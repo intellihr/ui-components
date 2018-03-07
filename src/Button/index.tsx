@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 
 export interface ButtonProps {
     children?: any;
@@ -10,4 +10,3 @@ export interface ButtonProps {
 export const Button: React.SFC<ButtonProps> = props => (
     <button> Sample Button </button>
 )
-
