@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "declaration": true,
+    "jsx": "react",
+    "lib": [
+      "es2015",
+      "scripthost",
+      "dom"
+    ],
+    "moduleResolution": "node",
+    "module": "es2015",
+    "target": "es5",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "rootDir": "./src",
+    "outDir": "./es"
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/__tests__/*",
+    "**/*.md",
+    "dist",
+    "es"
+  ]
+}

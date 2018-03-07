@@ -1,0 +1,34 @@
+{
+  "name": "@intellihr/ui-components",
+  "description": "A common React components library that is used in our company",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^16.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.0.40",
+    "typescript": "^2.7.2",
+    "webpack": "^4.1.0"
+  },
+  "scripts": {
+    "compile": "rm -rf es && tsc",
+    "test": "yarn test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/intellihr/ui-components.git"
+  },
+  "keywords": [
+    "intellihr",
+    "components",
+    "ui-components",
+    "react"
+  ],
+  "author": "Nick Luo <nick.luo@intellihr.com.au>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/intellihr/ui-components/issues"
+  },
+  "homepage": "https://github.com/intellihr/ui-components#readme"
+}
