@@ -24,8 +24,7 @@ module.exports = {
                 "jsx": "react",
               }
             }
-          },
-          'stylelint-custom-processor-loader',
+          }
         ],
       },
       {

@@ -53,7 +53,8 @@
       "no-require-imports": false,
       "no-var-requires": false,
       "comment-format": [false, "check-space", "check-uppercase"],
-      "no-console": [false]
+      "no-console": [false],
+      "semicolon": false
     },
     "rulesDirectory": []
-  }  
+  }
