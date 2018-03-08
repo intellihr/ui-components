@@ -1,0 +1,13 @@
+//
+//  This file acts as a manifest file for SASS compilation.
+//
+
+// Hide any broken items before loading foundation
+@import 'resources/hidden-while-loading';
+
+// Foundation for Sites
+@import '~foundation-sites/scss/settings/settings';
+@import 'foundation_settings';
+@import 'resources/foundation_variables';
+
+@import 'foundation';

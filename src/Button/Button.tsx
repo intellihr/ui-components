@@ -1,5 +1,4 @@
 import React from 'react'
-import './style'
 
 export interface ButtonProps {
     children?: any;
@@ -8,6 +7,8 @@ export interface ButtonProps {
     onClick?: React.ReactEventHandler<any>;
 }
 
-export const Button: React.SFC<ButtonProps> = props => (
+const Button: React.SFC<ButtonProps> = props => (
     <button> Sample Button </button>
 )
+
+export default Button
