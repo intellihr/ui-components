@@ -29,7 +29,7 @@
       ],
       "strict-boolean-expressions": false,
       "typedef": false,
-      "no-default-export": false,
+      "no-default-export": true,
       "export-name": false,
       "no-relative-imports": false,
       "import-name": [
