@@ -1,0 +1,15 @@
+.breadcrumbs {
+  margin: 0;
+
+  li {
+    font-size: rem-calc(12);
+
+    &.active a {
+      color: $main-text;
+    }
+
+    &:not(:last-child)::after {
+      top: 0;
+    }
+  }
+}

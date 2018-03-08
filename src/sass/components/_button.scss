@@ -1,0 +1,250 @@
+@import '../resources/global';
+
+$button-spacing: 10px;
+
+@mixin add-disabled ($background-color, $text-color) {
+  &:disabled,
+  &.disabled,
+  &[disabled] {
+    background-color: $background-color;
+    color: $text-color;
+    opacity: .3;
+
+    &:focus,
+    &:hover {
+      background-color: $background-color;
+      color: $text-color;
+    }
+  }
+}
+
+@mixin add-borderless ($functional) {
+  background-color: transparent;
+  border: 0;
+  color: map-get($functional, base);
+
+  &:focus,
+  &:hover,
+  &.hover {
+    background-color: map-get($functional, base);
+    color: map-get($functional, text);
+  }
+
+  &:active,
+  &.active {
+    background-color: map-get($functional, active);
+    color: map-get($functional, hover-text);
+  }
+}
+
+@mixin add-hollow ($functional) {
+  @include add-disabled(transparent, map-get($functional, hollow-text));
+
+  background-color: transparent;
+  border: 1px solid map-get($functional, base);
+  color: map-get($functional, hollow-text);
+
+  &:focus,
+  &:hover,
+  &.hover {
+    background-color: map-get($functional, hollow-hover);
+    border-color: map-get($functional, hollow-base);
+    color: map-get($functional, hollow-text);
+  }
+
+  &:active,
+  &.active {
+    background-color: map-get($functional, hollow-active);
+    color: map-get($functional, hollow-active-text);
+  }
+}
+
+@mixin button-functional-colour ($functional) {
+  @include add-disabled(map-get($functional, base), map-get($functional, text));
+
+  background-color: map-get($functional, base);
+  color: map-get($functional, text);
+
+  &:focus,
+  &:hover,
+  &.hover {
+    background-color: map-get($functional, hover);
+    color: map-get($functional, hover-text);
+  }
+
+  &:active,
+  &.active {
+    background-color: map-get($functional, active);
+    color: map-get($functional, hover-text);
+  }
+
+  &.hollow {
+    @include add-hollow($functional);
+  }
+
+  &.borderless {
+    @include add-borderless($functional);
+  }
+}
+
+
+
+.button {
+  font-weight: 600;
+  outline: none;
+  text-transform: uppercase;
+
+  .fa {
+    vertical-align: initial;
+  }
+
+  @each $colour, $values in $functional-colours {
+    &.#{$colour} {
+      @include button-functional-colour($values);
+    }
+  }
+
+  &.neutral.borderless {
+    color: $neutral-text;
+  }
+
+  @extend .neutral;
+
+
+  &.option,
+  &.cancel,
+  &.back {
+    @include add-borderless(map-get($functional-colours, neutral));
+    @include add-disabled(transparent, lighten($main-text, 24%));
+
+    color: lighten($main-text, 24%);
+
+    &:focus,
+    &:hover,
+    &.hover {
+      background-color: transparent;
+      color: $main-text;
+    }
+
+    &:active,
+    &.active {
+      background-color: transparent;
+      color: $main-text;
+    }
+  }
+
+  &.back {
+    margin-bottom: .25rem;
+    padding-left: 0;
+  }
+
+  &.add {
+    @extend .secondary;
+
+    @include add-borderless(map-get($functional-colours, secondary));
+    @include add-disabled(transparent, map-get(map-get($functional-colours, secondary), base));
+  }
+
+  &.add-subtle {
+    background-color: transparent;
+    color: darken($neutral-base, 10%);
+
+    &:focus,
+    &:hover,
+    &.hover,
+    &:active,
+    &.active {
+      background-color: transparent;
+      color: $secondary-base;
+    }
+  }
+
+  &.delete-subtle {
+    @extend .alert;
+
+    @include add-disabled($neutral, $neutral-text);
+
+    background-color: $neutral;
+    color: $neutral-text;
+  }
+
+  &.delete {
+    @extend .delete-subtle;
+
+    color: $alert;
+  }
+
+  &.resolve {
+    @extend .success;
+
+    @include add-disabled($neutral, $neutral-text);
+
+    background-color: $neutral;
+    color: $neutral-text;
+  }
+
+  &.skip {
+    @extend .neutral;
+
+    @include add-borderless(map-get($functional-colours, neutral));
+
+    color: $neutral-text;
+  }
+
+  &.remove {
+    @extend .delete-subtle;
+
+    @include breakpoint(small only) {
+      &::after {
+        content: ' Remove';
+      }
+    }
+
+    @include breakpoint(medium up) {
+      border-radius: 50%;
+      height: 1.55rem;
+      margin: .5rem;
+      padding: 0;
+      width: 1.55rem;
+    }
+  }
+
+  &.holster {
+    padding: .5rem .3rem;
+    background-color: transparent;
+    color: lighten($main-text, 30%);
+
+    &.hover, &:hover, &:active, &:focus {
+      background-color: $neutral-base;
+      color: $main-text;
+    }
+
+    .fa {
+      line-height: 1;
+      margin: 0;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.action-bar-holder {
+  display: flex;
+  overflow: auto;
+
+  .button {
+    margin-right: $button-spacing;
+  }
+
+  .button-group {
+    margin-right: $button-spacing;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.icon-action {
+  margin: 0;
+  margin-left: 3px;
+}

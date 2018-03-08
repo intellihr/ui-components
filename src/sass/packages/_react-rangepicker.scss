@@ -1,0 +1,29 @@
+@import '~react-rangeslider/lib/index.css';
+
+.rangeslider,
+.rangeslider-horizontal {
+  height: 0.25rem;
+  box-shadow: none;
+
+  .rangeslider__fill {
+    background-color: lightgrey;
+    display: none;
+  }
+
+  .rangeslider__handle {
+    width: 20px;
+    height: 20px;
+    background-color: lightgrey;
+    border: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+
+    &:focus {
+      outline: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+

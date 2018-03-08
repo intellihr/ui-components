@@ -1,0 +1,34 @@
+.button-row {
+  display: flex;
+  .button{
+    margin-right: 1rem;
+  }
+}
+
+.button-group .button[data-toggle$="dropdown-pane"] {
+  border-right: 0 none;
+
+  .fa-angle-down {
+    margin-left: 2px;
+  }
+}
+
+.button-group {
+  @include button-group('.modal-button');
+
+  //.button {
+  //  border-radius: 0;
+  //}
+  //
+  //.button:first-of-type {
+  //  border-radius: $button-radius 0 0 $button-radius;
+  //}
+  //
+  //.button:last-of-type {
+  //  border-radius: 0 $button-radius $button-radius 0;
+  //}
+  //
+  //.button:only-of-type {
+  //  border-radius: $button-radius;
+  //}
+}

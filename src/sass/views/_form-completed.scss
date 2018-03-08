@@ -1,0 +1,26 @@
+@import '../resources/mixins';
+
+.form-completed-container {
+  @include limit-width
+
+  form > .row {
+    &:target {
+      background-color: rgba(3, 222, 235, .08);
+      border-radius: 8px;
+      box-shadow: 0 0 0px 2px rgba(3, 222, 235, .36);
+      margin: 20px 10px;
+    }
+  }
+}
+
+.not-logged-in {
+  .form-completed-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.form-completed-label,
+.form-completed-label b {
+  font-weight: 600;
+}

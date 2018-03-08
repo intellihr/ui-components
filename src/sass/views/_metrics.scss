@@ -1,0 +1,54 @@
+.metric-form {
+  @extend .ihr-form;
+  max-width: 1200px;
+
+  .metric-label {
+    font-weight: bolder;
+  }
+
+  .field-container {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+}
+
+.field-list {
+  margin: 2% 0;
+}
+
+.field-items {
+  margin-top: 15px;
+}
+
+.react-selectize {
+  &.root-node {
+    width: auto;
+  }
+}
+
+.react-selectize-reset-button-container {
+  display: none;
+}
+
+.metric-list-value {
+  font-size: 14px;
+}
+
+.simple-option {
+  .metric-label {
+    font-size: 13px;
+  }
+
+  .metric-description {
+    font-size: 11px;
+    margin-left: 5px;
+  }
+}
+
+.non-selectable {
+  background-color: $light-gray;
+}
+
+.index-metric-description {
+  font-size: 12px;
+}

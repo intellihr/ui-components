@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import { isEmpty } from 'lodash'
 import React from 'react'
+import './styles'
 
 export class Callout extends React.Component<any, any> {
   get messages() {
@@ -36,7 +37,7 @@ export class Callout extends React.Component<any, any> {
     return cNames
   }
 
-  render() {
+  public render() {
     const { children } = this.props
 
     if (isEmpty(this.messages) && !children) {

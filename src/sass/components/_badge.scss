@@ -1,0 +1,107 @@
+@import '../resources/global';
+
+$colour-shadow: rgba(0, 0, 0, .2);
+
+.badge-container {
+  display: inline-block;
+  position: relative;
+}
+
+.clickable-container {
+  .profile-picture-badge, .initials-badge {
+    transition: border-color 0.2s;
+
+    img {
+      transition: border-color 0.2s;
+    }
+
+    &:hover, &:active, &:focus {
+      border-color: $primary-base;
+
+      img {
+        border-color: $primary-base;
+      }
+    }
+  }
+}
+
+.profile-picture-badge, .initials-badge {
+  border: 1px solid $border-light;
+  border-radius: 50%;
+  color: $link-text;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1rem;
+  font-weight: 600;
+  height: 40px;
+  line-height: 38px;
+  overflow: hidden;
+  text-align: center;
+  width: 40px;
+  user-select: none;
+
+  .extended-leave-circle {
+    background-color: $warning-base;
+    border: 2px solid $main-background-hover;
+    border-radius: 50%;
+    bottom: -.1rem;
+    box-shadow: 0 2px 2px $colour-shadow;
+    padding: 5.5px;
+    position: absolute;
+    left: -.3rem;
+  }
+
+  img {
+    vertical-align: initial;
+  }
+
+  &.badge-small {
+    font-size: 0.8rem;
+    height: 30px;
+    line-height: 28px;
+    width: 30px;
+
+    .extended-leave-circle {
+      padding: 5px;
+    }
+  }
+
+  &.badge-large {
+    font-size: 1.5rem;
+    height: 72px;
+    line-height: 70px;
+    width: 72px;
+
+    .extended-leave-circle {
+      padding: 6.5px;
+      left: .1rem;
+      bottom: .1rem;
+    }
+  }
+
+  &.badge-xlarge {
+    font-size: 2.5rem;
+    height: 120px;
+    line-height: 118px;
+    width: 120px;
+
+    .extended-leave-circle {
+      padding: 7px;
+      left: .75rem;
+      bottom: .25rem;
+    }
+  }
+}
+
+.profile-picture-badge {
+  background-color: transparent;
+
+  img {
+    width: 100%;
+  }
+}
+
+.initials-badge {
+  background-color: $badge-background;
+  text-transform: uppercase;
+}

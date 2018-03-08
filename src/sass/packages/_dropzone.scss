@@ -1,0 +1,22 @@
+.dropzone {
+  margin-bottom: rem-calc(20);
+  border-width: 1px;
+  border-color: $light-gray;
+
+  &:hover {
+    border-color: $medium-gray;
+  }
+}
+
+#dropzone-error-modal {
+  background-color: $alert-color;
+  color: #ffffff;
+
+  > p {
+    margin: 0;
+  }
+
+  .close-button {
+    color: inherit;
+  }
+}

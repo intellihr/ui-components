@@ -1,0 +1,29 @@
+@import '../resources/mixins';
+
+.performance-report-config-form {
+  max-width: 1100px;
+
+  .performance-report-config-index {
+    margin-top: 6px;
+  }
+
+  .columns {
+    padding-right: 0;
+  }
+
+  .section-row,
+  .item-row {
+    margin: 10px 0px 20px 0px;
+  }
+
+  .input-container {
+    .switch {
+      @include switch-size-legacy(.9rem, 7rem, 2rem, 1.5rem, .25rem);
+      margin-top: 4px;
+    }
+  }
+
+  .grayed-out {
+    color: $medium-gray;
+  }
+}

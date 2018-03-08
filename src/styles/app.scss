@@ -3,11 +3,8 @@
 //
 
 // Hide any broken items before loading foundation
-@import 'resources/hidden-while-loading';
+// @import 'resources/hidden-while-loading';
 
 // Foundation for Sites
-@import '~foundation-sites/scss/settings/settings';
-@import 'foundation_settings';
-@import 'resources/foundation_variables';
+@import "~foundation-sites/scss/foundation.scss";
 
-@import 'foundation';

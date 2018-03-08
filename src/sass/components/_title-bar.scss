@@ -1,0 +1,85 @@
+$ihrImageHeaderHeight: 30px;
+
+.title-bar {
+  &.mobile {
+    background: $sidebar;
+    height: 48px;
+    // margin-bottom: 1rem;
+
+    button {
+      color: $sidebar-text;
+    }
+
+    .menu > li {
+      height: 48px;
+
+      > button {
+        width: 48px;
+        height: 48px;
+        outline: none;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      > a {
+        line-height: 48px;
+        padding: 0 7px 0 7px;
+        color: $sidebar-text;
+
+        > img {
+          margin-right: 0;
+        }
+      }
+      > a:hover,
+      > a:focus,
+      > button:hover,
+      > button:focus {
+        background-color: $sidebar-hover;
+      }
+      &.menu-logo {
+        > a > img {
+          height: $ihrImageHeaderHeight;
+        }
+        > a:hover,
+        > a:focus {
+          background-color: $sidebar;
+        }
+      }
+
+      @include breakpoint(large up) {
+        &.menu-logo > a {
+          padding: 9px 0;
+        }
+      }
+    }
+
+    .dropdown.menu li a {
+      padding: 16px;
+      white-space: nowrap;
+    }
+    .dropdown.menu .submenu {
+      background-color: $primary;
+      border: none;
+    }
+    .dropdown.menu .submenu li a {
+      color: $main-background-hover;
+
+      &:hover {
+        background-color: darken($primary, 5%)
+      }
+    }
+  }
+
+  .menu {
+    .menu-logo {
+      > a > img {
+        height: $ihrImageHeaderHeight;
+      }
+    }
+  }
+}
+
+.menu > li > a > span {
+  vertical-align: top;
+}

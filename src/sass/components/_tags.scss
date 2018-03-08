@@ -1,0 +1,85 @@
+@import '../foundation_settings';
+
+.person-tag {
+  align-items: center;
+  display: flex;
+  padding: 2px;
+  flex-wrap: nowrap;
+
+  .grid-x {
+    flex-wrap: nowrap;
+  }
+
+  .person-label {
+    align-items: center;
+    display: flex;
+  }
+
+  .badge-container {
+    align-self: start;
+    position: relative;
+
+    .initials-badge-icon {
+      text-align: right;
+
+      position: absolute;
+      right: 0;
+      top: 27px;
+
+      .fa {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .display-name {
+    color: $main-text;
+    overflow: hidden;
+    padding-left: 10px;
+    align-self: center;
+
+    .position-title {
+      color: $main-text-light;
+      font-size: .8125rem;
+      line-height: 1.3;
+      margin-top: 2px;
+    }
+  }
+
+  .person-tag-description {
+    color: $main-text-light;
+    font-size: .75rem;
+    font-weight: 600;
+    padding-left: 58px;
+  }
+
+  &.cursor-auto {
+    cursor: auto;
+  }
+
+  &.cursor-pointer {
+    cursor: pointer;
+  }
+
+  .has-tip {
+    display: inherit;
+  }
+
+  .header-component {
+    font-size: .9375rem;
+    font-weight: normal;
+
+    .overdue-count {
+      @include breakpoint(small down) {
+        order: 2;
+      }
+    }
+  }
+
+  .tag-icon {
+    i {
+      margin-right: 10px;
+      font-size: 2rem;
+    }
+  }
+}

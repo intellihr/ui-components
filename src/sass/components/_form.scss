@@ -1,0 +1,137 @@
+@import '../resources/mixins';
+
+.ihr-form,
+.ihr-form-view {
+  @include limit-width;
+
+  .field-container {
+    @extend .row;
+
+    margin-bottom: 1em;
+
+    &:last-child {
+      margin-bottom: 2em;
+    }
+  }
+
+  .label-container {
+    @extend .column;
+    @extend .medium-4;
+
+    label {
+      font-size: $global-font-size;
+      line-height: $global-lineheight;
+    }
+  }
+
+  // this element follows an input element
+  .input-tail {
+    margin-top: -.75rem;
+  }
+}
+
+.ihr-form {
+  .label-container {
+
+    @include breakpoint(medium) {
+      label {
+        @include form-label-middle;
+      }
+    }
+  }
+
+  .input-container {
+    @extend .column;
+    @extend .medium-8;
+
+    &:first-child {
+      @extend .medium-offset-4;
+    }
+  }
+}
+
+// a read-only view of a form - has labels and values rather than labels and inputs
+.ihr-form-view {
+  .label-container {
+    label {
+      font-weight: 600;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .value-container {
+    @extend .column;
+    @extend .medium-8;
+
+    &:first-child {
+      @extend .medium-offset-4;
+    }
+  }
+}
+
+.vertical {
+  .required {
+    &::after {
+      color: $main-text-light;
+      content: ' - required';
+      font-size: .9em;
+      font-style: italic;
+    }
+  }
+}
+
+#tenant_logo_remove {
+  margin-left: 5px;
+}
+
+input,
+select,
+.Select-control {
+  &:hover {
+    background-color: $main-background-hover;
+  }
+
+  &:disabled {
+    opacity: .5;
+  }
+}
+
+select {
+  &:hover {
+    &:focus {
+      background-color: inherit;
+    }
+  }
+}
+
+input,
+textarea,
+select {
+  &:hover {
+    &:disabled {
+      background-color: $neutral;
+    }
+  }
+}
+
+.input-group {
+  > :last-child {
+    border-left: 0;
+    border-radius: 0 $input-radius $input-radius 0;
+  }
+}
+
+.input-group-label {
+  &.disabled {
+    opacity: .5;
+  }
+}
+
+.form-error {
+  font-weight: 600;
+}
+
+input.is-invalid-input:focus {
+  border-color: $alert-base;
+}

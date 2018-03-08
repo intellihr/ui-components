@@ -1,0 +1,43 @@
+.accordion {
+
+  .accordion-title {
+    font-size: inherit;
+  }
+
+  .callout.alert {
+    margin-bottom: rem-calc(10);
+  }
+
+  .menu.nested {
+    margin: rem-calc(20);
+  }
+
+  li {
+
+    &[aria-expanded~=true] {
+      > a {
+        font-weight: $global-weight-bold;
+      }
+    }
+
+    > a {
+      background-color: $primary-color;
+      color: $white;
+
+      &:hover {
+        cursor: pointer;
+        background-color: darken($primary-color, 5%);
+      }
+    }
+  }
+
+  .is-accordion-submenu-parent > a::after {
+    border-color: $white transparent transparent;
+  }
+}
+
+ul.is-accordion-submenu {
+  &.nested {
+    margin-left: 0;
+  }
+}

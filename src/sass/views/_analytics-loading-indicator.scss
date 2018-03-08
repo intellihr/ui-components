@@ -1,0 +1,54 @@
+@mixin analytics-container-loader-core {
+  animation: analytics-container-loader-animation 1.8s infinite ease-in-out;
+  animation-fill-mode: both;
+  border-radius: 50%;
+  height: rem-calc(12);
+  width: rem-calc(12);
+}
+
+.analytics-container-loader:empty,
+.analytics-container-loader:empty::before,
+.analytics-container-loader:empty::after {
+  @include analytics-container-loader-core;
+}
+
+.analytics-container-loader {
+  &:empty {
+    animation-delay: -.16s;
+    color: $primary-color;
+    font-size: rem-calc(10);
+    left: rem-calc(12);
+    position: relative;
+    text-indent: rem-calc(-9999);
+    top: rem-calc(-14);
+    transform: translateZ(0);
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+    }
+
+    &::before {
+      animation-delay: -.32s;
+      left: rem-calc(-12);
+    }
+
+    &::after {
+      left: rem-calc(12);
+    }
+  }
+}
+
+@keyframes analytics-container-loader-animation {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 rem-calc(12) 0 rem-calc(-12);
+  }
+
+  40% {
+    box-shadow: 0 rem-calc(12) 0 0;
+  }
+}

@@ -1,6 +1,3 @@
-// @import '~foundation-sites/scss/settings/settings';
-// @import 'foundation';
-
 $callouts: (
   neutral:       (background: $neutral-light,                border: $border,         color: $main-text,                title: $main-text),
   info:          (background: lighten($secondary, 44%),      border: $secondary,      color: $main-text,                title: $main-text),
@@ -102,7 +99,7 @@ $callouts: (
     font-weight: 600;
     text-align: center;
     text-transform: uppercase;
-    @extend .small!optional;
+    @extend .small;
   }
 
 }

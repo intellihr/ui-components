@@ -1,0 +1,62 @@
+//
+//  This file acts as a manifest file for SASS compilation.
+//
+
+// Hide any broken items before loading foundation
+@import 'resources/hidden-while-loading';
+
+// Foundation for Sites
+@import '~foundation-sites/scss/settings/settings';
+@import 'foundation_settings';
+@import 'resources/foundation_variables';
+
+@import 'foundation';
+// Foundation Flex classes mixin includes Flex Child alignment and Source Ordering styles
+// these classes are not included in xy-grid or float-grid so they won't cause any problems
+@include foundation-flex-classes; // to include when using flex-box mode
+@include foundation-everything(false);
+@include foundation-xy-grid-classes;
+@include foundation-menu-icon;
+// @include foundation-flex-grid; // we're likely to use this in future
+
+// Font Awesome
+$fa-font-path: '~font-awesome/fonts';
+@import '~font-awesome/scss/font-awesome';
+
+// Intelli-icons
+// @import '~intellihr-icons/style.css';
+
+// Globals
+@import 'global_styles';
+
+// Components
+@import 'components/accordion';
+@import 'components/action-panel';
+@import 'components/attribute-label';
+@import 'components/badge';
+@import 'components/box';
+@import 'components/breadcrumbs';
+@import 'components/button';
+@import 'components/button-group';
+@import 'components/callout';
+@import 'components/comments';
+@import 'components/dropdown';
+@import 'components/errors';
+@import 'components/feature-panel';
+@import 'components/footer';
+@import 'components/form';
+@import 'components/grid';
+@import 'components/icon';
+@import 'components/label';
+@import 'components/loader';
+@import 'components/modal';
+@import 'components/navigation';
+@import 'components/radio-button-group';
+@import 'components/table';
+@import 'components/tabs';
+@import 'components/tags';
+@import 'components/tenant-logo';
+@import 'components/title-bar';
+@import 'components/typography';
+@import 'components/user-menu';
+

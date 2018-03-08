@@ -1,0 +1,29 @@
+//#ihr-errors {
+//
+//  border: 0 none;
+//  padding: 0;
+//
+//  > ul {
+//
+//    margin: 0;
+//    border: inherit;
+//
+//    > li {
+//
+//      color: $white;
+//      font-size: $small-font-size;
+//
+//      padding: rem-calc(5) rem-calc(15);
+//      border: inherit;
+//      list-style: none;
+//
+//      &:nth-child(odd) {
+//        background-color: $alert-color;
+//      }
+//
+//      &:nth-child(even) {
+//        background-color: scale-color($alert-color, $lightness: -3%);
+//      }
+//    }
+//  }
+//}

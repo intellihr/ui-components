@@ -1,0 +1,36 @@
+#goal-create-button {
+  float: left;
+  margin-bottom: 1rem;
+}
+
+.goal-section {
+  > p {
+    margin-bottom: 0;
+  }
+}
+
+#goal-progress-status-dropdown-pane {
+  .button {
+    border-right: 0 none;
+    margin-bottom: 10px;
+    width: 100%;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+#goal-comment-spinner {
+  margin-bottom: 10px;
+}
+
+.dashboard-goal-at-risk {
+  color: $warning-color;
+}
+
+#goal-parent-result-error {
+  color: $alert-color;
+  display: none;
+  font-size: $small-font-size;
+}

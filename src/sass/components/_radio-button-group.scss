@@ -1,0 +1,40 @@
+.radio-button-group {
+  @extend .button-group;
+
+  .button {
+    background-color: $light-gray;
+    color: $black;
+    border-bottom: 1px solid $white;
+    border-left: none;
+  }
+
+  input {
+    display: none;
+  }
+
+  input:checked + .button {
+    background-color: $primary-color;
+    color: $white;
+  }
+
+  .button:hover {
+    background-color: $medium-gray;
+  }
+}
+
+.radio-button-group.stacked, .radio-button-group.stacked-for-small {
+
+  @include breakpoint(small only) {
+
+    .button:not(:last-child) {
+      border-right-color: $light-gray;
+    }
+
+    input:checked + .button {
+      border-right-color: $primary-color;
+      transition: border-right-color 0.25s ease-out;
+    }
+
+  }
+
+}

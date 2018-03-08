@@ -1,0 +1,11 @@
+.row {
+
+  &.full-width {
+
+    // This is the proper way of making 100% width row in Foundation)
+    // http://stackoverflow.com/a/15389776/4197938
+
+    width: 100%;
+    max-width: 100%;
+  }
+}
