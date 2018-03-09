@@ -6,23 +6,23 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.jsx', '.js']
   },
   plugins: [
-    new ExtractTextPlugin('./assets/bundle.css'),
+    new ExtractTextPlugin('./bundle.css'),
   ],
   entry: [
     './src/sass/app.scss'
   ],
   output: {
     path: path.resolve(__dirname, 'assets'),
-    filename: './js/bundle.js'
+    filename: 'bundle.css'
   },
   module: {
     rules: [
-      // {
-      //   test: /\.(ts|tsx)$/,
-      //   exclude: /(node_modules)/,
-      //   enforce: 'pre',
-      //   loader: 'tslint-loader',
-      // },
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /(node_modules)/,
+        enforce: 'pre',
+        loader: 'tslint-loader',
+      },
       {
         test: /\.(ts|tsx)$/,
         exclude: /(node_modules)/,

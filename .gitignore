@@ -57,6 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
-# compiled files
+# Compiled and built files
 es
 styleguide
+assets
