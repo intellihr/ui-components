@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-import { isEmpty } from 'lodash'
 import React from 'react'
 import './styles'
 
@@ -47,9 +46,9 @@ export class Callout extends React.Component<CalloutProps, any> {
   }
 
   public render() {
-    const { children } = this.props
+    const { children, messages } = this.props
 
-    if (isEmpty(this.messages) && !children) {
+    if (!Array.isArray(messages) && !children) {
       return null
     }
 
