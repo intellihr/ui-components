@@ -45,7 +45,7 @@ export class Callout extends React.Component<CalloutProps, any> {
     return cNames
   }
 
-  public render() {
+  public render(): JSX.Element | null {
     const { children, messages } = this.props
 
     if (!Array.isArray(messages) && !children) {
