@@ -49,7 +49,8 @@
     "test": "yarn test",
     "build": "yarn compile && webpack",
     "styleguide:build": "styleguidist build",
-    "styleguide": "styleguidist server"
+    "styleguide": "styleguidist server",
+    "gh-pages": "git subtree push --prefix styleguide origin gh-pages"
   },
   "repository": {
     "type": "git",
