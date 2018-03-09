@@ -3,17 +3,26 @@ import { isEmpty } from 'lodash'
 import React from 'react'
 import './styles'
 
-export class Callout extends React.Component<any, any> {
+export interface CalloutProps {
+  type: 'info' | 'success' | 'error' | 'warning' | 'preview';
+  children?: any;
+  className?: string;
+  message? : string;
+  messages?: string[];
+  justifyCenter?: boolean;
+}
+
+export class Callout extends React.Component<CalloutProps, any> {
   get messages() {
     const { message } = this.props
     let { messages } = this.props
 
-    if (isEmpty(messages)) {
+    if (!Array.isArray(messages)) {
       messages = []
     }
 
     if (message) {
-      messages.push(message)
+      messages = [message, ...messages];
     }
 
     return messages
