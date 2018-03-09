@@ -7,12 +7,12 @@
   "module": "./es/index.js",
   "files": [
     "es",
-    "assets"
+    "assets",
+    "src"
   ],
   "dependencies": {
     "classnames": "^2.2.5",
-    "lodash": "^4.17.5",
-    "react": "^16.2.0"
+    "lodash": "^4.17.5"
   },
   "devDependencies": {
     "@epegzz/sass-vars-loader": "^3.2.0",
@@ -31,6 +31,7 @@
     "postcss-loader": "^2.1.1",
     "react-docgen-typescript": "^1.2.5",
     "react-dom": "^16.2.0",
+    "react": "^16.2.0",
     "react-styleguidist": "^6.2.6",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.2",
