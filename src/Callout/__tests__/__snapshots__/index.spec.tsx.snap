@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Callout Renders successfully 1`] = `
+<div
+  className="callout success justify-center"
+>
+  <div
+    className="content"
+  >
+    <div
+      className="title"
+    >
+      Well done!
+    </div>
+    You successfully read this important alert message.
+  </div>
+</div>
+`;
+
+exports[`Callout Renders successfully when both messages and message is passed 1`] = `
+<div
+  className="callout info"
+>
+  <div
+    className="content"
+  >
+    <ul>
+      <li>
+        hello world
+      </li>
+      <li>
+        You are wrong
+      </li>
+      <li>
+        hey
+      </li>
+      <li>
+        what
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Callout Renders successfully when messages are passed 1`] = `
+<div
+  className="callout warning"
+>
+  <div
+    className="content"
+  >
+    <ul>
+      <li>
+        You are wrong
+      </li>
+      <li>
+        hey
+      </li>
+      <li>
+        what
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Callout Renders successfully when messages has length 1 1`] = `
+<div
+  className="callout info justify-center"
+>
+  <div
+    className="content"
+  >
+    Hello world
+  </div>
+</div>
+`;
+
+exports[`Callout Renders successfully when only message is passed 1`] = `null`;

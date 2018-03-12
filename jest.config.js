@@ -1,0 +1,31 @@
+module.exports = {
+  moduleFileExtensions: [
+    "ts",
+    "tsx",
+    "js"
+  ],
+  transform: {
+    "^.+\\.(ts|tsx)?$": "ts-jest",
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
+    "<rootDir>/assetsTransformer.js"
+  },
+  testRegex: "/__tests__/.*\\.(ts|tsx|js)$",
+  collectCoverage: true,
+  coverageDirectory: "<rootDir>/coverage/",
+  mapCoverage: true,
+  coverageReporters: [
+    "text",
+    "html",
+  ],
+  collectCoverageFrom : [
+    "src/**/*.tsx",
+    "!**/examples/**"
+  ],
+  globals: {
+    'ts-jest': {
+      tsConfigFile: 'tsconfig-jest.json',
+      useBabelrc: true,
+    }
+  },
+  setupTestFrameworkScriptFile: "./setupTest.ts"
+};
