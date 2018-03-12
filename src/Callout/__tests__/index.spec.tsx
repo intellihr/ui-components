@@ -1,4 +1,4 @@
-import { mount } from 'enzyme'
+import { shallow } from 'enzyme'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import reactRenderer from 'react-test-renderer'
@@ -21,7 +21,7 @@ describe('Callout', () => {
   })
 
   it('Renders with DOM assertion', () => {
-    const component = mount(
+    const component = shallow(
       <Callout type="success" justifyCenter>
         <div className="title">
             Well done!
