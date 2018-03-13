@@ -52,16 +52,19 @@ pipeline {
 
       steps {
         sshagent (credentials: ['GITHUB_CI']) {
-          try {
-            sh 'git add .'
-            sh 'git -c user.email="continuous.integration@intellihr.com.au" -c user.name="IntelliHR CI" commit -m "Update gh-pages as of $(git log \'--format=format:%H\' remotes/origin/master -1)"'
-            sh 'yarn gh-pages'
-          } catch (Exception e) {
-            echo 'No need to publish gh-pages...Skipping...'
+          script {
+            try {
+              sh 'git add .'
+              sh 'git -c user.email="continuous.integration@intellihr.com.au" -c user.name="IntelliHR CI" commit -m "Update gh-pages as of $(git log \'--format=format:%H\' remotes/origin/master -1)"'
+              sh 'yarn gh-pages'
+            } catch (Exception e) {
+              echo 'No need to publish gh-pages...Skipping...'
+            }
           }
         }
       }
     }
+
     stage('Publish NPM') {
       when {
         branch 'master'
@@ -74,11 +77,13 @@ pipeline {
         }
 
         withNPM(npmrcConfig: 'npm-config') {
-          try {
-            echo 'About to publish to npm'
-            sh 'npm version patch'
-          } catch (Exception e) {
-            echo 'No need to update the version...Skipping...'
+          script {
+            try {
+              echo 'About to publish to npm'
+              sh 'npm version patch'
+            } catch (Exception e) {
+              echo 'No need to update the version...Skipping...'
+            }
           }
         }
 
