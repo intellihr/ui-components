@@ -50,13 +50,18 @@ pipeline {
       }
 
       steps {
+        sshagent (credentials: ['GITHUB_CI']) {
+          sh 'git config user.email="continuous.integration@intellihr.com.au"'
+          sh 'git config user.name="IntelliHR CI"'
+        }
+
         withNPM(npmrcConfig: 'npm-config') {
           echo 'About to publish to npm'
           sh 'npm version patch'
         }
 
         sshagent (credentials: ['GITHUB_CI']) {
-          sh 'git -c user.email="continuous.integration@intellihr.com.au" -c user.name="IntelliHR CI" push origin master'
+          sh 'git push origin master'
         }
       }
     }
