@@ -74,8 +74,12 @@ pipeline {
         }
 
         withNPM(npmrcConfig: 'npm-config') {
-          echo 'About to publish to npm'
-          sh 'npm version patch'
+          try {
+            echo 'About to publish to npm'
+            sh 'npm version patch'
+          } catch (Exception e) {
+            echo 'No need to update the version...Skipping...'
+          }
         }
 
         sshagent (credentials: ['GITHUB_CI']) {
