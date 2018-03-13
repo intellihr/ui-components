@@ -38,6 +38,7 @@ pipeline {
         ])
       }
     }
+
     stage('Build') {
       steps {
         sh 'yarn && yarn build'
@@ -51,8 +52,8 @@ pipeline {
 
       steps {
         sshagent (credentials: ['GITHUB_CI']) {
-          sh 'git config user.email="continuous.integration@intellihr.com.au"'
-          sh 'git config user.name="IntelliHR CI"'
+          sh 'git config user.email "continuous.integration@intellihr.com.au"'
+          sh 'git config user.name "IntelliHR CI"'
         }
 
         withNPM(npmrcConfig: 'npm-config') {
@@ -61,7 +62,7 @@ pipeline {
         }
 
         sshagent (credentials: ['GITHUB_CI']) {
-          sh 'git push origin master'
+          sh 'git push origin HEAD:master'
         }
       }
     }
