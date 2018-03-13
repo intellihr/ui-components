@@ -45,6 +45,23 @@ pipeline {
       }
     }
 
+    stage('Publish gh-pages') {
+      when {
+        branch 'master'
+      }
+
+      steps {
+        sshagent (credentials: ['GITHUB_CI']) {
+          try {
+            sh 'git add .'
+            sh 'git -c user.email="continuous.integration@intellihr.com.au" -c user.name="IntelliHR CI" commit -m "Update gh-pages as of $(git log \'--format=format:%H\' remotes/origin/master -1)"'
+            sh 'yarn gh-pages'
+          } catch (Exception e) {
+            echo 'No need to publish gh-pages...Skipping...'
+          }
+        }
+      }
+    }
     stage('Publish NPM') {
       when {
         branch 'master'
