@@ -23,19 +23,17 @@ pipeline {
   stages {
     stage('checkout') {
       steps {
-        checkout([
-          $class: 'GitSCM',
-          branches: [[name: 'refs/remotes/origin/' + env.BRANCH_NAME]],
-          extensions: [[$class: 'CleanBeforeCheckout']],
-          userRemoteConfigs: [[
-            url: 'git@github.com:intellihr/ui-components.git',
-            credentialsId: 'GITHUB_CI',
-            refspec: '+refs/heads/master:refs/remotes/origin/master ' +
-              // '+refs/heads/develop:refs/remotes/origin/develop ' +
-              '+refs/heads/gh-pages:refs/remotes/origin/gh-pages ' +
-              pullRefsepc
-          ]]
-        ])
+        checkout(
+          [
+            $class: 'GitSCM',
+            branches: [[name: '*/master'], [name: '*/gh-pages']],
+            doGenerateSubmoduleConfigurations: false,
+            localBranch: 'master'],
+            extensions: [[$class: 'LocalBranch', localBranch: 'master'],
+            submoduleCfg: [],
+            userRemoteConfigs: [[credentialsId: 'GITHUB_CI', url: 'git@github.com:intellihr/ui-components.git']]
+          ]
+        )
       }
     }
 
@@ -88,7 +86,14 @@ pipeline {
         }
 
         sshagent (credentials: ['GITHUB_CI']) {
-          sh 'git push origin HEAD:master'
+          script {
+            try {
+              sh 'git branch'
+              sh 'git push origin master'
+            } catch (Exception e) {
+              echo 'Nothing to push...'
+            }
+          }
         }
       }
     }
