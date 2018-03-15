@@ -12,13 +12,13 @@ module.exports = {
   testRegex: "/__tests__/.*\\.(ts|tsx|js)$",
   collectCoverage: true,
   coverageDirectory: "<rootDir>/coverage/",
-  mapCoverage: true,
   coverageReporters: [
     "text",
     "html",
   ],
   collectCoverageFrom : [
     "src/**/*.tsx",
+    "!src/style.tsx",
     "!**/examples/**"
   ],
   globals: {
