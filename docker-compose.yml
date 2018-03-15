@@ -1,7 +1,7 @@
 version: '3'
 services:
   ui-components:
-    build: ./
+    build: .
     command: yarn styleguide
     ports:
-      - "6060:6060"
+      - 6060:6060

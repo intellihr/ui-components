@@ -61,3 +61,7 @@ typings/
 es
 assets
 dist
+
+# Vim
+*.swp
+*.swo
