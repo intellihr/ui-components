@@ -44,12 +44,12 @@ describe('Callout', () => {
 
   it('Renders successfully when only message is passed', () => {
     const msg: string = 'hello world'
-    const component = shallow(
+    const wrapper = shallow(
       <Callout type="info" message={msg} />
     )
 
-    expect(component).toMatchSnapshot()
-    expect(component.prop('type')).toEqual('info')
+    expect(wrapper).toMatchSnapshot()
+    expect(wrapper.instance().props.type).toEqual('info')
   })
 
   it('Renders successfully when both messages and message is passed', () => {
@@ -71,5 +71,13 @@ describe('Callout', () => {
     )
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot();
+  })
+
+  it('Renders without any message/messages or children', () => {
+
+    const wrapper = shallow(
+      <Callout type="info"/>
+    )
+    expect(wrapper).toMatchSnapshot()
   })
 })

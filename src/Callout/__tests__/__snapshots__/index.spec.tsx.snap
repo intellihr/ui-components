@@ -76,4 +76,16 @@ exports[`Callout Renders successfully when messages has length 1 1`] = `
 </div>
 `;
 
-exports[`Callout Renders successfully when only message is passed (DOM test) 1`] = `""`;
+exports[`Callout Renders successfully when only message is passed 1`] = `
+<div
+  className="callout info"
+>
+  <div
+    className="content"
+  >
+    hello world
+  </div>
+</div>
+`;
+
+exports[`Callout Renders without any message/messages or children 1`] = `""`;

@@ -64,9 +64,9 @@ export class Callout extends React.Component<CalloutProps, any> {
   }
 
   public render(): JSX.Element | null {
-    const { children, messages } = this.props
+    const { children } = this.props
 
-    if (isEmpty(messages) && !children) {
+    if (isEmpty(this.messages) && !children) {
       return null
     }
 
