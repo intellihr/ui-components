@@ -27,5 +27,6 @@ module.exports = {
       useBabelrc: true,
     }
   },
-  setupTestFrameworkScriptFile: "./setupTest.ts"
+  setupTestFrameworkScriptFile: "./setupTest.ts",
+  snapshotSerializers: ["enzyme-to-json/serializer"]
 };

@@ -44,20 +44,12 @@ describe('Callout', () => {
 
   it('Renders successfully when only message is passed', () => {
     const msg: string = 'hello world'
-    const component = reactRenderer.create(
-      <Callout type="info" message={msg} />
-    )
-    const tree = component.toJSON()
-    expect(tree).toEqual(expect.anything())
-    expect(tree).toMatchSnapshot();
-  })
-
-  it('Renders successfully when only message is passed', () => {
-    const msg: string = 'hello world'
     const component = shallow(
       <Callout type="info" message={msg} />
     )
-    component.find('div').first().hasClass('callout')
+
+    expect(component).toMatchSnapshot()
+    expect(component.prop('type')).toEqual('info')
   })
 
   it('Renders successfully when both messages and message is passed', () => {

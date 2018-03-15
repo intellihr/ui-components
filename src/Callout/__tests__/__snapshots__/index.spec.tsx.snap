@@ -76,4 +76,4 @@ exports[`Callout Renders successfully when messages has length 1 1`] = `
 </div>
 `;
 
-exports[`Callout Renders successfully when only message is passed 1`] = `null`;
+exports[`Callout Renders successfully when only message is passed (DOM test) 1`] = `""`;
