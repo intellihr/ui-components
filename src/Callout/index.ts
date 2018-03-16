@@ -1,2 +1,1 @@
-import { Callout } from './Callout'
-export { Callout }
+export { Callout } from './Callout'

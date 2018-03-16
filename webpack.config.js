@@ -83,7 +83,7 @@ module.exports = {
               loader: '@epegzz/sass-vars-loader',
               options: {
                 files: [
-                  path.resolve(__dirname, 'src/colours/index.js')
+                  path.resolve(__dirname, 'src/sass/colours/index.js')
                 ]
               }
             }
