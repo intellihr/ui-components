@@ -15,7 +15,7 @@
 ```jsx
 <div>
   <p><button className="button" data-open="example-modal-2" >Modal With Close</button></p>
-  <Modal id="example-modal-2" size="large" className="example" showCloseButton>
+  <Modal id="example-modal-2" size="fixed-medium-up" className="example" showCloseButton>
     <h1> Hello World </h1>
   </Modal>
 </div>
