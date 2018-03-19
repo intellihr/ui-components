@@ -60,3 +60,7 @@ typings/
 # Compiled and built files
 es
 assets
+
+# Vim
+*.swp
+*.swo
