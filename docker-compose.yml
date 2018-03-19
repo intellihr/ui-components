@@ -1,5 +1,10 @@
 version: '3'
 services:
+  gitlab-ci:
+    image: ui-components:latest
+    volumes:
+      - ./node_modules:/code/node_modules
+
   ui-components:
     build: .
     command: yarn styleguide
