@@ -55,10 +55,10 @@
     "webpack-cli": "^2.0.10"
   },
   "scripts": {
-    "clean": "rm -rf assets && rm -rf es",
+    "clean": "rm -rf dist && rm -rf es",
     "compile": "rm -rf es && tsc",
     "test": "NODE_ENV=test && jest --no-cache",
-    "build": "yarn compile && rm -rf assets && webpack",
+    "build": "yarn clean && yarn compile && webpack",
     "styleguide:build": "styleguidist build",
     "styleguide": "styleguidist server",
     "gh-pages": "git subtree push --prefix styleguide origin gh-pages"

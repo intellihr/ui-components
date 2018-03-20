@@ -6,14 +6,21 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.jsx', '.js']
   },
   plugins: [
-    new ExtractTextPlugin('./bundle.css'),
+    new ExtractTextPlugin('[name]/[name].css'),
   ],
-  entry: [
-    './src/sass/app.scss'
-  ],
+  entry: {
+    Callout: './src/Callout',
+    Modal: './src/Modal'
+  },
   output: {
-    path: path.resolve(__dirname, 'assets'),
-    filename: 'bundle.css'
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name]/[name].js'
+  },
+  externals: {
+    'react': 'React',
+    'jquery': 'jQuery',
+    'lodash': '_',
+    'foundation-sites': 'Foundation'
   },
   module: {
     rules: [
