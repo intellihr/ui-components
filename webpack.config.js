@@ -1,22 +1,53 @@
 const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const webpack = require('webpack');
 
 module.exports = {
+  mode: 'development',
   resolve: {
     extensions: ['.ts', '.tsx', '.jsx', '.js']
   },
   plugins: [
-    new ExtractTextPlugin('./bundle.css'),
+    new ExtractTextPlugin('[name].css'),
   ],
-  entry: [
-    './src/sass/app.scss'
-  ],
+  entry: {
+    Callout: './src/Callout',
+    Modal: './src/Modal',
+  },
   output: {
-    path: path.resolve(__dirname, 'assets'),
-    filename: 'bundle.css'
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js',
+    libraryTarget: 'commonjs'
+  },
+  externals: {
+    'react': {
+      commonjs: 'react'
+    },
+    'lodash': {
+      commonjs: 'lodash',
+      commonjs2: 'lodash',
+      amd: 'lodash',
+      root: '_'
+    },
+    'jquery': 'jQuery',
+    'foundation-sites': 'Foundation',
+    'classnames': {
+      commonjs: 'classnames'
+    }
   },
   module: {
     rules: [
+      {
+        test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/',    // where the fonts will go
+            publicPath: '../'       // override the default path
+          }
+        }]
+      },
       {
         test: /\.(ts|tsx)$/,
         exclude: /(node_modules)/,
@@ -83,7 +114,7 @@ module.exports = {
               loader: '@epegzz/sass-vars-loader',
               options: {
                 files: [
-                  path.resolve(__dirname, 'src/colours/index.js')
+                  path.resolve(__dirname, 'src/sass/colours/index.js')
                 ]
               }
             }

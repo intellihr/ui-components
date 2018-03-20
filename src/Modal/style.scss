@@ -1,0 +1,14 @@
+@import '../sass/foundation_settings';
+
+:local(.modalClass) {
+  &.reveal {
+    margin: auto;
+    top: auto;
+    outline: none;
+
+    @include breakpoint(small down) {
+      height: auto;
+      position: initial;
+    }
+  }
+}
