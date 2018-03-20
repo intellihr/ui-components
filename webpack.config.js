@@ -6,21 +6,22 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.jsx', '.js']
   },
   plugins: [
-    new ExtractTextPlugin('[name]/[name].css'),
+    new ExtractTextPlugin('[name].css'),
   ],
   entry: {
     Callout: './src/Callout',
-    Modal: './src/Modal'
+    Modal: './src/Modal',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name]/[name].js'
+    filename: '[name].js'
   },
   externals: {
     'react': 'React',
     'jquery': 'jQuery',
     'lodash': '_',
-    'foundation-sites': 'Foundation'
+    'foundation-sites': 'Foundation',
+    'classnames': 'classNames'
   },
   module: {
     rules: [

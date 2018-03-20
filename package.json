@@ -2,9 +2,8 @@
   "name": "@intellihr/ui-components",
   "description": "A common React components library that is used in our company",
   "version": "1.0.0",
-  "main": "./es/index.js",
+  "main": "./dist/",
   "types": "./es/index.d.ts",
-  "module": "./es/index.js",
   "files": [
     "es",
     "assets",
