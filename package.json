@@ -51,8 +51,8 @@
     "webpack-cli": "^2.0.10"
   },
   "scripts": {
-    "clean": "rm -rf dist && rm -rf es",
-    "compile": "rm -rf es && tsc",
+    "clean": "rm -rf dist/* && rm -rf es/*",
+    "compile": "rm -rf es/* && tsc",
     "test": "NODE_ENV=test && jest --no-cache",
     "build": "yarn clean && yarn compile && webpack",
     "styleguide:build": "styleguidist build",

@@ -6,40 +6,33 @@ import net.intellihr.CodeAnalysis
 
 def helper = new net.intellihr.Helper(this)
 def analyse = new net.intellihr.CodeAnalysis(this)
-def pullRefsepc = env.CHANGE_TARGET ? '+refs/pull/' + env.CHANGE_ID + '/head:refs/remotes/origin/' + env.BRANCH_NAME : ''
 
 pipeline {
-
   agent {
-    docker {
-      image 'node:8.9.4'
+    dockerfile {
+      additionalBuildArgs '--force-rm'
     }
   }
 
-  options {
-    skipDefaultCheckout true
-  }
-
   stages {
-    stage('checkout') {
+    stage('Checkout gh-pages') {
       steps {
-        checkout(
-          [
-            $class: 'GitSCM',
-            branches: [[name: '*/master'], [name: '*/gh-pages']],
-            doGenerateSubmoduleConfigurations: false,
-            localBranch: 'master'],
-            extensions: [[$class: 'LocalBranch', localBranch: 'master'],
-            submoduleCfg: [],
-            userRemoteConfigs: [[credentialsId: 'GITHUB_CI', url: 'git@github.com:intellihr/ui-components.git']]
-          ]
-        )
+        dir ('/code') {
+          sshagent (credentials: ['GITHUB_CI']) {
+            sh '''
+              git fetch --no-tags --progress git@github.com:intellihr/ui-components.git \
+                +refs/heads/gh-pages:refs/remotes/origin/gh-pages
+            '''
+          }
+        }
       }
     }
 
     stage('Build') {
       steps {
-        sh 'yarn && yarn build'
+        dir ('/code') {
+          sh 'yarn build'
+        }
       }
     }
 
@@ -49,14 +42,16 @@ pipeline {
       }
 
       steps {
-        sshagent (credentials: ['GITHUB_CI']) {
-          script {
-            try {
-              sh 'git add .'
-              sh 'git -c user.email="continuous.integration@intellihr.com.au" -c user.name="IntelliHR CI" commit -m "Update gh-pages as of $(git log \'--format=format:%H\' remotes/origin/master -1)"'
-              sh 'yarn gh-pages'
-            } catch (Exception e) {
-              echo 'No need to publish gh-pages...Skipping...'
+        dir ('/code') {
+          sshagent (credentials: ['GITHUB_CI']) {
+            script {
+              try {
+                sh 'git add .'
+                sh 'git -c user.email="continuous.integration@intellihr.com.au" -c user.name="IntelliHR CI" commit -m "Update gh-pages as of $(git log \'--format=format:%H\' remotes/origin/master -1)"'
+                sh 'yarn gh-pages'
+              } catch (Exception e) {
+                echo 'No need to publish gh-pages...Skipping...'
+              }
             }
           }
         }
@@ -69,29 +64,31 @@ pipeline {
       }
 
       steps {
-        sshagent (credentials: ['GITHUB_CI']) {
-          sh 'git config user.email "continuous.integration@intellihr.com.au"'
-          sh 'git config user.name "IntelliHR CI"'
-        }
+        dir ('/code') {
+          sshagent (credentials: ['GITHUB_CI']) {
+            sh 'git config user.email "continuous.integration@intellihr.com.au"'
+            sh 'git config user.name "IntelliHR CI"'
+          }
 
-        withNPM(npmrcConfig: 'npm-config') {
-          script {
-            try {
-              echo 'About to publish to npm'
-              sh 'npm version patch'
-            } catch (Exception e) {
-              echo 'No need to update the version...Skipping...'
+          withNPM(npmrcConfig: 'npm-config') {
+            script {
+              try {
+                echo 'About to publish to npm'
+                sh 'npm version patch'
+              } catch (Exception e) {
+                echo 'No need to update the version...Skipping...'
+              }
             }
           }
-        }
 
-        sshagent (credentials: ['GITHUB_CI']) {
-          script {
-            try {
-              sh 'git branch'
-              sh 'git push origin master'
-            } catch (Exception e) {
-              echo 'Nothing to push...'
+          sshagent (credentials: ['GITHUB_CI']) {
+            script {
+              try {
+                sh 'git branch'
+                sh 'git push origin master'
+              } catch (Exception e) {
+                echo 'Nothing to push...'
+              }
             }
           }
         }
