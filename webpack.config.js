@@ -1,7 +1,9 @@
 const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const webpack = require('webpack');
 
 module.exports = {
+  mode: 'development',
   resolve: {
     extensions: ['.ts', '.tsx', '.jsx', '.js']
   },
@@ -14,14 +16,24 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js'
+    filename: '[name].js',
+    libraryTarget: 'commonjs'
   },
   externals: {
-    'react': 'React',
+    'react': {
+      commonjs: 'react'
+    },
+    'lodash': {
+      commonjs: 'lodash',
+      commonjs2: 'lodash',
+      amd: 'lodash',
+      root: '_'
+    },
     'jquery': 'jQuery',
-    'lodash': '_',
     'foundation-sites': 'Foundation',
-    'classnames': 'classNames'
+    'classnames': {
+      commonjs: 'classnames'
+    }
   },
   module: {
     rules: [

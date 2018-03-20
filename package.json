@@ -6,14 +6,11 @@
   "types": "./es/index.d.ts",
   "files": [
     "es",
-    "assets",
-    "src"
+    "dist"
   ],
   "dependencies": {
     "@types/jquery": "^3.3.1",
-    "classnames": "^2.2.5",
-    "jest": "^22.4.2",
-    "lodash": "^4.17.5"
+    "jest": "^22.4.2"
   },
   "devDependencies": {
     "@epegzz/sass-vars-loader": "^3.2.0",
@@ -21,13 +18,14 @@
     "@types/jest": "^22.2.0",
     "@types/lodash": "^4.14.104",
     "@types/react": "^16.0.40",
-    "awesome-typescript-loader": "4",
+    "awesome-typescript-loader": "^4.0.1",
+    "classnames": "^2.2.5",
     "compass-mixins": "^0.12.10",
     "css-loader": "^0.28.10",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.1",
-    "extract-text-webpack-plugin": "^3.0.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
     "font-awesome": "^4.7.0",
     "foundation-datepicker": "1.5.3",
@@ -44,13 +42,12 @@
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.2",
     "ts-jest": "^22.4.1",
-    "ts-loader": "3",
     "tslint": "^5.9.1",
     "tslint-loader": "^3.6.0",
     "tslint-microsoft-contrib": "^5.0.3",
     "typescript": "^2.7.2",
     "url-loader": "^1.0.1",
-    "webpack": "3",
+    "webpack": "^4.1.1",
     "webpack-cli": "^2.0.10"
   },
   "scripts": {
