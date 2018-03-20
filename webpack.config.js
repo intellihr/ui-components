@@ -11,14 +11,16 @@ module.exports = {
     new ExtractTextPlugin('[name].css'),
   ],
   entry: {
-    Callout: './src/Callout',
-    Modal: './src/Modal',
+    index: './src/index.ts',
+    Callout: './src/Callout/Callout.tsx',
+    Modal: './src/Modal/Modal.tsx',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
     libraryTarget: 'commonjs'
   },
+  devtool: 'inline-source-map',
   externals: {
     'react': {
       commonjs: 'react'
@@ -29,8 +31,12 @@ module.exports = {
       amd: 'lodash',
       root: '_'
     },
-    'jquery': 'jQuery',
-    'foundation-sites': 'Foundation',
+    'jquery': {
+      commonjs: 'jquery'
+    },
+    'foundation-sites': {
+      commonjs: 'foundation-sites'
+    },
     'classnames': {
       commonjs: 'classnames'
     }
