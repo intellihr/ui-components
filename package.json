@@ -37,7 +37,7 @@
     "react": "^16.2.0",
     "react-docgen-typescript": "^1.2.5",
     "react-dom": "^16.2.0",
-    "react-styleguidist": "https://github.com/boazhoch/react-styleguidist.git#fix/html-webpack-plugin",
+    "react-styleguidist": "https://github.com/intellihr/react-styleguidist.git#master",
     "react-test-renderer": "^16.2.0",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.2",
