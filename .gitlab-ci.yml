@@ -92,6 +92,7 @@ deploy-npm:
         git config user.name 'IntelliHR CI' &&
         echo '//registry.npmjs.org/:_authToken=$NPM_TOKEN' > .npmrc &&
         npm version $RELEASE_VERSION -m '[skip ci] Upgrade to %s' &&
+        npm publish --access public &&
         git push https://$GIT_USERNAME:$GIT_TOKEN@gitlab.com/intellihr/ui-components.git HEAD:master
       "
   only:
