@@ -2,7 +2,7 @@ image: tmaier/docker-compose:latest
 
 variables:
   DOCKER_DRIVER: overlay2
-  RELEASE_VERSION: patch
+  RELEASE_VERSION: prerelease
 
 services:
   - docker:dind
@@ -93,7 +93,7 @@ deploy-npm:
         echo '//registry.npmjs.org/:_authToken=$NPM_TOKEN' > .npmrc &&
         npm version $RELEASE_VERSION -m '[skip ci] Upgrade to %s' &&
         npm publish --access public &&
-        git push https://$GIT_USERNAME:$GIT_TOKEN@gitlab.com/intellihr/ui-components.git HEAD:master
+        git push https://$GIT_USERNAME:$GIT_TOKEN@gitlab.com/intellihr/ui-components.git --follow-tags HEAD:master
       "
   only:
     refs:
