@@ -65,3 +65,6 @@ dist
 # Vim
 *.swp
 *.swo
+
+# NPM
+.npmrc

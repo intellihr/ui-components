@@ -13,7 +13,7 @@ git fetch gitlab master develop
 git push --follow-tags gitlab HEAD:master
 git rebase gitlab/master gitlab/develop
 
-sed -ir "s/\sRELEASE_VERSION.*/ RELEASE_VERSION: $DEFAULT_RELEASE_VERSION/" .gitlab-ci.yml
+sed -i -r "s/\sRELEASE_VERSION.*/ RELEASE_VERSION: $DEFAULT_RELEASE_VERSION/" .gitlab-ci.yml
 
 if ! git diff-index --quiet HEAD --; then
   git add .gitlab-ci.yml
