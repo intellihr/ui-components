@@ -17,7 +17,7 @@ sed -i -r "s/\sRELEASE_VERSION.*/ RELEASE_VERSION: $DEFAULT_RELEASE_VERSION/" .g
 
 if ! git diff-index --quiet HEAD --; then
   git add .gitlab-ci.yml
-  git commit -m "Reset to default release version"
+  git commit -m "Reset to default release version $DEFAULT_RELEASE_VERSION"
 fi
 
 git push gitlab HEAD:develop
