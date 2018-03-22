@@ -1,20 +1,14 @@
-# ui-components
+# @intellihr/ui-components
 
-A common React components library that is used in our company
-
-## Why
-
-It helps we migrate our UI specific logic, and it's single source of truth of components.
+A common React components library that is used in our company.
 
 ## Get Started
 
-To preview the components without local development, we could simply run the docker container:
-
-``` sh
-docker-compose up -d
+```javascript
+yarn add @intellihr/ui-components
+// or
+npm i @intellihr/ui-components
 ```
-
-## Usage
 
 To use in the consumer project, we could simply do this (only import the css if the component has a specific css module/file):
 
@@ -25,15 +19,30 @@ import '@intellihr/ui-components/dist/Modal.css'
 
 ## Local Development Guide
 
-### No default class
+After clone down the repository, please install local dependencies:
 
-## Compilation
+```javascript
+yarn
+```
 
-Basically it uses 
+To preview the components, we could write a example usage in the Markdown file with JSX syntax in the component folder, e.g. `Callout.examples.md`
 
-## Typescript Usage
+```jsx
+<Callout type="info">
+  <div className="title">
+  Information!
+  </div>
+  Bringing you the lasted news.
+</Callout>
+```
 
-This project is written in Typescript.
+Some development points:
+
+* Tests are written in `__tests__` of each component folder
+
+* No default export (https://palantir.github.io/tslint/rules/no-default-export/)
+
+* This project is developed with Typescript
 
 ## Customisation
 
