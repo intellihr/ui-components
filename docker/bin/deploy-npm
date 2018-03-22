@@ -1,0 +1,16 @@
+#!/bin/sh
+
+git config user.email "continuous.integration@intellihr.com.au"
+git config user.name "IntelliHR CI"
+
+echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
+
+npm version $RELEASE_VERSION -m "[skip ci] Upgrade to %s"
+npm publish --access public
+
+git remote add gitlab https://$GIT_USERNAME:$GIT_TOKEN@gitlab.com/intellihr/ui-components.git
+git fetch gitlab master develop
+git push --follow-tags gitlab HEAD:master
+git rebase gitlab/master gitlab/develop
+git push gitlab HEAD:develop
+

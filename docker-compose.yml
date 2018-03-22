@@ -4,6 +4,11 @@ services:
     image: ui-components:latest
     volumes:
       - ./node_modules:/code/node_modules
+    environment:
+      - RELEASE_VERSION=${RELEASE_VERSION}
+      - NPM_TOKEN=${NPM_TOKEN}
+      - GIT_USERNAME=${GIT_USERNAME}
+      - GIT_TOKEN=${GIT_TOKEN}
 
   ui-components:
     build: .
