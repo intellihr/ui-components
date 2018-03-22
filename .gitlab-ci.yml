@@ -28,6 +28,7 @@ prepare-image:
 
 install-package:
   stage: install
+  retry: 2
   script:
     - docker-compose run -v ./node_modules:/code/node_modules --rm gitlab-ci /bin/sh -c
       "

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -xe
 
 git config user.email "continuous.integration@intellihr.com.au"
 git config user.name "IntelliHR CI"
