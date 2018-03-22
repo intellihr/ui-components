@@ -9,10 +9,10 @@
     "dist"
   ],
   "dependencies": {
-    "@types/jquery": "^3.3.1",
-    "jest": "^22.4.2"
   },
   "devDependencies": {
+    "jest": "^22.4.2",
+    "@types/jquery": "^3.3.1",
     "@epegzz/sass-vars-loader": "^3.2.0",
     "@types/classnames": "^2.2.3",
     "@types/jest": "^22.2.0",
