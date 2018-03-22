@@ -2,6 +2,7 @@ image: tmaier/docker-compose:latest
 
 variables:
   DOCKER_DRIVER: overlay2
+  DEFAULT_RELEASE_VERSION: prepatch
   RELEASE_VERSION: prerelease
 
 services:
