@@ -14,7 +14,7 @@ before_script:
 stages:
   - prepare
   - install
-  #- test
+  - test
   - build
   - deploy
 
@@ -40,10 +40,10 @@ install-package:
     paths:
       - node_modules/
 
-#test:
-  #stage: test
-  #script:
-    #- docker-compose run -v ./node_modules:/code/node_modules --rm gitlab-ci yarn test
+test:
+  stage: test
+  script:
+    - docker-compose run -v ./node_modules:/code/node_modules --rm gitlab-ci yarn test
 
 build-bundle:
   stage: build
@@ -53,34 +53,34 @@ build-bundle:
     paths:
       - es/
       - dist/
-  #only:
-    #refs:
-      #- master
+  only:
+    refs:
+      - master
 
-#build-styleguide:
-  #stage: build
-  #script:
-    #- docker-compose run -v ./styleguide:/code/styleguide --rm gitlab-ci yarn styleguide:build
-  #artifacts:
-    #paths:
-      #- styleguide/
-  #only:
-    #refs:
-      #- master
+build-styleguide:
+  stage: build
+  script:
+    - docker-compose run -v ./styleguide:/code/styleguide --rm gitlab-ci yarn styleguide:build
+  artifacts:
+    paths:
+      - styleguide/
+  only:
+    refs:
+      - master
 
-#pages:
-  #stage: deploy
-  #dependencies:
-    #- build-styleguide
-  #script:
-    #- mkdir public
-    #- cp -r styleguide/* public
-  #artifacts:
-    #paths:
-      #- public
-  #only:
-    #refs:
-      #- master
+pages:
+  stage: deploy
+  dependencies:
+    - build-styleguide
+  script:
+    - mkdir public
+    - cp -r styleguide/* public
+  artifacts:
+    paths:
+      - public
+  only:
+    refs:
+      - master
 
 deploy-npm:
   stage: deploy
@@ -89,6 +89,6 @@ deploy-npm:
     - build-bundle
   script:
     - docker-compose run -v ./es:/code/es -v ./dist:/code/dist --rm gitlab-ci ./docker/bin/deploy-npm
-  #only:
-    #refs:
-      #- master
+  only:
+    refs:
+      - master
