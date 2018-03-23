@@ -33,7 +33,7 @@ install-package:
   script:
     - docker-compose run -v ./node_modules:/code/node_modules --rm gitlab-ci /bin/sh -c
       "
-        yarn install --frozen-lockfile &&
+        yarn install --frozen-lockfile --network-concurrency 10 &&
         npm rebuild node-sass
       "
   artifacts:
