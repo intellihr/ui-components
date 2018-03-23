@@ -1,0 +1,16 @@
+version: "2"
+
+plugins:
+  eslint:
+    enabled: true
+    config:
+      extensions:
+        - .ts
+        - .tsx
+        - .js
+        - .jsx
+
+exclude_patterns:
+  - 'node_modules/*'
+  - 'coverage/*'
+  - 'styleguide/*'
