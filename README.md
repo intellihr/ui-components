@@ -2,6 +2,18 @@
 
 A common React components library that is used in our company.
 
+# Table of Contents
+
+* [Get Started](#get-started)
+* [Local Development Guide](#local-development-guide)
+  * [Run Docker](#run-docker)
+  * [Install Dependency](#install-dependency)
+  * [Development](#development)
+  * [Lint](#lint)
+* [Customisation](#customisation)
+* [Known Issues](#known-issues)
+  * [Lint Check False Positive on `no-undef`](#lint-check-false-positive-on-no-undef)
+
 ## Get Started
 
 ```javascript
@@ -19,17 +31,28 @@ import '@intellihr/ui-components/dist/Modal.css'
 
 ## Local Development Guide
 
+### Run Docker
+
 After clone down the repository, please run everything inside the provided docker container
 
 ```!bash
 docker-compose run --rm code /bin/sh
 ```
 
+### Install Dependency
+
 Please install local dependencies:
 
-```javascript
-yarn
+```!bash
+yarn i
 ```
+or
+```!bash
+yarn install
+npm rebuild node-sass
+```
+
+### Development
 
 To preview the components, we could write a example usage in the Markdown file with JSX syntax in the component folder, e.g. `Callout.examples.md`
 
@@ -50,6 +73,18 @@ Some development points:
 
 * This project is developed with Typescript
 
+### Lint
+
+Style Check
+```!bash
+yarn lint
+```
+
+with autofix
+```!bash
+yarn lint:fix
+```
+
 ## Customisation
 
 If you need a customised e.g. `Callout` component, you could do something like:
@@ -63,3 +98,12 @@ class MyCallout extends React.SFC<MyCalloutProps> {
   }
 }
 ```
+
+## Known Issues
+
+### Lint check false positive on `no-undef`
+If you see standard is complaining about `no-undef`, you can simply ignore them and add
+```javascript
+/* eslint no-undef: 0 */
+```
+at the top of the file. (see: https://github.com/eslint/typescript-eslint-parser/issues/416)
