@@ -1,3 +1,4 @@
+/* eslint no-undef: 0 */
 import classNames from 'classnames'
 import { isEmpty } from 'lodash'
 import React from 'react'

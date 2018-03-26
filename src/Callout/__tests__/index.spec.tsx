@@ -1,6 +1,5 @@
 import { shallow } from 'enzyme'
 import React from 'react'
-import ReactDOM from 'react-dom'
 import reactRenderer from 'react-test-renderer'
 
 import { Callout } from '../'

@@ -1,3 +1,4 @@
+/* eslint no-undef: 0 */
 import classNames from 'classnames'
 import 'foundation-sites'
 import { default as jQuery } from 'jquery'

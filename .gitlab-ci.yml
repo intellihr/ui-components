@@ -40,6 +40,11 @@ install-package:
     paths:
       - node_modules/
 
+lint:
+  stage: test
+  script:
+    - docker-compose run -v ./node_modules:/code/node_modules --rm gitlab-ci yarn lint
+
 test:
   stage: test
   script:
