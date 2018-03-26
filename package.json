@@ -54,7 +54,6 @@
   "scripts": {
     "i": "yarn && npm rebuild node-sass",
     "clean": "rm -rf dist/* && rm -rf es/*",
-    "clean": "rm -rf dist/* && rm -rf es/*",
     "compile": "rm -rf es/* && tsc",
     "test": "NODE_ENV=test && jest --no-cache",
     "lint": "standard **/*.{ts,tsx,js,jsx} --verbose | snazzy",
