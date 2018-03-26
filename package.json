@@ -64,7 +64,8 @@
     "build:watch": "yarn build -d --watch",
     "styleguide:build": "styleguidist build",
     "styleguide": "styleguidist server",
-    "gh-pages": "git subtree push --prefix styleguide origin gh-pages"
+    "gh-pages": "git subtree push --prefix styleguide origin gh-pages",
+    "codequality": "docker run --env SOURCE_CODE=$(pwd) --volume $(pwd):/code --volume /var/run/docker.sock:/var/run/docker.sock quay.io/intellihr/codequality /code"
   },
   "repository": {
     "type": "git",

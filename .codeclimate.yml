@@ -1,16 +1,11 @@
 version: "2"
 
 plugins:
-  eslint:
+  fixme:
     enabled: true
-    config:
-      extensions:
-        - .ts
-        - .tsx
-        - .js
-        - .jsx
-
-exclude_patterns:
-  - 'node_modules/*'
-  - 'coverage/*'
-  - 'styleguide/*'
+  shellcheck:
+    enabled: true
+  nodesecurity:
+    enabled: true
+  markdownlint:
+    enabled: true
