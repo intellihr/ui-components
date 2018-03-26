@@ -19,7 +19,13 @@ import '@intellihr/ui-components/dist/Modal.css'
 
 ## Local Development Guide
 
-After clone down the repository, please install local dependencies:
+After clone down the repository, please run everything inside the provided docker container
+
+```!bash
+docker-compose run --rm code /bin/sh
+```
+
+Please install local dependencies:
 
 ```javascript
 yarn

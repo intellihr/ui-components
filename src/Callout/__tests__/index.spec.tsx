@@ -8,8 +8,8 @@ import { Callout } from '../'
 describe('Callout', () => {
   it('Renders successfully', () => {
     const component = reactRenderer.create(
-      <Callout type="success" justifyCenter>
-        <div className="title">
+      <Callout type='success' justifyCenter>
+        <div className='title'>
             Well done!
         </div>
               You successfully read this important alert message.
@@ -17,13 +17,13 @@ describe('Callout', () => {
     )
 
     const tree = component.toJSON()
-    expect(tree).toMatchSnapshot();
+    expect(tree).toMatchSnapshot()
   })
 
   it('Renders with DOM assertion', () => {
     const component = shallow(
-      <Callout type="success" justifyCenter>
-        <div className="title">
+      <Callout type='success' justifyCenter>
+        <div className='title'>
             Well done!
         </div>
               You successfully read this important alert message.
@@ -36,16 +36,16 @@ describe('Callout', () => {
   it('Renders successfully when messages are passed', () => {
     const messages: string[] = ['You are wrong', 'hey', 'what']
     const component = reactRenderer.create(
-      <Callout type="warning" messages={messages}/>
+      <Callout type='warning' messages={messages} />
     )
     const tree = component.toJSON()
-    expect(tree).toMatchSnapshot();
+    expect(tree).toMatchSnapshot()
   })
 
   it('Renders successfully when only message is passed', () => {
     const msg: string = 'hello world'
     const wrapper = shallow(
-      <Callout type="info" message={msg} />
+      <Callout type='info' message={msg} />
     )
 
     expect(wrapper).toMatchSnapshot()
@@ -57,26 +57,25 @@ describe('Callout', () => {
     const messages: string[] = ['You are wrong', 'hey', 'what']
 
     const component = reactRenderer.create(
-      <Callout type="info" message={msg} messages={messages} />
+      <Callout type='info' message={msg} messages={messages} />
     )
     const tree = component.toJSON()
-    expect(tree).toMatchSnapshot();
+    expect(tree).toMatchSnapshot()
   })
 
   it('Renders successfully when messages has length 1', () => {
     const messages: string[] = ['Hello world']
 
     const component = reactRenderer.create(
-      <Callout type="info" messages={messages} justifyCenter/>
+      <Callout type='info' messages={messages} justifyCenter />
     )
     const tree = component.toJSON()
-    expect(tree).toMatchSnapshot();
+    expect(tree).toMatchSnapshot()
   })
 
   it('Renders without any message/messages or children', () => {
-
     const wrapper = shallow(
-      <Callout type="info"/>
+      <Callout type='info' />
     )
     expect(wrapper).toMatchSnapshot()
   })

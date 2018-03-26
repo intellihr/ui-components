@@ -11,8 +11,13 @@ services:
       - GIT_USERNAME=${GIT_USERNAME}
       - GIT_TOKEN=${GIT_TOKEN}
 
-  ui-components:
+  code:
     build: .
-    command: yarn styleguide
+    volumes:
+      - .:/code
+      - ui-components:/code/node_modules # Optimisation for Docker-Mac
     ports:
       - 6060:6060
+
+volumes:
+  ui-components: ~

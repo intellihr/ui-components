@@ -1,32 +1,32 @@
 module.exports = {
   moduleFileExtensions: [
-    "ts",
-    "tsx",
-    "js"
+    'ts',
+    'tsx',
+    'js'
   ],
   transform: {
-    "^.+\\.(ts|tsx)?$": "ts-jest",
-    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-    "<rootDir>/assetsTransformer.js"
+    '^.+\\.(ts|tsx)?$': 'ts-jest',
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+    '<rootDir>/assetsTransformer.js'
   },
-  testRegex: "/__tests__/.*\\.(ts|tsx|js)$",
+  testRegex: '/__tests__/.*\\.(ts|tsx|js)$',
   collectCoverage: true,
-  coverageDirectory: "<rootDir>/coverage/",
+  coverageDirectory: '<rootDir>/coverage/',
   coverageReporters: [
-    "text",
-    "html",
+    'text',
+    'html'
   ],
-  collectCoverageFrom : [
-    "src/**/*.tsx",
-    "!src/style.tsx",
-    "!**/examples/**"
+  collectCoverageFrom: [
+    'src/**/*.tsx',
+    '!src/style.tsx',
+    '!**/examples/**'
   ],
   globals: {
     'ts-jest': {
       tsConfigFile: 'tsconfig-jest.json',
-      useBabelrc: true,
+      useBabelrc: true
     }
   },
-  setupTestFrameworkScriptFile: "./setupTest.ts",
-  snapshotSerializers: ["enzyme-to-json/serializer"]
-};
+  setupTestFrameworkScriptFile: './setupTest.ts',
+  snapshotSerializers: ['enzyme-to-json/serializer']
+}

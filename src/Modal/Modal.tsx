@@ -14,27 +14,26 @@ export interface ModalProps {
 }
 
 export class Modal extends React.Component<ModalProps, any> {
-
   public _modal: any
 
-  constructor(props: any) {
+  constructor (props: any) {
     super(props)
 
     this._modal = {}
   }
-  public componentDidMount() {
+  public componentDidMount () {
     const { id } = this.props
     this._modal = new Foundation.Reveal(jQuery(`#${id}`))
   }
 
-  public componentWillUnmount() {
+  public componentWillUnmount () {
     const { id } = this.props
 
     this._modal.close()
     jQuery(`#${id}`).parent().remove()
   }
 
-  get children() {
+  get children () {
     const {
       children
     } = this.props
@@ -59,7 +58,7 @@ export class Modal extends React.Component<ModalProps, any> {
     )
   }
 
-  get size() {
+  get size () {
     const { size } = this.props
 
     if (size) {
@@ -71,7 +70,7 @@ export class Modal extends React.Component<ModalProps, any> {
 
   public closeModal = () => this._modal.close()
 
-  get closeButton() {
+  get closeButton () {
     const {
       showCloseButton
     } = this.props
@@ -79,17 +78,17 @@ export class Modal extends React.Component<ModalProps, any> {
     if (showCloseButton) {
       return (
         <button
-          className="close-button"
-          type="button"
+          className='close-button'
+          type='button'
           onClick={this.closeModal}
         >
-          <span aria-hidden="true">&times;</span>
+          <span aria-hidden='true'>&times;</span>
         </button>
       )
     }
   }
 
-  public render() {
+  public render () {
     const {
       id,
       className

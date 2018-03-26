@@ -12,7 +12,7 @@ export interface CalloutProps {
 }
 
 export class Callout extends React.Component<CalloutProps, any> {
-  get messages() {
+  get messages () {
     const { message } = this.props
     let { messages } = this.props
 
@@ -21,13 +21,13 @@ export class Callout extends React.Component<CalloutProps, any> {
     }
 
     if (message) {
-      messages = [message, ...messages];
+      messages = [message, ...messages]
     }
 
     return messages
   }
 
-  get messagesList() {
+  get messagesList () {
     const messages = this.messages
 
     if (isEmpty(messages)) {
@@ -45,7 +45,7 @@ export class Callout extends React.Component<CalloutProps, any> {
     )
   }
 
-  get classNames(): string[] {
+  get classNames (): string[] {
     const {
       justifyCenter,
       type
@@ -63,7 +63,7 @@ export class Callout extends React.Component<CalloutProps, any> {
     return cNames
   }
 
-  public render(): JSX.Element | null {
+  public render (): JSX.Element | null {
     const { children } = this.props
 
     if (isEmpty(this.messages) && !children) {
@@ -74,7 +74,7 @@ export class Callout extends React.Component<CalloutProps, any> {
       <div
         className={classNames(this.classNames)}
       >
-        <div className="content">
+        <div className='content'>
           {this.messagesList}
           {children}
         </div>

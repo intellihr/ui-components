@@ -1,6 +1,5 @@
-const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const webpack = require('webpack');
+const path = require('path')
 
 module.exports = {
   mode: 'development',
@@ -8,19 +7,18 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.jsx', '.js']
   },
   plugins: [
-    new ExtractTextPlugin('[name].css'),
+    new ExtractTextPlugin('[name].css')
   ],
   entry: {
     index: './src/index.ts',
     Callout: './src/Callout/Callout.tsx',
-    Modal: './src/Modal/Modal.tsx',
+    Modal: './src/Modal/Modal.tsx'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
     libraryTarget: 'commonjs'
   },
-  devtool: 'inline-source-map',
   externals: {
     'react': {
       commonjs: 'react'
@@ -49,25 +47,31 @@ module.exports = {
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            outputPath: 'fonts/',    // where the fonts will go
-            publicPath: '../'       // override the default path
+            outputPath: 'fonts/', // where the fonts will go
+            publicPath: '../' // override the default path
           }
         }]
       },
       {
-        test: /\.(ts|tsx)$/,
+        test: /\.tsx?$/,
         exclude: /(node_modules)/,
         enforce: 'pre',
-        loader: 'tslint-loader',
+        loader: 'standard-loader',
+        options: {
+          parser: 'typescript-eslint-parser',
+          plugins: [
+            'typescript'
+          ]
+        }
       },
       {
-        test: /\.(ts|tsx)$/,
+        test: /\.tsx?$/,
         exclude: /(node_modules)/,
         use: [
           {
-            loader: 'awesome-typescript-loader',
+            loader: 'awesome-typescript-loader'
           }
-        ],
+        ]
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
@@ -81,7 +85,7 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader'
-        ],
+        ]
       },
       {
         test: /\.scss$/,
@@ -128,6 +132,5 @@ module.exports = {
         })
       }
     ]
-  },
-  devtool: 'source-map'
+  }
 }

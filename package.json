@@ -10,11 +10,10 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "jest": "^22.4.2",
-    "@types/jquery": "^3.3.1",
     "@epegzz/sass-vars-loader": "^3.2.0",
     "@types/classnames": "^2.2.3",
     "@types/jest": "^22.2.0",
+    "@types/jquery": "^3.3.1",
     "@types/lodash": "^4.14.104",
     "@types/react": "^16.0.40",
     "awesome-typescript-loader": "^4.0.1",
@@ -24,11 +23,13 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.1",
+    "eslint-plugin-typescript": "^0.10.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
     "font-awesome": "^4.7.0",
     "foundation-datepicker": "1.5.3",
     "foundation-sites": "^6.4.4-rc1",
+    "jest": "^22.4.2",
     "jquery": "^3.3.1",
     "node-sass": "^4.7.2",
     "postcss-cssnext": "^3.1.0",
@@ -39,12 +40,13 @@
     "react-styleguidist": "https://github.com/intellihr/react-styleguidist.git#357d8ddf375a3669a8f6a8a2753a6212ea11f0ed",
     "react-test-renderer": "^16.2.0",
     "sass-loader": "^6.0.7",
+    "snazzy": "^7.1.1",
+    "standard": "^11.0.1",
+    "standard-loader": "^6.0.1",
     "style-loader": "^0.20.2",
     "ts-jest": "^22.4.1",
-    "tslint": "^5.9.1",
-    "tslint-loader": "^3.6.0",
-    "tslint-microsoft-contrib": "^5.0.3",
     "typescript": "^2.7.2",
+    "typescript-eslint-parser": "^14.0.0",
     "url-loader": "^1.0.1",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.10"
@@ -53,7 +55,10 @@
     "clean": "rm -rf dist/* && rm -rf es/*",
     "compile": "rm -rf es/* && tsc",
     "test": "NODE_ENV=test && jest --no-cache",
-    "build": "yarn clean && yarn compile && webpack",
+    "lint": "standard **/*.{ts,tsx,js,jsx} --verbose | snazzy",
+    "lint:fix": "standard **/*.{ts,tsx,js,jsx} --verbose --fix | snazzy",
+    "build": "yarn clean && yarn compile && webpack --progress",
+    "build:watch": "yarn build -d --watch",
     "styleguide:build": "styleguidist build",
     "styleguide": "styleguidist server",
     "gh-pages": "git subtree push --prefix styleguide origin gh-pages"
@@ -73,5 +78,18 @@
   "bugs": {
     "url": "https://github.com/intellihr/ui-components/issues"
   },
-  "homepage": "https://github.com/intellihr/ui-components#readme"
+  "homepage": "https://github.com/intellihr/ui-components#readme",
+  "standard": {
+    "parser": "typescript-eslint-parser",
+    "envs": [
+      "jest"
+    ],
+    "plugins": [
+      "typescript"
+    ],
+    "ignore": [
+      "node_modules/**",
+      "styleguide/**"
+    ]
+  }
 }
