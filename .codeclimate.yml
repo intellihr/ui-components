@@ -9,3 +9,19 @@ plugins:
     enabled: true
   markdownlint:
     enabled: true
+
+exclude_patterns:
+  - config/
+  - db/
+  - dist/
+  - features/
+  - script/
+  - es/
+  - coverage/
+  - styleguide/
+  - "**/node_modules/"
+  - "**/spec/"
+  - "**/test/"
+  - "**/tests/"
+  - "**/vendor/"
+  - "**/*.d.ts"

@@ -1,4 +1,7 @@
-A Sample Button Component
+# Button
+
+### A Sample Button Component
+
 ```jsx
 <Button />
 ```

@@ -49,21 +49,31 @@ test:
   script:
     - docker-compose run --rm gitlab-ci yarn test
 
-codequality:
+codequality: &codequality
   stage: test
+  variables:
+    CODECLIMATE_FORMAT: json
   dependencies: []
   script:
     - docker pull codeclimate/codeclimate
     - export SP_VERSION=$(echo "$CI_SERVER_VERSION" | sed 's/^\([0-9]*\)\.\([0-9]*\).*/\1-\2-stable/')
     - docker run
       --env SOURCE_CODE="$PWD"
-      --env CODECLIMATE_DEBUG=1
+      --env CODECLIMATE_FORMAT="$CODECLIMATE_FORMAT"
       --volume "$PWD":/code
       --volume /var/run/docker.sock:/var/run/docker.sock
       quay.io/intellihr/codequality:latest /code
   artifacts:
     paths:
       - codeclimate.json
+
+codequality-html:
+  <<: *codequality
+  variables:
+    CODECLIMATE_FORMAT: html
+  artifacts:
+    paths:
+      - .codeclimate/
 
 build-bundle:
   stage: build
