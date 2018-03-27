@@ -58,9 +58,10 @@ typings/
 .env
 
 # Compiled and built files
-es
-assets
-dist
+es/
+assets/
+dist/
+styleguide/
 
 # Vim
 *.swp

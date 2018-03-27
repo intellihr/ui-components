@@ -31,7 +31,7 @@ install-package:
   stage: install
   retry: 2
   script:
-    - docker-compose run -v ./node_modules:/code/node_modules --rm gitlab-ci /bin/sh -c
+    - docker-compose run --rm gitlab-ci /bin/sh -c
       "
         yarn install --frozen-lockfile --network-concurrency 10 &&
         npm rebuild node-sass
@@ -43,17 +43,17 @@ install-package:
 lint:
   stage: test
   script:
-    - docker-compose run -v ./node_modules:/code/node_modules --rm gitlab-ci yarn lint
+    - docker-compose run --rm gitlab-ci yarn lint
 
 test:
   stage: test
   script:
-    - docker-compose run -v ./node_modules:/code/node_modules --rm gitlab-ci yarn test
+    - docker-compose run --rm gitlab-ci yarn test
 
 build-bundle:
   stage: build
   script:
-    - docker-compose run -v ./es:/code/es -v ./dist:/code/dist --rm gitlab-ci yarn build
+    - docker-compose run --rm gitlab-ci yarn build
   artifacts:
     paths:
       - es/
@@ -65,7 +65,7 @@ build-bundle:
 build-styleguide:
   stage: build
   script:
-    - docker-compose run -v ./styleguide:/code/styleguide --rm gitlab-ci yarn styleguide:build
+    - docker-compose run --rm gitlab-ci yarn styleguide:build
   artifacts:
     paths:
       - styleguide/
@@ -93,7 +93,7 @@ deploy-npm:
     - prepare-image
     - build-bundle
   script:
-    - docker-compose run -v ./es:/code/es -v ./dist:/code/dist --rm gitlab-ci ./docker/bin/deploy-npm
+    - docker-compose run --rm gitlab-ci ./docker/bin/deploy-npm
   only:
     refs:
       - master
