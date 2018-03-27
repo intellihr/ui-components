@@ -11,7 +11,6 @@ export interface CalloutProps {
   messages?: string[];
   justifyCenter?: boolean;
   shouldFocus: boolean;
-  handleFocus?: () => void;
 }
 
 export interface CalloutState {
@@ -19,15 +18,15 @@ export interface CalloutState {
 }
 
 export class Callout extends React.Component<CalloutProps, CalloutState> {
-
   private node: HTMLDivElement | null = null
 
   public state: CalloutState = { willFocus: true }
 
   handleFocus = () => {
-    const { shouldFocus, handleFocus } = this.props
-    debugger
-    if (shouldFocus && this.state.willFocus && this.node) {
+    const { shouldFocus } = this.props
+    const { willFocus } = this.state
+
+    if (shouldFocus && willFocus && this.node) {
       this.node.scrollIntoView()
       this.setState({
         willFocus: false
@@ -104,7 +103,7 @@ export class Callout extends React.Component<CalloutProps, CalloutState> {
     return (
       <div
         className={classNames(this.classNames)}
-        ref={node => this.node = node}
+        ref={node => { this.node = node }}
       >
         <div className='content'>
           {this.messagesList}
