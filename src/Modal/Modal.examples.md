@@ -1,3 +1,5 @@
+# Modal
+
 ### A Simple Modal
 
 ```jsx
@@ -8,7 +10,6 @@
   </Modal>
 </div>
 ```
-
 
 ### A Modal with Close Button
 
