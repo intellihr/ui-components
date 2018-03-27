@@ -1,6 +1,6 @@
 # Button
 
-### A Sample Button Component
+## A Sample Button Component
 
 ```jsx
 <Button />

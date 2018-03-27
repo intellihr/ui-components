@@ -1,6 +1,6 @@
 # Callout
 
-### Generate Message
+## Generate Message
 
 ```jsx
 <Callout type="info">
@@ -13,7 +13,7 @@
 
 For when you have a message for the user
 
-### Successful Message
+## Successful Message
 
 ```jsx
 <Callout type="success">
@@ -26,7 +26,7 @@ For when you have a message for the user
 
 For when an action is successfully performed
 
-### Warning Message
+## Warning Message
 
 ```jsx
 <Callout type="warning">
@@ -39,7 +39,7 @@ For when an action is successfully performed
 
 For when an action might have an undesired effect
 
-### Error Message
+## Error Message
 
 ```jsx
 <Callout type="error">
@@ -52,7 +52,7 @@ For when an action might have an undesired effect
 
 For when an error has occured
 
-### Preview Mode
+## Preview Mode
 
 ```jsx
 <Callout type="preview-mode">
@@ -62,7 +62,7 @@ For when an error has occured
 
 For when showing a preview of a form
 
-### A callout type not been set
+## A callout type not been set
 
 ```jsx
 <Callout>

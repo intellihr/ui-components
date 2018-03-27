@@ -21,7 +21,8 @@ npm i @intellihr/ui-components
 ```
 
 To use in the consumer project,
-we could simply do this (only import the css if the component has a specific css module/file):
+we could simply do this
+(only import the css if the component has a specific css module/file):
 
 ``` javascript
 import { Modal } from '@intellihr/ui-components'
@@ -57,8 +58,8 @@ npm rebuild node-sass
 ### Development
 
 To preview the components,
-we could write a example usage in the Markdown file with JSX syntax in the component folder,
-e.g. `Callout.examples.md`
+we could write a example usage in the Markdown file
+with JSX syntax in the component folder, e.g. `Callout.examples.md`
 
 ```jsx
 <Callout type="info">
