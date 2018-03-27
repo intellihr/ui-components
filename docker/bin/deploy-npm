@@ -11,8 +11,7 @@ npm publish --access public
 git remote add gitlab https://$GIT_USERNAME:$GIT_TOKEN@gitlab.com/intellihr/ui-components.git
 git push --tags gitlab
 
-git fetch gitlab develop
-git checkout gitlab/develop
+git pull --rebase gitlab develop
 
 sed -i -r "s/\sRELEASE_VERSION.*/ RELEASE_VERSION: $DEFAULT_RELEASE_VERSION/" .gitlab-ci.yml
 
