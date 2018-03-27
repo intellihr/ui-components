@@ -9,9 +9,10 @@ npm version $RELEASE_VERSION -m "[skip ci] Upgrade to %s"
 npm publish --access public
 
 git remote add gitlab https://$GIT_USERNAME:$GIT_TOKEN@gitlab.com/intellihr/ui-components.git
-git fetch gitlab master develop
-git push --follow-tags gitlab HEAD:master
-git rebase gitlab/master gitlab/develop
+git push --tags gitlab
+
+git fetch gitlab develop
+git checkout gitlab/develop
 
 sed -i -r "s/\sRELEASE_VERSION.*/ RELEASE_VERSION: $DEFAULT_RELEASE_VERSION/" .gitlab-ci.yml
 
