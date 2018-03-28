@@ -69,3 +69,6 @@ styleguide/
 
 # NPM
 .npmrc
+
+# codequality
+.codeclimate/

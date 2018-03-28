@@ -5,10 +5,10 @@ git config user.name "IntelliHR CI"
 
 echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
 
-npm version $RELEASE_VERSION -m "[skip ci] Upgrade to %s"
+npm version "$RELEASE_VERSION" -m "[skip ci] Upgrade to %s"
 npm publish --access public
 
-git remote add gitlab https://$GIT_USERNAME:$GIT_TOKEN@gitlab.com/intellihr/ui-components.git
+git remote add gitlab "https://$GIT_USERNAME:$GIT_TOKEN@gitlab.com/intellihr/ui-components.git"
 git push --tags gitlab
 
 git pull --rebase gitlab develop

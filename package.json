@@ -1,7 +1,7 @@
 {
   "name": "@intellihr/ui-components",
   "description": "A common React components library that is used in our company",
-  "version": "1.0.5-beta.7",
+  "version": "1.0.5-beta.8",
   "main": "./dist/",
   "types": "./es/index.d.ts",
   "files": [
@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "@epegzz/sass-vars-loader": "^3.2.0",
+    "@intellihr/standard": "^11.0.3",
     "@types/classnames": "^2.2.3",
     "@types/jest": "^22.2.0",
     "@types/jquery": "^3.3.1",
@@ -44,7 +45,6 @@
     "react-test-renderer": "^16.2.0",
     "sass-loader": "^6.0.7",
     "snazzy": "^7.1.1",
-    "standard": "^11.0.1",
     "standard-loader": "^6.0.1",
     "style-loader": "^0.20.2",
     "ts-jest": "^22.4.1",
@@ -62,12 +62,12 @@
     "test": "NODE_ENV=test && jest --no-cache",
     "lint": "standard **/*.{ts,tsx,js,jsx} --verbose | snazzy",
     "lint:fix": "standard **/*.{ts,tsx,js,jsx} --verbose --fix | snazzy",
-    "build": "yarn clean && yarn compile && webpack --progress",
     "build": "yarn clean && webpack",
     "build:watch": "yarn build -d --watch",
     "styleguide:build": "styleguidist build",
     "styleguide": "styleguidist server",
-    "gh-pages": "git subtree push --prefix styleguide origin gh-pages"
+    "gh-pages": "git subtree push --prefix styleguide origin gh-pages",
+    "codequality": "docker run --env CODECLIMATE_FORMAT=html --env SOURCE_CODE=$(pwd) --volume $(pwd):/code --volume /var/run/docker.sock:/var/run/docker.sock quay.io/intellihr/codequality /code"
   },
   "repository": {
     "type": "git",

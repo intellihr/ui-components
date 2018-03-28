@@ -1,4 +1,6 @@
-### Generate Message
+# Callout
+
+## Generate Message
 
 ```jsx
 <Callout type="info">
@@ -11,7 +13,8 @@
 
 For when you have a message for the user
 
-### Successful Message
+## Successful Message
+
 ```jsx
 <Callout type="success">
   <div className="title">
@@ -20,9 +23,11 @@ For when you have a message for the user
   You successfully read this important alert message.
 </Callout>
 ```
+
 For when an action is successfully performed
 
-### Warning Message
+## Warning Message
+
 ```jsx
 <Callout type="warning">
   <div className="title">
@@ -31,9 +36,11 @@ For when an action is successfully performed
   Better check yourself, you're not looking too good.
 </Callout>
 ```
+
 For when an action might have an undesired effect
 
-### Error Message
+## Error Message
+
 ```jsx
 <Callout type="error">
   <div className="title">
@@ -42,21 +49,25 @@ For when an action might have an undesired effect
   Change a few things up and try submitting again.
 </Callout>
 ```
+
 For when an error has occured
 
-### Preview Mode
+## Preview Mode
+
 ```jsx
 <Callout type="preview-mode">
   Preview Mode
 </Callout>
 ```
+
 For when showing a preview of a form
 
-### A callout type not been set
+## A callout type not been set
+
 ```jsx
 <Callout>
   Same old, same old
 </Callout>
 ```
-This default callout should not be required! Select another type
 
+This default callout should not be required! Select another type
