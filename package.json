@@ -1,7 +1,7 @@
 {
   "name": "@intellihr/ui-components",
   "description": "A common React components library that is used in our company",
-  "version": "1.0.5-beta.7",
+  "version": "1.0.5-beta.8",
   "main": "./dist/",
   "types": "./es/index.d.ts",
   "files": [
@@ -59,7 +59,6 @@
     "test": "NODE_ENV=test && jest --no-cache",
     "lint": "standard **/*.{ts,tsx,js,jsx} --verbose | snazzy",
     "lint:fix": "standard **/*.{ts,tsx,js,jsx} --verbose --fix | snazzy",
-    "build": "yarn clean && yarn compile && webpack --progress",
     "build": "yarn clean && webpack",
     "build:watch": "yarn build -d --watch",
     "styleguide:build": "styleguidist build",
