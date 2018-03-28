@@ -1,4 +1,3 @@
-/* eslint no-undef: 0 */
 import classNames from 'classnames'
 import 'foundation-sites'
 import { default as jQuery } from 'jquery'
@@ -7,11 +6,11 @@ import React from 'react'
 const style = require('./style.scss')
 
 export interface ModalProps {
-  children: React.ReactElement<any>[];
-  id: string;
-  size: 'tiny' | 'small' | 'large' | 'full' | 'fixed-medium-up' | 'fixed-large-up' | 'fixed-xxlarge-up',
-  className?: string;
-  showCloseButton?: boolean;
+  children: React.ReactElement<any>[]
+  id: string
+  size: 'tiny' | 'small' | 'large' | 'full' | 'fixed-medium-up' | 'fixed-large-up' | 'fixed-xxlarge-up'
+  className?: string
+  showCloseButton?: boolean
 }
 
 export class Modal extends React.Component<ModalProps, any> {

@@ -11,8 +11,6 @@ A common React components library that is used in our company.
   * [Development](#development)
   * [Lint](#lint)
 * [Customisation](#customisation)
-* [Known Issues](#known-issues)
-  * [Lint Check False Positive on `no-undef`](#lint-check-false-positive-on-no-undef)
 
 ## Get Started
 
@@ -98,12 +96,3 @@ class MyCallout extends React.SFC<MyCalloutProps> {
   }
 }
 ```
-
-## Known Issues
-
-### Lint check false positive on `no-undef`
-If you see standard is complaining about `no-undef`, you can simply ignore them and add
-```javascript
-/* eslint no-undef: 0 */
-```
-at the top of the file. (see: https://github.com/eslint/typescript-eslint-parser/issues/416)
