@@ -60,6 +60,7 @@
     "lint": "standard **/*.{ts,tsx,js,jsx} --verbose | snazzy",
     "lint:fix": "standard **/*.{ts,tsx,js,jsx} --verbose --fix | snazzy",
     "build": "yarn clean && yarn compile && webpack --progress",
+    "build": "yarn clean && webpack",
     "build:watch": "yarn build -d --watch",
     "styleguide:build": "styleguidist build",
     "styleguide": "styleguidist server",
