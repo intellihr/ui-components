@@ -1,0 +1,28 @@
+version: "2"
+
+plugins:
+  fixme:
+    enabled: true
+  shellcheck:
+    enabled: true
+  nodesecurity:
+    enabled: true
+  markdownlint:
+    enabled: true
+
+exclude_patterns:
+  - config/
+  - db/
+  - dist/
+  - features/
+  - script/
+  - es/
+  - coverage/
+  - styleguide/
+  - .codeclimate/
+  - "**/node_modules/"
+  - "**/spec/"
+  - "**/test/"
+  - "**/tests/"
+  - "**/vendor/"
+  - "**/*.d.ts"
