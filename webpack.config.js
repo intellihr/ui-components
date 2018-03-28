@@ -2,7 +2,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const path = require('path')
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   resolve: {
     extensions: ['.ts', '.tsx', '.jsx', '.js']
   },
@@ -31,9 +31,6 @@ module.exports = {
     },
     'jquery': {
       commonjs: 'jquery'
-    },
-    'foundation-sites': {
-      commonjs: 'foundation-sites'
     },
     'classnames': {
       commonjs: 'classnames'

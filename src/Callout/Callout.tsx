@@ -3,7 +3,7 @@ import { isEmpty } from 'lodash'
 import React from 'react'
 
 export interface CalloutProps {
-  type: 'info' | 'success' | 'error' | 'warning' | 'preview'
+  type: 'info' | 'success' | 'error' | 'warning' | 'preview' | ''
   children?: any
   className?: string
   message?: string
@@ -21,11 +21,18 @@ export class Callout extends React.Component<CalloutProps, CalloutState> {
 
   public state: CalloutState = { willFocus: true }
 
+  public static defaultProps: CalloutProps = {
+    messages: [],
+    type: '',
+    shouldFocus: false,
+    justifyCenter: false
+  }
+
   handleFocus = () => {
     const { shouldFocus } = this.props
     const { willFocus } = this.state
 
-    if (shouldFocus && willFocus && this.node) {
+    if (shouldFocus && willFocus && this.node && this.node.scrollIntoView) {
       this.node.scrollIntoView()
       this.setState({
         willFocus: false
@@ -69,7 +76,7 @@ export class Callout extends React.Component<CalloutProps, CalloutState> {
 
     return (
       <ul>
-        {messages.map((message, msgKey) => (<li key={`callout_message_${msgKey + 1}`}>{message}</li>))}
+        {messages.map((message, msgKey) => (<li key={`callout_message_${msgKey}`}>{message}</li>))}
       </ul>
     )
   }

@@ -1,2 +1,2 @@
 export { Callout } from './Callout'
-export { Modal } from './Modal'
+// export { Modal } from './Modal'
