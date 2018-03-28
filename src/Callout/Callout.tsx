@@ -1,16 +1,15 @@
-/* eslint no-undef: 0 */
 import classNames from 'classnames'
 import { isEmpty } from 'lodash'
 import React from 'react'
 
 export interface CalloutProps {
-  type: 'info' | 'success' | 'error' | 'warning' | 'preview';
-  children?: any;
-  className?: string;
-  message?: string;
-  messages?: string[];
-  justifyCenter?: boolean;
-  shouldFocus: boolean;
+  type: 'info' | 'success' | 'error' | 'warning' | 'preview' | ''
+  children?: any
+  className?: string
+  message?: string
+  messages?: string[]
+  justifyCenter?: boolean
+  shouldFocus: boolean
 }
 
 export interface CalloutState {
@@ -22,11 +21,18 @@ export class Callout extends React.Component<CalloutProps, CalloutState> {
 
   public state: CalloutState = { willFocus: true }
 
+  public static defaultProps: CalloutProps = {
+    messages: [],
+    type: '',
+    shouldFocus: false,
+    justifyCenter: false
+  }
+
   handleFocus = () => {
     const { shouldFocus } = this.props
     const { willFocus } = this.state
 
-    if (shouldFocus && willFocus && this.node) {
+    if (shouldFocus && willFocus && this.node && this.node.scrollIntoView) {
       this.node.scrollIntoView()
       this.setState({
         willFocus: false
@@ -70,7 +76,7 @@ export class Callout extends React.Component<CalloutProps, CalloutState> {
 
     return (
       <ul>
-        {messages.map((message, msgKey) => (<li key={`callout_message_${msgKey + 1}`}>{message}</li>))}
+        {messages.map((message, msgKey) => (<li key={`callout_message_${msgKey}`}>{message}</li>))}
       </ul>
     )
   }
