@@ -92,6 +92,15 @@ with autofix
 yarn lint:fix
 ```
 
+### Code Quality Analysis
+
+```!bash
+yarn codequality
+```
+
+It will then generate `.codeclimate/codeclimate.html`
+(Note: This takes time)
+
 ## Customisation
 
 If you need a customised e.g. `Callout` component, you could do something like:
