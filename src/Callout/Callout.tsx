@@ -3,13 +3,13 @@ import { isEmpty } from 'lodash'
 import React from 'react'
 
 export interface CalloutProps {
-  type: 'info' | 'success' | 'error' | 'warning' | 'preview' | '';
-  children?: any;
-  className?: string;
-  message?: string;
-  messages?: string[];
-  justifyCenter?: boolean;
-  shouldFocus: boolean;
+  type: 'info' | 'success' | 'error' | 'warning' | 'preview' | ''
+  children?: any
+  className?: string
+  message?: string
+  messages?: string[]
+  justifyCenter?: boolean
+  shouldFocus: boolean
 }
 
 export interface CalloutState {
