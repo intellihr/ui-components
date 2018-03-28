@@ -1,7 +1,7 @@
 FROM node:8.10.0-alpine
 
 RUN apk upgrade &&\
-    apk --update add git yarn openssh-client &&\
+    apk --update add zip git yarn openssh-client &&\
     npm install -g typescript &&\
     rm -rf /var/cache/apk/*
 
