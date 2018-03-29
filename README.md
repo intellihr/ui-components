@@ -76,19 +76,19 @@ Some development points:
 Style Check
 
 ```!bash
-yarn lint
+npm run lint
 ```
 
 with autofix
 
 ```!bash
-yarn lint:fix
+npm run lint:fix
 ```
 
 ### Code Quality Analysis
 
 ```!bash
-yarn codequality
+npm run codequality
 ```
 
 It will then generate `.codeclimate/codeclimate.html`

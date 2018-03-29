@@ -40,12 +40,12 @@ install-package:
 lint:
   stage: build & test
   script:
-    - docker-compose run --rm gitlab-ci yarn lint
+    - docker-compose run --rm gitlab-ci npm run lint
 
 test:
   stage: build & test
   script:
-    - docker-compose run --rm gitlab-ci yarn test
+    - docker-compose run --rm gitlab-ci npm run test:ci
 
 codequality: &codequality
   stage: review
@@ -76,7 +76,7 @@ codequality-html:
 build-bundle:
   stage: build & test
   script:
-    - docker-compose run --rm gitlab-ci yarn build
+    - docker-compose run --rm gitlab-ci npm run build
   artifacts:
     paths:
       - es/
@@ -90,7 +90,7 @@ build-styleguide:
   script:
     - docker-compose run --rm gitlab-ci /bin/sh -c
       "
-        yarn styleguide:build &&
+        npm run styleguide:build &&
         rm -f Dockerfile && mv Dockerfile-review Dockerfile &&
         zip -r styleguide.zip styleguide/ nginx/ Dockerfile
       "
