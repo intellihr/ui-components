@@ -45,14 +45,7 @@ docker-compose run --rm code /bin/sh
 Please install local dependencies:
 
 ```!bash
-yarn i
-```
-
-or
-
-```!bash
-yarn install
-npm rebuild node-sass
+npm install
 ```
 
 ### Development
