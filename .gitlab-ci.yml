@@ -31,11 +31,7 @@ prepare-image:
 install-package:
   stage: install
   script:
-    - docker-compose run --rm gitlab-ci /bin/sh -c
-      "
-        npm ci &&
-        npm rebuild node-sass
-      "
+    - docker-compose run --rm gitlab-ci npm ci
   artifacts:
     paths:
       - node_modules/
