@@ -3,6 +3,8 @@ const path = require('path')
 
 module.exports = {
   mode: 'development',
+  target: 'web',
+  devtool: 'source-map',
   resolve: {
     extensions: ['.ts', '.tsx', '.jsx', '.js']
   },
