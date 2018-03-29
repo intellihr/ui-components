@@ -1,0 +1,7 @@
+#!/bin/sh -xe
+
+if eb list | grep -q "$CI_COMMIT_REF_SLUG" ; then
+  eb deploy "$CI_COMMIT_REF_SLUG"
+else
+  eb create -c "45def85f-$CI_COMMIT_REF_SLUG" "$CI_COMMIT_REF_SLUG"
+fi

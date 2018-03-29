@@ -4,6 +4,7 @@ variables:
   DOCKER_DRIVER: overlay2
   DEFAULT_RELEASE_VERSION: prerelease
   RELEASE_VERSION: prerelease
+  REVIEW_PORT: 8888
 
 services:
   - docker:dind
@@ -14,8 +15,8 @@ before_script:
 stages:
   - prepare
   - install
-  - test
-  - build
+  - build & test
+  - review
   - deploy
 
 prepare-image:
@@ -40,17 +41,17 @@ install-package:
       - node_modules/
 
 lint:
-  stage: test
+  stage: build & test
   script:
     - docker-compose run --rm gitlab-ci yarn lint
 
 test:
-  stage: test
+  stage: build & test
   script:
     - docker-compose run --rm gitlab-ci yarn test
 
 codequality: &codequality
-  stage: test
+  stage: build & test
   variables:
     CODECLIMATE_FORMAT: json
   dependencies: []
@@ -76,7 +77,7 @@ codequality-html:
       - .codeclimate/
 
 build-bundle:
-  stage: build
+  stage: build & test
   script:
     - docker-compose run --rm gitlab-ci yarn build
   artifacts:
@@ -88,15 +89,46 @@ build-bundle:
       - master
 
 build-styleguide:
-  stage: build
+  stage: build & test
   script:
-    - docker-compose run --rm gitlab-ci yarn styleguide:build
+    - docker-compose run --rm gitlab-ci /bin/sh -c
+      "
+        yarn styleguide:build &&
+        rm -f Dockerfile && mv Dockerfile-review Dockerfile &&
+        zip -r styleguide.zip styleguide/ nginx/ Dockerfile
+      "
   artifacts:
     paths:
       - styleguide/
+      - styleguide.zip
+
+review:
+  stage: review
+  image: coxauto/aws-ebcli
+  dependencies:
+    - build-styleguide
+  script:
+    - ./docker/bin/deploy-review
+  environment:
+    name: review/$CI_COMMIT_REF_SLUG
+    url: http://45def85f-$CI_COMMIT_REF_SLUG.ap-southeast-2.elasticbeanstalk.com
+    on_stop: stop_review
   only:
-    refs:
-      - master
+    - branches
+  except:
+    - master
+
+stop_review:
+  stage: review
+  image: coxauto/aws-ebcli
+  script:
+    - eb terminate --force "$CI_COMMIT_REF_SLUG"
+  environment:
+    name: review/$CI_COMMIT_REF_SLUG
+    action: stop
+  variables:
+    GIT_STRATEGY: none
+  when: manual
 
 pages:
   stage: deploy
