@@ -73,7 +73,7 @@ Some development points:
 
 ### Lint
 
-Style Check
+Typescript Style Check
 
 ```!bash
 npm run lint
@@ -83,6 +83,12 @@ with autofix
 
 ```!bash
 npm run lint:fix
+```
+
+Sass Style Check
+
+```!bash
+npm run lint:sass
 ```
 
 ### Code Quality Analysis
