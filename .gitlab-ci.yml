@@ -37,10 +37,15 @@ install-package:
       - node_modules/
       - npm-debug.log
 
-lint:
+ts-lint:
   stage: build & test
   script:
     - docker-compose run --rm gitlab-ci npm run lint
+
+sass-lint:
+  stage: build & test
+  script:
+    - docker-compose run --rm gitlab-ci npm run lint:sass
 
 test:
   stage: build & test
