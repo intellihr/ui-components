@@ -65,7 +65,7 @@ with JSX syntax in the component folder, e.g. `Callout.examples.md`
 
 Some development points:
 
-* Tests are written in `__tests__` of each component folder
+* Tests are written in `.test.tsx` of each component `.tsx` file
 
 * [No default export](https://palantir.github.io/tslint/rules/no-default-export/)
 
