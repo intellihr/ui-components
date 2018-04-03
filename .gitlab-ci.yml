@@ -37,10 +37,15 @@ install-package:
       - node_modules/
       - npm-debug.log
 
-lint:
+ts-lint:
   stage: build & test
   script:
     - docker-compose run --rm gitlab-ci npm run lint
+
+sass-lint:
+  stage: build & test
+  script:
+    - docker-compose run --rm gitlab-ci npm run lint:sass
 
 test:
   stage: build & test
@@ -108,13 +113,14 @@ review:
   script:
     - ./docker/bin/deploy-review
   environment:
-    name: review/$CI_COMMIT_REF_SLUG
-    url: http://45def85f-$CI_COMMIT_REF_SLUG.ap-southeast-2.elasticbeanstalk.com
+    name: $CI_COMMIT_REF_SLUG
+    url: http://$CI_COMMIT_REF_SLUG-45def85f.ap-southeast-2.elasticbeanstalk.com
     on_stop: stop_review
   only:
     - branches
   except:
     - master
+  when: manual
 
 stop_review:
   stage: review
@@ -122,9 +128,9 @@ stop_review:
   dependencies:
     - build-styleguide
   script:
-    - eb terminate --force "$CI_COMMIT_REF_SLUG"
+    - eb terminate --force "$CI_COMMIT_REF_SLUG-45def85f"
   environment:
-    name: review/$CI_COMMIT_REF_SLUG
+    name: $CI_COMMIT_REF_SLUG
     action: stop
   variables:
     GIT_STRATEGY: none
