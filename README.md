@@ -45,14 +45,7 @@ docker-compose run --rm code /bin/sh
 Please install local dependencies:
 
 ```!bash
-yarn i
-```
-
-or
-
-```!bash
-yarn install
-npm rebuild node-sass
+npm install
 ```
 
 ### Development
@@ -83,19 +76,19 @@ Some development points:
 Style Check
 
 ```!bash
-yarn lint
+npm run lint
 ```
 
 with autofix
 
 ```!bash
-yarn lint:fix
+npm run lint:fix
 ```
 
 ### Code Quality Analysis
 
 ```!bash
-yarn codequality
+npm run codequality
 ```
 
 It will then generate `.codeclimate/codeclimate.html`

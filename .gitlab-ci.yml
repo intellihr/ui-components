@@ -31,27 +31,24 @@ prepare-image:
 install-package:
   stage: install
   script:
-    - docker-compose run --rm gitlab-ci /bin/sh -c
-      "
-        yarn install --frozen-lockfile --network-concurrency 1 &&
-        npm rebuild node-sass
-      "
+    - docker-compose run --rm gitlab-ci npm ci
   artifacts:
     paths:
       - node_modules/
+      - npm-debug.log
 
 lint:
   stage: build & test
   script:
-    - docker-compose run --rm gitlab-ci yarn lint
+    - docker-compose run --rm gitlab-ci npm run lint
 
 test:
   stage: build & test
   script:
-    - docker-compose run --rm gitlab-ci yarn test
+    - docker-compose run --rm gitlab-ci npm run test:ci
 
 codequality: &codequality
-  stage: build & test
+  stage: review
   variables:
     CODECLIMATE_FORMAT: json
   dependencies: []
@@ -79,7 +76,7 @@ codequality-html:
 build-bundle:
   stage: build & test
   script:
-    - docker-compose run --rm gitlab-ci yarn build
+    - docker-compose run --rm gitlab-ci npm run build
   artifacts:
     paths:
       - es/
@@ -93,12 +90,13 @@ build-styleguide:
   script:
     - docker-compose run --rm gitlab-ci /bin/sh -c
       "
-        yarn styleguide:build &&
+        npm run styleguide:build &&
         rm -f Dockerfile && mv Dockerfile-review Dockerfile &&
         zip -r styleguide.zip styleguide/ nginx/ Dockerfile
       "
   artifacts:
     paths:
+      - .elasticbeanstalk/
       - styleguide/
       - styleguide.zip
 
@@ -121,6 +119,8 @@ review:
 stop_review:
   stage: review
   image: coxauto/aws-ebcli
+  dependencies:
+    - build-styleguide
   script:
     - eb terminate --force "$CI_COMMIT_REF_SLUG"
   environment:

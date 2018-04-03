@@ -19,13 +19,5 @@ services:
     ports:
       - 6060:6060
 
-  review:
-    build:
-      context: .
-      dockerfile: Dockerfile-review
-    ports:
-      - ${REVIEW_PORT-80}:80
-    container_name: ${REVIEW_CONTAINER_NAME}
-
 volumes:
   ui-components: ~
