@@ -14,6 +14,7 @@ before_script:
 
 stages:
   - prepare
+  - update
   - install
   - build & test
   - review
@@ -28,8 +29,20 @@ prepare-image:
     paths:
       - ui-components.tar
 
+update:on-schedule:
+  stage: update
+  only:
+    - schedules
+  script:
+    - docker-compose run --rm gitlab-ci renovate
+      --platform gitlab
+      --endpoint https://gitlab.com/api/v4
+      --token "$GIT_TOKEN" intellihr/ui-components
+
 install-package:
   stage: install
+  except:
+    - schedules
   script:
     - docker-compose run --rm gitlab-ci npm ci
   artifacts:
@@ -39,21 +52,29 @@ install-package:
 
 ts-lint:
   stage: build & test
+  except:
+    - schedules
   script:
     - docker-compose run --rm gitlab-ci npm run lint
 
 sass-lint:
   stage: build & test
+  except:
+    - schedules
   script:
     - docker-compose run --rm gitlab-ci npm run lint:sass
 
 test:
   stage: build & test
+  except:
+    - schedules
   script:
     - docker-compose run --rm gitlab-ci npm run test:ci
 
 codequality: &codequality
   stage: review
+  except:
+    - schedules
   variables:
     CODECLIMATE_FORMAT: json
   dependencies: []
@@ -92,6 +113,8 @@ build-bundle:
 
 build-styleguide:
   stage: build & test
+  except:
+    - schedules
   script:
     - docker-compose run --rm gitlab-ci /bin/sh -c
       "
@@ -107,6 +130,12 @@ build-styleguide:
 
 review:
   stage: review
+  only:
+    - branches
+  except:
+    - schedules
+    - master
+  when: manual
   image: coxauto/aws-ebcli
   dependencies:
     - build-styleguide
@@ -116,14 +145,15 @@ review:
     name: $CI_COMMIT_REF_SLUG
     url: http://$CI_COMMIT_REF_SLUG-45def85f.ap-southeast-2.elasticbeanstalk.com
     on_stop: stop_review
-  only:
-    - branches
-  except:
-    - master
-  when: manual
 
 stop_review:
   stage: review
+  only:
+    - branches
+  except:
+    - schedules
+    - master
+  when: manual
   image: coxauto/aws-ebcli
   dependencies:
     - build-styleguide
@@ -134,7 +164,6 @@ stop_review:
     action: stop
   variables:
     GIT_STRATEGY: none
-  when: manual
 
 pages:
   stage: deploy
