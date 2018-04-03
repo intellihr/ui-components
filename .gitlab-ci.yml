@@ -120,6 +120,7 @@ review:
     - branches
   except:
     - master
+  when: manual
 
 stop_review:
   stage: review
