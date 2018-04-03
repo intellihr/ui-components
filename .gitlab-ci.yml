@@ -148,6 +148,12 @@ review:
 
 stop_review:
   stage: review
+  only:
+    - branches
+  except:
+    - schedules
+    - master
+  when: manual
   image: coxauto/aws-ebcli
   dependencies:
     - build-styleguide
@@ -158,7 +164,6 @@ stop_review:
     action: stop
   variables:
     GIT_STRATEGY: none
-  when: manual
 
 pages:
   stage: deploy
