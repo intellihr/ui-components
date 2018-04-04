@@ -41,7 +41,7 @@
     "react": "16.2.0",
     "react-docgen-typescript": "1.2.5",
     "react-dom": "16.2.0",
-    "react-styleguidist": "7.0.1",
+    "react-styleguidist": "7.0.3",
     "react-test-renderer": "16.2.0",
     "sass-lint": "1.12.1",
     "sass-loader": "6.0.7",
