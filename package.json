@@ -50,7 +50,7 @@
     "style-loader": "0.20.2",
     "ts-jest": "22.4.2",
     "ts-loader": "4.1.0",
-    "typescript": "2.7.2",
+    "typescript": "2.8.1",
     "typescript-eslint-parser": "14.0.0",
     "url-loader": "1.0.1",
     "webpack": "4.4.1",
