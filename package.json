@@ -47,7 +47,7 @@
     "sass-loader": "6.0.7",
     "snazzy": "7.1.1",
     "standard-loader": "6.0.1",
-    "style-loader": "0.20.2",
+    "style-loader": "0.20.3",
     "ts-jest": "22.4.2",
     "ts-loader": "4.1.0",
     "typescript": "2.8.1",
