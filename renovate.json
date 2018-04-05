@@ -5,6 +5,9 @@
   "baseBranches": [
     "develop"
   ],
+  "labels": [
+    "upgrade",
+    "bot"
+  ],
   "prHourlyLimit": 0
 }
-
