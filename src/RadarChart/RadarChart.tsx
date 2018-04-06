@@ -1,29 +1,38 @@
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 import { Radar, defaults as chartJSDefaults } from 'react-chartjs-2'
-import { forEach as _forEach, merge as _merge, get as _get } from 'lodash'
+import { forEach, merge, get } from 'lodash'
 import Color from 'color'
 import { Parser as HtmlToReactParser } from 'html-to-react'
 import classNames from 'classnames'
 const style = require('./style.scss')
-// import { getColour } from '../../../../utils/ui/colourHelper'
-// import Icon from '../icons/Icon'
+import { Icon } from '../Icon'
 
-export interface RadarChartProps {
-  dataLabels?: object
-  pointLabels?: string[]
-  datasets?: any[]
-  colour?: string
-  showLegend: boolean
+export interface RadarChartDataLabels {
+  [key: number]: string
 }
 
-_merge(chartJSDefaults, {
+export interface RadarChartDatasets {
+  label: string
+  data: number[]
+  colour?: string
+}
+
+export interface RadarChartProps {
+  dataLabels?: RadarChartDataLabels
+  pointLabels: string[]
+  datasets: RadarChartDatasets[]
+  colour?: string
+  showLegend?: boolean
+  dataLabelColour?: string
+}
+
+merge(chartJSDefaults, {
   global: {
     legend: {
       display: false
     }
   }
-
 })
 
 const htmlToReactParser = new HtmlToReactParser()
@@ -32,6 +41,8 @@ export class RadarChart extends React.Component<RadarChartProps, any> {
   public chart: any;
 
   public static defaultProps: RadarChartProps = {
+    pointLabels: [],
+    datasets: [],
     showLegend: true
   }
 
@@ -43,10 +54,11 @@ export class RadarChart extends React.Component<RadarChartProps, any> {
     this.forceUpdate()
   }
 
-  get options () {
+  get options (): object {
     const {
       dataLabels,
-      showLegend
+      showLegend,
+      dataLabelColour
     } = this.props
 
     return {
@@ -61,11 +73,11 @@ export class RadarChart extends React.Component<RadarChartProps, any> {
               {datasets.map((dataset: any, i: number) => {
                 return (
                   <li key={i}>
-                    {/*<Icon*/}
-                    {/*type='circle'*/}
-                    {/*size={1}*/}
-                    {/*style={{color: datasets[i].colour}}*/}
-                    {/*/>*/}
+                    <Icon
+                      type='circle'
+                      size={1}
+                      color={datasets[i].colour}
+                    />
 
                     <span className='legend-label'>
                       {datasets[i].label}
@@ -86,7 +98,7 @@ export class RadarChart extends React.Component<RadarChartProps, any> {
         callbacks: {
           label: (tooltipItems: any, data: any) => {
             const datasetName = data.datasets[tooltipItems.datasetIndex].label
-            const dataPointValue = _get(dataLabels, tooltipItems.yLabel, tooltipItems.yLabel)
+            const dataPointValue = get(dataLabels, tooltipItems.yLabel, tooltipItems.yLabel)
 
             return `${datasetName}: ${dataPointValue}`
           }
@@ -105,23 +117,23 @@ export class RadarChart extends React.Component<RadarChartProps, any> {
           max: 5,
           stepSize: 1,
           fontSize: 10,
-          fontColor: 'rgb(0,255,0)',
-          callback: (label: string) => _get(dataLabels, label, label)
+          fontColor: dataLabelColour,
+          callback: (label: string) => get(dataLabels, label, label)
         }
       }
     }
   }
 
-  get data () {
+  get data (): object {
     const {
       datasets,
       pointLabels
     } = this.props
 
-    _forEach(datasets, (dataset) => {
+    forEach(datasets, (dataset) => {
       const dataColour = dataset.colour
 
-      return _merge(dataset, {
+      return merge(dataset, {
         borderColor: dataColour,
         backgroundColor: Color(dataColour).alpha(0.25),
         pointBorderColor: dataColour,
@@ -151,16 +163,3 @@ export class RadarChart extends React.Component<RadarChartProps, any> {
     )
   }
 }
-
-/*
-RadarChart.propTypes = {
-    dataLabels: PropTypes.objectOf(PropTypes.string.isRequired),
-    pointLabels: PropTypes.arrayOf(PropTypes.string).isRequired,
-    datasets: PropTypes.arrayOf(PropTypes.shape({
-        label: PropTypes.string.isRequired,
-        data: PropTypes.arrayOf(PropTypes.number).isRequired,
-        colour: PropTypes.string
-    }).isRequired),
-    showLegend: PropTypes.bool
-}
-*/
