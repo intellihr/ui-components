@@ -5,8 +5,8 @@ import { forEach, merge, get } from 'lodash'
 import Color from 'color'
 import { Parser as HtmlToReactParser } from 'html-to-react'
 import classNames from 'classnames'
-const style = require('./style.scss')
 import { Icon } from '../Icon'
+const style = require('./style.scss')
 
 export interface RadarChartDataLabels {
   [key: number]: string
@@ -37,17 +37,13 @@ merge(chartJSDefaults, {
 
 const htmlToReactParser = new HtmlToReactParser()
 
-export class RadarChart extends React.Component<RadarChartProps, any> {
+export class RadarChart extends React.Component<RadarChartProps> {
   public chart: any;
 
   public static defaultProps: RadarChartProps = {
     pointLabels: [],
     datasets: [],
     showLegend: true
-  }
-
-  constructor (props: any) {
-    super(props)
   }
 
   componentDidMount () {
@@ -157,7 +153,7 @@ export class RadarChart extends React.Component<RadarChartProps, any> {
         <Radar
           data={this.data}
           options={this.options}
-          ref={(chart) => {this.chart = chart}}
+          ref={(chart) => { this.chart = chart }}
         />
       </div>
     )

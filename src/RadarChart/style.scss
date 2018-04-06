@@ -8,8 +8,8 @@
     position: absolute;
 
     li {
-      display: flex;
       align-items: center;
+      display: flex;
       font-size: .8rem;
       margin-bottom: 3px;
 
@@ -22,9 +22,9 @@
       }
 
       .legend-label {
-        width: 100%;
         margin-left: 5px;
         white-space: nowrap;
+        width: 100%;
       }
     }
   }
