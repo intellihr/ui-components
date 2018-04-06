@@ -16,6 +16,7 @@
     "@epegzz/sass-vars-loader": "^3.2.0",
     "@intellihr/standard": "^11.0.3",
     "@types/classnames": "^2.2.3",
+    "@types/enzyme": "^3.1.9",
     "@types/jest": "^22.2.0",
     "@types/jquery": "^3.3.1",
     "@types/lodash": "^4.14.104",
