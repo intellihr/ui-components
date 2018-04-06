@@ -28,5 +28,8 @@ module.exports = {
     }
   },
   setupTestFrameworkScriptFile: './setupTest.ts',
-  snapshotSerializers: ['enzyme-to-json/serializer']
+  snapshotSerializers: ['enzyme-to-json/serializer'],
+  moduleNameMapper: {
+    '\\.(scss|css)$': 'identity-obj-proxy'
+  }
 }
