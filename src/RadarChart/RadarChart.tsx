@@ -9,6 +9,20 @@ import { Icon } from '../Icon'
 
 const style = require('./style.scss')
 
+interface Dataset {
+  colour: string
+  label: string
+}
+
+interface Data {
+  datasets: Dataset[]
+}
+
+interface TooltipItems {
+  datasetIndex: number
+  yLabel: string
+}
+
 export interface RadarChartDataLabels {
   [key: number]: string
 }
@@ -26,6 +40,7 @@ export interface RadarChartProps {
   colour?: string
   showLegend?: boolean
   dataLabelColour?: string
+  maxValue?: number
 }
 
 merge(chartJSDefaults, {
@@ -44,7 +59,8 @@ export class RadarChart extends React.Component<RadarChartProps> {
   public static defaultProps: RadarChartProps = {
     pointLabels: [],
     datasets: [],
-    showLegend: true
+    showLegend: true,
+    maxValue: 5
   }
 
   componentDidMount () {
@@ -67,7 +83,7 @@ export class RadarChart extends React.Component<RadarChartProps> {
         if (showLegend && datasets.length) {
           return ReactDOMServer.renderToStaticMarkup(
             <ul>
-              {datasets.map((dataset: any, i: number) => {
+              {datasets.map((dataset: Dataset, i: number) => {
                 return (
                   <li key={i}>
                     <Icon
@@ -93,7 +109,7 @@ export class RadarChart extends React.Component<RadarChartProps> {
       tooltips: {
         titleFontSize: 10,
         callbacks: {
-          label: (tooltipItems: any, data: any) => {
+          label: (tooltipItems: TooltipItems, data: Data) => {
             const datasetName = data.datasets[tooltipItems.datasetIndex].label
             const dataPointValue = get(dataLabels, tooltipItems.yLabel, tooltipItems.yLabel)
 

@@ -12,7 +12,7 @@ export interface IconProps {
   isFontAwesome?: boolean
 }
 
-export class Icon extends React.Component<IconProps, any> {
+export class Icon extends React.Component<IconProps> {
   public static defaultProps: IconProps = {
     type: '',
     isStacked: false,
