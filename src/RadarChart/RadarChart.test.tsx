@@ -27,7 +27,7 @@ const datasets = [
 ]
 
 describe('<RadarChart />', () => {
-  it(`should display a donut chart with the right values`, () => {
+  it(`Renders a RadarChart with the correct values`, () => {
     const wrapper = shallow(
       <RadarChart
         dataLabels={dataLabels}

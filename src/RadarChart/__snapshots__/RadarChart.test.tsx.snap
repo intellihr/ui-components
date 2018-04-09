@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<RadarChart /> should display a donut chart with the right values 1`] = `
+exports[`<RadarChart /> Renders a RadarChart with the correct values 1`] = `
 <div
-  className="radar-chart"
+  className="radarChartClass radar-chart"
 >
   <Radar
     data={
