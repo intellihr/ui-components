@@ -51,7 +51,7 @@ describe('<Icon />', () => {
   it(`should render a large icon`, () => {
     const wrapper = mount(
       <Icon
-        type='check'
+        type='circle'
         isLarge
       />
     )

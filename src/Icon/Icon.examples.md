@@ -1,13 +1,14 @@
 # Icon
 
-### Basic Icon
+## Basic Icon
 
 ```jsx
   <Icon
     type='star'
   />
 ```
-### Large Icon
+
+## Large Icon
 
 ```jsx
   <Icon
@@ -15,27 +16,27 @@
     isLarge
   />
 ```
-  
-### 4x size Icon
-  
+
+## 4x size Icon
+
 ```jsx
   <Icon
     type='star'
     size={4}
   />
 ```
-  
-### Spinning Icon
-  
+
+## Spinning Icon
+
 ```jsx
   <Icon
     type='star'
     isSpinning
   />
 ```
-  
-### Coloured Icon
-  
+
+## Coloured Icon
+
 ```jsx
   <Icon
     type='star'
@@ -43,7 +44,7 @@
   />
 ```
 
-### Mix and match
+## Mix and match
 
 Icon props can be used together!
 

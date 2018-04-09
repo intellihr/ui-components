@@ -7,9 +7,9 @@
   dataLabelColour='rgb(100,100,100)'
   pointLabels={[
     'Quality',
-    'Teamwork', 
-    'Values', 
-    'Compliance', 
+    'Teamwork',
+    'Values',
+    'Compliance',
     'Productivity'
   ]}
   datasets={[
@@ -40,9 +40,9 @@
   dataLabelColour='rgb(100,100,100)'
   pointLabels={[
     'Quality',
-    'Teamwork', 
-    'Values', 
-    'Compliance', 
+    'Teamwork',
+    'Values',
+    'Compliance',
     'Productivity'
   ]}
   datasets={[

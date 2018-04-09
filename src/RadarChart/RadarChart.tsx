@@ -72,54 +72,65 @@ export class RadarChart extends React.Component<RadarChartProps> {
     this.forceUpdate()
   }
 
+  private legendCallback (chart: any): string | null {
+    const {
+      showLegend
+    } = this.props
+
+    const {
+      datasets
+    } = chart.data
+
+    if (showLegend && datasets.length) {
+      return ReactDOMServer.renderToStaticMarkup(
+        <ul>
+          {datasets.map((dataset: Dataset, i: number) => {
+            return (
+              <li key={i}>
+                <Icon
+                  type='circle'
+                  size={1}
+                  color={datasets[i].colour}
+                />
+
+                <span className='legend-label'>
+                  {datasets[i].label}
+                </span>
+              </li>
+            )
+          })}
+        </ul>
+      )
+    }
+
+    return null
+  }
+
+  private tooltipLabelCallback (tooltipItems: TooltipItems, data: Data) {
+    const {
+      dataLabels
+    } = this.props
+
+    const datasetName = data.datasets[tooltipItems.datasetIndex].label
+    const dataPointValue = get(dataLabels, tooltipItems.yLabel, tooltipItems.yLabel)
+
+    return `${datasetName}: ${dataPointValue}`
+  }
+
   get options (): object {
     const {
       dataLabels,
-      showLegend,
       dataLabelColour
     } = this.props
 
     return {
-      legendCallback: (chart: any) => {
-        const {
-          datasets
-        } = chart.data
-
-        if (showLegend && datasets.length) {
-          return ReactDOMServer.renderToStaticMarkup(
-            <ul>
-              {datasets.map((dataset: Dataset, i: number) => {
-                return (
-                  <li key={i}>
-                    <Icon
-                      type='circle'
-                      size={1}
-                      color={datasets[i].colour}
-                    />
-
-                    <span className='legend-label'>
-                      {datasets[i].label}
-                    </span>
-                  </li>
-                )
-              })}
-            </ul>
-          )
-        }
-
-        return null
-      },
+      legendCallback: (chart: any) => this.legendCallback(chart),
       responsive: true,
       maintainAspectRatio: false,
       tooltips: {
         titleFontSize: 10,
         callbacks: {
-          label: (tooltipItems: TooltipItems, data: Data) => {
-            const datasetName = data.datasets[tooltipItems.datasetIndex].label
-            const dataPointValue = get(dataLabels, tooltipItems.yLabel, tooltipItems.yLabel)
-
-            return `${datasetName}: ${dataPointValue}`
-          }
+          label: (tooltipItems: TooltipItems, data: Data) => this.tooltipLabelCallback(tooltipItems, data)
         }
       },
       scale: {
