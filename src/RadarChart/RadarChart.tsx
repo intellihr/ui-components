@@ -6,6 +6,7 @@ import Color from 'color'
 import { Parser as HtmlToReactParser } from 'html-to-react'
 import classNames from 'classnames'
 import { Icon } from '../Icon'
+
 const style = require('./style.scss')
 
 export interface RadarChartDataLabels {
