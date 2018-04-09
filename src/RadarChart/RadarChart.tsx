@@ -34,12 +34,17 @@ export interface RadarChartDatasets {
 }
 
 export interface RadarChartProps {
+  /** Strings to display instead of the default numerical labels on each tick */
   dataLabels?: RadarChartDataLabels
+  /** Array of labels that are placed clockwise around the edge of the chart.  */
   pointLabels: string[]
+  /** Set of data to display. Requires a name (label) and array of numbers. RGB colour is optional. */
   datasets: RadarChartDatasets[]
-  colour?: string
+  /** Display legend */
   showLegend?: boolean
+  /** RGB colour of dataLabels */
   dataLabelColour?: string
+  /** Maximum tick value to display */
   maxValue?: number
 }
 

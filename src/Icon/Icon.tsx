@@ -2,13 +2,21 @@ import React from 'react'
 import classNames from 'classnames'
 
 export interface IconProps {
+  /** FontAwesome or alternate name of the icon to display */
   type: string
+  /** Multiplies icon size by this amount (max 5) */
   size?: 1 | 2 | 3 | 4 | 5
+  /** Adds FontAwesome stacked class to icon */
   isStacked?: boolean
+  /** Adds FontAwesome `fa-lg` class to icon */
   isLarge?: boolean
+  /** Colour of the icon */
   color?: string
+  /** Additonal class name to pass to the icon */
   className?: string
+  /** Adds FontAwesome `fa-spin` class to icon */
   isSpinning?: boolean
+  /** Prepends fa- to `type`. Set to false to use non-FontAwesome icons */
   isFontAwesome?: boolean
 }
 
