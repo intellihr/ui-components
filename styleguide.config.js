@@ -2,7 +2,7 @@ const path = require('path')
 const _ = require('lodash')
 const docGenTypescript = require('react-docgen-typescript')
 module.exports = {
-  components: 'src/**/*.tsx',
+  title: 'IntelliHR Design System',
   propsParser: docGenTypescript.withCustomConfig('./tsconfig.json').parse,
   getComponentPathLine (componentPath) {
     const name = path.basename(componentPath, '.tsx')
@@ -11,6 +11,14 @@ module.exports = {
   getExampleFilename (componentPath) {
     return componentPath.replace(/\.tsx?$/, '.examples.md')
   },
+  sections: [{
+    name: 'Introduction',
+    content: './docs/introduction.md'
+  }, {
+    name: 'Components',
+    components: 'src/**/*.tsx'
+  }],
+  showUsage: true,
   updateExample: function (props, exampleFilePath) {
     // magically require components
     /**
