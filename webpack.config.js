@@ -46,8 +46,7 @@ module.exports = {
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            outputPath: 'fonts/', // where the fonts will go
-            publicPath: '../' // override the default path
+            outputPath: 'fonts/' // where the fonts will go
           }
         }]
       },
@@ -71,12 +70,6 @@ module.exports = {
           {
             loader: 'awesome-typescript-loader'
           }
-        ]
-      },
-      {
-        test: /\.(eot|svg|ttf|woff|woff2)$/,
-        use: [
-          'url-loader'
         ]
       },
       {

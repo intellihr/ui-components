@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadarChart /> Renders a RadarChart with the correct values 1`] = `
+<div
+  className="radarChartClass radar-chart"
+>
+  <Radar
+    data={
+      Object {
+        "datasets": Array [
+          Object {
+            "backgroundColor": Object {
+              "color": Array [
+                255,
+                0,
+                0,
+              ],
+              "model": "rgb",
+              "valpha": 0.25,
+            },
+            "borderColor": "rgb(255,0,0)",
+            "colour": "rgb(255,0,0)",
+            "data": Array [
+              3,
+              2,
+              3,
+              3,
+              3,
+            ],
+            "label": "Manager expectation",
+            "pointBorderColor": "rgb(255,0,0)",
+            "pointHitRadius": 10,
+            "pointHoverBackgroundColor": "rgb(255,0,0)",
+            "pointHoverRadius": 5,
+          },
+          Object {
+            "backgroundColor": Object {
+              "color": Array [
+                0,
+                0,
+                255,
+              ],
+              "model": "rgb",
+              "valpha": 0.25,
+            },
+            "borderColor": "rgb(0,0,255)",
+            "colour": "rgb(0,0,255)",
+            "data": Array [
+              2,
+              2,
+              4,
+              5,
+              1,
+            ],
+            "label": "Employee expectation",
+            "pointBorderColor": "rgb(0,0,255)",
+            "pointHitRadius": 10,
+            "pointHoverBackgroundColor": "rgb(0,0,255)",
+            "pointHoverRadius": 5,
+          },
+        ],
+        "labels": Array [
+          "Quality",
+          "Teamwork",
+          "Values",
+          "Compliance",
+          "Productivity",
+        ],
+      }
+    }
+    options={
+      Object {
+        "legendCallback": [Function],
+        "maintainAspectRatio": false,
+        "responsive": true,
+        "scale": Object {
+          "gridLines": Object {
+            "circular": true,
+            "offsetGridLines": true,
+          },
+          "pointLabels": Object {
+            "fontSize": 14,
+          },
+          "ticks": Object {
+            "callback": [Function],
+            "fontColor": undefined,
+            "fontSize": 10,
+            "max": 5,
+            "min": 0,
+            "stepSize": 1,
+          },
+        },
+        "tooltips": Object {
+          "callbacks": Object {
+            "label": [Function],
+          },
+          "titleFontSize": 10,
+        },
+      }
+    }
+  />
+</div>
+`;
