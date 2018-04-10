@@ -5,10 +5,12 @@ A common React components library that is used in our company.
 ## Badges
 
 ### Master
+
 - ![Coverage](https://gitlab.com/intellihr/ui-components/badges/master/coverage.svg)
 - ![Build status](https://gitlab.com/intellihr/ui-components/badges/master/build.svg)
 
 ### Develop
+
 - ![Coverage](https://gitlab.com/intellihr/ui-components/badges/develop/coverage.svg)
 - ![Build status](https://gitlab.com/intellihr/ui-components/badges/develop/build.svg)
 
