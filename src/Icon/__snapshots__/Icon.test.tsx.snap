@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Icon /> should render a large icon 1`] = `
+<Icon
+  isFontAwesome={true}
+  isLarge={true}
+  isSpinning={false}
+  isStacked={false}
+  type="circle"
+>
+  <i
+    aria-hidden={true}
+    className="fa fa-circle fa-lg"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+  />
+</Icon>
+`;
+
+exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
+<Icon
+  isFontAwesome={false}
+  isLarge={false}
+  isSpinning={false}
+  isStacked={false}
+  type="intelli-icon-avatar"
+>
+  <i
+    aria-hidden={true}
+    className="fa intelli-icon-avatar"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+  />
+</Icon>
+`;
+
+exports[`<Icon /> should render icon with colour 1`] = `
+<Icon
+  color="#1A2B3C"
+  isFontAwesome={true}
+  isLarge={false}
+  isSpinning={false}
+  isStacked={false}
+  type="check"
+>
+  <i
+    aria-hidden={true}
+    className="fa fa-check"
+    style={
+      Object {
+        "color": "#1A2B3C",
+      }
+    }
+  />
+</Icon>
+`;
+
+exports[`<Icon /> should render icon with no size or colour 1`] = `
+<Icon
+  isFontAwesome={true}
+  isLarge={false}
+  isSpinning={false}
+  isStacked={false}
+  type="check"
+>
+  <i
+    aria-hidden={true}
+    className="fa fa-check"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+  />
+</Icon>
+`;
+
+exports[`<Icon /> should render icon with no stack or size if only isStacked is given 1`] = `
+<Icon
+  isFontAwesome={true}
+  isLarge={false}
+  isSpinning={false}
+  isStacked={true}
+  type="check"
+>
+  <i
+    aria-hidden={true}
+    className="fa fa-check"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+  />
+</Icon>
+`;
+
+exports[`<Icon /> should render icon with size 1`] = `
+<Icon
+  isFontAwesome={true}
+  isLarge={false}
+  isSpinning={false}
+  isStacked={false}
+  size={3}
+  type="check"
+>
+  <i
+    aria-hidden={true}
+    className="fa fa-check fa-3x"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+  />
+</Icon>
+`;
+
+exports[`<Icon /> should render icon with stack and size 1`] = `
+<Icon
+  isFontAwesome={true}
+  isLarge={false}
+  isSpinning={false}
+  isStacked={true}
+  size={2}
+  type="check"
+>
+  <i
+    aria-hidden={true}
+    className="fa fa-check fa-stack-2x"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+  />
+</Icon>
+`;
