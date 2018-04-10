@@ -19,6 +19,7 @@ module.exports = {
     components: 'src/**/*.tsx'
   }],
   showUsage: true,
+  showCode: true,
   updateExample: function (props, exampleFilePath) {
     // magically require components
     /**
