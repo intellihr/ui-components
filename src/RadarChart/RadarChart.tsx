@@ -5,7 +5,7 @@ import { forEach, merge, get } from 'lodash'
 import Color from 'color'
 import { Parser as HtmlToReactParser } from 'html-to-react'
 import classNames from 'classnames'
-import { Icon } from '../Icon'
+import { Legend } from '../Legend'
 
 const style = require('./style.scss')
 
@@ -81,25 +81,9 @@ export class RadarChart extends React.Component<RadarChartProps> {
       datasets
     } = chart.data
 
-    if (showLegend && datasets.length) {
+    if (showLegend) {
       return ReactDOMServer.renderToStaticMarkup(
-        <ul>
-          {datasets.map((dataset: Dataset, i: number) => {
-            return (
-              <li key={i}>
-                <Icon
-                  type='circle'
-                  size={1}
-                  color={datasets[i].colour}
-                />
-
-                <span className='legend-label'>
-                  {datasets[i].label}
-                </span>
-              </li>
-            )
-          })}
-        </ul>
+        <Legend datasets={datasets} />
       )
     }
 

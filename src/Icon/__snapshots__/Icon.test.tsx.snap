@@ -6,11 +6,11 @@ exports[`<Icon /> should render a large icon 1`] = `
   isLarge={true}
   isSpinning={false}
   isStacked={false}
-  type="check"
+  type="circle"
 >
   <i
     aria-hidden={true}
-    className="fa fa-check fa-lg"
+    className="fa fa-circle fa-lg"
     style={
       Object {
         "color": undefined,
