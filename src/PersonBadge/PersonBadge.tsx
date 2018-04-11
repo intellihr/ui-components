@@ -1,9 +1,8 @@
 import React from 'react'
 import classNames from 'classnames'
 import { isNil } from 'lodash'
-const style = require('./PersonBadge.scss')
-
 import { Icon } from '../Icon/Icon'
+const style = require('./PersonBadge.scss')
 
 export interface SkeletonOptions {
   showSkeleton: boolean
@@ -35,13 +34,11 @@ export class PersonBadge extends React.Component<PersonBadgeProps> {
   public static defaultProps: PersonBadgeProps = {
     size: 'large',
     isOnLeave: false,
-    onImageError: error => {
-      console.log('Something went wrong with the image: ', error)
-    }
+    onImageError: () => {}
   }
 
   constructor (props: any) {
-    super (props)
+    super(props)
 
     this.state = {
       showInitials: !this.hasImage(props)
@@ -70,7 +67,7 @@ export class PersonBadge extends React.Component<PersonBadgeProps> {
 
     return (
       <div className={classNames('person-badge-hover', size)}>
-        <Icon type='camera' /> 
+        <Icon type='camera' />
         <span className='person-badge-hover-label'>{hoverLabel}</span>
       </div>
     )
@@ -97,8 +94,8 @@ export class PersonBadge extends React.Component<PersonBadgeProps> {
 
     return (
       <img
-        src={imageId ? imageId : imageData}
-        onError={ event => { isNil(onImageError) ? null : onImageError(event) } }
+        src={imageId || imageData}
+        onError={event => !isNil(onImageError) ? onImageError(event) : null}
       />
     )
   }
@@ -146,7 +143,7 @@ export class PersonBadge extends React.Component<PersonBadgeProps> {
         className,
         size
       )}>
-        <div 
+        <div
           className={classNames(
             'person-badge-inner-container',
             { 'with-hover': !isNil(handleClick) }
