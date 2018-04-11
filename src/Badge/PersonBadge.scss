@@ -1,0 +1,154 @@
+:local(.PersonBadge) {
+  display: inline-block;
+  position: relative;
+
+  >.extended-leave-circle {
+    background-color: $warning-base;
+    border: 2px solid $main-background-hover;
+    border-radius: 50%;
+    box-shadow: 0 2px 2px rgba(0,0,0,.2);
+    position: absolute;
+  }
+
+  &.small {
+    font-size: .8rem;
+    width: 30px;
+    height: 30px;
+
+    >.extended-leave-circle {
+      padding: 5px;
+      left: -.3rem;
+      bottom: -.1rem;
+    }
+  }
+  &.medium {
+    font-size: 1rem;
+    width: 40px;
+    height: 40px;
+
+    >.extended-leave-circle {
+      padding: 5.5px;
+      left: -.3rem;
+      bottom: -.1rem;
+    }
+  }
+  &.large {
+    font-size: 1.5rem;
+    width: 72px;
+    height: 72px;
+
+    >.extended-leave-circle {
+      padding: 6.5px;
+      left: .1rem;
+      bottom: .1rem;
+    }
+  }
+  &.xlarge {
+    font-size: 2.5rem;
+    width: 120px;
+    height: 120px;
+
+    >.extended-leave-circle {
+      padding: 7px;
+      left: .75rem;
+      bottom: .25rem;
+    }
+  }
+
+  >.person-badge-inner-container {
+    position: relative;
+    width: 100%;
+    height:100%;
+    border: 1px solid $border-light;
+    border-radius: 50%;
+    color: $link-text;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    overflow: hidden;
+    user-select: none;
+
+    &.with-hover{
+      cursor: pointer;
+      transition: border-color 0.2s;
+      &:hover, &:active, &:focus {
+        border-color: $primary-base;
+      }
+    }
+
+    >.person-badge-hover {
+      position: absolute;
+      background: rgba(0,0,0,.6);
+      color: $primary-text;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+
+      transition: opacity .2s;
+      &:hover, &:active, &:focus {
+        opacity: 1;
+      }
+
+      >* {
+        padding: .2rem .7rem;
+      }
+  
+      >.person-badge-hover-label {
+        font-size: .75rem;
+        line-height: .85rem;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      &.small {
+        >.person-badge-hover-icon {
+          font-size: .75rem;
+        }
+        >.person-badge-hover-label {
+          display: none;
+        }
+      }
+
+      &.medium {
+        >.person-badge-hover-icon {
+          font-size: 1.25rem;
+        }
+        >.person-badge-hover-label {
+          display: none;
+        }
+      }
+
+      &.large {
+        >.person-badge-hover-icon {
+          font-size: 1.25rem;
+        }
+        >.person-badge-hover-label {
+          font-size: .65rem;
+        }
+      }
+
+      &.xlarge {
+        >.person-badge-hover-icon {
+          font-size: 2rem;
+        }
+        >.person-badge-hover-label {
+          font-size: .75rem;
+        }
+      }
+    }
+
+    >.badge-initials-container {
+      background-color: $badge-background-light;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
