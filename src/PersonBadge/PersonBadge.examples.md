@@ -5,21 +5,37 @@
     preferredOrFirstName='John'
     lastName='Wick'
     size='xlarge'
+    skeletonOptions={{
+      showSkeleton: false,
+      shape: 'circle'
+    }}
   />
   <PersonBadge
     preferredOrFirstName='Zoltan'
     lastName='Khevai'
     size='large'
+    skeletonOptions={{
+      showSkeleton: false,
+      shape: 'circle'
+    }}
   />
   <PersonBadge
     preferredOrFirstName='Edward'
     lastName='Nigma'
     size='medium'
+    skeletonOptions={{
+      showSkeleton: false,
+      shape: 'circle'
+    }}
   />
   <PersonBadge
     preferredOrFirstName='Tom'
     lastName='Hanks'
     size='small'
+    skeletonOptions={{
+      showSkeleton: false,
+      shape: 'circle'
+    }}
   />
 
   <PersonBadge
@@ -27,24 +43,40 @@
     lastName='Wick'
     size='xlarge'
     isOnLeave
+    skeletonOptions={{
+      showSkeleton: false,
+      shape: 'circle'
+    }}
   />
   <PersonBadge
     preferredOrFirstName='Zoltan'
     lastName='Khevai'
     size='large'
     isOnLeave
+    skeletonOptions={{
+      showSkeleton: false,
+      shape: 'circle'
+    }}
   />
   <PersonBadge
     preferredOrFirstName='Edward'
     lastName='Nigma'
     size='medium'
     isOnLeave
+    skeletonOptions={{
+      showSkeleton: false,
+      shape: 'circle'
+    }}
   />
   <PersonBadge
     preferredOrFirstName='Tom'
     lastName='Hanks'
     size='small'
     isOnLeave
+    skeletonOptions={{
+      showSkeleton: false,
+      shape: 'circle'
+    }}
   />
 
   <br />
@@ -55,6 +87,10 @@
     size='xlarge'
     imageId='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
     handleClick={() => {}}
+    skeletonOptions={{
+      showSkeleton: false,
+      shape: 'circle'
+    }}
   />
   <PersonBadge
     preferredOrFirstName='Zoltan'
@@ -62,6 +98,10 @@
     size='large'
     imageId='https://vignette.wikia.nocookie.net/witcher/images/4/4d/Tw2_zoltan_chivay_render.jpg/revision/latest/top-crop/width/240/height/240?cb=20170605185340'
     handleClick={() => {}}
+    skeletonOptions={{
+      showSkeleton: false,
+      shape: 'circle'
+    }}
   />
   <PersonBadge
     preferredOrFirstName='Edward'
@@ -69,6 +109,10 @@
     size='medium'
     imageId='http://style.anu.edu.au/_anu/4/images/placeholders/person.png'
     handleClick={() => {}}
+    skeletonOptions={{
+      showSkeleton: false,
+      shape: 'circle'
+    }}
   />
   <PersonBadge
     preferredOrFirstName='Tom'
@@ -76,6 +120,10 @@
     size='small'
     imageId='http://style.anu.edu.au/_anu/4/images/placeholders/person.png'
     handleClick={() => {}}
+    skeletonOptions={{
+      showSkeleton: false,
+      shape: 'circle'
+    }}
   />
 
   <PersonBadge
@@ -87,6 +135,10 @@
     hoverIcon='camera'
     hoverLabel='Change Picture'
     handleClick={() => {}}
+    skeletonOptions={{
+      showSkeleton: false,
+      shape: 'circle'
+    }}
   />
   <PersonBadge
     preferredOrFirstName='Zoltan'
@@ -97,6 +149,10 @@
     hoverIcon='camera'
     hoverLabel='Change Picture'
     handleClick={() => {}}
+    skeletonOptions={{
+      showSkeleton: false,
+      shape: 'circle'
+    }}
   />
   <PersonBadge
     preferredOrFirstName='Edward'
@@ -107,6 +163,10 @@
     hoverIcon='camera'
     hoverLabel='Change Picture'
     handleClick={() => {}}
+    skeletonOptions={{
+      showSkeleton: false,
+      shape: 'circle'
+    }}
   />
   <PersonBadge
     preferredOrFirstName='Tom'
@@ -117,6 +177,10 @@
     hoverIcon='camera'
     hoverLabel='Change Picture'
     handleClick={() => {}}
+    skeletonOptions={{
+      showSkeleton: false,
+      shape: 'circle'
+    }}
   />
 </div>
 ```

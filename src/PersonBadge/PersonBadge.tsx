@@ -2,25 +2,30 @@ import React from 'react'
 import classNames from 'classnames'
 import { isNil } from 'lodash'
 import { Icon } from '../Icon/Icon'
+import { 
+  withSkeleton,
+  SkeletonComponentProps
+ } from '../Skeleton/Skeleton'
 const style = require('./PersonBadge.scss')
 
-export interface SkeletonOptions {
-  showSkeleton: boolean
-  shape: string
-}
-
-export interface PersonBadgeProps {
+export interface PersonBadgeProps extends SkeletonComponentProps {
+  /** This will be used for the first character of the initials badge if the image URL nad data are missing */
   preferredOrFirstName?: string
+  /** This will be used for the second character of the initials badge if the image URL nad data are missing */
   lastName?: string
-  className?: string
+  /** Text for the black, transparent overlay (both Label and Icon have to be present for the overlay to render) */
   hoverLabel?: string
+  /** Label for the black, transparent overlay (both Label and Icon have to be present for the overlay to render) */
   hoverIcon?: string
+  /** Handle the component click (If the function is not present, curson and border effects will not appear on hover) */
   handleClick?: (event: React.MouseEvent<HTMLDivElement>) => void
-  size?: 'original' | 'small' | 'medium' | 'large' | 'xlarge'
+  /** Image URL */
   imageId?: string
+  /** Image blob data */
   imageData?: string
+  /** If true will place a yellow marker besides the profile picture */
   isOnLeave?: boolean
-  skeletonOptions?: SkeletonOptions
+  /** Handler for the case if image doesn't load */
   onImageError?: (error: any) => void
 }
 
@@ -28,13 +33,19 @@ export interface PersonBadgeState {
   showInitials: boolean
 }
 
-export class PersonBadge extends React.Component<PersonBadgeProps> {
-  public state: PersonBadgeState = { showInitials: true }
+export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
+  public state: PersonBadgeState = { 
+    showInitials: true
+  }
 
   public static defaultProps: PersonBadgeProps = {
-    size: 'large',
+    size: 'medium',
     isOnLeave: false,
-    onImageError: () => {}
+    onImageError: () => {},
+    skeletonOptions: {
+      showSkeleton: true,
+      shape: 'circle'
+    }
   }
 
   constructor (props: any) {
@@ -158,3 +169,5 @@ export class PersonBadge extends React.Component<PersonBadgeProps> {
     )
   }
 }
+
+export const PersonBadge = withSkeleton(PersonBadgeComponent)
