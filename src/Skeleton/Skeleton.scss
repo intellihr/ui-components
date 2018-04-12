@@ -1,0 +1,69 @@
+@keyframes progress {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+:local(.Skeleton) {
+  animation: progress 1.2s ease-in-out infinite;
+  background-color: $neutral-base;
+  background-image: linear-gradient(90deg, $neutral-base, tint($neutral-base, 45%), $neutral-base);
+  background-size: 200px 100%;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  border: 1px solid $border-light;
+  display: inline-flex;
+  line-height: 1rem;
+  width: 100%;
+
+  &.circle {
+    border-radius: 50%;
+
+    &.skeleton-small {
+      height: 30px;
+      width: 30px;
+      // line-height: 30px;
+    }
+    &.skeleton-medium {
+      height: 40px;
+      width: 40px;
+      // line-height: 40px;
+    }
+    &.skeleton-large {
+      height: 72px;
+      width: 72px;
+      // line-height: 72px;
+    }
+    &.skeleton-xlarge {
+      height: 120px;
+      width: 120px;
+      // line-height: 120px;
+    }
+  }
+
+  &.line {
+    &.skeleton-small {
+      height: 30px;
+      width: 90px;
+      // line-height: 30px;
+    }
+    &.skeleton-medium {
+      height: 40px;
+      width: 120px;
+      // line-height: 40px;
+    }
+    &.skeleton-large {
+      height: 72px;
+      width: 195px;
+      // line-height: 72px;
+    }
+    &.skeleton-xlarge {
+      height: 120px;
+      width: 240px;
+      // line-height: 120px;
+    }
+  }
+}
