@@ -40,9 +40,9 @@
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
 
-"@types/chart.js@2.7.11":
-  version "2.7.11"
-  resolved "https://registry.yarnpkg.com/@types/chart.js/-/chart.js-2.7.11.tgz#40e392efc91d8e42a9a7cc21b7b082acbe693c40"
+"@types/chart.js@2.7.14":
+  version "2.7.14"
+  resolved "https://registry.yarnpkg.com/@types/chart.js/-/chart.js-2.7.14.tgz#4c4602b3ae2285ef4a196e4e11ec168342c0ec28"
 
 "@types/cheerio@*":
   version "0.22.7"
