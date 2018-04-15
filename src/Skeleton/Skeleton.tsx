@@ -18,7 +18,6 @@ export interface SkeletonComponentProps {
   /** Additional class names for the parent container */
   className?: string
 }
-export interface SkeletonComponentState {}
 
 export const withSkeleton = <P extends SkeletonComponentProps>(
   UnwrappedComponent: React.ComponentType<P>
