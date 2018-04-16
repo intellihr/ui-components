@@ -20,46 +20,39 @@ export interface SkeletonComponentProps {
 
 export const withSkeleton = <P extends {}>(
   UnwrappedComponent: React.ComponentType<P>
-) => class Skeleton extends React.Component<P & SkeletonComponentProps> {
-  public static defaultProps: Partial<SkeletonComponentProps> = {
-    skeletonOptions: {
-      showSkeleton: true,
-      shape: 'circle'
-    },
-    size: 'medium',
-    className: ''
-  }
-
-  render () {
-    if (isEmpty(this.props.skeletonOptions)) {
-      return <UnwrappedComponent {...this.props} />
-    }
-    
-    const {
+) => class Skeleton extends React.Component< P & SkeletonComponentProps> {
+    static defaultProps: Partial<SkeletonComponentProps> = {
       skeletonOptions: {
-        showSkeleton,
-        width,
-        shape
+        showSkeleton: true,
+        shape: 'circle'
       },
-      size,
-      className
-    } = this.props
-
-    if (!showSkeleton) {
-      return <UnwrappedComponent {...this.props} />
+      size: 'medium',
+      className: ''
     }
 
-    return (
-      <span
-        className={classNames(
-          style.Skeleton,
-          className,
-          'skeleton',
-          shape,
-          `skeleton-${size}`
-        )}
-        style={{ width }}
-      />
-    )
-  }  
+    render (): JSX.Element {
+      const { showSkeleton, width, shape } = this.props.skeletonOptions!
+
+      if (showSkeleton) {
+        return <UnwrappedComponent {...this.props} />
+      }
+
+      const {
+        size,
+        className
+      } = this.props
+
+      return (
+        <span
+          className={classNames(
+            style.Skeleton,
+            className,
+            'skeleton',
+            shape,
+            `skeleton-${size}`
+          )}
+          style={{width}}
+        />
+      )
+    }
 }
