@@ -6,90 +6,89 @@
     background-color: $warning-base;
     border: 2px solid $main-background-hover;
     border-radius: 50%;
-    box-shadow: 0 2px 2px rgba(0,0,0,.2);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
     position: absolute;
   }
 
   &.small {
     font-size: .8rem;
-    width: 30px;
     height: 30px;
+    width: 30px;
 
     >.extended-leave-circle {
-      padding: 5px;
-      left: -.3rem;
       bottom: -.1rem;
+      left: -.3rem;
+      padding: 5px;
     }
   }
   &.medium {
     font-size: 1rem;
-    width: 40px;
     height: 40px;
+    width: 40px;
 
     >.extended-leave-circle {
-      padding: 5.5px;
-      left: -.3rem;
       bottom: -.1rem;
+      left: -.3rem;
+      padding: 5.5px;
     }
   }
   &.large {
     font-size: 1.5rem;
-    width: 72px;
     height: 72px;
+    width: 72px;
 
     >.extended-leave-circle {
-      padding: 6.5px;
-      left: .1rem;
       bottom: .1rem;
+      left: .1rem;
+      padding: 6.5px;
     }
   }
   &.xlarge {
     font-size: 2.5rem;
-    width: 120px;
     height: 120px;
+    width: 120px;
 
     >.extended-leave-circle {
-      padding: 7px;
-      left: .75rem;
       bottom: .25rem;
+      left: .75rem;
+      padding: 7px;
     }
   }
 
   >.person-badge-inner-container {
-    position: relative;
-    width: 100%;
-    height:100%;
     border: 1px solid $border-light;
     border-radius: 50%;
     color: $link-text;
     font-weight: 600;
-    text-transform: uppercase;
-    text-align: center;
+    height: 100%;
     overflow: hidden;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
     user-select: none;
+    width: 100%;
 
     &.with-hover{
       cursor: pointer;
-      transition: border-color 0.2s;
+      transition: border-color .2s;
       &:hover, &:active, &:focus {
         border-color: $primary-base;
       }
     }
 
     >.person-badge-hover {
-      position: absolute;
+      align-items: center;
       background: rgba(0,0,0,.6);
       color: $primary-text;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-
       display: flex;
       flex-flow: column;
-      align-items: center;
+      height: 100%;
       justify-content: center;
-
+      opacity: 0;
+      position: absolute;
       transition: opacity .2s;
+      width: 100%;
+
       &:hover, &:active, &:focus {
         opacity: 1;
       }
