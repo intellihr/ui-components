@@ -71,22 +71,22 @@ For all dependecies, use the combination of
 
 1. Add `devDependencies`
 
-```!bash
-npm add some-library --save-dev
-```
+    ```!bash
+    npm add some-library --save-dev
+    ```
 
 2. For `dependencies`, update `package.json`
 
-```json
-{
-  "devDependencies": {
-    "some-library": "^1.0.0"
-  },
-  "peerDependencies": {
-    "some-library": "^1.0.0"
-  }
-}
-```
+    ```json
+    {
+      "devDependencies": {
+        "some-library": "^1.0.0"
+      },
+      "peerDependencies": {
+        "some-library": "^1.0.0"
+      }
+    }
+    ```
 
 In this case, the consumer will be responsible to download
 the dependencies.
