@@ -3,8 +3,7 @@ options:
   formatter: stylish
   max-warnings: 50
 files:
-  include:
-    - 'src/**/*.s+(a|c)ss'
+  include: 'src/**/*.s+(a|c)ss'
   ignore:
     # Too Cleanup
     - 'src/sass/**/*.s+(a|c)ss'
