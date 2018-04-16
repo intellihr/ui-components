@@ -1,6 +1,5 @@
 import React from 'react'
 import classNames from 'classnames'
-import { isEmpty } from 'lodash'
 const style = require('./Skeleton.scss')
 
 export interface SkeletonComponentProps {
@@ -25,7 +24,6 @@ export const withSkeleton = <P extends {}>(
     static defaultProps: Partial<SkeletonComponentProps> = {
       skeletonOptions: {
         showSkeleton: true,
-        width: 12,
         shape: 'circle'
       },
       size: 'medium',
@@ -33,12 +31,7 @@ export const withSkeleton = <P extends {}>(
     }
 
     render (): JSX.Element {
-      if (isEmpty(this.props.skeletonOptions)) {
-        return <UnwrappedComponent {...this.props} />
-      }
-
       const {
-
         size,
         className
       } = this.props
