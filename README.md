@@ -75,7 +75,7 @@ For all dependecies, use the combination of
     npm add some-library --save-dev
     ```
 
-2. For `dependencies`, update `package.json`
+2. For `dependencies`, update `package.json` (Skip this for `devDependencies`)
 
     ```json
     {
