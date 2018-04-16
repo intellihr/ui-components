@@ -36,7 +36,7 @@ export const withSkeleton = <P extends SkeletonComponentProps>(
       if (isEmpty(this.props.skeletonOptions)) {
         return <UnwrappedComponent {...this.props} />
       }
-  
+
       const {
         skeletonOptions: {
           showSkeleton,
@@ -46,11 +46,11 @@ export const withSkeleton = <P extends SkeletonComponentProps>(
         size,
         className
       } = this.props
-  
+
       if (!showSkeleton) {
-        return <UnwrappedComponent { ...this.props } />
+        return <UnwrappedComponent {...this.props} />
       }
-    
+
       return (
         <span
           className={classNames(
@@ -60,7 +60,7 @@ export const withSkeleton = <P extends SkeletonComponentProps>(
             shape,
             `skeleton-${size}`
           )}
-          style={ { width } }
+          style={{ width }}
         />
       )
     }
