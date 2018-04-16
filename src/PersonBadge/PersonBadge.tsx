@@ -170,4 +170,4 @@ export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
   }
 }
 
-export const PersonBadge: React.ComponentClass<PersonBadgeProps & SkeletonComponentProps>  = withSkeleton(PersonBadgeComponent)
+export const PersonBadge: React.ComponentClass<PersonBadgeProps & SkeletonComponentProps> = withSkeleton(PersonBadgeComponent)

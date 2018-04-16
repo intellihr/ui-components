@@ -20,7 +20,7 @@ export interface SkeletonComponentProps {
 
 export const withSkeleton = <P extends {}>(
   UnwrappedComponent: React.ComponentType<P>
-) =>class Skeleton extends React.Component< P & SkeletonComponentProps> {
+) => class Skeleton extends React.Component< P & SkeletonComponentProps> {
     static defaultProps: Partial<SkeletonComponentProps> = {
       skeletonOptions: {
         showSkeleton: true,
@@ -39,7 +39,7 @@ export const withSkeleton = <P extends {}>(
       const { showSkeleton, width, shape } = this.props.skeletonOptions!
 
       if (showSkeleton) {
-        return <UnwrappedComponent { ...this.props } />
+        return <UnwrappedComponent {...this.props} />
       }
 
       return (
