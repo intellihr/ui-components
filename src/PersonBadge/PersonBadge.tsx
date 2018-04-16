@@ -2,10 +2,10 @@ import React from 'react'
 import classNames from 'classnames'
 import { isNil } from 'lodash'
 import { Icon } from '../Icon/Icon'
-import { 
+import {
   withSkeleton,
   SkeletonComponentProps
- } from '../Skeleton/Skeleton'
+} from '../Skeleton/Skeleton'
 const style = require('./PersonBadge.scss')
 
 export interface PersonBadgeProps extends SkeletonComponentProps {
@@ -34,7 +34,7 @@ export interface PersonBadgeState {
 }
 
 export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
-  public state: PersonBadgeState = { 
+  public state: PersonBadgeState = {
     showInitials: true
   }
 
