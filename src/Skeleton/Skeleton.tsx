@@ -31,16 +31,16 @@ export const withSkeleton = <P extends {}>(
     }
 
     render (): JSX.Element {
-      const {
-        size,
-        className
-      } = this.props
-
       const { showSkeleton, width, shape } = this.props.skeletonOptions!
 
       if (showSkeleton) {
         return <UnwrappedComponent {...this.props} />
       }
+
+      const {
+        size,
+        className
+      } = this.props
 
       return (
         <span
