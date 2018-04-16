@@ -1,3 +1,4 @@
+const nodeExternals = require('webpack-node-externals')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const path = require('path')
 
@@ -12,32 +13,14 @@ module.exports = {
     new ExtractTextPlugin('[name].css')
   ],
   entry: {
-    index: './src/index.ts',
-    Callout: './src/Callout/Callout.tsx',
-    Modal: './src/Modal/Modal.tsx'
+    index: './src/index.ts'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
     libraryTarget: 'commonjs'
   },
-  externals: {
-    'react': {
-      commonjs: 'react'
-    },
-    'lodash': {
-      commonjs: 'lodash',
-      commonjs2: 'lodash',
-      amd: 'lodash',
-      root: '_'
-    },
-    'jquery': {
-      commonjs: 'jquery'
-    },
-    'classnames': {
-      commonjs: 'classnames'
-    }
-  },
+  externals: [nodeExternals()],
   module: {
     rules: [
       {
