@@ -1,6 +1,8 @@
 import React from 'react'
 import classNames from 'classnames'
 
+import { PersonBadge } from '../PersonBadge/PersonBadge'
+
 export interface CommentProps {
   comment: {
     id: string,
@@ -31,7 +33,13 @@ export class Comment extends React.Component<CommentProps> {
 
     return (
       <div id={comment.id} className={classNames()}>
-        Whaaaazzzaaaa
+        <div className='comment-badge-container'>
+          <PersonBadge
+            size='small'
+            preferredOrFirstName={comment.personPreferredOrFirstName}
+            lastName={comment.personFirtsName}
+          />
+        </div>
       </div>
     )
   }

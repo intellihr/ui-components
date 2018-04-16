@@ -3,8 +3,7 @@ import classNames from 'classnames'
 import { isNil } from 'lodash'
 import { Icon } from '../Icon/Icon'
 import {
-  withSkeleton,
-  SkeletonComponentProps
+  withSkeleton
 } from '../Skeleton/Skeleton'
 const style = require('./PersonBadge.scss')
 
