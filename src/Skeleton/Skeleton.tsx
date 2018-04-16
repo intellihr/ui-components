@@ -14,7 +14,7 @@ export interface SkeletonComponentProps {
     shape: 'circle' | 'line'
   }
   /** How big you want the skeleton (Width can be overridden by skeletonOptions.width prop) */
-  size?: 'small' | 'medium' | 'large' | 'xlarge',
+  size?: 'small' | 'medium' | 'large' | 'xlarge'
   /** Additional class names for the parent container */
   className?: string
 }
