@@ -22,9 +22,9 @@
   dependencies:
     loader-utils "^1.1.0"
 
-"@intellihr/standard@11.0.3":
-  version "11.0.3"
-  resolved "https://registry.yarnpkg.com/@intellihr/standard/-/standard-11.0.3.tgz#f93f224e226e36e97155b134c030f5973df0e896"
+"@intellihr/standard@11.0.4":
+  version "11.0.4"
+  resolved "https://registry.yarnpkg.com/@intellihr/standard/-/standard-11.0.4.tgz#1397983f0cedba51ad43c708f8b6c4bfa168cce4"
   dependencies:
     eslint "~4.19.0"
     eslint-config-standard "11.0.0"
