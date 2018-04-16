@@ -1,11 +1,10 @@
 import React from 'react'
 import classNames from 'classnames'
-import { isEmpty } from 'lodash'
 const style = require('./Skeleton.scss')
 
 export interface SkeletonComponentProps {
   /** Skeleton setting */
-  skeletonOptions: {
+  skeletonOptions?: {
     /** If true, will display the skeleton */
     showSkeleton: boolean,
     /** The width of the skeleton, will overrite the 'size' prop */
@@ -19,11 +18,10 @@ export interface SkeletonComponentProps {
   className?: string
 }
 
-export const withSkeleton = <P extends SkeletonComponentProps>(
+export const withSkeleton = <P extends {}>(
   UnwrappedComponent: React.ComponentType<P>
-) =>
-  class Skeleton extends React.Component<P> {
-    public static defaultProps: SkeletonComponentProps = {
+) => class Skeleton extends React.Component< P & SkeletonComponentProps> {
+    static defaultProps: Partial<SkeletonComponentProps> = {
       skeletonOptions: {
         showSkeleton: true,
         shape: 'circle'
@@ -32,22 +30,15 @@ export const withSkeleton = <P extends SkeletonComponentProps>(
       className: ''
     }
 
-    render () {
-      if (isEmpty(this.props.skeletonOptions)) {
-        return <UnwrappedComponent {...this.props} />
-      }
-
+    render (): JSX.Element {
       const {
-        skeletonOptions: {
-          showSkeleton,
-          width,
-          shape
-        },
         size,
         className
       } = this.props
 
-      if (!showSkeleton) {
+      const { showSkeleton, width, shape } = this.props.skeletonOptions!
+
+      if (showSkeleton) {
         return <UnwrappedComponent {...this.props} />
       }
 
@@ -60,8 +51,8 @@ export const withSkeleton = <P extends SkeletonComponentProps>(
             shape,
             `skeleton-${size}`
           )}
-          style={{ width }}
+          style={{width}}
         />
       )
     }
-  }
+}

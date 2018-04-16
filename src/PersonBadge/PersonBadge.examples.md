@@ -5,26 +5,18 @@
     preferredOrFirstName='John'
     lastName='Wick'
     size='xlarge'
-    skeletonOptions={{
-      showSkeleton: false,
-      shape: 'circle'
-    }}
   />
   <PersonBadge
     preferredOrFirstName='Zoltan'
     lastName='Khevai'
     size='large'
-    skeletonOptions={{
-      showSkeleton: false,
-      shape: 'circle'
-    }}
   />
   <PersonBadge
     preferredOrFirstName='Edward'
     lastName='Nigma'
     size='medium'
     skeletonOptions={{
-      showSkeleton: false,
+      showSkeleton: true,
       shape: 'circle'
     }}
   />
@@ -33,7 +25,7 @@
     lastName='Hanks'
     size='small'
     skeletonOptions={{
-      showSkeleton: false,
+      showSkeleton: true,
       shape: 'circle'
     }}
   />
@@ -44,7 +36,7 @@
     size='xlarge'
     isOnLeave
     skeletonOptions={{
-      showSkeleton: false,
+      showSkeleton: true,
       shape: 'circle'
     }}
   />
@@ -54,7 +46,7 @@
     size='large'
     isOnLeave
     skeletonOptions={{
-      showSkeleton: false,
+      showSkeleton: true,
       shape: 'circle'
     }}
   />
@@ -64,7 +56,7 @@
     size='medium'
     isOnLeave
     skeletonOptions={{
-      showSkeleton: false,
+      showSkeleton: true,
       shape: 'circle'
     }}
   />
@@ -74,7 +66,7 @@
     size='small'
     isOnLeave
     skeletonOptions={{
-      showSkeleton: false,
+      showSkeleton: true,
       shape: 'circle'
     }}
   />
@@ -88,7 +80,7 @@
     imageId='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
     handleClick={() => {}}
     skeletonOptions={{
-      showSkeleton: false,
+      showSkeleton: true,
       shape: 'circle'
     }}
   />
@@ -99,7 +91,7 @@
     imageId='https://vignette.wikia.nocookie.net/witcher/images/4/4d/Tw2_zoltan_chivay_render.jpg/revision/latest/top-crop/width/240/height/240?cb=20170605185340'
     handleClick={() => {}}
     skeletonOptions={{
-      showSkeleton: false,
+      showSkeleton: true,
       shape: 'circle'
     }}
   />
@@ -110,7 +102,7 @@
     imageId='http://style.anu.edu.au/_anu/4/images/placeholders/person.png'
     handleClick={() => {}}
     skeletonOptions={{
-      showSkeleton: false,
+      showSkeleton: true,
       shape: 'circle'
     }}
   />
@@ -121,7 +113,7 @@
     imageId='http://style.anu.edu.au/_anu/4/images/placeholders/person.png'
     handleClick={() => {}}
     skeletonOptions={{
-      showSkeleton: false,
+      showSkeleton: true,
       shape: 'circle'
     }}
   />
@@ -136,7 +128,7 @@
     hoverLabel='Change Picture'
     handleClick={() => {}}
     skeletonOptions={{
-      showSkeleton: false,
+      showSkeleton: true,
       shape: 'circle'
     }}
   />
@@ -150,7 +142,7 @@
     hoverLabel='Change Picture'
     handleClick={() => {}}
     skeletonOptions={{
-      showSkeleton: false,
+      showSkeleton: true,
       shape: 'circle'
     }}
   />
@@ -164,7 +156,7 @@
     hoverLabel='Change Picture'
     handleClick={() => {}}
     skeletonOptions={{
-      showSkeleton: false,
+      showSkeleton: true,
       shape: 'circle'
     }}
   />
@@ -178,7 +170,7 @@
     hoverLabel='Change Picture'
     handleClick={() => {}}
     skeletonOptions={{
-      showSkeleton: false,
+      showSkeleton: true,
       shape: 'circle'
     }}
   />
