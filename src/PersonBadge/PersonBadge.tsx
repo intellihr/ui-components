@@ -8,7 +8,9 @@ import {
 } from '../Skeleton/Skeleton'
 const style = require('./PersonBadge.scss')
 
-export interface PersonBadgeProps extends SkeletonComponentProps {
+export interface PersonBadgeProps {
+  /** size for the badge  */
+  size?: 'small' | 'medium' | 'large' | 'xlarge'
   /** This will be used for the first character of the initials badge if the image URL nad data are missing */
   preferredOrFirstName?: string
   /** This will be used for the second character of the initials badge if the image URL nad data are missing */
@@ -27,6 +29,8 @@ export interface PersonBadgeProps extends SkeletonComponentProps {
   isOnLeave?: boolean
   /** Handler for the case if image doesn't load */
   onImageError?: (error: any) => void
+
+  className?: string
 }
 
 export interface PersonBadgeState {
@@ -41,11 +45,7 @@ export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
   public static defaultProps: PersonBadgeProps = {
     size: 'medium',
     isOnLeave: false,
-    onImageError: () => {},
-    skeletonOptions: {
-      showSkeleton: true,
-      shape: 'circle'
-    }
+    onImageError: () => {}
   }
 
   constructor (props: any) {
@@ -170,4 +170,4 @@ export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
   }
 }
 
-export const PersonBadge = withSkeleton(PersonBadgeComponent)
+export const PersonBadge: React.ComponentClass<PersonBadgeProps & SkeletonComponentProps>  = withSkeleton(PersonBadgeComponent)
