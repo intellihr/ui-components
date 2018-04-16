@@ -4,6 +4,7 @@ variables:
   DOCKER_DRIVER: overlay2
   DEFAULT_RELEASE_VERSION: prerelease
   RELEASE_VERSION: prerelease
+  REVIEW_PORT: 8888
 
 services:
   - docker:dind
@@ -13,9 +14,10 @@ before_script:
 
 stages:
   - prepare
+  - update
   - install
-  - test
-  - build
+  - build & test
+  - review
   - deploy
 
 prepare-image:
@@ -27,30 +29,52 @@ prepare-image:
     paths:
       - ui-components.tar
 
+update:on-schedule:
+  stage: update
+  only:
+    - schedules
+  script:
+    - docker-compose run --rm gitlab-ci renovate
+      --platform gitlab
+      --endpoint https://gitlab.com/api/v4
+      --token "$GIT_TOKEN" intellihr/ui-components
+
 install-package:
   stage: install
+  except:
+    - schedules
   script:
-    - docker-compose run --rm gitlab-ci /bin/sh -c
-      "
-        yarn install --frozen-lockfile --network-concurrency 1 &&
-        npm rebuild node-sass
-      "
+    - docker-compose run --rm gitlab-ci npm ci
   artifacts:
     paths:
       - node_modules/
+      - npm-debug.log
 
-lint:
-  stage: test
+ts-lint:
+  stage: build & test
+  except:
+    - schedules
   script:
-    - docker-compose run --rm gitlab-ci yarn lint
+    - docker-compose run --rm gitlab-ci npm run lint
+
+sass-lint:
+  stage: build & test
+  except:
+    - schedules
+  script:
+    - docker-compose run --rm gitlab-ci npm run lint:sass
 
 test:
-  stage: test
+  stage: build & test
+  except:
+    - schedules
   script:
-    - docker-compose run --rm gitlab-ci yarn test
+    - docker-compose run --rm gitlab-ci npm run test:ci
 
 codequality: &codequality
-  stage: test
+  stage: review
+  except:
+    - schedules
   variables:
     CODECLIMATE_FORMAT: json
   dependencies: []
@@ -76,9 +100,9 @@ codequality-html:
       - .codeclimate/
 
 build-bundle:
-  stage: build
+  stage: build & test
   script:
-    - docker-compose run --rm gitlab-ci yarn build
+    - docker-compose run --rm gitlab-ci npm run build
   artifacts:
     paths:
       - es/
@@ -88,15 +112,58 @@ build-bundle:
       - master
 
 build-styleguide:
-  stage: build
+  stage: build & test
+  except:
+    - schedules
   script:
-    - docker-compose run --rm gitlab-ci yarn styleguide:build
+    - docker-compose run --rm gitlab-ci /bin/sh -c
+      "
+        npm run styleguide:build &&
+        rm -f Dockerfile && mv Dockerfile-review Dockerfile &&
+        zip -r styleguide.zip styleguide/ nginx/ Dockerfile
+      "
   artifacts:
     paths:
+      - .elasticbeanstalk/
       - styleguide/
+      - styleguide.zip
+
+review:
+  stage: review
   only:
-    refs:
-      - master
+    - branches
+  except:
+    - schedules
+    - master
+  when: manual
+  image: coxauto/aws-ebcli
+  dependencies:
+    - build-styleguide
+  script:
+    - ./docker/bin/deploy-review
+  environment:
+    name: $CI_COMMIT_REF_SLUG
+    url: http://$CI_COMMIT_REF_SLUG-45def85f.ap-southeast-2.elasticbeanstalk.com
+    on_stop: stop_review
+
+stop_review:
+  stage: review
+  only:
+    - branches
+  except:
+    - schedules
+    - master
+  when: manual
+  image: coxauto/aws-ebcli
+  dependencies:
+    - build-styleguide
+  script:
+    - eb terminate --force "$CI_COMMIT_REF_SLUG-45def85f"
+  environment:
+    name: $CI_COMMIT_REF_SLUG
+    action: stop
+  variables:
+    GIT_STRATEGY: none
 
 pages:
   stage: deploy

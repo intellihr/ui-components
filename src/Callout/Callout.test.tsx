@@ -2,7 +2,7 @@ import { shallow } from 'enzyme'
 import React from 'react'
 import reactRenderer from 'react-test-renderer'
 
-import { Callout } from '../'
+import { Callout } from '../Callout'
 
 describe('Callout', () => {
   it('Renders successfully', () => {

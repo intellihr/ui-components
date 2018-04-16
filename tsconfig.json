@@ -12,6 +12,7 @@
     "module": "commonjs",
     "target": "es5",
     "sourceMap": true,
+    "noUnusedLocals": true,
     "noImplicitAny": true,
     "skipLibCheck": true,
     "rootDir": "./src",
@@ -21,11 +22,13 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.tsx"
+    "src/**/*.tsx",
+    "declarations.d.ts"
   ],
   "exclude": [
     "node_modules",
-    "**/__tests__/*",
+    "**/*.test.ts",
+    "**/*.test.tsx",
     "**/*.md",
     "dist",
     "es"

@@ -2,6 +2,18 @@
 
 A common React components library that is used in our company.
 
+## Badges
+
+### Master
+
+* ![Coverage](https://gitlab.com/intellihr/ui-components/badges/master/coverage.svg)
+* ![Build status](https://gitlab.com/intellihr/ui-components/badges/master/build.svg)
+
+### Develop
+
+* ![Coverage](https://gitlab.com/intellihr/ui-components/badges/develop/coverage.svg)
+* ![Build status](https://gitlab.com/intellihr/ui-components/badges/develop/build.svg)
+
 ## Table of Contents
 
 * [Get Started](#get-started)
@@ -45,14 +57,7 @@ docker-compose run --rm code /bin/sh
 Please install local dependencies:
 
 ```!bash
-yarn i
-```
-
-or
-
-```!bash
-yarn install
-npm rebuild node-sass
+npm install
 ```
 
 ### Development
@@ -72,7 +77,7 @@ with JSX syntax in the component folder, e.g. `Callout.examples.md`
 
 Some development points:
 
-* Tests are written in `__tests__` of each component folder
+* Tests are written in `.test.tsx` of each component `.tsx` file
 
 * [No default export](https://palantir.github.io/tslint/rules/no-default-export/)
 
@@ -80,22 +85,28 @@ Some development points:
 
 ### Lint
 
-Style Check
+Typescript Style Check
 
 ```!bash
-yarn lint
+npm run lint
 ```
 
 with autofix
 
 ```!bash
-yarn lint:fix
+npm run lint:fix
+```
+
+Sass Style Check
+
+```!bash
+npm run lint:sass
 ```
 
 ### Code Quality Analysis
 
 ```!bash
-yarn codequality
+npm run codequality
 ```
 
 It will then generate `.codeclimate/codeclimate.html`

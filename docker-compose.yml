@@ -3,10 +3,7 @@ services:
   gitlab-ci:
     image: ui-components:latest
     volumes:
-      - ./node_modules:/code/node_modules
-      - ./es:/code/es
-      - ./dist:/code/dist
-      - ./styleguide:/code/styleguide
+      - .:/code
     environment:
       - DEFAULT_RELEASE_VERSION=${DEFAULT_RELEASE_VERSION}
       - RELEASE_VERSION=${RELEASE_VERSION}

@@ -1,5 +1,3 @@
-# Callout
-
 ## Generate Message
 
 ```jsx

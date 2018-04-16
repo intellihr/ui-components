@@ -3,8 +3,8 @@
 :local(.modalClass) {
   &.reveal {
     margin: auto;
-    top: auto;
     outline: none;
+    top: auto;
 
     @include breakpoint(small down) {
       height: auto;

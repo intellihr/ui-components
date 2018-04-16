@@ -46,23 +46,23 @@ module.exports = {
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            outputPath: 'fonts/', // where the fonts will go
-            publicPath: '../' // override the default path
+            outputPath: 'fonts/' // where the fonts will go
           }
         }]
       },
-      {
-        test: /\.tsx?$/,
-        exclude: /(node_modules)/,
-        enforce: 'pre',
-        loader: 'standard-loader',
-        options: {
-          parser: 'typescript-eslint-parser',
-          plugins: [
-            'typescript'
-          ]
-        }
-      },
+      // Re-enable after standard is updated to fix typescript
+      // {
+      //   test: /\.tsx?$/,
+      //   exclude: /(node_modules)/,
+      //   enforce: 'pre',
+      //   loader: 'standard-loader',
+      //   options: {
+      //     parser: 'typescript-eslint-parser',
+      //     plugins: [
+      //       'typescript'
+      //     ]
+      //   }
+      // },
       {
         test: /\.tsx?$/,
         exclude: /(node_modules)/,
@@ -70,12 +70,6 @@ module.exports = {
           {
             loader: 'awesome-typescript-loader'
           }
-        ]
-      },
-      {
-        test: /\.(eot|svg|ttf|woff|woff2)$/,
-        use: [
-          'url-loader'
         ]
       },
       {

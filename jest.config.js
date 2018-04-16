@@ -9,7 +9,7 @@ module.exports = {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
     '<rootDir>/assetsTransformer.js'
   },
-  testRegex: '/__tests__/.*\\.(ts|tsx|js)$',
+  testRegex: '.*\\.test.(ts|tsx|js)$',
   collectCoverage: true,
   coverageDirectory: '<rootDir>/coverage/',
   coverageReporters: [
@@ -28,5 +28,8 @@ module.exports = {
     }
   },
   setupTestFrameworkScriptFile: './setupTest.ts',
-  snapshotSerializers: ['enzyme-to-json/serializer']
+  snapshotSerializers: ['enzyme-to-json/serializer'],
+  moduleNameMapper: {
+    '\\.(scss|css)$': 'identity-obj-proxy'
+  }
 }

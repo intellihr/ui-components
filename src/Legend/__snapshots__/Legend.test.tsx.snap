@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Legend /> should render a legend 1`] = `
+<Legend
+  datasets={
+    Array [
+      Object {
+        "colour": "rgb(0,255,0)",
+        "label": "I am the green dataset",
+      },
+      Object {
+        "colour": "rgb(0,0,255)",
+        "label": "I am BLUE!",
+      },
+    ]
+  }
+>
+  <ul
+    className="legendClass"
+  >
+    <li
+      key="0"
+    >
+      <Icon
+        color="rgb(0,255,0)"
+        isFontAwesome={true}
+        isLarge={false}
+        isSpinning={false}
+        isStacked={false}
+        size={1}
+        type="circle"
+      >
+        <i
+          aria-hidden={true}
+          className="fa fa-circle fa-1x"
+          style={
+            Object {
+              "color": "rgb(0,255,0)",
+            }
+          }
+        />
+      </Icon>
+      <span
+        className="legend-label"
+      >
+        I am the green dataset
+      </span>
+    </li>
+    <li
+      key="1"
+    >
+      <Icon
+        color="rgb(0,0,255)"
+        isFontAwesome={true}
+        isLarge={false}
+        isSpinning={false}
+        isStacked={false}
+        size={1}
+        type="circle"
+      >
+        <i
+          aria-hidden={true}
+          className="fa fa-circle fa-1x"
+          style={
+            Object {
+              "color": "rgb(0,0,255)",
+            }
+          }
+        />
+      </Icon>
+      <span
+        className="legend-label"
+      >
+        I am BLUE!
+      </span>
+    </li>
+  </ul>
+</Legend>
+`;
+
+exports[`<Legend /> should render null if there is no data provided 1`] = `
+<Legend
+  datasets={Array []}
+/>
+`;
