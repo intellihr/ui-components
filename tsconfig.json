@@ -12,7 +12,7 @@
     "module": "commonjs",
     "target": "es5",
     "sourceMap": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "noImplicitAny": true,
     "skipLibCheck": true,
     "rootDir": "./src",

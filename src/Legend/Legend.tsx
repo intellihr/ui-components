@@ -1,7 +1,6 @@
 import React from 'react'
+import { LegendWrapper, LegendLabel } from './style'
 import { Icon } from '../Icon'
-
-const style = require('./style.scss')
 
 export interface LegendDataset {
   colour: string
@@ -28,7 +27,7 @@ export class Legend extends React.Component<LegendProps> {
     }
 
     return (
-      <ul className={style.legendClass}>
+      <LegendWrapper>
         {datasets.map((dataset: LegendDataset, i: number) => {
           return (
             <li key={i}>
@@ -38,13 +37,13 @@ export class Legend extends React.Component<LegendProps> {
                 color={datasets[i].colour}
               />
 
-              <span className='legend-label'>
+              <LegendLabel>
                 {datasets[i].label}
-              </span>
+              </LegendLabel>
             </li>
           )
         })}
-      </ul>
+      </LegendWrapper>
     )
   }
 }
