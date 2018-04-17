@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Colour /> should render a colour component 1`] = `
+<Colour
+  description="intelli-royal-blue"
+  hex="#432DF3"
+>
+  <div>
+    <styled.div>
+      <div
+        className="sc-bdVaJa krdfja"
+      />
+    </styled.div>
+    <styled.p>
+      <p
+        className="sc-bwzfXH hOEnvp"
+      >
+         
+        intelli-royal-blue
+         
+      </p>
+    </styled.p>
+    <p>
+       
+      #432DF3
+       
+    </p>
+  </div>
+</Colour>
+`;
