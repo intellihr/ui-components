@@ -35,6 +35,7 @@ export class Comment extends React.Component<CommentProps> {
       <div className='comment-badge-container'>
         <PersonBadge
           size='small'
+          imageId={personProfilePictureId}
           preferredOrFirstName={personPreferredOrFirstName}
           lastName={personFirstName}
         />
@@ -84,8 +85,6 @@ export class Comment extends React.Component<CommentProps> {
       }
     } = this.props
 
-    console.log(personId, loggedInUserId)
-
     return (
       <strong className='comment-header-person-name'>
         {personId === loggedInUserId ? 'You' : personDisplayName}
@@ -128,7 +127,7 @@ export class Comment extends React.Component<CommentProps> {
         {this.commentHeaderMeta}
 
         {this.ownerLabel}
-        
+
         {this.commentDate}
         {this.commentHeaderLabel}
       </div>
