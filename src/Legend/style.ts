@@ -1,6 +1,5 @@
 import React from 'react'
 import * as styled from 'styled-components'
-import * as LegendComponent from './Legend'
 
 export const LegendWrapper = styled.default.ul`
   margin: 0;
