@@ -2,6 +2,7 @@
   0% {
     background-position: -200px 0;
   }
+
   100% {
     background-position: calc(200px + 100%) 0;
   }
@@ -26,14 +27,17 @@
       height: 30px;
       width: 30px;
     }
+
     &.skeleton-medium {
       height: 40px;
       width: 40px;
     }
+
     &.skeleton-large {
       height: 72px;
       width: 72px;
     }
+
     &.skeleton-xlarge {
       height: 120px;
       width: 120px;
@@ -45,14 +49,17 @@
       height: 30px;
       width: 90px;
     }
+
     &.skeleton-medium {
       height: 40px;
       width: 120px;
     }
+
     &.skeleton-large {
       height: 72px;
       width: 195px;
     }
+
     &.skeleton-xlarge {
       height: 120px;
       width: 240px;
