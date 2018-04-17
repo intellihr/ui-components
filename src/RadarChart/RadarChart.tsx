@@ -44,8 +44,12 @@ export interface RadarChartProps {
   showLegend?: boolean
   /** RGB colour of dataLabels */
   dataLabelColour?: string
+  /** Minimum tick value to display */
+  minValue?: number
   /** Maximum tick value to display */
   maxValue?: number
+  /** Size of each step between ticks */
+  stepSize?: number
 }
 
 merge(chartJSDefaults, {
@@ -65,7 +69,9 @@ export class RadarChart extends React.Component<RadarChartProps> {
     pointLabels: [],
     datasets: [],
     showLegend: true,
-    maxValue: 5
+    minValue: 0,
+    maxValue: 5,
+    stepSize: 1
   }
 
   componentDidMount () {
@@ -104,7 +110,10 @@ export class RadarChart extends React.Component<RadarChartProps> {
   get options (): object {
     const {
       dataLabels,
-      dataLabelColour
+      dataLabelColour,
+      minValue,
+      maxValue,
+      stepSize
     } = this.props
 
     return {
@@ -126,9 +135,9 @@ export class RadarChart extends React.Component<RadarChartProps> {
           offsetGridLines: true
         },
         ticks: {
-          min: 0,
-          max: 5,
-          stepSize: 1,
+          min: minValue,
+          max: maxValue,
+          stepSize: stepSize,
           fontSize: 10,
           fontColor: dataLabelColour,
           callback: (label: string) => get(dataLabels, label, label)
