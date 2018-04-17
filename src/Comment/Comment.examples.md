@@ -6,9 +6,10 @@
     id: 'sampleCommentId',
     comment: 'A very recent comment',
     personDisplayName: 'Testing Preson Name',
-    personFirstName: 'Culkin',
-    personPreferredOrFirstName: 'McKooley',
-    createdDateString: 'just now',
+    personLastName: 'Culkin',
+    personFirstName: 'McKooley',
+    personPreferredOrFirstName: 'McK',
+    createdDateText: <span>just now</span>,
     personId: 'sampleCommentPersonId'
   }}
   loggedInUser={{
@@ -25,9 +26,10 @@
     id: 'sampleCommentId',
     comment: 'This is some ancient comment',
     personDisplayName: 'Testing Preson Name',
-    personFirstName: 'Culkin',
-    personPreferredOrFirstName: 'McKooley',
-    createdDateString: '1st Jan 2017',
+    personLastName: 'Culkin',
+    personFirstName: 'McKooley',
+    personPreferredOrFirstName: 'McK',
+    createdDateText: <span>1st Jan 2017</span>,
     personProfilePictureId: 'http://www.multiplemayhemmamma.com/wp-content/uploads/2013/03/home-alone-150x150.jpg',
     personId: 'sampleCommentPersonId'
   }}

@@ -42,6 +42,8 @@ export const withSkeleton = <P extends {}>(
         className
       } = this.props
 
+      console.log(this.props)
+
       return (
         <span
           className={classNames(

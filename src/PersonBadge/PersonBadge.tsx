@@ -62,7 +62,7 @@ export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
       imageData
     } = props
 
-    return !isNil(imageId) || !isNil(imageData)
+    return (!isNil(imageId) && imageId !== '') || (!isNil(imageData) && imageData !== '')
   }
 
   get hoverDom (): JSX.Element | null {

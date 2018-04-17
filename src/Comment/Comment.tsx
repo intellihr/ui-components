@@ -4,16 +4,22 @@ import { PersonBadge } from '../PersonBadge/PersonBadge'
 const style = require('./style.scss')
 
 export interface CommentProps {
+  /** Comment object to render */
   comment: {
+    /** Comment ID (UUID) */
     id: string,
+    /** Comment text string */
     comment: string,
+    /** Additional text to display in the array header (preferable a span HTML element) */
     header?: React.Component,
     personDisplayName: string,
     personFirstName: string,
+    personLastName: string,
     personPreferredOrFirstName: string,
-    createdDateString: string,
+    createdDateText: React.Component,
     personId: string,
     personProfilePictureId?: string,
+    /** A label to be displayed right before the date label of the comment (use a span to persist the inline diplay behaviour) */
     label?: React.Component
   }
   loggedInUser: {
@@ -31,6 +37,8 @@ export class Comment extends React.Component<CommentProps> {
       personProfilePictureId
     } = this.props.comment
 
+    console.log(this.props)
+
     return (
       <div className='comment-badge-container'>
         <PersonBadge
@@ -43,33 +51,18 @@ export class Comment extends React.Component<CommentProps> {
     )
   }
 
-  get ownerLabel (): JSX.Element | null {
-    const {
-      comment: {
-        personId: commenterId
-      },
-      loggedInUser: {
-        id: loggedInUserId
-      }
-    } = this.props
-
-    if (commenterId === loggedInUserId) {
-      return <div className='comment-header-owner-label'>Owner</div>
-    }
-
-    return null
-  }
-
   get commentDate (): JSX.Element {
     const {
       comment: {
-        createdDateString
+        createdDateText,
+        label
       }
     } = this.props
 
     return (
       <div className='comment-header-date'>
-        {createdDateString}
+        {label}
+        {createdDateText}
       </div>
     )
   }
@@ -104,10 +97,7 @@ export class Comment extends React.Component<CommentProps> {
         {this.commenterName}
         {header}
 
-        {this.ownerLabel}
-
         {this.commentDate}
-        {label}
       </div>
     )
   }
@@ -126,13 +116,13 @@ export class Comment extends React.Component<CommentProps> {
 
   render (): JSX.Element {
     const {
-      comment
-      // idx,
-      // alternatingColours
+      comment,
+      loggedInUser,
+      idx
     } = this.props
 
     return (
-      <div id={comment.id} className={classNames(style.Comment)}>
+      <div id={idx.toString()} className={classNames(style.Comment)}>
         {this.personProfilePicture}
         <div className='comment-content-container'>
           {this.commentHeader}
