@@ -12,12 +12,17 @@ export interface CommentProps {
     comment: string,
     /** Additional text to display in the array header (preferable a span HTML element) */
     header?: React.Component,
+    /** Commenter full name */
     personDisplayName: string,
-    personFirstName: string,
+    /** Commenter last name */
     personLastName: string,
+    /** Commenter preferred or last (if preferred is empty) name */
     personPreferredOrFirstName: string,
+    /** Use DateText component from the list of alreay defined components (a string should work too) */
     createdDateText: React.Component,
+    /** Commenter person ID */
     personId: string,
+    /** Commenter Image URL, if null or empty, will display initials */
     personProfilePictureId?: string,
     /** A label to be displayed right before the date label of the comment (use a span to persist the inline diplay behaviour) */
     label?: React.Component
