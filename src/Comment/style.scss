@@ -1,3 +1,7 @@
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
 :local(.Comment) {
   display: flex;
   flex-flow: row;
@@ -17,6 +21,10 @@
     
     &.secondary {
       background-color: cornsilk;
+    }
+
+    &.loggedInUser {
+      background-color: tint($secondary-base, 95%);
     }
 
     >.comment-header-container {

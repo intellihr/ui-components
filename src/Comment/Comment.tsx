@@ -32,12 +32,10 @@ export interface CommentProps {
 export class Comment extends React.Component<CommentProps> {
   get personProfilePicture (): JSX.Element {
     const {
-      personFirstName,
+      personLastName,
       personPreferredOrFirstName,
       personProfilePictureId
     } = this.props.comment
-
-    console.log(this.props)
 
     return (
       <div className='comment-badge-container'>
@@ -45,7 +43,7 @@ export class Comment extends React.Component<CommentProps> {
           size='small'
           imageId={personProfilePictureId}
           preferredOrFirstName={personPreferredOrFirstName}
-          lastName={personFirstName}
+          lastName={personLastName}
         />
       </div>
     )
@@ -102,6 +100,10 @@ export class Comment extends React.Component<CommentProps> {
     )
   }
 
+  get targetCommentId () {
+    return window.location.hash.substr(1)
+  }
+
   get commentContent (): JSX.Element {
     const {
       comment
@@ -116,15 +118,29 @@ export class Comment extends React.Component<CommentProps> {
 
   render (): JSX.Element {
     const {
-      comment,
-      loggedInUser,
-      idx
+      comment: {
+        id: commentId,
+        comment,
+        personId: commenterId
+      },
+      loggedInUser: {
+        id: loggedInUserId
+      },
+      idx,
+      alternatingColours
     } = this.props
 
     return (
       <div id={idx.toString()} className={classNames(style.Comment)}>
         {this.personProfilePicture}
-        <div className='comment-content-container'>
+        <div className={classNames(
+          'comment-content-container',
+          {
+            secondary: alternatingColours && (idx % 2 === 1),
+            target: this.targetCommentId === commentId,
+            loggedInUser: commenterId === loggedInUserId
+          }
+        )}>
           {this.commentHeader}
           {this.commentContent}
         </div>
