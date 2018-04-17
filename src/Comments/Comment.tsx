@@ -92,44 +92,22 @@ export class Comment extends React.Component<CommentProps> {
     )
   }
 
-  get commentHeaderMeta (): React.Component | null {
+  get commentHeader (): JSX.Element {
     const {
       comment: {
-        header
-      }
-    } = this.props
-
-    if (header) {
-      return header
-    }
-
-    return null
-  }
-
-  get commentHeaderLabel (): React.Component | null {
-    const {
-      comment: {
+        header,
         label
       }
     } = this.props
-
-    if (label) {
-      return label
-    }
-
-    return null
-  }
-
-  get commentHeader (): JSX.Element {
     return (
       <div className='comment-header-container'>
         {this.commenterName}
-        {this.commentHeaderMeta}
+        {header}
 
         {this.ownerLabel}
 
         {this.commentDate}
-        {this.commentHeaderLabel}
+        {label}
       </div>
     )
   }
