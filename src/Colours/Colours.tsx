@@ -7,7 +7,7 @@ export interface ColourProps {
 }
 
 export class Colour extends React.PureComponent<ColourProps> {
-  render() {
+  render () {
     const { hex, description } = this.props
     const Box = styled.div`
       width: 10em;
