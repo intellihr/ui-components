@@ -33,6 +33,9 @@ describe('<RadarChart />', () => {
         dataLabels={dataLabels}
         pointLabels={pointLabels}
         datasets={datasets}
+        minValue={1}
+        maxValue={5}
+        stepSize={0.5}
       />
     )
 
