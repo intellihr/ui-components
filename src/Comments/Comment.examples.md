@@ -43,7 +43,6 @@
     comment={{
       id: 'sampleCommentId',
       comment: 'This is the first comment ever',
-      header: <div></div>
       personDisplayName: 'Testing Preson Name',
       personFirstName: 'Culkin',
       personPreferredOrFirstName: 'McKooley',

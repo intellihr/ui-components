@@ -7,14 +7,14 @@ export interface CommentProps {
   comment: {
     id: string,
     comment: string,
-    header?: JSX.Element,
+    header?: React.Component,
     personDisplayName: string,
     personFirstName: string,
     personPreferredOrFirstName: string,
     createdAt: string,
     personId: string,
     personProfilePictureId?: string,
-    label?: JSX.Element
+    label?: React.Component
   }
   loggedInUser: {
     id: string
@@ -87,7 +87,7 @@ export class Comment extends React.Component<CommentProps> {
     )
   }
 
-  get commentHeaderMeta (): JSX.Element | null {
+  get commentHeaderMeta (): React.Component | null {
     const {
       comment: {
         header
@@ -101,7 +101,7 @@ export class Comment extends React.Component<CommentProps> {
     return null
   }
 
-  get commentHeaderLabel (): JSX.Element | null {
+  get commentHeaderLabel (): React.Component | null {
     const {
       comment: {
         label
