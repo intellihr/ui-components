@@ -1,3 +1,41 @@
 :local(.Comment) {
-  background-color: rgba(0,0,0,.3);
+  display: flex;
+  flex-flow: row;
+
+  >.comment-badge-container {
+    align-self: flex-start;
+    padding: .5rem;
+  }
+
+  >.comment-content-container {
+    align-self: stretch;
+    flex-grow: 1;
+    padding: .6rem 1.2rem;
+    border-radius: .75rem;
+    background-color: $neutral-light;
+
+    >.comment-header-container {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      justify-content: center;
+
+      >.comment-header-person-name {
+        flex-grow: 1;
+      }
+
+      >.comment-header-owner-label {
+        font-size: 12px;
+        border-radius: 31px;
+        padding: 4px 11px;
+        font-weight: 400;
+        border: 1px solid $neutral-base;
+      }
+
+      >.comment-header-date {
+        font-size: 80%;
+        margin-left: .75rem;
+      }
+    }
+  }
 }
