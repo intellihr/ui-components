@@ -20,6 +20,7 @@ A common React components library that is used in our company.
 * [Local Development Guide](#local-development-guide)
   * [Run Docker](#run-docker)
   * [Install Dependency](#install-dependency)
+  * [Add Dependency](#add-dependency)
   * [Development](#development)
   * [Lint](#lint)
 * [Customisation](#customisation)
@@ -59,6 +60,36 @@ Please install local dependencies:
 ```!bash
 npm install
 ```
+
+### Add Dependency
+
+Ui-components must NOT contain any dependency so that
+the bundled file does not contain any 3rd party library.
+
+For all dependecies, use the combination of
+`peerDependencies` and `devDependencies`
+
+1. Add `devDependencies`
+
+    ```!bash
+    npm add some-library --save-dev
+    ```
+
+2. For `dependencies`, update `package.json` (Skip this for `devDependencies`)
+
+    ```json
+    {
+      "devDependencies": {
+        "some-library": "^1.0.0"
+      },
+      "peerDependencies": {
+        "some-library": "^1.0.0"
+      }
+    }
+    ```
+
+In this case, the consumer will be responsible to download
+the dependencies.
 
 ### Development
 
