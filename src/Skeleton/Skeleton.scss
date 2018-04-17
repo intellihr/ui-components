@@ -11,10 +11,10 @@
   animation: progress 1.2s ease-in-out infinite;
   background-color: $neutral-base;
   background-image: linear-gradient(90deg, $neutral-base, tint($neutral-base, 45%), $neutral-base);
-  background-size: 200px 100%;
   background-repeat: no-repeat;
-  border-radius: 4px;
+  background-size: 200px 100%;
   border: 1px solid $border-light;
+  border-radius: 4px;
   display: inline-flex;
   line-height: 1rem;
   width: 100%;

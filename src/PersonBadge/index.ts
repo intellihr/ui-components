@@ -1,0 +1,1 @@
+export { PersonBadge } from './PersonBadge'
