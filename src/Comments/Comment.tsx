@@ -11,7 +11,7 @@ export interface CommentProps {
     personDisplayName: string,
     personFirstName: string,
     personPreferredOrFirstName: string,
-    createdAt: string,
+    createdDateString: string,
     personId: string,
     personProfilePictureId?: string,
     label?: React.Component
@@ -60,9 +60,15 @@ export class Comment extends React.Component<CommentProps> {
   }
 
   get commentDate (): JSX.Element {
+    const {
+      comment: {
+        createdDateString
+      }
+    } = this.props
+
     return (
       <div className='comment-header-date'>
-        25 minutes ago
+        {createdDateString}
       </div>
     )
   }

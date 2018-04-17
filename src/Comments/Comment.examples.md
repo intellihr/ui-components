@@ -4,11 +4,11 @@
   <Comment
     comment={{
       id: 'sampleCommentId',
-      comment: 'This is the first comment ever',
+      comment: 'A very recent comment',
       personDisplayName: 'Testing Preson Name',
       personFirstName: 'Culkin',
       personPreferredOrFirstName: 'McKooley',
-      createdAt: '2017-01-02 08:10:59',
+      createdDateString: 'just now',
       personId: 'sampleCommentPersonId'
     }}
     loggedInUser={{
@@ -23,30 +23,11 @@
   <Comment
     comment={{
       id: 'sampleCommentId',
-      comment: 'This is the first comment ever',
+      comment: 'This is some ancient comment',
       personDisplayName: 'Testing Preson Name',
       personFirstName: 'Culkin',
       personPreferredOrFirstName: 'McKooley',
-      createdAt: '2017-01-02 08:10:59',
-      personId: 'sampleCommentPersonId'
-    }}
-    loggedInUser={{
-      id: 'sampleCommentPersonId'
-    }}
-    idx={1}
-  />
-```
-
-### Own comment with a header
-```jsx
-  <Comment
-    comment={{
-      id: 'sampleCommentId',
-      comment: 'This is the first comment ever',
-      personDisplayName: 'Testing Preson Name',
-      personFirstName: 'Culkin',
-      personPreferredOrFirstName: 'McKooley',
-      createdAt: '2017-01-02 08:10:59',
+      createdDateString: '1st Jan 2017',
       personId: 'sampleCommentPersonId'
     }}
     loggedInUser={{
