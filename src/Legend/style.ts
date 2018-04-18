@@ -1,7 +1,7 @@
 import React from 'react'
-import * as styled from 'styled-components'
+import styled, { StyledComponentClass } from 'styled-components'
 
-export const LegendWrapper = styled.default.ul`
+const LegendWrapper = styled.ul`
   margin: 0;
   padding: 0;
 
@@ -21,8 +21,13 @@ export const LegendWrapper = styled.default.ul`
   }
 `
 
-export const LegendLabel = styled.default.span`
+const LegendLabel = styled.span`
   margin-left: 5px;
   white-space: nowrap;
   width: 100%;
 `
+
+export {
+  LegendWrapper,
+  LegendLabel
+}
