@@ -1,6 +1,9 @@
 import React from 'react'
 import classNames from 'classnames'
-import { isNil } from 'lodash'
+import {
+  isNil,
+  isEmpty
+} from 'lodash'
 import { Icon } from '../Icon/Icon'
 import {
   withSkeleton,
@@ -62,7 +65,7 @@ export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
       imageData
     } = props
 
-    return !isNil(imageId) || !isNil(imageData)
+    return !isEmpty(imageId) || !isEmpty(imageData)
   }
 
   get hoverDom (): JSX.Element | null {

@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "strict": true,
+    "strictNullChecks": true,
     "declaration": true,
     "jsx": "react",
     "lib": [
