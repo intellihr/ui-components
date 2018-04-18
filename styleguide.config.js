@@ -6,7 +6,7 @@ module.exports = {
   propsParser: docGenTypescript.withCustomConfig('./tsconfig.json').parse,
   getComponentPathLine (componentPath) {
     const name = path.basename(componentPath, '.tsx')
-    return `import { ${name} } from 'ui-components/es/${name}';`
+    return `import { ${name} } from '@intellihr/ui-components';`
   },
   getExampleFilename (componentPath) {
     return componentPath.replace(/\.tsx?$/, '.examples.md')
