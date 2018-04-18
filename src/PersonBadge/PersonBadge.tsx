@@ -1,8 +1,8 @@
 import React from 'react'
 import classNames from 'classnames'
-import { 
+import {
   isNil,
-  isEmpty 
+  isEmpty
 } from 'lodash'
 import { Icon } from '../Icon/Icon'
 import {
