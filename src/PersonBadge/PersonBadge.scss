@@ -101,17 +101,6 @@
         opacity: 1;
       }
 
-      >* {
-        padding: .2rem .7rem;
-      }
-
-      >.person-badge-hover-label {
-        font-size: .75rem;
-        font-weight: 600;
-        line-height: .85rem;
-        text-transform: uppercase;
-      }
-
       &.small {
         >.person-badge-hover-icon {
           font-size: .75rem;
@@ -150,6 +139,24 @@
         >.person-badge-hover-label {
           font-size: .75rem;
         }
+      }
+
+      >* {
+        padding: .2rem .7rem;
+      }
+
+      // NOTE: This to override default styles of font-awesome in lapis (has no effect on ui-components)
+      >.fa {
+        margin: 0;
+        width: auto;
+        text-align: inherit;
+      }
+
+      >.person-badge-hover-label {
+        font-size: .75rem;
+        font-weight: 600;
+        line-height: .85rem;
+        text-transform: uppercase;
       }
     }
 
