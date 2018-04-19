@@ -3,8 +3,7 @@ options:
   formatter: stylish
   max-warnings: 50
 files:
-  include:
-    - 'src/**/*.s+(a|c)ss'
+  include: 'src/**/*.s+(a|c)ss'
   ignore:
     # Too Cleanup
     - 'src/sass/**/*.s+(a|c)ss'
@@ -26,7 +25,8 @@ rules:
   no-attribute-selectors: 0
   no-color-hex: 0
   no-color-keywords: 1
-  no-color-literals: 1
+  # Enable again when we implement our color properly
+  no-color-literals: 0
   no-combinators: 0
   no-css-comments: 1
   no-debug: 1
