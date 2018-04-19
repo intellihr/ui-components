@@ -22,8 +22,7 @@ export interface DotStatusLabelProps {
   }
 
 export class DotStatusLabel extends React.Component<DotStatusLabelProps> {
-  public static defaultProps: DotStatusLabelProps = {
-    text: '',
+  public static defaultProps: Partial<DotStatusLabelProps> = {
     isHollow: false
   }
 
