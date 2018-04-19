@@ -21,8 +21,7 @@ export interface AttributeLabelProps {
 }
 
 export class AttributeLabel extends React.Component<AttributeLabelProps> {
-  public static defaultProps: AttributeLabelProps = {
-    text: '',
+  public static defaultProps: Partial<AttributeLabelProps> = {
     color: 'neutral',
     isHollow: false,
     size: 'small'
