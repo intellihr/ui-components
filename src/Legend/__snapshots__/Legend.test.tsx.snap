@@ -15,66 +15,72 @@ exports[`<Legend /> should render a legend 1`] = `
     ]
   }
 >
-  <ul
-    className="legendClass"
-  >
-    <li
-      key="0"
+  <styled.ul>
+    <ul
+      className="sc-bdVaJa gVmZaa"
     >
-      <Icon
-        color="rgb(0,255,0)"
-        isFontAwesome={true}
-        isLarge={false}
-        isSpinning={false}
-        isStacked={false}
-        size={1}
-        type="circle"
+      <li
+        key="0"
       >
-        <i
-          aria-hidden={true}
-          className="fa fa-circle fa-1x"
-          style={
-            Object {
-              "color": "rgb(0,255,0)",
+        <Icon
+          color="rgb(0,255,0)"
+          isFontAwesome={true}
+          isLarge={false}
+          isSpinning={false}
+          isStacked={false}
+          size={1}
+          type="circle"
+        >
+          <i
+            aria-hidden={true}
+            className="fa fa-circle fa-1x"
+            style={
+              Object {
+                "color": "rgb(0,255,0)",
+              }
             }
-          }
-        />
-      </Icon>
-      <span
-        className="legend-label"
+          />
+        </Icon>
+        <styled.span>
+          <span
+            className="sc-bwzfXH IRuoF"
+          >
+            I am the green dataset
+          </span>
+        </styled.span>
+      </li>
+      <li
+        key="1"
       >
-        I am the green dataset
-      </span>
-    </li>
-    <li
-      key="1"
-    >
-      <Icon
-        color="rgb(0,0,255)"
-        isFontAwesome={true}
-        isLarge={false}
-        isSpinning={false}
-        isStacked={false}
-        size={1}
-        type="circle"
-      >
-        <i
-          aria-hidden={true}
-          className="fa fa-circle fa-1x"
-          style={
-            Object {
-              "color": "rgb(0,0,255)",
+        <Icon
+          color="rgb(0,0,255)"
+          isFontAwesome={true}
+          isLarge={false}
+          isSpinning={false}
+          isStacked={false}
+          size={1}
+          type="circle"
+        >
+          <i
+            aria-hidden={true}
+            className="fa fa-circle fa-1x"
+            style={
+              Object {
+                "color": "rgb(0,0,255)",
+              }
             }
-          }
-        />
-      </Icon>
-      <span
-        className="legend-label"
-      >
-        I am BLUE!
-      </span>
-    </li>
-  </ul>
+          />
+        </Icon>
+        <styled.span>
+          <span
+            className="sc-bwzfXH IRuoF"
+          >
+            I am BLUE!
+          </span>
+        </styled.span>
+      </li>
+    </ul>
+  </styled.ul>
 </Legend>
 `;
 
