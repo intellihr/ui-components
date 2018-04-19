@@ -2,6 +2,9 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 export interface ColourProps {
+  description: string
+}
+export interface ColourProps {
   hex: string
   description: string
 }
@@ -25,3 +28,5 @@ export class Colour extends React.PureComponent<ColourProps> {
     </div>)
   }
 }
+
+// export const IntelliRoyalBlue = (props: ) =>
