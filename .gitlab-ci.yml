@@ -64,6 +64,13 @@ sass-lint:
   script:
     - docker-compose run --rm gitlab-ci npm run lint:sass
 
+css-lint:
+  stage: build & test
+  except:
+    - schedules
+  script:
+    - docker-compose run --rm gitlab-ci npm run lint:css
+
 test:
   stage: build & test
   except:

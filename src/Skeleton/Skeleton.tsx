@@ -13,20 +13,19 @@ export interface SkeletonComponentProps {
     shape: 'circle' | 'line'
   }
   /** How big you want the skeleton (Width can be overridden by skeletonOptions.width prop) */
-  size?: 'small' | 'medium' | 'large' | 'xlarge'
+  size: 'small' | 'medium' | 'large' | 'xlarge'
   /** Additional class names for the parent container */
   className?: string
 }
 
 export const withSkeleton = <P extends {}>(
   UnwrappedComponent: React.ComponentType<P>
-) => class Skeleton extends React.Component< P & SkeletonComponentProps> {
+) => class Skeleton extends React.Component<P & SkeletonComponentProps> {
     static defaultProps: Partial<SkeletonComponentProps> = {
       skeletonOptions: {
         showSkeleton: true,
         shape: 'circle'
       },
-      size: 'medium',
       className: ''
     }
 

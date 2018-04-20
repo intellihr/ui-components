@@ -46,7 +46,7 @@ export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
   }
 
   public static defaultProps: PersonBadgeProps = {
-    size: 'medium',
+    size: 'xlarge',
     isOnLeave: false,
     onImageError: () => {}
   }
