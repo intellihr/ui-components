@@ -18,46 +18,60 @@ A common React components library that is used in our company.
 
 * [Get Started](#get-started)
 * [Local Development Guide](#local-development-guide)
-  * [Run Docker](#run-docker)
-  * [Install Dependency](#install-dependency)
-  * [Add Dependency](#add-dependency)
-  * [Development](#development)
-  * [Lint](#lint)
+    * [Docker](#docker)
+        * [Build Image](#build-image)
+        * [Run Inside Docker](#run-inside-docker)
+    * [Install Dependency](#install-dependency)
+    * [Add Dependency](#add-dependency)
+    * [Development](#development)
+    * [Lint](#lint)
 * [Customisation](#customisation)
 
 ## Get Started
 
-```javascript
-yarn add @intellihr/ui-components
-// or
-npm i @intellihr/ui-components
-```
+1. Install ui-components
 
-To use in the consumer project,
-we could simply do this
-(only import the css if the component has a specific css module/file):
+    ```bash
+    yarn add @intellihr/ui-components
+    # or
+    npm i @intellihr/ui-components
+    ```
 
-``` javascript
-import { Modal } from '@intellihr/ui-components'
-import '@intellihr/ui-components/dist/Modal.css'
-```
+2. How to use
+
+    ```javascript
+    // Import in your javascript to use
+    import { OurComponent } from '@intellihr/ui-components'
+    ```
+
+    ```sass
+    // Import once only for styles
+    import '~@intellihr/ui-components/dist/index.css'
+    ```
 
 ## Local Development Guide
 
-### Run Docker
+### Docker
 
-After clone down the repository,
-please run everything inside the provided docker container
+#### Build Imange
 
-```!bash
+```bash
+docker-compose build --force-rm code
+# or without mounting node_module
+docker-composer build --force-rm code-mac
+```
+
+#### Run Inside Docker
+
+```bash
 docker-compose run --rm code /bin/sh
+# or without mounting node_module
+docker-composer run --rm code-mac /bin/sh
 ```
 
 ### Install Dependency
 
-Please install local dependencies:
-
-```!bash
+```bash
 npm install
 ```
 
@@ -71,8 +85,8 @@ For all dependecies, use the combination of
 
 1. Add `devDependencies`
 
-    ```!bash
-    npm add some-library --save-dev
+    ```bash
+    npm i --save-dev -E some-library
     ```
 
 2. For `dependencies`, update `package.json` (Skip this for `devDependencies`)
@@ -80,12 +94,20 @@ For all dependecies, use the combination of
     ```json
     {
       "devDependencies": {
-        "some-library": "^1.0.0"
+        "some-library": "1.0.0"
       },
       "peerDependencies": {
         "some-library": "^1.0.0"
       }
     }
+    ```
+
+3. Update your consumer to include your `peerDependencies` (Skip this for `devDependencies`)
+
+    ```bash
+    npm i --save-dev some-library
+    # or
+    yarn add --dev some-library
     ```
 
 In this case, the consumer will be responsible to download
@@ -118,25 +140,37 @@ Some development points:
 
 Typescript Style Check
 
-```!bash
+```bash
 npm run lint
 ```
 
 with autofix
 
-```!bash
+```bash
 npm run lint:fix
 ```
 
 Sass Style Check
 
-```!bash
+```bash
 npm run lint:sass
+```
+
+Sass Style Autofix
+
+```bash
+npm run lint:sass:fix
+```
+
+Styled-Components Check
+
+```bash
+npm run lint:css
 ```
 
 ### Code Quality Analysis
 
-```!bash
+```bash
 npm run codequality
 ```
 
