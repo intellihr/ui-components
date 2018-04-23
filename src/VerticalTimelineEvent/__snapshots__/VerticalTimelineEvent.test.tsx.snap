@@ -8,7 +8,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
     className="vertical-timeline-event"
   >
     <div
-      className="vertical-timeline-event sc-bdVaJa MVSuk"
+      className="vertical-timeline-event sc-bdVaJa gOPKuC"
     >
       <styled.span>
         <span
@@ -16,6 +16,36 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
         >
           21 Apr
         </span>
+      </styled.span>
+      <styled.span>
+        <span
+          className="sc-htpNat hvZCVt"
+        />
+      </styled.span>
+      <styled.div>
+        <div
+          className="sc-bxivhb ihKacX"
+        >
+          Hey this is the child content of the event!
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
+</VerticalTimelineEvent>
+`;
+
+exports[`<VerticalTimelineEvent /> should render a vertical timeline event without an event date 1`] = `
+<VerticalTimelineEvent>
+  <styled.div
+    className="vertical-timeline-event"
+  >
+    <div
+      className="vertical-timeline-event sc-bdVaJa gOPKuC"
+    >
+      <styled.span>
+        <span
+          className="sc-bwzfXH eRTkPM"
+        />
       </styled.span>
       <styled.span>
         <span

@@ -6,7 +6,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
 >
   <styled.div>
     <div
-      className="sc-bdVaJa gOtzTt"
+      className="sc-bdVaJa eRDUDB"
     >
       <styled.div>
         <div
@@ -17,7 +17,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
       </styled.div>
       <styled.div>
         <div
-          className="sc-htpNat giaHkH"
+          className="sc-htpNat kxXeog"
         >
           <VerticalTimelineEvent
             eventDate="21 Apr"
@@ -26,7 +26,60 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
               className="vertical-timeline-event"
             >
               <div
-                className="vertical-timeline-event sc-bxivhb eSvtKT"
+                className="vertical-timeline-event sc-bxivhb fFrPmT"
+              >
+                <styled.span>
+                  <span
+                    className="sc-ifAKCX jNFHSL"
+                  >
+                    21 Apr
+                  </span>
+                </styled.span>
+                <styled.span>
+                  <span
+                    className="sc-EHOje hjcKOQ"
+                  />
+                </styled.span>
+                <styled.div>
+                  <div
+                    className="sc-bZQynM fiigoC"
+                  >
+                    Event that happened
+                  </div>
+                </styled.div>
+              </div>
+            </styled.div>
+          </VerticalTimelineEvent>
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
+</VerticalTimeline>
+`;
+
+exports[`<VerticalTimeline /> should render a vertical timeline without a year 1`] = `
+<VerticalTimeline>
+  <styled.div>
+    <div
+      className="sc-bdVaJa eRDUDB"
+    >
+      <styled.div>
+        <div
+          className="sc-bwzfXH hEtsWO"
+        />
+      </styled.div>
+      <styled.div>
+        <div
+          className="sc-htpNat kxXeog"
+        >
+          <VerticalTimelineEvent
+            eventDate="21 Apr"
+          >
+            <styled.div
+              className="vertical-timeline-event"
+            >
+              <div
+                className="vertical-timeline-event sc-bxivhb fFrPmT"
               >
                 <styled.span>
                   <span

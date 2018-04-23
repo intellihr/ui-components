@@ -13,7 +13,7 @@ interface VerticalTimelineEventProps {
   eventDate?: string
 }
 
-class VerticalTimelineEvent extends React.Component<VerticalTimelineEventProps> {
+class VerticalTimelineEvent extends React.PureComponent<VerticalTimelineEventProps> {
   public render (): JSX.Element | null {
     const {
       children,

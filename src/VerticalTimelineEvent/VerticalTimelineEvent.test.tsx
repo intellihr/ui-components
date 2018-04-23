@@ -15,4 +15,14 @@ describe('<VerticalTimelineEvent />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it(`should render a vertical timeline event without an event date`, () => {
+    const wrapper = mount(
+      <VerticalTimelineEvent>
+        Hey this is the child content of the event!
+      </VerticalTimelineEvent>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })

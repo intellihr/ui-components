@@ -3,14 +3,6 @@ import styled, { StyledComponentClass } from 'styled-components'
 
 const VerticalTimelineWrapper = styled.div`
   margin-bottom: 40px;
- 
-  .vertical-timeline-event:first-child {
-    margin-top: 0
-  }
-
-  .vertical-timeline-event:last-child {
-    margin-bottom: 0
-  }
 `
 
 const TimelineYearHeading = styled.div`
@@ -22,7 +14,7 @@ const TimelineYearHeading = styled.div`
 const Timeline = styled.div`
   position: relative;
 
-  &:before {
+  &::before {
     content: '';
     position: absolute;
     top: 0;

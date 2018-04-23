@@ -12,7 +12,7 @@ interface VerticalTimelineProps {
   year?: string
 }
 
-class VerticalTimeline extends React.Component<VerticalTimelineProps> {
+class VerticalTimeline extends React.PureComponent<VerticalTimelineProps> {
   public render (): JSX.Element | null {
     const {
       children,

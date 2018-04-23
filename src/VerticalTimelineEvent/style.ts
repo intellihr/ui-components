@@ -4,6 +4,14 @@ import styled, { StyledComponentClass } from 'styled-components'
 const VerticalTimelineEventWrapper = styled.div`
   margin: 40px 0;
   position: relative;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 `
 
 const EventDate = styled.span`

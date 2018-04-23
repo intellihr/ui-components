@@ -20,4 +20,18 @@ describe('<VerticalTimeline />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it(`should render a vertical timeline without a year`, () => {
+    const wrapper = mount(
+      <VerticalTimeline>
+        <VerticalTimelineEvent
+          eventDate='21 Apr'
+        >
+          Event that happened
+        </VerticalTimelineEvent>
+      </VerticalTimeline>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })
