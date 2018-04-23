@@ -1,0 +1,1 @@
+export { VerticalTimeline } from './VerticalTimeline'
