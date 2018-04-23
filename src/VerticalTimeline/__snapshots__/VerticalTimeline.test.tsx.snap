@@ -1,0 +1,231 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
+.c0 {
+  margin-bottom: 40px;
+}
+
+.c1 {
+  text-align: right;
+  width: 4rem;
+  font-weight: 600;
+}
+
+.c2 {
+  position: relative;
+}
+
+.c2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 5rem;
+  height: 100%;
+  width: 2px;
+  background: rgb(223,229,232);
+}
+
+.c3 {
+  margin: 40px 0;
+  position: relative;
+}
+
+.c3:first-child {
+  margin-top: 0;
+}
+
+.c3:last-child {
+  margin-bottom: 0;
+}
+
+.c4 {
+  text-align: right;
+  color: hsl(210,13.4%,47.2%);
+  position: absolute;
+  width: 4rem;
+  font-size: 12px;
+  top: 6px;
+}
+
+.c5 {
+  background-color: white;
+  border: 2px solid rgb(223,229,232);
+  border-radius: 50%;
+  padding: 5px;
+  position: absolute;
+  left: 74px;
+  top: 7px;
+}
+
+.c6 {
+  margin-left: 7rem;
+}
+
+<VerticalTimeline
+  year="2006"
+>
+  <styled.div>
+    <div
+      className="c0"
+    >
+      <styled.div>
+        <div
+          className="c1"
+        >
+          2006
+        </div>
+      </styled.div>
+      <styled.div>
+        <div
+          className="c2"
+        >
+          <VerticalTimelineEvent
+            eventDate="21 Apr"
+          >
+            <styled.div
+              className="vertical-timeline-event"
+            >
+              <div
+                className="vertical-timeline-event c3"
+              >
+                <styled.span>
+                  <span
+                    className="c4"
+                  >
+                    21 Apr
+                  </span>
+                </styled.span>
+                <styled.span>
+                  <span
+                    className="c5"
+                  />
+                </styled.span>
+                <styled.div>
+                  <div
+                    className="c6"
+                  >
+                    Event that happened
+                  </div>
+                </styled.div>
+              </div>
+            </styled.div>
+          </VerticalTimelineEvent>
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
+</VerticalTimeline>
+`;
+
+exports[`<VerticalTimeline /> should render a vertical timeline without a year 1`] = `
+.c0 {
+  margin-bottom: 40px;
+}
+
+.c1 {
+  text-align: right;
+  width: 4rem;
+  font-weight: 600;
+}
+
+.c2 {
+  position: relative;
+}
+
+.c2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 5rem;
+  height: 100%;
+  width: 2px;
+  background: rgb(223,229,232);
+}
+
+.c3 {
+  margin: 40px 0;
+  position: relative;
+}
+
+.c3:first-child {
+  margin-top: 0;
+}
+
+.c3:last-child {
+  margin-bottom: 0;
+}
+
+.c4 {
+  text-align: right;
+  color: hsl(210,13.4%,47.2%);
+  position: absolute;
+  width: 4rem;
+  font-size: 12px;
+  top: 6px;
+}
+
+.c5 {
+  background-color: white;
+  border: 2px solid rgb(223,229,232);
+  border-radius: 50%;
+  padding: 5px;
+  position: absolute;
+  left: 74px;
+  top: 7px;
+}
+
+.c6 {
+  margin-left: 7rem;
+}
+
+<VerticalTimeline>
+  <styled.div>
+    <div
+      className="c0"
+    >
+      <styled.div>
+        <div
+          className="c1"
+        />
+      </styled.div>
+      <styled.div>
+        <div
+          className="c2"
+        >
+          <VerticalTimelineEvent
+            eventDate="21 Apr"
+          >
+            <styled.div
+              className="vertical-timeline-event"
+            >
+              <div
+                className="vertical-timeline-event c3"
+              >
+                <styled.span>
+                  <span
+                    className="c4"
+                  >
+                    21 Apr
+                  </span>
+                </styled.span>
+                <styled.span>
+                  <span
+                    className="c5"
+                  />
+                </styled.span>
+                <styled.div>
+                  <div
+                    className="c6"
+                  >
+                    Event that happened
+                  </div>
+                </styled.div>
+              </div>
+            </styled.div>
+          </VerticalTimelineEvent>
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
+</VerticalTimeline>
+`;

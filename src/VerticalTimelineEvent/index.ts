@@ -1,0 +1,1 @@
+export { VerticalTimelineEvent } from './VerticalTimelineEvent'
