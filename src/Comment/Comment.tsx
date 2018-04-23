@@ -23,7 +23,7 @@ export interface CommentProps {
     /** Commenter person ID */
     personId: string,
     /** Commenter Image URL, if null or empty, will display initials */
-    personProfilePictureId?: string,
+    personProfilePictureUrl?: string,
     /** A label to be displayed right before the date label of the comment (use a span to persist the inline diplay behaviour) */
     label?: React.Component
   }
@@ -39,14 +39,14 @@ export class Comment extends React.Component<CommentProps> {
     const {
       personLastName,
       personPreferredOrFirstName,
-      personProfilePictureId
+      personProfilePictureUrl
     } = this.props.comment
 
     return (
       <div className='comment-badge-container'>
         <PersonBadge
           size='small'
-          imageId={personProfilePictureId}
+          imageUrl={personProfilePictureUrl}
           preferredOrFirstName={personPreferredOrFirstName}
           lastName={personLastName}
         />
@@ -91,8 +91,7 @@ export class Comment extends React.Component<CommentProps> {
   get commentHeader (): JSX.Element {
     const {
       comment: {
-        header,
-        label
+        header
       }
     } = this.props
     return (
@@ -125,7 +124,6 @@ export class Comment extends React.Component<CommentProps> {
     const {
       comment: {
         id: commentId,
-        comment,
         personId: commenterId
       },
       loggedInUser: {

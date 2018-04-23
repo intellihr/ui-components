@@ -1,7 +1,7 @@
 {
   "name": "@intellihr/ui-components",
   "description": "A common React components library that is used in our company",
-  "version": "1.0.5-beta.13",
+  "version": "1.0.5-beta.14",
   "main": "./dist/",
   "types": "./es/index.d.ts",
   "files": [
@@ -9,10 +9,10 @@
     "dist"
   ],
   "peerDependencies": {
-    "foundation-sites": "^6.4.3",
     "chart.js": "^2.7.2",
-    "color": "^3.0.0",
     "classnames": "^2.2.5",
+    "color": "^3.0.0",
+    "foundation-sites": "^6.4.3",
     "html-to-react": "^1.3.3",
     "react": "^16.3.1",
     "react-chartjs-2": "^2.7.0",
@@ -51,6 +51,7 @@
     "html-to-react": "1.3.3",
     "identity-obj-proxy": "3.0.0",
     "jest": "22.4.3",
+    "jest-styled-components": "^5.0.1",
     "jquery": "3.3.1",
     "node-sass": "4.8.3",
     "postcss-cssnext": "3.1.0",
