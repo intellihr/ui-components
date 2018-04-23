@@ -4,13 +4,13 @@ import styled from 'styled-components'
 export interface ColourProps {
   description: string
 }
-export interface ColourProps {
+
+export interface SProps extends ColourProps {
   hex: string
-  description: string
 }
 
-export class Colour extends React.PureComponent<ColourProps> {
-  render () {
+export class Colour extends React.PureComponent<SProps> {
+  render() {
     const { hex, description } = this.props
     const Box = styled.div`
       width: 10em;
@@ -19,8 +19,8 @@ export class Colour extends React.PureComponent<ColourProps> {
       margin-bottom: 1em;
     `
     const ColourName = styled.p`
-    font-weight: 600
-  `
+      font-weight: 600
+    `
     return (<div>
       <Box />
       <ColourName> {description} </ColourName>
@@ -29,4 +29,10 @@ export class Colour extends React.PureComponent<ColourProps> {
   }
 }
 
-// export const IntelliRoyalBlue = (props: ) =>
+export class IntelliRoyalBlue extends React.PureComponent<ColourProps> {
+  render() {
+    return <Colour hex="#432DF3" description={this.props.description} />
+  }
+}
+
+
