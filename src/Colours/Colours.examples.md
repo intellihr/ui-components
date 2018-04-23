@@ -1,5 +1,13 @@
+### Brand Colours
 ```jsx
-const IntelliRoyalBlue = require('./Colours');
+const { ColourGrid, brandColours } = require('./Colours');
 
-<Colour hex={"#432DF3"} description="intelli-royal-blue" />
+<ColourGrid colours={brandColours} />
+```
+
+### App Colours
+```jsx
+const { ColourGrid, appColours } = require('./Colours');
+
+<ColourGrid colours={appColours} />
 ```
