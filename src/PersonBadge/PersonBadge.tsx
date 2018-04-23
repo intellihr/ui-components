@@ -25,7 +25,7 @@ export interface PersonBadgeProps {
   /** Handle the component click (If the function is not present, curson and border effects will not appear on hover) */
   handleClick?: (event: React.MouseEvent<HTMLDivElement>) => void
   /** Image URL */
-  imageId?: string
+  imageUrl?: string
   /** Image blob data */
   imageData?: string
   /** If true will place a yellow marker besides the profile picture */
@@ -46,7 +46,7 @@ export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
   }
 
   public static defaultProps: PersonBadgeProps = {
-    size: 'xlarge',
+    size: 'medium',
     isOnLeave: false,
     onImageError: () => {}
   }
@@ -61,11 +61,11 @@ export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
 
   protected hasImage (props: any): boolean {
     const {
-      imageId,
+      imageUrl,
       imageData
     } = props
 
-    return !isEmpty(imageId) || !isEmpty(imageData)
+    return !isEmpty(imageUrl) || !isEmpty(imageData)
   }
 
   get hoverDom (): JSX.Element | null {
@@ -101,14 +101,14 @@ export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
 
   get picture (): JSX.Element {
     const {
-      imageId,
+      imageUrl,
       imageData,
       onImageError
     } = this.props
 
     return (
       <img
-        src={imageId || imageData}
+        src={imageUrl || imageData}
         onError={event => !isNil(onImageError) ? onImageError(event) : null}
       />
     )
