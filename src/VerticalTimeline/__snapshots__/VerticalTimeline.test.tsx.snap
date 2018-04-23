@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
+<VerticalTimeline
+  year="2006"
+>
+  <styled.div>
+    <div
+      className="sc-bdVaJa gOtzTt"
+    >
+      <styled.div>
+        <div
+          className="sc-bwzfXH hEtsWO"
+        >
+          2006
+        </div>
+      </styled.div>
+      <styled.div>
+        <div
+          className="sc-htpNat giaHkH"
+        >
+          <VerticalTimelineEvent
+            eventDate="21 Apr"
+          >
+            <styled.div
+              className="vertical-timeline-event"
+            >
+              <div
+                className="vertical-timeline-event sc-bxivhb eSvtKT"
+              >
+                <styled.span>
+                  <span
+                    className="sc-ifAKCX jNFHSL"
+                  >
+                    21 Apr
+                  </span>
+                </styled.span>
+                <styled.span>
+                  <span
+                    className="sc-EHOje hjcKOQ"
+                  />
+                </styled.span>
+                <styled.div>
+                  <div
+                    className="sc-bZQynM fiigoC"
+                  >
+                    Event that happened
+                  </div>
+                </styled.div>
+              </div>
+            </styled.div>
+          </VerticalTimelineEvent>
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
+</VerticalTimeline>
+`;

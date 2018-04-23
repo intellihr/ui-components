@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] = `
+<VerticalTimelineEvent
+  eventDate="21 Apr"
+>
+  <styled.div
+    className="vertical-timeline-event"
+  >
+    <div
+      className="vertical-timeline-event sc-bdVaJa MVSuk"
+    >
+      <styled.span>
+        <span
+          className="sc-bwzfXH eRTkPM"
+        >
+          21 Apr
+        </span>
+      </styled.span>
+      <styled.span>
+        <span
+          className="sc-htpNat hvZCVt"
+        />
+      </styled.span>
+      <styled.div>
+        <div
+          className="sc-bxivhb ihKacX"
+        >
+          Hey this is the child content of the event!
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
+</VerticalTimelineEvent>
+`;
