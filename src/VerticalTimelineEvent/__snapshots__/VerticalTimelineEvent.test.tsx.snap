@@ -1,6 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] = `
+.c0 {
+  margin: 40px 0;
+  position: relative;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  text-align: right;
+  color: hsl(210,13.4%,47.2%);
+  position: absolute;
+  width: 4rem;
+  font-size: 12px;
+  top: 6px;
+}
+
+.c2 {
+  background-color: white;
+  border: 2px solid rgb(223,229,232);
+  border-radius: 50%;
+  padding: 5px;
+  position: absolute;
+  left: 74px;
+  top: 7px;
+}
+
+.c3 {
+  margin-left: 7rem;
+}
+
 <VerticalTimelineEvent
   eventDate="21 Apr"
 >
@@ -8,23 +44,23 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
     className="vertical-timeline-event"
   >
     <div
-      className="vertical-timeline-event sc-bdVaJa gOPKuC"
+      className="vertical-timeline-event c0"
     >
       <styled.span>
         <span
-          className="sc-bwzfXH eRTkPM"
+          className="c1"
         >
           21 Apr
         </span>
       </styled.span>
       <styled.span>
         <span
-          className="sc-htpNat hvZCVt"
+          className="c2"
         />
       </styled.span>
       <styled.div>
         <div
-          className="sc-bxivhb ihKacX"
+          className="c3"
         >
           Hey this is the child content of the event!
         </div>
@@ -35,26 +71,62 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
 `;
 
 exports[`<VerticalTimelineEvent /> should render a vertical timeline event without an event date 1`] = `
+.c0 {
+  margin: 40px 0;
+  position: relative;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  text-align: right;
+  color: hsl(210,13.4%,47.2%);
+  position: absolute;
+  width: 4rem;
+  font-size: 12px;
+  top: 6px;
+}
+
+.c2 {
+  background-color: white;
+  border: 2px solid rgb(223,229,232);
+  border-radius: 50%;
+  padding: 5px;
+  position: absolute;
+  left: 74px;
+  top: 7px;
+}
+
+.c3 {
+  margin-left: 7rem;
+}
+
 <VerticalTimelineEvent>
   <styled.div
     className="vertical-timeline-event"
   >
     <div
-      className="vertical-timeline-event sc-bdVaJa gOPKuC"
+      className="vertical-timeline-event c0"
     >
       <styled.span>
         <span
-          className="sc-bwzfXH eRTkPM"
+          className="c1"
         />
       </styled.span>
       <styled.span>
         <span
-          className="sc-htpNat hvZCVt"
+          className="c2"
         />
       </styled.span>
       <styled.div>
         <div
-          className="sc-bxivhb ihKacX"
+          className="c3"
         >
           Hey this is the child content of the event!
         </div>
