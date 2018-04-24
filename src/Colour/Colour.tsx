@@ -59,7 +59,7 @@ export class Colour extends React.PureComponent<SProps> {
       margin-bottom: 1em;
     `
     const ColourName = styled.p`
-      font-weight: 600
+      font-weight: 600;
     `
     return (<div>
       <Box />
