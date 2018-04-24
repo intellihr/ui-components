@@ -1,7 +1,7 @@
 import { mount } from 'enzyme'
 import React from 'react'
-import { brandColours } from './Colour'
-import { Colour } from './'
+import { brandColors } from './Colour'
+import { Color } from './'
 import 'jest-styled-components'
 
 describe('<Colour />', () => {
