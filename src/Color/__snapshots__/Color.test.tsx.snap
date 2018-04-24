@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Colour /> should render a colour component 1`] = `
+exports[`<Color /> should render a color component 1`] = `
 .c0 {
   width: 10em;
   height: 7.5em;
@@ -12,12 +12,14 @@ exports[`<Colour /> should render a colour component 1`] = `
   font-weight: 600;
 }
 
-<Colour
+<Color
   description="intelli-royal-blue"
   hex="#432DF3"
 >
   <div>
-    <styled.div>
+    <styled.div
+      hex="#432DF3"
+    >
       <div
         className="c0"
       />
@@ -37,5 +39,5 @@ exports[`<Colour /> should render a colour component 1`] = `
        
     </p>
   </div>
-</Colour>
+</Color>
 `;

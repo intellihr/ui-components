@@ -1,13 +1,13 @@
 import { mount } from 'enzyme'
 import React from 'react'
 import { ColorsGrid } from './'
-import { brandColoursArray } from './Color'
+import { brandColorsArray } from './Color'
 import 'jest-styled-components'
 
-describe('<ColoursGrid />', () => {
-  it(`should render a colour component`, () => {
+describe('<ColorsGrid />', () => {
+  it(`should render a color component`, () => {
     const wrapper = mount(
-      <ColorsGrid colours={brandColoursArray} />
+      <ColorsGrid colors={brandColorsArray} />
     )
     expect(wrapper).toMatchSnapshot()
   })
