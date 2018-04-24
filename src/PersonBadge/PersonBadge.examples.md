@@ -1,4 +1,5 @@
-## Person Badge examples
+## PersonBadge using Initials
+
 ```jsx
 <div>
   <PersonBadge
@@ -7,168 +8,171 @@
     size='xlarge'
   />
   <PersonBadge
-    preferredOrFirstName='Zoltan'
-    lastName='Khevai'
+    preferredOrFirstName='John'
+    lastName='Wick'
     size='large'
   />
   <PersonBadge
-    preferredOrFirstName='Edward'
-    lastName='Nigma'
+    preferredOrFirstName='John'
+    lastName='Wick'
     size='medium'
-    skeletonOptions={{
-      showSkeleton: true,
-      shape: 'circle'
-    }}
   />
   <PersonBadge
-    preferredOrFirstName='Tom'
-    lastName='Hanks'
+    preferredOrFirstName='John'
+    lastName='Wick'
     size='small'
-    skeletonOptions={{
-      showSkeleton: true,
-      shape: 'circle'
-    }}
   />
+</div>
+```
 
+## PersonBadge using ImageUrl
+
+```jsx
+<div>
   <PersonBadge
     preferredOrFirstName='John'
     lastName='Wick'
     size='xlarge'
-    isOnLeave
-    skeletonOptions={{
-      showSkeleton: true,
-      shape: 'circle'
-    }}
+    imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
   />
   <PersonBadge
-    preferredOrFirstName='Zoltan'
-    lastName='Khevai'
+    preferredOrFirstName='John'
+    lastName='Wick'
     size='large'
-    isOnLeave
-    skeletonOptions={{
-      showSkeleton: true,
-      shape: 'circle'
-    }}
+    imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
   />
   <PersonBadge
-    preferredOrFirstName='Edward'
-    lastName='Nigma'
+    preferredOrFirstName='John'
+    lastName='Wick'
     size='medium'
-    isOnLeave
-    skeletonOptions={{
-      showSkeleton: true,
-      shape: 'circle'
-    }}
+    imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
   />
   <PersonBadge
-    preferredOrFirstName='Tom'
-    lastName='Hanks'
+    preferredOrFirstName='John'
+    lastName='Wick'
     size='small'
-    isOnLeave
-    skeletonOptions={{
-      showSkeleton: true,
-      shape: 'circle'
-    }}
+    imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
   />
+</div>
+```
 
-  <br />
+## PersonBadge using isOnLeave
 
+```jsx
+<div>
   <PersonBadge
     preferredOrFirstName='John'
     lastName='Wick'
     size='xlarge'
-    imageId='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-    handleClick={() => {}}
-    skeletonOptions={{
-      showSkeleton: true,
-      shape: 'circle'
-    }}
+    imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
+    isOnLeave
   />
   <PersonBadge
-    preferredOrFirstName='Zoltan'
-    lastName='Chivay'
+    preferredOrFirstName='John'
+    lastName='Wick'
     size='large'
-    imageId='https://vignette.wikia.nocookie.net/witcher/images/4/4d/Tw2_zoltan_chivay_render.jpg/revision/latest/top-crop/width/240/height/240?cb=20170605185340'
-    handleClick={() => {}}
-    skeletonOptions={{
-      showSkeleton: true,
-      shape: 'circle'
-    }}
+    imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
+    isOnLeave
   />
   <PersonBadge
-    preferredOrFirstName='Edward'
-    lastName='Nigma'
+    preferredOrFirstName='John'
+    lastName='Wick'
     size='medium'
-    imageId='http://style.anu.edu.au/_anu/4/images/placeholders/person.png'
-    handleClick={() => {}}
-    skeletonOptions={{
-      showSkeleton: true,
-      shape: 'circle'
-    }}
+    imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
+    isOnLeave
   />
   <PersonBadge
-    preferredOrFirstName='Tom'
-    lastName='Hanks'
+    preferredOrFirstName='John'
+    lastName='Wick'
     size='small'
-    imageId='http://style.anu.edu.au/_anu/4/images/placeholders/person.png'
-    handleClick={() => {}}
-    skeletonOptions={{
-      showSkeleton: true,
-      shape: 'circle'
-    }}
+    imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
+    isOnLeave
   />
+</div>
+```
 
+## PersonBadge using hover props
+
+```jsx
+<div>
   <PersonBadge
     preferredOrFirstName='John'
     lastName='Wick'
     size='xlarge'
-    isOnLeave
-    imageId='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
+    imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
     hoverIcon='camera'
     hoverLabel='Change Picture'
     handleClick={() => {}}
-    skeletonOptions={{
-      showSkeleton: true,
-      shape: 'circle'
-    }}
   />
   <PersonBadge
-    preferredOrFirstName='Zoltan'
-    lastName='Chivay'
+    preferredOrFirstName='John'
+    lastName='Wick'
     size='large'
-    isOnLeave
-    imageId='https://vignette.wikia.nocookie.net/witcher/images/4/4d/Tw2_zoltan_chivay_render.jpg/revision/latest/top-crop/width/240/height/240?cb=20170605185340'
+    imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
     hoverIcon='camera'
     hoverLabel='Change Picture'
     handleClick={() => {}}
-    skeletonOptions={{
-      showSkeleton: true,
-      shape: 'circle'
-    }}
   />
   <PersonBadge
-    preferredOrFirstName='Edward'
-    lastName='Nigma'
+    preferredOrFirstName='John'
+    lastName='Wick'
     size='medium'
-    isOnLeave
-    imageId='http://style.anu.edu.au/_anu/4/images/placeholders/person.png'
+    imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
     hoverIcon='camera'
     hoverLabel='Change Picture'
     handleClick={() => {}}
+  />
+  <PersonBadge
+    preferredOrFirstName='John'
+    lastName='Wick'
+    size='small'
+    imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
+    hoverIcon='camera'
+    hoverLabel='Change Picture'
+    handleClick={() => {}}
+  />
+</div>
+```
+
+## PersonBadge using skeleton options
+
+```jsx
+<div>
+  <PersonBadge
+    preferredOrFirstName='John'
+    lastName='Wick'
+    size='xlarge'
+    imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
     skeletonOptions={{
       showSkeleton: true,
       shape: 'circle'
     }}
   />
   <PersonBadge
-    preferredOrFirstName='Tom'
-    lastName='Hanks'
+    preferredOrFirstName='John'
+    lastName='Wick'
+    size='large'
+    imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
+    skeletonOptions={{
+      showSkeleton: true,
+      shape: 'circle'
+    }}
+  />
+  <PersonBadge
+    preferredOrFirstName='John'
+    lastName='Wick'
+    size='medium'
+    imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
+    skeletonOptions={{
+      showSkeleton: true,
+      shape: 'circle'
+    }}
+  />
+  <PersonBadge
+    preferredOrFirstName='John'
+    lastName='Wick'
     size='small'
-    isOnLeave
-    imageId='http://style.anu.edu.au/_anu/4/images/placeholders/person.png'
-    hoverIcon='camera'
-    hoverLabel='Change Picture'
-    handleClick={() => {}}
+    imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
     skeletonOptions={{
       showSkeleton: true,
       shape: 'circle'

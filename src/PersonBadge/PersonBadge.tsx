@@ -30,8 +30,6 @@ export interface PersonBadgeProps {
   imageData?: string
   /** If true will place a yellow marker besides the profile picture */
   isOnLeave?: boolean
-  /** Handler for the case if image doesn't load */
-  onImageError?: (error: any) => void
 
   className?: string
 }
@@ -47,8 +45,7 @@ export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
 
   public static defaultProps: PersonBadgeProps = {
     size: 'medium',
-    isOnLeave: false,
-    onImageError: () => {}
+    isOnLeave: false
   }
 
   constructor (props: any) {
@@ -94,22 +91,21 @@ export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
     } = this.props
 
     const firstInitial = preferredOrFirstName ? preferredOrFirstName.charAt(0) : ''
-    const lastInitital = lastName ? lastName.charAt(0) : ''
+    const lastInitial = lastName ? lastName.charAt(0) : ''
 
-    return firstInitial + lastInitital
+    return firstInitial + lastInitial
   }
 
   get picture (): JSX.Element {
     const {
       imageUrl,
-      imageData,
-      onImageError
+      imageData
     } = this.props
 
     return (
       <img
         src={imageUrl || imageData}
-        onError={event => !isNil(onImageError) ? onImageError(event) : null}
+        onError={() => { this.setState({showInitials: true}) }}
       />
     )
   }
@@ -118,7 +114,7 @@ export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
     if (this.state.showInitials) {
       return (
         <div className='badge-initials-container'>
-          <span className='badge-intials'>
+          <span className='badge-initials'>
             {this.initials}
           </span>
         </div>
