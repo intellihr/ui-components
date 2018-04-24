@@ -11,8 +11,8 @@ export interface SProps extends ColourProps {
 }
 
 export interface ColourObject {
-  name: string;
-  hex: string;
+  name: string
+  hex: string
 }
 
 export interface ColourWithNameAndValue {
