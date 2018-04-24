@@ -148,8 +148,8 @@
       // NOTE: This to override default styles of font-awesome in lapis (has no effect on ui-components)
       >.fa {
         margin: 0;
-        width: auto;
         text-align: inherit;
+        width: auto;
       }
 
       >.person-badge-hover-label {

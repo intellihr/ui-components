@@ -14,13 +14,13 @@
 
   >.comment-content-container {
     align-self: stretch;
+    background-color: $neutral-light;
+    border-radius: .75rem;
     flex-grow: 1;
     padding: .85rem 1.2rem;
-    border-radius: .75rem;
-    background-color: $neutral-light;
     
     &.secondary {
-      background-color: cornsilk;
+      background-color: #fff8dc;
     }
 
     &.loggedInUser {
@@ -33,10 +33,10 @@
       }
 
       >.comment-header-date {
-        font-size: 80%;
-        margin-left: .75rem;
         display: inline;
         float: right;
+        font-size: 80%;
+        margin-left: .75rem;
 
         >* {
           display: inline;
