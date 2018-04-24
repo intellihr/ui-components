@@ -1,6 +1,6 @@
 ### A Colour Component
 ```jsx
-const { brandColours } = require('./Color');
+const { brandColors } = require('./style');
 
-<Colour hex={brandColours.intelliRoyalBlue} description="intelli-royal-blue" />
+<Color hex={brandColors.intelliRoyalBlue} description="intelli-royal-blue" />
 ```
