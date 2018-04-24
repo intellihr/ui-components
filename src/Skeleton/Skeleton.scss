@@ -1,3 +1,5 @@
+@import 'compass/functions';
+
 @keyframes progress {
   0% {
     background-position: -200px 0;
@@ -41,28 +43,6 @@
     &.skeleton-xlarge {
       height: 120px;
       width: 120px;
-    }
-  }
-
-  &.line {
-    &.skeleton-small {
-      height: 30px;
-      width: 90px;
-    }
-
-    &.skeleton-medium {
-      height: 40px;
-      width: 120px;
-    }
-
-    &.skeleton-large {
-      height: 72px;
-      width: 195px;
-    }
-
-    &.skeleton-xlarge {
-      height: 120px;
-      width: 240px;
     }
   }
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { CSSProperties } from 'react'
 import classNames from 'classnames'
 const style = require('./Skeleton.scss')
 
@@ -7,13 +7,13 @@ export interface SkeletonComponentProps {
   skeletonOptions?: {
     /** If true, will display the skeleton */
     showSkeleton: boolean,
-    /** The width of the skeleton, will overrite the 'size' prop */
+    /** Width of the skeleton (only applies if `shape` is set to `line`) */
     width?: number,
     /** A circle or a line */
     shape: 'circle' | 'line'
   }
-  /** How big you want the skeleton (Width can be overridden by skeletonOptions.width prop) */
-  size: 'small' | 'medium' | 'large' | 'xlarge'
+  /** Circle size of the skeleton (only applies if `shape` is set to `circle`) */
+  size?: 'small' | 'medium' | 'large' | 'xlarge'
   /** Additional class names for the parent container */
   className?: string
 }
@@ -23,23 +23,37 @@ export const withSkeleton = <P extends {}>(
 ) => class Skeleton extends React.Component<P & SkeletonComponentProps> {
     static defaultProps: Partial<SkeletonComponentProps> = {
       skeletonOptions: {
-        showSkeleton: true,
+        showSkeleton: false,
         shape: 'circle'
       },
       className: ''
     }
 
-    render (): JSX.Element {
-      const { showSkeleton, width, shape } = this.props.skeletonOptions!
+    get style (): CSSProperties | undefined {
+      const {
+        width,
+        shape
+      } = this.props.skeletonOptions!
 
-      if (showSkeleton) {
-        return <UnwrappedComponent {...this.props} />
+      if (shape === 'line') {
+        return { width }
       }
+    }
+
+    render (): JSX.Element {
+      const {
+        showSkeleton,
+        shape
+      } = this.props.skeletonOptions!
 
       const {
         size,
         className
       } = this.props
+
+      if (!showSkeleton) {
+        return <UnwrappedComponent {...this.props} />
+      }
 
       return (
         <span
@@ -50,7 +64,7 @@ export const withSkeleton = <P extends {}>(
             shape,
             `skeleton-${size}`
           )}
-          style={{width}}
+          style={this.style}
         />
       )
     }
