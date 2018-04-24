@@ -1,0 +1,358 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ColoursGrid /> should render a colour component 1`] = `
+<ColoursGrid
+  colours={
+    Array [
+      Object {
+        "hex": "#432DF3",
+        "name": "intelli-royal-blue",
+      },
+      Object {
+        "hex": "#04DBAC",
+        "name": "intelli-green",
+      },
+      Object {
+        "hex": "#FFDD37",
+        "name": "intelli-yellow",
+      },
+      Object {
+        "hex": "#FF4D50",
+        "name": "intelli-red",
+      },
+      Object {
+        "hex": "#03DEEB",
+        "name": "intelli-cyan",
+      },
+      Object {
+        "hex": "#A35AFF",
+        "name": "intelli-purple",
+      },
+      Object {
+        "hex": "#303035",
+        "name": "intelli-charcoal",
+      },
+      Object {
+        "hex": "#B3B3B5",
+        "name": "intelli-grey-1",
+      },
+      Object {
+        "hex": "#E4E4E5",
+        "name": "intelli-grey-2",
+      },
+      Object {
+        "hex": "#F5F7F9",
+        "name": "intelli-base-white",
+      },
+      Object {
+        "hex": "#F5F5F5",
+        "name": "intelli-off-white",
+      },
+    ]
+  }
+>
+  <styled.div>
+    <div
+      className="sc-bdVaJa etdbDy"
+    >
+      <Colour
+        description="intelli-royal-blue"
+        hex="#432DF3"
+        key="intelli-royal-blue"
+      >
+        <div>
+          <styled.div>
+            <div
+              className="sc-bwzfXH cWLzbN"
+            />
+          </styled.div>
+          <styled.p>
+            <p
+              className="sc-htpNat daVmCj"
+            >
+               
+              intelli-royal-blue
+               
+            </p>
+          </styled.p>
+          <p>
+             
+            #432DF3
+             
+          </p>
+        </div>
+      </Colour>
+      <Colour
+        description="intelli-green"
+        hex="#04DBAC"
+        key="intelli-green"
+      >
+        <div>
+          <styled.div>
+            <div
+              className="sc-bxivhb hSmeNb"
+            />
+          </styled.div>
+          <styled.p>
+            <p
+              className="sc-ifAKCX fDiTuQ"
+            >
+               
+              intelli-green
+               
+            </p>
+          </styled.p>
+          <p>
+             
+            #04DBAC
+             
+          </p>
+        </div>
+      </Colour>
+      <Colour
+        description="intelli-yellow"
+        hex="#FFDD37"
+        key="intelli-yellow"
+      >
+        <div>
+          <styled.div>
+            <div
+              className="sc-EHOje jLhXoF"
+            />
+          </styled.div>
+          <styled.p>
+            <p
+              className="sc-bZQynM bydMxI"
+            >
+               
+              intelli-yellow
+               
+            </p>
+          </styled.p>
+          <p>
+             
+            #FFDD37
+             
+          </p>
+        </div>
+      </Colour>
+      <Colour
+        description="intelli-red"
+        hex="#FF4D50"
+        key="intelli-red"
+      >
+        <div>
+          <styled.div>
+            <div
+              className="sc-gzVnrw RNCrr"
+            />
+          </styled.div>
+          <styled.p>
+            <p
+              className="sc-htoDjs hEDuLJ"
+            >
+               
+              intelli-red
+               
+            </p>
+          </styled.p>
+          <p>
+             
+            #FF4D50
+             
+          </p>
+        </div>
+      </Colour>
+      <Colour
+        description="intelli-cyan"
+        hex="#03DEEB"
+        key="intelli-cyan"
+      >
+        <div>
+          <styled.div>
+            <div
+              className="sc-dnqmqq jSpDwW"
+            />
+          </styled.div>
+          <styled.p>
+            <p
+              className="sc-iwsKbI jbxArO"
+            >
+               
+              intelli-cyan
+               
+            </p>
+          </styled.p>
+          <p>
+             
+            #03DEEB
+             
+          </p>
+        </div>
+      </Colour>
+      <Colour
+        description="intelli-purple"
+        hex="#A35AFF"
+        key="intelli-purple"
+      >
+        <div>
+          <styled.div>
+            <div
+              className="sc-gZMcBi eRHIIL"
+            />
+          </styled.div>
+          <styled.p>
+            <p
+              className="sc-gqjmRU bupxyl"
+            >
+               
+              intelli-purple
+               
+            </p>
+          </styled.p>
+          <p>
+             
+            #A35AFF
+             
+          </p>
+        </div>
+      </Colour>
+      <Colour
+        description="intelli-charcoal"
+        hex="#303035"
+        key="intelli-charcoal"
+      >
+        <div>
+          <styled.div>
+            <div
+              className="sc-VigVT iLopOi"
+            />
+          </styled.div>
+          <styled.p>
+            <p
+              className="sc-jTzLTM biUQWd"
+            >
+               
+              intelli-charcoal
+               
+            </p>
+          </styled.p>
+          <p>
+             
+            #303035
+             
+          </p>
+        </div>
+      </Colour>
+      <Colour
+        description="intelli-grey-1"
+        hex="#B3B3B5"
+        key="intelli-grey-1"
+      >
+        <div>
+          <styled.div>
+            <div
+              className="sc-fjdhpX klIbXh"
+            />
+          </styled.div>
+          <styled.p>
+            <p
+              className="sc-jzJRlG fIiydF"
+            >
+               
+              intelli-grey-1
+               
+            </p>
+          </styled.p>
+          <p>
+             
+            #B3B3B5
+             
+          </p>
+        </div>
+      </Colour>
+      <Colour
+        description="intelli-grey-2"
+        hex="#E4E4E5"
+        key="intelli-grey-2"
+      >
+        <div>
+          <styled.div>
+            <div
+              className="sc-cSHVUG fehlNa"
+            />
+          </styled.div>
+          <styled.p>
+            <p
+              className="sc-kAzzGY GyKas"
+            >
+               
+              intelli-grey-2
+               
+            </p>
+          </styled.p>
+          <p>
+             
+            #E4E4E5
+             
+          </p>
+        </div>
+      </Colour>
+      <Colour
+        description="intelli-base-white"
+        hex="#F5F7F9"
+        key="intelli-base-white"
+      >
+        <div>
+          <styled.div>
+            <div
+              className="sc-chPdSV gBUpVU"
+            />
+          </styled.div>
+          <styled.p>
+            <p
+              className="sc-kgoBCf bzkTnp"
+            >
+               
+              intelli-base-white
+               
+            </p>
+          </styled.p>
+          <p>
+             
+            #F5F7F9
+             
+          </p>
+        </div>
+      </Colour>
+      <Colour
+        description="intelli-off-white"
+        hex="#F5F5F5"
+        key="intelli-off-white"
+      >
+        <div>
+          <styled.div>
+            <div
+              className="sc-kGXeez jQSpWt"
+            />
+          </styled.div>
+          <styled.p>
+            <p
+              className="sc-kpOJdX gBQQgN"
+            >
+               
+              intelli-off-white
+               
+            </p>
+          </styled.p>
+          <p>
+             
+            #F5F5F5
+             
+          </p>
+        </div>
+      </Colour>
+    </div>
+  </styled.div>
+</ColoursGrid>
+`;

@@ -13,7 +13,7 @@ exports[`<Colour /> should render a colour component 1`] = `
     </styled.div>
     <styled.p>
       <p
-        className="sc-bwzfXH hOEnvp"
+        className="sc-bwzfXH kxPYMp"
       >
          
         intelli-royal-blue
