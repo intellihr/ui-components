@@ -1,6 +1,5 @@
 import { mount } from 'enzyme'
 import React from 'react'
-import 'jest-styled-components'
 
 import { VerticalTimeline } from '../VerticalTimeline'
 import { VerticalTimelineEvent } from '../VerticalTimelineEvent'
