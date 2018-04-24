@@ -12,7 +12,7 @@ export interface IconProps {
   isLarge?: boolean
   /** Colour of the icon */
   color?: string
-  /** Additonal class name to pass to the icon */
+  /** Additional class name to pass to the icon */
   className?: string
   /** Adds FontAwesome `fa-spin` class to icon */
   isSpinning?: boolean

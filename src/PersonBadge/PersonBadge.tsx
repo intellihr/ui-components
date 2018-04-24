@@ -25,13 +25,11 @@ export interface PersonBadgeProps {
   /** Handle the component click (If the function is not present, curson and border effects will not appear on hover) */
   handleClick?: (event: React.MouseEvent<HTMLDivElement>) => void
   /** Image URL */
-  imageId?: string
+  imageUrl?: string
   /** Image blob data */
   imageData?: string
   /** If true will place a yellow marker besides the profile picture */
   isOnLeave?: boolean
-  /** Handler for the case if image doesn't load */
-  onImageError?: (error: any) => void
 
   className?: string
 }
@@ -46,9 +44,8 @@ export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
   }
 
   public static defaultProps: PersonBadgeProps = {
-    size: 'xlarge',
-    isOnLeave: false,
-    onImageError: () => {}
+    size: 'medium',
+    isOnLeave: false
   }
 
   constructor (props: any) {
@@ -61,11 +58,11 @@ export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
 
   protected hasImage (props: any): boolean {
     const {
-      imageId,
+      imageUrl,
       imageData
     } = props
 
-    return !isEmpty(imageId) || !isEmpty(imageData)
+    return !isEmpty(imageUrl) || !isEmpty(imageData)
   }
 
   get hoverDom (): JSX.Element | null {
@@ -94,22 +91,21 @@ export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
     } = this.props
 
     const firstInitial = preferredOrFirstName ? preferredOrFirstName.charAt(0) : ''
-    const lastInitital = lastName ? lastName.charAt(0) : ''
+    const lastInitial = lastName ? lastName.charAt(0) : ''
 
-    return firstInitial + lastInitital
+    return firstInitial + lastInitial
   }
 
   get picture (): JSX.Element {
     const {
-      imageId,
-      imageData,
-      onImageError
+      imageUrl,
+      imageData
     } = this.props
 
     return (
       <img
-        src={imageId || imageData}
-        onError={event => !isNil(onImageError) ? onImageError(event) : null}
+        src={imageUrl || imageData}
+        onError={() => { this.setState({showInitials: true}) }}
       />
     )
   }
@@ -118,7 +114,7 @@ export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
     if (this.state.showInitials) {
       return (
         <div className='badge-initials-container'>
-          <span className='badge-intials'>
+          <span className='badge-initials'>
             {this.initials}
           </span>
         </div>
