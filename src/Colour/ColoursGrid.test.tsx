@@ -1,7 +1,7 @@
 import { mount } from 'enzyme'
 import React from 'react'
 import { ColoursGrid } from './'
-import  { brandColoursArray } from './Colour'
+import { brandColoursArray } from './Colour'
 
 describe('<ColoursGrid />', () => {
   it(`should render a colour component`, () => {

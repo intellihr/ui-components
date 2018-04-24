@@ -7,7 +7,7 @@ export interface ColourGridProps {
 }
 
 export class ColoursGrid extends React.PureComponent<ColourGridProps> {
-  render() {
+  render () {
     const WrappedList = styled.div`
       display: flex;
       flex-wrap: wrap
