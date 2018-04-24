@@ -36,7 +36,6 @@ export const appColors: ColorWithNameAndValue = {
   intelliRedLight: '#FFE6E6'
 }
 
-
 export const ColorBox = styled.div`
   width: 10em;
   height: 7.5em;
