@@ -1,6 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Legend /> should render a legend 1`] = `
+.c0 {
+  margin: 0;
+  padding: 0;
+}
+
+.c0 li {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: .8rem;
+  margin-bottom: 3px;
+}
+
+.c0 li:last-child {
+  margin-bottom: 0;
+}
+
+.c0 li i {
+  font-size: 10px;
+}
+
+.c1 {
+  margin-left: 5px;
+  white-space: nowrap;
+  width: 100%;
+}
+
 <Legend
   datasets={
     Array [
@@ -17,7 +49,7 @@ exports[`<Legend /> should render a legend 1`] = `
 >
   <styled.ul>
     <ul
-      className="sc-bdVaJa gVmZaa"
+      className="c0"
     >
       <li
         key="0"
@@ -43,7 +75,7 @@ exports[`<Legend /> should render a legend 1`] = `
         </Icon>
         <styled.span>
           <span
-            className="sc-bwzfXH IRuoF"
+            className="c1"
           >
             I am the green dataset
           </span>
@@ -73,7 +105,7 @@ exports[`<Legend /> should render a legend 1`] = `
         </Icon>
         <styled.span>
           <span
-            className="sc-bwzfXH IRuoF"
+            className="c1"
           >
             I am BLUE!
           </span>

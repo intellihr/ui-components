@@ -1,8 +1,6 @@
 import { mount } from 'enzyme'
 import React from 'react'
-
 import { VerticalTimelineEvent } from '../VerticalTimelineEvent'
-import 'jest-styled-components'
 
 describe('<VerticalTimelineEvent />', () => {
   it(`should render a vertical timeline event`, () => {
