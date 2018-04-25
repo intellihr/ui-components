@@ -10,7 +10,7 @@
     position: absolute;
   }
 
-  &.small {
+  &.badge-small {
     font-size: .8rem;
     height: 30px;
     width: 30px;
@@ -22,7 +22,7 @@
     }
   }
 
-  &.medium {
+  &.badge-medium {
     font-size: 1rem;
     height: 40px;
     width: 40px;
@@ -34,7 +34,7 @@
     }
   }
 
-  &.large {
+  &.badge-large {
     font-size: 1.5rem;
     height: 72px;
     width: 72px;
@@ -46,7 +46,7 @@
     }
   }
 
-  &.xlarge {
+  &.badge-xlarge {
     font-size: 2.5rem;
     height: 120px;
     width: 120px;
@@ -101,7 +101,7 @@
         opacity: 1;
       }
 
-      &.small {
+      &.badge-small {
         >.person-badge-hover-icon {
           font-size: .75rem;
         }
@@ -111,7 +111,7 @@
         }
       }
 
-      &.medium {
+      &.badge-medium {
         >.person-badge-hover-icon {
           font-size: 1.25rem;
         }
@@ -121,7 +121,7 @@
         }
       }
 
-      &.large {
+      &.badge-large {
         >.person-badge-hover-icon {
           font-size: 1.25rem;
         }
@@ -131,7 +131,7 @@
         }
       }
 
-      &.xlarge {
+      &.badge-xlarge {
         >.person-badge-hover-icon {
           font-size: 2rem;
         }
@@ -148,8 +148,8 @@
       // NOTE: This to override default styles of font-awesome in lapis (has no effect on ui-components)
       >.fa {
         margin: 0;
-        width: auto;
         text-align: inherit;
+        width: auto;
       }
 
       >.person-badge-hover-label {
