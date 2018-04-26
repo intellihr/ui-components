@@ -56,6 +56,14 @@ export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
     }
   }
 
+  componentDidUpdate (prevProps: PersonBadgeProps): void {
+    if (this.hasImage(prevProps) !== this.hasImage(this.props)) {
+      this.setState({
+        showInitials: !this.state.showInitials
+      })
+    }
+  }
+
   protected hasImage (props: any): boolean {
     const {
       imageUrl,
@@ -151,7 +159,7 @@ export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
       <div className={classNames(
         style.PersonBadge,
         className,
-        size
+        `badge-${size}`
       )}>
         <div
           className={classNames(
