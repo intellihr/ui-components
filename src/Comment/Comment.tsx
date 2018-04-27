@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { PersonBadge } from '../PersonBadge/PersonBadge'
+import { Avatar } from '../Avatar/Avatar'
 const style = require('./style.scss')
 
 export interface CommentProps {
@@ -14,16 +14,14 @@ export interface CommentProps {
     header?: React.Component,
     /** Commenter full name */
     personDisplayName: string,
-    /** Commenter last name */
-    personLastName: string,
-    /** Commenter preferred or last (if preferred is empty) name */
-    personPreferredOrFirstName: string,
+    /** Commenter's initials to display in Avatar */
+    commenterInitials?: string
     /** Use DateText component from the list of alreay defined components (a string should work too) */
     createdDateText: React.Component,
     /** Commenter person ID */
     personId: string,
     /** Commenter Image URL, if null or empty, will display initials */
-    personProfilePictureUrl?: string,
+    avatarUrl?: string,
     /** A label to be displayed right before the date label of the comment (use a span to persist the inline diplay behaviour) */
     label?: React.Component
   }
@@ -35,20 +33,18 @@ export interface CommentProps {
 }
 
 export class Comment extends React.Component<CommentProps> {
-  get personProfilePicture (): JSX.Element {
+  get avatar (): JSX.Element {
     const {
-      personLastName,
-      personPreferredOrFirstName,
-      personProfilePictureUrl
+      commenterInitials,
+      avatarUrl
     } = this.props.comment
 
     return (
       <div className='comment-badge-container'>
-        <PersonBadge
+        <Avatar
           size='small'
-          imageUrl={personProfilePictureUrl}
-          preferredOrFirstName={personPreferredOrFirstName}
-          lastName={personLastName}
+          imageUrl={avatarUrl}
+          initials={commenterInitials}
         />
       </div>
     )
@@ -135,7 +131,7 @@ export class Comment extends React.Component<CommentProps> {
 
     return (
       <div id={idx.toString()} className={classNames(style.Comment)}>
-        {this.personProfilePicture}
+        {this.avatar}
         <div className={classNames(
           'comment-content-container',
           {
