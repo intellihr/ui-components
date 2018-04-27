@@ -12,6 +12,19 @@ const VerticalTimelineEventWrapper = styled.div`
   &:last-child {
     margin-bottom: 0;
   }
+  
+  .event-marker {
+    position: absolute;
+    width: auto;
+    height: 0;
+    left: 88px;
+    top: 12px;
+    
+    > * {
+      top: -50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 `
 
 const EventDate = styled.span`
@@ -21,16 +34,19 @@ const EventDate = styled.span`
   width: 4rem;
   font-size: 12px;
   top: 6px;
+  line-height: 1;
 `
 
 const EventDot = styled.span`
-  background-color: white;
-  border: 2px solid rgb(223, 229, 232);
-  border-radius: 50%;
-  padding: 5px;
+  border: 2px solid rgb(223,229,232);
   position: absolute;
-  left: 74px;
-  top: 7px;
+  left: 50%;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: white;
+  top: 12px;
 `
 
 const EventContent = styled.div`
