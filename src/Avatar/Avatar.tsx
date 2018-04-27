@@ -9,43 +9,40 @@ import {
   withSkeleton,
   SkeletonComponentProps
 } from '../Skeleton/Skeleton'
-const style = require('./PersonBadge.scss')
+const style = require('./Avatar.scss')
 
-export interface PersonBadgeProps {
-  /** size for the badge  */
+export interface AvatarProps {
+  /** Size of the avatar  */
   size?: 'small' | 'medium' | 'large' | 'xlarge'
-  /** This will be used for the first character of the initials badge if the image URL nad data are missing */
-  preferredOrFirstName?: string
-  /** This will be used for the second character of the initials badge if the image URL nad data are missing */
-  lastName?: string
+  /** Initials to display if no valid `imageUrl` or `imageData` is passed to Avatar */
+  initials?: string
   /** Text for the black, transparent overlay (both Label and Icon have to be present for the overlay to render) */
   hoverLabel?: string
   /** Label for the black, transparent overlay (both Label and Icon have to be present for the overlay to render) */
   hoverIcon?: string
-  /** Handle the component click (If the function is not present, curson and border effects will not appear on hover) */
+  /** Handle the component click (If the function is not present, cursor and border effects will not appear on hover) */
   handleClick?: (event: React.MouseEvent<HTMLDivElement>) => void
   /** Image URL */
   imageUrl?: string
   /** Image blob data */
   imageData?: string
-  /** If true will place a yellow marker besides the profile picture */
-  isOnLeave?: boolean
+  /** Display a coloured status dot on the avatar */
+  statusDot?: 'primary' | 'secondary' | 'success' | 'warning' | 'alert' | 'neutral' | 'highlight'
 
   className?: string
 }
 
-export interface PersonBadgeState {
+export interface AvatarState {
   showInitials: boolean
 }
 
-export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
-  public state: PersonBadgeState = {
+export class AvatarComponent extends React.Component<AvatarProps> {
+  public state: AvatarState = {
     showInitials: true
   }
 
-  public static defaultProps: PersonBadgeProps = {
-    size: 'medium',
-    isOnLeave: false
+  public static defaultProps: AvatarProps = {
+    size: 'medium'
   }
 
   constructor (props: any) {
@@ -56,7 +53,7 @@ export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
     }
   }
 
-  componentDidUpdate (prevProps: PersonBadgeProps): void {
+  componentDidUpdate (prevProps: AvatarProps): void {
     if (this.hasImage(prevProps) !== this.hasImage(this.props)) {
       this.setState({
         showInitials: !this.state.showInitials
@@ -85,23 +82,11 @@ export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
     }
 
     return (
-      <div className={classNames('person-badge-hover', size)}>
+      <div className={classNames('avatar-hover', `avatar-${size}`)}>
         <Icon type='camera' />
-        <span className='person-badge-hover-label'>{hoverLabel}</span>
+        <span className='avatar-hover-label'>{hoverLabel}</span>
       </div>
     )
-  }
-
-  get initials (): string {
-    const {
-      preferredOrFirstName,
-      lastName
-    } = this.props
-
-    const firstInitial = preferredOrFirstName ? preferredOrFirstName.charAt(0) : ''
-    const lastInitial = lastName ? lastName.charAt(0) : ''
-
-    return firstInitial + lastInitial
   }
 
   get picture (): JSX.Element {
@@ -118,31 +103,35 @@ export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
     )
   }
 
-  get badgeContent (): JSX.Element {
+  get avatarContent (): JSX.Element {
+    const {
+      initials
+    } = this.props
+
     if (this.state.showInitials) {
       return (
-        <div className='badge-initials-container'>
-          <span className='badge-initials'>
-            {this.initials}
+        <div className='avatar-initials-container'>
+          <span className='avatar-initials'>
+            {initials}
           </span>
         </div>
       )
     }
 
     return (
-      <div className='badge-picture-container'>
+      <div className='avatar-picture-container'>
         {this.picture}
       </div>
     )
   }
 
-  get extendedLeaveDot (): JSX.Element | null {
+  get statusDot (): JSX.Element | null {
     const {
-      isOnLeave
+      statusDot
     } = this.props
 
-    if (isOnLeave) {
-      return <span className='extended-leave-circle' />
+    if (statusDot) {
+      return <span className={`status-dot ${statusDot}`} />
     }
 
     return null
@@ -157,24 +146,24 @@ export class PersonBadgeComponent extends React.Component<PersonBadgeProps> {
 
     return (
       <div className={classNames(
-        style.PersonBadge,
+        style.Avatar,
         className,
-        `badge-${size}`
+        `avatar-${size}`
       )}>
         <div
           className={classNames(
-            'person-badge-inner-container',
+            'avatar-inner-container',
             { 'with-hover': !isNil(handleClick) }
           )}
           onClick={event => isNil(handleClick) ? null : handleClick(event)}
         >
           {this.hoverDom}
-          {this.badgeContent}
+          {this.avatarContent}
         </div>
-        {this.extendedLeaveDot}
+        {this.statusDot}
       </div>
     )
   }
 }
 
-export const PersonBadge: React.ComponentClass<PersonBadgeProps & SkeletonComponentProps> = withSkeleton(PersonBadgeComponent)
+export const Avatar: React.ComponentClass<AvatarProps & SkeletonComponentProps> = withSkeleton(AvatarComponent)
