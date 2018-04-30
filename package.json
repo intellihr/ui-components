@@ -49,6 +49,8 @@
     "font-awesome": "4.7.0",
     "foundation-datepicker": "1.5.6",
     "foundation-sites": "6.4.3",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
     "html-to-react": "1.3.3",
     "identity-obj-proxy": "3.0.0",
     "jest": "22.4.3",
@@ -99,7 +101,8 @@
     "styleguide:build": "styleguidist build",
     "styleguide": "styleguidist server",
     "gh-pages": "git subtree push --prefix styleguide origin gh-pages",
-    "codequality": "docker run --env CODECLIMATE_FORMAT=html --env SOURCE_CODE=$(pwd) --volume $(pwd):/code --volume /var/run/docker.sock:/var/run/docker.sock quay.io/intellihr/codequality /code"
+    "codequality": "docker run --env CODECLIMATE_FORMAT=html --env SOURCE_CODE=$(pwd) --volume $(pwd):/code --volume /var/run/docker.sock:/var/run/docker.sock quay.io/intellihr/codequality /code",
+    "style:build": "webpack --config ./webpack.style.config.js"
   },
   "repository": {
     "type": "git",
