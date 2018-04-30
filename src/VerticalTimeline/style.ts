@@ -20,7 +20,7 @@ const Timeline = styled.div`
     position: absolute;
     top: 12px;
     left: 87px;
-    height: 100%;
+    height: calc(100% - 16px);
     width: 2px;
     background: rgb(223, 229, 232);
   }
