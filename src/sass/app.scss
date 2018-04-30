@@ -1,27 +1,7 @@
-// Foundation for Sites
-@import '~foundation-sites/scss/settings/settings';
-@import 'foundation_settings';
-@import 'resources/foundation_variables';
-
-@import 'foundation';
-// Foundation Flex classes mixin includes Flex Child alignment and Source Ordering styles
-// these classes are not included in xy-grid or float-grid so they won't cause any problems
-@include foundation-flex-classes; // to include when using flex-box mode
-@include foundation-everything(false);
-@include foundation-xy-grid-classes;
-@include foundation-menu-icon;
-// @include foundation-flex-grid; // we're likely to use this in future
-
-// Intelli-icons
-@import '~@intellihr/icons/style.css';
-
-// Font Awesome
-// $fa-font-path: '~font-awesome/fonts';
-// @import '~font-awesome/scss/font-awesome';
+@import './base.scss';
 
 // Google Font
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700");
-
 
 // Components
 @import 'components/accordion';
