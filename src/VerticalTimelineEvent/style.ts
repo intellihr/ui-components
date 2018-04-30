@@ -27,6 +27,19 @@ const VerticalTimelineEventWrapper = styled.div`
   }
 `
 
+const EventMarkerWrapper = styled.div`
+  position: absolute;
+  width: auto;
+  height: 0;
+  left: 88px;
+  top: 12px;
+    
+  > * {
+    top: -50%;
+    transform: translate(-50%, -50%);
+  }
+`
+
 const EventDate = styled.span`
   text-align: right;
   color: hsl(210, 13.4%, 47.2%);
@@ -46,7 +59,6 @@ const EventDot = styled.span`
   height: 1rem;
   border-radius: 50%;
   background: white;
-  top: 12px;
 `
 
 const EventContent = styled.div`
@@ -57,5 +69,6 @@ export {
   VerticalTimelineEventWrapper,
   EventDate,
   EventDot,
-  EventContent
+  EventContent,
+  EventMarkerWrapper
 }
