@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { RadarChart } from '../RadarChart'
+import { RadarChart } from './RadarChart'
 
 const dataLabels = {
   1: 'Needs Help',
@@ -27,7 +27,19 @@ const datasets = [
 ]
 
 describe('<RadarChart />', () => {
-  it(`Renders a RadarChart with the correct values`, () => {
+  it(`Renders a RadarChart`, () => {
+    const wrapper = shallow(
+      <RadarChart
+        dataLabels={dataLabels}
+        pointLabels={pointLabels}
+        datasets={datasets}
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it(`Renders a RadarChart with the correct custom values`, () => {
     const wrapper = shallow(
       <RadarChart
         dataLabels={dataLabels}
@@ -36,6 +48,7 @@ describe('<RadarChart />', () => {
         minValue={1}
         maxValue={5}
         stepSize={0.5}
+        height={250}
       />
     )
 
