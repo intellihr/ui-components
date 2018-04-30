@@ -14,6 +14,21 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
   margin-bottom: 0;
 }
 
+.c2 {
+  position: absolute;
+  width: auto;
+  height: 0;
+  left: 88px;
+  top: 12px;
+}
+
+.c2 > * {
+  top: -50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
 .c1 {
   text-align: right;
   color: hsl(210,13.4%,47.2%);
@@ -21,19 +36,21 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
   width: 4rem;
   font-size: 12px;
   top: 6px;
-}
-
-.c2 {
-  background-color: white;
-  border: 2px solid rgb(223,229,232);
-  border-radius: 50%;
-  padding: 5px;
-  position: absolute;
-  left: 74px;
-  top: 7px;
+  line-height: 1;
 }
 
 .c3 {
+  border: 2px solid rgb(223,229,232);
+  position: absolute;
+  left: 50%;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: white;
+}
+
+.c4 {
   margin-left: 7rem;
 }
 
@@ -53,11 +70,146 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
           21 Apr
         </span>
       </styled.span>
+      <styled.div>
+        <div
+          className="c2"
+        >
+          <styled.span>
+            <span
+              className="c3"
+            />
+          </styled.span>
+        </div>
+      </styled.div>
+      <styled.div>
+        <div
+          className="c4"
+        >
+          Hey this is the child content of the event!
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
+</VerticalTimelineEvent>
+`;
+
+exports[`<VerticalTimelineEvent /> should render a vertical timeline event with a custom event marker 1`] = `
+.c0 {
+  margin: 40px 0;
+  position: relative;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  position: absolute;
+  width: auto;
+  height: 0;
+  left: 88px;
+  top: 12px;
+}
+
+.c2 > * {
+  top: -50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.c1 {
+  text-align: right;
+  color: hsl(210,13.4%,47.2%);
+  position: absolute;
+  width: 4rem;
+  font-size: 12px;
+  top: 6px;
+  line-height: 1;
+}
+
+.c3 {
+  margin-left: 7rem;
+}
+
+<VerticalTimelineEvent
+  markerComponent={
+    <Skeleton
+      className=""
+      initials="JW"
+      size="small"
+      skeletonOptions={
+        Object {
+          "shape": "circle",
+          "showSkeleton": false,
+        }
+      }
+    />
+  }
+>
+  <styled.div
+    className="vertical-timeline-event"
+  >
+    <div
+      className="vertical-timeline-event c0"
+    >
       <styled.span>
         <span
-          className="c2"
+          className="c1"
         />
       </styled.span>
+      <styled.div>
+        <div
+          className="c2"
+        >
+          <Skeleton
+            className=""
+            initials="JW"
+            size="small"
+            skeletonOptions={
+              Object {
+                "shape": "circle",
+                "showSkeleton": false,
+              }
+            }
+          >
+            <AvatarComponent
+              className=""
+              initials="JW"
+              size="small"
+              skeletonOptions={
+                Object {
+                  "shape": "circle",
+                  "showSkeleton": false,
+                }
+              }
+            >
+              <div
+                className="Avatar avatar-small"
+              >
+                <div
+                  className="avatar-inner-container"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="avatar-initials-container"
+                  >
+                    <span
+                      className="avatar-initials"
+                    >
+                      JW
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </AvatarComponent>
+          </Skeleton>
+        </div>
+      </styled.div>
       <styled.div>
         <div
           className="c3"
@@ -84,6 +236,21 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
   margin-bottom: 0;
 }
 
+.c2 {
+  position: absolute;
+  width: auto;
+  height: 0;
+  left: 88px;
+  top: 12px;
+}
+
+.c2 > * {
+  top: -50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
 .c1 {
   text-align: right;
   color: hsl(210,13.4%,47.2%);
@@ -91,19 +258,21 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
   width: 4rem;
   font-size: 12px;
   top: 6px;
-}
-
-.c2 {
-  background-color: white;
-  border: 2px solid rgb(223,229,232);
-  border-radius: 50%;
-  padding: 5px;
-  position: absolute;
-  left: 74px;
-  top: 7px;
+  line-height: 1;
 }
 
 .c3 {
+  border: 2px solid rgb(223,229,232);
+  position: absolute;
+  left: 50%;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: white;
+}
+
+.c4 {
   margin-left: 7rem;
 }
 
@@ -119,14 +288,20 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
           className="c1"
         />
       </styled.span>
-      <styled.span>
-        <span
-          className="c2"
-        />
-      </styled.span>
       <styled.div>
         <div
-          className="c3"
+          className="c2"
+        >
+          <styled.span>
+            <span
+              className="c3"
+            />
+          </styled.span>
+        </div>
+      </styled.div>
+      <styled.div>
+        <div
+          className="c4"
         >
           Hey this is the child content of the event!
         </div>
