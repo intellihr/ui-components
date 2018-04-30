@@ -2,7 +2,8 @@ import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
 
 const VerticalTimelineWrapper = styled.div`
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 `
 
 const TimelineYearHeading = styled.div`
@@ -17,8 +18,8 @@ const Timeline = styled.div`
   &::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 5rem;
+    top: 12px;
+    left: 87px;
     height: 100%;
     width: 2px;
     background: rgb(223, 229, 232);
