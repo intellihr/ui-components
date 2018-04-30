@@ -92,3 +92,32 @@
   maxValue={200}
   stepSize={50}
 />
+```
+
+## Basic Radar Chart with custom height
+
+```jsx
+<RadarChart
+  dataLabelColour='rgb(100,100,100)'
+  pointLabels={[
+    'Quality',
+    'Teamwork',
+    'Values',
+    'Compliance',
+    'Productivity'
+  ]}
+  datasets={[
+    {
+      label: 'Dataset 1',
+      data: [3, 2, 3, 3, 3],
+      colour: 'rgb(255,0,0)'
+    },
+    {
+      label: 'Dataset 2',
+      data: [2, 2, 4, 5, 1],
+      colour: 'rgb(0,0,255)'
+    }
+  ]}
+  height={200}
+/>
+```
