@@ -14,21 +14,6 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
   margin-bottom: 0;
 }
 
-.c0 .event-marker {
-  position: absolute;
-  width: auto;
-  height: 0;
-  left: 88px;
-  top: 12px;
-}
-
-.c0 .event-marker > * {
-  top: -50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-}
-
 .c2 {
   position: absolute;
   width: auto;
@@ -120,21 +105,6 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
 
 .c0:last-child {
   margin-bottom: 0;
-}
-
-.c0 .event-marker {
-  position: absolute;
-  width: auto;
-  height: 0;
-  left: 88px;
-  top: 12px;
-}
-
-.c0 .event-marker > * {
-  top: -50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
 }
 
 .c2 {
@@ -264,21 +234,6 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
 
 .c0:last-child {
   margin-bottom: 0;
-}
-
-.c0 .event-marker {
-  position: absolute;
-  width: auto;
-  height: 0;
-  left: 88px;
-  top: 12px;
-}
-
-.c0 .event-marker > * {
-  top: -50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
 }
 
 .c2 {

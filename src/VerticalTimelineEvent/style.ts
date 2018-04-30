@@ -12,19 +12,6 @@ const VerticalTimelineEventWrapper = styled.div`
   &:last-child {
     margin-bottom: 0;
   }
-  
-  .event-marker {
-    position: absolute;
-    width: auto;
-    height: 0;
-    left: 88px;
-    top: 12px;
-    
-    > * {
-      top: -50%;
-      transform: translate(-50%, -50%);
-    }
-  }
 `
 
 const EventMarkerWrapper = styled.div`
@@ -33,7 +20,7 @@ const EventMarkerWrapper = styled.div`
   height: 0;
   left: 88px;
   top: 12px;
-    
+
   > * {
     top: -50%;
     transform: translate(-50%, -50%);
@@ -51,7 +38,7 @@ const EventDate = styled.span`
 `
 
 const EventDot = styled.span`
-  border: 2px solid rgb(223,229,232);
+  border: 2px solid rgb(223, 229, 232);
   position: absolute;
   left: 50%;
   display: inline-block;

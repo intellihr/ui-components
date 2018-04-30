@@ -39,21 +39,6 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
   margin-bottom: 0;
 }
 
-.c3 .event-marker {
-  position: absolute;
-  width: auto;
-  height: 0;
-  left: 88px;
-  top: 12px;
-}
-
-.c3 .event-marker > * {
-  top: -50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-}
-
 .c5 {
   position: absolute;
   width: auto;
@@ -193,21 +178,6 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
 
 .c3:last-child {
   margin-bottom: 0;
-}
-
-.c3 .event-marker {
-  position: absolute;
-  width: auto;
-  height: 0;
-  left: 88px;
-  top: 12px;
-}
-
-.c3 .event-marker > * {
-  top: -50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
 }
 
 .c5 {
