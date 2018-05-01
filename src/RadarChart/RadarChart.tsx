@@ -188,12 +188,14 @@ export class RadarChart extends React.Component<RadarChartProps> {
       <div className={classNames(style.radarChartClass, 'radar-chart')}>
         {this.chart && htmlToReactParser.parse(this.chart.chartInstance.generateLegend())}
 
-        <Radar
-          data={this.data}
-          options={this.options}
-          ref={(chart) => { this.chart = chart }}
-          height={height}
-        />
+        <div>
+          <Radar
+            data={this.data}
+            options={this.options}
+            ref={(chart) => { this.chart = chart }}
+            height={height}
+          />
+        </div>
       </div>
     )
   }
