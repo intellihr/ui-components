@@ -36,16 +36,13 @@ export interface AvatarState {
   showInitials: boolean
 }
 
-export class AvatarComponent extends React.Component<AvatarProps> {
-  public state: AvatarState = {
-    showInitials: true
-  }
+export class AvatarComponent extends React.Component<AvatarProps, AvatarState> {
 
   public static defaultProps: AvatarProps = {
     size: 'medium'
   }
 
-  constructor (props: any) {
+  constructor (props: AvatarProps) {
     super(props)
 
     this.state = {
@@ -61,7 +58,7 @@ export class AvatarComponent extends React.Component<AvatarProps> {
     }
   }
 
-  protected hasImage (props: any): boolean {
+  protected hasImage (props: AvatarProps): boolean {
     const {
       imageUrl,
       imageData
