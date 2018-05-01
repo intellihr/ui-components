@@ -96,7 +96,7 @@
     "lint:css": "stylelint \"src/**/*.{ts,tsx}\"",
     "lint:sass": "sass-lint --verbose",
     "lint:sass:fix": "sass-lint-auto-fix -c .sass-lint.yml --verbose",
-    "build": "npm run clean && webpack",
+    "build": "npm run clean && webpack && cp src/sass/app.scss dist/",
     "build:watch": "npm run build -d --watch",
     "styleguide:build": "styleguidist build",
     "styleguide": "styleguidist server",
