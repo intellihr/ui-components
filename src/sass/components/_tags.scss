@@ -7,6 +7,7 @@
   flex-wrap: nowrap;
 
   .grid-x {
+    width:100%;
     flex-wrap: nowrap;
   }
 
@@ -15,11 +16,12 @@
     display: flex;
   }
 
-  .badge-container {
+  .avatar-container {
     align-self: start;
     position: relative;
+    display: flex;
 
-    .initials-badge-icon {
+    .avatar-icon {
       text-align: right;
 
       position: absolute;
@@ -50,7 +52,6 @@
     color: $main-text-light;
     font-size: .75rem;
     font-weight: 600;
-    padding-left: 58px;
   }
 
   &.cursor-auto {
