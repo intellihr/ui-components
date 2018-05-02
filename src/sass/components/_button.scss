@@ -93,9 +93,19 @@ $button-spacing: 10px;
   font-weight: 600;
   outline: none;
   text-transform: uppercase;
+  margin-left: .125rem;
+  margin-right: .125rem;
 
   .fa {
     vertical-align: initial;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
   }
 
   @each $colour, $values in $functional-colours {
@@ -206,6 +216,7 @@ $button-spacing: 10px;
       margin: .5rem;
       padding: 0;
       width: 1.55rem;
+      line-height: 1.55rem;
     }
   }
 
