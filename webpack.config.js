@@ -13,7 +13,8 @@ module.exports = {
     new ExtractTextPlugin('[name].css')
   ],
   entry: {
-    index: './src/index.ts'
+    index: './src/index.ts',
+    'ui-components': './src/sass/app.scss'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
