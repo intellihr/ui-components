@@ -14,7 +14,7 @@ module.exports = {
   ],
   entry: {
     index: './src/index.ts',
-    base: './src/sass/app.scss'
+    ['ui-components']: './src/sass/app.scss'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
