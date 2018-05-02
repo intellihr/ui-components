@@ -98,6 +98,10 @@
   dependencies:
     loader-utils "^1.1.0"
 
+"@intellihr/icons@0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@intellihr/icons/-/icons-0.0.1.tgz#4c8acef914c6d9e587dbe736e8eb388dbbfadb5b"
+
 "@intellihr/standard@11.0.4":
   version "11.0.4"
   resolved "https://registry.yarnpkg.com/@intellihr/standard/-/standard-11.0.4.tgz#1397983f0cedba51ad43c708f8b6c4bfa168cce4"
