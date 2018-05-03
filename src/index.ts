@@ -1,3 +1,4 @@
+export { AttributeLabel } from './AttributeLabel'
 export { Callout } from './Callout'
 export { Avatar } from './Avatar'
 export { RadarChart } from './RadarChart'
