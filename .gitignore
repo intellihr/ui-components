@@ -67,6 +67,9 @@ styleguide/
 *.swp
 *.swo
 
+# PHPStorm
+.idea
+
 # NPM
 .npmrc
 

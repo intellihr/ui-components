@@ -4,11 +4,11 @@ import {
   isNil,
   isEmpty
 } from 'lodash'
-import { Icon } from '../Icon/Icon'
+import { Icon } from '../Icon'
 import {
   withSkeleton,
   SkeletonComponentProps
-} from '../Skeleton/Skeleton'
+} from '../Skeleton'
 const style = require('./Avatar.scss')
 
 export interface AvatarProps {
@@ -36,7 +36,7 @@ export interface AvatarState {
   showInitials: boolean
 }
 
-export class AvatarComponent extends React.Component<AvatarProps> {
+class AvatarComponent extends React.Component<AvatarProps> {
   public state: AvatarState = {
     showInitials: true
   }
