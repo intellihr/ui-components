@@ -1,23 +1,12 @@
 import React from 'react'
-import styled, { StyledComponentClass } from 'styled-components'
 import { Defaults, DefaultsConsumer } from '../DefaultsContext'
-
-export const BaseAnchor = styled.a`
-  color: inherit;
-
-  &:hover,
-  &:visited,
-  &:active,
-  &:focus {
-    color: inherit;
-  }
-`
+import { BaseAnchor } from './BaseAnchor'
 
 export interface AnchorProps {
   /** Child components */
   children?: any
   /** Class names to apply to the anchor; useful when you need to use this element surrounding multiple other elements */
-  className?: any
+  className?: string
   /** Callback to call on click; receives event */
   onClick?: (event: React.MouseEvent<HTMLElement>) => void
   /** Destination url */

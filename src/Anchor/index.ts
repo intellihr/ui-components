@@ -1,2 +1,3 @@
-export { BaseAnchor, Anchor, AnchorProps } from './Anchor'
+export { Anchor, AnchorProps } from './Anchor'
+export { BaseAnchor } from './BaseAnchor'
 export { withAnchor } from './withAnchor'

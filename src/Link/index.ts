@@ -1,1 +1,2 @@
-export { ActionLink, TextLink } from './Link'
+export { ActionLink } from './ActionLink'
+export { TextLink } from './TextLink'
