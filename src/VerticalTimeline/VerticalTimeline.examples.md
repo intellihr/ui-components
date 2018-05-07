@@ -24,7 +24,7 @@
   <VerticalTimelineEvent
     eventDate='Jun 2'
     markerComponent={
-      <AvatarComponent 
+      <Avatar
         initials='JW'
         size='small'
       />
@@ -35,7 +35,7 @@
   <VerticalTimelineEvent
     eventDate='Jun 2'
     markerComponent={
-      <AvatarComponent 
+      <Avatar 
         size='small'
         imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
       />
