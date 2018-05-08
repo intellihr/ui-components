@@ -1,5 +1,5 @@
-import { Component } from 'react'
-import { Line, ChartDataSets} from 'react-chartjs-2'
+import React from 'react'
+import { Line } from 'react-chartjs-2'
 import { reduce, merge } from 'lodash'
 import classNames from 'classnames'
 const timeLineChartClass = require('./style.scss')
@@ -40,7 +40,7 @@ const timeLineChartClass = require('./style.scss')
 export interface TimeLineBasedChartProps {
   labels: Array<string | string[]>;
   data?: any
-  showXGridLines: boolean
+  showXGridLines?: boolean
   showXTicks?: boolean
   showYTicks?: boolean
   minYTick?: number
@@ -48,7 +48,7 @@ export interface TimeLineBasedChartProps {
   yTickStepSize: number
   yTickLabels: any
   timeToolTipFormat: string
-  timeUnit: string
+  timeUnit: 'millisecond' | 'second' | 'minute' | 'hour' | 'day' | 'week' | 'month' | 'quarter' | 'year'
   timeDisplayFormat: string
   dateFormat: string
   getColour: (lineColor: string) => string
@@ -57,7 +57,7 @@ export interface TimeLineBasedChartProps {
 
 
 
-export class TimeLineBasedChart extends Component<TimeLineBasedChartProps, any> {
+export class TimeLineBasedChart extends React.Component<TimeLineBasedChartProps, any> {
   get options() {
     const {
       showXGridLines,
