@@ -1,6 +1,6 @@
 import React from 'react'
-import { Line } from 'react-chartjs-2'
-import { reduce, merge } from 'lodash'
+import { Line, ChartData } from 'react-chartjs-2'
+import { reduce, merge, get } from 'lodash'
 import classNames from 'classnames'
 const timeLineChartClass = require('./style.scss')
 // TimeLineChart.propTypes = {
@@ -36,7 +36,6 @@ const timeLineChartClass = require('./style.scss')
 //   minYTick: 0
 // }
 
-
 export interface TimeLineBasedChartProps {
   labels: Array<string | string[]>;
   data?: any
@@ -55,6 +54,12 @@ export interface TimeLineBasedChartProps {
   title: string
 }
 
+export interface ChartTooltipItem {
+  xLabel?: string;
+  yLabel?: string;
+  datasetIndex?: number;
+  index?: number;
+}
 
 
 export class TimeLineBasedChart extends React.Component<TimeLineBasedChartProps, any> {
@@ -129,25 +134,28 @@ export class TimeLineBasedChart extends React.Component<TimeLineBasedChartProps,
       },
       tooltips: {
         callbacks: {
-          label: (tooltipItem, data) => {
+          label: (tooltipItem: ChartTooltipItem, data: ChartData<any>) => {
+
+            if (!data.datasets || !tooltipItem.datasetIndex) {
+              return ''
+            }
+
             let label = data.datasets[tooltipItem.datasetIndex].label || ''
 
             if (label) {
               label += ': '
             }
-
             let valueLabel = tooltipItem.yLabel
 
             if (yTickLabels) {
               Object.keys(yTickLabels).forEach(function (key) {
-                if (parseInt(key) === parseInt(tooltipItem.yLabel)) {
+                if (parseInt(key) === parseInt(get(tooltipItem, ['yLabel', '']))) {
                   valueLabel = yTickLabels[key]
                 }
               })
             }
 
-            label += valueLabel
-            return label
+            return `${label}${valueLabel}`
           }
         }
       }
@@ -170,7 +178,7 @@ export class TimeLineBasedChart extends React.Component<TimeLineBasedChartProps,
       getColour
     } = this.props
 
-    return data.map(dataset => {
+    return data.map((dataset: ChartData<any>) => {
       let attributes = {
         label: dataset['datasetLabel'],
         backgroundColor: getColour(dataset['lineColor']),
