@@ -19,4 +19,3 @@ describe('<TimeBasedLineChart />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 })
-

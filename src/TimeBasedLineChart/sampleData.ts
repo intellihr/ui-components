@@ -208,5 +208,3 @@ export const lineObject3 = {
     }
   ]
 }
-
-
