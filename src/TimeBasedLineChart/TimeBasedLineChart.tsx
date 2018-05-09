@@ -60,6 +60,17 @@ export interface ChartTooltipItem {
   index?: number;
 }
 
+export interface TimeBasedLineChartWithDefaultProps extends TimeBasedLineChartProps {
+    /** show X Gridlines or not */
+    showXGridLines: boolean
+    /** show X Ticks or not */
+    showXTicks: boolean
+    /** show Y Ticks or not */
+    showYTicks: boolean
+    /** min Y tick value on Y Axis */
+    minYTick: number
+}
+
 export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartProps> {
   render () {
     return (<BaseTimeBasedLineChart
@@ -72,7 +83,7 @@ export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartPr
   }
 }
 
-class BaseTimeBasedLineChart extends React.PureComponent<TimeBasedLineChartProps> {
+class BaseTimeBasedLineChart extends React.PureComponent<TimeBasedLineChartWithDefaultProps> {
   lineGradient (lineColor: string) {
     const canvas = document.createElement('canvas')
     const ctx = canvas.getContext('2d')

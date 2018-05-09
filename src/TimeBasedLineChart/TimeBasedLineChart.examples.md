@@ -11,7 +11,6 @@ const { lineObject } = require('./sampleData');
   timeUnit='month'
   timeDisplayFormat='MMM'
   dateFormat='DD/MM/YYYY'
-
 />
 ```
 
