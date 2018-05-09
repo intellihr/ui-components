@@ -1,6 +1,6 @@
-import { ChartTooltipItem, TimeBasedLineChartProps } from './TimeBasedLineChart'
 import { ChartData } from 'react-chartjs-2'
 import { get } from 'lodash'
+import { ChartTooltipItem, TimeBasedLineChartProps } from './TimeBasedLineChart'
 
 export const getTimeBasedLineChartDefaultOptions = (props: TimeBasedLineChartProps) => {
   const {
