@@ -146,6 +146,5 @@ export const TimeLineBasedExampleChart = () =>
     timeUnit='month'
     timeDisplayFormat='MMM'
     dateFormat='DD/MM/YYYY'
-    title='productivity'
     getColour={() => 'rgb(15, 104, 250)'}
   />

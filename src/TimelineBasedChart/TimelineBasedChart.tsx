@@ -17,7 +17,7 @@ export interface LineObject {
 
 export interface TimelineBasedChartProps {
   /** Array of labels that are placed clockwise around the edge of the chart.  */
-  labels?: Array<string | string[]>;
+  labels?: Array<string | string[]>
   /** The data for the charts to display, please see the interface */
   data: LineObject[]
   /** show X Gridlines or not */
