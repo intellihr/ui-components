@@ -1,11 +1,11 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 import { lineObject } from './sampleData'
-import { TimelineBasedChart } from './'
+import { TimeBasedLineChart } from './'
 
-describe('<TimelineBasedChart />', () => {
-  it('Renders the TimelineBasedChart with gradient', () => {
-    const wrapper = shallow(<TimelineBasedChart
+describe('<TimeBasedLineChart />', () => {
+  it('Renders the TimeBasedLineChart with gradient', () => {
+    const wrapper = shallow(<TimeBasedLineChart
       data={[lineObject]}
       maxYTick={10}
       yTickStepSize={1}

@@ -15,7 +15,7 @@ export interface LineObject {
   isGradient?: boolean
 }
 
-export interface TimelineBasedChartProps {
+export interface TimeBasedLineChartProps {
   /** Array of labels that are placed clockwise around the edge of the chart.  */
   labels?: Array<string | string[]>
   /** The data for the charts to display, please see the interface */
@@ -55,9 +55,9 @@ export interface ChartTooltipItem {
   index?: number;
 }
 
-export class TimelineBasedChart extends React.PureComponent<TimelineBasedChartProps> {
+export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartProps> {
   render () {
-    return (<BaseTimelineBasedChart
+    return (<BaseTimeBasedLineChart
       showXGridLines={false}
       showXTicks
       showYTicks
@@ -65,7 +65,7 @@ export class TimelineBasedChart extends React.PureComponent<TimelineBasedChartPr
   }
 }
 
-class BaseTimelineBasedChart extends React.PureComponent<TimelineBasedChartProps> {
+class BaseTimeBasedLineChart extends React.PureComponent<TimeBasedLineChartProps> {
   get options () {
     const {
       showXGridLines,

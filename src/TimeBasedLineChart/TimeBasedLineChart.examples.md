@@ -1,9 +1,9 @@
-## TimeLineBasedChart with filled graph
+## TimeBasedLineChart with filled graph
 
 ```jsx
 const { lineObject } = require('./sampleData');
 
-<TimelineBasedChart
+<TimeBasedLineChart
   data={[lineObject]}
   maxYTick={10}
   yTickStepSize={1}
@@ -15,12 +15,12 @@ const { lineObject } = require('./sampleData');
 />
 ```
 
-## TimelineBasedChart with more than 1 line
+## TimeBasedLineChart with more than 1 line
 
 ```jsx
 const { lineObject2, lineObject3 } = require('./sampleData');
 
-<TimelineBasedChart
+<TimeBasedLineChart
   data={[lineObject2, lineObject3]}
   maxYTick={300}
   yTickStepSize={20}
