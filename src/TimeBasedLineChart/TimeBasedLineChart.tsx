@@ -137,7 +137,7 @@ class BaseTimeBasedLineChart extends React.PureComponent<TimeBasedLineChartProps
             labels: labels,
             datasets: this.datasets
           }}
-          options={options ? options : getDefaultOptions(this.props)}
+          options={options || getDefaultOptions(this.props)}
         />
       </div>
     )
