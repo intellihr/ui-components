@@ -2,7 +2,7 @@ import { ChartTooltipItem, TimeBasedLineChartProps } from './TimeBasedLineChart'
 import { ChartData } from 'react-chartjs-2'
 import { get } from 'lodash'
 
-export const getChartOptions = (props: TimeBasedLineChartProps) => {
+export const getDefaultOptions = (props: TimeBasedLineChartProps) => {
   const {
     showXGridLines,
     showXTicks,
