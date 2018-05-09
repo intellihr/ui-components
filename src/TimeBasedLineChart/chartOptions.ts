@@ -1,8 +1,8 @@
-import { ChartTooltipItem, TimeBasedLineChartProps } from './TimeBasedLineChart'
 import { ChartData } from 'react-chartjs-2'
 import { get } from 'lodash'
+import { ChartTooltipItem, TimeBasedLineChartProps } from './TimeBasedLineChart'
 
-export const getDefaultOptions = (props: TimeBasedLineChartProps) => {
+export const getTimeBasedLineChartDefaultOptions = (props: TimeBasedLineChartProps) => {
   const {
     showXGridLines,
     showXTicks,
@@ -87,7 +87,7 @@ export const getDefaultOptions = (props: TimeBasedLineChartProps) => {
 
           if (yTickLabels) {
             Object.keys(yTickLabels).forEach(function (key) {
-              if (parseInt(key) === parseInt(get(tooltipItem, ['yLabel', '']))) {
+              if (parseInt(key) === parseInt(get(tooltipItem, ['yLabel'], '') || '')) {
                 valueLabel = yTickLabels[key]
               }
             })
