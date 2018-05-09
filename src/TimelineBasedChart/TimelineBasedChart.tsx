@@ -16,21 +16,36 @@ export interface LineObject {
 }
 
 export interface TimelineBasedChartProps {
+  /** Array of labels that are placed clockwise around the edge of the chart.  */
   labels?: Array<string | string[]>;
+  /** The data for the charts to display, please see the interface */
   data: LineObject[]
+  /** show X Gridlines or not */
   showXGridLines?: boolean
+  /** show X Ticks or not */
   showXTicks?: boolean
+  /** show Y Ticks or not */
   showYTicks?: boolean
+  /** min Y tick value on Y Axis*/
   minYTick?: number
+  /** max Y tick value on Y Axis */
   maxYTick: number
+  /** The step size of Y Axis */
   yTickStepSize: number
+  /** The labels on Y Axis */
   yTickLabels?: any
+  /** Time format for tooltip */
   timeToolTipFormat: string
+  /** Time unit */
   timeUnit: 'millisecond' | 'second' | 'minute' | 'hour' | 'day' | 'week' | 'month' | 'quarter' | 'year'
+  /** Time display format */
   timeDisplayFormat: string
+  /** Date format string */
   dateFormat: string
+  /** Get colour fn */
   getColour: (lineColor: string) => string
-  title: string
+  /** The chart title */
+  title?: string
 }
 
 export interface ChartTooltipItem {
