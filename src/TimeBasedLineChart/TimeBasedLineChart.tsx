@@ -47,8 +47,6 @@ export interface TimeBasedLineChartProps {
   timeDisplayFormat: string
   /** Date format string */
   dateFormat: string
-  /** Get colour fn */
-  getColour: (lineColor: string) => string
   /** The chart title */
   title?: string
   /** Chart Options */
@@ -87,21 +85,20 @@ class BaseTimeBasedLineChart extends React.PureComponent<TimeBasedLineChartProps
   get datasets () {
     const {
       labels,
-      data,
-      getColour
+      data
     } = this.props
 
     return data.map((dataset: ChartData<any>) => {
       let attributes = {
         label: dataset['datasetLabel'],
-        backgroundColor: getColour(dataset['lineColor']),
-        borderColor: getColour(dataset['lineColor']),
+        backgroundColor: dataset['lineColor'],
+        borderColor: dataset['lineColor'],
         borderWidth: 4,
-        pointBackgroundColor: getColour(dataset['lineColor']),
-        pointBorderColor: getColour(dataset['lineColor']),
+        pointBackgroundColor: dataset['lineColor'],
+        pointBorderColor: dataset['lineColor'],
         pointBorderWidth: 1,
         pointRadius: 4,
-        pointHoverBackgroundColor: getColour(dataset['lineColor']),
+        pointHoverBackgroundColor: dataset['lineColor'],
         pointHitRadius: 10,
         pointHoverRadius: 5,
         lineTension: 0,
@@ -111,10 +108,10 @@ class BaseTimeBasedLineChart extends React.PureComponent<TimeBasedLineChartProps
 
       if (dataset['isGradient']) {
         attributes = merge(attributes, {
-          colour: getColour(dataset['lineColor']),
-          backgroundColor: this.lineGradient(getColour(dataset['lineColor'])),
+          colour: dataset['lineColor'],
+          backgroundColor: this.lineGradient(dataset['lineColor']),
           fill: true,
-          fillColor: getColour(dataset['lineColor'])
+          fillColor: dataset['lineColor']
         })
       }
 

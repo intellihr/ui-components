@@ -87,7 +87,7 @@ export const getDefaultOptions = (props: TimeBasedLineChartProps) => {
 
           if (yTickLabels) {
             Object.keys(yTickLabels).forEach(function (key) {
-              if (parseInt(key) === parseInt(get(tooltipItem, ['yLabel', '']))) {
+              if (parseInt(key) === parseInt(get(tooltipItem, ['yLabel'], '') || '')) {
                 valueLabel = yTickLabels[key]
               }
             })

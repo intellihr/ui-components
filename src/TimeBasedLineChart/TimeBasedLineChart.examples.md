@@ -11,7 +11,7 @@ const { lineObject } = require('./sampleData');
   timeUnit='month'
   timeDisplayFormat='MMM'
   dateFormat='DD/MM/YYYY'
-  getColour={(c) => c}
+
 />
 ```
 
@@ -28,6 +28,6 @@ const { lineObject2, lineObject3 } = require('./sampleData');
   timeUnit='month'
   timeDisplayFormat='MMM'
   dateFormat='DD/MM/YYYY'
-  getColour={(c) => c}
+
 />
 ```
