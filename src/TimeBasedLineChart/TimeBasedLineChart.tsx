@@ -66,6 +66,13 @@ export interface BaseLineChartProps {
 }
 
 export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartProps> {
+  public static defaultProps: Partial<TimeBasedLineChartProps> = {
+    showXTicks: true,
+    showXGridLines: true,
+    showYTicks: true,
+    minYTick: 0
+  }
+
   lineGradient = (lineColor: string) => {
     const canvas = document.createElement('canvas')
     const ctx = canvas.getContext('2d')
