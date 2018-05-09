@@ -20,7 +20,6 @@ export interface ChartLabels {
   [key: string]: string
 }
 
-
 export interface TimeBasedLineChartProps {
   /** Array of labels that are placed along the x  */
   labels?: Array<string | string[]>
@@ -62,7 +61,7 @@ export interface ChartTooltipItem {
 }
 
 export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartProps> {
-  render() {
+  render () {
     return (<BaseTimeBasedLineChart
       showXGridLines={false}
       showXTicks
@@ -74,8 +73,7 @@ export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartPr
 }
 
 class BaseTimeBasedLineChart extends React.PureComponent<TimeBasedLineChartProps> {
-
-  lineGradient(lineColor: string) {
+  lineGradient (lineColor: string) {
     const canvas = document.createElement('canvas')
     const ctx = canvas.getContext('2d')
     const gradient = ctx!.createLinearGradient(0, 0, 0, 400)
@@ -84,7 +82,7 @@ class BaseTimeBasedLineChart extends React.PureComponent<TimeBasedLineChartProps
     return gradient
   }
 
-  get datasets() {
+  get datasets () {
     const {
       labels,
       data,
@@ -122,7 +120,7 @@ class BaseTimeBasedLineChart extends React.PureComponent<TimeBasedLineChartProps
     })
   }
 
-  render() {
+  render () {
     const {
       title,
       labels
