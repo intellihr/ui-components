@@ -66,7 +66,6 @@ export interface BaseLineChartProps {
 }
 
 export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartProps> {
-
   lineGradient = (lineColor: string) => {
     const canvas = document.createElement('canvas')
     const ctx = canvas.getContext('2d')
