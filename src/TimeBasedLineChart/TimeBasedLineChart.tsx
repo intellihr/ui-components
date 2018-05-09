@@ -1,7 +1,7 @@
 import React from 'react'
 import { Line, ChartData } from 'react-chartjs-2'
 import { merge, get } from 'lodash'
-import { getDefaultOptions } from './chartOptions'
+import { getTimeBasedLineChartDefaultOptions } from './chartOptions'
 import classNames from 'classnames'
 const timeLineChartClass = require('./style.scss')
 
@@ -20,11 +20,7 @@ export interface ChartLabels {
   [key: string]: string
 }
 
-export interface TimeBasedLineChartProps {
-  /** Array of labels that are placed along the x  */
-  labels?: Array<string | string[]>
-  /** The data for the charts to display, please see the interface */
-  data: LineObject[]
+export interface TimeBasedLineChartProps extends BaseLineChartProps {
   /** show X Gridlines or not */
   showXGridLines?: boolean
   /** show X Ticks or not */
@@ -47,10 +43,8 @@ export interface TimeBasedLineChartProps {
   timeDisplayFormat: string
   /** Date format string */
   dateFormat: string
-  /** The chart title */
-  title?: string
-  /** Chart Options */
-  options?: Chart.ChartOptions
+  /** The data for the charts to display, please see the interface */
+  data: LineObject[]
 }
 
 export interface ChartTooltipItem {
@@ -60,31 +54,20 @@ export interface ChartTooltipItem {
   index?: number;
 }
 
-export interface TimeBasedLineChartWithDefaultProps extends TimeBasedLineChartProps {
-    /** show X Gridlines or not */
-    showXGridLines: boolean
-    /** show X Ticks or not */
-    showXTicks: boolean
-    /** show Y Ticks or not */
-    showYTicks: boolean
-    /** min Y tick value on Y Axis */
-    minYTick: number
+export interface BaseLineChartProps {
+  /** Array of labels that are placed along the x  */
+  labels?: Array<string | string[]>
+  /** Chart Options */
+  options: Chart.ChartOptions
+  /** The chart title */
+  title?: string
+
+  datasets: Chart.ChartDataSets[]
 }
 
 export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartProps> {
-  render () {
-    return (<BaseTimeBasedLineChart
-      showXGridLines={false}
-      showXTicks
-      showYTicks
-      minYTick={0}
-      {...this.props}
-    />)
-  }
-}
 
-class BaseTimeBasedLineChart extends React.PureComponent<TimeBasedLineChartWithDefaultProps> {
-  lineGradient (lineColor: string) {
+  lineGradient = (lineColor: string) => {
     const canvas = document.createElement('canvas')
     const ctx = canvas.getContext('2d')
     const gradient = ctx!.createLinearGradient(0, 0, 0, 400)
@@ -94,10 +77,7 @@ class BaseTimeBasedLineChart extends React.PureComponent<TimeBasedLineChartWithD
   }
 
   get datasets () {
-    const {
-      labels,
-      data
-    } = this.props
+    const { data } = this.props
 
     return data.map((dataset: ChartData<any>) => {
       let attributes = {
@@ -129,12 +109,28 @@ class BaseTimeBasedLineChart extends React.PureComponent<TimeBasedLineChartWithD
       return attributes
     })
   }
+  render () {
+    const {
+      labels,
+      title
+    } = this.props
 
+    return (<BaseLineChart
+      datasets={this.datasets}
+      options={getTimeBasedLineChartDefaultOptions(this.props)}
+      labels={labels}
+      title={title}
+    />)
+  }
+}
+
+class BaseLineChart extends React.PureComponent<BaseLineChartProps> {
   render () {
     const {
       title,
       labels,
-      options
+      options,
+      datasets
     } = this.props
 
     return (
@@ -146,9 +142,9 @@ class BaseTimeBasedLineChart extends React.PureComponent<TimeBasedLineChartWithD
         <Line
           data={{
             labels: labels,
-            datasets: this.datasets
+            datasets: datasets
           }}
-          options={options || getDefaultOptions(this.props)}
+          options={options}
         />
       </div>
     )
