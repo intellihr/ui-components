@@ -51,6 +51,8 @@ export interface TimeBasedLineChartProps {
   getColour: (lineColor: string) => string
   /** The chart title */
   title?: string
+  /** Chart Options */
+  options?: Chart.ChartOptions
 }
 
 export interface ChartTooltipItem {
@@ -123,7 +125,8 @@ class BaseTimeBasedLineChart extends React.PureComponent<TimeBasedLineChartProps
   render () {
     const {
       title,
-      labels
+      labels,
+      options
     } = this.props
 
     return (
@@ -137,7 +140,7 @@ class BaseTimeBasedLineChart extends React.PureComponent<TimeBasedLineChartProps
             labels: labels,
             datasets: this.datasets
           }}
-          options={getDefaultOptions(this.props)}
+          options={options ? options : getDefaultOptions(this.props)}
         />
       </div>
     )
