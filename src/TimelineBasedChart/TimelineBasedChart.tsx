@@ -26,7 +26,7 @@ export interface TimelineBasedChartProps {
   showXTicks?: boolean
   /** show Y Ticks or not */
   showYTicks?: boolean
-  /** min Y tick value on Y Axis*/
+  /** min Y tick value on Y Axis */
   minYTick?: number
   /** max Y tick value on Y Axis */
   maxYTick: number
@@ -56,18 +56,17 @@ export interface ChartTooltipItem {
 }
 
 export class TimelineBasedChart extends React.PureComponent<TimelineBasedChartProps> {
-  render() {
+  render () {
     return (<BaseTimelineBasedChart
       showXGridLines={false}
-      showXTicks={true}
-      showYTicks={true}
+      showXTicks
+      showYTicks
       minYTick={0} {...this.props} />)
   }
 }
 
-
 class BaseTimelineBasedChart extends React.PureComponent<TimelineBasedChartProps> {
-  get options() {
+  get options () {
     const {
       showXGridLines,
       showXTicks,
@@ -139,7 +138,6 @@ class BaseTimelineBasedChart extends React.PureComponent<TimelineBasedChartProps
       tooltips: {
         callbacks: {
           label: (tooltipItem: ChartTooltipItem, data: ChartData<any>) => {
-
             if (!data.datasets || !tooltipItem.datasetIndex) {
               return ''
             }
@@ -166,7 +164,7 @@ class BaseTimelineBasedChart extends React.PureComponent<TimelineBasedChartProps
     }
   }
 
-  lineGradient(lineColor: string) {
+  lineGradient (lineColor: string) {
     const canvas = document.createElement('canvas')
     const ctx = canvas.getContext('2d')
     const gradient = ctx!.createLinearGradient(0, 0, 0, 400)
@@ -175,7 +173,7 @@ class BaseTimelineBasedChart extends React.PureComponent<TimelineBasedChartProps
     return gradient
   }
 
-  get datasets() {
+  get datasets () {
     const {
       labels,
       data,
@@ -211,10 +209,9 @@ class BaseTimelineBasedChart extends React.PureComponent<TimelineBasedChartProps
 
       return attributes
     })
-
   }
 
-  render() {
+  render () {
     const { title, labels } = this.props
     return (
       <div className={classNames(timeLineChartClass, 'line-chart')}>
