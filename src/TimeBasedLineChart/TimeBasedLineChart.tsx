@@ -19,8 +19,9 @@ export interface ChartLabels {
   [key: string]: string
 }
 
+
 export interface TimeBasedLineChartProps {
-  /** Array of labels that are placed along the x axis  */
+  /** Array of labels that are placed along the x  */
   labels?: Array<string | string[]>
   /** The data for the charts to display, please see the interface */
   data: LineObject[]
@@ -123,9 +124,9 @@ class BaseTimeBasedLineChart extends React.PureComponent<TimeBasedLineChartProps
             min: minYTick,
             max: maxYTick,
             stepSize: yTickStepSize,
-            callback: (label: any) => {
+            callback: (label: string) => {
               if (yTickLabels) {
-                let tickLabel = null
+                let tickLabel = ''
 
                 Object.keys(yTickLabels).forEach(function (key) {
                   if (parseInt(key) === parseInt(label)) {
