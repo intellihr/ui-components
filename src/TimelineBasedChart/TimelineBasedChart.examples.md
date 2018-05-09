@@ -1,6 +1,6 @@
 # Basic TimeLineBasedChart
 ```jsx
-const { TimeLineBasedExampleChart } = require('./TimelineBasedChart');
+const { TimeLineBasedExampleChart } = require('./TimelineBasedChartExample');
 
 <TimeLineBasedExampleChart />
 ```
