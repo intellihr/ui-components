@@ -1,6 +1,6 @@
 import React from 'react'
 import { Line, ChartData } from 'react-chartjs-2'
-import { reduce, merge, get } from 'lodash'
+import { merge, get } from 'lodash'
 import classNames from 'classnames'
 const timeLineChartClass = require('./style.scss')
 
@@ -15,8 +15,12 @@ export interface LineObject {
   isGradient?: boolean
 }
 
+export interface ChartLabels {
+  [key: string]: string
+}
+
 export interface TimeBasedLineChartProps {
-  /** Array of labels that are placed clockwise around the edge of the chart.  */
+  /** Array of labels that are placed along the x axis  */
   labels?: Array<string | string[]>
   /** The data for the charts to display, please see the interface */
   data: LineObject[]
@@ -33,7 +37,7 @@ export interface TimeBasedLineChartProps {
   /** The step size of Y Axis */
   yTickStepSize: number
   /** The labels on Y Axis */
-  yTickLabels?: any
+  yTickLabels?: ChartLabels
   /** Time format for tooltip */
   timeToolTipFormat: string
   /** Time unit */
@@ -61,7 +65,9 @@ export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartPr
       showXGridLines={false}
       showXTicks
       showYTicks
-      minYTick={0} {...this.props} />)
+      minYTick={0}
+      {...this.props}
+    />)
   }
 }
 
