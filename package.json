@@ -81,7 +81,8 @@
     "url-loader": "1.0.1",
     "webpack": "4.5.0",
     "webpack-cli": "2.0.14",
-    "webpack-node-externals": "1.7.2"
+    "webpack-node-externals": "1.7.2",
+    "moment": "^2.22.1"
   },
   "scripts": {
     "postinstall": "npm rebuild node-sass",
@@ -129,8 +130,5 @@
       "node_modules/**",
       "styleguide/**"
     ]
-  },
-  "dependencies": {
-    "moment": "^2.22.1"
   }
 }
