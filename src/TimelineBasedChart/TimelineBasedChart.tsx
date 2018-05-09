@@ -4,9 +4,20 @@ import { reduce, merge, get } from 'lodash'
 import classNames from 'classnames'
 const timeLineChartClass = require('./style.scss')
 
+export interface DataSet {
+  x: object,
+  y: number| string
+}
+export interface LineObject {
+  dataset: DataSet[]
+  lineColor: string
+  datasetLabel: string
+  isGradient?: boolean
+}
+
 export interface TimelineBasedChartProps {
   labels?: Array<string | string[]>;
-  data?: any
+  data: LineObject[]
   showXGridLines?: boolean
   showXTicks?: boolean
   showYTicks?: boolean
