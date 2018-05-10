@@ -1,11 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with 2 lines and without gradient 1`] = `
-<BaseTimeBasedLineChart
-  data={
+<BaseLineChart
+  datasets={
     Array [
       Object {
-        "dataset": Array [
+        "backgroundColor": "rgb(67, 45, 243)",
+        "borderColor": "rgb(67, 45, 243)",
+        "borderWidth": 4,
+        "data": Array [
           Object {
             "x": "2018-05-08T04:40:09.000Z",
             "y": "100",
@@ -43,11 +46,22 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with 2 lines and 
             "y": "100",
           },
         ],
-        "datasetLabel": "Productivity",
-        "lineColor": "rgb(67, 45, 243)",
+        "fill": false,
+        "label": "Productivity",
+        "lineTension": 0,
+        "pointBackgroundColor": "rgb(67, 45, 243)",
+        "pointBorderColor": "rgb(67, 45, 243)",
+        "pointBorderWidth": 1,
+        "pointHitRadius": 10,
+        "pointHoverBackgroundColor": "rgb(67, 45, 243)",
+        "pointHoverRadius": 5,
+        "pointRadius": 4,
       },
       Object {
-        "dataset": Array [
+        "backgroundColor": "rgb(3, 222, 235)",
+        "borderColor": "rgb(3, 222, 235)",
+        "borderWidth": 4,
+        "data": Array [
           Object {
             "x": "2018-02-20T23:53:42.000Z",
             "y": "150",
@@ -73,31 +87,84 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with 2 lines and 
             "y": "150",
           },
         ],
-        "datasetLabel": "Productivity",
-        "lineColor": "rgb(3, 222, 235)",
+        "fill": false,
+        "label": "Productivity",
+        "lineTension": 0,
+        "pointBackgroundColor": "rgb(3, 222, 235)",
+        "pointBorderColor": "rgb(3, 222, 235)",
+        "pointBorderWidth": 1,
+        "pointHitRadius": 10,
+        "pointHoverBackgroundColor": "rgb(3, 222, 235)",
+        "pointHoverRadius": 5,
+        "pointRadius": 4,
       },
     ]
   }
-  dateFormat="DD/MM/YYYY"
-  getColour={[Function]}
-  maxYTick={300}
-  minYTick={0}
-  showXGridLines={false}
-  showXTicks={true}
-  showYTicks={true}
-  timeDisplayFormat="MMM"
-  timeToolTipFormat="ll"
-  timeUnit="month"
-  yTickStepSize={20}
+  options={
+    Object {
+      "layout": Object {
+        "padding": Object {
+          "bottom": 10,
+          "left": 10,
+          "right": 10,
+          "top": 10,
+        },
+      },
+      "scales": Object {
+        "xAxes": Array [
+          Object {
+            "gridLines": Object {
+              "display": true,
+            },
+            "ticks": Object {
+              "display": true,
+            },
+            "time": Object {
+              "displayFormats": Object {
+                "month": "MMM",
+              },
+              "parser": "DD/MM/YYYY",
+              "tooltipFormat": "ll",
+              "unit": "month",
+            },
+            "type": "time",
+          },
+        ],
+        "yAxes": Array [
+          Object {
+            "gridLines": Object {
+              "drawBorder": true,
+            },
+            "ticks": Object {
+              "callback": [Function],
+              "display": true,
+              "max": 300,
+              "min": 0,
+              "stepSize": 20,
+            },
+          },
+        ],
+      },
+      "tooltips": Object {
+        "callbacks": Object {
+          "label": [Function],
+        },
+      },
+    }
+  }
 />
 `;
 
 exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with gradient 1`] = `
-<BaseTimeBasedLineChart
-  data={
+<BaseLineChart
+  datasets={
     Array [
       Object {
-        "dataset": Array [
+        "backgroundColor": CanvasGradient {},
+        "borderColor": "rgb(67, 45, 243)",
+        "borderWidth": 4,
+        "colour": "rgb(67, 45, 243)",
+        "data": Array [
           Object {
             "x": "2018-05-08T05:06:52.000Z",
             "y": "6",
@@ -227,22 +294,71 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with gradient 1`]
             "y": "5",
           },
         ],
-        "datasetLabel": "Happiness Rating",
-        "isGradient": true,
-        "lineColor": "rgb(67, 45, 243)",
+        "fill": true,
+        "fillColor": "rgb(67, 45, 243)",
+        "label": "Happiness Rating",
+        "lineTension": 0,
+        "pointBackgroundColor": "rgb(67, 45, 243)",
+        "pointBorderColor": "rgb(67, 45, 243)",
+        "pointBorderWidth": 1,
+        "pointHitRadius": 10,
+        "pointHoverBackgroundColor": "rgb(67, 45, 243)",
+        "pointHoverRadius": 5,
+        "pointRadius": 4,
       },
     ]
   }
-  dateFormat="DD/MM/YYYY"
-  getColour={[Function]}
-  maxYTick={10}
-  minYTick={0}
-  showXGridLines={false}
-  showXTicks={true}
-  showYTicks={true}
-  timeDisplayFormat="MMM"
-  timeToolTipFormat="ll"
-  timeUnit="month"
-  yTickStepSize={1}
+  options={
+    Object {
+      "layout": Object {
+        "padding": Object {
+          "bottom": 10,
+          "left": 10,
+          "right": 10,
+          "top": 10,
+        },
+      },
+      "scales": Object {
+        "xAxes": Array [
+          Object {
+            "gridLines": Object {
+              "display": true,
+            },
+            "ticks": Object {
+              "display": true,
+            },
+            "time": Object {
+              "displayFormats": Object {
+                "month": "MMM",
+              },
+              "parser": "DD/MM/YYYY",
+              "tooltipFormat": "ll",
+              "unit": "month",
+            },
+            "type": "time",
+          },
+        ],
+        "yAxes": Array [
+          Object {
+            "gridLines": Object {
+              "drawBorder": true,
+            },
+            "ticks": Object {
+              "callback": [Function],
+              "display": true,
+              "max": 10,
+              "min": 0,
+              "stepSize": 1,
+            },
+          },
+        ],
+      },
+      "tooltips": Object {
+        "callbacks": Object {
+          "label": [Function],
+        },
+      },
+    }
+  }
 />
 `;

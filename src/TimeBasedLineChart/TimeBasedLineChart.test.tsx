@@ -13,7 +13,6 @@ describe('<TimeBasedLineChart />', () => {
       timeUnit='month'
       timeDisplayFormat='MMM'
       dateFormat='DD/MM/YYYY'
-      getColour={() => 'rgb(15, 104, 250)'}
     />)
 
     expect(wrapper).toMatchSnapshot()
@@ -28,7 +27,6 @@ describe('<TimeBasedLineChart />', () => {
       timeUnit='month'
       timeDisplayFormat='MMM'
       dateFormat='DD/MM/YYYY'
-      getColour={(c) => c}
     />)
     expect(wrapper).toMatchSnapshot()
   })

@@ -20,7 +20,9 @@ export interface ChartLabels {
   [key: string]: string
 }
 
-export interface TimeBasedLineChartProps extends BaseLineChartProps {
+export interface TimeBasedLineChartProps {
+  /** Array of labels that are placed along the x-axis */
+  labels?: Array<string | string[]>
   /** show X Gridlines or not */
   showXGridLines?: boolean
   /** show X Ticks or not */
@@ -45,6 +47,8 @@ export interface TimeBasedLineChartProps extends BaseLineChartProps {
   dateFormat: string
   /** The data for the charts to display, please see the interface */
   data: LineObject[]
+  /** Chart Options */
+  options?: Chart.ChartOptions
 }
 
 export interface ChartTooltipItem {
@@ -55,7 +59,7 @@ export interface ChartTooltipItem {
 }
 
 export interface BaseLineChartProps {
-  /** Array of labels that are placed along the x  */
+  /** Array of labels that are placed along the x-axis  */
   labels?: Array<string | string[]>
   /** Chart Options */
   options: Chart.ChartOptions
