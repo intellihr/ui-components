@@ -1,4 +1,6 @@
-## TextLink
+# ActionLink
+
+## Basic text link
 
 ```jsx
 <TextLink
