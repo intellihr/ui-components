@@ -49,6 +49,8 @@ export interface TimeBasedLineChartProps {
   data: LineObject[]
   /** Chart Options */
   options?: Chart.ChartOptions
+  /** The chart title */
+  title?: string
 }
 
 export interface ChartTooltipItem {
