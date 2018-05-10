@@ -1,8 +1,8 @@
 import React from 'react'
+import classNames from 'classnames'
 import { Line, ChartData } from 'react-chartjs-2'
 import { merge, get } from 'lodash'
 import { getTimeBasedLineChartDefaultOptions } from './chartOptions'
-import classNames from 'classnames'
 const timeLineChartClass = require('./style.scss')
 
 export interface DataSet {
@@ -49,8 +49,6 @@ export interface TimeBasedLineChartProps {
   data: LineObject[]
   /** Chart Options */
   options?: Chart.ChartOptions
-  /** The chart title */
-  title?: string
 }
 
 export interface ChartTooltipItem {
@@ -65,9 +63,7 @@ export interface BaseLineChartProps {
   labels?: Array<string | string[]>
   /** Chart Options */
   options: Chart.ChartOptions
-  /** The chart title */
-  title?: string
-
+  /** The datasets to render the Chart */
   datasets: Chart.ChartDataSets[]
 }
 
@@ -122,16 +118,12 @@ export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartPr
     })
   }
   render () {
-    const {
-      labels,
-      title
-    } = this.props
+    const { labels } = this.props
 
     return (<BaseLineChart
       datasets={this.datasets}
       options={getTimeBasedLineChartDefaultOptions(this.props)}
       labels={labels}
-      title={title}
     />)
   }
 }
@@ -139,7 +131,6 @@ export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartPr
 class BaseLineChart extends React.PureComponent<BaseLineChartProps> {
   render () {
     const {
-      title,
       labels,
       options,
       datasets
@@ -147,10 +138,6 @@ class BaseLineChart extends React.PureComponent<BaseLineChartProps> {
 
     return (
       <div className={classNames(timeLineChartClass, 'line-chart')}>
-        {title && (<div className='chart-title'>
-          {title}
-        </div>)}
-
         <Line
           data={{
             labels: labels,
