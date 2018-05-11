@@ -44,7 +44,7 @@ install-package:
   except:
     - schedules
   script:
-    - docker-compose run --rm gitlab-ci npm ci
+    - docker-compose run --rm gitlab-ci yarn
   artifacts:
     paths:
       - node_modules/
@@ -56,7 +56,7 @@ ts-lint:
     - schedules
     - master
   script:
-    - docker-compose run --rm gitlab-ci npm run lint
+    - docker-compose run --rm gitlab-ci yarn lint
 
 sass-lint:
   stage: build & test
@@ -64,7 +64,7 @@ sass-lint:
     - schedules
     - master
   script:
-    - docker-compose run --rm gitlab-ci npm run lint:sass
+    - docker-compose run --rm gitlab-ci yarn lint:sass
 
 css-lint:
   stage: build & test
@@ -72,7 +72,7 @@ css-lint:
     - schedules
     - master
   script:
-    - docker-compose run --rm gitlab-ci npm run lint:css
+    - docker-compose run --rm gitlab-ci yarn lint:css
 
 test:
   stage: build & test
@@ -80,7 +80,7 @@ test:
     - schedules
     - master
   script:
-    - docker-compose run --rm gitlab-ci npm run test:ci
+    - docker-compose run --rm gitlab-ci yarn test:ci
 
 codequality: &codequality
   stage: review
@@ -114,7 +114,7 @@ codequality-html:
 build-bundle:
   stage: build & test
   script:
-    - docker-compose run --rm gitlab-ci npm run build
+    - docker-compose run --rm gitlab-ci yarn build
   artifacts:
     paths:
       - es/
