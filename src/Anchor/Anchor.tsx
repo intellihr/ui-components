@@ -3,8 +3,6 @@ import { Defaults, DefaultsConsumer } from '../DefaultsContext'
 import { BaseAnchor } from './BaseAnchor'
 
 export interface AnchorProps {
-  /** Child components */
-  children?: any
   /** Class names to apply to the anchor; useful when you need to use this element surrounding multiple other elements */
   className?: string
   /** Callback to call on click; receives event */
@@ -20,7 +18,7 @@ export class Anchor extends React.PureComponent<AnchorProps> {
     href: '#'
   }
 
-  private anchorComponent (defaultValues: Defaults): any {
+  private anchorComponent (defaultValues: Defaults) {
     const {
       className,
       children,
