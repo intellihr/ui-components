@@ -1,9 +1,7 @@
 import React from 'react'
-import classNames from 'classnames'
 import { Line, ChartData } from 'react-chartjs-2'
 import { merge, get } from 'lodash'
 import { getTimeBasedLineChartDefaultOptions } from './chartOptions'
-const timeLineChartClass = require('./style.scss')
 
 export interface DataSet {
   x: object,
@@ -49,6 +47,10 @@ export interface TimeBasedLineChartProps {
   data: LineObject[]
   /** Chart Options */
   options?: Chart.ChartOptions
+
+  width?: number;
+
+  height?: number;
 }
 
 export interface ChartTooltipItem {
@@ -65,6 +67,10 @@ export interface BaseLineChartProps {
   options: Chart.ChartOptions
   /** The datasets to render the Chart */
   datasets: Chart.ChartDataSets[]
+
+  width?: number;
+
+  height?: number;
 }
 
 export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartProps> {
@@ -129,23 +135,25 @@ export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartPr
 }
 
 class BaseLineChart extends React.PureComponent<BaseLineChartProps> {
-  render () {
+  render() {
     const {
       labels,
       options,
-      datasets
+      datasets,
+      width,
+      height
     } = this.props
 
     return (
-      <div className={classNames(timeLineChartClass, 'line-chart')}>
-        <Line
-          data={{
-            labels: labels,
-            datasets: datasets
-          }}
-          options={options}
-        />
-      </div>
+      <Line
+        data={{
+          labels: labels,
+          datasets: datasets
+        }}
+        options={options}
+        width={width}
+        height={height}
+      />
     )
   }
 }
