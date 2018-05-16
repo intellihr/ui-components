@@ -97,7 +97,7 @@
     "lint:sass": "sass-lint --verbose",
     "lint:sass:fix": "sass-lint-auto-fix -c .sass-lint.yml --verbose",
     "build": "npm run clean && webpack && mkdir -p dist/sass && cp -r src/sass dist",
-    "build:watch": "webpack --watch",
+    "build:watch": "webpack -d --watch",
     "styleguide:build": "styleguidist build",
     "styleguide": "styleguidist server",
     "gh-pages": "git subtree push --prefix styleguide origin gh-pages",
