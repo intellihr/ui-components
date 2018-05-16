@@ -18,6 +18,7 @@ export const getTimeBasedLineChartDefaultOptions = (props: TimeBasedLineChartPro
   } = props
 
   return {
+    maintainAspectRatio: false,
     layout: {
       padding: {
         left: 10,
@@ -45,13 +46,14 @@ export const getTimeBasedLineChartDefaultOptions = (props: TimeBasedLineChartPro
         }
       }],
       yAxes: [{
+        fontSize: '8px',
         gridLines: {
           drawBorder: showYTicks
         },
         ticks: {
           display: showYTicks,
-          min: minYTick,
-          max: maxYTick,
+          suggestedMin: minYTick,
+          suggestedMax: maxYTick,
           stepSize: yTickStepSize,
           callback: (label: any) => {
             if (yTickLabels) {
@@ -62,7 +64,6 @@ export const getTimeBasedLineChartDefaultOptions = (props: TimeBasedLineChartPro
                   tickLabel = yTickLabels[key]
                 }
               })
-
               return tickLabel
             }
 

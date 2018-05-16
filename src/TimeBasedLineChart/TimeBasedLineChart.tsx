@@ -124,12 +124,12 @@ export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartPr
     })
   }
   render () {
-    const { labels } = this.props
-
+    const { labels, ...props } = this.props
     return (<BaseLineChart
       datasets={this.datasets}
       options={getTimeBasedLineChartDefaultOptions(this.props)}
       labels={labels}
+      {...props}
     />)
   }
 }
