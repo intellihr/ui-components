@@ -1,7 +1,7 @@
 {
   "name": "@intellihr/ui-components",
   "description": "A common React components library that is used in our company",
-  "version": "1.0.5-beta.22",
+  "version": "1.0.5-beta.23",
   "main": "./dist/",
   "types": "./es/index.d.ts",
   "files": [
@@ -97,7 +97,7 @@
     "lint:sass": "sass-lint --verbose",
     "lint:sass:fix": "sass-lint-auto-fix -c .sass-lint.yml --verbose",
     "build": "npm run clean && webpack && mkdir -p dist/sass && cp -r src/sass dist",
-    "build:watch": "npm run build -d --watch",
+    "build:watch": "webpack -d --watch",
     "styleguide:build": "styleguidist build",
     "styleguide": "styleguidist server",
     "gh-pages": "git subtree push --prefix styleguide origin gh-pages",
