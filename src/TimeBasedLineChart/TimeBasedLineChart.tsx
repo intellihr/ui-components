@@ -135,7 +135,7 @@ export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartPr
 }
 
 class BaseLineChart extends React.PureComponent<BaseLineChartProps> {
-  render() {
+  render () {
     const {
       labels,
       options,
