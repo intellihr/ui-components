@@ -387,7 +387,7 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with gradient 1`]
   datasets={
     Array [
       Object {
-        "backgroundColor": CanvasGradient {},
+        "backgroundColor": "rgb(67, 45, 243)",
         "borderColor": "rgb(67, 45, 243)",
         "borderWidth": 4,
         "colour": "rgb(67, 45, 243)",

@@ -35,7 +35,6 @@
     "@types/react-dom": "16.0.4",
     "@types/react-test-renderer": "16.0.1",
     "awesome-typescript-loader": "5.0.0-1",
-    "canvas": "^1.6.10",
     "chart.js": "2.7.2",
     "classnames": "2.2.5",
     "color": "3.0.0",
