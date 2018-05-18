@@ -1,9 +1,11 @@
 import moment from 'moment'
+import { createGradient } from './createGradient'
 
 export const lineObject = {
   lineColor: 'rgb(67, 45, 243)',
   datasetLabel: 'Happiness Rating',
   isGradient: true,
+  backgroundColor: createGradient('rgb(67, 45, 243)'),
   dataset: [
     {
       x: moment('2018-05-08T05:06:52.000Z'),
