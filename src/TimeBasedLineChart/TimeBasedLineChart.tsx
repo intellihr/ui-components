@@ -52,7 +52,7 @@ export interface TimeBasedLineChartProps {
   /** Chart Height */
   height?: number;
   /** Background filled colour */
-  backgroundFilledColor?: string;
+  backgroundFilledColor?: CanvasGradient;
 }
 
 export interface ChartTooltipItem {
