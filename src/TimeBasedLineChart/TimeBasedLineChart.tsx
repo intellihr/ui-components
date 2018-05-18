@@ -52,7 +52,7 @@ export interface TimeBasedLineChartProps {
   /** Chart Height */
   height?: number;
   /** Background filled colour */
-  backgroundFilledColor?: CanvasGradient;
+  backgroundColor?: CanvasGradient;
 }
 
 export interface ChartTooltipItem {
@@ -84,7 +84,7 @@ export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartPr
   }
 
   get datasets () {
-    const { data, backgroundFilledColor } = this.props
+    const { data, backgroundColor } = this.props
 
     return data.map((dataset: ChartData<any>) => {
       let attributes = {
@@ -107,7 +107,7 @@ export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartPr
       if (dataset['isGradient']) {
         attributes = merge(attributes, {
           colour: dataset['lineColor'],
-          backgroundColor: backgroundFilledColor,
+          backgroundColor: backgroundColor,
           fill: true,
           fillColor: dataset['lineColor']
         })
