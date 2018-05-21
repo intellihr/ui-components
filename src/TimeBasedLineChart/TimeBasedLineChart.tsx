@@ -12,6 +12,7 @@ export interface LineObject {
   lineColor: string
   datasetLabel: string
   isGradient?: boolean
+  backgroundColor?: string | CanvasGradient | CanvasPattern | string[]
 }
 
 export interface ChartLabels {
@@ -47,9 +48,9 @@ export interface TimeBasedLineChartProps {
   data: LineObject[]
   /** Chart Options */
   options?: Chart.ChartOptions
-
+  /** Chart Width */
   width?: number;
-
+  /** Chart Height */
   height?: number;
 }
 
@@ -75,19 +76,10 @@ export interface BaseLineChartProps {
 
 export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartProps> {
   public static defaultProps: Partial<TimeBasedLineChartProps> = {
-    showXTicks: true,
     showXGridLines: true,
     showYTicks: true,
+    showXTicks: true,
     minYTick: 0
-  }
-
-  lineGradient = (lineColor: string) => {
-    const canvas = document.createElement('canvas')
-    const ctx = canvas.getContext('2d')
-    const gradient = ctx!.createLinearGradient(0, 0, 0, 400)
-    gradient.addColorStop(0, lineColor.replace(')', ', 0.3)').replace('rgb', 'rgba'))
-    gradient.addColorStop(0.9, lineColor.replace(')', ', 0)').replace('rgb', 'rgba'))
-    return gradient
   }
 
   get datasets () {
@@ -114,7 +106,7 @@ export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartPr
       if (dataset['isGradient']) {
         attributes = merge(attributes, {
           colour: dataset['lineColor'],
-          backgroundColor: this.lineGradient(dataset['lineColor']),
+          backgroundColor: dataset['backgroundColor'],
           fill: true,
           fillColor: dataset['lineColor']
         })
