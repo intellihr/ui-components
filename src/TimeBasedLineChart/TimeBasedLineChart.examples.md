@@ -3,6 +3,8 @@
 ```jsx
 const { lineObject } = require('./sampleData');
 
+const { createGradient } = require('./createGradient');
+
 <TimeBasedLineChart
   data={[lineObject]}
   maxYTick={10}
@@ -11,6 +13,8 @@ const { lineObject } = require('./sampleData');
   timeUnit='month'
   timeDisplayFormat='MMM'
   dateFormat='DD/MM/YYYY'
+  height={500}
+  backgroundColor={createGradient('rgb(67, 45, 243)')}
 />
 ```
 
@@ -27,6 +31,6 @@ const { lineObject2, lineObject3 } = require('./sampleData');
   timeUnit='month'
   timeDisplayFormat='MMM'
   dateFormat='DD/MM/YYYY'
-
+  height={360}
 />
 ```
