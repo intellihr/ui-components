@@ -214,6 +214,7 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with 2 lines and 
           Object {
             "fontSize": "8px",
             "gridLines": Object {
+              "display": undefined,
               "drawBorder": true,
             },
             "ticks": Object {
@@ -578,6 +579,7 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with gradient 1`]
           Object {
             "fontSize": "8px",
             "gridLines": Object {
+              "display": undefined,
               "drawBorder": true,
             },
             "ticks": Object {
