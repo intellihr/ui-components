@@ -81,6 +81,7 @@ export interface BaseLineChartProps {
 export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartProps> {
   public static defaultProps: Partial<TimeBasedLineChartProps> = {
     showXGridLines: true,
+    showYGridLines: true,
     showYTicks: true,
     showXTicks: true,
     minYTick: 0
