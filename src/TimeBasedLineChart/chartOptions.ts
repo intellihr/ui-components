@@ -81,8 +81,8 @@ export const getTimeBasedLineChartDefaultOptions = (props: TimeBasedLineChartPro
           const { noCustomTooltipLabel } = props
 
           if (noCustomTooltipLabel) return ''
-          
-          if (!tooltipItem || tooltipItem.datasetIndex === null ) {
+
+          if (!tooltipItem || tooltipItem.datasetIndex === null) {
             return ''
           }
 
