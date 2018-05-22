@@ -24,6 +24,8 @@ export interface TimeBasedLineChartProps {
   labels?: Array<string | string[]>
   /** show X Gridlines or not */
   showXGridLines?: boolean
+  /** show Y Gridlines or not */
+  showYGridLines?: boolean
   /** show X Ticks or not */
   showXTicks?: boolean
   /** show Y Ticks or not */

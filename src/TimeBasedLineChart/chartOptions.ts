@@ -5,6 +5,7 @@ import { ChartTooltipItem, TimeBasedLineChartProps } from './TimeBasedLineChart'
 export const getTimeBasedLineChartDefaultOptions = (props: TimeBasedLineChartProps) => {
   const {
     showXGridLines,
+    showYGridLines,
     showXTicks,
     showYTicks,
     minYTick,
@@ -48,7 +49,8 @@ export const getTimeBasedLineChartDefaultOptions = (props: TimeBasedLineChartPro
       yAxes: [{
         fontSize: '8px',
         gridLines: {
-          drawBorder: showYTicks
+          drawBorder: showYTicks,
+          display: showYGridLines
         },
         ticks: {
           display: showYTicks,
