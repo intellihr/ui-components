@@ -54,6 +54,8 @@ export interface TimeBasedLineChartProps {
   width?: number;
   /** Chart Height */
   height?: number;
+  /** Display custom tooltip label or not */
+  noCustomTooltipLabel?: boolean
 }
 
 export interface ChartTooltipItem {
