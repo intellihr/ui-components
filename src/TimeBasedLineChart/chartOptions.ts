@@ -1,10 +1,11 @@
 import { ChartData } from 'react-chartjs-2'
-import { get } from 'lodash'
+import { get, toNumber } from 'lodash'
 import { ChartTooltipItem, TimeBasedLineChartProps } from './TimeBasedLineChart'
 
 export const getTimeBasedLineChartDefaultOptions = (props: TimeBasedLineChartProps) => {
   const {
     showXGridLines,
+    showYGridLines,
     showXTicks,
     showYTicks,
     minYTick,
@@ -14,7 +15,8 @@ export const getTimeBasedLineChartDefaultOptions = (props: TimeBasedLineChartPro
     timeToolTipFormat,
     timeUnit,
     timeDisplayFormat,
-    dateFormat
+    dateFormat,
+    noCustomTooltipLabel
   } = props
 
   return {
@@ -48,7 +50,8 @@ export const getTimeBasedLineChartDefaultOptions = (props: TimeBasedLineChartPro
       yAxes: [{
         fontSize: '8px',
         gridLines: {
-          drawBorder: showYTicks
+          drawBorder: showYTicks,
+          display: showYGridLines
         },
         ticks: {
           display: showYTicks,
@@ -75,26 +78,27 @@ export const getTimeBasedLineChartDefaultOptions = (props: TimeBasedLineChartPro
     tooltips: {
       callbacks: {
         label: (tooltipItem: ChartTooltipItem, data: ChartData<any>) => {
-          if (!data.datasets || !tooltipItem.datasetIndex) {
+          const { noCustomTooltipLabel } = props
+
+          if (noCustomTooltipLabel) return ''
+
+          if (!tooltipItem || tooltipItem.datasetIndex === null) {
             return ''
           }
 
-          let label = data.datasets[tooltipItem.datasetIndex].label || ''
+          const label = get(data, ['datasets', `${tooltipItem.datasetIndex}`, 'label'], '')
 
-          if (label) {
-            label += ': '
-          }
           let valueLabel = tooltipItem.yLabel
 
           if (yTickLabels) {
             Object.keys(yTickLabels).forEach(function (key) {
-              if (parseInt(key) === parseInt(get(tooltipItem, ['yLabel'], '') || '')) {
+              if (toNumber(key) === toNumber(get(tooltipItem, ['yLabel'], ''))) {
                 valueLabel = yTickLabels[key]
               }
             })
           }
 
-          return `${label}${valueLabel}`
+          return `${label}: ${valueLabel}`
         }
       }
     }
