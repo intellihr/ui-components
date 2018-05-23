@@ -18,11 +18,7 @@ const InfoIcon = () => (
   </span>
 )
 
-// const InfoText = () => (
-//   <div className={classNames(performanceInfo, 'header', 'info')}>
-//     <p> Hide Info </p>
-//   </div>
-// )
+const ArrowIcon = () => <i className="intelli-icon-arrow-down"/>
 
 const headerStates = {
   initial: 0,
@@ -74,24 +70,12 @@ export class InfoText extends React.PureComponent<any, any> {
     })
   }
 
-  get header() {
-    const { status } = this.state
-
-    if (status === 0) {
-      return (
-        <div className={classNames(performanceInfo, 'header', 'info')}>
-          <p> Hide Info </p>
-        </div>
-      )
-    }
-  }
-
   get icon() {
     const { isExpanded } = this.state
 
-    // if (isExpanded) {
-    //   return <InfoText/>
-    // }
+    if (isExpanded) {
+      return <ArrowIcon/>
+    }
 
     return <InfoIcon />
   }
