@@ -24,6 +24,8 @@ export interface TimeBasedLineChartProps {
   labels?: Array<string | string[]>
   /** show X Gridlines or not */
   showXGridLines?: boolean
+  /** show Y Gridlines or not */
+  showYGridLines?: boolean
   /** show X Ticks or not */
   showXTicks?: boolean
   /** show Y Ticks or not */
@@ -52,6 +54,8 @@ export interface TimeBasedLineChartProps {
   width?: number;
   /** Chart Height */
   height?: number;
+  /** Display custom tooltip label or not */
+  noCustomTooltipLabel?: boolean
 }
 
 export interface ChartTooltipItem {
@@ -77,6 +81,7 @@ export interface BaseLineChartProps {
 export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartProps> {
   public static defaultProps: Partial<TimeBasedLineChartProps> = {
     showXGridLines: true,
+    showYGridLines: true,
     showYTicks: true,
     showXTicks: true,
     minYTick: 0

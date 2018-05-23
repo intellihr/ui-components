@@ -214,6 +214,7 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with 2 lines and 
           Object {
             "fontSize": "8px",
             "gridLines": Object {
+              "display": true,
               "drawBorder": true,
             },
             "ticks": Object {
@@ -235,6 +236,7 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with 2 lines and 
   }
   showXGridLines={true}
   showXTicks={true}
+  showYGridLines={true}
   showYTicks={true}
   timeDisplayFormat="MMM"
   timeToolTipFormat="ll"
@@ -578,6 +580,7 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with gradient 1`]
           Object {
             "fontSize": "8px",
             "gridLines": Object {
+              "display": true,
               "drawBorder": true,
             },
             "ticks": Object {
@@ -599,6 +602,7 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with gradient 1`]
   }
   showXGridLines={true}
   showXTicks={true}
+  showYGridLines={true}
   showYTicks={true}
   timeDisplayFormat="MMM"
   timeToolTipFormat="ll"
