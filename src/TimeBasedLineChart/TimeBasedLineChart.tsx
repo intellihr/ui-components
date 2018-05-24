@@ -36,7 +36,7 @@ export interface TimeBasedLineChartProps {
   maxYTick: number
   /** The step size of Y Axis */
   yTickStepSize: number
-  /** The labels on Y Axis */
+  /** The labels on Y Axis ticks */
   yTickLabels?: ChartLabels
   /** Time format for tooltip */
   timeToolTipFormat: string
@@ -56,6 +56,10 @@ export interface TimeBasedLineChartProps {
   height?: number;
   /** Display custom tooltip label or not */
   noCustomTooltipLabel?: boolean
+  /** The label on the X axis */
+  xAxisLabel?: string
+  /** The label on the Y axis */
+  yAxisLabel?: string
 }
 
 export interface ChartTooltipItem {

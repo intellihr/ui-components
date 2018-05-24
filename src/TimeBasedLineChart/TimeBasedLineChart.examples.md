@@ -15,6 +15,8 @@ const { createGradient } = require('./createGradient');
   dateFormat='DD/MM/YYYY'
   height={500}
   backgroundColor={createGradient('rgb(67, 45, 243)')}
+  yAxisLabel='Value'
+  xAxisLabel='Date'
 />
 ```
 
