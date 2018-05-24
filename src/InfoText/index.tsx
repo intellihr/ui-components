@@ -18,60 +18,125 @@ const InfoIcon = () => (
   </span>
 )
 
-const ArrowIcon = () => <i className="intelli-icon-arrow-down"/>
+const ArrowIcon = () => (
+  <span>
+    <i className="intelli-icon-arrow-down"/>
+  </span>
+)
 
 export enum InfoTextStatus {
   initial = 0,
   hover,
-  expanded,
-  hoverAfterExpanded 
+  clicked,
+  hoverAfterClicked
 }
 
 export interface IInfoText {
   primaryText: string
-  clickedText: string
+  secondaryText: string
 }
 
-export class InfoText extends React.PureComponent<IInfoText, any> {
-  constructor(props: any) {
+export interface InfoTextState {
+  isHover: boolean
+  status: InfoTextStatus
+}
+
+export class InfoText extends React.PureComponent<IInfoText, InfoTextState> {
+  constructor(props: IInfoText) {
     super(props)
     this.state = {
-      isExpanded: false,
-      isFocus: false,
+      isHover: false,
       status: InfoTextStatus.initial
     }
   }
 
-  onMouseEnter = () => this.setState({
-    isFocus: true,
-    status: InfoTextStatus.hover
-  })
-
-  onMouseLeave = () => {
+  // Hover in
+  onMouseEnter = () => {
     const {
-      isExpanded
+      status
     } = this.state
 
-    if (isExpanded) {
-      return
+    if (status === InfoTextStatus.initial) {
+      this.setState({
+        status: InfoTextStatus.hover
+      })
     }
 
-    this.setState({
-      isFocus: false
-    })
+  }
+  
+  // Hover out
+  onMouseLeave = () => {
+    const {
+      status
+    } = this.state
+
+    if (status === InfoTextStatus.hover) {
+      this.setState({
+        status: InfoTextStatus.initial
+      })
+    }
+
+    if (status === InfoTextStatus.hoverAfterClicked) {
+      this.setState({
+        status: InfoTextStatus.clicked
+      })
+    }
   }
 
   handleClick = () => {
-    this.setState({
-      isExpanded: !this.state.isExpanded
+    const {
+      status
+    } = this.state
+
+    if (status === InfoTextStatus.initial) {
+      return this.setState({
+        status: InfoTextStatus.hover
+      })
+    }
+    
+    if (status === InfoTextStatus.clicked) {
+      return this.setState({
+        status: InfoTextStatus.initial
+      })
+    }
+
+    return this.setState({
+      status: InfoTextStatus.clicked
     })
   }
 
-  get icon() {
-    const { isExpanded } = this.state
+  get text(): string {
+    const {
+      primaryText,
+      secondaryText
+    } = this.props
 
-    if (isExpanded) {
-      return <ArrowIcon/>
+    const {
+      status
+    } = this.state
+
+    console.log('the status is ', status)
+
+    switch(status) {
+      case InfoTextStatus.initial:
+        return ''
+      case InfoTextStatus.hover:
+        return primaryText
+      case InfoTextStatus.clicked:
+        return secondaryText
+      default:
+        return ''
+    }
+
+  }
+
+  get icon() {
+    const { 
+      status 
+    } = this.state
+
+    if (status === InfoTextStatus.clicked) {
+      return <ArrowIcon />
     }
 
     return <InfoIcon />
@@ -79,8 +144,6 @@ export class InfoText extends React.PureComponent<IInfoText, any> {
 
   render() {
     const {
-      isExpanded,
-      isFocus,
       status
     } = this.state
 
@@ -94,7 +157,7 @@ export class InfoText extends React.PureComponent<IInfoText, any> {
         onMouseLeave={this.onMouseLeave}
         onClick={this.handleClick}
       >
-        { status=== InfoTextStatus.hover && <p> {primaryText} </p> }
+        <p> {this.text } </p>
         { this.icon }
       </Wrapper>
     )

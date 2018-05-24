@@ -12,15 +12,3 @@ export const Wrapper = styled.div`
     cursor: pointer;
   }
 `
-
-export const ArrowIcon = styled.span`
-  font-family: 'intellihr';
-  content: '\e920';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-`
-
