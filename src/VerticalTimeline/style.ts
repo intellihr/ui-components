@@ -9,6 +9,7 @@ const VerticalTimelineWrapper = styled.div`
 const TimelineYearHeading = styled.div`
   text-align: right;
   width: 4rem;
+  font-size: 14px;
   font-weight: 600;
 `
 
