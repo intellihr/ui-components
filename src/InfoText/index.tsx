@@ -20,32 +20,33 @@ const InfoIcon = () => (
 
 const ArrowIcon = () => <i className="intelli-icon-arrow-down"/>
 
-const headerStates = {
-  initial: 0,
-  hover: 1,
-  expanded: 2,
-  expandedAndHover: 3
+export enum InfoTextStatus {
+  initial = 0,
+  hover,
+  expanded,
+  hoverAfterExpanded 
 }
 
 export interface IInfoText {
-  hoverText: string
+  primaryText: string
   clickedText: string
 }
 
-export class InfoText extends React.PureComponent<any, any> {
+export class InfoText extends React.PureComponent<IInfoText, any> {
   constructor(props: any) {
     super(props)
     this.state = {
-      displayHelperText: false,
+      displayPrimaryText: false,
       isExpanded: false,
       isFocus: false,
-      status: headerStates.initial
+      status: InfoTextStatus.initial
     }
   }
 
   onMouseEnter = () => this.setState({
-    displayHelperText: true,
-    isFocus: true
+    displayPrimaryText: true,
+    isFocus: true,
+    status: InfoTextStatus.hover
   })
 
   onMouseLeave = () => {
@@ -58,14 +59,14 @@ export class InfoText extends React.PureComponent<any, any> {
     }
 
     this.setState({
-      displayHelperText: false,
+      displayPrimaryText: false,
       isFocus: false
     })
   }
 
   handleClick = () => {
     this.setState({
-      displayHelperText: true,
+      displayPrimaryText: true,
       isExpanded: !this.state.isExpanded
     })
   }
@@ -82,10 +83,15 @@ export class InfoText extends React.PureComponent<any, any> {
 
   render() {
     const {
-      displayHelperText,
+      displayPrimaryText,
       isExpanded,
-      isFocus
+      isFocus,
+      status
     } = this.state
+
+    const {
+      primaryText
+    } = this.props
 
     return (
       <Wrapper
@@ -93,7 +99,7 @@ export class InfoText extends React.PureComponent<any, any> {
         onMouseLeave={this.onMouseLeave}
         onClick={this.handleClick}
       >
-        { displayHelperText && <p> How to Read this chart </p> }
+        { status=== InfoTextStatus.hover && <p> {primaryText} </p> }
         { this.icon }
       </Wrapper>
     )
