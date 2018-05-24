@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import classNames from 'classnames'
 import { Icon } from '../Icon'
 import {
@@ -206,13 +206,13 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
     } = this.props
 
     return (
-      <div>
+      <Fragment>
         <TitleBox>
           <h3> {title} </h3>
           {this.wrapper}
         </TitleBox>
         {this.helpContent}
-      </div>
+      </Fragment>
     )
   }
 }
