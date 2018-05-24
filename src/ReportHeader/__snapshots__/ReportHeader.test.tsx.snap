@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ReportHeader /> should render ReportHeader 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  height: 40px;
+  width: 300px;
+}
+
+.c1:hover {
+  color: rgb(67,45,243);
+  cursor: pointer;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.c2 {
+  font-size: 10px;
+}
+
+<ReportHeader
+  displayInfo={true}
+  primaryText="How To Read This Chart"
+  renderHelperContent={[Function]}
+  secondaryText="Hide Info"
+  title="Hello"
+>
+  <div>
+    <styled.div>
+      <div
+        className="c0"
+      >
+        <h3>
+           
+          Hello
+           
+        </h3>
+        <styled.div
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <div
+            className="c1"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            <p>
+               
+               
+            </p>
+            <InfoIcon>
+              <styled.div>
+                <div
+                  className="c2"
+                >
+                  <span
+                    className="fa-stack"
+                  >
+                    <Icon
+                      isFontAwesome={true}
+                      isLarge={false}
+                      isSpinning={false}
+                      isStacked={true}
+                      size={1}
+                      type="info"
+                    >
+                      <i
+                        aria-hidden={true}
+                        className="fa fa-info fa-stack-1x"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                      />
+                    </Icon>
+                    <Icon
+                      isFontAwesome={true}
+                      isLarge={false}
+                      isSpinning={false}
+                      isStacked={true}
+                      size={2}
+                      type="circle-thin"
+                    >
+                      <i
+                        aria-hidden={true}
+                        className="fa fa-circle-thin fa-stack-2x"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                      />
+                    </Icon>
+                  </span>
+                </div>
+              </styled.div>
+            </InfoIcon>
+          </div>
+        </styled.div>
+      </div>
+    </styled.div>
+  </div>
+</ReportHeader>
+`;
