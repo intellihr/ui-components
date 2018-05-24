@@ -34,6 +34,7 @@ export enum InfoTextStatus {
 export interface IInfoText {
   primaryText: string
   secondaryText: string
+  handleClick: () => void
 }
 
 export interface InfoTextState {
@@ -88,6 +89,12 @@ export class InfoText extends React.PureComponent<IInfoText, InfoTextState> {
       status
     } = this.state
 
+    const {
+      handleClick
+    } = this.props
+
+    handleClick()
+
     if (status === InfoTextStatus.initial) {
       return this.setState({
         status: InfoTextStatus.hover
@@ -114,8 +121,6 @@ export class InfoText extends React.PureComponent<IInfoText, InfoTextState> {
     const {
       status
     } = this.state
-
-    console.log('the status is ', status)
 
     switch(status) {
       case InfoTextStatus.initial:
