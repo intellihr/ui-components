@@ -42,9 +42,9 @@ describe('<TimeBasedLineChart />', () => {
       timeDisplayFormat='MMM'
       dateFormat='DD/MM/YYYY'
       yAxisLabel='Value'
-      showYAxisLabel={true}
+      showYAxisLabel
       xAxisLabel='Date'
-      showXAxisLabel={true}
+      showXAxisLabel
     />)
 
     expect(wrapper).toMatchSnapshot()
