@@ -5,8 +5,10 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  align-items: center;
   height: 40px;
   width: 300px;
+  padding: 5px;
   &:hover {
     color: rgb(67, 45, 243);
     cursor: pointer;
@@ -25,4 +27,12 @@ export const HelpContentBox = styled.div`
 
 export const IconBox = styled.div`
   font-size: 10px;
+`
+
+export const ArrowIcon = styled.i`
+  transform: rotate(180deg);
+`
+
+export const IconText = styled.span`
+  padding: 0 10px;
 `

@@ -1,7 +1,14 @@
 import React from 'react'
 import classNames from 'classnames'
 import { Icon } from '../Icon'
-import { Wrapper, TitleBox, HelpContentBox, IconBox } from './style'
+import {
+  Wrapper,
+  TitleBox,
+  HelpContentBox,
+  IconBox,
+  ArrowIcon,
+  IconText
+} from './style'
 
 const InfoIcon = () => (
   <IconBox>
@@ -19,8 +26,6 @@ const InfoIcon = () => (
     </span>
   </IconBox>
 )
-
-const ArrowIcon = () => <i className='intelli-icon-arrow-down' />
 
 export enum InfoTextStatus {
   initial = 0,
@@ -43,7 +48,7 @@ export interface ReportHeaderState {
 }
 
 export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeaderState> {
-  constructor (props: IReportHeader) {
+  constructor(props: IReportHeader) {
     super(props)
     this.state = {
       status: InfoTextStatus.initial,
@@ -104,7 +109,7 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
     })
   }
 
-  get text (): string {
+  get text(): string {
     const {
       primaryText,
       secondaryText
@@ -126,7 +131,7 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
     }
   }
 
-  get icon () {
+  get icon() {
 
     const {
       displayInfo
@@ -141,13 +146,13 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
     } = this.state
 
     if (status === InfoTextStatus.clicked) {
-      return <ArrowIcon />
+      return <ArrowIcon className='intelli-icon-arrow-down' />
     }
 
     return <InfoIcon />
   }
 
-  get helpContent (): JSX.Element | null {
+  get helpContent(): JSX.Element | null {
     const {
       isExpanded
     } = this.state
@@ -162,6 +167,27 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
           {renderHelperContent()}
         </HelpContentBox>
       )
+    }
+
+    return null
+  }
+
+  get wrapper() {
+    const {
+      displayInfo
+    } = this.props
+
+    if (displayInfo) {
+      return (<Wrapper
+        onMouseEnter={this.onMouseEnter}
+        onMouseLeave={this.onMouseLeave}
+        onClick={this.handleClick}
+      >
+        <IconText>
+          {this.text}
+        </IconText>
+        {this.icon}
+      </Wrapper>)
     }
 
     return null
@@ -183,14 +209,7 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
       <div>
         <TitleBox>
           <h3> {title} </h3>
-          {displayInfo && (<Wrapper
-            onMouseEnter={this.onMouseEnter}
-            onMouseLeave={this.onMouseLeave}
-            onClick={this.handleClick}
-          >
-            <p> {this.text} </p>
-            {this.icon}
-          </Wrapper>)}
+          {this.wrapper}
         </TitleBox>
         {this.helpContent}
       </div>
