@@ -36,7 +36,6 @@ export class InfoText extends React.PureComponent<IInfoText, any> {
   constructor(props: any) {
     super(props)
     this.state = {
-      displayPrimaryText: false,
       isExpanded: false,
       isFocus: false,
       status: InfoTextStatus.initial
@@ -44,7 +43,6 @@ export class InfoText extends React.PureComponent<IInfoText, any> {
   }
 
   onMouseEnter = () => this.setState({
-    displayPrimaryText: true,
     isFocus: true,
     status: InfoTextStatus.hover
   })
@@ -59,14 +57,12 @@ export class InfoText extends React.PureComponent<IInfoText, any> {
     }
 
     this.setState({
-      displayPrimaryText: false,
       isFocus: false
     })
   }
 
   handleClick = () => {
     this.setState({
-      displayPrimaryText: true,
       isExpanded: !this.state.isExpanded
     })
   }
@@ -83,7 +79,6 @@ export class InfoText extends React.PureComponent<IInfoText, any> {
 
   render() {
     const {
-      displayPrimaryText,
       isExpanded,
       isFocus,
       status
