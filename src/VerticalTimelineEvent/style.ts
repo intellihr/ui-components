@@ -32,7 +32,7 @@ const EventDate = styled.span`
   color: hsl(210, 13.4%, 47.2%);
   position: absolute;
   width: 4rem;
-  font-size: 12px;
+  font-size: 14px;
   top: 6px;
   line-height: 1;
 `

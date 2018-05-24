@@ -176,6 +176,7 @@ export class RadarChart extends React.Component<RadarChartProps> {
         borderColor: dataColour,
         backgroundColor: Color(dataColour).alpha(0.25),
         pointBorderColor: dataColour,
+        pointBackgroundColor: dataColour,
         pointHoverBackgroundColor: dataColour,
         pointHitRadius: 10,
         pointHoverRadius: 5

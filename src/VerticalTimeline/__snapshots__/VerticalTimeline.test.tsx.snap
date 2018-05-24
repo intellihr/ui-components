@@ -9,6 +9,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
 .c1 {
   text-align: right;
   width: 4rem;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -59,7 +60,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
   color: hsl(210,13.4%,47.2%);
   position: absolute;
   width: 4rem;
-  font-size: 12px;
+  font-size: 14px;
   top: 6px;
   line-height: 1;
 }
@@ -82,9 +83,11 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
 <VerticalTimeline
   year="2006"
 >
-  <styled.div>
+  <styled.div
+    className="vertical-timeline"
+  >
     <div
-      className="c0"
+      className="vertical-timeline c0"
     >
       <styled.div>
         <div
@@ -150,6 +153,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
 .c1 {
   text-align: right;
   width: 4rem;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -200,7 +204,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
   color: hsl(210,13.4%,47.2%);
   position: absolute;
   width: 4rem;
-  font-size: 12px;
+  font-size: 14px;
   top: 6px;
   line-height: 1;
 }
@@ -221,9 +225,11 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
 }
 
 <VerticalTimeline>
-  <styled.div>
+  <styled.div
+    className="vertical-timeline"
+  >
     <div
-      className="c0"
+      className="vertical-timeline c0"
     >
       <styled.div>
         <div

@@ -20,7 +20,7 @@ class VerticalTimeline extends React.PureComponent<VerticalTimelineProps> {
     } = this.props
 
     return (
-      <VerticalTimelineWrapper>
+      <VerticalTimelineWrapper className='vertical-timeline'>
         <TimelineYearHeading>
           {year}
         </TimelineYearHeading>

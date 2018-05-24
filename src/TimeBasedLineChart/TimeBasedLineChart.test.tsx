@@ -28,6 +28,23 @@ describe('<TimeBasedLineChart />', () => {
       timeDisplayFormat='MMM'
       dateFormat='DD/MM/YYYY'
     />)
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('Renders the TimeBasedLineChart with axis labels', () => {
+    const wrapper = shallow(<TimeBasedLineChart
+      data={[lineObject]}
+      maxYTick={10}
+      yTickStepSize={1}
+      timeToolTipFormat='ll'
+      timeUnit='month'
+      timeDisplayFormat='MMM'
+      dateFormat='DD/MM/YYYY'
+      yAxisLabel='Value'
+      xAxisLabel='Date'
+    />)
+
     expect(wrapper).toMatchSnapshot()
   })
 })
