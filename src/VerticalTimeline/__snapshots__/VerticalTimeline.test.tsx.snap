@@ -82,11 +82,9 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
 <VerticalTimeline
   year="2006"
 >
-  <styled.div
-    className="vertical-timeline"
-  >
+  <styled.div>
     <div
-      className="vertical-timeline c0"
+      className="c0"
     >
       <styled.div>
         <div
@@ -223,11 +221,9 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
 }
 
 <VerticalTimeline>
-  <styled.div
-    className="vertical-timeline"
-  >
+  <styled.div>
     <div
-      className="vertical-timeline c0"
+      className="c0"
     >
       <styled.div>
         <div
