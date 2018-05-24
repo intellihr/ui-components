@@ -20,11 +20,7 @@ const InfoIcon = () => (
   </IconBox>
 )
 
-const ArrowIcon = () => (
-  <span>
-    <i className='intelli-icon-arrow-down' />
-  </span>
-)
+const ArrowIcon = () => <i className='intelli-icon-arrow-down' />
 
 export enum InfoTextStatus {
   initial = 0,
