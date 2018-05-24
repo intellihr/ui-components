@@ -36,7 +36,7 @@ export interface TimeBasedLineChartProps {
   maxYTick: number
   /** The step size of Y Axis */
   yTickStepSize: number
-  /** The labels on Y Axis */
+  /** The labels on Y Axis ticks */
   yTickLabels?: ChartLabels
   /** Time format for tooltip */
   timeToolTipFormat: string
@@ -56,6 +56,14 @@ export interface TimeBasedLineChartProps {
   height?: number;
   /** Display custom tooltip label or not */
   noCustomTooltipLabel?: boolean
+  /** The label on the X axis */
+  xAxisLabel?: string
+  /** The label on the Y axis */
+  yAxisLabel?: string
+  /** show the X axis label or not */
+  showXAxisLabel?: boolean
+  /** show the Y axis label or not */
+  showYAxisLabel?: boolean
 }
 
 export interface ChartTooltipItem {
@@ -84,7 +92,11 @@ export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartPr
     showYGridLines: true,
     showYTicks: true,
     showXTicks: true,
-    minYTick: 0
+    minYTick: 0,
+    xAxisLabel: '',
+    yAxisLabel: '',
+    showXAxisLabel: false,
+    showYAxisLabel: false
   }
 
   get datasets () {
