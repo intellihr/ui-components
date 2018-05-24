@@ -12,3 +12,17 @@ export const Wrapper = styled.div`
     cursor: pointer;
   }
 `
+
+export const TitleBox = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+`
+
+export const HelpContentBox = styled.div`
+  margin: 10px 0 15px 0;
+`
+
+export const IconBox = styled.div`
+  font-size: 10px;
+`

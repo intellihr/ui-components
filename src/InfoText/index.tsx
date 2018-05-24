@@ -1,21 +1,23 @@
 import React from 'react'
 import classNames from 'classnames'
 import { Icon } from '../Icon'
-import { Wrapper } from './style'
+import { Wrapper, TitleBox, HelpContentBox, IconBox } from './style'
 
 const InfoIcon = () => (
-  <span className='fa-stack'>
-    <Icon
-      type='info'
-      size={1}
-      isStacked
-    />
-    <Icon
-      type='circle-thin'
-      size={2}
-      isStacked
-    />
-  </span>
+  <IconBox>
+    <span className='fa-stack'>
+      <Icon
+        type='info'
+        size={1}
+        isStacked
+      />
+      <Icon
+        type='circle-thin'
+        size={2}
+        isStacked
+      />
+    </span>
+  </IconBox>
 )
 
 const ArrowIcon = () => (
@@ -31,23 +33,25 @@ export enum InfoTextStatus {
   hoverAfterClicked
 }
 
-export interface IInfoText {
+export interface IReportHeader {
+  title: string
   primaryText: string
   secondaryText: string
-  handleClick: () => void
+  renderHelperContent: () => JSX.Element
+  displayInfo: boolean
 }
 
-export interface InfoTextState {
-  isHover: boolean
-  status: InfoTextStatus
+export interface ReportHeaderState {
+  status: InfoTextStatus,
+  isExpanded: boolean
 }
 
-export class InfoText extends React.PureComponent<IInfoText, InfoTextState> {
-  constructor (props: IInfoText) {
+export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeaderState> {
+  constructor (props: IReportHeader) {
     super(props)
     this.state = {
-      isHover: false,
-      status: InfoTextStatus.initial
+      status: InfoTextStatus.initial,
+      isExpanded: false
     }
   }
 
@@ -88,26 +92,19 @@ export class InfoText extends React.PureComponent<IInfoText, InfoTextState> {
       status
     } = this.state
 
-    const {
-      handleClick
-    } = this.props
-
-    handleClick()
+    let newStatus
 
     if (status === InfoTextStatus.initial) {
-      return this.setState({
-        status: InfoTextStatus.hover
-      })
+      newStatus = InfoTextStatus.hover
+    } else if (status === InfoTextStatus.clicked) {
+      newStatus = InfoTextStatus.initial
+    } else {
+      newStatus = InfoTextStatus.clicked
     }
 
-    if (status === InfoTextStatus.clicked) {
-      return this.setState({
-        status: InfoTextStatus.initial
-      })
-    }
-
-    return this.setState({
-      status: InfoTextStatus.clicked
+    this.setState({
+      status: newStatus,
+      isExpanded: !this.state.isExpanded
     })
   }
 
@@ -134,6 +131,15 @@ export class InfoText extends React.PureComponent<IInfoText, InfoTextState> {
   }
 
   get icon () {
+
+    const {
+      displayInfo
+    } = this.props
+
+    if (!displayInfo) {
+      return null
+    }
+
     const {
       status
     } = this.state
@@ -145,24 +151,36 @@ export class InfoText extends React.PureComponent<IInfoText, InfoTextState> {
     return <InfoIcon />
   }
 
-  render () {
+  render() {
     const {
-      status
+      status,
+      isExpanded
     } = this.state
 
     const {
-      primaryText
+      primaryText,
+      title,
+      renderHelperContent,
+      displayInfo
     } = this.props
 
     return (
-      <Wrapper
-        onMouseEnter={this.onMouseEnter}
-        onMouseLeave={this.onMouseLeave}
-        onClick={this.handleClick}
-      >
-        <p> {this.text } </p>
-        { this.icon }
-      </Wrapper>
+      <div>
+        <TitleBox>
+          <h3> {title} </h3>
+          {displayInfo && (<Wrapper
+            onMouseEnter={this.onMouseEnter}
+            onMouseLeave={this.onMouseLeave}
+            onClick={this.handleClick}
+          >
+            <p> {this.text} </p>
+            {this.icon}
+          </Wrapper>)}
+        </TitleBox>
+        {isExpanded && (<HelpContentBox>
+          {renderHelperContent()}
+        </HelpContentBox>)}
+      </div>
     )
   }
 }
