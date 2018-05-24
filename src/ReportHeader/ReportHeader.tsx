@@ -147,10 +147,29 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
     return <InfoIcon />
   }
 
+  get helpContent (): JSX.Element | null {
+    const {
+      isExpanded
+    } = this.state
+
+    const {
+      renderHelperContent
+    } = this.props
+
+    if (isExpanded) {
+      return (
+        <HelpContentBox>
+          {renderHelperContent()}
+        </HelpContentBox>
+      )
+    }
+
+    return null
+  }
+
   render() {
     const {
       status,
-      isExpanded
     } = this.state
 
     const {
@@ -173,9 +192,7 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
             {this.icon}
           </Wrapper>)}
         </TitleBox>
-        {isExpanded && (<HelpContentBox>
-          {renderHelperContent()}
-        </HelpContentBox>)}
+        {this.helpContent}
       </div>
     )
   }
