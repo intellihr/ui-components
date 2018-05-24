@@ -196,10 +196,6 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with 2 lines and 
             "gridLines": Object {
               "display": true,
             },
-            "scaleLabel": Object {
-              "display": false,
-              "labelString": "",
-            },
             "ticks": Object {
               "display": true,
             },
@@ -220,10 +216,6 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with 2 lines and 
             "gridLines": Object {
               "display": true,
               "drawBorder": true,
-            },
-            "scaleLabel": Object {
-              "display": false,
-              "labelString": "",
             },
             "ticks": Object {
               "callback": [Function],
@@ -242,396 +234,14 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with 2 lines and 
       },
     }
   }
-  showXAxisLabel={false}
   showXGridLines={true}
   showXTicks={true}
-  showYAxisLabel={false}
   showYGridLines={true}
   showYTicks={true}
   timeDisplayFormat="MMM"
   timeToolTipFormat="ll"
   timeUnit="month"
-  xAxisLabel=""
-  yAxisLabel=""
   yTickStepSize={20}
-/>
-`;
-
-exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with axis labels 1`] = `
-<BaseLineChart
-  data={
-    Array [
-      Object {
-        "backgroundColor": Object {
-          "addColorStop": [Function],
-        },
-        "dataset": Array [
-          Object {
-            "x": "2018-05-08T05:06:52.000Z",
-            "y": "6",
-          },
-          Object {
-            "x": "2018-05-08T04:40:09.000Z",
-            "y": "6",
-          },
-          Object {
-            "x": "2018-04-30T06:27:46.000Z",
-            "y": "7",
-          },
-          Object {
-            "x": "2018-04-04T04:18:03.000Z",
-            "y": "6",
-          },
-          Object {
-            "x": "2018-02-20T23:52:54.000Z",
-            "y": "6",
-          },
-          Object {
-            "x": "2018-02-06T22:56:37.000Z",
-            "y": "6",
-          },
-          Object {
-            "x": "2018-01-08T22:40:42.000Z",
-            "y": "6",
-          },
-          Object {
-            "x": "2017-12-21T05:18:47.000Z",
-            "y": "6",
-          },
-          Object {
-            "x": "2017-11-06T22:55:53.000Z",
-            "y": "5",
-          },
-          Object {
-            "x": "2017-11-06T22:46:59.000Z",
-            "y": "6",
-          },
-          Object {
-            "x": "2017-11-01T22:29:39.000Z",
-            "y": "8",
-          },
-          Object {
-            "x": "2017-10-29T23:25:25.000Z",
-            "y": "5",
-          },
-          Object {
-            "x": "2017-10-03T06:39:48.000Z",
-            "y": "8",
-          },
-          Object {
-            "x": "2017-07-31T23:42:42.000Z",
-            "y": "8",
-          },
-          Object {
-            "x": "2017-07-16T23:35:50.000Z",
-            "y": "8",
-          },
-          Object {
-            "x": "2017-06-19T05:13:43.000Z",
-            "y": "6",
-          },
-          Object {
-            "x": "2017-05-22T09:40:52.000Z",
-            "y": "7",
-          },
-          Object {
-            "x": "2017-05-04T00:00:00.000Z",
-            "y": "7",
-          },
-          Object {
-            "x": "2017-05-04T00:00:00.000Z",
-            "y": "8",
-          },
-          Object {
-            "x": "2017-04-06T00:00:00.000Z",
-            "y": "8",
-          },
-          Object {
-            "x": "2017-03-04T00:00:00.000Z",
-            "y": "9",
-          },
-          Object {
-            "x": "2017-02-01T02:40:16.000Z",
-            "y": "9",
-          },
-          Object {
-            "x": "2016-11-02T00:00:00.000Z",
-            "y": "8",
-          },
-          Object {
-            "x": "2016-10-09T08:57:51.000Z",
-            "y": "8",
-          },
-          Object {
-            "x": "2016-10-09T08:44:22.000Z",
-            "y": "7",
-          },
-          Object {
-            "x": "2016-10-08T21:39:19.000Z",
-            "y": "7",
-          },
-          Object {
-            "x": "2016-10-07T22:57:39.000Z",
-            "y": "8",
-          },
-          Object {
-            "x": "2016-09-10T23:32:39.000Z",
-            "y": "9",
-          },
-          Object {
-            "x": "2016-08-10T23:27:11.000Z",
-            "y": "10",
-          },
-          Object {
-            "x": "2016-08-01T06:54:48.000Z",
-            "y": "9",
-          },
-          Object {
-            "x": "2016-07-29T01:22:16.000Z",
-            "y": "9",
-          },
-          Object {
-            "x": "2016-07-10T23:28:31.000Z",
-            "y": "5",
-          },
-        ],
-        "datasetLabel": "Happiness Rating",
-        "isGradient": true,
-        "lineColor": "rgb(67, 45, 243)",
-      },
-    ]
-  }
-  datasets={
-    Array [
-      Object {
-        "backgroundColor": Object {
-          "addColorStop": [Function],
-        },
-        "borderColor": "rgb(67, 45, 243)",
-        "borderWidth": 4,
-        "colour": "rgb(67, 45, 243)",
-        "data": Array [
-          Object {
-            "x": "2018-05-08T05:06:52.000Z",
-            "y": "6",
-          },
-          Object {
-            "x": "2018-05-08T04:40:09.000Z",
-            "y": "6",
-          },
-          Object {
-            "x": "2018-04-30T06:27:46.000Z",
-            "y": "7",
-          },
-          Object {
-            "x": "2018-04-04T04:18:03.000Z",
-            "y": "6",
-          },
-          Object {
-            "x": "2018-02-20T23:52:54.000Z",
-            "y": "6",
-          },
-          Object {
-            "x": "2018-02-06T22:56:37.000Z",
-            "y": "6",
-          },
-          Object {
-            "x": "2018-01-08T22:40:42.000Z",
-            "y": "6",
-          },
-          Object {
-            "x": "2017-12-21T05:18:47.000Z",
-            "y": "6",
-          },
-          Object {
-            "x": "2017-11-06T22:55:53.000Z",
-            "y": "5",
-          },
-          Object {
-            "x": "2017-11-06T22:46:59.000Z",
-            "y": "6",
-          },
-          Object {
-            "x": "2017-11-01T22:29:39.000Z",
-            "y": "8",
-          },
-          Object {
-            "x": "2017-10-29T23:25:25.000Z",
-            "y": "5",
-          },
-          Object {
-            "x": "2017-10-03T06:39:48.000Z",
-            "y": "8",
-          },
-          Object {
-            "x": "2017-07-31T23:42:42.000Z",
-            "y": "8",
-          },
-          Object {
-            "x": "2017-07-16T23:35:50.000Z",
-            "y": "8",
-          },
-          Object {
-            "x": "2017-06-19T05:13:43.000Z",
-            "y": "6",
-          },
-          Object {
-            "x": "2017-05-22T09:40:52.000Z",
-            "y": "7",
-          },
-          Object {
-            "x": "2017-05-04T00:00:00.000Z",
-            "y": "7",
-          },
-          Object {
-            "x": "2017-05-04T00:00:00.000Z",
-            "y": "8",
-          },
-          Object {
-            "x": "2017-04-06T00:00:00.000Z",
-            "y": "8",
-          },
-          Object {
-            "x": "2017-03-04T00:00:00.000Z",
-            "y": "9",
-          },
-          Object {
-            "x": "2017-02-01T02:40:16.000Z",
-            "y": "9",
-          },
-          Object {
-            "x": "2016-11-02T00:00:00.000Z",
-            "y": "8",
-          },
-          Object {
-            "x": "2016-10-09T08:57:51.000Z",
-            "y": "8",
-          },
-          Object {
-            "x": "2016-10-09T08:44:22.000Z",
-            "y": "7",
-          },
-          Object {
-            "x": "2016-10-08T21:39:19.000Z",
-            "y": "7",
-          },
-          Object {
-            "x": "2016-10-07T22:57:39.000Z",
-            "y": "8",
-          },
-          Object {
-            "x": "2016-09-10T23:32:39.000Z",
-            "y": "9",
-          },
-          Object {
-            "x": "2016-08-10T23:27:11.000Z",
-            "y": "10",
-          },
-          Object {
-            "x": "2016-08-01T06:54:48.000Z",
-            "y": "9",
-          },
-          Object {
-            "x": "2016-07-29T01:22:16.000Z",
-            "y": "9",
-          },
-          Object {
-            "x": "2016-07-10T23:28:31.000Z",
-            "y": "5",
-          },
-        ],
-        "fill": true,
-        "fillColor": "rgb(67, 45, 243)",
-        "label": "Happiness Rating",
-        "lineTension": 0,
-        "pointBackgroundColor": "rgb(67, 45, 243)",
-        "pointBorderColor": "rgb(67, 45, 243)",
-        "pointBorderWidth": 1,
-        "pointHitRadius": 10,
-        "pointHoverBackgroundColor": "rgb(67, 45, 243)",
-        "pointHoverRadius": 5,
-        "pointRadius": 4,
-      },
-    ]
-  }
-  dateFormat="DD/MM/YYYY"
-  maxYTick={10}
-  minYTick={0}
-  options={
-    Object {
-      "layout": Object {
-        "padding": Object {
-          "bottom": 10,
-          "left": 10,
-          "right": 10,
-          "top": 10,
-        },
-      },
-      "maintainAspectRatio": false,
-      "scales": Object {
-        "xAxes": Array [
-          Object {
-            "gridLines": Object {
-              "display": true,
-            },
-            "scaleLabel": Object {
-              "display": true,
-              "labelString": "Date",
-            },
-            "ticks": Object {
-              "display": true,
-            },
-            "time": Object {
-              "displayFormats": Object {
-                "month": "MMM",
-              },
-              "parser": "DD/MM/YYYY",
-              "tooltipFormat": "ll",
-              "unit": "month",
-            },
-            "type": "time",
-          },
-        ],
-        "yAxes": Array [
-          Object {
-            "fontSize": "8px",
-            "gridLines": Object {
-              "display": true,
-              "drawBorder": true,
-            },
-            "scaleLabel": Object {
-              "display": true,
-              "labelString": "Value",
-            },
-            "ticks": Object {
-              "callback": [Function],
-              "display": true,
-              "stepSize": 1,
-              "suggestedMax": 10,
-              "suggestedMin": 0,
-            },
-          },
-        ],
-      },
-      "tooltips": Object {
-        "callbacks": Object {
-          "label": [Function],
-        },
-      },
-    }
-  }
-  showXAxisLabel={true}
-  showXGridLines={true}
-  showXTicks={true}
-  showYAxisLabel={true}
-  showYGridLines={true}
-  showYTicks={true}
-  timeDisplayFormat="MMM"
-  timeToolTipFormat="ll"
-  timeUnit="month"
-  xAxisLabel="Date"
-  yAxisLabel="Value"
-  yTickStepSize={1}
 />
 `;
 
@@ -952,10 +562,6 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with gradient 1`]
             "gridLines": Object {
               "display": true,
             },
-            "scaleLabel": Object {
-              "display": false,
-              "labelString": "",
-            },
             "ticks": Object {
               "display": true,
             },
@@ -977,10 +583,6 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with gradient 1`]
               "display": true,
               "drawBorder": true,
             },
-            "scaleLabel": Object {
-              "display": false,
-              "labelString": "",
-            },
             "ticks": Object {
               "callback": [Function],
               "display": true,
@@ -998,17 +600,13 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with gradient 1`]
       },
     }
   }
-  showXAxisLabel={false}
   showXGridLines={true}
   showXTicks={true}
-  showYAxisLabel={false}
   showYGridLines={true}
   showYTicks={true}
   timeDisplayFormat="MMM"
   timeToolTipFormat="ll"
   timeUnit="month"
-  xAxisLabel=""
-  yAxisLabel=""
   yTickStepSize={1}
 />
 `;
