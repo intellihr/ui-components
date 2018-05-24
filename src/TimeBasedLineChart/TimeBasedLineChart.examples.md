@@ -16,9 +16,7 @@ const { createGradient } = require('./createGradient');
   height={500}
   backgroundColor={createGradient('rgb(67, 45, 243)')}
   yAxisLabel='Value'
-  showYAxisLabel={true}
   xAxisLabel='Date'
-  showXAxisLabel={true}
 />
 ```
 

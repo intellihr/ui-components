@@ -60,10 +60,6 @@ export interface TimeBasedLineChartProps {
   xAxisLabel?: string
   /** The label on the Y axis */
   yAxisLabel?: string
-  /** show the X axis label or not */
-  showXAxisLabel?: boolean
-  /** show the Y axis label or not */
-  showYAxisLabel?: boolean
 }
 
 export interface ChartTooltipItem {
@@ -92,12 +88,7 @@ export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartPr
     showYGridLines: true,
     showYTicks: true,
     showXTicks: true,
-    minYTick: 0,
-    xAxisLabel: '',
-    yAxisLabel: '',
-    showXAxisLabel: false,
-    showYAxisLabel: false
-
+    minYTick: 0
   }
 
   get datasets () {

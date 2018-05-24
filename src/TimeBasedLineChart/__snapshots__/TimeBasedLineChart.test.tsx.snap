@@ -198,7 +198,7 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with 2 lines and 
             },
             "scaleLabel": Object {
               "display": false,
-              "labelString": "",
+              "labelString": undefined,
             },
             "ticks": Object {
               "display": true,
@@ -223,7 +223,7 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with 2 lines and 
             },
             "scaleLabel": Object {
               "display": false,
-              "labelString": "",
+              "labelString": undefined,
             },
             "ticks": Object {
               "callback": [Function],
@@ -242,17 +242,13 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with 2 lines and 
       },
     }
   }
-  showXAxisLabel={false}
   showXGridLines={true}
   showXTicks={true}
-  showYAxisLabel={false}
   showYGridLines={true}
   showYTicks={true}
   timeDisplayFormat="MMM"
   timeToolTipFormat="ll"
   timeUnit="month"
-  xAxisLabel=""
-  yAxisLabel=""
   yTickStepSize={20}
 />
 `;
@@ -620,10 +616,8 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with axis labels 
       },
     }
   }
-  showXAxisLabel={true}
   showXGridLines={true}
   showXTicks={true}
-  showYAxisLabel={true}
   showYGridLines={true}
   showYTicks={true}
   timeDisplayFormat="MMM"
@@ -954,7 +948,7 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with gradient 1`]
             },
             "scaleLabel": Object {
               "display": false,
-              "labelString": "",
+              "labelString": undefined,
             },
             "ticks": Object {
               "display": true,
@@ -979,7 +973,7 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with gradient 1`]
             },
             "scaleLabel": Object {
               "display": false,
-              "labelString": "",
+              "labelString": undefined,
             },
             "ticks": Object {
               "callback": [Function],
@@ -998,17 +992,13 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with gradient 1`]
       },
     }
   }
-  showXAxisLabel={false}
   showXGridLines={true}
   showXTicks={true}
-  showYAxisLabel={false}
   showYGridLines={true}
   showYTicks={true}
   timeDisplayFormat="MMM"
   timeToolTipFormat="ll"
   timeUnit="month"
-  xAxisLabel=""
-  yAxisLabel=""
   yTickStepSize={1}
 />
 `;

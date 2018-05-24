@@ -18,9 +18,7 @@ export const getTimeBasedLineChartDefaultOptions = (props: TimeBasedLineChartPro
     dateFormat,
     noCustomTooltipLabel,
     xAxisLabel,
-    yAxisLabel,
-    showXAxisLabel,
-    showYAxisLabel
+    yAxisLabel
   } = props
 
   return {
@@ -45,7 +43,7 @@ export const getTimeBasedLineChartDefaultOptions = (props: TimeBasedLineChartPro
           }
         },
         scaleLabel: {
-          display: showXAxisLabel,
+          display: Boolean(xAxisLabel),
           labelString: xAxisLabel
         },
         gridLines: {
@@ -58,7 +56,7 @@ export const getTimeBasedLineChartDefaultOptions = (props: TimeBasedLineChartPro
       yAxes: [{
         fontSize: '8px',
         scaleLabel: {
-          display: showYAxisLabel,
+          display: Boolean(yAxisLabel),
           labelString: yAxisLabel
         },
         gridLines: {
