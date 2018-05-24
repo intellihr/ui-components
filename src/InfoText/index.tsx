@@ -20,7 +20,7 @@ const InfoIcon = () => (
 
 const ArrowIcon = () => (
   <span>
-    <i className="intelli-icon-arrow-down"/>
+    <i className='intelli-icon-arrow-down' />
   </span>
 )
 
@@ -43,7 +43,7 @@ export interface InfoTextState {
 }
 
 export class InfoText extends React.PureComponent<IInfoText, InfoTextState> {
-  constructor(props: IInfoText) {
+  constructor (props: IInfoText) {
     super(props)
     this.state = {
       isHover: false,
@@ -62,9 +62,8 @@ export class InfoText extends React.PureComponent<IInfoText, InfoTextState> {
         status: InfoTextStatus.hover
       })
     }
-
   }
-  
+
   // Hover out
   onMouseLeave = () => {
     const {
@@ -100,7 +99,7 @@ export class InfoText extends React.PureComponent<IInfoText, InfoTextState> {
         status: InfoTextStatus.hover
       })
     }
-    
+
     if (status === InfoTextStatus.clicked) {
       return this.setState({
         status: InfoTextStatus.initial
@@ -112,7 +111,7 @@ export class InfoText extends React.PureComponent<IInfoText, InfoTextState> {
     })
   }
 
-  get text(): string {
+  get text (): string {
     const {
       primaryText,
       secondaryText
@@ -122,7 +121,7 @@ export class InfoText extends React.PureComponent<IInfoText, InfoTextState> {
       status
     } = this.state
 
-    switch(status) {
+    switch (status) {
       case InfoTextStatus.initial:
         return ''
       case InfoTextStatus.hover:
@@ -132,12 +131,11 @@ export class InfoText extends React.PureComponent<IInfoText, InfoTextState> {
       default:
         return ''
     }
-
   }
 
-  get icon() {
-    const { 
-      status 
+  get icon () {
+    const {
+      status
     } = this.state
 
     if (status === InfoTextStatus.clicked) {
@@ -147,7 +145,7 @@ export class InfoText extends React.PureComponent<IInfoText, InfoTextState> {
     return <InfoIcon />
   }
 
-  render() {
+  render () {
     const {
       status
     } = this.state
