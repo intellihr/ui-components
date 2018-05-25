@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
   height: 40px;
   width: 300px;
   padding: 5px;
+
   &:hover {
     color: rgb(15, 104, 250);
     cursor: pointer;
