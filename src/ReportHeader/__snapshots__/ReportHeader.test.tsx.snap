@@ -13,12 +13,17 @@ exports[`<ReportHeader /> should render ReportHeader 1`] = `
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 40px;
   width: 300px;
+  padding: 5px;
 }
 
 .c1:hover {
-  color: rgb(67,45,243);
+  color: rgb(15,104,250);
   cursor: pointer;
 }
 
@@ -34,8 +39,12 @@ exports[`<ReportHeader /> should render ReportHeader 1`] = `
   margin-bottom: 10px;
 }
 
-.c2 {
+.c3 {
   font-size: 10px;
+}
+
+.c2 {
+  padding: 0 10px;
 }
 
 <ReportHeader
@@ -66,14 +75,15 @@ exports[`<ReportHeader /> should render ReportHeader 1`] = `
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
           >
-            <p>
-               
-               
-            </p>
+            <styled.span>
+              <span
+                className="c2"
+              />
+            </styled.span>
             <InfoIcon>
               <styled.div>
                 <div
-                  className="c2"
+                  className="c3"
                 >
                   <span
                     className="fa-stack"
