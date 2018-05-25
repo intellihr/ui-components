@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   width: 300px;
   padding: 5px;
   &:hover {
-    color: rgb(67, 45, 243);
+    color: rgb(15, 104, 250);
     cursor: pointer;
   }
 `

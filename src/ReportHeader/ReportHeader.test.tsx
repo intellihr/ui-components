@@ -9,11 +9,11 @@ describe('<ReportHeader />', () => {
         primaryText='How To Read This Chart'
         secondaryText='Hide Info'
         title={'Hello'}
-        displayInfo={true}
+        displayInfo
         renderHelperContent={() => (<span> 'I am help text' </span>)}
       />
     )
 
     expect(wrapper).toMatchSnapshot()
   })
-}
+})
