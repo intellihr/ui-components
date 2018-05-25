@@ -37,6 +37,8 @@ exports[`<ReportHeader /> should render ReportHeader 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 800;
 }
 
 .c3 {
