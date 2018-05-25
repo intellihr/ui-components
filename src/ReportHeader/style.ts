@@ -19,6 +19,8 @@ export const TitleBox = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 800;
 `
 
 export const HelpContentBox = styled.div`
