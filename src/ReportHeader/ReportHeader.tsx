@@ -95,11 +95,8 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
 
     let newStatus
 
-    debugger
 
-    if (status === InfoTextStatus.initial) {
-      newStatus = InfoTextStatus.hover
-    } else if (status === InfoTextStatus.clicked) {
+    if (status === InfoTextStatus.clicked) {
       newStatus = InfoTextStatus.initial
     } else {
       newStatus = InfoTextStatus.clicked
