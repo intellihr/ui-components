@@ -38,7 +38,7 @@ export interface IReportHeader {
   title: string
   primaryText: string
   secondaryText: string
-  renderHelperContent: () => JSX.Element
+  renderHelperContent: (isExpanded: boolean) => JSX.Element
   displayInfo: boolean
 }
 
@@ -94,6 +94,8 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
     } = this.state
 
     let newStatus
+
+    debugger
 
     if (status === InfoTextStatus.initial) {
       newStatus = InfoTextStatus.hover
@@ -163,7 +165,7 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
     if (isExpanded) {
       return (
         <HelpContentBox>
-          {renderHelperContent()}
+          {renderHelperContent(isExpanded)}
         </HelpContentBox>
       )
     }
