@@ -12,7 +12,7 @@ export const HighLightBox = styled.div`
 `
 
 export const HighLightCaption = styled.div`
-
+  padding: 5px;
 `
 
 export const HighlighImageBlock = styled.div`
