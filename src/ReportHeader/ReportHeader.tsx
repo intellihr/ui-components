@@ -38,7 +38,7 @@ export interface IReportHeader {
   renderTitle: JSX.Element
   primaryText: string
   secondaryText: string
-  renderHelperContent: JSX.Element
+  renderHelperContent?: JSX.Element
 }
 
 export interface ReportHeaderState {

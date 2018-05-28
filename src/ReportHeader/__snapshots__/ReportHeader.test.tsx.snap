@@ -1,6 +1,150 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ReportHeader /> should render ReportHeader 1`] = `
+exports[`<ReportHeader /> should render ReportHeader with info 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 40px;
+  width: 300px;
+  padding: 5px;
+}
+
+.c1:hover {
+  color: rgb(15,104,250);
+  cursor: pointer;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.c3 {
+  font-size: 10px;
+}
+
+.c2 {
+  padding: 0 10px;
+}
+
+<ReportHeader
+  primaryText="How To Read This Chart"
+  renderHelperContent={
+    <span>
+       I am help text 
+    </span>
+  }
+  renderTitle={
+    <h3>
+       I am header 
+    </h3>
+  }
+  secondaryText="Hide Info"
+>
+  <div>
+    <styled.div>
+      <div
+        className="c0"
+      >
+        <h3>
+           I am header 
+        </h3>
+        <styled.div
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <div
+            className="c1"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            <styled.span>
+              <span
+                className="c2"
+              />
+            </styled.span>
+            <InfoIcon>
+              <styled.div>
+                <div
+                  className="c3"
+                >
+                  <span
+                    className="fa-stack"
+                  >
+                    <Icon
+                      isFontAwesome={true}
+                      isLarge={false}
+                      isSpinning={false}
+                      isStacked={true}
+                      size={1}
+                      type="info"
+                    >
+                      <i
+                        aria-hidden={true}
+                        className="fa fa-info fa-stack-1x"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                      />
+                    </Icon>
+                    <Icon
+                      isFontAwesome={true}
+                      isLarge={false}
+                      isSpinning={false}
+                      isStacked={true}
+                      size={2}
+                      type="circle-thin"
+                    >
+                      <i
+                        aria-hidden={true}
+                        className="fa fa-circle-thin fa-stack-2x"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                      />
+                    </Icon>
+                  </span>
+                </div>
+              </styled.div>
+            </InfoIcon>
+          </div>
+        </styled.div>
+      </div>
+    </styled.div>
+  </div>
+</ReportHeader>
+`;
+
+exports[`<ReportHeader /> should render ReportHeader without info 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -17,10 +161,12 @@ exports[`<ReportHeader /> should render ReportHeader 1`] = `
 }
 
 <ReportHeader
-  displayInfo={true}
   primaryText="How To Read This Chart"
-  renderHelperContent={[Function]}
-  renderTitle={[Function]}
+  renderTitle={
+    <h3>
+       I am header 
+    </h3>
+  }
   secondaryText="Hide Info"
 >
   <div>
@@ -28,7 +174,9 @@ exports[`<ReportHeader /> should render ReportHeader 1`] = `
       <div
         className="c0"
       >
-        <undefined />
+        <h3>
+           I am header 
+        </h3>
       </div>
     </styled.div>
   </div>
