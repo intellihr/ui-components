@@ -35,7 +35,7 @@ export enum InfoTextStatus {
 }
 
 export interface IReportHeader {
-  renderTitle: () => JSX.Element
+  renderTitle: JSX.Element
   primaryText: string
   secondaryText: string
   renderHelperContent: (isExpanded: boolean) => JSX.Element
@@ -205,7 +205,7 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
     return (
       <div>
         <TitleBox>
-          {renderTitle()}
+          {renderTitle}
           {this.wrapper}
         </TitleBox>
         {this.helpContent}
