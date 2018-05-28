@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import classNames from 'classnames'
+import { isEmpty } from 'lodash'
 import { Icon } from '../Icon'
 import {
   Wrapper,
@@ -35,11 +35,10 @@ export enum InfoTextStatus {
 }
 
 export interface IReportHeader {
-  title: string
+  renderTitle: JSX.Element
   primaryText: string
   secondaryText: string
-  renderHelperContent: () => JSX.Element
-  displayInfo: boolean
+  renderHelperContent?: JSX.Element
 }
 
 export interface ReportHeaderState {
@@ -95,9 +94,7 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
 
     let newStatus
 
-    if (status === InfoTextStatus.initial) {
-      newStatus = InfoTextStatus.hover
-    } else if (status === InfoTextStatus.clicked) {
+    if (status === InfoTextStatus.clicked) {
       newStatus = InfoTextStatus.initial
     } else {
       newStatus = InfoTextStatus.clicked
@@ -133,14 +130,6 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
 
   get icon () {
     const {
-      displayInfo
-    } = this.props
-
-    if (!displayInfo) {
-      return null
-    }
-
-    const {
       status
     } = this.state
 
@@ -163,7 +152,7 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
     if (isExpanded) {
       return (
         <HelpContentBox>
-          {renderHelperContent()}
+          {renderHelperContent}
         </HelpContentBox>
       )
     }
@@ -173,10 +162,10 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
 
   get wrapper () {
     const {
-      displayInfo
+      renderHelperContent
     } = this.props
 
-    if (displayInfo) {
+    if (!isEmpty(renderHelperContent)) {
       return (<Wrapper
         onMouseEnter={this.onMouseEnter}
         onMouseLeave={this.onMouseLeave}
@@ -199,15 +188,13 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
 
     const {
       primaryText,
-      title,
-      renderHelperContent,
-      displayInfo
+      renderTitle
     } = this.props
 
     return (
       <div>
         <TitleBox>
-          <h3> {title} </h3>
+          {renderTitle}
           {this.wrapper}
         </TitleBox>
         {this.helpContent}

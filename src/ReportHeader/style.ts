@@ -21,7 +21,8 @@ export const TitleBox = styled.div`
   justify-content: space-between;
   margin-bottom: 10px;
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 600;
+  text-transform: uppercase;
 `
 
 export const HelpContentBox = styled.div`

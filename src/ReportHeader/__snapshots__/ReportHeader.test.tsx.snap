@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ReportHeader /> should render ReportHeader 1`] = `
+exports[`<ReportHeader /> should render ReportHeader with info 1`] = `
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -38,7 +38,8 @@ exports[`<ReportHeader /> should render ReportHeader 1`] = `
   justify-content: space-between;
   margin-bottom: 10px;
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .c3 {
@@ -50,11 +51,18 @@ exports[`<ReportHeader /> should render ReportHeader 1`] = `
 }
 
 <ReportHeader
-  displayInfo={true}
   primaryText="How To Read This Chart"
-  renderHelperContent={[Function]}
+  renderHelperContent={
+    <span>
+       I am help text 
+    </span>
+  }
+  renderTitle={
+    <h3>
+       I am header 
+    </h3>
+  }
   secondaryText="Hide Info"
-  title="Hello"
 >
   <div>
     <styled.div>
@@ -62,9 +70,7 @@ exports[`<ReportHeader /> should render ReportHeader 1`] = `
         className="c0"
       >
         <h3>
-           
-          Hello
-           
+           I am header 
         </h3>
         <styled.div
           onClick={[Function]}
@@ -132,6 +138,45 @@ exports[`<ReportHeader /> should render ReportHeader 1`] = `
             </InfoIcon>
           </div>
         </styled.div>
+      </div>
+    </styled.div>
+  </div>
+</ReportHeader>
+`;
+
+exports[`<ReportHeader /> should render ReportHeader without info 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+<ReportHeader
+  primaryText="How To Read This Chart"
+  renderTitle={
+    <h3>
+       I am header 
+    </h3>
+  }
+  secondaryText="Hide Info"
+>
+  <div>
+    <styled.div>
+      <div
+        className="c0"
+      >
+        <h3>
+           I am header 
+        </h3>
       </div>
     </styled.div>
   </div>
