@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import uuid from 'uuid'
+import { isEmpty } from 'lodash'
 import {
   MainBox,
   Col,
@@ -39,13 +40,13 @@ export class ReportInfo extends React.PureComponent <IReportInfo> {
       highlights
     } = this.props
 
-    if (!highlights) {
+    if (!isEmpty(highlights)) {
       return null
     }
 
-    return highlights.map((h: any) => (
+    return highlights.map((h: IHighlightSection) => (
       <Col key={uuid.v4()}>
-        <HighlightSection {...h.props} />
+        <HighlightSection {...h} />
       </Col>
     ))
   }
