@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import classNames from 'classnames'
+import { isEmpty } from 'lodash'
 import { Icon } from '../Icon'
 import {
   Wrapper,
@@ -38,8 +38,7 @@ export interface IReportHeader {
   renderTitle: JSX.Element
   primaryText: string
   secondaryText: string
-  renderHelperContent: (isExpanded: boolean) => JSX.Element
-  displayInfo: boolean
+  renderHelperContent: JSX.Element
 }
 
 export interface ReportHeaderState {
@@ -131,14 +130,6 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
 
   get icon () {
     const {
-      displayInfo
-    } = this.props
-
-    if (!displayInfo) {
-      return null
-    }
-
-    const {
       status
     } = this.state
 
@@ -161,7 +152,7 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
     if (isExpanded) {
       return (
         <HelpContentBox>
-          {renderHelperContent(isExpanded)}
+          {renderHelperContent}
         </HelpContentBox>
       )
     }
@@ -171,10 +162,10 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
 
   get wrapper () {
     const {
-      displayInfo
+      renderHelperContent
     } = this.props
 
-    if (displayInfo) {
+    if (!isEmpty(renderHelperContent)) {
       return (<Wrapper
         onMouseEnter={this.onMouseEnter}
         onMouseLeave={this.onMouseLeave}
@@ -197,8 +188,6 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
 
     const {
       primaryText,
-      renderHelperContent,
-      displayInfo,
       renderTitle
     } = this.props
 
