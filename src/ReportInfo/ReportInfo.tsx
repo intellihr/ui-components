@@ -40,7 +40,7 @@ export class ReportInfo extends React.PureComponent <IReportInfo> {
       highlights
     } = this.props
 
-    if (!isEmpty(highlights)) {
+    if (isEmpty(highlights)) {
       return null
     }
 
