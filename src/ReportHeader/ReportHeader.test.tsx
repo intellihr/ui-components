@@ -8,9 +8,9 @@ describe('<ReportHeader />', () => {
       <ReportHeader
         primaryText='How To Read This Chart'
         secondaryText='Hide Info'
-        title={'Hello'}
         displayInfo
-        renderHelperContent={() => (<span> 'I am help text' </span>)}
+        renderHelperContent={() => (<span> I am help text </span>)}
+        renderTitle={() => (<h3> I am header </h3>)}
       />
     )
 

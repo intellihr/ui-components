@@ -38,7 +38,8 @@ exports[`<ReportHeader /> should render ReportHeader 1`] = `
   justify-content: space-between;
   margin-bottom: 10px;
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .c3 {
@@ -53,8 +54,8 @@ exports[`<ReportHeader /> should render ReportHeader 1`] = `
   displayInfo={true}
   primaryText="How To Read This Chart"
   renderHelperContent={[Function]}
+  renderTitle={[Function]}
   secondaryText="Hide Info"
-  title="Hello"
 >
   <div>
     <styled.div>
@@ -62,9 +63,7 @@ exports[`<ReportHeader /> should render ReportHeader 1`] = `
         className="c0"
       >
         <h3>
-           
-          Hello
-           
+           I am header 
         </h3>
         <styled.div
           onClick={[Function]}
