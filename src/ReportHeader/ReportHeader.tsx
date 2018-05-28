@@ -35,7 +35,7 @@ export enum InfoTextStatus {
 }
 
 export interface IReportHeader {
-  title: string
+  renderTitle: () => JSX.Element
   primaryText: string
   secondaryText: string
   renderHelperContent: (isExpanded: boolean) => JSX.Element
@@ -94,7 +94,6 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
     } = this.state
 
     let newStatus
-
 
     if (status === InfoTextStatus.clicked) {
       newStatus = InfoTextStatus.initial
@@ -198,15 +197,15 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
 
     const {
       primaryText,
-      title,
       renderHelperContent,
-      displayInfo
+      displayInfo,
+      renderTitle
     } = this.props
 
     return (
       <div>
         <TitleBox>
-          <h3> {title} </h3>
+          {renderTitle()}
           {this.wrapper}
         </TitleBox>
         {this.helpContent}

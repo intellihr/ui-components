@@ -1,9 +1,9 @@
 import React from 'react'
 import uuid from 'uuid'
-import { 
-  MainBox, 
-  Col, 
-  HighLightBox, 
+import {
+  MainBox,
+  Col,
+  HighLightBox,
   HighLightCaption,
   HighlighImageBlock
 } from './style'
@@ -34,7 +34,7 @@ export const HighlightSection = (props: IHighlightSection) => {
 }
 
 export class ReportInfo extends React.PureComponent <IReportInfo> {
-  get highlights() {
+  get highlights () {
     const {
       highlights
     } = this.props
@@ -49,7 +49,7 @@ export class ReportInfo extends React.PureComponent <IReportInfo> {
       </Col>
     ))
   }
-  render() {
+  render () {
     const {
       description
     } = this.props

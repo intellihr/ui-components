@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { StyledComponentClass }from 'styled-components'
+import styled, { StyledComponentClass } from 'styled-components'
 
 export const MainBox = styled.div`
   display: flex;
