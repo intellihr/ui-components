@@ -1,4 +1,5 @@
 import React from 'react'
+import uuid from 'uuid'
 import { 
   MainBox, 
   Col, 
@@ -38,14 +39,12 @@ export class ReportInfo extends React.PureComponent <IReportInfo> {
       highlights
     } = this.props
 
-    console.log('the highlights is ', highlights)
-
     if (!highlights) {
       return null
     }
 
     return highlights.map((h: any) => (
-      <Col>
+      <Col key={uuid.v4()}>
         <HighlightSection {...h.props} />
       </Col>
     ))

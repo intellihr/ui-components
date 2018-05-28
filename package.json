@@ -131,5 +131,9 @@
       "node_modules/**",
       "styleguide/**"
     ]
+  },
+  "dependencies": {
+    "@types/uuid": "^3.4.3",
+    "uuid": "^3.2.1"
   }
 }
