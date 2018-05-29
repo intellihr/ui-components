@@ -39,6 +39,7 @@ export interface IReportHeader {
   primaryText: string
   secondaryText: string
   renderHelperContent?: JSX.Element
+  onShown?: () => void
 }
 
 export interface ReportHeaderState {
@@ -89,8 +90,14 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
 
   handleClick = () => {
     const {
-      status
+      status,
+      isExpanded
     } = this.state
+
+    const {
+      onShown
+    } = this.props
+
 
     let newStatus
 
@@ -98,6 +105,10 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
       newStatus = InfoTextStatus.initial
     } else {
       newStatus = InfoTextStatus.clicked
+    }
+
+    if (onShown && !isExpanded) {
+      onShown()
     }
 
     this.setState({
