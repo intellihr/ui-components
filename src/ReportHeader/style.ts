@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
   height: 40px;
   width: 300px;
   padding: 5px;
+  text-transform: uppercase;
 
   &:hover {
     color: rgb(15, 104, 250);
@@ -22,7 +23,6 @@ export const TitleBox = styled.div`
   margin-bottom: 10px;
   font-size: 14px;
   font-weight: 600;
-  text-transform: uppercase;
   align-items: center;
 `
 
