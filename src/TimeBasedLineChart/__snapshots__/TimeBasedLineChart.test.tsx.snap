@@ -202,6 +202,8 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with 2 lines and 
             },
             "ticks": Object {
               "display": true,
+              "maxRotation": 65,
+              "minRotation": 65,
             },
             "time": Object {
               "displayFormats": Object {
@@ -576,6 +578,8 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with axis labels 
             },
             "ticks": Object {
               "display": true,
+              "maxRotation": 65,
+              "minRotation": 65,
             },
             "time": Object {
               "displayFormats": Object {
@@ -952,6 +956,8 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with gradient 1`]
             },
             "ticks": Object {
               "display": true,
+              "maxRotation": 65,
+              "minRotation": 65,
             },
             "time": Object {
               "displayFormats": Object {
