@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ReportHeader /> should render ReportHeader with info 1`] = `
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -20,9 +20,10 @@ exports[`<ReportHeader /> should render ReportHeader with info 1`] = `
   height: 40px;
   width: 300px;
   padding: 5px;
+  text-transform: uppercase;
 }
 
-.c1:hover {
+.c2:hover {
   color: rgb(15,104,250);
   cursor: pointer;
 }
@@ -36,17 +37,25 @@ exports[`<ReportHeader /> should render ReportHeader with info 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 14px;
   font-weight: 600;
-  text-transform: uppercase;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.c3 {
+.c1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.c4 {
   font-size: 10px;
 }
 
-.c2 {
+.c3 {
   padding: 0 10px;
 }
 
@@ -69,29 +78,35 @@ exports[`<ReportHeader /> should render ReportHeader with info 1`] = `
       <div
         className="c0"
       >
-        <h3>
-           I am header 
-        </h3>
+        <styled.div>
+          <div
+            className="c1"
+          >
+            <h3>
+               I am header 
+            </h3>
+          </div>
+        </styled.div>
         <styled.div
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
           <div
-            className="c1"
+            className="c2"
             onClick={[Function]}
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
           >
             <styled.span>
               <span
-                className="c2"
+                className="c3"
               />
             </styled.span>
             <InfoIcon>
               <styled.div>
                 <div
-                  className="c3"
+                  className="c4"
                 >
                   <span
                     className="fa-stack"
@@ -154,10 +169,18 @@ exports[`<ReportHeader /> should render ReportHeader without info 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 14px;
   font-weight: 600;
-  text-transform: uppercase;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  font-size: 20px;
+  font-weight: 600;
 }
 
 <ReportHeader
@@ -174,9 +197,15 @@ exports[`<ReportHeader /> should render ReportHeader without info 1`] = `
       <div
         className="c0"
       >
-        <h3>
-           I am header 
-        </h3>
+        <styled.div>
+          <div
+            className="c1"
+          >
+            <h3>
+               I am header 
+            </h3>
+          </div>
+        </styled.div>
       </div>
     </styled.div>
   </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Line, ChartData } from 'react-chartjs-2'
-import { merge, get } from 'lodash'
+import { merge } from 'lodash'
 import { getTimeBasedLineChartDefaultOptions } from './chartOptions'
 
 export interface DataSet {
@@ -60,6 +60,8 @@ export interface TimeBasedLineChartProps {
   xAxisLabel?: string
   /** The label on the Y axis */
   yAxisLabel?: string
+  /** Number of degrees to rotate the tick labels by */
+  xTickLabelRotationDegree?: number
 }
 
 export interface ChartTooltipItem {

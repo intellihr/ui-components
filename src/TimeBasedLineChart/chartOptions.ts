@@ -16,7 +16,7 @@ export const getTimeBasedLineChartDefaultOptions = (props: TimeBasedLineChartPro
     timeUnit,
     timeDisplayFormat,
     dateFormat,
-    noCustomTooltipLabel,
+    xTickLabelRotationDegree,
     xAxisLabel,
     yAxisLabel
   } = props
@@ -50,7 +50,9 @@ export const getTimeBasedLineChartDefaultOptions = (props: TimeBasedLineChartPro
           display: showXGridLines
         },
         ticks: {
-          display: showXTicks
+          display: showXTicks,
+          maxRotation: xTickLabelRotationDegree || 65,
+          minRotation: xTickLabelRotationDegree || 65
         }
       }],
       yAxes: [{
