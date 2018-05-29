@@ -1,9 +1,16 @@
 import React from 'react'
-import styled, { StyledComponentClass } from 'styled-components'
+import styled, { StyledComponentClass, css } from 'styled-components'
+
+export interface IMainBox {
+  textColor: string
+}
 
 export const MainBox = styled.div`
   display: flex;
   justify-content: space-between;
+  ${(props: IMainBox) => props.textColor && css`
+    color: ${props.textColor};
+  `}
 `
 
 export const HighLightBox = styled.div`
