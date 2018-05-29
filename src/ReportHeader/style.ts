@@ -46,4 +46,3 @@ export const ArrowIcon = styled.i`
 export const IconText = styled.span`
   padding: 0 10px;
 `
-
