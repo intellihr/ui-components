@@ -20,6 +20,7 @@ exports[`<ReportHeader /> should render ReportHeader with info 1`] = `
   height: 40px;
   width: 300px;
   padding: 5px;
+  text-transform: uppercase;
 }
 
 .c1:hover {
@@ -39,7 +40,10 @@ exports[`<ReportHeader /> should render ReportHeader with info 1`] = `
   margin-bottom: 10px;
   font-size: 14px;
   font-weight: 600;
-  text-transform: uppercase;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c3 {
@@ -157,7 +161,10 @@ exports[`<ReportHeader /> should render ReportHeader without info 1`] = `
   margin-bottom: 10px;
   font-size: 14px;
   font-weight: 600;
-  text-transform: uppercase;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <ReportHeader
