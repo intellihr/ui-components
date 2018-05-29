@@ -66,13 +66,13 @@ sass-lint:
   script:
     - docker-compose run --rm gitlab-ci yarn lint:sass
 
-css-lint:
-  stage: build & test
-  except:
-    - schedules
-    - master
-  script:
-    - docker-compose run --rm gitlab-ci yarn lint:css
+# css-lint:
+#   stage: build & test
+#   except:
+#     - schedules
+#     - master
+#   script:
+#     - docker-compose run --rm gitlab-ci yarn lint:css
 
 test:
   stage: build & test

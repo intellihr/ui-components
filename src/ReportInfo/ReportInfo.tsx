@@ -16,8 +16,9 @@ export interface IHighlightSection {
 }
 
 export interface IReportInfo {
-  description: string,
+  description: string
   highlights: IHighlightSection[]
+  textColor: string
 }
 
 export const HighlightSection = (props: IHighlightSection) => {
@@ -35,6 +36,10 @@ export const HighlightSection = (props: IHighlightSection) => {
 }
 
 export class ReportInfo extends React.PureComponent <IReportInfo> {
+  public static defaultProps: Partial<IReportInfo> = {
+    textColor: 'hsl(210, 13.4%, 47.2%)'
+  }
+
   get highlights () {
     const {
       highlights
@@ -52,10 +57,11 @@ export class ReportInfo extends React.PureComponent <IReportInfo> {
   }
   render () {
     const {
-      description
+      description,
+      textColor
     } = this.props
     return (
-      <MainBox>
+      <MainBox textColor={textColor} >
         <Col>
           {description}
         </Col>

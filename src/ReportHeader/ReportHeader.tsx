@@ -7,7 +7,8 @@ import {
   HelpContentBox,
   IconBox,
   ArrowIcon,
-  IconText
+  IconText,
+  Title
 } from './style'
 
 const InfoIcon = () => (
@@ -39,6 +40,7 @@ export interface IReportHeader {
   primaryText: string
   secondaryText: string
   renderHelperContent?: JSX.Element
+  onShown?: () => void
 }
 
 export interface ReportHeaderState {
@@ -89,8 +91,13 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
 
   handleClick = () => {
     const {
-      status
+      status,
+      isExpanded
     } = this.state
+
+    const {
+      onShown
+    } = this.props
 
     let newStatus
 
@@ -98,6 +105,10 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
       newStatus = InfoTextStatus.initial
     } else {
       newStatus = InfoTextStatus.clicked
+    }
+
+    if (onShown && !isExpanded) {
+      onShown()
     }
 
     this.setState({
@@ -181,6 +192,17 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
     return null
   }
 
+  get title () {
+    const {
+      renderTitle
+    } = this.props
+    return (
+      <Title>
+        { renderTitle }
+      </Title>
+    )
+  }
+
   render () {
     const {
       status
@@ -194,7 +216,7 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
     return (
       <div>
         <TitleBox>
-          {renderTitle}
+          {this.title}
           {this.wrapper}
         </TitleBox>
         {this.helpContent}
