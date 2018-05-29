@@ -36,7 +36,6 @@ export const HighlightSection = (props: IHighlightSection) => {
 }
 
 export class ReportInfo extends React.PureComponent <IReportInfo> {
-  
   public static defaultProps: Partial<IReportInfo> = {
     textColor: 'hsl(210, 13.4%, 47.2%)'
   }

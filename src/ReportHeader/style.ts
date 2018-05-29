@@ -20,10 +20,15 @@ export const Wrapper = styled.div`
 export const TitleBox = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 14px;
   font-weight: 600;
   align-items: center;
+`
+
+export const Title = styled.div`
+  font-size: 20px;
+  font-weight: 600;
 `
 
 export const HelpContentBox = styled.div`
@@ -41,3 +46,4 @@ export const ArrowIcon = styled.i`
 export const IconText = styled.span`
   padding: 0 10px;
 `
+
