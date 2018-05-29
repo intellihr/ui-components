@@ -23,6 +23,7 @@ export const TitleBox = styled.div`
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
+  align-items: center;
 `
 
 export const HelpContentBox = styled.div`
