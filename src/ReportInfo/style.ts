@@ -8,6 +8,8 @@ export interface IMainBox {
 export const MainBox = styled.div`
   display: flex;
   justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #dfe5e8;
   ${(props: IMainBox) => props.textColor && css`
     color: ${props.textColor};
   `}
