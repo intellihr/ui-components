@@ -23,7 +23,7 @@ export const HighLightCaption = styled.div`
 `
 
 export const HighlighImageBlock = styled.div`
-  padding: 10px;
+  padding: 0 10px 10px 10px;
   height: 100%;
   width: 100%;
 `
