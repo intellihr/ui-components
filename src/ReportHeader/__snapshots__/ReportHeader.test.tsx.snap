@@ -1,6 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ReportHeader /> should render ReportHeader with info 1`] = `
+.c5.icon-small {
+  bottom: 2px;
+  font-size: xx-small;
+  position: relative;
+}
+
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -114,38 +120,40 @@ exports[`<ReportHeader /> should render ReportHeader with info 1`] = `
                     <Icon
                       isFontAwesome={true}
                       isLarge={false}
+                      isSmall={false}
                       isSpinning={false}
                       isStacked={true}
                       size={1}
                       type="info"
                     >
-                      <i
+                      <styled.span
                         aria-hidden={true}
                         className="fa fa-info fa-stack-1x"
-                        style={
-                          Object {
-                            "color": undefined,
-                          }
-                        }
-                      />
+                      >
+                        <span
+                          aria-hidden={true}
+                          className="fa fa-info fa-stack-1x c5"
+                        />
+                      </styled.span>
                     </Icon>
                     <Icon
                       isFontAwesome={true}
                       isLarge={false}
+                      isSmall={false}
                       isSpinning={false}
                       isStacked={true}
                       size={2}
                       type="circle-thin"
                     >
-                      <i
+                      <styled.span
                         aria-hidden={true}
                         className="fa fa-circle-thin fa-stack-2x"
-                        style={
-                          Object {
-                            "color": undefined,
-                          }
-                        }
-                      />
+                      >
+                        <span
+                          aria-hidden={true}
+                          className="fa fa-circle-thin fa-stack-2x c5"
+                        />
+                      </styled.span>
                     </Icon>
                   </span>
                 </div>

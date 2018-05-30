@@ -27,10 +27,30 @@ exports[`<Legend /> should render a legend 1`] = `
   font-size: 10px;
 }
 
-.c1 {
+.c2 {
   margin-left: 5px;
   white-space: nowrap;
   width: 100%;
+}
+
+.c1 {
+  color: rgb(0,255,0);
+}
+
+.c1.icon-small {
+  bottom: 2px;
+  font-size: xx-small;
+  position: relative;
+}
+
+.c3 {
+  color: rgb(0,0,255);
+}
+
+.c3.icon-small {
+  bottom: 2px;
+  font-size: xx-small;
+  position: relative;
 }
 
 <Legend
@@ -58,24 +78,27 @@ exports[`<Legend /> should render a legend 1`] = `
           color="rgb(0,255,0)"
           isFontAwesome={true}
           isLarge={false}
+          isSmall={false}
           isSpinning={false}
           isStacked={false}
           size={1}
           type="circle"
         >
-          <i
+          <styled.span
             aria-hidden={true}
             className="fa fa-circle fa-1x"
-            style={
-              Object {
-                "color": "rgb(0,255,0)",
-              }
-            }
-          />
+            color="rgb(0,255,0)"
+          >
+            <span
+              aria-hidden={true}
+              className="fa fa-circle fa-1x c1"
+              color="rgb(0,255,0)"
+            />
+          </styled.span>
         </Icon>
         <styled.span>
           <span
-            className="c1"
+            className="c2"
           >
             I am the green dataset
           </span>
@@ -88,24 +111,27 @@ exports[`<Legend /> should render a legend 1`] = `
           color="rgb(0,0,255)"
           isFontAwesome={true}
           isLarge={false}
+          isSmall={false}
           isSpinning={false}
           isStacked={false}
           size={1}
           type="circle"
         >
-          <i
+          <styled.span
             aria-hidden={true}
             className="fa fa-circle fa-1x"
-            style={
-              Object {
-                "color": "rgb(0,0,255)",
-              }
-            }
-          />
+            color="rgb(0,0,255)"
+          >
+            <span
+              aria-hidden={true}
+              className="fa fa-circle fa-1x c3"
+              color="rgb(0,0,255)"
+            />
+          </styled.span>
         </Icon>
         <styled.span>
           <span
-            className="c1"
+            className="c2"
           >
             I am BLUE!
           </span>
