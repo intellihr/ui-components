@@ -4,13 +4,13 @@ import {Anchor} from '../Anchor'
 
 export interface LinkButtonProps extends ButtonProps {
   /** Weather the button is clickable or not*/
-  disabled?: boolean
+  disabled: boolean
   /** Destination url */
-  href?: string
+  href: string
 }
 
-export class LinkButton extends React.Component<LinkButtonProps> {
-  public static defaultProps: LinkButtonProps = {
+export class LinkButton extends React.PureComponent<LinkButtonProps> {
+  public static defaultProps:  Partial<LinkButtonProps> = {
     disabled: false,
     type: 'neutral'
   }

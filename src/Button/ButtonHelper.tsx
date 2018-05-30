@@ -21,7 +21,7 @@ export interface ButtonProps {
   /** Size of the button */
   size?: ButtonSizes
   /** What type of button to display */
-  type?: ButtonTypes
+  type: ButtonTypes
   /** Any extra classes */
   className?: string
 }
