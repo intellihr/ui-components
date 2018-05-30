@@ -78,6 +78,7 @@ exports[`<ReportHeader /> should render ReportHeader with info 1`] = `
     </h3>
   }
   secondaryText="Hide Info"
+  showHelper={true}
 >
   <div>
     <styled.div>
@@ -193,12 +194,18 @@ exports[`<ReportHeader /> should render ReportHeader without info 1`] = `
 
 <ReportHeader
   primaryText="How To Read This Chart"
+  renderHelperContent={
+    <span>
+       I am help text 
+    </span>
+  }
   renderTitle={
     <h3>
        I am header 
     </h3>
   }
   secondaryText="Hide Info"
+  showHelper={false}
 >
   <div>
     <styled.div>

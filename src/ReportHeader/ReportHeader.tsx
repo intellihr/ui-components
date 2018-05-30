@@ -41,6 +41,7 @@ export interface IReportHeader {
   secondaryText: string
   renderHelperContent?: JSX.Element
   onShown?: () => void
+  showHelper?: boolean
 }
 
 export interface ReportHeaderState {
@@ -49,6 +50,10 @@ export interface ReportHeaderState {
 }
 
 export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeaderState> {
+  public static defaultProps: Partial<IReportHeader> = {
+    showHelper: true
+  }
+
   constructor (props: IReportHeader) {
     super(props)
     this.state = {
@@ -173,10 +178,11 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
 
   get wrapper () {
     const {
+      showHelper,
       renderHelperContent
     } = this.props
 
-    if (!isEmpty(renderHelperContent)) {
+    if (showHelper && !isEmpty(renderHelperContent)) {
       return (<Wrapper
         onMouseEnter={this.onMouseEnter}
         onMouseLeave={this.onMouseLeave}
@@ -204,15 +210,6 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
   }
 
   render () {
-    const {
-      status
-    } = this.state
-
-    const {
-      primaryText,
-      renderTitle
-    } = this.props
-
     return (
       <div>
         <TitleBox>
