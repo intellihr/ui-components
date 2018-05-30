@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LinkButton /> should render a disabled link button 1`] = `
+<Anchor
+  href="#"
+  type="neutral"
+>
+  <span
+    className="button neutral disabled"
+  >
+    testing testing 123
+  </span>
+</Anchor>
+`;
+
+exports[`<LinkButton /> should render a link button with a simple text 1`] = `
+<Anchor
+  href="#"
+  type="neutral"
+>
+  <span
+    className="button neutral"
+  >
+    testing testing 123
+  </span>
+</Anchor>
+`;
+
+exports[`<LinkButton /> should render a link button with a size large 1`] = `
+<Anchor
+  href="#"
+  size="large"
+  type="neutral"
+>
+  <span
+    className="button large neutral"
+  >
+    testing testing 123
+  </span>
+</Anchor>
+`;
+
+exports[`<LinkButton /> should render a link button with a type delete-subtle 1`] = `
+<Anchor
+  href="#"
+  type="delete-subtle"
+>
+  <span
+    className="button delete-subtle"
+  >
+    testing testing 123
+  </span>
+</Anchor>
+`;
