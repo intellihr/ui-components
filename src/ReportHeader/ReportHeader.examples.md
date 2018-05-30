@@ -1,12 +1,18 @@
-## Basic text link
+## Basic report header
+
+```jsx
+<ReportHeader
+  renderTitle='Hello'
+/>
+```
+
+## Report header with helper content
 
 ```jsx
 <ReportHeader
   primaryText='How To Read This Chart'
   secondaryText='Hide Info'
-  title={'Hello'}
-  displayInfo={true}
-  renderHelperContent={() => <div> I am helper text </div>}
+  renderTitle='Hello'
+  renderHelperContent={<div> I am helper text </div>}
 />
 ```
-
