@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
+import { StyledIcon } from './style'
 
 export interface IconProps {
   /** FontAwesome or alternate name of the icon to display */
@@ -10,6 +11,8 @@ export interface IconProps {
   isStacked?: boolean
   /** Adds FontAwesome `fa-lg` class to icon */
   isLarge?: boolean
+  /** Adds a class to reduce the font size of the icon */
+  isSmall?: boolean
   /** Colour of the icon */
   color?: string
   /** Additional class name to pass to the icon */
@@ -20,11 +23,12 @@ export interface IconProps {
   isFontAwesome?: boolean
 }
 
-export class Icon extends React.Component<IconProps> {
+export class Icon extends React.PureComponent<IconProps> {
   public static defaultProps: IconProps = {
     type: '',
     isStacked: false,
     isLarge: false,
+    isSmall: false,
     isSpinning: false,
     isFontAwesome: true
   }
@@ -67,7 +71,8 @@ export class Icon extends React.Component<IconProps> {
   get classNames (): string {
     const {
       className,
-      isSpinning
+      isSpinning,
+      isSmall
     } = this.props
 
     return classNames(
@@ -75,7 +80,10 @@ export class Icon extends React.Component<IconProps> {
       'fa',
       this.type,
       this.sizeClass,
-      {'fa-spin': isSpinning}
+      {
+        'fa-spin': isSpinning,
+        'icon-small': isSmall
+      }
     )
   }
 
@@ -85,10 +93,10 @@ export class Icon extends React.Component<IconProps> {
     } = this.props
 
     return (
-      <i
+      <StyledIcon
         className={this.classNames}
         aria-hidden
-        style={{color}}
+        color={color}
       />
     )
   }
