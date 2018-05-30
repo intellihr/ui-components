@@ -4,7 +4,7 @@ import {
   isNil,
   isEmpty
 } from 'lodash'
-import { Icon } from '../Icon'
+import { FontAwesomeIcon } from '../Icon'
 import {
   withSkeleton,
   SkeletonComponentProps
@@ -83,7 +83,7 @@ class AvatarComponent extends React.Component<AvatarProps> {
 
     return (
       <div className={classNames('avatar-hover', `avatar-${size}`)}>
-        <Icon type='camera' />
+        <FontAwesomeIcon type='camera' />
         <span className='avatar-hover-label'>{hoverLabel}</span>
       </div>
     )

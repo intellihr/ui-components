@@ -8,22 +8,21 @@ exports[`<Icon /> should render a large icon 1`] = `
 }
 
 <Icon
-  isFontAwesome={true}
   isLarge={true}
   isSmall={false}
   isSpinning={false}
   isStacked={false}
   type="circle"
 >
-  <styled.span
+  <styled.i
     aria-hidden={true}
-    className="fa fa-circle fa-lg"
+    className="icon fa circle fa-lg"
   >
-    <span
+    <i
       aria-hidden={true}
-      className="fa fa-circle fa-lg c0"
+      className="icon fa circle fa-lg c0"
     />
-  </styled.span>
+  </styled.i>
 </Icon>
 `;
 
@@ -35,22 +34,21 @@ exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
 }
 
 <Icon
-  isFontAwesome={false}
   isLarge={false}
   isSmall={false}
   isSpinning={false}
   isStacked={false}
   type="intelli-icon-avatar"
 >
-  <styled.span
+  <styled.i
     aria-hidden={true}
-    className="fa intelli-icon-avatar"
+    className="icon fa intelli-icon-avatar"
   >
-    <span
+    <i
       aria-hidden={true}
-      className="fa intelli-icon-avatar c0"
+      className="icon fa intelli-icon-avatar c0"
     />
-  </styled.span>
+  </styled.i>
 </Icon>
 `;
 
@@ -67,24 +65,23 @@ exports[`<Icon /> should render icon with colour 1`] = `
 
 <Icon
   color="#1A2B3C"
-  isFontAwesome={true}
   isLarge={false}
   isSmall={false}
   isSpinning={false}
   isStacked={false}
-  type="check"
+  type="fa-check"
 >
-  <styled.span
+  <styled.i
     aria-hidden={true}
-    className="fa fa-check"
+    className="icon fa fa-check"
     color="#1A2B3C"
   >
-    <span
+    <i
       aria-hidden={true}
-      className="fa fa-check c0"
+      className="icon fa fa-check c0"
       color="#1A2B3C"
     />
-  </styled.span>
+  </styled.i>
 </Icon>
 `;
 
@@ -96,22 +93,21 @@ exports[`<Icon /> should render icon with no size or colour 1`] = `
 }
 
 <Icon
-  isFontAwesome={true}
   isLarge={false}
   isSmall={false}
   isSpinning={false}
   isStacked={false}
-  type="check"
+  type="fa-check"
 >
-  <styled.span
+  <styled.i
     aria-hidden={true}
-    className="fa fa-check"
+    className="icon fa fa-check"
   >
-    <span
+    <i
       aria-hidden={true}
-      className="fa fa-check c0"
+      className="icon fa fa-check c0"
     />
-  </styled.span>
+  </styled.i>
 </Icon>
 `;
 
@@ -123,22 +119,21 @@ exports[`<Icon /> should render icon with no stack or size if only isStacked is 
 }
 
 <Icon
-  isFontAwesome={true}
   isLarge={false}
   isSmall={false}
   isSpinning={false}
   isStacked={true}
-  type="check"
+  type="fa-check"
 >
-  <styled.span
+  <styled.i
     aria-hidden={true}
-    className="fa fa-check"
+    className="icon fa fa-check"
   >
-    <span
+    <i
       aria-hidden={true}
-      className="fa fa-check c0"
+      className="icon fa fa-check c0"
     />
-  </styled.span>
+  </styled.i>
 </Icon>
 `;
 
@@ -150,23 +145,22 @@ exports[`<Icon /> should render icon with size 1`] = `
 }
 
 <Icon
-  isFontAwesome={true}
   isLarge={false}
   isSmall={false}
   isSpinning={false}
   isStacked={false}
   size={3}
-  type="check"
+  type="fa-check"
 >
-  <styled.span
+  <styled.i
     aria-hidden={true}
-    className="fa fa-check fa-3x"
+    className="icon fa fa-check fa-3x"
   >
-    <span
+    <i
       aria-hidden={true}
-      className="fa fa-check fa-3x c0"
+      className="icon fa fa-check fa-3x c0"
     />
-  </styled.span>
+  </styled.i>
 </Icon>
 `;
 
@@ -178,22 +172,21 @@ exports[`<Icon /> should render icon with stack and size 1`] = `
 }
 
 <Icon
-  isFontAwesome={true}
   isLarge={false}
   isSmall={false}
   isSpinning={false}
   isStacked={true}
   size={2}
-  type="check"
+  type="fa-check"
 >
-  <styled.span
+  <styled.i
     aria-hidden={true}
-    className="fa fa-check fa-stack-2x"
+    className="icon fa fa-check fa-stack-2x"
   >
-    <span
+    <i
       aria-hidden={true}
-      className="fa fa-check fa-stack-2x c0"
+      className="icon fa fa-check fa-stack-2x c0"
     />
-  </styled.span>
+  </styled.i>
 </Icon>
 `;

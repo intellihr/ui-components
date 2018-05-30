@@ -4,13 +4,8 @@ exports[`<DotStatusLabel /> should render a dot status label 1`] = `
 <span
   className="DotStatusLabel dot-status-label"
 >
-  <Icon
+  <FontAwesomeIcon
     color="rgb(192, 48, 0)"
-    isFontAwesome={true}
-    isLarge={false}
-    isSmall={false}
-    isSpinning={false}
-    isStacked={false}
     size={1}
     type="circle"
   />
@@ -21,12 +16,7 @@ exports[`<DotStatusLabel /> should render a dot status label with default values
 <span
   className="DotStatusLabel dot-status-label"
 >
-  <Icon
-    isFontAwesome={true}
-    isLarge={false}
-    isSmall={false}
-    isSpinning={false}
-    isStacked={false}
+  <FontAwesomeIcon
     size={1}
     type="circle"
   />
@@ -37,12 +27,7 @@ exports[`<DotStatusLabel /> should render a hollow dot status label 1`] = `
 <span
   className="DotStatusLabel dot-status-label"
 >
-  <Icon
-    isFontAwesome={true}
-    isLarge={false}
-    isSmall={false}
-    isSpinning={false}
-    isStacked={false}
+  <FontAwesomeIcon
     size={1}
     type="circle-o"
   />
