@@ -8,6 +8,7 @@ exports[`<DotStatusLabel /> should render a dot status label 1`] = `
     color="rgb(192, 48, 0)"
     isFontAwesome={true}
     isLarge={false}
+    isSmall={false}
     isSpinning={false}
     isStacked={false}
     size={1}
@@ -23,6 +24,7 @@ exports[`<DotStatusLabel /> should render a dot status label with default values
   <Icon
     isFontAwesome={true}
     isLarge={false}
+    isSmall={false}
     isSpinning={false}
     isStacked={false}
     size={1}
@@ -38,6 +40,7 @@ exports[`<DotStatusLabel /> should render a hollow dot status label 1`] = `
   <Icon
     isFontAwesome={true}
     isLarge={false}
+    isSmall={false}
     isSpinning={false}
     isStacked={false}
     size={1}
