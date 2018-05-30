@@ -1,0 +1,466 @@
+$button-spacing: 10px;
+
+$button-styles: (
+  primary: (
+    background-color: $primary-base,
+    border: transparent,
+    text-color: $primary-text,
+    disabled-background-color: $primary-base,
+    disabled-text-color: $primary-text,
+    hover-background-color: $primary-hover,
+    hover-text-color: $primary-hover-text,
+    active-background-color: $primary-active,
+    active-text-color: $primary-hover-text
+  ),
+  secondary: (
+    background-color: $secondary-base,
+    border: transparent,
+    text-color: $secondary-text,
+    disabled-background-color: $secondary-base,
+    disabled-text-color: $secondary-text,
+    hover-background-color: $secondary-hover,
+    hover-text-color: $secondary-hover-text,
+    active-background-color: $secondary-active,
+    active-text-color: $secondary-hover-text
+  ),
+  success: (
+    background-color: $success-base,
+    border: transparent,
+    text-color: $success-text,
+    disabled-background-color: $success-base,
+    disabled-text-color: $success-text,
+    hover-background-color: $success-hover,
+    hover-text-color: $success-hover-text,
+    active-background-color: $success-active,
+    active-text-color: $success-hover-text
+  ),
+  warning: (
+    background-color: $warning-base,
+    border: transparent,
+    text-color: $warning-text,
+    disabled-background-color: $warning-base,
+    disabled-text-color: $warning-text,
+    hover-background-color: $warning-hover,
+    hover-text-color: $warning-hover-text,
+    active-background-color: $warning-active,
+    active-text-color: $warning-hover-text
+  ),
+  alert: (
+    background-color: $alert-base,
+    border: transparent,
+    text-color: $alert-text,
+    disabled-background-color: $alert-base,
+    disabled-text-color: $alert-text,
+    hover-background-color: $alert-hover,
+    hover-text-color: $alert-hover-text,
+    active-background-color: $alert-active,
+    active-text-color: $alert-hover-text
+  ),
+  neutral: (
+    background-color: $neutral-base,
+    border: transparent,
+    text-color: $neutral-text,
+    disabled-background-color: $neutral-base,
+    disabled-text-color: $neutral-text,
+    hover-background-color: $neutral-hover,
+    hover-text-color: $neutral-hover-text,
+    active-background-color: $neutral-active,
+    active-text-color: $neutral-hover-text
+  ),
+  highlight: (
+    background-color: $highlight-base,
+    border: transparent,
+    text-color: $highlight-text,
+    disabled-background-color: $highlight-base,
+    disabled-text-color: $highlight-text,
+    hover-background-color: $highlight-hover,
+    hover-text-color: $highlight-hover-text,
+    active-background-color: $highlight-active,
+    active-text-color: $highlight-hover-text
+  ),
+  dark: (
+    background-color: $dark-base,
+    border: transparent,
+    text-color: $dark-text,
+    disabled-background-color: $dark-base,
+    disabled-text-color: $dark-text,
+    hover-background-color: $dark-hover,
+    hover-text-color: $dark-hover-text,
+    active-background-color: $dark-active,
+    active-text-color: $dark-hover-text
+  ),
+  light: (
+    background-color: $light-base,
+    border: transparent,
+    text-color: $light-text,
+    disabled-background-color: $light-base,
+    disabled-text-color: $light-text,
+    hover-background-color: $light-hover,
+    hover-text-color: $light-hover-text,
+    active-background-color: $light-active,
+    active-text-color: $light-hover-text
+  ),
+  primary-borderless: (
+    background-color: transparent,
+    border: transparent,
+    text-color: $primary-base,
+    disabled-background-color: transparent,
+    disabled-text-color: $primary-base,
+    hover-background-color: $primary-base,
+    hover-text-color: $primary-text,
+    active-background-color: $primary-active,
+    active-text-color: $primary-hover-text
+  ),
+  secondary-borderless: (
+    background-color: transparent,
+    border: transparent,
+    text-color: $secondary-base,
+    disabled-background-color: transparent,
+    disabled-text-color: $secondary-base,
+    hover-background-color: $secondary-base,
+    hover-text-color: $secondary-text,
+    active-background-color: $secondary-active,
+    active-text-color: $secondary-hover-text
+  ),
+  success-borderless: (
+    background-color: transparent,
+    border: transparent,
+    text-color: $success-base,
+    disabled-background-color: transparent,
+    disabled-text-color: $success-base,
+    hover-background-color: $success-base,
+    hover-text-color: $success-text,
+    active-background-color: $success-active,
+    active-text-color: $success-hover-text
+  ),
+  warning-borderless: (
+    background-color: transparent,
+    border: transparent,
+    text-color: $warning-base,
+    disabled-background-color: transparent,
+    disabled-text-color: $warning-base,
+    hover-background-color: $warning-base,
+    hover-text-color: $warning-text,
+    active-background-color: $warning-active,
+    active-text-color: $warning-hover-text
+  ),
+  alert-borderless: (
+    background-color: transparent,
+    border: transparent,
+    text-color: $alert-base,
+    disabled-background-color: transparent,
+    disabled-text-color: $alert-base,
+    hover-background-color: $alert-base,
+    hover-text-color: $alert-text,
+    active-background-color: $alert-active,
+    active-text-color: $alert-hover-text
+  ),
+  neutral-borderless: (
+    background-color: transparent,
+    border: transparent,
+    text-color: $neutral-text,
+    disabled-background-color: transparent,
+    disabled-text-color: $neutral-base,
+    hover-background-color: $neutral-base,
+    hover-text-color: $neutral-text,
+    active-background-color: $neutral-active,
+    active-text-color: $neutral-hover-text
+  ),
+  highlight-borderless: (
+    background-color: transparent,
+    border: transparent,
+    text-color: $highlight-base,
+    disabled-background-color: transparent,
+    disabled-text-color: $highlight-base,
+    hover-background-color: $highlight-base,
+    hover-text-color: $highlight-text,
+    active-background-color: $highlight-active,
+    active-text-color: $highlight-hover-text
+  ),
+  dark-borderless: (
+    background-color: transparent,
+    border: transparent,
+    text-color: $dark-base,
+    disabled-background-color: transparent,
+    disabled-text-color: $dark-base,
+    hover-background-color: $dark-base,
+    hover-text-color: $dark-text,
+    active-background-color: $dark-active,
+    active-text-color: $dark-hover-text
+  ),
+  light-borderless: (
+    background-color: transparent,
+    border: transparent,
+    text-color: $light-base,
+    disabled-background-color: transparent,
+    disabled-text-color: $light-base,
+    hover-background-color: $light-base,
+    hover-text-color: $light-text,
+    active-background-color: $light-active,
+    active-text-color: $light-hover-text
+  ),
+  primary-hollow: (
+    background-color: transparent,
+    border: $primary-base,
+    text-color: $primary-hollow-text,
+    disabled-background-color: transparent,
+    disabled-text-color: $primary-hollow-text,
+    hover-background-color: $primary-hollow-hover,
+    hover-text-color: $primary-hollow-text,
+    active-background-color: $primary-hollow-active,
+    active-text-color: $primary-hollow-active-text,
+    hover-border-color: $primary-hollow-base
+  ),
+  secondary-hollow: (
+    background-color: transparent,
+    border: $secondary-base,
+    text-color: $secondary-hollow-text,
+    disabled-background-color: transparent,
+    disabled-text-color: $secondary-hollow-text,
+    hover-background-color: $secondary-hollow-hover,
+    hover-text-color: $secondary-hollow-text,
+    active-background-color: $secondary-hollow-active,
+    active-text-color: $secondary-hollow-active-text,
+    hover-border-color: $secondary-hollow-base
+  ),
+  success-hollow: (
+    background-color: transparent,
+    border: $success-base,
+    text-color: $success-hollow-text,
+    disabled-background-color: transparent,
+    disabled-text-color: $success-hollow-text,
+    hover-background-color: $success-hollow-hover,
+    hover-text-color: $success-hollow-text,
+    active-background-color: $success-hollow-active,
+    active-text-color: $success-hollow-active-text,
+    hover-border-color: $success-hollow-base
+  ),
+  warning-hollow: (
+    background-color: transparent,
+    border: $warning-base,
+    text-color: $warning-hollow-text,
+    disabled-background-color: transparent,
+    disabled-text-color: $warning-hollow-text,
+    hover-background-color: $warning-hollow-hover,
+    hover-text-color: $warning-hollow-text,
+    active-background-color: $warning-hollow-active,
+    active-text-color: $warning-hollow-active-text,
+    hover-border-color: $warning-hollow-base
+  ),
+  alert-hollow: (
+    background-color: transparent,
+    border: $alert-base,
+    text-color: $alert-hollow-text,
+    disabled-background-color: transparent,
+    disabled-text-color: $alert-hollow-text,
+    hover-background-color: $alert-hollow-hover,
+    hover-text-color: $alert-hollow-text,
+    active-background-color: $alert-hollow-active,
+    active-text-color: $alert-hollow-active-text,
+    hover-border-color: $alert-hollow-base
+  ),
+  neutral-hollow: (
+    background-color: transparent,
+    border: $neutral-base,
+    text-color: $neutral-hollow-text,
+    disabled-background-color: transparent,
+    disabled-text-color: $neutral-hollow-text,
+    hover-background-color: $neutral-hollow-hover,
+    hover-text-color: $neutral-hollow-text,
+    active-background-color: $neutral-hollow-active,
+    active-text-color: $neutral-hollow-active-text,
+    hover-border-color: $neutral-hollow-base
+  ),
+  highlight-hollow: (
+    background-color: transparent,
+    border: $highlight-base,
+    text-color: $highlight-hollow-text,
+    disabled-background-color: transparent,
+    disabled-text-color: $highlight-hollow-text,
+    hover-background-color: $highlight-hollow-hover,
+    hover-text-color: $highlight-hollow-text,
+    active-background-color: $highlight-hollow-active,
+    active-text-color: $highlight-hollow-active-text,
+    hover-border-color: $highlight-hollow-base
+  ),
+  dark-hollow: (
+    background-color: transparent,
+    border: $dark-base,
+    text-color: $dark-hollow-text,
+    disabled-background-color: transparent,
+    disabled-text-color: $dark-hollow-text,
+    hover-background-color: $dark-hollow-hover,
+    hover-text-color: $dark-hollow-text,
+    active-background-color: $dark-hollow-active,
+    active-text-color: $dark-hollow-active-text,
+    hover-border-color: $dark-hollow-base
+  ),
+  light-hollow: (
+    background-color: transparent,
+    border: $light-base,
+    text-color: $light-hollow-text,
+    disabled-background-color: transparent,
+    disabled-text-color: $light-hollow-text,
+    hover-background-color: $light-hollow-hover,
+    hover-text-color: $light-hollow-text,
+    active-background-color: $light-hollow-active,
+    active-text-color: $light-hollow-active-text,
+    hover-border-color: $light-hollow-base
+  ),
+  cancel: (
+    background-color: transparent,
+    border: transparent,
+    text-color: lighten($main-text, 24%),
+    disabled-background-color: transparent,
+    disabled-text-color: lighten($main-text, 24%),
+    hover-background-color: transparent,
+    hover-text-color: $main-text,
+    active-background-color: transparent,
+    active-text-color: $main-text
+  ),
+  add: (
+    background-color: transparent,
+    border: transparent,
+    text-color: $secondary-base,
+    disabled-background-color: transparent,
+    disabled-text-color: $secondary-base,
+    hover-background-color: $secondary-base,
+    hover-text-color: $secondary-text,
+    active-background-color: $secondary-active,
+    active-text-color: $secondary-hover-text
+  ),
+  add-subtle: (
+    background-color: transparent,
+    border: transparent,
+    text-color: darken($neutral-base, 10%),
+    disabled-background-color: transparent,
+    disabled-text-color: darken($neutral-base, 10%),
+    hover-background-color: transparent,
+    hover-text-color: $secondary-base,
+    active-background-color: transparent,
+    active-text-color: $secondary-base
+  ),
+  delete: (
+    background-color: $neutral,
+    border: transparent,
+    text-color: $alert,
+    disabled-background-color: $neutral,
+    disabled-text-color: $neutral-text,
+    hover-background-color: $alert-hover,
+    hover-text-color: $alert-hover-text,
+    active-background-color: $alert-active,
+    active-text-color: $alert-hover-text
+  ),
+  delete-subtle: (
+    background-color: $neutral,
+    border: transparent,
+    text-color: $neutral-text,
+    disabled-background-color: $neutral,
+    disabled-text-color: $neutral-text,
+    hover-background-color: $alert-hover,
+    hover-text-color: $alert-hover-text,
+    active-background-color: $alert-active,
+    active-text-color: $alert-hover-text
+  ),
+  resolve: (
+    background-color: $neutral,
+    border: transparent,
+    text-color: $neutral-text,
+    disabled-background-color: $neutral,
+    disabled-text-color: $neutral-text,
+    hover-background-color: $success-hover,
+    hover-text-color: $success-hover-text,
+    active-background-color: $success-active,
+    active-text-color: $success-hover-text
+  ),
+  skip: (
+    background-color: transparent,
+    border: transparent,
+    text-color: $neutral-text,
+    disabled-background-color: transparent,
+    disabled-text-color: $neutral-base,
+    hover-background-color: $neutral-base,
+    hover-text-color: $neutral-text,
+    active-background-color: $neutral-active,
+    active-text-color: $neutral-hover-text
+  )
+);
+
+@mixin add-disabled ($background-color, $text-color) {
+  &:disabled,
+  &.disabled,
+  &[disabled] {
+    background-color: $background-color;
+    color: $text-color;
+    cursor: not-allowed;
+    opacity: .3;
+
+    &:focus,
+    &:hover {
+      background-color: $background-color;
+      color: $text-color;
+    }
+  }
+}
+
+@mixin add-button-style ($style) {
+  @include add-disabled(
+    map-get($style, disabled-background-color),
+    map-get($style, disabled-text-color)
+  );
+
+  background-color: map-get($style, background-color);
+  border-color: map-get($style, border);
+  color: map-get($style, text-color);
+
+  &:focus,
+  &:hover,
+  &.hover {
+    background-color: map-get($style, hover-background-color);
+    color: map-get($style, hover-text-color);
+
+    @if map-has-key($style, hover-border-color) {
+      border-color: map-get($style, hover-border-color);
+    }
+  }
+
+  &:active,
+  &.active {
+    background-color: map-get($style, active-background-color);
+    color: map-get($style, active-text-color);
+  }
+}
+
+:local(.button) {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: .9rem;
+  font-weight: 600;
+  line-height: 1;
+  margin: 0 .125rem 1rem;
+  outline: none;
+  padding: .85em 1em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color .25s ease-out, color .25s ease-out;
+
+  .fa {
+    vertical-align: initial;
+  }
+
+  @each $colour, $style in $button-styles {
+    &.#{$colour} {
+      @include add-button-style($style);
+    }
+  }
+
+  &.small {
+    font-size: .75rem;
+  }
+
+  &.large {
+    font-size: 1.25rem;
+  }
+}
