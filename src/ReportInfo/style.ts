@@ -22,6 +22,8 @@ export const HighLightBox = styled.div`
 
 export const HighLightCaption = styled.div`
   padding: 5px;
+  font-size: 13px;
+  line-height: 1.3;
 `
 
 export const HighlighImageBlock = styled.div`
@@ -33,4 +35,9 @@ export const HighlighImageBlock = styled.div`
 export const Col = styled.div`
   flex: 1;
   width: 32%;
+`
+
+export const Description = styled.div`
+  font-size: 14px;
+  line-height: 1.5;
 `
