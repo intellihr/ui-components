@@ -18,7 +18,9 @@ export const getTimeBasedLineChartDefaultOptions = (props: TimeBasedLineChartPro
     dateFormat,
     xTickLabelRotationDegree,
     xAxisLabel,
-    yAxisLabel
+    yAxisLabel,
+    minXTick,
+    maxXTick
   } = props
 
   return {
@@ -40,7 +42,9 @@ export const getTimeBasedLineChartDefaultOptions = (props: TimeBasedLineChartPro
           unit: timeUnit,
           displayFormats: {
             [timeUnit]: timeDisplayFormat
-          }
+          },
+          min: minXTick,
+          max: maxXTick
         },
         scaleLabel: {
           display: Boolean(xAxisLabel),
