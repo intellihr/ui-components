@@ -6,12 +6,13 @@ import {
   Col,
   HighLightBox,
   HighLightCaption,
-  HighlighImageBlock
+  HighlighImageBlock,
+  Description
 } from './style'
 
 export interface IHighlightSection {
   caption: string,
-  imageUrl: string,
+  imageUrl?: string,
   title?: string
 }
 
@@ -25,9 +26,10 @@ export const HighlightSection = (props: IHighlightSection) => {
   return (
     <HighLightBox>
       <h5> {props.title} </h5>
-      <HighlighImageBlock>
+      {props.imageUrl && <HighlighImageBlock>
         <img src={props.imageUrl} />
-      </HighlighImageBlock>
+      </HighlighImageBlock>}
+
       <HighLightCaption>
         {props.caption}
       </HighLightCaption>
@@ -55,6 +57,17 @@ export class ReportInfo extends React.PureComponent <IReportInfo> {
       </Col>
     ))
   }
+
+  get descriptionSection () {
+    const {
+      description
+    } = this.props
+
+    return (<Description>
+      {description}
+    </Description>)
+  }
+  
   render () {
     const {
       description,
@@ -63,7 +76,7 @@ export class ReportInfo extends React.PureComponent <IReportInfo> {
     return (
       <MainBox textColor={textColor} >
         <Col>
-          {description}
+          {this.descriptionSection}
         </Col>
         {this.highlights}
       </MainBox>
