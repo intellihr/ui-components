@@ -62,6 +62,10 @@ export interface TimeBasedLineChartProps {
   yAxisLabel?: string
   /** Number of degrees to rotate the tick labels by */
   xTickLabelRotationDegree?: number
+  /** min X tick value on X Axis */
+  minXTick?: string
+  /** max X tick value on X Axis */
+  maxXTick?: string
 }
 
 export interface ChartTooltipItem {
