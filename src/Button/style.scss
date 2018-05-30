@@ -1,7 +1,7 @@
 $button-spacing: 10px;
 
 $button-styles: (
-  primary:(
+  primary: (
     background-color: $primary-base,
     border: transparent,
     text-color: $primary-text,
@@ -12,7 +12,7 @@ $button-styles: (
     active-background-color: $primary-active,
     active-text-color: $primary-hover-text
   ),
-  secondary:(
+  secondary: (
     background-color: $secondary-base,
     border: transparent,
     text-color: $secondary-text,
@@ -23,7 +23,7 @@ $button-styles: (
     active-background-color: $secondary-active,
     active-text-color: $secondary-hover-text
   ),
-  success:(
+  success: (
     background-color: $success-base,
     border: transparent,
     text-color: $success-text,
@@ -34,7 +34,7 @@ $button-styles: (
     active-background-color: $success-active,
     active-text-color: $success-hover-text
   ),
-  warning:(
+  warning: (
     background-color: $warning-base,
     border: transparent,
     text-color: $warning-text,
@@ -45,7 +45,7 @@ $button-styles: (
     active-background-color: $warning-active,
     active-text-color: $warning-hover-text
   ),
-  alert:(
+  alert: (
     background-color: $alert-base,
     border: transparent,
     text-color: $alert-text,
@@ -56,7 +56,7 @@ $button-styles: (
     active-background-color: $alert-active,
     active-text-color: $alert-hover-text
   ),
-  neutral:(
+  neutral: (
     background-color: $neutral-base,
     border: transparent,
     text-color: $neutral-text,
@@ -67,7 +67,7 @@ $button-styles: (
     active-background-color: $neutral-active,
     active-text-color: $neutral-hover-text
   ),
-  highlight:(
+  highlight: (
     background-color: $highlight-base,
     border: transparent,
     text-color: $highlight-text,
@@ -78,7 +78,7 @@ $button-styles: (
     active-background-color: $highlight-active,
     active-text-color: $highlight-hover-text
   ),
-  dark:(
+  dark: (
     background-color: $dark-base,
     border: transparent,
     text-color: $dark-text,
@@ -89,7 +89,7 @@ $button-styles: (
     active-background-color: $dark-active,
     active-text-color: $dark-hover-text
   ),
-  light:(
+  light: (
     background-color: $light-base,
     border: transparent,
     text-color: $light-text,
@@ -100,7 +100,7 @@ $button-styles: (
     active-background-color: $light-active,
     active-text-color: $light-hover-text
   ),
-  primary-borderless:(
+  primary-borderless: (
     background-color: transparent,
     border: transparent,
     text-color: $primary-base,
@@ -111,7 +111,7 @@ $button-styles: (
     active-background-color: $primary-active,
     active-text-color: $primary-hover-text
   ),
-  secondary-borderless:(
+  secondary-borderless: (
     background-color: transparent,
     border: transparent,
     text-color: $secondary-base,
@@ -122,7 +122,7 @@ $button-styles: (
     active-background-color: $secondary-active,
     active-text-color: $secondary-hover-text
   ),
-  success-borderless:(
+  success-borderless: (
     background-color: transparent,
     border: transparent,
     text-color: $success-base,
@@ -133,7 +133,7 @@ $button-styles: (
     active-background-color: $success-active,
     active-text-color: $success-hover-text
   ),
-  warning-borderless:(
+  warning-borderless: (
     background-color: transparent,
     border: transparent,
     text-color: $warning-base,
@@ -144,7 +144,7 @@ $button-styles: (
     active-background-color: $warning-active,
     active-text-color: $warning-hover-text
   ),
-  alert-borderless:(
+  alert-borderless: (
     background-color: transparent,
     border: transparent,
     text-color: $alert-base,
@@ -155,7 +155,7 @@ $button-styles: (
     active-background-color: $alert-active,
     active-text-color: $alert-hover-text
   ),
-  neutral-borderless:(
+  neutral-borderless: (
     background-color: transparent,
     border: transparent,
     text-color: $neutral-text,
@@ -166,7 +166,7 @@ $button-styles: (
     active-background-color: $neutral-active,
     active-text-color: $neutral-hover-text
   ),
-  highlight-borderless:(
+  highlight-borderless: (
     background-color: transparent,
     border: transparent,
     text-color: $highlight-base,
@@ -177,7 +177,7 @@ $button-styles: (
     active-background-color: $highlight-active,
     active-text-color: $highlight-hover-text
   ),
-  dark-borderless:(
+  dark-borderless: (
     background-color: transparent,
     border: transparent,
     text-color: $dark-base,
@@ -188,7 +188,7 @@ $button-styles: (
     active-background-color: $dark-active,
     active-text-color: $dark-hover-text
   ),
-  light-borderless:(
+  light-borderless: (
     background-color: transparent,
     border: transparent,
     text-color: $light-base,
@@ -199,7 +199,7 @@ $button-styles: (
     active-background-color: $light-active,
     active-text-color: $light-hover-text
   ),
-  primary-hollow:(
+  primary-hollow: (
     background-color: transparent,
     border: $primary-base,
     text-color: $primary-hollow-text,
@@ -211,7 +211,7 @@ $button-styles: (
     active-text-color: $primary-hollow-active-text,
     hover-border-color: $primary-hollow-base
   ),
-  secondary-hollow:(
+  secondary-hollow: (
     background-color: transparent,
     border: $secondary-base,
     text-color: $secondary-hollow-text,
@@ -223,7 +223,7 @@ $button-styles: (
     active-text-color: $secondary-hollow-active-text,
     hover-border-color: $secondary-hollow-base
   ),
-  success-hollow:(
+  success-hollow: (
     background-color: transparent,
     border: $success-base,
     text-color: $success-hollow-text,
@@ -235,7 +235,7 @@ $button-styles: (
     active-text-color: $success-hollow-active-text,
     hover-border-color: $success-hollow-base
   ),
-  warning-hollow:(
+  warning-hollow: (
     background-color: transparent,
     border: $warning-base,
     text-color: $warning-hollow-text,
@@ -247,7 +247,7 @@ $button-styles: (
     active-text-color: $warning-hollow-active-text,
     hover-border-color: $warning-hollow-base
   ),
-  alert-hollow:(
+  alert-hollow: (
     background-color: transparent,
     border: $alert-base,
     text-color: $alert-hollow-text,
@@ -259,7 +259,7 @@ $button-styles: (
     active-text-color: $alert-hollow-active-text,
     hover-border-color: $alert-hollow-base
   ),
-  neutral-hollow:(
+  neutral-hollow: (
     background-color: transparent,
     border: $neutral-base,
     text-color: $neutral-hollow-text,
@@ -271,7 +271,7 @@ $button-styles: (
     active-text-color: $neutral-hollow-active-text,
     hover-border-color: $neutral-hollow-base
   ),
-  highlight-hollow:(
+  highlight-hollow: (
     background-color: transparent,
     border: $highlight-base,
     text-color: $highlight-hollow-text,
@@ -283,7 +283,7 @@ $button-styles: (
     active-text-color: $highlight-hollow-active-text,
     hover-border-color: $highlight-hollow-base
   ),
-  dark-hollow:(
+  dark-hollow: (
     background-color: transparent,
     border: $dark-base,
     text-color: $dark-hollow-text,
@@ -295,7 +295,7 @@ $button-styles: (
     active-text-color: $dark-hollow-active-text,
     hover-border-color: $dark-hollow-base
   ),
-  light-hollow:(
+  light-hollow: (
     background-color: transparent,
     border: $light-base,
     text-color: $light-hollow-text,
@@ -307,7 +307,7 @@ $button-styles: (
     active-text-color: $light-hollow-active-text,
     hover-border-color: $light-hollow-base
   ),
-  cancel:(
+  cancel: (
     background-color: transparent,
     border: transparent,
     text-color: lighten($main-text, 24%),
@@ -318,7 +318,7 @@ $button-styles: (
     active-background-color: transparent,
     active-text-color: $main-text
   ),
-  add:(
+  add: (
     background-color: transparent,
     border: transparent,
     text-color: $secondary-base,
@@ -329,7 +329,7 @@ $button-styles: (
     active-background-color: $secondary-active,
     active-text-color: $secondary-hover-text
   ),
-  add-subtle:(
+  add-subtle: (
     background-color: transparent,
     border: transparent,
     text-color: darken($neutral-base, 10%),
@@ -340,7 +340,7 @@ $button-styles: (
     active-background-color: transparent,
     active-text-color: $secondary-base
   ),
-  delete:(
+  delete: (
     background-color: $neutral,
     border: transparent,
     text-color: $alert,
@@ -351,7 +351,7 @@ $button-styles: (
     active-background-color: $alert-active,
     active-text-color: $alert-hover-text
   ),
-  delete-subtle:(
+  delete-subtle: (
     background-color: $neutral,
     border: transparent,
     text-color: $neutral-text,
@@ -362,7 +362,7 @@ $button-styles: (
     active-background-color: $alert-active,
     active-text-color: $alert-hover-text
   ),
-  resolve:(
+  resolve: (
     background-color: $neutral,
     border: transparent,
     text-color: $neutral-text,
@@ -373,7 +373,7 @@ $button-styles: (
     active-background-color: $success-active,
     active-text-color: $success-hover-text
   ),
-  skip:(
+  skip: (
     background-color: transparent,
     border: transparent,
     text-color: $neutral-text,
@@ -392,8 +392,8 @@ $button-styles: (
   &[disabled] {
     background-color: $background-color;
     color: $text-color;
-    opacity: .3;
     cursor: not-allowed;
+    opacity: .3;
 
     &:focus,
     &:hover {
@@ -404,15 +404,14 @@ $button-styles: (
 }
 
 @mixin add-button-style ($style) {
-  background-color: map-get($style, background-color);
-  border-color: map-get($style, border);
-  color: map-get($style, text-color);
-
-
   @include add-disabled(
     map-get($style, disabled-background-color),
     map-get($style, disabled-text-color)
   );
+
+  background-color: map-get($style, background-color);
+  border-color: map-get($style, border);
+  color: map-get($style, text-color);
 
   &:focus,
   &:hover,
@@ -433,19 +432,19 @@ $button-styles: (
 }
 
 :local(.button) {
-  transition: background-color 0.25s ease-out, color 0.25s ease-out;
   border: 1px solid transparent;
   border-radius: 4px;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0 .125rem 1rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  padding: 0.85em 1em;
   cursor: pointer;
-  line-height: 1;
-  outline: none;
   display: inline-block;
+  font-size: .9rem;
+  font-weight: 600;
+  line-height: 1;
+  margin: 0 .125rem 1rem;
+  outline: none;
+  padding: .85em 1em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color .25s ease-out, color .25s ease-out;
 
   .fa {
     vertical-align: initial;
