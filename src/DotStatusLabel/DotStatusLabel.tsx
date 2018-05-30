@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import React from 'react'
-import { Icon } from '../Icon'
+import { FontAwesomeIcon } from '../Icon'
 
 const style = require('./DotStatusLabel.scss')
 
@@ -53,7 +53,7 @@ export class DotStatusLabel extends React.Component<DotStatusLabelProps> {
 
     return (
       <span className={classNames(style.DotStatusLabel, 'dot-status-label', textColor)}>
-        <Icon
+        <FontAwesomeIcon
           type={isHollow ? 'circle-o' : 'circle'}
           size={1}
           color={color}
