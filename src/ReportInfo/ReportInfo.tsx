@@ -67,7 +67,7 @@ export class ReportInfo extends React.PureComponent <IReportInfo> {
       {description}
     </Description>)
   }
-  
+
   render () {
     const {
       description,
