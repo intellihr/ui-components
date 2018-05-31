@@ -1,6 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
-import { Avatar } from '../Avatar/Avatar'
+import { Avatar } from '../Avatar'
+import { FormattedText } from '../FormattedText'
 const style = require('./style.scss')
 
 export interface CommentProps {
@@ -111,7 +112,9 @@ export class Comment extends React.Component<CommentProps> {
 
     return (
       <div className='comment-content'>
-        {comment}
+        <FormattedText
+          text={comment}
+        />
       </div>
     )
   }
