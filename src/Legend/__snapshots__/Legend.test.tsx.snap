@@ -74,28 +74,33 @@ exports[`<Legend /> should render a legend 1`] = `
       <li
         key="0"
       >
-        <Icon
+        <FontAwesomeIcon
           color="rgb(0,255,0)"
-          isFontAwesome={true}
-          isLarge={false}
-          isSmall={false}
-          isSpinning={false}
-          isStacked={false}
           size={1}
           type="circle"
         >
-          <styled.span
-            aria-hidden={true}
-            className="fa fa-circle fa-1x"
+          <Icon
             color="rgb(0,255,0)"
+            isLarge={false}
+            isSmall={false}
+            isSpinning={false}
+            isStacked={false}
+            size={1}
+            type="fa-circle"
           >
-            <span
+            <styled.i
               aria-hidden={true}
-              className="fa fa-circle fa-1x c1"
+              className="icon fa fa-circle fa-1x"
               color="rgb(0,255,0)"
-            />
-          </styled.span>
-        </Icon>
+            >
+              <i
+                aria-hidden={true}
+                className="icon fa fa-circle fa-1x c1"
+                color="rgb(0,255,0)"
+              />
+            </styled.i>
+          </Icon>
+        </FontAwesomeIcon>
         <styled.span>
           <span
             className="c2"
@@ -107,28 +112,33 @@ exports[`<Legend /> should render a legend 1`] = `
       <li
         key="1"
       >
-        <Icon
+        <FontAwesomeIcon
           color="rgb(0,0,255)"
-          isFontAwesome={true}
-          isLarge={false}
-          isSmall={false}
-          isSpinning={false}
-          isStacked={false}
           size={1}
           type="circle"
         >
-          <styled.span
-            aria-hidden={true}
-            className="fa fa-circle fa-1x"
+          <Icon
             color="rgb(0,0,255)"
+            isLarge={false}
+            isSmall={false}
+            isSpinning={false}
+            isStacked={false}
+            size={1}
+            type="fa-circle"
           >
-            <span
+            <styled.i
               aria-hidden={true}
-              className="fa fa-circle fa-1x c3"
+              className="icon fa fa-circle fa-1x"
               color="rgb(0,0,255)"
-            />
-          </styled.span>
-        </Icon>
+            >
+              <i
+                aria-hidden={true}
+                className="icon fa fa-circle fa-1x c3"
+                color="rgb(0,0,255)"
+              />
+            </styled.i>
+          </Icon>
+        </FontAwesomeIcon>
         <styled.span>
           <span
             className="c2"

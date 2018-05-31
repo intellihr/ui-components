@@ -137,24 +137,27 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
         <div
           className="avatar-hover avatar-large"
         >
-          <Icon
-            isFontAwesome={true}
-            isLarge={false}
-            isSmall={false}
-            isSpinning={false}
-            isStacked={false}
+          <FontAwesomeIcon
             type="camera"
           >
-            <styled.span
-              aria-hidden={true}
-              className="fa fa-camera"
+            <Icon
+              isLarge={false}
+              isSmall={false}
+              isSpinning={false}
+              isStacked={false}
+              type="fa-camera"
             >
-              <span
+              <styled.i
                 aria-hidden={true}
-                className="fa fa-camera c0"
-              />
-            </styled.span>
-          </Icon>
+                className="icon fa fa-camera"
+              >
+                <i
+                  aria-hidden={true}
+                  className="icon fa fa-camera c0"
+                />
+              </styled.i>
+            </Icon>
+          </FontAwesomeIcon>
           <span
             className="avatar-hover-label"
           >

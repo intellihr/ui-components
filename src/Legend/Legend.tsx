@@ -1,6 +1,6 @@
 import React from 'react'
 import { LegendWrapper, LegendLabel } from './style'
-import { Icon } from '../Icon'
+import { FontAwesomeIcon } from '../Icon'
 
 export interface LegendDataset {
   colour: string
@@ -31,7 +31,7 @@ export class Legend extends React.Component<LegendProps> {
         {datasets.map((dataset: LegendDataset, i: number) => {
           return (
             <li key={i}>
-              <Icon
+              <FontAwesomeIcon
                 type='circle'
                 size={1}
                 color={datasets[i].colour}

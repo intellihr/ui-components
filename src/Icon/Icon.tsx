@@ -19,18 +19,14 @@ export interface IconProps {
   className?: string
   /** Adds FontAwesome `fa-spin` class to icon */
   isSpinning?: boolean
-  /** Prepends fa- to `type`. Set to false to use non-FontAwesome icons */
-  isFontAwesome?: boolean
 }
 
 export class Icon extends React.PureComponent<IconProps> {
-  public static defaultProps: IconProps = {
-    type: '',
+  public static defaultProps: Partial<IconProps> = {
     isStacked: false,
     isLarge: false,
     isSmall: false,
-    isSpinning: false,
-    isFontAwesome: true
+    isSpinning: false
   }
 
   get sizeClass (): string {
@@ -55,30 +51,19 @@ export class Icon extends React.PureComponent<IconProps> {
     return ''
   }
 
-  get type (): string {
-    const {
-      isFontAwesome,
-      type
-    } = this.props
-
-    if (isFontAwesome) {
-      return `fa-${type}`
-    }
-
-    return type
-  }
-
   get classNames (): string {
     const {
       className,
+      type,
       isSpinning,
       isSmall
     } = this.props
 
     return classNames(
       className,
+      'icon',
       'fa',
-      this.type,
+      type,
       this.sizeClass,
       {
         'fa-spin': isSpinning,

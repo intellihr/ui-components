@@ -1,13 +1,13 @@
 import { mount } from 'enzyme'
 import React from 'react'
 
-import { Icon } from '../Icon'
+import { Icon } from './Icon'
 
 describe('<Icon />', () => {
   it(`should render icon with no size or colour`, () => {
     const wrapper = mount(
       <Icon
-        type='check'
+        type='fa-check'
       />
     )
 
@@ -17,7 +17,7 @@ describe('<Icon />', () => {
   it(`should render icon with size`, () => {
     const wrapper = mount(
       <Icon
-        type='check'
+        type='fa-check'
         size={3}
       />
     )
@@ -28,7 +28,7 @@ describe('<Icon />', () => {
   it(`should render icon with stack and size`, () => {
     const wrapper = mount(
       <Icon
-        type='check'
+        type='fa-check'
         size={2}
         isStacked
       />
@@ -40,7 +40,7 @@ describe('<Icon />', () => {
   it(`should render icon with no stack or size if only isStacked is given`, () => {
     const wrapper = mount(
       <Icon
-        type='check'
+        type='fa-check'
         isStacked
       />
     )
@@ -62,7 +62,7 @@ describe('<Icon />', () => {
   it(`should render icon with colour`, () => {
     const wrapper = mount(
       <Icon
-        type='check'
+        type='fa-check'
         color='#1A2B3C'
       />
     )
@@ -74,7 +74,6 @@ describe('<Icon />', () => {
     const wrapper = mount(
       <Icon
         type='intelli-icon-avatar'
-        isFontAwesome={false}
       />
     )
 

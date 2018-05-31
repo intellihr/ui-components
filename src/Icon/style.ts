@@ -4,7 +4,7 @@ export interface StyledIconProps {
   color?: string
 }
 
-export const StyledIcon = styled.span`
+export const StyledIcon = styled.i`
   ${(props: StyledIconProps) => props.color && css`
     color: ${props.color};  
   `}
