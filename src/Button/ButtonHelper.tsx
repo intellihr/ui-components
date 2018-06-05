@@ -26,13 +26,7 @@ export interface ButtonProps {
   className?: string
 }
 
-export function buttonClass (props: ButtonProps, extras?: any): string {
-  const {
-    size,
-    type,
-    className
-  } = props
-
+export function buttonClass (type: ButtonTypes, size?: ButtonSizes, className?: string, extras?: any): string {
   return classNames(
     style.button,
     [

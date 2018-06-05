@@ -17,6 +17,9 @@ export class LinkButton extends React.PureComponent<LinkButtonProps> {
 
   public render (): JSX.Element | null {
     const {
+      size,
+      type,
+      className,
       children,
       disabled,
       href,
@@ -25,7 +28,7 @@ export class LinkButton extends React.PureComponent<LinkButtonProps> {
 
     return (
       <Anchor href={disabled ? '#' : href} {...props}>
-        <span className={buttonClass(this.props, { disabled: disabled })}>
+        <span className={buttonClass(type, size, className, { disabled: disabled })}>
           {children}
         </span>
       </Anchor>
