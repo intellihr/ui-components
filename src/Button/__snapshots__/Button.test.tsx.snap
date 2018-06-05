@@ -4,7 +4,6 @@ exports[`<Button /> should render a button with a simple text 1`] = `
 <button
   className="button neutral"
   onClick={[Function]}
-  type="neutral"
 >
   testing testing 123
 </button>
@@ -14,8 +13,6 @@ exports[`<Button /> should render a button with a size large 1`] = `
 <button
   className="button large neutral"
   onClick={[Function]}
-  size="large"
-  type="neutral"
 >
   testing testing 123
 </button>
@@ -25,7 +22,6 @@ exports[`<Button /> should render a button with a type delete-subtle 1`] = `
 <button
   className="button delete-subtle"
   onClick={[Function]}
-  type="delete-subtle"
 >
   testing testing 123
 </button>
@@ -36,7 +32,6 @@ exports[`<Button /> should render a disabled button 1`] = `
   className="button neutral"
   disabled={true}
   onClick={[Function]}
-  type="neutral"
 >
   testing testing 123
 </button>
