@@ -8,12 +8,15 @@ export class Button extends React.PureComponent<ButtonProps> {
 
   public render (): JSX.Element | null {
     const {
+      size,
+      type,
+      className,
       children,
       ...props
     } = this.props
 
     return (
-      <button className={buttonClass(this.props)} {...props}>{children}</button>
+      <button className={buttonClass(size, type, className)} {...props}>{children}</button>
     )
   }
 }

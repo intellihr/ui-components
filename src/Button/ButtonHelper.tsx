@@ -15,24 +15,18 @@ export type ButtonTypes =
 
   'add' |'add-subtle' | 'delete-subtle' | 'delete' | 'resolve' | 'skip' | 'cancel'
 
-export type ButtonSizes = 'small' | 'medium' | 'large'
+export type ButtonSizes = 'small' | 'medium' | 'large' | undefined
 
 export interface ButtonProps {
   /** Size of the button */
-  size?: ButtonSizes
+  size: ButtonSizes
   /** What type of button to display */
   type: ButtonTypes
   /** Any extra classes */
   className?: string
 }
 
-export function buttonClass (props: ButtonProps, extras?: any): string {
-  const {
-    size,
-    type,
-    className
-  } = props
-
+export function buttonClass (size: ButtonSizes, type: ButtonTypes, className?: string, extras?: any): string {
   return classNames(
     style.button,
     [
