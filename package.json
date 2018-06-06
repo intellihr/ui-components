@@ -1,7 +1,7 @@
 {
   "name": "@intellihr/ui-components",
   "description": "A common React components library that is used in our company",
-  "version": "1.0.5-beta.35",
+  "version": "1.0.5-beta.36",
   "main": "./dist/",
   "types": "./es/index.d.ts",
   "files": [
@@ -134,6 +134,7 @@
     ]
   },
   "dependencies": {
+    "better-react-spinkit": "^2.0.4",
     "react-linkify": "^0.2.2",
     "uuid": "^3.2.1"
   }

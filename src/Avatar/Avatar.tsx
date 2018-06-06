@@ -45,7 +45,7 @@ class AvatarComponent extends React.Component<AvatarProps> {
     size: 'medium'
   }
 
-  constructor (props: any) {
+  constructor (props: AvatarProps) {
     super(props)
 
     this.state = {
@@ -61,7 +61,7 @@ class AvatarComponent extends React.Component<AvatarProps> {
     }
   }
 
-  protected hasImage (props: any): boolean {
+  protected hasImage (props: AvatarProps): boolean {
     const {
       imageUrl,
       imageData
