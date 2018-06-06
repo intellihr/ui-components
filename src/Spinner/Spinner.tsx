@@ -1,12 +1,13 @@
 import React from 'react'
 import classNames from 'classnames'
-import * as BetterSpinner from 'better-react-spinkit'
+import { ThreeBounce, FadingCircle } from 'better-react-spinkit'
 import { isEqual } from 'lodash'
 import { SpinnerWrapper } from './style'
+import { getColor } from '../Color'
 
 export interface SpinnerProps {
   /** Type of spinner to display */
-  type?: 'three-bounce' | 'fading-circle'
+  type: 'three-bounce' | 'fading-circle'
   /** Position of the spinner on the page */
   position?: 'page' | 'left' | 'center' | 'right' | 'inline'
   /** Size of the spinner */
@@ -17,8 +18,7 @@ export interface SpinnerProps {
 
 export class Spinner extends React.Component<SpinnerProps> {
   public static defaultProps: Partial<SpinnerProps> = {
-    type: 'three-bounce',
-    color: '#432DF3',
+    color: getColor('primary'),
     size: 20
   }
 
@@ -37,9 +37,9 @@ export class Spinner extends React.Component<SpinnerProps> {
 
     switch (type) {
       case 'three-bounce':
-        return <BetterSpinner.ThreeBounce {...attributes} />
+        return <ThreeBounce {...attributes} />
       case 'fading-circle':
-        return <BetterSpinner.FadingCircle {...attributes} />
+        return <FadingCircle {...attributes} />
     }
   }
 

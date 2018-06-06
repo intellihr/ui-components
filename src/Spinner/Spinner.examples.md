@@ -24,6 +24,7 @@
 
 ```jsx
   <Spinner
+    type='three-bounce'
     position='left'
   />
 ```
@@ -32,6 +33,7 @@
 
 ```jsx
   <Spinner
+    type='three-bounce'
     position='center'
   />
 ```
@@ -40,6 +42,7 @@
 
 ```jsx
   <Spinner
+    type='three-bounce'
     position='right'
   />
 ```
@@ -50,6 +53,7 @@
   <div>
       Hey this is some text
       <Spinner
+        type='three-bounce'
         position='inline'
       />
       And look at me spin!
@@ -65,9 +69,10 @@ initialState = { showSpinner: false };
   <Button onClick={() => setState({ showSpinner: !state.showSpinner })}>{state.showSpinner ? 'Hide' : 'Show'} Page Spinner</Button>
   {state.showSpinner ? 
       <Spinner 
-          position='page' 
-          color='green' 
-          size={100} 
+        type='three-bounce'
+        position='page' 
+        color='green' 
+        size={100} 
       /> 
   : null}
 </div>
