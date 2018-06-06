@@ -24,7 +24,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
   left: 87px;
   height: calc(100% - 16px);
   width: 2px;
-  background: #DFE5E8;
+  background: rgb(223,229,232);
 }
 
 .c3 {
@@ -168,7 +168,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
   left: 87px;
   height: calc(100% - 16px);
   width: 2px;
-  background: #DFE5E8;
+  background: rgb(223,229,232);
 }
 
 .c3 {
