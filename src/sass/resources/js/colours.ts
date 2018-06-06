@@ -50,8 +50,6 @@ function buildFunctionalColour (colour: any) {
   return functionalColour
 }
 
-
-
 function buildColourList (systemColours: any, functionalColours: any, analyticsColours: any) {
   let colourList: any = {}
   let functionalExport: any = {}
