@@ -1,6 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Legend /> should render a legend 1`] = `
+.c0 {
+  margin: 0;
+  padding: 0;
+}
+
+.c0 li {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: .8rem;
+  margin-bottom: 3px;
+}
+
+.c0 li:last-child {
+  margin-bottom: 0;
+}
+
+.c0 li i {
+  font-size: 10px;
+}
+
+.c2 {
+  margin-left: 5px;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.c1 {
+  color: rgb(0,255,0);
+}
+
+.c1.icon-small {
+  bottom: 2px;
+  font-size: xx-small;
+  position: relative;
+}
+
+.c3 {
+  color: rgb(0,0,255);
+}
+
+.c3.icon-small {
+  bottom: 2px;
+  font-size: xx-small;
+  position: relative;
+}
+
 <Legend
   datasets={
     Array [
@@ -17,33 +69,41 @@ exports[`<Legend /> should render a legend 1`] = `
 >
   <styled.ul>
     <ul
-      className="sc-bdVaJa gVmZaa"
+      className="c0"
     >
       <li
         key="0"
       >
-        <Icon
+        <FontAwesomeIcon
           color="rgb(0,255,0)"
-          isFontAwesome={true}
-          isLarge={false}
-          isSpinning={false}
-          isStacked={false}
           size={1}
           type="circle"
         >
-          <i
-            aria-hidden={true}
-            className="fa fa-circle fa-1x"
-            style={
-              Object {
-                "color": "rgb(0,255,0)",
-              }
-            }
-          />
-        </Icon>
+          <Icon
+            color="rgb(0,255,0)"
+            isLarge={false}
+            isSmall={false}
+            isSpinning={false}
+            isStacked={false}
+            size={1}
+            type="fa-circle"
+          >
+            <styled.i
+              aria-hidden={true}
+              className="icon fa fa-circle fa-1x"
+              color="rgb(0,255,0)"
+            >
+              <i
+                aria-hidden={true}
+                className="icon fa fa-circle fa-1x c1"
+                color="rgb(0,255,0)"
+              />
+            </styled.i>
+          </Icon>
+        </FontAwesomeIcon>
         <styled.span>
           <span
-            className="sc-bwzfXH IRuoF"
+            className="c2"
           >
             I am the green dataset
           </span>
@@ -52,28 +112,36 @@ exports[`<Legend /> should render a legend 1`] = `
       <li
         key="1"
       >
-        <Icon
+        <FontAwesomeIcon
           color="rgb(0,0,255)"
-          isFontAwesome={true}
-          isLarge={false}
-          isSpinning={false}
-          isStacked={false}
           size={1}
           type="circle"
         >
-          <i
-            aria-hidden={true}
-            className="fa fa-circle fa-1x"
-            style={
-              Object {
-                "color": "rgb(0,0,255)",
-              }
-            }
-          />
-        </Icon>
+          <Icon
+            color="rgb(0,0,255)"
+            isLarge={false}
+            isSmall={false}
+            isSpinning={false}
+            isStacked={false}
+            size={1}
+            type="fa-circle"
+          >
+            <styled.i
+              aria-hidden={true}
+              className="icon fa fa-circle fa-1x"
+              color="rgb(0,0,255)"
+            >
+              <i
+                aria-hidden={true}
+                className="icon fa fa-circle fa-1x c3"
+                color="rgb(0,0,255)"
+              />
+            </styled.i>
+          </Icon>
+        </FontAwesomeIcon>
         <styled.span>
           <span
-            className="sc-bwzfXH IRuoF"
+            className="c2"
           >
             I am BLUE!
           </span>

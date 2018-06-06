@@ -1,17 +1,25 @@
 # Icon
 
-## Basic Icon
+## Basic FontAwesome Icon
 
 ```jsx
-  <Icon
+  <FontAwesomeIcon
     type='star'
+  />
+```
+
+## Basic Intelli Icon
+
+```jsx
+  <IntelliIcon
+    type='smile'
   />
 ```
 
 ## Large Icon
 
 ```jsx
-  <Icon
+  <FontAwesomeIcon
     type='star'
     isLarge
   />
@@ -20,7 +28,7 @@
 ## 4x size Icon
 
 ```jsx
-  <Icon
+  <FontAwesomeIcon
     type='star'
     size={4}
   />
@@ -29,7 +37,7 @@
 ## Spinning Icon
 
 ```jsx
-  <Icon
+  <FontAwesomeIcon
     type='star'
     isSpinning
   />
@@ -38,7 +46,7 @@
 ## Coloured Icon
 
 ```jsx
-  <Icon
+  <FontAwesomeIcon
     type='star'
     color='rgb(204,204,0)'
   />
@@ -49,7 +57,7 @@
 Icon props can be used together!
 
 ```jsx
-  <Icon
+  <FontAwesomeIcon
     type='star'
     color='rgb(204,204,0)'
     isSpinning

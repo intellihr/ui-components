@@ -21,5 +21,27 @@
   >
     Like this!
   </VerticalTimelineEvent>
+  <VerticalTimelineEvent
+    eventDate='Jun 2'
+    markerComponent={
+      <Avatar
+        initials='JW'
+        size='small'
+      />
+    }
+  >
+    You can also override the default event marker with a component like Avatar
+  </VerticalTimelineEvent>
+  <VerticalTimelineEvent
+    eventDate='Jun 2'
+    markerComponent={
+      <Avatar 
+        size='small'
+        imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
+      />
+    }
+  >
+    And display a picture!
+  </VerticalTimelineEvent>
 </VerticalTimeline>
 ```

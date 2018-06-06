@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AttributeLabel Index should export AttributeLabel Component 1`] = `"AttributeLabel"`;

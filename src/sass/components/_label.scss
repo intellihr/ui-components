@@ -60,6 +60,10 @@
   &.draft {
     @extend .neutral;
   }
+
+  &.abandoned {
+    @include label-colour(white, $analytics-purple2);
+  }
 }
 
 .goal-dates-labels,

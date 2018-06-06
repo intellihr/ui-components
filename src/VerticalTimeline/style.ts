@@ -3,12 +3,14 @@ import styled, { StyledComponentClass } from 'styled-components'
 import { appColors } from '../Color'
 
 const VerticalTimelineWrapper = styled.div`
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 `
 
 const TimelineYearHeading = styled.div`
   text-align: right;
   width: 4rem;
+  font-size: 14px;
   font-weight: 600;
 `
 
@@ -18,9 +20,9 @@ const Timeline = styled.div`
   &::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 5rem;
-    height: 100%;
+    top: 12px;
+    left: 87px;
+    height: calc(100% - 16px);
     width: 2px;
     background: ${appColors.intelliGreyBlue2};
   }

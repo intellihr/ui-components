@@ -45,11 +45,17 @@ export interface RadarChartProps {
   /** RGB colour of dataLabels */
   dataLabelColour?: string
   /** Minimum tick value to display */
-  minValue?: number
+  minValue: number
   /** Maximum tick value to display */
   maxValue?: number
   /** Size of each step between ticks */
-  stepSize?: number
+  stepSize: number
+  /** Height of the chart in pixels */
+  height?: number
+  /** Display tooltips on hover */
+  showTooltips?: boolean
+  /** Will display the first value as the first tick instead of in the center of the chart */
+  minValueAsFirstTick?: boolean
 }
 
 merge(chartJSDefaults, {
@@ -71,7 +77,10 @@ export class RadarChart extends React.Component<RadarChartProps> {
     showLegend: true,
     minValue: 0,
     maxValue: 5,
-    stepSize: 1
+    stepSize: 1,
+    height: 400,
+    showTooltips: true,
+    minValueAsFirstTick: false
   }
 
   componentDidMount () {
@@ -113,7 +122,9 @@ export class RadarChart extends React.Component<RadarChartProps> {
       dataLabelColour,
       minValue,
       maxValue,
-      stepSize
+      stepSize,
+      showTooltips,
+      minValueAsFirstTick
     } = this.props
 
     return {
@@ -121,6 +132,7 @@ export class RadarChart extends React.Component<RadarChartProps> {
       responsive: true,
       maintainAspectRatio: false,
       tooltips: {
+        enabled: showTooltips,
         titleFontSize: 10,
         callbacks: {
           label: (tooltipItems: TooltipItems, data: Data) => this.tooltipLabelCallback(tooltipItems, data)
@@ -135,12 +147,17 @@ export class RadarChart extends React.Component<RadarChartProps> {
           offsetGridLines: true
         },
         ticks: {
-          min: minValue,
+          min: minValueAsFirstTick ? minValue - stepSize : minValue,
           max: maxValue,
           stepSize: stepSize,
           fontSize: 10,
           fontColor: dataLabelColour,
           callback: (label: string) => get(dataLabels, label, label)
+        }
+      },
+      layout: {
+        padding: {
+          bottom: 16
         }
       }
     }
@@ -159,6 +176,7 @@ export class RadarChart extends React.Component<RadarChartProps> {
         borderColor: dataColour,
         backgroundColor: Color(dataColour).alpha(0.25),
         pointBorderColor: dataColour,
+        pointBackgroundColor: dataColour,
         pointHoverBackgroundColor: dataColour,
         pointHitRadius: 10,
         pointHoverRadius: 5
@@ -172,15 +190,22 @@ export class RadarChart extends React.Component<RadarChartProps> {
   }
 
   public render (): JSX.Element {
+    const {
+      height
+    } = this.props
+
     return (
       <div className={classNames(style.radarChartClass, 'radar-chart')}>
         {this.chart && htmlToReactParser.parse(this.chart.chartInstance.generateLegend())}
 
-        <Radar
-          data={this.data}
-          options={this.options}
-          ref={(chart) => { this.chart = chart }}
-        />
+        <div>
+          <Radar
+            data={this.data}
+            options={this.options}
+            ref={(chart) => { this.chart = chart }}
+            height={height}
+          />
+        </div>
       </div>
     )
   }

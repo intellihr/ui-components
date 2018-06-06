@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DotStatusLabel /> should render a dot status label 1`] = `
+<span
+  className="DotStatusLabel dot-status-label"
+>
+  <FontAwesomeIcon
+    color="rgb(192, 48, 0)"
+    size={1}
+    type="circle"
+  />
+</span>
+`;
+
+exports[`<DotStatusLabel /> should render a dot status label with default values 1`] = `
+<span
+  className="DotStatusLabel dot-status-label"
+>
+  <FontAwesomeIcon
+    size={1}
+    type="circle"
+  />
+</span>
+`;
+
+exports[`<DotStatusLabel /> should render a hollow dot status label 1`] = `
+<span
+  className="DotStatusLabel dot-status-label"
+>
+  <FontAwesomeIcon
+    size={1}
+    type="circle-o"
+  />
+</span>
+`;

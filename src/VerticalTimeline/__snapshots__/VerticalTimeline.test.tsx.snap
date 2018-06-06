@@ -2,12 +2,14 @@
 
 exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
 .c0 {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .c1 {
   text-align: right;
   width: 4rem;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -18,9 +20,9 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
 .c2::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 5rem;
-  height: 100%;
+  top: 12px;
+  left: 87px;
+  height: calc(100% - 16px);
   width: 2px;
   background: #DFE5E8;
 }
@@ -38,35 +40,54 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
   margin-bottom: 0;
 }
 
+.c5 {
+  position: absolute;
+  width: auto;
+  height: 0;
+  left: 88px;
+  top: 12px;
+}
+
+.c5 > * {
+  top: -50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
 .c4 {
   text-align: right;
   color: hsl(210,13.4%,47.2%);
   position: absolute;
   width: 4rem;
-  font-size: 12px;
+  font-size: 14px;
   top: 6px;
-}
-
-.c5 {
-  background-color: white;
-  border: 2px solid rgb(223,229,232);
-  border-radius: 50%;
-  padding: 5px;
-  position: absolute;
-  left: 74px;
-  top: 7px;
+  line-height: 1;
 }
 
 .c6 {
+  border: 2px solid rgb(223,229,232);
+  position: absolute;
+  left: 50%;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: white;
+}
+
+.c7 {
   margin-left: 7rem;
 }
 
 <VerticalTimeline
   year="2006"
 >
-  <styled.div>
+  <styled.div
+    className="vertical-timeline"
+  >
     <div
-      className="c0"
+      className="vertical-timeline c0"
     >
       <styled.div>
         <div
@@ -95,14 +116,20 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                     21 Apr
                   </span>
                 </styled.span>
-                <styled.span>
-                  <span
-                    className="c5"
-                  />
-                </styled.span>
                 <styled.div>
                   <div
-                    className="c6"
+                    className="c5"
+                  >
+                    <styled.span>
+                      <span
+                        className="c6"
+                      />
+                    </styled.span>
+                  </div>
+                </styled.div>
+                <styled.div>
+                  <div
+                    className="c7"
                   >
                     Event that happened
                   </div>
@@ -119,12 +146,14 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
 
 exports[`<VerticalTimeline /> should render a vertical timeline without a year 1`] = `
 .c0 {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .c1 {
   text-align: right;
   width: 4rem;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -135,9 +164,9 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
 .c2::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 5rem;
-  height: 100%;
+  top: 12px;
+  left: 87px;
+  height: calc(100% - 16px);
   width: 2px;
   background: #DFE5E8;
 }
@@ -155,33 +184,52 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
   margin-bottom: 0;
 }
 
+.c5 {
+  position: absolute;
+  width: auto;
+  height: 0;
+  left: 88px;
+  top: 12px;
+}
+
+.c5 > * {
+  top: -50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
 .c4 {
   text-align: right;
   color: hsl(210,13.4%,47.2%);
   position: absolute;
   width: 4rem;
-  font-size: 12px;
+  font-size: 14px;
   top: 6px;
-}
-
-.c5 {
-  background-color: white;
-  border: 2px solid rgb(223,229,232);
-  border-radius: 50%;
-  padding: 5px;
-  position: absolute;
-  left: 74px;
-  top: 7px;
+  line-height: 1;
 }
 
 .c6 {
+  border: 2px solid rgb(223,229,232);
+  position: absolute;
+  left: 50%;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: white;
+}
+
+.c7 {
   margin-left: 7rem;
 }
 
 <VerticalTimeline>
-  <styled.div>
+  <styled.div
+    className="vertical-timeline"
+  >
     <div
-      className="c0"
+      className="vertical-timeline c0"
     >
       <styled.div>
         <div
@@ -208,14 +256,20 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                     21 Apr
                   </span>
                 </styled.span>
-                <styled.span>
-                  <span
-                    className="c5"
-                  />
-                </styled.span>
                 <styled.div>
                   <div
-                    className="c6"
+                    className="c5"
+                  >
+                    <styled.span>
+                      <span
+                        className="c6"
+                      />
+                    </styled.span>
+                  </div>
+                </styled.div>
+                <styled.div>
+                  <div
+                    className="c7"
                   >
                     Event that happened
                   </div>

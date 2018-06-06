@@ -1,64 +1,92 @@
-:local(.PersonBadge) {
+:local(.Avatar) {
   display: inline-block;
   position: relative;
 
-  >.extended-leave-circle {
-    background-color: $warning-base;
+  >.status-dot {
     border: 2px solid $main-background-hover;
     border-radius: 50%;
     box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
     position: absolute;
+
+    &.primary {
+      background-color: $primary;
+    }
+
+    &.secondary {
+      background-color: $secondary;
+    }
+
+    &.success {
+      background-color: $success;
+    }
+
+    &.warning {
+      background-color: $warning;
+    }
+
+    &.alert {
+      background-color: $alert;
+    }
+
+    &.highlight {
+      background-color: $highlight;
+    }
+
+    &.neutral {
+      background-color: $neutral;
+    }
+
   }
 
-  &.small {
+  &.avatar-small {
     font-size: .8rem;
     height: 30px;
     width: 30px;
 
-    >.extended-leave-circle {
+    >.status-dot {
       bottom: -.1rem;
       left: -.3rem;
       padding: 5px;
     }
   }
 
-  &.medium {
+  &.avatar-medium {
     font-size: 1rem;
     height: 40px;
     width: 40px;
 
-    >.extended-leave-circle {
+    >.status-dot {
       bottom: -.1rem;
       left: -.3rem;
       padding: 5.5px;
     }
   }
 
-  &.large {
+  &.avatar-large {
     font-size: 1.5rem;
     height: 72px;
     width: 72px;
 
-    >.extended-leave-circle {
+    >.status-dot {
       bottom: .1rem;
       left: .1rem;
       padding: 6.5px;
     }
   }
 
-  &.xlarge {
+  &.avatar-xlarge {
     font-size: 2.5rem;
     height: 120px;
     width: 120px;
 
-    >.extended-leave-circle {
+    >.status-dot {
       bottom: .25rem;
       left: .75rem;
       padding: 7px;
     }
   }
 
-  >.person-badge-inner-container {
+  >.avatar-inner-container {
     border: 1px solid $border-light;
     border-radius: 50%;
     color: $link-text;
@@ -82,7 +110,7 @@
       }
     }
 
-    >.person-badge-hover {
+    >.avatar-hover {
       align-items: center;
       background: rgba(0, 0, 0, .6);
       color: $primary-text;
@@ -101,42 +129,42 @@
         opacity: 1;
       }
 
-      &.small {
-        >.person-badge-hover-icon {
+      &.avatar-small {
+        >.avatar-hover-icon {
           font-size: .75rem;
         }
 
-        >.person-badge-hover-label {
+        >.avatar-hover-label {
           display: none;
         }
       }
 
-      &.medium {
-        >.person-badge-hover-icon {
+      &.avatar-medium {
+        >.avatar-hover-icon {
           font-size: 1.25rem;
         }
 
-        >.person-badge-hover-label {
+        >.avatar-hover-label {
           display: none;
         }
       }
 
-      &.large {
-        >.person-badge-hover-icon {
+      &.avatar-large {
+        >.avatar-hover-icon {
           font-size: 1.25rem;
         }
 
-        >.person-badge-hover-label {
+        >.avatar-hover-label {
           font-size: .65rem;
         }
       }
 
-      &.xlarge {
-        >.person-badge-hover-icon {
+      &.avatar-xlarge {
+        >.avatar-hover-icon {
           font-size: 2rem;
         }
 
-        >.person-badge-hover-label {
+        >.avatar-hover-label {
           font-size: .75rem;
         }
       }
@@ -152,7 +180,7 @@
         width: auto;
       }
 
-      >.person-badge-hover-label {
+      >.avatar-hover-label {
         font-size: .75rem;
         font-weight: 600;
         line-height: .85rem;
@@ -160,7 +188,7 @@
       }
     }
 
-    >.badge-initials-container {
+    >.avatar-initials-container {
       align-items: center;
       background-color: $badge-background-light;
       display: flex;
