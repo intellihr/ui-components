@@ -44,7 +44,7 @@ install-package:
   except:
     - schedules
   script:
-    - docker-compose run --rm gitlab-ci npm ci
+    - docker-compose run --rm gitlab-ci yarn
   artifacts:
     paths:
       - node_modules/
@@ -56,7 +56,7 @@ ts-lint:
     - schedules
     - master
   script:
-    - docker-compose run --rm gitlab-ci npm run lint
+    - docker-compose run --rm gitlab-ci yarn lint
 
 sass-lint:
   stage: build & test
@@ -64,15 +64,15 @@ sass-lint:
     - schedules
     - master
   script:
-    - docker-compose run --rm gitlab-ci npm run lint:sass
+    - docker-compose run --rm gitlab-ci yarn lint:sass
 
-css-lint:
-  stage: build & test
-  except:
-    - schedules
-    - master
-  script:
-    - docker-compose run --rm gitlab-ci npm run lint:css
+# css-lint:
+#   stage: build & test
+#   except:
+#     - schedules
+#     - master
+#   script:
+#     - docker-compose run --rm gitlab-ci yarn lint:css
 
 test:
   stage: build & test
@@ -80,41 +80,41 @@ test:
     - schedules
     - master
   script:
-    - docker-compose run --rm gitlab-ci npm run test:ci
+    - docker-compose run --rm gitlab-ci yarn test:ci
 
-codequality: &codequality
-  stage: review
-  except:
-    - schedules
-    - master
-  variables:
-    CODECLIMATE_FORMAT: json
-  dependencies: []
-  script:
-    - docker pull codeclimate/codeclimate
-    - export SP_VERSION=$(echo "$CI_SERVER_VERSION" | sed 's/^\([0-9]*\)\.\([0-9]*\).*/\1-\2-stable/')
-    - docker run
-      --env SOURCE_CODE="$PWD"
-      --env CODECLIMATE_FORMAT="$CODECLIMATE_FORMAT"
-      --volume "$PWD":/code
-      --volume /var/run/docker.sock:/var/run/docker.sock
-      quay.io/intellihr/codequality:latest /code
-  artifacts:
-    paths:
-      - codeclimate.json
+# codequality: &codequality
+#   stage: review
+#   except:
+#     - schedules
+#     - master
+#   variables:
+#     CODECLIMATE_FORMAT: json
+#   dependencies: []
+#   script:
+#     - docker pull codeclimate/codeclimate
+#     - export SP_VERSION=$(echo "$CI_SERVER_VERSION" | sed 's/^\([0-9]*\)\.\([0-9]*\).*/\1-\2-stable/')
+#     - docker run
+#       --env SOURCE_CODE="$PWD"
+#       --env CODECLIMATE_FORMAT="$CODECLIMATE_FORMAT"
+#       --volume "$PWD":/code
+#       --volume /var/run/docker.sock:/var/run/docker.sock
+#       quay.io/intellihr/codequality:latest /code
+#   artifacts:
+#     paths:
+#       - codeclimate.json
 
-codequality-html:
-  <<: *codequality
-  variables:
-    CODECLIMATE_FORMAT: html
-  artifacts:
-    paths:
-      - .codeclimate/
+# codequality-html:
+#   <<: *codequality
+#   variables:
+#     CODECLIMATE_FORMAT: html
+#   artifacts:
+#     paths:
+#       - .codeclimate/
 
 build-bundle:
   stage: build & test
   script:
-    - docker-compose run --rm gitlab-ci npm run build
+    - docker-compose run --rm gitlab-ci yarn build
   artifacts:
     paths:
       - es/

@@ -1,144 +1,192 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Icon /> should render a large icon 1`] = `
+.c0.icon-small {
+  bottom: 2px;
+  font-size: xx-small;
+  position: relative;
+}
+
 <Icon
-  isFontAwesome={true}
   isLarge={true}
+  isSmall={false}
   isSpinning={false}
   isStacked={false}
   type="circle"
 >
-  <i
+  <styled.i
     aria-hidden={true}
-    className="fa fa-circle fa-lg"
-    style={
-      Object {
-        "color": undefined,
-      }
-    }
-  />
+    className="icon fa circle fa-lg"
+  >
+    <i
+      aria-hidden={true}
+      className="icon fa circle fa-lg c0"
+    />
+  </styled.i>
 </Icon>
 `;
 
 exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
+.c0.icon-small {
+  bottom: 2px;
+  font-size: xx-small;
+  position: relative;
+}
+
 <Icon
-  isFontAwesome={false}
   isLarge={false}
+  isSmall={false}
   isSpinning={false}
   isStacked={false}
   type="intelli-icon-avatar"
 >
-  <i
+  <styled.i
     aria-hidden={true}
-    className="fa intelli-icon-avatar"
-    style={
-      Object {
-        "color": undefined,
-      }
-    }
-  />
+    className="icon fa intelli-icon-avatar"
+  >
+    <i
+      aria-hidden={true}
+      className="icon fa intelli-icon-avatar c0"
+    />
+  </styled.i>
 </Icon>
 `;
 
 exports[`<Icon /> should render icon with colour 1`] = `
+.c0 {
+  color: #1A2B3C;
+}
+
+.c0.icon-small {
+  bottom: 2px;
+  font-size: xx-small;
+  position: relative;
+}
+
 <Icon
   color="#1A2B3C"
-  isFontAwesome={true}
   isLarge={false}
+  isSmall={false}
   isSpinning={false}
   isStacked={false}
-  type="check"
+  type="fa-check"
 >
-  <i
+  <styled.i
     aria-hidden={true}
-    className="fa fa-check"
-    style={
-      Object {
-        "color": "#1A2B3C",
-      }
-    }
-  />
+    className="icon fa fa-check"
+    color="#1A2B3C"
+  >
+    <i
+      aria-hidden={true}
+      className="icon fa fa-check c0"
+      color="#1A2B3C"
+    />
+  </styled.i>
 </Icon>
 `;
 
 exports[`<Icon /> should render icon with no size or colour 1`] = `
+.c0.icon-small {
+  bottom: 2px;
+  font-size: xx-small;
+  position: relative;
+}
+
 <Icon
-  isFontAwesome={true}
   isLarge={false}
+  isSmall={false}
   isSpinning={false}
   isStacked={false}
-  type="check"
+  type="fa-check"
 >
-  <i
+  <styled.i
     aria-hidden={true}
-    className="fa fa-check"
-    style={
-      Object {
-        "color": undefined,
-      }
-    }
-  />
+    className="icon fa fa-check"
+  >
+    <i
+      aria-hidden={true}
+      className="icon fa fa-check c0"
+    />
+  </styled.i>
 </Icon>
 `;
 
 exports[`<Icon /> should render icon with no stack or size if only isStacked is given 1`] = `
+.c0.icon-small {
+  bottom: 2px;
+  font-size: xx-small;
+  position: relative;
+}
+
 <Icon
-  isFontAwesome={true}
   isLarge={false}
+  isSmall={false}
   isSpinning={false}
   isStacked={true}
-  type="check"
+  type="fa-check"
 >
-  <i
+  <styled.i
     aria-hidden={true}
-    className="fa fa-check"
-    style={
-      Object {
-        "color": undefined,
-      }
-    }
-  />
+    className="icon fa fa-check"
+  >
+    <i
+      aria-hidden={true}
+      className="icon fa fa-check c0"
+    />
+  </styled.i>
 </Icon>
 `;
 
 exports[`<Icon /> should render icon with size 1`] = `
+.c0.icon-small {
+  bottom: 2px;
+  font-size: xx-small;
+  position: relative;
+}
+
 <Icon
-  isFontAwesome={true}
   isLarge={false}
+  isSmall={false}
   isSpinning={false}
   isStacked={false}
   size={3}
-  type="check"
+  type="fa-check"
 >
-  <i
+  <styled.i
     aria-hidden={true}
-    className="fa fa-check fa-3x"
-    style={
-      Object {
-        "color": undefined,
-      }
-    }
-  />
+    className="icon fa fa-check fa-3x"
+  >
+    <i
+      aria-hidden={true}
+      className="icon fa fa-check fa-3x c0"
+    />
+  </styled.i>
 </Icon>
 `;
 
 exports[`<Icon /> should render icon with stack and size 1`] = `
+.c0.icon-small {
+  bottom: 2px;
+  font-size: xx-small;
+  position: relative;
+}
+
 <Icon
-  isFontAwesome={true}
   isLarge={false}
+  isSmall={false}
   isSpinning={false}
   isStacked={true}
   size={2}
-  type="check"
+  type="fa-check"
 >
-  <i
+  <styled.i
     aria-hidden={true}
-    className="fa fa-check fa-stack-2x"
-    style={
-      Object {
-        "color": undefined,
-      }
-    }
-  />
+    className="icon fa fa-check fa-stack-2x"
+  >
+    <i
+      aria-hidden={true}
+      className="icon fa fa-check fa-stack-2x c0"
+    />
+  </styled.i>
 </Icon>
 `;

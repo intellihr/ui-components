@@ -93,6 +93,12 @@ exports[`<Avatar /> Renders a large Avatar with initials, using imageData 1`] = 
 `;
 
 exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and overlay 1`] = `
+.c0.icon-small {
+  bottom: 2px;
+  font-size: xx-small;
+  position: relative;
+}
+
 <Skeleton
   className=""
   handleClick={[Function]}
@@ -131,23 +137,27 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
         <div
           className="avatar-hover avatar-large"
         >
-          <Icon
-            isFontAwesome={true}
-            isLarge={false}
-            isSpinning={false}
-            isStacked={false}
+          <FontAwesomeIcon
             type="camera"
           >
-            <i
-              aria-hidden={true}
-              className="fa fa-camera"
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-            />
-          </Icon>
+            <Icon
+              isLarge={false}
+              isSmall={false}
+              isSpinning={false}
+              isStacked={false}
+              type="fa-camera"
+            >
+              <styled.i
+                aria-hidden={true}
+                className="icon fa fa-camera"
+              >
+                <i
+                  aria-hidden={true}
+                  className="icon fa fa-camera c0"
+                />
+              </styled.i>
+            </Icon>
+          </FontAwesomeIcon>
           <span
             className="avatar-hover-label"
           >

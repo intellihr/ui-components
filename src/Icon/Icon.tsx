@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
+import { StyledIcon } from './style'
 
 export interface IconProps {
   /** FontAwesome or alternate name of the icon to display */
@@ -10,23 +11,22 @@ export interface IconProps {
   isStacked?: boolean
   /** Adds FontAwesome `fa-lg` class to icon */
   isLarge?: boolean
+  /** Adds a class to reduce the font size of the icon */
+  isSmall?: boolean
   /** Colour of the icon */
   color?: string
   /** Additional class name to pass to the icon */
   className?: string
   /** Adds FontAwesome `fa-spin` class to icon */
   isSpinning?: boolean
-  /** Prepends fa- to `type`. Set to false to use non-FontAwesome icons */
-  isFontAwesome?: boolean
 }
 
-export class Icon extends React.Component<IconProps> {
-  public static defaultProps: IconProps = {
-    type: '',
+export class Icon extends React.PureComponent<IconProps> {
+  public static defaultProps: Partial<IconProps> = {
     isStacked: false,
     isLarge: false,
-    isSpinning: false,
-    isFontAwesome: true
+    isSmall: false,
+    isSpinning: false
   }
 
   get sizeClass (): string {
@@ -51,31 +51,24 @@ export class Icon extends React.Component<IconProps> {
     return ''
   }
 
-  get type (): string {
-    const {
-      isFontAwesome,
-      type
-    } = this.props
-
-    if (isFontAwesome) {
-      return `fa-${type}`
-    }
-
-    return type
-  }
-
   get classNames (): string {
     const {
       className,
-      isSpinning
+      type,
+      isSpinning,
+      isSmall
     } = this.props
 
     return classNames(
       className,
+      'icon',
       'fa',
-      this.type,
+      type,
       this.sizeClass,
-      {'fa-spin': isSpinning}
+      {
+        'fa-spin': isSpinning,
+        'icon-small': isSmall
+      }
     )
   }
 
@@ -85,10 +78,10 @@ export class Icon extends React.Component<IconProps> {
     } = this.props
 
     return (
-      <i
+      <StyledIcon
         className={this.classNames}
         aria-hidden
-        style={{color}}
+        color={color}
       />
     )
   }

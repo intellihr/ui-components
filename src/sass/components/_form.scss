@@ -135,3 +135,56 @@ select {
 input.is-invalid-input:focus {
   border-color: $alert-base;
 }
+
+.select2 {
+  margin: 0 0 1rem;
+
+  .select2-selection {
+    border: 1px solid #c3ccd0;
+    height: 2.4375rem;
+
+    &:focus {
+      outline: none;
+      border: 1px solid #432df3;
+      transition: border-color 0.3s ease-in-out, background-color 0.3s ease;
+    }
+
+    &:hover {
+      background-color: whitesmoke;
+    }
+  }
+
+  .selection {
+    .select2-selection__rendered {
+      line-height: 1.5;
+      padding: 8px 24px 8px 8px;
+      color: #47525d;
+    }
+
+    .select2-selection__arrow {
+      height:24px;
+      margin-top: 7px;
+      margin-right: 2px;
+
+      b {
+        border-color: #47525d transparent transparent transparent;
+      }
+    }
+  }
+}
+
+.select2-dropdown {
+  .select2-results__option {
+    color: #666666;
+
+    &.select2-results__option[aria-selected=true] {
+      background-color: #f5faff;
+      color: #333;
+    }
+
+    &.select2-results__option--highlighted[aria-selected] {
+      background-color: #ebf5ff;
+      color: #333;
+    }
+  }
+}

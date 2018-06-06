@@ -4,11 +4,11 @@ import {
   isNil,
   isEmpty
 } from 'lodash'
-import { Icon } from '../Icon/Icon'
+import { FontAwesomeIcon } from '../Icon'
 import {
   withSkeleton,
   SkeletonComponentProps
-} from '../Skeleton/Skeleton'
+} from '../Skeleton'
 const style = require('./Avatar.scss')
 
 export interface AvatarProps {
@@ -36,7 +36,10 @@ export interface AvatarState {
   showInitials: boolean
 }
 
-export class AvatarComponent extends React.Component<AvatarProps, AvatarState> {
+class AvatarComponent extends React.Component<AvatarProps> {
+  public state: AvatarState = {
+    showInitials: true
+  }
 
   public static defaultProps: AvatarProps = {
     size: 'medium'
@@ -80,7 +83,7 @@ export class AvatarComponent extends React.Component<AvatarProps, AvatarState> {
 
     return (
       <div className={classNames('avatar-hover', `avatar-${size}`)}>
-        <Icon type='camera' />
+        <FontAwesomeIcon type='camera' />
         <span className='avatar-hover-label'>{hoverLabel}</span>
       </div>
     )

@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormattedText /> should render any urls as links 1`] = `
+.c0 {
+  white-space: pre-wrap;
+}
+
+<FormattedText
+  text="www.heyguy.com
+
+        also this one www.ozbargain.com.au"
+>
+  <styled.div>
+    <div
+      className="c0"
+    >
+      <Linkify
+        className="Linkify"
+        component="a"
+        properties={
+          Object {
+            "target": "_blank",
+          }
+        }
+      >
+        <span
+          className="Linkify"
+        >
+          <a
+            href="http://www.heyguy.com"
+            key="parse0match0"
+            target="_blank"
+          >
+            www.heyguy.com
+          </a>
+          
+
+        also this one 
+          <a
+            href="http://www.ozbargain.com.au"
+            key="parse0match1"
+            target="_blank"
+          >
+            www.ozbargain.com.au
+          </a>
+        </span>
+      </Linkify>
+    </div>
+  </styled.div>
+</FormattedText>
+`;
+
+exports[`<FormattedText /> should render the formatted text 1`] = `
+.c0 {
+  white-space: pre-wrap;
+}
+
+<FormattedText
+  text="Hello. I am a piece of paragraph text.
+
+        This should be on a new line :)"
+>
+  <styled.div>
+    <div
+      className="c0"
+    >
+      <Linkify
+        className="Linkify"
+        component="a"
+        properties={
+          Object {
+            "target": "_blank",
+          }
+        }
+      >
+        <span
+          className="Linkify"
+        >
+          Hello. I am a piece of paragraph text.
+
+        This should be on a new line :)
+        </span>
+      </Linkify>
+    </div>
+  </styled.div>
+</FormattedText>
+`;

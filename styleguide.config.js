@@ -11,12 +11,16 @@ module.exports = {
   getExampleFilename (componentPath) {
     return componentPath.replace(/\.tsx?$/, '.examples.md')
   },
+  pagePerSection: true,
   sections: [{
     name: 'Introduction',
     content: './docs/introduction.md'
   }, {
-    name: 'Components',
-    components: 'src/**/*.tsx'
+    name: 'UI Components',
+    components: 'src/**/[A-Z]*.tsx'
+  }, {
+    name: 'Higher Order Components',
+    components: 'src/**/[a-z]*.tsx'
   }],
   showUsage: true,
   showCode: true,
