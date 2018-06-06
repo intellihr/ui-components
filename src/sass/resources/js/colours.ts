@@ -78,11 +78,6 @@ function buildColourList (systemColours: any, functionalColours: any, analyticsC
 
   colourList['functional-colours'] = functionalExport
 
-  // return humps.decamelizeKeys(
-  //   colourList,
-  //   { separator: '-' }
-  // )
-
   return mapKeys(colourList, (value, key) => {
     return kebabCase(key)
   })
