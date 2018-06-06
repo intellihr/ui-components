@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
-import { appColors } from '../Color'
+import { getColor } from '../Color'
 
 const VerticalTimelineWrapper = styled.div`
   margin-bottom: 20px;
@@ -24,7 +24,7 @@ const Timeline = styled.div`
     left: 87px;
     height: calc(100% - 16px);
     width: 2px;
-    background: ${appColors.intelliGreyBlue2};
+    background: ${getColor('neutral-base')};
   }
 `
 
