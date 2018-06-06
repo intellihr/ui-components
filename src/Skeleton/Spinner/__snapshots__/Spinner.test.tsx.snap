@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Spinner /> should render a fading circle spinner 1`] = `
+<styled.div
+  className="spinner"
+>
+  <FadingCircle
+    color="#432DF3"
+    endOpacity={1}
+    size={20}
+    startOpacity={0}
+  />
+</styled.div>
+`;
+
+exports[`<Spinner /> should render a spinner 1`] = `
+<styled.div
+  className="spinner center"
+>
+  <ThreeBounce
+    color="red"
+    duration="1.5s"
+    gutter={2}
+    scaleEnd={1}
+    scaleStart={0}
+    size={50}
+    timingFunction="ease-in-out"
+  />
+</styled.div>
+`;

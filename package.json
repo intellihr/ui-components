@@ -134,6 +134,7 @@
     ]
   },
   "dependencies": {
+    "better-react-spinkit": "^2.0.4",
     "react-linkify": "^0.2.2",
     "uuid": "^3.2.1"
   }
