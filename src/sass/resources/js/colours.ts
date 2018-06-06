@@ -5,7 +5,7 @@ function clamp (val: number) {
   return Math.min(100, Math.max(0, val))
 }
 
-const lightenAbsolute = (c: Color) => (ratio: number) => {
+const lightenAbsolute = (ratio: number) => (c: Color) => {
   let hsl: any = c.hsl()
   hsl.color[2] += ratio * 100
   hsl.color[2] = clamp(hsl.color[2])
@@ -13,7 +13,7 @@ const lightenAbsolute = (c: Color) => (ratio: number) => {
   return hsl
 }
 
-const darkenAbsolute = (c: Color) => (ratio: number) => {
+const darkenAbsolute = (ratio: number) => (c: Color) => {
   let hsl: any = c.hsl()
   hsl.color[2] -= ratio * 100
   hsl.color[2] = clamp(hsl.color[2])
@@ -49,6 +49,8 @@ function buildFunctionalColour (colour: any) {
 
   return functionalColour
 }
+
+
 
 function buildColourList (systemColours: any, functionalColours: any, analyticsColours: any) {
   let colourList: any = {}
@@ -112,12 +114,12 @@ const systemColours = {
   mainBackground: w.intelliWhite,
   mainBackgroundHover: w.intelliOffWhite,
   mainText: w.intelliDarkGrey,
-  mainTextLight: lightenAbsolute(w.intelliDarkGrey)(0.15),
+  mainTextLight: lightenAbsolute(0.15)(w.intelliDarkGrey),
   sidebar: w.intelliBaseWhite,
   sidebarHover: w.intelliRoyalBlueLight,
   sidebarText: w.intelliDarkGrey,
   heading: w.intelliDarkGrey,
-  subheading: lightenAbsolute(w.intelliDarkGrey)(0.15),
+  subheading: lightenAbsolute(0.15)(w.intelliDarkGrey),
 
   buttonText: w.intelliDarkGrey,
   buttonTextAlt: w.intelliBaseWhite,
@@ -136,25 +138,25 @@ const systemColours = {
 
   // Qualification compliance colours
   complianceCurrent: w.intelliGreen,
-  complianceExpiringSoon: darkenAbsolute(w.intelliYellow)(0.15),
-  complianceFuture: lightenAbsolute(w.intelliRed)(0.25),
+  complianceExpiringSoon: darkenAbsolute(0.15)(w.intelliYellow),
+  complianceFuture: lightenAbsolute(0.25)(w.intelliRed),
   complianceDraft: w.intelliGrey2,
   complianceAwaitingApproval: w.intelliYellow,
-  complianceDeclined: darkenAbsolute(w.intelliRed)(0.25),
+  complianceDeclined: darkenAbsolute(0.25)(w.intelliRed),
   complianceExpired: w.intelliRed,
   complianceNotActioned: w.intelliGrey2,
-  complianceRevoked: darkenAbsolute(w.intelliRed)(0.4),
+  complianceRevoked: darkenAbsolute(0.4)(w.intelliRed),
 
   // Org Chart
   currentEntityNodeBg: w.intelliRoyalBlueLight,
-  currentEntityNodeBgHover: darkenAbsolute(w.intelliRoyalBlueLight)(0.03),
+  currentEntityNodeBgHover: darkenAbsolute(0.03)(w.intelliRoyalBlueLight),
   currentEntityNodeTextHover: w.intelliRoyalBlue,
 
   entityNodeBg: w.intelliBaseWhite,
-  entityNodeBgHover: darkenAbsolute(w.intelliBaseWhite)(0.03),
+  entityNodeBgHover: darkenAbsolute(0.03)(w.intelliBaseWhite),
 
   searchedNodeBg: w.intelliAppBlueLight,
-  searchedNodeBgHover: darkenAbsolute(w.intelliAppBlueLight)(0.03)
+  searchedNodeBgHover: darkenAbsolute(0.03)(w.intelliAppBlueLight)
 }
 
 /**
@@ -177,68 +179,68 @@ const functionalColours = {
     base: w.intelliRoyalBlue,
     text: w.intelliWhite,
     light: w.intelliRoyalBlueLight,
-    hover: darkenAbsolute(w.intelliRoyalBlue)(0.2),
-    active: darkenAbsolute(w.intelliRoyalBlue)(0.3)
+    hover: darkenAbsolute(0.2)(w.intelliRoyalBlue),
+    active: darkenAbsolute(0.3)(w.intelliRoyalBlue)
   },
   secondary: {
     base: w.intelliAppBlue,
     text: w.intelliWhite,
     light: w.intelliAppBlueLight,
-    hover: darkenAbsolute(w.intelliAppBlue)(0.05),
+    hover: darkenAbsolute(0.05)(w.intelliAppBlue),
     hoverText: w.intelliAppBlueLight,
-    active: darkenAbsolute(w.intelliAppBlue)(0.09)
+    active: darkenAbsolute(0.09)(w.intelliAppBlue)
   },
   success: {
     base: w.intelliGreen,
     text: w.intelliWhite,
     light: w.intelliGreenLight,
-    hover: darkenAbsolute(w.intelliGreen)(0.05),
-    active: darkenAbsolute(w.intelliGreen)(0.09)
+    hover: darkenAbsolute(0.05)(w.intelliGreen),
+    active: darkenAbsolute(0.09)(w.intelliGreen)
   },
   warning: {
     base: w.intelliYellow,
     text: w.intelliDarkGrey,
     light: w.intelliYellowLight,
-    hover: darkenAbsolute(w.intelliYellow)(0.12),
-    active: darkenAbsolute(w.intelliYellow)(0.15),
+    hover: darkenAbsolute(0.12)(w.intelliYellow),
+    active: darkenAbsolute(0.15)(w.intelliYellow),
     hollowActiveText: w.intelliWhite
   },
   alert: {
     base: w.intelliRed,
     text: w.intelliWhite,
     light: w.intelliRedLight,
-    hover: darkenAbsolute(w.intelliRed)(0.20),
-    active: darkenAbsolute(w.intelliRed)(0.26)
+    hover: darkenAbsolute(0.20)(w.intelliRed),
+    active: darkenAbsolute(0.26)(w.intelliRed)
   },
   neutral: {
     base: w.intelliGreyBlue2,
     text: w.intelliDarkGrey,
     light: w.intelliBaseWhite,
-    hover: darkenAbsolute(w.intelliGreyBlue2)(0.05),
-    active: darkenAbsolute(w.intelliGreyBlue2)(0.09),
+    hover: darkenAbsolute(0.05)(w.intelliGreyBlue2),
+    active: darkenAbsolute(0.09)(w.intelliGreyBlue2),
     hollowText: w.intelliDarkGrey,
     hollowHover: w.intelliGreyBlue2.alpha(0.3)
   },
   highlight: {
     base: w.intelliCyan,
     text: w.intelliWhite,
-    light: lightenAbsolute(Color('#D7F2FF'))(0.05),
-    hover: darkenAbsolute(w.intelliCyan)(0.05),
-    active: darkenAbsolute(w.intelliCyan)(0.07)
+    light: lightenAbsolute(0.05)(Color('#D7F2FF')),
+    hover: darkenAbsolute(0.05)(w.intelliCyan),
+    active: darkenAbsolute(0.07)(w.intelliCyan)
   },
   dark: {
     base: w.intelliCharcoal,
     text: w.intelliWhite,
-    light: lightenAbsolute(Color('#303035'))(0.05),
-    hover: lightenAbsolute(w.intelliCharcoal)(0.1),
+    light: lightenAbsolute(0.05)(Color('#303035')),
+    hover: lightenAbsolute(0.1)(w.intelliCharcoal),
     active: w.intelliCharcoal
   },
   light: {
     base: w.intelliWhite,
     text: w.intelliCharcoal,
     light: Color('#FFFFFF'),
-    hover: darkenAbsolute(w.intelliWhite)(0.1),
-    active: darkenAbsolute(w.intelliWhite)(0.2),
+    hover: darkenAbsolute(0.1)(w.intelliWhite),
+    active: darkenAbsolute(0.2)(w.intelliWhite),
     hollowHover: w.intelliWhite.alpha(0.18),
     hollowActive: w.intelliWhite.alpha(0.1),
     hollowActiveText: w.intelliWhite
