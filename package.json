@@ -17,7 +17,9 @@
     "react": "^16.3.1",
     "react-chartjs-2": "^2.7.0",
     "react-dom": "^16.3.1",
-    "styled-components": "^3.2.6"
+    "styled-components": "^3.2.6",
+    "@intellihr/icons": "0.0.1",
+    "font-awesome": "4.7.0"
   },
   "devDependencies": {
     "@epegzz/sass-vars-loader": "3.2.3",
