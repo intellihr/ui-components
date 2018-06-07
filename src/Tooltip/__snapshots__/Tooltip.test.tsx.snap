@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tooltip /> should render a tooltip with the child element 1`] = `
+<span
+  data-for="5523e4ad-89a7-4955-bf0a-7d7e32ffd2f9"
+  data-tip={true}
+>
+  <div>
+    This div should have a tooltip
+  </div>
+  <ReactTooltip
+    effect="solid"
+    id="5523e4ad-89a7-4955-bf0a-7d7e32ffd2f9"
+    insecure={true}
+    place="top"
+    resizeHide={true}
+    wrapper="div"
+  >
+    Tooltip message
+  </ReactTooltip>
+</span>
+`;
