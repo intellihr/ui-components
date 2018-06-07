@@ -49,6 +49,54 @@ A common React components library that is used in our company.
     import '~@intellihr/ui-components/dist/index.css'
     ```
 
+## Integrated into your project
+
+It's simple. Let's add that into your project:
+
+```bash
+yarn add @intellihr/ui-components
+```
+
+Or:
+
+```bash
+npm i @intellihr/ui-components
+```
+
+Then included the project css and this project's components css into your project's entry point. e.g. in CRA, it's the `index.js`:
+
+```javascript
+import '@intellihr/ui-components/dist/index.css'
+import '@intellihr/ui-components/dist/ui-components.css'
+``` 
+
+Make sure your project knows how to handle css file type, which is quite simple if you use webpack(and normally your project should have already setup):
+
+```javascript
+{
+  test: /\.css$/,
+  use: [
+    require.resolve('style-loader'),
+    {
+      loader: require.resolve('css-loader')
+    }
+}
+
+```
+
+Then you could start using the components! Test out by:
+
+```javascript
+import { Callout } from '@intellihr/ui-components'
+
+<Callout type="info">
+  <div className="title">
+  Information!
+  </div>
+  Bringing you the lasted news.
+</Callout>
+```
+
 ## Local Development Guide
 
 ### Docker
