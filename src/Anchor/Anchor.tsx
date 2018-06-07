@@ -11,6 +11,9 @@ export interface AnchorProps {
   href?: string
   /** Link target */
   target?: string
+  useReactRouter?: boolean,
+  blockNavigationOnLeftClick?: boolean,
+  onLeftClick?: (rowObject: object) => void
 }
 
 export class Anchor extends React.PureComponent<AnchorProps> {

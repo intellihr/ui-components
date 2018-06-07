@@ -1,0 +1,85 @@
+@import '../sass/foundation_settings';
+@import '../sass/components/typography';
+
+$smartList-bgColour-alert: lighten($alert-light, 3%);
+$smartList-bgHoverColour-alert: lighten($alert-light, 1%);
+
+:local(.smartList) {
+  .list-title {
+    @extend .section-header;
+    margin: 16px 0 16px 0;
+  }
+
+  .header-row {
+    padding: 0 10px 10px 10px;
+  }
+
+  .cursor-auto {
+    cursor: auto;
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+  .vertical-align-center {
+    margin-top: 0.6%;
+  }
+
+  .show-all-row {
+    text-align: center;
+    padding-top: 10px;
+    text-transform: uppercase;
+    color: $dark-gray;
+    font-weight: 600;
+  }
+
+  .hide-row {
+    display: none;
+  }
+
+  &.hover-bg {
+    .item-row:hover {
+      background-color: #fafafa;
+    }
+  }
+
+  .item-row {
+    border-top: 1px solid $border-light;
+    padding: 10px;
+    min-height: 80px;
+    top: 50%;
+    position: relative;
+    transition: background-color 0.15s ease-in;
+    color: $main-text;
+    align-items: center;
+
+    .dd-menu {
+      border-radius: $global-radius;
+      transition: background-color 0.2s ease-in;
+
+      button.option {
+        padding: 10px 5px;
+      }
+
+      &:hover {
+        background-color: $border-light;
+      }
+
+      .fa-ellipsis-v {
+        font-size: 24px;
+      }
+
+      a:hover {
+        background-color: $sidebar;
+      }
+    }
+
+    &.alert {
+      background-color: $smartList-bgColour-alert;
+      &:hover {
+        background-color: $smartList-bgHoverColour-alert;
+      }
+    }
+  }
+}
