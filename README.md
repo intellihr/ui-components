@@ -63,6 +63,8 @@ Or:
 npm i @intellihr/ui-components
 ```
 
+Also you will need to install the peer dependencies of this project `package.json`.
+
 Then included the project css and this project's components css into your project's entry point. e.g. in CRA, it's the `index.js`:
 
 ```javascript
