@@ -1,7 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
 import { ThreeBounce, FadingCircle } from 'better-react-spinkit'
-import { isEqual } from 'lodash'
 import { SpinnerWrapper } from './style'
 import { getColor } from '../Color'
 
@@ -16,14 +15,10 @@ export interface SpinnerProps {
   color?: string
 }
 
-export class Spinner extends React.Component<SpinnerProps> {
+export class Spinner extends React.PureComponent<SpinnerProps> {
   public static defaultProps: Partial<SpinnerProps> = {
     color: getColor('primary'),
     size: 20
-  }
-
-  shouldComponentUpdate (nextProps: SpinnerProps) {
-    return !isEqual(this.props, nextProps)
   }
 
   spinner () {

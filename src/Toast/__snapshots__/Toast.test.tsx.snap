@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Toast /> should call the onMount function if given one 1`] = `
+<div
+  className="ToastClass alert"
+>
+  <IntelliIcon
+    className="toast-icon"
+    size={1}
+    type="alert"
+  />
+  <span
+    className="toast-content"
+  >
+    Yahallo!
+  </span>
+  <span
+    className="fa-container toast-close-span"
+    onClick={[Function]}
+  >
+    <IntelliIcon
+      className="toast-close"
+      size={1}
+      type="cross-small"
+    />
+  </span>
+</div>
+`;
+
+exports[`<Toast /> should render a toast of a default type, which is success 1`] = `
+<div
+  className="ToastClass success"
+>
+  <IntelliIcon
+    className="toast-icon"
+    size={1}
+    type="check"
+  />
+  <span
+    className="toast-content"
+  >
+    Yo ... whaazzzaaaap!!!
+  </span>
+  <span
+    className="fa-container toast-close-span"
+    onClick={[Function]}
+  >
+    <IntelliIcon
+      className="toast-close"
+      size={1}
+      type="cross-small"
+    />
+  </span>
+</div>
+`;
+
+exports[`<Toast /> should render an alert toast 1`] = `
+<div
+  className="ToastClass alert"
+>
+  <IntelliIcon
+    className="toast-icon"
+    size={1}
+    type="alert"
+  />
+  <span
+    className="toast-content"
+  >
+    Surprise @#$%^&*!!!
+  </span>
+  <span
+    className="fa-container toast-close-span"
+    onClick={[Function]}
+  >
+    <IntelliIcon
+      className="toast-close"
+      size={1}
+      type="cross-small"
+    />
+  </span>
+</div>
+`;
