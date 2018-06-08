@@ -40,7 +40,7 @@ $smartList-bgHoverColour-alert: lighten($alert-light, 1%);
 
   &.hover-bg {
     .item-row:hover {
-      background-color: #fafafa;
+      background-color: $main-background-hover;
     }
   }
 
