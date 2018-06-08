@@ -43,14 +43,7 @@ export class SmartList extends React.PureComponent<ISmartList, SmartListState> {
 
   public state: SmartListState = { paginationButton: true }
 
-  constructor (props: ISmartList) {
-    super(props)
-
-    this.cloneTableElement = this.cloneTableElement.bind(this)
-    this.togglePagination = this.togglePagination.bind(this)
-  }
-
-  cloneTableElement (rowIndex = 0, isHeader = false): JSX.Element[] {
+  cloneTableElement = (rowIndex = 0, isHeader = false): JSX.Element[] => {
     const {
       id,
       children,
@@ -58,10 +51,9 @@ export class SmartList extends React.PureComponent<ISmartList, SmartListState> {
     } = this.props
 
     let columnIndex = 0
-    const key = id ? `${id}-list-item-${rowIndex}-${columnIndex}` : uuid.v4()
 
     const listItemProps = (item: any) => ({
-      key,
+      key: id ? `${id}-list-item-${rowIndex}-${columnIndex}` : uuid.v4(),
       isHeader,
       rowIndex,
       data,
@@ -87,7 +79,7 @@ export class SmartList extends React.PureComponent<ISmartList, SmartListState> {
     )
   }
 
-  togglePagination (): void {
+  togglePagination = (): void => {
     this.setState({ paginationButton: !this.state.paginationButton })
   }
 

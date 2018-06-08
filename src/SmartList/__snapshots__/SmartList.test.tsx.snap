@@ -95,7 +95,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
         }
         header=""
         isHeader={true}
-        key="test-smart-list-list-item-0-0"
+        key="test-smart-list-list-item-0-1"
         rowIndex={0}
         size={3}
       >
@@ -129,7 +129,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
         }
         header=""
         isHeader={true}
-        key="test-smart-list-list-item-0-0"
+        key="test-smart-list-list-item-0-2"
         rowIndex={0}
         size={3}
       >
@@ -230,7 +230,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
             }
             header=""
             isHeader={false}
-            key="test-smart-list-list-item-0-0"
+            key="test-smart-list-list-item-0-1"
             rowIndex={0}
             size={3}
           >
@@ -262,7 +262,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
             }
             header=""
             isHeader={false}
-            key="test-smart-list-list-item-0-0"
+            key="test-smart-list-list-item-0-2"
             rowIndex={0}
             size={3}
           >
@@ -359,7 +359,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
             }
             header=""
             isHeader={false}
-            key="test-smart-list-list-item-1-0"
+            key="test-smart-list-list-item-1-1"
             rowIndex={1}
             size={3}
           >
@@ -391,7 +391,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
             }
             header=""
             isHeader={false}
-            key="test-smart-list-list-item-1-0"
+            key="test-smart-list-list-item-1-2"
             rowIndex={1}
             size={3}
           >
@@ -503,7 +503,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
         }
         header="Expiry Date"
         isHeader={true}
-        key="test-smart-list-list-item-0-0"
+        key="test-smart-list-list-item-0-1"
         rowIndex={0}
         size={3}
       >
@@ -543,7 +543,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
         }
         header="Status"
         isHeader={true}
-        key="test-smart-list-list-item-0-0"
+        key="test-smart-list-list-item-0-2"
         rowIndex={0}
         size={3}
       >
@@ -650,7 +650,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
             }
             header="Expiry Date"
             isHeader={false}
-            key="test-smart-list-list-item-0-0"
+            key="test-smart-list-list-item-0-1"
             rowIndex={0}
             size={3}
           >
@@ -682,7 +682,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
             }
             header="Status"
             isHeader={false}
-            key="test-smart-list-list-item-0-0"
+            key="test-smart-list-list-item-0-2"
             rowIndex={0}
             size={3}
           >
@@ -779,7 +779,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
             }
             header="Expiry Date"
             isHeader={false}
-            key="test-smart-list-list-item-1-0"
+            key="test-smart-list-list-item-1-1"
             rowIndex={1}
             size={3}
           >
@@ -811,7 +811,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
             }
             header="Status"
             isHeader={false}
-            key="test-smart-list-list-item-1-0"
+            key="test-smart-list-list-item-1-2"
             rowIndex={1}
             size={3}
           >
@@ -872,7 +872,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
         data={Array []}
         header=""
         isHeader={true}
-        key="test-smart-list-list-item-0-0"
+        key="test-smart-list-list-item-0-1"
         rowIndex={0}
         size={3}
       >
@@ -891,7 +891,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
         data={Array []}
         header=""
         isHeader={true}
-        key="test-smart-list-list-item-0-0"
+        key="test-smart-list-list-item-0-2"
         rowIndex={0}
         size={3}
       >
