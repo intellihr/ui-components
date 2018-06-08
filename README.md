@@ -16,7 +16,7 @@ A common React components library that is used in our company.
 
 ## Table of Contents
 
-* [Get Started](#get-started)
+* [Get Started (Integrate to Your Project)](#get-started-integrate-to-your-project)
 * [Local Development Guide](#local-development-guide)
     * [Docker](#docker)
         * [Build Image](#build-image)
@@ -27,26 +27,49 @@ A common React components library that is used in our company.
     * [Lint](#lint)
 * [Customisation](#customisation)
 
-## Get Started
+## Get Started (Integrate to Your Project)
 
-1. Install ui-components
+1. It's simple. Let's add that into your project:
 
     ```bash
-    yarn add @intellihr/ui-components
+    yarn add @intellihr/ui-components react react-dom
     # or
-    npm i @intellihr/ui-components
+    npm i @intellihr/ui-components react react-dom
     ```
 
-2. How to use
+2. Then included the project css and this project's components css into your project's entry point. e.g. in CRA, it's the `index.js`:
 
     ```javascript
-    // Import in your javascript to use
-    import { OurComponent } from '@intellihr/ui-components'
+    import '@intellihr/ui-components/dist/index.css'
+    import '@intellihr/ui-components/dist/ui-components.css'
+    ``` 
+
+3. Make sure your project knows how to handle css file type, which is quite simple if you use webpack(and normally your project should have already setup):
+
+    ```javascript
+    {
+      test: /\.css$/,
+      use: [
+        require.resolve('style-loader'),
+        {
+          loader: require.resolve('css-loader')
+        }
+      ]
+    }
+
     ```
 
-    ```sass
-    // Import once only for styles
-    import '~@intellihr/ui-components/dist/index.css'
+4. Then you could start using the components! Test out by:
+
+    ```javascript
+    import { Callout } from '@intellihr/ui-components'
+
+    <Callout type="info">
+      <div className="title">
+      Information!
+      </div>
+      Bringing you the lasted news.
+    </Callout>
     ```
 
 ## Local Development Guide
