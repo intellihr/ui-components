@@ -86,7 +86,7 @@ export class ListClickableColumn extends React.PureComponent<IListClickableColum
     }
   }
 
-  classNames (): string {
+  get classNames (): string {
     return classNames(
       style.ListClickableColumns,
       'clickable-columns',
@@ -103,7 +103,7 @@ export class ListClickableColumn extends React.PureComponent<IListClickableColum
     return (
       <Anchor
         blockNavigationOnLeftClick={blockNavigationOnLeftClick}
-        className={this.classNames()}
+        className={this.classNames}
         href={this.getUrl}
         onClick={this.handleClick}
         onLeftClick={this.handleLeftClick}
