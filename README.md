@@ -16,40 +16,113 @@ A common React components library that is used in our company.
 
 ## Table of Contents
 
-* [Get Started](#get-started)
+* [Get Started (Integrate to Your Project)](#get-started-integrate-to-your-project)
 * [Local Development Guide](#local-development-guide)
+    * [Add Dependency](#add-dependency)
+        * [Add `dependencies`](#add-dependencies)
+        * [Add `devDependencies`](#add-devdependencies)
+        * [Add `peerDependencies`](#add-peerdependencies)
     * [Docker](#docker)
         * [Build Image](#build-image)
         * [Run Inside Docker](#run-inside-docker)
     * [Install Dependency](#install-dependency)
-    * [Add Dependency](#add-dependency)
     * [Development](#development)
     * [Lint](#lint)
 * [Customisation](#customisation)
 
-## Get Started
+## Get Started (Integrate to Your Project)
 
-1. Install ui-components
+1. It's simple. Let's add that into your project:
 
     ```bash
-    yarn add @intellihr/ui-components
+    yarn add @intellihr/ui-components react react-dom
     # or
-    npm i @intellihr/ui-components
+    npm i @intellihr/ui-components react react-dom
     ```
 
-2. How to use
+2. Then included the project css and this project's components css into your project's entry point. e.g. in CRA, it's the `index.js`:
 
     ```javascript
-    // Import in your javascript to use
-    import { OurComponent } from '@intellihr/ui-components'
+    import '@intellihr/ui-components/dist/index.css'
+    import '@intellihr/ui-components/dist/ui-components.css'
+    ``` 
+
+3. Make sure your project knows how to handle css file type, which is quite simple if you use webpack(and normally your project should have already setup):
+
+    ```javascript
+    {
+      test: /\.css$/,
+      use: [
+        require.resolve('style-loader'),
+        {
+          loader: require.resolve('css-loader')
+        }
+      ]
+    }
+
     ```
 
-    ```sass
-    // Import once only for styles
-    import '~@intellihr/ui-components/dist/index.css'
+4. Then you could start using the components! Test out by:
+
+    ```javascript
+    import { Callout } from '@intellihr/ui-components'
+
+    <Callout type="info">
+      <div className="title">
+      Information!
+      </div>
+      Bringing you the lasted news.
+    </Callout>
     ```
 
 ## Local Development Guide
+
+### Add Dependency
+
+For Details Check [Here](https://lexi-lambda.github.io/blog/2016/08/24/understanding-the-npm-dependency-model/)
+
+![Dependency Mind Map](https://drive.google.com/uc?id=1vg0quZCNcOvm7vz10rIK6WFqmIH_VHy3)
+
+#### Add `devDependencies`
+
+    ```bash
+    yarn add -D some-library
+    ```
+
+#### Add `dependencies`
+
+    ```bash
+    yarn add -E some-library
+    ```
+    
+#### Add `peerDependencies`
+
+1. Add `devDependencies`
+
+    ```bash
+    yarn add -D some-library
+    ```
+
+2. Update `package.json` to add `peerDependencies`
+
+    ```json
+    {
+      "devDependencies": {
+        "some-library": "^1.0.0"
+      },
+      "peerDependencies": {
+        "some-library": "^1.0.0"
+      }
+    }
+    ```
+
+3. Update your consumer to include your `peerDependencies`
+
+    ```bash
+    npm i --save-dev some-library
+    # or
+    yarn add -D some-library
+    ```
 
 ### Docker
 
@@ -72,46 +145,8 @@ docker-composer run --rm code-mac /bin/sh
 ### Install Dependency
 
 ```bash
-npm install
+yarn
 ```
-
-### Add Dependency
-
-Ui-components must NOT contain any dependency so that
-the bundled file does not contain any 3rd party library.
-
-For all dependecies, use the combination of
-`peerDependencies` and `devDependencies`
-
-1. Add `devDependencies`
-
-    ```bash
-    npm i --save-dev -E some-library
-    ```
-
-2. For `dependencies`, update `package.json` (Skip this for `devDependencies`)
-
-    ```json
-    {
-      "devDependencies": {
-        "some-library": "1.0.0"
-      },
-      "peerDependencies": {
-        "some-library": "^1.0.0"
-      }
-    }
-    ```
-
-3. Update your consumer to include your `peerDependencies` (Skip this for `devDependencies`)
-
-    ```bash
-    npm i --save-dev some-library
-    # or
-    yarn add --dev some-library
-    ```
-
-In this case, the consumer will be responsible to download
-the dependencies.
 
 ### Development
 
@@ -141,37 +176,37 @@ Some development points:
 Typescript Style Check
 
 ```bash
-npm run lint
+yarn lint
 ```
 
 with autofix
 
 ```bash
-npm run lint:fix
+yarn lint:fix
 ```
 
 Sass Style Check
 
 ```bash
-npm run lint:sass
+yarn lint:sass
 ```
 
 Sass Style Autofix
 
 ```bash
-npm run lint:sass:fix
+yarn lint:sass:fix
 ```
 
 Styled-Components Check
 
 ```bash
-npm run lint:css
+yarn lint:css
 ```
 
 ### Code Quality Analysis
 
 ```bash
-npm run codequality
+yarn codequality
 ```
 
 It will then generate `.codeclimate/codeclimate.html`
