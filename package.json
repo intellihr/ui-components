@@ -28,7 +28,6 @@
   },
   "devDependencies": {
     "@epegzz/sass-vars-loader": "3.2.3",
-    "@intellihr/icons": "0.0.1",
     "@intellihr/standard": "11.0.4",
     "@types/chart.js": "2.7.14",
     "@types/classnames": "2.2.3",
