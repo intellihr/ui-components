@@ -1,4 +1,4 @@
-import React, { cloneElement } from 'react'
+import React from 'react'
 import uuid from 'uuid'
 import { times, map, take, filter, size, isEmpty, every, isNil } from 'lodash'
 import classNames from 'classnames'
@@ -69,11 +69,11 @@ export class SmartList extends React.PureComponent<ISmartList, SmartListState> {
         if (child.type === ListClickableColumn) {
           props.children = map(
             child.props.children,
-            (child: any) => cloneElement(child, listItemProps(child))
+            (child: any) => React.cloneElement(child, listItemProps(child))
           )
         }
 
-        return cloneElement(child, props)
+        return React.cloneElement(child, props)
       }
     )
   }

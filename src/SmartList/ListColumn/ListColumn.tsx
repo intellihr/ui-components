@@ -1,5 +1,5 @@
 import React from 'react'
-import { isNil } from 'lodash'
+import { isNil, map } from 'lodash'
 import classNames from 'classnames'
 import { ListHeader } from '../ListHeader'
 
@@ -96,13 +96,7 @@ export class ListColumn extends React.PureComponent<IListColumn> {
       return [size]
     }
 
-    let classes = []
-
-    for (let key in size) {
-      classes.push(`${key}-${size[key]}`)
-    }
-
-    return classes
+    return map(size, (v, k) => `${k}-${v}`)
   }
 
   get columnOrderClasses () {
@@ -122,25 +116,20 @@ export class ListColumn extends React.PureComponent<IListColumn> {
       return [order]
     }
 
-    let classes = []
-
-    for (const key in order) {
-      classes.push(`${key}-order-${order[key]}`)
-    }
-
-    return classes
+    return map(order, (v, k) => `${k}-order-${v}`)
   }
 
   public render (): JSX.Element | null {
     const {
-      alignRight
+      alignRight,
+      classNames: customClasses
     } = this.props
 
     return (
       <div className={classNames(
         'list-column',
         'cell',
-        this.props.classNames,
+        customClasses,
         this.cellClassNames,
         ...this.columnSizeClasses,
         ...this.columnOrderClasses,
