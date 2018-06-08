@@ -10,22 +10,36 @@ import { ListRow } from './ListRow'
 const style = require('./style.scss')
 
 export interface ISmartList {
-  id?: string,
-  data: any,
-  children: any,
-  handleRowClick?: (rowObject?: object, event?: any) => void,
-  emptyListText?: string,
-  title?: string,
-  loading?: boolean,
-  cursor?: 'auto' | 'pointer',
-  limit?: number,
-  showHeaderRow?: boolean,
-  showHoverBg?: boolean,
-  hideHeaderOnSmall?: boolean,
+  /** ID of the smart list */
+  id?: string
+  /** Dataset used to generate the list rows */
+  data: any
+  /** Column components passed to the list */
+  children: any
+  /** Callback that gets triggered when clicking on a list row */
+  handleRowClick?: (rowObject?: object, event?: any) => void
+  /** Text to display where there is no data available */
+  emptyListText?: string
+  /** Title of the list */
+  title?: string
+  /** Flag to select if the data is being loaded */
+  loading?: boolean
+  /** Style for cursor */
+  cursor?: 'auto' | 'pointer'
+  /** Limit of rows that will be shown by default */
+  limit?: number
+  /** Flag to select if headers should be displayed for each column */
+  showHeaderRow?: boolean
+  /** Flag to select if the background color of rows should change on hover */
+  showHoverBg?: boolean
+  /** Flag to select if column headers should be hidden for small breakpoint */
+  hideHeaderOnSmall?: boolean
+  /** Wrapper component applied to each row */
   rowWrapper?: (props: object) => JSX.Element
 }
 
 export interface SmartListState {
+  /** Flag to select if the pagination (Show More/Hide) button should be shown */
   paginationButton: boolean
 }
 

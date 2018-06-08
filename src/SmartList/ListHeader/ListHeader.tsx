@@ -3,9 +3,13 @@ import React from 'react'
 const style = require('./style.scss')
 
 export interface IListHeader {
-  label?: string | object,
-  tooltipId?: string,
-  tooltipText?: string,
+  /** Label for the column header */
+  label?: string | object
+  /** ID for the column header tooltip */
+  tooltipId?: string
+  /** Text display in the column header tooltip */
+  tooltipText?: string
+  /** Callback triggered when the tooltip appears */
   onShowTooltip?: () => void
 }
 

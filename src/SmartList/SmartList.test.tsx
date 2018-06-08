@@ -3,7 +3,7 @@ import { mount } from 'enzyme'
 import { SmartList } from './SmartList'
 import { ListColumn } from './ListColumn'
 
-export interface ISmartListItem {
+export interface ITestSmartListItem {
   name: string,
   issuingOrganisation: string,
   expiryDate: string,
@@ -35,7 +35,7 @@ describe('<SmartList />', () => {
         <ListColumn
           size={6}
           header='Qualification'
-          cell={(row: ISmartListItem) =>
+          cell={(row: ITestSmartListItem) =>
             <div>
               <b>{row.name}</b>
               <div>{row.issuingOrganisation}</div>
@@ -45,12 +45,12 @@ describe('<SmartList />', () => {
         <ListColumn
           size={3}
           header='Expiry Date'
-          cell={(row: ISmartListItem) => row.expiryDate}
+          cell={(row: ITestSmartListItem) => row.expiryDate}
         />
         <ListColumn
           size={3}
           header='Status'
-          cell={(row: ISmartListItem) => row.status}
+          cell={(row: ITestSmartListItem) => row.status}
         />
       </SmartList>
     )
@@ -67,7 +67,7 @@ describe('<SmartList />', () => {
       >
         <ListColumn
           size={6}
-          cell={(row: ISmartListItem) =>
+          cell={(row: ITestSmartListItem) =>
             <div>
               <b>{row.name}</b>
               <div>{row.issuingOrganisation}</div>
@@ -76,11 +76,11 @@ describe('<SmartList />', () => {
         />
         <ListColumn
           size={3}
-          cell={(row: ISmartListItem) => row.expiryDate}
+          cell={(row: ITestSmartListItem) => row.expiryDate}
         />
         <ListColumn
           size={3}
-          cell={(row: ISmartListItem) => row.status}
+          cell={(row: ITestSmartListItem) => row.status}
         />
       </SmartList>
     )
@@ -96,7 +96,7 @@ describe('<SmartList />', () => {
       >
         <ListColumn
           size={6}
-          cell={(row: ISmartListItem) =>
+          cell={(row: ITestSmartListItem) =>
             <div>
               <b>{row.name}</b>
               <div>{row.issuingOrganisation}</div>
@@ -105,11 +105,11 @@ describe('<SmartList />', () => {
         />
         <ListColumn
           size={3}
-          cell={(row: ISmartListItem) => row.expiryDate}
+          cell={(row: ITestSmartListItem) => row.expiryDate}
         />
         <ListColumn
           size={3}
-          cell={(row: ISmartListItem) => row.status}
+          cell={(row: ITestSmartListItem) => row.status}
         />
       </SmartList>
     )

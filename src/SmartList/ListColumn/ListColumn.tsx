@@ -4,27 +4,45 @@ import classNames from 'classnames'
 import { ListHeader } from '../ListHeader'
 
 export interface SizeShape {
-  small: 'auto' | 'shrink' | 'stretch',
-  medium: 'auto' | 'shrink' | 'stretch',
-  large: 'auto' | 'shrink' | 'stretch',
-  xlarge: 'auto' | 'shrink' | 'stretch',
-  xxlarge: 'auto' | 'shrink' | 'stretch',
+  /** Size action for "small" breakpoint */
+  small: 'auto' | 'shrink' | 'stretch'
+  /** Size action for "medium" breakpoint */
+  medium: 'auto' | 'shrink' | 'stretch'
+  /** Size action for "large" breakpoint */
+  large: 'auto' | 'shrink' | 'stretch'
+  /** Size action for "xlarge" breakpoint */
+  xlarge: 'auto' | 'shrink' | 'stretch'
+  /** Size action for "xxlarge" breakpoint */
+  xxlarge: 'auto' | 'shrink' | 'stretch'
   [key: string]: string
 }
 
 export interface IListColumn {
-  cell: (rowObject: any) => JSX.Element | string,
-  cellClassNames?: (rowObject: any) => string,
-  data?: any,
-  rowIndex?: number,
-  isHeader?: boolean,
-  header?: string | object,
-  classNames?: string,
+  /** Content to display in each cell of the list column */
+  cell: (rowObject: any) => JSX.Element | string
+  /** Class names to use for each cell of the list column */
+  cellClassNames?: (rowObject: any) => string
+  /** Dataset used to generate the list content */
+  data?: any
+  /** Index of the row being iterated on */
+  rowIndex?: number
+  /** Flag to state if the column cell is the header or not */
+  isHeader?: boolean
+  /** Content to display in header */
+  header?: string | object
+  /** Class names to use for each row of the list */
+  classNames?: string
+  /** Size of the column */
   size: ('auto' | 'shrink' | 'stretch') | number | SizeShape
-  alignRight?: boolean,
-  tooltipId?: string,
-  tooltipText?: string,
-  behave?: string,
+  /** Flag to select if the text should be aligned right */
+  alignRight?: boolean
+  /** ID for the column header tooltip */
+  tooltipId?: string
+  /** Text display in the column header tooltip */
+  tooltipText?: string
+  /** Foundation behave attribute */
+  behave?: string
+  /** Foundation order attribute */
   order?: any
 }
 

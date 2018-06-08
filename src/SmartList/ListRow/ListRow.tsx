@@ -4,15 +4,24 @@ import classNames from 'classnames'
 import { Anchor } from '../../Anchor'
 
 export interface IListRow {
-  children: any,
-  wrapperClassName?: string,
-  className?: string,
+  /** Column elements passed to the row */
+  children: any
+  /** Wrapper Class name to apply to each row */
+  wrapperClassName?: string
+  /** Class name to apply to each row */
+  className?: string
+  /** Callback triggered when the row has been clicked */
   handleClick?:
-    (rowObject?: object, event?: React.MouseEvent<HTMLDivElement>) => void,
-  index?: number,
-  cursor?: 'auto' | 'pointer',
-  hideRow?: boolean,
-  to?: string,
+    (rowObject?: object, event?: React.MouseEvent<HTMLDivElement>) => void
+  /** Index of the row in the list */
+  index?: number
+  /** Style for cursor */
+  cursor?: 'auto' | 'pointer'
+  /** Flag to state if the row should be hidden */
+  hideRow?: boolean
+  /** Redirect url used for React Router */
+  to?: string
+  /** Redirect url used for window location */
   href?: string
 }
 

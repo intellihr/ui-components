@@ -11,8 +11,11 @@ export interface AnchorProps {
   href?: string
   /** Link target */
   target?: string
-  useReactRouter?: boolean,
-  blockNavigationOnLeftClick?: boolean,
+  /** Flag to select if React Router should be used or not */
+  useReactRouter?: boolean
+  /** Flag to state if navigation should be blocked on left click */
+  blockNavigationOnLeftClick?: boolean
+  /** Callback to call on left click */
   onLeftClick?: (rowObject: object) => void
 }
 

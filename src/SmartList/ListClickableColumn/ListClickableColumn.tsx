@@ -6,15 +6,25 @@ import { Anchor } from '../../Anchor'
 const style = require('./style.scss')
 
 export interface IListClickableColumn {
-  data: any,
-  rowIndex: number,
-  isHeader?: boolean,
-  handleClick?: (rowObject: object) => void,
-  handleLeftClick?: (rowObject: object) => void,
-  urlForRow?: (rowObject: object) => string,
-  childrenWrapper?: (rowObject: object, children: any) => JSX.Element,
-  children: JSX.Element,
-  blockNavigationOnLeftClick?: boolean,
+  /** Dataset used to generate the list rows */
+  data: any
+  /** Index of the row being iterated on */
+  rowIndex: number
+  /** Flag to state if the column cell is the header or not */
+  isHeader?: boolean
+  /** Callback that gets triggered when clicking on a list row */
+  handleClick?: (rowObject: object) => void
+  /** Callback that gets triggered when left clicking on a list row */
+  handleLeftClick?: (rowObject: object) => void
+  /** Url to redirect to when row has been clicked */
+  urlForRow?: (rowObject: object) => string
+  /** Wrapper for child component */
+  childrenWrapper?: (rowObject: object, children: any) => JSX.Element
+  /** Column components passed to the list */
+  children: JSX.Element
+  /** Flag to state if navigation should be blocked on left click */
+  blockNavigationOnLeftClick?: boolean
+  /** Flag to select if React Router should be used or not */
   useReactRouter?: boolean
 }
 
