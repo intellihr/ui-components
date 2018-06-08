@@ -63,7 +63,6 @@ Or:
 npm i @intellihr/ui-components react react-dom
 ```
 
-
 Then included the project css and this project's components css into your project's entry point. e.g. in CRA, it's the `index.js`:
 
 ```javascript
