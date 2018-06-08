@@ -56,6 +56,8 @@ A common React components library that is used in our company.
 
 ### Add Dependency
 
+For Details Check [Here](https://lexi-lambda.github.io/blog/2016/08/24/understanding-the-npm-dependency-model/)
+
 ![Dependency Mind Map](https://drive.google.com/uc?id=1GHwom14JIMrASrXhuSmbON4aWa1LyAG5)
 
 #### Add `devDependencies`
