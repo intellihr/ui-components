@@ -1,7 +1,7 @@
 import React from 'react'
 import uuid from 'uuid'
-import { take, filter, size, isEmpty, every, isNil } from 'lodash'
-import { Children, cloneElement } from 'react'
+import { times, map, take, filter, size, isEmpty, every, isNil } from 'lodash'
+import { cloneElement } from 'react'
 import classNames from 'classnames'
 import { Callout } from '../Callout'
 import { Spinner } from '../Spinner'
@@ -55,33 +55,27 @@ export class SmartList extends React.PureComponent<ISmartList, SmartListState> {
       data
     } = this.props
 
-    let colIndex = 0
+    let columnIndex = 0
 
-    return Children.map(
+    const listItemProps = (item: any) => ({
+      key: uuid.v4(),
+      isHeader,
+      rowIndex,
+      data,
+      colIndex: columnIndex++,
+      size: item.props.size,
+      header: item.props.header
+    })
+
+    return map(
       children,
       (child: any) => {
-        let props: any = {
-          key: uuid.v4(),
-          isHeader,
-          rowIndex,
-          data,
-          colIndex: colIndex++,
-          size: child.props.size,
-          header: child.props.header
-        }
+        const props: any = listItemProps(child)
 
         if (child.type === ListClickableColumn) {
-          props.children = Children.map(
+          props.children = map(
             child.props.children,
-            (child: any) => cloneElement(child, {
-              key: uuid.v4(),
-              isHeader,
-              rowIndex,
-              data,
-              colIndex: colIndex++,
-              size: child.props.size,
-              header: child.props.header
-            })
+            (child: any) => cloneElement(child, listItemProps(child))
           )
         }
 
@@ -91,9 +85,7 @@ export class SmartList extends React.PureComponent<ISmartList, SmartListState> {
   }
 
   togglePagination (): void {
-    this.setState({
-      paginationButton: !this.state.paginationButton
-    })
+    this.setState({ paginationButton: !this.state.paginationButton })
   }
 
   get headerRow (): JSX.Element | undefined {
@@ -123,15 +115,84 @@ export class SmartList extends React.PureComponent<ISmartList, SmartListState> {
     return !isNil(limit) && limit < data.length
   }
 
-  get itemRows (): JSX.Element | JSX.Element[] {
+  listRow (index: number): JSX.Element {
+    const {
+      handleRowClick,
+      cursor,
+      rowWrapper,
+      data
+    } = this.props
+
+    const listItem = data[index]
+
+    const defaultProps = {
+      key: uuid.v4(),
+      cursor,
+      data: listItem,
+      hideRow: listItem.hide,
+      index: index,
+      handleClick: (e: any) =>
+        handleRowClick && handleRowClick(listItem, e)
+    }
+
+    if (rowWrapper) {
+      return (
+        rowWrapper({
+          defaultProps,
+          row: listItem,
+          children: this.cloneTableElement(index)
+        })
+      )
+    }
+
+    return (
+      <ListRow {...defaultProps}>
+        {this.cloneTableElement(index)}
+      </ListRow>
+    )
+  }
+
+  get listRowsContent (): JSX.Element[] {
+    const {
+      data,
+      limit
+    } = this.props
+
+    let rows: JSX.Element[] = times(data.length, i => this.listRow(i))
+
+    if (this.canLimitData) {
+      if (this.state.paginationButton) {
+        rows = take(filter(rows, ['props.hideRow', false]), limit)
+      }
+
+      const visibleRowsCount = size(filter(data, item => !item.hide))
+
+      if (!isNil(limit) && visibleRowsCount > 0 && visibleRowsCount > limit) {
+        rows.push(
+          <div
+            key='pagination-button'
+            className={classNames(
+              style,
+              'smart-list',
+              'cursor-pointer',
+              'show-all-row'
+            )}
+            onClick={this.togglePagination}
+          >
+            {this.showAllRowContent(visibleRowsCount)}
+          </div>
+        )
+      }
+    }
+
+    return rows
+  }
+
+  get listContent (): JSX.Element | JSX.Element[] {
     const {
       data,
       emptyListText,
-      loading,
-      handleRowClick,
-      cursor,
-      limit,
-      rowWrapper
+      loading
     } = this.props
 
     if (loading) {
@@ -152,69 +213,7 @@ export class SmartList extends React.PureComponent<ISmartList, SmartListState> {
       )
     }
 
-    let rows: JSX.Element[] = []
-
-    let displayData = data
-
-    console.log(displayData.length)
-
-    for (let i = 0; i < displayData.length; i++) {
-      console.log(displayData[i])
-
-      const defaultProps = {
-        key: uuid.v4(),
-        cursor,
-        data: displayData[i],
-        hideRow: displayData[i].hide,
-        index: i,
-        handleClick: (e: any) =>
-          handleRowClick && handleRowClick(displayData[i], e)
-      }
-
-      if (rowWrapper) {
-        rows.push(rowWrapper({
-          defaultProps,
-          row: displayData[i],
-          children: this.cloneTableElement(i)
-        }))
-      } else {
-        rows.push(
-          <ListRow
-            {...defaultProps}
-            key={displayData[i].id}
-          >
-            {this.cloneTableElement(i)}
-          </ListRow>
-        )
-      }
-    }
-
-    if (this.canLimitData) {
-      if (this.state.paginationButton) {
-        rows = take(filter(rows, ['props.hideRow', false]), limit)
-      }
-
-      const visibleRowsCount = size(filter(data, item => !item.hide))
-
-      if (limit && visibleRowsCount > 0 && visibleRowsCount > limit) {
-        rows.push(
-          <div
-            className={classNames(
-              style,
-              'smart-list',
-              'cursor-pointer',
-              'show-all-row'
-            )}
-            key='pagination-button'
-            onClick={this.togglePagination}
-          >
-            {this.showAllRowContent(visibleRowsCount)}
-          </div>
-        )
-      }
-    }
-
-    return rows
+    return this.listRowsContent
   }
 
   showAllRowContent (visibleRowsCount: number) {
@@ -245,19 +244,16 @@ export class SmartList extends React.PureComponent<ISmartList, SmartListState> {
     } = this.props
 
     return (
-      <div className={
-        classNames(
-          style.SmartList,
-          'smart-list',
-          { 'hover-bg': showHoverBg }
-        )
-      }>
+      <div className={classNames(
+        style.SmartList,
+        'smart-list',
+        { 'hover-bg': showHoverBg }
+      )}>
         {this.title}
-
         {this.headerRow}
 
         <div className='smart-list-rows'>
-          {this.itemRows}
+          {this.listContent}
         </div>
       </div>
     )

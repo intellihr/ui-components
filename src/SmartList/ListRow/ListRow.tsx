@@ -4,10 +4,11 @@ import classNames from 'classnames'
 import { Anchor } from '../../Anchor'
 
 export interface IListRow {
-  children: any
+  children: any,
   wrapperClassName?: string,
   className?: string,
-  handleClick?: (rowObject?: object, event?: any) => void,
+  handleClick?:
+    (rowObject?: object, event?: React.MouseEvent<HTMLDivElement>) => void,
   index?: number,
   cursor?: 'auto' | 'pointer',
   hideRow?: boolean,

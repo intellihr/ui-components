@@ -20,7 +20,7 @@ export class ListHeader extends React.PureComponent<IListHeader> {
     }
 
     return (
-      <span className={style}>
+      <span className={style.ListHeader}>
         {label}
       </span>
     )
