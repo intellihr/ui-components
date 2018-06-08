@@ -58,12 +58,12 @@ A common React components library that is used in our company.
 
 For Details Check [Here](https://lexi-lambda.github.io/blog/2016/08/24/understanding-the-npm-dependency-model/)
 
-![Dependency Mind Map](https://drive.google.com/uc?id=1GHwom14JIMrASrXhuSmbON4aWa1LyAG5)
+![Dependency Mind Map](https://drive.google.com/uc?id=1vg0quZCNcOvm7vz10rIK6WFqmIH_VHy3)
 
 #### Add `devDependencies`
 
     ```bash
-    yarn add -DE some-library
+    yarn add -D some-library
     ```
 
 #### Add `dependencies`
@@ -77,7 +77,7 @@ For Details Check [Here](https://lexi-lambda.github.io/blog/2016/08/24/understan
 1. Add `devDependencies`
 
     ```bash
-    yarn add -DE some-library
+    yarn add -D some-library
     ```
 
 2. Update `package.json` to add `peerDependencies`
@@ -85,7 +85,7 @@ For Details Check [Here](https://lexi-lambda.github.io/blog/2016/08/24/understan
     ```json
     {
       "devDependencies": {
-        "some-library": "1.0.0"
+        "some-library": "^1.0.0"
       },
       "peerDependencies": {
         "some-library": "^1.0.0"
