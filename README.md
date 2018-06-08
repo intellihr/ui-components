@@ -18,11 +18,14 @@ A common React components library that is used in our company.
 
 * [Get Started](#get-started)
 * [Local Development Guide](#local-development-guide)
+    * [Add Dependency](#add-dependency)
+        * [Add `dependencies`](#add-dependencies)
+        * [Add `devDependencies`](#add-devdependencies)
+        * [Add `peerDependencies`](#add-peerdependencies)
     * [Docker](#docker)
         * [Build Image](#build-image)
         * [Run Inside Docker](#run-inside-docker)
     * [Install Dependency](#install-dependency)
-    * [Add Dependency](#add-dependency)
     * [Development](#development)
     * [Lint](#lint)
 * [Customisation](#customisation)
@@ -51,6 +54,51 @@ A common React components library that is used in our company.
 
 ## Local Development Guide
 
+### Add Dependency
+
+![Dependency Mind Map](https://drive.google.com/uc?id=1GHwom14JIMrASrXhuSmbON4aWa1LyAG5)
+
+#### Add `devDependencies`
+
+    ```bash
+    yarn add -DE some-library
+    ```
+
+#### Add `dependencies`
+
+    ```bash
+    yarn add -E some-library
+    ```
+    
+#### Add `peerDependencies`
+
+1. Add `devDependencies`
+
+    ```bash
+    yarn add -DE some-library
+    ```
+
+2. Update `package.json` to add `peerDependencies`
+
+    ```json
+    {
+      "devDependencies": {
+        "some-library": "1.0.0"
+      },
+      "peerDependencies": {
+        "some-library": "^1.0.0"
+      }
+    }
+    ```
+
+3. Update your consumer to include your `peerDependencies`
+
+    ```bash
+    npm i --save-dev some-library
+    # or
+    yarn add -D some-library
+    ```
+
 ### Docker
 
 #### Build Imange
@@ -72,46 +120,8 @@ docker-composer run --rm code-mac /bin/sh
 ### Install Dependency
 
 ```bash
-npm install
+yarn
 ```
-
-### Add Dependency
-
-Ui-components must NOT contain any dependency so that
-the bundled file does not contain any 3rd party library.
-
-For all dependecies, use the combination of
-`peerDependencies` and `devDependencies`
-
-1. Add `devDependencies`
-
-    ```bash
-    npm i --save-dev -E some-library
-    ```
-
-2. For `dependencies`, update `package.json` (Skip this for `devDependencies`)
-
-    ```json
-    {
-      "devDependencies": {
-        "some-library": "1.0.0"
-      },
-      "peerDependencies": {
-        "some-library": "^1.0.0"
-      }
-    }
-    ```
-
-3. Update your consumer to include your `peerDependencies` (Skip this for `devDependencies`)
-
-    ```bash
-    npm i --save-dev some-library
-    # or
-    yarn add --dev some-library
-    ```
-
-In this case, the consumer will be responsible to download
-the dependencies.
 
 ### Development
 
@@ -141,37 +151,37 @@ Some development points:
 Typescript Style Check
 
 ```bash
-npm run lint
+yarn lint
 ```
 
 with autofix
 
 ```bash
-npm run lint:fix
+yarn lint:fix
 ```
 
 Sass Style Check
 
 ```bash
-npm run lint:sass
+yarn lint:sass
 ```
 
 Sass Style Autofix
 
 ```bash
-npm run lint:sass:fix
+yarn lint:sass:fix
 ```
 
 Styled-Components Check
 
 ```bash
-npm run lint:css
+yarn lint:css
 ```
 
 ### Code Quality Analysis
 
 ```bash
-npm run codequality
+yarn codequality
 ```
 
 It will then generate `.codeclimate/codeclimate.html`
