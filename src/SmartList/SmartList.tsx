@@ -1,4 +1,5 @@
 import React from 'react'
+import uuid from 'uuid'
 import { take, filter, size, isEmpty, every, isNil } from 'lodash'
 import { Children, cloneElement } from 'react'
 import classNames from 'classnames'
@@ -16,11 +17,11 @@ export interface ISmartList {
   emptyListText?: string,
   title?: string,
   loading?: boolean,
-  cursor: 'auto' | 'pointer',
-  limit: number,
+  cursor?: 'auto' | 'pointer',
+  limit?: number,
   showHeaderRow?: boolean,
-  showHoverBg: boolean,
-  hideHeaderOnSmall: boolean,
+  showHoverBg?: boolean,
+  hideHeaderOnSmall?: boolean,
   rowWrapper?: (props: object) => JSX.Element
 }
 
@@ -60,6 +61,7 @@ export class SmartList extends React.PureComponent<ISmartList, SmartListState> {
       children,
       (child: any) => {
         let props: any = {
+          key: uuid.v4(),
           isHeader,
           rowIndex,
           data,
@@ -72,6 +74,7 @@ export class SmartList extends React.PureComponent<ISmartList, SmartListState> {
           props.children = Children.map(
             child.props.children,
             (child: any) => cloneElement(child, {
+              key: uuid.v4(),
               isHeader,
               rowIndex,
               data,
@@ -153,8 +156,13 @@ export class SmartList extends React.PureComponent<ISmartList, SmartListState> {
 
     let displayData = data
 
+    console.log(displayData.length)
+
     for (let i = 0; i < displayData.length; i++) {
+      console.log(displayData[i])
+
       const defaultProps = {
+        key: uuid.v4(),
         cursor,
         data: displayData[i],
         hideRow: displayData[i].hide,
@@ -188,7 +196,7 @@ export class SmartList extends React.PureComponent<ISmartList, SmartListState> {
 
       const visibleRowsCount = size(filter(data, item => !item.hide))
 
-      if (visibleRowsCount > 0 && visibleRowsCount > limit) {
+      if (limit && visibleRowsCount > 0 && visibleRowsCount > limit) {
         rows.push(
           <div
             className={classNames(
@@ -239,7 +247,7 @@ export class SmartList extends React.PureComponent<ISmartList, SmartListState> {
     return (
       <div className={
         classNames(
-          style,
+          style.SmartList,
           'smart-list',
           { 'hover-bg': showHoverBg }
         )
@@ -247,6 +255,7 @@ export class SmartList extends React.PureComponent<ISmartList, SmartListState> {
         {this.title}
 
         {this.headerRow}
+
         <div className='smart-list-rows'>
           {this.itemRows}
         </div>

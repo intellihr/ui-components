@@ -4,7 +4,7 @@
 $smartList-bgColour-alert: lighten($alert-light, 3%);
 $smartList-bgHoverColour-alert: lighten($alert-light, 1%);
 
-:local(.smartList) {
+:local(.SmartList) {
   .list-title {
     @extend .section-header;
     margin: 16px 0 16px 0;

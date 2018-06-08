@@ -3,7 +3,7 @@ import React from 'react'
 const style = require('./style.scss')
 
 export interface IListHeader {
-  label?: string,
+  label?: string | object,
   tooltipId?: string,
   tooltipText?: string,
   onShowTooltip?: () => void
