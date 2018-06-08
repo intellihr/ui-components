@@ -63,7 +63,23 @@ Or:
 npm i @intellihr/ui-components
 ```
 
-Also you will need to install the peer dependencies of this project `package.json`.
+Also you will need to install the peer dependencies of this project `package.json`. Here is a list of the dependencies you will need to install into your project should you want to use this library:
+```javascript
+"chart.js": "^2.7.2",
+"classnames": "^2.2.5",
+"color": "^3.0.0",
+"foundation-sites": "^6.4.3",
+"html-to-react": "^1.3.3",
+"react": "^16.3.1",
+"react-chartjs-2": "^2.7.0",
+"react-dom": "^16.3.1",
+"styled-components": "^3.2.6",
+"@intellihr/icons": "0.0.1",
+"font-awesome": "4.7.0",
+"better-react-spinkit": "^2.0.4",
+"react-linkify": "^0.2.2",
+"uuid": "^3.2.1"
+```
 
 Then included the project css and this project's components css into your project's entry point. e.g. in CRA, it's the `index.js`:
 
