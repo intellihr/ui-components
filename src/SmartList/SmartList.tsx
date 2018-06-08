@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { cloneElement } from 'react'
 import uuid from 'uuid'
 import { times, map, take, filter, size, isEmpty, every, isNil } from 'lodash'
-import { cloneElement } from 'react'
 import classNames from 'classnames'
 import { Callout } from '../Callout'
 import { Spinner } from '../Spinner'
@@ -221,7 +220,7 @@ export class SmartList extends React.PureComponent<ISmartList, SmartListState> {
     return 'Collapse'
   }
 
-  get title (): JSX.Element | undefined  {
+  get title (): JSX.Element | undefined {
     const {
       title
     } = this.props
