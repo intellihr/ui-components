@@ -11,6 +11,7 @@ import { ListRow } from './ListRow'
 const style = require('./style.scss')
 
 export interface ISmartList {
+  id?: string,
   data: any,
   children: any,
   handleRowClick?: (rowObject?: object, event?: any) => void,
@@ -51,14 +52,16 @@ export class SmartList extends React.PureComponent<ISmartList, SmartListState> {
 
   cloneTableElement (rowIndex = 0, isHeader = false): JSX.Element[] {
     const {
+      id,
       children,
       data
     } = this.props
 
     let columnIndex = 0
+    const key = id ? `${id}-list-item-${rowIndex}-${columnIndex}` : uuid.v4()
 
     const listItemProps = (item: any) => ({
-      key: uuid.v4(),
+      key,
       isHeader,
       rowIndex,
       data,
@@ -117,6 +120,7 @@ export class SmartList extends React.PureComponent<ISmartList, SmartListState> {
 
   listRow (index: number): JSX.Element {
     const {
+      id,
       handleRowClick,
       cursor,
       rowWrapper,
@@ -124,9 +128,10 @@ export class SmartList extends React.PureComponent<ISmartList, SmartListState> {
     } = this.props
 
     const listItem = data[index]
+    const key = id ? `${id}-list-row-${index}` : uuid.v4()
 
     const defaultProps = {
-      key: uuid.v4(),
+      key,
       cursor,
       data: listItem,
       hideRow: listItem.hide,

@@ -29,6 +29,7 @@ describe('<SmartList />', () => {
   it(`should render an Smart List displaying the right data with the right headers`, () => {
     const wrapper = mount(
       <SmartList
+        id='test-smart-list'
         data={items}
       >
         <ListColumn
@@ -60,6 +61,7 @@ describe('<SmartList />', () => {
   it(`should render a headerless Smart List displaying the right data with the right title`, () => {
     const wrapper = mount(
       <SmartList
+        id='test-smart-list'
         title='My List Title'
         data={items}
       >
@@ -89,6 +91,7 @@ describe('<SmartList />', () => {
   it(`should render an empty Smart List displaying the right data empty list text`, () => {
     const wrapper = mount(
       <SmartList
+        id='test-smart-list'
         data={[]}
       >
         <ListColumn
