@@ -16,7 +16,7 @@ A common React components library that is used in our company.
 
 ## Table of Contents
 
-* [Get Started](#get-started)
+* [Get Started (Integrate to Your Project)](#get-started-integrate-to-your-project)
 * [Local Development Guide](#local-development-guide)
     * [Docker](#docker)
         * [Build Image](#build-image)
@@ -27,7 +27,7 @@ A common React components library that is used in our company.
     * [Lint](#lint)
 * [Customisation](#customisation)
 
-## Get Started (Integrated to your project)
+## Get Started (Integrate to Your Project)
 
 1. It's simple. Let's add that into your project:
 
