@@ -7,6 +7,7 @@ describe('<Tooltip />', () => {
     const wrapper = shallow(
       <Tooltip
         message='Tooltip message'
+        id='test-tooltip'
       >
         <div>This div should have a tooltip</div>
       </Tooltip>

@@ -3,6 +3,7 @@ import ReactTooltip from 'react-tooltip'
 import uuid from 'uuid'
 
 export interface TooltipProps {
+  id?: string,
   children: React.ReactNode,
   message: string,
   place?: 'top' | 'right' | 'bottom' | 'left',
@@ -11,6 +12,14 @@ export interface TooltipProps {
 }
 
 export class Tooltip extends React.Component<TooltipProps> {
+  get tooltipId ():string {
+    const {
+      id
+    } = this.props
+
+    return id || uuid.v4()
+  }
+
   public static defaultProps: Partial<TooltipProps> = {
     place: 'top',
     effect: 'solid'
@@ -25,7 +34,7 @@ export class Tooltip extends React.Component<TooltipProps> {
       onShow
     } = this.props
 
-    const tooltipId = uuid.v4()
+    const tooltipId = this.tooltipId
 
     return (
       <span data-tip data-for={tooltipId}>

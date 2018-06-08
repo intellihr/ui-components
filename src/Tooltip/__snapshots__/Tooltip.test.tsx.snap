@@ -2,7 +2,7 @@
 
 exports[`<Tooltip /> should render a tooltip with the child element 1`] = `
 <span
-  data-for="5523e4ad-89a7-4955-bf0a-7d7e32ffd2f9"
+  data-for="test-tooltip"
   data-tip={true}
 >
   <div>
@@ -10,7 +10,7 @@ exports[`<Tooltip /> should render a tooltip with the child element 1`] = `
   </div>
   <ReactTooltip
     effect="solid"
-    id="5523e4ad-89a7-4955-bf0a-7d7e32ffd2f9"
+    id="test-tooltip"
     insecure={true}
     place="top"
     resizeHide={true}
