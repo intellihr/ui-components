@@ -27,7 +27,7 @@ A common React components library that is used in our company.
     * [Lint](#lint)
 * [Customisation](#customisation)
 
-## Get Started
+## Get Started (Integrated to your project)
 
 1. It's simple. Let's add that into your project:
 
