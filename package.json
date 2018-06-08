@@ -19,7 +19,10 @@
     "react-dom": "^16.3.1",
     "styled-components": "^3.2.6",
     "@intellihr/icons": "0.0.1",
-    "font-awesome": "4.7.0"
+    "font-awesome": "4.7.0",
+    "better-react-spinkit": "^2.0.4",
+    "react-linkify": "^0.2.2",
+    "uuid": "^3.2.1"
   },
   "devDependencies": {
     "@epegzz/sass-vars-loader": "3.2.3",
@@ -86,7 +89,10 @@
     "url-loader": "1.0.1",
     "webpack": "4.5.0",
     "webpack-cli": "2.0.14",
-    "webpack-node-externals": "1.7.2"
+    "webpack-node-externals": "1.7.2",
+    "better-react-spinkit": "^2.0.4",
+    "react-linkify": "^0.2.2",
+    "uuid": "^3.2.1"
   },
   "scripts": {
     "postinstall": "npm rebuild node-sass",
@@ -134,10 +140,5 @@
       "node_modules/**",
       "styleguide/**"
     ]
-  },
-  "dependencies": {
-    "better-react-spinkit": "^2.0.4",
-    "react-linkify": "^0.2.2",
-    "uuid": "^3.2.1"
   }
 }
