@@ -104,7 +104,7 @@ export class ListClickableColumn extends React.PureComponent<IListClickableColum
     )
   }
 
-  render () {
+  public render (): JSX.Element {
     const {
       blockNavigationOnLeftClick,
       useReactRouter
