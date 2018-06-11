@@ -20,6 +20,7 @@
   <ListColumn
     size={6}
     header='Qualification'
+    tooltipText='This is a test tooltip'
     cell={(row) =>
       <div>
         <b>{row.name}</b>
