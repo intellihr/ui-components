@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListColumn /> should render a list column with custom column orders 1`] = `
+<ListColumn
+  alignRight={false}
+  cell={[Function]}
+  data={
+    Array [
+      Object {
+        "name": "Test Name",
+      },
+    ]
+  }
+  header="Test"
+  isHeader={true}
+  order="large-order-2"
+  rowIndex={0}
+  size={6}
+>
+  <div
+    className="list-column cell small-6 large-order-2"
+  >
+    <ListHeader
+      label="Test"
+    >
+      <span
+        className="ListHeader"
+      >
+        Test
+      </span>
+    </ListHeader>
+  </div>
+</ListColumn>
+`;
+
+exports[`<ListColumn /> should render a list column with custom column orders 2`] = `
+<ListColumn
+  alignRight={false}
+  cell={[Function]}
+  data={
+    Array [
+      Object {
+        "name": "Test Name",
+      },
+    ]
+  }
+  header="Test"
+  isHeader={true}
+  order={2}
+  rowIndex={0}
+  size={6}
+>
+  <div
+    className="list-column cell small-6 small-order-2"
+  >
+    <ListHeader
+      label="Test"
+    >
+      <span
+        className="ListHeader"
+      >
+        Test
+      </span>
+    </ListHeader>
+  </div>
+</ListColumn>
+`;
+
+exports[`<ListColumn /> should render a list column with custom column orders 3`] = `
+<ListColumn
+  alignRight={false}
+  cell={[Function]}
+  data={
+    Array [
+      Object {
+        "name": "Test Name",
+      },
+    ]
+  }
+  header="Test"
+  isHeader={true}
+  order={
+    Object {
+      "large": 2,
+      "small": 6,
+    }
+  }
+  rowIndex={0}
+  size={6}
+>
+  <div
+    className="list-column cell small-6 large-order-2 small-order-6"
+  >
+    <ListHeader
+      label="Test"
+    >
+      <span
+        className="ListHeader"
+      >
+        Test
+      </span>
+    </ListHeader>
+  </div>
+</ListColumn>
+`;
+
+exports[`<ListColumn /> should render a list column with the right header 1`] = `
+<ListColumn
+  alignRight={false}
+  cell={[Function]}
+  data={
+    Array [
+      Object {
+        "name": "Test Name",
+      },
+    ]
+  }
+  header="Test"
+  isHeader={true}
+  rowIndex={0}
+  size={6}
+>
+  <div
+    className="list-column cell small-6"
+  >
+    <ListHeader
+      label="Test"
+    >
+      <span
+        className="ListHeader"
+      >
+        Test
+      </span>
+    </ListHeader>
+  </div>
+</ListColumn>
+`;
+
+exports[`<ListColumn /> should render a list column with the right non-header cell content 1`] = `
+<ListColumn
+  alignRight={false}
+  cell={[Function]}
+  data={
+    Array [
+      Object {
+        "name": "Test Name",
+      },
+    ]
+  }
+  header=""
+  isHeader={false}
+  rowIndex={0}
+  size={6}
+>
+  <div
+    className="list-column cell small-6"
+  >
+    <div>
+      Test Name
+    </div>
+  </div>
+</ListColumn>
+`;
