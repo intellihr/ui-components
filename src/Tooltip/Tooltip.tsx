@@ -42,17 +42,19 @@ export class Tooltip extends React.Component<TooltipProps> {
       message,
       place,
       effect,
-      onShow
+      onShow,
+      id
     } = this.props
 
     const tooltipId = this.tooltipId
+    const tooltipElementKey = id || uuid.v4()
     let tooltipElement = children
 
     if (withIcon) {
       tooltipElement = (
         <TooltipIcon>
           <FontAwesomeIcon
-            key={uuid.v4()}
+            key={tooltipElementKey}
             color={iconColour}
             type='question-circle-o'
           />
@@ -61,7 +63,7 @@ export class Tooltip extends React.Component<TooltipProps> {
     }
 
     return (
-      <span key={uuid.v4()} data-tip data-for={tooltipId}>
+      <span key={tooltipElementKey} data-tip data-for={tooltipId}>
         {tooltipElement}
 
         <ReactTooltip
