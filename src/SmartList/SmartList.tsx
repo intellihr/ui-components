@@ -6,6 +6,7 @@ import { Callout } from '../Callout'
 import { Spinner } from '../Spinner'
 import { ListClickableColumn } from './ListClickableColumn'
 import { ListRow } from './ListRow'
+import { withGrid } from '../Grid'
 
 const style = require('./style.scss')
 
@@ -43,7 +44,7 @@ export interface SmartListState {
   paginationButton: boolean
 }
 
-export class SmartList extends React.PureComponent<ISmartList, SmartListState> {
+class SmartListComponent extends React.PureComponent<ISmartList, SmartListState> {
   public static defaultProps: Partial<ISmartList> = {
     emptyListText: 'No Results found.',
     loading: false,
@@ -269,3 +270,5 @@ export class SmartList extends React.PureComponent<ISmartList, SmartListState> {
     )
   }
 }
+
+export const SmartList: React.ComponentClass<ISmartList> = withGrid(SmartListComponent)

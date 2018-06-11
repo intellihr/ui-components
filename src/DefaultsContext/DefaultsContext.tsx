@@ -3,6 +3,8 @@ import React from 'react'
 export interface Defaults {
   /** Anchor component used for clickable links */
   AnchorComponent?: (props: any) => JSX.Element
+  /** Breakpoints used for the grid layout */
+  breakpoints?: string[]
 }
 
 const defaults: Defaults = {}
