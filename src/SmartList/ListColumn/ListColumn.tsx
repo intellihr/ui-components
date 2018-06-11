@@ -78,8 +78,6 @@ export class ListColumn extends React.PureComponent<IListColumn> {
     if (!isNil(rowIndex) && data && data[rowIndex]) {
       return cell(data[rowIndex])
     }
-
-    console.log('<><>>>>')
   }
 
   get cellClassNames (): string | undefined {
