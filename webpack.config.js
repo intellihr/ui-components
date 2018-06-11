@@ -58,7 +58,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        exclude: /(node_modules)/,
+        exclude: /node_modules\/(?!flexboxgrid2)/,
         use: [
           'style-loader',
           'css-loader'

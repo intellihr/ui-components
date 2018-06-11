@@ -1,15 +1,25 @@
 import React from 'react'
-import { Defaults, DefaultsConsumer } from '../DefaultsContext'
 import { ThemeProvider } from 'styled-components'
+import { Defaults, DefaultsConsumer } from '../DefaultsContext'
 
 export interface IGridProps {
   /** Breakpoints to use for the grid layout */
-  breakpoints?: string[]
+  breakpoints?: {
+    xs: number,
+    sm: number,
+    md: number,
+    lg: number
+  }
 }
 
 export class Grid extends React.PureComponent<IGridProps> {
   public static defaultProps: IGridProps = {
-    breakpoints: ['1em', '2em', '3em', '4em']
+    breakpoints: {
+      xs: 0,
+      sm: 39.9375,
+      md: 63.9375,
+      lg: 74.9375
+    }
   }
 
   private gridComponent (defaultValues: Defaults) {
@@ -21,7 +31,9 @@ export class Grid extends React.PureComponent<IGridProps> {
     return (
       <ThemeProvider
         theme={{
-          breakpoints: defaultValues.breakpoints || breakpoints
+          flexboxgrid: {
+            breakpoints: defaultValues.breakpoints || breakpoints
+          }
         }}
       >
         {children}

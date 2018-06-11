@@ -2,6 +2,7 @@ import React from 'react'
 import uuid from 'uuid'
 import { times, map, take, filter, size, isEmpty, every, isNil } from 'lodash'
 import classNames from 'classnames'
+import { Row } from 'react-styled-flexboxgrid'
 import { Callout } from '../Callout'
 import { Spinner } from '../Spinner'
 import { ListClickableColumn } from './ListClickableColumn'
@@ -106,10 +107,12 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
     if (showHeaderRow) {
       return (
         <div className={classNames(
-          'header-row grid-x grid-padding-x',
+          'header-row',
           {'hide-for-small-only': hideHeaderOnSmall}
         )}>
-          {this.cloneTableElement(0, true)}
+          <Row>
+            {this.cloneTableElement(0, true)}
+          </Row>
         </div>
       )
     }
@@ -263,9 +266,7 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
         {this.title}
         {this.headerRow}
 
-        <div className='smart-list-rows'>
-          {this.listContent}
-        </div>
+        {this.listContent}
       </div>
     )
   }

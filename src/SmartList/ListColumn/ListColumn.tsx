@@ -1,21 +1,9 @@
 import React from 'react'
-import { isNil, map } from 'lodash'
+import { isNil, merge } from 'lodash'
 import classNames from 'classnames'
+import { Col } from 'react-styled-flexboxgrid'
 import { ListHeader } from '../ListHeader'
-
-export interface SizeShape {
-  /** Size action for "small" breakpoint */
-  small: 'auto' | 'shrink' | 'stretch'
-  /** Size action for "medium" breakpoint */
-  medium: 'auto' | 'shrink' | 'stretch'
-  /** Size action for "large" breakpoint */
-  large: 'auto' | 'shrink' | 'stretch'
-  /** Size action for "xlarge" breakpoint */
-  xlarge: 'auto' | 'shrink' | 'stretch'
-  /** Size action for "xxlarge" breakpoint */
-  xxlarge: 'auto' | 'shrink' | 'stretch'
-  [key: string]: string
-}
+import { IGridProps } from '../../Grid'
 
 export interface IListColumn {
   /** Content to display in each cell of the list column */
@@ -30,10 +18,8 @@ export interface IListColumn {
   isHeader?: boolean
   /** Content to display in header */
   header?: string | object
-  /** Class names to use for each row of the list */
-  classNames?: string
   /** Size of the column */
-  size: ('auto' | 'shrink' | 'stretch') | number | SizeShape
+  size: IGridProps
   /** Flag to select if the text should be aligned right */
   alignRight?: boolean
   /** Text display in the column header tooltip */
@@ -88,65 +74,29 @@ export class ListColumn extends React.PureComponent<IListColumn> {
     }
   }
 
-  get columnSizeClasses () {
+  get sizeParams (): IGridProps {
     const {
-      behave,
       size
     } = this.props
 
-    if (!size) {
-      return []
-    }
-
-    if (behave) {
-      return [behave]
-    }
-
-    if (typeof size === 'number') {
-      return [`small-${size}`]
-    }
-
-    if (typeof size === 'string') {
-      return [size]
-    }
-
-    return map(size, (v, k) => `${k}-${v}`)
-  }
-
-  get columnOrderClasses () {
-    const {
-      order
-    } = this.props
-
-    if (!order) {
-      return []
-    }
-
-    if (typeof order === 'number') {
-      return [`small-order-${order}`]
-    }
-
-    if (typeof order === 'string') {
-      return [order]
-    }
-
-    return map(order, (v, k) => `${k}-order-${v}`)
+    return merge({
+      xs: 12,
+      sm: 12,
+      md: 12,
+      lg: 12
+    }, size)
   }
 
   public render (): JSX.Element {
     const {
       alignRight,
-      classNames: customClasses
+      size
     } = this.props
 
-    return (
+    const content = (
       <div className={classNames(
         'list-column',
-        'cell',
-        customClasses,
         this.cellClassNames,
-        ...this.columnSizeClasses,
-        ...this.columnOrderClasses,
         {
           'text-right': alignRight
         }
@@ -154,5 +104,15 @@ export class ListColumn extends React.PureComponent<IListColumn> {
         {this.cellContent}
       </div>
     )
+
+    if (size) {
+      return (
+        <Col {...this.sizeParams}>
+          {content}
+        </Col>
+      )
+    }
+
+    return content
   }
 }
