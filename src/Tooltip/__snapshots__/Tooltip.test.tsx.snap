@@ -2,21 +2,26 @@
 
 exports[`<Tooltip /> should render a tooltip with the child element 1`] = `
 <span
-  data-for="test-tooltip"
-  data-tip={true}
+  className="Tooltip"
 >
-  <div>
-    This div should have a tooltip
-  </div>
-  <ReactTooltip
-    effect="solid"
-    id="test-tooltip"
-    insecure={true}
-    place="top"
-    resizeHide={true}
-    wrapper="div"
+  <span
+    data-for="test-tooltip"
+    data-tip={true}
+    key="eb817b2f-92a8-42fc-8485-b32d9d410e91"
   >
-    Tooltip message
-  </ReactTooltip>
+    <div>
+      This div should have a tooltip
+    </div>
+    <ReactTooltip
+      effect="solid"
+      id="test-tooltip"
+      insecure={true}
+      place="top"
+      resizeHide={true}
+      wrapper="div"
+    >
+      Tooltip message
+    </ReactTooltip>
+  </span>
 </span>
 `;
