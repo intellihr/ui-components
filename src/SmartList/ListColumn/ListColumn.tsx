@@ -36,8 +36,6 @@ export interface IListColumn {
   size: ('auto' | 'shrink' | 'stretch') | number | SizeShape
   /** Flag to select if the text should be aligned right */
   alignRight?: boolean
-  /** ID for the column header tooltip */
-  tooltipId?: string
   /** Text display in the column header tooltip */
   tooltipText?: string
   /** Foundation behave attribute */
@@ -61,7 +59,6 @@ export class ListColumn extends React.PureComponent<IListColumn> {
       rowIndex,
       isHeader,
       header,
-      tooltipId,
       tooltipText
     } = this.props
 
@@ -69,7 +66,6 @@ export class ListColumn extends React.PureComponent<IListColumn> {
       return (
         <ListHeader
           label={header}
-          tooltipId={tooltipId}
           tooltipText={tooltipText}
         />
       )

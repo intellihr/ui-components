@@ -18,3 +18,14 @@
  <div>This div should have a tooltip</div>
 </Tooltip>
 ```
+
+## Tooltip with icon
+
+```jsx
+<Tooltip 
+  message='Tooltip message'
+  withIcon
+>
+ <span>This div should not have a tooltip</span>
+</Tooltip>
+```
