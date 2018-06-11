@@ -5,8 +5,6 @@ import { FontAwesomeIcon } from '../Icon'
 import { getColor } from '../Color'
 import { TooltipIcon } from './style'
 
-const style = require('./style.ts')
-
 export interface TooltipProps {
   id?: string,
   children: JSX.Element,
@@ -97,10 +95,6 @@ export class Tooltip extends React.Component<TooltipProps> {
   }
 
   public render (): JSX.Element[] | JSX.Element {
-    return (
-      <span className={style.Tooltip}>
-        {this.content}
-      </span>
-    )
+    return this.content
   }
 }
