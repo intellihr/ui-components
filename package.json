@@ -48,6 +48,7 @@
     "css-loader": "0.28.11",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
+    "enzyme-context-patch": "^0.0.8",
     "enzyme-to-json": "3.3.3",
     "eslint-plugin-typescript": "0.11.0",
     "extract-text-webpack-plugin": "4.0.0-beta.0",
@@ -102,7 +103,8 @@
     "styleguide:build": "styleguidist build",
     "styleguide": "styleguidist server",
     "gh-pages": "git subtree push --prefix styleguide origin gh-pages",
-    "codequality": "docker run --env CODECLIMATE_FORMAT=html --env SOURCE_CODE=$(pwd) --volume $(pwd):/code --volume /var/run/docker.sock:/var/run/docker.sock quay.io/intellihr/codequality /code"
+    "codequality": "docker run --env CODECLIMATE_FORMAT=html --env SOURCE_CODE=$(pwd) --volume $(pwd):/code --volume /var/run/docker.sock:/var/run/docker.sock quay.io/intellihr/codequality /code",
+    "rebuild": "rm -Rf public/build node_modules public/js/bundle.js && yarn && yarn run build"
   },
   "repository": {
     "type": "git",

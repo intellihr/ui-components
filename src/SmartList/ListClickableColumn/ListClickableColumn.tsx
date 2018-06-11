@@ -96,14 +96,6 @@ export class ListClickableColumn extends React.PureComponent<IListClickableColum
     }
   }
 
-  get classNames (): string {
-    return classNames(
-      style.ListClickableColumns,
-      'clickable-columns',
-      'cell auto grid-x grid-padding-x'
-    )
-  }
-
   public render (): JSX.Element {
     const {
       blockNavigationOnLeftClick,
@@ -112,8 +104,12 @@ export class ListClickableColumn extends React.PureComponent<IListClickableColum
 
     return (
       <Anchor
+        className={classNames(
+          style.ListClickableColumns,
+          'clickable-columns',
+          'cell auto grid-x grid-padding-x'
+        )}
         blockNavigationOnLeftClick={blockNavigationOnLeftClick}
-        className={this.classNames}
         href={this.getUrl}
         onClick={this.handleClick}
         onLeftClick={this.handleLeftClick}

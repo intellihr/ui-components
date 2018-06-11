@@ -78,6 +78,8 @@ export class ListColumn extends React.PureComponent<IListColumn> {
     if (!isNil(rowIndex) && data && data[rowIndex]) {
       return cell(data[rowIndex])
     }
+
+    console.log('<><>>>>')
   }
 
   get cellClassNames (): string | undefined {
@@ -137,7 +139,7 @@ export class ListColumn extends React.PureComponent<IListColumn> {
     return map(order, (v, k) => `${k}-order-${v}`)
   }
 
-  public render (): JSX.Element | null {
+  public render (): JSX.Element {
     const {
       alignRight,
       classNames: customClasses
