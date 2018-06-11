@@ -3,8 +3,9 @@ import ReactTooltip from 'react-tooltip'
 import uuid from 'uuid'
 import { FontAwesomeIcon } from '../Icon'
 import { getColor } from '../Color'
+import { TooltipIcon } from './style'
 
-const style = require('./style.scss')
+const style = require('./style.ts')
 
 export interface TooltipProps {
   id?: string,
@@ -49,12 +50,13 @@ export class Tooltip extends React.Component<TooltipProps> {
 
     if (withIcon) {
       tooltipElement = (
-        <FontAwesomeIcon
-          key={uuid.v4()}
-          className='tooltip-icon'
-          color={iconColour}
-          type='question-circle-o'
-        />
+        <TooltipIcon>
+          <FontAwesomeIcon
+            key={uuid.v4()}
+            color={iconColour}
+            type='question-circle-o'
+          />
+        </TooltipIcon>
       )
     }
 
