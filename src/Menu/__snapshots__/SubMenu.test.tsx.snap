@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SubMenu /> should render a menu with isNested true even if isNested is false 1`] = `
+<Menu
+  isAccordion={false}
+  isNested={true}
+>
+  <li>
+    Hello I am the child!
+  </li>
+</Menu>
+`;
+
+exports[`<SubMenu /> should render a menu with the nested class 1`] = `
+<Menu
+  isAccordion={false}
+  isNested={true}
+>
+  <li>
+    Hello I am the child!
+  </li>
+</Menu>
+`;

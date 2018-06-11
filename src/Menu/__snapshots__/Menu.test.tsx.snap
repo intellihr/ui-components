@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Menu /> should render a simple menu 1`] = `
+<ul
+  className="vertical menu"
+>
+  <li>
+    Hello I am the child!
+  </li>
+</ul>
+`;
+
+exports[`<Menu /> should render an accordion menu 1`] = `
+<ul
+  className="vertical menu accordion-menu"
+  id="test-menu"
+>
+  <li>
+    Hello I am the child!
+  </li>
+</ul>
+`;

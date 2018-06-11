@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MenuItem /> should render a a menu item with a link 1`] = `
+<li>
+  <a
+    href="www.google.com"
+  >
+    Test menu item
+  </a>
+</li>
+`;
+
+exports[`<MenuItem /> should render a simple menu item 1`] = `
+<li>
+  <a>
+    Test menu item
+  </a>
+</li>
+`;
