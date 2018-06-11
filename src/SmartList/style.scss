@@ -27,11 +27,11 @@ $smartList-bgHoverColour-alert: lighten($alert-light, 1%);
   }
 
   .show-all-row {
-    text-align: center;
-    padding-top: 10px;
-    text-transform: uppercase;
     color: $dark-gray;
     font-weight: 600;
+    padding-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
   }
 
   .hide-row {
@@ -45,14 +45,14 @@ $smartList-bgHoverColour-alert: lighten($alert-light, 1%);
   }
 
   .item-row {
-    border-top: 1px solid $border-light;
-    padding: 10px;
-    min-height: 80px;
-    top: 50%;
-    position: relative;
-    transition: background-color 0.15s ease-in;
-    color: $main-text;
     align-items: center;
+    border-top: 1px solid $border-light;
+    color: $main-text;
+    min-height: 80px;
+    padding: 10px;
+    position: relative;
+    top: 50%;
+    transition: background-color 0.15s ease-in;
 
     .dd-menu {
       border-radius: $global-radius;

@@ -3,7 +3,7 @@
 
 :local(.ListHeader) {
   @extend .section-header;
+  color: $main-text-light;
   font-size: 0.9375rem;
   font-weight: 600;
-  color: $main-text-light;
 }

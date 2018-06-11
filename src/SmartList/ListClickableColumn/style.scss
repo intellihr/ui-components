@@ -16,9 +16,9 @@
   }
 
   &, .modal-button, .modal-trigger {
-    width: 100%;
+    align-items: center;
     cursor: pointer;
     display: flex;
-    align-items: center;
+    width: 100%;
   }
 }
