@@ -3,7 +3,13 @@ import { isNil, merge } from 'lodash'
 import classNames from 'classnames'
 import { Col } from 'react-styled-flexboxgrid'
 import { ListHeader } from '../ListHeader'
-import { IGridProps } from '../../Grid'
+
+export interface ISize {
+  xs?: number,
+  sm?: number,
+  md?: number,
+  lg?: number
+}
 
 export interface IListColumn {
   /** Content to display in each cell of the list column */
@@ -19,7 +25,7 @@ export interface IListColumn {
   /** Content to display in header */
   header?: string | object
   /** Size of the column */
-  size: IGridProps
+  size?: ISize
   /** Flag to select if the text should be aligned right */
   alignRight?: boolean
   /** Text display in the column header tooltip */
@@ -74,7 +80,7 @@ export class ListColumn extends React.PureComponent<IListColumn> {
     }
   }
 
-  get sizeParams (): IGridProps {
+  get sizeParams (): ISize {
     const {
       size
     } = this.props
