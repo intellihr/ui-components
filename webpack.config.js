@@ -49,7 +49,6 @@ module.exports = {
       // },
       {
         test: /\.tsx?$/,
-        exclude: /(node_modules)/,
         use: [
           {
             loader: 'awesome-typescript-loader'
@@ -58,7 +57,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        exclude: /node_modules\/(?!flexboxgrid2)/,
+        exclude: /node_modules/,
         use: [
           'style-loader',
           'css-loader'
