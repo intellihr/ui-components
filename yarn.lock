@@ -5960,6 +5960,10 @@ lodash.flattendeep@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.flattendeep/-/lodash.flattendeep-4.4.0.tgz#fb030917f86a3134e5bc9bec0d69e0013ddfedb2"
 
+lodash.isinteger@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/lodash.isinteger/-/lodash.isinteger-4.0.4.tgz#619c0af3d03f8b04c31f5882840b77b11cd68343"
+
 lodash.kebabcase@^4.0.0:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/lodash.kebabcase/-/lodash.kebabcase-4.1.1.tgz#8489b1cb0d29ff88195cceca448ff6d6cc295c36"
@@ -8169,6 +8173,12 @@ react-reconciler@^0.7.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.0"
+
+react-styled-flexboxgrid@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/react-styled-flexboxgrid/-/react-styled-flexboxgrid-2.2.0.tgz#2b1ea9dba28da8c493c0f576b4d5b2dc8a07a30f"
+  dependencies:
+    lodash.isinteger "^4.0.4"
 
 react-styleguidist@7.0.4:
   version "7.0.4"

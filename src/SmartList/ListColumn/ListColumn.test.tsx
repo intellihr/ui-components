@@ -18,7 +18,9 @@ describe('<ListColumn />', () => {
       <ListColumn
         data={testData}
         rowIndex={0}
-        size={6}
+        size={{
+          sm: 6
+        }}
         cell={(row: ITestListColumnItem) =>
           <div>
             {row.name}
@@ -35,68 +37,11 @@ describe('<ListColumn />', () => {
       <ListColumn
         data={testData}
         rowIndex={0}
-        size={6}
-        isHeader
-        header='Test'
-        cell={(row: ITestListColumnItem) =>
-          <div>
-            {row.name}
-          </div>
-        }
-      />
-    )
-
-    expect(wrapper).toMatchSnapshot()
-  })
-
-  it('should render a list column with custom column orders', () => {
-    let wrapper = mount(
-      <ListColumn
-        data={testData}
-        rowIndex={0}
-        size={6}
-        isHeader
-        header='Test'
-        order='large-order-2'
-        cell={(row: ITestListColumnItem) =>
-          <div>
-            {row.name}
-          </div>
-        }
-      />
-    )
-
-    expect(wrapper).toMatchSnapshot()
-
-    wrapper = mount(
-      <ListColumn
-        data={testData}
-        rowIndex={0}
-        size={6}
-        isHeader
-        header='Test'
-        order={2}
-        cell={(row: ITestListColumnItem) =>
-          <div>
-            {row.name}
-          </div>
-        }
-      />
-    )
-
-    expect(wrapper).toMatchSnapshot()
-
-    wrapper = mount(
-      <ListColumn
-        data={testData}
-        rowIndex={0}
-        size={6}
-        isHeader
-        header='Test'
-        order={{
-          large: 2,
-          small: 6
+        size={{
+          sm: 6
         }}
+        isHeader
+        header='Test'
         cell={(row: ITestListColumnItem) =>
           <div>
             {row.name}

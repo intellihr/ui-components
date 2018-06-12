@@ -1,6 +1,7 @@
 import React from 'react'
 import { isEmpty } from 'lodash'
 import classNames from 'classnames'
+import { Row } from 'react-styled-flexboxgrid'
 import { Anchor } from '../../Anchor'
 
 export interface IListRow {
@@ -42,12 +43,10 @@ export class ListRow extends React.PureComponent<IListRow> {
     } = this.props
 
     return (
-      <div
+      <Row
         className={classNames(
           'item-row',
           `cursor-${cursor}`,
-          'grid-x',
-          'grid-padding-x',
           wrapperClassName,
           className
         )}
@@ -55,7 +54,7 @@ export class ListRow extends React.PureComponent<IListRow> {
         style={{display: hideRow ? 'none' : 'flex'}}
       >
         {children}
-      </div>
+      </Row>
     )
   }
 

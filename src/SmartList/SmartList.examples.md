@@ -18,7 +18,10 @@
   ]}
 >
   <ListColumn
-    size={6}
+    size={{
+      md: 6,
+      lg: 6
+    }}
     header='Qualification'
     tooltipText='This is a test tooltip'
     cell={(row) =>
@@ -30,13 +33,19 @@
   />
   
   <ListColumn
-    size={3}
+    size={{
+      md: 3,
+      lg: 3
+    }}
     header='Expiry Date'
     cell={(row) => row.expiryDate}
   />
   
   <ListColumn
-    size={3}
+    size={{
+      md: 3,
+      lg: 3
+    }}
     header='Status'
     cell={(row) => row.status}
   />
@@ -76,7 +85,10 @@
   limit={2}
 >
   <ListColumn
-    size={6}
+    size={{
+      md: 6,
+      lg: 6
+    }}
     header='Qualification'
     cell={(row) =>
       <div>
@@ -87,13 +99,19 @@
   />
   
   <ListColumn
-    size={3}
+    size={{
+      md: 3,
+      lg: 3
+    }}
     header='Expiry Date'
     cell={(row) => row.expiryDate}
   />
   
   <ListColumn
-    size={3}
+    size={{
+      md: 3,
+      lg: 3
+    }}
     header='Status'
     cell={(row) => row.status}
   />
@@ -107,7 +125,10 @@
   data={[]}
 >
   <ListColumn
-    size={6}
+    size={{
+      md: 6,
+      lg: 6
+    }}
     header='Qualification'
     cell={(row) =>
       <div>
@@ -118,13 +139,19 @@
   />
   
   <ListColumn
-    size={3}
+    size={{
+      md: 3,
+      lg: 3
+    }}
     header='Expiry Date'
     cell={(row) => row.expiryDate}
   />
   
   <ListColumn
-    size={3}
+    size={{
+      md: 3,
+      lg: 3
+    }}
     header='Status'
     cell={(row) => row.status}
   />
@@ -139,7 +166,10 @@
   loading
 >
   <ListColumn
-    size={6}
+    size={{
+      md: 6,
+      lg: 6
+    }}
     header='Qualification'
     cell={(row) =>
       <div>
@@ -150,13 +180,19 @@
   />
   
   <ListColumn
-    size={3}
+    size={{
+      md: 3,
+      lg: 3
+    }}
     header='Expiry Date'
     cell={(row) => row.expiryDate}
   />
   
   <ListColumn
-    size={3}
+    size={{
+      md: 3,
+      lg: 3
+    }}
     header='Status'
     cell={(row) => row.status}
   />

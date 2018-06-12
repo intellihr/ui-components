@@ -2,10 +2,12 @@ import React from 'react'
 import uuid from 'uuid'
 import { times, map, take, filter, size, isEmpty, every, isNil } from 'lodash'
 import classNames from 'classnames'
+import { Row } from 'react-styled-flexboxgrid'
 import { Callout } from '../Callout'
 import { Spinner } from '../Spinner'
 import { ListClickableColumn } from './ListClickableColumn'
 import { ListRow } from './ListRow'
+import { withGrid } from '../Grid'
 
 const style = require('./style.scss')
 
@@ -43,7 +45,7 @@ export interface SmartListState {
   paginationButton: boolean
 }
 
-export class SmartList extends React.PureComponent<ISmartList, SmartListState> {
+class SmartListComponent extends React.PureComponent<ISmartList, SmartListState> {
   public static defaultProps: Partial<ISmartList> = {
     emptyListText: 'No Results found.',
     loading: false,
@@ -105,10 +107,12 @@ export class SmartList extends React.PureComponent<ISmartList, SmartListState> {
     if (showHeaderRow) {
       return (
         <div className={classNames(
-          'header-row grid-x grid-padding-x',
+          'header-row',
           {'hide-for-small-only': hideHeaderOnSmall}
         )}>
-          {this.cloneTableElement(0, true)}
+          <Row>
+            {this.cloneTableElement(0, true)}
+          </Row>
         </div>
       )
     }
@@ -262,10 +266,10 @@ export class SmartList extends React.PureComponent<ISmartList, SmartListState> {
         {this.title}
         {this.headerRow}
 
-        <div className='smart-list-rows'>
-          {this.listContent}
-        </div>
+        {this.listContent}
       </div>
     )
   }
 }
+
+export const SmartList: React.ComponentClass<ISmartList> = withGrid(SmartListComponent)

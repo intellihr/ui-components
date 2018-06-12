@@ -33,7 +33,10 @@ describe('<SmartList />', () => {
         data={items}
       >
         <ListColumn
-          size={6}
+          size={{
+            md: 6,
+            lg: 6
+          }}
           header='Qualification'
           cell={(row: ITestSmartListItem) =>
             <div>
@@ -43,12 +46,18 @@ describe('<SmartList />', () => {
           }
         />
         <ListColumn
-          size={3}
+          size={{
+            md: 3,
+            lg: 3
+          }}
           header='Expiry Date'
           cell={(row: ITestSmartListItem) => row.expiryDate}
         />
         <ListColumn
-          size={3}
+          size={{
+            md: 3,
+            lg: 3
+          }}
           header='Status'
           cell={(row: ITestSmartListItem) => row.status}
         />
@@ -66,7 +75,10 @@ describe('<SmartList />', () => {
         data={items}
       >
         <ListColumn
-          size={6}
+          size={{
+            md: 6,
+            lg: 6
+          }}
           cell={(row: ITestSmartListItem) =>
             <div>
               <b>{row.name}</b>
@@ -75,11 +87,17 @@ describe('<SmartList />', () => {
           }
         />
         <ListColumn
-          size={3}
+          size={{
+            md: 3,
+            lg: 3
+          }}
           cell={(row: ITestSmartListItem) => row.expiryDate}
         />
         <ListColumn
-          size={3}
+          size={{
+            md: 3,
+            lg: 3
+          }}
           cell={(row: ITestSmartListItem) => row.status}
         />
       </SmartList>
@@ -95,7 +113,10 @@ describe('<SmartList />', () => {
         data={[]}
       >
         <ListColumn
-          size={6}
+          size={{
+            md: 6,
+            lg: 6
+          }}
           cell={(row: ITestSmartListItem) =>
             <div>
               <b>{row.name}</b>
@@ -104,11 +125,17 @@ describe('<SmartList />', () => {
           }
         />
         <ListColumn
-          size={3}
+          size={{
+            md: 3,
+            lg: 3
+          }}
           cell={(row: ITestSmartListItem) => row.expiryDate}
         />
         <ListColumn
-          size={3}
+          size={{
+            md: 3,
+            lg: 3
+          }}
           cell={(row: ITestSmartListItem) => row.status}
         />
       </SmartList>
