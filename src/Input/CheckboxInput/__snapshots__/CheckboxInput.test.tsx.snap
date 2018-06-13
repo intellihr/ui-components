@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CheckboxInput /> should render a checkbox input 1`] = `
+<div
+  className="checkbox-input"
+>
+  <Input
+    name="test-input"
+    type="checkbox"
+  />
+</div>
+`;
+
+exports[`<CheckboxInput /> should render a checkbox input with a component as the label 1`] = `
+<div
+  className="checkbox-input"
+>
+  <Input
+    label={
+      <FontAwesomeIcon
+        type="star"
+      />
+    }
+    name="test-input"
+    type="checkbox"
+  />
+  <styled.label
+    htmlFor="test-input"
+  >
+    <FontAwesomeIcon
+      type="star"
+    />
+  </styled.label>
+</div>
+`;
+
+exports[`<CheckboxInput /> should render a checkbox input with a string label 1`] = `
+<div
+  className="checkbox-input"
+>
+  <Input
+    label="Hey I am a test string"
+    name="test-input"
+    type="checkbox"
+  />
+  <styled.label
+    htmlFor="test-input"
+  >
+    Hey I am a test string
+  </styled.label>
+</div>
+`;
