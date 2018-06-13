@@ -1,5 +1,5 @@
 import React from 'react'
-import classNames from 'classNames'
+import classNames from 'classnames'
 import { ButtonProps, buttonClass } from './ButtonHelper'
 
 export class Button extends React.PureComponent<ButtonProps> {
