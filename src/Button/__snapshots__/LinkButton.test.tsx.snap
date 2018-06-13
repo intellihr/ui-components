@@ -3,6 +3,7 @@
 exports[`<LinkButton /> should render a disabled link button 1`] = `
 <Anchor
   href="#"
+  id="test-link-button-disabled"
 >
   <span
     className="button neutral disabled"
@@ -15,6 +16,7 @@ exports[`<LinkButton /> should render a disabled link button 1`] = `
 exports[`<LinkButton /> should render a link button with a simple text 1`] = `
 <Anchor
   href="#"
+  id="test-link-button-simple"
 >
   <span
     className="button neutral"
@@ -27,6 +29,7 @@ exports[`<LinkButton /> should render a link button with a simple text 1`] = `
 exports[`<LinkButton /> should render a link button with a size large 1`] = `
 <Anchor
   href="#"
+  id="test-link-button-large"
 >
   <span
     className="button large neutral"
@@ -39,6 +42,7 @@ exports[`<LinkButton /> should render a link button with a size large 1`] = `
 exports[`<LinkButton /> should render a link button with a type delete-subtle 1`] = `
 <Anchor
   href="#"
+  id="test-link-button-delete"
 >
   <span
     className="button delete-subtle"
@@ -56,13 +60,14 @@ exports[`<LinkButton /> should render a link button with an icon 1`] = `
       type="star"
     />
   }
+  id="test-link-button-icon"
 >
   <span
     className="button primary"
   >
     <span
       className="button-icon"
-      key="dba9cca5-4cac-410d-8ab9-74edb023b9ae"
+      key="test-link-button-icon"
     >
       <FontAwesomeIcon
         type="star"
