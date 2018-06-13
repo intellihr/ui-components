@@ -1,46 +1,11 @@
 import React from 'react'
-import uuid from 'uuid'
-import classNames from 'classnames'
 import { ButtonProps, buttonClass } from './ButtonHelper'
+import { BaseButton } from './BaseButton'
 
-export class Button extends React.PureComponent<ButtonProps> {
+export class Button extends BaseButton<ButtonProps> {
   public static defaultProps: Partial<ButtonProps> = {
     type: 'neutral',
     iconAlignment: 'left'
-  }
-
-  get buttonContent (): string | JSX.Element | (string | JSX.Element)[] | null {
-    const {
-      id,
-      children,
-      icon,
-      iconAlignment
-    } = this.props
-
-    if (icon) {
-      const iconComponent = (
-        <span
-          key={id || uuid.v4()}
-          className={classNames('button-icon', iconAlignment)}
-        >
-          {icon}
-        </span>
-      )
-
-      if (iconAlignment === 'right') {
-        return [
-          children,
-          iconComponent
-        ]
-      }
-
-      return [
-        iconComponent,
-        children
-      ]
-    }
-
-    return children
   }
 
   public render (): JSX.Element | null {

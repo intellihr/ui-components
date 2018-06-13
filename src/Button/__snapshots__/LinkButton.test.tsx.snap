@@ -47,3 +47,28 @@ exports[`<LinkButton /> should render a link button with a type delete-subtle 1`
   </span>
 </Anchor>
 `;
+
+exports[`<LinkButton /> should render a link button with an icon 1`] = `
+<Anchor
+  href="test"
+  icon={
+    <FontAwesomeIcon
+      type="star"
+    />
+  }
+>
+  <span
+    className="button primary"
+  >
+    <span
+      className="button-icon"
+      key="dba9cca5-4cac-410d-8ab9-74edb023b9ae"
+    >
+      <FontAwesomeIcon
+        type="star"
+      />
+    </span>
+    Link Button with Icon
+  </span>
+</Anchor>
+`;
