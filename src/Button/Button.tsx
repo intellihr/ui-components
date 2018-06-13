@@ -1,4 +1,5 @@
 import React from 'react'
+import uuid from 'uuid'
 import classNames from 'classnames'
 import { ButtonProps, buttonClass } from './ButtonHelper'
 
@@ -17,7 +18,10 @@ export class Button extends React.PureComponent<ButtonProps> {
 
     if (icon) {
       const iconComponent = (
-        <span className={classNames('button-icon', iconAlignment)}>
+        <span
+          key={uuid.v4()}
+          className={classNames('button-icon', iconAlignment)}
+        >
           {icon}
         </span>
       )
