@@ -1,7 +1,7 @@
 {
   "name": "@intellihr/ui-components",
   "description": "A common React components library that is used in our company",
-  "version": "1.0.5-beta.39",
+  "version": "1.0.5-beta.40",
   "main": "./dist/",
   "types": "./es/index.d.ts",
   "files": [
@@ -24,7 +24,7 @@
     "react-chartjs-2": "2.7.0",
     "react-linkify": "0.2.2",
     "react-tooltip": "3.6.1",
-    "styled-components": "3.2.6",
+    "styled-components": "3.3.2",
     "uuid": "3.2.1"
   },
   "devDependencies": {

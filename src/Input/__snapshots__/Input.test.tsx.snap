@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> should highlight all text when focused and highlightOnFocus is true 1`] = `
+<input
+  className=""
+  id="test-input"
+  onFocus={[Function]}
+  type="text"
+/>
+`;
+
+exports[`<Input /> should not highlight all text when focused and highlightOnFocus is false\` 1`] = `
+<input
+  className=""
+  id="test-input"
+  onFocus={[Function]}
+  type="text"
+/>
+`;
+
+exports[`<Input /> should render an input 1`] = `
+<input
+  className=""
+  id="test-input"
+  onFocus={[Function]}
+  type="text"
+/>
+`;
+
+exports[`<Input /> should render an input with an icon 1`] = `
+<styled.div>
+  <Icon
+    isLarge={false}
+    isSmall={false}
+    isSpinning={false}
+    isStacked={false}
+    type="fa-check"
+  />
+  <input
+    className=""
+    id="test-input"
+    onFocus={[Function]}
+    type="text"
+  />
+</styled.div>
+`;
+
+exports[`<Input /> should render with an onBlur function if handleBlur is passed in 1`] = `
+<input
+  className=""
+  id="test-input"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  type="text"
+/>
+`;
