@@ -43,7 +43,7 @@ export interface SelectBoxInputState {
 }
 
 export class SelectBoxInput extends React.PureComponent<SelectBoxInputProps, SelectBoxInputState> {
-  private _cachedOptions: any
+  private cachedOptions: any
 
   public static defaultProps: Partial<SelectBoxInputProps> = {
     placeholder: 'Please Select',
@@ -64,7 +64,7 @@ export class SelectBoxInput extends React.PureComponent<SelectBoxInputProps, Sel
 
   constructor (props: SelectBoxInputProps) {
     super(props)
-    this._cachedOptions = null
+    this.cachedOptions = null
     this.state = {
       preselectValue: ''
     }
@@ -93,7 +93,7 @@ export class SelectBoxInput extends React.PureComponent<SelectBoxInputProps, Sel
   }
 
   async cachedOptionsPromise () {
-    return this._cachedOptions
+    return this.cachedOptions
   }
 
   handleChange (newValue: any): void {
@@ -136,17 +136,17 @@ export class SelectBoxInput extends React.PureComponent<SelectBoxInputProps, Sel
     } = this.props
 
     if (promiseOptions) {
-      if (!this._cachedOptions) {
+      if (!this.cachedOptions) {
         return Promise
           .resolve(promiseOptions())
           .then(options => {
-            this._cachedOptions = {
+            this.cachedOptions = {
               options: this.prepareOptions(options)
               // Complete options is not working: https://github.com/JedWatson/react-select/issues/1514
               // complete: true
             }
 
-            return this._cachedOptions
+            return this.cachedOptions
           })
           .then(cachedOptions => {
             this.preselectValue(cachedOptions.options)
