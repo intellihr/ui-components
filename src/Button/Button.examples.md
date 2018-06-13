@@ -250,3 +250,26 @@
   </Button>
 </div>
 ```
+
+## Buttons with Icons
+```jsx
+<div>
+  <div>
+    <Button 
+      icon={<FontAwesomeIcon type='star' />}
+      type='primary-hollow' 
+      onClick={() => alert('primary-hollow')}
+    >
+      primary-hollow
+    </Button>
+    <Button 
+      icon={<FontAwesomeIcon type='star' />}
+      iconAlignment='right'
+      type='primary-hollow' 
+      onClick={() => alert('primary-hollow')}
+    >
+      primary-hollow
+    </Button>
+  </div>
+</div>
+```
