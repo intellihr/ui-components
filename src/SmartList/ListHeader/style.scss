@@ -1,0 +1,9 @@
+@import '../../sass/foundation_settings';
+@import '../../sass/components/typography';
+
+:local(.ListHeader) {
+  @extend .section-header;
+  color: $main-text-light;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}

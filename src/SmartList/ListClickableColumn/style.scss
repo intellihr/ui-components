@@ -1,0 +1,24 @@
+:local(.ListClickableColumns) {
+  &:focus, & *:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    .cell:first-child, .cell-label {
+      &:not(.label) {
+        color: $link-text;
+      }
+    }
+
+    .label {
+      cursor: pointer;
+    }
+  }
+
+  &, .modal-button, .modal-trigger {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+  }
+}
