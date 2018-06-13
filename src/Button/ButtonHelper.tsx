@@ -24,6 +24,12 @@ export interface ButtonProps {
   type: ButtonTypes
   /** Any extra classes */
   className?: string
+  /** Icon component passed to Button */
+  icon?: JSX.Element
+  /** Alignment of the button icon */
+  iconAlignment?: 'left' | 'right'
+  /** Children components passed to the button */
+  children: JSX.Element | string
 }
 
 export function buttonClass (type: ButtonTypes, size?: ButtonSizes, className?: string, extras?: any): string {

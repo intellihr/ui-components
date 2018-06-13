@@ -1,11 +1,15 @@
 import React from 'react'
-import { IGridProps } from '../Grid'
 
 export interface Defaults {
   /** Anchor component used for clickable links */
   AnchorComponent?: (props: any) => JSX.Element
   /** Breakpoints used for the grid layout */
-  breakpoints?: IGridProps
+  breakpoints?: {
+    xs: number,
+    sm: number,
+    md: number,
+    lg: number
+  }
 }
 
 const defaults: Defaults = {}

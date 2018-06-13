@@ -3,6 +3,7 @@
 exports[`<Button /> should render a button with a simple text 1`] = `
 <button
   className="button neutral"
+  iconAlignment="left"
   onClick={[Function]}
 >
   testing testing 123
@@ -12,6 +13,7 @@ exports[`<Button /> should render a button with a simple text 1`] = `
 exports[`<Button /> should render a button with a size large 1`] = `
 <button
   className="button large neutral"
+  iconAlignment="left"
   onClick={[Function]}
 >
   testing testing 123
@@ -21,9 +23,31 @@ exports[`<Button /> should render a button with a size large 1`] = `
 exports[`<Button /> should render a button with a type delete-subtle 1`] = `
 <button
   className="button delete-subtle"
+  iconAlignment="left"
   onClick={[Function]}
 >
   testing testing 123
+</button>
+`;
+
+exports[`<Button /> should render a button with an icon 1`] = `
+<button
+  className="button primary-hollow"
+  icon={
+    <FontAwesomeIcon
+      type="star"
+    />
+  }
+  iconAlignment="right"
+>
+  primary-hollow
+  <span
+    className="button-icon right"
+  >
+    <FontAwesomeIcon
+      type="star"
+    />
+  </span>
 </button>
 `;
 
@@ -31,6 +55,7 @@ exports[`<Button /> should render a disabled button 1`] = `
 <button
   className="button neutral"
   disabled={true}
+  iconAlignment="left"
   onClick={[Function]}
 >
   testing testing 123
