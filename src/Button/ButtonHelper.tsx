@@ -18,6 +18,8 @@ export type ButtonTypes =
 export type ButtonSizes = 'small' | 'medium' | 'large'
 
 export interface ButtonProps {
+  /** Unique id of the button */
+  id?: string
   /** Size of the button */
   size?: ButtonSizes
   /** What type of button to display */
