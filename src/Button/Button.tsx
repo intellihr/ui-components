@@ -11,6 +11,7 @@ export class Button extends React.PureComponent<ButtonProps> {
 
   get buttonContent (): string | JSX.Element | (string | JSX.Element)[] | null {
     const {
+      id,
       children,
       icon,
       iconAlignment
@@ -19,7 +20,7 @@ export class Button extends React.PureComponent<ButtonProps> {
     if (icon) {
       const iconComponent = (
         <span
-          key={uuid.v4()}
+          key={id || uuid.v4()}
           className={classNames('button-icon', iconAlignment)}
         >
           {icon}
