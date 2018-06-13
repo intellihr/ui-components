@@ -463,4 +463,14 @@ $button-styles: (
   &.large {
     font-size: 1.25rem;
   }
+
+  .button-icon {
+    &.left {
+      margin-right: 5px;
+    }
+
+    &.right {
+      margin-left: 5px;
+    }
+  }
 }
