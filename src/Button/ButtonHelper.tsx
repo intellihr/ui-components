@@ -16,19 +16,27 @@ export type ButtonTypes =
 
 export type ButtonSizes = 'small' | 'medium' | 'large'
 
-export interface ButtonProps {
+export interface IBaseButton {
   /** Unique id of the button */
   id?: string
   /** Size of the button */
   size?: ButtonSizes
   /** What type of button to display */
   type?: ButtonTypes
-  /** Any extra classes */
-  className?: string
-  /** Icon component passed to Button */
-  icon?: JSX.Element
   /** Alignment of the button icon */
   iconAlignment?: 'left' | 'right'
+  /** Icon component passed to Button */
+  icon?: JSX.Element
+}
+
+export interface IBaseButtonProps extends IBaseButton {
+    /** Children components passed to the button */
+    render: (content: any) => JSX.Element
+}
+
+export interface ButtonProps extends IBaseButton {
+  /** Any extra classes */
+  className?: string
   /** Disable the button or not */
   disabled?: boolean
   /** onClick event */

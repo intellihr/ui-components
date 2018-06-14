@@ -1,15 +1,10 @@
 import React from 'react'
 import uuid from 'uuid'
 import classNames from 'classnames'
-import { ButtonTypes, ButtonSizes, ButtonProps } from './ButtonHelper'
+import { IBaseButtonProps } from './ButtonHelper'
 
-export interface IBaseButton extends ButtonProps {
-  /** Children components passed to the button */
-  render: (content: any) => JSX.Element
-}
-
-export class BaseButton extends React.PureComponent<IBaseButton> {
-  public static defaultProps: Partial<IBaseButton> = {
+export class BaseButton extends React.PureComponent<IBaseButtonProps> {
+  public static defaultProps: Partial<IBaseButtonProps> = {
     type: 'neutral',
     iconAlignment: 'left'
   }
