@@ -31,10 +31,17 @@ export interface IBaseButton {
   /** Alignment of the button icon */
   iconAlignment?: 'left' | 'right'
   /** Children components passed to the button */
-  children: JSX.Element | string
+  render: (content: any) => JSX.Element
 }
 
-export abstract class BaseButton<P> extends React.Component<P & IBaseButton, void> {
+
+export class BaseButton extends React.PureComponent<IBaseButton> {
+  public static defaultProps: Partial<IBaseButton> = {
+    type: 'neutral',
+    iconAlignment: 'left'
+  }
+
+  
   get buttonContent (): any {
     const {
       id,
@@ -67,5 +74,9 @@ export abstract class BaseButton<P> extends React.Component<P & IBaseButton, voi
     }
 
     return children
+  }
+
+  public render (): JSX.Element {
+    return this.props.render(this.buttonContent)
   }
 }

@@ -30,7 +30,7 @@ export interface ButtonProps {
   /** Alignment of the button icon */
   iconAlignment?: 'left' | 'right'
   /** Children components passed to the button */
-  children: JSX.Element | string
+  children: (content: any) => JSX.Element | null
 }
 
 export function buttonClass (type: ButtonTypes, size?: ButtonSizes, className?: string, extras?: any): string {

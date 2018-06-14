@@ -1,8 +1,8 @@
 import React from 'react'
-import { ButtonProps, buttonClass } from './ButtonHelper'
-import { BaseButton } from './BaseButton'
+import { buttonClass } from './ButtonHelper'
+import { BaseButton, IBaseButton as ButtonProps } from './BaseButton'
 
-export class Button extends BaseButton<ButtonProps> {
+export class Button extends React.PureComponent<ButtonProps> {
   public static defaultProps: Partial<ButtonProps> = {
     type: 'neutral',
     iconAlignment: 'left'
@@ -17,9 +17,14 @@ export class Button extends BaseButton<ButtonProps> {
     } = this.props
 
     return (
-      <button className={buttonClass(type, size, className)} {...props}>
-        {this.buttonContent}
-      </button>
+      <BaseButton 
+        {...this.props}
+        render={(content) => (
+          <button className={buttonClass(type, size, className)} {...props}>
+            {content}
+          </button>
+        )}
+      />
     )
   }
 }
