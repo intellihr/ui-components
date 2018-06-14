@@ -1,11 +1,11 @@
 import { shallow } from 'enzyme'
 import React from 'react'
-import { SelectBoxInput } from './SelectBoxInput'
+import { SelectInput } from './SelectInput'
 
-describe('<SelectBoxInput />', () => {
+describe('<SelectInput />', () => {
   it(`should render a select box with options`, () => {
     const wrapper = shallow(
-      <SelectBoxInput
+      <SelectInput
         name='test'
         value=''
         options={[
@@ -26,7 +26,7 @@ describe('<SelectBoxInput />', () => {
 
   it(`should render a multi select box with options`, () => {
     const wrapper = shallow(
-      <SelectBoxInput
+      <SelectInput
         name='test'
         value=''
         options={[
@@ -48,7 +48,7 @@ describe('<SelectBoxInput />', () => {
 
   it(`should render a select box with promise options`, () => {
     const wrapper = shallow(
-      <SelectBoxInput
+      <SelectInput
         name='test'
         value=''
         promiseOptions={() => new Promise(resolve => [

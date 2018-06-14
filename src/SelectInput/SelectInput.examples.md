@@ -1,9 +1,9 @@
-# Select Box Input
+# Select Input
 
 ```jsx
 initialState = { value: null };
 
-  <SelectBoxInput
+  <SelectInput
     name='testInput'
     value={state.value}
     options={[

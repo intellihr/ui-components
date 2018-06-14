@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SelectBoxInput /> should render a multi select box with options 1`] = `
+exports[`<SelectInput /> should render a multi select box with options 1`] = `
 <Select
   arrowRenderer={[Function]}
   autosize={true}
@@ -28,7 +28,7 @@ exports[`<SelectBoxInput /> should render a multi select box with options 1`] = 
   menuBuffer={0}
   menuRenderer={[Function]}
   multi={true}
-  name="test"
+  name="test[]"
   noResultsText="No results found"
   onBlurResetsInput={true}
   onCloseResetsInput={true}
@@ -65,7 +65,7 @@ exports[`<SelectBoxInput /> should render a multi select box with options 1`] = 
 />
 `;
 
-exports[`<SelectBoxInput /> should render a select box with options 1`] = `
+exports[`<SelectInput /> should render a select box with options 1`] = `
 <Select
   arrowRenderer={[Function]}
   autosize={true}
@@ -130,7 +130,7 @@ exports[`<SelectBoxInput /> should render a select box with options 1`] = `
 />
 `;
 
-exports[`<SelectBoxInput /> should render a select box with promise options 1`] = `
+exports[`<SelectInput /> should render a select box with promise options 1`] = `
 <Async
   autoload={true}
   cache={Object {}}

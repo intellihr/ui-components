@@ -4,18 +4,18 @@ import capitalize from 'capitalize'
 import Select, { Async, OnChangeHandler, ReactSelectProps } from 'react-select'
 import { isEmpty, cloneDeep } from 'lodash'
 
-export interface SelectBoxInputOptions {
+export interface SelectInputOptions {
   label: string
   value: string | boolean | number
 }
 
-export interface SelectBoxInputProps extends ReactSelectProps {
+export interface SelectInputProps extends ReactSelectProps {
   /** Label describing what the select options are for */
   label?: string
   /** Placeholder when no option is selected */
   placeholder?: string
   /** Array of options to display */
-  options?: SelectBoxInputOptions[]
+  options?: SelectInputOptions[]
   /** Promise to use as options when it resolves */
   promiseOptions?: Function
   /** Custom function passed to the `onChange` handler */
@@ -35,17 +35,17 @@ export interface SelectBoxInputProps extends ReactSelectProps {
   /** Custom label used if there are no available options */
   noneLabel?: string
   /** Specifies a default value to use */
-  preselectDefaultValue?: SelectBoxInputOptions[]
+  preselectDefaultValue?: SelectInputOptions[]
 }
 
-export interface SelectBoxInputState {
+export interface SelectInputState {
   preselectValue: string
 }
 
-export class SelectBoxInput extends React.PureComponent<SelectBoxInputProps, SelectBoxInputState> {
+export class SelectInput extends React.PureComponent<SelectInputProps, SelectInputState> {
   private cachedOptions: any
 
-  public static defaultProps: Partial<SelectBoxInputProps> = {
+  public static defaultProps: Partial<SelectInputProps> = {
     placeholder: 'Please Select',
     isInvalid: false,
     isDisabled: false,
@@ -62,7 +62,7 @@ export class SelectBoxInput extends React.PureComponent<SelectBoxInputProps, Sel
     openOnFocus: false
   }
 
-  constructor (props: SelectBoxInputProps) {
+  constructor (props: SelectInputProps) {
     super(props)
     this.cachedOptions = null
     this.state = {
@@ -86,7 +86,7 @@ export class SelectBoxInput extends React.PureComponent<SelectBoxInputProps, Sel
     this.setState({preselectValue: ''})
   }
 
-  componentWillReceiveProps (nextProps: SelectBoxInputProps) {
+  componentWillReceiveProps (nextProps: SelectInputProps) {
     if (nextProps.value === '' && !isEmpty(nextProps.preselectDefaultValue)) {
       this.handleChange(nextProps.preselectDefaultValue)
     }
@@ -161,7 +161,7 @@ export class SelectBoxInput extends React.PureComponent<SelectBoxInputProps, Sel
     return undefined
   }
 
-  prepareOptions (options: any): SelectBoxInputOptions {
+  prepareOptions (options: any): SelectInputOptions {
     const {
       label,
       generateNoneValue,
@@ -220,7 +220,7 @@ export class SelectBoxInput extends React.PureComponent<SelectBoxInputProps, Sel
     let value = this.props.value
 
     const base:any = {
-      name,
+      name: multi ? `${name}[]` : name,
       resetValue,
       clearable,
       multi,
