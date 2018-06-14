@@ -1,9 +1,9 @@
 import React from 'react'
-import { buttonClass, ButtonProps } from './ButtonHelper'
+import { buttonClass, IButtonProps } from './ButtonHelper'
 import { BaseButton } from './BaseButton'
 
-export class Button extends React.PureComponent<ButtonProps> {
-  public static defaultProps: Partial<ButtonProps> = {
+export class Button extends React.PureComponent<IButtonProps> {
+  public static defaultProps: Partial<IButtonProps> = {
     type: 'neutral',
     iconAlignment: 'left'
   }

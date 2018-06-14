@@ -34,7 +34,7 @@ export interface IBaseButtonProps extends IBaseButton {
     render: (content: any) => JSX.Element
 }
 
-export interface ButtonProps extends IBaseButton {
+export interface IButtonProps extends IBaseButton {
   /** Any extra classes */
   className?: string
   /** Disable the button or not */
