@@ -1,79 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<LinkButton /> should render a disabled link button 1`] = `
-<Anchor
-  href="#"
+<BaseButton
+  disabled={true}
+  iconAlignment="left"
   id="test-link-button-disabled"
+  render={[Function]}
+  type="neutral"
 >
-  <span
-    className="button neutral disabled"
-  >
-    testing testing 123
-  </span>
-</Anchor>
+  testing testing 123
+</BaseButton>
 `;
 
 exports[`<LinkButton /> should render a link button with a simple text 1`] = `
-<Anchor
-  href="#"
+<BaseButton
+  disabled={false}
+  iconAlignment="left"
   id="test-link-button-simple"
+  render={[Function]}
+  type="neutral"
 >
-  <span
-    className="button neutral"
-  >
-    testing testing 123
-  </span>
-</Anchor>
+  testing testing 123
+</BaseButton>
 `;
 
 exports[`<LinkButton /> should render a link button with a size large 1`] = `
-<Anchor
-  href="#"
+<BaseButton
+  disabled={false}
+  iconAlignment="left"
   id="test-link-button-large"
+  render={[Function]}
+  size="large"
+  type="neutral"
 >
-  <span
-    className="button large neutral"
-  >
-    testing testing 123
-  </span>
-</Anchor>
+  testing testing 123
+</BaseButton>
 `;
 
 exports[`<LinkButton /> should render a link button with a type delete-subtle 1`] = `
-<Anchor
-  href="#"
+<BaseButton
+  disabled={false}
+  iconAlignment="left"
   id="test-link-button-delete"
+  render={[Function]}
+  type="delete-subtle"
 >
-  <span
-    className="button delete-subtle"
-  >
-    testing testing 123
-  </span>
-</Anchor>
+  testing testing 123
+</BaseButton>
 `;
 
 exports[`<LinkButton /> should render a link button with an icon 1`] = `
-<Anchor
+<BaseButton
+  disabled={false}
   href="test"
   icon={
     <FontAwesomeIcon
       type="star"
     />
   }
+  iconAlignment="left"
   id="test-link-button-icon"
+  render={[Function]}
+  type="primary"
 >
-  <span
-    className="button primary"
-  >
-    <span
-      className="button-icon"
-      key="test-link-button-icon"
-    >
-      <FontAwesomeIcon
-        type="star"
-      />
-    </span>
-    Link Button with Icon
-  </span>
-</Anchor>
+  Link Button with Icon
+</BaseButton>
 `;
