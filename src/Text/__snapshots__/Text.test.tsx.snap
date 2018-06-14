@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> should render a skeleton element if skeletonOptions are passed to the component 1`] = `
+<Skeleton
+  className=""
+  skeletonOptions={
+    Object {
+      "shape": "line",
+      "showSkeleton": true,
+    }
+  }
+>
+  <span
+    className="Skeleton skeleton line skeleton-undefined"
+    style={
+      Object {
+        "width": undefined,
+      }
+    }
+  />
+</Skeleton>
+`;
+
+exports[`<Text /> should render an element with text 1`] = `
+.c0.heavy {
+  font-weight: 600;
+}
+
+.c0.heading {
+  display: block;
+  font-weight: 600;
+  font-family: 'Open Sans',Arial,sans-serif;
+}
+
+.c0.upper {
+  text-transform: uppercase;
+}
+
+.c0.small {
+  font-size: .8125rem;
+}
+
+<Skeleton
+  className=""
+  skeletonOptions={
+    Object {
+      "shape": "circle",
+      "showSkeleton": false,
+    }
+  }
+>
+  <TextComponent
+    className=""
+    skeletonOptions={
+      Object {
+        "shape": "circle",
+        "showSkeleton": false,
+      }
+    }
+  >
+    <styled.span
+      className=""
+    >
+      <span
+        className="c0"
+      >
+        Hello, world!
+      </span>
+    </styled.span>
+  </TextComponent>
+</Skeleton>
+`;
