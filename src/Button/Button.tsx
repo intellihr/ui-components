@@ -18,7 +18,7 @@ export class Button extends React.PureComponent<ButtonProps> {
     } = this.props
 
     return (
-      <BaseButton 
+      <BaseButton
         {...this.props}
         render={(content) => (
           <button className={buttonClass(type!, size, className)} {...props}>

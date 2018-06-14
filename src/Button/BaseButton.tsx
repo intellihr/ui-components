@@ -34,7 +34,6 @@ export interface IBaseButton {
   render: (content: any) => JSX.Element
 }
 
-
 export class BaseButton extends React.PureComponent<IBaseButton> {
   public static defaultProps: Partial<IBaseButton> = {
     type: 'neutral',
