@@ -29,8 +29,11 @@ export interface ButtonProps {
   icon?: JSX.Element
   /** Alignment of the button icon */
   iconAlignment?: 'left' | 'right'
-  /** Children components passed to the button */
-  children: (content: any) => JSX.Element | null
+
+  /** Disable the button or not */
+  disabled?: boolean
+
+  onClick?: (event: React.SyntheticEvent<any>) => void 
 }
 
 export function buttonClass (type: ButtonTypes, size?: ButtonSizes, className?: string, extras?: any): string {

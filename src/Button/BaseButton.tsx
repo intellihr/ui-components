@@ -23,7 +23,7 @@ export interface IBaseButton {
   /** Size of the button */
   size?: ButtonSizes
   /** What type of button to display */
-  type: ButtonTypes
+  type?: ButtonTypes
   /** Any extra classes */
   className?: string
   /** Icon component passed to Button */
@@ -41,7 +41,6 @@ export class BaseButton extends React.PureComponent<IBaseButton> {
     iconAlignment: 'left'
   }
 
-  
   get buttonContent (): any {
     const {
       id,
