@@ -29,10 +29,9 @@ export interface ButtonProps {
   icon?: JSX.Element
   /** Alignment of the button icon */
   iconAlignment?: 'left' | 'right'
-
   /** Disable the button or not */
   disabled?: boolean
-
+  /** onClick event */
   onClick?: (event: React.SyntheticEvent<any>) => void
 }
 
