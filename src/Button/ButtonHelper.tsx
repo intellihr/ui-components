@@ -30,7 +30,7 @@ export interface IBaseButton {
 }
 
 export interface IBaseButtonProps extends IBaseButton {
-    /** Children components passed to the button */
+    /** function to get the content */
     render: (content: any) => JSX.Element
 }
 
