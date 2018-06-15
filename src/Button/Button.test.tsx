@@ -1,4 +1,4 @@
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
 import React from 'react'
 
 import { Button } from './Button'
@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '../Icon'
 
 describe('<Button />', () => {
   it(`should render a button with a simple text`, () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <Button
         id='test-button'
         onClick={() => alert('yo')}
@@ -19,7 +19,7 @@ describe('<Button />', () => {
   })
 
   it(`should render a disabled button`, () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <Button
         id='test-button-disabled'
         disabled onClick={() => alert('yo')}
@@ -32,7 +32,7 @@ describe('<Button />', () => {
   })
 
   it(`should render a button with a type delete-subtle`, () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <Button
         id='test-button-delete-subtle'
         type='delete-subtle'
@@ -46,7 +46,7 @@ describe('<Button />', () => {
   })
 
   it(`should render a button with a size large`, () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <Button id='test-button-large' size='large' onClick={() => alert('yo')}>
         testing testing 123
       </Button>
@@ -56,7 +56,7 @@ describe('<Button />', () => {
   })
 
   it('should render a button with an icon', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <Button
         id='test-button-icon'
         icon={<FontAwesomeIcon type='star' />}

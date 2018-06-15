@@ -15,8 +15,6 @@ export interface MenuProps {
   isAccordion?: boolean
   /** Apply nested class */
   isNested?: boolean
-  /** Children MenuItems */
-  children: JSX.Element
 }
 
 export class Menu extends React.PureComponent<MenuProps> {

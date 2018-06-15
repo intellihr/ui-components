@@ -1,4 +1,3 @@
-import React from 'react'
 import classNames from 'classnames'
 const style = require('./style.scss')
 
@@ -17,21 +16,31 @@ export type ButtonTypes =
 
 export type ButtonSizes = 'small' | 'medium' | 'large'
 
-export interface ButtonProps {
+export interface IBaseButton {
   /** Unique id of the button */
   id?: string
   /** Size of the button */
   size?: ButtonSizes
   /** What type of button to display */
-  type: ButtonTypes
-  /** Any extra classes */
-  className?: string
-  /** Icon component passed to Button */
-  icon?: JSX.Element
+  type?: ButtonTypes
   /** Alignment of the button icon */
   iconAlignment?: 'left' | 'right'
-  /** Children components passed to the button */
-  children: JSX.Element | string
+  /** Icon component passed to Button */
+  icon?: JSX.Element
+}
+
+export interface IBaseButtonProps extends IBaseButton {
+    /** function to get the content */
+    render: (content: React.ReactNode) => JSX.Element
+}
+
+export interface IButtonProps extends IBaseButton {
+  /** Any extra classes */
+  className?: string
+  /** Disable the button or not */
+  disabled?: boolean
+  /** onClick event */
+  onClick?: (event: React.SyntheticEvent<any>) => void
 }
 
 export function buttonClass (type: ButtonTypes, size?: ButtonSizes, className?: string, extras?: any): string {

@@ -1,50 +1,966 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<FormattedText /> should render any urls as links 1`] = `
+exports[`<FormattedText /> should render a big block of markdown 1`] = `
 .c0 {
   white-space: pre-wrap;
 }
 
-<FormattedText
-  text="www.heyguy.com
+.c1 {
+  color: inherit;
+}
 
-        also this one www.ozbargain.com.au"
+.c1:hover,
+.c1:visited,
+.c1:active,
+.c1:focus {
+  color: inherit;
+}
+
+.c2 {
+  color: rgb(5,87,223);
+}
+
+<FormattedText
+  text="
+FormattedText supports all syntax supported by markdown.
+
+Typography
+----------
+Multiple line breaks will be collapsed to a single paragraph:
+
+
+
+
+See?
+
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+---
+
+Links
+-----
+http://www.intellihr.com.au
+[Inline link](http://www.google.com)
+
+---
+
+Images
+------
+![Alt text](https://i.imgur.com/eyUDgtd.jpg \\"Title Text\\")
+
+---
+
+Code
+----
+
+Inline code with \`blah\`
+
+---
+
+Tables
+------
+Colons can be used to align columns.
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+---
+
+Quotes
+------
+
+> What the navy seal did you just navy seal about me, you little navy seal? I'll have you know I navy sealed top of my class in the navy seals, and I've been involved in numerous secret raids on the navy seals, and I have over 300 confirmed...
+
+---
+
+Lists
+-----
+
+Unordered Lists:
+
+ * Wow
+ * Eat carrots
+ * Eat things which aren't carrots
+ 
+Ordered/multi-level lists:
+
+ 1. Nothing wrong with me
+ 2. Nothing wrong with me
+ 3. Nothing
+    * Wrong
+    * With
+      - me?
+"
 >
   <styled.div>
     <div
       className="c0"
     >
-      <Linkify
-        className="Linkify"
-        component="a"
-        properties={
+      <ReactMarkdown
+        astPlugins={Array []}
+        escapeHtml={true}
+        plugins={Array []}
+        rawSourcePos={false}
+        renderers={
           Object {
-            "target": "_blank",
+            "link": [Function],
           }
         }
-      >
-        <span
-          className="Linkify"
-        >
-          <a
-            href="http://www.heyguy.com"
-            key="parse0match0"
-            target="_blank"
-          >
-            www.heyguy.com
-          </a>
-          
+        skipHtml={false}
+        source="
+FormattedText supports all syntax supported by markdown.
 
-        also this one 
-          <a
-            href="http://www.ozbargain.com.au"
-            key="parse0match1"
-            target="_blank"
+Typography
+----------
+Multiple line breaks will be collapsed to a single paragraph:
+
+
+
+
+See?
+
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+---
+
+Links
+-----
+http://www.intellihr.com.au
+[Inline link](http://www.google.com)
+
+---
+
+Images
+------
+![Alt text](https://i.imgur.com/eyUDgtd.jpg \\"Title Text\\")
+
+---
+
+Code
+----
+
+Inline code with \`blah\`
+
+---
+
+Tables
+------
+Colons can be used to align columns.
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+---
+
+Quotes
+------
+
+> What the navy seal did you just navy seal about me, you little navy seal? I'll have you know I navy sealed top of my class in the navy seals, and I've been involved in numerous secret raids on the navy seals, and I have over 300 confirmed...
+
+---
+
+Lists
+-----
+
+Unordered Lists:
+
+ * Wow
+ * Eat carrots
+ * Eat things which aren't carrots
+ 
+Ordered/multi-level lists:
+
+ 1. Nothing wrong with me
+ 2. Nothing wrong with me
+ 3. Nothing
+    * Wrong
+    * With
+      - me?
+"
+        sourcePos={false}
+        transformLinkUri={[Function]}
+      >
+        <div
+          key="root-1-1"
+        >
+          <p
+            key="paragraph-2-1"
           >
-            www.ozbargain.com.au
-          </a>
-        </span>
-      </Linkify>
+            FormattedText supports all syntax supported by markdown.
+          </p>
+          <Heading
+            key="heading-4-1"
+            level={2}
+          >
+            <h2>
+              Typography
+            </h2>
+          </Heading>
+          <p
+            key="paragraph-6-1"
+          >
+            Multiple line breaks will be collapsed to a single paragraph:
+          </p>
+          <p
+            key="paragraph-11-1"
+          >
+            See?
+          </p>
+          <Heading
+            key="heading-13-1"
+            level={1}
+          >
+            <h1>
+              H1
+            </h1>
+          </Heading>
+          <Heading
+            key="heading-14-1"
+            level={2}
+          >
+            <h2>
+              H2
+            </h2>
+          </Heading>
+          <Heading
+            key="heading-15-1"
+            level={3}
+          >
+            <h3>
+              H3
+            </h3>
+          </Heading>
+          <Heading
+            key="heading-16-1"
+            level={4}
+          >
+            <h4>
+              H4
+            </h4>
+          </Heading>
+          <Heading
+            key="heading-17-1"
+            level={5}
+          >
+            <h5>
+              H5
+            </h5>
+          </Heading>
+          <Heading
+            key="heading-18-1"
+            level={6}
+          >
+            <h6>
+              H6
+            </h6>
+          </Heading>
+          <hr
+            key="thematicBreak-20-1"
+          />
+          <Heading
+            key="heading-22-1"
+            level={2}
+          >
+            <h2>
+              Links
+            </h2>
+          </Heading>
+          <p
+            key="paragraph-24-1"
+          >
+            <Component
+              href="http://www.intellihr.com.au"
+              key="link-24-1"
+            >
+              <WithAnchor
+                href="http://www.intellihr.com.au"
+                target="_blank"
+                useReactRouter={false}
+              >
+                <Anchor
+                  href="http://www.intellihr.com.au"
+                  target="_blank"
+                  useReactRouter={false}
+                >
+                  <styled.a
+                    href="http://www.intellihr.com.au"
+                    target="_blank"
+                    useReactRouter={false}
+                  >
+                    <a
+                      className="c1"
+                      href="http://www.intellihr.com.au"
+                      target="_blank"
+                    >
+                      <styled.span
+                        href="http://www.intellihr.com.au"
+                        target="_blank"
+                        useReactRouter={false}
+                      >
+                        <span
+                          className="c2"
+                          href="http://www.intellihr.com.au"
+                          target="_blank"
+                        >
+                          http://www.intellihr.com.au
+                        </span>
+                      </styled.span>
+                    </a>
+                  </styled.a>
+                </Anchor>
+              </WithAnchor>
+            </Component>
+            
+
+            <Component
+              href="http://www.google.com"
+              key="link-25-1"
+            >
+              <WithAnchor
+                href="http://www.google.com"
+                target="_blank"
+                useReactRouter={false}
+              >
+                <Anchor
+                  href="http://www.google.com"
+                  target="_blank"
+                  useReactRouter={false}
+                >
+                  <styled.a
+                    href="http://www.google.com"
+                    target="_blank"
+                    useReactRouter={false}
+                  >
+                    <a
+                      className="c1"
+                      href="http://www.google.com"
+                      target="_blank"
+                    >
+                      <styled.span
+                        href="http://www.google.com"
+                        target="_blank"
+                        useReactRouter={false}
+                      >
+                        <span
+                          className="c2"
+                          href="http://www.google.com"
+                          target="_blank"
+                        >
+                          Inline link
+                        </span>
+                      </styled.span>
+                    </a>
+                  </styled.a>
+                </Anchor>
+              </WithAnchor>
+            </Component>
+          </p>
+          <hr
+            key="thematicBreak-27-1"
+          />
+          <Heading
+            key="heading-29-1"
+            level={2}
+          >
+            <h2>
+              Images
+            </h2>
+          </Heading>
+          <p
+            key="paragraph-31-1"
+          >
+            <img
+              alt="Alt text"
+              key="image-31-1"
+              src="https://i.imgur.com/eyUDgtd.jpg"
+              title="Title Text"
+            />
+          </p>
+          <hr
+            key="thematicBreak-33-1"
+          />
+          <Heading
+            key="heading-35-1"
+            level={2}
+          >
+            <h2>
+              Code
+            </h2>
+          </Heading>
+          <p
+            key="paragraph-38-1"
+          >
+            Inline code with 
+            <InlineCode
+              inline={true}
+              key="inlineCode-38-18"
+              value="blah"
+            >
+              <code>
+                blah
+              </code>
+            </InlineCode>
+          </p>
+          <hr
+            key="thematicBreak-40-1"
+          />
+          <Heading
+            key="heading-42-1"
+            level={2}
+          >
+            <h2>
+              Tables
+            </h2>
+          </Heading>
+          <p
+            key="paragraph-44-1"
+          >
+            Colons can be used to align columns.
+          </p>
+          <bound SimpleRenderer
+            columnAlignment={
+              Array [
+                null,
+                "center",
+                "right",
+              ]
+            }
+            key="table-46-1"
+          >
+            <table>
+              <bound SimpleRenderer
+                columnAlignment={
+                  Array [
+                    null,
+                    "center",
+                    "right",
+                  ]
+                }
+                key="tableHead-46-1"
+              >
+                <thead>
+                  <bound SimpleRenderer
+                    columnAlignment={
+                      Array [
+                        null,
+                        "center",
+                        "right",
+                      ]
+                    }
+                    isHeader={true}
+                    key="tableRow-46-1"
+                  >
+                    <tr>
+                      <TableCell
+                        align={null}
+                        isHeader={true}
+                        key="tableCell-46-3"
+                      >
+                        <th>
+                          Tables
+                        </th>
+                      </TableCell>
+                      <TableCell
+                        align="center"
+                        isHeader={true}
+                        key="tableCell-46-19"
+                      >
+                        <th
+                          style={
+                            Object {
+                              "textAlign": "center",
+                            }
+                          }
+                        >
+                          Are
+                        </th>
+                      </TableCell>
+                      <TableCell
+                        align="right"
+                        isHeader={true}
+                        key="tableCell-46-35"
+                      >
+                        <th
+                          style={
+                            Object {
+                              "textAlign": "right",
+                            }
+                          }
+                        >
+                          Cool
+                        </th>
+                      </TableCell>
+                    </tr>
+                  </bound SimpleRenderer>
+                </thead>
+              </bound SimpleRenderer>
+              <bound SimpleRenderer
+                columnAlignment={
+                  Array [
+                    null,
+                    "center",
+                    "right",
+                  ]
+                }
+                key="tableBody-48-1"
+              >
+                <tbody>
+                  <bound SimpleRenderer
+                    columnAlignment={
+                      Array [
+                        null,
+                        "center",
+                        "right",
+                      ]
+                    }
+                    isHeader={false}
+                    key="tableRow-48-1"
+                  >
+                    <tr>
+                      <TableCell
+                        align={null}
+                        isHeader={false}
+                        key="tableCell-48-3"
+                      >
+                        <td>
+                          col 3 is
+                        </td>
+                      </TableCell>
+                      <TableCell
+                        align="center"
+                        isHeader={false}
+                        key="tableCell-48-19"
+                      >
+                        <td
+                          style={
+                            Object {
+                              "textAlign": "center",
+                            }
+                          }
+                        >
+                          right-aligned
+                        </td>
+                      </TableCell>
+                      <TableCell
+                        align="right"
+                        isHeader={false}
+                        key="tableCell-48-35"
+                      >
+                        <td
+                          style={
+                            Object {
+                              "textAlign": "right",
+                            }
+                          }
+                        >
+                          $1600
+                        </td>
+                      </TableCell>
+                    </tr>
+                  </bound SimpleRenderer>
+                  <bound SimpleRenderer
+                    columnAlignment={
+                      Array [
+                        null,
+                        "center",
+                        "right",
+                      ]
+                    }
+                    isHeader={false}
+                    key="tableRow-49-1"
+                  >
+                    <tr>
+                      <TableCell
+                        align={null}
+                        isHeader={false}
+                        key="tableCell-49-3"
+                      >
+                        <td>
+                          col 2 is
+                        </td>
+                      </TableCell>
+                      <TableCell
+                        align="center"
+                        isHeader={false}
+                        key="tableCell-49-19"
+                      >
+                        <td
+                          style={
+                            Object {
+                              "textAlign": "center",
+                            }
+                          }
+                        >
+                          centered
+                        </td>
+                      </TableCell>
+                      <TableCell
+                        align="right"
+                        isHeader={false}
+                        key="tableCell-49-37"
+                      >
+                        <td
+                          style={
+                            Object {
+                              "textAlign": "right",
+                            }
+                          }
+                        >
+                          $12
+                        </td>
+                      </TableCell>
+                    </tr>
+                  </bound SimpleRenderer>
+                  <bound SimpleRenderer
+                    columnAlignment={
+                      Array [
+                        null,
+                        "center",
+                        "right",
+                      ]
+                    }
+                    isHeader={false}
+                    key="tableRow-50-1"
+                  >
+                    <tr>
+                      <TableCell
+                        align={null}
+                        isHeader={false}
+                        key="tableCell-50-3"
+                      >
+                        <td>
+                          zebra stripes
+                        </td>
+                      </TableCell>
+                      <TableCell
+                        align="center"
+                        isHeader={false}
+                        key="tableCell-50-19"
+                      >
+                        <td
+                          style={
+                            Object {
+                              "textAlign": "center",
+                            }
+                          }
+                        >
+                          are neat
+                        </td>
+                      </TableCell>
+                      <TableCell
+                        align="right"
+                        isHeader={false}
+                        key="tableCell-50-38"
+                      >
+                        <td
+                          style={
+                            Object {
+                              "textAlign": "right",
+                            }
+                          }
+                        >
+                          $1
+                        </td>
+                      </TableCell>
+                    </tr>
+                  </bound SimpleRenderer>
+                </tbody>
+              </bound SimpleRenderer>
+            </table>
+          </bound SimpleRenderer>
+          <hr
+            key="thematicBreak-52-1"
+          />
+          <Heading
+            key="heading-54-1"
+            level={2}
+          >
+            <h2>
+              Quotes
+            </h2>
+          </Heading>
+          <blockquote
+            key="blockquote-57-1"
+          >
+            <p
+              key="paragraph-57-3"
+            >
+              What the navy seal did you just navy seal about me, you little navy seal? I'll have you know I navy sealed top of my class in the navy seals, and I've been involved in numerous secret raids on the navy seals, and I have over 300 confirmed...
+            </p>
+          </blockquote>
+          <hr
+            key="thematicBreak-59-1"
+          />
+          <Heading
+            key="heading-61-1"
+            level={2}
+          >
+            <h2>
+              Lists
+            </h2>
+          </Heading>
+          <p
+            key="paragraph-64-1"
+          >
+            Unordered Lists:
+          </p>
+          <List
+            key="list-66-1"
+            ordered={false}
+            start={null}
+            tight={false}
+          >
+            <ul>
+              <ListItem
+                checked={null}
+                key="listItem-66-1"
+                tight={true}
+              >
+                <li>
+                  Wow
+                </li>
+              </ListItem>
+              <ListItem
+                checked={null}
+                key="listItem-67-1"
+                tight={true}
+              >
+                <li>
+                  Eat carrots
+                </li>
+              </ListItem>
+              <ListItem
+                checked={null}
+                key="listItem-68-1"
+                tight={false}
+              >
+                <li>
+                  <p
+                    key="paragraph-68-4"
+                  >
+                    Eat things which aren't carrots
+                  </p>
+                </li>
+              </ListItem>
+            </ul>
+          </List>
+          <p
+            key="paragraph-70-1"
+          >
+            Ordered/multi-level lists:
+          </p>
+          <List
+            key="list-72-1"
+            ordered={true}
+            start={1}
+            tight={true}
+          >
+            <ol>
+              <ListItem
+                checked={null}
+                key="listItem-72-1"
+                tight={true}
+              >
+                <li>
+                  Nothing wrong with me
+                </li>
+              </ListItem>
+              <ListItem
+                checked={null}
+                key="listItem-73-1"
+                tight={true}
+              >
+                <li>
+                  Nothing wrong with me
+                </li>
+              </ListItem>
+              <ListItem
+                checked={null}
+                key="listItem-74-1"
+                tight={true}
+              >
+                <li>
+                  Nothing
+                  <List
+                    key="list-75-5"
+                    ordered={false}
+                    start={null}
+                    tight={true}
+                  >
+                    <ul>
+                      <ListItem
+                        checked={null}
+                        key="listItem-75-5"
+                        tight={true}
+                      >
+                        <li>
+                          Wrong
+                        </li>
+                      </ListItem>
+                      <ListItem
+                        checked={null}
+                        key="listItem-76-5"
+                        tight={true}
+                      >
+                        <li>
+                          With
+                          <List
+                            key="list-77-7"
+                            ordered={false}
+                            start={null}
+                            tight={true}
+                          >
+                            <ul>
+                              <ListItem
+                                checked={null}
+                                key="listItem-77-7"
+                                tight={true}
+                              >
+                                <li>
+                                  me?
+                                </li>
+                              </ListItem>
+                            </ul>
+                          </List>
+                        </li>
+                      </ListItem>
+                    </ul>
+                  </List>
+                </li>
+              </ListItem>
+            </ol>
+          </List>
+        </div>
+      </ReactMarkdown>
+    </div>
+  </styled.div>
+</FormattedText>
+`;
+
+exports[`<FormattedText /> should render any urls as links 1`] = `
+.c0 {
+  white-space: pre-wrap;
+}
+
+.c1 {
+  color: inherit;
+}
+
+.c1:hover,
+.c1:visited,
+.c1:active,
+.c1:focus {
+  color: inherit;
+}
+
+.c2 {
+  color: rgb(5,87,223);
+}
+
+<FormattedText
+  text="http://www.heyguy.com
+
+        also this one http://www.ozbargain.com.au"
+>
+  <styled.div>
+    <div
+      className="c0"
+    >
+      <ReactMarkdown
+        astPlugins={Array []}
+        escapeHtml={true}
+        plugins={Array []}
+        rawSourcePos={false}
+        renderers={
+          Object {
+            "link": [Function],
+          }
+        }
+        skipHtml={false}
+        source="http://www.heyguy.com
+
+        also this one http://www.ozbargain.com.au"
+        sourcePos={false}
+        transformLinkUri={[Function]}
+      >
+        <div
+          key="root-1-1"
+        >
+          <p
+            key="paragraph-1-1"
+          >
+            <Component
+              href="http://www.heyguy.com"
+              key="link-1-1"
+            >
+              <WithAnchor
+                href="http://www.heyguy.com"
+                target="_blank"
+                useReactRouter={false}
+              >
+                <Anchor
+                  href="http://www.heyguy.com"
+                  target="_blank"
+                  useReactRouter={false}
+                >
+                  <styled.a
+                    href="http://www.heyguy.com"
+                    target="_blank"
+                    useReactRouter={false}
+                  >
+                    <a
+                      className="c1"
+                      href="http://www.heyguy.com"
+                      target="_blank"
+                    >
+                      <styled.span
+                        href="http://www.heyguy.com"
+                        target="_blank"
+                        useReactRouter={false}
+                      >
+                        <span
+                          className="c2"
+                          href="http://www.heyguy.com"
+                          target="_blank"
+                        >
+                          http://www.heyguy.com
+                        </span>
+                      </styled.span>
+                    </a>
+                  </styled.a>
+                </Anchor>
+              </WithAnchor>
+            </Component>
+          </p>
+          <CodeBlock
+            key="code-3-1"
+            language={null}
+            value="    also this one http://www.ozbargain.com.au"
+          >
+            <pre>
+              <code>
+                    also this one http://www.ozbargain.com.au
+              </code>
+            </pre>
+          </CodeBlock>
+        </div>
+      </ReactMarkdown>
     </div>
   </styled.div>
 </FormattedText>
@@ -64,23 +980,44 @@ exports[`<FormattedText /> should render the formatted text 1`] = `
     <div
       className="c0"
     >
-      <Linkify
-        className="Linkify"
-        component="a"
-        properties={
+      <ReactMarkdown
+        astPlugins={Array []}
+        escapeHtml={true}
+        plugins={Array []}
+        rawSourcePos={false}
+        renderers={
           Object {
-            "target": "_blank",
+            "link": [Function],
           }
         }
-      >
-        <span
-          className="Linkify"
-        >
-          Hello. I am a piece of paragraph text.
+        skipHtml={false}
+        source="Hello. I am a piece of paragraph text.
 
-        This should be on a new line :)
-        </span>
-      </Linkify>
+        This should be on a new line :)"
+        sourcePos={false}
+        transformLinkUri={[Function]}
+      >
+        <div
+          key="root-1-1"
+        >
+          <p
+            key="paragraph-1-1"
+          >
+            Hello. I am a piece of paragraph text.
+          </p>
+          <CodeBlock
+            key="code-3-1"
+            language={null}
+            value="    This should be on a new line :)"
+          >
+            <pre>
+              <code>
+                    This should be on a new line :)
+              </code>
+            </pre>
+          </CodeBlock>
+        </div>
+      </ReactMarkdown>
     </div>
   </styled.div>
 </FormattedText>
