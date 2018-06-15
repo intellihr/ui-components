@@ -9,7 +9,7 @@ export class BaseButton extends React.PureComponent<IBaseButtonProps> {
     iconAlignment: 'left'
   }
 
-  get buttonContent (): any {
+  get buttonContent (): React.ReactNode {
     const {
       id,
       children,
@@ -28,16 +28,10 @@ export class BaseButton extends React.PureComponent<IBaseButtonProps> {
       )
 
       if (iconAlignment === 'right') {
-        return [
-          children,
-          iconComponent
-        ]
+        return <>'         '{children}'         '{iconComponent}'       '</>
       }
 
-      return [
-        iconComponent,
-        children
-      ]
+      return <>'       '{iconComponent}'       '{children}'     '</>
     }
 
     return children

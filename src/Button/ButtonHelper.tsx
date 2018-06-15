@@ -31,7 +31,7 @@ export interface IBaseButton {
 
 export interface IBaseButtonProps extends IBaseButton {
     /** function to get the content */
-    render: (content: any) => JSX.Element
+    render: (content: React.ReactNode) => JSX.Element
 }
 
 export interface IButtonProps extends IBaseButton {
