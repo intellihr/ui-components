@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { Fragment, PureComponent, ReactNode } from 'react'
 import uuid from 'uuid'
 import classNames from 'classnames'
 import { IBaseButtonProps } from './ButtonHelper'
 
-export class BaseButton extends React.PureComponent<IBaseButtonProps> {
+export class BaseButton extends PureComponent<IBaseButtonProps> {
   public static defaultProps: Partial<IBaseButtonProps> = {
     type: 'neutral',
     iconAlignment: 'left'
   }
 
-  get buttonContent (): React.ReactNode {
+  get buttonContent (): ReactNode {
     const {
       id,
       children,
@@ -28,10 +28,16 @@ export class BaseButton extends React.PureComponent<IBaseButtonProps> {
       )
 
       if (iconAlignment === 'right') {
-        return <>'         '{children}'         '{iconComponent}'       '</>
+        return <Fragment>
+          {children}
+          {iconComponent}
+        </Fragment>
       }
 
-      return <>'       '{iconComponent}'       '{children}'     '</>
+      return <Fragment>
+        {iconComponent}
+        {children}
+      </Fragment>
     }
 
     return children
