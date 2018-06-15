@@ -1,41 +1,90 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Button /> should render a button with a simple text 1`] = `
-<button
-  className="button neutral"
+<Button
   iconAlignment="left"
   id="test-button"
   onClick={[Function]}
+  type="neutral"
 >
-  testing testing 123
-</button>
+  <BaseButton
+    iconAlignment="left"
+    id="test-button"
+    onClick={[Function]}
+    render={[Function]}
+    type="neutral"
+  >
+    <button
+      className="button neutral"
+      id="test-button"
+      onClick={[Function]}
+    >
+      testing testing 123
+    </button>
+  </BaseButton>
+</Button>
 `;
 
 exports[`<Button /> should render a button with a size large 1`] = `
-<button
-  className="button large neutral"
+<Button
   iconAlignment="left"
   id="test-button-large"
   onClick={[Function]}
+  size="large"
+  type="neutral"
 >
-  testing testing 123
-</button>
+  <BaseButton
+    iconAlignment="left"
+    id="test-button-large"
+    onClick={[Function]}
+    render={[Function]}
+    size="large"
+    type="neutral"
+  >
+    <button
+      className="button large neutral"
+      id="test-button-large"
+      onClick={[Function]}
+    >
+      testing testing 123
+    </button>
+  </BaseButton>
+</Button>
 `;
 
 exports[`<Button /> should render a button with a type delete-subtle 1`] = `
-<button
-  className="button delete-subtle"
+<Button
   iconAlignment="left"
   id="test-button-delete-subtle"
   onClick={[Function]}
+  type="delete-subtle"
 >
-  testing testing 123
-</button>
+  <BaseButton
+    iconAlignment="left"
+    id="test-button-delete-subtle"
+    onClick={[Function]}
+    render={[Function]}
+    type="delete-subtle"
+  >
+    <button
+      className="button delete-subtle"
+      id="test-button-delete-subtle"
+      onClick={[Function]}
+    >
+      testing testing 123
+    </button>
+  </BaseButton>
+</Button>
 `;
 
 exports[`<Button /> should render a button with an icon 1`] = `
-<button
-  className="button primary-hollow"
+.c0.icon-small {
+  bottom: 2px;
+  font-size: xx-small;
+  position: relative;
+}
+
+<Button
   icon={
     <FontAwesomeIcon
       type="star"
@@ -43,27 +92,84 @@ exports[`<Button /> should render a button with an icon 1`] = `
   }
   iconAlignment="right"
   id="test-button-icon"
+  type="primary-hollow"
 >
-  primary-hollow
-  <span
-    className="button-icon right"
-    key="test-button-icon"
+  <BaseButton
+    icon={
+      <FontAwesomeIcon
+        type="star"
+      />
+    }
+    iconAlignment="right"
+    id="test-button-icon"
+    render={[Function]}
+    type="primary-hollow"
   >
-    <FontAwesomeIcon
-      type="star"
-    />
-  </span>
-</button>
+    <button
+      className="button primary-hollow"
+      icon={
+        <FontAwesomeIcon
+          type="star"
+        />
+      }
+      id="test-button-icon"
+    >
+      primary-hollow
+      <span
+        className="button-icon right"
+        key="test-button-icon"
+      >
+        <FontAwesomeIcon
+          type="star"
+        >
+          <Icon
+            isLarge={false}
+            isSmall={false}
+            isSpinning={false}
+            isStacked={false}
+            type="fa-star"
+          >
+            <styled.i
+              aria-hidden={true}
+              className="icon fa fa-star"
+            >
+              <i
+                aria-hidden={true}
+                className="icon fa fa-star c0"
+              />
+            </styled.i>
+          </Icon>
+        </FontAwesomeIcon>
+      </span>
+    </button>
+  </BaseButton>
+</Button>
 `;
 
 exports[`<Button /> should render a disabled button 1`] = `
-<button
-  className="button neutral"
+<Button
   disabled={true}
   iconAlignment="left"
   id="test-button-disabled"
   onClick={[Function]}
+  type="neutral"
 >
-  testing testing 123
-</button>
+  <BaseButton
+    disabled={true}
+    iconAlignment="left"
+    id="test-button-disabled"
+    onClick={[Function]}
+    render={[Function]}
+    type="neutral"
+  >
+    <button
+      className="button neutral"
+      disabled={true}
+      id="test-button-disabled"
+      onClick={[Function]}
+    >
+      testing testing 123
+    </button>
+  </BaseButton>
+</Button>
 `;

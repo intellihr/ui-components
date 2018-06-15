@@ -250,3 +250,24 @@
   </LinkButton>
 </div>
 ```
+
+## Link buttons with Icons
+```jsx
+<div>
+  <div>
+    <LinkButton 
+      icon={<FontAwesomeIcon type='star' />}
+      type='primary' 
+    >
+      primary
+    </LinkButton>
+    <LinkButton 
+      icon={<FontAwesomeIcon type='star' />}
+      iconAlignment='right'
+      type='primary'
+    >
+      primary
+    </LinkButton>
+  </div>
+</div>
+```

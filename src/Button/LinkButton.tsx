@@ -1,37 +1,42 @@
 import React from 'react'
-import {ButtonProps, buttonClass} from './ButtonHelper'
-import {Anchor} from '../Anchor'
+import { buttonClass, IButtonProps } from './ButtonHelper'
+import { Anchor } from '../Anchor'
+import { BaseButton } from './BaseButton'
 
-export interface LinkButtonProps extends ButtonProps {
+export interface LinkButtonProps extends IButtonProps{
   /** Weather the button is clickable or not */
-  disabled: boolean
+  disabled?: boolean
   /** Destination url */
   href: string
 }
 
 export class LinkButton extends React.PureComponent<LinkButtonProps> {
-  public static defaultProps: Partial<LinkButtonProps> = {
+  public static defaultProps: Partial<LinkButtonProps & IButtonProps> = {
     disabled: false,
     type: 'neutral'
   }
 
   public render (): JSX.Element | null {
     const {
+      className,
       size,
       type,
-      className,
-      children,
       disabled,
       href,
       ...props
     } = this.props
 
     return (
-      <Anchor href={disabled ? '#' : href} {...props}>
-        <span className={buttonClass(type, size, className, { disabled: disabled })}>
-          {children}
-        </span>
-      </Anchor>
+      <BaseButton
+        {...this.props}
+        render={(content: any) => (
+          <Anchor href={disabled ? '#' : href} {...props}>
+            <span className={buttonClass(type!, size, className, { disabled: disabled })}>
+              {content}
+            </span>
+          </Anchor>
+        )}
+      />
     )
   }
 }
