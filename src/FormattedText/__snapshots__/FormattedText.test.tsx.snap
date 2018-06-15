@@ -112,6 +112,7 @@ Ordered/multi-level lists:
         renderers={
           Object {
             "link": [Function],
+            "text": [Function],
           }
         }
         skipHtml={false}
@@ -890,6 +891,7 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
         renderers={
           Object {
             "link": [Function],
+            "text": [Function],
           }
         }
         skipHtml={false}
@@ -988,6 +990,7 @@ exports[`<FormattedText /> should render the formatted text 1`] = `
         renderers={
           Object {
             "link": [Function],
+            "text": [Function],
           }
         }
         skipHtml={false}
