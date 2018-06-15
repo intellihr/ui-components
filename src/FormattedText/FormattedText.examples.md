@@ -1,7 +1,18 @@
 ```jsx
 <FormattedText
   text={`
+Emoji
+-----
+FormattedText will convert any text wrapped in colons to emoji components.
+\`:crocodile: Gators gonna gate :crocodile:\` becomes
+:crocodile: Gators gonna gate :crocodile:
+
+It works like magic!   
+  
+---
+  
 FormattedText supports all syntax supported by markdown.
+
 
 Typography
 ----------

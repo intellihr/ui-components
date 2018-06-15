@@ -145,6 +145,12 @@
   dependencies:
     "@types/color-convert" "*"
 
+"@types/emoji-mart@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@types/emoji-mart/-/emoji-mart-2.2.1.tgz#542650a490278c3bbec3f78b5737714ea122c8fe"
+  dependencies:
+    "@types/react" "*"
+
 "@types/enzyme@3.1.9":
   version "3.1.9"
   resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-3.1.9.tgz#fbd97f3beb7cad76fc9c6f04c97d77f4834522ef"
@@ -2975,6 +2981,10 @@ elliptic@^6.0.0:
     inherits "^2.0.1"
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
+
+emoji-mart@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/emoji-mart/-/emoji-mart-2.6.1.tgz#222b9d8f20c4484758266b847588f84cc2db384c"
 
 "emoji-regex@>=6.0.0 <=6.1.1":
   version "6.1.1"
@@ -8190,6 +8200,12 @@ react-reconciler@^0.7.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.0"
+
+react-string-replace@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/react-string-replace/-/react-string-replace-0.4.1.tgz#024c6ac0a91163ecae439a1b197d3e1660c98c0d"
+  dependencies:
+    lodash "^4.17.4"
 
 react-styled-flexboxgrid@^2.2.0:
   version "2.2.0"
