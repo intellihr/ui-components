@@ -1,5 +1,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
+import { Emoji } from 'emoji-mart'
+import reactStringReplace from 'react-string-replace'
 import { StyledFormattedText } from './style'
 import { TextLink } from '../Link'
 
@@ -23,6 +25,19 @@ export class FormattedText extends React.PureComponent<FormattedTextProps> {
     )
   }
 
+  textRenderer = (
+    text: string
+  ): JSX.Element => {
+    return reactStringReplace(text, /:([^:]+):/g, (match: string, i: number) => {
+      return <Emoji
+        key={i}
+        emoji={match}
+        set='twitter'
+        size={16}
+      />
+    })
+  }
+
   public render (): JSX.Element {
     const {
       text
@@ -33,7 +48,8 @@ export class FormattedText extends React.PureComponent<FormattedTextProps> {
         <ReactMarkdown
           source={text}
           renderers={{
-            link: this.linkRenderer
+            link: this.linkRenderer,
+            text: this.textRenderer
           }}
         />
       </StyledFormattedText>
