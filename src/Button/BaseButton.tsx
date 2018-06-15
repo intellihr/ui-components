@@ -1,9 +1,9 @@
-import React, { Fragment, PureComponent, ReactNode } from 'react'
+import React, { Fragment, ReactNode } from 'react'
 import uuid from 'uuid'
 import classNames from 'classnames'
 import { IBaseButtonProps } from './ButtonHelper'
 
-export class BaseButton extends PureComponent<IBaseButtonProps> {
+export class BaseButton extends React.PureComponent<IBaseButtonProps> {
   public static defaultProps: Partial<IBaseButtonProps> = {
     type: 'neutral',
     iconAlignment: 'left'

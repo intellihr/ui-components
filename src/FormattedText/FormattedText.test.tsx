@@ -1,4 +1,4 @@
-import { mount } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import React from 'react'
 import { FormattedText } from './FormattedText'
 
