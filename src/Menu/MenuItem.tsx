@@ -4,7 +4,6 @@ export interface MenuItemProps {
   /** HTML id to use for the menu */
   url?: string
   label: string
-  children?: JSX.Element
 }
 
 export class MenuItem extends React.PureComponent<MenuItemProps> {
