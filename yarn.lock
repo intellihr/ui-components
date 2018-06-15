@@ -2998,13 +2998,13 @@ envinfo@^4.4.2:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/envinfo/-/envinfo-4.4.2.tgz#472c49f3a8b9bca73962641ce7cb692bf623cd1c"
 
-enzyme-adapter-react-16@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/enzyme-adapter-react-16/-/enzyme-adapter-react-16-1.1.1.tgz#a8f4278b47e082fbca14f5bfb1ee50ee650717b4"
+"enzyme-adapter-react-16@npm:enzyme-react-adapter-future":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/enzyme-react-adapter-future/-/enzyme-react-adapter-future-1.1.3.tgz#f0c102f098086a0ad0270bbdaf9da5113297dc05"
   dependencies:
     enzyme-adapter-utils "^1.3.0"
     lodash "^4.17.4"
-    object.assign "^4.0.4"
+    object.assign "^4.1.0"
     object.values "^1.0.4"
     prop-types "^15.6.0"
     react-reconciler "^0.7.0"
@@ -3017,10 +3017,6 @@ enzyme-adapter-utils@^1.3.0:
     lodash "^4.17.4"
     object.assign "^4.0.4"
     prop-types "^15.6.0"
-
-enzyme-context-patch@^0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/enzyme-context-patch/-/enzyme-context-patch-0.0.8.tgz#ef47acae52f1dc755b92c8b2b8a35b8cc5eb924b"
 
 enzyme-to-json@3.3.3:
   version "3.3.3"
@@ -3892,9 +3888,16 @@ foundation-datepicker@1.5.6:
   version "1.5.6"
   resolved "https://registry.yarnpkg.com/foundation-datepicker/-/foundation-datepicker-1.5.6.tgz#6dc891f3f6422028219f74284d1684548a8ca4bf"
 
-foundation-sites@*, foundation-sites@6.4.3:
+foundation-sites@*:
   version "6.4.3"
   resolved "https://registry.yarnpkg.com/foundation-sites/-/foundation-sites-6.4.3.tgz#ea89eb599badf6f03dd526c51f00bdb942a844f6"
+  dependencies:
+    jquery ">=3.0.0"
+    what-input "^4.1.3"
+
+foundation-sites@^6.4.4-rc1:
+  version "6.4.4-rc1"
+  resolved "https://registry.yarnpkg.com/foundation-sites/-/foundation-sites-6.4.4-rc1.tgz#8b645679d6f8e59717b22abea14accc4e32eefea"
   dependencies:
     jquery ">=3.0.0"
     what-input "^4.1.3"
@@ -5830,12 +5833,6 @@ levn@^0.3.0, levn@~0.3.0:
   dependencies:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
-
-linkify-it@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/linkify-it/-/linkify-it-2.0.3.tgz#d94a4648f9b1c179d64fa97291268bdb6ce9434f"
-  dependencies:
-    uc.micro "^1.0.1"
 
 listify@^1.0.0:
   version "1.0.0"
@@ -8157,13 +8154,15 @@ react-is@^16.3.1, react-is@^16.3.2:
   version "16.3.2"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.3.2.tgz#f4d3d0e2f5fbb6ac46450641eb2e25bf05d36b22"
 
-react-linkify@0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/react-linkify/-/react-linkify-0.2.2.tgz#55b99b1cc7244446a0f9bdebbe13b2c30f789e65"
+react-markdown@^3.3.3:
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/react-markdown/-/react-markdown-3.3.3.tgz#1e57e63e9f4e87d2919a51d77815b803f4b7b5d6"
   dependencies:
-    linkify-it "^2.0.3"
-    prop-types "^15.5.8"
-    tlds "^1.57.0"
+    prop-types "^15.6.1"
+    remark-parse "^5.0.0"
+    unified "^6.1.5"
+    unist-util-visit "^1.3.0"
+    xtend "^4.0.1"
 
 react-reconciler@^0.7.0:
   version "0.7.0"
@@ -9849,10 +9848,6 @@ timers-browserify@^2.0.4:
   dependencies:
     setimmediate "^1.0.4"
 
-tlds@^1.57.0:
-  version "1.203.1"
-  resolved "https://registry.yarnpkg.com/tlds/-/tlds-1.203.1.tgz#4dc9b02f53de3315bc98b80665e13de3edfc1dfc"
-
 tmp@^0.0.33:
   version "0.0.33"
   resolved "https://registry.yarnpkg.com/tmp/-/tmp-0.0.33.tgz#6d34335889768d21b2bcda0aa277ced3b1bfadf9"
@@ -10024,10 +10019,6 @@ ua-parser-js@^0.7.9:
   version "0.7.18"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.18.tgz#a7bfd92f56edfb117083b69e31d2aa8882d4b1ed"
 
-uc.micro@^1.0.1:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/uc.micro/-/uc.micro-1.0.5.tgz#0c65f15f815aa08b560a61ce8b4db7ffc3f45376"
-
 uglify-es@^3.3.4:
   version "3.3.9"
   resolved "https://registry.yarnpkg.com/uglify-es/-/uglify-es-3.3.9.tgz#0c1c4f0700bed8dbc124cdb304d2592ca203e677"
@@ -10102,7 +10093,7 @@ unherit@^1.0.4:
     inherits "^2.0.1"
     xtend "^4.0.1"
 
-unified@^6.0.0:
+unified@^6.0.0, unified@^6.1.5:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/unified/-/unified-6.2.0.tgz#7fbd630f719126d67d40c644b7e3f617035f6dba"
   dependencies:

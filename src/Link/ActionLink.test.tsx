@@ -6,7 +6,7 @@ import { DefaultsProvider } from '../DefaultsContext'
 
 // Skipping until enzyme properly supports React 16.3
 // see https://github.com/airbnb/enzyme/pull/1513
-describe.skip('<ActionLink />', () => {
+describe('<ActionLink />', () => {
   it(`should render an action link`, () => {
     const wrapper = mount(
       <ActionLink href='/lol'>
