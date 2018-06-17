@@ -5,8 +5,6 @@ export interface FormProps {
   handleSubmit?: (event: React.FormEvent<HTMLFormElement>) => void
   /** Function passed to `onChange` attribute */
   handleChange?: (event: React.FormEvent<HTMLFormElement>) => void
-  /** Child form inputs */
-  children: JSX.Element
 }
 
 export class Form extends React.PureComponent<FormProps> {
