@@ -28,16 +28,16 @@ export class BaseButton extends React.PureComponent<IBaseButtonProps> {
       )
 
       if (iconAlignment === 'right') {
-        return <Fragment>
+        return <React.Fragment>
           {children}
           {iconComponent}
-        </Fragment>
+        </React.Fragment>
       }
 
-      return <Fragment>
+      return <React.Fragment>
         {iconComponent}
         {children}
-      </Fragment>
+      </React.Fragment>
     }
 
     return children

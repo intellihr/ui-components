@@ -1,4 +1,4 @@
-const colours = require('../sass/resources/js/colours')
+import colours from '../sass/resources/js/colours'
 
 export const getColor = (name: string): string => {
   if (!colours[name]) {

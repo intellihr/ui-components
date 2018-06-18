@@ -265,4 +265,4 @@ const analyticsColours = {
   red1: Color('#FF4D50')
 }
 
-module.exports = buildColourList(systemColours, functionalColours, analyticsColours)
+export default buildColourList(systemColours, functionalColours, analyticsColours)
