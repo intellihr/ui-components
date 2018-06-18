@@ -100,7 +100,7 @@ export class Input extends React.PureComponent<InputProps> {
         id={id || name}
         type={type}
         value={value}
-        checked={isChecked}
+        checked={isChecked || undefined}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
         onBlur={handleBlur ? (e) => handleBlur(e, value) : undefined}

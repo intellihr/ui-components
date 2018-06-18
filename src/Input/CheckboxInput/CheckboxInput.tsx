@@ -31,7 +31,8 @@ export class CheckboxInput extends React.PureComponent<CheckboxProps> {
   public render (): JSX.Element {
     const {
       value,
-      className
+      className,
+      ...props
     } = this.props
 
     return (
@@ -39,9 +40,8 @@ export class CheckboxInput extends React.PureComponent<CheckboxProps> {
         className={classNames('checkbox-input', className)}
       >
         <Input
-          {...this.props}
-          className={undefined}
-          isChecked={Boolean(value) || undefined}
+          {...props}
+          isChecked={Boolean(value)}
           type='checkbox'
         />
         {this.infoLabel}

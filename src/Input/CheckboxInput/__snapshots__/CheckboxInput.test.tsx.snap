@@ -5,6 +5,7 @@ exports[`<CheckboxInput /> should render a checkbox input 1`] = `
   className="checkbox-input"
 >
   <Input
+    isChecked={false}
     name="test-input"
     type="checkbox"
   />
@@ -16,6 +17,7 @@ exports[`<CheckboxInput /> should render a checkbox input with a component as th
   className="checkbox-input"
 >
   <Input
+    isChecked={false}
     label={
       <FontAwesomeIcon
         type="star"
@@ -39,6 +41,7 @@ exports[`<CheckboxInput /> should render a checkbox input with a string label 1`
   className="checkbox-input"
 >
   <Input
+    isChecked={false}
     label="Hey I am a test string"
     name="test-input"
     type="checkbox"
