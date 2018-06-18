@@ -17,7 +17,9 @@ exports[`<Text /> should render a skeleton element if skeletonOptions are passed
         "width": undefined,
       }
     }
-  />
+  >
+    ‌
+  </span>
 </Skeleton>
 `;
 
