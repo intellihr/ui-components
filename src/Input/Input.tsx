@@ -2,20 +2,17 @@ import React from 'react'
 import classNames from 'classnames'
 import { InputWrapper } from './style'
 
-export interface InputProps {
+export interface GenericInputProps {
   /** ID of the input */
   id?: string
   /** Name of the input */
   name: string
-  /** Type of input to display */
-  type: string
   /** Custom classname to use */
   className?: string
   /** If true, adds invalid input class to component */
   isInvalid?: boolean
   /** Function passed to `onChange` prop */
   handleChange?: any
-  /** Function called when
   /** Value of the input */
   value?: string | number
   /** [Number only] Minimum value allowed */
@@ -40,6 +37,13 @@ export interface InputProps {
   isHTML5Required?: boolean
   /** Add autofocus attribute to input */
   autoFocus?: boolean
+  /** Specify if input is checked */
+  isChecked?: boolean
+}
+
+export interface InputProps extends GenericInputProps {
+  /** Type of input to display */
+  type: string
 }
 
 export class Input extends React.PureComponent<InputProps> {
@@ -87,7 +91,8 @@ export class Input extends React.PureComponent<InputProps> {
       placeholder,
       isHTML5Required,
       autoFocus,
-      handleKeyDown
+      handleKeyDown,
+      isChecked
     } = this.props
 
     return (
@@ -95,6 +100,7 @@ export class Input extends React.PureComponent<InputProps> {
         id={id || name}
         type={type}
         value={value}
+        checked={isChecked || undefined}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
         onBlur={handleBlur ? (e) => handleBlur(e, value) : undefined}

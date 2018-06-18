@@ -1,7 +1,7 @@
 import React from 'react'
-import { Input, InputProps } from '../Input'
+import { Input, GenericInputProps } from '../Input'
 
-export class NumberInput extends React.PureComponent<InputProps> {
+export class NumberInput extends React.PureComponent<GenericInputProps> {
   public render (): JSX.Element {
     return (
       <Input
