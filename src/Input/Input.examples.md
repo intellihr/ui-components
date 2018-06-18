@@ -8,6 +8,11 @@
     <TextInput />
     Number
     <NumberInput />
+    Checkbox
+    <CheckboxInput 
+      name='example-checkbox'
+      label='This is a checkbox input :)'
+    />
   </div>
 ```
 
