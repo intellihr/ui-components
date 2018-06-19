@@ -1522,6 +1522,419 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
 </WithGrid>
 `;
 
+exports[`<SmartList /> should render an Smart List with a single column 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c1 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:39.9375em) {
+  .c1 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:63.9375em) {
+  .c1 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:74.9375em) {
+  .c1 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+<WithGrid
+  data={
+    Array [
+      Object {
+        "expiryDate": "11 Nov 2004",
+        "issuingOrganisation": "Queensland Gov.",
+        "name": "Blue Card",
+        "status": "Expired",
+      },
+      Object {
+        "expiryDate": "05 Feb 2017",
+        "issuingOrganisation": "Western Australia Gov.",
+        "name": "Green Card",
+        "status": "Current",
+      },
+    ]
+  }
+  id="test-smart-list-single-column"
+>
+  <Grid
+    breakpoints={
+      Object {
+        "lg": 74.9375,
+        "md": 63.9375,
+        "sm": 39.9375,
+        "xs": 0,
+      }
+    }
+    data={
+      Array [
+        Object {
+          "expiryDate": "11 Nov 2004",
+          "issuingOrganisation": "Queensland Gov.",
+          "name": "Blue Card",
+          "status": "Expired",
+        },
+        Object {
+          "expiryDate": "05 Feb 2017",
+          "issuingOrganisation": "Western Australia Gov.",
+          "name": "Green Card",
+          "status": "Current",
+        },
+      ]
+    }
+    id="test-smart-list-single-column"
+  >
+    <ThemeProvider
+      theme={
+        Object {
+          "flexboxgrid": Object {
+            "breakpoints": Object {
+              "lg": 74.9375,
+              "md": 63.9375,
+              "sm": 39.9375,
+              "xs": 0,
+            },
+          },
+        }
+      }
+    >
+      <SmartListComponent
+        cursor="auto"
+        data={
+          Array [
+            Object {
+              "expiryDate": "11 Nov 2004",
+              "issuingOrganisation": "Queensland Gov.",
+              "name": "Blue Card",
+              "status": "Expired",
+            },
+            Object {
+              "expiryDate": "05 Feb 2017",
+              "issuingOrganisation": "Western Australia Gov.",
+              "name": "Green Card",
+              "status": "Current",
+            },
+          ]
+        }
+        emptyListText="No Results found."
+        hideHeaderOnSmall={false}
+        id="test-smart-list-single-column"
+        limit={5}
+        loading={false}
+        showHeaderRow={true}
+        showHoverBg={true}
+      >
+        <div
+          className="SmartList smart-list hover-bg"
+        >
+          <div
+            className="header-row"
+          >
+            <Row>
+              <div
+                className="c0"
+              >
+                <ListColumn
+                  alignRight={false}
+                  cell={[Function]}
+                  colIndex={0}
+                  data={
+                    Array [
+                      Object {
+                        "expiryDate": "11 Nov 2004",
+                        "issuingOrganisation": "Queensland Gov.",
+                        "name": "Blue Card",
+                        "status": "Expired",
+                      },
+                      Object {
+                        "expiryDate": "05 Feb 2017",
+                        "issuingOrganisation": "Western Australia Gov.",
+                        "name": "Green Card",
+                        "status": "Current",
+                      },
+                    ]
+                  }
+                  header="Qualification"
+                  isHeader={true}
+                  key="test-smart-list-single-column-list-item-0-0"
+                  rowIndex={0}
+                  size={
+                    Object {
+                      "lg": 6,
+                      "md": 6,
+                    }
+                  }
+                >
+                  <Col
+                    lg={6}
+                    md={6}
+                    sm={12}
+                    xs={12}
+                  >
+                    <div
+                      className="c1"
+                    >
+                      <div
+                        className="list-column"
+                      >
+                        <ListHeader
+                          label="Qualification"
+                        >
+                          <span
+                            className="ListHeader"
+                          >
+                            Qualification
+                          </span>
+                        </ListHeader>
+                      </div>
+                    </div>
+                  </Col>
+                </ListColumn>
+              </div>
+            </Row>
+          </div>
+          <ListRow
+            cursor="auto"
+            data={
+              Object {
+                "expiryDate": "11 Nov 2004",
+                "issuingOrganisation": "Queensland Gov.",
+                "name": "Blue Card",
+                "status": "Expired",
+              }
+            }
+            handleClick={[Function]}
+            hideRow={false}
+            index={0}
+            key="test-smart-list-single-column-list-row-0"
+          >
+            <Row
+              className="item-row cursor-auto"
+              onClick={[Function]}
+              style={
+                Object {
+                  "display": "flex",
+                }
+              }
+            >
+              <div
+                className="item-row cursor-auto c0"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "display": "flex",
+                  }
+                }
+              >
+                <ListColumn
+                  alignRight={false}
+                  cell={[Function]}
+                  colIndex={0}
+                  data={
+                    Array [
+                      Object {
+                        "expiryDate": "11 Nov 2004",
+                        "issuingOrganisation": "Queensland Gov.",
+                        "name": "Blue Card",
+                        "status": "Expired",
+                      },
+                      Object {
+                        "expiryDate": "05 Feb 2017",
+                        "issuingOrganisation": "Western Australia Gov.",
+                        "name": "Green Card",
+                        "status": "Current",
+                      },
+                    ]
+                  }
+                  header="Qualification"
+                  isHeader={false}
+                  key="test-smart-list-single-column-list-item-0-0"
+                  rowIndex={0}
+                  size={
+                    Object {
+                      "lg": 6,
+                      "md": 6,
+                    }
+                  }
+                >
+                  <Col
+                    lg={6}
+                    md={6}
+                    sm={12}
+                    xs={12}
+                  >
+                    <div
+                      className="c1"
+                    >
+                      <div
+                        className="list-column"
+                      >
+                        <div>
+                          <b>
+                            Blue Card
+                          </b>
+                          <div>
+                            Queensland Gov.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Col>
+                </ListColumn>
+              </div>
+            </Row>
+          </ListRow>
+          <ListRow
+            cursor="auto"
+            data={
+              Object {
+                "expiryDate": "05 Feb 2017",
+                "issuingOrganisation": "Western Australia Gov.",
+                "name": "Green Card",
+                "status": "Current",
+              }
+            }
+            handleClick={[Function]}
+            hideRow={false}
+            index={1}
+            key="test-smart-list-single-column-list-row-1"
+          >
+            <Row
+              className="item-row cursor-auto"
+              onClick={[Function]}
+              style={
+                Object {
+                  "display": "flex",
+                }
+              }
+            >
+              <div
+                className="item-row cursor-auto c0"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "display": "flex",
+                  }
+                }
+              >
+                <ListColumn
+                  alignRight={false}
+                  cell={[Function]}
+                  colIndex={0}
+                  data={
+                    Array [
+                      Object {
+                        "expiryDate": "11 Nov 2004",
+                        "issuingOrganisation": "Queensland Gov.",
+                        "name": "Blue Card",
+                        "status": "Expired",
+                      },
+                      Object {
+                        "expiryDate": "05 Feb 2017",
+                        "issuingOrganisation": "Western Australia Gov.",
+                        "name": "Green Card",
+                        "status": "Current",
+                      },
+                    ]
+                  }
+                  header="Qualification"
+                  isHeader={false}
+                  key="test-smart-list-single-column-list-item-1-0"
+                  rowIndex={1}
+                  size={
+                    Object {
+                      "lg": 6,
+                      "md": 6,
+                    }
+                  }
+                >
+                  <Col
+                    lg={6}
+                    md={6}
+                    sm={12}
+                    xs={12}
+                  >
+                    <div
+                      className="c1"
+                    >
+                      <div
+                        className="list-column"
+                      >
+                        <div>
+                          <b>
+                            Green Card
+                          </b>
+                          <div>
+                            Western Australia Gov.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Col>
+                </ListColumn>
+              </div>
+            </Row>
+          </ListRow>
+        </div>
+      </SmartListComponent>
+    </ThemeProvider>
+  </Grid>
+</WithGrid>
+`;
+
 exports[`<SmartList /> should render an empty Smart List displaying the right data empty list text 1`] = `
 .c0 {
   box-sizing: border-box;
