@@ -14,7 +14,6 @@ export interface AnchorProps {
 }
 
 export class MenuItem extends React.PureComponent<MenuItemProps> {
-
   get icon (): JSX.Element | null {
     const { icon } = this.props
 
@@ -34,15 +33,15 @@ export class MenuItem extends React.PureComponent<MenuItemProps> {
       url,
       label
     } = this.props
-    
+
     if (render) {
       return render(url, this.icon, label)
     }
 
     return (
       <MenuItemAnchor href={url}>
-        {this.icon} 
-        {label} 
+        {this.icon}
+        {label}
       </MenuItemAnchor>
     )
   }
