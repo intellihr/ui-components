@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme'
 import React from 'react'
-
+import { IntelliIcon } from '../Icon'
 import { MenuItem } from './MenuItem'
 
 describe('<MenuItem />', () => {
@@ -19,6 +19,30 @@ describe('<MenuItem />', () => {
       <MenuItem
         url='www.google.com'
         label='Test menu item'
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it(`should render a menu item with active state`, () => {
+    const wrapper = shallow(
+      <MenuItem
+        url='www.google.com'
+        label='Test menu item'
+        isActive={true}
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it(`should render a menu item with Icon`, () => {
+    const wrapper = shallow(
+      <MenuItem
+        url='www.google.com'
+        label='Test menu item'
+        icon={<IntelliIcon type={'clock'} />}
       />
     )
 
