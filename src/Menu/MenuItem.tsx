@@ -1,33 +1,44 @@
 import React from 'react'
-import styled, { StyledComponentClass } from 'styled-components'
-import { IntelliIcon } from '../Icon'
-import { MenuItemAnchor, MenuIcon } from './style'
+import classNames from 'classnames'
+import { MenuItemAnchor, StyledIcon } from './style'
 
 export interface MenuItemProps {
   /** HTML id to use for the menu */
   url?: string
   label: string
+  icon?: JSX.Element,
+  isActive?: boolean
 }
 
 export class MenuItem extends React.PureComponent<MenuItemProps> {
+  public defaultProps: Partial<MenuItemProps> = {
+    isActive: false
+  }
+
+  get icon (): JSX.Element | null {
+    const { icon } = this.props
+
+    if (icon) {
+      return (
+        <StyledIcon>
+          {icon}
+        </StyledIcon>
+      )
+    }
+    return null
+  }
   public render (): JSX.Element {
     const {
       url,
       label,
-      children
+      isActive
     } = this.props
-
-    const MenuIcon = styled(IntelliIcon)`
-      margin-right: 0.1825rem;
-      width: 1.28571em;
-      text-align: center;
-      vertical-align: top;
-    `
+    
 
     return (
       <li>
-        <MenuItemAnchor href={url}>
-          <MenuIcon type={'clock'} />
+        <MenuItemAnchor href={url} className={classNames({active: isActive})}>
+          {this.icon }
           {label}
         </MenuItemAnchor>
       </li>
