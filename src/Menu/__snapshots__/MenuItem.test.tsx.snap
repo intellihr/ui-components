@@ -2,18 +2,48 @@
 
 exports[`<MenuItem /> should render a a menu item with a link 1`] = `
 <li>
-  <a
+  <styled.a
+    className=""
     href="www.google.com"
   >
     Test menu item
-  </a>
+  </styled.a>
+</li>
+`;
+
+exports[`<MenuItem /> should render a menu item with Icon 1`] = `
+<li>
+  <styled.a
+    className=""
+    href="www.google.com"
+  >
+    <styled.span>
+      <IntelliIcon
+        type="clock"
+      />
+    </styled.span>
+    Test menu item
+  </styled.a>
+</li>
+`;
+
+exports[`<MenuItem /> should render a menu item with active state 1`] = `
+<li>
+  <styled.a
+    className="active"
+    href="www.google.com"
+  >
+    Test menu item
+  </styled.a>
 </li>
 `;
 
 exports[`<MenuItem /> should render a simple menu item 1`] = `
 <li>
-  <a>
+  <styled.a
+    className=""
+  >
     Test menu item
-  </a>
+  </styled.a>
 </li>
 `;

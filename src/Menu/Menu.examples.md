@@ -21,11 +21,13 @@
         </SubMenu>
       </MenuItem>
       <MenuItem
+        isActive={true}
         url='#'
         label='Item 2'
       /> 
       <MenuItem
         label='Item 3'
+        icon={<FontAwesomeIcon type='star'/>}
       > 
         <SubMenu
           isAccordion
