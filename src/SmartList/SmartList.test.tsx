@@ -26,7 +26,7 @@ const items = [
 ]
 
 describe('<SmartList />', () => {
-  it(`should render an Smart List displaying the right data with the right headers`, () => {
+  it('should render an Smart List displaying the right data with the right headers', () => {
     const wrapper = mount(
       <SmartList
         id='test-smart-list'
@@ -67,7 +67,32 @@ describe('<SmartList />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a headerless Smart List displaying the right data with the right title`, () => {
+  it('should render an Smart List with a single column', () => {
+    const wrapper = mount(
+      <SmartList
+        id='test-smart-list-single-column'
+        data={items}
+      >
+        <ListColumn
+          size={{
+            md: 6,
+            lg: 6
+          }}
+          header='Qualification'
+          cell={(row: ITestSmartListItem) =>
+            <div>
+              <b>{row.name}</b>
+              <div>{row.issuingOrganisation}</div>
+            </div>
+          }
+        />
+      </SmartList>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should render a headerless Smart List displaying the right data with the right title', () => {
     const wrapper = mount(
       <SmartList
         id='test-smart-list'
@@ -106,7 +131,7 @@ describe('<SmartList />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render an empty Smart List displaying the right data empty list text`, () => {
+  it('should render an empty Smart List displaying the right data empty list text', () => {
     const wrapper = mount(
       <SmartList
         id='test-smart-list'
