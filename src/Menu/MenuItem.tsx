@@ -38,7 +38,7 @@ export class MenuItem extends React.PureComponent<MenuItemProps> {
     return (
       <li>
         <MenuItemAnchor href={url} className={classNames({active: isActive})}>
-          {this.icon }
+          {this.icon}
           {label}
         </MenuItemAnchor>
         {children}
