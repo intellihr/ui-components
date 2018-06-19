@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Children } from 'react'
 import classNames from 'classnames'
 import { MenuItemAnchor, StyledIcon } from './style'
 
@@ -31,7 +31,8 @@ export class MenuItem extends React.PureComponent<MenuItemProps> {
     const {
       url,
       label,
-      isActive
+      isActive,
+      children
     } = this.props
     
 
@@ -41,6 +42,7 @@ export class MenuItem extends React.PureComponent<MenuItemProps> {
           {this.icon }
           {label}
         </MenuItemAnchor>
+        {children}
       </li>
     )
   }
