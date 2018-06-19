@@ -50,7 +50,6 @@ export class Menu extends React.PureComponent<MenuProps> {
     const {
       id,
       className,
-      isAccordion,
       isNested,
       children
     } = this.props
@@ -63,7 +62,6 @@ export class Menu extends React.PureComponent<MenuProps> {
           'menu',
           className,
           {
-            'accordion-menu': isAccordion,
             'nested': isNested
           }
         )}
