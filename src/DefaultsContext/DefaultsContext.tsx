@@ -2,7 +2,7 @@ import React from 'react'
 
 export interface Defaults {
   /** Anchor component used for clickable links */
-  AnchorComponent?: (props: any) => JSX.Element
+  AnchorComponent?: any
   /** Breakpoints used for the grid layout */
   breakpoints?: {
     xs: number,
