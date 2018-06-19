@@ -34,7 +34,6 @@ export class MenuItem extends React.PureComponent<MenuItemProps> {
       isActive,
       children
     } = this.props
-    
 
     return (
       <li>
