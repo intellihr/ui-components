@@ -30,7 +30,7 @@ describe('<MenuItem />', () => {
       <MenuItem
         url='www.google.com'
         label='Test menu item'
-        isActive={true}
+        isActive
       />
     )
 
