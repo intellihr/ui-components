@@ -1,5 +1,4 @@
 import React, { Children } from 'react'
-import classNames from 'classnames'
 import { MenuItemAnchor, StyledIcon } from './style'
 
 export interface MenuItemProps {
