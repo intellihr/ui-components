@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Heading /> should render a h1 element with type 'page' 1`] = `
+.c0 {
+  display: block;
+  font-family: 'Roboto',Arial,sans-serif;
+}
+
+<Skeleton
+  className=""
+  skeletonOptions={
+    Object {
+      "shape": "circle",
+      "showSkeleton": false,
+    }
+  }
+  type="page"
+>
+  <HeadingComponent
+    className=""
+    skeletonOptions={
+      Object {
+        "shape": "circle",
+        "showSkeleton": false,
+      }
+    }
+    type="page"
+  >
+    <styled.h1
+      className="heading"
+      tag={[Function]}
+    >
+      <h1
+        className="heading c0"
+      >
+        Hello I am a h1
+      </h1>
+    </styled.h1>
+  </HeadingComponent>
+</Skeleton>
+`;
+
+exports[`<Heading /> should render a h2 element with type 'section' 1`] = `
+.c0 {
+  display: block;
+  font-family: 'Roboto',Arial,sans-serif;
+}
+
+<Skeleton
+  className=""
+  skeletonOptions={
+    Object {
+      "shape": "circle",
+      "showSkeleton": false,
+    }
+  }
+  type="section"
+>
+  <HeadingComponent
+    className=""
+    skeletonOptions={
+      Object {
+        "shape": "circle",
+        "showSkeleton": false,
+      }
+    }
+    type="section"
+  >
+    <styled.h2
+      className="heading"
+      tag={[Function]}
+    >
+      <h2
+        className="heading c0"
+      >
+        Hello I am a h2
+      </h2>
+    </styled.h2>
+  </HeadingComponent>
+</Skeleton>
+`;
+
+exports[`<Heading /> should render a h3 element with type 'subsection' 1`] = `
+.c0 {
+  display: block;
+  font-family: 'Roboto',Arial,sans-serif;
+}
+
+<Skeleton
+  className=""
+  skeletonOptions={
+    Object {
+      "shape": "circle",
+      "showSkeleton": false,
+    }
+  }
+  type="subsection"
+>
+  <HeadingComponent
+    className=""
+    skeletonOptions={
+      Object {
+        "shape": "circle",
+        "showSkeleton": false,
+      }
+    }
+    type="subsection"
+  >
+    <styled.h3
+      className="heading"
+      tag={[Function]}
+    >
+      <h3
+        className="heading c0"
+      >
+        Hello I am a h3
+      </h3>
+    </styled.h3>
+  </HeadingComponent>
+</Skeleton>
+`;
+
+exports[`<Heading /> should render a skeleton element if skeletonOptions are passed to the component 1`] = `
+.c0 {
+  display: block;
+  font-family: 'Roboto',Arial,sans-serif;
+}
+
+<Skeleton
+  className=""
+  skeletonOptions={
+    Object {
+      "shape": "circle",
+      "showSkeleton": false,
+    }
+  }
+  type="page"
+>
+  <HeadingComponent
+    className=""
+    skeletonOptions={
+      Object {
+        "shape": "circle",
+        "showSkeleton": false,
+      }
+    }
+    type="page"
+  >
+    <styled.h1
+      className="heading"
+      tag={[Function]}
+    >
+      <h1
+        className="heading c0"
+      >
+        Hello, world!
+      </h1>
+    </styled.h1>
+  </HeadingComponent>
+</Skeleton>
+`;
