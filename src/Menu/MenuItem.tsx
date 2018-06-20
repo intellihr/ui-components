@@ -1,20 +1,19 @@
 import React, { Children } from 'react'
-import classNames from 'classnames'
 import { MenuItemAnchor, StyledIcon } from './style'
 
 export interface MenuItemProps {
   /** HTML id to use for the menu */
   url?: string
   label: string
-  icon?: JSX.Element,
-  isActive?: boolean
+  icon?: JSX.Element
+  render?: (label: string, iconContent: JSX.Element | null, url?: string) => JSX.Element
+}
+
+export interface AnchorProps {
+  href?: string
 }
 
 export class MenuItem extends React.PureComponent<MenuItemProps> {
-  public defaultProps: Partial<MenuItemProps> = {
-    isActive: false
-  }
-
   get icon (): JSX.Element | null {
     const { icon } = this.props
 
@@ -27,20 +26,34 @@ export class MenuItem extends React.PureComponent<MenuItemProps> {
     }
     return null
   }
+
+  get component () {
+    const {
+      render,
+      url,
+      label
+    } = this.props
+
+    if (render) {
+      return render(label, this.icon, url)
+    }
+
+    return (
+      <MenuItemAnchor href={url}>
+        {this.icon}
+        {label}
+      </MenuItemAnchor>
+    )
+  }
+
   public render (): JSX.Element {
     const {
-      url,
-      label,
-      isActive,
       children
     } = this.props
 
     return (
       <li>
-        <MenuItemAnchor href={url} className={classNames({active: isActive})}>
-          {this.icon}
-          {label}
-        </MenuItemAnchor>
+        {this.component}
         {children}
       </li>
     )

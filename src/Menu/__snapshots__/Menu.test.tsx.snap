@@ -12,7 +12,7 @@ exports[`<Menu /> should render a simple menu 1`] = `
 
 exports[`<Menu /> should render an accordion menu 1`] = `
 <ul
-  className="vertical menu accordion-menu"
+  className="vertical menu"
   id="test-menu"
 >
   <li>

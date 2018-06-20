@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navigation /> should render a simple navigation Menu 1`] = `
+<div
+  className="off-canvas-wrapper off-canvas position-left reveal-for-large"
+  data-auto-focus={false}
+  data-off-canvas={true}
+  id="offCanvasLeft"
+>
+  <Menu
+    className="ihr-nav vertical menu"
+    id="menu"
+    isAccordion={true}
+    isNested={false}
+  >
+    <MenuItem
+      icon={
+        <IntelliIcon
+          type="clock"
+        />
+      }
+      label="Dashboard"
+      url="/#"
+    />
+  </Menu>
+</div>
+`;
