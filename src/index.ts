@@ -23,5 +23,7 @@ export { SmartList, ListRow, ListClickableColumn, ListColumn } from './SmartList
 export { TextInput, NumberInput, CheckboxInput } from './Input'
 export { SelectInput } from './SelectInput'
 export { Form } from './Form'
+export { Navigation } from './Navigation'
 export { Text } from './Text'
 export { Heading } from './Heading'
+export { getColor } from './Color'
