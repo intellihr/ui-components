@@ -1,38 +1,38 @@
-# Field Label
+# Input Label
 
-## Basic Field Label
+## Basic Input Label
 
 ```jsx
   <div>
-    <FieldLabel>
+    <InputLabel>
       Hello boys!
-    </FieldLabel>
+    </InputLabel>
     <TextInput name='example-input1' />
   </div>
 ```
 
-## Field Label with `htmlFor`
+## Input Label with `htmlFor`
 
 ```jsx
   <div>
-    <FieldLabel
+    <InputLabel
       htmlFor='example-input2'
     >
       Hello ladies!
-    </FieldLabel>
+    </InputLabel>
     <TextInput name='example-input2' />
   </div>
 ```
 
-## Field Label with isInvalid
+## Input Label with isInvalid
 
 ```jsx
   <div>
-    <FieldLabel
+    <InputLabel
       isInvalid
     >
       Gentlemen...
-    </FieldLabel>
+    </InputLabel>
     <TextInput name='example-input3' isInvalid />
   </div>
 ```

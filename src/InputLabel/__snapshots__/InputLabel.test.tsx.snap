@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<FieldLabel /> should render a label 1`] = `
+exports[`<InputLabel /> should render a label 1`] = `
 .c0 {
   color: hsl(210,13.4%,47.2%);
   font-size: 0.9375rem;
@@ -11,7 +11,7 @@ exports[`<FieldLabel /> should render a label 1`] = `
   color: rgb(255,77,80);
 }
 
-<FieldLabel>
+<InputLabel>
   <styled.label
     className=""
   >
@@ -21,10 +21,10 @@ exports[`<FieldLabel /> should render a label 1`] = `
       Hello boys.
     </label>
   </styled.label>
-</FieldLabel>
+</InputLabel>
 `;
 
-exports[`<FieldLabel /> should render a label with a 'for' attribute 1`] = `
+exports[`<InputLabel /> should render a label with a 'for' attribute 1`] = `
 .c0 {
   color: hsl(210,13.4%,47.2%);
   font-size: 0.9375rem;
@@ -35,7 +35,7 @@ exports[`<FieldLabel /> should render a label with a 'for' attribute 1`] = `
   color: rgb(255,77,80);
 }
 
-<FieldLabel
+<InputLabel
   htmlFor="input-id"
 >
   <styled.label
@@ -49,10 +49,10 @@ exports[`<FieldLabel /> should render a label with a 'for' attribute 1`] = `
       Hello ladies.
     </label>
   </styled.label>
-</FieldLabel>
+</InputLabel>
 `;
 
-exports[`<FieldLabel /> should render a red label if isInvalid is true 1`] = `
+exports[`<InputLabel /> should render a red label if isInvalid is true 1`] = `
 .c0 {
   color: hsl(210,13.4%,47.2%);
   font-size: 0.9375rem;
@@ -63,7 +63,7 @@ exports[`<FieldLabel /> should render a red label if isInvalid is true 1`] = `
   color: rgb(255,77,80);
 }
 
-<FieldLabel
+<InputLabel
   isInvalid={true}
 >
   <styled.label
@@ -75,5 +75,5 @@ exports[`<FieldLabel /> should render a red label if isInvalid is true 1`] = `
       Hello ladies.
     </label>
   </styled.label>
-</FieldLabel>
+</InputLabel>
 `;

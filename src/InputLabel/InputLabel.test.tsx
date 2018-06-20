@@ -1,14 +1,14 @@
 import { mount } from 'enzyme'
 import React from 'react'
 
-import { FieldLabel } from './FieldLabel'
+import { InputLabel } from './InputLabel'
 
-describe('<FieldLabel />', () => {
+describe('<InputLabel />', () => {
   it(`should render a label`, () => {
     const wrapper = mount(
-      <FieldLabel>
+      <InputLabel>
         Hello boys.
-      </FieldLabel>
+      </InputLabel>
     )
 
     expect(wrapper).toMatchSnapshot()
@@ -16,11 +16,11 @@ describe('<FieldLabel />', () => {
 
   it(`should render a label with a 'for' attribute`, () => {
     const wrapper = mount(
-      <FieldLabel
-      htmlFor='input-id'
+      <InputLabel
+        htmlFor='input-id'
       >
         Hello ladies.
-      </FieldLabel>
+      </InputLabel>
     )
 
     expect(wrapper).toMatchSnapshot()
@@ -28,11 +28,11 @@ describe('<FieldLabel />', () => {
 
   it(`should render a red label if isInvalid is true`, () => {
     const wrapper = mount(
-      <FieldLabel
+      <InputLabel
         isInvalid
       >
         Hello ladies.
-      </FieldLabel>
+      </InputLabel>
     )
 
     expect(wrapper).toMatchSnapshot()

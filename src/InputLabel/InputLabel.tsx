@@ -1,15 +1,15 @@
 import React from 'react'
-import { StyledFieldLabel } from './style'
+import { StyledInputLabel } from './style'
 import classNames from 'classnames'
 
-export interface FieldLabelProps {
+export interface InputLabelProps {
   /** ID of input to attach to */
   htmlFor?: string
   /** If true, adds invalid label class to component */
   isInvalid?: boolean
 }
 
-export class FieldLabel extends React.PureComponent<FieldLabelProps> {
+export class InputLabel extends React.PureComponent<InputLabelProps> {
   public render (): JSX.Element {
     const {
       htmlFor,
@@ -18,14 +18,14 @@ export class FieldLabel extends React.PureComponent<FieldLabelProps> {
     } = this.props
 
     return (
-      <StyledFieldLabel
+      <StyledInputLabel
         htmlFor={htmlFor}
         className={classNames(
           { 'is-invalid-label': isInvalid }
         )}
       >
         {children}
-      </StyledFieldLabel>
+      </StyledInputLabel>
     )
   }
 }
