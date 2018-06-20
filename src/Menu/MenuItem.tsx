@@ -6,7 +6,7 @@ export interface MenuItemProps {
   url?: string
   label: string
   icon?: JSX.Element
-  render?: (url: string | undefined, iconContent: JSX.Element | null, label: string) => JSX.Element
+  render?: (label: string, iconContent: JSX.Element | null, url?: string) => JSX.Element
 }
 
 export interface AnchorProps {
@@ -35,7 +35,7 @@ export class MenuItem extends React.PureComponent<MenuItemProps> {
     } = this.props
 
     if (render) {
-      return render(url, this.icon, label)
+      return render(label, this.icon, url)
     }
 
     return (
