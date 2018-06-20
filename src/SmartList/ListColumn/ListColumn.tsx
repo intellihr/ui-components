@@ -3,7 +3,7 @@ import { isNil, merge } from 'lodash'
 import classNames from 'classnames'
 import { Col } from 'react-styled-flexboxgrid'
 import { ListHeader } from '../ListHeader'
-import { withSkeleton, SkeletonComponentProps } from '../../Skeleton'
+import { Skeleton, SkeletonComponentProps } from '../../Skeleton'
 
 export interface ISize {
   xs?: number,
@@ -36,8 +36,6 @@ export interface IListColumn {
   /** Foundation order attribute */
   order?: any
 }
-
-const Skeleton = withSkeleton()
 
 class ListColumn extends React.PureComponent<IListColumn & SkeletonComponentProps> {
   public static defaultProps: Partial<IListColumn> = {

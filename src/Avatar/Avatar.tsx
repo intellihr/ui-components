@@ -36,6 +36,8 @@ export interface AvatarState {
   showInitials: boolean
 }
 
+export type IAvatarSkeletonProps = AvatarProps & SkeletonComponentProps
+
 class AvatarComponent extends React.Component<AvatarProps> {
   public state: AvatarState = {
     showInitials: true
@@ -166,4 +168,34 @@ class AvatarComponent extends React.Component<AvatarProps> {
   }
 }
 
-export const Avatar: React.ComponentClass<AvatarProps & SkeletonComponentProps> = withSkeleton(AvatarComponent)
+const AvatarWithSkeleton: React.ComponentClass<IAvatarSkeletonProps> = withSkeleton(AvatarComponent)
+
+class Avatar extends React.PureComponent<IAvatarSkeletonProps> {
+  render () {
+    const {
+      size,
+      skeletonOptions,
+      skeletonOptions: {
+        size: skeletonSize = null
+      } = {}
+    } = this.props
+
+    let props = this.props
+
+    if (!skeletonSize && skeletonOptions && size) {
+      props = {
+        ...props,
+        skeletonOptions: {
+          ...skeletonOptions,
+          size
+        }
+      }
+    }
+
+    return <AvatarWithSkeleton {...props} />
+  }
+}
+
+export {
+  Avatar
+}

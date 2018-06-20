@@ -20,59 +20,77 @@ export interface SkeletonComponentProps {
   className?: string
 }
 
-export const withSkeleton = <P extends {}>(
-  UnwrappedComponent?: React.ComponentType<P>
-) => class Skeleton extends React.Component<P & SkeletonComponentProps> {
-    static defaultProps: Partial<SkeletonComponentProps> = {
-      skeletonOptions: {
-        showSkeleton: false,
-        shape: 'circle'
-      },
-      className: ''
+class Skeleton extends React.Component<SkeletonComponentProps> {
+  static defaultProps: Partial<SkeletonComponentProps> = {
+    skeletonOptions: {
+      showSkeleton: false,
+      shape: 'line',
+      size: 'large'
+    },
+    className: ''
+  }
+
+  get style (): CSSProperties | undefined {
+    const {
+      shape = 'line',
+      width
+    } = this.props.skeletonOptions!
+
+    if (shape === 'line') {
+      return { width }
     }
+  }
 
-    get style (): CSSProperties | undefined {
-      const {
-        width,
-        shape
-      } = this.props.skeletonOptions!
+  render (): JSX.Element {
+    const {
+      showSkeleton = false,
+      shape = 'line',
+      size = 'large'
+    } = this.props.skeletonOptions!
 
-      if (shape === 'line') {
-        return { width }
-      }
-    }
+    const {
+      children,
+      className
+    } = this.props
 
-    render (): JSX.Element {
-      const {
-        showSkeleton,
-        shape,
-        size
-      } = this.props.skeletonOptions!
-
-      const {
-        className
-      } = this.props
-
-      if (!showSkeleton) {
-        if (UnwrappedComponent) {
-          return <UnwrappedComponent {...this.props} />
-        }
-        return <span />
-      }
-
+    if (!showSkeleton) {
       return (
-        <span
-          className={classNames(
-            style.Skeleton,
-            className,
-            'skeleton',
-            shape,
-            `skeleton-${size}`
-          )}
-          style={this.style}
-        >
-          {shape === 'line' ? String.fromCharCode(8204) : null}
-        </span>
+        <React.Fragment>
+          {children}
+        </React.Fragment>
       )
     }
+
+    return (
+      <span
+        className={classNames(
+          style.Skeleton,
+          className,
+          'skeleton',
+          shape,
+          `skeleton-${size}`
+        )}
+        style={this.style}
+      >
+        {shape === 'line' ? String.fromCharCode(8204) : null}
+      </span>
+    )
+  }
+}
+
+const withSkeleton = <P extends {}>(
+  UnwrappedComponent: React.ComponentType<P>
+) => class extends React.PureComponent<P & SkeletonComponentProps> {
+  render (): JSX.Element {
+    return (
+      <Skeleton {...this.props} >
+        <UnwrappedComponent {...this.props} />
+      </Skeleton>
+    )
+  }
+}
+
+export {
+  Skeleton,
+  withSkeleton
 }
