@@ -45,7 +45,7 @@ export class MenuItem extends React.PureComponent<MenuItemProps> {
       </MenuItemAnchor>
     )
   }
-  
+
   public render (): JSX.Element {
     const {
       children

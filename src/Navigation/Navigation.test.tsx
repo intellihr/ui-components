@@ -9,9 +9,9 @@ describe('<Navigation />', () => {
   it(`should render a simple navigation Menu`, () => {
     const wrapper = shallow(
       <Navigation>
-        <MenuItem 
-          url="/#"
-          label="Dashboard" 
+        <MenuItem
+          url='/#'
+          label='Dashboard'
           icon={<IntelliIcon type={'clock'} />}
         />
       </Navigation>
@@ -19,5 +19,4 @@ describe('<Navigation />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
-
 })
