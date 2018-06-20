@@ -2,24 +2,26 @@ import React, { CSSProperties } from 'react'
 import classNames from 'classnames'
 const style = require('./Skeleton.scss')
 
-export interface SkeletonComponentProps {
-  /** Skeleton setting */
-  skeletonOptions?: {
-    /** If true, will display the skeleton */
-    showSkeleton: boolean,
-    /** Width of the skeleton (only applies if `shape` is set to `line`) */
-    width?: number,
-    /** A circle or a line */
-    shape: 'circle' | 'line'
-  }
+export interface ISkeletonOptions {
+  /** If true, will display the skeleton */
+  showSkeleton: boolean,
+  /** Width of the skeleton (only applies if `shape` is set to `line`) */
+  width?: number,
+  /** A circle or a line */
+  shape: 'circle' | 'line'
   /** Circle size of the skeleton (only applies if `shape` is set to `circle`) */
   size?: 'small' | 'medium' | 'large' | 'xlarge'
+}
+
+export interface SkeletonComponentProps {
+  /** Skeleton setting */
+  skeletonOptions?: ISkeletonOptions
   /** Additional class names for the parent container */
   className?: string
 }
 
 export const withSkeleton = <P extends {}>(
-  UnwrappedComponent: React.ComponentType<P>
+  UnwrappedComponent?: React.ComponentType<P>
 ) => class Skeleton extends React.Component<P & SkeletonComponentProps> {
     static defaultProps: Partial<SkeletonComponentProps> = {
       skeletonOptions: {
@@ -43,16 +45,19 @@ export const withSkeleton = <P extends {}>(
     render (): JSX.Element {
       const {
         showSkeleton,
-        shape
+        shape,
+        size
       } = this.props.skeletonOptions!
 
       const {
-        size,
         className
       } = this.props
 
       if (!showSkeleton) {
-        return <UnwrappedComponent {...this.props} />
+        if (UnwrappedComponent) {
+          return <UnwrappedComponent {...this.props} />
+        }
+        return <span />
       }
 
       return (

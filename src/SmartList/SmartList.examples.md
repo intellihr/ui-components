@@ -31,7 +31,7 @@
       </div>
     }
   />
-  
+
   <ListColumn
     size={{
       md: 3,
@@ -40,7 +40,7 @@
     header='Expiry Date'
     cell={(row) => row.expiryDate}
   />
-  
+
   <ListColumn
     size={{
       md: 3,
@@ -97,7 +97,7 @@
       </div>
     }
   />
-  
+
   <ListColumn
     size={{
       md: 3,
@@ -106,7 +106,7 @@
     header='Expiry Date'
     cell={(row) => row.expiryDate}
   />
-  
+
   <ListColumn
     size={{
       md: 3,
@@ -137,7 +137,7 @@
       </div>
     }
   />
-  
+
   <ListColumn
     size={{
       md: 3,
@@ -146,7 +146,7 @@
     header='Expiry Date'
     cell={(row) => row.expiryDate}
   />
-  
+
   <ListColumn
     size={{
       md: 3,
@@ -154,6 +154,41 @@
     }}
     header='Status'
     cell={(row) => row.status}
+  />
+</SmartList>
+```
+
+## Skeleton Smart List
+
+```jsx
+<SmartList
+  skeletonOptions={{
+    showSkeleton: true,
+    numberOfRows: 5
+  }}
+>
+  <ListColumn
+    size={{
+      md: 6,
+      lg: 6
+    }}
+    header='Qualification'
+  />
+
+  <ListColumn
+    size={{
+      md: 3,
+      lg: 3
+    }}
+    header='Expiry Date'
+  />
+
+  <ListColumn
+    size={{
+      md: 3,
+      lg: 3
+    }}
+    header='Status'
   />
 </SmartList>
 ```
@@ -178,7 +213,7 @@
       </div>
     }
   />
-  
+
   <ListColumn
     size={{
       md: 3,
@@ -187,7 +222,7 @@
     header='Expiry Date'
     cell={(row) => row.expiryDate}
   />
-  
+
   <ListColumn
     size={{
       md: 3,

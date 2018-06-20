@@ -8,8 +8,14 @@ import { Spinner } from '../Spinner'
 import { ListClickableColumn } from './ListClickableColumn'
 import { ListRow } from './ListRow'
 import { withGrid } from '../Grid'
+import { ISkeletonOptions } from '../Skeleton'
 
 const style = require('./style.scss')
+
+export interface ISmartListSkeletonOptions extends ISkeletonOptions {
+  /* Number of rows to show skeletons */
+  numberOfRows?: number
+}
 
 export interface ISmartList {
   /** ID of the smart list */
@@ -38,6 +44,8 @@ export interface ISmartList {
   hideHeaderOnSmall?: boolean
   /** Wrapper component applied to each row */
   rowWrapper?: (props: object) => JSX.Element
+  /** Skleton Options */
+  skeletonOptions?: ISmartListSkeletonOptions
 }
 
 export interface SmartListState {
@@ -58,6 +66,14 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
 
   public state: SmartListState = { paginationButton: true }
 
+  private data: any[] = []
+
+  private skeletonOptions: ISmartListSkeletonOptions = {
+    showSkeleton: false,
+    numberOfRows: 5,
+    shape: 'line'
+  }
+
   get listColumns (): JSX.Element[] {
     const {
       children
@@ -72,8 +88,7 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
 
   cloneTableElement = (rowIndex = 0, isHeader = false): JSX.Element[] => {
     const {
-      id,
-      data
+      id
     } = this.props
 
     let columnIndex = 0
@@ -82,7 +97,8 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
       key: id ? `${id}-list-item-${rowIndex}-${columnIndex}` : uuid.v4(),
       isHeader,
       rowIndex,
-      data,
+      skeletonOptions: this.skeletonOptions,
+      data: this.data,
       colIndex: columnIndex++,
       size: item.props.size,
       header: item.props.header
@@ -131,11 +147,10 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
 
   get canLimitData (): boolean {
     const {
-      data,
       limit
     } = this.props
 
-    return !isNil(limit) && limit < data.length
+    return !isNil(limit) && limit < this.data.length
   }
 
   listRow (index: number): JSX.Element {
@@ -143,11 +158,10 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
       id,
       handleRowClick,
       cursor,
-      rowWrapper,
-      data
+      rowWrapper
     } = this.props
 
-    const listItem = data[index]
+    const listItem = this.data[index]
     const key = id ? `${id}-list-row-${index}` : uuid.v4()
 
     const defaultProps = {
@@ -179,18 +193,17 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
 
   get listRowsContent (): JSX.Element[] {
     const {
-      data,
       limit
     } = this.props
 
-    let rows: JSX.Element[] = times(data.length, i => this.listRow(i))
+    let rows: JSX.Element[] = times(this.data.length, i => this.listRow(i))
 
     if (this.canLimitData) {
       if (this.state.paginationButton) {
         rows = take(filter(rows, ['props.hideRow', false]), limit)
       }
 
-      const visibleRowsCount = size(filter(data, item => !item.hide))
+      const visibleRowsCount = size(filter(this.data, item => !item.hide))
 
       if (!isNil(limit) && visibleRowsCount > 0 && visibleRowsCount > limit) {
         rows.push(
@@ -215,7 +228,6 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
 
   get listContent (): JSX.Element | JSX.Element[] {
     const {
-      data,
       emptyListText,
       loading
     } = this.props
@@ -230,7 +242,7 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
       )
     }
 
-    if (isEmpty(data) || every(data, ['hide', true])) {
+    if (isEmpty(this.data) || every(this.data, ['hide', true])) {
       return (
         <Callout type='' shouldFocus={false}>
           {emptyListText}
@@ -265,8 +277,26 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
 
   public render (): JSX.Element {
     const {
-      showHoverBg
+      data,
+      showHoverBg,
+      skeletonOptions
     } = this.props
+
+    this.skeletonOptions = {
+      ...this.skeletonOptions,
+      ...skeletonOptions
+    }
+
+    const {
+      showSkeleton,
+      numberOfRows
+    } = this.skeletonOptions
+
+    if (showSkeleton) {
+      this.data = Array(numberOfRows).fill({})
+    } else {
+      this.data = data
+    }
 
     return (
       <div className={classNames(

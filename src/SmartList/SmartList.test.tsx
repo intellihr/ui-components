@@ -168,4 +168,40 @@ describe('<SmartList />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it('should render skeleton', () => {
+    const wrapper = mount(
+      <SmartList
+        id='test-smart-list'
+        skeletonOptions={{
+          showSkeleton: true,
+          numberOfRows: 5
+        }}
+      >
+        <ListColumn
+          size={{
+            md: 6,
+            lg: 6
+          }}
+          header='Test1'
+        />
+        <ListColumn
+          size={{
+            md: 3,
+            lg: 3
+          }}
+          header='Test2'
+        />
+        <ListColumn
+          size={{
+            md: 3,
+            lg: 3
+          }}
+          header='Test3'
+        />
+      </SmartList>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })
