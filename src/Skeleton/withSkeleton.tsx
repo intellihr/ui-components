@@ -65,7 +65,9 @@ export const withSkeleton = <P extends {}>(
             `skeleton-${size}`
           )}
           style={this.style}
-        />
+        >
+          {shape === 'line' ? String.fromCharCode(8204) : null}
+        </span>
       )
     }
 }

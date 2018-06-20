@@ -1,6 +1,6 @@
 import React from 'react'
 import uuid from 'uuid'
-import { times, map, take, filter, size, isEmpty, every, isNil } from 'lodash'
+import { times, map, take, filter, size, isEmpty, every, isNil, isArray } from 'lodash'
 import classNames from 'classnames'
 import { Row } from 'react-styled-flexboxgrid'
 import { Callout } from '../Callout'
@@ -58,10 +58,21 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
 
   public state: SmartListState = { paginationButton: true }
 
+  get listColumns (): JSX.Element[] {
+    const {
+      children
+    } = this.props
+
+    if (isArray(children)) {
+      return children
+    }
+
+    return [children]
+  }
+
   cloneTableElement = (rowIndex = 0, isHeader = false): JSX.Element[] => {
     const {
       id,
-      children,
       data
     } = this.props
 
@@ -78,7 +89,7 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
     })
 
     return map(
-      children,
+      this.listColumns,
       (child: any) => {
         const props: any = listItemProps(child)
 
