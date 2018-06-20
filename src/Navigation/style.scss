@@ -24,15 +24,15 @@ fieldset {
 }
 
 .off-canvas-wrapper {
-  overflow: initial !important;
+  overflow: initial ;
   padding-bottom: 5rem;
   width: 100%;
 
   #offCanvasLeft {
-    position: fixed;
-    min-height: auto;
-    height: auto;
     bottom: 0;
+    height: auto;
+    min-height: auto;
+    position: fixed;
     .ps__rail-y {
       &, &:hover {
         .ps__thumb-y {
