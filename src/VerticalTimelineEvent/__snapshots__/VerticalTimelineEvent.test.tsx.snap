@@ -138,16 +138,9 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
 
 <VerticalTimelineEvent
   markerComponent={
-    <Skeleton
-      className=""
+    <Avatar
       initials="JW"
       size="small"
-      skeletonOptions={
-        Object {
-          "shape": "circle",
-          "showSkeleton": false,
-        }
-      }
     />
   }
 >
@@ -166,48 +159,52 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
         <div
           className="c2"
         >
-          <Skeleton
-            className=""
+          <Avatar
             initials="JW"
             size="small"
-            skeletonOptions={
-              Object {
-                "shape": "circle",
-                "showSkeleton": false,
-              }
-            }
           >
-            <AvatarComponent
-              className=""
+            <class_1
               initials="JW"
               size="small"
-              skeletonOptions={
-                Object {
-                  "shape": "circle",
-                  "showSkeleton": false,
-                }
-              }
             >
-              <div
-                className="Avatar avatar-small"
+              <Skeleton
+                className=""
+                initials="JW"
+                size="small"
+                skeletonOptions={
+                  Object {
+                    "shape": "line",
+                    "showSkeleton": false,
+                    "size": "large",
+                  }
+                }
               >
-                <div
-                  className="avatar-inner-container"
-                  onClick={[Function]}
+                <AvatarComponent
+                  initials="JW"
+                  size="small"
                 >
                   <div
-                    className="avatar-initials-container"
+                    className="Avatar avatar-small"
                   >
-                    <span
-                      className="avatar-initials"
+                    <div
+                      className="avatar-inner-container"
+                      onClick={[Function]}
                     >
-                      JW
-                    </span>
+                      <div
+                        className="avatar-initials-container"
+                      >
+                        <span
+                          className="avatar-initials"
+                        >
+                          JW
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </AvatarComponent>
-          </Skeleton>
+                </AvatarComponent>
+              </Skeleton>
+            </class_1>
+          </Avatar>
         </div>
       </styled.div>
       <styled.div>

@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InputLabel /> should render a label 1`] = `
+.c0 {
+  color: hsl(210,13.4%,47.2%);
+  font-size: 0.9375rem;
+  line-height: 1.8;
+}
+
+.c0.is-invalid-label {
+  color: rgb(255,77,80);
+}
+
+<InputLabel>
+  <styled.label
+    className=""
+  >
+    <label
+      className="c0"
+    >
+      Hello boys.
+    </label>
+  </styled.label>
+</InputLabel>
+`;
+
+exports[`<InputLabel /> should render a label with a 'for' attribute 1`] = `
+.c0 {
+  color: hsl(210,13.4%,47.2%);
+  font-size: 0.9375rem;
+  line-height: 1.8;
+}
+
+.c0.is-invalid-label {
+  color: rgb(255,77,80);
+}
+
+<InputLabel
+  htmlFor="input-id"
+>
+  <styled.label
+    className=""
+    htmlFor="input-id"
+  >
+    <label
+      className="c0"
+      htmlFor="input-id"
+    >
+      Hello ladies.
+    </label>
+  </styled.label>
+</InputLabel>
+`;
+
+exports[`<InputLabel /> should render a red label if isInvalid is true 1`] = `
+.c0 {
+  color: hsl(210,13.4%,47.2%);
+  font-size: 0.9375rem;
+  line-height: 1.8;
+}
+
+.c0.is-invalid-label {
+  color: rgb(255,77,80);
+}
+
+<InputLabel
+  isInvalid={true}
+>
+  <styled.label
+    className="is-invalid-label"
+  >
+    <label
+      className="is-invalid-label c0"
+    >
+      Hello ladies.
+    </label>
+  </styled.label>
+</InputLabel>
+`;

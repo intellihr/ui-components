@@ -1,1 +1,6 @@
-export { withSkeleton, SkeletonComponentProps } from './withSkeleton'
+export {
+  withSkeleton,
+  SkeletonComponentProps,
+  Skeleton,
+  ISkeletonOptions
+} from './withSkeleton'
