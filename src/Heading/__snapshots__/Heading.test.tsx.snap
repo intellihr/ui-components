@@ -6,38 +6,36 @@ exports[`<Heading /> should render a h1 element with type 'page' 1`] = `
   font-family: 'Roboto',Arial,sans-serif;
 }
 
-<Skeleton
-  className=""
-  skeletonOptions={
-    Object {
-      "shape": "circle",
-      "showSkeleton": false,
-    }
-  }
+<class_1
   type="page"
 >
-  <HeadingComponent
+  <Skeleton
     className=""
     skeletonOptions={
       Object {
-        "shape": "circle",
+        "shape": "line",
         "showSkeleton": false,
+        "size": "large",
       }
     }
     type="page"
   >
-    <styled.h1
-      className="heading"
-      tag={[Function]}
+    <HeadingComponent
+      type="page"
     >
-      <h1
-        className="heading c0"
+      <styled.h1
+        className="heading"
+        tag={[Function]}
       >
-        Hello I am a h1
-      </h1>
-    </styled.h1>
-  </HeadingComponent>
-</Skeleton>
+        <h1
+          className="heading c0"
+        >
+          Hello I am a h1
+        </h1>
+      </styled.h1>
+    </HeadingComponent>
+  </Skeleton>
+</class_1>
 `;
 
 exports[`<Heading /> should render a h2 element with type 'section' 1`] = `
@@ -46,38 +44,36 @@ exports[`<Heading /> should render a h2 element with type 'section' 1`] = `
   font-family: 'Roboto',Arial,sans-serif;
 }
 
-<Skeleton
-  className=""
-  skeletonOptions={
-    Object {
-      "shape": "circle",
-      "showSkeleton": false,
-    }
-  }
+<class_1
   type="section"
 >
-  <HeadingComponent
+  <Skeleton
     className=""
     skeletonOptions={
       Object {
-        "shape": "circle",
+        "shape": "line",
         "showSkeleton": false,
+        "size": "large",
       }
     }
     type="section"
   >
-    <styled.h2
-      className="heading"
-      tag={[Function]}
+    <HeadingComponent
+      type="section"
     >
-      <h2
-        className="heading c0"
+      <styled.h2
+        className="heading"
+        tag={[Function]}
       >
-        Hello I am a h2
-      </h2>
-    </styled.h2>
-  </HeadingComponent>
-</Skeleton>
+        <h2
+          className="heading c0"
+        >
+          Hello I am a h2
+        </h2>
+      </styled.h2>
+    </HeadingComponent>
+  </Skeleton>
+</class_1>
 `;
 
 exports[`<Heading /> should render a h3 element with type 'subsection' 1`] = `
@@ -86,38 +82,36 @@ exports[`<Heading /> should render a h3 element with type 'subsection' 1`] = `
   font-family: 'Roboto',Arial,sans-serif;
 }
 
-<Skeleton
-  className=""
-  skeletonOptions={
-    Object {
-      "shape": "circle",
-      "showSkeleton": false,
-    }
-  }
+<class_1
   type="subsection"
 >
-  <HeadingComponent
+  <Skeleton
     className=""
     skeletonOptions={
       Object {
-        "shape": "circle",
+        "shape": "line",
         "showSkeleton": false,
+        "size": "large",
       }
     }
     type="subsection"
   >
-    <styled.h3
-      className="heading"
-      tag={[Function]}
+    <HeadingComponent
+      type="subsection"
     >
-      <h3
-        className="heading c0"
+      <styled.h3
+        className="heading"
+        tag={[Function]}
       >
-        Hello I am a h3
-      </h3>
-    </styled.h3>
-  </HeadingComponent>
-</Skeleton>
+        <h3
+          className="heading c0"
+        >
+          Hello I am a h3
+        </h3>
+      </styled.h3>
+    </HeadingComponent>
+  </Skeleton>
+</class_1>
 `;
 
 exports[`<Heading /> should render a skeleton element if skeletonOptions are passed to the component 1`] = `
@@ -126,36 +120,34 @@ exports[`<Heading /> should render a skeleton element if skeletonOptions are pas
   font-family: 'Roboto',Arial,sans-serif;
 }
 
-<Skeleton
-  className=""
-  skeletonOptions={
-    Object {
-      "shape": "circle",
-      "showSkeleton": false,
-    }
-  }
+<class_1
   type="page"
 >
-  <HeadingComponent
+  <Skeleton
     className=""
     skeletonOptions={
       Object {
-        "shape": "circle",
+        "shape": "line",
         "showSkeleton": false,
+        "size": "large",
       }
     }
     type="page"
   >
-    <styled.h1
-      className="heading"
-      tag={[Function]}
+    <HeadingComponent
+      type="page"
     >
-      <h1
-        className="heading c0"
+      <styled.h1
+        className="heading"
+        tag={[Function]}
       >
-        Hello, world!
-      </h1>
-    </styled.h1>
-  </HeadingComponent>
-</Skeleton>
+        <h1
+          className="heading c0"
+        >
+          Hello, world!
+        </h1>
+      </styled.h1>
+    </HeadingComponent>
+  </Skeleton>
+</class_1>
 `;
