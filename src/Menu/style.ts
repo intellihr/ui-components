@@ -3,6 +3,8 @@ import styled, { StyledComponentClass } from 'styled-components'
 
 export const MenuItemAnchor = styled.a`
   padding: 1 rem;
+  display: flex;
+  align-items: center;
 `
 
 export const StyledIcon = styled.span`
