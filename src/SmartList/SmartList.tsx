@@ -12,7 +12,7 @@ import { ISkeletonOptions } from '../Skeleton'
 
 const style = require('./style.scss')
 
-export interface ISmartListSkeletonOptions extends ISkeletonOptions {
+export interface ISmartListSkeletonOptions extends Partial<ISkeletonOptions> {
   /* Number of rows to show skeletons */
   numberOfRows?: number
 }
