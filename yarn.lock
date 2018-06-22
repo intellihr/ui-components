@@ -8290,6 +8290,12 @@ react-styleguidist@7.0.4:
     webpack-dev-server "^2.11.2"
     webpack-merge "^4.1.2"
 
+react-table@6.8.6:
+  version "6.8.6"
+  resolved "https://registry.yarnpkg.com/react-table/-/react-table-6.8.6.tgz#a0ad8b4839319052d5befc012603fb161e52ede3"
+  dependencies:
+    classnames "^2.2.5"
+
 react-test-renderer@16.3.1:
   version "16.3.1"
   resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-16.3.1.tgz#d9257936d8535bd40f57f3d5a84e7b0452fb17f2"
