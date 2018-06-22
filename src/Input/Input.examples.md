@@ -3,6 +3,8 @@
 ## Basic Input
 
 ```jsx
+initialState = { value: false };
+
   <div>
     Text
     <TextInput />
@@ -12,6 +14,8 @@
     <CheckboxInput 
       name='example-checkbox'
       label='This is a checkbox input :)'
+      value={state.value}
+      handleChange={() => setState({value: !state.value})}
     />
   </div>
 ```
