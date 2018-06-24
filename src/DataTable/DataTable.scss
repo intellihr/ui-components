@@ -55,6 +55,11 @@
   background: lighten($neutral-light, 1%);
   border-bottom: 2px solid lighten($border, 10%);
   font-weight: 600; // need to figure out why this is bolder than in lapis despite having the same settings
+  padding: 0.5rem 0.625rem 0.625rem;
+}
+
+.ReactTable .rt-td {
+  padding: 0.5rem 0.625rem 0.625rem;
 }
 
 .ReactTable .rt-thead.-headerGroups {
