@@ -26,3 +26,21 @@
   ]}
 />
 ```
+
+## Basic DataTable with no data
+
+```jsx
+<DataTable
+  data={[]}
+  columns={[
+    {
+      Header: 'Name',
+      accessor: 'name'
+    },
+    {
+      Header: 'Age',
+      accessor: 'age'
+    }
+  ]}
+/>
+```
