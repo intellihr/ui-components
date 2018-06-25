@@ -59,7 +59,30 @@ export default class ReactTablePagination extends React.Component<any, any> {
 
     return (
       <div className={classnames(className, '-pagination')} style={this.props.style}>
-        <div className="-previous">
+        <div>
+          Showing 1 to 25 of 37 entries
+        </div>
+
+        <div className="-center">
+
+          {showPageSizeOptions && (
+            <span className="select-wrap -pageSizeOptions">
+              <label>{"Show "}
+                <select onChange={e => onPageSizeChange(Number(e.target.value))} value={pageSize}>
+                  {pageSizeOptions.map((option: any, i: number) => (
+                    // eslint-disable-next-line react/no-array-index-key
+                    <option key={i} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+                {" entries"}
+              </label>
+            </span>
+          )}
+        </div>
+
+        <div>
           <button
             type="button"
             className="-btn"
@@ -72,7 +95,8 @@ export default class ReactTablePagination extends React.Component<any, any> {
             {this.props.previousText}
           </button>
         </div>
-        <div className="-center">
+
+        <div>
           <span className="-pageInfo">
             {this.props.pageText}{' '}
             {showPageJump ? (
@@ -101,20 +125,9 @@ export default class ReactTablePagination extends React.Component<any, any> {
             )}{' '}
             {this.props.ofText} <span className="-totalPages">{pages || 1}</span>
           </span>
-          {showPageSizeOptions && (
-            <span className="select-wrap -pageSizeOptions">
-              <select onChange={e => onPageSizeChange(Number(e.target.value))} value={pageSize}>
-                {pageSizeOptions.map((option: any, i: number) => (
-                  // eslint-disable-next-line react/no-array-index-key
-                  <option key={i} value={option}>
-                    {`${option} ${this.props.rowsText}`}
-                  </option>
-                ))}
-              </select>
-            </span>
-          )}
         </div>
-        <div className="-next">
+
+        <div>
           <button
             type="button"
             className="-btn"
@@ -127,6 +140,7 @@ export default class ReactTablePagination extends React.Component<any, any> {
             {this.props.nextText}
           </button>
         </div>
+
       </div>
     )
   }
