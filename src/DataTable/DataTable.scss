@@ -433,6 +433,15 @@
 //   text-align: center;
 // }
 
+// .ReactTable .-pagination .-pageSizeOptions:before {
+//   content: "Show";
+//   position: relative;
+// }
+
+// .ReactTable .-pagination .-pageSizeOptions:after {
+//   content: "entries";
+// }
+
 // .ReactTable .-pagination .-pageSizeOptions {
 //   margin: 3px 10px;
 // }
