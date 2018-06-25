@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<IndentedElement /> should render an element with no indent 1`] = `
+<IndentedElement
+  depth={0}
+>
+  <styled.div
+    depth={0}
+  >
+    <div
+      className=""
+    >
+      Hello I am not indented
+    </div>
+  </styled.div>
+</IndentedElement>
+`;
+
+exports[`<IndentedElement /> should render an indented element 1`] = `
+.c0 {
+  padding-left: 64px;
+}
+
+<IndentedElement
+  depth={2}
+>
+  <styled.div
+    depth={2}
+  >
+    <div
+      className="c0"
+    >
+      WOW! I'm depth level two :)
+    </div>
+  </styled.div>
+</IndentedElement>
+`;
