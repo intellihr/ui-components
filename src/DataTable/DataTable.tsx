@@ -45,7 +45,7 @@ export class DataTable extends React.Component<DataTableProps> {
       defaultPageSize={defaultPageSize}
       showPageSizeOptions={showPageSizeOptions}
       pageSizeOptions={pageSizeOptions}
-      minRows={1}
+      minRows={0}
     />
   }
 }
