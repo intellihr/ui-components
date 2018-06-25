@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactTable from 'react-table'
 import PaginationComponent from './PaginationComponent'
+import classNames = require('classnames')
 
 const style = require('./DataTable.scss')
 
@@ -48,6 +49,7 @@ export class DataTable extends React.Component<DataTableProps> {
 
     return <ReactTable
       data={data}
+      className={classNames({sortable})}
       columns={columns}
 
       showPagination={showPaginationTop || showPaginationBottom}
