@@ -1,35 +1,8 @@
 import React from 'react'
 import ReactTable from 'react-table'
+import PaginationComponent from './PaginationComponent'
 
 const style = require('./DataTable.scss')
-
-class Pagination extends React.Component {
-
-  // get pageSizeSelectOptions () {
-  //   const {
-  //     pageSizeOptions
-  //   } = this.props
-
-  //   return pageSizeOptions.map(option => <option value={option}>{option}</option>)
-  // }
-
-  render () {
-    console.log(this.props)
-    return (
-      <div>
-        <div>Showing 1 to 25 of 25 entries</div>
-        <div>
-          <label>Show
-              <select>
-                {/* {this.pageSizeSelectOptions} */}
-              </select>
-             entries
-            </label>
-        </div>
-      </div>
-    )
-  }
-}
 
 export interface DataTableProps {
     data: Array<Object>
@@ -96,7 +69,7 @@ export class DataTable extends React.Component<DataTableProps> {
       minRows={0}
       resizable={false}
 
-      PaginationComponent={Pagination}
+      PaginationComponent={PaginationComponent}
     />
   }
 }

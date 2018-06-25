@@ -224,6 +224,7 @@
       accessor: 'age'
     }
   ]}
+  showPaginationTop={true}
   showPaginationBottom={true}
   showPageSizeOptions={true}
 />
