@@ -6,46 +6,67 @@ const style = require('./DataTable.scss')
 export interface DataTableProps {
     data: Array<Object>
     columns: Array<Object>
-    showPagination?: boolean
     showPaginationTop?: boolean
     showPaginationBottom?: boolean
     showPageSizeOptions?: boolean
     pageSizeOptions?: Array<number>
     defaultPageSize?: number
+    sortable?: boolean
+    defaultSortDesc?: boolean
+    defaultSorted?: Array<Object>
+    filterable?: boolean
   }
 
 export class DataTable extends React.Component<DataTableProps> {
   public static defaultProps: Partial<DataTableProps> = {
-    showPageSizeOptions: false,
-    showPagination: false,
     showPaginationTop: false,
-    showPaginationBottom: true,
+    showPaginationBottom: false,
+    showPageSizeOptions: false,
     pageSizeOptions: [10, 25, 50, 100],
-    defaultPageSize: 25
+    defaultPageSize: 25,
+    sortable: false,
+    defaultSortDesc: false,
+    defaultSorted: [],
+    filterable: false
   }
 
   public render (): JSX.Element {
     const {
       data,
       columns,
-      showPagination,
       showPaginationTop,
       showPaginationBottom,
-      defaultPageSize,
+      showPageSizeOptions,
       pageSizeOptions,
-      showPageSizeOptions
+      defaultPageSize,
+      sortable,
+      defaultSortDesc,
+      defaultSorted,
+      filterable
     } = this.props
 
     return <ReactTable
       data={data}
       columns={columns}
-      showPagination={showPagination}
+
+      showPagination={showPaginationTop || showPaginationBottom}
       showPaginationTop={showPaginationTop}
       showPaginationBottom={showPaginationBottom}
-      defaultPageSize={defaultPageSize}
+
       showPageSizeOptions={showPageSizeOptions}
+      defaultPageSize={defaultPageSize}
       pageSizeOptions={pageSizeOptions}
+
+      sortable={sortable}
+      multiSort={true}
+
+      defaultSortDesc={defaultSortDesc}
+      defaultSorted={defaultSorted}
+
+      filterable={filterable}
+
       minRows={0}
+      resizable={false}
     />
   }
 }
