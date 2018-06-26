@@ -1,4 +1,4 @@
-### A Color Component
+#### A Color Component
 ```jsx
 const { brandColors } = require('./style');
 

@@ -1,7 +1,3 @@
-# Vertical Timeline
-
-## Basic Vertical Timeline
-
 ```jsx
 <VerticalTimeline
   year='2007'

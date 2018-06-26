@@ -1,4 +1,4 @@
-## Simple Tooltip
+#### Simple Tooltip
 
 ```jsx
 <Tooltip 
@@ -8,7 +8,7 @@
 </Tooltip>
 ```
 
-## Simple Tooltip with on show event
+#### Simple Tooltip with on show event
 
 ```jsx
 <Tooltip 
@@ -19,7 +19,7 @@
 </Tooltip>
 ```
 
-## Tooltip with icon
+#### Tooltip with icon
 
 ```jsx
 <Tooltip 

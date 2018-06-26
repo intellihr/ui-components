@@ -1,4 +1,4 @@
-## Basic report header
+#### Basic report header
 
 ```jsx
 <ReportHeader
@@ -6,7 +6,7 @@
 />
 ```
 
-## Report header with helper content
+#### Report header with helper content
 
 ```jsx
 <ReportHeader

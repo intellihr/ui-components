@@ -1,4 +1,4 @@
-## Functional Color Buttons
+#### Functional Color Buttons
 
 ```jsx
 <div>
@@ -59,7 +59,7 @@
 </div>
 ```
 
-## Borderless Buttons
+#### Borderless Buttons
 
 ```jsx
 <div>
@@ -120,7 +120,7 @@
 </div>
 ```
 
-## hollow Buttons
+#### hollow Buttons
 ```jsx
 <div>
   <div>
@@ -180,7 +180,7 @@
 </div>
 ```
 
-## Special Case Buttons
+#### Special Case Buttons
 
 ```jsx
 <div>
@@ -236,7 +236,7 @@
 ```
 
 
-## Button sizes
+#### Button sizes
 ```jsx
 <div>
   <Button size='small' onClick={() => alert('small')}>
@@ -251,8 +251,10 @@
 </div>
 ```
 
-## Buttons with Icons
+#### Buttons with Icons
 ```jsx
+const { FontAwesomeIcon } = require('../Icon');
+
 <div>
   <div>
     <Button 

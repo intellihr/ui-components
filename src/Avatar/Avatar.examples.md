@@ -1,4 +1,4 @@
-## Avatar using Initials
+#### Avatar using Initials
 
 ```jsx
 <div>
@@ -21,7 +21,7 @@
 </div>
 ```
 
-## Avatar using ImageUrl
+#### Avatar using ImageUrl
 
 ```jsx
 <div>
@@ -48,7 +48,7 @@
 </div>
 ```
 
-## Avatar using statusDot
+#### Avatar using statusDot
 
 ```jsx
 <div>
@@ -125,7 +125,7 @@
 </div>
 ```
 
-## Avatar using hover props
+#### Avatar using hover props
 
 ```jsx
 <div>
@@ -164,7 +164,7 @@
 </div>
 ```
 
-## Avatar using skeleton options
+#### Avatar using skeleton options
 
 ```jsx
 <div>
