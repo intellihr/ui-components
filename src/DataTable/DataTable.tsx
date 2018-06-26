@@ -1,86 +1,52 @@
 import React from 'react'
-import ReactTable from 'react-table'
+import ReactTable, { TableProps } from 'react-table'
 import PaginationComponent from './PaginationComponent'
-import classNames = require('classnames')
-import { Callout } from '../Callout'
+import classNames from 'classnames'
 import NoDataComponent from './NoDataComponent'
-
 const style = require('./DataTable.scss')
 
 export interface DataTableProps {
-    data: Array<Object>
-    columns: Array<Object>
-    showPaginationTop?: boolean
-    showPaginationBottom?: boolean
-    showPageSizeOptions?: boolean
-    pageSizeOptions?: Array<number>
-    defaultPageSize?: number
-    sortable?: boolean
-    defaultSortDesc?: boolean
-    defaultSorted?: Array<Object>
-    filterable?: boolean,
-    noDataText?: string,
-    NoDataComponent?: any
-  }
+  reactTableProps?: Partial<TableProps>,
+  data: any,
+  columns: any,
+  sortable?: boolean
+}
 
 export class DataTable extends React.Component<DataTableProps> {
   public static defaultProps: Partial<DataTableProps> = {
-    showPaginationTop: false,
-    showPaginationBottom: false,
-    showPageSizeOptions: false,
-    pageSizeOptions: [10, 25, 50, 100],
-    defaultPageSize: 25,
-    sortable: false,
-    defaultSortDesc: false,
-    defaultSorted: [],
-    filterable: false,
-    noDataText: 'No data found!',
-    NoDataComponent: NoDataComponent
+    sortable: false
   }
 
   public render (): JSX.Element {
     const {
-      data,
-      columns,
-      showPaginationTop,
-      showPaginationBottom,
-      showPageSizeOptions,
-      pageSizeOptions,
-      defaultPageSize,
+      reactTableProps,
       sortable,
-      defaultSortDesc,
-      defaultSorted,
-      filterable,
-      noDataText
+      columns,
+      data
     } = this.props
 
+    console.log(this.props)
     return <ReactTable
-      data={data}
-      className={classNames({sortable})}
-      columns={columns}
-      noDataText={noDataText}
-
-      showPagination={showPaginationTop || showPaginationBottom}
-      showPaginationTop={showPaginationTop}
-      showPaginationBottom={showPaginationBottom}
-
-      showPageSizeOptions={showPageSizeOptions}
-      defaultPageSize={defaultPageSize}
-      pageSizeOptions={pageSizeOptions}
-
-      sortable={sortable}
-      multiSort={true}
-
-      defaultSortDesc={defaultSortDesc}
-      defaultSorted={defaultSorted}
-
-      filterable={filterable}
-
-      minRows={0}
+      showPaginationTop
+      showPaginationBottom
+      showPagination={false}
+      showPageSizeOptions={false}
+      pageSizeOptions={[10, 25, 50, 100]}
+      defaultPageSize={25}
+      defaultSortDesc={false}
       resizable={false}
-
-      PaginationComponent={PaginationComponent}
+      multiSort
+      defaultSorted={[]}
+      minRows={0}
+      filterable={false}
+      noDataText={'No data found!'}
       NoDataComponent={NoDataComponent}
+      PaginationComponent={PaginationComponent}
+      {...reactTableProps}
+      data={data}
+      columns={columns}
+      sortable={sortable}
+      className={classNames({sortable}, style.reactTable)}
     />
   }
 }

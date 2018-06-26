@@ -1,0 +1,368 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PaginationComponent /> Renders a basic DataTable 1`] = `
+<ReactTablePagination
+  columns={
+    Array [
+      Object {
+        "Header": "Name",
+        "accessor": "name",
+      },
+      Object {
+        "Header": "Age",
+        "accessor": "age",
+      },
+    ]
+  }
+  data={
+    Array [
+      Object {
+        "age": 26,
+        "name": "Tanner Linsley",
+      },
+      Object {
+        "age": 23,
+        "name": "Jason Maurer",
+      },
+    ]
+  }
+>
+  <div
+    className="-pagination"
+  >
+    <div
+      className="page-details"
+    >
+      Showing 
+      1
+       to 
+      NaN
+       of 
+      2
+       entries
+    </div>
+    <div
+      className="page-navigation"
+    >
+      <button
+        className="-btn"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      />
+      <button
+        className="-btn"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      />
+    </div>
+  </div>
+</ReactTablePagination>
+`;
+
+exports[`<PaginationComponent /> Renders a custom component in a DataTable 1`] = `
+<ReactTablePagination
+  columns={
+    Array [
+      Object {
+        "Cell": [Function],
+        "Header": "Name",
+        "accessor": "name",
+      },
+      Object {
+        "Header": "Age",
+        "accessor": "age",
+      },
+    ]
+  }
+  data={
+    Array [
+      Object {
+        "age": 26,
+        "name": "Tanner Linsley",
+      },
+      Object {
+        "age": 23,
+        "name": "Jason Maurer",
+      },
+    ]
+  }
+  sortable={true}
+>
+  <div
+    className="-pagination"
+  >
+    <div
+      className="page-details"
+    >
+      Showing 
+      1
+       to 
+      NaN
+       of 
+      2
+       entries
+    </div>
+    <div
+      className="page-navigation"
+    >
+      <button
+        className="-btn"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      />
+      <button
+        className="-btn"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      />
+    </div>
+  </div>
+</ReactTablePagination>
+`;
+
+exports[`<PaginationComponent /> Renders a filterable DataTable 1`] = `
+<ReactTablePagination
+  columns={
+    Array [
+      Object {
+        "Header": "Name",
+        "accessor": "name",
+      },
+      Object {
+        "Header": "Age",
+        "accessor": "age",
+      },
+    ]
+  }
+  data={
+    Array [
+      Object {
+        "age": 26,
+        "name": "Tanner Linsley",
+      },
+      Object {
+        "age": 23,
+        "name": "Jason Maurer",
+      },
+    ]
+  }
+  filterable={true}
+>
+  <div
+    className="-pagination"
+  >
+    <div
+      className="page-details"
+    >
+      Showing 
+      1
+       to 
+      NaN
+       of 
+      2
+       entries
+    </div>
+    <div
+      className="page-navigation"
+    >
+      <button
+        className="-btn"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      />
+      <button
+        className="-btn"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      />
+    </div>
+  </div>
+</ReactTablePagination>
+`;
+
+exports[`<PaginationComponent /> Renders a sortable DataTable 1`] = `
+<ReactTablePagination
+  columns={
+    Array [
+      Object {
+        "Header": "Name",
+        "accessor": "name",
+      },
+      Object {
+        "Header": "Age",
+        "accessor": "age",
+      },
+    ]
+  }
+  data={
+    Array [
+      Object {
+        "age": 26,
+        "name": "Tanner Linsley",
+      },
+      Object {
+        "age": 23,
+        "name": "Jason Maurer",
+      },
+    ]
+  }
+  sortable={true}
+>
+  <div
+    className="-pagination"
+  >
+    <div
+      className="page-details"
+    >
+      Showing 
+      1
+       to 
+      NaN
+       of 
+      2
+       entries
+    </div>
+    <div
+      className="page-navigation"
+    >
+      <button
+        className="-btn"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      />
+      <button
+        className="-btn"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      />
+    </div>
+  </div>
+</ReactTablePagination>
+`;
+
+exports[`<PaginationComponent /> Renders a sorted DataTable 1`] = `
+<ReactTablePagination
+  columns={
+    Array [
+      Object {
+        "Header": "Name",
+        "accessor": "name",
+      },
+      Object {
+        "Header": "Age",
+        "accessor": "age",
+      },
+    ]
+  }
+  data={
+    Array [
+      Object {
+        "age": 26,
+        "name": "Tanner Linsley",
+      },
+      Object {
+        "age": 23,
+        "name": "Jason Maurer",
+      },
+    ]
+  }
+  defaultSorted={
+    Array [
+      Object {
+        "desc": true,
+        "id": "age",
+      },
+    ]
+  }
+>
+  <div
+    className="-pagination"
+  >
+    <div
+      className="page-details"
+    >
+      Showing 
+      1
+       to 
+      NaN
+       of 
+      2
+       entries
+    </div>
+    <div
+      className="page-navigation"
+    >
+      <button
+        className="-btn"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      />
+      <button
+        className="-btn"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      />
+    </div>
+  </div>
+</ReactTablePagination>
+`;
+
+exports[`<PaginationComponent /> Renders an empty DataTable 1`] = `
+<ReactTablePagination
+  columns={
+    Array [
+      Object {
+        "Header": "Name",
+        "accessor": "name",
+      },
+      Object {
+        "Header": "Age",
+        "accessor": "age",
+      },
+    ]
+  }
+  data={Array []}
+>
+  <div
+    className="-pagination"
+  >
+    <div
+      className="page-details"
+    >
+      Showing 
+      1
+       to 
+      NaN
+       of 
+      0
+       entries
+    </div>
+    <div
+      className="page-navigation"
+    >
+      <button
+        className="-btn"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      />
+      <button
+        className="-btn"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      />
+    </div>
+  </div>
+</ReactTablePagination>
+`;

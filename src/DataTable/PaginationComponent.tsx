@@ -1,16 +1,12 @@
 import React from 'react'
-import classnames from 'classnames'
+import classNames from 'classnames'
 
 export default class ReactTablePagination extends React.Component<any, any> {
   constructor (props: any) {
     super(props)
 
-    this.getSafePage = this.getSafePage.bind(this)
-    this.changePage = this.changePage.bind(this)
-    this.applyPage = this.applyPage.bind(this)
-
     this.state = {
-      page: props.page,
+      page: props.page
     }
   }
 
@@ -18,129 +14,199 @@ export default class ReactTablePagination extends React.Component<any, any> {
     this.setState({ page: nextProps.page })
   }
 
-  getSafePage (page: any) {
-    if (Number.isNaN(page)) {
-      page = this.props.page
+  getSafePage = (newPage: any) => {
+    const {
+      pages,
+      page
+    } = this.props
+
+    if (Number.isNaN(newPage)) {
+      newPage = page
     }
-    return Math.min(Math.max(page, 0), this.props.pages - 1)
+    return Math.min(Math.max(newPage, 0), pages - 1)
   }
 
-  changePage (page: any) {
-    page = this.getSafePage(page)
-    this.setState({ page })
-    if (this.props.page !== page) {
-      this.props.onPageChange(page)
+  changePage = (newPage: any) => {
+    const {
+      page,
+      onPageChange
+    } = this.props
+
+    newPage = this.getSafePage(newPage)
+    this.setState({ newPage })
+    if (page !== newPage) {
+      onPageChange(newPage)
     }
   }
 
-  applyPage (e: any) {
-    if (e) {
-      e.preventDefault()
+  incrementPage = () => {
+    const {
+      page,
+      canNext
+    } = this.props
+
+    if (canNext) {
+      return this.changePage(page + 1)
     }
-    const page = this.state.page
-    this.changePage(page === '' ? this.props.page : page)
+  }
+
+  decrementPage = () => {
+    const {
+      page,
+      canPrevious
+    } = this.props
+
+    if (canPrevious) {
+      return this.changePage(page - 1)
+    }
+  }
+
+  get generatePagination () {
+    const {
+      pages,
+      page,
+    } = this.props
+
+    let startPage, endPage
+    if (pages <= 8) {
+      startPage = 1;
+      endPage = pages;
+    } else {
+      if (page <= 3) {
+        startPage = 1;
+        endPage = 5;
+      } else if (page + 5 > pages) {
+        startPage = pages - 5;
+        endPage = pages;
+      } else {
+        startPage = page - 1;
+        endPage = page + 2;
+      }
+    }
+
+    let response = []
+    for (let i = startPage; i <= endPage; i++ ) {
+      response.push(
+        <button
+          key={i}
+          className={classNames({'current': i === page+1}, 'page-button', '-btn')}
+          onClick={() => this.changePage(i - 1)}
+        >
+          {i}
+        </button>
+      )
+    }
+
+    if(pages > endPage+1) {
+        response.push(
+          <span className='ellipsis' key='endEllipsis'>...</span>
+          ,<button
+            key={pages}
+            className= 'page-button -btn'
+            onClick={() => this.changePage(pages - 1)}
+          >
+            {pages}
+          </button>
+        )
+    }
+
+    if(startPage > 1) {
+      response = response.slice(1)
+      response = [
+        <button
+          key={1}
+          className= 'page-button -btn'
+          onClick={() => this.changePage(0)}
+        >
+          1
+        </button>,
+        <span className='ellipsis' key='startEllipsis'>
+          ...
+        </span>
+      ].concat(response)
+    }
+    return response
+  }
+
+  get pageDetails () {
+    const {
+      page,
+      pageSize,
+      data
+    } = this.props
+
+    const entryCount = data.length
+    const nextPage = page+1
+    const maxPossibleCurrentPageIndex = nextPage * pageSize
+    const maxActualCurrentPageIndex = maxPossibleCurrentPageIndex > entryCount ? entryCount : maxPossibleCurrentPageIndex
+    const pageStartingIndex = page*pageSize || 1
+
+    return (
+      <div className='page-details'>
+        Showing {pageStartingIndex} to {maxActualCurrentPageIndex} of {entryCount} entries
+      </div>
+    )
+  }
+
+  get pageSizeOptions () {
+    const {
+      showPageSizeOptions,
+      pageSizeOptions,
+      pageSize,
+      onPageSizeChange
+    } = this.props
+
+    if (showPageSizeOptions) {
+      return (
+        <span className="select-wrap -pageSizeOptions">
+          <label>{"Show "}
+            <select onChange={e => onPageSizeChange(Number(e.target.value))} value={pageSize}>
+              {pageSizeOptions.map((option: any, i: number) => (
+                <option key={i} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+            {" entries"}
+          </label>
+        </span>
+      )
+    }
   }
 
   render () {
     const {
-      // Computed
-      pages,
-      // Props
-      page,
-      showPageSizeOptions,
-      pageSizeOptions,
-      pageSize,
-      showPageJump,
       canPrevious,
       canNext,
-      onPageSizeChange,
-      className
+      className,
+      previousText,
+      nextText,
+      style
     } = this.props
 
     return (
-      <div className={classnames(className, '-pagination')} style={this.props.style}>
-        <div>
-          Showing 1 to 25 of 37 entries
-        </div>
-
-        <div className="-center">
-
-          {showPageSizeOptions && (
-            <span className="select-wrap -pageSizeOptions">
-              <label>{"Show "}
-                <select onChange={e => onPageSizeChange(Number(e.target.value))} value={pageSize}>
-                  {pageSizeOptions.map((option: any, i: number) => (
-                    // eslint-disable-next-line react/no-array-index-key
-                    <option key={i} value={option}>
-                      {option}
-                    </option>
-                  ))}
-                </select>
-                {" entries"}
-              </label>
-            </span>
-          )}
-        </div>
-
-        <div>
+      <div className={classNames(className, '-pagination')} style={style}>
+        {this.pageDetails}
+        {this.pageSizeOptions}
+        <div className='page-navigation'>
           <button
             type="button"
             className="-btn"
-            onClick={() => {
-              if (!canPrevious) return
-              this.changePage(page - 1)
-            }}
+            onClick={this.decrementPage}
             disabled={!canPrevious}
           >
-            {this.props.previousText}
+            {previousText}
           </button>
-        </div>
-
-        <div>
-          <span className="-pageInfo">
-            {this.props.pageText}{' '}
-            {showPageJump ? (
-              <div className="-pageJump">
-                <input
-                  type={this.state.page === '' ? 'text' : 'number'}
-                  onChange={e => {
-                    const val = parseInt(e.target.value)
-                    const page = val - 1
-                    if (e.target.value === '') {
-                      return this.setState({ page: val })
-                    }
-                    this.setState({ page: this.getSafePage(page) })
-                  }}
-                  value={this.state.page === '' ? '' : this.state.page + 1}
-                  onBlur={this.applyPage}
-                  onKeyPress={e => {
-                    if (e.which === 13 || e.keyCode === 13) {
-                      this.applyPage(e)
-                    }
-                  }}
-                />
-              </div>
-            ) : (
-              <span className="-currentPage">{page + 1}</span>
-            )}{' '}
-            {this.props.ofText} <span className="-totalPages">{pages || 1}</span>
-          </span>
-        </div>
-
-        <div>
+          {this.generatePagination}
           <button
             type="button"
             className="-btn"
-            onClick={() => {
-              if (!canNext) return
-              this.changePage(page + 1)
-            }}
+            onClick={this.incrementPage}
             disabled={!canNext}
           >
-            {this.props.nextText}
+            {nextText}
           </button>
         </div>
-
       </div>
     )
   }
