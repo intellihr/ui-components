@@ -25,21 +25,20 @@ export class DataTable extends React.Component<DataTableProps> {
       data
     } = this.props
 
-    console.log(this.props)
     return <ReactTable
+      multiSort
       showPaginationTop
       showPaginationBottom
-      showPagination={false}
-      showPageSizeOptions={false}
-      pageSizeOptions={[10, 25, 50, 100]}
-      defaultPageSize={25}
-      defaultSortDesc={false}
       resizable={false}
-      multiSort
-      defaultSorted={[]}
-      minRows={0}
       filterable={false}
+      showPagination={false}
+      defaultSortDesc={false}
+      showPageSizeOptions={false}
+      minRows={0}
+      defaultPageSize={25}
+      pageSizeOptions={[10, 25, 50, 100]}
       noDataText={'No data found!'}
+      defaultSorted={[]}
       NoDataComponent={NoDataComponent}
       PaginationComponent={PaginationComponent}
       {...reactTableProps}

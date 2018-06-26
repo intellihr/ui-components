@@ -6,28 +6,26 @@ describe('<DataTable />', () => {
   it('Renders a basic DataTable', () => {
     const wrapper = mount(
       <DataTable
-        reactTableProps={
-          data:{[
-            {
-              name: 'Tanner Linsley',
-              age: 26
-            },
-            {
-              name: 'Jason Maurer',
-              age: 23
-            }
-          ]},
-          columns:{[
-            {
-              Header: 'Name',
-              accessor: 'name'
-            },
-            {
-              Header: 'Age',
-              accessor: 'age'
-            }
-          ]}
-        }
+        data={[
+          {
+            name: 'Tanner Linsley',
+            age: 26
+          },
+          {
+            name: 'Jason Maurer',
+            age: 23
+          }
+        ]}
+        columns={[
+          {
+            Header: 'Name',
+            accessor: 'name'
+          },
+          {
+            Header: 'Age',
+            accessor: 'age'
+          }
+        ]}
       />
     )
 
@@ -37,28 +35,28 @@ describe('<DataTable />', () => {
   it('Renders a paginated DataTable', () => {
     const wrapper = mount(
       <DataTable
-        reactTableProps={
-          data:{
-            [{
-              "name": "Doe Giacomelli",
-              "age": "85"
-            }, {
+        data={[{
+          "name": "Frederigo Mallebone",
+          "age": "15"
+        },
+        {
           "name": "Sutherlan Caulfield",
           "age": "35"
-          }]},
-          columns:{[
-            {
-              Header: 'Name',
-              accessor: 'name'
-            },
-            {
-              Header: 'Age',
-              accessor: 'age'
-            }
-          ]},
-          showPagination,
-          showPageSizeOptions
-        }
+        }]}
+        columns={[
+          {
+            Header: 'Name',
+            accessor: 'name'
+          },
+          {
+            Header: 'Age',
+            accessor: 'age'
+          }
+        ]}
+        reactTableProps={{
+          showPagination: true,
+          showPageSizeOptions: true
+        }}
       />
     )
 
