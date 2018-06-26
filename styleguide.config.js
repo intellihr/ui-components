@@ -28,11 +28,13 @@ module.exports = {
         'src/Comment/Comment.tsx',
         'src/DotStatusLabel/DotStatusLabel.tsx',
         'src/FormattedText/FormattedText.tsx',
+        'src/Grid/Grid.tsx',
         'src/Heading/Heading.tsx',
         'src/Icon/Icon.tsx',
         'src/InputLabel/InputLabel.tsx',
         'src/Legend/Legend.tsx',
         'src/Menu/Menu.tsx',
+        'src/Navigation/Navigation.tsx',
         'src/SmartList/SmartList.tsx',
         'src/Spinner/Spinner.tsx',
         'src/Text/Text.tsx',
@@ -95,7 +97,9 @@ module.exports = {
     {
       name: 'Technical Components',
       components: [
-        'src/Form/Form.tsx'
+        'src/Anchor/Anchor.tsx',
+        'src/Form/Form.tsx',
+        'src/Skeleton/withSkeleton.tsx'
       ]
     }
   ],
