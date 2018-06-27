@@ -27,18 +27,15 @@ module.exports = {
         'src/Callout/Callout.tsx',
         'src/Comment/Comment.tsx',
         'src/DotStatusLabel/DotStatusLabel.tsx',
-        'src/FormattedText/FormattedText.tsx',
         'src/Grid/Grid.tsx',
-        'src/Heading/Heading.tsx',
         'src/Icon/Icon.tsx',
         'src/InputLabel/InputLabel.tsx',
         'src/Legend/Legend.tsx',
         'src/Menu/Menu.tsx',
         'src/Navigation/Navigation.tsx',
-        'src/Skeleton/withSkeleton.tsx',
+        'src/Skeleton/Skeleton.tsx',
         'src/SmartList/SmartList.tsx',
         'src/Spinner/Spinner.tsx',
-        'src/Text/Text.tsx',
         'src/Toast/Toast.tsx',
         'src/Tooltip/Tooltip.tsx'
       ],
@@ -60,16 +57,24 @@ module.exports = {
         {
           name: 'Links',
           components: [
+            'src/Anchor/Anchor.tsx',
             'src/Link/ActionLink.tsx',
             'src/Link/TextLink.tsx'
           ]
         },
-
         {
           name: 'Report',
           components: [
             'src/ReportHeader/ReportHeader.tsx',
             'src/ReportInfo/ReportInfo.tsx'
+          ]
+        },
+        {
+          name: 'Typography',
+          components: [
+            'src/FormattedText/FormattedText.tsx',
+            'src/Heading/Heading.tsx',
+            'src/Text/Text.tsx'
           ]
         },
         {
@@ -82,8 +87,9 @@ module.exports = {
       ]
     },
     {
-      name: 'Inputs',
+      name: 'Forms',
       components: [
+        'src/Form/Form.tsx',
         'src/Input/Input.tsx',
         'src/SelectInput/SelectInput.tsx'
       ]
@@ -96,10 +102,11 @@ module.exports = {
       ]
     },
     {
-      name: 'Technical Components',
+      name: 'Higher Order Components',
       components: [
-        'src/Anchor/Anchor.tsx',
-        'src/Form/Form.tsx',
+        'src/Anchor/withAnchor.tsx',
+        'src/Grid/withGrid.tsx',
+        'src/Skeleton/withSkeleton.tsx'
       ]
     }
   ],
