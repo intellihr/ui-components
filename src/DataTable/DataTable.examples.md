@@ -1,5 +1,3 @@
-# DataTable
-
 #### Basic DataTable
 
 ```jsx
