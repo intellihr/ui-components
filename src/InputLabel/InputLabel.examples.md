@@ -1,8 +1,7 @@
-# Input Label
-
-## Basic Input Label
+#### Basic Input Label
 
 ```jsx
+const { TextInput } = require('../Input');
   <div>
     <InputLabel>
       Hello boys!
@@ -11,9 +10,10 @@
   </div>
 ```
 
-## Input Label with `htmlFor`
+#### Input Label with `htmlFor`
 
 ```jsx
+const { TextInput } = require('../Input');
   <div>
     <InputLabel
       htmlFor='example-input2'
@@ -24,9 +24,10 @@
   </div>
 ```
 
-## Input Label with isInvalid
+#### Input Label with isInvalid
 
 ```jsx
+const { TextInput } = require('../Input');
   <div>
     <InputLabel
       isInvalid

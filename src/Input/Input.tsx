@@ -27,7 +27,7 @@ export interface GenericInputProps {
   highlightOnFocus?: boolean
   /** Handle blur event */
   handleBlur?: (e: React.FocusEvent<HTMLInputElement>, value?: string | number) => void
-  /** Handle blur event */
+  /** Handle key down events */
   handleKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void
   /** Max length of string for text input */
   maxLength?: number

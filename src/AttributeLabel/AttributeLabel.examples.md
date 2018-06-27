@@ -1,4 +1,4 @@
-## Basic Label
+#### Basic Label
 
 ```jsx
 <AttributeLabel
@@ -6,7 +6,7 @@
 />
 ```
 
-## Styling of labels
+#### Styling of labels
 
 ```jsx
 <div>
@@ -42,7 +42,7 @@
 </div>
 ```
 
-## Sizing of labels
+#### Sizing of labels
 
 ```jsx
 <div>
@@ -63,7 +63,7 @@
 </div>
 ```
 
-## Hollow labels
+#### Hollow labels
 
 ```jsx
 <AttributeLabel
@@ -72,7 +72,7 @@
 />
 ```
 
-## Combining styles
+#### Combining styles
 
 ```jsx
 <AttributeLabel

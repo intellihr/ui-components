@@ -1,6 +1,4 @@
-# Toast
-
-## Basic Toast
+#### Basic Toast
 
 ```jsx
   <Toast>
@@ -8,7 +6,7 @@
   </Toast>
 ```
 
-## Alert Toast
+#### Alert Toast
 
 ```jsx
   <Toast
@@ -18,7 +16,7 @@
   </Toast>
 ```
 
-## Toast with handleClose function
+#### Toast with handleClose function
 
 ```jsx
 initialState = { showToast: true };
@@ -35,7 +33,7 @@ initialState = { showToast: true };
 </div>
 ```
 
-## Toast with onMount function
+#### Toast with onMount function
 
 ```jsx
 initialState = { showToast: false };
@@ -55,7 +53,7 @@ initialState = { showToast: false };
 </div>
 ```
 
-## Custom Content
+#### Custom Content
 
 ```jsx
   <Toast

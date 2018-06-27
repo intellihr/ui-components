@@ -1,6 +1,4 @@
-# Radar Chart
-
-## Basic Radar Chart
+#### Basic Radar Chart
 
 ```jsx
 <RadarChart
@@ -27,7 +25,7 @@
 />
 ```
 
-## Radar Chart with labelled data points
+#### Radar Chart with labelled data points
 
 ```jsx
 <RadarChart
@@ -60,7 +58,7 @@
 />
 ```
 
-## Radar Chart with custom min, max, and step values
+#### Radar Chart with custom min, max, and step values
 
 ```jsx
 <RadarChart
@@ -94,7 +92,7 @@
 />
 ```
 
-## Basic Radar Chart with custom height
+#### Basic Radar Chart with custom height
 
 ```jsx
 <RadarChart

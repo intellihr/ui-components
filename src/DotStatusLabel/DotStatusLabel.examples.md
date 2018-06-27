@@ -1,4 +1,4 @@
-## Basic label
+#### Basic label
 
 ```jsx
 <DotStatusLabel
@@ -6,7 +6,7 @@
 />
 ```
 
-## Basic label with subtitle text
+#### Basic label with subtitle text
 
 ```jsx
 <DotStatusLabel
@@ -15,7 +15,7 @@
 />
 ```
 
-## Hollow label
+#### Hollow label
 
 ```jsx
 <DotStatusLabel
@@ -24,7 +24,7 @@
 />
 ```
 
-## Coloured text
+#### Coloured text
 
 ```jsx
 <DotStatusLabel
@@ -34,7 +34,7 @@
 />
 ```
 
-## Coloured icon
+#### Coloured icon
 
 ```jsx
 <div>

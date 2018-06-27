@@ -1,6 +1,8 @@
-## Basic Smart List
+#### Basic Smart List
 
 ```jsx
+const { ListColumn } = require('./ListColumn');
+
 <SmartList
   data={[
     {
@@ -52,9 +54,11 @@
 </SmartList>
 ```
 
-## Smart List with limit
+#### Smart List with limit
 
 ```jsx
+const { ListColumn } = require('./ListColumn');
+
 <SmartList
   data={[
     {
@@ -118,9 +122,11 @@
 </SmartList>
 ```
 
-## Empty Smart List
+#### Empty Smart List
 
 ```jsx
+const { ListColumn } = require('./ListColumn');
+
 <SmartList
   data={[]}
 >
@@ -158,9 +164,11 @@
 </SmartList>
 ```
 
-## Skeleton Smart List
+#### Skeleton Smart List
 
 ```jsx
+const { ListColumn } = require('./ListColumn');
+
 <SmartList
   skeletonOptions={{
     showSkeleton: true,
@@ -193,9 +201,11 @@
 </SmartList>
 ```
 
-## Loading Smart List
+#### Loading Smart List
 
 ```jsx
+const { ListColumn } = require('./ListColumn');
+
 <SmartList
   data={[]}
   loading

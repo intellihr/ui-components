@@ -1,7 +1,3 @@
-# Legend
-
-## Basic Legend
-
 ```jsx
 <Legend
  datasets={[

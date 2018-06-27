@@ -1,4 +1,4 @@
-## Functional Color LinkButtons
+#### Functional Color LinkButtons
 
 ```jsx
 <div>
@@ -59,7 +59,7 @@
 </div>
 ```
 
-## Borderless LinkButtons
+#### Borderless LinkButtons
 
 ```jsx
 <div>
@@ -120,7 +120,7 @@
 </div>
 ```
 
-## hollow LinkButtons
+#### hollow LinkButtons
 ```jsx
 <div>
   <div>
@@ -180,7 +180,7 @@
 </div>
 ```
 
-## Special Case LinkButtons
+#### Special Case LinkButtons
 
 ```jsx
 <div>
@@ -236,7 +236,7 @@
 ```
 
 
-## LinkButton sizes
+#### LinkButton sizes
 ```jsx
 <div>
   <LinkButton size='small' href='#'>
@@ -251,8 +251,10 @@
 </div>
 ```
 
-## Link buttons with Icons
+#### Link buttons with Icons
 ```jsx
+const { FontAwesomeIcon } = require('../Icon');
+
 <div>
   <div>
     <LinkButton 

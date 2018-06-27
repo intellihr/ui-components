@@ -1,4 +1,4 @@
-## TimeBasedLineChart with filled graph
+#### TimeBasedLineChart with filled graph
 
 ```jsx
 const { lineObject } = require('./sampleData');
@@ -20,7 +20,7 @@ const { createGradient } = require('./createGradient');
 />
 ```
 
-## TimeBasedLineChart with more than 1 line
+#### TimeBasedLineChart with more than 1 line
 
 ```jsx
 const { lineObject2, lineObject3 } = require('./sampleData');

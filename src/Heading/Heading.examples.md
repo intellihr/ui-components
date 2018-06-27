@@ -1,6 +1,4 @@
-# Heading
-
-## Basic Heading
+#### Basic Heading
 
 ```jsx
 <div>
@@ -22,7 +20,7 @@
 </div>
 ```
 
-## Skeleton Heading
+#### Skeleton Heading
 
 ```jsx
   <Heading

@@ -1,6 +1,7 @@
 const path = require('path')
 const _ = require('lodash')
 const docGenTypescript = require('react-docgen-typescript')
+
 module.exports = {
   title: 'IntelliHR Design System',
   propsParser: docGenTypescript.withCustomConfig('./tsconfig.json').parse,
@@ -12,18 +13,105 @@ module.exports = {
     return componentPath.replace(/\.tsx?$/, '.examples.md')
   },
   pagePerSection: true,
-  sections: [{
-    name: 'Introduction',
-    content: './docs/introduction.md'
-  }, {
-    name: 'UI Components',
-    components: 'src/**/[A-Z]*.tsx'
-  }, {
-    name: 'Higher Order Components',
-    components: 'src/**/[a-z]*.tsx'
-  }],
-  showUsage: true,
-  showCode: true,
+  sections: [
+    {
+      name: 'Introduction',
+      content: './docs/introduction.md',
+      components: 'src/style.tsx'
+    },
+    {
+      name: 'UI Components',
+      components: [
+        'src/AttributeLabel/AttributeLabel.tsx',
+        'src/Avatar/Avatar.tsx',
+        'src/Callout/Callout.tsx',
+        'src/Comment/Comment.tsx',
+        'src/DotStatusLabel/DotStatusLabel.tsx',
+        'src/Grid/Grid.tsx',
+        'src/Icon/Icon.tsx',
+        'src/InputLabel/InputLabel.tsx',
+        'src/Legend/Legend.tsx',
+        'src/Menu/Menu.tsx',
+        'src/Navigation/Navigation.tsx',
+        'src/Skeleton/Skeleton.tsx',
+        'src/SmartList/SmartList.tsx',
+        'src/Spinner/Spinner.tsx',
+        'src/Toast/Toast.tsx',
+        'src/Tooltip/Tooltip.tsx'
+      ],
+      sections: [
+        {
+          name: 'Buttons',
+          components: [
+            'src/Button/Button.tsx',
+            'src/Button/LinkButton.tsx'
+          ]
+        },
+        {
+          name: 'Colors',
+          components: [
+            'src/Color/Color.tsx',
+            'src/Color/ColorsGrid.tsx'
+          ]
+        },
+        {
+          name: 'Links',
+          components: [
+            'src/Anchor/Anchor.tsx',
+            'src/Link/ActionLink.tsx',
+            'src/Link/TextLink.tsx'
+          ]
+        },
+        {
+          name: 'Report',
+          components: [
+            'src/ReportHeader/ReportHeader.tsx',
+            'src/ReportInfo/ReportInfo.tsx'
+          ]
+        },
+        {
+          name: 'Typography',
+          components: [
+            'src/FormattedText/FormattedText.tsx',
+            'src/Heading/Heading.tsx',
+            'src/Text/Text.tsx'
+          ]
+        },
+        {
+          name: 'Vertical Timeline',
+          components: [
+            'src/VerticalTimeline/VerticalTimeline.tsx',
+            'src/VerticalTimelineEvent/VerticalTimelineEvent.tsx'
+          ]
+        }
+      ]
+    },
+    {
+      name: 'Forms',
+      components: [
+        'src/Form/Form.tsx',
+        'src/Input/Input.tsx',
+        'src/SelectInput/SelectInput.tsx'
+      ]
+    },
+    {
+      name: 'Charts',
+      components: [
+        'src/RadarChart/RadarChart.tsx',
+        'src/TimeBasedLineChart/TimeBasedLineChart.tsx'
+      ]
+    },
+    {
+      name: 'Higher Order Components',
+      components: [
+        'src/Anchor/withAnchor.tsx',
+        'src/Grid/withGrid.tsx',
+        'src/Skeleton/withSkeleton.tsx'
+      ]
+    }
+  ],
+  showUsage: false,
+  showCode: false,
   updateExample: function (props, exampleFilePath) {
     // magically require components
     /**

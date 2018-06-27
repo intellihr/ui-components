@@ -1,6 +1,4 @@
-# ActionLink
-
-## Basic action link
+#### Basic action link
 
 ```jsx
 <ActionLink
@@ -10,14 +8,14 @@ Your text here
 </ActionLink>
 ```
 
-## Action link with alternate anchor tag
+#### Action link with alternate anchor tag
 
 ```jsx
 const { DefaultsProvider } = require("../DefaultsContext");
 
 <DefaultsProvider
   value={{
-    AnchorComponent: (props) => <a href="/bananafailedlink"> {...props} />
+    AnchorComponent: 'i'
   }}
 >
   <ActionLink
