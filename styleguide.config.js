@@ -35,6 +35,7 @@ module.exports = {
         'src/Legend/Legend.tsx',
         'src/Menu/Menu.tsx',
         'src/Navigation/Navigation.tsx',
+        'src/Skeleton/withSkeleton.tsx',
         'src/SmartList/SmartList.tsx',
         'src/Spinner/Spinner.tsx',
         'src/Text/Text.tsx',
@@ -99,7 +100,6 @@ module.exports = {
       components: [
         'src/Anchor/Anchor.tsx',
         'src/Form/Form.tsx',
-        'src/Skeleton/withSkeleton.tsx'
       ]
     }
   ],
