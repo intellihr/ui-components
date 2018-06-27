@@ -130,45 +130,12 @@
       accessor: 'age'
     }
   ]}
-  reactTableProps={{
-    defaultSorted:[
-      {
-        id: 'age',
-        desc: true
-      }
-    ]
-  }}
-/>
-```
-
-#### Filterable DataTable
-
-```jsx
-<DataTable
-    data={[
-      {
-        name: 'Tanner Linsley',
-        age: 26
-      },
-      {
-        name: 'Jason Maurer',
-        age: 23
-      }
-    ]}
-    columns={[
-      {
-        Header: 'Name',
-        accessor: 'name'
-      },
-      {
-        Header: 'Age',
-        accessor: 'age'
-      }
-    ]}
-    reactTableProps= {{
-      filterable: true
-    }}
-  
+  defaultSorted={[
+     {
+       id: 'age',
+       desc: true
+     }
+   ]}
 />
 ```
 
@@ -249,6 +216,237 @@
     "name": "Doe Giacomelli",
     "age": "85"
   }, {
+    "name": "Mona Dobsons",
+    "age": "77"
+  }, {
+    "name": "Domenic Wyndham",
+    "age": "86"
+  }, {
+    "name": "Chas Egel",
+    "age": "28"
+  }, {
+    "name": "Chantal Dwyer",
+    "age": "38"
+  }, {
+    "name": "Matthias McGuane",
+    "age": "64"
+  }, {
+    "name": "Troy Salleir",
+    "age": "87"
+  }, {
+    "name": "Hyacinthia Illing",
+    "age": "30"
+  }, {
+    "name": "Erv Hinrichs",
+    "age": "14"
+  }, {
+    "name": "Dorette Bearham",
+    "age": "13"
+  }, {
+    "name": "Ave Dobrovolski",
+    "age": "51"
+  }, {
+    "name": "Doe Giacomelli",
+    "age": "85"
+  }, {
+    "name": "Mona Dobsons",
+    "age": "77"
+  }, {
+    "name": "Domenic Wyndham",
+    "age": "86"
+  }, {
+    "name": "Chas Egel",
+    "age": "28"
+  }, {
+    "name": "Chantal Dwyer",
+    "age": "38"
+  }, {
+    "name": "Matthias McGuane",
+    "age": "64"
+  }, {
+    "name": "Troy Salleir",
+    "age": "87"
+  }, {
+    "name": "Hyacinthia Illing",
+    "age": "30"
+  }, {
+    "name": "Erv Hinrichs",
+    "age": "14"
+  }, {
+    "name": "Dorette Bearham",
+    "age": "13"
+  }, {
+    "name": "Ave Dobrovolski",
+    "age": "51"
+  }, {
+    "name": "Doe Giacomelli",
+    "age": "85"
+  }, {
+    "name": "Mona Dobsons",
+    "age": "77"
+  }, {
+    "name": "Domenic Wyndham",
+    "age": "86"
+  }, {
+    "name": "Chas Egel",
+    "age": "28"
+  }, {
+    "name": "Chantal Dwyer",
+    "age": "38"
+  }, {
+    "name": "Matthias McGuane",
+    "age": "64"
+  }, {
+    "name": "Troy Salleir",
+    "age": "87"
+  }, {
+    "name": "Hyacinthia Illing",
+    "age": "30"
+  }, {
+    "name": "Erv Hinrichs",
+    "age": "14"
+  }, {
+    "name": "Dorette Bearham",
+    "age": "13"
+  }, {
+    "name": "Ave Dobrovolski",
+    "age": "51"
+  }, {
+    "name": "Doe Giacomelli",
+    "age": "85"
+  }, {
+    "name": "Mona Dobsons",
+    "age": "77"
+  }, {
+    "name": "Domenic Wyndham",
+    "age": "86"
+  }, {
+    "name": "Chas Egel",
+    "age": "28"
+  }, {
+    "name": "Chantal Dwyer",
+    "age": "38"
+  }, {
+    "name": "Matthias McGuane",
+    "age": "64"
+  }, {
+    "name": "Troy Salleir",
+    "age": "87"
+  }, {
+    "name": "Hyacinthia Illing",
+    "age": "30"
+  }, {
+    "name": "Erv Hinrichs",
+    "age": "14"
+  }, {
+    "name": "Dorette Bearham",
+    "age": "13"
+  }, {
+    "name": "Ave Dobrovolski",
+    "age": "51"
+  }, {
+    "name": "Doe Giacomelli",
+    "age": "85"
+  }, {
+    "name": "Mona Dobsons",
+    "age": "77"
+  }, {
+    "name": "Domenic Wyndham",
+    "age": "86"
+  }, {
+    "name": "Chas Egel",
+    "age": "28"
+  }, {
+    "name": "Chantal Dwyer",
+    "age": "38"
+  }, {
+    "name": "Matthias McGuane",
+    "age": "64"
+  }, {
+    "name": "Troy Salleir",
+    "age": "87"
+  }, {
+    "name": "Hyacinthia Illing",
+    "age": "30"
+  }, {
+    "name": "Erv Hinrichs",
+    "age": "14"
+  }, {
+    "name": "Dorette Bearham",
+    "age": "13"
+  }, {
+    "name": "Ave Dobrovolski",
+    "age": "51"
+  }, {
+    "name": "Doe Giacomelli",
+    "age": "85"
+  }, {
+    "name": "Mona Dobsons",
+    "age": "77"
+  }, {
+    "name": "Domenic Wyndham",
+    "age": "86"
+  }, {
+    "name": "Chas Egel",
+    "age": "28"
+  }, {
+    "name": "Chantal Dwyer",
+    "age": "38"
+  }, {
+    "name": "Matthias McGuane",
+    "age": "64"
+  }, {
+    "name": "Troy Salleir",
+    "age": "87"
+  }, {
+    "name": "Hyacinthia Illing",
+    "age": "30"
+  }, {
+    "name": "Erv Hinrichs",
+    "age": "14"
+  }, {
+    "name": "Dorette Bearham",
+    "age": "13"
+  }, {
+    "name": "Ave Dobrovolski",
+    "age": "51"
+  }, {
+    "name": "Doe Giacomelli",
+    "age": "85"
+  }, {
+    "name": "Mona Dobsons",
+    "age": "77"
+  }, {
+    "name": "Domenic Wyndham",
+    "age": "86"
+  }, {
+    "name": "Chas Egel",
+    "age": "28"
+  }, {
+    "name": "Chantal Dwyer",
+    "age": "38"
+  }, {
+    "name": "Matthias McGuane",
+    "age": "64"
+  }, {
+    "name": "Troy Salleir",
+    "age": "87"
+  }, {
+    "name": "Hyacinthia Illing",
+    "age": "30"
+  }, {
+    "name": "Erv Hinrichs",
+    "age": "14"
+  }, {
+    "name": "Dorette Bearham",
+    "age": "13"
+  }, {
+    "name": "Ave Dobrovolski",
+    "age": "51"
+  }, {
+    "name": "Doe Giacomelli",
+    "age": "85"
+  }, {
     "name": "Sutherlan Caulfield",
     "age": "35"
   }]}
@@ -262,9 +460,36 @@
       accessor: 'age'
     }
   ]}
-  reactTableProps={{
-    showPagination: true,
-    showPageSizeOptions: true
+  showPagination
+/>
+```
+
+#### DataTable with custom overrides
+
+```jsx
+<DataTable
+  data={[
+    {
+      name: 'Tanner Linsley',
+      age: 26
+    },
+    {
+      name: 'Jason Maurer',
+      age: 23
+    }
+  ]}
+  columns={[
+    {
+      Header: 'Name',
+      accessor: 'name'
+    },
+    {
+      Header: 'Age',
+      accessor: 'age'
+    }
+  ]}
+  reactTableOverrides={{
+    filterable: true
   }}
 />
 ```
