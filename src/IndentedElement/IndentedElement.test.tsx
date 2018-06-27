@@ -1,10 +1,9 @@
 import React from 'react'
 import { mount } from 'enzyme'
-
 import { IndentedElement } from './IndentedElement'
 
 describe('<IndentedElement />', () => {
-  it(`should render an element with no indent`, () => {
+  it('should render an element with no indent', () => {
     const wrapper = mount(
       <IndentedElement
         depth={0}
@@ -16,7 +15,7 @@ describe('<IndentedElement />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render an indented element`, () => {
+  it('should render an indented element', () => {
     const wrapper = mount(
       <IndentedElement
         depth={2}

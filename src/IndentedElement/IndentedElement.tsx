@@ -9,7 +9,7 @@ export interface IIndentedElement {
 }
 
 export class IndentedElement extends React.PureComponent <IIndentedElement> {
-  render () {
+  render (): JSX.Element {
     const {
       depth,
       children
