@@ -1,0 +1,162 @@
+@import '../sass/foundation_settings';
+
+$color-styles: (
+  alert: (
+    strip-color: $alert-base,
+    background-color: $alert-light
+  ),
+  success: (
+    strip-color: $success-base,
+    background-color: $success-light
+  ),
+  warning: (
+    strip-color: $warning-base,
+    background-color: $warning-light
+  ),
+  primary: (
+    strip-color: $primary-base,
+    background-color: $primary-light
+  ),
+  secondary: (
+    strip-color: $secondary-base,
+    background-color: $secondary-light
+  ),
+  neutral: (
+    strip-color: $neutral-base,
+    background-color: $neutral-light
+  )
+);
+
+@mixin button-colour($style) {
+  border-left: 5px map-get($style, strip-color) solid;
+
+  a, button {
+    &:hover, &:active, &:focus {
+      color: $main-text !important;
+      background-color: map-get($style, background-color) !important;
+    }
+  }
+}
+
+:local(.dropdownMenu).dd-menu {
+  .toggle-component {
+    cursor: pointer;
+    line-height: 0;
+    margin-bottom: 0;
+
+    button {
+      margin-bottom: 0;
+    }
+  }
+
+  div.dd-menu-items {
+    width: min-content;
+    margin: .5rem 0;
+
+    ul {
+      border-radius: $global-radius;
+      min-width: 140px;
+      .dd-items-center {
+        display: block;
+
+        li {
+          display: block;
+        }
+      }
+
+      li {
+        width: 100%;
+
+        &.alert-on-hover {
+          a, button {
+            &:hover {
+              color: $alert-base !important;
+            }
+          }
+        }
+
+
+        &:hover {
+          background-color: transparent !important;
+        }
+
+        @each $colour, $style in $color-styles {
+          &.#{$colour} {
+            @include button-colour($style);
+          }
+        }
+
+        &:not(.non-clickable) {
+          a, button {
+            transition: background .3s ease-in-out, color .3s ease-in-out;
+
+            &:hover, &:active, &:focus {
+              background-color: $neutral-light;
+              color: $link-text;
+
+              .fa[class*="-outline"]:before {
+                color: $neutral-light;
+                text-shadow: -1px -1px $link-text, -1px 1px $link-text, 1px -1px $link-text, 1px 1px $link-text;
+              }
+            }
+          }
+        }
+
+        &.non-clickable {
+          span {
+            color: $main-text;
+            cursor: default;
+            line-height: 1;
+          }
+        }
+
+        hr {
+          height: 0;
+          width: 0;
+          padding: 0;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        &:first-of-type {
+          border-radius: 4px 4px 0 0;
+
+          a, button {
+            border-radius: 4px 4px 0 0;
+          }
+        }
+
+        &:last-of-type {
+          border-radius: 0 0 4px 4px;
+
+          a, button {
+            border-radius: 0 0 4px 4px;
+          }
+        }
+
+        &:only-of-type {
+          border-radius: 4px;
+        }
+
+        > * {
+          text-align: inherit;
+          padding: 1em;
+        }
+
+        a, button {
+          cursor: pointer;
+          border-radius: 0;
+          color: $main-text;
+
+          span.left-icon {
+            margin-right: 3px;
+          }
+
+          span.right-icon {
+            margin-left: 3px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -4,4 +4,5 @@ declare module 'better-react-spinkit'
 declare module 'foundation-sites'
 declare module 'react-styled-flexboxgrid'
 declare module 'react-string-replace'
+declare module 'react-dd-menu'
 declare let Foundation: any
