@@ -1,17 +1,18 @@
 @import '../sass/foundation_settings';
 @import '../sass/components/typography';
 
-$smartList-bgColour-alert: lighten($alert-light, 3%);
-$smartList-bgHoverColour-alert: lighten($alert-light, 1%);
+$smart-list-bg-color-alert: lighten($alert-light, 3%);
+$smart-list-bg-hover-color-alert: lighten($alert-light, 1%);
 
 :local(.SmartList) {
   .list-title {
-    @extend .section-header;
-    margin: 16px 0 16px 0;
+    @extend %section-header;
+
+    margin: 16px 0;
   }
 
   .header-row {
-    padding: 0 10px 10px 10px;
+    padding: 0 10px 10px;
   }
 
   .cursor-auto {
@@ -23,7 +24,7 @@ $smartList-bgHoverColour-alert: lighten($alert-light, 1%);
   }
 
   .vertical-align-center {
-    margin-top: 0.6%;
+    margin-top: .6%;
   }
 
   .show-all-row {
@@ -39,8 +40,10 @@ $smartList-bgHoverColour-alert: lighten($alert-light, 1%);
   }
 
   &.hover-bg {
-    .item-row:hover {
-      background-color: $main-background-hover;
+    .item-row {
+      &:hover {
+        background-color: $main-background-hover;
+      }
     }
   }
 
@@ -52,14 +55,16 @@ $smartList-bgHoverColour-alert: lighten($alert-light, 1%);
     padding: 10px;
     position: relative;
     top: 50%;
-    transition: background-color 0.15s ease-in;
+    transition: background-color .15s ease-in;
 
     .dd-menu {
       border-radius: $global-radius;
-      transition: background-color 0.2s ease-in;
+      transition: background-color .2s ease-in;
 
-      button.option {
-        padding: 10px 5px;
+      button {
+        &.option {
+          padding: 10px 5px;
+        }
       }
 
       &:hover {
@@ -70,15 +75,18 @@ $smartList-bgHoverColour-alert: lighten($alert-light, 1%);
         font-size: 24px;
       }
 
-      a:hover {
-        background-color: $sidebar;
+      a {
+        &:hover {
+          background-color: $sidebar;
+        }
       }
     }
 
     &.alert {
-      background-color: $smartList-bgColour-alert;
+      background-color: $smart-list-bg-color-alert;
+
       &:hover {
-        background-color: $smartList-bgHoverColour-alert;
+        background-color: $smart-list-bg-hover-color-alert;
       }
     }
   }

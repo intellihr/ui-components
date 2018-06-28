@@ -16,7 +16,7 @@
 
   @each $color, $value in $functional-colours {
     &.#{$color} {
-      color: map-get($value, base)
+      color: map-get($value, base);
     }
   }
 }

@@ -28,14 +28,16 @@ fieldset {
   padding-bottom: 5rem;
   width: 100%;
 
-  #offCanvasLeft {
+  #offCanvasLeft { // sass-lint:disable-line no-ids
     bottom: 0;
     height: auto;
     min-height: auto;
     position: fixed;
-    .ps__rail-y {
-      &, &:hover {
-        .ps__thumb-y {
+
+    .ps__rail-y { // sass-lint:disable-line class-name-format
+      &,
+      &:hover {
+        .ps__thumb-y { // sass-lint:disable-line class-name-format
           background-color: #c3ccd0;
         }
       }
@@ -43,6 +45,8 @@ fieldset {
   }
 }
 
-.fa.fa-xl {
-  font-size: 1.5rem;
+.fa {
+  &.fa-xl {
+    font-size: 1.5rem;
+  }
 }
