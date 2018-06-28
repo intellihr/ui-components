@@ -1,6 +1,6 @@
 import React from 'react'
 import uuid from 'uuid'
-import { times, map, take, filter, size, isEmpty, every, isNil, isArray } from 'lodash'
+import { fill, times, map, take, filter, size, isEmpty, every, isNil, isArray } from 'lodash'
 import classNames from 'classnames'
 import { Row } from 'react-styled-flexboxgrid'
 import { Callout } from '../Callout'
@@ -293,7 +293,7 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
     } = this.skeletonOptions
 
     if (showSkeleton) {
-      this.data = Array(numberOfRows).fill({})
+      this.data = fill(Array(numberOfRows), {})
     } else {
       this.data = data
     }

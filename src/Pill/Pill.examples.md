@@ -1,72 +1,72 @@
 #### Basic Label
 
 ```jsx
-<AttributeLabel
+<Pill
   text='Hello world!'
 />
 ```
 
-#### Styling of labels
+#### Styling of pills
 
 ```jsx
 <div>
-  <AttributeLabel
+  <Pill
     text='Alert!!!'
     color='alert'
   />
 
-  <AttributeLabel
+  <Pill
     text='Success'
     color='success'
   />
 
-  <AttributeLabel
+  <Pill
     text='Warning!'
     color='warning'
   />
 
-  <AttributeLabel
+  <Pill
     text='Primary'
     color='primary'
   />
 
-  <AttributeLabel
+  <Pill
     text='Neutral'
     color='neutral'
   />
 
-  <AttributeLabel
+  <Pill
     text='Secondary'
     color='secondary'
   />
 </div>
 ```
 
-#### Sizing of labels
+#### Sizing of pills
 
 ```jsx
 <div>
-  <AttributeLabel
+  <Pill
     text='Small'
     size='small'
   />
 
-  <AttributeLabel
+  <Pill
     text='Medium'
     size='medium'
   />
 
-  <AttributeLabel
+  <Pill
     text='Large'
     size='large'
   />
 </div>
 ```
 
-#### Hollow labels
+#### Hollow pills
 
 ```jsx
-<AttributeLabel
+<Pill
   text="I'm Hollow"
   isHollow
 />
@@ -75,7 +75,7 @@
 #### Combining styles
 
 ```jsx
-<AttributeLabel
+<Pill
   text="A small Hollow Alert"
   size='small'
   color='alert'

@@ -1,7 +1,7 @@
 options:
   merge-default-rules: false
   formatter: stylish
-  max-warnings: 50
+  max-warnings: 0
 files:
   include: 'src/**/*.s+(a|c)ss'
   ignore:

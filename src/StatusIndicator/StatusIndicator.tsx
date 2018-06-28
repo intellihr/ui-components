@@ -2,9 +2,9 @@ import classNames from 'classnames'
 import React from 'react'
 import { FontAwesomeIcon } from '../Icon'
 
-const style = require('./DotStatusLabel.scss')
+const style = require('./StatusIndicator.scss')
 
-export interface DotStatusLabelProps {
+export interface StatusIndicatorProps {
     /** Text to show inside the label  */
     text: string
 
@@ -21,8 +21,8 @@ export interface DotStatusLabelProps {
     isHollow?: boolean
   }
 
-export class DotStatusLabel extends React.Component<DotStatusLabelProps> {
-  public static defaultProps: Partial<DotStatusLabelProps> = {
+export class StatusIndicator extends React.Component<StatusIndicatorProps> {
+  public static defaultProps: Partial<StatusIndicatorProps> = {
     isHollow: false
   }
 
@@ -52,10 +52,9 @@ export class DotStatusLabel extends React.Component<DotStatusLabelProps> {
     } = this.props
 
     return (
-      <span className={classNames(style.DotStatusLabel, 'dot-status-label', textColor)}>
+      <span className={classNames(style.StatusIndicator, 'dot-status-label', textColor)}>
         <FontAwesomeIcon
           type={isHollow ? 'circle-o' : 'circle'}
-          size={1}
           color={color}
         />
         {text}

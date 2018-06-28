@@ -140,7 +140,7 @@ export class Comment extends React.Component<CommentProps> {
           {
             secondary: alternatingColours && (idx % 2 === 1),
             target: this.targetCommentId === commentId,
-            loggedInUser: commenterId === loggedInUserId
+            'logged-in-user': commenterId === loggedInUserId
           }
         )}>
           {this.commentHeader}

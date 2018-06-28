@@ -1,10 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
 import jQuery from 'jquery'
-import { Foundation } from 'foundation-sites/js/foundation.core'
-import { AccordionMenu } from 'foundation-sites/js/foundation.accordionMenu'
-
-Foundation.plugin(AccordionMenu, 'AccordionMenu')
 
 export interface MenuProps {
   /** HTML id to use for the menu */
