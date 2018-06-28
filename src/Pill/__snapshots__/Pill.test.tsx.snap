@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Pill /> should render a large hollow attribute label 1`] = `
+<span
+  className="label Pill alert large hollow"
+>
+  Test
+</span>
+`;
+
+exports[`<Pill /> should render an attribute label 1`] = `
+<span
+  className="label Pill alert small"
+>
+  Test
+</span>
+`;
+
+exports[`<Pill /> should render an attribute label with default values 1`] = `
+<span
+  className="label Pill neutral small"
+>
+  Test
+</span>
+`;

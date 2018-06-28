@@ -1,4 +1,4 @@
-:local(.DotStatusLabel) {
+:local(.StatusIndicator) {
   font-size: .9375rem;
   font-weight: normal;
   vertical-align: bottom;
@@ -6,6 +6,7 @@
   .fa {
     bottom: 2px;
     font-size: xx-small;
+    margin-right: 3px;
     position: relative;
   }
 

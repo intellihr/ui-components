@@ -96,6 +96,8 @@ class CustomOption extends React.PureComponent {
 ## Indented smart list cell content
 
 ```jsx
+const { ListColumn } = require('../SmartList/ListColumn');
+
 <SmartList
   data={[
     {

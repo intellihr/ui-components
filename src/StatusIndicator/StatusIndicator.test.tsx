@@ -1,13 +1,13 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { DotStatusLabel } from './DotStatusLabel'
+import { StatusIndicator } from './StatusIndicator'
 
-describe('<DotStatusLabel />', () => {
+describe('<StatusIndicator />', () => {
   it('should render a dot status label with default values', () => {
     const wrapper = shallow(
-      <DotStatusLabel
-        statusText='Test'
+      <StatusIndicator
+        text='Test'
       />
     )
 
@@ -16,8 +16,8 @@ describe('<DotStatusLabel />', () => {
 
   it('should render a dot status label', () => {
     const wrapper = shallow(
-      <DotStatusLabel
-        statusText='Test'
+      <StatusIndicator
+        text='Test'
         color='rgb(192, 48, 0)'
       />
     )
@@ -27,8 +27,8 @@ describe('<DotStatusLabel />', () => {
 
   it('should render a hollow dot status label', () => {
     const wrapper = shallow(
-      <DotStatusLabel
-        statusText='Test'
+      <StatusIndicator
+        text='Test'
         isHollow
       />
     )

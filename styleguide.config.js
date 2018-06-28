@@ -25,20 +25,21 @@ module.exports = {
     {
       name: 'UI Components',
       components: [
-        'src/AttributeLabel/AttributeLabel.tsx',
         'src/Avatar/Avatar.tsx',
         'src/Callout/Callout.tsx',
         'src/Comment/Comment.tsx',
-        'src/DotStatusLabel/DotStatusLabel.tsx',
         'src/Grid/Grid.tsx',
         'src/Icon/Icon.tsx',
+        'src/IndentedElement/IndentedElement',
         'src/InputLabel/InputLabel.tsx',
         'src/Legend/Legend.tsx',
         'src/Menu/Menu.tsx',
         'src/Navigation/Navigation.tsx',
+        'src/Pill/Pill.tsx',
         'src/Skeleton/Skeleton.tsx',
         'src/SmartList/SmartList.tsx',
         'src/Spinner/Spinner.tsx',
+        'src/StatusIndicator/StatusIndicator.tsx',
         'src/Toast/Toast.tsx',
         'src/Tooltip/Tooltip.tsx'
       ],
