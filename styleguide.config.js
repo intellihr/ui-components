@@ -40,6 +40,7 @@ module.exports = {
         'src/Skeleton/Skeleton.tsx',
         'src/Spinner/Spinner.tsx',
         'src/StatusIndicator/StatusIndicator.tsx',
+        'src/Tabs/Tabs.tsx',
         'src/Toast/Toast.tsx',
         'src/Tooltip/Tooltip.tsx'
       ],
