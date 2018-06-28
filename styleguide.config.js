@@ -4,6 +4,9 @@ const docGenTypescript = require('react-docgen-typescript')
 
 module.exports = {
   title: 'IntelliHR Design System',
+  require: [
+    path.resolve(__dirname, 'src/index.ts')
+  ],
   propsParser: docGenTypescript.withCustomConfig('./tsconfig.json').parse,
   getComponentPathLine (componentPath) {
     const name = path.basename(componentPath, '.tsx')
