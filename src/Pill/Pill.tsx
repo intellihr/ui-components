@@ -1,9 +1,9 @@
 import classNames from 'classnames'
 import React from 'react'
 
-const style = require('./AttributeLabel.scss')
+const style = require('./Pill.scss')
 
-export interface AttributeLabelProps {
+export interface PillProps {
   /** Text to show inside the label  */
   text: string
 
@@ -20,8 +20,8 @@ export interface AttributeLabelProps {
   size?: 'small' | 'medium' | 'large'
 }
 
-export class AttributeLabel extends React.Component<AttributeLabelProps> {
-  public static defaultProps: Partial<AttributeLabelProps> = {
+export class Pill extends React.Component<PillProps> {
+  public static defaultProps: Partial<PillProps> = {
     color: 'neutral',
     isHollow: false,
     size: 'small'
@@ -38,7 +38,7 @@ export class AttributeLabel extends React.Component<AttributeLabelProps> {
 
     return (
       <span
-        className={classNames(className, 'label', style.AttributeLabel, color, size, {'hollow': isHollow})}
+        className={classNames(className, 'label', style.Pill, color, size, {'hollow': isHollow})}
       >
         {text}
       </span>

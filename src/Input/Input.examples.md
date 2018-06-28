@@ -1,8 +1,10 @@
-# Input
-
-## Basic Input
+#### Basic Input
 
 ```jsx
+const { TextInput } = require('./TextInput');
+const { NumberInput } = require('./NumberInput');
+const { CheckboxInput } = require('./CheckboxInput');
+
 initialState = { value: false };
 
   <div>
@@ -20,9 +22,12 @@ initialState = { value: false };
   </div>
 ```
 
-## Input with Attributes
+#### Input with Attributes
 
 ```jsx
+const { TextInput } = require('./TextInput');
+const { NumberInput } = require('./NumberInput');
+
   <div>
     Text
     <TextInput
@@ -38,9 +43,14 @@ initialState = { value: false };
   </div>
 ```
 
-## Input with Icon
+#### Input with Icon
 
 ```jsx
+const { TextInput } = require('./TextInput');
+const { NumberInput } = require('./NumberInput');
+const { FontAwesomeIcon } = require('../Icon/FontAwesomeIcon');
+const { IntelliIcon } = require('../Icon/IntelliIcon');
+
   <div>
     Text
     <TextInput 
@@ -53,9 +63,12 @@ initialState = { value: false };
   </div>
 ```
 
-## Input with highlightOnFocus
+#### Input with highlightOnFocus
 
 ```jsx
+const { TextInput } = require('./TextInput');
+const { NumberInput } = require('./NumberInput');
+
    <div>
      Text
      <TextInput 
@@ -70,40 +83,47 @@ initialState = { value: false };
    </div>
 ```
 
-## Input with handleBlur
+#### Input with handleChange
 
 ```jsx
+const { TextInput } = require('./TextInput');
+const { NumberInput } = require('./NumberInput');
+
    <div>
      Text
      <TextInput 
        value='Blur me!'
-       handleBlur={(e, value) => alert(`
+       handleChange={(e) => alert(`
             event: ${e}
-            value: ${value}
+            value: ${e.target.value}
        `)}
      />
      Number
      <NumberInput 
        value={987654321}
-       handleBlur={(e, value) => alert(`
+       handleChange={(e) => alert(`
            event: ${e}
-           value: ${value}
+           value: ${e.target.value}
        `)}
      />
    </div>
 ```
 
-## Invalid Input
+#### Invalid Input
 
 ```jsx
+const { TextInput } = require('./TextInput');
+
   <TextInput 
     isInvalid
   />
 ```
 
-## Disabled Input
+#### Disabled Input
 
 ```jsx
+const { TextInput } = require('./TextInput');
+
   <TextInput
     isDisabled
    />

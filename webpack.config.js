@@ -1,6 +1,7 @@
 const nodeExternals = require('webpack-node-externals')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const path = require('path')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -10,7 +11,11 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.jsx', '.js']
   },
   plugins: [
-    new ExtractTextPlugin('[name].css')
+    new ExtractTextPlugin('[name].css'),
+    new CopyWebpackPlugin([{
+      from: path.resolve(__dirname, 'src/sass'),
+      to: path.resolve(__dirname, 'dist/sass')
+    }])
   ],
   entry: {
     index: './src/index.ts',
@@ -55,6 +60,16 @@ module.exports = {
             loader: 'awesome-typescript-loader'
           }
         ]
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules\/(?!(react-styleguidist|foundation-sites|emoji-mart)\/).*/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            cacheDirectory: true
+          }
+        }
       },
       {
         test: /\.css$/,

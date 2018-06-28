@@ -1,6 +1,4 @@
-# Spinner
-
-## Three Bounce Spinner
+#### Three Bounce Spinner
 
 ```jsx
   <Spinner
@@ -9,7 +7,7 @@
   />
 ```
 
-## Circle Spinner
+#### Circle Spinner
 
 ```jsx
   <Spinner
@@ -18,9 +16,9 @@
   />
 ```
 
-## Position Styles
+#### Position Styles
 
-### Left
+##### Left
 
 ```jsx
   <Spinner
@@ -29,7 +27,7 @@
   />
 ```
 
-### Center
+##### Center
 
 ```jsx
   <Spinner
@@ -38,7 +36,7 @@
   />
 ```
 
-### Right
+##### Right
 
 ```jsx
   <Spinner
@@ -47,7 +45,7 @@
   />
 ```
 
-### Inline
+##### Inline
 
 ```jsx
   <div>
@@ -60,7 +58,7 @@
   </div>
 ```
 
-### Page
+##### Page
 
 ```jsx
 initialState = { showSpinner: false };

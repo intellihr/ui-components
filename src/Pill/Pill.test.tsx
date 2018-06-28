@@ -1,12 +1,12 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { AttributeLabel } from './AttributeLabel'
+import { Pill } from './Pill'
 
-describe('<AttributeLabel />', () => {
+describe('<Pill />', () => {
   it('should render an attribute label with default values', () => {
     const wrapper = shallow(
-      <AttributeLabel
+      <Pill
         text='Test'
       />
     )
@@ -16,10 +16,9 @@ describe('<AttributeLabel />', () => {
 
   it('should render an attribute label', () => {
     const wrapper = shallow(
-      <AttributeLabel
+      <Pill
         text='Test'
         color='alert'
-        textColor='white'
       />
     )
 
@@ -28,10 +27,9 @@ describe('<AttributeLabel />', () => {
 
   it('should render a large hollow attribute label', () => {
     const wrapper = shallow(
-      <AttributeLabel
+      <Pill
         text='Test'
         color='alert'
-        textColor='white'
         isHollow
         size='large'
       />

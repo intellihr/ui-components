@@ -34,10 +34,14 @@ h6 {
   margin-bottom: .4rem;
 }
 
-.section-header {
+%section-header {
   color: $main-text;
   font-size: 1.125em;
   font-weight: 600;
+}
+
+.section-header {
+  @extend %section-header
 }
 
 p.page-subheader {

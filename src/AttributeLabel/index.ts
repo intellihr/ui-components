@@ -1,1 +1,0 @@
-export { AttributeLabel } from './AttributeLabel'

@@ -18,12 +18,12 @@
     border-radius: .75rem;
     flex-grow: 1;
     padding: .85rem 1.2rem;
-    
+
     &.secondary {
       background-color: #fff8dc;
     }
 
-    &.loggedInUser {
+    &.logged-in-user {
       background-color: tint($secondary-base, 95%);
     }
 

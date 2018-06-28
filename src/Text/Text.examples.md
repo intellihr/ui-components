@@ -1,6 +1,4 @@
-# Text
-
-## Basic Text
+#### Basic Text
 
 ```jsx
   <Text>
@@ -8,7 +6,7 @@
   </Text>
 ```
 
-## Skeleton Text
+#### Skeleton Text
 
 ```jsx
   <Text

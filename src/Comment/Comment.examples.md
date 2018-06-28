@@ -1,6 +1,4 @@
-## Comment
-### Someone else's comment
-#### Should add more examples when there will be time
+#### Someone else's comment
 ```jsx
 <Comment
   comment={{
@@ -19,7 +17,7 @@
 />
 ```
 
-### Own comment
+#### Own comment
 ```jsx
 <Comment
   comment={{

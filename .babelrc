@@ -1,3 +1,14 @@
 {
-  "presets": [ "env" ]
+  "presets": [
+    [
+      "env", {
+	"targets": {
+	  "browsers": "defaults"
+	}
+      }
+    ]
+  ],
+  "plugins": [
+    "syntax-dynamic-import"
+  ]
 }

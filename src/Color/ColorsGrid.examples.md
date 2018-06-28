@@ -1,11 +1,11 @@
-### Brand Colors
+#### Brand Colors
 ```jsx
 const { brandColorsArray } = require('./Color');
 
 <ColorsGrid colors={brandColorsArray} />
 ```
 
-### App Colors
+#### App Colors
 ```jsx
 const { appColorsArray } = require('./Color');
 

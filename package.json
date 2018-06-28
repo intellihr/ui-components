@@ -1,7 +1,7 @@
 {
   "name": "@intellihr/ui-components",
   "description": "A common React components library that is used in our company",
-  "version": "1.0.5-beta.49",
+  "version": "1.0.5-beta.50",
   "main": "./dist/",
   "types": "./es/index.d.ts",
   "files": [
@@ -9,6 +9,7 @@
     "dist"
   ],
   "peerDependencies": {
+    "foundation-sites": "^6.4.3",
     "react": "^16.3.1",
     "react-dom": "^16.3.1"
   },
@@ -33,6 +34,7 @@
     "uuid": "3.2.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0-beta.51",
     "@epegzz/sass-vars-loader": "3.2.3",
     "@intellihr/standard": "11.0.4",
     "@types/capitalize": "1.0.1",
@@ -41,7 +43,7 @@
     "@types/color": "3.0.0",
     "@types/emoji-mart": "^2.2.1",
     "@types/enzyme": "3.1.9",
-    "@types/foundation-sites": "6.4.3",
+    "@types/foundation-sites": "^6.4.3",
     "@types/jest": "22.2.2",
     "@types/jquery": "3.3.1",
     "@types/lodash": "4.14.107",
@@ -53,11 +55,15 @@
     "@types/uuid": "^3.4.3",
     "awesome-typescript-loader": "5.0.0-1",
     "babel-jest": "^23.0.1",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-preset-env": "^1.7.0",
     "chart.js": "2.7.2",
     "classnames": "2.2.5",
     "color": "3.0.0",
     "compass-mixins": "0.12.10",
+    "copy-webpack-plugin": "^4.5.2",
     "css-loader": "0.28.11",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "npm:enzyme-react-adapter-future",
@@ -113,7 +119,7 @@
     "lint:css": "stylelint \"src/**/*.{ts,tsx}\"",
     "lint:sass": "sass-lint --verbose",
     "lint:sass:fix": "sass-lint-auto-fix -c .sass-lint.yml --verbose",
-    "build": "npm run clean && webpack && mkdir -p dist/sass && cp -r src/sass dist",
+    "build": "npm run clean && webpack",
     "build:watch": "webpack --watch",
     "styleguide:build": "styleguidist build",
     "styleguide": "styleguidist server",

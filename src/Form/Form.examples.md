@@ -1,7 +1,6 @@
-# Form
-
 ```jsx
-initialState = { textInputValue: '' };
+const { TextInput } = require('../Input');
+const initialState = { textInputValue: '' };
 
   <Form
     handleSubmit={() => alert(`Test input: ${state.textInputValue}`)}
