@@ -48,6 +48,8 @@ const { NumberInput } = require('./NumberInput');
 ```jsx
 const { TextInput } = require('./TextInput');
 const { NumberInput } = require('./NumberInput');
+const { FontAwesomeIcon } = require('../Icon/FontAwesomeIcon');
+const { IntelliIcon } = require('../Icon/IntelliIcon');
 
   <div>
     Text

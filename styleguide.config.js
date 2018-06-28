@@ -32,6 +32,7 @@ module.exports = {
         'src/DotStatusLabel/DotStatusLabel.tsx',
         'src/Grid/Grid.tsx',
         'src/Icon/Icon.tsx',
+        'src/IndentedElement/IndentedElement',
         'src/InputLabel/InputLabel.tsx',
         'src/Legend/Legend.tsx',
         'src/Menu/Menu.tsx',
