@@ -2,8 +2,9 @@
 @import '../../sass/components/typography';
 
 :local(.ListHeader) {
-  @extend .section-header;
+  @extend %section-header;
+
   color: $main-text-light;
-  font-size: 0.9375rem;
+  font-size: .9375rem;
   font-weight: 600;
 }
