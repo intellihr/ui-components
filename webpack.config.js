@@ -57,13 +57,18 @@ module.exports = {
         exclude: /(node_modules)/,
         use: [
           {
-            loader: 'awesome-typescript-loader'
+            loader: 'awesome-typescript-loader',
+            options: {
+              useBabel: true,
+              useCache: true,
+              cacheDirectory: path.resolve(__dirname, 'node_modules/.cache/awcache')
+            }
           }
         ]
       },
       {
         test: /\.js$/,
-        exclude: /node_modules\/(?!(react-styleguidist|foundation-sites|emoji-mart)\/).*/,
+        exclude: /node_modules\/(?!(react-styleguidist|foundation-sites)\/).*/,
         use: {
           loader: 'babel-loader',
           options: {

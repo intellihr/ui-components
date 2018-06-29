@@ -5,6 +5,7 @@ const docGenTypescript = require('react-docgen-typescript')
 module.exports = {
   title: 'IntelliHR Design System',
   require: [
+    require.resolve('babel-polyfill'),
     path.resolve(__dirname, 'src/index.ts')
   ],
   propsParser: docGenTypescript.withCustomConfig('./tsconfig.json').parse,
