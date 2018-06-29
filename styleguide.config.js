@@ -38,7 +38,6 @@ module.exports = {
         'src/Navigation/Navigation.tsx',
         'src/Pill/Pill.tsx',
         'src/Skeleton/Skeleton.tsx',
-        'src/SmartList/SmartList.tsx',
         'src/Spinner/Spinner.tsx',
         'src/StatusIndicator/StatusIndicator.tsx',
         'src/Toast/Toast.tsx',
@@ -72,6 +71,13 @@ module.exports = {
           components: [
             'src/ReportHeader/ReportHeader.tsx',
             'src/ReportInfo/ReportInfo.tsx'
+          ]
+        },
+        {
+          name: 'Tables',
+          components: [
+            'src/DataTable/DataTable.tsx',
+            'src/SmartList/SmartList.tsx'
           ]
         },
         {

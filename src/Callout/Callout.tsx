@@ -3,7 +3,7 @@ import { isEmpty } from 'lodash'
 import React from 'react'
 
 export interface CalloutProps {
-  type: 'info' | 'success' | 'error' | 'warning' | 'preview' | ''
+  type: 'info' | 'success' | 'error' | 'warning' | 'preview' | 'no-data' | ''
   children?: any
   className?: string
   message?: string

@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DataTablePagination /> Pagination with few pages should match the snapshot 1`] = `
+<div
+  className="-pagination"
+>
+  <div
+    className="page-details"
+  >
+    Showing 
+    50
+     to 
+    70
+     of 
+    70
+     entries
+  </div>
+  <div
+    className="page-navigation"
+  >
+    <button
+      className="previous -btn"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      Previous
+    </button>
+    <button
+      className="page-button -btn"
+      key="0"
+      onClick={[Function]}
+    >
+      1
+    </button>
+    <button
+      className="page-button -btn"
+      key="1"
+      onClick={[Function]}
+    >
+      2
+    </button>
+    <button
+      className="current page-button -btn"
+      key="2"
+      onClick={[Function]}
+    >
+      3
+    </button>
+    <button
+      className="next -btn"
+      disabled={true}
+      onClick={[Function]}
+      type="button"
+    >
+      Next
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<DataTablePagination /> Pagination with many pages should match the snapshot 1`] = `
+<div
+  className="-pagination"
+>
+  <div
+    className="page-details"
+  >
+    Showing 
+    30
+     to 
+    40
+     of 
+    295
+     entries
+  </div>
+  <div
+    className="page-navigation"
+  >
+    <button
+      className="previous -btn"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      Previous
+    </button>
+    <button
+      className="page-button -btn"
+      key="0"
+      onClick={[Function]}
+    >
+      1
+    </button>
+    <button
+      className="page-button -btn"
+      key="1"
+      onClick={[Function]}
+    >
+      2
+    </button>
+    <button
+      className="page-button -btn"
+      key="2"
+      onClick={[Function]}
+    >
+      3
+    </button>
+    <button
+      className="current page-button -btn"
+      key="3"
+      onClick={[Function]}
+    >
+      4
+    </button>
+    <button
+      className="page-button -btn"
+      key="4"
+      onClick={[Function]}
+    >
+      5
+    </button>
+    <span
+      className="ellipsis"
+      key="5"
+    >
+      ...
+    </span>
+    <button
+      className="page-button -btn"
+      key="6"
+      onClick={[Function]}
+    >
+      30
+    </button>
+    <button
+      className="next -btn"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      Next
+    </button>
+  </div>
+</div>
+`;
