@@ -41,11 +41,11 @@ const TabTitleAnchor = BaseAnchor.extend`
   }
   
   .left-icon {
-    margin-right: 3px;
+    margin-right: 5px;
   }
   
   .right-icon {
-    margin-left: 3px;
+    margin-left: 5px;
   }
 `
 

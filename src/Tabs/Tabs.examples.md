@@ -15,10 +15,35 @@ const { FontAwesomeIcon } = require('../Icon');
     },
     {
       title: 'Tab 3',
-      leftIconComponent: <FontAwesomeIcon type='hand-o-right' />,
-      rightIconComponent: <FontAwesomeIcon type='hand-o-left' />,
+      leftComponent: <FontAwesomeIcon type='hand-o-right' />,
+      rightComponent: <FontAwesomeIcon type='hand-o-left' />,
       content: <h2>BOO</h2>
     }
   ]}
+/>
+```
+
+#### Open to a specific tab
+
+```jsx
+const { FontAwesomeIcon } = require('../Icon');
+
+<Tabs
+  tabs={[
+    {
+      title: 'Tab 1',
+      content: 'Some cool content'
+    },
+    {
+      title: 'Default to this tab',
+      content: 'Some more cool content',
+      anchorId: 'default'
+    },
+    {
+      title: 'Tab 3',
+      content: 'Uncool content'
+    }
+  ]}
+  startTab={1}
 />
 ```

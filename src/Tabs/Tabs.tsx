@@ -1,5 +1,5 @@
 import React, { MouseEvent } from 'react'
-import { map, toString, isNumber, findIndex } from 'lodash'
+import { map, isNumber, findIndex } from 'lodash'
 import classNames from 'classnames'
 import { TabContent, TabsContainer, TabTitle, TabTitleAnchor, TabTitles } from './style'
 
@@ -8,10 +8,10 @@ export interface TabDefinition {
   title?: string
 
   /** Component positioned to the left of the title */
-  leftIconComponent?: React.ReactType
+  leftComponent?: React.ReactType
 
   /** Component positioned to the right of the title */
-  rightIconComponent?: React.ReactType
+  rightComponent?: React.ReactType
 
   /** Anchor id used when clicking between tabs */
   anchorId?: string
@@ -34,7 +34,7 @@ export interface TabsProps {
   useAnchors?: boolean
 
   /** The tab to start opened to (by anchorId or index) */
-  startTab: string | number
+  startTab?: string | number
 }
 
 export interface TabsState {
@@ -42,33 +42,38 @@ export interface TabsState {
 }
 
 export class Tabs extends React.Component<TabsProps, TabsState> {
-  public state: TabsState = {
-    currentTabIndex: 0
-  }
-
   public static defaultProps: Partial<TabsProps> = {
     tabbingStyle: 'horizontal',
     useAnchors: false
   }
 
-  componentDidUpdate (prevProps: TabsProps) {
-    if (prevProps.startTab !== this.props.startTab) {
-      this.clickTabHandler(this.props.startTab)
+  constructor (props: TabsProps) {
+    super(props)
+    this.state = {
+      currentTabIndex: this.tabIndexForStartTab(this.props.startTab)
     }
   }
 
-  clickTabHandler = (newTab: number | string) => {
+  tabIndexForStartTab = (newTab?: number | string): number => {
     const { tabs } = this.props
 
-    let newIndex = 0
+    if (!newTab) {
+      return 0
+    }
 
     if (isNumber(newTab)) {
-      newIndex = newTab
-    } else {
-      const find = findIndex(tabs, { 'anchorId': newTab })
-
-      if (find !== -1) newIndex = find
+      return newTab
     }
+
+    const find = findIndex(tabs, { 'anchorId': newTab })
+
+    return (find === -1) ? 0 : find
+  }
+
+  clickTabHandler = (e: MouseEvent<HTMLAnchorElement>) => {
+    e.target
+
+    const newIndex = this.tabIndexForStartTab(e.target)
 
     this.setState({ currentTabIndex: newIndex })
   }
@@ -107,9 +112,9 @@ export class Tabs extends React.Component<TabsProps, TabsState> {
         href={href}
         onClick={() => this.clickTabHandler(index)}
       >
-        {this.iconComponent('left', tab.leftIconComponent)}
+        {this.iconComponent('left', tab.leftComponent)}
         {tab.title}
-        {this.iconComponent('right', tab.rightIconComponent)}
+        {this.iconComponent('right', tab.rightComponent)}
       </TabTitleAnchor>
     )
   }
