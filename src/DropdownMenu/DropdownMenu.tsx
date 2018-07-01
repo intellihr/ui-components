@@ -1,16 +1,71 @@
+import uuid from 'uuid'
 import React from 'react'
-import DropdownPane from 'react-dd-menu'
 import { map, get } from 'lodash'
 import classNames from 'classnames'
+import DropdownPane from 'react-dd-menu'
 import { Anchor } from '../Anchor'
-import uuid from 'uuid'
 const style = require('./style.scss')
 
 export interface CalloutState {
   isMenuOpen: boolean
 }
 
-export class DropdownMenu extends React.PureComponent<any, CalloutState> {
+export type dropdownMenuAlignments =  'left' | 'right' | 'center'
+export type sectionColors = 'alert' | 'success' | 'warning' | 'primary' | 'secondary' | 'neutral'
+
+export interface sectionProps {
+  /** what text to show in a section */
+  text?: string,
+  /** a component that is shown to the left of the text */
+  leftComponent?: JSX.Element,
+  /** a component that is shown to the right of the text */
+  rightComponent?: JSX.Element,
+  /** a link that will be navigated to on click */
+  href?: string,
+  /** onClick event */
+  onClick?: (event: React.SyntheticEvent<any>) => void
+  /** an override component that will render instead of the inbuilt components*/
+  component?: JSX.Element,
+  /** makes the text red on hover instead of blue */
+  hoverAlert: boolean,
+  /** show an element that cannot be clicked */
+  nonClickable: boolean,
+  /** shows the section as the desired colored section */
+  color: sectionColors,
+  /** an optional section ID */
+  id: string
+}
+
+export interface DropdownMenuProps {
+  dropdownOverrides?: {
+    /** What direction in respect to the parent to open and animate the dropdown */
+    align?: dropdownMenuAlignments,
+    /** Which direction to animate from the parent */
+    animAlign?: dropdownMenuAlignments,
+    /** Which direction to open from the parent */
+    menuAlign?: dropdownMenuAlignments,
+    /** Open the dropdown upwards if true */
+    upwards?: boolean,
+    /** If opening and closing should be animated */
+    animate?: boolean,
+    /** The amount of time in ms to end the CSSTransitionGroup */
+    enterTimeout?: number,
+    /** The amount of time in ms to end the CSSTransitionGroup */
+    leaveTimeout?: number,
+    /** If the menu should close when you click inside the menu */
+    closeOnInsideClick?: boolean,
+    /** If the menu should close when you outside inside the menu */
+    closeOnOutsideClick?: boolean
+  },
+  /** Any custom classNames */
+  className?: string,
+  /** The parent component that opens the dropdown */
+  toggleComponent: JSX.Element,
+  /** The sections to render */
+  sections: sectionProps[]
+}
+
+export class DropdownMenu extends React.PureComponent<DropdownMenuProps, CalloutState> {
   public state: CalloutState = { isMenuOpen: false }
 
   toggle = () => {
@@ -36,54 +91,54 @@ export class DropdownMenu extends React.PureComponent<any, CalloutState> {
     )
   }
 
-  getIcon = (component: any, alignment: 'left' | 'right') => {
-    return (
-      <span className={`${alignment}-icon`}>
+  getSideComponent = (component: any, alignment: 'left' | 'right') => {
+    if (component) {
+      return (
+        <span className={`${alignment}-component`}>
         {component}
       </span>
-    )
+      )
+    }
   }
 
-  renderOptions = () => {
+  renderSections = () => {
     const {
-      options
+      sections
     } = this.props
 
-    return map(options, (option) => {
+    return map(sections, (option) => {
       const {
         component,
         text,
         nonClickable,
         color,
         hoverAlert,
-        leftIcon,
-        rightIcon,
+        leftComponent,
+        rightComponent,
         ...props
       } = option
 
-      let Component = component
-      if(!Component && nonClickable ) {
-        Component = 'span'
-      } if (!Component) {
-        Component = get(option, 'href') ? Anchor : 'button'
-      }
-
       const classes = classNames({'non-clickable': nonClickable, 'alert-on-hover': hoverAlert}, color)
-      if(leftIcon || text || rightIcon) {
+      if(component) {
         return (
           <li key={props.id || uuid.v4()} className={classes}>
-            <Component {...props}>
-              {this.getIcon(leftIcon, 'left')}
-              {text}
-              {this.getIcon(rightIcon, 'right')}
-            </Component>
+            {component}
           </li>
         )
       }
 
+      let Component: typeof Anchor | string = 'span'
+      if (!nonClickable) {
+        Component = get(option, 'href') ? Anchor : 'button'
+      }
+
       return (
         <li key={props.id || uuid.v4()} className={classes}>
-          <Component {...props} />
+          <Component {...props}>
+            {this.getSideComponent(leftComponent, 'left')}
+            {text}
+            {this.getSideComponent(rightComponent, 'right')}
+          </Component>
         </li>
       )
     })
@@ -95,21 +150,20 @@ export class DropdownMenu extends React.PureComponent<any, CalloutState> {
     } = this.state
 
     const {
-      toggleComponent,
-      options,
       className,
-      ...props
+      dropdownOverrides
     } = this.props
 
     return (
       <DropdownPane
+        {...dropdownOverrides}
         isOpen={isMenuOpen}
         close={this.close}
         toggle={this.toggleComponent()}
         className={classNames(style.dropdownMenu, className)}
-        {...props}
+        inverse={false}
       >
-        {this.renderOptions()}
+        {this.renderSections()}
       </DropdownPane>
     )
   }

@@ -3,7 +3,7 @@
 ```jsx
 <DropdownMenu
   toggleComponent={<Button>Basic Dropdown</Button>}
-  options={[
+  sections={[
     {
       text: 'Item 1',
       onClick: () => alert('Item 1'),
@@ -21,7 +21,7 @@
 ```jsx
 <DropdownMenu
   toggleComponent={<Button>Colored Dropdown</Button>}
-  options={[
+  sections={[
     {
       text: 'Alert',
       onClick: () => console.log('test'),
@@ -62,8 +62,10 @@
 <React.Fragment>
   <DropdownMenu
     toggleComponent={<Button>Left</Button>}
-    align='left'
-    options={[
+    dropdownOverrides={{
+      align:'left'
+    }}
+    sections={[
       {
         text: 'Item 1',
       }
@@ -71,8 +73,10 @@
   />
   <DropdownMenu
     toggleComponent={<Button>Center</Button>}
-    align='center'
-    options={[
+    dropdownOverrides={{
+      align:'center'
+    }}
+    sections={[
       {
         text: 'Item 1',
       }
@@ -80,8 +84,10 @@
   />
   <DropdownMenu
     toggleComponent={<Button>Right</Button>}
-    align='right'
-    options={[
+    dropdownOverrides={{
+      align:'right'
+    }}
+    sections={[
       {
         text: 'Item 1'
       }
@@ -95,19 +101,19 @@
 ```jsx
 <DropdownMenu
    toggleComponent={<Button>Custom</Button>}
-   options={[
+   sections={[
      {
        text: 'Item 1'
      },
      {
-       component: 'hr'
+       component: <hr/>
      },
      {
-       text: 'Item 2',
+       text: 'Item 2'
      },
      {
        text: 'Item 3',
-       component: Callout
+       component: <Callout>asdf</Callout>
      }
    ]}
 />
@@ -118,7 +124,7 @@
 ```jsx
 <DropdownMenu
    toggleComponent={<Button>Non Clickable Component</Button>}
-   options={[
+   sections={[
      {
        text: 'no click',
        nonClickable: true
@@ -132,7 +138,7 @@
 ```jsx
 <DropdownMenu
    toggleComponent={<Button>Alert</Button>}
-   options={[
+   sections={[
      {
        text: 'hover over me',
        hoverAlert: true
@@ -141,15 +147,17 @@
 />
 ```
 
-## Icon Component
+## left and right Components
 
 ```jsx
+const { FontAwesomeIcon } = require('../Icon');
+
 <DropdownMenu
    toggleComponent={<Button>Icons</Button>}
-   options={[
+   sections={[
      {
-       leftIcon: <FontAwesomeIcon type='hand-o-right' />,
-       rightIcon: <FontAwesomeIcon type='hand-o-left' />,
+       leftComponent: <FontAwesomeIcon type='hand-o-right' />,
+       rightComponent: <FontAwesomeIcon type='hand-o-left' />,
        text: 'Surrounded by icons'
      }
    ]}
@@ -159,6 +167,8 @@
 ## Profile Menu Example
 
 ```jsx
+const { FontAwesomeIcon, IntelliIcon } = require('../Icon');
+
 <DropdownMenu
    toggleComponent={
      <Avatar
@@ -166,38 +176,40 @@
        size='medium'
      />
    }
-   align='left'
-   options={[
+   dropdownOverrides={{
+     align:'left'
+   }}
+   sections={[
      {
        text: 'John Doe',
        nonClickable: true,
        style: {'fontWeight':600}
      },
      {
-       component: 'hr'
+       component: <hr/>
      },
      {
        text: 'My Profile',
-       leftIcon: <IntelliIcon type='avatar' />
+       leftComponent: <IntelliIcon type='avatar' />
      },
      {
        text: 'Change Password',
-       leftIcon: <IntelliIcon type='security' />
+       leftComponent: <IntelliIcon type='security' />
      },
      {
        text: 'Update Profile Picture',
-       leftIcon: <FontAwesomeIcon type='camera-outline' />
+       leftComponent: <FontAwesomeIcon type='camera-outline' />
      },
      {
        text: 'User Disclaimer',
-       leftIcon: <IntelliIcon type='shield' />
+       leftComponent: <IntelliIcon type='shield' />
      },
      {
-       component: 'hr'
+       component: <hr/>
      },
      {
        text: 'Log Out',
-       leftIcon: <FontAwesomeIcon type='power-off' />,
+       leftComponent: <FontAwesomeIcon type='power-off' />,
        href: 'google.com',
        hoverAlert: true
      }

@@ -41,7 +41,8 @@ module.exports = {
         'src/Spinner/Spinner.tsx',
         'src/StatusIndicator/StatusIndicator.tsx',
         'src/Toast/Toast.tsx',
-        'src/Tooltip/Tooltip.tsx'
+        'src/Tooltip/Tooltip.tsx',
+        'src/DropdownMenu/DropdownMenu.tsx'
       ],
       sections: [
         {
