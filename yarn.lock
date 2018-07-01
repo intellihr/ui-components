@@ -8371,9 +8371,9 @@ react-string-replace@0.4.1:
   dependencies:
     lodash "^4.17.4"
 
-react-styled-flexboxgrid@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/react-styled-flexboxgrid/-/react-styled-flexboxgrid-2.2.0.tgz#2b1ea9dba28da8c493c0f576b4d5b2dc8a07a30f"
+react-styled-flexboxgrid@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/react-styled-flexboxgrid/-/react-styled-flexboxgrid-2.4.0.tgz#208474f068b12abf4550c3918c9481ab750cc79e"
   dependencies:
     lodash.isinteger "^4.0.4"
 
