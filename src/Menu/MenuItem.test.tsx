@@ -4,7 +4,7 @@ import { IntelliIcon } from '../Icon'
 import { MenuItem } from './MenuItem'
 
 describe('<MenuItem />', () => {
-  it(`should render a simple menu item`, () => {
+  it('should render a simple menu item', () => {
     const wrapper = shallow(
       <MenuItem
         label='Test menu item'
@@ -14,7 +14,7 @@ describe('<MenuItem />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a a menu item with a link`, () => {
+  it('should render a a menu item with a link', () => {
     const wrapper = shallow(
       <MenuItem
         url='www.google.com'
@@ -25,7 +25,7 @@ describe('<MenuItem />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a menu item with active state`, () => {
+  it('should render a menu item with active state', () => {
     const wrapper = shallow(
       <MenuItem
         url='www.google.com'
@@ -37,12 +37,25 @@ describe('<MenuItem />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a menu item with Icon`, () => {
+  it('should render a menu item with Icon', () => {
     const wrapper = shallow(
       <MenuItem
         url='www.google.com'
         label='Test menu item'
         icon={<IntelliIcon type={'clock'} />}
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should render a menu item with a custom class name', () => {
+    const wrapper = shallow(
+      <MenuItem
+        url='www.google.com'
+        label='Test menu item'
+        icon={<IntelliIcon type={'clock'} />}
+        className='custom-class-name'
       />
     )
 
