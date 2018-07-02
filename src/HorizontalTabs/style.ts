@@ -40,11 +40,11 @@ const HorizontalTabTitleAnchor = BaseAnchor.extend`
     color: ${getColor('primary-base')};
   }
   
-  .left-icon {
+  .left-component {
     margin-right: 5px;
   }
   
-  .right-icon {
+  .right-component {
     margin-left: 5px;
   }
 `

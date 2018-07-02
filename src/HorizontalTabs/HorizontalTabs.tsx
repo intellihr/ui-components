@@ -1,7 +1,13 @@
 import React, { MouseEvent } from 'react'
 import { findIndex, isNumber, map, toNumber } from 'lodash'
 import classNames from 'classnames'
-import { HorizontalTabContent, HorizontalTabsContainer, HorizontalTabTitle, HorizontalTabTitleAnchor, HorizontalTabTitles } from './style'
+import {
+  HorizontalTabContent,
+  HorizontalTabsContainer,
+  HorizontalTabTitle,
+  HorizontalTabTitleAnchor,
+  HorizontalTabTitles
+} from './style'
 
 export interface HorizontalTabDefinition {
   /** String title to use for this tab */
@@ -66,13 +72,13 @@ export class HorizontalTabs extends React.Component<HorizontalTabsProps, Horizon
     return (tabIndex === -1) ? 0 : tabIndex
   }
 
-  clickTabHandler = (e: MouseEvent<HTMLAnchorElement>) => {
-    const tabIndex = toNumber(e.currentTarget.dataset.tabindex || 0)
+  clickTabHandler = (event: MouseEvent<HTMLAnchorElement>) => {
+    const tabIndex = toNumber(event.currentTarget.dataset.tabindex || 0)
 
     this.setState({ currentTabIndex: tabIndex })
   }
 
-  iconComponent = (
+  sideComponent = (
     alignment: 'left' | 'right',
     component?: JSX.Element
   ): JSX.Element | null => {
@@ -81,7 +87,7 @@ export class HorizontalTabs extends React.Component<HorizontalTabsProps, Horizon
     }
 
     return (
-      <span className={`${alignment}-icon`}>
+      <span className={`${alignment}-component`}>
         {component}
       </span>
     )
@@ -107,9 +113,9 @@ export class HorizontalTabs extends React.Component<HorizontalTabsProps, Horizon
         onClick={this.clickTabHandler}
         data-tabindex={index}
       >
-        {this.iconComponent('left', tab.leftComponent)}
+        {this.sideComponent('left', tab.leftComponent)}
         {tab.title}
-        {this.iconComponent('right', tab.rightComponent)}
+        {this.sideComponent('right', tab.rightComponent)}
       </HorizontalTabTitleAnchor>
     )
   }
