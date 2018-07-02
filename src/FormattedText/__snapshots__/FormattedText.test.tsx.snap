@@ -5,6 +5,10 @@ exports[`<FormattedText /> should render a big block of markdown 1`] = `
   white-space: pre-wrap;
 }
 
+.c0 .react-markdown-block > :last-child {
+  margin-bottom: 0;
+}
+
 .c1 {
   color: inherit;
 }
@@ -106,6 +110,7 @@ Ordered/multi-level lists:
     >
       <ReactMarkdown
         astPlugins={Array []}
+        className="react-markdown-block"
         escapeHtml={true}
         plugins={Array []}
         rawSourcePos={false}
@@ -198,6 +203,7 @@ Ordered/multi-level lists:
         transformLinkUri={[Function]}
       >
         <div
+          className="react-markdown-block"
           key="root-1-1"
         >
           <p
@@ -859,6 +865,10 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
   white-space: pre-wrap;
 }
 
+.c0 .react-markdown-block > :last-child {
+  margin-bottom: 0;
+}
+
 .c1 {
   color: inherit;
 }
@@ -885,6 +895,7 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
     >
       <ReactMarkdown
         astPlugins={Array []}
+        className="react-markdown-block"
         escapeHtml={true}
         plugins={Array []}
         rawSourcePos={false}
@@ -902,6 +913,7 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
         transformLinkUri={[Function]}
       >
         <div
+          className="react-markdown-block"
           key="root-1-1"
         >
           <p
@@ -973,6 +985,10 @@ exports[`<FormattedText /> should render the formatted text 1`] = `
   white-space: pre-wrap;
 }
 
+.c0 .react-markdown-block > :last-child {
+  margin-bottom: 0;
+}
+
 <FormattedText
   text="Hello. I am a piece of paragraph text.
 
@@ -984,6 +1000,7 @@ exports[`<FormattedText /> should render the formatted text 1`] = `
     >
       <ReactMarkdown
         astPlugins={Array []}
+        className="react-markdown-block"
         escapeHtml={true}
         plugins={Array []}
         rawSourcePos={false}
@@ -1001,6 +1018,7 @@ exports[`<FormattedText /> should render the formatted text 1`] = `
         transformLinkUri={[Function]}
       >
         <div
+          className="react-markdown-block"
           key="root-1-1"
         >
           <p

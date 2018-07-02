@@ -28,7 +28,7 @@ export class FormattedText extends React.PureComponent<FormattedTextProps> {
   textRenderer = (
     text: string
   ): JSX.Element => {
-    return reactStringReplace(text, /:([^:]+):/g, (match: string, i: number) => {
+    return reactStringReplace(text, /:([^:\s]+):/g, (match: string, i: number) => {
       return <Emoji
         key={i}
         emoji={match}
@@ -51,6 +51,7 @@ export class FormattedText extends React.PureComponent<FormattedTextProps> {
             link: this.linkRenderer,
             text: this.textRenderer
           }}
+          className='react-markdown-block'
         />
       </StyledFormattedText>
     )
