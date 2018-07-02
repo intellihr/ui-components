@@ -9,7 +9,7 @@ export interface CalloutProps {
   message?: string
   messages?: string[]
   justifyCenter?: boolean
-  shouldFocus: boolean
+  shouldFocus?: boolean
 }
 
 export interface CalloutState {
