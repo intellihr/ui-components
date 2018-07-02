@@ -3,19 +3,19 @@ import styled, { StyledComponentClass }  from 'styled-components'
 import { getColor } from '../Color'
 import { BaseAnchor } from '../Anchor'
 
-const TabsContainer = styled.div``
+const HorizontalTabsContainer = styled.div``
 
-const TabTitles = styled.ul`
+const HorizontalTabTitles = styled.ul`
   clear: both;
   list-style-type: none;
   margin: 0;
 `
 
-const TabTitle = styled.li`
+const HorizontalTabTitle = styled.li`
   float: left;
 `
 
-const TabTitleAnchor = BaseAnchor.extend`
+const HorizontalTabTitleAnchor = BaseAnchor.extend`
   border: 0;
   box-shadow: inset 0 -1px 0 0 ${getColor('neutral-base')};
   color: ${getColor('main-text')};
@@ -49,16 +49,16 @@ const TabTitleAnchor = BaseAnchor.extend`
   }
 `
 
-const TabContent = styled.div`
+const HorizontalTabContent = styled.div`
   border: 1px solid ${getColor('neutral-base')};
   clear: both;
   padding: 1rem;
 `
 
 export {
-  TabsContainer,
-  TabTitles,
-  TabTitle,
-  TabTitleAnchor,
-  TabContent
+  HorizontalTabsContainer,
+  HorizontalTabTitles,
+  HorizontalTabTitle,
+  HorizontalTabTitleAnchor,
+  HorizontalTabContent
 }

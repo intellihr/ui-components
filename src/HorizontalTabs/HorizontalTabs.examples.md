@@ -3,7 +3,7 @@
 ```jsx
 const { FontAwesomeIcon } = require('../Icon');
 
-<Tabs
+<HorizontalTabs
   tabs={[
     {
       title: 'Tab 1',
@@ -28,7 +28,7 @@ const { FontAwesomeIcon } = require('../Icon');
 ```jsx
 const { FontAwesomeIcon } = require('../Icon');
 
-<Tabs
+<HorizontalTabs
   tabs={[
     {
       title: 'Tab 1',
@@ -37,13 +37,36 @@ const { FontAwesomeIcon } = require('../Icon');
     {
       title: 'Default to this tab',
       content: 'Some more cool content',
-      anchorId: 'default'
+      anchorId: '#default'
     },
     {
       title: 'Tab 3',
       content: 'Uncool content'
     }
   ]}
-  startTab={1}
+  defaultTab='#default'
+/>
+```
+
+#### Use anchors to update URL
+
+**You won't be able to use this in the style guide because it will navigate you away from the page**
+
+```jsx
+const { FontAwesomeIcon } = require('../Icon');
+
+<HorizontalTabs
+  tabs={[
+    {
+      title: 'Tab with anchor',
+      content: 'Some cool content',
+      anchorId: '#anchor1'
+    },
+    {
+      title: 'Tab without anchor',
+      content: 'Some more cool content'
+    }
+  ]}
+  useAnchors
 />
 ```

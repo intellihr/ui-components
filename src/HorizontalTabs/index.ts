@@ -1,0 +1,1 @@
+export { HorizontalTabs } from './HorizontalTabs'

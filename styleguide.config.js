@@ -30,6 +30,7 @@ module.exports = {
         'src/Callout/Callout.tsx',
         'src/Comment/Comment.tsx',
         'src/Grid/Grid.tsx',
+        'src/HorizontalTabs/HorizontalTabs.tsx',
         'src/Icon/Icon.tsx',
         'src/IndentedElement/IndentedElement',
         'src/InputLabel/InputLabel.tsx',
@@ -40,7 +41,6 @@ module.exports = {
         'src/Skeleton/Skeleton.tsx',
         'src/Spinner/Spinner.tsx',
         'src/StatusIndicator/StatusIndicator.tsx',
-        'src/Tabs/Tabs.tsx',
         'src/Toast/Toast.tsx',
         'src/Tooltip/Tooltip.tsx'
       ],

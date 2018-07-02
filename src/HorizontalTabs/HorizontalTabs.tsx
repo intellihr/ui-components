@@ -1,86 +1,80 @@
 import React, { MouseEvent } from 'react'
-import { map, isNumber, findIndex } from 'lodash'
+import { findIndex, isNumber, map, toNumber } from 'lodash'
 import classNames from 'classnames'
-import { TabContent, TabsContainer, TabTitle, TabTitleAnchor, TabTitles } from './style'
+import { HorizontalTabContent, HorizontalTabsContainer, HorizontalTabTitle, HorizontalTabTitleAnchor, HorizontalTabTitles } from './style'
 
-export interface TabDefinition {
+export interface HorizontalTabDefinition {
   /** String title to use for this tab */
   title?: string
 
   /** Component positioned to the left of the title */
-  leftComponent?: React.ReactType
+  leftComponent?: JSX.Element
 
   /** Component positioned to the right of the title */
-  rightComponent?: React.ReactType
+  rightComponent?: JSX.Element
 
   /** Anchor id used when clicking between tabs */
   anchorId?: string
 
   /** Custom component to render for this tab (overrides default rendering) */
-  titleComponent?: React.ReactType
+  titleComponent?: JSX.Element
 
   /** Content to place inside the actual tab */
-  content: React.ReactType
+  content: JSX.Element | string
 }
 
-export interface TabsProps {
+export interface HorizontalTabsProps {
   /** A list of tabs and their content to render */
-  tabs: TabDefinition[]
-
-  /** Alternate styles of tabulation */
-  tabbingStyle: 'horizontal'
+  tabs: HorizontalTabDefinition[]
 
   /** Whether to update the url of the page with anchors when changing tabs */
   useAnchors?: boolean
 
   /** The tab to start opened to (by anchorId or index) */
-  startTab?: string | number
+  defaultTab?: string | number
 }
 
-export interface TabsState {
+export interface HorizontalTabsState {
   currentTabIndex: number
 }
 
-export class Tabs extends React.Component<TabsProps, TabsState> {
-  public static defaultProps: Partial<TabsProps> = {
-    tabbingStyle: 'horizontal',
+export class HorizontalTabs extends React.Component<HorizontalTabsProps, HorizontalTabsState> {
+  public static defaultProps: Partial<HorizontalTabsProps> = {
     useAnchors: false
   }
 
-  constructor (props: TabsProps) {
+  constructor (props: HorizontalTabsProps) {
     super(props)
     this.state = {
-      currentTabIndex: this.tabIndexForStartTab(this.props.startTab)
+      currentTabIndex: this.indexForTab(this.props.defaultTab)
     }
   }
 
-  tabIndexForStartTab = (newTab?: number | string): number => {
+  indexForTab = (tabIdentifier?: number | string): number => {
     const { tabs } = this.props
 
-    if (!newTab) {
+    if (!tabIdentifier) {
       return 0
     }
 
-    if (isNumber(newTab)) {
-      return newTab
+    if (isNumber(tabIdentifier)) {
+      return tabIdentifier
     }
 
-    const find = findIndex(tabs, { 'anchorId': newTab })
+    const tabIndex = findIndex(tabs, { 'anchorId': tabIdentifier })
 
-    return (find === -1) ? 0 : find
+    return (tabIndex === -1) ? 0 : tabIndex
   }
 
   clickTabHandler = (e: MouseEvent<HTMLAnchorElement>) => {
-    e.target
+    const tabIndex = toNumber(e.currentTarget.dataset.tabindex || 0)
 
-    const newIndex = this.tabIndexForStartTab(e.target)
-
-    this.setState({ currentTabIndex: newIndex })
+    this.setState({ currentTabIndex: tabIndex })
   }
 
   iconComponent = (
     alignment: 'left' | 'right',
-    component?: React.ReactType
+    component?: JSX.Element
   ): JSX.Element | null => {
     if (!component) {
       return null
@@ -93,7 +87,7 @@ export class Tabs extends React.Component<TabsProps, TabsState> {
     )
   }
 
-  titleForTab = (tab: TabDefinition, index: number): JSX.Element => {
+  titleForTab = (tab: HorizontalTabDefinition, index: number): JSX.Element => {
     const { currentTabIndex } = this.state
     const { useAnchors } = this.props
 
@@ -107,15 +101,16 @@ export class Tabs extends React.Component<TabsProps, TabsState> {
     })
 
     return (
-      <TabTitleAnchor
+      <HorizontalTabTitleAnchor
         className={classes}
         href={href}
-        onClick={() => this.clickTabHandler(index)}
+        onClick={this.clickTabHandler}
+        data-tabindex={index}
       >
         {this.iconComponent('left', tab.leftComponent)}
         {tab.title}
         {this.iconComponent('right', tab.rightComponent)}
-      </TabTitleAnchor>
+      </HorizontalTabTitleAnchor>
     )
   }
 
@@ -125,15 +120,15 @@ export class Tabs extends React.Component<TabsProps, TabsState> {
     } = this.props
 
     const tabTitleItems = map(tabs, (tab, index) => (
-      <TabTitle key={index}>
+      <HorizontalTabTitle key={index}>
         {this.titleForTab(tab, index)}
-      </TabTitle>
+      </HorizontalTabTitle>
     ))
 
     return (
-      <TabTitles>
+      <HorizontalTabTitles>
         {tabTitleItems}
-      </TabTitles>
+      </HorizontalTabTitles>
     )
   }
 
@@ -146,9 +141,9 @@ export class Tabs extends React.Component<TabsProps, TabsState> {
     }
 
     return (
-      <TabContent>
+      <HorizontalTabContent>
         {tabs[currentTabIndex].content}
-      </TabContent>
+      </HorizontalTabContent>
     )
   }
 
@@ -162,10 +157,10 @@ export class Tabs extends React.Component<TabsProps, TabsState> {
     }
 
     return (
-      <TabsContainer>
+      <HorizontalTabsContainer>
         {this.tabTitles}
         {this.tabContent}
-      </TabsContainer>
+      </HorizontalTabsContainer>
     )
   }
 }
