@@ -25,6 +25,7 @@
     "html-to-react": "1.3.3",
     "lodash": "4.17.10",
     "react-chartjs-2": "2.7.0",
+    "react-dd-menu": "2.0.2",
     "react-linkify": "0.2.2",
     "react-markdown": "3.3.3",
     "react-select": "1.2.1",

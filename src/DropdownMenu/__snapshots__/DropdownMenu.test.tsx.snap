@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DropdownMenu /> Custom Components should match the snapshot 1`] = `
+<DropdownMenu
+  align="center"
+  animAlign={null}
+  animate={true}
+  className="dropdownMenu"
+  close={[Function]}
+  closeOnInsideClick={true}
+  closeOnOutsideClick={true}
+  enterTimeout={150}
+  inverse={false}
+  isOpen={false}
+  leaveTimeout={150}
+  menuAlign={null}
+  size={null}
+  textAlign={null}
+  toggle={
+    <div
+      className="toggle-component"
+      onClick={[Function]}
+    >
+      <button>
+        Custom
+      </button>
+    </div>
+  }
+  upwards={false}
+>
+  <li
+    className=""
+    key="testing1"
+  >
+    <Anchor
+      href="test"
+      id="testing1"
+    >
+      Item 1
+    </Anchor>
+  </li>
+  <li
+    className=""
+    key="testing2"
+  >
+    <div>
+      asdf
+    </div>
+  </li>
+</DropdownMenu>
+`;
+
+exports[`<DropdownMenu /> Left and Right Components should match the snapshot 1`] = `
+<DropdownMenu
+  align="center"
+  animAlign={null}
+  animate={true}
+  className="dropdownMenu"
+  close={[Function]}
+  closeOnInsideClick={true}
+  closeOnOutsideClick={true}
+  enterTimeout={150}
+  inverse={false}
+  isOpen={false}
+  leaveTimeout={150}
+  menuAlign={null}
+  size={null}
+  textAlign={null}
+  toggle={
+    <div
+      className="toggle-component"
+      onClick={[Function]}
+    >
+      <button>
+        Icons
+      </button>
+    </div>
+  }
+  upwards={false}
+>
+  <li
+    className="non-clickable"
+    key="testing1"
+  >
+    <span
+      id="testing1"
+    >
+      <span
+        className="left-component"
+      >
+        <div>
+          left
+        </div>
+      </span>
+      Surrounded by components
+      <span
+        className="right-component"
+      >
+        <div>
+          right
+        </div>
+      </span>
+    </span>
+  </li>
+</DropdownMenu>
+`;
+
+exports[`<DropdownMenu /> Simple dropdown should match the snapshot 1`] = `
+<DropdownMenu
+  align="center"
+  animAlign={null}
+  animate={true}
+  className="dropdownMenu"
+  close={[Function]}
+  closeOnInsideClick={true}
+  closeOnOutsideClick={true}
+  enterTimeout={150}
+  inverse={false}
+  isOpen={false}
+  leaveTimeout={150}
+  menuAlign={null}
+  size={null}
+  textAlign={null}
+  toggle={
+    <div
+      className="toggle-component"
+      onClick={[Function]}
+    >
+      <button>
+        test
+      </button>
+    </div>
+  }
+  upwards={false}
+>
+  <li
+    className=""
+    key="testing"
+  >
+    <button
+      id="testing"
+      onClick={[MockFunction]}
+    >
+      Item 1
+    </button>
+  </li>
+  <li
+    className=""
+    key="testing2"
+  >
+    <Anchor
+      href="https://www.intellihr.com.au"
+      id="testing2"
+    >
+      Item 2
+    </Anchor>
+  </li>
+</DropdownMenu>
+`;
