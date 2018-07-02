@@ -29,6 +29,7 @@ module.exports = {
         'src/Avatar/Avatar.tsx',
         'src/Callout/Callout.tsx',
         'src/Comment/Comment.tsx',
+        'src/DropdownMenu/DropdownMenu.tsx',
         'src/Grid/Grid.tsx',
         'src/Icon/Icon.tsx',
         'src/IndentedElement/IndentedElement',
@@ -41,8 +42,7 @@ module.exports = {
         'src/Spinner/Spinner.tsx',
         'src/StatusIndicator/StatusIndicator.tsx',
         'src/Toast/Toast.tsx',
-        'src/Tooltip/Tooltip.tsx',
-        'src/DropdownMenu/DropdownMenu.tsx'
+        'src/Tooltip/Tooltip.tsx'
       ],
       sections: [
         {

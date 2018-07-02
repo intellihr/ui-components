@@ -1,4 +1,4 @@
-## Basic DropdownMenu
+#### Basic DropdownMenu
 
 ```jsx
 <DropdownMenu
@@ -6,7 +6,7 @@
   sections={[
     {
       text: 'Item 1',
-      onClick: () => alert('Item 1'),
+      onClick: () => alert('Item 1')
     },
     {
       text: 'Item 2',
@@ -16,7 +16,7 @@
 />
 ```
 
-## Colored Dropdown Menu
+#### Colored Dropdown Menu
 
 ```jsx
 <DropdownMenu
@@ -24,7 +24,7 @@
   sections={[
     {
       text: 'Alert',
-      onClick: () => console.log('test'),
+      onClick: () => alert('Test'),
       color: 'alert'
     },
     {
@@ -34,29 +34,29 @@
     },
     {
       text: 'Warning',
-      onClick: () => console.log('test'),
+      onClick: () => alert('Test'),
       color: 'warning'
     },
     {
       text: 'Primary',
-      onClick: () => console.log('test'),
+      onClick: () => alert('Test'),
       color: 'primary'
     },
     {
       text: 'Secondary',
-      onClick: () => console.log('test'),
+      onClick: () => alert('Test'),
       color: 'secondary'
     },
     {
       text: 'Neutral',
-      onClick: () => console.log('test'),
+      onClick: () => alert('Test'),
       color: 'neutral'
     },
   ]}
 />
 ```
 
-## Dropdown Alignment
+#### Dropdown Alignment
 
 ```jsx
 <React.Fragment>
@@ -67,7 +67,8 @@
     }}
     sections={[
       {
-        text: 'Item 1',
+        onClick: () => alert('Test'),
+        text: 'Item 1'
       }
     ]}
   />
@@ -78,7 +79,8 @@
     }}
     sections={[
       {
-        text: 'Item 1',
+        onClick: () => alert('Test'),
+        text: 'Item 1'
       }
     ]}
   />
@@ -88,7 +90,8 @@
       align:'right'
     }}
     sections={[
-      {
+      {      
+        onClick: () => alert('Test'),
         text: 'Item 1'
       }
     ]}
@@ -96,19 +99,21 @@
 </React.Fragment>
 ```
 
-## Custom Components
+#### Custom Components
 
 ```jsx
 <DropdownMenu
    toggleComponent={<Button>Custom</Button>}
    sections={[
      {
+       onClick: () => alert('Test'),
        text: 'Item 1'
      },
      {
        component: <hr/>
      },
      {
+       onClick: () => alert('Test'),
        text: 'Item 2'
      },
      {
@@ -119,21 +124,20 @@
 />
 ```
 
-## Non Clickable Component
+#### Non Clickable Component
 
 ```jsx
 <DropdownMenu
    toggleComponent={<Button>Non Clickable Component</Button>}
    sections={[
      {
-       text: 'no click',
-       nonClickable: true
+       text: 'no click'
      }
    ]}
 />
 ```
 
-## Alert Component
+#### Alert Component
 
 ```jsx
 <DropdownMenu
@@ -141,13 +145,14 @@
    sections={[
      {
        text: 'hover over me',
+       onClick: () => alert('Test'),
        hoverAlert: true
      }
    ]}
 />
 ```
 
-## left and right Components
+#### left and right Components
 
 ```jsx
 const { FontAwesomeIcon } = require('../Icon');
@@ -158,13 +163,14 @@ const { FontAwesomeIcon } = require('../Icon');
      {
        leftComponent: <FontAwesomeIcon type='hand-o-right' />,
        rightComponent: <FontAwesomeIcon type='hand-o-left' />,
+       onClick: () => alert('Test'),
        text: 'Surrounded by icons'
      }
    ]}
 />
 ```
 
-## Profile Menu Example
+#### Profile Menu Example
 
 ```jsx
 const { FontAwesomeIcon, IntelliIcon } = require('../Icon');
@@ -182,7 +188,6 @@ const { FontAwesomeIcon, IntelliIcon } = require('../Icon');
    sections={[
      {
        text: 'John Doe',
-       nonClickable: true,
        style: {'fontWeight':600}
      },
      {

@@ -10,7 +10,7 @@ export interface CalloutState {
   isMenuOpen: boolean
 }
 
-export type dropdownMenuAlignments =  'left' | 'right' | 'center'
+export type dropdownMenuAlignments = 'left' | 'right' | 'center'
 export type sectionColors = 'alert' | 'success' | 'warning' | 'primary' | 'secondary' | 'neutral'
 
 export interface sectionProps {
@@ -24,16 +24,16 @@ export interface sectionProps {
   href?: string,
   /** onClick event */
   onClick?: (event: React.SyntheticEvent<any>) => void
-  /** an override component that will render instead of the inbuilt components*/
+  /** an override component that will render instead of the inbuilt components */
   component?: JSX.Element,
   /** makes the text red on hover instead of blue */
   hoverAlert: boolean,
-  /** show an element that cannot be clicked */
-  nonClickable: boolean,
   /** shows the section as the desired colored section */
   color: sectionColors,
   /** an optional section ID */
   id: string
+  /** any extra props to pass to the component */
+  componentProps: any
 }
 
 export interface DropdownMenuProps {
@@ -76,7 +76,7 @@ export class DropdownMenu extends React.PureComponent<DropdownMenuProps, Callout
     this.setState({ isMenuOpen: false })
   }
 
-  toggleComponent = () => {
+  get toggleComponent () {
     const {
       toggleComponent
     } = this.props
@@ -91,12 +91,24 @@ export class DropdownMenu extends React.PureComponent<DropdownMenuProps, Callout
     )
   }
 
-  getSideComponent = (component: any, alignment: 'left' | 'right') => {
+  getComponent = (section: sectionProps) => {
+    const {
+      onClick,
+      href
+    } = section
+
+    if (href || onClick) {
+      return get(section, 'href') ? Anchor : 'button'
+    }
+    return 'span'
+  }
+
+  getSideComponent = (component: JSX.Element | undefined, alignment: 'left' | 'right') => {
     if (component) {
       return (
         <span className={`${alignment}-component`}>
-        {component}
-      </span>
+          {component}
+        </span>
       )
     }
   }
@@ -106,35 +118,38 @@ export class DropdownMenu extends React.PureComponent<DropdownMenuProps, Callout
       sections
     } = this.props
 
-    return map(sections, (option) => {
+    return map(sections, (section) => {
       const {
         component,
         text,
-        nonClickable,
         color,
         hoverAlert,
         leftComponent,
         rightComponent,
-        ...props
-      } = option
+        componentProps,
+        id,
+        onClick,
+        href
+      } = section
 
-      const classes = classNames({'non-clickable': nonClickable, 'alert-on-hover': hoverAlert}, color)
-      if(component) {
+      const classes = classNames({'non-clickable': !href && !onClick, 'alert-on-hover': hoverAlert}, color)
+      if (component) {
         return (
-          <li key={props.id || uuid.v4()} className={classes}>
+          <li key={id || uuid.v4()} className={classes}>
             {component}
           </li>
         )
       }
 
-      let Component: typeof Anchor | string = 'span'
-      if (!nonClickable) {
-        Component = get(option, 'href') ? Anchor : 'button'
-      }
-
+      const Component = this.getComponent(section)
       return (
-        <li key={props.id || uuid.v4()} className={classes}>
-          <Component {...props}>
+        <li key={id || uuid.v4()} className={classes}>
+          <Component
+            {...componentProps}
+            onClick={onClick}
+            href={href}
+            id={id}
+          >
             {this.getSideComponent(leftComponent, 'left')}
             {text}
             {this.getSideComponent(rightComponent, 'right')}
@@ -159,7 +174,7 @@ export class DropdownMenu extends React.PureComponent<DropdownMenuProps, Callout
         {...dropdownOverrides}
         isOpen={isMenuOpen}
         close={this.close}
-        toggle={this.toggleComponent()}
+        toggle={this.toggleComponent}
         className={classNames(style.dropdownMenu, className)}
         inverse={false}
       >

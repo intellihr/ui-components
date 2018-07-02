@@ -30,130 +30,163 @@ $color-styles: (
 @mixin button-colour($style) {
   border-left: 5px map-get($style, strip-color) solid;
 
-  a, button {
-    &:hover, &:active, &:focus {
-      color: $main-text !important;
-      background-color: map-get($style, background-color) !important;
+  &:not(.non-clickable) {
+    a,
+    button {
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: map-get($style, background-color);
+        color: $main-text;
+      }
     }
   }
 }
 
-:local(.dropdownMenu).dd-menu {
-  .toggle-component {
-    cursor: pointer;
-    line-height: 0;
-    margin-bottom: 0;
-
-    button {
+:local(.dropdownMenu) {
+  &.dd-menu {
+    .toggle-component {
+      cursor: pointer;
+      line-height: 0;
       margin-bottom: 0;
-    }
-  }
 
-  div.dd-menu-items {
-    width: min-content;
-    margin: .5rem 0;
-
-    ul {
-      border-radius: $global-radius;
-      min-width: 140px;
-      .dd-items-center {
-        display: block;
-
-        li {
-          display: block;
-        }
+      button {
+        margin-bottom: 0;
       }
+    }
 
-      li {
-        width: 100%;
+    div {
+      &.dd-menu-items {
+        margin: .5rem 0;
+        width: min-content;
 
-        &.alert-on-hover {
-          a, button {
-            &:hover {
-              color: $alert-base !important;
+        ul {
+          border-radius: $global-radius;
+          min-width: 140px;
+
+          .dd-items-center {
+            display: block;
+
+            li {
+              display: block;
             }
           }
-        }
 
+          li {
+            width: 100%;
 
-        &:hover {
-          background-color: transparent !important;
-        }
-
-        @each $colour, $style in $color-styles {
-          &.#{$colour} {
-            @include button-colour($style);
-          }
-        }
-
-        &:not(.non-clickable) {
-          a, button {
-            transition: background .3s ease-in-out, color .3s ease-in-out;
-
-            &:hover, &:active, &:focus {
-              background-color: $neutral-light;
-              color: $link-text;
-
-              .fa[class*="-outline"]:before {
-                color: $neutral-light;
-                text-shadow: -1px -1px $link-text, -1px 1px $link-text, 1px -1px $link-text, 1px 1px $link-text;
+            &.alert-on-hover {
+              &:not(.non-clickable) {
+                a,
+                button {
+                  &:hover,
+                  &:active,
+                  &:focus {
+                    color: $alert-base;
+                  }
+                }
               }
             }
-          }
-        }
 
-        &.non-clickable {
-          span {
-            color: $main-text;
-            cursor: default;
-            line-height: 1;
-          }
-        }
+            //this is to fix the library being super specific
+            &:hover {
+              &:not([role='separator']) {
+                &:not(.separator) {
+                  background-color: transparent;
+                }
+              }
+            }
 
-        hr {
-          height: 0;
-          width: 0;
-          padding: 0;
-          margin-top: 0;
-          margin-bottom: 0;
-        }
+            @each $colour, $style in $color-styles {
+              &.#{$colour} {
+                @include button-colour($style);
+              }
+            }
 
-        &:first-of-type {
-          border-radius: 4px 4px 0 0;
+            &:not(.non-clickable) {
+              a,
+              button {
+                transition: background .3s ease-in-out, color .3s ease-in-out;
 
-          a, button {
-            border-radius: 4px 4px 0 0;
-          }
-        }
+                &:hover,
+                &:active,
+                &:focus {
+                  background-color: $neutral-light;
+                  color: $link-text;
 
-        &:last-of-type {
-          border-radius: 0 0 4px 4px;
+                  .fa {
+                    &[class*='-outline'] {
+                      &::before {
+                        color: $neutral-light;
+                        text-shadow: -1px -1px $link-text, -1px 1px $link-text, 1px -1px $link-text, 1px 1px $link-text;
+                      }
+                    }
+                  }
+                }
+              }
+            }
 
-          a, button {
-            border-radius: 0 0 4px 4px;
-          }
-        }
+            &.non-clickable {
+              span {
+                color: $main-text;
+                cursor: default;
+                line-height: 1;
+              }
+            }
 
-        &:only-of-type {
-          border-radius: 4px;
-        }
+            hr {
+              height: 0;
+              margin-bottom: 0;
+              margin-top: 0;
+              padding: 0;
+              width: 0;
+            }
 
-        > * {
-          text-align: inherit;
-          padding: 1em;
-        }
+            &:first-of-type {
+              border-radius: 4px 4px 0 0;
 
-        a, button {
-          cursor: pointer;
-          border-radius: 0;
-          color: $main-text;
+              a,
+              button {
+                border-radius: 4px 4px 0 0;
+              }
+            }
 
-          span.left-component {
-            margin-right: 3px;
-          }
+            &:last-of-type {
+              border-radius: 0 0 4px 4px;
 
-          span.right-component {
-            margin-left: 3px;
+              a,
+              button {
+                border-radius: 0 0 4px 4px;
+              }
+            }
+
+            &:only-of-type {
+              border-radius: 4px;
+            }
+
+            > * {
+              padding: 1em;
+              text-align: inherit;
+            }
+
+            a,
+            button,
+            span {
+              border-radius: 0;
+              color: $main-text;
+              cursor: pointer;
+              line-height: 1;
+
+              span {
+                &.left-component {
+                  margin-right: 3px;
+                }
+
+                &.right-component {
+                  margin-left: 3px;
+                }
+              }
+            }
           }
         }
       }

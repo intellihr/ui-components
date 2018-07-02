@@ -13,7 +13,7 @@ describe('<DropdownMenu />', () => {
           {
             text: 'Item 1',
             id: 'testing',
-            onClick: clickEvent,
+            onClick: clickEvent
           },
           {
             text: 'Item 2',
@@ -42,12 +42,14 @@ describe('<DropdownMenu />', () => {
         sections={[
           {
             text: 'Item 1',
-            id: 'testing1'
+            id: 'testing1',
+            href: 'test'
           },
           {
             text: 'Item 2',
             component: <div>asdf</div>,
-            id: 'testing2'
+            id: 'testing2',
+            href: 'test'
           }
         ]}
       />
@@ -91,7 +93,7 @@ describe('<DropdownMenu />', () => {
 
     it('should render the left and right components', () => {
       const parent = wrapper
-        .find('button')
+        .find('span')
         .findWhere(element => element.html().includes('Surrounded by components'))
 
       expect(
@@ -110,5 +112,3 @@ describe('<DropdownMenu />', () => {
     })
   })
 })
-
-
