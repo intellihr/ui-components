@@ -118,6 +118,7 @@ $color-styles: (
               }
             }
 
+            //ugliness due to sass linting not liking parent and children in the same brackets
             &:not(.non-clickable) {
               a,
               button {
