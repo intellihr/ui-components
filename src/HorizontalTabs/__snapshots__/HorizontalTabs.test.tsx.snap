@@ -35,7 +35,7 @@ exports[`<HorizontalTabs /> Standard tabs with default anchor should match the s
         onClick={[Function]}
       >
         <span
-          className="left-icon"
+          className="left-component"
         >
           <div
             id="tab3left"
@@ -98,7 +98,7 @@ exports[`<HorizontalTabs /> Standard tabs with default index should match the sn
         onClick={[Function]}
       >
         <span
-          className="left-icon"
+          className="left-component"
         >
           <div
             id="tab3left"
