@@ -188,7 +188,9 @@ const { FontAwesomeIcon, IntelliIcon } = require('../Icon');
    sections={[
      {
        text: 'John Doe',
-       style: {'fontWeight':600}
+       componentProps: {
+         style: {'fontWeight':600}
+       }
      },
      {
        component: <hr/>
@@ -205,7 +207,7 @@ const { FontAwesomeIcon, IntelliIcon } = require('../Icon');
      },
      {
        text: 'Update Profile Picture',
-       leftComponent: <FontAwesomeIcon type='camera-outline' />,
+       leftComponent: <FontAwesomeIcon type='camera' />,
        onClick: () => alert('Test')
      },
      {
