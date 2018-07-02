@@ -19,11 +19,15 @@
 #### Colored Dropdown Menu
 
 ```jsx
+const { FontAwesomeIcon, IntelliIcon } = require('../Icon');
+
+
 <DropdownMenu
   toggleComponent={<Button>Colored Dropdown</Button>}
   sections={[
     {
       text: 'Alert',
+       leftComponent: <FontAwesomeIcon type='camera-outline' />,
       onClick: () => alert('Test'),
       color: 'alert'
     },
@@ -195,19 +199,23 @@ const { FontAwesomeIcon, IntelliIcon } = require('../Icon');
      },
      {
        text: 'My Profile',
-       leftComponent: <IntelliIcon type='avatar' />
+       leftComponent: <IntelliIcon type='avatar' />,
+       onClick: () => alert('Test')
      },
      {
        text: 'Change Password',
-       leftComponent: <IntelliIcon type='security' />
+       leftComponent: <IntelliIcon type='security' />,
+       onClick: () => alert('Test')
      },
      {
        text: 'Update Profile Picture',
-       leftComponent: <FontAwesomeIcon type='camera-outline' />
+       leftComponent: <FontAwesomeIcon type='camera-outline' />,
+       onClick: () => alert('Test')
      },
      {
        text: 'User Disclaimer',
-       leftComponent: <IntelliIcon type='shield' />
+       leftComponent: <IntelliIcon type='shield' />,
+       onClick: () => alert('Test')
      },
      {
        component: <hr/>

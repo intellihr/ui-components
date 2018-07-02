@@ -36,8 +36,20 @@ $color-styles: (
       &:hover,
       &:active,
       &:focus {
-        background-color: map-get($style, background-color);
-        color: $main-text;
+        &,
+        span {
+          background-color: map-get($style, background-color);
+          color: $main-text;
+
+          .fa {
+            &[class*='-outline'] {
+              &::before {
+                color: map-get($style, background-color);
+                text-shadow: -1px -1px $main-text, -1px 1px $main-text, 1px -1px $main-text, 1px 1px $main-text;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -82,7 +94,10 @@ $color-styles: (
                   &:hover,
                   &:active,
                   &:focus {
-                    color: $alert-base;
+                    &,
+                    span {
+                      color: $alert-base;
+                    }
                   }
                 }
               }
@@ -106,19 +121,31 @@ $color-styles: (
             &:not(.non-clickable) {
               a,
               button {
-                transition: background .3s ease-in-out, color .3s ease-in-out;
+                &,
+                span {
+                  &,
+                  i {
+                    &,
+                    &::before {
+                      transition: background .3s ease-in-out, color .3s ease-in-out;
+                    }
+                  }
+                }
 
                 &:hover,
                 &:active,
                 &:focus {
-                  background-color: $neutral-light;
-                  color: $link-text;
+                  &,
+                  span {
+                    background-color: $neutral-light;
+                    color: $link-text;
 
-                  .fa {
-                    &[class*='-outline'] {
-                      &::before {
-                        color: $neutral-light;
-                        text-shadow: -1px -1px $link-text, -1px 1px $link-text, 1px -1px $link-text, 1px 1px $link-text;
+                    .fa {
+                      &[class*='-outline'] {
+                        &::before {
+                          color: $neutral-light;
+                          text-shadow: -1px -1px $link-text, -1px 1px $link-text, 1px -1px $link-text, 1px 1px $link-text;
+                        }
                       }
                     }
                   }
