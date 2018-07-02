@@ -31,6 +31,7 @@ module.exports = {
         'src/Comment/Comment.tsx',
         'src/DropdownMenu/DropdownMenu.tsx',
         'src/Grid/Grid.tsx',
+        'src/HorizontalTabs/HorizontalTabs.tsx',
         'src/Icon/Icon.tsx',
         'src/IndentedElement/IndentedElement',
         'src/InputLabel/InputLabel.tsx',
