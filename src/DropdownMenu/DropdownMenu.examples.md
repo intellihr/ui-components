@@ -19,15 +19,11 @@
 #### Colored Dropdown Menu
 
 ```jsx
-const { FontAwesomeIcon, IntelliIcon } = require('../Icon');
-
-
 <DropdownMenu
   toggleComponent={<Button>Colored Dropdown</Button>}
   sections={[
     {
       text: 'Alert',
-       leftComponent: <FontAwesomeIcon type='camera-outline' />,
       onClick: () => alert('Test'),
       color: 'alert'
     },
