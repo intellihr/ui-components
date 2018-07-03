@@ -1,8 +1,8 @@
 #### Grid system organisation
 
 ***This is an attempt at using a new grid system for front-end components.
-It should only be used within the `ui-components` repository until it has been 
-proven that it fulfills all the requirements.***
+It should only be used within the `ui-components` code base until it has been 
+proven that it fulfills all requirements.***
 
 
 React Context API is used through `styled-components`'s Theme Provider 
@@ -13,18 +13,18 @@ ui-component code base.
 In order for a top level component to be aware of those parameters, it has to 
 be wrapped in the `withGrid` HOC.
 
-```
-  class Test extends React.PureComponent {
-    render () {
-      return (
-        <div>
-          I want to know about those breakpoints!
-        </div>
-      )
-    }
+```jsx static
+class Test {
+  render () {
+    return (
+      <div>
+        I want to know about those breakpoints!
+      </div>
+    )
   }
-  
-  const BreakpointAwareTest = withGrid(Test)
+}
+
+const BreakpointAwareTest = withGrid(Test)
 ```
 
 The npm package used for the grid system is *react-styled-flexboxgrid* 
@@ -42,25 +42,22 @@ that are passed to it.
 will define what portion of the row (out of 12 by default) the column should 
 take for each breakpoint.
 
-```jsx
-  class TestWithGrid {
-    render () {
+```jsx static
+import { Row, Col } from 'react-styled-flexboxgrid'
+
+class ComponentWithGrid {
+   render () {
       return (
-        <BreakpointAwareTest>
-          <Row>
-            <Col xs={6} md={3}>
-              Hello, world!
-            </Col>
-            
-            <Col xs={6} md={3}>
-              World, hello!
-            </Col>
-          </Row>
-        </BreakpointAwareTest>
+          <BreakpointAwareTest>
+               <Row>
+                   <Col xs={6} md={3}>Hello, world!</Col>
+                   <Col xs={6} md={3}>World, hello!</Col>
+               </Row>
+          </BreakpointAwareTest>
       )
-    }
-  }
+   }
+}
 ```
 
-In this example, a row has two columns that will take half of the width of the 
-row on `xs` screens, and 1/4 of the width on `md` screens
+In this example, a row has two columns which will each take half of the width of the 
+row on `xs` screens, and 1/4 of the width on `md` screens.
