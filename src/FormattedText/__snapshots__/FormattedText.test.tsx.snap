@@ -1,5 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<FormattedText /> should include a custom text renderer 1`] = `
+<styled.div>
+  <ReactMarkdown
+    astPlugins={Array []}
+    className="react-markdown-block"
+    escapeHtml={true}
+    plugins={Array []}
+    rawSourcePos={false}
+    renderers={
+      Object {
+        "link": [Function],
+        "text": [Function],
+      }
+    }
+    skipHtml={false}
+    source=":crocodile:"
+    sourcePos={false}
+    transformLinkUri={[Function]}
+  />
+</styled.div>
+`;
+
+exports[`<FormattedText /> should not include a custom text renderer 1`] = `
+<styled.div>
+  <ReactMarkdown
+    astPlugins={Array []}
+    className="react-markdown-block"
+    escapeHtml={true}
+    plugins={Array []}
+    rawSourcePos={false}
+    renderers={
+      Object {
+        "link": [Function],
+      }
+    }
+    skipHtml={false}
+    source=":crocodile:"
+    sourcePos={false}
+    transformLinkUri={[Function]}
+  />
+</styled.div>
+`;
+
 exports[`<FormattedText /> should render a big block of markdown 1`] = `
 .c0 {
   white-space: pre-wrap;
@@ -117,7 +160,6 @@ Ordered/multi-level lists:
         renderers={
           Object {
             "link": [Function],
-            "text": [Function],
           }
         }
         skipHtml={false}
@@ -902,7 +944,6 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
         renderers={
           Object {
             "link": [Function],
-            "text": [Function],
           }
         }
         skipHtml={false}
@@ -1007,7 +1048,6 @@ exports[`<FormattedText /> should render the formatted text 1`] = `
         renderers={
           Object {
             "link": [Function],
-            "text": [Function],
           }
         }
         skipHtml={false}
