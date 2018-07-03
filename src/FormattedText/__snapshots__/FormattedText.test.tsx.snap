@@ -68,6 +68,7 @@ exports[`<FormattedText /> should render a big block of markdown 1`] = `
 }
 
 <FormattedText
+  renderEmojis={false}
   text="
 FormattedText supports all syntax supported by markdown.
 
@@ -927,6 +928,7 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
 }
 
 <FormattedText
+  renderEmojis={false}
   text="http://www.heyguy.com
 
         also this one http://www.ozbargain.com.au"
@@ -1031,6 +1033,7 @@ exports[`<FormattedText /> should render the formatted text 1`] = `
 }
 
 <FormattedText
+  renderEmojis={false}
   text="Hello. I am a piece of paragraph text.
 
         This should be on a new line :)"

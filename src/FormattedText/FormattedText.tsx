@@ -4,7 +4,6 @@ import { Emoji } from 'emoji-mart'
 import reactStringReplace from 'react-string-replace'
 import { StyledFormattedText } from './style'
 import { TextLink } from '../Link'
-import { Text } from '../Text'
 
 export interface FormattedTextProps {
   /** Preformatted markdown text to display */
@@ -14,6 +13,10 @@ export interface FormattedTextProps {
 }
 
 export class FormattedText extends React.PureComponent<FormattedTextProps> {
+  public static defaultProps: Partial<FormattedTextProps> = {
+    renderEmojis: false
+  }
+
   linkRenderer = (props: { children: any, href: string }): JSX.Element => {
     return (
       <TextLink
