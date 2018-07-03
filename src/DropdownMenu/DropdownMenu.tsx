@@ -4,10 +4,7 @@ import { map, get } from 'lodash'
 import classNames from 'classnames'
 import DropdownPane from 'react-dd-menu'
 import { Anchor } from '../Anchor'
-import { DataTablePagination } from '../DataTable/DataTablePagination'
 import { DefaultDropdownButton } from './style'
-import { DataTableProps } from '../DataTable/DataTable'
-import { Button } from '../Button'
 import { FontAwesomeIcon } from '../Icon'
 const style = require('./style.scss')
 
