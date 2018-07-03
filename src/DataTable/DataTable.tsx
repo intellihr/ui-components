@@ -37,7 +37,10 @@ export interface DataTableProps {
   /** Whether we should add a search filter  */
   showSearchFilter?: boolean
 
-  /** Easy replacement for when there is no data  */
+  /** Show vertical delineation between columns  */
+  showVerticalLines?: boolean
+
+  /** Placeholder replacement for when there is no data  */
   noDataComponent?: JSX.Element
 
   /**
@@ -53,6 +56,7 @@ export class DataTable extends React.Component<DataTableProps, DataTableState> {
     sortable: false,
     showPagination: false,
     showSearchFilter: false,
+    showVerticalLines: false,
     defaultSorted: [],
     tableId: 'datatable'
   }
@@ -166,14 +170,18 @@ export class DataTable extends React.Component<DataTableProps, DataTableState> {
 
   get classNames (): string {
     const {
+      tableId,
       sortable,
-      tableId
+      showVerticalLines
     } = this.props
 
     return classNames(
       style.DataTable,
       `data-table-${tableId}`,
-      {sortable}
+      {
+        sortable,
+        'show-vertical-lines': showVerticalLines
+      }
     )
   }
 

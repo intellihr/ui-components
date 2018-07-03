@@ -473,5 +473,6 @@ props used there can be used as overrides to customise DataTable as you need.
     filterable: true,
     resizable: true
   }}
+  showVerticalLines
 />
 ```
