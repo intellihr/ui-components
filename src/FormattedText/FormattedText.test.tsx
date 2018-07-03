@@ -115,4 +115,25 @@ describe('<FormattedText />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it(`should include a custom text renderer`, () => {
+    const wrapper = shallow(
+      <FormattedText
+        text=':crocodile:'
+        renderEmojis
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it(`should not include a custom text renderer`, () => {
+    const wrapper = shallow(
+      <FormattedText
+        text=':crocodile:'
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })

@@ -4,6 +4,8 @@ import { map, get } from 'lodash'
 import classNames from 'classnames'
 import DropdownPane from 'react-dd-menu'
 import { Anchor } from '../Anchor'
+import { DefaultDropdownButton } from './style'
+import { FontAwesomeIcon } from '../Icon'
 const style = require('./style.scss')
 
 export interface CalloutState {
@@ -60,13 +62,20 @@ export interface DropdownMenuProps {
   /** Any custom classNames */
   className?: string,
   /** The parent component that opens the dropdown */
-  toggleComponent: JSX.Element,
+  toggleComponent?: JSX.Element,
   /** The sections to render */
   sections: sectionProps[]
 }
 
 export class DropdownMenu extends React.PureComponent<DropdownMenuProps, CalloutState> {
   public state: CalloutState = { isMenuOpen: false }
+  public static defaultProps: Partial<DropdownMenuProps> = {
+    toggleComponent: (
+      <DefaultDropdownButton>
+        <FontAwesomeIcon type='ellipsis-v' />
+      </DefaultDropdownButton>
+    )
+  }
 
   toggle = () => {
     this.setState({ isMenuOpen: !this.state.isMenuOpen })

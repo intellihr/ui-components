@@ -1,8 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<FormattedText /> should include a custom text renderer 1`] = `
+<styled.div>
+  <ReactMarkdown
+    astPlugins={Array []}
+    className="react-markdown-block"
+    escapeHtml={true}
+    plugins={Array []}
+    rawSourcePos={false}
+    renderers={
+      Object {
+        "link": [Function],
+        "text": [Function],
+      }
+    }
+    skipHtml={false}
+    source=":crocodile:"
+    sourcePos={false}
+    transformLinkUri={[Function]}
+  />
+</styled.div>
+`;
+
+exports[`<FormattedText /> should not include a custom text renderer 1`] = `
+<styled.div>
+  <ReactMarkdown
+    astPlugins={Array []}
+    className="react-markdown-block"
+    escapeHtml={true}
+    plugins={Array []}
+    rawSourcePos={false}
+    renderers={
+      Object {
+        "link": [Function],
+      }
+    }
+    skipHtml={false}
+    source=":crocodile:"
+    sourcePos={false}
+    transformLinkUri={[Function]}
+  />
+</styled.div>
+`;
+
 exports[`<FormattedText /> should render a big block of markdown 1`] = `
 .c0 {
   white-space: pre-wrap;
+}
+
+.c0 .react-markdown-block > :last-child {
+  margin-bottom: 0;
 }
 
 .c1 {
@@ -21,6 +68,7 @@ exports[`<FormattedText /> should render a big block of markdown 1`] = `
 }
 
 <FormattedText
+  renderEmojis={false}
   text="
 FormattedText supports all syntax supported by markdown.
 
@@ -106,13 +154,13 @@ Ordered/multi-level lists:
     >
       <ReactMarkdown
         astPlugins={Array []}
+        className="react-markdown-block"
         escapeHtml={true}
         plugins={Array []}
         rawSourcePos={false}
         renderers={
           Object {
             "link": [Function],
-            "text": [Function],
           }
         }
         skipHtml={false}
@@ -198,6 +246,7 @@ Ordered/multi-level lists:
         transformLinkUri={[Function]}
       >
         <div
+          className="react-markdown-block"
           key="root-1-1"
         >
           <p
@@ -859,6 +908,10 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
   white-space: pre-wrap;
 }
 
+.c0 .react-markdown-block > :last-child {
+  margin-bottom: 0;
+}
+
 .c1 {
   color: inherit;
 }
@@ -875,6 +928,7 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
 }
 
 <FormattedText
+  renderEmojis={false}
   text="http://www.heyguy.com
 
         also this one http://www.ozbargain.com.au"
@@ -885,13 +939,13 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
     >
       <ReactMarkdown
         astPlugins={Array []}
+        className="react-markdown-block"
         escapeHtml={true}
         plugins={Array []}
         rawSourcePos={false}
         renderers={
           Object {
             "link": [Function],
-            "text": [Function],
           }
         }
         skipHtml={false}
@@ -902,6 +956,7 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
         transformLinkUri={[Function]}
       >
         <div
+          className="react-markdown-block"
           key="root-1-1"
         >
           <p
@@ -973,7 +1028,12 @@ exports[`<FormattedText /> should render the formatted text 1`] = `
   white-space: pre-wrap;
 }
 
+.c0 .react-markdown-block > :last-child {
+  margin-bottom: 0;
+}
+
 <FormattedText
+  renderEmojis={false}
   text="Hello. I am a piece of paragraph text.
 
         This should be on a new line :)"
@@ -984,13 +1044,13 @@ exports[`<FormattedText /> should render the formatted text 1`] = `
     >
       <ReactMarkdown
         astPlugins={Array []}
+        className="react-markdown-block"
         escapeHtml={true}
         plugins={Array []}
         rawSourcePos={false}
         renderers={
           Object {
             "link": [Function],
-            "text": [Function],
           }
         }
         skipHtml={false}
@@ -1001,6 +1061,7 @@ exports[`<FormattedText /> should render the formatted text 1`] = `
         transformLinkUri={[Function]}
       >
         <div
+          className="react-markdown-block"
           key="root-1-1"
         >
           <p

@@ -2,7 +2,6 @@
 
 ```jsx
 <DropdownMenu
-  toggleComponent={<Button>Basic Dropdown</Button>}
   sections={[
     {
       text: 'Item 1',

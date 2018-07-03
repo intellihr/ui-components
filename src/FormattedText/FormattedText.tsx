@@ -8,12 +8,16 @@ import { TextLink } from '../Link'
 export interface FormattedTextProps {
   /** Preformatted markdown text to display */
   text: string
+  /** If true, renders emojis */
+  renderEmojis?: boolean
 }
 
 export class FormattedText extends React.PureComponent<FormattedTextProps> {
-  linkRenderer = (
-    props: { children: any, href: string }
-  ): JSX.Element => {
+  public static defaultProps: Partial<FormattedTextProps> = {
+    renderEmojis: false
+  }
+
+  linkRenderer = (props: { children: any, href: string }): JSX.Element => {
     return (
       <TextLink
         href={props.href}
@@ -25,10 +29,8 @@ export class FormattedText extends React.PureComponent<FormattedTextProps> {
     )
   }
 
-  textRenderer = (
-    text: string
-  ): JSX.Element => {
-    return reactStringReplace(text, /:([^:]+):/g, (match: string, i: number) => {
+  textRenderer = (text: string): JSX.Element => {
+    return reactStringReplace(text, /(?:^|\s):([^:\s]+):(?=\s|$)/g, (match: string, i: number) => {
       return <Emoji
         key={i}
         emoji={match}
@@ -40,17 +42,24 @@ export class FormattedText extends React.PureComponent<FormattedTextProps> {
 
   public render (): JSX.Element {
     const {
-      text
+      text,
+      renderEmojis
     } = this.props
+
+    const renderers:any = {
+      link: this.linkRenderer
+    }
+
+    if (renderEmojis) {
+      renderers.text = this.textRenderer
+    }
 
     return (
       <StyledFormattedText>
         <ReactMarkdown
           source={text}
-          renderers={{
-            link: this.linkRenderer,
-            text: this.textRenderer
-          }}
+          renderers={renderers}
+          className='react-markdown-block'
         />
       </StyledFormattedText>
     )

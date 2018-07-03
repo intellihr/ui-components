@@ -8,7 +8,6 @@ describe('<DropdownMenu />', () => {
 
     const wrapper = shallow(
       <DropdownMenu
-        toggleComponent={<button>test</button>}
         sections={[
           {
             text: 'Item 1',
