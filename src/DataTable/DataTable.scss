@@ -334,7 +334,8 @@
       width: auto;
 
       &:not([disabled]) {
-        &:hover {
+        &:hover,
+        &:focus {
           background-color: $neutral-base;
           color: $black;
         }
@@ -350,7 +351,8 @@
         background-color: $secondary-base;
         color: $white;
 
-        &:hover {
+        &:hover,
+        &:focus {
           background-color: $secondary-base;
           color: $white;
           cursor: default;
