@@ -1,25 +1,38 @@
-import React from 'react'
+import React, { ChangeEvent } from 'react'
 import ReactTable, { TableProps, Column, SortingRule } from 'react-table'
-import { DataTablePagination } from './DataTablePagination'
 import classNames from 'classnames'
+import {
+  get,
+  filter,
+  isString,
+  isFunction,
+  lowerCase
+} from 'lodash'
 import { Callout } from '../Callout'
+import { DataTablePagination, DataTablePaginationProps } from './DataTablePagination'
+import { TextInput } from '../Input/TextInput'
 const style = require('./DataTable.scss')
 
+export interface DataTableState {
+  /** Currently applied search filter */
+  searchFilter: string | null
+}
+
 export interface DataTableProps {
+  /** Name for this table */
+  tableId?: string
   /** List of all row data */
-  data: any[],
-
+  data: any[]
   /** Column definitions for the table */
-  columns: Column[],
-
+  columns: Column[]
   /** Whether the table can be sorted on its columns */
   sortable?: boolean
-
   /** Default sorting properties */
   defaultSorted?: SortingRule[]
-
   /** Whether the table should be paginated */
   showPagination?: boolean
+  /** Whether we should add a search filter  */
+  showSearchFilter?: boolean
 
   /**
    * Overrides for react-table props which can be applied to this table.
@@ -29,11 +42,83 @@ export interface DataTableProps {
   reactTableOverrides?: Partial<TableProps>
 }
 
-export class DataTable extends React.Component<DataTableProps> {
+export class DataTable extends React.Component<DataTableProps, DataTableState> {
   public static defaultProps: Partial<DataTableProps> = {
     sortable: false,
     showPagination: false,
-    defaultSorted: []
+    showSearchFilter: false,
+    defaultSorted: [],
+    tableId: 'datatable'
+  }
+
+  constructor (props: DataTableProps) {
+    super(props)
+
+    this.state = {
+      searchFilter: null
+    }
+  }
+
+  updateSearchFilter = (event: ChangeEvent<HTMLInputElement>) => {
+    this.setState({
+      searchFilter: event.target.value
+    })
+  }
+
+  shouldFilterRow = (row: object) => {
+    const { columns } = this.props
+    const { searchFilter } = this.state
+    const needle = lowerCase(searchFilter || '')
+
+    for (const column of columns) {
+      let columnValue = ''
+
+      if (isString(column.accessor)) {
+        columnValue = get(row, column.accessor, '')
+      }
+
+      if (isFunction(column.accessor)) {
+        columnValue = column.accessor(row) || ''
+      }
+
+      columnValue = lowerCase(columnValue)
+
+      if (columnValue.includes(needle)) {
+        return true
+      }
+    }
+
+    return false
+  }
+
+  get filteredData () {
+    const { data, showSearchFilter } = this.props
+    const { searchFilter } = this.state
+
+    if (!showSearchFilter || !searchFilter) {
+      return data
+    }
+
+    return filter(data, this.shouldFilterRow)
+  }
+
+  get searchFilter (): JSX.Element | undefined {
+    const {
+      showSearchFilter,
+      tableId
+    } = this.props
+
+    if (showSearchFilter) {
+      return (
+        <span className='search-filter'>
+          <label>Search:</label>
+          <TextInput
+            handleChange={this.updateSearchFilter}
+            name={`${tableId}-search-filter`}
+          />
+        </span>
+      )
+    }
   }
 
   get defaultNoDataComponent (): (props: any) => JSX.Element {
@@ -41,6 +126,16 @@ export class DataTable extends React.Component<DataTableProps> {
       <Callout type='no-data' shouldFocus={false} >
         {props.children}
       </Callout>
+    )
+  }
+
+  paginationComponent = (props: DataTablePaginationProps) => {
+    return (
+      <DataTablePagination
+        key='pagination'
+        {...props}
+        customComponent={this.searchFilter}
+      />
     )
   }
 
@@ -54,27 +149,43 @@ export class DataTable extends React.Component<DataTableProps> {
       showPaginationBottom: true,
       noDataText: 'No data found',
       NoDataComponent: this.defaultNoDataComponent,
-      PaginationComponent: DataTablePagination
+      PaginationComponent: this.paginationComponent
     }
+  }
+
+  get classNames (): string {
+    const {
+      sortable,
+      tableId
+    } = this.props
+
+    return classNames(
+      style.DataTable,
+      `data-table-${tableId}`,
+      {sortable}
+    )
   }
 
   public render (): JSX.Element {
     const {
       columns,
-      data,
-      reactTableOverrides,
       showPagination,
       sortable,
-      defaultSorted
+      defaultSorted,
+      reactTableOverrides
     } = this.props
+
+    const filteredData = this.filteredData
 
     return <ReactTable
       {...this.defaultReactTableProps}
-      data={data}
+      data={filteredData}
       columns={columns}
-      className={classNames({sortable}, style.reactTable)}
+      className={this.classNames}
       showPagination={showPagination}
+      showPaginationBottom={filteredData.length > 0}
       showPageSizeOptions={showPagination}
+      pageSize={showPagination ? undefined : filteredData.length}
       sortable={sortable}
       defaultSorted={defaultSorted}
       {...reactTableOverrides}
