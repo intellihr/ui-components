@@ -21,18 +21,24 @@ export interface DataTableState {
 export interface DataTableProps {
   /** Name for this table */
   tableId?: string
+
   /** List of all row data */
   data: any[]
   /** Column definitions for the table */
   columns: Column[]
+
   /** Whether the table can be sorted on its columns */
   sortable?: boolean
   /** Default sorting properties */
   defaultSorted?: SortingRule[]
   /** Whether the table should be paginated */
   showPagination?: boolean
+
   /** Whether we should add a search filter  */
   showSearchFilter?: boolean
+
+  /** Easy replacement for when there is no data  */
+  noDataComponent?: JSX.Element
 
   /**
    * Overrides for react-table props which can be applied to this table.
@@ -65,7 +71,7 @@ export class DataTable extends React.Component<DataTableProps, DataTableState> {
     })
   }
 
-  shouldFilterRow = (row: object) => {
+  shouldFilterRow = (row: object): boolean => {
     const { columns } = this.props
     const { searchFilter } = this.state
     const needle = lowerCase(searchFilter || '')
@@ -91,7 +97,7 @@ export class DataTable extends React.Component<DataTableProps, DataTableState> {
     return false
   }
 
-  get filteredData () {
+  get filteredData (): any[] {
     const { data, showSearchFilter } = this.props
     const { searchFilter } = this.state
 
@@ -121,15 +127,21 @@ export class DataTable extends React.Component<DataTableProps, DataTableState> {
     }
   }
 
-  get defaultNoDataComponent (): (props: any) => JSX.Element {
-    return (props) => (
+  noDataComponent = (props: any): JSX.Element => {
+    const {
+      noDataComponent
+    } = this.props
+
+    if (noDataComponent) return noDataComponent
+
+    return (
       <Callout type='no-data' shouldFocus={false} >
         {props.children}
       </Callout>
     )
   }
 
-  paginationComponent = (props: DataTablePaginationProps) => {
+  paginationComponent = (props: DataTablePaginationProps): JSX.Element => {
     return (
       <DataTablePagination
         key='pagination'
@@ -147,8 +159,7 @@ export class DataTable extends React.Component<DataTableProps, DataTableState> {
       pageSizeOptions: [10, 25, 50, 100],
       showPaginationTop: true,
       showPaginationBottom: true,
-      noDataText: 'No data found',
-      NoDataComponent: this.defaultNoDataComponent,
+      NoDataComponent: this.noDataComponent,
       PaginationComponent: this.paginationComponent
     }
   }

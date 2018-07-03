@@ -40,6 +40,7 @@
       accessor: 'age'
     }
   ]}
+  noDataComponent={<Callout type='no-data' shouldFocus={false}>This table has no data!</Callout>}
 />
 ```
 
