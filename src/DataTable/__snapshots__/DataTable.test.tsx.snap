@@ -28,7 +28,10 @@ exports[`<DataTable /> Basic DataTable should match the snapshot 1`] = `
   }
   defaultSorted={Array []}
   showPagination={false}
+  showSearchFilter={false}
+  showVerticalLines={false}
   sortable={false}
+  tableId="datatable"
 >
   <ReactTable
     AggregatedComponent={[Function]}
@@ -49,7 +52,7 @@ exports[`<DataTable /> Basic DataTable should match the snapshot 1`] = `
     TrComponent={[Function]}
     TrGroupComponent={[Function]}
     aggregatedKey="_aggregated"
-    className="reactTable"
+    className="DataTable data-table-datatable"
     collapseOnDataChange={true}
     collapseOnPageChange={true}
     collapseOnSortingChange={true}
@@ -155,10 +158,11 @@ exports[`<DataTable /> Basic DataTable should match the snapshot 1`] = `
     multiSort={true}
     nestingLevelKey="_nestingLevel"
     nextText="Next"
-    noDataText="No data found"
+    noDataText="No rows found"
     ofText="of"
     onFetchData={[Function]}
     originalKey="_original"
+    pageSize={2}
     pageSizeOptions={
       Array [
         10,
@@ -185,7 +189,7 @@ exports[`<DataTable /> Basic DataTable should match the snapshot 1`] = `
     subRowsKey="_subRows"
   >
     <div
-      className="ReactTable reactTable"
+      className="ReactTable DataTable data-table-datatable"
       style={Object {}}
     >
       <TableComponent
