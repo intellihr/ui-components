@@ -126,9 +126,11 @@ exports[`<DropdownMenu /> Simple dropdown should match the snapshot 1`] = `
       className="toggle-component"
       onClick={[Function]}
     >
-      <button>
-        test
-      </button>
+      <styled.button>
+        <FontAwesomeIcon
+          type="ellipsis-v"
+        />
+      </styled.button>
     </div>
   }
   upwards={false}
