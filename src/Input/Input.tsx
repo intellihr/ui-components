@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ChangeEventHandler } from 'react'
 import classNames from 'classnames'
 import { InputWrapper } from './style'
 
@@ -12,7 +12,7 @@ export interface GenericInputProps {
   /** If true, adds invalid input class to component */
   isInvalid?: boolean
   /** Function passed to `onChange` prop */
-  handleChange?: any
+  handleChange?: ChangeEventHandler<HTMLInputElement>
   /** Value of the input */
   value?: string | number
   /** [Number only] Minimum value allowed */

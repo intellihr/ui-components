@@ -9,40 +9,30 @@ export interface DataTablePaginationState {
 export interface DataTablePaginationProps {
   /** Data to paginate - only used to get total number of rows */
   data: any[]
-
   /** Currently selected page */
   page: number
-
   /** Page count */
   pages: number
-
   /** Row size per page */
   pageSize: number
-
   /** List of page size options */
   pageSizeOptions: number[]
-
   /** Show the ability to change page size? */
   showPageSizeOptions: boolean
-
   /** Can we go to the next page? */
   canNext: boolean
-
   /** Can we go to the previous page? */
   canPrevious: boolean
-
   /** Classnames */
   className?: string
-
   /** Back button text */
   previousText?: string
-
   /** Forward button text */
   nextText?: string
-
+  /** Custom component to render within this component */
+  customComponent?: JSX.Element
   /** Page changing callback */
   onPageChange: (page: number) => void
-
   /** Page size change callback */
   onPageSizeChange: (newPageSize: number, newPage: number) => void
 }
@@ -228,7 +218,7 @@ export class DataTablePagination extends React.Component<DataTablePaginationProp
       )
 
       return (
-        <span className='select-wrap -pageSizeOptions'>
+        <span className='page-size-options'>
           <label>Show {pageSizeSelect} entries</label>
         </span>
       )
@@ -241,13 +231,15 @@ export class DataTablePagination extends React.Component<DataTablePaginationProp
       canNext,
       className,
       previousText,
-      nextText
+      nextText,
+      customComponent
     } = this.props
 
     return (
       <div className={classNames(className, '-pagination')} >
-        {this.pageDetails}
+        {customComponent}
         {this.pageSizeOptions}
+        {this.pageDetails}
         <div className='page-navigation'>
           <button
             type='button'
