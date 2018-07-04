@@ -25,7 +25,7 @@
 />
 ```
 
-#### Basic DataTable with no data
+#### Empty data table
 
 ```jsx
 <DataTable
@@ -40,10 +40,13 @@
       accessor: 'age'
     }
   ]}
+  noDataComponent={<Callout type='no-data' shouldFocus={false}>This table has no data!</Callout>}
 />
 ```
 
-#### Sortable DataTable
+#### Sortable DataTable + default sorting
+
+Hold shift to sort on multiple columns
 
 ```jsx
 <DataTable
@@ -68,66 +71,6 @@
     }
   ]}
   sortable
-/>
-```
-
-#### Custom Column Components
-
-```jsx
-<DataTable
-  data={[
-    {
-      name: 'Tanner Linsley',
-      age: 26
-    },
-    {
-      name: 'Jason Maurer',
-      age: 23
-    }
-  ]}
-  columns={[
-    {
-      Header: 'Name',
-      accessor: 'name',
-      Cell: data => (
-        <Callout>
-          {data.row.name}
-        </Callout>
-      )
-    },
-    {
-      Header: 'Age',
-      accessor: 'age'
-    }
-  ]}
-  sortable
-/>
-```
-
-#### Default Sorted DataTable
-
-```jsx
-<DataTable
-  data={[
-    {
-      name: 'Tanner Linsley',
-      age: 26
-    },
-    {
-      name: 'Jason Maurer',
-      age: 23
-    }
-  ]}
-  columns={[
-    {
-      Header: 'Name',
-      accessor: 'name'
-    },
-    {
-      Header: 'Age',
-      accessor: 'age'
-    }
-  ]}
   defaultSorted={[
      {
        id: 'age',
@@ -137,7 +80,43 @@
 />
 ```
 
-#### Paginated DataTable
+#### Custom Column Components + widths + accessors
+
+```jsx
+<DataTable
+  data={[
+    {
+      name: 'Tanner Linsley',
+      age: {
+        number: 26
+      },
+      
+    },
+    {
+      name: 'Jason Maurer',
+      age: {
+        number: 23
+      }
+    }
+  ]}
+  columns={[
+    {
+      id: 'name',
+      Header: 'Name',
+      accessor: row => row.name.toUpperCase()
+    },
+    {
+      Header: 'Age',
+      accessor: 'age.number',
+      width: 100,
+      Cell: ({ value }) => <Callout>{value}</Callout>
+    }
+  ]}
+  sortable
+/>
+```
+
+#### Paginated + filterable DataTable
 
 ```jsx
 <DataTable
@@ -459,10 +438,14 @@
     }
   ]}
   showPagination
+  showSearchFilter
 />
 ```
 
 #### DataTable with custom overrides
+
+The data table uses [react-table](https://react-table.js.org/#/story/readme) under the hood, and many of the
+props used there can be used as overrides to customise DataTable as you need.
 
 ```jsx
 <DataTable
@@ -487,7 +470,9 @@
     }
   ]}
   reactTableOverrides={{
-    filterable: true
+    filterable: true,
+    resizable: true
   }}
+  showVerticalLines
 />
 ```
