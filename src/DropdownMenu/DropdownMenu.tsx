@@ -29,13 +29,13 @@ export interface sectionProps {
   /** an override component that will render instead of the inbuilt components */
   component?: JSX.Element,
   /** makes the text red on hover instead of blue */
-  hoverAlert: boolean,
+  hoverAlert?: boolean,
   /** shows the section as the desired colored section */
-  color: sectionColors,
+  color?: sectionColors,
   /** an optional section ID */
-  id: string
+  id?: string
   /** any extra props to pass to the component */
-  componentProps: any
+  componentProps?: any
 }
 
 export interface DropdownMenuProps {
