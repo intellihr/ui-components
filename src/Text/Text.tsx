@@ -16,11 +16,19 @@ export interface TextProps {
   isHeavy?: boolean
   /** If true, displays the text in a smaller font size */
   isSmall?: boolean
+  /** If true, will truncate overflowing text */
+  isTruncated?: boolean
+  /** If true, will display the text inline */
+  isInline?: boolean
   /** Color of the text */
   color?: string
 }
 
 export class TextComponent extends React.PureComponent<TextProps> {
+  public static defaultProps: Partial<TextProps> = {
+    isInline: true
+  }
+
   public render (): JSX.Element {
     const {
       children,
@@ -29,6 +37,8 @@ export class TextComponent extends React.PureComponent<TextProps> {
       isHeavy,
       isUpper,
       isSmall,
+      isTruncated,
+      isInline,
       color
     } = this.props
 
@@ -41,7 +51,9 @@ export class TextComponent extends React.PureComponent<TextProps> {
             'heading': isHeading,
             'heavy': isHeavy,
             'upper': isUpper,
-            'small': isSmall
+            'small': isSmall,
+            'truncated': isTruncated,
+            'block': !isInline
           }
         )}
       >

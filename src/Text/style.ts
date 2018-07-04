@@ -26,4 +26,14 @@ export const TextWrapper = styled.span`
   &.small {
     font-size: .8125rem;
   }
+  
+  &.truncated {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  &.block {
+    display: block;
+  }
 `

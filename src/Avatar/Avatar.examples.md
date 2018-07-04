@@ -125,6 +125,32 @@
 </div>
 ```
 
+#### Avatar using status icon
+
+```jsx
+
+const { FontAwesomeIcon } = require('../Icon');
+
+<div>
+    <div>
+      <Avatar
+        initials='JW'
+        size='medium'
+        statusIcon={<FontAwesomeIcon type='arrow-right' color='#432df3' />}
+      />
+    </div>
+    <div>
+      <Avatar
+        initials='JW'
+        size='medium'
+        statusDot='success'
+        statusIcon={<FontAwesomeIcon type='arrow-right' color='#432df3' />}
+      />
+    </div>
+</div>
+
+```
+
 #### Avatar using hover props
 
 ```jsx
