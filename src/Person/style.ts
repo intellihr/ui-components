@@ -1,9 +1,14 @@
 import styled from 'styled-components'
 import { getColor } from '../Color'
 
+interface IPersonWrapper {
+  className?: string
+  isHoverable?: boolean
+}
+
 export const PersonWrapper = styled.div`
   align-items: center;
-  display: flex;
+  display: inline-flex;
   padding: 2px;
   
   .person-secondary-text {
@@ -16,6 +21,19 @@ export const PersonWrapper = styled.div`
     color: ${getColor('main-text-light')};
     font-size: .75rem;
     font-weight: 600;
+  }
+  
+  &:hover {
+    ${(props: IPersonWrapper) => {
+      if (props.isHoverable) {
+        return `
+              color: ${getColor('link-text')};
+              cursor: pointer;
+            `
+      }
+      
+      return null
+    }
   }
 `
 

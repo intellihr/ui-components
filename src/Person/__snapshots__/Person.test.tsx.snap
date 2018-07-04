@@ -3,6 +3,7 @@
 exports[`<Person /> should render a basic compact person 1`] = `
 <styled.div
   className="person"
+  isHoverable={false}
 >
   <styled.div>
     <Avatar
@@ -23,6 +24,7 @@ exports[`<Person /> should render a basic compact person 1`] = `
 exports[`<Person /> should render a basic person 1`] = `
 <styled.div
   className="person"
+  isHoverable={false}
 >
   <styled.div>
     <Avatar
@@ -43,6 +45,7 @@ exports[`<Person /> should render a basic person 1`] = `
 exports[`<Person /> should render a compact person with lots of data 1`] = `
 <styled.div
   className="person"
+  isHoverable={false}
 >
   <styled.div>
     <Avatar
@@ -73,6 +76,7 @@ exports[`<Person /> should render a compact person with lots of data 1`] = `
 exports[`<Person /> should render a person with lots of data 1`] = `
 <styled.div
   className="person"
+  isHoverable={false}
 >
   <styled.div>
     <Avatar
@@ -97,7 +101,9 @@ exports[`<Person /> should render a person with lots of data 1`] = `
       Guy Killer
     </class_1>
     <class_1
-      isSmall={true}
+      className="person-tertiary-text"
+      isInline={false}
+      isTruncated={true}
     >
       In Cinemas 2019
     </class_1>

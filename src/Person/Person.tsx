@@ -21,11 +21,14 @@ export interface IPerson {
   secondaryText?: string
   /** The tertiary text */
   tertiaryText?: string
+  /** If true, will display a hover state style when hovered */
+  isHoverable?: boolean
 }
 
 export class Person extends React.PureComponent<IPerson> {
   public static defaultProps: Partial<IPerson> = {
-    isCompact: false
+    isCompact: false,
+    isHoverable: false
   }
 
   avatar () {
@@ -73,14 +76,16 @@ export class Person extends React.PureComponent<IPerson> {
       text = `(${text})`
     }
 
-    return <Text
-      className='person-secondary-text'
-      isSmall
-      isTruncated
-      isInline={isCompact}
-    >
-      {text}
-    </Text>
+    return (
+      <Text
+        className='person-secondary-text'
+        isSmall
+        isTruncated
+        isInline={isCompact}
+      >
+        {text}
+      </Text>
+    )
   }
 
   tertiaryText () {
@@ -93,16 +98,27 @@ export class Person extends React.PureComponent<IPerson> {
       return null
     }
 
-    return <Text
-      className='person-tertiary-text'
-      isInline={false}
-      isTruncated
-    >{tertiaryText}</Text>
+    return (
+      <Text
+        className='person-tertiary-text'
+        isInline={false}
+        isTruncated
+      >
+        {tertiaryText}
+      </Text>
+    )
   }
 
   public render(): JSX.Element {
-     return (
-      <PersonWrapper className={classNames('person')}>
+    const {
+      isHoverable
+    } = this.props
+
+    return (
+      <PersonWrapper
+        className={classNames('person')}
+        isHoverable={isHoverable}
+      >
         {this.avatar()}
         <PersonInfo>
           {this.primaryText()}
