@@ -35,9 +35,9 @@ A common React components library that is used in our company.
 1. It's simple. Let's add that into your project:
 
     ```bash
-    yarn add @intellihr/ui-components react react-dom
+    yarn add @intellihr/ui-components react react-dom foundation-sites
     # or
-    npm i @intellihr/ui-components react react-dom
+    npm i @intellihr/ui-components react react-dom foundation-sites
     ```
 
 2. Then included the project css and this project's components css into your project's entry point. e.g. in CRA, it's the `index.js`:
@@ -115,8 +115,11 @@ For Details Check [Here](https://lexi-lambda.github.io/blog/2016/08/24/understan
       }
     }
     ```
+    
+3. Update `README.md` the [Get Started](#get-started-integrate-to-your-project) session 
+to include your library in the install command
 
-3. Update your consumer to include your `peerDependencies`
+4. Update your consumer to include your `peerDependencies`
 
     ```bash
     npm i --save-dev some-library
