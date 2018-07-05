@@ -3,6 +3,7 @@
 exports[`<Person /> should render a basic compact person 1`] = `
 <styled.div
   className="person"
+  isCompact={true}
   isHoverable={false}
 >
   <styled.div>
@@ -24,6 +25,7 @@ exports[`<Person /> should render a basic compact person 1`] = `
 exports[`<Person /> should render a basic person 1`] = `
 <styled.div
   className="person"
+  isCompact={false}
   isHoverable={false}
 >
   <styled.div>
@@ -45,6 +47,7 @@ exports[`<Person /> should render a basic person 1`] = `
 exports[`<Person /> should render a compact person with lots of data 1`] = `
 <styled.div
   className="person"
+  isCompact={true}
   isHoverable={false}
 >
   <styled.div>
@@ -76,6 +79,7 @@ exports[`<Person /> should render a compact person with lots of data 1`] = `
 exports[`<Person /> should render a person with lots of data 1`] = `
 <styled.div
   className="person"
+  isCompact={false}
   isHoverable={false}
 >
   <styled.div>

@@ -111,13 +111,15 @@ export class Person extends React.PureComponent<IPerson> {
 
   public render(): JSX.Element {
     const {
-      isHoverable
+      isHoverable,
+      isCompact
     } = this.props
 
     return (
       <PersonWrapper
         className={classNames('person')}
         isHoverable={isHoverable}
+        isCompact={isCompact}
       >
         {this.avatar()}
         <PersonInfo>
