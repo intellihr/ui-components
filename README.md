@@ -115,8 +115,11 @@ For Details Check [Here](https://lexi-lambda.github.io/blog/2016/08/24/understan
       }
     }
     ```
+    
+3. Update `README.md` the [Get Started](#get-started-integrate-to-your-project) session 
+to include your library in the install command
 
-3. Update your consumer to include your `peerDependencies`
+4. Update your consumer to include your `peerDependencies`
 
     ```bash
     npm i --save-dev some-library
