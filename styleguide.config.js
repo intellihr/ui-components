@@ -27,6 +27,7 @@ module.exports = {
       name: 'UI Components',
       components: [
         'src/Avatar/Avatar.tsx',
+        'src/AvatarEntity/AvatarEntity.tsx',
         'src/Callout/Callout.tsx',
         'src/Comment/Comment.tsx',
         'src/DropdownMenu/DropdownMenu.tsx',
@@ -38,7 +39,6 @@ module.exports = {
         'src/Legend/Legend.tsx',
         'src/Menu/Menu.tsx',
         'src/Navigation/Navigation.tsx',
-        'src/Person/Person.tsx',
         'src/Pill/Pill.tsx',
         'src/Skeleton/Skeleton.tsx',
         'src/Spinner/Spinner.tsx',

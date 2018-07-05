@@ -1,10 +1,11 @@
 import React from 'react'
 import classNames from 'classnames'
-import { AvatarContainer, PersonInfo, PersonWrapper } from './style'
+import { AvatarContainer, AvatarEntityInfo, AvatarEntityWrapper } from './style'
 import { Avatar } from '../Avatar'
 import { Text } from '../Text'
+import { AvatarProps } from '../Avatar/Avatar'
 
-export interface IPerson {
+export interface IAvatarEntity {
   /** Initials to display if no valid `imageUrl` or `imageData` is passed to Avatar */
   avatarInitials: string
   /** Image URL */
@@ -13,7 +14,7 @@ export interface IPerson {
   avatarStatusColor?: 'primary' | 'secondary' | 'success' | 'warning' | 'alert' | 'neutral' | 'highlight'
   /** Display an icon on the avatar */
   avatarStatusIcon?: JSX.Element
-  /** If true, displays Person in a compact view */
+  /** If true, displays AvatarEntity in a compact view */
   isCompact?: boolean
   /** The primary text */
   primaryText: string
@@ -25,33 +26,33 @@ export interface IPerson {
   isHoverable?: boolean
 }
 
-export class Person extends React.PureComponent<IPerson> {
-  public static defaultProps: Partial<IPerson> = {
+export class AvatarEntity extends React.PureComponent<IAvatarEntity & AvatarProps> {
+  public static defaultProps: Partial<IAvatarEntity> = {
     isCompact: false,
     isHoverable: false
   }
 
-  avatar () {
+  get avatar (): JSX.Element {
     const {
-      avatarInitials,
-      avatarUrl,
-      avatarStatusColor,
-      avatarStatusIcon,
+      initials,
+      imageUrl,
+      statusDot,
+      statusIcon,
       isCompact
     } = this.props
 
     return <AvatarContainer>
       <Avatar
-        initials={avatarInitials}
-        imageUrl={avatarUrl}
-        statusDot={avatarStatusColor}
-        statusIcon={avatarStatusIcon}
+        initials={initials}
+        imageUrl={imageUrl}
+        statusDot={statusDot}
+        statusIcon={statusIcon}
         size={isCompact ? 'small' : 'medium'}
       />
     </AvatarContainer>
   }
 
-  primaryText () {
+  get primaryText (): JSX.Element {
     const {
       primaryText,
       isCompact
@@ -60,7 +61,7 @@ export class Person extends React.PureComponent<IPerson> {
     return <Text isInline={isCompact}>{primaryText}</Text>
   }
 
-  secondaryText () {
+  get secondaryText (): JSX.Element | null {
     const {
       secondaryText,
       isCompact
@@ -88,7 +89,7 @@ export class Person extends React.PureComponent<IPerson> {
     )
   }
 
-  tertiaryText () {
+  get tertiaryText (): JSX.Element | null {
     const {
       tertiaryText,
       isCompact
@@ -116,18 +117,18 @@ export class Person extends React.PureComponent<IPerson> {
     } = this.props
 
     return (
-      <PersonWrapper
-        className={classNames('person')}
+      <AvatarEntityWrapper
+        className='avatar-entity'
         isHoverable={isHoverable}
         isCompact={isCompact}
       >
-        {this.avatar()}
-        <PersonInfo>
-          {this.primaryText()}
-          {this.secondaryText()}
-          {this.tertiaryText()}
-        </PersonInfo>
-      </PersonWrapper>
+        {this.avatar}
+        <AvatarEntityInfo>
+          {this.primaryText}
+          {this.secondaryText}
+          {this.tertiaryText}
+        </AvatarEntityInfo>
+      </AvatarEntityWrapper>
     )
   }
 }

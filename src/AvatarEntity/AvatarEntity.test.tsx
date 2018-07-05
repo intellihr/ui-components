@@ -1,12 +1,11 @@
 import { shallow } from 'enzyme'
 import React from 'react'
+import { AvatarEntity } from './AvatarEntity'
 
-import { Person } from './Person'
-
-describe('<Person />', () => {
-  it(`should render a basic person`, () => {
+describe('<AvatarEntity />', () => {
+  it(`should render a basic avatar entity`, () => {
     const wrapper = shallow(
-      <Person
+      <AvatarEntity
         avatarInitials='JW'
         primaryText='John Wick'
       />
@@ -15,9 +14,9 @@ describe('<Person />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a person with lots of data`, () => {
+  it(`should render a avatar entity with lots of data`, () => {
     const wrapper = shallow(
-      <Person
+      <AvatarEntity
         avatarInitials='JW'
         avatarUrl='www.example.com'
         avatarStatusColor='primary'
@@ -30,9 +29,9 @@ describe('<Person />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a basic compact person`, () => {
+  it(`should render a basic compact avatar entity`, () => {
     const wrapper = shallow(
-      <Person
+      <AvatarEntity
         avatarInitials='JW'
         primaryText='John Wick'
         isCompact
@@ -42,9 +41,9 @@ describe('<Person />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a compact person with lots of data`, () => {
+  it(`should render a compact avatar entity with lots of data`, () => {
     const wrapper = shallow(
-      <Person
+      <AvatarEntity
         avatarInitials='JW'
         avatarUrl='www.example.com'
         avatarStatusColor='primary'

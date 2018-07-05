@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 import { getColor } from '../Color'
 
-interface IPersonWrapper {
+interface IAvatarEntityWrapper {
   className?: string
   isHoverable?: boolean
   isCompact?: boolean
 }
 
-export const PersonWrapper = styled.div`
+export const AvatarEntityWrapper = styled.div`
   align-items: center;
   display: inline-flex;
   padding: 2px;
@@ -17,7 +17,7 @@ export const PersonWrapper = styled.div`
     line-height: 1.3;
     margin-top: 2px;
     
-    margin-left: ${(props: IPersonWrapper) => props.isCompact ? '5px' : '0px'};
+    margin-left: ${(props: IAvatarEntityWrapper) => props.isCompact ? '5px' : '0px'};
   }
 
   .person-tertiary-text {
@@ -27,7 +27,7 @@ export const PersonWrapper = styled.div`
   }
 
   &:hover {
-    ${(props: IPersonWrapper) => {
+    ${(props: IAvatarEntityWrapper) => {
       if (props.isHoverable) {
         return `
               color: ${getColor('link-text')};
@@ -46,7 +46,7 @@ export const AvatarContainer = styled.div`
   display: flex;
 `
 
-export const PersonInfo = styled.div`
+export const AvatarEntityInfo = styled.div`
     overflow: hidden;
     padding-left: 10px;
     align-self: center;

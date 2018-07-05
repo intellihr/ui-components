@@ -1,82 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Person /> should render a basic compact person 1`] = `
-<styled.div
-  className="person"
-  isCompact={true}
-  isHoverable={false}
->
-  <styled.div>
-    <Avatar
-      initials="JW"
-      size="small"
-    />
-  </styled.div>
-  <styled.div>
-    <class_1
-      isInline={true}
-    >
-      John Wick
-    </class_1>
-  </styled.div>
-</styled.div>
-`;
-
-exports[`<Person /> should render a basic person 1`] = `
-<styled.div
-  className="person"
-  isCompact={false}
-  isHoverable={false}
->
-  <styled.div>
-    <Avatar
-      initials="JW"
-      size="medium"
-    />
-  </styled.div>
-  <styled.div>
-    <class_1
-      isInline={false}
-    >
-      John Wick
-    </class_1>
-  </styled.div>
-</styled.div>
-`;
-
-exports[`<Person /> should render a compact person with lots of data 1`] = `
-<styled.div
-  className="person"
-  isCompact={true}
-  isHoverable={false}
->
-  <styled.div>
-    <Avatar
-      imageUrl="www.example.com"
-      initials="JW"
-      size="small"
-      statusDot="primary"
-    />
-  </styled.div>
-  <styled.div>
-    <class_1
-      isInline={true}
-    >
-      John Wick
-    </class_1>
-    <class_1
-      className="person-secondary-text"
-      isInline={true}
-      isSmall={true}
-      isTruncated={true}
-    >
-      (Guy Killer)
-    </class_1>
-  </styled.div>
-</styled.div>
-`;
-
-exports[`<Person /> should render a person with lots of data 1`] = `
+exports[`<AvatarEntity /> should render a avatar entity with lots of data 1`] = `
 <styled.div
   className="person"
   isCompact={false}
@@ -110,6 +34,82 @@ exports[`<Person /> should render a person with lots of data 1`] = `
       isTruncated={true}
     >
       In Cinemas 2019
+    </class_1>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<AvatarEntity /> should render a basic avatar entity 1`] = `
+<styled.div
+  className="person"
+  isCompact={false}
+  isHoverable={false}
+>
+  <styled.div>
+    <Avatar
+      initials="JW"
+      size="medium"
+    />
+  </styled.div>
+  <styled.div>
+    <class_1
+      isInline={false}
+    >
+      John Wick
+    </class_1>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<AvatarEntity /> should render a basic compact avatar entity 1`] = `
+<styled.div
+  className="person"
+  isCompact={true}
+  isHoverable={false}
+>
+  <styled.div>
+    <Avatar
+      initials="JW"
+      size="small"
+    />
+  </styled.div>
+  <styled.div>
+    <class_1
+      isInline={true}
+    >
+      John Wick
+    </class_1>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<AvatarEntity /> should render a compact avatar entity with lots of data 1`] = `
+<styled.div
+  className="person"
+  isCompact={true}
+  isHoverable={false}
+>
+  <styled.div>
+    <Avatar
+      imageUrl="www.example.com"
+      initials="JW"
+      size="small"
+      statusDot="primary"
+    />
+  </styled.div>
+  <styled.div>
+    <class_1
+      isInline={true}
+    >
+      John Wick
+    </class_1>
+    <class_1
+      className="person-secondary-text"
+      isInline={true}
+      isSmall={true}
+      isTruncated={true}
+    >
+      (Guy Killer)
     </class_1>
   </styled.div>
 </styled.div>

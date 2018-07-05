@@ -1,7 +1,7 @@
-#### Basic Person 
+#### Basic AvatarEntity 
 
 ```jsx
-  <Person
+  <AvatarEntity
     avatarInitials='JW'
     avatarStatusColor='primary'
     primaryText='John Wick'
@@ -9,7 +9,7 @@
 ```
 
 ```jsx
-  <Person
+  <AvatarEntity
     avatarInitials='JW'
     avatarStatusColor='primary'
     primaryText='John Wick'
@@ -20,7 +20,7 @@
 ```jsx
 const { FontAwesomeIcon } = require('../Icon');
 
-  <Person
+  <AvatarEntity
     avatarInitials='JW'
     avatarStatusColor='primary'
     avatarStatusIcon={
@@ -35,7 +35,7 @@ const { FontAwesomeIcon } = require('../Icon');
 #### Compact
 
 ```jsx
-  <Person
+  <AvatarEntity
     avatarInitials='JW'
     avatarStatusColor='success'
     primaryText='John Wick'
@@ -47,7 +47,7 @@ const { FontAwesomeIcon } = require('../Icon');
 ```jsx
 const { FontAwesomeIcon } = require('../Icon');
 
-  <Person
+  <AvatarEntity
     avatarInitials='JW'
     avatarStatusColor='success'
     avatarStatusIcon={
@@ -64,7 +64,7 @@ const { FontAwesomeIcon } = require('../Icon');
 ```jsx
 const { FontAwesomeIcon } = require('../Icon');
 
-  <Person
+  <AvatarEntity
     avatarInitials='JW'
     avatarStatusColor='primary'
     avatarStatusIcon={
@@ -80,7 +80,7 @@ const { FontAwesomeIcon } = require('../Icon');
 ```jsx
 const { FontAwesomeIcon } = require('../Icon');
 
-  <Person
+  <AvatarEntity
     avatarInitials='JW'
     avatarStatusColor='success'
     avatarStatusIcon={
