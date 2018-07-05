@@ -35,9 +35,9 @@ A common React components library that is used in our company.
 1. It's simple. Let's add that into your project:
 
     ```bash
-    yarn add @intellihr/ui-components react react-dom foundation-sites
+    yarn add @intellihr/ui-components react react-dom foundation-sites jquery
     # or
-    npm i @intellihr/ui-components react react-dom foundation-sites
+    npm i @intellihr/ui-components react react-dom foundation-sites jquery
     ```
 
 2. Then included the project css and this project's components css into your project's entry point. e.g. in CRA, it's the `index.js`:
@@ -45,7 +45,7 @@ A common React components library that is used in our company.
     ```javascript
     import '@intellihr/ui-components/dist/index.css'
     import '@intellihr/ui-components/dist/ui-components.css'
-    ``` 
+    ```
 
 3. Make sure your project knows how to handle css file type, which is quite simple if you use webpack(and normally your project should have already setup):
 
@@ -94,7 +94,7 @@ For Details Check [Here](https://lexi-lambda.github.io/blog/2016/08/24/understan
     ```bash
     yarn add -E some-library
     ```
-    
+
 #### Add `peerDependencies`
 
 1. Add `devDependencies`
@@ -115,8 +115,8 @@ For Details Check [Here](https://lexi-lambda.github.io/blog/2016/08/24/understan
       }
     }
     ```
-    
-3. Update `README.md` the [Get Started](#get-started-integrate-to-your-project) session 
+
+3. Update `README.md` the [Get Started](#get-started-integrate-to-your-project) session
 to include your library in the install command
 
 4. Update your consumer to include your `peerDependencies`
