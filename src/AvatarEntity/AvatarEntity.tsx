@@ -1,27 +1,24 @@
 import React from 'react'
-import classNames from 'classnames'
-import { AvatarContainer, AvatarEntityInfo, AvatarEntityWrapper } from './style'
+import {
+  AvatarContainer,
+  AvatarEntityInfo,
+  AvatarEntityWrapper,
+  SecondaryTextWrapper,
+  TertiaryTextWrapper
+} from './style'
 import { Avatar } from '../Avatar'
 import { Text } from '../Text'
 import { AvatarProps } from '../Avatar/Avatar'
 
 export interface IAvatarEntity {
-  /** Initials to display if no valid `imageUrl` or `imageData` is passed to Avatar */
-  avatarInitials: string
-  /** Image URL */
-  avatarUrl?: string
-  /** Display a coloured status dot on the avatar */
-  avatarStatusColor?: 'primary' | 'secondary' | 'success' | 'warning' | 'alert' | 'neutral' | 'highlight'
-  /** Display an icon on the avatar */
-  avatarStatusIcon?: JSX.Element
-  /** If true, displays AvatarEntity in a compact view */
-  isCompact?: boolean
   /** The primary text */
   primaryText: string
   /** The secondary text */
   secondaryText?: string
   /** The tertiary text */
   tertiaryText?: string
+  /** If true, displays AvatarEntity in a compact view */
+  isCompact?: boolean
   /** If true, will display a hover state style when hovered */
   isHoverable?: boolean
 }
@@ -78,14 +75,17 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & AvatarProp
     }
 
     return (
-      <Text
-        className='person-secondary-text'
-        isSmall
-        isTruncated
-        isInline={isCompact}
+      <SecondaryTextWrapper
+        isCompact={isCompact}
       >
-        {text}
-      </Text>
+        <Text
+          isSmall
+          isTruncated
+          isInline={isCompact}
+        >
+          {text}
+        </Text>
+      </SecondaryTextWrapper>
     )
   }
 
@@ -100,27 +100,26 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & AvatarProp
     }
 
     return (
-      <Text
-        className='person-tertiary-text'
-        isInline={false}
-        isTruncated
-      >
-        {tertiaryText}
-      </Text>
+      <TertiaryTextWrapper>
+        <Text
+          isInline={false}
+          isTruncated
+        >
+          {tertiaryText}
+        </Text>
+      </TertiaryTextWrapper>
     )
   }
 
   public render(): JSX.Element {
     const {
-      isHoverable,
-      isCompact
+      isHoverable
     } = this.props
 
     return (
       <AvatarEntityWrapper
         className='avatar-entity'
         isHoverable={isHoverable}
-        isCompact={isCompact}
       >
         {this.avatar}
         <AvatarEntityInfo>

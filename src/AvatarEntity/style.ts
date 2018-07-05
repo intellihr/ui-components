@@ -4,6 +4,9 @@ import { getColor } from '../Color'
 interface IAvatarEntityWrapper {
   className?: string
   isHoverable?: boolean
+}
+
+interface ITextWrapper {
   isCompact?: boolean
 }
 
@@ -12,20 +15,6 @@ export const AvatarEntityWrapper = styled.div`
   display: inline-flex;
   padding: 2px;
   
-  .person-secondary-text {
-    color: ${getColor('main-text-light')};
-    line-height: 1.3;
-    margin-top: 2px;
-    
-    margin-left: ${(props: IAvatarEntityWrapper) => props.isCompact ? '5px' : '0px'};
-  }
-
-  .person-tertiary-text {
-    color: ${getColor('main-text-light')};
-    font-size: .75rem;
-    font-weight: 600;
-  }
-
   &:hover {
     ${(props: IAvatarEntityWrapper) => {
       if (props.isHoverable) {
@@ -47,7 +36,20 @@ export const AvatarContainer = styled.div`
 `
 
 export const AvatarEntityInfo = styled.div`
-    overflow: hidden;
-    padding-left: 10px;
-    align-self: center;
+  overflow: hidden;
+  padding-left: 10px;
+  align-self: center;
+`
+
+export const SecondaryTextWrapper = styled.span`
+  color: ${getColor('main-text-light')};
+  line-height: 1.3;
+  margin-top: 2px;
+  margin-left: ${(props: ITextWrapper) => props.isCompact ? '5px' : '0px'};
+`
+
+export const TertiaryTextWrapper = styled.span`
+  color: ${getColor('main-text-light')};
+  font-size: .75rem;
+  font-weight: 600;
 `

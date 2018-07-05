@@ -2,16 +2,16 @@
 
 ```jsx
   <AvatarEntity
-    avatarInitials='JW'
-    avatarStatusColor='primary'
+    initials='JW'
+    statusDot='primary'
     primaryText='John Wick'
   />
 ```
 
 ```jsx
   <AvatarEntity
-    avatarInitials='JW'
-    avatarStatusColor='primary'
+    initials='JW'
+    statusDot='primary'
     primaryText='John Wick'
     secondaryText='Guy Killer'
   />
@@ -21,9 +21,9 @@
 const { FontAwesomeIcon } = require('../Icon');
 
   <AvatarEntity
-    avatarInitials='JW'
-    avatarStatusColor='primary'
-    avatarStatusIcon={
+    initials='JW'
+    statusDot='primary'
+    statusIcon={
       <FontAwesomeIcon type='arrow-right' color='#432df3' />
     }
     primaryText='John Wick'
@@ -36,8 +36,8 @@ const { FontAwesomeIcon } = require('../Icon');
 
 ```jsx
   <AvatarEntity
-    avatarInitials='JW'
-    avatarStatusColor='success'
+    initials='JW'
+    statusDot='success'
     primaryText='John Wick'
     isCompact
   />
@@ -48,9 +48,9 @@ const { FontAwesomeIcon } = require('../Icon');
 const { FontAwesomeIcon } = require('../Icon');
 
   <AvatarEntity
-    avatarInitials='JW'
-    avatarStatusColor='success'
-    avatarStatusIcon={
+    initials='JW'
+    statusDot='success'
+    statusIcon={
       <FontAwesomeIcon type='arrow-right' color='#432df3' />
     }
     primaryText='John Wick'
@@ -65,9 +65,9 @@ const { FontAwesomeIcon } = require('../Icon');
 const { FontAwesomeIcon } = require('../Icon');
 
   <AvatarEntity
-    avatarInitials='JW'
-    avatarStatusColor='primary'
-    avatarStatusIcon={
+    initials='JW'
+    statusDot='primary'
+    statusIcon={
       <FontAwesomeIcon type='arrow-right' color='#432df3' />
     }
     primaryText='John Wick'
@@ -81,9 +81,9 @@ const { FontAwesomeIcon } = require('../Icon');
 const { FontAwesomeIcon } = require('../Icon');
 
   <AvatarEntity
-    avatarInitials='JW'
-    avatarStatusColor='success'
-    avatarStatusIcon={
+    initials='JW'
+    statusDot='success'
+    statusIcon={
       <FontAwesomeIcon type='arrow-right' color='#432df3' />
     }
     primaryText='John Wick'

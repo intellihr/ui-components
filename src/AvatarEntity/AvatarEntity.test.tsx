@@ -6,7 +6,7 @@ describe('<AvatarEntity />', () => {
   it(`should render a basic avatar entity`, () => {
     const wrapper = shallow(
       <AvatarEntity
-        avatarInitials='JW'
+        initials='JW'
         primaryText='John Wick'
       />
     )
@@ -17,9 +17,9 @@ describe('<AvatarEntity />', () => {
   it(`should render a avatar entity with lots of data`, () => {
     const wrapper = shallow(
       <AvatarEntity
-        avatarInitials='JW'
-        avatarUrl='www.example.com'
-        avatarStatusColor='primary'
+        initials='JW'
+        imageUrl='www.example.com'
+        statusDot='primary'
         primaryText='John Wick'
         secondaryText='Guy Killer'
         tertiaryText='In Cinemas 2019'
@@ -32,7 +32,7 @@ describe('<AvatarEntity />', () => {
   it(`should render a basic compact avatar entity`, () => {
     const wrapper = shallow(
       <AvatarEntity
-        avatarInitials='JW'
+        initials='JW'
         primaryText='John Wick'
         isCompact
       />
@@ -44,9 +44,9 @@ describe('<AvatarEntity />', () => {
   it(`should render a compact avatar entity with lots of data`, () => {
     const wrapper = shallow(
       <AvatarEntity
-        avatarInitials='JW'
-        avatarUrl='www.example.com'
-        avatarStatusColor='primary'
+        initials='JW'
+        imageUrl='www.example.com'
+        statusDot='primary'
         primaryText='John Wick'
         secondaryText='Guy Killer'
         tertiaryText='In Cinemas 2019'
