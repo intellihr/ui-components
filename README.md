@@ -35,9 +35,9 @@ A common React components library that is used in our company.
 1. It's simple. Let's add that into your project:
 
     ```bash
-    yarn add @intellihr/ui-components react react-dom foundation-sites jquery
+    yarn add @intellihr/ui-components react react-dom foundation-sites jquery styled-components
     # or
-    npm i @intellihr/ui-components react react-dom foundation-sites jquery
+    npm i @intellihr/ui-components react react-dom foundation-sites jquery styled-components
     ```
 
 2. Then included the project css and this project's components css into your project's entry point. e.g. in CRA, it's the `index.js`:
