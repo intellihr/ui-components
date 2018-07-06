@@ -35,7 +35,13 @@
     &.neutral {
       background-color: $neutral;
     }
+  }
 
+  >.icon {
+    bottom: -2px;
+    font-size: 14px;
+    position: absolute;
+    right: 0;
   }
 
   &.avatar-small {
@@ -45,8 +51,8 @@
 
     >.status-dot {
       bottom: -.1rem;
-      left: -.3rem;
-      padding: 5px;
+      left: -.2rem;
+      padding: 4px;
     }
   }
 
@@ -56,9 +62,9 @@
     width: 40px;
 
     >.status-dot {
-      bottom: -.1rem;
-      left: -.3rem;
-      padding: 5.5px;
+      bottom: -1px;
+      left: -1px;
+      padding: 4px;
     }
   }
 

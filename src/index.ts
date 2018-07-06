@@ -9,6 +9,7 @@ import 'foundation-sites'
 /** UI Components */
 export { BaseAnchor, Anchor } from './Anchor'
 export { Avatar } from './Avatar'
+export { AvatarEntity } from './AvatarEntity'
 export { BaseButton, Button, LinkButton } from './Button'
 export { Callout } from './Callout'
 export { Comment } from './Comment'

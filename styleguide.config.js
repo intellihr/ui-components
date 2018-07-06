@@ -27,6 +27,7 @@ module.exports = {
       name: 'UI Components',
       components: [
         'src/Avatar/Avatar.tsx',
+        'src/AvatarEntity/AvatarEntity.tsx',
         'src/Callout/Callout.tsx',
         'src/Comment/Comment.tsx',
         'src/DropdownMenu/DropdownMenu.tsx',

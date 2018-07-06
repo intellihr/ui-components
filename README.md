@@ -18,6 +18,8 @@ A common React components library that is used in our company.
 
 * [Get Started (Integrate to Your Project)](#get-started-integrate-to-your-project)
 * [Local Development Guide](#local-development-guide)
+    * [Yarn Link](#yarn-link)
+        * [Issue with `styled-components`](#issue-with-styled-components)
     * [Add Dependency](#add-dependency)
         * [Add `dependencies`](#add-dependencies)
         * [Add `devDependencies`](#add-devdependencies)
@@ -35,9 +37,9 @@ A common React components library that is used in our company.
 1. It's simple. Let's add that into your project:
 
     ```bash
-    yarn add @intellihr/ui-components react react-dom
+    yarn add @intellihr/ui-components react react-dom foundation-sites jquery styled-components
     # or
-    npm i @intellihr/ui-components react react-dom
+    npm i @intellihr/ui-components react react-dom foundation-sites jquery styled-components
     ```
 
 2. Then included the project css and this project's components css into your project's entry point. e.g. in CRA, it's the `index.js`:
@@ -45,7 +47,7 @@ A common React components library that is used in our company.
     ```javascript
     import '@intellihr/ui-components/dist/index.css'
     import '@intellihr/ui-components/dist/ui-components.css'
-    ``` 
+    ```
 
 3. Make sure your project knows how to handle css file type, which is quite simple if you use webpack(and normally your project should have already setup):
 
@@ -77,6 +79,27 @@ A common React components library that is used in our company.
 
 ## Local Development Guide
 
+### Yarn Link
+
+#### Issue with `styled-components`
+
+If you having weird issue on styling after yarn link, please follow the steps below.
+
+1. Remove `styled-components` in `devDependencies` of the ui-components package.json
+2. run `yarn build:watch`
+3. Proceed normal yarn link procedure
+4. Revert changes in package.json and yarn.lock before commit
+
+This will force the root library to use its own `styled-components` dependency.
+
+Webpack has issue to import `peerDependencies` when they are:
+
+1. `dependencies` of the root project
+2. both `peerDependencies` and `devDependencies` at the same time in the child project
+
+This will cause webpack to import the `devDependencies` in the child project but not the root project
+which causes the same package imported twice (one in root, another one in child)
+
 ### Add Dependency
 
 For Details Check [Here](https://lexi-lambda.github.io/blog/2016/08/24/understanding-the-npm-dependency-model/)
@@ -94,7 +117,7 @@ For Details Check [Here](https://lexi-lambda.github.io/blog/2016/08/24/understan
     ```bash
     yarn add -E some-library
     ```
-    
+
 #### Add `peerDependencies`
 
 1. Add `devDependencies`
@@ -116,7 +139,10 @@ For Details Check [Here](https://lexi-lambda.github.io/blog/2016/08/24/understan
     }
     ```
 
-3. Update your consumer to include your `peerDependencies`
+3. Update `README.md` the [Get Started](#get-started-integrate-to-your-project) session
+to include your library in the install command
+
+4. Update your consumer to include your `peerDependencies`
 
     ```bash
     npm i --save-dev some-library
