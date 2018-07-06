@@ -87,6 +87,31 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
       />
     }
   />
+  
+  <FontAwesomeIcon
+    type='inbox'
+    size={3}
+    badge={
+      <Badge
+        label={6}
+        backgroundColor='rgb(71, 82, 93)'
+        color='white'
+      />
+    }
+  />
+  
+  <FontAwesomeIcon
+    type='inbox'
+    size={3}
+    badge={
+      <Badge
+        label={6}
+        backgroundColor='rgb(71, 82, 93)'
+        color='white'
+      />
+    }
+  />
+    
 </div>
 ```
 

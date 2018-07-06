@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '../Icon'
-import { BadgeWrapper, NumberedBadgeLabelWrapper } from './style'
+import { BadgeWrapper } from './style'
 
 interface IBadgeProps {
   /** Label of the badge  */
@@ -11,15 +11,17 @@ interface IBadgeProps {
   backgroundColor?: string
   /** Font color of the badge */
   color?: string
+  /** Is the badge small */
+  isSmall?: boolean
+  /** Is the badge large */
+  isLarge?: boolean
 }
 
 class Badge extends React.PureComponent<IBadgeProps> {
-  get label (): JSX.Element {
+  get label (): number | string | JSX.Element {
     const {
       pending,
-      label,
-      backgroundColor,
-      color
+      label
     } = this.props
 
     if (pending) {
@@ -32,19 +34,24 @@ class Badge extends React.PureComponent<IBadgeProps> {
       )
     }
 
-    return (
-      <NumberedBadgeLabelWrapper
-        backgroundColor={backgroundColor}
-        color={color}
-      >
-        {label}
-      </NumberedBadgeLabelWrapper>
-    )
+    return label
   }
 
   public render (): JSX.Element {
+    const {
+      backgroundColor,
+      color,
+      isSmall,
+      isLarge
+    } = this.props
+
     return (
-      <BadgeWrapper>
+      <BadgeWrapper
+        backgroundColor={backgroundColor}
+        color={color}
+        isSmall={isSmall}
+        isLarge={isLarge}
+      >
         {this.label}
       </BadgeWrapper>
     )
