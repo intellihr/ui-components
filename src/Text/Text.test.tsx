@@ -12,6 +12,14 @@ describe('<Text />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
+  it(`should render an element with heavy text`, () => {
+    const wrapper = mount(
+      <Text isHeavy>Hello, world!</Text>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it(`should render a skeleton element if skeletonOptions are passed to the component`, () => {
     const wrapper = mount(
       <Text

@@ -28,6 +28,8 @@ export interface AvatarProps {
   imageData?: string
   /** Display a coloured status dot on the avatar */
   statusDot?: 'primary' | 'secondary' | 'success' | 'warning' | 'alert' | 'neutral' | 'highlight'
+  /** Display an icon component on the avatar */
+  statusIcon?: JSX.Element
 
   className?: string
 }
@@ -139,6 +141,18 @@ class AvatarComponent extends React.Component<AvatarProps> {
     return null
   }
 
+  get statusIcon (): JSX.Element | null {
+    const {
+      statusIcon
+    } = this.props
+
+    if (statusIcon) {
+      return statusIcon
+    }
+
+    return null
+  }
+
   public render (): JSX.Element | null {
     const {
       className,
@@ -163,6 +177,7 @@ class AvatarComponent extends React.Component<AvatarProps> {
           {this.avatarContent}
         </div>
         {this.statusDot}
+        {this.statusIcon}
       </div>
     )
   }
