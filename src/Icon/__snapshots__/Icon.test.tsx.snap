@@ -55,21 +55,8 @@ exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
 exports[`<Icon /> should render an icon with a badge 1`] = `
 .c1 {
   position: absolute;
-  margin-top: -10px;
-  margin-left: -15px;
-}
-
-.c1 .refresh-icon {
-  background-color: $main-background;
-  border-radius: 16px;
-  color: $primary-base;
-  font-size: 16px;
-  height: 16px;
-  margin: 0;
-  position: relative;
-  right: 2px;
-  top: 2px;
-  width: 16px;
+  margin-top: -8px;
+  margin-left: -20px;
 }
 
 .c0.icon-small {
@@ -78,27 +65,24 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
   position: relative;
 }
 
-.c2 .refresh-icon {
-  background-color: $main-background;
-  border-radius: 20px;
-  color: $primary-base;
-  font-size: 20px;
-  height: 20px;
-  margin: 0;
-  position: relative;
-  top: 2px;
-}
-
-.c3 {
-  background-color: #1A2B3C;
-  color: #1A293C;
+.c2 {
   border: 1px solid $neutral-base;
   border-radius: 50%;
   color: $neutral-text;
   display: inline-block;
   font-weight: 600;
-  min-width: 1.4em;
   text-align: center;
+  background-color: #1A2B3C;
+  color: #1A293C;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 14px;
+}
+
+.c2 .refresh-icon {
+  background-color: $main-background;
+  color: $primary-base;
 }
 
 <Icon
@@ -125,30 +109,31 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
       className="icon fa fa-check fa-3x c0"
     />
   </styled.i>
-  <styled.span>
+  <styled.span
+    size={3}
+  >
     <span
       className="c1"
+      size={3}
     >
       <Badge
         backgroundColor="#1A2B3C"
         color="#1A293C"
+        isLarge={false}
+        isSmall={true}
         label={6}
       >
-        <styled.span>
+        <styled.span
+          backgroundColor="#1A2B3C"
+          color="#1A293C"
+          isLarge={false}
+          isSmall={true}
+        >
           <span
             className="c2"
+            color="#1A293C"
           >
-            <styled.span
-              backgroundColor="#1A2B3C"
-              color="#1A293C"
-            >
-              <span
-                className="c3"
-                color="#1A293C"
-              >
-                6
-              </span>
-            </styled.span>
+            6
           </span>
         </styled.span>
       </Badge>
