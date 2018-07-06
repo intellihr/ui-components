@@ -4,20 +4,21 @@
 <div>
   <Badge
     label={6}
-    isSmall
+    tSize='s'
     backgroundColor='rgb(71, 82, 93)'
     color='white'
   />
   
   <Badge
     label={6}
+    tSize='m'
     backgroundColor='rgb(71, 82, 93)'
     color='white'
   />
   
   <Badge
     label={6}
-    isLarge
+    tSize='l'
     backgroundColor='rgb(71, 82, 93)'
     color='white'
   />
@@ -29,20 +30,21 @@
 ```jsx
 <div>
   <Badge
-    label={6}
-    isSmall
     pending
+    label={6}
+    tSize='s'
   />
   
   <Badge
-    label={6}
     pending
+    label={6}
+    tSize='m'
   />
   
   <Badge
-    label={6}
-    isLarge
     pending
+    label={6}
+    tSize='l'
   />
 </div>
 ```

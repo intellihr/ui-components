@@ -79,7 +79,7 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
   <div>
     <FontAwesomeIcon
       type='inbox'
-      size={3}
+      tSize='l'
       badge={
         <Badge
           label={6}
@@ -93,7 +93,7 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
   <div>
     <FontAwesomeIcon
       type='inbox'
-      size={4}
+      tSize='xl'
       badge={
         <Badge
           label={6}
@@ -107,7 +107,7 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
   <div>
     <FontAwesomeIcon
       type='inbox'
-      size={5}
+      tSize='xxl'
       badge={
         <Badge
           label={6}
@@ -128,7 +128,7 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
 
 <FontAwesomeIcon
   type='inbox'
-  size={1}
+  customSize={1}
   badge={
     <Badge
       label={6}

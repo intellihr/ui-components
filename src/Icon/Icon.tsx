@@ -21,6 +21,10 @@ export interface IconProps {
   isSpinning?: boolean
   /** Badge to display on the icon */
   badge?: JSX.Element
+  /** Custom sizes for icons */
+  customSize?: number
+  /** Enforced icon guideline sizes */
+  tSize?: 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl'
 }
 
 export class Icon extends React.PureComponent<IconProps> {
@@ -35,8 +39,13 @@ export class Icon extends React.PureComponent<IconProps> {
     const {
       size,
       isStacked,
-      isLarge
+      isLarge,
+      customSize
     } = this.props
+
+    if (customSize) {
+      return ''
+    }
 
     if (isLarge) {
       return `fa-lg`
@@ -74,39 +83,18 @@ export class Icon extends React.PureComponent<IconProps> {
     )
   }
 
-  get badgeSize () {
-    const {
-      size
-    } = this.props
-
-    if (size === 3) {
-      return {
-        isSmall: true
-      }
-    }
-
-    if (size === 5) {
-      return {
-        isLarge: true
-      }
-    }
-  }
-
   get badge () {
     const {
       badge,
-      size
+      tSize
     } = this.props
 
-    if (badge && size && size >= 3) {
+    if (badge && tSize) {
       return (
         <BadgeWrapper
-          size={size}
+          tSize={tSize}
         >
-          {React.cloneElement(badge, {
-            isSmall: size === 3,
-            isLarge: size === 5
-          })}
+          {React.cloneElement(badge, { tSize })}
         </BadgeWrapper>
       )
     }
@@ -114,7 +102,9 @@ export class Icon extends React.PureComponent<IconProps> {
 
   public render (): JSX.Element {
     const {
-      color
+      color,
+      customSize,
+      tSize
     } = this.props
 
     return (
@@ -123,6 +113,8 @@ export class Icon extends React.PureComponent<IconProps> {
           className={this.classNames}
           aria-hidden
           color={color}
+          customSize={customSize}
+          tSize={tSize}
         />
 
         {this.badge}

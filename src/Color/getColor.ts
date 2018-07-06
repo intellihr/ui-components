@@ -1,10 +1,6 @@
 import colours from '../sass/resources/js/colours'
 
-export const getColor = (name: string | undefined): string | null => {
-  if (!name) {
-    return null
-  }
-
+export const getColor = (name: string): string => {
   if (!colours[name]) {
     throw new Error(`Unknown Colour Name '${name}'`)
   }

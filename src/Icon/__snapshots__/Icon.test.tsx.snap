@@ -53,36 +53,10 @@ exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
 `;
 
 exports[`<Icon /> should render an icon with a badge 1`] = `
-.c1 {
-  position: absolute;
-  margin-top: -8px;
-  margin-left: -20px;
-}
-
 .c0.icon-small {
   bottom: 2px;
   font-size: xx-small;
   position: relative;
-}
-
-.c2 {
-  border: 1px solid $neutral-base;
-  border-radius: 50%;
-  color: $neutral-text;
-  display: inline-block;
-  font-weight: 600;
-  text-align: center;
-  background-color: #1A2B3C;
-  color: #1A293C;
-  width: 25px;
-  height: 25px;
-  line-height: 25px;
-  font-size: 14px;
-}
-
-.c2 .refresh-icon {
-  background-color: $main-background;
-  color: $primary-base;
 }
 
 <Icon
@@ -91,6 +65,7 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
       backgroundColor="#1A2B3C"
       color="#1A293C"
       label={6}
+      tSize="s"
     />
   }
   isLarge={false}
@@ -109,36 +84,6 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
       className="icon fa fa-check fa-3x c0"
     />
   </styled.i>
-  <styled.span
-    size={3}
-  >
-    <span
-      className="c1"
-      size={3}
-    >
-      <Badge
-        backgroundColor="#1A2B3C"
-        color="#1A293C"
-        isLarge={false}
-        isSmall={true}
-        label={6}
-      >
-        <styled.span
-          backgroundColor="#1A2B3C"
-          color="#1A293C"
-          isLarge={false}
-          isSmall={true}
-        >
-          <span
-            className="c2"
-            color="#1A293C"
-          >
-            6
-          </span>
-        </styled.span>
-      </Badge>
-    </span>
-  </styled.span>
 </Icon>
 `;
 
