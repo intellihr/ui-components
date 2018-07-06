@@ -18,6 +18,8 @@ A common React components library that is used in our company.
 
 * [Get Started (Integrate to Your Project)](#get-started-integrate-to-your-project)
 * [Local Development Guide](#local-development-guide)
+    * [Yarn Link](#yarn-link)
+        * [Issue with `styled-components`](#issue-with-styled-components)
     * [Add Dependency](#add-dependency)
         * [Add `dependencies`](#add-dependencies)
         * [Add `devDependencies`](#add-devdependencies)
@@ -76,6 +78,27 @@ A common React components library that is used in our company.
     ```
 
 ## Local Development Guide
+
+### Yarn Link
+
+#### Issue with `styled-components`
+
+If you having weird issue on styling after yarn link, please follow the steps below.
+
+1. Remove `styled-components` in `devDependencies` of the ui-components package.json
+2. run `yarn build:watch`
+3. Proceed normal yarn link procedure
+4. Revert changes in package.json and yarn.lock before commit
+
+This will force the root library to use its own `styled-components` dependency.
+
+Webpack has issue to import `peerDependencies` when they are:
+
+1. `dependencies` of the root project
+2. both `peerDependencies` and `devDependencies` at the same time in the child project
+
+This will cause webpack to import the `devDependencies` in the child project but not the root project
+which causes the same package imported twice (one in root, another one in child)
 
 ### Add Dependency
 
