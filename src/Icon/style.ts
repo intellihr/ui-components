@@ -4,30 +4,39 @@ interface StyledIconProps {
   color?: string
 }
 
+interface IBadgeWrapper {
+  size?: 1 | 2 | 3 | 4 | 5
+}
+
 const BadgeWrapper = styled.span`
   position: absolute;
-  margin-top: -10px;
-  margin-left: -15px;
-  
-  .refresh-icon {
-    background-color: $main-background;
-    border-radius: 16px;
-    color: $primary-base;
-    font-size: 16px;
-    height: 16px;
-    margin: 0;
-    position: relative;
-    right: 2px;
-    top: 2px;
-    width: 16px;
-  }
+
+  ${(props: IBadgeWrapper) => {
+    switch (props.size) {
+      case 3:
+        return `
+          margin-top: -8px;
+          margin-left: -20px;
+        `
+      case 4:
+        return `
+          margin-top: -4px;
+          margin-left: -22px;
+        `
+      case 5:
+        return `
+          margin-top: 0px;
+          margin-left: -25px;
+        `
+    }
+  }}
 `
 
 const StyledIcon = styled.i`
   ${(props: StyledIconProps) => props.color && css`
     color: ${props.color};  
   `}
-  
+
   &.icon-small {
     bottom: 2px;
     font-size: xx-small;

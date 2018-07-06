@@ -75,17 +75,19 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
 ```jsx
 const { FontAwesomeIcon } = require('./FontAwesomeIcon');
 
-<FontAwesomeIcon
-  type='inbox'
-  size={3}
-  badge={
-    <Badge
-      label={6}
-      backgroundColor='rgb(71, 82, 93)'
-      color='white'
-    />
-  }
-/>
+<div>
+  <FontAwesomeIcon
+    type='inbox'
+    size={3}
+    badge={
+      <Badge
+        label={6}
+        backgroundColor='rgb(71, 82, 93)'
+        color='white'
+      />
+    }
+  />
+</div>
 ```
 
 #### Icon fetching
@@ -95,7 +97,7 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
 
 <FontAwesomeIcon
   type='inbox'
-  size={3}
+  size={1}
   badge={
     <Badge
       label={6}

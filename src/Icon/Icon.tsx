@@ -76,12 +76,15 @@ export class Icon extends React.PureComponent<IconProps> {
 
   get badge () {
     const {
-      badge
+      badge,
+      size
     } = this.props
 
-    if (badge) {
+    if (badge && size && size >= 3) {
       return (
-        <BadgeWrapper>
+        <BadgeWrapper
+          size={size}
+        >
           {badge}
         </BadgeWrapper>
       )
