@@ -52,6 +52,111 @@ exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
 </Icon>
 `;
 
+exports[`<Icon /> should render an icon with a badge 1`] = `
+.c1 {
+  position: absolute;
+  margin-top: -10px;
+  margin-left: -15px;
+}
+
+.c1 .refresh-icon {
+  background-color: $main-background;
+  border-radius: 16px;
+  color: $primary-base;
+  font-size: 16px;
+  height: 16px;
+  margin: 0;
+  position: relative;
+  right: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.c0.icon-small {
+  bottom: 2px;
+  font-size: xx-small;
+  position: relative;
+}
+
+.c2 .refresh-icon {
+  background-color: $main-background;
+  border-radius: 20px;
+  color: $primary-base;
+  font-size: 20px;
+  height: 20px;
+  margin: 0;
+  position: relative;
+  top: 2px;
+}
+
+.c3 {
+  background-color: #1A2B3C;
+  color: #1A293C;
+  border: 1px solid $neutral-base;
+  border-radius: 50%;
+  color: $neutral-text;
+  display: inline-block;
+  font-weight: 600;
+  min-width: 1.4em;
+  text-align: center;
+}
+
+<Icon
+  badge={
+    <Badge
+      backgroundColor="#1A2B3C"
+      color="#1A293C"
+      label={6}
+    />
+  }
+  isLarge={false}
+  isSmall={false}
+  isSpinning={false}
+  isStacked={false}
+  size={3}
+  type="fa-check"
+>
+  <styled.i
+    aria-hidden={true}
+    className="icon fa fa-check fa-3x"
+  >
+    <i
+      aria-hidden={true}
+      className="icon fa fa-check fa-3x c0"
+    />
+  </styled.i>
+  <styled.span>
+    <span
+      className="c1"
+    >
+      <Badge
+        backgroundColor="#1A2B3C"
+        color="#1A293C"
+        label={6}
+      >
+        <styled.span>
+          <span
+            className="c2"
+          >
+            <styled.span
+              backgroundColor="#1A2B3C"
+              color="#1A293C"
+            >
+              <span
+                className="c3"
+                color="#1A293C"
+              >
+                6
+              </span>
+            </styled.span>
+          </span>
+        </styled.span>
+      </Badge>
+    </span>
+  </styled.span>
+</Icon>
+`;
+
 exports[`<Icon /> should render icon with colour 1`] = `
 .c0 {
   color: #1A2B3C;
