@@ -28,20 +28,37 @@
     }
 
     >.comment-header-container {
-      >.comment-header-person-name {
-        display: inline;
-      }
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: baseline;
 
       >.comment-header-date {
-        display: inline;
-        float: right;
         font-size: 80%;
-        margin-left: .75rem;
+        margin-left: .4rem;
 
         >* {
           display: inline;
           margin: 0 .225rem;
         }
+      }
+
+      // This will select the 'as at date' or 'comment header' in case of the system comment
+      >*:nth-child(2) {
+        flex-grow: 1;
+      }
+
+      /*
+        Overriding default Button styles.
+        NOTE: This, still will not accomodate the design for this component,
+            as the `react-dd-menu` and `DropdownMenu` are somehow hijacking
+            `Button` styles.
+      */
+      .comment-action-button {
+        margin: 0;
+        font-style: normal;
+        font-weight: normal;
+        text-transform: capitalize;
       }
     }
 

@@ -1,7 +1,13 @@
 import React from 'react'
 import classNames from 'classnames'
+import { isEmpty } from 'lodash'
 import { Avatar } from '../Avatar'
+import { DropdownMenu } from '../DropdownMenu'
+import { DefaultDropdownButton } from './style'
+import { FontAwesomeIcon } from '../Icon/FontAwesomeIcon'
 import { FormattedText } from '../FormattedText'
+import { sectionProps } from '../DropdownMenu/DropdownMenu';
+import { Button } from '../Button'
 const style = require('./style.scss')
 
 export interface CommentProps {
@@ -28,12 +34,36 @@ export interface CommentProps {
   }
   loggedInUser: {
     id: string
-  }
-  idx: number
+  },
+  /** Handler for the Comment Edit event */
+  editHandler?: (event: React.SyntheticEvent<any>) => void,
+  /** Handler for the Comment Delete event */
+  deleteHandler?: (event: React.SyntheticEvent<any>) => void,
+  idx: number,
   alternatingColours?: boolean
 }
 
 export class Comment extends React.Component<CommentProps> {
+  displayCommentInstruments (): boolean {
+    const {
+      comment: {
+        header: commentHeader
+      },
+      editHandler,
+      deleteHandler
+    } = this.props
+
+    if(commentHeader) {
+      return false
+    }
+
+    if (editHandler || deleteHandler) {
+      return true
+    }
+
+    return false
+  }
+
   get avatar (): JSX.Element {
     const {
       commenterInitials,
@@ -46,6 +76,73 @@ export class Comment extends React.Component<CommentProps> {
           size='small'
           imageUrl={avatarUrl}
           initials={commenterInitials}
+        />
+      </div>
+    )
+  }
+
+  get commentActionSections (): sectionProps[] {
+    const {
+      editHandler,
+      deleteHandler
+    } = this.props
+
+    const sections: sectionProps[] = []
+
+    if(editHandler) {
+      sections.push({
+        component: (
+          <Button
+            type='neutral-borderless'
+            className='comment-action-button'
+            onClick={editHandler}
+          >
+            Edit
+          </Button>
+        )
+      })
+    }
+
+    if(deleteHandler) {
+      if(editHandler) {
+        sections.push({
+          component: <hr />
+        })
+      }
+
+      sections.push({
+        component: (
+          <Button
+            type='alert-borderless'
+            className='comment-action-button'
+            onClick={deleteHandler}
+          >
+            Delete
+          </Button>
+        )
+      })
+    }
+
+    return sections
+  }
+
+  get commentActions (): JSX.Element | null {
+    if(!this.displayCommentInstruments()) {
+      return null
+    }
+
+    return (
+      <div className="comment-action-menu">
+        <DropdownMenu
+          toggleComponent = {
+            <DefaultDropdownButton>
+              <FontAwesomeIcon type='ellipsis-v' />
+            </DefaultDropdownButton>
+          }
+          dropdownOverrides = {{
+            align: 'left'
+          }}
+          sections = { this.commentActionSections }
         />
       </div>
     )
@@ -97,6 +194,8 @@ export class Comment extends React.Component<CommentProps> {
         {header}
 
         {this.commentDate}
+
+        {this.commentActions}
       </div>
     )
   }
