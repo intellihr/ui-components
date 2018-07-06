@@ -69,3 +69,40 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
     size={3}
   />
 ```
+
+#### Icon with badge
+
+```jsx
+const { FontAwesomeIcon } = require('./FontAwesomeIcon');
+
+<FontAwesomeIcon
+  type='inbox'
+  size={3}
+  badge={
+    <Badge
+      label={6}
+      backgroundColor='rgb(71, 82, 93)'
+      color='white'
+    />
+  }
+/>
+```
+
+#### Icon fetching
+
+```jsx
+const { FontAwesomeIcon } = require('./FontAwesomeIcon');
+
+<FontAwesomeIcon
+  type='inbox'
+  size={3}
+  badge={
+    <Badge
+      label={6}
+      backgroundColor='rgb(71, 82, 93)'
+      color='white'
+      pending
+    />
+  }
+/>
+```

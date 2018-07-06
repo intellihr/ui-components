@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { StyledIcon } from './style'
+import { StyledIcon, BadgeWrapper } from './style'
 
 export interface IconProps {
   /** FontAwesome or alternate name of the icon to display */
@@ -19,6 +19,8 @@ export interface IconProps {
   className?: string
   /** Adds FontAwesome `fa-spin` class to icon */
   isSpinning?: boolean
+  /** Badge to display on the icon */
+  badge?: JSX.Element
 }
 
 export class Icon extends React.PureComponent<IconProps> {
@@ -72,17 +74,35 @@ export class Icon extends React.PureComponent<IconProps> {
     )
   }
 
+  get badge () {
+    const {
+      badge
+    } = this.props
+
+    if (badge) {
+      return (
+        <BadgeWrapper>
+          {badge}
+        </BadgeWrapper>
+      )
+    }
+  }
+
   public render (): JSX.Element {
     const {
       color
     } = this.props
 
     return (
-      <StyledIcon
-        className={this.classNames}
-        aria-hidden
-        color={color}
-      />
+      <React.Fragment>
+        <StyledIcon
+          className={this.classNames}
+          aria-hidden
+          color={color}
+        />
+
+        {this.badge}
+      </React.Fragment>
     )
   }
 }

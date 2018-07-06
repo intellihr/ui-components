@@ -1,10 +1,29 @@
 import styled, { css } from 'styled-components'
 
-export interface StyledIconProps {
+interface StyledIconProps {
   color?: string
 }
 
-export const StyledIcon = styled.i`
+const BadgeWrapper = styled.span`
+  position: absolute;
+  margin-top: -10px;
+  margin-left: -15px;
+  
+  .refresh-icon {
+    background-color: $main-background;
+    border-radius: 16px;
+    color: $primary-base;
+    font-size: 16px;
+    height: 16px;
+    margin: 0;
+    position: relative;
+    right: 2px;
+    top: 2px;
+    width: 16px;
+  }
+`
+
+const StyledIcon = styled.i`
   ${(props: StyledIconProps) => props.color && css`
     color: ${props.color};  
   `}
@@ -15,3 +34,9 @@ export const StyledIcon = styled.i`
     position: relative;
   }
 `
+
+export {
+  BadgeWrapper,
+  StyledIcon,
+  StyledIconProps
+}
