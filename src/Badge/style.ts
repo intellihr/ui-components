@@ -35,18 +35,18 @@ const BadgeWrapper = styled.span`
 
     if (props.isLarge) {
       return `
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
-        font-size: 30px
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 25px
       `
     }
 
     return `
-      width: 35px;
-      height: 35px;
-      line-height: 35px;
-      font-size: 20px
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 18px
     `
   }}
   

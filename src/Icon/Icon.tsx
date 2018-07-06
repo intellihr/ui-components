@@ -74,6 +74,24 @@ export class Icon extends React.PureComponent<IconProps> {
     )
   }
 
+  get badgeSize () {
+    const {
+      size
+    } = this.props
+
+    if (size === 3) {
+      return {
+        isSmall: true
+      }
+    }
+
+    if (size === 5) {
+      return {
+        isLarge: true
+      }
+    }
+  }
+
   get badge () {
     const {
       badge,
@@ -85,7 +103,10 @@ export class Icon extends React.PureComponent<IconProps> {
         <BadgeWrapper
           size={size}
         >
-          {badge}
+          {React.cloneElement(badge, {
+            isSmall: size === 3,
+            isLarge: size === 5
+          })}
         </BadgeWrapper>
       )
     }

@@ -76,41 +76,47 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
 const { FontAwesomeIcon } = require('./FontAwesomeIcon');
 
 <div>
-  <FontAwesomeIcon
-    type='inbox'
-    size={3}
-    badge={
-      <Badge
-        label={6}
-        backgroundColor='rgb(71, 82, 93)'
-        color='white'
-      />
-    }
-  />
+  <div>
+    <FontAwesomeIcon
+      type='inbox'
+      size={3}
+      badge={
+        <Badge
+          label={6}
+          backgroundColor='rgb(71, 82, 93)'
+          color='white'
+        />
+      }
+    />
+  </div>
   
-  <FontAwesomeIcon
-    type='inbox'
-    size={3}
-    badge={
-      <Badge
-        label={6}
-        backgroundColor='rgb(71, 82, 93)'
-        color='white'
-      />
-    }
-  />
+  <div>
+    <FontAwesomeIcon
+      type='inbox'
+      size={4}
+      badge={
+        <Badge
+          label={6}
+          backgroundColor='rgb(71, 82, 93)'
+          color='white'
+        />
+      }
+    />
+  </div>
   
-  <FontAwesomeIcon
-    type='inbox'
-    size={3}
-    badge={
-      <Badge
-        label={6}
-        backgroundColor='rgb(71, 82, 93)'
-        color='white'
-      />
-    }
-  />
+  <div>
+    <FontAwesomeIcon
+      type='inbox'
+      size={5}
+      badge={
+        <Badge
+          label={6}
+          backgroundColor='rgb(71, 82, 93)'
+          color='white'
+        />
+      }
+    />
+  </div>
     
 </div>
 ```

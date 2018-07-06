@@ -25,8 +25,8 @@ const BadgeWrapper = styled.span`
         `
       case 5:
         return `
-          margin-top: 0px;
-          margin-left: -25px;
+          margin-top: -5px;
+          margin-left: -30px;
         `
     }
   }}
