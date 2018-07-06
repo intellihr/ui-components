@@ -4,7 +4,7 @@ import { BadgeWrapper } from './style'
 
 interface IBadgeProps {
   /** Label of the badge  */
-  label: number | string
+  label?: number | string
   /** Is the badge content loading */
   pending?: boolean
   /** Background color of the badge */
@@ -18,7 +18,7 @@ interface IBadgeProps {
 }
 
 class Badge extends React.PureComponent<IBadgeProps> {
-  get label (): number | string | JSX.Element {
+  get label (): number | string | JSX.Element | undefined {
     const {
       pending,
       label

@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Badge /> should render a simple badge 1`] = `
+.c0 {
+  border: 1px solid $neutral-base;
+  border-radius: 50%;
+  color: $neutral-text;
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  background-color: #1A2B3C;
+  color: #1A293C;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.c0 .refresh-icon {
+  background-color: $main-background;
+  color: $primary-base;
+}
+
+<Badge
+  backgroundColor="#1A2B3C"
+  color="#1A293C"
+  label={6}
+>
+  <styled.span
+    backgroundColor="#1A2B3C"
+    color="#1A293C"
+  >
+    <span
+      className="c0"
+      color="#1A293C"
+    >
+      6
+    </span>
+  </styled.span>
+</Badge>
+`;
+
+exports[`<Badge /> should render a small badge 1`] = `
+.c0 {
+  border: 1px solid $neutral-base;
+  border-radius: 50%;
+  color: $neutral-text;
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  background-color: #1A2B3C;
+  color: #1A293C;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 14px;
+}
+
+.c0 .refresh-icon {
+  background-color: $main-background;
+  color: $primary-base;
+}
+
+<Badge
+  backgroundColor="#1A2B3C"
+  color="#1A293C"
+  isSmall={true}
+  label={6}
+>
+  <styled.span
+    backgroundColor="#1A2B3C"
+    color="#1A293C"
+    isSmall={true}
+  >
+    <span
+      className="c0"
+      color="#1A293C"
+    >
+      6
+    </span>
+  </styled.span>
+</Badge>
+`;
+
+exports[`<Badge /> should render a spinning badge 1`] = `
+.c1.icon-small {
+  bottom: 2px;
+  font-size: xx-small;
+  position: relative;
+}
+
+.c0 {
+  border: 1px solid $neutral-base;
+  border-radius: 50%;
+  color: $neutral-text;
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  background-color: #1A2B3C;
+  color: #1A293C;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.c0 .refresh-icon {
+  background-color: $main-background;
+  color: $primary-base;
+}
+
+<Badge
+  backgroundColor="#1A2B3C"
+  color="#1A293C"
+  label={6}
+  pending={true}
+>
+  <styled.span
+    backgroundColor="#1A2B3C"
+    color="#1A293C"
+  >
+    <span
+      className="c0"
+      color="#1A293C"
+    >
+      <FontAwesomeIcon
+        className="refresh-icon"
+        isSpinning={true}
+        type="refresh"
+      >
+        <Icon
+          className="refresh-icon"
+          isLarge={false}
+          isSmall={false}
+          isSpinning={true}
+          isStacked={false}
+          type="fa-refresh"
+        >
+          <styled.i
+            aria-hidden={true}
+            className="refresh-icon icon fa fa-refresh fa-spin"
+          >
+            <i
+              aria-hidden={true}
+              className="refresh-icon icon fa fa-refresh fa-spin c1"
+            />
+          </styled.i>
+        </Icon>
+      </FontAwesomeIcon>
+    </span>
+  </styled.span>
+</Badge>
+`;
