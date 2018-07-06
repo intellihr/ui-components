@@ -17,16 +17,16 @@ export const AvatarEntityWrapper = styled.div`
   
   &:hover {
     ${(props: IAvatarEntityWrapper) => {
-      if (props.isHoverable) {
-        return `
-              color: ${getColor('link-text')};
-              cursor: pointer;
-            `
-      }
-
-      return null
+    if (props.isHoverable) {
+      return `
+          color: ${getColor('link-text')};
+          cursor: pointer;
+        `
     }
+
+    return null
   }
+}
 `
 
 export const AvatarContainer = styled.div`

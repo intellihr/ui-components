@@ -111,7 +111,7 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & AvatarProp
     )
   }
 
-  public render(): JSX.Element {
+  public render (): JSX.Element {
     const {
       isHoverable
     } = this.props

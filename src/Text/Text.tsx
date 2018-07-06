@@ -1,5 +1,4 @@
 import React from 'react'
-import classNames from 'classnames'
 import { TextWrapper } from './style'
 import { withSkeleton, SkeletonComponentProps } from '../Skeleton'
 
@@ -45,17 +44,13 @@ export class TextComponent extends React.PureComponent<TextProps> {
     return (
       <TextWrapper
         color={color}
-        className={classNames(
-          className,
-          {
-            'heading': isHeading,
-            'heavy': isHeavy,
-            'upper': isUpper,
-            'small': isSmall,
-            'truncated': isTruncated,
-            'block': !isInline
-          }
-        )}
+        isInline={isInline}
+        isHeavy={isHeavy}
+        isHeading={isHeading}
+        isUpper={isUpper}
+        isSmall={isSmall}
+        isTruncated={isTruncated}
+        className={className}
       >
         {children}
       </TextWrapper>

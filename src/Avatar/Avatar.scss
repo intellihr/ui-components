@@ -38,10 +38,10 @@
   }
 
   >.icon {
-    position: absolute;
-    right: 0;
     bottom: -2px;
     font-size: 14px;
+    position: absolute;
+    right: 0;
   }
 
   &.avatar-small {
@@ -62,8 +62,8 @@
     width: 40px;
 
     >.status-dot {
-      left: -1px;
       bottom: -1px;
+      left: -1px;
       padding: 4px;
     }
   }
