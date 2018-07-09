@@ -6,7 +6,7 @@ import { DropdownMenu } from '../DropdownMenu'
 import { DefaultDropdownButton } from './style'
 import { FontAwesomeIcon } from '../Icon/FontAwesomeIcon'
 import { FormattedText } from '../FormattedText'
-import { sectionProps } from '../DropdownMenu/DropdownMenu';
+import { sectionProps } from '../DropdownMenu/DropdownMenu'
 import { Button } from '../Button'
 const style = require('./style.scss')
 
@@ -53,7 +53,7 @@ export class Comment extends React.Component<CommentProps> {
       deleteHandler
     } = this.props
 
-    if(commentHeader) {
+    if (commentHeader) {
       return false
     }
 
@@ -89,7 +89,7 @@ export class Comment extends React.Component<CommentProps> {
 
     const sections: sectionProps[] = []
 
-    if(editHandler) {
+    if (editHandler) {
       sections.push({
         component: (
           <Button
@@ -103,8 +103,8 @@ export class Comment extends React.Component<CommentProps> {
       })
     }
 
-    if(deleteHandler) {
-      if(editHandler) {
+    if (deleteHandler) {
+      if (editHandler) {
         sections.push({
           component: <hr />
         })
@@ -127,22 +127,22 @@ export class Comment extends React.Component<CommentProps> {
   }
 
   get commentActions (): JSX.Element | null {
-    if(!this.displayCommentInstruments()) {
+    if (!this.displayCommentInstruments()) {
       return null
     }
 
     return (
-      <div className="comment-action-menu">
+      <div className='comment-action-menu'>
         <DropdownMenu
-          toggleComponent = {
+          toggleComponent={
             <DefaultDropdownButton>
               <FontAwesomeIcon type='ellipsis-v' />
             </DefaultDropdownButton>
           }
-          dropdownOverrides = {{
+          dropdownOverrides={{
             align: 'left'
           }}
-          sections = { this.commentActionSections }
+          sections={this.commentActionSections}
         />
       </div>
     )
