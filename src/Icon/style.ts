@@ -15,20 +15,20 @@ const BadgeWrapper = styled.span`
   
   ${(props: IBadgeWrapper) => {
     switch (props.tSize) {
-      case 's':
-        return `
-          margin-top: -8px;
-          margin-left: -20px;
-        `
-      case 'm':
-        return `
-          margin-top: -4px;
-          margin-left: -22px;
-        `
       case 'l':
         return `
-          margin-top: -5px;
-          margin-left: -30px;
+          margin-top: -10px;
+          margin-left: -10px;
+        `
+      case 'xl':
+        return `
+          margin-top: -9px;
+          margin-left: -15px;
+        `
+      case 'xxl':
+        return `
+          margin-top: -9px;
+          margin-left: -22px;
         `
     }
   }}

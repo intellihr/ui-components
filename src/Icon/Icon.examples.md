@@ -126,16 +126,51 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
 ```jsx
 const { FontAwesomeIcon } = require('./FontAwesomeIcon');
 
-<FontAwesomeIcon
-  type='inbox'
-  customSize={1}
-  badge={
-    <Badge
-      label={6}
-      backgroundColor='rgb(71, 82, 93)'
-      color='white'
-      pending
+<div>
+  <div>
+    <FontAwesomeIcon
+      type='inbox'
+      tSize='l'
+      badge={
+        <Badge
+          label={6}
+          backgroundColor='rgb(71, 82, 93)'
+          color='white'
+          pending
+        />
+      }
     />
-  }
-/>
+  </div>
+  
+  <div>
+    <FontAwesomeIcon
+      type='inbox'
+      tSize='xl'
+      badge={
+        <Badge
+          label={6}
+          backgroundColor='rgb(71, 82, 93)'
+          color='white'
+          pending
+        />
+      }
+    />
+  </div>
+  
+  <div>
+    <FontAwesomeIcon
+      type='inbox'
+      tSize='xxl'
+      badge={
+        <Badge
+          label={6}
+          backgroundColor='rgb(71, 82, 93)'
+          color='white'
+          pending
+        />
+      }
+    />
+  </div>
+    
+</div>
 ```

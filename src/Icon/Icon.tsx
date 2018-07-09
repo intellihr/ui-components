@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
+import { includes } from 'lodash'
 import { StyledIcon, BadgeWrapper } from './style'
 
 export interface IconProps {
@@ -40,10 +41,11 @@ export class Icon extends React.PureComponent<IconProps> {
       size,
       isStacked,
       isLarge,
-      customSize
+      customSize,
+      tSize
     } = this.props
 
-    if (customSize) {
+    if (customSize || tSize) {
       return ''
     }
 
@@ -83,18 +85,36 @@ export class Icon extends React.PureComponent<IconProps> {
     )
   }
 
+  get badgeSize () {
+    const {
+      tSize
+    } = this.props
+
+    if (tSize === 'l') {
+      return 's'
+    }
+
+    if (tSize === 'xl') {
+      return 'm'
+    }
+
+    if (tSize === 'xxl') {
+      return 'l'
+    }
+  }
+
   get badge () {
     const {
       badge,
       tSize
     } = this.props
 
-    if (badge && tSize) {
+    if (badge && tSize && includes(['l', 'xl', 'xxl'], tSize)) {
       return (
         <BadgeWrapper
           tSize={tSize}
         >
-          {React.cloneElement(badge, { tSize })}
+          {React.cloneElement(badge, { tSize: this.badgeSize })}
         </BadgeWrapper>
       )
     }
