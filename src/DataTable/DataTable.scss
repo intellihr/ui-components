@@ -58,7 +58,7 @@
     .rt-td {
       box-shadow: inset 0 0 0 0 transparent;
       line-height: normal;
-      padding: .8rem .975rem .975rem;
+      padding: .5rem .625rem .625rem;
       position: relative;
       transition: box-shadow .3s cubic-bezier(.175, .885, .32, 1.275);
 
@@ -68,6 +68,7 @@
     }
 
     .rt-th {
+      line-height: 1.5;
       outline: none;
     }
 
@@ -284,6 +285,7 @@
       flex: 3 0 auto;
 
       select {
+        display: inline-block;
         margin: 0;
         width: 75px;
       }
