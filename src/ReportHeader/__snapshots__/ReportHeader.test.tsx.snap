@@ -124,9 +124,7 @@ exports[`<ReportHeader /> should render ReportHeader with info 1`] = `
                     type="info-circle"
                   >
                     <Icon
-                      isLarge={false}
                       isSpinning={false}
-                      isStacked={false}
                       size="large"
                       type="fa-info-circle"
                     >

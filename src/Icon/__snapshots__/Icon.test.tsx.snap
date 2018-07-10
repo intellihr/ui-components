@@ -12,9 +12,7 @@ exports[`<Icon /> should render a large icon 1`] = `
 }
 
 <Icon
-  isLarge={false}
   isSpinning={false}
-  isStacked={false}
   size="large"
   type="circle"
 >
@@ -44,9 +42,7 @@ exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
 }
 
 <Icon
-  isLarge={false}
   isSpinning={false}
-  isStacked={false}
   size="medium"
   type="intelli-icon-avatar"
 >
@@ -111,9 +107,7 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
       size="small"
     />
   }
-  isLarge={false}
   isSpinning={false}
-  isStacked={false}
   size="xlarge"
   type="fa-check"
 >
@@ -173,9 +167,7 @@ exports[`<Icon /> should render icon with a custom size 1`] = `
 
 <Icon
   customSize={2.6}
-  isLarge={false}
   isSpinning={false}
-  isStacked={false}
   size="medium"
   type="fa-check"
 >
@@ -211,9 +203,7 @@ exports[`<Icon /> should render icon with colour 1`] = `
 
 <Icon
   color="#1A2B3C"
-  isLarge={false}
   isSpinning={false}
-  isStacked={false}
   size="medium"
   type="fa-check"
 >
@@ -245,9 +235,7 @@ exports[`<Icon /> should render icon with no size or colour 1`] = `
 }
 
 <Icon
-  isLarge={false}
   isSpinning={false}
-  isStacked={false}
   size="medium"
   type="fa-check"
 >
@@ -277,9 +265,7 @@ exports[`<Icon /> should render icon with size 1`] = `
 }
 
 <Icon
-  isLarge={false}
   isSpinning={false}
-  isStacked={false}
   size="medium"
   type="fa-check"
 >

@@ -127,9 +127,7 @@ exports[`<Button /> should render a button with an icon 1`] = `
           type="star"
         >
           <Icon
-            isLarge={false}
             isSpinning={false}
-            isStacked={false}
             size="medium"
             type="fa-star"
           >

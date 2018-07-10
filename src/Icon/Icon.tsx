@@ -8,10 +8,6 @@ export interface IIconProps {
   type: string
   /** Multiplies icon size by this amount (max 5) */
   size?: 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge'
-  /** Adds FontAwesome stacked class to icon */
-  isStacked?: boolean
-  /** Adds FontAwesome `fa-lg` class to icon */
-  isLarge?: boolean
   /** Colour of the icon */
   color?: string
   /** Additional class name to pass to the icon */
@@ -26,8 +22,6 @@ export interface IIconProps {
 
 export class Icon extends React.PureComponent<IIconProps> {
   public static defaultProps: Partial<IIconProps> = {
-    isStacked: false,
-    isLarge: false,
     isSpinning: false,
     size: 'medium'
   }

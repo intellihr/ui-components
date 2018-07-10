@@ -21,9 +21,11 @@ describe('<Input />', () => {
       <Input
         name='test-input'
         type='text'
-        icon={<Icon
-          type='fa-check'
-        />}
+        icon={
+          <Icon
+            type='fa-check'
+          />
+        }
       />
     )
 

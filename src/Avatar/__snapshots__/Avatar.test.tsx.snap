@@ -168,9 +168,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
                 type="camera"
               >
                 <Icon
-                  isLarge={false}
                   isSpinning={false}
-                  isStacked={false}
                   size="medium"
                   type="fa-camera"
                 >
