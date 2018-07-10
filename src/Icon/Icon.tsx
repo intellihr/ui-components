@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import { includes } from 'lodash'
 import { StyledIcon, BadgeWrapper } from './style'
 
-export interface IconProps {
+export interface IIconProps {
   /** FontAwesome or alternate name of the icon to display */
   type: string
   /** Multiplies icon size by this amount (max 5) */
@@ -28,8 +28,8 @@ export interface IconProps {
   tSize?: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge'
 }
 
-export class Icon extends React.PureComponent<IconProps> {
-  public static defaultProps: Partial<IconProps> = {
+export class Icon extends React.PureComponent<IIconProps> {
+  public static defaultProps: Partial<IIconProps> = {
     isStacked: false,
     isLarge: false,
     isSmall: false,
