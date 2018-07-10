@@ -90,17 +90,13 @@ export class Icon extends React.PureComponent<IconProps> {
       tSize
     } = this.props
 
-    if (tSize === 'large') {
-      return 'small'
+    const newBadgeSize: { [i:string]: string } = {
+      large: 'small',
+      xlarge: 'medium',
+      xxlarge: 'large'
     }
 
-    if (tSize === 'xlarge') {
-      return 'medium'
-    }
-
-    if (tSize === 'xxlarge') {
-      return 'large'
-    }
+    return tSize && newBadgeSize[tSize]
   }
 
   get badge () {
