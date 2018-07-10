@@ -85,12 +85,12 @@ export class Icon extends React.PureComponent<IIconProps> {
     )
   }
 
-  get badgeSize () {
+  get badgeSize (): string | undefined {
     const {
       tSize
     } = this.props
 
-    const newBadgeSize: { [i:string]: string } = {
+    const newBadgeSize: { [i: string]: string } = {
       large: 'small',
       xlarge: 'medium',
       xxlarge: 'large'
