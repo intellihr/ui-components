@@ -160,6 +160,40 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
 </Icon>
 `;
 
+exports[`<Icon /> should render icon with a custom size 1`] = `
+.c0.fa {
+  font-size: 2.6rem;
+}
+
+.c0.icon-small {
+  bottom: 2px;
+  font-size: xx-small;
+  position: relative;
+}
+
+<Icon
+  customSize={2.6}
+  isLarge={false}
+  isSpinning={false}
+  isStacked={false}
+  size="medium"
+  type="fa-check"
+>
+  <styled.i
+    aria-hidden={true}
+    className="icon fa fa-check"
+    customSize={2.6}
+    size="medium"
+  >
+    <i
+      aria-hidden={true}
+      className="icon fa fa-check c0"
+      size="medium"
+    />
+  </styled.i>
+</Icon>
+`;
+
 exports[`<Icon /> should render icon with colour 1`] = `
 .c0 {
   color: #1A2B3C;

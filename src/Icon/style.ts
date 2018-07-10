@@ -41,12 +41,14 @@ const StyledIcon = styled.i`
     color: ${props.color};  
   `}
   
-  ${(props: StyledIconProps) => props.customSize && css`
-    font-size: ${props.customSize}rem;  
-  `}
-  
   &.fa {
   ${(props: StyledIconProps) => {
+    if (props.customSize) {
+      return `
+        font-size: ${props.customSize}rem;
+      `
+    }
+
     switch (props.size) {
       case 'xxsmall':
         return `

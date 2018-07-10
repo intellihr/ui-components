@@ -48,6 +48,17 @@ describe('<Icon />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
+  it('should render icon with a custom size', () => {
+    const wrapper = mount(
+      <Icon
+        type='fa-check'
+        customSize={2.6}
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it('should render a non-FontAwesome icon', () => {
     const wrapper = mount(
       <Icon
