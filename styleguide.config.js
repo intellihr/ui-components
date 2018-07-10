@@ -49,6 +49,7 @@ module.exports = {
         'src/InputLabel/InputLabel.tsx',
         'src/Legend/Legend.tsx',
         'src/Menu/Menu.tsx',
+        'src/Modal/Modal.tsx',
         'src/Navigation/Navigation.tsx',
         'src/Pill/Pill.tsx',
         'src/Skeleton/Skeleton.tsx',
