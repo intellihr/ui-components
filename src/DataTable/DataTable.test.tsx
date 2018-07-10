@@ -133,4 +133,75 @@ describe('<DataTable />', () => {
       expect(wrapper.find('.-pagination').exists()).toBeTruthy()
     })
   })
+
+  describe('Filtered DataTable - custom filter function', () => {
+    const filterToSam = jest.fn((_: any, row: any) => row.name === 'Sam')
+
+    const wrapper = mount(
+      <DataTable
+        tableId='test-table'
+        data={[
+          {
+            'name': 'Sam',
+            'age': '15'
+          },
+          {
+            'name': 'Some other guy',
+            'age': '35'
+          }
+        ]}
+        columns={[
+          {
+            Header: 'Name',
+            accessor: 'name',
+            filterMethod: filterToSam
+          },
+          {
+            Header: 'Age',
+            accessor: 'age'
+          }
+        ]}
+        showPagination
+        showSearchFilter
+      />
+    )
+
+    const mockedEvent = {
+      target: {
+        value: 'filterinput'
+      }
+    }
+
+    wrapper
+      .find({ name: 'test-table-search-filter' })
+      .at(0)
+      .simulate('change', mockedEvent)
+
+    it('should have the search filter', () => {
+      expect(wrapper.find({ name: 'test-table-search-filter' }).exists()).toBeTruthy()
+    })
+
+    it('should contain correctly filtered data', () => {
+      expect(wrapper.contains('Sam')).toBeTruthy()
+      expect(wrapper.contains('Some other guy')).toBeFalsy()
+    })
+
+    it('should call the filter correctly', () => {
+      expect(filterToSam).toBeCalledWith(
+        {
+          id: '',
+          value: 'filterinput'
+        },
+        {
+          name: 'Sam',
+          age: '15'
+        },
+        {
+          Header: 'Name',
+          accessor: 'name',
+          filterMethod: filterToSam
+        }
+      )
+    })
+  })
 })
