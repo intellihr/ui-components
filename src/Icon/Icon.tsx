@@ -99,7 +99,7 @@ export class Icon extends React.PureComponent<IIconProps> {
     return tSize && newBadgeSize[tSize]
   }
 
-  get badge () {
+  get badge (): JSX.Element | undefined {
     const {
       badge,
       tSize
@@ -110,7 +110,7 @@ export class Icon extends React.PureComponent<IIconProps> {
         <BadgeWrapper
           tSize={tSize}
         >
-          {React.cloneElement(badge, { tSize: this.badgeSize })}
+          {React.cloneElement(badge, { size: this.badgeSize })}
         </BadgeWrapper>
       )
     }

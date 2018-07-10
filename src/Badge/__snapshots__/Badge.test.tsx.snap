@@ -26,16 +26,17 @@ exports[`<Badge /> should render a large badge 1`] = `
   backgroundColor="#1A2B3C"
   color="#1A293C"
   label={6}
-  tSize="large"
+  size="large"
 >
   <styled.span
     backgroundColor="#1A2B3C"
     color="#1A293C"
-    tSize="large"
+    size="large"
   >
     <span
       className="c0"
       color="#1A293C"
+      size="large"
     >
       6
     </span>
@@ -69,16 +70,17 @@ exports[`<Badge /> should render a small badge 1`] = `
   backgroundColor="#1A2B3C"
   color="#1A293C"
   label={6}
-  tSize="small"
+  size="small"
 >
   <styled.span
     backgroundColor="#1A2B3C"
     color="#1A293C"
-    tSize="small"
+    size="small"
   >
     <span
       className="c0"
       color="#1A293C"
+      size="small"
     >
       6
     </span>
@@ -119,16 +121,17 @@ exports[`<Badge /> should render a spinning badge 1`] = `
   color="#1A293C"
   label={6}
   pending={true}
-  tSize="small"
+  size="small"
 >
   <styled.span
     backgroundColor="#1A2B3C"
     color="#1A293C"
-    tSize="small"
+    size="small"
   >
     <span
       className="c0"
       color="#1A293C"
+      size="small"
     >
       <FontAwesomeIcon
         className="refresh-icon"
