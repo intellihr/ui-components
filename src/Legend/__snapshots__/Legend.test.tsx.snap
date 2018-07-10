@@ -37,6 +37,10 @@ exports[`<Legend /> should render a legend 1`] = `
   color: rgb(0,255,0);
 }
 
+.c1.fa {
+  font-size: .75rem;
+}
+
 .c1.icon-small {
   bottom: 2px;
   font-size: xx-small;
@@ -45,6 +49,10 @@ exports[`<Legend /> should render a legend 1`] = `
 
 .c3 {
   color: rgb(0,0,255);
+}
+
+.c3.fa {
+  font-size: .75rem;
 }
 
 .c3.icon-small {
@@ -76,7 +84,7 @@ exports[`<Legend /> should render a legend 1`] = `
       >
         <FontAwesomeIcon
           color="rgb(0,255,0)"
-          size={1}
+          size="xsmall"
           type="circle"
         >
           <Icon
@@ -84,20 +92,20 @@ exports[`<Legend /> should render a legend 1`] = `
             isLarge={false}
             isSpinning={false}
             isStacked={false}
-            size={1}
+            size="xsmall"
             type="fa-circle"
           >
             <styled.i
               aria-hidden={true}
               className="icon fa fa-circle"
               color="rgb(0,255,0)"
-              size={1}
+              size="xsmall"
             >
               <i
                 aria-hidden={true}
                 className="icon fa fa-circle c1"
                 color="rgb(0,255,0)"
-                size={1}
+                size="xsmall"
               />
             </styled.i>
           </Icon>
@@ -115,7 +123,7 @@ exports[`<Legend /> should render a legend 1`] = `
       >
         <FontAwesomeIcon
           color="rgb(0,0,255)"
-          size={1}
+          size="xsmall"
           type="circle"
         >
           <Icon
@@ -123,20 +131,20 @@ exports[`<Legend /> should render a legend 1`] = `
             isLarge={false}
             isSpinning={false}
             isStacked={false}
-            size={1}
+            size="xsmall"
             type="fa-circle"
           >
             <styled.i
               aria-hidden={true}
               className="icon fa fa-circle"
               color="rgb(0,0,255)"
-              size={1}
+              size="xsmall"
             >
               <i
                 aria-hidden={true}
                 className="icon fa fa-circle c3"
                 color="rgb(0,0,255)"
-                size={1}
+                size="xsmall"
               />
             </styled.i>
           </Icon>
