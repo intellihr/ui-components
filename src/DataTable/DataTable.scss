@@ -18,7 +18,6 @@
   border: 0;
   display: flex;
   flex-direction: column;
-  position: relative;
 
   .rt-table {
     align-items: stretch;
@@ -26,7 +25,6 @@
     display: flex;
     flex: auto 1;
     flex-direction: column;
-    overflow: auto;
     width: 100%;
   }
 
@@ -59,7 +57,6 @@
       box-shadow: inset 0 0 0 0 transparent;
       line-height: normal;
       padding: .5rem .625rem .625rem;
-      position: relative;
       transition: box-shadow .3s cubic-bezier(.175, .885, .32, 1.275);
 
       &.-cursor-pointer {
@@ -70,6 +67,25 @@
     .rt-th {
       line-height: 1.5;
       outline: none;
+
+      // Signifies sortable headers
+      &.-cursor-pointer {
+        @include sorting-cursor('\f0dc', $main-text);
+
+        cursor: pointer;
+
+        &.-sort-asc {
+          @include sorting-cursor('\f0de', $link-text);
+        }
+
+        &.-sort-desc {
+          @include sorting-cursor('\f0dd', $link-text);
+        }
+
+        div {
+          display: inline;
+        }
+      }
     }
 
     .rt-resizable-header {
@@ -114,26 +130,6 @@
     }
   }
 
-  &.sortable {
-    .rt-thead {
-      .rt-th {
-        @include sorting-cursor('\f0dc', $main-text);
-
-        &.-sort-asc {
-          @include sorting-cursor('\f0de', $link-text);
-        }
-
-        &.-sort-desc {
-          @include sorting-cursor('\f0dd', $link-text);
-        }
-
-        div {
-          display: inline;
-        }
-      }
-    }
-  }
-
   &.show-vertical-lines {
     .rt-th,
     .rt-td {
@@ -149,7 +145,6 @@
     display: flex;
     flex: 99999 1 auto;
     flex-direction: column;
-    overflow: auto;
 
     .rt-tr-group {
       align-items: stretch;
@@ -181,11 +176,9 @@
   .rt-th,
   .rt-td {
     flex: 1 0 0;
-    overflow: hidden;
     text-overflow: ellipsis;
     transition: .3s ease;
     transition-property: width, min-width, padding, opacity;
-    white-space: nowrap;
 
     &.-hidden {
       border: 0;

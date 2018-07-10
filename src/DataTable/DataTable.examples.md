@@ -110,10 +110,21 @@ Hold shift to sort on multiple columns
       width: 100
     },
     {
-      Header: 'Custom',
       accessor: '',
-      Cell: () => <Callout>Custom</Callout>,
-      width: 300
+      width: 60,
+      sortable: false,
+      Cell: () => <DropdownMenu
+        sections={[
+          {
+            text: 'Item 1',
+            onClick: () => alert('Item 1')
+          },
+          {
+            text: 'Item 2',
+            href: 'https://www.intellihr.com.au'
+          }
+        ]}
+      />
     }
   ]}
   sortable

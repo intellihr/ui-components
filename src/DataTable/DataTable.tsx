@@ -204,7 +204,6 @@ export class DataTable extends React.Component<DataTableProps, DataTableState> {
   get classNames (): string {
     const {
       tableId,
-      sortable,
       showVerticalLines
     } = this.props
 
@@ -212,7 +211,6 @@ export class DataTable extends React.Component<DataTableProps, DataTableState> {
       style.DataTable,
       `data-table-${tableId}`,
       {
-        sortable,
         'show-vertical-lines': showVerticalLines
       }
     )
