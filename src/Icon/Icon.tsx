@@ -25,7 +25,7 @@ export interface IconProps {
   /** Custom sizes for icons */
   customSize?: number
   /** Enforced icon guideline sizes */
-  tSize?: 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl'
+  tSize?: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge'
 }
 
 export class Icon extends React.PureComponent<IconProps> {
@@ -90,16 +90,16 @@ export class Icon extends React.PureComponent<IconProps> {
       tSize
     } = this.props
 
-    if (tSize === 'l') {
-      return 's'
+    if (tSize === 'large') {
+      return 'small'
     }
 
-    if (tSize === 'xl') {
-      return 'm'
+    if (tSize === 'xlarge') {
+      return 'medium'
     }
 
-    if (tSize === 'xxl') {
-      return 'l'
+    if (tSize === 'xxlarge') {
+      return 'large'
     }
   }
 
@@ -109,7 +109,7 @@ export class Icon extends React.PureComponent<IconProps> {
       tSize
     } = this.props
 
-    if (badge && tSize && includes(['l', 'xl', 'xxl'], tSize)) {
+    if (badge && tSize && includes(['large', 'xlarge', 'xxlarge'], tSize)) {
       return (
         <BadgeWrapper
           tSize={tSize}

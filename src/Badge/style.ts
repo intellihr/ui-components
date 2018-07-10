@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 interface IBadgeWrapper {
   backgroundColor?: string
   color?: string
-  tSize?: 's' | 'm' | 'l'
+  tSize?: 'small' | 'medium' | 'large'
 }
 
 const BadgeWrapper = styled.span`
@@ -17,21 +17,21 @@ const BadgeWrapper = styled.span`
   
   ${(props: IBadgeWrapper) => {
     switch (props.tSize) {
-      case 's':
+      case 'small':
         return `
           width: 20px;
           height: 20px;
           line-height: 20px;
           font-size: 12px
         `
-      case 'm':
+      case 'medium':
         return `
           width: 24px;
           height: 24px;
           line-height: 24px;
           font-size: 15px
         `
-      case 'l':
+      case 'large':
         return `
           width: 30px;
           height: 30px;

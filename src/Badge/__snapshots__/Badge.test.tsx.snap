@@ -1,13 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Badge /> should render a simple badge 1`] = `
+exports[`<Badge /> should render a large badge 1`] = `
 .c0 {
   background-color: #1A2B3C;
   color: #1A293C;
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  font-size: 12px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 21px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.24);
   border: 1px solid $neutral-base;
   border-radius: 50%;
   color: $neutral-text;
@@ -25,12 +26,12 @@ exports[`<Badge /> should render a simple badge 1`] = `
   backgroundColor="#1A2B3C"
   color="#1A293C"
   label={6}
-  tSize="s"
+  tSize="large"
 >
   <styled.span
     backgroundColor="#1A2B3C"
     color="#1A293C"
-    tSize="s"
+    tSize="large"
   >
     <span
       className="c0"
@@ -50,6 +51,7 @@ exports[`<Badge /> should render a small badge 1`] = `
   height: 20px;
   line-height: 20px;
   font-size: 12px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.24);
   border: 1px solid $neutral-base;
   border-radius: 50%;
   color: $neutral-text;
@@ -66,14 +68,13 @@ exports[`<Badge /> should render a small badge 1`] = `
 <Badge
   backgroundColor="#1A2B3C"
   color="#1A293C"
-  isSmall={true}
   label={6}
-  tSize="s"
+  tSize="small"
 >
   <styled.span
     backgroundColor="#1A2B3C"
     color="#1A293C"
-    tSize="s"
+    tSize="small"
   >
     <span
       className="c0"
@@ -99,6 +100,7 @@ exports[`<Badge /> should render a spinning badge 1`] = `
   height: 20px;
   line-height: 20px;
   font-size: 12px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.24);
   border: 1px solid $neutral-base;
   border-radius: 50%;
   color: $neutral-text;
@@ -117,12 +119,12 @@ exports[`<Badge /> should render a spinning badge 1`] = `
   color="#1A293C"
   label={6}
   pending={true}
-  tSize="s"
+  tSize="small"
 >
   <styled.span
     backgroundColor="#1A2B3C"
     color="#1A293C"
-    tSize="s"
+    tSize="small"
   >
     <span
       className="c0"

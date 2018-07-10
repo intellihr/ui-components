@@ -65,7 +65,7 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
       backgroundColor="#1A2B3C"
       color="#1A293C"
       label={6}
-      tSize="s"
+      tSize="small"
     />
   }
   isLarge={false}

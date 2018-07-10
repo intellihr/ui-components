@@ -4,21 +4,21 @@
 <div>
   <Badge
     label={6}
-    tSize='s'
+    tSize='small'
     backgroundColor='rgb(71, 82, 93)'
     color='white'
   />
   
   <Badge
     label={6}
-    tSize='m'
+    tSize='medium'
     backgroundColor='rgb(71, 82, 93)'
     color='white'
   />
   
   <Badge
     label={6}
-    tSize='l'
+    tSize='large'
     backgroundColor='rgb(71, 82, 93)'
     color='white'
   />
@@ -32,19 +32,19 @@
   <Badge
     pending
     label={6}
-    tSize='s'
+    tSize='small'
   />
   
   <Badge
     pending
     label={6}
-    tSize='m'
+    tSize='medium'
   />
   
   <Badge
     pending
     label={6}
-    tSize='l'
+    tSize='large'
   />
 </div>
 ```

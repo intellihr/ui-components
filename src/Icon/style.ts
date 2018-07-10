@@ -1,13 +1,15 @@
 import styled, { css } from 'styled-components'
 
+type tSize = 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge'
+
 interface StyledIconProps {
   color?: string
   customSize?: number
-  tSize?: 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl'
+  tSize?: tSize
 }
 
 interface IBadgeWrapper {
-  tSize?: 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl'
+  tSize?: tSize
 }
 
 const BadgeWrapper = styled.span`
@@ -15,17 +17,17 @@ const BadgeWrapper = styled.span`
   
   ${(props: IBadgeWrapper) => {
     switch (props.tSize) {
-      case 'l':
+      case 'large':
         return `
           margin-top: -10px;
           margin-left: -10px;
         `
-      case 'xl':
+      case 'xlarge':
         return `
           margin-top: -9px;
           margin-left: -15px;
         `
-      case 'xxl':
+      case 'xxlarge':
         return `
           margin-top: -9px;
           margin-left: -22px;
@@ -45,27 +47,27 @@ const StyledIcon = styled.i`
   
   ${(props: StyledIconProps) => {
     switch (props.tSize) {
-      case 'xs':
+      case 'xsmall':
         return `
           font-size: .75rem; // 12px
-       `
-      case 's':
+        `
+      case 'small':
         return `
           font-size: .85rem; // 14px
         `
-      case 'm':
+      case 'medium':
         return `
           font-size: 1rem; // 16px
         `
-      case 'l':
+      case 'large':
         return `
           font-size: 1.5rem; // 24px
         `
-      case 'xl':
+      case 'xlarge':
         return `
           font-size: 2rem; // 32px
         `
-      case 'xxl':
+      case 'xxlarge':
         return `
           font-size: 3rem; // 48px
         `

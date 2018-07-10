@@ -3,7 +3,7 @@ import { mount } from 'enzyme'
 import { Badge } from './Badge'
 
 describe('<Badge />', () => {
-  it('should render a simple badge', () => {
+  it('should render a small badge', () => {
     const wrapper = mount(
       <Badge
         label={6}
@@ -15,13 +15,13 @@ describe('<Badge />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should render a small badge', () => {
+  it('should render a large badge', () => {
     const wrapper = mount(
       <Badge
         label={6}
         backgroundColor='#1A2B3C'
         color='#1A293C'
-        isSmall
+        tSize='large'
       />
     )
 

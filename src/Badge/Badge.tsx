@@ -12,12 +12,12 @@ interface IBadgeProps {
   /** Font color of the badge */
   color?: string
   /** Enforced badge guideline sizes */
-  tSize?: 's' | 'm' | 'l'
+  tSize?: 'small' | 'medium' | 'large'
 }
 
 class Badge extends React.PureComponent<IBadgeProps> {
   public static defaultProps: Partial<IBadgeProps> = {
-    tSize: 's'
+    tSize: 'small'
   }
 
   get label (): number | string | JSX.Element | undefined {
