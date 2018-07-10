@@ -82,12 +82,6 @@ exports[`<Button /> should render a button with an icon 1`] = `
   font-size: 1rem;
 }
 
-.c0.icon-small {
-  bottom: 2px;
-  font-size: xx-small;
-  position: relative;
-}
-
 <Button
   icon={
     <FontAwesomeIcon

@@ -93,12 +93,6 @@ exports[`<Badge /> should render a spinning badge 1`] = `
   font-size: 1rem;
 }
 
-.c1.icon-small {
-  bottom: 2px;
-  font-size: xx-small;
-  position: relative;
-}
-
 .c0 {
   background-color: #1A2B3C;
   color: #1A293C;

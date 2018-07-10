@@ -5,12 +5,6 @@ exports[`<Icon /> should render a large icon 1`] = `
   font-size: 1.5rem;
 }
 
-.c0.icon-small {
-  bottom: 2px;
-  font-size: xx-small;
-  position: relative;
-}
-
 <Icon
   isSpinning={false}
   size="large"
@@ -33,12 +27,6 @@ exports[`<Icon /> should render a large icon 1`] = `
 exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
 .c0.fa {
   font-size: 1rem;
-}
-
-.c0.icon-small {
-  bottom: 2px;
-  font-size: xx-small;
-  position: relative;
 }
 
 <Icon
@@ -69,12 +57,6 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
 
 .c0.fa {
   font-size: 2rem;
-}
-
-.c0.icon-small {
-  bottom: 2px;
-  font-size: xx-small;
-  position: relative;
 }
 
 .c2 {
@@ -159,12 +141,6 @@ exports[`<Icon /> should render icon with a custom size 1`] = `
   font-size: 2.6rem;
 }
 
-.c0.icon-small {
-  bottom: 2px;
-  font-size: xx-small;
-  position: relative;
-}
-
 <Icon
   customSize={2.6}
   isSpinning={false}
@@ -195,12 +171,6 @@ exports[`<Icon /> should render icon with colour 1`] = `
   font-size: 1rem;
 }
 
-.c0.icon-small {
-  bottom: 2px;
-  font-size: xx-small;
-  position: relative;
-}
-
 <Icon
   color="#1A2B3C"
   isSpinning={false}
@@ -228,12 +198,6 @@ exports[`<Icon /> should render icon with no size or colour 1`] = `
   font-size: 1rem;
 }
 
-.c0.icon-small {
-  bottom: 2px;
-  font-size: xx-small;
-  position: relative;
-}
-
 <Icon
   isSpinning={false}
   size="medium"
@@ -256,12 +220,6 @@ exports[`<Icon /> should render icon with no size or colour 1`] = `
 exports[`<Icon /> should render icon with size 1`] = `
 .c0.fa {
   font-size: 1rem;
-}
-
-.c0.icon-small {
-  bottom: 2px;
-  font-size: xx-small;
-  position: relative;
 }
 
 <Icon

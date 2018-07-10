@@ -112,12 +112,6 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
   font-size: 1rem;
 }
 
-.c0.icon-small {
-  bottom: 2px;
-  font-size: xx-small;
-  position: relative;
-}
-
 <Avatar
   handleClick={[Function]}
   hoverIcon="image"

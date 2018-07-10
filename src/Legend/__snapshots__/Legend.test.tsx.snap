@@ -41,24 +41,12 @@ exports[`<Legend /> should render a legend 1`] = `
   font-size: .75rem;
 }
 
-.c1.icon-small {
-  bottom: 2px;
-  font-size: xx-small;
-  position: relative;
-}
-
 .c3 {
   color: rgb(0,0,255);
 }
 
 .c3.fa {
   font-size: .75rem;
-}
-
-.c3.icon-small {
-  bottom: 2px;
-  font-size: xx-small;
-  position: relative;
 }
 
 <Legend

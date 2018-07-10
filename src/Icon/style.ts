@@ -81,12 +81,6 @@ const StyledIcon = styled.i`
     }
   }}
   }
-
-  &.icon-small {
-    bottom: 2px;
-    font-size: xx-small;
-    position: relative;
-  }
 `
 
 export {
