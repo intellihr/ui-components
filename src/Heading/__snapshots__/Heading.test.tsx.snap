@@ -2,8 +2,8 @@
 
 exports[`<Heading /> should render a h1 element with type 'page' 1`] = `
 .c0 {
+  font-family: 'Open Sans',Arial,sans-serif;
   display: block;
-  font-family: 'Roboto',Arial,sans-serif;
 }
 
 <class_1
@@ -21,10 +21,14 @@ exports[`<Heading /> should render a h1 element with type 'page' 1`] = `
     type="page"
   >
     <HeadingComponent
+      isInline={false}
+      isSubtitle={false}
       type="page"
     >
       <styled.h1
         className="heading"
+        isInline={false}
+        isSubtitle={false}
         tag={[Function]}
       >
         <h1
@@ -40,8 +44,8 @@ exports[`<Heading /> should render a h1 element with type 'page' 1`] = `
 
 exports[`<Heading /> should render a h2 element with type 'section' 1`] = `
 .c0 {
+  font-family: 'Open Sans',Arial,sans-serif;
   display: block;
-  font-family: 'Roboto',Arial,sans-serif;
 }
 
 <class_1
@@ -59,10 +63,14 @@ exports[`<Heading /> should render a h2 element with type 'section' 1`] = `
     type="section"
   >
     <HeadingComponent
+      isInline={false}
+      isSubtitle={false}
       type="section"
     >
       <styled.h2
         className="heading"
+        isInline={false}
+        isSubtitle={false}
         tag={[Function]}
       >
         <h2
@@ -78,8 +86,8 @@ exports[`<Heading /> should render a h2 element with type 'section' 1`] = `
 
 exports[`<Heading /> should render a h3 element with type 'subsection' 1`] = `
 .c0 {
+  font-family: 'Open Sans',Arial,sans-serif;
   display: block;
-  font-family: 'Roboto',Arial,sans-serif;
 }
 
 <class_1
@@ -97,10 +105,14 @@ exports[`<Heading /> should render a h3 element with type 'subsection' 1`] = `
     type="subsection"
   >
     <HeadingComponent
+      isInline={false}
+      isSubtitle={false}
       type="subsection"
     >
       <styled.h3
         className="heading"
+        isInline={false}
+        isSubtitle={false}
         tag={[Function]}
       >
         <h3
@@ -116,8 +128,8 @@ exports[`<Heading /> should render a h3 element with type 'subsection' 1`] = `
 
 exports[`<Heading /> should render a skeleton element if skeletonOptions are passed to the component 1`] = `
 .c0 {
+  font-family: 'Open Sans',Arial,sans-serif;
   display: block;
-  font-family: 'Roboto',Arial,sans-serif;
 }
 
 <class_1
@@ -135,10 +147,14 @@ exports[`<Heading /> should render a skeleton element if skeletonOptions are pas
     type="page"
   >
     <HeadingComponent
+      isInline={false}
+      isSubtitle={false}
       type="page"
     >
       <styled.h1
         className="heading"
+        isInline={false}
+        isSubtitle={false}
         tag={[Function]}
       >
         <h1
@@ -150,4 +166,134 @@ exports[`<Heading /> should render a skeleton element if skeletonOptions are pas
     </HeadingComponent>
   </Skeleton>
 </class_1>
+`;
+
+exports[`<Heading /> should render a subtitle p element 1`] = `
+.c0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  display: block;
+  color: hsl(210,13.4%,47.2%);
+  font-size: 1.125rem;
+}
+
+<class_1
+  isSubtitle={true}
+>
+  <Skeleton
+    className=""
+    isSubtitle={true}
+    skeletonOptions={
+      Object {
+        "shape": "line",
+        "showSkeleton": false,
+        "size": "large",
+      }
+    }
+  >
+    <HeadingComponent
+      isInline={false}
+      isSubtitle={true}
+    >
+      <styled.p
+        className="heading"
+        isInline={false}
+        isSubtitle={true}
+        tag={[Function]}
+      >
+        <p
+          className="heading c0"
+        >
+          Hello I am a subtitle
+        </p>
+      </styled.p>
+    </HeadingComponent>
+  </Skeleton>
+</class_1>
+`;
+
+exports[`<Heading /> should render two inline h1 elements 1`] = `
+Array [
+  .c0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  display: inline-block;
+}
+
+<class_1
+    isInline={true}
+    type="page"
+  >
+    <Skeleton
+      className=""
+      isInline={true}
+      skeletonOptions={
+        Object {
+          "shape": "line",
+          "showSkeleton": false,
+          "size": "large",
+        }
+      }
+      type="page"
+    >
+      <HeadingComponent
+        isInline={true}
+        isSubtitle={false}
+        type="page"
+      >
+        <styled.h1
+          className="heading"
+          isInline={true}
+          isSubtitle={false}
+          tag={[Function]}
+        >
+          <h1
+            className="heading c0"
+          >
+            Hello I am a h1
+          </h1>
+        </styled.h1>
+      </HeadingComponent>
+    </Skeleton>
+  </class_1>,
+  .c0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  display: inline-block;
+}
+
+<class_1
+    isInline={true}
+    type="page"
+  >
+    <Skeleton
+      className=""
+      isInline={true}
+      skeletonOptions={
+        Object {
+          "shape": "line",
+          "showSkeleton": false,
+          "size": "large",
+        }
+      }
+      type="page"
+    >
+      <HeadingComponent
+        isInline={true}
+        isSubtitle={false}
+        type="page"
+      >
+        <styled.h1
+          className="heading"
+          isInline={true}
+          isSubtitle={false}
+          tag={[Function]}
+        >
+          <h1
+            className="heading c0"
+          >
+            Hello I am a h1
+          </h1>
+        </styled.h1>
+      </HeadingComponent>
+    </Skeleton>
+  </class_1>,
+]
 `;
