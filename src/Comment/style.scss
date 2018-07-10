@@ -2,56 +2,6 @@
   @return mix(white, $color, $percentage);
 }
 
-$styleValues: (
-  background-color: transparent,
-  border: transparent,
-  text-color: $alert-base,
-  disabled-background-color: transparent,
-  disabled-text-color: $alert-base,
-  hover-background-color: $alert-base,
-  hover-text-color: $alert-text,
-  active-background-color: $alert-active,
-  active-text-color: $alert-hover-text
-);
-
-@mixin add-button-style ($style) {
-  &:disabled,
-  &.disabled,
-  &[disabled] {
-    background-color: map-get($style, disabled-background-color);
-    color: map-get($style, disabled-text-color);
-    cursor: not-allowed;
-    opacity: .3;
-
-    &:focus,
-    &:hover {
-      background-color: map-get($style, disabled-background-color);
-      color: map-get($style, disabled-text-color);
-    }
-  }
-
-  background-color: map-get($style, background-color);
-  border-color: map-get($style, border);
-  color: map-get($style, text-color);
-
-  &:focus,
-  &:hover,
-  &.hover {
-    background-color: map-get($style, hover-background-color);
-    color: map-get($style, hover-text-color);
-
-    @if map-has-key($style, hover-border-color) {
-      border-color: map-get($style, hover-border-color);
-    }
-  }
-
-  &:active,
-  &.active {
-    background-color: map-get($style, active-background-color);
-    color: map-get($style, active-text-color);
-  }
-}
-
 :local(.Comment) {
   display: flex;
   flex-flow: row;
@@ -101,38 +51,6 @@ $styleValues: (
 
     >.comment-content {
       margin-top: .5rem;
-    }
-  }
-
-  /*
-    Very, very, very dirty hack.
-    Due to 'react-dd-menu' and 'DropdownPane' rewriting the styles for alert button,
-      this hack is present here.
-    The style variable and the mixin at the top are part of this too.
-    Judge me not... :'(
-  */
-  >.comment-content-container {
-    >.comment-header-container {
-      >.comment-action-menu {
-        >div {
-          >.dd-menu-items {
-            >ul {
-              >li {
-                >.comment-action-button {
-                  margin: 0;
-                  font-style: normal;
-                  font-weight: normal;
-                  text-transform: capitalize;
-
-                  &.alert-borderless {
-                    @include add-button-style($styleValues);
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
     }
   }
 }

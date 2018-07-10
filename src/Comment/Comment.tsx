@@ -35,35 +35,16 @@ export interface CommentProps {
   loggedInUser: {
     id: string
   },
+  actions?: sectionProps[],
   /** Handler for the Comment Edit event */
-  editHandler?: (event: React.SyntheticEvent<any>) => void,
+  handleEdit?: (event: React.SyntheticEvent<any>) => void,
   /** Handler for the Comment Delete event */
-  deleteHandler?: (event: React.SyntheticEvent<any>) => void,
+  handleDelete?: (event: React.SyntheticEvent<any>) => void,
   idx: number,
   alternatingColours?: boolean
 }
 
 export class Comment extends React.Component<CommentProps> {
-  displayCommentInstruments (): boolean {
-    const {
-      comment: {
-        header: commentHeader
-      },
-      editHandler,
-      deleteHandler
-    } = this.props
-
-    if (commentHeader) {
-      return false
-    }
-
-    if (editHandler || deleteHandler) {
-      return true
-    }
-
-    return false
-  }
-
   get avatar (): JSX.Element {
     const {
       commenterInitials,
@@ -81,70 +62,30 @@ export class Comment extends React.Component<CommentProps> {
     )
   }
 
-  get commentActionSections (): sectionProps[] {
+  get commentActions (): JSX.Element | null {
     const {
-      editHandler,
-      deleteHandler
+      actions,
+      comment: {
+        header: commentHeader
+      }
     } = this.props
 
-    const sections: sectionProps[] = []
-
-    if (editHandler) {
-      sections.push({
-        component: (
-          <Button
-            type='neutral-borderless'
-            className='comment-action-button'
-            onClick={editHandler}
-          >
-            Edit
-          </Button>
-        )
-      })
-    }
-
-    if (deleteHandler) {
-      if (editHandler) {
-        sections.push({
-          component: <hr />
-        })
-      }
-
-      sections.push({
-        component: (
-          <Button
-            type='alert-borderless'
-            className='comment-action-button'
-            onClick={deleteHandler}
-          >
-            Delete
-          </Button>
-        )
-      })
-    }
-
-    return sections
-  }
-
-  get commentActions (): JSX.Element | null {
-    if (!this.displayCommentInstruments()) {
+    if (commentHeader || !actions) {
       return null
     }
 
     return (
-      <div className='comment-action-menu'>
-        <DropdownMenu
-          toggleComponent={
-            <DefaultDropdownButton>
-              <FontAwesomeIcon type='ellipsis-v' />
-            </DefaultDropdownButton>
-          }
-          dropdownOverrides={{
-            align: 'left'
-          }}
-          sections={this.commentActionSections}
-        />
-      </div>
+      <DropdownMenu
+        toggleComponent={
+          <DefaultDropdownButton>
+            <FontAwesomeIcon type='ellipsis-v' />
+          </DefaultDropdownButton>
+        }
+        dropdownOverrides={{
+          align: 'left'
+        }}
+        sections={actions}
+      />
     )
   }
 

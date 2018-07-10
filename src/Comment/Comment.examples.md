@@ -50,12 +50,20 @@
     personProfilePictureId: 'http://www.multiplemayhemmamma.com/wp-content/uploads/2013/03/home-alone-150x150.jpg',
     personId: 'sampleCommentPersonId'
   }}
+  actions={[{
+    text: 'Edit',
+    onClick: () => { alert('Edit handler') }
+  },{
+    component: <hr />
+  },{
+    text: 'Delete',
+    onClick: () => { alert('Delete handler') },
+    hoverAlert: true
+  }]}
   loggedInUser={{
     id: 'sampleCommentPersonId'
   }}
   idx={1}
-  editHandler={() => { alert('Edit this comment') }}
-  deleteHandler={() => { alert('This comment is to be deleted') }}
 />
 ```
 
