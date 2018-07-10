@@ -89,8 +89,7 @@ Hold shift to sort on multiple columns
       name: 'Tanner Linsley',
       age: {
         number: 26
-      },
-      
+      }
     },
     {
       name: 'Jason Maurer',
@@ -108,11 +107,51 @@ Hold shift to sort on multiple columns
     {
       Header: 'Age',
       accessor: 'age.number',
-      width: 100,
-      Cell: ({ value }) => <Callout>{value}</Callout>
+      width: 100
+    },
+    {
+      Header: 'Custom',
+      accessor: '',
+      Cell: () => <Callout>Custom</Callout>,
+      width: 300
     }
   ]}
   sortable
+/>
+```
+
+#### Custom Filters
+
+```jsx
+<DataTable
+  data={[
+    {
+      name: 'Tanner Linsley',
+      age: 26
+    },
+    {
+      name: 'Jason Maurer',
+      age: 23
+    }
+  ]}
+  columns={[
+    {
+      Header: 'Name',
+      accessor: 'name'
+    },
+    {
+      Header: 'Age',
+      accessor: 'age'
+    },
+    {
+      Header: 'This column filters to "dog"',
+      accessor: '',
+      Cell: () => <Callout>Custom</Callout>,
+      filterMethod: (filter) => filter.value === 'dog'
+    }
+  ]}
+  showPagination
+  showSearchFilter
 />
 ```
 

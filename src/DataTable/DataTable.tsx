@@ -1,5 +1,5 @@
 import React, { ChangeEvent } from 'react'
-import ReactTable, { TableProps, Column, SortingRule } from 'react-table'
+import ReactTable, { TableProps, Column, SortingRule, Filter, FilterFunction } from 'react-table'
 import classNames from 'classnames'
 import {
   get,
@@ -34,7 +34,7 @@ export interface DataTableProps {
   /** Whether the table should be paginated */
   showPagination?: boolean
 
-  /** Whether we should add a search filter  */
+  /** Whether we should add a search filter - requires pagination  */
   showSearchFilter?: boolean
 
   /** Show vertical delineation between columns  */
@@ -69,31 +69,47 @@ export class DataTable extends React.Component<DataTableProps, DataTableState> {
     }
   }
 
-  updateSearchFilter = (event: ChangeEvent<HTMLInputElement>) => {
-    this.setState({
-      searchFilter: event.target.value
-    })
-  }
+  defaultFilterMethod = (
+    columnFilter: Filter,
+    row: any,
+    column: Column
+  ): boolean => {
+    // We filter either by the global state filter or by the individual column filter if it exists
+    let { searchFilter } = this.state
+    if (columnFilter.value) {
+      searchFilter = columnFilter.value
+    }
 
-  shouldFilterRow = (row: object): boolean => {
-    const { columns } = this.props
-    const { searchFilter } = this.state
     const needle = lowerCase(searchFilter || '')
 
+    let columnValue = ''
+
+    if (isString(column.accessor)) {
+      columnValue = get(row, column.accessor, '')
+    }
+
+    if (isFunction(column.accessor)) {
+      columnValue = column.accessor(row) || ''
+    }
+
+    columnValue = lowerCase(columnValue)
+
+    return columnValue.includes(needle)
+  }
+
+  shouldFilterRow = (row: any): boolean => {
+    const { searchFilter } = this.state
+    const { columns } = this.props
+
     for (const column of columns) {
-      let columnValue = ''
-
-      if (isString(column.accessor)) {
-        columnValue = get(row, column.accessor, '')
+      const currentFilter = {
+        id: column.id || '',
+        value: searchFilter
       }
 
-      if (isFunction(column.accessor)) {
-        columnValue = column.accessor(row) || ''
-      }
+      const filterMethod: FilterFunction = column.filterMethod || this.defaultFilterMethod
 
-      columnValue = lowerCase(columnValue)
-
-      if (columnValue.includes(needle)) {
+      if (filterMethod(currentFilter, row, column)) {
         return true
       }
     }
@@ -112,7 +128,24 @@ export class DataTable extends React.Component<DataTableProps, DataTableState> {
     return filter(data, this.shouldFilterRow)
   }
 
-  get searchFilter (): JSX.Element | undefined {
+  get columnsWithFilterMethod (): Column[] {
+    const { columns } = this.props
+
+    return columns.map((column) => {
+      return {
+        filterMethod: this.defaultFilterMethod,
+        ...column
+      }
+    })
+  }
+
+  updateSearchFilter = (event: ChangeEvent<HTMLInputElement>) => {
+    this.setState({
+      searchFilter: event.target.value
+    })
+  }
+
+  get searchFilterComponent (): JSX.Element | undefined {
     const {
       showSearchFilter,
       tableId
@@ -150,7 +183,7 @@ export class DataTable extends React.Component<DataTableProps, DataTableState> {
       <DataTablePagination
         key='pagination'
         {...props}
-        customComponent={this.searchFilter}
+        customComponent={this.searchFilterComponent}
       />
     )
   }
@@ -187,7 +220,6 @@ export class DataTable extends React.Component<DataTableProps, DataTableState> {
 
   public render (): JSX.Element {
     const {
-      columns,
       showPagination,
       sortable,
       defaultSorted,
@@ -199,7 +231,7 @@ export class DataTable extends React.Component<DataTableProps, DataTableState> {
     return <ReactTable
       {...this.defaultReactTableProps}
       data={filteredData}
-      columns={columns}
+      columns={this.columnsWithFilterMethod}
       className={this.classNames}
       showPagination={showPagination}
       showPaginationBottom={filteredData.length > 0}

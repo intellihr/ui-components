@@ -91,10 +91,12 @@ exports[`<DataTable /> Basic DataTable should match the snapshot 1`] = `
         Object {
           "Header": "Name",
           "accessor": "name",
+          "filterMethod": [Function],
         },
         Object {
           "Header": "Age",
           "accessor": "age",
+          "filterMethod": [Function],
         },
       ]
     }
