@@ -89,6 +89,10 @@ exports[`<Badge /> should render a small badge 1`] = `
 `;
 
 exports[`<Badge /> should render a spinning badge 1`] = `
+.c1.fa {
+  font-size: 1rem;
+}
+
 .c1.icon-small {
   bottom: 2px;
   font-size: xx-small;
@@ -141,18 +145,20 @@ exports[`<Badge /> should render a spinning badge 1`] = `
         <Icon
           className="refresh-icon"
           isLarge={false}
-          isSmall={false}
           isSpinning={true}
           isStacked={false}
+          size="medium"
           type="fa-refresh"
         >
           <styled.i
             aria-hidden={true}
             className="refresh-icon icon fa fa-refresh fa-spin"
+            size="medium"
           >
             <i
               aria-hidden={true}
               className="refresh-icon icon fa fa-refresh fa-spin c1"
+              size="medium"
             />
           </styled.i>
         </Icon>

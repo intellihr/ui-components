@@ -82,7 +82,6 @@ exports[`<Legend /> should render a legend 1`] = `
           <Icon
             color="rgb(0,255,0)"
             isLarge={false}
-            isSmall={false}
             isSpinning={false}
             isStacked={false}
             size={1}
@@ -90,13 +89,15 @@ exports[`<Legend /> should render a legend 1`] = `
           >
             <styled.i
               aria-hidden={true}
-              className="icon fa fa-circle fa-1x"
+              className="icon fa fa-circle"
               color="rgb(0,255,0)"
+              size={1}
             >
               <i
                 aria-hidden={true}
-                className="icon fa fa-circle fa-1x c1"
+                className="icon fa fa-circle c1"
                 color="rgb(0,255,0)"
+                size={1}
               />
             </styled.i>
           </Icon>
@@ -120,7 +121,6 @@ exports[`<Legend /> should render a legend 1`] = `
           <Icon
             color="rgb(0,0,255)"
             isLarge={false}
-            isSmall={false}
             isSpinning={false}
             isStacked={false}
             size={1}
@@ -128,13 +128,15 @@ exports[`<Legend /> should render a legend 1`] = `
           >
             <styled.i
               aria-hidden={true}
-              className="icon fa fa-circle fa-1x"
+              className="icon fa fa-circle"
               color="rgb(0,0,255)"
+              size={1}
             >
               <i
                 aria-hidden={true}
-                className="icon fa fa-circle fa-1x c3"
+                className="icon fa fa-circle c3"
                 color="rgb(0,0,255)"
+                size={1}
               />
             </styled.i>
           </Icon>

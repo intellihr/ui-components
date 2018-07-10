@@ -7,13 +7,11 @@ export interface IIconProps {
   /** FontAwesome or alternate name of the icon to display */
   type: string
   /** Multiplies icon size by this amount (max 5) */
-  size?: 1 | 2 | 3 | 4 | 5
+  size?: 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge'
   /** Adds FontAwesome stacked class to icon */
   isStacked?: boolean
   /** Adds FontAwesome `fa-lg` class to icon */
   isLarge?: boolean
-  /** Adds a class to reduce the font size of the icon */
-  isSmall?: boolean
   /** Colour of the icon */
   color?: string
   /** Additional class name to pass to the icon */
@@ -24,52 +22,21 @@ export interface IIconProps {
   badge?: JSX.Element
   /** Custom sizes for icons */
   customSize?: number
-  /** Enforced icon guideline sizes */
-  tSize?: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge'
 }
 
 export class Icon extends React.PureComponent<IIconProps> {
   public static defaultProps: Partial<IIconProps> = {
     isStacked: false,
     isLarge: false,
-    isSmall: false,
-    isSpinning: false
-  }
-
-  get sizeClass (): string {
-    const {
-      size,
-      isStacked,
-      isLarge,
-      customSize,
-      tSize
-    } = this.props
-
-    if (customSize || tSize) {
-      return ''
-    }
-
-    if (isLarge) {
-      return `fa-lg`
-    }
-
-    if (size) {
-      if (isStacked) {
-        return `fa-stack-${size}x`
-      }
-
-      return `fa-${size}x`
-    }
-
-    return ''
+    isSpinning: false,
+    size: 'medium'
   }
 
   get classNames (): string {
     const {
       className,
       type,
-      isSpinning,
-      isSmall
+      isSpinning
     } = this.props
 
     return classNames(
@@ -77,17 +44,15 @@ export class Icon extends React.PureComponent<IIconProps> {
       'icon',
       'fa',
       type,
-      this.sizeClass,
       {
-        'fa-spin': isSpinning,
-        'icon-small': isSmall
+        'fa-spin': isSpinning
       }
     )
   }
 
   get badgeSize (): string | undefined {
     const {
-      tSize
+      size
     } = this.props
 
     const newBadgeSize: { [i: string]: string } = {
@@ -96,19 +61,19 @@ export class Icon extends React.PureComponent<IIconProps> {
       xxlarge: 'large'
     }
 
-    return tSize && newBadgeSize[tSize]
+    return size && newBadgeSize[size]
   }
 
   get badge (): JSX.Element | undefined {
     const {
       badge,
-      tSize
+      size
     } = this.props
 
-    if (badge && tSize && includes(['large', 'xlarge', 'xxlarge'], tSize)) {
+    if (badge && includes(['large', 'xlarge', 'xxlarge'], size)) {
       return (
         <BadgeWrapper
-          tSize={tSize}
+          size={size}
         >
           {React.cloneElement(badge, { size: this.badgeSize })}
         </BadgeWrapper>
@@ -120,7 +85,7 @@ export class Icon extends React.PureComponent<IIconProps> {
     const {
       color,
       customSize,
-      tSize
+      size
     } = this.props
 
     return (
@@ -130,7 +95,7 @@ export class Icon extends React.PureComponent<IIconProps> {
           aria-hidden
           color={color}
           customSize={customSize}
-          tSize={tSize}
+          size={size}
         />
 
         {this.badge}

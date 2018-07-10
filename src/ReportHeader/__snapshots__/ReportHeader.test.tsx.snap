@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ReportHeader /> should render ReportHeader with info 1`] = `
+.c5.fa {
+  font-size: 1.5rem;
+}
+
 .c5.icon-small {
   bottom: 2px;
   font-size: xx-small;
@@ -115,58 +119,30 @@ exports[`<ReportHeader /> should render ReportHeader with info 1`] = `
                 <div
                   className="c4"
                 >
-                  <span
-                    className="fa-stack"
+                  <FontAwesomeIcon
+                    size="large"
+                    type="info-circle"
                   >
-                    <FontAwesomeIcon
-                      isStacked={true}
-                      size={1}
-                      type="info"
+                    <Icon
+                      isLarge={false}
+                      isSpinning={false}
+                      isStacked={false}
+                      size="large"
+                      type="fa-info-circle"
                     >
-                      <Icon
-                        isLarge={false}
-                        isSmall={false}
-                        isSpinning={false}
-                        isStacked={true}
-                        size={1}
-                        type="fa-info"
+                      <styled.i
+                        aria-hidden={true}
+                        className="icon fa fa-info-circle"
+                        size="large"
                       >
-                        <styled.i
+                        <i
                           aria-hidden={true}
-                          className="icon fa fa-info fa-stack-1x"
-                        >
-                          <i
-                            aria-hidden={true}
-                            className="icon fa fa-info fa-stack-1x c5"
-                          />
-                        </styled.i>
-                      </Icon>
-                    </FontAwesomeIcon>
-                    <FontAwesomeIcon
-                      isStacked={true}
-                      size={2}
-                      type="circle-thin"
-                    >
-                      <Icon
-                        isLarge={false}
-                        isSmall={false}
-                        isSpinning={false}
-                        isStacked={true}
-                        size={2}
-                        type="fa-circle-thin"
-                      >
-                        <styled.i
-                          aria-hidden={true}
-                          className="icon fa fa-circle-thin fa-stack-2x"
-                        >
-                          <i
-                            aria-hidden={true}
-                            className="icon fa fa-circle-thin fa-stack-2x c5"
-                          />
-                        </styled.i>
-                      </Icon>
-                    </FontAwesomeIcon>
-                  </span>
+                          className="icon fa fa-info-circle c5"
+                          size="large"
+                        />
+                      </styled.i>
+                    </Icon>
+                  </FontAwesomeIcon>
                 </div>
               </styled.div>
             </InfoIcon>

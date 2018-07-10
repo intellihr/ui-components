@@ -16,23 +16,13 @@ const { IntelliIcon } = require('./IntelliIcon');
   />
 ```
 
-#### Large Icon
+#### Extra large Icon
 
 ```jsx
 const { FontAwesomeIcon } = require('./FontAwesomeIcon');
   <FontAwesomeIcon
     type='star'
-    isLarge
-  />
-```
-
-#### 4x size Icon
-
-```jsx
-const { FontAwesomeIcon } = require('./FontAwesomeIcon');
-  <FontAwesomeIcon
-    type='star'
-    size={4}
+    size='xlarge'
   />
 ```
 
@@ -66,7 +56,7 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
     type='star'
     color='rgb(204,204,0)'
     isSpinning
-    size={3}
+    size='large'
   />
 ```
 
@@ -79,7 +69,7 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
   <div>
     <FontAwesomeIcon
       type='inbox'
-      tSize='large'
+      size='large'
       badge={
         <Badge
           label={6}
@@ -93,7 +83,7 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
   <div>
     <FontAwesomeIcon
       type='inbox'
-      tSize='xlarge'
+      size='xlarge'
       badge={
         <Badge
           label={6}
@@ -107,7 +97,7 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
   <div>
     <FontAwesomeIcon
       type='inbox'
-      tSize='xxlarge'
+      size='xxlarge'
       badge={
         <Badge
           label={6}
@@ -130,7 +120,7 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
   <div>
     <FontAwesomeIcon
       type='inbox'
-      tSize='large'
+      size='large'
       badge={
         <Badge
           label={6}
@@ -145,7 +135,7 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
   <div>
     <FontAwesomeIcon
       type='inbox'
-      tSize='xlarge'
+      size='xlarge'
       badge={
         <Badge
           label={6}
@@ -160,7 +150,7 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
   <div>
     <FontAwesomeIcon
       type='inbox'
-      tSize='xxlarge'
+      size='xxlarge'
       badge={
         <Badge
           label={6}

@@ -1,32 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Icon /> should render a large icon 1`] = `
-.c0.icon-small {
-  bottom: 2px;
-  font-size: xx-small;
-  position: relative;
+.c0.fa {
+  font-size: 1.5rem;
 }
 
-<Icon
-  isLarge={true}
-  isSmall={false}
-  isSpinning={false}
-  isStacked={false}
-  type="circle"
->
-  <styled.i
-    aria-hidden={true}
-    className="icon fa circle fa-lg"
-  >
-    <i
-      aria-hidden={true}
-      className="icon fa circle fa-lg c0"
-    />
-  </styled.i>
-</Icon>
-`;
-
-exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
 .c0.icon-small {
   bottom: 2px;
   font-size: xx-small;
@@ -35,28 +13,93 @@ exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
 
 <Icon
   isLarge={false}
-  isSmall={false}
   isSpinning={false}
   isStacked={false}
+  size="large"
+  type="circle"
+>
+  <styled.i
+    aria-hidden={true}
+    className="icon fa circle"
+    size="large"
+  >
+    <i
+      aria-hidden={true}
+      className="icon fa circle c0"
+      size="large"
+    />
+  </styled.i>
+</Icon>
+`;
+
+exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
+.c0.fa {
+  font-size: 1rem;
+}
+
+.c0.icon-small {
+  bottom: 2px;
+  font-size: xx-small;
+  position: relative;
+}
+
+<Icon
+  isLarge={false}
+  isSpinning={false}
+  isStacked={false}
+  size="medium"
   type="intelli-icon-avatar"
 >
   <styled.i
     aria-hidden={true}
     className="icon fa intelli-icon-avatar"
+    size="medium"
   >
     <i
       aria-hidden={true}
       className="icon fa intelli-icon-avatar c0"
+      size="medium"
     />
   </styled.i>
 </Icon>
 `;
 
 exports[`<Icon /> should render an icon with a badge 1`] = `
+.c1 {
+  position: absolute;
+  margin-top: -9px;
+  margin-left: -15px;
+}
+
+.c0.fa {
+  font-size: 2rem;
+}
+
 .c0.icon-small {
   bottom: 2px;
   font-size: xx-small;
   position: relative;
+}
+
+.c2 {
+  background-color: #1A2B3C;
+  color: #1A293C;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 15px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.24);
+  border: 1px solid $neutral-base;
+  border-radius: 50%;
+  color: $neutral-text;
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+}
+
+.c2 .refresh-icon {
+  background-color: $main-background;
+  color: $primary-base;
 }
 
 <Icon
@@ -69,27 +112,61 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
     />
   }
   isLarge={false}
-  isSmall={false}
   isSpinning={false}
   isStacked={false}
-  size={3}
+  size="xlarge"
   type="fa-check"
 >
   <styled.i
     aria-hidden={true}
-    className="icon fa fa-check fa-3x"
+    className="icon fa fa-check"
+    size="xlarge"
   >
     <i
       aria-hidden={true}
-      className="icon fa fa-check fa-3x c0"
+      className="icon fa fa-check c0"
+      size="xlarge"
     />
   </styled.i>
+  <styled.span
+    size="xlarge"
+  >
+    <span
+      className="c1"
+      size="xlarge"
+    >
+      <Badge
+        backgroundColor="#1A2B3C"
+        color="#1A293C"
+        label={6}
+        size="medium"
+      >
+        <styled.span
+          backgroundColor="#1A2B3C"
+          color="#1A293C"
+          size="medium"
+        >
+          <span
+            className="c2"
+            color="#1A293C"
+            size="medium"
+          >
+            6
+          </span>
+        </styled.span>
+      </Badge>
+    </span>
+  </styled.span>
 </Icon>
 `;
 
 exports[`<Icon /> should render icon with colour 1`] = `
 .c0 {
   color: #1A2B3C;
+}
+
+.c0.fa {
+  font-size: 1rem;
 }
 
 .c0.icon-small {
@@ -101,26 +178,32 @@ exports[`<Icon /> should render icon with colour 1`] = `
 <Icon
   color="#1A2B3C"
   isLarge={false}
-  isSmall={false}
   isSpinning={false}
   isStacked={false}
+  size="medium"
   type="fa-check"
 >
   <styled.i
     aria-hidden={true}
     className="icon fa fa-check"
     color="#1A2B3C"
+    size="medium"
   >
     <i
       aria-hidden={true}
       className="icon fa fa-check c0"
       color="#1A2B3C"
+      size="medium"
     />
   </styled.i>
 </Icon>
 `;
 
 exports[`<Icon /> should render icon with no size or colour 1`] = `
+.c0.fa {
+  font-size: 1rem;
+}
+
 .c0.icon-small {
   bottom: 2px;
   font-size: xx-small;
@@ -129,50 +212,30 @@ exports[`<Icon /> should render icon with no size or colour 1`] = `
 
 <Icon
   isLarge={false}
-  isSmall={false}
   isSpinning={false}
   isStacked={false}
+  size="medium"
   type="fa-check"
 >
   <styled.i
     aria-hidden={true}
     className="icon fa fa-check"
+    size="medium"
   >
     <i
       aria-hidden={true}
       className="icon fa fa-check c0"
-    />
-  </styled.i>
-</Icon>
-`;
-
-exports[`<Icon /> should render icon with no stack or size if only isStacked is given 1`] = `
-.c0.icon-small {
-  bottom: 2px;
-  font-size: xx-small;
-  position: relative;
-}
-
-<Icon
-  isLarge={false}
-  isSmall={false}
-  isSpinning={false}
-  isStacked={true}
-  type="fa-check"
->
-  <styled.i
-    aria-hidden={true}
-    className="icon fa fa-check"
-  >
-    <i
-      aria-hidden={true}
-      className="icon fa fa-check c0"
+      size="medium"
     />
   </styled.i>
 </Icon>
 `;
 
 exports[`<Icon /> should render icon with size 1`] = `
+.c0.fa {
+  font-size: 1rem;
+}
+
 .c0.icon-small {
   bottom: 2px;
   font-size: xx-small;
@@ -181,46 +244,20 @@ exports[`<Icon /> should render icon with size 1`] = `
 
 <Icon
   isLarge={false}
-  isSmall={false}
   isSpinning={false}
   isStacked={false}
-  size={3}
+  size="medium"
   type="fa-check"
 >
   <styled.i
     aria-hidden={true}
-    className="icon fa fa-check fa-3x"
+    className="icon fa fa-check"
+    size="medium"
   >
     <i
       aria-hidden={true}
-      className="icon fa fa-check fa-3x c0"
-    />
-  </styled.i>
-</Icon>
-`;
-
-exports[`<Icon /> should render icon with stack and size 1`] = `
-.c0.icon-small {
-  bottom: 2px;
-  font-size: xx-small;
-  position: relative;
-}
-
-<Icon
-  isLarge={false}
-  isSmall={false}
-  isSpinning={false}
-  isStacked={true}
-  size={2}
-  type="fa-check"
->
-  <styled.i
-    aria-hidden={true}
-    className="icon fa fa-check fa-stack-2x"
-  >
-    <i
-      aria-hidden={true}
-      className="icon fa fa-check fa-stack-2x c0"
+      className="icon fa fa-check c0"
+      size="medium"
     />
   </styled.i>
 </Icon>

@@ -19,30 +19,7 @@ describe('<Icon />', () => {
     const wrapper = mount(
       <Icon
         type='fa-check'
-        size={3}
-      />
-    )
-
-    expect(wrapper).toMatchSnapshot()
-  })
-
-  it('should render icon with stack and size', () => {
-    const wrapper = mount(
-      <Icon
-        type='fa-check'
-        size={2}
-        isStacked
-      />
-    )
-
-    expect(wrapper).toMatchSnapshot()
-  })
-
-  it('should render icon with no stack or size if only isStacked is given', () => {
-    const wrapper = mount(
-      <Icon
-        type='fa-check'
-        isStacked
+        size='medium'
       />
     )
 
@@ -53,7 +30,7 @@ describe('<Icon />', () => {
     const wrapper = mount(
       <Icon
         type='circle'
-        isLarge
+        size='large'
       />
     )
 
@@ -85,7 +62,7 @@ describe('<Icon />', () => {
     const wrapper = mount(
       <Icon
         type='fa-check'
-        size={3}
+        size='xlarge'
         badge={
           <Badge
             label={6}

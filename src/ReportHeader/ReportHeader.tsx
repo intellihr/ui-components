@@ -13,18 +13,10 @@ import {
 
 const InfoIcon = () => (
   <IconBox>
-    <span className='fa-stack'>
-      <FontAwesomeIcon
-        type='info'
-        size={1}
-        isStacked
-      />
-      <FontAwesomeIcon
-        type='circle-thin'
-        size={2}
-        isStacked
-      />
-    </span>
+    <FontAwesomeIcon
+      type='info-circle'
+      size='large'
+    />
   </IconBox>
 )
 
