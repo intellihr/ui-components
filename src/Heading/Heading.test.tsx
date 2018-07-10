@@ -40,6 +40,39 @@ describe('<Heading />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
+  it(`should render a subtitle p element`, () => {
+    const wrapper = mount(
+      <Heading
+        isSubtitle
+      >
+        Hello I am a subtitle
+      </Heading>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it(`should render two inline h1 elements`, () => {
+    const wrapper = mount(
+      <React.Fragment>
+        <Heading
+          type='page'
+          isInline
+        >
+          Hello I am a h1
+        </Heading>
+        <Heading
+          type='page'
+          isInline
+        >
+          Hello I am a h1
+        </Heading>
+      </React.Fragment>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it(`should render a skeleton element if skeletonOptions are passed to the component`, () => {
     const wrapper = mount(
       <Heading

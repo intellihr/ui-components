@@ -19,6 +19,36 @@
   </Heading>
 </div>
 ```
+#### Subtitle Heading
+
+```jsx
+<div>
+  <Heading
+    isSubtitle={true}
+  >
+    Hello! I am a SUBTITLE HEADING!
+  </Heading>
+</div>
+```
+
+#### Inline Heading
+
+```jsx
+<div>
+  <Heading
+    type='page'
+    isInline={true}
+  >
+    Inline!
+  </Heading>
+  <Heading
+    type='section'
+    isInline={true}
+  >
+    Inline!
+  </Heading>
+</div>
+```
 
 #### Skeleton Heading
 

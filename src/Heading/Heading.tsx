@@ -5,12 +5,21 @@ import { withSkeleton, SkeletonComponentProps } from '../Skeleton'
 
 export interface HeadingProps {
   /** Specify the type of heading to use */
-  type: 'page' | 'section' | 'subsection'
+  type?: 'page' | 'section' | 'subsection'
   /** Custom class name to use */
   className?: string
+  /** If true, will display the heading inline */
+  isInline?: boolean
+  /** If true, will display the heading with the subtitle styling */
+  isSubtitle?: boolean
 }
 
 export class HeadingComponent extends React.PureComponent<HeadingProps> {
+  public static defaultProps: Partial<HeadingProps> = {
+    isInline: false,
+    isSubtitle: false
+  }
+
   get headingTag (): any {
     const {
       type
@@ -23,11 +32,15 @@ export class HeadingComponent extends React.PureComponent<HeadingProps> {
         return HeadingWrapper.withComponent('h2')
       case 'subsection':
         return HeadingWrapper.withComponent('h3')
+      default:
+        return HeadingWrapper.withComponent('p')
     }
   }
 
   public render (): JSX.Element {
     const {
+      isInline,
+      isSubtitle,
       children
     } = this.props
 
@@ -37,6 +50,8 @@ export class HeadingComponent extends React.PureComponent<HeadingProps> {
       <HeadingTag
         tag={this.headingTag}
         className={classNames('heading')}
+        isInline={isInline}
+        isSubtitle={isSubtitle}
       >
         {children}
       </HeadingTag>
