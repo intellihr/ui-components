@@ -35,11 +35,8 @@ export interface CommentProps {
   loggedInUser: {
     id: string
   },
+  /** an array of sectionProps from the DropdownMenu to render the submenu sections */
   actions?: sectionProps[],
-  /** Handler for the Comment Edit event */
-  handleEdit?: (event: React.SyntheticEvent<any>) => void,
-  /** Handler for the Comment Delete event */
-  handleDelete?: (event: React.SyntheticEvent<any>) => void,
   idx: number,
   alternatingColours?: boolean
 }
