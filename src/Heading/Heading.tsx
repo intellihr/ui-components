@@ -1,5 +1,4 @@
 import React from 'react'
-import classNames from 'classnames'
 import { HeadingWrapper } from './style'
 import { withSkeleton, SkeletonComponentProps } from '../Skeleton'
 
@@ -9,15 +8,12 @@ export interface HeadingProps {
   /** Custom class name to use */
   className?: string
   /** If true, will display the heading inline */
-  isInline?: boolean
-  /** If true, will display the heading with the subtitle styling */
-  isSubtitle?: boolean
+  inline?: boolean
 }
 
 export class HeadingComponent extends React.PureComponent<HeadingProps> {
   public static defaultProps: Partial<HeadingProps> = {
-    isInline: false,
-    isSubtitle: false
+    inline: false
   }
 
   get headingTag (): any {
@@ -32,15 +28,12 @@ export class HeadingComponent extends React.PureComponent<HeadingProps> {
         return HeadingWrapper.withComponent('h2')
       case 'subsection':
         return HeadingWrapper.withComponent('h3')
-      default:
-        return HeadingWrapper.withComponent('p')
     }
   }
 
   public render (): JSX.Element {
     const {
-      isInline,
-      isSubtitle,
+      inline,
       children
     } = this.props
 
@@ -49,9 +42,8 @@ export class HeadingComponent extends React.PureComponent<HeadingProps> {
     return (
       <HeadingTag
         tag={this.headingTag}
-        className={classNames('heading')}
-        isInline={isInline}
-        isSubtitle={isSubtitle}
+        className='heading'
+        inline={inline}
       >
         {children}
       </HeadingTag>

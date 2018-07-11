@@ -40,30 +40,12 @@ describe('<Heading />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a subtitle p element`, () => {
-    const wrapper = mount(
-      <Heading
-        isSubtitle
-      >
-        Hello I am a subtitle
-      </Heading>
-    )
-
-    expect(wrapper).toMatchSnapshot()
-  })
-
-  it(`should render two inline h1 elements`, () => {
+  it(`should render an inline h1 element`, () => {
     const wrapper = mount(
       <React.Fragment>
         <Heading
           type='page'
-          isInline
-        >
-          Hello I am a h1
-        </Heading>
-        <Heading
-          type='page'
-          isInline
+          inline
         >
           Hello I am a h1
         </Heading>
