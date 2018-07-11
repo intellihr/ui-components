@@ -6,8 +6,10 @@ import { StyledIcon, BadgeWrapper } from './style'
 export interface IIconProps {
   /** FontAwesome or alternate name of the icon to display */
   type: string
-  /** Multiplies icon size by this amount (max 5) */
+  /** Multiplies icon size by this amount */
   size?: 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge'
+  /** Custom sizes for icons */
+  customSize?: number
   /** Colour of the icon */
   color?: string
   /** Additional class name to pass to the icon */
@@ -16,8 +18,6 @@ export interface IIconProps {
   isSpinning?: boolean
   /** Badge to display on the icon */
   badge?: JSX.Element
-  /** Custom sizes for icons */
-  customSize?: number
 }
 
 export class Icon extends React.PureComponent<IIconProps> {

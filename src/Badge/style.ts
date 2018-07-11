@@ -19,24 +19,30 @@ const BadgeWrapper = styled.span`
     switch (props.size) {
       case 'small':
         return `
-          width: 20px;
-          height: 20px;
-          line-height: 20px;
-          font-size: 12px
+          &, .fa {
+            font-size: 12px;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+          }
         `
       case 'medium':
         return `
-          width: 24px;
-          height: 24px;
-          line-height: 24px;
-          font-size: 15px
+          &, .fa {
+            font-size: 15px;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+          }
         `
       case 'large':
         return `
-          width: 30px;
-          height: 30px;
-          line-height: 30px;
-          font-size: 21px
+          &, .fa {
+            font-size: 21px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+          }
         `
     }
   }}

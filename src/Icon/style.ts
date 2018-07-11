@@ -68,7 +68,7 @@ const StyledIcon = styled.i`
         `
       case 'large':
         return `
-          font-size: 1.5rem; // 24px
+          font-size: 1.3125rem; // 21px
         `
       case 'xlarge':
         return `

@@ -2,7 +2,7 @@
 
 exports[`<Icon /> should render a large icon 1`] = `
 .c0.fa {
-  font-size: 1.5rem;
+  font-size: 1.3125rem;
 }
 
 <Icon
@@ -62,10 +62,6 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
 .c2 {
   background-color: #1A2B3C;
   color: #1A293C;
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
-  font-size: 15px;
   box-shadow: 0 2px 2px rgba(0,0,0,0.24);
   border: 1px solid $neutral-base;
   border-radius: 50%;
@@ -73,6 +69,14 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
   display: inline-block;
   font-weight: 600;
   text-align: center;
+}
+
+.c2,
+.c2 .fa {
+  font-size: 15px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
 }
 
 .c2 .refresh-icon {
