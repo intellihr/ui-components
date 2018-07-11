@@ -15,10 +15,14 @@ export interface TextProps {
   isHeavy?: boolean
   /** If true, displays the text in a smaller font size */
   isSmall?: boolean
+  /** If true, displays the text in a larger font size */
+  isLarge?: boolean
   /** If true, will truncate overflowing text */
   isTruncated?: boolean
   /** If true, will display the text inline */
   isInline?: boolean
+  /** If true, displays the text with a gray colour */
+  isSubtle?: boolean
   /** Color of the text */
   color?: string
 }
@@ -36,8 +40,10 @@ export class TextComponent extends React.PureComponent<TextProps> {
       isHeavy,
       isUpper,
       isSmall,
+      isLarge,
       isTruncated,
       isInline,
+      isSubtle,
       color
     } = this.props
 
@@ -49,7 +55,9 @@ export class TextComponent extends React.PureComponent<TextProps> {
         isHeading={isHeading}
         isUpper={isUpper}
         isSmall={isSmall}
+        isLarge={isLarge}
         isTruncated={isTruncated}
+        isSubtle={isSubtle}
         className={className}
       >
         {children}

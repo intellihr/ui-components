@@ -70,6 +70,82 @@ exports[`<Text /> should render an element with heavy text 1`] = `
 </class_1>
 `;
 
+exports[`<Text /> should render an element with large text 1`] = `
+.c0 {
+  font-size: 1.125rem;
+}
+
+<class_1
+  isLarge={true}
+>
+  <Skeleton
+    className=""
+    isLarge={true}
+    skeletonOptions={
+      Object {
+        "shape": "line",
+        "showSkeleton": false,
+        "size": "large",
+      }
+    }
+  >
+    <TextComponent
+      isInline={true}
+      isLarge={true}
+    >
+      <styled.span
+        isInline={true}
+        isLarge={true}
+      >
+        <span
+          className="c0"
+        >
+          Hello, world!
+        </span>
+      </styled.span>
+    </TextComponent>
+  </Skeleton>
+</class_1>
+`;
+
+exports[`<Text /> should render an element with subtle text 1`] = `
+.c0 {
+  color: hsl(210,13.4%,47.2%);
+}
+
+<class_1
+  isSubtle={true}
+>
+  <Skeleton
+    className=""
+    isSubtle={true}
+    skeletonOptions={
+      Object {
+        "shape": "line",
+        "showSkeleton": false,
+        "size": "large",
+      }
+    }
+  >
+    <TextComponent
+      isInline={true}
+      isSubtle={true}
+    >
+      <styled.span
+        isInline={true}
+        isSubtle={true}
+      >
+        <span
+          className="c0"
+        >
+          Hello, world!
+        </span>
+      </styled.span>
+    </TextComponent>
+  </Skeleton>
+</class_1>
+`;
+
 exports[`<Text /> should render an element with text 1`] = `
 <class_1>
   <Skeleton

@@ -28,6 +28,14 @@
   </Text>
 ```
 
+#### Subtle
+
+```jsx
+  <Text isSubtle>
+    Hello! I am text
+  </Text>
+```
+
 #### Upper
 
 ```jsx
@@ -44,14 +52,22 @@
   </Text>
 ```
 
+#### Large
+
+```jsx
+  <Text isLarge>
+    Hello! I am text
+  </Text>
+```
+
 #### Inline (false)
 
 ```jsx
 <div>
   <Text isInline={false}>
-    Hello! 
+    Hello!
   </Text>
-  <Text> 
+  <Text>
     I am text
   </Text>
 </div>
@@ -62,9 +78,9 @@
 ```jsx
 <div>
   <Text isInline={false} color='red'>
-    Hello! 
+    Hello!
   </Text>
-  <Text isSmall isHeavy isUpper> 
+  <Text isSmall isHeavy isUpper>
     I am text
   </Text>
 </div>
