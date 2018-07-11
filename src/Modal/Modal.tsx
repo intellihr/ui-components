@@ -1,11 +1,12 @@
 import React from 'react'
 import classNames from 'classnames'
 import { StyledReactModal } from './style'
+import { Size } from '../interfaces'
 
-enum Size {
-  Medium = 'fixed-medium-up',
-  Large = 'fixed-medium-up',
-  Xxlarge = 'fixed-xxlarge-up'
+enum ReactModalSize {
+  medium = 'fixed-medium-up',
+  large = 'fixed-large-up',
+  xxlarge = 'fixed-xxlarge-up'
 }
 
 interface IModalProps {
@@ -22,7 +23,7 @@ interface IModalProps {
   children?: JSX.Element
 
   /** Modal Size */
-  size?: Size.Medium | Size.Large | Size.Xxlarge
+  size?: Size.medium | Size.large | Size.xxlarge
 
   /** Show Close Button */
   showCloseButton?: boolean
@@ -34,7 +35,7 @@ interface IModalProps {
 class Modal extends React.PureComponent<IModalProps> {
   public static defaultProps: Partial<IModalProps> = {
     showCloseButton: true,
-    size: Size.Medium,
+    size: 'medium',
     modalZLevel: 0
   }
 
@@ -47,7 +48,8 @@ class Modal extends React.PureComponent<IModalProps> {
     } = this.props
 
     return classNames(
-      size,
+      'modal',
+      ReactModalSize[size!],
       className
     )
   }
@@ -89,7 +91,7 @@ class Modal extends React.PureComponent<IModalProps> {
         isOpen={isOpen}
         onRequestClose={handleClose}
         overlayClassName='modal-overlay'
-        className={classNames('modal', size || null, className)}
+        className={this.classNames}
         style={{
           overlay: {
             zIndex: overlayZIndex
@@ -107,7 +109,6 @@ class Modal extends React.PureComponent<IModalProps> {
 }
 
 export {
-  Size,
   IModalProps,
   Modal
 }

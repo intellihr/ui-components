@@ -52,3 +52,6 @@ export { withAnchor } from './Anchor'
 
 /** Helper Functions */
 export { getColor } from './Color'
+
+/** Common Interfaces */
+export * from './interfaces'

@@ -63,7 +63,8 @@ module.exports = {
           name: 'Buttons',
           components: [
             'src/Button/Button.tsx',
-            'src/Button/LinkButton.tsx'
+            'src/Button/LinkButton.tsx',
+            'src/Modal/ModalButton.tsx'
           ]
         },
         {

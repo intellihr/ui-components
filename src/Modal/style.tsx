@@ -2,7 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import ReactModal from 'react-modal'
 import { getColor } from '../Color'
-import { globalRadius } from '../sass/globals'
+
+const { radius } = require('../sass/globals.scss')
 
 interface IReactModalAdapter extends ReactModal.Props {
   className?: string
@@ -19,7 +20,7 @@ class ReactModalAdapter extends React.PureComponent<IReactModalAdapter> {
 
   public render (): JSX.Element {
     const {
-      className,
+      className
     } = this.props
 
     return (
@@ -34,8 +35,8 @@ class ReactModalAdapter extends React.PureComponent<IReactModalAdapter> {
 }
 
 const StyledReactModal = styled(ReactModalAdapter)`
-  &.modal-overlay {
-    background-color: rgba(${getColor('dark-base')}, 0.45);
+  .modal-overlay {
+    background-color: ${getColor('modal-overlay')};
 
     display: flex;
     flex-direction: column;
@@ -57,7 +58,7 @@ const StyledReactModal = styled(ReactModalAdapter)`
   .modal {
     background-color: ${getColor('main-background')};
     border: 1px solid ${getColor('border')};
-    border-radius: $global-radius;
+    border-radius: ${radius};
     flex-shrink: 0;
     height: auto;
     margin: auto;
