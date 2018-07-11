@@ -5,10 +5,12 @@ import {
   DropdownMenu,
   iSectionProps
 } from '../DropdownMenu'
-import { ActionMenuButtonToggleButton } from './style'
+import {
+  StyledComment,
+  ActionMenuButtonToggleButton
+} from './style'
 import { FontAwesomeIcon } from '../Icon'
 import { FormattedText } from '../FormattedText'
-const style = require('./style.scss')
 
 export interface CommentProps {
   /** Comment object to render */
@@ -100,11 +102,12 @@ export class Comment extends React.Component<CommentProps> {
     )
   }
 
-  get commenterName (): JSX.Element {
+  get commentTitle (): JSX.Element {
     const {
       comment: {
         personId,
-        personDisplayName
+        personDisplayName,
+        header
       },
       loggedInUser: {
         id: loggedInUserId
@@ -112,28 +115,13 @@ export class Comment extends React.Component<CommentProps> {
     } = this.props
 
     return (
-      <strong className='comment-header-person-name'>
-        {personId === loggedInUserId ? 'You' : personDisplayName}
-      </strong>
+      <div className='comment-header-person-name'>
+        <strong>
+          {personId === loggedInUserId ? 'You' : personDisplayName}
+        </strong>
+        {header}
+      </div>
     )
-  }
-
-  get commentHeaderElement (): JSX.Element | null {
-    const {
-      comment: {
-        header
-      }
-    } = this.props
-
-    if (header) {
-      return (
-        <div className='comment-header'>
-          {header}
-        </div>
-      )
-    }
-
-    return null
   }
 
   get commentHeader (): JSX.Element {
@@ -144,10 +132,9 @@ export class Comment extends React.Component<CommentProps> {
     return (
       <div className={classNames(
         'comment-header-container',
-        { 'with-header': !(!header) }
+        { 'with-status-update': !(!header) }
       )}>
-        {this.commenterName}
-        {this.commentHeaderElement}
+        {this.commentTitle}
 
         {this.commentDate}
 
@@ -177,8 +164,7 @@ export class Comment extends React.Component<CommentProps> {
   render (): JSX.Element {
     const {
       comment: {
-        id: commentId,
-        personId: commenterId
+        id: commentId
       },
       loggedInUser: {
         id: loggedInUserId
@@ -186,19 +172,16 @@ export class Comment extends React.Component<CommentProps> {
     } = this.props
 
     return (
-      <div id={commentId} className={classNames(style.Comment)}>
+      <StyledComment>
         {this.avatar}
         <div className={classNames(
           'comment-content-container',
-          {
-            target: this.targetCommentId === commentId,
-            'logged-in-user': commenterId === loggedInUserId
-          }
+          { target: this.targetCommentId === commentId }
         )}>
           {this.commentHeader}
           {this.commentContent}
         </div>
-      </div>
+      </StyledComment>
     )
   }
 }

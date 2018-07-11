@@ -1,6 +1,60 @@
-import React from 'react'
-import styled, { StyledComponentClass } from 'styled-components'
+import styled from 'styled-components'
 import { getColor } from '../Color'
+
+const StyledComment = styled.div`
+
+  display: flex;
+  flex-flow: row;
+  margin: 1.125rem 0;
+
+  >.comment-badge-container {
+    align-self: flex-start;
+    padding: .5rem;
+  }
+
+  >.comment-content-container {
+    align-self: stretch;
+    background-color: ${getColor('neutral-light')};
+    border-radius: .75rem;
+    flex-grow: 1;
+    padding: .85rem 1.2rem;
+
+    >.comment-header-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: baseline;
+
+      >.comment-header-date {
+        color: ${getColor('badge-background-dark')};
+        flex-grow: 1;
+        font-size: 80%;
+        margin-left: .4rem;
+
+        >* {
+          display: inline;
+          margin: 0 .225rem;
+        }
+      }
+
+      &.with-status-update {
+        >.comment-header {
+          flex-grow: 1;
+        }
+        >.comment-header-date {
+          width: 100%;
+          margin-left: -.15rem;
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    >.comment-content {
+      margin-top: .5rem;
+    }
+  }
+`
 
 const ActionMenuButtonToggleButton = styled.button`
   background-color: transparent;
@@ -26,5 +80,6 @@ const ActionMenuButtonToggleButton = styled.button`
 `
 
 export {
+  StyledComment,
   ActionMenuButtonToggleButton
 }
