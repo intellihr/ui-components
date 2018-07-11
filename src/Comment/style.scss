@@ -30,6 +30,7 @@
     >.comment-header-container {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       justify-content: flex-start;
       align-items: baseline;
 
@@ -45,7 +46,17 @@
 
       // This will select the 'as at date' or 'comment header' in case of the system comment
       >*:nth-child(2) {
-        flex-grow: 1;
+        &.comment-header,
+        &.comment-header-date {
+          flex-grow: 1;
+        }
+      }
+      // Placing the 'as at date' to a new line if `comment header` is present
+      >*:nth-child(3) {
+        &.comment-header-date {
+          width: 100%;
+          margin-left: -.15rem;
+        }
       }
     }
 

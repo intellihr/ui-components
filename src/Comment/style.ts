@@ -2,11 +2,11 @@ import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
 import { getColor } from '../Color'
 
-const DefaultDropdownButton = styled.button`
+const ActionMenuButtonToggleButton = styled.button`
   background-color: transparent;
-  color: #929fab;
+  color: ${getColor('badge-background-dark')};
   cursor: pointer;
-  padding: .2rem .3rem;
+  padding: .2rem;
   transition: background-color .25s ease-out, color .25s ease-out;
 
   &:hover,
@@ -25,13 +25,6 @@ const DefaultDropdownButton = styled.button`
   }
 `
 
-DefaultDropdownButton.defaultProps = {
-  theme: {
-    iconSize: '1.5rem',
-    buttonPadding: '.5rem .3rem'
-  }
-}
-
 export {
-  DefaultDropdownButton
+  ActionMenuButtonToggleButton
 }

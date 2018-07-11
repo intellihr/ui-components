@@ -75,23 +75,16 @@ $color-styles: (
           color: $alert-base;
 
           &:focus,
-          &:hover {
-            background-color: transparent;
-            border-color: transparent;
-            color: $alert-base;
+          &:hover,
+          &.hover {
+            background-color: $alert-base;
+            color: $alert-text;
+          }
 
-            &:focus,
-            &:hover,
-            &.hover {
-              background-color: $alert-base;
-              color: $alert-text;
-            }
-
-            &:active,
-            &.active {
-              background-color: $alert-active;
-              color: $alert-text;
-            }
+          &:active,
+          &.active {
+            background-color: $alert-active;
+            color: $alert-text;
           }
         }
       }

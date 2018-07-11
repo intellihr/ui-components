@@ -1,13 +1,11 @@
 import React from 'react'
 import classNames from 'classnames'
-import { isEmpty } from 'lodash'
 import { Avatar } from '../Avatar'
 import { DropdownMenu } from '../DropdownMenu'
-import { DefaultDropdownButton } from './style'
+import { ActionMenuButtonToggleButton } from './style'
 import { FontAwesomeIcon } from '../Icon/FontAwesomeIcon'
 import { FormattedText } from '../FormattedText'
 import { sectionProps } from '../DropdownMenu/DropdownMenu'
-import { Button } from '../Button'
 const style = require('./style.scss')
 
 export interface CommentProps {
@@ -74,9 +72,9 @@ export class Comment extends React.Component<CommentProps> {
     return (
       <DropdownMenu
         toggleComponent={
-          <DefaultDropdownButton>
+          <ActionMenuButtonToggleButton>
             <FontAwesomeIcon type='ellipsis-v' />
-          </DefaultDropdownButton>
+          </ActionMenuButtonToggleButton>
         }
         dropdownOverrides={{
           align: 'left'
@@ -120,16 +118,29 @@ export class Comment extends React.Component<CommentProps> {
     )
   }
 
-  get commentHeader (): JSX.Element {
+  get commentHeaderElement (): JSX.Element | null {
     const {
       comment: {
         header
       }
     } = this.props
+
+    if (header) {
+      return (
+        <div className='comment-header'>
+          {header}
+        </div>
+      )
+    }
+
+    return null
+  }
+
+  get commentHeader (): JSX.Element {
     return (
       <div className='comment-header-container'>
         {this.commenterName}
-        {header}
+        {this.commentHeaderElement}
 
         {this.commentDate}
 
