@@ -23,3 +23,22 @@ const { LinkButton } = require('../Button');
   Hello this is a Modal
 </ModalButton>
 ```
+
+#### Modify Button and Modal Props
+
+```jsx
+const { LinkButton } = require('../Button');
+
+<ModalButton
+  buttonContent='Click Me'
+  buttonProps={{
+    type: 'warning'
+  }}
+  modalProps={{
+    size: 'xxlarge'
+  }}
+>
+  Hello this is a Modal
+</ModalButton>
+```
+
