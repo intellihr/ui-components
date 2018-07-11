@@ -81,7 +81,7 @@ const { getColor } = require ('../Color');
     createdDateText: <span>1st Jan 2017</span>,
     personProfilePictureId: 'http://www.multiplemayhemmamma.com/wp-content/uploads/2013/03/home-alone-150x150.jpg',
     personId: 'lyanna',
-    header: <label style={{ marginLeft: '5px' }}>has <Text isHeavy color={getColor('success')}>approved</Text> Joshua Brady's qualification</label>
+    header: <span style={{ marginLeft: '5px' }}>has <Text isHeavy color={getColor('success')}>approved</Text> Joshua Brady's <Text isHeavy color={getColor('secondary')}>qualification</Text> with a <Text isHeavy color={getColor('alert')}>very long</Text> message to test how a long message would look.</span>
   }}
   loggedInUser={{
     id: 'sampleCommentPersonId'
