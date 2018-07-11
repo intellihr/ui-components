@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import ReactModal from 'react-modal'
 import { getColor } from '../Color'
+import { breakpoint } from '../Theme'
 
 const { radius } = require('../sass/globals.scss')
 
@@ -49,10 +50,10 @@ const StyledReactModal = styled(ReactModalAdapter)`
     right: 0;
     top: 0;
 
-    @include breakpoint(small down) {
+    ${breakpoint.down('small')`
       overflow-y: hidden;
       padding: 0;
-    }
+    `}
   }
 
   .modal {
@@ -67,7 +68,7 @@ const StyledReactModal = styled(ReactModalAdapter)`
     padding: 1.5rem;
     position: relative;
 
-    @include breakpoint(small down) {
+    ${breakpoint.down('small')`
       border: 0;
       border-radius: 0;
 
@@ -82,7 +83,7 @@ const StyledReactModal = styled(ReactModalAdapter)`
       margin: 0;
       min-height: 100vh;
       top: 0;
-    }
+    `}
 
     .modal-close-button {
       cursor: pointer;
@@ -95,50 +96,50 @@ const StyledReactModal = styled(ReactModalAdapter)`
       font-size: 2em;
       line-height: 1;
 
-      @include breakpoint(small down) {
+      ${breakpoint.down('small')`
         position: fixed;
         will-change: scroll-position;
-      }
+      `}
     }
 
     &.fixed-xxlarge-up {
       min-width: 1380px;
       width: 1380px;
 
-      @include breakpoint(xlarge down) {
+      ${breakpoint.down('xlarge')`
         min-width: 0;
         width: 90%;
-      }
+      `}
 
-      @include breakpoint(small only) {
+      ${breakpoint.only('small')`
         min-width: 0;
         width: 100%;
-      }
+      `}
     }
 
     &.fixed-large-up {
       min-width: 960px;
       width: 960px;
 
-      @include breakpoint(medium only) {
+      ${breakpoint.only('medium')`
         min-width: 0;
         width: 90%;
-      }
+      `}
 
-      @include breakpoint(small only) {
+      ${breakpoint.only('small')`
         min-width: 0;
         width: 100%;
-      }
+      `}
     }
 
     &.fixed-medium-up {
       min-width: 600px;
       width: 600px;
 
-      @include breakpoint(small only) {
+      ${breakpoint.only('small')`
         min-width: 0;
         width: 100%;
-      }
+      `}
     }
   }
 `

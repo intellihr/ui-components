@@ -2,4 +2,7 @@
 
 :export {
   radius: $global-radius;
+  @each $breakpoint-key, $breakpoint-value in $breakpoints {
+    breakpoint-#{$breakpoint-key}: $breakpoint-value
+  }
 }
