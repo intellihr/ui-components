@@ -6,7 +6,7 @@ import {
   iSectionProps
 } from '../DropdownMenu'
 import { ActionMenuButtonToggleButton } from './style'
-import { FontAwesomeIcon } from '../Icon/FontAwesomeIcon'
+import { FontAwesomeIcon } from '../Icon'
 import { FormattedText } from '../FormattedText'
 const style = require('./style.scss')
 
