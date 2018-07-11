@@ -28,6 +28,7 @@ module.exports = {
       components: [
         'src/Avatar/Avatar.tsx',
         'src/AvatarEntity/AvatarEntity.tsx',
+        'src/Badge/Badge.tsx',
         'src/Callout/Callout.tsx',
         'src/Comment/Comment.tsx',
         'src/DropdownMenu/DropdownMenu.tsx',
