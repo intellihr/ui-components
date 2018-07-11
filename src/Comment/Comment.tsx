@@ -1,11 +1,13 @@
 import React from 'react'
 import classNames from 'classnames'
 import { Avatar } from '../Avatar'
-import { DropdownMenu } from '../DropdownMenu'
+import {
+  DropdownMenu,
+  iSectionProps
+} from '../DropdownMenu'
 import { ActionMenuButtonToggleButton } from './style'
 import { FontAwesomeIcon } from '../Icon/FontAwesomeIcon'
 import { FormattedText } from '../FormattedText'
-import { sectionProps } from '../DropdownMenu/DropdownMenu'
 const style = require('./style.scss')
 
 export interface CommentProps {
@@ -34,7 +36,7 @@ export interface CommentProps {
     id: string
   },
   /** an array of sectionProps from the DropdownMenu to render the submenu sections */
-  actions?: sectionProps[],
+  actions?: iSectionProps[],
   idx: number,
   alternatingColours?: boolean
 }

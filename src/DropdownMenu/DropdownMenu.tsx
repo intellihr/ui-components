@@ -15,7 +15,7 @@ export interface CalloutState {
 export type dropdownMenuAlignments = 'left' | 'right' | 'center'
 export type sectionColors = 'alert' | 'success' | 'warning' | 'primary' | 'secondary' | 'neutral'
 
-export interface sectionProps {
+export interface iSectionProps {
   /** what text to show in a section */
   text?: string,
   /** a component that is shown to the left of the text */
@@ -64,7 +64,7 @@ export interface DropdownMenuProps {
   /** The parent component that opens the dropdown */
   toggleComponent?: JSX.Element,
   /** The sections to render */
-  sections: sectionProps[]
+  sections: iSectionProps[]
 }
 
 export class DropdownMenu extends React.PureComponent<DropdownMenuProps, CalloutState> {
@@ -100,7 +100,7 @@ export class DropdownMenu extends React.PureComponent<DropdownMenuProps, Callout
     )
   }
 
-  getComponent = (section: sectionProps) => {
+  getComponent = (section: iSectionProps) => {
     const {
       onClick,
       href
