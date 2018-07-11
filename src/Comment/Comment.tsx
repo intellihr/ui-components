@@ -36,9 +36,7 @@ export interface CommentProps {
     id: string
   },
   /** an array of sectionProps from the DropdownMenu to render the submenu sections */
-  actions?: iSectionProps[],
-  idx: number,
-  alternatingColours?: boolean
+  actions?: iSectionProps[]
 }
 
 export class Comment extends React.Component<CommentProps> {
@@ -139,8 +137,15 @@ export class Comment extends React.Component<CommentProps> {
   }
 
   get commentHeader (): JSX.Element {
+    const {
+      comment: { header }
+    } = this.props
+
     return (
-      <div className='comment-header-container'>
+      <div className={classNames(
+        'comment-header-container',
+        { 'with-header': !(!header) }
+      )}>
         {this.commenterName}
         {this.commentHeaderElement}
 
@@ -177,18 +182,15 @@ export class Comment extends React.Component<CommentProps> {
       },
       loggedInUser: {
         id: loggedInUserId
-      },
-      idx,
-      alternatingColours
+      }
     } = this.props
 
     return (
-      <div id={idx.toString()} className={classNames(style.Comment)}>
+      <div id={commentId} className={classNames(style.Comment)}>
         {this.avatar}
         <div className={classNames(
           'comment-content-container',
           {
-            secondary: alternatingColours && (idx % 2 === 1),
             target: this.targetCommentId === commentId,
             'logged-in-user': commenterId === loggedInUserId
           }

@@ -19,10 +19,6 @@
     flex-grow: 1;
     padding: .85rem 1.2rem;
 
-    &.secondary {
-      background-color: #fff8dc;
-    }
-
     &.logged-in-user {
       background-color: tint($secondary-base, 95%);
     }
@@ -35,6 +31,7 @@
       align-items: baseline;
 
       >.comment-header-date {
+        flex-grow: 1;
         font-size: 80%;
         margin-left: .4rem;
 
@@ -44,16 +41,11 @@
         }
       }
 
-      // This will select the 'as at date' or 'comment header' in case of the system comment
-      >*:nth-child(2) {
-        &.comment-header,
-        &.comment-header-date {
+      &.with-header {
+        >.comment-header {
           flex-grow: 1;
         }
-      }
-      // Placing the 'as at date' to a new line if `comment header` is present
-      >*:nth-child(3) {
-        &.comment-header-date {
+        >.comment-header-date {
           width: 100%;
           margin-left: -.15rem;
         }
