@@ -4,7 +4,7 @@ import { withSkeleton, SkeletonComponentProps } from '../Skeleton'
 
 export interface HeadingProps {
   /** Specify the type of heading to use */
-  type?: 'page' | 'section' | 'subsection'
+  type: 'page' | 'section' | 'subsection'
   /** Custom class name to use */
   className?: string
   /** If true, will display the heading inline */
