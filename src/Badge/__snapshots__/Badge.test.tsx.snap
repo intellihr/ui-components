@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Badge /> should render a large badge 1`] = `
+.c0 {
+  background-color: #1A2B3C;
+  color: #1A293C;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.24);
+  border: 1px solid $neutral-base;
+  border-radius: 50%;
+  color: $neutral-text;
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+}
+
+.c0,
+.c0 .fa {
+  font-size: 21px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.c0 .refresh-icon {
+  background-color: $main-background;
+  color: $primary-base;
+}
+
+<Badge
+  backgroundColor="#1A2B3C"
+  color="#1A293C"
+  label={6}
+  size="large"
+>
+  <styled.span
+    backgroundColor="#1A2B3C"
+    color="#1A293C"
+    size="large"
+  >
+    <span
+      className="c0"
+      color="#1A293C"
+      size="large"
+    >
+      6
+    </span>
+  </styled.span>
+</Badge>
+`;
+
+exports[`<Badge /> should render a small badge 1`] = `
+.c0 {
+  background-color: #1A2B3C;
+  color: #1A293C;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.24);
+  border: 1px solid $neutral-base;
+  border-radius: 50%;
+  color: $neutral-text;
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+}
+
+.c0,
+.c0 .fa {
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+}
+
+.c0 .refresh-icon {
+  background-color: $main-background;
+  color: $primary-base;
+}
+
+<Badge
+  backgroundColor="#1A2B3C"
+  color="#1A293C"
+  label={6}
+  size="small"
+>
+  <styled.span
+    backgroundColor="#1A2B3C"
+    color="#1A293C"
+    size="small"
+  >
+    <span
+      className="c0"
+      color="#1A293C"
+      size="small"
+    >
+      6
+    </span>
+  </styled.span>
+</Badge>
+`;
+
+exports[`<Badge /> should render a spinning badge 1`] = `
+.c1.fa {
+  font-size: 1rem;
+}
+
+.c0 {
+  background-color: #1A2B3C;
+  color: #1A293C;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.24);
+  border: 1px solid $neutral-base;
+  border-radius: 50%;
+  color: $neutral-text;
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+}
+
+.c0,
+.c0 .fa {
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+}
+
+.c0 .refresh-icon {
+  background-color: $main-background;
+  color: $primary-base;
+}
+
+<Badge
+  backgroundColor="#1A2B3C"
+  color="#1A293C"
+  label={6}
+  pending={true}
+  size="small"
+>
+  <styled.span
+    backgroundColor="#1A2B3C"
+    color="#1A293C"
+    size="small"
+  >
+    <span
+      className="c0"
+      color="#1A293C"
+      size="small"
+    >
+      <FontAwesomeIcon
+        className="refresh-icon"
+        isSpinning={true}
+        type="refresh"
+      >
+        <Icon
+          className="refresh-icon"
+          isSpinning={true}
+          size="medium"
+          type="fa-refresh"
+        >
+          <styled.i
+            aria-hidden={true}
+            className="refresh-icon icon fa fa-refresh fa-spin"
+            size="medium"
+          >
+            <i
+              aria-hidden={true}
+              className="refresh-icon icon fa fa-refresh fa-spin c1"
+              size="medium"
+            />
+          </styled.i>
+        </Icon>
+      </FontAwesomeIcon>
+    </span>
+  </styled.span>
+</Badge>
+`;

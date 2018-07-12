@@ -41,7 +41,7 @@ export class Toast extends React.PureComponent<ToastProps> {
     return (
       <IntelliIcon
         type={iconName}
-        size={1}
+        size='xsmall'
         className='toast-icon'
       />
     )
@@ -59,7 +59,7 @@ export class Toast extends React.PureComponent<ToastProps> {
       >
         <IntelliIcon
           type='cross-small'
-          size={1}
+          size='xsmall'
           className='toast-close'
         />
       </span>

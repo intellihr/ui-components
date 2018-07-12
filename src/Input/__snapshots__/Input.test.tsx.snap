@@ -30,10 +30,8 @@ exports[`<Input /> should render an input 1`] = `
 exports[`<Input /> should render an input with an icon 1`] = `
 <styled.div>
   <Icon
-    isLarge={false}
-    isSmall={false}
     isSpinning={false}
-    isStacked={false}
+    size="medium"
     type="fa-check"
   />
   <input

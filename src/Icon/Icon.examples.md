@@ -16,23 +16,13 @@ const { IntelliIcon } = require('./IntelliIcon');
   />
 ```
 
-#### Large Icon
+#### Extra large Icon
 
 ```jsx
 const { FontAwesomeIcon } = require('./FontAwesomeIcon');
   <FontAwesomeIcon
     type='star'
-    isLarge
-  />
-```
-
-#### 4x size Icon
-
-```jsx
-const { FontAwesomeIcon } = require('./FontAwesomeIcon');
-  <FontAwesomeIcon
-    type='star'
-    size={4}
+    size='xlarge'
   />
 ```
 
@@ -66,6 +56,111 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
     type='star'
     color='rgb(204,204,0)'
     isSpinning
-    size={3}
+    size='large'
   />
+```
+
+#### Icon with badge
+
+```jsx
+const { FontAwesomeIcon } = require('./FontAwesomeIcon');
+
+<div>
+  <div>
+    <FontAwesomeIcon
+      type='inbox'
+      size='large'
+      badge={
+        <Badge
+          label={6}
+          backgroundColor='rgb(71, 82, 93)'
+          color='white'
+        />
+      }
+    />
+  </div>
+  
+  <div>
+    <FontAwesomeIcon
+      type='inbox'
+      size='xlarge'
+      badge={
+        <Badge
+          label={6}
+          backgroundColor='rgb(71, 82, 93)'
+          color='white'
+        />
+      }
+    />
+  </div>
+  
+  <div>
+    <FontAwesomeIcon
+      type='inbox'
+      size='xxlarge'
+      badge={
+        <Badge
+          label={6}
+          backgroundColor='rgb(71, 82, 93)'
+          color='white'
+        />
+      }
+    />
+  </div>
+    
+</div>
+```
+
+#### Icon fetching
+
+```jsx
+const { FontAwesomeIcon } = require('./FontAwesomeIcon');
+
+<div>
+  <div>
+    <FontAwesomeIcon
+      type='inbox'
+      size='large'
+      badge={
+        <Badge
+          label={6}
+          backgroundColor='rgb(71, 82, 93)'
+          color='white'
+          pending
+        />
+      }
+    />
+  </div>
+  
+  <div>
+    <FontAwesomeIcon
+      type='inbox'
+      size='xlarge'
+      badge={
+        <Badge
+          label={6}
+          backgroundColor='rgb(71, 82, 93)'
+          color='white'
+          pending
+        />
+      }
+    />
+  </div>
+  
+  <div>
+    <FontAwesomeIcon
+      type='inbox'
+      size='xxlarge'
+      badge={
+        <Badge
+          label={6}
+          backgroundColor='rgb(71, 82, 93)'
+          color='white'
+          pending
+        />
+      }
+    />
+  </div>
+    
+</div>
 ```

@@ -1,7 +1,7 @@
 import React from 'react'
-import { Icon, IconProps } from './Icon'
+import { Icon, IIconProps } from './Icon'
 
-export class IntelliIcon extends React.PureComponent<IconProps> {
+export class IntelliIcon extends React.PureComponent<IIconProps> {
   public render (): JSX.Element {
     const {
       type

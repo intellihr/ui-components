@@ -1,62 +1,36 @@
 import React from 'react'
 import classNames from 'classnames'
-import { StyledIcon } from './style'
+import { includes } from 'lodash'
+import { StyledIcon, BadgeWrapper } from './style'
 
-export interface IconProps {
+export interface IIconProps {
   /** FontAwesome or alternate name of the icon to display */
   type: string
-  /** Multiplies icon size by this amount (max 5) */
-  size?: 1 | 2 | 3 | 4 | 5
-  /** Adds FontAwesome stacked class to icon */
-  isStacked?: boolean
-  /** Adds FontAwesome `fa-lg` class to icon */
-  isLarge?: boolean
-  /** Adds a class to reduce the font size of the icon */
-  isSmall?: boolean
+  /** Multiplies icon size by this amount */
+  size?: 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge'
+  /** Custom sizes for icons */
+  customSize?: number
   /** Colour of the icon */
   color?: string
   /** Additional class name to pass to the icon */
   className?: string
   /** Adds FontAwesome `fa-spin` class to icon */
   isSpinning?: boolean
+  /** Badge to display on the icon */
+  badge?: JSX.Element
 }
 
-export class Icon extends React.PureComponent<IconProps> {
-  public static defaultProps: Partial<IconProps> = {
-    isStacked: false,
-    isLarge: false,
-    isSmall: false,
-    isSpinning: false
-  }
-
-  get sizeClass (): string {
-    const {
-      size,
-      isStacked,
-      isLarge
-    } = this.props
-
-    if (isLarge) {
-      return `fa-lg`
-    }
-
-    if (size) {
-      if (isStacked) {
-        return `fa-stack-${size}x`
-      }
-
-      return `fa-${size}x`
-    }
-
-    return ''
+export class Icon extends React.PureComponent<IIconProps> {
+  public static defaultProps: Partial<IIconProps> = {
+    isSpinning: false,
+    size: 'medium'
   }
 
   get classNames (): string {
     const {
       className,
       type,
-      isSpinning,
-      isSmall
+      isSpinning
     } = this.props
 
     return classNames(
@@ -64,25 +38,62 @@ export class Icon extends React.PureComponent<IconProps> {
       'icon',
       'fa',
       type,
-      this.sizeClass,
       {
-        'fa-spin': isSpinning,
-        'icon-small': isSmall
+        'fa-spin': isSpinning
       }
     )
   }
 
+  get badgeSize (): string | undefined {
+    const {
+      size
+    } = this.props
+
+    const newBadgeSize: { [i: string]: string } = {
+      large: 'small',
+      xlarge: 'medium',
+      xxlarge: 'large'
+    }
+
+    return size && newBadgeSize[size]
+  }
+
+  get badge (): JSX.Element | undefined {
+    const {
+      badge,
+      size
+    } = this.props
+
+    if (badge && includes(['large', 'xlarge', 'xxlarge'], size)) {
+      return (
+        <BadgeWrapper
+          size={size}
+        >
+          {React.cloneElement(badge, { size: this.badgeSize })}
+        </BadgeWrapper>
+      )
+    }
+  }
+
   public render (): JSX.Element {
     const {
-      color
+      color,
+      customSize,
+      size
     } = this.props
 
     return (
-      <StyledIcon
-        className={this.classNames}
-        aria-hidden
-        color={color}
-      />
+      <React.Fragment>
+        <StyledIcon
+          className={this.classNames}
+          aria-hidden
+          color={color}
+          customSize={customSize}
+          size={size}
+        />
+
+        {this.badge}
+      </React.Fragment>
     )
   }
 }
