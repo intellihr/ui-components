@@ -47,7 +47,7 @@
 #### Small
 
 ```jsx
-  <Text small>
+  <Text size='small'>
     Hello! I am text
   </Text>
 ```
@@ -55,7 +55,7 @@
 #### Large
 
 ```jsx
-  <Text large>
+  <Text size='large'>
     Hello! I am text
   </Text>
 ```
@@ -80,7 +80,7 @@
   <Text inline={false} color='red'>
     Hello!
   </Text>
-  <Text small heavy upper>
+  <Text size='small' heavy upper>
     I am text
   </Text>
 </div>

@@ -6,8 +6,7 @@ export interface TextWrapperProps {
   inline?: boolean
   upper?: boolean
   heavy?: boolean
-  small?: boolean
-  large?: boolean
+  size?: 'small' | 'medium' |'large'
   truncated?: boolean
   subtle?: boolean
 }
@@ -27,14 +26,6 @@ export const TextWrapper = styled.span`
     text-transform: uppercase;
   `}
 
-  ${(props: TextWrapperProps) => props.small && css`
-    font-size: .8125rem;
-  `}
-
-  ${(props: TextWrapperProps) => props.large && css`
-    font-size: 1.125rem;
-  `}
-
   ${(props: TextWrapperProps) => props.truncated && css`
     white-space: nowrap;
     overflow: hidden;
@@ -48,4 +39,21 @@ export const TextWrapper = styled.span`
   ${(props: TextWrapperProps) => props.subtle && css`
     color: ${getColor('main-text-light')};
   `}
+
+  ${(props: TextWrapperProps) => {
+    switch (props.size) {
+      case 'small':
+        return `
+          font-size: .8125rem;
+        `
+      case 'medium':
+      return `
+        font-size: 1rem;
+      `
+      case 'large':
+        return `
+          font-size: 1.125rem;
+        `
+    }
+  }}
 `
