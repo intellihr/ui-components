@@ -2,6 +2,7 @@
 
 ```jsx
 const React = require('react')
+const { Size } = require('../')
 
 class ModalExample extends React.PureComponent {
   constructor () {
@@ -38,6 +39,7 @@ class ModalExample extends React.PureComponent {
         <Modal
           isOpen={isOpen}
           handleClose={this.handleClick}
+          size={Size.Medium}
         >
           <h1>Hello this is a Modal</h1>
         </Modal>
