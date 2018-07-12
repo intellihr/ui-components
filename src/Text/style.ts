@@ -3,11 +3,11 @@ import { getColor } from '../Color'
 
 export interface TextWrapperProps {
   color?: string | 'subtle'
-  inline?: boolean
-  upper?: boolean
+  isInline?: boolean
+  isUpper?: boolean
   weight?: 'normal' | 'heavy'
   size?: 'small' | 'medium' |'large'
-  truncated?: boolean
+  isTruncated?: boolean
 }
 
 export const TextWrapper = styled.span`
@@ -39,17 +39,17 @@ export const TextWrapper = styled.span`
     }
   }}
 
-  ${(props: TextWrapperProps) => props.upper && css`
+  ${(props: TextWrapperProps) => props.isUpper && css`
     text-transform: uppercase;
   `}
 
-  ${(props: TextWrapperProps) => props.truncated && css`
+  ${(props: TextWrapperProps) => props.isTruncated && css`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   `}
 
-  ${(props: TextWrapperProps) => !props.inline && css`
+  ${(props: TextWrapperProps) => !props.isInline && css`
     display: block;
   `}
 

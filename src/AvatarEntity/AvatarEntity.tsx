@@ -55,7 +55,7 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & AvatarProp
       isCompact
     } = this.props
 
-    return <Text inline={isCompact}>{primaryText}</Text>
+    return <Text isInline={isCompact}>{primaryText}</Text>
   }
 
   get secondaryText (): JSX.Element | null {
@@ -80,8 +80,8 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & AvatarProp
       >
         <Text
           size='small'
-          truncated
-          inline={isCompact}
+          isTruncated
+          isInline={isCompact}
         >
           {text}
         </Text>
@@ -102,8 +102,10 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & AvatarProp
     return (
       <TertiaryTextWrapper>
         <Text
-          inline={false}
-          truncated
+          size='small'
+          weight='heavy'
+          isInline={false}
+          isTruncated
         >
           {tertiaryText}
         </Text>

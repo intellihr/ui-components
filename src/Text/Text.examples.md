@@ -10,10 +10,10 @@
 
 ```jsx
   <div>
-    <Text inline={false} size='small'>
+    <Text isInline={false} size='small'>
       Small
     </Text>
-    <Text inline={false} size='medium'>
+    <Text isInline={false} size='medium'>
       Medium (default)
     </Text>
     <Text size='large'>
@@ -26,8 +26,8 @@
 
 ```jsx
   <div>
-    <Text inline={false} weight='normal'>
-      Normal
+    <Text isInline={false} weight='normal'>
+      Normal (default)
     </Text>
     <Text weight='heavy'>
       Heavy
@@ -39,7 +39,7 @@
 
 ```jsx
   <div>
-    <Text inline={false} color='subtle'>
+    <Text isInline={false} color='subtle'>
       Hello! I am the system color for 'subtle'
     </Text>
     <Text color='blue'>
@@ -51,7 +51,7 @@
 #### Upper
 
 ```jsx
-  <Text upper>
+  <Text isUpper>
     Hello! I am text
   </Text>
 ```
@@ -60,7 +60,7 @@
 
 ```jsx
 <div>
-  <Text inline={false}>
+  <Text isInline={false}>
     Hello!
   </Text>
   <Text>
@@ -73,10 +73,10 @@
 
 ```jsx
 <div>
-  <Text inline={false} color='red'>
+  <Text isInline={false} color='red'>
     Hello!
   </Text>
-  <Text size='small' weight='heavy' upper>
+  <Text size='small' weight='heavy' isUpper>
     I am text
   </Text>
 </div>
