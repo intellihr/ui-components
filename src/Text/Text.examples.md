@@ -6,18 +6,20 @@
   </Text>
 ```
 
-#### Skeleton Text
+#### Sizes
 
 ```jsx
-  <Text
-    skeletonOptions={{
-      showSkeleton: true,
-      shape: 'line',
-      width: 200
-    }}
-  >
-    Hello! I am text
-  </Text>
+  <div>
+    <Text inline={false} size='small'>
+      Small
+    </Text>
+    <Text inline={false} size='medium'>
+      Medium (default)
+    </Text>
+    <Text size='large'>
+      Large
+    </Text>
+  </div>
 ```
 
 #### Heavy
@@ -40,22 +42,6 @@
 
 ```jsx
   <Text upper>
-    Hello! I am text
-  </Text>
-```
-
-#### Small
-
-```jsx
-  <Text size='small'>
-    Hello! I am text
-  </Text>
-```
-
-#### Large
-
-```jsx
-  <Text size='large'>
     Hello! I am text
   </Text>
 ```
@@ -84,4 +70,18 @@
     I am text
   </Text>
 </div>
+```
+
+#### Skeleton Text
+
+```jsx
+  <Text
+    skeletonOptions={{
+      showSkeleton: true,
+      shape: 'line',
+      width: 200
+    }}
+  >
+    Hello! I am text
+  </Text>
 ```
