@@ -22,7 +22,7 @@ describe('<Text />', () => {
 
   it(`should render an element with subtle text`, () => {
     const wrapper = mount(
-      <Text subtle>Hello, world!</Text>
+      <Text color='subtle'>Hello, world!</Text>
     )
 
     expect(wrapper).toMatchSnapshot()
@@ -46,7 +46,7 @@ describe('<Text />', () => {
 
   it(`should render an element with the text converted to uppercase`, () => {
     const wrapper = mount(
-      <Text upper>Hello, world!</Text>
+      <Text isUpper>Hello, world!</Text>
     )
 
     expect(wrapper).toMatchSnapshot()
@@ -54,7 +54,7 @@ describe('<Text />', () => {
 
   it(`should render a non-inline text element`, () => {
     const wrapper = mount(
-      <Text inline={false}>Hello, world!</Text>
+      <Text isInline={false}>Hello, world!</Text>
     )
 
     expect(wrapper).toMatchSnapshot()
