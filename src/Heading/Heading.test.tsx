@@ -40,21 +40,6 @@ describe('<Heading />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render an inline h1 element`, () => {
-    const wrapper = mount(
-      <React.Fragment>
-        <Heading
-          type='page'
-          inline
-        >
-          Hello I am a h1
-        </Heading>
-      </React.Fragment>
-    )
-
-    expect(wrapper).toMatchSnapshot()
-  })
-
   it(`should render a skeleton element if skeletonOptions are passed to the component`, () => {
     const wrapper = mount(
       <Heading
