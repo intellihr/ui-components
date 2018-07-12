@@ -4,7 +4,6 @@ import { getColor } from '../Color'
 export interface TextWrapperProps {
   color?: string
   isInline?: boolean
-  isHeading?: boolean
   isUpper?: boolean
   isHeavy?: boolean
   isSmall?: boolean
@@ -14,18 +13,14 @@ export interface TextWrapperProps {
 }
 
 export const TextWrapper = styled.span`
+  font-family: 'Open Sans', Arial, sans-serif;
+
   ${(props: TextWrapperProps) => props.color && css`
     color: ${props.color};
   `}
 
   ${(props: TextWrapperProps) => props.isHeavy && css`
     font-weight: 600;
-  `}
-
-  ${(props: TextWrapperProps) => props.isHeading && css`
-    display: block;
-    font-weight: 600;
-    font-family: 'Open Sans', Arial, sans-serif;
   `}
 
   ${(props: TextWrapperProps) => props.isUpper && css`

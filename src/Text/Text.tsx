@@ -7,8 +7,6 @@ export interface TextProps {
   children: string
   /** Custom class name to use */
   className?: string
-  /** Specify if text is a heading */
-  isHeading?: boolean
   /** If true, displays the text in uppercase */
   isUpper?: boolean
   /** If true, displays the text with a heavy font weight */
@@ -36,7 +34,6 @@ export class TextComponent extends React.PureComponent<TextProps> {
     const {
       children,
       className,
-      isHeading,
       isHeavy,
       isUpper,
       isSmall,
@@ -52,7 +49,6 @@ export class TextComponent extends React.PureComponent<TextProps> {
         color={color}
         isInline={isInline}
         isHeavy={isHeavy}
-        isHeading={isHeading}
         isUpper={isUpper}
         isSmall={isSmall}
         isLarge={isLarge}
