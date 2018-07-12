@@ -8,52 +8,52 @@ export interface TextProps {
   /** Custom class name to use */
   className?: string
   /** If true, displays the text in uppercase */
-  isUpper?: boolean
+  upper?: boolean
   /** If true, displays the text with a heavy font weight */
-  isHeavy?: boolean
+  heavy?: boolean
   /** If true, displays the text in a smaller font size */
-  isSmall?: boolean
+  small?: boolean
   /** If true, displays the text in a larger font size */
-  isLarge?: boolean
+  large?: boolean
   /** If true, will truncate overflowing text */
-  isTruncated?: boolean
+  truncated?: boolean
   /** If true, will display the text inline */
-  isInline?: boolean
+  inline?: boolean
   /** If true, displays the text with a gray colour */
-  isSubtle?: boolean
+  subtle?: boolean
   /** Color of the text */
   color?: string
 }
 
 export class TextComponent extends React.PureComponent<TextProps> {
   public static defaultProps: Partial<TextProps> = {
-    isInline: true
+    inline: true
   }
 
   public render (): JSX.Element {
     const {
       children,
       className,
-      isHeavy,
-      isUpper,
-      isSmall,
-      isLarge,
-      isTruncated,
-      isInline,
-      isSubtle,
+      heavy,
+      upper,
+      small,
+      large,
+      truncated,
+      inline,
+      subtle,
       color
     } = this.props
 
     return (
       <TextWrapper
         color={color}
-        isInline={isInline}
-        isHeavy={isHeavy}
-        isUpper={isUpper}
-        isSmall={isSmall}
-        isLarge={isLarge}
-        isTruncated={isTruncated}
-        isSubtle={isSubtle}
+        inline={inline}
+        heavy={heavy}
+        upper={upper}
+        small={small}
+        large={large}
+        truncated={truncated}
+        subtle={subtle}
         className={className}
       >
         {children}

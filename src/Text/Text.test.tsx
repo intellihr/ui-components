@@ -14,7 +14,7 @@ describe('<Text />', () => {
 
   it(`should render an element with heavy text`, () => {
     const wrapper = mount(
-      <Text isHeavy>Hello, world!</Text>
+      <Text heavy>Hello, world!</Text>
     )
 
     expect(wrapper).toMatchSnapshot()
@@ -22,7 +22,7 @@ describe('<Text />', () => {
 
   it(`should render an element with subtle text`, () => {
     const wrapper = mount(
-      <Text isSubtle>Hello, world!</Text>
+      <Text subtle>Hello, world!</Text>
     )
 
     expect(wrapper).toMatchSnapshot()
@@ -30,7 +30,7 @@ describe('<Text />', () => {
 
   it(`should render an element with large text`, () => {
     const wrapper = mount(
-      <Text isLarge>Hello, world!</Text>
+      <Text large>Hello, world!</Text>
     )
 
     expect(wrapper).toMatchSnapshot()

@@ -23,7 +23,7 @@
 #### Heavy
 
 ```jsx
-  <Text isHeavy>
+  <Text heavy>
     Hello! I am text
   </Text>
 ```
@@ -31,7 +31,7 @@
 #### Subtle
 
 ```jsx
-  <Text isSubtle>
+  <Text subtle>
     Hello! I am text
   </Text>
 ```
@@ -39,7 +39,7 @@
 #### Upper
 
 ```jsx
-  <Text isUpper>
+  <Text upper>
     Hello! I am text
   </Text>
 ```
@@ -47,7 +47,7 @@
 #### Small
 
 ```jsx
-  <Text isSmall>
+  <Text small>
     Hello! I am text
   </Text>
 ```
@@ -55,7 +55,7 @@
 #### Large
 
 ```jsx
-  <Text isLarge>
+  <Text large>
     Hello! I am text
   </Text>
 ```
@@ -64,7 +64,7 @@
 
 ```jsx
 <div>
-  <Text isInline={false}>
+  <Text inline={false}>
     Hello!
   </Text>
   <Text>
@@ -77,10 +77,10 @@
 
 ```jsx
 <div>
-  <Text isInline={false} color='red'>
+  <Text inline={false} color='red'>
     Hello!
   </Text>
-  <Text isSmall isHeavy isUpper>
+  <Text small heavy upper>
     I am text
   </Text>
 </div>

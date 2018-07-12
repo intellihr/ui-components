@@ -3,13 +3,13 @@ import { getColor } from '../Color'
 
 export interface TextWrapperProps {
   color?: string
-  isInline?: boolean
-  isUpper?: boolean
-  isHeavy?: boolean
-  isSmall?: boolean
-  isLarge?: boolean
-  isTruncated?: boolean
-  isSubtle?: boolean
+  inline?: boolean
+  upper?: boolean
+  heavy?: boolean
+  small?: boolean
+  large?: boolean
+  truncated?: boolean
+  subtle?: boolean
 }
 
 export const TextWrapper = styled.span`
@@ -19,33 +19,33 @@ export const TextWrapper = styled.span`
     color: ${props.color};
   `}
 
-  ${(props: TextWrapperProps) => props.isHeavy && css`
+  ${(props: TextWrapperProps) => props.heavy && css`
     font-weight: 600;
   `}
 
-  ${(props: TextWrapperProps) => props.isUpper && css`
+  ${(props: TextWrapperProps) => props.upper && css`
     text-transform: uppercase;
   `}
 
-  ${(props: TextWrapperProps) => props.isSmall && css`
+  ${(props: TextWrapperProps) => props.small && css`
     font-size: .8125rem;
   `}
 
-  ${(props: TextWrapperProps) => props.isLarge && css`
+  ${(props: TextWrapperProps) => props.large && css`
     font-size: 1.125rem;
   `}
 
-  ${(props: TextWrapperProps) => props.isTruncated && css`
+  ${(props: TextWrapperProps) => props.truncated && css`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   `}
 
-  ${(props: TextWrapperProps) => !props.isInline && css`
+  ${(props: TextWrapperProps) => !props.inline && css`
     display: block;
   `}
 
-  ${(props: TextWrapperProps) => props.isSubtle && css`
+  ${(props: TextWrapperProps) => props.subtle && css`
     color: ${getColor('main-text-light')};
   `}
 `
