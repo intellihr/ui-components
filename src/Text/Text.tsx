@@ -7,35 +7,34 @@ export interface TextProps {
   children: string
   /** Custom class name to use */
   className?: string
-  /** Specify if text is a heading */
-  isHeading?: boolean
   /** If true, displays the text in uppercase */
   isUpper?: boolean
-  /** If true, displays the text with a heavy font weight */
-  isHeavy?: boolean
-  /** If true, displays the text in a smaller font size */
-  isSmall?: boolean
+  /** Specify the text font weight */
+  weight?: 'normal' | 'heavy'
+  /** Specify the size of text to use */
+  size?: 'small' | 'medium' | 'large'
   /** If true, will truncate overflowing text */
   isTruncated?: boolean
   /** If true, will display the text inline */
   isInline?: boolean
   /** Color of the text */
-  color?: string
+  color?: string | 'subtle'
 }
 
 export class TextComponent extends React.PureComponent<TextProps> {
   public static defaultProps: Partial<TextProps> = {
-    isInline: true
+    isInline: true,
+    size: 'medium',
+    weight: 'normal'
   }
 
   public render (): JSX.Element {
     const {
       children,
       className,
-      isHeading,
-      isHeavy,
+      weight,
       isUpper,
-      isSmall,
+      size,
       isTruncated,
       isInline,
       color
@@ -45,10 +44,9 @@ export class TextComponent extends React.PureComponent<TextProps> {
       <TextWrapper
         color={color}
         isInline={isInline}
-        isHeavy={isHeavy}
-        isHeading={isHeading}
+        weight={weight}
         isUpper={isUpper}
-        isSmall={isSmall}
+        size={size}
         isTruncated={isTruncated}
         className={className}
       >

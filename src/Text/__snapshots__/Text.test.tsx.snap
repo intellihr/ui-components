@@ -1,5 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Text /> should render a non-inline text element 1`] = `
+.c0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  color: undefined;
+  font-weight: 400;
+  display: block;
+  font-size: 1rem;
+}
+
+<class_1
+  isInline={false}
+>
+  <Skeleton
+    className=""
+    isInline={false}
+    skeletonOptions={
+      Object {
+        "shape": "line",
+        "showSkeleton": false,
+        "size": "large",
+      }
+    }
+  >
+    <TextComponent
+      isInline={false}
+      size="medium"
+      weight="normal"
+    >
+      <styled.span
+        isInline={false}
+        size="medium"
+        weight="normal"
+      >
+        <span
+          className="c0"
+          size="medium"
+        >
+          Hello, world!
+        </span>
+      </styled.span>
+    </TextComponent>
+  </Skeleton>
+</class_1>
+`;
+
 exports[`<Text /> should render a skeleton element if skeletonOptions are passed to the component 1`] = `
 <class_1
   skeletonOptions={
@@ -34,15 +79,62 @@ exports[`<Text /> should render a skeleton element if skeletonOptions are passed
 
 exports[`<Text /> should render an element with heavy text 1`] = `
 .c0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  color: undefined;
   font-weight: 600;
+  font-size: 1rem;
 }
 
 <class_1
-  isHeavy={true}
+  weight="heavy"
 >
   <Skeleton
     className=""
-    isHeavy={true}
+    skeletonOptions={
+      Object {
+        "shape": "line",
+        "showSkeleton": false,
+        "size": "large",
+      }
+    }
+    weight="heavy"
+  >
+    <TextComponent
+      isInline={true}
+      size="medium"
+      weight="heavy"
+    >
+      <styled.span
+        isInline={true}
+        size="medium"
+        weight="heavy"
+      >
+        <span
+          className="c0"
+          size="medium"
+        >
+          Hello, world!
+        </span>
+      </styled.span>
+    </TextComponent>
+  </Skeleton>
+</class_1>
+`;
+
+exports[`<Text /> should render an element with large text 1`] = `
+.c0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  color: undefined;
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+
+<class_1
+  size="large"
+>
+  <Skeleton
+    className=""
+    size="large"
     skeletonOptions={
       Object {
         "shape": "line",
@@ -52,15 +144,109 @@ exports[`<Text /> should render an element with heavy text 1`] = `
     }
   >
     <TextComponent
-      isHeavy={true}
       isInline={true}
+      size="large"
+      weight="normal"
     >
       <styled.span
-        isHeavy={true}
         isInline={true}
+        size="large"
+        weight="normal"
       >
         <span
           className="c0"
+          size="large"
+        >
+          Hello, world!
+        </span>
+      </styled.span>
+    </TextComponent>
+  </Skeleton>
+</class_1>
+`;
+
+exports[`<Text /> should render an element with small text 1`] = `
+.c0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  color: undefined;
+  font-weight: 400;
+  font-size: .8125rem;
+}
+
+<class_1
+  size="small"
+>
+  <Skeleton
+    className=""
+    size="small"
+    skeletonOptions={
+      Object {
+        "shape": "line",
+        "showSkeleton": false,
+        "size": "large",
+      }
+    }
+  >
+    <TextComponent
+      isInline={true}
+      size="small"
+      weight="normal"
+    >
+      <styled.span
+        isInline={true}
+        size="small"
+        weight="normal"
+      >
+        <span
+          className="c0"
+          size="small"
+        >
+          Hello, world!
+        </span>
+      </styled.span>
+    </TextComponent>
+  </Skeleton>
+</class_1>
+`;
+
+exports[`<Text /> should render an element with subtle text 1`] = `
+.c0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  color: hsl(210,13.4%,47.2%);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+<class_1
+  color="subtle"
+>
+  <Skeleton
+    className=""
+    color="subtle"
+    skeletonOptions={
+      Object {
+        "shape": "line",
+        "showSkeleton": false,
+        "size": "large",
+      }
+    }
+  >
+    <TextComponent
+      color="subtle"
+      isInline={true}
+      size="medium"
+      weight="normal"
+    >
+      <styled.span
+        color="subtle"
+        isInline={true}
+        size="medium"
+        weight="normal"
+      >
+        <span
+          className="c0"
+          color="subtle"
+          size="medium"
         >
           Hello, world!
         </span>
@@ -71,6 +257,13 @@ exports[`<Text /> should render an element with heavy text 1`] = `
 `;
 
 exports[`<Text /> should render an element with text 1`] = `
+.c0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  color: undefined;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
 <class_1>
   <Skeleton
     className=""
@@ -84,12 +277,64 @@ exports[`<Text /> should render an element with text 1`] = `
   >
     <TextComponent
       isInline={true}
+      size="medium"
+      weight="normal"
     >
       <styled.span
         isInline={true}
+        size="medium"
+        weight="normal"
       >
         <span
-          className=""
+          className="c0"
+          size="medium"
+        >
+          Hello, world!
+        </span>
+      </styled.span>
+    </TextComponent>
+  </Skeleton>
+</class_1>
+`;
+
+exports[`<Text /> should render an element with the text converted to uppercase 1`] = `
+.c0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  color: undefined;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+<class_1
+  isUpper={true}
+>
+  <Skeleton
+    className=""
+    isUpper={true}
+    skeletonOptions={
+      Object {
+        "shape": "line",
+        "showSkeleton": false,
+        "size": "large",
+      }
+    }
+  >
+    <TextComponent
+      isInline={true}
+      isUpper={true}
+      size="medium"
+      weight="normal"
+    >
+      <styled.span
+        isInline={true}
+        isUpper={true}
+        size="medium"
+        weight="normal"
+      >
+        <span
+          className="c0"
+          size="medium"
         >
           Hello, world!
         </span>

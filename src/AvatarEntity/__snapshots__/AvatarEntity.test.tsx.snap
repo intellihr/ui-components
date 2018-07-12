@@ -24,8 +24,8 @@ exports[`<AvatarEntity /> should render a avatar entity with lots of data 1`] = 
     >
       <class_1
         isInline={false}
-        isSmall={true}
         isTruncated={true}
+        size="small"
       >
         Guy Killer
       </class_1>
@@ -34,6 +34,8 @@ exports[`<AvatarEntity /> should render a avatar entity with lots of data 1`] = 
       <class_1
         isInline={false}
         isTruncated={true}
+        size="small"
+        weight="heavy"
       >
         In Cinemas 2019
       </class_1>
@@ -108,8 +110,8 @@ exports[`<AvatarEntity /> should render a compact avatar entity with lots of dat
     >
       <class_1
         isInline={true}
-        isSmall={true}
         isTruncated={true}
+        size="small"
       >
         (Guy Killer)
       </class_1>
