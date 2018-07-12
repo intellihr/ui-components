@@ -28,9 +28,33 @@ describe('<Text />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
+  it(`should render an element with small text`, () => {
+    const wrapper = mount(
+      <Text size='small'>Hello, world!</Text>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it(`should render an element with large text`, () => {
     const wrapper = mount(
-      <Text large>Hello, world!</Text>
+      <Text size='large'>Hello, world!</Text>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it(`should render an element with the text converted to uppercase`, () => {
+    const wrapper = mount(
+      <Text upper>Hello, world!</Text>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it(`should render a non-inline text element`, () => {
+    const wrapper = mount(
+      <Text inline={false}>Hello, world!</Text>
     )
 
     expect(wrapper).toMatchSnapshot()

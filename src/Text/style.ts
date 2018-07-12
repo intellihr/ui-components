@@ -47,9 +47,9 @@ export const TextWrapper = styled.span`
           font-size: .8125rem;
         `
       case 'medium':
-      return `
-        font-size: 1rem;
-      `
+        return `
+          font-size: 1rem;
+        `
       case 'large':
         return `
           font-size: 1.125rem;

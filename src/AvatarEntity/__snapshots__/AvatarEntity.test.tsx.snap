@@ -15,7 +15,7 @@ exports[`<AvatarEntity /> should render a avatar entity with lots of data 1`] = 
   </styled.div>
   <styled.div>
     <class_1
-      isInline={false}
+      inline={false}
     >
       John Wick
     </class_1>
@@ -23,17 +23,17 @@ exports[`<AvatarEntity /> should render a avatar entity with lots of data 1`] = 
       isCompact={false}
     >
       <class_1
-        isInline={false}
-        isSmall={true}
-        isTruncated={true}
+        inline={false}
+        size="small"
+        truncated={true}
       >
         Guy Killer
       </class_1>
     </styled.span>
     <styled.span>
       <class_1
-        isInline={false}
-        isTruncated={true}
+        inline={false}
+        truncated={true}
       >
         In Cinemas 2019
       </class_1>
@@ -55,7 +55,7 @@ exports[`<AvatarEntity /> should render a basic avatar entity 1`] = `
   </styled.div>
   <styled.div>
     <class_1
-      isInline={false}
+      inline={false}
     >
       John Wick
     </class_1>
@@ -76,7 +76,7 @@ exports[`<AvatarEntity /> should render a basic compact avatar entity 1`] = `
   </styled.div>
   <styled.div>
     <class_1
-      isInline={true}
+      inline={true}
     >
       John Wick
     </class_1>
@@ -99,7 +99,7 @@ exports[`<AvatarEntity /> should render a compact avatar entity with lots of dat
   </styled.div>
   <styled.div>
     <class_1
-      isInline={true}
+      inline={true}
     >
       John Wick
     </class_1>
@@ -107,9 +107,9 @@ exports[`<AvatarEntity /> should render a compact avatar entity with lots of dat
       isCompact={true}
     >
       <class_1
-        isInline={true}
-        isSmall={true}
-        isTruncated={true}
+        inline={true}
+        size="small"
+        truncated={true}
       >
         (Guy Killer)
       </class_1>
