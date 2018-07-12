@@ -14,7 +14,7 @@ describe('<Text />', () => {
 
   it(`should render an element with heavy text`, () => {
     const wrapper = mount(
-      <Text heavy>Hello, world!</Text>
+      <Text weight='heavy'>Hello, world!</Text>
     )
 
     expect(wrapper).toMatchSnapshot()

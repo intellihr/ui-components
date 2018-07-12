@@ -5,7 +5,7 @@ export interface TextWrapperProps {
   color?: string
   inline?: boolean
   upper?: boolean
-  heavy?: boolean
+  weight?: 'normal' | 'heavy'
   size?: 'small' | 'medium' |'large'
   truncated?: boolean
   subtle?: boolean
@@ -18,9 +18,18 @@ export const TextWrapper = styled.span`
     color: ${props.color};
   `}
 
-  ${(props: TextWrapperProps) => props.heavy && css`
-    font-weight: 600;
-  `}
+  ${(props: TextWrapperProps) => {
+    switch (props.weight) {
+      case 'normal':
+        return `
+          font-weight: 400;
+        `
+      case 'heavy':
+        return `
+          font-weight: 600;
+        `
+    }
+  }}
 
   ${(props: TextWrapperProps) => props.upper && css`
     text-transform: uppercase;

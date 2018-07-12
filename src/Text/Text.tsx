@@ -9,8 +9,8 @@ export interface TextProps {
   className?: string
   /** If true, displays the text in uppercase */
   upper?: boolean
-  /** If true, displays the text with a heavy font weight */
-  heavy?: boolean
+  /** Specify the text font weight */
+  weight?: 'normal' | 'heavy'
   /** Specify the size of text to use */
   size?: 'small' | 'medium' | 'large'
   /** If true, will truncate overflowing text */
@@ -26,14 +26,15 @@ export interface TextProps {
 export class TextComponent extends React.PureComponent<TextProps> {
   public static defaultProps: Partial<TextProps> = {
     inline: true,
-    size: 'medium'
+    size: 'medium',
+    weight: 'normal'
   }
 
   public render (): JSX.Element {
     const {
       children,
       className,
-      heavy,
+      weight,
       upper,
       size,
       truncated,
@@ -46,7 +47,7 @@ export class TextComponent extends React.PureComponent<TextProps> {
       <TextWrapper
         color={color}
         inline={inline}
-        heavy={heavy}
+        weight={weight}
         upper={upper}
         size={size}
         truncated={truncated}

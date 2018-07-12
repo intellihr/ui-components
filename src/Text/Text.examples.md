@@ -25,7 +25,7 @@
 #### Heavy
 
 ```jsx
-  <Text heavy>
+  <Text weight='heavy'>
     Hello! I am text
   </Text>
 ```
@@ -66,7 +66,7 @@
   <Text inline={false} color='red'>
     Hello!
   </Text>
-  <Text size='small' heavy upper>
+  <Text size='small' weight='heavy' upper>
     I am text
   </Text>
 </div>
