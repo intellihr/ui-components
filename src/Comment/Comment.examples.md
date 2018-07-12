@@ -13,7 +13,6 @@
   loggedInUser={{
     id: 'sampleLoggedUserId'
   }}
-  idx={1}
 />
 ```
 
@@ -33,7 +32,6 @@
   loggedInUser={{
     id: 'sampleCommentPersonId'
   }}
-  idx={1}
 />
 ```
 
@@ -63,7 +61,6 @@
   loggedInUser={{
     id: 'sampleCommentPersonId'
   }}
-  idx={1}
 />
 ```
 
@@ -86,6 +83,5 @@ const { getColor } = require ('../Color');
   loggedInUser={{
     id: 'sampleCommentPersonId'
   }}
-  idx={1}
 />
 ```

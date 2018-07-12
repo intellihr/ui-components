@@ -7,7 +7,7 @@ import {
 } from '../DropdownMenu'
 import {
   StyledComment,
-  ActionMenuButtonToggleButton
+  CommentActionMenuToggleButton
 } from './style'
 import { FontAwesomeIcon } from '../Icon'
 import { FormattedText } from '../FormattedText'
@@ -74,9 +74,9 @@ export class Comment extends React.Component<CommentProps> {
     return (
       <DropdownMenu
         toggleComponent={
-          <ActionMenuButtonToggleButton>
+          <CommentActionMenuToggleButton>
             <FontAwesomeIcon type='ellipsis-v' />
-          </ActionMenuButtonToggleButton>
+          </CommentActionMenuToggleButton>
         }
         dropdownOverrides={{
           align: 'left'
@@ -115,10 +115,10 @@ export class Comment extends React.Component<CommentProps> {
     } = this.props
 
     return (
-      <div className='comment-header-person-name'>
-        <strong>
+      <div className='comment-header'>
+        <span className='comment-header-person-name'>
           {personId === loggedInUserId ? 'You' : personDisplayName}
-        </strong>
+        </span>
         {header}
       </div>
     )
@@ -165,9 +165,6 @@ export class Comment extends React.Component<CommentProps> {
     const {
       comment: {
         id: commentId
-      },
-      loggedInUser: {
-        id: loggedInUserId
       }
     } = this.props
 
@@ -175,7 +172,7 @@ export class Comment extends React.Component<CommentProps> {
       <StyledComment>
         {this.avatar}
         <div className={classNames(
-          'comment-content-container',
+          'comment-container',
           { target: this.targetCommentId === commentId }
         )}>
           {this.commentHeader}

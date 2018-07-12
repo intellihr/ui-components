@@ -12,7 +12,7 @@ const StyledComment = styled.div`
     padding: .5rem;
   }
 
-  >.comment-content-container {
+  >.comment-container {
     align-self: stretch;
     background-color: ${getColor('neutral-light')};
     border-radius: .75rem;
@@ -25,6 +25,12 @@ const StyledComment = styled.div`
       flex-wrap: wrap;
       justify-content: flex-start;
       align-items: baseline;
+
+      >.comment-header{
+        >.comment-header-person-name {
+          font-weight: 600;
+        }
+      }
 
       >.comment-header-date {
         color: ${getColor('badge-background-dark')};
@@ -56,7 +62,7 @@ const StyledComment = styled.div`
   }
 `
 
-const ActionMenuButtonToggleButton = styled.button`
+const CommentActionMenuToggleButton = styled.button`
   background-color: transparent;
   color: ${getColor('badge-background-dark')};
   cursor: pointer;
@@ -81,5 +87,5 @@ const ActionMenuButtonToggleButton = styled.button`
 
 export {
   StyledComment,
-  ActionMenuButtonToggleButton
+  CommentActionMenuToggleButton
 }
