@@ -17,10 +17,8 @@ export interface TextProps {
   truncated?: boolean
   /** If true, will display the text inline */
   inline?: boolean
-  /** If true, displays the text with a gray colour */
-  subtle?: boolean
   /** Color of the text */
-  color?: string
+  color?: string | 'subtle'
 }
 
 export class TextComponent extends React.PureComponent<TextProps> {
@@ -39,7 +37,6 @@ export class TextComponent extends React.PureComponent<TextProps> {
       size,
       truncated,
       inline,
-      subtle,
       color
     } = this.props
 
@@ -51,7 +48,6 @@ export class TextComponent extends React.PureComponent<TextProps> {
         upper={upper}
         size={size}
         truncated={truncated}
-        subtle={subtle}
         className={className}
       >
         {children}

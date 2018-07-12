@@ -2,21 +2,29 @@ import styled, { css } from 'styled-components'
 import { getColor } from '../Color'
 
 export interface TextWrapperProps {
-  color?: string
+  color?: string | 'subtle'
   inline?: boolean
   upper?: boolean
   weight?: 'normal' | 'heavy'
   size?: 'small' | 'medium' |'large'
   truncated?: boolean
-  subtle?: boolean
 }
 
 export const TextWrapper = styled.span`
   font-family: 'Open Sans', Arial, sans-serif;
 
-  ${(props: TextWrapperProps) => props.color && css`
-    color: ${props.color};
-  `}
+  ${(props: TextWrapperProps) => {
+    switch (props.color) {
+      case 'subtle':
+        return `
+          color: ${getColor('main-text-light')};
+        `
+      default:
+        return `
+          color: ${props.color};
+        `
+    }
+  }}
 
   ${(props: TextWrapperProps) => {
     switch (props.weight) {
@@ -43,10 +51,6 @@ export const TextWrapper = styled.span`
 
   ${(props: TextWrapperProps) => !props.inline && css`
     display: block;
-  `}
-
-  ${(props: TextWrapperProps) => props.subtle && css`
-    color: ${getColor('main-text-light')};
   `}
 
   ${(props: TextWrapperProps) => {

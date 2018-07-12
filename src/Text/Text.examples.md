@@ -22,20 +22,30 @@
   </div>
 ```
 
-#### Heavy
+#### Weight
 
 ```jsx
-  <Text weight='heavy'>
-    Hello! I am text
-  </Text>
+  <div>
+    <Text inline={false} weight='normal'>
+      Normal
+    </Text>
+    <Text weight='heavy'>
+      Heavy
+    </Text>
+  </div>
 ```
 
-#### Subtle
+#### Color
 
 ```jsx
-  <Text subtle>
-    Hello! I am text
-  </Text>
+  <div>
+    <Text inline={false} color='subtle'>
+      Hello! I am the system color for 'subtle'
+    </Text>
+    <Text color='blue'>
+      Hello! I am blue text
+    </Text>
+  </div>
 ```
 
 #### Upper
