@@ -11,7 +11,7 @@
 #### Using Other Button
 
 ```jsx
-const { LinkButton } = require('../Button');
+const { LinkButton } = require('../Button')
 
 <ModalButton
   buttonComponent={LinkButton}
@@ -27,7 +27,8 @@ const { LinkButton } = require('../Button');
 #### Modify Button and Modal Props
 
 ```jsx
-const { LinkButton } = require('../Button');
+const { LinkButton } = require('../Button')
+const { Size } = require('../')
 
 <ModalButton
   buttonContent='Click Me'
@@ -35,7 +36,7 @@ const { LinkButton } = require('../Button');
     type: 'warning'
   }}
   modalProps={{
-    size: 'xxlarge'
+    size: Size.XXLarge
   }}
 >
   Hello this is a Modal

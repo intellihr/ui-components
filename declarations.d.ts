@@ -5,5 +5,5 @@ declare module 'foundation-sites'
 declare module 'react-styled-flexboxgrid'
 declare module 'react-string-replace'
 declare module 'react-dd-menu'
-declear module '@humblebee/styled-components-breakpoint'
+declare module '@humblebee/styled-components-breakpoint'
 declare let Foundation: any

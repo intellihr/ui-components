@@ -23,7 +23,7 @@ interface IModalProps {
   children?: JSX.Element
 
   /** Modal Size */
-  size?: Size.medium | Size.large | Size.xxlarge
+  size?: Size.Medium | Size.Large | Size.XXLarge
 
   /** Show Close Button */
   showCloseButton?: boolean
@@ -35,7 +35,7 @@ interface IModalProps {
 class Modal extends React.PureComponent<IModalProps> {
   public static defaultProps: Partial<IModalProps> = {
     showCloseButton: true,
-    size: 'medium',
+    size: Size.Medium,
     modalZLevel: 0
   }
 

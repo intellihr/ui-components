@@ -1,7 +1,7 @@
 #### Modal
 
 ```jsx
-const React = require('react');
+const React = require('react')
 
 class ModalExample extends React.PureComponent {
   constructor () {
