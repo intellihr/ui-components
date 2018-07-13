@@ -1,6 +1,13 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+export interface HeadingWrapperProps {
+  inline?: boolean
+}
 
 export const HeadingWrapper = styled.h1`
-  display: block;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
+
+  ${(props: HeadingWrapperProps) => props.inline && css`
+    display: inline-block;
+  `}
 `

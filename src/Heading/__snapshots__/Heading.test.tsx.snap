@@ -2,8 +2,7 @@
 
 exports[`<Heading /> should render a h1 element with type 'page' 1`] = `
 .c0 {
-  display: block;
-  font-family: 'Roboto',Arial,sans-serif;
+  font-family: 'Open Sans',Arial,sans-serif;
 }
 
 <class_1
@@ -21,10 +20,12 @@ exports[`<Heading /> should render a h1 element with type 'page' 1`] = `
     type="page"
   >
     <HeadingComponent
+      inline={false}
       type="page"
     >
       <styled.h1
         className="heading"
+        inline={false}
         tag={[Function]}
       >
         <h1
@@ -40,8 +41,7 @@ exports[`<Heading /> should render a h1 element with type 'page' 1`] = `
 
 exports[`<Heading /> should render a h2 element with type 'section' 1`] = `
 .c0 {
-  display: block;
-  font-family: 'Roboto',Arial,sans-serif;
+  font-family: 'Open Sans',Arial,sans-serif;
 }
 
 <class_1
@@ -59,10 +59,12 @@ exports[`<Heading /> should render a h2 element with type 'section' 1`] = `
     type="section"
   >
     <HeadingComponent
+      inline={false}
       type="section"
     >
       <styled.h2
         className="heading"
+        inline={false}
         tag={[Function]}
       >
         <h2
@@ -78,8 +80,7 @@ exports[`<Heading /> should render a h2 element with type 'section' 1`] = `
 
 exports[`<Heading /> should render a h3 element with type 'subsection' 1`] = `
 .c0 {
-  display: block;
-  font-family: 'Roboto',Arial,sans-serif;
+  font-family: 'Open Sans',Arial,sans-serif;
 }
 
 <class_1
@@ -97,10 +98,12 @@ exports[`<Heading /> should render a h3 element with type 'subsection' 1`] = `
     type="subsection"
   >
     <HeadingComponent
+      inline={false}
       type="subsection"
     >
       <styled.h3
         className="heading"
+        inline={false}
         tag={[Function]}
       >
         <h3
@@ -116,8 +119,7 @@ exports[`<Heading /> should render a h3 element with type 'subsection' 1`] = `
 
 exports[`<Heading /> should render a skeleton element if skeletonOptions are passed to the component 1`] = `
 .c0 {
-  display: block;
-  font-family: 'Roboto',Arial,sans-serif;
+  font-family: 'Open Sans',Arial,sans-serif;
 }
 
 <class_1
@@ -135,10 +137,12 @@ exports[`<Heading /> should render a skeleton element if skeletonOptions are pas
     type="page"
   >
     <HeadingComponent
+      inline={false}
       type="page"
     >
       <styled.h1
         className="heading"
+        inline={false}
         tag={[Function]}
       >
         <h1
