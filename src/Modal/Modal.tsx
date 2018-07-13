@@ -14,7 +14,7 @@ interface IModalProps {
   isOpen: boolean
 
   /** Callback to call on close; receives event */
-  handleClose(event: (MouseEvent | KeyboardEvent | React.MouseEvent<HTMLButtonElement>)): void
+  handleClose?: (event: (MouseEvent | KeyboardEvent | React.MouseEvent<HTMLButtonElement>)) => void
 
   /** Extra classes to apply */
   className?: string
