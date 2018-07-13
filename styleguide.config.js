@@ -35,6 +35,7 @@ module.exports = {
     {
       name: 'UI Components',
       components: [
+        'src/ActionList/ActionList.tsx',
         'src/Avatar/Avatar.tsx',
         'src/AvatarEntity/AvatarEntity.tsx',
         'src/Badge/Badge.tsx',
@@ -77,6 +78,12 @@ module.exports = {
             'src/Anchor/Anchor.tsx',
             'src/Link/ActionLink.tsx',
             'src/Link/TextLink.tsx'
+          ]
+        },
+        {
+          name: 'Lists',
+          components: [
+            'src/List/List.tsx'
           ]
         },
         {

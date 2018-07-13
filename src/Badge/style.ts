@@ -7,12 +7,10 @@ interface IBadgeWrapper {
 }
 
 const BadgeWrapper = styled.span`
+  color: lighten(yellow,80%);
+  
   ${(props: IBadgeWrapper) => props.backgroundColor && css`
     background-color: ${props.backgroundColor};  
-  `}
-  
-  ${(props: IBadgeWrapper) => props.color && css`
-    color: ${props.color};
   `}
   
   &, .fa {
