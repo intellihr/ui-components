@@ -20,6 +20,25 @@
 </div>
 ```
 
+#### Inline Heading
+
+```jsx
+<div>
+  <Heading
+    type='page'
+    inline={true}
+  >
+    Inline!
+  </Heading>
+  <Heading
+    type='section'
+    inline={true}
+  >
+    Inline!
+  </Heading>
+</div>
+```
+
 #### Skeleton Heading
 
 ```jsx
