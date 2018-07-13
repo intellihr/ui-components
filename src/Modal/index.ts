@@ -1,2 +1,2 @@
-export { Modal, IModalProps } from './Modal'
-export { ModalButton } from './ModalButton'
+export { Modal } from './Modal'
+export { ToggleModal } from './ToggleModal'

@@ -1,4 +1,4 @@
-#### Modal
+#### Simple Modal Implementation
 
 ```jsx
 const React = require('react')
@@ -30,12 +30,11 @@ class ModalExample extends React.PureComponent {
 
     return (
       <React.Fragment>
-        <button
-          type='button'
+        <div
           onClick={this.handleClick}
         >
           Click Me
-        </button>
+        </div>
         <Modal
           isOpen={isOpen}
           handleClose={this.handleClick}

@@ -127,14 +127,8 @@ exports[`<Modal /> should open a modal after click 1`] = `
   }
 }
 
-<ModalButton
-  buttonComponent={[Function]}
-  buttonContent="Click Me"
-  buttonProps={
-    Object {
-      "type": "primary",
-    }
-  }
+<ToggleModal
+  toggleComponent={[Function]}
 >
   <Button
     iconAlignment="left"
@@ -161,6 +155,7 @@ exports[`<Modal /> should open a modal after click 1`] = `
     modalZLevel={0}
     showCloseButton={true}
     size="medium"
+    toggleComponent={[Function]}
   >
     <Styled(ReactModalAdapter)
       ariaHideApp={false}
@@ -205,7 +200,7 @@ exports[`<Modal /> should open a modal after click 1`] = `
           onRequestClose={[Function]}
           overlayClassName="modal-overlay"
           parentSelector={[Function]}
-          portalClassName="modal fixed-medium-up sc-ifAKCX c0"
+          portalClassName="modal fixed-medium-up sc-bxivhb c0"
           shouldCloseOnEsc={true}
           shouldCloseOnOverlayClick={true}
           shouldFocusAfterRender={true}
@@ -256,7 +251,7 @@ exports[`<Modal /> should open a modal after click 1`] = `
             onRequestClose={[Function]}
             overlayClassName="modal-overlay"
             parentSelector={[Function]}
-            portalClassName="modal fixed-medium-up sc-ifAKCX c0"
+            portalClassName="modal fixed-medium-up sc-bxivhb c0"
             shouldCloseOnEsc={true}
             shouldCloseOnOverlayClick={true}
             shouldFocusAfterRender={true}
@@ -315,10 +310,10 @@ exports[`<Modal /> should open a modal after click 1`] = `
       </ReactModalAdapter>
     </Styled(ReactModalAdapter)>
   </Modal>
-</ModalButton>
+</ToggleModal>
 `;
 
-exports[`<Modal /> should render a modal button 1`] = `
+exports[`<Modal /> should render a modal with a button 1`] = `
 <React.Fragment>
   <Button
     iconAlignment="left"
@@ -333,6 +328,7 @@ exports[`<Modal /> should render a modal button 1`] = `
     modalZLevel={0}
     showCloseButton={true}
     size="medium"
+    toggleComponent={[Function]}
   >
     Hello this is a Modal
   </Modal>

@@ -49,7 +49,6 @@ module.exports = {
         'src/InputLabel/InputLabel.tsx',
         'src/Legend/Legend.tsx',
         'src/Menu/Menu.tsx',
-        'src/Modal/Modal.tsx',
         'src/Navigation/Navigation.tsx',
         'src/Pill/Pill.tsx',
         'src/Skeleton/Skeleton.tsx',
@@ -63,8 +62,7 @@ module.exports = {
           name: 'Buttons',
           components: [
             'src/Button/Button.tsx',
-            'src/Button/LinkButton.tsx',
-            'src/Modal/ModalButton.tsx'
+            'src/Button/LinkButton.tsx'
           ]
         },
         {
@@ -86,6 +84,13 @@ module.exports = {
           name: 'Lists',
           components: [
             'src/List/List.tsx'
+          ]
+        },
+        {
+          name: 'Modal',
+          components: [
+            'src/Modal/Modal.tsx',
+            'src/Modal/ToggleModal.tsx'
           ]
         },
         {
