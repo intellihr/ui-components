@@ -1,5 +1,5 @@
 import React from 'react'
-import { Defaults, DefaultsConsumer } from '../DefaultsContext'
+import { Defaults, DefaultsConsumer } from '../Defaults'
 import { BaseAnchor } from './BaseAnchor'
 
 export interface AnchorProps {

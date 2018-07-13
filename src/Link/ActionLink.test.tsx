@@ -2,10 +2,8 @@ import { mount } from 'enzyme'
 import React from 'react'
 
 import { ActionLink } from './ActionLink'
-import { DefaultsProvider } from '../DefaultsContext'
+import { DefaultsProvider } from '../Defaults'
 
-// Skipping until enzyme properly supports React 16.3
-// see https://github.com/airbnb/enzyme/pull/1513
 describe('<ActionLink />', () => {
   it(`should render an action link`, () => {
     const wrapper = mount(
