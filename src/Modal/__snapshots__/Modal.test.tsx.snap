@@ -130,7 +130,6 @@ exports[`<Modal /> should render a hidden modal 1`] = `
 <Modal
   isOpen={false}
   modalZLevel={0}
-  showCloseButton={true}
   size="medium"
 >
   <Styled(ReactModalAdapter)

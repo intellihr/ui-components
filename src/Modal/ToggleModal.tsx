@@ -7,7 +7,10 @@ interface IToggleArguments {
 }
 
 interface IToggleModalProps {
-  toggleComponent: (toggleArguments: IToggleArguments) => JSX.Element
+  /** A trigger component which opens or closes the modal */
+  trigger: (toggleArguments: IToggleArguments) => JSX.Element
+
+  /** The children inside the Modal component */
   children: JSX.Element
 }
 
@@ -26,19 +29,17 @@ class ToggleModal extends React.PureComponent<IToggleModalProps & IModalProps, I
     } = this.state
 
     const {
-      toggleComponent
+      trigger
     } = this.props
 
     return (
       <React.Fragment>
-        {toggleComponent({toggle: this.toggle})}
+        {trigger({toggle: this.toggle})}
         <Modal
           isOpen={isOpen}
           handleClose={this.toggle}
           {...this.props}
-        >
-          {this.props.children}
-        </Modal>
+        />
       </React.Fragment>
     )
   }

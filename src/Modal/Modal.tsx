@@ -25,16 +25,12 @@ interface IModalProps {
   /** Modal Size */
   size?: Size.Medium | Size.Large | Size.XXLarge
 
-  /** Show Close Button */
-  showCloseButton?: boolean
-
   /** The deep level */
   modalZLevel?: number
 }
 
 class Modal extends React.PureComponent<IModalProps> {
   public static defaultProps: Partial<IModalProps> = {
-    showCloseButton: true,
     size: Size.Medium,
     modalZLevel: 0
   }
@@ -56,11 +52,10 @@ class Modal extends React.PureComponent<IModalProps> {
 
   get closeButton (): JSX.Element | undefined {
     const {
-      handleClose,
-      showCloseButton
+      handleClose
     } = this.props
 
-    if (showCloseButton) {
+    if (handleClose) {
       return (
         <button
           className='modal-close-button'
@@ -73,7 +68,7 @@ class Modal extends React.PureComponent<IModalProps> {
     }
   }
 
-  render () {
+  render (): JSX.Element {
     const {
       children,
       className,

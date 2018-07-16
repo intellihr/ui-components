@@ -128,7 +128,7 @@ exports[`<Modal /> should open a modal after click 1`] = `
 }
 
 <ToggleModal
-  toggleComponent={[Function]}
+  trigger={[Function]}
 >
   <Button
     iconAlignment="left"
@@ -153,9 +153,8 @@ exports[`<Modal /> should open a modal after click 1`] = `
     handleClose={[Function]}
     isOpen={true}
     modalZLevel={0}
-    showCloseButton={true}
     size="medium"
-    toggleComponent={[Function]}
+    trigger={[Function]}
   >
     <Styled(ReactModalAdapter)
       ariaHideApp={false}
@@ -326,9 +325,8 @@ exports[`<Modal /> should render a modal with a button 1`] = `
     handleClose={[Function]}
     isOpen={false}
     modalZLevel={0}
-    showCloseButton={true}
     size="medium"
-    toggleComponent={[Function]}
+    trigger={[Function]}
   >
     Hello this is a Modal
   </Modal>

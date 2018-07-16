@@ -7,7 +7,7 @@ describe('<Modal />', () => {
   it('should render a modal with a button', () => {
     const wrapper = shallow(
       <ToggleModal
-        toggleComponent={({toggle}) => (
+        trigger={({toggle}) => (
           <Button
             type='primary'
             onClick={toggle}
@@ -26,7 +26,7 @@ describe('<Modal />', () => {
   it('should open a modal after click', () => {
     const wrapper = mount(
       <ToggleModal
-        toggleComponent={({toggle}) => (
+        trigger={({toggle}) => (
           <Button
             type='primary'
             onClick={toggle}
