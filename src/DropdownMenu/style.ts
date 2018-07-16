@@ -16,7 +16,7 @@ const DefaultDropdownButton = styled.button`
     color: ${getColor('main-text')};
     outline: none;
   }
-  
+
   .fa {
     font-size: 1.5rem;
     line-height: 1;
