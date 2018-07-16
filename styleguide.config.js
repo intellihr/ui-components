@@ -20,7 +20,16 @@ module.exports = {
   sections: [
     {
       name: 'Introduction',
-      content: './docs/introduction.md',
+      sections: [
+        {
+          name: 'About',
+          content: './docs/about.md'
+        },
+        {
+          name: 'Setting Defaults',
+          content: './src/Defaults/Defaults.examples.md'
+        }
+      ],
       components: 'src/style.tsx'
     },
     {
