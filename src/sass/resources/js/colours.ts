@@ -132,6 +132,7 @@ const systemColours = {
   foundationDarkGrey: w.intelliDarkGrey,
   foundationBlack: w.intelliCharcoal,
 
+  badgeBackgroundDark: darkenAbsolute(0.15)(w.intelliGrey1),
   badgeBackgroundLight: w.intelliGrey2,
 
   // Qualification compliance colours

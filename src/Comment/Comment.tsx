@@ -1,8 +1,16 @@
 import React from 'react'
 import classNames from 'classnames'
 import { Avatar } from '../Avatar'
+import {
+  DropdownMenu,
+  iSectionProps
+} from '../DropdownMenu'
+import {
+  StyledComment,
+  CommentActionMenuToggleButton
+} from './style'
+import { FontAwesomeIcon } from '../Icon'
 import { FormattedText } from '../FormattedText'
-const style = require('./style.scss')
 
 export interface CommentProps {
   /** Comment object to render */
@@ -28,9 +36,9 @@ export interface CommentProps {
   }
   loggedInUser: {
     id: string
-  }
-  idx: number
-  alternatingColours?: boolean
+  },
+  /** an array of sectionProps from the DropdownMenu to render the submenu sections */
+  actions?: iSectionProps[]
 }
 
 export class Comment extends React.Component<CommentProps> {
@@ -51,6 +59,33 @@ export class Comment extends React.Component<CommentProps> {
     )
   }
 
+  get commentActions (): JSX.Element | null {
+    const {
+      actions,
+      comment: {
+        header: commentHeader
+      }
+    } = this.props
+
+    if (commentHeader || !actions) {
+      return null
+    }
+
+    return (
+      <DropdownMenu
+        toggleComponent={
+          <CommentActionMenuToggleButton>
+            <FontAwesomeIcon type='ellipsis-v' />
+          </CommentActionMenuToggleButton>
+        }
+        dropdownOverrides={{
+          align: 'left'
+        }}
+        sections={actions}
+      />
+    )
+  }
+
   get commentDate (): JSX.Element {
     const {
       comment: {
@@ -67,11 +102,12 @@ export class Comment extends React.Component<CommentProps> {
     )
   }
 
-  get commenterName (): JSX.Element {
+  get commentTitle (): JSX.Element {
     const {
       comment: {
         personId,
-        personDisplayName
+        personDisplayName,
+        header
       },
       loggedInUser: {
         id: loggedInUserId
@@ -79,24 +115,30 @@ export class Comment extends React.Component<CommentProps> {
     } = this.props
 
     return (
-      <strong className='comment-header-person-name'>
-        {personId === loggedInUserId ? 'You' : personDisplayName}
-      </strong>
+      <div className='comment-header'>
+        <span className='comment-header-person-name'>
+          {personId === loggedInUserId ? 'You' : personDisplayName}
+        </span>
+        {header}
+      </div>
     )
   }
 
   get commentHeader (): JSX.Element {
     const {
-      comment: {
-        header
-      }
+      comment: { header }
     } = this.props
+
     return (
-      <div className='comment-header-container'>
-        {this.commenterName}
-        {header}
+      <div className={classNames(
+        'comment-header-container',
+        { 'with-status-update': !(!header) }
+      )}>
+        {this.commentTitle}
 
         {this.commentDate}
+
+        {this.commentActions}
       </div>
     )
   }
@@ -122,31 +164,21 @@ export class Comment extends React.Component<CommentProps> {
   render (): JSX.Element {
     const {
       comment: {
-        id: commentId,
-        personId: commenterId
-      },
-      loggedInUser: {
-        id: loggedInUserId
-      },
-      idx,
-      alternatingColours
+        id: commentId
+      }
     } = this.props
 
     return (
-      <div id={idx.toString()} className={classNames(style.Comment)}>
+      <StyledComment>
         {this.avatar}
         <div className={classNames(
-          'comment-content-container',
-          {
-            secondary: alternatingColours && (idx % 2 === 1),
-            target: this.targetCommentId === commentId,
-            'logged-in-user': commenterId === loggedInUserId
-          }
+          'comment-container',
+          { target: this.targetCommentId === commentId }
         )}>
           {this.commentHeader}
           {this.commentContent}
         </div>
-      </div>
+      </StyledComment>
     )
   }
 }

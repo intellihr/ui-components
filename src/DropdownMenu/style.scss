@@ -70,13 +70,21 @@ $color-styles: (
       &.alert-on-hover {
         a,
         button {
+          background-color: transparent;
+          border-color: transparent;
+          color: $alert-base;
+
+          &:focus,
           &:hover,
+          &.hover {
+            background-color: $alert-base;
+            color: $alert-text;
+          }
+
           &:active,
-          &:focus {
-            &,
-            span {
-              color: $alert-base;
-            }
+          &.active {
+            background-color: $alert-active;
+            color: $alert-text;
           }
         }
       }
@@ -197,4 +205,3 @@ $color-styles: (
     }
   }
 }
-
