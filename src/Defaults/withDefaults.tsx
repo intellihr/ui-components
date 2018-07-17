@@ -1,12 +1,12 @@
 import React from 'react'
-import { Subtract } from '../Typescript'
+import { Subtract } from 'utility-types'
 import { Defaults, DefaultsConsumer } from './Defaults'
 
 interface IWithDefaults {
   defaults: Defaults
 }
 
-const withDefaults = <P extends {}>(DefaultsAwareComponent: React.ComponentType<P & Partial<IWithDefaults>>) => (
+const withDefaults = <P extends IWithDefaults>(DefaultsAwareComponent: React.ComponentType<P>) => (
   class extends React.PureComponent<Subtract<P, IWithDefaults>> {
     public render (): JSX.Element {
       return (

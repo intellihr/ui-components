@@ -13,9 +13,7 @@ interface IWithStyledBreakpoints {
 
 const withStyledBreakpoints = <P extends IWithStyledBreakpoints>(StyledBreakpointsAwareComponent: React.ComponentType<P>) => (
   class extends React.PureComponent<P & Partial<IWithStyledBreakpoints>> {
-    /**
-     * defaults may be undefined if DefaultProvider is not used
-     */
+    // defaults may be undefined if DefaultProvider is not used
     public getBreakpoint (defaults: Defaults | undefined) {
       let breakpoints = fallbackDefaults.breakpoints
 

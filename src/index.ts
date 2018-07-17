@@ -54,7 +54,7 @@ export { withAnchor } from './Anchor'
 export { getColor } from './Color'
 
 /** Common Interfaces */
-export { Size } from './interfaces'
+export { Size } from './Interface'
 
 /** Styled Components */
 export { withStyledBreakpoints } from './Style'

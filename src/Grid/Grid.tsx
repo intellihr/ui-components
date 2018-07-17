@@ -14,9 +14,7 @@ interface IGridProps {
   breakpoints?: IBreakpoints
 }
 
-type IGridBaseProp = IGridProps & IWithDefaults
-
-class GridBase extends React.PureComponent<IGridBaseProp> {
+class GridBase extends React.PureComponent<IGridProps & IWithDefaults> {
   private pxToRem (px: number): number {
     return px * 0.0625
   }
@@ -74,7 +72,6 @@ const Grid = withDefaults(GridBase)
 
 export {
   IBreakpoints,
-  IGridBaseProp,
   IGridProps,
   Grid
 }
