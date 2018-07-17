@@ -1,28 +1,56 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
-import { Defaults, DefaultsConsumer } from '../Defaults'
+import { IWithDefaults, withDefaults, DefaultsConsumer } from '../Defaults'
 
-export interface IGridProps {
-  /** Breakpoints to use for the grid layout */
-  breakpoints?: {
-    xs: number,
-    sm: number,
-    md: number,
-    lg: number
-  }
+interface IBreakpoints {
+  xs: number
+  sm: number
+  md: number
+  lg: number
 }
 
-export class Grid extends React.PureComponent<IGridProps> {
-  public static defaultProps: IGridProps = {
-    breakpoints: {
-      xs: 0,
-      sm: 39.9375,
-      md: 63.9375,
-      lg: 74.9375
+interface IGridProps {
+    /** Breakpoints to use for the grid layout */
+  breakpoints?: IBreakpoints
+}
+
+type IGridBaseProp = IGridProps & IWithDefaults
+
+class GridBase extends React.PureComponent<IGridBaseProp> {
+  private pxToRem (px: number): number {
+    return px * 0.0625
+  }
+  /**
+   * Retrieve breakpoints in the following orders:
+   * 1. Breakpoints directly provided to the component
+   * 2. Breakpoints defined in the Default Provider
+   */
+  private get breakpoints () {
+    const {
+      breakpoints,
+      defaults: {
+        breakpoints: {
+          small,
+          medium,
+          large,
+          xlarge
+        }
+      }
+    } = this.props
+
+    if (breakpoints) {
+      return breakpoints
+    }
+
+    return {
+      xs: this.pxToRem(small),
+      sm: this.pxToRem(medium),
+      md: this.pxToRem(large),
+      lg: this.pxToRem(xlarge)
     }
   }
 
-  private gridComponent (defaultValues: Defaults) {
+  public render (): JSX.Element {
     const {
       children,
       breakpoints
@@ -32,7 +60,7 @@ export class Grid extends React.PureComponent<IGridProps> {
       <ThemeProvider
         theme={{
           flexboxgrid: {
-            breakpoints: defaultValues.breakpoints || breakpoints
+            breakpoints: this.breakpoints
           }
         }}
       >
@@ -40,12 +68,13 @@ export class Grid extends React.PureComponent<IGridProps> {
       </ThemeProvider>
     )
   }
+}
 
-  public render (): JSX.Element {
-    return (
-      <DefaultsConsumer>
-        {defaultValues => this.gridComponent(defaultValues)}
-      </DefaultsConsumer>
-    )
-  }
+const Grid = withDefaults(GridBase)
+
+export {
+  IBreakpoints,
+  IGridBaseProp,
+  IGridProps,
+  Grid
 }

@@ -206,7 +206,7 @@
   dependencies:
     loader-utils "^1.1.0"
 
-"@humblebee/styled-components-breakpoint@^2.1.3":
+"@humblebee/styled-components-breakpoint@2.1.3":
   version "2.1.3"
   resolved "https://registry.yarnpkg.com/@humblebee/styled-components-breakpoint/-/styled-components-breakpoint-2.1.3.tgz#2dfedfc021426109befb0778aaaadfec23c61488"
 
@@ -352,6 +352,12 @@
 "@types/react@*":
   version "16.3.14"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.3.14.tgz#f90ac6834de172e13ecca430dcb6814744225d36"
+  dependencies:
+    csstype "^2.2.0"
+
+"@types/react@^16.4.6":
+  version "16.4.6"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.4.6.tgz#5024957c6bcef4f02823accf5974faba2e54fada"
   dependencies:
     csstype "^2.2.0"
 
@@ -10774,6 +10780,10 @@ util@0.10.3, util@^0.10.3:
   resolved "https://registry.yarnpkg.com/util/-/util-0.10.3.tgz#7afb1afe50805246489e3db7fe0ed379336ac0f9"
   dependencies:
     inherits "2.0.1"
+
+utility-types@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/utility-types/-/utility-types-2.0.0.tgz#3c9fe26914a1c7b8aff690e8f941e76b091d3149"
 
 utils-merge@1.0.1:
   version "1.0.1"

@@ -16,9 +16,8 @@
     "styled-components": "^3.3.2"
   },
   "dependencies": {
-    "@humblebee/styled-components-breakpoint": "^2.1.3",
+    "@humblebee/styled-components-breakpoint": "2.1.3",
     "@intellihr/icons": "0.0.1",
-    "@types/react-modal": "^3.2.0",
     "better-react-spinkit": "2.0.4",
     "capitalize": "1.0.0",
     "chart.js": "2.7.2",
@@ -38,6 +37,7 @@
     "react-styled-flexboxgrid": "2.4.0",
     "react-table": "6.8.6",
     "react-tooltip": "3.6.1",
+    "utility-types": "2.0.0",
     "uuid": "3.2.1"
   },
   "devDependencies": {
@@ -54,8 +54,10 @@
     "@types/jest": "22.2.2",
     "@types/jquery": "3.3.1",
     "@types/lodash": "4.14.107",
+    "@types/react": "^16.4.6",
     "@types/react-chartjs-2": "2.5.7",
     "@types/react-dom": "16.0.4",
+    "@types/react-modal": "^3.2.0",
     "@types/react-select": "1.2.7",
     "@types/react-table": "6.7.11",
     "@types/react-test-renderer": "16.0.1",

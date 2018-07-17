@@ -1,8 +1,9 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { StyledFunction, StyledInterface, StyledComponentClass } from 'styled-components'
 import ReactModal from 'react-modal'
+import { flow } from 'lodash'
 import { getColor } from '../Color'
-import { breakpoint } from '../Theme'
+import { IWithStyledBreakpoints, withStyledBreakpoints } from '../Style'
 
 const { radius } = require('../sass/globals.scss')
 
@@ -11,11 +12,11 @@ interface IReactModalAdapter extends ReactModal.Props {
 }
 
 class ReactModalAdapter extends React.PureComponent<IReactModalAdapter> {
-  get contentClassName () {
+  get contentClassName (): string {
     return `${this.props.className}__content`
   }
 
-  get overlayClassName () {
+  get overlayClassName (): string {
     return `${this.props.className}__overlay`
   }
 
@@ -35,7 +36,12 @@ class ReactModalAdapter extends React.PureComponent<IReactModalAdapter> {
   }
 }
 
-const StyledReactModal = styled(ReactModalAdapter)`
+const styledReactModal: StyledFunction<ReactModal.Props & Partial<IWithStyledBreakpoints>> = flow([
+  styled(ReactModalAdapter),
+  withStyledBreakpoints
+]) as any
+
+const StyledReactModal = styledReactModal`
   .modal-overlay {
     background-color: ${getColor('modal-overlay')};
 
@@ -50,7 +56,7 @@ const StyledReactModal = styled(ReactModalAdapter)`
     right: 0;
     top: 0;
 
-    ${breakpoint.down('small')`
+    ${props => props.breakpoint!.down('small')`
       overflow-y: hidden;
       padding: 0;
     `}
@@ -68,7 +74,7 @@ const StyledReactModal = styled(ReactModalAdapter)`
     padding: 1.5rem;
     position: relative;
 
-    ${breakpoint.down('small')`
+    ${(props) => props.breakpoint!.down('small')`
       border: 0;
       border-radius: 0;
 
@@ -96,7 +102,7 @@ const StyledReactModal = styled(ReactModalAdapter)`
       font-size: 2em;
       line-height: 1;
 
-      ${breakpoint.down('small')`
+      ${(props) => props.breakpoint!.down('small')`
         position: fixed;
         will-change: scroll-position;
       `}
@@ -106,12 +112,12 @@ const StyledReactModal = styled(ReactModalAdapter)`
       min-width: 1380px;
       width: 1380px;
 
-      ${breakpoint.down('xlarge')`
+      ${(props) => props.breakpoint!.down('xlarge')`
         min-width: 0;
         width: 90%;
       `}
 
-      ${breakpoint.only('small')`
+      ${(props) => props.breakpoint!.only('small')`
         min-width: 0;
         width: 100%;
       `}
@@ -121,12 +127,12 @@ const StyledReactModal = styled(ReactModalAdapter)`
       min-width: 960px;
       width: 960px;
 
-      ${breakpoint.only('medium')`
+      ${(props) => props.breakpoint!.only('medium')`
         min-width: 0;
         width: 90%;
       `}
 
-      ${breakpoint.only('small')`
+      ${(props) => props.breakpoint!.only('small')`
         min-width: 0;
         width: 100%;
       `}
@@ -136,7 +142,7 @@ const StyledReactModal = styled(ReactModalAdapter)`
       min-width: 600px;
       width: 600px;
 
-      ${breakpoint.only('small')`
+      ${(props) => props.breakpoint!.only('small')`
         min-width: 0;
         width: 100%;
       `}

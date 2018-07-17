@@ -1,1 +1,2 @@
-export { Defaults, DefaultsConsumer, DefaultsProvider } from './Defaults'
+export { defaults, Defaults, DefaultsConsumer, DefaultsProvider } from './Defaults'
+export { IWithDefaults, withDefaults } from './withDefaults'

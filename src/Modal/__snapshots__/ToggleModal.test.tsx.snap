@@ -156,7 +156,7 @@ exports[`<Modal /> should open a modal after click 1`] = `
     size="medium"
     trigger={[Function]}
   >
-    <Styled(ReactModalAdapter)
+    <class_1
       ariaHideApp={false}
       className="modal fixed-medium-up"
       isOpen={true}
@@ -173,9 +173,28 @@ exports[`<Modal /> should open a modal after click 1`] = `
         }
       }
     >
-      <ReactModalAdapter
+      <Styled(ReactModalAdapter)
         ariaHideApp={false}
-        className="modal fixed-medium-up c0"
+        breakpoint={
+          Object {
+            "down": [Function],
+            "large": [Function],
+            "list": Array [
+              "small",
+              "medium",
+              "large",
+              "xlarge",
+              "xxlarge",
+            ],
+            "medium": [Function],
+            "only": [Function],
+            "small": [Function],
+            "up": [Function],
+            "xlarge": [Function],
+            "xxlarge": [Function],
+          }
+        }
+        className="modal fixed-medium-up"
         isOpen={true}
         onRequestClose={[Function]}
         overlayClassName="modal-overlay"
@@ -190,20 +209,31 @@ exports[`<Modal /> should open a modal after click 1`] = `
           }
         }
       >
-        <Modal
+        <ReactModalAdapter
           ariaHideApp={false}
-          bodyOpenClassName="ReactModal__Body--open"
+          breakpoint={
+            Object {
+              "down": [Function],
+              "large": [Function],
+              "list": Array [
+                "small",
+                "medium",
+                "large",
+                "xlarge",
+                "xxlarge",
+              ],
+              "medium": [Function],
+              "only": [Function],
+              "small": [Function],
+              "up": [Function],
+              "xlarge": [Function],
+              "xxlarge": [Function],
+            }
+          }
           className="modal fixed-medium-up c0"
-          closeTimeoutMS={0}
           isOpen={true}
           onRequestClose={[Function]}
           overlayClassName="modal-overlay"
-          parentSelector={[Function]}
-          portalClassName="modal fixed-medium-up sc-bxivhb c0"
-          shouldCloseOnEsc={true}
-          shouldCloseOnOverlayClick={true}
-          shouldFocusAfterRender={true}
-          shouldReturnFocusAfterClose={true}
           style={
             Object {
               "content": Object {
@@ -215,37 +245,30 @@ exports[`<Modal /> should open a modal after click 1`] = `
             }
           }
         >
-          <ModalPortal
+          <Modal
             ariaHideApp={false}
             bodyOpenClassName="ReactModal__Body--open"
-            className="modal fixed-medium-up c0"
-            closeTimeoutMS={0}
-            defaultStyles={
+            breakpoint={
               Object {
-                "content": Object {
-                  "WebkitOverflowScrolling": "touch",
-                  "background": "#fff",
-                  "border": "1px solid #ccc",
-                  "borderRadius": "4px",
-                  "bottom": "40px",
-                  "left": "40px",
-                  "outline": "none",
-                  "overflow": "auto",
-                  "padding": "20px",
-                  "position": "absolute",
-                  "right": "40px",
-                  "top": "40px",
-                },
-                "overlay": Object {
-                  "backgroundColor": "rgba(255, 255, 255, 0.75)",
-                  "bottom": 0,
-                  "left": 0,
-                  "position": "fixed",
-                  "right": 0,
-                  "top": 0,
-                },
+                "down": [Function],
+                "large": [Function],
+                "list": Array [
+                  "small",
+                  "medium",
+                  "large",
+                  "xlarge",
+                  "xxlarge",
+                ],
+                "medium": [Function],
+                "only": [Function],
+                "small": [Function],
+                "up": [Function],
+                "xlarge": [Function],
+                "xxlarge": [Function],
               }
             }
+            className="modal fixed-medium-up c0"
+            closeTimeoutMS={0}
             isOpen={true}
             onRequestClose={[Function]}
             overlayClassName="modal-overlay"
@@ -266,48 +289,119 @@ exports[`<Modal /> should open a modal after click 1`] = `
               }
             }
           >
-            <div
-              aria-modal="true"
-              className="ReactModal__Overlay ReactModal__Overlay--after-open modal-overlay"
-              onClick={[Function]}
-              onMouseDown={[Function]}
+            <ModalPortal
+              ariaHideApp={false}
+              bodyOpenClassName="ReactModal__Body--open"
+              breakpoint={
+                Object {
+                  "down": [Function],
+                  "large": [Function],
+                  "list": Array [
+                    "small",
+                    "medium",
+                    "large",
+                    "xlarge",
+                    "xxlarge",
+                  ],
+                  "medium": [Function],
+                  "only": [Function],
+                  "small": [Function],
+                  "up": [Function],
+                  "xlarge": [Function],
+                  "xxlarge": [Function],
+                }
+              }
+              className="modal fixed-medium-up c0"
+              closeTimeoutMS={0}
+              defaultStyles={
+                Object {
+                  "content": Object {
+                    "WebkitOverflowScrolling": "touch",
+                    "background": "#fff",
+                    "border": "1px solid #ccc",
+                    "borderRadius": "4px",
+                    "bottom": "40px",
+                    "left": "40px",
+                    "outline": "none",
+                    "overflow": "auto",
+                    "padding": "20px",
+                    "position": "absolute",
+                    "right": "40px",
+                    "top": "40px",
+                  },
+                  "overlay": Object {
+                    "backgroundColor": "rgba(255, 255, 255, 0.75)",
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "fixed",
+                    "right": 0,
+                    "top": 0,
+                  },
+                }
+              }
+              isOpen={true}
+              onRequestClose={[Function]}
+              overlayClassName="modal-overlay"
+              parentSelector={[Function]}
+              portalClassName="modal fixed-medium-up sc-bxivhb c0"
+              shouldCloseOnEsc={true}
+              shouldCloseOnOverlayClick={true}
+              shouldFocusAfterRender={true}
+              shouldReturnFocusAfterClose={true}
               style={
                 Object {
-                  "zIndex": 1010,
+                  "content": Object {
+                    "zIndex": 1011,
+                  },
+                  "overlay": Object {
+                    "zIndex": 1010,
+                  },
                 }
               }
             >
               <div
-                className="ReactModal__Content ReactModal__Content--after-open modal fixed-medium-up c0"
+                aria-modal="true"
+                className="ReactModal__Overlay ReactModal__Overlay--after-open modal-overlay"
                 onClick={[Function]}
-                onKeyDown={[Function]}
                 onMouseDown={[Function]}
-                onMouseUp={[Function]}
                 style={
                   Object {
-                    "zIndex": 1011,
+                    "zIndex": 1010,
                   }
                 }
-                tabIndex="-1"
               >
-                Hello this is a Modal
-                <button
-                  className="modal-close-button"
+                <div
+                  className="ReactModal__Content ReactModal__Content--after-open modal fixed-medium-up c0"
                   onClick={[Function]}
-                  type="button"
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseUp={[Function]}
+                  style={
+                    Object {
+                      "zIndex": 1011,
+                    }
+                  }
+                  tabIndex="-1"
                 >
-                  <span
-                    aria-hidden="true"
+                  Hello this is a Modal
+                  <button
+                    className="modal-close-button"
+                    onClick={[Function]}
+                    type="button"
                   >
-                    ×
-                  </span>
-                </button>
+                    <span
+                      aria-hidden="true"
+                    >
+                      ×
+                    </span>
+                  </button>
+                </div>
               </div>
-            </div>
-          </ModalPortal>
-        </Modal>
-      </ReactModalAdapter>
-    </Styled(ReactModalAdapter)>
+            </ModalPortal>
+          </Modal>
+        </ReactModalAdapter>
+      </Styled(ReactModalAdapter)>
+    </class_1>
   </Modal>
 </ToggleModal>
 `;

@@ -55,3 +55,6 @@ export { getColor } from './Color'
 
 /** Common Interfaces */
 export { Size } from './interfaces'
+
+/** Styled Components */
+export { withStyledBreakpoints } from './Style'
