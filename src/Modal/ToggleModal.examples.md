@@ -10,7 +10,7 @@ by yourself.
 const { Button } = require('../Button');
 
 <ToggleModal
-  toggleComponent={({toggle}) => (
+  trigger={({toggle}) => (
     <Button
       type='primary'
       onClick={toggle}
@@ -29,7 +29,7 @@ const { Button } = require('../Button');
 const { Anchor } = require('../Anchor');
 
 <ToggleModal
-  toggleComponent={({toggle}) => (
+  trigger={({toggle}) => (
     <Anchor
       href='#!/ToggleModal'
       onClick={toggle}

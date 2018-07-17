@@ -6,19 +6,16 @@ interface IToggleArguments {
   toggle: () => void
 }
 
-interface IToggleModalProps {
+interface IToggleModalProps extends IModalProps {
   /** A trigger component which opens or closes the modal */
   trigger: (toggleArguments: IToggleArguments) => JSX.Element
-
-  /** The children inside the Modal component */
-  children: JSX.Element
 }
 
 interface IToggleModalState {
   isOpen: boolean
 }
 
-class ToggleModal extends React.PureComponent<IToggleModalProps & IModalProps, IToggleModalState> {
+class ToggleModal extends React.PureComponent<IToggleModalProps, IToggleModalState> {
   public state = {
     isOpen: false
   }

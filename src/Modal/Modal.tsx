@@ -13,7 +13,10 @@ interface IModalProps {
   /** Show Modal */
   isOpen: boolean
 
-  /** Callback to call on close; receives event */
+  /**
+   * Show close button at the top right if handleClose is set.
+   * Callback to call on close; receives event
+   * */
   handleClose?: (event: (MouseEvent | KeyboardEvent | React.MouseEvent<HTMLButtonElement>)) => void
 
   /** Extra classes to apply */
