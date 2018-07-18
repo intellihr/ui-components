@@ -1,6 +1,6 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
-import { Defaults, DefaultsConsumer } from '../DefaultsContext'
+import { Defaults, DefaultsConsumer } from '../Defaults'
 
 export interface IGridProps {
   /** Breakpoints to use for the grid layout */

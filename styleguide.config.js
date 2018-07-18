@@ -20,12 +20,22 @@ module.exports = {
   sections: [
     {
       name: 'Introduction',
-      content: './docs/introduction.md',
+      sections: [
+        {
+          name: 'About',
+          content: './docs/about.md'
+        },
+        {
+          name: 'Setting Defaults',
+          content: './src/Defaults/Defaults.examples.md'
+        }
+      ],
       components: 'src/style.tsx'
     },
     {
       name: 'UI Components',
       components: [
+        'src/ActionList/ActionList.tsx',
         'src/Avatar/Avatar.tsx',
         'src/AvatarEntity/AvatarEntity.tsx',
         'src/Badge/Badge.tsx',
@@ -68,6 +78,12 @@ module.exports = {
             'src/Anchor/Anchor.tsx',
             'src/Link/ActionLink.tsx',
             'src/Link/TextLink.tsx'
+          ]
+        },
+        {
+          name: 'Lists',
+          components: [
+            'src/List/List.tsx'
           ]
         },
         {

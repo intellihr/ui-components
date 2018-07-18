@@ -1,6 +1,6 @@
 import React from 'react'
 
-export interface Defaults {
+interface Defaults {
   /** Anchor component used for clickable links */
   AnchorComponent?: any
   /** Breakpoints used for the grid layout */
@@ -15,5 +15,11 @@ export interface Defaults {
 const defaults: Defaults = {}
 const DefaultsContext: React.Context<Defaults> = React.createContext(defaults)
 
-export const DefaultsConsumer = DefaultsContext.Consumer
-export const DefaultsProvider = DefaultsContext.Provider
+const DefaultsConsumer = DefaultsContext.Consumer
+const DefaultsProvider = DefaultsContext.Provider
+
+export {
+  Defaults,
+  DefaultsConsumer,
+  DefaultsProvider
+}
