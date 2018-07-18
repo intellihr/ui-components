@@ -28,41 +28,6 @@ interface IActionList {
   actions?: IAction[]
 }
 
-const descriptionForAction = (action: IAction) => {
-  if (!action.description) {
-    return null
-  }
-
-  return (
-    <ActionDescriptionWrapper>
-      {action.description}
-    </ActionDescriptionWrapper>
-  )
-}
-
-const actionLinksForAction = (action: IAction) => {
-  if (!action.actionLinks) {
-    return null
-  }
-
-  const actionLinks = map(action.actionLinks, (actionLink, index) =>
-    <TextLink
-      key={`linktext-${index}`}
-      href={actionLink.linkUrl}
-      className='action-link'
-      useReactRouter={actionLink.useReactRouter || false}
-    >
-      {actionLink.linkText}
-    </TextLink>
-  )
-
-  return (
-    <ActionLinksWrapper>
-      {actionLinks}
-    </ActionLinksWrapper>
-  )
-}
-
 class ActionList extends React.PureComponent<IActionList> {
   public static defaultProps: Partial<IActionList> = {
     headerMessage: 'Actions you can take',
@@ -86,6 +51,41 @@ class ActionList extends React.PureComponent<IActionList> {
     return actionsCopy
   }
 
+  private descriptionForAction (action: IAction) {
+    if (!action.description) {
+      return null
+    }
+
+    return (
+      <ActionDescriptionWrapper>
+        {action.description}
+      </ActionDescriptionWrapper>
+    )
+  }
+
+  private actionLinksForAction (action: IAction) {
+    if (!action.actionLinks) {
+      return null
+    }
+
+    const actionLinks = map(action.actionLinks, (actionLink, index) =>
+      <TextLink
+        key={`linktext-${index}`}
+        href={actionLink.linkUrl}
+        className='action-link'
+        useReactRouter={actionLink.useReactRouter || false}
+      >
+        {actionLink.linkText}
+      </TextLink>
+    )
+
+    return (
+      <ActionLinksWrapper>
+        {actionLinks}
+      </ActionLinksWrapper>
+    )
+  }
+
   get actionsList (): JSX.Element {
     const actionsList = map(this.actions, (action, index) =>
       <div key={`action-${index}`}>
@@ -93,8 +93,8 @@ class ActionList extends React.PureComponent<IActionList> {
           {action.title}
         </ActionTitleWrapper>
 
-        {descriptionForAction(action)}
-        {actionLinksForAction(action)}
+        {this.descriptionForAction(action)}
+        {this.actionLinksForAction(action)}
       </div>
     )
 
