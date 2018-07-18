@@ -35,8 +35,10 @@ class ActionList extends React.PureComponent<IActionList> {
   }
 
   get actions (): IAction[] {
-    const { action } = this.props
-    const { actions } = this.props
+    const {
+      action,
+      actions
+    } = this.props
 
     let actionsCopy: IAction[] = []
 
@@ -51,26 +53,26 @@ class ActionList extends React.PureComponent<IActionList> {
     return actionsCopy
   }
 
-  private descriptionForAction (action: IAction) {
-    if (!action.description) {
+  private descriptionForAction (description?: string) {
+    if (!description) {
       return null
     }
 
     return (
       <ActionDescriptionWrapper>
-        {action.description}
+        {description}
       </ActionDescriptionWrapper>
     )
   }
 
-  private actionLinksForAction (action: IAction) {
-    if (!action.actionLinks) {
+  private actionLinksForAction (actionLinks?: IActionLink[]) {
+    if (!actionLinks) {
       return null
     }
 
-    const actionLinks = map(action.actionLinks, (actionLink, index) =>
+    const textLinkComponents = map(actionLinks, (actionLink, index) =>
       <TextLink
-        key={`linktext-${index}`}
+        key={`action-link-${index}`}
         href={actionLink.linkUrl}
         className='action-link'
         useReactRouter={actionLink.useReactRouter || false}
@@ -81,7 +83,7 @@ class ActionList extends React.PureComponent<IActionList> {
 
     return (
       <ActionLinksWrapper>
-        {actionLinks}
+        {textLinkComponents}
       </ActionLinksWrapper>
     )
   }
@@ -93,8 +95,8 @@ class ActionList extends React.PureComponent<IActionList> {
           {action.title}
         </ActionTitleWrapper>
 
-        {this.descriptionForAction(action)}
-        {this.actionLinksForAction(action)}
+        {this.descriptionForAction(action.description)}
+        {this.actionLinksForAction(action.actionLinks)}
       </div>
     )
 
