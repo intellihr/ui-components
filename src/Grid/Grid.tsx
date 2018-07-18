@@ -10,7 +10,7 @@ interface IBreakpoints {
 }
 
 interface IGridProps {
-    /** Breakpoints to use for the grid layout */
+  /** Breakpoints to use for the grid layout */
   breakpoints?: IBreakpoints
 }
 
@@ -18,6 +18,7 @@ class GridBase extends React.PureComponent<IGridProps & IWithDefaults> {
   private pxToRem (px: number): number {
     return px * 0.0625
   }
+
   /**
    * Retrieve breakpoints in the following orders:
    * 1. Breakpoints directly provided to the component
