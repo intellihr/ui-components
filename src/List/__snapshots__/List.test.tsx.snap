@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List /> should render an unordered list 1`] = `
+<ul>
+  <li
+    key=".0"
+  >
+    <span>
+      This
+    </span>
+  </li>
+  <li
+    key=".1"
+  >
+    <span>
+      Is
+    </span>
+  </li>
+  <li
+    key=".2"
+  >
+    <span>
+      A
+    </span>
+  </li>
+  <li
+    key=".3"
+  >
+    <span>
+      Test
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`<List /> should render an unordered list by default 1`] = `
+<ul>
+  <li
+    key=".0"
+  >
+    <span>
+      This
+    </span>
+  </li>
+  <li
+    key=".1"
+  >
+    <span>
+      Is
+    </span>
+  </li>
+  <li
+    key=".2"
+  >
+    <span>
+      A
+    </span>
+  </li>
+  <li
+    key=".3"
+  >
+    <span>
+      Test
+    </span>
+  </li>
+</ul>
+`;
