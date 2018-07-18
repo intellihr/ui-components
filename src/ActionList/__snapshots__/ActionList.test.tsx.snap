@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ActionList /> should render a simple action list with a header 1`] = `
+<div
+  className="action-list"
+>
+  <styled.div>
+    Test header message
+  </styled.div>
+  <styled.div>
+    <List
+      type="ordered"
+    >
+      <div
+        key="action-0"
+      >
+        <styled.div>
+          Contact our customer support
+        </styled.div>
+        <styled.div>
+          Test description
+        </styled.div>
+      </div>
+    </List>
+  </styled.div>
+</div>
+`;
+
+exports[`<ActionList /> should render a simple action list with a link 1`] = `
+<div
+  className="action-list"
+>
+  <styled.div>
+    Test header message
+  </styled.div>
+  <styled.div>
+    <List
+      type="ordered"
+    >
+      <div
+        key="action-0"
+      >
+        <styled.div>
+          Test Title
+        </styled.div>
+        <styled.div>
+          Test description
+        </styled.div>
+        <styled.div>
+          <WithAnchor
+            className="action-link"
+            href="/test-url"
+            key="action-link-0"
+            useReactRouter={false}
+          >
+            Test Link Text
+          </WithAnchor>
+        </styled.div>
+      </div>
+    </List>
+  </styled.div>
+</div>
+`;
+
+exports[`<ActionList /> should render a simple action list with a single action 1`] = `
+<div
+  className="action-list"
+>
+  <styled.div>
+    Actions you can take
+  </styled.div>
+  <styled.div>
+    <List
+      type="ordered"
+    >
+      <div
+        key="action-0"
+      >
+        <styled.div>
+          Contact our customer support
+        </styled.div>
+        <styled.div>
+          Test description
+        </styled.div>
+      </div>
+    </List>
+  </styled.div>
+</div>
+`;
+
+exports[`<ActionList /> should render a simple action list with multiple actions 1`] = `
+<div
+  className="action-list"
+>
+  <styled.div>
+    Actions you can take
+  </styled.div>
+  <styled.div>
+    <List
+      type="ordered"
+    >
+      <div
+        key="action-0"
+      >
+        <styled.div>
+          Test Title 1
+        </styled.div>
+      </div>
+      <div
+        key="action-1"
+      >
+        <styled.div>
+          Test Title 2
+        </styled.div>
+        <styled.div>
+          Test description
+        </styled.div>
+      </div>
+    </List>
+  </styled.div>
+</div>
+`;
