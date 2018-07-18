@@ -52,6 +52,27 @@ exports[`<MenuItem /> should render a menu item with active state 1`] = `
 </li>
 `;
 
+exports[`<MenuItem /> should render a menu item with loading state 1`] = `
+<li>
+  <styled.a
+    href="www.google.com"
+  >
+    <styled.span>
+      <IntelliIcon
+        type="clock"
+      />
+    </styled.span>
+    Test menu item
+    <styled.span>
+      <FontAwesomeIcon
+        isSpinning={true}
+        type="circle-o-notch"
+      />
+    </styled.span>
+  </styled.a>
+</li>
+`;
+
 exports[`<MenuItem /> should render a simple menu item 1`] = `
 <li>
   <styled.a>

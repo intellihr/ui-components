@@ -1,3 +1,5 @@
+#### Generic Menu
+
 ```jsx
 const { MenuItem } = require("./MenuItem");
 const { SubMenu } = require("./SubMenu");
@@ -54,5 +56,39 @@ const { FontAwesomeIcon } = require("../Icon");
       />
     </SubMenu>
   </MenuItem>
+</Menu>
+```
+
+#### Menu with loading menu item
+
+```jsx
+const { MenuItem } = require("./MenuItem");
+const { SubMenu } = require("./SubMenu");
+const { FontAwesomeIcon } = require("../Icon");
+
+<Menu
+  id='example-loading-menu'
+  isAccordion
+  className='ihr-nav'
+>
+  <MenuItem
+    label='Item 1'
+  > 
+    <SubMenu>
+      <MenuItem
+        url='#'
+        label='Item 1A'
+      />
+      <MenuItem
+        url='#'
+        label='Item 1A'
+      />
+    </SubMenu>
+  </MenuItem>
+  <MenuItem
+    isLoading={true}
+    url='#'
+    label='Item 2'
+  />
 </Menu>
 ```
