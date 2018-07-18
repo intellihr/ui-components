@@ -1,5 +1,6 @@
 import React, { Children } from 'react'
-import { MenuItemAnchor, StyledIcon } from './style'
+import { MenuItemAnchorWrapper, IconWrapper, LoadingIconWrapper } from './style'
+import { FontAwesomeIcon } from '../Icon'
 
 export interface MenuItemProps {
   /** HTML id to use for the menu */
@@ -8,6 +9,7 @@ export interface MenuItemProps {
   icon?: JSX.Element
   render?: (label: string, iconContent: JSX.Element | null, url?: string) => JSX.Element
   className?: string
+  isLoading?: boolean
 }
 
 export interface AnchorProps {
@@ -20,12 +22,29 @@ export class MenuItem extends React.PureComponent<MenuItemProps> {
 
     if (icon) {
       return (
-        <StyledIcon>
+        <IconWrapper>
           {icon}
-        </StyledIcon>
+        </IconWrapper>
       )
     }
     return null
+  }
+
+  get loadingIcon (): JSX.Element | undefined {
+    const {
+      isLoading
+    } = this.props
+
+    if (isLoading) {
+      return (
+        <LoadingIconWrapper>
+          <FontAwesomeIcon
+            type='circle-o-notch'
+            isSpinning
+          />
+        </LoadingIconWrapper>
+      )
+    }
   }
 
   get component () {
@@ -40,10 +59,11 @@ export class MenuItem extends React.PureComponent<MenuItemProps> {
     }
 
     return (
-      <MenuItemAnchor href={url}>
+      <MenuItemAnchorWrapper href={url}>
         {this.icon}
         {label}
-      </MenuItemAnchor>
+        {this.loadingIcon}
+      </MenuItemAnchorWrapper>
     )
   }
 
