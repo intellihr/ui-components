@@ -15,4 +15,18 @@ describe('<Tooltip />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it('should render a tooltip with a custom class name', () => {
+    const wrapper = shallow(
+      <Tooltip
+        message='Tooltip message'
+        id='test-tooltip'
+        className='test-classname'
+      >
+        <div>This div should have a tooltip</div>
+      </Tooltip>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })

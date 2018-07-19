@@ -14,6 +14,7 @@ export interface TooltipProps {
   onShow?: () => void,
   withIcon?: boolean,
   iconColour?: string
+  className?: string
 }
 
 export class Tooltip extends React.Component<TooltipProps> {
@@ -41,7 +42,8 @@ export class Tooltip extends React.Component<TooltipProps> {
       place,
       effect,
       onShow,
-      id
+      id,
+      className
     } = this.props
 
     const tooltipId = this.tooltipId
@@ -61,7 +63,12 @@ export class Tooltip extends React.Component<TooltipProps> {
     }
 
     return (
-      <span key={tooltipElementKey} data-tip data-for={tooltipId}>
+      <span
+        className={className}
+        key={tooltipElementKey}
+        data-tip
+        data-for={tooltipId}
+      >
         {tooltipElement}
 
         <ReactTooltip
