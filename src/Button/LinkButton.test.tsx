@@ -59,4 +59,20 @@ describe('<LinkButton />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it('should render a link button that does not use react router', () => {
+    const wrapper = shallow(
+      <LinkButton
+        id='test-link-button-icon'
+        icon={<FontAwesomeIcon type='star' />}
+        type='primary'
+        href='test'
+        useReactRouter={false}
+      >
+        Link Button with Icon
+      </LinkButton>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })
