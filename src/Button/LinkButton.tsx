@@ -1,9 +1,9 @@
 import React from 'react'
 import { buttonClass, IButtonProps } from './ButtonHelper'
-import { Anchor } from '../Anchor'
+import { Anchor, AnchorProps } from '../Anchor'
 import { BaseButton } from './BaseButton'
 
-export interface LinkButtonProps extends IButtonProps{
+export interface LinkButtonProps extends IButtonProps, AnchorProps {
   /** Weather the button is clickable or not */
   disabled?: boolean
   /** Destination url */

@@ -61,4 +61,17 @@ describe('<MenuItem />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it('should render a menu item with loading state', () => {
+    const wrapper = shallow(
+      <MenuItem
+        url='www.google.com'
+        label='Test menu item'
+        icon={<IntelliIcon type={'clock'} />}
+        isLoading
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })
