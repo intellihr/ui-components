@@ -1,3 +1,4 @@
+import React from 'react'
 import classNames from 'classnames'
 const style = require('./style.scss')
 
@@ -40,7 +41,7 @@ export interface IButtonProps extends IBaseButton {
   /** Disable the button or not */
   disabled?: boolean
   /** onClick event */
-  onClick?: (event: React.SyntheticEvent<any>) => void
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void
 }
 
 export function buttonClass (type: ButtonTypes, size?: ButtonSizes, className?: string, extras?: any): string {
