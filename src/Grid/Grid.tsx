@@ -1,6 +1,7 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import { IWithDefaults, withDefaults, DefaultsConsumer } from '../Defaults'
+import { pxToRem } from '../Style'
 
 interface IBreakpoints {
   xs: number
@@ -15,10 +16,6 @@ interface IGridProps {
 }
 
 class GridBase extends React.PureComponent<IGridProps & IWithDefaults> {
-  private pxToRem (px: number): number {
-    return px * 0.0625
-  }
-
   /**
    * Retrieve breakpoints in the following orders:
    * 1. Breakpoints directly provided to the component
@@ -42,10 +39,10 @@ class GridBase extends React.PureComponent<IGridProps & IWithDefaults> {
     }
 
     return {
-      xs: this.pxToRem(small),
-      sm: this.pxToRem(medium),
-      md: this.pxToRem(large),
-      lg: this.pxToRem(xlarge)
+      xs: pxToRem(small),
+      sm: pxToRem(medium),
+      md: pxToRem(large),
+      lg: pxToRem(xlarge)
     }
   }
 

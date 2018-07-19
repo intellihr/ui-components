@@ -35,12 +35,12 @@ describe('<ToggleModal />', () => {
           </Button>
         )}
       >
-        Hello this is a Modal
+        <div>hello this is a modal</div>
       </ToggleModal>
     )
 
     wrapper.find('button').simulate('click')
 
-    expect(wrapper).toMatchSnapshot()
+    expect(wrapper.find('div[children="hello this is a modal"]').exists()).toBeTruthy()
   })
 })
