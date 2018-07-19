@@ -1,5 +1,5 @@
 import React from 'react'
-import styledBreakpoint from '@humblebee/styled-components-breakpoint'
+import styledBreakpoint from '@intellihr/styled-components-breakpoint'
 import { ThemeProvider } from 'styled-components'
 import { defaults as fallbackDefaults, IDefaults, DefaultsConsumer } from '../Defaults'
 

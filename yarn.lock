@@ -206,10 +206,6 @@
   dependencies:
     loader-utils "^1.1.0"
 
-"@humblebee/styled-components-breakpoint@2.1.3":
-  version "2.1.3"
-  resolved "https://registry.yarnpkg.com/@humblebee/styled-components-breakpoint/-/styled-components-breakpoint-2.1.3.tgz#2dfedfc021426109befb0778aaaadfec23c61488"
-
 "@intellihr/icons@0.0.1":
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/@intellihr/icons/-/icons-0.0.1.tgz#4c8acef914c6d9e587dbe736e8eb388dbbfadb5b"
@@ -227,6 +223,12 @@
     eslint-plugin-react "~7.7.0"
     eslint-plugin-standard "~3.0.1"
     standard-engine "~8.0.0"
+
+"@intellihr/styled-components-breakpoint@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@intellihr/styled-components-breakpoint/-/styled-components-breakpoint-0.0.2.tgz#d3de03386bc2fd8a227cd0efca72d8f95fe0e9e6"
+  dependencies:
+    lodash "^4.17.10"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
