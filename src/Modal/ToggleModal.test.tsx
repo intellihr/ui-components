@@ -3,7 +3,7 @@ import { shallow, mount } from 'enzyme'
 import { ToggleModal } from './ToggleModal'
 import { Button } from '../Button'
 
-describe('<Modal />', () => {
+describe('<ToggleModal />', () => {
   it('should render a modal with a button', () => {
     const wrapper = shallow(
       <ToggleModal

@@ -69,10 +69,10 @@ class GridBase extends React.PureComponent<IGridProps & IWithDefaults> {
   }
 }
 
-// Export separately for styleguidist to show the correct name
-export const Grid = withDefaults(GridBase)
+const Grid = withDefaults(GridBase)
 
 export {
   IBreakpoints,
   IGridProps,
+  Grid
 }

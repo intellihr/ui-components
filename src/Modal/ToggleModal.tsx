@@ -26,7 +26,8 @@ class ToggleModal extends React.PureComponent<IToggleModalProps, IToggleModalSta
     } = this.state
 
     const {
-      trigger
+      trigger,
+      ...props
     } = this.props
 
     return (
@@ -35,7 +36,7 @@ class ToggleModal extends React.PureComponent<IToggleModalProps, IToggleModalSta
         <Modal
           isOpen={isOpen}
           handleClose={this.toggle}
-          {...this.props}
+          {...props}
         />
       </React.Fragment>
     )

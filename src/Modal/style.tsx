@@ -13,11 +13,19 @@ interface IReactModalAdapter extends ReactModal.Props {
 
 class ReactModalAdapter extends React.PureComponent<IReactModalAdapter> {
   get contentClassName (): string {
-    return `${this.props.className}__content`
+    const {
+      className
+    } = this.props
+
+    return className ? `${className}__content` : ''
   }
 
   get overlayClassName (): string {
-    return `${this.props.className}__overlay`
+    const {
+      className
+    } = this.props
+
+    return className ? `${this.props.className}__overlay` : ''
   }
 
   public render (): JSX.Element {

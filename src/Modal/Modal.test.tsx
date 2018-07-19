@@ -4,10 +4,9 @@ import { Modal } from './Modal'
 
 describe('<Modal />', () => {
   it('should render a hidden modal', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <Modal
         isOpen={false}
-        handleClose={() => {}}
       >
         This text is hidden
       </Modal>
@@ -20,7 +19,6 @@ describe('<Modal />', () => {
     const wrapper = shallow(
       <Modal
         isOpen
-        handleClose={() => {}}
         showCloseButton={false}
       >
         This text is shown

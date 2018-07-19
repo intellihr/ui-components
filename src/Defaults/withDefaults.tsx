@@ -1,9 +1,9 @@
 import React from 'react'
 import { Subtract } from 'utility-types'
-import { Defaults, DefaultsConsumer } from './Defaults'
+import { IDefaults, DefaultsConsumer } from './Defaults'
 
 interface IWithDefaults {
-  defaults: Defaults
+  defaults: IDefaults
 }
 
 const withDefaults = <P extends IWithDefaults>(DefaultsAwareComponent: React.ComponentType<P>) => (
@@ -11,7 +11,7 @@ const withDefaults = <P extends IWithDefaults>(DefaultsAwareComponent: React.Com
     public render (): JSX.Element {
       return (
         <DefaultsConsumer>
-          {(defaults: Defaults) =>
+          {(defaults: IDefaults) =>
             <DefaultsAwareComponent
               {...this.props}
               defaults={defaults}

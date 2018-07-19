@@ -2,7 +2,7 @@ import React from 'react'
 
 const sassGlobals = require('../sass/globals.scss')
 
-interface ProvidedDefaults {
+interface IDefaults {
   /** Breakpoints used for the grid layout */
   breakpoints: {
     small: number
@@ -11,14 +11,12 @@ interface ProvidedDefaults {
     xlarge: number
     xxlarge: number
   }
-}
 
-interface Defaults extends ProvidedDefaults {
   /** Anchor component used for clickable links */
   AnchorComponent?: any
 }
 
-const defaults: ProvidedDefaults = {
+const defaults: IDefaults = {
   breakpoints: {
     small: parseInt(sassGlobals['breakpoint-small']),
     medium: parseInt(sassGlobals['breakpoint-medium']),
@@ -28,15 +26,14 @@ const defaults: ProvidedDefaults = {
   }
 }
 
-const DefaultsContext: React.Context<Defaults> = React.createContext(defaults)
+const DefaultsContext: React.Context<IDefaults> = React.createContext(defaults)
 
 const DefaultsConsumer = DefaultsContext.Consumer
 
 const DefaultsProvider = DefaultsContext.Provider
 
 export {
-  ProvidedDefaults,
-  Defaults,
+  IDefaults,
   DefaultsConsumer,
   DefaultsProvider,
   defaults

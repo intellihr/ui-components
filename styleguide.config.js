@@ -42,7 +42,6 @@ module.exports = {
         'src/Callout/Callout.tsx',
         'src/Comment/Comment.tsx',
         'src/DropdownMenu/DropdownMenu.tsx',
-        'src/Grid/Grid.tsx',
         'src/HorizontalTabs/HorizontalTabs.tsx',
         'src/Icon/Icon.tsx',
         'src/IndentedElement/IndentedElement',

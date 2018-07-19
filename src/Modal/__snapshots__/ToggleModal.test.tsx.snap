@@ -154,7 +154,6 @@ exports[`<Modal /> should open a modal after click 1`] = `
     isOpen={true}
     modalZLevel={0}
     size="medium"
-    trigger={[Function]}
   >
     <class_1
       ariaHideApp={false}
@@ -420,7 +419,431 @@ exports[`<Modal /> should render a modal with a button 1`] = `
     isOpen={false}
     modalZLevel={0}
     size="medium"
-    trigger={[Function]}
+  >
+    Hello this is a Modal
+  </Modal>
+</React.Fragment>
+`;
+
+exports[`<ToggleModal /> should open a modal after click 1`] = `
+.c0 .modal-overlay {
+  background-color: rgba(48,48,53,0.44999999999999996);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.c0 .modal {
+  background-color: rgb(255,255,255);
+  border: 1px solid rgb(195,204,208);
+  border-radius: 4px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  height: auto;
+  margin: auto;
+  outline: none;
+  overflow-y: visible;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.c0 .modal .modal-close-button {
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  color: rgb(71,82,93);
+  font-size: 2em;
+  line-height: 1;
+}
+
+.c0 .modal.fixed-xxlarge-up {
+  min-width: 1380px;
+  width: 1380px;
+}
+
+.c0 .modal.fixed-large-up {
+  min-width: 960px;
+  width: 960px;
+}
+
+.c0 .modal.fixed-medium-up {
+  min-width: 600px;
+  width: 600px;
+}
+
+@media only screen and (max-width:0px) {
+  .c0 .modal-overlay {
+    overflow-y: hidden;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width:0px) {
+  .c0 .modal {
+    border: 0;
+    border-radius: 0;
+    max-width: none;
+    overflow-y: scroll;
+    position: initial;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    min-height: 100vh;
+    top: 0;
+  }
+}
+
+@media only screen and (max-width:0px) {
+  .c0 .modal .modal-close-button {
+    position: fixed;
+    will-change: scroll-position;
+  }
+}
+
+@media only screen and (max-width:1200px) {
+  .c0 .modal.fixed-xxlarge-up {
+    min-width: 0;
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width:0px) and (max-width:640px) {
+  .c0 .modal.fixed-xxlarge-up {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1024px) {
+  .c0 .modal.fixed-large-up {
+    min-width: 0;
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width:0px) and (max-width:640px) {
+  .c0 .modal.fixed-large-up {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width:0px) and (max-width:640px) {
+  .c0 .modal.fixed-medium-up {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+<ToggleModal
+  trigger={[Function]}
+>
+  <Button
+    iconAlignment="left"
+    onClick={[Function]}
+    type="primary"
+  >
+    <BaseButton
+      iconAlignment="left"
+      onClick={[Function]}
+      render={[Function]}
+      type="primary"
+    >
+      <button
+        className="button primary"
+        onClick={[Function]}
+      >
+        Click Me
+      </button>
+    </BaseButton>
+  </Button>
+  <Modal
+    handleClose={[Function]}
+    isOpen={true}
+    modalZLevel={0}
+    size="medium"
+  >
+    <class_1
+      ariaHideApp={false}
+      className="modal fixed-medium-up"
+      isOpen={true}
+      onRequestClose={[Function]}
+      overlayClassName="modal-overlay"
+      style={
+        Object {
+          "content": Object {
+            "zIndex": 1011,
+          },
+          "overlay": Object {
+            "zIndex": 1010,
+          },
+        }
+      }
+    >
+      <Styled(ReactModalAdapter)
+        ariaHideApp={false}
+        breakpoint={
+          Object {
+            "down": [Function],
+            "large": [Function],
+            "list": Array [
+              "small",
+              "medium",
+              "large",
+              "xlarge",
+              "xxlarge",
+            ],
+            "medium": [Function],
+            "only": [Function],
+            "small": [Function],
+            "up": [Function],
+            "xlarge": [Function],
+            "xxlarge": [Function],
+          }
+        }
+        className="modal fixed-medium-up"
+        isOpen={true}
+        onRequestClose={[Function]}
+        overlayClassName="modal-overlay"
+        style={
+          Object {
+            "content": Object {
+              "zIndex": 1011,
+            },
+            "overlay": Object {
+              "zIndex": 1010,
+            },
+          }
+        }
+      >
+        <ReactModalAdapter
+          ariaHideApp={false}
+          breakpoint={
+            Object {
+              "down": [Function],
+              "large": [Function],
+              "list": Array [
+                "small",
+                "medium",
+                "large",
+                "xlarge",
+                "xxlarge",
+              ],
+              "medium": [Function],
+              "only": [Function],
+              "small": [Function],
+              "up": [Function],
+              "xlarge": [Function],
+              "xxlarge": [Function],
+            }
+          }
+          className="modal fixed-medium-up c0"
+          isOpen={true}
+          onRequestClose={[Function]}
+          overlayClassName="modal-overlay"
+          style={
+            Object {
+              "content": Object {
+                "zIndex": 1011,
+              },
+              "overlay": Object {
+                "zIndex": 1010,
+              },
+            }
+          }
+        >
+          <Modal
+            ariaHideApp={false}
+            bodyOpenClassName="ReactModal__Body--open"
+            breakpoint={
+              Object {
+                "down": [Function],
+                "large": [Function],
+                "list": Array [
+                  "small",
+                  "medium",
+                  "large",
+                  "xlarge",
+                  "xxlarge",
+                ],
+                "medium": [Function],
+                "only": [Function],
+                "small": [Function],
+                "up": [Function],
+                "xlarge": [Function],
+                "xxlarge": [Function],
+              }
+            }
+            className="modal fixed-medium-up c0"
+            closeTimeoutMS={0}
+            isOpen={true}
+            onRequestClose={[Function]}
+            overlayClassName="modal-overlay"
+            parentSelector={[Function]}
+            portalClassName="modal fixed-medium-up sc-bxivhb c0"
+            shouldCloseOnEsc={true}
+            shouldCloseOnOverlayClick={true}
+            shouldFocusAfterRender={true}
+            shouldReturnFocusAfterClose={true}
+            style={
+              Object {
+                "content": Object {
+                  "zIndex": 1011,
+                },
+                "overlay": Object {
+                  "zIndex": 1010,
+                },
+              }
+            }
+          >
+            <ModalPortal
+              ariaHideApp={false}
+              bodyOpenClassName="ReactModal__Body--open"
+              breakpoint={
+                Object {
+                  "down": [Function],
+                  "large": [Function],
+                  "list": Array [
+                    "small",
+                    "medium",
+                    "large",
+                    "xlarge",
+                    "xxlarge",
+                  ],
+                  "medium": [Function],
+                  "only": [Function],
+                  "small": [Function],
+                  "up": [Function],
+                  "xlarge": [Function],
+                  "xxlarge": [Function],
+                }
+              }
+              className="modal fixed-medium-up c0"
+              closeTimeoutMS={0}
+              defaultStyles={
+                Object {
+                  "content": Object {
+                    "WebkitOverflowScrolling": "touch",
+                    "background": "#fff",
+                    "border": "1px solid #ccc",
+                    "borderRadius": "4px",
+                    "bottom": "40px",
+                    "left": "40px",
+                    "outline": "none",
+                    "overflow": "auto",
+                    "padding": "20px",
+                    "position": "absolute",
+                    "right": "40px",
+                    "top": "40px",
+                  },
+                  "overlay": Object {
+                    "backgroundColor": "rgba(255, 255, 255, 0.75)",
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "fixed",
+                    "right": 0,
+                    "top": 0,
+                  },
+                }
+              }
+              isOpen={true}
+              onRequestClose={[Function]}
+              overlayClassName="modal-overlay"
+              parentSelector={[Function]}
+              portalClassName="modal fixed-medium-up sc-bxivhb c0"
+              shouldCloseOnEsc={true}
+              shouldCloseOnOverlayClick={true}
+              shouldFocusAfterRender={true}
+              shouldReturnFocusAfterClose={true}
+              style={
+                Object {
+                  "content": Object {
+                    "zIndex": 1011,
+                  },
+                  "overlay": Object {
+                    "zIndex": 1010,
+                  },
+                }
+              }
+            >
+              <div
+                aria-modal="true"
+                className="ReactModal__Overlay ReactModal__Overlay--after-open modal-overlay"
+                onClick={[Function]}
+                onMouseDown={[Function]}
+                style={
+                  Object {
+                    "zIndex": 1010,
+                  }
+                }
+              >
+                <div
+                  className="ReactModal__Content ReactModal__Content--after-open modal fixed-medium-up c0"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseUp={[Function]}
+                  style={
+                    Object {
+                      "zIndex": 1011,
+                    }
+                  }
+                  tabIndex="-1"
+                >
+                  Hello this is a Modal
+                  <button
+                    className="modal-close-button"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <span
+                      aria-hidden="true"
+                    >
+                      ×
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </ModalPortal>
+          </Modal>
+        </ReactModalAdapter>
+      </Styled(ReactModalAdapter)>
+    </class_1>
+  </Modal>
+</ToggleModal>
+`;
+
+exports[`<ToggleModal /> should render a modal with a button 1`] = `
+<React.Fragment>
+  <Button
+    iconAlignment="left"
+    onClick={[Function]}
+    type="primary"
+  >
+    Click Me
+  </Button>
+  <Modal
+    handleClose={[Function]}
+    isOpen={false}
+    modalZLevel={0}
+    size="medium"
   >
     Hello this is a Modal
   </Modal>

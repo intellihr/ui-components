@@ -60,6 +60,7 @@ class Modal extends React.PureComponent<IModalProps> {
 
     if (handleClose) {
       return (
+        // We use button here on purpose because we don't want any intellihr style
         <button
           className='modal-close-button'
           type='button'
