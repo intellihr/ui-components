@@ -42,7 +42,6 @@ module.exports = {
         'src/Callout/Callout.tsx',
         'src/Comment/Comment.tsx',
         'src/DropdownMenu/DropdownMenu.tsx',
-        'src/Grid/Grid.tsx',
         'src/HorizontalTabs/HorizontalTabs.tsx',
         'src/Icon/Icon.tsx',
         'src/IndentedElement/IndentedElement',
@@ -84,6 +83,13 @@ module.exports = {
           name: 'Lists',
           components: [
             'src/List/List.tsx'
+          ]
+        },
+        {
+          name: 'Modal',
+          components: [
+            'src/Modal/Modal.tsx',
+            'src/Modal/ToggleModal.tsx'
           ]
         },
         {
@@ -136,6 +142,8 @@ module.exports = {
       name: 'Higher Order Components',
       components: [
         'src/Anchor/withAnchor.tsx',
+        'src/Style/withStyledBreakpoints.tsx',
+        'src/Defaults/withDefaults.tsx',
         'src/Grid/withGrid.tsx',
         'src/Skeleton/withSkeleton.tsx'
       ]

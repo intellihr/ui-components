@@ -27,6 +27,7 @@ export { InputLabel } from './InputLabel'
 export { IndentedElement } from './IndentedElement'
 export { TextInput, NumberInput, CheckboxInput } from './Input'
 export { Legend } from './Legend'
+export { Modal, ToggleModal } from './Modal'
 export { ActionLink, TextLink } from './Link'
 export { List } from './List'
 export { Menu, MenuItem, SubMenu } from './Menu'
@@ -51,3 +52,9 @@ export { withAnchor } from './Anchor'
 
 /** Helper Functions */
 export { getColor } from './Color'
+
+/** Common Interfaces */
+export { Size } from './Interface'
+
+/** Styled Components */
+export { withStyledBreakpoints } from './Style'

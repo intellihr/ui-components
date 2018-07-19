@@ -1,5 +1,5 @@
 import React from 'react'
-import { Defaults, DefaultsConsumer } from '../Defaults'
+import { IDefaults, DefaultsConsumer } from '../Defaults'
 import { BaseAnchor } from './BaseAnchor'
 
 export interface AnchorProps {
@@ -24,7 +24,7 @@ export class Anchor extends React.PureComponent<AnchorProps> {
     href: '#'
   }
 
-  private anchorComponent (defaultValues: Defaults) {
+  private anchorComponent (defaultValues: IDefaults) {
     const {
       className,
       children,

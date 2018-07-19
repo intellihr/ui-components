@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@intellihr/icons": "0.0.1",
+    "@intellihr/styled-components-breakpoint": "0.0.2",
     "better-react-spinkit": "2.0.4",
     "capitalize": "1.0.0",
     "chart.js": "2.7.2",
@@ -30,11 +31,13 @@
     "react-dd-menu": "2.0.2",
     "react-linkify": "0.2.2",
     "react-markdown": "3.3.3",
+    "react-modal": "3.5.1",
     "react-select": "1.2.1",
     "react-string-replace": "0.4.1",
     "react-styled-flexboxgrid": "2.4.0",
     "react-table": "6.8.6",
     "react-tooltip": "3.6.1",
+    "utility-types": "2.0.0",
     "uuid": "3.2.1"
   },
   "devDependencies": {
@@ -51,8 +54,10 @@
     "@types/jest": "22.2.2",
     "@types/jquery": "3.3.1",
     "@types/lodash": "4.14.107",
+    "@types/react": "^16.4.6",
     "@types/react-chartjs-2": "2.5.7",
     "@types/react-dom": "16.0.4",
+    "@types/react-modal": "^3.2.0",
     "@types/react-select": "1.2.7",
     "@types/react-table": "6.7.11",
     "@types/react-test-renderer": "16.0.1",

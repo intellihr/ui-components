@@ -1,25 +1,40 @@
 import React from 'react'
 
-interface Defaults {
+const sassGlobals = require('../sass/globals.scss')
+
+interface IDefaults {
+  /** Breakpoints used for the grid layout */
+  breakpoints: {
+    small: number
+    medium: number
+    large: number
+    xlarge: number
+    xxlarge: number
+  }
+
   /** Anchor component used for clickable links */
   AnchorComponent?: any
-  /** Breakpoints used for the grid layout */
-  breakpoints?: {
-    xs: number,
-    sm: number,
-    md: number,
-    lg: number
+}
+
+const defaults: IDefaults = {
+  breakpoints: {
+    small: parseInt(sassGlobals['breakpoint-small']),
+    medium: parseInt(sassGlobals['breakpoint-medium']),
+    large: parseInt(sassGlobals['breakpoint-large']),
+    xlarge: parseInt(sassGlobals['breakpoint-xlarge']),
+    xxlarge: parseInt(sassGlobals['breakpoint-xxlarge'])
   }
 }
 
-const defaults: Defaults = {}
-const DefaultsContext: React.Context<Defaults> = React.createContext(defaults)
+const DefaultsContext: React.Context<IDefaults> = React.createContext(defaults)
 
 const DefaultsConsumer = DefaultsContext.Consumer
+
 const DefaultsProvider = DefaultsContext.Provider
 
 export {
-  Defaults,
+  IDefaults,
   DefaultsConsumer,
-  DefaultsProvider
+  DefaultsProvider,
+  defaults
 }

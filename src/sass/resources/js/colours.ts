@@ -109,6 +109,7 @@ const w = {
 }
 
 const systemColours = {
+  modalOverlay: w.intelliCharcoal.fade(0.55),
   mainBackground: w.intelliWhite,
   mainBackgroundHover: w.intelliOffWhite,
   mainText: w.intelliDarkGrey,
