@@ -69,16 +69,22 @@ $color-styles: (
     &:not(.non-clickable) {
       &.alert-on-hover {
         a,
-        button {
+        button,
+        .left-component,
+        .right-component {
           background-color: transparent;
           border-color: transparent;
           color: $alert-base;
 
           &:focus,
-          &:hover,
-          &.hover {
+          &:hover {
             background-color: $alert-base;
-            color: $alert-text;
+
+            &,
+            .left-component,
+            .right-component {
+              color: $alert-text;
+            }
           }
 
           &:active,
@@ -92,16 +98,20 @@ $color-styles: (
       a,
       button {
         &,
-        span {
+        .left-component,
+        .right-component {
           transition: background .3s ease-in-out, color .3s ease-in-out;
         }
 
         &:hover,
         &:active,
         &:focus {
+          background-color: $neutral-light;
+          color: $link-text;
+
           &,
-          span {
-            background-color: $neutral-light;
+          .left-component,
+          .right-component {
             color: $link-text;
           }
         }
