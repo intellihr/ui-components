@@ -30,7 +30,7 @@ module.exports = {
           content: './src/Defaults/Defaults.examples.md'
         }
       ],
-      components: 'src/style.tsx'
+      components: 'src/common/sass/style.tsx'
     },
     {
       name: 'UI Components',

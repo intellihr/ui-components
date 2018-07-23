@@ -1,0 +1,57 @@
+@import '../../../common/sass/foundation_settings';
+
+@mixin toast-color-coding ($color-scheme) {
+  background-color: map-get($color-scheme, light);
+  border-color: map-get($color-scheme, base);
+
+  .fa {
+    color: map-get($color-scheme, base);
+  }
+
+  .toast-text {
+    color: map-get($color-scheme, textOnLight);
+  }
+}
+
+:local(.ToastClass) {
+  align-items: baseline;
+  border: .1rem solid;
+  border-radius: $global-radius;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .15);
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  margin-bottom: 10px;
+  overflow: hidden;
+
+  padding: .75rem;
+
+  >.fa,
+  .fa-container {
+    flex: 0 auto;
+
+    &.toast-icon {
+      font-size: 2rem;
+    }
+
+    &.toast-close-span {
+      cursor: pointer;
+      font-size: .95rem;
+      position: relative;
+      top: -.3rem;
+    }
+  }
+
+  >.toast-content {
+    flex: auto;
+    padding: 0 .575rem;
+    position: relative;
+    top: -.375rem;
+  }
+
+  @each $colour, $values in $functional-colours {
+    &.#{$colour} {
+      @include toast-color-coding($values);
+    }
+  }
+}
