@@ -2,7 +2,7 @@
 
 ```jsx
 const React = require('react')
-const { Props } = require('../')
+const { Props } = require('../../../')
 
 class ModalExample extends React.PureComponent {
   constructor () {

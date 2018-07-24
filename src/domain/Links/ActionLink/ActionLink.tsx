@@ -10,9 +10,9 @@ const ActionLinkLabel = styled.span`
 `
 
 interface ActionLinkProps extends AnchorProps {}
-const ActionLink: React.ComponentClass<ActionLinkProps> = withAnchor(ActionLinkLabel)
+
+export const ActionLink: React.ComponentClass<ActionLinkProps> = withAnchor(ActionLinkLabel)
 
 export {
   ActionLinkProps,
-  ActionLink
 }

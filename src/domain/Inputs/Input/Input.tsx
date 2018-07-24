@@ -46,7 +46,7 @@ interface InputProps extends GenericInputProps {
   type: string
 }
 
-class Input extends React.PureComponent<InputProps> {
+export class Input extends React.PureComponent<InputProps> {
   constructor (props: InputProps) {
     super(props)
 
@@ -137,6 +137,5 @@ class Input extends React.PureComponent<InputProps> {
 
 export {
   GenericInputProps,
-  InputProps,
-  Input
+  InputProps
 }

@@ -30,7 +30,7 @@ module.exports = {
           content: 'src/domain/Defaults/Defaults/Defaults.examples.md'
         }
       ],
-      components: 'src/common/sass/style.tsx'
+      components: 'src/common/sass/style.ts'
     },
     {
       name: 'UI Components',
@@ -38,53 +38,53 @@ module.exports = {
         {
           name: 'Anchors',
           components: [
-            'src/domain/Anchors/Anchor/Anchor.tsx'
+            'src/domain/Anchors/Anchor/Anchor'
           ]
         },
         {
           name: 'Avatars',
           components: [
-            'src/domain/Avatars/Avatar/Avatar.tsx',
-            'src/domain/Avatars/AvatarEntity/AvatarEntity.tsx'
+            'src/domain/Avatars/Avatar/Avatar',
+            'src/domain/Avatars/AvatarEntity/AvatarEntity'
           ]
         },
         {
           name: 'Badges',
           components: [
-            'src/domain/Badges/Badge/Badge.tsx'
+            'src/domain/Badges/Badge/Badge'
           ]
         },
         {
           name: 'Buttons',
           components: [
-            'src/domain/Buttons/Button/Button.tsx',
-            'src/domain/Buttons/LinkButton/LinkButton.tsx'
+            'src/domain/Buttons/Button/Button',
+            'src/domain/Buttons/LinkButton/LinkButton'
           ]
         },
         {
           name: 'Callouts',
           components: [
-            'src/domain/Callouts/Callout/Callout.tsx'
+            'src/domain/Callouts/Callout/Callout'
           ]
         },
         {
           name: 'Charts',
           components: [
-            'src/domain/Charts/RadarChart/RadarChart.tsx',
-            'src/domain/Charts/TimeBasedLineChart/TimeBasedLineChart.tsx'
+            'src/domain/Charts/RadarChart/RadarChart',
+            'src/domain/Charts/TimeBasedLineChart/TimeBasedLineChart'
           ]
         },
         {
           name: 'Colors',
           components: [
-            'src/domain/Colors/Color/Color.tsx',
-            'src/domain/Colors/ColorsGrid/ColorsGrid.tsx'
+            'src/domain/Colors/Color/Color',
+            'src/domain/Colors/ColorsGrid/ColorsGrid'
           ]
         },
         {
           name: 'Comments',
           components: [
-            'src/domain/Comments/Comment/Comment.tsx'
+            'src/domain/Comments/Comment/Comment'
           ]
         },
         {
@@ -96,127 +96,127 @@ module.exports = {
         {
           name: 'Forms',
           components: [
-            'src/domain/Forms/Form/Form.tsx'
+            'src/domain/Forms/Form/Form'
           ]
         },
         {
           name: 'Icons',
           components: [
-            'src/domain/Icons/Icon/Icon.tsx'
+            'src/domain/Icons/Icon/Icon'
           ]
         },
         {
           name: 'Indicators',
-          commponents: [
-            'src/domain/Indicators/StatusIndicator/StatusIndicator.tsx'
+          components: [
+            'src/domain/Indicators/StatusIndicator/StatusIndicator'
           ]
         },
         {
           name: 'Inputs',
-          commponents: [
-            'src/domain/Inputs/InputLabel/InputLabel.tsx',
-            'src/domain/Inputs/Input/Input.tsx',
-            'src/domain/Inputs/SelectInput/SelectInput.tsx'
+          components: [
+            'src/domain/Inputs/InputLabel/InputLabel',
+            'src/domain/Inputs/Input/Input',
+            'src/domain/Inputs/SelectInput/SelectInput'
           ]
         },
         {
           name: 'Legends',
           components: [
-            'src/domain/Legends/Legend/Legend.tsx'
+            'src/domain/Legends/Legend/Legend'
           ]
         },
         {
           name: 'Links',
           components: [
-            'src/domain/Links/ActionLink/ActionLink.tsx',
-            'src/domain/Links/TextLink/TextLink.tsx'
+            'src/domain/Links/ActionLink/ActionLink',
+            'src/domain/Links/TextLink/TextLink'
           ]
         },
         {
           name: 'Lists',
           components: [
-            'src/domain/Lists/List/List.tsx',
-            'src/domain/Lists/ActionList/ActionList.tsx',
-            'src/domain/Lists/SmartList/SmartList.tsx'
+            'src/domain/Lists/List/List',
+            'src/domain/Lists/ActionList/ActionList',
+            'src/domain/Lists/SmartList/SmartList'
           ]
         },
         {
           name: 'Menus',
           components: [
-            'src/domain/Menus/DropdownMenu/DropdownMenu.tsx',
-            'src/domain/Menus/Menu/Menu.tsx',
-            'src/domain/Menus/Navigation/Navigation.tsx'
+            'src/domain/Menus/DropdownMenu/DropdownMenu',
+            'src/domain/Menus/Menu/Menu',
+            'src/domain/Menus/Navigation/Navigation'
           ]
         },
         {
           name: 'Modals',
           components: [
-            'src/domain/Modals/Modal/Modal.tsx',
-            'src/domain/Modals/ToggleModal/ToggleModal.tsx'
+            'src/domain/Modals/Modal/Modal',
+            'src/domain/Modals/ToggleModal/ToggleModal'
           ]
         },
         {
           name: 'Pills',
           components: [
-            'src/domain/Pills/Pill/Pill.tsx'
+            'src/domain/Pills/Pill/Pill'
           ]
         },
         {
           name: 'Reports',
           components: [
-            'src/domain/Reports/ReportHeader/ReportHeader.tsx',
-            'src/domain/Reports/ReportInfo/ReportInfo.tsx'
+            'src/domain/Reports/ReportHeader/ReportHeader',
+            'src/domain/Reports/ReportInfo/ReportInfo'
           ]
         },
         {
           name: 'Skeletons',
           components: [
-            'src/domain/Skeletons/Skeleton/Skeleton.tsx'
+            'src/domain/Skeletons/Skeleton/Skeleton'
           ]
         },
         {
           name: 'Spinners',
           components: [
-            'src/domain/Spinners/Spinner/Spinner.tsx'
+            'src/domain/Spinners/Spinner/Spinner'
           ]
         },
         {
           name: 'Tables',
           components: [
-            'src/domain/Tables/DataTable/DataTable.tsx'
+            'src/domain/Tables/DataTable/DataTable'
           ]
         },
         {
           name: 'Tabs',
           components: [
-            'src/domain/Tabs/HorizontalTabs/HorizontalTabs.tsx'
+            'src/domain/Tabs/HorizontalTabs/HorizontalTabs'
           ]
         },
         {
           name: 'Timelines',
           components: [
-            'src/domain/Timelines/VerticalTimeline/VerticalTimeline/VerticalTimeline.tsx',
-            'src/domain/Timelines/VerticalTimeline/VerticalTimelineEvent/VerticalTimelineEvent.tsx'
+            'src/domain/Timelines/VerticalTimeline/VerticalTimeline/VerticalTimeline',
+            'src/domain/Timelines/VerticalTimeline/VerticalTimelineEvent/VerticalTimelineEvent'
           ]
         },
         {
           name: 'Toasts',
           components: [
-            'src/domain/Toasts/Toast/Toast.tsx'
+            'src/domain/Toasts/Toast/Toast'
           ]
         },
         {
           name: 'Tooltips',
           components: [
-            'src/domain/Tooltips/Tooltip/Tooltip.tsx'
+            'src/domain/Tooltips/Tooltip/Tooltip'
           ]
         },
         {
           name: 'Typographies',
           components: [
-            'src/domain/Typographies/FormattedText/FormattedText.tsx',
-            'src/domain/Typographies/Heading/Heading.tsx',
-            'src/domain/Typographies/Text/Text.tsx'
+            'src/domain/Typographies/FormattedText/FormattedText',
+            'src/domain/Typographies/Heading/Heading',
+            'src/domain/Typographies/Text/Text'
           ]
         }
       ]
@@ -224,11 +224,11 @@ module.exports = {
     {
       name: 'Higher Order Components',
       components: [
-        'src/domain/Anchors/Anchor/withAnchor.tsx',
-        'src/domain/Styles/hoc/withStyledBreakpoints.tsx',
-        'src/domain/Defaults/withDefaults/withDefaults.tsx',
-        'src/domain/Grids/Grid/withGrid.tsx',
-        'src/domain/Skeletons/withSkeleton/withSkeleton.tsx'
+        'src/domain/Anchors/Anchor/withAnchor',
+        'src/domain/Styles/hoc/withStyledBreakpoints',
+        'src/domain/Defaults/withDefaults/withDefaults',
+        'src/domain/Grids/Grid/withGrid',
+        'src/domain/Skeletons/withSkeleton/withSkeleton'
       ]
     }
   ],

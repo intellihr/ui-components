@@ -7,9 +7,9 @@ const TextLinkLabel = styled.span`
 `
 
 interface TextLinkProps extends AnchorProps {}
-const TextLink: React.ComponentClass<TextLinkProps> = withAnchor(TextLinkLabel)
+
+export const TextLink: React.ComponentClass<TextLinkProps> = withAnchor(TextLinkLabel)
 
 export {
-  TextLinkProps,
-  TextLink
+  TextLinkProps
 }
