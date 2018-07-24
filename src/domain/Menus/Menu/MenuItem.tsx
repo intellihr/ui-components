@@ -2,7 +2,7 @@ import React from 'react'
 import { MenuItemAnchorWrapper, IconWrapper, LoadingIconWrapper, MenuItemWrapper } from './style'
 import { FontAwesomeIcon } from '../../Icons'
 
-export interface MenuItemProps {
+export interface IMenuItemProps {
   /** HTML id to use for the menu */
   url?: string
   label: string
@@ -12,7 +12,7 @@ export interface MenuItemProps {
   isLoading?: boolean
 }
 
-export class MenuItem extends React.PureComponent<MenuItemProps> {
+export class MenuItem extends React.PureComponent<IMenuItemProps> {
   get icon (): JSX.Element | null {
     const { icon } = this.props
 

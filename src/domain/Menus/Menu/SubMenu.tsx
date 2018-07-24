@@ -1,6 +1,5 @@
 import React from 'react'
 import Collapsible from 'react-collapsible'
-import { MenuItem } from './MenuItem'
 import { SubMenuWrapper } from './style'
 
 export interface ISubMenuProps {
@@ -8,15 +7,17 @@ export interface ISubMenuProps {
   triggerComponent: JSX.Element
   /** If true, opens the accordion menu. If false, closes the menu */
   isOpen?: boolean
+  /** Function called when open or close event finishes for size recalculation */
+  handleSizeChange?: () => void
 }
 
 export class SubMenu extends React.PureComponent<ISubMenuProps> {
-
   public render (): JSX.Element {
     const {
       children,
       triggerComponent,
-      isOpen
+      isOpen,
+      handleSizeChange
     } = this.props
 
     return (
@@ -24,9 +25,11 @@ export class SubMenu extends React.PureComponent<ISubMenuProps> {
         trigger={triggerComponent}
         open={isOpen}
         transitionTime={250}
+        onOpen={handleSizeChange}
+        onClose={handleSizeChange}
       >
         <SubMenuWrapper>
-         {children}
+          {children}
         </SubMenuWrapper>
       </Collapsible>
     )

@@ -20,7 +20,7 @@ describe('<SubMenu />', () => {
     const wrapper = shallow(
       <SubMenu
         triggerComponent={<li>Click me!</li>}
-        isOpen={true}
+        isOpen
       >
         <li>Hello I am the child!</li>
       </SubMenu>
