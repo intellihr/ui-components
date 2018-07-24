@@ -8,9 +8,9 @@ import {
   isFunction,
   lowerCase
 } from 'lodash'
-import { Callout } from '../../Callouts'
+import { Callout } from '@Domain/Callouts'
 import { DataTablePagination, DataTablePaginationProps } from './DataTablePagination'
-import { TextInput } from '../../Forms'
+import { TextInput } from '@Domain/Inputs'
 const style = require('./DataTable.scss')
 
 export interface DataTableState {

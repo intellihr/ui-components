@@ -2,7 +2,7 @@ import { shallow } from 'enzyme'
 import React from 'react'
 
 import { Form } from './Form'
-import { Input } from '../Input/Input'
+import { Input } from '@Domain/Inputs'
 
 describe('<Form />', () => {
   it(`should render a form`, () => {

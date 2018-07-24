@@ -1,4 +1,4 @@
-const enum Size {
+enum Size {
   XXSmall = 'xxsmall',
   XSmall = 'xsmall',
   Small = 'small',

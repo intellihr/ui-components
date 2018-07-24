@@ -1,8 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import { StyledReactModal } from './style'
-import { Props } from '../../../common/types'
-import Size = Props.Size
+import { Props } from '@Common/types'
 
 enum ReactModalSize {
   medium = 'fixed-medium-up',
@@ -27,7 +26,7 @@ interface IModalProps {
   children?: JSX.Element
 
   /** Modal Size */
-  size?: Size.Medium | Size.Large | Size.XXLarge
+  size?: Props.Size.Medium | Props.Size.Large | Props.Size.XXLarge
 
   /** The deep level */
   modalZLevel?: number
@@ -35,7 +34,7 @@ interface IModalProps {
 
 class Modal extends React.PureComponent<IModalProps> {
   public static defaultProps: Partial<IModalProps> = {
-    size: Size.Medium,
+    size: Props.Size.Medium,
     modalZLevel: 0
   }
 
