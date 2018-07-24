@@ -1,13 +1,34 @@
 import React from 'react'
-import { Menu, MenuProps } from './Menu'
+import Collapsible from 'react-collapsible'
+import { MenuItem } from './MenuItem'
+import { SubMenuWrapper } from './style'
 
-export class SubMenu extends React.PureComponent<MenuProps> {
+export interface ISubMenuProps {
+  /** MenuItem component to use as trigger */
+  triggerComponent: JSX.Element
+  /** If true, opens the accordion menu. If false, closes the menu */
+  isOpen?: boolean
+}
+
+export class SubMenu extends React.PureComponent<ISubMenuProps> {
+
   public render (): JSX.Element {
+    const {
+      children,
+      triggerComponent,
+      isOpen
+    } = this.props
+
     return (
-      <Menu
-        {...this.props}
-        isNested
-      />
+      <Collapsible
+        trigger={triggerComponent}
+        open={isOpen}
+        transitionTime={250}
+      >
+        <SubMenuWrapper>
+         {children}
+        </SubMenuWrapper>
+      </Collapsible>
     )
   }
 }

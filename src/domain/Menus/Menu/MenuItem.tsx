@@ -1,5 +1,5 @@
-import React, { Children } from 'react'
-import { MenuItemAnchorWrapper, IconWrapper, LoadingIconWrapper } from './style'
+import React from 'react'
+import { MenuItemAnchorWrapper, IconWrapper, LoadingIconWrapper, MenuItemWrapper } from './style'
 import { FontAwesomeIcon } from '../../Icons'
 
 export interface MenuItemProps {
@@ -10,10 +10,6 @@ export interface MenuItemProps {
   render?: (label: string, iconContent: JSX.Element | null, url?: string) => JSX.Element
   className?: string
   isLoading?: boolean
-}
-
-export interface AnchorProps {
-  href?: string
 }
 
 export class MenuItem extends React.PureComponent<MenuItemProps> {
@@ -74,10 +70,10 @@ export class MenuItem extends React.PureComponent<MenuItemProps> {
     } = this.props
 
     return (
-      <li className={className}>
+      <MenuItemWrapper className={className}>
         {this.component}
         {children}
-      </li>
+      </MenuItemWrapper>
     )
   }
 }

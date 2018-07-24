@@ -8,12 +8,7 @@ export class Navigation extends React.PureComponent <{}> {
 
     return (
       <div id='offCanvasLeft' className='off-canvas-wrapper off-canvas position-left reveal-for-large' data-off-canvas data-auto-focus={false}>
-
-        <Menu
-          id='menu'
-          isAccordion
-          className='ihr-nav vertical menu'
-        >
+        <Menu>
           {children}
         </Menu>
       </div>

@@ -6,7 +6,9 @@ import { SubMenu } from './SubMenu'
 describe('<SubMenu />', () => {
   it(`should render a menu with the nested class`, () => {
     const wrapper = shallow(
-      <SubMenu>
+      <SubMenu
+        triggerComponent={<li>Click me!</li>}
+      >
         <li>Hello I am the child!</li>
       </SubMenu>
     )
@@ -14,10 +16,11 @@ describe('<SubMenu />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a menu with isNested true even if isNested is false`, () => {
+  it(`should render a menu that is open on render`, () => {
     const wrapper = shallow(
       <SubMenu
-        isNested={false}
+        triggerComponent={<li>Click me!</li>}
+        isOpen={true}
       >
         <li>Hello I am the child!</li>
       </SubMenu>

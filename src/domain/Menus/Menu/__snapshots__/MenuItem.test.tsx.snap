@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MenuItem /> should render a a menu item with a link 1`] = `
-<li>
+<styled.li>
   <styled.a
     href="www.google.com"
   >
     Test menu item
   </styled.a>
-</li>
+</styled.li>
 `;
 
 exports[`<MenuItem /> should render a menu item with Icon 1`] = `
-<li>
+<styled.li>
   <styled.a
     href="www.google.com"
   >
@@ -22,38 +22,23 @@ exports[`<MenuItem /> should render a menu item with Icon 1`] = `
     </styled.span>
     Test menu item
   </styled.a>
-</li>
+</styled.li>
 `;
 
-exports[`<MenuItem /> should render a menu item with a custom class name 1`] = `
-<li
-  className="custom-class-name"
+exports[`<MenuItem /> should render a menu item with active state 1`] = `
+<styled.li
+  className="active"
 >
   <styled.a
     href="www.google.com"
   >
-    <styled.span>
-      <IntelliIcon
-        type="clock"
-      />
-    </styled.span>
     Test menu item
   </styled.a>
-</li>
-`;
-
-exports[`<MenuItem /> should render a menu item with active state 1`] = `
-<li>
-  <styled.a
-    href="www.google.com"
-  >
-    Test menu item
-  </styled.a>
-</li>
+</styled.li>
 `;
 
 exports[`<MenuItem /> should render a menu item with loading state 1`] = `
-<li>
+<styled.li>
   <styled.a
     href="www.google.com"
   >
@@ -70,13 +55,13 @@ exports[`<MenuItem /> should render a menu item with loading state 1`] = `
       />
     </styled.span>
   </styled.a>
-</li>
+</styled.li>
 `;
 
 exports[`<MenuItem /> should render a simple menu item 1`] = `
-<li>
+<styled.li>
   <styled.a>
     Test menu item
   </styled.a>
-</li>
+</styled.li>
 `;

@@ -30,7 +30,7 @@ describe('<MenuItem />', () => {
       <MenuItem
         url='www.google.com'
         label='Test menu item'
-        isActive
+        className='active'
       />
     )
 
@@ -43,19 +43,6 @@ describe('<MenuItem />', () => {
         url='www.google.com'
         label='Test menu item'
         icon={<IntelliIcon type={'clock'} />}
-      />
-    )
-
-    expect(wrapper).toMatchSnapshot()
-  })
-
-  it('should render a menu item with a custom class name', () => {
-    const wrapper = shallow(
-      <MenuItem
-        url='www.google.com'
-        label='Test menu item'
-        icon={<IntelliIcon type={'clock'} />}
-        className='custom-class-name'
       />
     )
 
