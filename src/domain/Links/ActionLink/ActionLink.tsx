@@ -14,5 +14,5 @@ interface ActionLinkProps extends AnchorProps {}
 export const ActionLink: React.ComponentClass<ActionLinkProps> = withAnchor(ActionLinkLabel)
 
 export {
-  ActionLinkProps,
+  ActionLinkProps
 }
