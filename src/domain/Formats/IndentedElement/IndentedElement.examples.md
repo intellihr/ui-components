@@ -51,6 +51,7 @@
 
 ```jsx
 initialState = { value: null };
+const { SelectInput } = require('@Domain/Inputs');
 
 class CustomOption extends React.PureComponent {
   render () {
@@ -58,7 +59,7 @@ class CustomOption extends React.PureComponent {
       depth,
       label
     } = this.props.option
-  
+
     return <div
       onClick={(event) => {
         event.preventDefault();
@@ -96,7 +97,7 @@ class CustomOption extends React.PureComponent {
 ## Indented smart list cell content
 
 ```jsx
-const { ListColumn } = require('../SmartList/ListColumn');
+const { ListColumn } = require('@Domain/Lists');
 
 <SmartList
   data={[

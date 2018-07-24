@@ -18,7 +18,7 @@
 ```
 
 ```jsx
-const { FontAwesomeIcon } = require('../Icon');
+const { FontAwesomeIcon } = require('@Domain/Icons');
 
   <AvatarEntity
     initials='JW'
@@ -45,7 +45,7 @@ const { FontAwesomeIcon } = require('../Icon');
 
 
 ```jsx
-const { FontAwesomeIcon } = require('../Icon');
+const { FontAwesomeIcon } = require('@Domain/Icons');
 
   <AvatarEntity
     initials='JW'
@@ -62,7 +62,7 @@ const { FontAwesomeIcon } = require('../Icon');
 #### isHoverable
 
 ```jsx
-const { FontAwesomeIcon } = require('../Icon');
+const { FontAwesomeIcon } = require('@Domain/Icons');
 
   <AvatarEntity
     initials='JW'
@@ -78,7 +78,7 @@ const { FontAwesomeIcon } = require('../Icon');
 ```
 
 ```jsx
-const { FontAwesomeIcon } = require('../Icon');
+const { FontAwesomeIcon } = require('@Domain/Icons');
 
   <AvatarEntity
     initials='JW'

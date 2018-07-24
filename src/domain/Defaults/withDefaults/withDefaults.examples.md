@@ -5,7 +5,7 @@ It will inject `defaults` props in your component.
 This works cross repositories and through any depth in the react dom tree.
 
 ```
-const { DefaultsProvider, DefaultsConsumer } = require('./Defaults');
+const { DefaultsProvider, DefaultsConsumer } = require('../Defaults');
 
 <DefaultsProvider
   value={{

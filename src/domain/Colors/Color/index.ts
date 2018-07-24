@@ -1,1 +1,1 @@
-export { Color, ColorObject, brandColorsArray } from './Color'
+export { Color, ColorObject, appColorsArray, brandColorsArray } from './Color'

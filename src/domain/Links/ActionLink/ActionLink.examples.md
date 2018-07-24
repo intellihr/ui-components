@@ -11,7 +11,7 @@ Your text here
 #### Action link with alternate anchor tag
 
 ```jsx
-const { DefaultsProvider } = require("../Defaults");
+const { DefaultsProvider } = require("@Domain/Defaults");
 
 <DefaultsProvider
   value={{

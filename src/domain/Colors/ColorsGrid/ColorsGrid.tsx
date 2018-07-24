@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ColorObject, Color } from '../Color'
-import { WrappedList } from '../services/style'
+import { WrappedList } from './style'
 
 export interface ColorGridProps {
   colors: ColorObject[]

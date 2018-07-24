@@ -1,6 +1,6 @@
 import { mount } from 'enzyme'
 import React from 'react'
-import { brandColors } from '../services/style'
+import { brandColors } from './style'
 import { Color } from './'
 
 describe('<Color />', () => {

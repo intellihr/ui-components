@@ -1,9 +1,9 @@
 #### Generic Menu
 
 ```jsx
-const { MenuItem } = require("./MenuItem");
-const { SubMenu } = require("./SubMenu");
-const { FontAwesomeIcon } = require("../Icon");
+const { MenuItem } = require('./MenuItem');
+const { SubMenu } = require('./SubMenu');
+const { FontAwesomeIcon } = require('@Domain/Icons');
 
 <Menu
   id='example-menu'
@@ -12,7 +12,7 @@ const { FontAwesomeIcon } = require("../Icon");
 >
   <MenuItem
     label='Item 1'
-  > 
+  >
     <SubMenu>
       <MenuItem
         url='#'
@@ -28,17 +28,17 @@ const { FontAwesomeIcon } = require("../Icon");
     isActive={true}
     url='#'
     label='Item 2'
-  /> 
+  />
   <MenuItem
     label='Item 3'
     icon={<FontAwesomeIcon type='star'/>}
-  > 
+  >
     <SubMenu
       isAccordion
     >
       <MenuItem
         label='Item 3A'
-      > 
+      >
         <SubMenu>
           <MenuItem
             url='#'
@@ -62,9 +62,9 @@ const { FontAwesomeIcon } = require("../Icon");
 #### Menu with loading menu item
 
 ```jsx
-const { MenuItem } = require("./MenuItem");
-const { SubMenu } = require("./SubMenu");
-const { FontAwesomeIcon } = require("../Icon");
+const { MenuItem } = require('./MenuItem');
+const { SubMenu } = require('./SubMenu');
+const { FontAwesomeIcon } = require('@Domain/Icons');
 
 <Menu
   id='example-loading-menu'
@@ -73,7 +73,7 @@ const { FontAwesomeIcon } = require("../Icon");
 >
   <MenuItem
     label='Item 1'
-  > 
+  >
     <SubMenu>
       <MenuItem
         url='#'

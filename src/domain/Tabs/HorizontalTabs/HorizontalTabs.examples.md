@@ -1,7 +1,7 @@
 #### Standard list of tabs
 
 ```jsx
-const { FontAwesomeIcon } = require('../Icon');
+const { FontAwesomeIcon } = require('@Domain/Icons');
 
 <HorizontalTabs
   tabs={[
@@ -26,7 +26,7 @@ const { FontAwesomeIcon } = require('../Icon');
 #### Open to a specific tab
 
 ```jsx
-const { FontAwesomeIcon } = require('../Icon');
+const { FontAwesomeIcon } = require('@Domain/Icons');
 
 <HorizontalTabs
   tabs={[
@@ -53,7 +53,7 @@ const { FontAwesomeIcon } = require('../Icon');
 **You won't be able to use this in the style guide because it will navigate you away from the page**
 
 ```jsx
-const { FontAwesomeIcon } = require('../Icon');
+const { FontAwesomeIcon } = require('@Domain/Icons');
 
 <HorizontalTabs
   tabs={[

@@ -66,8 +66,8 @@
 
 ### Comments that have a header defined will not render actionMenu and will be considered a system generated comment
 ```jsx
-const { Text } = require('../Text');
-const { getColor } = require ('../Color');
+const { Text } = require('@Domain/Typographies');
+const { getColor } = require ('@Domain/Colors');
 
 <Comment
   comment={{

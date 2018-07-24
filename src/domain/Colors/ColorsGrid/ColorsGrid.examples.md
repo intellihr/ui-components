@@ -1,13 +1,13 @@
 #### Brand Colors
 ```jsx
-const { brandColorsArray } = require('./Color');
+const { brandColorsArray } = require('@Domain/Colors');
 
 <ColorsGrid colors={brandColorsArray} />
 ```
 
 #### App Colors
 ```jsx
-const { appColorsArray } = require('./Color');
+const { appColorsArray } = require('@Domain/Colors');
 
 <ColorsGrid colors={appColorsArray} />
 ```

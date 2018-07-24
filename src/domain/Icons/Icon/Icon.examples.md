@@ -1,7 +1,7 @@
 #### Basic FontAwesome Icon
 
 ```jsx
-const { FontAwesomeIcon } = require('./FontAwesomeIcon');
+const { FontAwesomeIcon } = require('../FontAwesomeIcon');
   <FontAwesomeIcon
     type='star'
   />
@@ -10,7 +10,7 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
 #### Basic Intelli Icon
 
 ```jsx
-const { IntelliIcon } = require('./IntelliIcon');
+const { IntelliIcon } = require('../IntelliIcon');
   <IntelliIcon
     type='smile'
   />
@@ -19,7 +19,7 @@ const { IntelliIcon } = require('./IntelliIcon');
 #### Extra large Icon
 
 ```jsx
-const { FontAwesomeIcon } = require('./FontAwesomeIcon');
+const { FontAwesomeIcon } = require('../FontAwesomeIcon');
   <FontAwesomeIcon
     type='star'
     size='xlarge'
@@ -29,7 +29,7 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
 #### Spinning Icon
 
 ```jsx
-const { FontAwesomeIcon } = require('./FontAwesomeIcon');
+const { FontAwesomeIcon } = require('../FontAwesomeIcon');
   <FontAwesomeIcon
     type='star'
     isSpinning
@@ -39,7 +39,7 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
 #### Coloured Icon
 
 ```jsx
-const { FontAwesomeIcon } = require('./FontAwesomeIcon');
+const { FontAwesomeIcon } = require('../FontAwesomeIcon');
   <FontAwesomeIcon
     type='star'
     color='rgb(204,204,0)'
@@ -51,7 +51,7 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
 Icon props can be used together!
 
 ```jsx
-const { FontAwesomeIcon } = require('./FontAwesomeIcon');
+const { FontAwesomeIcon } = require('../FontAwesomeIcon');
   <FontAwesomeIcon
     type='star'
     color='rgb(204,204,0)'
@@ -63,7 +63,7 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
 #### Icon with badge
 
 ```jsx
-const { FontAwesomeIcon } = require('./FontAwesomeIcon');
+const { FontAwesomeIcon } = require('../FontAwesomeIcon');
 
 <div>
   <div>
@@ -79,7 +79,7 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
       }
     />
   </div>
-  
+
   <div>
     <FontAwesomeIcon
       type='inbox'
@@ -93,7 +93,7 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
       }
     />
   </div>
-  
+
   <div>
     <FontAwesomeIcon
       type='inbox'
@@ -107,14 +107,14 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
       }
     />
   </div>
-    
+
 </div>
 ```
 
 #### Icon fetching
 
 ```jsx
-const { FontAwesomeIcon } = require('./FontAwesomeIcon');
+const { FontAwesomeIcon } = require('../FontAwesomeIcon');
 
 <div>
   <div>
@@ -131,7 +131,7 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
       }
     />
   </div>
-  
+
   <div>
     <FontAwesomeIcon
       type='inbox'
@@ -146,7 +146,7 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
       }
     />
   </div>
-  
+
   <div>
     <FontAwesomeIcon
       type='inbox'
@@ -161,6 +161,6 @@ const { FontAwesomeIcon } = require('./FontAwesomeIcon');
       }
     />
   </div>
-    
+
 </div>
 ```

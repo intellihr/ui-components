@@ -4,7 +4,7 @@ import {
   ColorName,
   appColors,
   brandColors
-} from '../services/style'
+} from './style'
 import { transformColors } from '../services/transformColors'
 
 export interface ColorProps {

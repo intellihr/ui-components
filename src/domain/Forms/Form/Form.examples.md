@@ -1,5 +1,5 @@
 ```jsx
-const { TextInput } = require('../Input');
+const { TextInput } = require('@Domain/Inputs');
 const initialState = { textInputValue: '' };
 
   <Form

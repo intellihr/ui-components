@@ -154,7 +154,7 @@
 #### left and right Components
 
 ```jsx
-const { FontAwesomeIcon } = require('../Icon');
+const { FontAwesomeIcon } = require('@Domain/Icons');
 
 <DropdownMenu
    toggleComponent={<Button>Icons</Button>}
@@ -172,7 +172,7 @@ const { FontAwesomeIcon } = require('../Icon');
 #### Profile Menu Example
 
 ```jsx
-const { FontAwesomeIcon, IntelliIcon } = require('../Icon');
+const { FontAwesomeIcon, IntelliIcon } = require('@Domain/Icons');
 
 <DropdownMenu
    toggleComponent={

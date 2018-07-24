@@ -7,7 +7,7 @@ by yourself.
 #### Toggle Modal with Button
 
 ```jsx
-const { Button } = require('../Button');
+const { Button } = require('@Domain/Buttons');
 
 <ToggleModal
   trigger={({toggle}) => (
@@ -26,7 +26,7 @@ const { Button } = require('../Button');
 #### Toggle Modal with Anchor
 
 ```jsx
-const { Anchor } = require('../Anchor');
+const { Anchor } = require('@Domain/Anchors');
 
 <ToggleModal
   trigger={({toggle}) => (

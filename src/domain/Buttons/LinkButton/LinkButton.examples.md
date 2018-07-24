@@ -253,7 +253,7 @@
 
 #### Link buttons with Icons
 ```jsx
-const { FontAwesomeIcon } = require('../Icon');
+const { FontAwesomeIcon } = require('@Domain/Icons');
 
 <div>
   <div>

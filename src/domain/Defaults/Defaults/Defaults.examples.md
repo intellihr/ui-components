@@ -6,6 +6,7 @@ such as the component to use for anchors throughout the design system:
 
 ```
 const { DefaultsProvider } = require('./Defaults');
+const { ActionLink } = require('@Domain/Links');
 
 <DefaultsProvider
   value={{
