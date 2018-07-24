@@ -2,7 +2,7 @@ import { mount } from 'enzyme'
 import React from 'react'
 
 import { Icon } from './Icon'
-import { Badge } from '../Badge'
+import { Badge } from '@Domain/Badges'
 
 describe('<Icon />', () => {
   it('should render icon with no size or colour', () => {
