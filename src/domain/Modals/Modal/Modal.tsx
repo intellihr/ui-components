@@ -9,27 +9,25 @@ enum ReactModalSize {
   xxlarge = 'fixed-xxlarge-up'
 }
 
-interface IModalProps {
-  /** Show Modal */
-  isOpen: boolean
-
+interface IBaseModalProps {
   /**
    * Show close button at the top right if handleClose is set.
    * Callback to call on close; receives event
    * */
   handleClose?: (event: (MouseEvent | KeyboardEvent | React.MouseEvent<HTMLButtonElement>)) => void
-
   /** Extra classes to apply */
   className?: string
-
-  /** Component that will be inserted into the modal */
-  children?: JSX.Element
-
   /** Modal Size */
   size?: Props.Size.Medium | Props.Size.Large | Props.Size.XXLarge
-
   /** The deep level */
   modalZLevel?: number
+  /** Component that will be inserted into the modal */
+  children?: JSX.Element
+}
+
+interface IModalProps extends IBaseModalProps {
+  /** Show Modal */
+  isOpen: boolean
 }
 
 class Modal extends React.PureComponent<IModalProps> {
@@ -108,6 +106,7 @@ class Modal extends React.PureComponent<IModalProps> {
 }
 
 export {
+  IBaseModalProps,
   IModalProps,
   Modal
 }

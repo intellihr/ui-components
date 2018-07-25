@@ -1,1 +1,1 @@
-export { IModalProps, Modal } from './Modal'
+export { IBaseModalProps, IModalProps, Modal } from './Modal'

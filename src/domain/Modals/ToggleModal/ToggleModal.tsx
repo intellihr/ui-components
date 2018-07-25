@@ -1,12 +1,11 @@
 import React from 'react'
-import { Button, IButtonProps } from '@Domain/Buttons'
-import { Modal, IModalProps } from '../Modal'
+import { Modal, IBaseModalProps } from '../Modal'
 
 interface IToggleArguments {
   toggle: () => void
 }
 
-interface IToggleModalProps extends IModalProps {
+interface IToggleModalProps extends IBaseModalProps {
   /** A trigger component which opens or closes the modal */
   trigger: (toggleArguments: IToggleArguments) => JSX.Element
 }

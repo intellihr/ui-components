@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import capitalize from 'capitalize'
-import Select, { Async, OnChangeHandler, ReactSelectProps } from 'react-select'
+import Select, { Async, Creatable, OnChangeHandler, ReactSelectProps } from 'react-select'
 import { isEmpty, cloneDeep } from 'lodash'
 
 export interface SelectInputOptions {
@@ -36,6 +36,8 @@ export interface SelectInputProps extends ReactSelectProps {
   noneLabel?: string
   /** Specifies a default value to use */
   preselectDefaultValue?: SelectInputOptions[]
+  /** Handler for creating new options */
+  handleNewOption?: (option: SelectInputOptions) => void
 }
 
 export interface SelectInputState {
@@ -257,8 +259,18 @@ export class SelectInput extends React.PureComponent<SelectInputProps, SelectInp
 
   public render (): JSX.Element {
     const {
-      promiseOptions
+      promiseOptions,
+      handleNewOption
     } = this.props
+
+    if (handleNewOption) {
+      return (
+        <Creatable
+          {...this.selectProps}
+          onNewOptionClick={handleNewOption}
+        />
+      )
+    }
 
     if (promiseOptions) {
       return (
