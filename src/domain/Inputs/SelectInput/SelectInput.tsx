@@ -36,8 +36,8 @@ export interface SelectInputProps extends ReactSelectProps {
   noneLabel?: string
   /** Specifies a default value to use */
   preselectDefaultValue?: SelectInputOptions[]
-  /** Can users create elements if they don't exist */
-  handleNewOption?: Function
+  /** Handler for creating new options */
+  handleNewOption?: (option: SelectInputOptions) => void
 }
 
 export interface SelectInputState {
@@ -221,27 +221,7 @@ export class SelectInput extends React.PureComponent<SelectInputProps, SelectInp
 
     let value = this.props.value
 
-    const base:any = {
-      name: multi ? `${name}[]` : name,
-      resetValue,
-      clearable,
-      multi,
-      onChange: handleChange,
-      value: !isFetching ? value || this.state.preselectValue : '',
-      className: classNames({'is-invalid-input': isInvalid}, `react-select-${name}`),
-      disabled: isDisabled,
-      isLoading: isFetching,
-      placeholder,
-      onBlurResetsInput,
-      onSelectResetsInput,
-      onCloseResetsInput,
-      optionComponent,
-      autoFocus,
-      openOnFocus,
-      onOpen,
-      filterOptions,
-      noResultsText
-    }
+    const base:any = {}
 
     if (promiseOptions) {
       base.loadOptions = this.promiseOptions
