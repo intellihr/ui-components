@@ -1,1 +1,1 @@
-export * from './types'
+export { Props } from './types'

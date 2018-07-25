@@ -82,12 +82,25 @@ You should always create your component within a given domain or create one.
 
 Each domain exports its publicly available resource using `index.ts`.
 
-The use of `export *` is allowed in Domain level given it has a proper control in the Component level.
-
 Import by alias is possible
 
 ```typescript
 import { Button } from '@Domain/Buttons'
+```
+
+Exports in `src/domain/index.ts` is necessary for the library consumer.
+However when used internally, you need to specify the domain
+
+Good:
+
+```typescript
+import { Button } from '@Domains/Button'
+```
+
+Bad:
+
+```typescript
+import { Button } from '@Domains'
 ```
 
 ### Styleguide Structure
