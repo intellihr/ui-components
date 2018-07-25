@@ -1,5 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<SelectInput /> should render a creatable select box 1`] = `
+<CreatableSelect
+  className="react-select-test"
+  clearable={true}
+  disabled={false}
+  filterOptions={[Function]}
+  isLoading={false}
+  isOptionUnique={[Function]}
+  isValidNewOption={[Function]}
+  menuRenderer={[Function]}
+  multi={false}
+  name="test"
+  newOptionCreator={[Function]}
+  onBlurResetsInput={true}
+  onCloseResetsInput={true}
+  onNewOptionClick={[Function]}
+  onSelectResetsInput={true}
+  openOnFocus={false}
+  options={
+    Array [
+      Object {
+        "label": "option1",
+        "value": "value1",
+      },
+      Object {
+        "label": "option2",
+        "value": "value2",
+      },
+    ]
+  }
+  placeholder="Please Select"
+  promptTextCreator={[Function]}
+  resetValue=""
+  shouldKeyDownEventCreateNewOption={[Function]}
+  value=""
+/>
+`;
+
 exports[`<SelectInput /> should render a multi select box with options 1`] = `
 <Select
   arrowRenderer={[Function]}
