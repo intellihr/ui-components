@@ -1,0 +1,217 @@
+@import '../../../common/sass/foundation_settings';
+
+$color-styles: (
+  alert: (
+    strip-color: $alert-base,
+    background-color: $alert-light
+  ),
+  success: (
+    strip-color: $success-base,
+    background-color: $success-light
+  ),
+  warning: (
+    strip-color: $warning-base,
+    background-color: $warning-light
+  ),
+  primary: (
+    strip-color: $primary-base,
+    background-color: $primary-light
+  ),
+  secondary: (
+    strip-color: $secondary-base,
+    background-color: $secondary-light
+  ),
+  neutral: (
+    strip-color: $neutral-base,
+    background-color: $neutral-light
+  )
+);
+
+@mixin button-colour($style) {
+  border-left: 5px map-get($style, strip-color) solid;
+
+  &:not(.non-clickable) {
+    a,
+    button {
+      &:hover,
+      &:active,
+      &:focus {
+        &,
+        span {
+          background-color: map-get($style, background-color);
+          color: $main-text;
+        }
+      }
+    }
+  }
+}
+
+@mixin dd-list-item {
+  li {
+    width: 100%;
+
+    //this is to fix the library being super specific
+    &:hover {
+      &:not([role='separator']) {
+        &:not(.separator) {
+          background-color: transparent;
+        }
+      }
+    }
+
+    @each $colour, $style in $color-styles {
+      &.#{$colour} {
+        @include button-colour($style);
+      }
+    }
+
+    //ugliness due to sass linting not liking parent and children in the same brackets
+    &:not(.non-clickable) {
+      &.alert-on-hover {
+        a,
+        button,
+        .left-component,
+        .right-component {
+          background-color: transparent;
+          border-color: transparent;
+          color: $alert-base;
+
+          &:focus,
+          &:hover {
+            background-color: $alert-base;
+
+            &,
+            .left-component,
+            .right-component {
+              color: $alert-text;
+            }
+          }
+
+          &:active,
+          &.active {
+            background-color: $alert-active;
+            color: $alert-text;
+          }
+        }
+      }
+
+      a,
+      button {
+        &,
+        .left-component,
+        .right-component {
+          transition: background .3s ease-in-out, color .3s ease-in-out;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: $neutral-light;
+          color: $link-text;
+
+          &,
+          .left-component,
+          .right-component {
+            color: $link-text;
+          }
+        }
+      }
+    }
+
+    &.non-clickable {
+      span {
+        color: $main-text;
+        cursor: default;
+        line-height: 1;
+      }
+    }
+
+    hr {
+      height: 0;
+      margin-bottom: 0;
+      margin-top: 0;
+      padding: 0;
+      width: 0;
+    }
+
+    &:first-of-type {
+      border-radius: 4px 4px 0 0;
+
+      a,
+      button {
+        border-radius: 4px 4px 0 0;
+      }
+    }
+
+    &:last-of-type {
+      border-radius: 0 0 4px 4px;
+
+      a,
+      button {
+        border-radius: 0 0 4px 4px;
+      }
+    }
+
+    &:only-of-type {
+      border-radius: 4px;
+    }
+
+    > * {
+      padding: 1em;
+      text-align: inherit;
+    }
+
+    a,
+    button,
+    span {
+      border-radius: 0;
+      color: $main-text;
+      cursor: pointer;
+      line-height: 1;
+
+      span {
+        &.left-component {
+          margin-right: 3px;
+        }
+
+        &.right-component {
+          margin-left: 3px;
+        }
+      }
+    }
+  }
+}
+
+:local(.dropdownMenu) {
+  &.dd-menu {
+    .toggle-component {
+      cursor: pointer;
+      line-height: 0;
+      margin-bottom: 0;
+
+      button {
+        margin-bottom: 0;
+      }
+    }
+
+    div.dd-menu-items {  // sass-lint:disable-line force-element-nesting no-qualifying-elements
+      margin: .5rem 0;
+      width: min-content;
+
+      ul {
+        border-radius: $global-radius;
+        min-width: 140px;
+
+        .dd-items-center {
+          display: block;
+
+          li {
+            display: block;
+          }
+        }
+
+        @include dd-list-item;
+      }
+    }
+  }
+}
