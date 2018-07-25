@@ -221,7 +221,27 @@ export class SelectInput extends React.PureComponent<SelectInputProps, SelectInp
 
     let value = this.props.value
 
-    const base:any = {}
+    const base:any = {
+      name: multi ? `${name}[]` : name,
+      resetValue,
+      clearable,
+      multi,
+      onChange: handleChange,
+      value: !isFetching ? value || this.state.preselectValue : '',
+      className: classNames({'is-invalid-input': isInvalid}, `react-select-${name}`),
+      disabled: isDisabled,
+      isLoading: isFetching,
+      placeholder,
+      onBlurResetsInput,
+      onSelectResetsInput,
+      onCloseResetsInput,
+      optionComponent,
+      autoFocus,
+      openOnFocus,
+      onOpen,
+      filterOptions,
+      noResultsText
+    }
 
     if (promiseOptions) {
       base.loadOptions = this.promiseOptions
