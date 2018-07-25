@@ -18,7 +18,7 @@
     "noImplicitAny": true,
     "skipLibCheck": true,
     "rootDir": "./src",
-    "outDir": "./es",
+    "outDir": "./types",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "paths": {
