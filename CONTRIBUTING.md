@@ -11,7 +11,7 @@ This file contains a set of guidelines for contributing to UI-Components. Guidel
 [Code Standard](#code-standard)
   * [Folder Structure](#folder-structure)
       * [Structure Overview](#structure-overview)
-      * [Structure Explains](#structure-explains)
+      * [Structure Explained](#structure-explained)
   * [Styleguide Structure](#styleguide-structure)
   * [Child Component](#child-component)
   * [Request Change of Code Standard](#request-change-of-code-standard)
@@ -25,37 +25,50 @@ This file contains a set of guidelines for contributing to UI-Components. Guidel
 ```
 /src
   /common 🡓 Children folders are always plural, PascalCase
+    /index.ts
     /types
     /sass
   /domain 🡓 Children folders are always plural, PascalCase
+    /index.ts
     /Pills 🡐 Always create even if there is only one component
+      /index.ts
       /Pill 🡐 Always singular, PascalCase
+        /index.ts
     /Timelines 🡐 Must be generic/high level
+      /index.ts
       /VerticalTimeline
+        /index.ts
         /VerticalTimelineEvent
+          /index.ts
     /Buttons
+      /index.ts
       /BaseButton
+        /index.ts
       /LinkButton
+        /index.ts
     /Charts
+      /index.ts
       /RadarChart
+        /index.ts
       /TimeBasedLineChart
+        /index.ts
 ```
 
-#### Structure Explains
+#### Structure Explained
 
 **Common**
 
 Common folder stores all non-component specific files such as helpers, global sass, types, etc.
 
-If you files are being used in other components,
-it does NOT mean that you should put your file in the common.
+It does NOT mean that you should put your file in the common
+if it is being used in other components,
 
 When your file can be put inside a component,
 you should group it together with your component (e.g. `getColor `in `Color` component).
 
 You should only create your files here when you are having difficulty to classify it by component.
 
-Import by alias is available
+Import by alias is possible
 
 ```typescript
 import { Props } from '@Common/types'
@@ -69,7 +82,9 @@ You should always create your component within a given domain or create one.
 
 Each domain exports its publicly available resource using `index.ts`.
 
-Import by alias is available
+The use of `export *` is allowed in Domain level given it has a proper control in the Component level.
+
+Import by alias is possible
 
 ```typescript
 import { Button } from '@Domain/Buttons'
