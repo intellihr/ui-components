@@ -58,7 +58,7 @@ typings/
 .env
 
 # Compiled and built files
-es/
+types/
 assets/
 dist/
 styleguide/

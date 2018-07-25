@@ -3,10 +3,10 @@
   "description": "A common React components library that is used in our company",
   "version": "1.0.5-beta.63",
   "main": "./dist/",
-  "types": "./es/index.d.ts",
+  "types": "./types/index.d.ts",
   "files": [
     "es",
-    "dist"
+    "types"
   ],
   "peerDependencies": {
     "foundation-sites": "^6.4.3",
