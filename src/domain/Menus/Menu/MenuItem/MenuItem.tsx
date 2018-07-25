@@ -1,6 +1,6 @@
 import React from 'react'
 import { MenuItemAnchorWrapper, IconWrapper, LoadingIconWrapper, MenuItemWrapper } from './style'
-import { FontAwesomeIcon } from '../../Icons'
+import { FontAwesomeIcon } from '@Domain/Icons'
 
 export interface IMenuItemProps {
   /** HTML id to use for the menu */
