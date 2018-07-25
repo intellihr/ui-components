@@ -154,6 +154,11 @@ $color-styles: (
 
     &:only-of-type {
       border-radius: 4px;
+
+      a,
+      button {
+        border-radius: 4px;
+      }
     }
 
     > * {
