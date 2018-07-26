@@ -49,21 +49,29 @@ exports[`<ActionLink /> should render an action link 1`] = `
 `;
 
 exports[`<ActionLink /> should render an action link with a replacement anchor tag 1`] = `
-<WithAnchor
-  href="#"
+<DefaultsProvider
+  value={
+    Object {
+      "AnchorComponent": [Function],
+    }
+  }
 >
-  <Anchor
+  <WithAnchor
     href="#"
   >
-    <AnchorComponent
+    <Anchor
       href="#"
     >
-      <a
-        href="/allTheFeelsUgh"
+      <AnchorComponent
+        href="#"
       >
-        Replacement default text
-      </a>
-    </AnchorComponent>
-  </Anchor>
-</WithAnchor>
+        <a
+          href="/allTheFeelsUgh"
+        >
+          Replacement default text
+        </a>
+      </AnchorComponent>
+    </Anchor>
+  </WithAnchor>
+</DefaultsProvider>
 `;
