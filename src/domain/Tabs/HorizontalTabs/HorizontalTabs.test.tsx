@@ -99,7 +99,7 @@ describe('<HorizontalTabs />', () => {
 
     const wrapper = mount(
       <HorizontalTabs
-        tabs = {[
+        tabs={[
           {
             title: 'Tab 1',
             content: 'Some cool content'
