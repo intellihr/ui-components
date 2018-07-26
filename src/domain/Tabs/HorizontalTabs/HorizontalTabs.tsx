@@ -40,7 +40,7 @@ export interface HorizontalTabsProps {
   defaultTab?: string | number
 
   /** Callback to run when clicking between tabs */
-  callback?: (tab: HorizontalTabDefinition) => void
+  onTabChange?: (tab: HorizontalTabDefinition) => void
 }
 
 export interface HorizontalTabsState {
@@ -78,15 +78,15 @@ export class HorizontalTabs extends React.Component<HorizontalTabsProps, Horizon
   clickTabHandler = (event: MouseEvent<HTMLAnchorElement>) => {
     const {
       tabs,
-      callback
+      onTabChange
     } = this.props
 
     const { currentTabIndex } = this.state
 
     const newTabIndex = toNumber(event.currentTarget.dataset.tabindex || 0)
 
-    if (callback && (currentTabIndex !== newTabIndex)) {
-      callback(tabs[newTabIndex])
+    if (onTabChange && (currentTabIndex !== newTabIndex)) {
+      onTabChange(tabs[newTabIndex])
     }
 
     this.setState({ currentTabIndex: newTabIndex })

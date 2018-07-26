@@ -87,7 +87,7 @@ class TabsExample extends React.PureComponent {
   render () {
     return (
       <HorizontalTabs
-        callback={this.callbackExample}
+        onTabChange={this.callbackExample}
         tabs={[
           {
             title: 'Tab 1',

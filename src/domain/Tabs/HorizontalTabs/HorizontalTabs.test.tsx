@@ -109,7 +109,7 @@ describe('<HorizontalTabs />', () => {
 
     const wrapper = mount(
       <HorizontalTabs
-        callback={callbackMock}
+        onTabChange={callbackMock}
         tabs={[
           {
             title: 'Tab 1',
