@@ -38,6 +38,9 @@ export interface HorizontalTabsProps {
 
   /** The tab to start opened to (by anchorId or index) */
   defaultTab?: string | number
+
+  /** Callback to run when clicking between tabs */
+  onTabChange?: (tab: HorizontalTabDefinition) => void
 }
 
 export interface HorizontalTabsState {
@@ -73,9 +76,20 @@ export class HorizontalTabs extends React.Component<HorizontalTabsProps, Horizon
   }
 
   clickTabHandler = (event: MouseEvent<HTMLAnchorElement>) => {
-    const tabIndex = toNumber(event.currentTarget.dataset.tabindex || 0)
+    const {
+      tabs,
+      onTabChange
+    } = this.props
 
-    this.setState({ currentTabIndex: tabIndex })
+    const { currentTabIndex } = this.state
+
+    const newTabIndex = toNumber(event.currentTarget.dataset.tabindex || 0)
+
+    if (onTabChange && (currentTabIndex !== newTabIndex)) {
+      onTabChange(tabs[newTabIndex])
+    }
+
+    this.setState({ currentTabIndex: newTabIndex })
   }
 
   sideComponent = (

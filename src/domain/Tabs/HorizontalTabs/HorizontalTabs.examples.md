@@ -70,3 +70,37 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
   useAnchors
 />
 ```
+
+#### Callback on tab change
+
+```jsx
+const React = require('react')
+const { Props } = require('../../../')
+
+class TabsExample extends React.PureComponent {
+  callbackExample (tab) {
+    if (tab.title === 'Tab 2') {
+      alert('Called an alert when you opened this tab!')
+    }
+  }
+
+  render () {
+    return (
+      <HorizontalTabs
+        onTabChange={this.callbackExample}
+        tabs={[
+          {
+            title: 'Tab 1',
+            content: 'Some cool content'
+          },
+          {
+            title: 'Tab 2',
+            content: 'I will show an alert as a part of my callback!'
+          }
+        ]}
+      />
+    )
+  }
+}
+<TabsExample />
+```
