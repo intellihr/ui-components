@@ -78,13 +78,16 @@ const React = require('react')
 const { Props } = require('../../../')
 
 class TabsExample extends React.PureComponent {
-  callbackExample () {
-    alert('Called an alert when you opened this tab!')
+  callbackExample (tab) {
+    if (tab.title == 'Tab 1') {
+      alert('Called an alert when you opened this tab!')
+    }
   }
 
   render () {
     return (
       <HorizontalTabs
+        callback={this.callbackExample}
         tabs={[
           {
             title: 'Tab 1',
@@ -92,8 +95,7 @@ class TabsExample extends React.PureComponent {
           },
           {
             title: 'Tab 2',
-            content: 'Some more cool content',
-            callback: this.callbackExample
+            content: 'Some more cool content'
           }
         ]}
       />

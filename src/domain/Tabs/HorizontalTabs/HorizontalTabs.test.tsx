@@ -94,11 +94,22 @@ describe('<HorizontalTabs />', () => {
   })
 
   describe('Clicking a tab with a callback function', () => {
-    const callbackMock = jest.fn()
-    const callbackNotCalledMock = jest.fn()
+    const doSomethingMock = jest.fn()
+    const doSomethingElseMock = jest.fn()
+
+    const callbackMock = (tab) => {
+      if (tab.title == 'Tab 2') {
+        doSomethingMock()
+      }
+
+      if (tab.title == 'Tab 3') {
+        doSomethingElseMock()
+      }
+    }
 
     const wrapper = mount(
       <HorizontalTabs
+        callback={callbackMock}
         tabs={[
           {
             title: 'Tab 1',
@@ -107,14 +118,12 @@ describe('<HorizontalTabs />', () => {
           {
             title: 'Tab 2',
             content: 'Some more cool content',
-            anchorId: '#second',
-            callback: callbackMock
+            anchorId: '#second'
           },
           {
             title: 'Tab 3',
             content: 'Some other content',
-            anchorId: '#third',
-            callback: callbackNotCalledMock
+            anchorId: '#third'
           }
         ]}
       />
@@ -129,11 +138,11 @@ describe('<HorizontalTabs />', () => {
     })
 
     it('should call the callback function on the tab opened', () => {
-      expect(callbackMock).toBeCalled()
+      expect(doSomethingMock).toBeCalled()
     })
 
     it('should not call the callback function on tab not opened', () => {
-      expect(callbackNotCalledMock).not.toBeCalled()
+      expect(doSomethingElseMock).not.toBeCalled()
     })
   })
 })
