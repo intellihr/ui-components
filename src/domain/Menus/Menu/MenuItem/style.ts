@@ -43,9 +43,18 @@ const LoadingIconWrapper = styled.span`
   float: right;
 `
 
+const SubMenuWrapper = styled.ul`
+  margin: 0;
+  
+  a {
+    padding-left: 2.8rem;
+  }
+`
+
 export {
   MenuItemWrapper,
   MenuItemAnchorWrapper,
   IconWrapper,
-  LoadingIconWrapper
+  LoadingIconWrapper,
+  SubMenuWrapper
 }

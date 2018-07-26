@@ -10,6 +10,70 @@ exports[`<MenuItem /> should render a a menu item with a link 1`] = `
 </styled.li>
 `;
 
+exports[`<MenuItem /> should render a menu item as a submenu if it has children 1`] = `
+<Collapsible
+  className=""
+  classParentString="Collapsible"
+  contentInnerClassName=""
+  contentOuterClassName=""
+  easing="linear"
+  lazyRender={false}
+  onClose={[Function]}
+  onClosing={[Function]}
+  onOpen={[Function]}
+  onOpening={[Function]}
+  open={false}
+  openedClassName=""
+  overflowWhenOpen="hidden"
+  tabIndex={null}
+  transitionCloseTime={null}
+  transitionTime={250}
+  trigger={
+    <styled.li
+      className={undefined}
+    >
+      <styled.a
+        href="www.google.com"
+      >
+        <styled.span>
+          <IntelliIcon
+            type="clock"
+          />
+        </styled.span>
+        Father
+      </styled.a>
+    </styled.li>
+  }
+  triggerClassName=""
+  triggerDisabled={false}
+  triggerOpenedClassName=""
+  triggerSibling={null}
+  triggerStyle={null}
+  triggerTagName="span"
+>
+  <styled.ul>
+    <MenuItem
+      icon={
+        <IntelliIcon
+          type="clock"
+        />
+      }
+      label="Son"
+      url="www.google.com"
+    />
+    <MenuItem
+      icon={
+        <IntelliIcon
+          type="clock"
+        />
+      }
+      label="Devil"
+      url="www.google.com"
+    />
+  </styled.ul>
+</Collapsible>
+`;
+
 exports[`<MenuItem /> should render a menu item with Icon 1`] = `
 <styled.li>
   <styled.a

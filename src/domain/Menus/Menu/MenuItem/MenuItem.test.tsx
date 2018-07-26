@@ -61,4 +61,27 @@ describe('<MenuItem />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it('should render a menu item as a submenu if it has children', () => {
+    const wrapper = shallow(
+      <MenuItem
+        url='www.google.com'
+        label='Father'
+        icon={<IntelliIcon type={'clock'} />}
+      >
+        <MenuItem
+          url='www.google.com'
+          label='Son'
+          icon={<IntelliIcon type={'clock'} />}
+        />
+        <MenuItem
+          url='www.google.com'
+          label='Devil'
+          icon={<IntelliIcon type={'clock'} />}
+        />
+      </MenuItem>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })

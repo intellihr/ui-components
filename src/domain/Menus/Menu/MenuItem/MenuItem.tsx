@@ -1,5 +1,6 @@
 import React from 'react'
-import { MenuItemAnchorWrapper, IconWrapper, LoadingIconWrapper, MenuItemWrapper } from './style'
+import Collapsible from 'react-collapsible'
+import { MenuItemAnchorWrapper, IconWrapper, LoadingIconWrapper, MenuItemWrapper, SubMenuWrapper } from './style'
 import { FontAwesomeIcon } from '@Domain/Icons'
 
 export interface IMenuItemProps {
@@ -10,6 +11,8 @@ export interface IMenuItemProps {
   render?: (label: string, iconContent: JSX.Element | null, url?: string) => JSX.Element
   className?: string
   isLoading?: boolean
+  isOpen?: boolean
+  handleSizeChange?: () => void
 }
 
 export class MenuItem extends React.PureComponent<IMenuItemProps> {
@@ -47,7 +50,8 @@ export class MenuItem extends React.PureComponent<IMenuItemProps> {
     const {
       render,
       url,
-      label
+      label,
+      className
     } = this.props
 
     if (render) {
@@ -55,25 +59,39 @@ export class MenuItem extends React.PureComponent<IMenuItemProps> {
     }
 
     return (
-      <MenuItemAnchorWrapper href={url}>
-        {this.icon}
-        {label}
-        {this.loadingIcon}
-      </MenuItemAnchorWrapper>
+      <MenuItemWrapper className={className}>
+        <MenuItemAnchorWrapper href={url}>
+          {this.icon}
+          {label}
+          {this.loadingIcon}
+        </MenuItemAnchorWrapper>
+      </MenuItemWrapper>
     )
   }
 
   public render (): JSX.Element {
     const {
       children,
-      className
+      isOpen,
+      handleSizeChange
     } = this.props
 
-    return (
-      <MenuItemWrapper className={className}>
-        {this.component}
-        {children}
-      </MenuItemWrapper>
-    )
+    if (children) {
+      return (
+        <Collapsible
+          trigger={this.component}
+          open={isOpen}
+          transitionTime={250}
+          onOpen={handleSizeChange}
+          onClose={handleSizeChange}
+        >
+          <SubMenuWrapper>
+            {children}
+          </SubMenuWrapper>
+        </Collapsible>
+      )
+    }
+
+    return this.component
   }
 }

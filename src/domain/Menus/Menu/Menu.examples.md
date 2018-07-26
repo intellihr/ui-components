@@ -2,16 +2,13 @@
 
 ```jsx
 const { MenuItem } = require('./MenuItem');
-const { SubMenu } = require('./SubMenu');
 const { FontAwesomeIcon } = require('@Domain/Icons');
 
 <Menu>
-  <SubMenu triggerComponent={
-    <MenuItem
-      icon={<FontAwesomeIcon type='star' />}
-      label='Item 1'
-    />
-  }>
+  <MenuItem
+    icon={<FontAwesomeIcon type='star' />}
+    label='Item 1'
+  >
     <MenuItem
       url='#'
       label='Item 1A'
@@ -20,19 +17,15 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
       url='#'
       label='Item 1B'
     />
-  </SubMenu>
+  </MenuItem>
   <MenuItem
     isActive={true}
     url='#'
     label='Item 2'
   /> 
-  <SubMenu 
+  <MenuItem 
     isOpen={true}
-    triggerComponent={
-      <MenuItem
-        label='Item 3'
-      />
-    }
+    label='Item 3'
   >
     <MenuItem
       url='#'
@@ -43,7 +36,7 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
       label='Item 3B'
       className='active'
     />
-  </SubMenu>
+  </MenuItem>
 </Menu>
 ```
 
@@ -51,16 +44,13 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 
 ```jsx
 const { MenuItem } = require('./MenuItem');
-const { SubMenu } = require('./SubMenu');
 const { FontAwesomeIcon } = require('@Domain/Icons');
 
 <Menu>
-  <SubMenu triggerComponent={
-    <MenuItem
-      icon={<FontAwesomeIcon type='star' />}
-      label='Item 1'
-    />
-  }>
+  <MenuItem
+    icon={<FontAwesomeIcon type='star' />}
+    label='Item 1'
+  >
     <MenuItem
       url='#'
       label='Item 1A'
@@ -69,19 +59,16 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
       url='#'
       label='Item 1B'
     />
-  </SubMenu>
+  </MenuItem>
   <MenuItem
+    isActive={true}
     isLoading={true}
     url='#'
     label='Item 2'
   /> 
-  <SubMenu 
+  <MenuItem 
     isOpen={true}
-    triggerComponent={
-      <MenuItem
-        label='Item 3'
-      />
-    }
+    label='Item 3'
   >
     <MenuItem
       url='#'
@@ -92,6 +79,6 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
       label='Item 3B'
       className='active'
     />
-  </SubMenu>
+  </MenuItem>
 </Menu>
 ```
