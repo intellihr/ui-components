@@ -5,8 +5,8 @@
   "main": "./dist/",
   "types": "./types/index.d.ts",
   "files": [
-    "es",
-    "types"
+    "types",
+    "dist"
   ],
   "peerDependencies": {
     "foundation-sites": "^6.4.3",
