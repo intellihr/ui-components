@@ -117,7 +117,7 @@ build-bundle:
     - docker-compose run --rm gitlab-ci yarn build
   artifacts:
     paths:
-      - es/
+      - types/
       - dist/
   only:
     refs:
