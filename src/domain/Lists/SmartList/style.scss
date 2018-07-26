@@ -1,0 +1,93 @@
+@import '../../../common/sass/foundation_settings';
+@import '../../../common/sass/components/typography';
+
+$smart-list-bg-color-alert: lighten($alert-light, 3%);
+$smart-list-bg-hover-color-alert: lighten($alert-light, 1%);
+
+:local(.SmartList) {
+  .list-title {
+    @extend %section-header;
+
+    margin: 16px 0;
+  }
+
+  .header-row {
+    padding: 0 10px 10px;
+  }
+
+  .cursor-auto {
+    cursor: auto;
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+  .vertical-align-center {
+    margin-top: .6%;
+  }
+
+  .show-all-row {
+    color: $dark-gray;
+    font-weight: 600;
+    padding-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .hide-row {
+    display: none;
+  }
+
+  &.hover-bg {
+    .item-row {
+      &:hover {
+        background-color: $main-background-hover;
+      }
+    }
+  }
+
+  .item-row {
+    align-items: center;
+    border-top: 1px solid $border-light;
+    color: $main-text;
+    min-height: 80px;
+    padding: 10px;
+    position: relative;
+    top: 50%;
+    transition: background-color .15s ease-in;
+
+    .dd-menu {
+      border-radius: $global-radius;
+      transition: background-color .2s ease-in;
+
+      button {
+        &.option {
+          padding: 10px 5px;
+        }
+      }
+
+      &:hover {
+        background-color: $border-light;
+      }
+
+      .fa-ellipsis-v {
+        font-size: 24px;
+      }
+
+      a {
+        &:hover {
+          background-color: $sidebar;
+        }
+      }
+    }
+
+    &.alert {
+      background-color: $smart-list-bg-color-alert;
+
+      &:hover {
+        background-color: $smart-list-bg-hover-color-alert;
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ActionLink /> should render an action link 1`] = `
+.c0 {
+  color: inherit;
+}
+
+.c0:hover,
+.c0:visited,
+.c0:active,
+.c0:focus {
+  color: inherit;
+}
+
+.c1 {
+  color: rgb(5,87,223);
+  font-weight: 600;
+  font-size: .9375rem;
+  text-transform: uppercase;
+}
+
+<WithAnchor
+  href="/lol"
+>
+  <Anchor
+    href="/lol"
+  >
+    <styled.a
+      href="/lol"
+    >
+      <a
+        className="c0"
+        href="/lol"
+      >
+        <styled.span
+          href="/lol"
+        >
+          <span
+            className="c1"
+            href="/lol"
+          >
+            Grrr I am action man
+          </span>
+        </styled.span>
+      </a>
+    </styled.a>
+  </Anchor>
+</WithAnchor>
+`;
+
+exports[`<ActionLink /> should render an action link with a replacement anchor tag 1`] = `
+<DefaultsProvider
+  value={
+    Object {
+      "AnchorComponent": [Function],
+    }
+  }
+>
+  <WithAnchor
+    href="#"
+  >
+    <Anchor
+      href="#"
+    >
+      <AnchorComponent
+        href="#"
+      >
+        <a
+          href="/allTheFeelsUgh"
+        >
+          Replacement default text
+        </a>
+      </AnchorComponent>
+    </Anchor>
+  </WithAnchor>
+</DefaultsProvider>
+`;

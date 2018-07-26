@@ -2,6 +2,8 @@
 
 A common React components library that is used in our company.
 
+Please check our [CONTRIBUTING.md](/CONTRIBUTING.md) before contribute.
+
 ## Badges
 
 ### Master
@@ -18,6 +20,7 @@ A common React components library that is used in our company.
 
 * [Get Started (Integrate to Your Project)](#get-started-integrate-to-your-project)
 * [Local Development Guide](#local-development-guide)
+    * [Contributing](#contributing)
     * [Yarn Link](#yarn-link)
         * [Issue with `styled-components`](#issue-with-styled-components)
     * [Add Dependency](#add-dependency)
@@ -78,6 +81,12 @@ A common React components library that is used in our company.
     ```
 
 ## Local Development Guide
+
+### Contributing
+
+Please check our [CONTRIBUTING.md](/CONTRIBUTING.md) before contribute.
+
+It contains all the coding standard and other important information in regards to contributing.
 
 ### Yarn Link
 

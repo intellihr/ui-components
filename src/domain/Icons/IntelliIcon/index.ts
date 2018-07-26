@@ -1,0 +1,1 @@
+export { IntelliIcon } from './IntelliIcon'

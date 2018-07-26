@@ -8,18 +8,22 @@ module.exports = {
   target: 'web',
   devtool: 'source-map',
   resolve: {
-    extensions: ['.ts', '.tsx', '.jsx', '.js']
+    extensions: ['.ts', '.tsx', '.jsx', '.js'],
+    alias: {
+      '@Common': path.resolve(__dirname, 'src/common'),
+      '@Domain': path.resolve(__dirname, 'src/domain')
+    }
   },
   plugins: [
     new ExtractTextPlugin('[name].css'),
     new CopyWebpackPlugin([{
-      from: path.resolve(__dirname, 'src/sass'),
+      from: path.resolve(__dirname, 'src/common/sass'),
       to: path.resolve(__dirname, 'dist/sass')
     }])
   ],
   entry: {
     index: './src/index.ts',
-    'ui-components': './src/sass/app.scss'
+    'ui-components': './src/common/sass/app.scss'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -121,7 +125,7 @@ module.exports = {
               loader: '@epegzz/sass-vars-loader',
               options: {
                 files: [
-                  path.resolve(__dirname, 'src/sass/colours/index.js')
+                  path.resolve(__dirname, 'src/common/sass/colours/index.js')
                 ]
               }
             }

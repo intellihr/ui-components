@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Modal /> should render a hidden modal 1`] = `
+<class_1
+  ariaHideApp={false}
+  className="modal fixed-medium-up"
+  isOpen={false}
+  overlayClassName="modal-overlay"
+  style={
+    Object {
+      "content": Object {
+        "zIndex": 1011,
+      },
+      "overlay": Object {
+        "zIndex": 1010,
+      },
+    }
+  }
+>
+  This text is hidden
+</class_1>
+`;
+
+exports[`<Modal /> should render a shown modal with no close button 1`] = `
+<class_1
+  ariaHideApp={false}
+  className="modal fixed-medium-up"
+  isOpen={true}
+  overlayClassName="modal-overlay"
+  style={
+    Object {
+      "content": Object {
+        "zIndex": 1011,
+      },
+      "overlay": Object {
+        "zIndex": 1010,
+      },
+    }
+  }
+>
+  This text is shown
+</class_1>
+`;

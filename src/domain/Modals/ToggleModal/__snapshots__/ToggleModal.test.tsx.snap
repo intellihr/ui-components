@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ToggleModal /> should render a modal with a button 1`] = `
+<React.Fragment>
+  <Button
+    iconAlignment="left"
+    onClick={[Function]}
+    type="primary"
+  >
+    Click Me
+  </Button>
+  <Modal
+    handleClose={[Function]}
+    isOpen={false}
+    modalZLevel={0}
+    size="medium"
+  >
+    Hello this is a Modal
+  </Modal>
+</React.Fragment>
+`;

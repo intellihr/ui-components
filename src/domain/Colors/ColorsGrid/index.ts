@@ -1,0 +1,1 @@
+export { ColorsGrid } from './ColorsGrid'
