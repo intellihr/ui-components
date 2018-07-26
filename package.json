@@ -1,12 +1,12 @@
 {
   "name": "@intellihr/ui-components",
   "description": "A common React components library that is used in our company",
-  "version": "1.0.5-beta.63",
+  "version": "1.0.5-beta.64",
   "main": "./dist/",
   "types": "./types/index.d.ts",
   "files": [
-    "es",
-    "types"
+    "types",
+    "dist"
   ],
   "peerDependencies": {
     "foundation-sites": "^6.4.3",
