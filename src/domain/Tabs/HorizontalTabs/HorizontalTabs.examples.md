@@ -79,7 +79,7 @@ const { Props } = require('../../../')
 
 class TabsExample extends React.PureComponent {
   callbackExample (tab) {
-    if (tab.title == 'Tab 1') {
+    if (tab.title == 'Tab 2') {
       alert('Called an alert when you opened this tab!')
     }
   }
@@ -95,7 +95,7 @@ class TabsExample extends React.PureComponent {
           },
           {
             title: 'Tab 2',
-            content: 'Some more cool content'
+            content: 'I will show an alert as a part of my callback!'
           }
         ]}
       />
