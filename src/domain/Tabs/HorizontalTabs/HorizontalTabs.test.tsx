@@ -133,7 +133,7 @@ describe('<HorizontalTabs />', () => {
     })
 
     it('should not call the callback function on tab not opened', () => {
-      expect(callbackNotCalledMock).not.toHaveBeenCalled()
+      expect(callbackNotCalledMock).not.toBeCalled()
     })
   })
 })
