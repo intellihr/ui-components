@@ -27,6 +27,9 @@ export interface HorizontalTabDefinition {
 
   /** Content to place inside the actual tab */
   content: JSX.Element | string
+
+  /** Callback to run when clicking between tabs */
+  callback?: () => void
 }
 
 export interface HorizontalTabsProps {
@@ -73,9 +76,17 @@ export class HorizontalTabs extends React.Component<HorizontalTabsProps, Horizon
   }
 
   clickTabHandler = (event: MouseEvent<HTMLAnchorElement>) => {
-    const tabIndex = toNumber(event.currentTarget.dataset.tabindex || 0)
+    const { tabs } = this.props
+    const { currentTabIndex } = this.state
 
-    this.setState({ currentTabIndex: tabIndex })
+    const newTabIndex = toNumber(event.currentTarget.dataset.tabindex || 0)
+    const callback = tabs[newTabIndex].callback
+
+    if (callback && (currentTabIndex !== newTabIndex)) {
+      callback()
+    }
+
+    this.setState({ currentTabIndex: newTabIndex })
   }
 
   sideComponent = (

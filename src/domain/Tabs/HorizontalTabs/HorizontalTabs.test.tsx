@@ -92,4 +92,48 @@ describe('<HorizontalTabs />', () => {
       expect(wrapper.contains('Some more cool content')).toBeTruthy()
     })
   })
+
+  describe('Clicking a tab with a callback function', () => {
+    const callbackMock = jest.fn()
+    const callbackNotCalledMock = jest.fn()
+
+    const wrapper = mount(
+      <HorizontalTabs
+        tabs = {[
+          {
+            title: 'Tab 1',
+            content: 'Some cool content'
+          },
+          {
+            title: 'Tab 2',
+            content: 'Some more cool content',
+            anchorId: '#second',
+            callback: callbackMock
+          },
+          {
+            title: 'Tab 3',
+            content: 'Some other content',
+            anchorId: '#third',
+            callback: callbackNotCalledMock
+          }
+        ]}
+      />
+    )
+
+    const tabAnchor = wrapper.find({'data-tabindex': 1}).at(0)
+
+    tabAnchor.simulate('click')
+
+    it('should render the correct content', () => {
+      expect(wrapper.contains('Some more cool content')).toBeTruthy()
+    })
+
+    it('should call the callback function on the tab opened', () => {
+      expect(callbackMock).toBeCalled()
+    })
+
+    it('should not call the callback function on tab not opened', () => {
+      expect(callbackNotCalledMock).not.toHaveBeenCalled()
+    })
+  })
 })
