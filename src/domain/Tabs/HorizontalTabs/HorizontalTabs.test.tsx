@@ -98,11 +98,11 @@ describe('<HorizontalTabs />', () => {
     const doSomethingElseMock = jest.fn()
 
     const callbackMock = (tab) => {
-      if (tab.title == 'Tab 2') {
+      if (tab.title === 'Tab 2') {
         doSomethingMock()
       }
 
-      if (tab.title == 'Tab 3') {
+      if (tab.title === 'Tab 3') {
         doSomethingElseMock()
       }
     }
