@@ -1,25 +1,42 @@
 import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
 
-const MenuItemAnchorWrapper = styled.a`
-  padding: 1 rem;
-  display: flex;
-  align-items: center;
-`
+const MenuWrapper = styled.ul`
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  
+  li {
+    display: block;
+  }
 
-const IconWrapper = styled.span`
-  margin-right: 0.2rem;
-  width: 1.28571em;
-  text-align: center;
-  vertical-align: top;
-`
+  .Collapsible__trigger {
+    a {
+      position: relative;
 
-const LoadingIconWrapper = styled.span`
-  float: right;
+      &::after {
+        content: '\\e920';
+        display: inline-block;
+        font-family: 'intellihr';
+        position: absolute;
+        right: 1rem;
+      }
+    }
+
+    &.is-open {
+      a {
+        font-weight: 600;
+
+        &::after {
+          font-weight: initial;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
 `
 
 export {
-  MenuItemAnchorWrapper,
-  IconWrapper,
-  LoadingIconWrapper
+  MenuWrapper
 }

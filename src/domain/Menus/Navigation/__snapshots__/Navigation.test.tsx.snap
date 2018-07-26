@@ -7,12 +7,7 @@ exports[`<Navigation /> should render a simple navigation Menu 1`] = `
   data-off-canvas={true}
   id="offCanvasLeft"
 >
-  <Menu
-    className="ihr-nav vertical menu"
-    id="menu"
-    isAccordion={true}
-    isNested={false}
-  >
+  <Menu>
     <MenuItem
       icon={
         <IntelliIcon

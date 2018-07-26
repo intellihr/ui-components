@@ -13,17 +13,4 @@ describe('<Menu />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
-
-  it(`should render an accordion menu`, () => {
-    const wrapper = shallow(
-      <Menu
-        id='test-menu'
-        isAccordion
-      >
-        <li>Hello I am the child!</li>
-      </Menu>
-    )
-
-    expect(wrapper).toMatchSnapshot()
-  })
 })
