@@ -5,5 +5,6 @@ declare module 'foundation-sites'
 declare module 'react-styled-flexboxgrid'
 declare module 'react-string-replace'
 declare module 'react-dd-menu'
+declare module 'styled-transition-group'
 declare module '@intellihr/styled-components-breakpoint'
 declare let Foundation: any
