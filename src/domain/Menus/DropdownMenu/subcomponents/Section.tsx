@@ -4,7 +4,6 @@ import { StyledSection } from './style'
 
 type DropdownMenuSectionType =
   'default'
-  | 'nonClickable'
   | 'alert'
   | 'stripAlert'
   | 'stripSuccess'
@@ -25,16 +24,39 @@ interface IDropdownMenuSectionProps {
   /** A link that will be navigated to on click */
   href?: string,
   /** Event handler when the section is clicked */
-  onClick?: (event: React.SyntheticEvent<any>) => void
+  onClick?: (event: React.SyntheticEvent<HTMLLIElement>) => void
+  /** Should this section close the menu when clicked?
+   *  Defaults to closing when onClick or href is provided; can overwrite with this prop */
+  closeDropdownBehaviour?:  'always' | 'never' | 'whenActionProvided',
   /** An override component that will render instead of the inbuilt components */
   component?: JSX.Element,
-  /** any extra props to pass to the component */
-  componentProps?: any
+  /** Any extra props to pass to the component */
+  componentProps?: any,
+  /** Internal prop used for closing the section */
+  __closeMenuCallback: (event: React.SyntheticEvent<HTMLLIElement>, section: IDropdownMenuSectionProps) => void
 }
 
 class Section extends React.PureComponent<IDropdownMenuSectionProps, never> {
   public static defaultProps: Partial<IDropdownMenuSectionProps> = {
-    sectionType: 'default'
+    sectionType: 'default',
+    closeDropdownBehaviour: 'whenActionProvided'
+  }
+
+  private handleCloseMenuClick = (event: React.SyntheticEvent<HTMLLIElement>) => {
+    const {
+      href,
+      onClick,
+      closeDropdownBehaviour,
+      __closeMenuCallback
+    } = this.props
+
+    if (closeDropdownBehaviour === 'always') {
+      __closeMenuCallback(event, this.props)
+    }
+
+    if (closeDropdownBehaviour === 'whenActionProvided' && (!!href || !!onClick)) {
+      __closeMenuCallback(event, this.props)
+    }
   }
 
   private get component () {
@@ -63,7 +85,8 @@ class Section extends React.PureComponent<IDropdownMenuSectionProps, never> {
 
     return {
       clickable: !!href || !!onClick,
-      sectionType: sectionType || 'default'
+      sectionType: sectionType || 'default',
+      onClick: this.handleCloseMenuClick
     }
   }
 

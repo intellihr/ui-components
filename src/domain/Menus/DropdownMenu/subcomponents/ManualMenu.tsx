@@ -119,13 +119,15 @@ class ManualMenu extends React.PureComponent<IDropdownManualMenuProps, never> {
 
   private get dropdownSections () {
     const {
-      sections
+      sections,
+      onDropdownClose
     } = this.props
 
     return map(sections, (section, index) => {
       return (
         <Section
           key={index}
+          __closeMenuCallback={onDropdownClose}
           {...section}
         />
       )
