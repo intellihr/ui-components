@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@Domain/Icons'
 import { DefaultDropdownButton, StyledToggleContainer } from './subcomponents/style'
 import { DropdownPosition, ManualMenu } from './subcomponents/ManualMenu'
 import { IDropdownMenuSectionProps, Section } from './subcomponents/Section'
-import { Portal } from './subcomponents/Portal'
 
 interface IDropdownMenuState {
   isMenuOpen: boolean
@@ -26,7 +25,6 @@ interface IDropdownMenuProps {
 class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenuState> {
   public static ManualMenu = ManualMenu
   public static Section = Section
-  public static Portal = Portal
   public static DefaultDropdownButton = DefaultDropdownButton
 
   public state: IDropdownMenuState = { isMenuOpen: false }

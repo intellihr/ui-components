@@ -1,6 +1,5 @@
 import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
-import transition from 'styled-transition-group'
 import { getColor } from '@Domain/Colors'
 import { DropdownMenuSectionType } from './Section'
 
@@ -34,33 +33,21 @@ const StyledToggleContainer = styled.span`
   margin-bottom: 0;
 `
 
-const StyledMenuContainer = styled.div`
+const StyledDropdownMenu = styled.div`
   margin: .5rem 0;
   position: absolute;
   width: min-content;
-`
+  
+  transform: scale(0);
+  transition: transform 150ms cubic-bezier(0.5, 1.8, 0.9, 0.8);
 
-const StyledDropdownAnimation = transition.div`
-  &:enter {
-    transform: scale(0);
-    transition: transform 150ms cubic-bezier(0.5, 1.8, 0.9, 0.8);
-
-    &:enter-active {
-      transform: scale(1);
-    }
-  }
-
-  &:exit {
+  &.entering,
+  &.entered {
     transform: scale(1);
-    transition: transform 150ms cubic-bezier(0.5, 1.8, 0.9, 0.8);
-
-    &:exit-active {
-      transform: scale(0);
-    }
   }
 `
 
-const StyledMenu = styled.ul`
+const StyledSectionList = styled.ul`
   background-color: ${getColor('main-background')};
   border-radius: 4px;
   box-shadow: 0 0 4px rgba(0, 0, 0, .15), 0 2px 4px rgba(0, 0, 0, .29);
@@ -236,9 +223,8 @@ const StyledSection = styled.li`
 export {
   DefaultDropdownButton,
   StyledToggleContainer,
-  StyledMenuContainer,
-  StyledDropdownAnimation,
-  StyledMenu,
+  StyledDropdownMenu,
+  StyledSectionList,
   StyledSection,
   DropdownMenuSectionType
 }

@@ -1,8 +1,9 @@
 import React, { RefObject } from 'react'
 import { map } from 'lodash'
-import { StyledDropdownAnimation, StyledMenu, StyledMenuContainer } from './style'
+import { Transition } from 'react-transition-group'
+import { StyledDropdownMenu, StyledSectionList } from './style'
 import { Section, IDropdownMenuSectionProps } from './Section'
-import { Portal } from './Portal'
+import FocusTrap from 'focus-trap-react'
 
 type DropdownPosition = 'topLeft' | 'topCenter' | 'topRight' | 'bottomLeft' | 'bottomCenter' | 'bottomRight'
 
@@ -41,7 +42,7 @@ class ManualMenu extends React.PureComponent<IDropdownManualMenuProps, never> {
     const boundingRect = parentRef.current.getBoundingClientRect()
 
     return {
-      top: boundingRect.top + boundingRect.height,
+      top: boundingRect.top + boundingRect.height + window.pageYOffset,
       left: boundingRect.left
     }
   }
@@ -61,48 +62,51 @@ class ManualMenu extends React.PureComponent<IDropdownManualMenuProps, never> {
     })
   }
 
-  private get portalContent () {
+  private animatedMenu = (animationState: string) => {
     const {
       className,
       isMenuOpen,
       onDropdownClose
     } = this.props
 
-    if (!isMenuOpen) {
-      return <div/>
-    }
-
     return (
-      <Portal
-        onOutsideClick={onDropdownClose}
+      <StyledDropdownMenu
+        style={this.dropdownPosition}
+        className={animationState}
       >
-        <StyledMenuContainer
-          className={className}
-          style={this.dropdownPosition}
+        <FocusTrap
+          active={isMenuOpen}
+          focusTrapOptions={{
+            onDeactivate: onDropdownClose,
+            initialFocus: document.body,
+            clickOutsideDeactivates: true,
+            returnFocusOnDeactivate: false
+          }}
         >
-          <StyledMenu>
+          <StyledSectionList
+            className={className}
+          >
             {this.dropdownSections}
-          </StyledMenu>
-        </StyledMenuContainer>
-      </Portal>
+          </StyledSectionList>
+        </FocusTrap>
+      </StyledDropdownMenu>
     )
   }
 
-  public render (): JSX.Element | null {
+  public render () {
     const {
       isMenuOpen
     } = this.props
 
     return (
-      <StyledDropdownAnimation
+      <Transition
         in={isMenuOpen}
-        onEnter={() => console.log('lol')}
-        timeout={1500}
-        onEntered={() => console.log('lolwaw')}
-        onExiting={() => console.log('wah')}
+        timeout={100}
+        mountOnEnter
+        unmountOnExit
       >
-        {this.portalContent}
-      </StyledDropdownAnimation>
+        {this.animatedMenu}
+      </Transition>
     )
   }
 }
