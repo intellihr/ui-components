@@ -42,8 +42,8 @@ export interface HorizontalTabsProps {
   /** Callback to run when clicking between tabs */
   onTabChange?: (tab: HorizontalTabDefinition) => void
 
-  /** The current tab */
-  anchorId?: string
+  /** The currently opened tab */
+  currentlyOpenedTab?: string
 }
 
 export interface HorizontalTabsState {
@@ -140,12 +140,14 @@ export class HorizontalTabs extends React.Component<HorizontalTabsProps, Horizon
   get tabTitles (): JSX.Element {
     const {
       tabs,
-      anchorId
+      currentlyOpenedTab
     } = this.props
 
-    const currentTabIndex = this.indexForTab(anchorId)
-    if (currentTabIndex !== this.state.currentTabIndex) {
-      this.setState({ currentTabIndex: currentTabIndex })
+    if (currentlyOpenedTab) {
+      const tabIndex = this.indexForTab(currentlyOpenedTab)
+      if (tabIndex !== this.state.currentTabIndex) {
+        this.setState({ currentTabIndex: tabIndex })
+      }
     }
 
     const tabTitleItems = map(tabs, (tab, index) => (
