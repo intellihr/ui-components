@@ -1,5 +1,4 @@
 import React, { Fragment, ReactNode } from 'react'
-import uuid from 'uuid'
 import classNames from 'classnames'
 import { IBaseButtonProps } from '../services/buttonHelper'
 
@@ -20,7 +19,7 @@ class BaseButton extends React.PureComponent<IBaseButtonProps> {
     if (icon) {
       const iconComponent = (
         <span
-          key={id || uuid.v4()}
+          key={id}
           className={classNames('button-icon', iconAlignment)}
         >
           {icon}
@@ -28,16 +27,16 @@ class BaseButton extends React.PureComponent<IBaseButtonProps> {
       )
 
       if (iconAlignment === 'right') {
-        return <React.Fragment>
+        return <Fragment>
           {children}
           {iconComponent}
-        </React.Fragment>
+        </Fragment>
       }
 
-      return <React.Fragment>
+      return <Fragment>
         {iconComponent}
         {children}
-      </React.Fragment>
+      </Fragment>
     }
 
     return children
