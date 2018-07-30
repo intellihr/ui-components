@@ -62,6 +62,19 @@ export class HorizontalTabs extends React.Component<HorizontalTabsProps, Horizon
     }
   }
 
+  componentDidUpdate () {
+    const {
+      currentlyOpenedTab
+    } = this.props
+
+    if (currentlyOpenedTab) {
+      const tabIndex = this.indexForTab(currentlyOpenedTab)
+      if (tabIndex !== this.state.currentTabIndex) {
+        this.setState({ currentTabIndex: tabIndex })
+      }
+    }
+  }
+
   indexForTab = (tabIdentifier?: number | string): number => {
     const { tabs } = this.props
 
@@ -139,16 +152,8 @@ export class HorizontalTabs extends React.Component<HorizontalTabsProps, Horizon
 
   get tabTitles (): JSX.Element {
     const {
-      tabs,
-      currentlyOpenedTab
+      tabs
     } = this.props
-
-    if (currentlyOpenedTab) {
-      const tabIndex = this.indexForTab(currentlyOpenedTab)
-      if (tabIndex !== this.state.currentTabIndex) {
-        this.setState({ currentTabIndex: tabIndex })
-      }
-    }
 
     const tabTitleItems = map(tabs, (tab, index) => (
       <HorizontalTabTitle key={index}>
