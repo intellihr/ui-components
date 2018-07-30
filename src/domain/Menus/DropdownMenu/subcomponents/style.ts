@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
 import { getColor } from '@Domain/Colors'
 import { DropdownMenuSectionType } from './Section'
+import { IPositionXY } from '@Domain/Menus/DropdownMenu/subcomponents/ManualMenu'
 
 const DefaultDropdownButton = styled.button`
   background-color: transparent;
@@ -33,12 +34,17 @@ const StyledToggleContainer = styled.span`
   margin-bottom: 0;
 `
 
+interface IStyledDropdownMenuProps {
+  transformOrigin: IPositionXY
+}
+
 const StyledDropdownMenu = styled.div`
   margin: .5rem 0;
   position: absolute;
   width: min-content;
   
   transform: scale(0);
+  transform-origin: ${(props: IStyledDropdownMenuProps) => props.transformOrigin.xPos + ' ' + props.transformOrigin.yPos};
   transition: transform 150ms cubic-bezier(0.5, 1.8, 0.9, 0.8);
 
   &.entering,

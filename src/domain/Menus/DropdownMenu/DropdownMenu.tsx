@@ -1,7 +1,7 @@
 import React, { RefObject } from 'react'
 import { FontAwesomeIcon } from '@Domain/Icons'
 import { DefaultDropdownButton, StyledToggleContainer } from './subcomponents/style'
-import { DropdownPosition, ManualMenu } from './subcomponents/ManualMenu'
+import { IPositionXY, ManualMenu } from './subcomponents/ManualMenu'
 import { IDropdownMenuSectionProps, Section } from './subcomponents/Section'
 
 interface IDropdownMenuState {
@@ -10,9 +10,9 @@ interface IDropdownMenuState {
 
 interface IDropdownMenuProps {
   /** What position on the parent to anchor relative to */
-  parentAnchorPosition?: DropdownPosition,
+  parentAnchorPosition?: IPositionXY,
   /** What position on the dropdown itself to place at the anchor position */
-  dropdownAnchorPosition?: DropdownPosition,
+  dropdownAnchorPosition?: IPositionXY,
   /** Any custom class names */
   className?: string,
   /** The sections to render in the dropdown */

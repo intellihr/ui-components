@@ -5,13 +5,16 @@ import { StyledDropdownMenu, StyledSectionList } from './style'
 import { Section, IDropdownMenuSectionProps } from './Section'
 import FocusTrap from 'focus-trap-react'
 
-type DropdownPosition = 'topLeft' | 'topCenter' | 'topRight' | 'bottomLeft' | 'bottomCenter' | 'bottomRight'
+interface IPositionXY {
+  xPos: 'left' | 'center' | 'right',
+  yPos: 'top' | 'center' | 'bottom'
+}
 
 interface IDropdownManualMenuProps {
   /** What position on the parent to anchor relative to */
-  parentAnchorPosition?: DropdownPosition,
+  parentAnchorPosition?: IPositionXY,
   /** What position on the dropdown itself to place at the anchor position */
-  dropdownAnchorPosition?: DropdownPosition,
+  dropdownAnchorPosition?: IPositionXY,
   /** Any custom class names */
   className?: string,
   /** Whether the dropdown is showing currently or not */
@@ -26,8 +29,14 @@ interface IDropdownManualMenuProps {
 
 class ManualMenu extends React.PureComponent<IDropdownManualMenuProps, never> {
   public static defaultProps: Partial<IDropdownManualMenuProps> = {
-    parentAnchorPosition: 'bottomLeft',
-    dropdownAnchorPosition: 'topLeft'
+    parentAnchorPosition: {
+      xPos: 'left',
+      yPos: 'bottom'
+    },
+    dropdownAnchorPosition: {
+      xPos: 'left',
+      yPos: 'top'
+    }
   }
 
   private get dropdownPosition () {
@@ -73,6 +82,10 @@ class ManualMenu extends React.PureComponent<IDropdownManualMenuProps, never> {
       <StyledDropdownMenu
         style={this.dropdownPosition}
         className={animationState}
+        transformOrigin={{
+          xPos: 'left',
+          yPos: 'top'
+        }}
       >
         <FocusTrap
           active={isMenuOpen}
@@ -112,6 +125,6 @@ class ManualMenu extends React.PureComponent<IDropdownManualMenuProps, never> {
 }
 
 export {
-  DropdownPosition,
+  IPositionXY,
   ManualMenu
 }
