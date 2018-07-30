@@ -22,12 +22,12 @@ describe('<Section />', () => {
           }}
         />
         <Section
-          component={<hr/>}
+          component={<hr />}
         />
         <Section
           text='Item 5'
-          leftComponent={<FontAwesomeIcon type='hand-o-right'/>}
-          rightComponent={<FontAwesomeIcon type='hand-o-left'/>}
+          leftComponent={<FontAwesomeIcon type='hand-o-right' />}
+          rightComponent={<FontAwesomeIcon type='hand-o-left' />}
         />
       </span>
     )
@@ -41,8 +41,8 @@ describe('<Section />', () => {
     const wrapper = mount(
       <Section
         text='surrounded'
-        leftComponent={<FontAwesomeIcon type='hand-o-right'/>}
-        rightComponent={<FontAwesomeIcon type='hand-o-left'/>}
+        leftComponent={<FontAwesomeIcon type='hand-o-right' />}
+        rightComponent={<FontAwesomeIcon type='hand-o-left' />}
       />
     )
 

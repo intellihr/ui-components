@@ -40,11 +40,11 @@ class ManualMenu extends React.PureComponent<IDropdownManualMenuProps, never> {
   }
 
   componentDidMount () {
-    window.addEventListener("resize", this.onWindowSizeUpdate);
+    window.addEventListener('resize', this.onWindowSizeUpdate)
   }
 
   componentWillUnmount () {
-    window.removeEventListener("resize", this.onWindowSizeUpdate);
+    window.removeEventListener('resize', this.onWindowSizeUpdate)
   }
 
   private onWindowSizeUpdate = () => {

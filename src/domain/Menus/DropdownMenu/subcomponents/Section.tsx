@@ -27,7 +27,7 @@ interface IDropdownMenuSectionProps {
   onClick?: (event: React.SyntheticEvent<HTMLLIElement>) => void
   /** Should this section close the menu when clicked?
    *  Defaults to closing when onClick or href is provided; can overwrite with this prop */
-  closeDropdownBehaviour?:  'always' | 'never' | 'whenActionProvided',
+  closeDropdownBehaviour?: 'always' | 'never' | 'whenActionProvided',
   /** An override component that will render instead of the inbuilt components */
   component?: JSX.Element,
   /** Any extra props to pass to the component */
