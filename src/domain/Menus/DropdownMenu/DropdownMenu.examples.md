@@ -12,6 +12,14 @@
       href: 'https://www.intellihr.com.au'
     }
   ]}
+  dropdownAnchorPosition={{
+    xPos: 'right',
+    yPos: 'top'
+  }}
+  parentAnchorPosition={{
+    xPos: 'right',
+    yPos: 'bottom'
+  }}
 />
 ```
 

@@ -6,14 +6,14 @@ import { Section, IDropdownMenuSectionProps } from './Section'
 import FocusTrap from 'focus-trap-react'
 
 interface IPositionXY {
-  xPos: 'left' | 'center' | 'right',
-  yPos: 'top' | 'center' | 'bottom'
+  xPos: 'left' | 'right',
+  yPos: 'top' | 'bottom'
 }
 
 interface IDropdownManualMenuProps {
   /** What position on the parent to anchor relative to */
   parentAnchorPosition?: IPositionXY,
-  /** What position on the dropdown itself to place at the anchor position */
+  /** What position on the dropdown itself to place at the anchor position*/
   dropdownAnchorPosition?: IPositionXY,
   /** Any custom class names */
   className?: string,
@@ -39,6 +39,64 @@ class ManualMenu extends React.PureComponent<IDropdownManualMenuProps, never> {
     }
   }
 
+  private get parentAnchorXPos () {
+    const {
+      parentAnchorPosition,
+      parentRef
+    } = this.props
+
+    if (!parentRef.current) {
+      return window.pageXOffset
+    }
+
+    const boundingRect = parentRef.current.getBoundingClientRect()
+    const xPos = (parentAnchorPosition!.xPos === 'left') ? boundingRect.left : boundingRect.right
+
+    return xPos + window.pageXOffset
+  }
+
+  private get parentAnchorYPos () {
+    const {
+      parentAnchorPosition,
+      parentRef
+    } = this.props
+
+    if (!parentRef.current) {
+      return window.pageYOffset
+    }
+
+    const boundingRect = parentRef.current.getBoundingClientRect()
+    const yPos = (parentAnchorPosition!.yPos === 'top') ? boundingRect.top : boundingRect.bottom
+
+    return yPos + window.pageYOffset
+  }
+
+  private dropdownXOffset = (parentXPos: number) => {
+    const {
+      dropdownAnchorPosition
+    } = this.props
+
+    switch (dropdownAnchorPosition!.xPos) {
+      case 'left':
+        return { left: parentXPos }
+      case 'right':
+        return { right: document.documentElement.clientWidth - parentXPos }
+    }
+  }
+
+  private dropdownYOffset = (parentYPos: number) => {
+    const {
+      dropdownAnchorPosition
+    } = this.props
+
+    switch (dropdownAnchorPosition!.yPos) {
+      case 'top':
+        return { top: parentYPos }
+      case 'bottom':
+        return { bottom: document.documentElement.clientHeight - parentYPos }
+    }
+  }
+
   private get dropdownPosition () {
     const {
       parentRef
@@ -48,11 +106,14 @@ class ManualMenu extends React.PureComponent<IDropdownManualMenuProps, never> {
       return {}
     }
 
-    const boundingRect = parentRef.current.getBoundingClientRect()
+    // Get the x/y position we care about on the parent
+    const parentXPos = this.parentAnchorXPos
+    const parentYPos = this.parentAnchorYPos
 
+    // Position the dropdown correctly in relation to this parent point
     return {
-      top: boundingRect.top + boundingRect.height + window.pageYOffset,
-      left: boundingRect.left
+      ...this.dropdownXOffset(parentXPos),
+      ...this.dropdownYOffset(parentYPos)
     }
   }
 
@@ -75,17 +136,15 @@ class ManualMenu extends React.PureComponent<IDropdownManualMenuProps, never> {
     const {
       className,
       isMenuOpen,
-      onDropdownClose
+      onDropdownClose,
+      dropdownAnchorPosition
     } = this.props
 
     return (
       <StyledDropdownMenu
-        style={this.dropdownPosition}
         className={animationState}
-        transformOrigin={{
-          xPos: 'left',
-          yPos: 'top'
-        }}
+        transformOrigin={dropdownAnchorPosition!}
+        style={this.dropdownPosition}
       >
         <FocusTrap
           active={isMenuOpen}
