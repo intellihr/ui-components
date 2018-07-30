@@ -172,8 +172,6 @@ hiding the dropdown.
 />
 ```
 
-Alert and non clickable here
-
 #### Left and right section components
 
 ```jsx
@@ -247,4 +245,69 @@ const { FontAwesomeIcon, IntelliIcon } = require('@Domain/Icons');
      }
    ]}
 />
+```
+
+#### Manual Dropdown Menu
+
+`DropdownMenu` provides a ManualMenu subcomponent, which can be used
+to manually manage the toggling and hiding of a dropdown menu, as
+well as specify its parent ref on the page.
+
+```jsx
+const { SelectInput } = require('@Domain/Inputs');
+
+class ManualExample extends React.PureComponent {
+  constructor () {
+    this.state = {
+      isOpen: false
+    }
+
+    this.anchorRef = React.createRef()
+  }
+
+  render () {
+    const {
+      isOpen
+    } = this.state
+
+    return (
+      <React.Fragment>
+        <Button
+          onClick={() => this.setState({ isOpen: true })}
+        >
+          Show Menu
+        </Button>
+        <div
+          style={{
+            border: '1px black solid',
+            float: 'right',
+            padding: 10,
+            width: 200
+          }}
+          ref={this.anchorRef}
+        >
+          The dropdown will be anchored to this box
+        </div>
+        <DropdownMenu.ManualMenu
+          isDropdownOpen={this.state.isOpen}
+          onDropdownClose={() => this.setState({ isOpen: false })}
+          sections={[
+            {
+              text: 'Item 1',
+              onClick: () => alert('Item 1')
+            },
+            {
+              text: 'Item 2',
+              href: 'https://www.intellihr.com.au'
+            }
+          ]}
+          parentRef={this.anchorRef}
+        />
+      </React.Fragment>
+    )
+  }
+}
+
+<ManualExample />
+
 ```
