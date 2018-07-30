@@ -30,7 +30,7 @@ describe('<MenuItem />', () => {
       <MenuItem
         url='www.google.com'
         label='Test menu item'
-        isActive
+        className='active'
       />
     )
 
@@ -49,19 +49,6 @@ describe('<MenuItem />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should render a menu item with a custom class name', () => {
-    const wrapper = shallow(
-      <MenuItem
-        url='www.google.com'
-        label='Test menu item'
-        icon={<IntelliIcon type={'clock'} />}
-        className='custom-class-name'
-      />
-    )
-
-    expect(wrapper).toMatchSnapshot()
-  })
-
   it('should render a menu item with loading state', () => {
     const wrapper = shallow(
       <MenuItem
@@ -70,6 +57,29 @@ describe('<MenuItem />', () => {
         icon={<IntelliIcon type={'clock'} />}
         isLoading
       />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should render a menu item as a submenu if it has children', () => {
+    const wrapper = shallow(
+      <MenuItem
+        url='www.google.com'
+        label='Father'
+        icon={<IntelliIcon type={'clock'} />}
+      >
+        <MenuItem
+          url='www.google.com'
+          label='Son'
+          icon={<IntelliIcon type={'clock'} />}
+        />
+        <MenuItem
+          url='www.google.com'
+          label='Devil'
+          icon={<IntelliIcon type={'clock'} />}
+        />
+      </MenuItem>
     )
 
     expect(wrapper).toMatchSnapshot()

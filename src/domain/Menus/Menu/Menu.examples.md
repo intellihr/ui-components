@@ -2,59 +2,40 @@
 
 ```jsx
 const { MenuItem } = require('./MenuItem');
-const { SubMenu } = require('./SubMenu');
 const { FontAwesomeIcon } = require('@Domain/Icons');
 
-<Menu
-  id='example-menu'
-  isAccordion
-  className='ihr-nav'
->
+<Menu>
   <MenuItem
+    icon={<FontAwesomeIcon type='star' />}
     label='Item 1'
   >
-    <SubMenu>
-      <MenuItem
-        url='#'
-        label='Item 1A'
-      />
-      <MenuItem
-        url='#'
-        label='Item 1A'
-      />
-    </SubMenu>
+    <MenuItem
+      url='#'
+      label='Item 1A'
+    />
+    <MenuItem
+      url='#'
+      label='Item 1B'
+    />
   </MenuItem>
   <MenuItem
     isActive={true}
     url='#'
     label='Item 2'
-  />
-  <MenuItem
+  /> 
+  <MenuItem 
+    isOpen={true}
     label='Item 3'
-    icon={<FontAwesomeIcon type='star'/>}
   >
-    <SubMenu
-      isAccordion
-    >
-      <MenuItem
-        label='Item 3A'
-      >
-        <SubMenu>
-          <MenuItem
-            url='#'
-            label='Item 3Aa'
-          />
-          <MenuItem
-            url='#'
-            label='Item 3Ab'
-          />
-        </SubMenu>
-      </MenuItem>
-      <MenuItem
-        url='#'
-        label='Item 3B'
-      />
-    </SubMenu>
+    <MenuItem
+      url='#'
+      label='Item 3A'
+    />
+    <MenuItem
+      url='#'
+      label='Item 3B'
+      className='active'
+    />
   </MenuItem>
 </Menu>
 ```
@@ -63,32 +44,41 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 
 ```jsx
 const { MenuItem } = require('./MenuItem');
-const { SubMenu } = require('./SubMenu');
 const { FontAwesomeIcon } = require('@Domain/Icons');
 
-<Menu
-  id='example-loading-menu'
-  isAccordion
-  className='ihr-nav'
->
+<Menu>
   <MenuItem
+    icon={<FontAwesomeIcon type='star' />}
     label='Item 1'
   >
-    <SubMenu>
-      <MenuItem
-        url='#'
-        label='Item 1A'
-      />
-      <MenuItem
-        url='#'
-        label='Item 1A'
-      />
-    </SubMenu>
+    <MenuItem
+      url='#'
+      label='Item 1A'
+    />
+    <MenuItem
+      url='#'
+      label='Item 1B'
+    />
   </MenuItem>
   <MenuItem
+    isActive={true}
     isLoading={true}
     url='#'
     label='Item 2'
-  />
+  /> 
+  <MenuItem 
+    isOpen={true}
+    label='Item 3'
+  >
+    <MenuItem
+      url='#'
+      label='Item 3A'
+    />
+    <MenuItem
+      url='#'
+      label='Item 3B'
+      className='active'
+    />
+  </MenuItem>
 </Menu>
 ```
