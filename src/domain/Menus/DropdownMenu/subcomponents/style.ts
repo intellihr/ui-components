@@ -193,6 +193,7 @@ const StyledSection = styled.li`
   > a,
   > button,
   > span {
+    border-radius: 0;
     display: block;
     line-height: 1;
     min-width: 100%;
@@ -212,8 +213,8 @@ const StyledSection = styled.li`
   &:first-of-type {
     border-radius: 4px 4px 0 0;
 
-    a,
-    button {
+    > a,
+    > button {
       border-radius: 4px 4px 0 0;
     }
   }
@@ -221,8 +222,8 @@ const StyledSection = styled.li`
   &:last-of-type {
     border-radius: 0 0 4px 4px;
 
-    a,
-    button {
+    > a,
+    > button {
       border-radius: 0 0 4px 4px;
     }
   }
@@ -230,8 +231,8 @@ const StyledSection = styled.li`
   &:only-of-type {
     border-radius: 4px;
 
-    a,
-    button {
+    > a,
+    > button {
       border-radius: 4px;
     }
   }
