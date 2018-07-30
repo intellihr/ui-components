@@ -56,7 +56,7 @@
   },{
     text: 'Delete',
     onClick: () => { alert('Delete handler') },
-    hoverAlert: true
+    sectionType: 'alert'
   }]}
   loggedInUser={{
     id: 'sampleCommentPersonId'
