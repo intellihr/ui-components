@@ -33,7 +33,7 @@ interface IDropdownMenuSectionProps {
   /** Any extra props to pass to the component */
   componentProps?: any,
   /** Internal prop used for closing the section */
-  __closeMenuCallback: (event: React.SyntheticEvent<HTMLLIElement>, section: IDropdownMenuSectionProps) => void
+  __closeMenuCallback?: (event: React.SyntheticEvent<HTMLLIElement>, section: IDropdownMenuSectionProps) => void
 }
 
 class Section extends React.PureComponent<IDropdownMenuSectionProps, never> {
@@ -51,11 +51,11 @@ class Section extends React.PureComponent<IDropdownMenuSectionProps, never> {
     } = this.props
 
     if (closeDropdownBehaviour === 'always') {
-      __closeMenuCallback(event, this.props)
+      __closeMenuCallback!(event, this.props)
     }
 
     if (closeDropdownBehaviour === 'whenActionProvided' && (!!href || !!onClick)) {
-      __closeMenuCallback(event, this.props)
+      __closeMenuCallback!(event, this.props)
     }
   }
 

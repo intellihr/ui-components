@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { StyledComponentClass } from 'styled-components'
+import styled, { StyledComponentClass, css } from 'styled-components'
 import { getColor } from '@Domain/Colors'
 import { DropdownMenuSectionType } from './Section'
 import { IPositionXY } from '@Domain/Menus/DropdownMenu/subcomponents/ManualMenu'
@@ -101,11 +101,11 @@ function styleForSectionType(section: IStyledSectionProps) {
   if (section.sectionType in stripMapping) {
     const mapping = stripMapping[section.sectionType]
 
-    return `
+    return css`
       color: ${getColor('main-text')};
       border-left: 5px solid ${mapping.stripColor};
     
-      ${section.clickable && `
+      ${section.clickable && css`
         cursor: pointer;
         
         &:hover,
@@ -119,7 +119,7 @@ function styleForSectionType(section: IStyledSectionProps) {
   }
 
   if (section.sectionType === 'alert') {
-    return `
+    return css`
       &,
       .left-component,
       .right-component {
@@ -127,7 +127,7 @@ function styleForSectionType(section: IStyledSectionProps) {
         border-color: transparent;
         color: ${getColor('alert-base')};
 
-        ${section.clickable && `
+        ${section.clickable && css`
           cursor: pointer;
         
           &:focus,
@@ -152,10 +152,10 @@ function styleForSectionType(section: IStyledSectionProps) {
   }
 
   if (section.sectionType === 'default') {
-    return `
+    return css`
       color: ${getColor('main-text')};
        
-      ${section.clickable && `
+      ${section.clickable && css`
         cursor: pointer;
       
         &:hover,
