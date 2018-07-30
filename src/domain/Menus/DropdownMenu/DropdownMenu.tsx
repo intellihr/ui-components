@@ -9,12 +9,12 @@ interface IDropdownMenuState {
 }
 
 interface IDropdownMenuProps {
+  /** Any custom class names */
+  className?: string,
   /** What position on the parent to anchor relative to */
   parentAnchorPosition?: IPositionXY,
   /** What position on the dropdown itself to place at the anchor position */
   dropdownAnchorPosition?: IPositionXY,
-  /** Any custom class names */
-  className?: string,
   /** The sections to render in the dropdown */
   sections: IDropdownMenuSectionProps[],
   /** The parent component that opens the dropdown and positions it on the page.
