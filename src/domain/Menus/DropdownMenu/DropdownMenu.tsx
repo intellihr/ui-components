@@ -30,8 +30,6 @@ class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenu
   public static Section = Section
   public static DefaultDropdownButton = DefaultDropdownButton
 
-  public state: IDropdownMenuState = { isDropdownOpen: false }
-
   public static defaultProps: Partial<IDropdownMenuProps> = {
     toggleComponent: (
       <DefaultDropdownButton>
@@ -39,6 +37,8 @@ class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenu
       </DefaultDropdownButton>
     )
   }
+
+  public state: IDropdownMenuState = { isDropdownOpen: false }
 
   private toggleComponentRef: RefObject<HTMLSpanElement> = React.createRef()
 
