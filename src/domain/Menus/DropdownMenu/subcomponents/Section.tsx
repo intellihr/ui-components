@@ -62,7 +62,7 @@ class Section extends React.PureComponent<IDropdownMenuSectionProps, never> {
     } = this.props
 
     return {
-      nonClickable: !href && !onClick,
+      clickable: !!href || !!onClick,
       sectionType: sectionType || 'default'
     }
   }

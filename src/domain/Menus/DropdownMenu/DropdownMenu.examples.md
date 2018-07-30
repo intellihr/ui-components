@@ -12,19 +12,11 @@
       href: 'https://www.intellihr.com.au'
     }
   ]}
-  dropdownAnchorPosition={{
-    xPos: 'right',
-    yPos: 'top'
-  }}
-  parentAnchorPosition={{
-    xPos: 'right',
-    yPos: 'bottom'
-  }}
 />
 ```
 
 
-#### DropdownMenu inside bounding box
+#### DropdownMenu inside overflow hidden bounding box
 
 ```jsx
 <div
@@ -49,4 +41,210 @@
     ]}
   />
 </div>
+```
+
+#### Dropdown Menu using strip colors
+
+```jsx
+<DropdownMenu
+  toggleComponent={<Button>Colored Dropdown</Button>}
+  sections={[
+    {
+      text: 'Alert',
+      onClick: () => alert('Test'),
+      sectionType: 'stripAlert'
+    },
+    {
+      text: 'Success',
+      href: 'https://www.intellihr.com.au',
+      sectionType: 'stripSuccess'
+    },
+    {
+      text: 'Warning',
+      onClick: () => alert('Test'),
+      sectionType: 'stripWarning'
+    },
+    {
+      text: 'Primary',
+      onClick: () => alert('Test'),
+      sectionType: 'stripPrimary'
+    },
+    {
+      text: 'Secondary',
+      onClick: () => alert('Test'),
+      sectionType: 'stripSecondary'
+    },
+    {
+      text: 'Neutral',
+      onClick: () => alert('Test'),
+      sectionType: 'stripNeutral'
+    },
+  ]}
+/>
+```
+
+#### Dropdown Alignment
+
+Specify a corner on the toggle component and a corner on the dropdown itself
+and the two will be anchored when the dropdown is displayed.
+
+Alignment also determines the animation direction for showing and
+hiding the dropdown.
+
+```jsx
+<React.Fragment>
+  <DropdownMenu
+    toggleComponent={<Button>Left</Button>}
+    sections={[
+      {
+        onClick: () => alert('Test'),
+        text: 'Item 1'
+      }
+    ]}
+    parentAnchorPosition={{
+      xPos: 'left',
+      yPos: 'bottom'
+    }}
+    dropdownAnchorPosition={{
+      xPos: 'left',
+      yPos: 'top'
+    }}
+  />
+  <DropdownMenu
+    toggleComponent={<Button>Right</Button>}
+    sections={[
+      {      
+        onClick: () => alert('Test'),
+        text: 'Item 1'
+      }
+    ]}
+    parentAnchorPosition={{
+      xPos: 'right',
+      yPos: 'bottom'
+    }}
+    dropdownAnchorPosition={{
+      xPos: 'right',
+      yPos: 'top'
+    }}
+  />
+  <DropdownMenu
+    toggleComponent={<Button>Drop upwards</Button>}
+    sections={[
+      {      
+        onClick: () => alert('Test'),
+        text: 'Item 1'
+      }
+    ]}
+    parentAnchorPosition={{
+      xPos: 'left',
+      yPos: 'top'
+    }}
+    dropdownAnchorPosition={{
+      xPos: 'left',
+      yPos: 'bottom'
+    }}
+  />
+</React.Fragment>
+```
+
+#### Custom Components
+
+```jsx
+<DropdownMenu
+   toggleComponent={<Button>Custom</Button>}
+   sections={[
+     {
+       onClick: () => alert('Test'),
+       text: 'Item 1'
+     },
+     {
+       component: <hr/>
+     },
+     {
+       onClick: () => alert('Test'),
+       text: 'Item 2'
+     },
+     {
+       text: 'Item 3',
+       component: <Callout>asdf</Callout>
+     }
+   ]}
+/>
+```
+
+Alert and non clickable here
+
+#### Left and right section components
+
+```jsx
+const { FontAwesomeIcon } = require('@Domain/Icons');
+
+<DropdownMenu
+   toggleComponent={<Button>Icons</Button>}
+   sections={[
+     {
+       leftComponent: <FontAwesomeIcon type='hand-o-right' />,
+       rightComponent: <FontAwesomeIcon type='hand-o-left' />,
+       onClick: () => alert('Test'),
+       text: 'Surrounded by icons'
+     }
+   ]}
+/>
+```
+
+#### Profile Menu Example
+
+```jsx
+const { FontAwesomeIcon, IntelliIcon } = require('@Domain/Icons');
+
+<DropdownMenu
+   toggleComponent={
+     <div style={{ cursor: 'pointer' }} >
+       <Avatar
+         initials='JD'
+         size='medium'
+       />
+     </div>
+   }
+   sections={[
+     {
+       text: 'John Doe',
+       componentProps: {
+         style: {'fontWeight':600}
+       }
+     },
+     {
+       component: <hr/>
+     },
+     {
+       text: 'My Profile',
+       leftComponent: <IntelliIcon type='avatar' />,
+       onClick: () => alert('Test')
+     },
+     {
+       text: 'Change Password',
+       leftComponent: <IntelliIcon type='security' />,
+       onClick: () => alert('Test')
+     },
+     {
+       text: 'Update Profile Picture',
+       leftComponent: <FontAwesomeIcon type='camera' />,
+       onClick: () => alert('Test')
+     },
+     {
+       text: 'User Disclaimer',
+       leftComponent: <IntelliIcon type='shield' />,
+       onClick: () => alert('Test')
+     },
+     {
+       component: <hr/>
+     },
+     {
+       text: 'Log Out',
+       leftComponent: <FontAwesomeIcon type='power-off' />,
+       href: 'google.com',
+       sectionType: 'alert'
+     }
+   ]}
+/>
 ```
