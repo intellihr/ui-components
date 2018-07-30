@@ -20,7 +20,7 @@ interface IDropdownManualMenuProps {
   /** The sections to render in the dropdown */
   sections: IDropdownMenuSectionProps[],
   /** Whether the dropdown is showing currently or not */
-  isMenuOpen: boolean,
+  isDropdownOpen: boolean,
   /** Callback when the modal is attempted to be closed */
   onDropdownClose: () => void,
   /** Parent ref to anchor this to on the page */
@@ -135,7 +135,7 @@ class ManualMenu extends React.PureComponent<IDropdownManualMenuProps, never> {
   private animatedMenu = (animationState: string) => {
     const {
       className,
-      isMenuOpen,
+      isDropdownOpen,
       onDropdownClose,
       dropdownAnchorPosition
     } = this.props
@@ -147,13 +147,14 @@ class ManualMenu extends React.PureComponent<IDropdownManualMenuProps, never> {
         style={this.dropdownPosition}
       >
         <FocusTrap
-          active={isMenuOpen}
+          active={isDropdownOpen}
           focusTrapOptions={{
             onDeactivate: onDropdownClose,
             initialFocus: document.body,
             clickOutsideDeactivates: true,
             returnFocusOnDeactivate: false
           }}
+          tag='span'
         >
           <StyledSectionList
             className={className}
@@ -167,12 +168,12 @@ class ManualMenu extends React.PureComponent<IDropdownManualMenuProps, never> {
 
   public render () {
     const {
-      isMenuOpen
+      isDropdownOpen
     } = this.props
 
     return (
       <Transition
-        in={isMenuOpen}
+        in={isDropdownOpen}
         timeout={100}
         mountOnEnter
         unmountOnExit

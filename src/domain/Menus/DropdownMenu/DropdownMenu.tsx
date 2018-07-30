@@ -1,11 +1,13 @@
 import React, { RefObject } from 'react'
+import moment, { Moment } from 'moment'
 import { FontAwesomeIcon } from '@Domain/Icons'
 import { DefaultDropdownButton, StyledToggleContainer } from './subcomponents/style'
 import { IPositionXY, ManualMenu } from './subcomponents/ManualMenu'
 import { IDropdownMenuSectionProps, Section } from './subcomponents/Section'
 
 interface IDropdownMenuState {
-  isMenuOpen: boolean
+  isDropdownOpen: boolean,
+  lastClosedTime?: Moment
 }
 
 interface IDropdownMenuProps {
@@ -28,7 +30,7 @@ class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenu
   public static Section = Section
   public static DefaultDropdownButton = DefaultDropdownButton
 
-  public state: IDropdownMenuState = { isMenuOpen: false }
+  public state: IDropdownMenuState = { isDropdownOpen: false }
 
   public static defaultProps: Partial<IDropdownMenuProps> = {
     toggleComponent: (
@@ -40,12 +42,27 @@ class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenu
 
   private toggleComponentRef: RefObject<HTMLSpanElement> = React.createRef()
 
-  private toggle = () => {
-    this.setState({ isMenuOpen: !this.state.isMenuOpen })
+  private openMenu = () => {
+    const {
+      isDropdownOpen,
+      lastClosedTime
+    } = this.state
+
+    if (isDropdownOpen) {
+      return
+    }
+
+    // Hack to prevent reopening the menu on the same click as closing it
+    if (!lastClosedTime || (moment().diff(lastClosedTime) > 300)) {
+      this.setState({ isDropdownOpen: true })
+    }
   }
 
   private close = () => {
-    this.setState({ isMenuOpen: false })
+    this.setState({
+      isDropdownOpen: false,
+      lastClosedTime: moment()
+    })
   }
 
   private get toggleComponent () {
@@ -56,7 +73,7 @@ class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenu
     return (
       <span>
         <StyledToggleContainer
-          onClick={this.toggle}
+          onClick={this.openMenu}
           innerRef={this.toggleComponentRef}
         >
           {toggleComponent}
@@ -66,7 +83,7 @@ class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenu
   }
 
   private get dropdownMenu (): JSX.Element | null {
-    const { isMenuOpen } = this.state
+    const { isDropdownOpen } = this.state
     const {
       className,
       sections,
@@ -77,7 +94,7 @@ class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenu
     return (
       <ManualMenu
         className={className}
-        isMenuOpen={isMenuOpen}
+        isDropdownOpen={isDropdownOpen}
         onDropdownClose={this.close}
         sections={sections}
         parentAnchorPosition={parentAnchorPosition}
