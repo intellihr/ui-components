@@ -238,11 +238,11 @@ const StyledSection = styled.li`
   }
   
   .left-component {
-    margin-right: 3px;
+    margin-right: 5px;
   }
 
   .right-component {
-    margin-left: 3px;
+    margin-left: 5px;
   }
 `
 

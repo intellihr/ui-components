@@ -119,7 +119,7 @@ class Section extends React.PureComponent<IDropdownMenuSectionProps, never> {
         >
           {leftComponent && <span className='left-component'>{leftComponent}</span>}
           {text}
-          {rightComponent && <span className='left-component'>{rightComponent}</span>}
+          {rightComponent && <span className='right-component'>{rightComponent}</span>}
         </Component>
       </StyledSection>
     )
