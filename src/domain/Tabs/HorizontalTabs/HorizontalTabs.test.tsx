@@ -16,7 +16,8 @@ describe('<HorizontalTabs />', () => {
     {
       title: 'Tab 3',
       leftComponent: <div id='tab3left'>Test me</div>,
-      content: <h2 id='tab3content'>BOO</h2>
+      content: <h2 id='tab3content'>BOO</h2>,
+      anchorId: '#third'
     },
     {
       titleComponent: <div id='tab4'>Tab 4</div>,
@@ -52,6 +53,29 @@ describe('<HorizontalTabs />', () => {
           .find('#tab3content')
           .contains('BOO')
       ).toBeTruthy()
+    })
+  })
+
+  describe('Standard tabs with currently opened tab', () => {
+    const wrapper = shallow(
+      <HorizontalTabs
+        tabs={tabDefinitions}
+        currentlyOpenedTab={'#third'}
+      />
+    )
+
+    it('should match the snapshot', () => {
+      expect(wrapper).toMatchSnapshot()
+    })
+
+    it('should render the correct title', () => {
+      expect(
+        wrapper
+          .find('#tab3left')
+          .contains('Test me')
+      ).toBeTruthy()
+
+      expect(wrapper.contains('Tab 3')).toBeTruthy()
     })
   })
 

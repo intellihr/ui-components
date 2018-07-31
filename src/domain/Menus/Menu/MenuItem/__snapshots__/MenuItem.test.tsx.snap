@@ -2,11 +2,11 @@
 
 exports[`<MenuItem /> should render a a menu item with a link 1`] = `
 <styled.li>
-  <styled.a
+  <a
     href="www.google.com"
   >
     Test menu item
-  </styled.a>
+  </a>
 </styled.li>
 `;
 
@@ -32,7 +32,7 @@ exports[`<MenuItem /> should render a menu item as a submenu if it has children 
     <styled.li
       className={undefined}
     >
-      <styled.a
+      <a
         href="www.google.com"
       >
         <styled.span>
@@ -41,7 +41,7 @@ exports[`<MenuItem /> should render a menu item as a submenu if it has children 
           />
         </styled.span>
         Father
-      </styled.a>
+      </a>
     </styled.li>
   }
   triggerClassName=""
@@ -76,7 +76,7 @@ exports[`<MenuItem /> should render a menu item as a submenu if it has children 
 
 exports[`<MenuItem /> should render a menu item with Icon 1`] = `
 <styled.li>
-  <styled.a
+  <a
     href="www.google.com"
   >
     <styled.span>
@@ -85,7 +85,7 @@ exports[`<MenuItem /> should render a menu item with Icon 1`] = `
       />
     </styled.span>
     Test menu item
-  </styled.a>
+  </a>
 </styled.li>
 `;
 
@@ -93,17 +93,17 @@ exports[`<MenuItem /> should render a menu item with active state 1`] = `
 <styled.li
   className="active"
 >
-  <styled.a
+  <a
     href="www.google.com"
   >
     Test menu item
-  </styled.a>
+  </a>
 </styled.li>
 `;
 
 exports[`<MenuItem /> should render a menu item with loading state 1`] = `
 <styled.li>
-  <styled.a
+  <a
     href="www.google.com"
   >
     <styled.span>
@@ -118,14 +118,14 @@ exports[`<MenuItem /> should render a menu item with loading state 1`] = `
         type="circle-o-notch"
       />
     </styled.span>
-  </styled.a>
+  </a>
 </styled.li>
 `;
 
 exports[`<MenuItem /> should render a simple menu item 1`] = `
 <styled.li>
-  <styled.a>
+  <a>
     Test menu item
-  </styled.a>
+  </a>
 </styled.li>
 `;
