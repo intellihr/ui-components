@@ -11,24 +11,31 @@ const MenuItemWrapper = styled.li`
       margin-left: 0;
     }
   }
-`
-
-const MenuItemAnchorWrapper = styled.a`
-  padding: 1rem;
-  display: block;
-  align-items: center;
-  line-height: 1;
-  text-decoration: none;
   
-  color: ${getColor('sidebar-text')};
-  margin-left: 3px;
-  white-space: nowrap;
-
-  &:hover {
+  a, a:focus {
+    padding: 1rem;
+    display: block;
+    align-items: center;
+    line-height: 1;
+    text-decoration: none;
+    
     color: ${getColor('sidebar-text')};
-    background-color: ${getColor('neutral')};
-    border-left: 3px solid ${getColor('neutral')};
-    margin-left: 0;
+    margin-left: 3px;
+    white-space: nowrap;
+  
+    &:hover {
+      color: ${getColor('sidebar-text')};
+      background-color: ${getColor('neutral')};
+      border-left: 3px solid ${getColor('neutral')};
+      margin-left: 0;
+    }
+    
+     &.active {
+      border-left: 3px solid ${getColor('primary')};
+      color: ${getColor('primary')};
+      font-weight: 600;
+      margin-left: 0;
+    }
   }
 `
 
@@ -46,14 +53,13 @@ const LoadingIconWrapper = styled.span`
 const SubMenuWrapper = styled.ul`
   margin: 0;
   
-  a {
+  a, a:focus  {
     padding-left: 2.8rem;
   }
 `
 
 export {
   MenuItemWrapper,
-  MenuItemAnchorWrapper,
   IconWrapper,
   LoadingIconWrapper,
   SubMenuWrapper

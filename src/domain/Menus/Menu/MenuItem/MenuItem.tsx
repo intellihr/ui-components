@@ -1,6 +1,6 @@
 import React from 'react'
 import Collapsible from 'react-collapsible'
-import { MenuItemAnchorWrapper, IconWrapper, LoadingIconWrapper, MenuItemWrapper, SubMenuWrapper } from './style'
+import { IconWrapper, LoadingIconWrapper, MenuItemWrapper, SubMenuWrapper } from './style'
 import { FontAwesomeIcon } from '@Domain/Icons'
 
 export interface IMenuItemProps {
@@ -55,16 +55,20 @@ export class MenuItem extends React.PureComponent<IMenuItemProps> {
     } = this.props
 
     if (render) {
-      return render(label, this.icon, url)
+      return (
+        <MenuItemWrapper className={className}>
+          {render(label, this.icon, url)}
+        </MenuItemWrapper>
+      )
     }
 
     return (
       <MenuItemWrapper className={className}>
-        <MenuItemAnchorWrapper href={url}>
+        <a href={url}>
           {this.icon}
           {label}
           {this.loadingIcon}
-        </MenuItemAnchorWrapper>
+        </a>
       </MenuItemWrapper>
     )
   }
