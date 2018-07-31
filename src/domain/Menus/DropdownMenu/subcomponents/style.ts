@@ -41,7 +41,7 @@ interface IStyledDropdownMenuProps {
 }
 
 const StyledDropdownMenu = styled.span`
-  margin: .5rem 0;
+  margin: 2px;
   position: absolute;
   width: min-content;
   z-index: 100;

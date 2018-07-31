@@ -94,11 +94,13 @@ hiding the dropdown.
 ```jsx
 <React.Fragment>
   <DropdownMenu
-    toggleComponent={<Button>Left</Button>}
+    toggleComponent={<Button>Anchored bottom left</Button>}
     sections={[
       {
-        onClick: () => alert('Test'),
         text: 'Item 1'
+      },
+      {
+        text: 'Item 2'
       }
     ]}
     parentAnchorPosition={{
@@ -111,11 +113,13 @@ hiding the dropdown.
     }}
   />
   <DropdownMenu
-    toggleComponent={<Button>Right</Button>}
+    toggleComponent={<Button>Anchored bottom right</Button>}
     sections={[
-      {      
-        onClick: () => alert('Test'),
+      {
         text: 'Item 1'
+      },
+      {
+        text: 'Item 2'
       }
     ]}
     parentAnchorPosition={{
@@ -128,11 +132,13 @@ hiding the dropdown.
     }}
   />
   <DropdownMenu
-    toggleComponent={<Button>Drop upwards</Button>}
+    toggleComponent={<Button>Drop upwards, top left</Button>}
     sections={[
-      {      
-        onClick: () => alert('Test'),
+      {
         text: 'Item 1'
+      },
+      {
+        text: 'Item 2'
       }
     ]}
     parentAnchorPosition={{
@@ -141,6 +147,44 @@ hiding the dropdown.
     }}
     dropdownAnchorPosition={{
       xPos: 'left',
+      yPos: 'bottom'
+    }}
+  />
+  <DropdownMenu
+    toggleComponent={<Button>Anchored top right, open to right</Button>}
+    sections={[
+      {
+        text: 'Item 1'
+      },
+      {
+        text: 'Item 2'
+      }
+    ]}
+    parentAnchorPosition={{
+      xPos: 'right',
+      yPos: 'top'
+    }}
+    dropdownAnchorPosition={{
+      xPos: 'left',
+      yPos: 'top'
+    }}
+  />
+  <DropdownMenu
+    toggleComponent={<Button>Anchored bottom left, open to left upwards</Button>}
+    sections={[
+      {
+        text: 'Item 1'
+      },
+      {
+        text: 'Item 2'
+      }
+    ]}
+    parentAnchorPosition={{
+      xPos: 'left',
+      yPos: 'bottom'
+    }}
+    dropdownAnchorPosition={{
+      xPos: 'right',
       yPos: 'bottom'
     }}
   />
