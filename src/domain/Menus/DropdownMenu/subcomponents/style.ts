@@ -1,8 +1,8 @@
 import React from 'react'
 import styled, { StyledComponentClass, css } from 'styled-components'
+import { Props } from '@Common/types'
 import { getColor } from '@Domain/Colors'
-import { DropdownMenuSectionType } from './Section'
-import { IPositionXY } from '@Domain/Menus/DropdownMenu/subcomponents/ManualMenu'
+import { SectionType } from './Section'
 
 const DefaultDropdownButton = styled.button`
   background-color: transparent;
@@ -37,7 +37,7 @@ const StyledToggleContainer = styled.span`
 `
 
 interface IStyledDropdownMenuProps {
-  transformOrigin: IPositionXY
+  transformOrigin: Props.IPositionXY
 }
 
 const StyledDropdownMenu = styled.span`
@@ -66,7 +66,7 @@ const StyledSectionList = styled.ul`
 `
 
 interface IStyledSectionProps {
-  sectionType: DropdownMenuSectionType,
+  sectionType: SectionType,
   clickable: boolean
 }
 
@@ -251,6 +251,5 @@ export {
   StyledToggleContainer,
   StyledDropdownMenu,
   StyledSectionList,
-  StyledSection,
-  DropdownMenuSectionType
+  StyledSection
 }

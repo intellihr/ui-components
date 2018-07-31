@@ -1,9 +1,10 @@
 import React, { RefObject } from 'react'
 import moment, { Moment } from 'moment'
+import { Props } from '@Common/types'
 import { FontAwesomeIcon } from '@Domain/Icons'
 import { DefaultDropdownButton, StyledToggleContainer } from './subcomponents/style'
-import { IPositionXY, ManualMenu } from './subcomponents/ManualMenu'
-import { IDropdownMenuSectionProps, Section } from './subcomponents/Section'
+import { ManualMenu } from './subcomponents/ManualMenu'
+import { ISectionProps, Section } from './subcomponents/Section'
 
 interface IDropdownMenuState {
   isDropdownOpen: boolean,
@@ -12,13 +13,13 @@ interface IDropdownMenuState {
 
 interface IDropdownMenuProps {
   /** What position on the parent to anchor relative to */
-  parentAnchorPosition?: IPositionXY,
+  parentAnchorPosition?: Props.IPositionXY,
   /** What position on the dropdown itself to place at the anchor position */
-  dropdownAnchorPosition?: IPositionXY,
+  dropdownAnchorPosition?: Props.IPositionXY,
   /** Any custom class names */
   className?: string,
   /** The sections to render in the dropdown */
-  sections: IDropdownMenuSectionProps[],
+  sections: ISectionProps[],
   /** The parent component that opens the dropdown and positions it on the page.
    *  This component will be wrapped in a span which will determine the onclick properties.
    *  Note: all margins will be removed. */

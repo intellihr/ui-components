@@ -1,24 +1,20 @@
 import React, { RefObject } from 'react'
 import { map } from 'lodash'
 import { Transition } from 'react-transition-group'
+import { Props } from '@Common/types'
 import { StyledDropdownMenu, StyledSectionList } from './style'
-import { Section, IDropdownMenuSectionProps } from './Section'
+import { Section, ISectionProps } from './Section'
 import FocusTrap from 'focus-trap-react'
 
-interface IPositionXY {
-  xPos: 'left' | 'right',
-  yPos: 'top' | 'bottom'
-}
-
-interface IDropdownManualMenuProps {
+interface IManualMenuProps {
   /** Any custom class names */
   className?: string,
   /** What position on the parent to anchor relative to */
-  parentAnchorPosition?: IPositionXY,
+  parentAnchorPosition?: Props.IPositionXY,
   /** What position on the dropdown itself to place at the anchor position */
-  dropdownAnchorPosition?: IPositionXY,
+  dropdownAnchorPosition?: Props.IPositionXY,
   /** The sections to render in the dropdown */
-  sections: IDropdownMenuSectionProps[],
+  sections: ISectionProps[],
   /** Whether the dropdown is showing currently or not */
   isDropdownOpen: boolean,
   /** Callback when the modal is attempted to be closed */
@@ -27,15 +23,15 @@ interface IDropdownManualMenuProps {
   parentRef: RefObject<HTMLSpanElement>
 }
 
-class ManualMenu extends React.PureComponent<IDropdownManualMenuProps, never> {
-  public static defaultProps: Partial<IDropdownManualMenuProps> = {
+class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
+  public static defaultProps: Partial<IManualMenuProps> = {
     parentAnchorPosition: {
-      xPos: 'left',
-      yPos: 'bottom'
+      xPos: Props.Position.Left,
+      yPos: Props.Position.Bottom
     },
     dropdownAnchorPosition: {
-      xPos: 'left',
-      yPos: 'top'
+      xPos: Props.Position.Left,
+      yPos: Props.Position.Top
     }
   }
 
@@ -90,9 +86,9 @@ class ManualMenu extends React.PureComponent<IDropdownManualMenuProps, never> {
     } = this.props
 
     switch (dropdownAnchorPosition!.xPos) {
-      case 'left':
+      case Props.Position.Left:
         return { left: parentXPos }
-      case 'right':
+      case Props.Position.Right:
         return { right: document.documentElement.clientWidth - parentXPos }
     }
   }
@@ -103,9 +99,9 @@ class ManualMenu extends React.PureComponent<IDropdownManualMenuProps, never> {
     } = this.props
 
     switch (dropdownAnchorPosition!.yPos) {
-      case 'top':
+      case Props.Position.Top:
         return { top: parentYPos }
-      case 'bottom':
+      case Props.Position.Bottom:
         return { bottom: document.documentElement.clientHeight - parentYPos }
     }
   }
@@ -200,6 +196,6 @@ class ManualMenu extends React.PureComponent<IDropdownManualMenuProps, never> {
 }
 
 export {
-  IPositionXY,
+  IManualMenuProps,
   ManualMenu
 }

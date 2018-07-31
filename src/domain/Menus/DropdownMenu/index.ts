@@ -1,2 +1,2 @@
 export { DropdownMenu, IDropdownMenuProps } from './DropdownMenu'
-export { IDropdownMenuSectionProps } from './subcomponents/Section'
+export { ISectionProps as IDropdownMenuSectionProps } from './subcomponents/Section'

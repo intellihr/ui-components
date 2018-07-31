@@ -11,6 +11,7 @@ import {
 } from './style'
 import { FontAwesomeIcon } from '@Domain/Icons'
 import { FormattedText } from '@Domain/Typographies'
+import { Props } from '@Common/types'
 
 export interface CommentProps {
   /** Comment object to render */
@@ -80,12 +81,12 @@ export class Comment extends React.Component<CommentProps> {
         }
         sections={actions}
         parentAnchorPosition={{
-          xPos: 'right',
-          yPos: 'bottom'
+          xPos: Props.Position.Right,
+          yPos: Props.Position.Bottom
         }}
         dropdownAnchorPosition={{
-          xPos: 'right',
-          yPos: 'top'
+          xPos: Props.Position.Right,
+          yPos: Props.Position.Top
         }}
       />
     )

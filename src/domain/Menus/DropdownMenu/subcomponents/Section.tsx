@@ -2,7 +2,7 @@ import React from 'react'
 import { Anchor } from '@Domain/Anchors'
 import { StyledSection } from './style'
 
-type DropdownMenuSectionType =
+type SectionType =
   'default'
   | 'alert'
   | 'stripAlert'
@@ -12,7 +12,7 @@ type DropdownMenuSectionType =
   | 'stripSecondary'
   | 'stripNeutral'
 
-interface IDropdownMenuSectionProps {
+interface ISectionProps {
   /** What text to show in a section. Will only be used if no component is provided. */
   text?: string,
   /** A component that is shown to the left of the text */
@@ -20,7 +20,7 @@ interface IDropdownMenuSectionProps {
   /** A component that is shown to the right of the text */
   rightComponent?: JSX.Element,
   /** Determines how to style this section, allowing for different styles for alerts and so on */
-  sectionType?: DropdownMenuSectionType,
+  sectionType?: SectionType,
   /** A link that will be navigated to on click */
   href?: string,
   /** Event handler when the section is clicked */
@@ -33,11 +33,11 @@ interface IDropdownMenuSectionProps {
   /** Any extra props to pass to the component */
   componentProps?: any,
   /** Internal prop used for closing the section */
-  __closeMenuCallback?: (event: React.SyntheticEvent<HTMLLIElement>, section: IDropdownMenuSectionProps) => void
+  __closeMenuCallback?: (event: React.SyntheticEvent<HTMLLIElement>, section: ISectionProps) => void
 }
 
-class Section extends React.PureComponent<IDropdownMenuSectionProps, never> {
-  public static defaultProps: Partial<IDropdownMenuSectionProps> = {
+class Section extends React.PureComponent<ISectionProps, never> {
+  public static defaultProps: Partial<ISectionProps> = {
     sectionType: 'default',
     closeDropdownBehaviour: 'whenActionProvided'
   }
@@ -127,7 +127,7 @@ class Section extends React.PureComponent<IDropdownMenuSectionProps, never> {
 }
 
 export {
-  DropdownMenuSectionType,
-  IDropdownMenuSectionProps,
-  Section
+  Section,
+  ISectionProps,
+  SectionType
 }
