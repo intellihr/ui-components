@@ -115,7 +115,6 @@ exports[`<Button /> should render a button with an icon 1`] = `
       primary-hollow
       <span
         className="button-icon right"
-        key="test-button-icon"
       >
         <FontAwesomeIcon
           type="star"
