@@ -69,6 +69,14 @@
       line-height: 1.5;
       outline: none;
 
+      &.content-right {
+        text-align: right;
+      }
+
+      &.content-center {
+        text-align: center;
+      }
+
       // Signifies sortable headers
       &.-cursor-pointer {
         @include sorting-cursor('\f0dc', $main-text);
@@ -174,6 +182,14 @@
     align-items: center;
     display: flex;
     padding: .5rem .625rem .625rem;
+
+    &.content-right {
+      flex-direction: row-reverse;
+    }
+
+    &.content-center {
+      flex-direction: column;
+    }
   }
 
   .rt-th,

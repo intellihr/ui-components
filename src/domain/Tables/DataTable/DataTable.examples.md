@@ -44,6 +44,37 @@
 />
 ```
 
+#### DataTable with right or center aligned content
+
+```jsx
+<DataTable
+  data={[
+    {
+      name: 'Tanner Linsley',
+      age: 26
+    },
+    {
+      name: 'Jason Maurer',
+      age: 23
+    }
+  ]}
+  columns={[
+    {
+      Header: 'Name',
+      accessor: 'name',
+      headerClassName: 'content-right',
+      className: 'content-right'
+    },
+    {
+      Header: 'Age',
+      accessor: 'age',
+      headerClassName: 'content-center',
+      className: 'content-center'
+    }
+  ]}
+/>
+```
+
 #### Sortable DataTable + default sorting
 
 Hold shift to sort on multiple columns
