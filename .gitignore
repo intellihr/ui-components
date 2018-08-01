@@ -58,10 +58,10 @@ typings/
 .env
 
 # Compiled and built files
-types/
-assets/
-dist/
-styleguide/
+/types/
+/assets/
+/dist/
+/styleguide/
 
 # Vim
 *.swp

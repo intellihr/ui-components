@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import { Avatar } from '@Domain/Avatars'
 import {
   DropdownMenu,
-  iSectionProps
+  IDropdownMenuSectionProps
 } from '@Domain/Menus'
 import {
   StyledComment,
@@ -11,6 +11,7 @@ import {
 } from './style'
 import { FontAwesomeIcon } from '@Domain/Icons'
 import { FormattedText } from '@Domain/Typographies'
+import { Props } from '@Common/types'
 
 export interface CommentProps {
   /** Comment object to render */
@@ -38,7 +39,7 @@ export interface CommentProps {
     id: string
   },
   /** an array of sectionProps from the DropdownMenu to render the submenu sections */
-  actions?: iSectionProps[]
+  actions?: IDropdownMenuSectionProps[]
 }
 
 export class Comment extends React.Component<CommentProps> {
@@ -78,10 +79,15 @@ export class Comment extends React.Component<CommentProps> {
             <FontAwesomeIcon type='ellipsis-v' />
           </CommentActionMenuToggleButton>
         }
-        dropdownOverrides={{
-          align: 'left'
-        }}
         sections={actions}
+        parentAnchorPosition={{
+          xPos: Props.Position.Right,
+          yPos: Props.Position.Bottom
+        }}
+        dropdownAnchorPosition={{
+          xPos: Props.Position.Right,
+          yPos: Props.Position.Top
+        }}
       />
     )
   }

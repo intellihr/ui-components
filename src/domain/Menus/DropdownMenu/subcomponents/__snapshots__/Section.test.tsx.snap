@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Section /> Default sections should match the snapshot 1`] = `
+<span>
+  <Section
+    closeDropdownBehaviour="whenActionProvided"
+    sectionType="default"
+    text="Item 1"
+  />
+  <Section
+    closeDropdownBehaviour="whenActionProvided"
+    onClick={[Function]}
+    sectionType="default"
+    text="Item 2"
+  />
+  <Section
+    closeDropdownBehaviour="whenActionProvided"
+    componentProps={
+      Object {
+        "style": Object {
+          "fontWeight": 600,
+        },
+      }
+    }
+    href="https://intellihr.com.au"
+    sectionType="default"
+    text="Item 3"
+  />
+  <Section
+    closeDropdownBehaviour="whenActionProvided"
+    component={<hr />}
+    sectionType="default"
+  />
+  <Section
+    closeDropdownBehaviour="whenActionProvided"
+    leftComponent={
+      <FontAwesomeIcon
+        type="hand-o-right"
+      />
+    }
+    rightComponent={
+      <FontAwesomeIcon
+        type="hand-o-left"
+      />
+    }
+    sectionType="default"
+    text="Item 5"
+  />
+</span>
+`;
