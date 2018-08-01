@@ -111,7 +111,7 @@ export class HorizontalTabs extends React.Component<HorizontalTabsProps, Horizon
   }
 
   titleForTab = (tab: HorizontalTabDefinition, index: number): JSX.Element => {
-    const { currentTabIndex } = this
+    const currentTabIndex = this.currentTabIndex
     const { useAnchors } = this.props
 
     if (tab.titleComponent) {
@@ -156,7 +156,7 @@ export class HorizontalTabs extends React.Component<HorizontalTabsProps, Horizon
   }
 
   get tabContent (): JSX.Element | null {
-    const { currentTabIndex } = this
+    const currentTabIndex = this.currentTabIndex
     const { tabs } = this.props
 
     if (currentTabIndex < 0 || currentTabIndex >= tabs.length) {
