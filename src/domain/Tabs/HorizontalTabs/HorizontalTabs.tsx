@@ -42,8 +42,8 @@ export interface HorizontalTabsProps {
   /** Callback to run when clicking between tabs */
   onTabChange?: (tab: HorizontalTabDefinition) => void
 
-  /** The currently opened tab */
-  currentlyOpenedTab?: string
+  /** The current tab (by anchorId or index) */
+  currentTab?: string | number
 }
 
 export interface HorizontalTabsState {
@@ -59,19 +59,6 @@ export class HorizontalTabs extends React.Component<HorizontalTabsProps, Horizon
     super(props)
     this.state = {
       currentTabIndex: this.indexForTab(this.props.defaultTab)
-    }
-  }
-
-  componentDidUpdate () {
-    const {
-      currentlyOpenedTab
-    } = this.props
-
-    if (currentlyOpenedTab) {
-      const tabIndex = this.indexForTab(currentlyOpenedTab)
-      if (tabIndex !== this.state.currentTabIndex) {
-        this.setState({ currentTabIndex: tabIndex })
-      }
     }
   }
 
@@ -124,7 +111,7 @@ export class HorizontalTabs extends React.Component<HorizontalTabsProps, Horizon
   }
 
   titleForTab = (tab: HorizontalTabDefinition, index: number): JSX.Element => {
-    const { currentTabIndex } = this.state
+    const { currentTabIndex } = this
     const { useAnchors } = this.props
 
     if (tab.titleComponent) {
@@ -169,7 +156,7 @@ export class HorizontalTabs extends React.Component<HorizontalTabsProps, Horizon
   }
 
   get tabContent (): JSX.Element | null {
-    const { currentTabIndex } = this.state
+    const { currentTabIndex } = this
     const { tabs } = this.props
 
     if (currentTabIndex < 0 || currentTabIndex >= tabs.length) {
@@ -181,6 +168,17 @@ export class HorizontalTabs extends React.Component<HorizontalTabsProps, Horizon
         {tabs[currentTabIndex].content}
       </HorizontalTabContent>
     )
+  }
+
+  get currentTabIndex ():number {
+    const {
+      currentTab
+    } = this.props
+    if (currentTab) {
+      return this.indexForTab(currentTab)
+    } else {
+      return this.state.currentTabIndex
+    }
   }
 
   public render (): JSX.Element | null {

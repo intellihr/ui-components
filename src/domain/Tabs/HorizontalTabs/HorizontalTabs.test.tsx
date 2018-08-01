@@ -56,11 +56,11 @@ describe('<HorizontalTabs />', () => {
     })
   })
 
-  describe('Standard tabs with currently opened tab', () => {
+  describe('Standard tabs with current tab', () => {
     const wrapper = shallow(
       <HorizontalTabs
         tabs={tabDefinitions}
-        currentlyOpenedTab={'#third'}
+        currentTab={'#third'}
       />
     )
 
@@ -76,6 +76,14 @@ describe('<HorizontalTabs />', () => {
       ).toBeTruthy()
 
       expect(wrapper.contains('Tab 3')).toBeTruthy()
+    })
+
+    it('should render the correct content', () => {
+      expect(
+        wrapper
+          .find('#tab3content')
+          .contains('BOO')
+      ).toBeTruthy()
     })
   })
 
