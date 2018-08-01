@@ -80,14 +80,6 @@ export class Comment extends React.Component<CommentProps> {
           </CommentActionMenuToggleButton>
         }
         sections={actions}
-        parentAnchorPosition={{
-          xPos: Props.Position.Right,
-          yPos: Props.Position.Bottom
-        }}
-        dropdownAnchorPosition={{
-          xPos: Props.Position.Right,
-          yPos: Props.Position.Top
-        }}
       />
     )
   }

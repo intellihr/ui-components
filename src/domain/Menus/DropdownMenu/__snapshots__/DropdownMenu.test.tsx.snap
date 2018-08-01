@@ -19,20 +19,10 @@ exports[`<DropdownMenu /> Simple dropdown behaviour should match the snapshot 1`
     </styled.span>
   </span>
   <ManualMenu
-    dropdownAnchorPosition={
-      Object {
-        "xPos": "left",
-        "yPos": "top",
-      }
-    }
+    dropdownAnchorPosition="auto"
     isDropdownOpen={false}
     onDropdownClose={[Function]}
-    parentAnchorPosition={
-      Object {
-        "xPos": "left",
-        "yPos": "bottom",
-      }
-    }
+    parentAnchorPosition="auto"
     parentRef={
       Object {
         "current": null,

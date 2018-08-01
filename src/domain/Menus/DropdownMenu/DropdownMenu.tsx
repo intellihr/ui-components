@@ -12,10 +12,10 @@ interface IDropdownMenuState {
 }
 
 interface IDropdownMenuProps {
-  /** What position on the parent to anchor relative to */
-  parentAnchorPosition?: Props.IPositionXY,
-  /** What position on the dropdown itself to place at the anchor position */
-  dropdownAnchorPosition?: Props.IPositionXY,
+  /** What position on the parent to anchor relative to; 'auto' will find best position automatically */
+  parentAnchorPosition?: Props.IPositionXY | 'auto',
+  /** What position on the dropdown itself to place at the anchor position; 'auto' will find best position automatically */
+  dropdownAnchorPosition?: Props.IPositionXY | 'auto',
   /** Any custom class names */
   className?: string,
   /** The sections to render in the dropdown */
