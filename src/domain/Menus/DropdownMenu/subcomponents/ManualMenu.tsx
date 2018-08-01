@@ -49,7 +49,9 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
 
   private onWindowUpdate = () => {
     // This allows the menu to reposition correctly when the window changes
-    if (this.currentlyMounted) this.forceUpdate()
+    if (this.currentlyMounted) {
+      this.forceUpdate()
+    }
   }
 
   private debounceOnWindowUpdate = debounce(this.onWindowUpdate, 100)
@@ -59,6 +61,7 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
       parentRef
     } = this.props
 
+    // For the first render, the parent ref will be undefined, so we let the dropdown have (0, 0) position on the page
     if (!parentRef.current) {
       return new DOMRect()
     }
