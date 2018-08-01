@@ -182,8 +182,8 @@
   .rt-td {
     align-items: center;
     display: flex;
-    padding: .5rem .625rem .625rem;
     flex-direction: row;
+    padding: .5rem .625rem .625rem;
 
     &.content-right {
       flex-direction: row-reverse;
