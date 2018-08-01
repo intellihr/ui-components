@@ -10,7 +10,6 @@ class BaseButton extends React.PureComponent<IBaseButtonProps> {
 
   get buttonContent (): ReactNode {
     const {
-      id,
       children,
       icon,
       iconAlignment
@@ -19,7 +18,6 @@ class BaseButton extends React.PureComponent<IBaseButtonProps> {
     if (icon) {
       const iconComponent = (
         <span
-          key={id}
           className={classNames('button-icon', iconAlignment)}
         >
           {icon}
