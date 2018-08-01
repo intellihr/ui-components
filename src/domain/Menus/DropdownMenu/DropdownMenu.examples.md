@@ -85,6 +85,10 @@
 
 #### Dropdown Alignment
 
+By default, dropdowns will be positioned according to their location on the page.
+They will default to flipping direction after reaching a 2/3 cutoff on the page window.
+
+Optionally, you can manually define the alignment for the dropdown.
 Specify a corner on the toggle component and a corner on the dropdown itself
 and the two will be anchored when the dropdown is displayed.
 
