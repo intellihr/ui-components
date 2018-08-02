@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { isString, isNumber } from 'lodash'
 import { Text } from '@Domain/Typographies/Text'
 const style = require('./Field.scss')
@@ -10,7 +10,7 @@ export interface IField {
 }
 
 export class Field extends React.PureComponent <IField> {
-  get formattedChildren (): (JSX.Element)[] {
+  get formattedChildren (): JSX.Element[] {
     const {
       children
     } = this.props
@@ -21,7 +21,7 @@ export class Field extends React.PureComponent <IField> {
     )
   }
 
-  get label (): (JSX.Element) {
+  get label (): JSX.Element {
     const {
       label,
       labelRightComponent
