@@ -1,7 +1,7 @@
-import React from 'react'
-import { isString, isNumber } from 'lodash'
+import React, { Fragment } from 'react'
+import { isString, isNumber, isNil } from 'lodash'
 import { Text } from '@Domain/Typographies/Text'
-const style = require('./Field.scss')
+import { FieldLabelWrapper } from './style'
 
 export interface IField {
   /** Label text */
@@ -27,38 +27,27 @@ export class Field extends React.PureComponent <IField> {
       labelRightComponent
     } = this.props
 
-    if (labelRightComponent) {
-      return (
-        <div>
-          <Text
-            size='small'
-            color='subtle'
-            className='label-right-component'
-          >
-            {label}
-          </Text>
-          {labelRightComponent}
-        </div>
-      )
-    }
-
     return (
-      <Text
-        size='small'
-        color='subtle'
-        isInline={false}
-      >
-        {label}
-      </Text>
+      <FieldLabelWrapper labelRightComponent={labelRightComponent}>
+        <Text
+          size='small'
+          color='subtle'
+          isInline={!isNil(labelRightComponent)}
+          className='label-component'
+        >
+          {label}
+        </Text>
+        {labelRightComponent}
+      </FieldLabelWrapper>
     )
   }
 
   render (): JSX.Element {
     return (
-      <div className={style.Field}>
+      <Fragment>
         {this.label}
         {this.formattedChildren}
-      </div>
+      </Fragment>
     )
   }
 }
