@@ -16,16 +16,17 @@
 ```
 
 
-#### DropdownMenu inside overflow hidden bounding box
+#### DropdownMenu inside overflow: hidden, position: relative bounding box
 
 ```jsx
 <div
   style={{
     height: 90,
     width: 90,
-    overflow: 'hidden',
     border: '1px black solid',
-    padding: 10
+    padding: 10,
+    overflow: 'hidden',
+    position: 'relative'
   }}
 >
   <DropdownMenu
