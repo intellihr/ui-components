@@ -32,7 +32,7 @@ export class Field extends React.PureComponent <IField> {
         <div>
           <Text
             size='small'
-            color='#434E59'
+            color='subtle'
             className='label-right-component'
           >
             {label}
@@ -45,7 +45,7 @@ export class Field extends React.PureComponent <IField> {
     return (
       <Text
         size='small'
-        color='#434E59'
+        color='subtle'
         isInline={false}
       >
         {label}
