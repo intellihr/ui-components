@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<HorizontalTabs /> Standard tabs with currently opened tab should match the snapshot 1`] = `
+exports[`<HorizontalTabs /> Standard tabs with current tab should match the snapshot 1`] = `
 <styled.div>
   <styled.ul>
     <styled.li
       key="0"
     >
       <styled.a
-        className="active"
+        className=""
         data-tabindex={0}
         onClick={[Function]}
       >
@@ -29,7 +29,7 @@ exports[`<HorizontalTabs /> Standard tabs with currently opened tab should match
       key="2"
     >
       <styled.a
-        className=""
+        className="active"
         data-tabindex={2}
         onClick={[Function]}
       >
@@ -58,7 +58,11 @@ exports[`<HorizontalTabs /> Standard tabs with currently opened tab should match
     </styled.li>
   </styled.ul>
   <styled.div>
-    Some cool content
+    <h2
+      id="tab3content"
+    >
+      BOO
+    </h2>
   </styled.div>
 </styled.div>
 `;

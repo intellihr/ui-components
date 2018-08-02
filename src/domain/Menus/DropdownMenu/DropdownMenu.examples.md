@@ -15,7 +15,35 @@
 />
 ```
 
-#### Colored Dropdown Menu
+
+#### DropdownMenu inside overflow hidden bounding box
+
+```jsx
+<div
+  style={{
+    height: 90,
+    width: 90,
+    overflow: 'hidden',
+    border: '1px black solid',
+    padding: 10
+  }}
+>
+  <DropdownMenu
+    sections={[
+      {
+        text: 'Item 1',
+        onClick: () => alert('Item 1')
+      },
+      {
+        text: 'Item 2',
+        href: 'https://www.intellihr.com.au'
+      }
+    ]}
+  />
+</div>
+```
+
+#### Dropdown Menu using strip colors
 
 ```jsx
 <DropdownMenu
@@ -24,32 +52,32 @@
     {
       text: 'Alert',
       onClick: () => alert('Test'),
-      color: 'alert'
+      sectionType: 'stripAlert'
     },
     {
       text: 'Success',
       href: 'https://www.intellihr.com.au',
-      color: 'success'
+      sectionType: 'stripSuccess'
     },
     {
       text: 'Warning',
       onClick: () => alert('Test'),
-      color: 'warning'
+      sectionType: 'stripWarning'
     },
     {
       text: 'Primary',
       onClick: () => alert('Test'),
-      color: 'primary'
+      sectionType: 'stripPrimary'
     },
     {
       text: 'Secondary',
       onClick: () => alert('Test'),
-      color: 'secondary'
+      sectionType: 'stripSecondary'
     },
     {
       text: 'Neutral',
       onClick: () => alert('Test'),
-      color: 'neutral'
+      sectionType: 'stripNeutral'
     },
   ]}
 />
@@ -57,43 +85,112 @@
 
 #### Dropdown Alignment
 
+By default, dropdowns will be positioned according to their location on the page.
+They will default to flipping direction after reaching a 2/3 cutoff on the page window.
+
+Optionally, you can manually define the alignment for the dropdown.
+Specify a corner on the toggle component and a corner on the dropdown itself
+and the two will be anchored when the dropdown is displayed.
+
+Alignment also determines the animation direction for showing and
+hiding the dropdown.
+
 ```jsx
 <React.Fragment>
   <DropdownMenu
-    toggleComponent={<Button>Left</Button>}
-    dropdownOverrides={{
-      align:'left'
-    }}
+    toggleComponent={<Button>Anchored bottom left</Button>}
     sections={[
       {
-        onClick: () => alert('Test'),
         text: 'Item 1'
+      },
+      {
+        text: 'Item 2'
       }
     ]}
+    parentAnchorPosition={{
+      xPos: 'left',
+      yPos: 'bottom'
+    }}
+    dropdownAnchorPosition={{
+      xPos: 'left',
+      yPos: 'top'
+    }}
   />
   <DropdownMenu
-    toggleComponent={<Button>Center</Button>}
-    dropdownOverrides={{
-      align:'center'
-    }}
+    toggleComponent={<Button>Anchored bottom right</Button>}
     sections={[
       {
-        onClick: () => alert('Test'),
         text: 'Item 1'
+      },
+      {
+        text: 'Item 2'
       }
     ]}
+    parentAnchorPosition={{
+      xPos: 'right',
+      yPos: 'bottom'
+    }}
+    dropdownAnchorPosition={{
+      xPos: 'right',
+      yPos: 'top'
+    }}
   />
   <DropdownMenu
-    toggleComponent={<Button>Right</Button>}
-    dropdownOverrides={{
-      align:'right'
-    }}
+    toggleComponent={<Button>Drop upwards, top left</Button>}
     sections={[
-      {      
-        onClick: () => alert('Test'),
+      {
         text: 'Item 1'
+      },
+      {
+        text: 'Item 2'
       }
     ]}
+    parentAnchorPosition={{
+      xPos: 'left',
+      yPos: 'top'
+    }}
+    dropdownAnchorPosition={{
+      xPos: 'left',
+      yPos: 'bottom'
+    }}
+  />
+  <DropdownMenu
+    toggleComponent={<Button>Anchored top right, open to right</Button>}
+    sections={[
+      {
+        text: 'Item 1'
+      },
+      {
+        text: 'Item 2'
+      }
+    ]}
+    parentAnchorPosition={{
+      xPos: 'right',
+      yPos: 'top'
+    }}
+    dropdownAnchorPosition={{
+      xPos: 'left',
+      yPos: 'top'
+    }}
+  />
+  <DropdownMenu
+    toggleComponent={<Button>Anchored bottom left, open to left upwards</Button>}
+    sections={[
+      {
+        text: 'Item 1'
+      },
+      {
+        text: 'Item 2'
+      }
+    ]}
+    parentAnchorPosition={{
+      xPos: 'left',
+      yPos: 'bottom'
+    }}
+    dropdownAnchorPosition={{
+      xPos: 'right',
+      yPos: 'bottom'
+    }}
   />
 </React.Fragment>
 ```
@@ -123,35 +220,7 @@
 />
 ```
 
-#### Non Clickable Component
-
-```jsx
-<DropdownMenu
-   toggleComponent={<Button>Non Clickable Component</Button>}
-   sections={[
-     {
-       text: 'no click'
-     }
-   ]}
-/>
-```
-
-#### Alert Component
-
-```jsx
-<DropdownMenu
-   toggleComponent={<Button>Alert</Button>}
-   sections={[
-     {
-       text: 'hover over me',
-       onClick: () => alert('Test'),
-       hoverAlert: true
-     }
-   ]}
-/>
-```
-
-#### left and right Components
+#### Left and right section components
 
 ```jsx
 const { FontAwesomeIcon } = require('@Domain/Icons');
@@ -176,14 +245,13 @@ const { FontAwesomeIcon, IntelliIcon } = require('@Domain/Icons');
 
 <DropdownMenu
    toggleComponent={
-     <Avatar
-       initials='JD'
-       size='medium'
-     />
+     <div style={{ cursor: 'pointer' }} >
+       <Avatar
+         initials='JD'
+         size='medium'
+       />
+     </div>
    }
-   dropdownOverrides={{
-     align:'left'
-   }}
    sections={[
      {
        text: 'John Doe',
@@ -221,8 +289,73 @@ const { FontAwesomeIcon, IntelliIcon } = require('@Domain/Icons');
        text: 'Log Out',
        leftComponent: <FontAwesomeIcon type='power-off' />,
        href: 'google.com',
-       hoverAlert: true
+       sectionType: 'alert'
      }
    ]}
 />
+```
+
+#### Manual Dropdown Menu
+
+`DropdownMenu` provides a ManualMenu subcomponent, which can be used
+to manually manage the toggling and hiding of a dropdown menu, as
+well as specify its parent ref on the page.
+
+```jsx
+const { SelectInput } = require('@Domain/Inputs');
+
+class ManualExample extends React.PureComponent {
+  constructor () {
+    this.state = {
+      isOpen: false
+    }
+
+    this.anchorRef = React.createRef()
+  }
+
+  render () {
+    const {
+      isOpen
+    } = this.state
+
+    return (
+      <React.Fragment>
+        <Button
+          onClick={() => this.setState({ isOpen: true })}
+        >
+          Show Menu
+        </Button>
+        <div
+          style={{
+            border: '1px black solid',
+            float: 'right',
+            padding: 10,
+            width: 200
+          }}
+          ref={this.anchorRef}
+        >
+          The dropdown will be anchored to this box
+        </div>
+        <DropdownMenu.ManualMenu
+          isDropdownOpen={this.state.isOpen}
+          onDropdownClose={() => this.setState({ isOpen: false })}
+          sections={[
+            {
+              text: 'Item 1',
+              onClick: () => alert('Item 1')
+            },
+            {
+              text: 'Item 2',
+              href: 'https://www.intellihr.com.au'
+            }
+          ]}
+          parentRef={this.anchorRef}
+        />
+      </React.Fragment>
+    )
+  }
+}
+
+<ManualExample />
+
 ```
