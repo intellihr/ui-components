@@ -27,3 +27,17 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
     </Button>
   </Field>
 ```
+
+
+#### Field with a Label Right Component
+
+```jsx
+const { FontAwesomeIcon } = require('@Domain/Icons');
+
+  <Field
+    label='Position Title'
+    labelRightComponent={<FontAwesomeIcon type='star' />}
+  >
+    Chief Executive Officer
+  </Field>
+```
