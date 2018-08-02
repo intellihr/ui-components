@@ -1,10 +1,11 @@
 import React, { RefObject } from 'react'
+import ReactDOM from 'react-dom'
 import { debounce, map } from 'lodash'
 import { Transition } from 'react-transition-group'
+import FocusTrap from 'focus-trap-react'
 import { Props } from '@Common/types'
 import { StyledDropdownMenu, StyledSectionList } from './style'
 import { Section, ISectionProps } from './Section'
-import FocusTrap from 'focus-trap-react'
 
 interface IManualMenuProps {
   /** Any custom class names */
@@ -197,7 +198,7 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
     )
   }
 
-  public render () {
+  private get transition () {
     const {
       isDropdownOpen
     } = this.props
@@ -211,6 +212,13 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
       >
         {this.animatedMenu}
       </Transition>
+    )
+  }
+
+  public render () {
+    return ReactDOM.createPortal(
+      this.transition,
+      document.body
     )
   }
 }
