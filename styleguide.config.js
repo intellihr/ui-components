@@ -90,7 +90,8 @@ module.exports = {
         {
           name: 'Formats',
           components: [
-            'src/domain/Formats/IndentedElement/IndentedElement'
+            'src/domain/Formats/IndentedElement/IndentedElement',
+            'src/domain/Formats/Field/Field'
           ]
         },
         {
