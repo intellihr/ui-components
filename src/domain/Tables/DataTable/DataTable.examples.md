@@ -62,14 +62,14 @@
     {
       Header: 'Name',
       accessor: 'name',
-      headerClassName: 'content-right',
-      className: 'content-right'
+      headerAlignment: 'right',
+      columnAlignment: 'right'
     },
     {
       Header: 'Age',
       accessor: 'age',
-      headerClassName: 'content-center',
-      className: 'content-center'
+      headerAlignment: 'center',
+      columnAlignment: 'center'
     }
   ]}
 />

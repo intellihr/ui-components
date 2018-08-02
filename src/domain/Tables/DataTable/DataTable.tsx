@@ -13,19 +13,27 @@ import { DataTablePagination, DataTablePaginationProps } from './DataTablePagina
 import { TextInput } from '@Domain/Inputs'
 const style = require('./DataTable.scss')
 
-export interface DataTableState {
+interface DataTableColumn extends Column {
+  /** Alignment for the header on the column */
+  headerAlignment?: 'left' | 'center' | 'right'
+
+  /** Alignment for the content in the column */
+  columnAlignment?: 'left' | 'center' | 'right'
+}
+
+interface DataTableState {
   /** Currently applied search filter */
   searchFilter: string | null
 }
 
-export interface DataTableProps {
+interface DataTableProps {
   /** Name for this table */
   tableId?: string
 
   /** List of all row data */
   data: any[]
   /** Column definitions for the table */
-  columns: Column[]
+  columns: DataTableColumn[]
 
   /** Whether the table can be sorted on its columns */
   sortable?: boolean
@@ -51,7 +59,7 @@ export interface DataTableProps {
   reactTableOverrides?: Partial<TableProps>
 }
 
-export class DataTable extends React.Component<DataTableProps, DataTableState> {
+class DataTable extends React.Component<DataTableProps, DataTableState> {
   public static defaultProps: Partial<DataTableProps> = {
     sortable: false,
     showPagination: false,
@@ -72,7 +80,7 @@ export class DataTable extends React.Component<DataTableProps, DataTableState> {
   defaultFilterMethod = (
     columnFilter: Filter,
     row: any,
-    column: Column
+    column: DataTableColumn
   ): boolean => {
     // We filter either by the global state filter or by the individual column filter if it exists
     let { searchFilter } = this.state
@@ -128,15 +136,26 @@ export class DataTable extends React.Component<DataTableProps, DataTableState> {
     return filter(data, this.shouldFilterRow)
   }
 
-  get columnsWithFilterMethod (): Column[] {
+  get columnsWithFilterMethod (): DataTableColumn[] {
     const { columns } = this.props
 
     return columns.map((column) => {
       return {
         filterMethod: this.defaultFilterMethod,
-        ...column
+        ...column,
+        headerClassName: classNames(this.columnClassName(column.headerAlignment), column.headerClassName),
+        className: classNames(this.columnClassName(column.columnAlignment), column.className)
       }
     })
+  }
+
+  columnClassName (alignment: 'left' | 'center' | 'right' | undefined) {
+    switch (alignment) {
+      case 'right':
+        return 'content-right'
+      case 'center':
+        return 'content-center'
+    }
   }
 
   updateSearchFilter = (event: ChangeEvent<HTMLInputElement>) => {
@@ -240,4 +259,11 @@ export class DataTable extends React.Component<DataTableProps, DataTableState> {
       {...reactTableOverrides}
     />
   }
+}
+
+export {
+  DataTableColumn,
+  DataTableState,
+  DataTableProps,
+  DataTable
 }
