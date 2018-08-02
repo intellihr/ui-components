@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import { isString, isNumber } from 'lodash'
 import { Text } from '../../Typographies/Text'
-import { FieldWrapper } from './style'
 
 export interface IField {
   /** Label text */
