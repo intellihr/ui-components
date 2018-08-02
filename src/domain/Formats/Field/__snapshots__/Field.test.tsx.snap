@@ -1,0 +1,281 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Field /> should render a Field component, creating a Text child with the provided number 1`] = `
+.c0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  color: hsl(210,13.4%,47.2%);
+  font-weight: 400;
+  display: block;
+  font-size: .875rem;
+}
+
+.c1 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  color: undefined;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+<Field
+  label="FTE"
+>
+  <styled.div>
+    <div
+      className=""
+    >
+      <class_1
+        className="label-component"
+        color="subtle"
+        isInline={false}
+        size="small"
+      >
+        <Skeleton
+          className="label-component"
+          color="subtle"
+          isInline={false}
+          size="small"
+          skeletonOptions={
+            Object {
+              "shape": "line",
+              "showSkeleton": false,
+              "size": "large",
+            }
+          }
+        >
+          <TextComponent
+            className="label-component"
+            color="subtle"
+            isInline={false}
+            size="small"
+            weight="normal"
+          >
+            <styled.span
+              className="label-component"
+              color="subtle"
+              isInline={false}
+              size="small"
+              weight="normal"
+            >
+              <span
+                className="label-component c0"
+                color="subtle"
+                size="small"
+              >
+                FTE
+              </span>
+            </styled.span>
+          </TextComponent>
+        </Skeleton>
+      </class_1>
+    </div>
+  </styled.div>
+  <class_1
+    key=".0"
+  >
+    <Skeleton
+      className=""
+      skeletonOptions={
+        Object {
+          "shape": "line",
+          "showSkeleton": false,
+          "size": "large",
+        }
+      }
+    >
+      <TextComponent
+        isInline={true}
+        size="medium"
+        weight="normal"
+      >
+        <styled.span
+          isInline={true}
+          size="medium"
+          weight="normal"
+        >
+          <span
+            className="c1"
+            size="medium"
+          >
+            1.000
+          </span>
+        </styled.span>
+      </TextComponent>
+    </Skeleton>
+  </class_1>
+</Field>
+`;
+
+exports[`<Field /> should render a Field component, creating a Text child with the provided text 1`] = `
+.c0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  color: hsl(210,13.4%,47.2%);
+  font-weight: 400;
+  display: block;
+  font-size: .875rem;
+}
+
+.c1 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  color: undefined;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+<Field
+  label="Position Title"
+>
+  <styled.div>
+    <div
+      className=""
+    >
+      <class_1
+        className="label-component"
+        color="subtle"
+        isInline={false}
+        size="small"
+      >
+        <Skeleton
+          className="label-component"
+          color="subtle"
+          isInline={false}
+          size="small"
+          skeletonOptions={
+            Object {
+              "shape": "line",
+              "showSkeleton": false,
+              "size": "large",
+            }
+          }
+        >
+          <TextComponent
+            className="label-component"
+            color="subtle"
+            isInline={false}
+            size="small"
+            weight="normal"
+          >
+            <styled.span
+              className="label-component"
+              color="subtle"
+              isInline={false}
+              size="small"
+              weight="normal"
+            >
+              <span
+                className="label-component c0"
+                color="subtle"
+                size="small"
+              >
+                Position Title
+              </span>
+            </styled.span>
+          </TextComponent>
+        </Skeleton>
+      </class_1>
+    </div>
+  </styled.div>
+  <class_1
+    key=".0"
+  >
+    <Skeleton
+      className=""
+      skeletonOptions={
+        Object {
+          "shape": "line",
+          "showSkeleton": false,
+          "size": "large",
+        }
+      }
+    >
+      <TextComponent
+        isInline={true}
+        size="medium"
+        weight="normal"
+      >
+        <styled.span
+          isInline={true}
+          size="medium"
+          weight="normal"
+        >
+          <span
+            className="c1"
+            size="medium"
+          >
+            Chief Executive Officer
+          </span>
+        </styled.span>
+      </TextComponent>
+    </Skeleton>
+  </class_1>
+</Field>
+`;
+
+exports[`<Field /> should render a Field component, with the provided component child 1`] = `
+.c0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  color: hsl(210,13.4%,47.2%);
+  font-weight: 400;
+  display: block;
+  font-size: .875rem;
+}
+
+<Field
+  label="Position Title"
+>
+  <styled.div>
+    <div
+      className=""
+    >
+      <class_1
+        className="label-component"
+        color="subtle"
+        isInline={false}
+        size="small"
+      >
+        <Skeleton
+          className="label-component"
+          color="subtle"
+          isInline={false}
+          size="small"
+          skeletonOptions={
+            Object {
+              "shape": "line",
+              "showSkeleton": false,
+              "size": "large",
+            }
+          }
+        >
+          <TextComponent
+            className="label-component"
+            color="subtle"
+            isInline={false}
+            size="small"
+            weight="normal"
+          >
+            <styled.span
+              className="label-component"
+              color="subtle"
+              isInline={false}
+              size="small"
+              weight="normal"
+            >
+              <span
+                className="label-component c0"
+                color="subtle"
+                size="small"
+              >
+                Position Title
+              </span>
+            </styled.span>
+          </TextComponent>
+        </Skeleton>
+      </class_1>
+    </div>
+  </styled.div>
+  <p
+    key=".0"
+  >
+    Chief Executive Officer
+  </p>
+</Field>
+`;
