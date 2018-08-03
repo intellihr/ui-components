@@ -6,6 +6,8 @@ import { FieldLabelWrapper } from './style'
 export interface IField {
   /** Label text */
   label: string
+
+  /** Component to sit to the right of the Label */
   labelRightComponent?: JSX.Element
 }
 
