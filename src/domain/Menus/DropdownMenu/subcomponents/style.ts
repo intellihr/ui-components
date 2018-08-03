@@ -44,7 +44,7 @@ const StyledDropdownMenu = styled.span`
   margin: 2px;
   position: absolute;
   width: min-content;
-  z-index: 100;
+  z-index: 2000;
   
   transform: scale(0.1);
   transform-origin: ${(props: IStyledDropdownMenuProps) => props.transformOrigin.xPos + ' ' + props.transformOrigin.yPos};
