@@ -1,5 +1,6 @@
 import React from 'react'
 import { mount } from 'enzyme'
+import { Props } from '@Common/types'
 import { DataTable } from './DataTable'
 
 describe('<DataTable />', () => {
@@ -40,6 +41,46 @@ describe('<DataTable />', () => {
 
     it('should not be paginated', () => {
       expect(wrapper.find('.-pagination').exists()).toBeFalsy()
+    })
+  })
+
+  describe('Aligned DataTable', () => {
+    const wrapper = mount(
+      <DataTable
+        data={[
+          {
+            name: 'Tanner Linsley',
+            age: 26
+          },
+          {
+            name: 'Jason Maurer',
+            age: 23
+          }
+        ]}
+        columns={[
+          {
+            Header: 'Name',
+            accessor: 'name',
+            headerAlignment: Props.Position.Right,
+            columnAlignment: Props.Position.Right
+          },
+          {
+            Header: 'Age',
+            accessor: 'age',
+            headerAlignment: Props.Position.Center,
+            columnAlignment: Props.Position.Center
+          }
+        ]}
+      />
+    )
+
+    it('should match the snapshot', () => {
+      expect(wrapper).toMatchSnapshot()
+    })
+
+    it('should contain the data', () => {
+      expect(wrapper.contains('Tanner Linsley')).toBeTruthy()
+      expect(wrapper.contains('Jason Maurer')).toBeTruthy()
     })
   })
 
