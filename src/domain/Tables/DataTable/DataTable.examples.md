@@ -44,6 +44,39 @@
 />
 ```
 
+#### DataTable with right or center aligned content
+
+```jsx
+const { Props } = require('@Common/types');
+
+<DataTable
+  data={[
+    {
+      name: 'Tanner Linsley',
+      age: 26
+    },
+    {
+      name: 'Jason Maurer',
+      age: 23
+    }
+  ]}
+  columns={[
+    {
+      Header: 'Name',
+      accessor: 'name',
+      headerAlignment: Props.Position.Right,
+      columnAlignment: Props.Position.Right
+    },
+    {
+      Header: 'Age',
+      accessor: 'age',
+      headerAlignment: Props.Position.Center,
+      columnAlignment: Props.Position.Center
+    }
+  ]}
+/>
+```
+
 #### Sortable DataTable + default sorting
 
 Hold shift to sort on multiple columns
