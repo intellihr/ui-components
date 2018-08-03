@@ -11,14 +11,15 @@ import {
 import { Callout } from '@Domain/Callouts'
 import { DataTablePagination, DataTablePaginationProps } from './DataTablePagination'
 import { TextInput } from '@Domain/Inputs'
+import { Props } from '@Common/types'
 const style = require('./DataTable.scss')
 
 interface DataTableColumn extends Column {
   /** Alignment for the header on the column */
-  headerAlignment?: 'left' | 'center' | 'right'
+  headerAlignment?: Props.Position.Left | Props.Position.Center | Props.Position.Right
 
   /** Alignment for the content in the column */
-  columnAlignment?: 'left' | 'center' | 'right'
+  columnAlignment?: Props.Position.Left | Props.Position.Center | Props.Position.Right
 }
 
 interface DataTableState {
@@ -149,11 +150,11 @@ class DataTable extends React.Component<DataTableProps, DataTableState> {
     })
   }
 
-  columnClassName (alignment: 'left' | 'center' | 'right' | undefined) {
+  columnClassName (alignment: Props.Position.Left | Props.Position.Center | Props.Position.Right | undefined): string | undefined {
     switch (alignment) {
-      case 'right':
+      case Props.Position.Right:
         return 'content-right'
-      case 'center':
+      case Props.Position.Center:
         return 'content-center'
     }
   }
