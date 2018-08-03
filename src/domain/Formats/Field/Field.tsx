@@ -3,7 +3,7 @@ import { isString, isNumber, isNil } from 'lodash'
 import { Text } from '@Domain/Typographies/Text'
 import { FieldLabelWrapper } from './style'
 
-export interface IField {
+interface IFieldProps {
   /** Label text */
   label: string
 
@@ -11,7 +11,20 @@ export interface IField {
   labelRightComponent?: JSX.Element
 }
 
-export class Field extends React.PureComponent <IField> {
+class Field extends React.PureComponent <IFieldProps> {
+
+  formattedChild (child: string | number | JSX.Element) : JSX.Element {
+    if (isString(child) || isNumber(child)) {
+      return (
+        <Text>
+          {child}
+        </Text>
+      )
+    }
+
+    return child
+  }
+
   get formattedChildren (): JSX.Element[] {
     const {
       children
@@ -19,7 +32,7 @@ export class Field extends React.PureComponent <IField> {
 
     return React.Children.map(
       children,
-      (child) => isString(child) || isNumber(child) ? <Text>{child}</Text> : child
+      this.formattedChild
     )
   }
 
@@ -52,4 +65,9 @@ export class Field extends React.PureComponent <IField> {
       </Fragment>
     )
   }
+}
+
+export {
+  IFieldProps,
+  Field
 }
