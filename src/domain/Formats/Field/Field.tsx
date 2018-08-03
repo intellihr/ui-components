@@ -12,7 +12,6 @@ interface IFieldProps {
 }
 
 class Field extends React.PureComponent <IFieldProps> {
-
   formattedChild (child: string | number | JSX.Element) : JSX.Element {
     if (isString(child) || isNumber(child)) {
       return (
