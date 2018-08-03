@@ -43,6 +43,46 @@ describe('<DataTable />', () => {
     })
   })
 
+  describe('Aligned DataTable', () => {
+    const wrapper = mount(
+      <DataTable
+        data={[
+          {
+            name: 'Tanner Linsley',
+            age: 26
+          },
+          {
+            name: 'Jason Maurer',
+            age: 23
+          }
+        ]}
+        columns={[
+          {
+            Header: 'Name',
+            accessor: 'name',
+            headerAlignment: 'right',
+            columnAlignment: 'right'
+          },
+          {
+            Header: 'Age',
+            accessor: 'age',
+            headerAlignment: 'center',
+            columnAlignment: 'center'
+          }
+        ]}
+      />
+    )
+
+    it('should match the snapshot', () => {
+      expect(wrapper).toMatchSnapshot()
+    })
+
+    it('should contain the data', () => {
+      expect(wrapper.contains('Tanner Linsley')).toBeTruthy()
+      expect(wrapper.contains('Jason Maurer')).toBeTruthy()
+    })
+  })
+
   describe('Paginated DataTable', () => {
     const wrapper = mount(
       <DataTable

@@ -136,7 +136,7 @@ class DataTable extends React.Component<DataTableProps, DataTableState> {
     return filter(data, this.shouldFilterRow)
   }
 
-  get columnsWithFilterMethod (): DataTableColumn[] {
+  get columns (): DataTableColumn[] {
     const { columns } = this.props
 
     return columns.map((column) => {
@@ -248,7 +248,7 @@ class DataTable extends React.Component<DataTableProps, DataTableState> {
     return <ReactTable
       {...this.defaultReactTableProps}
       data={filteredData}
-      columns={this.columnsWithFilterMethod}
+      columns={this.columns}
       className={this.classNames}
       showPagination={showPagination}
       showPaginationBottom={filteredData.length > 0}
