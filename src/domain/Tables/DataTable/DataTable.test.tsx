@@ -1,5 +1,6 @@
 import React from 'react'
 import { mount } from 'enzyme'
+import { Props } from '@Common/types'
 import { DataTable } from './DataTable'
 
 describe('<DataTable />', () => {
@@ -60,14 +61,14 @@ describe('<DataTable />', () => {
           {
             Header: 'Name',
             accessor: 'name',
-            headerAlignment: 'right',
-            columnAlignment: 'right'
+            headerAlignment: Props.Position.Right,
+            columnAlignment: Props.Position.Right
           },
           {
             Header: 'Age',
             accessor: 'age',
-            headerAlignment: 'center',
-            columnAlignment: 'center'
+            headerAlignment: Props.Position.Center,
+            columnAlignment: Props.Position.Center
           }
         ]}
       />
