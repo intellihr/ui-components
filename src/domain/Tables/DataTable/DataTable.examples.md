@@ -47,6 +47,8 @@
 #### DataTable with right or center aligned content
 
 ```jsx
+const { Props } = require('@Common/Types')
+
 <DataTable
   data={[
     {
@@ -62,14 +64,14 @@
     {
       Header: 'Name',
       accessor: 'name',
-      headerAlignment: 'right',
-      columnAlignment: 'right'
+      headerAlignment: Props.Position.Right,
+      columnAlignment: Props.Position.Right
     },
     {
       Header: 'Age',
       accessor: 'age',
-      headerAlignment: 'center',
-      columnAlignment: 'center'
+      headerAlignment: Props.Position.Center,
+      columnAlignment: Props.Position.Center
     }
   ]}
 />
