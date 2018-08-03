@@ -383,6 +383,17 @@ $button-styles: (
     hover-text-color: $neutral-text,
     active-background-color: $neutral-active,
     active-text-color: $neutral-hover-text
+  ),
+  menu-action: (
+    background-color: transparent,
+    border: transparent,
+    text-color: $main-text,
+    disabled-background-color: transparent,
+    disabled-text-color: $main-text-light,
+    hover-background-color: transparent,
+    hover-text-color: $secondary-base,
+    active-background-color: transparent,
+    active-text-color: $secondary-base
   )
 );
 

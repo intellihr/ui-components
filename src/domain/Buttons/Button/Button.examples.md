@@ -207,6 +207,9 @@
     <Button type='cancel' onClick={() => alert('cancel')}>
       cancel
     </Button>
+    <Button type='menu-action' onClick={() => alert('menu-action')}>
+      menu-action
+    </Button>
   </div>
   <div>
     <h3>Disabled</h3>
@@ -230,6 +233,9 @@
     </Button>
     <Button type='cancel' disabled onClick={() => alert('cancel')}>
       cancel
+    </Button>
+    <Button type='menu-action' disabled onClick={() => alert('menu-action')}>
+      menu-action
     </Button>
   </div>
 </div>
