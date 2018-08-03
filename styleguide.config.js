@@ -227,7 +227,7 @@ module.exports = {
         'src/domain/Anchors/Anchor/withAnchor',
         'src/domain/Styles/hoc/withStyledBreakpoints',
         'src/domain/Defaults/withDefaults/withDefaults',
-        'src/domain/Grids/Grid/withGrid',
+        'src/domain/Grids/WithGrid',
         'src/domain/Skeletons/withSkeleton/withSkeleton'
       ]
     }

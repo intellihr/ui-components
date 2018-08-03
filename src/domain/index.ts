@@ -14,6 +14,7 @@ export { InputLabel, TextInput, NumberInput, CheckboxInput, SelectInput } from '
 export { StatusIndicator } from './Indicators'
 export { Legend } from './Legends'
 export { ActionLink, TextLink } from './Links'
+export { WithGrid } from './Grids'
 
 /*
  * ListRow, ListClickableColumn and ListColum are here for legacy support.

@@ -1,13 +1,14 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
-import { IWithDefaults, withDefaults, DefaultsConsumer } from '@Domain/Defaults'
-import { pxToRem } from '@Domain/Styles'
+import { IWithDefaults, withDefaults, DefaultsConsumer } from '../../Defaults/index'
+import { pxToRem } from '../../Styles/index'
 
 interface IBreakpoints {
-  xs: number
-  sm: number
-  md: number
-  lg: number
+  xsm  : number
+  sm  : number
+  md  : number
+  lg : number,
+  xlg: number
 }
 
 interface IGridProps {
@@ -26,6 +27,7 @@ class GridBase extends React.PureComponent<IGridProps & IWithDefaults> {
       breakpoints,
       defaults: {
         breakpoints: {
+          xsmall,
           small,
           medium,
           large,
@@ -37,12 +39,14 @@ class GridBase extends React.PureComponent<IGridProps & IWithDefaults> {
     if (breakpoints) {
       return breakpoints
     }
+    console.log(xsmall+'...'+small)
 
     return {
-      xs: pxToRem(small),
-      sm: pxToRem(medium),
-      md: pxToRem(large),
-      lg: pxToRem(xlarge)
+      xs: pxToRem(xsmall),
+      sm: pxToRem(small),
+      md: pxToRem(medium),
+      lg: pxToRem(large),
+      xlg: pxToRem(xlarge)
     }
   }
 

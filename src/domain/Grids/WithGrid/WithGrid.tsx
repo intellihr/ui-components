@@ -1,7 +1,7 @@
 import React from 'react'
-import { Grid, IGridProps } from './Grid'
+import { Grid, IGridProps } from '../Grid/Grid'
 
-export const withGrid = <P extends {}>(Component: React.ComponentType<P>) =>
+export const WithGrid = <P extends {}>(Component: React.ComponentType<P>) =>
   class WithGrid extends React.Component<P & IGridProps> {
     render (): JSX.Element {
       return (

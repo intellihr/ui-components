@@ -7,7 +7,7 @@ import { Callout } from '../../Callouts'
 import { Spinner } from '../../Spinners'
 import { ListClickableColumn } from './ListClickableColumn'
 import { ListRow } from './ListRow'
-import { withGrid } from '../../Grids'
+import { WithGrid } from '../../Grids'
 import { ISkeletonOptions } from '../../Skeletons'
 
 const style = require('./style.scss')
@@ -313,4 +313,4 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
   }
 }
 
-export const SmartList: React.ComponentClass<ISmartList> = withGrid(SmartListComponent)
+export const SmartList: React.ComponentClass<ISmartList> = WithGrid(SmartListComponent)
