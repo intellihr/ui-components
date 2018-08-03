@@ -47,7 +47,7 @@
 #### DataTable with right or center aligned content
 
 ```jsx
-const { Props } = require('@Common/Types')
+const { Props } = require('@Common/types')
 
 <DataTable
   data={[
