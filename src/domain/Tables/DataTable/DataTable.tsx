@@ -14,12 +14,14 @@ import { TextInput } from '@Domain/Inputs'
 import { Props } from '@Common/types'
 const style = require('./DataTable.scss')
 
+type alignmentOptions = Props.Position.Left | Props.Position.Center | Props.Position.Right
+
 interface DataTableColumn extends Column {
   /** Alignment for the header on the column */
-  headerAlignment?: Props.Position.Left | Props.Position.Center | Props.Position.Right
+  headerAlignment?: alignmentOptions
 
   /** Alignment for the content in the column */
-  columnAlignment?: Props.Position.Left | Props.Position.Center | Props.Position.Right
+  columnAlignment?: alignmentOptions
 }
 
 interface DataTableState {
@@ -150,7 +152,7 @@ class DataTable extends React.Component<DataTableProps, DataTableState> {
     })
   }
 
-  columnClassName (alignment: Props.Position.Left | Props.Position.Center | Props.Position.Right | undefined): string | undefined {
+  columnClassName (alignment: alignmentOptions | undefined): string | undefined {
     switch (alignment) {
       case Props.Position.Right:
         return 'content-right'
