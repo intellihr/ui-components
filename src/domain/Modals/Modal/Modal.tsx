@@ -24,7 +24,7 @@ interface IBaseModalProps {
   /** The deep level */
   modalZLevel?: number
   /** Component that will be inserted into the modal */
-  children?: JSX.Element
+  children?: JSX.Element | string
 }
 
 interface IModalProps extends IBaseModalProps {
