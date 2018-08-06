@@ -153,20 +153,24 @@ function styleForSectionType (section: IStyledSectionProps) {
 
   if (section.sectionType === 'default') {
     return css`
-      color: ${getColor('main-text')};
-       
-      ${section.clickable && css`
-        cursor: pointer;
+      &,
+      .left-component,
+      .right-component {
+        color: ${getColor('main-text')};
+         
+        ${section.clickable && css`
+          cursor: pointer;
+        
+          &:hover,
+          &:active,
+          &:focus {
+            background-color: ${getColor('neutral-light')};
       
-        &:hover,
-        &:active,
-        &:focus {
-          background-color: ${getColor('neutral-light')};
-    
-          &,
-          .left-component,
-          .right-component {
-            color: ${getColor('link-text')};
+            &,
+            .left-component,
+            .right-component {
+              color: ${getColor('link-text')};
+            }
           }
         }
       `}
