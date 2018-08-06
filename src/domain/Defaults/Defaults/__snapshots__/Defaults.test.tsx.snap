@@ -5,11 +5,11 @@ Array [
   Array [
     Object {
       "breakpoints": Object {
-        "large": 300,
-        "medium": 200,
-        "small": 100,
-        "xlarge": 400,
-        "xsmall": 0,
+        "large": 200,
+        "medium": 100,
+        "small": 0,
+        "xlarge": 300,
+        "xxlarge": 400,
       },
     },
   ],

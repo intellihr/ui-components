@@ -1,7 +1,7 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
-import { IWithDefaults, withDefaults, DefaultsConsumer } from '../../Defaults/index'
-import { pxToRem } from '../../Styles/index'
+import { pxToRem } from '@Domain/Styles'
+import { IWithDefaults } from '@Domain/Defaults'
 
 interface IBreakpoints {
   sm : number

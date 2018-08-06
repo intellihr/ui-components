@@ -48,7 +48,7 @@ describe('withDefaults', () => {
       <DefaultsProvider
         value={{
           breakpoints: {
-            xsmall: 0,
+            small: 0,
             medium: 100,
             large: 200,
             xlarge: 300,

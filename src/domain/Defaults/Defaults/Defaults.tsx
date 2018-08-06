@@ -6,10 +6,10 @@ const sassGlobals = require('@Common/sass/globals.scss')
 interface IDefaults {
   /** Breakpoints used for the grid layout */
   breakpoints: {
-    small: number,
-    medium: number,
-    large : number,
-    xlarge: number,
+    small: number
+    medium: number
+    large : number
+    xlarge: number
     xxlarge: number
   }
 
