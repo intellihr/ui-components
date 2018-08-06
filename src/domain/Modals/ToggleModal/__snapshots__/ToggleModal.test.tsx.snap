@@ -13,6 +13,7 @@ exports[`<ToggleModal /> should render a modal with a button 1`] = `
     handleClose={[Function]}
     isOpen={false}
     modalZLevel={0}
+    showCloseButton={true}
     size="medium"
   >
     Hello this is a Modal

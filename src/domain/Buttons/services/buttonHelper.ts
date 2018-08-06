@@ -13,7 +13,7 @@ export type ButtonTypes =
   'primary-hollow' | 'secondary-hollow' | 'success-hollow' | 'warning-hollow' | 'alert-hollow' |
   'neutral-hollow' | 'highlight-hollow' | 'light-hollow' | 'dark-hollow' |
 
-  'add' |'add-subtle' | 'delete-subtle' | 'delete' | 'resolve' | 'skip' | 'cancel'
+  'add' |'add-subtle' | 'delete-subtle' | 'delete' | 'resolve' | 'skip' | 'cancel' | 'menu-action'
 
 export type ButtonSizes = 'small' | 'medium' | 'large'
 
