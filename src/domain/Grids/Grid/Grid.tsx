@@ -4,7 +4,6 @@ import { IWithDefaults, withDefaults, DefaultsConsumer } from '../../Defaults/in
 import { pxToRem } from '../../Styles/index'
 
 interface IBreakpoints {
-  xsm  : number
   sm  : number
   md  : number
   lg : number,
@@ -16,7 +15,7 @@ interface IGridProps {
   breakpoints?: IBreakpoints
 }
 
-class GridBase extends React.PureComponent<IGridProps & IWithDefaults> {
+class Grid extends React.PureComponent<IGridProps & IWithDefaults> {
   /**
    * Retrieve breakpoints in the following orders:
    * 1. Breakpoints directly provided to the component
@@ -27,7 +26,6 @@ class GridBase extends React.PureComponent<IGridProps & IWithDefaults> {
       breakpoints,
       defaults: {
         breakpoints: {
-          xsmall,
           small,
           medium,
           large,
@@ -39,10 +37,8 @@ class GridBase extends React.PureComponent<IGridProps & IWithDefaults> {
     if (breakpoints) {
       return breakpoints
     }
-    console.log(xsmall+'...'+small)
 
     return {
-      xs: pxToRem(xsmall),
       sm: pxToRem(small),
       md: pxToRem(medium),
       lg: pxToRem(large),
@@ -69,8 +65,6 @@ class GridBase extends React.PureComponent<IGridProps & IWithDefaults> {
     )
   }
 }
-
-const Grid = withDefaults(GridBase)
 
 export {
   IBreakpoints,

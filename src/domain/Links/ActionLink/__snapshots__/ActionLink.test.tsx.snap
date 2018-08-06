@@ -56,22 +56,51 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
     }
   }
 >
-  <WithAnchor
-    href="#"
+  <GridBase
+    defaults={
+      Object {
+        "breakpoints": Object {
+          "large": 1024,
+          "medium": 640,
+          "small": 0,
+          "xlarge": 1200,
+          "xxlarge": 1440,
+        },
+      }
+    }
   >
-    <Anchor
-      href="#"
+    <ThemeProvider
+      theme={
+        Object {
+          "flexboxgrid": Object {
+            "breakpoints": Object {
+              "lg": 64,
+              "md": 40,
+              "sm": 0,
+              "xlg": 75,
+            },
+          },
+        }
+      }
     >
-      <AnchorComponent
+      <WithAnchor
         href="#"
       >
-        <a
-          href="/allTheFeelsUgh"
+        <Anchor
+          href="#"
         >
-          Replacement default text
-        </a>
-      </AnchorComponent>
-    </Anchor>
-  </WithAnchor>
+          <AnchorComponent
+            href="#"
+          >
+            <a
+              href="/allTheFeelsUgh"
+            >
+              Replacement default text
+            </a>
+          </AnchorComponent>
+        </Anchor>
+      </WithAnchor>
+    </ThemeProvider>
+  </GridBase>
 </DefaultsProvider>
 `;

@@ -1,1 +1,0 @@
-export { WithGrid } from './WithGrid'

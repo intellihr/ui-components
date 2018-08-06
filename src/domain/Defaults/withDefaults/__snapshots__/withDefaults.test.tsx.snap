@@ -7,8 +7,8 @@ Array [
       "breakpoints": Object {
         "large": 200,
         "medium": 100,
-        "small": 0,
         "xlarge": 300,
+        "xsmall": 0,
         "xxlarge": 400,
       },
     },

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Column /> Simple Column behaviour should default values if nothing provided 1`] = `
+<Col
+  lg={3}
+  md={3}
+  sm={12}
+  xs={12}
+/>
+`;
+
+exports[`<Column /> Simple Column behaviour should match the snapshot 1`] = `
+<Col
+  sm={12}
+  xs={12}
+/>
+`;
