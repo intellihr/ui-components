@@ -14,7 +14,7 @@ export interface ISize {
 
 export interface IListColumn {
   /** Content to display in each cell of the list column */
-  cell: (rowObject: any) => JSX.Element | string
+  cell: (rowObject: any) => JSX.Element | string | number
   /** Class names to use for each cell of the list column */
   cellClassNames?: (rowObject: any) => string
   /** Dataset used to generate the list content */
@@ -45,7 +45,7 @@ class ListColumn extends React.PureComponent<IListColumn & SkeletonComponentProp
     alignRight: false
   }
 
-  get cellContent (): JSX.Element | string | undefined {
+  get cellContent (): JSX.Element | string | undefined | number {
     const {
       cell,
       data,
