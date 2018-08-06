@@ -207,6 +207,9 @@
     <LinkButton type='cancel' href='#'>
       cancel
     </LinkButton>
+    <LinkButton type='menu-action' href='#'>
+      menu-action
+    </LinkButton>
   </div>
   <div>
     <h3>Disabled</h3>
@@ -230,6 +233,9 @@
     </LinkButton>
     <LinkButton disabled type='cancel' href='#'>
       cancel
+    </LinkButton>
+    <LinkButton type='menu-action' disabled  href='#'>
+      menu-action
     </LinkButton>
   </div>
 </div>

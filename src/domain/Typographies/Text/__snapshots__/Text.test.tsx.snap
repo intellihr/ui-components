@@ -170,7 +170,7 @@ exports[`<Text /> should render an element with small text 1`] = `
   font-family: 'Open Sans',Arial,sans-serif;
   color: undefined;
   font-weight: 400;
-  font-size: .8125rem;
+  font-size: .875rem;
 }
 
 <class_1

@@ -15,6 +15,8 @@ interface IBaseModalProps {
    * Callback to call on close; receives event
    * */
   handleClose?: (event: (MouseEvent | KeyboardEvent | React.MouseEvent<HTMLButtonElement>)) => void
+  /** Shows the close button if true and handleClose is set */
+  showCloseButton?: boolean
   /** Extra classes to apply */
   className?: string
   /** Modal Size */
@@ -22,7 +24,7 @@ interface IBaseModalProps {
   /** The deep level */
   modalZLevel?: number
   /** Component that will be inserted into the modal */
-  children?: JSX.Element
+  children?: JSX.Element | string
 }
 
 interface IModalProps extends IBaseModalProps {
@@ -33,7 +35,8 @@ interface IModalProps extends IBaseModalProps {
 class Modal extends React.PureComponent<IModalProps> {
   public static defaultProps: Partial<IModalProps> = {
     size: Props.Size.Medium,
-    modalZLevel: 0
+    modalZLevel: 0,
+    showCloseButton: true
   }
 
   static BASE_Z_INDEX = 1010
@@ -53,10 +56,11 @@ class Modal extends React.PureComponent<IModalProps> {
 
   get closeButton (): JSX.Element | undefined {
     const {
-      handleClose
+      handleClose,
+      showCloseButton
     } = this.props
 
-    if (handleClose) {
+    if (handleClose && showCloseButton) {
       return (
         // We use button here on purpose because we don't want any intellihr style
         <button
@@ -73,10 +77,8 @@ class Modal extends React.PureComponent<IModalProps> {
   render (): JSX.Element {
     const {
       children,
-      className,
       isOpen,
       handleClose,
-      size,
       modalZLevel
     } = this.props
 

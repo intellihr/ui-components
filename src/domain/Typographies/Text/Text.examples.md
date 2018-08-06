@@ -10,6 +10,9 @@
 
 ```jsx
   <div>
+    <Text isInline={false} size='xsmall'>
+      X-Small
+    </Text>
     <Text isInline={false} size='small'>
       Small
     </Text>

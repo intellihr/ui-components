@@ -4,7 +4,7 @@ import { withSkeleton, SkeletonComponentProps } from '@Domain/Skeletons'
 
 export interface TextProps {
   /** Text to display */
-  children: string
+  children: string | number
   /** Custom class name to use */
   className?: string
   /** If true, displays the text in uppercase */
@@ -12,7 +12,7 @@ export interface TextProps {
   /** Specify the text font weight */
   weight?: 'normal' | 'heavy'
   /** Specify the size of text to use */
-  size?: 'small' | 'medium' | 'large'
+  size?: 'xsmall' | 'small' | 'medium' | 'large'
   /** If true, will truncate overflowing text */
   isTruncated?: boolean
   /** If true, will display the text inline */
