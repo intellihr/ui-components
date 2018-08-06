@@ -2,44 +2,57 @@ import React from 'react'
 import { Col } from 'react-styled-flexboxgrid'
 
 interface IColProps {
-  xs  : number
-  sm  : number
-  md  : number,
-  lg  : number
+  sm: number,
+  md: number,
+  lg: number,
+  xlg: number,
+  xxlg: number
 }
 
 class Column extends React.PureComponent<IColProps> {
-
-  get dimensions() {
-    let xsmall : number = 0;
-    let small  : number = 0;
-    let medium : number = 0;
-    let large  : number = 0;
+  get dimensions () {
+    let small: number = 0
+    let medium: number = 0
+    let large: number = 0
+    let xlarge: number = 0
+    let xxlarge: number = 0
 
     const {
-      xs,
       sm,
       md,
-      lg
+      lg,
+      xlg,
+      xxlg
     } = this.props
 
-    !xs ? xsmall = 12 : xsmall = xs;
+    !sm ? small = 12 : small = sm
 
-    !sm ? small = 12 : small = sm;
+    !md ? medium = 6 : medium = md
 
-    !md ? medium = 6 : medium = md;
+    !lg ? large = 3 : large = lg
 
-    !lg ? large = 6  : large = lg;
+    !xlg ? xlarge = 3 : xlarge = xlg
 
-    (md && !lg) ? large = md : large = lg;
+    !xxlg ? xxlarge = 3 : xxlarge = xxlg
 
-    (!md && lg) ? medium = lg : medium = md;
+    if (md && !lg && !xlg && !xxlg) {
+      large = md
+      xlarge = md
+      xxlarge = md
+    }
+
+    if (lg && !xlg && !xxlg) {
+      medium = lg
+      xlarge = lg
+      xxlarge = lg
+    }
 
     return {
-      xs: xsmall,
       sm: small,
       md: medium,
-      lg: large
+      lg: large,
+      xlg: xlarge,
+      xxlg: xxlarge
     }
   }
 

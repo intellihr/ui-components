@@ -56,7 +56,7 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
     }
   }
 >
-  <GridBase
+  <Grid
     defaults={
       Object {
         "breakpoints": Object {
@@ -78,6 +78,7 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
               "md": 40,
               "sm": 0,
               "xlg": 75,
+              "xxlg": 90,
             },
           },
         }
@@ -101,6 +102,6 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
         </Anchor>
       </WithAnchor>
     </ThemeProvider>
-  </GridBase>
+  </Grid>
 </DefaultsProvider>
 `;

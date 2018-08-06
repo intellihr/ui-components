@@ -4,10 +4,11 @@ import { IWithDefaults, withDefaults, DefaultsConsumer } from '../../Defaults/in
 import { pxToRem } from '../../Styles/index'
 
 interface IBreakpoints {
-  sm  : number
-  md  : number
-  lg : number,
-  xlg: number
+  sm : number
+  md : number
+  lg : number
+  xlg : number
+  xxlg : number
 }
 
 interface IGridProps {
@@ -29,7 +30,8 @@ class Grid extends React.PureComponent<IGridProps & IWithDefaults> {
           small,
           medium,
           large,
-          xlarge
+          xlarge,
+          xxlarge
         }
       }
     } = this.props
@@ -42,7 +44,8 @@ class Grid extends React.PureComponent<IGridProps & IWithDefaults> {
       sm: pxToRem(small),
       md: pxToRem(medium),
       lg: pxToRem(large),
-      xlg: pxToRem(xlarge)
+      xlg: pxToRem(xlarge),
+      xxlg: pxToRem(xxlarge)
     }
   }
 
