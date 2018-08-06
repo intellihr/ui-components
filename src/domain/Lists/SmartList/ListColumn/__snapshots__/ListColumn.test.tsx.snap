@@ -1,5 +1,94 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<ListColumn /> should render a list column with number content 1`] = `
+.c0 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c0 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+<ListColumn
+  alignRight={false}
+  cell={[Function]}
+  data={
+    Array [
+      Object {
+        "name": "Test Name",
+        "number": 100,
+      },
+    ]
+  }
+  header=""
+  isHeader={false}
+  rowIndex={0}
+  size={
+    Object {
+      "sm": 6,
+    }
+  }
+>
+  <Col
+    lg={12}
+    md={12}
+    sm={6}
+    xs={12}
+  >
+    <div
+      className="c0"
+    >
+      <div
+        className="list-column"
+      >
+        100
+      </div>
+    </div>
+  </Col>
+</ListColumn>
+`;
+
 exports[`<ListColumn /> should render a list column with the right header 1`] = `
 .c0 {
   box-sizing: border-box;
@@ -57,6 +146,7 @@ exports[`<ListColumn /> should render a list column with the right header 1`] = 
     Array [
       Object {
         "name": "Test Name",
+        "number": 100,
       },
     ]
   }
@@ -153,6 +243,7 @@ exports[`<ListColumn /> should render a list column with the right non-header ce
     Array [
       Object {
         "name": "Test Name",
+        "number": 100,
       },
     ]
   }
