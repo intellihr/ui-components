@@ -8,7 +8,7 @@ interface IDefaults {
   breakpoints: {
     small: number
     medium: number
-    large : number
+    large: number
     xlarge: number
     xxlarge: number
   }
