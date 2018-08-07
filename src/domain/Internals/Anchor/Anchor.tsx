@@ -19,7 +19,6 @@ class Anchor extends React.PureComponent<IAnchorProps, never> {
   private anchorComponent (defaultValues: IDefaults) {
     const {
       anchorComponent,
-      anchorComponentProps,
       children,
       href,
       ...props
@@ -27,10 +26,14 @@ class Anchor extends React.PureComponent<IAnchorProps, never> {
 
     const AnchorComponent = anchorComponent || defaultValues.AnchorComponent || 'a'
 
+    // Prevent warnings from passing anchorComponentProps to core html tags
+    if (isString(AnchorComponent)) {
+      delete props.anchorComponentProps
+    }
+
     return (
       <AnchorComponent
         {...props}
-        anchorComponentProps={!isString(AnchorComponent) ? anchorComponentProps : undefined}
         href={href}
       >
         {children}

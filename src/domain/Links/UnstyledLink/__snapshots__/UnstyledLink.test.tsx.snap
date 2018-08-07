@@ -12,20 +12,16 @@ exports[`<TextLink /> should render a text link 1`] = `
 <UnstyledLink
   href="/lol"
 >
-  <Styled(Anchor)
+  <Anchor
+    className="c0"
     href="/lol"
   >
-    <Anchor
+    <a
       className="c0"
       href="/lol"
     >
-      <a
-        className="c0"
-        href="/lol"
-      >
-        Text link me
-      </a>
-    </Anchor>
-  </Styled(Anchor)>
+      Text link me
+    </a>
+  </Anchor>
 </UnstyledLink>
 `;

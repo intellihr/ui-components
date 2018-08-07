@@ -18,21 +18,17 @@ exports[`<ActionLink /> should render an action link 1`] = `
 <ActionLink
   href="/lol"
 >
-  <styled.span>
-    <span
+  <Anchor
+    className="c0"
+    href="/lol"
+  >
+    <a
       className="c0"
+      href="/lol"
     >
-      <Anchor
-        href="/lol"
-      >
-        <a
-          href="/lol"
-        >
-          Grrr I am action man
-        </a>
-      </Anchor>
-    </span>
-  </styled.span>
+      Grrr I am action man
+    </a>
+  </Anchor>
 </ActionLink>
 `;
 
@@ -61,25 +57,21 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
   <ActionLink
     href="#"
   >
-    <styled.span>
-      <span
+    <Anchor
+      className="c0"
+      href="#"
+    >
+      <AnchorComponent
         className="c0"
+        href="#"
       >
-        <Anchor
-          href="#"
+        <a
+          href="/allTheFeelsUgh"
         >
-          <AnchorComponent
-            href="#"
-          >
-            <a
-              href="/allTheFeelsUgh"
-            >
-              Replacement default text
-            </a>
-          </AnchorComponent>
-        </Anchor>
-      </span>
-    </styled.span>
+          Replacement default text
+        </a>
+      </AnchorComponent>
+    </Anchor>
   </ActionLink>
 </DefaultsProvider>
 `;
