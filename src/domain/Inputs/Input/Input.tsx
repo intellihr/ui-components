@@ -64,7 +64,7 @@ export class Input extends React.PureComponent<InputProps> {
     }
   }
 
-  classNames (): string {
+  get classNames (): string {
     const {
       className,
       isInvalid
@@ -105,7 +105,7 @@ export class Input extends React.PureComponent<InputProps> {
         onKeyDown={handleKeyDown}
         onBlur={handleBlur ? (e) => handleBlur(e, value) : undefined}
         onFocus={this.onFocus}
-        className={this.classNames()}
+        className={this.classNames}
         disabled={isDisabled}
         placeholder={placeholder}
         min={min}
