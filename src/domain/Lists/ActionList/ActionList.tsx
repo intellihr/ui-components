@@ -13,7 +13,9 @@ import { TextLink } from '../../Links'
 interface IActionLink {
   linkUrl: string
   linkText: string
-  useReactRouter?: boolean
+  anchorComponentProps?: {
+    [i: string]: any
+  }
 }
 
 interface IAction {
@@ -75,7 +77,7 @@ class ActionList extends React.PureComponent<IActionList> {
         key={`action-link-${index}`}
         href={actionLink.linkUrl}
         className='action-link'
-        useReactRouter={actionLink.useReactRouter || false}
+        anchorComponentProps={actionLink.anchorComponentProps}
       >
         {actionLink.linkText}
       </TextLink>

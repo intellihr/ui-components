@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import { isNil } from 'lodash'
-import { Anchor } from '../../../Anchors'
+import { Anchor } from '@Domain/Internals'
 
 const style = require('./style.scss')
 
@@ -22,16 +22,14 @@ export interface IListClickableColumn {
   childrenWrapper?: (rowObject: object, children: any) => JSX.Element
   /** Column components passed to the list */
   children: JSX.Element
-  /** Flag to state if navigation should be blocked on left click */
-  blockNavigationOnLeftClick?: boolean
-  /** Flag to select if React Router should be used or not */
-  useReactRouter?: boolean
+  /** Anchor props passthrough */
+  anchorComponentProps?: {
+    [i: string]: any
+  }
 }
 
 export class ListClickableColumn extends React.PureComponent<IListClickableColumn> {
   public static defaultProps: Partial<IListClickableColumn> = {
-    blockNavigationOnLeftClick: false,
-    useReactRouter: true,
     isHeader: false
   }
 
@@ -72,18 +70,6 @@ export class ListClickableColumn extends React.PureComponent<IListClickableColum
     }
   }
 
-  handleLeftClick = (): void | undefined => {
-    const {
-      data,
-      rowIndex,
-      handleLeftClick
-    } = this.props
-
-    if (handleLeftClick && this.isRowValid) {
-      return handleLeftClick(data[rowIndex])
-    }
-  }
-
   get getUrl (): string | undefined {
     const {
       data,
@@ -98,8 +84,7 @@ export class ListClickableColumn extends React.PureComponent<IListClickableColum
 
   public render (): JSX.Element {
     const {
-      blockNavigationOnLeftClick,
-      useReactRouter
+      anchorComponentProps
     } = this.props
 
     return (
@@ -109,11 +94,9 @@ export class ListClickableColumn extends React.PureComponent<IListClickableColum
           'clickable-columns',
           'cell auto grid-x grid-padding-x'
         )}
-        blockNavigationOnLeftClick={blockNavigationOnLeftClick}
         href={this.getUrl}
         onClick={this.handleClick}
-        onLeftClick={this.handleLeftClick}
-        useReactRouter={useReactRouter}
+        anchorComponentProps={anchorComponentProps}
       >
         {this.children}
       </Anchor>

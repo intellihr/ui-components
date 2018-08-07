@@ -1,4 +1,3 @@
-export { BaseAnchor, Anchor, withAnchor } from './Anchors'
 export { Avatar, AvatarEntity } from './Avatars'
 export { Badge } from './Badges'
 export { BaseButton, Button, LinkButton } from './Buttons'
@@ -13,7 +12,7 @@ export { FontAwesomeIcon, IntelliIcon } from './Icons'
 export { InputLabel, TextInput, NumberInput, CheckboxInput, SelectInput, TextAreaInput } from './Inputs'
 export { StatusIndicator } from './Indicators'
 export { Legend } from './Legends'
-export { ActionLink, TextLink } from './Links'
+export { ActionLink, TextLink, UnstyledLink } from './Links'
 
 /*
  * ListRow, ListClickableColumn and ListColum are here for legacy support.

@@ -47,14 +47,13 @@ exports[`<ActionList /> should render a simple action list with a link 1`] = `
           Test description
         </styled.div>
         <styled.div>
-          <WithAnchor
+          <TextLink
             className="action-link"
             href="/test-url"
             key="action-link-0"
-            useReactRouter={false}
           >
             Test Link Text
-          </WithAnchor>
+          </TextLink>
         </styled.div>
       </div>
     </List>
