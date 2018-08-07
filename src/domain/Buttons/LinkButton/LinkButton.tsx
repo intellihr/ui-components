@@ -9,7 +9,9 @@ export interface LinkButtonProps extends IButtonProps {
   /** Destination url */
   href?: string,
   /** Anchor props passthrough */
-  anchorComponentProps?: object
+  anchorComponentProps?: {
+    [i: string]: any
+  }
 }
 
 export class LinkButton extends React.PureComponent<LinkButtonProps> {

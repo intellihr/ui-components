@@ -24,7 +24,9 @@ export interface IListRow {
   /** Redirect url used for window location */
   href?: string
   /** Anchor props passthrough */
-  anchorComponentProps?: object
+  anchorComponentProps?: {
+    [i: string]: any
+  }
 }
 
 export class ListRow extends React.PureComponent<IListRow> {

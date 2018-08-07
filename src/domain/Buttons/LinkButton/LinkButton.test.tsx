@@ -68,7 +68,7 @@ describe('<LinkButton />', () => {
         type='primary'
         href='test'
         anchorComponentProps={{
-          useReactRouter: false
+          someProp: false
         }}
       >
         Link Button with Icon

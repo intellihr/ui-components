@@ -6,7 +6,9 @@ interface IAnchorProps extends React.HTMLProps<HTMLAnchorElement> {
   /** Alternative prop to render using if you don't want the default */
   anchorComponent?: React.ComponentType<any> | string
   /** Object with extra props to pass to the external anchor */
-  anchorComponentProps?: object
+  anchorComponentProps?: {
+    [i: string]: any
+  }
   /** Fix typescript issue with refs */
   ref?: any
 }

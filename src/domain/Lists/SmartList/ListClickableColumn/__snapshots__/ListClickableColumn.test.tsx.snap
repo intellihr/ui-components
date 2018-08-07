@@ -155,6 +155,11 @@ exports[`<ListClickableColumn /> should render a simple list row if is header 1`
 
 exports[`<ListClickableColumn /> should render a simple list row with a simple redirect 1`] = `
 <ListClickableColumn
+  anchorComponentProps={
+    Object {
+      "someProp": false,
+    }
+  }
   data={
     Array [
       Object {
@@ -165,9 +170,13 @@ exports[`<ListClickableColumn /> should render a simple list row with a simple r
   isHeader={false}
   rowIndex={0}
   urlForRow={[Function]}
-  useReactRouter={false}
 >
   <Anchor
+    anchorComponentProps={
+      Object {
+        "someProp": false,
+      }
+    }
     className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"
     href="test-url.test"
     onClick={[Function]}

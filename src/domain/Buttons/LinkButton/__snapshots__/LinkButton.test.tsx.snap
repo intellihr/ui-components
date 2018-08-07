@@ -71,7 +71,7 @@ exports[`<LinkButton /> should render a link button with manual extra props for 
 <BaseButton
   anchorComponentProps={
     Object {
-      "useReactRouter": false,
+      "someProp": false,
     }
   }
   disabled={false}
