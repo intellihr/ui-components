@@ -36,12 +36,6 @@ module.exports = {
       name: 'UI Components',
       sections: [
         {
-          name: 'Anchors',
-          components: [
-            'src/domain/Anchors/Anchor/Anchor'
-          ]
-        },
-        {
           name: 'Avatars',
           components: [
             'src/domain/Avatars/Avatar/Avatar',
@@ -130,7 +124,8 @@ module.exports = {
           name: 'Links',
           components: [
             'src/domain/Links/ActionLink/ActionLink',
-            'src/domain/Links/TextLink/TextLink'
+            'src/domain/Links/TextLink/TextLink',
+            'src/domain/Links/UnstyledLink/UnstyledLink'
           ]
         },
         {
@@ -223,13 +218,13 @@ module.exports = {
       ]
     },
     {
-      name: 'Higher Order Components',
+      name: 'Internal/Higher Order Components',
       components: [
-        'src/domain/Anchors/Anchor/withAnchor',
         'src/domain/Styles/hoc/withStyledBreakpoints',
         'src/domain/Defaults/withDefaults/withDefaults',
         'src/domain/Grids/Grid/withGrid',
-        'src/domain/Skeletons/withSkeleton/withSkeleton'
+        'src/domain/Skeletons/withSkeleton/withSkeleton',
+        'src/domain/Internals/Anchor/Anchor'
       ]
     }
   ],

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Anchor } from '@Domain/Anchors'
+import { Anchor } from '@Domain/Internals'
 import { StyledSection } from './style'
 
 type SectionType =

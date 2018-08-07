@@ -20,9 +20,9 @@ export class FormattedText extends React.PureComponent<FormattedTextProps> {
   linkRenderer = (props: { children: any, href: string }): JSX.Element => {
     return (
       <TextLink
+        anchorComponent='a'
         href={props.href}
         target='_blank'
-        useReactRouter={false}
       >
         {props.children}
       </TextLink>

@@ -34,7 +34,9 @@
         {
           linkText: 'This is a link with React router',
           linkUrl: '/',
-          useReactRouter: true
+          anchorComponentProps: {
+            useReactRouter: true
+          }
         }
       ]
     }}

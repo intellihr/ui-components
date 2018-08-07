@@ -6,10 +6,10 @@ exports[`<TextLink /> should render a text link 1`] = `
 .c0:visited,
 .c0:hover,
 .c0:active {
-  color: rgb(5,87,223);
+  color: inherit;
 }
 
-<TextLink
+<UnstyledLink
   href="/lol"
 >
   <Styled(Anchor)
@@ -27,5 +27,5 @@ exports[`<TextLink /> should render a text link 1`] = `
       </a>
     </Anchor>
   </Styled(Anchor)>
-</TextLink>
+</UnstyledLink>
 `;

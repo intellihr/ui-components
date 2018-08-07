@@ -1,8 +1,7 @@
 import React from 'react'
-import { isEmpty } from 'lodash'
 import classNames from 'classnames'
 import { Row } from 'react-styled-flexboxgrid'
-import { Anchor } from '../../../Anchors'
+import { Anchor } from '@Domain/Internals'
 
 export interface IListRow {
   /** Column elements passed to the row */
@@ -24,6 +23,8 @@ export interface IListRow {
   to?: string
   /** Redirect url used for window location */
   href?: string
+  /** Anchor props passthrough */
+  anchorComponentProps?: any
 }
 
 export class ListRow extends React.PureComponent<IListRow> {
@@ -61,14 +62,15 @@ export class ListRow extends React.PureComponent<IListRow> {
   public render (): JSX.Element {
     const {
       to,
-      href
+      href,
+      anchorComponentProps
     } = this.props
 
     if (to || href) {
       return (
         <Anchor
-          useReactRouter={isEmpty(href)}
           href={href || to}
+          anchorComponentProps={anchorComponentProps}
         >
           {this.listRow}
         </Anchor>

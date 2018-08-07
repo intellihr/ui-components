@@ -12,25 +12,6 @@ exports[`<LinkButton /> should render a disabled link button 1`] = `
 </BaseButton>
 `;
 
-exports[`<LinkButton /> should render a link button that does not use react router 1`] = `
-<BaseButton
-  disabled={false}
-  href="test"
-  icon={
-    <FontAwesomeIcon
-      type="star"
-    />
-  }
-  iconAlignment="left"
-  id="test-link-button-icon"
-  render={[Function]}
-  type="primary"
-  useReactRouter={false}
->
-  Link Button with Icon
-</BaseButton>
-`;
-
 exports[`<LinkButton /> should render a link button with a simple text 1`] = `
 <BaseButton
   disabled={false}
@@ -70,6 +51,29 @@ exports[`<LinkButton /> should render a link button with a type delete-subtle 1`
 
 exports[`<LinkButton /> should render a link button with an icon 1`] = `
 <BaseButton
+  disabled={false}
+  href="test"
+  icon={
+    <FontAwesomeIcon
+      type="star"
+    />
+  }
+  iconAlignment="left"
+  id="test-link-button-icon"
+  render={[Function]}
+  type="primary"
+>
+  Link Button with Icon
+</BaseButton>
+`;
+
+exports[`<LinkButton /> should render a link button with manual extra props for the anchor 1`] = `
+<BaseButton
+  anchorComponentProps={
+    Object {
+      "useReactRouter": false,
+    }
+  }
   disabled={false}
   href="test"
   icon={
