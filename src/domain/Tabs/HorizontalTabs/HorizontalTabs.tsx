@@ -12,19 +12,14 @@ import {
 export interface HorizontalTabDefinition {
   /** String title to use for this tab */
   title?: string
-
   /** Component positioned to the left of the title */
   leftComponent?: JSX.Element
-
   /** Component positioned to the right of the title */
   rightComponent?: JSX.Element
-
   /** Anchor id used when clicking between tabs */
   anchorId?: string
-
   /** Custom component to render for this tab (overrides default rendering) */
   titleComponent?: JSX.Element
-
   /** Content to place inside the actual tab */
   content: JSX.Element | string
 }
@@ -32,16 +27,12 @@ export interface HorizontalTabDefinition {
 export interface HorizontalTabsProps {
   /** A list of tabs and their content to render */
   tabs: HorizontalTabDefinition[]
-
   /** Whether to update the url of the page with anchors when changing tabs */
   useAnchors?: boolean
-
   /** The tab to start opened to (by anchorId or index) */
   defaultTab?: string | number
-
   /** Callback to run when clicking between tabs */
   onTabChange?: (tab: HorizontalTabDefinition) => void
-
   /** The current tab (by anchorId or index) */
   currentTab?: string | number
 }

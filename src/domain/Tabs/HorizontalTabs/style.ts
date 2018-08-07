@@ -1,7 +1,6 @@
 import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
 import { getColor } from '@Domain/Colors'
-import { BaseAnchor } from '../../Anchors'
 
 const HorizontalTabsContainer = styled.div``
 
@@ -15,7 +14,7 @@ const HorizontalTabTitle = styled.li`
   float: left;
 `
 
-const HorizontalTabTitleAnchor = BaseAnchor.extend`
+const HorizontalTabTitleAnchor = styled.a`
   border: 0;
   box-shadow: inset 0 -1px 0 0 ${getColor('neutral-base')};
   color: ${getColor('main-text')};

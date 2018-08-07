@@ -1,19 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ListClickableColumn /> should render a list row wrapped and clickable 1`] = `
-.c0 {
-  color: inherit;
-}
-
-.c0:hover,
-.c0:visited,
-.c0:active,
-.c0:focus {
-  color: inherit;
-}
-
 <ListClickableColumn
-  blockNavigationOnLeftClick={false}
   data={
     Array [
       Object {
@@ -23,52 +11,27 @@ exports[`<ListClickableColumn /> should render a list row wrapped and clickable 
   }
   isHeader={false}
   rowIndex={0}
-  useReactRouter={true}
 >
   <Anchor
-    blockNavigationOnLeftClick={false}
     className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"
     href="#"
     onClick={[Function]}
-    onLeftClick={[Function]}
-    useReactRouter={true}
   >
-    <styled.a
-      blockNavigationOnLeftClick={false}
+    <a
       className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"
       href="#"
       onClick={[Function]}
-      onLeftClick={[Function]}
-      useReactRouter={true}
     >
-      <a
-        className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x c0"
-        href="#"
-        onClick={[Function]}
-      >
-        <div>
-          This is my column content
-        </div>
-      </a>
-    </styled.a>
+      <div>
+        This is my column content
+      </div>
+    </a>
   </Anchor>
 </ListClickableColumn>
 `;
 
 exports[`<ListClickableColumn /> should render a list row wrapped and clickable with click events 1`] = `
-.c0 {
-  color: inherit;
-}
-
-.c0:hover,
-.c0:visited,
-.c0:active,
-.c0:focus {
-  color: inherit;
-}
-
 <ListClickableColumn
-  blockNavigationOnLeftClick={false}
   data={
     Array [
       Object {
@@ -79,52 +42,27 @@ exports[`<ListClickableColumn /> should render a list row wrapped and clickable 
   handleClick={[Function]}
   isHeader={false}
   rowIndex={0}
-  useReactRouter={true}
 >
   <Anchor
-    blockNavigationOnLeftClick={false}
     className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"
     href="#"
     onClick={[Function]}
-    onLeftClick={[Function]}
-    useReactRouter={true}
   >
-    <styled.a
-      blockNavigationOnLeftClick={false}
+    <a
       className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"
       href="#"
       onClick={[Function]}
-      onLeftClick={[Function]}
-      useReactRouter={true}
     >
-      <a
-        className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x c0"
-        href="#"
-        onClick={[Function]}
-      >
-        <div>
-          This is my column content
-        </div>
-      </a>
-    </styled.a>
+      <div>
+        This is my column content
+      </div>
+    </a>
   </Anchor>
 </ListClickableColumn>
 `;
 
 exports[`<ListClickableColumn /> should render a list row wrapped and clickable with click events 2`] = `
-.c0 {
-  color: inherit;
-}
-
-.c0:hover,
-.c0:visited,
-.c0:active,
-.c0:focus {
-  color: inherit;
-}
-
 <ListClickableColumn
-  blockNavigationOnLeftClick={false}
   data={
     Array [
       Object {
@@ -135,52 +73,27 @@ exports[`<ListClickableColumn /> should render a list row wrapped and clickable 
   handleLeftClick={[Function]}
   isHeader={false}
   rowIndex={0}
-  useReactRouter={true}
 >
   <Anchor
-    blockNavigationOnLeftClick={false}
     className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"
     href="#"
     onClick={[Function]}
-    onLeftClick={[Function]}
-    useReactRouter={true}
   >
-    <styled.a
-      blockNavigationOnLeftClick={false}
+    <a
       className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"
       href="#"
       onClick={[Function]}
-      onLeftClick={[Function]}
-      useReactRouter={true}
     >
-      <a
-        className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x c0"
-        href="#"
-        onClick={[Function]}
-      >
-        <div>
-          This is my column content
-        </div>
-      </a>
-    </styled.a>
+      <div>
+        This is my column content
+      </div>
+    </a>
   </Anchor>
 </ListClickableColumn>
 `;
 
 exports[`<ListClickableColumn /> should render a list row wrapped and clickable with url to redirect 1`] = `
-.c0 {
-  color: inherit;
-}
-
-.c0:hover,
-.c0:visited,
-.c0:active,
-.c0:focus {
-  color: inherit;
-}
-
 <ListClickableColumn
-  blockNavigationOnLeftClick={false}
   data={
     Array [
       Object {
@@ -191,52 +104,27 @@ exports[`<ListClickableColumn /> should render a list row wrapped and clickable 
   isHeader={false}
   rowIndex={0}
   urlForRow={[Function]}
-  useReactRouter={true}
 >
   <Anchor
-    blockNavigationOnLeftClick={false}
     className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"
     href="test-url.test"
     onClick={[Function]}
-    onLeftClick={[Function]}
-    useReactRouter={true}
   >
-    <styled.a
-      blockNavigationOnLeftClick={false}
+    <a
       className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"
       href="test-url.test"
       onClick={[Function]}
-      onLeftClick={[Function]}
-      useReactRouter={true}
     >
-      <a
-        className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x c0"
-        href="test-url.test"
-        onClick={[Function]}
-      >
-        <div>
-          This is my column content
-        </div>
-      </a>
-    </styled.a>
+      <div>
+        This is my column content
+      </div>
+    </a>
   </Anchor>
 </ListClickableColumn>
 `;
 
 exports[`<ListClickableColumn /> should render a simple list row if is header 1`] = `
-.c0 {
-  color: inherit;
-}
-
-.c0:hover,
-.c0:visited,
-.c0:active,
-.c0:focus {
-  color: inherit;
-}
-
 <ListClickableColumn
-  blockNavigationOnLeftClick={false}
   data={
     Array [
       Object {
@@ -246,52 +134,32 @@ exports[`<ListClickableColumn /> should render a simple list row if is header 1`
   }
   isHeader={true}
   rowIndex={0}
-  useReactRouter={true}
 >
   <Anchor
-    blockNavigationOnLeftClick={false}
     className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"
     href="#"
     onClick={[Function]}
-    onLeftClick={[Function]}
-    useReactRouter={true}
   >
-    <styled.a
-      blockNavigationOnLeftClick={false}
+    <a
       className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"
       href="#"
       onClick={[Function]}
-      onLeftClick={[Function]}
-      useReactRouter={true}
     >
-      <a
-        className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x c0"
-        href="#"
-        onClick={[Function]}
-      >
-        <div>
-          This is my column content
-        </div>
-      </a>
-    </styled.a>
+      <div>
+        This is my column content
+      </div>
+    </a>
   </Anchor>
 </ListClickableColumn>
 `;
 
 exports[`<ListClickableColumn /> should render a simple list row with a simple redirect 1`] = `
-.c0 {
-  color: inherit;
-}
-
-.c0:hover,
-.c0:visited,
-.c0:active,
-.c0:focus {
-  color: inherit;
-}
-
 <ListClickableColumn
-  blockNavigationOnLeftClick={false}
+  anchorComponentProps={
+    Object {
+      "someProp": false,
+    }
+  }
   data={
     Array [
       Object {
@@ -302,34 +170,26 @@ exports[`<ListClickableColumn /> should render a simple list row with a simple r
   isHeader={false}
   rowIndex={0}
   urlForRow={[Function]}
-  useReactRouter={false}
 >
   <Anchor
-    blockNavigationOnLeftClick={false}
+    anchorComponentProps={
+      Object {
+        "someProp": false,
+      }
+    }
     className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"
     href="test-url.test"
     onClick={[Function]}
-    onLeftClick={[Function]}
-    useReactRouter={false}
   >
-    <styled.a
-      blockNavigationOnLeftClick={false}
+    <a
       className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"
       href="test-url.test"
       onClick={[Function]}
-      onLeftClick={[Function]}
-      useReactRouter={false}
     >
-      <a
-        className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x c0"
-        href="test-url.test"
-        onClick={[Function]}
-      >
-        <div>
-          This is my column content
-        </div>
-      </a>
-    </styled.a>
+      <div>
+        This is my column content
+      </div>
+    </a>
   </Anchor>
 </ListClickableColumn>
 `;

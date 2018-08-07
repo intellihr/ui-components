@@ -52,18 +52,11 @@ exports[`<FormattedText /> should render a big block of markdown 1`] = `
   margin-bottom: 0;
 }
 
-.c1 {
-  color: inherit;
-}
-
-.c1:hover,
+.c1,
+.c1:link,
 .c1:visited,
-.c1:active,
-.c1:focus {
-  color: inherit;
-}
-
-.c2 {
+.c1:hover,
+.c1:active {
   color: rgb(5,87,223);
 }
 
@@ -338,43 +331,26 @@ Ordered/multi-level lists:
               href="http://www.intellihr.com.au"
               key="link-24-1"
             >
-              <WithAnchor
+              <TextLink
+                anchorComponent="a"
                 href="http://www.intellihr.com.au"
                 target="_blank"
-                useReactRouter={false}
               >
                 <Anchor
+                  anchorComponent="a"
+                  className="c1"
                   href="http://www.intellihr.com.au"
                   target="_blank"
-                  useReactRouter={false}
                 >
-                  <styled.a
+                  <a
+                    className="c1"
                     href="http://www.intellihr.com.au"
                     target="_blank"
-                    useReactRouter={false}
                   >
-                    <a
-                      className="c1"
-                      href="http://www.intellihr.com.au"
-                      target="_blank"
-                    >
-                      <styled.span
-                        href="http://www.intellihr.com.au"
-                        target="_blank"
-                        useReactRouter={false}
-                      >
-                        <span
-                          className="c2"
-                          href="http://www.intellihr.com.au"
-                          target="_blank"
-                        >
-                          http://www.intellihr.com.au
-                        </span>
-                      </styled.span>
-                    </a>
-                  </styled.a>
+                    http://www.intellihr.com.au
+                  </a>
                 </Anchor>
-              </WithAnchor>
+              </TextLink>
             </Component>
             
 
@@ -382,43 +358,26 @@ Ordered/multi-level lists:
               href="http://www.google.com"
               key="link-25-1"
             >
-              <WithAnchor
+              <TextLink
+                anchorComponent="a"
                 href="http://www.google.com"
                 target="_blank"
-                useReactRouter={false}
               >
                 <Anchor
+                  anchorComponent="a"
+                  className="c1"
                   href="http://www.google.com"
                   target="_blank"
-                  useReactRouter={false}
                 >
-                  <styled.a
+                  <a
+                    className="c1"
                     href="http://www.google.com"
                     target="_blank"
-                    useReactRouter={false}
                   >
-                    <a
-                      className="c1"
-                      href="http://www.google.com"
-                      target="_blank"
-                    >
-                      <styled.span
-                        href="http://www.google.com"
-                        target="_blank"
-                        useReactRouter={false}
-                      >
-                        <span
-                          className="c2"
-                          href="http://www.google.com"
-                          target="_blank"
-                        >
-                          Inline link
-                        </span>
-                      </styled.span>
-                    </a>
-                  </styled.a>
+                    Inline link
+                  </a>
                 </Anchor>
-              </WithAnchor>
+              </TextLink>
             </Component>
           </p>
           <hr
@@ -912,18 +871,11 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
   margin-bottom: 0;
 }
 
-.c1 {
-  color: inherit;
-}
-
-.c1:hover,
+.c1,
+.c1:link,
 .c1:visited,
-.c1:active,
-.c1:focus {
-  color: inherit;
-}
-
-.c2 {
+.c1:hover,
+.c1:active {
   color: rgb(5,87,223);
 }
 
@@ -966,43 +918,26 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
               href="http://www.heyguy.com"
               key="link-1-1"
             >
-              <WithAnchor
+              <TextLink
+                anchorComponent="a"
                 href="http://www.heyguy.com"
                 target="_blank"
-                useReactRouter={false}
               >
                 <Anchor
+                  anchorComponent="a"
+                  className="c1"
                   href="http://www.heyguy.com"
                   target="_blank"
-                  useReactRouter={false}
                 >
-                  <styled.a
+                  <a
+                    className="c1"
                     href="http://www.heyguy.com"
                     target="_blank"
-                    useReactRouter={false}
                   >
-                    <a
-                      className="c1"
-                      href="http://www.heyguy.com"
-                      target="_blank"
-                    >
-                      <styled.span
-                        href="http://www.heyguy.com"
-                        target="_blank"
-                        useReactRouter={false}
-                      >
-                        <span
-                          className="c2"
-                          href="http://www.heyguy.com"
-                          target="_blank"
-                        >
-                          http://www.heyguy.com
-                        </span>
-                      </styled.span>
-                    </a>
-                  </styled.a>
+                    http://www.heyguy.com
+                  </a>
                 </Anchor>
-              </WithAnchor>
+              </TextLink>
             </Component>
           </p>
           <CodeBlock

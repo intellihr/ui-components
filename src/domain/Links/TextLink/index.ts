@@ -1,1 +1,1 @@
-export { TextLink } from './TextLink'
+export { TextLink, ITextLinkProps } from './TextLink'

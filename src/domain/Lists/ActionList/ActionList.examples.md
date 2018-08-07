@@ -28,13 +28,15 @@
       description: 'Test Description',
       actionLinks: [
         {
-          linkText: 'This is a link without React router',
+          linkText: 'This is a link',
           linkUrl: '/'
         },
         {
-          linkText: 'This is a link with React router',
+          linkText: 'This is a link with some other props',
           linkUrl: '/',
-          useReactRouter: true
+          anchorComponentProps: {
+            someProp: true
+          }
         }
       ]
     }}

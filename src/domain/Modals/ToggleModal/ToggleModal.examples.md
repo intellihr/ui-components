@@ -26,7 +26,7 @@ const { Button } = require('@Domain/Buttons');
 #### Toggle Modal with Anchor
 
 ```jsx
-const { Anchor } = require('@Domain/Anchors');
+const { Anchor } = require('@Domain/Internals');
 
 <ToggleModal
   trigger={({toggle}) => (

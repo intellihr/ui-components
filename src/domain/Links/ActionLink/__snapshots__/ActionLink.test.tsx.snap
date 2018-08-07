@@ -2,53 +2,51 @@
 
 exports[`<ActionLink /> should render an action link 1`] = `
 .c0 {
-  color: inherit;
-}
-
-.c0:hover,
-.c0:visited,
-.c0:active,
-.c0:focus {
-  color: inherit;
-}
-
-.c1 {
-  color: rgb(5,87,223);
   font-weight: 600;
   font-size: .9375rem;
   text-transform: uppercase;
 }
 
-<WithAnchor
+.c0,
+.c0:link,
+.c0:visited,
+.c0:hover,
+.c0:active {
+  color: rgb(5,87,223);
+}
+
+<ActionLink
   href="/lol"
 >
   <Anchor
+    className="c0"
     href="/lol"
   >
-    <styled.a
+    <a
+      className="c0"
       href="/lol"
     >
-      <a
-        className="c0"
-        href="/lol"
-      >
-        <styled.span
-          href="/lol"
-        >
-          <span
-            className="c1"
-            href="/lol"
-          >
-            Grrr I am action man
-          </span>
-        </styled.span>
-      </a>
-    </styled.a>
+      Grrr I am action man
+    </a>
   </Anchor>
-</WithAnchor>
+</ActionLink>
 `;
 
 exports[`<ActionLink /> should render an action link with a replacement anchor tag 1`] = `
+.c0 {
+  font-weight: 600;
+  font-size: .9375rem;
+  text-transform: uppercase;
+}
+
+.c0,
+.c0:link,
+.c0:visited,
+.c0:hover,
+.c0:active {
+  color: rgb(5,87,223);
+}
+
 <DefaultsProvider
   value={
     Object {
@@ -56,13 +54,15 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
     }
   }
 >
-  <WithAnchor
+  <ActionLink
     href="#"
   >
     <Anchor
+      className="c0"
       href="#"
     >
       <AnchorComponent
+        className="c0"
         href="#"
       >
         <a
@@ -72,6 +72,6 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
         </a>
       </AnchorComponent>
     </Anchor>
-  </WithAnchor>
+  </ActionLink>
 </DefaultsProvider>
 `;
