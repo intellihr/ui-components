@@ -117,7 +117,8 @@ module.exports = {
           components: [
             'src/domain/Inputs/InputLabel/InputLabel',
             'src/domain/Inputs/Input/Input',
-            'src/domain/Inputs/SelectInput/SelectInput'
+            'src/domain/Inputs/SelectInput/SelectInput',
+            'src/domain/Inputs/TextAreaInput/TextAreaInput'
           ]
         },
         {
