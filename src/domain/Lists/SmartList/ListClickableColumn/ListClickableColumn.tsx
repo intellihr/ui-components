@@ -23,7 +23,7 @@ export interface IListClickableColumn {
   /** Column components passed to the list */
   children: JSX.Element
   /** Anchor props passthrough */
-  anchorComponentProps?: any
+  anchorComponentProps?: object
 }
 
 export class ListClickableColumn extends React.PureComponent<IListClickableColumn> {

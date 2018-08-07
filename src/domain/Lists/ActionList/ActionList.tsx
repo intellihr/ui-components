@@ -13,7 +13,7 @@ import { TextLink } from '../../Links'
 interface IActionLink {
   linkUrl: string
   linkText: string
-  anchorComponentProps?: any
+  anchorComponentProps?: object
 }
 
 interface IAction {
