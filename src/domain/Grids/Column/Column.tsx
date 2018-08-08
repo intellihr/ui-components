@@ -1,5 +1,5 @@
 import React from 'react'
-import { map } from 'lodash'
+import { map, reduce, isNil } from 'lodash'
 import { Col } from 'react-styled-flexboxgrid'
 
 interface IColProps {
@@ -22,16 +22,21 @@ class Column extends React.PureComponent<IColProps> {
       lg
     } = this.props
 
-    let dimensions = {'xs': xs, 'sm': sm, 'md': md, 'lg': lg}
-    let value = 0
-    map(dimensions, function (item, key) {
-      if (item) {
-        value = item
-      } else {
-        dimensions[key as keyof IColProps] = value
+    const dimensions: IColProps = {'xs': xs, 'sm': sm, 'md': md, 'lg': lg}
+
+    let previousValue: number = 12
+
+    return reduce(Object.keys(dimensions), (acc: IColProps, key: string): IColProps => {
+      const sizeValue = dimensions[key as keyof IColProps]
+
+      if (!isNil(sizeValue)) {
+        previousValue = sizeValue
       }
-    })
-    return dimensions
+
+      acc[key as keyof IColProps] = previousValue
+
+      return acc
+    }, {})
   }
 
   public render (): JSX.Element {
