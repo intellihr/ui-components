@@ -2,7 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { Anchor, IAnchorProps } from '@Domain/Internals'
 
-export const ActionLink = styled(Anchor)`
+interface IActionLinkProps extends IAnchorProps {}
+
+export const ActionLink = styled(Anchor)<IActionLinkProps>`
   font-weight: 600;
   font-size: .9375rem;
   text-transform: uppercase;
@@ -17,8 +19,6 @@ export const ActionLink = styled(Anchor)`
 `
 
 ActionLink.displayName = 'ActionLink'
-
-interface IActionLinkProps extends IAnchorProps {}
 
 export {
   IActionLinkProps

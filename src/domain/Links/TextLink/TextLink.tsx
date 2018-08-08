@@ -2,7 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { IAnchorProps, Anchor } from '@Domain/Internals'
 
-export const TextLink = styled(Anchor)`
+interface ITextLinkProps extends IAnchorProps {}
+
+export const TextLink = styled(Anchor)<ITextLinkProps>`
   &,
   &:link,
   &:visited,
@@ -13,8 +15,6 @@ export const TextLink = styled(Anchor)`
 `
 
 TextLink.displayName = 'TextLink'
-
-interface ITextLinkProps extends IAnchorProps {}
 
 export {
   ITextLinkProps
