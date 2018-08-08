@@ -23,7 +23,7 @@ module.exports = {
   ],
   entry: {
     index: './src/index.ts',
-    'ui-components': './src/common/sass/app.scss'
+    'ui-components': './src/common/sass/legacy/app.scss'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -125,7 +125,7 @@ module.exports = {
               loader: '@epegzz/sass-vars-loader',
               options: {
                 files: [
-                  path.resolve(__dirname, 'src/common/sass/colours/index.js')
+                  path.resolve(__dirname, 'src/common/legacy/colors/colorList.js')
                 ]
               }
             }

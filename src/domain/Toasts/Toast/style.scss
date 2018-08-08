@@ -1,4 +1,4 @@
-@import '../../../common/sass/foundation_settings';
+@import '../../../common/sass/legacy/foundation_settings';
 
 @mixin toast-color-coding ($color-scheme) {
   background-color: map-get($color-scheme, light);
@@ -16,7 +16,7 @@
 :local(.ToastClass) {
   align-items: baseline;
   border: .1rem solid;
-  border-radius: $global-radius;
+  border-radius: $border-radius;
   box-shadow: 0 6px 16px rgba(0, 0, 0, .15);
   display: flex;
   flex-direction: row;

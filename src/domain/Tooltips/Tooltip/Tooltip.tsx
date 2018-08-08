@@ -2,7 +2,7 @@ import React from 'react'
 import ReactTooltip from 'react-tooltip'
 import uuid from 'uuid'
 import { FontAwesomeIcon } from '../../Icons'
-import { getColor } from '../../Colors'
+import { getColor } from '@Common/legacy'
 import { TooltipIcon } from './style'
 
 export interface TooltipProps {

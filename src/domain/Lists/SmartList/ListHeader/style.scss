@@ -1,5 +1,5 @@
-@import '../../../../common/sass/foundation_settings';
-@import '../../../../common/sass/components/typography';
+@import '../../../../common/sass/legacy/foundation_settings';
+@import '../../../../common/sass/legacy/components/typography';
 
 :local(.ListHeader) {
   @extend %section-header;

@@ -31,18 +31,3 @@
 @mixin limit-width($max-width: 900px) {
   max-width: $max-width;
 }
-
-@mixin react-select-form-input-error(
-  $background: $input-background-invalid,
-  $background-lighten: 10%
-) {
-  .Select-control {
-    border-color: $background;
-  }
-
-  &:not(.is-focused) {
-    .Select-control {
-      background-color: mix($background, $white, $background-lighten);
-    }
-  }
-}

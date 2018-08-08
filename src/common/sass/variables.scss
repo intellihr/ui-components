@@ -1,0 +1,24 @@
+/**
+ * The Global belows are moved from foundation settings
+ */
+
+// 1. Global
+// ---------
+$border-radius: 4px;
+
+// 2. Breakpoints
+// --------------
+$breakpoint-small: 0;
+$breakpoint-medium: 640px;
+$breakpoint-large: 1024px;
+$breakpoint-xlarge: 1200px;
+$breakpoint-xxlarge: 1440px;
+
+:export {
+  border-radius: $border-radius;
+  breakpoint-small: $breakpoint-small;
+  breakpoint-medium: $breakpoint-medium;
+  breakpoint-large: $breakpoint-large;
+  breakpoint-xlarge: $breakpoint-xlarge;
+  breakpoint-xxlarge: $breakpoint-xxlarge;
+}

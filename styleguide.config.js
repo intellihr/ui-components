@@ -69,13 +69,6 @@ module.exports = {
           ]
         },
         {
-          name: 'Colors',
-          components: [
-            'src/domain/Colors/Color/Color',
-            'src/domain/Colors/ColorsGrid/ColorsGrid'
-          ]
-        },
-        {
           name: 'Comments',
           components: [
             'src/domain/Comments/Comment/Comment'
