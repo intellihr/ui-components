@@ -2,11 +2,10 @@
 
 exports[`<Column /> Simple Column behaviour should default values if nothing provided 1`] = `
 <Col
-  lg={3}
-  md={6}
+  lg={12}
+  md={12}
   sm={12}
-  xlg={3}
-  xxlg={3}
+  xs={12}
 />
 `;
 
@@ -15,8 +14,7 @@ exports[`<Column /> Simple Column behaviour should default values if partial val
   lg={8}
   md={8}
   sm={12}
-  xlg={8}
-  xxlg={8}
+  xs={12}
 />
 `;
 
@@ -25,7 +23,6 @@ exports[`<Column /> Simple Column behaviour should match the snapshot 1`] = `
   lg={3}
   md={3}
   sm={6}
-  xlg={3}
-  xxlg={3}
+  xs={12}
 />
 `;

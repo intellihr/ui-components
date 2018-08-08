@@ -118,7 +118,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
   }
 }
 
-<SmartListComponent
+<SmartList
   cursor="auto"
   data={
     Array [
@@ -751,7 +751,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
       </Row>
     </ListRow>
   </div>
-</SmartListComponent>
+</SmartList>
 `;
 
 exports[`<SmartList /> should render an Smart List displaying the right data with the right headers 1`] = `
@@ -872,7 +872,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
   }
 }
 
-<SmartListComponent
+<SmartList
   cursor="auto"
   data={
     Array [
@@ -1517,7 +1517,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
       </Row>
     </ListRow>
   </div>
-</SmartListComponent>
+</SmartList>
 `;
 
 exports[`<SmartList /> should render an Smart List with a single column 1`] = `
@@ -1589,7 +1589,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
   }
 }
 
-<SmartListComponent
+<SmartList
   cursor="auto"
   data={
     Array [
@@ -1888,7 +1888,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
       </Row>
     </ListRow>
   </div>
-</SmartListComponent>
+</SmartList>
 `;
 
 exports[`<SmartList /> should render an empty Smart List displaying the right data empty list text 1`] = `
@@ -2009,7 +2009,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
   }
 }
 
-<SmartListComponent
+<SmartList
   cursor="auto"
   data={Array []}
   emptyListText="No Results found."
@@ -2176,7 +2176,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
       </div>
     </Callout>
   </div>
-</SmartListComponent>
+</SmartList>
 `;
 
 exports[`<SmartList /> should render skeleton 1`] = `
@@ -2297,7 +2297,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
   }
 }
 
-<SmartListComponent
+<SmartList
   cursor="auto"
   emptyListText="No Results found."
   hideHeaderOnSmall={false}
@@ -3942,5 +3942,5 @@ exports[`<SmartList /> should render skeleton 1`] = `
       </Row>
     </ListRow>
   </div>
-</SmartListComponent>
+</SmartList>
 `;

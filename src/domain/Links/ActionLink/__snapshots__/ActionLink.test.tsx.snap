@@ -49,6 +49,13 @@ exports[`<ActionLink /> should render an action link 1`] = `
 `;
 
 exports[`<ActionLink /> should render an action link with a replacement anchor tag 1`] = `
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
 <DefaultsProvider
   value={
     Object {
@@ -60,11 +67,10 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
     defaults={
       Object {
         "breakpoints": Object {
-          "large": 1024,
-          "medium": 640,
-          "small": 0,
-          "xlarge": 1200,
-          "xxlarge": 1440,
+          "large": 1200,
+          "medium": 1024,
+          "small": 640,
+          "xsmall": 0,
         },
       }
     }
@@ -74,33 +80,41 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
         Object {
           "flexboxgrid": Object {
             "breakpoints": Object {
-              "lg": 64,
-              "md": 40,
-              "sm": 0,
-              "xlg": 75,
-              "xxlg": 90,
+              "lg": 75,
+              "md": 64,
+              "sm": 40,
+              "xs": 0,
             },
+            "gridSize": 12,
           },
         }
       }
     >
-      <WithAnchor
-        href="#"
+      <Grid
+        fluid={true}
       >
-        <Anchor
-          href="#"
+        <div
+          className="c0"
         >
-          <AnchorComponent
+          <WithAnchor
             href="#"
           >
-            <a
-              href="/allTheFeelsUgh"
+            <Anchor
+              href="#"
             >
-              Replacement default text
-            </a>
-          </AnchorComponent>
-        </Anchor>
-      </WithAnchor>
+              <AnchorComponent
+                href="#"
+              >
+                <a
+                  href="/allTheFeelsUgh"
+                >
+                  Replacement default text
+                </a>
+              </AnchorComponent>
+            </Anchor>
+          </WithAnchor>
+        </div>
+      </Grid>
     </ThemeProvider>
   </Grid>
 </DefaultsProvider>

@@ -52,7 +52,7 @@ export interface SmartListState {
   paginationButton: boolean
 }
 
-class SmartListComponent extends React.PureComponent<ISmartList, SmartListState> {
+class SmartList extends React.PureComponent<ISmartList, SmartListState> {
   public static defaultProps: Partial<ISmartList> = {
     emptyListText: 'No Results found.',
     loading: false,
@@ -312,4 +312,6 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
   }
 }
 
-export const SmartList: React.ComponentClass<ISmartList> = SmartListComponent
+export {
+  SmartList
+}

@@ -120,7 +120,7 @@ const StyledReactModal = styledReactModal`
       min-width: 1380px;
       width: 1380px;
 
-      ${(props) => props.breakpoint!.down('xlarge')`
+      ${(props) => props.breakpoint!.down('medium')`
         min-width: 0;
         width: 90%;
       `}

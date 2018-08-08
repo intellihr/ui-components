@@ -1,14 +1,14 @@
 import React from 'react'
+import { Grid as StyledGrid } from 'react-styled-flexboxgrid'
 import { ThemeProvider } from 'styled-components'
 import { pxToRem } from '@Domain/Styles'
 import { IWithDefaults } from '@Domain/Defaults'
 
 interface IBreakpoints {
+  xs : number
   sm : number
   md : number
   lg : number
-  xlg : number
-  xxlg : number
 }
 
 interface IGridProps {
@@ -27,11 +27,10 @@ class Grid extends React.PureComponent<IGridProps & IWithDefaults> {
       breakpoints,
       defaults: {
         breakpoints: {
+          xsmall,
           small,
           medium,
-          large,
-          xlarge,
-          xxlarge
+          large
         }
       }
     } = this.props
@@ -41,11 +40,10 @@ class Grid extends React.PureComponent<IGridProps & IWithDefaults> {
     }
 
     return {
+      xs: pxToRem(xsmall),
       sm: pxToRem(small),
       md: pxToRem(medium),
-      lg: pxToRem(large),
-      xlg: pxToRem(xlarge),
-      xxlg: pxToRem(xxlarge)
+      lg: pxToRem(large)
     }
   }
 
@@ -59,11 +57,12 @@ class Grid extends React.PureComponent<IGridProps & IWithDefaults> {
       <ThemeProvider
         theme={{
           flexboxgrid: {
+            gridSize: 12,
             breakpoints: this.breakpoints
           }
         }}
       >
-        {children}
+        <StyledGrid fluid>{children}</StyledGrid>
       </ThemeProvider>
     )
   }
