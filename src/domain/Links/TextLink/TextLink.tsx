@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { IAnchorProps, Anchor } from '@Domain/Internals'
+import { Anchor, IAnchorProps } from '../../Internals/Anchor/Anchor'
 
 interface ITextLinkProps extends IAnchorProps {}
 
-export const TextLink = styled(Anchor)<ITextLinkProps>`
+export const TextLink = styled(Anchor)`
   &,
   &:link,
   &:visited,
