@@ -2,7 +2,6 @@ import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
 import { getColor } from '@Common/index'
 
-
 const HorizontalTabsContainer = styled.div``
 
 const HorizontalTabTitles = styled.ul`

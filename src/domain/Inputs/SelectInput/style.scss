@@ -1,5 +1,7 @@
 @import '~react-select/dist/react-select.css';
 
+// sass-lint:disable class-name-format
+
 @mixin react-select-form-input-error(
   $background: $alert,
   $background-lighten: 10%
@@ -25,10 +27,12 @@
     }
 
     &.is-disabled {
-      .Select-control,
-      .Select-control:hover {
-        background-color: $neutral;
-        opacity: .5;
+      .Select-control {
+        &,
+        &:hover {
+          background-color: $neutral;
+          opacity: .5;
+        }
       }
     }
 
@@ -37,16 +41,16 @@
     }
 
     .Select-control {
-      margin-bottom: 1rem;
-      transition: border-color 0.3s ease-in-out, background-color 0.3s ease;
       border: 1px solid $border;
+      margin-bottom: 1rem;
+      transition: border-color .3s ease-in-out, background-color .3s ease;
 
       &:hover {
         background-color: $main-background-hover;
       }
 
       .Select-value-label {
-        color: $sidebar-text !important;
+        color: $sidebar-text !important; // sass-lint:disable-line no-important
       }
 
       .Select-placeholder {
