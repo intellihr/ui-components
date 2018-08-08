@@ -20,7 +20,7 @@ export { ActionLink, TextLink, UnstyledLink } from './Links'
  */
 export { List, SmartList, ActionList, ListRow, ListClickableColumn, ListColumn } from './Lists'
 
-export { Menu, MenuItem, DropdownMenu, Navigation } from './Menus'
+export { Menu, MenuItem, DropdownMenu } from './Menus'
 export { Modal, ToggleModal } from './Modals'
 export { Pill } from './Pills'
 export { ReportHeader, ReportInfo, HighlightSection } from './Reports'
