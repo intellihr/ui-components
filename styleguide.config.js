@@ -141,8 +141,7 @@ module.exports = {
           name: 'Menus',
           components: [
             'src/domain/Menus/DropdownMenu/DropdownMenu',
-            'src/domain/Menus/Menu/Menu',
-            'src/domain/Menus/Navigation/Navigation'
+            'src/domain/Menus/Menu/Menu'
           ]
         },
         {
