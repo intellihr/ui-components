@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Anchor, IAnchorProps } from '@Domain/Internals'
+import { Anchor, IAnchorProps } from '../../Internals/Anchor/Anchor'
 
 interface IUnstyledLinkProps extends IAnchorProps {}
 
-export const UnstyledLink = styled(Anchor)<IUnstyledLinkProps>`
+export const UnstyledLink = styled(Anchor)`
   &,
   &:link,
   &:visited,
