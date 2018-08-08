@@ -2,7 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { Anchor, IAnchorProps } from '@Domain/Internals'
 
-export const UnstyledLink = styled(Anchor)`
+interface IUnstyledLinkProps extends IAnchorProps {}
+
+export const UnstyledLink = styled(Anchor)<IUnstyledLinkProps>`
   &,
   &:link,
   &:visited,
@@ -13,8 +15,6 @@ export const UnstyledLink = styled(Anchor)`
 `
 
 UnstyledLink.displayName = 'UnstyledLink'
-
-interface IUnstyledLinkProps extends IAnchorProps {}
 
 export {
   IUnstyledLinkProps
