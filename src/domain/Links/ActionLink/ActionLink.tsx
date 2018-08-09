@@ -1,10 +1,12 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { StyledFunction } from 'styled-components'
 import { Anchor, IAnchorProps } from '../../Internals/Anchor/Anchor'
 
 interface IActionLinkProps extends IAnchorProps {}
 
-export const ActionLink = styled(Anchor)`
+const styledAnchor: StyledFunction<IActionLinkProps> = styled(Anchor)
+
+export const ActionLink = styledAnchor`
   font-weight: 600;
   font-size: .9375rem;
   text-transform: uppercase;
