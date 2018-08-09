@@ -1,4 +1,4 @@
-@import '../../../common/sass/legacy/foundation_settings';
+@import '../../../common/sass/variables';
 
 @mixin toast-color-coding ($color-scheme) {
   background-color: map-get($color-scheme, light);

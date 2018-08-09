@@ -1,9 +1,4 @@
-@import '../../../../common/sass/legacy/foundation_settings';
-@import '../../../../common/sass/legacy/components/typography';
-
 :local(.ListHeader) {
-  @extend %section-header;
-
   color: $main-text-light;
   font-size: .9375rem;
   font-weight: 600;

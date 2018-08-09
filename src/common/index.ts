@@ -1,2 +1,2 @@
 export { Props } from './types'
-export { getColor } from './legacy/index'
+export { getColor } from './legacy'

@@ -1,13 +1,14 @@
 @import '../../../common/sass/variables';
-@import '../../../common/sass/legacy/components/typography';
 
 $smart-list-bg-color-alert: lighten($alert-light, 3%);
 $smart-list-bg-hover-color-alert: lighten($alert-light, 1%);
 
 :local(.SmartList) {
   .list-title {
-    @extend %section-header;
 
+    color: $main-text;
+    font-size: 1.125em;
+    font-weight: 600;
     margin: 16px 0;
   }
 
