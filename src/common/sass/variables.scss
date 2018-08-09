@@ -2,11 +2,13 @@
  * The Global belows are moved from foundation settings
  */
 
-// 1. Global
-// ---------
+// --------------
+// Global
+// --------------
 $border-radius: 4px;
 
-// 2. Breakpoints
+// --------------
+// Breakpoints
 // --------------
 $breakpoint-small: 0;
 $breakpoint-medium: 640px;
@@ -14,11 +16,158 @@ $breakpoint-large: 1024px;
 $breakpoint-xlarge: 1200px;
 $breakpoint-xxlarge: 1440px;
 
+// --------------
+// Colors
+// --------------
+// Neutral
+$n100: #FFFFFF;
+$n150: #FAFBFC;
+$n200: #F5F9FC;
+$n300: #E1E6EB;
+$n400: #C5CED6;
+$n500: #8FA1B3;
+$n600: #667380;
+$n700: #424F5C;
+$n800: #262D33;
+
+// Blue
+$b100: #EDF4FF;
+$b200: #CADDFC;
+$b300: #739FE6;
+$b400: #0F68FA;
+$b500: #0053D9;
+$b600: #00368C;
+
+// Cyan
+$c100: #EDFCFF;
+$c200: #C8F2FA;
+$c300: #61DAF2;
+$c400: #20BEDD;
+$c500: #178EA5;
+$c600: #0F5E6E;
+
+// Green
+$g100: #F0FFED;
+$g200: #CBF5C4;
+$g300: #9DE091;
+$g400: #77CC68;
+$g500: #3B892C;
+$g600: #275B1D;
+
+// Indigo
+$i100: #EFEDFF;
+$i200: #CEC8FA;
+$i300: #7362F5;
+$i400: #432DF3;
+$i500: #2512B3;
+$i600: #0F0080;
+
+// Orange
+$o100: #FFF9ED;
+$o200: #FFEABF;
+$o300: #FFD580;
+$o400: #FFC145;
+$o500: #BF8000;
+$o600: #7F5500;
+
+// Red
+$r100: #FFEFED;
+$r200: #FFC5BF;
+$r300: #FF8A80;
+$r400: #F25749;
+$r500: #D41200;
+$r600: #B30F00;
+
+// Yelow
+$y100: #FFFDED;
+$y200: #FFF7BF;
+$y300: #FFEC73;
+$y400: #FFE226;
+$y500: #BFA91C;
+$y600: #7F7012;
+
 :export {
+  // --------------
+  // Global
+  // --------------
   border-radius: $border-radius;
+
+  // --------------
+  // Breakpoints
+  // --------------
   breakpoint-small: $breakpoint-small;
   breakpoint-medium: $breakpoint-medium;
   breakpoint-large: $breakpoint-large;
   breakpoint-xlarge: $breakpoint-xlarge;
   breakpoint-xxlarge: $breakpoint-xxlarge;
+
+  // --------------
+  // Colors
+  // --------------
+  // Neutral
+  n100: $n100;
+  n150: $n150;
+  n200: $n200;
+  n300: $n300;
+  n400: $n400;
+  n500: $n500;
+  n600: $n600;
+  n700: $n700;
+  n800: $n800;
+
+  // Blue
+  b100: $b100;
+  b200: $b200;
+  b300: $b300;
+  b400: $b400;
+  b500: $b500;
+  b600: $b600;
+
+  // Cyan
+  c100: $c100;
+  c200: $c200;
+  c300: $c300;
+  c400: $c400;
+  c500: $c500;
+  c600: $c600;
+
+  // Green
+  g100: $g100;
+  g200: $g200;
+  g300: $g300;
+  g400: $g400;
+  g500: $g500;
+  g600: $g600;
+
+  // Indigo
+  i100: $i100;
+  i200: $i200;
+  i300: $i300;
+  i400: $i400;
+  i500: $i500;
+  i600: $i600;
+
+  // Orange
+  o100: $o100;
+  o200: $o200;
+  o300: $o300;
+  o400: $o400;
+  o500: $o500;
+  o600: $o600;
+
+  // Red
+  r100: $r100;
+  r200: $r200;
+  r300: $r300;
+  r400: $r400;
+  r500: $r500;
+  r600: $r600;
+
+  // Yelow
+  y100: $y100;
+  y200: $y200;
+  y300: $y300;
+  y400: $y400;
+  y500: $y500;
+  y600: $y600;
 }
