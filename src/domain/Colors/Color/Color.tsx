@@ -7,12 +7,12 @@ import {
 } from './style'
 const variables = require('@Common/sass/variables.scss')
 
-export interface ColorGridProps {
+export interface IColorGridProps {
   colors: string[]
 }
 
-export class ColorsGrid extends React.PureComponent<ColorGridProps> {
-  render () {
+export class ColorsGrid extends React.PureComponent<IColorGridProps> {
+  public render (): JSX.Element {
     const { colors } = this.props
 
     return (

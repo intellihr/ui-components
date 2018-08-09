@@ -1,14 +1,13 @@
-import React from 'react'
-import styled, { StyledComponentClass } from 'styled-components'
+import styled from 'styled-components'
 
-export interface ColorBoxProps {
+export interface IColorBoxProps {
   hex: string
 }
 
 export const ColorBox = styled.div`
   width: 10em;
   height: 7.5em;
-  background-color: ${(props: ColorBoxProps) => props.hex};
+  background-color: ${(props: IColorBoxProps) => props.hex};
   margin-bottom: 1em;
 `
 
