@@ -45,11 +45,10 @@
 
 // 0. UI-Components globals
 // ---------
-@import './globals.scss';
+@import '../variables';
 
 // 1. Global
 // ---------
-
 $global-font-size: 1rem;
 $global-width: rem-calc(1920);
 $global-lineheight: 1.5;
@@ -175,7 +174,7 @@ $keystroke-font: $font-family-monospace;
 $keystroke-color: $black;
 $keystroke-background: $light-gray;
 $keystroke-padding: rem-calc(2 4 0);
-$keystroke-radius: $global-radius;
+$keystroke-radius: $border-radius;
 $abbr-underline: 1px dotted $black;
 
 // 5. Typography Helpers
@@ -256,7 +255,7 @@ $button-background: $primary-color;
 $button-background-hover: scale-color($button-background, $lightness: -15%);
 $button-color: $button-text;
 $button-color-alt: $button-text-alt;
-$button-radius: $global-radius;
+$button-radius: $border-radius;
 $button-hollow-border-width: 1px;
 $button-clear-border-width: 1px;
 $button-sizes: (
@@ -291,7 +290,7 @@ $callout-margin: 0 0 1rem 0;
 $callout-padding: 1rem;
 $callout-font-color: $body-font-color;
 $callout-font-color-alt: $body-background;
-$callout-radius: $global-radius;
+$callout-radius: $border-radius;
 $callout-link-tint: 30%;
 
 // 14. Card
@@ -302,7 +301,7 @@ $card-font-color: $body-font-color;
 $card-divider-background: $light-gray;
 $card-border: 1px solid $light-gray;
 $card-shadow: none;
-$card-border-radius: $global-radius;
+$card-border-radius: $border-radius;
 $card-padding: $global-padding;
 $card-margin-bottom: $global-margin;
 
@@ -334,7 +333,7 @@ $dropdown-background: $body-background;
 $dropdown-border: 1px solid $medium-gray;
 $dropdown-font-size: 1rem;
 $dropdown-width: 300px;
-$dropdown-radius: $global-radius;
+$dropdown-radius: $border-radius;
 $dropdown-sizes: (
   tiny: 100px,
   small: 200px,
@@ -372,7 +371,7 @@ $form-label-font-weight: $global-weight-normal;
 $form-label-line-height: 2.5;
 $select-background: $white;
 $select-triangle-color: $main-text;
-$select-radius: $global-radius;
+$select-radius: $border-radius;
 $input-color: $main-text;
 $input-placeholder-color: $border;
 $input-font-family: $body-font-family;
@@ -388,8 +387,8 @@ $input-shadow-focus: none;
 $input-cursor-disabled: default;
 $input-transition: border-color .3s ease-in-out, background-color .3s ease;
 $input-number-spinners: true;
-$input-radius: $global-radius;
-$form-button-radius: $global-radius;
+$input-radius: $border-radius;
+$form-button-radius: $border-radius;
 
 // 20. Label
 // ---------
@@ -400,7 +399,7 @@ $label-color-alt: $white;
 $label-palette: $foundation-palette;
 $label-font-size: .8rem;
 $label-padding: .33333rem .5rem;
-$label-radius: $global-radius;
+$label-radius: $border-radius;
 
 // 21. Media Object
 // ----------------
@@ -426,7 +425,7 @@ $menu-item-background-hover: $primary;
 // ---------
 
 $meter-height: 1rem;
-$meter-radius: $global-radius;
+$meter-radius: $border-radius;
 $meter-background: $medium-gray;
 $meter-fill-good: $success-color;
 $meter-fill-medium: $warning-color;
@@ -472,7 +471,7 @@ $pagination-margin-bottom: $global-margin;
 $pagination-item-color: $black;
 $pagination-item-padding: rem-calc(3 10);
 $pagination-item-spacing: rem-calc(1);
-$pagination-radius: $global-radius;
+$pagination-radius: $border-radius;
 $pagination-item-background-hover: $light-gray;
 $pagination-item-background-current: $primary-color;
 $pagination-item-color-current: $white;
@@ -489,7 +488,7 @@ $progress-height: 1rem;
 $progress-background: $medium-gray;
 $progress-margin-bottom: $global-margin;
 $progress-meter-background: $primary-color;
-$progress-radius: $global-radius;
+$progress-radius: $border-radius;
 
 // 28. Responsive Embed
 // --------------------
@@ -510,7 +509,7 @@ $reveal-max-width: $global-width;
 $reveal-offset: rem-calc(100);
 $reveal-padding: $global-padding;
 $reveal-border: 1px solid $medium-gray;
-$reveal-radius: $global-radius;
+$reveal-radius: $border-radius;
 $reveal-zindex: 1005;
 $reveal-overlay-background: rgba($black, .45);
 
@@ -527,7 +526,7 @@ $slider-handle-height: 1.4rem;
 $slider-handle-width: 1.4rem;
 $slider-handle-background: $primary-color;
 $slider-opacity-disabled: .25;
-$slider-radius: $global-radius;
+$slider-radius: $border-radius;
 $slider-transition: all .2s ease-in-out;
 
 // 31. Switch
@@ -539,11 +538,11 @@ $switch-height: 2rem;
 $switch-height-tiny: 1.5rem;
 $switch-height-small: 1.75rem;
 $switch-height-large: 2.5rem;
-$switch-radius: $global-radius;
+$switch-radius: $border-radius;
 $switch-margin: $global-margin;
 $switch-paddle-background: $white;
 $switch-paddle-offset: .25rem;
-$switch-paddle-radius: $global-radius;
+$switch-paddle-radius: $border-radius;
 $switch-paddle-transition: all .25s ease-out;
 
 // 32. Table
@@ -594,7 +593,7 @@ $thumbnail-margin-bottom: $global-margin;
 $thumbnail-shadow: 0 0 0 1px rgba($black, .2);
 $thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, .5);
 $thumbnail-transition: box-shadow 200ms ease-out;
-$thumbnail-radius: $global-radius;
+$thumbnail-radius: $border-radius;
 
 // 35. Title Bar
 // -------------
@@ -621,7 +620,7 @@ $tooltip-font-size: $small-font-size;
 $tooltip-pip-width: .5rem;
 $tooltip-pip-height: $tooltip-pip-width * .866;
 $tooltip-pip-offset: .25rem;
-$tooltip-radius: $global-radius;
+$tooltip-radius: $border-radius;
 
 // 37. Top Bar
 // -----------

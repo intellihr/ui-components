@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { getColor } from '@Domain/Colors'
+import { getColor } from '@Common/legacy'
 
 export const InputWrapper = styled.div`
   position: relative;

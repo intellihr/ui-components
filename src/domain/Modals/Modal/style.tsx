@@ -2,10 +2,10 @@ import React from 'react'
 import styled, { StyledFunction, StyledInterface, StyledComponentClass } from 'styled-components'
 import ReactModal from 'react-modal'
 import { flow } from 'lodash'
-import { getColor } from '@Domain/Colors'
+import { getColor } from '@Common/legacy'
 import { IWithStyledBreakpoints, withStyledBreakpoints } from '@Domain/Styles'
 
-const { radius } = require('@Common/sass/globals.scss')
+const { radius } = require('@Common/sass/variables.scss')
 
 interface IReactModalAdapter extends ReactModal.Props {
   className?: string
