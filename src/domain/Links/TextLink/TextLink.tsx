@@ -1,10 +1,12 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { StyledFunction } from 'styled-components'
 import { Anchor, IAnchorProps } from '../../Internals/Anchor/Anchor'
 
 interface ITextLinkProps extends IAnchorProps {}
 
-export const TextLink = styled(Anchor)`
+const styledAnchor: StyledFunction<ITextLinkProps> = styled(Anchor)
+
+export const TextLink = styledAnchor`
   &,
   &:link,
   &:visited,
