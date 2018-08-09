@@ -28,6 +28,10 @@ module.exports = {
         {
           name: 'Setting Defaults',
           content: 'src/domain/Defaults/Defaults/Defaults.examples.md'
+        },
+        {
+          name: 'Colors',
+          content: 'src/domain/Colors/Color/Color.examples.md'
         }
       ],
       components: 'src/common/sass/style.ts'
