@@ -28,6 +28,10 @@ module.exports = {
         {
           name: 'Setting Defaults',
           content: 'src/domain/Defaults/Defaults/Defaults.examples.md'
+        },
+        {
+          name: 'Colors',
+          content: 'src/domain/Colors/Color/Color.examples.md'
         }
       ],
       components: 'src/common/sass/style.ts'
@@ -66,13 +70,6 @@ module.exports = {
           components: [
             'src/domain/Charts/RadarChart/RadarChart',
             'src/domain/Charts/TimeBasedLineChart/TimeBasedLineChart'
-          ]
-        },
-        {
-          name: 'Colors',
-          components: [
-            'src/domain/Colors/Color/Color',
-            'src/domain/Colors/ColorsGrid/ColorsGrid'
           ]
         },
         {

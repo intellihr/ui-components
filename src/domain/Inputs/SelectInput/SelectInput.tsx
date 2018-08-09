@@ -3,6 +3,7 @@ import classNames from 'classnames'
 import capitalize from 'capitalize'
 import Select, { Async, Creatable, OnChangeHandler, ReactSelectProps } from 'react-select'
 import { isEmpty, cloneDeep } from 'lodash'
+const style = require('./style.scss')
 
 export interface SelectInputOptions {
   label: string
@@ -228,7 +229,7 @@ export class SelectInput extends React.PureComponent<SelectInputProps, SelectInp
       multi,
       onChange: handleChange,
       value: !isFetching ? value || this.state.preselectValue : '',
-      className: classNames({'is-invalid-input': isInvalid}, `react-select-${name}`),
+      className: classNames({'is-invalid-input': isInvalid}, `react-select-${name}`, style.selectInput),
       disabled: isDisabled,
       isLoading: isFetching,
       placeholder,

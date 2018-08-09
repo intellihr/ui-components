@@ -1,1 +1,0 @@
-export { ColorsGrid } from './ColorsGrid'

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { StyledComponentClass, css } from 'styled-components'
 import { Props } from '@Common/types'
-import { getColor } from '@Domain/Colors'
+import { getColor } from '@Common/legacy'
 import { SectionType } from './Section'
 
 const DefaultDropdownButton = styled.button`

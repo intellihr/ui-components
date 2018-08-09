@@ -48,7 +48,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
   }
 }
 
-@media only screen and (min-width:40em) {
+@media only screen and (min-width:0.0625em) {
   .c1 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
@@ -58,7 +58,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
   }
 }
 
-@media only screen and (min-width:64em) {
+@media only screen and (min-width:0.125em) {
   .c1 {
     -webkit-flex-basis: 50%;
     -ms-flex-preferred-size: 50%;
@@ -68,7 +68,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
   }
 }
 
-@media only screen and (min-width:75em) {
+@media only screen and (min-width:0.1875em) {
   .c1 {
     -webkit-flex-basis: 50%;
     -ms-flex-preferred-size: 50%;
@@ -88,7 +88,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
   }
 }
 
-@media only screen and (min-width:40em) {
+@media only screen and (min-width:0.0625em) {
   .c2 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
@@ -98,7 +98,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
   }
 }
 
-@media only screen and (min-width:64em) {
+@media only screen and (min-width:0.125em) {
   .c2 {
     -webkit-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
@@ -108,7 +108,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
   }
 }
 
-@media only screen and (min-width:75em) {
+@media only screen and (min-width:0.1875em) {
   .c2 {
     -webkit-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
@@ -178,11 +178,11 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
       defaults={
         Object {
           "breakpoints": Object {
-            "large": 1024,
-            "medium": 640,
+            "large": 2,
+            "medium": 1,
             "small": 0,
-            "xlarge": 1200,
-            "xxlarge": 1440,
+            "xlarge": 3,
+            "xxlarge": 4,
           },
         }
       }
@@ -194,9 +194,9 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
           Object {
             "flexboxgrid": Object {
               "breakpoints": Object {
-                "lg": 75,
-                "md": 64,
-                "sm": 40,
+                "lg": 0.1875,
+                "md": 0.125,
+                "sm": 0.0625,
                 "xs": 0,
               },
             },
@@ -891,7 +891,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
   }
 }
 
-@media only screen and (min-width:40em) {
+@media only screen and (min-width:0.0625em) {
   .c1 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
@@ -901,7 +901,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
   }
 }
 
-@media only screen and (min-width:64em) {
+@media only screen and (min-width:0.125em) {
   .c1 {
     -webkit-flex-basis: 50%;
     -ms-flex-preferred-size: 50%;
@@ -911,7 +911,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
   }
 }
 
-@media only screen and (min-width:75em) {
+@media only screen and (min-width:0.1875em) {
   .c1 {
     -webkit-flex-basis: 50%;
     -ms-flex-preferred-size: 50%;
@@ -931,7 +931,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
   }
 }
 
-@media only screen and (min-width:40em) {
+@media only screen and (min-width:0.0625em) {
   .c2 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
@@ -941,7 +941,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
   }
 }
 
-@media only screen and (min-width:64em) {
+@media only screen and (min-width:0.125em) {
   .c2 {
     -webkit-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
@@ -951,7 +951,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
   }
 }
 
-@media only screen and (min-width:75em) {
+@media only screen and (min-width:0.1875em) {
   .c2 {
     -webkit-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
@@ -1019,11 +1019,11 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
       defaults={
         Object {
           "breakpoints": Object {
-            "large": 1024,
-            "medium": 640,
+            "large": 2,
+            "medium": 1,
             "small": 0,
-            "xlarge": 1200,
-            "xxlarge": 1440,
+            "xlarge": 3,
+            "xxlarge": 4,
           },
         }
       }
@@ -1034,9 +1034,9 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
           Object {
             "flexboxgrid": Object {
               "breakpoints": Object {
-                "lg": 75,
-                "md": 64,
-                "sm": 40,
+                "lg": 0.1875,
+                "md": 0.125,
+                "sm": 0.0625,
                 "xs": 0,
               },
             },
@@ -1734,7 +1734,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
   }
 }
 
-@media only screen and (min-width:40em) {
+@media only screen and (min-width:0.0625em) {
   .c1 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
@@ -1744,7 +1744,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
   }
 }
 
-@media only screen and (min-width:64em) {
+@media only screen and (min-width:0.125em) {
   .c1 {
     -webkit-flex-basis: 50%;
     -ms-flex-preferred-size: 50%;
@@ -1754,7 +1754,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
   }
 }
 
-@media only screen and (min-width:75em) {
+@media only screen and (min-width:0.1875em) {
   .c1 {
     -webkit-flex-basis: 50%;
     -ms-flex-preferred-size: 50%;
@@ -1822,11 +1822,11 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
       defaults={
         Object {
           "breakpoints": Object {
-            "large": 1024,
-            "medium": 640,
+            "large": 2,
+            "medium": 1,
             "small": 0,
-            "xlarge": 1200,
-            "xxlarge": 1440,
+            "xlarge": 3,
+            "xxlarge": 4,
           },
         }
       }
@@ -1837,9 +1837,9 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
           Object {
             "flexboxgrid": Object {
               "breakpoints": Object {
-                "lg": 75,
-                "md": 64,
-                "sm": 40,
+                "lg": 0.1875,
+                "md": 0.125,
+                "sm": 0.0625,
                 "xs": 0,
               },
             },
@@ -2200,7 +2200,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
   }
 }
 
-@media only screen and (min-width:40em) {
+@media only screen and (min-width:0.0625em) {
   .c1 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
@@ -2210,7 +2210,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
   }
 }
 
-@media only screen and (min-width:64em) {
+@media only screen and (min-width:0.125em) {
   .c1 {
     -webkit-flex-basis: 50%;
     -ms-flex-preferred-size: 50%;
@@ -2220,7 +2220,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
   }
 }
 
-@media only screen and (min-width:75em) {
+@media only screen and (min-width:0.1875em) {
   .c1 {
     -webkit-flex-basis: 50%;
     -ms-flex-preferred-size: 50%;
@@ -2240,7 +2240,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
   }
 }
 
-@media only screen and (min-width:40em) {
+@media only screen and (min-width:0.0625em) {
   .c2 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
@@ -2250,7 +2250,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
   }
 }
 
-@media only screen and (min-width:64em) {
+@media only screen and (min-width:0.125em) {
   .c2 {
     -webkit-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
@@ -2260,7 +2260,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
   }
 }
 
-@media only screen and (min-width:75em) {
+@media only screen and (min-width:0.1875em) {
   .c2 {
     -webkit-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
@@ -2283,11 +2283,11 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
       defaults={
         Object {
           "breakpoints": Object {
-            "large": 1024,
-            "medium": 640,
+            "large": 2,
+            "medium": 1,
             "small": 0,
-            "xlarge": 1200,
-            "xxlarge": 1440,
+            "xlarge": 3,
+            "xxlarge": 4,
           },
         }
       }
@@ -2298,9 +2298,9 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
           Object {
             "flexboxgrid": Object {
               "breakpoints": Object {
-                "lg": 75,
-                "md": 64,
-                "sm": 40,
+                "lg": 0.1875,
+                "md": 0.125,
+                "sm": 0.0625,
                 "xs": 0,
               },
             },
@@ -2529,7 +2529,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
   }
 }
 
-@media only screen and (min-width:40em) {
+@media only screen and (min-width:0.0625em) {
   .c1 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
@@ -2539,7 +2539,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
   }
 }
 
-@media only screen and (min-width:64em) {
+@media only screen and (min-width:0.125em) {
   .c1 {
     -webkit-flex-basis: 50%;
     -ms-flex-preferred-size: 50%;
@@ -2549,7 +2549,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
   }
 }
 
-@media only screen and (min-width:75em) {
+@media only screen and (min-width:0.1875em) {
   .c1 {
     -webkit-flex-basis: 50%;
     -ms-flex-preferred-size: 50%;
@@ -2569,7 +2569,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
   }
 }
 
-@media only screen and (min-width:40em) {
+@media only screen and (min-width:0.0625em) {
   .c2 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
@@ -2579,7 +2579,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
   }
 }
 
-@media only screen and (min-width:64em) {
+@media only screen and (min-width:0.125em) {
   .c2 {
     -webkit-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
@@ -2589,7 +2589,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
   }
 }
 
-@media only screen and (min-width:75em) {
+@media only screen and (min-width:0.1875em) {
   .c2 {
     -webkit-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
@@ -2621,11 +2621,11 @@ exports[`<SmartList /> should render skeleton 1`] = `
       defaults={
         Object {
           "breakpoints": Object {
-            "large": 1024,
-            "medium": 640,
+            "large": 2,
+            "medium": 1,
             "small": 0,
-            "xlarge": 1200,
-            "xxlarge": 1440,
+            "xlarge": 3,
+            "xxlarge": 4,
           },
         }
       }
@@ -2642,9 +2642,9 @@ exports[`<SmartList /> should render skeleton 1`] = `
           Object {
             "flexboxgrid": Object {
               "breakpoints": Object {
-                "lg": 75,
-                "md": 64,
-                "sm": 40,
+                "lg": 0.1875,
+                "md": 0.125,
+                "sm": 0.0625,
                 "xs": 0,
               },
             },
