@@ -15,6 +15,7 @@ const AvatarEntityWrapper = styled.div`
   align-items: center;
   display: inline-flex;
   padding: 2px;
+  color: ${getColor('main-text')};
 
   &:hover {
     ${(props: IAvatarEntityWrapper) => {
