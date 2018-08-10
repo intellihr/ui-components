@@ -23,7 +23,7 @@ module.exports = {
   ],
   entry: {
     index: './src/index.ts',
-    'ui-components': './src/common/sass/legacy/app.scss'
+    'ui-components': './src/common/sass/app.scss'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
