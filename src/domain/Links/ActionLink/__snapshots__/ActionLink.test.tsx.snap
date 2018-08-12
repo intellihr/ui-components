@@ -65,10 +65,11 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
     defaults={
       Object {
         "breakpoints": Object {
-          "large": 3,
-          "medium": 2,
-          "small": 1,
-          "xsmall": 0,
+          "large": 2,
+          "medium": 1,
+          "small": 0,
+          "xlarge": 3,
+          "xxlarge": 4,
         },
       }
     }

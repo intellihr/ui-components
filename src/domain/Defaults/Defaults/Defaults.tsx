@@ -6,10 +6,11 @@ const sassGlobals = require('@Common/sass/variables.scss')
 interface IDefaults {
   /** Breakpoints used for the grid layout */
   breakpoints: {
-    xsmall: number
     small: number
     medium: number
     large: number
+    xlarge: number
+    xxlarge: number
   }
 
   /** Anchor component used for clickable links */
@@ -23,10 +24,11 @@ interface IDefaultsProviders {
 
 const defaults: IDefaults = {
   breakpoints: {
-    xsmall: parseInt(sassGlobals['breakpoint-small']) || 0,
-    small: parseInt(sassGlobals['breakpoint-medium']) || 1,
-    medium: parseInt(sassGlobals['breakpoint-large']) || 2,
-    large: parseInt(sassGlobals['breakpoint-xlarge']) || 3
+    small: parseInt(sassGlobals['breakpoint-small']) || 0,
+    medium: parseInt(sassGlobals['breakpoint-medium']) || 1,
+    large: parseInt(sassGlobals['breakpoint-large']) || 2,
+    xlarge: parseInt(sassGlobals['breakpoint-xlarge']) || 3,
+    xxlarge: parseInt(sassGlobals['breakpoint-xxlarge']) || 4
   }
 }
 

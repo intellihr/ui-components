@@ -27,10 +27,10 @@ class GridProvider extends React.PureComponent<IGridProps & IWithDefaults> {
       breakpoints,
       defaults: {
         breakpoints: {
-          xsmall,
           small,
           medium,
-          large
+          large,
+          xlarge
         }
       }
     } = this.props
@@ -40,10 +40,10 @@ class GridProvider extends React.PureComponent<IGridProps & IWithDefaults> {
     }
 
     return {
-      xs: pxToRem(xsmall),
-      sm: pxToRem(small),
-      md: pxToRem(medium),
-      lg: pxToRem(large)
+      xs: pxToRem(small),
+      sm: pxToRem(medium),
+      md: pxToRem(large),
+      lg: pxToRem(xlarge)
     }
   }
 
