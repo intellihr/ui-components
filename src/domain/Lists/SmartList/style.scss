@@ -1,13 +1,14 @@
-@import '../../../common/sass/foundation_settings';
-@import '../../../common/sass/components/typography';
+@import '../../../common/sass/variables';
 
 $smart-list-bg-color-alert: lighten($alert-light, 3%);
 $smart-list-bg-hover-color-alert: lighten($alert-light, 1%);
 
 :local(.SmartList) {
   .list-title {
-    @extend %section-header;
 
+    color: $main-text;
+    font-size: 1.125em;
+    font-weight: 600;
     margin: 16px 0;
   }
 
@@ -28,7 +29,7 @@ $smart-list-bg-hover-color-alert: lighten($alert-light, 1%);
   }
 
   .show-all-row {
-    color: $dark-gray;
+    color: $main-text;
     font-weight: 600;
     padding-top: 10px;
     text-align: center;
@@ -58,7 +59,7 @@ $smart-list-bg-hover-color-alert: lighten($alert-light, 1%);
     transition: background-color .15s ease-in;
 
     .dd-menu {
-      border-radius: $global-radius;
+      border-radius: $border-radius;
       transition: background-color .2s ease-in;
 
       button {

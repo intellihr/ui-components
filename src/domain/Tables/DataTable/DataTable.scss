@@ -1,4 +1,4 @@
-@import '../../../common/sass/foundation_settings';
+@import '../../../common/sass/legacy/foundation_settings';
 
 // sass-lint:disable class-name-format
 
@@ -68,6 +68,15 @@
     .rt-th {
       line-height: 1.5;
       outline: none;
+      text-align: left;
+
+      &.content-right {
+        text-align: right;
+      }
+
+      &.content-center {
+        text-align: center;
+      }
 
       // Signifies sortable headers
       &.-cursor-pointer {
@@ -173,7 +182,16 @@
   .rt-td {
     align-items: center;
     display: flex;
+    flex-direction: row;
     padding: .5rem .625rem .625rem;
+
+    &.content-right {
+      flex-direction: row-reverse;
+    }
+
+    &.content-center {
+      flex-direction: column;
+    }
   }
 
   .rt-th,

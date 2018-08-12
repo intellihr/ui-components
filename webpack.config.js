@@ -125,7 +125,7 @@ module.exports = {
               loader: '@epegzz/sass-vars-loader',
               options: {
                 files: [
-                  path.resolve(__dirname, 'src/common/sass/colours/index.js')
+                  path.resolve(__dirname, 'src/common/legacy/colors/colorList.js')
                 ]
               }
             }

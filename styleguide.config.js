@@ -28,6 +28,10 @@ module.exports = {
         {
           name: 'Setting Defaults',
           content: 'src/domain/Defaults/Defaults/Defaults.examples.md'
+        },
+        {
+          name: 'Colors',
+          content: 'src/domain/Colors/Color/Color.examples.md'
         }
       ],
       components: 'src/common/sass/style.ts'
@@ -39,12 +43,6 @@ module.exports = {
           name: 'Grid',
           components: [
             'src/domain/Grids/Grid/GridProvider'
-          ]
-        },
-        {
-          name: 'Anchors',
-          components: [
-            'src/domain/Anchors/Anchor/Anchor'
           ]
         },
         {
@@ -81,13 +79,6 @@ module.exports = {
           ]
         },
         {
-          name: 'Colors',
-          components: [
-            'src/domain/Colors/Color/Color',
-            'src/domain/Colors/ColorsGrid/ColorsGrid'
-          ]
-        },
-        {
           name: 'Comments',
           components: [
             'src/domain/Comments/Comment/Comment'
@@ -96,7 +87,8 @@ module.exports = {
         {
           name: 'Formats',
           components: [
-            'src/domain/Formats/IndentedElement/IndentedElement'
+            'src/domain/Formats/IndentedElement/IndentedElement',
+            'src/domain/Formats/Field/Field'
           ]
         },
         {
@@ -122,7 +114,8 @@ module.exports = {
           components: [
             'src/domain/Inputs/InputLabel/InputLabel',
             'src/domain/Inputs/Input/Input',
-            'src/domain/Inputs/SelectInput/SelectInput'
+            'src/domain/Inputs/SelectInput/SelectInput',
+            'src/domain/Inputs/TextAreaInput/TextAreaInput'
           ]
         },
         {
@@ -135,7 +128,8 @@ module.exports = {
           name: 'Links',
           components: [
             'src/domain/Links/ActionLink/ActionLink',
-            'src/domain/Links/TextLink/TextLink'
+            'src/domain/Links/TextLink/TextLink',
+            'src/domain/Links/UnstyledLink/UnstyledLink'
           ]
         },
         {
@@ -150,8 +144,7 @@ module.exports = {
           name: 'Menus',
           components: [
             'src/domain/Menus/DropdownMenu/DropdownMenu',
-            'src/domain/Menus/Menu/Menu',
-            'src/domain/Menus/Navigation/Navigation'
+            'src/domain/Menus/Menu/Menu'
           ]
         },
         {
@@ -228,12 +221,12 @@ module.exports = {
       ]
     },
     {
-      name: 'Higher Order Components',
+      name: 'Internal/Higher Order Components',
       components: [
-        'src/domain/Anchors/Anchor/withAnchor',
         'src/domain/Styles/hoc/withStyledBreakpoints',
         'src/domain/Defaults/withDefaults/withDefaults',
-        'src/domain/Skeletons/withSkeleton/withSkeleton'
+        'src/domain/Skeletons/withSkeleton/withSkeleton',
+        'src/domain/Internals/Anchor/Anchor'
       ]
     }
   ],

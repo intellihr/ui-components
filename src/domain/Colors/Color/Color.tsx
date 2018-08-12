@@ -1,40 +1,32 @@
-import React, { Fragment } from 'react'
+import React from 'react'
+import { map } from 'lodash'
 import {
+  WrappedList,
   ColorBox,
-  ColorName,
-  appColors,
-  brandColors
+  ColorName
 } from './style'
-import { transformColors } from '../services/transformColors'
+const variables = require('@Common/sass/variables.scss')
 
-export interface ColorProps {
-  description: string
+export interface IColorGridProps {
+  colors: string[]
 }
 
-export interface SProps extends ColorProps {
-  hex: string
-}
+export class ColorsGrid extends React.PureComponent<IColorGridProps> {
+  public render (): JSX.Element {
+    const { colors } = this.props
 
-export interface ColorObject {
-  name: string
-  hex: string
-}
-
-/**
- * This component is for demonstration of the Color plates purpose
- */
-export class Color extends React.PureComponent<SProps> {
-  render () {
-    const { hex, description } = this.props
     return (
-      <div>
-        <ColorBox hex={hex} />
-        <ColorName> {description} </ColorName>
-        <p> {hex} </p>
-      </div>
+      <WrappedList>
+        {map(colors, (color) =>
+          (
+            <div>
+              <ColorBox hex={variables[color]} />
+              <ColorName> {color} </ColorName>
+              <p> {variables[color]} </p>
+            </div>
+          )
+        )}
+      </WrappedList>
     )
   }
 }
-
-export const brandColorsArray: ColorObject[] = transformColors(brandColors)
-export const appColorsArray: ColorObject[] = transformColors(appColors)

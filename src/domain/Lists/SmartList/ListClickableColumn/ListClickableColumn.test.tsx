@@ -82,7 +82,9 @@ describe('<ListClickableColumn />', () => {
         data={testData}
         rowIndex={0}
         urlForRow={row => 'test-url.test'}
-        useReactRouter={false}
+        anchorComponentProps={{
+          someProp: false
+        }}
       >
         <div>This is my column content</div>
       </ListClickableColumn>

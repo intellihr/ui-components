@@ -20,10 +20,10 @@ Array [
   Array [
     Object {
       "breakpoints": Object {
-        "large": 1200,
-        "medium": 1024,
-        "small": 640,
-        "xsmall": NaN,
+        "large": 3,
+        "medium": 2,
+        "small": 1,
+        "xsmall": 0,
       },
     },
   ],
@@ -36,10 +36,10 @@ Array [
     Object {
       "AnchorComponent": [Function],
       "breakpoints": Object {
-        "large": 1200,
-        "medium": 1024,
-        "small": 640,
-        "xsmall": NaN,
+        "large": 3,
+        "medium": 2,
+        "small": 1,
+        "xsmall": 0,
       },
     },
   ],
@@ -51,10 +51,10 @@ Array [
   Array [
     Object {
       "breakpoints": Object {
-        "large": 1200,
-        "medium": 1024,
-        "small": 640,
-        "xsmall": NaN,
+        "large": 3,
+        "medium": 2,
+        "small": 1,
+        "xsmall": 0,
       },
     },
   ],

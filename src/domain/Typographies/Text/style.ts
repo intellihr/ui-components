@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components'
-import { getColor } from '@Domain/Colors'
+import { getColor } from '@Common/legacy'
 
 export interface TextWrapperProps {
   color?: string | 'subtle'
   isInline?: boolean
   isUpper?: boolean
   weight?: 'normal' | 'heavy'
-  size?: 'small' | 'medium' |'large'
+  size?: 'xsmall' | 'small' | 'medium' |'large'
   isTruncated?: boolean
 }
 
@@ -55,9 +55,13 @@ export const TextWrapper = styled.span`
 
   ${(props: TextWrapperProps) => {
     switch (props.size) {
-      case 'small':
+      case 'xsmall':
         return `
           font-size: .8125rem;
+        `
+      case 'small':
+        return `
+          font-size: .875rem;
         `
       case 'medium':
         return `

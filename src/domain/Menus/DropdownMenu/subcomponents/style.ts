@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { StyledComponentClass, css } from 'styled-components'
 import { Props } from '@Common/types'
-import { getColor } from '@Domain/Colors'
+import { getColor } from '@Common/legacy'
 import { SectionType } from './Section'
 
 const DefaultDropdownButton = styled.button`
@@ -44,7 +44,7 @@ const StyledDropdownMenu = styled.span`
   margin: 2px;
   position: absolute;
   width: min-content;
-  z-index: 100;
+  z-index: 2000;
   
   transform: scale(0.1);
   transform-origin: ${(props: IStyledDropdownMenuProps) => props.transformOrigin.xPos + ' ' + props.transformOrigin.yPos};
@@ -153,20 +153,24 @@ function styleForSectionType (section: IStyledSectionProps) {
 
   if (section.sectionType === 'default') {
     return css`
-      color: ${getColor('main-text')};
-       
-      ${section.clickable && css`
-        cursor: pointer;
+      &,
+      .left-component,
+      .right-component {
+        color: ${getColor('main-text')};
+         
+        ${section.clickable && css`
+          cursor: pointer;
+        
+          &:hover,
+          &:active,
+          &:focus {
+            background-color: ${getColor('neutral-light')};
       
-        &:hover,
-        &:active,
-        &:focus {
-          background-color: ${getColor('neutral-light')};
-    
-          &,
-          .left-component,
-          .right-component {
-            color: ${getColor('link-text')};
+            &,
+            .left-component,
+            .right-component {
+              color: ${getColor('link-text')};
+            }
           }
         }
       `}

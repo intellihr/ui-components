@@ -1,18 +1,27 @@
 import React from 'react'
-import styled from 'styled-components'
-import { AnchorProps, withAnchor } from '../../Anchors'
+import styled, { StyledFunction } from 'styled-components'
+import { Anchor, IAnchorProps } from '../../Internals/Anchor/Anchor'
 
-const ActionLinkLabel = styled.span`
-  color: rgb(5, 87, 223);
+interface IActionLinkProps extends IAnchorProps {}
+
+const styledAnchor: StyledFunction<IActionLinkProps> = styled(Anchor)
+
+export const ActionLink = styledAnchor`
   font-weight: 600;
   font-size: .9375rem;
   text-transform: uppercase;
+  
+  &,
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: rgb(5, 87, 223);
+  }
 `
 
-interface ActionLinkProps extends AnchorProps {}
-
-export const ActionLink: React.ComponentClass<ActionLinkProps> = withAnchor(ActionLinkLabel)
+ActionLink.displayName = 'ActionLink'
 
 export {
-  ActionLinkProps
+  IActionLinkProps
 }

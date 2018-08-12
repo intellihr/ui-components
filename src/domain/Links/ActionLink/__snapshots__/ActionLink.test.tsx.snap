@@ -2,50 +2,34 @@
 
 exports[`<ActionLink /> should render an action link 1`] = `
 .c0 {
-  color: inherit;
-}
-
-.c0:hover,
-.c0:visited,
-.c0:active,
-.c0:focus {
-  color: inherit;
-}
-
-.c1 {
-  color: rgb(5,87,223);
   font-weight: 600;
   font-size: .9375rem;
   text-transform: uppercase;
 }
 
-<WithAnchor
+.c0,
+.c0:link,
+.c0:visited,
+.c0:hover,
+.c0:active {
+  color: rgb(5,87,223);
+}
+
+<ActionLink
   href="/lol"
 >
   <Anchor
+    className="c0"
     href="/lol"
   >
-    <styled.a
+    <a
+      className="c0"
       href="/lol"
     >
-      <a
-        className="c0"
-        href="/lol"
-      >
-        <styled.span
-          href="/lol"
-        >
-          <span
-            className="c1"
-            href="/lol"
-          >
-            Grrr I am action man
-          </span>
-        </styled.span>
-      </a>
-    </styled.a>
+      Grrr I am action man
+    </a>
   </Anchor>
-</WithAnchor>
+</ActionLink>
 `;
 
 exports[`<ActionLink /> should render an action link with a replacement anchor tag 1`] = `
@@ -54,6 +38,20 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
   margin-left: auto;
   padding-right: 2rem;
   padding-left: 2rem;
+}
+
+.c1 {
+  font-weight: 600;
+  font-size: .9375rem;
+  text-transform: uppercase;
+}
+
+.c1,
+.c1:link,
+.c1:visited,
+.c1:hover,
+.c1:active {
+  color: rgb(5,87,223);
 }
 
 <DefaultsProvider
@@ -67,10 +65,10 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
     defaults={
       Object {
         "breakpoints": Object {
-          "large": 1200,
-          "medium": 1024,
-          "small": 640,
-          "xsmall": NaN,
+          "large": 3,
+          "medium": 2,
+          "small": 1,
+          "xsmall": 0,
         },
       }
     }
@@ -80,10 +78,10 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
         Object {
           "flexboxgrid": Object {
             "breakpoints": Object {
-              "lg": 75,
-              "md": 64,
-              "sm": 40,
-              "xs": NaN,
+              "lg": 0.1875,
+              "md": 0.125,
+              "sm": 0.0625,
+              "xs": 0,
             },
             "gridSize": 12,
             "gutterWidth": 1,
@@ -98,13 +96,15 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
         <div
           className="c0"
         >
-          <WithAnchor
+          <ActionLink
             href="#"
           >
             <Anchor
+              className="c1"
               href="#"
             >
               <AnchorComponent
+                className="c1"
                 href="#"
               >
                 <a
@@ -114,7 +114,7 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
                 </a>
               </AnchorComponent>
             </Anchor>
-          </WithAnchor>
+          </ActionLink>
         </div>
       </Grid>
     </ThemeProvider>

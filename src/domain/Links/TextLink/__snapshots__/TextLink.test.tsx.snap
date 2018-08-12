@@ -1,46 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TextLink /> should render a text link 1`] = `
-.c0 {
-  color: inherit;
-}
-
-.c0:hover,
+.c0,
+.c0:link,
 .c0:visited,
-.c0:active,
-.c0:focus {
-  color: inherit;
-}
-
-.c1 {
+.c0:hover,
+.c0:active {
   color: rgb(5,87,223);
 }
 
-<WithAnchor
+<TextLink
   href="/lol"
 >
   <Anchor
+    className="c0"
     href="/lol"
   >
-    <styled.a
+    <a
+      className="c0"
       href="/lol"
     >
-      <a
-        className="c0"
-        href="/lol"
-      >
-        <styled.span
-          href="/lol"
-        >
-          <span
-            className="c1"
-            href="/lol"
-          >
-            Text link me
-          </span>
-        </styled.span>
-      </a>
-    </styled.a>
+      Text link me
+    </a>
   </Anchor>
-</WithAnchor>
+</TextLink>
 `;

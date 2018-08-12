@@ -1,1 +1,1 @@
-export { ActionLink } from './ActionLink'
+export { ActionLink, IActionLinkProps } from './ActionLink'

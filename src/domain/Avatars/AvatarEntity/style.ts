@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
-import { getColor } from '@Domain/Colors'
+import { getColor } from '@Common/legacy'
 
 interface IAvatarEntityWrapper {
   className?: string
@@ -15,6 +15,7 @@ const AvatarEntityWrapper = styled.div`
   align-items: center;
   display: inline-flex;
   padding: 2px;
+  color: ${getColor('main-text')};
 
   &:hover {
     ${(props: IAvatarEntityWrapper) => {

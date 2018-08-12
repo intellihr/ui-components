@@ -1,7 +1,7 @@
 import React from 'react'
 import { GridProvider } from '@Domain/Grids'
 
-const sassGlobals = require('@Common/sass/globals.scss')
+const sassGlobals = require('@Common/sass/variables.scss')
 
 interface IDefaults {
   /** Breakpoints used for the grid layout */
@@ -23,10 +23,10 @@ interface IDefaultsProviders {
 
 const defaults: IDefaults = {
   breakpoints: {
-    xsmall: parseInt(sassGlobals['breakpoint-small']),
-    small: parseInt(sassGlobals['breakpoint-medium']),
-    medium: parseInt(sassGlobals['breakpoint-large']),
-    large: parseInt(sassGlobals['breakpoint-xlarge'])
+    xsmall: parseInt(sassGlobals['breakpoint-small']) || 0,
+    small: parseInt(sassGlobals['breakpoint-medium']) || 1,
+    medium: parseInt(sassGlobals['breakpoint-large']) || 2,
+    large: parseInt(sassGlobals['breakpoint-xlarge']) || 3
   }
 }
 

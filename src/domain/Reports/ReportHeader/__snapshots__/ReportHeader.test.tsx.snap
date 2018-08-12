@@ -2,6 +2,7 @@
 
 exports[`<ReportHeader /> should render ReportHeader with info 1`] = `
 .c5.fa {
+  margin-right: 3px;
   font-size: 1.3125rem;
 }
 
