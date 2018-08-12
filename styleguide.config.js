@@ -40,12 +40,6 @@ module.exports = {
       name: 'UI Components',
       sections: [
         {
-          name: 'Grid',
-          components: [
-            'src/domain/Grids/Grid/GridProvider'
-          ]
-        },
-        {
           name: 'Avatars',
           components: [
             'src/domain/Avatars/Avatar/Avatar',
@@ -95,6 +89,12 @@ module.exports = {
           name: 'Forms',
           components: [
             'src/domain/Forms/Form/Form'
+          ]
+        },
+        {
+          name: 'Grid',
+          components: [
+            'src/domain/Grids/Grid/GridProvider'
           ]
         },
         {

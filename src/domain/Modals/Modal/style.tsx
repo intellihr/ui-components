@@ -125,7 +125,7 @@ const StyledReactModal = styledReactModal`
         width: 90%;
       `}
 
-      ${(props) => props.breakpoint!.only('small')`
+      ${(props) => props.breakpoint!.only('xsmall')`
         min-width: 0;
         width: 100%;
       `}
@@ -140,7 +140,7 @@ const StyledReactModal = styledReactModal`
         width: 90%;
       `}
 
-      ${(props) => props.breakpoint!.only('small')`
+      ${(props) => props.breakpoint!.only('xsmall')`
         min-width: 0;
         width: 100%;
       `}
@@ -150,7 +150,7 @@ const StyledReactModal = styledReactModal`
       min-width: 600px;
       width: 600px;
 
-      ${(props) => props.breakpoint!.only('small')`
+      ${(props) => props.breakpoint!.only('xsmall')`
         min-width: 0;
         width: 100%;
       `}
