@@ -36,6 +36,12 @@ module.exports = {
       name: 'UI Components',
       sections: [
         {
+          name: 'Grid',
+          components: [
+            'src/domain/Grids/Grid/GridProvider'
+          ]
+        },
+        {
           name: 'Anchors',
           components: [
             'src/domain/Anchors/Anchor/Anchor'
@@ -227,7 +233,6 @@ module.exports = {
         'src/domain/Anchors/Anchor/withAnchor',
         'src/domain/Styles/hoc/withStyledBreakpoints',
         'src/domain/Defaults/withDefaults/withDefaults',
-        'src/domain/Grids/Grid/Grid',
         'src/domain/Skeletons/withSkeleton/withSkeleton'
       ]
     }

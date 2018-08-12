@@ -16,7 +16,7 @@ interface IGridProps {
   breakpoints?: IBreakpoints
 }
 
-class Grid extends React.PureComponent<IGridProps & IWithDefaults> {
+class GridProvider extends React.PureComponent<IGridProps & IWithDefaults> {
   /**
    * Retrieve breakpoints in the following orders:
    * 1. Breakpoints directly provided to the component
@@ -58,6 +58,8 @@ class Grid extends React.PureComponent<IGridProps & IWithDefaults> {
         theme={{
           flexboxgrid: {
             gridSize: 12,
+            gutterWidth: 1,
+            outerMargin: 2,
             breakpoints: this.breakpoints
           }
         }}
@@ -71,5 +73,5 @@ class Grid extends React.PureComponent<IGridProps & IWithDefaults> {
 export {
   IBreakpoints,
   IGridProps,
-  Grid
+  GridProvider
 }

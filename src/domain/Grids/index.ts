@@ -1,2 +1,2 @@
 export { Row } from './Row'
-export { Grid } from './Grid'
+export { GridProvider } from './Grid'

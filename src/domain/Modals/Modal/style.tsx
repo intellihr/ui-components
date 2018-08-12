@@ -116,7 +116,7 @@ const StyledReactModal = styledReactModal`
       `}
     }
 
-    &.fixed-xxlarge-up {
+    &.fixed-xlarge-up {
       min-width: 1380px;
       width: 1380px;
 

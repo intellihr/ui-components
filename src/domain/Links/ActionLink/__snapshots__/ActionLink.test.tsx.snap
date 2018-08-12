@@ -63,14 +63,14 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
     }
   }
 >
-  <Grid
+  <GridProvider
     defaults={
       Object {
         "breakpoints": Object {
           "large": 1200,
           "medium": 1024,
           "small": 640,
-          "xsmall": 0,
+          "xsmall": NaN,
         },
       }
     }
@@ -83,9 +83,11 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
               "lg": 75,
               "md": 64,
               "sm": 40,
-              "xs": 0,
+              "xs": NaN,
             },
             "gridSize": 12,
+            "gutterWidth": 1,
+            "outerMargin": 2,
           },
         }
       }
@@ -116,6 +118,6 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
         </div>
       </Grid>
     </ThemeProvider>
-  </Grid>
+  </GridProvider>
 </DefaultsProvider>
 `;

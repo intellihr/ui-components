@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid } from '@Domain/Grids'
+import { GridProvider } from '@Domain/Grids'
 
 const sassGlobals = require('@Common/sass/globals.scss')
 
@@ -23,10 +23,10 @@ interface IDefaultsProviders {
 
 const defaults: IDefaults = {
   breakpoints: {
-    xsmall: parseInt(sassGlobals['breakpoint-xsmall']),
-    small: parseInt(sassGlobals['breakpoint-small']),
-    medium: parseInt(sassGlobals['breakpoint-medium']),
-    large: parseInt(sassGlobals['breakpoint-large'])
+    xsmall: parseInt(sassGlobals['breakpoint-small']),
+    small: parseInt(sassGlobals['breakpoint-medium']),
+    medium: parseInt(sassGlobals['breakpoint-large']),
+    large: parseInt(sassGlobals['breakpoint-xlarge'])
   }
 }
 
@@ -48,7 +48,7 @@ class DefaultsProvider extends React.PureComponent<IDefaultsProviders> {
           ...value
         }}
       >
-        <Grid defaults={defaults}>{children}</Grid>
+        <GridProvider defaults={defaults}>{children}</GridProvider>
       </DefaultsContext.Provider>
     )
   }

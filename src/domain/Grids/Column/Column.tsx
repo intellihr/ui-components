@@ -1,20 +1,20 @@
 import React from 'react'
-import { map, reduce, isNil } from 'lodash'
+import { reduce, isNil, omit, pick } from 'lodash'
 import { Col } from 'react-styled-flexboxgrid'
 
-interface IColProps {
+interface IColumnProps {
   xs?: number,
   sm?: number,
   md?: number,
   lg?: number
 }
 
-class Column extends React.PureComponent<IColProps> {
-  public static defaultProps: Partial<IColProps> = {
+class Column extends React.PureComponent<IColumnProps> {
+  public static defaultProps: Partial<IColumnProps> = {
     xs: 12
   }
 
-  get dimensions () : IColProps {
+  get dimensions () : IColumnProps {
     const {
       xs,
       sm,
@@ -22,18 +22,18 @@ class Column extends React.PureComponent<IColProps> {
       lg
     } = this.props
 
-    const dimensions: IColProps = {'xs': xs, 'sm': sm, 'md': md, 'lg': lg}
+    const dimensions: Array<string> = ['xs', 'sm', 'md', 'lg']
 
     let previousValue: number = 12
+    var that = this
 
-    return reduce(Object.keys(dimensions), (acc: IColProps, key: string): IColProps => {
-      const sizeValue = dimensions[key as keyof IColProps]
+    return reduce(dimensions, (acc: IColumnProps, key: string, k): IColumnProps => {
+      const sizeValue = that.props[key as keyof IColumnProps]
 
       if (!isNil(sizeValue)) {
         previousValue = sizeValue
       }
-
-      acc[key as keyof IColProps] = previousValue
+      acc[key as keyof IColumnProps] = previousValue
 
       return acc
     }, {})
@@ -41,10 +41,14 @@ class Column extends React.PureComponent<IColProps> {
 
   public render (): JSX.Element {
     return (
-      <Col
-        {...this.props}
+      <Col type='row'
+        {...omit(this.props, ['style'])}
         {...this.dimensions}
-      />
+      >
+        <div {...pick(this.props, ['style'])}>
+          {this.props.children}
+        </div>
+      </Col>
     )
   }
 }

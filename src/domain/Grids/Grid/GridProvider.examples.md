@@ -30,8 +30,7 @@ const { Column } = require('../Column');
 const style = {
   backgroundColor:'#432DF3',
   minHeight:'1rem',
-  marginBottom: '5px',
-  borderRight:'1px solid #fff'
+  border:'1px solid #fff'
 };
 <div>
 <Row>
@@ -59,7 +58,7 @@ const { Column } = require('../Column');
 const style = {
   backgroundColor:'#432DF3',
   minHeight:'1rem',
-  marginBottom: '5px'
+  border:'1px solid #fff'
 };
 
 <Row>
@@ -85,8 +84,7 @@ const { Column } = require('../Column');
 const style = {
   backgroundColor:'#432DF3',
   minHeight:'1rem',
-  marginBottom: '5px',
-  marginRight:'5px'
+  border:'1px solid #fff'
 };
 <div>
   <Row>
@@ -111,8 +109,7 @@ const { Column } = require('../Column');
 const style = {
   backgroundColor:'#432DF3',
   minHeight:'1rem',
-  marginBottom: '5px',
-  marginRight:'5px'
+  border:'1px solid #fff'
 };
 <Row>
   <Column md={12}>
@@ -129,8 +126,7 @@ const { Column } = require('../Column');
 const style = {
   backgroundColor:'#432DF3',
   minHeight:'1rem',
-  marginBottom: '5px',
-  marginRight:'5px'
+  border:'1px solid #fff'
 };
 <Row>
   <Column md={12}>
@@ -148,8 +144,7 @@ const { Column } = require('../Column');
 const style = {
   backgroundColor:'#432DF3',
   minHeight:'1rem',
-  marginBottom: '5px',
-  marginRight:'5px'
+  border:'1px solid #fff'
 };
 <Row>
   <Column md={12}>
@@ -166,8 +161,8 @@ const { Row } = require('../Row');
 const { Column } = require('../Column');
 const styleLeftColumn = {
   backgroundColor:'#432DF3',
-  height: '8rem',
-  borderRight:'2px solid #fff'
+  minHeight: '8rem',
+  borderRight:'1px solid #fff'
 };
 const styleRightColumn = {
   backgroundColor:'#432DF3',
@@ -184,8 +179,8 @@ const { Row } = require('../Row');
 const { Column } = require('../Column');
 const styleLeftColumn = {
   backgroundColor:'#432DF3',
-  height: '8rem',
-  borderRight:'2px solid #fff'
+  minHeight: '8rem',
+  borderRight:'1px solid #fff'
 };
 const styleRightColumn = {
   backgroundColor:'#432DF3',
@@ -203,8 +198,8 @@ const { Row } = require('../Row');
 const { Column } = require('../Column');
 const styleLeftColumn = {
   backgroundColor:'#432DF3',
-  height: '8rem',
-  borderRight:'2px solid #fff'
+  minHeight: '8rem',
+  borderRight:'1px solid #fff'
 };
 const styleRightColumn = {
   backgroundColor:'#432DF3',
@@ -225,8 +220,8 @@ const { Row } = require('../Row');
 const { Column } = require('../Column');
 const style = {
   backgroundColor:'#432DF3',
-  height: '1rem',
-  borderRight:'2px solid #fff'
+  minHeight: '1rem',
+  borderRight:'1px solid #fff'
 };
 <Row around="md">
   <Column md={2} style={style}/>
@@ -241,8 +236,8 @@ const { Row } = require('../Row');
 const { Column } = require('../Column');
 const style = {
   backgroundColor:'#432DF3',
-  height: '1rem',
-  borderRight:'2px solid #fff'
+  minHeight: '1rem',
+  borderRight:'1px solid #fff'
 };
 <Row between="md">
   <Column md={2} style={style}/>
@@ -260,8 +255,8 @@ const { Row } = require('../Row');
 const { Column } = require('../Column');
 const style = {
   backgroundColor:'#432DF3',
-  height: '1rem',
-  borderRight:'2px solid #fff'
+  minHeight: '1rem',
+  borderRight:'1px solid #fff'
 };
 <Row>
   <Column sm={12} md={6} style={style}/>

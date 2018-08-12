@@ -9,10 +9,11 @@ $global-radius: 4px;
 // 2. Breakpoints
 // --------------
 $breakpoints: (
-  xsmall: 0,
-  small: 640px,
-  medium: 1024px,
-  large: 1200px
+  small: 0,
+  medium: 640px,
+  large: 1024px,
+  xlarge: 1200px,
+  xxlarge: 1440px
 );
 
 :export {

@@ -1,2 +1,2 @@
-export { IGridProps } from './Grid'
-export { Grid } from './Grid'
+export { IGridProps } from './GridProvider'
+export { GridProvider } from './GridProvider'

@@ -1,8 +1,9 @@
 /* This file is used by Jest */
 module.exports = {
   radius: '4px',
-  'breakpoint-xsmall': '0',
-  'breakpoint-small': '640px',
-  'breakpoint-medium': '1024px',
-  'breakpoint-large': '1200px'
+  'breakpoint-ssmall': '0',
+  'breakpoint-medium': '640px',
+  'breakpoint-large': '1024px',
+  'breakpoint-xlarge': '1200px',
+  'breakpoint-xxlarge': '1440px'
 }
