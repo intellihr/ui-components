@@ -11,19 +11,25 @@ $button-styles: (
     disabled-text-color: $n400,
     hover-background-color: $i500,
     hover-text-color: $n100,
-    active-background-color: $i400,
-    active-text-color: $n100
+    active-background-color: $i600,
+    active-text-color: $n100,
+    focus-background-color: $i100,
+    focus-text-color: $i400,
+    focus-border-color: $i400 
   ),
   secondary: (
-    background-color: $secondary-base,
+    background-color: $b400,
     border: transparent,
-    text-color: $secondary-text,
-    disabled-background-color: $secondary-base,
-    disabled-text-color: $secondary-text,
-    hover-background-color: $secondary-hover,
-    hover-text-color: $secondary-hover-text,
-    active-background-color: $secondary-active,
-    active-text-color: $secondary-hover-text
+    text-color: $n100,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $b500,
+    hover-text-color: $n100,
+    active-background-color: $b600,
+    active-text-color: $n100,
+    focus-background-color: $b100,
+    focus-text-color: $b400,
+    focus-border-color: $b400 
   ),
   success: (
     background-color: $success-base,
@@ -116,11 +122,11 @@ $button-styles: (
   secondary-borderless: (
     background-color: transparent,
     border: transparent,
-    text-color: $secondary-base,
+    text-color: $b400,
     disabled-background-color: transparent,
-    disabled-text-color: $secondary-base,
-    hover-background-color: $secondary-base,
-    hover-text-color: $secondary-text,
+    disabled-text-color: $b400,
+    hover-background-color: $b400,
+    hover-text-color: $n100,
     active-background-color: $secondary-active,
     active-text-color: $secondary-hover-text
   ),
@@ -215,7 +221,7 @@ $button-styles: (
   ),
   secondary-hollow: (
     background-color: transparent,
-    border: $secondary-base,
+    border: $b400,
     text-color: $secondary-hollow-text,
     disabled-background-color: transparent,
     disabled-text-color: $secondary-hollow-text,
@@ -323,11 +329,11 @@ $button-styles: (
   add: (
     background-color: transparent,
     border: transparent,
-    text-color: $secondary-base,
+    text-color: $b400,
     disabled-background-color: transparent,
-    disabled-text-color: $secondary-base,
-    hover-background-color: $secondary-base,
-    hover-text-color: $secondary-text,
+    disabled-text-color: $b400,
+    hover-background-color: $b400,
+    hover-text-color: $n100,
     active-background-color: $secondary-active,
     active-text-color: $secondary-hover-text
   ),
@@ -338,9 +344,9 @@ $button-styles: (
     disabled-background-color: transparent,
     disabled-text-color: darken($neutral-base, 10%),
     hover-background-color: transparent,
-    hover-text-color: $secondary-base,
+    hover-text-color: $b400,
     active-background-color: transparent,
-    active-text-color: $secondary-base
+    active-text-color: $b400
   ),
   delete: (
     background-color: $neutral,
@@ -393,9 +399,9 @@ $button-styles: (
     disabled-background-color: transparent,
     disabled-text-color: $main-text-light,
     hover-background-color: transparent,
-    hover-text-color: $secondary-base,
+    hover-text-color: $b400,
     active-background-color: transparent,
-    active-text-color: $secondary-base
+    active-text-color: $b400
   )
 );
 
@@ -406,7 +412,7 @@ $button-styles: (
     background-color: $background-color;
     color: $text-color;
     cursor: not-allowed;
-    opacity: .3;
+    opacity: 1;
 
     &:focus,
     &:hover {
