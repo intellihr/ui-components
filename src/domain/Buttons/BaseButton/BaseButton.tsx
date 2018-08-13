@@ -1,14 +1,14 @@
-import React, { Fragment, ReactNode } from 'react'
+import React, { Fragment } from 'react'
 import classNames from 'classnames'
 import { IBaseButtonProps } from '../services/buttonHelper'
 
-class BaseButton extends React.PureComponent<IBaseButtonProps> {
+class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
   public static defaultProps: Partial<IBaseButtonProps> = {
     type: 'neutral',
     iconAlignment: 'left'
   }
 
-  get buttonContent (): ReactNode {
+  get buttonContent (): JSX.Element {
     const {
       children,
       icon,
@@ -37,11 +37,7 @@ class BaseButton extends React.PureComponent<IBaseButtonProps> {
       </Fragment>
     }
 
-    return children
-  }
-
-  public render (): JSX.Element {
-    return this.props.render(this.buttonContent)
+    return <Fragment>{children}</Fragment>
   }
 }
 

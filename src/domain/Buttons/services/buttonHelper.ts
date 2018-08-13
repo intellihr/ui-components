@@ -17,7 +17,7 @@ export type ButtonTypes =
 
 export type ButtonSizes = 'small' | 'medium' | 'large'
 
-export interface IBaseButton {
+export interface IBaseButtonProps {
   /** Unique id of the button */
   id?: string
   /** Size of the button */
@@ -28,14 +28,6 @@ export interface IBaseButton {
   iconAlignment?: 'left' | 'right'
   /** Icon component passed to Button */
   icon?: JSX.Element
-}
-
-export interface IBaseButtonProps extends IBaseButton {
-    /** function to get the content */
-    render: (content: React.ReactNode) => JSX.Element
-}
-
-export interface IButtonProps extends IBaseButton {
   /** Any extra classes */
   className?: string
   /** Disable the button or not */

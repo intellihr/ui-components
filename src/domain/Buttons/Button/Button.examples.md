@@ -4,55 +4,55 @@
 <div>
   <div>
     <h3>Enabled</h3>
-    <Button type='primary' buttonComponentProps={{onClick:() => alert('primary')}}>
+    <Button type='primary' onClick={() => alert('primary')}>
       primary
     </Button>
-    <Button type='secondary' buttonComponentProps={{onClick:() => alert('secondary')}}>
+    <Button type='secondary' onClick={() => alert('secondary')}>
       secondary
     </Button>
-    <Button type='warning' buttonComponentProps={{onClick:() => alert('warning')}}>
+    <Button type='warning' onClick={() => alert('warning')}>
       warning
     </Button>
-    <Button type='alert' buttonComponentProps={{onClick:() => alert('alert')}}>
+    <Button type='alert' onClick={() => alert('alert')}>
       alert
     </Button>
-    <Button type='neutral' buttonComponentProps={{onClick:() => alert('neutral')}}>
+    <Button type='neutral' onClick={() => alert('neutral')}>
       neutral
     </Button> 
-    <Button type='highlight' buttonComponentProps={{onClick:() => alert('highlight')}}>
+    <Button type='highlight' onClick={() => alert('highlight')}>
       highlight
     </Button>
-    <Button type='light' buttonComponentProps={{onClick:() => alert('light')}}>
+    <Button type='light' onClick={() => alert('light')}>
       light
     </Button>
-    <Button type='dark' buttonComponentProps={{onClick:() => alert('dark')}}>
+    <Button type='dark' onClick={() => alert('dark')}>
       dark
     </Button>  
   </div>
   <div>
     <h3>Disabled</h3>
-    <Button type='primary' buttonComponentProps={{onClick:() => alert('primary'), disabled: true}}>
+    <Button type='primary' disabled onClick={() => alert('primary')}>
       primary
     </Button>
-    <Button type='secondary' buttonComponentProps={{onClick:() => alert('secondary'), disabled: true}}>
+    <Button type='secondary' disabled onClick={() => alert('secondary')}>
       secondary
     </Button>
-    <Button type='warning' buttonComponentProps={{onClick:() => alert('warning'), disabled: true}}>
+    <Button type='warning' disabled onClick={() => alert('warning')}>
       warning
     </Button>
-    <Button type='alert' buttonComponentProps={{onClick:() => alert('alert'), disabled: true}}>
+    <Button type='alert' disabled onClick={() => alert('alert')}>
       alert
     </Button>
-    <Button type='neutral' buttonComponentProps={{onClick:() => alert('neutral'), disabled: true}}>
+    <Button type='neutral' disabled onClick={() => alert('neutral')}>
       neutral
     </Button> 
-    <Button type='highlight' buttonComponentProps={{onClick:() => alert('highlight'), disabled: true}}>
+    <Button type='highlight' disabled onClick={() => alert('highlight')}>
       highlight
     </Button>
-    <Button type='light' buttonComponentProps={{onClick:() => alert('light'), disabled: true}}>
+    <Button type='light' disabled onClick={() => alert('light')}>
       light
     </Button>
-    <Button type='dark' buttonComponentProps={{onClick:() => alert('dark'), disabled: true}}>
+    <Button type='dark' disabled onClick={() => alert('dark')}>
       dark
     </Button>  
   </div>
@@ -65,55 +65,55 @@
 <div>
   <div>
     <h3>Enabled</h3>
-    <Button type='primary-borderless' buttonComponentProps={{onClick:() => alert('primary-borderless')}}>
+    <Button type='primary-borderless' onClick={() => alert('primary-borderless')}>
       primary-borderless
     </Button>
-    <Button type='secondary-borderless' buttonComponentProps={{onClick:() => alert('secondary-borderless')}}>
+    <Button type='secondary-borderless' onClick={() => alert('secondary-borderless')}>
       secondary-borderless
     </Button>
-    <Button type='warning-borderless' buttonComponentProps={{onClick:() => alert('warning-borderless')}}>
+    <Button type='warning-borderless' onClick={() => alert('warning-borderless')}>
       warning-borderless
     </Button>
-    <Button type='alert-borderless' buttonComponentProps={{onClick:() => alert('alert-borderless')}}>
+    <Button type='alert-borderless' onClick={() => alert('alert-borderless')}>
       alert-borderless
     </Button>
-    <Button type='neutral-borderless' buttonComponentProps={{onClick:() => alert('neutral-borderless')}}>
+    <Button type='neutral-borderless' onClick={() => alert('neutral-borderless')}>
       neutral-borderless
     </Button> 
-    <Button type='highlight-borderless' buttonComponentProps={{onClick:() => alert('highlight-borderless')}}>
+    <Button type='highlight-borderless' onClick={() => alert('highlight-borderless')}>
       highlight-borderless
     </Button>
-    <Button type='light-borderless' buttonComponentProps={{onClick:() => alert('light-borderless')}}>
+    <Button type='light-borderless' onClick={() => alert('light-borderless')}>
       light-borderless
     </Button>
-    <Button type='dark-borderless' buttonComponentProps={{onClick:() => alert('dark-borderless')}}>
+    <Button type='dark-borderless' onClick={() => alert('dark-borderless')}>
       dark-borderless
     </Button>  
   </div>
   <div>
     <h3>Disabled</h3>
-    <Button type='primary-borderless' buttonComponentProps={{onClick:() => alert('primary-borderless'), disabled: true}}>
+    <Button type='primary-borderless' disabled onClick={() => alert('primary-borderless')}>
       primary-borderless
     </Button>
-    <Button type='secondary-borderless' buttonComponentProps={{onClick:() => alert('secondary-borderless'), disabled: true}}>
+    <Button type='secondary-borderless' disabled onClick={() => alert('secondary-borderless')}>
       secondary-borderless
     </Button>
-    <Button type='warning-borderless' buttonComponentProps={{onClick:() => alert('warning-borderless'), disabled: true}}>
+    <Button type='warning-borderless' disabled onClick={() => alert('warning-borderless')}>
       warning-borderless
     </Button>
-    <Button type='alert-borderless' buttonComponentProps={{onClick:() => alert('alert-borderless'), disabled: true}}>
+    <Button type='alert-borderless' disabled onClick={() => alert('alert-borderless')}>
       alert-borderless
     </Button>
-    <Button type='neutral-borderless' buttonComponentProps={{onClick:() => alert('neutral-borderless'), disabled: true}}>
+    <Button type='neutral-borderless' disabled onClick={() => alert('neutral-borderless')}>
       neutral-borderless
     </Button> 
-    <Button type='highlight-borderless' buttonComponentProps={{onClick:() => alert('highlight-borderless'), disabled: true}}>
+    <Button type='highlight-borderless' disabled onClick={() => alert('highlight-borderless')}>
       highlight-borderless
     </Button>
-    <Button type='light-borderless' buttonComponentProps={{onClick:() => alert('light-borderless'), disabled: true}}>
+    <Button type='light-borderless' disabled onClick={() => alert('light-borderless')}>
       light-borderless
     </Button>
-    <Button type='dark-borderless' buttonComponentProps={{onClick:() => alert('dark-borderless'), disabled: true}}>
+    <Button type='dark-borderless' disabled onClick={() => alert('dark-borderless')}>
       dark-borderless
     </Button>  
     </div>
@@ -125,55 +125,55 @@
 <div>
   <div>
     <h3>Enabled</h3>
-    <Button type='primary-hollow' buttonComponentProps={{onClick:() => alert('primary-hollow')}}>
+    <Button type='primary-hollow' onClick={() => alert('primary-hollow')}>
       primary-hollow
     </Button>
-    <Button type='secondary-hollow' buttonComponentProps={{onClick:() => alert('secondary-hollow')}}>
+    <Button type='secondary-hollow' onClick={() => alert('secondary-hollow')}>
       secondary-hollow
     </Button>
-    <Button type='warning-hollow' buttonComponentProps={{onClick:() => alert('warning-hollow')}}>
+    <Button type='warning-hollow' onClick={() => alert('warning-hollow')}>
       warning-hollow
     </Button>
-    <Button type='alert-hollow' buttonComponentProps={{onClick:() => alert('alert-hollow')}}>
+    <Button type='alert-hollow' onClick={() => alert('alert-hollow')}>
       alert-hollow
     </Button>
-    <Button type='neutral-hollow' buttonComponentProps={{onClick:() => alert('neutral-hollow')}}>
+    <Button type='neutral-hollow' onClick={() => alert('neutral-hollow')}>
       neutral-hollow
     </Button> 
-    <Button type='highlight-hollow' buttonComponentProps={{onClick:() => alert('highlight-hollow')}}>
+    <Button type='highlight-hollow' onClick={() => alert('highlight-hollow')}>
       highlight-hollow
     </Button>
-    <Button type='light-hollow' buttonComponentProps={{onClick:() => alert('light-hollow')}}>
+    <Button type='light-hollow' onClick={() => alert('light-hollow')}>
       light-hollow
     </Button>
-    <Button type='dark-hollow' buttonComponentProps={{onClick:() => alert('dark-hollow')}}>
+    <Button type='dark-hollow' onClick={() => alert('dark-hollow')}>
       dark-hollow
     </Button>
   </div>
   <div>
     <h3>Disabled</h3>
-    <Button type='primary-hollow' buttonComponentProps={{onClick:() => alert('primary-hollow'), disabled: true}}>
+    <Button type='primary-hollow' disabled onClick={() => alert('primary-hollow')}>
       primary-hollow
     </Button>
-    <Button type='secondary-hollow' buttonComponentProps={{onClick:() => alert('secondary-hollow'), disabled: true}}>
+    <Button type='secondary-hollow' disabled onClick={() => alert('secondary-hollow')}>
       secondary-hollow
     </Button>
-    <Button type='warning-hollow' buttonComponentProps={{onClick:() => alert('warning-hollow'), disabled: true}}>
+    <Button type='warning-hollow' disabled onClick={() => alert('warning-hollow')}>
       warning-hollow
     </Button>
-    <Button type='alert-hollow' buttonComponentProps={{onClick:() => alert('alert-hollow'), disabled: true}}>
+    <Button type='alert-hollow' disabled onClick={() => alert('alert-hollow')}>
       alert-hollow
     </Button>
-    <Button type='neutral-hollow' buttonComponentProps={{onClick:() => alert('neutral-hollow'), disabled: true}}>
+    <Button type='neutral-hollow' disabled onClick={() => alert('neutral-hollow')}>
       neutral-hollow
     </Button> 
-    <Button type='highlight-hollow' buttonComponentProps={{onClick:() => alert('highlight-hollow'), disabled: true}}>
+    <Button type='highlight-hollow' disabled onClick={() => alert('highlight-hollow')}>
       highlight-hollow
     </Button>
-    <Button type='light-hollow' buttonComponentProps={{onClick:() => alert('light-hollow'), disabled: true}}>
+    <Button type='light-hollow' disabled onClick={() => alert('light-hollow')}>
       light-hollow
     </Button>
-    <Button type='dark-hollow' buttonComponentProps={{onClick:() => alert('dark-hollow'), disabled: true}}>
+    <Button type='dark-hollow' disabled onClick={() => alert('dark-hollow')}>
       dark-hollow
     </Button>
   </div>
@@ -186,55 +186,55 @@
 <div>
   <div>
     <h3>Enabled</h3>
-    <Button type='add' buttonComponentProps={{onClick:() => alert('add')}}>
+    <Button type='add' onClick={() => alert('add')}>
       add
     </Button>
-    <Button type='add-subtle' buttonComponentProps={{onClick:() => alert('add-subtle')}}>
+    <Button type='add-subtle' onClick={() => alert('add-subtle')}>
       add-subtle
     </Button>
-    <Button type='delete' buttonComponentProps={{onClick:() => alert('delete')}}>
+    <Button type='delete' onClick={() => alert('delete')}>
       delete
     </Button>
-    <Button type='delete-subtle' buttonComponentProps={{onClick:() => alert('delete-subtle')}}>
+    <Button type='delete-subtle' onClick={() => alert('delete-subtle')}>
       delete-subtle
     </Button>
-    <Button type='resolve' buttonComponentProps={{onClick:() => alert('resolve')}}>
+    <Button type='resolve' onClick={() => alert('resolve')}>
       resolve
     </Button> 
-    <Button type='skip' buttonComponentProps={{onClick:() => alert('skip')}}>
+    <Button type='skip' onClick={() => alert('skip')}>
       skip
     </Button>
-    <Button type='cancel' buttonComponentProps={{onClick:() => alert('cancel')}}>
+    <Button type='cancel' onClick={() => alert('cancel')}>
       cancel
     </Button>
-    <Button type='menu-action' buttonComponentProps={{onClick:() => alert('menu-action')}}>
+    <Button type='menu-action' onClick={() => alert('menu-action')}>
       menu-action
     </Button>
   </div>
   <div>
     <h3>Disabled</h3>
-    <Button type='add' buttonComponentProps={{onClick:() => alert('add'), disabled: true}}>
+    <Button type='add' disabled onClick={() => alert('add')}>
       add
     </Button>
-    <Button type='add-subtle' buttonComponentProps={{onClick:() => alert('add-subtle'), disabled: true}}>
+    <Button type='add-subtle' disabled onClick={() => alert('add-subtle')}>
       add-subtle
     </Button>
-    <Button type='delete' buttonComponentProps={{onClick:() => alert('delete'), disabled: true}}>
+    <Button type='delete' disabled onClick={() => alert('delete')}>
       delete
     </Button>
-    <Button type='delete-subtle' buttonComponentProps={{onClick:() => alert('delete-subtle'), disabled: true}}>
+    <Button type='delete-subtle' disabled onClick={() => alert('delete-subtle')}>
       delete-subtle
     </Button>
-    <Button type='resolve' buttonComponentProps={{onClick:() => alert('resolve'), disabled: true}}>
+    <Button type='resolve' disabled onClick={() => alert('resolve')}>
       resolve
     </Button> 
-    <Button type='skip' buttonComponentProps={{onClick:() => alert('skip'), disabled: true}}>
+    <Button type='skip' disabled onClick={() => alert('skip')}>
       skip
     </Button>
-    <Button type='cancel' buttonComponentProps={{onClick:() => alert('cancel'), disabled: true}}>
+    <Button type='cancel' disabled onClick={() => alert('cancel')}>
       cancel
     </Button>
-    <Button type='menu-action' buttonComponentProps={{onClick:() => alert('menu-action'), disabled: true}}>
+    <Button type='menu-action' disabled onClick={() => alert('menu-action')}>
       menu-action
     </Button>
   </div>
@@ -245,13 +245,13 @@
 #### Button sizes
 ```jsx
 <div>
-  <Button size='small' buttonComponentProps={{onClick:() => alert('small')}}>
+  <Button size='small' onClick={() => alert('small')}>
     small
   </Button>
-  <Button size='medium' buttonComponentProps={{onClick:() => alert('medium')}}>
+  <Button size='medium' onClick={() => alert('medium')}>
     medium
   </Button>
-  <Button size='large' buttonComponentProps={{onClick:() => alert('large')}}>
+  <Button size='large' onClick={() => alert('large')}>
     large
   </Button>
 </div>
@@ -266,7 +266,7 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
     <Button 
       icon={<FontAwesomeIcon type='star' />}
       type='primary-hollow' 
-      buttonComponentProps={{onClick:() => alert('primary-hollow')}}
+      onClick={() => alert('primary-hollow')}
     >
       primary-hollow
     </Button>
@@ -274,7 +274,7 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
       icon={<FontAwesomeIcon type='star' />}
       iconAlignment='right'
       type='primary-hollow' 
-      buttonComponentProps={{onClick:() => alert('primary-hollow')}}
+      onClick={() => alert('primary-hollow')}
     >
       primary-hollow
     </Button>

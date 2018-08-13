@@ -3,12 +3,8 @@
 exports[`<ToggleModal /> should render a modal with a button 1`] = `
 <React.Fragment>
   <Button
-    buttonComponentProps={
-      Object {
-        "onClick": [Function],
-      }
-    }
     iconAlignment="left"
+    onClick={[Function]}
     type="primary"
   >
     Click Me

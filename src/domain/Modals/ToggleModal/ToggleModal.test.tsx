@@ -10,7 +10,7 @@ describe('<ToggleModal />', () => {
         trigger={({toggle}) => (
           <Button
             type='primary'
-            buttonComponentProps={{onClick: toggle}}
+            onClick={toggle}
           >
             Click Me
           </Button>
@@ -29,7 +29,7 @@ describe('<ToggleModal />', () => {
         trigger={({toggle}) => (
           <Button
             type='primary'
-            buttonComponentProps={{onClick: toggle}}
+            onClick={toggle}
           >
             Click Me
           </Button>
