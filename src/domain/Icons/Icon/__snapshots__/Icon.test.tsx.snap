@@ -72,6 +72,10 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
   display: inline-block;
   font-weight: 600;
   text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .c2,

@@ -50,6 +50,7 @@ const BadgeWrapper = styled.span`
   display: inline-block;
   font-weight: 600;
   text-align: center;
+  user-select: none;
   
   .refresh-icon {
     background-color: $main-background;
