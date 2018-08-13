@@ -11,8 +11,8 @@ export { FontAwesomeIcon, IntelliIcon } from './Icons'
 export { InputLabel, TextInput, NumberInput, CheckboxInput, SelectInput, TextAreaInput } from './Inputs'
 export { StatusIndicator } from './Indicators'
 export { Legend } from './Legends'
+export { GridProvider, Row } from './Grids'
 export { ActionLink, TextLink, UnstyledLink } from './Links'
-
 /*
  * ListRow, ListClickableColumn and ListColum are here for legacy support.
  * They should be static properties of SmartList

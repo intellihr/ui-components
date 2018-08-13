@@ -7,7 +7,6 @@ import { Callout } from '../../Callouts'
 import { Spinner } from '../../Spinners'
 import { ListClickableColumn } from './ListClickableColumn'
 import { ListRow } from './ListRow'
-import { withGrid } from '../../Grids'
 import { ISkeletonOptions } from '../../Skeletons'
 
 const style = require('./style.scss')
@@ -53,7 +52,7 @@ export interface SmartListState {
   paginationButton: boolean
 }
 
-class SmartListComponent extends React.PureComponent<ISmartList, SmartListState> {
+class SmartList extends React.PureComponent<ISmartList, SmartListState> {
   public static defaultProps: Partial<ISmartList> = {
     emptyListText: 'No Results found.',
     loading: false,
@@ -313,4 +312,6 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
   }
 }
 
-export const SmartList: React.ComponentClass<ISmartList> = withGrid(SmartListComponent)
+export {
+  SmartList
+}

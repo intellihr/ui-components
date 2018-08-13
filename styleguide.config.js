@@ -92,6 +92,12 @@ module.exports = {
           ]
         },
         {
+          name: 'Grid',
+          components: [
+            'src/domain/Grids/Grid/GridProvider'
+          ]
+        },
+        {
           name: 'Icons',
           components: [
             'src/domain/Icons/Icon/Icon'
@@ -219,7 +225,6 @@ module.exports = {
       components: [
         'src/domain/Styles/hoc/withStyledBreakpoints',
         'src/domain/Defaults/withDefaults/withDefaults',
-        'src/domain/Grids/Grid/withGrid',
         'src/domain/Skeletons/withSkeleton/withSkeleton',
         'src/domain/Internals/Anchor/Anchor'
       ]

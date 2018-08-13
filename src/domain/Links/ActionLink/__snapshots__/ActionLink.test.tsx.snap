@@ -34,16 +34,23 @@ exports[`<ActionLink /> should render an action link 1`] = `
 
 exports[`<ActionLink /> should render an action link with a replacement anchor tag 1`] = `
 .c0 {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.c1 {
   font-weight: 600;
   font-size: .9375rem;
   text-transform: uppercase;
 }
 
-.c0,
-.c0:link,
-.c0:visited,
-.c0:hover,
-.c0:active {
+.c1,
+.c1:link,
+.c1:visited,
+.c1:hover,
+.c1:active {
   color: rgb(5,87,223);
 }
 
@@ -54,24 +61,50 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
     }
   }
 >
-  <ActionLink
-    href="#"
-  >
-    <Anchor
-      className="c0"
-      href="#"
+  <GridProvider>
+    <ThemeProvider
+      theme={
+        Object {
+          "flexboxgrid": Object {
+            "breakpoints": Object {
+              "lg": 2,
+              "md": 1,
+              "sm": 0,
+              "xs": -1,
+            },
+            "gridSize": 12,
+          },
+        }
+      }
     >
-      <AnchorComponent
-        className="c0"
-        href="#"
+      <Grid
+        fluid={true}
       >
-        <a
-          href="/allTheFeelsUgh"
+        <div
+          className="c0"
         >
-          Replacement default text
-        </a>
-      </AnchorComponent>
-    </Anchor>
-  </ActionLink>
+          <ActionLink
+            href="#"
+          >
+            <Anchor
+              className="c1"
+              href="#"
+            >
+              <AnchorComponent
+                className="c1"
+                href="#"
+              >
+                <a
+                  href="/allTheFeelsUgh"
+                >
+                  Replacement default text
+                </a>
+              </AnchorComponent>
+            </Anchor>
+          </ActionLink>
+        </div>
+      </Grid>
+    </ThemeProvider>
+  </GridProvider>
 </DefaultsProvider>
 `;
