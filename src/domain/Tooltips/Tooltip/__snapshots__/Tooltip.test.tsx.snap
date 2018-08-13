@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tooltip /> should render a tooltip with a custom class name 1`] = `
-<span
+<styled.span
   className="test-classname"
   data-for="test-tooltip"
   data-tip={true}
@@ -20,11 +20,11 @@ exports[`<Tooltip /> should render a tooltip with a custom class name 1`] = `
   >
     Tooltip message
   </ReactTooltip>
-</span>
+</styled.span>
 `;
 
 exports[`<Tooltip /> should render a tooltip with the child element 1`] = `
-<span
+<styled.span
   data-for="test-tooltip"
   data-tip={true}
   key="test-tooltip"
@@ -42,5 +42,5 @@ exports[`<Tooltip /> should render a tooltip with the child element 1`] = `
   >
     Tooltip message
   </ReactTooltip>
-</span>
+</styled.span>
 `;
