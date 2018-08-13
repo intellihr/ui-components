@@ -1,16 +1,18 @@
+@import "../../../common/sass/variables";
+
 $button-spacing: 10px;
 
 $button-styles: (
   primary: (
-    background-color: $primary-base,
+    background-color: $i400,
     border: transparent,
-    text-color: $primary-text,
-    disabled-background-color: $primary-base,
-    disabled-text-color: $primary-text,
-    hover-background-color: $primary-hover,
-    hover-text-color: $primary-hover-text,
-    active-background-color: $primary-active,
-    active-text-color: $primary-hover-text
+    text-color: $n100,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $i500,
+    hover-text-color: $n100,
+    active-background-color: $i400,
+    active-text-color: $n100
   ),
   secondary: (
     background-color: $secondary-base,
@@ -424,7 +426,6 @@ $button-styles: (
   border-color: map-get($style, border);
   color: map-get($style, text-color);
 
-  &:focus,
   &:hover,
   &.hover {
     background-color: map-get($style, hover-background-color);
@@ -432,6 +433,15 @@ $button-styles: (
 
     @if map-has-key($style, hover-border-color) {
       border-color: map-get($style, hover-border-color);
+    }
+  }
+
+  &:focus {
+    background-color: map-get($style, focus-background-color);
+    color: map-get($style, focus-text-color);
+
+    @if map-has-key($style, focus-border-color) {
+      border-color: map-get($style, focus-border-color);
     }
   }
 
