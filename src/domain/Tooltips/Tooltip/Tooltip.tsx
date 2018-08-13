@@ -3,7 +3,7 @@ import ReactTooltip from 'react-tooltip'
 import uuid from 'uuid'
 import { FontAwesomeIcon } from '../../Icons'
 import { getColor } from '@Common/legacy'
-import { TooltipIcon } from './style'
+import { TooltipIcon, TooltipWrapper } from './style'
 
 export interface TooltipProps {
   id?: string,
@@ -63,7 +63,7 @@ export class Tooltip extends React.Component<TooltipProps> {
     }
 
     return (
-      <span
+      <TooltipWrapper
         className={className}
         key={tooltipElementKey}
         data-tip
@@ -79,7 +79,7 @@ export class Tooltip extends React.Component<TooltipProps> {
         >
           {message}
         </ReactTooltip>
-      </span>
+      </TooltipWrapper>
     )
   }
 
