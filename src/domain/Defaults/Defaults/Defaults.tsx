@@ -9,8 +9,6 @@ interface IDefaults {
     small: number
     medium: number
     large: number
-    xlarge: number
-    xxlarge: number
   }
 
   /** Anchor component used for clickable links */
@@ -24,11 +22,9 @@ interface IDefaultsProviders {
 
 const defaults: IDefaults = {
   breakpoints: {
-    small: parseInt(sassGlobals['breakpoint-small']) || 0,
-    medium: parseInt(sassGlobals['breakpoint-medium']) || 1,
-    large: parseInt(sassGlobals['breakpoint-large']) || 2,
-    xlarge: parseInt(sassGlobals['breakpoint-xlarge']) || 3,
-    xxlarge: parseInt(sassGlobals['breakpoint-xxlarge']) || 4
+    small: parseInt(sassGlobals['breakpoint-min']) || 0,
+    medium: parseInt(sassGlobals['breakpoint-tablet']) || 1,
+    large: parseInt(sassGlobals['breakpoint-desktop']) || 2
   }
 }
 
@@ -50,7 +46,7 @@ class DefaultsProvider extends React.PureComponent<IDefaultsProviders> {
           ...value
         }}
       >
-        <GridProvider defaults={defaults}>{children}</GridProvider>
+        <GridProvider>{children}</GridProvider>
       </DefaultsContext.Provider>
     )
   }

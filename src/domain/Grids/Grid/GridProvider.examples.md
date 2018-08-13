@@ -16,13 +16,13 @@ The two main components of the grid system are `Row` and `Column`.
 A `Row` is a wrapper that will handle the alignment of all the `Column` children
 that are passed to it.
 
-`Column` components will take a set of properties (`xs`, `sm`, `md`, `lg`) that 
+`Column` components will take a set of properties (`sm`, `md`, `lg`) that 
 will define what portion of the row (out of 12 by default) the column should 
 take for each breakpoint.
 
 ### Responsive
 Responsive modifiers enable specifying different column sizes, offsets, alignment and distribution 
-at xs, sm, md & lg viewport widths.
+at sm, md & lg viewport widths.
 
 ```jsx
 const { Row } = require('../Row');
@@ -34,17 +34,17 @@ const style = {
 };
 <div>
 <Row>
-  <Column xs={12} sm={3} md={2} lg={1} style={style}/>
-  <Column xs={6} sm={6} md={8} lg={10} style={style}/>
-  <Column xs={6} sm={3} md={2} lg={1} style={style}/>
+  <Column sm={12} md={2} style={style}/>
+  <Column sm={12} md={8} style={style}/>
+  <Column sm={12} md={2} style={style}/>
 </Row>
 <Row>
-  <Column xs={12} sm={3} md={2} lg={1} style={style}/>
-  <Column xs={12} sm={9} md={10} lg={11} style={style}/>
+  <Column sm={3} md={2} style={style}/>
+  <Column sm={9} md={10} style={style}/>
 </Row>
 <Row>
-  <Column xs={10} sm={6} md={8} lg={10} style={style}/>
-  <Column xs={2} sm={6} md={4} lg={2} style={style}/>
+  <Column sm={12} md={8} style={style}/>
+  <Column sm={12} md={4} style={style}/>
 </Row>
 </div>
 ```
@@ -205,7 +205,7 @@ const styleRightColumn = {
   backgroundColor:'#432DF3',
   minHeight:'1rem'
 };
-<Row bottom="xs">
+<Row bottom="md">
   <Column md={6} style={styleLeftColumn}/>
   <Column md={6} style={styleRightColumn}/>
 </Row>

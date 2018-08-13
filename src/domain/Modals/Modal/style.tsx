@@ -116,20 +116,7 @@ const StyledReactModal = styledReactModal`
       `}
     }
 
-    &.fixed-xlarge-up {
-      min-width: 1380px;
-      width: 1380px;
 
-      ${(props) => props.breakpoint!.down('medium')`
-        min-width: 0;
-        width: 90%;
-      `}
-
-      ${(props) => props.breakpoint!.only('xsmall')`
-        min-width: 0;
-        width: 100%;
-      `}
-    }
 
     &.fixed-large-up {
       min-width: 960px;
@@ -140,7 +127,7 @@ const StyledReactModal = styledReactModal`
         width: 90%;
       `}
 
-      ${(props) => props.breakpoint!.only('xsmall')`
+      ${(props) => props.breakpoint!.only('min')`
         min-width: 0;
         width: 100%;
       `}
@@ -150,7 +137,7 @@ const StyledReactModal = styledReactModal`
       min-width: 600px;
       width: 600px;
 
-      ${(props) => props.breakpoint!.only('xsmall')`
+      ${(props) => props.breakpoint!.only('min')`
         min-width: 0;
         width: 100%;
       `}

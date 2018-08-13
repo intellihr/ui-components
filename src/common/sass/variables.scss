@@ -10,11 +10,9 @@ $border-radius: 4px;
 // --------------
 // Breakpoints
 // --------------
-$breakpoint-small: 0;
-$breakpoint-medium: 640px;
-$breakpoint-large: 1024px;
-$breakpoint-xlarge: 1200px;
-$breakpoint-xxlarge: 1440px;
+$breakpoint-min: 0;
+$breakpoint-tablet: 640px;
+$breakpoint-desktop: 1024px;
 
 // --------------
 // Colors
@@ -95,11 +93,9 @@ $y600: #7F7012;
   // --------------
   // Breakpoints
   // --------------
-  breakpoint-small: $breakpoint-small;
-  breakpoint-medium: $breakpoint-medium;
-  breakpoint-large: $breakpoint-large;
-  breakpoint-xlarge: $breakpoint-xlarge;
-  breakpoint-xxlarge: $breakpoint-xxlarge;
+  breakpoint-min: $breakpoint-min;
+  breakpoint-tablet: $breakpoint-tablet;
+  breakpoint-desktop: $breakpoint-desktop;
 
   // --------------
   // Colors

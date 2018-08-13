@@ -61,32 +61,18 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
     }
   }
 >
-  <GridProvider
-    defaults={
-      Object {
-        "breakpoints": Object {
-          "large": 2,
-          "medium": 1,
-          "small": 0,
-          "xlarge": 3,
-          "xxlarge": 4,
-        },
-      }
-    }
-  >
+  <GridProvider>
     <ThemeProvider
       theme={
         Object {
           "flexboxgrid": Object {
             "breakpoints": Object {
-              "lg": 0.1875,
-              "md": 0.125,
-              "sm": 0.0625,
-              "xs": 0,
+              "lg": 2,
+              "md": 1,
+              "sm": 0,
+              "xs": -1,
             },
             "gridSize": 12,
-            "gutterWidth": 1,
-            "outerMargin": 2,
           },
         }
       }
