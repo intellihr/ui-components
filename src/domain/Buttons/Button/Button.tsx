@@ -1,8 +1,13 @@
 import React from 'react'
-import { buttonClass, IButtonProps } from '../services/buttonHelper'
+import { buttonClass, IBaseButtonProps } from '../services/buttonHelper'
 import { BaseButton } from '../BaseButton'
 
-export class Button extends React.PureComponent<IButtonProps> {
+export interface IButtonProps extends IBaseButtonProps {
+  /** Button props passthrough */
+  buttonOverrides?: React.HTMLProps<HTMLButtonElement>
+}
+
+export class Button extends BaseButton<IButtonProps> {
   public static defaultProps: Partial<IButtonProps> = {
     type: 'neutral',
     iconAlignment: 'left'
@@ -13,19 +18,20 @@ export class Button extends React.PureComponent<IButtonProps> {
       size,
       type,
       className,
-      iconAlignment,
-      ...props
+      buttonOverrides,
+      onClick,
+      disabled
     } = this.props
 
     return (
-      <BaseButton
-        {...this.props}
-        render={(content) => (
-          <button className={buttonClass(type!, size, className)} {...props}>
-            {content}
-          </button>
-        )}
-      />
+      <button
+        className={buttonClass(type!, size, className)}
+        onClick={onClick}
+        disabled={disabled}
+        {...buttonOverrides}
+      >
+        {this.buttonContent}
+      </button>
     )
   }
 }

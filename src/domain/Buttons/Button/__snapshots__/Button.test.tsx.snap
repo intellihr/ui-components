@@ -2,78 +2,59 @@
 
 exports[`<Button /> should render a button with a simple text 1`] = `
 <Button
+  buttonComponentProps={
+    Object {
+      "onClick": [Function],
+    }
+  }
   iconAlignment="left"
   id="test-button"
-  onClick={[Function]}
   type="neutral"
 >
-  <BaseButton
-    iconAlignment="left"
-    id="test-button"
-    onClick={[Function]}
-    render={[Function]}
-    type="neutral"
+  <button
+    className="button neutral"
   >
-    <button
-      className="button neutral"
-      id="test-button"
-      onClick={[Function]}
-    >
-      testing testing 123
-    </button>
-  </BaseButton>
+    testing testing 123
+  </button>
 </Button>
 `;
 
 exports[`<Button /> should render a button with a size large 1`] = `
 <Button
+  buttonComponentProps={
+    Object {
+      "onClick": [Function],
+    }
+  }
   iconAlignment="left"
   id="test-button-large"
-  onClick={[Function]}
   size="large"
   type="neutral"
 >
-  <BaseButton
-    iconAlignment="left"
-    id="test-button-large"
-    onClick={[Function]}
-    render={[Function]}
-    size="large"
-    type="neutral"
+  <button
+    className="button large neutral"
   >
-    <button
-      className="button large neutral"
-      id="test-button-large"
-      onClick={[Function]}
-    >
-      testing testing 123
-    </button>
-  </BaseButton>
+    testing testing 123
+  </button>
 </Button>
 `;
 
 exports[`<Button /> should render a button with a type delete-subtle 1`] = `
 <Button
+  buttonComponentProps={
+    Object {
+      "onClick": [Function],
+    }
+  }
   iconAlignment="left"
   id="test-button-delete-subtle"
-  onClick={[Function]}
   type="delete-subtle"
 >
-  <BaseButton
-    iconAlignment="left"
-    id="test-button-delete-subtle"
-    onClick={[Function]}
-    render={[Function]}
-    type="delete-subtle"
+  <button
+    className="button delete-subtle"
   >
-    <button
-      className="button delete-subtle"
-      id="test-button-delete-subtle"
-      onClick={[Function]}
-    >
-      testing testing 123
-    </button>
-  </BaseButton>
+    testing testing 123
+  </button>
 </Button>
 `;
 
@@ -93,81 +74,55 @@ exports[`<Button /> should render a button with an icon 1`] = `
   id="test-button-icon"
   type="primary-hollow"
 >
-  <BaseButton
-    icon={
+  <button
+    className="button primary-hollow"
+  >
+    primary-hollow
+    <span
+      className="button-icon right"
+    >
       <FontAwesomeIcon
         type="star"
-      />
-    }
-    iconAlignment="right"
-    id="test-button-icon"
-    render={[Function]}
-    type="primary-hollow"
-  >
-    <button
-      className="button primary-hollow"
-      icon={
-        <FontAwesomeIcon
-          type="star"
-        />
-      }
-      id="test-button-icon"
-    >
-      primary-hollow
-      <span
-        className="button-icon right"
       >
-        <FontAwesomeIcon
-          type="star"
+        <Icon
+          isSpinning={false}
+          size="medium"
+          type="fa-star"
         >
-          <Icon
-            isSpinning={false}
+          <styled.i
+            aria-hidden={true}
+            className="icon fa fa-star"
             size="medium"
-            type="fa-star"
           >
-            <styled.i
+            <i
               aria-hidden={true}
-              className="icon fa fa-star"
+              className="icon fa fa-star c0"
               size="medium"
-            >
-              <i
-                aria-hidden={true}
-                className="icon fa fa-star c0"
-                size="medium"
-              />
-            </styled.i>
-          </Icon>
-        </FontAwesomeIcon>
-      </span>
-    </button>
-  </BaseButton>
+            />
+          </styled.i>
+        </Icon>
+      </FontAwesomeIcon>
+    </span>
+  </button>
 </Button>
 `;
 
 exports[`<Button /> should render a disabled button 1`] = `
 <Button
-  disabled={true}
+  buttonComponentProps={
+    Object {
+      "disabled": true,
+      "onClick": [Function],
+    }
+  }
   iconAlignment="left"
   id="test-button-disabled"
-  onClick={[Function]}
   type="neutral"
 >
-  <BaseButton
-    disabled={true}
-    iconAlignment="left"
-    id="test-button-disabled"
-    onClick={[Function]}
-    render={[Function]}
-    type="neutral"
+  <button
+    className="button neutral"
   >
-    <button
-      className="button neutral"
-      disabled={true}
-      id="test-button-disabled"
-      onClick={[Function]}
-    >
-      testing testing 123
-    </button>
-  </BaseButton>
+    testing testing 123
+  </button>
 </Button>
 `;

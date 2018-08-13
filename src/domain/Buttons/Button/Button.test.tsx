@@ -9,7 +9,9 @@ describe('<Button />', () => {
     const wrapper = mount(
       <Button
         id='test-button'
-        onClick={() => alert('yo')}
+        buttonComponentProps={{
+          onClick: () => alert('yo')
+        }}
       >
         testing testing 123
       </Button>
@@ -22,7 +24,10 @@ describe('<Button />', () => {
     const wrapper = mount(
       <Button
         id='test-button-disabled'
-        disabled onClick={() => alert('yo')}
+        buttonComponentProps={{
+          onClick: () => alert('yo'),
+          disabled: true
+        }}
       >
         testing testing 123
       </Button>
@@ -36,7 +41,9 @@ describe('<Button />', () => {
       <Button
         id='test-button-delete-subtle'
         type='delete-subtle'
-        onClick={() => alert('yo')}
+        buttonComponentProps={{
+          onClick: () => alert('yo')
+        }}
       >
         testing testing 123
       </Button>
@@ -47,7 +54,13 @@ describe('<Button />', () => {
 
   it(`should render a button with a size large`, () => {
     const wrapper = mount(
-      <Button id='test-button-large' size='large' onClick={() => alert('yo')}>
+      <Button
+        id='test-button-large'
+        size='large'
+        buttonComponentProps={{
+          onClick: () => alert('yo')
+        }}
+      >
         testing testing 123
       </Button>
     )
