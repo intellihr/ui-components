@@ -3,6 +3,7 @@ import styled, { StyledComponentClass, css } from 'styled-components'
 import { Props } from '../../../../common/types'
 import { getColor } from '../../../../common/legacy'
 import { SectionType } from './Section'
+const sassGlobals = require('../../../../common/sass/variables.scss')
 
 const DefaultDropdownButton = styled.button`
   background-color: transparent;
@@ -44,7 +45,7 @@ const StyledDropdownMenu = styled.span`
   margin: 2px;
   position: absolute;
   width: min-content;
-  z-index: 2000;
+  z-index: ${sassGlobals['z-index-dropdown-menu']};
 
   transform: scale(0.1);
   transform-origin: ${(props: IStyledDropdownMenuProps) => props.transformOrigin.xPos + ' ' + props.transformOrigin.yPos};

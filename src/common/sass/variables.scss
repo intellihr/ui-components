@@ -15,6 +15,17 @@ $breakpoint-tablet: 640px;
 $breakpoint-desktop: 1024px;
 
 // --------------
+// Z Indexes
+// --------------
+$z-index-absolute-bottom: -9999;
+$z-index-default: 0;
+$z-index-modal: 1000;
+$z-index-date-input: 2000;
+$z-index-dropdown-menu: 3000;
+$z-index-toaster: 4000;
+$z-index-absolute-top: 9999;
+
+// --------------
 // Colors
 // --------------
 // Neutral
@@ -96,6 +107,17 @@ $y600: #7F7012;
   breakpoint-min: $breakpoint-min;
   breakpoint-tablet: $breakpoint-tablet;
   breakpoint-desktop: $breakpoint-desktop;
+
+  // --------------
+  // Z Indexes
+  // --------------
+  z-index-absolute-bottom: -9999;
+  z-index-default: 0;
+  z-index-modal: 1000;
+  z-index-date-input: 2000;
+  z-index-dropdown-menu: 3000;
+  z-index-toaster: 4000;
+  z-index-absolute-top: 9999;
 
   // --------------
   // Colors

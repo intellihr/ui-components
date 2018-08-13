@@ -1,7 +1,9 @@
 import React from 'react'
 import classNames from 'classnames'
+import { parseInt } from 'lodash'
 import { StyledReactModal } from './style'
 import { Props } from '../../../common/types'
+const sassGlobals = require('../../../common/sass/variables.scss')
 
 enum ReactModalSize {
   medium = 'fixed-medium-up',
@@ -21,8 +23,8 @@ interface IBaseModalProps {
   className?: string
   /** Modal Size */
   size?: Props.Size.Medium | Props.Size.Large | Props.Size.XXLarge
-  /** The deep level */
-  modalZLevel?: number
+  /** The offset amount for the Z index of the modal */
+  offsetZIndex?: number
   /** Component that will be inserted into the modal */
   children?: JSX.Element | string
 }
@@ -35,11 +37,13 @@ interface IModalProps extends IBaseModalProps {
 class Modal extends React.PureComponent<IModalProps> {
   public static defaultProps: Partial<IModalProps> = {
     size: Props.Size.Medium,
-    modalZLevel: 0,
+    offsetZIndex: 0,
     showCloseButton: true
   }
 
-  public static BASE_Z_INDEX = 1010
+  get baseZIndex () {
+    return parseInt(sassGlobals['z-index-modal'])
+  }
 
   get classNames (): string {
     const {
@@ -79,10 +83,10 @@ class Modal extends React.PureComponent<IModalProps> {
       children,
       isOpen,
       handleClose,
-      modalZLevel
+      offsetZIndex
     } = this.props
 
-    const overlayZIndex = Modal.BASE_Z_INDEX + 2 * modalZLevel!
+    const overlayZIndex = this.baseZIndex + 2 * offsetZIndex!
 
     return (
       <StyledReactModal

@@ -9,10 +9,10 @@ exports[`<Modal /> should render a hidden modal 1`] = `
   style={
     Object {
       "content": Object {
-        "zIndex": 1011,
+        "zIndex": NaN,
       },
       "overlay": Object {
-        "zIndex": 1010,
+        "zIndex": NaN,
       },
     }
   }
@@ -30,10 +30,10 @@ exports[`<Modal /> should render a shown modal with no close button 1`] = `
   style={
     Object {
       "content": Object {
-        "zIndex": 1011,
+        "zIndex": NaN,
       },
       "overlay": Object {
-        "zIndex": 1010,
+        "zIndex": NaN,
       },
     }
   }
