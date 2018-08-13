@@ -1,9 +1,9 @@
 import React from 'react'
-import { buttonClass, IBaseButtonProps } from '../services/buttonHelper'
+import { buttonClass, IButtonProps } from '../services/buttonHelper'
 import { Anchor } from '@Domain/Internals'
 import { BaseButton } from '../BaseButton'
 
-export interface LinkButtonProps extends IBaseButtonProps {
+export interface LinkButtonProps extends IButtonProps {
   /** Weather the button is clickable or not */
   disabled?: boolean,
   /** Destination url */
@@ -15,7 +15,7 @@ export interface LinkButtonProps extends IBaseButtonProps {
 }
 
 export class LinkButton extends React.PureComponent<LinkButtonProps> {
-  public static defaultProps: Partial<LinkButtonProps & IBaseButtonProps> = {
+  public static defaultProps: Partial<LinkButtonProps & IButtonProps> = {
     disabled: false,
     type: 'neutral'
   }

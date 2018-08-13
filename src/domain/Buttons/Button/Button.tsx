@@ -1,5 +1,5 @@
 import React from 'react'
-import { buttonClass, IBaseButtonProps } from '../services/buttonHelper'
+import { buttonClass, IButtonProps as IBaseButtonProps } from '../services/buttonHelper'
 import { BaseButton } from '../BaseButton'
 
 export interface IButtonProps extends IBaseButtonProps {
