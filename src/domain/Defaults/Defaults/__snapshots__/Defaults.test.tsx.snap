@@ -19,13 +19,7 @@ Array [
 exports[`<Defaults /> should provide default values 1`] = `
 Array [
   Array [
-    Object {
-      "breakpoints": Object {
-        "large": 2,
-        "medium": 1,
-        "small": 0,
-      },
-    },
+    Object {},
   ],
 ]
 `;
@@ -35,11 +29,6 @@ Array [
   Array [
     Object {
       "AnchorComponent": [Function],
-      "breakpoints": Object {
-        "large": 2,
-        "medium": 1,
-        "small": 0,
-      },
     },
   ],
 ]
@@ -48,13 +37,7 @@ Array [
 exports[`<Defaults /> should still provide default values without Provider 1`] = `
 Array [
   Array [
-    Object {
-      "breakpoints": Object {
-        "large": 2,
-        "medium": 1,
-        "small": 0,
-      },
-    },
+    Object {},
   ],
 ]
 `;

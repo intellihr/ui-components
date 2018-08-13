@@ -6,7 +6,7 @@ describe('<Column />', () => {
   describe('Simple Column behaviour', () => {
     it('should match the snapshot', () => {
       const wrapper = shallow(
-        <Column xs={12} sm={6} md={3} lg={3} />
+        <Column sm={6} md={3} lg={3} />
       )
       expect(wrapper).toMatchSnapshot()
     })

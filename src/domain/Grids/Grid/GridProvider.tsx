@@ -4,7 +4,6 @@ import { ThemeProvider } from 'styled-components'
 import { pxToRem } from '@Domain/Styles'
 const sassGlobals = require('@Common/sass/variables.scss')
 
-
 class GridProvider extends React.PureComponent {
   private get breakpoints () {
     return {

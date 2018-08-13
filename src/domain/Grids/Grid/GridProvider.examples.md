@@ -34,17 +34,17 @@ const style = {
 };
 <div>
 <Row>
-  <Column sm={12} md={2} style={style}/>
-  <Column sm={12} md={8} style={style}/>
-  <Column sm={12} md={2} style={style}/>
+  <Column sm={12} md={2}><div style={style}/></Column>
+  <Column sm={12} md={8}><div style={style}/></Column>
+  <Column sm={12} md={2}><div style={style}/></Column>
 </Row>
 <Row>
-  <Column sm={3} md={2} style={style}/>
-  <Column sm={9} md={10} style={style}/>
+  <Column sm={3} md={2}><div style={style}/></Column>
+  <Column sm={9} md={10}><div style={style}/></Column>
 </Row>
 <Row>
-  <Column sm={12} md={8} style={style}/>
-  <Column sm={12} md={4} style={style}/>
+  <Column sm={12} md={8}><div style={style}/></Column>
+  <Column sm={12} md={4}><div style={style}/></Column>
 </Row>
 </div>
 ```
@@ -62,17 +62,17 @@ const style = {
 };
 
 <Row>
-  <Column mdOffset={11} md={1} style={style}></Column>
-  <Column mdOffset={10} md={2} style={style}></Column>
-  <Column mdOffset={9} md={3} style={style}></Column>
-  <Column mdOffset={8} md={4} style={style}></Column>
-  <Column mdOffset={7} md={5} style={style}></Column>
-  <Column mdOffset={6} md={6} style={style}></Column>
-  <Column mdOffset={5} md={7} style={style}></Column>
-  <Column mdOffset={4} md={8} style={style}></Column>
-  <Column mdOffset={3} md={9} style={style}></Column>
-  <Column mdOffset={2} md={10} style={style}></Column>
-  <Column mdOffset={1} md={11} style={style}></Column>
+  <Column mdOffset={11} md={1}><div style={style}/></Column>
+  <Column mdOffset={10} md={2}><div style={style}/></Column>
+  <Column mdOffset={9} md={3}><div style={style}/></Column>
+  <Column mdOffset={8} md={4}><div style={style}/></Column>
+  <Column mdOffset={7} md={5}><div style={style}/></Column>
+  <Column mdOffset={6} md={6}><div style={style}/></Column>
+  <Column mdOffset={5} md={7}><div style={style}/></Column>
+  <Column mdOffset={4} md={8}><div style={style}/></Column>
+  <Column mdOffset={3} md={9}><div style={style}/></Column>
+  <Column mdOffset={2} md={10}><div style={style}/></Column>
+  <Column mdOffset={1} md={11}><div style={style}/></Column>
 </Row>
 ```
 
@@ -88,13 +88,13 @@ const style = {
 };
 <div>
   <Row>
-    <Column md style={style}/>
-    <Column md style={style}/>
+    <Column md><div style={style}/></Column>
+    <Column md><div style={style}/></Column>
   </Row>
   <Row>
-    <Column md style={style}/>
-    <Column md style={style}/>
-    <Column md style={style}/>
+    <Column md><div style={style}/></Column>
+    <Column md><div style={style}/></Column>
+    <Column md><div style={style}/></Column>
   </Row>
 </div>
 ```
@@ -131,7 +131,7 @@ const style = {
 <Row>
   <Column md={12}>
     <Row center="md">
-      <Column md={6} style={style}/>
+      <Column md={6}><div style={style}/></Column>
     </Row>
   </Column>
 </Row>
@@ -149,7 +149,7 @@ const style = {
 <Row>
   <Column md={12}>
     <Row end="md">
-      <Column md={6} style={style}/>
+      <Column md={6}><div style={style}/></Column>
     </Row>
   </Column>
 </Row>
@@ -169,8 +169,8 @@ const styleRightColumn = {
   minHeight:'1rem'
 };
 <Row top="md">
-  <Column md={6} style={styleLeftColumn}>Column 1 </Column>
-  <Column md={6} style={styleRightColumn}>Column 2 </Column>
+  <Column md={6}><div style={styleLeftColumn}/></Column>
+  <Column md={6}><div style={styleRightColumn}/></Column>
 </Row>
 ```
 .middle-
@@ -187,8 +187,8 @@ const styleRightColumn = {
   minHeight:'1rem'
 };
 <Row middle="md">
-  <Column md={6} style={styleLeftColumn}/>
-  <Column md={6} style={styleRightColumn}/>
+  <Column md={6}><div style={styleLeftColumn}/></Column>
+  <Column md={6}><div style={styleRightColumn}/></Column>
 </Row>
 ```
 
@@ -206,8 +206,8 @@ const styleRightColumn = {
   minHeight:'1rem'
 };
 <Row bottom="md">
-  <Column md={6} style={styleLeftColumn}/>
-  <Column md={6} style={styleRightColumn}/>
+  <Column md={6}><div style={styleLeftColumn}/></Column>
+  <Column md={6}><div style={styleRightColumn}/></Column>
 </Row>
 ```
 
@@ -224,9 +224,9 @@ const style = {
   borderRight:'1px solid #fff'
 };
 <Row around="md">
-  <Column md={2} style={style}/>
-  <Column md={2} style={style}/>
-  <Column md={2} style={style}/>
+  <Column md={2}><div style={style}/></Column>
+  <Column md={2}><div style={style}/></Column>
+  <Column md={2}><div style={style}/></Column>
 </Row>
 ```
 .between-
@@ -240,9 +240,9 @@ const style = {
   borderRight:'1px solid #fff'
 };
 <Row between="md">
-  <Column md={2} style={style}/>
-  <Column md={2} style={style}/>
-  <Column md={2} style={style}/>
+  <Column md={2}><div style={style}/></Column>
+  <Column md={2}><div style={style}/></Column>
+  <Column md={2}><div style={style}/></Column>
 </Row>
 ```
 
@@ -259,7 +259,7 @@ const style = {
   borderRight:'1px solid #fff'
 };
 <Row>
-  <Column sm={12} md={6} style={style}/>
-  <Column md={false} sm={6} style={style}/>
+  <Column sm={12} md={6}><div style={style}/></Column>
+  <Column md={false} sm={6}><div style={style}/></Column>
 </Row>
 ```

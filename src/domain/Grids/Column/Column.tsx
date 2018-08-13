@@ -25,7 +25,7 @@ class Column extends React.PureComponent<IColumnProps> {
     const dimensions: Array<string> = ['xs', 'sm', 'md', 'lg']
 
     let previousValue: number = 12
-    var that = this
+    const that = this
 
     return reduce(dimensions, (acc: IColumnProps, key: string, k): IColumnProps => {
       const sizeValue = that.props[key as keyof IColumnProps]
@@ -42,13 +42,9 @@ class Column extends React.PureComponent<IColumnProps> {
   public render (): JSX.Element {
     return (
       <Col type='row'
-        {...omit(this.props, ['style'])}
+        {...this.props}
         {...this.dimensions}
-      >
-        <div {...pick(this.props, ['style'])}>
-          {this.props.children}
-        </div>
-      </Col>
+      />
     )
   }
 }
