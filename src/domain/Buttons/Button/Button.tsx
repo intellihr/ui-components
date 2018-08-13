@@ -4,9 +4,7 @@ import { BaseButton } from '../BaseButton'
 
 export interface IButtonProps extends IBaseButtonProps {
   /** Button props passthrough */
-  buttonComponentProps?: {
-    [i: string]: any
-  }
+  buttonOverrides?: React.HTMLProps<HTMLButtonElement>
 }
 
 export class Button extends BaseButton<IButtonProps> {
@@ -20,7 +18,7 @@ export class Button extends BaseButton<IButtonProps> {
       size,
       type,
       className,
-      buttonComponentProps,
+      buttonOverrides,
       onClick,
       disabled
     } = this.props
@@ -28,9 +26,9 @@ export class Button extends BaseButton<IButtonProps> {
     return (
       <button
         className={buttonClass(type!, size, className)}
-        {...buttonComponentProps}
         onClick={onClick}
         disabled={disabled}
+        {...buttonOverrides}
       >
         {this.buttonContent}
       </button>
