@@ -3,6 +3,9 @@
 $button-spacing: 10px;
 
 $button-styles: (
+  // ––––––––––––––––––––––––––––––––––––
+  // Functional
+  // ––––––––––––––––––––––––––––––––––––
   primary: (
     background-color: $i400,
     border: transparent,
@@ -126,6 +129,9 @@ $button-styles: (
     focus-text-color: $n600,
     focus-border-color: $n400
   ),
+  // ––––––––––––––––––––––––––––––––––––
+  // Borderless
+  // ––––––––––––––––––––––––––––––––––––
   primary-borderless: (
     background-color: transparent,
     border: transparent,
@@ -225,6 +231,9 @@ $button-styles: (
     active-background-color: $light-active,
     active-text-color: $light-hover-text
   ),
+  // ––––––––––––––––––––––––––––––––––––
+  // Hollow
+  // ––––––––––––––––––––––––––––––––––––
   primary-hollow: (
     background-color: transparent,
     border: $primary-base,
@@ -333,6 +342,9 @@ $button-styles: (
     active-text-color: $light-hollow-active-text,
     hover-border-color: $light-hollow-base
   ),
+  // ––––––––––––––––––––––––––––––––––––
+  // Special Case
+  // ––––––––––––––––––––––––––––––––––––
   cancel: (
     background-color: transparent,
     border: transparent,
