@@ -137,6 +137,9 @@
     <Button type='secondary-hollow' onClick={() => alert('secondary-hollow')}>
       secondary-hollow
     </Button>
+    <Button type='success-hollow' onClick={() => alert('success-hollow')}>
+      success-hollow
+    </Button>
     <Button type='warning-hollow' onClick={() => alert('warning-hollow')}>
       warning-hollow
     </Button>
