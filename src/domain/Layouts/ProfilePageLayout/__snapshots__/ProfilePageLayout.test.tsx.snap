@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProfilePageLayout /> should render a legend 1`] = `
+<ProfilePageLayout>
+  <div
+    className="base profile-page-base"
+  >
+    <ProfilePageComponent
+      position="header"
+    >
+      <div
+        className="header profile-page-header"
+      >
+        <div>
+          a
+        </div>
+      </div>
+    </ProfilePageComponent>
+    <ProfilePageComponent
+      position="content"
+    >
+      <div
+        className="content profile-page-content"
+      >
+        <div>
+          b
+        </div>
+      </div>
+    </ProfilePageComponent>
+  </div>
+</ProfilePageLayout>
+`;
