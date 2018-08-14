@@ -250,7 +250,7 @@ $button-styles: (
   light-borderless: (
     background-color: transparent,
     border: transparent,
-    text-color: $n600,
+    text-color: $n700,
     disabled-background-color: $n200,
     disabled-text-color: $n400,
     hover-background-color: $n200,
@@ -413,13 +413,16 @@ $button-styles: (
   cancel: (
     background-color: transparent,
     border: transparent,
-    text-color: lighten($main-text, 24%),
+    text-color: $n700,
     disabled-background-color: $n200,
     disabled-text-color: $n400,
-    hover-background-color: transparent,
-    hover-text-color: $main-text,
-    active-background-color: transparent,
-    active-text-color: $main-text
+    hover-background-color: $n200,
+    hover-text-color: $n700,
+    active-background-color: $n300,
+    active-text-color: $n700,
+    focus-background-color: $n200,
+    focus-text-color: $n700,
+    focus-border-color: $n400
   ),
   add: (
     background-color: transparent,
