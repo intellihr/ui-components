@@ -10,6 +10,9 @@
     <Button type='secondary' onClick={() => alert('secondary')}>
       secondary
     </Button>
+    <Button type='success' onClick={() => alert('success')}>
+      success
+    </Button>
     <Button type='warning' onClick={() => alert('warning')}>
       warning
     </Button>

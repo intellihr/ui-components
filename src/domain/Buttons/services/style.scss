@@ -35,15 +35,18 @@ $button-styles: (
     focus-border-color: $b400 
   ),
   success: (
-    background-color: $success-base,
+    background-color: $g200,
     border: transparent,
-    text-color: $success-text,
+    text-color: $g600,
     disabled-background-color: $n200,
     disabled-text-color: $n400,
-    hover-background-color: $success-hover,
-    hover-text-color: $success-hover-text,
-    active-background-color: $success-active,
-    active-text-color: $success-hover-text
+    hover-background-color: $g300,
+    hover-text-color: $g600,
+    active-background-color: $g400,
+    active-text-color: $n100,
+    focus-background-color: $g100,
+    focus-text-color: $g600,
+    focus-border-color: $g400 
   ),
   warning: (
     background-color: $o200,
@@ -54,7 +57,7 @@ $button-styles: (
     hover-background-color: $o300,
     hover-text-color: $o600,
     active-background-color: $o400,
-    active-text-color: $o600,
+    active-text-color: $n100,
     focus-background-color: $o100,
     focus-text-color: $o600,
     focus-border-color: $o400 
