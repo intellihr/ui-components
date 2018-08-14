@@ -41,7 +41,7 @@ class Modal extends React.PureComponent<IModalProps> {
     showCloseButton: true
   }
 
-  get baseZIndex () {
+  get baseZIndex (): number {
     return parseInt(zIndexModal)
   }
 
