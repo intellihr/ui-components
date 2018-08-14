@@ -10,6 +10,9 @@
     <Button type='secondary' onClick={() => alert('secondary')}>
       secondary
     </Button>
+    <Button type='success' onClick={() => alert('success')}>
+      success
+    </Button>
     <Button type='warning' onClick={() => alert('warning')}>
       warning
     </Button>
@@ -71,6 +74,9 @@
     <Button type='secondary-borderless' onClick={() => alert('secondary-borderless')}>
       secondary-borderless
     </Button>
+    <Button type='success-borderless' onClick={() => alert('success-borderless')}>
+      success-borderless
+    </Button>
     <Button type='warning-borderless' onClick={() => alert('warning-borderless')}>
       warning-borderless
     </Button>
@@ -130,6 +136,9 @@
     </Button>
     <Button type='secondary-hollow' onClick={() => alert('secondary-hollow')}>
       secondary-hollow
+    </Button>
+    <Button type='success-hollow' onClick={() => alert('success-hollow')}>
+      success-hollow
     </Button>
     <Button type='warning-hollow' onClick={() => alert('warning-hollow')}>
       warning-hollow

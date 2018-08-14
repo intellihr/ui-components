@@ -1,414 +1,543 @@
+@import '../../../common/sass/variables';
+
 $button-spacing: 10px;
 
 $button-styles: (
+  // ––––––––––––––––––––––––––––––––––––
+  // Functional
+  // ––––––––––––––––––––––––––––––––––––
   primary: (
-    background-color: $primary-base,
+    background-color: $i400,
     border: transparent,
-    text-color: $primary-text,
-    disabled-background-color: $primary-base,
-    disabled-text-color: $primary-text,
-    hover-background-color: $primary-hover,
-    hover-text-color: $primary-hover-text,
-    active-background-color: $primary-active,
-    active-text-color: $primary-hover-text
+    text-color: $n100,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $i500,
+    hover-text-color: $n100,
+    active-background-color: $i600,
+    active-text-color: $n100,
+    focus-background-color: $i100,
+    focus-text-color: $i400,
+    focus-border-color: $i400
   ),
   secondary: (
-    background-color: $secondary-base,
+    background-color: $b400,
     border: transparent,
-    text-color: $secondary-text,
-    disabled-background-color: $secondary-base,
-    disabled-text-color: $secondary-text,
-    hover-background-color: $secondary-hover,
-    hover-text-color: $secondary-hover-text,
-    active-background-color: $secondary-active,
-    active-text-color: $secondary-hover-text
+    text-color: $n100,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $b500,
+    hover-text-color: $n100,
+    active-background-color: $b600,
+    active-text-color: $n100,
+    focus-background-color: $b100,
+    focus-text-color: $b400,
+    focus-border-color: $b400
   ),
   success: (
-    background-color: $success-base,
+    background-color: $g200,
     border: transparent,
-    text-color: $success-text,
-    disabled-background-color: $success-base,
-    disabled-text-color: $success-text,
-    hover-background-color: $success-hover,
-    hover-text-color: $success-hover-text,
-    active-background-color: $success-active,
-    active-text-color: $success-hover-text
+    text-color: $g600,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $g300,
+    hover-text-color: $g600,
+    active-background-color: $g400,
+    active-text-color: $n100,
+    focus-background-color: $g100,
+    focus-text-color: $g600,
+    focus-border-color: $g400
   ),
   warning: (
-    background-color: $warning-base,
+    background-color: $o200,
     border: transparent,
-    text-color: $warning-text,
-    disabled-background-color: $warning-base,
-    disabled-text-color: $warning-text,
-    hover-background-color: $warning-hover,
-    hover-text-color: $warning-hover-text,
-    active-background-color: $warning-active,
-    active-text-color: $warning-hover-text
+    text-color: $o600,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $o300,
+    hover-text-color: $o600,
+    active-background-color: $o400,
+    active-text-color: $n100,
+    focus-background-color: $o100,
+    focus-text-color: $o600,
+    focus-border-color: $o400
   ),
   alert: (
-    background-color: $alert-base,
+    background-color: $r100,
     border: transparent,
-    text-color: $alert-text,
-    disabled-background-color: $alert-base,
-    disabled-text-color: $alert-text,
-    hover-background-color: $alert-hover,
-    hover-text-color: $alert-hover-text,
-    active-background-color: $alert-active,
-    active-text-color: $alert-hover-text
+    text-color: $r500,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $r200,
+    hover-text-color: $r500,
+    active-background-color: $r400,
+    active-text-color: $n100,
+    focus-background-color: $r100,
+    focus-text-color: $r500,
+    focus-border-color: $r300
   ),
   neutral: (
-    background-color: $neutral-base,
+    background-color: $n300,
     border: transparent,
-    text-color: $neutral-text,
-    disabled-background-color: $neutral-base,
-    disabled-text-color: $neutral-text,
-    hover-background-color: $neutral-hover,
-    hover-text-color: $neutral-hover-text,
-    active-background-color: $neutral-active,
-    active-text-color: $neutral-hover-text
+    text-color: $n700,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $n400,
+    hover-text-color: $n700,
+    active-background-color: $n600,
+    active-text-color: $n100,
+    focus-background-color: $n400,
+    focus-text-color: $n700,
+    focus-border-color: $n600
   ),
   highlight: (
-    background-color: $highlight-base,
+    background-color: $c200,
     border: transparent,
-    text-color: $highlight-text,
-    disabled-background-color: $highlight-base,
-    disabled-text-color: $highlight-text,
-    hover-background-color: $highlight-hover,
-    hover-text-color: $highlight-hover-text,
-    active-background-color: $highlight-active,
-    active-text-color: $highlight-hover-text
+    text-color: $c600,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $c300,
+    hover-text-color: $c600,
+    active-background-color: $c400,
+    active-text-color: $n100,
+    focus-background-color: $c100,
+    focus-text-color: $c600,
+    focus-border-color: $c400
   ),
   dark: (
-    background-color: $dark-base,
+    background-color: $n800,
     border: transparent,
-    text-color: $dark-text,
-    disabled-background-color: $dark-base,
-    disabled-text-color: $dark-text,
-    hover-background-color: $dark-hover,
-    hover-text-color: $dark-hover-text,
-    active-background-color: $dark-active,
-    active-text-color: $dark-hover-text
+    text-color: $n100,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $n600,
+    hover-text-color: $n200,
+    active-background-color: $n500,
+    active-text-color: $n100,
+    focus-background-color: $n300,
+    focus-text-color: $n800,
+    focus-border-color: $n500
   ),
   light: (
-    background-color: $light-base,
+    background-color: $n100,
     border: transparent,
-    text-color: $light-text,
-    disabled-background-color: $light-base,
-    disabled-text-color: $light-text,
-    hover-background-color: $light-hover,
-    hover-text-color: $light-hover-text,
-    active-background-color: $light-active,
-    active-text-color: $light-hover-text
+    text-color: $n700,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $n200,
+    hover-text-color: $n800,
+    active-background-color: $n300,
+    active-text-color: $n100,
+    focus-background-color: $n200,
+    focus-text-color: $n800,
+    focus-border-color: $n400
   ),
+  // ––––––––––––––––––––––––––––––––––––
+  // Borderless
+  // ––––––––––––––––––––––––––––––––––––
   primary-borderless: (
     background-color: transparent,
     border: transparent,
-    text-color: $primary-base,
-    disabled-background-color: transparent,
-    disabled-text-color: $primary-base,
-    hover-background-color: $primary-base,
-    hover-text-color: $primary-text,
-    active-background-color: $primary-active,
-    active-text-color: $primary-hover-text
+    text-color: $i400,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $i100,
+    hover-text-color: $i600,
+    active-background-color: $i200,
+    active-text-color: $i600,
+    focus-background-color: $i100,
+    focus-text-color: $i600,
+    focus-border-color: $i400
   ),
   secondary-borderless: (
     background-color: transparent,
     border: transparent,
-    text-color: $secondary-base,
-    disabled-background-color: transparent,
-    disabled-text-color: $secondary-base,
-    hover-background-color: $secondary-base,
-    hover-text-color: $secondary-text,
-    active-background-color: $secondary-active,
-    active-text-color: $secondary-hover-text
+    text-color: $b400,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $b100,
+    hover-text-color: $b600,
+    active-background-color: $b200,
+    active-text-color: $b600,
+    focus-background-color: $b100,
+    focus-text-color: $b600,
+    focus-border-color: $b400
   ),
   success-borderless: (
     background-color: transparent,
     border: transparent,
-    text-color: $success-base,
-    disabled-background-color: transparent,
-    disabled-text-color: $success-base,
-    hover-background-color: $success-base,
-    hover-text-color: $success-text,
-    active-background-color: $success-active,
-    active-text-color: $success-hover-text
+    text-color: $g600,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $g100,
+    hover-text-color: $g600,
+    active-background-color: $g200,
+    active-text-color: $g600,
+    focus-background-color: $g100,
+    focus-text-color: $g600,
+    focus-border-color: $g400
   ),
   warning-borderless: (
     background-color: transparent,
     border: transparent,
-    text-color: $warning-base,
-    disabled-background-color: transparent,
-    disabled-text-color: $warning-base,
-    hover-background-color: $warning-base,
-    hover-text-color: $warning-text,
-    active-background-color: $warning-active,
-    active-text-color: $warning-hover-text
+    text-color: $o600,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $o100,
+    hover-text-color: $o600,
+    active-background-color: $o200,
+    active-text-color: $o600,
+    focus-background-color: $o100,
+    focus-text-color: $o600,
+    focus-border-color: $o400
   ),
   alert-borderless: (
     background-color: transparent,
     border: transparent,
-    text-color: $alert-base,
-    disabled-background-color: transparent,
-    disabled-text-color: $alert-base,
-    hover-background-color: $alert-base,
-    hover-text-color: $alert-text,
-    active-background-color: $alert-active,
-    active-text-color: $alert-hover-text
+    text-color: $r600,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $r100,
+    hover-text-color: $r600,
+    active-background-color: $r200,
+    active-text-color: $r600,
+    focus-background-color: $r100,
+    focus-text-color: $r600,
+    focus-border-color: $r400
   ),
   neutral-borderless: (
     background-color: transparent,
     border: transparent,
-    text-color: $neutral-text,
-    disabled-background-color: transparent,
-    disabled-text-color: $neutral-base,
-    hover-background-color: $neutral-base,
-    hover-text-color: $neutral-text,
-    active-background-color: $neutral-active,
-    active-text-color: $neutral-hover-text
+    text-color: $n700,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $n200,
+    hover-text-color: $n700,
+    active-background-color: $n300,
+    active-text-color: $n700,
+    focus-background-color: $n200,
+    focus-text-color: $n700,
+    focus-border-color: $n400
   ),
   highlight-borderless: (
     background-color: transparent,
     border: transparent,
-    text-color: $highlight-base,
-    disabled-background-color: transparent,
-    disabled-text-color: $highlight-base,
-    hover-background-color: $highlight-base,
-    hover-text-color: $highlight-text,
-    active-background-color: $highlight-active,
-    active-text-color: $highlight-hover-text
+    text-color: $c600,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $c100,
+    hover-text-color: $c600,
+    active-background-color: $c200,
+    active-text-color: $c600,
+    focus-background-color: $c100,
+    focus-text-color: $c600,
+    focus-border-color: $c400
   ),
   dark-borderless: (
     background-color: transparent,
     border: transparent,
-    text-color: $dark-base,
-    disabled-background-color: transparent,
-    disabled-text-color: $dark-base,
-    hover-background-color: $dark-base,
-    hover-text-color: $dark-text,
-    active-background-color: $dark-active,
-    active-text-color: $dark-hover-text
+    text-color: $n700,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $n300,
+    hover-text-color: $n800,
+    active-background-color: $n400,
+    active-text-color: $n800,
+    focus-background-color: $n300,
+    focus-text-color: $n800,
+    focus-border-color: $n500
   ),
   light-borderless: (
     background-color: transparent,
     border: transparent,
-    text-color: $light-base,
-    disabled-background-color: transparent,
-    disabled-text-color: $light-base,
-    hover-background-color: $light-base,
-    hover-text-color: $light-text,
-    active-background-color: $light-active,
-    active-text-color: $light-hover-text
+    text-color: $n700,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $n200,
+    hover-text-color: $n800,
+    active-background-color: $n300,
+    active-text-color: $n800,
+    focus-background-color: $n200,
+    focus-text-color: $n800,
+    focus-border-color: $n400
   ),
+  // ––––––––––––––––––––––––––––––––––––
+  // Hollow
+  // ––––––––––––––––––––––––––––––––––––
   primary-hollow: (
     background-color: transparent,
-    border: $primary-base,
-    text-color: $primary-hollow-text,
-    disabled-background-color: transparent,
-    disabled-text-color: $primary-hollow-text,
-    hover-background-color: $primary-hollow-hover,
-    hover-text-color: $primary-hollow-text,
-    active-background-color: $primary-hollow-active,
-    active-text-color: $primary-hollow-active-text,
-    hover-border-color: $primary-hollow-base
+    border: $i400,
+    text-color: $i400,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    disabled-border-color: transparent,
+    hover-background-color: $i100,
+    hover-text-color: $i400,
+    hover-border-color: $i400,
+    active-background-color: $i200,
+    active-text-color: $i600,
+    focus-background-color: $i100,
+    focus-text-color: $i600,
+    focus-border-color: $i400
   ),
   secondary-hollow: (
     background-color: transparent,
-    border: $secondary-base,
-    text-color: $secondary-hollow-text,
-    disabled-background-color: transparent,
-    disabled-text-color: $secondary-hollow-text,
-    hover-background-color: $secondary-hollow-hover,
-    hover-text-color: $secondary-hollow-text,
-    active-background-color: $secondary-hollow-active,
-    active-text-color: $secondary-hollow-active-text,
-    hover-border-color: $secondary-hollow-base
+    border: $b400,
+    text-color: $b400,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    disabled-border-color: transparent,
+    hover-background-color: $b100,
+    hover-text-color: $b400,
+    hover-border-color: $b400,
+    active-background-color: $b200,
+    active-text-color: $b600,
+    focus-background-color: $b100,
+    focus-text-color: $b600,
+    focus-border-color: $b400
   ),
   success-hollow: (
     background-color: transparent,
-    border: $success-base,
-    text-color: $success-hollow-text,
-    disabled-background-color: transparent,
-    disabled-text-color: $success-hollow-text,
-    hover-background-color: $success-hollow-hover,
-    hover-text-color: $success-hollow-text,
-    active-background-color: $success-hollow-active,
-    active-text-color: $success-hollow-active-text,
-    hover-border-color: $success-hollow-base
+    border: $g400,
+    text-color: $g600,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    disabled-border-color: transparent,
+    hover-background-color: $g100,
+    hover-text-color: $g600,
+    hover-border-color: $g400,
+    active-background-color: $g200,
+    active-text-color: $g600,
+    focus-background-color: $g100,
+    focus-text-color: $g600,
+    focus-border-color: $g400
   ),
   warning-hollow: (
     background-color: transparent,
-    border: $warning-base,
-    text-color: $warning-hollow-text,
-    disabled-background-color: transparent,
-    disabled-text-color: $warning-hollow-text,
-    hover-background-color: $warning-hollow-hover,
-    hover-text-color: $warning-hollow-text,
-    active-background-color: $warning-hollow-active,
-    active-text-color: $warning-hollow-active-text,
-    hover-border-color: $warning-hollow-base
+    border: $o400,
+    text-color: $o600,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    disabled-border-color: transparent,
+    hover-background-color: $o100,
+    hover-text-color: $o600,
+    hover-border-color: $o400,
+    active-background-color: $o200,
+    active-text-color: $o600,
+    focus-background-color: $o100,
+    focus-text-color: $o600,
+    focus-border-color: $o400
   ),
   alert-hollow: (
     background-color: transparent,
-    border: $alert-base,
-    text-color: $alert-hollow-text,
-    disabled-background-color: transparent,
-    disabled-text-color: $alert-hollow-text,
-    hover-background-color: $alert-hollow-hover,
-    hover-text-color: $alert-hollow-text,
-    active-background-color: $alert-hollow-active,
-    active-text-color: $alert-hollow-active-text,
-    hover-border-color: $alert-hollow-base
+    border: $r400,
+    text-color: $r600,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    disabled-border-color: transparent,
+    hover-background-color: $r100,
+    hover-text-color: $r600,
+    hover-border-color: $r400,
+    active-background-color: $r200,
+    active-text-color: $r600,
+    focus-background-color: $r100,
+    focus-text-color: $r600,
+    focus-border-color: $r400
   ),
   neutral-hollow: (
     background-color: transparent,
-    border: $neutral-base,
-    text-color: $neutral-hollow-text,
-    disabled-background-color: transparent,
-    disabled-text-color: $neutral-hollow-text,
-    hover-background-color: $neutral-hollow-hover,
-    hover-text-color: $neutral-hollow-text,
-    active-background-color: $neutral-hollow-active,
-    active-text-color: $neutral-hollow-active-text,
-    hover-border-color: $neutral-hollow-base
+    border: $n400,
+    text-color: $n700,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    disabled-border-color: transparent,
+    hover-background-color: $n150,
+    hover-text-color: $n700,
+    hover-border-color: $n500,
+    active-background-color: $n300,
+    active-text-color: $n700,
+    focus-background-color: $n200,
+    focus-text-color: $n700,
+    focus-border-color: $n400
   ),
   highlight-hollow: (
     background-color: transparent,
-    border: $highlight-base,
-    text-color: $highlight-hollow-text,
-    disabled-background-color: transparent,
-    disabled-text-color: $highlight-hollow-text,
-    hover-background-color: $highlight-hollow-hover,
-    hover-text-color: $highlight-hollow-text,
-    active-background-color: $highlight-hollow-active,
-    active-text-color: $highlight-hollow-active-text,
-    hover-border-color: $highlight-hollow-base
+    border: $c400,
+    text-color: $c600,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    disabled-border-color: transparent,
+    hover-background-color: $c100,
+    hover-text-color: $c600,
+    hover-border-color: $c400,
+    active-background-color: $c200,
+    active-text-color: $c600,
+    focus-background-color: $c100,
+    focus-text-color: $c600,
+    focus-border-color: $c400
   ),
   dark-hollow: (
     background-color: transparent,
-    border: $dark-base,
-    text-color: $dark-hollow-text,
-    disabled-background-color: transparent,
-    disabled-text-color: $dark-hollow-text,
-    hover-background-color: $dark-hollow-hover,
-    hover-text-color: $dark-hollow-text,
-    active-background-color: $dark-hollow-active,
-    active-text-color: $dark-hollow-active-text,
-    hover-border-color: $dark-hollow-base
+    border: $n500,
+    text-color: $n700,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    disabled-border-color: transparent,
+    hover-background-color: $n300,
+    hover-text-color: $n800,
+    active-background-color: $n400,
+    active-text-color: $n800,
+    focus-background-color: $n300,
+    focus-text-color: $n800,
+    focus-border-color: $n500
   ),
   light-hollow: (
     background-color: transparent,
-    border: $light-base,
-    text-color: $light-hollow-text,
-    disabled-background-color: transparent,
-    disabled-text-color: $light-hollow-text,
-    hover-background-color: $light-hollow-hover,
-    hover-text-color: $light-hollow-text,
-    active-background-color: $light-hollow-active,
-    active-text-color: $light-hollow-active-text,
-    hover-border-color: $light-hollow-base
+    border: $n400,
+    text-color: $n700,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    disabled-border-color: transparent,
+    hover-background-color: $n200,
+    hover-text-color: $n800,
+    hover-border-color: $n500,
+    active-background-color: $n300,
+    active-text-color: $n800,
+    focus-background-color: $n200,
+    focus-text-color: $n800,
+    focus-border-color: $n400
   ),
+  // ––––––––––––––––––––––––––––––––––––
+  // Special Case
+  // ––––––––––––––––––––––––––––––––––––
   cancel: (
     background-color: transparent,
     border: transparent,
-    text-color: lighten($main-text, 24%),
-    disabled-background-color: transparent,
-    disabled-text-color: lighten($main-text, 24%),
-    hover-background-color: transparent,
-    hover-text-color: $main-text,
-    active-background-color: transparent,
-    active-text-color: $main-text
+    text-color: $n700,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $n200,
+    hover-text-color: $n800,
+    active-background-color: $n300,
+    active-text-color: $n800,
+    focus-background-color: $n200,
+    focus-text-color: $n800,
+    focus-border-color: $n400
   ),
   add: (
     background-color: transparent,
     border: transparent,
-    text-color: $secondary-base,
-    disabled-background-color: transparent,
-    disabled-text-color: $secondary-base,
-    hover-background-color: $secondary-base,
-    hover-text-color: $secondary-text,
-    active-background-color: $secondary-active,
-    active-text-color: $secondary-hover-text
+    text-color: $i400,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $i100,
+    hover-text-color: $i600,
+    active-background-color: $i200,
+    active-text-color: $i600,
+    focus-background-color: $i100,
+    focus-text-color: $i600,
+    focus-border-color: $i400
   ),
   add-subtle: (
     background-color: transparent,
     border: transparent,
-    text-color: darken($neutral-base, 10%),
-    disabled-background-color: transparent,
-    disabled-text-color: darken($neutral-base, 10%),
-    hover-background-color: transparent,
-    hover-text-color: $secondary-base,
-    active-background-color: transparent,
-    active-text-color: $secondary-base
+    text-color: $n700,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $i100,
+    hover-text-color: $i600,
+    active-background-color: $i200,
+    active-text-color: $i600,
+    focus-background-color: $i100,
+    focus-text-color: $i600,
+    focus-border-color: $i400
   ),
   delete: (
-    background-color: $neutral,
+    background-color: $r100,
     border: transparent,
-    text-color: $alert,
-    disabled-background-color: $neutral,
-    disabled-text-color: $neutral-text,
-    hover-background-color: $alert-hover,
-    hover-text-color: $alert-hover-text,
-    active-background-color: $alert-active,
-    active-text-color: $alert-hover-text
+    text-color: $r500,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $r200,
+    hover-text-color: $r500,
+    active-background-color: $r400,
+    active-text-color: $n100,
+    focus-background-color: $r100,
+    focus-text-color: $r500,
+    focus-border-color: $r300
   ),
   delete-subtle: (
-    background-color: $neutral,
+    background-color: $n300,
     border: transparent,
-    text-color: $neutral-text,
-    disabled-background-color: $neutral,
-    disabled-text-color: $neutral-text,
-    hover-background-color: $alert-hover,
-    hover-text-color: $alert-hover-text,
-    active-background-color: $alert-active,
-    active-text-color: $alert-hover-text
+    text-color: $n700,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $r200,
+    hover-text-color: $r500,
+    active-background-color: $r400,
+    active-text-color: $n100,
+    focus-background-color: $r100,
+    focus-text-color: $r500,
+    focus-border-color: $r300
   ),
   resolve: (
-    background-color: $neutral,
+    background-color: $n300,
     border: transparent,
-    text-color: $neutral-text,
-    disabled-background-color: $neutral,
-    disabled-text-color: $neutral-text,
-    hover-background-color: $success-hover,
-    hover-text-color: $success-hover-text,
-    active-background-color: $success-active,
-    active-text-color: $success-hover-text
+    text-color: $n700,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $g300,
+    hover-text-color: $g600,
+    active-background-color: $g400,
+    active-text-color: $n100,
+    focus-background-color: $g100,
+    focus-text-color: $g600,
+    focus-border-color: $g400
   ),
   skip: (
     background-color: transparent,
     border: transparent,
-    text-color: $neutral-text,
-    disabled-background-color: transparent,
-    disabled-text-color: $neutral-base,
-    hover-background-color: $neutral-base,
-    hover-text-color: $neutral-text,
-    active-background-color: $neutral-active,
-    active-text-color: $neutral-hover-text
+    text-color: $n700,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $n200,
+    hover-text-color: $n800,
+    active-background-color: $n300,
+    active-text-color: $n800,
+    focus-background-color: $n200,
+    focus-text-color: $n800,
+    focus-border-color: $n400
   ),
   menu-action: (
     background-color: transparent,
     border: transparent,
-    text-color: $main-text,
-    disabled-background-color: transparent,
-    disabled-text-color: $main-text-light,
-    hover-background-color: transparent,
-    hover-text-color: $secondary-base,
-    active-background-color: transparent,
-    active-text-color: $secondary-base
+    text-color: $n700,
+    disabled-background-color: $n200,
+    disabled-text-color: $n400,
+    hover-background-color: $i100,
+    hover-text-color: $i600,
+    active-background-color: $i200,
+    active-text-color: $i600,
+    focus-background-color: $i100,
+    focus-text-color: $i600,
+    focus-border-color: $i400
   )
 );
 
-@mixin add-disabled ($background-color, $text-color) {
+@mixin add-disabled ($background-color, $text-color, $border-color) {
   &:disabled,
   &.disabled,
   &[disabled] {
     background-color: $background-color;
+    border-color: $border-color;
     color: $text-color;
     cursor: not-allowed;
-    opacity: .3;
+    opacity: 1;
 
     &:focus,
     &:hover {
       background-color: $background-color;
+      border-color: $border-color;
       color: $text-color;
     }
   }
@@ -417,14 +546,14 @@ $button-styles: (
 @mixin add-button-style ($style) {
   @include add-disabled(
     map-get($style, disabled-background-color),
-    map-get($style, disabled-text-color)
+    map-get($style, disabled-text-color),
+    map-get($style, disabled-border-color)
   );
 
   background-color: map-get($style, background-color);
   border-color: map-get($style, border);
   color: map-get($style, text-color);
 
-  &:focus,
   &:hover,
   &.hover {
     background-color: map-get($style, hover-background-color);
@@ -432,6 +561,15 @@ $button-styles: (
 
     @if map-has-key($style, hover-border-color) {
       border-color: map-get($style, hover-border-color);
+    }
+  }
+
+  &:focus {
+    background-color: map-get($style, focus-background-color);
+    color: map-get($style, focus-text-color);
+
+    @if map-has-key($style, focus-border-color) {
+      border-color: map-get($style, focus-border-color);
     }
   }
 
