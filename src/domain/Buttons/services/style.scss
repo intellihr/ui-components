@@ -85,15 +85,18 @@ $button-styles: (
     focus-border-color: $n600 
   ),
   highlight: (
-    background-color: $highlight-base,
+    background-color: $c200,
     border: transparent,
-    text-color: $highlight-text,
+    text-color: $c600,
     disabled-background-color: $n200,
     disabled-text-color: $n400,
-    hover-background-color: $highlight-hover,
-    hover-text-color: $highlight-hover-text,
-    active-background-color: $highlight-active,
-    active-text-color: $highlight-hover-text
+    hover-background-color: $c300,
+    hover-text-color: $c600,
+    active-background-color: $c400,
+    active-text-color: $n100,
+    focus-background-color: $c100,
+    focus-text-color: $c600,
+    focus-border-color: $c400 
   ),
   dark: (
     background-color: $dark-base,
