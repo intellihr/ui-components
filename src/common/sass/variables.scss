@@ -99,25 +99,25 @@ $y600: #7F7012;
   // --------------
   // Global
   // --------------
-  border-radius: $border-radius;
+  borderRadius: $border-radius;
 
   // --------------
   // Breakpoints
   // --------------
-  breakpoint-min: $breakpoint-min;
-  breakpoint-tablet: $breakpoint-tablet;
-  breakpoint-desktop: $breakpoint-desktop;
+  breakpointMin: $breakpoint-min;
+  breakpointTablet: $breakpoint-tablet;
+  breakpointDesktop: $breakpoint-desktop;
 
   // --------------
   // Z Indexes
   // --------------
-  z-index-absolute-bottom: -9999;
-  z-index-default: 0;
-  z-index-modal: 1000;
-  z-index-date-input: 2000;
-  z-index-dropdown-menu: 3000;
-  z-index-toaster: 4000;
-  z-index-absolute-top: 9999;
+  zIndexAbsoluteBottom: $z-index-absolute-bottom;
+  zIndexDefault: $z-index-default;
+  zIndexModal: $z-index-modal;
+  zIndexDateInput: $z-index-date-input;
+  zIndexDropdownMenu: $z-index-dropdown-menu;
+  zIndexToaster: $z-index-toaster;
+  zIndexAbsoluteTop: $z-index-absolute-top;
 
   // --------------
   // Colors

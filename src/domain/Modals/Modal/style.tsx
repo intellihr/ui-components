@@ -5,7 +5,7 @@ import { flow } from 'lodash'
 import { getColor } from '../../../common/legacy'
 import { IWithStyledBreakpoints, withStyledBreakpoints } from '../../Styles'
 
-const { radius } = require('@Common/sass/variables.scss')
+const { borderRadius } = require('@Common/sass/variables.scss')
 
 interface IReactModalAdapter extends ReactModal.Props {
   className?: string
@@ -73,7 +73,7 @@ const StyledReactModal = styledReactModal`
   .modal {
     background-color: ${getColor('main-background')};
     border: 1px solid ${getColor('border')};
-    border-radius: ${radius};
+    border-radius: ${borderRadius};
     flex-shrink: 0;
     height: auto;
     margin: auto;

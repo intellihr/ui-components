@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import { parseInt } from 'lodash'
 import { StyledReactModal } from './style'
 import { Props } from '../../../common/types'
-const sassGlobals = require('../../../common/sass/variables.scss')
+const { zIndexModal } = require('../../../common/sass/variables.scss')
 
 enum ReactModalSize {
   medium = 'fixed-medium-up',
@@ -42,7 +42,7 @@ class Modal extends React.PureComponent<IModalProps> {
   }
 
   get baseZIndex () {
-    return parseInt(sassGlobals['z-index-modal'])
+    return parseInt(zIndexModal)
   }
 
   get classNames (): string {

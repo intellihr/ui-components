@@ -1,7 +1,7 @@
 import React from 'react'
 import styledBreakpoint from '@intellihr/styled-components-breakpoint'
 
-const sassGlobals = require('@Common/sass/variables.scss')
+const { breakpointMin, breakpointTablet, breakpointDesktop} = require('@Common/sass/variables.scss')
 
 interface IWithStyledBreakpoints {
   breakpoint: {
@@ -15,9 +15,9 @@ const withStyledBreakpoints = <P extends IWithStyledBreakpoints>(StyledBreakpoin
   class extends React.PureComponent<P & Partial<IWithStyledBreakpoints>> {
     get breakpoints () {
       return styledBreakpoint({
-        small: parseInt(sassGlobals['breakpoint-min'], 10) || 0,
-        medium: parseInt(sassGlobals['breakpoint-tablet'], 10) || 1,
-        large: parseInt(sassGlobals['breakpoint-desktop'], 10) || 2
+        small: parseInt(breakpointMin, 10) || 0,
+        medium: parseInt(breakpointTablet, 10) || 1,
+        large: parseInt(breakpointDesktop, 10) || 2
       })
     }
 
