@@ -32,7 +32,7 @@ $button-styles: (
     active-text-color: $n100,
     focus-background-color: $b100,
     focus-text-color: $b400,
-    focus-border-color: $b400 
+    focus-border-color: $b400
   ),
   success: (
     background-color: $g200,
@@ -46,7 +46,7 @@ $button-styles: (
     active-text-color: $n100,
     focus-background-color: $g100,
     focus-text-color: $g600,
-    focus-border-color: $g400 
+    focus-border-color: $g400
   ),
   warning: (
     background-color: $o200,
@@ -60,7 +60,7 @@ $button-styles: (
     active-text-color: $n100,
     focus-background-color: $o100,
     focus-text-color: $o600,
-    focus-border-color: $o400 
+    focus-border-color: $o400
   ),
   alert: (
     background-color: $r100,
@@ -74,7 +74,7 @@ $button-styles: (
     active-text-color: $n100,
     focus-background-color: $r100,
     focus-text-color: $r500,
-    focus-border-color: $r300 
+    focus-border-color: $r300
   ),
   neutral: (
     background-color: $n300,
@@ -88,7 +88,7 @@ $button-styles: (
     active-text-color: $n100,
     focus-background-color: $n400,
     focus-text-color: $n700,
-    focus-border-color: $n600 
+    focus-border-color: $n600
   ),
   highlight: (
     background-color: $c200,
@@ -116,7 +116,7 @@ $button-styles: (
     active-text-color: $n100,
     focus-background-color: $n300,
     focus-text-color: $n800,
-    focus-border-color: $n500 
+    focus-border-color: $n500
   ),
   light: (
     background-color: $n100,
@@ -147,7 +147,7 @@ $button-styles: (
     active-text-color: $i600,
     focus-background-color: $i100,
     focus-text-color: $i600,
-    focus-border-color: $i400 
+    focus-border-color: $i400
   ),
   secondary-borderless: (
     background-color: transparent,
@@ -175,7 +175,7 @@ $button-styles: (
     active-text-color: $g600,
     focus-background-color: $g100,
     focus-text-color: $g600,
-    focus-border-color: $g400 
+    focus-border-color: $g400
   ),
   warning-borderless: (
     background-color: transparent,
@@ -189,7 +189,7 @@ $button-styles: (
     active-text-color: $o600,
     focus-background-color: $o100,
     focus-text-color: $o600,
-    focus-border-color: $o400 
+    focus-border-color: $o400
   ),
   alert-borderless: (
     background-color: transparent,
@@ -203,7 +203,7 @@ $button-styles: (
     active-text-color: $r600,
     focus-background-color: $r100,
     focus-text-color: $r600,
-    focus-border-color: $r400 
+    focus-border-color: $r400
   ),
   neutral-borderless: (
     background-color: transparent,
@@ -217,7 +217,7 @@ $button-styles: (
     active-text-color: $n700,
     focus-background-color: $n200,
     focus-text-color: $n700,
-    focus-border-color: $n400 
+    focus-border-color: $n400
   ),
   highlight-borderless: (
     background-color: transparent,
@@ -231,7 +231,7 @@ $button-styles: (
     active-text-color: $c600,
     focus-background-color: $c100,
     focus-text-color: $c600,
-    focus-border-color: $c400 
+    focus-border-color: $c400
   ),
   dark-borderless: (
     background-color: transparent,
@@ -436,7 +436,7 @@ $button-styles: (
     active-text-color: $i600,
     focus-background-color: $i100,
     focus-text-color: $i600,
-    focus-border-color: $i400 
+    focus-border-color: $i400
   ),
   add-subtle: (
     background-color: transparent,
@@ -464,7 +464,7 @@ $button-styles: (
     active-text-color: $n100,
     focus-background-color: $r100,
     focus-text-color: $r500,
-    focus-border-color: $r300 
+    focus-border-color: $r300
   ),
   delete-subtle: (
     background-color: $n300,
@@ -478,7 +478,7 @@ $button-styles: (
     active-text-color: $n100,
     focus-background-color: $r100,
     focus-text-color: $r500,
-    focus-border-color: $r300 
+    focus-border-color: $r300
   ),
   resolve: (
     background-color: $n300,
@@ -492,7 +492,7 @@ $button-styles: (
     active-text-color: $n100,
     focus-background-color: $g100,
     focus-text-color: $g600,
-    focus-border-color: $g400 
+    focus-border-color: $g400
   ),
   skip: (
     background-color: transparent,
@@ -520,7 +520,7 @@ $button-styles: (
     active-text-color: $i600,
     focus-background-color: $i100,
     focus-text-color: $i600,
-    focus-border-color: $i400 
+    focus-border-color: $i400
   )
 );
 
@@ -537,8 +537,8 @@ $button-styles: (
     &:focus,
     &:hover {
       background-color: $background-color;
-      color: $text-color;
       border-color: $border-color;
+      color: $text-color;
     }
   }
 }
