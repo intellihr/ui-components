@@ -283,14 +283,18 @@ $button-styles: (
   secondary-hollow: (
     background-color: transparent,
     border: $b400,
-    text-color: $secondary-hollow-text,
+    text-color: $b400,
     disabled-background-color: $n200,
     disabled-text-color: $n400,
-    hover-background-color: $secondary-hollow-hover,
-    hover-text-color: $secondary-hollow-text,
-    active-background-color: $secondary-hollow-active,
-    active-text-color: $secondary-hollow-active-text,
-    hover-border-color: $secondary-hollow-base
+    disabled-border-color: transparent,
+    hover-background-color: $b100,
+    hover-text-color: $b400,
+    hover-border-color: $b400,
+    active-background-color: $b200,
+    active-text-color: $b600,
+    focus-background-color: $b100,
+    focus-text-color: $b600,
+    focus-border-color: $b400
   ),
   success-hollow: (
     background-color: transparent,
