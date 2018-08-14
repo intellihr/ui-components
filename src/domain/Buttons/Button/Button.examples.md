@@ -74,6 +74,9 @@
     <Button type='secondary-borderless' onClick={() => alert('secondary-borderless')}>
       secondary-borderless
     </Button>
+    <Button type='success-borderless' onClick={() => alert('success-borderless')}>
+      success-borderless
+    </Button>
     <Button type='warning-borderless' onClick={() => alert('warning-borderless')}>
       warning-borderless
     </Button>
