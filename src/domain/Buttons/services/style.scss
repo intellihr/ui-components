@@ -393,15 +393,19 @@ $button-styles: (
   ),
   light-hollow: (
     background-color: transparent,
-    border: $light-base,
-    text-color: $light-hollow-text,
+    border: $n400,
+    text-color: $n700,
     disabled-background-color: $n200,
     disabled-text-color: $n400,
-    hover-background-color: $light-hollow-hover,
-    hover-text-color: $light-hollow-text,
-    active-background-color: $light-hollow-active,
-    active-text-color: $light-hollow-active-text,
-    hover-border-color: $light-hollow-base
+    disabled-border-color: transparent,
+    hover-background-color: $n150,
+    hover-text-color: $n700,
+    hover-border-color: $n500,
+    active-background-color: $n300,
+    active-text-color: $n700,
+    focus-background-color: $n200,
+    focus-text-color: $n700,
+    focus-border-color: $n400
   ),
   // ––––––––––––––––––––––––––––––––––––
   // Special Case
