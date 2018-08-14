@@ -114,9 +114,9 @@ $button-styles: (
     hover-text-color: $n200,
     active-background-color: $n500,
     active-text-color: $n100,
-    focus-background-color: $n200,
-    focus-text-color: $n700,
-    focus-border-color: $n600 
+    focus-background-color: $n300,
+    focus-text-color: $n800,
+    focus-border-color: $n500 
   ),
   light: (
     background-color: $n100,
@@ -124,12 +124,12 @@ $button-styles: (
     text-color: $n700,
     disabled-background-color: $n200,
     disabled-text-color: $n400,
-    hover-background-color: $n300,
-    hover-text-color: $n700,
-    active-background-color: $n400,
+    hover-background-color: $n200,
+    hover-text-color: $n800,
+    active-background-color: $n300,
     active-text-color: $n100,
-    focus-background-color: $n150,
-    focus-text-color: $n600,
+    focus-background-color: $n200,
+    focus-text-color: $n800,
     focus-border-color: $n400
   ),
   // ––––––––––––––––––––––––––––––––––––
@@ -243,7 +243,7 @@ $button-styles: (
     hover-text-color: $n800,
     active-background-color: $n400,
     active-text-color: $n800,
-    focus-background-color: $n200,
+    focus-background-color: $n300,
     focus-text-color: $n800,
     focus-border-color: $n500
   ),
@@ -254,11 +254,11 @@ $button-styles: (
     disabled-background-color: $n200,
     disabled-text-color: $n400,
     hover-background-color: $n200,
-    hover-text-color: $n700,
+    hover-text-color: $n800,
     active-background-color: $n300,
-    active-text-color: $n700,
+    active-text-color: $n800,
     focus-background-color: $n200,
-    focus-text-color: $n700,
+    focus-text-color: $n800,
     focus-border-color: $n400
   ),
   // ––––––––––––––––––––––––––––––––––––
@@ -383,13 +383,13 @@ $button-styles: (
     disabled-background-color: $n200,
     disabled-text-color: $n400,
     disabled-border-color: transparent,
-    hover-background-color: $n200,
+    hover-background-color: $n300,
     hover-text-color: $n800,
     active-background-color: $n400,
     active-text-color: $n800,
     focus-background-color: $n300,
     focus-text-color: $n800,
-    focus-border-color: $n600
+    focus-border-color: $n500
   ),
   light-hollow: (
     background-color: transparent,
@@ -398,13 +398,13 @@ $button-styles: (
     disabled-background-color: $n200,
     disabled-text-color: $n400,
     disabled-border-color: transparent,
-    hover-background-color: $n150,
-    hover-text-color: $n700,
+    hover-background-color: $n200,
+    hover-text-color: $n800,
     hover-border-color: $n500,
     active-background-color: $n300,
-    active-text-color: $n700,
+    active-text-color: $n800,
     focus-background-color: $n200,
-    focus-text-color: $n700,
+    focus-text-color: $n800,
     focus-border-color: $n400
   ),
   // ––––––––––––––––––––––––––––––––––––
@@ -417,11 +417,11 @@ $button-styles: (
     disabled-background-color: $n200,
     disabled-text-color: $n400,
     hover-background-color: $n200,
-    hover-text-color: $n700,
+    hover-text-color: $n800,
     active-background-color: $n300,
-    active-text-color: $n700,
+    active-text-color: $n800,
     focus-background-color: $n200,
-    focus-text-color: $n700,
+    focus-text-color: $n800,
     focus-border-color: $n400
   ),
   add: (
@@ -493,13 +493,16 @@ $button-styles: (
   menu-action: (
     background-color: transparent,
     border: transparent,
-    text-color: $main-text,
+    text-color: $n700,
     disabled-background-color: $n200,
     disabled-text-color: $n400,
-    hover-background-color: transparent,
-    hover-text-color: $b400,
-    active-background-color: transparent,
-    active-text-color: $b400
+    hover-background-color: $i100,
+    hover-text-color: $i600,
+    active-background-color: $i200,
+    active-text-color: $i600,
+    focus-background-color: $i100,
+    focus-text-color: $i600,
+    focus-border-color: $i400 
   )
 );
 
