@@ -96,29 +96,35 @@ $button-styles: (
     active-text-color: $n100,
     focus-background-color: $c100,
     focus-text-color: $c600,
-    focus-border-color: $c400 
+    focus-border-color: $c400
   ),
   dark: (
-    background-color: $dark-base,
+    background-color: $n800,
     border: transparent,
-    text-color: $dark-text,
+    text-color: $n100,
     disabled-background-color: $n200,
     disabled-text-color: $n400,
-    hover-background-color: $dark-hover,
-    hover-text-color: $dark-hover-text,
-    active-background-color: $dark-active,
-    active-text-color: $dark-hover-text
+    hover-background-color: $n600,
+    hover-text-color: $n200,
+    active-background-color: $n500,
+    active-text-color: $n100,
+    focus-background-color: $n300,
+    focus-text-color: $n700,
+    focus-border-color: $n600 
   ),
   light: (
-    background-color: $light-base,
+    background-color: $n100,
     border: transparent,
-    text-color: $light-text,
+    text-color: $n700,
     disabled-background-color: $n200,
     disabled-text-color: $n400,
-    hover-background-color: $light-hover,
-    hover-text-color: $light-hover-text,
-    active-background-color: $light-active,
-    active-text-color: $light-hover-text
+    hover-background-color: $n300,
+    hover-text-color: $n700,
+    active-background-color: $n400,
+    active-text-color: $n100,
+    focus-background-color: $n150,
+    focus-text-color: $n600,
+    focus-border-color: $n400
   ),
   primary-borderless: (
     background-color: transparent,
@@ -200,11 +206,11 @@ $button-styles: (
   dark-borderless: (
     background-color: transparent,
     border: transparent,
-    text-color: $dark-base,
+    text-color: $n700,
     disabled-background-color: $n200,
     disabled-text-color: $n400,
-    hover-background-color: $dark-base,
-    hover-text-color: $dark-text,
+    hover-background-color: $n800,
+    hover-text-color: $n700,
     active-background-color: $dark-active,
     active-text-color: $dark-hover-text
   ),
@@ -305,7 +311,7 @@ $button-styles: (
   ),
   dark-hollow: (
     background-color: transparent,
-    border: $dark-base,
+    border: $n800,
     text-color: $dark-hollow-text,
     disabled-background-color: $n200,
     disabled-text-color: $n400,
