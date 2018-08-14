@@ -314,15 +314,19 @@ $button-styles: (
   ),
   warning-hollow: (
     background-color: transparent,
-    border: $warning-base,
-    text-color: $warning-hollow-text,
+    border: $o400,
+    text-color: $o600,
     disabled-background-color: $n200,
     disabled-text-color: $n400,
-    hover-background-color: $warning-hollow-hover,
-    hover-text-color: $warning-hollow-text,
-    active-background-color: $warning-hollow-active,
-    active-text-color: $warning-hollow-active-text,
-    hover-border-color: $warning-hollow-base
+    disabled-border-color: transparent,
+    hover-background-color: $o100,
+    hover-text-color: $o600,
+    hover-border-color: $o400,
+    active-background-color: $o200,
+    active-text-color: $o600,
+    focus-background-color: $o100,
+    focus-text-color: $o600,
+    focus-border-color: $o400
   ),
   alert-hollow: (
     background-color: transparent,
