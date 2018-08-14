@@ -239,10 +239,13 @@ $button-styles: (
     text-color: $n700,
     disabled-background-color: $n200,
     disabled-text-color: $n400,
-    hover-background-color: $n800,
-    hover-text-color: $n700,
-    active-background-color: $dark-active,
-    active-text-color: $dark-hover-text
+    hover-background-color: $n300,
+    hover-text-color: $n800,
+    active-background-color: $n400,
+    active-text-color: $n800,
+    focus-background-color: $n200,
+    focus-text-color: $n800,
+    focus-border-color: $n500
   ),
   light-borderless: (
     background-color: transparent,
