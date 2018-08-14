@@ -138,13 +138,16 @@ $button-styles: (
   primary-borderless: (
     background-color: transparent,
     border: transparent,
-    text-color: $primary-base,
+    text-color: $i400,
     disabled-background-color: $n200,
     disabled-text-color: $n400,
-    hover-background-color: $primary-base,
-    hover-text-color: $primary-text,
-    active-background-color: $primary-active,
-    active-text-color: $primary-hover-text
+    hover-background-color: $i100,
+    hover-text-color: $i600,
+    active-background-color: $i200,
+    active-text-color: $i600,
+    focus-background-color: $i100,
+    focus-text-color: $i600,
+    focus-border-color: $i400 
   ),
   secondary-borderless: (
     background-color: transparent,
@@ -152,10 +155,13 @@ $button-styles: (
     text-color: $b400,
     disabled-background-color: $n200,
     disabled-text-color: $n400,
-    hover-background-color: $b400,
-    hover-text-color: $n100,
-    active-background-color: $secondary-active,
-    active-text-color: $secondary-hover-text
+    hover-background-color: $b100,
+    hover-text-color: $b600,
+    active-background-color: $b200,
+    active-text-color: $b600,
+    focus-background-color: $b100,
+    focus-text-color: $b600,
+    focus-border-color: $b400
   ),
   success-borderless: (
     background-color: transparent,
@@ -239,7 +245,7 @@ $button-styles: (
   // ––––––––––––––––––––––––––––––––––––
   primary-hollow: (
     background-color: transparent,
-    border: $primary-base,
+    border: $i400,
     text-color: $primary-hollow-text,
     disabled-background-color: $n200,
     disabled-text-color: $n400,
