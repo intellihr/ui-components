@@ -378,15 +378,18 @@ $button-styles: (
   ),
   dark-hollow: (
     background-color: transparent,
-    border: $n800,
-    text-color: $dark-hollow-text,
+    border: $n500,
+    text-color: $n700,
     disabled-background-color: $n200,
     disabled-text-color: $n400,
-    hover-background-color: $dark-hollow-hover,
-    hover-text-color: $dark-hollow-text,
-    active-background-color: $dark-hollow-active,
-    active-text-color: $dark-hollow-active-text,
-    hover-border-color: $dark-hollow-base
+    disabled-border-color: transparent,
+    hover-background-color: $n200,
+    hover-text-color: $n800,
+    active-background-color: $n400,
+    active-text-color: $n800,
+    focus-background-color: $n300,
+    focus-text-color: $n800,
+    focus-border-color: $n600
   ),
   light-hollow: (
     background-color: transparent,
