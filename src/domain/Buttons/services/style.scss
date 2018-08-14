@@ -247,13 +247,16 @@ $button-styles: (
   light-borderless: (
     background-color: transparent,
     border: transparent,
-    text-color: $light-base,
+    text-color: $n600,
     disabled-background-color: $n200,
     disabled-text-color: $n400,
-    hover-background-color: $light-base,
-    hover-text-color: $light-text,
-    active-background-color: $light-active,
-    active-text-color: $light-hover-text
+    hover-background-color: $n200,
+    hover-text-color: $n700,
+    active-background-color: $n300,
+    active-text-color: $n700,
+    focus-background-color: $n200,
+    focus-text-color: $n700,
+    focus-border-color: $n400
   ),
   // ––––––––––––––––––––––––––––––––––––
   // Hollow
