@@ -43,19 +43,6 @@ module.exports = {
           }
         }]
       },
-      // Re-enable after standard is updated to fix typescript
-      // {
-      //   test: /\.tsx?$/,
-      //   exclude: /(node_modules)/,
-      //   enforce: 'pre',
-      //   loader: 'standard-loader',
-      //   options: {
-      //     parser: 'typescript-eslint-parser',
-      //     plugins: [
-      //       'typescript'
-      //     ]
-      //   }
-      // },
       {
         test: /\.tsx?$/,
         exclude: /(node_modules)/,
