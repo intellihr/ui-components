@@ -5,7 +5,7 @@ const style = require('./style.scss')
 export interface IProfilePageComponentProps {
   /** What to display in the layout. */
   children?: React.ReactNode
-  /** If the component to display is the top or bottom component*/
+  /** If the component to display is the top or bottom component */
   position: 'header' | 'content'
 }
 
