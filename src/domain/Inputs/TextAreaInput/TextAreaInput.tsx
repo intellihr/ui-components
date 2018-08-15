@@ -1,5 +1,5 @@
 import React, { ChangeEventHandler } from 'react'
-import { StyledAutosizeTextarea } from '@Domain/Inputs/TextAreaInput/style'
+import { StyledAutosizeTextarea } from '../../Inputs/TextAreaInput/style'
 import classNames from 'classnames'
 
 interface ITextAreaInputProps {

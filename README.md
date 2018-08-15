@@ -26,6 +26,7 @@ Please check our [CONTRIBUTING.md](/CONTRIBUTING.md) before contribute.
         * [UI-Components does not seem to be updated correctly](#ui-components-does-not-seem-to-be-updated-correctly)
     * [Styleguide Issues](#styleguide-issues)
         * [Styleguide uses wrong name for components](#styleguide-uses-wrong-name-for-components)
+    * [Path Mapping in Typescript](#path-mapping-in-typescript)
     * [Add Dependency](#add-dependency)
         * [Add `dependencies`](#add-dependencies)
         * [Add `devDependencies`](#add-devdependencies)
@@ -151,6 +152,27 @@ You can usually fix this by exporting the component where it is defined:
 ```typescript
 export const Component = styled(Thing)
 ```
+
+### Path Mapping in Typescript
+
+Path Mapping refers the following path aliases
+
+```typescript
+import { XXX } from '@Domain/XXX'
+import { YYY } from '@Common/YYY'
+```
+
+These are available only in `.examples.md` or `.test.tsx` files.
+
+We do not use path mapping in Typescript file (i.e. `.ts` or `.tsx`).
+
+The reason is [Here](https://github.com/Microsoft/TypeScript/issues/16640)
+
+As we need to output type definitions to our Typescript consumer (e.g. SPA),
+using path mapping will result in wrong mapping because typescript complier does not re-write the path.
+
+This only applies to libraries.
+For other Typescript projects, there is no issue with using path mapping since no consumers care about the type definition.
 
 ### Add Dependency
 

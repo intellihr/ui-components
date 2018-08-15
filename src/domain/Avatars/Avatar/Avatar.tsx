@@ -4,7 +4,7 @@ import {
   isNil,
   isEmpty
 } from 'lodash'
-import { FontAwesomeIcon } from '@Domain/Icons'
+import { FontAwesomeIcon } from '../../Icons'
 import {
   withSkeleton,
   ISkeletonComponentProps

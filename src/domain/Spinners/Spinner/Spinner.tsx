@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import { ThreeBounce, FadingCircle } from 'better-react-spinkit'
 import { SpinnerWrapper } from './style'
-import { getColor } from '@Common/legacy'
+import { getColor } from '../../../common/legacy'
 
 export interface ISpinnerProps {
   /** Type of spinner to display */

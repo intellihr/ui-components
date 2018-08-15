@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { StyledComponentClass, css } from 'styled-components'
-import { Props } from '@Common/types'
-import { getColor } from '@Common/legacy'
+import { Props } from '../../../../common/types'
+import { getColor } from '../../../../common/legacy'
 import { SectionType } from './Section'
 
 const DefaultDropdownButton = styled.button`
@@ -30,7 +30,7 @@ const DefaultDropdownButton = styled.button`
 
 const StyledToggleContainer = styled.span`
   display: table-cell;
-  
+
   > * {
     margin: 0;
   }
@@ -45,7 +45,7 @@ const StyledDropdownMenu = styled.span`
   position: absolute;
   width: min-content;
   z-index: 2000;
-  
+
   transform: scale(0.1);
   transform-origin: ${(props: IStyledDropdownMenuProps) => props.transformOrigin.xPos + ' ' + props.transformOrigin.yPos};
   transition: transform 150ms cubic-bezier(0.5, 1.8, 0.9, 0.8);
@@ -104,10 +104,10 @@ function styleForSectionType (section: IStyledSectionProps) {
     return css`
       color: ${getColor('main-text')};
       border-left: 5px solid ${mapping.stripColor};
-    
+
       ${section.clickable && css`
         cursor: pointer;
-        
+
         &:hover,
         &:active,
         &:focus {
@@ -129,18 +129,18 @@ function styleForSectionType (section: IStyledSectionProps) {
 
         ${section.clickable && css`
           cursor: pointer;
-        
+
           &:focus,
           &:hover {
             background-color: ${getColor('alert-base')};
-  
+
             &,
             .left-component,
             .right-component {
               color: ${getColor('alert-text')};
             }
           }
-  
+
           &:active,
           &.active {
             background-color: ${getColor('alert-active')};
@@ -157,15 +157,15 @@ function styleForSectionType (section: IStyledSectionProps) {
       .left-component,
       .right-component {
         color: ${getColor('main-text')};
-         
+
         ${section.clickable && css`
           cursor: pointer;
-        
+
           &:hover,
           &:active,
           &:focus {
             background-color: ${getColor('neutral-light')};
-      
+
             &,
             .left-component,
             .right-component {
@@ -186,14 +186,14 @@ const StyledSection = styled.li`
   padding: 0;
   white-space: pre;
   width: 100%;
-  
+
   hr {
     height: 0;
     margin-bottom: 0;
     margin-top: 0;
     padding: 0;
   }
-  
+
   > a,
   > button,
   > span {
@@ -204,16 +204,16 @@ const StyledSection = styled.li`
     outline: 0;
     padding: 1em;
     text-align: left;
-    
+
     &,
     .left-component,
     .right-component {
       transition: background .3s ease-in-out, color .3s ease-in-out;
     }
-  
+
     ${styleForSectionType}
   }
-  
+
   &:first-of-type {
     border-radius: 4px 4px 0 0;
 
@@ -240,7 +240,7 @@ const StyledSection = styled.li`
       border-radius: 4px;
     }
   }
-  
+
   .left-component {
     margin-right: 5px;
   }

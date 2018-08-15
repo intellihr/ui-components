@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
-import { getColor } from '@Common/legacy'
+import { getColor } from '../../../common/legacy'
 
 export const StyledInputLabel = styled.label`
   color: ${getColor('main-text-light')};

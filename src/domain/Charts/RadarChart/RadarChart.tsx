@@ -5,7 +5,7 @@ import { forEach, merge, get } from 'lodash'
 import Color from 'color'
 import { Parser as HtmlToReactParser } from 'html-to-react'
 import classNames from 'classnames'
-import { Legend } from '@Domain/Legends'
+import { Legend } from '../../Legends'
 
 const style = require('./style.scss')
 

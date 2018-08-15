@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import { Row } from 'react-styled-flexboxgrid'
-import { Anchor } from '@Domain/Internals'
+import { Anchor } from '../../../Internals'
 
 export interface IListRow {
   /** Column elements passed to the row */
