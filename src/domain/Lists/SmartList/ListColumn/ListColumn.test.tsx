@@ -16,6 +16,12 @@ const testData = [
 
 describe('<ListColumn />', () => {
   it('should render a list column with the right non-header cell content', () => {
+    const cell = (row: ITestListColumnItem) => (
+      <div>
+        {row.name}
+      </div>
+    )
+
     const wrapper = mount(
       <ListColumn
         data={testData}
@@ -23,11 +29,7 @@ describe('<ListColumn />', () => {
         size={{
           sm: 6
         }}
-        cell={(row: ITestListColumnItem) =>
-          <div>
-            {row.name}
-          </div>
-        }
+        cell={cell}
       />
     )
 
@@ -35,6 +37,12 @@ describe('<ListColumn />', () => {
   })
 
   it('should render a list column with the right header', () => {
+    const cell = (row: ITestListColumnItem) => (
+      <div>
+        {row.name}
+      </div>
+    )
+
     const wrapper = mount(
       <ListColumn
         data={testData}
@@ -42,13 +50,9 @@ describe('<ListColumn />', () => {
         size={{
           sm: 6
         }}
-        isHeader
+        isHeader={true}
         header='Test'
-        cell={(row: ITestListColumnItem) =>
-          <div>
-            {row.name}
-          </div>
-        }
+        cell={cell}
       />
     )
 
@@ -56,6 +60,8 @@ describe('<ListColumn />', () => {
   })
 
   it('should render a list column with number content', () => {
+    const cell = (row: ITestListColumnItem) => row.number
+
     const wrapper = mount(
       <ListColumn
         data={testData}
@@ -63,7 +69,7 @@ describe('<ListColumn />', () => {
         size={{
           sm: 6
         }}
-        cell={(row: ITestListColumnItem) => row.number}
+        cell={cell}
       />
     )
 

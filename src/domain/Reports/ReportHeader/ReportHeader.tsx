@@ -36,12 +36,12 @@ export interface IReportHeader {
   showHelper?: boolean
 }
 
-export interface ReportHeaderState {
+export interface IReportHeaderState {
   status: InfoTextStatus,
   isExpanded: boolean
 }
 
-export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeaderState> {
+export class ReportHeader extends React.PureComponent<IReportHeader, IReportHeaderState> {
   public static defaultProps: Partial<IReportHeader> = {
     showHelper: true
   }
@@ -55,7 +55,7 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
   }
 
   // Hover in
-  onMouseEnter = () => {
+  public onMouseEnter = () => {
     const {
       status
     } = this.state
@@ -68,7 +68,7 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
   }
 
   // Hover out
-  onMouseLeave = () => {
+  public onMouseLeave = () => {
     const {
       status
     } = this.state
@@ -86,7 +86,7 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
     }
   }
 
-  handleClick = () => {
+  public handleClick = () => {
     const {
       status,
       isExpanded
@@ -201,7 +201,7 @@ export class ReportHeader extends React.PureComponent<IReportHeader, ReportHeade
     )
   }
 
-  render () {
+  public render () {
     return (
       <div>
         <TitleBox>

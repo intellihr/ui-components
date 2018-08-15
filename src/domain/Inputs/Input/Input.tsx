@@ -2,7 +2,7 @@ import React, { ChangeEventHandler } from 'react'
 import classNames from 'classnames'
 import { InputWrapper } from '../services/style'
 
-interface GenericInputProps {
+interface IGenericInputProps {
   /** ID of the input */
   id?: string
   /** Name of the input */
@@ -41,7 +41,7 @@ interface GenericInputProps {
   isChecked?: boolean
 }
 
-interface InputProps extends GenericInputProps {
+interface InputProps extends IGenericInputProps {
   /** Type of input to display */
   type: string
 }
@@ -53,7 +53,7 @@ export class Input extends React.PureComponent<InputProps> {
     this.onFocus = this.onFocus.bind(this)
   }
 
-  onFocus (e: React.FocusEvent<HTMLInputElement>): void {
+  public onFocus (e: React.FocusEvent<HTMLInputElement>): void {
     const {
       highlightOnFocus
     } = this.props
@@ -76,7 +76,7 @@ export class Input extends React.PureComponent<InputProps> {
     )
   }
 
-  input (): JSX.Element {
+  public input (): JSX.Element {
     const {
       id,
       name,
@@ -136,6 +136,6 @@ export class Input extends React.PureComponent<InputProps> {
 }
 
 export {
-  GenericInputProps,
+  IGenericInputProps,
   InputProps
 }

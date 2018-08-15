@@ -1,8 +1,8 @@
 import React from 'react'
 import { TextWrapper } from './style'
-import { withSkeleton, SkeletonComponentProps } from '@Domain/Skeletons'
+import { withSkeleton, ISkeletonComponentProps } from '../../Skeletons'
 
-export interface TextProps {
+export interface ITextProps {
   /** Text to display */
   children: string | number
   /** Custom class name to use */
@@ -21,8 +21,8 @@ export interface TextProps {
   color?: string | 'subtle'
 }
 
-export class TextComponent extends React.PureComponent<TextProps> {
-  public static defaultProps: Partial<TextProps> = {
+export class TextComponent extends React.PureComponent<ITextProps> {
+  public static defaultProps: Partial<ITextProps> = {
     isInline: true,
     size: 'medium',
     weight: 'normal'
@@ -56,4 +56,4 @@ export class TextComponent extends React.PureComponent<TextProps> {
   }
 }
 
-export const Text: React.ComponentClass<TextProps & SkeletonComponentProps> = withSkeleton(TextComponent)
+export const Text: React.ComponentClass<ITextProps & ISkeletonComponentProps> = withSkeleton(TextComponent)

@@ -9,37 +9,37 @@ import { Legend } from '@Domain/Legends'
 
 const style = require('./style.scss')
 
-interface Dataset {
+interface IDataset {
   colour: string
   label: string
 }
 
-interface Data {
-  datasets: Dataset[]
+interface IData {
+  datasets: IDataset[]
 }
 
-interface TooltipItems {
+interface ITooltipItems {
   datasetIndex: number
   yLabel: string
 }
 
-export interface RadarChartDataLabels {
+export interface IRadarChartDataLabels {
   [key: number]: string
 }
 
-export interface RadarChartDatasets {
+export interface IRadarChartDatasets {
   label: string
   data: number[]
   colour?: string
 }
 
-export interface RadarChartProps {
+export interface IRadarChartProps {
   /** Strings to display instead of the default numerical labels on each tick */
-  dataLabels?: RadarChartDataLabels
+  dataLabels?: IRadarChartDataLabels
   /** Array of labels that are placed clockwise around the edge of the chart.  */
   pointLabels: string[]
   /** Set of data to display. Requires a name (label) and array of numbers. RGB colour is optional. */
-  datasets: RadarChartDatasets[]
+  datasets: IRadarChartDatasets[]
   /** Display legend */
   showLegend?: boolean
   /** RGB colour of dataLabels */
@@ -68,53 +68,7 @@ merge(chartJSDefaults, {
 
 const htmlToReactParser = new HtmlToReactParser()
 
-export class RadarChart extends React.Component<RadarChartProps> {
-  public chart: any;
-
-  public static defaultProps: RadarChartProps = {
-    pointLabels: [],
-    datasets: [],
-    showLegend: true,
-    minValue: 0,
-    maxValue: 5,
-    stepSize: 1,
-    height: 400,
-    showTooltips: true,
-    minValueAsFirstTick: false
-  }
-
-  componentDidMount () {
-    this.forceUpdate()
-  }
-
-  private legendCallback (chart: any): string | null {
-    const {
-      showLegend
-    } = this.props
-
-    const {
-      datasets
-    } = chart.data
-
-    if (showLegend) {
-      return ReactDOMServer.renderToStaticMarkup(
-        <Legend datasets={datasets} />
-      )
-    }
-
-    return null
-  }
-
-  private tooltipLabelCallback (tooltipItems: TooltipItems, data: Data) {
-    const {
-      dataLabels
-    } = this.props
-
-    const datasetName = data.datasets[tooltipItems.datasetIndex].label
-    const dataPointValue = get(dataLabels, tooltipItems.yLabel, tooltipItems.yLabel)
-
-    return `${datasetName}: ${dataPointValue}`
-  }
+export class RadarChart extends React.Component<IRadarChartProps> {
 
   get options (): object {
     const {
@@ -135,7 +89,7 @@ export class RadarChart extends React.Component<RadarChartProps> {
         enabled: showTooltips,
         titleFontSize: 10,
         callbacks: {
-          label: (tooltipItems: TooltipItems, data: Data) => this.tooltipLabelCallback(tooltipItems, data)
+          label: (tooltipItems: ITooltipItems, data: IData) => this.tooltipLabelCallback(tooltipItems, data)
         }
       },
       scale: {
@@ -149,7 +103,7 @@ export class RadarChart extends React.Component<RadarChartProps> {
         ticks: {
           min: minValueAsFirstTick ? minValue - stepSize : minValue,
           max: maxValue,
-          stepSize: stepSize,
+          stepSize,
           fontSize: 10,
           fontColor: dataLabelColour,
           callback: (label: string) => get(dataLabels, label, label)
@@ -189,6 +143,23 @@ export class RadarChart extends React.Component<RadarChartProps> {
     }
   }
 
+  public static defaultProps: IRadarChartProps = {
+    pointLabels: [],
+    datasets: [],
+    showLegend: true,
+    minValue: 0,
+    maxValue: 5,
+    stepSize: 1,
+    height: 400,
+    showTooltips: true,
+    minValueAsFirstTick: false
+  }
+  public chart: any
+
+  public componentDidMount () {
+    this.forceUpdate()
+  }
+
   public render (): JSX.Element {
     const {
       height
@@ -208,5 +179,34 @@ export class RadarChart extends React.Component<RadarChartProps> {
         </div>
       </div>
     )
+  }
+
+  private legendCallback (chart: any): string | null {
+    const {
+      showLegend
+    } = this.props
+
+    const {
+      datasets
+    } = chart.data
+
+    if (showLegend) {
+      return ReactDOMServer.renderToStaticMarkup(
+        <Legend datasets={datasets} />
+      )
+    }
+
+    return null
+  }
+
+  private tooltipLabelCallback (tooltipItems: ITooltipItems, data: IData) {
+    const {
+      dataLabels
+    } = this.props
+
+    const datasetName = data.datasets[tooltipItems.datasetIndex].label
+    const dataPointValue = get(dataLabels, tooltipItems.yLabel, tooltipItems.yLabel)
+
+    return `${datasetName}: ${dataPointValue}`
   }
 }

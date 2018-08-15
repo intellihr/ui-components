@@ -13,7 +13,7 @@ interface IBaseModalProps {
   /**
    * Show close button at the top right if handleClose is set.
    * Callback to call on close; receives event
-   * */
+   */
   handleClose?: (event: (MouseEvent | KeyboardEvent | React.MouseEvent<HTMLButtonElement>)) => void
   /** Shows the close button if true and handleClose is set */
   showCloseButton?: boolean
@@ -39,7 +39,7 @@ class Modal extends React.PureComponent<IModalProps> {
     showCloseButton: true
   }
 
-  static BASE_Z_INDEX = 1010
+  public static BASE_Z_INDEX = 1010
 
   get classNames (): string {
     const {
@@ -74,7 +74,7 @@ class Modal extends React.PureComponent<IModalProps> {
     }
   }
 
-  render (): JSX.Element {
+  public render (): JSX.Element {
     const {
       children,
       isOpen,

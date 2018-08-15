@@ -1,5 +1,5 @@
 export {
-  SkeletonComponentProps,
+  ISkeletonComponentProps,
   Skeleton,
   ISkeletonOptions
 } from './Skeleton'

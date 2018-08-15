@@ -3,7 +3,7 @@ import React from 'react'
 
 const style = require('./Pill.scss')
 
-export interface PillProps {
+export interface IPillProps {
   /** Text to show inside the label  */
   text: string
 
@@ -20,8 +20,8 @@ export interface PillProps {
   size?: 'small' | 'medium' | 'large'
 }
 
-export class Pill extends React.Component<PillProps> {
-  public static defaultProps: Partial<PillProps> = {
+export class Pill extends React.Component<IPillProps> {
+  public static defaultProps: Partial<IPillProps> = {
     color: 'neutral',
     isHollow: false,
     size: 'small'

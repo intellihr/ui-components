@@ -1,5 +1,5 @@
 export {
-  GenericInputProps,
+  IGenericInputProps,
   InputProps,
   Input
 } from './Input'

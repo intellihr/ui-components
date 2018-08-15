@@ -3,23 +3,23 @@ import { Line, ChartData } from 'react-chartjs-2'
 import { merge } from 'lodash'
 import { getTimeBasedLineChartDefaultOptions } from './chartOptions'
 
-export interface DataSet {
+export interface IDataSet {
   x: object,
   y: number | string
 }
-export interface LineObject {
-  dataset: DataSet[]
+export interface ILineObject {
+  dataset: IDataSet[]
   lineColor: string
   datasetLabel: string
   isGradient?: boolean
   backgroundColor?: string | CanvasGradient | CanvasPattern | string[]
 }
 
-export interface ChartLabels {
+export interface IChartLabels {
   [key: string]: string
 }
 
-export interface TimeBasedLineChartProps {
+export interface ITimeBasedLineChartProps {
   /** Array of labels that are placed along the x-axis */
   labels?: Array<string | string[]>
   /** show X Gridlines or not */
@@ -37,7 +37,7 @@ export interface TimeBasedLineChartProps {
   /** The step size of Y Axis */
   yTickStepSize: number
   /** The labels on Y Axis ticks */
-  yTickLabels?: ChartLabels
+  yTickLabels?: IChartLabels
   /** Time format for tooltip */
   timeToolTipFormat: string
   /** Time unit */
@@ -47,13 +47,13 @@ export interface TimeBasedLineChartProps {
   /** Date format string */
   dateFormat: string
   /** The data for the charts to display, please see the interface */
-  data: LineObject[]
+  data: ILineObject[]
   /** Chart Options */
   options?: Chart.ChartOptions
   /** Chart Width */
-  width?: number;
+  width?: number
   /** Chart Height */
-  height?: number;
+  height?: number
   /** Display custom tooltip label or not */
   noCustomTooltipLabel?: boolean
   /** The label on the X axis */
@@ -68,14 +68,14 @@ export interface TimeBasedLineChartProps {
   maxXTick?: string
 }
 
-export interface ChartTooltipItem {
-  xLabel?: string;
-  yLabel?: string;
-  datasetIndex?: number;
-  index?: number;
+export interface IChartTooltipItem {
+  xLabel?: string
+  yLabel?: string
+  datasetIndex?: number
+  index?: number
 }
 
-export interface BaseLineChartProps {
+export interface IBaseLineChartProps {
   /** Array of labels that are placed along the x-axis  */
   labels?: Array<string | string[]>
   /** Chart Options */
@@ -83,13 +83,13 @@ export interface BaseLineChartProps {
   /** The datasets to render the Chart */
   datasets: Chart.ChartDataSets[]
 
-  width?: number;
+  width?: number
 
-  height?: number;
+  height?: number
 }
 
-export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartProps> {
-  public static defaultProps: Partial<TimeBasedLineChartProps> = {
+export class TimeBasedLineChart extends React.PureComponent<ITimeBasedLineChartProps> {
+  public static defaultProps: Partial<ITimeBasedLineChartProps> = {
     showXGridLines: true,
     showYGridLines: true,
     showYTicks: true,
@@ -102,35 +102,35 @@ export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartPr
 
     return data.map((dataset: ChartData<any>) => {
       let attributes = {
-        label: dataset['datasetLabel'],
-        backgroundColor: dataset['lineColor'],
-        borderColor: dataset['lineColor'],
+        label: dataset.datasetLabel,
+        backgroundColor: dataset.lineColor,
+        borderColor: dataset.lineColor,
         borderWidth: 4,
-        pointBackgroundColor: dataset['lineColor'],
-        pointBorderColor: dataset['lineColor'],
+        pointBackgroundColor: dataset.lineColor,
+        pointBorderColor: dataset.lineColor,
         pointBorderWidth: 1,
         pointRadius: 4,
-        pointHoverBackgroundColor: dataset['lineColor'],
+        pointHoverBackgroundColor: dataset.lineColor,
         pointHitRadius: 10,
         pointHoverRadius: 5,
         lineTension: 0,
         fill: false,
-        data: dataset['dataset']
+        data: dataset.dataset
       }
 
-      if (dataset['isGradient']) {
+      if (dataset.isGradient) {
         attributes = merge(attributes, {
-          colour: dataset['lineColor'],
-          backgroundColor: dataset['backgroundColor'],
+          colour: dataset.lineColor,
+          backgroundColor: dataset.backgroundColor,
           fill: true,
-          fillColor: dataset['lineColor']
+          fillColor: dataset.lineColor
         })
       }
 
       return attributes
     })
   }
-  render () {
+  public render () {
     const { labels, ...props } = this.props
     return (<BaseLineChart
       datasets={this.datasets}
@@ -141,8 +141,9 @@ export class TimeBasedLineChart extends React.PureComponent<TimeBasedLineChartPr
   }
 }
 
-class BaseLineChart extends React.PureComponent<BaseLineChartProps> {
-  render () {
+// tslint:disable-next-line:max-classes-per-file
+class BaseLineChart extends React.PureComponent<IBaseLineChartProps> {
+  public render () {
     const {
       labels,
       options,
@@ -154,8 +155,8 @@ class BaseLineChart extends React.PureComponent<BaseLineChartProps> {
     return (
       <Line
         data={{
-          labels: labels,
-          datasets: datasets
+          labels,
+          datasets
         }}
         options={options}
         width={width}

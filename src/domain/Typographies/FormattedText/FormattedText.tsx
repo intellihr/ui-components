@@ -5,19 +5,19 @@ import reactStringReplace from 'react-string-replace'
 import { StyledFormattedText } from './style'
 import { TextLink } from '@Domain/Links'
 
-export interface FormattedTextProps {
+export interface IFormattedTextProps {
   /** Preformatted markdown text to display */
   text: string
   /** If true, renders emojis */
   renderEmojis?: boolean
 }
 
-export class FormattedText extends React.PureComponent<FormattedTextProps> {
-  public static defaultProps: Partial<FormattedTextProps> = {
+export class FormattedText extends React.PureComponent<IFormattedTextProps> {
+  public static defaultProps: Partial<IFormattedTextProps> = {
     renderEmojis: false
   }
 
-  linkRenderer = (props: { children: any, href: string }): JSX.Element => {
+  public linkRenderer = (props: { children: any, href: string }): JSX.Element => {
     return (
       <TextLink
         anchorComponent='a'
@@ -29,7 +29,7 @@ export class FormattedText extends React.PureComponent<FormattedTextProps> {
     )
   }
 
-  textRenderer = (text: string): JSX.Element => {
+  public textRenderer = (text: string): JSX.Element => {
     return reactStringReplace(text, /(?:^|\s):([^:\s]+):(?=\s|$)/g, (match: string, i: number) => {
       return <Emoji
         key={i}

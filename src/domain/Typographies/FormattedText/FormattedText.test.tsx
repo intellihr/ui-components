@@ -120,7 +120,7 @@ describe('<FormattedText />', () => {
     const wrapper = shallow(
       <FormattedText
         text=':crocodile:'
-        renderEmojis
+        renderEmojis={true}
       />
     )
 

@@ -15,9 +15,9 @@ const withStyledBreakpoints = <P extends IWithStyledBreakpoints>(StyledBreakpoin
   class extends React.PureComponent<P & Partial<IWithStyledBreakpoints>> {
     get breakpoints () {
       return styledBreakpoint({
-        small: parseInt(sassGlobals['breakpoint-min']) || 0,
-        medium: parseInt(sassGlobals['breakpoint-tablet']) || 1,
-        large: parseInt(sassGlobals['breakpoint-desktop']) || 2
+        small: parseInt(sassGlobals['breakpoint-min'], 10) || 0,
+        medium: parseInt(sassGlobals['breakpoint-tablet'], 10) || 1,
+        large: parseInt(sassGlobals['breakpoint-desktop'], 10) || 2
       })
     }
 

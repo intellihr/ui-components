@@ -30,7 +30,7 @@ class Badge extends React.PureComponent<IBadgeProps> {
       return (
         <FontAwesomeIcon
           type='refresh'
-          isSpinning
+          isSpinning={true}
           className='refresh-icon'
         />
       )

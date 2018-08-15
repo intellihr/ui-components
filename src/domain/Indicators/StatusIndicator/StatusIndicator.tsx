@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '../../Icons'
 
 const style = require('./StatusIndicator.scss')
 
-export interface StatusIndicatorProps {
+export interface IStatusIndicatorProps {
     /** Text to show inside the label  */
     text: string
 
@@ -21,8 +21,8 @@ export interface StatusIndicatorProps {
     isHollow?: boolean
   }
 
-export class StatusIndicator extends React.Component<StatusIndicatorProps> {
-  public static defaultProps: Partial<StatusIndicatorProps> = {
+export class StatusIndicator extends React.Component<IStatusIndicatorProps> {
+  public static defaultProps: Partial<IStatusIndicatorProps> = {
     isHollow: false
   }
 

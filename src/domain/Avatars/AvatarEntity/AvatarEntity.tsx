@@ -6,8 +6,8 @@ import {
   SecondaryTextWrapper,
   TertiaryTextWrapper
 } from './style'
-import { Avatar, AvatarProps } from '@Domain/Avatars'
-import { Text } from '@Domain/Typographies'
+import { Avatar, IAvatarProps } from '../../Avatars'
+import { Text } from '../../Typographies'
 
 export interface IAvatarEntity {
   /** The primary text */
@@ -22,7 +22,7 @@ export interface IAvatarEntity {
   isHoverable?: boolean
 }
 
-export class AvatarEntity extends React.PureComponent<IAvatarEntity & AvatarProps> {
+export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarProps> {
   public static defaultProps: Partial<IAvatarEntity> = {
     isCompact: false,
     isHoverable: false
@@ -79,7 +79,7 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & AvatarProp
       >
         <Text
           size='xsmall'
-          isTruncated
+          isTruncated={true}
           isInline={isCompact}
         >
           {text}
@@ -104,7 +104,7 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & AvatarProp
           size='xsmall'
           weight='heavy'
           isInline={false}
-          isTruncated
+          isTruncated={true}
         >
           {tertiaryText}
         </Text>

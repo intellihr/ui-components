@@ -25,37 +25,6 @@ interface IManualMenuProps {
 }
 
 class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
-  public static defaultProps: Partial<IManualMenuProps> = {
-    parentAnchorPosition: 'auto',
-    dropdownAnchorPosition: 'auto'
-  }
-
-  public static AUTO_FLIP_CUTOFF = 2 / 3
-
-  private currentlyMounted: boolean = false
-
-  componentDidMount () {
-    this.currentlyMounted = true
-
-    window.addEventListener('resize', this.onWindowUpdate)
-    window.addEventListener('scroll', this.debounceOnWindowUpdate)
-  }
-
-  componentWillUnmount () {
-    this.currentlyMounted = false
-
-    window.removeEventListener('scroll', this.onWindowUpdate)
-    window.removeEventListener('resize', this.debounceOnWindowUpdate)
-  }
-
-  private onWindowUpdate = () => {
-    // This allows the menu to reposition correctly when the window changes
-    if (this.currentlyMounted) {
-      this.forceUpdate()
-    }
-  }
-
-  private debounceOnWindowUpdate = debounce(this.onWindowUpdate, 100)
 
   private get parentBoundingRect (): ClientRect | DOMRect {
     const {
@@ -89,7 +58,7 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
       parentAnchorPosition
     } = this.props
 
-    if (parentAnchorPosition !== 'auto') return parentAnchorPosition!
+    if (parentAnchorPosition !== 'auto') { return parentAnchorPosition! }
 
     return {
       xPos: this.parentInLeftSideOfWindow ? Props.Position.Left : Props.Position.Right,
@@ -102,7 +71,7 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
       dropdownAnchorPosition
     } = this.props
 
-    if (dropdownAnchorPosition !== 'auto') return dropdownAnchorPosition!
+    if (dropdownAnchorPosition !== 'auto') { return dropdownAnchorPosition! }
 
     return {
       xPos: this.parentInLeftSideOfWindow ? Props.Position.Left : Props.Position.Right,
@@ -162,6 +131,66 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
     })
   }
 
+  private get transition () {
+    const {
+      isDropdownOpen
+    } = this.props
+
+    return (
+      <Transition
+        in={isDropdownOpen}
+        timeout={100}
+        mountOnEnter={true}
+        unmountOnExit={true}
+      >
+        {this.animatedMenu}
+      </Transition>
+    )
+  }
+  public static defaultProps: Partial<IManualMenuProps> = {
+    parentAnchorPosition: 'auto',
+    dropdownAnchorPosition: 'auto'
+  }
+
+  public static AUTO_FLIP_CUTOFF = 2 / 3
+
+  private currentlyMounted: boolean = false
+
+
+  public componentDidMount () {
+    this.currentlyMounted = true
+
+    window.addEventListener('resize', this.onWindowUpdate)
+    window.addEventListener('scroll', this.debounceOnWindowUpdate())
+  }
+
+  public componentWillUnmount () {
+    this.currentlyMounted = false
+
+    window.removeEventListener('scroll', this.onWindowUpdate)
+    window.removeEventListener('resize', this.debounceOnWindowUpdate())
+  }
+
+  public render (): JSX.Element {
+    return (
+      <React.Fragment>
+        ReactDOM.createPortal(
+          this.transition,
+          document.body
+        )
+      </React.Fragment>
+    )
+  }
+
+  private debounceOnWindowUpdate = () => debounce(this.onWindowUpdate, 100)
+
+  private onWindowUpdate = () => {
+    // This allows the menu to reposition correctly when the window changes
+    if (this.currentlyMounted) {
+      this.forceUpdate()
+    }
+  }
+
   private animatedMenu = (animationState: string) => {
     const {
       className,
@@ -195,30 +224,6 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
           </StyledSectionList>
         </FocusTrap>
       </StyledDropdownMenu>
-    )
-  }
-
-  private get transition () {
-    const {
-      isDropdownOpen
-    } = this.props
-
-    return (
-      <Transition
-        in={isDropdownOpen}
-        timeout={100}
-        mountOnEnter
-        unmountOnExit
-      >
-        {this.animatedMenu}
-      </Transition>
-    )
-  }
-
-  public render () {
-    return ReactDOM.createPortal(
-      this.transition,
-      document.body
     )
   }
 }

@@ -8,15 +8,15 @@ import {
   isFunction,
   lowerCase
 } from 'lodash'
-import { Callout } from '@Domain/Callouts'
-import { DataTablePagination, DataTablePaginationProps } from './DataTablePagination'
-import { TextInput } from '@Domain/Inputs'
-import { Props } from '@Common/types'
+import { Callout } from '../../Callouts'
+import { DataTablePagination, IDataTablePaginationProps } from './DataTablePagination'
+import { TextInput } from '../../Inputs'
+import { Props } from '../../../common/types'
 const style = require('./DataTable.scss')
 
 type alignmentOptions = Props.Position.Left | Props.Position.Center | Props.Position.Right
 
-interface DataTableColumn extends Column {
+interface IDataTableColumn extends Column {
   /** Alignment for the header on the column */
   headerAlignment?: alignmentOptions
 
@@ -24,19 +24,19 @@ interface DataTableColumn extends Column {
   columnAlignment?: alignmentOptions
 }
 
-interface DataTableState {
+interface IDataTableState {
   /** Currently applied search filter */
   searchFilter: string | null
 }
 
-interface DataTableProps {
+interface IDataTableProps {
   /** Name for this table */
   tableId?: string
 
   /** List of all row data */
   data: any[]
   /** Column definitions for the table */
-  columns: DataTableColumn[]
+  columns: IDataTableColumn[]
 
   /** Whether the table can be sorted on its columns */
   sortable?: boolean
@@ -58,12 +58,12 @@ interface DataTableProps {
    * Overrides for react-table props which can be applied to this table.
    * Supports all options from https://www.npmjs.com/package/react-table.
    * Use this if you need to provide any custom alterations to how the table works.
-   * */
+   */
   reactTableOverrides?: Partial<TableProps>
 }
 
-class DataTable extends React.Component<DataTableProps, DataTableState> {
-  public static defaultProps: Partial<DataTableProps> = {
+class DataTable extends React.Component<IDataTableProps, IDataTableState> {
+  public static defaultProps: Partial<IDataTableProps> = {
     sortable: false,
     showPagination: false,
     showSearchFilter: false,
@@ -72,7 +72,7 @@ class DataTable extends React.Component<DataTableProps, DataTableState> {
     tableId: 'datatable'
   }
 
-  constructor (props: DataTableProps) {
+  constructor (props: IDataTableProps) {
     super(props)
 
     this.state = {
@@ -80,10 +80,10 @@ class DataTable extends React.Component<DataTableProps, DataTableState> {
     }
   }
 
-  defaultFilterMethod = (
+  public defaultFilterMethod = (
     columnFilter: Filter,
     row: any,
-    column: DataTableColumn
+    column: IDataTableColumn
   ): boolean => {
     // We filter either by the global state filter or by the individual column filter if it exists
     let { searchFilter } = this.state
@@ -108,7 +108,7 @@ class DataTable extends React.Component<DataTableProps, DataTableState> {
     return columnValue.includes(needle)
   }
 
-  shouldFilterRow = (row: any): boolean => {
+  public shouldFilterRow = (row: any): boolean => {
     const { searchFilter } = this.state
     const { columns } = this.props
 
@@ -139,7 +139,7 @@ class DataTable extends React.Component<DataTableProps, DataTableState> {
     return filter(data, this.shouldFilterRow)
   }
 
-  get columns (): DataTableColumn[] {
+  get columns (): IDataTableColumn[] {
     const { columns } = this.props
 
     return columns.map((column) => {
@@ -152,7 +152,7 @@ class DataTable extends React.Component<DataTableProps, DataTableState> {
     })
   }
 
-  columnClassName (alignment: alignmentOptions | undefined): string | undefined {
+  public columnClassName (alignment: alignmentOptions | undefined): string | undefined {
     switch (alignment) {
       case Props.Position.Right:
         return 'content-right'
@@ -161,7 +161,7 @@ class DataTable extends React.Component<DataTableProps, DataTableState> {
     }
   }
 
-  updateSearchFilter = (event: ChangeEvent<HTMLInputElement>) => {
+  public updateSearchFilter = (event: ChangeEvent<HTMLInputElement>) => {
     this.setState({
       searchFilter: event.target.value
     })
@@ -186,12 +186,12 @@ class DataTable extends React.Component<DataTableProps, DataTableState> {
     }
   }
 
-  noDataComponent = (props: any): JSX.Element => {
+  public noDataComponent = (props: any): JSX.Element => {
     const {
       noDataComponent
     } = this.props
 
-    if (noDataComponent) return noDataComponent
+    if (noDataComponent) { return noDataComponent }
 
     return (
       <Callout type='no-data' shouldFocus={false} >
@@ -200,7 +200,7 @@ class DataTable extends React.Component<DataTableProps, DataTableState> {
     )
   }
 
-  paginationComponent = (props: DataTablePaginationProps): JSX.Element => {
+  public paginationComponent = (props: IDataTablePaginationProps): JSX.Element => {
     return (
       <DataTablePagination
         key='pagination'
@@ -265,8 +265,8 @@ class DataTable extends React.Component<DataTableProps, DataTableState> {
 }
 
 export {
-  DataTableColumn,
-  DataTableState,
-  DataTableProps,
+  IDataTableColumn,
+  IDataTableState,
+  IDataTableProps,
   DataTable
 }

@@ -58,7 +58,7 @@ export class ListClickableColumn extends React.PureComponent<IListClickableColum
     return children
   }
 
-  handleClick = (): void | undefined => {
+  public handleClick = (): void | undefined => {
     const {
       data,
       rowIndex,

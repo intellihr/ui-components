@@ -31,7 +31,7 @@ export class ListHeader extends React.PureComponent<IListHeader> {
         <Tooltip
           message={tooltipText}
           onShow={onShowTooltip}
-          withIcon
+          withIcon={true}
         >
           {labelContainer}
         </Tooltip>
