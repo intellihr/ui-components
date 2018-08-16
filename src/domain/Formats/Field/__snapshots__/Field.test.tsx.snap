@@ -83,17 +83,20 @@ exports[`<Field /> should render a Field component, creating a Text child with t
       }
     >
       <TextComponent
+        color="n800"
         isInline={true}
         size="medium"
         weight="normal"
       >
         <styled.span
+          color="n800"
           isInline={true}
           size="medium"
           weight="normal"
         >
           <span
             className="c1"
+            color="n800"
             size="medium"
           >
             1.000
@@ -188,17 +191,20 @@ exports[`<Field /> should render a Field component, creating a Text child with t
       }
     >
       <TextComponent
+        color="n800"
         isInline={true}
         size="medium"
         weight="normal"
       >
         <styled.span
+          color="n800"
           isInline={true}
           size="medium"
           weight="normal"
         >
           <span
             className="c1"
+            color="n800"
             size="medium"
           >
             Chief Executive Officer
