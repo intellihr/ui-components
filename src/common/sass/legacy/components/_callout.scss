@@ -1,11 +1,11 @@
 $callouts: (
-  neutral:       (background: $neutral-light,                border: $border,         color: $main-text,                title: $main-text),
-  info:          (background: lighten($secondary, 44%),      border: $secondary,      color: $main-text,                title: $main-text),
-  success:       (background: lighten($success, 51%),        border: $success,        color: $main-text,                title: $main-text),
-  warning:       (background: lighten($warning, 34%),        border: $warning,        color: $main-text,                title: $main-text),
-  error:         (background: lighten($alert, 33%),          border: $alert,          color: darken($alert, 16%),       title: darken($alert, 16%)),
-  no-data:       (background: lighten($neutral-light, 0.5%), border: $neutral-light,  color: $main-text-light,          title: $main-text),
-  preview-mode:  (background: $neutral-light,                border: $neutral-light,  color: lighten($main-text, 20%),  title: $main-text)
+  neutral:       (background: $n200, border: $n400, color: $n800, title: $n700),
+  info:          (background: $c100, border: $c400, color: $c600, title: $c600),
+  success:       (background: $g100, border: $g400, color: $g600, title: $g600),
+  warning:       (background: $o100, border: $o400, color: $o600, title: $o600),
+  error:         (background: $r100, border: $r400, color: $r600, title: $r600),
+  no-data:       (background: $n150, border: $n400, color: $n800, title: $n700),
+  preview-mode:  (background: $n150, border: $n150, color: $n600, title: $n700)
 );
 
 @mixin add-callout ($background, $border, $color, $title) {
