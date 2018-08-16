@@ -36,8 +36,8 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
 .c0 {
   margin-right: auto;
   margin-left: auto;
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
 }
 
 .c1 {
@@ -73,6 +73,8 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
               "xs": -1,
             },
             "gridSize": 12,
+            "gutterWidth": 0,
+            "outerMargin": 0,
           },
         }
       }
