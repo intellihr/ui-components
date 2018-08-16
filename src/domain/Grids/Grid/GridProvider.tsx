@@ -24,6 +24,8 @@ class GridProvider extends React.PureComponent {
         theme={{
           flexboxgrid: {
             gridSize: 12,
+            gutterWidth: 0,
+            outerMargin: 0,
             breakpoints: this.breakpoints
           }
         }}
