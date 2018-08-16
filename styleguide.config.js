@@ -47,6 +47,12 @@ module.exports = {
           ]
         },
         {
+          name: 'Layouts',
+          components: [
+            'src/domain/Layouts/PageLayout/PageLayout'
+          ]
+        },
+        {
           name: 'Badges',
           components: [
             'src/domain/Badges/Badge/Badge'
