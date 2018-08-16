@@ -8,6 +8,8 @@ import { StyledDropdownMenu, StyledSectionList } from './style'
 import { Section, ISectionProps } from './Section'
 
 interface IManualMenuProps {
+  /** id to use for the menu to identify it on the page; required for accessibility */
+  id: string,
   /** Any custom class names */
   className?: string,
   /** What position on the parent to anchor relative to; 'auto' will find best position automatically */
@@ -25,7 +27,6 @@ interface IManualMenuProps {
 }
 
 class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
-
   private get parentBoundingRect (): ClientRect | DOMRect {
     const {
       parentRef
@@ -151,28 +152,27 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
       </Transition>
     )
   }
-  public static defaultProps: Partial<IManualMenuProps> = {
+
+  public static AUTO_FLIP_CUTOFF = 2 / 3
+  public static defaultProps = {
     parentAnchorPosition: 'auto',
     dropdownAnchorPosition: 'auto'
   }
 
-  public static AUTO_FLIP_CUTOFF = 2 / 3
-
   private currentlyMounted: boolean = false
-
 
   public componentDidMount () {
     this.currentlyMounted = true
 
     window.addEventListener('resize', this.onWindowUpdate)
-    window.addEventListener('scroll', this.debounceOnWindowUpdate())
+    window.addEventListener('scroll', this.debounceOnWindowUpdate)
   }
 
   public componentWillUnmount () {
     this.currentlyMounted = false
 
     window.removeEventListener('scroll', this.onWindowUpdate)
-    window.removeEventListener('resize', this.debounceOnWindowUpdate())
+    window.removeEventListener('resize', this.debounceOnWindowUpdate)
   }
 
   public render (): React.ReactPortal {
@@ -182,8 +182,6 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
     )
   }
 
-  private debounceOnWindowUpdate = () => debounce(this.onWindowUpdate, 100)
-
   private onWindowUpdate = () => {
     // This allows the menu to reposition correctly when the window changes
     if (this.currentlyMounted) {
@@ -191,8 +189,12 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
     }
   }
 
+  // tslint:disable-next-line:member-ordering
+  private debounceOnWindowUpdate = debounce(this.onWindowUpdate, 100)
+
   private animatedMenu = (animationState: string) => {
     const {
+      id,
       className,
       isDropdownOpen,
       onDropdownClose
@@ -218,7 +220,9 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
           tag='span'
         >
           <StyledSectionList
+            id={id}
             className={className}
+            role='menu'
           >
             {this.dropdownSections}
           </StyledSectionList>

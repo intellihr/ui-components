@@ -1,5 +1,6 @@
 import React, { RefObject } from 'react'
 import moment, { Moment } from 'moment'
+import uuid from 'uuid'
 import { Props } from '../../../common/types'
 import { FontAwesomeIcon } from '../../Icons'
 import { DefaultDropdownButton, StyledToggleContainer } from './subcomponents/style'
@@ -8,6 +9,7 @@ import { ISectionProps, Section } from './subcomponents/Section'
 
 interface IDropdownMenuState {
   isDropdownOpen: boolean,
+  dropdownId?: string,
   lastClosedTime?: Moment
 }
 
@@ -29,17 +31,22 @@ interface IDropdownMenuProps {
 }
 
 class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenuState> {
-
   private get toggleComponent () {
     const {
-      toggleComponent
-    } = this.props
+      isDropdownOpen,
+      dropdownId
+    } = this.state
+    const { toggleComponent } = this.props
 
     return (
       <span>
         <StyledToggleContainer
           onClick={this.openMenu}
           innerRef={this.toggleComponentRef}
+          role='button'
+          aria-haspopup='true'
+          aria-expanded={isDropdownOpen}
+          aria-owns={dropdownId}
         >
           {toggleComponent}
         </StyledToggleContainer>
@@ -48,7 +55,10 @@ class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenu
   }
 
   private get dropdownMenu (): JSX.Element | null {
-    const { isDropdownOpen } = this.state
+    const {
+      isDropdownOpen,
+      dropdownId
+    } = this.state
     const {
       className,
       sections,
@@ -58,6 +68,7 @@ class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenu
 
     return (
       <ManualMenu
+        id={dropdownId || ''}
         className={className}
         isDropdownOpen={isDropdownOpen}
         onDropdownClose={this.close}
@@ -68,11 +79,11 @@ class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenu
       />
     )
   }
+
   public static ManualMenu = ManualMenu
   public static Section = Section
   public static DefaultDropdownButton = DefaultDropdownButton
-
-  public static defaultProps: Partial<IDropdownMenuProps> = {
+  public static defaultProps = {
     toggleComponent: (
       <DefaultDropdownButton>
         <FontAwesomeIcon type='ellipsis-v' />
@@ -80,7 +91,9 @@ class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenu
     )
   }
 
-  public state: IDropdownMenuState = { isDropdownOpen: false }
+  public state: IDropdownMenuState = {
+    isDropdownOpen: false
+  }
 
   private toggleComponentRef: RefObject<HTMLSpanElement> = React.createRef()
 
@@ -105,13 +118,17 @@ class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenu
 
     // Hack to prevent reopening the menu on the same click as closing it
     if (!lastClosedTime || (moment().diff(lastClosedTime) > 300)) {
-      this.setState({ isDropdownOpen: true })
+      this.setState({
+        isDropdownOpen: true,
+        dropdownId: uuid.v4()
+      })
     }
   }
 
   private close = () => {
     this.setState({
       isDropdownOpen: false,
+      dropdownId: undefined,
       lastClosedTime: moment()
     })
   }

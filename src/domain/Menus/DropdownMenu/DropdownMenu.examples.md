@@ -323,6 +323,11 @@ class ManualExample extends React.PureComponent {
       <React.Fragment>
         <Button
           onClick={() => this.setState({ isOpen: true })}
+          buttonOverrides={{
+            'aria-haspopup': 'true',
+            'aria-expanded': isOpen,
+            'aria-owns': 'manual-menu-example'
+          }}
         >
           Show Menu
         </Button>
@@ -338,6 +343,7 @@ class ManualExample extends React.PureComponent {
           The dropdown will be anchored to this box
         </div>
         <DropdownMenu.ManualMenu
+          id='manual-menu-example'
           isDropdownOpen={this.state.isOpen}
           onDropdownClose={() => this.setState({ isOpen: false })}
           sections={[
