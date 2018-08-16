@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components'
 import { getColor } from '../../../common/legacy'
 
+const variables = require('../../../common/sass/variables.scss')
+
 export interface ITextWrapperProps {
   color?: string | 'subtle'
   isInline?: boolean
@@ -17,11 +19,11 @@ export const TextWrapper = styled.span`
     switch (props.color) {
       case 'subtle':
         return `
-          color: ${getColor('main-text-light')};
+          color: ${variables.n600};
         `
       default:
         return `
-          color: ${props.color};
+          color: ${variables.n800};
         `
     }
   }}
