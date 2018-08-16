@@ -1,5 +1,5 @@
 import React from 'react'
-import { GridProvider } from '@Domain/Grids'
+import { GridProvider } from '../../Grids'
 
 const sassGlobals = require('@Common/sass/variables.scss')
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { buttonClass, IBaseButtonProps } from '../services/buttonHelper'
-import { Anchor } from '@Domain/Internals'
+import { Anchor } from '../../Internals'
 import { BaseButton } from '../BaseButton'
 
 export interface ILinkButtonProps extends IBaseButtonProps {

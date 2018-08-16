@@ -1,8 +1,8 @@
 import React from 'react'
 import { Grid as StyledGrid } from 'react-styled-flexboxgrid'
 import { ThemeProvider } from 'styled-components'
-import { pxToRem } from '@Domain/Styles'
-const sassGlobals = require('@Common/sass/variables.scss')
+import { pxToRem } from '../../Styles'
+const sassGlobals = require('../../../common/sass/variables.scss')
 
 class GridProvider extends React.PureComponent {
   private get breakpoints () {

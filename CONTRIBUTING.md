@@ -68,10 +68,8 @@ you should group it together with your component (e.g. `getColor `in `Color` com
 
 You should only create your files here when you are having difficulty to classify it by component.
 
-Import by alias is possible
-
 ```typescript
-import { Props } from '@Common/types'
+import { Props } from '../../common/types'
 ```
 
 **Domain**
@@ -82,10 +80,8 @@ You should always create your component within a given domain or create one.
 
 Each domain exports its publicly available resource using `index.ts`.
 
-Import by alias is possible
-
 ```typescript
-import { Button } from '@Domain/Buttons'
+import { Button } from '../../domain/Buttons'
 ```
 
 Exports in `src/domain/index.ts` is necessary for the library consumer.
@@ -94,13 +90,22 @@ However when used internally, you need to specify the domain
 Good:
 
 ```typescript
-import { Button } from '@Domains/Button'
+import { Button } from '../../domain/Button'
 ```
 
 Bad:
 
 ```typescript
-import { Button } from '@Domains'
+import { Button } from '../../domain'
+```
+
+**Path Mapping**
+
+Path Mapping is possible only in `.examples.md` or `.test.tsx` files.
+
+```typescript
+import { XXX } from '@Domain/XXX'
+import { YYY } from '@Common/YYY'
 ```
 
 ### Styleguide Structure

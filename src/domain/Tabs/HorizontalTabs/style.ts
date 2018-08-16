@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
-import { getColor } from '@Common/index'
+import { getColor } from '../../../common/legacy'
 
 const HorizontalTabsContainer = styled.div``
 

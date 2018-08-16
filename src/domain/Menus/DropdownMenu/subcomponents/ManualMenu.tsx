@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { debounce, map } from 'lodash'
 import { Transition } from 'react-transition-group'
 import FocusTrap from 'focus-trap-react'
-import { Props } from '@Common/types'
+import { Props } from '../../../../common/types'
 import { StyledDropdownMenu, StyledSectionList } from './style'
 import { Section, ISectionProps } from './Section'
 
@@ -175,14 +175,10 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
     window.removeEventListener('resize', this.debounceOnWindowUpdate())
   }
 
-  public render (): JSX.Element {
-    return (
-      <React.Fragment>
-        ReactDOM.createPortal(
-          this.transition,
-          document.body
-        )
-      </React.Fragment>
+  public render (): React.ReactPortal {
+    return ReactDOM.createPortal(
+      this.transition,
+      document.body
     )
   }
 

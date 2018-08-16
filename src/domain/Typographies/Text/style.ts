@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { getColor } from '@Common/legacy'
+import { getColor } from '../../../common/legacy'
 
 export interface ITextWrapperProps {
   color?: string | 'subtle'

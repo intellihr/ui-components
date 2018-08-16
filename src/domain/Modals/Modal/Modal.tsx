@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import { StyledReactModal } from './style'
-import { Props } from '@Common/types'
+import { Props } from '../../../common/types'
 
 enum ReactModalSize {
   medium = 'fixed-medium-up',

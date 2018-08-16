@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown'
 import { Emoji } from 'emoji-mart'
 import reactStringReplace from 'react-string-replace'
 import { StyledFormattedText } from './style'
-import { TextLink } from '@Domain/Links'
+import { TextLink } from '../../Links'
 
 export interface IFormattedTextProps {
   /** Preformatted markdown text to display */

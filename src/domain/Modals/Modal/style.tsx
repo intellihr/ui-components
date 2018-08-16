@@ -2,8 +2,8 @@ import React from 'react'
 import styled, { StyledFunction, StyledInterface, StyledComponentClass } from 'styled-components'
 import ReactModal from 'react-modal'
 import { flow } from 'lodash'
-import { getColor } from '@Common/legacy'
-import { IWithStyledBreakpoints, withStyledBreakpoints } from '@Domain/Styles'
+import { getColor } from '../../../common/legacy'
+import { IWithStyledBreakpoints, withStyledBreakpoints } from '../../Styles'
 
 const { radius } = require('@Common/sass/variables.scss')
 
