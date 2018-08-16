@@ -11,7 +11,7 @@ export interface IPageLayoutProps {
 }
 
 export class PageLayout extends React.Component<IPageLayoutProps> {
-  static Region = Region
+  public static Region = Region
 
   public render (): JSX.Element | null {
     const { children, layoutType } = this.props
