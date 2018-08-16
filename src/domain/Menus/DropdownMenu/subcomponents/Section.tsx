@@ -96,7 +96,7 @@ class Section extends React.PureComponent<ISectionProps, never> {
 
     const Component = this.component
     return (
-      <StyledSection{...this.styleProps}>
+      <StyledSection {...this.styleProps}>
         <Component
           {...componentProps}
           onClick={onClick}

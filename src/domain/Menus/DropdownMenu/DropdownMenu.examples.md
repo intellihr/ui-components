@@ -324,7 +324,7 @@ class ManualExample extends React.PureComponent {
         <Button
           onClick={() => this.setState({ isOpen: true })}
           buttonOverrides={{
-            'aria-haspopup': 'true',
+            'aria-haspopup': true,
             'aria-expanded': isOpen,
             'aria-owns': 'manual-menu-example'
           }}

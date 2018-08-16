@@ -44,9 +44,9 @@ class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenu
           onClick={this.openMenu}
           innerRef={this.toggleComponentRef}
           role='button'
-          aria-haspopup='true'
           aria-expanded={isDropdownOpen}
           aria-owns={dropdownId}
+          aria-haspopup
         >
           {toggleComponent}
         </StyledToggleContainer>
