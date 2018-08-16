@@ -3,7 +3,7 @@
 exports[`<Field /> should render a Field component, creating a Text child with the provided number 1`] = `
 .c0 {
   font-family: 'Open Sans',Arial,sans-serif;
-  color: hsl(210,13.4%,47.2%);
+  color: n600;
   font-weight: 400;
   display: block;
   font-size: .875rem;
@@ -11,7 +11,7 @@ exports[`<Field /> should render a Field component, creating a Text child with t
 
 .c1 {
   font-family: 'Open Sans',Arial,sans-serif;
-  color: undefined;
+  color: n800;
   font-weight: 400;
   font-size: 1rem;
 }
@@ -83,17 +83,20 @@ exports[`<Field /> should render a Field component, creating a Text child with t
       }
     >
       <TextComponent
+        color="n800"
         isInline={true}
         size="medium"
         weight="normal"
       >
         <styled.span
+          color="n800"
           isInline={true}
           size="medium"
           weight="normal"
         >
           <span
             className="c1"
+            color="n800"
             size="medium"
           >
             1.000
@@ -108,7 +111,7 @@ exports[`<Field /> should render a Field component, creating a Text child with t
 exports[`<Field /> should render a Field component, creating a Text child with the provided text 1`] = `
 .c0 {
   font-family: 'Open Sans',Arial,sans-serif;
-  color: hsl(210,13.4%,47.2%);
+  color: n600;
   font-weight: 400;
   display: block;
   font-size: .875rem;
@@ -116,7 +119,7 @@ exports[`<Field /> should render a Field component, creating a Text child with t
 
 .c1 {
   font-family: 'Open Sans',Arial,sans-serif;
-  color: undefined;
+  color: n800;
   font-weight: 400;
   font-size: 1rem;
 }
@@ -188,17 +191,20 @@ exports[`<Field /> should render a Field component, creating a Text child with t
       }
     >
       <TextComponent
+        color="n800"
         isInline={true}
         size="medium"
         weight="normal"
       >
         <styled.span
+          color="n800"
           isInline={true}
           size="medium"
           weight="normal"
         >
           <span
             className="c1"
+            color="n800"
             size="medium"
           >
             Chief Executive Officer
@@ -213,7 +219,7 @@ exports[`<Field /> should render a Field component, creating a Text child with t
 exports[`<Field /> should render a Field component, with the provided component child 1`] = `
 .c0 {
   font-family: 'Open Sans',Arial,sans-serif;
-  color: hsl(210,13.4%,47.2%);
+  color: n600;
   font-weight: 400;
   display: block;
   font-size: .875rem;

@@ -1,6 +1,7 @@
 import React from 'react'
 import { TextWrapper } from './style'
 import { withSkeleton, ISkeletonComponentProps } from '../../Skeletons'
+const { n800 } = require('../../../common/sass/variables.scss')
 
 export interface ITextProps {
   /** Text to display */
@@ -18,14 +19,15 @@ export interface ITextProps {
   /** If true, will display the text inline */
   isInline?: boolean
   /** Color of the text */
-  color?: string | 'subtle'
+  color?: string
 }
 
 export class TextComponent extends React.PureComponent<ITextProps> {
   public static defaultProps: Partial<ITextProps> = {
     isInline: true,
     size: 'medium',
-    weight: 'normal'
+    weight: 'normal',
+    color: n800
   }
 
   public render (): JSX.Element {
