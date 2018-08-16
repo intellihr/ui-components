@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components'
 
+const variables = require('../../../common/sass/variables.scss')
+
 interface IBadgeWrapper {
   backgroundColor?: string
   color?: string
@@ -8,13 +10,13 @@ interface IBadgeWrapper {
 
 const BadgeWrapper = styled.span`
   ${(props: IBadgeWrapper) => props.backgroundColor && css`
-    background-color: ${props.backgroundColor};  
+    background-color: ${props.backgroundColor};
   `}
-  
+
   ${(props: IBadgeWrapper) => props.color && css`
     color: ${props.color};
   `}
-  
+
   &, .fa {
   ${(props: IBadgeWrapper) => {
     switch (props.size) {
@@ -42,19 +44,19 @@ const BadgeWrapper = styled.span`
     }
   }}
   }
-  
+
   box-shadow: 0 2px 2px rgba(0,0,0,0.24);
-  border: 1px solid $neutral-base;
+  border: 1px solid ${variables.n400};
   border-radius: 50%;
-  color: $neutral-text;
+  color: ${variables.n100};
   display: inline-block;
   font-weight: 600;
   text-align: center;
   user-select: none;
-  
+
   .refresh-icon {
-    background-color: $main-background;
-    color: $primary-base;
+    background-color: transparent;
+    color: ${variables.n700};
   }
 `
 
