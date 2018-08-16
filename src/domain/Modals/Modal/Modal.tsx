@@ -42,7 +42,7 @@ class Modal extends React.PureComponent<IModalProps> {
   }
 
   get baseZIndex (): number {
-    return parseInt(zIndexModal)
+    return parseInt(zIndexModal, 10)
   }
 
   get classNames (): string {
