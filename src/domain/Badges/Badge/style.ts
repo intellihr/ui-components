@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-const variables = require('../../../common/sass/variables.scss')
+const { n100, n400, n700 } = require('../../../common/sass/variables.scss')
 
 interface IBadgeWrapper {
   backgroundColor?: string
@@ -46,9 +46,9 @@ const BadgeWrapper = styled.span`
   }
 
   box-shadow: 0 2px 2px rgba(0,0,0,0.24);
-  border: 1px solid ${variables.n400};
+  border: 1px solid ${n400};
   border-radius: 50%;
-  color: ${variables.n100};
+  color: ${n100};
   display: inline-block;
   font-weight: 600;
   text-align: center;
@@ -56,7 +56,7 @@ const BadgeWrapper = styled.span`
 
   .refresh-icon {
     background-color: transparent;
-    color: ${variables.n700};
+    color: ${n700};
   }
 `
 
