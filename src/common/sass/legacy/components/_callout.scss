@@ -1,9 +1,9 @@
 $callouts: (
   neutral:       (background: $n200, border: $n400, color: $n800, title: $n700),
-  info:          (background: $c100, border: $c400, color: $c600, title: $c600),
-  success:       (background: $g100, border: $g400, color: $g600, title: $g600),
-  warning:       (background: $o100, border: $o400, color: $o600, title: $o600),
-  error:         (background: $r100, border: $r400, color: $r600, title: $r600),
+  info:          (background: $c100, border: $c400, color: $n800, title: $n700),
+  success:       (background: $g100, border: $g400, color: $n800, title: $n700),
+  warning:       (background: $o100, border: $o400, color: $n800, title: $n700),
+  error:         (background: $r100, border: $r400, color: $n800, title: $n700),
   no-data:       (background: $n150, border: $n400, color: $n800, title: $n700),
   preview-mode:  (background: $n150, border: $n150, color: $n600, title: $n700)
 );
