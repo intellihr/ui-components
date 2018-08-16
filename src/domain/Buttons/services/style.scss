@@ -627,21 +627,21 @@ $button-styles: (
   @extend %button;
 }
 
-/**
- * Legacy global button class for non-javascript support
- */
+// --------------
+// Legacy global button class for non-javascript support
+// --------------
 .button {
+  @extend %button;
+
   // Extend neutral by default
   @include add-button-style(
-      map_get($button-styles, neutral)
+    map-get($button-styles, neutral)
   );
-
-  @extend %button;
 
   // Only used on legacy pages for dropdowns
   &.holster {
     @include add-button-style(
-        map_get($button-styles, neutral-borderless)
+      map-get($button-styles, neutral-borderless)
     );
 
     margin: 0;
