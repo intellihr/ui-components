@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid as StyledGrid } from 'react-styled-flexboxgrid'
 import { ThemeProvider } from 'styled-components'
 import { pxToRem } from '../../Styles'
-const { breakpointMin, breakpointTablet, breakpointDesktop} = require('../../../common/sass/variables.scss')
+const { breakpointMin, breakpointTablet, breakpointDesktop } = require('../../../common/sass/variables.scss')
 
 class GridProvider extends React.PureComponent {
   private get breakpoints () {

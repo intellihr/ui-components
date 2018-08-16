@@ -1,7 +1,7 @@
 import React from 'react'
 import styledBreakpoint from '@intellihr/styled-components-breakpoint'
 
-const { breakpointMin, breakpointTablet, breakpointDesktop} = require('@Common/sass/variables.scss')
+const { breakpointMin, breakpointTablet, breakpointDesktop } = require('@Common/sass/variables.scss')
 
 interface IWithStyledBreakpoints {
   breakpoint: {
