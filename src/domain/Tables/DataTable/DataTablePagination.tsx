@@ -204,14 +204,10 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
       onPageSizeChange
     } = this.props
 
-    const { page } = this.state
-
-    const changeHandler = (e: React.ChangeEvent<HTMLSelectElement>) => onPageSizeChange(Number(e.target.value), page)
-
     if (showPageSizeOptions) {
       const pageSizeSelect = (
         <select
-          onChange={changeHandler}
+          onChange={this.changeHandler}
           value={pageSize}
         >
           {pageSizeOptions.map((option: number) => (
@@ -266,5 +262,17 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
         </div>
       </div>
     )
+  }
+
+  private changeHandler = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const {
+      onPageSizeChange
+    } = this.props
+
+    const {
+      page
+    } = this.state
+
+    return onPageSizeChange(Number(e.target.value), page)
   }
 }

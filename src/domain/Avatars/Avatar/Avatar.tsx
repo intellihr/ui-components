@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@Domain/Icons'
 import {
   withSkeleton,
   ISkeletonComponentProps
-} from '../..//Skeletons'
+} from '../../Skeletons'
 const style = require('./Avatar.scss')
 
 export interface IAvatarProps {

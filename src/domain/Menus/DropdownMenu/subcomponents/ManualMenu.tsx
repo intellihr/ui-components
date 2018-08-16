@@ -58,7 +58,9 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
       parentAnchorPosition
     } = this.props
 
-    if (parentAnchorPosition !== 'auto') { return parentAnchorPosition! }
+    if (parentAnchorPosition !== 'auto') {
+      return parentAnchorPosition!
+    }
 
     return {
       xPos: this.parentInLeftSideOfWindow ? Props.Position.Left : Props.Position.Right,
@@ -71,7 +73,9 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
       dropdownAnchorPosition
     } = this.props
 
-    if (dropdownAnchorPosition !== 'auto') { return dropdownAnchorPosition! }
+    if (dropdownAnchorPosition !== 'auto') {
+      return dropdownAnchorPosition!
+    }
 
     return {
       xPos: this.parentInLeftSideOfWindow ? Props.Position.Left : Props.Position.Right,
