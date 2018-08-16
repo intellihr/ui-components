@@ -114,14 +114,14 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
 }
 
 <Avatar
-  handleClick={[Function]}
+  handleClick={[MockFunction]}
   hoverIcon="image"
   hoverLabel="Upload image"
   initials="JW"
   size="large"
 >
   <class_1
-    handleClick={[Function]}
+    handleClick={[MockFunction]}
     hoverIcon="image"
     hoverLabel="Upload image"
     initials="JW"
@@ -129,7 +129,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
   >
     <Skeleton
       className=""
-      handleClick={[Function]}
+      handleClick={[MockFunction]}
       hoverIcon="image"
       hoverLabel="Upload image"
       initials="JW"
@@ -143,7 +143,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
       }
     >
       <AvatarComponent
-        handleClick={[Function]}
+        handleClick={[MockFunction]}
         hoverIcon="image"
         hoverLabel="Upload image"
         initials="JW"
@@ -261,18 +261,18 @@ exports[`<Avatar /> Renders a medium Avatar with initials and a warning status d
 
 exports[`<Avatar /> Renders a small Avatar with initials, with hover effect but no overlay 1`] = `
 <Avatar
-  handleClick={[Function]}
+  handleClick={[MockFunction]}
   initials="JW"
   size="small"
 >
   <class_1
-    handleClick={[Function]}
+    handleClick={[MockFunction]}
     initials="JW"
     size="small"
   >
     <Skeleton
       className=""
-      handleClick={[Function]}
+      handleClick={[MockFunction]}
       initials="JW"
       size="small"
       skeletonOptions={
@@ -284,7 +284,7 @@ exports[`<Avatar /> Renders a small Avatar with initials, with hover effect but 
       }
     >
       <AvatarComponent
-        handleClick={[Function]}
+        handleClick={[MockFunction]}
         initials="JW"
         size="small"
       >

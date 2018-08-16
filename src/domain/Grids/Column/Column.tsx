@@ -22,7 +22,7 @@ class Column extends React.PureComponent<IColumnProps> {
       lg
     } = this.props
 
-    const dimensions: Array<string> = ['xs', 'sm', 'md', 'lg']
+    const dimensions: string[] = ['xs', 'sm', 'md', 'lg']
 
     let previousValue: number = 12
     const that = this

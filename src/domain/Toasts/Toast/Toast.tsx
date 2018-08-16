@@ -3,28 +3,28 @@ import classNames from 'classnames'
 import { IntelliIcon } from '../../Icons'
 const style = require('./style.scss')
 
-export interface ToastProps {
+export interface IToastProps {
   /** Function run when component is mounted (usually a timer if required) */
-  onMount?: Function
+  onMount?: () => void
   /** Function called when close button is clicked */
-  handleClose: any
+  handleClose: (e: React.MouseEvent<HTMLSpanElement>) => void
   /** Type of toast */
   type?: 'success' | 'alert'
   /** Children that will be displayed as toast content */
   children: JSX.Element | string
 }
 
-export class Toast extends React.PureComponent<ToastProps> {
-  public static defaultProps: Partial<ToastProps> = {
+export class Toast extends React.PureComponent<IToastProps> {
+  public static defaultProps: Partial<IToastProps> = {
     type: 'success'
   }
 
-  componentDidMount () {
+  public componentDidMount () {
     const {
       onMount
     } = this.props
 
-    if (onMount) onMount()
+    if (onMount) { onMount() }
   }
 
   get icon (): JSX.Element {

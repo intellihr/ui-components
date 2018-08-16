@@ -6,6 +6,7 @@
 import { Size as _s, AllSizes as _as } from './size'
 import { Position as _p, IPositionXY as _pxy } from './position'
 
+// tslint:disable-next-line:no-namespace
 namespace Props {
   export import Size = _s
   export type AllSizes = _as

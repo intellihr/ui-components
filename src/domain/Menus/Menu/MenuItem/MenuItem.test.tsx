@@ -55,7 +55,7 @@ describe('<MenuItem />', () => {
         url='www.google.com'
         label='Test menu item'
         icon={<IntelliIcon type={'clock'} />}
-        isLoading
+        isLoading={true}
       />
     )
 

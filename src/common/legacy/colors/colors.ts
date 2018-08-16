@@ -6,7 +6,7 @@ function clamp (val: number) {
 }
 
 const lightenAbsolute = (ratio: number) => (c: Color) => {
-  let hsl: any = c.hsl()
+  const hsl: any = c.hsl()
   hsl.color[2] += ratio * 100
   hsl.color[2] = clamp(hsl.color[2])
 
@@ -14,7 +14,7 @@ const lightenAbsolute = (ratio: number) => (c: Color) => {
 }
 
 const darkenAbsolute = (ratio: number) => (c: Color) => {
-  let hsl: any = c.hsl()
+  const hsl: any = c.hsl()
   hsl.color[2] -= ratio * 100
   hsl.color[2] = clamp(hsl.color[2])
 
@@ -22,7 +22,7 @@ const darkenAbsolute = (ratio: number) => (c: Color) => {
 }
 
 function buildFunctionalColour (colour: any) {
-  let functionalColour: any = {}
+  const functionalColour: any = {}
   const requiredKeys = ['base', 'text', 'light', 'hover', 'active']
   const optionalKeyPairs = [
     ['hoverText', 'text', 1.0],
@@ -50,36 +50,6 @@ function buildFunctionalColour (colour: any) {
   return functionalColour
 }
 
-function buildColourList (systemColours: any, functionalColours: any, analyticsColours: any) {
-  let colourList: any = {}
-  let functionalExport: any = {}
-
-  for (const key of Object.keys(systemColours)) {
-    colourList[key] = systemColours[key].toString()
-  }
-
-  for (const key of Object.keys(analyticsColours)) {
-    colourList[`analytics-${key}`] = analyticsColours[key].toString()
-  }
-  colourList['analytics-colours'] = analyticsColours
-
-  for (const key of Object.keys(functionalColours)) {
-    const functionalColour = buildFunctionalColour(functionalColours[key])
-
-    for (const type of Object.keys(functionalColour)) {
-      colourList[key + '-' + type] = functionalColour[type]
-    }
-
-    colourList[key] = functionalColour['base']
-    functionalExport[key] = functionalColour
-  }
-
-  colourList['functional-colours'] = functionalExport
-
-  return mapKeys(colourList, (value, key) => {
-    return kebabCase(key)
-  })
-}
 
 const w = {
   // Brand Colours
@@ -267,4 +237,35 @@ const analyticsColours = {
   red1: Color('#FF4D50')
 }
 
-export default buildColourList(systemColours, functionalColours, analyticsColours)
+function buildColourList () {
+  const colourList: any = {}
+  const functionalExport: any = {}
+
+  for (const key of Object.keys(systemColours) as Array<keyof typeof systemColours>) {
+    colourList[key] = systemColours[key].toString()
+  }
+
+  for (const key of Object.keys(analyticsColours) as Array<keyof typeof analyticsColours>) {
+    colourList[`analytics-${key}`] = analyticsColours[key].toString()
+  }
+  colourList['analytics-colours'] = analyticsColours
+
+  for (const key of Object.keys(functionalColours) as Array<keyof typeof functionalColours>) {
+    const functionalColour = buildFunctionalColour(functionalColours[key])
+
+    for (const type of Object.keys(functionalColour)) {
+      colourList[key + '-' + type] = functionalColour[type]
+    }
+
+    colourList[key] = functionalColour.base
+    functionalExport[key] = functionalColour
+  }
+
+  colourList['functional-colours'] = functionalExport
+
+  return mapKeys(colourList, (value, key) => {
+    return kebabCase(key)
+  })
+}
+
+export default buildColourList()

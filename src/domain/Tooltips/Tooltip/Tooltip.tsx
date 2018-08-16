@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '../../Icons'
 import { getColor } from '@Common/legacy'
 import { TooltipIcon, TooltipWrapper } from './style'
 
-export interface TooltipProps {
+export interface ITooltipProps {
   id?: string,
   children: JSX.Element,
   message: string,
@@ -17,8 +17,8 @@ export interface TooltipProps {
   className?: string
 }
 
-export class Tooltip extends React.Component<TooltipProps> {
-  public static defaultProps: Partial<TooltipProps> = {
+export class Tooltip extends React.Component<ITooltipProps> {
+  public static defaultProps: Partial<ITooltipProps> = {
     place: 'top',
     effect: 'solid',
     withIcon: false,
@@ -66,7 +66,7 @@ export class Tooltip extends React.Component<TooltipProps> {
       <TooltipWrapper
         className={className}
         key={tooltipElementKey}
-        data-tip
+        data-tip={true}
         data-for={tooltipId}
       >
         {tooltipElement}

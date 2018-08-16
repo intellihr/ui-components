@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { getColor } from '@Common/legacy'
 
-export interface TextWrapperProps {
+export interface ITextWrapperProps {
   color?: string | 'subtle'
   isInline?: boolean
   isUpper?: boolean
@@ -13,7 +13,7 @@ export interface TextWrapperProps {
 export const TextWrapper = styled.span`
   font-family: 'Open Sans', Arial, sans-serif;
 
-  ${(props: TextWrapperProps) => {
+  ${(props: ITextWrapperProps) => {
     switch (props.color) {
       case 'subtle':
         return `
@@ -26,7 +26,7 @@ export const TextWrapper = styled.span`
     }
   }}
 
-  ${(props: TextWrapperProps) => {
+  ${(props: ITextWrapperProps) => {
     switch (props.weight) {
       case 'normal':
         return `
@@ -39,21 +39,21 @@ export const TextWrapper = styled.span`
     }
   }}
 
-  ${(props: TextWrapperProps) => props.isUpper && css`
+  ${(props: ITextWrapperProps) => props.isUpper && css`
     text-transform: uppercase;
   `}
 
-  ${(props: TextWrapperProps) => props.isTruncated && css`
+  ${(props: ITextWrapperProps) => props.isTruncated && css`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   `}
 
-  ${(props: TextWrapperProps) => !props.isInline && css`
+  ${(props: ITextWrapperProps) => !props.isInline && css`
     display: block;
   `}
 
-  ${(props: TextWrapperProps) => {
+  ${(props: ITextWrapperProps) => {
     switch (props.size) {
       case 'xsmall':
         return `

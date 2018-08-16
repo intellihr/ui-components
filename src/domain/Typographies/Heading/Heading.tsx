@@ -1,16 +1,16 @@
 import React from 'react'
 import { HeadingWrapper } from './style'
-import { withSkeleton, SkeletonComponentProps } from '@Domain/Skeletons'
+import { withSkeleton, ISkeletonComponentProps } from '../../Skeletons'
 
-export interface HeadingProps {
+export interface IHeadingProps {
   /** Specify the type of heading to use */
   type: 'page' | 'section' | 'subsection'
   /** If true, will display the heading inline */
   inline?: boolean
 }
 
-export class HeadingComponent extends React.PureComponent<HeadingProps> {
-  public static defaultProps: Partial<HeadingProps> = {
+export class HeadingComponent extends React.PureComponent<IHeadingProps> {
+  public static defaultProps: Partial<IHeadingProps> = {
     inline: false
   }
 
@@ -49,4 +49,4 @@ export class HeadingComponent extends React.PureComponent<HeadingProps> {
   }
 }
 
-export const Heading: React.ComponentClass<HeadingProps & SkeletonComponentProps> = withSkeleton(HeadingComponent)
+export const Heading: React.ComponentClass<IHeadingProps & ISkeletonComponentProps> = withSkeleton(HeadingComponent)

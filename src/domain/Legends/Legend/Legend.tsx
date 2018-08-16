@@ -2,18 +2,18 @@ import React from 'react'
 import { LegendWrapper, LegendLabel } from './style'
 import { FontAwesomeIcon } from '../../Icons'
 
-export interface LegendDataset {
+export interface ILegendDataset {
   colour: string
   label: string
 }
 
-export interface LegendProps {
+export interface ILegendProps {
   /** The label and colour value for each dataset */
-  datasets: LegendDataset[]
+  datasets: ILegendDataset[]
 }
 
-export class Legend extends React.Component<LegendProps> {
-  public static defaultProps: LegendProps = {
+export class Legend extends React.Component<ILegendProps> {
+  public static defaultProps: ILegendProps = {
     datasets: []
   }
 
@@ -28,7 +28,7 @@ export class Legend extends React.Component<LegendProps> {
 
     return (
       <LegendWrapper>
-        {datasets.map((dataset: LegendDataset, i: number) => {
+        {datasets.map((dataset: ILegendDataset, i: number) => {
           return (
             <li key={i}>
               <FontAwesomeIcon

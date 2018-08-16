@@ -39,7 +39,7 @@ describe('<SelectInput />', () => {
             value: 'value2'
           }
         ]}
-        multi
+        multi={true}
       />
     )
 
@@ -47,20 +47,22 @@ describe('<SelectInput />', () => {
   })
 
   it('should render a select box with promise options', () => {
+    const promiseOptions = () => new Promise(resolve => [
+      {
+        label: 'option1',
+        value: 'value1'
+      },
+      {
+        label: 'option2',
+        value: 'value2'
+      }
+    ])
+
     const wrapper = shallow(
       <SelectInput
         name='test'
         value=''
-        promiseOptions={() => new Promise(resolve => [
-          {
-            label: 'option1',
-            value: 'value1'
-          },
-          {
-            label: 'option2',
-            value: 'value2'
-          }
-        ])}
+        promiseOptions={promiseOptions}
       />
     )
 

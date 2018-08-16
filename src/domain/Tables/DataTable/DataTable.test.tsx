@@ -107,7 +107,7 @@ describe('<DataTable />', () => {
             accessor: 'age'
           }
         ]}
-        showPagination
+        showPagination={true}
       />
     )
 
@@ -145,8 +145,8 @@ describe('<DataTable />', () => {
             accessor: 'age'
           }
         ]}
-        showPagination
-        showSearchFilter
+        showPagination={true}
+        showSearchFilter={true}
       />
     )
 
@@ -202,8 +202,8 @@ describe('<DataTable />', () => {
             accessor: 'age'
           }
         ]}
-        showPagination
-        showSearchFilter
+        showPagination={true}
+        showSearchFilter={true}
       />
     )
 

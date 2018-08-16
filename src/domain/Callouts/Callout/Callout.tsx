@@ -2,7 +2,7 @@ import classNames from 'classnames'
 import { isEmpty } from 'lodash'
 import React from 'react'
 
-export interface CalloutProps {
+export interface ICalloutProps {
   type: 'info' | 'success' | 'error' | 'warning' | 'preview' | 'no-data' | ''
   children?: any
   className?: string
@@ -12,41 +12,11 @@ export interface CalloutProps {
   shouldFocus?: boolean
 }
 
-export interface CalloutState {
+export interface ICalloutState {
   willFocus: boolean
 }
 
-export class Callout extends React.Component<CalloutProps, CalloutState> {
-  private node: HTMLDivElement | null = null
-
-  public state: CalloutState = { willFocus: true }
-
-  public static defaultProps: CalloutProps = {
-    messages: [],
-    type: '',
-    shouldFocus: false,
-    justifyCenter: false
-  }
-
-  handleFocus = () => {
-    const { shouldFocus } = this.props
-    const { willFocus } = this.state
-
-    if (shouldFocus && willFocus && this.node && this.node.scrollIntoView) {
-      this.node.scrollIntoView()
-      this.setState({
-        willFocus: false
-      })
-    }
-  }
-
-  componentDidMount () {
-    this.handleFocus()
-  }
-
-  componentDidUpdate () {
-    this.handleFocus()
-  }
+export class Callout extends React.Component<ICalloutProps, ICalloutState> {
 
   get messages () {
     const { message } = this.props
@@ -97,6 +67,36 @@ export class Callout extends React.Component<CalloutProps, CalloutState> {
     }
 
     return cNames
+  }
+
+  public static defaultProps: ICalloutProps = {
+    messages: [],
+    type: '',
+    shouldFocus: false,
+    justifyCenter: false
+  }
+
+  public state: ICalloutState = { willFocus: true }
+  private node: HTMLDivElement | null = null
+
+  public handleFocus = () => {
+    const { shouldFocus } = this.props
+    const { willFocus } = this.state
+
+    if (shouldFocus && willFocus && this.node && this.node.scrollIntoView) {
+      this.node.scrollIntoView()
+      this.setState({
+        willFocus: false
+      })
+    }
+  }
+
+  public componentDidMount () {
+    this.handleFocus()
+  }
+
+  public componentDidUpdate () {
+    this.handleFocus()
   }
 
   public render (): JSX.Element | null {

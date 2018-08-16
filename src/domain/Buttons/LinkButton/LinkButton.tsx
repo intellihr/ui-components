@@ -35,7 +35,7 @@ export class LinkButton extends BaseButton<ILinkButtonProps> {
         href={disabled ? '#' : href}
         anchorComponentProps={anchorComponentProps}
       >
-        <span className={buttonClass(type!, size, className, { disabled: disabled })}>
+        <span className={buttonClass(type!, size, className, { disabled })}>
           {this.buttonContent}
         </span>
       </Anchor>

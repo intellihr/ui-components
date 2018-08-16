@@ -9,7 +9,7 @@ import {
   HorizontalTabTitles
 } from './style'
 
-export interface HorizontalTabDefinition {
+export interface IHorizontalTabDefinition {
   /** String title to use for this tab */
   title?: string
   /** Component positioned to the left of the title */
@@ -24,36 +24,36 @@ export interface HorizontalTabDefinition {
   content: JSX.Element | string
 }
 
-export interface HorizontalTabsProps {
+export interface IHorizontalTabsProps {
   /** A list of tabs and their content to render */
-  tabs: HorizontalTabDefinition[]
+  tabs: IHorizontalTabDefinition[]
   /** Whether to update the url of the page with anchors when changing tabs */
   useAnchors?: boolean
   /** The tab to start opened to (by anchorId or index) */
   defaultTab?: string | number
   /** Callback to run when clicking between tabs */
-  onTabChange?: (tab: HorizontalTabDefinition) => void
+  onTabChange?: (tab: IHorizontalTabDefinition) => void
   /** The current tab (by anchorId or index) */
   currentTab?: string | number
 }
 
-export interface HorizontalTabsState {
+export interface IHorizontalTabsState {
   currentTabIndex: number
 }
 
-export class HorizontalTabs extends React.Component<HorizontalTabsProps, HorizontalTabsState> {
-  public static defaultProps: Partial<HorizontalTabsProps> = {
+export class HorizontalTabs extends React.Component<IHorizontalTabsProps, IHorizontalTabsState> {
+  public static defaultProps: Partial<IHorizontalTabsProps> = {
     useAnchors: false
   }
 
-  constructor (props: HorizontalTabsProps) {
+  constructor (props: IHorizontalTabsProps) {
     super(props)
     this.state = {
       currentTabIndex: this.indexForTab(this.props.defaultTab)
     }
   }
 
-  indexForTab = (tabIdentifier?: number | string): number => {
+  public indexForTab = (tabIdentifier?: number | string): number => {
     const { tabs } = this.props
 
     if (!tabIdentifier) {
@@ -69,7 +69,7 @@ export class HorizontalTabs extends React.Component<HorizontalTabsProps, Horizon
     return (tabIndex === -1) ? 0 : tabIndex
   }
 
-  clickTabHandler = (event: MouseEvent<HTMLAnchorElement>) => {
+  public clickTabHandler = (event: MouseEvent<HTMLAnchorElement>) => {
     const {
       tabs,
       onTabChange
@@ -86,7 +86,7 @@ export class HorizontalTabs extends React.Component<HorizontalTabsProps, Horizon
     this.setState({ currentTabIndex: newTabIndex })
   }
 
-  sideComponent = (
+  public sideComponent = (
     alignment: 'left' | 'right',
     component?: JSX.Element
   ): JSX.Element | null => {
@@ -101,7 +101,7 @@ export class HorizontalTabs extends React.Component<HorizontalTabsProps, Horizon
     )
   }
 
-  titleForTab = (tab: HorizontalTabDefinition, index: number): JSX.Element => {
+  public titleForTab = (tab: IHorizontalTabDefinition, index: number): JSX.Element => {
     const currentTabIndex = this.currentTabIndex
     const { useAnchors } = this.props
 

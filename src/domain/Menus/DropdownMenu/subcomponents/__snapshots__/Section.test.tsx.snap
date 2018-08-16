@@ -9,7 +9,7 @@ exports[`<Section /> Default sections should match the snapshot 1`] = `
   />
   <Section
     closeDropdownBehaviour="whenActionProvided"
-    onClick={[Function]}
+    onClick={[MockFunction]}
     sectionType="default"
     text="Item 2"
   />

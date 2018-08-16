@@ -25,8 +25,10 @@ interface ISectionProps {
   href?: string,
   /** Event handler when the section is clicked */
   onClick?: (event: React.SyntheticEvent<HTMLLIElement>) => void
-  /** Should this section close the menu when clicked?
-   *  Defaults to closing when onClick or href is provided; can overwrite with this prop */
+  /**
+   * Should this section close the menu when clicked?
+   * Defaults to closing when onClick or href is provided; can overwrite with this prop
+   */
   closeDropdownBehaviour?: 'always' | 'never' | 'whenActionProvided',
   /** An override component that will render instead of the inbuilt components */
   component?: JSX.Element,
@@ -37,27 +39,6 @@ interface ISectionProps {
 }
 
 class Section extends React.PureComponent<ISectionProps, never> {
-  public static defaultProps: Partial<ISectionProps> = {
-    sectionType: 'default',
-    closeDropdownBehaviour: 'whenActionProvided'
-  }
-
-  private handleCloseMenuClick = (event: React.SyntheticEvent<HTMLLIElement>) => {
-    const {
-      href,
-      onClick,
-      closeDropdownBehaviour,
-      __closeMenuCallback
-    } = this.props
-
-    if (closeDropdownBehaviour === 'always') {
-      __closeMenuCallback!(event, this.props)
-    }
-
-    if (closeDropdownBehaviour === 'whenActionProvided' && (!!href || !!onClick)) {
-      __closeMenuCallback!(event, this.props)
-    }
-  }
 
   private get component () {
     const {
@@ -88,6 +69,10 @@ class Section extends React.PureComponent<ISectionProps, never> {
       sectionType: sectionType || 'default',
       onClick: this.handleCloseMenuClick
     }
+  }
+  public static defaultProps: Partial<ISectionProps> = {
+    sectionType: 'default',
+    closeDropdownBehaviour: 'whenActionProvided'
   }
 
   public render (): JSX.Element {
@@ -123,6 +108,23 @@ class Section extends React.PureComponent<ISectionProps, never> {
         </Component>
       </StyledSection>
     )
+  }
+
+  private handleCloseMenuClick = (event: React.SyntheticEvent<HTMLLIElement>) => {
+    const {
+      href,
+      onClick,
+      closeDropdownBehaviour,
+      __closeMenuCallback
+    } = this.props
+
+    if (closeDropdownBehaviour === 'always') {
+      __closeMenuCallback!(event, this.props)
+    }
+
+    if (closeDropdownBehaviour === 'whenActionProvided' && (!!href || !!onClick)) {
+      __closeMenuCallback!(event, this.props)
+    }
   }
 }
 

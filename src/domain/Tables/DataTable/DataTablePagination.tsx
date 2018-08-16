@@ -1,12 +1,12 @@
 import React from 'react'
 import classNames from 'classnames'
 
-export interface DataTablePaginationState {
+export interface IDataTablePaginationState {
   /** Currently selected page - stored here to allow async changes */
   page: number
 }
 
-export interface DataTablePaginationProps {
+export interface IDataTablePaginationProps {
   /** Data to paginate - only used to get total number of rows */
   data: any[]
   /** Currently selected page */
@@ -37,13 +37,13 @@ export interface DataTablePaginationProps {
   onPageSizeChange: (newPageSize: number, newPage: number) => void
 }
 
-export class DataTablePagination extends React.Component<DataTablePaginationProps, DataTablePaginationState> {
-  public static defaultProps: Partial<DataTablePaginationProps> = {
+export class DataTablePagination extends React.Component<IDataTablePaginationProps, IDataTablePaginationState> {
+  public static defaultProps: Partial<IDataTablePaginationProps> = {
     previousText: 'Previous',
     nextText: 'Next'
   }
 
-  constructor (props: DataTablePaginationProps) {
+  constructor (props: IDataTablePaginationProps) {
     super(props)
 
     this.state = {
@@ -51,13 +51,13 @@ export class DataTablePagination extends React.Component<DataTablePaginationProp
     }
   }
 
-  componentWillReceiveProps (nextProps: DataTablePaginationProps) {
+  public componentWillReceiveProps (nextProps: IDataTablePaginationProps) {
     this.setState({
       page: nextProps.page
     })
   }
 
-  getSafePage = (newPage: number) => {
+  public getSafePage = (newPage: number) => {
     const {
       pages
     } = this.props
@@ -65,7 +65,7 @@ export class DataTablePagination extends React.Component<DataTablePaginationProp
     return Math.min(Math.max(newPage, 0), pages - 1)
   }
 
-  changePage = (newPage: number) => {
+  public changePage = (newPage: number) => {
     const {
       page,
       onPageChange
@@ -79,7 +79,7 @@ export class DataTablePagination extends React.Component<DataTablePaginationProp
     }
   }
 
-  incrementPage = () => {
+  public incrementPage = () => {
     const {
       page,
       canNext
@@ -90,7 +90,7 @@ export class DataTablePagination extends React.Component<DataTablePaginationProp
     }
   }
 
-  decrementPage = () => {
+  public decrementPage = () => {
     const {
       page,
       canPrevious
@@ -101,7 +101,7 @@ export class DataTablePagination extends React.Component<DataTablePaginationProp
     }
   }
 
-  shouldPaginatePage = (pageNo: number) => {
+  public shouldPaginatePage = (pageNo: number) => {
     const { pages } = this.props
     const { page } = this.state
 
@@ -128,14 +128,16 @@ export class DataTablePagination extends React.Component<DataTablePaginationProp
     return false
   }
 
-  buttonForPage = (pageNo: number, key: number) => {
+  public buttonForPage = (pageNo: number, key: number) => {
     const { page } = this.state
+
+    const clickHandler = () => this.changePage(pageNo)
 
     return (
       <button
         key={key}
         className={classNames({'current': page === pageNo}, 'page-button', '-btn')}
-        onClick={() => this.changePage(pageNo)}
+        onClick={clickHandler}
       >
         {pageNo + 1}
       </button>
@@ -146,7 +148,7 @@ export class DataTablePagination extends React.Component<DataTablePaginationProp
     const { pages } = this.props
     const { page } = this.state
 
-    let response = []
+    const response = []
     let hasStartEllipses = false
     let hasEndEllipses = false
     let key = 0 // Using a common key prevents jumpiness when changing pages
@@ -201,12 +203,11 @@ export class DataTablePagination extends React.Component<DataTablePaginationProp
       pageSize,
       onPageSizeChange
     } = this.props
-    const { page } = this.state
 
     if (showPageSizeOptions) {
       const pageSizeSelect = (
         <select
-          onChange={e => onPageSizeChange(Number(e.target.value), page)}
+          onChange={this.changeHandler}
           value={pageSize}
         >
           {pageSizeOptions.map((option: number) => (
@@ -225,7 +226,7 @@ export class DataTablePagination extends React.Component<DataTablePaginationProp
     }
   }
 
-  render () {
+  public render () {
     const {
       canPrevious,
       canNext,
@@ -261,5 +262,17 @@ export class DataTablePagination extends React.Component<DataTablePaginationProp
         </div>
       </div>
     )
+  }
+
+  private changeHandler = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const {
+      onPageSizeChange
+    } = this.props
+
+    const {
+      page
+    } = this.state
+
+    return onPageSizeChange(Number(e.target.value), page)
   }
 }

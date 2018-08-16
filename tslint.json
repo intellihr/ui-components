@@ -1,0 +1,8 @@
+{
+  "extends": ["@intellihr/standard-tslint"],
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**/*.ts"
+    ]
+  }
+}

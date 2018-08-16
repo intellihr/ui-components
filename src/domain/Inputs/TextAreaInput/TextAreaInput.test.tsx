@@ -16,7 +16,7 @@ describe('<TextAreaInput />', () => {
   it('should render a disabled text area', () => {
     const wrapper = shallow(
       <TextAreaInput
-        isDisabled
+        isDisabled={true}
         name='test-textarea'
       />
     )
@@ -27,7 +27,7 @@ describe('<TextAreaInput />', () => {
   it('should render an invalid text area', () => {
     const wrapper = shallow(
       <TextAreaInput
-        isInvalid
+        isInvalid={true}
         name='test-textarea'
       />
     )

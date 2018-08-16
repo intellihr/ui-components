@@ -34,7 +34,7 @@ describe('<Avatar />', () => {
       <Avatar
         initials='JW'
         size='small'
-        handleClick={event => {}}
+        handleClick={jest.fn()}
       />
     )
 
@@ -46,7 +46,7 @@ describe('<Avatar />', () => {
       <Avatar
         initials='JW'
         size='large'
-        handleClick={event => {}}
+        handleClick={jest.fn()}
         hoverLabel='Upload image'
         hoverIcon='image'
       />

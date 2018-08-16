@@ -8,9 +8,9 @@ class GridProvider extends React.PureComponent {
   private get breakpoints () {
     return {
       xs: -1,
-      sm: pxToRem(parseInt(sassGlobals['breakpoint-min'])) || 0,
-      md: pxToRem(parseInt(sassGlobals['breakpoint-tablet'])) || 1,
-      lg: pxToRem(parseInt(sassGlobals['breakpoint-desktop'])) || 2
+      sm: pxToRem(parseInt(sassGlobals['breakpoint-min'], 10)) || 0,
+      md: pxToRem(parseInt(sassGlobals['breakpoint-tablet'], 10)) || 1,
+      lg: pxToRem(parseInt(sassGlobals['breakpoint-desktop'], 10)) || 2
     }
   }
 
@@ -28,7 +28,7 @@ class GridProvider extends React.PureComponent {
           }
         }}
       >
-        <StyledGrid fluid>{children}</StyledGrid>
+        <StyledGrid fluid={true}>{children}</StyledGrid>
       </ThemeProvider>
     )
   }

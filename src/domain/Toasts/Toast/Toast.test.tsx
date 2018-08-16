@@ -4,10 +4,12 @@ import React from 'react'
 import { Toast } from './Toast'
 
 describe('<Toast />', () => {
+  const closeHandler = () => { console.log('Closing this toast.') }
+
   it(`should render a toast of a default type, which is success`, () => {
     const wrapper = shallow(
       <Toast
-        handleClose={() => { console.log('Closing this toast.') }}
+        handleClose={closeHandler}
       >
         Yo ... whaazzzaaaap!!!
       </Toast>
@@ -20,7 +22,7 @@ describe('<Toast />', () => {
     const wrapper = shallow(
       <Toast
         type='alert'
-        handleClose={() => { console.log('Closing this toast.') }}
+        handleClose={closeHandler}
       >
         Surprise @#$%^&*!!!
       </Toast>
@@ -36,7 +38,7 @@ describe('<Toast />', () => {
       <Toast
         type='alert'
         onMount={mockOnMountFn}
-        handleClose={() => { console.log('Closing this toast.') }}
+        handleClose={closeHandler}
       >
         Yahallo!
       </Toast>
