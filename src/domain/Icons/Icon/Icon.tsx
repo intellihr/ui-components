@@ -86,7 +86,7 @@ class Icon extends React.PureComponent<IIconProps> {
       <React.Fragment>
         <StyledIcon
           className={this.classNames}
-          aria-hidden={true}
+          aria-hidden
           color={color}
           customSize={customSize}
           size={size}

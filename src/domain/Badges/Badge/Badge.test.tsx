@@ -34,7 +34,7 @@ describe('<Badge />', () => {
         label={6}
         backgroundColor='#1A2B3C'
         color='#1A293C'
-        pending={true}
+        pending
       />
     )
 

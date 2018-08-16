@@ -79,7 +79,7 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
       >
         <Text
           size='xsmall'
-          isTruncated={true}
+          isTruncated
           isInline={isCompact}
         >
           {text}
@@ -104,7 +104,7 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
           size='xsmall'
           weight='heavy'
           isInline={false}
-          isTruncated={true}
+          isTruncated
         >
           {tertiaryText}
         </Text>

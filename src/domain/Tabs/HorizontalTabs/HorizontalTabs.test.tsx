@@ -92,7 +92,7 @@ describe('<HorizontalTabs />', () => {
       <HorizontalTabs
         tabs={tabDefinitions}
         defaultTab='#second'
-        useAnchors={true}
+        useAnchors
       />
     )
 

@@ -29,7 +29,7 @@ describe('<StatusIndicator />', () => {
     const wrapper = shallow(
       <StatusIndicator
         text='Test'
-        isHollow={true}
+        isHollow
       />
     )
 
