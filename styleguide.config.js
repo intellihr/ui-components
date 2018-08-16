@@ -49,7 +49,7 @@ module.exports = {
         {
           name: 'Layouts',
           components: [
-            'src/domain/Layouts/ProfilePageLayout/ProfilePageLayout'
+            'src/domain/Layouts/PageLayout/PageLayout'
           ]
         },
         {

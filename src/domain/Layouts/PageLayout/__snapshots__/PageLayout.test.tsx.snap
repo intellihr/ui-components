@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PageLayout /> should render a profile layout 1`] = `
+<PageLayout
+  layoutType="profile"
+>
+  <div
+    className="profile page-base"
+  >
+    <Region
+      regionType="header"
+    >
+      <div
+        className="page-header"
+      >
+        <div>
+          a
+        </div>
+      </div>
+    </Region>
+    <Region
+      regionType="content"
+    >
+      <div
+        className="page-content"
+      >
+        <div>
+          b
+        </div>
+      </div>
+    </Region>
+  </div>
+</PageLayout>
+`;

@@ -1,12 +1,11 @@
 This layout is used for pages that display profile details for an entity.
-It contains a subcomponent that 
 ```jsx
-<ProfilePageLayout>
-  <ProfilePageLayout.component position='header'>
+<PageLayout layoutType='profile'>
+  <PageLayout.Region regionType='header'>
     <div style={{backgroundColor: 'gray', height: '240px', width: '100%'}}/>
-  </ProfilePageLayout.component>
-  <ProfilePageLayout.component position='content'>
+  </PageLayout.Region>
+  <PageLayout.Region regionType='content'>
     <div style={{backgroundColor: 'lightgray', height: '500px', width: '100%'}}/>
-  </ProfilePageLayout.component>
-</ProfilePageLayout>
+  </PageLayout.Region>
+</PageLayout>
 ```
