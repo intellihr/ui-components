@@ -8,13 +8,28 @@ import { StyledDropdownMenu, StyledSectionList } from './style'
 import { Section, ISectionProps } from './Section'
 
 interface IManualMenuProps {
-  /** id to use for the menu to identify it on the page; required for accessibility */
+  /**
+   * id to use for the menu to identify it on the page.
+   *
+   * This is required for accessibility - this id should match some other
+   * element on the page with role="button" and aria-owns="{id}". This is
+   * made required to prevent using this menu without setting this
+   * correctly.
+   *
+   * Do NOT auto-generate this id unless it matches a button on the page.
+   */
   id: string,
   /** Any custom class names */
   className?: string,
-  /** What position on the parent to anchor relative to; 'auto' will find best position automatically */
+  /**
+   * What position on the parent to anchor relative to; 'auto' will find
+   * a best position automatically.
+   */
   parentAnchorPosition?: Props.IPositionXY | 'auto',
-  /** What position on the dropdown itself to place at the anchor position; 'auto' will find best position automatically */
+  /**
+   * What position on the dropdown itself to place at the anchor position;
+   * 'auto' will find a best position automatically.
+   */
   dropdownAnchorPosition?: Props.IPositionXY | 'auto',
   /** The sections to render in the dropdown */
   sections: ISectionProps[],
