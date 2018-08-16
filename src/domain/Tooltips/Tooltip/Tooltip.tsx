@@ -66,7 +66,7 @@ export class Tooltip extends React.Component<ITooltipProps> {
       <TooltipWrapper
         className={className}
         key={tooltipElementKey}
-        data-tip={true}
+        data-tip
         data-for={tooltipId}
       >
         {tooltipElement}

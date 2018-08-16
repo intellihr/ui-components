@@ -144,8 +144,8 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
       <Transition
         in={isDropdownOpen}
         timeout={100}
-        mountOnEnter={true}
-        unmountOnExit={true}
+        mountOnEnter
+        unmountOnExit
       >
         {this.animatedMenu}
       </Transition>

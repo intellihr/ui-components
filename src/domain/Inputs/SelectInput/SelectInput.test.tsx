@@ -39,7 +39,7 @@ describe('<SelectInput />', () => {
             value: 'value2'
           }
         ]}
-        multi={true}
+        multi
       />
     )
 

@@ -214,9 +214,9 @@
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/@intellihr/icons/-/icons-0.0.1.tgz#4c8acef914c6d9e587dbe736e8eb388dbbfadb5b"
 
-"@intellihr/standard-tslint@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@intellihr/standard-tslint/-/standard-tslint-0.0.1.tgz#21c8b67c5b727c51ad726fe3654b7c9ad5227566"
+"@intellihr/standard-tslint@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@intellihr/standard-tslint/-/standard-tslint-0.0.2.tgz#b12be04ff8225899c65f24a2b5f076f1e5cda94c"
 
 "@intellihr/styled-components-breakpoint@0.0.2":
   version "0.0.2"

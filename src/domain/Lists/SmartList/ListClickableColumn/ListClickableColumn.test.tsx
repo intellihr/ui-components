@@ -73,7 +73,7 @@ describe('<ListClickableColumn />', () => {
       <ListClickableColumn
         data={testData}
         rowIndex={0}
-        isHeader={true}
+        isHeader
       >
         <div>This is my column content</div>
       </ListClickableColumn>

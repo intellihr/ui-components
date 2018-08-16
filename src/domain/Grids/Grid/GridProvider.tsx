@@ -28,7 +28,7 @@ class GridProvider extends React.PureComponent {
           }
         }}
       >
-        <StyledGrid fluid={true}>{children}</StyledGrid>
+        <StyledGrid fluid>{children}</StyledGrid>
       </ThemeProvider>
     )
   }
