@@ -15,9 +15,9 @@ const withStyledBreakpoints = <P extends IWithStyledBreakpoints>(StyledBreakpoin
   class extends React.PureComponent<P & Partial<IWithStyledBreakpoints>> {
     get breakpoints () {
       return styledBreakpoint({
-        small: parseInt(breakpointMin, 10) || 0,
-        medium: parseInt(breakpointTablet, 10) || 1,
-        large: parseInt(breakpointDesktop, 10) || 2
+        small: parseInt(breakpointMin, 10),
+        medium: parseInt(breakpointTablet, 10),
+        large: parseInt(breakpointDesktop, 10)
       })
     }
 

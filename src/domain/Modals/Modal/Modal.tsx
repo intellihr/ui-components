@@ -41,10 +41,6 @@ class Modal extends React.PureComponent<IModalProps> {
     showCloseButton: true
   }
 
-  get baseZIndex (): number {
-    return parseInt(zIndexModal, 10)
-  }
-
   get classNames (): string {
     const {
       className,
@@ -86,7 +82,7 @@ class Modal extends React.PureComponent<IModalProps> {
       offsetZIndex
     } = this.props
 
-    const overlayZIndex = this.baseZIndex + 2 * offsetZIndex!
+    const overlayZIndex = parseInt(zIndexModal, 10) + 2 * offsetZIndex!
 
     return (
       <StyledReactModal

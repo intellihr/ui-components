@@ -8,9 +8,9 @@ class GridProvider extends React.PureComponent {
   private get breakpoints () {
     return {
       xs: -1,
-      sm: pxToRem(parseInt(breakpointMin, 10)) || 0,
-      md: pxToRem(parseInt(breakpointTablet, 10)) || 1,
-      lg: pxToRem(parseInt(breakpointDesktop, 10)) || 2
+      sm: pxToRem(parseInt(breakpointMin, 10)),
+      md: pxToRem(parseInt(breakpointTablet, 10)),
+      lg: pxToRem(parseInt(breakpointDesktop, 10))
     }
   }
 

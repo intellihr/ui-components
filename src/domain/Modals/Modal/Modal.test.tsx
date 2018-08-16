@@ -2,20 +2,14 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import { Modal } from './Modal'
 
-class MockedModal extends Modal {
-  get baseZIndex (): number {
-    return 1000
-  }
-}
-
 describe('<MockedModal />', () => {
   it('should render a hidden modal', () => {
     const wrapper = shallow(
-      <MockedModal
+      <Modal
         isOpen={false}
       >
         This text is hidden
-      </MockedModal>
+      </Modal>
     )
 
     expect(wrapper).toMatchSnapshot()
@@ -23,12 +17,12 @@ describe('<MockedModal />', () => {
 
   it('should render a shown modal with no close button', () => {
     const wrapper = shallow(
-      <MockedModal
+      <Modal
         isOpen={true}
         showCloseButton={false}
       >
         This text is shown
-      </MockedModal>
+      </Modal>
     )
 
     expect(wrapper).toMatchSnapshot()
