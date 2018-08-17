@@ -1,7 +1,5 @@
 @import '../../../common/sass/variables';
 
-$button-spacing: 10px;
-
 $button-styles: (
   // ––––––––––––––––––––––––––––––––––––
   // Functional
@@ -580,7 +578,8 @@ $button-styles: (
   }
 }
 
-:local(.button) {
+
+%button {
   border: 1px solid transparent;
   border-radius: 4px;
   cursor: pointer;
@@ -620,6 +619,39 @@ $button-styles: (
 
     &.right {
       margin-left: 3px;
+    }
+  }
+}
+
+:local(.button) {
+  @extend %button;
+}
+
+// --------------
+// Legacy global button class for non-javascript support
+// --------------
+.button {
+  @extend %button;
+
+  // Extend neutral by default
+  @include add-button-style(
+    map-get($button-styles, neutral)
+  );
+
+  // Only used on legacy pages for dropdowns
+  &.holster {
+    @include add-button-style(
+      map-get($button-styles, neutral-borderless)
+    );
+
+    margin: 0;
+    padding: .5rem .3rem;
+
+    .fa {
+      font-size: 1.5rem;
+      line-height: 1;
+      margin: 0;
+      width: 1.3em;
     }
   }
 }
