@@ -50,7 +50,7 @@ describe('<ListColumn />', () => {
         size={{
           sm: 6
         }}
-        isHeader={true}
+        isHeader
         header='Test'
         cell={cell}
       />

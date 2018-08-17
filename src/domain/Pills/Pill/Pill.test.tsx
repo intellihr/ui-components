@@ -30,7 +30,7 @@ describe('<Pill />', () => {
       <Pill
         text='Test'
         color='alert'
-        isHollow={true}
+        isHollow
         size='large'
       />
     )

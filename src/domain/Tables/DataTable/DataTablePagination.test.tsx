@@ -17,7 +17,7 @@ describe('<DataTablePagination />', () => {
         pageSizeOptions={[5, 10, 20, 100]}
         showPageSizeOptions={false}
         canNext={false}
-        canPrevious={true}
+        canPrevious
         onPageChange={onPageChange}
         onPageSizeChange={onPageSizeChange}
       />
@@ -51,8 +51,8 @@ describe('<DataTablePagination />', () => {
         pageSize={10}
         pageSizeOptions={[5, 10, 20, 100]}
         showPageSizeOptions={false}
-        canNext={true}
-        canPrevious={true}
+        canNext
+        canPrevious
         onPageChange={onPageChange}
         onPageSizeChange={onPageSizeChange}
       />

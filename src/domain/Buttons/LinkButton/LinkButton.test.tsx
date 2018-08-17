@@ -17,7 +17,7 @@ describe('<LinkButton />', () => {
 
   it(`should render a disabled link button`, () => {
     const wrapper = shallow(
-      <LinkButton id='test-link-button-disabled' disabled={true}>
+      <LinkButton id='test-link-button-disabled' disabled>
         testing testing 123
       </LinkButton>
     )

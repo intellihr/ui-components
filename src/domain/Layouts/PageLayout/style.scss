@@ -1,0 +1,29 @@
+@import '../../../common/sass/variables';
+
+:local(.profile) {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  .page-header {
+    overflow: hidden;
+    width: 100%;
+
+    @media only screen and (min-width: $breakpoint-tablet) {
+      border-radius: $border-radius;
+    }
+  }
+
+  .page-content {
+    @media only screen and (max-width: $breakpoint-tablet) {
+      width: 100%;
+    }
+
+    @media only screen and (min-width: $breakpoint-tablet) {
+      border-radius: $border-radius;
+      margin-top: -41px;
+      overflow: hidden;
+      width: calc(100% / 12 * 10);
+    }
+  }
+}

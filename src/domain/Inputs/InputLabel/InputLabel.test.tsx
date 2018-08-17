@@ -29,7 +29,7 @@ describe('<InputLabel />', () => {
   it(`should render a red label if isInvalid is true`, () => {
     const wrapper = mount(
       <InputLabel
-        isInvalid={true}
+        isInvalid
       >
         Hello ladies.
       </InputLabel>

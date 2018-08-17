@@ -60,11 +60,19 @@ For when an error has occured
 
 For when showing a preview of a form
 
+#### A callout no data
+
+```jsx
+<Callout type="no-data">
+  No Data
+</Callout>
+```
+
 #### A callout type not been set
 
 ```jsx
 <Callout>
-  Same old, same old
+  Neutral
 </Callout>
 ```
 

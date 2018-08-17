@@ -46,7 +46,7 @@ describe('<Text />', () => {
 
   it(`should render an element with the text converted to uppercase`, () => {
     const wrapper = mount(
-      <Text isUpper={true}>Hello, world!</Text>
+      <Text isUpper>Hello, world!</Text>
     )
 
     expect(wrapper).toMatchSnapshot()

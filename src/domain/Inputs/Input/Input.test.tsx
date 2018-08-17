@@ -60,7 +60,7 @@ describe('<Input />', () => {
       <Input
         name='test-input'
         type='text'
-        highlightOnFocus={true}
+        highlightOnFocus
       />
     )
 

@@ -34,7 +34,7 @@ describe('<AvatarEntity />', () => {
       <AvatarEntity
         initials='JW'
         primaryText='John Wick'
-        isCompact={true}
+        isCompact
       />
     )
 
@@ -50,7 +50,7 @@ describe('<AvatarEntity />', () => {
         primaryText='John Wick'
         secondaryText='Guy Killer'
         tertiaryText='In Cinemas 2019'
-        isCompact={true}
+        isCompact
       />
     )
 

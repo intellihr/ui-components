@@ -39,7 +39,6 @@ interface ISectionProps {
 }
 
 class Section extends React.PureComponent<ISectionProps, never> {
-
   private get component () {
     const {
       onClick,
@@ -67,7 +66,8 @@ class Section extends React.PureComponent<ISectionProps, never> {
     return {
       clickable: !!href || !!onClick,
       sectionType: sectionType || 'default',
-      onClick: this.handleCloseMenuClick
+      onClick: this.handleCloseMenuClick,
+      role: 'menuitem'
     }
   }
   public static defaultProps: Partial<ISectionProps> = {

@@ -7,7 +7,7 @@ import { Callout } from '../Callout'
 describe('Callout', () => {
   it('Renders successfully', () => {
     const component = reactRenderer.create(
-      <Callout type='success' justifyCenter={true}>
+      <Callout type='success' justifyCenter>
         <div className='title'>
             Well done!
         </div>
@@ -21,7 +21,7 @@ describe('Callout', () => {
 
   it('Renders with DOM assertion', () => {
     const component = shallow(
-      <Callout type='success' justifyCenter={true}>
+      <Callout type='success' justifyCenter>
         <div className='title'>
             Well done!
         </div>
@@ -66,7 +66,7 @@ describe('Callout', () => {
     const messages: string[] = ['Hello world']
 
     const component = reactRenderer.create(
-      <Callout type='info' messages={messages} justifyCenter={true} />
+      <Callout type='info' messages={messages} justifyCenter />
     )
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
