@@ -135,25 +135,23 @@ const style = {
 .end-
 ```jsx
 const { Row } = require('../Row');
-const { Column } = require('../Column');
 const style = {
   backgroundColor:'#432DF3',
   minHeight:'1rem',
   border:'1px solid #fff'
 };
 <Row>
-  <Column md={12}>
+  <Row.Column md={12}>
     <Row end="md">
-      <Column md={6}><div style={style}/></Column>
+      <Row.Column md={6}><div style={style}/></Row.Column>
     </Row>
-  </Column>
+  </Row.Column>
 </Row>
 ```
 
 .top-
 ```jsx
 const { Row } = require('../Row');
-const { Column } = require('../Column');
 const styleLeftColumn = {
   backgroundColor:'#432DF3',
   minHeight: '8rem',
@@ -164,14 +162,13 @@ const styleRightColumn = {
   minHeight:'1rem'
 };
 <Row top="md">
-  <Column md={6}><div style={styleLeftColumn}/></Column>
-  <Column md={6}><div style={styleRightColumn}/></Column>
+  <Row.Column md={6}><div style={styleLeftColumn}/></Row.Column>
+  <Row.Column md={6}><div style={styleRightColumn}/></Row.Column>
 </Row>
 ```
 .middle-
 ```jsx
 const { Row } = require('../Row');
-const { Column } = require('../Column');
 const styleLeftColumn = {
   backgroundColor:'#432DF3',
   minHeight: '8rem',
@@ -182,15 +179,14 @@ const styleRightColumn = {
   minHeight:'1rem'
 };
 <Row middle="md">
-  <Column md={6}><div style={styleLeftColumn}/></Column>
-  <Column md={6}><div style={styleRightColumn}/></Column>
+  <Row.Column md={6}><div style={styleLeftColumn}/></Row.Column>
+  <Row.Column md={6}><div style={styleRightColumn}/></Row.Column>
 </Row>
 ```
 
 .bottom-
 ```jsx
 const { Row } = require('../Row');
-const { Column } = require('../Column');
 const styleLeftColumn = {
   backgroundColor:'#432DF3',
   minHeight: '8rem',
@@ -201,8 +197,8 @@ const styleRightColumn = {
   minHeight:'1rem'
 };
 <Row bottom="md">
-  <Column md={6}><div style={styleLeftColumn}/></Column>
-  <Column md={6}><div style={styleRightColumn}/></Column>
+  <Row.Column md={6}><div style={styleLeftColumn}/></Row.Column>
+  <Row.Column md={6}><div style={styleRightColumn}/></Row.Column>
 </Row>
 ```
 
@@ -212,32 +208,30 @@ Add classes to distribute the contents of a row or column.
 .around-
 ```jsx
 const { Row } = require('../Row');
-const { Column } = require('../Column');
 const style = {
   backgroundColor:'#432DF3',
   minHeight: '1rem',
   borderRight:'1px solid #fff'
 };
 <Row around="md">
-  <Column md={2}><div style={style}/></Column>
-  <Column md={2}><div style={style}/></Column>
-  <Column md={2}><div style={style}/></Column>
+  <Row.Column md={2}><div style={style}/></Row.Column>
+  <Row.Column md={2}><div style={style}/></Row.Column>
+  <Row.Column md={2}><div style={style}/></Row.Column>
 </Row>
 ```
 .between-
 
 ```jsx
 const { Row } = require('../Row');
-const { Column } = require('../Column');
 const style = {
   backgroundColor:'#432DF3',
   minHeight: '1rem',
   borderRight:'1px solid #fff'
 };
 <Row between="md">
-  <Column md={2}><div style={style}/></Column>
-  <Column md={2}><div style={style}/></Column>
-  <Column md={2}><div style={style}/></Column>
+  <Row.Column md={2}><div style={style}/></Row.Column>
+  <Row.Column md={2}><div style={style}/></Row.Column>
+  <Row.Column md={2}><div style={style}/></Row.Column>
 </Row>
 ```
 
@@ -247,14 +241,13 @@ You can simply hide some elements for a given breakpoint by passing `false` to t
 
 ```jsx
 const { Row } = require('../Row');
-const { Column } = require('../Column');
 const style = {
   backgroundColor:'#432DF3',
   minHeight: '1rem',
   borderRight:'1px solid #fff'
 };
 <Row>
-  <Column sm={12} md={6}><div style={style}/></Column>
-  <Column md={false} sm={6}><div style={style}/></Column>
+  <Row.Column sm={12} md={6}><div style={style}/></Row.Column>
+  <Row.Column md={false} sm={6}><div style={style}/></Row.Column>
 </Row>
 ```

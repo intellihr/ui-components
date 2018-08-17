@@ -18,6 +18,9 @@ class Column extends React.PureComponent<IColumnProps> {
       lg
     } = this.props
 
+    const defaultColumnSize = 12
+    const numberOfColumnSizes = 3
+
     const dimensions: string[] = ['xs', 'sm', 'md', 'lg']
 
     let previousValue: number
@@ -26,8 +29,8 @@ class Column extends React.PureComponent<IColumnProps> {
     return reduce(dimensions, (acc: IColumnProps, key: string, index): IColumnProps => {
       const sizeValue = that.props[key as keyof IColumnProps]
 
-      if(!previousValue &&  index === 3) {
-        previousValue = 12
+      if(!previousValue &&  index === numberOfColumnSizes) {
+        previousValue = defaultColumnSize
       }
 
       if (!isNil(sizeValue)) {
