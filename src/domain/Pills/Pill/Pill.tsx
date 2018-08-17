@@ -11,7 +11,7 @@ export interface IPillProps {
   className?: string
 
   /** Background or border colour of the label  */
-  color?: 'alert' | 'success' | 'warning' | 'primary' | 'neutral' | 'secondary' | 'highlight' | 'purple'
+  color?: 'alert' | 'success' | 'warning' | 'primary' | 'neutral' | 'secondary' | 'highlight'
 
   /** size of the label  */
   size?: 'small' | 'medium' | 'large'
