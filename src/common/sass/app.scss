@@ -16,7 +16,6 @@
 @include foundation-forms;
 @include foundation-accordion;
 @include foundation-accordion-menu;
-@include foundation-badge;
 @include foundation-breadcrumbs;
 @include foundation-button-group;
 @include foundation-callout;
@@ -61,7 +60,6 @@ $fa-font-path: '~font-awesome/fonts';
 // Components
 @import 'legacy/components/accordion';
 @import 'legacy/components/action-panel';
-@import 'legacy/components/badge';
 @import 'legacy/components/box';
 @import 'legacy/components/breadcrumbs';
 @import 'legacy/components/button-group';
@@ -76,10 +74,10 @@ $fa-font-path: '~font-awesome/fonts';
 @import 'legacy/components/loader';
 @import 'legacy/components/modal';
 @import 'legacy/components/navigation';
+@import 'legacy/components/person-tag';
 @import 'legacy/components/radio-button-group';
 @import 'legacy/components/table';
 @import 'legacy/components/tabs';
-@import 'legacy/components/tags';
 @import 'legacy/components/tenant-logo';
 @import 'legacy/components/title-bar';
 @import 'legacy/components/typography';
