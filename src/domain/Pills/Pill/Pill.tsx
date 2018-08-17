@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import React from 'react'
 
-const style = require('./Pill.scss')
+const style = require('./style.scss')
 
 export interface IPillProps {
   /** Text to show inside the label  */
@@ -11,19 +11,15 @@ export interface IPillProps {
   className?: string
 
   /** Background or border colour of the label  */
-  color?: 'alert' | 'success' | 'warning' | 'primary' | 'neutral' | 'secondary'
-
-  /** Should the label have a hollow centre with a border outline  */
-  isHollow?: boolean
+  color?: 'alert' | 'success' | 'warning' | 'primary' | 'neutral' | 'secondary' | 'highlight' | 'purple'
 
   /** size of the label  */
   size?: 'small' | 'medium' | 'large'
 }
 
 export class Pill extends React.Component<IPillProps> {
-  public static defaultProps: Partial<IPillProps> = {
+  public static defaultProps = {
     color: 'neutral',
-    isHollow: false,
     size: 'small'
   }
 
@@ -31,14 +27,13 @@ export class Pill extends React.Component<IPillProps> {
     const {
       text,
       color,
-      isHollow,
       size,
       className
     } = this.props
 
     return (
       <span
-        className={classNames(className, 'label', style.Pill, color, size, {'hollow': isHollow})}
+        className={classNames(style.pill, className, color, size)}
       >
         {text}
       </span>

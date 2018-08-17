@@ -6,7 +6,8 @@ module.exports = {
   title: 'IntelliHR Design System',
   require: [
     require.resolve('babel-polyfill'),
-    path.resolve(__dirname, 'src/index.ts')
+    path.resolve(__dirname, 'src/index.ts'),
+    path.resolve(__dirname, 'src/common/sass/style.ts')
   ],
   propsParser: docGenTypescript.withCustomConfig('./tsconfig.json').parse,
   getComponentPathLine (componentPath) {
@@ -33,8 +34,7 @@ module.exports = {
           name: 'Colors',
           content: 'src/domain/Colors/Color/Color.examples.md'
         }
-      ],
-      components: 'src/common/sass/style.ts'
+      ]
     },
     {
       name: 'UI Components',
