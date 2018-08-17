@@ -82,7 +82,8 @@ class Modal extends React.PureComponent<IModalProps> {
       offsetZIndex
     } = this.props
 
-    const overlayZIndex = parseInt(zIndexModal, 10) + 2 * offsetZIndex!
+    const modalOffsetBase = 2
+    const overlayZIndex = parseInt(zIndexModal, 10) + modalOffsetBase * offsetZIndex!
 
     return (
       <StyledReactModal

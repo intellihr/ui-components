@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import { Modal } from './Modal'
 
-describe('<MockedModal />', () => {
+describe('<Modal />', () => {
   it('should render a hidden modal', () => {
     const wrapper = shallow(
       <Modal

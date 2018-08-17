@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<MockedModal /> should render a hidden modal 1`] = `
+exports[`<Modal /> should render a hidden modal 1`] = `
 <class_1
   ariaHideApp={false}
   className="modal fixed-medium-up"
@@ -21,7 +21,7 @@ exports[`<MockedModal /> should render a hidden modal 1`] = `
 </class_1>
 `;
 
-exports[`<MockedModal /> should render a shown modal with no close button 1`] = `
+exports[`<Modal /> should render a shown modal with no close button 1`] = `
 <class_1
   ariaHideApp={false}
   className="modal fixed-medium-up"
