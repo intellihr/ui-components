@@ -1,0 +1,168 @@
+@import '../../variables';
+
+.person-tag {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 2px;
+
+  .grid-x {
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .person-label {
+    align-items: center;
+    display: flex;
+  }
+
+  .avatar-container {
+    align-self: start;
+    display: flex;
+    position: relative;
+
+    .avatar-icon {
+      position: absolute;
+      right: 0;
+      text-align: right;
+      top: 27px;
+
+      .fa {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .display-name {
+    align-self: center;
+    color: $n700;
+    overflow: hidden;
+    padding-left: 10px;
+
+    .position-title {
+      color: $n600;
+      font-size: .8125rem;
+      line-height: 1.3;
+      margin-top: 2px;
+    }
+  }
+
+  .person-tag-description {
+    color: $n600;
+    font-size: .75rem;
+    font-weight: 600;
+  }
+
+  &.cursor-auto {
+    cursor: auto;
+  }
+
+  &.cursor-pointer {
+    cursor: pointer;
+  }
+
+  .has-tip {
+    display: inherit;
+  }
+
+  .header-component {
+    font-size: .9375rem;
+    font-weight: normal;
+
+    .overdue-count {
+      @include breakpoint(small down) {
+        order: 2;
+      }
+    }
+  }
+
+  .tag-icon {
+    i {
+      font-size: 2rem;
+      margin-right: 10px;
+    }
+  }
+}
+
+.avatar-container {
+  display: inline-block;
+  position: relative;
+}
+
+.profile-picture-badge,
+.initials-badge {
+  border: 1px solid $n400;
+  border-radius: 50%;
+  color: $i400;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  height: 40px;
+  line-height: 38px;
+  overflow: hidden;
+  text-align: center;
+  width: 40px;
+  user-select: none;
+  vertical-align: middle;
+
+  .extended-leave-circle {
+    background-color: $o300;
+    bottom: -.1rem;
+    border: 2px solid $o400;
+    border-radius: 50%;
+    left: -.3rem;
+    padding: 5.5px;
+    position: absolute;
+  }
+
+  img {
+    vertical-align: initial;
+    width: 100%;
+  }
+
+  &.badge-small {
+    font-size: 0.8rem;
+    height: 30px;
+    line-height: 28px;
+    width: 30px;
+
+    .extended-leave-circle {
+      padding: 5px;
+    }
+  }
+
+  &.badge-large {
+    font-size: 1.5rem;
+    height: 72px;
+    line-height: 70px;
+    width: 72px;
+
+    .extended-leave-circle {
+      bottom: .1rem;
+      left: .1rem;
+      padding: 6.5px;
+    }
+  }
+
+  &.badge-xlarge {
+    font-size: 2.5rem;
+    height: 120px;
+    line-height: 118px;
+    width: 120px;
+
+    .extended-leave-circle {
+      bottom: .25rem;
+      left: .75rem;
+      padding: 7px;
+    }
+  }
+}
+
+.profile-picture-badge {
+  background-color: transparent;
+}
+
+.initials-badge {
+  background-color: $n200;
+  text-transform: uppercase;
+}

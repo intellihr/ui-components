@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
-import { getColor } from '../../../common/legacy'
+
+const { i400, n600, n700 } = require('../../../common/sass/variables.scss')
 
 interface IAvatarEntityWrapper {
   className?: string
@@ -15,13 +16,13 @@ const AvatarEntityWrapper = styled.div`
   align-items: center;
   display: inline-flex;
   padding: 2px;
-  color: ${getColor('main-text')};
+  color: ${n700};
 
   &:hover {
     ${(props: IAvatarEntityWrapper) => {
     if (props.isHoverable) {
       return `
-          color: ${getColor('link-text')};
+          color: ${i400};
           cursor: pointer;
         `
     }
@@ -44,16 +45,9 @@ const AvatarEntityInfo = styled.div`
 `
 
 const SecondaryTextWrapper = styled.span`
-  color: ${getColor('main-text-light')};
   line-height: 1.3;
   margin-top: 2px;
   margin-left: ${(props: ITextWrapper) => props.isCompact ? '5px' : '0px'};
-`
-
-const TertiaryTextWrapper = styled.span`
-  color: ${getColor('main-text-light')};
-  font-size: .75rem;
-  font-weight: 600;
 `
 
 export {
@@ -62,6 +56,5 @@ export {
   AvatarEntityWrapper,
   AvatarContainer,
   AvatarEntityInfo,
-  SecondaryTextWrapper,
-  TertiaryTextWrapper
+  SecondaryTextWrapper
 }
