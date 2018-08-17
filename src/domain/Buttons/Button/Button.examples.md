@@ -290,3 +290,49 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
   </div>
 </div>
 ```
+
+#### Legacy Buttons
+
+Buttons can be used in blade pages by using the `button` classname. This also adds a separate `holster` button type
+for dropdowns.
+
+```jsx
+<div>
+  <div>
+    <h3>Enabled</h3>
+    <button className='button' onClick={() => alert('primary')}>
+      default
+    </button>
+    <button className='button primary' onClick={() => alert('primary')}>
+      primary
+    </button>
+    <button className='button secondary' onClick={() => alert('secondary')}>
+      secondary
+    </button>
+    <button className='button success' onClick={() => alert('success')}>
+      success
+    </button>
+    <button className='button warning' onClick={() => alert('warning')}>
+      warning
+    </button>
+    <button className='button alert' onClick={() => alert('alert')}>
+      alert
+    </button>
+    <button className='button neutral' onClick={() => alert('neutral')}>
+      neutral
+    </button> 
+    <button className='button highlight' onClick={() => alert('highlight')}>
+      highlight
+    </button>
+    <button className='button primary-hollow' onClick={() => alert('highlight')}>
+      primary-hollow
+    </button>
+    <button className='button primary' disabled onClick={() => alert('primary')}>
+      disabled
+    </button>
+    <button className='button holster' onClick={() => alert('yo')}>
+       <span class="fa fa-ellipsis-v"></span>
+    </button>
+  </div>
+</div>
+```
