@@ -1,3 +1,6 @@
+// Google Font
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700");
+
 // Foundation for Sites
 @import '~foundation-sites/scss/settings/settings';
 @import 'legacy/foundation_settings';
@@ -11,7 +14,6 @@
 @include foundation-grid;
 @include foundation-typography;
 @include foundation-forms;
-// @include foundation-button;
 @include foundation-accordion;
 @include foundation-accordion-menu;
 @include foundation-badge;
@@ -26,7 +28,6 @@
 @include foundation-dropdown;
 @include foundation-dropdown-menu;
 @include foundation-responsive-embed;
-@include foundation-label;
 @include foundation-media-object;
 @include foundation-off-canvas;
 @include foundation-orbit;
@@ -57,26 +58,21 @@
 $fa-font-path: '~font-awesome/fonts';
 @import '~font-awesome/scss/font-awesome';
 
-// Google Font
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700");
-
 // Components
 @import 'legacy/components/accordion';
 @import 'legacy/components/action-panel';
-@import 'legacy/components/attribute-label';
 @import 'legacy/components/badge';
 @import 'legacy/components/box';
 @import 'legacy/components/breadcrumbs';
 @import 'legacy/components/button-group';
 @import 'legacy/components/callout';
 @import 'legacy/components/dropdown';
-@import 'legacy/components/errors';
 @import 'legacy/components/feature-panel';
 @import 'legacy/components/footer';
 @import 'legacy/components/form';
 @import 'legacy/components/grid';
 @import 'legacy/components/icon';
-@import 'legacy/components/label';
+@import 'legacy/components/label-group';
 @import 'legacy/components/loader';
 @import 'legacy/components/modal';
 @import 'legacy/components/navigation';
