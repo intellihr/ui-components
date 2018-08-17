@@ -14,9 +14,9 @@ exports[`<Column /> Simple Column behaviour should default values if partial val
 <Col
   lg={8}
   md={8}
-  sm={12}
+  sm={8}
   type="row"
-  xs={12}
+  xs={8}
 />
 `;
 
@@ -26,6 +26,6 @@ exports[`<Column /> Simple Column behaviour should match the snapshot 1`] = `
   md={3}
   sm={6}
   type="row"
-  xs={12}
+  xs={6}
 />
 `;

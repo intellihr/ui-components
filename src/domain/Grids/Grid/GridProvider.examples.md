@@ -26,7 +26,6 @@ at sm, md & lg viewport widths.
 
 ```jsx
 const { Row } = require('../Row');
-const { Column } = require('../Column');
 const style = {
   backgroundColor:'#432DF3',
   minHeight:'1rem',
@@ -34,17 +33,17 @@ const style = {
 };
 <div>
 <Row>
-  <Column sm={12} md={2}><div style={style}/></Column>
-  <Column sm={12} md={8}><div style={style}/></Column>
-  <Column sm={12} md={2}><div style={style}/></Column>
+  <Row.Column sm={12} md={2}><div style={style}/></Row.Column>
+  <Row.Column sm={12} md={8}><div style={style}/></Row.Column>
+  <Row.Column sm={12} md={2}><div style={style}/></Row.Column>
 </Row>
 <Row>
-  <Column sm={3} md={2}><div style={style}/></Column>
-  <Column sm={9} md={10}><div style={style}/></Column>
+  <Row.Column sm={3} md={2}><div style={style}/></Row.Column>
+  <Row.Column sm={9} md={10}><div style={style}/></Row.Column>
 </Row>
 <Row>
-  <Column sm={12} md={8}><div style={style}/></Column>
-  <Column sm={12} md={4}><div style={style}/></Column>
+  <Row.Column sm={12} md={8}><div style={style}/></Row.Column>
+  <Row.Column sm={12} md={4}><div style={style}/></Row.Column>
 </Row>
 </div>
 ```
@@ -54,7 +53,6 @@ Offset a column.
 
 ```jsx
 const { Row } = require('../Row');
-const { Column } = require('../Column');
 const style = {
   backgroundColor:'#432DF3',
   minHeight:'1rem',
@@ -62,17 +60,17 @@ const style = {
 };
 
 <Row>
-  <Column mdOffset={11} md={1}><div style={style}/></Column>
-  <Column mdOffset={10} md={2}><div style={style}/></Column>
-  <Column mdOffset={9} md={3}><div style={style}/></Column>
-  <Column mdOffset={8} md={4}><div style={style}/></Column>
-  <Column mdOffset={7} md={5}><div style={style}/></Column>
-  <Column mdOffset={6} md={6}><div style={style}/></Column>
-  <Column mdOffset={5} md={7}><div style={style}/></Column>
-  <Column mdOffset={4} md={8}><div style={style}/></Column>
-  <Column mdOffset={3} md={9}><div style={style}/></Column>
-  <Column mdOffset={2} md={10}><div style={style}/></Column>
-  <Column mdOffset={1} md={11}><div style={style}/></Column>
+  <Row.Column mdOffset={11} md={1}><div style={style}/></Row.Column>
+  <Row.Column mdOffset={10} md={2}><div style={style}/></Row.Column>
+  <Row.Column mdOffset={9} md={3}><div style={style}/></Row.Column>
+  <Row.Column mdOffset={8} md={4}><div style={style}/></Row.Column>
+  <Row.Column mdOffset={7} md={5}><div style={style}/></Row.Column>
+  <Row.Column mdOffset={6} md={6}><div style={style}/></Row.Column>
+  <Row.Column mdOffset={5} md={7}><div style={style}/></Row.Column>
+  <Row.Column mdOffset={4} md={8}><div style={style}/></Row.Column>
+  <Row.Column mdOffset={3} md={9}><div style={style}/></Row.Column>
+  <Row.Column mdOffset={2} md={10}><div style={style}/></Row.Column>
+  <Row.Column mdOffset={1} md={11}><div style={style}/></Row.Column>
 </Row>
 ```
 
@@ -80,7 +78,6 @@ const style = {
 Add any number of auto sizing columns to a row. Let the grid figure it out.
 ```jsx
 const { Row } = require('../Row');
-const { Column } = require('../Column');
 const style = {
   backgroundColor:'#432DF3',
   minHeight:'1rem',
@@ -88,13 +85,13 @@ const style = {
 };
 <div>
   <Row>
-    <Column md><div style={style}/></Column>
-    <Column md><div style={style}/></Column>
+    <Row.Column md><div style={style}/></Row.Column>
+    <Row.Column md><div style={style}/></Row.Column>
   </Row>
   <Row>
-    <Column md><div style={style}/></Column>
-    <Column md><div style={style}/></Column>
-    <Column md><div style={style}/></Column>
+    <Row.Column md><div style={style}/></Row.Column>
+    <Row.Column md><div style={style}/></Row.Column>
+    <Row.Column md><div style={style}/></Row.Column>
   </Row>
 </div>
 ```
@@ -105,35 +102,33 @@ Add classes to align elements to the start or end of row as well as the top, bot
 .start-
 ```jsx
 const { Row } = require('../Row');
-const { Column } = require('../Column');
 const style = {
   backgroundColor:'#432DF3',
   minHeight:'1rem',
   border:'1px solid #fff'
 };
 <Row>
-  <Column md={12}>
+  <Row.Column md={12}>
     <Row start="md">
-      <Column md={6} style={style}/>
+      <Row.Column md={6} style={style}/>
     </Row>
-  </Column>
+  </Row.Column>
 </Row>
 ```
 .center-
 ```jsx
 const { Row } = require('../Row');
-const { Column } = require('../Column');
 const style = {
   backgroundColor:'#432DF3',
   minHeight:'1rem',
   border:'1px solid #fff'
 };
 <Row>
-  <Column md={12}>
+  <Row.Column md={12}>
     <Row center="md">
-      <Column md={6}><div style={style}/></Column>
+      <Row.Column md={6}><div style={style}/></Row.Column>
     </Row>
-  </Column>
+  </Row.Column>
 </Row>
 ```
 
