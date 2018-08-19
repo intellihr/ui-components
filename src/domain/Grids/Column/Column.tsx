@@ -10,39 +10,29 @@ interface IColumnProps {
 }
 
 class Column extends React.PureComponent<IColumnProps> {
+  public static defaultProps: Partial<IColumnProps> = {
+    sm: 12
+  }
+
   get dimensions () : IColumnProps {
     const {
-      xs,
       sm,
       md,
       lg
     } = this.props
 
-    const defaultColumnSize = 12
-    const numberOfColumnSizes = 3
+    const dimensions: string[] = ['sm', 'md', 'lg']
 
-    const dimensions: string[] = ['xs', 'sm', 'md', 'lg']
-
-    let previousValue: number
+    let previousValue: number = 12
     const that = this
 
     return reduce(dimensions, (acc: IColumnProps, key: string, index): IColumnProps => {
       const sizeValue = that.props[key as keyof IColumnProps]
 
-      if(!previousValue &&  index === numberOfColumnSizes) {
-        previousValue = defaultColumnSize
-      }
-
       if (!isNil(sizeValue)) {
         previousValue = sizeValue
       }
-      acc[key as keyof IColumnProps] = sizeValue
-
-      keys(acc).forEach((identifier) => {
-        if(!acc[identifier as keyof IColumnProps]) {
-          acc[identifier as keyof IColumnProps] = previousValue
-        }
-      })
+      acc[key as keyof IColumnProps] = previousValue
 
       return acc
     }, {})
