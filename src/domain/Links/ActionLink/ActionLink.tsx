@@ -15,7 +15,6 @@ export const ActionLink = styledAnchor`
   text-transform: uppercase;
   transition: color .25s ease-out;
 
-
   &,
   &:link,
   &:visited {
@@ -29,7 +28,6 @@ export const ActionLink = styledAnchor`
   &:active {
     color: ${i600}
   }
-
 `
 
 ActionLink.displayName = 'ActionLink'
