@@ -4,21 +4,6 @@
 
 // sass-lint:disable class-name-format
 
-@mixin react-select-form-input-error(
-  $error-border: $r300,
-  $error-background: $r100
-) {
-  .Select-control {
-    border-color: $error-border;
-  }
-
-  &:not(.is-focused) {
-    .Select-control {
-      background-color: $error-background;
-    }
-  }
-}
-
 :local(.selectInput) {
   .Select {
     &.is-focused {
@@ -29,16 +14,21 @@
     }
 
     &.is-disabled {
-      .Select-control {
-        &,
-        &:hover {
-          background-color: $n400;
-        }
+      .Select-control:hover {
+        background-color: $n400;
       }
     }
 
     &.is-invalid-input {
-      @include react-select-form-input-error;
+      .Select-control {
+        border-color: $r300;
+      }
+
+      &:not(.is-focused) {
+        .Select-control {
+          background-color: $r100;
+        }
+      }
     }
 
     .Select-control {
