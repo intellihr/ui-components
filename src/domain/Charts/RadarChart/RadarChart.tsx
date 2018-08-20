@@ -6,9 +6,7 @@ import Color from 'color'
 import { Parser as HtmlToReactParser } from 'html-to-react'
 import classNames from 'classnames'
 import { Legend } from '../../Legends'
-
 const style = require('./style.scss')
-
 const { n600 } = require('../../../common/sass/variables.scss')
 
 interface IDataset {
