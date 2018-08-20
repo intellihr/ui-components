@@ -34,7 +34,7 @@ module.exports = {
   setupTestFrameworkScriptFile: './setupTest.ts',
   snapshotSerializers: ['enzyme-to-json/serializer'],
   moduleNameMapper: {
-    '\\globals.scss': '<rootDir>/src/common/sass/globals.mock.js',
+    '\\/sass/variables.scss': '<rootDir>/src/common/sass/variables.mock.js',
     '\\.(scss|css)$': 'identity-obj-proxy',
     '^@Domain/(.+)$': '<rootDir>/src/domain/$1',
     '^@Common/(.+)$': '<rootDir>/src/common/$1'

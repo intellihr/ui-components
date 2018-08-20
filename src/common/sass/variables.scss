@@ -3,11 +3,6 @@
  */
 
 // --------------
-// Global
-// --------------
-$border-radius: 4px;
-
-// --------------
 // Breakpoints
 // --------------
 $breakpoint-min: 0;
@@ -84,18 +79,30 @@ $y400: #FFE226;
 $y500: #BFA91C;
 $y600: #7F7012;
 
-:export {
-  // --------------
-  // Global
-  // --------------
-  border-radius: $border-radius;
 
+// --------------
+// Global
+// --------------
+$border-radius: 4px;
+
+// --------------
+// Z Indexes
+// --------------
+$z-index-absolute-bottom: -9999;
+$z-index-default: 0;
+$z-index-modal: 1000;
+$z-index-date-input: 2000;
+$z-index-dropdown-menu: 3000;
+$z-index-toaster: 4000;
+$z-index-absolute-top: 9999;
+
+:export {
   // --------------
   // Breakpoints
   // --------------
-  breakpoint-min: $breakpoint-min;
-  breakpoint-tablet: $breakpoint-tablet;
-  breakpoint-desktop: $breakpoint-desktop;
+  breakpointMin: $breakpoint-min;
+  breakpointTablet: $breakpoint-tablet;
+  breakpointDesktop: $breakpoint-desktop;
 
   // --------------
   // Colors
@@ -166,4 +173,20 @@ $y600: #7F7012;
   y400: $y400;
   y500: $y500;
   y600: $y600;
+
+  // --------------
+  // Global
+  // --------------
+  borderRadius: $border-radius;
+
+  // --------------
+  // Z Indexes
+  // --------------
+  zIndexAbsoluteBottom: $z-index-absolute-bottom;
+  zIndexDefault: $z-index-default;
+  zIndexModal: $z-index-modal;
+  zIndexDateInput: $z-index-date-input;
+  zIndexDropdownMenu: $z-index-dropdown-menu;
+  zIndexToaster: $z-index-toaster;
+  zIndexAbsoluteTop: $z-index-absolute-top;
 }

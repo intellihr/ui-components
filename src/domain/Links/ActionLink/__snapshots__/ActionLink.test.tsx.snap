@@ -67,8 +67,8 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
         Object {
           "flexboxgrid": Object {
             "breakpoints": Object {
-              "lg": 2,
-              "md": 1,
+              "lg": 64,
+              "md": 40,
               "sm": 0,
               "xs": -1,
             },
