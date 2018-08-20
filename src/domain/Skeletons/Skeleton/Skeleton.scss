@@ -1,5 +1,7 @@
 @import 'compass/functions';
 
+@import '../../../common/sass/variables';
+
 @keyframes progress {
   0% {
     background-position: -200px 0;
@@ -12,11 +14,11 @@
 
 :local(.Skeleton) {
   animation: progress 1.2s ease-in-out infinite;
-  background-color: $neutral-base;
-  background-image: linear-gradient(90deg, $neutral-base, tint($neutral-base, 45%), $neutral-base);
+  background-color: $n200;
+  background-image: linear-gradient(90deg, $n200, $n300);
   background-repeat: no-repeat;
   background-size: 200px 100%;
-  border: 1px solid $border-light;
+  border: 1px solid $n200;
   border-radius: 4px;
   display: inline-flex;
   line-height: 1rem;
