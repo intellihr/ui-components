@@ -1,15 +1,25 @@
 @import '../../../common/sass/variables';
 
+$toast-styles: (
+  primary:    (background-color: $i100, text-color: $n800, border-color: $i400),
+  secondary:  (background-color: $b100, text-color: $n800, border-color: $b400),
+  success:    (background-color: $g100, text-color: $n800, border-color: $g400),
+  warning:    (background-color: $o100, text-color: $n800, border-color: $o400),
+  alert:      (background-color: $r100, text-color: $n800, border-color: $r300),
+  neutral:    (background-color: $n200, text-color: $n800, border-color: $n400),
+  info:       (background-color: $c100, text-color: $n800, border-color: $c400)
+);
+
 @mixin toast-color-coding ($color-scheme) {
-  background-color: map-get($color-scheme, light);
-  border-color: map-get($color-scheme, base);
+  background-color: map-get($color-scheme, background-color);
+  border-color: map-get($color-scheme, border-color);
 
   .fa {
-    color: map-get($color-scheme, base);
+    color: map-get($color-scheme, border-color);
   }
 
-  .toast-text {
-    color: map-get($color-scheme, textOnLight);
+  .toast-content {
+    color: map-get($color-scheme, text-color);
   }
 }
 
@@ -49,7 +59,7 @@
     top: -.375rem;
   }
 
-  @each $colour, $values in $functional-colours {
+  @each $colour, $values in $toast-styles {
     &.#{$colour} {
       @include toast-color-coding($values);
     }
