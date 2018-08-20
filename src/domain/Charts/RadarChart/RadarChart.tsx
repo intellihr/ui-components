@@ -9,6 +9,8 @@ import { Legend } from '../../Legends'
 
 const style = require('./style.scss')
 
+const { n600 } = require('../../../common/sass/variables.scss')
+
 interface IDataset {
   colour: string
   label: string
@@ -146,6 +148,7 @@ export class RadarChart extends React.Component<IRadarChartProps> {
   public static defaultProps: IRadarChartProps = {
     pointLabels: [],
     datasets: [],
+    dataLabelColour: n600,
     showLegend: true,
     minValue: 0,
     maxValue: 5,

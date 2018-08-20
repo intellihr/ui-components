@@ -2,7 +2,7 @@
 
 ```jsx
 <RadarChart
-  dataLabelColour='rgb(100,100,100)'
+  dataLabelColour='#667380'
   pointLabels={[
     'Quality',
     'Teamwork',
@@ -35,7 +35,7 @@
     3: 'Third!!',
     5: 'There was no fourth label'
   }}
-  dataLabelColour='rgb(100,100,100)'
+  dataLabelColour='#667380'
   pointLabels={[
     'Quality',
     'Teamwork',
@@ -66,7 +66,7 @@
     100: 'This is where 100 label goes',
     200: '200 is the max value',
   }}
-  dataLabelColour='rgb(100,100,100)'
+  dataLabelColour='#667380'
   pointLabels={[
     'Quality',
     'Teamwork',
@@ -96,7 +96,7 @@
 
 ```jsx
 <RadarChart
-  dataLabelColour='rgb(100,100,100)'
+  dataLabelColour='#667380'
   pointLabels={[
     'Quality',
     'Teamwork',
