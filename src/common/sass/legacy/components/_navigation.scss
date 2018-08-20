@@ -69,4 +69,12 @@
       }
     }
   }
+
+  ul {
+    &.is-accordion-submenu {
+      &.nested {
+        margin-left: 0;
+      }
+    }
+  }
 }
