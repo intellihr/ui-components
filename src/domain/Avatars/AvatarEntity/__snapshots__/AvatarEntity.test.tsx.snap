@@ -15,7 +15,7 @@ exports[`<AvatarEntity /> should render a avatar entity with lots of data 1`] = 
   </styled.div>
   <styled.div>
     <class_1
-      color="n700"
+      color="#424F5C"
       isInline={false}
     >
       John Wick
@@ -24,7 +24,7 @@ exports[`<AvatarEntity /> should render a avatar entity with lots of data 1`] = 
       isCompact={false}
     >
       <class_1
-        color="n600"
+        color="#667380"
         isInline={false}
         isTruncated={true}
         size="xsmall"
@@ -33,7 +33,7 @@ exports[`<AvatarEntity /> should render a avatar entity with lots of data 1`] = 
       </class_1>
     </styled.span>
     <class_1
-      color="n600"
+      color="#667380"
       isInline={false}
       isTruncated={true}
       size="xsmall"
@@ -58,7 +58,7 @@ exports[`<AvatarEntity /> should render a basic avatar entity 1`] = `
   </styled.div>
   <styled.div>
     <class_1
-      color="n700"
+      color="#424F5C"
       isInline={false}
     >
       John Wick
@@ -80,7 +80,7 @@ exports[`<AvatarEntity /> should render a basic compact avatar entity 1`] = `
   </styled.div>
   <styled.div>
     <class_1
-      color="n700"
+      color="#424F5C"
       isInline={true}
     >
       John Wick
@@ -104,7 +104,7 @@ exports[`<AvatarEntity /> should render a compact avatar entity with lots of dat
   </styled.div>
   <styled.div>
     <class_1
-      color="n700"
+      color="#424F5C"
       isInline={true}
     >
       John Wick
@@ -113,7 +113,7 @@ exports[`<AvatarEntity /> should render a compact avatar entity with lots of dat
       isCompact={true}
     >
       <class_1
-        color="n600"
+        color="#667380"
         isInline={true}
         isTruncated={true}
         size="xsmall"

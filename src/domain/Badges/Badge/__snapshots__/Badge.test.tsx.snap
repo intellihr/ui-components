@@ -5,9 +5,9 @@ exports[`<Badge /> should render a large badge 1`] = `
   background-color: #1A2B3C;
   color: #1A293C;
   box-shadow: 0 2px 2px rgba(0,0,0,0.24);
-  border: 1px solid n400;
+  border: 1px solid #C5CED6;
   border-radius: 50%;
-  color: n100;
+  color: #FFFFFF;
   display: inline-block;
   font-weight: 600;
   text-align: center;
@@ -27,7 +27,7 @@ exports[`<Badge /> should render a large badge 1`] = `
 
 .c0 .refresh-icon {
   background-color: transparent;
-  color: n700;
+  color: #424F5C;
 }
 
 <Badge
@@ -57,9 +57,9 @@ exports[`<Badge /> should render a small badge 1`] = `
   background-color: #1A2B3C;
   color: #1A293C;
   box-shadow: 0 2px 2px rgba(0,0,0,0.24);
-  border: 1px solid n400;
+  border: 1px solid #C5CED6;
   border-radius: 50%;
-  color: n100;
+  color: #FFFFFF;
   display: inline-block;
   font-weight: 600;
   text-align: center;
@@ -79,7 +79,7 @@ exports[`<Badge /> should render a small badge 1`] = `
 
 .c0 .refresh-icon {
   background-color: transparent;
-  color: n700;
+  color: #424F5C;
 }
 
 <Badge
@@ -114,9 +114,9 @@ exports[`<Badge /> should render a spinning badge 1`] = `
   background-color: #1A2B3C;
   color: #1A293C;
   box-shadow: 0 2px 2px rgba(0,0,0,0.24);
-  border: 1px solid n400;
+  border: 1px solid #C5CED6;
   border-radius: 50%;
-  color: n100;
+  color: #FFFFFF;
   display: inline-block;
   font-weight: 600;
   text-align: center;
@@ -136,7 +136,7 @@ exports[`<Badge /> should render a spinning badge 1`] = `
 
 .c0 .refresh-icon {
   background-color: transparent;
-  color: n700;
+  color: #424F5C;
 }
 
 <Badge

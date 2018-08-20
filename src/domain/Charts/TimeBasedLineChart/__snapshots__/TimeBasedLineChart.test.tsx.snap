@@ -44,7 +44,7 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with 2 lines and 
           },
         ],
         "datasetLabel": "Productivity",
-        "lineColor": "rgb(67, 45, 243)",
+        "lineColor": "#0F68FA",
       },
       Object {
         "dataset": Array [
@@ -74,15 +74,15 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with 2 lines and 
           },
         ],
         "datasetLabel": "Productivity",
-        "lineColor": "rgb(3, 222, 235)",
+        "lineColor": "#61DAF2",
       },
     ]
   }
   datasets={
     Array [
       Object {
-        "backgroundColor": "rgb(67, 45, 243)",
-        "borderColor": "rgb(67, 45, 243)",
+        "backgroundColor": "#0F68FA",
+        "borderColor": "#0F68FA",
         "borderWidth": 4,
         "data": Array [
           Object {
@@ -125,17 +125,17 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with 2 lines and 
         "fill": false,
         "label": "Productivity",
         "lineTension": 0,
-        "pointBackgroundColor": "rgb(67, 45, 243)",
-        "pointBorderColor": "rgb(67, 45, 243)",
+        "pointBackgroundColor": "#0F68FA",
+        "pointBorderColor": "#0F68FA",
         "pointBorderWidth": 1,
         "pointHitRadius": 10,
-        "pointHoverBackgroundColor": "rgb(67, 45, 243)",
+        "pointHoverBackgroundColor": "#0F68FA",
         "pointHoverRadius": 5,
         "pointRadius": 4,
       },
       Object {
-        "backgroundColor": "rgb(3, 222, 235)",
-        "borderColor": "rgb(3, 222, 235)",
+        "backgroundColor": "#61DAF2",
+        "borderColor": "#61DAF2",
         "borderWidth": 4,
         "data": Array [
           Object {
@@ -166,11 +166,11 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with 2 lines and 
         "fill": false,
         "label": "Productivity",
         "lineTension": 0,
-        "pointBackgroundColor": "rgb(3, 222, 235)",
-        "pointBorderColor": "rgb(3, 222, 235)",
+        "pointBackgroundColor": "#61DAF2",
+        "pointBorderColor": "#61DAF2",
         "pointBorderWidth": 1,
         "pointHitRadius": 10,
-        "pointHoverBackgroundColor": "rgb(3, 222, 235)",
+        "pointHoverBackgroundColor": "#61DAF2",
         "pointHoverRadius": 5,
         "pointRadius": 4,
       },
@@ -397,7 +397,7 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with axis labels 
         ],
         "datasetLabel": "Happiness Rating",
         "isGradient": true,
-        "lineColor": "rgb(67, 45, 243)",
+        "lineColor": "#0F68FA",
       },
     ]
   }
@@ -407,9 +407,9 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with axis labels 
         "backgroundColor": Object {
           "addColorStop": [Function],
         },
-        "borderColor": "rgb(67, 45, 243)",
+        "borderColor": "#0F68FA",
         "borderWidth": 4,
-        "colour": "rgb(67, 45, 243)",
+        "colour": "#0F68FA",
         "data": Array [
           Object {
             "x": "2018-05-08T05:06:52.000Z",
@@ -541,14 +541,14 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with axis labels 
           },
         ],
         "fill": true,
-        "fillColor": "rgb(67, 45, 243)",
+        "fillColor": "#0F68FA",
         "label": "Happiness Rating",
         "lineTension": 0,
-        "pointBackgroundColor": "rgb(67, 45, 243)",
-        "pointBorderColor": "rgb(67, 45, 243)",
+        "pointBackgroundColor": "#0F68FA",
+        "pointBorderColor": "#0F68FA",
         "pointBorderWidth": 1,
         "pointHitRadius": 10,
-        "pointHoverBackgroundColor": "rgb(67, 45, 243)",
+        "pointHoverBackgroundColor": "#0F68FA",
         "pointHoverRadius": 5,
         "pointRadius": 4,
       },
@@ -777,7 +777,7 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with gradient 1`]
         ],
         "datasetLabel": "Happiness Rating",
         "isGradient": true,
-        "lineColor": "rgb(67, 45, 243)",
+        "lineColor": "#0F68FA",
       },
     ]
   }
@@ -787,9 +787,9 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with gradient 1`]
         "backgroundColor": Object {
           "addColorStop": [Function],
         },
-        "borderColor": "rgb(67, 45, 243)",
+        "borderColor": "#0F68FA",
         "borderWidth": 4,
-        "colour": "rgb(67, 45, 243)",
+        "colour": "#0F68FA",
         "data": Array [
           Object {
             "x": "2018-05-08T05:06:52.000Z",
@@ -921,14 +921,14 @@ exports[`<TimeBasedLineChart /> Renders the TimeBasedLineChart with gradient 1`]
           },
         ],
         "fill": true,
-        "fillColor": "rgb(67, 45, 243)",
+        "fillColor": "#0F68FA",
         "label": "Happiness Rating",
         "lineTension": 0,
-        "pointBackgroundColor": "rgb(67, 45, 243)",
-        "pointBorderColor": "rgb(67, 45, 243)",
+        "pointBackgroundColor": "#0F68FA",
+        "pointBorderColor": "#0F68FA",
         "pointBorderWidth": 1,
         "pointHitRadius": 10,
-        "pointHoverBackgroundColor": "rgb(67, 45, 243)",
+        "pointHoverBackgroundColor": "#0F68FA",
         "pointHoverRadius": 5,
         "pointRadius": 4,
       },

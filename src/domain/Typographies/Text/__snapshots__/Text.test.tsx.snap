@@ -3,7 +3,7 @@
 exports[`<Text /> should render a non-inline text element 1`] = `
 .c0 {
   font-family: 'Open Sans',Arial,sans-serif;
-  color: n800;
+  color: #262D33;
   font-weight: 400;
   display: block;
   font-size: 1rem;
@@ -24,20 +24,20 @@ exports[`<Text /> should render a non-inline text element 1`] = `
     }
   >
     <TextComponent
-      color="n800"
+      color="#262D33"
       isInline={false}
       size="medium"
       weight="normal"
     >
       <styled.span
-        color="n800"
+        color="#262D33"
         isInline={false}
         size="medium"
         weight="normal"
       >
         <span
           className="c0"
-          color="n800"
+          color="#262D33"
           size="medium"
         >
           Hello, world!
@@ -83,7 +83,7 @@ exports[`<Text /> should render a skeleton element if skeletonOptions are passed
 exports[`<Text /> should render an element with heavy text 1`] = `
 .c0 {
   font-family: 'Open Sans',Arial,sans-serif;
-  color: n800;
+  color: #262D33;
   font-weight: 600;
   font-size: 1rem;
 }
@@ -103,20 +103,20 @@ exports[`<Text /> should render an element with heavy text 1`] = `
     weight="heavy"
   >
     <TextComponent
-      color="n800"
+      color="#262D33"
       isInline={true}
       size="medium"
       weight="heavy"
     >
       <styled.span
-        color="n800"
+        color="#262D33"
         isInline={true}
         size="medium"
         weight="heavy"
       >
         <span
           className="c0"
-          color="n800"
+          color="#262D33"
           size="medium"
         >
           Hello, world!
@@ -130,7 +130,7 @@ exports[`<Text /> should render an element with heavy text 1`] = `
 exports[`<Text /> should render an element with large text 1`] = `
 .c0 {
   font-family: 'Open Sans',Arial,sans-serif;
-  color: n800;
+  color: #262D33;
   font-weight: 400;
   font-size: 1.125rem;
 }
@@ -150,20 +150,20 @@ exports[`<Text /> should render an element with large text 1`] = `
     }
   >
     <TextComponent
-      color="n800"
+      color="#262D33"
       isInline={true}
       size="large"
       weight="normal"
     >
       <styled.span
-        color="n800"
+        color="#262D33"
         isInline={true}
         size="large"
         weight="normal"
       >
         <span
           className="c0"
-          color="n800"
+          color="#262D33"
           size="large"
         >
           Hello, world!
@@ -177,7 +177,7 @@ exports[`<Text /> should render an element with large text 1`] = `
 exports[`<Text /> should render an element with small text 1`] = `
 .c0 {
   font-family: 'Open Sans',Arial,sans-serif;
-  color: n800;
+  color: #262D33;
   font-weight: 400;
   font-size: .875rem;
 }
@@ -197,20 +197,20 @@ exports[`<Text /> should render an element with small text 1`] = `
     }
   >
     <TextComponent
-      color="n800"
+      color="#262D33"
       isInline={true}
       size="small"
       weight="normal"
     >
       <styled.span
-        color="n800"
+        color="#262D33"
         isInline={true}
         size="small"
         weight="normal"
       >
         <span
           className="c0"
-          color="n800"
+          color="#262D33"
           size="small"
         >
           Hello, world!
@@ -224,7 +224,7 @@ exports[`<Text /> should render an element with small text 1`] = `
 exports[`<Text /> should render an element with subtle text 1`] = `
 .c0 {
   font-family: 'Open Sans',Arial,sans-serif;
-  color: n600;
+  color: #667380;
   font-weight: 400;
   font-size: 1rem;
 }
@@ -271,7 +271,7 @@ exports[`<Text /> should render an element with subtle text 1`] = `
 exports[`<Text /> should render an element with text 1`] = `
 .c0 {
   font-family: 'Open Sans',Arial,sans-serif;
-  color: n800;
+  color: #262D33;
   font-weight: 400;
   font-size: 1rem;
 }
@@ -288,20 +288,20 @@ exports[`<Text /> should render an element with text 1`] = `
     }
   >
     <TextComponent
-      color="n800"
+      color="#262D33"
       isInline={true}
       size="medium"
       weight="normal"
     >
       <styled.span
-        color="n800"
+        color="#262D33"
         isInline={true}
         size="medium"
         weight="normal"
       >
         <span
           className="c0"
-          color="n800"
+          color="#262D33"
           size="medium"
         >
           Hello, world!
@@ -315,7 +315,7 @@ exports[`<Text /> should render an element with text 1`] = `
 exports[`<Text /> should render an element with the text converted to uppercase 1`] = `
 .c0 {
   font-family: 'Open Sans',Arial,sans-serif;
-  color: n800;
+  color: #262D33;
   font-weight: 400;
   text-transform: uppercase;
   font-size: 1rem;
@@ -336,14 +336,14 @@ exports[`<Text /> should render an element with the text converted to uppercase 
     }
   >
     <TextComponent
-      color="n800"
+      color="#262D33"
       isInline={true}
       isUpper={true}
       size="medium"
       weight="normal"
     >
       <styled.span
-        color="n800"
+        color="#262D33"
         isInline={true}
         isUpper={true}
         size="medium"
@@ -351,7 +351,7 @@ exports[`<Text /> should render an element with the text converted to uppercase 
       >
         <span
           className="c0"
-          color="n800"
+          color="#262D33"
           size="medium"
         >
           Hello, world!

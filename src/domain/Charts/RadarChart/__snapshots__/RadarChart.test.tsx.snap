@@ -92,7 +92,7 @@ exports[`<RadarChart /> Renders a RadarChart 1`] = `
             },
             "ticks": Object {
               "callback": [Function],
-              "fontColor": undefined,
+              "fontColor": "#667380",
               "fontSize": 10,
               "max": 5,
               "min": 0,
@@ -205,7 +205,7 @@ exports[`<RadarChart /> Renders a RadarChart with the correct custom values 1`] 
             },
             "ticks": Object {
               "callback": [Function],
-              "fontColor": undefined,
+              "fontColor": "#667380",
               "fontSize": 10,
               "max": 5,
               "min": 1,
