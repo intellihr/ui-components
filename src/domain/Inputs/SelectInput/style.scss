@@ -14,8 +14,10 @@
     }
 
     &.is-disabled {
-      .Select-control:hover {
-        background-color: $n400;
+      .Select-control {
+        &:hover {
+          background-color: $n400;
+        }
       }
     }
 
