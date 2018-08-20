@@ -1,35 +1,42 @@
+@import '../../variables';
+
 .tabs {
+  @include clearfix;
+  background-color: transparent;
   border: none;
-  width: auto;
+  list-style-type: none;
+  margin: 0;
   position: relative;
   top: 1px;
-  background-color: transparent;
+  width: auto;
 
   .tabs-title {
+    float: left;
+
     > a {
       background-color: transparent;
       border: 0;
-      box-shadow: inset 0 -1px 0 0 $neutral;
-      color: $main-text;
+      box-shadow: inset 0 -1px 0 0 $n300;
+      color: $n700;
+      display: block;
       font-size: inherit;
       font-weight: 600;
+      line-height: 1;
       padding: rem-calc(15) rem-calc(20);
       text-transform: uppercase;
       transition: box-shadow .3s ease, color .3s ease;
 
       &:hover,
       &:focus {
-        background-color: $main-background;
-        box-shadow: inset 0 -3px 0 0 $neutral;
-        color: $primary;
+        box-shadow: inset 0 -3px 0 0 $n300;
+        color: $i400;
       }
     }
 
     &.is-active > a {
-      background-color: $main-background;
       border: 0;
-      box-shadow: inset 0 -3px 0 0 $primary;
-      color: $primary;
+      box-shadow: inset 0 -3px 0 0 $i400;
+      color: $i400;
     }
   }
 
@@ -39,5 +46,14 @@
 }
 
 .tabs-content {
-  border: 1px solid $neutral;
+  border: 1px solid $n300;
+}
+
+.tabs-panel {
+  display: none;
+  padding: 1rem;
+
+  &.is-active {
+    display: block;
+  }
 }

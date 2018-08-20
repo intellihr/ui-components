@@ -31,7 +31,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
 
 .c1 {
   text-align: right;
-  color: hsl(210,13.4%,47.2%);
+  color: #667380;
   position: absolute;
   width: 4rem;
   font-size: 14px;
@@ -40,7 +40,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
 }
 
 .c3 {
-  border: 2px solid rgb(223,229,232);
+  border: 2px solid #E1E6EB;
   position: absolute;
   left: 50%;
   display: inline-block;
@@ -124,7 +124,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
 
 .c1 {
   text-align: right;
-  color: hsl(210,13.4%,47.2%);
+  color: #667380;
   position: absolute;
   width: 4rem;
   font-size: 14px;
@@ -250,7 +250,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
 
 .c1 {
   text-align: right;
-  color: hsl(210,13.4%,47.2%);
+  color: #667380;
   position: absolute;
   width: 4rem;
   font-size: 14px;
@@ -259,7 +259,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
 }
 
 .c3 {
-  border: 2px solid rgb(223,229,232);
+  border: 2px solid #E1E6EB;
   position: absolute;
   left: 50%;
   display: inline-block;

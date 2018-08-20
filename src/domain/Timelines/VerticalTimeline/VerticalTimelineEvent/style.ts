@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
+const { n300, n600 } = require('../../../../common/sass/variables.scss')
 
 const VerticalTimelineEventWrapper = styled.div`
   margin: 40px 0;
@@ -29,7 +30,7 @@ const EventMarkerWrapper = styled.div`
 
 const EventDate = styled.span`
   text-align: right;
-  color: hsl(210, 13.4%, 47.2%);
+  color: ${n600};
   position: absolute;
   width: 4rem;
   font-size: 14px;
@@ -38,7 +39,7 @@ const EventDate = styled.span`
 `
 
 const EventDot = styled.span`
-  border: 2px solid rgb(223, 229, 232);
+  border: 2px solid ${n300};
   position: absolute;
   left: 50%;
   display: inline-block;

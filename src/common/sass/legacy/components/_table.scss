@@ -1,3 +1,5 @@
+@import '../../variables';
+
 .table-container {
   overflow-x: auto;
 }
@@ -13,8 +15,8 @@ table {
   }
 
   thead {
-    background: lighten($neutral-light, 1%);
-    border-bottom: 2px solid lighten($border, 10%);
+    background: $n200;
+    border-bottom: 2px solid $n400;
 
     th {
       font-weight: 600;
@@ -24,10 +26,9 @@ table {
   tbody {
     tr {
       border: 0;
-      border-bottom: 1px solid lighten($border, 15%);
+      border-bottom: 1px solid $n300;
     }
   }
-
 
   .button-group {
     margin-bottom: 0;
@@ -38,65 +39,11 @@ table {
 tr {
   &.highlight {
     // As styled by foundation's callout
-    background-color: scale-color($warning, $lightness: 85%);
+    background-color: $o100;
   }
 
-  &.table-info {
-    border: rem-calc(1) solid lighten($success-color, 5%);
-
-    td,
-    form {
-      background-color: lighten($success-color, 5%);
-      color: $main-background;
-
-      > a {
-        color: $main-background;
-      }
-
-      &.table-action-cell {
-        a,
-        form {
-          color: $main-background;
-
-          &:hover {
-            background-color: darken($success-color, 5%);
-            color: $main-background;
-          }
-        }
-      }
-    }
-  }
-
-  &.table-danger,
   &.alert {
-    background-color: lighten($alert-color, 20%);
-    border: rem-calc(1) solid lighten($alert-color, 15%);
-
-    &:nth-child(even) {
-      background-color: lighten($alert-color, 10%);
-      border: rem-calc(1) solid lighten($alert-color, 5%);
-    }
-
-    td,
-    form {
-      color: $main-background;
-
-      > a {
-        color: $main-background;
-      }
-
-      &.table-action-cell {
-        a,
-        form {
-          color: $main-background;
-
-          &:hover {
-            background-color: darken($alert-color, 5%);
-            color: $main-background;
-          }
-        }
-      }
-    }
+    background-color: $r100;
   }
 }
 
@@ -129,8 +76,6 @@ td {
     }
   }
 }
-
-
 
 .table-full-width {
   margin-left: auto;

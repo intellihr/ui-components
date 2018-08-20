@@ -1,13 +1,14 @@
+@import '../../variables';
+
 $ihrImageHeaderHeight: 30px;
 
 .title-bar {
   &.mobile {
-    background: $sidebar;
+    background: $n200;
     height: 48px;
-    // margin-bottom: 1rem;
 
     button {
-      color: $sidebar-text;
+      color: $n700;
     }
 
     .menu > li {
@@ -25,7 +26,7 @@ $ihrImageHeaderHeight: 30px;
       > a {
         line-height: 48px;
         padding: 0 7px 0 7px;
-        color: $sidebar-text;
+        color: $n700;
 
         > img {
           margin-right: 0;
@@ -35,7 +36,7 @@ $ihrImageHeaderHeight: 30px;
       > a:focus,
       > button:hover,
       > button:focus {
-        background-color: $sidebar-hover;
+        background-color: $n300;
       }
       &.menu-logo {
         > a > img {
@@ -43,7 +44,7 @@ $ihrImageHeaderHeight: 30px;
         }
         > a:hover,
         > a:focus {
-          background-color: $sidebar;
+          background-color: $n200;
         }
       }
 
@@ -51,22 +52,6 @@ $ihrImageHeaderHeight: 30px;
         &.menu-logo > a {
           padding: 9px 0;
         }
-      }
-    }
-
-    .dropdown.menu li a {
-      padding: 16px;
-      white-space: nowrap;
-    }
-    .dropdown.menu .submenu {
-      background-color: $primary;
-      border: none;
-    }
-    .dropdown.menu .submenu li a {
-      color: $main-background-hover;
-
-      &:hover {
-        background-color: darken($primary, 5%)
       }
     }
   }

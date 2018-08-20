@@ -52,12 +52,23 @@ exports[`<FormattedText /> should render a big block of markdown 1`] = `
   margin-bottom: 0;
 }
 
+.c1 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+}
+
 .c1,
 .c1:link,
-.c1:visited,
-.c1:hover,
+.c1:visited {
+  color: i400;
+}
+
+.c1:hover {
+  color: i500;
+}
+
 .c1:active {
-  color: rgb(5,87,223);
+  color: i600;
 }
 
 <FormattedText
@@ -871,12 +882,23 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
   margin-bottom: 0;
 }
 
+.c1 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+}
+
 .c1,
 .c1:link,
-.c1:visited,
-.c1:hover,
+.c1:visited {
+  color: i400;
+}
+
+.c1:hover {
+  color: i500;
+}
+
 .c1:active {
-  color: rgb(5,87,223);
+  color: i600;
 }
 
 <FormattedText

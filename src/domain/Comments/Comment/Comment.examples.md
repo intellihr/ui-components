@@ -4,7 +4,7 @@
   comment={{
     id: 'sampleCommentId',
     comment: 'A very recent comment',
-    personDisplayName: 'Testing Preson Name',
+    personDisplayName: 'Example Person Name',
     personLastName: 'Culkin',
     personPreferredOrFirstName: 'McKooley',
     createdDateText: <span>just now</span>,
@@ -22,7 +22,7 @@
   comment={{
     id: 'sampleCommentId',
     comment: 'This is some ancient comment',
-    personDisplayName: 'Testing Preson Name',
+    personDisplayName: 'Example Person Name',
     personLastName: 'Culkin',
     personPreferredOrFirstName: 'McKooley',
     createdDateText: <span>1st Jan 2017</span>,
@@ -41,7 +41,7 @@
   comment={{
     id: 'sampleCommentId',
     comment: 'This is some ancient comment',
-    personDisplayName: 'Testing Preson Name',
+    personDisplayName: 'Example Person Name',
     personLastName: 'Culkin',
     personPreferredOrFirstName: 'McKooley',
     createdDateText: <span>1st Jan 2017</span>,
