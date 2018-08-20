@@ -3,11 +3,11 @@ import styled, { StyledComponentClass, css } from 'styled-components'
 import { Props } from '../../../../common/types'
 import { getColor } from '../../../../common/legacy'
 import { SectionType } from './Section'
-const { zIndexDropdownMenu } = require('../../../../common/sass/variables.scss')
+const variables = require('../../../../common/sass/variables.scss')
 
 const DefaultDropdownButton = styled.button`
   background-color: transparent;
-  color: #929fab;
+  color: ${variables.n700};
   cursor: pointer;
   margin: 0;
   padding: .5rem .3rem;
@@ -16,8 +16,8 @@ const DefaultDropdownButton = styled.button`
   &:hover,
   &:active,
   &:focus {
-    background-color: ${getColor('neutral-base')};
-    color: ${getColor('main-text')};
+    background-color: ${variables.n300};
+    color: ${variables.n800};
     outline: none;
   }
 
@@ -45,7 +45,7 @@ const StyledDropdownMenu = styled.span`
   margin: 2px;
   position: absolute;
   width: min-content;
-  z-index: ${zIndexDropdownMenu};
+  z-index: ${variables.zIndexDropdownMenu};
 
   transform: scale(0.1);
   transform-origin: ${(props: IStyledDropdownMenuProps) => props.transformOrigin.xPos + ' ' + props.transformOrigin.yPos};
@@ -58,7 +58,7 @@ const StyledDropdownMenu = styled.span`
 `
 
 const StyledSectionList = styled.ul`
-  background-color: ${getColor('main-background')};
+  background-color: ${variables.n100};
   border-radius: 4px;
   box-shadow: 0 0 4px rgba(0, 0, 0, .15), 0 2px 4px rgba(0, 0, 0, .29);
   min-width: 140px;
@@ -73,28 +73,28 @@ interface IStyledSectionProps {
 
 const stripMapping: { [n: string]: { stripColor: string, backgroundColor: string } } = {
   stripAlert: {
-    stripColor: getColor('alert-base'),
-    backgroundColor: getColor('alert-light')
+    stripColor: variables.r400,
+    backgroundColor: variables.r100
   },
   stripSuccess: {
-    stripColor: getColor('success-base'),
-    backgroundColor: getColor('success-light')
+    stripColor: variables.g400,
+    backgroundColor: variables.g100
   },
   stripWarning: {
-    stripColor: getColor('warning-base'),
-    backgroundColor: getColor('warning-light')
+    stripColor: variables.o400,
+    backgroundColor: variables.o100
   },
   stripPrimary: {
-    stripColor: getColor('primary-base'),
-    backgroundColor: getColor('primary-light')
+    stripColor: variables.i400,
+    backgroundColor: variables.i100
   },
   stripSecondary: {
-    stripColor: getColor('secondary-base'),
-    backgroundColor: getColor('secondary-light')
+    stripColor: variables.b400,
+    backgroundColor: variables.b100
   },
   stripNeutral: {
-    stripColor: getColor('neutral-base'),
-    backgroundColor: getColor('neutral-light')
+    stripColor: variables.n400,
+    backgroundColor: variables.n200
   }
 }
 
@@ -103,7 +103,7 @@ function styleForSectionType (section: IStyledSectionProps) {
     const mapping = stripMapping[section.sectionType]
 
     return css`
-      color: ${getColor('main-text')};
+      color: ${variables.n800};
       border-left: 5px solid ${mapping.stripColor};
 
       ${section.clickable && css`
@@ -113,7 +113,6 @@ function styleForSectionType (section: IStyledSectionProps) {
         &:active,
         &:focus {
           background-color: ${mapping.backgroundColor};
-          color: ${getColor('main-text')}
         }
       `}
     `
@@ -126,26 +125,19 @@ function styleForSectionType (section: IStyledSectionProps) {
       .right-component {
         background-color: transparent;
         border-color: transparent;
-        color: ${getColor('alert-base')};
+        color: ${variables.r600};
 
         ${section.clickable && css`
           cursor: pointer;
 
           &:focus,
           &:hover {
-            background-color: ${getColor('alert-base')};
-
-            &,
-            .left-component,
-            .right-component {
-              color: ${getColor('alert-text')};
-            }
+            background-color: ${variables.r100};
           }
 
           &:active,
           &.active {
-            background-color: ${getColor('alert-active')};
-            color: ${getColor('alert-text')};
+            background-color: ${variables.r200};
           }
         `}
       }
@@ -157,7 +149,7 @@ function styleForSectionType (section: IStyledSectionProps) {
       &,
       .left-component,
       .right-component {
-        color: ${getColor('main-text')};
+        color: ${variables.n700};
 
         ${section.clickable && css`
           cursor: pointer;
@@ -165,12 +157,12 @@ function styleForSectionType (section: IStyledSectionProps) {
           &:hover,
           &:active,
           &:focus {
-            background-color: ${getColor('neutral-light')};
+            background-color: ${variables.n200};
 
             &,
             .left-component,
             .right-component {
-              color: ${getColor('link-text')};
+              color: ${variables.i400};
             }
           }
         }
