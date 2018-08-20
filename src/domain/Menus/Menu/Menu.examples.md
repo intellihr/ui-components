@@ -42,7 +42,7 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 
 #### Menu with loading menu item
 
-```jsx 
+```jsx
 const { MenuItem } = require('./MenuItem');
 const { FontAwesomeIcon } = require('@Domain/Icons');
 
