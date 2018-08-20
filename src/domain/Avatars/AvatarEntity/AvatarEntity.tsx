@@ -3,11 +3,13 @@ import {
   AvatarContainer,
   AvatarEntityInfo,
   AvatarEntityWrapper,
-  SecondaryTextWrapper,
-  TertiaryTextWrapper
+  SecondaryTextWrapper
 } from './style'
-import { Avatar, IAvatarProps } from '../../Avatars'
+import { Avatar, IAvatarProps } from '../'
 import { Text } from '../../Typographies'
+
+
+const { n600, n700 } = require('../../../common/sass/variables.scss')
 
 export interface IAvatarEntity {
   /** The primary text */
@@ -54,7 +56,14 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
       isCompact
     } = this.props
 
-    return <Text isInline={isCompact}>{primaryText}</Text>
+    return (
+      <Text
+        color={n700}
+        isInline={isCompact}
+      >
+        {primaryText}
+      </Text>
+    )
   }
 
   get secondaryText (): JSX.Element | null {
@@ -78,6 +87,7 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
         isCompact={isCompact}
       >
         <Text
+          color={n600}
           size='xsmall'
           isTruncated
           isInline={isCompact}
@@ -99,16 +109,15 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
     }
 
     return (
-      <TertiaryTextWrapper>
-        <Text
-          size='xsmall'
-          weight='heavy'
-          isInline={false}
-          isTruncated
-        >
-          {tertiaryText}
-        </Text>
-      </TertiaryTextWrapper>
+      <Text
+        color={n600}
+        size='xsmall'
+        weight='heavy'
+        isInline={false}
+        isTruncated
+      >
+        {tertiaryText}
+      </Text>
     )
   }
 
