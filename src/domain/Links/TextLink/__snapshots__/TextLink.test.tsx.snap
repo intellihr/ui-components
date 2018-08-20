@@ -1,12 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TextLink /> should render a text link 1`] = `
+.c0 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+}
+
 .c0,
 .c0:link,
-.c0:visited,
-.c0:hover,
+.c0:visited {
+  color: i400;
+}
+
+.c0:hover {
+  color: i500;
+}
+
 .c0:active {
-  color: rgb(5,87,223);
+  color: i600;
 }
 
 <TextLink
