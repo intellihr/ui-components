@@ -18,7 +18,7 @@ describe('<Modal />', () => {
   it('should render a shown modal with no close button', () => {
     const wrapper = shallow(
       <Modal
-        isOpen={true}
+        isOpen
         showCloseButton={false}
       >
         This text is shown
