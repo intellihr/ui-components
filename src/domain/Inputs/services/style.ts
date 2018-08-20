@@ -1,9 +1,10 @@
 import styled from 'styled-components'
-import { getColor } from '../../../common/legacy'
+
+const { n800, n400 } = require('../../../common/sass/variables.scss')
 
 export const InputWrapper = styled.div`
   position: relative;
-  color: ${getColor('main-text-light')};
+  color: ${n800};
 
   input {
     text-indent: 30px;
@@ -13,6 +14,6 @@ export const InputWrapper = styled.div`
     position: absolute;
     top: 10px;
     left: 10px;
-    color: ${getColor('border')};
+    color: ${n400};
   }
 `
