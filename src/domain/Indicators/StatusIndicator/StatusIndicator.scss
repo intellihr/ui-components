@@ -1,3 +1,5 @@
+@import '../../../common/sass/variables';
+
 :local(.StatusIndicator) {
   font-size: .9375rem;
   font-weight: normal;
@@ -11,13 +13,7 @@
   }
 
   .subtitle {
-    font-size: .8125rem;
+    display: block;
     padding-left: 15px;
-  }
-
-  @each $color, $value in $functional-colours {
-    &.#{$color} {
-      color: map-get($value, base);
-    }
   }
 }
