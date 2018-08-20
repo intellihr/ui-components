@@ -5,14 +5,22 @@ exports[`<ActionLink /> should render an action link 1`] = `
   font-weight: 600;
   font-size: .9375rem;
   text-transform: uppercase;
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
 }
 
 .c0,
 .c0:link,
-.c0:visited,
-.c0:hover,
+.c0:visited {
+  color: i400;
+}
+
+.c0:hover {
+  color: i500;
+}
+
 .c0:active {
-  color: rgb(5,87,223);
+  color: i600;
 }
 
 <ActionLink
@@ -44,14 +52,22 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
   font-weight: 600;
   font-size: .9375rem;
   text-transform: uppercase;
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
 }
 
 .c1,
 .c1:link,
-.c1:visited,
-.c1:hover,
+.c1:visited {
+  color: i400;
+}
+
+.c1:hover {
+  color: i500;
+}
+
 .c1:active {
-  color: rgb(5,87,223);
+  color: i600;
 }
 
 <DefaultsProvider
