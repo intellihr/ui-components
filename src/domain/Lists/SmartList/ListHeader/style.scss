@@ -1,5 +1,7 @@
+@import '../../../../common/sass/variables';
+
 :local(.ListHeader) {
-  color: $main-text-light;
+  color: $n700;
   font-size: .9375rem;
   font-weight: 600;
 }

@@ -1,3 +1,5 @@
+@import '../../../../common/sass/variables';
+
 :local(.ListClickableColumns) {
   &:focus,
   & *:focus {
@@ -8,12 +10,12 @@
     :not(.label) {
       &.cell {
         &:first-child {
-          color: $link-text;
+          color: $i400;
         }
       }
 
       &.cell-label {
-        color: $link-text;
+        color: $i400;
       }
     }
 

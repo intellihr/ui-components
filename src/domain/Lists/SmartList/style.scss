@@ -1,19 +1,17 @@
 @import '../../../common/sass/variables';
 
-$smart-list-bg-color-alert: lighten($alert-light, 3%);
-$smart-list-bg-hover-color-alert: lighten($alert-light, 1%);
-
 :local(.SmartList) {
   .list-title {
-
-    color: $main-text;
+    color: $n800;
     font-size: 1.125em;
     font-weight: 600;
     margin: 16px 0;
   }
 
   .header-row {
-    padding: 0 10px 10px;
+    background-color: $n200;
+    color: $n700;
+    padding: .75rem 10px;
   }
 
   .cursor-auto {
@@ -29,7 +27,7 @@ $smart-list-bg-hover-color-alert: lighten($alert-light, 1%);
   }
 
   .show-all-row {
-    color: $main-text;
+    color: $n800;
     font-weight: 600;
     padding-top: 10px;
     text-align: center;
@@ -43,15 +41,15 @@ $smart-list-bg-hover-color-alert: lighten($alert-light, 1%);
   &.hover-bg {
     .item-row {
       &:hover {
-        background-color: $main-background-hover;
+        background-color: $n200;
       }
     }
   }
 
   .item-row {
     align-items: center;
-    border-top: 1px solid $border-light;
-    color: $main-text;
+    border-top: 1px solid $n300;
+    color: $n800;
     min-height: 80px;
     padding: 10px;
     position: relative;
@@ -69,7 +67,7 @@ $smart-list-bg-hover-color-alert: lighten($alert-light, 1%);
       }
 
       &:hover {
-        background-color: $border-light;
+        background-color: $n200;
       }
 
       .fa-ellipsis-v {
@@ -78,17 +76,26 @@ $smart-list-bg-hover-color-alert: lighten($alert-light, 1%);
 
       a {
         &:hover {
-          background-color: $sidebar;
+          background-color: $n200;
         }
       }
     }
 
     &.alert {
-      background-color: $smart-list-bg-color-alert;
+      background-color: $r100;
 
       &:hover {
-        background-color: $smart-list-bg-hover-color-alert;
+        background-color: $r200;
       }
     }
+  }
+
+  .callout {
+    background-color: $n100;
+    border: 0;
+  }
+
+  .spinner {
+    padding: 2rem 0;
   }
 }
