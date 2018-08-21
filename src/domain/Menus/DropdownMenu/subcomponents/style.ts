@@ -4,7 +4,6 @@ import { Props } from '../../../../common/types'
 import { SectionType } from './Section'
 const variables = require('../../../../common/sass/variables.scss')
 
-// todo make look good
 const DefaultDropdownButton = styled.button`
   background-color: transparent;
   border: 1px solid transparent;
