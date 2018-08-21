@@ -47,12 +47,6 @@ module.exports = {
           ]
         },
         {
-          name: 'Layouts',
-          components: [
-            'src/domain/Layouts/PageLayout/PageLayout'
-          ]
-        },
-        {
           name: 'Badges',
           components: [
             'src/domain/Badges/Badge/Badge'
@@ -122,6 +116,12 @@ module.exports = {
             'src/domain/Inputs/Input/Input',
             'src/domain/Inputs/SelectInput/SelectInput',
             'src/domain/Inputs/TextAreaInput/TextAreaInput'
+          ]
+        },
+        {
+          name: 'Layouts',
+          components: [
+            'src/domain/Layouts/PageLayout/PageLayout'
           ]
         },
         {
