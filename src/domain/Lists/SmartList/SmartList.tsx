@@ -7,6 +7,7 @@ import { Callout } from '../../Callouts'
 import { Spinner } from '../../Spinners'
 import { ListClickableColumn } from './ListClickableColumn'
 import { ListRow } from './ListRow'
+import { ListColumn } from './ListColumn'
 import { ISkeletonOptions } from '../../Skeletons'
 
 const style = require('./style.scss')
@@ -53,6 +54,10 @@ export interface ISmartListState {
 }
 
 class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
+  public static Row = ListRow
+  public static Column = ListColumn
+  public static ClickableColumn = ListClickableColumn
+
   public static defaultProps: Partial<ISmartList> = {
     emptyListText: 'No Results found.',
     loading: false,

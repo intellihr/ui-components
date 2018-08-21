@@ -27,7 +27,7 @@
   }
 
   .show-all-row {
-    color: $n800;
+    color: $n700;
     font-weight: 600;
     padding-top: 10px;
     text-align: center;
@@ -49,7 +49,7 @@
   .item-row {
     align-items: center;
     border-top: 1px solid $n300;
-    color: $n800;
+    color: $n700;
     min-height: 80px;
     padding: 10px;
     position: relative;
@@ -93,6 +93,7 @@
   .callout {
     background-color: $n100;
     border: 0;
+    color: $n600;
   }
 
   .spinner {
