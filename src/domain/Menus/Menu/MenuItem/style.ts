@@ -1,12 +1,12 @@
 import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
-import { getColor } from '../../../../common/legacy'
+const { i400, n700, n300 } = require('@Common/sass/variables.scss')
 
 const MenuItemWrapper = styled.li`
   &.active {
     a {
-      border-left: 3px solid ${getColor('primary')};
-      color: ${getColor('primary')};
+      border-left: 3px solid ${i400};
+      color: ${i400};
       font-weight: 600;
       margin-left: 0;
     }
@@ -19,20 +19,20 @@ const MenuItemWrapper = styled.li`
     line-height: 1;
     text-decoration: none;
 
-    color: ${getColor('sidebar-text')};
+    color: ${n700};
     margin-left: 3px;
     white-space: nowrap;
 
     &:hover {
-      color: ${getColor('sidebar-text')};
-      background-color: ${getColor('neutral')};
-      border-left: 3px solid ${getColor('neutral')};
+      color: ${n700};
+      background-color: ${n300};
+      border-left: 3px solid ${n300};
       margin-left: 0;
     }
 
      &.active {
-      border-left: 3px solid ${getColor('primary')};
-      color: ${getColor('primary')};
+      border-left: 3px solid ${i400};
+      color: ${i400};
       font-weight: 600;
       margin-left: 0;
     }
