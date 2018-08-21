@@ -60,15 +60,15 @@ exports[`<FormattedText /> should render a big block of markdown 1`] = `
 .c1,
 .c1:link,
 .c1:visited {
-  color: i400;
+  color: #432DF3;
 }
 
 .c1:hover {
-  color: i500;
+  color: #2512B3;
 }
 
 .c1:active {
-  color: i600;
+  color: #0F0080;
 }
 
 <FormattedText
@@ -890,15 +890,15 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
 .c1,
 .c1:link,
 .c1:visited {
-  color: i400;
+  color: #432DF3;
 }
 
 .c1:hover {
-  color: i500;
+  color: #2512B3;
 }
 
 .c1:active {
-  color: i600;
+  color: #0F0080;
 }
 
 <FormattedText
