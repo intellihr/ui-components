@@ -7,6 +7,11 @@ exports[`<ReportHeader /> should render ReportHeader with info 1`] = `
 }
 
 .c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #667380;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -18,18 +23,14 @@ exports[`<ReportHeader /> should render ReportHeader with info 1`] = `
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   height: 40px;
-  width: 300px;
   padding: 5px;
   text-transform: uppercase;
+  width: 300px;
 }
 
 .c2:hover {
-  color: rgb(15,104,250);
+  color: #432DF3;
   cursor: pointer;
 }
 
