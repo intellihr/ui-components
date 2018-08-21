@@ -1,24 +1,31 @@
 import React from 'react'
 import styled, { StyledComponentClass, css } from 'styled-components'
 import { Props } from '../../../../common/types'
-import { getColor } from '../../../../common/legacy'
 import { SectionType } from './Section'
 const variables = require('../../../../common/sass/variables.scss')
 
+// todo make look good
 const DefaultDropdownButton = styled.button`
   background-color: transparent;
+  border: 1px solid transparent;
   color: ${variables.n700};
   cursor: pointer;
   margin: 0;
+  outline: none;
   padding: .5rem .3rem;
   transition: background-color .25s ease-out, color .25s ease-out;
 
-  &:hover,
-  &:active,
-  &:focus {
+  &:hover {
+    background-color: ${variables.n200};
+  }
+  
+  &:active {
     background-color: ${variables.n300};
-    color: ${variables.n800};
-    outline: none;
+  }
+  
+  &:focus {
+    background-color: ${variables.n200};
+    border-color: ${variables.n400};
   }
 
   .fa {
