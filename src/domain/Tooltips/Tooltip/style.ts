@@ -28,8 +28,6 @@ const TooltipWrapper = styled.span`
     &.place-left:after {
       border-left-color: ${n800};
     }
-
-
   }
 `
 
