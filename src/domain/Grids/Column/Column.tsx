@@ -26,7 +26,11 @@ class Column extends React.PureComponent<IColumnProps> {
     let previousValue: number = 12
     const that = this
 
-    return reduce(dimensions, (acc: IColumnProps, key: string, index): IColumnProps => {
+    return reduce(dimensions,
+                 (acc: IColumnProps,
+                          key: string,
+                          index: number): IColumnProps =>
+      {
       const sizeValue = that.props[key as keyof IColumnProps]
 
       if (!isNil(sizeValue)) {
