@@ -9,15 +9,15 @@ exports[`<TextLink /> should render a text link 1`] = `
 .c0,
 .c0:link,
 .c0:visited {
-  color: i400;
+  color: #432DF3;
 }
 
 .c0:hover {
-  color: i500;
+  color: #2512B3;
 }
 
 .c0:active {
-  color: i600;
+  color: #0F0080;
 }
 
 <TextLink
