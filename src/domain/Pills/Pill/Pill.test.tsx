@@ -24,17 +24,4 @@ describe('<Pill />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
-
-  it('should render a large hollow attribute label', () => {
-    const wrapper = shallow(
-      <Pill
-        text='Test'
-        color='alert'
-        isHollow
-        size='large'
-      />
-    )
-
-    expect(wrapper).toMatchSnapshot()
-  })
 })

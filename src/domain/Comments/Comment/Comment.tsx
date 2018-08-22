@@ -1,19 +1,19 @@
 import React from 'react'
 import classNames from 'classnames'
-import { Avatar } from '@Domain/Avatars'
+import { Avatar } from '../../Avatars'
 import {
   DropdownMenu,
   IDropdownMenuSectionProps
-} from '@Domain/Menus'
+} from '../../Menus'
 import {
   StyledComment,
   CommentActionMenuToggleButton
 } from './style'
-import { FontAwesomeIcon } from '@Domain/Icons'
-import { FormattedText } from '@Domain/Typographies'
-import { Props } from '@Common/types'
+import { FontAwesomeIcon } from '../../Icons'
+import { FormattedText } from '../../Typographies'
+import { Props } from '../../../common/types'
 
-export interface CommentProps {
+export interface ICommentProps {
   /** Comment object to render */
   comment: {
     /** Comment ID (UUID) */
@@ -42,7 +42,7 @@ export interface CommentProps {
   actions?: IDropdownMenuSectionProps[]
 }
 
-export class Comment extends React.Component<CommentProps> {
+export class Comment extends React.Component<ICommentProps> {
   get avatar (): JSX.Element {
     const {
       commenterInitials,
@@ -159,7 +159,7 @@ export class Comment extends React.Component<CommentProps> {
     )
   }
 
-  render (): JSX.Element {
+  public render (): JSX.Element {
     const {
       comment: {
         id: commentId

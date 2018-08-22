@@ -1,10 +1,11 @@
+@import '../../variables';
+
 .radio-button-group {
   @extend .button-group;
 
   .button {
-    background-color: $light-gray;
-    color: $black;
-    border-bottom: 1px solid $white;
+    background-color: $n300;
+    color: $n700;
     border-left: none;
   }
 
@@ -13,28 +14,11 @@
   }
 
   input:checked + .button {
-    background-color: $primary-color;
-    color: $white;
+    background-color: $i400;
+    color: $n100;
   }
 
   .button:hover {
-    background-color: $medium-gray;
+    background-color: $n400;
   }
-}
-
-.radio-button-group.stacked, .radio-button-group.stacked-for-small {
-
-  @include breakpoint(small only) {
-
-    .button:not(:last-child) {
-      border-right-color: $light-gray;
-    }
-
-    input:checked + .button {
-      border-right-color: $primary-color;
-      transition: border-right-color 0.25s ease-out;
-    }
-
-  }
-
 }

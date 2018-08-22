@@ -1,4 +1,4 @@
-@import '../../../common/sass/legacy/foundation_settings';
+@import '../../../common/sass/variables';
 
 // sass-lint:disable class-name-format
 
@@ -30,8 +30,8 @@
   }
 
   .rt-thead {
-    background: lighten($neutral-light, 1%);
-    border-bottom: 2px solid lighten($border, 10%);
+    background: $n200;
+    border-bottom: 2px solid $n400;
     display: flex;
     flex: 1 0 auto;
     flex-direction: column;
@@ -39,7 +39,7 @@
     user-select: none;
 
     &.-filters {
-      border-bottom: 1px solid lighten($border, 10%);
+      border-bottom: 1px solid $n300;
 
       .rt-th {
         input {
@@ -49,8 +49,8 @@
     }
 
     &.-headerGroups {
-      background: lighten($neutral-light, 1%);
-      border-bottom: 2px solid lighten($border, 10%);
+      background: $n200;
+      border-bottom: 2px solid $n300;
     }
 
     .rt-th,
@@ -80,16 +80,16 @@
 
       // Signifies sortable headers
       &.-cursor-pointer {
-        @include sorting-cursor('\f0dc', $main-text);
+        @include sorting-cursor('\f0dc', $n800);
 
         cursor: pointer;
 
         &.-sort-asc {
-          @include sorting-cursor('\f0de', $link-text);
+          @include sorting-cursor('\f0de', $i400);
         }
 
         &.-sort-desc {
-          @include sorting-cursor('\f0dd', $link-text);
+          @include sorting-cursor('\f0dd', $i400);
         }
 
         div {
@@ -112,17 +112,17 @@
     }
 
     .rt-header-pivot {
-      border-right-color: #f7f7f7;
+      border-right-color: $n300;
 
       &::after {
         border: 8px rgba(255, 255, 255, 0);
-        border-left-color: #fff;
+        border-left-color: $n100;
         margin-top: -8px;
       }
 
       &::before {
         border: 10px rgba(102, 102, 102, 0);
-        border-left-color: #f7f7f7;
+        border-left-color: $n300;
         margin-top: -10px;
       }
 
@@ -143,7 +143,7 @@
   &.show-vertical-lines {
     .rt-th,
     .rt-td {
-      border-right: solid 1px rgba(0, 0, 0, .05);
+      border-right: solid 1px $n300;
 
       &:last-child {
         border-right: 0;
@@ -158,7 +158,7 @@
 
     .rt-tr-group {
       align-items: stretch;
-      border-bottom: solid 1px rgba(0, 0, 0, .05);
+      border-bottom: solid 1px $n300;
       display: flex;
       flex: 1 0 auto;
       flex-direction: column;
@@ -219,7 +219,7 @@
     &::after {
       border-left: 5.04px solid transparent;
       border-right: 5.04px solid transparent;
-      border-top: 7px solid rgba(0, 0, 0, .8);
+      border-top: 7px solid $n300;
       content: '';
       cursor: pointer;
       height: 0;
@@ -268,7 +268,7 @@
 
   .pagination-bottom {
     .-pagination {
-      border-top: solid 1px lighten($border, 10%);
+      border-top: solid 1px $n300;
 
       .search-filter,
       .page-size-options {
@@ -311,7 +311,7 @@
     }
 
     .ellipsis {
-      color: $border;
+      color: $n800;
       cursor: not-allowed;
       padding: .1875rem .5rem;
     }
@@ -337,7 +337,7 @@
       background: transparent;
       border: 0;
       border-radius: 4px;
-      color: $dark-base;
+      color: $n800;
       cursor: pointer;
       display: block;
       font-size: .875rem;
@@ -352,25 +352,24 @@
       &:not([disabled]) {
         &:hover,
         &:focus {
-          background-color: $neutral-base;
-          color: $black;
+          background-color: $n300;
         }
       }
 
       &[disabled] {
         background-color: transparent;
-        color: $border;
+        color: $n400;
         cursor: not-allowed;
       }
 
       &.current {
-        background-color: $secondary-base;
-        color: $white;
+        background-color: $i400;
+        color: $n100;
 
         &:hover,
         &:focus {
-          background-color: $secondary-base;
-          color: $white;
+          background-color: $i400;
+          color: $n100;
           cursor: default;
         }
       }
@@ -387,7 +386,7 @@
   }
 
   .-loading {
-    background: rgba(255, 255, 255, .8);
+    background: $n150;
     bottom: 0;
     display: block;
     left: 0;
@@ -400,7 +399,7 @@
     z-index: -1;
 
     > div {
-      color: rgba(0, 0, 0, .6);
+      color: $n700;
       display: block;
       font-size: 15px;
       left: 0;

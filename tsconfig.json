@@ -20,11 +20,7 @@
     "rootDir": "./src",
     "outDir": "./types",
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "paths": {
-      "@Domain/*": ["src/domain/*"],
-      "@Common/*": ["src/common/*"]
-    }
+    "esModuleInterop": true
   },
   "include": [
     "src/**/*.ts",

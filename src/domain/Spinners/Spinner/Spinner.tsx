@@ -2,9 +2,10 @@ import React from 'react'
 import classNames from 'classnames'
 import { ThreeBounce, FadingCircle } from 'better-react-spinkit'
 import { SpinnerWrapper } from './style'
-import { getColor } from '@Common/legacy'
 
-export interface SpinnerProps {
+const { i400 } = require('../../../common/sass/variables.scss')
+
+export interface ISpinnerProps {
   /** Type of spinner to display */
   type: 'three-bounce' | 'fading-circle'
   /** Position of the spinner on the page */
@@ -15,13 +16,13 @@ export interface SpinnerProps {
   color?: string
 }
 
-export class Spinner extends React.PureComponent<SpinnerProps> {
-  public static defaultProps: Partial<SpinnerProps> = {
-    color: getColor('primary'),
+export class Spinner extends React.PureComponent<ISpinnerProps> {
+  public static defaultProps: Partial<ISpinnerProps> = {
+    color: i400,
     size: 20
   }
 
-  spinner () {
+  public spinner () {
     const {
       type,
       size,

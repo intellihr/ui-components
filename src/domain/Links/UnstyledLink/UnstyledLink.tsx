@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { StyledFunction } from 'styled-components'
 import { Anchor, IAnchorProps } from '../../Internals/Anchor/Anchor'
 
+// tslint:disable-next-line:no-empty-interface
 interface IUnstyledLinkProps extends IAnchorProps {}
 
 const styledAnchor: StyledFunction<IUnstyledLinkProps> = styled(Anchor)

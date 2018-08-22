@@ -1,15 +1,38 @@
+// Google Font
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700");
+
 // Foundation for Sites
 @import '~foundation-sites/scss/settings/settings';
 @import 'legacy/foundation_settings';
 
 @import 'foundation';
+
 // Foundation Flex classes mixin includes Flex Child alignment and Source Ordering styles
 // these classes are not included in xy-grid or float-grid so they won't cause any problems
+// Foundation is imported piecewise so we can disable styles which aren't being used
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-typography;
+@include foundation-forms;
+@include foundation-accordion-menu;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-dropdown-menu;
+@include foundation-off-canvas;
+@include foundation-pagination;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+
 @include foundation-flex-classes; // to include when using flex-box mode
-@include foundation-everything(false);
 @include foundation-xy-grid-classes;
-@include foundation-menu-icon;
-// @include foundation-flex-grid; // we're likely to use this in future
 
 // Intelli-icons
 @import '~@intellihr/icons/style.css';
@@ -18,34 +41,23 @@
 $fa-font-path: '~font-awesome/fonts';
 @import '~font-awesome/scss/font-awesome';
 
-// Google Font
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700");
-
 // Components
-@import 'legacy/components/accordion';
-@import 'legacy/components/action-panel';
-@import 'legacy/components/attribute-label';
-@import 'legacy/components/badge';
 @import 'legacy/components/box';
 @import 'legacy/components/breadcrumbs';
-@import 'legacy/components/button';
 @import 'legacy/components/button-group';
 @import 'legacy/components/callout';
 @import 'legacy/components/dropdown';
-@import 'legacy/components/errors';
-@import 'legacy/components/feature-panel';
-@import 'legacy/components/footer';
 @import 'legacy/components/form';
+@import 'legacy/components/feature-panel';
 @import 'legacy/components/grid';
 @import 'legacy/components/icon';
-@import 'legacy/components/label';
-@import 'legacy/components/loader';
+@import 'legacy/components/label-group';
 @import 'legacy/components/modal';
 @import 'legacy/components/navigation';
+@import 'legacy/components/person-tag';
 @import 'legacy/components/radio-button-group';
 @import 'legacy/components/table';
 @import 'legacy/components/tabs';
-@import 'legacy/components/tags';
 @import 'legacy/components/tenant-logo';
 @import 'legacy/components/title-bar';
 @import 'legacy/components/typography';

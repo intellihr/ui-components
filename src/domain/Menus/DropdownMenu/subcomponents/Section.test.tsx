@@ -12,7 +12,7 @@ describe('<Section />', () => {
         />
         <Section
           text='Item 2'
-          onClick={() => {}}
+          onClick={jest.fn()}
         />
         <Section
           text='Item 3'

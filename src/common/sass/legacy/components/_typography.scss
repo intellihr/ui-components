@@ -1,3 +1,5 @@
+@import '../../variables';
+
 h1, .h1 {
   font-size: 2rem;
   font-weight: 600;
@@ -25,17 +27,17 @@ h6 {
 }
 
 .subheader {
-  color: $subheading;
+  color: $n600;
 }
 
 .title {
-  color: lighten($main-text, 20%);
+  color: $n600;
   font-size: 1.4375rem;
   margin-bottom: .4rem;
 }
 
 %section-header {
-  color: $main-text;
+  color: $n800;
   font-size: 1.125em;
   font-weight: 600;
 }
@@ -45,6 +47,6 @@ h6 {
 }
 
 p.page-subheader {
-  color: $main-text-light;
+  color: $n600;
   font-size: .9375rem;
 }

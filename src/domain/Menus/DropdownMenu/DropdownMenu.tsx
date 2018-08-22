@@ -1,13 +1,15 @@
 import React, { RefObject } from 'react'
 import moment, { Moment } from 'moment'
-import { Props } from '@Common/types'
-import { FontAwesomeIcon } from '@Domain/Icons'
+import uuid from 'uuid'
+import { Props } from '../../../common/types'
+import { FontAwesomeIcon } from '../../Icons'
 import { DefaultDropdownButton, StyledToggleContainer } from './subcomponents/style'
 import { ManualMenu } from './subcomponents/ManualMenu'
 import { ISectionProps, Section } from './subcomponents/Section'
 
 interface IDropdownMenuState {
   isDropdownOpen: boolean,
+  dropdownId?: string,
   lastClosedTime?: Moment
 }
 
@@ -20,18 +22,68 @@ interface IDropdownMenuProps {
   className?: string,
   /** The sections to render in the dropdown */
   sections: ISectionProps[],
-  /** The parent component that opens the dropdown and positions it on the page.
-   *  This component will be wrapped in a span which will determine the onclick properties.
-   *  Note: all margins will be removed. */
+  /**
+   * The parent component that opens the dropdown and positions it on the page.
+   * This component will be wrapped in a span which will determine the onclick properties.
+   * Note: all margins will be removed.
+   */
   toggleComponent?: JSX.Element
 }
 
 class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenuState> {
+  private get toggleComponent () {
+    const {
+      isDropdownOpen,
+      dropdownId
+    } = this.state
+    const { toggleComponent } = this.props
+
+    return (
+      <span>
+        <StyledToggleContainer
+          onClick={this.openMenu}
+          innerRef={this.toggleComponentRef}
+          role='button'
+          aria-expanded={isDropdownOpen}
+          aria-owns={dropdownId}
+          aria-haspopup
+        >
+          {toggleComponent}
+        </StyledToggleContainer>
+      </span>
+    )
+  }
+
+  private get dropdownMenu (): JSX.Element | null {
+    const {
+      isDropdownOpen,
+      dropdownId
+    } = this.state
+    const {
+      className,
+      sections,
+      parentAnchorPosition,
+      dropdownAnchorPosition
+    } = this.props
+
+    return (
+      <ManualMenu
+        id={dropdownId || ''}
+        className={className}
+        isDropdownOpen={isDropdownOpen}
+        onDropdownClose={this.close}
+        sections={sections}
+        parentAnchorPosition={parentAnchorPosition}
+        dropdownAnchorPosition={dropdownAnchorPosition}
+        parentRef={this.toggleComponentRef}
+      />
+    )
+  }
+
   public static ManualMenu = ManualMenu
   public static Section = Section
   public static DefaultDropdownButton = DefaultDropdownButton
-
-  public static defaultProps: Partial<IDropdownMenuProps> = {
+  public static defaultProps = {
     toggleComponent: (
       <DefaultDropdownButton>
         <FontAwesomeIcon type='ellipsis-v' />
@@ -39,9 +91,20 @@ class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenu
     )
   }
 
-  public state: IDropdownMenuState = { isDropdownOpen: false }
+  public state: IDropdownMenuState = {
+    isDropdownOpen: false
+  }
 
   private toggleComponentRef: RefObject<HTMLSpanElement> = React.createRef()
+
+  public render (): JSX.Element {
+    return (
+      <React.Fragment>
+        {this.toggleComponent}
+        {this.dropdownMenu}
+      </React.Fragment>
+    )
+  }
 
   private openMenu = () => {
     const {
@@ -55,63 +118,19 @@ class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenu
 
     // Hack to prevent reopening the menu on the same click as closing it
     if (!lastClosedTime || (moment().diff(lastClosedTime) > 300)) {
-      this.setState({ isDropdownOpen: true })
+      this.setState({
+        isDropdownOpen: true,
+        dropdownId: uuid.v4()
+      })
     }
   }
 
   private close = () => {
     this.setState({
       isDropdownOpen: false,
+      dropdownId: undefined,
       lastClosedTime: moment()
     })
-  }
-
-  private get toggleComponent () {
-    const {
-      toggleComponent
-    } = this.props
-
-    return (
-      <span>
-        <StyledToggleContainer
-          onClick={this.openMenu}
-          innerRef={this.toggleComponentRef}
-        >
-          {toggleComponent}
-        </StyledToggleContainer>
-      </span>
-    )
-  }
-
-  private get dropdownMenu (): JSX.Element | null {
-    const { isDropdownOpen } = this.state
-    const {
-      className,
-      sections,
-      parentAnchorPosition,
-      dropdownAnchorPosition
-    } = this.props
-
-    return (
-      <ManualMenu
-        className={className}
-        isDropdownOpen={isDropdownOpen}
-        onDropdownClose={this.close}
-        sections={sections}
-        parentAnchorPosition={parentAnchorPosition}
-        dropdownAnchorPosition={dropdownAnchorPosition}
-        parentRef={this.toggleComponentRef}
-      />
-    )
-  }
-
-  public render (): JSX.Element {
-    return (
-      <React.Fragment>
-        {this.toggleComponent}
-        {this.dropdownMenu}
-      </React.Fragment>
-    )
   }
 }
 

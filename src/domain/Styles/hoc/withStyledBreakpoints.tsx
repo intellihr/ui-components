@@ -1,7 +1,7 @@
 import React from 'react'
 import styledBreakpoint from '@intellihr/styled-components-breakpoint'
-import { ThemeProvider } from 'styled-components'
-import { defaults as fallbackDefaults, IDefaults, DefaultsConsumer } from '@Domain/Defaults'
+
+const { breakpointMin, breakpointTablet, breakpointDesktop } = require('@Common/sass/variables.scss')
 
 interface IWithStyledBreakpoints {
   breakpoint: {
@@ -13,29 +13,22 @@ interface IWithStyledBreakpoints {
 
 const withStyledBreakpoints = <P extends IWithStyledBreakpoints>(StyledBreakpointsAwareComponent: React.ComponentType<P>) => (
   class extends React.PureComponent<P & Partial<IWithStyledBreakpoints>> {
-    // defaults may be undefined if DefaultProvider is not used
-    public getBreakpoint (defaults: IDefaults | undefined) {
-      let breakpoints = fallbackDefaults.breakpoints
-
-      if (defaults && defaults.breakpoints) {
-        breakpoints = defaults.breakpoints
-      }
-
+    get breakpoints () {
       return styledBreakpoint({
-        ...breakpoints
+        small: parseInt(breakpointMin, 10),
+        medium: parseInt(breakpointTablet, 10),
+        large: parseInt(breakpointDesktop, 10)
       })
     }
 
     public render (): JSX.Element {
       return (
-        <DefaultsConsumer>
-          {defaults => (
-            <StyledBreakpointsAwareComponent
-              {...this.props}
-              breakpoint={this.getBreakpoint(defaults)}
-            />
-          )}
-        </DefaultsConsumer>
+        (
+          <StyledBreakpointsAwareComponent
+            {...this.props}
+            breakpoint={this.breakpoints}
+          />
+        )
       )
     }
   }

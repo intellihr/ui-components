@@ -6,7 +6,8 @@ module.exports = {
   title: 'IntelliHR Design System',
   require: [
     require.resolve('babel-polyfill'),
-    path.resolve(__dirname, 'src/index.ts')
+    path.resolve(__dirname, 'src/index.ts'),
+    path.resolve(__dirname, 'src/common/sass/style.ts')
   ],
   propsParser: docGenTypescript.withCustomConfig('./tsconfig.json').parse,
   getComponentPathLine (componentPath) {
@@ -33,8 +34,7 @@ module.exports = {
           name: 'Colors',
           content: 'src/domain/Colors/Color/Color.examples.md'
         }
-      ],
-      components: 'src/common/sass/style.ts'
+      ]
     },
     {
       name: 'UI Components',
@@ -92,6 +92,12 @@ module.exports = {
           ]
         },
         {
+          name: 'Grid',
+          components: [
+            'src/domain/Grids/Grid/GridProvider'
+          ]
+        },
+        {
           name: 'Icons',
           components: [
             'src/domain/Icons/Icon/Icon'
@@ -110,6 +116,12 @@ module.exports = {
             'src/domain/Inputs/Input/Input',
             'src/domain/Inputs/SelectInput/SelectInput',
             'src/domain/Inputs/TextAreaInput/TextAreaInput'
+          ]
+        },
+        {
+          name: 'Layouts',
+          components: [
+            'src/domain/Layouts/PageLayout/PageLayout'
           ]
         },
         {
@@ -219,7 +231,6 @@ module.exports = {
       components: [
         'src/domain/Styles/hoc/withStyledBreakpoints',
         'src/domain/Defaults/withDefaults/withDefaults',
-        'src/domain/Grids/Grid/withGrid',
         'src/domain/Skeletons/withSkeleton/withSkeleton',
         'src/domain/Internals/Anchor/Anchor'
       ]

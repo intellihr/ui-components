@@ -1,10 +1,11 @@
 import classNames from 'classnames'
 import React from 'react'
 import { FontAwesomeIcon } from '../../Icons'
+import { Text } from '../../Typographies/Text'
 
 const style = require('./StatusIndicator.scss')
 
-export interface StatusIndicatorProps {
+export interface IStatusIndicatorProps {
     /** Text to show inside the label  */
     text: string
 
@@ -15,14 +16,14 @@ export interface StatusIndicatorProps {
     color?: string
 
     /** Main colour of the text (and icon if no `color` provided)  */
-    textColor?: 'alert' | 'success' | 'warning' | 'primary' | 'neutral' | 'secondary'
+    textColor?: string
 
     /** Should the label use a hollow icon  */
     isHollow?: boolean
   }
 
-export class StatusIndicator extends React.Component<StatusIndicatorProps> {
-  public static defaultProps: Partial<StatusIndicatorProps> = {
+export class StatusIndicator extends React.Component<IStatusIndicatorProps> {
+  public static defaultProps: Partial<IStatusIndicatorProps> = {
     isHollow: false
   }
 
@@ -34,9 +35,13 @@ export class StatusIndicator extends React.Component<StatusIndicatorProps> {
 
     if (subtitleText) {
       return (
-        <div className={classNames('subtitle', textColor)}>
+        <Text
+          size='small'
+          color={textColor}
+          className='subtitle'
+        >
           {subtitleText}
-        </div>
+        </Text>
       )
     }
 
@@ -52,12 +57,14 @@ export class StatusIndicator extends React.Component<StatusIndicatorProps> {
     } = this.props
 
     return (
-      <span className={classNames(style.StatusIndicator, 'dot-status-label', textColor)}>
+      <span className={classNames(style.StatusIndicator, 'dot-status-label')}>
         <FontAwesomeIcon
           type={isHollow ? 'circle-o' : 'circle'}
           color={color}
         />
-        {text}
+        <Text color={textColor}>
+          {text}
+        </Text>
         {this.subtitleText}
       </span>
     )

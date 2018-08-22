@@ -31,10 +31,6 @@ interface IActionList {
 }
 
 class ActionList extends React.PureComponent<IActionList> {
-  public static defaultProps: Partial<IActionList> = {
-    headerMessage: 'Actions you can take',
-    actions: []
-  }
 
   get actions (): IAction[] {
     const {
@@ -53,41 +49,6 @@ class ActionList extends React.PureComponent<IActionList> {
     }
 
     return actionsCopy
-  }
-
-  private descriptionForAction (description?: string) {
-    if (!description) {
-      return null
-    }
-
-    return (
-      <ActionDescriptionWrapper>
-        {description}
-      </ActionDescriptionWrapper>
-    )
-  }
-
-  private actionLinksForAction (actionLinks?: IActionLink[]) {
-    if (!actionLinks) {
-      return null
-    }
-
-    const textLinkComponents = map(actionLinks, (actionLink, index) =>
-      <TextLink
-        key={`action-link-${index}`}
-        href={actionLink.linkUrl}
-        className='action-link'
-        anchorComponentProps={actionLink.anchorComponentProps}
-      >
-        {actionLink.linkText}
-      </TextLink>
-    )
-
-    return (
-      <ActionLinksWrapper>
-        {textLinkComponents}
-      </ActionLinksWrapper>
-    )
   }
 
   get actionsList (): JSX.Element {
@@ -124,6 +85,10 @@ class ActionList extends React.PureComponent<IActionList> {
       </ActionListHeaderWrapper>
     )
   }
+  public static defaultProps: Partial<IActionList> = {
+    headerMessage: 'Actions you can take',
+    actions: []
+  }
 
   public render (): JSX.Element | null {
     if (isEmpty(this.actions)) {
@@ -138,6 +103,41 @@ class ActionList extends React.PureComponent<IActionList> {
           {this.actionsList}
         </ActionListBodyWrapper>
       </div>
+    )
+  }
+
+  private descriptionForAction (description?: string) {
+    if (!description) {
+      return null
+    }
+
+    return (
+      <ActionDescriptionWrapper>
+        {description}
+      </ActionDescriptionWrapper>
+    )
+  }
+
+  private actionLinksForAction (actionLinks?: IActionLink[]) {
+    if (!actionLinks) {
+      return null
+    }
+
+    const textLinkComponents = map(actionLinks, (actionLink, index) =>
+      <TextLink
+        key={`action-link-${index}`}
+        href={actionLink.linkUrl}
+        className='action-link'
+        anchorComponentProps={actionLink.anchorComponentProps}
+      >
+        {actionLink.linkText}
+      </TextLink>
+    )
+
+    return (
+      <ActionLinksWrapper>
+        {textLinkComponents}
+      </ActionLinksWrapper>
     )
   }
 }

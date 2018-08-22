@@ -2,13 +2,13 @@
 
 exports[`<InputLabel /> should render a label 1`] = `
 .c0 {
-  color: hsl(210,13.4%,47.2%);
+  color: #667380;
   font-size: 0.9375rem;
   line-height: 1.8;
 }
 
 .c0.is-invalid-label {
-  color: rgb(255,77,80);
+  color: #D41200;
 }
 
 <InputLabel>
@@ -26,13 +26,13 @@ exports[`<InputLabel /> should render a label 1`] = `
 
 exports[`<InputLabel /> should render a label with a 'for' attribute 1`] = `
 .c0 {
-  color: hsl(210,13.4%,47.2%);
+  color: #667380;
   font-size: 0.9375rem;
   line-height: 1.8;
 }
 
 .c0.is-invalid-label {
-  color: rgb(255,77,80);
+  color: #D41200;
 }
 
 <InputLabel
@@ -54,13 +54,13 @@ exports[`<InputLabel /> should render a label with a 'for' attribute 1`] = `
 
 exports[`<InputLabel /> should render a red label if isInvalid is true 1`] = `
 .c0 {
-  color: hsl(210,13.4%,47.2%);
+  color: #667380;
   font-size: 0.9375rem;
   line-height: 1.8;
 }
 
 .c0.is-invalid-label {
-  color: rgb(255,77,80);
+  color: #D41200;
 }
 
 <InputLabel

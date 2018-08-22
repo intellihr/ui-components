@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 type size = 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge'
 
-interface StyledIconProps {
+interface IStyledIconProps {
   color?: string
   customSize?: number
   size?: size
@@ -14,7 +14,7 @@ interface IBadgeWrapper {
 
 const BadgeWrapper = styled.span`
   position: absolute;
-  
+
   ${(props: IBadgeWrapper) => {
     switch (props.size) {
       case 'large':
@@ -37,13 +37,13 @@ const BadgeWrapper = styled.span`
 `
 
 const StyledIcon = styled.i`
-  ${(props: StyledIconProps) => props.color && css`
-    color: ${props.color};  
+  ${(props: IStyledIconProps) => props.color && css`
+    color: ${props.color};
   `}
-  
+
   &.fa {
     margin-right: 3px;
-  ${(props: StyledIconProps) => {
+  ${(props: IStyledIconProps) => {
     if (props.customSize) {
       return `
         font-size: ${props.customSize}rem;
@@ -87,5 +87,5 @@ const StyledIcon = styled.i`
 export {
   BadgeWrapper,
   StyledIcon,
-  StyledIconProps
+  IStyledIconProps
 }

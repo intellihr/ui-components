@@ -1,3 +1,20 @@
+.action-bar-holder {
+  display: flex;
+  overflow: auto;
+
+  .button {
+    margin-right: 10px;
+  }
+
+  .button-group {
+    margin-right: 10px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
 .button-row {
   display: flex;
   .button{
@@ -15,20 +32,4 @@
 
 .button-group {
   @include button-group('.modal-button');
-
-  //.button {
-  //  border-radius: 0;
-  //}
-  //
-  //.button:first-of-type {
-  //  border-radius: $button-radius 0 0 $button-radius;
-  //}
-  //
-  //.button:last-of-type {
-  //  border-radius: 0 $button-radius $button-radius 0;
-  //}
-  //
-  //.button:only-of-type {
-  //  border-radius: $button-radius;
-  //}
 }

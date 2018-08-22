@@ -3,11 +3,13 @@ import {
   AvatarContainer,
   AvatarEntityInfo,
   AvatarEntityWrapper,
-  SecondaryTextWrapper,
-  TertiaryTextWrapper
+  SecondaryTextWrapper
 } from './style'
-import { Avatar, AvatarProps } from '@Domain/Avatars'
-import { Text } from '@Domain/Typographies'
+import { Avatar, IAvatarProps } from '../'
+import { Text } from '../../Typographies'
+
+
+const { n600, n700 } = require('../../../common/sass/variables.scss')
 
 export interface IAvatarEntity {
   /** The primary text */
@@ -22,7 +24,7 @@ export interface IAvatarEntity {
   isHoverable?: boolean
 }
 
-export class AvatarEntity extends React.PureComponent<IAvatarEntity & AvatarProps> {
+export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarProps> {
   public static defaultProps: Partial<IAvatarEntity> = {
     isCompact: false,
     isHoverable: false
@@ -54,7 +56,14 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & AvatarProp
       isCompact
     } = this.props
 
-    return <Text isInline={isCompact}>{primaryText}</Text>
+    return (
+      <Text
+        color={n700}
+        isInline={isCompact}
+      >
+        {primaryText}
+      </Text>
+    )
   }
 
   get secondaryText (): JSX.Element | null {
@@ -78,6 +87,7 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & AvatarProp
         isCompact={isCompact}
       >
         <Text
+          color={n600}
           size='xsmall'
           isTruncated
           isInline={isCompact}
@@ -99,16 +109,15 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & AvatarProp
     }
 
     return (
-      <TertiaryTextWrapper>
-        <Text
-          size='xsmall'
-          weight='heavy'
-          isInline={false}
-          isTruncated
-        >
-          {tertiaryText}
-        </Text>
-      </TertiaryTextWrapper>
+      <Text
+        color={n600}
+        size='xsmall'
+        weight='heavy'
+        isInline={false}
+        isTruncated
+      >
+        {tertiaryText}
+      </Text>
     )
   }
 

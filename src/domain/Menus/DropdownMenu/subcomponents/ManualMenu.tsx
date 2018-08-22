@@ -3,16 +3,33 @@ import ReactDOM from 'react-dom'
 import { debounce, map } from 'lodash'
 import { Transition } from 'react-transition-group'
 import FocusTrap from 'focus-trap-react'
-import { Props } from '@Common/types'
+import { Props } from '../../../../common/types'
 import { StyledDropdownMenu, StyledSectionList } from './style'
 import { Section, ISectionProps } from './Section'
 
 interface IManualMenuProps {
+  /**
+   * id to use for the menu to identify it on the page.
+   *
+   * This is required for accessibility - this id should match some other
+   * element on the page with role="button" and aria-owns="{id}". This is
+   * made required to prevent using this menu without setting this
+   * correctly.
+   *
+   * Do NOT auto-generate this id unless it matches a button on the page.
+   */
+  id: string,
   /** Any custom class names */
   className?: string,
-  /** What position on the parent to anchor relative to; 'auto' will find best position automatically */
+  /**
+   * What position on the parent to anchor relative to; 'auto' will find
+   * a best position automatically.
+   */
   parentAnchorPosition?: Props.IPositionXY | 'auto',
-  /** What position on the dropdown itself to place at the anchor position; 'auto' will find best position automatically */
+  /**
+   * What position on the dropdown itself to place at the anchor position;
+   * 'auto' will find a best position automatically.
+   */
   dropdownAnchorPosition?: Props.IPositionXY | 'auto',
   /** The sections to render in the dropdown */
   sections: ISectionProps[],
@@ -25,38 +42,6 @@ interface IManualMenuProps {
 }
 
 class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
-  public static defaultProps: Partial<IManualMenuProps> = {
-    parentAnchorPosition: 'auto',
-    dropdownAnchorPosition: 'auto'
-  }
-
-  public static AUTO_FLIP_CUTOFF = 2 / 3
-
-  private currentlyMounted: boolean = false
-
-  componentDidMount () {
-    this.currentlyMounted = true
-
-    window.addEventListener('resize', this.onWindowUpdate)
-    window.addEventListener('scroll', this.debounceOnWindowUpdate)
-  }
-
-  componentWillUnmount () {
-    this.currentlyMounted = false
-
-    window.removeEventListener('scroll', this.onWindowUpdate)
-    window.removeEventListener('resize', this.debounceOnWindowUpdate)
-  }
-
-  private onWindowUpdate = () => {
-    // This allows the menu to reposition correctly when the window changes
-    if (this.currentlyMounted) {
-      this.forceUpdate()
-    }
-  }
-
-  private debounceOnWindowUpdate = debounce(this.onWindowUpdate, 100)
-
   private get parentBoundingRect (): ClientRect | DOMRect {
     const {
       parentRef
@@ -89,7 +74,9 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
       parentAnchorPosition
     } = this.props
 
-    if (parentAnchorPosition !== 'auto') return parentAnchorPosition!
+    if (parentAnchorPosition !== 'auto') {
+      return parentAnchorPosition!
+    }
 
     return {
       xPos: this.parentInLeftSideOfWindow ? Props.Position.Left : Props.Position.Right,
@@ -102,7 +89,9 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
       dropdownAnchorPosition
     } = this.props
 
-    if (dropdownAnchorPosition !== 'auto') return dropdownAnchorPosition!
+    if (dropdownAnchorPosition !== 'auto') {
+      return dropdownAnchorPosition!
+    }
 
     return {
       xPos: this.parentInLeftSideOfWindow ? Props.Position.Left : Props.Position.Right,
@@ -162,8 +151,65 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
     })
   }
 
+  private get transition () {
+    const {
+      isDropdownOpen
+    } = this.props
+
+    return (
+      <Transition
+        in={isDropdownOpen}
+        timeout={100}
+        mountOnEnter
+        unmountOnExit
+      >
+        {this.animatedMenu}
+      </Transition>
+    )
+  }
+
+  public static AUTO_FLIP_CUTOFF = 2 / 3
+  public static defaultProps = {
+    parentAnchorPosition: 'auto',
+    dropdownAnchorPosition: 'auto'
+  }
+
+  private currentlyMounted: boolean = false
+
+  public componentDidMount () {
+    this.currentlyMounted = true
+
+    window.addEventListener('resize', this.onWindowUpdate)
+    window.addEventListener('scroll', this.debounceOnWindowUpdate)
+  }
+
+  public componentWillUnmount () {
+    this.currentlyMounted = false
+
+    window.removeEventListener('scroll', this.onWindowUpdate)
+    window.removeEventListener('resize', this.debounceOnWindowUpdate)
+  }
+
+  public render (): React.ReactPortal {
+    return ReactDOM.createPortal(
+      this.transition,
+      document.body
+    )
+  }
+
+  private onWindowUpdate = () => {
+    // This allows the menu to reposition correctly when the window changes
+    if (this.currentlyMounted) {
+      this.forceUpdate()
+    }
+  }
+
+  // tslint:disable-next-line:member-ordering
+  private debounceOnWindowUpdate = debounce(this.onWindowUpdate, 100)
+
   private animatedMenu = (animationState: string) => {
     const {
+      id,
       className,
       isDropdownOpen,
       onDropdownClose
@@ -189,36 +235,14 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
           tag='span'
         >
           <StyledSectionList
+            id={id}
             className={className}
+            role='menu'
           >
             {this.dropdownSections}
           </StyledSectionList>
         </FocusTrap>
       </StyledDropdownMenu>
-    )
-  }
-
-  private get transition () {
-    const {
-      isDropdownOpen
-    } = this.props
-
-    return (
-      <Transition
-        in={isDropdownOpen}
-        timeout={100}
-        mountOnEnter
-        unmountOnExit
-      >
-        {this.animatedMenu}
-      </Transition>
-    )
-  }
-
-  public render () {
-    return ReactDOM.createPortal(
-      this.transition,
-      document.body
     )
   }
 }

@@ -1,5 +1,7 @@
 @import '../resources/mixins';
 
+@import '../../variables';
+
 .ihr-form,
 .ihr-form-view {
   @include limit-width;
@@ -73,7 +75,7 @@
 .vertical {
   .required {
     &::after {
-      color: $main-text-light;
+      color: $n400;
       content: ' - required';
       font-size: .9em;
       font-style: italic;
@@ -89,7 +91,7 @@ input,
 select,
 .Select-control {
   &:hover {
-    background-color: $main-background-hover;
+    background-color: $n200;
   }
 
   &:disabled {
@@ -100,7 +102,7 @@ select,
 select {
   &:hover {
     &:focus {
-      background-color: inherit;
+      background-color: $n200;
     }
   }
 }
@@ -110,7 +112,7 @@ textarea,
 select {
   &:hover {
     &:disabled {
-      background-color: $neutral;
+      background-color: $n200;
     }
   }
 }
@@ -133,24 +135,24 @@ select {
 }
 
 input.is-invalid-input:focus {
-  border-color: $alert-base;
+  border-color: $r300;
 }
 
 .select2 {
   margin: 0 0 1rem;
 
   .select2-selection {
-    border: 1px solid #c3ccd0;
+    border: 1px solid $n400;
     height: 2.4375rem;
 
     &:focus {
       outline: none;
-      border: 1px solid #432df3;
+      border: 1px solid $i400;
       transition: border-color 0.3s ease-in-out, background-color 0.3s ease;
     }
 
     &:hover {
-      background-color: whitesmoke;
+      background-color: $n200;
     }
   }
 
@@ -158,16 +160,16 @@ input.is-invalid-input:focus {
     .select2-selection__rendered {
       line-height: 1.5;
       padding: 8px 24px 8px 8px;
-      color: #47525d;
+      color: $n700;
     }
 
     .select2-selection__arrow {
-      height:24px;
+      height: 24px;
       margin-top: 7px;
       margin-right: 2px;
 
       b {
-        border-color: #47525d transparent transparent transparent;
+        border-color: $n700 transparent transparent transparent;
       }
     }
   }
@@ -175,16 +177,16 @@ input.is-invalid-input:focus {
 
 .select2-dropdown {
   .select2-results__option {
-    color: #666666;
+    color: $n600;
 
     &.select2-results__option[aria-selected=true] {
-      background-color: #f5faff;
-      color: #333;
+      background-color: $n200;
+      color: $n700;
     }
 
     &.select2-results__option--highlighted[aria-selected] {
-      background-color: #ebf5ff;
-      color: #333;
+      background-color: $i100;
+      color: $n700;
     }
   }
 }

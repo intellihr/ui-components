@@ -18,6 +18,14 @@ class Anchor extends React.PureComponent<IAnchorProps, never> {
     href: '#'
   }
 
+  public render (): JSX.Element {
+    return (
+      <DefaultsConsumer>
+        {(defaultValues: IDefaults) => this.anchorComponent(defaultValues)}
+      </DefaultsConsumer>
+    )
+  }
+
   private anchorComponent (defaultValues: IDefaults) {
     const {
       anchorComponent,
@@ -40,14 +48,6 @@ class Anchor extends React.PureComponent<IAnchorProps, never> {
       >
         {children}
       </AnchorComponent>
-    )
-  }
-
-  public render (): JSX.Element {
-    return (
-      <DefaultsConsumer>
-        {(defaultValues: IDefaults) => this.anchorComponent(defaultValues)}
-      </DefaultsConsumer>
     )
   }
 }

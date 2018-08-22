@@ -4,17 +4,19 @@ import { ToggleModal } from './ToggleModal'
 import { Button } from '@Domain/Buttons'
 
 describe('<ToggleModal />', () => {
+  const trigger = ({toggle}) => (
+    <Button
+      type='primary'
+      onClick={toggle}
+    >
+      Click Me
+    </Button>
+  )
+
   it('should render a modal with a button', () => {
     const wrapper = shallow(
       <ToggleModal
-        trigger={({toggle}) => (
-          <Button
-            type='primary'
-            onClick={toggle}
-          >
-            Click Me
-          </Button>
-        )}
+        trigger={trigger}
       >
         Hello this is a Modal
       </ToggleModal>
@@ -26,14 +28,7 @@ describe('<ToggleModal />', () => {
   it('should open a modal after click', () => {
     const wrapper = mount(
       <ToggleModal
-        trigger={({toggle}) => (
-          <Button
-            type='primary'
-            onClick={toggle}
-          >
-            Click Me
-          </Button>
-        )}
+        trigger={trigger}
       >
         <div>hello this is a modal</div>
       </ToggleModal>

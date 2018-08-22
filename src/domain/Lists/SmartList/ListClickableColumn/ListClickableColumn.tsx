@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import { isNil } from 'lodash'
-import { Anchor } from '@Domain/Internals'
+import { Anchor } from '../../../Internals'
 
 const style = require('./style.scss')
 
@@ -58,7 +58,7 @@ export class ListClickableColumn extends React.PureComponent<IListClickableColum
     return children
   }
 
-  handleClick = (): void | undefined => {
+  public handleClick = (): void | undefined => {
     const {
       data,
       rowIndex,

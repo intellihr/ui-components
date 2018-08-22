@@ -12,7 +12,7 @@ exports[`<ToggleModal /> should render a modal with a button 1`] = `
   <Modal
     handleClose={[Function]}
     isOpen={false}
-    modalZLevel={0}
+    offsetZIndex={0}
     showCloseButton={true}
     size="medium"
   >

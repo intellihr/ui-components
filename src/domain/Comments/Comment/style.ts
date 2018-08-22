@@ -1,9 +1,8 @@
 import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
-import { getColor } from '@Common/legacy'
+const { n200, n300, n600, n700, n800 } = require('../../../common/sass/variables.scss')
 
 const StyledComment = styled.div`
-
   display: flex;
   flex-flow: row;
   margin: 1.125rem 0;
@@ -15,7 +14,7 @@ const StyledComment = styled.div`
 
   >.comment-container {
     align-self: stretch;
-    background-color: ${getColor('neutral-light')};
+    background-color: ${n200};
     border-radius: .75rem;
     flex-grow: 1;
     padding: .85rem 1.2rem;
@@ -34,7 +33,7 @@ const StyledComment = styled.div`
       }
 
       >.comment-header-date {
-        color: ${getColor('badge-background-dark')};
+        color: ${n600};
         flex-grow: 1;
         font-size: 80%;
         margin-left: .4rem;
@@ -65,7 +64,7 @@ const StyledComment = styled.div`
 
 const CommentActionMenuToggleButton = styled.button`
   background-color: transparent;
-  color: ${getColor('badge-background-dark')};
+  color: ${n700};
   cursor: pointer;
   padding: .2rem;
   transition: background-color .25s ease-out, color .25s ease-out;
@@ -73,8 +72,8 @@ const CommentActionMenuToggleButton = styled.button`
   &:hover,
   &:active,
   &:focus {
-    background-color: ${getColor('neutral-base')};
-    color: ${getColor('main-text')};
+    background-color: ${n300};
+    color: ${n800};
     outline: none;
   }
 

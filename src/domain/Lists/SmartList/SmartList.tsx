@@ -7,7 +7,7 @@ import { Callout } from '../../Callouts'
 import { Spinner } from '../../Spinners'
 import { ListClickableColumn } from './ListClickableColumn'
 import { ListRow } from './ListRow'
-import { withGrid } from '../../Grids'
+import { ListColumn } from './ListColumn'
 import { ISkeletonOptions } from '../../Skeletons'
 
 const style = require('./style.scss')
@@ -48,12 +48,16 @@ export interface ISmartList {
   skeletonOptions?: ISmartListSkeletonOptions
 }
 
-export interface SmartListState {
+export interface ISmartListState {
   /** Flag to select if the pagination (Show More/Hide) button should be shown */
   paginationButton: boolean
 }
 
-class SmartListComponent extends React.PureComponent<ISmartList, SmartListState> {
+class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
+  public static Row = ListRow
+  public static Column = ListColumn
+  public static ClickableColumn = ListClickableColumn
+
   public static defaultProps: Partial<ISmartList> = {
     emptyListText: 'No Results found.',
     loading: false,
@@ -64,7 +68,7 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
     limit: 5
   }
 
-  public state: SmartListState = { paginationButton: true }
+  public state: ISmartListState = { paginationButton: true }
 
   private data: any[] = []
 
@@ -86,7 +90,7 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
     return [children]
   }
 
-  cloneTableElement = (rowIndex = 0, isHeader = false): JSX.Element[] => {
+  public cloneTableElement = (rowIndex = 0, isHeader = false): JSX.Element[] => {
     const {
       id
     } = this.props
@@ -112,7 +116,7 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
         if (child.type === ListClickableColumn) {
           props.children = map(
             child.props.children,
-            (child: any) => React.cloneElement(child, listItemProps(child))
+            (subChild: any) => React.cloneElement(subChild, listItemProps(subChild))
           )
         }
 
@@ -121,7 +125,7 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
     )
   }
 
-  togglePagination = (): void => {
+  public togglePagination = (): void => {
     this.setState({ paginationButton: !this.state.paginationButton })
   }
 
@@ -153,7 +157,7 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
     return !isNil(limit) && limit < this.data.length
   }
 
-  listRow (index: number): JSX.Element {
+  public listRow (index: number): JSX.Element {
     const {
       id,
       handleRowClick,
@@ -169,7 +173,7 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
       cursor,
       data: listItem,
       hideRow: listItem.hide,
-      index: index,
+      index,
       handleClick: (e: any) =>
         handleRowClick && handleRowClick(listItem, e)
     }
@@ -253,7 +257,7 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
     return this.listRowsContent
   }
 
-  showAllRowContent (visibleRowsCount: number) {
+  public showAllRowContent (visibleRowsCount: number) {
     if (this.state.paginationButton) {
       return `Show All (${visibleRowsCount})`
     }
@@ -313,4 +317,6 @@ class SmartListComponent extends React.PureComponent<ISmartList, SmartListState>
   }
 }
 
-export const SmartList: React.ComponentClass<ISmartList> = withGrid(SmartListComponent)
+export {
+  SmartList
+}

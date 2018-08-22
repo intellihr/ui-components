@@ -27,17 +27,19 @@
 #### Coloured dot
 
 ```jsx
+const { r400 } = require('@Common/sass/variables.scss');
+
 <div>
   <StatusIndicator
     text='Approved'
     subtitleText='25 days ago'
-    color='rgb(255, 0, 0)'
+    color={r400}
   />
 
   <StatusIndicator
     text='Approved'
     subtitleText='25 days ago'
-    color='rgb(255, 0, 0)'
+    color={r400}
     isHollow
   />
 </div>
@@ -46,9 +48,24 @@
 #### Coloured text
 
 ```jsx
+const { g400 } = require('@Common/sass/variables.scss');
+
 <StatusIndicator
   text='Approved'
   subtitleText='25 days ago'
-  textColor='success'
+  textColor={g400}
+/>
+```
+
+#### Coloured text and dot
+
+```jsx
+const { g400, o400 } = require('@Common/sass/variables.scss');
+
+<StatusIndicator
+  text='Approved'
+  subtitleText='25 days ago'
+  color={g400}
+  textColor={o400}
 />
 ```

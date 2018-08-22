@@ -13,15 +13,15 @@ export interface ISkeletonOptions {
   size?: 'small' | 'medium' | 'large' | 'xlarge'
 }
 
-export interface SkeletonComponentProps {
+export interface ISkeletonComponentProps {
   /** Skeleton setting */
   skeletonOptions?: ISkeletonOptions
   /** Additional class names for the parent container */
   className?: string
 }
 
-class Skeleton extends React.Component<SkeletonComponentProps> {
-  static defaultProps: Partial<SkeletonComponentProps> = {
+class Skeleton extends React.Component<ISkeletonComponentProps> {
+  public static defaultProps: Partial<ISkeletonComponentProps> = {
     skeletonOptions: {
       showSkeleton: false,
       shape: 'line',
@@ -41,7 +41,7 @@ class Skeleton extends React.Component<SkeletonComponentProps> {
     }
   }
 
-  render (): JSX.Element {
+  public render (): JSX.Element {
     const {
       showSkeleton = false,
       shape = 'line',

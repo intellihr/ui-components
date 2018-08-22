@@ -1,91 +1,104 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<LinkButton /> should render a disabled link button 1`] = `
-<BaseButton
-  disabled={true}
-  iconAlignment="left"
-  id="test-link-button-disabled"
-  render={[Function]}
-  type="neutral"
+<Anchor
+  href="#"
 >
-  testing testing 123
-</BaseButton>
+  <span
+    className="button neutral disabled"
+  >
+    <React.Fragment>
+      testing testing 123
+    </React.Fragment>
+  </span>
+</Anchor>
 `;
 
 exports[`<LinkButton /> should render a link button with a simple text 1`] = `
-<BaseButton
-  disabled={false}
-  iconAlignment="left"
-  id="test-link-button-simple"
-  render={[Function]}
-  type="neutral"
+<Anchor
+  href="#"
 >
-  testing testing 123
-</BaseButton>
+  <span
+    className="button neutral"
+  >
+    <React.Fragment>
+      testing testing 123
+    </React.Fragment>
+  </span>
+</Anchor>
 `;
 
 exports[`<LinkButton /> should render a link button with a size large 1`] = `
-<BaseButton
-  disabled={false}
-  iconAlignment="left"
-  id="test-link-button-large"
-  render={[Function]}
-  size="large"
-  type="neutral"
+<Anchor
+  href="#"
 >
-  testing testing 123
-</BaseButton>
+  <span
+    className="button large neutral"
+  >
+    <React.Fragment>
+      testing testing 123
+    </React.Fragment>
+  </span>
+</Anchor>
 `;
 
 exports[`<LinkButton /> should render a link button with a type delete-subtle 1`] = `
-<BaseButton
-  disabled={false}
-  iconAlignment="left"
-  id="test-link-button-delete"
-  render={[Function]}
-  type="delete-subtle"
+<Anchor
+  href="#"
 >
-  testing testing 123
-</BaseButton>
+  <span
+    className="button delete-subtle"
+  >
+    <React.Fragment>
+      testing testing 123
+    </React.Fragment>
+  </span>
+</Anchor>
 `;
 
 exports[`<LinkButton /> should render a link button with an icon 1`] = `
-<BaseButton
-  disabled={false}
+<Anchor
   href="test"
-  icon={
-    <FontAwesomeIcon
-      type="star"
-    />
-  }
-  iconAlignment="left"
-  id="test-link-button-icon"
-  render={[Function]}
-  type="primary"
 >
-  Link Button with Icon
-</BaseButton>
+  <span
+    className="button primary"
+  >
+    <React.Fragment>
+      <span
+        className="button-icon"
+      >
+        <FontAwesomeIcon
+          type="star"
+        />
+      </span>
+      Link Button with Icon
+    </React.Fragment>
+  </span>
+</Anchor>
 `;
 
 exports[`<LinkButton /> should render a link button with manual extra props for the anchor 1`] = `
-<BaseButton
+<Anchor
   anchorComponentProps={
     Object {
       "someProp": false,
     }
   }
-  disabled={false}
   href="test"
-  icon={
-    <FontAwesomeIcon
-      type="star"
-    />
-  }
-  iconAlignment="left"
-  id="test-link-button-icon"
-  render={[Function]}
-  type="primary"
 >
-  Link Button with Icon
-</BaseButton>
+  <span
+    className="button primary"
+  >
+    <React.Fragment>
+      <span
+        className="button-icon"
+      >
+        <FontAwesomeIcon
+          type="star"
+        />
+      </span>
+      Link Button with Icon
+    </React.Fragment>
+  </span>
+</Anchor>
 `;

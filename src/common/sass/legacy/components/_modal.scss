@@ -1,3 +1,5 @@
+@import '../../variables';
+
 // Hack to prevent scrollbars outside the modal when the modal goes off the screen
 body {
   &.ReactModal__Body--open {
@@ -17,7 +19,7 @@ body {
   margin-bottom: 2rem;
 
   .title {
-    color: $main-text;
+    color: $n800;
     font-size: 1.3125rem;
     font-weight: 600;
     margin-bottom: 2rem;

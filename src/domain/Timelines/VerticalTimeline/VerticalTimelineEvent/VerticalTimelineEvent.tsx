@@ -7,7 +7,7 @@ import {
   EventMarkerWrapper
 } from './style'
 
-interface VerticalTimelineEventProps {
+interface IVerticalTimelineEventProps {
   /** Children components to display on the VerticalTimeline */
   children: JSX.Element | string
   /** Date of the event to display on the side of the VerticalTimeline */
@@ -16,7 +16,7 @@ interface VerticalTimelineEventProps {
   markerComponent?: JSX.Element
 }
 
-class VerticalTimelineEvent extends React.PureComponent<VerticalTimelineEventProps> {
+class VerticalTimelineEvent extends React.PureComponent<IVerticalTimelineEventProps> {
   public render (): JSX.Element {
     const {
       children,
@@ -41,6 +41,6 @@ class VerticalTimelineEvent extends React.PureComponent<VerticalTimelineEventPro
 }
 
 export {
-  VerticalTimelineEventProps,
+  IVerticalTimelineEventProps,
   VerticalTimelineEvent
 }

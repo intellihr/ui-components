@@ -1,8 +1,8 @@
 import React, { ChangeEventHandler } from 'react'
-import { StyledAutosizeTextarea } from '@Domain/Inputs/TextAreaInput/style'
+import { StyledAutosizeTextarea } from '../../Inputs/TextAreaInput/style'
 import classNames from 'classnames'
 
-interface TextAreaInputProps {
+interface ITextAreaInputProps {
   /** ID of the input */
   id?: string
   /** Name of the input */
@@ -25,8 +25,8 @@ interface TextAreaInputProps {
   isHTML5Required?: boolean
 }
 
-class TextAreaInput extends React.PureComponent<TextAreaInputProps> {
-  public static defaultProps: Partial<TextAreaInputProps> = {
+class TextAreaInput extends React.PureComponent<ITextAreaInputProps> {
+  public static defaultProps: Partial<ITextAreaInputProps> = {
     rows: 2
   }
 
@@ -72,5 +72,5 @@ class TextAreaInput extends React.PureComponent<TextAreaInputProps> {
 
 export {
   TextAreaInput,
-  TextAreaInputProps
+  ITextAreaInputProps
 }

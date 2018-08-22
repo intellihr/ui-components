@@ -1,3 +1,4 @@
+/* tslint:disable:jsx-no-lambda */
 import React from 'react'
 import { mount } from 'enzyme'
 import { SmartList } from './SmartList'
@@ -32,7 +33,7 @@ describe('<SmartList />', () => {
         id='test-smart-list'
         data={items}
       >
-        <ListColumn
+        <SmartList.Column
           size={{
             md: 6,
             lg: 6
@@ -45,7 +46,7 @@ describe('<SmartList />', () => {
             </div>
           }
         />
-        <ListColumn
+        <SmartList.Column
           size={{
             md: 3,
             lg: 3
@@ -53,7 +54,7 @@ describe('<SmartList />', () => {
           header='Expiry Date'
           cell={(row: ITestSmartListItem) => row.expiryDate}
         />
-        <ListColumn
+        <SmartList.Column
           size={{
             md: 3,
             lg: 3
@@ -73,7 +74,7 @@ describe('<SmartList />', () => {
         id='test-smart-list-single-column'
         data={items}
       >
-        <ListColumn
+        <SmartList.Column
           size={{
             md: 6,
             lg: 6
@@ -99,7 +100,7 @@ describe('<SmartList />', () => {
         title='My List Title'
         data={items}
       >
-        <ListColumn
+        <SmartList.Column
           size={{
             md: 6,
             lg: 6
@@ -111,14 +112,14 @@ describe('<SmartList />', () => {
             </div>
           }
         />
-        <ListColumn
+        <SmartList.Column
           size={{
             md: 3,
             lg: 3
           }}
           cell={(row: ITestSmartListItem) => row.expiryDate}
         />
-        <ListColumn
+        <SmartList.Column
           size={{
             md: 3,
             lg: 3
@@ -137,7 +138,7 @@ describe('<SmartList />', () => {
         id='test-smart-list'
         data={[]}
       >
-        <ListColumn
+        <SmartList.Column
           size={{
             md: 6,
             lg: 6
@@ -149,14 +150,14 @@ describe('<SmartList />', () => {
             </div>
           }
         />
-        <ListColumn
+        <SmartList.Column
           size={{
             md: 3,
             lg: 3
           }}
           cell={(row: ITestSmartListItem) => row.expiryDate}
         />
-        <ListColumn
+        <SmartList.Column
           size={{
             md: 3,
             lg: 3
@@ -178,21 +179,21 @@ describe('<SmartList />', () => {
           numberOfRows: 5
         }}
       >
-        <ListColumn
+        <SmartList.Column
           size={{
             md: 6,
             lg: 6
           }}
           header='Test1'
         />
-        <ListColumn
+        <SmartList.Column
           size={{
             md: 3,
             lg: 3
           }}
           header='Test2'
         />
-        <ListColumn
+        <SmartList.Column
           size={{
             md: 3,
             lg: 3

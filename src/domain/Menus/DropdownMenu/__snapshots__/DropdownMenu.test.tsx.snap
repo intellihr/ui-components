@@ -4,12 +4,15 @@ exports[`<DropdownMenu /> Simple dropdown behaviour should match the snapshot 1`
 <React.Fragment>
   <span>
     <styled.span
+      aria-expanded={false}
+      aria-haspopup={true}
       innerRef={
         Object {
           "current": null,
         }
       }
       onClick={[Function]}
+      role="button"
     >
       <styled.button>
         <FontAwesomeIcon
@@ -20,6 +23,7 @@ exports[`<DropdownMenu /> Simple dropdown behaviour should match the snapshot 1`
   </span>
   <ManualMenu
     dropdownAnchorPosition="auto"
+    id=""
     isDropdownOpen={false}
     onDropdownClose={[Function]}
     parentAnchorPosition="auto"

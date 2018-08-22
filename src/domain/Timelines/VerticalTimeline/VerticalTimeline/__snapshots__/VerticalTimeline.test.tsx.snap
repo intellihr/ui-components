@@ -24,7 +24,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
   left: 87px;
   height: calc(100% - 16px);
   width: 2px;
-  background: rgb(223,229,232);
+  background: #E1E6EB;
 }
 
 .c3 {
@@ -57,7 +57,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
 
 .c4 {
   text-align: right;
-  color: hsl(210,13.4%,47.2%);
+  color: #667380;
   position: absolute;
   width: 4rem;
   font-size: 14px;
@@ -66,7 +66,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
 }
 
 .c6 {
-  border: 2px solid rgb(223,229,232);
+  border: 2px solid #E1E6EB;
   position: absolute;
   left: 50%;
   display: inline-block;
@@ -168,7 +168,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
   left: 87px;
   height: calc(100% - 16px);
   width: 2px;
-  background: rgb(223,229,232);
+  background: #E1E6EB;
 }
 
 .c3 {
@@ -201,7 +201,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
 
 .c4 {
   text-align: right;
-  color: hsl(210,13.4%,47.2%);
+  color: #667380;
   position: absolute;
   width: 4rem;
   font-size: 14px;
@@ -210,7 +210,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
 }
 
 .c6 {
-  border: 2px solid rgb(223,229,232);
+  border: 2px solid #E1E6EB;
   position: absolute;
   left: 50%;
   display: inline-block;

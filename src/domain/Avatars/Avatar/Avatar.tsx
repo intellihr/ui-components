@@ -4,14 +4,14 @@ import {
   isNil,
   isEmpty
 } from 'lodash'
-import { FontAwesomeIcon } from '@Domain/Icons'
+import { FontAwesomeIcon } from '../../Icons'
 import {
   withSkeleton,
-  SkeletonComponentProps
-} from '@Domain/Skeletons'
+  ISkeletonComponentProps
+} from '../../Skeletons'
 const style = require('./Avatar.scss')
 
-export interface AvatarProps {
+export interface IAvatarProps {
   /** Size of the avatar  */
   size?: 'small' | 'medium' | 'large' | 'xlarge'
   /** Initials to display if no valid `imageUrl` or `imageData` is passed to Avatar */
@@ -34,45 +34,13 @@ export interface AvatarProps {
   className?: string
 }
 
-export interface AvatarState {
+export interface IAvatarState {
   showInitials: boolean
 }
 
-export type IAvatarSkeletonProps = AvatarProps & SkeletonComponentProps
+export type IAvatarSkeletonProps = IAvatarProps & ISkeletonComponentProps
 
-class AvatarComponent extends React.Component<AvatarProps> {
-  public state: AvatarState = {
-    showInitials: true
-  }
-
-  public static defaultProps: AvatarProps = {
-    size: 'medium'
-  }
-
-  constructor (props: AvatarProps) {
-    super(props)
-
-    this.state = {
-      showInitials: !this.hasImage(props)
-    }
-  }
-
-  componentDidUpdate (prevProps: AvatarProps): void {
-    if (this.hasImage(prevProps) !== this.hasImage(this.props)) {
-      this.setState({
-        showInitials: !this.state.showInitials
-      })
-    }
-  }
-
-  protected hasImage (props: AvatarProps): boolean {
-    const {
-      imageUrl,
-      imageData
-    } = props
-
-    return !isEmpty(imageUrl) || !isEmpty(imageData)
-  }
+class AvatarComponent extends React.Component<IAvatarProps> {
 
   get hoverDom (): JSX.Element | null {
     const {
@@ -99,10 +67,12 @@ class AvatarComponent extends React.Component<AvatarProps> {
       imageData
     } = this.props
 
+    const errorHandler = () => { this.setState({showInitials: true}) }
+
     return (
       <img
         src={imageUrl || imageData}
-        onError={() => { this.setState({showInitials: true}) }}
+        onError={errorHandler}
       />
     )
   }
@@ -153,12 +123,37 @@ class AvatarComponent extends React.Component<AvatarProps> {
     return null
   }
 
+  public static defaultProps: IAvatarProps = {
+    size: 'medium'
+  }
+  public state: IAvatarState = {
+    showInitials: true
+  }
+
+  constructor (props: IAvatarProps) {
+    super(props)
+
+    this.state = {
+      showInitials: !this.hasImage(props)
+    }
+  }
+
+  public componentDidUpdate (prevProps: IAvatarProps): void {
+    if (this.hasImage(prevProps) !== this.hasImage(this.props)) {
+      this.setState({
+        showInitials: !this.state.showInitials
+      })
+    }
+  }
+
   public render (): JSX.Element | null {
     const {
       className,
       size,
       handleClick
     } = this.props
+
+    const errorHandler = (event: React.MouseEvent<HTMLDivElement>) => isNil(handleClick) ? null : handleClick(event)
 
     return (
       <div className={classNames(
@@ -171,7 +166,7 @@ class AvatarComponent extends React.Component<AvatarProps> {
             'avatar-inner-container',
             { 'with-hover': !isNil(handleClick) }
           )}
-          onClick={event => isNil(handleClick) ? null : handleClick(event)}
+          onClick={errorHandler}
         >
           {this.hoverDom}
           {this.avatarContent}
@@ -181,12 +176,22 @@ class AvatarComponent extends React.Component<AvatarProps> {
       </div>
     )
   }
+
+  protected hasImage (props: IAvatarProps): boolean {
+    const {
+      imageUrl,
+      imageData
+    } = props
+
+    return !isEmpty(imageUrl) || !isEmpty(imageData)
+  }
 }
 
 const AvatarWithSkeleton: React.ComponentClass<IAvatarSkeletonProps> = withSkeleton(AvatarComponent)
 
+// tslint:disable-next-line:max-classes-per-file
 class Avatar extends React.PureComponent<IAvatarSkeletonProps> {
-  render () {
+  public render () {
     const {
       size,
       skeletonOptions,

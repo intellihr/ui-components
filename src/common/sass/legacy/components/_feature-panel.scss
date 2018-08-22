@@ -1,15 +1,11 @@
+@import '../../variables';
+
 .feature-panel {
   float: left;
   display: block;
-  background-color: $secondary-color;
-  color: #ffffff;
   padding: 10px;
   width: 200px;
   margin: 0 20px 20px 0;
-
-  &:hover, &:active, &:visited {
-    color: #ffffff;
-  }
 
   .icon {
     font-size: rem-calc(30);

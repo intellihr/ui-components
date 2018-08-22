@@ -5,7 +5,7 @@ exports[`<Spinner /> should render a fading circle spinner 1`] = `
   className="spinner"
 >
   <FadingCircle
-    color="rgb(67, 45, 243)"
+    color="#432DF3"
     endOpacity={1}
     size={20}
     startOpacity={0}

@@ -1,7 +1,7 @@
 import React from 'react'
 import Collapsible from 'react-collapsible'
 import { IconWrapper, LoadingIconWrapper, MenuItemWrapper, SubMenuWrapper } from './style'
-import { FontAwesomeIcon } from '@Domain/Icons'
+import { FontAwesomeIcon } from '../../../Icons'
 
 export interface IMenuItemProps {
   /** HTML id to use for the menu */

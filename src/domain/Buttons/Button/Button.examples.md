@@ -10,6 +10,9 @@
     <Button type='secondary' onClick={() => alert('secondary')}>
       secondary
     </Button>
+    <Button type='success' onClick={() => alert('success')}>
+      success
+    </Button>
     <Button type='warning' onClick={() => alert('warning')}>
       warning
     </Button>
@@ -71,6 +74,9 @@
     <Button type='secondary-borderless' onClick={() => alert('secondary-borderless')}>
       secondary-borderless
     </Button>
+    <Button type='success-borderless' onClick={() => alert('success-borderless')}>
+      success-borderless
+    </Button>
     <Button type='warning-borderless' onClick={() => alert('warning-borderless')}>
       warning-borderless
     </Button>
@@ -130,6 +136,9 @@
     </Button>
     <Button type='secondary-hollow' onClick={() => alert('secondary-hollow')}>
       secondary-hollow
+    </Button>
+    <Button type='success-hollow' onClick={() => alert('success-hollow')}>
+      success-hollow
     </Button>
     <Button type='warning-hollow' onClick={() => alert('warning-hollow')}>
       warning-hollow
@@ -278,6 +287,52 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
     >
       primary-hollow
     </Button>
+  </div>
+</div>
+```
+
+#### Legacy Buttons
+
+Buttons can be used in blade pages by using the `button` classname. This also adds a separate `holster` button type
+for dropdowns.
+
+```jsx
+<div>
+  <div>
+    <h3>Enabled</h3>
+    <button className='button' onClick={() => alert('primary')}>
+      default
+    </button>
+    <button className='button primary' onClick={() => alert('primary')}>
+      primary
+    </button>
+    <button className='button secondary' onClick={() => alert('secondary')}>
+      secondary
+    </button>
+    <button className='button success' onClick={() => alert('success')}>
+      success
+    </button>
+    <button className='button warning' onClick={() => alert('warning')}>
+      warning
+    </button>
+    <button className='button alert' onClick={() => alert('alert')}>
+      alert
+    </button>
+    <button className='button neutral' onClick={() => alert('neutral')}>
+      neutral
+    </button> 
+    <button className='button highlight' onClick={() => alert('highlight')}>
+      highlight
+    </button>
+    <button className='button primary-hollow' onClick={() => alert('highlight')}>
+      primary-hollow
+    </button>
+    <button className='button primary' disabled onClick={() => alert('primary')}>
+      disabled
+    </button>
+    <button className='button holster' onClick={() => alert('yo')}>
+       <span class="fa fa-ellipsis-v"></span>
+    </button>
   </div>
 </div>
 ```

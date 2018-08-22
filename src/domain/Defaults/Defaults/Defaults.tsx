@@ -1,17 +1,9 @@
 import React from 'react'
+import { GridProvider } from '../../Grids'
 
 const sassGlobals = require('@Common/sass/variables.scss')
 
 interface IDefaults {
-  /** Breakpoints used for the grid layout */
-  breakpoints: {
-    small: number
-    medium: number
-    large: number
-    xlarge: number
-    xxlarge: number
-  }
-
   /** Anchor component used for clickable links */
   AnchorComponent?: React.ComponentType<any>
 }
@@ -22,13 +14,6 @@ interface IDefaultsProviders {
 }
 
 const defaults: IDefaults = {
-  breakpoints: {
-    small: parseInt(sassGlobals['breakpoint-small']) || 0,
-    medium: parseInt(sassGlobals['breakpoint-medium']) || 1,
-    large: parseInt(sassGlobals['breakpoint-large']) || 2,
-    xlarge: parseInt(sassGlobals['breakpoint-xlarge']) || 3,
-    xxlarge: parseInt(sassGlobals['breakpoint-xxlarge']) || 4
-  }
 }
 
 const DefaultsContext: React.Context<IDefaults> = React.createContext(defaults)
@@ -49,7 +34,7 @@ class DefaultsProvider extends React.PureComponent<IDefaultsProviders> {
           ...value
         }}
       >
-        {children}
+        <GridProvider>{children}</GridProvider>
       </DefaultsContext.Provider>
     )
   }

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
-import { getColor } from '@Common/index'
+
+const { n300, n700, i400 } = require('../../../common/sass/variables.scss')
 
 const HorizontalTabsContainer = styled.div``
 
@@ -16,8 +17,8 @@ const HorizontalTabTitle = styled.li`
 
 const HorizontalTabTitleAnchor = styled.a`
   border: 0;
-  box-shadow: inset 0 -1px 0 0 ${getColor('neutral-base')};
-  color: ${getColor('main-text')};
+  box-shadow: inset 0 -1px 0 0 ${n300};
+  color: ${n700};
   display: block;
   font-size: inherit;
   font-weight: 600;
@@ -27,16 +28,14 @@ const HorizontalTabTitleAnchor = styled.a`
 
   &:hover,
   &:focus {
-    background-color: ${getColor('main-background')};
-    box-shadow: inset 0 -3px 0 0 ${getColor('neutral-base')};
-    color: ${getColor('primary-base')};
+    box-shadow: inset 0 -3px 0 0 ${n300};
+    color: ${i400};
   }
 
   &.active {
-    background-color: ${getColor('main-background')};
     border: 0;
-    box-shadow: inset 0 -3px 0 0 ${getColor('primary-base')};
-    color: ${getColor('primary-base')};
+    box-shadow: inset 0 -3px 0 0 ${i400};
+    color: ${i400};
   }
 
   .left-component {
@@ -49,7 +48,7 @@ const HorizontalTabTitleAnchor = styled.a`
 `
 
 const HorizontalTabContent = styled.div`
-  border: 1px solid ${getColor('neutral-base')};
+  border: 1px solid ${n300};
   clear: both;
   padding: 1rem;
 `
