@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components'
-import { getColor } from '../../../common/legacy'
 
 const { n600 } = require('../../../common/sass/variables.scss')
 

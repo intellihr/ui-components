@@ -1,6 +1,5 @@
 import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
-import { getColor } from '../../../common/legacy'
 const { n200, n300, n600, n700, n800 } = require('../../../common/sass/variables.scss')
 
 const StyledComment = styled.div`
