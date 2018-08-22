@@ -22,12 +22,3 @@
     background-color: $n400;
   }
 }
-
-.radio-button-group.stacked, .radio-button-group.stacked-for-small {
-
-  @include breakpoint(small only) {
-    input:checked + .button {
-      transition: border-right-color 0.25s ease-out;
-    }
-  }
-}
