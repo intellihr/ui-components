@@ -15,7 +15,7 @@
 :local(.Skeleton) {
   animation: progress 1.2s ease-in-out infinite;
   background-color: $n200;
-  background-image: linear-gradient(90deg, $n200, $n300);
+  background-image: linear-gradient(90deg, $n200, $n300, $n200);
   background-repeat: no-repeat;
   background-size: 200px 100%;
   border: 1px solid $n200;
