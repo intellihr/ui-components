@@ -36,6 +36,8 @@ interface ISectionProps {
   componentProps?: any,
   /** Internal prop used for closing the section */
   __closeMenuCallback?: (event: React.SyntheticEvent<HTMLLIElement>, section: ISectionProps) => void
+  /** Use the hover style without using href or onClick */
+  styleOnHover?: boolean
 }
 
 class Section extends React.PureComponent<ISectionProps, never> {
@@ -60,11 +62,12 @@ class Section extends React.PureComponent<ISectionProps, never> {
     const {
       onClick,
       href,
+      styleOnHover,
       sectionType
     } = this.props
 
     return {
-      clickable: !!href || !!onClick,
+      clickable: styleOnHover || !!href || !!onClick,
       sectionType: sectionType || 'default',
       onClick: this.handleCloseMenuClick,
       role: 'menuitem'
