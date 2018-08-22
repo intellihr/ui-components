@@ -110,10 +110,8 @@ select {
 input,
 textarea,
 select {
-  &:hover {
-    &:disabled {
-      background-color: $n200;
-    }
+  &:disabled {
+    background-color: $n200;
   }
 }
 
