@@ -42,18 +42,16 @@ $fa-font-path: '~font-awesome/fonts';
 @import '~font-awesome/scss/font-awesome';
 
 // Components
-@import 'legacy/components/action-panel';
 @import 'legacy/components/box';
 @import 'legacy/components/breadcrumbs';
 @import 'legacy/components/button-group';
 @import 'legacy/components/callout';
 @import 'legacy/components/dropdown';
-@import 'legacy/components/feature-panel';
 @import 'legacy/components/form';
+@import 'legacy/components/feature-panel';
 @import 'legacy/components/grid';
 @import 'legacy/components/icon';
 @import 'legacy/components/label-group';
-@import 'legacy/components/loader';
 @import 'legacy/components/modal';
 @import 'legacy/components/navigation';
 @import 'legacy/components/person-tag';

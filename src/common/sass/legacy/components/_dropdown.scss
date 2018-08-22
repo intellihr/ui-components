@@ -1,3 +1,5 @@
+@import '../../variables';
+
 .dropdown-pane {
   padding: 0;
   border: 0;
@@ -9,6 +11,8 @@
   transform: scale(0);
   transform-origin: 100% 0;
   transition: transform 0.15s ease-out;
+  position: absolute;
+  background-color: $n100;
 
   &.is-open {
     transform: scale(1);
@@ -27,7 +31,7 @@
       padding: 0.8em 1.5em 0.8em 1em;
       box-sizing: border-box;
       text-align: left;
-      color: $main-text;
+      color: $n700;
       outline: 0;
       line-height: 1.5;
       white-space: nowrap;
@@ -35,24 +39,30 @@
       width: 100%;
 
       &:hover, &:focus, &:active {
-        color: $link-text;
-        background-color: $neutral-light;
+        color: $i400;
+        background-color: $n200;
         cursor: pointer;
       }
 
       &.dropdown-item-delete {
-        &:hover, &:focus, &:active {
-          color: $alert-base;
+        color: $r600;
+
+        &:hover, &:focus {
+          background-color: $r100;
+        }
+
+        &:active {
+          background-color: $r200;
         }
       }
 
       &.disabled, &:disabled {
         opacity: 0.3;
         cursor: not-allowed;
-        color: #47525d;
+        color: $n700;
 
         &:hover, &:focus, &:active {
-          color: #47525d;
+          color: $n700;
         }
       }
     }
