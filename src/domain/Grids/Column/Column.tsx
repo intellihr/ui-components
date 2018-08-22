@@ -3,7 +3,6 @@ import { reduce, isNil, keys } from 'lodash'
 import { Col } from 'react-styled-flexboxgrid'
 
 interface IColumnProps {
-  xs?: number,
   sm?: number,
   md?: number,
   lg?: number
