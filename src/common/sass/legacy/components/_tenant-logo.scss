@@ -1,5 +1,7 @@
+@import '../../variables';
+
 img.tenant-logo-preview {
-  border: 1px solid $medium-gray;
+  border: 1px solid $n400;
   padding: 1rem;
   max-width: rem-calc(250);
 }
