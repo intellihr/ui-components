@@ -1,62 +1,157 @@
 #### Primary
 ```jsx
 const { ColorsGrid } = require('./Color');
+const { Variables } = require('@Common');
 
-<ColorsGrid colors={['n400','c400','b400','i400','g400','y400','o400','r400']} />
+<ColorsGrid
+  colors={[
+    Variables.Color.n400,
+    Variables.Color.c400,
+    Variables.Color.b400,
+    Variables.Color.i400,
+    Variables.Color.g400,
+    Variables.Color.y400,
+    Variables.Color.o400,
+    Variables.Color.r400
+  ]}
+/>
 ```
 
 #### Neutrals
 ```jsx
 const { ColorsGrid } = require('./Color');
+const { Variables } = require('@Common');
 
-<ColorsGrid colors={['n100','n150','n200','n300','n400','n500','n600','n700','n800']} />
+<ColorsGrid
+  colors={[
+    Variables.Color.n100,
+    Variables.Color.n150,
+    Variables.Color.n200,
+    Variables.Color.n300,
+    Variables.Color.n400,
+    Variables.Color.n500,
+    Variables.Color.n600,
+    Variables.Color.n700,
+    Variables.Color.n800
+  ]}
+/>
 ```
 
 #### Cyan
 ```jsx
 const { ColorsGrid } = require('./Color');
+const { Variables } = require('@Common');
 
-<ColorsGrid colors={['c100','c200','c300','c400','c500','c600']} />
+<ColorsGrid
+  colors={[
+    Variables.Color.c100,
+    Variables.Color.c200,
+    Variables.Color.c300,
+    Variables.Color.c400,
+    Variables.Color.c500,
+    Variables.Color.c600
+  ]}
+/>
 ```
 
 #### Blue
 ```jsx
 const { ColorsGrid } = require('./Color');
+const { Variables } = require('@Common');
 
-<ColorsGrid colors={['b100','b200','b300','b400','b500','b600']} />
+<ColorsGrid
+  colors={[
+    Variables.Color.b100,
+    Variables.Color.b200,
+    Variables.Color.b300,
+    Variables.Color.b400,
+    Variables.Color.b500,
+    Variables.Color.b600
+  ]}
+/>
 ```
 
 #### Indigo
 ```jsx
 const { ColorsGrid } = require('./Color');
+const { Variables } = require('@Common');
 
-<ColorsGrid colors={['i100','i200','i300','i400','i500','i600']} />
+<ColorsGrid
+  colors={[
+    Variables.Color.i100,
+    Variables.Color.i200,
+    Variables.Color.i300,
+    Variables.Color.i400,
+    Variables.Color.i500,
+    Variables.Color.i600
+  ]}
+/>
 ```
 
 #### Green
 ```jsx
 const { ColorsGrid } = require('./Color');
+const { Variables } = require('@Common');
 
-<ColorsGrid colors={['g100','g200','g300','g400','g500','g600']} />
+<ColorsGrid
+  colors={[
+    Variables.Color.g100,
+    Variables.Color.g200,
+    Variables.Color.g300,
+    Variables.Color.g400,
+    Variables.Color.g500,
+    Variables.Color.g600
+  ]}
+/>
 ```
 
 #### Yellow
 ```jsx
 const { ColorsGrid } = require('./Color');
+const { Variables } = require('@Common');
 
-<ColorsGrid colors={['y100','y200','y300','y400','y500','y600']} />
+<ColorsGrid
+  colors={[
+    Variables.Color.y100,
+    Variables.Color.y200,
+    Variables.Color.y300,
+    Variables.Color.y400,
+    Variables.Color.y500,
+    Variables.Color.y600
+  ]}
+/>
 ```
 
 #### Orange
 ```jsx
 const { ColorsGrid } = require('./Color');
+const { Variables } = require('@Common');
 
-<ColorsGrid colors={['o100','o200','o300','o400','o500','o600']} />
+<ColorsGrid
+  colors={[
+    Variables.Color.o100,
+    Variables.Color.o200,
+    Variables.Color.o300,
+    Variables.Color.o400,
+    Variables.Color.o500,
+    Variables.Color.o600
+  ]}
+/>
 ```
 
 #### Red
 ```jsx
 const { ColorsGrid } = require('./Color');
+const { Variables } = require('@Common');
 
-<ColorsGrid colors={['r100','r200','r300','r400','r500','r600']} />
+<ColorsGrid
+  colors={[
+    Variables.Color.r100,
+    Variables.Color.r200,
+    Variables.Color.r300,
+    Variables.Color.r400,
+    Variables.Color.r500,
+    Variables.Color.r600
+  ]}
+/>
 ```
