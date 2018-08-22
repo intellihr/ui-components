@@ -1,5 +1,5 @@
 import React from 'react'
-import { reduce, isNil, omit, pick } from 'lodash'
+import { reduce, isNil, keys } from 'lodash'
 import { Col } from 'react-styled-flexboxgrid'
 
 interface IColumnProps {
@@ -11,23 +11,26 @@ interface IColumnProps {
 
 class Column extends React.PureComponent<IColumnProps> {
   public static defaultProps: Partial<IColumnProps> = {
-    xs: 12
+    sm: 12
   }
 
   get dimensions () : IColumnProps {
     const {
-      xs,
       sm,
       md,
       lg
     } = this.props
 
-    const dimensions: string[] = ['xs', 'sm', 'md', 'lg']
+    const dimensions: string[] = ['sm', 'md', 'lg']
 
     let previousValue: number = 12
     const that = this
 
-    return reduce(dimensions, (acc: IColumnProps, key: string, k): IColumnProps => {
+    return reduce(dimensions,
+                 (acc: IColumnProps,
+                          key: string,
+                          index: number): IColumnProps =>
+      {
       const sizeValue = that.props[key as keyof IColumnProps]
 
       if (!isNil(sizeValue)) {

@@ -6,7 +6,6 @@ exports[`<Column /> Simple Column behaviour should default values if nothing pro
   md={12}
   sm={12}
   type="row"
-  xs={12}
 />
 `;
 
@@ -16,7 +15,6 @@ exports[`<Column /> Simple Column behaviour should default values if partial val
   md={8}
   sm={12}
   type="row"
-  xs={12}
 />
 `;
 
@@ -26,6 +24,5 @@ exports[`<Column /> Simple Column behaviour should match the snapshot 1`] = `
   md={3}
   sm={6}
   type="row"
-  xs={12}
 />
 `;
