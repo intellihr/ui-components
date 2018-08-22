@@ -67,7 +67,7 @@
 ### Comments that have a header defined will not render actionMenu and will be considered a system generated comment
 ```jsx
 const { Text } = require('@Domain/Typographies');
-const { getColor } = require ('@Common/legacy');
+const { Variables } = require('@Common');
 
 <Comment
   comment={{
@@ -78,7 +78,25 @@ const { getColor } = require ('@Common/legacy');
     createdDateText: <span>1st Jan 2017</span>,
     personProfilePictureId: 'http://www.multiplemayhemmamma.com/wp-content/uploads/2013/03/home-alone-150x150.jpg',
     personId: 'lyanna',
-    header: <span style={{ marginLeft: '5px' }}>has <Text isHeavy color={getColor('success')}>approved</Text> Joshua Brady's <Text isHeavy color={getColor('secondary')}>qualification</Text> with a <Text isHeavy color={getColor('alert')}>very long</Text> message to test how a long message would look.</span>
+    header: (
+      <span style={{ marginLeft: '5px' }}>
+        has
+        <Text
+          isHeavy
+          color={Variables.Color.g400}
+        >
+          approved
+        </Text>
+        Joshua Brady's
+        <Text
+          isHeavy
+          color={Variables.Color.i400}
+        >
+          qualification
+        </Text>
+        with a very long message to test how a long message would look.
+      </span>
+    )
   }}
   loggedInUser={{
     id: 'sampleCommentPersonId'

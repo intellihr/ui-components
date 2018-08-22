@@ -1,7 +1,6 @@
 import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
-
-const { i400, n600, n700 } = require('../../../common/sass/variables.scss')
+import { Variables } from '../../../common'
 
 interface IAvatarEntityWrapper {
   className?: string
@@ -16,13 +15,13 @@ const AvatarEntityWrapper = styled.div`
   align-items: center;
   display: inline-flex;
   padding: 2px;
-  color: ${n700};
+  color: ${Variables.Color.n700};
 
   &:hover {
     ${(props: IAvatarEntityWrapper) => {
     if (props.isHoverable) {
       return `
-          color: ${i400};
+          color: ${Variables.Color.i400};
           cursor: pointer;
         `
     }

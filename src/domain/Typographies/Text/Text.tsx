@@ -1,7 +1,7 @@
 import React from 'react'
 import { TextWrapper } from './style'
 import { withSkeleton, ISkeletonComponentProps } from '../../Skeletons'
-const { n800 } = require('../../../common/sass/variables.scss')
+import { Variables } from '../../../common'
 
 export interface ITextProps {
   /** Text to display */
@@ -19,7 +19,7 @@ export interface ITextProps {
   /** If true, will display the text inline */
   isInline?: boolean
   /** Color of the text */
-  color?: string
+  color?: Variables.Color | 'subtle'
 }
 
 export class TextComponent extends React.PureComponent<ITextProps> {
@@ -27,7 +27,7 @@ export class TextComponent extends React.PureComponent<ITextProps> {
     isInline: true,
     size: 'medium',
     weight: 'normal',
-    color: n800
+    color: Variables.Color.n800
   }
 
   public render (): JSX.Element {

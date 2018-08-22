@@ -1,8 +1,7 @@
 import React from 'react'
 import styled, { StyledFunction } from 'styled-components'
-import { Anchor, IAnchorProps } from '../../Internals/Anchor/Anchor'
-
-const { i400, i500, i600 } = require('../../../common/sass/variables.scss')
+import { Anchor, IAnchorProps } from '../../Internals/Anchor'
+import { Variables } from '../../../common'
 
 // tslint:disable-next-line:no-empty-interface
 interface IActionLinkProps extends IAnchorProps {}
@@ -18,15 +17,15 @@ export const ActionLink = styledAnchor`
   &,
   &:link,
   &:visited {
-    color: ${i400};
+    color: ${Variables.Color.i400};
   }
 
   &:hover {
-    color: ${i500}
+    color: ${Variables.Color.i500}
   }
 
   &:active {
-    color: ${i600}
+    color: ${Variables.Color.i600}
   }
 `
 

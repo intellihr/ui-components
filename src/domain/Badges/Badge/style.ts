@@ -1,10 +1,9 @@
 import styled, { css } from 'styled-components'
-
-const { n100, n400, n700 } = require('../../../common/sass/variables.scss')
+import { Variables } from '../../../common'
 
 interface IBadgeWrapper {
-  backgroundColor?: string
-  color?: string
+  backgroundColor?: Variables.Color
+  color?: Variables.Color
   size?: 'small' | 'medium' | 'large'
 }
 
@@ -46,9 +45,9 @@ const BadgeWrapper = styled.span`
   }
 
   box-shadow: 0 2px 2px rgba(0,0,0,0.24);
-  border: 1px solid ${n400};
+  border: 1px solid ${Variables.Color.n400};
   border-radius: 50%;
-  color: ${n100};
+  color: ${Variables.Color.n100};
   display: inline-block;
   font-weight: 600;
   text-align: center;
@@ -56,7 +55,7 @@ const BadgeWrapper = styled.span`
 
   .refresh-icon {
     background-color: transparent;
-    color: ${n700};
+    color: ${Variables.Color.n700};
   }
 `
 
