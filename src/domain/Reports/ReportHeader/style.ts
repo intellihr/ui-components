@@ -1,18 +1,21 @@
 import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
 
+const { i400, n600 } = require('../../../common/sass/variables.scss')
+
 export const Wrapper = styled.div`
+  align-items: center;
+  color: ${n600};
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  align-items: center;
   height: 40px;
-  width: 300px;
   padding: 5px;
   text-transform: uppercase;
+  width: 300px;
 
   &:hover {
-    color: rgb(15, 104, 250);
+    color: ${i400};
     cursor: pointer;
   }
 `

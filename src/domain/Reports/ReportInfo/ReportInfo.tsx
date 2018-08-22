@@ -1,5 +1,4 @@
 import React, { ReactElement } from 'react'
-import uuid from 'uuid'
 import { isEmpty } from 'lodash'
 import {
   MainBox,
@@ -9,6 +8,8 @@ import {
   HighlighImageBlock,
   Description
 } from './style'
+
+const { n800 } = require('../../../common/sass/variables.scss')
 
 export interface IHighlightSection {
   caption: string,
@@ -38,8 +39,8 @@ export const HighlightSection = (props: IHighlightSection) => {
 }
 
 export class ReportInfo extends React.PureComponent <IReportInfo> {
-  public static defaultProps: Partial<IReportInfo> = {
-    textColor: 'hsl(210, 13.4%, 47.2%)'
+  public static defaultProps = {
+    textColor: n800
   }
 
   get highlights () {
@@ -51,8 +52,8 @@ export class ReportInfo extends React.PureComponent <IReportInfo> {
       return null
     }
 
-    return highlights.map((h: IHighlightSection) => (
-      <Col key={uuid.v4()}>
+    return highlights.map((h: IHighlightSection, idx: number) => (
+      <Col key={idx}>
         <HighlightSection {...h} />
       </Col>
     ))
@@ -63,16 +64,18 @@ export class ReportInfo extends React.PureComponent <IReportInfo> {
       description
     } = this.props
 
-    return (<Description>
-      {description}
-    </Description>)
+    return (
+      <Description>
+        {description}
+      </Description>
+    )
   }
 
   public render () {
     const {
-      description,
       textColor
     } = this.props
+
     return (
       <MainBox textColor={textColor} >
         <Col>
