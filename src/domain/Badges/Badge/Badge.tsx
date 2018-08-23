@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '../../Icons'
 import { BadgeWrapper } from './style'
+import { Variables } from '../../../common'
 
 interface IBadgeProps {
   /** Label of the badge  */
@@ -8,9 +9,9 @@ interface IBadgeProps {
   /** Is the badge content loading */
   pending?: boolean
   /** Background color of the badge */
-  backgroundColor?: string
+  backgroundColor?: Variables.Color
   /** Font color of the badge */
-  color?: string
+  color?: Variables.Color
   /** Enforced badge guideline sizes */
   size?: 'small' | 'medium' | 'large'
 }

@@ -1,7 +1,7 @@
 #### Basic Radar Chart
 
 ```jsx
-const { i400, r400 } = require('@Common/sass/variables.scss');
+const { Variables } = require('@Common');
 
 <RadarChart
   pointLabels={[
@@ -15,12 +15,12 @@ const { i400, r400 } = require('@Common/sass/variables.scss');
     {
       label: 'Dataset 1',
       data: [3, 2, 3, 3, 3],
-      colour: r400
+      colour: Variables.Color.r400
     },
     {
       label: 'Dataset 2',
       data: [2, 2, 4, 5, 1],
-      colour: i400
+      colour: Variables.Color.i400
     }
   ]}
 />
@@ -29,7 +29,7 @@ const { i400, r400 } = require('@Common/sass/variables.scss');
 #### Radar Chart with labelled data points
 
 ```jsx
-const { i400, r400 } = require('@Common/sass/variables.scss');
+const { Variables } = require('@Common');
 
 <RadarChart
   dataLabels={{
@@ -49,12 +49,12 @@ const { i400, r400 } = require('@Common/sass/variables.scss');
     {
       label: 'Dataset 1',
       data: [3, 2, 3, 3, 3],
-      colour: r400
+      colour: Variables.Color.r400
     },
     {
       label: 'Dataset 2',
       data: [2, 2, 4, 5, 1],
-      colour: i400
+      colour: Variables.Color.i400
     }
   ]}
 />
@@ -63,7 +63,7 @@ const { i400, r400 } = require('@Common/sass/variables.scss');
 #### Radar Chart with custom min, max, and step values
 
 ```jsx
-const { i400, r400 } = require('@Common/sass/variables.scss');
+const { Variables } = require('@Common');
 
 <RadarChart
   dataLabels={{
@@ -81,12 +81,12 @@ const { i400, r400 } = require('@Common/sass/variables.scss');
     {
       label: 'Dataset 1',
       data: [80, 50, 100, 100, 150],
-      colour: r400
+      colour: Variables.Color.r400
     },
     {
       label: 'Dataset 2',
       data: [90, 60, 75, 175, 50],
-      colour: i400
+      colour: Variables.Color.i400
     }
   ]}
   minValue={50}
@@ -98,7 +98,7 @@ const { i400, r400 } = require('@Common/sass/variables.scss');
 #### Basic Radar Chart with custom height
 
 ```jsx
-const { i400, r400 } = require('@Common/sass/variables.scss');
+const { Variables } = require('@Common');
 
 <RadarChart
   pointLabels={[
@@ -112,12 +112,12 @@ const { i400, r400 } = require('@Common/sass/variables.scss');
     {
       label: 'Dataset 1',
       data: [3, 2, 3, 3, 3],
-      colour: r400
+      colour: Variables.Color.r400
     },
     {
       label: 'Dataset 2',
       data: [2, 2, 4, 5, 1],
-      colour: i400
+      colour: Variables.Color.i400
     }
   ]}
   height={200}

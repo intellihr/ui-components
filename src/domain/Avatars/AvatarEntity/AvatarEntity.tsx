@@ -7,9 +7,7 @@ import {
 } from './style'
 import { Avatar, IAvatarProps } from '../'
 import { Text } from '../../Typographies'
-
-
-const { n600, n700 } = require('../../../common/sass/variables.scss')
+import { Variables } from '../../../common'
 
 export interface IAvatarEntity {
   /** The primary text */
@@ -58,7 +56,7 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
 
     return (
       <Text
-        color={n700}
+        color={Variables.Color.n700}
         isInline={isCompact}
       >
         {primaryText}
@@ -87,7 +85,7 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
         isCompact={isCompact}
       >
         <Text
-          color={n600}
+          color={Variables.Color.n600}
           size='xsmall'
           isTruncated
           isInline={isCompact}
@@ -110,7 +108,7 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
 
     return (
       <Text
-        color={n600}
+        color={Variables.Color.n600}
         size='xsmall'
         weight='heavy'
         isInline={false}

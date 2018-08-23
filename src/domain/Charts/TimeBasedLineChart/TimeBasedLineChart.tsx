@@ -2,7 +2,6 @@ import React from 'react'
 import { Line, ChartData } from 'react-chartjs-2'
 import { merge } from 'lodash'
 import { getTimeBasedLineChartDefaultOptions } from './chartOptions'
-const { n600 } = require('../../../common/sass/variables.scss')
 
 export interface IDataSet {
   x: object,

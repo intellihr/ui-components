@@ -1,16 +1,16 @@
 import React from 'react'
 import { Grid as StyledGrid } from 'react-styled-flexboxgrid'
 import { ThemeProvider } from 'styled-components'
+import { Variables } from '../../../common'
 import { pxToRem } from '../../Styles'
-const { breakpointMin, breakpointTablet, breakpointDesktop } = require('../../../common/sass/variables.scss')
 
 class GridProvider extends React.PureComponent {
   private get breakpoints () {
     return {
       xs: -1,
-      sm: pxToRem(parseInt(breakpointMin, 10)),
-      md: pxToRem(parseInt(breakpointTablet, 10)),
-      lg: pxToRem(parseInt(breakpointDesktop, 10))
+      sm: pxToRem(Variables.Breakpoint.breakpointMin),
+      md: pxToRem(Variables.Breakpoint.breakpointTablet),
+      lg: pxToRem(Variables.Breakpoint.breakpointDesktop)
     }
   }
 

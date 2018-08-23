@@ -1,12 +1,12 @@
 import moment from 'moment'
+import { Variables } from '../../../common'
 import { createGradient } from './createGradient'
-const { b400, c400 } = require('../../../common/sass/variables.scss')
 
 export const lineObject = {
-  lineColor: b400,
+  lineColor: Variables.Color.b400,
   datasetLabel: 'Happiness Rating',
   isGradient: true,
-  backgroundColor: createGradient(b400),
+  backgroundColor: createGradient(Variables.Color.b400),
   dataset: [
     {
       x: moment('2018-05-08T05:06:52.000Z'),
@@ -140,7 +140,7 @@ export const lineObject = {
 
 export const lineObject2 = {
   datasetLabel: 'Productivity',
-  lineColor: b400,
+  lineColor: Variables.Color.b400,
   dataset: [
     {
       x: moment('2018-05-08T04:40:09.000Z'),
@@ -183,7 +183,7 @@ export const lineObject2 = {
 
 export const lineObject3 = {
   datasetLabel: 'Productivity',
-  lineColor: c400,
+  lineColor: Variables.Color.c400,
   dataset: [
     {
       x: moment('2018-02-20T23:53:42.000Z'),

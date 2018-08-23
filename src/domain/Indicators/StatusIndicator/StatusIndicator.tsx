@@ -2,6 +2,7 @@ import classNames from 'classnames'
 import React from 'react'
 import { FontAwesomeIcon } from '../../Icons'
 import { Text } from '../../Typographies/Text'
+import { Variables } from '../../../common'
 
 const style = require('./StatusIndicator.scss')
 
@@ -13,10 +14,10 @@ export interface IStatusIndicatorProps {
     subtitleText?: string
 
     /** Colour of the icon  */
-    color?: string
+    color?: Variables.Color
 
     /** Main colour of the text (and icon if no `color` provided)  */
-    textColor?: string
+    textColor?: Variables.Color | 'subtle'
 
     /** Should the label use a hollow icon  */
     isHollow?: boolean

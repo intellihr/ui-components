@@ -1,9 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
-import { parseInt } from 'lodash'
 import { StyledReactModal } from './style'
-import { Props } from '../../../common/types'
-const { zIndexModal } = require('../../../common/sass/variables.scss')
+import { Props, Variables } from '../../../common'
 
 enum ReactModalSize {
   medium = 'fixed-medium-up',
@@ -83,7 +81,7 @@ class Modal extends React.PureComponent<IModalProps> {
     } = this.props
 
     const modalOffsetBase = 2
-    const overlayZIndex = parseInt(zIndexModal, 10) + modalOffsetBase * offsetZIndex!
+    const overlayZIndex = Variables.ZIndex.zIndexModal + modalOffsetBase * offsetZIndex!
 
     return (
       <StyledReactModal
