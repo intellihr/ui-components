@@ -29,6 +29,7 @@ export const TitleBox = styled.div`
 `
 
 export const Title = styled.div`
+  color: ${Variables.Color.n700};
   font-size: 20px;
   font-weight: 600;
 `
