@@ -49,11 +49,18 @@ const SecondaryTextWrapper = styled.span`
   margin-left: ${(props: ITextWrapper) => props.isCompact ? '5px' : '0px'};
 `
 
+const TertiaryTextWrapper = styled.span`
+  color: ${Variables.Color.n600};
+  font-size: .75rem;
+  font-weight: 600;
+`
+
 export {
   IAvatarEntityWrapper,
   ITextWrapper,
   AvatarEntityWrapper,
   AvatarContainer,
   AvatarEntityInfo,
-  SecondaryTextWrapper
+  SecondaryTextWrapper,
+  TertiaryTextWrapper
 }

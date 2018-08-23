@@ -37,7 +37,7 @@ export class StatusIndicator extends React.Component<IStatusIndicatorProps> {
     if (subtitleText) {
       return (
         <Text
-          size='small'
+          type='small'
           color={textColor}
           className='subtitle'
         >

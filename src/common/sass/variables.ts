@@ -9,8 +9,8 @@
 // tslint:disable-next-line:no-namespace
 namespace Variables {
   export enum Breakpoint {
-    breakpointMin = 0,
-    breakpointTablet = 640,
+    breakpointMin =     0,
+    breakpointTablet =  640,
     breakpointDesktop = 1024
   }
 
@@ -83,18 +83,41 @@ namespace Variables {
     y600 = '#7F7012'
   }
 
+export enum FontSize {
+  fzXSmall =          12,
+  fzSmall =           14,
+  fzBody =            16,
+  fzHeading =         18,
+  fzDisplay =         24,
+  fzDisplayLarge =    36
+}
+
+export enum FontWeight {
+  fwRegular =         400,
+  fwMedium =          600
+}
+
+export enum LineHeight {
+  lhXSmall =          20,
+  lhSmall =           20,
+  lhBody =            24,
+  lhHeading =         24,
+  lhDisplay =         28,
+  lhDisplayLarge =    40
+}
+
   export enum Style {
     borderRadius = 4
   }
 
   export enum ZIndex {
-    zIndexAbsoluteBottom = -9999,
-    zIndexDefault = 0,
-    zIndexModal = 1000,
-    zIndexDateInput = 2000,
-    zIndexDropdownMenu = 3000,
-    zIndexToaster = 4000,
-    zIndexAbsoluteTop = 9999
+    zIndexAbsoluteBottom =  -9999,
+    zIndexDefault =         0,
+    zIndexModal =           1000,
+    zIndexDateInput =       2000,
+    zIndexDropdownMenu =    3000,
+    zIndexToaster =         4000,
+    zIndexAbsoluteTop =     9999
   }
 }
 

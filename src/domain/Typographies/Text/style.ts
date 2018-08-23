@@ -6,7 +6,7 @@ export interface ITextWrapperProps {
   isInline?: boolean
   isUpper?: boolean
   weight?: 'normal' | 'heavy'
-  size?: 'xsmall' | 'small' | 'medium' |'large'
+  type?: 'xsmall' | 'small' | 'body' | 'heading' | 'display' | 'display-large'
   isTruncated?: boolean
 }
 
@@ -14,28 +14,88 @@ export const TextWrapper = styled.span`
   font-family: 'Open Sans', Arial, sans-serif;
 
   ${(props: ITextWrapperProps) => {
-    switch (props.color) {
-      case 'subtle':
+    switch (props.type) {
+      case 'xsmall':
         return `
-          color: ${Variables.Color.n600};
+          font-size: ${Variables.FontSize.fzXSmall}px;
+          line-height: ${Variables.LineHeight.lhXSmall}px;
+          letter-spacing: .02em;
         `
-      default:
+      case 'small':
         return `
-          color: ${props.color};
+          font-size: ${Variables.FontSize.fzSmall}px;
+          line-height: ${Variables.LineHeight.lhSmall}px;
+          letter-spacing: normal;
+        `
+      case 'body':
+        return `
+          font-size: ${Variables.FontSize.fzBody}px;
+          line-height: ${Variables.LineHeight.lhBody}px;
+          letter-spacing: normal;
+        `
+      case 'heading':
+        return `
+          font-size: ${Variables.FontSize.fzHeading}px;
+          line-height: ${Variables.LineHeight.lhHeading}px;
+          letter-spacing: -.02em;
+        `
+      case 'display':
+        return `
+          font-size: ${Variables.FontSize.fzDisplay}px;
+          line-height: ${Variables.LineHeight.lhDisplay}px;
+          letter-spacing: -.02em;
+        `
+      case 'display-large':
+        return `
+          font-size: ${Variables.FontSize.fzDisplayLarge}px;
+          line-height: ${Variables.LineHeight.lhDisplayLarge}px;
+          letter-spacing: -.02em;
         `
     }
   }}
 
   ${(props: ITextWrapperProps) => {
-    switch (props.weight) {
-      case 'normal':
-        return `
-          font-weight: 400;
-        `
-      case 'heavy':
-        return `
-          font-weight: 600;
-        `
+    if (props.color) {
+      return `
+        color: ${props.color};
+      `
+    } else {
+      switch (props.type) {
+        case 'xsmall' || 'small':
+          return `
+            color: ${Variables.Color.n800};
+          `
+        case 'body' || 'heading' || 'display' || 'display-large':
+          return `
+            color: ${Variables.Color.n700};
+          `
+      }
+    }
+  }}
+
+  ${(props: ITextWrapperProps) => {
+    if (props.weight) {
+      switch (props.weight) {
+        case 'normal':
+          return `
+            font-weight: ${Variables.FontWeight.fwRegular};
+          `
+        case 'heavy':
+          return `
+            font-weight: ${Variables.FontWeight.fwMedium};
+          `
+      }
+    } else {
+      switch (props.type) {
+        case 'xsmall' || 'small' || 'body':
+          return `
+            font-weight: ${Variables.FontWeight.fwRegular};
+          `
+        case 'heading' || 'display' || 'display-large':
+          return `
+            font-weight: ${Variables.FontWeight.fwMedium};
+          `
+      }
     }
   }}
 
@@ -52,25 +112,4 @@ export const TextWrapper = styled.span`
   ${(props: ITextWrapperProps) => !props.isInline && css`
     display: block;
   `}
-
-  ${(props: ITextWrapperProps) => {
-    switch (props.size) {
-      case 'xsmall':
-        return `
-          font-size: .8125rem;
-        `
-      case 'small':
-        return `
-          font-size: .875rem;
-        `
-      case 'medium':
-        return `
-          font-size: 1rem;
-        `
-      case 'large':
-        return `
-          font-size: 1.125rem;
-        `
-    }
-  }}
 `

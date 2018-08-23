@@ -6,22 +6,29 @@
   </Text>
 ```
 
-#### Sizes
+#### Types
 
 ```jsx
   <div>
-    <Text isInline={false} size='xsmall'>
+    <Text isInline={false} type='xsmall'>
       X-Small
     </Text>
-    <Text isInline={false} size='small'>
+    <Text isInline={false} type='small'>
       Small
     </Text>
-    <Text isInline={false} size='medium'>
-      Medium (default)
+    <Text isInline={false} type='body'>
+      Body (default)
     </Text>
-    <Text size='large'>
-      Large
+    <Text isInline={false} type='heading'>
+      Heading
     </Text>
+    <Text isInline={false} type='display'>
+      Display
+    </Text>
+    <Text isInline={false} type='display-large'>
+      Display Large
+    </Text>
+
   </div>
 ```
 
@@ -42,9 +49,6 @@
 
 ```jsx
   <div>
-    <Text isInline={false} color='subtle'>
-      Hello! I am the system color for 'subtle'
-    </Text>
     <Text color='blue'>
       Hello! I am blue text
     </Text>
@@ -79,7 +83,7 @@
   <Text isInline={false} color='red'>
     Hello!
   </Text>
-  <Text size='small' weight='heavy' isUpper>
+  <Text type='small' weight='heavy' isUpper>
     I am text
   </Text>
 </div>
