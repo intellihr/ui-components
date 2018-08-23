@@ -333,6 +333,9 @@ for dropdowns.
     <button className='button holster' onClick={() => alert('yo')}>
        <span class="fa fa-ellipsis-v"></span>
     </button>
+    <button className='button remove' onClick={() => alert('remove')}>
+       <span class="fa fa-times"></span>
+    </button>
   </div>
 </div>
 ```

@@ -654,4 +654,18 @@ $button-styles: (
       width: 1.3em;
     }
   }
+
+  // Legacy button for removing rows of data
+  &.remove {
+    @include add-button-style(
+        map-get($button-styles, delete-subtle)
+    );
+
+    border-radius: 50%;
+    height: 1.55rem;
+    line-height: 1.55rem;
+    margin: .5rem;
+    padding: 0;
+    width: 1.55rem;
+  }
 }
