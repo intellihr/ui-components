@@ -16,8 +16,8 @@
     &.is-disabled {
       .Select-control {
         &:hover {
-          cursor: not-allowed;
           background-color: $n200;
+          cursor: not-allowed;
         }
       }
     }

@@ -51,6 +51,14 @@
   }
 }
 
+.input-group-label {
+  &.disabled {
+    .fa {
+      color: $n400;
+    }
+  }
+}
+
 // a read-only view of a form - has labels and values rather than labels and inputs
 .ihr-form-view {
   .label-container {
