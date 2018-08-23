@@ -83,12 +83,11 @@ $print-transparent-backgrounds: true;
 
 // 2. Breakpoints
 // --------------
-
-/*
-  foundation breakpoints define the minimum screen width for that value
-  eg. given the following values: medium = 640 and large = 1024
-      the medium breakpoint will be a range from 640 to 1023
- */
+//
+// Foundation breakpoints define the minimum screen width for that value
+// eg. given the following values: medium = 640 and large = 1024
+// the medium breakpoint will be a range from 640 to 1023
+//
 $print-breakpoint: large;
 $breakpoint-classes: (small medium large xlarge xxlarge);
 

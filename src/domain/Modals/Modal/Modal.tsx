@@ -3,12 +3,6 @@ import classNames from 'classnames'
 import { StyledReactModal } from './style'
 import { Props, Variables } from '../../../common'
 
-enum ReactModalSize {
-  medium = 'fixed-medium-up',
-  large = 'fixed-large-up',
-  xxlarge = 'fixed-xxlarge-up'
-}
-
 interface IBaseModalProps {
   /**
    * Show close button at the top right if handleClose is set.
@@ -20,7 +14,7 @@ interface IBaseModalProps {
   /** Extra classes to apply */
   className?: string
   /** Modal Size */
-  size?: Props.Size.Medium | Props.Size.Large | Props.Size.XXLarge
+  size?: Props.Size.Medium | Props.Size.Large | Props.Size.XLarge
   /** The offset amount for the Z index of the modal */
   offsetZIndex?: number
   /** Component that will be inserted into the modal */
@@ -47,7 +41,7 @@ class Modal extends React.PureComponent<IModalProps> {
 
     return classNames(
       'modal',
-      ReactModalSize[size!],
+     `modal-size-${size}`,
       className
     )
   }

@@ -1,10 +1,10 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import { Modal } from './Modal'
 
 describe('<Modal />', () => {
   it('should render a hidden modal', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <Modal
         isOpen={false}
       >
