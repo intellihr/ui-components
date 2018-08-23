@@ -5,7 +5,7 @@
 @import '~foundation-sites/scss/settings/settings';
 @import 'legacy/foundation_settings';
 
-@import 'foundation';
+@import '~foundation-sites/scss/foundation';
 
 // Foundation Flex classes mixin includes Flex Child alignment and Source Ordering styles
 // these classes are not included in xy-grid or float-grid so they won't cause any problems

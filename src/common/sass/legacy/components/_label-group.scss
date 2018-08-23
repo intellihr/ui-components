@@ -1,3 +1,5 @@
+@import '~foundation-sites/scss/foundation';
+
 @mixin label-group {
   @include breakpoint(medium) {
     .label {
