@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import { isString, isNumber, isNil } from 'lodash'
 import { Text } from '../../Typographies/Text'
 import { FieldLabelWrapper } from './style'
+import { Variables } from '../../../common'
 
 interface IFieldProps {
   /** Label text */
@@ -15,7 +16,9 @@ class Field extends React.PureComponent <IFieldProps> {
   public formattedChild (child: string | number | JSX.Element) : JSX.Element {
     if (isString(child) || isNumber(child)) {
       return (
-        <Text>
+        <Text
+          color={Variables.Color.n800}
+        >
           {child}
         </Text>
       )
@@ -45,7 +48,7 @@ class Field extends React.PureComponent <IFieldProps> {
       <FieldLabelWrapper labelRightComponent={labelRightComponent}>
         <Text
           type='small'
-          color='subtle'
+          color={Variables.Color.n600}
           isInline={!isNil(labelRightComponent)}
           className='label-component'
         >

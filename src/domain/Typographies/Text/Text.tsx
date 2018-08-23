@@ -19,7 +19,7 @@ export interface ITextProps {
   /** If true, will display the text inline */
   isInline?: boolean
   /** Color of the text */
-  color?: Variables.Color | 'subtle'
+  color?: Variables.Color
 }
 
 export class TextComponent extends React.PureComponent<ITextProps> {

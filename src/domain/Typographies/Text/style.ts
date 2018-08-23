@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import { Variables } from '../../../common'
 
 export interface ITextWrapperProps {
-  color?: Variables.Color | 'subtle'
+  color?: Variables.Color
   isInline?: boolean
   isUpper?: boolean
   weight?: 'normal' | 'heavy'
