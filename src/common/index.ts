@@ -1,2 +1,2 @@
 export { Props } from './types'
-export { getColor } from './legacy'
+export { Variables } from './sass/variables'

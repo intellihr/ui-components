@@ -1,13 +1,12 @@
 import React from 'react'
 import styled, { StyledComponentClass, css } from 'styled-components'
-import { Props } from '../../../../common/types'
+import { Props, Variables } from '../../../../common'
 import { SectionType } from './Section'
-const variables = require('../../../../common/sass/variables.scss')
 
 const DefaultDropdownButton = styled.button`
   background-color: transparent;
   border: 1px solid transparent;
-  color: ${variables.n700};
+  color: ${Variables.Color.n700};
   cursor: pointer;
   margin: 0;
   outline: none;
@@ -15,16 +14,16 @@ const DefaultDropdownButton = styled.button`
   transition: background-color .25s ease-out, color .25s ease-out;
 
   &:hover {
-    background-color: ${variables.n200};
+    background-color: ${Variables.Color.n200};
   }
   
   &:active {
-    background-color: ${variables.n300};
+    background-color: ${Variables.Color.n300};
   }
   
   &:focus {
-    background-color: ${variables.n200};
-    border-color: ${variables.n400};
+    background-color: ${Variables.Color.n200};
+    border-color: ${Variables.Color.n400};
   }
 
   .fa {
@@ -51,7 +50,7 @@ const StyledDropdownMenu = styled.span`
   margin: 2px;
   position: absolute;
   width: min-content;
-  z-index: ${variables.zIndexDropdownMenu};
+  z-index: ${Variables.ZIndex.zIndexDropdownMenu};
 
   transform: scale(0.1);
   transform-origin: ${(props: IStyledDropdownMenuProps) => props.transformOrigin.xPos + ' ' + props.transformOrigin.yPos};
@@ -64,7 +63,7 @@ const StyledDropdownMenu = styled.span`
 `
 
 const StyledSectionList = styled.ul`
-  background-color: ${variables.n100};
+  background-color: ${Variables.Color.n100};
   border-radius: 4px;
   box-shadow: 0 0 4px rgba(0, 0, 0, .15), 0 2px 4px rgba(0, 0, 0, .29);
   min-width: 140px;
@@ -79,28 +78,28 @@ interface IStyledSectionProps {
 
 const stripMapping: { [n: string]: { stripColor: string, backgroundColor: string } } = {
   stripAlert: {
-    stripColor: variables.r400,
-    backgroundColor: variables.r100
+    stripColor: Variables.Color.r400,
+    backgroundColor: Variables.Color.r100
   },
   stripSuccess: {
-    stripColor: variables.g400,
-    backgroundColor: variables.g100
+    stripColor: Variables.Color.g400,
+    backgroundColor: Variables.Color.g100
   },
   stripWarning: {
-    stripColor: variables.o400,
-    backgroundColor: variables.o100
+    stripColor: Variables.Color.o400,
+    backgroundColor: Variables.Color.o100
   },
   stripPrimary: {
-    stripColor: variables.i400,
-    backgroundColor: variables.i100
+    stripColor: Variables.Color.i400,
+    backgroundColor: Variables.Color.i100
   },
   stripSecondary: {
-    stripColor: variables.b400,
-    backgroundColor: variables.b100
+    stripColor: Variables.Color.b400,
+    backgroundColor: Variables.Color.b100
   },
   stripNeutral: {
-    stripColor: variables.n400,
-    backgroundColor: variables.n200
+    stripColor: Variables.Color.n400,
+    backgroundColor: Variables.Color.n200
   }
 }
 
@@ -109,7 +108,7 @@ function styleForSectionType (section: IStyledSectionProps) {
     const mapping = stripMapping[section.sectionType]
 
     return css`
-      color: ${variables.n800};
+      color: ${Variables.Color.n800};
       border-left: 5px solid ${mapping.stripColor};
 
       ${section.clickable && css`
@@ -131,19 +130,19 @@ function styleForSectionType (section: IStyledSectionProps) {
       .right-component {
         background-color: transparent;
         border-color: transparent;
-        color: ${variables.r600};
+        color: ${Variables.Color.r600};
 
         ${section.clickable && css`
           cursor: pointer;
 
           &:focus,
           &:hover {
-            background-color: ${variables.r100};
+            background-color: ${Variables.Color.r100};
           }
 
           &:active,
           &.active {
-            background-color: ${variables.r200};
+            background-color: ${Variables.Color.r200};
           }
         `}
       }
@@ -155,7 +154,7 @@ function styleForSectionType (section: IStyledSectionProps) {
       &,
       .left-component,
       .right-component {
-        color: ${variables.n700};
+        color: ${Variables.Color.n700};
 
         ${section.clickable && css`
           cursor: pointer;
@@ -163,12 +162,12 @@ function styleForSectionType (section: IStyledSectionProps) {
           &:hover,
           &:active,
           &:focus {
-            background-color: ${variables.n200};
+            background-color: ${Variables.Color.n200};
 
             &,
             .left-component,
             .right-component {
-              color: ${variables.i400};
+              color: ${Variables.Color.i400};
             }
           }
         }

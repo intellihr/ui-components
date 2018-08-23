@@ -6,8 +6,9 @@ import Color from 'color'
 import { Parser as HtmlToReactParser } from 'html-to-react'
 import classNames from 'classnames'
 import { Legend } from '../../Legends'
+import { Variables } from '../../../common'
+
 const style = require('./style.scss')
-const { n600 } = require('../../../common/sass/variables.scss')
 
 interface IDataset {
   colour: string
@@ -146,7 +147,7 @@ export class RadarChart extends React.Component<IRadarChartProps> {
   public static defaultProps: IRadarChartProps = {
     pointLabels: [],
     datasets: [],
-    dataLabelColour: n600,
+    dataLabelColour: Variables.Color.n600,
     showLegend: true,
     minValue: 0,
     maxValue: 5,

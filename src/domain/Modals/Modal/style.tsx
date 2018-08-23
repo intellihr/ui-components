@@ -3,9 +3,8 @@ import Color from 'color'
 import styled, { StyledFunction, StyledInterface, StyledComponentClass } from 'styled-components'
 import ReactModal from 'react-modal'
 import { flow } from 'lodash'
+import { Variables } from '../../../common'
 import { IWithStyledBreakpoints, withStyledBreakpoints } from '../../Styles'
-
-const { borderRadius, n100, n400, n800 } = require('../../../common/sass/variables.scss')
 
 interface IReactModalAdapter extends ReactModal.Props {
   className?: string
@@ -51,7 +50,7 @@ const styledReactModal: StyledFunction<ReactModal.Props & Partial<IWithStyledBre
 
 const StyledReactModal = styledReactModal`
   .modal-overlay {
-    background-color: ${Color(n800).alpha(0.45).toString()};
+    background-color: ${Color(Variables.Color.n800).alpha(0.45).toString()};
 
     display: flex;
     flex-direction: column;
@@ -71,9 +70,9 @@ const StyledReactModal = styledReactModal`
   }
 
   .modal {
-    background-color: ${n100};
-    border: 1px solid ${n400};
-    border-radius: ${borderRadius};
+    background-color: ${Variables.Color.n100};
+    border: 1px solid ${Variables.Color.n400};
+    border-radius: ${Variables.Style.borderRadius};
     flex-shrink: 0;
     height: auto;
     margin: auto;
@@ -106,7 +105,7 @@ const StyledReactModal = styledReactModal`
       right: 1rem;
       top: 0.5rem;
 
-      color: ${n800};
+      color: ${Variables.Color.n800};
       font-size: 2em;
       line-height: 1;
 

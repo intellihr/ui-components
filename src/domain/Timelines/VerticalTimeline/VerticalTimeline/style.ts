@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
-const { n300 } = require('../../../../common/sass/variables.scss')
+import { Variables } from '../../../../common'
 
 const VerticalTimelineWrapper = styled.div`
   margin-bottom: 20px;
@@ -24,7 +24,7 @@ const Timeline = styled.div`
     left: 87px;
     height: calc(100% - 16px);
     width: 2px;
-    background: ${n300};
+    background: ${Variables.Color.n300};
   }
 `
 

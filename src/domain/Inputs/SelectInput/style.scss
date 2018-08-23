@@ -16,7 +16,8 @@
     &.is-disabled {
       .Select-control {
         &:hover {
-          background-color: $n400;
+          background-color: $n200;
+          cursor: not-allowed;
         }
       }
     }
@@ -39,7 +40,7 @@
       transition: border-color .3s ease-in-out, background-color .3s ease;
 
       &:hover {
-        background-color: $n500;
+        background-color: $n200;
       }
 
       .Select-value-label {

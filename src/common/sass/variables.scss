@@ -1,5 +1,7 @@
 /**
  * The following variables are the core design variables for the entire design system
+ *
+ * When updating this file, ALWAYS update common/sass/variables.ts at the same time.
  */
 
 // --------------
@@ -81,7 +83,7 @@ $y600: #7F7012;
 
 
 // --------------
-// Global
+// Style
 // --------------
 $border-radius: 4px;
 
@@ -95,98 +97,3 @@ $z-index-date-input: 2000;
 $z-index-dropdown-menu: 3000;
 $z-index-toaster: 4000;
 $z-index-absolute-top: 9999;
-
-:export {
-  // --------------
-  // Breakpoints
-  // --------------
-  breakpointMin: $breakpoint-min;
-  breakpointTablet: $breakpoint-tablet;
-  breakpointDesktop: $breakpoint-desktop;
-
-  // --------------
-  // Colors
-  // --------------
-  // Neutral
-  n100: $n100;
-  n150: $n150;
-  n200: $n200;
-  n300: $n300;
-  n400: $n400;
-  n500: $n500;
-  n600: $n600;
-  n700: $n700;
-  n800: $n800;
-
-  // Blue
-  b100: $b100;
-  b200: $b200;
-  b300: $b300;
-  b400: $b400;
-  b500: $b500;
-  b600: $b600;
-
-  // Cyan
-  c100: $c100;
-  c200: $c200;
-  c300: $c300;
-  c400: $c400;
-  c500: $c500;
-  c600: $c600;
-
-  // Green
-  g100: $g100;
-  g200: $g200;
-  g300: $g300;
-  g400: $g400;
-  g500: $g500;
-  g600: $g600;
-
-  // Indigo
-  i100: $i100;
-  i200: $i200;
-  i300: $i300;
-  i400: $i400;
-  i500: $i500;
-  i600: $i600;
-
-  // Orange
-  o100: $o100;
-  o200: $o200;
-  o300: $o300;
-  o400: $o400;
-  o500: $o500;
-  o600: $o600;
-
-  // Red
-  r100: $r100;
-  r200: $r200;
-  r300: $r300;
-  r400: $r400;
-  r500: $r500;
-  r600: $r600;
-
-  // Yellow
-  y100: $y100;
-  y200: $y200;
-  y300: $y300;
-  y400: $y400;
-  y500: $y500;
-  y600: $y600;
-
-  // --------------
-  // Global
-  // --------------
-  borderRadius: $border-radius;
-
-  // --------------
-  // Z Indexes
-  // --------------
-  zIndexAbsoluteBottom: $z-index-absolute-bottom;
-  zIndexDefault: $z-index-default;
-  zIndexModal: $z-index-modal;
-  zIndexDateInput: $z-index-date-input;
-  zIndexDropdownMenu: $z-index-dropdown-menu;
-  zIndexToaster: $z-index-toaster;
-  zIndexAbsoluteTop: $z-index-absolute-top;
-}

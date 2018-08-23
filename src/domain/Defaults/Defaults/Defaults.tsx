@@ -1,8 +1,6 @@
 import React from 'react'
 import { GridProvider } from '../../Grids'
 
-const sassGlobals = require('@Common/sass/variables.scss')
-
 interface IDefaults {
   /** Anchor component used for clickable links */
   AnchorComponent?: React.ComponentType<any>

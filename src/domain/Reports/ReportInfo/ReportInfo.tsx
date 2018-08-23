@@ -1,5 +1,6 @@
-import React, { ReactElement } from 'react'
+import React from 'react'
 import { isEmpty } from 'lodash'
+import { Variables } from '../../../common'
 import {
   MainBox,
   Col,
@@ -8,8 +9,6 @@ import {
   HighlighImageBlock,
   Description
 } from './style'
-
-const { n800 } = require('../../../common/sass/variables.scss')
 
 export interface IHighlightSection {
   caption: string,
@@ -40,7 +39,7 @@ export const HighlightSection = (props: IHighlightSection) => {
 
 export class ReportInfo extends React.PureComponent <IReportInfo> {
   public static defaultProps = {
-    textColor: n800
+    textColor: Variables.Color.n800
   }
 
   get highlights () {

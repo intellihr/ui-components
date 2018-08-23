@@ -1,7 +1,6 @@
 import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
-
-const { n300, n700, i400 } = require('../../../common/sass/variables.scss')
+import { Variables } from '../../../common'
 
 const HorizontalTabsContainer = styled.div``
 
@@ -17,8 +16,8 @@ const HorizontalTabTitle = styled.li`
 
 const HorizontalTabTitleAnchor = styled.a`
   border: 0;
-  box-shadow: inset 0 -1px 0 0 ${n300};
-  color: ${n700};
+  box-shadow: inset 0 -1px 0 0 ${Variables.Color.n300};
+  color: ${Variables.Color.n700};
   display: block;
   font-size: inherit;
   font-weight: 600;
@@ -28,14 +27,14 @@ const HorizontalTabTitleAnchor = styled.a`
 
   &:hover,
   &:focus {
-    box-shadow: inset 0 -3px 0 0 ${n300};
-    color: ${i400};
+    box-shadow: inset 0 -3px 0 0 ${Variables.Color.n300};
+    color: ${Variables.Color.i400};
   }
 
   &.active {
     border: 0;
-    box-shadow: inset 0 -3px 0 0 ${i400};
-    color: ${i400};
+    box-shadow: inset 0 -3px 0 0 ${Variables.Color.i400};
+    color: ${Variables.Color.i400};
   }
 
   .left-component {
@@ -48,7 +47,7 @@ const HorizontalTabTitleAnchor = styled.a`
 `
 
 const HorizontalTabContent = styled.div`
-  border: 1px solid ${n300};
+  border: 1px solid ${Variables.Color.n300};
   clear: both;
   padding: 1rem;
 `

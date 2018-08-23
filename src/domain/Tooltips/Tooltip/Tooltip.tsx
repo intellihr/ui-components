@@ -1,10 +1,9 @@
 import React from 'react'
 import ReactTooltip from 'react-tooltip'
 import uuid from 'uuid'
+import { Variables } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons'
 import { TooltipIcon, TooltipWrapper } from './style'
-
-const { n700 } = require('../../../common/sass/variables.scss')
 
 export interface ITooltipProps {
   id?: string,
@@ -23,7 +22,7 @@ export class Tooltip extends React.Component<ITooltipProps> {
     place: 'top',
     effect: 'solid',
     withIcon: false,
-    iconColour: n700
+    iconColour: Variables.Color.n700
   }
 
   get tooltipId ():string {

@@ -1,7 +1,6 @@
 import React from 'react'
 import styled, { StyledComponentClass, css } from 'styled-components'
-
-const { n400 } = require('../../../common/sass/variables.scss')
+import { Variables } from '../../../common'
 
 export interface IMainBox {
   textColor: string
@@ -11,7 +10,7 @@ export const MainBox = styled.div`
   display: flex;
   justify-content: space-between;
   padding-bottom: 15px;
-  border-bottom: 2px solid ${n400};
+  border-bottom: 2px solid ${Variables.Color.n400};
   
   ${(props: IMainBox) => props.textColor && css`
     color: ${props.textColor};

@@ -5,10 +5,10 @@ import {
   ColorBox,
   ColorName
 } from './style'
-const variables = require('@Common/sass/variables.scss')
+import { Variables } from '../../../common'
 
 export interface IColorGridProps {
-  colors: string[]
+  colors: Variables.Color[]
 }
 
 export class ColorsGrid extends React.PureComponent<IColorGridProps> {
@@ -17,12 +17,12 @@ export class ColorsGrid extends React.PureComponent<IColorGridProps> {
 
     return (
       <WrappedList>
-        {map(colors, (color) =>
+        {map(colors, (color: Variables.Color, idx: number) =>
           (
-            <div>
-              <ColorBox hex={variables[color]} />
+            <div key={idx}>
+              <ColorBox hex={color} />
               <ColorName> {color} </ColorName>
-              <p> {variables[color]} </p>
+              <p> {color} </p>
             </div>
           )
         )}
