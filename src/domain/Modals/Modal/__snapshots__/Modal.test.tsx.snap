@@ -22,7 +22,7 @@ exports[`<Modal /> should render a hidden modal 1`] = `
 .c0 .modal {
   background-color: #FFFFFF;
   border: 1px solid #C5CED6;
-  border-radius: 4;
+  border-radius: 4px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;

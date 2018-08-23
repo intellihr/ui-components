@@ -71,7 +71,7 @@ const StyledReactModal = styled(ReactModalAdapter)`
   .modal {
     background-color: ${Variables.Color.n100};
     border: 1px solid ${Variables.Color.n400};
-    border-radius: ${Variables.Style.borderRadius};
+    border-radius: ${Variables.Style.borderRadius}px;
     flex-shrink: 0;
     height: auto;
     margin: auto;
