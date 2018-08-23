@@ -19,10 +19,10 @@ export interface IHighlightSection {
 export interface IReportInfo {
   description: string
   highlights: IHighlightSection[]
-  textColor: string
+  textColor: Variables.Color
 }
 
-export const HighlightSection = (props: IHighlightSection) => {
+const HighlightSection = (props: IHighlightSection) => {
   return (
     <HighLightBox>
       <h5> {props.title} </h5>
@@ -42,7 +42,7 @@ export class ReportInfo extends React.PureComponent <IReportInfo> {
     textColor: Variables.Color.n800
   }
 
-  get highlights () {
+  get highlights (): JSX.Element[] | null {
     const {
       highlights
     } = this.props
@@ -58,7 +58,7 @@ export class ReportInfo extends React.PureComponent <IReportInfo> {
     ))
   }
 
-  get descriptionSection () {
+  get descriptionSection (): JSX.Element {
     const {
       description
     } = this.props
@@ -70,7 +70,7 @@ export class ReportInfo extends React.PureComponent <IReportInfo> {
     )
   }
 
-  public render () {
+  public render (): JSX.Element {
     const {
       textColor
     } = this.props
