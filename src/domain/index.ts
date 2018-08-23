@@ -23,7 +23,7 @@ export { List, SmartList, ActionList, ListRow, ListClickableColumn, ListColumn }
 export { Menu, MenuItem, DropdownMenu } from './Menus'
 export { Modal, ToggleModal } from './Modals'
 export { Pill } from './Pills'
-export { ReportHeader, ReportInfo, HighlightSection } from './Reports'
+export { ReportHeader, ReportInfo } from './Reports'
 export { Skeleton, withSkeleton } from './Skeletons'
 export { Spinner } from './Spinners'
 export { withStyledBreakpoints } from './Styles'

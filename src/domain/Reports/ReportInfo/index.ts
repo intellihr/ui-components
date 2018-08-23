@@ -1,1 +1,1 @@
-export { ReportInfo, HighlightSection } from './ReportInfo'
+export { ReportInfo } from './ReportInfo'
