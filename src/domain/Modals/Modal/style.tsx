@@ -1,10 +1,8 @@
 import React from 'react'
 import Color from 'color'
-import styled, { StyledFunction, StyledInterface, StyledComponentClass } from 'styled-components'
+import styled, { StyledComponentClass } from 'styled-components'
 import ReactModal from 'react-modal'
-import { flow } from 'lodash'
 import { Variables } from '../../../common'
-import { IWithStyledBreakpoints, withStyledBreakpoints } from '../../Styles'
 
 interface IReactModalAdapter extends ReactModal.Props {
   className?: string
@@ -43,12 +41,13 @@ class ReactModalAdapter extends React.PureComponent<IReactModalAdapter> {
   }
 }
 
-const styledReactModal: StyledFunction<ReactModal.Props & Partial<IWithStyledBreakpoints>> = flow([
-  styled(ReactModalAdapter),
-  withStyledBreakpoints
-]) as any
+const {
+  breakpointTablet,
+  breakpointDesktop,
+  breakpointBigDesktop
+} = Variables.Breakpoint
 
-const StyledReactModal = styledReactModal`
+const StyledReactModal = styled(ReactModalAdapter)`
   .modal-overlay {
     background-color: ${Color(Variables.Color.n800).alpha(0.45).toString()};
 
@@ -62,11 +61,11 @@ const StyledReactModal = styledReactModal`
     left: 0;
     right: 0;
     top: 0;
-
-    ${props => props.breakpoint!.down('small')`
+    
+    @media only screen and (max-width: ${breakpointTablet}px) {
       overflow-y: hidden;
       padding: 0;
-    `}
+    }
   }
 
   .modal {
@@ -81,7 +80,7 @@ const StyledReactModal = styledReactModal`
     padding: 1.5rem;
     position: relative;
 
-    ${(props) => props.breakpoint!.down('small')`
+    @media only screen and (max-width: ${breakpointTablet}px) {
       border: 0;
       border-radius: 0;
 
@@ -96,7 +95,7 @@ const StyledReactModal = styledReactModal`
       margin: 0;
       min-height: 100vh;
       top: 0;
-    `}
+    }
 
     .modal-close-button {
       cursor: pointer;
@@ -109,50 +108,50 @@ const StyledReactModal = styledReactModal`
       font-size: 2em;
       line-height: 1;
 
-      ${(props) => props.breakpoint!.down('small')`
+      @media only screen and (max-width: ${breakpointTablet}px) {
         position: fixed;
         will-change: scroll-position;
-      `}
+      }
     }
 
-    &.fixed-xxlarge-up {
-      min-width: 1380px;
-      width: 1380px;
+    &.modal-size-xlarge {
+      min-width: ${breakpointBigDesktop - 60}px;
+      width: ${breakpointBigDesktop - 60}px;
 
-      ${(props) => props.breakpoint!.down('medium')`
+      @media only screen and (max-width: ${breakpointBigDesktop}px) {
         min-width: 0;
         width: 90%;
-      `}
+      }
 
-      ${(props) => props.breakpoint!.only('min')`
+      @media only screen and (max-width: ${breakpointTablet}px) {
         min-width: 0;
         width: 100%;
-      `}
+      }
     }
 
-    &.fixed-large-up {
-      min-width: 960px;
-      width: 960px;
+    &.modal-size-large {
+      min-width: ${breakpointDesktop - 60}px;
+      width: ${breakpointDesktop - 60}px;
 
-      ${(props) => props.breakpoint!.only('medium')`
+      @media only screen and (max-width: ${breakpointDesktop}px) {
         min-width: 0;
         width: 90%;
-      `}
+      }
 
-      ${(props) => props.breakpoint!.only('min')`
+      @media only screen and (max-width: ${breakpointTablet}px) {
         min-width: 0;
         width: 100%;
-      `}
+      }
     }
 
-    &.fixed-medium-up {
-      min-width: 600px;
-      width: 600px;
+    &.modal-size-medium {
+      min-width: ${breakpointTablet - 60}px;
+      width: ${breakpointTablet - 60}px;
 
-      ${(props) => props.breakpoint!.only('min')`
+      @media only screen and (max-width: ${breakpointTablet}px) {
         min-width: 0;
         width: 100%;
-      `}
+      }
     }
   }
 `
