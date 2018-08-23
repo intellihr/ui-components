@@ -34,7 +34,6 @@
 
 .ihr-form {
   .label-container {
-
     @include breakpoint(medium) {
       label {
         @include form-label-middle;
@@ -91,18 +90,14 @@ input,
 select,
 .Select-control {
   &:hover {
-    background-color: $n200;
-  }
-
-  &:disabled {
-    opacity: .5;
+    background-color: $n150;
   }
 }
 
 select {
   &:hover {
     &:focus {
-      background-color: $n200;
+      background-color: $n150;
     }
   }
 }
@@ -110,8 +105,12 @@ select {
 input,
 textarea,
 select {
-  &:disabled {
-    background-color: $n200;
+  &:disabled{
+    &,
+    &:hover {
+      cursor: not-allowed;
+      background-color: $n200;
+    }
   }
 }
 
@@ -119,12 +118,6 @@ select {
   > :last-child {
     border-left: 0;
     border-radius: 0 $input-radius $input-radius 0;
-  }
-}
-
-.input-group-label {
-  &.disabled {
-    opacity: .5;
   }
 }
 
