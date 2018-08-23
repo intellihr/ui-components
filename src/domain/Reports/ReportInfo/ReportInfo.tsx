@@ -19,7 +19,7 @@ export interface IHighlightSection {
 export interface IReportInfo {
   description: string
   highlights: IHighlightSection[]
-  textColor: string
+  textColor: Variables.Color
 }
 
 const HighlightSection = (props: IHighlightSection) => {

@@ -9,9 +9,11 @@
 #### Report info with text color
 
 ```jsx
+const { i400 } = require('@Common/sass/variables.scss');
+
 <ReportInfo
   description="Hello! I am blue report info."
-  textColor="blue"
+  textColor={i400}
 />
 ```
 
@@ -23,12 +25,12 @@
   highlights={[
      {
        "caption": "I am Highlight 1.",
-       "image": "highlight_1",
+       "title": "highlight 1 title",
        "imageUrl": "https://i1.wp.com/www.foot.com/wp-content/uploads/2017/03/placeholder.gif?ssl=1",
      },
      {
        "caption": "I am Highlight 2.",
-       "image": "highlight_2",
+       "title": "highlight 2 title",
        "imageUrl": "https://i1.wp.com/www.foot.com/wp-content/uploads/2017/03/placeholder.gif?ssl=1",
      },
   ]}
