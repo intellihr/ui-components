@@ -5,7 +5,7 @@ const { n800 } = require('../../../common/sass/variables.scss')
 
 export interface ITextProps {
   /** Text to display */
-  children: string | number
+  children: string | string[] | number
   /** Custom class name to use */
   className?: string
   /** If true, displays the text in uppercase */
