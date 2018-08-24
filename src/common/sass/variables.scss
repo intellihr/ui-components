@@ -1,8 +1,8 @@
-/**
- * The following variables are the core design variables for the entire design system
- *
- * When updating this file, ALWAYS update common/sass/variables.ts at the same time.
- */
+// ------------------------------------------------------------------------------------
+// The following variables are the core design variables for the entire design system
+//
+// When updating this file, ALWAYS update common/sass/variables.ts at the same time.
+// ------------------------------------------------------------------------------------
 
 // --------------
 // Breakpoints
@@ -10,6 +10,7 @@
 $breakpoint-min:          0;
 $breakpoint-tablet:       640px;
 $breakpoint-desktop:      1024px;
+$breakpoint-big-desktop:  1440px;
 
 // --------------
 // Colors

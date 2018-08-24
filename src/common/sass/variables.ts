@@ -9,9 +9,10 @@
 // tslint:disable-next-line:no-namespace
 namespace Variables {
   export enum Breakpoint {
-    breakpointMin =     0,
-    breakpointTablet =  640,
-    breakpointDesktop = 1024
+    breakpointMin =        0,
+    breakpointTablet =     640,
+    breakpointDesktop =    1024,
+    breakpointBigDesktop = 1440
   }
 
   export enum Color {
