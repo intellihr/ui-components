@@ -2,6 +2,7 @@ import React from 'react'
 import { mount } from 'enzyme'
 
 import { Text } from './Text'
+import { Variables } from '../../../common'
 
 describe('<Text />', () => {
   it(`should render an element with text`, () => {
@@ -22,7 +23,7 @@ describe('<Text />', () => {
 
   it(`should render an element with subtle text`, () => {
     const wrapper = mount(
-      <Text color='subtle'>Hello, world!</Text>
+      <Text color={Variables.Color.n700}>Hello, world!</Text>
     )
 
     expect(wrapper).toMatchSnapshot()
@@ -30,15 +31,15 @@ describe('<Text />', () => {
 
   it(`should render an element with small text`, () => {
     const wrapper = mount(
-      <Text size='small'>Hello, world!</Text>
+      <Text type='small'>Hello, world!</Text>
     )
 
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render an element with large text`, () => {
+  it(`should render an element with heading text`, () => {
     const wrapper = mount(
-      <Text size='large'>Hello, world!</Text>
+      <Text type='heading'>Hello, world!</Text>
     )
 
     expect(wrapper).toMatchSnapshot()
