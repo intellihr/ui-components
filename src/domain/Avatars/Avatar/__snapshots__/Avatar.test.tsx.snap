@@ -108,6 +108,10 @@ exports[`<Avatar /> Renders a large Avatar with initials, using imageData 1`] = 
 `;
 
 exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and overlay 1`] = `
+.c0 {
+  width: 1.28571em;
+}
+
 .c0.fa {
   margin-right: .25rem;
   font-size: 1rem;

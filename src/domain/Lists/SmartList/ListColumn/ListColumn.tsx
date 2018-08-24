@@ -1,7 +1,7 @@
 import React from 'react'
 import { isNil, merge } from 'lodash'
 import classNames from 'classnames'
-import { Col } from 'react-styled-flexboxgrid'
+import { Row } from '../../../Grids/Row'
 import { ListHeader } from '../ListHeader'
 import { Skeleton, ISkeletonComponentProps } from '../../../Skeletons'
 
@@ -88,19 +88,6 @@ class ListColumn extends React.PureComponent<IListColumn & ISkeletonComponentPro
     }
   }
 
-  get sizeParams (): ISize {
-    const {
-      size
-    } = this.props
-
-    return merge({
-      xs: 12,
-      sm: 12,
-      md: 12,
-      lg: 12
-    }, size)
-  }
-
   public render (): JSX.Element {
     const {
       alignRight,
@@ -121,9 +108,9 @@ class ListColumn extends React.PureComponent<IListColumn & ISkeletonComponentPro
 
     if (size) {
       return (
-        <Col {...this.sizeParams}>
+        <Row.Column {...size}>
           {content}
-        </Col>
+        </Row.Column>
       )
     }
 
