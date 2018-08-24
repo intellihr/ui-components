@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ReportHeader /> should render ReportHeader with info 1`] = `
+.c5 {
+  width: 1.28571em;
+}
+
 .c5.fa {
   margin-right: 3px;
   font-size: 1.3125rem;
@@ -53,6 +57,7 @@ exports[`<ReportHeader /> should render ReportHeader with info 1`] = `
 }
 
 .c1 {
+  color: #424F5C;
   font-size: 20px;
   font-weight: 600;
 }
@@ -168,6 +173,7 @@ exports[`<ReportHeader /> should render ReportHeader without info 1`] = `
 }
 
 .c1 {
+  color: #424F5C;
   font-size: 20px;
   font-weight: 600;
 }

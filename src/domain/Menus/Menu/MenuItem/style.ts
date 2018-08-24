@@ -36,14 +36,12 @@ const MenuItemWrapper = styled.li`
       font-weight: 600;
       margin-left: 0;
     }
+     
+     > .icon {
+      text-align: center;
+      vertical-align: top;
+    }
   }
-`
-
-const IconWrapper = styled.span`
-  margin-right: 0.2rem;
-  width: 1.28571em;
-  text-align: center;
-  vertical-align: top;
 `
 
 const LoadingIconWrapper = styled.span`
@@ -58,9 +56,13 @@ const SubMenuWrapper = styled.ul`
   }
 `
 
+const MenuItemLabelWrapper = styled.span`
+  margin-left: 4px;
+`
+
 export {
   MenuItemWrapper,
-  IconWrapper,
   LoadingIconWrapper,
-  SubMenuWrapper
+  SubMenuWrapper,
+  MenuItemLabelWrapper
 }

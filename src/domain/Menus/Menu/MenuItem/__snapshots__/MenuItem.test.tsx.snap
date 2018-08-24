@@ -35,12 +35,12 @@ exports[`<MenuItem /> should render a menu item as a submenu if it has children 
       <a
         href="www.google.com"
       >
+        <IntelliIcon
+          type="clock"
+        />
         <styled.span>
-          <IntelliIcon
-            type="clock"
-          />
+          Father
         </styled.span>
-        Father
       </a>
     </styled.li>
   }
@@ -79,12 +79,12 @@ exports[`<MenuItem /> should render a menu item with Icon 1`] = `
   <a
     href="www.google.com"
   >
+    <IntelliIcon
+      type="clock"
+    />
     <styled.span>
-      <IntelliIcon
-        type="clock"
-      />
+      Test menu item
     </styled.span>
-    Test menu item
   </a>
 </styled.li>
 `;
@@ -106,12 +106,12 @@ exports[`<MenuItem /> should render a menu item with loading state 1`] = `
   <a
     href="www.google.com"
   >
+    <IntelliIcon
+      type="clock"
+    />
     <styled.span>
-      <IntelliIcon
-        type="clock"
-      />
+      Test menu item
     </styled.span>
-    Test menu item
     <styled.span>
       <FontAwesomeIcon
         isSpinning={true}
