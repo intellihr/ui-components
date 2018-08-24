@@ -38,16 +38,6 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
   padding-left: 0.5rem;
 }
 
-@media only screen and (min-width:0em) {
-  .c1 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-    display: block;
-  }
-}
-
 @media only screen and (min-width:48em) {
   .c1 {
     -webkit-flex-basis: 100%;
@@ -74,16 +64,6 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
     max-width: 50%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c2 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
     display: block;
   }
 }
@@ -198,24 +178,31 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
               }
             }
           >
-            <Col
+            <Column
               lg={6}
               md={6}
               sm={12}
-              xs={12}
             >
-              <div
-                className="c1"
+              <Col
+                lg={6}
+                md={6}
+                sm={12}
+                type="row"
               >
                 <div
-                  className="list-column"
+                  className="c1"
+                  type="row"
                 >
-                  <ListHeader
-                    label=""
-                  />
+                  <div
+                    className="list-column"
+                  >
+                    <ListHeader
+                      label=""
+                    />
+                  </div>
                 </div>
-              </div>
-            </Col>
+              </Col>
+            </Column>
           </ListColumn>
           <ListColumn
             alignRight={false}
@@ -255,24 +242,31 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
               }
             }
           >
-            <Col
+            <Column
               lg={3}
               md={3}
               sm={12}
-              xs={12}
             >
-              <div
-                className="c2"
+              <Col
+                lg={3}
+                md={3}
+                sm={12}
+                type="row"
               >
                 <div
-                  className="list-column"
+                  className="c2"
+                  type="row"
                 >
-                  <ListHeader
-                    label=""
-                  />
+                  <div
+                    className="list-column"
+                  >
+                    <ListHeader
+                      label=""
+                    />
+                  </div>
                 </div>
-              </div>
-            </Col>
+              </Col>
+            </Column>
           </ListColumn>
           <ListColumn
             alignRight={false}
@@ -312,24 +306,31 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
               }
             }
           >
-            <Col
+            <Column
               lg={3}
               md={3}
               sm={12}
-              xs={12}
             >
-              <div
-                className="c2"
+              <Col
+                lg={3}
+                md={3}
+                sm={12}
+                type="row"
               >
                 <div
-                  className="list-column"
+                  className="c2"
+                  type="row"
                 >
-                  <ListHeader
-                    label=""
-                  />
+                  <div
+                    className="list-column"
+                  >
+                    <ListHeader
+                      label=""
+                    />
+                  </div>
                 </div>
-              </div>
-            </Col>
+              </Col>
+            </Column>
           </ListColumn>
         </div>
       </Row>
@@ -358,8 +359,8 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
           }
         }
       >
-        <div
-          className="item-row cursor-auto c0"
+        <Row
+          className="item-row cursor-auto"
           onClick={[Function]}
           style={
             Object {
@@ -367,179 +368,210 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
             }
           }
         >
-          <ListColumn
-            alignRight={false}
-            cell={[Function]}
-            colIndex={0}
-            data={
-              Array [
-                Object {
-                  "expiryDate": "11 Nov 2004",
-                  "issuingOrganisation": "Queensland Gov.",
-                  "name": "Blue Card",
-                  "status": "Expired",
-                },
-                Object {
-                  "expiryDate": "05 Feb 2017",
-                  "issuingOrganisation": "Western Australia Gov.",
-                  "name": "Green Card",
-                  "status": "Current",
-                },
-              ]
-            }
-            header=""
-            isHeader={false}
-            key="test-smart-list-list-item-0-0"
-            rowIndex={0}
-            size={
+          <div
+            className="item-row cursor-auto c0"
+            onClick={[Function]}
+            style={
               Object {
-                "lg": 6,
-                "md": 6,
-              }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": false,
+                "display": "flex",
               }
             }
           >
-            <Col
-              lg={6}
-              md={6}
-              sm={12}
-              xs={12}
+            <ListColumn
+              alignRight={false}
+              cell={[Function]}
+              colIndex={0}
+              data={
+                Array [
+                  Object {
+                    "expiryDate": "11 Nov 2004",
+                    "issuingOrganisation": "Queensland Gov.",
+                    "name": "Blue Card",
+                    "status": "Expired",
+                  },
+                  Object {
+                    "expiryDate": "05 Feb 2017",
+                    "issuingOrganisation": "Western Australia Gov.",
+                    "name": "Green Card",
+                    "status": "Current",
+                  },
+                ]
+              }
+              header=""
+              isHeader={false}
+              key="test-smart-list-list-item-0-0"
+              rowIndex={0}
+              size={
+                Object {
+                  "lg": 6,
+                  "md": 6,
+                }
+              }
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": false,
+                }
+              }
             >
-              <div
-                className="c1"
+              <Column
+                lg={6}
+                md={6}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={6}
+                  md={6}
+                  sm={12}
+                  type="row"
                 >
-                  <div>
-                    <b>
-                      Blue Card
-                    </b>
-                    <div>
-                      Queensland Gov.
+                  <div
+                    className="c1"
+                    type="row"
+                  >
+                    <div
+                      className="list-column"
+                    >
+                      <div>
+                        <b>
+                          Blue Card
+                        </b>
+                        <div>
+                          Queensland Gov.
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-          <ListColumn
-            alignRight={false}
-            cell={[Function]}
-            colIndex={1}
-            data={
-              Array [
-                Object {
-                  "expiryDate": "11 Nov 2004",
-                  "issuingOrganisation": "Queensland Gov.",
-                  "name": "Blue Card",
-                  "status": "Expired",
-                },
-                Object {
-                  "expiryDate": "05 Feb 2017",
-                  "issuingOrganisation": "Western Australia Gov.",
-                  "name": "Green Card",
-                  "status": "Current",
-                },
-              ]
-            }
-            header=""
-            isHeader={false}
-            key="test-smart-list-list-item-0-1"
-            rowIndex={0}
-            size={
-              Object {
-                "lg": 3,
-                "md": 3,
+                </Col>
+              </Column>
+            </ListColumn>
+            <ListColumn
+              alignRight={false}
+              cell={[Function]}
+              colIndex={1}
+              data={
+                Array [
+                  Object {
+                    "expiryDate": "11 Nov 2004",
+                    "issuingOrganisation": "Queensland Gov.",
+                    "name": "Blue Card",
+                    "status": "Expired",
+                  },
+                  Object {
+                    "expiryDate": "05 Feb 2017",
+                    "issuingOrganisation": "Western Australia Gov.",
+                    "name": "Green Card",
+                    "status": "Current",
+                  },
+                ]
               }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": false,
+              header=""
+              isHeader={false}
+              key="test-smart-list-list-item-0-1"
+              rowIndex={0}
+              size={
+                Object {
+                  "lg": 3,
+                  "md": 3,
+                }
               }
-            }
-          >
-            <Col
-              lg={3}
-              md={3}
-              sm={12}
-              xs={12}
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": false,
+                }
+              }
             >
-              <div
-                className="c2"
+              <Column
+                lg={3}
+                md={3}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={3}
+                  md={3}
+                  sm={12}
+                  type="row"
                 >
-                  11 Nov 2004
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-          <ListColumn
-            alignRight={false}
-            cell={[Function]}
-            colIndex={2}
-            data={
-              Array [
-                Object {
-                  "expiryDate": "11 Nov 2004",
-                  "issuingOrganisation": "Queensland Gov.",
-                  "name": "Blue Card",
-                  "status": "Expired",
-                },
-                Object {
-                  "expiryDate": "05 Feb 2017",
-                  "issuingOrganisation": "Western Australia Gov.",
-                  "name": "Green Card",
-                  "status": "Current",
-                },
-              ]
-            }
-            header=""
-            isHeader={false}
-            key="test-smart-list-list-item-0-2"
-            rowIndex={0}
-            size={
-              Object {
-                "lg": 3,
-                "md": 3,
+                  <div
+                    className="c2"
+                    type="row"
+                  >
+                    <div
+                      className="list-column"
+                    >
+                      11 Nov 2004
+                    </div>
+                  </div>
+                </Col>
+              </Column>
+            </ListColumn>
+            <ListColumn
+              alignRight={false}
+              cell={[Function]}
+              colIndex={2}
+              data={
+                Array [
+                  Object {
+                    "expiryDate": "11 Nov 2004",
+                    "issuingOrganisation": "Queensland Gov.",
+                    "name": "Blue Card",
+                    "status": "Expired",
+                  },
+                  Object {
+                    "expiryDate": "05 Feb 2017",
+                    "issuingOrganisation": "Western Australia Gov.",
+                    "name": "Green Card",
+                    "status": "Current",
+                  },
+                ]
               }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": false,
+              header=""
+              isHeader={false}
+              key="test-smart-list-list-item-0-2"
+              rowIndex={0}
+              size={
+                Object {
+                  "lg": 3,
+                  "md": 3,
+                }
               }
-            }
-          >
-            <Col
-              lg={3}
-              md={3}
-              sm={12}
-              xs={12}
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": false,
+                }
+              }
             >
-              <div
-                className="c2"
+              <Column
+                lg={3}
+                md={3}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={3}
+                  md={3}
+                  sm={12}
+                  type="row"
                 >
-                  Expired
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-        </div>
+                  <div
+                    className="c2"
+                    type="row"
+                  >
+                    <div
+                      className="list-column"
+                    >
+                      Expired
+                    </div>
+                  </div>
+                </Col>
+              </Column>
+            </ListColumn>
+          </div>
+        </Row>
       </Row>
     </ListRow>
     <ListRow
@@ -566,8 +598,8 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
           }
         }
       >
-        <div
-          className="item-row cursor-auto c0"
+        <Row
+          className="item-row cursor-auto"
           onClick={[Function]}
           style={
             Object {
@@ -575,179 +607,210 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
             }
           }
         >
-          <ListColumn
-            alignRight={false}
-            cell={[Function]}
-            colIndex={0}
-            data={
-              Array [
-                Object {
-                  "expiryDate": "11 Nov 2004",
-                  "issuingOrganisation": "Queensland Gov.",
-                  "name": "Blue Card",
-                  "status": "Expired",
-                },
-                Object {
-                  "expiryDate": "05 Feb 2017",
-                  "issuingOrganisation": "Western Australia Gov.",
-                  "name": "Green Card",
-                  "status": "Current",
-                },
-              ]
-            }
-            header=""
-            isHeader={false}
-            key="test-smart-list-list-item-1-0"
-            rowIndex={1}
-            size={
+          <div
+            className="item-row cursor-auto c0"
+            onClick={[Function]}
+            style={
               Object {
-                "lg": 6,
-                "md": 6,
-              }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": false,
+                "display": "flex",
               }
             }
           >
-            <Col
-              lg={6}
-              md={6}
-              sm={12}
-              xs={12}
+            <ListColumn
+              alignRight={false}
+              cell={[Function]}
+              colIndex={0}
+              data={
+                Array [
+                  Object {
+                    "expiryDate": "11 Nov 2004",
+                    "issuingOrganisation": "Queensland Gov.",
+                    "name": "Blue Card",
+                    "status": "Expired",
+                  },
+                  Object {
+                    "expiryDate": "05 Feb 2017",
+                    "issuingOrganisation": "Western Australia Gov.",
+                    "name": "Green Card",
+                    "status": "Current",
+                  },
+                ]
+              }
+              header=""
+              isHeader={false}
+              key="test-smart-list-list-item-1-0"
+              rowIndex={1}
+              size={
+                Object {
+                  "lg": 6,
+                  "md": 6,
+                }
+              }
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": false,
+                }
+              }
             >
-              <div
-                className="c1"
+              <Column
+                lg={6}
+                md={6}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={6}
+                  md={6}
+                  sm={12}
+                  type="row"
                 >
-                  <div>
-                    <b>
-                      Green Card
-                    </b>
-                    <div>
-                      Western Australia Gov.
+                  <div
+                    className="c1"
+                    type="row"
+                  >
+                    <div
+                      className="list-column"
+                    >
+                      <div>
+                        <b>
+                          Green Card
+                        </b>
+                        <div>
+                          Western Australia Gov.
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-          <ListColumn
-            alignRight={false}
-            cell={[Function]}
-            colIndex={1}
-            data={
-              Array [
-                Object {
-                  "expiryDate": "11 Nov 2004",
-                  "issuingOrganisation": "Queensland Gov.",
-                  "name": "Blue Card",
-                  "status": "Expired",
-                },
-                Object {
-                  "expiryDate": "05 Feb 2017",
-                  "issuingOrganisation": "Western Australia Gov.",
-                  "name": "Green Card",
-                  "status": "Current",
-                },
-              ]
-            }
-            header=""
-            isHeader={false}
-            key="test-smart-list-list-item-1-1"
-            rowIndex={1}
-            size={
-              Object {
-                "lg": 3,
-                "md": 3,
+                </Col>
+              </Column>
+            </ListColumn>
+            <ListColumn
+              alignRight={false}
+              cell={[Function]}
+              colIndex={1}
+              data={
+                Array [
+                  Object {
+                    "expiryDate": "11 Nov 2004",
+                    "issuingOrganisation": "Queensland Gov.",
+                    "name": "Blue Card",
+                    "status": "Expired",
+                  },
+                  Object {
+                    "expiryDate": "05 Feb 2017",
+                    "issuingOrganisation": "Western Australia Gov.",
+                    "name": "Green Card",
+                    "status": "Current",
+                  },
+                ]
               }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": false,
+              header=""
+              isHeader={false}
+              key="test-smart-list-list-item-1-1"
+              rowIndex={1}
+              size={
+                Object {
+                  "lg": 3,
+                  "md": 3,
+                }
               }
-            }
-          >
-            <Col
-              lg={3}
-              md={3}
-              sm={12}
-              xs={12}
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": false,
+                }
+              }
             >
-              <div
-                className="c2"
+              <Column
+                lg={3}
+                md={3}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={3}
+                  md={3}
+                  sm={12}
+                  type="row"
                 >
-                  05 Feb 2017
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-          <ListColumn
-            alignRight={false}
-            cell={[Function]}
-            colIndex={2}
-            data={
-              Array [
-                Object {
-                  "expiryDate": "11 Nov 2004",
-                  "issuingOrganisation": "Queensland Gov.",
-                  "name": "Blue Card",
-                  "status": "Expired",
-                },
-                Object {
-                  "expiryDate": "05 Feb 2017",
-                  "issuingOrganisation": "Western Australia Gov.",
-                  "name": "Green Card",
-                  "status": "Current",
-                },
-              ]
-            }
-            header=""
-            isHeader={false}
-            key="test-smart-list-list-item-1-2"
-            rowIndex={1}
-            size={
-              Object {
-                "lg": 3,
-                "md": 3,
+                  <div
+                    className="c2"
+                    type="row"
+                  >
+                    <div
+                      className="list-column"
+                    >
+                      05 Feb 2017
+                    </div>
+                  </div>
+                </Col>
+              </Column>
+            </ListColumn>
+            <ListColumn
+              alignRight={false}
+              cell={[Function]}
+              colIndex={2}
+              data={
+                Array [
+                  Object {
+                    "expiryDate": "11 Nov 2004",
+                    "issuingOrganisation": "Queensland Gov.",
+                    "name": "Blue Card",
+                    "status": "Expired",
+                  },
+                  Object {
+                    "expiryDate": "05 Feb 2017",
+                    "issuingOrganisation": "Western Australia Gov.",
+                    "name": "Green Card",
+                    "status": "Current",
+                  },
+                ]
               }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": false,
+              header=""
+              isHeader={false}
+              key="test-smart-list-list-item-1-2"
+              rowIndex={1}
+              size={
+                Object {
+                  "lg": 3,
+                  "md": 3,
+                }
               }
-            }
-          >
-            <Col
-              lg={3}
-              md={3}
-              sm={12}
-              xs={12}
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": false,
+                }
+              }
             >
-              <div
-                className="c2"
+              <Column
+                lg={3}
+                md={3}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={3}
+                  md={3}
+                  sm={12}
+                  type="row"
                 >
-                  Current
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-        </div>
+                  <div
+                    className="c2"
+                    type="row"
+                  >
+                    <div
+                      className="list-column"
+                    >
+                      Current
+                    </div>
+                  </div>
+                </Col>
+              </Column>
+            </ListColumn>
+          </div>
+        </Row>
       </Row>
     </ListRow>
   </div>
@@ -792,16 +855,6 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
   padding-left: 0.5rem;
 }
 
-@media only screen and (min-width:0em) {
-  .c1 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-    display: block;
-  }
-}
-
 @media only screen and (min-width:48em) {
   .c1 {
     -webkit-flex-basis: 100%;
@@ -828,16 +881,6 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
     max-width: 50%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c2 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
     display: block;
   }
 }
@@ -946,30 +989,37 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
               }
             }
           >
-            <Col
+            <Column
               lg={6}
               md={6}
               sm={12}
-              xs={12}
             >
-              <div
-                className="c1"
+              <Col
+                lg={6}
+                md={6}
+                sm={12}
+                type="row"
               >
                 <div
-                  className="list-column"
+                  className="c1"
+                  type="row"
                 >
-                  <ListHeader
-                    label="Qualification"
+                  <div
+                    className="list-column"
                   >
-                    <span
-                      className="ListHeader"
+                    <ListHeader
+                      label="Qualification"
                     >
-                      Qualification
-                    </span>
-                  </ListHeader>
+                      <span
+                        className="ListHeader"
+                      >
+                        Qualification
+                      </span>
+                    </ListHeader>
+                  </div>
                 </div>
-              </div>
-            </Col>
+              </Col>
+            </Column>
           </ListColumn>
           <ListColumn
             alignRight={false}
@@ -1009,30 +1059,37 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
               }
             }
           >
-            <Col
+            <Column
               lg={3}
               md={3}
               sm={12}
-              xs={12}
             >
-              <div
-                className="c2"
+              <Col
+                lg={3}
+                md={3}
+                sm={12}
+                type="row"
               >
                 <div
-                  className="list-column"
+                  className="c2"
+                  type="row"
                 >
-                  <ListHeader
-                    label="Expiry Date"
+                  <div
+                    className="list-column"
                   >
-                    <span
-                      className="ListHeader"
+                    <ListHeader
+                      label="Expiry Date"
                     >
-                      Expiry Date
-                    </span>
-                  </ListHeader>
+                      <span
+                        className="ListHeader"
+                      >
+                        Expiry Date
+                      </span>
+                    </ListHeader>
+                  </div>
                 </div>
-              </div>
-            </Col>
+              </Col>
+            </Column>
           </ListColumn>
           <ListColumn
             alignRight={false}
@@ -1072,30 +1129,37 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
               }
             }
           >
-            <Col
+            <Column
               lg={3}
               md={3}
               sm={12}
-              xs={12}
             >
-              <div
-                className="c2"
+              <Col
+                lg={3}
+                md={3}
+                sm={12}
+                type="row"
               >
                 <div
-                  className="list-column"
+                  className="c2"
+                  type="row"
                 >
-                  <ListHeader
-                    label="Status"
+                  <div
+                    className="list-column"
                   >
-                    <span
-                      className="ListHeader"
+                    <ListHeader
+                      label="Status"
                     >
-                      Status
-                    </span>
-                  </ListHeader>
+                      <span
+                        className="ListHeader"
+                      >
+                        Status
+                      </span>
+                    </ListHeader>
+                  </div>
                 </div>
-              </div>
-            </Col>
+              </Col>
+            </Column>
           </ListColumn>
         </div>
       </Row>
@@ -1124,8 +1188,8 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
           }
         }
       >
-        <div
-          className="item-row cursor-auto c0"
+        <Row
+          className="item-row cursor-auto"
           onClick={[Function]}
           style={
             Object {
@@ -1133,179 +1197,210 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
             }
           }
         >
-          <ListColumn
-            alignRight={false}
-            cell={[Function]}
-            colIndex={0}
-            data={
-              Array [
-                Object {
-                  "expiryDate": "11 Nov 2004",
-                  "issuingOrganisation": "Queensland Gov.",
-                  "name": "Blue Card",
-                  "status": "Expired",
-                },
-                Object {
-                  "expiryDate": "05 Feb 2017",
-                  "issuingOrganisation": "Western Australia Gov.",
-                  "name": "Green Card",
-                  "status": "Current",
-                },
-              ]
-            }
-            header="Qualification"
-            isHeader={false}
-            key="test-smart-list-list-item-0-0"
-            rowIndex={0}
-            size={
+          <div
+            className="item-row cursor-auto c0"
+            onClick={[Function]}
+            style={
               Object {
-                "lg": 6,
-                "md": 6,
-              }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": false,
+                "display": "flex",
               }
             }
           >
-            <Col
-              lg={6}
-              md={6}
-              sm={12}
-              xs={12}
+            <ListColumn
+              alignRight={false}
+              cell={[Function]}
+              colIndex={0}
+              data={
+                Array [
+                  Object {
+                    "expiryDate": "11 Nov 2004",
+                    "issuingOrganisation": "Queensland Gov.",
+                    "name": "Blue Card",
+                    "status": "Expired",
+                  },
+                  Object {
+                    "expiryDate": "05 Feb 2017",
+                    "issuingOrganisation": "Western Australia Gov.",
+                    "name": "Green Card",
+                    "status": "Current",
+                  },
+                ]
+              }
+              header="Qualification"
+              isHeader={false}
+              key="test-smart-list-list-item-0-0"
+              rowIndex={0}
+              size={
+                Object {
+                  "lg": 6,
+                  "md": 6,
+                }
+              }
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": false,
+                }
+              }
             >
-              <div
-                className="c1"
+              <Column
+                lg={6}
+                md={6}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={6}
+                  md={6}
+                  sm={12}
+                  type="row"
                 >
-                  <div>
-                    <b>
-                      Blue Card
-                    </b>
-                    <div>
-                      Queensland Gov.
+                  <div
+                    className="c1"
+                    type="row"
+                  >
+                    <div
+                      className="list-column"
+                    >
+                      <div>
+                        <b>
+                          Blue Card
+                        </b>
+                        <div>
+                          Queensland Gov.
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-          <ListColumn
-            alignRight={false}
-            cell={[Function]}
-            colIndex={1}
-            data={
-              Array [
-                Object {
-                  "expiryDate": "11 Nov 2004",
-                  "issuingOrganisation": "Queensland Gov.",
-                  "name": "Blue Card",
-                  "status": "Expired",
-                },
-                Object {
-                  "expiryDate": "05 Feb 2017",
-                  "issuingOrganisation": "Western Australia Gov.",
-                  "name": "Green Card",
-                  "status": "Current",
-                },
-              ]
-            }
-            header="Expiry Date"
-            isHeader={false}
-            key="test-smart-list-list-item-0-1"
-            rowIndex={0}
-            size={
-              Object {
-                "lg": 3,
-                "md": 3,
+                </Col>
+              </Column>
+            </ListColumn>
+            <ListColumn
+              alignRight={false}
+              cell={[Function]}
+              colIndex={1}
+              data={
+                Array [
+                  Object {
+                    "expiryDate": "11 Nov 2004",
+                    "issuingOrganisation": "Queensland Gov.",
+                    "name": "Blue Card",
+                    "status": "Expired",
+                  },
+                  Object {
+                    "expiryDate": "05 Feb 2017",
+                    "issuingOrganisation": "Western Australia Gov.",
+                    "name": "Green Card",
+                    "status": "Current",
+                  },
+                ]
               }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": false,
+              header="Expiry Date"
+              isHeader={false}
+              key="test-smart-list-list-item-0-1"
+              rowIndex={0}
+              size={
+                Object {
+                  "lg": 3,
+                  "md": 3,
+                }
               }
-            }
-          >
-            <Col
-              lg={3}
-              md={3}
-              sm={12}
-              xs={12}
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": false,
+                }
+              }
             >
-              <div
-                className="c2"
+              <Column
+                lg={3}
+                md={3}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={3}
+                  md={3}
+                  sm={12}
+                  type="row"
                 >
-                  11 Nov 2004
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-          <ListColumn
-            alignRight={false}
-            cell={[Function]}
-            colIndex={2}
-            data={
-              Array [
-                Object {
-                  "expiryDate": "11 Nov 2004",
-                  "issuingOrganisation": "Queensland Gov.",
-                  "name": "Blue Card",
-                  "status": "Expired",
-                },
-                Object {
-                  "expiryDate": "05 Feb 2017",
-                  "issuingOrganisation": "Western Australia Gov.",
-                  "name": "Green Card",
-                  "status": "Current",
-                },
-              ]
-            }
-            header="Status"
-            isHeader={false}
-            key="test-smart-list-list-item-0-2"
-            rowIndex={0}
-            size={
-              Object {
-                "lg": 3,
-                "md": 3,
+                  <div
+                    className="c2"
+                    type="row"
+                  >
+                    <div
+                      className="list-column"
+                    >
+                      11 Nov 2004
+                    </div>
+                  </div>
+                </Col>
+              </Column>
+            </ListColumn>
+            <ListColumn
+              alignRight={false}
+              cell={[Function]}
+              colIndex={2}
+              data={
+                Array [
+                  Object {
+                    "expiryDate": "11 Nov 2004",
+                    "issuingOrganisation": "Queensland Gov.",
+                    "name": "Blue Card",
+                    "status": "Expired",
+                  },
+                  Object {
+                    "expiryDate": "05 Feb 2017",
+                    "issuingOrganisation": "Western Australia Gov.",
+                    "name": "Green Card",
+                    "status": "Current",
+                  },
+                ]
               }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": false,
+              header="Status"
+              isHeader={false}
+              key="test-smart-list-list-item-0-2"
+              rowIndex={0}
+              size={
+                Object {
+                  "lg": 3,
+                  "md": 3,
+                }
               }
-            }
-          >
-            <Col
-              lg={3}
-              md={3}
-              sm={12}
-              xs={12}
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": false,
+                }
+              }
             >
-              <div
-                className="c2"
+              <Column
+                lg={3}
+                md={3}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={3}
+                  md={3}
+                  sm={12}
+                  type="row"
                 >
-                  Expired
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-        </div>
+                  <div
+                    className="c2"
+                    type="row"
+                  >
+                    <div
+                      className="list-column"
+                    >
+                      Expired
+                    </div>
+                  </div>
+                </Col>
+              </Column>
+            </ListColumn>
+          </div>
+        </Row>
       </Row>
     </ListRow>
     <ListRow
@@ -1332,8 +1427,8 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
           }
         }
       >
-        <div
-          className="item-row cursor-auto c0"
+        <Row
+          className="item-row cursor-auto"
           onClick={[Function]}
           style={
             Object {
@@ -1341,179 +1436,210 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
             }
           }
         >
-          <ListColumn
-            alignRight={false}
-            cell={[Function]}
-            colIndex={0}
-            data={
-              Array [
-                Object {
-                  "expiryDate": "11 Nov 2004",
-                  "issuingOrganisation": "Queensland Gov.",
-                  "name": "Blue Card",
-                  "status": "Expired",
-                },
-                Object {
-                  "expiryDate": "05 Feb 2017",
-                  "issuingOrganisation": "Western Australia Gov.",
-                  "name": "Green Card",
-                  "status": "Current",
-                },
-              ]
-            }
-            header="Qualification"
-            isHeader={false}
-            key="test-smart-list-list-item-1-0"
-            rowIndex={1}
-            size={
+          <div
+            className="item-row cursor-auto c0"
+            onClick={[Function]}
+            style={
               Object {
-                "lg": 6,
-                "md": 6,
-              }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": false,
+                "display": "flex",
               }
             }
           >
-            <Col
-              lg={6}
-              md={6}
-              sm={12}
-              xs={12}
+            <ListColumn
+              alignRight={false}
+              cell={[Function]}
+              colIndex={0}
+              data={
+                Array [
+                  Object {
+                    "expiryDate": "11 Nov 2004",
+                    "issuingOrganisation": "Queensland Gov.",
+                    "name": "Blue Card",
+                    "status": "Expired",
+                  },
+                  Object {
+                    "expiryDate": "05 Feb 2017",
+                    "issuingOrganisation": "Western Australia Gov.",
+                    "name": "Green Card",
+                    "status": "Current",
+                  },
+                ]
+              }
+              header="Qualification"
+              isHeader={false}
+              key="test-smart-list-list-item-1-0"
+              rowIndex={1}
+              size={
+                Object {
+                  "lg": 6,
+                  "md": 6,
+                }
+              }
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": false,
+                }
+              }
             >
-              <div
-                className="c1"
+              <Column
+                lg={6}
+                md={6}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={6}
+                  md={6}
+                  sm={12}
+                  type="row"
                 >
-                  <div>
-                    <b>
-                      Green Card
-                    </b>
-                    <div>
-                      Western Australia Gov.
+                  <div
+                    className="c1"
+                    type="row"
+                  >
+                    <div
+                      className="list-column"
+                    >
+                      <div>
+                        <b>
+                          Green Card
+                        </b>
+                        <div>
+                          Western Australia Gov.
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-          <ListColumn
-            alignRight={false}
-            cell={[Function]}
-            colIndex={1}
-            data={
-              Array [
-                Object {
-                  "expiryDate": "11 Nov 2004",
-                  "issuingOrganisation": "Queensland Gov.",
-                  "name": "Blue Card",
-                  "status": "Expired",
-                },
-                Object {
-                  "expiryDate": "05 Feb 2017",
-                  "issuingOrganisation": "Western Australia Gov.",
-                  "name": "Green Card",
-                  "status": "Current",
-                },
-              ]
-            }
-            header="Expiry Date"
-            isHeader={false}
-            key="test-smart-list-list-item-1-1"
-            rowIndex={1}
-            size={
-              Object {
-                "lg": 3,
-                "md": 3,
+                </Col>
+              </Column>
+            </ListColumn>
+            <ListColumn
+              alignRight={false}
+              cell={[Function]}
+              colIndex={1}
+              data={
+                Array [
+                  Object {
+                    "expiryDate": "11 Nov 2004",
+                    "issuingOrganisation": "Queensland Gov.",
+                    "name": "Blue Card",
+                    "status": "Expired",
+                  },
+                  Object {
+                    "expiryDate": "05 Feb 2017",
+                    "issuingOrganisation": "Western Australia Gov.",
+                    "name": "Green Card",
+                    "status": "Current",
+                  },
+                ]
               }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": false,
+              header="Expiry Date"
+              isHeader={false}
+              key="test-smart-list-list-item-1-1"
+              rowIndex={1}
+              size={
+                Object {
+                  "lg": 3,
+                  "md": 3,
+                }
               }
-            }
-          >
-            <Col
-              lg={3}
-              md={3}
-              sm={12}
-              xs={12}
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": false,
+                }
+              }
             >
-              <div
-                className="c2"
+              <Column
+                lg={3}
+                md={3}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={3}
+                  md={3}
+                  sm={12}
+                  type="row"
                 >
-                  05 Feb 2017
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-          <ListColumn
-            alignRight={false}
-            cell={[Function]}
-            colIndex={2}
-            data={
-              Array [
-                Object {
-                  "expiryDate": "11 Nov 2004",
-                  "issuingOrganisation": "Queensland Gov.",
-                  "name": "Blue Card",
-                  "status": "Expired",
-                },
-                Object {
-                  "expiryDate": "05 Feb 2017",
-                  "issuingOrganisation": "Western Australia Gov.",
-                  "name": "Green Card",
-                  "status": "Current",
-                },
-              ]
-            }
-            header="Status"
-            isHeader={false}
-            key="test-smart-list-list-item-1-2"
-            rowIndex={1}
-            size={
-              Object {
-                "lg": 3,
-                "md": 3,
+                  <div
+                    className="c2"
+                    type="row"
+                  >
+                    <div
+                      className="list-column"
+                    >
+                      05 Feb 2017
+                    </div>
+                  </div>
+                </Col>
+              </Column>
+            </ListColumn>
+            <ListColumn
+              alignRight={false}
+              cell={[Function]}
+              colIndex={2}
+              data={
+                Array [
+                  Object {
+                    "expiryDate": "11 Nov 2004",
+                    "issuingOrganisation": "Queensland Gov.",
+                    "name": "Blue Card",
+                    "status": "Expired",
+                  },
+                  Object {
+                    "expiryDate": "05 Feb 2017",
+                    "issuingOrganisation": "Western Australia Gov.",
+                    "name": "Green Card",
+                    "status": "Current",
+                  },
+                ]
               }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": false,
+              header="Status"
+              isHeader={false}
+              key="test-smart-list-list-item-1-2"
+              rowIndex={1}
+              size={
+                Object {
+                  "lg": 3,
+                  "md": 3,
+                }
               }
-            }
-          >
-            <Col
-              lg={3}
-              md={3}
-              sm={12}
-              xs={12}
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": false,
+                }
+              }
             >
-              <div
-                className="c2"
+              <Column
+                lg={3}
+                md={3}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={3}
+                  md={3}
+                  sm={12}
+                  type="row"
                 >
-                  Current
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-        </div>
+                  <div
+                    className="c2"
+                    type="row"
+                  >
+                    <div
+                      className="list-column"
+                    >
+                      Current
+                    </div>
+                  </div>
+                </Col>
+              </Column>
+            </ListColumn>
+          </div>
+        </Row>
       </Row>
     </ListRow>
   </div>
@@ -1547,16 +1673,6 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
   flex: 0 0 auto;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
-}
-
-@media only screen and (min-width:0em) {
-  .c1 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-    display: block;
-  }
 }
 
 @media only screen and (min-width:48em) {
@@ -1663,30 +1779,37 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
               }
             }
           >
-            <Col
+            <Column
               lg={6}
               md={6}
               sm={12}
-              xs={12}
             >
-              <div
-                className="c1"
+              <Col
+                lg={6}
+                md={6}
+                sm={12}
+                type="row"
               >
                 <div
-                  className="list-column"
+                  className="c1"
+                  type="row"
                 >
-                  <ListHeader
-                    label="Qualification"
+                  <div
+                    className="list-column"
                   >
-                    <span
-                      className="ListHeader"
+                    <ListHeader
+                      label="Qualification"
                     >
-                      Qualification
-                    </span>
-                  </ListHeader>
+                      <span
+                        className="ListHeader"
+                      >
+                        Qualification
+                      </span>
+                    </ListHeader>
+                  </div>
                 </div>
-              </div>
-            </Col>
+              </Col>
+            </Column>
           </ListColumn>
         </div>
       </Row>
@@ -1715,8 +1838,8 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
           }
         }
       >
-        <div
-          className="item-row cursor-auto c0"
+        <Row
+          className="item-row cursor-auto"
           onClick={[Function]}
           style={
             Object {
@@ -1724,69 +1847,86 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
             }
           }
         >
-          <ListColumn
-            alignRight={false}
-            cell={[Function]}
-            colIndex={0}
-            data={
-              Array [
-                Object {
-                  "expiryDate": "11 Nov 2004",
-                  "issuingOrganisation": "Queensland Gov.",
-                  "name": "Blue Card",
-                  "status": "Expired",
-                },
-                Object {
-                  "expiryDate": "05 Feb 2017",
-                  "issuingOrganisation": "Western Australia Gov.",
-                  "name": "Green Card",
-                  "status": "Current",
-                },
-              ]
-            }
-            header="Qualification"
-            isHeader={false}
-            key="test-smart-list-single-column-list-item-0-0"
-            rowIndex={0}
-            size={
+          <div
+            className="item-row cursor-auto c0"
+            onClick={[Function]}
+            style={
               Object {
-                "lg": 6,
-                "md": 6,
-              }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": false,
+                "display": "flex",
               }
             }
           >
-            <Col
-              lg={6}
-              md={6}
-              sm={12}
-              xs={12}
+            <ListColumn
+              alignRight={false}
+              cell={[Function]}
+              colIndex={0}
+              data={
+                Array [
+                  Object {
+                    "expiryDate": "11 Nov 2004",
+                    "issuingOrganisation": "Queensland Gov.",
+                    "name": "Blue Card",
+                    "status": "Expired",
+                  },
+                  Object {
+                    "expiryDate": "05 Feb 2017",
+                    "issuingOrganisation": "Western Australia Gov.",
+                    "name": "Green Card",
+                    "status": "Current",
+                  },
+                ]
+              }
+              header="Qualification"
+              isHeader={false}
+              key="test-smart-list-single-column-list-item-0-0"
+              rowIndex={0}
+              size={
+                Object {
+                  "lg": 6,
+                  "md": 6,
+                }
+              }
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": false,
+                }
+              }
             >
-              <div
-                className="c1"
+              <Column
+                lg={6}
+                md={6}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={6}
+                  md={6}
+                  sm={12}
+                  type="row"
                 >
-                  <div>
-                    <b>
-                      Blue Card
-                    </b>
-                    <div>
-                      Queensland Gov.
+                  <div
+                    className="c1"
+                    type="row"
+                  >
+                    <div
+                      className="list-column"
+                    >
+                      <div>
+                        <b>
+                          Blue Card
+                        </b>
+                        <div>
+                          Queensland Gov.
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-        </div>
+                </Col>
+              </Column>
+            </ListColumn>
+          </div>
+        </Row>
       </Row>
     </ListRow>
     <ListRow
@@ -1813,8 +1953,8 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
           }
         }
       >
-        <div
-          className="item-row cursor-auto c0"
+        <Row
+          className="item-row cursor-auto"
           onClick={[Function]}
           style={
             Object {
@@ -1822,69 +1962,86 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
             }
           }
         >
-          <ListColumn
-            alignRight={false}
-            cell={[Function]}
-            colIndex={0}
-            data={
-              Array [
-                Object {
-                  "expiryDate": "11 Nov 2004",
-                  "issuingOrganisation": "Queensland Gov.",
-                  "name": "Blue Card",
-                  "status": "Expired",
-                },
-                Object {
-                  "expiryDate": "05 Feb 2017",
-                  "issuingOrganisation": "Western Australia Gov.",
-                  "name": "Green Card",
-                  "status": "Current",
-                },
-              ]
-            }
-            header="Qualification"
-            isHeader={false}
-            key="test-smart-list-single-column-list-item-1-0"
-            rowIndex={1}
-            size={
+          <div
+            className="item-row cursor-auto c0"
+            onClick={[Function]}
+            style={
               Object {
-                "lg": 6,
-                "md": 6,
-              }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": false,
+                "display": "flex",
               }
             }
           >
-            <Col
-              lg={6}
-              md={6}
-              sm={12}
-              xs={12}
+            <ListColumn
+              alignRight={false}
+              cell={[Function]}
+              colIndex={0}
+              data={
+                Array [
+                  Object {
+                    "expiryDate": "11 Nov 2004",
+                    "issuingOrganisation": "Queensland Gov.",
+                    "name": "Blue Card",
+                    "status": "Expired",
+                  },
+                  Object {
+                    "expiryDate": "05 Feb 2017",
+                    "issuingOrganisation": "Western Australia Gov.",
+                    "name": "Green Card",
+                    "status": "Current",
+                  },
+                ]
+              }
+              header="Qualification"
+              isHeader={false}
+              key="test-smart-list-single-column-list-item-1-0"
+              rowIndex={1}
+              size={
+                Object {
+                  "lg": 6,
+                  "md": 6,
+                }
+              }
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": false,
+                }
+              }
             >
-              <div
-                className="c1"
+              <Column
+                lg={6}
+                md={6}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={6}
+                  md={6}
+                  sm={12}
+                  type="row"
                 >
-                  <div>
-                    <b>
-                      Green Card
-                    </b>
-                    <div>
-                      Western Australia Gov.
+                  <div
+                    className="c1"
+                    type="row"
+                  >
+                    <div
+                      className="list-column"
+                    >
+                      <div>
+                        <b>
+                          Green Card
+                        </b>
+                        <div>
+                          Western Australia Gov.
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-        </div>
+                </Col>
+              </Column>
+            </ListColumn>
+          </div>
+        </Row>
       </Row>
     </ListRow>
   </div>
@@ -1929,16 +2086,6 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
   padding-left: 0.5rem;
 }
 
-@media only screen and (min-width:0em) {
-  .c1 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-    display: block;
-  }
-}
-
 @media only screen and (min-width:48em) {
   .c1 {
     -webkit-flex-basis: 100%;
@@ -1965,16 +2112,6 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
     max-width: 50%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c2 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
     display: block;
   }
 }
@@ -2053,24 +2190,31 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
               }
             }
           >
-            <Col
+            <Column
               lg={6}
               md={6}
               sm={12}
-              xs={12}
             >
-              <div
-                className="c1"
+              <Col
+                lg={6}
+                md={6}
+                sm={12}
+                type="row"
               >
                 <div
-                  className="list-column"
+                  className="c1"
+                  type="row"
                 >
-                  <ListHeader
-                    label=""
-                  />
+                  <div
+                    className="list-column"
+                  >
+                    <ListHeader
+                      label=""
+                    />
+                  </div>
                 </div>
-              </div>
-            </Col>
+              </Col>
+            </Column>
           </ListColumn>
           <ListColumn
             alignRight={false}
@@ -2095,24 +2239,31 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
               }
             }
           >
-            <Col
+            <Column
               lg={3}
               md={3}
               sm={12}
-              xs={12}
             >
-              <div
-                className="c2"
+              <Col
+                lg={3}
+                md={3}
+                sm={12}
+                type="row"
               >
                 <div
-                  className="list-column"
+                  className="c2"
+                  type="row"
                 >
-                  <ListHeader
-                    label=""
-                  />
+                  <div
+                    className="list-column"
+                  >
+                    <ListHeader
+                      label=""
+                    />
+                  </div>
                 </div>
-              </div>
-            </Col>
+              </Col>
+            </Column>
           </ListColumn>
           <ListColumn
             alignRight={false}
@@ -2137,24 +2288,31 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
               }
             }
           >
-            <Col
+            <Column
               lg={3}
               md={3}
               sm={12}
-              xs={12}
             >
-              <div
-                className="c2"
+              <Col
+                lg={3}
+                md={3}
+                sm={12}
+                type="row"
               >
                 <div
-                  className="list-column"
+                  className="c2"
+                  type="row"
                 >
-                  <ListHeader
-                    label=""
-                  />
+                  <div
+                    className="list-column"
+                  >
+                    <ListHeader
+                      label=""
+                    />
+                  </div>
                 </div>
-              </div>
-            </Col>
+              </Col>
+            </Column>
           </ListColumn>
         </div>
       </Row>
@@ -2217,16 +2375,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
   padding-left: 0.5rem;
 }
 
-@media only screen and (min-width:0em) {
-  .c1 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-    display: block;
-  }
-}
-
 @media only screen and (min-width:48em) {
   .c1 {
     -webkit-flex-basis: 100%;
@@ -2253,16 +2401,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
     max-width: 50%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c2 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
     display: block;
   }
 }
@@ -2353,30 +2491,37 @@ exports[`<SmartList /> should render skeleton 1`] = `
               }
             }
           >
-            <Col
+            <Column
               lg={6}
               md={6}
               sm={12}
-              xs={12}
             >
-              <div
-                className="c1"
+              <Col
+                lg={6}
+                md={6}
+                sm={12}
+                type="row"
               >
                 <div
-                  className="list-column"
+                  className="c1"
+                  type="row"
                 >
-                  <ListHeader
-                    label="Test1"
+                  <div
+                    className="list-column"
                   >
-                    <span
-                      className="ListHeader"
+                    <ListHeader
+                      label="Test1"
                     >
-                      Test1
-                    </span>
-                  </ListHeader>
+                      <span
+                        className="ListHeader"
+                      >
+                        Test1
+                      </span>
+                    </ListHeader>
+                  </div>
                 </div>
-              </div>
-            </Col>
+              </Col>
+            </Column>
           </ListColumn>
           <ListColumn
             alignRight={false}
@@ -2408,30 +2553,37 @@ exports[`<SmartList /> should render skeleton 1`] = `
               }
             }
           >
-            <Col
+            <Column
               lg={3}
               md={3}
               sm={12}
-              xs={12}
             >
-              <div
-                className="c2"
+              <Col
+                lg={3}
+                md={3}
+                sm={12}
+                type="row"
               >
                 <div
-                  className="list-column"
+                  className="c2"
+                  type="row"
                 >
-                  <ListHeader
-                    label="Test2"
+                  <div
+                    className="list-column"
                   >
-                    <span
-                      className="ListHeader"
+                    <ListHeader
+                      label="Test2"
                     >
-                      Test2
-                    </span>
-                  </ListHeader>
+                      <span
+                        className="ListHeader"
+                      >
+                        Test2
+                      </span>
+                    </ListHeader>
+                  </div>
                 </div>
-              </div>
-            </Col>
+              </Col>
+            </Column>
           </ListColumn>
           <ListColumn
             alignRight={false}
@@ -2463,30 +2615,37 @@ exports[`<SmartList /> should render skeleton 1`] = `
               }
             }
           >
-            <Col
+            <Column
               lg={3}
               md={3}
               sm={12}
-              xs={12}
             >
-              <div
-                className="c2"
+              <Col
+                lg={3}
+                md={3}
+                sm={12}
+                type="row"
               >
                 <div
-                  className="list-column"
+                  className="c2"
+                  type="row"
                 >
-                  <ListHeader
-                    label="Test3"
+                  <div
+                    className="list-column"
                   >
-                    <span
-                      className="ListHeader"
+                    <ListHeader
+                      label="Test3"
                     >
-                      Test3
-                    </span>
-                  </ListHeader>
+                      <span
+                        className="ListHeader"
+                      >
+                        Test3
+                      </span>
+                    </ListHeader>
+                  </div>
                 </div>
-              </div>
-            </Col>
+              </Col>
+            </Column>
           </ListColumn>
         </div>
       </Row>
@@ -2508,8 +2667,8 @@ exports[`<SmartList /> should render skeleton 1`] = `
           }
         }
       >
-        <div
-          className="item-row cursor-auto c0"
+        <Row
+          className="item-row cursor-auto"
           onClick={[Function]}
           style={
             Object {
@@ -2517,268 +2676,299 @@ exports[`<SmartList /> should render skeleton 1`] = `
             }
           }
         >
-          <ListColumn
-            alignRight={false}
-            colIndex={0}
-            data={
-              Array [
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-              ]
-            }
-            header="Test1"
-            isHeader={false}
-            key="test-smart-list-list-item-0-0"
-            rowIndex={0}
-            size={
+          <div
+            className="item-row cursor-auto c0"
+            onClick={[Function]}
+            style={
               Object {
-                "lg": 6,
-                "md": 6,
-              }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": true,
+                "display": "flex",
               }
             }
           >
-            <Col
-              lg={6}
-              md={6}
-              sm={12}
-              xs={12}
+            <ListColumn
+              alignRight={false}
+              colIndex={0}
+              data={
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ]
+              }
+              header="Test1"
+              isHeader={false}
+              key="test-smart-list-list-item-0-0"
+              rowIndex={0}
+              size={
+                Object {
+                  "lg": 6,
+                  "md": 6,
+                }
+              }
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": true,
+                }
+              }
             >
-              <div
-                className="c1"
+              <Column
+                lg={6}
+                md={6}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={6}
+                  md={6}
+                  sm={12}
+                  type="row"
                 >
-                  <Skeleton
-                    alignRight={false}
-                    className=""
-                    colIndex={0}
-                    data={
-                      Array [
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                      ]
-                    }
-                    header="Test1"
-                    isHeader={false}
-                    rowIndex={0}
-                    size={
-                      Object {
-                        "lg": 6,
-                        "md": 6,
-                      }
-                    }
-                    skeletonOptions={
-                      Object {
-                        "numberOfRows": 5,
-                        "shape": "line",
-                        "showSkeleton": true,
-                      }
-                    }
+                  <div
+                    className="c1"
+                    type="row"
                   >
-                    <span
-                      className="Skeleton skeleton line skeleton-large"
-                      style={
-                        Object {
-                          "width": undefined,
-                        }
-                      }
+                    <div
+                      className="list-column"
                     >
-                      ‌
-                    </span>
-                  </Skeleton>
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-          <ListColumn
-            alignRight={false}
-            colIndex={1}
-            data={
-              Array [
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-              ]
-            }
-            header="Test2"
-            isHeader={false}
-            key="test-smart-list-list-item-0-1"
-            rowIndex={0}
-            size={
-              Object {
-                "lg": 3,
-                "md": 3,
+                      <Skeleton
+                        alignRight={false}
+                        className=""
+                        colIndex={0}
+                        data={
+                          Array [
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                          ]
+                        }
+                        header="Test1"
+                        isHeader={false}
+                        rowIndex={0}
+                        size={
+                          Object {
+                            "lg": 6,
+                            "md": 6,
+                          }
+                        }
+                        skeletonOptions={
+                          Object {
+                            "numberOfRows": 5,
+                            "shape": "line",
+                            "showSkeleton": true,
+                          }
+                        }
+                      >
+                        <span
+                          className="Skeleton skeleton line skeleton-large"
+                          style={
+                            Object {
+                              "width": undefined,
+                            }
+                          }
+                        >
+                          ‌
+                        </span>
+                      </Skeleton>
+                    </div>
+                  </div>
+                </Col>
+              </Column>
+            </ListColumn>
+            <ListColumn
+              alignRight={false}
+              colIndex={1}
+              data={
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ]
               }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": true,
+              header="Test2"
+              isHeader={false}
+              key="test-smart-list-list-item-0-1"
+              rowIndex={0}
+              size={
+                Object {
+                  "lg": 3,
+                  "md": 3,
+                }
               }
-            }
-          >
-            <Col
-              lg={3}
-              md={3}
-              sm={12}
-              xs={12}
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": true,
+                }
+              }
             >
-              <div
-                className="c2"
+              <Column
+                lg={3}
+                md={3}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={3}
+                  md={3}
+                  sm={12}
+                  type="row"
                 >
-                  <Skeleton
-                    alignRight={false}
-                    className=""
-                    colIndex={1}
-                    data={
-                      Array [
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                      ]
-                    }
-                    header="Test2"
-                    isHeader={false}
-                    rowIndex={0}
-                    size={
-                      Object {
-                        "lg": 3,
-                        "md": 3,
-                      }
-                    }
-                    skeletonOptions={
-                      Object {
-                        "numberOfRows": 5,
-                        "shape": "line",
-                        "showSkeleton": true,
-                      }
-                    }
+                  <div
+                    className="c2"
+                    type="row"
                   >
-                    <span
-                      className="Skeleton skeleton line skeleton-large"
-                      style={
-                        Object {
-                          "width": undefined,
-                        }
-                      }
+                    <div
+                      className="list-column"
                     >
-                      ‌
-                    </span>
-                  </Skeleton>
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-          <ListColumn
-            alignRight={false}
-            colIndex={2}
-            data={
-              Array [
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-              ]
-            }
-            header="Test3"
-            isHeader={false}
-            key="test-smart-list-list-item-0-2"
-            rowIndex={0}
-            size={
-              Object {
-                "lg": 3,
-                "md": 3,
+                      <Skeleton
+                        alignRight={false}
+                        className=""
+                        colIndex={1}
+                        data={
+                          Array [
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                          ]
+                        }
+                        header="Test2"
+                        isHeader={false}
+                        rowIndex={0}
+                        size={
+                          Object {
+                            "lg": 3,
+                            "md": 3,
+                          }
+                        }
+                        skeletonOptions={
+                          Object {
+                            "numberOfRows": 5,
+                            "shape": "line",
+                            "showSkeleton": true,
+                          }
+                        }
+                      >
+                        <span
+                          className="Skeleton skeleton line skeleton-large"
+                          style={
+                            Object {
+                              "width": undefined,
+                            }
+                          }
+                        >
+                          ‌
+                        </span>
+                      </Skeleton>
+                    </div>
+                  </div>
+                </Col>
+              </Column>
+            </ListColumn>
+            <ListColumn
+              alignRight={false}
+              colIndex={2}
+              data={
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ]
               }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": true,
+              header="Test3"
+              isHeader={false}
+              key="test-smart-list-list-item-0-2"
+              rowIndex={0}
+              size={
+                Object {
+                  "lg": 3,
+                  "md": 3,
+                }
               }
-            }
-          >
-            <Col
-              lg={3}
-              md={3}
-              sm={12}
-              xs={12}
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": true,
+                }
+              }
             >
-              <div
-                className="c2"
+              <Column
+                lg={3}
+                md={3}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={3}
+                  md={3}
+                  sm={12}
+                  type="row"
                 >
-                  <Skeleton
-                    alignRight={false}
-                    className=""
-                    colIndex={2}
-                    data={
-                      Array [
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                      ]
-                    }
-                    header="Test3"
-                    isHeader={false}
-                    rowIndex={0}
-                    size={
-                      Object {
-                        "lg": 3,
-                        "md": 3,
-                      }
-                    }
-                    skeletonOptions={
-                      Object {
-                        "numberOfRows": 5,
-                        "shape": "line",
-                        "showSkeleton": true,
-                      }
-                    }
+                  <div
+                    className="c2"
+                    type="row"
                   >
-                    <span
-                      className="Skeleton skeleton line skeleton-large"
-                      style={
-                        Object {
-                          "width": undefined,
-                        }
-                      }
+                    <div
+                      className="list-column"
                     >
-                      ‌
-                    </span>
-                  </Skeleton>
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-        </div>
+                      <Skeleton
+                        alignRight={false}
+                        className=""
+                        colIndex={2}
+                        data={
+                          Array [
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                          ]
+                        }
+                        header="Test3"
+                        isHeader={false}
+                        rowIndex={0}
+                        size={
+                          Object {
+                            "lg": 3,
+                            "md": 3,
+                          }
+                        }
+                        skeletonOptions={
+                          Object {
+                            "numberOfRows": 5,
+                            "shape": "line",
+                            "showSkeleton": true,
+                          }
+                        }
+                      >
+                        <span
+                          className="Skeleton skeleton line skeleton-large"
+                          style={
+                            Object {
+                              "width": undefined,
+                            }
+                          }
+                        >
+                          ‌
+                        </span>
+                      </Skeleton>
+                    </div>
+                  </div>
+                </Col>
+              </Column>
+            </ListColumn>
+          </div>
+        </Row>
       </Row>
     </ListRow>
     <ListRow
@@ -2798,8 +2988,8 @@ exports[`<SmartList /> should render skeleton 1`] = `
           }
         }
       >
-        <div
-          className="item-row cursor-auto c0"
+        <Row
+          className="item-row cursor-auto"
           onClick={[Function]}
           style={
             Object {
@@ -2807,268 +2997,299 @@ exports[`<SmartList /> should render skeleton 1`] = `
             }
           }
         >
-          <ListColumn
-            alignRight={false}
-            colIndex={0}
-            data={
-              Array [
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-              ]
-            }
-            header="Test1"
-            isHeader={false}
-            key="test-smart-list-list-item-1-0"
-            rowIndex={1}
-            size={
+          <div
+            className="item-row cursor-auto c0"
+            onClick={[Function]}
+            style={
               Object {
-                "lg": 6,
-                "md": 6,
-              }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": true,
+                "display": "flex",
               }
             }
           >
-            <Col
-              lg={6}
-              md={6}
-              sm={12}
-              xs={12}
+            <ListColumn
+              alignRight={false}
+              colIndex={0}
+              data={
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ]
+              }
+              header="Test1"
+              isHeader={false}
+              key="test-smart-list-list-item-1-0"
+              rowIndex={1}
+              size={
+                Object {
+                  "lg": 6,
+                  "md": 6,
+                }
+              }
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": true,
+                }
+              }
             >
-              <div
-                className="c1"
+              <Column
+                lg={6}
+                md={6}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={6}
+                  md={6}
+                  sm={12}
+                  type="row"
                 >
-                  <Skeleton
-                    alignRight={false}
-                    className=""
-                    colIndex={0}
-                    data={
-                      Array [
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                      ]
-                    }
-                    header="Test1"
-                    isHeader={false}
-                    rowIndex={1}
-                    size={
-                      Object {
-                        "lg": 6,
-                        "md": 6,
-                      }
-                    }
-                    skeletonOptions={
-                      Object {
-                        "numberOfRows": 5,
-                        "shape": "line",
-                        "showSkeleton": true,
-                      }
-                    }
+                  <div
+                    className="c1"
+                    type="row"
                   >
-                    <span
-                      className="Skeleton skeleton line skeleton-large"
-                      style={
-                        Object {
-                          "width": undefined,
-                        }
-                      }
+                    <div
+                      className="list-column"
                     >
-                      ‌
-                    </span>
-                  </Skeleton>
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-          <ListColumn
-            alignRight={false}
-            colIndex={1}
-            data={
-              Array [
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-              ]
-            }
-            header="Test2"
-            isHeader={false}
-            key="test-smart-list-list-item-1-1"
-            rowIndex={1}
-            size={
-              Object {
-                "lg": 3,
-                "md": 3,
+                      <Skeleton
+                        alignRight={false}
+                        className=""
+                        colIndex={0}
+                        data={
+                          Array [
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                          ]
+                        }
+                        header="Test1"
+                        isHeader={false}
+                        rowIndex={1}
+                        size={
+                          Object {
+                            "lg": 6,
+                            "md": 6,
+                          }
+                        }
+                        skeletonOptions={
+                          Object {
+                            "numberOfRows": 5,
+                            "shape": "line",
+                            "showSkeleton": true,
+                          }
+                        }
+                      >
+                        <span
+                          className="Skeleton skeleton line skeleton-large"
+                          style={
+                            Object {
+                              "width": undefined,
+                            }
+                          }
+                        >
+                          ‌
+                        </span>
+                      </Skeleton>
+                    </div>
+                  </div>
+                </Col>
+              </Column>
+            </ListColumn>
+            <ListColumn
+              alignRight={false}
+              colIndex={1}
+              data={
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ]
               }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": true,
+              header="Test2"
+              isHeader={false}
+              key="test-smart-list-list-item-1-1"
+              rowIndex={1}
+              size={
+                Object {
+                  "lg": 3,
+                  "md": 3,
+                }
               }
-            }
-          >
-            <Col
-              lg={3}
-              md={3}
-              sm={12}
-              xs={12}
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": true,
+                }
+              }
             >
-              <div
-                className="c2"
+              <Column
+                lg={3}
+                md={3}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={3}
+                  md={3}
+                  sm={12}
+                  type="row"
                 >
-                  <Skeleton
-                    alignRight={false}
-                    className=""
-                    colIndex={1}
-                    data={
-                      Array [
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                      ]
-                    }
-                    header="Test2"
-                    isHeader={false}
-                    rowIndex={1}
-                    size={
-                      Object {
-                        "lg": 3,
-                        "md": 3,
-                      }
-                    }
-                    skeletonOptions={
-                      Object {
-                        "numberOfRows": 5,
-                        "shape": "line",
-                        "showSkeleton": true,
-                      }
-                    }
+                  <div
+                    className="c2"
+                    type="row"
                   >
-                    <span
-                      className="Skeleton skeleton line skeleton-large"
-                      style={
-                        Object {
-                          "width": undefined,
-                        }
-                      }
+                    <div
+                      className="list-column"
                     >
-                      ‌
-                    </span>
-                  </Skeleton>
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-          <ListColumn
-            alignRight={false}
-            colIndex={2}
-            data={
-              Array [
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-              ]
-            }
-            header="Test3"
-            isHeader={false}
-            key="test-smart-list-list-item-1-2"
-            rowIndex={1}
-            size={
-              Object {
-                "lg": 3,
-                "md": 3,
+                      <Skeleton
+                        alignRight={false}
+                        className=""
+                        colIndex={1}
+                        data={
+                          Array [
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                          ]
+                        }
+                        header="Test2"
+                        isHeader={false}
+                        rowIndex={1}
+                        size={
+                          Object {
+                            "lg": 3,
+                            "md": 3,
+                          }
+                        }
+                        skeletonOptions={
+                          Object {
+                            "numberOfRows": 5,
+                            "shape": "line",
+                            "showSkeleton": true,
+                          }
+                        }
+                      >
+                        <span
+                          className="Skeleton skeleton line skeleton-large"
+                          style={
+                            Object {
+                              "width": undefined,
+                            }
+                          }
+                        >
+                          ‌
+                        </span>
+                      </Skeleton>
+                    </div>
+                  </div>
+                </Col>
+              </Column>
+            </ListColumn>
+            <ListColumn
+              alignRight={false}
+              colIndex={2}
+              data={
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ]
               }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": true,
+              header="Test3"
+              isHeader={false}
+              key="test-smart-list-list-item-1-2"
+              rowIndex={1}
+              size={
+                Object {
+                  "lg": 3,
+                  "md": 3,
+                }
               }
-            }
-          >
-            <Col
-              lg={3}
-              md={3}
-              sm={12}
-              xs={12}
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": true,
+                }
+              }
             >
-              <div
-                className="c2"
+              <Column
+                lg={3}
+                md={3}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={3}
+                  md={3}
+                  sm={12}
+                  type="row"
                 >
-                  <Skeleton
-                    alignRight={false}
-                    className=""
-                    colIndex={2}
-                    data={
-                      Array [
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                      ]
-                    }
-                    header="Test3"
-                    isHeader={false}
-                    rowIndex={1}
-                    size={
-                      Object {
-                        "lg": 3,
-                        "md": 3,
-                      }
-                    }
-                    skeletonOptions={
-                      Object {
-                        "numberOfRows": 5,
-                        "shape": "line",
-                        "showSkeleton": true,
-                      }
-                    }
+                  <div
+                    className="c2"
+                    type="row"
                   >
-                    <span
-                      className="Skeleton skeleton line skeleton-large"
-                      style={
-                        Object {
-                          "width": undefined,
-                        }
-                      }
+                    <div
+                      className="list-column"
                     >
-                      ‌
-                    </span>
-                  </Skeleton>
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-        </div>
+                      <Skeleton
+                        alignRight={false}
+                        className=""
+                        colIndex={2}
+                        data={
+                          Array [
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                          ]
+                        }
+                        header="Test3"
+                        isHeader={false}
+                        rowIndex={1}
+                        size={
+                          Object {
+                            "lg": 3,
+                            "md": 3,
+                          }
+                        }
+                        skeletonOptions={
+                          Object {
+                            "numberOfRows": 5,
+                            "shape": "line",
+                            "showSkeleton": true,
+                          }
+                        }
+                      >
+                        <span
+                          className="Skeleton skeleton line skeleton-large"
+                          style={
+                            Object {
+                              "width": undefined,
+                            }
+                          }
+                        >
+                          ‌
+                        </span>
+                      </Skeleton>
+                    </div>
+                  </div>
+                </Col>
+              </Column>
+            </ListColumn>
+          </div>
+        </Row>
       </Row>
     </ListRow>
     <ListRow
@@ -3088,8 +3309,8 @@ exports[`<SmartList /> should render skeleton 1`] = `
           }
         }
       >
-        <div
-          className="item-row cursor-auto c0"
+        <Row
+          className="item-row cursor-auto"
           onClick={[Function]}
           style={
             Object {
@@ -3097,268 +3318,299 @@ exports[`<SmartList /> should render skeleton 1`] = `
             }
           }
         >
-          <ListColumn
-            alignRight={false}
-            colIndex={0}
-            data={
-              Array [
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-              ]
-            }
-            header="Test1"
-            isHeader={false}
-            key="test-smart-list-list-item-2-0"
-            rowIndex={2}
-            size={
+          <div
+            className="item-row cursor-auto c0"
+            onClick={[Function]}
+            style={
               Object {
-                "lg": 6,
-                "md": 6,
-              }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": true,
+                "display": "flex",
               }
             }
           >
-            <Col
-              lg={6}
-              md={6}
-              sm={12}
-              xs={12}
+            <ListColumn
+              alignRight={false}
+              colIndex={0}
+              data={
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ]
+              }
+              header="Test1"
+              isHeader={false}
+              key="test-smart-list-list-item-2-0"
+              rowIndex={2}
+              size={
+                Object {
+                  "lg": 6,
+                  "md": 6,
+                }
+              }
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": true,
+                }
+              }
             >
-              <div
-                className="c1"
+              <Column
+                lg={6}
+                md={6}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={6}
+                  md={6}
+                  sm={12}
+                  type="row"
                 >
-                  <Skeleton
-                    alignRight={false}
-                    className=""
-                    colIndex={0}
-                    data={
-                      Array [
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                      ]
-                    }
-                    header="Test1"
-                    isHeader={false}
-                    rowIndex={2}
-                    size={
-                      Object {
-                        "lg": 6,
-                        "md": 6,
-                      }
-                    }
-                    skeletonOptions={
-                      Object {
-                        "numberOfRows": 5,
-                        "shape": "line",
-                        "showSkeleton": true,
-                      }
-                    }
+                  <div
+                    className="c1"
+                    type="row"
                   >
-                    <span
-                      className="Skeleton skeleton line skeleton-large"
-                      style={
-                        Object {
-                          "width": undefined,
-                        }
-                      }
+                    <div
+                      className="list-column"
                     >
-                      ‌
-                    </span>
-                  </Skeleton>
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-          <ListColumn
-            alignRight={false}
-            colIndex={1}
-            data={
-              Array [
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-              ]
-            }
-            header="Test2"
-            isHeader={false}
-            key="test-smart-list-list-item-2-1"
-            rowIndex={2}
-            size={
-              Object {
-                "lg": 3,
-                "md": 3,
+                      <Skeleton
+                        alignRight={false}
+                        className=""
+                        colIndex={0}
+                        data={
+                          Array [
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                          ]
+                        }
+                        header="Test1"
+                        isHeader={false}
+                        rowIndex={2}
+                        size={
+                          Object {
+                            "lg": 6,
+                            "md": 6,
+                          }
+                        }
+                        skeletonOptions={
+                          Object {
+                            "numberOfRows": 5,
+                            "shape": "line",
+                            "showSkeleton": true,
+                          }
+                        }
+                      >
+                        <span
+                          className="Skeleton skeleton line skeleton-large"
+                          style={
+                            Object {
+                              "width": undefined,
+                            }
+                          }
+                        >
+                          ‌
+                        </span>
+                      </Skeleton>
+                    </div>
+                  </div>
+                </Col>
+              </Column>
+            </ListColumn>
+            <ListColumn
+              alignRight={false}
+              colIndex={1}
+              data={
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ]
               }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": true,
+              header="Test2"
+              isHeader={false}
+              key="test-smart-list-list-item-2-1"
+              rowIndex={2}
+              size={
+                Object {
+                  "lg": 3,
+                  "md": 3,
+                }
               }
-            }
-          >
-            <Col
-              lg={3}
-              md={3}
-              sm={12}
-              xs={12}
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": true,
+                }
+              }
             >
-              <div
-                className="c2"
+              <Column
+                lg={3}
+                md={3}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={3}
+                  md={3}
+                  sm={12}
+                  type="row"
                 >
-                  <Skeleton
-                    alignRight={false}
-                    className=""
-                    colIndex={1}
-                    data={
-                      Array [
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                      ]
-                    }
-                    header="Test2"
-                    isHeader={false}
-                    rowIndex={2}
-                    size={
-                      Object {
-                        "lg": 3,
-                        "md": 3,
-                      }
-                    }
-                    skeletonOptions={
-                      Object {
-                        "numberOfRows": 5,
-                        "shape": "line",
-                        "showSkeleton": true,
-                      }
-                    }
+                  <div
+                    className="c2"
+                    type="row"
                   >
-                    <span
-                      className="Skeleton skeleton line skeleton-large"
-                      style={
-                        Object {
-                          "width": undefined,
-                        }
-                      }
+                    <div
+                      className="list-column"
                     >
-                      ‌
-                    </span>
-                  </Skeleton>
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-          <ListColumn
-            alignRight={false}
-            colIndex={2}
-            data={
-              Array [
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-              ]
-            }
-            header="Test3"
-            isHeader={false}
-            key="test-smart-list-list-item-2-2"
-            rowIndex={2}
-            size={
-              Object {
-                "lg": 3,
-                "md": 3,
+                      <Skeleton
+                        alignRight={false}
+                        className=""
+                        colIndex={1}
+                        data={
+                          Array [
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                          ]
+                        }
+                        header="Test2"
+                        isHeader={false}
+                        rowIndex={2}
+                        size={
+                          Object {
+                            "lg": 3,
+                            "md": 3,
+                          }
+                        }
+                        skeletonOptions={
+                          Object {
+                            "numberOfRows": 5,
+                            "shape": "line",
+                            "showSkeleton": true,
+                          }
+                        }
+                      >
+                        <span
+                          className="Skeleton skeleton line skeleton-large"
+                          style={
+                            Object {
+                              "width": undefined,
+                            }
+                          }
+                        >
+                          ‌
+                        </span>
+                      </Skeleton>
+                    </div>
+                  </div>
+                </Col>
+              </Column>
+            </ListColumn>
+            <ListColumn
+              alignRight={false}
+              colIndex={2}
+              data={
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ]
               }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": true,
+              header="Test3"
+              isHeader={false}
+              key="test-smart-list-list-item-2-2"
+              rowIndex={2}
+              size={
+                Object {
+                  "lg": 3,
+                  "md": 3,
+                }
               }
-            }
-          >
-            <Col
-              lg={3}
-              md={3}
-              sm={12}
-              xs={12}
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": true,
+                }
+              }
             >
-              <div
-                className="c2"
+              <Column
+                lg={3}
+                md={3}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={3}
+                  md={3}
+                  sm={12}
+                  type="row"
                 >
-                  <Skeleton
-                    alignRight={false}
-                    className=""
-                    colIndex={2}
-                    data={
-                      Array [
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                      ]
-                    }
-                    header="Test3"
-                    isHeader={false}
-                    rowIndex={2}
-                    size={
-                      Object {
-                        "lg": 3,
-                        "md": 3,
-                      }
-                    }
-                    skeletonOptions={
-                      Object {
-                        "numberOfRows": 5,
-                        "shape": "line",
-                        "showSkeleton": true,
-                      }
-                    }
+                  <div
+                    className="c2"
+                    type="row"
                   >
-                    <span
-                      className="Skeleton skeleton line skeleton-large"
-                      style={
-                        Object {
-                          "width": undefined,
-                        }
-                      }
+                    <div
+                      className="list-column"
                     >
-                      ‌
-                    </span>
-                  </Skeleton>
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-        </div>
+                      <Skeleton
+                        alignRight={false}
+                        className=""
+                        colIndex={2}
+                        data={
+                          Array [
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                          ]
+                        }
+                        header="Test3"
+                        isHeader={false}
+                        rowIndex={2}
+                        size={
+                          Object {
+                            "lg": 3,
+                            "md": 3,
+                          }
+                        }
+                        skeletonOptions={
+                          Object {
+                            "numberOfRows": 5,
+                            "shape": "line",
+                            "showSkeleton": true,
+                          }
+                        }
+                      >
+                        <span
+                          className="Skeleton skeleton line skeleton-large"
+                          style={
+                            Object {
+                              "width": undefined,
+                            }
+                          }
+                        >
+                          ‌
+                        </span>
+                      </Skeleton>
+                    </div>
+                  </div>
+                </Col>
+              </Column>
+            </ListColumn>
+          </div>
+        </Row>
       </Row>
     </ListRow>
     <ListRow
@@ -3378,8 +3630,8 @@ exports[`<SmartList /> should render skeleton 1`] = `
           }
         }
       >
-        <div
-          className="item-row cursor-auto c0"
+        <Row
+          className="item-row cursor-auto"
           onClick={[Function]}
           style={
             Object {
@@ -3387,268 +3639,299 @@ exports[`<SmartList /> should render skeleton 1`] = `
             }
           }
         >
-          <ListColumn
-            alignRight={false}
-            colIndex={0}
-            data={
-              Array [
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-              ]
-            }
-            header="Test1"
-            isHeader={false}
-            key="test-smart-list-list-item-3-0"
-            rowIndex={3}
-            size={
+          <div
+            className="item-row cursor-auto c0"
+            onClick={[Function]}
+            style={
               Object {
-                "lg": 6,
-                "md": 6,
-              }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": true,
+                "display": "flex",
               }
             }
           >
-            <Col
-              lg={6}
-              md={6}
-              sm={12}
-              xs={12}
+            <ListColumn
+              alignRight={false}
+              colIndex={0}
+              data={
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ]
+              }
+              header="Test1"
+              isHeader={false}
+              key="test-smart-list-list-item-3-0"
+              rowIndex={3}
+              size={
+                Object {
+                  "lg": 6,
+                  "md": 6,
+                }
+              }
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": true,
+                }
+              }
             >
-              <div
-                className="c1"
+              <Column
+                lg={6}
+                md={6}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={6}
+                  md={6}
+                  sm={12}
+                  type="row"
                 >
-                  <Skeleton
-                    alignRight={false}
-                    className=""
-                    colIndex={0}
-                    data={
-                      Array [
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                      ]
-                    }
-                    header="Test1"
-                    isHeader={false}
-                    rowIndex={3}
-                    size={
-                      Object {
-                        "lg": 6,
-                        "md": 6,
-                      }
-                    }
-                    skeletonOptions={
-                      Object {
-                        "numberOfRows": 5,
-                        "shape": "line",
-                        "showSkeleton": true,
-                      }
-                    }
+                  <div
+                    className="c1"
+                    type="row"
                   >
-                    <span
-                      className="Skeleton skeleton line skeleton-large"
-                      style={
-                        Object {
-                          "width": undefined,
-                        }
-                      }
+                    <div
+                      className="list-column"
                     >
-                      ‌
-                    </span>
-                  </Skeleton>
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-          <ListColumn
-            alignRight={false}
-            colIndex={1}
-            data={
-              Array [
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-              ]
-            }
-            header="Test2"
-            isHeader={false}
-            key="test-smart-list-list-item-3-1"
-            rowIndex={3}
-            size={
-              Object {
-                "lg": 3,
-                "md": 3,
+                      <Skeleton
+                        alignRight={false}
+                        className=""
+                        colIndex={0}
+                        data={
+                          Array [
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                          ]
+                        }
+                        header="Test1"
+                        isHeader={false}
+                        rowIndex={3}
+                        size={
+                          Object {
+                            "lg": 6,
+                            "md": 6,
+                          }
+                        }
+                        skeletonOptions={
+                          Object {
+                            "numberOfRows": 5,
+                            "shape": "line",
+                            "showSkeleton": true,
+                          }
+                        }
+                      >
+                        <span
+                          className="Skeleton skeleton line skeleton-large"
+                          style={
+                            Object {
+                              "width": undefined,
+                            }
+                          }
+                        >
+                          ‌
+                        </span>
+                      </Skeleton>
+                    </div>
+                  </div>
+                </Col>
+              </Column>
+            </ListColumn>
+            <ListColumn
+              alignRight={false}
+              colIndex={1}
+              data={
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ]
               }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": true,
+              header="Test2"
+              isHeader={false}
+              key="test-smart-list-list-item-3-1"
+              rowIndex={3}
+              size={
+                Object {
+                  "lg": 3,
+                  "md": 3,
+                }
               }
-            }
-          >
-            <Col
-              lg={3}
-              md={3}
-              sm={12}
-              xs={12}
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": true,
+                }
+              }
             >
-              <div
-                className="c2"
+              <Column
+                lg={3}
+                md={3}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={3}
+                  md={3}
+                  sm={12}
+                  type="row"
                 >
-                  <Skeleton
-                    alignRight={false}
-                    className=""
-                    colIndex={1}
-                    data={
-                      Array [
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                      ]
-                    }
-                    header="Test2"
-                    isHeader={false}
-                    rowIndex={3}
-                    size={
-                      Object {
-                        "lg": 3,
-                        "md": 3,
-                      }
-                    }
-                    skeletonOptions={
-                      Object {
-                        "numberOfRows": 5,
-                        "shape": "line",
-                        "showSkeleton": true,
-                      }
-                    }
+                  <div
+                    className="c2"
+                    type="row"
                   >
-                    <span
-                      className="Skeleton skeleton line skeleton-large"
-                      style={
-                        Object {
-                          "width": undefined,
-                        }
-                      }
+                    <div
+                      className="list-column"
                     >
-                      ‌
-                    </span>
-                  </Skeleton>
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-          <ListColumn
-            alignRight={false}
-            colIndex={2}
-            data={
-              Array [
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-              ]
-            }
-            header="Test3"
-            isHeader={false}
-            key="test-smart-list-list-item-3-2"
-            rowIndex={3}
-            size={
-              Object {
-                "lg": 3,
-                "md": 3,
+                      <Skeleton
+                        alignRight={false}
+                        className=""
+                        colIndex={1}
+                        data={
+                          Array [
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                          ]
+                        }
+                        header="Test2"
+                        isHeader={false}
+                        rowIndex={3}
+                        size={
+                          Object {
+                            "lg": 3,
+                            "md": 3,
+                          }
+                        }
+                        skeletonOptions={
+                          Object {
+                            "numberOfRows": 5,
+                            "shape": "line",
+                            "showSkeleton": true,
+                          }
+                        }
+                      >
+                        <span
+                          className="Skeleton skeleton line skeleton-large"
+                          style={
+                            Object {
+                              "width": undefined,
+                            }
+                          }
+                        >
+                          ‌
+                        </span>
+                      </Skeleton>
+                    </div>
+                  </div>
+                </Col>
+              </Column>
+            </ListColumn>
+            <ListColumn
+              alignRight={false}
+              colIndex={2}
+              data={
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ]
               }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": true,
+              header="Test3"
+              isHeader={false}
+              key="test-smart-list-list-item-3-2"
+              rowIndex={3}
+              size={
+                Object {
+                  "lg": 3,
+                  "md": 3,
+                }
               }
-            }
-          >
-            <Col
-              lg={3}
-              md={3}
-              sm={12}
-              xs={12}
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": true,
+                }
+              }
             >
-              <div
-                className="c2"
+              <Column
+                lg={3}
+                md={3}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={3}
+                  md={3}
+                  sm={12}
+                  type="row"
                 >
-                  <Skeleton
-                    alignRight={false}
-                    className=""
-                    colIndex={2}
-                    data={
-                      Array [
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                      ]
-                    }
-                    header="Test3"
-                    isHeader={false}
-                    rowIndex={3}
-                    size={
-                      Object {
-                        "lg": 3,
-                        "md": 3,
-                      }
-                    }
-                    skeletonOptions={
-                      Object {
-                        "numberOfRows": 5,
-                        "shape": "line",
-                        "showSkeleton": true,
-                      }
-                    }
+                  <div
+                    className="c2"
+                    type="row"
                   >
-                    <span
-                      className="Skeleton skeleton line skeleton-large"
-                      style={
-                        Object {
-                          "width": undefined,
-                        }
-                      }
+                    <div
+                      className="list-column"
                     >
-                      ‌
-                    </span>
-                  </Skeleton>
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-        </div>
+                      <Skeleton
+                        alignRight={false}
+                        className=""
+                        colIndex={2}
+                        data={
+                          Array [
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                          ]
+                        }
+                        header="Test3"
+                        isHeader={false}
+                        rowIndex={3}
+                        size={
+                          Object {
+                            "lg": 3,
+                            "md": 3,
+                          }
+                        }
+                        skeletonOptions={
+                          Object {
+                            "numberOfRows": 5,
+                            "shape": "line",
+                            "showSkeleton": true,
+                          }
+                        }
+                      >
+                        <span
+                          className="Skeleton skeleton line skeleton-large"
+                          style={
+                            Object {
+                              "width": undefined,
+                            }
+                          }
+                        >
+                          ‌
+                        </span>
+                      </Skeleton>
+                    </div>
+                  </div>
+                </Col>
+              </Column>
+            </ListColumn>
+          </div>
+        </Row>
       </Row>
     </ListRow>
     <ListRow
@@ -3668,8 +3951,8 @@ exports[`<SmartList /> should render skeleton 1`] = `
           }
         }
       >
-        <div
-          className="item-row cursor-auto c0"
+        <Row
+          className="item-row cursor-auto"
           onClick={[Function]}
           style={
             Object {
@@ -3677,268 +3960,299 @@ exports[`<SmartList /> should render skeleton 1`] = `
             }
           }
         >
-          <ListColumn
-            alignRight={false}
-            colIndex={0}
-            data={
-              Array [
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-              ]
-            }
-            header="Test1"
-            isHeader={false}
-            key="test-smart-list-list-item-4-0"
-            rowIndex={4}
-            size={
+          <div
+            className="item-row cursor-auto c0"
+            onClick={[Function]}
+            style={
               Object {
-                "lg": 6,
-                "md": 6,
-              }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": true,
+                "display": "flex",
               }
             }
           >
-            <Col
-              lg={6}
-              md={6}
-              sm={12}
-              xs={12}
+            <ListColumn
+              alignRight={false}
+              colIndex={0}
+              data={
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ]
+              }
+              header="Test1"
+              isHeader={false}
+              key="test-smart-list-list-item-4-0"
+              rowIndex={4}
+              size={
+                Object {
+                  "lg": 6,
+                  "md": 6,
+                }
+              }
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": true,
+                }
+              }
             >
-              <div
-                className="c1"
+              <Column
+                lg={6}
+                md={6}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={6}
+                  md={6}
+                  sm={12}
+                  type="row"
                 >
-                  <Skeleton
-                    alignRight={false}
-                    className=""
-                    colIndex={0}
-                    data={
-                      Array [
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                      ]
-                    }
-                    header="Test1"
-                    isHeader={false}
-                    rowIndex={4}
-                    size={
-                      Object {
-                        "lg": 6,
-                        "md": 6,
-                      }
-                    }
-                    skeletonOptions={
-                      Object {
-                        "numberOfRows": 5,
-                        "shape": "line",
-                        "showSkeleton": true,
-                      }
-                    }
+                  <div
+                    className="c1"
+                    type="row"
                   >
-                    <span
-                      className="Skeleton skeleton line skeleton-large"
-                      style={
-                        Object {
-                          "width": undefined,
-                        }
-                      }
+                    <div
+                      className="list-column"
                     >
-                      ‌
-                    </span>
-                  </Skeleton>
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-          <ListColumn
-            alignRight={false}
-            colIndex={1}
-            data={
-              Array [
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-              ]
-            }
-            header="Test2"
-            isHeader={false}
-            key="test-smart-list-list-item-4-1"
-            rowIndex={4}
-            size={
-              Object {
-                "lg": 3,
-                "md": 3,
+                      <Skeleton
+                        alignRight={false}
+                        className=""
+                        colIndex={0}
+                        data={
+                          Array [
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                          ]
+                        }
+                        header="Test1"
+                        isHeader={false}
+                        rowIndex={4}
+                        size={
+                          Object {
+                            "lg": 6,
+                            "md": 6,
+                          }
+                        }
+                        skeletonOptions={
+                          Object {
+                            "numberOfRows": 5,
+                            "shape": "line",
+                            "showSkeleton": true,
+                          }
+                        }
+                      >
+                        <span
+                          className="Skeleton skeleton line skeleton-large"
+                          style={
+                            Object {
+                              "width": undefined,
+                            }
+                          }
+                        >
+                          ‌
+                        </span>
+                      </Skeleton>
+                    </div>
+                  </div>
+                </Col>
+              </Column>
+            </ListColumn>
+            <ListColumn
+              alignRight={false}
+              colIndex={1}
+              data={
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ]
               }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": true,
+              header="Test2"
+              isHeader={false}
+              key="test-smart-list-list-item-4-1"
+              rowIndex={4}
+              size={
+                Object {
+                  "lg": 3,
+                  "md": 3,
+                }
               }
-            }
-          >
-            <Col
-              lg={3}
-              md={3}
-              sm={12}
-              xs={12}
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": true,
+                }
+              }
             >
-              <div
-                className="c2"
+              <Column
+                lg={3}
+                md={3}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={3}
+                  md={3}
+                  sm={12}
+                  type="row"
                 >
-                  <Skeleton
-                    alignRight={false}
-                    className=""
-                    colIndex={1}
-                    data={
-                      Array [
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                      ]
-                    }
-                    header="Test2"
-                    isHeader={false}
-                    rowIndex={4}
-                    size={
-                      Object {
-                        "lg": 3,
-                        "md": 3,
-                      }
-                    }
-                    skeletonOptions={
-                      Object {
-                        "numberOfRows": 5,
-                        "shape": "line",
-                        "showSkeleton": true,
-                      }
-                    }
+                  <div
+                    className="c2"
+                    type="row"
                   >
-                    <span
-                      className="Skeleton skeleton line skeleton-large"
-                      style={
-                        Object {
-                          "width": undefined,
-                        }
-                      }
+                    <div
+                      className="list-column"
                     >
-                      ‌
-                    </span>
-                  </Skeleton>
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-          <ListColumn
-            alignRight={false}
-            colIndex={2}
-            data={
-              Array [
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-                Object {},
-              ]
-            }
-            header="Test3"
-            isHeader={false}
-            key="test-smart-list-list-item-4-2"
-            rowIndex={4}
-            size={
-              Object {
-                "lg": 3,
-                "md": 3,
+                      <Skeleton
+                        alignRight={false}
+                        className=""
+                        colIndex={1}
+                        data={
+                          Array [
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                          ]
+                        }
+                        header="Test2"
+                        isHeader={false}
+                        rowIndex={4}
+                        size={
+                          Object {
+                            "lg": 3,
+                            "md": 3,
+                          }
+                        }
+                        skeletonOptions={
+                          Object {
+                            "numberOfRows": 5,
+                            "shape": "line",
+                            "showSkeleton": true,
+                          }
+                        }
+                      >
+                        <span
+                          className="Skeleton skeleton line skeleton-large"
+                          style={
+                            Object {
+                              "width": undefined,
+                            }
+                          }
+                        >
+                          ‌
+                        </span>
+                      </Skeleton>
+                    </div>
+                  </div>
+                </Col>
+              </Column>
+            </ListColumn>
+            <ListColumn
+              alignRight={false}
+              colIndex={2}
+              data={
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ]
               }
-            }
-            skeletonOptions={
-              Object {
-                "numberOfRows": 5,
-                "shape": "line",
-                "showSkeleton": true,
+              header="Test3"
+              isHeader={false}
+              key="test-smart-list-list-item-4-2"
+              rowIndex={4}
+              size={
+                Object {
+                  "lg": 3,
+                  "md": 3,
+                }
               }
-            }
-          >
-            <Col
-              lg={3}
-              md={3}
-              sm={12}
-              xs={12}
+              skeletonOptions={
+                Object {
+                  "numberOfRows": 5,
+                  "shape": "line",
+                  "showSkeleton": true,
+                }
+              }
             >
-              <div
-                className="c2"
+              <Column
+                lg={3}
+                md={3}
+                sm={12}
               >
-                <div
-                  className="list-column"
+                <Col
+                  lg={3}
+                  md={3}
+                  sm={12}
+                  type="row"
                 >
-                  <Skeleton
-                    alignRight={false}
-                    className=""
-                    colIndex={2}
-                    data={
-                      Array [
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                      ]
-                    }
-                    header="Test3"
-                    isHeader={false}
-                    rowIndex={4}
-                    size={
-                      Object {
-                        "lg": 3,
-                        "md": 3,
-                      }
-                    }
-                    skeletonOptions={
-                      Object {
-                        "numberOfRows": 5,
-                        "shape": "line",
-                        "showSkeleton": true,
-                      }
-                    }
+                  <div
+                    className="c2"
+                    type="row"
                   >
-                    <span
-                      className="Skeleton skeleton line skeleton-large"
-                      style={
-                        Object {
-                          "width": undefined,
-                        }
-                      }
+                    <div
+                      className="list-column"
                     >
-                      ‌
-                    </span>
-                  </Skeleton>
-                </div>
-              </div>
-            </Col>
-          </ListColumn>
-        </div>
+                      <Skeleton
+                        alignRight={false}
+                        className=""
+                        colIndex={2}
+                        data={
+                          Array [
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                            Object {},
+                          ]
+                        }
+                        header="Test3"
+                        isHeader={false}
+                        rowIndex={4}
+                        size={
+                          Object {
+                            "lg": 3,
+                            "md": 3,
+                          }
+                        }
+                        skeletonOptions={
+                          Object {
+                            "numberOfRows": 5,
+                            "shape": "line",
+                            "showSkeleton": true,
+                          }
+                        }
+                      >
+                        <span
+                          className="Skeleton skeleton line skeleton-large"
+                          style={
+                            Object {
+                              "width": undefined,
+                            }
+                          }
+                        >
+                          ‌
+                        </span>
+                      </Skeleton>
+                    </div>
+                  </div>
+                </Col>
+              </Column>
+            </ListColumn>
+          </div>
+        </Row>
       </Row>
     </ListRow>
   </div>
