@@ -17,7 +17,7 @@ export interface IStatusIndicatorProps {
     color?: Variables.Color
 
     /** Main colour of the text (and icon if no `color` provided)  */
-    textColor?: Variables.Color | 'subtle'
+    textColor?: Variables.Color
 
     /** Should the label use a hollow icon  */
     isHollow?: boolean

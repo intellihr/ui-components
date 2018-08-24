@@ -1,19 +1,19 @@
 @import '../../../common/sass/variables';
 
 :local(.StatusIndicator) {
-  font-size: .9375rem;
+  font-size: $fz-body;
   font-weight: normal;
   vertical-align: bottom;
 
   .fa {
     bottom: 2px;
-    font-size: xx-small;
-    margin-right: 3px;
+    font-size: $fz-xsmall;
+    margin-right: .5rem;
     position: relative;
   }
 
   .subtitle {
     display: block;
-    padding-left: 15px;
+    padding-left: 1rem;
   }
 }
