@@ -28,7 +28,6 @@
     <Text isInline={false} type='display-large'>
       Display Large
     </Text>
-
   </div>
 ```
 
@@ -48,8 +47,10 @@
 #### Color
 
 ```jsx
+const { Variables } = require('../../../common');
+
   <div>
-    <Text color='blue'>
+    <Text color={Variables.Color.b400}>
       Hello! I am blue text
     </Text>
   </div>
@@ -59,7 +60,7 @@
 
 ```jsx
   <Text isUpper>
-    Hello! I am text
+    Hello! You will see me in all caps
   </Text>
 ```
 
