@@ -28,14 +28,18 @@ const StyledComment = styled.div`
 
       >.comment-header{
         >.comment-header-person-name {
-          font-weight: 600;
+          display: inline-block; // This is added for the weird span -2px height
+          font-size: ${Variables.FontSize.fzBody}px;
+          font-weight: ${Variables.FontWeight.fwMedium};
+          line-height: ${Variables.LineHeight.lhBody}px;
         }
       }
 
       >.comment-header-date {
         color: ${Variables.Color.n600};
         flex-grow: 1;
-        font-size: 80%;
+        font-size: ${Variables.FontSize.fzXSmall}px;
+        line-height: ${Variables.LineHeight.lhXSmall}px;
         margin-left: .4rem;
 
         >* {
@@ -78,8 +82,8 @@ const CommentActionMenuToggleButton = styled.button`
   }
 
   .fa {
-    font-size: 1rem;
-    line-height: 1;
+    font-size: ${Variables.FontSize.fzBody}px;
+    line-height: ${Variables.LineHeight.lhBody}px;
     margin: 0;
     width: 1.3em;
   }
