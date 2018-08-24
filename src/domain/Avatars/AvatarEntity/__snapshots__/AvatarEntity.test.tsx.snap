@@ -27,20 +27,22 @@ exports[`<AvatarEntity /> should render a avatar entity with lots of data 1`] = 
         color="#667380"
         isInline={false}
         isTruncated={true}
-        size="xsmall"
+        type="xsmall"
       >
         Guy Killer
       </class_1>
     </styled.span>
-    <class_1
-      color="#667380"
-      isInline={false}
-      isTruncated={true}
-      size="xsmall"
-      weight="heavy"
-    >
-      In Cinemas 2019
-    </class_1>
+    <styled.span>
+      <class_1
+        color="#667380"
+        isInline={false}
+        isTruncated={true}
+        type="xsmall"
+        weight="heavy"
+      >
+        In Cinemas 2019
+      </class_1>
+    </styled.span>
   </styled.div>
 </styled.div>
 `;
@@ -116,7 +118,7 @@ exports[`<AvatarEntity /> should render a compact avatar entity with lots of dat
         color="#667380"
         isInline={true}
         isTruncated={true}
-        size="xsmall"
+        type="xsmall"
       >
         (Guy Killer)
       </class_1>

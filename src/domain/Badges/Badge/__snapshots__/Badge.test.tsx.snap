@@ -106,7 +106,7 @@ exports[`<Badge /> should render a small badge 1`] = `
 
 exports[`<Badge /> should render a spinning badge 1`] = `
 .c1.fa {
-  margin-right: 3px;
+  margin-right: .25rem;
   font-size: 1rem;
 }
 

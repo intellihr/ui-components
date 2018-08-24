@@ -38,7 +38,7 @@ exports[`<Legend /> should render a legend 1`] = `
 }
 
 .c1.fa {
-  margin-right: 3px;
+  margin-right: .25rem;
   font-size: .75rem;
 }
 
@@ -47,7 +47,7 @@ exports[`<Legend /> should render a legend 1`] = `
 }
 
 .c3.fa {
-  margin-right: 3px;
+  margin-right: .25rem;
   font-size: .75rem;
 }
 
