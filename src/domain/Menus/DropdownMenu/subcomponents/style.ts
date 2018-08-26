@@ -138,11 +138,13 @@ function styleForSectionType (section: IStyledSectionProps) {
           &:focus,
           &:hover {
             background-color: ${Variables.Color.r100};
+            color: ${Variables.Color.r600};
           }
 
           &:active,
           &.active {
             background-color: ${Variables.Color.r200};
+            color: ${Variables.Color.r600};
           }
         `}
       }
