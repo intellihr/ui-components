@@ -35,7 +35,7 @@
 />
 ```
 
-### Own comment with some actions attached to it
+#### Own comment with some actions attached to it
 ```jsx
 <Comment
   comment={{
@@ -64,7 +64,7 @@
 />
 ```
 
-### Comments that have a header defined will not render actionMenu and will be considered a system generated comment
+#### Comments that have a header defined will not render actionMenu and will be considered a system generated comment
 ```jsx
 const { Text } = require('@Domain/Typographies');
 const { Variables } = require('@Common');
