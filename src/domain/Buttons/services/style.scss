@@ -658,7 +658,7 @@ $button-styles: (
   // Legacy button for removing rows of data
   &.remove {
     @include add-button-style(
-        map-get($button-styles, delete-subtle)
+      map-get($button-styles, delete-subtle)
     );
 
     border-radius: 50%;
