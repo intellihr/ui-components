@@ -32,7 +32,7 @@ class DefaultsProvider extends React.PureComponent<IDefaultsProviders> {
           ...value
         }}
       >
-        <GridProvider>{children}</GridProvider>
+        {children}
       </DefaultsContext.Provider>
     )
   }
