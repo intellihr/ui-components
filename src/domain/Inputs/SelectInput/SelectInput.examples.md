@@ -1,4 +1,4 @@
-# Select Input
+#### Select Input
 
 ```jsx
 initialState = { value: null };
@@ -22,7 +22,7 @@ initialState = { value: null };
   />
 ```
 
-# Select Input with ability to create new elements
+#### Select Input with ability to create new elements
 
 ```jsx
 const options = [

@@ -1,6 +1,4 @@
-# Indented Element
-
-## Basic usage
+#### Basic usage
 
 ```jsx
 <div>
@@ -47,7 +45,7 @@
 </div>
 ```
 
-## Indented select input options
+#### Indented select input options
 
 ```jsx
 initialState = { value: null };
@@ -94,7 +92,7 @@ class CustomOption extends React.PureComponent {
   />
 ```
 
-## Indented smart list cell content
+#### Indented smart list cell content
 
 ```jsx
 const { ListColumn } = require('@Domain/Lists');

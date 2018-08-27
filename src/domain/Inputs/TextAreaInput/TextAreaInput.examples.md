@@ -1,23 +1,23 @@
-# Text Area Input
+#### Text Area Input
 
 ```jsx
 initialState = { value: '' };
 
 <div>
-  <TextAreaInput 
+  <TextAreaInput
     value={state.value}
     handleChange={(e) => setState({value: e.value})}
   />
 </div>
 ```
 
-Customize with props
+#### Customize with props
 
 ```jsx
 initialState = { value: '' };
 
 <div>
-  <TextAreaInput 
+  <TextAreaInput
     value={state.value}
     handleChange={(e) => setState({value: e.value})}
     rows={8}
