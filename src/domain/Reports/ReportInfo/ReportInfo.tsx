@@ -18,8 +18,8 @@ export interface IHighlightSection {
 
 export interface IReportInfo {
   description: string
-  highlights: IHighlightSection[]
-  textColor: Variables.Color
+  highlights?: IHighlightSection[]
+  textColor?: Variables.Color
 }
 
 const HighlightSection = (props: IHighlightSection) => {
@@ -47,7 +47,7 @@ export class ReportInfo extends React.PureComponent <IReportInfo> {
       highlights
     } = this.props
 
-    if (isEmpty(highlights)) {
+    if (!highlights || isEmpty(highlights)) {
       return null
     }
 

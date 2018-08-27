@@ -9,7 +9,7 @@
 #### Report info with text color
 
 ```jsx
-const { Variables } = require('../../../common');
+const { Variables } = require('@Common');
 
 <ReportInfo
   description="Hello! I am blue report info."
