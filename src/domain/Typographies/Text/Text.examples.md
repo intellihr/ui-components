@@ -80,8 +80,10 @@ const { Variables } = require('../../../common');
 #### Mix and Match
 
 ```jsx
+const { Variables } = require('../../../common');
+
 <div>
-  <Text isInline={false} color='red'>
+  <Text isInline={false} color={Variables.Color.r400}>
     Hello!
   </Text>
   <Text type='small' weight='heavy' isUpper>

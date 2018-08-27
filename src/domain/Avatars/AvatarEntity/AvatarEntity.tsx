@@ -3,8 +3,7 @@ import {
   AvatarContainer,
   AvatarEntityInfo,
   AvatarEntityWrapper,
-  SecondaryTextWrapper,
-  TertiaryTextWrapper
+  SecondaryTextWrapper
 } from './style'
 import { Avatar, IAvatarProps } from '../'
 import { Text } from '../../Typographies'
@@ -108,7 +107,6 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
     }
 
     return (
-      <TertiaryTextWrapper>
         <Text
           color={Variables.Color.n600}
           type='xsmall'
@@ -118,7 +116,6 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
         >
           {tertiaryText}
         </Text>
-      </TertiaryTextWrapper>
     )
   }
 

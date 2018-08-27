@@ -25,9 +25,7 @@ export interface ITextProps {
 export class TextComponent extends React.PureComponent<ITextProps> {
   public static defaultProps: Partial<ITextProps> = {
     isInline: true,
-    color: Variables.Color.n800,
-    type: 'body',
-    weight: 'normal'
+    type: 'body'
   }
 
   public render (): JSX.Element {

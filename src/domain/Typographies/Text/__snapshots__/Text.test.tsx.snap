@@ -9,7 +9,7 @@ exports[`<Text /> should render a non-inline text element 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
-  color: #262D33;
+  color: #424F5C;
   font-weight: 400;
   display: block;
 }
@@ -29,20 +29,15 @@ exports[`<Text /> should render a non-inline text element 1`] = `
     }
   >
     <TextComponent
-      color="#262D33"
       isInline={false}
       type="body"
-      weight="normal"
     >
       <styled.span
-        color="#262D33"
         isInline={false}
         type="body"
-        weight="normal"
       >
         <span
           className="c0"
-          color="#262D33"
           type="body"
         >
           Hello, world!
@@ -85,6 +80,56 @@ exports[`<Text /> should render a skeleton element if skeletonOptions are passed
 </class_1>
 `;
 
+exports[`<Text /> should render an element with colored text 1`] = `
+.c0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #F25749;
+  font-weight: 400;
+}
+
+<class_1
+  color="#F25749"
+>
+  <Skeleton
+    className=""
+    color="#F25749"
+    skeletonOptions={
+      Object {
+        "shape": "line",
+        "showSkeleton": false,
+        "size": "large",
+      }
+    }
+  >
+    <TextComponent
+      color="#F25749"
+      isInline={true}
+      type="body"
+    >
+      <styled.span
+        color="#F25749"
+        isInline={true}
+        type="body"
+      >
+        <span
+          className="c0"
+          color="#F25749"
+          type="body"
+        >
+          Hello, world!
+        </span>
+      </styled.span>
+    </TextComponent>
+  </Skeleton>
+</class_1>
+`;
+
 exports[`<Text /> should render an element with heading text 1`] = `
 .c0 {
   font-family: 'Open Sans',Arial,sans-serif;
@@ -94,8 +139,8 @@ exports[`<Text /> should render an element with heading text 1`] = `
   -moz-letter-spacing: -.02em;
   -ms-letter-spacing: -.02em;
   letter-spacing: -.02em;
-  color: #262D33;
-  font-weight: 400;
+  color: #424F5C;
+  font-weight: 600;
 }
 
 <class_1
@@ -113,20 +158,15 @@ exports[`<Text /> should render an element with heading text 1`] = `
     type="heading"
   >
     <TextComponent
-      color="#262D33"
       isInline={true}
       type="heading"
-      weight="normal"
     >
       <styled.span
-        color="#262D33"
         isInline={true}
         type="heading"
-        weight="normal"
       >
         <span
           className="c0"
-          color="#262D33"
           type="heading"
         >
           Hello, world!
@@ -146,7 +186,7 @@ exports[`<Text /> should render an element with heavy text 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
-  color: #262D33;
+  color: #424F5C;
   font-weight: 600;
 }
 
@@ -165,20 +205,17 @@ exports[`<Text /> should render an element with heavy text 1`] = `
     weight="heavy"
   >
     <TextComponent
-      color="#262D33"
       isInline={true}
       type="body"
       weight="heavy"
     >
       <styled.span
-        color="#262D33"
         isInline={true}
         type="body"
         weight="heavy"
       >
         <span
           className="c0"
-          color="#262D33"
           type="body"
         >
           Hello, world!
@@ -217,73 +254,16 @@ exports[`<Text /> should render an element with small text 1`] = `
     type="small"
   >
     <TextComponent
-      color="#262D33"
       isInline={true}
       type="small"
-      weight="normal"
     >
       <styled.span
-        color="#262D33"
         isInline={true}
         type="small"
-        weight="normal"
       >
         <span
           className="c0"
-          color="#262D33"
           type="small"
-        >
-          Hello, world!
-        </span>
-      </styled.span>
-    </TextComponent>
-  </Skeleton>
-</class_1>
-`;
-
-exports[`<Text /> should render an element with subtle text 1`] = `
-.c0 {
-  font-family: 'Open Sans',Arial,sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #424F5C;
-  font-weight: 400;
-}
-
-<class_1
-  color="#424F5C"
->
-  <Skeleton
-    className=""
-    color="#424F5C"
-    skeletonOptions={
-      Object {
-        "shape": "line",
-        "showSkeleton": false,
-        "size": "large",
-      }
-    }
-  >
-    <TextComponent
-      color="#424F5C"
-      isInline={true}
-      type="body"
-      weight="normal"
-    >
-      <styled.span
-        color="#424F5C"
-        isInline={true}
-        type="body"
-        weight="normal"
-      >
-        <span
-          className="c0"
-          color="#424F5C"
-          type="body"
         >
           Hello, world!
         </span>
@@ -302,7 +282,7 @@ exports[`<Text /> should render an element with text 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
-  color: #262D33;
+  color: #424F5C;
   font-weight: 400;
 }
 
@@ -318,20 +298,15 @@ exports[`<Text /> should render an element with text 1`] = `
     }
   >
     <TextComponent
-      color="#262D33"
       isInline={true}
       type="body"
-      weight="normal"
     >
       <styled.span
-        color="#262D33"
         isInline={true}
         type="body"
-        weight="normal"
       >
         <span
           className="c0"
-          color="#262D33"
           type="body"
         >
           Hello, world!
@@ -351,7 +326,7 @@ exports[`<Text /> should render an element with the text converted to uppercase 
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
-  color: #262D33;
+  color: #424F5C;
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -371,22 +346,17 @@ exports[`<Text /> should render an element with the text converted to uppercase 
     }
   >
     <TextComponent
-      color="#262D33"
       isInline={true}
       isUpper={true}
       type="body"
-      weight="normal"
     >
       <styled.span
-        color="#262D33"
         isInline={true}
         isUpper={true}
         type="body"
-        weight="normal"
       >
         <span
           className="c0"
-          color="#262D33"
           type="body"
         >
           Hello, world!

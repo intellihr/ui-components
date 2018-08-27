@@ -21,9 +21,9 @@ describe('<Text />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render an element with subtle text`, () => {
+  it(`should render an element with colored text`, () => {
     const wrapper = mount(
-      <Text color={Variables.Color.n700}>Hello, world!</Text>
+      <Text color={Variables.Color.r400}>Hello, world!</Text>
     )
 
     expect(wrapper).toMatchSnapshot()
