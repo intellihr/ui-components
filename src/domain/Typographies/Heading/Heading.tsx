@@ -37,7 +37,7 @@ export class HeadingComponent extends React.PureComponent<IHeadingProps> {
 
     const HeadingTag = this.headingTag
 
-    console.warn("Warning: Heading component has been depracated and will be removed in a future release.")
+    console.warn('Warning: Heading component has been depracated and will be removed in a future release.')
 
     return (
       <HeadingTag
