@@ -210,9 +210,9 @@
   dependencies:
     loader-utils "^1.1.0"
 
-"@intellihr/icons@0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@intellihr/icons/-/icons-0.0.1.tgz#4c8acef914c6d9e587dbe736e8eb388dbbfadb5b"
+"@intellihr/icons@0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@intellihr/icons/-/icons-0.0.5.tgz#78eb279578406517142d4ea60978a7fd6a62e6f1"
 
 "@intellihr/standard-tslint@0.0.2":
   version "0.0.2"
