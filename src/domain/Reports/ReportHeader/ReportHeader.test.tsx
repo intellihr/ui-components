@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 import { ReportHeader } from './'
-import {ReportInfo} from '../ReportInfo'
+import { ReportInfo } from '../ReportInfo'
 
 describe('<ReportHeader />', () => {
   it(`should render ReportHeader with info`, () => {

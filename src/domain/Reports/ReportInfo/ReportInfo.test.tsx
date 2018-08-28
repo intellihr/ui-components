@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme'
 import React from 'react'
-import {ReportInfo} from './ReportInfo'
-import {Variables} from '../../../common'
+import { ReportInfo } from './ReportInfo'
+import { Variables } from '../../../common'
 
 describe('<ReportInfo />', () => {
     it('should render a ReportInfo', () => {
