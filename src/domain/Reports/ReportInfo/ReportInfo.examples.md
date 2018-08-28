@@ -9,11 +9,11 @@
 #### Report info with text color
 
 ```jsx
-const { i400 } = require('@Common/sass/variables.scss');
+const { Variables } = require('@Common');
 
 <ReportInfo
   description="Hello! I am blue report info."
-  textColor={i400}
+  textColor={Variables.Color.i400}
 />
 ```
 

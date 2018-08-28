@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Pill /> should render an attribute label 1`] = `
+exports[`<Pill /> should render a pill 1`] = `
 <span
   className="pill alert small"
 >
@@ -8,7 +8,7 @@ exports[`<Pill /> should render an attribute label 1`] = `
 </span>
 `;
 
-exports[`<Pill /> should render an attribute label with default values 1`] = `
+exports[`<Pill /> should render a pill with default values 1`] = `
 <span
   className="pill neutral small"
 >

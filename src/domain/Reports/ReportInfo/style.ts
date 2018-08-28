@@ -3,7 +3,7 @@ import styled, { StyledComponentClass, css } from 'styled-components'
 import { Variables } from '../../../common'
 
 export interface IMainBox {
-  textColor: string
+  textColor?: Variables.Color
 }
 
 export const MainBox = styled.div`

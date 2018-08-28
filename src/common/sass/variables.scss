@@ -7,10 +7,10 @@
 // --------------
 // Breakpoints
 // --------------
-$breakpoint-min: 0;
-$breakpoint-tablet: 640px;
-$breakpoint-desktop: 1024px;
-$breakpoint-big-desktop: 1440px;
+$breakpoint-min:          0;
+$breakpoint-tablet:       640px;
+$breakpoint-desktop:      1024px;
+$breakpoint-big-desktop:  1440px;
 
 // --------------
 // Colors
@@ -82,19 +82,44 @@ $y400: #FFE226;
 $y500: #BFA91C;
 $y600: #7F7012;
 
+// --------------
+// Font Sizes
+// --------------
+$fz-xsmall:               12px;
+$fz-small:                14px;
+$fz-body:                 16px;
+$fz-heading:              18px;
+$fz-display:              24px;
+$fz-display-large:        36px;
+
+// --------------
+// Font Weights
+// --------------
+$fw-regular:              400;
+$fw-medium:               600;
+
+// --------------
+// Line Heights
+// --------------
+$lh-xsmall:               18px;
+$lh-small:                20px;
+$lh-body:                 24px;
+$lh-heading:              24px;
+$lh-display:              28px;
+$lh-display-large:        40px;
 
 // --------------
 // Style
 // --------------
-$border-radius: 4px;
+$border-radius:           4px;
 
 // --------------
 // Z Indexes
 // --------------
 $z-index-absolute-bottom: -9999;
-$z-index-default: 0;
-$z-index-modal: 1000;
-$z-index-date-input: 2000;
-$z-index-dropdown-menu: 3000;
-$z-index-toaster: 4000;
-$z-index-absolute-top: 9999;
+$z-index-default:         0;
+$z-index-modal:           1000;
+$z-index-date-input:      2000;
+$z-index-dropdown-menu:   3000;
+$z-index-toaster:         4000;
+$z-index-absolute-top:    9999;

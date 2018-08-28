@@ -1,214 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ReportHeader /> should render ReportHeader with info 1`] = `
-.c5 {
-  width: 1.28571em;
-}
-
-.c5.fa {
-  margin-right: 3px;
-  font-size: 1.3125rem;
-}
-
-.c2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #667380;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  height: 40px;
-  padding: 5px;
-  text-transform: uppercase;
-  width: 300px;
-}
-
-.c2:hover {
-  color: #432DF3;
-  cursor: pointer;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  font-size: 14px;
-  font-weight: 600;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c1 {
-  color: #424F5C;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.c4 {
-  font-size: 10px;
-}
-
-.c3 {
-  padding: 0 10px;
-}
-
-<ReportHeader
-  primaryText="How To Read This Chart"
-  renderHelperContent={
-    <span>
-       I am help text 
-    </span>
-  }
-  renderTitle={
-    <h3>
-       I am header 
-    </h3>
-  }
-  secondaryText="Hide Info"
-  showHelper={true}
->
-  <div>
+<div>
+  <styled.div>
     <styled.div>
-      <div
-        className="c0"
-      >
-        <styled.div>
-          <div
-            className="c1"
-          >
-            <h3>
-               I am header 
-            </h3>
-          </div>
-        </styled.div>
-        <styled.div
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="c2"
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            <styled.span>
-              <span
-                className="c3"
-              />
-            </styled.span>
-            <InfoIcon>
-              <styled.div>
-                <div
-                  className="c4"
-                >
-                  <FontAwesomeIcon
-                    size="large"
-                    type="info-circle"
-                  >
-                    <Icon
-                      isSpinning={false}
-                      size="large"
-                      type="fa-info-circle"
-                    >
-                      <styled.i
-                        aria-hidden={true}
-                        className="icon fa fa-info-circle"
-                        size="large"
-                      >
-                        <i
-                          aria-hidden={true}
-                          className="icon fa fa-info-circle c5"
-                          size="large"
-                        />
-                      </styled.i>
-                    </Icon>
-                  </FontAwesomeIcon>
-                </div>
-              </styled.div>
-            </InfoIcon>
-          </div>
-        </styled.div>
-      </div>
+      <h3>
+         I am header 
+      </h3>
     </styled.div>
-  </div>
-</ReportHeader>
+    <styled.div
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <styled.span />
+      <InfoIcon />
+    </styled.div>
+  </styled.div>
+</div>
+`;
+
+exports[`<ReportHeader /> should render ReportHeader with info 2`] = `
+<div>
+  <styled.div>
+    <styled.div>
+      <h3>
+         I am header 
+      </h3>
+    </styled.div>
+    <styled.div
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <styled.span />
+      <InfoIcon />
+    </styled.div>
+  </styled.div>
+  <styled.div>
+    <ReportInfo
+      description="I am helper text"
+      textColor="#262D33"
+    />
+  </styled.div>
+</div>
 `;
 
 exports[`<ReportHeader /> should render ReportHeader without info 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  font-size: 14px;
-  font-weight: 600;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c1 {
-  color: #424F5C;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-<ReportHeader
-  primaryText="How To Read This Chart"
-  renderHelperContent={
-    <span>
-       I am help text 
-    </span>
-  }
-  renderTitle={
-    <h3>
-       I am header 
-    </h3>
-  }
-  secondaryText="Hide Info"
-  showHelper={false}
->
-  <div>
+<div>
+  <styled.div>
     <styled.div>
-      <div
-        className="c0"
-      >
-        <styled.div>
-          <div
-            className="c1"
-          >
-            <h3>
-               I am header 
-            </h3>
-          </div>
-        </styled.div>
-      </div>
+      <h3>
+         I am header 
+      </h3>
     </styled.div>
-  </div>
-</ReportHeader>
+  </styled.div>
+</div>
+`;
+
+exports[`<ReportHeader /> should render ReportHeader without info 2`] = `
+<div>
+  <styled.div>
+    <styled.div>
+      <h3>
+         I am header 
+      </h3>
+    </styled.div>
+  </styled.div>
+</div>
 `;

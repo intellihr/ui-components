@@ -3,17 +3,27 @@
 exports[`<Field /> should render a Field component, creating a Text child with the provided number 1`] = `
 .c0 {
   font-family: 'Open Sans',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
   color: #667380;
   font-weight: 400;
   display: block;
-  font-size: .875rem;
 }
 
 .c1 {
   font-family: 'Open Sans',Arial,sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
   color: #262D33;
   font-weight: 400;
-  font-size: 1rem;
 }
 
 <Field
@@ -23,105 +33,78 @@ exports[`<Field /> should render a Field component, creating a Text child with t
     <div
       className=""
     >
-      <class_1
+      <Text
         className="label-component"
-        color="subtle"
+        color="#667380"
         isInline={false}
-        size="small"
-      >
-        <Skeleton
-          className="label-component"
-          color="subtle"
-          isInline={false}
-          size="small"
-          skeletonOptions={
-            Object {
-              "shape": "line",
-              "showSkeleton": false,
-              "size": "large",
-            }
-          }
-        >
-          <TextComponent
-            className="label-component"
-            color="subtle"
-            isInline={false}
-            size="small"
-            weight="normal"
-          >
-            <styled.span
-              className="label-component"
-              color="subtle"
-              isInline={false}
-              size="small"
-              weight="normal"
-            >
-              <span
-                className="label-component c0"
-                color="subtle"
-                size="small"
-              >
-                FTE
-              </span>
-            </styled.span>
-          </TextComponent>
-        </Skeleton>
-      </class_1>
-    </div>
-  </styled.div>
-  <class_1
-    key=".0"
-  >
-    <Skeleton
-      className=""
-      skeletonOptions={
-        Object {
-          "shape": "line",
-          "showSkeleton": false,
-          "size": "large",
-        }
-      }
-    >
-      <TextComponent
-        color="#262D33"
-        isInline={true}
-        size="medium"
-        weight="normal"
+        tag="span"
+        type="small"
       >
         <styled.span
-          color="#262D33"
-          isInline={true}
-          size="medium"
-          weight="normal"
+          className="label-component"
+          color="#667380"
+          isInline={false}
+          type="small"
         >
           <span
-            className="c1"
-            color="#262D33"
-            size="medium"
+            className="label-component c0"
+            color="#667380"
+            type="small"
           >
-            1.000
+            FTE
           </span>
         </styled.span>
-      </TextComponent>
-    </Skeleton>
-  </class_1>
+      </Text>
+    </div>
+  </styled.div>
+  <Text
+    color="#262D33"
+    isInline={true}
+    key=".0"
+    tag="span"
+    type="body"
+  >
+    <styled.span
+      color="#262D33"
+      isInline={true}
+      type="body"
+    >
+      <span
+        className="c1"
+        color="#262D33"
+        type="body"
+      >
+        1.000
+      </span>
+    </styled.span>
+  </Text>
 </Field>
 `;
 
 exports[`<Field /> should render a Field component, creating a Text child with the provided text 1`] = `
 .c0 {
   font-family: 'Open Sans',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
   color: #667380;
   font-weight: 400;
   display: block;
-  font-size: .875rem;
 }
 
 .c1 {
   font-family: 'Open Sans',Arial,sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
   color: #262D33;
   font-weight: 400;
-  font-size: 1rem;
 }
 
 <Field
@@ -131,98 +114,66 @@ exports[`<Field /> should render a Field component, creating a Text child with t
     <div
       className=""
     >
-      <class_1
+      <Text
         className="label-component"
-        color="subtle"
+        color="#667380"
         isInline={false}
-        size="small"
-      >
-        <Skeleton
-          className="label-component"
-          color="subtle"
-          isInline={false}
-          size="small"
-          skeletonOptions={
-            Object {
-              "shape": "line",
-              "showSkeleton": false,
-              "size": "large",
-            }
-          }
-        >
-          <TextComponent
-            className="label-component"
-            color="subtle"
-            isInline={false}
-            size="small"
-            weight="normal"
-          >
-            <styled.span
-              className="label-component"
-              color="subtle"
-              isInline={false}
-              size="small"
-              weight="normal"
-            >
-              <span
-                className="label-component c0"
-                color="subtle"
-                size="small"
-              >
-                Position Title
-              </span>
-            </styled.span>
-          </TextComponent>
-        </Skeleton>
-      </class_1>
-    </div>
-  </styled.div>
-  <class_1
-    key=".0"
-  >
-    <Skeleton
-      className=""
-      skeletonOptions={
-        Object {
-          "shape": "line",
-          "showSkeleton": false,
-          "size": "large",
-        }
-      }
-    >
-      <TextComponent
-        color="#262D33"
-        isInline={true}
-        size="medium"
-        weight="normal"
+        tag="span"
+        type="small"
       >
         <styled.span
-          color="#262D33"
-          isInline={true}
-          size="medium"
-          weight="normal"
+          className="label-component"
+          color="#667380"
+          isInline={false}
+          type="small"
         >
           <span
-            className="c1"
-            color="#262D33"
-            size="medium"
+            className="label-component c0"
+            color="#667380"
+            type="small"
           >
-            Chief Executive Officer
+            Position Title
           </span>
         </styled.span>
-      </TextComponent>
-    </Skeleton>
-  </class_1>
+      </Text>
+    </div>
+  </styled.div>
+  <Text
+    color="#262D33"
+    isInline={true}
+    key=".0"
+    tag="span"
+    type="body"
+  >
+    <styled.span
+      color="#262D33"
+      isInline={true}
+      type="body"
+    >
+      <span
+        className="c1"
+        color="#262D33"
+        type="body"
+      >
+        Chief Executive Officer
+      </span>
+    </styled.span>
+  </Text>
 </Field>
 `;
 
 exports[`<Field /> should render a Field component, with the provided component child 1`] = `
 .c0 {
   font-family: 'Open Sans',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
   color: #667380;
   font-weight: 400;
   display: block;
-  font-size: .875rem;
 }
 
 <Field
@@ -232,50 +183,28 @@ exports[`<Field /> should render a Field component, with the provided component 
     <div
       className=""
     >
-      <class_1
+      <Text
         className="label-component"
-        color="subtle"
+        color="#667380"
         isInline={false}
-        size="small"
+        tag="span"
+        type="small"
       >
-        <Skeleton
+        <styled.span
           className="label-component"
-          color="subtle"
+          color="#667380"
           isInline={false}
-          size="small"
-          skeletonOptions={
-            Object {
-              "shape": "line",
-              "showSkeleton": false,
-              "size": "large",
-            }
-          }
+          type="small"
         >
-          <TextComponent
-            className="label-component"
-            color="subtle"
-            isInline={false}
-            size="small"
-            weight="normal"
+          <span
+            className="label-component c0"
+            color="#667380"
+            type="small"
           >
-            <styled.span
-              className="label-component"
-              color="subtle"
-              isInline={false}
-              size="small"
-              weight="normal"
-            >
-              <span
-                className="label-component c0"
-                color="subtle"
-                size="small"
-              >
-                Position Title
-              </span>
-            </styled.span>
-          </TextComponent>
-        </Skeleton>
-      </class_1>
+            Position Title
+          </span>
+        </styled.span>
+      </Text>
     </div>
   </styled.div>
   <p

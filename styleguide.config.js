@@ -32,7 +32,7 @@ module.exports = {
         },
         {
           name: 'Colors',
-          content: 'src/domain/Colors/Color/Color.examples.md'
+          content: 'src/domain/Internals/ExampleColorGrid/ExampleColorGrid.examples.md'
         }
       ]
     },
@@ -220,7 +220,6 @@ module.exports = {
           name: 'Typographies',
           components: [
             'src/domain/Typographies/FormattedText/FormattedText',
-            'src/domain/Typographies/Heading/Heading',
             'src/domain/Typographies/Text/Text'
           ]
         }

@@ -113,7 +113,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
 }
 
 .c0.fa {
-  margin-right: 3px;
+  margin-right: .25rem;
   font-size: 1rem;
 }
 

@@ -12,9 +12,17 @@ const BadgeWrapper = styled.span`
     background-color: ${props.backgroundColor};
   `}
 
-  ${(props: IBadgeWrapper) => props.color && css`
-    color: ${props.color};
-  `}
+  ${(props: IBadgeWrapper) => {
+    if (props.color) {
+      return css`
+        color: ${props.color};
+      `
+    }
+
+    return css`
+      color: ${Variables.Color.n700};
+    `
+  }}
 
   &, .fa {
   ${(props: IBadgeWrapper) => {
@@ -47,7 +55,6 @@ const BadgeWrapper = styled.span`
   box-shadow: 0 2px 2px rgba(0,0,0,0.24);
   border: 1px solid ${Variables.Color.n400};
   border-radius: 50%;
-  color: ${Variables.Color.n700};
   display: inline-block;
   font-weight: 600;
   text-align: center;
@@ -55,6 +62,9 @@ const BadgeWrapper = styled.span`
 
   .refresh-icon {
     background-color: transparent;
+    position: relative;
+    top: -1px;
+    left: -1px;
   }
 `
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import { TextWrapper } from './style'
-import { withSkeleton, ISkeletonComponentProps } from '../../Skeletons'
 import { Variables } from '../../../common'
 
 export interface ITextProps {
@@ -12,50 +11,63 @@ export interface ITextProps {
   isUpper?: boolean
   /** Specify the text font weight */
   weight?: 'normal' | 'heavy'
-  /** Specify the size of text to use */
-  size?: 'xsmall' | 'small' | 'medium' | 'large'
+  /** Specify the type of text to use */
+  type?: 'xsmall' | 'small' | 'body' | 'heading' | 'display' | 'display-large'
   /** If true, will truncate overflowing text */
   isTruncated?: boolean
   /** If true, will display the text inline */
   isInline?: boolean
   /** Color of the text */
-  color?: Variables.Color | 'subtle'
+  color?: Variables.Color
+  /** Optional header tag to render the element with */
+  tag?: 'h1' | 'h2' | 'h3' | 'p' | 'span'
 }
 
-export class TextComponent extends React.PureComponent<ITextProps> {
+export class Text extends React.PureComponent<ITextProps> {
   public static defaultProps: Partial<ITextProps> = {
     isInline: true,
-    size: 'medium',
-    weight: 'normal',
-    color: Variables.Color.n800
+    type: 'body',
+    tag: 'span'
+  }
+
+  get textTag (): any {
+    const {
+      tag
+    } = this.props
+
+    if (tag) {
+      return TextWrapper.withComponent(tag)
+    }
+
+    return TextWrapper
   }
 
   public render (): JSX.Element {
     const {
       children,
       className,
+      type,
       weight,
       isUpper,
-      size,
       isTruncated,
       isInline,
       color
     } = this.props
 
+    const TextTag = this.textTag
+
     return (
-      <TextWrapper
+      <TextTag
+        type={type}
         color={color}
         isInline={isInline}
         weight={weight}
         isUpper={isUpper}
-        size={size}
         isTruncated={isTruncated}
         className={className}
       >
         {children}
-      </TextWrapper>
+      </TextTag>
     )
   }
 }
-
-export const Text: React.ComponentClass<ITextProps & ISkeletonComponentProps> = withSkeleton(TextComponent)

@@ -44,7 +44,7 @@ const StyledIcon = styled.i`
   `}
 
   &.fa {
-    margin-right: 3px;
+    margin-right: .25rem;
   ${(props: IStyledIconProps) => {
     if (props.customSize) {
       return `

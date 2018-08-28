@@ -1,26 +1,28 @@
 #### Simple Badge
 
 ```jsx
+const { Variables } = require('../../../common');
+
 <div>
   <Badge
     label={6}
     size='small'
-    backgroundColor='rgb(71, 82, 93)'
-    color='white'
+    backgroundColor={Variables.Color.n700}
+    color={Variables.Color.n100}
   />
-  
+
   <Badge
     label={6}
     size='medium'
-    backgroundColor='rgb(71, 82, 93)'
-    color='white'
+    backgroundColor={Variables.Color.n700}
+    color={Variables.Color.n100}
   />
-  
+
   <Badge
     label={6}
     size='large'
-    backgroundColor='rgb(71, 82, 93)'
-    color='white'
+    backgroundColor={Variables.Color.n700}
+    color={Variables.Color.n100}
   />
 </div>
 ```
@@ -34,13 +36,13 @@
     label={6}
     size='small'
   />
-  
+
   <Badge
     pending
     label={6}
     size='medium'
   />
-  
+
   <Badge
     pending
     label={6}

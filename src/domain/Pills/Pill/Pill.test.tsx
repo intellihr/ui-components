@@ -4,7 +4,7 @@ import React from 'react'
 import { Pill } from './Pill'
 
 describe('<Pill />', () => {
-  it('should render an attribute label with default values', () => {
+  it('should render a pill with default values', () => {
     const wrapper = shallow(
       <Pill
         text='Test'
@@ -14,7 +14,7 @@ describe('<Pill />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should render an attribute label', () => {
+  it('should render a pill', () => {
     const wrapper = shallow(
       <Pill
         text='Test'
