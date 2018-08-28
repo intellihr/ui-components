@@ -99,7 +99,7 @@ export enum FontWeight {
 }
 
 export enum LineHeight {
-  lhXSmall =          20,
+  lhXSmall =          18,
   lhSmall =           20,
   lhBody =            24,
   lhHeading =         24,

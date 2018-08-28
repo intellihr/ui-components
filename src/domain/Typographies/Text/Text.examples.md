@@ -31,6 +31,20 @@
   </div>
 ```
 
+#### Tags
+A tag can be provided to turn any of the Text options into a Heading, or paragraph tag. By default Text is a span.
+
+```jsx
+  <div>
+    <Text tag='h1' type='display-large'>
+      Inspect me! I'm a h1 tag
+    </Text>
+    <Text tag='p' type='body'>
+      Inspect me! I'm a p tag
+    </Text>
+  </div>
+```
+
 #### Weight
 
 ```jsx
@@ -90,18 +104,4 @@ const { Variables } = require('../../../common');
     I am text
   </Text>
 </div>
-```
-
-#### Skeleton Text
-
-```jsx
-  <Text
-    skeletonOptions={{
-      showSkeleton: true,
-      shape: 'line',
-      width: 200
-    }}
-  >
-    Hello! I am text
-  </Text>
 ```
