@@ -1,6 +1,5 @@
-import {shallow} from 'enzyme'
+import { shallow } from 'enzyme'
 import React from 'react'
-
 import {ReportInfo} from './ReportInfo'
 import {Variables} from '../../../common'
 
