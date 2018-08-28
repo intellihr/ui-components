@@ -61,16 +61,9 @@ describe('<Text />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a skeleton element if skeletonOptions are passed to the component`, () => {
+  it(`should render a text element as a h1`, () => {
     const wrapper = mount(
-      <Text
-        skeletonOptions={{
-          showSkeleton: true,
-          shape: 'line'
-        }}
-      >
-        Hello, world!
-      </Text>
+      <Text tag='h1'>Hello, world!</Text>
     )
 
     expect(wrapper).toMatchSnapshot()

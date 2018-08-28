@@ -31,6 +31,17 @@
   </div>
 ```
 
+#### Tagging as Heading
+A tag can be provided to turn any of the Text options into a Heading
+
+```jsx
+  <div>
+    <Text tag='h1' type='display-large'>
+      Inspect me! I'm a h1
+    </Text>
+  </div>
+```
+
 #### Weight
 
 ```jsx
@@ -90,18 +101,4 @@ const { Variables } = require('../../../common');
     I am text
   </Text>
 </div>
-```
-
-#### Skeleton Text
-
-```jsx
-  <Text
-    skeletonOptions={{
-      showSkeleton: true,
-      shape: 'line',
-      width: 200
-    }}
-  >
-    Hello! I am text
-  </Text>
 ```

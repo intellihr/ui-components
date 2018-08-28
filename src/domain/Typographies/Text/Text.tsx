@@ -1,6 +1,5 @@
 import React from 'react'
 import { TextWrapper } from './style'
-import { withSkeleton, ISkeletonComponentProps } from '../../Skeletons'
 import { Variables } from '../../../common'
 
 export interface ITextProps {
@@ -20,12 +19,26 @@ export interface ITextProps {
   isInline?: boolean
   /** Color of the text */
   color?: Variables.Color
+  /** Optional header tag to render the element with */
+  tag?: 'h1' | 'h2' | 'h3'
 }
 
-export class TextComponent extends React.PureComponent<ITextProps> {
+export class Text extends React.PureComponent<ITextProps> {
   public static defaultProps: Partial<ITextProps> = {
     isInline: true,
     type: 'body'
+  }
+
+  get textTag (): any {
+    const {
+      tag
+    } = this.props
+
+    if (tag) {
+      return TextWrapper.withComponent(tag)
+    }
+
+    return TextWrapper
   }
 
   public render (): JSX.Element {
@@ -40,8 +53,10 @@ export class TextComponent extends React.PureComponent<ITextProps> {
       color
     } = this.props
 
+    const TextTag = this.textTag
+
     return (
-      <TextWrapper
+      <TextTag
         type={type}
         color={color}
         isInline={isInline}
@@ -51,9 +66,7 @@ export class TextComponent extends React.PureComponent<ITextProps> {
         className={className}
       >
         {children}
-      </TextWrapper>
+      </TextTag>
     )
   }
 }
-
-export const Text: React.ComponentClass<ITextProps & ISkeletonComponentProps> = withSkeleton(TextComponent)
