@@ -32,7 +32,7 @@ module.exports = {
         },
         {
           name: 'Colors',
-          content: 'src/domain/Colors/Color/Color.examples.md'
+          content: 'src/domain/Internals/ExampleColorGrid/ExampleColorGrid.examples.md'
         }
       ]
     },
