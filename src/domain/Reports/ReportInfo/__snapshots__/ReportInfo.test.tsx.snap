@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ReportInfo /> should render a ReportInfo 1`] = `
+<styled.div
+  textColor="#262D33"
+>
+  <styled.div>
+    <styled.div>
+      Info.
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<ReportInfo /> should render a ReportInfo with highlights 1`] = `
+<styled.div
+  textColor="#262D33"
+>
+  <styled.div>
+    <styled.div>
+      Hello! I am blue report info.
+    </styled.div>
+  </styled.div>
+  <styled.div
+    key="0"
+  >
+    <HighlightSection
+      caption="I am Highlight 1."
+      imageUrl="https://i1.wp.com/www.foot.com/wp-content/uploads/2017/03/placeholder.gif?ssl=1"
+      title="highlight 1 title"
+    />
+  </styled.div>
+  <styled.div
+    key="1"
+  >
+    <HighlightSection
+      caption="I am Highlight 2."
+      imageUrl="https://i1.wp.com/www.foot.com/wp-content/uploads/2017/03/placeholder.gif?ssl=1"
+      title="highlight 2 title"
+    />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<ReportInfo /> should render a ReportInfo with text color 1`] = `
+<styled.div
+  textColor="#432DF3"
+>
+  <styled.div>
+    <styled.div>
+      Hello! I am blue report info.
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;

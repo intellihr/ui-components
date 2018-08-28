@@ -154,10 +154,11 @@ export class ReportHeader extends React.PureComponent<IReportHeader, IReportHead
     } = this.state
 
     const {
+      showHelper,
       renderHelperContent
     } = this.props
 
-    if (isExpanded) {
+    if (showHelper && isExpanded) {
       return (
         <HelpContentBox>
           {renderHelperContent}
