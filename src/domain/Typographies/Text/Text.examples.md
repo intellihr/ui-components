@@ -6,21 +6,27 @@
   </Text>
 ```
 
-#### Sizes
+#### Types
 
 ```jsx
   <div>
-    <Text isInline={false} size='xsmall'>
+    <Text isInline={false} type='xsmall'>
       X-Small
     </Text>
-    <Text isInline={false} size='small'>
+    <Text isInline={false} type='small'>
       Small
     </Text>
-    <Text isInline={false} size='medium'>
-      Medium (default)
+    <Text isInline={false} type='body'>
+      Body (default)
     </Text>
-    <Text size='large'>
-      Large
+    <Text isInline={false} type='heading'>
+      Heading
+    </Text>
+    <Text isInline={false} type='display'>
+      Display
+    </Text>
+    <Text isInline={false} type='display-large'>
+      Display Large
     </Text>
   </div>
 ```
@@ -41,11 +47,10 @@
 #### Color
 
 ```jsx
+const { Variables } = require('../../../common');
+
   <div>
-    <Text isInline={false} color='subtle'>
-      Hello! I am the system color for 'subtle'
-    </Text>
-    <Text color='blue'>
+    <Text color={Variables.Color.b400}>
       Hello! I am blue text
     </Text>
   </div>
@@ -55,7 +60,7 @@
 
 ```jsx
   <Text isUpper>
-    Hello! I am text
+    Hello! You will see me in all caps
   </Text>
 ```
 
@@ -75,11 +80,13 @@
 #### Mix and Match
 
 ```jsx
+const { Variables } = require('../../../common');
+
 <div>
-  <Text isInline={false} color='red'>
+  <Text isInline={false} color={Variables.Color.r400}>
     Hello!
   </Text>
-  <Text size='small' weight='heavy' isUpper>
+  <Text type='small' weight='heavy' isUpper>
     I am text
   </Text>
 </div>

@@ -3,10 +3,15 @@
 exports[`<Text /> should render a non-inline text element 1`] = `
 .c0 {
   font-family: 'Open Sans',Arial,sans-serif;
-  color: #262D33;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
   font-weight: 400;
   display: block;
-  font-size: 1rem;
 }
 
 <class_1
@@ -24,21 +29,16 @@ exports[`<Text /> should render a non-inline text element 1`] = `
     }
   >
     <TextComponent
-      color="#262D33"
       isInline={false}
-      size="medium"
-      weight="normal"
+      type="body"
     >
       <styled.span
-        color="#262D33"
         isInline={false}
-        size="medium"
-        weight="normal"
+        type="body"
       >
         <span
           className="c0"
-          color="#262D33"
-          size="medium"
+          type="body"
         >
           Hello, world!
         </span>
@@ -80,12 +80,114 @@ exports[`<Text /> should render a skeleton element if skeletonOptions are passed
 </class_1>
 `;
 
+exports[`<Text /> should render an element with colored text 1`] = `
+.c0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #F25749;
+  font-weight: 400;
+}
+
+<class_1
+  color="#F25749"
+>
+  <Skeleton
+    className=""
+    color="#F25749"
+    skeletonOptions={
+      Object {
+        "shape": "line",
+        "showSkeleton": false,
+        "size": "large",
+      }
+    }
+  >
+    <TextComponent
+      color="#F25749"
+      isInline={true}
+      type="body"
+    >
+      <styled.span
+        color="#F25749"
+        isInline={true}
+        type="body"
+      >
+        <span
+          className="c0"
+          color="#F25749"
+          type="body"
+        >
+          Hello, world!
+        </span>
+      </styled.span>
+    </TextComponent>
+  </Skeleton>
+</class_1>
+`;
+
+exports[`<Text /> should render an element with heading text 1`] = `
+.c0 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  -webkit-letter-spacing: -.02em;
+  -moz-letter-spacing: -.02em;
+  -ms-letter-spacing: -.02em;
+  letter-spacing: -.02em;
+  color: #424F5C;
+  font-weight: 600;
+}
+
+<class_1
+  type="heading"
+>
+  <Skeleton
+    className=""
+    skeletonOptions={
+      Object {
+        "shape": "line",
+        "showSkeleton": false,
+        "size": "large",
+      }
+    }
+    type="heading"
+  >
+    <TextComponent
+      isInline={true}
+      type="heading"
+    >
+      <styled.span
+        isInline={true}
+        type="heading"
+      >
+        <span
+          className="c0"
+          type="heading"
+        >
+          Hello, world!
+        </span>
+      </styled.span>
+    </TextComponent>
+  </Skeleton>
+</class_1>
+`;
+
 exports[`<Text /> should render an element with heavy text 1`] = `
 .c0 {
   font-family: 'Open Sans',Arial,sans-serif;
-  color: #262D33;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
   font-weight: 600;
-  font-size: 1rem;
 }
 
 <class_1
@@ -103,68 +205,18 @@ exports[`<Text /> should render an element with heavy text 1`] = `
     weight="heavy"
   >
     <TextComponent
-      color="#262D33"
       isInline={true}
-      size="medium"
+      type="body"
       weight="heavy"
     >
       <styled.span
-        color="#262D33"
         isInline={true}
-        size="medium"
+        type="body"
         weight="heavy"
       >
         <span
           className="c0"
-          color="#262D33"
-          size="medium"
-        >
-          Hello, world!
-        </span>
-      </styled.span>
-    </TextComponent>
-  </Skeleton>
-</class_1>
-`;
-
-exports[`<Text /> should render an element with large text 1`] = `
-.c0 {
-  font-family: 'Open Sans',Arial,sans-serif;
-  color: #262D33;
-  font-weight: 400;
-  font-size: 1.125rem;
-}
-
-<class_1
-  size="large"
->
-  <Skeleton
-    className=""
-    size="large"
-    skeletonOptions={
-      Object {
-        "shape": "line",
-        "showSkeleton": false,
-        "size": "large",
-      }
-    }
-  >
-    <TextComponent
-      color="#262D33"
-      isInline={true}
-      size="large"
-      weight="normal"
-    >
-      <styled.span
-        color="#262D33"
-        isInline={true}
-        size="large"
-        weight="normal"
-      >
-        <span
-          className="c0"
-          color="#262D33"
-          size="large"
+          type="body"
         >
           Hello, world!
         </span>
@@ -177,17 +229,21 @@ exports[`<Text /> should render an element with large text 1`] = `
 exports[`<Text /> should render an element with small text 1`] = `
 .c0 {
   font-family: 'Open Sans',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
   color: #262D33;
   font-weight: 400;
-  font-size: .875rem;
 }
 
 <class_1
-  size="small"
+  type="small"
 >
   <Skeleton
     className=""
-    size="small"
     skeletonOptions={
       Object {
         "shape": "line",
@@ -195,70 +251,19 @@ exports[`<Text /> should render an element with small text 1`] = `
         "size": "large",
       }
     }
+    type="small"
   >
     <TextComponent
-      color="#262D33"
       isInline={true}
-      size="small"
-      weight="normal"
+      type="small"
     >
       <styled.span
-        color="#262D33"
         isInline={true}
-        size="small"
-        weight="normal"
+        type="small"
       >
         <span
           className="c0"
-          color="#262D33"
-          size="small"
-        >
-          Hello, world!
-        </span>
-      </styled.span>
-    </TextComponent>
-  </Skeleton>
-</class_1>
-`;
-
-exports[`<Text /> should render an element with subtle text 1`] = `
-.c0 {
-  font-family: 'Open Sans',Arial,sans-serif;
-  color: #667380;
-  font-weight: 400;
-  font-size: 1rem;
-}
-
-<class_1
-  color="subtle"
->
-  <Skeleton
-    className=""
-    color="subtle"
-    skeletonOptions={
-      Object {
-        "shape": "line",
-        "showSkeleton": false,
-        "size": "large",
-      }
-    }
-  >
-    <TextComponent
-      color="subtle"
-      isInline={true}
-      size="medium"
-      weight="normal"
-    >
-      <styled.span
-        color="subtle"
-        isInline={true}
-        size="medium"
-        weight="normal"
-      >
-        <span
-          className="c0"
-          color="subtle"
-          size="medium"
+          type="small"
         >
           Hello, world!
         </span>
@@ -271,9 +276,14 @@ exports[`<Text /> should render an element with subtle text 1`] = `
 exports[`<Text /> should render an element with text 1`] = `
 .c0 {
   font-family: 'Open Sans',Arial,sans-serif;
-  color: #262D33;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
   font-weight: 400;
-  font-size: 1rem;
 }
 
 <class_1>
@@ -288,21 +298,16 @@ exports[`<Text /> should render an element with text 1`] = `
     }
   >
     <TextComponent
-      color="#262D33"
       isInline={true}
-      size="medium"
-      weight="normal"
+      type="body"
     >
       <styled.span
-        color="#262D33"
         isInline={true}
-        size="medium"
-        weight="normal"
+        type="body"
       >
         <span
           className="c0"
-          color="#262D33"
-          size="medium"
+          type="body"
         >
           Hello, world!
         </span>
@@ -315,10 +320,15 @@ exports[`<Text /> should render an element with text 1`] = `
 exports[`<Text /> should render an element with the text converted to uppercase 1`] = `
 .c0 {
   font-family: 'Open Sans',Arial,sans-serif;
-  color: #262D33;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
   font-weight: 400;
   text-transform: uppercase;
-  font-size: 1rem;
 }
 
 <class_1
@@ -336,23 +346,18 @@ exports[`<Text /> should render an element with the text converted to uppercase 
     }
   >
     <TextComponent
-      color="#262D33"
       isInline={true}
       isUpper={true}
-      size="medium"
-      weight="normal"
+      type="body"
     >
       <styled.span
-        color="#262D33"
         isInline={true}
         isUpper={true}
-        size="medium"
-        weight="normal"
+        type="body"
       >
         <span
           className="c0"
-          color="#262D33"
-          size="medium"
+          type="body"
         >
           Hello, world!
         </span>

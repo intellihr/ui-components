@@ -6,7 +6,7 @@ exports[`<Icon /> should render a large icon 1`] = `
 }
 
 .c0.fa {
-  margin-right: 3px;
+  margin-right: .25rem;
   font-size: 1.3125rem;
 }
 
@@ -35,7 +35,7 @@ exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
 }
 
 .c0.fa {
-  margin-right: 3px;
+  margin-right: .25rem;
   font-size: 1rem;
 }
 
@@ -70,7 +70,7 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
 }
 
 .c0.fa {
-  margin-right: 3px;
+  margin-right: .25rem;
   font-size: 2rem;
 }
 
@@ -166,7 +166,7 @@ exports[`<Icon /> should render icon with a custom size 1`] = `
 }
 
 .c0.fa {
-  margin-right: 3px;
+  margin-right: .25rem;
   font-size: 2.6rem;
 }
 
@@ -198,7 +198,7 @@ exports[`<Icon /> should render icon with colour 1`] = `
 }
 
 .c0.fa {
-  margin-right: 3px;
+  margin-right: .25rem;
   font-size: 1rem;
 }
 
@@ -230,7 +230,7 @@ exports[`<Icon /> should render icon with no size or colour 1`] = `
 }
 
 .c0.fa {
-  margin-right: 3px;
+  margin-right: .25rem;
   font-size: 1rem;
 }
 
@@ -259,7 +259,7 @@ exports[`<Icon /> should render icon with size 1`] = `
 }
 
 .c0.fa {
-  margin-right: 3px;
+  margin-right: .25rem;
   font-size: 1rem;
 }
 
