@@ -220,7 +220,6 @@ module.exports = {
           name: 'Typographies',
           components: [
             'src/domain/Typographies/FormattedText/FormattedText',
-            'src/domain/Typographies/Heading/Heading',
             'src/domain/Typographies/Text/Text'
           ]
         }
