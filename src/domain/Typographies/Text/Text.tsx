@@ -20,13 +20,14 @@ export interface ITextProps {
   /** Color of the text */
   color?: Variables.Color
   /** Optional header tag to render the element with */
-  tag?: 'h1' | 'h2' | 'h3'
+  tag?: 'h1' | 'h2' | 'h3' | 'p' | 'span'
 }
 
 export class Text extends React.PureComponent<ITextProps> {
   public static defaultProps: Partial<ITextProps> = {
     isInline: true,
-    type: 'body'
+    type: 'body',
+    tag: 'span'
   }
 
   get textTag (): any {

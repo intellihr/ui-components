@@ -37,6 +37,7 @@ exports[`<Field /> should render a Field component, creating a Text child with t
         className="label-component"
         color="#667380"
         isInline={false}
+        tag="span"
         type="small"
       >
         <styled.span
@@ -60,6 +61,7 @@ exports[`<Field /> should render a Field component, creating a Text child with t
     color="#262D33"
     isInline={true}
     key=".0"
+    tag="span"
     type="body"
   >
     <styled.span
@@ -116,6 +118,7 @@ exports[`<Field /> should render a Field component, creating a Text child with t
         className="label-component"
         color="#667380"
         isInline={false}
+        tag="span"
         type="small"
       >
         <styled.span
@@ -139,6 +142,7 @@ exports[`<Field /> should render a Field component, creating a Text child with t
     color="#262D33"
     isInline={true}
     key=".0"
+    tag="span"
     type="body"
   >
     <styled.span
@@ -183,6 +187,7 @@ exports[`<Field /> should render a Field component, with the provided component 
         className="label-component"
         color="#667380"
         isInline={false}
+        tag="span"
         type="small"
       >
         <styled.span

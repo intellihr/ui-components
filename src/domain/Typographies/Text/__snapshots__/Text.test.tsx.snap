@@ -16,6 +16,7 @@ exports[`<Text /> should render a non-inline text element 1`] = `
 
 <Text
   isInline={false}
+  tag="span"
   type="body"
 >
   <styled.span
@@ -80,6 +81,7 @@ exports[`<Text /> should render an element with colored text 1`] = `
 <Text
   color="#F25749"
   isInline={true}
+  tag="span"
   type="body"
 >
   <styled.span
@@ -113,6 +115,7 @@ exports[`<Text /> should render an element with heading text 1`] = `
 
 <Text
   isInline={true}
+  tag="span"
   type="heading"
 >
   <styled.span
@@ -144,6 +147,7 @@ exports[`<Text /> should render an element with heavy text 1`] = `
 
 <Text
   isInline={true}
+  tag="span"
   type="body"
   weight="heavy"
 >
@@ -177,6 +181,7 @@ exports[`<Text /> should render an element with small text 1`] = `
 
 <Text
   isInline={true}
+  tag="span"
   type="small"
 >
   <styled.span
@@ -208,6 +213,7 @@ exports[`<Text /> should render an element with text 1`] = `
 
 <Text
   isInline={true}
+  tag="span"
   type="body"
 >
   <styled.span
@@ -241,6 +247,7 @@ exports[`<Text /> should render an element with the text converted to uppercase 
 <Text
   isInline={true}
   isUpper={true}
+  tag="span"
   type="body"
 >
   <styled.span

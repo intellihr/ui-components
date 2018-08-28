@@ -10,6 +10,7 @@ exports[`<StatusIndicator /> should render a dot status label 1`] = `
   />
   <Text
     isInline={true}
+    tag="span"
     type="body"
   >
     Test
@@ -26,6 +27,7 @@ exports[`<StatusIndicator /> should render a dot status label with default value
   />
   <Text
     isInline={true}
+    tag="span"
     type="body"
   >
     Test
@@ -42,6 +44,7 @@ exports[`<StatusIndicator /> should render a hollow dot status label 1`] = `
   />
   <Text
     isInline={true}
+    tag="span"
     type="body"
   >
     Test

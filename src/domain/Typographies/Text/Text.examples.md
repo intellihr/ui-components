@@ -31,13 +31,16 @@
   </div>
 ```
 
-#### Tagging as Heading
-A tag can be provided to turn any of the Text options into a Heading
+#### Tags
+A tag can be provided to turn any of the Text options into a Heading, or paragraph tag. By default Text is a span.
 
 ```jsx
   <div>
     <Text tag='h1' type='display-large'>
-      Inspect me! I'm a h1
+      Inspect me! I'm a h1 tag
+    </Text>
+    <Text tag='p' type='body'>
+      Inspect me! I'm a p tag
     </Text>
   </div>
 ```

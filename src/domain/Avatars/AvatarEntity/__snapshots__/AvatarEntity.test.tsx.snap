@@ -17,6 +17,7 @@ exports[`<AvatarEntity /> should render a avatar entity with lots of data 1`] = 
     <Text
       color="#424F5C"
       isInline={false}
+      tag="span"
       type="body"
     >
       John Wick
@@ -28,6 +29,7 @@ exports[`<AvatarEntity /> should render a avatar entity with lots of data 1`] = 
         color="#667380"
         isInline={false}
         isTruncated={true}
+        tag="span"
         type="xsmall"
       >
         Guy Killer
@@ -37,6 +39,7 @@ exports[`<AvatarEntity /> should render a avatar entity with lots of data 1`] = 
       color="#667380"
       isInline={false}
       isTruncated={true}
+      tag="span"
       type="xsmall"
       weight="heavy"
     >
@@ -61,6 +64,7 @@ exports[`<AvatarEntity /> should render a basic avatar entity 1`] = `
     <Text
       color="#424F5C"
       isInline={false}
+      tag="span"
       type="body"
     >
       John Wick
@@ -84,6 +88,7 @@ exports[`<AvatarEntity /> should render a basic compact avatar entity 1`] = `
     <Text
       color="#424F5C"
       isInline={true}
+      tag="span"
       type="body"
     >
       John Wick
@@ -109,6 +114,7 @@ exports[`<AvatarEntity /> should render a compact avatar entity with lots of dat
     <Text
       color="#424F5C"
       isInline={true}
+      tag="span"
       type="body"
     >
       John Wick
@@ -120,6 +126,7 @@ exports[`<AvatarEntity /> should render a compact avatar entity with lots of dat
         color="#667380"
         isInline={true}
         isTruncated={true}
+        tag="span"
         type="xsmall"
       >
         (Guy Killer)
