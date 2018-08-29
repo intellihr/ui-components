@@ -57,7 +57,7 @@ const SubMenuWrapper = styled.ul`
 `
 
 const MenuItemLabelWrapper = styled.span`
-  margin-left: 4px;
+  margin-left: 3px;
 `
 
 export {
