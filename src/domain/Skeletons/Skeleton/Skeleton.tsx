@@ -1,14 +1,15 @@
 import React, { CSSProperties } from 'react'
-import classNames from 'classnames'
-const style = require('./Skeleton.scss')
+import { SkeletonWrapper } from './style'
 
 export interface ISkeletonOptions {
   /** If true, will display the skeleton */
   showSkeleton: boolean,
-  /** Width of the skeleton (only applies if `shape` is set to `line`) */
+  /** Width of the skeleton (only applies if `shape` is set to `line` or `block`) */
   width?: number,
-  /** A circle or a line */
-  shape: 'circle' | 'line'
+  /** Height of the skeleton (only applies if `shape` is set to `block`) */
+  height?: number,
+  /** Shape of the skeleton */
+  shape: 'circle' | 'line' | 'block'
   /** Circle size of the skeleton (only applies if `shape` is set to `circle`) */
   size?: 'small' | 'medium' | 'large' | 'xlarge'
 }
@@ -45,7 +46,9 @@ class Skeleton extends React.Component<ISkeletonComponentProps> {
     const {
       showSkeleton = false,
       shape = 'line',
-      size = 'large'
+      size = 'large',
+      width,
+      height
     } = this.props.skeletonOptions!
 
     const {
@@ -62,18 +65,17 @@ class Skeleton extends React.Component<ISkeletonComponentProps> {
     }
 
     return (
-      <span
-        className={classNames(
-          style.Skeleton,
-          className,
-          'skeleton',
-          shape,
-          `skeleton-${size}`
-        )}
-        style={this.style}
+      <SkeletonWrapper
+        width={width}
+        height={height}
+        shape={shape}
+        size={size}
+        className={className}
       >
-        {shape === 'line' ? String.fromCharCode(8204) : null}
-      </span>
+        <span>
+          {shape === 'line' ? String.fromCharCode(8204) : null}
+        </span>
+      </SkeletonWrapper>
     )
   }
 }
