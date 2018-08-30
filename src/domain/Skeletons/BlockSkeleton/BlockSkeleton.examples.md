@@ -1,14 +1,20 @@
-#### Block Skeleton
+#### Default Block Skeleton
 
 ```jsx
-<div>
-  <BlockSkeleton
-    skeletonOptions={{
-      showSkeleton: true,
-      shape: 'block',
-      width: 400,
-      height: 200
-    }}
-  />
-</div>
+<BlockSkeleton
+  skeletonOptions={{
+    showSkeleton: true
+  }}
+/>
+```
+
+#### Block Skeleton with provided Width and Height
+```jsx
+<BlockSkeleton
+  skeletonOptions={{
+    showSkeleton: true,
+    width: 400,
+    height: 200
+  }}
+/>
 ```
