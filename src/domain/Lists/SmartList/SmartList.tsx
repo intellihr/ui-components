@@ -8,11 +8,11 @@ import { Spinner } from '../../Spinners'
 import { ListClickableColumn } from './ListClickableColumn'
 import { ListRow } from './ListRow'
 import { ListColumn } from './ListColumn'
-import { ISkeletonOptions } from '../../Skeletons'
+import { ILineSkeletonOptions } from '../../Skeletons'
 
 const style = require('./style.scss')
 
-export interface ISmartListSkeletonOptions extends Partial<ISkeletonOptions> {
+export interface ISmartListSkeletonOptions extends Partial<ILineSkeletonOptions> {
   /* Number of rows to show skeletons */
   numberOfRows?: number
 }

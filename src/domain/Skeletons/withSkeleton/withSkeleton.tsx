@@ -1,14 +1,14 @@
 import React from 'react'
-import { Skeleton, ISkeletonComponentProps } from '../Skeleton'
+import { LineSkeleton, ILineSkeletonComponentProps } from '../LineSkeleton'
 
 export const withSkeleton = <P extends {}>(
   UnwrappedComponent: React.ComponentType<P>
-) => class extends React.PureComponent<P & ISkeletonComponentProps> {
+) => class extends React.PureComponent<P & ILineSkeletonComponentProps> {
   public render (): JSX.Element {
     return (
-      <Skeleton {...this.props} >
+      <LineSkeleton {...this.props} >
         <UnwrappedComponent {...this.props} />
-      </Skeleton>
+      </LineSkeleton>
     )
   }
 }

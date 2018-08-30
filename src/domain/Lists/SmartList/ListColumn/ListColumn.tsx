@@ -3,7 +3,7 @@ import { isNil, merge } from 'lodash'
 import classNames from 'classnames'
 import { Row } from '../../../Grids/Row'
 import { ListHeader } from '../ListHeader'
-import { Skeleton, ISkeletonComponentProps } from '../../../Skeletons'
+import { LineSkeleton, ILineSkeletonComponentProps } from '../../../Skeletons'
 
 export interface ISize {
   xs?: number,
@@ -37,7 +37,7 @@ export interface IListColumn {
   order?: any
 }
 
-class ListColumn extends React.PureComponent<IListColumn & ISkeletonComponentProps> {
+class ListColumn extends React.PureComponent<IListColumn & ILineSkeletonComponentProps> {
   public static defaultProps: Partial<IListColumn> = {
     rowIndex: 0,
     isHeader: false,
@@ -68,7 +68,7 @@ class ListColumn extends React.PureComponent<IListColumn & ISkeletonComponentPro
     }
 
     if (showSkeleton) {
-      return <Skeleton {...this.props} />
+      return <LineSkeleton {...this.props} />
     }
 
     if (!isNil(rowIndex) && data && data[rowIndex]) {

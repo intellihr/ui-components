@@ -7,7 +7,7 @@ import {
 import { FontAwesomeIcon } from '../../Icons'
 import {
   withSkeleton,
-  ISkeletonComponentProps
+  ILineSkeletonComponentProps
 } from '../../Skeletons'
 const style = require('./Avatar.scss')
 
@@ -38,7 +38,7 @@ export interface IAvatarState {
   showInitials: boolean
 }
 
-export type IAvatarSkeletonProps = IAvatarProps & ISkeletonComponentProps
+export type IAvatarSkeletonProps = IAvatarProps & ILineSkeletonComponentProps
 
 class AvatarComponent extends React.Component<IAvatarProps> {
 
