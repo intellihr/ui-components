@@ -1,17 +1,13 @@
-import React, { CSSProperties } from 'react'
+import React from 'react'
 import { TextSkeletonWrapper } from './style'
 
 export interface ITextSkeletonOptions {
   /** If true, will display the skeleton */
   showSkeleton: boolean,
-  /** Width of the skeleton (only applies if `shape` is set to `line` or `block`) */
+  /** Width of the skeleton */
   width?: number,
-  /** Height of the skeleton (only applies if `shape` is set to `block`) */
-  height?: number,
-  /** Shape of the skeleton */
-  shape: 'circle' | 'line' | 'block'
-  /** Circle size of the skeleton (only applies if `shape` is set to `circle`) */
-  size?: 'small' | 'medium' | 'large' | 'xlarge'
+  /** Text type the skeleton is being rendered for */
+  type?: 'xsmall' | 'small' | 'body' | 'heading' | 'display' | 'display-large'
 }
 
 export interface ITextSkeletonComponentProps {
@@ -25,30 +21,15 @@ class TextSkeleton extends React.Component<ITextSkeletonComponentProps> {
   public static defaultProps: Partial<ITextSkeletonComponentProps> = {
     skeletonOptions: {
       showSkeleton: false,
-      shape: 'line',
-      size: 'large'
-    },
-    className: ''
+      type: 'body'
   }
-
-  get style (): CSSProperties | undefined {
-    const {
-      shape = 'line',
-      width
-    } = this.props.skeletonOptions!
-
-    if (shape === 'line') {
-      return { width }
     }
-  }
 
   public render (): JSX.Element {
     const {
       showSkeleton = false,
-      shape = 'line',
-      size = 'large',
-      width,
-      height
+      type = 'body',
+      width
     } = this.props.skeletonOptions!
 
     const {
@@ -66,14 +47,12 @@ class TextSkeleton extends React.Component<ITextSkeletonComponentProps> {
 
     return (
       <TextSkeletonWrapper
+        type={type}
         width={width}
-        height={height}
-        shape={shape}
-        size={size}
         className={className}
       >
         <span>
-          {shape === 'line' ? String.fromCharCode(8204) : null}
+          {String.fromCharCode(8204)}
         </span>
       </TextSkeletonWrapper>
     )

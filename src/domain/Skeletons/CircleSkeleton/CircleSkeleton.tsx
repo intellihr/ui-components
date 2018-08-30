@@ -4,7 +4,7 @@ import { CircleSkeletonWrapper } from './style'
 export interface ICircleSkeletonOptions {
   /** If true, will display the skeleton */
   showSkeleton: boolean,
-  /** Circle size of the skeleton (only applies if `shape` is set to `circle`) */
+  /** Circle size of the skeleton */
   size?: 'small' | 'medium' | 'large' | 'xlarge'
 }
 
