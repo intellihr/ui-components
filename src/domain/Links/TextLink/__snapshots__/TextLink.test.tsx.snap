@@ -4,6 +4,12 @@ exports[`<TextLink /> should render a text link 1`] = `
 .c0 {
   -webkit-transition: color .25s ease-out;
   transition: color .25s ease-out;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
 }
 
 .c0,
@@ -23,16 +29,21 @@ exports[`<TextLink /> should render a text link 1`] = `
 <TextLink
   href="/lol"
 >
-  <Anchor
+  <Component
     className="c0"
     href="/lol"
   >
-    <a
+    <Anchor
       className="c0"
       href="/lol"
     >
-      Text link me
-    </a>
-  </Anchor>
+      <a
+        className="c0"
+        href="/lol"
+      >
+        Text link me
+      </a>
+    </Anchor>
+  </Component>
 </TextLink>
 `;

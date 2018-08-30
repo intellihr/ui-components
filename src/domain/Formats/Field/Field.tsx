@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import { isString, isNumber, isNil } from 'lodash'
 import { Text } from '../../Typographies/Text'
 import { FieldLabelWrapper } from './style'
-import { Variables } from '../../../common'
+import { Props, Variables } from '../../../common'
 
 interface IFieldProps {
   /** Label text */
@@ -47,7 +47,7 @@ class Field extends React.PureComponent <IFieldProps> {
     return (
       <FieldLabelWrapper labelRightComponent={labelRightComponent}>
         <Text
-          type='small'
+          type={Props.TypographyType.small}
           color={Variables.Color.n600}
           isInline={!isNil(labelRightComponent)}
           className='label-component'

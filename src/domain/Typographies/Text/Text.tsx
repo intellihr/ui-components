@@ -1,6 +1,6 @@
 import React from 'react'
 import { TextWrapper } from './style'
-import { Variables } from '../../../common'
+import { Props, Variables } from '../../../common'
 
 export interface ITextProps {
   /** Text to display */
@@ -12,7 +12,7 @@ export interface ITextProps {
   /** Specify the text font weight */
   weight?: 'normal' | 'heavy'
   /** Specify the type of text to use */
-  type?: 'xsmall' | 'small' | 'body' | 'heading' | 'display' | 'display-large'
+  type?: Props.TypographyType
   /** If true, will truncate overflowing text */
   isTruncated?: boolean
   /** If true, will display the text inline */
@@ -26,7 +26,7 @@ export interface ITextProps {
 export class Text extends React.PureComponent<ITextProps> {
   public static defaultProps: Partial<ITextProps> = {
     isInline: true,
-    type: 'body',
+    type: Props.TypographyType.body,
     tag: 'span'
   }
 
