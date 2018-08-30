@@ -5,10 +5,6 @@ import {
   isEmpty
 } from 'lodash'
 import { FontAwesomeIcon } from '../../Icons'
-import {
-  withSkeleton,
-  ITextSkeletonComponentProps
-} from '../../Skeletons'
 const style = require('./Avatar.scss')
 
 export interface IAvatarProps {
@@ -38,9 +34,7 @@ export interface IAvatarState {
   showInitials: boolean
 }
 
-export type IAvatarSkeletonProps = IAvatarProps & ITextSkeletonComponentProps
-
-class AvatarComponent extends React.Component<IAvatarProps> {
+class Avatar extends React.Component<IAvatarProps> {
 
   get hoverDom (): JSX.Element | null {
     const {
@@ -184,35 +178,6 @@ class AvatarComponent extends React.Component<IAvatarProps> {
     } = props
 
     return !isEmpty(imageUrl) || !isEmpty(imageData)
-  }
-}
-
-const AvatarWithSkeleton: React.ComponentClass<IAvatarSkeletonProps> = withSkeleton(AvatarComponent)
-
-// tslint:disable-next-line:max-classes-per-file
-class Avatar extends React.PureComponent<IAvatarSkeletonProps> {
-  public render () {
-    const {
-      size,
-      skeletonOptions,
-      skeletonOptions: {
-        size: skeletonSize = null
-      } = {}
-    } = this.props
-
-    let props = this.props
-
-    if (!skeletonSize && skeletonOptions && size) {
-      props = {
-        ...props,
-        skeletonOptions: {
-          ...skeletonOptions,
-          size
-        }
-      }
-    }
-
-    return <AvatarWithSkeleton {...props} />
   }
 }
 
