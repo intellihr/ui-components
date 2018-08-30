@@ -13,4 +13,14 @@ describe('<TextLink />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it(`should render a small text link`, () => {
+    const wrapper = mount(
+      <TextLink href='/lol' small>
+        Text link me
+      </TextLink>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })
