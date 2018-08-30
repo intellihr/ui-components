@@ -1,7 +1,7 @@
 import styled, { css, keyframes } from 'styled-components'
 import { Variables } from '../../../common'
 
-export interface ILineSkeletonWrapperProps {
+export interface ITextSkeletonWrapperProps {
   width?: number,
   height?: number,
   shape: 'circle' | 'line' | 'block',
@@ -18,19 +18,19 @@ const progress = keyframes`
   }
 `
 
-export const LineSkeletonWrapper = styled.span`
+export const TextSkeletonWrapper = styled.span`
   animation: ${progress} 1.2s ease-in-out infinite;
   background-color: ${Variables.Color.n200};
   background-image: linear-gradient(90deg, ${Variables.Color.n200}, ${Variables.Color.n300}, ${Variables.Color.n200});
   background-repeat: no-repeat;
   background-size: 200px 100%;
   border: 1px solid ${Variables.Color.n200};
-  border-radius: ${(props: ILineSkeletonWrapperProps) => props.shape == 'circle' ? '50%' : '4px'};
+  border-radius: ${(props: ITextSkeletonWrapperProps) => props.shape == 'circle' ? '50%' : '4px'};
   display: inline-flex;
   line-height: 1rem;
   width: 100%;
 
-  ${(props: ILineSkeletonWrapperProps) => {
+  ${(props: ITextSkeletonWrapperProps) => {
     switch (props.shape) {
       case 'circle':
         switch (props.size) {

@@ -1,7 +1,7 @@
 import React, { CSSProperties } from 'react'
-import { LineSkeletonWrapper } from './style'
+import { TextSkeletonWrapper } from './style'
 
-export interface ILineSkeletonOptions {
+export interface ITextSkeletonOptions {
   /** If true, will display the skeleton */
   showSkeleton: boolean,
   /** Width of the skeleton (only applies if `shape` is set to `line` or `block`) */
@@ -14,15 +14,15 @@ export interface ILineSkeletonOptions {
   size?: 'small' | 'medium' | 'large' | 'xlarge'
 }
 
-export interface ILineSkeletonComponentProps {
+export interface ITextSkeletonComponentProps {
   /** Skeleton setting */
-  skeletonOptions?: ILineSkeletonOptions
+  skeletonOptions?: ITextSkeletonOptions
   /** Additional class names for the parent container */
   className?: string
 }
 
-class LineSkeleton extends React.Component<ILineSkeletonComponentProps> {
-  public static defaultProps: Partial<ILineSkeletonComponentProps> = {
+class TextSkeleton extends React.Component<ITextSkeletonComponentProps> {
+  public static defaultProps: Partial<ITextSkeletonComponentProps> = {
     skeletonOptions: {
       showSkeleton: false,
       shape: 'line',
@@ -65,7 +65,7 @@ class LineSkeleton extends React.Component<ILineSkeletonComponentProps> {
     }
 
     return (
-      <LineSkeletonWrapper
+      <TextSkeletonWrapper
         width={width}
         height={height}
         shape={shape}
@@ -75,11 +75,11 @@ class LineSkeleton extends React.Component<ILineSkeletonComponentProps> {
         <span>
           {shape === 'line' ? String.fromCharCode(8204) : null}
         </span>
-      </LineSkeletonWrapper>
+      </TextSkeletonWrapper>
     )
   }
 }
 
 export {
-  LineSkeleton
+  TextSkeleton
 }

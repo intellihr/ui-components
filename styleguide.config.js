@@ -177,7 +177,7 @@ module.exports = {
         {
           name: 'Skeletons',
           components: [
-            'src/domain/Skeletons/LineSkeleton/LineSkeleton',
+            'src/domain/Skeletons/TextSkeleton/TextSkeleton',
             'src/domain/Skeletons/BlockSkeleton/BlockSkeleton',
             'src/domain/Skeletons/CircleSkeleton/CircleSkeleton'
           ]

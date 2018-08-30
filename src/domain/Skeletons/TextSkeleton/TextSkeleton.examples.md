@@ -1,14 +1,14 @@
-#### Line Skeleton
+#### Text Skeleton
 
 ```jsx
 <div>
-  <LineSkeleton
+  <TextSkeleton
     skeletonOptions={{
       showSkeleton: true,
       shape: 'line'
     }}
   />
-  <LineSkeleton
+  <TextSkeleton
     skeletonOptions={{
       showSkeleton: true,
       shape: 'line',
