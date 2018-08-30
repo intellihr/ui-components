@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { TextSkeletonWrapper } from './style'
 
 export interface ITextSkeletonOptions {
@@ -8,6 +8,8 @@ export interface ITextSkeletonOptions {
   width?: number,
   /** Text type the skeleton is being rendered for */
   type?: 'xsmall' | 'small' | 'body' | 'heading' | 'display' | 'display-large'
+  /** Number of lines of TextSkeleton to render (to make a paragraph skeleton) */
+  numLines?: number
 }
 
 export interface ITextSkeletonComponentProps {
@@ -29,7 +31,8 @@ class TextSkeleton extends React.Component<ITextSkeletonComponentProps> {
     const {
       showSkeleton = false,
       type = 'body',
-      width
+      width,
+      numLines
     } = this.props.skeletonOptions!
 
     const {
@@ -45,7 +48,7 @@ class TextSkeleton extends React.Component<ITextSkeletonComponentProps> {
       )
     }
 
-    return (
+    const skeleton = (
       <TextSkeletonWrapper
         type={type}
         width={width}
@@ -55,6 +58,15 @@ class TextSkeleton extends React.Component<ITextSkeletonComponentProps> {
           {String.fromCharCode(8204)}
         </span>
       </TextSkeletonWrapper>
+    )
+
+    const output = new Array<JSX.Element>(numLines ? numLines : 1)
+    output.fill(skeleton, 0, numLines)
+
+    return (
+      <Fragment>
+        {output}
+      </Fragment>
     )
   }
 }

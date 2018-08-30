@@ -74,8 +74,7 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
 
   private skeletonOptions: ISmartListSkeletonOptions = {
     showSkeleton: false,
-    numberOfRows: 5,
-    shape: 'line'
+    numberOfRows: 5
   }
 
   get listColumns (): JSX.Element[] {

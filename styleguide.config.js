@@ -233,7 +233,6 @@ module.exports = {
       components: [
         'src/domain/Styles/hoc/withStyledBreakpoints',
         'src/domain/Defaults/withDefaults/withDefaults',
-        'src/domain/Skeletons/withSkeleton/withSkeleton',
         'src/domain/Internals/Anchor/Anchor'
       ]
     }

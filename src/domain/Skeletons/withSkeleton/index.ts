@@ -1,3 +1,0 @@
-export {
-  withSkeleton
-} from './withSkeleton'

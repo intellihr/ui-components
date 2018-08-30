@@ -8,6 +8,17 @@
 />
 ```
 
+#### Multi-Line Text Skeleton
+
+```jsx
+<TextSkeleton
+  skeletonOptions={{
+    showSkeleton: true,
+    numLines: 5
+  }}
+/>
+```
+
 #### Text Skeleton with Width Option
 
 ```jsx
