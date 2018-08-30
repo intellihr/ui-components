@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { StyledFunction } from 'styled-components'
+import styled, { StyledFunction, css } from 'styled-components'
 import { Anchor, IAnchorProps } from '../../Internals/Anchor'
 import { Variables } from '../../../common'
 
@@ -10,7 +10,7 @@ const styledAnchor: StyledFunction<ITextLinkProps> = styled(Anchor)
 
 export const TextLink = styledAnchor`
   transition: color .25s ease-out;
-
+  
   &,
   &:link,
   &:visited {
