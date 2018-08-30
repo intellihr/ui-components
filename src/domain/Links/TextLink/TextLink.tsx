@@ -4,19 +4,13 @@ import { Anchor, IAnchorProps } from '../../Internals/Anchor'
 import { Variables } from '../../../common'
 
 // tslint:disable-next-line:no-empty-interface
-interface ITextLinkProps extends IAnchorProps {
-  small?: boolean
-}
+interface ITextLinkProps extends IAnchorProps {}
 
-const styledAnchor: StyledFunction<ITextLinkProps> = styled(({ small, ...rest }) => <Anchor {...rest} />)
+const styledAnchor: StyledFunction<ITextLinkProps> = styled(Anchor)
 
 export const TextLink = styledAnchor`
   transition: color .25s ease-out;
   
-  ${(props: ITextLinkProps) => props.small && css`
-    font-size: ${Variables.FontSize.fzSmall}px;
-  `}
-
   &,
   &:link,
   &:visited {

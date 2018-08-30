@@ -72,7 +72,6 @@ class AnnotatedSectionDescription extends React.Component<IAnnotatedSectionDescr
         <TextLink
           href={linkUrl}
           anchorComponentProps={anchorComponentProps}
-          small
         >
           {linkText}
         </TextLink>

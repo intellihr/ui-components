@@ -48,7 +48,6 @@ exports[`<SectionList /> should render a section list with an annotated section 
 .c6 {
   -webkit-transition: color .25s ease-out;
   transition: color .25s ease-out;
-  font-size: 14px;
 }
 
 .c6,
@@ -256,23 +255,16 @@ exports[`<SectionList /> should render a section list with an annotated section 
                                   <div
                                     className="c5"
                                   >
-                                    <TextLink
-                                      small={true}
-                                    >
-                                      <Component
+                                    <TextLink>
+                                      <Anchor
                                         className="c6"
-                                        small={true}
+                                        href="#"
                                       >
-                                        <Anchor
+                                        <a
                                           className="c6"
                                           href="#"
-                                        >
-                                          <a
-                                            className="c6"
-                                            href="#"
-                                          />
-                                        </Anchor>
-                                      </Component>
+                                        />
+                                      </Anchor>
                                     </TextLink>
                                   </div>
                                 </AnnotatedSectionDescription>
@@ -366,7 +358,6 @@ exports[`<SectionList /> should render a sectionList 1`] = `
 .c8 {
   -webkit-transition: color .25s ease-out;
   transition: color .25s ease-out;
-  font-size: 14px;
 }
 
 .c8,
@@ -655,25 +646,18 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                     </Text>
                                     <TextLink
                                       href="#"
-                                      small={true}
                                     >
-                                      <Component
+                                      <Anchor
                                         className="c8"
                                         href="#"
-                                        small={true}
                                       >
-                                        <Anchor
+                                        <a
                                           className="c8"
                                           href="#"
                                         >
-                                          <a
-                                            className="c8"
-                                            href="#"
-                                          >
-                                            Annotated Link
-                                          </a>
-                                        </Anchor>
-                                      </Component>
+                                          Annotated Link
+                                        </a>
+                                      </Anchor>
                                     </TextLink>
                                   </div>
                                 </AnnotatedSectionDescription>
