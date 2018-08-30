@@ -3,8 +3,8 @@ import React from 'react'
 
 import { SectionList } from './SectionList'
 
-describe('<PageLayout />', () => {
-  it('should render a profile layout', () => {
+describe('<SectionList />', () => {
+  it('should render a sectionList', () => {
     const wrapper = mount(
       <SectionList>
         <SectionList.Section>
@@ -24,7 +24,7 @@ describe('<PageLayout />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should render an annotated section without props', () => {
+  it('should render a section list with an annotated section without props', () => {
     const wrapper = mount(
       <SectionList>
         <SectionList.Section>
