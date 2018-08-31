@@ -48,6 +48,12 @@ exports[`<SectionList /> should render a section list with an annotated section 
 .c6 {
   -webkit-transition: color .25s ease-out;
   transition: color .25s ease-out;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
 }
 
 .c6,
@@ -255,16 +261,23 @@ exports[`<SectionList /> should render a section list with an annotated section 
                                   <div
                                     className="c5"
                                   >
-                                    <TextLink>
-                                      <Anchor
+                                    <TextLink
+                                      textType="small"
+                                    >
+                                      <Component
                                         className="c6"
-                                        href="#"
+                                        textType="small"
                                       >
-                                        <a
+                                        <Anchor
                                           className="c6"
                                           href="#"
-                                        />
-                                      </Anchor>
+                                        >
+                                          <a
+                                            className="c6"
+                                            href="#"
+                                          />
+                                        </Anchor>
+                                      </Component>
                                     </TextLink>
                                   </div>
                                 </AnnotatedSectionDescription>
@@ -358,6 +371,12 @@ exports[`<SectionList /> should render a sectionList 1`] = `
 .c8 {
   -webkit-transition: color .25s ease-out;
   transition: color .25s ease-out;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
 }
 
 .c8,
@@ -646,18 +665,25 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                     </Text>
                                     <TextLink
                                       href="#"
+                                      textType="small"
                                     >
-                                      <Anchor
+                                      <Component
                                         className="c8"
                                         href="#"
+                                        textType="small"
                                       >
-                                        <a
+                                        <Anchor
                                           className="c8"
                                           href="#"
                                         >
-                                          Annotated Link
-                                        </a>
-                                      </Anchor>
+                                          <a
+                                            className="c8"
+                                            href="#"
+                                          >
+                                            Annotated Link
+                                          </a>
+                                        </Anchor>
+                                      </Component>
                                     </TextLink>
                                   </div>
                                 </AnnotatedSectionDescription>

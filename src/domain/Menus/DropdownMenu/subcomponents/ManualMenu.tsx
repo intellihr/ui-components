@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { debounce, map } from 'lodash'
 import { Transition } from 'react-transition-group'
 import FocusTrap from 'focus-trap-react'
-import { Props } from '../../../../common/types'
+import { Props } from '../../../../common'
 import { StyledDropdownMenu, StyledSectionList } from './style'
 import { Section, ISectionProps } from './Section'
 

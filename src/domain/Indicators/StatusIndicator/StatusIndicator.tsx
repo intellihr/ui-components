@@ -2,7 +2,7 @@ import classNames from 'classnames'
 import React from 'react'
 import { FontAwesomeIcon } from '../../Icons'
 import { Text } from '../../Typographies/Text'
-import { Variables } from '../../../common'
+import { Props, Variables } from '../../../common'
 
 const style = require('./StatusIndicator.scss')
 
@@ -37,7 +37,7 @@ export class StatusIndicator extends React.Component<IStatusIndicatorProps> {
     if (subtitleText) {
       return (
         <Text
-          type='small'
+          type={Props.TypographyType.small}
           color={textColor}
           className='subtitle'
         >

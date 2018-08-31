@@ -1,7 +1,7 @@
 import React from 'react'
-import { TextLink, ITextLinkProps } from '../../../Links/TextLink'
+import { TextLink } from '../../../Links/TextLink'
 import { Text } from '../../../Typographies/Text'
-import { Variables } from '../../../../common'
+import { Props, Variables } from '../../../../common'
 
 export interface IAnnotatedSectionDescriptionProps {
   /** The title for what is displayed */
@@ -30,7 +30,7 @@ class AnnotatedSectionDescription extends React.Component<IAnnotatedSectionDescr
       return (
         <Text
           isInline={false}
-          type='small'
+          type={Props.TypographyType.small}
           color={Variables.Color.n600}
         >
           {description}
@@ -48,7 +48,7 @@ class AnnotatedSectionDescription extends React.Component<IAnnotatedSectionDescr
       return (
         <Text
           tag='h2'
-          type='heading'
+          type={Props.TypographyType.heading}
           color={Variables.Color.n700}
         >
           {header}
@@ -72,6 +72,7 @@ class AnnotatedSectionDescription extends React.Component<IAnnotatedSectionDescr
         <TextLink
           href={linkUrl}
           anchorComponentProps={anchorComponentProps}
+          textType={Props.TypographyType.small}
         >
           {linkText}
         </TextLink>

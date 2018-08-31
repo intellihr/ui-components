@@ -11,7 +11,6 @@ import {
 } from './style'
 import { FontAwesomeIcon } from '../../Icons'
 import { FormattedText } from '../../Typographies'
-import { Props } from '../../../common/types'
 
 export interface ICommentProps {
   /** Comment object to render */

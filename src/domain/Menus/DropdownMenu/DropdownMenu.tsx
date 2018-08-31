@@ -1,7 +1,7 @@
 import React, { RefObject } from 'react'
 import moment, { Moment } from 'moment'
 import uuid from 'uuid'
-import { Props } from '../../../common/types'
+import { Props } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons'
 import { DefaultDropdownButton, StyledToggleContainer } from './subcomponents/style'
 import { ManualMenu } from './subcomponents/ManualMenu'

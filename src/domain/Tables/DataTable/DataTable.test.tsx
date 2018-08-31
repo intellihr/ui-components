@@ -1,6 +1,6 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import { Props } from '@Common/types'
+import { Props } from '../../../common'
 import { DataTable } from './DataTable'
 
 describe('<DataTable />', () => {

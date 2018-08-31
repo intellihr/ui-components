@@ -11,7 +11,7 @@ import {
 import { Callout } from '../../Callouts'
 import { DataTablePagination, IDataTablePaginationProps } from './DataTablePagination'
 import { TextInput } from '../../Inputs'
-import { Props } from '../../../common/types'
+import { Props } from '../../../common'
 const style = require('./DataTable.scss')
 
 type alignmentOptions = Props.Position.Left | Props.Position.Center | Props.Position.Right
