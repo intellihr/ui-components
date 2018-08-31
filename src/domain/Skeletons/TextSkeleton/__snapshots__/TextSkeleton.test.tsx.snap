@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextSkeleton /> should render a text skeleton 1`] = `
+.c0 {
+  -webkit-animation: hNBTQs 1.2s ease-in-out infinite;
+  animation: hNBTQs 1.2s ease-in-out infinite;
+  background-color: #F5F9FC;
+  background-image: linear-gradient(90deg,#F5F9FC,#E1E6EB,#F5F9FC);
+  background-repeat: no-repeat;
+  background-size: 200px 100%;
+  border: 1px solid #F5F9FC;
+  border-radius: 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+<TextSkeleton
+  skeletonOptions={
+    Object {
+      "showSkeleton": true,
+    }
+  }
+>
+  <styled.span
+    type="body"
+  >
+    <span
+      className="c0"
+      type="body"
+    >
+      <span>
+        ‌
+      </span>
+    </span>
+  </styled.span>
+</TextSkeleton>
+`;
+
+exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
+.c0 {
+  -webkit-animation: hNBTQs 1.2s ease-in-out infinite;
+  animation: hNBTQs 1.2s ease-in-out infinite;
+  background-color: #F5F9FC;
+  background-image: linear-gradient(90deg,#F5F9FC,#E1E6EB,#F5F9FC);
+  background-repeat: no-repeat;
+  background-size: 200px 100%;
+  border: 1px solid #F5F9FC;
+  border-radius: 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+<TextSkeleton
+  skeletonOptions={
+    Object {
+      "showSkeleton": true,
+      "type": "display",
+    }
+  }
+>
+  <styled.span
+    type="display"
+  >
+    <span
+      className="c0"
+      type="display"
+    >
+      <span>
+        ‌
+      </span>
+    </span>
+  </styled.span>
+</TextSkeleton>
+`;
+
+exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
+.c0 {
+  -webkit-animation: hNBTQs 1.2s ease-in-out infinite;
+  animation: hNBTQs 1.2s ease-in-out infinite;
+  background-color: #F5F9FC;
+  background-image: linear-gradient(90deg,#F5F9FC,#E1E6EB,#F5F9FC);
+  background-repeat: no-repeat;
+  background-size: 200px 100%;
+  border: 1px solid #F5F9FC;
+  border-radius: 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 250px;
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+<TextSkeleton
+  skeletonOptions={
+    Object {
+      "showSkeleton": true,
+      "width": 250,
+    }
+  }
+>
+  <styled.span
+    type="body"
+    width={250}
+  >
+    <span
+      className="c0"
+      type="body"
+      width={250}
+    >
+      <span>
+        ‌
+      </span>
+    </span>
+  </styled.span>
+</TextSkeleton>
+`;

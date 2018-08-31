@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BlockSkeleton /> should render a block skeleton 1`] = `
+.c0 {
+  -webkit-animation: hNBTQs 1.2s ease-in-out infinite;
+  animation: hNBTQs 1.2s ease-in-out infinite;
+  background-color: #F5F9FC;
+  background-image: linear-gradient(90deg,#F5F9FC,#E1E6EB,#F5F9FC);
+  background-repeat: no-repeat;
+  background-size: 200px 100%;
+  border: 1px solid #F5F9FC;
+  border-radius: 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  line-height: 1rem;
+  width: 100%;
+  height: 1rem;
+}
+
+<BlockSkeleton
+  skeletonOptions={
+    Object {
+      "showSkeleton": true,
+    }
+  }
+>
+  <styled.span>
+    <span
+      className="c0"
+    />
+  </styled.span>
+</BlockSkeleton>
+`;
+
+exports[`<BlockSkeleton /> should render a block skeleton with set width and height 1`] = `
+.c0 {
+  -webkit-animation: hNBTQs 1.2s ease-in-out infinite;
+  animation: hNBTQs 1.2s ease-in-out infinite;
+  background-color: #F5F9FC;
+  background-image: linear-gradient(90deg,#F5F9FC,#E1E6EB,#F5F9FC);
+  background-repeat: no-repeat;
+  background-size: 200px 100%;
+  border: 1px solid #F5F9FC;
+  border-radius: 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  line-height: 1rem;
+  width: 400px;
+  height: 200px;
+}
+
+<BlockSkeleton
+  skeletonOptions={
+    Object {
+      "height": 200,
+      "showSkeleton": true,
+      "width": 400,
+    }
+  }
+>
+  <styled.span
+    height={200}
+    width={400}
+  >
+    <span
+      className="c0"
+      height={200}
+      width={400}
+    />
+  </styled.span>
+</BlockSkeleton>
+`;
