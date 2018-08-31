@@ -1,9 +1,10 @@
 import styled, { css, keyframes } from 'styled-components'
-import { Variables } from '../../../common'
+import { Props, Variables } from '../../../common'
+import { styleForTypographyType } from '../../Typographies/services/textStyles'
 
 export interface ITextSkeletonWrapperProps {
   width?: number,
-  type?: 'xsmall' | 'small' | 'body' | 'heading' | 'display' | 'display-large'
+  type?: Props.TypographyType
 }
 
 const progress = keyframes`
@@ -28,39 +29,5 @@ export const TextSkeletonWrapper = styled.span`
   width: ${(props: ITextSkeletonWrapperProps) => props.width ? `${props.width}px` : '100%'};
   font-family: 'Open Sans', Arial, sans-serif;
 
-  ${(props: ITextSkeletonWrapperProps) => {
-    switch (props.type) {
-      case 'xsmall':
-        return css`
-          font-size: ${Variables.FontSize.fzXSmall}px;
-          line-height: ${Variables.LineHeight.lhXSmall}px;
-        `
-      case 'small':
-        return css`
-          font-size: ${Variables.FontSize.fzSmall}px;
-          line-height: ${Variables.LineHeight.lhSmall}px;
-        `
-      case 'heading':
-        return css`
-          font-size: ${Variables.FontSize.fzHeading}px;
-          line-height: ${Variables.LineHeight.lhHeading}px;
-        `
-      case 'display':
-        return css`
-          font-size: ${Variables.FontSize.fzDisplay}px;
-          line-height: ${Variables.LineHeight.lhDisplay}px;
-        `
-      case 'display-large':
-        return css`
-          font-size: ${Variables.FontSize.fzDisplayLarge}px;
-          line-height: ${Variables.LineHeight.lhDisplayLarge}px;
-        `
-      case 'body':
-      default:
-        return css`
-          font-size: ${Variables.FontSize.fzBody}px;
-          line-height: ${Variables.LineHeight.lhBody}px;
-        `
-    }
-  }}
+  ${(props: ITextSkeletonWrapperProps) => styleForTypographyType(props.type)}
 `

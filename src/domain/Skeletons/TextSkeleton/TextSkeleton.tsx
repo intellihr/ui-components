@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import { TextSkeletonWrapper } from './style'
+import { Props } from '../../../common'
 
 export interface ITextSkeletonOptions {
   /** If true, will display the skeleton */
@@ -7,7 +8,7 @@ export interface ITextSkeletonOptions {
   /** Width of the skeleton */
   width?: number,
   /** Text type the skeleton is being rendered for */
-  type?: 'xsmall' | 'small' | 'body' | 'heading' | 'display' | 'display-large'
+  type?: Props.TypographyType
   /** Number of lines of TextSkeleton to render (to make a paragraph skeleton) */
   numLines?: number
 }
@@ -23,13 +24,13 @@ class TextSkeleton extends React.Component<ITextSkeletonComponentProps> {
   public static defaultProps: Partial<ITextSkeletonComponentProps> = {
     skeletonOptions: {
       showSkeleton: false,
-      type: 'body'
+      type: Props.TypographyType.body
     }
   }
 
   skeleton (key: number): JSX.Element {
     const {
-      type = 'body',
+      type = Props.TypographyType.body,
       width
     } = this.props.skeletonOptions!
 
