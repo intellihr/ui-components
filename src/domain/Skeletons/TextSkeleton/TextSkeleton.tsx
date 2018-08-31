@@ -24,20 +24,41 @@ class TextSkeleton extends React.Component<ITextSkeletonComponentProps> {
     skeletonOptions: {
       showSkeleton: false,
       type: 'body'
-  }
     }
+  }
+
+  skeleton (key: number): JSX.Element {
+    const {
+      type = 'body',
+      width
+    } = this.props.skeletonOptions!
+
+    const {
+      className
+    } = this.props
+
+    return (
+      <TextSkeletonWrapper
+        type={type}
+        width={width}
+        className={className}
+        key={key}
+      >
+        <span>
+          {String.fromCharCode(8204)}
+        </span>
+      </TextSkeletonWrapper>
+    )
+  }
 
   public render (): JSX.Element {
     const {
       showSkeleton = false,
-      type = 'body',
-      width,
       numLines
     } = this.props.skeletonOptions!
 
     const {
-      children,
-      className
+      children
     } = this.props
 
     if (!showSkeleton) {
@@ -48,20 +69,13 @@ class TextSkeleton extends React.Component<ITextSkeletonComponentProps> {
       )
     }
 
-    const skeleton = (
-      <TextSkeletonWrapper
-        type={type}
-        width={width}
-        className={className}
-      >
-        <span>
-          {String.fromCharCode(8204)}
-        </span>
-      </TextSkeletonWrapper>
-    )
+    const arrayLength = numLines ? numLines : 1
 
-    const output = new Array<JSX.Element>(numLines ? numLines : 1)
-    output.fill(skeleton, 0, numLines)
+    const output = new Array<JSX.Element>(arrayLength)
+
+    for (let i = 0; i < arrayLength; i++) {
+      output.push(this.skeleton(i))
+    }
 
     return (
       <Fragment>
