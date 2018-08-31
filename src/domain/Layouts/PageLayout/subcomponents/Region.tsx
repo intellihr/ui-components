@@ -1,11 +1,10 @@
 import React from 'react'
-import classNames from 'classnames'
 
 export interface IPageRegionProps {
   /** What to display in the layout. */
   children?: React.ReactNode
   /** If the component to display is the top or bottom component */
-  regionType: 'header' | 'content'
+  regionType: 'header' | 'content' | 'top-left' | 'top-right'
 }
 
 export class Region extends React.Component<IPageRegionProps> {
@@ -13,9 +12,11 @@ export class Region extends React.Component<IPageRegionProps> {
     const { children, regionType } = this.props
     return (
       <div
-        className={classNames(`page-${regionType}`)}
+        className={`page-${regionType}-outer`}
       >
-        {children}
+        <div className={`page-${regionType}-inner`}>
+          {children}
+        </div>
       </div>
     )
   }

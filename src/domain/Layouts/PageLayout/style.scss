@@ -1,29 +1,133 @@
 @import '../../../common/sass/variables';
 
-:local(.profile) {
-  align-items: center;
+@mixin page-top {
+  .page-top-left-outer {
+    flex: 1 1 50%;
+    padding-bottom: .75rem;
+    padding-top: .75rem;
+  }
+
+  .page-top-right-outer {
+    display: flex;
+    flex: 1 1 50%;
+    justify-content: flex-end;
+    padding-bottom: .75rem;
+    padding-top: .75rem;
+  }
+}
+
+@mixin base-layout {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+}
 
-  .page-header {
-    overflow: hidden;
-    width: 100%;
+@mixin profile-layout {
+  @include page-top;
+  @include base-layout;
+  align-items: center;
 
-    @media only screen and (min-width: $breakpoint-tablet) {
-      border-radius: $border-radius;
+  @media only screen and (min-width: $breakpoint-tablet) {
+    padding: 0 24px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    .page-top-left-outer {
+      padding-left: 24px;
+    }
+
+    .page-top-right-outer {
+      padding-right: 24px;
     }
   }
 
-  .page-content {
+  .page-header-outer {
+    flex: 0 0 100%;
+    width: 100%;
+
+    .page-header-inner {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: $breakpoint-big-desktop;
+      overflow: hidden;
+
+      @media only screen and (min-width: $breakpoint-tablet) {
+        border-radius: $border-radius;
+      }
+    }
+  }
+
+  .page-content-outer {
+    width: 100%;
+
+    .page-content-inner {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     @media only screen and (max-width: $breakpoint-tablet) {
       width: 100%;
     }
 
     @media only screen and (min-width: $breakpoint-tablet) {
-      border-radius: $border-radius;
       margin-top: -41px;
-      overflow: hidden;
-      width: calc(100% / 12 * 10);
+
+      .page-content-inner {
+        border-radius: $border-radius;
+        max-width:  calc(#{$breakpoint-big-desktop} / 12 * 10);
+        overflow: hidden;
+        width: calc(100% / 12 * 10);
+      }
     }
   }
+}
+
+@mixin simple-layout {
+  @include page-top;
+  @include base-layout;
+  padding: 0 24px;
+
+  .page-content-outer {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $breakpoint-big-desktop;
+    width: 100%;
+  }
+}
+
+@mixin fullscreen-layout {
+  @include page-top;
+  @include base-layout;
+  padding: 0 24px;
+
+  .page-content-outer {
+    width: 100%;
+  }
+}
+
+:local(.profile) {
+  @include profile-layout
+}
+
+:local(.simple) {
+  @include simple-layout
+}
+
+:local(.fullscreen) {
+  @include fullscreen-layout
+}
+
+// --------------
+// Legacy global layout classes for non-javascript support
+// --------------
+.profile-page-layout {
+  @include profile-layout
+}
+
+.simple-page-layout {
+  @include simple-layout
+}
+
+.fullscreen-page-layout {
+  @include fullscreen-layout
 }

@@ -1,5 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<PageLayout /> should render a fullscreen layout 1`] = `
+<PageLayout
+  layoutType="fullscreen"
+>
+  <div
+    className="fullscreen page-base"
+  >
+    <Region
+      regionType="top-left"
+    >
+      <div
+        className="page-top-left-outer"
+      >
+        <div
+          className="page-top-left-inner"
+        >
+          <div>
+            1
+          </div>
+        </div>
+      </div>
+    </Region>
+    <Region
+      regionType="top-right"
+    >
+      <div
+        className="page-top-right-outer"
+      >
+        <div
+          className="page-top-right-inner"
+        >
+          <div>
+            2
+          </div>
+        </div>
+      </div>
+    </Region>
+    <Region
+      regionType="content"
+    >
+      <div
+        className="page-content-outer"
+      >
+        <div
+          className="page-content-inner"
+        >
+          <div>
+            a
+          </div>
+        </div>
+      </div>
+    </Region>
+  </div>
+</PageLayout>
+`;
+
 exports[`<PageLayout /> should render a profile layout 1`] = `
 <PageLayout
   layoutType="profile"
@@ -8,13 +64,47 @@ exports[`<PageLayout /> should render a profile layout 1`] = `
     className="profile page-base"
   >
     <Region
+      regionType="top-left"
+    >
+      <div
+        className="page-top-left-outer"
+      >
+        <div
+          className="page-top-left-inner"
+        >
+          <div>
+            1
+          </div>
+        </div>
+      </div>
+    </Region>
+    <Region
+      regionType="top-right"
+    >
+      <div
+        className="page-top-right-outer"
+      >
+        <div
+          className="page-top-right-inner"
+        >
+          <div>
+            2
+          </div>
+        </div>
+      </div>
+    </Region>
+    <Region
       regionType="header"
     >
       <div
-        className="page-header"
+        className="page-header-outer"
       >
-        <div>
-          a
+        <div
+          className="page-header-inner"
+        >
+          <div>
+            a
+          </div>
         </div>
       </div>
     </Region>
@@ -22,10 +112,70 @@ exports[`<PageLayout /> should render a profile layout 1`] = `
       regionType="content"
     >
       <div
-        className="page-content"
+        className="page-content-outer"
       >
-        <div>
-          b
+        <div
+          className="page-content-inner"
+        >
+          <div>
+            b
+          </div>
+        </div>
+      </div>
+    </Region>
+  </div>
+</PageLayout>
+`;
+
+exports[`<PageLayout /> should render a simple layout 1`] = `
+<PageLayout
+  layoutType="profile"
+>
+  <div
+    className="profile page-base"
+  >
+    <Region
+      regionType="top-left"
+    >
+      <div
+        className="page-top-left-outer"
+      >
+        <div
+          className="page-top-left-inner"
+        >
+          <div>
+            1
+          </div>
+        </div>
+      </div>
+    </Region>
+    <Region
+      regionType="top-right"
+    >
+      <div
+        className="page-top-right-outer"
+      >
+        <div
+          className="page-top-right-inner"
+        >
+          <div>
+            2
+          </div>
+        </div>
+      </div>
+    </Region>
+    <Region
+      regionType="content"
+    >
+      <div
+        className="page-content-outer"
+      >
+        <div
+          className="page-content-inner"
+        >
+          <div>
+            a
+          </div>
         </div>
       </div>
     </Region>
