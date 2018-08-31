@@ -28,7 +28,7 @@ class TextSkeleton extends React.Component<ITextSkeletonComponentProps> {
     }
   }
 
-  skeleton (key: number): JSX.Element {
+  public skeleton (key: number): JSX.Element {
     const {
       type = Props.TypographyType.body,
       width

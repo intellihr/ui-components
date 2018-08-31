@@ -26,7 +26,7 @@ class CircleSkeleton extends React.Component<ICircleSkeletonComponentProps> {
   public render (): JSX.Element {
     const {
       showSkeleton = false,
-      size = 'large',
+      size = 'large'
     } = this.props.skeletonOptions!
 
     const {
