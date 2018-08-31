@@ -40,4 +40,17 @@ describe('<TextSkeleton />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it('should render a multi line text skeleton', () => {
+    const wrapper = mount(
+      <TextSkeleton
+        skeletonOptions={{
+          showSkeleton: true,
+          numLines: 5
+        }}
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })
