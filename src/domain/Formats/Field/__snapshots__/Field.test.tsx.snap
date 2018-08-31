@@ -42,12 +42,11 @@ exports[`<Field /> should render a Field component, creating a Text child with t
           className="label-component"
           color="#667380"
           isInline={false}
-          type="small"
+          textType="small"
         >
           <span
             className="label-component c0"
             color="#667380"
-            type="small"
           >
             FTE
           </span>
@@ -65,12 +64,11 @@ exports[`<Field /> should render a Field component, creating a Text child with t
     <styled.span
       color="#262D33"
       isInline={true}
-      type="body"
+      textType="body"
     >
       <span
         className="c1"
         color="#262D33"
-        type="body"
       >
         1.000
       </span>
@@ -121,12 +119,11 @@ exports[`<Field /> should render a Field component, creating a Text child with t
           className="label-component"
           color="#667380"
           isInline={false}
-          type="small"
+          textType="small"
         >
           <span
             className="label-component c0"
             color="#667380"
-            type="small"
           >
             Position Title
           </span>
@@ -144,12 +141,11 @@ exports[`<Field /> should render a Field component, creating a Text child with t
     <styled.span
       color="#262D33"
       isInline={true}
-      type="body"
+      textType="body"
     >
       <span
         className="c1"
         color="#262D33"
-        type="body"
       >
         Chief Executive Officer
       </span>
@@ -189,12 +185,11 @@ exports[`<Field /> should render a Field component, with the provided component 
           className="label-component"
           color="#667380"
           isInline={false}
-          type="small"
+          textType="small"
         >
           <span
             className="label-component c0"
             color="#667380"
-            type="small"
           >
             Position Title
           </span>

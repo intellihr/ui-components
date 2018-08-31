@@ -2691,6 +2691,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
   font-family: 'Open Sans',Arial,sans-serif;
   font-size: 16px;
   line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
 }
 
 @media only screen and (min-width:0em) {
@@ -3131,11 +3135,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               >
                                 <styled.span
                                   key="0"
-                                  type="body"
+                                  textType="body"
                                 >
                                   <span
                                     className="c4"
-                                    type="body"
                                   >
                                     <span>
                                       ‌
@@ -3225,11 +3228,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               >
                                 <styled.span
                                   key="0"
-                                  type="body"
+                                  textType="body"
                                 >
                                   <span
                                     className="c4"
-                                    type="body"
                                   >
                                     <span>
                                       ‌
@@ -3319,11 +3321,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               >
                                 <styled.span
                                   key="0"
-                                  type="body"
+                                  textType="body"
                                 >
                                   <span
                                     className="c4"
-                                    type="body"
                                   >
                                     <span>
                                       ‌
@@ -3480,11 +3481,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               >
                                 <styled.span
                                   key="0"
-                                  type="body"
+                                  textType="body"
                                 >
                                   <span
                                     className="c4"
-                                    type="body"
                                   >
                                     <span>
                                       ‌
@@ -3574,11 +3574,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               >
                                 <styled.span
                                   key="0"
-                                  type="body"
+                                  textType="body"
                                 >
                                   <span
                                     className="c4"
-                                    type="body"
                                   >
                                     <span>
                                       ‌
@@ -3668,11 +3667,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               >
                                 <styled.span
                                   key="0"
-                                  type="body"
+                                  textType="body"
                                 >
                                   <span
                                     className="c4"
-                                    type="body"
                                   >
                                     <span>
                                       ‌
@@ -3829,11 +3827,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               >
                                 <styled.span
                                   key="0"
-                                  type="body"
+                                  textType="body"
                                 >
                                   <span
                                     className="c4"
-                                    type="body"
                                   >
                                     <span>
                                       ‌
@@ -3923,11 +3920,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               >
                                 <styled.span
                                   key="0"
-                                  type="body"
+                                  textType="body"
                                 >
                                   <span
                                     className="c4"
-                                    type="body"
                                   >
                                     <span>
                                       ‌
@@ -4017,11 +4013,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               >
                                 <styled.span
                                   key="0"
-                                  type="body"
+                                  textType="body"
                                 >
                                   <span
                                     className="c4"
-                                    type="body"
                                   >
                                     <span>
                                       ‌
@@ -4178,11 +4173,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               >
                                 <styled.span
                                   key="0"
-                                  type="body"
+                                  textType="body"
                                 >
                                   <span
                                     className="c4"
-                                    type="body"
                                   >
                                     <span>
                                       ‌
@@ -4272,11 +4266,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               >
                                 <styled.span
                                   key="0"
-                                  type="body"
+                                  textType="body"
                                 >
                                   <span
                                     className="c4"
-                                    type="body"
                                   >
                                     <span>
                                       ‌
@@ -4366,11 +4359,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               >
                                 <styled.span
                                   key="0"
-                                  type="body"
+                                  textType="body"
                                 >
                                   <span
                                     className="c4"
-                                    type="body"
                                   >
                                     <span>
                                       ‌
@@ -4527,11 +4519,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               >
                                 <styled.span
                                   key="0"
-                                  type="body"
+                                  textType="body"
                                 >
                                   <span
                                     className="c4"
-                                    type="body"
                                   >
                                     <span>
                                       ‌
@@ -4621,11 +4612,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               >
                                 <styled.span
                                   key="0"
-                                  type="body"
+                                  textType="body"
                                 >
                                   <span
                                     className="c4"
-                                    type="body"
                                   >
                                     <span>
                                       ‌
@@ -4715,11 +4705,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               >
                                 <styled.span
                                   key="0"
-                                  type="body"
+                                  textType="body"
                                 >
                                   <span
                                     className="c4"
-                                    type="body"
                                   >
                                     <span>
                                       ‌

@@ -18,6 +18,10 @@ exports[`<TextSkeleton /> should render a multi line text skeleton 1`] = `
   font-family: 'Open Sans',Arial,sans-serif;
   font-size: 16px;
   line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
 }
 
 <TextSkeleton
@@ -30,11 +34,10 @@ exports[`<TextSkeleton /> should render a multi line text skeleton 1`] = `
 >
   <styled.span
     key="0"
-    type="body"
+    textType="body"
   >
     <span
       className="c0"
-      type="body"
     >
       <span>
         ‌
@@ -43,11 +46,10 @@ exports[`<TextSkeleton /> should render a multi line text skeleton 1`] = `
   </styled.span>
   <styled.span
     key="1"
-    type="body"
+    textType="body"
   >
     <span
       className="c0"
-      type="body"
     >
       <span>
         ‌
@@ -56,11 +58,10 @@ exports[`<TextSkeleton /> should render a multi line text skeleton 1`] = `
   </styled.span>
   <styled.span
     key="2"
-    type="body"
+    textType="body"
   >
     <span
       className="c0"
-      type="body"
     >
       <span>
         ‌
@@ -69,11 +70,10 @@ exports[`<TextSkeleton /> should render a multi line text skeleton 1`] = `
   </styled.span>
   <styled.span
     key="3"
-    type="body"
+    textType="body"
   >
     <span
       className="c0"
-      type="body"
     >
       <span>
         ‌
@@ -82,11 +82,10 @@ exports[`<TextSkeleton /> should render a multi line text skeleton 1`] = `
   </styled.span>
   <styled.span
     key="4"
-    type="body"
+    textType="body"
   >
     <span
       className="c0"
-      type="body"
     >
       <span>
         ‌
@@ -114,6 +113,10 @@ exports[`<TextSkeleton /> should render a text skeleton 1`] = `
   font-family: 'Open Sans',Arial,sans-serif;
   font-size: 16px;
   line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
 }
 
 <TextSkeleton
@@ -125,11 +128,10 @@ exports[`<TextSkeleton /> should render a text skeleton 1`] = `
 >
   <styled.span
     key="0"
-    type="body"
+    textType="body"
   >
     <span
       className="c0"
-      type="body"
     >
       <span>
         ‌
@@ -157,6 +159,10 @@ exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
   font-family: 'Open Sans',Arial,sans-serif;
   font-size: 24px;
   line-height: 28px;
+  -webkit-letter-spacing: -.02em;
+  -moz-letter-spacing: -.02em;
+  -ms-letter-spacing: -.02em;
+  letter-spacing: -.02em;
 }
 
 <TextSkeleton
@@ -169,11 +175,10 @@ exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
 >
   <styled.span
     key="0"
-    type="display"
+    textType="display"
   >
     <span
       className="c0"
-      type="display"
     >
       <span>
         ‌
@@ -201,6 +206,10 @@ exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
   font-family: 'Open Sans',Arial,sans-serif;
   font-size: 16px;
   line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
 }
 
 <TextSkeleton
@@ -213,12 +222,11 @@ exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
 >
   <styled.span
     key="0"
-    type="body"
+    textType="body"
     width={250}
   >
     <span
       className="c0"
-      type="body"
       width={250}
     >
       <span>

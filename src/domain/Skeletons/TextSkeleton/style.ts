@@ -1,10 +1,10 @@
-import styled, { css, keyframes } from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { Props, Variables } from '../../../common'
 import { styleForTypographyType } from '../../Typographies/services/textStyles'
 
 export interface ITextSkeletonWrapperProps {
   width?: number,
-  type?: Props.TypographyType
+  textType?: Props.TypographyType
 }
 
 const progress = keyframes`
@@ -29,5 +29,5 @@ export const TextSkeletonWrapper = styled.span`
   width: ${(props: ITextSkeletonWrapperProps) => props.width ? `${props.width}px` : '100%'};
   font-family: 'Open Sans', Arial, sans-serif;
 
-  ${(props: ITextSkeletonWrapperProps) => styleForTypographyType(props.type)}
+  ${(props: ITextSkeletonWrapperProps) => styleForTypographyType(props.textType)}
 `

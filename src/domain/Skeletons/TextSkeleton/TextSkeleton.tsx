@@ -40,7 +40,7 @@ class TextSkeleton extends React.Component<ITextSkeletonComponentProps> {
 
     return (
       <TextSkeletonWrapper
-        type={type}
+        textType={type}
         width={width}
         className={className}
         key={key}

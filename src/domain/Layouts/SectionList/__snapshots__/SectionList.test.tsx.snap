@@ -630,12 +630,11 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                       <styled.h2
                                         color="#424F5C"
                                         isInline={true}
-                                        type="heading"
+                                        textType="heading"
                                       >
                                         <h2
                                           className="c6"
                                           color="#424F5C"
-                                          type="heading"
                                         >
                                           Annotated Section
                                         </h2>
@@ -650,12 +649,11 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                       <styled.span
                                         color="#667380"
                                         isInline={false}
-                                        type="small"
+                                        textType="small"
                                       >
                                         <span
                                           className="c7"
                                           color="#667380"
-                                          type="small"
                                         >
                                           Annotated Description
                                         </span>
