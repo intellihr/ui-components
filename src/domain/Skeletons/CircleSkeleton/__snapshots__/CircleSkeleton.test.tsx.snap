@@ -23,11 +23,8 @@ exports[`<CircleSkeleton /> should render a circle skeleton 1`] = `
 }
 
 <CircleSkeleton
-  skeletonOptions={
-    Object {
-      "showSkeleton": true,
-    }
-  }
+  showSkeleton={true}
+  size="large"
 >
   <Styled(styled.span)
     size="large"
@@ -68,12 +65,8 @@ exports[`<CircleSkeleton /> should render a circle skeleton with set size 1`] = 
 }
 
 <CircleSkeleton
-  skeletonOptions={
-    Object {
-      "showSkeleton": true,
-      "size": "small",
-    }
-  }
+  showSkeleton={true}
+  size="small"
 >
   <Styled(styled.span)
     size="small"
