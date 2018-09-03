@@ -1,7 +1,5 @@
 @import '../../../common/sass/variables';
 
-// sass-lint:disable class-name-format
-
 @mixin sorting-cursor($icon, $color) {
   &::before {
     color: $color;
