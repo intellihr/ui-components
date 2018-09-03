@@ -557,8 +557,12 @@ exports[`<SectionList /> should render a sectionList 1`] = `
     <AnnotatedSection
       description="Annotated Description"
       header="Annotated Section"
+      linkProps={
+        Object {
+          "href": "#",
+        }
+      }
       linkText="Annotated Link"
-      linkUrl="#"
     >
       <styled.div>
         <div
@@ -610,15 +614,23 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                               <Styled(AnnotatedSectionDescription)
                                 description="Annotated Description"
                                 header="Annotated Section"
+                                linkProps={
+                                  Object {
+                                    "href": "#",
+                                  }
+                                }
                                 linkText="Annotated Link"
-                                linkUrl="#"
                               >
                                 <AnnotatedSectionDescription
                                   className="c5"
                                   description="Annotated Description"
                                   header="Annotated Section"
+                                  linkProps={
+                                    Object {
+                                      "href": "#",
+                                    }
+                                  }
                                   linkText="Annotated Link"
-                                  linkUrl="#"
                                 >
                                   <div
                                     className="c5"

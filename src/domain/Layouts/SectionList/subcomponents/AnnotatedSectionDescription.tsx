@@ -14,8 +14,8 @@ export interface IAnnotatedSectionDescriptionProps {
   linkUrl?: string,
   /** The className of the component (used by styled components) */
   className?: string,
-  /** Any extra anchor component props */
-  anchorComponentProps?: {
+  /** Any extra link props */
+  linkProps?: {
     [i: string]: any
   }
 }
@@ -60,8 +60,7 @@ class AnnotatedSectionDescription extends React.Component<IAnnotatedSectionDescr
   public render (): JSX.Element | null {
     const {
       linkText,
-      linkUrl,
-      anchorComponentProps,
+      linkProps,
       className
     } = this.props
 
@@ -70,9 +69,8 @@ class AnnotatedSectionDescription extends React.Component<IAnnotatedSectionDescr
         {this.header}
         {this.description}
         <TextLink
-          href={linkUrl}
-          anchorComponentProps={anchorComponentProps}
           textType={Props.TypographyType.small}
+          {...linkProps}
         >
           {linkText}
         </TextLink>
