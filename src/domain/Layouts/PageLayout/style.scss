@@ -1,13 +1,17 @@
 @import '../../../common/sass/variables';
 
+// sass-lint:disable class-name-format
+
 @mixin page-top {
-  .page-top-left-outer {
+  :local(.top-left-outer),
+  .ihr-layout__top-left--outer {
     flex: 1 1 50%;
     padding-bottom: .75rem;
     padding-top: .75rem;
   }
 
-  .page-top-right-outer {
+  :local(.top-right-outer),
+  .ihr-layout__top-right--outer {
     display: flex;
     flex: 1 1 50%;
     justify-content: flex-end;
@@ -22,8 +26,6 @@
 }
 
 @mixin profile-layout {
-  @include page-top;
-  @include base-layout;
   align-items: center;
 
   @media only screen and (min-width: $breakpoint-tablet) {
@@ -31,62 +33,64 @@
   }
 
   @media only screen and (max-width: $breakpoint-tablet) {
-    .page-top-left-outer {
+    :local(.top-left-outer),
+    .ihr-layout__top-left--outer {
       padding-left: 24px;
     }
 
-    .page-top-right-outer {
+    :local(.top-right-outer),
+    .ihr-layout__top-right--outer {
       padding-right: 24px;
     }
   }
 
-  .page-header-outer {
-    flex: 0 0 100%;
-    width: 100%;
+  :local(.header-inner),
+  .ihr-layout__header--inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $breakpoint-big-desktop;
+    overflow: hidden;
 
-    .page-header-inner {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: $breakpoint-big-desktop;
-      overflow: hidden;
-
-      @media only screen and (min-width: $breakpoint-tablet) {
-        border-radius: $border-radius;
-      }
+    @media only screen and (min-width: $breakpoint-tablet) {
+      border-radius: $border-radius;
     }
   }
 
-  .page-content-outer {
+  :local(.header-outer),
+  .ihr-layout__header--outer {
+    flex: 0 0 100%;
     width: 100%;
+  }
 
-    .page-content-inner {
-      margin-left: auto;
-      margin-right: auto;
-    }
+  :local(.content-inner),
+  .ihr-layout__content--inner {
+    margin-left: auto;
+    margin-right: auto;
 
     @media only screen and (max-width: $breakpoint-tablet) {
       width: 100%;
     }
 
     @media only screen and (min-width: $breakpoint-tablet) {
+      border-radius: $border-radius;
       margin-top: -41px;
-
-      .page-content-inner {
-        border-radius: $border-radius;
-        max-width:  calc(#{$breakpoint-big-desktop} / 12 * 10);
-        overflow: hidden;
-        width: calc(100% / 12 * 10);
-      }
+      max-width:  $breakpoint-big-desktop / 12 * 10;
+      overflow: hidden;
+      width: 100% / 12 * 10;
     }
+  }
+
+  :local(.content-outer),
+  .ihr-layout__content--outer {
+    width: 100%;
   }
 }
 
 @mixin simple-layout {
-  @include page-top;
-  @include base-layout;
   padding: 0 24px;
 
-  .page-content-outer {
+  :local(.content-outer),
+  .ihr-layout__content--outer {
     align-items: center;
     margin-left: auto;
     margin-right: auto;
@@ -96,38 +100,32 @@
 }
 
 @mixin fullscreen-layout {
-  @include page-top;
-  @include base-layout;
   padding: 0 24px;
 
-  .page-content-outer {
+  :local(.content-outer),
+  .ihr-layout__content--outer {
     width: 100%;
   }
 }
 
-:local(.profile) {
+:local(.base),
+.ihr-layout {
+  @include page-top;
+  @include base-layout;
+}
+
+:local(.profile),
+.ihr-layout--profile {
   @include profile-layout
 }
 
-:local(.simple) {
+:local(.simple),
+.ihr-layout--simple {
   @include simple-layout
 }
 
-:local(.fullscreen) {
+:local(.fullscreen),
+.ihr-layout--fullscreen {
   @include fullscreen-layout
 }
 
-// --------------
-// Legacy global layout classes for non-javascript support
-// --------------
-.profile-page-layout {
-  @include profile-layout
-}
-
-.simple-page-layout {
-  @include simple-layout
-}
-
-.fullscreen-page-layout {
-  @include fullscreen-layout
-}

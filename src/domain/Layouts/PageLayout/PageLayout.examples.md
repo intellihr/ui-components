@@ -60,30 +60,30 @@ const { Variables } = require('@Common');
 </PageLayout>
 ```
 
-#### Legacy Layout
+#### Plain HTML Layout
 
-Layouts can be used in blade pages by using exposed class names
+Layouts can be used in plain html files by using global class names
 ```jsx
 const { Variables } = require('@Common');
 
-<div class='profile-page-layout'>
-  <div class='page-top-left-outer'>
-    <div class='page-top-left-inner'>
+<div class='ihr-layout ihr-layout--profile'>
+  <div class='ihr-layout__top-left--outer'>
+    <div class='ihr-layout__top-left--inner'>
       <div style={{backgroundColor: Variables.Color.n300, height: '40px', width: 'auto'}}/>
     </div>
   </div>
-  <div class='page-top-right-outer'>
-    <div class='page-top-right-inner'>
+  <div class='ihr-layout__top-right--outer'>
+    <div class='ihr-layout__top-right--inner'>
        <div style={{backgroundColor: Variables.Color.n400, height: '40px', width: '300px'}}/>
     </div>
   </div>
-  <div class='page-header-outer'>
-    <div class='page-header-inner'>
+  <div class='ihr-layout__header--outer'>
+    <div class='ihr-layout__header--inner'>
       <div style={{backgroundColor: Variables.Color.n500, height: '240px', width: '100%'}}/>
     </div>
   </div>
-  <div class='page-content-outer'>
-    <div class='page-content-inner'>
+  <div class='ihr-layout__content--outer'>
+    <div class='ihr-layout__content--inner'>
       <div style={{backgroundColor: Variables.Color.n600, height: '500px', width: '100%'}}/>
     </div>
   </div>
@@ -92,19 +92,19 @@ const { Variables } = require('@Common');
 ```jsx
 const { Variables } = require('@Common');
 
-<div class='simple-page-layout'>
-  <div class='page-top-left-outer'>
-    <div class='page-top-left-inner'>
+<div class='ihr-layout ihr-layout--simple'>
+  <div class='ihr-layout__top-left--outer'>
+    <div class='ihr-layout__top-left--inner'>
       <div style={{backgroundColor: Variables.Color.n300, height: '40px', width: 'auto'}}/>
     </div>
   </div>
-  <div class='page-top-right-outer'>
-    <div class='page-top-right-inner'>
+  <div class='ihr-layout__top-right--outer'>
+    <div class='ihr-layout__top-right--inner'>
        <div style={{backgroundColor: Variables.Color.n400, height: '40px', width: '300px'}}/>
     </div>
   </div>
-  <div class='page-content-outer'>
-    <div class='page-content-inner'>
+  <div class='ihr-layout__content--outer'>
+    <div class='ihr-layout__content--inner'>
       <div style={{backgroundColor: Variables.Color.n600, height: '500px', width: '100%'}}/>
     </div>
   </div>
@@ -113,19 +113,19 @@ const { Variables } = require('@Common');
 ```jsx
 const { Variables } = require('@Common');
 
-<div class='fullscreen-page-layout'>
-  <div class='page-top-left-outer'>
-    <div class='page-top-left-inner'>
+<div class='ihr-layout ihr-layout--fullscreen'>
+  <div class='ihr-layout__top-left--outer'>
+    <div class='ihr-layout__top-left--inner'>
       <div style={{backgroundColor: Variables.Color.n300, height: '40px', width: 'auto'}}/>
     </div>
   </div>
-  <div class='page-top-right-outer'>
-    <div class='page-top-right-inner'>
+  <div class='ihr-layout__top-right--outer'>
+    <div class='ihr-layout__top-right--inner'>
        <div style={{backgroundColor: Variables.Color.n400, height: '40px', width: '300px'}}/>
     </div>
   </div>
-  <div class='page-content-outer'>
-    <div class='page-top-right-inner'>
+  <div class='ihr-layout__content--outer'>
+    <div class='ihr-layout__content--inner'>
       <div style={{backgroundColor: Variables.Color.n600, height: '500px', width: '100%'}}/>
     </div>
   </div>

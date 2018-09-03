@@ -17,7 +17,7 @@ export class PageLayout extends React.Component<IPageLayoutProps> {
     const { children, layoutType } = this.props
     return (
       <div
-        className={classNames(style[layoutType], 'page-base')}
+        className={classNames(style.base, style[layoutType], 'page-base')}
       >
         {children}
       </div>

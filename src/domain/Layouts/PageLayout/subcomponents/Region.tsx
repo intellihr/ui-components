@@ -1,4 +1,5 @@
 import React from 'react'
+const style = require('../style.scss')
 
 export interface IPageRegionProps {
   /** What to display in the layout. */
@@ -12,9 +13,9 @@ export class Region extends React.Component<IPageRegionProps> {
     const { children, regionType } = this.props
     return (
       <div
-        className={`page-${regionType}-outer`}
+        className={style[`${regionType}-outer`]}
       >
-        <div className={`page-${regionType}-inner`}>
+        <div className={style[`${regionType}-inner`]}>
           {children}
         </div>
       </div>
