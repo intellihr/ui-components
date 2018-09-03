@@ -23,11 +23,7 @@ exports[`<BlockSkeleton /> should render a block skeleton 1`] = `
 }
 
 <BlockSkeleton
-  skeletonOptions={
-    Object {
-      "showSkeleton": true,
-    }
-  }
+  showSkeleton={true}
 >
   <Styled(styled.span)>
     <styled.span
@@ -64,13 +60,9 @@ exports[`<BlockSkeleton /> should render a block skeleton with set width and hei
 }
 
 <BlockSkeleton
-  skeletonOptions={
-    Object {
-      "height": 200,
-      "showSkeleton": true,
-      "width": 400,
-    }
-  }
+  height={200}
+  showSkeleton={true}
+  width={400}
 >
   <Styled(styled.span)
     height={200}

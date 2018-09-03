@@ -2,19 +2,15 @@
 
 ```jsx
 <BlockSkeleton
-  skeletonOptions={{
-    showSkeleton: true
-  }}
+  showSkeleton={true}
 />
 ```
 
 #### Block Skeleton with provided Width and Height
 ```jsx
 <BlockSkeleton
-  skeletonOptions={{
-    showSkeleton: true,
-    width: 400,
-    height: 200
-  }}
+  showSkeleton={true}
+  width={400}
+  height={200}
 />
 ```
