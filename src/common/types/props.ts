@@ -27,7 +27,7 @@ namespace Props {
     Small = 'small',
     Medium = 'medium',
     Large = 'large',
-    XLarge = 'xlarge',
+    XLarge = 'xlarge'
   }
 
   export enum TypographyType {
