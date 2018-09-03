@@ -2,7 +2,6 @@
 
 exports[`<Text /> should render a non-inline text element 1`] = `
 .c0 {
-  font-family: 'Open Sans',Arial,sans-serif;
   font-size: 16px;
   line-height: 24px;
   -webkit-letter-spacing: normal;
@@ -35,7 +34,6 @@ exports[`<Text /> should render a non-inline text element 1`] = `
 
 exports[`<Text /> should render a text element as a h1 1`] = `
 .c0 {
-  font-family: 'Open Sans',Arial,sans-serif;
   font-size: 16px;
   line-height: 24px;
   -webkit-letter-spacing: normal;
@@ -67,7 +65,6 @@ exports[`<Text /> should render a text element as a h1 1`] = `
 
 exports[`<Text /> should render an element with colored text 1`] = `
 .c0 {
-  font-family: 'Open Sans',Arial,sans-serif;
   font-size: 16px;
   line-height: 24px;
   -webkit-letter-spacing: normal;
@@ -102,7 +99,6 @@ exports[`<Text /> should render an element with colored text 1`] = `
 
 exports[`<Text /> should render an element with heading text 1`] = `
 .c0 {
-  font-family: 'Open Sans',Arial,sans-serif;
   font-size: 18px;
   line-height: 24px;
   -webkit-letter-spacing: -.02em;
@@ -134,7 +130,6 @@ exports[`<Text /> should render an element with heading text 1`] = `
 
 exports[`<Text /> should render an element with heavy text 1`] = `
 .c0 {
-  font-family: 'Open Sans',Arial,sans-serif;
   font-size: 16px;
   line-height: 24px;
   -webkit-letter-spacing: normal;
@@ -168,7 +163,6 @@ exports[`<Text /> should render an element with heavy text 1`] = `
 
 exports[`<Text /> should render an element with small text 1`] = `
 .c0 {
-  font-family: 'Open Sans',Arial,sans-serif;
   font-size: 14px;
   line-height: 20px;
   -webkit-letter-spacing: normal;
@@ -200,7 +194,6 @@ exports[`<Text /> should render an element with small text 1`] = `
 
 exports[`<Text /> should render an element with text 1`] = `
 .c0 {
-  font-family: 'Open Sans',Arial,sans-serif;
   font-size: 16px;
   line-height: 24px;
   -webkit-letter-spacing: normal;
@@ -232,7 +225,6 @@ exports[`<Text /> should render an element with text 1`] = `
 
 exports[`<Text /> should render an element with the text converted to uppercase 1`] = `
 .c0 {
-  font-family: 'Open Sans',Arial,sans-serif;
   font-size: 16px;
   line-height: 24px;
   -webkit-letter-spacing: normal;
