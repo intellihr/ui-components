@@ -15,10 +15,8 @@ export interface IAnnotatedSectionProps {
   description?: string,
   /** The text for the call to action */
   linkText?: string,
-  /** Where the call to action goes to */
-  linkUrl?: string,
-  /** Any extra anchor component props */
-  anchorComponentProps?: {
+  /** Any extra link props */
+  linkProps?: {
     [i: string]: any
   }
 }
@@ -30,8 +28,7 @@ class AnnotatedSection extends React.Component<IAnnotatedSectionProps> {
       header,
       description,
       linkText,
-      linkUrl,
-      anchorComponentProps
+      linkProps
     } = this.props
 
     return (
@@ -42,8 +39,7 @@ class AnnotatedSection extends React.Component<IAnnotatedSectionProps> {
               header={header}
               description={description}
               linkText={linkText}
-              linkUrl={linkUrl}
-              anchorComponentProps={anchorComponentProps}
+              linkProps={linkProps}
             />
           </Row.Column>
           <Row.Column sm={12} md={8}>

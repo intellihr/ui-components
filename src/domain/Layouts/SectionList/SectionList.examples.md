@@ -12,7 +12,7 @@ sub-components that provide responsive styling between mobile and desktop.
     header='Annotated Section'
     description='This is an annotated section, which enables sections to have a description.'
     linkText='Action that can be taken'
-    linkUrl='#'
+    linkProps={{href: '#'}}
   >
     <Text>
       As is the same with a Section, content can be passed into an Annotated Section which will then be displayed
