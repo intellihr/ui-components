@@ -2,7 +2,6 @@
 
 exports[`<Field /> should render a Field component, creating a Text child with the provided number 1`] = `
 .c0 {
-  font-family: 'Open Sans',Arial,sans-serif;
   font-size: 14px;
   line-height: 20px;
   -webkit-letter-spacing: normal;
@@ -15,7 +14,6 @@ exports[`<Field /> should render a Field component, creating a Text child with t
 }
 
 .c1 {
-  font-family: 'Open Sans',Arial,sans-serif;
   font-size: 16px;
   line-height: 24px;
   -webkit-letter-spacing: normal;
@@ -83,7 +81,6 @@ exports[`<Field /> should render a Field component, creating a Text child with t
 
 exports[`<Field /> should render a Field component, creating a Text child with the provided text 1`] = `
 .c0 {
-  font-family: 'Open Sans',Arial,sans-serif;
   font-size: 14px;
   line-height: 20px;
   -webkit-letter-spacing: normal;
@@ -96,7 +93,6 @@ exports[`<Field /> should render a Field component, creating a Text child with t
 }
 
 .c1 {
-  font-family: 'Open Sans',Arial,sans-serif;
   font-size: 16px;
   line-height: 24px;
   -webkit-letter-spacing: normal;
@@ -164,7 +160,6 @@ exports[`<Field /> should render a Field component, creating a Text child with t
 
 exports[`<Field /> should render a Field component, with the provided component child 1`] = `
 .c0 {
-  font-family: 'Open Sans',Arial,sans-serif;
   font-size: 14px;
   line-height: 20px;
   -webkit-letter-spacing: normal;
