@@ -7,7 +7,7 @@ import {
 } from './style'
 import { Avatar, IAvatarProps } from '../'
 import { Text } from '../../Typographies'
-import { Variables } from '../../../common'
+import { Props, Variables } from '../../../common'
 
 export interface IAvatarEntity {
   /** The primary text */
@@ -86,7 +86,7 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
       >
         <Text
           color={Variables.Color.n600}
-          type='xsmall'
+          type={Props.TypographyType.xsmall}
           isTruncated
           isInline={isCompact}
         >
@@ -109,7 +109,7 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
     return (
         <Text
           color={Variables.Color.n600}
-          type='xsmall'
+          type={Props.TypographyType.xsmall}
           weight='heavy'
           isInline={false}
           isTruncated

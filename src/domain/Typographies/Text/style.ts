@@ -1,59 +1,20 @@
 import styled, { css } from 'styled-components'
-import { Variables } from '../../../common'
+import { Props, Variables } from '../../../common'
+import { styleForTypographyType } from '../services/textStyles'
 
 export interface ITextWrapperProps {
   color?: Variables.Color
   isInline?: boolean
   isUpper?: boolean
   weight?: 'normal' | 'heavy'
-  type?: 'xsmall' | 'small' | 'body' | 'heading' | 'display' | 'display-large'
+  type?: Props.TypographyType
   isTruncated?: boolean
 }
 
 export const TextWrapper = styled.span`
   font-family: 'Open Sans', Arial, sans-serif;
 
-  ${(props: ITextWrapperProps) => {
-    switch (props.type) {
-      case 'xsmall':
-        return css`
-          font-size: ${Variables.FontSize.fzXSmall}px;
-          line-height: ${Variables.LineHeight.lhXSmall}px;
-          letter-spacing: .02em;
-        `
-      case 'small':
-        return css`
-          font-size: ${Variables.FontSize.fzSmall}px;
-          line-height: ${Variables.LineHeight.lhSmall}px;
-          letter-spacing: normal;
-        `
-      case 'heading':
-        return css`
-          font-size: ${Variables.FontSize.fzHeading}px;
-          line-height: ${Variables.LineHeight.lhHeading}px;
-          letter-spacing: -.02em;
-        `
-      case 'display':
-        return css`
-          font-size: ${Variables.FontSize.fzDisplay}px;
-          line-height: ${Variables.LineHeight.lhDisplay}px;
-          letter-spacing: -.02em;
-        `
-      case 'display-large':
-        return css`
-          font-size: ${Variables.FontSize.fzDisplayLarge}px;
-          line-height: ${Variables.LineHeight.lhDisplayLarge}px;
-          letter-spacing: -.02em;
-        `
-      case 'body':
-      default:
-        return css`
-          font-size: ${Variables.FontSize.fzBody}px;
-          line-height: ${Variables.LineHeight.lhBody}px;
-          letter-spacing: normal;
-        `
-    }
-  }}
+  ${(props: ITextWrapperProps) => styleForTypographyType(props.type)}
 
   ${(props: ITextWrapperProps) => {
     if (props.color) {

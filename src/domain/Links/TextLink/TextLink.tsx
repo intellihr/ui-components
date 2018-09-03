@@ -1,16 +1,21 @@
 import React from 'react'
 import styled, { StyledFunction } from 'styled-components'
 import { Anchor, IAnchorProps } from '../../Internals/Anchor'
-import { Variables } from '../../../common'
+import { Props, Variables } from '../../../common'
+import { styleForTypographyType } from '../../Typographies/services/textStyles'
 
 // tslint:disable-next-line:no-empty-interface
-interface ITextLinkProps extends IAnchorProps {}
+interface ITextLinkProps extends IAnchorProps {
+  textType?: Props.TypographyType
+}
 
-const styledAnchor: StyledFunction<ITextLinkProps> = styled(Anchor)
+const styledAnchor: StyledFunction<ITextLinkProps> = styled(({ textType, ...rest }) => <Anchor {...rest} />)
 
 export const TextLink = styledAnchor`
   transition: color .25s ease-out;
-
+  
+  ${(props: ITextLinkProps) => styleForTypographyType(props.textType)}
+  
   &,
   &:link,
   &:visited {

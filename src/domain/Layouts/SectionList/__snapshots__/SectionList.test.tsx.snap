@@ -1,0 +1,730 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SectionList /> should render a section list with an annotated section without props 1`] = `
+.c2 {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 0rem;
+  margin-left: 0rem;
+}
+
+.c4 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+.c7 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+.c6 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+}
+
+.c6,
+.c6:link,
+.c6:visited {
+  color: #432DF3;
+}
+
+.c6:hover {
+  color: #2512B3;
+}
+
+.c6:active {
+  color: #0F0080;
+}
+
+@media only screen and (min-width:0em) {
+  .c4 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:40em) {
+  .c4 {
+    -webkit-flex-basis: 33.333333333333336%;
+    -ms-flex-preferred-size: 33.333333333333336%;
+    flex-basis: 33.333333333333336%;
+    max-width: 33.333333333333336%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c4 {
+    -webkit-flex-basis: 33.333333333333336%;
+    -ms-flex-preferred-size: 33.333333333333336%;
+    flex-basis: 33.333333333333336%;
+    max-width: 33.333333333333336%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c7 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:40em) {
+  .c7 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c7 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c1 {
+    border-bottom: 1px solid #E1E6EB;
+  }
+
+  .c1:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media only screen and (max-width:640px) {
+  .c8 {
+    background-color: #FAFBFC;
+    border-top: 1px solid #E1E6EB;
+    border-bottom: 1px solid #E1E6EB;
+  }
+}
+
+@media only screen and (max-width:640px) {
+  .c8 {
+    padding: 24px 16px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c8 {
+    margin-left: 24px;
+    margin-right: 24px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media only screen and (max-width:640px) {
+  .c0 {
+    padding: 24px 16px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c0 {
+    margin-left: 24px;
+    margin-right: 24px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media only screen and (max-width:640px) {
+  .c5 {
+    padding: 24px 16px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c5 {
+    margin-left: 24px;
+    margin-right: 24px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+<SectionList>
+  <div>
+    <Styled(styled.div)>
+      <styled.div
+        className="c0"
+      >
+        <div
+          className="c0 c1"
+        >
+          section 1
+        </div>
+      </styled.div>
+    </Styled(styled.div)>
+    <AnnotatedSection>
+      <styled.div>
+        <div
+          className="c1"
+        >
+          <Row>
+            <GridProvider>
+              <ThemeProvider
+                theme={
+                  Object {
+                    "flexboxgrid": Object {
+                      "breakpoints": Object {
+                        "lg": 64,
+                        "md": 40,
+                        "sm": 0,
+                        "xs": -1,
+                      },
+                      "gridSize": 12,
+                      "gutterWidth": 0,
+                      "outerMargin": 0,
+                    },
+                  }
+                }
+              >
+                <Grid
+                  fluid={true}
+                >
+                  <div
+                    className="c2"
+                  >
+                    <Row>
+                      <div
+                        className="c3"
+                      >
+                        <Column
+                          md={4}
+                          sm={12}
+                        >
+                          <Col
+                            lg={4}
+                            md={4}
+                            sm={12}
+                            type="row"
+                          >
+                            <div
+                              className="c4"
+                              type="row"
+                            >
+                              <Styled(AnnotatedSectionDescription)>
+                                <AnnotatedSectionDescription
+                                  className="c5"
+                                >
+                                  <div
+                                    className="c5"
+                                  >
+                                    <TextLink
+                                      textType="small"
+                                    >
+                                      <Component
+                                        className="c6"
+                                        textType="small"
+                                      >
+                                        <Anchor
+                                          className="c6"
+                                          href="#"
+                                        >
+                                          <a
+                                            className="c6"
+                                            href="#"
+                                          />
+                                        </Anchor>
+                                      </Component>
+                                    </TextLink>
+                                  </div>
+                                </AnnotatedSectionDescription>
+                              </Styled(AnnotatedSectionDescription)>
+                            </div>
+                          </Col>
+                        </Column>
+                        <Column
+                          md={8}
+                          sm={12}
+                        >
+                          <Col
+                            lg={8}
+                            md={8}
+                            sm={12}
+                            type="row"
+                          >
+                            <div
+                              className="c7"
+                              type="row"
+                            >
+                              <styled.div>
+                                <div
+                                  className="c8"
+                                >
+                                  section 2
+                                </div>
+                              </styled.div>
+                            </div>
+                          </Col>
+                        </Column>
+                      </div>
+                    </Row>
+                  </div>
+                </Grid>
+              </ThemeProvider>
+            </GridProvider>
+          </Row>
+        </div>
+      </styled.div>
+    </AnnotatedSection>
+  </div>
+</SectionList>
+`;
+
+exports[`<SectionList /> should render a sectionList 1`] = `
+.c2 {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 0rem;
+  margin-left: 0rem;
+}
+
+.c4 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+.c9 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+.c8 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+}
+
+.c8,
+.c8:link,
+.c8:visited {
+  color: #432DF3;
+}
+
+.c8:hover {
+  color: #2512B3;
+}
+
+.c8:active {
+  color: #0F0080;
+}
+
+.c6 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  -webkit-letter-spacing: -.02em;
+  -moz-letter-spacing: -.02em;
+  -ms-letter-spacing: -.02em;
+  letter-spacing: -.02em;
+  color: #424F5C;
+  font-weight: 600;
+}
+
+.c7 {
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #667380;
+  font-weight: 400;
+  display: block;
+}
+
+@media only screen and (min-width:0em) {
+  .c4 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:40em) {
+  .c4 {
+    -webkit-flex-basis: 33.333333333333336%;
+    -ms-flex-preferred-size: 33.333333333333336%;
+    flex-basis: 33.333333333333336%;
+    max-width: 33.333333333333336%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c4 {
+    -webkit-flex-basis: 33.333333333333336%;
+    -ms-flex-preferred-size: 33.333333333333336%;
+    flex-basis: 33.333333333333336%;
+    max-width: 33.333333333333336%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c9 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:40em) {
+  .c9 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c9 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c1 {
+    border-bottom: 1px solid #E1E6EB;
+  }
+
+  .c1:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media only screen and (max-width:640px) {
+  .c10 {
+    background-color: #FAFBFC;
+    border-top: 1px solid #E1E6EB;
+    border-bottom: 1px solid #E1E6EB;
+  }
+}
+
+@media only screen and (max-width:640px) {
+  .c10 {
+    padding: 24px 16px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c10 {
+    margin-left: 24px;
+    margin-right: 24px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media only screen and (max-width:640px) {
+  .c0 {
+    padding: 24px 16px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c0 {
+    margin-left: 24px;
+    margin-right: 24px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media only screen and (max-width:640px) {
+  .c5 {
+    padding: 24px 16px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c5 {
+    margin-left: 24px;
+    margin-right: 24px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+<SectionList>
+  <div>
+    <Styled(styled.div)>
+      <styled.div
+        className="c0"
+      >
+        <div
+          className="c0 c1"
+        >
+          section 1
+        </div>
+      </styled.div>
+    </Styled(styled.div)>
+    <AnnotatedSection
+      description="Annotated Description"
+      header="Annotated Section"
+      linkText="Annotated Link"
+      linkUrl="#"
+    >
+      <styled.div>
+        <div
+          className="c1"
+        >
+          <Row>
+            <GridProvider>
+              <ThemeProvider
+                theme={
+                  Object {
+                    "flexboxgrid": Object {
+                      "breakpoints": Object {
+                        "lg": 64,
+                        "md": 40,
+                        "sm": 0,
+                        "xs": -1,
+                      },
+                      "gridSize": 12,
+                      "gutterWidth": 0,
+                      "outerMargin": 0,
+                    },
+                  }
+                }
+              >
+                <Grid
+                  fluid={true}
+                >
+                  <div
+                    className="c2"
+                  >
+                    <Row>
+                      <div
+                        className="c3"
+                      >
+                        <Column
+                          md={4}
+                          sm={12}
+                        >
+                          <Col
+                            lg={4}
+                            md={4}
+                            sm={12}
+                            type="row"
+                          >
+                            <div
+                              className="c4"
+                              type="row"
+                            >
+                              <Styled(AnnotatedSectionDescription)
+                                description="Annotated Description"
+                                header="Annotated Section"
+                                linkText="Annotated Link"
+                                linkUrl="#"
+                              >
+                                <AnnotatedSectionDescription
+                                  className="c5"
+                                  description="Annotated Description"
+                                  header="Annotated Section"
+                                  linkText="Annotated Link"
+                                  linkUrl="#"
+                                >
+                                  <div
+                                    className="c5"
+                                  >
+                                    <Text
+                                      color="#424F5C"
+                                      isInline={true}
+                                      tag="h2"
+                                      type="heading"
+                                    >
+                                      <styled.h2
+                                        color="#424F5C"
+                                        isInline={true}
+                                        type="heading"
+                                      >
+                                        <h2
+                                          className="c6"
+                                          color="#424F5C"
+                                          type="heading"
+                                        >
+                                          Annotated Section
+                                        </h2>
+                                      </styled.h2>
+                                    </Text>
+                                    <Text
+                                      color="#667380"
+                                      isInline={false}
+                                      tag="span"
+                                      type="small"
+                                    >
+                                      <styled.span
+                                        color="#667380"
+                                        isInline={false}
+                                        type="small"
+                                      >
+                                        <span
+                                          className="c7"
+                                          color="#667380"
+                                          type="small"
+                                        >
+                                          Annotated Description
+                                        </span>
+                                      </styled.span>
+                                    </Text>
+                                    <TextLink
+                                      href="#"
+                                      textType="small"
+                                    >
+                                      <Component
+                                        className="c8"
+                                        href="#"
+                                        textType="small"
+                                      >
+                                        <Anchor
+                                          className="c8"
+                                          href="#"
+                                        >
+                                          <a
+                                            className="c8"
+                                            href="#"
+                                          >
+                                            Annotated Link
+                                          </a>
+                                        </Anchor>
+                                      </Component>
+                                    </TextLink>
+                                  </div>
+                                </AnnotatedSectionDescription>
+                              </Styled(AnnotatedSectionDescription)>
+                            </div>
+                          </Col>
+                        </Column>
+                        <Column
+                          md={8}
+                          sm={12}
+                        >
+                          <Col
+                            lg={8}
+                            md={8}
+                            sm={12}
+                            type="row"
+                          >
+                            <div
+                              className="c9"
+                              type="row"
+                            >
+                              <styled.div>
+                                <div
+                                  className="c10"
+                                >
+                                  section 2
+                                </div>
+                              </styled.div>
+                            </div>
+                          </Col>
+                        </Column>
+                      </div>
+                    </Row>
+                  </div>
+                </Grid>
+              </ThemeProvider>
+            </GridProvider>
+          </Row>
+        </div>
+      </styled.div>
+    </AnnotatedSection>
+  </div>
+</SectionList>
+`;
