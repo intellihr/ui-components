@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SectionList /> should render a section list with an annotated section without props 1`] = `
-.c2 {
+.c3 {
   margin-right: auto;
   margin-left: auto;
   padding-right: 0rem;
   padding-left: 0rem;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -27,7 +27,16 @@ exports[`<SectionList /> should render a section list with an annotated section 
   margin-left: 0rem;
 }
 
-.c4 {
+.c5 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+.c8 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -37,15 +46,6 @@ exports[`<SectionList /> should render a section list with an annotated section 
 }
 
 .c7 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0rem;
-  padding-left: 0rem;
-}
-
-.c6 {
   -webkit-transition: color .25s ease-out;
   transition: color .25s ease-out;
   font-size: 14px;
@@ -56,22 +56,22 @@ exports[`<SectionList /> should render a section list with an annotated section 
   letter-spacing: normal;
 }
 
-.c6,
-.c6:link,
-.c6:visited {
+.c7,
+.c7:link,
+.c7:visited {
   color: #432DF3;
 }
 
-.c6:hover {
+.c7:hover {
   color: #2512B3;
 }
 
-.c6:active {
+.c7:active {
   color: #0F0080;
 }
 
 @media only screen and (min-width:0em) {
-  .c4 {
+  .c5 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -81,7 +81,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
 }
 
 @media only screen and (min-width:40em) {
-  .c4 {
+  .c5 {
     -webkit-flex-basis: 33.333333333333336%;
     -ms-flex-preferred-size: 33.333333333333336%;
     flex-basis: 33.333333333333336%;
@@ -91,7 +91,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
 }
 
 @media only screen and (min-width:64em) {
-  .c4 {
+  .c5 {
     -webkit-flex-basis: 33.333333333333336%;
     -ms-flex-preferred-size: 33.333333333333336%;
     flex-basis: 33.333333333333336%;
@@ -101,7 +101,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
 }
 
 @media only screen and (min-width:0em) {
-  .c7 {
+  .c8 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -111,7 +111,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
 }
 
 @media only screen and (min-width:40em) {
-  .c7 {
+  .c8 {
     -webkit-flex-basis: 66.66666666666667%;
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
@@ -121,7 +121,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
 }
 
 @media only screen and (min-width:64em) {
-  .c7 {
+  .c8 {
     -webkit-flex-basis: 66.66666666666667%;
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
@@ -141,7 +141,19 @@ exports[`<SectionList /> should render a section list with an annotated section 
 }
 
 @media only screen and (max-width:639px) {
-  .c8 {
+  .c9 {
+    padding: 24px 16px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c9 {
+    margin-left: 24px;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c9 {
     background-color: #FAFBFC;
     border-top: 1px solid #E1E6EB;
     border-bottom: 1px solid #E1E6EB;
@@ -149,17 +161,14 @@ exports[`<SectionList /> should render a section list with an annotated section 
 }
 
 @media only screen and (max-width:639px) {
-  .c8 {
+  .c6 {
     padding: 24px 16px;
   }
 }
 
 @media only screen and (min-width:640px) {
-  .c8 {
-    margin-left: 24px;
+  .c6 {
     margin-right: 24px;
-    padding-top: 32px;
-    padding-bottom: 32px;
   }
 }
 
@@ -178,14 +187,8 @@ exports[`<SectionList /> should render a section list with an annotated section 
   }
 }
 
-@media only screen and (max-width:639px) {
-  .c5 {
-    padding: 24px 16px;
-  }
-}
-
 @media only screen and (min-width:640px) {
-  .c5 {
+  .c2 {
     margin-left: 24px;
     margin-right: 24px;
     padding-top: 32px;
@@ -207,131 +210,135 @@ exports[`<SectionList /> should render a section list with an annotated section 
       </styled.div>
     </Styled(styled.div)>
     <AnnotatedSection>
-      <styled.div>
-        <div
-          className="c1"
+      <Styled(styled.div)>
+        <styled.div
+          className="c2"
         >
-          <Row>
-            <GridProvider>
-              <ThemeProvider
-                theme={
-                  Object {
-                    "flexboxgrid": Object {
-                      "breakpoints": Object {
-                        "lg": 64,
-                        "md": 40,
-                        "sm": 0,
-                        "xs": -1,
+          <div
+            className="c2 c1"
+          >
+            <Row>
+              <GridProvider>
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "flexboxgrid": Object {
+                        "breakpoints": Object {
+                          "lg": 64,
+                          "md": 40,
+                          "sm": 0,
+                          "xs": -1,
+                        },
+                        "gridSize": 12,
+                        "gutterWidth": 0,
+                        "outerMargin": 0,
                       },
-                      "gridSize": 12,
-                      "gutterWidth": 0,
-                      "outerMargin": 0,
-                    },
+                    }
                   }
-                }
-              >
-                <Grid
-                  fluid={true}
                 >
-                  <div
-                    className="c2"
+                  <Grid
+                    fluid={true}
                   >
-                    <Row>
-                      <div
-                        className="c3"
-                      >
-                        <Column
-                          md={4}
-                          sm={12}
+                    <div
+                      className="c3"
+                    >
+                      <Row>
+                        <div
+                          className="c4"
                         >
-                          <Col
-                            lg={4}
+                          <Column
                             md={4}
                             sm={12}
-                            type="row"
                           >
-                            <div
-                              className="c4"
+                            <Col
+                              lg={4}
+                              md={4}
+                              sm={12}
                               type="row"
                             >
-                              <Styled(AnnotatedSectionDescription)>
-                                <AnnotatedSectionDescription
-                                  className="c5"
-                                >
-                                  <div
-                                    className="c5"
+                              <div
+                                className="c5"
+                                type="row"
+                              >
+                                <Styled(AnnotatedSectionDescription)>
+                                  <AnnotatedSectionDescription
+                                    className="c6"
                                   >
-                                    <TextLink
-                                      textType="small"
+                                    <div
+                                      className="c6"
                                     >
-                                      <Component
-                                        className="c6"
+                                      <TextLink
                                         textType="small"
                                       >
-                                        <Anchor
-                                          className="c6"
-                                          href="#"
+                                        <Component
+                                          className="c7"
+                                          textType="small"
                                         >
-                                          <a
-                                            className="c6"
+                                          <Anchor
+                                            className="c7"
                                             href="#"
-                                          />
-                                        </Anchor>
-                                      </Component>
-                                    </TextLink>
-                                  </div>
-                                </AnnotatedSectionDescription>
-                              </Styled(AnnotatedSectionDescription)>
-                            </div>
-                          </Col>
-                        </Column>
-                        <Column
-                          md={8}
-                          sm={12}
-                        >
-                          <Col
-                            lg={8}
+                                          >
+                                            <a
+                                              className="c7"
+                                              href="#"
+                                            />
+                                          </Anchor>
+                                        </Component>
+                                      </TextLink>
+                                    </div>
+                                  </AnnotatedSectionDescription>
+                                </Styled(AnnotatedSectionDescription)>
+                              </div>
+                            </Col>
+                          </Column>
+                          <Column
                             md={8}
                             sm={12}
-                            type="row"
                           >
-                            <div
-                              className="c7"
+                            <Col
+                              lg={8}
+                              md={8}
+                              sm={12}
                               type="row"
                             >
-                              <styled.div>
-                                <div
-                                  className="c8"
-                                >
-                                  section 2
-                                </div>
-                              </styled.div>
-                            </div>
-                          </Col>
-                        </Column>
-                      </div>
-                    </Row>
-                  </div>
-                </Grid>
-              </ThemeProvider>
-            </GridProvider>
-          </Row>
-        </div>
-      </styled.div>
+                              <div
+                                className="c8"
+                                type="row"
+                              >
+                                <styled.div>
+                                  <div
+                                    className="c9"
+                                  >
+                                    section 2
+                                  </div>
+                                </styled.div>
+                              </div>
+                            </Col>
+                          </Column>
+                        </div>
+                      </Row>
+                    </div>
+                  </Grid>
+                </ThemeProvider>
+              </GridProvider>
+            </Row>
+          </div>
+        </styled.div>
+      </Styled(styled.div)>
     </AnnotatedSection>
   </div>
 </SectionList>
 `;
 
 exports[`<SectionList /> should render a sectionList 1`] = `
-.c2 {
+.c3 {
   margin-right: auto;
   margin-left: auto;
   padding-right: 0rem;
   padding-left: 0rem;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -350,7 +357,16 @@ exports[`<SectionList /> should render a sectionList 1`] = `
   margin-left: 0rem;
 }
 
-.c4 {
+.c5 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+.c10 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -360,15 +376,6 @@ exports[`<SectionList /> should render a sectionList 1`] = `
 }
 
 .c9 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0rem;
-  padding-left: 0rem;
-}
-
-.c8 {
   -webkit-transition: color .25s ease-out;
   transition: color .25s ease-out;
   font-size: 14px;
@@ -379,21 +386,21 @@ exports[`<SectionList /> should render a sectionList 1`] = `
   letter-spacing: normal;
 }
 
-.c8,
-.c8:link,
-.c8:visited {
+.c9,
+.c9:link,
+.c9:visited {
   color: #432DF3;
 }
 
-.c8:hover {
+.c9:hover {
   color: #2512B3;
 }
 
-.c8:active {
+.c9:active {
   color: #0F0080;
 }
 
-.c6 {
+.c7 {
   font-size: 18px;
   line-height: 24px;
   -webkit-letter-spacing: -.02em;
@@ -404,7 +411,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
   font-weight: 600;
 }
 
-.c7 {
+.c8 {
   font-size: 14px;
   line-height: 20px;
   -webkit-letter-spacing: normal;
@@ -417,7 +424,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c4 {
+  .c5 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -427,7 +434,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
 }
 
 @media only screen and (min-width:40em) {
-  .c4 {
+  .c5 {
     -webkit-flex-basis: 33.333333333333336%;
     -ms-flex-preferred-size: 33.333333333333336%;
     flex-basis: 33.333333333333336%;
@@ -437,7 +444,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
 }
 
 @media only screen and (min-width:64em) {
-  .c4 {
+  .c5 {
     -webkit-flex-basis: 33.333333333333336%;
     -ms-flex-preferred-size: 33.333333333333336%;
     flex-basis: 33.333333333333336%;
@@ -447,7 +454,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c9 {
+  .c10 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -457,7 +464,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
 }
 
 @media only screen and (min-width:40em) {
-  .c9 {
+  .c10 {
     -webkit-flex-basis: 66.66666666666667%;
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
@@ -467,7 +474,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
 }
 
 @media only screen and (min-width:64em) {
-  .c9 {
+  .c10 {
     -webkit-flex-basis: 66.66666666666667%;
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
@@ -487,7 +494,19 @@ exports[`<SectionList /> should render a sectionList 1`] = `
 }
 
 @media only screen and (max-width:639px) {
-  .c10 {
+  .c11 {
+    padding: 24px 16px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c11 {
+    margin-left: 24px;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c11 {
     background-color: #FAFBFC;
     border-top: 1px solid #E1E6EB;
     border-bottom: 1px solid #E1E6EB;
@@ -495,17 +514,14 @@ exports[`<SectionList /> should render a sectionList 1`] = `
 }
 
 @media only screen and (max-width:639px) {
-  .c10 {
+  .c6 {
     padding: 24px 16px;
   }
 }
 
 @media only screen and (min-width:640px) {
-  .c10 {
-    margin-left: 24px;
+  .c6 {
     margin-right: 24px;
-    padding-top: 32px;
-    padding-bottom: 32px;
   }
 }
 
@@ -524,14 +540,8 @@ exports[`<SectionList /> should render a sectionList 1`] = `
   }
 }
 
-@media only screen and (max-width:639px) {
-  .c5 {
-    padding: 24px 16px;
-  }
-}
-
 @media only screen and (min-width:640px) {
-  .c5 {
+  .c2 {
     margin-left: 24px;
     margin-right: 24px;
     padding-top: 32px;
@@ -562,65 +572,57 @@ exports[`<SectionList /> should render a sectionList 1`] = `
       }
       linkText="Annotated Link"
     >
-      <styled.div>
-        <div
-          className="c1"
+      <Styled(styled.div)>
+        <styled.div
+          className="c2"
         >
-          <Row>
-            <GridProvider>
-              <ThemeProvider
-                theme={
-                  Object {
-                    "flexboxgrid": Object {
-                      "breakpoints": Object {
-                        "lg": 64,
-                        "md": 40,
-                        "sm": 0,
-                        "xs": -1,
+          <div
+            className="c2 c1"
+          >
+            <Row>
+              <GridProvider>
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "flexboxgrid": Object {
+                        "breakpoints": Object {
+                          "lg": 64,
+                          "md": 40,
+                          "sm": 0,
+                          "xs": -1,
+                        },
+                        "gridSize": 12,
+                        "gutterWidth": 0,
+                        "outerMargin": 0,
                       },
-                      "gridSize": 12,
-                      "gutterWidth": 0,
-                      "outerMargin": 0,
-                    },
+                    }
                   }
-                }
-              >
-                <Grid
-                  fluid={true}
                 >
-                  <div
-                    className="c2"
+                  <Grid
+                    fluid={true}
                   >
-                    <Row>
-                      <div
-                        className="c3"
-                      >
-                        <Column
-                          md={4}
-                          sm={12}
+                    <div
+                      className="c3"
+                    >
+                      <Row>
+                        <div
+                          className="c4"
                         >
-                          <Col
-                            lg={4}
+                          <Column
                             md={4}
                             sm={12}
-                            type="row"
                           >
-                            <div
-                              className="c4"
+                            <Col
+                              lg={4}
+                              md={4}
+                              sm={12}
                               type="row"
                             >
-                              <Styled(AnnotatedSectionDescription)
-                                description="Annotated Description"
-                                header="Annotated Section"
-                                linkProps={
-                                  Object {
-                                    "href": "#",
-                                  }
-                                }
-                                linkText="Annotated Link"
+                              <div
+                                className="c5"
+                                type="row"
                               >
-                                <AnnotatedSectionDescription
-                                  className="c5"
+                                <Styled(AnnotatedSectionDescription)
                                   description="Annotated Description"
                                   header="Annotated Section"
                                   linkProps={
@@ -630,108 +632,120 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                   }
                                   linkText="Annotated Link"
                                 >
-                                  <div
-                                    className="c5"
+                                  <AnnotatedSectionDescription
+                                    className="c6"
+                                    description="Annotated Description"
+                                    header="Annotated Section"
+                                    linkProps={
+                                      Object {
+                                        "href": "#",
+                                      }
+                                    }
+                                    linkText="Annotated Link"
                                   >
-                                    <Text
-                                      color="#424F5C"
-                                      isInline={true}
-                                      tag="h2"
-                                      type="heading"
+                                    <div
+                                      className="c6"
                                     >
-                                      <styled.h2
+                                      <Text
                                         color="#424F5C"
                                         isInline={true}
-                                        textType="heading"
+                                        tag="h2"
+                                        type="heading"
                                       >
-                                        <h2
-                                          className="c6"
+                                        <styled.h2
                                           color="#424F5C"
+                                          isInline={true}
+                                          textType="heading"
                                         >
-                                          Annotated Section
-                                        </h2>
-                                      </styled.h2>
-                                    </Text>
-                                    <Text
-                                      color="#667380"
-                                      isInline={false}
-                                      tag="span"
-                                      type="small"
-                                    >
-                                      <styled.span
+                                          <h2
+                                            className="c7"
+                                            color="#424F5C"
+                                          >
+                                            Annotated Section
+                                          </h2>
+                                        </styled.h2>
+                                      </Text>
+                                      <Text
                                         color="#667380"
                                         isInline={false}
-                                        textType="small"
+                                        tag="span"
+                                        type="small"
                                       >
-                                        <span
-                                          className="c7"
+                                        <styled.span
                                           color="#667380"
+                                          isInline={false}
+                                          textType="small"
                                         >
-                                          Annotated Description
-                                        </span>
-                                      </styled.span>
-                                    </Text>
-                                    <TextLink
-                                      href="#"
-                                      textType="small"
-                                    >
-                                      <Component
-                                        className="c8"
+                                          <span
+                                            className="c8"
+                                            color="#667380"
+                                          >
+                                            Annotated Description
+                                          </span>
+                                        </styled.span>
+                                      </Text>
+                                      <TextLink
                                         href="#"
                                         textType="small"
                                       >
-                                        <Anchor
-                                          className="c8"
+                                        <Component
+                                          className="c9"
                                           href="#"
+                                          textType="small"
                                         >
-                                          <a
-                                            className="c8"
+                                          <Anchor
+                                            className="c9"
                                             href="#"
                                           >
-                                            Annotated Link
-                                          </a>
-                                        </Anchor>
-                                      </Component>
-                                    </TextLink>
-                                  </div>
-                                </AnnotatedSectionDescription>
-                              </Styled(AnnotatedSectionDescription)>
-                            </div>
-                          </Col>
-                        </Column>
-                        <Column
-                          md={8}
-                          sm={12}
-                        >
-                          <Col
-                            lg={8}
+                                            <a
+                                              className="c9"
+                                              href="#"
+                                            >
+                                              Annotated Link
+                                            </a>
+                                          </Anchor>
+                                        </Component>
+                                      </TextLink>
+                                    </div>
+                                  </AnnotatedSectionDescription>
+                                </Styled(AnnotatedSectionDescription)>
+                              </div>
+                            </Col>
+                          </Column>
+                          <Column
                             md={8}
                             sm={12}
-                            type="row"
                           >
-                            <div
-                              className="c9"
+                            <Col
+                              lg={8}
+                              md={8}
+                              sm={12}
                               type="row"
                             >
-                              <styled.div>
-                                <div
-                                  className="c10"
-                                >
-                                  section 2
-                                </div>
-                              </styled.div>
-                            </div>
-                          </Col>
-                        </Column>
-                      </div>
-                    </Row>
-                  </div>
-                </Grid>
-              </ThemeProvider>
-            </GridProvider>
-          </Row>
-        </div>
-      </styled.div>
+                              <div
+                                className="c10"
+                                type="row"
+                              >
+                                <styled.div>
+                                  <div
+                                    className="c11"
+                                  >
+                                    section 2
+                                  </div>
+                                </styled.div>
+                              </div>
+                            </Col>
+                          </Column>
+                        </div>
+                      </Row>
+                    </div>
+                  </Grid>
+                </ThemeProvider>
+              </GridProvider>
+            </Row>
+          </div>
+        </styled.div>
+      </Styled(styled.div)>
     </AnnotatedSection>
   </div>
 </SectionList>
