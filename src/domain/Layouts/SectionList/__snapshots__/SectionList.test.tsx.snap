@@ -394,7 +394,6 @@ exports[`<SectionList /> should render a sectionList 1`] = `
 }
 
 .c6 {
-  font-family: 'Open Sans',Arial,sans-serif;
   font-size: 18px;
   line-height: 24px;
   -webkit-letter-spacing: -.02em;
@@ -406,7 +405,6 @@ exports[`<SectionList /> should render a sectionList 1`] = `
 }
 
 .c7 {
-  font-family: 'Open Sans',Arial,sans-serif;
   font-size: 14px;
   line-height: 20px;
   -webkit-letter-spacing: normal;

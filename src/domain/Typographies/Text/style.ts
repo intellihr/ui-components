@@ -12,8 +12,6 @@ export interface ITextWrapperProps {
 }
 
 export const TextWrapper = styled.span`
-  font-family: 'Open Sans', Arial, sans-serif;
-
   ${(props: ITextWrapperProps) => styleForTypographyType(props.type)}
 
   ${(props: ITextWrapperProps) => {
