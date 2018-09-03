@@ -2,9 +2,7 @@
 
 ```jsx
 <TextSkeleton
-  skeletonOptions={{
-    showSkeleton: true
-  }}
+  showSkeleton={true}
 />
 ```
 
@@ -12,10 +10,8 @@
 
 ```jsx
 <TextSkeleton
-  skeletonOptions={{
-    showSkeleton: true,
-    numLines: 5
-  }}
+  showSkeleton={true}
+  numLines={5}
 />
 ```
 
@@ -23,10 +19,8 @@
 
 ```jsx
 <TextSkeleton
-  skeletonOptions={{
-    showSkeleton: true,
-    width: 250
-  }}
+  showSkeleton={true}
+  width={250}
 />
 ```
 
@@ -39,10 +33,8 @@
       TextSkeleton for X-Small Text
     </Text>
     <TextSkeleton
-      skeletonOptions={{
-        showSkeleton: true,
-        type: 'xsmall'
-      }}
+      showSkeleton={true}
+      type='xsmall'
     />
   </div>
   <div>
@@ -50,10 +42,8 @@
       TextSkeleton for Small Text
     </Text>
     <TextSkeleton
-      skeletonOptions={{
-        showSkeleton: true,
-        type: 'small'
-      }}
+      showSkeleton={true}
+      type='small'
     />
   </div>
   <div>
@@ -61,10 +51,8 @@
       TextSkeleton for Body Text (default)
     </Text>
     <TextSkeleton
-      skeletonOptions={{
-        showSkeleton: true,
-        type: 'body'
-      }}
+      showSkeleton={true}
+      type='body'
     />
   </div>
   <div>
@@ -72,10 +60,8 @@
       TextSkeleton for Heading Text
     </Text>
     <TextSkeleton
-      skeletonOptions={{
-        showSkeleton: true,
-        type: 'heading'
-      }}
+      showSkeleton={true}
+      type='heading'
     />
   </div>
   <div>
@@ -83,10 +69,8 @@
       TextSkeleton for Display Text
     </Text>
     <TextSkeleton
-      skeletonOptions={{
-        showSkeleton: true,
-        type: 'display'
-      }}
+      showSkeleton={true}
+      type='display'
     />
   </div>
   <div>
@@ -94,10 +78,8 @@
       TextSkeleton for Display Large Text
     </Text>
     <TextSkeleton
-      skeletonOptions={{
-        showSkeleton: true,
-        type: 'display-large'
-      }}
+      showSkeleton={true}
+      type='display-large'
     />
   </div>
 </React.Fragment>

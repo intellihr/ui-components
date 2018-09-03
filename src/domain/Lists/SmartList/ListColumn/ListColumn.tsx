@@ -1,9 +1,10 @@
 import React from 'react'
-import { isNil, merge } from 'lodash'
+import { isNil } from 'lodash'
 import classNames from 'classnames'
 import { Row } from '../../../Grids/Row'
 import { ListHeader } from '../ListHeader'
-import { TextSkeleton, ITextSkeletonComponentProps } from '../../../Skeletons'
+import { TextSkeleton } from '../../../Skeletons'
+import { ISmartListSkeletonOptions } from '../SmartList'
 
 export interface ISize {
   xs?: number,
@@ -35,14 +36,19 @@ export interface IListColumn {
   behave?: string
   /** Foundation order attribute */
   order?: any
+  /** Skeleton options */
+  skeletonOptions: ISmartListSkeletonOptions
 }
 
-class ListColumn extends React.PureComponent<IListColumn & ITextSkeletonComponentProps> {
+class ListColumn extends React.PureComponent<IListColumn> {
   public static defaultProps: Partial<IListColumn> = {
     rowIndex: 0,
     isHeader: false,
     header: '',
-    alignRight: false
+    alignRight: false,
+    skeletonOptions: {
+      showSkeleton: false
+    }
   }
 
   get cellContent (): JSX.Element | string | undefined | number {
@@ -52,11 +58,12 @@ class ListColumn extends React.PureComponent<IListColumn & ITextSkeletonComponen
       rowIndex,
       isHeader,
       header,
-      tooltipText,
-      skeletonOptions: {
-        showSkeleton = false
-      } = {}
+      tooltipText
     } = this.props
+
+    const {
+      showSkeleton
+    } = this.props.skeletonOptions
 
     if (isHeader) {
       return (
@@ -68,7 +75,7 @@ class ListColumn extends React.PureComponent<IListColumn & ITextSkeletonComponen
     }
 
     if (showSkeleton) {
-      return <TextSkeleton {...this.props} />
+      return <TextSkeleton showSkeleton={showSkeleton} />
     }
 
     if (!isNil(rowIndex) && data && data[rowIndex]) {

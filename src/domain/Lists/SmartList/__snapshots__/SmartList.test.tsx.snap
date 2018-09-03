@@ -130,6 +130,12 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
   loading={false}
   showHeaderRow={true}
   showHoverBg={true}
+  skeletonOptions={
+    Object {
+      "numberOfRows": 5,
+      "showSkeleton": false,
+    }
+  }
   title="My List Title"
 >
   <div
@@ -1031,6 +1037,12 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
   loading={false}
   showHeaderRow={true}
   showHoverBg={true}
+  skeletonOptions={
+    Object {
+      "numberOfRows": 5,
+      "showSkeleton": false,
+    }
+  }
 >
   <div
     className="SmartList smart-list hover-bg"
@@ -1905,6 +1917,12 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
   loading={false}
   showHeaderRow={true}
   showHoverBg={true}
+  skeletonOptions={
+    Object {
+      "numberOfRows": 5,
+      "showSkeleton": false,
+    }
+  }
 >
   <div
     className="SmartList smart-list hover-bg"
@@ -2421,6 +2439,12 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
   loading={false}
   showHeaderRow={true}
   showHoverBg={true}
+  skeletonOptions={
+    Object {
+      "numberOfRows": 5,
+      "showSkeleton": false,
+    }
+  }
 >
   <div
     className="SmartList smart-list hover-bg"
@@ -3108,32 +3132,8 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               className="list-column"
                             >
                               <TextSkeleton
-                                alignRight={false}
-                                colIndex={0}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test1"
-                                isHeader={false}
-                                rowIndex={0}
-                                size={
-                                  Object {
-                                    "lg": 6,
-                                    "md": 6,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "showSkeleton": true,
-                                  }
-                                }
+                                showSkeleton={true}
+                                type="body"
                               >
                                 <Styled(styled.span)
                                   key="0"
@@ -3204,32 +3204,8 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               className="list-column"
                             >
                               <TextSkeleton
-                                alignRight={false}
-                                colIndex={1}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test2"
-                                isHeader={false}
-                                rowIndex={0}
-                                size={
-                                  Object {
-                                    "lg": 3,
-                                    "md": 3,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "showSkeleton": true,
-                                  }
-                                }
+                                showSkeleton={true}
+                                type="body"
                               >
                                 <Styled(styled.span)
                                   key="0"
@@ -3300,32 +3276,8 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               className="list-column"
                             >
                               <TextSkeleton
-                                alignRight={false}
-                                colIndex={2}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test3"
-                                isHeader={false}
-                                rowIndex={0}
-                                size={
-                                  Object {
-                                    "lg": 3,
-                                    "md": 3,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "showSkeleton": true,
-                                  }
-                                }
+                                showSkeleton={true}
+                                type="body"
                               >
                                 <Styled(styled.span)
                                   key="0"
@@ -3463,32 +3415,8 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               className="list-column"
                             >
                               <TextSkeleton
-                                alignRight={false}
-                                colIndex={0}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test1"
-                                isHeader={false}
-                                rowIndex={1}
-                                size={
-                                  Object {
-                                    "lg": 6,
-                                    "md": 6,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "showSkeleton": true,
-                                  }
-                                }
+                                showSkeleton={true}
+                                type="body"
                               >
                                 <Styled(styled.span)
                                   key="0"
@@ -3559,32 +3487,8 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               className="list-column"
                             >
                               <TextSkeleton
-                                alignRight={false}
-                                colIndex={1}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test2"
-                                isHeader={false}
-                                rowIndex={1}
-                                size={
-                                  Object {
-                                    "lg": 3,
-                                    "md": 3,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "showSkeleton": true,
-                                  }
-                                }
+                                showSkeleton={true}
+                                type="body"
                               >
                                 <Styled(styled.span)
                                   key="0"
@@ -3655,32 +3559,8 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               className="list-column"
                             >
                               <TextSkeleton
-                                alignRight={false}
-                                colIndex={2}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test3"
-                                isHeader={false}
-                                rowIndex={1}
-                                size={
-                                  Object {
-                                    "lg": 3,
-                                    "md": 3,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "showSkeleton": true,
-                                  }
-                                }
+                                showSkeleton={true}
+                                type="body"
                               >
                                 <Styled(styled.span)
                                   key="0"
@@ -3818,32 +3698,8 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               className="list-column"
                             >
                               <TextSkeleton
-                                alignRight={false}
-                                colIndex={0}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test1"
-                                isHeader={false}
-                                rowIndex={2}
-                                size={
-                                  Object {
-                                    "lg": 6,
-                                    "md": 6,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "showSkeleton": true,
-                                  }
-                                }
+                                showSkeleton={true}
+                                type="body"
                               >
                                 <Styled(styled.span)
                                   key="0"
@@ -3914,32 +3770,8 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               className="list-column"
                             >
                               <TextSkeleton
-                                alignRight={false}
-                                colIndex={1}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test2"
-                                isHeader={false}
-                                rowIndex={2}
-                                size={
-                                  Object {
-                                    "lg": 3,
-                                    "md": 3,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "showSkeleton": true,
-                                  }
-                                }
+                                showSkeleton={true}
+                                type="body"
                               >
                                 <Styled(styled.span)
                                   key="0"
@@ -4010,32 +3842,8 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               className="list-column"
                             >
                               <TextSkeleton
-                                alignRight={false}
-                                colIndex={2}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test3"
-                                isHeader={false}
-                                rowIndex={2}
-                                size={
-                                  Object {
-                                    "lg": 3,
-                                    "md": 3,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "showSkeleton": true,
-                                  }
-                                }
+                                showSkeleton={true}
+                                type="body"
                               >
                                 <Styled(styled.span)
                                   key="0"
@@ -4173,32 +3981,8 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               className="list-column"
                             >
                               <TextSkeleton
-                                alignRight={false}
-                                colIndex={0}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test1"
-                                isHeader={false}
-                                rowIndex={3}
-                                size={
-                                  Object {
-                                    "lg": 6,
-                                    "md": 6,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "showSkeleton": true,
-                                  }
-                                }
+                                showSkeleton={true}
+                                type="body"
                               >
                                 <Styled(styled.span)
                                   key="0"
@@ -4269,32 +4053,8 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               className="list-column"
                             >
                               <TextSkeleton
-                                alignRight={false}
-                                colIndex={1}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test2"
-                                isHeader={false}
-                                rowIndex={3}
-                                size={
-                                  Object {
-                                    "lg": 3,
-                                    "md": 3,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "showSkeleton": true,
-                                  }
-                                }
+                                showSkeleton={true}
+                                type="body"
                               >
                                 <Styled(styled.span)
                                   key="0"
@@ -4365,32 +4125,8 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               className="list-column"
                             >
                               <TextSkeleton
-                                alignRight={false}
-                                colIndex={2}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test3"
-                                isHeader={false}
-                                rowIndex={3}
-                                size={
-                                  Object {
-                                    "lg": 3,
-                                    "md": 3,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "showSkeleton": true,
-                                  }
-                                }
+                                showSkeleton={true}
+                                type="body"
                               >
                                 <Styled(styled.span)
                                   key="0"
@@ -4528,32 +4264,8 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               className="list-column"
                             >
                               <TextSkeleton
-                                alignRight={false}
-                                colIndex={0}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test1"
-                                isHeader={false}
-                                rowIndex={4}
-                                size={
-                                  Object {
-                                    "lg": 6,
-                                    "md": 6,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "showSkeleton": true,
-                                  }
-                                }
+                                showSkeleton={true}
+                                type="body"
                               >
                                 <Styled(styled.span)
                                   key="0"
@@ -4624,32 +4336,8 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               className="list-column"
                             >
                               <TextSkeleton
-                                alignRight={false}
-                                colIndex={1}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test2"
-                                isHeader={false}
-                                rowIndex={4}
-                                size={
-                                  Object {
-                                    "lg": 3,
-                                    "md": 3,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "showSkeleton": true,
-                                  }
-                                }
+                                showSkeleton={true}
+                                type="body"
                               >
                                 <Styled(styled.span)
                                   key="0"
@@ -4720,32 +4408,8 @@ exports[`<SmartList /> should render skeleton 1`] = `
                               className="list-column"
                             >
                               <TextSkeleton
-                                alignRight={false}
-                                colIndex={2}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test3"
-                                isHeader={false}
-                                rowIndex={4}
-                                size={
-                                  Object {
-                                    "lg": 3,
-                                    "md": 3,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "showSkeleton": true,
-                                  }
-                                }
+                                showSkeleton={true}
+                                type="body"
                               >
                                 <Styled(styled.span)
                                   key="0"
