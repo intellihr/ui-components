@@ -5,11 +5,12 @@ import {
   isEmpty
 } from 'lodash'
 import { FontAwesomeIcon } from '../../Icons'
+import { Props } from '../../../common'
 const style = require('./Avatar.scss')
 
 export interface IAvatarProps {
   /** Size of the avatar  */
-  size?: 'small' | 'medium' | 'large' | 'xlarge'
+  size?: Props.AvatarSize
   /** Initials to display if no valid `imageUrl` or `imageData` is passed to Avatar */
   initials?: string
   /** Text for the black, transparent overlay (both Label and Icon have to be present for the overlay to render) */
@@ -118,7 +119,7 @@ class Avatar extends React.Component<IAvatarProps> {
   }
 
   public static defaultProps: IAvatarProps = {
-    size: 'medium'
+    size: Props.AvatarSize.Medium
   }
   public state: IAvatarState = {
     showInitials: true

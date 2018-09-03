@@ -23,6 +23,13 @@ namespace Props {
     XXLarge = 'xxlarge'
   }
 
+  export enum AvatarSize {
+    Small = 'small',
+    Medium = 'medium',
+    Large = 'large',
+    XLarge = 'xlarge',
+  }
+
   export enum TypographyType {
     xsmall = 'xsmall',
     small = 'small',

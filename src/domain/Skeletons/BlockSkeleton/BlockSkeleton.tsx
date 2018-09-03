@@ -26,7 +26,7 @@ class BlockSkeleton extends React.Component<IBlockSkeletonComponentProps> {
 
   public render (): JSX.Element {
     const {
-      showSkeleton = false,
+      showSkeleton,
       width,
       height
     } = this.props.skeletonOptions!

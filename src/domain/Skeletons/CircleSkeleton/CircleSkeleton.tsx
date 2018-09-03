@@ -1,11 +1,12 @@
 import React from 'react'
 import { CircleSkeletonWrapper } from './style'
+import { Props } from '../../../common'
 
 export interface ICircleSkeletonOptions {
   /** If true, will display the skeleton */
   showSkeleton: boolean,
   /** Circle size of the skeleton */
-  size?: 'small' | 'medium' | 'large' | 'xlarge'
+  size?: Props.AvatarSize
 }
 
 export interface ICircleSkeletonComponentProps {
@@ -19,14 +20,14 @@ class CircleSkeleton extends React.Component<ICircleSkeletonComponentProps> {
   public static defaultProps: Partial<ICircleSkeletonComponentProps> = {
     skeletonOptions: {
       showSkeleton: false,
-      size: 'large'
+      size: Props.AvatarSize.Large
     }
   }
 
   public render (): JSX.Element {
     const {
-      showSkeleton = false,
-      size = 'large'
+      showSkeleton,
+      size
     } = this.props.skeletonOptions!
 
     const {

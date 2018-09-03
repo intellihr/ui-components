@@ -54,7 +54,7 @@ class TextSkeleton extends React.Component<ITextSkeletonComponentProps> {
 
   public render (): JSX.Element {
     const {
-      showSkeleton = false,
+      showSkeleton,
       numLines
     } = this.props.skeletonOptions!
 

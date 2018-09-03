@@ -1,49 +1,33 @@
-import styled, { css, keyframes } from 'styled-components'
-import { Variables } from '../../../common'
+import styled, { css } from 'styled-components'
+import { Props } from '../../../common'
+import { SkeletonWrapper } from '../style'
 
 export interface ICircleSkeletonWrapperProps {
-  size?: 'small' | 'medium' | 'large' | 'xlarge'
+  size?: Props.AvatarSize
 }
 
-const progress = keyframes`
-  0% {
-    background-position: -200px 0;
-  }
-
-  100% {
-    background-position: calc(200px + 100%) 0;
-  }
-`
-
-export const CircleSkeletonWrapper = styled.span`
-  animation: ${progress} 1.2s ease-in-out infinite;
-  background-color: ${Variables.Color.n200};
-  background-image: linear-gradient(90deg, ${Variables.Color.n200}, ${Variables.Color.n300}, ${Variables.Color.n200});
-  background-repeat: no-repeat;
-  background-size: 200px 100%;
-  border: 1px solid ${Variables.Color.n200};
+export const CircleSkeletonWrapper = styled(SkeletonWrapper)`
   border-radius: 50%;
-  display: inline-flex;
   line-height: 1rem;
 
   ${(props: ICircleSkeletonWrapperProps) => {
     switch (props.size) {
-      case 'small':
+      case Props.AvatarSize.Small:
         return css`
           height: 30px;
           width: 30px;
         `
-      case 'medium':
+      case Props.AvatarSize.Medium:
         return css`
           height: 40px;
           width: 40px;
         `
-      case 'large':
+      case Props.AvatarSize.Large:
         return css`
           height: 72px;
           width: 72px;
         `
-      case 'xlarge':
+      case Props.AvatarSize.XLarge:
         return css`
           height: 120px;
           width: 120px;
