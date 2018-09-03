@@ -45,9 +45,7 @@ class TextSkeleton extends React.Component<ITextSkeletonComponentProps> {
         className={className}
         key={key}
       >
-        <span>
-          {String.fromCharCode(8204)}
-        </span>
+        {String.fromCharCode(8204)}
       </TextSkeletonWrapper>
     )
   }
@@ -72,15 +70,15 @@ class TextSkeleton extends React.Component<ITextSkeletonComponentProps> {
 
     const arrayLength = numLines ? numLines : 1
 
-    const output = new Array<JSX.Element>(arrayLength)
+    const skeletons = new Array<JSX.Element>(arrayLength)
 
     for (let i = 0; i < arrayLength; i++) {
-      output.push(this.skeleton(i))
+      skeletons.push(this.skeleton(i))
     }
 
     return (
       <Fragment>
-        {output}
+        {skeletons}
       </Fragment>
     )
   }

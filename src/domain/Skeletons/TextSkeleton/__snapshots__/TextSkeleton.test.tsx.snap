@@ -45,9 +45,7 @@ exports[`<TextSkeleton /> should render a multi line text skeleton 1`] = `
       <span
         className="c0 c1"
       >
-        <span>
-          ‌
-        </span>
+        ‌
       </span>
     </styled.span>
   </Styled(styled.span)>
@@ -62,9 +60,7 @@ exports[`<TextSkeleton /> should render a multi line text skeleton 1`] = `
       <span
         className="c0 c1"
       >
-        <span>
-          ‌
-        </span>
+        ‌
       </span>
     </styled.span>
   </Styled(styled.span)>
@@ -79,9 +75,7 @@ exports[`<TextSkeleton /> should render a multi line text skeleton 1`] = `
       <span
         className="c0 c1"
       >
-        <span>
-          ‌
-        </span>
+        ‌
       </span>
     </styled.span>
   </Styled(styled.span)>
@@ -96,9 +90,7 @@ exports[`<TextSkeleton /> should render a multi line text skeleton 1`] = `
       <span
         className="c0 c1"
       >
-        <span>
-          ‌
-        </span>
+        ‌
       </span>
     </styled.span>
   </Styled(styled.span)>
@@ -113,9 +105,7 @@ exports[`<TextSkeleton /> should render a multi line text skeleton 1`] = `
       <span
         className="c0 c1"
       >
-        <span>
-          ‌
-        </span>
+        ‌
       </span>
     </styled.span>
   </Styled(styled.span)>
@@ -166,9 +156,7 @@ exports[`<TextSkeleton /> should render a text skeleton 1`] = `
       <span
         className="c0 c1"
       >
-        <span>
-          ‌
-        </span>
+        ‌
       </span>
     </styled.span>
   </Styled(styled.span)>
@@ -220,9 +208,7 @@ exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
       <span
         className="c0 c1"
       >
-        <span>
-          ‌
-        </span>
+        ‌
       </span>
     </styled.span>
   </Styled(styled.span)>
@@ -277,9 +263,7 @@ exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
         className="c0 c1"
         width={250}
       >
-        <span>
-          ‌
-        </span>
+        ‌
       </span>
     </styled.span>
   </Styled(styled.span)>

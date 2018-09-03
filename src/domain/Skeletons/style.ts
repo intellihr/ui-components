@@ -1,7 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 import { Variables } from '../../common'
 
-
 const progress = keyframes`
   0% {
     background-position: -200px 0;
