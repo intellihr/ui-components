@@ -1,20 +1,70 @@
 @import '../../../common/sass/variables';
 
-:local(.profile) {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+@mixin page-top {
+  :local(.top-left-outer),
+  .ihr-layout__top-left--outer {
+    flex: 1 1 50%;
+    padding-bottom: .75rem;
+    padding-top: .75rem;
+  }
 
-  .page-header {
+  :local(.top-right-outer),
+  .ihr-layout__top-right--outer {
+    display: flex;
+    flex: 1 1 50%;
+    justify-content: flex-end;
+    padding-bottom: .75rem;
+    padding-top: .75rem;
+  }
+}
+
+@mixin base-layout {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin profile-layout {
+  align-items: center;
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    padding: 0 24px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    :local(.top-left-outer),
+    .ihr-layout__top-left--outer {
+      padding-left: 24px;
+    }
+
+    :local(.top-right-outer),
+    .ihr-layout__top-right--outer {
+      padding-right: 24px;
+    }
+  }
+
+  :local(.header-inner),
+  .ihr-layout__header--inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $breakpoint-big-desktop;
     overflow: hidden;
-    width: 100%;
 
     @media only screen and (min-width: $breakpoint-tablet) {
       border-radius: $border-radius;
     }
   }
 
-  .page-content {
+  :local(.header-outer),
+  .ihr-layout__header--outer {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  :local(.content-inner),
+  .ihr-layout__content--inner {
+    margin-left: auto;
+    margin-right: auto;
+
     @media only screen and (max-width: $breakpoint-tablet) {
       width: 100%;
     }
@@ -22,8 +72,58 @@
     @media only screen and (min-width: $breakpoint-tablet) {
       border-radius: $border-radius;
       margin-top: -41px;
+      max-width:  $breakpoint-big-desktop / 12 * 10;
       overflow: hidden;
-      width: calc(100% / 12 * 10);
+      width: 100% / 12 * 10;
     }
   }
+
+  :local(.content-outer),
+  .ihr-layout__content--outer {
+    width: 100%;
+  }
 }
+
+@mixin simple-layout {
+  padding: 0 24px;
+
+  :local(.content-outer),
+  .ihr-layout__content--outer {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $breakpoint-big-desktop;
+    width: 100%;
+  }
+}
+
+@mixin fullscreen-layout {
+  padding: 0 24px;
+
+  :local(.content-outer),
+  .ihr-layout__content--outer {
+    width: 100%;
+  }
+}
+
+:local(.base),
+.ihr-layout {
+  @include page-top;
+  @include base-layout;
+}
+
+:local(.profile),
+.ihr-layout--profile {
+  @include profile-layout
+}
+
+:local(.simple),
+.ihr-layout--simple {
+  @include simple-layout
+}
+
+:local(.fullscreen),
+.ihr-layout--fullscreen {
+  @include fullscreen-layout
+}
+

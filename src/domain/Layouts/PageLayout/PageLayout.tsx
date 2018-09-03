@@ -7,7 +7,7 @@ export interface IPageLayoutProps {
   /** What to display in the layout. */
   children?: React.ReactNode,
   /** What type of layout to use */
-  layoutType: 'profile'
+  layoutType: 'profile' | 'simple' | 'fullscreen'
 }
 
 export class PageLayout extends React.Component<IPageLayoutProps> {
@@ -17,7 +17,7 @@ export class PageLayout extends React.Component<IPageLayoutProps> {
     const { children, layoutType } = this.props
     return (
       <div
-        className={classNames(style[layoutType], 'page-base')}
+        className={classNames(style.base, style[layoutType], 'page-base')}
       >
         {children}
       </div>
