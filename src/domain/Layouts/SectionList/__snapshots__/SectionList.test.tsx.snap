@@ -140,12 +140,6 @@ exports[`<SectionList /> should render a section list with an annotated section 
   }
 }
 
-@media only screen and (max-width:639px) {
-  .c9 {
-    padding: 24px 16px;
-  }
-}
-
 @media only screen and (min-width:640px) {
   .c9 {
     margin-left: 24px;
@@ -157,6 +151,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
     background-color: #FAFBFC;
     border-top: 1px solid #E1E6EB;
     border-bottom: 1px solid #E1E6EB;
+    padding: 24px 16px;
   }
 }
 
@@ -493,12 +488,6 @@ exports[`<SectionList /> should render a sectionList 1`] = `
   }
 }
 
-@media only screen and (max-width:639px) {
-  .c11 {
-    padding: 24px 16px;
-  }
-}
-
 @media only screen and (min-width:640px) {
   .c11 {
     margin-left: 24px;
@@ -510,6 +499,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
     background-color: #FAFBFC;
     border-top: 1px solid #E1E6EB;
     border-bottom: 1px solid #E1E6EB;
+    padding: 24px 16px;
   }
 }
 
