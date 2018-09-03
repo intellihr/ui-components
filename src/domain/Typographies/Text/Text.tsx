@@ -58,7 +58,7 @@ export class Text extends React.PureComponent<ITextProps> {
 
     return (
       <TextTag
-        type={type}
+        textType={type}
         color={color}
         isInline={isInline}
         weight={weight}

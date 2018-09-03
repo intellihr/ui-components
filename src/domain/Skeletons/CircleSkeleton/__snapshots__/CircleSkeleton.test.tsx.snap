@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CircleSkeleton /> should render a circle skeleton 1`] = `
+.c1 {
+  -webkit-animation: hNBTQs 1.2s ease-in-out infinite;
+  animation: hNBTQs 1.2s ease-in-out infinite;
+  background-color: #F5F9FC;
+  background-image: linear-gradient(90deg,#F5F9FC,#E1E6EB,#F5F9FC);
+  background-repeat: no-repeat;
+  background-size: 200px 100%;
+  border: 1px solid #F5F9FC;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c0 {
+  border-radius: 50%;
+  line-height: 1rem;
+  height: 72px;
+  width: 72px;
+}
+
+<CircleSkeleton
+  skeletonOptions={
+    Object {
+      "showSkeleton": true,
+    }
+  }
+>
+  <Styled(styled.span)
+    size="large"
+  >
+    <styled.span
+      className="c0"
+      size="large"
+    >
+      <span
+        className="c0 c1"
+        size="large"
+      />
+    </styled.span>
+  </Styled(styled.span)>
+</CircleSkeleton>
+`;
+
+exports[`<CircleSkeleton /> should render a circle skeleton with set size 1`] = `
+.c1 {
+  -webkit-animation: hNBTQs 1.2s ease-in-out infinite;
+  animation: hNBTQs 1.2s ease-in-out infinite;
+  background-color: #F5F9FC;
+  background-image: linear-gradient(90deg,#F5F9FC,#E1E6EB,#F5F9FC);
+  background-repeat: no-repeat;
+  background-size: 200px 100%;
+  border: 1px solid #F5F9FC;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c0 {
+  border-radius: 50%;
+  line-height: 1rem;
+  height: 30px;
+  width: 30px;
+}
+
+<CircleSkeleton
+  skeletonOptions={
+    Object {
+      "showSkeleton": true,
+      "size": "small",
+    }
+  }
+>
+  <Styled(styled.span)
+    size="small"
+  >
+    <styled.span
+      className="c0"
+      size="small"
+    >
+      <span
+        className="c0 c1"
+        size="small"
+      />
+    </styled.span>
+  </Styled(styled.span)>
+</CircleSkeleton>
+`;

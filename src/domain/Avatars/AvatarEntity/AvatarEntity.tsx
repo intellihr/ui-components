@@ -43,7 +43,7 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
         imageUrl={imageUrl}
         statusDot={statusDot}
         statusIcon={statusIcon}
-        size={isCompact ? 'small' : 'medium'}
+        size={isCompact ? Props.AvatarSize.Small : Props.AvatarSize.Medium}
       />
     </AvatarContainer>
   }

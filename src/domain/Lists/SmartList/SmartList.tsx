@@ -8,11 +8,11 @@ import { Spinner } from '../../Spinners'
 import { ListClickableColumn } from './ListClickableColumn'
 import { ListRow } from './ListRow'
 import { ListColumn } from './ListColumn'
-import { ISkeletonOptions } from '../../Skeletons'
+import { ITextSkeletonOptions } from '../../Skeletons'
 
 const style = require('./style.scss')
 
-export interface ISmartListSkeletonOptions extends Partial<ISkeletonOptions> {
+export interface ISmartListSkeletonOptions extends Partial<ITextSkeletonOptions> {
   /* Number of rows to show skeletons */
   numberOfRows?: number
 }
@@ -74,8 +74,7 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
 
   private skeletonOptions: ISmartListSkeletonOptions = {
     showSkeleton: false,
-    numberOfRows: 5,
-    shape: 'line'
+    numberOfRows: 5
   }
 
   get listColumns (): JSX.Element[] {
