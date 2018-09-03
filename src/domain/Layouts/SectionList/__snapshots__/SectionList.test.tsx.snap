@@ -140,7 +140,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
   }
 }
 
-@media only screen and (max-width:640px) {
+@media only screen and (max-width:639px) {
   .c8 {
     background-color: #FAFBFC;
     border-top: 1px solid #E1E6EB;
@@ -148,7 +148,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
   }
 }
 
-@media only screen and (max-width:640px) {
+@media only screen and (max-width:639px) {
   .c8 {
     padding: 24px 16px;
   }
@@ -163,7 +163,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
   }
 }
 
-@media only screen and (max-width:640px) {
+@media only screen and (max-width:639px) {
   .c0 {
     padding: 24px 16px;
   }
@@ -178,7 +178,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
   }
 }
 
-@media only screen and (max-width:640px) {
+@media only screen and (max-width:639px) {
   .c5 {
     padding: 24px 16px;
   }
@@ -486,7 +486,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
   }
 }
 
-@media only screen and (max-width:640px) {
+@media only screen and (max-width:639px) {
   .c10 {
     background-color: #FAFBFC;
     border-top: 1px solid #E1E6EB;
@@ -494,7 +494,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
   }
 }
 
-@media only screen and (max-width:640px) {
+@media only screen and (max-width:639px) {
   .c10 {
     padding: 24px 16px;
   }
@@ -509,7 +509,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
   }
 }
 
-@media only screen and (max-width:640px) {
+@media only screen and (max-width:639px) {
   .c0 {
     padding: 24px 16px;
   }
@@ -524,7 +524,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
   }
 }
 
-@media only screen and (max-width:640px) {
+@media only screen and (max-width:639px) {
   .c5 {
     padding: 24px 16px;
   }

@@ -4,7 +4,7 @@ import { Variables } from '../../../common'
 import { AnnotatedSectionDescription } from './subcomponents/AnnotatedSectionDescription'
 
 const sharedStyle = css`
-  @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet}px) {
+  @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
     padding: 24px 16px;
   }
 
@@ -27,7 +27,7 @@ const SectionBorder = styled.div`
 `
 
 const StyledAnnotatedSectionBody = styled.div`
-  @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet}px) {
+  @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
     background-color: ${Variables.Color.n150};
  
     border-top: 1px solid ${Variables.Color.n300};
