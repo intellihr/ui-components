@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<BlockSkeleton /> should render a block skeleton 1`] = `
-.c0 {
+.c1 {
   -webkit-animation: hNBTQs 1.2s ease-in-out infinite;
   animation: hNBTQs 1.2s ease-in-out infinite;
   background-color: #F5F9FC;
@@ -9,11 +9,14 @@ exports[`<BlockSkeleton /> should render a block skeleton 1`] = `
   background-repeat: no-repeat;
   background-size: 200px 100%;
   border: 1px solid #F5F9FC;
-  border-radius: 4px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.c0 {
+  border-radius: 4px;
   line-height: 1rem;
   width: 100%;
   height: 1rem;
@@ -26,16 +29,20 @@ exports[`<BlockSkeleton /> should render a block skeleton 1`] = `
     }
   }
 >
-  <styled.span>
-    <span
+  <Styled(styled.span)>
+    <styled.span
       className="c0"
-    />
-  </styled.span>
+    >
+      <span
+        className="c0 c1"
+      />
+    </styled.span>
+  </Styled(styled.span)>
 </BlockSkeleton>
 `;
 
 exports[`<BlockSkeleton /> should render a block skeleton with set width and height 1`] = `
-.c0 {
+.c1 {
   -webkit-animation: hNBTQs 1.2s ease-in-out infinite;
   animation: hNBTQs 1.2s ease-in-out infinite;
   background-color: #F5F9FC;
@@ -43,11 +50,14 @@ exports[`<BlockSkeleton /> should render a block skeleton with set width and hei
   background-repeat: no-repeat;
   background-size: 200px 100%;
   border: 1px solid #F5F9FC;
-  border-radius: 4px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.c0 {
+  border-radius: 4px;
   line-height: 1rem;
   width: 400px;
   height: 200px;
@@ -62,15 +72,21 @@ exports[`<BlockSkeleton /> should render a block skeleton with set width and hei
     }
   }
 >
-  <styled.span
+  <Styled(styled.span)
     height={200}
     width={400}
   >
-    <span
+    <styled.span
       className="c0"
       height={200}
       width={400}
-    />
-  </styled.span>
+    >
+      <span
+        className="c0 c1"
+        height={200}
+        width={400}
+      />
+    </styled.span>
+  </Styled(styled.span)>
 </BlockSkeleton>
 `;
