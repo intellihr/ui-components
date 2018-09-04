@@ -13,11 +13,9 @@ export class Region extends React.Component<IPageRegionProps> {
     const { children, regionType } = this.props
     return (
       <div
-        className={style[`${regionType}-outer`]}
+        className={style[regionType]}
       >
-        <div className={style[`${regionType}-inner`]}>
-          {children}
-        </div>
+        {children}
       </div>
     )
   }

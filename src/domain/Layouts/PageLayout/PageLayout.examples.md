@@ -58,20 +58,14 @@ Layouts can be used in plain html files by using global class names
 const { Variables } = require('@Common');
 
 <div class='ihr-layout ihr-layout--profile'>
-   <div class='ihr-layout__top--outer'>
-     <div class='ihr-layout__top--inner'>
-       <div style={{backgroundColor: Variables.Color.n400, height: '40px'}}/>
-     </div>
-   </div>
-  <div class='ihr-layout__header--outer'>
-    <div class='ihr-layout__header--inner'>
-      <div style={{backgroundColor: Variables.Color.n500, height: '240px'}}/>
-    </div>
+  <div class='ihr-layout__top'>
+    <div style={{backgroundColor: Variables.Color.n400, height: '40px'}}/>
   </div>
-  <div class='ihr-layout__content--outer'>
-    <div class='ihr-layout__content--inner'>
-      <div style={{backgroundColor: Variables.Color.n600, height: '500px'}}/>
-    </div>
+  <div class='ihr-layout__header'>
+    <div style={{backgroundColor: Variables.Color.n500, height: '240px'}}/>
+  </div>
+  <div class='ihr-layout__content'>
+    <div style={{backgroundColor: Variables.Color.n600, height: '500px'}}/>
   </div>
 </div>
 ```
@@ -79,15 +73,11 @@ const { Variables } = require('@Common');
 const { Variables } = require('@Common');
 
 <div class='ihr-layout ihr-layout--simple'>
-  <div class='ihr-layout__top--outer'>
-    <div class='ihr-layout__top--inner'>
-      <div style={{backgroundColor: Variables.Color.n400, height: '40px'}}/>
-    </div>
+  <div class='ihr-layout__top'>
+    <div style={{backgroundColor: Variables.Color.n400, height: '40px'}}/>
   </div>
-  <div class='ihr-layout__content--outer'>
-    <div class='ihr-layout__content--inner'>
-      <div style={{backgroundColor: Variables.Color.n600, height: '500px'}}/>
-    </div>
+  <div class='ihr-layout__content'>
+    <div style={{backgroundColor: Variables.Color.n600, height: '500px'}}/>
   </div>
 </div>
 ```
@@ -95,15 +85,11 @@ const { Variables } = require('@Common');
 const { Variables } = require('@Common');
 
 <div class='ihr-layout ihr-layout--fullscreen'>
-  <div class='ihr-layout__top--outer'>
-    <div class='ihr-layout__top--inner'>
-      <div style={{backgroundColor: Variables.Color.n400, height: '40px'}}/>
-    </div>
+  <div class='ihr-layout__top'>
+    <div style={{backgroundColor: Variables.Color.n400, height: '40px'}}/>
   </div>
-  <div class='ihr-layout__content--outer'>
-    <div class='ihr-layout__content--inner'>
-      <div style={{backgroundColor: Variables.Color.n600, height: '500px'}}/>
-    </div>
+  <div class='ihr-layout__content'>
+    <div style={{backgroundColor: Variables.Color.n600, height: '500px'}}/>
   </div>
 </div>
 ```
