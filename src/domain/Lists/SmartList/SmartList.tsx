@@ -8,7 +8,7 @@ import { Spinner } from '../../Spinners'
 import { ListClickableColumn } from './ListClickableColumn'
 import { ListRow } from './ListRow'
 import { ListColumn } from './ListColumn'
-import { ISkeletonProps } from '../../Skeletons/services/skeletonHelper'
+import { ISkeletonProps } from '../../Skeletons'
 
 const style = require('./style.scss')
 
