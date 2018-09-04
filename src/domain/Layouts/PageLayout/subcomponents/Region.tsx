@@ -5,7 +5,7 @@ export interface IPageRegionProps {
   /** What to display in the layout. */
   children?: React.ReactNode
   /** If the component to display is the top or bottom component */
-  regionType: 'header' | 'content' | 'top-left' | 'top-right'
+  regionType: 'header' | 'content' | 'top'
 }
 
 export class Region extends React.Component<IPageRegionProps> {
