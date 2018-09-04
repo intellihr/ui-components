@@ -1,0 +1,247 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Vertical Stack /> should render a vertical stack 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@media only screen and (max-width:639px) {
+  .c1 {
+    padding-top: 0px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c1 {
+    padding-top: 0px;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c2 {
+    padding-top: 16px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c2 {
+    padding-top: 24px;
+  }
+}
+
+<VerticalStack
+  desktopPadding={24}
+  mobilePadding={16}
+>
+  <styled.div>
+    <div
+      className="c0"
+    >
+      <styled.div
+        desktopPadding={0}
+        key=".0"
+        mobilePadding={0}
+      >
+        <div
+          className="c1"
+        >
+          <div>
+            1
+          </div>
+        </div>
+      </styled.div>
+      <styled.div
+        desktopPadding={24}
+        key=".1"
+        mobilePadding={16}
+      >
+        <div
+          className="c2"
+        >
+          <div>
+            3
+          </div>
+        </div>
+      </styled.div>
+      <styled.div
+        desktopPadding={24}
+        key=".2"
+        mobilePadding={16}
+      >
+        <div
+          className="c2"
+        >
+          <div>
+            2
+          </div>
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
+</VerticalStack>
+`;
+
+exports[`<Vertical Stack /> should render a vertical stack with a custom padding 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@media only screen and (max-width:639px) {
+  .c1 {
+    padding-top: 0px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c1 {
+    padding-top: 0px;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c2 {
+    padding-top: 30px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c2 {
+    padding-top: 60px;
+  }
+}
+
+<VerticalStack
+  desktopPadding={60}
+  mobilePadding={30}
+>
+  <styled.div>
+    <div
+      className="c0"
+    >
+      <styled.div
+        desktopPadding={0}
+        key=".0"
+        mobilePadding={0}
+      >
+        <div
+          className="c1"
+        >
+          <div>
+            1
+          </div>
+        </div>
+      </styled.div>
+      <styled.div
+        desktopPadding={60}
+        key=".1"
+        mobilePadding={30}
+      >
+        <div
+          className="c2"
+        >
+          <div>
+            3
+          </div>
+        </div>
+      </styled.div>
+      <styled.div
+        desktopPadding={60}
+        key=".2"
+        mobilePadding={30}
+      >
+        <div
+          className="c2"
+        >
+          <div>
+            2
+          </div>
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
+</VerticalStack>
+`;
+
+exports[`<Vertical Stack /> should render a vertical stack with no items 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+<VerticalStack
+  desktopPadding={24}
+  mobilePadding={16}
+>
+  <styled.div>
+    <div
+      className="c0"
+    />
+  </styled.div>
+</VerticalStack>
+`;
+
+exports[`<Vertical Stack /> should render a vertical with one item 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@media only screen and (max-width:639px) {
+  .c1 {
+    padding-top: 0px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c1 {
+    padding-top: 0px;
+  }
+}
+
+<VerticalStack
+  desktopPadding={24}
+  mobilePadding={16}
+>
+  <styled.div>
+    <div
+      className="c0"
+    >
+      <styled.div
+        desktopPadding={0}
+        key=".0"
+        mobilePadding={0}
+      >
+        <div
+          className="c1"
+        >
+          <div>
+            1
+          </div>
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
+</VerticalStack>
+`;
