@@ -7,11 +7,8 @@ describe('<PageLayout />', () => {
   it(`should render a profile layout`, () => {
     const wrapper = mount(
       <PageLayout layoutType='profile'>
-        <PageLayout.Region regionType='top-left'>
+        <PageLayout.Region regionType='top'>
           <div>1</div>
-        </PageLayout.Region>
-        <PageLayout.Region regionType='top-right'>
-          <div>2</div>
         </PageLayout.Region>
         <PageLayout.Region regionType='header'>
           <div>a</div>
@@ -28,11 +25,8 @@ describe('<PageLayout />', () => {
   it(`should render a simple layout`, () => {
     const wrapper = mount(
       <PageLayout layoutType='profile'>
-        <PageLayout.Region regionType='top-left'>
+        <PageLayout.Region regionType='top'>
           <div>1</div>
-        </PageLayout.Region>
-        <PageLayout.Region regionType='top-right'>
-          <div>2</div>
         </PageLayout.Region>
         <PageLayout.Region regionType='content'>
           <div>a</div>
@@ -46,11 +40,8 @@ describe('<PageLayout />', () => {
   it(`should render a fullscreen layout`, () => {
     const wrapper = mount(
       <PageLayout layoutType='fullscreen'>
-        <PageLayout.Region regionType='top-left'>
+        <PageLayout.Region regionType='top'>
           <div>1</div>
-        </PageLayout.Region>
-        <PageLayout.Region regionType='top-right'>
-          <div>2</div>
         </PageLayout.Region>
         <PageLayout.Region regionType='content'>
           <div>a</div>

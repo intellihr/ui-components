@@ -1,25 +1,18 @@
 @import '../../../common/sass/variables';
 
 @mixin page-top {
-  :local(.top-left-outer),
-  .ihr-layout__top-left--outer {
-    flex: 1 1 50%;
+  :local(.top),
+  .ihr-layout__top {
+    flex-wrap: nowrap;
     padding-bottom: .75rem;
     padding-top: .75rem;
-  }
-
-  :local(.top-right-outer),
-  .ihr-layout__top-right--outer {
-    display: flex;
-    flex: 1 1 50%;
-    justify-content: flex-end;
-    padding-bottom: .75rem;
-    padding-top: .75rem;
+    width: 100%;
   }
 }
 
 @mixin base-layout {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
@@ -31,37 +24,28 @@
   }
 
   @media only screen and (max-width: $breakpoint-tablet - 1) {
-    :local(.top-left-outer),
-    .ihr-layout__top-left--outer {
+    :local(.top),
+    .ihr-layout__top {
       padding-left: 24px;
-    }
-
-    :local(.top-right-outer),
-    .ihr-layout__top-right--outer {
       padding-right: 24px;
     }
   }
 
-  :local(.header-inner),
-  .ihr-layout__header--inner {
+  :local(.header),
+  .ihr-layout__header {
     margin-left: auto;
     margin-right: auto;
     max-width: $breakpoint-big-desktop;
     overflow: hidden;
+    width: 100%;
 
     @media only screen and (min-width: $breakpoint-tablet) {
       border-radius: $border-radius;
     }
   }
 
-  :local(.header-outer),
-  .ihr-layout__header--outer {
-    flex: 0 0 100%;
-    width: 100%;
-  }
-
-  :local(.content-inner),
-  .ihr-layout__content--inner {
+  :local(.content),
+  .ihr-layout__content {
     margin-left: auto;
     margin-right: auto;
 
@@ -77,18 +61,13 @@
       width: 100% / 12 * 10;
     }
   }
-
-  :local(.content-outer),
-  .ihr-layout__content--outer {
-    width: 100%;
-  }
 }
 
 @mixin simple-layout {
   padding: 0 24px;
 
-  :local(.content-outer),
-  .ihr-layout__content--outer {
+  :local(.content),
+  .ihr-layout__content {
     align-items: center;
     margin-left: auto;
     margin-right: auto;
@@ -100,8 +79,8 @@
 @mixin fullscreen-layout {
   padding: 0 24px;
 
-  :local(.content-outer),
-  .ihr-layout__content--outer {
+  :local(.content),
+  .ihr-layout__content {
     width: 100%;
   }
 }
