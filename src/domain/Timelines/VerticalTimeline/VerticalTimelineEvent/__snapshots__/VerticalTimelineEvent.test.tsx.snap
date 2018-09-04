@@ -163,47 +163,24 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
             initials="JW"
             size="small"
           >
-            <class_1
-              initials="JW"
-              size="small"
+            <div
+              className="Avatar avatar-small"
             >
-              <Skeleton
-                className=""
-                initials="JW"
-                size="small"
-                skeletonOptions={
-                  Object {
-                    "shape": "line",
-                    "showSkeleton": false,
-                    "size": "large",
-                  }
-                }
+              <div
+                className="avatar-inner-container"
+                onClick={[Function]}
               >
-                <AvatarComponent
-                  initials="JW"
-                  size="small"
+                <div
+                  className="avatar-initials-container"
                 >
-                  <div
-                    className="Avatar avatar-small"
+                  <span
+                    className="avatar-initials"
                   >
-                    <div
-                      className="avatar-inner-container"
-                      onClick={[Function]}
-                    >
-                      <div
-                        className="avatar-initials-container"
-                      >
-                        <span
-                          className="avatar-initials"
-                        >
-                          JW
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </AvatarComponent>
-              </Skeleton>
-            </class_1>
+                    JW
+                  </span>
+                </div>
+              </div>
+            </div>
           </Avatar>
         </div>
       </styled.div>

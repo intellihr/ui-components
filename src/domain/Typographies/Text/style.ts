@@ -7,12 +7,12 @@ export interface ITextWrapperProps {
   isInline?: boolean
   isUpper?: boolean
   weight?: 'normal' | 'heavy'
-  type?: Props.TypographyType
+  textType?: Props.TypographyType
   isTruncated?: boolean
 }
 
 export const TextWrapper = styled.span`
-  ${(props: ITextWrapperProps) => styleForTypographyType(props.type)}
+  ${(props: ITextWrapperProps) => styleForTypographyType(props.textType)}
 
   ${(props: ITextWrapperProps) => {
     if (props.color) {
@@ -21,7 +21,7 @@ export const TextWrapper = styled.span`
       `
     }
 
-    switch (props.type) {
+    switch (props.textType) {
       case 'xsmall':
       case 'small':
         return css`
@@ -52,7 +52,7 @@ export const TextWrapper = styled.span`
       }
     }
 
-    switch (props.type) {
+    switch (props.textType) {
       case 'heading':
       case 'display':
       case 'display-large':

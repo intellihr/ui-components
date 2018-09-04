@@ -57,6 +57,7 @@ $toast-styles: (
     padding: 0 .575rem;
     position: relative;
     top: -.375rem;
+    word-break: break-word;
   }
 
   @each $colour, $values in $toast-styles {

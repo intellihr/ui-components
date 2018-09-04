@@ -59,6 +59,11 @@ exports[`<ListColumn /> should render a list column with number content 1`] = `
       "sm": 6,
     }
   }
+  skeletonOptions={
+    Object {
+      "showSkeleton": false,
+    }
+  }
 >
   <Column
     sm={6}
@@ -141,6 +146,11 @@ exports[`<ListColumn /> should render a list column with the right header 1`] = 
   size={
     Object {
       "sm": 6,
+    }
+  }
+  skeletonOptions={
+    Object {
+      "showSkeleton": false,
     }
   }
 >
@@ -233,6 +243,11 @@ exports[`<ListColumn /> should render a list column with the right non-header ce
   size={
     Object {
       "sm": 6,
+    }
+  }
+  skeletonOptions={
+    Object {
+      "showSkeleton": false,
     }
   }
 >

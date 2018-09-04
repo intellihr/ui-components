@@ -8,32 +8,13 @@ exports[`<PageLayout /> should render a fullscreen layout 1`] = `
     className="base fullscreen page-base"
   >
     <Region
-      regionType="top-left"
+      regionType="top"
     >
       <div
-        className="top-left-outer"
+        className="top"
       >
-        <div
-          className="top-left-inner"
-        >
-          <div>
-            1
-          </div>
-        </div>
-      </div>
-    </Region>
-    <Region
-      regionType="top-right"
-    >
-      <div
-        className="top-right-outer"
-      >
-        <div
-          className="top-right-inner"
-        >
-          <div>
-            2
-          </div>
+        <div>
+          1
         </div>
       </div>
     </Region>
@@ -41,14 +22,10 @@ exports[`<PageLayout /> should render a fullscreen layout 1`] = `
       regionType="content"
     >
       <div
-        className="content-outer"
+        className="content"
       >
-        <div
-          className="content-inner"
-        >
-          <div>
-            a
-          </div>
+        <div>
+          a
         </div>
       </div>
     </Region>
@@ -64,32 +41,13 @@ exports[`<PageLayout /> should render a profile layout 1`] = `
     className="base profile page-base"
   >
     <Region
-      regionType="top-left"
+      regionType="top"
     >
       <div
-        className="top-left-outer"
+        className="top"
       >
-        <div
-          className="top-left-inner"
-        >
-          <div>
-            1
-          </div>
-        </div>
-      </div>
-    </Region>
-    <Region
-      regionType="top-right"
-    >
-      <div
-        className="top-right-outer"
-      >
-        <div
-          className="top-right-inner"
-        >
-          <div>
-            2
-          </div>
+        <div>
+          1
         </div>
       </div>
     </Region>
@@ -97,14 +55,10 @@ exports[`<PageLayout /> should render a profile layout 1`] = `
       regionType="header"
     >
       <div
-        className="header-outer"
+        className="header"
       >
-        <div
-          className="header-inner"
-        >
-          <div>
-            a
-          </div>
+        <div>
+          a
         </div>
       </div>
     </Region>
@@ -112,14 +66,10 @@ exports[`<PageLayout /> should render a profile layout 1`] = `
       regionType="content"
     >
       <div
-        className="content-outer"
+        className="content"
       >
-        <div
-          className="content-inner"
-        >
-          <div>
-            b
-          </div>
+        <div>
+          b
         </div>
       </div>
     </Region>
@@ -135,32 +85,13 @@ exports[`<PageLayout /> should render a simple layout 1`] = `
     className="base profile page-base"
   >
     <Region
-      regionType="top-left"
+      regionType="top"
     >
       <div
-        className="top-left-outer"
+        className="top"
       >
-        <div
-          className="top-left-inner"
-        >
-          <div>
-            1
-          </div>
-        </div>
-      </div>
-    </Region>
-    <Region
-      regionType="top-right"
-    >
-      <div
-        className="top-right-outer"
-      >
-        <div
-          className="top-right-inner"
-        >
-          <div>
-            2
-          </div>
+        <div>
+          1
         </div>
       </div>
     </Region>
@@ -168,14 +99,10 @@ exports[`<PageLayout /> should render a simple layout 1`] = `
       regionType="content"
     >
       <div
-        className="content-outer"
+        className="content"
       >
-        <div
-          className="content-inner"
-        >
-          <div>
-            a
-          </div>
+        <div>
+          a
         </div>
       </div>
     </Region>

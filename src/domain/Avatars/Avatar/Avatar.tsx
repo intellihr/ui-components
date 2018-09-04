@@ -5,15 +5,12 @@ import {
   isEmpty
 } from 'lodash'
 import { FontAwesomeIcon } from '../../Icons'
-import {
-  withSkeleton,
-  ISkeletonComponentProps
-} from '../../Skeletons'
+import { Props } from '../../../common'
 const style = require('./Avatar.scss')
 
 export interface IAvatarProps {
   /** Size of the avatar  */
-  size?: 'small' | 'medium' | 'large' | 'xlarge'
+  size?: Props.AvatarSize
   /** Initials to display if no valid `imageUrl` or `imageData` is passed to Avatar */
   initials?: string
   /** Text for the black, transparent overlay (both Label and Icon have to be present for the overlay to render) */
@@ -38,9 +35,7 @@ export interface IAvatarState {
   showInitials: boolean
 }
 
-export type IAvatarSkeletonProps = IAvatarProps & ISkeletonComponentProps
-
-class AvatarComponent extends React.Component<IAvatarProps> {
+class Avatar extends React.Component<IAvatarProps> {
 
   get hoverDom (): JSX.Element | null {
     const {
@@ -124,7 +119,7 @@ class AvatarComponent extends React.Component<IAvatarProps> {
   }
 
   public static defaultProps: IAvatarProps = {
-    size: 'medium'
+    size: Props.AvatarSize.Medium
   }
   public state: IAvatarState = {
     showInitials: true
@@ -184,35 +179,6 @@ class AvatarComponent extends React.Component<IAvatarProps> {
     } = props
 
     return !isEmpty(imageUrl) || !isEmpty(imageData)
-  }
-}
-
-const AvatarWithSkeleton: React.ComponentClass<IAvatarSkeletonProps> = withSkeleton(AvatarComponent)
-
-// tslint:disable-next-line:max-classes-per-file
-class Avatar extends React.PureComponent<IAvatarSkeletonProps> {
-  public render () {
-    const {
-      size,
-      skeletonOptions,
-      skeletonOptions: {
-        size: skeletonSize = null
-      } = {}
-    } = this.props
-
-    let props = this.props
-
-    if (!skeletonSize && skeletonOptions && size) {
-      props = {
-        ...props,
-        skeletonOptions: {
-          ...skeletonOptions,
-          size
-        }
-      }
-    }
-
-    return <AvatarWithSkeleton {...props} />
   }
 }
 

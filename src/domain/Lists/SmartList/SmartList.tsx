@@ -8,11 +8,11 @@ import { Spinner } from '../../Spinners'
 import { ListClickableColumn } from './ListClickableColumn'
 import { ListRow } from './ListRow'
 import { ListColumn } from './ListColumn'
-import { ISkeletonOptions } from '../../Skeletons'
+import { ISkeletonProps } from '../../Skeletons'
 
 const style = require('./style.scss')
 
-export interface ISmartListSkeletonOptions extends Partial<ISkeletonOptions> {
+export interface ISmartListSkeletonOptions extends ISkeletonProps {
   /* Number of rows to show skeletons */
   numberOfRows?: number
 }
@@ -44,7 +44,7 @@ export interface ISmartList {
   hideHeaderOnSmall?: boolean
   /** Wrapper component applied to each row */
   rowWrapper?: (props: object) => JSX.Element
-  /** Skleton Options */
+  /** Skeleton Options */
   skeletonOptions?: ISmartListSkeletonOptions
 }
 
@@ -65,18 +65,16 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
     showHeaderRow: true,
     showHoverBg: true,
     hideHeaderOnSmall: false,
-    limit: 5
+    limit: 5,
+    skeletonOptions: {
+      showSkeleton: false,
+      numberOfRows: 5
+    }
   }
 
   public state: ISmartListState = { paginationButton: true }
 
   private data: any[] = []
-
-  private skeletonOptions: ISmartListSkeletonOptions = {
-    showSkeleton: false,
-    numberOfRows: 5,
-    shape: 'line'
-  }
 
   get listColumns (): JSX.Element[] {
     const {
@@ -92,7 +90,8 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
 
   public cloneTableElement = (rowIndex = 0, isHeader = false): JSX.Element[] => {
     const {
-      id
+      id,
+      skeletonOptions
     } = this.props
 
     let columnIndex = 0
@@ -101,7 +100,7 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
       key: id ? `${id}-list-item-${rowIndex}-${columnIndex}` : uuid.v4(),
       isHeader,
       rowIndex,
-      skeletonOptions: this.skeletonOptions,
+      skeletonOptions,
       data: this.data,
       colIndex: columnIndex++,
       size: item.props.size,
@@ -282,19 +281,13 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
   public render (): JSX.Element {
     const {
       data,
-      showHoverBg,
-      skeletonOptions
+      showHoverBg
     } = this.props
-
-    this.skeletonOptions = {
-      ...this.skeletonOptions,
-      ...skeletonOptions
-    }
 
     const {
       showSkeleton,
       numberOfRows
-    } = this.skeletonOptions
+    } = this.props.skeletonOptions!
 
     if (showSkeleton) {
       this.data = fill(Array(numberOfRows), {})

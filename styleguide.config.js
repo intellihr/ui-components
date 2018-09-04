@@ -177,7 +177,9 @@ module.exports = {
         {
           name: 'Skeletons',
           components: [
-            'src/domain/Skeletons/Skeleton/Skeleton'
+            'src/domain/Skeletons/TextSkeleton/TextSkeleton',
+            'src/domain/Skeletons/BlockSkeleton/BlockSkeleton',
+            'src/domain/Skeletons/CircleSkeleton/CircleSkeleton'
           ]
         },
         {
@@ -231,7 +233,6 @@ module.exports = {
       components: [
         'src/domain/Styles/hoc/withStyledBreakpoints',
         'src/domain/Defaults/withDefaults/withDefaults',
-        'src/domain/Skeletons/withSkeleton/withSkeleton',
         'src/domain/Internals/Anchor/Anchor'
       ]
     }

@@ -14,7 +14,7 @@ describe('<SectionList />', () => {
           header='Annotated Section'
           description='Annotated Description'
           linkText='Annotated Link'
-          linkUrl='#'
+          linkProps={{href: '#'}}
         >
           section 2
         </SectionList.AnnotatedSection>

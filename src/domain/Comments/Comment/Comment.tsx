@@ -11,6 +11,7 @@ import {
 } from './style'
 import { FontAwesomeIcon } from '../../Icons'
 import { FormattedText } from '../../Typographies'
+import { Props } from '../../../common'
 
 export interface ICommentProps {
   /** Comment object to render */
@@ -51,7 +52,7 @@ export class Comment extends React.Component<ICommentProps> {
     return (
       <div className='comment-badge-container'>
         <Avatar
-          size='small'
+          size={Props.AvatarSize.Small}
           imageUrl={avatarUrl}
           initials={commenterInitials}
         />

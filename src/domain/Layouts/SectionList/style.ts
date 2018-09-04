@@ -1,20 +1,12 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { Variables } from '../../../common'
 import { AnnotatedSectionDescription } from './subcomponents/AnnotatedSectionDescription'
 
-const sharedStyle = css`
-  @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet}px) {
-    padding: 24px 16px;
-  }
-
-  @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
-    margin-left: 24px;
-    margin-right: 24px;
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
-`
+const horizontalMarginDesktop = 24
+const verticalPaddingDesktop = 32
+const horizontalPaddingMobile = 16
+const verticalPaddingMobile = 24
 
 const SectionBorder = styled.div`
   @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
@@ -27,26 +19,54 @@ const SectionBorder = styled.div`
 `
 
 const StyledAnnotatedSectionBody = styled.div`
-  @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet}px) {
+  @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
+    margin-left: ${horizontalMarginDesktop}px;
+  }
+  
+  @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
     background-color: ${Variables.Color.n150};
- 
     border-top: 1px solid ${Variables.Color.n300};
     border-bottom: 1px solid ${Variables.Color.n300};
+    padding: ${verticalPaddingMobile}px ${horizontalPaddingMobile}px;
   }
+`
 
-  ${sharedStyle}
+const StyledAnnotatedSectionDescription = styled(AnnotatedSectionDescription)`
+  @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
+    padding: ${verticalPaddingMobile}px ${horizontalPaddingMobile}px;
+  }
+  
+  @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
+    margin-right: ${horizontalMarginDesktop}px;
+  }
 `
 
 const StyledSection = styled(SectionBorder)` 
-  ${sharedStyle}
+  @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
+    padding: ${verticalPaddingMobile}px ${horizontalPaddingMobile}px;
+  }
+  
+  @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
+    margin-left: ${horizontalMarginDesktop}px;
+    margin-right: ${horizontalMarginDesktop}px;
+    padding-top: ${verticalPaddingDesktop}px;
+    padding-bottom: ${verticalPaddingDesktop}px;
+  }
 `
-const StyledAnnotatedSectionDescription = styled(AnnotatedSectionDescription)`
-  ${sharedStyle}
+
+const StyledAnnotatedSection = styled(SectionBorder)` 
+  @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
+    margin-left: ${horizontalMarginDesktop}px;
+    margin-right: ${horizontalMarginDesktop}px;
+    padding-top: ${verticalPaddingDesktop}px;
+    padding-bottom: ${verticalPaddingDesktop}px;
+  }
 `
 
 export {
   SectionBorder,
   StyledSection,
+  StyledAnnotatedSection,
   StyledAnnotatedSectionDescription,
   StyledAnnotatedSectionBody
 }

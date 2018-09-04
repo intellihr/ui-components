@@ -130,6 +130,12 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
   loading={false}
   showHeaderRow={true}
   showHoverBg={true}
+  skeletonOptions={
+    Object {
+      "numberOfRows": 5,
+      "showSkeleton": false,
+    }
+  }
   title="My List Title"
 >
   <div
@@ -205,7 +211,6 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": false,
                         }
                       }
@@ -269,7 +274,6 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": false,
                         }
                       }
@@ -333,7 +337,6 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": false,
                         }
                       }
@@ -471,7 +474,6 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": false,
                         }
                       }
@@ -540,7 +542,6 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": false,
                         }
                       }
@@ -602,7 +603,6 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": false,
                         }
                       }
@@ -738,7 +738,6 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": false,
                         }
                       }
@@ -807,7 +806,6 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": false,
                         }
                       }
@@ -869,7 +867,6 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": false,
                         }
                       }
@@ -1040,6 +1037,12 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
   loading={false}
   showHeaderRow={true}
   showHoverBg={true}
+  skeletonOptions={
+    Object {
+      "numberOfRows": 5,
+      "showSkeleton": false,
+    }
+  }
 >
   <div
     className="SmartList smart-list hover-bg"
@@ -1109,7 +1112,6 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": false,
                         }
                       }
@@ -1179,7 +1181,6 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": false,
                         }
                       }
@@ -1249,7 +1250,6 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": false,
                         }
                       }
@@ -1393,7 +1393,6 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": false,
                         }
                       }
@@ -1462,7 +1461,6 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": false,
                         }
                       }
@@ -1524,7 +1522,6 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": false,
                         }
                       }
@@ -1660,7 +1657,6 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": false,
                         }
                       }
@@ -1729,7 +1725,6 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": false,
                         }
                       }
@@ -1791,7 +1786,6 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": false,
                         }
                       }
@@ -1923,6 +1917,12 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
   loading={false}
   showHeaderRow={true}
   showHoverBg={true}
+  skeletonOptions={
+    Object {
+      "numberOfRows": 5,
+      "showSkeleton": false,
+    }
+  }
 >
   <div
     className="SmartList smart-list hover-bg"
@@ -1992,7 +1992,6 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": false,
                         }
                       }
@@ -2136,7 +2135,6 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": false,
                         }
                       }
@@ -2279,7 +2277,6 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": false,
                         }
                       }
@@ -2442,6 +2439,12 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
   loading={false}
   showHeaderRow={true}
   showHoverBg={true}
+  skeletonOptions={
+    Object {
+      "numberOfRows": 5,
+      "showSkeleton": false,
+    }
+  }
 >
   <div
     className="SmartList smart-list hover-bg"
@@ -2496,7 +2499,6 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": false,
                         }
                       }
@@ -2545,7 +2547,6 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": false,
                         }
                       }
@@ -2594,7 +2595,6 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": false,
                         }
                       }
@@ -2696,6 +2696,31 @@ exports[`<SmartList /> should render skeleton 1`] = `
   flex: 0 0 auto;
   padding-right: 0rem;
   padding-left: 0rem;
+}
+
+.c5 {
+  -webkit-animation: hNBTQs 1.2s ease-in-out infinite;
+  animation: hNBTQs 1.2s ease-in-out infinite;
+  background-color: #F5F9FC;
+  background-image: linear-gradient(90deg,#F5F9FC,#E1E6EB,#F5F9FC);
+  background-repeat: no-repeat;
+  background-size: 200px 100%;
+  border: 1px solid #F5F9FC;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c4 {
+  border-radius: 4px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
 }
 
 @media only screen and (min-width:0em) {
@@ -2834,7 +2859,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": true,
                         }
                       }
@@ -2896,7 +2920,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": true,
                         }
                       }
@@ -2958,7 +2981,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": true,
                         }
                       }
@@ -3087,7 +3109,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": true,
                         }
                       }
@@ -3110,47 +3131,26 @@ exports[`<SmartList /> should render skeleton 1`] = `
                             <div
                               className="list-column"
                             >
-                              <Skeleton
-                                alignRight={false}
-                                className=""
-                                colIndex={0}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test1"
-                                isHeader={false}
-                                rowIndex={0}
-                                size={
-                                  Object {
-                                    "lg": 6,
-                                    "md": 6,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "shape": "line",
-                                    "showSkeleton": true,
-                                  }
-                                }
+                              <TextSkeleton
+                                showSkeleton={true}
+                                type="body"
                               >
-                                <span
-                                  className="Skeleton skeleton line skeleton-large"
-                                  style={
-                                    Object {
-                                      "width": undefined,
-                                    }
-                                  }
+                                <Styled(styled.span)
+                                  key="0"
+                                  textType="body"
                                 >
-                                  ‌
-                                </span>
-                              </Skeleton>
+                                  <styled.span
+                                    className="c4"
+                                    textType="body"
+                                  >
+                                    <span
+                                      className="c4 c5"
+                                    >
+                                      ‌
+                                    </span>
+                                  </styled.span>
+                                </Styled(styled.span)>
+                              </TextSkeleton>
                             </div>
                           </div>
                         </Col>
@@ -3181,7 +3181,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": true,
                         }
                       }
@@ -3204,47 +3203,26 @@ exports[`<SmartList /> should render skeleton 1`] = `
                             <div
                               className="list-column"
                             >
-                              <Skeleton
-                                alignRight={false}
-                                className=""
-                                colIndex={1}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test2"
-                                isHeader={false}
-                                rowIndex={0}
-                                size={
-                                  Object {
-                                    "lg": 3,
-                                    "md": 3,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "shape": "line",
-                                    "showSkeleton": true,
-                                  }
-                                }
+                              <TextSkeleton
+                                showSkeleton={true}
+                                type="body"
                               >
-                                <span
-                                  className="Skeleton skeleton line skeleton-large"
-                                  style={
-                                    Object {
-                                      "width": undefined,
-                                    }
-                                  }
+                                <Styled(styled.span)
+                                  key="0"
+                                  textType="body"
                                 >
-                                  ‌
-                                </span>
-                              </Skeleton>
+                                  <styled.span
+                                    className="c4"
+                                    textType="body"
+                                  >
+                                    <span
+                                      className="c4 c5"
+                                    >
+                                      ‌
+                                    </span>
+                                  </styled.span>
+                                </Styled(styled.span)>
+                              </TextSkeleton>
                             </div>
                           </div>
                         </Col>
@@ -3275,7 +3253,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": true,
                         }
                       }
@@ -3298,47 +3275,26 @@ exports[`<SmartList /> should render skeleton 1`] = `
                             <div
                               className="list-column"
                             >
-                              <Skeleton
-                                alignRight={false}
-                                className=""
-                                colIndex={2}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test3"
-                                isHeader={false}
-                                rowIndex={0}
-                                size={
-                                  Object {
-                                    "lg": 3,
-                                    "md": 3,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "shape": "line",
-                                    "showSkeleton": true,
-                                  }
-                                }
+                              <TextSkeleton
+                                showSkeleton={true}
+                                type="body"
                               >
-                                <span
-                                  className="Skeleton skeleton line skeleton-large"
-                                  style={
-                                    Object {
-                                      "width": undefined,
-                                    }
-                                  }
+                                <Styled(styled.span)
+                                  key="0"
+                                  textType="body"
                                 >
-                                  ‌
-                                </span>
-                              </Skeleton>
+                                  <styled.span
+                                    className="c4"
+                                    textType="body"
+                                  >
+                                    <span
+                                      className="c4 c5"
+                                    >
+                                      ‌
+                                    </span>
+                                  </styled.span>
+                                </Styled(styled.span)>
+                              </TextSkeleton>
                             </div>
                           </div>
                         </Col>
@@ -3436,7 +3392,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": true,
                         }
                       }
@@ -3459,47 +3414,26 @@ exports[`<SmartList /> should render skeleton 1`] = `
                             <div
                               className="list-column"
                             >
-                              <Skeleton
-                                alignRight={false}
-                                className=""
-                                colIndex={0}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test1"
-                                isHeader={false}
-                                rowIndex={1}
-                                size={
-                                  Object {
-                                    "lg": 6,
-                                    "md": 6,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "shape": "line",
-                                    "showSkeleton": true,
-                                  }
-                                }
+                              <TextSkeleton
+                                showSkeleton={true}
+                                type="body"
                               >
-                                <span
-                                  className="Skeleton skeleton line skeleton-large"
-                                  style={
-                                    Object {
-                                      "width": undefined,
-                                    }
-                                  }
+                                <Styled(styled.span)
+                                  key="0"
+                                  textType="body"
                                 >
-                                  ‌
-                                </span>
-                              </Skeleton>
+                                  <styled.span
+                                    className="c4"
+                                    textType="body"
+                                  >
+                                    <span
+                                      className="c4 c5"
+                                    >
+                                      ‌
+                                    </span>
+                                  </styled.span>
+                                </Styled(styled.span)>
+                              </TextSkeleton>
                             </div>
                           </div>
                         </Col>
@@ -3530,7 +3464,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": true,
                         }
                       }
@@ -3553,47 +3486,26 @@ exports[`<SmartList /> should render skeleton 1`] = `
                             <div
                               className="list-column"
                             >
-                              <Skeleton
-                                alignRight={false}
-                                className=""
-                                colIndex={1}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test2"
-                                isHeader={false}
-                                rowIndex={1}
-                                size={
-                                  Object {
-                                    "lg": 3,
-                                    "md": 3,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "shape": "line",
-                                    "showSkeleton": true,
-                                  }
-                                }
+                              <TextSkeleton
+                                showSkeleton={true}
+                                type="body"
                               >
-                                <span
-                                  className="Skeleton skeleton line skeleton-large"
-                                  style={
-                                    Object {
-                                      "width": undefined,
-                                    }
-                                  }
+                                <Styled(styled.span)
+                                  key="0"
+                                  textType="body"
                                 >
-                                  ‌
-                                </span>
-                              </Skeleton>
+                                  <styled.span
+                                    className="c4"
+                                    textType="body"
+                                  >
+                                    <span
+                                      className="c4 c5"
+                                    >
+                                      ‌
+                                    </span>
+                                  </styled.span>
+                                </Styled(styled.span)>
+                              </TextSkeleton>
                             </div>
                           </div>
                         </Col>
@@ -3624,7 +3536,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": true,
                         }
                       }
@@ -3647,47 +3558,26 @@ exports[`<SmartList /> should render skeleton 1`] = `
                             <div
                               className="list-column"
                             >
-                              <Skeleton
-                                alignRight={false}
-                                className=""
-                                colIndex={2}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test3"
-                                isHeader={false}
-                                rowIndex={1}
-                                size={
-                                  Object {
-                                    "lg": 3,
-                                    "md": 3,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "shape": "line",
-                                    "showSkeleton": true,
-                                  }
-                                }
+                              <TextSkeleton
+                                showSkeleton={true}
+                                type="body"
                               >
-                                <span
-                                  className="Skeleton skeleton line skeleton-large"
-                                  style={
-                                    Object {
-                                      "width": undefined,
-                                    }
-                                  }
+                                <Styled(styled.span)
+                                  key="0"
+                                  textType="body"
                                 >
-                                  ‌
-                                </span>
-                              </Skeleton>
+                                  <styled.span
+                                    className="c4"
+                                    textType="body"
+                                  >
+                                    <span
+                                      className="c4 c5"
+                                    >
+                                      ‌
+                                    </span>
+                                  </styled.span>
+                                </Styled(styled.span)>
+                              </TextSkeleton>
                             </div>
                           </div>
                         </Col>
@@ -3785,7 +3675,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": true,
                         }
                       }
@@ -3808,47 +3697,26 @@ exports[`<SmartList /> should render skeleton 1`] = `
                             <div
                               className="list-column"
                             >
-                              <Skeleton
-                                alignRight={false}
-                                className=""
-                                colIndex={0}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test1"
-                                isHeader={false}
-                                rowIndex={2}
-                                size={
-                                  Object {
-                                    "lg": 6,
-                                    "md": 6,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "shape": "line",
-                                    "showSkeleton": true,
-                                  }
-                                }
+                              <TextSkeleton
+                                showSkeleton={true}
+                                type="body"
                               >
-                                <span
-                                  className="Skeleton skeleton line skeleton-large"
-                                  style={
-                                    Object {
-                                      "width": undefined,
-                                    }
-                                  }
+                                <Styled(styled.span)
+                                  key="0"
+                                  textType="body"
                                 >
-                                  ‌
-                                </span>
-                              </Skeleton>
+                                  <styled.span
+                                    className="c4"
+                                    textType="body"
+                                  >
+                                    <span
+                                      className="c4 c5"
+                                    >
+                                      ‌
+                                    </span>
+                                  </styled.span>
+                                </Styled(styled.span)>
+                              </TextSkeleton>
                             </div>
                           </div>
                         </Col>
@@ -3879,7 +3747,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": true,
                         }
                       }
@@ -3902,47 +3769,26 @@ exports[`<SmartList /> should render skeleton 1`] = `
                             <div
                               className="list-column"
                             >
-                              <Skeleton
-                                alignRight={false}
-                                className=""
-                                colIndex={1}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test2"
-                                isHeader={false}
-                                rowIndex={2}
-                                size={
-                                  Object {
-                                    "lg": 3,
-                                    "md": 3,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "shape": "line",
-                                    "showSkeleton": true,
-                                  }
-                                }
+                              <TextSkeleton
+                                showSkeleton={true}
+                                type="body"
                               >
-                                <span
-                                  className="Skeleton skeleton line skeleton-large"
-                                  style={
-                                    Object {
-                                      "width": undefined,
-                                    }
-                                  }
+                                <Styled(styled.span)
+                                  key="0"
+                                  textType="body"
                                 >
-                                  ‌
-                                </span>
-                              </Skeleton>
+                                  <styled.span
+                                    className="c4"
+                                    textType="body"
+                                  >
+                                    <span
+                                      className="c4 c5"
+                                    >
+                                      ‌
+                                    </span>
+                                  </styled.span>
+                                </Styled(styled.span)>
+                              </TextSkeleton>
                             </div>
                           </div>
                         </Col>
@@ -3973,7 +3819,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": true,
                         }
                       }
@@ -3996,47 +3841,26 @@ exports[`<SmartList /> should render skeleton 1`] = `
                             <div
                               className="list-column"
                             >
-                              <Skeleton
-                                alignRight={false}
-                                className=""
-                                colIndex={2}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test3"
-                                isHeader={false}
-                                rowIndex={2}
-                                size={
-                                  Object {
-                                    "lg": 3,
-                                    "md": 3,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "shape": "line",
-                                    "showSkeleton": true,
-                                  }
-                                }
+                              <TextSkeleton
+                                showSkeleton={true}
+                                type="body"
                               >
-                                <span
-                                  className="Skeleton skeleton line skeleton-large"
-                                  style={
-                                    Object {
-                                      "width": undefined,
-                                    }
-                                  }
+                                <Styled(styled.span)
+                                  key="0"
+                                  textType="body"
                                 >
-                                  ‌
-                                </span>
-                              </Skeleton>
+                                  <styled.span
+                                    className="c4"
+                                    textType="body"
+                                  >
+                                    <span
+                                      className="c4 c5"
+                                    >
+                                      ‌
+                                    </span>
+                                  </styled.span>
+                                </Styled(styled.span)>
+                              </TextSkeleton>
                             </div>
                           </div>
                         </Col>
@@ -4134,7 +3958,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": true,
                         }
                       }
@@ -4157,47 +3980,26 @@ exports[`<SmartList /> should render skeleton 1`] = `
                             <div
                               className="list-column"
                             >
-                              <Skeleton
-                                alignRight={false}
-                                className=""
-                                colIndex={0}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test1"
-                                isHeader={false}
-                                rowIndex={3}
-                                size={
-                                  Object {
-                                    "lg": 6,
-                                    "md": 6,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "shape": "line",
-                                    "showSkeleton": true,
-                                  }
-                                }
+                              <TextSkeleton
+                                showSkeleton={true}
+                                type="body"
                               >
-                                <span
-                                  className="Skeleton skeleton line skeleton-large"
-                                  style={
-                                    Object {
-                                      "width": undefined,
-                                    }
-                                  }
+                                <Styled(styled.span)
+                                  key="0"
+                                  textType="body"
                                 >
-                                  ‌
-                                </span>
-                              </Skeleton>
+                                  <styled.span
+                                    className="c4"
+                                    textType="body"
+                                  >
+                                    <span
+                                      className="c4 c5"
+                                    >
+                                      ‌
+                                    </span>
+                                  </styled.span>
+                                </Styled(styled.span)>
+                              </TextSkeleton>
                             </div>
                           </div>
                         </Col>
@@ -4228,7 +4030,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": true,
                         }
                       }
@@ -4251,47 +4052,26 @@ exports[`<SmartList /> should render skeleton 1`] = `
                             <div
                               className="list-column"
                             >
-                              <Skeleton
-                                alignRight={false}
-                                className=""
-                                colIndex={1}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test2"
-                                isHeader={false}
-                                rowIndex={3}
-                                size={
-                                  Object {
-                                    "lg": 3,
-                                    "md": 3,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "shape": "line",
-                                    "showSkeleton": true,
-                                  }
-                                }
+                              <TextSkeleton
+                                showSkeleton={true}
+                                type="body"
                               >
-                                <span
-                                  className="Skeleton skeleton line skeleton-large"
-                                  style={
-                                    Object {
-                                      "width": undefined,
-                                    }
-                                  }
+                                <Styled(styled.span)
+                                  key="0"
+                                  textType="body"
                                 >
-                                  ‌
-                                </span>
-                              </Skeleton>
+                                  <styled.span
+                                    className="c4"
+                                    textType="body"
+                                  >
+                                    <span
+                                      className="c4 c5"
+                                    >
+                                      ‌
+                                    </span>
+                                  </styled.span>
+                                </Styled(styled.span)>
+                              </TextSkeleton>
                             </div>
                           </div>
                         </Col>
@@ -4322,7 +4102,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": true,
                         }
                       }
@@ -4345,47 +4124,26 @@ exports[`<SmartList /> should render skeleton 1`] = `
                             <div
                               className="list-column"
                             >
-                              <Skeleton
-                                alignRight={false}
-                                className=""
-                                colIndex={2}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test3"
-                                isHeader={false}
-                                rowIndex={3}
-                                size={
-                                  Object {
-                                    "lg": 3,
-                                    "md": 3,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "shape": "line",
-                                    "showSkeleton": true,
-                                  }
-                                }
+                              <TextSkeleton
+                                showSkeleton={true}
+                                type="body"
                               >
-                                <span
-                                  className="Skeleton skeleton line skeleton-large"
-                                  style={
-                                    Object {
-                                      "width": undefined,
-                                    }
-                                  }
+                                <Styled(styled.span)
+                                  key="0"
+                                  textType="body"
                                 >
-                                  ‌
-                                </span>
-                              </Skeleton>
+                                  <styled.span
+                                    className="c4"
+                                    textType="body"
+                                  >
+                                    <span
+                                      className="c4 c5"
+                                    >
+                                      ‌
+                                    </span>
+                                  </styled.span>
+                                </Styled(styled.span)>
+                              </TextSkeleton>
                             </div>
                           </div>
                         </Col>
@@ -4483,7 +4241,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": true,
                         }
                       }
@@ -4506,47 +4263,26 @@ exports[`<SmartList /> should render skeleton 1`] = `
                             <div
                               className="list-column"
                             >
-                              <Skeleton
-                                alignRight={false}
-                                className=""
-                                colIndex={0}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test1"
-                                isHeader={false}
-                                rowIndex={4}
-                                size={
-                                  Object {
-                                    "lg": 6,
-                                    "md": 6,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "shape": "line",
-                                    "showSkeleton": true,
-                                  }
-                                }
+                              <TextSkeleton
+                                showSkeleton={true}
+                                type="body"
                               >
-                                <span
-                                  className="Skeleton skeleton line skeleton-large"
-                                  style={
-                                    Object {
-                                      "width": undefined,
-                                    }
-                                  }
+                                <Styled(styled.span)
+                                  key="0"
+                                  textType="body"
                                 >
-                                  ‌
-                                </span>
-                              </Skeleton>
+                                  <styled.span
+                                    className="c4"
+                                    textType="body"
+                                  >
+                                    <span
+                                      className="c4 c5"
+                                    >
+                                      ‌
+                                    </span>
+                                  </styled.span>
+                                </Styled(styled.span)>
+                              </TextSkeleton>
                             </div>
                           </div>
                         </Col>
@@ -4577,7 +4313,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": true,
                         }
                       }
@@ -4600,47 +4335,26 @@ exports[`<SmartList /> should render skeleton 1`] = `
                             <div
                               className="list-column"
                             >
-                              <Skeleton
-                                alignRight={false}
-                                className=""
-                                colIndex={1}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test2"
-                                isHeader={false}
-                                rowIndex={4}
-                                size={
-                                  Object {
-                                    "lg": 3,
-                                    "md": 3,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "shape": "line",
-                                    "showSkeleton": true,
-                                  }
-                                }
+                              <TextSkeleton
+                                showSkeleton={true}
+                                type="body"
                               >
-                                <span
-                                  className="Skeleton skeleton line skeleton-large"
-                                  style={
-                                    Object {
-                                      "width": undefined,
-                                    }
-                                  }
+                                <Styled(styled.span)
+                                  key="0"
+                                  textType="body"
                                 >
-                                  ‌
-                                </span>
-                              </Skeleton>
+                                  <styled.span
+                                    className="c4"
+                                    textType="body"
+                                  >
+                                    <span
+                                      className="c4 c5"
+                                    >
+                                      ‌
+                                    </span>
+                                  </styled.span>
+                                </Styled(styled.span)>
+                              </TextSkeleton>
                             </div>
                           </div>
                         </Col>
@@ -4671,7 +4385,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                       skeletonOptions={
                         Object {
                           "numberOfRows": 5,
-                          "shape": "line",
                           "showSkeleton": true,
                         }
                       }
@@ -4694,47 +4407,26 @@ exports[`<SmartList /> should render skeleton 1`] = `
                             <div
                               className="list-column"
                             >
-                              <Skeleton
-                                alignRight={false}
-                                className=""
-                                colIndex={2}
-                                data={
-                                  Array [
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                    Object {},
-                                  ]
-                                }
-                                header="Test3"
-                                isHeader={false}
-                                rowIndex={4}
-                                size={
-                                  Object {
-                                    "lg": 3,
-                                    "md": 3,
-                                  }
-                                }
-                                skeletonOptions={
-                                  Object {
-                                    "numberOfRows": 5,
-                                    "shape": "line",
-                                    "showSkeleton": true,
-                                  }
-                                }
+                              <TextSkeleton
+                                showSkeleton={true}
+                                type="body"
                               >
-                                <span
-                                  className="Skeleton skeleton line skeleton-large"
-                                  style={
-                                    Object {
-                                      "width": undefined,
-                                    }
-                                  }
+                                <Styled(styled.span)
+                                  key="0"
+                                  textType="body"
                                 >
-                                  ‌
-                                </span>
-                              </Skeleton>
+                                  <styled.span
+                                    className="c4"
+                                    textType="body"
+                                  >
+                                    <span
+                                      className="c4 c5"
+                                    >
+                                      ‌
+                                    </span>
+                                  </styled.span>
+                                </Styled(styled.span)>
+                              </TextSkeleton>
                             </div>
                           </div>
                         </Col>
