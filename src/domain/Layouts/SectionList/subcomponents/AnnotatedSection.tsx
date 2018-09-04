@@ -3,7 +3,7 @@ import { Row } from '../../../Grids/Row'
 import {
   StyledAnnotatedSectionDescription,
   StyledAnnotatedSectionBody,
-  SectionBorder
+  StyledAnnotatedSection
 } from '../style'
 
 export interface IAnnotatedSectionProps {
@@ -32,7 +32,7 @@ class AnnotatedSection extends React.Component<IAnnotatedSectionProps> {
     } = this.props
 
     return (
-      <SectionBorder>
+      <StyledAnnotatedSection>
         <Row>
           <Row.Column sm={12} md={4}>
             <StyledAnnotatedSectionDescription
@@ -48,7 +48,7 @@ class AnnotatedSection extends React.Component<IAnnotatedSectionProps> {
             </StyledAnnotatedSectionBody>
           </Row.Column>
         </Row>
-      </SectionBorder>
+      </StyledAnnotatedSection>
     )
   }
 }
