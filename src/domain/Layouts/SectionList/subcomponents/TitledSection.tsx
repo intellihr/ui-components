@@ -2,50 +2,51 @@ import React from 'react'
 import { Row } from '../../../Grids/Row'
 import {
   StyledSectionDescription,
-  StyledAnnotatedSectionBody,
+  StyledTitledSectionActions,
+  StyledTitledSectionBody,
   StyledAnnotatedSection
 } from '../style'
 
-export interface IAnnotatedSectionProps {
+export interface ITitledSectionProps {
   /** What to display in the layout. */
   children?: React.ReactNode,
   /** The title for what is displayed */
   header?: string,
   /** The description for what is displayed */
   description?: string,
-  /** The text for the call to action */
-  linkText?: string,
-  /** Any extra link props */
-  linkProps?: {
-    [i: string]: any
-  }
+  /** Action items (eg. buttons) for the header */
+  actionItems?: JSX.Element
 }
 
-class AnnotatedSection extends React.Component<IAnnotatedSectionProps> {
+class TitledSection extends React.Component<ITitledSectionProps> {
   public render (): JSX.Element | null {
     const {
       children,
       header,
       description,
-      linkText,
-      linkProps
+      actionItems
     } = this.props
 
     return (
       <StyledAnnotatedSection>
         <Row>
-          <Row.Column sm={12} md={4}>
+          <Row.Column sm={12} md={8}>
             <StyledSectionDescription
               header={header}
               description={description}
-              linkText={linkText}
-              linkProps={linkProps}
             />
           </Row.Column>
-          <Row.Column sm={12} md={8}>
-            <StyledAnnotatedSectionBody>
+          <Row.Column sm={12} md={4}>
+            <StyledTitledSectionActions>
+              {actionItems}
+            </StyledTitledSectionActions>
+          </Row.Column>
+        </Row>
+        <Row>
+          <Row.Column>
+            <StyledTitledSectionBody>
               {children}
-            </StyledAnnotatedSectionBody>
+            </StyledTitledSectionBody>
           </Row.Column>
         </Row>
       </StyledAnnotatedSection>
@@ -54,5 +55,5 @@ class AnnotatedSection extends React.Component<IAnnotatedSectionProps> {
 }
 
 export {
-  AnnotatedSection
+  TitledSection
 }
