@@ -1,4 +1,4 @@
 export {
-  ICircleSkeletonComponentProps,
+  ICircleSkeletonProps,
   CircleSkeleton
 } from './CircleSkeleton'

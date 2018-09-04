@@ -1,4 +1,4 @@
 export {
-  ITextSkeletonComponentProps,
+  ITextSkeletonProps,
   TextSkeleton
 } from './TextSkeleton'

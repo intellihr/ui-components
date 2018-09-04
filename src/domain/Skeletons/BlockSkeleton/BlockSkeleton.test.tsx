@@ -6,7 +6,7 @@ describe('<BlockSkeleton />', () => {
   it('should render a block skeleton', () => {
     const wrapper = mount(
       <BlockSkeleton
-        showSkeleton={true}
+        showSkeleton
       />
     )
 
@@ -16,7 +16,7 @@ describe('<BlockSkeleton />', () => {
   it('should render a block skeleton with set width and height', () => {
     const wrapper = mount(
       <BlockSkeleton
-        showSkeleton={true}
+        showSkeleton
         width={400}
         height={200}
       />

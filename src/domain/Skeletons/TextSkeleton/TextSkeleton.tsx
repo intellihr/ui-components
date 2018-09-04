@@ -1,22 +1,19 @@
 import React, { Fragment } from 'react'
 import { TextSkeletonWrapper } from './style'
+import { ISkeletonProps } from '../services/skeletonHelper'
 import { Props } from '../../../common'
 
-export interface ITextSkeletonComponentProps {
-  /** If true, will display the skeleton */
-  showSkeleton: boolean,
+export interface ITextSkeletonProps extends ISkeletonProps {
   /** Width of the skeleton */
   width?: number,
   /** Text type the skeleton is being rendered for */
-  type?: Props.TypographyType
+  type?: Props.TypographyType,
   /** Number of lines of TextSkeleton to render (to make a paragraph skeleton) */
   numLines?: number
-  /** Additional class names for the parent container */
-  className?: string
 }
 
-class TextSkeleton extends React.Component<ITextSkeletonComponentProps> {
-  public static defaultProps: Partial<ITextSkeletonComponentProps> = {
+class TextSkeleton extends React.Component<ITextSkeletonProps> {
+  public static defaultProps: Partial<ITextSkeletonProps> = {
     showSkeleton: false,
     type: Props.TypographyType.body
   }

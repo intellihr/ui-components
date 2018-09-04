@@ -7,7 +7,7 @@ describe('<TextSkeleton />', () => {
   it('should render a text skeleton', () => {
     const wrapper = mount(
       <TextSkeleton
-        showSkeleton={true}
+        showSkeleton
       />
     )
 
@@ -17,7 +17,7 @@ describe('<TextSkeleton />', () => {
   it('should render a text skeleton with set width', () => {
     const wrapper = mount(
       <TextSkeleton
-        showSkeleton={true}
+        showSkeleton
         width={250}
       />
     )
@@ -28,7 +28,7 @@ describe('<TextSkeleton />', () => {
   it('should render a text skeleton with set type', () => {
     const wrapper = mount(
       <TextSkeleton
-        showSkeleton={true}
+        showSkeleton
         type={Props.TypographyType.display}
       />
     )
@@ -39,7 +39,7 @@ describe('<TextSkeleton />', () => {
   it('should render a multi line text skeleton', () => {
     const wrapper = mount(
       <TextSkeleton
-        showSkeleton={true}
+        showSkeleton
         numLines={5}
       />
     )

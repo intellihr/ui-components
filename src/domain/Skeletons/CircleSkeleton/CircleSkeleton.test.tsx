@@ -7,7 +7,7 @@ describe('<CircleSkeleton />', () => {
   it('should render a circle skeleton', () => {
     const wrapper = mount(
       <CircleSkeleton
-        showSkeleton={true}
+        showSkeleton
       />
     )
 
@@ -17,7 +17,7 @@ describe('<CircleSkeleton />', () => {
   it('should render a circle skeleton with set size', () => {
     const wrapper = mount(
       <CircleSkeleton
-        showSkeleton={true}
+        showSkeleton
         size={Props.AvatarSize.Small}
       />
     )

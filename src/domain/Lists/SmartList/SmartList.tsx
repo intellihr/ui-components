@@ -8,14 +8,13 @@ import { Spinner } from '../../Spinners'
 import { ListClickableColumn } from './ListClickableColumn'
 import { ListRow } from './ListRow'
 import { ListColumn } from './ListColumn'
+import { ISkeletonProps } from '../../Skeletons/services/skeletonHelper'
 
 const style = require('./style.scss')
 
-export interface ISmartListSkeletonOptions {
+export interface ISmartListSkeletonOptions extends ISkeletonProps {
   /* Number of rows to show skeletons */
   numberOfRows?: number
-  /** If true, will display the skeleton */
-  showSkeleton: boolean
 }
 
 export interface ISmartList {
