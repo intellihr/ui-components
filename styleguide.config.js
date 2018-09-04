@@ -195,7 +195,8 @@ module.exports = {
         {
           name: 'Tabs',
           components: [
-            'src/domain/Tabs/HorizontalTabs/HorizontalTabs'
+            'src/domain/Tabs/HorizontalTabs/HorizontalTabs',
+            'src/domain/Tabs/HorizontalTabGroup/HorizontalTabGroup'
           ]
         },
         {
