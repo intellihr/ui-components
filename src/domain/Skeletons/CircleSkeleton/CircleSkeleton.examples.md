@@ -3,28 +3,20 @@
 ```jsx
 <div>
   <CircleSkeleton
-    skeletonOptions={{
-      showSkeleton: true,
-      size: 'xlarge'
-    }}
+    showSkeleton={true}
+    size='xlarge'
   />
   <CircleSkeleton
-    skeletonOptions={{
-      showSkeleton: true,
-      size: 'large'
-    }}
+    showSkeleton={true}
+    size='large'
   />
   <CircleSkeleton
-    skeletonOptions={{
-      showSkeleton: true,
-      size: 'medium'
-    }}
+    showSkeleton={true}
+    size='medium'
   />
   <CircleSkeleton
-    skeletonOptions={{
-      showSkeleton: true,
-      size: 'small'
-    }}
+    showSkeleton={true}
+    size='small'
   />
 </div>
 ```

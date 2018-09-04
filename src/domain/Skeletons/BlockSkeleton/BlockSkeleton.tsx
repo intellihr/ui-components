@@ -1,37 +1,24 @@
 import React from 'react'
 import { BlockSkeletonWrapper } from './style'
+import { ISkeletonProps } from '../services/skeletonHelper'
 
-export interface IBlockSkeletonOptions {
-  /** If true, will display the skeleton */
-  showSkeleton: boolean,
+export interface IBlockSkeletonProps extends ISkeletonProps {
   /** Width of the skeleton */
   width?: number,
   /** Height of the skeleton */
-  height?: number,
+  height?: number
 }
 
-export interface IBlockSkeletonComponentProps {
-  /** Skeleton setting */
-  skeletonOptions?: IBlockSkeletonOptions
-  /** Additional class names for the parent container */
-  className?: string
-}
-
-class BlockSkeleton extends React.Component<IBlockSkeletonComponentProps> {
-  public static defaultProps: Partial<IBlockSkeletonComponentProps> = {
-    skeletonOptions: {
-      showSkeleton: false
-    }
+class BlockSkeleton extends React.Component<IBlockSkeletonProps> {
+  public static defaultProps: Partial<IBlockSkeletonProps> = {
+    showSkeleton: false
   }
 
   public render (): JSX.Element {
     const {
       showSkeleton,
       width,
-      height
-    } = this.props.skeletonOptions!
-
-    const {
+      height,
       children,
       className
     } = this.props

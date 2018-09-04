@@ -27,12 +27,9 @@ exports[`<TextSkeleton /> should render a multi line text skeleton 1`] = `
 }
 
 <TextSkeleton
-  skeletonOptions={
-    Object {
-      "numLines": 5,
-      "showSkeleton": true,
-    }
-  }
+  numLines={5}
+  showSkeleton={true}
+  type="body"
 >
   <Styled(styled.span)
     key="0"
@@ -139,11 +136,8 @@ exports[`<TextSkeleton /> should render a text skeleton 1`] = `
 }
 
 <TextSkeleton
-  skeletonOptions={
-    Object {
-      "showSkeleton": true,
-    }
-  }
+  showSkeleton={true}
+  type="body"
 >
   <Styled(styled.span)
     key="0"
@@ -190,12 +184,8 @@ exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
 }
 
 <TextSkeleton
-  skeletonOptions={
-    Object {
-      "showSkeleton": true,
-      "type": "display",
-    }
-  }
+  showSkeleton={true}
+  type="display"
 >
   <Styled(styled.span)
     key="0"
@@ -242,12 +232,9 @@ exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
 }
 
 <TextSkeleton
-  skeletonOptions={
-    Object {
-      "showSkeleton": true,
-      "width": 250,
-    }
-  }
+  showSkeleton={true}
+  type="body"
+  width={250}
 >
   <Styled(styled.span)
     key="0"

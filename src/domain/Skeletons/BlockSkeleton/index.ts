@@ -1,5 +1,4 @@
 export {
-  IBlockSkeletonComponentProps,
-  BlockSkeleton,
-  IBlockSkeletonOptions
+  IBlockSkeletonProps,
+  BlockSkeleton
 } from './BlockSkeleton'

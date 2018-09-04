@@ -1,36 +1,23 @@
 import React from 'react'
 import { CircleSkeletonWrapper } from './style'
+import { ISkeletonProps } from '../services/skeletonHelper'
 import { Props } from '../../../common'
 
-export interface ICircleSkeletonOptions {
-  /** If true, will display the skeleton */
-  showSkeleton: boolean,
+export interface ICircleSkeletonProps extends ISkeletonProps {
   /** Circle size of the skeleton */
   size?: Props.AvatarSize
 }
 
-export interface ICircleSkeletonComponentProps {
-  /** Skeleton setting */
-  skeletonOptions?: ICircleSkeletonOptions
-  /** Additional class names for the parent container */
-  className?: string
-}
-
-class CircleSkeleton extends React.Component<ICircleSkeletonComponentProps> {
-  public static defaultProps: Partial<ICircleSkeletonComponentProps> = {
-    skeletonOptions: {
-      showSkeleton: false,
-      size: Props.AvatarSize.Large
-    }
+class CircleSkeleton extends React.Component<ICircleSkeletonProps> {
+  public static defaultProps: Partial<ICircleSkeletonProps> = {
+    showSkeleton: false,
+    size: Props.AvatarSize.Large
   }
 
   public render (): JSX.Element {
     const {
       showSkeleton,
-      size = Props.AvatarSize.Large
-    } = this.props.skeletonOptions!
-
-    const {
+      size,
       children,
       className
     } = this.props
