@@ -31,7 +31,7 @@ describe('<Vertical Stack />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should render a vertical with one item', () => {
+  it('should render a vertical stack with one item', () => {
     const wrapper = mount(
       <VerticalStack>
         <div>1</div>
