@@ -2,11 +2,15 @@ import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
 import { Variables } from '../../../common'
 
-const tabGroupHeight = 40
+const TabStyleConstants = {
+  GroupHeight: 40,
+  MarginSize: 16,
+  ScrollDuration: 250
+}
 
 const TabGroupContainer = styled.div`
   box-shadow: inset 0 -1px 0 0 ${Variables.Color.n300};
-  height: ${tabGroupHeight}px;
+  height: ${TabStyleConstants.GroupHeight}px;
   width: 100%;
 `
 
@@ -18,7 +22,7 @@ const TabChevronButton = styled.button`
   color: ${Variables.Color.n600};
   cursor: pointer;
   float: ${(props: ITabChevronButtonProps) => props.float};
-  line-height: ${tabGroupHeight}px;
+  line-height: ${TabStyleConstants.GroupHeight}px;
   outline: none;
   text-align: center;
   transition: color .15s ease-in;
@@ -38,7 +42,7 @@ const TabChevronButton = styled.button`
 `
 
 const TabListWrapper = styled.div`
-  height: ${tabGroupHeight}px;
+  height: ${TabStyleConstants.GroupHeight}px;
 `
 
 const TabList = styled.ul`
@@ -48,7 +52,7 @@ const TabList = styled.ul`
   position: relative;
   margin: 0;
   font-size: ${Variables.FontSize.fzBody}px;
-  line-height: ${tabGroupHeight}px;
+  line-height: ${TabStyleConstants.GroupHeight}px;
   list-style-type: none;
   white-space: nowrap;
   
@@ -69,14 +73,14 @@ const TabList = styled.ul`
 
 const TabListItem = styled.li`
   display: inline-block;
-  margin: 0 16px;
+  margin: 0 ${TabStyleConstants.MarginSize}px;
 `
 
 const TabListItemAnchor = styled.a`
   color: ${Variables.Color.n600};
   display: block;
   font-weight: ${Variables.FontWeight.fwMedium};
-  line-height: ${tabGroupHeight}px;
+  line-height: ${TabStyleConstants.GroupHeight}px;
   outline: none;
   position: relative;
   text-decoration: none;
@@ -115,6 +119,7 @@ const TabListItemAnchor = styled.a`
 `
 
 export {
+  TabStyleConstants,
   TabGroupContainer,
   TabChevronButton,
   TabListWrapper,

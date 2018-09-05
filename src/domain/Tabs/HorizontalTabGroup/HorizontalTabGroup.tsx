@@ -11,6 +11,7 @@ import classNames from 'classnames'
 import { Utils } from '../../../common'
 import { IntelliIcon } from '../../Icons'
 import {
+  TabStyleConstants,
   TabGroupContainer,
   TabChevronButton,
   TabListWrapper,
@@ -45,7 +46,6 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
   public static defaultProps = {
     useAnchors: false
   }
-  public static SCROLL_TIME_MS = 300
 
   private tabListRef: RefObject<HTMLUListElement> = React.createRef()
   private currentlyMounted: boolean = false
@@ -57,7 +57,7 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
     }
   }, 100, { leading: true })
 
-  public componentDidMount () {
+  public componentDidMount (): void {
     this.currentlyMounted = true
 
     window.addEventListener('resize', this.handleScrollUpdate)
@@ -66,10 +66,18 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
     this.forceUpdate()
   }
 
-  public componentWillUnmount () {
+  public componentWillUnmount (): void {
     window.removeEventListener('resize', this.handleScrollUpdate)
 
     this.currentlyMounted = false
+  }
+
+  public componentDidUpdate (prevProps: Readonly<IHorizontalTabGroupProps>) {
+    if (this.props.currentTab !== prevProps.currentTab) {
+      return this.handleScrollToTab(
+        this.indexForTab(this.props.currentTab)
+      )
+    }
   }
 
   public render (): JSX.Element | null {
@@ -121,7 +129,6 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
     }
 
     const isOnRight = (tabListEl.scrollLeft + tabListEl.clientWidth >= tabListEl.scrollWidth)
-    console.log('right', tabListEl.scrollLeft, tabListEl.clientWidth, tabListEl.scrollWidth)
 
     return (
       <TabChevronButton
@@ -139,7 +146,6 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
 
   private updateScroll = (newScrollValue: number): boolean => {
     if (this.currentlyMounted && this.tabListRef.current) {
-      console.log('updateScroll', this.tabListRef.current.scrollLeft, newScrollValue)
       this.tabListRef.current.scrollLeft = Math.round(newScrollValue)
       return true
     }
@@ -163,7 +169,7 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
       // Determine the last tab whose top-left value is before the desired scroll position
       for (let i = 0; i < tabList.children.length; i++) {
         const tab = tabList.children.item(i) as HTMLElement
-        const tabOffset = tab.offsetLeft - 16 // Account for margins
+        const tabOffset = tab.offsetLeft - TabStyleConstants.MarginSize
 
         if (tabOffset <= desiredScrollLeft) {
           finalScrollLeft = tabOffset
@@ -176,17 +182,46 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
       finalScrollLeft = clamp(
         finalScrollLeft,
         0,
-        tabList.scrollWidth
+        tabList.scrollWidth - tabList.clientWidth
       )
-
-      console.log('scroll', currentScrollLeft, desiredScrollLeft, finalScrollLeft, tabList.scrollWidth + tabList.clientWidth)
 
       return Utils.smoothUpdate({
         startValue: currentScrollLeft,
         endValue: Math.round(finalScrollLeft),
-        msTotal: HorizontalTabGroup.SCROLL_TIME_MS,
+        msTotal: TabStyleConstants.ScrollDuration,
         callback: this.updateScroll
       })
+    }
+  }
+
+  private handleScrollToTab = async (tabIndex: number): Promise<void> => {
+    const tabList = this.tabListRef.current
+
+    // Ensure the tab is contained within the visible scroll area
+    if (this.currentlyMounted && tabList) {
+      const currentScrollLeft = tabList.scrollLeft
+      const tab = tabList.children.item(tabIndex) as HTMLElement
+      const tabLeft = tab.offsetLeft - TabStyleConstants.MarginSize
+
+      if (tabLeft < currentScrollLeft) {
+        return Utils.smoothUpdate({
+          startValue: currentScrollLeft,
+          endValue: Math.round(tabLeft),
+          msTotal: TabStyleConstants.ScrollDuration,
+          callback: this.updateScroll
+        })
+      }
+
+      const tabRight = tab.offsetLeft + tab.clientWidth + TabStyleConstants.MarginSize
+
+      if (tabRight > currentScrollLeft + tabList.clientWidth) {
+        return Utils.smoothUpdate({
+          startValue: currentScrollLeft,
+          endValue: Math.round(tabRight - tabList.clientWidth),
+          msTotal: TabStyleConstants.ScrollDuration,
+          callback: this.updateScroll
+        })
+      }
     }
   }
 
@@ -236,7 +271,6 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
 
     return this.indexForTab(currentTab)
   }
-
 
   private clickTabHandler = (event: MouseEvent<HTMLAnchorElement>) => {
     const {
