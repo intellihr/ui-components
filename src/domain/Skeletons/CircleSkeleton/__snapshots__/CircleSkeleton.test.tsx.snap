@@ -4,11 +4,11 @@ exports[`<CircleSkeleton /> should render a circle skeleton 1`] = `
 .c1 {
   -webkit-animation: hNBTQs 1.2s ease-in-out infinite;
   animation: hNBTQs 1.2s ease-in-out infinite;
-  background-color: #F5F9FC;
-  background-image: linear-gradient(90deg,#F5F9FC,#E1E6EB,#F5F9FC);
+  background-color: #F2F5F7;
+  background-image: linear-gradient(90deg,#F2F5F7,#E1E6EB,#F2F5F7);
   background-repeat: no-repeat;
   background-size: 200px 100%;
-  border: 1px solid #F5F9FC;
+  border: 1px solid #F2F5F7;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -46,11 +46,11 @@ exports[`<CircleSkeleton /> should render a circle skeleton with set size 1`] = 
 .c1 {
   -webkit-animation: hNBTQs 1.2s ease-in-out infinite;
   animation: hNBTQs 1.2s ease-in-out infinite;
-  background-color: #F5F9FC;
-  background-image: linear-gradient(90deg,#F5F9FC,#E1E6EB,#F5F9FC);
+  background-color: #F2F5F7;
+  background-image: linear-gradient(90deg,#F2F5F7,#E1E6EB,#F2F5F7);
   background-repeat: no-repeat;
   background-size: 200px 100%;
-  border: 1px solid #F5F9FC;
+  border: 1px solid #F2F5F7;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
