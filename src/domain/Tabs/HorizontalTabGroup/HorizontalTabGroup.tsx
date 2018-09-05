@@ -1,11 +1,19 @@
 import React, { MouseEvent, RefObject } from 'react'
-import { findIndex, isNumber, map, toNumber, debounce } from 'lodash'
+import {
+  clamp,
+  debounce,
+  findIndex,
+  isNumber,
+  map,
+  toNumber
+} from 'lodash'
 import classNames from 'classnames'
 import { Utils } from '../../../common'
 import { IntelliIcon } from '../../Icons'
 import {
   TabGroupContainer,
   TabChevronButton,
+  TabListWrapper,
   TabList,
   TabListItem,
   TabListItemAnchor
@@ -53,6 +61,9 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
     this.currentlyMounted = true
 
     window.addEventListener('resize', this.handleScrollUpdate)
+
+    // Force an update to set the arrows
+    this.forceUpdate()
   }
 
   public componentWillUnmount () {
@@ -73,8 +84,8 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
     return (
       <TabGroupContainer>
         {this.leftChevron}
-        {this.tabList}
         {this.rightChevron}
+        {this.tabList}
       </TabGroupContainer>
     )
   }
@@ -91,12 +102,12 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
     return (
       <TabChevronButton
         disabled={isOnLeft}
-        onClick={() => this.handleScrollButton('left')}
+        float='left'
+        onClick={this.handleLeftScroll}
         tabIndex={-1}
       >
         <IntelliIcon
           type='arrow-left'
-          size='large'
         />
       </TabChevronButton>
     )
@@ -110,16 +121,17 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
     }
 
     const isOnRight = (tabListEl.scrollLeft + tabListEl.clientWidth >= tabListEl.scrollWidth)
+    console.log('right', tabListEl.scrollLeft, tabListEl.clientWidth, tabListEl.scrollWidth)
 
     return (
       <TabChevronButton
         disabled={isOnRight}
-        onClick={() => this.handleScrollButton('right')}
+        float='right'
+        onClick={this.handleRightScroll}
         tabIndex={-1}
       >
         <IntelliIcon
           type='arrow-right'
-          size='large'
         />
       </TabChevronButton>
     )
@@ -127,6 +139,7 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
 
   private updateScroll = (newScrollValue: number): boolean => {
     if (this.currentlyMounted && this.tabListRef.current) {
+      console.log('updateScroll', this.tabListRef.current.scrollLeft, newScrollValue)
       this.tabListRef.current.scrollLeft = Math.round(newScrollValue)
       return true
     }
@@ -134,31 +147,39 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
     return false
   }
 
+  private handleLeftScroll = () => this.handleScrollButton('left')
+  private handleRightScroll = () => this.handleScrollButton('right')
+
   private handleScrollButton = async (direction: 'left' | 'right'): Promise<void> => {
     const tabList = this.tabListRef.current
     // Left doesn't scroll as much to counter us only using the top left position
     const directionMultiplier = (direction === 'left') ? -0.6 : 1
 
-    if (tabList) {
+    if (this.currentlyMounted && tabList) {
       const currentScrollLeft = tabList.scrollLeft
       const desiredScrollLeft = currentScrollLeft + directionMultiplier * tabList.clientWidth
       let finalScrollLeft = 0
 
       // Determine the last tab whose top-left value is before the desired scroll position
       for (let i = 0; i < tabList.children.length; i++) {
-        const tab = tabList.children.item(i)
+        const tab = tabList.children.item(i) as HTMLElement
+        const tabOffset = tab.offsetLeft - 16 // Account for margins
 
-        if (finalScrollLeft + tab.clientWidth <= desiredScrollLeft) {
-          finalScrollLeft += tab.clientWidth
+        if (tabOffset <= desiredScrollLeft) {
+          finalScrollLeft = tabOffset
         } else {
           break
         }
       }
 
-      // Clamp to overall width
-      if (finalScrollLeft > tabList.scrollWidth) {
-        finalScrollLeft = tabList.scrollWidth
-      }
+      // Clamp between 0 and max left position (otherwise animation goes awry)
+      finalScrollLeft = clamp(
+        finalScrollLeft,
+        0,
+        tabList.scrollWidth
+      )
+
+      console.log('scroll', currentScrollLeft, desiredScrollLeft, finalScrollLeft, tabList.scrollWidth + tabList.clientWidth)
 
       return Utils.smoothUpdate({
         startValue: currentScrollLeft,
@@ -181,12 +202,14 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
     ))
 
     return (
-      <TabList
-        innerRef={this.tabListRef}
-        onScroll={this.handleScrollUpdate}
-      >
-        {tabListItems}
-      </TabList>
+      <TabListWrapper>
+        <TabList
+          innerRef={this.tabListRef}
+          onScroll={this.handleScrollUpdate}
+        >
+          {tabListItems}
+        </TabList>
+      </TabListWrapper>
     )
   }
 

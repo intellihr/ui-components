@@ -55,7 +55,7 @@ namespace Utils {
     const shift = endValue - startValue
 
     return new Promise<void>((resolve) => {
-      const numSteps = Math.ceil(msTotal/msPerStep)
+      const numSteps = Math.ceil(msTotal / msPerStep)
       let currentStep = 0
 
       const update = () => {

@@ -2,28 +2,29 @@ import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
 import { Variables } from '../../../common'
 
+const tabGroupHeight = 40
+
 const TabGroupContainer = styled.div`
-  align-items: center;
-  border-bottom: solid 1px ${Variables.Color.n300};
-  display: flex;
-  flex-wrap: nowrap;
-  height: 41px;
+  box-shadow: inset 0 -1px 0 0 ${Variables.Color.n300};
+  height: ${tabGroupHeight}px;
   width: 100%;
 `
 
+interface ITabChevronButtonProps {
+  float: 'left' | 'right'
+}
+
 const TabChevronButton = styled.button`
-  color: ${Variables.Color.n700};
+  color: ${Variables.Color.n600};
   cursor: pointer;
-  display: block;
-  flex-grow: 0;
-  height: 100%;
-  line-height: ${Variables.LineHeight.lhBody}px;
+  float: ${(props: ITabChevronButtonProps) => props.float};
+  line-height: ${tabGroupHeight}px;
   outline: none;
   text-align: center;
+  transition: color .15s ease-in;
 
-  &:hover,
-  &:focus {
-    color: ${Variables.Color.i400};
+  &:hover {
+    color: ${Variables.Color.n800};
   }
 
   &:disabled {
@@ -36,15 +37,26 @@ const TabChevronButton = styled.button`
   }
 `
 
+const TabListWrapper = styled.div`
+  height: ${tabGroupHeight}px;
+`
+
 const TabList = styled.ul`
-  clear: both;
-  display: flex;
-  flex-grow: 1;
-  list-style-type: none;
-  height: 100%;
-  margin: 0;
   overflow-x: scroll;
+  overflow-y: hidden;
+  padding-left: 0;
   position: relative;
+  margin: 0;
+  font-size: ${Variables.FontSize.fzBody}px;
+  line-height: ${tabGroupHeight}px;
+  list-style-type: none;
+  white-space: nowrap;
+  
+  &:after,
+  &:before {
+    display: table;
+    content: ' ';
+  }
   
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
@@ -56,29 +68,41 @@ const TabList = styled.ul`
 `
 
 const TabListItem = styled.li`
-  align-items: center;
-  display: flex;
-  flex-basis: auto;
-  height: 100%;
+  display: inline-block;
+  margin: 0 16px;
 `
 
 const TabListItemAnchor = styled.a`
-  align-items: center;
   color: ${Variables.Color.n600};
-  display: flex;
-  font-size: ${Variables.FontSize.fzBody}px;
+  display: block;
   font-weight: ${Variables.FontWeight.fwMedium};
-  line-height: ${Variables.LineHeight.lhBody}px;
-  height: 100%;
-  margin: 0 16px;
+  line-height: ${tabGroupHeight}px;
   outline: none;
-  text-align: center;
-  white-space: nowrap;
+  position: relative;
+  text-decoration: none;
+  transition: color .15s ease-in;
 
+  &:before {
+    background-color: transparent;
+    bottom: -2px;
+    content: '';
+    height: 2px;
+    left: 0; 
+    position: absolute;
+    transition: all .15s ease-in-out;
+    width: 100%;
+  }
+
+  &.active,
+  &:active,
   &:hover,
-  &:focus,
-  &.active{
+  &:focus {
     color: ${Variables.Color.i400};
+
+    &:before {
+      background-color: ${Variables.Color.i400};
+      bottom: 0;
+    }
   }
 
   .left-component {
@@ -93,6 +117,7 @@ const TabListItemAnchor = styled.a`
 export {
   TabGroupContainer,
   TabChevronButton,
+  TabListWrapper,
   TabList,
   TabListItem,
   TabListItemAnchor
