@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HorizontalTabGroup /> Standard tabs with current index should match the snapshot 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.ul
+      innerRef={
+        Object {
+          "current": null,
+        }
+      }
+      onScroll={[Function]}
+    >
+      <styled.li
+        key="0"
+      >
+        <styled.a
+          className=""
+          data-tabindex={0}
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          Tab 1
+        </styled.a>
+      </styled.li>
+      <styled.li
+        key="1"
+      >
+        <styled.a
+          className="active"
+          data-tabindex={1}
+          href="#second"
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          Tab 2
+        </styled.a>
+      </styled.li>
+      <styled.li
+        key="2"
+      >
+        <styled.a
+          className=""
+          data-tabindex={2}
+          href="#third"
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          <span
+            className="left-component"
+          >
+            <div
+              id="tab3left"
+            >
+              Test me
+            </div>
+          </span>
+          Tab 3
+        </styled.a>
+      </styled.li>
+      <styled.li
+        key="3"
+      >
+        <styled.a
+          className=""
+          data-tabindex={3}
+          onClick={[Function]}
+          tabIndex={0}
+        />
+      </styled.li>
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;

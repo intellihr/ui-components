@@ -88,3 +88,33 @@ class HorizontalTabExample extends React.PureComponent {
   ]}
 />
 ```
+
+#### Tabs with anchors
+
+Anchors can be used instead of onTabChange callbacks. This is useful for
+page-level tabs, where your SPA router can get the tab state from the url
+rather than storing it in the parent.
+
+Note that this doesn't work in the styleguide as anchors are used to link
+between pages.
+
+```jsx
+<HorizontalTabGroup
+  currentTab='#goodbye'
+  tabs={[
+    {
+      title: 'Tab 1',
+      anchorId: '#hello'
+    },
+    {
+      title: 'Tab 2',
+      anchorId: '#goodbye'
+    },
+    {
+      title: 'Tab 3',
+      anchorId: '#tab-3'
+    }
+  ]}
+  useAnchors
+/>
+```
