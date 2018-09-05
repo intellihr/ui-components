@@ -19,7 +19,8 @@ namespace Variables {
     // Neutral
     n100 = '#FFFFFF',
     n150 = '#FAFBFC',
-    n200 = '#F5F9FC',
+    n200 = '#F2F5F7',
+    n250 = '#EBEFF2',
     n300 = '#E1E6EB',
     n400 = '#C5CED6',
     n500 = '#8FA1B3',
@@ -68,8 +69,8 @@ namespace Variables {
     o600 = '#7F5500',
 
     // Red
-    r100 = '#FFEFED',
-    r200 = '#FFC5BF',
+    r100 = '#FFF1F0',
+    r200 = '#FFD2CC',
     r300 = '#FF8A80',
     r400 = '#F25749',
     r500 = '#D41200',

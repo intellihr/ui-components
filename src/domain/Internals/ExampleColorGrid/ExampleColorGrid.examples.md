@@ -47,39 +47,43 @@ const { Variables } = require('@Common');
 
 <ExampleColorGrid
   colors={[
-    { 
+    {
       colorHex: Variables.Color.n100,
       name: 'n100'
     },
-    { 
+    {
       colorHex: Variables.Color.n150,
       name: 'n150'
     },
-    { 
+    {
       colorHex: Variables.Color.n200,
       name: 'n200'
     },
-    { 
+    {
+      colorHex: Variables.Color.n250,
+      name: 'n250'
+    },
+    {
       colorHex: Variables.Color.n300,
       name: 'n300'
     },
-    { 
+    {
       colorHex: Variables.Color.n400,
       name: 'n400'
     },
-    { 
+    {
       colorHex: Variables.Color.n500,
       name: 'n500'
     },
-    { 
+    {
       colorHex: Variables.Color.n600,
       name: 'n600'
     },
-    { 
+    {
       colorHex: Variables.Color.n700,
       name: 'n700'
     },
-    { 
+    {
       colorHex: Variables.Color.n800,
       name: 'n800'
     }
