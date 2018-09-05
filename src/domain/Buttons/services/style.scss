@@ -604,6 +604,10 @@ $button-styles: (
     }
   }
 
+  &.full-width {
+    width: 100%
+  }
+
   &.small {
     font-size: .75rem;
 

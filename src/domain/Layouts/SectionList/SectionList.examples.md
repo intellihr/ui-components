@@ -11,12 +11,10 @@ sub-components that provide responsive styling between mobile and desktop.
   <SectionList.TitledSection
     header='Titled Section'
     description='This is a titled section, which enables sections to have a description and action item(s).'
-    actionItems={
-      <React.Fragment>
-        <Button type='primary'>Action 1</Button>
-        <Button type='primary'>Action 2</Button>
-      </React.Fragment>
-      }
+    actionItems={[
+        <Button type='primary' fullWidth>Action 1</Button>,
+        <Button type='primary' fullWidth>Action 2</Button>
+      ]}
   >
     <Text>
       As is the same with a Section, content can be passed into a Titled Section which will then be displayed

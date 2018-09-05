@@ -64,7 +64,8 @@ const StyledAnnotatedSection = styled(SectionBorder)`
 
 const StyledTitledSectionActions = styled.div`
   @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
-    padding: ${verticalPaddingMobile}px ${horizontalPaddingMobile}px;
+    padding-left: ${horizontalPaddingMobile}px;
+    padding-right: ${horizontalPaddingMobile}px;
   }
 
   @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {

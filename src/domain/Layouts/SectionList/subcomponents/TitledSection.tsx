@@ -15,16 +15,33 @@ export interface ITitledSectionProps {
   /** The description for what is displayed */
   description?: string,
   /** Action items (eg. buttons) for the header */
-  actionItems?: JSX.Element
+  actionItems?: Array<JSX.Element>
 }
 
 class TitledSection extends React.Component<ITitledSectionProps> {
+  get actionItems(): Array<JSX.Element> | undefined {
+    const {
+      actionItems
+    } = this.props
+
+    if (actionItems) {
+      const cellWidth = Math.floor(12 / actionItems.length)
+
+      return actionItems.map((item, index) => {
+        return (
+          <Row.Column sm={12} md={cellWidth} key={index}>
+            {item}
+          </Row.Column>
+        )
+      })
+    }
+  }
+
   public render (): JSX.Element | null {
     const {
       children,
       header,
-      description,
-      actionItems
+      description
     } = this.props
 
     return (
@@ -38,7 +55,9 @@ class TitledSection extends React.Component<ITitledSectionProps> {
           </Row.Column>
           <Row.Column sm={12} md={4}>
             <StyledTitledSectionActions>
-              {actionItems}
+              <Row>
+                {this.actionItems}
+              </Row>
             </StyledTitledSectionActions>
           </Row.Column>
         </Row>

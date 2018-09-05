@@ -20,12 +20,13 @@ export class Button extends BaseButton<IButtonProps> {
       className,
       buttonOverrides,
       onClick,
-      disabled
+      disabled,
+      fullWidth
     } = this.props
 
     return (
       <button
-        className={buttonClass(type!, size, className)}
+        className={buttonClass(type!, size, className, { 'full-width': fullWidth })}
         onClick={onClick}
         disabled={disabled}
         {...buttonOverrides}
