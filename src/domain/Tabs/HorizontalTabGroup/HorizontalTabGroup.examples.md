@@ -115,6 +115,6 @@ between pages.
       anchorId: '#tab-3'
     }
   ]}
-  useAnchors
+  anchorsUpdateUrl
 />
 ```

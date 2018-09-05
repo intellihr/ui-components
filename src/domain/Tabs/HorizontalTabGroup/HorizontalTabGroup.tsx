@@ -7,14 +7,12 @@ import {
   map,
   toNumber
 } from 'lodash'
-import classNames from 'classnames'
 import { Utils } from '../../../common'
 import { IntelliIcon } from '../../Icons'
 import {
   TabStyleConstants,
   TabGroupContainer,
   TabChevronButton,
-  TabListWrapper,
   TabList,
   TabListItem,
   TabListItemAnchor
@@ -27,7 +25,7 @@ export interface IHorizontalTabDefinition {
   leftComponent?: JSX.Element
   /** Component positioned to the right of the title */
   rightComponent?: JSX.Element
-  /** Anchor id used when clicking between tabs */
+  /** Anchor href used when clicking between tabs; will use # if not provided */
   anchorId?: string
 }
 
@@ -35,10 +33,10 @@ export interface IHorizontalTabGroupProps {
   /** A list of tabs and their content to render */
   tabs: IHorizontalTabDefinition[]
   /** Whether to update the url of the page with anchors when changing tabs */
-  useAnchors?: boolean
+  anchorsUpdateUrl?: boolean
   /** Callback to run when clicking between tabs */
   onTabChange?: (tab: IHorizontalTabDefinition, index: number) => void
-  /** The current tab selected (by anchor or index). This must be provided for the component to work.  */
+  /** The current tab selected (by anchor or index). This must be provided for the component to work. */
   currentTab: string | number
 }
 
@@ -62,7 +60,7 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
 
     window.addEventListener('resize', this.handleScrollUpdate)
 
-    // Force an update to set the arrows
+    // Force an update to set the arrows correctly
     this.forceUpdate()
   }
 
@@ -136,12 +134,91 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
         float='right'
         onClick={this.handleRightScroll}
         tabIndex={-1}
+        aria-hidden
       >
         <IntelliIcon
           type='arrow-right'
         />
       </TabChevronButton>
     )
+  }
+
+  private get tabList (): JSX.Element {
+    const {
+      tabs
+    } = this.props
+
+    return (
+      <TabList
+        innerRef={this.tabListRef}
+        onScroll={this.handleScrollUpdate}
+        role='tablist'
+      >
+        {map(tabs, this.listItemForTab)}
+      </TabList>
+    )
+  }
+
+  private sideComponent = (
+    alignment: 'left' | 'right',
+    component?: JSX.Element
+  ): JSX.Element | null => {
+    if (!component) {
+      return null
+    }
+
+    return (
+      <span className={`${alignment}-component`}>
+        {component}
+      </span>
+    )
+  }
+
+  private listItemForTab = (tab: IHorizontalTabDefinition, index: number): JSX.Element => {
+    const currentTabIndex = this.currentTabIndex
+
+    return (
+      <TabListItem
+        key={index}
+        role='tab'
+      >
+        <TabListItemAnchor
+          active={currentTabIndex === index}
+          href={tab.anchorId || '#'}
+          onClick={this.handleClickTab}
+          aria-selected={currentTabIndex === index}
+          data-tabindex={index}
+        >
+          {this.sideComponent('left', tab.leftComponent)}
+          {tab.title}
+          {this.sideComponent('right', tab.rightComponent)}
+        </TabListItemAnchor>
+      </TabListItem>
+    )
+  }
+
+  private indexForTab = (tabIdentifier?: number | string): number => {
+    const { tabs } = this.props
+
+    if (!tabIdentifier) {
+      return 0
+    }
+
+    if (isNumber(tabIdentifier)) {
+      return tabIdentifier
+    }
+
+    const tabIndex = findIndex(tabs, { 'anchorId': tabIdentifier })
+
+    return (tabIndex === -1) ? 0 : tabIndex
+  }
+
+  private get currentTabIndex (): number {
+    const {
+      currentTab
+    } = this.props
+
+    return this.indexForTab(currentTab)
   }
 
   private updateScroll = (newScrollValue: number): boolean => {
@@ -225,57 +302,11 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
     }
   }
 
-  private get tabList (): JSX.Element {
-    const {
-      tabs
-    } = this.props
-
-    const tabListItems = map(tabs, (tab, index) => (
-      <TabListItem key={index}>
-        {this.titleForTab(tab, index)}
-      </TabListItem>
-    ))
-
-    return (
-      <TabListWrapper>
-        <TabList
-          innerRef={this.tabListRef}
-          onScroll={this.handleScrollUpdate}
-        >
-          {tabListItems}
-        </TabList>
-      </TabListWrapper>
-    )
-  }
-
-  private indexForTab = (tabIdentifier?: number | string): number => {
-    const { tabs } = this.props
-
-    if (!tabIdentifier) {
-      return 0
-    }
-
-    if (isNumber(tabIdentifier)) {
-      return tabIdentifier
-    }
-
-    const tabIndex = findIndex(tabs, { 'anchorId': tabIdentifier })
-
-    return (tabIndex === -1) ? 0 : tabIndex
-  }
-
-  private get currentTabIndex (): number {
-    const {
-      currentTab
-    } = this.props
-
-    return this.indexForTab(currentTab)
-  }
-
-  private clickTabHandler = (event: MouseEvent<HTMLAnchorElement>) => {
+  private handleClickTab = (event: MouseEvent<HTMLAnchorElement>) => {
     const {
       tabs,
-      onTabChange
+      onTabChange,
+      anchorsUpdateUrl
     } = this.props
 
     const newTabIndex = toNumber(event.currentTarget.dataset.tabindex || 0)
@@ -283,44 +314,10 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
     if (onTabChange && (this.currentTabIndex !== newTabIndex)) {
       onTabChange(tabs[newTabIndex], newTabIndex)
     }
-  }
 
-  private sideComponent = (
-    alignment: 'left' | 'right',
-    component?: JSX.Element
-  ): JSX.Element | null => {
-    if (!component) {
-      return null
+    // Don't use anchors as links if not intending to
+    if (!anchorsUpdateUrl) {
+      event.preventDefault()
     }
-
-    return (
-      <span className={`${alignment}-component`}>
-        {component}
-      </span>
-    )
-  }
-
-  private titleForTab = (tab: IHorizontalTabDefinition, index: number): JSX.Element => {
-    const { useAnchors } = this.props
-    const currentTabIndex = this.currentTabIndex
-
-    const href = useAnchors ? tab.anchorId : undefined
-    const classes = classNames({
-      active: currentTabIndex === index
-    })
-
-    return (
-      <TabListItemAnchor
-        className={classes}
-        href={href}
-        onClick={this.clickTabHandler}
-        tabIndex={0}
-        data-tabindex={index}
-      >
-        {this.sideComponent('left', tab.leftComponent)}
-        {tab.title}
-        {this.sideComponent('right', tab.rightComponent)}
-      </TabListItemAnchor>
-    )
   }
 }

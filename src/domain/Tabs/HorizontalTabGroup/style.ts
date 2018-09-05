@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { StyledComponentClass } from 'styled-components'
+import styled, { css, StyledComponentClass } from 'styled-components'
 import { Variables } from '../../../common'
 
 const TabStyleConstants = {
@@ -41,10 +41,6 @@ const TabChevronButton = styled.button`
   }
 `
 
-const TabListWrapper = styled.div`
-  height: ${TabStyleConstants.GroupHeight}px;
-`
-
 const TabList = styled.ul`
   overflow-x: scroll;
   overflow-y: hidden;
@@ -76,6 +72,10 @@ const TabListItem = styled.li`
   margin: 0 ${TabStyleConstants.MarginSize}px;
 `
 
+interface ITabListItemAnchorProps {
+  active: boolean
+}
+
 const TabListItemAnchor = styled.a`
   color: ${Variables.Color.n600};
   display: block;
@@ -96,13 +96,13 @@ const TabListItemAnchor = styled.a`
     transition: all .15s ease-in-out;
     width: 100%;
   }
-
-  &.active,
+  
+  ${(props: ITabListItemAnchorProps) => props.active && css`&,`}
   &:active,
   &:hover,
   &:focus {
     color: ${Variables.Color.i400};
-
+  
     &:before {
       background-color: ${Variables.Color.i400};
       bottom: 0;
@@ -122,7 +122,6 @@ export {
   TabStyleConstants,
   TabGroupContainer,
   TabChevronButton,
-  TabListWrapper,
   TabList,
   TabListItem,
   TabListItemAnchor

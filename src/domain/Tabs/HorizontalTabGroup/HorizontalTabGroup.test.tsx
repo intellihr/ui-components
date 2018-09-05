@@ -26,7 +26,6 @@ describe('<HorizontalTabGroup />', () => {
       <HorizontalTabGroup
         tabs={tabDefinitions}
         currentTab={1}
-        useAnchors
       />
     )
 
@@ -48,7 +47,7 @@ describe('<HorizontalTabGroup />', () => {
       expect(
         wrapper
           .find({ href: '#second' })
-          .hasClass('active')
+          .prop('active')
       ).toBeTruthy()
     })
   })
