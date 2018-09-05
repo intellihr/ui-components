@@ -21,10 +21,7 @@ class TextSkeleton extends React.Component<ITextSkeletonProps> {
   public skeleton (key: number): JSX.Element {
     const {
       type,
-      width
-    } = this.props
-
-    const {
+      width,
       className
     } = this.props
 

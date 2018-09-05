@@ -2699,13 +2699,13 @@ exports[`<SmartList /> should render skeleton 1`] = `
 }
 
 .c5 {
-  -webkit-animation: hNBTQs 1.2s ease-in-out infinite;
-  animation: hNBTQs 1.2s ease-in-out infinite;
-  background-color: #F5F7FA;
-  background-image: linear-gradient(90deg,#F5F7FA,#E1E6EB,#F5F7FA);
-  background-repeat: no-repeat;
-  background-size: 200px 100%;
-  border: 1px solid #F5F7FA;
+  -webkit-animation: jXsTbE .8s linear infinite alternate;
+  animation: jXsTbE .8s linear infinite alternate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: #E1E6EB;
+  border: 1px solid #E1E6EB;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
