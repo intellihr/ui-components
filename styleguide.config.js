@@ -122,7 +122,8 @@ module.exports = {
           name: 'Layouts',
           components: [
             'src/domain/Layouts/PageLayout/PageLayout',
-            'src/domain/Layouts/SectionList/SectionList'
+            'src/domain/Layouts/SectionList/SectionList',
+            'src/domain/Layouts/Stacks/VerticalStack/VerticalStack'
           ]
         },
         {
