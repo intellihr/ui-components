@@ -24,7 +24,7 @@ namespace Utils {
 
   interface ISmoothUpdateArguments {
     startValue: number,
-    amount: number,
+    endValue: number,
     msTotal?: number,
     msPerStep?: number,
     callback: (currentValue: number) => boolean,
@@ -36,7 +36,7 @@ namespace Utils {
    *
    * @param args
    * @param args.startValue - value to start at
-   * @param args.amount - amount to asynchronously update by
+   * @param args.endValue - value to end at
    * @param args.msTotal=500 - milliseconds taken to update
    * @param args.msPerStep=10 - milliseconds per individual step
    * @param args.callback - callback after each step; return false to stop updating
@@ -45,12 +45,14 @@ namespace Utils {
   export function smoothUpdate (args: ISmoothUpdateArguments): Promise<void> {
     const {
       startValue,
-      amount,
+      endValue,
       callback,
       msTotal = 500,
       msPerStep = 10,
       easing = smoothStep
     } = args
+
+    const shift = endValue - startValue
 
     return new Promise<void>((resolve) => {
       const numSteps = Math.ceil(msTotal/msPerStep)
@@ -58,7 +60,7 @@ namespace Utils {
 
       const update = () => {
         currentStep += 1
-        const newValue = startValue + amount * easing(0, numSteps, currentStep)
+        const newValue = startValue + shift * easing(0, numSteps, currentStep)
 
         if (!callback(newValue) || currentStep >= numSteps) {
           return resolve()

@@ -91,7 +91,7 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
     return (
       <TabChevronButton
         disabled={isOnLeft}
-        onClick={this.scrollLeft}
+        onClick={() => this.handleScrollButton('left')}
         tabIndex={-1}
       >
         <IntelliIcon
@@ -114,7 +114,7 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
     return (
       <TabChevronButton
         disabled={isOnRight}
-        onClick={this.scrollRight}
+        onClick={() => this.handleScrollButton('right')}
         tabIndex={-1}
       >
         <IntelliIcon
@@ -126,36 +126,43 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
   }
 
   private updateScroll = (newScrollValue: number): boolean => {
-    if (this.tabListRef.current) {
-      this.tabListRef.current.scrollLeft = newScrollValue
+    if (this.currentlyMounted && this.tabListRef.current) {
+      this.tabListRef.current.scrollLeft = Math.round(newScrollValue)
       return true
     }
 
     return false
   }
 
-  private scrollLeft = async (): Promise<void> => {
-    if (this.tabListRef.current) {
-      const currentScrollLeft = this.tabListRef.current.scrollLeft
-      const amountToShift = -1 * this.tabListRef.current.clientWidth
+  private handleScrollButton = async (direction: 'left' | 'right'): Promise<void> => {
+    const tabList = this.tabListRef.current
+    // Left doesn't scroll as much to counter us only using the top left position
+    const directionMultiplier = (direction === 'left') ? -0.6 : 1
+
+    if (tabList) {
+      const currentScrollLeft = tabList.scrollLeft
+      const desiredScrollLeft = currentScrollLeft + directionMultiplier * tabList.clientWidth
+      let finalScrollLeft = 0
+
+      // Determine the last tab whose top-left value is before the desired scroll position
+      for (let i = 0; i < tabList.children.length; i++) {
+        const tab = tabList.children.item(i)
+
+        if (finalScrollLeft + tab.clientWidth <= desiredScrollLeft) {
+          finalScrollLeft += tab.clientWidth
+        } else {
+          break
+        }
+      }
+
+      // Clamp to overall width
+      if (finalScrollLeft > tabList.scrollWidth) {
+        finalScrollLeft = tabList.scrollWidth
+      }
 
       return Utils.smoothUpdate({
         startValue: currentScrollLeft,
-        amount: amountToShift,
-        msTotal: HorizontalTabGroup.SCROLL_TIME_MS,
-        callback: this.updateScroll
-      })
-    }
-  }
-
-  private scrollRight = async (): Promise<void> => {
-    if (this.tabListRef.current) {
-      const currentScrollLeft = this.tabListRef.current.scrollLeft
-      const amountToShift = this.tabListRef.current.clientWidth
-
-      return Utils.smoothUpdate({
-        startValue: currentScrollLeft,
-        amount: amountToShift,
+        endValue: Math.round(finalScrollLeft),
         msTotal: HorizontalTabGroup.SCROLL_TIME_MS,
         callback: this.updateScroll
       })
