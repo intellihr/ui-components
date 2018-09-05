@@ -1,6 +1,7 @@
-import React, { MouseEvent } from 'react'
-import { findIndex, isNumber, map, toNumber } from 'lodash'
+import React, { MouseEvent, RefObject } from 'react'
+import { findIndex, isNumber, map, toNumber, debounce } from 'lodash'
 import classNames from 'classnames'
+import { Utils } from '../../../common'
 import { IntelliIcon } from '../../Icons'
 import {
   TabGroupContainer,
@@ -36,6 +37,29 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
   public static defaultProps = {
     useAnchors: false
   }
+  public static SCROLL_TIME_MS = 300
+
+  private tabListRef: RefObject<HTMLUListElement> = React.createRef()
+  private currentlyMounted: boolean = false
+
+  private handleScrollUpdate = debounce(() => {
+    // Force a react re-render to correctly update the dom
+    if (this.currentlyMounted && this.tabListRef.current) {
+      this.forceUpdate()
+    }
+  }, 100, { leading: true })
+
+  public componentDidMount () {
+    this.currentlyMounted = true
+
+    window.addEventListener('resize', this.handleScrollUpdate)
+  }
+
+  public componentWillUnmount () {
+    window.removeEventListener('resize', this.handleScrollUpdate)
+
+    this.currentlyMounted = false
+  }
 
   public render (): JSX.Element | null {
     const {
@@ -55,9 +79,44 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
     )
   }
 
-  private get leftChevron (): JSX.Element | undefined {
+  private get leftChevron (): JSX.Element | null {
+    const tabListEl = this.tabListRef.current
+
+    if (!tabListEl || tabListEl.scrollWidth <= tabListEl.clientWidth) {
+      return null
+    }
+
+    const isOnLeft = (tabListEl.scrollLeft <= 0)
+
     return (
-      <TabChevronButton>
+      <TabChevronButton
+        disabled={isOnLeft}
+        onClick={this.scrollLeft}
+        tabIndex={-1}
+      >
+        <IntelliIcon
+          type='arrow-left'
+          size='large'
+        />
+      </TabChevronButton>
+    )
+  }
+
+  private get rightChevron (): JSX.Element | null {
+    const tabListEl = this.tabListRef.current
+
+    if (!tabListEl || tabListEl.scrollWidth <= tabListEl.clientWidth) {
+      return null
+    }
+
+    const isOnRight = (tabListEl.scrollLeft + tabListEl.clientWidth >= tabListEl.scrollWidth)
+
+    return (
+      <TabChevronButton
+        disabled={isOnRight}
+        onClick={this.scrollRight}
+        tabIndex={-1}
+      >
         <IntelliIcon
           type='arrow-right'
           size='large'
@@ -66,15 +125,41 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
     )
   }
 
-  private get rightChevron (): JSX.Element | undefined {
-    return (
-      <TabChevronButton>
-        <IntelliIcon
-          type='arrow-right'
-          size='large'
-        />
-      </TabChevronButton>
-    )
+  private updateScroll = (newScrollValue: number): boolean => {
+    if (this.tabListRef.current) {
+      this.tabListRef.current.scrollLeft = newScrollValue
+      return true
+    }
+
+    return false
+  }
+
+  private scrollLeft = async (): Promise<void> => {
+    if (this.tabListRef.current) {
+      const currentScrollLeft = this.tabListRef.current.scrollLeft
+      const amountToShift = -1 * this.tabListRef.current.clientWidth
+
+      return Utils.smoothUpdate({
+        startValue: currentScrollLeft,
+        amount: amountToShift,
+        msTotal: HorizontalTabGroup.SCROLL_TIME_MS,
+        callback: this.updateScroll
+      })
+    }
+  }
+
+  private scrollRight = async (): Promise<void> => {
+    if (this.tabListRef.current) {
+      const currentScrollLeft = this.tabListRef.current.scrollLeft
+      const amountToShift = this.tabListRef.current.clientWidth
+
+      return Utils.smoothUpdate({
+        startValue: currentScrollLeft,
+        amount: amountToShift,
+        msTotal: HorizontalTabGroup.SCROLL_TIME_MS,
+        callback: this.updateScroll
+      })
+    }
   }
 
   private get tabList (): JSX.Element {
@@ -89,7 +174,10 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
     ))
 
     return (
-      <TabList>
+      <TabList
+        innerRef={this.tabListRef}
+        onScroll={this.handleScrollUpdate}
+      >
         {tabListItems}
       </TabList>
     )
@@ -152,7 +240,7 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
     const { useAnchors } = this.props
     const currentTabIndex = this.currentTabIndex
 
-    const href = useAnchors ? tab.anchorId : '#'
+    const href = useAnchors ? tab.anchorId : undefined
     const classes = classNames({
       active: currentTabIndex === index
     })
@@ -162,6 +250,7 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
         className={classes}
         href={href}
         onClick={this.clickTabHandler}
+        tabIndex={0}
         data-tabindex={index}
       >
         {this.sideComponent('left', tab.leftComponent)}

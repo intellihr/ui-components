@@ -18,11 +18,17 @@ const TabChevronButton = styled.button`
   flex-grow: 0;
   height: 100%;
   line-height: ${Variables.LineHeight.lhBody}px;
+  outline: none;
   text-align: center;
 
   &:hover,
   &:focus {
     color: ${Variables.Color.i400};
+  }
+
+  &:disabled {
+    color: ${Variables.Color.n400};
+    cursor: not-allowed;
   }
   
   .fa {
@@ -39,7 +45,9 @@ const TabList = styled.ul`
   margin: 0;
   overflow-x: scroll;
   position: relative;
-  scroll-behavior: smooth;
+  
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
   
   &::-webkit-scrollbar {
     background: transparent;
@@ -71,14 +79,6 @@ const TabListItemAnchor = styled.a`
   &:focus,
   &.active{
     color: ${Variables.Color.i400};
-    
-    ::after {
-      background-color: ${Variables.Color.i400};
-      content: '';
-      height: 2px;
-      position: absolute;
-      width: 100%;
-    }
   }
 
   .left-component {

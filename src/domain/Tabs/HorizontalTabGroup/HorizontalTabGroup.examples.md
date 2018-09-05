@@ -33,7 +33,13 @@ class HorizontalTabExample extends React.PureComponent {
       title: 'Tab 2'
     },
     {
-      title: 'Tab 3',
+      title: 'Tab 3'
+    },
+    {
+      title: 'Tab 4'
+    },
+    {
+      title: 'Tab 5',
       leftComponent: <FontAwesomeIcon type='hand-o-right' />,
       rightComponent: <FontAwesomeIcon type='hand-o-left' />
     }
