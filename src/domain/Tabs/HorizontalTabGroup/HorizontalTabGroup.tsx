@@ -30,14 +30,16 @@ export interface IHorizontalTabDefinition {
 }
 
 export interface IHorizontalTabGroupProps {
+  /** The current tab selected (by anchor or index). This must be provided for the component to work. */
+  currentTab: string | number
   /** A list of tabs and their content to render */
   tabs: IHorizontalTabDefinition[]
   /** Whether to update the url of the page with anchors when changing tabs */
   anchorsUpdateUrl?: boolean
   /** Callback to run when clicking between tabs */
   onTabChange?: (tab: IHorizontalTabDefinition, index: number) => void
-  /** The current tab selected (by anchor or index). This must be provided for the component to work. */
-  currentTab: string | number
+  /** Callback when the scroll position changes */
+  onScrollUpdate?: (newScrollValue: number) => void
 }
 
 export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps, never> {
@@ -96,6 +98,9 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
     )
   }
 
+  public scrollLeft = () => this.handleScrollButton('left')
+  public scrollRight = () => this.handleScrollButton('right')
+
   private get leftChevron (): JSX.Element | null {
     const tabListEl = this.tabListRef.current
 
@@ -109,8 +114,9 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
       <TabChevronButton
         disabled={isOnLeft}
         float='left'
-        onClick={this.handleLeftScroll}
+        onClick={this.scrollLeft}
         tabIndex={-1}
+        aria-hidden
       >
         <IntelliIcon
           type='arrow-left'
@@ -132,7 +138,7 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
       <TabChevronButton
         disabled={isOnRight}
         float='right'
-        onClick={this.handleRightScroll}
+        onClick={this.scrollRight}
         tabIndex={-1}
         aria-hidden
       >
@@ -221,17 +227,23 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
     return this.indexForTab(currentTab)
   }
 
-  private updateScroll = (newScrollValue: number): boolean => {
+  private handleScrollValueChange = (newScrollValue: number): boolean => {
+    const {
+      onScrollUpdate
+    } = this.props
+
     if (this.currentlyMounted && this.tabListRef.current) {
       this.tabListRef.current.scrollLeft = Math.round(newScrollValue)
+
+      if (onScrollUpdate) {
+        onScrollUpdate(newScrollValue)
+      }
+
       return true
     }
 
     return false
   }
-
-  private handleLeftScroll = () => this.handleScrollButton('left')
-  private handleRightScroll = () => this.handleScrollButton('right')
 
   private handleScrollButton = async (direction: 'left' | 'right'): Promise<void> => {
     const tabList = this.tabListRef.current
@@ -255,7 +267,7 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
         }
       }
 
-      // Clamp between 0 and max left position (otherwise animation goes awry)
+      // Clamp scroll position between 0 and max left position (otherwise animation goes awry)
       finalScrollLeft = clamp(
         finalScrollLeft,
         0,
@@ -266,7 +278,7 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
         startValue: currentScrollLeft,
         endValue: Math.round(finalScrollLeft),
         msTotal: TabStyleConstants.ScrollDuration,
-        callback: this.updateScroll
+        callback: this.handleScrollValueChange
       })
     }
   }
@@ -285,7 +297,7 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
           startValue: currentScrollLeft,
           endValue: Math.round(tabLeft),
           msTotal: TabStyleConstants.ScrollDuration,
-          callback: this.updateScroll
+          callback: this.handleScrollValueChange
         })
       }
 
@@ -296,7 +308,7 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
           startValue: currentScrollLeft,
           endValue: Math.round(tabRight - tabList.clientWidth),
           msTotal: TabStyleConstants.ScrollDuration,
-          callback: this.updateScroll
+          callback: this.handleScrollValueChange
         })
       }
     }
