@@ -18,7 +18,7 @@ import {
   TabListItemAnchor
 } from './style'
 
-export interface IHorizontalTabDefinition {
+export interface IHorizontalTab {
   /** String title to use for this tab */
   title?: string
   /** Component positioned to the left of the title */
@@ -33,11 +33,11 @@ export interface IHorizontalTabGroupProps {
   /** The current tab selected (by anchor or index). This must be provided for the component to work. */
   currentTab: string | number
   /** A list of tabs and their content to render */
-  tabs: IHorizontalTabDefinition[]
+  tabs: IHorizontalTab[]
   /** Whether to update the url of the page with anchors when changing tabs */
   anchorsUpdateUrl?: boolean
   /** Callback to run when clicking between tabs */
-  onTabChange?: (tab: IHorizontalTabDefinition, index: number) => void
+  onTabChange?: (tab: IHorizontalTab, index: number) => void
   /** Callback when the scroll position changes */
   onScrollUpdate?: (newScrollValue: number) => void
 }
@@ -180,7 +180,7 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
     )
   }
 
-  private listItemForTab = (tab: IHorizontalTabDefinition, index: number): JSX.Element => {
+  private listItemForTab = (tab: IHorizontalTab, index: number): JSX.Element => {
     const currentTabIndex = this.currentTabIndex
 
     return (
