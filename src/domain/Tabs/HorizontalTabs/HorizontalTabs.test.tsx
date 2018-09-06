@@ -1,6 +1,6 @@
 import { shallow, mount } from 'enzyme'
 import React from 'react'
-import { HorizontalTabDefinition, HorizontalTabs } from './HorizontalTabs'
+import { IHorizontalTabDefinition, HorizontalTabs } from './HorizontalTabs'
 
 describe('<HorizontalTabs />', () => {
   const tabDefinitions = [
@@ -129,7 +129,7 @@ describe('<HorizontalTabs />', () => {
     const doSomethingMock = jest.fn()
     const doSomethingElseMock = jest.fn()
 
-    const callbackMock = (tab: HorizontalTabDefinition) => {
+    const callbackMock = (tab: IHorizontalTabDefinition) => {
       if (tab.title === 'Tab 2') {
         doSomethingMock()
       }

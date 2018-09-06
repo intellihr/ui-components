@@ -28,7 +28,7 @@ export { TextSkeleton, BlockSkeleton, CircleSkeleton } from './Skeletons'
 export { Spinner } from './Spinners'
 export { withStyledBreakpoints } from './Styles'
 export { DataTable } from './Tables'
-export { HorizontalTabs } from './Tabs'
+export { HorizontalTabs, HorizontalTabGroup } from './Tabs'
 
 /*
  * VerticalTimelineEvent is here for legacy support.
