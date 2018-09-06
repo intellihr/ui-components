@@ -23,8 +23,8 @@ describe('<SectionList />', () => {
           header='Titled Section'
           description='Titled Description'
           actionItems={[
-            <Button type='primary'>Action 1</Button>,
-            <Button type='primary'>Action 2</Button>
+            <Button type='primary' key={1}>Action 1</Button>,
+            <Button type='primary' key={2}>Action 2</Button>
           ]}
         >
           section 3

@@ -1260,6 +1260,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                               >
                                 <Button
                                   iconAlignment="left"
+                                  key="1"
                                   type="primary"
                                 >
                                   <button
@@ -1270,6 +1271,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                 </Button>
                                 <Button
                                   iconAlignment="left"
+                                  key="2"
                                   type="primary"
                                 >
                                   <button

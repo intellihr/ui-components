@@ -5,7 +5,7 @@ import {
   StyledTitledSectionHeaderRow,
   StyledTitledSectionActions,
   StyledTitledSectionBody,
-  StyledTitledSection,
+  StyledTitledSection
 } from '../style'
 
 export interface ITitledSectionProps {
@@ -16,7 +16,7 @@ export interface ITitledSectionProps {
   /** The description for what is displayed */
   description?: string,
   /** Action items (eg. buttons) for the header */
-  actionItems?: Array<JSX.Element>
+  actionItems?: JSX.Element[]
 }
 
 class TitledSection extends React.Component<ITitledSectionProps> {
