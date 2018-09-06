@@ -1,5 +1,285 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<SectionList /> should render a section list with a titled section without props 1`] = `
+.c3 {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+.c4 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 0rem;
+  margin-left: 0rem;
+}
+
+.c6 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+}
+
+.c6,
+.c6:link,
+.c6:visited {
+  color: #432DF3;
+}
+
+.c6:hover {
+  color: #2512B3;
+}
+
+.c6:active {
+  color: #0F0080;
+}
+
+.c7 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+@media only screen and (min-width:640px) {
+  .c1 {
+    border-bottom: 1px solid #E1E6EB;
+  }
+
+  .c1:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c0 {
+    margin-left: 24px;
+    margin-right: 24px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c2 {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c2 {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c5 {
+    padding: 24px 16px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c5 {
+    margin-right: 24px;
+    -webkit-box-flex: 2;
+    -webkit-flex-grow: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c7 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c7 {
+    text-align: right;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c8 {
+    padding-top: 1.5rem;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c8 {
+    background-color: #FAFBFC;
+    border-top: 1px solid #E1E6EB;
+    border-bottom: 1px solid #E1E6EB;
+    padding: 24px 16px;
+  }
+}
+
+<SectionList>
+  <div>
+    <TitledSection>
+      <Styled(styled.div)>
+        <styled.div
+          className="c0"
+        >
+          <div
+            className="c0 c1"
+          >
+            <Styled(Row)>
+              <Row
+                className="c2"
+              >
+                <GridProvider>
+                  <ThemeProvider
+                    theme={
+                      Object {
+                        "flexboxgrid": Object {
+                          "breakpoints": Object {
+                            "lg": 64,
+                            "md": 40,
+                            "sm": 0,
+                            "xs": -1,
+                          },
+                          "gridSize": 12,
+                          "gutterWidth": 0,
+                          "outerMargin": 0,
+                        },
+                      }
+                    }
+                  >
+                    <Grid
+                      fluid={true}
+                    >
+                      <div
+                        className="c3"
+                      >
+                        <Row
+                          className="c2"
+                        >
+                          <div
+                            className="c2 c4"
+                          >
+                            <Styled(SectionDescription)>
+                              <SectionDescription
+                                className="c5"
+                              >
+                                <div
+                                  className="c5"
+                                >
+                                  <TextLink
+                                    textType="small"
+                                  >
+                                    <Component
+                                      className="c6"
+                                      textType="small"
+                                    >
+                                      <Anchor
+                                        className="c6"
+                                        href="#"
+                                      >
+                                        <a
+                                          className="c6"
+                                          href="#"
+                                        />
+                                      </Anchor>
+                                    </Component>
+                                  </TextLink>
+                                </div>
+                              </SectionDescription>
+                            </Styled(SectionDescription)>
+                            <styled.div>
+                              <div
+                                className="c7"
+                              />
+                            </styled.div>
+                          </div>
+                        </Row>
+                      </div>
+                    </Grid>
+                  </ThemeProvider>
+                </GridProvider>
+              </Row>
+            </Styled(Row)>
+            <Row>
+              <GridProvider>
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "flexboxgrid": Object {
+                        "breakpoints": Object {
+                          "lg": 64,
+                          "md": 40,
+                          "sm": 0,
+                          "xs": -1,
+                        },
+                        "gridSize": 12,
+                        "gutterWidth": 0,
+                        "outerMargin": 0,
+                      },
+                    }
+                  }
+                >
+                  <Grid
+                    fluid={true}
+                  >
+                    <div
+                      className="c3"
+                    >
+                      <Row>
+                        <div
+                          className="c4"
+                        >
+                          <styled.div>
+                            <div
+                              className="c8"
+                            >
+                              section 1
+                            </div>
+                          </styled.div>
+                        </div>
+                      </Row>
+                    </div>
+                  </Grid>
+                </ThemeProvider>
+              </GridProvider>
+            </Row>
+          </div>
+        </styled.div>
+      </Styled(styled.div)>
+    </TitledSection>
+  </div>
+</SectionList>
+`;
+
 exports[`<SectionList /> should render a section list with an annotated section without props 1`] = `
 .c3 {
   margin-right: auto;
@@ -140,6 +420,21 @@ exports[`<SectionList /> should render a section list with an annotated section 
   }
 }
 
+@media only screen and (max-width:639px) {
+  .c0 {
+    padding: 24px 16px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c0 {
+    margin-left: 24px;
+    margin-right: 24px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
 @media only screen and (min-width:640px) {
   .c9 {
     margin-left: 24px;
@@ -164,21 +459,6 @@ exports[`<SectionList /> should render a section list with an annotated section 
 @media only screen and (min-width:640px) {
   .c6 {
     margin-right: 24px;
-  }
-}
-
-@media only screen and (max-width:639px) {
-  .c0 {
-    padding: 24px 16px;
-  }
-}
-
-@media only screen and (min-width:640px) {
-  .c0 {
-    margin-left: 24px;
-    margin-right: 24px;
-    padding-top: 32px;
-    padding-bottom: 32px;
   }
 }
 
@@ -255,8 +535,8 @@ exports[`<SectionList /> should render a section list with an annotated section 
                                 className="c5"
                                 type="row"
                               >
-                                <Styled(AnnotatedSectionDescription)>
-                                  <AnnotatedSectionDescription
+                                <Styled(SectionDescription)>
+                                  <SectionDescription
                                     className="c6"
                                   >
                                     <div
@@ -281,8 +561,8 @@ exports[`<SectionList /> should render a section list with an annotated section 
                                         </Component>
                                       </TextLink>
                                     </div>
-                                  </AnnotatedSectionDescription>
-                                </Styled(AnnotatedSectionDescription)>
+                                  </SectionDescription>
+                                </Styled(SectionDescription)>
                               </div>
                             </Col>
                           </Column>
@@ -395,6 +675,16 @@ exports[`<SectionList /> should render a sectionList 1`] = `
   color: #0F0080;
 }
 
+.c17 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
 .c7 {
   font-size: 18px;
   line-height: 24px;
@@ -407,6 +697,29 @@ exports[`<SectionList /> should render a sectionList 1`] = `
 }
 
 .c8 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #667380;
+  font-weight: 400;
+  display: block;
+}
+
+.c15 {
+  font-size: 18px;
+  line-height: 24px;
+  -webkit-letter-spacing: -.02em;
+  -moz-letter-spacing: -.02em;
+  -ms-letter-spacing: -.02em;
+  letter-spacing: -.02em;
+  color: #424F5C;
+  font-weight: 600;
+}
+
+.c16 {
   font-size: 14px;
   line-height: 20px;
   -webkit-letter-spacing: normal;
@@ -488,6 +801,21 @@ exports[`<SectionList /> should render a sectionList 1`] = `
   }
 }
 
+@media only screen and (max-width:639px) {
+  .c0 {
+    padding: 24px 16px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c0 {
+    margin-left: 24px;
+    margin-right: 24px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
 @media only screen and (min-width:640px) {
   .c11 {
     margin-left: 24px;
@@ -515,27 +843,84 @@ exports[`<SectionList /> should render a sectionList 1`] = `
   }
 }
 
-@media only screen and (max-width:639px) {
-  .c0 {
-    padding: 24px 16px;
-  }
-}
-
-@media only screen and (min-width:640px) {
-  .c0 {
-    margin-left: 24px;
-    margin-right: 24px;
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
-}
-
 @media only screen and (min-width:640px) {
   .c2 {
     margin-left: 24px;
     margin-right: 24px;
     padding-top: 32px;
     padding-bottom: 32px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c12 {
+    margin-left: 24px;
+    margin-right: 24px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c13 {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c13 {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c14 {
+    padding: 24px 16px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c14 {
+    margin-right: 24px;
+    -webkit-box-flex: 2;
+    -webkit-flex-grow: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c17 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c17 {
+    text-align: right;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c18 {
+    padding-top: 1.5rem;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c18 {
+    background-color: #FAFBFC;
+    border-top: 1px solid #E1E6EB;
+    border-bottom: 1px solid #E1E6EB;
+    padding: 24px 16px;
   }
 }
 
@@ -612,7 +997,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                 className="c5"
                                 type="row"
                               >
-                                <Styled(AnnotatedSectionDescription)
+                                <Styled(SectionDescription)
                                   description="Annotated Description"
                                   header="Annotated Section"
                                   linkProps={
@@ -622,7 +1007,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                   }
                                   linkText="Annotated Link"
                                 >
-                                  <AnnotatedSectionDescription
+                                  <SectionDescription
                                     className="c6"
                                     description="Annotated Description"
                                     header="Annotated Section"
@@ -697,8 +1082,8 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                         </Component>
                                       </TextLink>
                                     </div>
-                                  </AnnotatedSectionDescription>
-                                </Styled(AnnotatedSectionDescription)>
+                                  </SectionDescription>
+                                </Styled(SectionDescription)>
                               </div>
                             </Col>
                           </Column>
@@ -737,6 +1122,219 @@ exports[`<SectionList /> should render a sectionList 1`] = `
         </styled.div>
       </Styled(styled.div)>
     </AnnotatedSection>
+    <TitledSection
+      actionItems={
+        Array [
+          <Button
+            iconAlignment="left"
+            type="primary"
+          >
+            Action 1
+          </Button>,
+          <Button
+            iconAlignment="left"
+            type="primary"
+          >
+            Action 2
+          </Button>,
+        ]
+      }
+      description="Titled Description"
+      header="Titled Section"
+    >
+      <Styled(styled.div)>
+        <styled.div
+          className="c12"
+        >
+          <div
+            className="c12 c1"
+          >
+            <Styled(Row)>
+              <Row
+                className="c13"
+              >
+                <GridProvider>
+                  <ThemeProvider
+                    theme={
+                      Object {
+                        "flexboxgrid": Object {
+                          "breakpoints": Object {
+                            "lg": 64,
+                            "md": 40,
+                            "sm": 0,
+                            "xs": -1,
+                          },
+                          "gridSize": 12,
+                          "gutterWidth": 0,
+                          "outerMargin": 0,
+                        },
+                      }
+                    }
+                  >
+                    <Grid
+                      fluid={true}
+                    >
+                      <div
+                        className="c3"
+                      >
+                        <Row
+                          className="c13"
+                        >
+                          <div
+                            className="c13 c4"
+                          >
+                            <Styled(SectionDescription)
+                              description="Titled Description"
+                              header="Titled Section"
+                            >
+                              <SectionDescription
+                                className="c14"
+                                description="Titled Description"
+                                header="Titled Section"
+                              >
+                                <div
+                                  className="c14"
+                                >
+                                  <Text
+                                    color="#424F5C"
+                                    isInline={true}
+                                    tag="h2"
+                                    type="heading"
+                                  >
+                                    <styled.h2
+                                      color="#424F5C"
+                                      isInline={true}
+                                      textType="heading"
+                                    >
+                                      <h2
+                                        className="c15"
+                                        color="#424F5C"
+                                      >
+                                        Titled Section
+                                      </h2>
+                                    </styled.h2>
+                                  </Text>
+                                  <Text
+                                    color="#667380"
+                                    isInline={false}
+                                    tag="span"
+                                    type="small"
+                                  >
+                                    <styled.span
+                                      color="#667380"
+                                      isInline={false}
+                                      textType="small"
+                                    >
+                                      <span
+                                        className="c16"
+                                        color="#667380"
+                                      >
+                                        Titled Description
+                                      </span>
+                                    </styled.span>
+                                  </Text>
+                                  <TextLink
+                                    textType="small"
+                                  >
+                                    <Component
+                                      className="c9"
+                                      textType="small"
+                                    >
+                                      <Anchor
+                                        className="c9"
+                                        href="#"
+                                      >
+                                        <a
+                                          className="c9"
+                                          href="#"
+                                        />
+                                      </Anchor>
+                                    </Component>
+                                  </TextLink>
+                                </div>
+                              </SectionDescription>
+                            </Styled(SectionDescription)>
+                            <styled.div>
+                              <div
+                                className="c17"
+                              >
+                                <Button
+                                  iconAlignment="left"
+                                  type="primary"
+                                >
+                                  <button
+                                    className="button primary"
+                                  >
+                                    Action 1
+                                  </button>
+                                </Button>
+                                <Button
+                                  iconAlignment="left"
+                                  type="primary"
+                                >
+                                  <button
+                                    className="button primary"
+                                  >
+                                    Action 2
+                                  </button>
+                                </Button>
+                              </div>
+                            </styled.div>
+                          </div>
+                        </Row>
+                      </div>
+                    </Grid>
+                  </ThemeProvider>
+                </GridProvider>
+              </Row>
+            </Styled(Row)>
+            <Row>
+              <GridProvider>
+                <ThemeProvider
+                  theme={
+                    Object {
+                      "flexboxgrid": Object {
+                        "breakpoints": Object {
+                          "lg": 64,
+                          "md": 40,
+                          "sm": 0,
+                          "xs": -1,
+                        },
+                        "gridSize": 12,
+                        "gutterWidth": 0,
+                        "outerMargin": 0,
+                      },
+                    }
+                  }
+                >
+                  <Grid
+                    fluid={true}
+                  >
+                    <div
+                      className="c3"
+                    >
+                      <Row>
+                        <div
+                          className="c4"
+                        >
+                          <styled.div>
+                            <div
+                              className="c18"
+                            >
+                              section 3
+                            </div>
+                          </styled.div>
+                        </div>
+                      </Row>
+                    </div>
+                  </Grid>
+                </ThemeProvider>
+              </GridProvider>
+            </Row>
+          </div>
+        </styled.div>
+      </Styled(styled.div)>
+    </TitledSection>
   </div>
 </SectionList>
 `;

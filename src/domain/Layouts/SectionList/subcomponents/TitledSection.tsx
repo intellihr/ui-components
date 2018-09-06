@@ -1,11 +1,11 @@
 import React from 'react'
 import { Row } from '../../../Grids/Row'
 import {
-  StyledSectionDescription,
+  StyledTitledSectionDescription,
+  StyledTitledSectionHeaderRow,
   StyledTitledSectionActions,
   StyledTitledSectionBody,
-  StyledAnnotatedSection,
-  StyledTitledSectionHeaderRow
+  StyledTitledSection,
 } from '../style'
 
 export interface ITitledSectionProps {
@@ -29,9 +29,9 @@ class TitledSection extends React.Component<ITitledSectionProps> {
     } = this.props
 
     return (
-      <StyledAnnotatedSection>
+      <StyledTitledSection>
         <StyledTitledSectionHeaderRow>
-          <StyledSectionDescription
+          <StyledTitledSectionDescription
             header={header}
             description={description}
           />
@@ -44,7 +44,7 @@ class TitledSection extends React.Component<ITitledSectionProps> {
               {children}
             </StyledTitledSectionBody>
         </Row>
-      </StyledAnnotatedSection>
+      </StyledTitledSection>
     )
   }
 }

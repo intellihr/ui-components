@@ -18,29 +18,6 @@ const SectionBorder = styled.div`
   }
 `
 
-const StyledAnnotatedSectionBody = styled.div`
-  @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
-    margin-left: ${horizontalMarginDesktop}px;
-  }
-
-  @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
-    background-color: ${Variables.Color.n150};
-    border-top: 1px solid ${Variables.Color.n300};
-    border-bottom: 1px solid ${Variables.Color.n300};
-    padding: ${verticalPaddingMobile}px ${horizontalPaddingMobile}px;
-  }
-`
-
-const StyledSectionDescription = styled(SectionDescription)`
-  @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
-    padding: ${verticalPaddingMobile}px ${horizontalPaddingMobile}px;
-  }
-
-  @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
-    margin-right: ${horizontalMarginDesktop}px;
-  }
-`
-
 const StyledSection = styled(SectionBorder)`
   @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
     padding: ${verticalPaddingMobile}px ${horizontalPaddingMobile}px;
@@ -54,12 +31,54 @@ const StyledSection = styled(SectionBorder)`
   }
 `
 
+const StyledAnnotatedSectionBody = styled.div`
+  @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
+    margin-left: ${horizontalMarginDesktop}px;
+  }
+
+  @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
+    background-color: ${Variables.Color.n150};
+    border-top: 1px solid ${Variables.Color.n300};
+    border-bottom: 1px solid ${Variables.Color.n300};
+    padding: ${verticalPaddingMobile}px ${horizontalPaddingMobile}px;
+  }
+`
+
+const StyledAnnotatedSectionDescription = styled(SectionDescription)`
+  @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
+    padding: ${verticalPaddingMobile}px ${horizontalPaddingMobile}px;
+  }
+
+  @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
+    margin-right: ${horizontalMarginDesktop}px;
+  }
+`
+
 const StyledAnnotatedSection = styled(SectionBorder)`
   @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
     margin-left: ${horizontalMarginDesktop}px;
     margin-right: ${horizontalMarginDesktop}px;
     padding-top: ${verticalPaddingDesktop}px;
     padding-bottom: ${verticalPaddingDesktop}px;
+  }
+`
+
+const StyledTitledSection = styled(SectionBorder)`
+  @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
+    margin-left: ${horizontalMarginDesktop}px;
+    margin-right: ${horizontalMarginDesktop}px;
+    padding-top: ${verticalPaddingDesktop}px;
+    padding-bottom: ${verticalPaddingDesktop}px;
+  }
+`
+
+const StyledTitledSectionHeaderRow = styled(Row)`
+  @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
+    flex-wrap: nowrap;
+  }
+
+  @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
+    flex-wrap: wrap;
   }
 `
 
@@ -76,15 +95,15 @@ const StyledTitledSectionDescription = styled(SectionDescription)`
 `
 
 const StyledTitledSectionActions = styled.div`
+  flex-shrink: 0;
+  flex-grow: 1;
+
   @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
     padding-left: ${horizontalPaddingMobile}px;
     padding-right: ${horizontalPaddingMobile}px;
   }
 
   @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
-    margin-right: ${horizontalMarginDesktop}px;
-    flex-shrink: 0;
-    flex-grow: 1;
     text-align: right;
   }
 `
@@ -102,24 +121,15 @@ const StyledTitledSectionBody = styled.div`
   }
 `
 
-const StyledTitledSectionHeaderRow = styled(Row)`
-  @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
-    flex-wrap: nowrap;
-  }
-
-  @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
-    flex-wrap: wrap;
-  }
-`
-
 export {
   SectionBorder,
   StyledSection,
-  StyledSectionDescription,
   StyledAnnotatedSection,
+  StyledAnnotatedSectionDescription,
   StyledAnnotatedSectionBody,
+  StyledTitledSection,
+  StyledTitledSectionHeaderRow,
   StyledTitledSectionDescription,
   StyledTitledSectionActions,
-  StyledTitledSectionBody,
-  StyledTitledSectionHeaderRow
+  StyledTitledSectionBody
 }

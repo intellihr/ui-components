@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row } from '../../../Grids/Row'
 import {
-  StyledSectionDescription,
+  StyledAnnotatedSectionDescription,
   StyledAnnotatedSectionBody,
   StyledAnnotatedSection
 } from '../style'
@@ -35,7 +35,7 @@ class AnnotatedSection extends React.Component<IAnnotatedSectionProps> {
       <StyledAnnotatedSection>
         <Row>
           <Row.Column sm={12} md={4}>
-            <StyledSectionDescription
+            <StyledAnnotatedSectionDescription
               header={header}
               description={description}
               linkText={linkText}

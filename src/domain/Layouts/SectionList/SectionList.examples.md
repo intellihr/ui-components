@@ -8,20 +8,6 @@ sub-components that provide responsive styling between mobile and desktop.
       display a border below itself if another section is below it in the section list and you are on desktop.
     </Text>
   </SectionList.Section>
-  <SectionList.TitledSection
-    header='Titled Section'
-    description='This is a titled section, which enables sections to have a description and action item(s).'
-    actionItems={[
-        <Button type='primary'>Action 1</Button>,
-        <Button type='primary'>Action 2</Button>
-      ]}
-  >
-    <Text>
-      As is the same with a Section, content can be passed into a Titled Section which will then be displayed
-      inside the section. For the action items, the user can pass in any element (or set of nested elements)
-      that they'd like.
-    </Text>
-  </SectionList.TitledSection>
   <SectionList.AnnotatedSection
     header='Annotated Section'
     description='This is an annotated section, which enables sections to have a description.'
@@ -33,5 +19,18 @@ sub-components that provide responsive styling between mobile and desktop.
       inside the section.
     </Text>
   </SectionList.AnnotatedSection>
+  <SectionList.TitledSection
+    header='Titled Section'
+    description='This is a titled section, which enables sections to have a description and action item(s).'
+    actionItems={[
+        <Button type='primary'>Action 1</Button>,
+        <Button type='primary'>Action 2</Button>
+      ]}
+  >
+    <Text>
+      For action items, the user can pass in an array of elements to display, such as buttons. In mobile view,
+      if the action items are set to full width, they will stack on top of each other.
+    </Text>
+  </SectionList.TitledSection>
 </SectionList>
 ```
