@@ -3,28 +3,13 @@
 ```jsx
 const { FontAwesomeIcon } = require('@Domain/Icons');
 
-class HorizontalTabExample extends React.PureComponent {
-  constructor () {
-    this.state = {
-      openTab: 0
-    }
-  }
+initialState = {
+  openTab: 0
+};
 
-  render () {
-    const { isOpen } = this.state
-    const { tabs } = this.props
-
-    return (
-      <HorizontalTabGroup
-        onTabChange={(tab, index) => this.setState({ openTab: index })}
-        currentTab={this.state.openTab}
-        tabs={tabs}
-      />
-    )
-  }
-}
-
-<HorizontalTabExample
+<HorizontalTabGroup
+  onTabChange={(tab, index) => setState({ openTab: index })}
+  currentTab={state.openTab}
   tabs={[
     {
       title: 'Tab 1'
@@ -51,28 +36,13 @@ class HorizontalTabExample extends React.PureComponent {
 ```jsx
 const { FontAwesomeIcon } = require('@Domain/Icons');
 
-class HorizontalTabExample extends React.PureComponent {
-  constructor () {
-    this.state = {
-      openTab: 0
-    }
-  }
+initialState = {
+  openTab: 0
+};
 
-  render () {
-    const { isOpen } = this.state
-    const { tabs } = this.props
-
-    return (
-      <HorizontalTabGroup
-        onTabChange={(tab, index) => this.setState({ openTab: index })}
-        currentTab={this.state.openTab}
-        tabs={tabs}
-      />
-    )
-  }
-}
-
-<HorizontalTabExample
+<HorizontalTabGroup
+  onTabChange={(tab, index) => setState({ openTab: index })}
+  currentTab={state.openTab}
   tabs={[
     { title: 'Tab 1' },
     { title: 'Long Tab Title 2' },

@@ -22,7 +22,9 @@ const TabChevronButton = styled.button`
   color: ${Variables.Color.n600};
   cursor: pointer;
   float: ${(props: ITabChevronButtonProps) => props.float};
+  font-weight: bold;
   line-height: ${TabStyleConstants.GroupHeight}px;
+  margin: 0 ${TabStyleConstants.MarginSize / 2}px;
   outline: none;
   text-align: center;
   transition: color .15s ease-in;
