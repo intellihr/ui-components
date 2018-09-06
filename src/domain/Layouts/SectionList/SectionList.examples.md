@@ -12,8 +12,8 @@ sub-components that provide responsive styling between mobile and desktop.
     header='Titled Section'
     description='This is a titled section, which enables sections to have a description and action item(s).'
     actionItems={[
-        <Button type='primary' fullWidth>Action 1</Button>,
-        <Button type='primary' fullWidth>Action 2</Button>
+        <Button type='primary'>Action 1</Button>,
+        <Button type='primary'>Action 2</Button>
       ]}
   >
     <Text>

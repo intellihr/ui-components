@@ -4,7 +4,8 @@ import {
   StyledSectionDescription,
   StyledTitledSectionActions,
   StyledTitledSectionBody,
-  StyledAnnotatedSection
+  StyledAnnotatedSection,
+  StyledTitledSectionHeaderRow
 } from '../style'
 
 export interface ITitledSectionProps {
@@ -19,54 +20,29 @@ export interface ITitledSectionProps {
 }
 
 class TitledSection extends React.Component<ITitledSectionProps> {
-  get actionItems(): Array<JSX.Element> | undefined {
-    const {
-      actionItems
-    } = this.props
-
-    if (actionItems) {
-      const cellWidth = Math.floor(12 / actionItems.length)
-
-      return actionItems.map((item, index) => {
-        return (
-          <Row.Column sm={12} md={cellWidth} key={index}>
-            {item}
-          </Row.Column>
-        )
-      })
-    }
-  }
-
   public render (): JSX.Element | null {
     const {
       children,
       header,
-      description
+      description,
+      actionItems
     } = this.props
 
     return (
       <StyledAnnotatedSection>
+        <StyledTitledSectionHeaderRow>
+          <StyledSectionDescription
+            header={header}
+            description={description}
+          />
+          <StyledTitledSectionActions>
+              {actionItems}
+          </StyledTitledSectionActions>
+        </StyledTitledSectionHeaderRow>
         <Row>
-          <Row.Column sm={12} md={8}>
-            <StyledSectionDescription
-              header={header}
-              description={description}
-            />
-          </Row.Column>
-          <Row.Column sm={12} md={4}>
-            <StyledTitledSectionActions>
-              <Row>
-                {this.actionItems}
-              </Row>
-            </StyledTitledSectionActions>
-          </Row.Column>
-        </Row>
-        <Row>
-          <Row.Column>
             <StyledTitledSectionBody>
               {children}
             </StyledTitledSectionBody>
-          </Row.Column>
         </Row>
       </StyledAnnotatedSection>
     )
