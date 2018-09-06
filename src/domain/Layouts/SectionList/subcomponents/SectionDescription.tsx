@@ -20,7 +20,7 @@ export interface ISectionDescriptionProps {
   }
 }
 
-class SectionDescription extends React.Component<ISectionDescriptionProps> {
+class SectionDescription extends React.PureComponent<ISectionDescriptionProps> {
   get description () {
     const {
       description

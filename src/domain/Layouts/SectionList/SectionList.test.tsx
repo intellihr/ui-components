@@ -2,7 +2,7 @@ import { mount } from 'enzyme'
 import React from 'react'
 
 import { SectionList } from './SectionList'
-import { Button } from '../../Buttons/Button'
+import { Button } from '../../Buttons'
 
 describe('<SectionList />', () => {
   it('should render a sectionList', () => {

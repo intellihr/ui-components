@@ -9,8 +9,6 @@ import {
 } from '../style'
 
 export interface ITitledSectionProps {
-  /** What to display in the layout. */
-  children?: React.ReactNode,
   /** The title for what is displayed */
   header?: string,
   /** The description for what is displayed */
@@ -19,8 +17,8 @@ export interface ITitledSectionProps {
   actionItems?: JSX.Element[]
 }
 
-class TitledSection extends React.Component<ITitledSectionProps> {
-  public render (): JSX.Element | null {
+class TitledSection extends React.PureComponent<ITitledSectionProps> {
+  public render (): JSX.Element {
     const {
       children,
       header,
