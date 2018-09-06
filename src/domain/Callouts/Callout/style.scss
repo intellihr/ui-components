@@ -1,4 +1,4 @@
-@import '../../variables';
+@import '../../../common/sass/variables';
 
 $callouts: (
   neutral:       (background: $n200, border: $n400, color: $n800, title: $n700),
@@ -16,11 +16,14 @@ $callouts: (
   color: $color;
 }
 
-.callout {
+%callout {
+  border: 1px solid;
   border-radius: 4px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  padding: 1rem;
+  position: relative;
 
   > * {
     flex: 0 0 100%;
@@ -37,13 +40,14 @@ $callouts: (
     font-weight: 600;
   }
 
+  :local(.content),
   .content {
     flex-grow: 1;
 
     .title {
+      color: $n700;
       font-size: 1.1rem;
       font-weight: 600;
-      color: $n700;
     }
 
     .action-list {
@@ -82,26 +86,39 @@ $callouts: (
 
   &.no-data {
     border-width: 0;
-    text-align: center;
     padding: 50px;
+    text-align: center;
   }
 
   &.justify-center {
-    text-align: left;
     justify-content: center;
+    text-align: left;
 
+    :local(.content),
     .content {
       max-width: 600px;
     }
+  }
+
+  &.small {
+    padding: .5rem;
   }
 
   // Form preview, etc
   &.preview-mode {
     font-size: .9rem;
     font-weight: 600;
+    padding: .5rem;
     text-align: center;
     text-transform: uppercase;
-    @extend .small;
   }
+}
 
+:local(.callout) {
+  @extend %callout;
+}
+
+.callout {
+  @extend %callout;
+  margin: 0 0 1rem;
 }

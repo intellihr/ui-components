@@ -1,30 +1,32 @@
-#### Generate Message
+#### Information Callout
+
+Used when there is a message for the user.
 
 ```jsx
 <Callout type="info">
   <div className="title">
   Information!
   </div>
-  Bringing you the lasted news.
+  Bringing you the latest news.
 </Callout>
 ```
 
-For when you have a message for the user
+#### Success Callout
 
-#### Successful Message
+Used when an action is successfully performed.
 
 ```jsx
 <Callout type="success">
   <div className="title">
   Well done!
   </div>
-  You successfully read this important alert message.
+  You've successfully read this important alert message.
 </Callout>
 ```
 
-For when an action is successfully performed
+#### Warning Callout
 
-#### Warning Message
+Used when an action might have an undesired effect.
 
 ```jsx
 <Callout type="warning">
@@ -35,9 +37,9 @@ For when an action is successfully performed
 </Callout>
 ```
 
-For when an action might have an undesired effect
-
 #### Error Message
+
+Used when an error has occurred.
 
 ```jsx
 <Callout type="error">
@@ -48,9 +50,9 @@ For when an action might have an undesired effect
 </Callout>
 ```
 
-For when an error has occured
-
 #### Preview Mode
+
+Used when showing a preview of a form.
 
 ```jsx
 <Callout type="preview-mode">
@@ -58,9 +60,9 @@ For when an error has occured
 </Callout>
 ```
 
-For when showing a preview of a form
+#### No Data Callout
 
-#### A callout no data
+Used in place of an element when there is no data to be shown.
 
 ```jsx
 <Callout type="no-data">
@@ -68,7 +70,9 @@ For when showing a preview of a form
 </Callout>
 ```
 
-#### A callout type not been set
+#### Default Callout
+
+This default callout should not be required! Try using another type.
 
 ```jsx
 <Callout>
@@ -76,4 +80,17 @@ For when showing a preview of a form
 </Callout>
 ```
 
-This default callout should not be required! Select another type
+#### Legacy Callouts
+
+Callouts can be used in blade pages by using the `callout` class name as well as modifier classes. 
+
+```jsx
+<div>
+  <div class='callout error'>
+    Error
+  </div>
+  <div class='callout'>
+    Neutral
+  </div>
+</div>
+```
