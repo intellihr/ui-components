@@ -7,8 +7,6 @@ import {
 } from '../style'
 
 export interface IAnnotatedSectionProps {
-  /** What to display in the layout. */
-  children?: React.ReactNode,
   /** The title for what is displayed */
   header?: string,
   /** The description for what is displayed */
@@ -21,8 +19,8 @@ export interface IAnnotatedSectionProps {
   }
 }
 
-class AnnotatedSection extends React.Component<IAnnotatedSectionProps> {
-  public render (): JSX.Element | null {
+class AnnotatedSection extends React.PureComponent<IAnnotatedSectionProps> {
+  public render (): JSX.Element {
     const {
       children,
       header,

@@ -186,8 +186,8 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
   public componentWillUnmount () {
     this.currentlyMounted = false
 
-    window.removeEventListener('scroll', this.onWindowUpdate)
-    window.removeEventListener('resize', this.debounceOnWindowUpdate)
+    window.removeEventListener('resize', this.onWindowUpdate)
+    window.removeEventListener('scroll', this.debounceOnWindowUpdate)
   }
 
   public render (): React.ReactPortal {

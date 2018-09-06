@@ -3,7 +3,7 @@ import { TextLink } from '../../../Links/TextLink'
 import { Text } from '../../../Typographies/Text'
 import { Props, Variables } from '../../../../common'
 
-export interface IAnnotatedSectionDescriptionProps {
+export interface ISectionDescriptionProps {
   /** The title for what is displayed */
   header?: string,
   /** The description for what is displayed */
@@ -20,7 +20,7 @@ export interface IAnnotatedSectionDescriptionProps {
   }
 }
 
-class AnnotatedSectionDescription extends React.Component<IAnnotatedSectionDescriptionProps> {
+class SectionDescription extends React.PureComponent<ISectionDescriptionProps> {
   get description () {
     const {
       description
@@ -57,7 +57,7 @@ class AnnotatedSectionDescription extends React.Component<IAnnotatedSectionDescr
     }
   }
 
-  public render (): JSX.Element | null {
+  public render (): JSX.Element {
     const {
       linkText,
       linkProps,
@@ -80,5 +80,5 @@ class AnnotatedSectionDescription extends React.Component<IAnnotatedSectionDescr
 }
 
 export {
-  AnnotatedSectionDescription
+  SectionDescription
 }
