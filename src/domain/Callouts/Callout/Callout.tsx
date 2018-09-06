@@ -1,6 +1,7 @@
 import classNames from 'classnames'
 import { isEmpty } from 'lodash'
 import React from 'react'
+const style = require('./style.scss')
 
 export interface ICalloutProps {
   type: 'info' | 'success' | 'error' | 'warning' | 'preview' | 'no-data' | ''
@@ -58,7 +59,7 @@ export class Callout extends React.Component<ICalloutProps, ICalloutState> {
     } = this.props
 
     const cNames = [
-      'callout',
+      style.callout,
       type
     ]
 
@@ -111,7 +112,7 @@ export class Callout extends React.Component<ICalloutProps, ICalloutState> {
         className={classNames(this.classNames)}
         ref={node => { this.node = node }}
       >
-        <div className='content'>
+        <div className={style.content}>
           {this.messagesList}
           {children}
         </div>
