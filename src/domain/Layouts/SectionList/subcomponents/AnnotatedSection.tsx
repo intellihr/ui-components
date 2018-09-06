@@ -20,7 +20,7 @@ export interface IAnnotatedSectionProps {
 }
 
 class AnnotatedSection extends React.PureComponent<IAnnotatedSectionProps> {
-  public render (): JSX.Element | null {
+  public render (): JSX.Element {
     const {
       children,
       header,

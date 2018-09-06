@@ -57,7 +57,7 @@ class SectionDescription extends React.PureComponent<ISectionDescriptionProps> {
     }
   }
 
-  public render (): JSX.Element | null {
+  public render (): JSX.Element {
     const {
       linkText,
       linkProps,
