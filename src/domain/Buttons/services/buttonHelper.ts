@@ -22,6 +22,8 @@ export interface IBaseButtonProps {
   id?: string
   /** Size of the button */
   size?: ButtonSizes
+  /** If the button should be 100% width */
+  fullWidth?: boolean
   /** What type of button to display */
   type?: ButtonTypes
   /** Alignment of the button icon */

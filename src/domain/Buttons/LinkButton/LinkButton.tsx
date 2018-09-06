@@ -27,7 +27,8 @@ export class LinkButton extends BaseButton<ILinkButtonProps> {
       type,
       disabled,
       href,
-      anchorComponentProps
+      anchorComponentProps,
+      fullWidth
     } = this.props
 
     return (
@@ -35,7 +36,7 @@ export class LinkButton extends BaseButton<ILinkButtonProps> {
         href={disabled ? '#' : href}
         anchorComponentProps={anchorComponentProps}
       >
-        <span className={buttonClass(type!, size, className, { disabled })}>
+        <span className={buttonClass(type!, size, className, { disabled, 'full-width': fullWidth })}>
           {this.buttonContent}
         </span>
       </Anchor>

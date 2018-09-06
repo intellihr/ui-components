@@ -2,6 +2,7 @@ import { mount } from 'enzyme'
 import React from 'react'
 
 import { SectionList } from './SectionList'
+import { Button } from '../../Buttons'
 
 describe('<SectionList />', () => {
   it('should render a sectionList', () => {
@@ -18,6 +19,16 @@ describe('<SectionList />', () => {
         >
           section 2
         </SectionList.AnnotatedSection>
+        <SectionList.TitledSection
+          header='Titled Section'
+          description='Titled Description'
+          actionItems={[
+            <Button type='primary' key={1}>Action 1</Button>,
+            <Button type='primary' key={2}>Action 2</Button>
+          ]}
+        >
+          section 3
+        </SectionList.TitledSection>
       </SectionList>
     )
 
@@ -33,6 +44,18 @@ describe('<SectionList />', () => {
         <SectionList.AnnotatedSection>
           section 2
         </SectionList.AnnotatedSection>
+      </SectionList>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should render a section list with a titled section without props', () => {
+    const wrapper = mount(
+      <SectionList>
+        <SectionList.TitledSection>
+          section 1
+        </SectionList.TitledSection>
       </SectionList>
     )
 
