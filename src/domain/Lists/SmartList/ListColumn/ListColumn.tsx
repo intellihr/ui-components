@@ -1,5 +1,5 @@
 import React from 'react'
-import { isNil } from 'lodash'
+import { isNil, get } from 'lodash'
 import classNames from 'classnames'
 import { Row } from '../../../Grids/Row'
 import { ListHeader } from '../ListHeader'
@@ -37,7 +37,7 @@ export interface IListColumn {
   /** Foundation order attribute */
   order?: any
   /** Skeleton options */
-  skeletonOptions: ISmartListSkeletonOptions
+  skeletonOptions?: ISmartListSkeletonOptions
 }
 
 class ListColumn extends React.PureComponent<IListColumn> {
@@ -58,12 +58,9 @@ class ListColumn extends React.PureComponent<IListColumn> {
       rowIndex,
       isHeader,
       header,
-      tooltipText
+      tooltipText,
+      skeletonOptions
     } = this.props
-
-    const {
-      showSkeleton
-    } = this.props.skeletonOptions
 
     if (isHeader) {
       return (
@@ -73,6 +70,8 @@ class ListColumn extends React.PureComponent<IListColumn> {
         />
       )
     }
+
+    const showSkeleton = get(skeletonOptions, 'showSkeleton', false)
 
     if (showSkeleton) {
       return <TextSkeleton showSkeleton={showSkeleton} />
