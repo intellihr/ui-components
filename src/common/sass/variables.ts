@@ -19,8 +19,8 @@ namespace Variables {
     // Neutral
     n100 = '#FFFFFF',
     n150 = '#FAFBFC',
-    n200 = '#F2F5F7',
-    n250 = '#EBEFF2',
+    n200 = '#F5F7FA',
+    n250 = '#EDF1F5',
     n300 = '#E1E6EB',
     n400 = '#C5CED6',
     n500 = '#8FA1B3',
