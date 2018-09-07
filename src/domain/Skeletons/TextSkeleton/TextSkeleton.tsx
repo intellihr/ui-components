@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { TextSkeletonWrapper } from './style'
-import { ISkeletonProps } from '../services/skeletonHelper'
+import { ISkeletonProps } from '../interfaces'
 import { Props } from '../../../common'
 
 export interface ITextSkeletonProps extends ISkeletonProps {
