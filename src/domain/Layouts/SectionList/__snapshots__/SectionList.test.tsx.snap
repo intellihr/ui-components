@@ -28,31 +28,6 @@ exports[`<SectionList /> should render a section list with a titled section with
 }
 
 .c6 {
-  -webkit-transition: color .25s ease-out;
-  transition: color .25s ease-out;
-  font-size: 14px;
-  line-height: 20px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-}
-
-.c6,
-.c6:link,
-.c6:visited {
-  color: #432DF3;
-}
-
-.c6:hover {
-  color: #2512B3;
-}
-
-.c6:active {
-  color: #0F0080;
-}
-
-.c7 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -106,6 +81,13 @@ exports[`<SectionList /> should render a section list with a titled section with
 @media only screen and (min-width:640px) {
   .c5 {
     margin-right: 24px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-flex: 2;
     -webkit-flex-grow: 2;
     -ms-flex-positive: 2;
@@ -113,30 +95,34 @@ exports[`<SectionList /> should render a section list with a titled section with
     -webkit-flex-shrink: 1;
     -ms-flex-negative: 1;
     flex-shrink: 1;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 }
 
 @media only screen and (max-width:639px) {
-  .c7 {
+  .c6 {
     padding-left: 16px;
     padding-right: 16px;
   }
 }
 
 @media only screen and (min-width:640px) {
-  .c7 {
+  .c6 {
     text-align: right;
   }
 }
 
 @media only screen and (min-width:640px) {
-  .c8 {
+  .c7 {
     padding-top: 1.5rem;
   }
 }
 
 @media only screen and (max-width:639px) {
-  .c8 {
+  .c7 {
     background-color: #FAFBFC;
     border-top: 1px solid #E1E6EB;
     border-bottom: 1px solid #E1E6EB;
@@ -194,31 +180,12 @@ exports[`<SectionList /> should render a section list with a titled section with
                               >
                                 <div
                                   className="c5"
-                                >
-                                  <TextLink
-                                    textType="small"
-                                  >
-                                    <Component
-                                      className="c6"
-                                      textType="small"
-                                    >
-                                      <Anchor
-                                        className="c6"
-                                        href="#"
-                                      >
-                                        <a
-                                          className="c6"
-                                          href="#"
-                                        />
-                                      </Anchor>
-                                    </Component>
-                                  </TextLink>
-                                </div>
+                                />
                               </SectionDescription>
                             </Styled(SectionDescription)>
                             <styled.div>
                               <div
-                                className="c7"
+                                className="c6"
                               />
                             </styled.div>
                           </div>
@@ -260,7 +227,7 @@ exports[`<SectionList /> should render a section list with a titled section with
                         >
                           <styled.div>
                             <div
-                              className="c8"
+                              className="c7"
                             >
                               section 1
                             </div>
@@ -316,38 +283,13 @@ exports[`<SectionList /> should render a section list with an annotated section 
   padding-left: 0rem;
 }
 
-.c8 {
+.c7 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0rem;
   padding-left: 0rem;
-}
-
-.c7 {
-  -webkit-transition: color .25s ease-out;
-  transition: color .25s ease-out;
-  font-size: 14px;
-  line-height: 20px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-}
-
-.c7,
-.c7:link,
-.c7:visited {
-  color: #432DF3;
-}
-
-.c7:hover {
-  color: #2512B3;
-}
-
-.c7:active {
-  color: #0F0080;
 }
 
 @media only screen and (min-width:0em) {
@@ -381,7 +323,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
 }
 
 @media only screen and (min-width:0em) {
-  .c8 {
+  .c7 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -391,7 +333,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
 }
 
 @media only screen and (min-width:40em) {
-  .c8 {
+  .c7 {
     -webkit-flex-basis: 66.66666666666667%;
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
@@ -401,7 +343,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
 }
 
 @media only screen and (min-width:64em) {
-  .c8 {
+  .c7 {
     -webkit-flex-basis: 66.66666666666667%;
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
@@ -436,13 +378,13 @@ exports[`<SectionList /> should render a section list with an annotated section 
 }
 
 @media only screen and (min-width:640px) {
-  .c9 {
+  .c8 {
     margin-left: 24px;
   }
 }
 
 @media only screen and (max-width:639px) {
-  .c9 {
+  .c8 {
     background-color: #FAFBFC;
     border-top: 1px solid #E1E6EB;
     border-bottom: 1px solid #E1E6EB;
@@ -541,26 +483,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
                                   >
                                     <div
                                       className="c6"
-                                    >
-                                      <TextLink
-                                        textType="small"
-                                      >
-                                        <Component
-                                          className="c7"
-                                          textType="small"
-                                        >
-                                          <Anchor
-                                            className="c7"
-                                            href="#"
-                                          >
-                                            <a
-                                              className="c7"
-                                              href="#"
-                                            />
-                                          </Anchor>
-                                        </Component>
-                                      </TextLink>
-                                    </div>
+                                    />
                                   </SectionDescription>
                                 </Styled(SectionDescription)>
                               </div>
@@ -577,12 +500,12 @@ exports[`<SectionList /> should render a section list with an annotated section 
                               type="row"
                             >
                               <div
-                                className="c8"
+                                className="c7"
                                 type="row"
                               >
                                 <styled.div>
                                   <div
-                                    className="c9"
+                                    className="c8"
                                   >
                                     section 2
                                   </div>
@@ -886,6 +809,13 @@ exports[`<SectionList /> should render a sectionList 1`] = `
 @media only screen and (min-width:640px) {
   .c14 {
     margin-right: 24px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-flex: 2;
     -webkit-flex-grow: 2;
     -ms-flex-positive: 2;
@@ -893,6 +823,10 @@ exports[`<SectionList /> should render a sectionList 1`] = `
     -webkit-flex-shrink: 1;
     -ms-flex-negative: 1;
     flex-shrink: 1;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 }
 
@@ -1233,24 +1167,6 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                       </span>
                                     </styled.span>
                                   </Text>
-                                  <TextLink
-                                    textType="small"
-                                  >
-                                    <Component
-                                      className="c9"
-                                      textType="small"
-                                    >
-                                      <Anchor
-                                        className="c9"
-                                        href="#"
-                                      >
-                                        <a
-                                          className="c9"
-                                          href="#"
-                                        />
-                                      </Anchor>
-                                    </Component>
-                                  </TextLink>
                                 </div>
                               </SectionDescription>
                             </Styled(SectionDescription)>
