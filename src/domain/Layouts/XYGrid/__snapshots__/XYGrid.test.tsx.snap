@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<XYGrid /> should render an XYGrid 1`] = `
+<XYGrid
+  gutterMargins={true}
+  gutterPadding={false}
+  vertical={false}
+>
+  <div
+    className="ihrGridX grid-margin-x"
+  >
+    <Cell
+      size={
+        Object {
+          "min": 10,
+        }
+      }
+    >
+      <div
+        className="ihrCell min-10"
+      >
+        <div>
+          1
+        </div>
+      </div>
+    </Cell>
+    <Cell
+      size={
+        Object {
+          "min": 2,
+        }
+      }
+    >
+      <div
+        className="ihrCell min-2"
+      >
+        <div>
+          2
+        </div>
+      </div>
+    </Cell>
+    <Cell
+      offset={
+        Object {
+          "tablet": 2,
+        }
+      }
+      size={
+        Object {
+          "desktop": 3,
+          "tablet": 4,
+        }
+      }
+    >
+      <div
+        className="ihrCell desktop-3 tablet-4 tablet-offset-2"
+      >
+        <div>
+          3
+        </div>
+      </div>
+    </Cell>
+    <Cell
+      size={
+        Object {
+          "desktop": 6,
+          "tablet": 4,
+        }
+      }
+    >
+      <div
+        className="ihrCell desktop-6 tablet-4"
+      >
+        <div>
+          4
+        </div>
+      </div>
+    </Cell>
+    <Cell
+      size="auto"
+    >
+      <div
+        className="ihrCell auto"
+      >
+        <div>
+          5
+        </div>
+      </div>
+    </Cell>
+  </div>
+</XYGrid>
+`;
