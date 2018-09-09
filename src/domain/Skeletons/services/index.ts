@@ -1,1 +1,0 @@
-export { ISkeletonProps } from './skeletonHelper'

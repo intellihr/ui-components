@@ -10,8 +10,6 @@ export interface ISectionDescriptionProps {
   description?: string,
   /** The text for the call to action */
   linkText?: string,
-  /** Where the call to action goes to */
-  linkUrl?: string,
   /** The className of the component (used by styled components) */
   className?: string,
   /** Any extra link props */
@@ -57,10 +55,26 @@ class SectionDescription extends React.PureComponent<ISectionDescriptionProps> {
     }
   }
 
-  public render (): JSX.Element {
+  get link () {
     const {
       linkText,
-      linkProps,
+      linkProps
+    } = this.props
+
+    if (linkText && linkProps) {
+      return (
+        <TextLink
+          textType={Props.TypographyType.small}
+          {...linkProps}
+        >
+          {linkText}
+        </TextLink>
+      )
+    }
+  }
+
+  public render (): JSX.Element {
+    const {
       className
     } = this.props
 
@@ -68,12 +82,7 @@ class SectionDescription extends React.PureComponent<ISectionDescriptionProps> {
       <div className={className}>
         {this.header}
         {this.description}
-        <TextLink
-          textType={Props.TypographyType.small}
-          {...linkProps}
-        >
-          {linkText}
-        </TextLink>
+        {this.link}
       </div>
     )
   }

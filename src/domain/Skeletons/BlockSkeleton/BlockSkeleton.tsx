@@ -1,6 +1,6 @@
 import React from 'react'
 import { BlockSkeletonWrapper } from './style'
-import { ISkeletonProps } from '../services/skeletonHelper'
+import { ISkeletonProps } from '../interfaces'
 
 export interface IBlockSkeletonProps extends ISkeletonProps {
   /** Width of the skeleton */

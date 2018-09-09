@@ -1,6 +1,6 @@
 import React from 'react'
 import { CircleSkeletonWrapper } from './style'
-import { ISkeletonProps } from '../services/skeletonHelper'
+import { ISkeletonProps } from '../interfaces'
 import { Props } from '../../../common'
 
 export interface ICircleSkeletonProps extends ISkeletonProps {
