@@ -90,11 +90,11 @@ $print-transparent-backgrounds: true;
 //
 $print-breakpoint: large;
 $breakpoints: (
-  small: $breakpoint-min,
+  small: $breakpoint-min, //deprecated
   min: $breakpoint-min,
-  medium: $breakpoint-tablet,
+  medium: $breakpoint-tablet, //deprecated
   tablet: $breakpoint-tablet,
-  large: $breakpoint-desktop,
+  large: $breakpoint-desktop, //deprecated
   desktop: $breakpoint-desktop,
   big-desktop: $breakpoint-big-desktop
 );

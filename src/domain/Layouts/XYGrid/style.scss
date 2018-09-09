@@ -6,12 +6,12 @@
 
 .ihr-grid-x,
 :local(.ihrGridX) {
-  @extend .grid-x;
+  @extend .grid-x; // sass-lint:disable-line placeholder-in-extend
 }
 
 .ihr-grid-y,
 :local(.ihrGridY) {
-  @extend .grid-y;
+  @extend .grid-y; // sass-lint:disable-line placeholder-in-extend
 
 
   height: 100%;
@@ -19,5 +19,5 @@
 
 .ihr-cell,
 :local(.ihrCell) {
-  @extend .cell;
+  @extend .cell; // sass-lint:disable-line placeholder-in-extend
 }
