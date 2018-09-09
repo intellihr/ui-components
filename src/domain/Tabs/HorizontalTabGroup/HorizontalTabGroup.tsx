@@ -44,7 +44,7 @@ export interface IHorizontalTabGroupProps {
 
 export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps, never> {
   public static defaultProps = {
-    useAnchors: false
+    anchorsUpdateUrl: false
   }
 
   private tabListRef: RefObject<HTMLUListElement> = React.createRef()
