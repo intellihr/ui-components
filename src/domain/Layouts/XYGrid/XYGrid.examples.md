@@ -70,7 +70,8 @@ const styleSmall = {
 
 #### Gutters
 
-Gutters can be added as margins and/or as padding between cells
+Gutters can be added as margins and/or as padding between cells. Generally, you'll want to use margins,
+as these won't change the width of the underlying cells (so elements will size correctly to their parents.)
 
 ```jsx
 const { Variables } = require('@Common');
@@ -104,34 +105,30 @@ const style = {
 </XYGrid>
 ```
 
+Padding can be useful for spacing text and other elements without needing wrappers, but should generally be
+avoided unless you have a good use case:
+
 ```jsx
 const { Variables } = require('@Common');
-const style = {
-  backgroundColor: Variables.Color.n400,
-  border: `2px solid ${Variables.Color.n100}`,
-  minHeight: '2rem',
-  height: '100%',
-  width: '100%'
-};
 
 <XYGrid
   gutterPaddingX
   gutterPaddingY
 >
-  <XYGrid.Cell size={{ min: 10 }}>
-    <div style={style}/>
+  <XYGrid.Cell size={{ min: 4 }}>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec libero et libero molestie eleifend. Donec dignissim vel erat eu cursus.
   </XYGrid.Cell>
-  <XYGrid.Cell size={{ min: 2 }}>
-    <div style={style}/>
+  <XYGrid.Cell size={{ min: 4 }}>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec libero et libero molestie eleifend. Donec dignissim vel erat eu cursus.
   </XYGrid.Cell>
-  <XYGrid.Cell size={{ desktop: 3, tablet: 4 }}>
-    <div style={style}/>
+  <XYGrid.Cell size={{ min: 4 }}>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec libero et libero molestie eleifend. Donec dignissim vel erat eu cursus.
   </XYGrid.Cell>
-  <XYGrid.Cell size={{ desktop: 6, tablet: 4 }}>
-    <div style={style}/>
+  <XYGrid.Cell size={{ min: 4 }}>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec libero et libero molestie eleifend. Donec dignissim vel erat eu cursus.
   </XYGrid.Cell>
-  <XYGrid.Cell size={{ desktop: 3, tablet: 4 }}>
-    <div style={style}/>
+  <XYGrid.Cell size={{ min: 4 }}>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec libero et libero molestie eleifend. Donec dignissim vel erat eu cursus.
   </XYGrid.Cell>
 </XYGrid>
 ```
