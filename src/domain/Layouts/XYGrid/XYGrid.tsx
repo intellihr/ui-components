@@ -5,10 +5,14 @@ import { Cell } from './subcomponents/Cell'
 const style = require('./style.scss')
 
 interface IXYGridProps {
-  /** Adds gutters between cells as margins */
-  gutterMargins?: boolean
-  /** Adds gutters between cells as padding */
-  gutterPadding?: boolean
+  /** Adds gutters between cells as margin in the x direction */
+  gutterMarginX?: boolean
+  /** Adds gutters between cells as margin in the y direction */
+  gutterMarginY?: boolean
+  /** Adds gutters between cells as padding in the x direction */
+  gutterPaddingX?: boolean
+  /** Adds gutters between cells as padding in the y direction */
+  gutterPaddingY?: boolean
   /** Makes the grid a vertical grid */
   vertical?: boolean
 }
@@ -18,8 +22,10 @@ export class XYGrid extends React.PureComponent<IXYGridProps, never> {
 
   public static defaultProps = {
     vertical: false,
-    gutterMargins: false,
-    gutterPadding: false
+    gutterMarginX: false,
+    gutterMarginY: false,
+    gutterPaddingX: false,
+    gutterPaddingY: false
   }
 
   public render (): JSX.Element {
@@ -37,18 +43,22 @@ export class XYGrid extends React.PureComponent<IXYGridProps, never> {
   private get classNames(): string {
     const {
       vertical,
-      gutterMargins,
-      gutterPadding
+      gutterMarginX,
+      gutterMarginY,
+      gutterPaddingX,
+      gutterPaddingY
     } = this.props
 
     const gridClass = vertical ? style.ihrGridY : style.ihrGridX
-    const marginClass = vertical ? 'grid-margin-y' : 'grid-margin-x'
-    const paddingClass = vertical ? 'grid-padding-y' : 'grid-padding-x'
 
     return classNames(
       gridClass,
-      gutterMargins && marginClass,
-      gutterPadding && paddingClass
+      {
+        'grid-margin-x': gutterMarginX,
+        'grid-margin-y': gutterMarginY,
+        'grid-padding-x': gutterPaddingX,
+        'grid-padding-y': gutterPaddingY
+      }
     )
   }
 }

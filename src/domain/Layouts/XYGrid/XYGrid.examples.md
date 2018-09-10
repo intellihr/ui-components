@@ -70,7 +70,7 @@ const styleSmall = {
 
 #### Gutters
 
-Gutters can be added as margins or as padding between cells
+Gutters can be added as margins and/or as padding between cells
 
 ```jsx
 const { Variables } = require('@Common');
@@ -83,7 +83,8 @@ const style = {
 };
 
 <XYGrid
-  gutterMargins
+  gutterMarginX
+  gutterMarginY
 >
   <XYGrid.Cell size={{ min: 10 }}>
     <div style={style}/>
@@ -114,7 +115,8 @@ const style = {
 };
 
 <XYGrid
-  gutterPadding
+  gutterPaddingX
+  gutterPaddingY
 >
   <XYGrid.Cell size={{ min: 10 }}>
     <div style={style}/>
@@ -189,7 +191,7 @@ const styleSmall = {
 
 <div style={{ height: '500px' }}>
   <XYGrid
-    gutterMargins
+    gutterMarginY
     vertical
   >
     <XYGrid.Cell size={{ min: 'shrink' }}>
@@ -219,7 +221,7 @@ const style = {
 };
 
 <XYGrid
-  gutterMargins
+  gutterMarginY
   vertical
 >
   <XYGrid.Cell>
@@ -255,7 +257,7 @@ const style = {
   width: '100%'
 };
 
-<div class="ihr-grid-x">
+<div class="ihr-grid-x grid-margin-x">
   <div class="ihr-cell min-10">
     <div style={style}/>
   </div>
