@@ -26,6 +26,8 @@ Please check our [CONTRIBUTING.md](/CONTRIBUTING.md) before contribute.
         * [UI-Components does not seem to be updated correctly](#ui-components-does-not-seem-to-be-updated-correctly)
     * [Styleguide Issues](#styleguide-issues)
         * [Styleguide uses wrong name for components](#styleguide-uses-wrong-name-for-components)
+    * [Typescript Issues](#typescript-issues)
+        * [Files with only type/interface do not generate .d.ts files](#files-with-only-typeinterface-do-not-generate-dts-files)
     * [Path Mapping in Typescript](#path-mapping-in-typescript)
     * [Add Dependency](#add-dependency)
         * [Add `dependencies`](#add-dependencies)
@@ -152,6 +154,23 @@ You can usually fix this by exporting the component where it is defined:
 ```typescript
 export const Component = styled(Thing)
 ```
+
+### Typescript Issues
+
+#### Files with only type/interface do not generate .d.ts files
+
+Github issue: https://github.com/s-panferov/awesome-typescript-loader/issues/432
+
+Files containing only an interface will not be built by awesome-typescript-loader.
+If you have a file with only a type/interface you will need to add and export a dummy variable to trick the loader into generating the file.
+
+```typescript
+interface a {}
+const b = {}
+
+export { a, b }
+```
+
 
 ### Path Mapping in Typescript
 
