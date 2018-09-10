@@ -5,6 +5,10 @@ interface ISkeletonProps {
   className?: string
 }
 
+// Explanation in README.md
+const workaround = {}
+
 export {
-  ISkeletonProps
+  ISkeletonProps,
+  workaround
 }
