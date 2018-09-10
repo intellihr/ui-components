@@ -112,6 +112,8 @@ const StyledTitledSectionActions = styled.div`
 `
 
 const StyledTitledSectionBody = styled.div`
+  width: 100%;
+
   @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
     padding-top: 1.5rem;
   }
