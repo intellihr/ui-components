@@ -38,7 +38,7 @@ body {
     min-width: 1380px;
     width: 1380px;
 
-    @include breakpoint(xlarge down) {
+    @include breakpoint(desktop down) {
       min-width: 0;
       width: 90%;
     }

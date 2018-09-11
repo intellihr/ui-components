@@ -19,8 +19,41 @@
 @mixin profile-layout {
   align-items: center;
 
-  @media only screen and (min-width: $breakpoint-tablet) {
+  @media only screen and (min-width: $breakpoint-desktop) {
     padding: 0 24px;
+
+    :local(.header),
+    .ihr-layout__header {
+      border-radius: $border-radius;
+    }
+
+    :local(.content),
+    .ihr-layout__content {
+      border-radius: $border-radius;
+      margin-top: -41px;
+      max-width:  $breakpoint-big-desktop / 12 * 10;
+      overflow: hidden;
+      width: 100% / 12 * 10;
+    }
+  }
+
+  @media only screen and (max-width: $breakpoint-desktop - 1) and (min-width: $breakpoint-tablet)  {
+    padding: 0 24px;
+
+    :local(.header),
+    .ihr-layout__header {
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+      margin-top: 24px;
+    }
+
+    :local(.content),
+    .ihr-layout__content {
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+      overflow: hidden;
+      width: 100%;
+    }
   }
 
   @media only screen and (max-width: $breakpoint-tablet - 1) {
@@ -28,6 +61,11 @@
     .ihr-layout__top {
       padding-left: 24px;
       padding-right: 24px;
+    }
+
+    :local(.content),
+    .ihr-layout__content {
+      width: 100%;
     }
   }
 
@@ -38,28 +76,12 @@
     max-width: $breakpoint-big-desktop;
     overflow: hidden;
     width: 100%;
-
-    @media only screen and (min-width: $breakpoint-tablet) {
-      border-radius: $border-radius;
-    }
   }
 
   :local(.content),
   .ihr-layout__content {
     margin-left: auto;
     margin-right: auto;
-
-    @media only screen and (max-width: $breakpoint-tablet - 1) {
-      width: 100%;
-    }
-
-    @media only screen and (min-width: $breakpoint-tablet) {
-      border-radius: $border-radius;
-      margin-top: -41px;
-      max-width:  $breakpoint-big-desktop / 12 * 10;
-      overflow: hidden;
-      width: 100% / 12 * 10;
-    }
   }
 }
 
@@ -101,8 +123,18 @@
   @include simple-layout
 }
 
+// this is to fix forms being not centered
+:local(.form),
+.ihr-layout--form {
+  @include simple-layout;
+
+  :local(.content),
+  .ihr-layout__content {
+    max-width: 900px;
+  }
+}
+
 :local(.fullscreen),
 .ihr-layout--fullscreen {
   @include fullscreen-layout
 }
-

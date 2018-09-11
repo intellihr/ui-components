@@ -51,6 +51,24 @@ const { Variables } = require('@Common');
 </PageLayout>
 ```
 
+#### Form Layout
+
+This layout should be used for forms, it is a quick fix to center them on the page
+since they are a max width of 900 instead of 1440
+
+```jsx
+const { Variables } = require('@Common');
+
+<PageLayout layoutType='form'>
+  <PageLayout.Region regionType='top'>
+     <div style={{backgroundColor: Variables.Color.n300, height: '40px'}}/>
+   </PageLayout.Region>
+  <PageLayout.Region regionType='content'>
+    <div style={{backgroundColor: Variables.Color.n600, height: '500px'}}/>
+  </PageLayout.Region>
+</PageLayout>
+```
+
 #### Plain HTML Layout
 
 Layouts can be used in plain html files by using global class names
@@ -73,6 +91,18 @@ const { Variables } = require('@Common');
 const { Variables } = require('@Common');
 
 <div class='ihr-layout ihr-layout--simple'>
+  <div class='ihr-layout__top'>
+    <div style={{backgroundColor: Variables.Color.n400, height: '40px'}}/>
+  </div>
+  <div class='ihr-layout__content'>
+    <div style={{backgroundColor: Variables.Color.n600, height: '500px'}}/>
+  </div>
+</div>
+```
+```jsx
+const { Variables } = require('@Common');
+
+<div class='ihr-layout ihr-layout--form'>
   <div class='ihr-layout__top'>
     <div style={{backgroundColor: Variables.Color.n400, height: '40px'}}/>
   </div>

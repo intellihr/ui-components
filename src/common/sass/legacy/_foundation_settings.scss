@@ -41,7 +41,7 @@
 //  36. Tooltip
 //  37. Top Bar
 
-@import 'util/util';
+@import '~foundation-sites/scss/util/util';
 
 // 0. UI-Components globals
 // ---------
@@ -89,7 +89,16 @@ $print-transparent-backgrounds: true;
 // the medium breakpoint will be a range from 640 to 1023
 //
 $print-breakpoint: large;
-$breakpoint-classes: (small medium large xlarge xxlarge);
+$breakpoints: (
+  small: $breakpoint-min, //deprecated
+  min: $breakpoint-min,
+  medium: $breakpoint-tablet, //deprecated
+  tablet: $breakpoint-tablet,
+  large: $breakpoint-desktop, //deprecated
+  desktop: $breakpoint-desktop,
+  big-desktop: $breakpoint-big-desktop
+);
+$breakpoint-classes: (small medium large min tablet desktop big-desktop);
 
 // 3. The Grid
 // -----------
@@ -110,7 +119,9 @@ $grid-container: $global-width;
 $grid-columns: 12;
 $grid-margin-gutters: (
   small: 16,
-  medium: 24
+  medium: 24,
+  min: 16,
+  tablet: 24
 );
 $grid-padding-gutters: $grid-margin-gutters;
 $grid-container-padding: $grid-padding-gutters;

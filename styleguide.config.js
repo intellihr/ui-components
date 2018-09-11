@@ -123,7 +123,8 @@ module.exports = {
           components: [
             'src/domain/Layouts/PageLayout/PageLayout',
             'src/domain/Layouts/SectionList/SectionList',
-            'src/domain/Layouts/Stacks/VerticalStack/VerticalStack'
+            'src/domain/Layouts/Stacks/VerticalStack/VerticalStack',
+            'src/domain/Layouts/XYGrid/XYGrid'
           ]
         },
         {
