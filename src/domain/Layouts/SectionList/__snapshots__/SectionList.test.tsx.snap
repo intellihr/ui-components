@@ -70,15 +70,20 @@ exports[`<SectionList /> should render a section list with a titled section with
 
 @media only screen and (max-width:639px) {
   .c2 {
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 24px 16px 12px;
   }
 }
 
 @media only screen and (max-width:639px) {
   .c5 {
-    padding: 24px 16px;
+    padding-bottom: 12px;
   }
 }
 
@@ -96,13 +101,6 @@ exports[`<SectionList /> should render a section list with a titled section with
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-  }
-}
-
-@media only screen and (max-width:639px) {
-  .c6 {
-    padding-left: 16px;
-    padding-right: 16px;
   }
 }
 
@@ -795,15 +793,20 @@ exports[`<SectionList /> should render a sectionList 1`] = `
 
 @media only screen and (max-width:639px) {
   .c13 {
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 24px 16px 12px;
   }
 }
 
 @media only screen and (max-width:639px) {
   .c14 {
-    padding: 24px 16px;
+    padding-bottom: 12px;
   }
 }
 
@@ -821,13 +824,6 @@ exports[`<SectionList /> should render a sectionList 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-  }
-}
-
-@media only screen and (max-width:639px) {
-  .c17 {
-    padding-left: 16px;
-    padding-right: 16px;
   }
 }
 
@@ -1463,15 +1459,20 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
 
 @media only screen and (max-width:639px) {
   .c11 {
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 24px 16px 12px;
   }
 }
 
 @media only screen and (max-width:639px) {
   .c12 {
-    padding: 24px 16px;
+    padding-bottom: 12px;
   }
 }
 
@@ -1489,13 +1490,6 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-  }
-}
-
-@media only screen and (max-width:639px) {
-  .c15 {
-    padding-left: 16px;
-    padding-right: 16px;
   }
 }
 
