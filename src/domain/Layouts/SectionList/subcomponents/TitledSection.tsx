@@ -37,11 +37,13 @@ class TitledSection extends React.PureComponent<ITitledSectionProps> {
               {actionItems}
           </StyledTitledSectionActions>
         </StyledTitledSectionHeaderRow>
-        <Row>
+        {children &&
+          <Row>
             <StyledTitledSectionBody>
               {children}
             </StyledTitledSectionBody>
-        </Row>
+          </Row>
+        }
       </StyledTitledSection>
     )
   }
