@@ -78,15 +78,17 @@ const StyledTitledSectionHeaderRow = styled(Row)`
   }
 
   @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    padding: ${verticalPaddingMobile}px ${horizontalPaddingMobile}px ${verticalPaddingMobile/2}px;
   }
 `
 
 const StyledTitledSectionDescription = styled(SectionDescription)`
   @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
-    padding: ${verticalPaddingMobile}px ${horizontalPaddingMobile}px;
+    padding-bottom: ${verticalPaddingMobile/2}px;
   }
-
+  
   @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
     margin-right: ${horizontalMarginDesktop}px;
     display: flex;
@@ -98,12 +100,7 @@ const StyledTitledSectionDescription = styled(SectionDescription)`
 const StyledTitledSectionActions = styled.div`
   flex-shrink: 0;
   flex-grow: 1;
-
-  @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
-    padding-left: ${horizontalPaddingMobile}px;
-    padding-right: ${horizontalPaddingMobile}px;
-  }
-
+  
   @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
     text-align: right;
   }
