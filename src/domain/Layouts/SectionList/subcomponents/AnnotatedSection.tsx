@@ -40,11 +40,13 @@ class AnnotatedSection extends React.PureComponent<IAnnotatedSectionProps> {
               linkProps={linkProps}
             />
           </Row.Column>
-          <Row.Column sm={12} md={8}>
-            <StyledAnnotatedSectionBody>
-              {children}
-            </StyledAnnotatedSectionBody>
-          </Row.Column>
+          {children &&
+            <Row.Column sm={12} md={8}>
+              <StyledAnnotatedSectionBody>
+                {children}
+              </StyledAnnotatedSectionBody>
+            </Row.Column>
+          }
         </Row>
       </StyledAnnotatedSection>
     )
