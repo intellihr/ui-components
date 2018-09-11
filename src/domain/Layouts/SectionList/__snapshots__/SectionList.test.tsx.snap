@@ -222,13 +222,13 @@ exports[`<SectionList /> should render a section list with a titled section with
                         <div
                           className="c4"
                         >
-                          <styled.div>
+                          <StyledTitledSectionBody>
                             <div
                               className="c7"
                             >
                               section 1
                             </div>
-                          </styled.div>
+                          </StyledTitledSectionBody>
                         </div>
                       </Row>
                     </div>
@@ -500,13 +500,13 @@ exports[`<SectionList /> should render a section list with an annotated section 
                                 className="c7"
                                 type="row"
                               >
-                                <styled.div>
+                                <StyledAnnotatedSectionBody>
                                   <div
                                     className="c8"
                                   >
                                     section 2
                                   </div>
-                                </styled.div>
+                                </StyledAnnotatedSectionBody>
                               </div>
                             </Col>
                           </Column>
@@ -1029,13 +1029,13 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                 className="c10"
                                 type="row"
                               >
-                                <styled.div>
+                                <StyledAnnotatedSectionBody>
                                   <div
                                     className="c11"
                                   >
                                     section 2
                                   </div>
-                                </styled.div>
+                                </StyledAnnotatedSectionBody>
                               </div>
                             </Col>
                           </Column>
@@ -1229,13 +1229,13 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                         <div
                           className="c4"
                         >
-                          <styled.div>
+                          <StyledTitledSectionBody>
                             <div
                               className="c18"
                             >
                               section 3
                             </div>
-                          </styled.div>
+                          </StyledTitledSectionBody>
                         </div>
                       </Row>
                     </div>

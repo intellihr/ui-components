@@ -124,6 +124,9 @@ const StyledTitledSectionBody = styled.div`
   }
 `
 
+StyledTitledSectionBody.displayName = 'StyledTitledSectionBody'
+StyledAnnotatedSectionBody.displayName = 'StyledAnnotatedSectionBody'
+
 export {
   SectionBorder,
   StyledSection,

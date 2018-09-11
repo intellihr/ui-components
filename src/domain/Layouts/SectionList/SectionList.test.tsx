@@ -33,6 +33,8 @@ describe('<SectionList />', () => {
     )
 
     expect(wrapper).toMatchSnapshot()
+    expect(wrapper.find('StyledTitledSectionBody').exists()).toBeTruthy()
+    expect(wrapper.find('StyledAnnotatedSectionBody').exists()).toBeTruthy()
   })
 
   it('should render sectionList items with no children', () => {
@@ -57,6 +59,8 @@ describe('<SectionList />', () => {
     )
 
     expect(wrapper).toMatchSnapshot()
+    expect(wrapper.find('StyledTitledSectionBody').exists()).toBeFalsy()
+    expect(wrapper.find('StyledAnnotatedSectionBody').exists()).toBeFalsy()
   })
 
   it('should render a section list with an annotated section without props', () => {
