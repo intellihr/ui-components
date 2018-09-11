@@ -14,15 +14,15 @@ import { TextInput } from '../../Inputs'
 import { Props } from '../../../common'
 const style = require('./DataTable.scss')
 
-type alignmentOptions = Props.Position.Left | Props.Position.Center | Props.Position.Right
-type pageSizeOption = 10 | 25 | 50 | 100
+type AlignmentOption = Props.Position.Left | Props.Position.Center | Props.Position.Right
+type PageSizeOption = 10 | 25 | 50 | 100
 
 interface IDataTableColumn extends Column {
   /** Alignment for the header on the column */
-  headerAlignment?: alignmentOptions
+  headerAlignment?: AlignmentOption
 
   /** Alignment for the content in the column */
-  columnAlignment?: alignmentOptions
+  columnAlignment?: AlignmentOption
 }
 
 interface IDataTableState {
@@ -44,7 +44,7 @@ interface IDataTableProps {
   /** Whether the table should be paginated */
   showPagination?: boolean
   /** Default page size (only applicable if paginated) */
-  defaultPageSize?: pageSizeOption
+  defaultPageSize?: PageSizeOption
   /** Whether we should add a search filter - requires pagination  */
   showSearchFilter?: boolean
   /** Show vertical delineation between columns  */
@@ -150,7 +150,7 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
     })
   }
 
-  public columnClassName (alignment: alignmentOptions | undefined): string | undefined {
+  public columnClassName (alignment: AlignmentOption | undefined): string | undefined {
     switch (alignment) {
       case Props.Position.Right:
         return 'content-right'
