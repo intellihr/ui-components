@@ -15,6 +15,7 @@ import { Props } from '../../../common'
 const style = require('./DataTable.scss')
 
 type alignmentOptions = Props.Position.Left | Props.Position.Center | Props.Position.Right
+type pageSizeOption = 10 | 25 | 50 | 100
 
 interface IDataTableColumn extends Column {
   /** Alignment for the header on the column */
@@ -32,25 +33,22 @@ interface IDataTableState {
 interface IDataTableProps {
   /** Name for this table */
   tableId?: string
-
   /** List of all row data */
   data: any[]
   /** Column definitions for the table */
   columns: IDataTableColumn[]
-
   /** Whether the table can be sorted on its columns */
   sortable?: boolean
   /** Default sorting properties */
   defaultSorted?: SortingRule[]
   /** Whether the table should be paginated */
   showPagination?: boolean
-
+  /** Default page size (only applicable if paginated) */
+  defaultPageSize?: pageSizeOption
   /** Whether we should add a search filter - requires pagination  */
   showSearchFilter?: boolean
-
   /** Show vertical delineation between columns  */
   showVerticalLines?: boolean
-
   /** Placeholder replacement for when there is no data  */
   noDataComponent?: JSX.Element
 
@@ -214,7 +212,6 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
     return {
       resizable: false,
       minRows: 0,
-      defaultPageSize: 25,
       pageSizeOptions: [10, 25, 50, 100],
       showPaginationTop: true,
       showPaginationBottom: true,
@@ -241,6 +238,7 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
   public render (): JSX.Element {
     const {
       showPagination,
+      defaultPageSize,
       sortable,
       defaultSorted,
       reactTableOverrides
@@ -256,6 +254,7 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
       showPagination={showPagination}
       showPaginationBottom={filteredData.length > 0}
       showPageSizeOptions={showPagination}
+      defaultPageSize={defaultPageSize ? defaultPageSize : 25}
       pageSize={showPagination ? undefined : filteredData.length}
       sortable={sortable}
       defaultSorted={defaultSorted}
