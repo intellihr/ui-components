@@ -123,8 +123,18 @@
   @include simple-layout
 }
 
+// this is to fix forms being not centered
+:local(.form),
+.ihr-layout--form {
+  @include simple-layout;
+
+  :local(.content),
+  .ihr-layout__content {
+    max-width: 900px;
+  }
+}
+
 :local(.fullscreen),
 .ihr-layout--fullscreen {
   @include fullscreen-layout
 }
-
