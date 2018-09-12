@@ -3,20 +3,19 @@ import { Variables } from '../../common'
 
 const progress = keyframes`
   0% {
-    background-position: -200px 0;
+    opacity: .45;
   }
 
-  100% {
-    background-position: calc(200px + 100%) 0;
+  to {
+    opacity: .9;
   }
 `
 
 export const SkeletonWrapper = styled.span`
-  animation: ${progress} 1.2s ease-in-out infinite;
-  background-color: ${Variables.Color.n200};
-  background-image: linear-gradient(90deg, ${Variables.Color.n200}, ${Variables.Color.n300}, ${Variables.Color.n200});
-  background-repeat: no-repeat;
-  background-size: 200px 100%;
-  border: 1px solid ${Variables.Color.n200};
+  animation: ${progress} .8s linear infinite alternate;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: ${Variables.Color.n300};
+  border: 1px solid ${Variables.Color.n300};
   display: inline-flex;
 `

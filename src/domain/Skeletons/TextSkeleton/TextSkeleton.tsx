@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { TextSkeletonWrapper } from './style'
 import { ISkeletonProps } from '../interfaces'
 import { Props } from '../../../common'
@@ -7,9 +7,7 @@ export interface ITextSkeletonProps extends ISkeletonProps {
   /** Width of the skeleton */
   width?: number,
   /** Text type the skeleton is being rendered for */
-  type?: Props.TypographyType,
-  /** Number of lines of TextSkeleton to render (to make a paragraph skeleton) */
-  numLines?: number
+  type?: Props.TypographyType
 }
 
 class TextSkeleton extends React.Component<ITextSkeletonProps> {
@@ -18,33 +16,13 @@ class TextSkeleton extends React.Component<ITextSkeletonProps> {
     type: Props.TypographyType.body
   }
 
-  public skeleton (key: number): JSX.Element {
-    const {
-      type,
-      width
-    } = this.props
-
-    const {
-      className
-    } = this.props
-
-    return (
-      <TextSkeletonWrapper
-        textType={type}
-        width={width}
-        className={className}
-        key={key}
-      >
-        {String.fromCharCode(8204)}
-      </TextSkeletonWrapper>
-    )
-  }
-
   public render (): JSX.Element {
     const {
       showSkeleton,
-      numLines,
-      children
+      type,
+      width,
+      children,
+      className
     } = this.props
 
     if (!showSkeleton) {
@@ -55,18 +33,14 @@ class TextSkeleton extends React.Component<ITextSkeletonProps> {
       )
     }
 
-    const arrayLength = numLines ? numLines : 1
-
-    const skeletons = new Array<JSX.Element>(arrayLength)
-
-    for (let i = 0; i < arrayLength; i++) {
-      skeletons.push(this.skeleton(i))
-    }
-
     return (
-      <Fragment>
-        {skeletons}
-      </Fragment>
+      <TextSkeletonWrapper
+        textType={type}
+        width={width}
+        className={className}
+      >
+        {String.fromCharCode(8204)}
+      </TextSkeletonWrapper>
     )
   }
 }

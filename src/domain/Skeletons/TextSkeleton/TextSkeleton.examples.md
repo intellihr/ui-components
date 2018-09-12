@@ -6,15 +6,6 @@
 />
 ```
 
-#### Multi-Line Text Skeleton
-
-```jsx
-<TextSkeleton
-  showSkeleton={true}
-  numLines={5}
-/>
-```
-
 #### Text Skeleton with Width Option
 
 ```jsx
