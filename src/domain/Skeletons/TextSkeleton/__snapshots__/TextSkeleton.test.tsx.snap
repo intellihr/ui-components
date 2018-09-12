@@ -1,114 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TextSkeleton /> should render a multi line text skeleton 1`] = `
-.c1 {
-  -webkit-animation: jXsTbE .8s linear infinite alternate;
-  animation: jXsTbE .8s linear infinite alternate;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: #E1E6EB;
-  border: 1px solid #E1E6EB;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.c0 {
-  border-radius: 4px;
-  width: 100%;
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-}
-
-<TextSkeleton
-  numLines={5}
-  showSkeleton={true}
-  type="body"
->
-  <Styled(styled.span)
-    key="0"
-    textType="body"
-  >
-    <styled.span
-      className="c0"
-      textType="body"
-    >
-      <span
-        className="c0 c1"
-      >
-        ‌
-      </span>
-    </styled.span>
-  </Styled(styled.span)>
-  <Styled(styled.span)
-    key="1"
-    textType="body"
-  >
-    <styled.span
-      className="c0"
-      textType="body"
-    >
-      <span
-        className="c0 c1"
-      >
-        ‌
-      </span>
-    </styled.span>
-  </Styled(styled.span)>
-  <Styled(styled.span)
-    key="2"
-    textType="body"
-  >
-    <styled.span
-      className="c0"
-      textType="body"
-    >
-      <span
-        className="c0 c1"
-      >
-        ‌
-      </span>
-    </styled.span>
-  </Styled(styled.span)>
-  <Styled(styled.span)
-    key="3"
-    textType="body"
-  >
-    <styled.span
-      className="c0"
-      textType="body"
-    >
-      <span
-        className="c0 c1"
-      >
-        ‌
-      </span>
-    </styled.span>
-  </Styled(styled.span)>
-  <Styled(styled.span)
-    key="4"
-    textType="body"
-  >
-    <styled.span
-      className="c0"
-      textType="body"
-    >
-      <span
-        className="c0 c1"
-      >
-        ‌
-      </span>
-    </styled.span>
-  </Styled(styled.span)>
-</TextSkeleton>
-`;
-
 exports[`<TextSkeleton /> should render a text skeleton 1`] = `
 .c1 {
   -webkit-animation: jXsTbE .8s linear infinite alternate;
@@ -127,6 +18,8 @@ exports[`<TextSkeleton /> should render a text skeleton 1`] = `
 .c0 {
   border-radius: 4px;
   width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   font-size: 16px;
   line-height: 24px;
   -webkit-letter-spacing: normal;
@@ -140,7 +33,6 @@ exports[`<TextSkeleton /> should render a text skeleton 1`] = `
   type="body"
 >
   <Styled(styled.span)
-    key="0"
     textType="body"
   >
     <styled.span
@@ -175,6 +67,8 @@ exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
 .c0 {
   border-radius: 4px;
   width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   font-size: 24px;
   line-height: 28px;
   -webkit-letter-spacing: -.02em;
@@ -188,7 +82,6 @@ exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
   type="display"
 >
   <Styled(styled.span)
-    key="0"
     textType="display"
   >
     <styled.span
@@ -223,6 +116,8 @@ exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
 .c0 {
   border-radius: 4px;
   width: 250px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   font-size: 16px;
   line-height: 24px;
   -webkit-letter-spacing: normal;
@@ -237,7 +132,6 @@ exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
   width={250}
 >
   <Styled(styled.span)
-    key="0"
     textType="body"
     width={250}
   >
