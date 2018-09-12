@@ -8,7 +8,7 @@ exports[`<Field /> should render a Field component, creating a Text child with t
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
-  color: #667380;
+  color: #424F5C;
   font-weight: 400;
   display: block;
 }
@@ -33,20 +33,20 @@ exports[`<Field /> should render a Field component, creating a Text child with t
     >
       <Text
         className="label-component"
-        color="#667380"
+        color="#424F5C"
         isInline={false}
         tag="span"
         type="small"
       >
         <styled.span
           className="label-component"
-          color="#667380"
+          color="#424F5C"
           isInline={false}
           textType="small"
         >
           <span
             className="label-component c0"
-            color="#667380"
+            color="#424F5C"
           >
             FTE
           </span>
@@ -85,7 +85,7 @@ exports[`<Field /> should render a Field component, creating a Text child with t
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
-  color: #667380;
+  color: #424F5C;
   font-weight: 400;
   display: block;
 }
@@ -110,20 +110,20 @@ exports[`<Field /> should render a Field component, creating a Text child with t
     >
       <Text
         className="label-component"
-        color="#667380"
+        color="#424F5C"
         isInline={false}
         tag="span"
         type="small"
       >
         <styled.span
           className="label-component"
-          color="#667380"
+          color="#424F5C"
           isInline={false}
           textType="small"
         >
           <span
             className="label-component c0"
-            color="#667380"
+            color="#424F5C"
           >
             Position Title
           </span>
@@ -162,7 +162,7 @@ exports[`<Field /> should render a Field component, with the provided component 
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
-  color: #667380;
+  color: #424F5C;
   font-weight: 400;
   display: block;
 }
@@ -176,20 +176,20 @@ exports[`<Field /> should render a Field component, with the provided component 
     >
       <Text
         className="label-component"
-        color="#667380"
+        color="#424F5C"
         isInline={false}
         tag="span"
         type="small"
       >
         <styled.span
           className="label-component"
-          color="#667380"
+          color="#424F5C"
           isInline={false}
           textType="small"
         >
           <span
             className="label-component c0"
-            color="#667380"
+            color="#424F5C"
           >
             Position Title
           </span>
