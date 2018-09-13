@@ -26,7 +26,7 @@ export interface ITextProps {
 export class Text extends React.PureComponent<ITextProps> {
   public static defaultProps: Partial<ITextProps> = {
     isInline: true,
-    type: Props.TypographyType.body,
+    type: Props.TypographyType.Body,
     tag: 'span'
   }
 

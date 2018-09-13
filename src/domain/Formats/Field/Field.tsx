@@ -47,7 +47,7 @@ class Field extends React.PureComponent <IFieldProps> {
     return (
       <FieldLabelWrapper labelRightComponent={labelRightComponent}>
         <Text
-          type={Props.TypographyType.small}
+          type={Props.TypographyType.Small}
           color={Variables.Color.n700}
           isInline={!isNil(labelRightComponent)}
           className='label-component'

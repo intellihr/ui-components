@@ -13,7 +13,7 @@ export interface ITextSkeletonProps extends ISkeletonProps {
 class TextSkeleton extends React.Component<ITextSkeletonProps> {
   public static defaultProps: Partial<ITextSkeletonProps> = {
     showSkeleton: false,
-    type: Props.TypographyType.body
+    type: Props.TypographyType.Body
   }
 
   public render (): JSX.Element {

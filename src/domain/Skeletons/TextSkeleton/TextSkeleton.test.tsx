@@ -29,7 +29,7 @@ describe('<TextSkeleton />', () => {
     const wrapper = mount(
       <TextSkeleton
         showSkeleton
-        type={Props.TypographyType.display}
+        type={Props.TypographyType.Display}
       />
     )
 

@@ -31,12 +31,12 @@ namespace Props {
   }
 
   export enum TypographyType {
-    xsmall = 'xsmall',
-    small = 'small',
-    body = 'body',
-    heading = 'heading',
-    display = 'display',
-    displayLarge = 'display-large'
+    XSmall = 'xsmall',
+    Small = 'small',
+    Body = 'body',
+    Heading = 'heading',
+    Display = 'display',
+    DisplayLarge = 'display-large'
   }
 }
 
