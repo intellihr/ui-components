@@ -26,13 +26,12 @@ export class LinkButton extends BaseButton<ILinkButtonProps> {
       onClick
     } = this.props
 
-    if (disabled) {
-      event.preventDefault()
-      return
-    }
-
     if(onClick) {
       onClick(event)
+    }
+
+    if (disabled) {
+      event.preventDefault()
     }
   }
 
