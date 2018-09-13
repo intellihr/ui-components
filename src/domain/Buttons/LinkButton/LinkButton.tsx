@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { MouseEvent } from 'react'
 import { buttonClass, IBaseButtonProps } from '../services/buttonHelper'
 import { Anchor } from '../../Internals'
 import { BaseButton } from '../BaseButton'
@@ -20,6 +20,22 @@ export class LinkButton extends BaseButton<ILinkButtonProps> {
     type: 'neutral'
   }
 
+  private handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    const {
+      disabled,
+      onClick
+    } = this.props
+
+    if (disabled) {
+      event.preventDefault()
+      return
+    }
+
+    if(onClick) {
+      onClick(event)
+    }
+  }
+
   public render (): JSX.Element | null {
     const {
       className,
@@ -33,8 +49,9 @@ export class LinkButton extends BaseButton<ILinkButtonProps> {
 
     return (
       <Anchor
-        href={disabled ? '#' : href}
+        href={href}
         anchorComponentProps={anchorComponentProps}
+        onClick={this.handleClick}
       >
         <span className={buttonClass(type!, size, className, { disabled, 'full-width': fullWidth })}>
           {this.buttonContent}
