@@ -50,7 +50,7 @@ export class LinkButton extends BaseButton<ILinkButtonProps> {
       onClick
     } = this.props
 
-    if(onClick) {
+    if (onClick) {
       onClick(event)
     }
 
