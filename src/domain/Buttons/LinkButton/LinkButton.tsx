@@ -20,21 +20,6 @@ export class LinkButton extends BaseButton<ILinkButtonProps> {
     type: 'neutral'
   }
 
-  private handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    const {
-      disabled,
-      onClick
-    } = this.props
-
-    if(onClick) {
-      onClick(event)
-    }
-
-    if (disabled) {
-      event.preventDefault()
-    }
-  }
-
   public render (): JSX.Element | null {
     const {
       className,
@@ -57,5 +42,20 @@ export class LinkButton extends BaseButton<ILinkButtonProps> {
         </span>
       </Anchor>
     )
+  }
+
+  private handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    const {
+      disabled,
+      onClick
+    } = this.props
+
+    if(onClick) {
+      onClick(event)
+    }
+
+    if (disabled) {
+      event.preventDefault()
+    }
   }
 }
