@@ -86,7 +86,7 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
       >
         <Text
           color={Variables.Color.n600}
-          type={Props.TypographyType.xsmall}
+          type={Props.TypographyType.XSmall}
           isTruncated
           isInline={isCompact}
         >
@@ -109,7 +109,7 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
     return (
         <Text
           color={Variables.Color.n600}
-          type={Props.TypographyType.xsmall}
+          type={Props.TypographyType.XSmall}
           weight='heavy'
           isInline={false}
           isTruncated

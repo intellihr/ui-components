@@ -28,7 +28,7 @@ class SectionDescription extends React.PureComponent<ISectionDescriptionProps> {
       return (
         <Text
           isInline={false}
-          type={Props.TypographyType.small}
+          type={Props.TypographyType.Small}
           color={Variables.Color.n600}
         >
           {description}
@@ -46,7 +46,7 @@ class SectionDescription extends React.PureComponent<ISectionDescriptionProps> {
       return (
         <Text
           tag='h2'
-          type={Props.TypographyType.heading}
+          type={Props.TypographyType.Heading}
           color={Variables.Color.n700}
         >
           {header}
@@ -64,7 +64,7 @@ class SectionDescription extends React.PureComponent<ISectionDescriptionProps> {
     if (linkText && linkProps) {
       return (
         <TextLink
-          textType={Props.TypographyType.small}
+          textType={Props.TypographyType.Small}
           {...linkProps}
         >
           {linkText}
