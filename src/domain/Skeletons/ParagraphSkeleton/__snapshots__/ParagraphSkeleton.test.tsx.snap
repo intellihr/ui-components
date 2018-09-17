@@ -41,6 +41,10 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
   letter-spacing: normal;
 }
 
+.c3 {
+  width: 50%;
+}
+
 <ParagraphSkeleton
   showSkeleton={true}
 >
@@ -144,27 +148,31 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
         </styled.span>
       </Styled(styled.span)>
     </TextSkeleton>
-    <TextSkeleton
-      className="bottomTextSkeleton"
-      showSkeleton={true}
-      type="body"
-    >
-      <Styled(styled.span)
-        className="bottomTextSkeleton"
-        textType="body"
+    <styled.div>
+      <div
+        className="c3"
       >
-        <styled.span
-          className="bottomTextSkeleton c2"
-          textType="body"
+        <TextSkeleton
+          showSkeleton={true}
+          type="body"
         >
-          <span
-            className="bottomTextSkeleton c2 c1"
+          <Styled(styled.span)
+            textType="body"
           >
-            ‌
-          </span>
-        </styled.span>
-      </Styled(styled.span)>
-    </TextSkeleton>
+            <styled.span
+              className="c2"
+              textType="body"
+            >
+              <span
+                className="c2 c1"
+              >
+                ‌
+              </span>
+            </styled.span>
+          </Styled(styled.span)>
+        </TextSkeleton>
+      </div>
+    </styled.div>
   </div>
 </ParagraphSkeleton>
 `;

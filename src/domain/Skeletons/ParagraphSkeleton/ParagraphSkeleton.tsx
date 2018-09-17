@@ -2,7 +2,7 @@ import React from 'react'
 import { Props } from '../../../common'
 import { ISkeletonProps } from '../interfaces'
 import { TextSkeleton } from '../TextSkeleton'
-const style = require('./style.scss')
+import { BottomTextSkeletonWrapper } from './style'
 
 class ParagraphSkeleton extends React.Component<ISkeletonProps> {
   public static defaultProps: Partial<ISkeletonProps> = {
@@ -43,10 +43,11 @@ class ParagraphSkeleton extends React.Component<ISkeletonProps> {
           <TextSkeleton
             showSkeleton
           />
-          <TextSkeleton
-            showSkeleton
-            className={style.bottomTextSkeleton}
-          />
+          <BottomTextSkeletonWrapper>
+            <TextSkeleton
+              showSkeleton
+            />
+          </BottomTextSkeletonWrapper>
       </div>
     )
   }
