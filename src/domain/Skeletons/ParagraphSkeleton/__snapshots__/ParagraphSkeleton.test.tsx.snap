@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
+.c1 {
+  -webkit-animation: jXsTbE .8s linear infinite alternate;
+  animation: jXsTbE .8s linear infinite alternate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: #E1E6EB;
+  border: 1px solid #E1E6EB;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c0 {
+  border-radius: 4px;
+  width: 200px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 36px;
+  line-height: 40px;
+  -webkit-letter-spacing: -.02em;
+  -moz-letter-spacing: -.02em;
+  -ms-letter-spacing: -.02em;
+  letter-spacing: -.02em;
+}
+
+.c2 {
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+}
+
+<ParagraphSkeleton
+  showSkeleton={true}
+>
+  <div>
+    <TextSkeleton
+      showSkeleton={true}
+      type="display-large"
+      width={200}
+    >
+      <Styled(styled.span)
+        textType="display-large"
+        width={200}
+      >
+        <styled.span
+          className="c0"
+          textType="display-large"
+          width={200}
+        >
+          <span
+            className="c0 c1"
+            width={200}
+          >
+            ‌
+          </span>
+        </styled.span>
+      </Styled(styled.span)>
+    </TextSkeleton>
+    <TextSkeleton
+      showSkeleton={true}
+      type="body"
+    >
+      <Styled(styled.span)
+        textType="body"
+      >
+        <styled.span
+          className="c2"
+          textType="body"
+        >
+          <span
+            className="c2 c1"
+          >
+            ‌
+          </span>
+        </styled.span>
+      </Styled(styled.span)>
+    </TextSkeleton>
+    <TextSkeleton
+      showSkeleton={true}
+      type="body"
+    >
+      <Styled(styled.span)
+        textType="body"
+      >
+        <styled.span
+          className="c2"
+          textType="body"
+        >
+          <span
+            className="c2 c1"
+          >
+            ‌
+          </span>
+        </styled.span>
+      </Styled(styled.span)>
+    </TextSkeleton>
+    <TextSkeleton
+      showSkeleton={true}
+      type="body"
+    >
+      <Styled(styled.span)
+        textType="body"
+      >
+        <styled.span
+          className="c2"
+          textType="body"
+        >
+          <span
+            className="c2 c1"
+          >
+            ‌
+          </span>
+        </styled.span>
+      </Styled(styled.span)>
+    </TextSkeleton>
+    <TextSkeleton
+      showSkeleton={true}
+      type="body"
+    >
+      <Styled(styled.span)
+        textType="body"
+      >
+        <styled.span
+          className="c2"
+          textType="body"
+        >
+          <span
+            className="c2 c1"
+          >
+            ‌
+          </span>
+        </styled.span>
+      </Styled(styled.span)>
+    </TextSkeleton>
+    <TextSkeleton
+      className="bottomTextSkeleton"
+      showSkeleton={true}
+      type="body"
+    >
+      <Styled(styled.span)
+        className="bottomTextSkeleton"
+        textType="body"
+      >
+        <styled.span
+          className="bottomTextSkeleton c2"
+          textType="body"
+        >
+          <span
+            className="bottomTextSkeleton c2 c1"
+          >
+            ‌
+          </span>
+        </styled.span>
+      </Styled(styled.span)>
+    </TextSkeleton>
+  </div>
+</ParagraphSkeleton>
+`;
