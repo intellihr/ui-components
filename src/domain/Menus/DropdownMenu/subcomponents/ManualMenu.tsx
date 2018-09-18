@@ -6,7 +6,7 @@ import FocusTrap from 'focus-trap-react'
 import { Props } from '../../../../common'
 import { StyledDropdownMenu, StyledContentWrapper, StyledDropdownCustomContent, StyledDropdownSectionList } from './style'
 import { Section, ISectionProps } from './Section'
-import { DropdownMenu, IDropdownMenuChildProps } from '../DropdownMenu'
+import { DropdownMenu } from '../DropdownMenu'
 
 interface IManualMenuProps {
   /**
@@ -40,8 +40,13 @@ interface IManualMenuProps {
   onDropdownClose: () => void,
   /** Parent ref to anchor this to on the page */
   parentRef: RefObject<HTMLSpanElement>
-  /** */
-  children?: (props: IDropdownMenuChildProps) => React.ReactElement<any>
+  /** Children to display as custom content instead of sections */
+  children?: (props: IManualMenuChildrenProps) => React.ReactElement<any>
+}
+
+interface IManualMenuChildrenProps {
+  /** Callback to close the menu */
+  closeMenu: () => void
 }
 
 class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
@@ -274,5 +279,6 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
 
 export {
   IManualMenuProps,
+  IManualMenuChildrenProps,
   ManualMenu
 }

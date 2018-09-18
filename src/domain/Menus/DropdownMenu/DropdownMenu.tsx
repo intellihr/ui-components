@@ -4,17 +4,13 @@ import uuid from 'uuid'
 import { Props } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons'
 import { DefaultDropdownButton, StyledToggleContainer } from './subcomponents/style'
-import { ManualMenu } from './subcomponents/ManualMenu'
+import { IManualMenuChildrenProps, ManualMenu } from './subcomponents/ManualMenu'
 import { ISectionProps, Section } from './subcomponents/Section'
 
 interface IDropdownMenuState {
   isDropdownOpen: boolean
   dropdownId?: string
   lastClosedTime?: Moment
-}
-
-interface IDropdownMenuChildProps {
-  closeMenu: () => void
 }
 
 interface IDropdownMenuProps {
@@ -32,8 +28,8 @@ interface IDropdownMenuProps {
    * Note: all margins will be removed.
    */
   toggleComponent?: JSX.Element
-  /** */
-  children?: (props: IDropdownMenuChildProps) => React.ReactElement<any>
+  /** Children to display as custom content instead of sections */
+  children?: (props: IManualMenuChildrenProps) => React.ReactElement<any>
 }
 
 class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenuState> {
@@ -77,7 +73,6 @@ class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenu
     return (
       <ManualMenu
         id={dropdownId || ''}
-        children={children}
         className={className}
         isDropdownOpen={isDropdownOpen}
         onDropdownClose={this.close}
@@ -85,7 +80,9 @@ class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenu
         parentAnchorPosition={parentAnchorPosition}
         dropdownAnchorPosition={dropdownAnchorPosition}
         parentRef={this.toggleComponentRef}
-      />
+      >
+        {children}
+      </ManualMenu>
     )
   }
 
@@ -144,7 +141,6 @@ class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenu
 }
 
 export {
-  IDropdownMenuChildProps,
   IDropdownMenuProps,
   DropdownMenu
 }
