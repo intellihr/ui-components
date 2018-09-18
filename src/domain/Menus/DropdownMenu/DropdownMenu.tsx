@@ -8,9 +8,13 @@ import { ManualMenu } from './subcomponents/ManualMenu'
 import { ISectionProps, Section } from './subcomponents/Section'
 
 interface IDropdownMenuState {
-  isDropdownOpen: boolean,
-  dropdownId?: string,
+  isDropdownOpen: boolean
+  dropdownId?: string
   lastClosedTime?: Moment
+}
+
+interface IDropdownMenuChildProps {
+  closeMenu: () => void
 }
 
 interface IDropdownMenuProps {
@@ -21,13 +25,15 @@ interface IDropdownMenuProps {
   /** Any custom class names */
   className?: string,
   /** The sections to render in the dropdown */
-  sections: ISectionProps[],
+  sections?: ISectionProps[],
   /**
    * The parent component that opens the dropdown and positions it on the page.
    * This component will be wrapped in a span which will determine the onclick properties.
    * Note: all margins will be removed.
    */
   toggleComponent?: JSX.Element
+  /** */
+  children?: (props: IDropdownMenuChildProps) => React.ReactElement<any>
 }
 
 class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenuState> {
@@ -59,16 +65,19 @@ class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenu
       isDropdownOpen,
       dropdownId
     } = this.state
+
     const {
       className,
       sections,
       parentAnchorPosition,
-      dropdownAnchorPosition
+      dropdownAnchorPosition,
+      children
     } = this.props
 
     return (
       <ManualMenu
         id={dropdownId || ''}
+        children={children}
         className={className}
         isDropdownOpen={isDropdownOpen}
         onDropdownClose={this.close}
@@ -135,6 +144,7 @@ class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenu
 }
 
 export {
+  IDropdownMenuChildProps,
   IDropdownMenuProps,
   DropdownMenu
 }

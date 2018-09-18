@@ -34,4 +34,32 @@ describe('<DropdownMenu />', () => {
       ).toBeTruthy()
     })
   })
+
+  describe('Render a dropdown using custom content', () => {
+    const wrapper = shallow(
+      <DropdownMenu>
+        {() =>
+          <>
+            I am custom dropdown content!!
+          </>
+        }
+      </DropdownMenu>
+    )
+
+    it('should match the snapshot', () => {
+      expect(wrapper).toMatchSnapshot()
+    })
+
+    it('should open the menu', () => {
+      // @ts-ignore TS2339
+      wrapper.instance().openMenu()
+
+      expect(
+        wrapper
+          .update()
+          .find('ManualMenu')
+          .prop('isDropdownOpen')
+      ).toBeTruthy()
+    })
+  })
 })
