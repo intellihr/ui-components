@@ -366,3 +366,62 @@ class ManualExample extends React.PureComponent {
 <ManualExample />
 
 ```
+
+#### Custom children
+
+If the `sections` prop is not passed to the menu it will render the children as the content of the menu instead.
+DropdownMenu takes `children` *as a function* and will pass through a callback to close the menu if needed.
+
+```jsx
+const { TextInput } = require('@Domain/Inputs');
+const { FontAwesomeIcon } = require('@Domain/Icons');
+const _ = require('lodash');
+let textInput;
+
+initialState = { selectedOption: {value: 1, label: 'AUD'}, inputValue: '' };
+
+class ThingList extends React.PureComponent {
+  get options () {
+    const { options, query } = this.props
+    
+    return _.filter(options, option => {  
+      return _.toLower(option.label).includes(query)
+    })
+  }
+  
+  render () {
+    const { handleClick } = this.props
+  
+    return _.map(this.options, (option) => {    
+      return <Button key={option.value} onClick={() => handleClick(option)}>{option.label}</Button>
+    })
+  }
+}
+
+<DropdownMenu
+  toggleComponent={<Button>{state.selectedOption.label}</Button>}
+>
+  {({closeMenu}) => 
+    <>
+      <TextInput
+        placeholder='Search country!'
+        icon={<FontAwesomeIcon type='search' />}
+        value={state.inputValue}
+        handleChange={(e) => setState({inputValue: e.target.value})}
+      />
+      <ThingList
+        query={state.inputValue}
+        handleClick={(option) => {
+          setState({selectedOption: option})
+          closeMenu()
+        }}
+        options={[
+          { value: 1, label: 'AUD' },
+          { value: 2, label: 'USD' },
+          { value: 3, label: 'NZD' }
+        ]}
+      />
+    </>
+  }
+</DropdownMenu>
+```

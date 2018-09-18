@@ -62,13 +62,20 @@ const StyledDropdownMenu = styled.span`
   }
 `
 
-const StyledSectionList = styled.ul`
+const StyledContentWrapper = styled.div`
   background-color: ${Variables.Color.n100};
   border-radius: 4px;
   box-shadow: 0 0 4px rgba(0, 0, 0, .15), 0 2px 4px rgba(0, 0, 0, .29);
   min-width: 140px;
+`
+
+const StyledDropdownSectionList = styled.ul`
   margin: 0;
   padding: 0;
+`
+
+const StyledDropdownCustomContent = styled.div`
+  padding: 16px;
 `
 
 interface IStyledSectionProps {
@@ -254,6 +261,8 @@ export {
   DefaultDropdownButton,
   StyledToggleContainer,
   StyledDropdownMenu,
-  StyledSectionList,
-  StyledSection
+  StyledContentWrapper,
+  StyledSection,
+  StyledDropdownSectionList,
+  StyledDropdownCustomContent
 }
