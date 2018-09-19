@@ -13,19 +13,19 @@ import { FormattedText } from '../../Typographies'
 
 export interface ICommentProps {
   /** the name of the person who posted the comment */
-  submitter: string,
+  commentHeaderText: string,
   /** Displays the comment in a focused state */
   focused: boolean,
   /** The component to render to the left of the comment box */
-  avatar: React.Component,
+  avatarComponent: React.Component,
   /** A pill to be displayed right before the date label of the comment (use a span to persist the inline diplay behaviour) */
-  pill?: React.Component,
+  pillComponent?: React.Component,
   /** Additional text to display in the array header (preferable a span HTML element) */
-  header?: React.Component,
+  headerComponent?: React.Component,
   /** Use DateText component from the list of alreay defined components (a string should work too) */
-  createdDateText: React.Component,
+  dateComponent: React.Component,
   /** Comment text string */
-  comment: string,
+  commentBodyText: string,
   /** an array of sectionProps from the DropdownMenu to render the submenu sections */
   actions?: IDropdownMenuSectionProps[]
 }
@@ -33,12 +33,12 @@ export interface ICommentProps {
 export class Comment extends React.Component<ICommentProps> {
   get avatar (): JSX.Element {
     const {
-      avatar
+      avatarComponent
     } = this.props
 
     return (
       <div className='comment-badge-container'>
-        {avatar}
+        {avatarComponent}
       </div>
     )
   }
@@ -46,10 +46,10 @@ export class Comment extends React.Component<ICommentProps> {
   get commentActions (): JSX.Element | null {
     const {
       actions,
-      header
+      headerComponent
     } = this.props
 
-    if (header || !actions) {
+    if (headerComponent || !actions) {
       return null
     }
 
@@ -67,43 +67,43 @@ export class Comment extends React.Component<ICommentProps> {
 
   get commentDate (): JSX.Element {
     const {
-      createdDateText,
-      pill
+      dateComponent,
+      pillComponent
     } = this.props
 
     return (
       <div className='comment-header-date'>
-        {pill}
-        {createdDateText}
+        {pillComponent}
+        {dateComponent}
       </div>
     )
   }
 
   get commentTitle (): JSX.Element {
     const {
-      submitter,
-      header
+      commentHeaderText,
+      headerComponent
     } = this.props
 
     return (
       <div className='comment-header'>
         <span className='comment-header-person-name'>
-          {submitter}
+          {commentHeaderText}
         </span>
-        {header}
+        {headerComponent}
       </div>
     )
   }
 
   get commentHeader (): JSX.Element {
     const {
-      header
+      headerComponent
     } = this.props
 
     return (
       <div className={classNames(
         'comment-header-container',
-        { 'with-status-update': !(!header) }
+        { 'with-status-update': !(!headerComponent) }
       )}>
         {this.commentTitle}
 
@@ -116,13 +116,13 @@ export class Comment extends React.Component<ICommentProps> {
 
   get commentContent (): JSX.Element {
     const {
-      comment
+      commentBodyText
     } = this.props
 
     return (
       <div className='comment-content'>
         <FormattedText
-          text={comment}
+          text={commentBodyText}
         />
       </div>
     )

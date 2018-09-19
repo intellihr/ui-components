@@ -7,11 +7,11 @@ describe('<Comment />', () => {
   it(`should render a simple comment`, () => {
     const wrapper = shallow(
       <Comment
-        comment='A very recent comment'
-        submitter='Example Person Name'
-        createdDateText={<span>just now</span>}
-        pill={ <div>pill</div>}
-        avatar={<div>avatar</div>}
+        commentBodyText='A very recent comment'
+        commentHeaderText='Example Person Name'
+        dateComponent={<span>just now</span>}
+        pillComponent={ <div>pill</div>}
+        avatarComponent={<div>avatar</div>}
         actions={[{
           text: 'Edit',
           onClick: () => { alert('Edit handler') }
@@ -26,11 +26,11 @@ describe('<Comment />', () => {
     const wrapper = shallow(
       <Comment
         focused
-        comment='A very recent comment'
-        submitter='Example Person Name'
-        createdDateText={<span>just now</span>}
-        pill={ <div>pill</div>}
-        avatar={<div>avatar</div>}
+        commentBodyText='A very recent comment'
+        commentHeaderText='Example Person Name'
+        dateComponent={<span>just now</span>}
+        pillComponent={ <div>pill</div>}
+        avatarComponent={<div>avatar</div>}
       />
     )
     expect(wrapper).toMatchSnapshot()
@@ -39,10 +39,10 @@ describe('<Comment />', () => {
   it(`should render a header and no actions`, () => {
     const wrapper = shallow(
       <Comment
-        submitter='Example Person Name'
-        createdDateText={<span>just now</span>}
-        avatar={<div>avatar</div>}
-        header={<div>header</div>}
+        commentHeaderText='Example Person Name'
+        dateComponent={<span>just now</span>}
+        avatarComponent={<div>avatar</div>}
+        headerComponent={<div>header</div>}
         actions={[{
           text: 'Edit',
           onClick: () => { alert('Edit handler') }

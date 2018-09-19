@@ -3,11 +3,11 @@
 const { Props } = require('@Common');
 
 <Comment
-  comment='A very recent comment'
-  submitter='Example Person Name'
-  createdDateText={<span>just now</span>}
-  pill={ <Pill text='pill' />}
-  avatar={<Avatar size={Props.AvatarSize.Small} initials='EN' />}
+  commentBodyText='A very recent comment'
+  commentHeaderText='Example Person Name'
+  dateComponent={<span>just now</span>}
+  pillComponent={ <Pill text='pill' />}
+  avatarComponent={<Avatar size={Props.AvatarSize.Small} initials='EN' />}
 />
 ```
 
@@ -17,11 +17,11 @@ const { Props } = require('@Common');
 
 <Comment
   focused
-  comment='A very recent comment'
-  submitter='Example Person Name'
-  createdDateText={<span>just now</span>}
-  pill={ <Pill text='pill' />}
-  avatar={<Avatar size={Props.AvatarSize.Small} initials='EN' />}
+  commentBodyText='A very recent comment'
+  commentHeaderText='Example Person Name'
+  dateComponent={<span>just now</span>}
+  pillComponent={ <Pill text='pill' />}
+  avatarComponent={<Avatar size={Props.AvatarSize.Small} initials='EN' />}
 />
 ```
 
@@ -30,11 +30,11 @@ const { Props } = require('@Common');
 const { Props } = require('@Common');
 
 <Comment
-  comment='A very recent comment'
-  submitter='Example Person Name'
-  createdDateText={<span>just now</span>}
-  pill={ <Pill text='pill' />}
-  avatar={<Avatar size={Props.AvatarSize.Small} initials='EN' />}
+  commentBodyText='A very recent comment'
+  commentHeaderText='Example Person Name'
+  dateComponent={<span>just now</span>}
+  pillComponent={ <Pill text='pill' />}
+  avatarComponent={<Avatar size={Props.AvatarSize.Small} initials='EN' />}
   actions={[{
     text: 'Edit',
     onClick: () => { alert('Edit handler') }
@@ -53,15 +53,15 @@ const { Props } = require('@Common');
 
 #### Header Comment
 
-Comments that have a header will not render actionMenu and will be considered a system generated comment
+Comments that have a header Component will not render actionMenu and will be considered a system generated comment
 ```jsx
 const { Props, Variables } = require('@Common');
 
 <Comment
-  submitter='Example Person Name'
-  avatar={<Avatar size={Props.AvatarSize.Small} initials='EN' />}
-  createdDateText={<span>just now</span>}
-  header={(
+  commentHeaderText='Example Person Name'
+  avatarComponent={<Avatar size={Props.AvatarSize.Small} initials='EN' />}
+  dateComponent={<span>just now</span>}
+  headerComponent={(
     <span style={{ marginLeft: '5px' }}>
       has
       <Text
