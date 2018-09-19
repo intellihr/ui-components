@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Comment /> should render a focused comment 1`] = `
+<styled.div>
+  <div
+    className="comment-badge-container"
+  >
+    <div>
+      avatar
+    </div>
+  </div>
+  <div
+    className="comment-container focused"
+  >
+    <div
+      className="comment-header-container"
+    >
+      <div
+        className="comment-header"
+      >
+        <span
+          className="comment-header-person-name"
+        >
+          Example Person Name
+        </span>
+      </div>
+      <div
+        className="comment-header-date"
+      >
+        <div>
+          pill
+        </div>
+        <span>
+          just now
+        </span>
+      </div>
+    </div>
+    <div
+      className="comment-content"
+    >
+      <FormattedText
+        renderEmojis={false}
+        text="A very recent comment"
+      />
+    </div>
+  </div>
+</styled.div>
+`;
+
+exports[`<Comment /> should render a header and no actions 1`] = `
+<styled.div>
+  <div
+    className="comment-badge-container"
+  >
+    <div>
+      avatar
+    </div>
+  </div>
+  <div
+    className="comment-container"
+  >
+    <div
+      className="comment-header-container with-status-update"
+    >
+      <div
+        className="comment-header"
+      >
+        <span
+          className="comment-header-person-name"
+        >
+          Example Person Name
+        </span>
+        <div>
+          header
+        </div>
+      </div>
+      <div
+        className="comment-header-date"
+      >
+        <span>
+          just now
+        </span>
+      </div>
+    </div>
+    <div
+      className="comment-content"
+    >
+      <FormattedText
+        renderEmojis={false}
+      />
+    </div>
+  </div>
+</styled.div>
+`;
+
+exports[`<Comment /> should render a simple comment 1`] = `
+<styled.div>
+  <div
+    className="comment-badge-container"
+  >
+    <div>
+      avatar
+    </div>
+  </div>
+  <div
+    className="comment-container"
+  >
+    <div
+      className="comment-header-container"
+    >
+      <div
+        className="comment-header"
+      >
+        <span
+          className="comment-header-person-name"
+        >
+          Example Person Name
+        </span>
+      </div>
+      <div
+        className="comment-header-date"
+      >
+        <div>
+          pill
+        </div>
+        <span>
+          just now
+        </span>
+      </div>
+      <DropdownMenu
+        sections={
+          Array [
+            Object {
+              "onClick": [Function],
+              "text": "Edit",
+            },
+          ]
+        }
+        toggleComponent={
+          <styled.button>
+            <FontAwesomeIcon
+              type="ellipsis-v"
+            />
+          </styled.button>
+        }
+      />
+    </div>
+    <div
+      className="comment-content"
+    >
+      <FormattedText
+        renderEmojis={false}
+        text="A very recent comment"
+      />
+    </div>
+  </div>
+</styled.div>
+`;

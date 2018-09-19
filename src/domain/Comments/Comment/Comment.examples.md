@@ -1,53 +1,40 @@
-#### Someone else's comment
+#### A simple comment
 ```jsx
+const { Props } = require('@Common');
+
 <Comment
-  comment={{
-    id: 'sampleCommentId',
-    comment: 'A very recent comment',
-    personDisplayName: 'Example Person Name',
-    personLastName: 'Culkin',
-    personPreferredOrFirstName: 'McKooley',
-    createdDateText: <span>just now</span>,
-    personId: 'sampleCommentPersonId'
-  }}
-  loggedInUser={{
-    id: 'sampleLoggedUserId'
-  }}
+  comment='A very recent comment'
+  submitter='Example Person Name'
+  createdDateText={<span>just now</span>}
+  pill={ <Pill text='pill' />}
+  avatar={<Avatar size={Props.AvatarSize.Small} initials='EN' />}
 />
 ```
 
-#### Own comment
+#### A focused comment
 ```jsx
+const { Props } = require('@Common');
+
 <Comment
-  comment={{
-    id: 'sampleCommentId',
-    comment: 'This is some ancient comment',
-    personDisplayName: 'Example Person Name',
-    personLastName: 'Culkin',
-    personPreferredOrFirstName: 'McKooley',
-    createdDateText: <span>1st Jan 2017</span>,
-    personProfilePictureId: 'http://www.multiplemayhemmamma.com/wp-content/uploads/2013/03/home-alone-150x150.jpg',
-    personId: 'sampleCommentPersonId'
-  }}
-  loggedInUser={{
-    id: 'sampleCommentPersonId'
-  }}
+  focused
+  comment='A very recent comment'
+  submitter='Example Person Name'
+  createdDateText={<span>just now</span>}
+  pill={ <Pill text='pill' />}
+  avatar={<Avatar size={Props.AvatarSize.Small} initials='EN' />}
 />
 ```
 
-#### Own comment with some actions attached to it
+#### Comment with some actions attached to it
 ```jsx
+const { Props } = require('@Common');
+
 <Comment
-  comment={{
-    id: 'sampleCommentId',
-    comment: 'This is some ancient comment',
-    personDisplayName: 'Example Person Name',
-    personLastName: 'Culkin',
-    personPreferredOrFirstName: 'McKooley',
-    createdDateText: <span>1st Jan 2017</span>,
-    personProfilePictureId: 'http://www.multiplemayhemmamma.com/wp-content/uploads/2013/03/home-alone-150x150.jpg',
-    personId: 'sampleCommentPersonId'
-  }}
+  comment='A very recent comment'
+  submitter='Example Person Name'
+  createdDateText={<span>just now</span>}
+  pill={ <Pill text='pill' />}
+  avatar={<Avatar size={Props.AvatarSize.Small} initials='EN' />}
   actions={[{
     text: 'Edit',
     onClick: () => { alert('Edit handler') }
@@ -64,42 +51,34 @@
 />
 ```
 
-#### Comments that have a header defined will not render actionMenu and will be considered a system generated comment
+#### Header Comment
+
+Comments that have a header will not render actionMenu and will be considered a system generated comment
 ```jsx
-const { Text } = require('@Domain/Typographies');
-const { Variables } = require('@Common');
+const { Props, Variables } = require('@Common');
 
 <Comment
-  comment={{
-    id: 'sampleCommentId',
-    personDisplayName: 'Lyanna Moreton',
-    personLastName: 'Moreton',
-    personPreferredOrFirstName: 'Lyanna',
-    createdDateText: <span>1st Jan 2017</span>,
-    personProfilePictureId: 'http://www.multiplemayhemmamma.com/wp-content/uploads/2013/03/home-alone-150x150.jpg',
-    personId: 'lyanna',
-    header: (
-      <span style={{ marginLeft: '5px' }}>
-        has
-        <Text
-          isHeavy
-          color={Variables.Color.g400}
-        >
-          approved
-        </Text>
-        Joshua Brady's
-        <Text
-          isHeavy
-          color={Variables.Color.i400}
-        >
-          qualification
-        </Text>
-        with a very long message to test how a long message would look.
-      </span>
-    )
-  }}
-  loggedInUser={{
-    id: 'sampleCommentPersonId'
-  }}
+  submitter='Example Person Name'
+  avatar={<Avatar size={Props.AvatarSize.Small} initials='EN' />}
+  createdDateText={<span>just now</span>}
+  header={(
+    <span style={{ marginLeft: '5px' }}>
+      has
+      <Text
+        isHeavy
+        color={Variables.Color.g400}
+      >
+        approved
+      </Text>
+      Joshua Brady's
+      <Text
+        isHeavy
+        color={Variables.Color.i400}
+      >
+        qualification
+      </Text>
+      with a very long message to test how a long message would look.
+    </span>
+  )}
 />
 ```

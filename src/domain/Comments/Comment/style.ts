@@ -18,6 +18,10 @@ const StyledComment = styled.div`
     border-radius: .75rem;
     flex-grow: 1;
     padding: .85rem 1.2rem;
+    
+    &.focused {     
+        background-color: ${Variables.Color.i100};
+    }
 
     >.comment-header-container {
       display: flex;

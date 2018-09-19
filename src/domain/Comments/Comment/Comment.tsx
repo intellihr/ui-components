@@ -1,6 +1,5 @@
 import React from 'react'
 import classNames from 'classnames'
-import { Avatar } from '../../Avatars'
 import {
   DropdownMenu,
   IDropdownMenuSectionProps
@@ -11,33 +10,22 @@ import {
 } from './style'
 import { FontAwesomeIcon } from '../../Icons'
 import { FormattedText } from '../../Typographies'
-import { Props } from '../../../common'
 
 export interface ICommentProps {
-  /** Comment object to render */
-  comment: {
-    /** Comment ID (UUID) */
-    id: string,
-    /** Comment text string */
-    comment: string,
-    /** Additional text to display in the array header (preferable a span HTML element) */
-    header?: React.Component,
-    /** Commenter full name */
-    personDisplayName: string,
-    /** Commenter's initials to display in Avatar */
-    commenterInitials?: string
-    /** Use DateText component from the list of alreay defined components (a string should work too) */
-    createdDateText: React.Component,
-    /** Commenter person ID */
-    personId: string,
-    /** Commenter Image URL, if null or empty, will display initials */
-    avatarUrl?: string,
-    /** A label to be displayed right before the date label of the comment (use a span to persist the inline diplay behaviour) */
-    label?: React.Component
-  }
-  loggedInUser: {
-    id: string
-  },
+  /** the name of the person who posted the comment */
+  submitter: string,
+  /** Displays the comment in a focused state */
+  focused: boolean,
+  /** The component to render to the left of the comment box */
+  avatar: React.Component,
+  /** A pill to be displayed right before the date label of the comment (use a span to persist the inline diplay behaviour) */
+  pill?: React.Component,
+  /** Additional text to display in the array header (preferable a span HTML element) */
+  header?: React.Component,
+  /** Use DateText component from the list of alreay defined components (a string should work too) */
+  createdDateText: React.Component,
+  /** Comment text string */
+  comment: string,
   /** an array of sectionProps from the DropdownMenu to render the submenu sections */
   actions?: IDropdownMenuSectionProps[]
 }
@@ -45,17 +33,12 @@ export interface ICommentProps {
 export class Comment extends React.Component<ICommentProps> {
   get avatar (): JSX.Element {
     const {
-      commenterInitials,
-      avatarUrl
-    } = this.props.comment
+      avatar
+    } = this.props
 
     return (
       <div className='comment-badge-container'>
-        <Avatar
-          size={Props.AvatarSize.Small}
-          imageUrl={avatarUrl}
-          initials={commenterInitials}
-        />
+        {avatar}
       </div>
     )
   }
@@ -63,12 +46,10 @@ export class Comment extends React.Component<ICommentProps> {
   get commentActions (): JSX.Element | null {
     const {
       actions,
-      comment: {
-        header: commentHeader
-      }
+      header
     } = this.props
 
-    if (commentHeader || !actions) {
+    if (header || !actions) {
       return null
     }
 
@@ -86,15 +67,13 @@ export class Comment extends React.Component<ICommentProps> {
 
   get commentDate (): JSX.Element {
     const {
-      comment: {
-        createdDateText,
-        label
-      }
+      createdDateText,
+      pill
     } = this.props
 
     return (
       <div className='comment-header-date'>
-        {label}
+        {pill}
         {createdDateText}
       </div>
     )
@@ -102,20 +81,14 @@ export class Comment extends React.Component<ICommentProps> {
 
   get commentTitle (): JSX.Element {
     const {
-      comment: {
-        personId,
-        personDisplayName,
-        header
-      },
-      loggedInUser: {
-        id: loggedInUserId
-      }
+      submitter,
+      header
     } = this.props
 
     return (
       <div className='comment-header'>
         <span className='comment-header-person-name'>
-          {personId === loggedInUserId ? 'You' : personDisplayName}
+          {submitter}
         </span>
         {header}
       </div>
@@ -124,7 +97,7 @@ export class Comment extends React.Component<ICommentProps> {
 
   get commentHeader (): JSX.Element {
     const {
-      comment: { header }
+      header
     } = this.props
 
     return (
@@ -141,14 +114,10 @@ export class Comment extends React.Component<ICommentProps> {
     )
   }
 
-  get targetCommentId () {
-    return window.location.hash.substr(1)
-  }
-
   get commentContent (): JSX.Element {
     const {
       comment
-    } = this.props.comment
+    } = this.props
 
     return (
       <div className='comment-content'>
@@ -161,9 +130,7 @@ export class Comment extends React.Component<ICommentProps> {
 
   public render (): JSX.Element {
     const {
-      comment: {
-        id: commentId
-      }
+      focused
     } = this.props
 
     return (
@@ -171,7 +138,7 @@ export class Comment extends React.Component<ICommentProps> {
         {this.avatar}
         <div className={classNames(
           'comment-container',
-          { target: this.targetCommentId === commentId }
+          { focused }
         )}>
           {this.commentHeader}
           {this.commentContent}
