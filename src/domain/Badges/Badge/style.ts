@@ -27,8 +27,6 @@ const BadgeWrapper = styled.span`
 
   &, .fa {
   ${(props: IBadgeWrapper) => {
-    console.log(props.size)
-  
     switch (props.size) {
       case 'small':
         return `
