@@ -11,7 +11,7 @@ const FieldWrapper = styled.div`
 `
 
 const ErrorMessage = styled.div`
-  font-size: 14px;
+  font-size: ${Variables.FontSize.fzSmall}px;
   color: ${Variables.Color.r400};
 `
 

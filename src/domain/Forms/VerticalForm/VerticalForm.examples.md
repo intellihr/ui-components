@@ -1,7 +1,7 @@
 Basic field
 
 ```jsx
-const { TextInput } = require('../..//Inputs');
+const { TextInput } = require('../../Inputs');
 const initialState = { textInputValue: '' };
 
   <VerticalForm
@@ -27,7 +27,7 @@ const initialState = { textInputValue: '' };
 Field with errors & required
 
 ```jsx
-const { TextInput } = require('../..//Inputs');
+const { TextInput } = require('../../Inputs');
 const initialState = { textInputValue: '' };
 
   <VerticalForm

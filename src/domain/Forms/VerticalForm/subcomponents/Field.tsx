@@ -15,7 +15,6 @@ interface IVerticalFormFieldProps {
 }
 
 class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
-
   private get errorMessages (): JSX.Element | JSX.Element[] | null {
     const {
       errorMessages
@@ -34,23 +33,27 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
     return null
   }
 
-  private get inputLabel (): JSX.Element {
+  private get inputLabel (): JSX.Element | null {
     const {
       inputName,
       isRequired,
       label
     } = this.props
 
-    return (
-      <InputLabel
-        htmlFor={inputName}
-        isRequired={isRequired}
-      >
-        {label}
-      </InputLabel>
-    )
+    if (label) {
+      return (
+        <InputLabel
+          htmlFor={inputName}
+          isRequired={isRequired}
+        >
+          {label}
+        </InputLabel>
+      )
+    }
+
+    return null
   }
-  
+
   public static defaultProps = {
     isRequired: false
   }

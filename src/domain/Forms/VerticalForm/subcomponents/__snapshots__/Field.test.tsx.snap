@@ -31,13 +31,7 @@ exports[`<Field /> should render a vertical form field with error messages 1`] =
 </styled.div>
 `;
 
-exports[`<Field /> should render a vertical form field with nothing 1`] = `
-<styled.div>
-  <InputLabel
-    isRequired={false}
-  />
-</styled.div>
-`;
+exports[`<Field /> should render a vertical form field with nothing 1`] = `<styled.div />`;
 
 exports[`<Field /> should render a vertical form field with regular props 1`] = `
 <styled.div>
