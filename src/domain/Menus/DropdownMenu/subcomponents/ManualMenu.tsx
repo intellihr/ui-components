@@ -4,8 +4,9 @@ import { debounce, map } from 'lodash'
 import { Transition } from 'react-transition-group'
 import FocusTrap from 'focus-trap-react'
 import { Props } from '../../../../common'
-import { StyledDropdownMenu, StyledSectionList } from './style'
+import { StyledDropdownMenu, StyledContentWrapper, StyledDropdownCustomContent, StyledDropdownSectionList } from './style'
 import { Section, ISectionProps } from './Section'
+import { DropdownMenu } from '../DropdownMenu'
 
 interface IManualMenuProps {
   /**
@@ -32,13 +33,20 @@ interface IManualMenuProps {
    */
   dropdownAnchorPosition?: Props.IPositionXY | 'auto',
   /** The sections to render in the dropdown */
-  sections: ISectionProps[],
+  sections?: ISectionProps[],
   /** Whether the dropdown is showing currently or not */
   isDropdownOpen: boolean,
   /** Callback when the modal is attempted to be closed */
   onDropdownClose: () => void,
   /** Parent ref to anchor this to on the page */
   parentRef: RefObject<HTMLSpanElement>
+  /** Children to display as custom content instead of sections */
+  children?: (props: IManualMenuChildrenProps) => React.ReactElement<any>
+}
+
+interface IManualMenuChildrenProps {
+  /** Callback to close the menu */
+  closeMenu: () => void
 }
 
 class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
@@ -134,7 +142,7 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
     }
   }
 
-  private get dropdownSections () {
+  private get dropdownSections (): JSX.Element[] {
     const {
       sections,
       onDropdownClose
@@ -151,7 +159,29 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
     })
   }
 
-  private get transition () {
+  private get dropdownContent (): JSX.Element | JSX.Element[] {
+    const {
+      sections,
+      children,
+      onDropdownClose
+    } = this.props
+
+    if (!sections && children) {
+      return (
+        <StyledDropdownCustomContent>
+          {children({ closeMenu: onDropdownClose })}
+        </StyledDropdownCustomContent>
+      )
+    }
+
+    return (
+      <StyledDropdownSectionList>
+        {this.dropdownSections}
+      </StyledDropdownSectionList>
+    )
+  }
+
+  private get transition (): JSX.Element {
     const {
       isDropdownOpen
     } = this.props
@@ -234,13 +264,13 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
           }}
           tag='span'
         >
-          <StyledSectionList
+          <StyledContentWrapper
             id={id}
             className={className}
             role='menu'
           >
-            {this.dropdownSections}
-          </StyledSectionList>
+            {this.dropdownContent}
+          </StyledContentWrapper>
         </FocusTrap>
       </StyledDropdownMenu>
     )
@@ -249,5 +279,6 @@ class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
 
 export {
   IManualMenuProps,
+  IManualMenuChildrenProps,
   ManualMenu
 }
