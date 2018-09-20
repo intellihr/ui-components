@@ -1,10 +1,5 @@
 #!/usr/bin/env groovy
 
-@Library('jenkins')
-import net.intellihr.Helper
-
-def helper = new net.intellihr.Helper(this)
-
 pipeline {
   agent {
     dockerfile {
