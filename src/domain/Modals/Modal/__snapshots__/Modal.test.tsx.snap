@@ -50,8 +50,8 @@ exports[`<Modal /> should render a hidden modal 1`] = `
 }
 
 .c0 .modal.modal-size-large {
-  min-width: 964px;
-  width: 964px;
+  min-width: 974px;
+  width: 974px;
 }
 
 .c0 .modal.modal-size-medium {
@@ -106,7 +106,7 @@ exports[`<Modal /> should render a hidden modal 1`] = `
   }
 }
 
-@media only screen and (max-width:1024px) {
+@media only screen and (max-width:1034px) {
   .c0 .modal.modal-size-large {
     min-width: 0;
     width: 90%;
