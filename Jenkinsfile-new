@@ -1,12 +1,5 @@
 #!/usr/bin/env groovy
 
-@Library('jenkins')
-import net.intellihr.Helper
-import net.intellihr.CodeAnalysis
-
-def helper = new net.intellihr.Helper(this)
-def analyse = new net.intellihr.CodeAnalysis(this)
-
 pipeline {
   agent {
     dockerfile {
@@ -14,11 +7,16 @@ pipeline {
     }
   }
 
+  environment {
+    GIT_EMAIL = 'continuous.integration@intellihr.com.au'
+    GIT_USER = 'IntelliHR CI'
+  }
+
   stages {
     stage('Checkout gh-pages') {
       steps {
         dir ("/tmp/code/${env.BUILD_TAG}") {
-          sshagent (credentials: ['GITHUB_CI']) {
+          sshagent (credentials: ['GITHUB_CI_SSH_KEY']) {
             sh '''
               git fetch --no-tags --progress git@github.com:intellihr/ui-components.git \
                 +refs/heads/gh-pages:refs/remotes/origin/gh-pages
@@ -43,11 +41,11 @@ pipeline {
 
       steps {
         dir ("/tmp/code/${env.BUILD_TAG}") {
-          sshagent (credentials: ['GITHUB_CI']) {
+          sshagent (credentials: ['GITHUB_CI_SSH_KEY']) {
             script {
               try {
                 sh 'git add .'
-                sh 'git -c user.email="continuous.integration@intellihr.com.au" -c user.name="IntelliHR CI" commit -m "Update gh-pages as of $(git log \'--format=format:%H\' remotes/origin/master -1)"'
+                sh 'git -c user.email="$GIT_EMAIL" -c user.name="$GIT_USER" commit -m "Update gh-pages as of $(git log \'--format=format:%H\' remotes/origin/master -1)"'
                 sh 'yarn gh-pages'
               } catch (Exception e) {
                 echo 'No need to publish gh-pages...Skipping...'
@@ -65,9 +63,9 @@ pipeline {
 
       steps {
         dir ("/tmp/code/${env.BUILD_TAG}") {
-          sshagent (credentials: ['GITHUB_CI']) {
-            sh 'git config user.email "continuous.integration@intellihr.com.au"'
-            sh 'git config user.name "IntelliHR CI"'
+          sshagent (credentials: ['GITHUB_CI_SSH_KEY']) {
+            sh 'git config user.email "$GIT_EMAIL"'
+            sh 'git config user.name "$GIT_USER"'
           }
 
           withNPM(npmrcConfig: 'npm-config') {
@@ -81,7 +79,7 @@ pipeline {
             }
           }
 
-          sshagent (credentials: ['GITHUB_CI']) {
+          sshagent (credentials: ['GITHUB_CI_SSH_KEY']) {
             script {
               try {
                 sh 'git branch'
