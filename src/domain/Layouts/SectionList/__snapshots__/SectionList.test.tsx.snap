@@ -94,6 +94,9 @@ exports[`<SectionList /> should render a section list with a titled section with
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -817,6 +820,9 @@ exports[`<SectionList /> should render a sectionList 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1483,6 +1489,9 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
