@@ -15,7 +15,7 @@ pipeline {
   stages {
     stage('Checkout gh-pages') {
       steps {
-        dir ('/tmp/code/$BUILD_TAG') {
+        dir ("/tmp/code/${env.BUILD_TAG}") {
           sshagent (credentials: ['GITHUB_CI_SSH_KEY']) {
             sh '''
               git fetch --no-tags --progress git@github.com:intellihr/ui-components.git \
@@ -28,7 +28,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        dir ('/tmp/code/$BUILD_TAG') {
+        dir ("/tmp/code/${env.BUILD_TAG}") {
           sh 'yarn build'
         }
       }
@@ -40,7 +40,7 @@ pipeline {
       }
 
       steps {
-        dir ('/tmp/code/$BUILD_TAG') {
+        dir ("/tmp/code/${env.BUILD_TAG}") {
           sshagent (credentials: ['GITHUB_CI_SSH_KEY']) {
             script {
               try {
@@ -62,7 +62,7 @@ pipeline {
       }
 
       steps {
-        dir ('/tmp/code/$BUILD_TAG') {
+        dir ("/tmp/code/${env.BUILD_TAG}") {
           sshagent (credentials: ['GITHUB_CI_SSH_KEY']) {
             sh 'git config user.email "$GIT_EMAIL"'
             sh 'git config user.name "$GIT_USER"'
@@ -95,7 +95,7 @@ pipeline {
   }
   post {
     always {
-      dir ('/tmp/code/$BUILD_TAG') {
+      dir ("/tmp/code/${env.BUILD_TAG}") {
         deleteDir()
       }
     }

@@ -17,7 +17,7 @@ pipeline {
   stages {
     stage('Checkout gh-pages') {
       steps {
-        dir ('/tmp/code/$BUILD_TAG') {
+        dir ("/tmp/code/${env.BUILD_TAG}") {
           sshagent (credentials: ['GITHUB_CI']) {
             sh '''
               git fetch --no-tags --progress git@github.com:intellihr/ui-components.git \
@@ -30,7 +30,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        dir ('/tmp/code/$BUILD_TAG') {
+        dir ("/tmp/code/${env.BUILD_TAG}") {
           sh 'yarn build'
         }
       }
@@ -42,7 +42,7 @@ pipeline {
       }
 
       steps {
-        dir ('/tmp/code/$BUILD_TAG') {
+        dir ("/tmp/code/${env.BUILD_TAG}") {
           sshagent (credentials: ['GITHUB_CI']) {
             script {
               try {
@@ -64,7 +64,7 @@ pipeline {
       }
 
       steps {
-        dir ('/tmp/code/$BUILD_TAG') {
+        dir ("/tmp/code/${env.BUILD_TAG}") {
           sshagent (credentials: ['GITHUB_CI']) {
             sh 'git config user.email "continuous.integration@intellihr.com.au"'
             sh 'git config user.name "IntelliHR CI"'
@@ -97,7 +97,7 @@ pipeline {
   }
   post {
     always {
-      dir ('/tmp/code/$BUILD_TAG') {
+      dir ("/tmp/code/${env.BUILD_TAG}") {
         deleteDir()
       }
     }
