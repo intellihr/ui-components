@@ -92,6 +92,7 @@ const StyledTitledSectionDescription = styled(SectionDescription)`
   @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
     margin-right: ${horizontalMarginDesktop}px;
     display: flex;
+    flex-basis: 100%;
     flex-direction: column;
     justify-content: center;
   }
