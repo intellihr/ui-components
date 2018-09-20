@@ -5,6 +5,7 @@ interface IBadgeWrapper {
   backgroundColor?: Variables.Color
   color?: Variables.Color
   size?: 'small' | 'medium' | 'large'
+  hasBorder?: boolean
 }
 
 const BadgeWrapper = styled.span`
@@ -26,6 +27,8 @@ const BadgeWrapper = styled.span`
 
   &, .fa {
   ${(props: IBadgeWrapper) => {
+    console.log(props.size)
+  
     switch (props.size) {
       case 'small':
         return `
@@ -51,9 +54,12 @@ const BadgeWrapper = styled.span`
     }
   }}
   }
-
-  box-shadow: 0 2px 2px rgba(0,0,0,0.24);
-  border: 1px solid ${Variables.Color.n400};
+  
+  ${(props: IBadgeWrapper) => props.hasBorder && css`
+    border: 1px solid ${Variables.Color.n400};
+    box-shadow: 0 2px 2px rgba(0,0,0,0.24);
+  `}
+  
   border-radius: 50%;
   display: inline-block;
   font-weight: 600;

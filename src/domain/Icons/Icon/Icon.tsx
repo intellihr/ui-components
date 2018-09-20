@@ -69,7 +69,7 @@ class Icon extends React.PureComponent<IIconProps> {
         <BadgeWrapper
           size={size}
         >
-          {React.cloneElement(badge, { size: this.badgeSize })}
+          {React.cloneElement(badge)}
         </BadgeWrapper>
       )
     }

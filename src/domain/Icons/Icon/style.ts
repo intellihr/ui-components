@@ -20,7 +20,7 @@ const BadgeWrapper = styled.span`
       case 'large':
         return `
           margin-top: -10px;
-          margin-left: -10px;
+          margin-left: -14px;
         `
       case 'xlarge':
         return `

@@ -35,18 +35,21 @@ const { Variables } = require('../../../common');
     pending
     label={6}
     size='small'
+    hasBorder={false}
   />
 
   <Badge
     pending
     label={6}
     size='medium'
+    hasBorder={false}
   />
 
   <Badge
     pending
     label={6}
     size='large'
+    hasBorder={false}
   />
 </div>
 ```
