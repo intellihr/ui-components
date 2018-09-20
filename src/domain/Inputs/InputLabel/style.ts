@@ -1,13 +1,31 @@
 import React from 'react'
-import styled, { StyledComponentClass } from 'styled-components'
+import styled, { StyledComponentClass, css } from 'styled-components'
 import { Variables } from '../../../common'
 
-export const StyledInputLabel = styled.label`
+interface IStyledInputLabelProps extends React.HTMLProps<HTMLLabelElement> {
+  isRequired: boolean
+}
+
+const StyledInputLabel = styled.label`
   color: ${Variables.Color.n600};
   font-size: 0.9375rem;
   line-height: 1.8;
 
-  &.is-invalid-label {
-    color: ${Variables.Color.r500};
-  }
+
+  ${(props: IStyledInputLabelProps) => {
+    if (props.isRequired) {
+      return css`
+        &::after {
+          color: ${Variables.Color.n400};
+          content: ' - required';
+          font-size: .9em;
+          font-style: italic;
+        }
+      `
+    }
+  }}
 `
+
+export {
+  StyledInputLabel
+}

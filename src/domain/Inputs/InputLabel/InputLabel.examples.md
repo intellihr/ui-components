@@ -3,40 +3,40 @@
 ```jsx
 const { TextInput } = require('../TextInput');
 
-<div>
+<>
   <InputLabel>
-    Hello boys!
+    I am a basic input label
   </InputLabel>
   <TextInput name='example-input1' />
-</div>
+</>
 ```
 
-#### Input Label with `htmlFor`
+#### Input Label with htmlFor
 
 ```jsx
 const { TextInput } = require('../TextInput');
 
-<div>
+<>
   <InputLabel
     htmlFor='example-input2'
   >
-    Hello ladies!
+    Click me and I'll focus my input ;)
   </InputLabel>
   <TextInput name='example-input2' />
-</div>
+</>
 ```
 
-#### Input Label with isInvalid
+#### Input Label with isRequired
 
 ```jsx
 const { TextInput } = require('../TextInput');
 
-<div>
+<>
   <InputLabel
-    isInvalid
+    isRequired
   >
-    Gentlemen...
+    This field is required!
   </InputLabel>
-  <TextInput name='example-input3' isInvalid />
-</div>
+  <TextInput name='example-input3' isRequired />
+</>
 ```

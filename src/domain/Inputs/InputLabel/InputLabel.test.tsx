@@ -7,7 +7,7 @@ describe('<InputLabel />', () => {
   it(`should render a label`, () => {
     const wrapper = mount(
       <InputLabel>
-        Hello boys.
+        Test input label
       </InputLabel>
     )
 
@@ -19,19 +19,19 @@ describe('<InputLabel />', () => {
       <InputLabel
         htmlFor='input-id'
       >
-        Hello ladies.
+        Test input label
       </InputLabel>
     )
 
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a red label if isInvalid is true`, () => {
+  it(`should render a label with a required marker`, () => {
     const wrapper = mount(
       <InputLabel
-        isInvalid
+        isRequired
       >
-        Hello ladies.
+        Test input label
       </InputLabel>
     )
 
