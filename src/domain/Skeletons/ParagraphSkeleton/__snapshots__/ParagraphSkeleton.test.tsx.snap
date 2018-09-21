@@ -42,7 +42,16 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
 }
 
 .c3 {
+  border-radius: 4px;
   width: 50%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
 }
 
 <ParagraphSkeleton
@@ -56,16 +65,16 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
     >
       <Styled(styled.span)
         textType="display-large"
-        width={200}
+        width="200px"
       >
         <styled.span
           className="c0"
           textType="display-large"
-          width={200}
+          width="200px"
         >
           <span
             className="c0 c1"
-            width={200}
+            width="200px"
           >
             ‌
           </span>
@@ -148,31 +157,29 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
         </styled.span>
       </Styled(styled.span)>
     </TextSkeleton>
-    <styled.div>
-      <div
-        className="c3"
+    <TextSkeleton
+      showSkeleton={true}
+      type="body"
+      width="50%"
+    >
+      <Styled(styled.span)
+        textType="body"
+        width="50%"
       >
-        <TextSkeleton
-          showSkeleton={true}
-          type="body"
+        <styled.span
+          className="c3"
+          textType="body"
+          width="50%"
         >
-          <Styled(styled.span)
-            textType="body"
+          <span
+            className="c3 c1"
+            width="50%"
           >
-            <styled.span
-              className="c2"
-              textType="body"
-            >
-              <span
-                className="c2 c1"
-              >
-                ‌
-              </span>
-            </styled.span>
-          </Styled(styled.span)>
-        </TextSkeleton>
-      </div>
-    </styled.div>
+            ‌
+          </span>
+        </styled.span>
+      </Styled(styled.span)>
+    </TextSkeleton>
   </div>
 </ParagraphSkeleton>
 `;

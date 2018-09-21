@@ -7,18 +7,28 @@
 ```
 
 #### Text Skeleton with Width Option
-
+Provide width either as a number to be converted to px, or as a string containing the measurement (eg. 50%)
 ```jsx
-<TextSkeleton
-  showSkeleton={true}
-  width={250}
-/>
+<>
+  <div>
+    <TextSkeleton
+      showSkeleton={true}
+      width={'50%'}
+    />
+  </div>
+  <div>
+    <TextSkeleton
+      showSkeleton={true}
+      width={250}
+    />
+  </div>
+</>
 ```
 
 #### Text Skeleton for Different Text Types
 
 ```jsx
-<React.Fragment>
+<>
   <div>
     <Text type='xsmall' isInline={false}>
       TextSkeleton for X-Small Text
@@ -73,5 +83,5 @@
       type='display-large'
     />
   </div>
-</React.Fragment>
+</>
 ```

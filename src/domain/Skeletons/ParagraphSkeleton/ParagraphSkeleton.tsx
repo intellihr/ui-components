@@ -2,7 +2,6 @@ import React from 'react'
 import { Props } from '../../../common'
 import { ISkeletonProps } from '../interfaces'
 import { TextSkeleton } from '../TextSkeleton'
-import { BottomTextSkeletonWrapper } from './style'
 
 class ParagraphSkeleton extends React.Component<ISkeletonProps> {
   public static defaultProps: Partial<ISkeletonProps> = {
@@ -18,9 +17,9 @@ class ParagraphSkeleton extends React.Component<ISkeletonProps> {
 
     if (!showSkeleton) {
       return (
-        <React.Fragment>
+        <>
           {children}
-        </React.Fragment>
+        </>
       )
     }
 
@@ -43,11 +42,10 @@ class ParagraphSkeleton extends React.Component<ISkeletonProps> {
           <TextSkeleton
             showSkeleton
           />
-          <BottomTextSkeletonWrapper>
-            <TextSkeleton
-              showSkeleton
-            />
-          </BottomTextSkeletonWrapper>
+          <TextSkeleton
+            showSkeleton
+            width={'50%'}
+          />
       </div>
     )
   }
