@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { Variables } from '../../../common'
 import { SectionDescription } from './subcomponents/SectionDescription'
-import { Row } from '../../Grids/Row'
 
 const horizontalMarginDesktop = 24
 const verticalPaddingDesktop = 32
@@ -72,14 +71,8 @@ const StyledTitledSection = styled(SectionBorder)`
   }
 `
 
-const StyledTitledSectionHeaderRow = styled(Row)`
-  @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
-    flex-wrap: nowrap;
-  }
-
+const StyledTitledSectionHeaderRow = styled.div`
   @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
-    flex-direction: column;
-    justify-content: center;
     padding: ${verticalPaddingMobile}px ${horizontalPaddingMobile}px ${verticalPaddingMobile/2}px;
   }
 `
@@ -88,28 +81,13 @@ const StyledTitledSectionDescription = styled(SectionDescription)`
   @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
     padding-bottom: ${verticalPaddingMobile/2}px;
   }
-  
+
   @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
     margin-right: ${horizontalMarginDesktop}px;
-    display: flex;
-    flex-basis: 100%;
-    flex-direction: column;
-    justify-content: center;
-  }
-`
-
-const StyledTitledSectionActions = styled.div`
-  flex-shrink: 0;
-  flex-grow: 1;
-  
-  @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
-    text-align: right;
   }
 `
 
 const StyledTitledSectionBody = styled.div`
-  width: 100%;
-
   @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
     padding-top: 1.5rem;
   }
@@ -134,6 +112,5 @@ export {
   StyledTitledSection,
   StyledTitledSectionHeaderRow,
   StyledTitledSectionDescription,
-  StyledTitledSectionActions,
   StyledTitledSectionBody
 }
