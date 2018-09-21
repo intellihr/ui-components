@@ -13,7 +13,7 @@ Provide width either as a number to be converted to px, or as a string containin
   <div>
     <TextSkeleton
       showSkeleton={true}
-      width={'50%'}
+      width='50%'
     />
   </div>
   <div>

@@ -11,7 +11,7 @@ Provide width and height either as a number to be converted to px, or as a strin
 ```jsx
 <BlockSkeleton
   showSkeleton={true}
-  width={'50%'}
+  width='50%'
   height={200}
 />
 ```
