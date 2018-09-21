@@ -36,7 +36,7 @@ class TextSkeleton extends React.Component<ITextSkeletonProps> {
     return (
       <TextSkeletonWrapper
         textType={type}
-        width={typeof width == 'number' ? `${width}px` : width}
+        width={typeof width === 'number' ? `${width}px` : width}
         className={className}
       >
         {String.fromCharCode(8204)}
