@@ -148,7 +148,7 @@ exports[`<SectionList /> should render a section list with a titled section with
                       Object {
                         "flexboxgrid": Object {
                           "breakpoints": Object {
-                            "lg": 64,
+                            "lg": 64.625,
                             "md": 40,
                             "sm": 0,
                             "xs": -1,
@@ -201,7 +201,7 @@ exports[`<SectionList /> should render a section list with a titled section with
                     Object {
                       "flexboxgrid": Object {
                         "breakpoints": Object {
-                          "lg": 64,
+                          "lg": 64.625,
                           "md": 40,
                           "sm": 0,
                           "xs": -1,
@@ -310,7 +310,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
   }
 }
 
-@media only screen and (min-width:64em) {
+@media only screen and (min-width:64.625em) {
   .c5 {
     -webkit-flex-basis: 33.333333333333336%;
     -ms-flex-preferred-size: 33.333333333333336%;
@@ -340,7 +340,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
   }
 }
 
-@media only screen and (min-width:64em) {
+@media only screen and (min-width:64.625em) {
   .c7 {
     -webkit-flex-basis: 66.66666666666667%;
     -ms-flex-preferred-size: 66.66666666666667%;
@@ -439,7 +439,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
                     Object {
                       "flexboxgrid": Object {
                         "breakpoints": Object {
-                          "lg": 64,
+                          "lg": 64.625,
                           "md": 40,
                           "sm": 0,
                           "xs": -1,
@@ -676,7 +676,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
   }
 }
 
-@media only screen and (min-width:64em) {
+@media only screen and (min-width:64.625em) {
   .c5 {
     -webkit-flex-basis: 33.333333333333336%;
     -ms-flex-preferred-size: 33.333333333333336%;
@@ -706,7 +706,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
   }
 }
 
-@media only screen and (min-width:64em) {
+@media only screen and (min-width:64.625em) {
   .c10 {
     -webkit-flex-basis: 66.66666666666667%;
     -ms-flex-preferred-size: 66.66666666666667%;
@@ -891,7 +891,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                     Object {
                       "flexboxgrid": Object {
                         "breakpoints": Object {
-                          "lg": 64,
+                          "lg": 64.625,
                           "md": 40,
                           "sm": 0,
                           "xs": -1,
@@ -1089,7 +1089,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                       Object {
                         "flexboxgrid": Object {
                           "breakpoints": Object {
-                            "lg": 64,
+                            "lg": 64.625,
                             "md": 40,
                             "sm": 0,
                             "xs": -1,
@@ -1209,7 +1209,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                     Object {
                       "flexboxgrid": Object {
                         "breakpoints": Object {
-                          "lg": 64,
+                          "lg": 64.625,
                           "md": 40,
                           "sm": 0,
                           "xs": -1,
@@ -1390,7 +1390,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
   }
 }
 
-@media only screen and (min-width:64em) {
+@media only screen and (min-width:64.625em) {
   .c5 {
     -webkit-flex-basis: 33.333333333333336%;
     -ms-flex-preferred-size: 33.333333333333336%;
@@ -1543,7 +1543,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                     Object {
                       "flexboxgrid": Object {
                         "breakpoints": Object {
-                          "lg": 64,
+                          "lg": 64.625,
                           "md": 40,
                           "sm": 0,
                           "xs": -1,
@@ -1717,7 +1717,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                       Object {
                         "flexboxgrid": Object {
                           "breakpoints": Object {
-                            "lg": 64,
+                            "lg": 64.625,
                             "md": 40,
                             "sm": 0,
                             "xs": -1,
