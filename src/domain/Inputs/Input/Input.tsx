@@ -1,6 +1,8 @@
 import React, { ChangeEventHandler } from 'react'
 import classNames from 'classnames'
 import { InputWrapper } from '../services/style'
+import { InputGroupPosition } from '../InputGroup/InputGroup'
+const style = require('./style.scss')
 
 interface IGenericInputProps {
   /** ID of the input */
@@ -39,6 +41,10 @@ interface IGenericInputProps {
   autoFocus?: boolean
   /** Specify if input is checked */
   isChecked?: boolean
+  /** Specify where a input is in an InputGroup */
+  groupPosition?: InputGroupPosition
+  /** Specify width of the input */
+  width?: string
 }
 
 interface InputProps extends IGenericInputProps {
@@ -67,12 +73,20 @@ export class Input extends React.PureComponent<InputProps> {
   get classNames (): string {
     const {
       className,
-      isInvalid
+      isInvalid,
+      groupPosition
     } = this.props
 
     return classNames(
-      className,
-      {'is-invalid-input': isInvalid}
+      style.input,
+      [
+        className,
+        {
+          'is-invalid-input': isInvalid,
+          'input-group-left': groupPosition === 'left',
+          'input-group-right': groupPosition === 'right'
+        }
+      ]
     )
   }
 
@@ -92,7 +106,8 @@ export class Input extends React.PureComponent<InputProps> {
       isHTML5Required,
       autoFocus,
       handleKeyDown,
-      isChecked
+      isChecked,
+      width
     } = this.props
 
     return (
@@ -113,6 +128,7 @@ export class Input extends React.PureComponent<InputProps> {
         maxLength={maxLength}
         required={isHTML5Required}
         autoFocus={autoFocus}
+        style={width ? { width } : undefined}
       />
     )
   }

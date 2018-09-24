@@ -1,0 +1,9 @@
+:local(.input) {
+  &.input-group-left {
+    border-radius: 4px 0 0 4px;
+  }
+
+  &.input-group-right {
+    border-radius: 0 4px 4px 0;
+  }
+}

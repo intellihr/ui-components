@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InputGroup /> should render a simple input group 1`] = `
+<styled.div>
+  <TextInput
+    groupPosition="left"
+    name="test-input"
+  />
+  <TextInput
+    groupPosition="right"
+    name="test-input"
+  />
+</styled.div>
+`;
