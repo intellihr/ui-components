@@ -30,7 +30,7 @@ class TitledSection extends React.PureComponent<ITitledSectionProps> {
         <XYGrid>
           <XYGrid.Cell size={{ min: 12 }}>
             <StyledTitledSectionHeaderRow>
-              <XYGrid verticalAlignment='middle'>
+              <XYGrid verticalAlignment={XYGrid.VerticalAlignment.Middle}>
                 <XYGrid.Cell size={{ desktop: 'auto', tablet: 'auto', min: 12 }}>
                   <StyledTitledSectionDescription
                     header={header}

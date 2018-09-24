@@ -6,7 +6,7 @@ import { XYGrid } from './XYGrid'
 describe('<XYGrid />', () => {
   it(`should render an XYGrid`, () => {
     const wrapper = mount(
-      <XYGrid horizontalAlignment='center' verticalAlignment='stretch' gutterMarginX gutterPaddingY>
+      <XYGrid horizontalAlignment={XYGrid.HorizontalAlignment.Center} verticalAlignment={XYGrid.VerticalAlignment.Stretch} gutterMarginX gutterPaddingY>
         <XYGrid.Cell size={{ min: 10 }}>
           <div>1</div>
         </XYGrid.Cell>

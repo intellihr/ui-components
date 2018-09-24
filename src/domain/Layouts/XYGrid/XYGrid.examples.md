@@ -187,7 +187,7 @@ const style = {
       </div>
     </XYGrid.Cell>
   </XYGrid>
-  <XYGrid horizontalAlignment='right'>
+  <XYGrid horizontalAlignment={XYGrid.HorizontalAlignment.Right}>
     <XYGrid.Cell size={{ min: 4 }}>
       <div style={style}>
         <span>Aligned to</span>
@@ -199,7 +199,7 @@ const style = {
       </div>
     </XYGrid.Cell>
   </XYGrid>
-  <XYGrid horizontalAlignment='center'>
+  <XYGrid horizontalAlignment={XYGrid.HorizontalAlignment.Center}>
     <XYGrid.Cell size={{ min: 4 }}>
       <div style={style}>
         <span>Aligned to</span>
@@ -211,7 +211,7 @@ const style = {
       </div>
     </XYGrid.Cell>
   </XYGrid>
-  <XYGrid horizontalAlignment='justify'>
+  <XYGrid horizontalAlignment={XYGrid.HorizontalAlignment.Justify}>
     <XYGrid.Cell size={{ min: 4 }}>
       <div style={style}>
         <span>Aligned to</span>
@@ -223,7 +223,7 @@ const style = {
       </div>
     </XYGrid.Cell>
   </XYGrid>
-  <XYGrid horizontalAlignment='spaced'>
+  <XYGrid horizontalAlignment={XYGrid.HorizontalAlignment.Spaced}>
     <XYGrid.Cell size={{ min: 4 }}>
       <div style={style}>
         <span>Aligned to</span>
@@ -254,7 +254,7 @@ const style = {
 };
 
 <>
-  <XYGrid verticalAlignment='top'>
+  <XYGrid verticalAlignment={XYGrid.VerticalAlignment.Top}>
     <XYGrid.Cell size={{ min: 4 }}>
       <div style={style}>
         <span>Aligned to the top (default)</span>
@@ -266,7 +266,7 @@ const style = {
       </div>
     </XYGrid.Cell>
   </XYGrid>
-  <XYGrid verticalAlignment='middle'>
+  <XYGrid verticalAlignment={XYGrid.VerticalAlignment.Middle}>
     <XYGrid.Cell size={{ min: 4 }}>
       <div style={style}>
         <span>Aligned to the middle</span>
@@ -278,7 +278,7 @@ const style = {
       </div>
     </XYGrid.Cell>
   </XYGrid>
-  <XYGrid verticalAlignment='bottom'>
+  <XYGrid verticalAlignment={XYGrid.VerticalAlignment.Bottom}>
     <XYGrid.Cell size={{ min: 4 }}>
       <div style={style}>
         <span>Aligned to the bottom</span>
@@ -290,7 +290,7 @@ const style = {
       </div>
     </XYGrid.Cell>
   </XYGrid>
-  <XYGrid verticalAlignment='stretch'>
+  <XYGrid verticalAlignment={XYGrid.VerticalAlignment.Stretch}>
     <XYGrid.Cell size={{ min: 4 }}>
       <div style={style}>
         <span>Stretched to have the same height</span>

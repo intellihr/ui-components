@@ -4,11 +4,25 @@ import { Cell } from './subcomponents/Cell'
 
 const style = require('./style.scss')
 
+export enum HorizontalAlignment {
+  Right = 'right',
+  Center = 'center',
+  Justify = 'justify',
+  Spaced = 'spaced'
+}
+
+export enum VerticalAlignment {
+  Top = 'top',
+  Middle = 'middle',
+  Bottom = 'bottom',
+  Stretch = 'stretch'
+}
+
 interface IXYGridProps {
   /** The horizontal alignment of the items within the grid */
-  horizontalAlignment?: 'right' | 'center' | 'justify' | 'spaced'
+  horizontalAlignment?: HorizontalAlignment
   /** The vertical alignment of the items within the grid */
-  verticalAlignment?: 'top' | 'middle' | 'bottom' | 'stretch'
+  verticalAlignment?: VerticalAlignment
   /** Adds gutters between cells as margin in the x direction */
   gutterMarginX?: boolean
   /** Adds gutters between cells as margin in the y direction */
@@ -23,6 +37,8 @@ interface IXYGridProps {
 
 export class XYGrid extends React.PureComponent<IXYGridProps, never> {
   public static Cell = Cell
+  public static HorizontalAlignment = HorizontalAlignment
+  public static VerticalAlignment = VerticalAlignment
 
   public static defaultProps = {
     vertical: false,
