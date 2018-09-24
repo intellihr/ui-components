@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row } from '../../../Grids/Row'
+import { XYGrid } from '../../XYGrid'
 import {
   StyledAnnotatedSectionDescription,
   StyledAnnotatedSectionBody,
@@ -31,23 +31,23 @@ class AnnotatedSection extends React.PureComponent<IAnnotatedSectionProps> {
 
     return (
       <StyledAnnotatedSection>
-        <Row>
-          <Row.Column sm={12} md={4}>
+        <XYGrid>
+          <XYGrid.Cell size={{ desktop: 4, tablet: 4, min: 12 }}>
             <StyledAnnotatedSectionDescription
               header={header}
               description={description}
               linkText={linkText}
               linkProps={linkProps}
             />
-          </Row.Column>
+          </XYGrid.Cell>
           {children &&
-            <Row.Column sm={12} md={8}>
+            <XYGrid.Cell size={{ desktop: 8, tablet: 8, min: 12 }}>
               <StyledAnnotatedSectionBody>
                 {children}
               </StyledAnnotatedSectionBody>
-            </Row.Column>
+            </XYGrid.Cell>
           }
-        </Row>
+        </XYGrid>
       </StyledAnnotatedSection>
     )
   }

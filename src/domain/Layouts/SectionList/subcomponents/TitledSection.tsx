@@ -1,9 +1,8 @@
 import React from 'react'
-import { Row } from '../../../Grids/Row'
+import { XYGrid } from '../../XYGrid'
 import {
   StyledTitledSectionDescription,
   StyledTitledSectionHeaderRow,
-  StyledTitledSectionActions,
   StyledTitledSectionBody,
   StyledTitledSection
 } from '../style'
@@ -28,22 +27,30 @@ class TitledSection extends React.PureComponent<ITitledSectionProps> {
 
     return (
       <StyledTitledSection>
-        <StyledTitledSectionHeaderRow>
-          <StyledTitledSectionDescription
-            header={header}
-            description={description}
-          />
-          <StyledTitledSectionActions>
-              {actionItems}
-          </StyledTitledSectionActions>
-        </StyledTitledSectionHeaderRow>
-        {children &&
-          <Row>
-            <StyledTitledSectionBody>
-              {children}
-            </StyledTitledSectionBody>
-          </Row>
-        }
+        <XYGrid>
+          <XYGrid.Cell size={{ min: 12 }}>
+            <StyledTitledSectionHeaderRow>
+              <XYGrid verticalAlignment={XYGrid.VerticalAlignment.Middle}>
+                <XYGrid.Cell size={{ desktop: 'auto', tablet: 'auto', min: 12 }}>
+                  <StyledTitledSectionDescription
+                    header={header}
+                    description={description}
+                  />
+                </XYGrid.Cell>
+                <XYGrid.Cell size={{ desktop: 'shrink', tablet: 'shrink', min: 12 }}>
+                  {actionItems}
+                </XYGrid.Cell>
+              </XYGrid>
+            </StyledTitledSectionHeaderRow>
+          </XYGrid.Cell>
+          {children &&
+            <XYGrid.Cell size={{ min: 12 }}>
+              <StyledTitledSectionBody>
+                {children}
+              </StyledTitledSectionBody>
+            </XYGrid.Cell>
+          }
+        </XYGrid>
       </StyledTitledSection>
     )
   }
