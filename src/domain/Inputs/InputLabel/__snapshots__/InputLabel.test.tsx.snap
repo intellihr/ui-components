@@ -3,22 +3,20 @@
 exports[`<InputLabel /> should render a label 1`] = `
 .c0 {
   color: #667380;
-  font-size: 0.9375rem;
-  line-height: 1.8;
+  font-size: 14px;
+  line-height: 20px;
 }
 
-.c0.is-invalid-label {
-  color: #D41200;
-}
-
-<InputLabel>
+<InputLabel
+  isRequired={false}
+>
   <styled.label
-    className=""
+    isRequired={false}
   >
     <label
       className="c0"
     >
-      Hello boys.
+      Test input label
     </label>
   </styled.label>
 </InputLabel>
@@ -27,52 +25,52 @@ exports[`<InputLabel /> should render a label 1`] = `
 exports[`<InputLabel /> should render a label with a 'for' attribute 1`] = `
 .c0 {
   color: #667380;
-  font-size: 0.9375rem;
-  line-height: 1.8;
-}
-
-.c0.is-invalid-label {
-  color: #D41200;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 <InputLabel
   htmlFor="input-id"
+  isRequired={false}
 >
   <styled.label
-    className=""
     htmlFor="input-id"
+    isRequired={false}
   >
     <label
       className="c0"
       htmlFor="input-id"
     >
-      Hello ladies.
+      Test input label
     </label>
   </styled.label>
 </InputLabel>
 `;
 
-exports[`<InputLabel /> should render a red label if isInvalid is true 1`] = `
+exports[`<InputLabel /> should render a label with a required marker 1`] = `
 .c0 {
   color: #667380;
-  font-size: 0.9375rem;
-  line-height: 1.8;
+  font-size: 14px;
+  line-height: 20px;
 }
 
-.c0.is-invalid-label {
-  color: #D41200;
+.c0::after {
+  color: #C5CED6;
+  content: ' - required';
+  font-size: 14px;
+  font-style: italic;
 }
 
 <InputLabel
-  isInvalid={true}
+  isRequired={true}
 >
   <styled.label
-    className="is-invalid-label"
+    isRequired={true}
   >
     <label
-      className="is-invalid-label c0"
+      className="c0"
     >
-      Hello ladies.
+      Test input label
     </label>
   </styled.label>
 </InputLabel>

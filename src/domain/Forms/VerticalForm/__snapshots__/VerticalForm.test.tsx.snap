@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Form /> should render a form 1`] = `
+exports[`<VerticalForm /> should render a form 1`] = `
 <form>
   <Input
     name="testInput"
@@ -9,7 +9,7 @@ exports[`<Form /> should render a form 1`] = `
 </form>
 `;
 
-exports[`<Form /> should render with an onChange and onSubmit attributes if handleChange are handleSubmit are passed in 1`] = `
+exports[`<VerticalForm /> should render with an onChange and onSubmit attributes if handleChange are handleSubmit are passed in 1`] = `
 <form
   onChange={
     [MockFunction] {

@@ -88,7 +88,7 @@ module.exports = {
         {
           name: 'Forms',
           components: [
-            'src/domain/Forms/Form/Form'
+            'src/domain/Forms/VerticalForm/VerticalForm'
           ]
         },
         {
