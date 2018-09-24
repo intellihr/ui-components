@@ -160,6 +160,151 @@ const style = {
 </XYGrid>
 ```
 
+#### Horizontal Alignment
+
+Horizontal alignment can be applied to the grid to affect the items within it.
+
+```jsx
+const { Variables } = require('@Common');
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  width: '100%',
+  textAlign: 'center'
+};
+
+<>
+  <XYGrid>
+    <XYGrid.Cell size={{ min: 4 }}>
+      <div style={style}>
+        <span>Aligned to</span>
+      </div>
+    </XYGrid.Cell>
+    <XYGrid.Cell size={{ min: 4 }}>
+      <div style={style}>
+        <span>the left</span>
+      </div>
+    </XYGrid.Cell>
+  </XYGrid>
+  <XYGrid horizontalAlignment='right'>
+    <XYGrid.Cell size={{ min: 4 }}>
+      <div style={style}>
+        <span>Aligned to</span>
+      </div>
+    </XYGrid.Cell>
+    <XYGrid.Cell size={{ min: 4 }}>
+      <div style={style}>
+        <span>the right</span>
+      </div>
+    </XYGrid.Cell>
+  </XYGrid>
+  <XYGrid horizontalAlignment='center'>
+    <XYGrid.Cell size={{ min: 4 }}>
+      <div style={style}>
+        <span>Aligned to</span>
+      </div>
+    </XYGrid.Cell>
+    <XYGrid.Cell size={{ min: 4 }}>
+      <div style={style}>
+        <span>the center</span>
+      </div>
+    </XYGrid.Cell>
+  </XYGrid>
+  <XYGrid horizontalAlignment='justify'>
+    <XYGrid.Cell size={{ min: 4 }}>
+      <div style={style}>
+        <span>Aligned to</span>
+      </div>
+    </XYGrid.Cell>
+    <XYGrid.Cell size={{ min: 4 }}>
+      <div style={style}>
+        <span>the edges</span>
+      </div>
+    </XYGrid.Cell>
+  </XYGrid>
+  <XYGrid horizontalAlignment='spaced'>
+    <XYGrid.Cell size={{ min: 4 }}>
+      <div style={style}>
+        <span>Aligned to</span>
+      </div>
+    </XYGrid.Cell>
+    <XYGrid.Cell size={{ min: 4 }}>
+      <div style={style}>
+        <span>the space around</span>
+      </div>
+    </XYGrid.Cell>
+  </XYGrid>
+</>
+```
+
+#### Vertical Alignment
+
+Vertical alignment can be applied to the grid to affect the items within it.
+
+```jsx
+const { Variables } = require('@Common');
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  width: '100%',
+  height: '100%',
+  textAlign: 'center'
+};
+
+<>
+  <XYGrid verticalAlignment='top'>
+    <XYGrid.Cell size={{ min: 4 }}>
+      <div style={style}>
+        <span>Aligned to the top (default)</span>
+      </div>
+    </XYGrid.Cell>
+    <XYGrid.Cell size={{ min: 4 }}>
+      <div style={style}>
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id eros consequat ex faucibus pellentesque nec non ipsum. Nulla facilisis libero vitae nisi varius ultricies. Nullam aliquet sollicitudin luctus. Donec sit amet risus et est pellentesque consectetur. Cras eu nisl est. Quisque auctor magna at nulla ultrices, non molestie tortor iaculis.</span>
+      </div>
+    </XYGrid.Cell>
+  </XYGrid>
+  <XYGrid verticalAlignment='middle'>
+    <XYGrid.Cell size={{ min: 4 }}>
+      <div style={style}>
+        <span>Aligned to the middle</span>
+      </div>
+    </XYGrid.Cell>
+    <XYGrid.Cell size={{ min: 4 }}>
+      <div style={style}>
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id eros consequat ex faucibus pellentesque nec non ipsum. Nulla facilisis libero vitae nisi varius ultricies. Nullam aliquet sollicitudin luctus. Donec sit amet risus et est pellentesque consectetur. Cras eu nisl est. Quisque auctor magna at nulla ultrices, non molestie tortor iaculis.</span>
+      </div>
+    </XYGrid.Cell>
+  </XYGrid>
+  <XYGrid verticalAlignment='bottom'>
+    <XYGrid.Cell size={{ min: 4 }}>
+      <div style={style}>
+        <span>Aligned to the bottom</span>
+      </div>
+    </XYGrid.Cell>
+    <XYGrid.Cell size={{ min: 4 }}>
+      <div style={style}>
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id eros consequat ex faucibus pellentesque nec non ipsum. Nulla facilisis libero vitae nisi varius ultricies. Nullam aliquet sollicitudin luctus. Donec sit amet risus et est pellentesque consectetur. Cras eu nisl est. Quisque auctor magna at nulla ultrices, non molestie tortor iaculis.</span>
+      </div>
+    </XYGrid.Cell>
+  </XYGrid>
+  <XYGrid verticalAlignment='stretch'>
+    <XYGrid.Cell size={{ min: 4 }}>
+      <div style={style}>
+        <span>Stretched to have the same height</span>
+      </div>
+    </XYGrid.Cell>
+    <XYGrid.Cell size={{ min: 4 }}>
+      <div style={style}>
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id eros consequat ex faucibus pellentesque nec non ipsum. Nulla facilisis libero vitae nisi varius ultricies. Nullam aliquet sollicitudin luctus. Donec sit amet risus et est pellentesque consectetur. Cras eu nisl est. Quisque auctor magna at nulla ultrices, non molestie tortor iaculis.</span>
+      </div>
+    </XYGrid.Cell>
+  </XYGrid>
+</>
+```
+
 #### Vertical Grids
 
 Grids can be made vertical easily using the `vertical` prop.
@@ -205,7 +350,7 @@ const styleSmall = {
 ```
 
 Vertical grids can be used as a makeshift stack when no sizes are provided:
- 
+
 ```jsx
 const { Variables } = require('@Common');
 const style = {

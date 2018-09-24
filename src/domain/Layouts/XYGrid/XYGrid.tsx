@@ -5,6 +5,10 @@ import { Cell } from './subcomponents/Cell'
 const style = require('./style.scss')
 
 interface IXYGridProps {
+  /** The horizontal alignment of the items within the grid */
+  horizontalAlignment?: 'right' | 'center' | 'justify' | 'spaced'
+  /** The vertical alignment of the items within the grid */
+  verticalAlignment?: 'top' | 'middle' | 'bottom' | 'stretch'
   /** Adds gutters between cells as margin in the x direction */
   gutterMarginX?: boolean
   /** Adds gutters between cells as margin in the y direction */
@@ -46,10 +50,14 @@ export class XYGrid extends React.PureComponent<IXYGridProps, never> {
       gutterMarginX,
       gutterMarginY,
       gutterPaddingX,
-      gutterPaddingY
+      gutterPaddingY,
+      horizontalAlignment,
+      verticalAlignment
     } = this.props
 
     const gridClass = vertical ? style.ihrGridY : style.ihrGridX
+    const horizontalAlignmentClass = horizontalAlignment && `align-${horizontalAlignment}`
+    const verticalAlignmentClass = verticalAlignment && `align-${verticalAlignment}`
 
     return classNames(
       gridClass,
@@ -58,7 +66,9 @@ export class XYGrid extends React.PureComponent<IXYGridProps, never> {
         'grid-margin-y': gutterMarginY,
         'grid-padding-x': gutterPaddingX,
         'grid-padding-y': gutterPaddingY
-      }
+      },
+      horizontalAlignmentClass,
+      verticalAlignmentClass
     )
   }
 }
