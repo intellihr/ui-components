@@ -133,16 +133,16 @@ exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
 >
   <Styled(styled.span)
     textType="body"
-    width={250}
+    width="250px"
   >
     <styled.span
       className="c0"
       textType="body"
-      width={250}
+      width="250px"
     >
       <span
         className="c0 c1"
-        width={250}
+        width="250px"
       >
         ‌
       </span>

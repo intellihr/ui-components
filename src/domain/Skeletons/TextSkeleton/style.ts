@@ -4,13 +4,13 @@ import { styleForTypographyType } from '../../Typographies/services/textStyles'
 import { SkeletonWrapper } from '../style'
 
 export interface ITextSkeletonWrapperProps {
-  width?: number,
+  width?: string,
   textType?: Props.TypographyType
 }
 
 export const TextSkeletonWrapper = styled(SkeletonWrapper)`
   border-radius: 4px;
-  width: ${(props: ITextSkeletonWrapperProps) => props.width ? `${props.width}px` : '100%'};
+  width: ${(props: ITextSkeletonWrapperProps) => props.width ? `${props.width}` : '100%'};
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 
