@@ -65,18 +65,18 @@ exports[`<BlockSkeleton /> should render a block skeleton with set width and hei
   width={400}
 >
   <Styled(styled.span)
-    height={200}
-    width={400}
+    height="200px"
+    width="400px"
   >
     <styled.span
       className="c0"
-      height={200}
-      width={400}
+      height="200px"
+      width="400px"
     >
       <span
         className="c0 c1"
-        height={200}
-        width={400}
+        height="200px"
+        width="400px"
       />
     </styled.span>
   </Styled(styled.span)>

@@ -14,11 +14,14 @@ interface IBadgeProps {
   color?: Variables.Color
   /** Enforced badge guideline sizes */
   size?: 'small' | 'medium' | 'large'
+  /** Show border */
+  hasBorder?: boolean
 }
 
 class Badge extends React.PureComponent<IBadgeProps> {
   public static defaultProps: Partial<IBadgeProps> = {
-    size: 'small'
+    size: 'small',
+    hasBorder: true
   }
 
   get label (): number | string | JSX.Element | undefined {
@@ -44,7 +47,8 @@ class Badge extends React.PureComponent<IBadgeProps> {
     const {
       backgroundColor,
       color,
-      size
+      size,
+      hasBorder
     } = this.props
 
     return (
@@ -52,6 +56,7 @@ class Badge extends React.PureComponent<IBadgeProps> {
         color={color}
         size={size}
         backgroundColor={backgroundColor}
+        hasBorder={hasBorder}
       >
         {this.label}
       </BadgeWrapper>

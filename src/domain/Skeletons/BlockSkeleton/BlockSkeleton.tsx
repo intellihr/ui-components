@@ -4,9 +4,9 @@ import { ISkeletonProps } from '../interfaces'
 
 export interface IBlockSkeletonProps extends ISkeletonProps {
   /** Width of the skeleton */
-  width?: number,
+  width?: number | string,
   /** Height of the skeleton */
-  height?: number
+  height?: number | string
 }
 
 class BlockSkeleton extends React.Component<IBlockSkeletonProps> {
@@ -33,8 +33,8 @@ class BlockSkeleton extends React.Component<IBlockSkeletonProps> {
 
     return (
       <BlockSkeletonWrapper
-        width={width}
-        height={height}
+        width={typeof width === 'number' ? `${width}px` : width}
+        height={typeof height === 'number' ? `${height}px` : height}
         className={className}
       />
     )

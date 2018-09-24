@@ -5,7 +5,7 @@ import { Props } from '../../../common'
 
 export interface ITextSkeletonProps extends ISkeletonProps {
   /** Width of the skeleton */
-  width?: number,
+  width?: number | string,
   /** Text type the skeleton is being rendered for */
   type?: Props.TypographyType
 }
@@ -36,7 +36,7 @@ class TextSkeleton extends React.Component<ITextSkeletonProps> {
     return (
       <TextSkeletonWrapper
         textType={type}
-        width={width}
+        width={typeof width === 'number' ? `${width}px` : width}
         className={className}
       >
         {String.fromCharCode(8204)}

@@ -11,7 +11,7 @@ namespace Variables {
   export enum Breakpoint {
     breakpointMin =        0,
     breakpointTablet =     640,
-    breakpointDesktop =    1024,
+    breakpointDesktop =    1034,
     breakpointBigDesktop = 1440
   }
 
