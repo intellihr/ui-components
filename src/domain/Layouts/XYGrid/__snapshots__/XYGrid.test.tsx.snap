@@ -6,10 +6,12 @@ exports[`<XYGrid /> should render an XYGrid 1`] = `
   gutterMarginY={false}
   gutterPaddingX={false}
   gutterPaddingY={true}
+  horizontalAlignment="center"
   vertical={false}
+  verticalAlignment="stretch"
 >
   <div
-    className="ihrGridX grid-margin-x grid-padding-y"
+    className="ihrGridX grid-margin-x grid-padding-y align-center align-stretch"
   >
     <Cell
       size={

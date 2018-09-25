@@ -1,46 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SectionList /> should render a section list with a titled section without props 1`] = `
-.c3 {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 0rem;
-  padding-left: 0rem;
-}
-
-.c4 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: 0rem;
-  margin-left: 0rem;
-}
-
-.c6 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c7 {
-  width: 100%;
-}
-
 @media only screen and (min-width:640px) {
   .c1 {
     border-bottom: 1px solid #E1E6EB;
@@ -60,67 +20,32 @@ exports[`<SectionList /> should render a section list with a titled section with
   }
 }
 
-@media only screen and (min-width:640px) {
-  .c2 {
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-  }
-}
-
 @media only screen and (max-width:639px) {
   .c2 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     padding: 24px 16px 12px;
   }
 }
 
 @media only screen and (max-width:639px) {
-  .c5 {
+  .c3 {
     padding-bottom: 12px;
   }
 }
 
 @media only screen and (min-width:640px) {
-  .c5 {
+  .c3 {
     margin-right: 24px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
   }
 }
 
 @media only screen and (min-width:640px) {
-  .c6 {
-    text-align: right;
-  }
-}
-
-@media only screen and (min-width:640px) {
-  .c7 {
+  .c4 {
     padding-top: 1.5rem;
   }
 }
 
 @media only screen and (max-width:639px) {
-  .c7 {
+  .c4 {
     background-color: #FAFBFC;
     border-top: 1px solid #E1E6EB;
     border-bottom: 1px solid #E1E6EB;
@@ -138,105 +63,104 @@ exports[`<SectionList /> should render a section list with a titled section with
           <div
             className="c0 c1"
           >
-            <Styled(Row)>
-              <Row
-                className="c2"
+            <XYGrid
+              gutterMarginX={false}
+              gutterMarginY={false}
+              gutterPaddingX={false}
+              gutterPaddingY={false}
+              vertical={false}
+            >
+              <div
+                className="ihrGridX"
               >
-                <GridProvider>
-                  <ThemeProvider
-                    theme={
-                      Object {
-                        "flexboxgrid": Object {
-                          "breakpoints": Object {
-                            "lg": 64.625,
-                            "md": 40,
-                            "sm": 0,
-                            "xs": -1,
-                          },
-                          "gridSize": 12,
-                          "gutterWidth": 0,
-                          "outerMargin": 0,
-                        },
-                      }
-                    }
-                  >
-                    <Grid
-                      fluid={true}
-                    >
-                      <div
-                        className="c3"
-                      >
-                        <Row
-                          className="c2"
-                        >
-                          <div
-                            className="c2 c4"
-                          >
-                            <Styled(SectionDescription)>
-                              <SectionDescription
-                                className="c5"
-                              >
-                                <div
-                                  className="c5"
-                                />
-                              </SectionDescription>
-                            </Styled(SectionDescription)>
-                            <styled.div>
-                              <div
-                                className="c6"
-                              />
-                            </styled.div>
-                          </div>
-                        </Row>
-                      </div>
-                    </Grid>
-                  </ThemeProvider>
-                </GridProvider>
-              </Row>
-            </Styled(Row)>
-            <Row>
-              <GridProvider>
-                <ThemeProvider
-                  theme={
+                <Cell
+                  size={
                     Object {
-                      "flexboxgrid": Object {
-                        "breakpoints": Object {
-                          "lg": 64.625,
-                          "md": 40,
-                          "sm": 0,
-                          "xs": -1,
-                        },
-                        "gridSize": 12,
-                        "gutterWidth": 0,
-                        "outerMargin": 0,
-                      },
+                      "min": 12,
                     }
                   }
                 >
-                  <Grid
-                    fluid={true}
+                  <div
+                    className="ihrCell min-12"
                   >
-                    <div
-                      className="c3"
-                    >
-                      <Row>
-                        <div
-                          className="c4"
+                    <styled.div>
+                      <div
+                        className="c2"
+                      >
+                        <XYGrid
+                          gutterMarginX={false}
+                          gutterMarginY={false}
+                          gutterPaddingX={false}
+                          gutterPaddingY={false}
+                          vertical={false}
+                          verticalAlignment="middle"
                         >
-                          <StyledTitledSectionBody>
-                            <div
-                              className="c7"
+                          <div
+                            className="ihrGridX align-middle"
+                          >
+                            <Cell
+                              size={
+                                Object {
+                                  "desktop": "auto",
+                                  "min": 12,
+                                  "tablet": "auto",
+                                }
+                              }
                             >
-                              section 1
-                            </div>
-                          </StyledTitledSectionBody>
-                        </div>
-                      </Row>
-                    </div>
-                  </Grid>
-                </ThemeProvider>
-              </GridProvider>
-            </Row>
+                              <div
+                                className="ihrCell desktop-auto tablet-auto min-12"
+                              >
+                                <Styled(SectionDescription)>
+                                  <SectionDescription
+                                    className="c3"
+                                  >
+                                    <div
+                                      className="c3"
+                                    />
+                                  </SectionDescription>
+                                </Styled(SectionDescription)>
+                              </div>
+                            </Cell>
+                            <Cell
+                              size={
+                                Object {
+                                  "desktop": "shrink",
+                                  "min": 12,
+                                  "tablet": "shrink",
+                                }
+                              }
+                            >
+                              <div
+                                className="ihrCell desktop-shrink tablet-shrink min-12"
+                              />
+                            </Cell>
+                          </div>
+                        </XYGrid>
+                      </div>
+                    </styled.div>
+                  </div>
+                </Cell>
+                <Cell
+                  size={
+                    Object {
+                      "min": 12,
+                    }
+                  }
+                >
+                  <div
+                    className="ihrCell min-12"
+                  >
+                    <StyledTitledSectionBody>
+                      <div
+                        className="c4"
+                      >
+                        section 1
+                      </div>
+                    </StyledTitledSectionBody>
+                  </div>
+                </Cell>
+              </div>
+            </XYGrid>
           </div>
         </styled.div>
       </Styled(styled.div)>
@@ -246,110 +170,6 @@ exports[`<SectionList /> should render a section list with a titled section with
 `;
 
 exports[`<SectionList /> should render a section list with an annotated section without props 1`] = `
-.c3 {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 0rem;
-  padding-left: 0rem;
-}
-
-.c4 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: 0rem;
-  margin-left: 0rem;
-}
-
-.c5 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0rem;
-  padding-left: 0rem;
-}
-
-.c7 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0rem;
-  padding-left: 0rem;
-}
-
-@media only screen and (min-width:0em) {
-  .c5 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:40em) {
-  .c5 {
-    -webkit-flex-basis: 33.333333333333336%;
-    -ms-flex-preferred-size: 33.333333333333336%;
-    flex-basis: 33.333333333333336%;
-    max-width: 33.333333333333336%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:64.625em) {
-  .c5 {
-    -webkit-flex-basis: 33.333333333333336%;
-    -ms-flex-preferred-size: 33.333333333333336%;
-    flex-basis: 33.333333333333336%;
-    max-width: 33.333333333333336%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c7 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:40em) {
-  .c7 {
-    -webkit-flex-basis: 66.66666666666667%;
-    -ms-flex-preferred-size: 66.66666666666667%;
-    flex-basis: 66.66666666666667%;
-    max-width: 66.66666666666667%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:64.625em) {
-  .c7 {
-    -webkit-flex-basis: 66.66666666666667%;
-    -ms-flex-preferred-size: 66.66666666666667%;
-    flex-basis: 66.66666666666667%;
-    max-width: 66.66666666666667%;
-    display: block;
-  }
-}
-
 @media only screen and (min-width:640px) {
   .c1 {
     border-bottom: 1px solid #E1E6EB;
@@ -376,13 +196,13 @@ exports[`<SectionList /> should render a section list with an annotated section 
 }
 
 @media only screen and (min-width:640px) {
-  .c8 {
+  .c4 {
     margin-left: 24px;
   }
 }
 
 @media only screen and (max-width:639px) {
-  .c8 {
+  .c4 {
     background-color: #FAFBFC;
     border-top: 1px solid #E1E6EB;
     border-bottom: 1px solid #E1E6EB;
@@ -391,13 +211,13 @@ exports[`<SectionList /> should render a section list with an annotated section 
 }
 
 @media only screen and (max-width:639px) {
-  .c6 {
+  .c3 {
     padding: 24px 16px;
   }
 }
 
 @media only screen and (min-width:640px) {
-  .c6 {
+  .c3 {
     margin-right: 24px;
   }
 }
@@ -432,92 +252,62 @@ exports[`<SectionList /> should render a section list with an annotated section 
           <div
             className="c2 c1"
           >
-            <Row>
-              <GridProvider>
-                <ThemeProvider
-                  theme={
+            <XYGrid
+              gutterMarginX={false}
+              gutterMarginY={false}
+              gutterPaddingX={false}
+              gutterPaddingY={false}
+              vertical={false}
+            >
+              <div
+                className="ihrGridX"
+              >
+                <Cell
+                  size={
                     Object {
-                      "flexboxgrid": Object {
-                        "breakpoints": Object {
-                          "lg": 64.625,
-                          "md": 40,
-                          "sm": 0,
-                          "xs": -1,
-                        },
-                        "gridSize": 12,
-                        "gutterWidth": 0,
-                        "outerMargin": 0,
-                      },
+                      "desktop": 4,
+                      "min": 12,
+                      "tablet": 4,
                     }
                   }
                 >
-                  <Grid
-                    fluid={true}
+                  <div
+                    className="ihrCell desktop-4 tablet-4 min-12"
                   >
-                    <div
-                      className="c3"
-                    >
-                      <Row>
+                    <Styled(SectionDescription)>
+                      <SectionDescription
+                        className="c3"
+                      >
                         <div
-                          className="c4"
-                        >
-                          <Column
-                            md={4}
-                            sm={12}
-                          >
-                            <Col
-                              lg={4}
-                              md={4}
-                              sm={12}
-                              type="row"
-                            >
-                              <div
-                                className="c5"
-                                type="row"
-                              >
-                                <Styled(SectionDescription)>
-                                  <SectionDescription
-                                    className="c6"
-                                  >
-                                    <div
-                                      className="c6"
-                                    />
-                                  </SectionDescription>
-                                </Styled(SectionDescription)>
-                              </div>
-                            </Col>
-                          </Column>
-                          <Column
-                            md={8}
-                            sm={12}
-                          >
-                            <Col
-                              lg={8}
-                              md={8}
-                              sm={12}
-                              type="row"
-                            >
-                              <div
-                                className="c7"
-                                type="row"
-                              >
-                                <StyledAnnotatedSectionBody>
-                                  <div
-                                    className="c8"
-                                  >
-                                    section 2
-                                  </div>
-                                </StyledAnnotatedSectionBody>
-                              </div>
-                            </Col>
-                          </Column>
-                        </div>
-                      </Row>
-                    </div>
-                  </Grid>
-                </ThemeProvider>
-              </GridProvider>
-            </Row>
+                          className="c3"
+                        />
+                      </SectionDescription>
+                    </Styled(SectionDescription)>
+                  </div>
+                </Cell>
+                <Cell
+                  size={
+                    Object {
+                      "desktop": 8,
+                      "min": 12,
+                      "tablet": 8,
+                    }
+                  }
+                >
+                  <div
+                    className="ihrCell desktop-8 tablet-8 min-12"
+                  >
+                    <StyledAnnotatedSectionBody>
+                      <div
+                        className="c4"
+                      >
+                        section 2
+                      </div>
+                    </StyledAnnotatedSectionBody>
+                  </div>
+                </Cell>
+              </div>
+            </XYGrid>
           </div>
         </styled.div>
       </Styled(styled.div)>
@@ -527,51 +317,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
 `;
 
 exports[`<SectionList /> should render a sectionList 1`] = `
-.c3 {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 0rem;
-  padding-left: 0rem;
-}
-
-.c4 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: 0rem;
-  margin-left: 0rem;
-}
-
-.c5 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0rem;
-  padding-left: 0rem;
-}
-
-.c10 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0rem;
-  padding-left: 0rem;
-}
-
-.c9 {
+.c6 {
   -webkit-transition: color .25s ease-out;
   transition: color .25s ease-out;
   font-size: 14px;
@@ -582,35 +328,21 @@ exports[`<SectionList /> should render a sectionList 1`] = `
   letter-spacing: normal;
 }
 
-.c9,
-.c9:link,
-.c9:visited {
+.c6,
+.c6:link,
+.c6:visited {
   color: #432DF3;
 }
 
-.c9:hover {
+.c6:hover {
   color: #2512B3;
 }
 
-.c9:active {
+.c6:active {
   color: #0F0080;
 }
 
-.c17 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c18 {
-  width: 100%;
-}
-
-.c7 {
+.c4 {
   font-size: 18px;
   line-height: 24px;
   -webkit-letter-spacing: -.02em;
@@ -621,7 +353,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
   font-weight: 600;
 }
 
-.c8 {
+.c5 {
   font-size: 14px;
   line-height: 20px;
   -webkit-letter-spacing: normal;
@@ -633,7 +365,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
   display: block;
 }
 
-.c15 {
+.c11 {
   font-size: 18px;
   line-height: 24px;
   -webkit-letter-spacing: -.02em;
@@ -644,7 +376,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
   font-weight: 600;
 }
 
-.c16 {
+.c12 {
   font-size: 14px;
   line-height: 20px;
   -webkit-letter-spacing: normal;
@@ -654,66 +386,6 @@ exports[`<SectionList /> should render a sectionList 1`] = `
   color: #667380;
   font-weight: 400;
   display: block;
-}
-
-@media only screen and (min-width:0em) {
-  .c5 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:40em) {
-  .c5 {
-    -webkit-flex-basis: 33.333333333333336%;
-    -ms-flex-preferred-size: 33.333333333333336%;
-    flex-basis: 33.333333333333336%;
-    max-width: 33.333333333333336%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:64.625em) {
-  .c5 {
-    -webkit-flex-basis: 33.333333333333336%;
-    -ms-flex-preferred-size: 33.333333333333336%;
-    flex-basis: 33.333333333333336%;
-    max-width: 33.333333333333336%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c10 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:40em) {
-  .c10 {
-    -webkit-flex-basis: 66.66666666666667%;
-    -ms-flex-preferred-size: 66.66666666666667%;
-    flex-basis: 66.66666666666667%;
-    max-width: 66.66666666666667%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:64.625em) {
-  .c10 {
-    -webkit-flex-basis: 66.66666666666667%;
-    -ms-flex-preferred-size: 66.66666666666667%;
-    flex-basis: 66.66666666666667%;
-    max-width: 66.66666666666667%;
-    display: block;
-  }
 }
 
 @media only screen and (min-width:640px) {
@@ -742,13 +414,13 @@ exports[`<SectionList /> should render a sectionList 1`] = `
 }
 
 @media only screen and (min-width:640px) {
-  .c11 {
+  .c7 {
     margin-left: 24px;
   }
 }
 
 @media only screen and (max-width:639px) {
-  .c11 {
+  .c7 {
     background-color: #FAFBFC;
     border-top: 1px solid #E1E6EB;
     border-bottom: 1px solid #E1E6EB;
@@ -757,13 +429,13 @@ exports[`<SectionList /> should render a sectionList 1`] = `
 }
 
 @media only screen and (max-width:639px) {
-  .c6 {
+  .c3 {
     padding: 24px 16px;
   }
 }
 
 @media only screen and (min-width:640px) {
-  .c6 {
+  .c3 {
     margin-right: 24px;
   }
 }
@@ -778,7 +450,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
 }
 
 @media only screen and (min-width:640px) {
-  .c12 {
+  .c8 {
     margin-left: 24px;
     margin-right: 24px;
     padding-top: 32px;
@@ -786,67 +458,32 @@ exports[`<SectionList /> should render a sectionList 1`] = `
   }
 }
 
-@media only screen and (min-width:640px) {
-  .c13 {
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-  }
-}
-
 @media only screen and (max-width:639px) {
-  .c13 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+  .c9 {
     padding: 24px 16px 12px;
   }
 }
 
 @media only screen and (max-width:639px) {
-  .c14 {
+  .c10 {
     padding-bottom: 12px;
   }
 }
 
 @media only screen and (min-width:640px) {
-  .c14 {
+  .c10 {
     margin-right: 24px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
   }
 }
 
 @media only screen and (min-width:640px) {
-  .c17 {
-    text-align: right;
-  }
-}
-
-@media only screen and (min-width:640px) {
-  .c18 {
+  .c13 {
     padding-top: 1.5rem;
   }
 }
 
 @media only screen and (max-width:639px) {
-  .c18 {
+  .c13 {
     background-color: #FAFBFC;
     border-top: 1px solid #E1E6EB;
     border-bottom: 1px solid #E1E6EB;
@@ -884,170 +521,140 @@ exports[`<SectionList /> should render a sectionList 1`] = `
           <div
             className="c2 c1"
           >
-            <Row>
-              <GridProvider>
-                <ThemeProvider
-                  theme={
+            <XYGrid
+              gutterMarginX={false}
+              gutterMarginY={false}
+              gutterPaddingX={false}
+              gutterPaddingY={false}
+              vertical={false}
+            >
+              <div
+                className="ihrGridX"
+              >
+                <Cell
+                  size={
                     Object {
-                      "flexboxgrid": Object {
-                        "breakpoints": Object {
-                          "lg": 64.625,
-                          "md": 40,
-                          "sm": 0,
-                          "xs": -1,
-                        },
-                        "gridSize": 12,
-                        "gutterWidth": 0,
-                        "outerMargin": 0,
-                      },
+                      "desktop": 4,
+                      "min": 12,
+                      "tablet": 4,
                     }
                   }
                 >
-                  <Grid
-                    fluid={true}
+                  <div
+                    className="ihrCell desktop-4 tablet-4 min-12"
                   >
-                    <div
-                      className="c3"
+                    <Styled(SectionDescription)
+                      description="Annotated Description"
+                      header="Annotated Section"
+                      linkProps={
+                        Object {
+                          "href": "#",
+                        }
+                      }
+                      linkText="Annotated Link"
                     >
-                      <Row>
+                      <SectionDescription
+                        className="c3"
+                        description="Annotated Description"
+                        header="Annotated Section"
+                        linkProps={
+                          Object {
+                            "href": "#",
+                          }
+                        }
+                        linkText="Annotated Link"
+                      >
                         <div
-                          className="c4"
+                          className="c3"
                         >
-                          <Column
-                            md={4}
-                            sm={12}
+                          <Text
+                            color="#424F5C"
+                            isInline={true}
+                            tag="h2"
+                            type="heading"
                           >
-                            <Col
-                              lg={4}
-                              md={4}
-                              sm={12}
-                              type="row"
+                            <styled.h2
+                              color="#424F5C"
+                              isInline={true}
+                              textType="heading"
                             >
-                              <div
+                              <h2
+                                className="c4"
+                                color="#424F5C"
+                              >
+                                Annotated Section
+                              </h2>
+                            </styled.h2>
+                          </Text>
+                          <Text
+                            color="#667380"
+                            isInline={false}
+                            tag="span"
+                            type="small"
+                          >
+                            <styled.span
+                              color="#667380"
+                              isInline={false}
+                              textType="small"
+                            >
+                              <span
                                 className="c5"
-                                type="row"
+                                color="#667380"
                               >
-                                <Styled(SectionDescription)
-                                  description="Annotated Description"
-                                  header="Annotated Section"
-                                  linkProps={
-                                    Object {
-                                      "href": "#",
-                                    }
-                                  }
-                                  linkText="Annotated Link"
-                                >
-                                  <SectionDescription
-                                    className="c6"
-                                    description="Annotated Description"
-                                    header="Annotated Section"
-                                    linkProps={
-                                      Object {
-                                        "href": "#",
-                                      }
-                                    }
-                                    linkText="Annotated Link"
-                                  >
-                                    <div
-                                      className="c6"
-                                    >
-                                      <Text
-                                        color="#424F5C"
-                                        isInline={true}
-                                        tag="h2"
-                                        type="heading"
-                                      >
-                                        <styled.h2
-                                          color="#424F5C"
-                                          isInline={true}
-                                          textType="heading"
-                                        >
-                                          <h2
-                                            className="c7"
-                                            color="#424F5C"
-                                          >
-                                            Annotated Section
-                                          </h2>
-                                        </styled.h2>
-                                      </Text>
-                                      <Text
-                                        color="#667380"
-                                        isInline={false}
-                                        tag="span"
-                                        type="small"
-                                      >
-                                        <styled.span
-                                          color="#667380"
-                                          isInline={false}
-                                          textType="small"
-                                        >
-                                          <span
-                                            className="c8"
-                                            color="#667380"
-                                          >
-                                            Annotated Description
-                                          </span>
-                                        </styled.span>
-                                      </Text>
-                                      <TextLink
-                                        href="#"
-                                        textType="small"
-                                      >
-                                        <Component
-                                          className="c9"
-                                          href="#"
-                                          textType="small"
-                                        >
-                                          <Anchor
-                                            className="c9"
-                                            href="#"
-                                          >
-                                            <a
-                                              className="c9"
-                                              href="#"
-                                            >
-                                              Annotated Link
-                                            </a>
-                                          </Anchor>
-                                        </Component>
-                                      </TextLink>
-                                    </div>
-                                  </SectionDescription>
-                                </Styled(SectionDescription)>
-                              </div>
-                            </Col>
-                          </Column>
-                          <Column
-                            md={8}
-                            sm={12}
+                                Annotated Description
+                              </span>
+                            </styled.span>
+                          </Text>
+                          <TextLink
+                            href="#"
+                            textType="small"
                           >
-                            <Col
-                              lg={8}
-                              md={8}
-                              sm={12}
-                              type="row"
+                            <Component
+                              className="c6"
+                              href="#"
+                              textType="small"
                             >
-                              <div
-                                className="c10"
-                                type="row"
+                              <Anchor
+                                className="c6"
+                                href="#"
                               >
-                                <StyledAnnotatedSectionBody>
-                                  <div
-                                    className="c11"
-                                  >
-                                    section 2
-                                  </div>
-                                </StyledAnnotatedSectionBody>
-                              </div>
-                            </Col>
-                          </Column>
+                                <a
+                                  className="c6"
+                                  href="#"
+                                >
+                                  Annotated Link
+                                </a>
+                              </Anchor>
+                            </Component>
+                          </TextLink>
                         </div>
-                      </Row>
-                    </div>
-                  </Grid>
-                </ThemeProvider>
-              </GridProvider>
-            </Row>
+                      </SectionDescription>
+                    </Styled(SectionDescription)>
+                  </div>
+                </Cell>
+                <Cell
+                  size={
+                    Object {
+                      "desktop": 8,
+                      "min": 12,
+                      "tablet": 8,
+                    }
+                  }
+                >
+                  <div
+                    className="ihrCell desktop-8 tablet-8 min-12"
+                  >
+                    <StyledAnnotatedSectionBody>
+                      <div
+                        className="c7"
+                      >
+                        section 2
+                      </div>
+                    </StyledAnnotatedSectionBody>
+                  </div>
+                </Cell>
+              </div>
+            </XYGrid>
           </div>
         </styled.div>
       </Styled(styled.div)>
@@ -1074,101 +681,124 @@ exports[`<SectionList /> should render a sectionList 1`] = `
     >
       <Styled(styled.div)>
         <styled.div
-          className="c12"
+          className="c8"
         >
           <div
-            className="c12 c1"
+            className="c8 c1"
           >
-            <Styled(Row)>
-              <Row
-                className="c13"
+            <XYGrid
+              gutterMarginX={false}
+              gutterMarginY={false}
+              gutterPaddingX={false}
+              gutterPaddingY={false}
+              vertical={false}
+            >
+              <div
+                className="ihrGridX"
               >
-                <GridProvider>
-                  <ThemeProvider
-                    theme={
-                      Object {
-                        "flexboxgrid": Object {
-                          "breakpoints": Object {
-                            "lg": 64.625,
-                            "md": 40,
-                            "sm": 0,
-                            "xs": -1,
-                          },
-                          "gridSize": 12,
-                          "gutterWidth": 0,
-                          "outerMargin": 0,
-                        },
-                      }
+                <Cell
+                  size={
+                    Object {
+                      "min": 12,
                     }
+                  }
+                >
+                  <div
+                    className="ihrCell min-12"
                   >
-                    <Grid
-                      fluid={true}
-                    >
+                    <styled.div>
                       <div
-                        className="c3"
+                        className="c9"
                       >
-                        <Row
-                          className="c13"
+                        <XYGrid
+                          gutterMarginX={false}
+                          gutterMarginY={false}
+                          gutterPaddingX={false}
+                          gutterPaddingY={false}
+                          vertical={false}
+                          verticalAlignment="middle"
                         >
                           <div
-                            className="c13 c4"
+                            className="ihrGridX align-middle"
                           >
-                            <Styled(SectionDescription)
-                              description="Titled Description"
-                              header="Titled Section"
+                            <Cell
+                              size={
+                                Object {
+                                  "desktop": "auto",
+                                  "min": 12,
+                                  "tablet": "auto",
+                                }
+                              }
                             >
-                              <SectionDescription
-                                className="c14"
-                                description="Titled Description"
-                                header="Titled Section"
-                              >
-                                <div
-                                  className="c14"
-                                >
-                                  <Text
-                                    color="#424F5C"
-                                    isInline={true}
-                                    tag="h2"
-                                    type="heading"
-                                  >
-                                    <styled.h2
-                                      color="#424F5C"
-                                      isInline={true}
-                                      textType="heading"
-                                    >
-                                      <h2
-                                        className="c15"
-                                        color="#424F5C"
-                                      >
-                                        Titled Section
-                                      </h2>
-                                    </styled.h2>
-                                  </Text>
-                                  <Text
-                                    color="#667380"
-                                    isInline={false}
-                                    tag="span"
-                                    type="small"
-                                  >
-                                    <styled.span
-                                      color="#667380"
-                                      isInline={false}
-                                      textType="small"
-                                    >
-                                      <span
-                                        className="c16"
-                                        color="#667380"
-                                      >
-                                        Titled Description
-                                      </span>
-                                    </styled.span>
-                                  </Text>
-                                </div>
-                              </SectionDescription>
-                            </Styled(SectionDescription)>
-                            <styled.div>
                               <div
-                                className="c17"
+                                className="ihrCell desktop-auto tablet-auto min-12"
+                              >
+                                <Styled(SectionDescription)
+                                  description="Titled Description"
+                                  header="Titled Section"
+                                >
+                                  <SectionDescription
+                                    className="c10"
+                                    description="Titled Description"
+                                    header="Titled Section"
+                                  >
+                                    <div
+                                      className="c10"
+                                    >
+                                      <Text
+                                        color="#424F5C"
+                                        isInline={true}
+                                        tag="h2"
+                                        type="heading"
+                                      >
+                                        <styled.h2
+                                          color="#424F5C"
+                                          isInline={true}
+                                          textType="heading"
+                                        >
+                                          <h2
+                                            className="c11"
+                                            color="#424F5C"
+                                          >
+                                            Titled Section
+                                          </h2>
+                                        </styled.h2>
+                                      </Text>
+                                      <Text
+                                        color="#667380"
+                                        isInline={false}
+                                        tag="span"
+                                        type="small"
+                                      >
+                                        <styled.span
+                                          color="#667380"
+                                          isInline={false}
+                                          textType="small"
+                                        >
+                                          <span
+                                            className="c12"
+                                            color="#667380"
+                                          >
+                                            Titled Description
+                                          </span>
+                                        </styled.span>
+                                      </Text>
+                                    </div>
+                                  </SectionDescription>
+                                </Styled(SectionDescription)>
+                              </div>
+                            </Cell>
+                            <Cell
+                              size={
+                                Object {
+                                  "desktop": "shrink",
+                                  "min": 12,
+                                  "tablet": "shrink",
+                                }
+                              }
+                            >
+                              <div
+                                className="ihrCell desktop-shrink tablet-shrink min-12"
                               >
                                 <Button
                                   iconAlignment="left"
@@ -1193,58 +823,34 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                   </button>
                                 </Button>
                               </div>
-                            </styled.div>
+                            </Cell>
                           </div>
-                        </Row>
+                        </XYGrid>
                       </div>
-                    </Grid>
-                  </ThemeProvider>
-                </GridProvider>
-              </Row>
-            </Styled(Row)>
-            <Row>
-              <GridProvider>
-                <ThemeProvider
-                  theme={
+                    </styled.div>
+                  </div>
+                </Cell>
+                <Cell
+                  size={
                     Object {
-                      "flexboxgrid": Object {
-                        "breakpoints": Object {
-                          "lg": 64.625,
-                          "md": 40,
-                          "sm": 0,
-                          "xs": -1,
-                        },
-                        "gridSize": 12,
-                        "gutterWidth": 0,
-                        "outerMargin": 0,
-                      },
+                      "min": 12,
                     }
                   }
                 >
-                  <Grid
-                    fluid={true}
+                  <div
+                    className="ihrCell min-12"
                   >
-                    <div
-                      className="c3"
-                    >
-                      <Row>
-                        <div
-                          className="c4"
-                        >
-                          <StyledTitledSectionBody>
-                            <div
-                              className="c18"
-                            >
-                              section 3
-                            </div>
-                          </StyledTitledSectionBody>
-                        </div>
-                      </Row>
-                    </div>
-                  </Grid>
-                </ThemeProvider>
-              </GridProvider>
-            </Row>
+                    <StyledTitledSectionBody>
+                      <div
+                        className="c13"
+                      >
+                        section 3
+                      </div>
+                    </StyledTitledSectionBody>
+                  </div>
+                </Cell>
+              </div>
+            </XYGrid>
           </div>
         </styled.div>
       </Styled(styled.div)>
@@ -1254,42 +860,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
 `;
 
 exports[`<SectionList /> should render sectionList items with no children 1`] = `
-.c3 {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 0rem;
-  padding-left: 0rem;
-}
-
-.c4 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: 0rem;
-  margin-left: 0rem;
-}
-
-.c5 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0rem;
-  padding-left: 0rem;
-}
-
-.c9 {
+.c6 {
   -webkit-transition: color .25s ease-out;
   transition: color .25s ease-out;
   font-size: 14px;
@@ -1300,31 +871,21 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
   letter-spacing: normal;
 }
 
-.c9,
-.c9:link,
-.c9:visited {
+.c6,
+.c6:link,
+.c6:visited {
   color: #432DF3;
 }
 
-.c9:hover {
+.c6:hover {
   color: #2512B3;
 }
 
-.c9:active {
+.c6:active {
   color: #0F0080;
 }
 
-.c15 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c7 {
+.c4 {
   font-size: 18px;
   line-height: 24px;
   -webkit-letter-spacing: -.02em;
@@ -1335,7 +896,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
   font-weight: 600;
 }
 
-.c8 {
+.c5 {
   font-size: 14px;
   line-height: 20px;
   -webkit-letter-spacing: normal;
@@ -1347,7 +908,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
   display: block;
 }
 
-.c13 {
+.c10 {
   font-size: 18px;
   line-height: 24px;
   -webkit-letter-spacing: -.02em;
@@ -1358,7 +919,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
   font-weight: 600;
 }
 
-.c14 {
+.c11 {
   font-size: 14px;
   line-height: 20px;
   -webkit-letter-spacing: normal;
@@ -1368,36 +929,6 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
   color: #667380;
   font-weight: 400;
   display: block;
-}
-
-@media only screen and (min-width:0em) {
-  .c5 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:40em) {
-  .c5 {
-    -webkit-flex-basis: 33.333333333333336%;
-    -ms-flex-preferred-size: 33.333333333333336%;
-    flex-basis: 33.333333333333336%;
-    max-width: 33.333333333333336%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:64.625em) {
-  .c5 {
-    -webkit-flex-basis: 33.333333333333336%;
-    -ms-flex-preferred-size: 33.333333333333336%;
-    flex-basis: 33.333333333333336%;
-    max-width: 33.333333333333336%;
-    display: block;
-  }
 }
 
 @media only screen and (min-width:640px) {
@@ -1426,13 +957,13 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
 }
 
 @media only screen and (max-width:639px) {
-  .c6 {
+  .c3 {
     padding: 24px 16px;
   }
 }
 
 @media only screen and (min-width:640px) {
-  .c6 {
+  .c3 {
     margin-right: 24px;
   }
 }
@@ -1447,7 +978,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
 }
 
 @media only screen and (min-width:640px) {
-  .c10 {
+  .c7 {
     margin-left: 24px;
     margin-right: 24px;
     padding-top: 32px;
@@ -1455,56 +986,21 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
   }
 }
 
-@media only screen and (min-width:640px) {
-  .c11 {
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-  }
-}
-
 @media only screen and (max-width:639px) {
-  .c11 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+  .c8 {
     padding: 24px 16px 12px;
   }
 }
 
 @media only screen and (max-width:639px) {
-  .c12 {
+  .c9 {
     padding-bottom: 12px;
   }
 }
 
 @media only screen and (min-width:640px) {
-  .c12 {
+  .c9 {
     margin-right: 24px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-}
-
-@media only screen and (min-width:640px) {
-  .c15 {
-    text-align: right;
   }
 }
 
@@ -1536,146 +1032,119 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
           <div
             className="c2 c1"
           >
-            <Row>
-              <GridProvider>
-                <ThemeProvider
-                  theme={
+            <XYGrid
+              gutterMarginX={false}
+              gutterMarginY={false}
+              gutterPaddingX={false}
+              gutterPaddingY={false}
+              vertical={false}
+            >
+              <div
+                className="ihrGridX"
+              >
+                <Cell
+                  size={
                     Object {
-                      "flexboxgrid": Object {
-                        "breakpoints": Object {
-                          "lg": 64.625,
-                          "md": 40,
-                          "sm": 0,
-                          "xs": -1,
-                        },
-                        "gridSize": 12,
-                        "gutterWidth": 0,
-                        "outerMargin": 0,
-                      },
+                      "desktop": 4,
+                      "min": 12,
+                      "tablet": 4,
                     }
                   }
                 >
-                  <Grid
-                    fluid={true}
+                  <div
+                    className="ihrCell desktop-4 tablet-4 min-12"
                   >
-                    <div
-                      className="c3"
+                    <Styled(SectionDescription)
+                      description="Annotated Description"
+                      header="Annotated Section"
+                      linkProps={
+                        Object {
+                          "href": "#",
+                        }
+                      }
+                      linkText="Annotated Link"
                     >
-                      <Row>
+                      <SectionDescription
+                        className="c3"
+                        description="Annotated Description"
+                        header="Annotated Section"
+                        linkProps={
+                          Object {
+                            "href": "#",
+                          }
+                        }
+                        linkText="Annotated Link"
+                      >
                         <div
-                          className="c4"
+                          className="c3"
                         >
-                          <Column
-                            md={4}
-                            sm={12}
+                          <Text
+                            color="#424F5C"
+                            isInline={true}
+                            tag="h2"
+                            type="heading"
                           >
-                            <Col
-                              lg={4}
-                              md={4}
-                              sm={12}
-                              type="row"
+                            <styled.h2
+                              color="#424F5C"
+                              isInline={true}
+                              textType="heading"
                             >
-                              <div
-                                className="c5"
-                                type="row"
+                              <h2
+                                className="c4"
+                                color="#424F5C"
                               >
-                                <Styled(SectionDescription)
-                                  description="Annotated Description"
-                                  header="Annotated Section"
-                                  linkProps={
-                                    Object {
-                                      "href": "#",
-                                    }
-                                  }
-                                  linkText="Annotated Link"
+                                Annotated Section
+                              </h2>
+                            </styled.h2>
+                          </Text>
+                          <Text
+                            color="#667380"
+                            isInline={false}
+                            tag="span"
+                            type="small"
+                          >
+                            <styled.span
+                              color="#667380"
+                              isInline={false}
+                              textType="small"
+                            >
+                              <span
+                                className="c5"
+                                color="#667380"
+                              >
+                                Annotated Description
+                              </span>
+                            </styled.span>
+                          </Text>
+                          <TextLink
+                            href="#"
+                            textType="small"
+                          >
+                            <Component
+                              className="c6"
+                              href="#"
+                              textType="small"
+                            >
+                              <Anchor
+                                className="c6"
+                                href="#"
+                              >
+                                <a
+                                  className="c6"
+                                  href="#"
                                 >
-                                  <SectionDescription
-                                    className="c6"
-                                    description="Annotated Description"
-                                    header="Annotated Section"
-                                    linkProps={
-                                      Object {
-                                        "href": "#",
-                                      }
-                                    }
-                                    linkText="Annotated Link"
-                                  >
-                                    <div
-                                      className="c6"
-                                    >
-                                      <Text
-                                        color="#424F5C"
-                                        isInline={true}
-                                        tag="h2"
-                                        type="heading"
-                                      >
-                                        <styled.h2
-                                          color="#424F5C"
-                                          isInline={true}
-                                          textType="heading"
-                                        >
-                                          <h2
-                                            className="c7"
-                                            color="#424F5C"
-                                          >
-                                            Annotated Section
-                                          </h2>
-                                        </styled.h2>
-                                      </Text>
-                                      <Text
-                                        color="#667380"
-                                        isInline={false}
-                                        tag="span"
-                                        type="small"
-                                      >
-                                        <styled.span
-                                          color="#667380"
-                                          isInline={false}
-                                          textType="small"
-                                        >
-                                          <span
-                                            className="c8"
-                                            color="#667380"
-                                          >
-                                            Annotated Description
-                                          </span>
-                                        </styled.span>
-                                      </Text>
-                                      <TextLink
-                                        href="#"
-                                        textType="small"
-                                      >
-                                        <Component
-                                          className="c9"
-                                          href="#"
-                                          textType="small"
-                                        >
-                                          <Anchor
-                                            className="c9"
-                                            href="#"
-                                          >
-                                            <a
-                                              className="c9"
-                                              href="#"
-                                            >
-                                              Annotated Link
-                                            </a>
-                                          </Anchor>
-                                        </Component>
-                                      </TextLink>
-                                    </div>
-                                  </SectionDescription>
-                                </Styled(SectionDescription)>
-                              </div>
-                            </Col>
-                          </Column>
+                                  Annotated Link
+                                </a>
+                              </Anchor>
+                            </Component>
+                          </TextLink>
                         </div>
-                      </Row>
-                    </div>
-                  </Grid>
-                </ThemeProvider>
-              </GridProvider>
-            </Row>
+                      </SectionDescription>
+                    </Styled(SectionDescription)>
+                  </div>
+                </Cell>
+              </div>
+            </XYGrid>
           </div>
         </styled.div>
       </Styled(styled.div)>
@@ -1702,101 +1171,124 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
     >
       <Styled(styled.div)>
         <styled.div
-          className="c10"
+          className="c7"
         >
           <div
-            className="c10 c1"
+            className="c7 c1"
           >
-            <Styled(Row)>
-              <Row
-                className="c11"
+            <XYGrid
+              gutterMarginX={false}
+              gutterMarginY={false}
+              gutterPaddingX={false}
+              gutterPaddingY={false}
+              vertical={false}
+            >
+              <div
+                className="ihrGridX"
               >
-                <GridProvider>
-                  <ThemeProvider
-                    theme={
-                      Object {
-                        "flexboxgrid": Object {
-                          "breakpoints": Object {
-                            "lg": 64.625,
-                            "md": 40,
-                            "sm": 0,
-                            "xs": -1,
-                          },
-                          "gridSize": 12,
-                          "gutterWidth": 0,
-                          "outerMargin": 0,
-                        },
-                      }
+                <Cell
+                  size={
+                    Object {
+                      "min": 12,
                     }
+                  }
+                >
+                  <div
+                    className="ihrCell min-12"
                   >
-                    <Grid
-                      fluid={true}
-                    >
+                    <styled.div>
                       <div
-                        className="c3"
+                        className="c8"
                       >
-                        <Row
-                          className="c11"
+                        <XYGrid
+                          gutterMarginX={false}
+                          gutterMarginY={false}
+                          gutterPaddingX={false}
+                          gutterPaddingY={false}
+                          vertical={false}
+                          verticalAlignment="middle"
                         >
                           <div
-                            className="c11 c4"
+                            className="ihrGridX align-middle"
                           >
-                            <Styled(SectionDescription)
-                              description="Titled Description"
-                              header="Titled Section"
+                            <Cell
+                              size={
+                                Object {
+                                  "desktop": "auto",
+                                  "min": 12,
+                                  "tablet": "auto",
+                                }
+                              }
                             >
-                              <SectionDescription
-                                className="c12"
-                                description="Titled Description"
-                                header="Titled Section"
-                              >
-                                <div
-                                  className="c12"
-                                >
-                                  <Text
-                                    color="#424F5C"
-                                    isInline={true}
-                                    tag="h2"
-                                    type="heading"
-                                  >
-                                    <styled.h2
-                                      color="#424F5C"
-                                      isInline={true}
-                                      textType="heading"
-                                    >
-                                      <h2
-                                        className="c13"
-                                        color="#424F5C"
-                                      >
-                                        Titled Section
-                                      </h2>
-                                    </styled.h2>
-                                  </Text>
-                                  <Text
-                                    color="#667380"
-                                    isInline={false}
-                                    tag="span"
-                                    type="small"
-                                  >
-                                    <styled.span
-                                      color="#667380"
-                                      isInline={false}
-                                      textType="small"
-                                    >
-                                      <span
-                                        className="c14"
-                                        color="#667380"
-                                      >
-                                        Titled Description
-                                      </span>
-                                    </styled.span>
-                                  </Text>
-                                </div>
-                              </SectionDescription>
-                            </Styled(SectionDescription)>
-                            <styled.div>
                               <div
-                                className="c15"
+                                className="ihrCell desktop-auto tablet-auto min-12"
+                              >
+                                <Styled(SectionDescription)
+                                  description="Titled Description"
+                                  header="Titled Section"
+                                >
+                                  <SectionDescription
+                                    className="c9"
+                                    description="Titled Description"
+                                    header="Titled Section"
+                                  >
+                                    <div
+                                      className="c9"
+                                    >
+                                      <Text
+                                        color="#424F5C"
+                                        isInline={true}
+                                        tag="h2"
+                                        type="heading"
+                                      >
+                                        <styled.h2
+                                          color="#424F5C"
+                                          isInline={true}
+                                          textType="heading"
+                                        >
+                                          <h2
+                                            className="c10"
+                                            color="#424F5C"
+                                          >
+                                            Titled Section
+                                          </h2>
+                                        </styled.h2>
+                                      </Text>
+                                      <Text
+                                        color="#667380"
+                                        isInline={false}
+                                        tag="span"
+                                        type="small"
+                                      >
+                                        <styled.span
+                                          color="#667380"
+                                          isInline={false}
+                                          textType="small"
+                                        >
+                                          <span
+                                            className="c11"
+                                            color="#667380"
+                                          >
+                                            Titled Description
+                                          </span>
+                                        </styled.span>
+                                      </Text>
+                                    </div>
+                                  </SectionDescription>
+                                </Styled(SectionDescription)>
+                              </div>
+                            </Cell>
+                            <Cell
+                              size={
+                                Object {
+                                  "desktop": "shrink",
+                                  "min": 12,
+                                  "tablet": "shrink",
+                                }
+                              }
+                            >
+                              <div
+                                className="ihrCell desktop-shrink tablet-shrink min-12"
                               >
                                 <Button
                                   iconAlignment="left"
@@ -1821,15 +1313,15 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                   </button>
                                 </Button>
                               </div>
-                            </styled.div>
+                            </Cell>
                           </div>
-                        </Row>
+                        </XYGrid>
                       </div>
-                    </Grid>
-                  </ThemeProvider>
-                </GridProvider>
-              </Row>
-            </Styled(Row)>
+                    </styled.div>
+                  </div>
+                </Cell>
+              </div>
+            </XYGrid>
           </div>
         </styled.div>
       </Styled(styled.div)>

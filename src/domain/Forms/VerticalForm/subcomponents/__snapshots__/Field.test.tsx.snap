@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Field /> should render a vertical form field with a single error message 1`] = `
+<styled.div>
+  <InputLabel
+    isRequired={false}
+  >
+    This is a test input
+  </InputLabel>
+  Children
+  <styled.div>
+    Just one error
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<Field /> should render a vertical form field with error messages 1`] = `
+<styled.div>
+  <InputLabel
+    isRequired={false}
+  >
+    This is a test input
+  </InputLabel>
+  Children
+  <styled.div>
+    Error 1
+  </styled.div>
+  <styled.div>
+    Error 2
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<Field /> should render a vertical form field with nothing 1`] = `<styled.div />`;
+
+exports[`<Field /> should render a vertical form field with regular props 1`] = `
+<styled.div>
+  <InputLabel
+    htmlFor="testInput"
+    isRequired={true}
+  >
+    This is a test input
+  </InputLabel>
+  Children
+</styled.div>
+`;

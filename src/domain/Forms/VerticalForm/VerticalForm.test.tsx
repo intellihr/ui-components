@@ -1,18 +1,18 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { Form } from './Form'
-import { Input } from '@Domain/Inputs'
+import { VerticalForm } from './VerticalForm'
+import { Input } from '../../Inputs'
 
-describe('<Form />', () => {
+describe('<VerticalForm />', () => {
   it(`should render a form`, () => {
     const wrapper = shallow(
-      <Form>
+      <VerticalForm>
         <Input
           name='testInput'
           type='text'
         />
-      </Form>
+      </VerticalForm>
     )
 
     expect(wrapper).toMatchSnapshot()
@@ -23,15 +23,15 @@ describe('<Form />', () => {
     const mockHandleSubmit = jest.fn()
 
     const wrapper = shallow(
-      <Form
-        handleChange={mockHandleChange}
-        handleSubmit={mockHandleSubmit}
+      <VerticalForm
+        onChange={mockHandleChange}
+        onSubmit={mockHandleSubmit}
       >
         <Input
           name='testInput'
           type='text'
         />
-      </Form>
+      </VerticalForm>
     )
 
     expect(mockHandleChange.mock.calls.length).toBe(0)
