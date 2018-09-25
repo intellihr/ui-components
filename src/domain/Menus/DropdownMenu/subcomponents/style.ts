@@ -35,7 +35,7 @@ const DefaultDropdownButton = styled.button`
 `
 
 const StyledToggleContainer = styled.span`
-  display: table-cell;
+  display: inline-block;
 
   > * {
     margin: 0;
