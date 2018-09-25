@@ -2,15 +2,12 @@ import React from 'react'
 import { Button } from './subcomponents/Button'
 import { InputGroupWrapper } from './style'
 
-// tslint:disable-next-line:no-empty-interface
-interface IInputGroupProps {}
-
 type InputGroupPosition = 'left' | 'middle' | 'right'
 
-export class InputGroup extends React.PureComponent<IInputGroupProps> {
+export class InputGroup extends React.PureComponent<{}> {
   public static Button = Button
 
-  public render () {
+  public render (): JSX.Element {
     const {
       children
     } = this.props
@@ -25,6 +22,5 @@ export class InputGroup extends React.PureComponent<IInputGroupProps> {
 
 export {
   Button,
-  IInputGroupProps,
   InputGroupPosition
 }

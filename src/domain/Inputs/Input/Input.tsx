@@ -1,7 +1,9 @@
 import React, { ChangeEventHandler } from 'react'
 import classNames from 'classnames'
+import { isNil } from 'lodash'
 import { InputWrapper } from '../services/style'
-import { InputGroupPosition } from '../InputGroup/InputGroup'
+import { InputGroupPosition } from '../InputGroup'
+
 const style = require('./style.scss')
 
 interface IGenericInputProps {
@@ -83,8 +85,7 @@ export class Input extends React.PureComponent<InputProps> {
         className,
         {
           'is-invalid-input': isInvalid,
-          'input-group-left': groupPosition === 'left',
-          'input-group-right': groupPosition === 'right'
+          [`input-group-${groupPosition}`]: !isNil(groupPosition)
         }
       ]
     )

@@ -15,7 +15,7 @@ class Button extends React.PureComponent<IInputGroupButtonProps> {
     groupPosition: 'left'
   }
 
-  public render (): JSX.Element | null {
+  public render (): JSX.Element {
     const {
       onClick,
       disabled,

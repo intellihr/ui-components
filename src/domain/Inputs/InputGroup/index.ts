@@ -1,3 +1,4 @@
 export {
-  InputGroup
+  InputGroup,
+  InputGroupPosition
 } from './InputGroup'
