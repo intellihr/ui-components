@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OptionList /> should render a basic option list 1`] = `
+<React.Fragment>
+  <styled.button
+    key="0"
+    onClick={[Function]}
+  >
+    <span
+      className="left-component"
+    >
+      <img
+        src="http://www.senojflags.com/images/national-flag-icons/Georgia-Flag.png"
+      />
+    </span>
+    Georgia Lari (GEL)
+  </styled.button>
+  <styled.button
+    key="1"
+    onClick={[Function]}
+    selected={true}
+  >
+    <span
+      className="left-component"
+    >
+      <img
+        src="http://www.senojflags.com/images/national-flag-icons/Malaysia-Flag.png"
+      />
+    </span>
+    Malaysia Ringgit (MYR)
+  </styled.button>
+  <styled.button
+    key="2"
+    onClick={[Function]}
+  >
+    <span
+      className="left-component"
+    >
+      <img
+        src="http://www.senojflags.com/images/national-flag-icons/New-Zealand-Flag.png"
+      />
+    </span>
+    New Zealand Dollar (NZD)
+  </styled.button>
+  <styled.button
+    key="3"
+    onClick={[Function]}
+  >
+    <span
+      className="left-component"
+    >
+      <img
+        src="http://www.senojflags.com/images/national-flag-icons/Australia-Flag.png"
+      />
+    </span>
+    Australian Dollar (AUD)
+    <span
+      className="right-component"
+    >
+      <FontAwesomeIcon
+        type="star"
+      />
+    </span>
+  </styled.button>
+</React.Fragment>
+`;
+
+exports[`<OptionList /> should render an option list with filtered options 1`] = `
+<React.Fragment>
+  <styled.button
+    key="0"
+    onClick={[Function]}
+  >
+    <span
+      className="left-component"
+    >
+      <img
+        src="http://www.senojflags.com/images/national-flag-icons/New-Zealand-Flag.png"
+      />
+    </span>
+    New Zealand Dollar (NZD)
+  </styled.button>
+  <styled.button
+    key="1"
+    onClick={[Function]}
+  >
+    <span
+      className="left-component"
+    >
+      <img
+        src="http://www.senojflags.com/images/national-flag-icons/Australia-Flag.png"
+      />
+    </span>
+    Australian Dollar (AUD)
+    <span
+      className="right-component"
+    >
+      <FontAwesomeIcon
+        type="star"
+      />
+    </span>
+  </styled.button>
+</React.Fragment>
+`;
