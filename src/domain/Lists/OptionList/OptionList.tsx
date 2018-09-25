@@ -21,16 +21,6 @@ interface IOptionListProps {
 }
 
 class OptionList extends React.PureComponent<IOptionListProps> {
-  private filteredOptions = (options: IOptionProps[], query?: string) => {
-    if (query) {
-      return filter(options, option => {
-        return toLower(option.text).includes(query)
-      })
-    }
-
-    return options
-  }
-
   get content (): JSX.Element[] {
     const {
       options,
@@ -61,15 +51,27 @@ class OptionList extends React.PureComponent<IOptionListProps> {
   }
 
 
-  render (): JSX.Element {
+  public render (): JSX.Element {
     return (
       <>
         {this.content}
       </>
     )
   }
+
+  private filteredOptions = (options: IOptionProps[], query?: string) => {
+    if (query) {
+      return filter(options, option => {
+        return toLower(option.text).includes(query)
+      })
+    }
+
+    return options
+  }
 }
 
 export {
-  OptionList
+  OptionList,
+  IOptionListProps,
+  IOptionProps
 }
