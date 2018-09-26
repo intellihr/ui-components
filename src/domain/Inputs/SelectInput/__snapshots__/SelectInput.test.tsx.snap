@@ -34,6 +34,7 @@ exports[`<SelectInput /> should render a creatable select box 1`] = `
   promptTextCreator={[Function]}
   resetValue=""
   shouldKeyDownEventCreateNewOption={[Function]}
+  showNewOptionAtTop={true}
   value=""
 />
 `;
@@ -169,6 +170,32 @@ exports[`<SelectInput /> should render a select box with options 1`] = `
 `;
 
 exports[`<SelectInput /> should render a select box with promise options 1`] = `
+<Async
+  autoload={true}
+  cache={Object {}}
+  className="react-select-test selectInput"
+  clearable={true}
+  disabled={false}
+  ignoreAccents={true}
+  ignoreCase={true}
+  isLoading={false}
+  loadOptions={[Function]}
+  loadingPlaceholder="Loading..."
+  multi={false}
+  name="test"
+  onBlurResetsInput={true}
+  onCloseResetsInput={true}
+  onSelectResetsInput={true}
+  openOnFocus={false}
+  options={Array []}
+  placeholder="Please Select"
+  resetValue=""
+  searchPromptText="Type to search"
+  value=""
+/>
+`;
+
+exports[`<SelectInput /> should render with async options 1`] = `
 <Async
   autoload={true}
   cache={Object {}}
