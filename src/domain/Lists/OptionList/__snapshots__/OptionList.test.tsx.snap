@@ -3,6 +3,7 @@
 exports[`<OptionList /> should render a basic option list 1`] = `
 <React.Fragment>
   <styled.button
+    hidden={false}
     key="0"
     onClick={[Function]}
   >
@@ -16,6 +17,7 @@ exports[`<OptionList /> should render a basic option list 1`] = `
     Georgia Lari (GEL)
   </styled.button>
   <styled.button
+    hidden={false}
     key="1"
     onClick={[Function]}
     selected={true}
@@ -30,6 +32,7 @@ exports[`<OptionList /> should render a basic option list 1`] = `
     Malaysia Ringgit (MYR)
   </styled.button>
   <styled.button
+    hidden={false}
     key="2"
     onClick={[Function]}
   >
@@ -43,6 +46,7 @@ exports[`<OptionList /> should render a basic option list 1`] = `
     New Zealand Dollar (NZD)
   </styled.button>
   <styled.button
+    hidden={false}
     key="3"
     onClick={[Function]}
   >
@@ -68,7 +72,37 @@ exports[`<OptionList /> should render a basic option list 1`] = `
 exports[`<OptionList /> should render an option list with filtered options 1`] = `
 <React.Fragment>
   <styled.button
+    hidden={true}
     key="0"
+    onClick={[Function]}
+  >
+    <span
+      className="left-component"
+    >
+      <img
+        src="http://www.senojflags.com/images/national-flag-icons/Georgia-Flag.png"
+      />
+    </span>
+    Georgia Lari (GEL)
+  </styled.button>
+  <styled.button
+    hidden={true}
+    key="1"
+    onClick={[Function]}
+    selected={true}
+  >
+    <span
+      className="left-component"
+    >
+      <img
+        src="http://www.senojflags.com/images/national-flag-icons/Malaysia-Flag.png"
+      />
+    </span>
+    Malaysia Ringgit (MYR)
+  </styled.button>
+  <styled.button
+    hidden={false}
+    key="2"
     onClick={[Function]}
   >
     <span
@@ -81,7 +115,8 @@ exports[`<OptionList /> should render an option list with filtered options 1`] =
     New Zealand Dollar (NZD)
   </styled.button>
   <styled.button
-    key="1"
+    hidden={false}
+    key="3"
     onClick={[Function]}
   >
     <span

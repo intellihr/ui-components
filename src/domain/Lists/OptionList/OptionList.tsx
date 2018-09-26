@@ -10,9 +10,11 @@ interface IOptionProps {
   /** Text to display */
   text: string
   /** Event handler when the section is clicked */
-  onClick?: (event: React.MouseEvent<HTMLElement>) => void
+  onClick?: (option: IOptionProps) => void
   /** Applys distinct style to selected option */
   selected?: boolean
+  /** Any other option property that will get passed with the onClick callback */
+  [x: string]: any
 }
 
 interface IOptionListProps {
@@ -36,10 +38,12 @@ class OptionList extends React.PureComponent<IOptionListProps> {
         text
       } = option
 
+      const handleClick = () => onClick ? onClick(option) : null
+
       return (
         <OptionListButton
           key={idx}
-          onClick={onClick}
+          onClick={handleClick}
           selected={selected}
           hidden={query ? !toLower(option.text).includes(toLower(query)) : false}
         >

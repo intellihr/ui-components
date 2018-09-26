@@ -51,6 +51,7 @@ const { DropdownMenu } = require('../../Menus/DropdownMenu');
 #### Input Group with Dropdown Button
 
 ```jsx
+const { FilteredOptionList } = require('../../Lists/OptionList');
 const { TextInput } = require('../TextInput');
 const { DropdownMenu } = require('../../Menus/DropdownMenu');
 const { FontAwesomeIcon } = require('../../Icons');
@@ -58,25 +59,15 @@ const { FontAwesomeIcon } = require('../../Icons');
 const { map, filter, toLower } = require('lodash');
 let textInput;
 
-initialState = { selectedOption: {value: 1, label: 'AUD'}, inputValue: '' };
-
-class ThingList extends React.PureComponent {
-  get options () {
-    const { options, query } = this.props
-    
-    return filter(options, option => {  
-      return toLower(option.label).includes(query)
-    })
+initialState = {
+  selectedOption: {
+    text: 'Georgia Lari (GEL)',
+    onClick: (option) => {setState({selectedOption: option}); closeMenu()},
+    selected: true,
+    leftComponent: <img src='http://www.senojflags.com/images/national-flag-icons/Georgia-Flag.png' />,
+    buttonText: 'GEL'
   }
-  
-  render () {
-    const { handleClick } = this.props
-  
-    return map(this.options, (option) => {    
-      return <div key={option.value}><Button onClick={() => handleClick(option)}>{option.label}</Button></div>
-    })
-  }
-}
+};
 
 <InputGroup>
   <DropdownMenu
@@ -87,32 +78,49 @@ class ThingList extends React.PureComponent {
       icon={<FontAwesomeIcon type='caret-down' />}
       iconAlignment='right'
     >
-      {state.selectedOption.label}
+      {state.selectedOption.leftComponent} {state.selectedOption.buttonText}
     </InputGroup.Button>
     }
   >
   {({closeMenu}) => 
-    <>
-      <TextInput
-        placeholder='Search country!'
-        icon={<FontAwesomeIcon type='search' />}
-        value={state.inputValue}
-        handleChange={(e) => setState({inputValue: e.target.value})}
-        width={300}
-      />
-      <ThingList
-        query={state.inputValue}
-        handleClick={(option) => {
-          setState({selectedOption: option})
-          closeMenu()
-        }}
-        options={[
-          { value: 1, label: 'AUD' },
-          { value: 2, label: 'USD' },
-          { value: 3, label: 'NZD' }
-        ]}
-      />
-    </>
+    <FilteredOptionList
+      textInputProps={{
+        icon: <FontAwesomeIcon type='search' />,
+        placeholder: 'Search country!',
+        width: 300
+      }}
+      options={[
+        {
+          text: 'Georgia Lari (GEL)',
+          onClick: (option) => {setState({selectedOption: option}); closeMenu()},
+          selected: state.selectedOption.text === 'Georgia Lari (GEL)',
+          leftComponent: <img src='http://www.senojflags.com/images/national-flag-icons/Georgia-Flag.png' />,
+          buttonText: 'GEL'
+        },
+        {
+          text: 'Malaysia Ringgit (MYR)',
+          onClick: (option) => {setState({selectedOption: option}); closeMenu()},
+          selected: state.selectedOption.text === 'Malaysia Ringgit (MYR)',
+          leftComponent: <img src='http://www.senojflags.com/images/national-flag-icons/Malaysia-Flag.png' />,
+          buttonText: 'MYR'
+        },
+        {
+          text: 'New Zealand Dollar (NZD)',
+          onClick: (option) => {setState({selectedOption: option}); closeMenu()},
+          selected: state.selectedOption.text === 'New Zealand Dollar (NZD)',
+          leftComponent: <img src='http://www.senojflags.com/images/national-flag-icons/New-Zealand-Flag.png' />,
+          buttonText: 'NZD'
+        },
+        {
+          text: 'Australian Dollar (AUD)',
+          onClick: (option) => {setState({selectedOption: option}); closeMenu()},
+          selected: state.selectedOption.text === 'Australian Dollar (AUD)',
+          leftComponent: <img src='http://www.senojflags.com/images/national-flag-icons/Australia-Flag.png' />,
+          rightComponent: <FontAwesomeIcon type='star' />,
+          buttonText: 'AUD'
+        }
+      ]}
+    />
   }
   </DropdownMenu>
   <TextInput
