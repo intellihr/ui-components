@@ -1,11 +1,12 @@
 import React from 'react'
-import { IOptionProps, OptionList } from './OptionList'
+import { IOptionProps, OptionClickCallback, OptionList } from './OptionList'
 import { TextInput } from '../../Inputs/TextInput'
 import { IGenericInputProps } from '../../Inputs'
 
 interface IFilteredOptionListProps {
   options: IOptionProps[]
   textInputProps?: IGenericInputProps
+  handleClick: OptionClickCallback
 }
 
 interface IFilteredOptionListState {
@@ -20,7 +21,8 @@ class FilteredOptionList extends React.PureComponent<IFilteredOptionListProps, I
   public render (): JSX.Element {
     const {
       options,
-      textInputProps
+      textInputProps,
+      handleClick
     } = this.props
 
     return (
@@ -32,6 +34,7 @@ class FilteredOptionList extends React.PureComponent<IFilteredOptionListProps, I
           handleChange={this.updateQueryValue}
         />
         <OptionList
+          handleClick={handleClick}
           options={options}
           query={this.state.query}
         />

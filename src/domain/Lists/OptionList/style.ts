@@ -9,6 +9,7 @@ interface IOptionListButton {
 const OptionListButton = styled.button`
   background-color: ${Variables.Color.n100};
   color: ${Variables.Color.n800};
+  display: block;
   font-size: ${Variables.FontSize.fzBody}px;
   line-height: ${Variables.LineHeight.lhBody}px;
   width: 100%;
@@ -39,11 +40,11 @@ const OptionListButton = styled.button`
   ${(props: IOptionListButton) => props.hidden && css`display: none;`}
 
   .left-component {
-    margin-right: 5px;
+    margin-right: 8px;
   }
 
   .right-component {
-    margin-left: 5px;
+    margin-left: 8px;
   }
 `
 

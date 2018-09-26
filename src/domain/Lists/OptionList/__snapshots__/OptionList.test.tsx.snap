@@ -11,7 +11,7 @@ exports[`<OptionList /> should render a basic option list 1`] = `
       className="left-component"
     >
       <img
-        src="http://www.senojflags.com/images/national-flag-icons/Georgia-Flag.png"
+        src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/ge.png?raw=true"
       />
     </span>
     Georgia Lari (GEL)
@@ -26,7 +26,7 @@ exports[`<OptionList /> should render a basic option list 1`] = `
       className="left-component"
     >
       <img
-        src="http://www.senojflags.com/images/national-flag-icons/Malaysia-Flag.png"
+        src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/my.png?raw=true"
       />
     </span>
     Malaysia Ringgit (MYR)
@@ -40,7 +40,7 @@ exports[`<OptionList /> should render a basic option list 1`] = `
       className="left-component"
     >
       <img
-        src="http://www.senojflags.com/images/national-flag-icons/New-Zealand-Flag.png"
+        src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/nz.png?raw=true"
       />
     </span>
     New Zealand Dollar (NZD)
@@ -54,7 +54,7 @@ exports[`<OptionList /> should render a basic option list 1`] = `
       className="left-component"
     >
       <img
-        src="http://www.senojflags.com/images/national-flag-icons/Australia-Flag.png"
+        src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/au.png?raw=true"
       />
     </span>
     Australian Dollar (AUD)
@@ -80,7 +80,7 @@ exports[`<OptionList /> should render an option list with filtered options 1`] =
       className="left-component"
     >
       <img
-        src="http://www.senojflags.com/images/national-flag-icons/Georgia-Flag.png"
+        src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/ge.png?raw=true"
       />
     </span>
     Georgia Lari (GEL)
@@ -95,7 +95,7 @@ exports[`<OptionList /> should render an option list with filtered options 1`] =
       className="left-component"
     >
       <img
-        src="http://www.senojflags.com/images/national-flag-icons/Malaysia-Flag.png"
+        src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/my.png?raw=true"
       />
     </span>
     Malaysia Ringgit (MYR)
@@ -109,7 +109,7 @@ exports[`<OptionList /> should render an option list with filtered options 1`] =
       className="left-component"
     >
       <img
-        src="http://www.senojflags.com/images/national-flag-icons/New-Zealand-Flag.png"
+        src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/nz.png?raw=true"
       />
     </span>
     New Zealand Dollar (NZD)
@@ -123,7 +123,7 @@ exports[`<OptionList /> should render an option list with filtered options 1`] =
       className="left-component"
     >
       <img
-        src="http://www.senojflags.com/images/national-flag-icons/Australia-Flag.png"
+        src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/au.png?raw=true"
       />
     </span>
     Australian Dollar (AUD)

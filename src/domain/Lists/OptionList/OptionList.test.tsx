@@ -7,23 +7,23 @@ const exampleOptions = [
   {
     text: 'Georgia Lari (GEL)',
     onClick: () => alert('Selected GEL'),
-    leftComponent: <img src='http://www.senojflags.com/images/national-flag-icons/Georgia-Flag.png' />
+    leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/ge.png?raw=true' />
   },
   {
     text: 'Malaysia Ringgit (MYR)',
     onClick: () => alert('Selected MYR'),
     selected: true,
-    leftComponent: <img src='http://www.senojflags.com/images/national-flag-icons/Malaysia-Flag.png' />
+    leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/my.png?raw=true' />
   },
   {
     text: 'New Zealand Dollar (NZD)',
     onClick: () => alert('Selected NZD'),
-    leftComponent: <img src='http://www.senojflags.com/images/national-flag-icons/New-Zealand-Flag.png' />
+    leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/nz.png?raw=true' />
   },
   {
     text: 'Australian Dollar (AUD)',
     onClick: () => alert('Selected AUD'),
-    leftComponent: <img src='http://www.senojflags.com/images/national-flag-icons/Australia-Flag.png' />,
+    leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/au.png?raw=true' />,
     rightComponent: <FontAwesomeIcon type='star' />
   }
 ]

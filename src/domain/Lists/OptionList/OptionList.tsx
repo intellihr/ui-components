@@ -2,6 +2,8 @@ import React from 'react'
 import { filter, toLower, map } from 'lodash'
 import { OptionListButton } from './style'
 
+type OptionClickCallback = (option: IOptionProps) => void
+
 interface IOptionProps {
   /** A component that is shown to the left of the text */
   leftComponent?: JSX.Element
@@ -10,7 +12,7 @@ interface IOptionProps {
   /** Text to display */
   text: string
   /** Event handler when the section is clicked */
-  onClick?: (option: IOptionProps) => void
+  onClick?: OptionClickCallback
   /** Applys distinct style to selected option */
   selected?: boolean
   /** Any other option property that will get passed with the onClick callback */
@@ -20,13 +22,15 @@ interface IOptionProps {
 interface IOptionListProps {
   options: IOptionProps[]
   query?: string
+  handleClick: OptionClickCallback
 }
 
 class OptionList extends React.PureComponent<IOptionListProps> {
   get content (): JSX.Element[] {
     const {
       options,
-      query
+      query,
+      handleClick
     } = this.props
 
     return map(options, (option, idx) => {
@@ -38,12 +42,12 @@ class OptionList extends React.PureComponent<IOptionListProps> {
         text
       } = option
 
-      const handleClick = () => onClick ? onClick(option) : null
+      const callback = () => onClick ? onClick(option) : handleClick(option)
 
       return (
         <OptionListButton
           key={idx}
-          onClick={handleClick}
+          onClick={callback}
           selected={selected}
           hidden={query ? !toLower(option.text).includes(toLower(query)) : false}
         >
@@ -67,6 +71,7 @@ class OptionList extends React.PureComponent<IOptionListProps> {
 
 export {
   OptionList,
+  OptionClickCallback,
   IOptionListProps,
   IOptionProps
 }

@@ -64,7 +64,7 @@ initialState = {
     text: 'Georgia Lari (GEL)',
     onClick: (option) => {setState({selectedOption: option}); closeMenu()},
     selected: true,
-    leftComponent: <img src='http://www.senojflags.com/images/national-flag-icons/Georgia-Flag.png' />,
+    leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/ge.png?raw=true' />,
     buttonText: 'GEL'
   }
 };
@@ -75,15 +75,18 @@ initialState = {
     <InputGroup.Button
       type='input' 
       groupPosition='left'
-      icon={<FontAwesomeIcon type='caret-down' />}
-      iconAlignment='right'
+      leftComponent={state.selectedOption.leftComponent}
     >
-      {state.selectedOption.leftComponent} {state.selectedOption.buttonText}
+       {state.selectedOption.buttonText}
     </InputGroup.Button>
     }
   >
   {({closeMenu}) => 
     <FilteredOptionList
+      handleClick={(option) => {
+        setState({selectedOption: option})
+        closeMenu()
+      }}
       textInputProps={{
         icon: <FontAwesomeIcon type='search' />,
         placeholder: 'Search country!',
@@ -92,30 +95,27 @@ initialState = {
       options={[
         {
           text: 'Georgia Lari (GEL)',
-          onClick: (option) => {setState({selectedOption: option}); closeMenu()},
           selected: state.selectedOption.text === 'Georgia Lari (GEL)',
-          leftComponent: <img src='http://www.senojflags.com/images/national-flag-icons/Georgia-Flag.png' />,
+          leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/ge.png?raw=true' />,
           buttonText: 'GEL'
         },
         {
           text: 'Malaysia Ringgit (MYR)',
-          onClick: (option) => {setState({selectedOption: option}); closeMenu()},
           selected: state.selectedOption.text === 'Malaysia Ringgit (MYR)',
-          leftComponent: <img src='http://www.senojflags.com/images/national-flag-icons/Malaysia-Flag.png' />,
+          leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/my.png?raw=true' />,
           buttonText: 'MYR'
         },
         {
           text: 'New Zealand Dollar (NZD)',
-          onClick: (option) => {setState({selectedOption: option}); closeMenu()},
           selected: state.selectedOption.text === 'New Zealand Dollar (NZD)',
-          leftComponent: <img src='http://www.senojflags.com/images/national-flag-icons/New-Zealand-Flag.png' />,
+          leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/nz.png?raw=true' />,
           buttonText: 'NZD'
         },
         {
           text: 'Australian Dollar (AUD)',
-          onClick: (option) => {setState({selectedOption: option}); closeMenu()},
+          onClick: (option) => {alert('I have a custom onClick handler!'); setState({selectedOption: option}); closeMenu()},
           selected: state.selectedOption.text === 'Australian Dollar (AUD)',
-          leftComponent: <img src='http://www.senojflags.com/images/national-flag-icons/Australia-Flag.png' />,
+          leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/au.png?raw=true' />,
           rightComponent: <FontAwesomeIcon type='star' />,
           buttonText: 'AUD'
         }
