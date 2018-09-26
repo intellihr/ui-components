@@ -27,7 +27,7 @@ class OptionList extends React.PureComponent<IOptionListProps> {
       query
     } = this.props
 
-    return map(this.filteredOptions(options, query), (option, idx) => {
+    return map(options, (option, idx) => {
       const {
         onClick,
         selected,
@@ -41,6 +41,7 @@ class OptionList extends React.PureComponent<IOptionListProps> {
           key={idx}
           onClick={onClick}
           selected={selected}
+          hidden={query ? !toLower(option.text).includes(toLower(query)) : false}
         >
           {leftComponent && <span className='left-component'>{leftComponent}</span>}
           {text}
@@ -57,16 +58,6 @@ class OptionList extends React.PureComponent<IOptionListProps> {
         {this.content}
       </>
     )
-  }
-
-  private filteredOptions = (options: IOptionProps[], query?: string) => {
-    if (query) {
-      return filter(options, option => {
-        return toLower(option.text).includes(query)
-      })
-    }
-
-    return options
   }
 }
 

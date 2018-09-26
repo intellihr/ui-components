@@ -1,7 +1,7 @@
 import React from 'react'
 import { IOptionProps, OptionList } from './OptionList'
 import { TextInput } from '../../Inputs/TextInput'
-import { IGenericInputProps } from '../../Inputs/Input'
+import { IGenericInputProps } from '../../Inputs'
 
 interface IFilteredOptionListProps {
   options: IOptionProps[]

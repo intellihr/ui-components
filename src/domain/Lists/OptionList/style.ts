@@ -3,6 +3,7 @@ import { Variables } from '../../../common'
 
 interface IOptionListButton {
   selected?: boolean
+  hidden: boolean
 }
 
 const OptionListButton = styled.button`
@@ -35,10 +36,12 @@ const OptionListButton = styled.button`
     }
   }}
   
+  ${(props: IOptionListButton) => props.hidden && css`display: none;`}
+
   .left-component {
     margin-right: 5px;
   }
-  
+
   .right-component {
     margin-left: 5px;
   }
