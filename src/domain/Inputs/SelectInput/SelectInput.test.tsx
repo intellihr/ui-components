@@ -90,4 +90,20 @@ describe('<SelectInput />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it('should render with async options', () => {
+    const asyncOptions = async (input) => {
+      return []
+    }
+
+    const wrapper = shallow(
+      <SelectInput
+        name='test'
+        value=''
+        asyncOptions={asyncOptions}
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })

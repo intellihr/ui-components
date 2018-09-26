@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import capitalize from 'capitalize'
 import Select, { Async, Creatable, OnChangeHandler, ReactSelectProps } from 'react-select'
-import { isEmpty, cloneDeep } from 'lodash'
+import { isEmpty, cloneDeep, debounce } from 'lodash'
 const style = require('./style.scss')
 
 export interface ISelectInputOptions {
@@ -15,10 +15,12 @@ export interface ISelectInputProps extends ReactSelectProps {
   label?: string
   /** Placeholder when no option is selected */
   placeholder?: string
-  /** Array of options to display */
+  /** Array of options to display. Use this when you pre-fetched all options upfront. */
   options?: ISelectInputOptions[]
-  /** Promise to use as options when it resolves */
+  /** Promise to use as options when it resolves. Use this when your promise will fetch all options. */
   promiseOptions?: () => Promise<ISelectInputOptions[]>
+  /** Promise that takes an input for user typing. Use this when you do server-side filtering. */
+  asyncOptions?: (input: string) => Promise<ISelectInputOptions[]>
   /** Custom function passed to the `onChange` handler */
   handleChange?: OnChangeHandler
   /** If true, adds invalid input class to component */
@@ -46,6 +48,42 @@ export interface ISelectInputState {
 }
 
 export class SelectInput extends React.PureComponent<ISelectInputProps, ISelectInputState> {
+  public static defaultProps = {
+    placeholder: 'Please Select',
+    isInvalid: false,
+    isDisabled: false,
+    isFetching: false,
+    generateNoneValue: false,
+    clearable: true,
+    noneValue: '',
+    resetValue: '',
+    multi: false,
+    onBlurResetsInput: true,
+    onSelectResetsInput: true,
+    onCloseResetsInput: true,
+    autofocus: false,
+    openOnFocus: false
+  }
+
+  get value (): ReactSelectProps['value'] {
+    const {
+      asyncOptions,
+      isFetching,
+      value
+    } = this.props
+
+    // Simple value won't work for async options
+    // see: https://github.com/JedWatson/react-select/issues/2233
+    if (!isFetching && asyncOptions) {
+      for (const option of this.asyncFetchedOptions) {
+        if (option.value === value) {
+          return option
+        }
+      }
+    }
+
+    return !isFetching ? value || this.state.preselectValue : ''
+  }
 
   get selectProps (): any {
     const {
@@ -57,6 +95,7 @@ export class SelectInput extends React.PureComponent<ISelectInputProps, ISelectI
       isFetching,
       placeholder,
       promiseOptions,
+      asyncOptions,
       options,
       optionComponent,
       multi,
@@ -73,13 +112,13 @@ export class SelectInput extends React.PureComponent<ISelectInputProps, ISelectI
 
     const value = this.props.value
 
-    const base:any = {
+    const base: any = {
       name: multi ? `${name}[]` : name,
       resetValue,
       clearable,
       multi,
       onChange: handleChange,
-      value: !isFetching ? value || this.state.preselectValue : '',
+      value: this.value,
       className: classNames({'is-invalid-input': isInvalid}, `react-select-${name}`, style.selectInput),
       disabled: isDisabled,
       isLoading: isFetching,
@@ -97,6 +136,8 @@ export class SelectInput extends React.PureComponent<ISelectInputProps, ISelectI
 
     if (promiseOptions) {
       base.loadOptions = this.promiseOptions
+    } else if (asyncOptions) {
+      base.loadOptions = this.fetchAsyncOptions
     } else {
       base.options = this.prepareOptions(options)
     }
@@ -109,36 +150,33 @@ export class SelectInput extends React.PureComponent<ISelectInputProps, ISelectI
     return base
   }
 
-  public static defaultProps: Partial<ISelectInputProps> = {
-    placeholder: 'Please Select',
-    isInvalid: false,
-    isDisabled: false,
-    isFetching: false,
-    generateNoneValue: false,
-    clearable: true,
-    noneValue: '',
-    resetValue: '',
-    multi: false,
-    onBlurResetsInput: true,
-    onSelectResetsInput: true,
-    onCloseResetsInput: true,
-    autofocus: false,
-    openOnFocus: false
+  public readonly state = {
+    preselectValue: ''
   }
-  private cachedOptions: any
 
-  constructor (props: ISelectInputProps) {
-    super(props)
-    this.cachedOptions = null
-    this.state = {
-      preselectValue: ''
-    }
+  private asyncFetchedOptions: ISelectInputOptions[] = []
 
-    this.initialPreselectValue = this.initialPreselectValue.bind(this)
-    this.promiseOptions = this.promiseOptions.bind(this)
-    this.prepareOptions = this.prepareOptions.bind(this)
-    this.handleChange = this.handleChange.bind(this)
-  }
+  private cachedOptions?: { options: ISelectInputOptions[] }
+
+  private fetchAsyncOptions = debounce(
+    (input: string, callback: (err: any, result?: { options: ISelectInputOptions[] }) => void) => {
+      const {
+        asyncOptions
+      } = this.props
+
+      if (asyncOptions) {
+        asyncOptions(input)
+          .then(this.prepareOptions)
+          .then(options => {
+            this.asyncFetchedOptions = this.asyncFetchedOptions.concat(options || [])
+            this.preselectValue(options)
+            callback(null, { options: options || [] })
+          })
+          .catch(error => callback(error))
+      }
+    },
+    500
+  )
 
   public componentWillMount () {
     this.initialPreselectValue()
@@ -157,11 +195,42 @@ export class SelectInput extends React.PureComponent<ISelectInputProps, ISelectI
     }
   }
 
-  public async cachedOptionsPromise () {
+  public render (): JSX.Element {
+    const {
+      promiseOptions,
+      asyncOptions,
+      handleNewOption
+    } = this.props
+
+    if (handleNewOption) {
+      return (
+        <Creatable
+          {...this.selectProps}
+          onNewOptionClick={handleNewOption}
+        />
+      )
+    }
+
+    if (promiseOptions || asyncOptions) {
+      return (
+        <Async
+          {...this.selectProps}
+        />
+      )
+    }
+
+    return (
+      <Select
+        {...this.selectProps}
+      />
+    )
+  }
+
+  private async cachedOptionsPromise () {
     return this.cachedOptions
   }
 
-  public handleChange (newValue: any): void {
+  private handleChange = (newValue: any): void => {
     const {
       handleChange
     } = this.props
@@ -171,7 +240,7 @@ export class SelectInput extends React.PureComponent<ISelectInputProps, ISelectI
     }
   }
 
-  public preselectValue (options: any): void {
+  private preselectValue = (options: any): void => {
     const {
       isRequired,
       value,
@@ -195,7 +264,7 @@ export class SelectInput extends React.PureComponent<ISelectInputProps, ISelectI
     }
   }
 
-  public promiseOptions () {
+  private promiseOptions = () => {
     const {
       promiseOptions
     } = this.props
@@ -206,7 +275,7 @@ export class SelectInput extends React.PureComponent<ISelectInputProps, ISelectI
           .resolve(promiseOptions())
           .then(options => {
             this.cachedOptions = {
-              options: this.prepareOptions(options)
+              options: this.prepareOptions(options) || []
               // Complete options is not working: https://github.com/JedWatson/react-select/issues/1514
               // complete: true
             }
@@ -226,7 +295,7 @@ export class SelectInput extends React.PureComponent<ISelectInputProps, ISelectI
     return undefined
   }
 
-  public prepareOptions (options?: ISelectInputOptions[]): ISelectInputOptions[] | undefined {
+  private prepareOptions = (options?: ISelectInputOptions[]): ISelectInputOptions[] | undefined => {
     const {
       label,
       generateNoneValue,
@@ -252,39 +321,9 @@ export class SelectInput extends React.PureComponent<ISelectInputProps, ISelectI
     return returnOptions
   }
 
-  public initialPreselectValue () {
+  private initialPreselectValue = () => {
     if (!this.props.promiseOptions) {
       this.preselectValue(this.selectProps.options)
     }
-  }
-
-  public render (): JSX.Element {
-    const {
-      promiseOptions,
-      handleNewOption
-    } = this.props
-
-    if (handleNewOption) {
-      return (
-        <Creatable
-          {...this.selectProps}
-          onNewOptionClick={handleNewOption}
-        />
-      )
-    }
-
-    if (promiseOptions) {
-      return (
-        <Async
-          {...this.selectProps}
-        />
-      )
-    }
-
-    return (
-      <Select
-        {...this.selectProps}
-      />
-    )
   }
 }
