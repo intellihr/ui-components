@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilteredOptionList /> should render a basic option list 1`] = `
+<React.Fragment>
+  <TextInput
+    handleChange={[Function]}
+    name="filteredOptionListInput"
+    value=""
+  />
+  <OptionList
+    handleClick={[Function]}
+    options={
+      Array [
+        Object {
+          "buttonText": "GEL",
+          "leftComponent": <img
+            src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/ge.png?raw=true"
+          />,
+          "text": "Georgia Lari (GEL)",
+          "value": 1,
+        },
+        Object {
+          "buttonText": "MYR",
+          "leftComponent": <img
+            src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/my.png?raw=true"
+          />,
+          "text": "Malaysia Ringgit (MYR)",
+          "value": 2,
+        },
+        Object {
+          "buttonText": "NZD",
+          "leftComponent": <img
+            src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/nz.png?raw=true"
+          />,
+          "text": "New Zealand Dollar (NZD)",
+          "value": 3,
+        },
+        Object {
+          "buttonText": "AUD",
+          "leftComponent": <img
+            src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/au.png?raw=true"
+          />,
+          "onClick": [Function],
+          "rightComponent": <FontAwesomeIcon
+            type="star"
+          />,
+          "text": "Australian Dollar (AUD)",
+          "value": 4,
+        },
+      ]
+    }
+    query=""
+  />
+</React.Fragment>
+`;

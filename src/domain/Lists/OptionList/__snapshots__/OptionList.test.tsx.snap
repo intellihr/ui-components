@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OptionList /> should render a basic option list 1`] = `
+<React.Fragment>
+  <styled.button
+    hidden={false}
+    key="0"
+    onClick={[Function]}
+    selected={false}
+  >
+    <styled.span>
+      <img
+        src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/ge.png?raw=true"
+      />
+    </styled.span>
+    Georgia Lari (GEL)
+  </styled.button>
+  <styled.button
+    hidden={false}
+    key="1"
+    onClick={[Function]}
+    selected={false}
+  >
+    <styled.span>
+      <img
+        src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/my.png?raw=true"
+      />
+    </styled.span>
+    Malaysia Ringgit (MYR)
+  </styled.button>
+  <styled.button
+    hidden={false}
+    key="2"
+    onClick={[Function]}
+    selected={false}
+  >
+    <styled.span>
+      <img
+        src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/nz.png?raw=true"
+      />
+    </styled.span>
+    New Zealand Dollar (NZD)
+  </styled.button>
+  <styled.button
+    hidden={false}
+    key="3"
+    onClick={[Function]}
+    selected={false}
+  >
+    <styled.span>
+      <img
+        src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/au.png?raw=true"
+      />
+    </styled.span>
+    Australian Dollar (AUD)
+    <styled.span>
+      <FontAwesomeIcon
+        type="star"
+      />
+    </styled.span>
+  </styled.button>
+</React.Fragment>
+`;
+
+exports[`<OptionList /> should render an option list with filtered options 1`] = `
+<React.Fragment>
+  <styled.button
+    hidden={true}
+    key="0"
+    onClick={[Function]}
+    selected={false}
+  >
+    <styled.span>
+      <img
+        src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/ge.png?raw=true"
+      />
+    </styled.span>
+    Georgia Lari (GEL)
+  </styled.button>
+  <styled.button
+    hidden={true}
+    key="1"
+    onClick={[Function]}
+    selected={false}
+  >
+    <styled.span>
+      <img
+        src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/my.png?raw=true"
+      />
+    </styled.span>
+    Malaysia Ringgit (MYR)
+  </styled.button>
+  <styled.button
+    hidden={false}
+    key="2"
+    onClick={[Function]}
+    selected={false}
+  >
+    <styled.span>
+      <img
+        src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/nz.png?raw=true"
+      />
+    </styled.span>
+    New Zealand Dollar (NZD)
+  </styled.button>
+  <styled.button
+    hidden={false}
+    key="3"
+    onClick={[Function]}
+    selected={false}
+  >
+    <styled.span>
+      <img
+        src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/au.png?raw=true"
+      />
+    </styled.span>
+    Australian Dollar (AUD)
+    <styled.span>
+      <FontAwesomeIcon
+        type="star"
+      />
+    </styled.span>
+  </styled.button>
+</React.Fragment>
+`;

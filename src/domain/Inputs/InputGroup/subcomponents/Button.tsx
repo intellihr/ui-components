@@ -8,6 +8,10 @@ import { FontAwesomeIcon } from '../../../Icons/FontAwesomeIcon'
 interface IInputGroupButtonProps extends React.HTMLProps<HTMLButtonElement> {
   /** Where the button is in the input group */
   groupPosition: InputGroupPosition
+  /** A component that is shown to the left of the text */
+  leftComponent?: JSX.Element
+  /** A component that is shown to the right of the text */
+  rightComponent?: JSX.Element
 }
 
 class Button extends React.PureComponent<IInputGroupButtonProps> {
@@ -20,7 +24,9 @@ class Button extends React.PureComponent<IInputGroupButtonProps> {
       onClick,
       disabled,
       groupPosition,
-      children
+      children,
+      leftComponent,
+      rightComponent
     } = this.props
 
     return (
@@ -30,10 +36,10 @@ class Button extends React.PureComponent<IInputGroupButtonProps> {
         groupPosition={groupPosition}
         type='button'
       >
-        <>
-          {children}
-          <FontAwesomeIcon type='caret-down' />
-        </>
+        {leftComponent && <span className='left-component'>{leftComponent}</span>}
+        {children}
+        {rightComponent && <span className='right-component'>{rightComponent}</span>}
+        <FontAwesomeIcon className='right-component' type='caret-down' />
       </InputGroupButton>
     )
   }
