@@ -2,26 +2,26 @@ import styled, { css } from 'styled-components'
 import { Variables } from '../../../common'
 
 export interface IFormattedCurrencyPrefixWrapperProps {
-  prefixType?: 'small' | 'medium' | 'large'
+  prefixType?: 'xsmall' | 'body' | 'display'
 }
 
 const FormattedCurrencyPrefixWrapper = styled.span`
   ${(props: IFormattedCurrencyPrefixWrapperProps) => {
   if (props.prefixType) {
     switch (props.prefixType) {
-      case 'small':
+      case 'xsmall':
         return css`
             font-size: ${Variables.FontSize.fzXSmall}px;
             line-height: ${Variables.LineHeight.lhXSmall}px;
             font-weight: ${Variables.FontWeight.fwMedium};
         `
-      case 'medium':
+      case 'body':
         return css`
             font-size: ${Variables.FontSize.fzBody}px;
             line-height: ${Variables.LineHeight.lhBody}px;
             font-weight: ${Variables.FontWeight.fwMedium};
         `
-      case 'large':
+      case 'display':
         return css`
             font-size: ${Variables.FontSize.fzDisplay}px;
             line-height: ${Variables.LineHeight.lhDisplay}px;

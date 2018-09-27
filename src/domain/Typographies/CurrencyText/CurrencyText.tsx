@@ -10,13 +10,13 @@ interface ICurrencyTextProps {
   /** If true, displays the prefix with the format */
   isPrefixFormatted?: boolean
   /** Specify the prefix's style  */
-  prefixType?: 'small' | 'medium' | 'large'
+  prefixType?: 'xsmall' | 'body' | 'display'
 }
 
 class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
   public static defaultProps: Partial<ICurrencyTextProps> = {
     isPrefixFormatted: false,
-    prefixType: 'large'
+    prefixType: 'display'
   }
 
   get prefix (): JSX.Element | string | undefined {

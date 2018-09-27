@@ -14,21 +14,21 @@
     <CurrencyText
       value={1000}
       prefix='AUD'
-      prefixType='small'
+      prefixType='xsmall'
       isPrefixFormatted
     />
     <br/>
     <CurrencyText
       value={1000}
       prefix='AUD'
-      prefixType='medium'
+      prefixType='body'
       isPrefixFormatted
     />
     <br/>
     <CurrencyText
       value={1000}
       prefix='AUD'
-      prefixType='large'
+      prefixType='display'
       isPrefixFormatted
     />
   </div>

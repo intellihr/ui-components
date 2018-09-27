@@ -4,7 +4,7 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
 <CurrencyText
   isPrefixFormatted={false}
   prefix="AUD"
-  prefixType="large"
+  prefixType="display"
   value={1000}
 >
   <span>
@@ -28,12 +28,12 @@ exports[`<CurrencyText /> should render the Currency Text with isPrefixFormatted
 <CurrencyText
   isPrefixFormatted={true}
   prefix="AUD"
-  prefixType="large"
+  prefixType="display"
   value={1000}
 >
   <span>
     <styled.span
-      prefixType="large"
+      prefixType="display"
     >
       <span
         className="c0"
