@@ -54,6 +54,16 @@ const InputGroupButton = styled.button`
     background-color: ${Variables.Color.n200};
     border-color: ${Variables.Color.i400};
   }
+  
+  .left-component {
+    margin-right: 0.5rem;
+    flex: 1 0 auto;
+  }
+  
+  .right-component {
+    margin-left: 0.5rem;
+    flex: 1 0 auto;
+  }
 `
 
 export {

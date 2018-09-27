@@ -146,7 +146,8 @@ module.exports = {
           components: [
             'src/domain/Lists/List/List',
             'src/domain/Lists/ActionList/ActionList',
-            'src/domain/Lists/SmartList/SmartList'
+            'src/domain/Lists/SmartList/SmartList',
+            'src/domain/Lists/OptionList/OptionList'
           ]
         },
         {
@@ -227,7 +228,8 @@ module.exports = {
           name: 'Typographies',
           components: [
             'src/domain/Typographies/FormattedText/FormattedText',
-            'src/domain/Typographies/Text/Text'
+            'src/domain/Typographies/Text/Text',
+            'src/domain/Typographies/CurrencyText/CurrencyText'
           ]
         }
       ]
