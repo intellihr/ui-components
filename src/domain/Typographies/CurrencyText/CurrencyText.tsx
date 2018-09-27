@@ -1,8 +1,8 @@
 import React from 'react'
-import { CurrencyWrapper } from './style'
 import Numeral from 'numeral'
+import { FormattedCurrencyPrefixWrapper } from './style'
 
-export interface ICurrencyProps {
+interface ICurrencyTextProps {
   /** money value to display */
   value: string | number
   /** money prefix to display */
@@ -13,22 +13,26 @@ export interface ICurrencyProps {
   prefixType?: 'small' | 'medium' | 'large'
 }
 
-export class CurrencyText extends React.PureComponent<ICurrencyProps> {
-  public static defaultProps: Partial<ICurrencyProps> = {
-    isPrefixFormatted: false
+class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
+  public static defaultProps: Partial<ICurrencyTextProps> = {
+    isPrefixFormatted: false,
+    prefixType: 'large'
   }
 
-  get prefix (): JSX.Element|string|undefined  {
+  get prefix (): JSX.Element | string | undefined {
     const {
       prefix,
+      prefixType,
       isPrefixFormatted
     } = this.props
 
     if (isPrefixFormatted) {
       return (
-        <span className='currency-prefix'>
+        <FormattedCurrencyPrefixWrapper
+          prefixType={prefixType}
+        >
           {prefix}
-        </span>
+        </FormattedCurrencyPrefixWrapper>
       )
     }
 
@@ -44,16 +48,15 @@ export class CurrencyText extends React.PureComponent<ICurrencyProps> {
   }
 
   public render (): JSX.Element {
-    const {
-      prefixType
-    } = this.props
-
     return (
-      <CurrencyWrapper
-        prefixType={prefixType}
-      >
+      <span>
         {this.prefix} {this.value}
-      </CurrencyWrapper>
+      </span>
     )
   }
+}
+
+export {
+  CurrencyText,
+  ICurrencyTextProps
 }
