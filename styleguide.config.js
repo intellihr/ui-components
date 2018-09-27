@@ -228,7 +228,8 @@ module.exports = {
           name: 'Typographies',
           components: [
             'src/domain/Typographies/FormattedText/FormattedText',
-            'src/domain/Typographies/Text/Text'
+            'src/domain/Typographies/Text/Text',
+            'src/domain/Typographies/CurrencyText/CurrencyText'
           ]
         }
       ]

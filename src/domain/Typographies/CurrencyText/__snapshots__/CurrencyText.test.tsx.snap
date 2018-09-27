@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CurrencyText /> should render the Currency Text 1`] = `
+<CurrencyText
+  isPrefixFormatted={false}
+  prefix="AUD"
+  prefixType="display"
+  value={1000}
+>
+  <span>
+    AUD
+     
+    1,000
+  </span>
+</CurrencyText>
+`;
+
+exports[`<CurrencyText /> should render the Currency Text with isPrefixFormatted being true 1`] = `
+.c0 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 600;
+  position: relative;
+  margin-right: .25rem;
+  bottom: .25rem;
+}
+
+<CurrencyText
+  isPrefixFormatted={true}
+  prefix="AUD"
+  prefixType="display"
+  value={1000}
+>
+  <span>
+    <styled.span
+      prefixType="display"
+    >
+      <span
+        className="c0"
+      >
+        AUD
+      </span>
+    </styled.span>
+     
+    1,000
+  </span>
+</CurrencyText>
+`;
