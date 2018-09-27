@@ -17,8 +17,6 @@ interface IOptionProps {
   value: OptionValue
   /** Callback when option is clicked. Overrides OptionList handleClick. */
   onClick?: OptionClickCallback
-  /** Applys distinct style to selected option */
-  selected?: boolean
   /** Any other option property that will get passed with the onClick callback */
   [x: string]: any
 }
@@ -35,7 +33,6 @@ interface IOptionListProps {
 }
 
 class OptionList extends React.PureComponent<IOptionListProps> {
-
   get content (): JSX.Element[] {
     const {
       options,
@@ -68,7 +65,6 @@ class OptionList extends React.PureComponent<IOptionListProps> {
     })
   }
 
-
   public render (): JSX.Element {
     return (
       <>
@@ -76,6 +72,7 @@ class OptionList extends React.PureComponent<IOptionListProps> {
       </>
     )
   }
+
   private onClickCallback = (option: IOptionProps) => {
     const {
       handleClick

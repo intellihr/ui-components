@@ -6,65 +6,58 @@ exports[`<OptionList /> should render a basic option list 1`] = `
     hidden={false}
     key="0"
     onClick={[Function]}
+    selected={false}
   >
-    <span
-      className="left-component"
-    >
+    <styled.span>
       <img
         src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/ge.png?raw=true"
       />
-    </span>
+    </styled.span>
     Georgia Lari (GEL)
   </styled.button>
   <styled.button
     hidden={false}
     key="1"
     onClick={[Function]}
-    selected={true}
+    selected={false}
   >
-    <span
-      className="left-component"
-    >
+    <styled.span>
       <img
         src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/my.png?raw=true"
       />
-    </span>
+    </styled.span>
     Malaysia Ringgit (MYR)
   </styled.button>
   <styled.button
     hidden={false}
     key="2"
     onClick={[Function]}
+    selected={false}
   >
-    <span
-      className="left-component"
-    >
+    <styled.span>
       <img
         src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/nz.png?raw=true"
       />
-    </span>
+    </styled.span>
     New Zealand Dollar (NZD)
   </styled.button>
   <styled.button
     hidden={false}
     key="3"
     onClick={[Function]}
+    selected={false}
   >
-    <span
-      className="left-component"
-    >
+    <styled.span>
       <img
         src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/au.png?raw=true"
       />
-    </span>
+    </styled.span>
     Australian Dollar (AUD)
-    <span
-      className="right-component"
-    >
+    <styled.span>
       <FontAwesomeIcon
         type="star"
       />
-    </span>
+    </styled.span>
   </styled.button>
 </React.Fragment>
 `;
@@ -75,65 +68,58 @@ exports[`<OptionList /> should render an option list with filtered options 1`] =
     hidden={true}
     key="0"
     onClick={[Function]}
+    selected={false}
   >
-    <span
-      className="left-component"
-    >
+    <styled.span>
       <img
         src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/ge.png?raw=true"
       />
-    </span>
+    </styled.span>
     Georgia Lari (GEL)
   </styled.button>
   <styled.button
     hidden={true}
     key="1"
     onClick={[Function]}
-    selected={true}
+    selected={false}
   >
-    <span
-      className="left-component"
-    >
+    <styled.span>
       <img
         src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/my.png?raw=true"
       />
-    </span>
+    </styled.span>
     Malaysia Ringgit (MYR)
   </styled.button>
   <styled.button
     hidden={false}
     key="2"
     onClick={[Function]}
+    selected={false}
   >
-    <span
-      className="left-component"
-    >
+    <styled.span>
       <img
         src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/nz.png?raw=true"
       />
-    </span>
+    </styled.span>
     New Zealand Dollar (NZD)
   </styled.button>
   <styled.button
     hidden={false}
     key="3"
     onClick={[Function]}
+    selected={false}
   >
-    <span
-      className="left-component"
-    >
+    <styled.span>
       <img
         src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/au.png?raw=true"
       />
-    </span>
+    </styled.span>
     Australian Dollar (AUD)
-    <span
-      className="right-component"
-    >
+    <styled.span>
       <FontAwesomeIcon
         type="star"
       />
-    </span>
+    </styled.span>
   </styled.button>
 </React.Fragment>
 `;

@@ -1,7 +1,8 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { IOptionProps, OptionList } from './OptionList'
-import { FontAwesomeIcon } from '../../Icons'
+import { FilteredOptionList } from './FilteredOptionList'
+import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
+import { IOptionProps } from './OptionList'
 
 const exampleOptions = [
   {
@@ -34,25 +35,11 @@ const exampleOptions = [
 
 const dummyClick = () => console.log('hey')
 
-describe('<OptionList />', () => {
+describe('<FilteredOptionList />', () => {
   it('should render a basic option list', () => {
     const wrapper = shallow(
-      <OptionList
+      <FilteredOptionList
         handleClick={dummyClick}
-        options={exampleOptions}
-      />
-    )
-
-    expect(wrapper).toMatchSnapshot()
-  })
-
-  it('should render an option list with filtered options', () => {
-    const handleClick = () => console.log('hey')
-
-    const wrapper = shallow(
-      <OptionList
-        handleClick={dummyClick}
-        query='dollar'
         options={exampleOptions}
       />
     )
