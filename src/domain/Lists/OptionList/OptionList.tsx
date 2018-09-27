@@ -1,8 +1,10 @@
 import React from 'react'
-import { filter, toLower, map } from 'lodash'
-import { OptionListButton } from './style'
+import { toLower, map } from 'lodash'
+import { OptionListButton, OptionListLeftComponent, OptionListRightComponent } from './style'
 
 type OptionClickCallback = (option: IOptionProps) => void
+
+type OptionValue = string | number | boolean
 
 interface IOptionProps {
   /** A component that is shown to the left of the text */
@@ -11,7 +13,9 @@ interface IOptionProps {
   rightComponent?: JSX.Element
   /** Text to display */
   text: string
-  /** Event handler when the section is clicked */
+  /** Value of the option */
+  value: OptionValue
+  /** Callback when option is clicked. Overrides OptionList handleClick. */
   onClick?: OptionClickCallback
   /** Applys distinct style to selected option */
   selected?: boolean
@@ -20,40 +24,45 @@ interface IOptionProps {
 }
 
 interface IOptionListProps {
+  /** Array of options to display in the list */
   options: IOptionProps[]
+  /** Query string to filter the options by */
   query?: string
+  /** Default callback when an option is selected */
   handleClick: OptionClickCallback
+  /** Currently selected value */
+  selectedValue?: OptionValue
 }
 
 class OptionList extends React.PureComponent<IOptionListProps> {
+
   get content (): JSX.Element[] {
     const {
       options,
       query,
-      handleClick
+      selectedValue
     } = this.props
 
     return map(options, (option, idx) => {
       const {
-        onClick,
-        selected,
         leftComponent,
         rightComponent,
-        text
+        text,
+        value
       } = option
 
-      const callback = () => onClick ? onClick(option) : handleClick(option)
+      const callback = () => this.onClickCallback(option)
 
       return (
         <OptionListButton
           key={idx}
           onClick={callback}
-          selected={selected}
+          selected={value === selectedValue}
           hidden={query ? !toLower(option.text).includes(toLower(query)) : false}
         >
-          {leftComponent && <span className='left-component'>{leftComponent}</span>}
+          {leftComponent && <OptionListLeftComponent>{leftComponent}</OptionListLeftComponent>}
           {text}
-          {rightComponent && <span className='right-component'>{rightComponent}</span>}
+          {rightComponent && <OptionListRightComponent>{rightComponent}</OptionListRightComponent>}
         </OptionListButton>
       )
     })
@@ -66,6 +75,17 @@ class OptionList extends React.PureComponent<IOptionListProps> {
         {this.content}
       </>
     )
+  }
+  private onClickCallback = (option: IOptionProps) => {
+    const {
+      handleClick
+    } = this.props
+
+    if (option.onClick) {
+      return option.onClick(option)
+    }
+
+    return handleClick(option)
   }
 }
 

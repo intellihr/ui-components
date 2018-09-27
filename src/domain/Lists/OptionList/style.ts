@@ -38,16 +38,18 @@ const OptionListButton = styled.button`
   }}
   
   ${(props: IOptionListButton) => props.hidden && css`display: none;`}
+`
 
-  .left-component {
-    margin-right: 8px;
-  }
+const OptionListLeftComponent = styled.span`
+  margin-right: 8px;
+`
 
-  .right-component {
-    margin-left: 8px;
-  }
+const OptionListRightComponent = styled.span`
+  margin-left: 8px;
 `
 
 export {
-  OptionListButton
+  OptionListButton,
+  OptionListLeftComponent,
+  OptionListRightComponent
 }

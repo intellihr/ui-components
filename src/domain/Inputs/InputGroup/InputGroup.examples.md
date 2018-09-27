@@ -62,8 +62,8 @@ let textInput;
 initialState = {
   selectedOption: {
     text: 'Georgia Lari (GEL)',
+    value: 1,
     onClick: (option) => {setState({selectedOption: option}); closeMenu()},
-    selected: true,
     leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/ge.png?raw=true' />,
     buttonText: 'GEL'
   }
@@ -72,17 +72,18 @@ initialState = {
 <InputGroup>
   <DropdownMenu
     toggleComponent={
-    <InputGroup.Button
-      type='input' 
-      groupPosition='left'
-      leftComponent={state.selectedOption.leftComponent}
-    >
-       {state.selectedOption.buttonText}
-    </InputGroup.Button>
+      <InputGroup.Button
+        type='input' 
+        groupPosition='left'
+        leftComponent={state.selectedOption.leftComponent}
+      >
+         {state.selectedOption.buttonText}
+      </InputGroup.Button>
     }
   >
   {({closeMenu}) => 
     <FilteredOptionList
+      selectedValue={state.selectedOption.value}
       handleClick={(option) => {
         setState({selectedOption: option})
         closeMenu()
@@ -95,26 +96,26 @@ initialState = {
       options={[
         {
           text: 'Georgia Lari (GEL)',
-          selected: state.selectedOption.text === 'Georgia Lari (GEL)',
+          value: 1,
           leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/ge.png?raw=true' />,
           buttonText: 'GEL'
         },
         {
           text: 'Malaysia Ringgit (MYR)',
-          selected: state.selectedOption.text === 'Malaysia Ringgit (MYR)',
+          value: 2,
           leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/my.png?raw=true' />,
           buttonText: 'MYR'
         },
         {
           text: 'New Zealand Dollar (NZD)',
-          selected: state.selectedOption.text === 'New Zealand Dollar (NZD)',
+          value: 3,
           leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/nz.png?raw=true' />,
           buttonText: 'NZD'
         },
         {
           text: 'Australian Dollar (AUD)',
+          value: 4,
           onClick: (option) => {alert('I have a custom onClick handler!'); setState({selectedOption: option}); closeMenu()},
-          selected: state.selectedOption.text === 'Australian Dollar (AUD)',
           leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/au.png?raw=true' />,
           rightComponent: <FontAwesomeIcon type='star' />,
           buttonText: 'AUD'

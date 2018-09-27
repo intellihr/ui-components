@@ -3,29 +3,47 @@
 ```jsx
 const { FontAwesomeIcon } = require('@Domain/Icons');
 
+initialState = {
+  selectedOption: {
+    text: 'Georgia Lari (GEL)',
+    value: 1,
+    onClick: (option) => {setState({selectedOption: option})},
+    leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/ge.png?raw=true' />,
+    buttonText: 'GEL'
+  }
+};
+
 <OptionList
+  selectedValue={state.selectedOption.value}
+  handleClick={(option) => {
+    setState({selectedOption: option})
+  }}
   options={[
     {
       text: 'Georgia Lari (GEL)',
-      onClick: () => alert('Selected GEL'),
-      leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/ge.png?raw=true' />
+      value: 1,
+      leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/ge.png?raw=true' />,
+      buttonText: 'GEL'
     },
     {
       text: 'Malaysia Ringgit (MYR)',
-      onClick: () => alert('Selected MYR'),
-      selected: true,
-      leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/my.png?raw=true' />
+      value: 2,
+      leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/my.png?raw=true' />,
+      buttonText: 'MYR'
     },
     {
       text: 'New Zealand Dollar (NZD)',
-      onClick: () => alert('Selected NZD'),
-      leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/nz.png?raw=true' />
+      value: 3,
+      leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/nz.png?raw=true' />,
+      buttonText: 'NZD'
     },
     {
       text: 'Australian Dollar (AUD)',
-      onClick: () => alert('Selected AUD'),
+      value: 4,
+      onClick: (option) => {alert('I have a custom onClick handler!'); setState({selectedOption: option});},
       leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/au.png?raw=true' />,
-      rightComponent: <FontAwesomeIcon type='star' />
+      rightComponent: <FontAwesomeIcon type='star' />,
+      buttonText: 'AUD'
     }
   ]}
 />
@@ -37,33 +55,52 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 const { FilteredOptionList } = require('./FilteredOptionList');
 const { FontAwesomeIcon } = require('@Domain/Icons');
 
+initialState = {
+  selectedOption: {
+    text: 'Georgia Lari (GEL)',
+    value: 1,
+    onClick: (option) => {setState({selectedOption: option})},
+    leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/ge.png?raw=true' />,
+    buttonText: 'GEL'
+  }
+};
+
 <FilteredOptionList
+  selectedValue={state.selectedOption.value}
+  handleClick={(option) => {
+    setState({selectedOption: option})
+  }}
   textInputProps={{
     icon: <FontAwesomeIcon type='search' />,
-    placeholder: 'Type here to filter currencies'
+    placeholder: 'Search country!',
+    width: 300
   }}
   options={[
     {
       text: 'Georgia Lari (GEL)',
-      onClick: () => alert('Selected GEL'),
-      leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/ge.png?raw=true' />
+      value: 1,
+      leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/ge.png?raw=true' />,
+      buttonText: 'GEL'
     },
     {
       text: 'Malaysia Ringgit (MYR)',
-      onClick: () => alert('Selected MYR'),
-      selected: true,
-      leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/my.png?raw=true' />
+      value: 2,
+      leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/my.png?raw=true' />,
+      buttonText: 'MYR'
     },
     {
       text: 'New Zealand Dollar (NZD)',
-      onClick: () => alert('Selected NZD'),
-      leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/nz.png?raw=true' />
+      value: 3,
+      leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/nz.png?raw=true' />,
+      buttonText: 'NZD'
     },
     {
       text: 'Australian Dollar (AUD)',
-      onClick: () => alert('Selected AUD'),
+      value: 4,
+      onClick: (option) => {alert('I have a custom onClick handler!'); setState({selectedOption: option});},
       leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/au.png?raw=true' />,
-      rightComponent: <FontAwesomeIcon type='star' />
+      rightComponent: <FontAwesomeIcon type='star' />,
+      buttonText: 'AUD'
     }
   ]}
 />
