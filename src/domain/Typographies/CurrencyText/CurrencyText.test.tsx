@@ -20,6 +20,7 @@ describe('<CurrencyText />', () => {
       <CurrencyText
         value={1000}
         prefix='AUD'
+        prefixType='large'
         isPrefixFormatted
       />
     )

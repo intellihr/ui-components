@@ -9,6 +9,8 @@ export interface ICurrencyProps {
   prefix?: string
   /** If true, displays the prefix with the format */
   isPrefixFormatted?: boolean
+  /** Specify the prefix's style  */
+  prefixType?: 'small' | 'medium' | 'large'
 }
 
 export class CurrencyText extends React.PureComponent<ICurrencyProps> {
@@ -42,8 +44,14 @@ export class CurrencyText extends React.PureComponent<ICurrencyProps> {
   }
 
   public render (): JSX.Element {
+    const {
+      prefixType
+    } = this.props
+
     return (
-      <CurrencyWrapper>
+      <CurrencyWrapper
+        prefixType={prefixType}
+      >
         {this.prefix} {this.value}
       </CurrencyWrapper>
     )
