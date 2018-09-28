@@ -33,3 +33,9 @@
     />
   </div>
 ```
+
+#### Empty Currency Text
+
+```jsx
+  <CurrencyText />
+```
