@@ -4,7 +4,7 @@ import { FormattedCurrencyPrefixWrapper } from './style'
 
 interface ICurrencyTextProps {
   /** money value to display */
-  value: string | number
+  value?: string | number
   /** money prefix to display */
   prefix?: string
   /** If true, displays the prefix with the format */
@@ -39,20 +39,20 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
     return prefix
   }
 
-  get value (): string {
+  public render (): JSX.Element | string {
     const {
       value
     } = this.props
 
-    return Numeral(value.toString()).format('0,0')
-  }
+    if (value) {
+      return (
+        <span>
+          {this.prefix} {Numeral(value.toString()).format('0,0')}
+        </span>
+      )
+    }
 
-  public render (): JSX.Element {
-    return (
-      <span>
-        {this.prefix} {this.value}
-      </span>
-    )
+    return '-'
   }
 }
 
