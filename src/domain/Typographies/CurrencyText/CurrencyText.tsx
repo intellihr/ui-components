@@ -47,12 +47,20 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
     return Numeral(value.toString()).format('0,0')
   }
 
-  public render (): JSX.Element {
-    return (
-      <span>
+  public render (): JSX.Element | string {
+    const {
+      value
+    } = this.props
+
+    if (value) {
+      return (
+        <span>
         {this.prefix} {this.value}
       </span>
-    )
+      )
+    }
+
+    return '-'
   }
 }
 
