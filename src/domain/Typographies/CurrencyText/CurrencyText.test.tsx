@@ -30,7 +30,7 @@ describe('<CurrencyText />', () => {
 
   it('should render the Currency Text without value', () => {
     const wrapper = mount(
-      <CurrencyText/>
+      <CurrencyText />
     )
 
     expect(wrapper).toMatchSnapshot()

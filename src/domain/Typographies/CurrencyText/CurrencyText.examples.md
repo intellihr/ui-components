@@ -37,5 +37,5 @@
 #### Empty Currency Text
 
 ```jsx
-  <CurrencyText/>
+  <CurrencyText />
 ```
