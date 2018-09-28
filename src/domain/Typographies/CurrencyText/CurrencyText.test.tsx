@@ -4,7 +4,7 @@ import { mount } from 'enzyme'
 import { CurrencyText } from './CurrencyText'
 
 describe('<CurrencyText />', () => {
-  it(`should render the Currency Text`, () => {
+  it('should render the Currency Text', () => {
     const wrapper = mount(
       <CurrencyText
         value={1000}
@@ -15,7 +15,7 @@ describe('<CurrencyText />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render the Currency Text with isPrefixFormatted being true`, () => {
+  it('should render the Currency Text with isPrefixFormatted being true', () => {
     const wrapper = mount(
       <CurrencyText
         value={1000}
@@ -28,10 +28,9 @@ describe('<CurrencyText />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render the Currency Text without value`, () => {
+  it('should render the Currency Text without value', () => {
     const wrapper = mount(
-      <CurrencyText
-      />
+      <CurrencyText/>
     )
 
     expect(wrapper).toMatchSnapshot()
