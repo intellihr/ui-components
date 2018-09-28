@@ -46,3 +46,12 @@ exports[`<CurrencyText /> should render the Currency Text with isPrefixFormatted
   </span>
 </CurrencyText>
 `;
+
+exports[`<CurrencyText /> should render the Currency Text without value 1`] = `
+<CurrencyText
+  isPrefixFormatted={false}
+  prefixType="display"
+>
+  -
+</CurrencyText>
+`;

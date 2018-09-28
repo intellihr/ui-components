@@ -28,4 +28,13 @@ describe('<CurrencyText />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
+  it(`should render the Currency Text without value`, () => {
+    const wrapper = mount(
+      <CurrencyText
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
 })
