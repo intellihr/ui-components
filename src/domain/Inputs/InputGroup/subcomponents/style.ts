@@ -38,8 +38,13 @@ const InputGroupButton = styled.button`
   }}
 
   &:disabled {
-    background-color: ${Variables.Color.n100};
-    color: ${Variables.Color.n400}
+    cursor: not-allowed;
+    background-color: ${Variables.Color.n150};
+    color: ${Variables.Color.n400};
+    
+    &:hover {
+      background-color: ${Variables.Color.n150};
+    }
   }
 
   &:hover {

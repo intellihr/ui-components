@@ -1,6 +1,14 @@
 import React from 'react'
 import { toLower, map } from 'lodash'
-import { OptionListButton, OptionListLeftComponent, OptionListRightComponent } from './style'
+import {
+  OptionListButton,
+  OptionListLeftComponent,
+  OptionListRightComponent,
+  OptionListWrapper,
+  StyledEmptyState
+} from './style'
+import { Text } from '../../Typographies/Text'
+import { Props } from '../../../common'
 
 type OptionClickCallback = (option: IOptionProps) => void
 
@@ -30,10 +38,34 @@ interface IOptionListProps {
   handleClick: OptionClickCallback
   /** Currently selected value */
   selectedValue?: OptionValue
+  /** Maximum height of the list */
+  maxHeight?: number
 }
 
 class OptionList extends React.PureComponent<IOptionListProps> {
-  get content (): JSX.Element[] {
+  public hiddenOptions = {
+    query: '',
+    hidden: 0
+  }
+
+  public hideOption = (optionText: string, query?: string) => {
+    if (query !== this.hiddenOptions.query) {
+      this.hiddenOptions = {
+        query: query || '',
+        hidden: 0
+      }
+    }
+
+    if (query && !toLower(optionText).includes(toLower(query))) {
+      this.hiddenOptions.hidden++
+
+      return true
+    }
+
+    return false
+  }
+
+  get options (): JSX.Element[] {
     const {
       options,
       query,
@@ -55,7 +87,7 @@ class OptionList extends React.PureComponent<IOptionListProps> {
           key={idx}
           onClick={callback}
           selected={value === selectedValue}
-          hidden={query ? !toLower(option.text).includes(toLower(query)) : false}
+          hidden={this.hideOption(option.text, query)}
         >
           {leftComponent && <OptionListLeftComponent>{leftComponent}</OptionListLeftComponent>}
           {text}
@@ -65,11 +97,47 @@ class OptionList extends React.PureComponent<IOptionListProps> {
     })
   }
 
+  get content (): JSX.Element[] | JSX.Element {
+    const {
+      options
+    } = this.props
+
+    if (options.length === 0) {
+      return (
+        <StyledEmptyState>
+          <Text type={Props.TypographyType.Small}>
+            Sorry, We couldn't find any options
+          </Text>
+        </StyledEmptyState>
+      )
+    }
+
+    const filteredOptions = this.options
+
+    if (this.hiddenOptions.hidden === options.length) {
+      return (
+        <StyledEmptyState>
+          <Text type={Props.TypographyType.Small}>
+            Unfortunately, we couldn't find anything from your search
+          </Text>
+        </StyledEmptyState>
+      )
+    }
+
+    return filteredOptions
+  }
+
   public render (): JSX.Element {
+    const {
+      maxHeight
+    } = this.props
+
     return (
-      <>
+      <OptionListWrapper
+        maxHeight={maxHeight}
+      >
         {this.content}
-      </>
+      </OptionListWrapper>
     )
   }
 

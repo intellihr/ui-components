@@ -4,6 +4,7 @@ exports[`<Input /> should highlight all text when focused and highlightOnFocus i
 <input
   className="input "
   id="test-input"
+  name="test-input"
   onFocus={[Function]}
   type="text"
 />
@@ -13,6 +14,7 @@ exports[`<Input /> should not highlight all text when focused and highlightOnFoc
 <input
   className="input "
   id="test-input"
+  name="test-input"
   onFocus={[Function]}
   type="text"
 />
@@ -22,6 +24,7 @@ exports[`<Input /> should render an input 1`] = `
 <input
   className="input "
   id="test-input"
+  name="test-input"
   onFocus={[Function]}
   type="text"
 />
@@ -37,6 +40,7 @@ exports[`<Input /> should render an input with an icon 1`] = `
   <input
     className="input "
     id="test-input"
+    name="test-input"
     onFocus={[Function]}
     type="text"
   />
@@ -47,6 +51,7 @@ exports[`<Input /> should render with an onBlur function if handleBlur is passed
 <input
   className="input "
   id="test-input"
+  name="test-input"
   onBlur={[Function]}
   onFocus={[Function]}
   type="text"

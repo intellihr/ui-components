@@ -114,6 +114,7 @@ export class Input extends React.PureComponent<InputProps> {
     return (
       <input
         id={id || name}
+        name={name}
         type={type}
         value={value}
         checked={isChecked}
