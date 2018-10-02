@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<OptionList /> should render a basic option list 1`] = `
-<React.Fragment>
+<styled.div>
   <styled.button
     hidden={false}
     key="0"
@@ -59,11 +59,11 @@ exports[`<OptionList /> should render a basic option list 1`] = `
       />
     </styled.span>
   </styled.button>
-</React.Fragment>
+</styled.div>
 `;
 
 exports[`<OptionList /> should render an option list with filtered options 1`] = `
-<React.Fragment>
+<styled.div>
   <styled.button
     hidden={true}
     key="0"
@@ -121,5 +121,5 @@ exports[`<OptionList /> should render an option list with filtered options 1`] =
       />
     </styled.span>
   </styled.button>
-</React.Fragment>
+</styled.div>
 `;

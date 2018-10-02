@@ -1,10 +1,32 @@
 import styled, { css } from 'styled-components'
 import { Variables } from '../../../common'
 
+interface IOptionListWrapper {
+  maxHeight?: number
+}
+
 interface IOptionListButton {
   selected?: boolean
   hidden: boolean
 }
+
+const OptionListWrapper = styled.div`
+  ${(props: IOptionListWrapper) => {
+    if (props.maxHeight) {
+      return css`
+        max-height: ${props.maxHeight}px;
+        overflow-y: auto;
+      `
+    }
+    
+    return css`max-height: none`
+  }}
+`
+
+const StyledEmptyState = styled.div`
+  text-align: center;
+  padding: 0 24px;
+`
 
 const OptionListButton = styled.button`
   background-color: ${Variables.Color.n100};
@@ -17,12 +39,12 @@ const OptionListButton = styled.button`
   text-align: left;
   outline: none;
   cursor: pointer;
-  
+
   &:hover,
   &:focus {
     background-color: ${Variables.Color.n200};
   }
-  
+
   ${(props: IOptionListButton) => {
     if (props.selected) {
       return css`
@@ -36,7 +58,7 @@ const OptionListButton = styled.button`
       `
     }
   }}
-  
+
   ${(props: IOptionListButton) => props.hidden && css`display: none;`}
 `
 
@@ -49,6 +71,8 @@ const OptionListRightComponent = styled.span`
 `
 
 export {
+  StyledEmptyState,
+  OptionListWrapper,
   OptionListButton,
   OptionListLeftComponent,
   OptionListRightComponent
