@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import capitalize from 'capitalize'
 import Select, { Async, Creatable, OnChangeHandler, ReactSelectProps } from 'react-select'
-import { isEmpty, cloneDeep, debounce } from 'lodash'
+import { every, isEmpty, cloneDeep, debounce } from 'lodash'
 const style = require('./style.scss')
 
 export interface ISelectInputOptions {
@@ -10,13 +10,13 @@ export interface ISelectInputOptions {
   value: string | boolean | number
 }
 
-export interface ISelectInputProps extends ReactSelectProps {
+export interface ISelectInputProps<O=ISelectInputOptions> extends ReactSelectProps {
   /** Label describing what the select options are for */
   label?: string
   /** Placeholder when no option is selected */
   placeholder?: string
   /** Array of options to display. Use this when you pre-fetched all options upfront. */
-  options?: ISelectInputOptions[]
+  options?: O[]
   /** Promise to use as options when it resolves. Use this when your promise will fetch all options. */
   promiseOptions?: () => Promise<ISelectInputOptions[]>
   /** Promise that takes an input for user typing. Use this when you do server-side filtering. */
@@ -47,7 +47,7 @@ export interface ISelectInputState {
   preselectValue: string
 }
 
-export class SelectInput extends React.PureComponent<ISelectInputProps, ISelectInputState> {
+export class SelectInput<O=ISelectInputOptions> extends React.PureComponent<ISelectInputProps<O>, ISelectInputState> {
   public static defaultProps = {
     placeholder: 'Please Select',
     isInvalid: false,
@@ -138,13 +138,11 @@ export class SelectInput extends React.PureComponent<ISelectInputProps, ISelectI
       base.loadOptions = this.promiseOptions
     } else if (asyncOptions) {
       base.loadOptions = this.fetchAsyncOptions
-    } else {
-      base.options = this.prepareOptions(options)
-    }
-
-    if (optionComponent) {
+    } else if (optionComponent) {
       base.options = options
       base.optionComponent = optionComponent
+    } else if (options && this.isISelectInputOptions(options)){
+      base.options = this.prepareOptions(options)
     }
 
     return base
@@ -189,7 +187,7 @@ export class SelectInput extends React.PureComponent<ISelectInputProps, ISelectI
     this.setState({preselectValue: ''})
   }
 
-  public componentWillReceiveProps (nextProps: ISelectInputProps) {
+  public componentWillReceiveProps (nextProps: ISelectInputProps<O>) {
     if (nextProps.value === '' && !isEmpty(nextProps.preselectDefaultValue)) {
       this.handleChange(nextProps.preselectDefaultValue)
     }
@@ -223,6 +221,13 @@ export class SelectInput extends React.PureComponent<ISelectInputProps, ISelectI
       <Select
         {...this.selectProps}
       />
+    )
+  }
+
+  private isISelectInputOptions = (options: any[]): options is ISelectInputOptions[] => {
+    return every(
+      options,
+      option => option.value !== undefined && option.label !== undefined
     )
   }
 
