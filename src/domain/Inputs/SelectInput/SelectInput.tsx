@@ -227,7 +227,15 @@ export class SelectInput<O=ISelectInputOptions> extends React.PureComponent<ISel
   private isISelectInputOptions = (options: any[]): options is ISelectInputOptions[] => {
     return every(
       options,
-      option => option.value !== undefined && option.label !== undefined
+      option => {
+        const matched = option.value !== undefined && option.label !== undefined
+
+        if (!matched) {
+          console.warn('One of your options does not match the interface ISelectInputOptions')
+        }
+
+        return matched
+      }
     )
   }
 
