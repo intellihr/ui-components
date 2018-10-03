@@ -30,11 +30,11 @@ interface IBaseButtonProps {
    * For backwards compatibility only; please use layouts instead to achieve this effect if needed.
    * @deprecated
    */
-  hasLegacyMargins: boolean
+  hasLegacyMargins?: boolean
   /** What type of button to display */
-  type: ButtonType
+  type?: ButtonType
   /** Alignment of the button icon */
-  iconAlignment: 'left' | 'right'
+  iconAlignment?: 'left' | 'right'
   /** Icon component passed to Button */
   icon?: JSX.Element
   /** Any extra classes */
@@ -46,7 +46,7 @@ interface IBaseButtonProps {
 }
 
 class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
-  public static defaultProps = {
+  public static defaultProps: Partial<IBaseButtonProps> = {
     hasLegacyMargins: false,
     type: 'neutral',
     iconAlignment: 'left'

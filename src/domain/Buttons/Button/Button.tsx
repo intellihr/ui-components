@@ -7,12 +7,6 @@ export interface IButtonProps extends IBaseButtonProps {
 }
 
 export class Button extends BaseButton<IButtonProps> {
-  public static defaultProps = {
-    ...BaseButton.defaultProps,
-    type: 'neutral',
-    iconAlignment: 'left'
-  }
-
   public render (): JSX.Element | null {
     const {
       buttonOverrides,

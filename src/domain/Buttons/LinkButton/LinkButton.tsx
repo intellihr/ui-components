@@ -15,10 +15,9 @@ export interface ILinkButtonProps extends IBaseButtonProps {
 }
 
 export class LinkButton extends BaseButton<ILinkButtonProps> {
-  public static defaultProps = {
+  public static defaultProps: Partial<ILinkButtonProps> = {
     ...BaseButton.defaultProps,
-    disabled: false,
-    type: 'neutral'
+    disabled: false
   }
 
   public render (): JSX.Element | null {
