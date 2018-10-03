@@ -1,9 +1,7 @@
 import React from 'react'
-import { buttonClass, IBaseButtonProps } from '../../../Buttons/services/buttonHelper'
-import { BaseButton } from '../../../Buttons/BaseButton'
-import { InputGroupButton } from './style'
 import { InputGroupPosition } from '../InputGroup'
 import { FontAwesomeIcon } from '../../../Icons/FontAwesomeIcon'
+import { InputGroupButton } from './style'
 
 interface IInputGroupButtonProps extends React.HTMLProps<HTMLButtonElement> {
   /** Where the button is in the input group */

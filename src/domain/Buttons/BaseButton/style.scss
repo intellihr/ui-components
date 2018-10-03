@@ -587,7 +587,6 @@ $button-styles: (
   font-size: .9rem;
   font-weight: 600;
   line-height: 1;
-  margin: 0 .125rem 1rem;
   outline: none;
   padding: .85em 1em;
   text-align: center;
@@ -606,6 +605,10 @@ $button-styles: (
 
   &.full-width {
     width: 100%;
+  }
+
+  &.legacy-margins {
+    margin: 0 .125rem 1rem;
   }
 
   &.small {
@@ -652,6 +655,9 @@ $button-styles: (
 // --------------
 .button {
   @extend %button;
+
+  // Legacy buttons always have margin
+  margin: 0 .125rem 1rem;
 
   // Extend neutral by default
   @include add-button-style(

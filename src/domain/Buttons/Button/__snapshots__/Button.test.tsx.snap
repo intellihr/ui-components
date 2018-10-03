@@ -7,6 +7,7 @@ exports[`<Button /> should render a button with a simple text 1`] = `
       "onClick": [Function],
     }
   }
+  hasLegacyMargins={false}
   iconAlignment="left"
   id="test-button"
   type="neutral"
@@ -26,6 +27,7 @@ exports[`<Button /> should render a button with a size large 1`] = `
       "onClick": [Function],
     }
   }
+  hasLegacyMargins={false}
   iconAlignment="left"
   id="test-button-large"
   size="large"
@@ -46,6 +48,7 @@ exports[`<Button /> should render a button with a type delete-subtle 1`] = `
       "onClick": [Function],
     }
   }
+  hasLegacyMargins={false}
   iconAlignment="left"
   id="test-button-delete-subtle"
   type="delete-subtle"
@@ -69,6 +72,7 @@ exports[`<Button /> should render a button with an icon 1`] = `
 }
 
 <Button
+  hasLegacyMargins={false}
   icon={
     <FontAwesomeIcon
       type="star"
@@ -119,6 +123,7 @@ exports[`<Button /> should render a disabled button 1`] = `
       "onClick": [Function],
     }
   }
+  hasLegacyMargins={false}
   iconAlignment="left"
   id="test-button-disabled"
   type="neutral"
