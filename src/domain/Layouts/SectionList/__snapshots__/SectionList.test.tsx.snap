@@ -663,12 +663,14 @@ exports[`<SectionList /> should render a sectionList 1`] = `
       actionItems={
         Array [
           <Button
+            hasLegacyMargins={false}
             iconAlignment="left"
             type="primary"
           >
             Action 1
           </Button>,
           <Button
+            hasLegacyMargins={false}
             iconAlignment="left"
             type="primary"
           >
@@ -801,6 +803,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                 className="ihrCell desktop-shrink tablet-shrink min-12"
                               >
                                 <Button
+                                  hasLegacyMargins={false}
                                   iconAlignment="left"
                                   key="1"
                                   type="primary"
@@ -812,6 +815,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                   </button>
                                 </Button>
                                 <Button
+                                  hasLegacyMargins={false}
                                   iconAlignment="left"
                                   key="2"
                                   type="primary"
@@ -1153,12 +1157,14 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
       actionItems={
         Array [
           <Button
+            hasLegacyMargins={false}
             iconAlignment="left"
             type="primary"
           >
             Action 1
           </Button>,
           <Button
+            hasLegacyMargins={false}
             iconAlignment="left"
             type="primary"
           >
@@ -1291,6 +1297,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                 className="ihrCell desktop-shrink tablet-shrink min-12"
                               >
                                 <Button
+                                  hasLegacyMargins={false}
                                   iconAlignment="left"
                                   key="1"
                                   type="primary"
@@ -1302,6 +1309,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                   </button>
                                 </Button>
                                 <Button
+                                  hasLegacyMargins={false}
                                   iconAlignment="left"
                                   key="2"
                                   type="primary"

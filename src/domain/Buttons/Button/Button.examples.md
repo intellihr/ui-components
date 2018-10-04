@@ -291,10 +291,27 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 </div>
 ```
 
-#### Legacy Buttons
+### Legacy Button Support
+
+Buttons have a `hasLegacyMargins` Prop if the old margin support is required.
+
+```jsx
+<div>
+  <Button hasLegacyMargins>
+    Button 1
+  </Button>
+  <Button hasLegacyMargins>
+    Button 2
+  </Button>
+  <Button hasLegacyMargins>
+    Button 3
+  </Button>
+</div>
+```
+
 
 Buttons can be used in blade pages by using the `button` classname. This also adds a separate `holster` button type
-for dropdowns.
+for dropdowns. These buttons always have the legacy margins, and should not be used in a react context.
 
 ```jsx
 <div>
