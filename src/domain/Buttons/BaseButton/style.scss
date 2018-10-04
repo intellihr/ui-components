@@ -656,13 +656,13 @@ $button-styles: (
 .button {
   @extend %button;
 
-  // Legacy buttons always have margin
-  margin: 0 .125rem 1rem;
-
   // Extend neutral by default
   @include add-button-style(
     map-get($button-styles, neutral)
   );
+
+  // Legacy buttons always have margin
+  margin: 0 .125rem 1rem;
 
   // Only used on legacy pages for dropdowns
   &.holster {
