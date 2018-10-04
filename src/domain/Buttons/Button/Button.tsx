@@ -1,6 +1,5 @@
 import React from 'react'
-import { buttonClass, IBaseButtonProps } from '../services/buttonHelper'
-import { BaseButton } from '../BaseButton'
+import { BaseButton, IBaseButtonProps } from '../BaseButton'
 
 export interface IButtonProps extends IBaseButtonProps {
   /** Button props passthrough */
@@ -8,25 +7,16 @@ export interface IButtonProps extends IBaseButtonProps {
 }
 
 export class Button extends BaseButton<IButtonProps> {
-  public static defaultProps: Partial<IButtonProps> = {
-    type: 'neutral',
-    iconAlignment: 'left'
-  }
-
   public render (): JSX.Element | null {
     const {
-      size,
-      type,
-      className,
       buttonOverrides,
       onClick,
-      disabled,
-      fullWidth
+      disabled
     } = this.props
 
     return (
       <button
-        className={buttonClass(type!, size, className, { 'full-width': fullWidth })}
+        className={this.buttonClass}
         onClick={onClick}
         disabled={disabled}
         {...buttonOverrides}
