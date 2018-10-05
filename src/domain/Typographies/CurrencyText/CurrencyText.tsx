@@ -43,16 +43,18 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
     return prefix
   }
 
-  public formattedMoney = (value: string | number): string => {
+  get formattedMoney(): string {
     const {
-      decimalPlace
+      decimalPlace,
+      value
     } = this.props
 
     let moneyFormat = '0,0.'
-    if(decimalPlace){
-      moneyFormat = padEnd(moneyFormat, 4 + decimalPlace, '0')
+    if (decimalPlace) {
+      moneyFormat = padEnd(moneyFormat, moneyFormat.length + decimalPlace, '0')
     }
-    return Numeral(value.toString()).format(moneyFormat)
+
+    return Numeral(value!.toString()).format(moneyFormat)
   }
 
   public render (): JSX.Element | string {
@@ -63,7 +65,7 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
     if (value || value === 0) {
       return (
         <span>
-          {this.prefix} {this.formattedMoney(value)}
+          {this.prefix} {this.formattedMoney}
         </span>
       )
     }
