@@ -1,4 +1,5 @@
-import React from 'react'
+import React  from 'react'
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import Color from 'color'
 import styled, { StyledComponentClass } from 'styled-components'
 import ReactModal from 'react-modal'
@@ -9,7 +10,39 @@ interface IReactModalAdapter extends ReactModal.Props {
 }
 
 class ReactModalAdapter extends React.PureComponent<IReactModalAdapter> {
-  get contentClassName (): string {
+  private overlayRef: HTMLDivElement | null = null
+
+  public render (): JSX.Element {
+    const {
+      className,
+      children,
+      ...props
+    } = this.props
+
+    return (
+      <ReactModal
+        overlayRef={this.setOverlayRef}
+        portalClassName={className}
+        className={this.contentClassName}
+        overlayClassName={this.overlayClassName}
+        {...props}
+      >
+        {children}
+      </ReactModal>
+    )
+  }
+
+  private setOverlayRef = (overlayRef: HTMLDivElement) => {
+    if (!this.overlayRef && overlayRef) {
+      disableBodyScroll(overlayRef, { reserveScrollBarGap: true })
+    } else if (this.overlayRef && !overlayRef) {
+      enableBodyScroll(this.overlayRef)
+    }
+
+    this.overlayRef = overlayRef
+  }
+
+  private get contentClassName (): string {
     const {
       className
     } = this.props
@@ -17,27 +50,12 @@ class ReactModalAdapter extends React.PureComponent<IReactModalAdapter> {
     return className ? `${className}__content` : ''
   }
 
-  get overlayClassName (): string {
+  private get overlayClassName (): string {
     const {
       className
     } = this.props
 
     return className ? `${this.props.className}__overlay` : ''
-  }
-
-  public render (): JSX.Element {
-    const {
-      className
-    } = this.props
-
-    return (
-      <ReactModal
-        portalClassName={className}
-        className={this.contentClassName}
-        overlayClassName={this.overlayClassName}
-        {...this.props}
-      />
-    )
   }
 }
 
@@ -56,6 +74,7 @@ const StyledReactModal = styled(ReactModalAdapter)`
     overflow-y: auto;
     padding: 1rem 0;
     position: fixed;
+    -webkit-overflow-scrolling: touch;
 
     bottom: 0;
     left: 0;

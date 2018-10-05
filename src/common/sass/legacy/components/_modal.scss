@@ -1,19 +1,6 @@
 @import '~foundation-sites/scss/foundation';
 @import '../../variables';
 
-// Hack to prevent scrollbars outside the modal when the modal goes off the screen
-body {
-  &.ReactModal__Body--open {
-    overflow-y: hidden;
-
-    @include breakpoint(small down) {
-      position: fixed;
-      height: 100%;
-      width: 100%;
-    }
-  }
-}
-
 .reveal {
   padding: 1.5rem;
   overflow-y: visible;
