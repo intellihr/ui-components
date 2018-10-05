@@ -1,5 +1,6 @@
 import React from 'react'
 import Numeral from 'numeral'
+import { padEnd } from 'lodash'
 import { FormattedCurrencyPrefixWrapper } from './style'
 
 interface ICurrencyTextProps {
@@ -11,12 +12,15 @@ interface ICurrencyTextProps {
   isPrefixFormatted?: boolean
   /** Specify the prefix's style  */
   prefixType?: 'xsmall' | 'body' | 'display'
+  /** decimal place to display */
+  decimalPlace?:  number
 }
 
 class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
   public static defaultProps: Partial<ICurrencyTextProps> = {
     isPrefixFormatted: false,
-    prefixType: 'display'
+    prefixType: 'display',
+    decimalPlace:  0
   }
 
   get prefix (): JSX.Element | string | undefined {
@@ -39,15 +43,27 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
     return prefix
   }
 
+  public formattedMoney = (value: string | number): string => {
+    const {
+      decimalPlace
+    } = this.props
+
+    let moneyFormat = '0,0.'
+    if(decimalPlace){
+      moneyFormat = padEnd(moneyFormat, 4 + decimalPlace, '0')
+    }
+    return Numeral(value.toString()).format(moneyFormat)
+  }
+
   public render (): JSX.Element | string {
     const {
       value
     } = this.props
 
-    if (value) {
+    if (value || value === 0) {
       return (
         <span>
-          {this.prefix} {Numeral(value.toString()).format('0,0')}
+          {this.prefix} {this.formattedMoney(value)}
         </span>
       )
     }
