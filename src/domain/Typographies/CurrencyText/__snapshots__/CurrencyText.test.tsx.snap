@@ -2,15 +2,32 @@
 
 exports[`<CurrencyText /> should render the Currency Text 1`] = `
 <CurrencyText
+  decimalPlace={2}
   isPrefixFormatted={false}
   prefix="AUD"
   prefixType="display"
-  value={1000}
+  value={1000.499}
 >
   <span>
     AUD
      
-    1,000
+    1,000.50
+  </span>
+</CurrencyText>
+`;
+
+exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = `
+<CurrencyText
+  decimalPlace={0}
+  isPrefixFormatted={false}
+  prefix="AUD"
+  prefixType="display"
+  value={0}
+>
+  <span>
+    AUD
+     
+    0
   </span>
 </CurrencyText>
 `;
@@ -26,6 +43,7 @@ exports[`<CurrencyText /> should render the Currency Text with isPrefixFormatted
 }
 
 <CurrencyText
+  decimalPlace={0}
   isPrefixFormatted={true}
   prefix="AUD"
   prefixType="display"
@@ -49,6 +67,7 @@ exports[`<CurrencyText /> should render the Currency Text with isPrefixFormatted
 
 exports[`<CurrencyText /> should render the Currency Text without value 1`] = `
 <CurrencyText
+  decimalPlace={0}
   isPrefixFormatted={false}
   prefixType="display"
 >

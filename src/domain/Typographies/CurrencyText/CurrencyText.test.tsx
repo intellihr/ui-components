@@ -7,8 +7,9 @@ describe('<CurrencyText />', () => {
   it('should render the Currency Text', () => {
     const wrapper = mount(
       <CurrencyText
-        value={1000}
+        value={1000.499}
         prefix='AUD'
+        decimalPlace={2}
       />
     )
 
@@ -31,6 +32,17 @@ describe('<CurrencyText />', () => {
   it('should render the Currency Text without value', () => {
     const wrapper = mount(
       <CurrencyText />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should render the Currency Text with 0 as value', () => {
+    const wrapper = mount(
+      <CurrencyText
+        value={0}
+        prefix='AUD'
+      />
     )
 
     expect(wrapper).toMatchSnapshot()
