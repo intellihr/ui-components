@@ -4,5 +4,6 @@ declare module 'better-react-spinkit'
 declare module 'foundation-sites'
 declare module 'react-styled-flexboxgrid'
 declare module 'react-string-replace'
+declare module 'body-scroll-lock'
 declare module '@intellihr/styled-components-breakpoint'
 declare let Foundation: any

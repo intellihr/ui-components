@@ -13,6 +13,7 @@ exports[`<Modal /> should render a hidden modal 1`] = `
   overflow-y: auto;
   padding: 1rem 0;
   position: fixed;
+  -webkit-overflow-scrolling: touch;
   bottom: 0;
   left: 0;
   right: 0;
@@ -168,10 +169,11 @@ exports[`<Modal /> should render a hidden modal 1`] = `
       <Modal
         ariaHideApp={false}
         bodyOpenClassName="ReactModal__Body--open"
-        className="modal modal-size-medium c0"
+        className="modal modal-size-medium c0__content"
         closeTimeoutMS={0}
         isOpen={false}
         overlayClassName="modal-overlay"
+        overlayRef={[Function]}
         parentSelector={[Function]}
         portalClassName="modal modal-size-medium sc-bdVaJa c0"
         shouldCloseOnEsc={true}
@@ -192,7 +194,7 @@ exports[`<Modal /> should render a hidden modal 1`] = `
         <ModalPortal
           ariaHideApp={false}
           bodyOpenClassName="ReactModal__Body--open"
-          className="modal modal-size-medium c0"
+          className="modal modal-size-medium c0__content"
           closeTimeoutMS={0}
           defaultStyles={
             Object {
@@ -222,6 +224,7 @@ exports[`<Modal /> should render a hidden modal 1`] = `
           }
           isOpen={false}
           overlayClassName="modal-overlay"
+          overlayRef={[Function]}
           parentSelector={[Function]}
           portalClassName="modal modal-size-medium sc-bdVaJa c0"
           shouldCloseOnEsc={true}

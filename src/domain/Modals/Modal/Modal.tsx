@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
-import { StyledReactModal } from './style'
 import { Props, Variables } from '../../../common'
+import { StyledReactModal } from './style'
 
 interface IBaseModalProps {
   /**
@@ -31,39 +31,6 @@ class Modal extends React.PureComponent<IModalProps> {
     size: Props.Size.Medium,
     offsetZIndex: 0,
     showCloseButton: true
-  }
-
-  get classNames (): string {
-    const {
-      className,
-      size
-    } = this.props
-
-    return classNames(
-      'modal',
-     `modal-size-${size}`,
-      className
-    )
-  }
-
-  get closeButton (): JSX.Element | undefined {
-    const {
-      handleClose,
-      showCloseButton
-    } = this.props
-
-    if (handleClose && showCloseButton) {
-      return (
-        // We use button here on purpose because we don't want any intellihr style
-        <button
-          className='modal-close-button'
-          type='button'
-          onClick={handleClose}
-        >
-          <span aria-hidden='true'>&times;</span>
-        </button>
-      )
-    }
   }
 
   public render (): JSX.Element {
@@ -97,6 +64,39 @@ class Modal extends React.PureComponent<IModalProps> {
         {this.closeButton}
       </StyledReactModal>
     )
+  }
+
+  private get classNames (): string {
+    const {
+      className,
+      size
+    } = this.props
+
+    return classNames(
+      'modal',
+      `modal-size-${size}`,
+      className
+    )
+  }
+
+  private get closeButton (): JSX.Element | undefined {
+    const {
+      handleClose,
+      showCloseButton
+    } = this.props
+
+    if (handleClose && showCloseButton) {
+      return (
+        // We use button here on purpose because we don't want any intellihr style
+        <button
+          className='modal-close-button'
+          type='button'
+          onClick={handleClose}
+        >
+          <span aria-hidden='true'>&times;</span>
+        </button>
+      )
+    }
   }
 }
 
