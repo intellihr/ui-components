@@ -3,7 +3,9 @@ import {
   AvatarContainer,
   AvatarEntityInfo,
   AvatarEntityWrapper,
-  SecondaryTextWrapper
+  PrimaryTextWrapper,
+  SecondaryTextWrapper,
+  TertiaryTextWrapper
 } from './style'
 import { Avatar, IAvatarProps } from '../'
 import { Text } from '../../Typographies'
@@ -55,12 +57,11 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
     } = this.props
 
     return (
-      <Text
-        color={Variables.Color.n700}
-        isInline={isCompact}
+      <PrimaryTextWrapper
+        isCompact={isCompact}
       >
         {primaryText}
-      </Text>
+      </PrimaryTextWrapper>
     )
   }
 
@@ -84,14 +85,7 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
       <SecondaryTextWrapper
         isCompact={isCompact}
       >
-        <Text
-          color={Variables.Color.n600}
-          type={Props.TypographyType.XSmall}
-          isTruncated
-          isInline={isCompact}
-        >
-          {text}
-        </Text>
+        {text}
       </SecondaryTextWrapper>
     )
   }
@@ -107,15 +101,11 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
     }
 
     return (
-        <Text
-          color={Variables.Color.n600}
-          type={Props.TypographyType.XSmall}
-          weight='heavy'
-          isInline={false}
-          isTruncated
+        <TertiaryTextWrapper
+          isCompact={isCompact}
         >
           {tertiaryText}
-        </Text>
+        </TertiaryTextWrapper>
     )
   }
 

@@ -43,6 +43,15 @@ function styleForTypographyType (type?: Props.TypographyType): any {
   }
 }
 
+function styleForTruncatedText (): any {
+  return css`
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  `
+}
+
 export {
-  styleForTypographyType
+  styleForTypographyType,
+  styleForTruncatedText
 }

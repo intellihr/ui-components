@@ -1,9 +1,10 @@
 import React from 'react'
-import styled, { StyledComponentClass } from 'styled-components'
-import { Variables } from '../../../common'
+import styled, { css } from 'styled-components'
+import { Props, Variables } from '../../../common'
+import { styleForTypographyType, styleForTruncatedText } from '../../Typographies/services/textStyles'
 
 interface IAvatarEntityWrapper {
-  className?: string
+  className?: string,
   isHoverable?: boolean
 }
 
@@ -17,17 +18,16 @@ const AvatarEntityWrapper = styled.div`
   padding: 2px;
   color: ${Variables.Color.n700};
 
-  &:hover {
-    ${(props: IAvatarEntityWrapper) => {
+  ${(props: IAvatarEntityWrapper) => {
     if (props.isHoverable) {
-      return `
+      return css`
+        &:hover {
           color: ${Variables.Color.i400};
           cursor: pointer;
-        `
+        }
+      `
     }
-
-    return null
-  }
+  }}
 }
 `
 
@@ -42,11 +42,42 @@ const AvatarEntityInfo = styled.div`
   padding-left: 10px;
   align-self: center;
 `
+const PrimaryTextWrapper = styled.span`
+  ${styleForTypographyType(Props.TypographyType.Body)}
+  font-weight: ${Variables.FontWeight.fwRegular};
+
+  ${(props: ITextWrapper) => {
+    if (!props.isCompact) {
+      return css`
+        display: block;
+      `
+    }
+  }}
+`
 
 const SecondaryTextWrapper = styled.span`
-  line-height: 1.3;
+  ${styleForTypographyType(Props.TypographyType.XSmall)}
+  font-weight: ${Variables.FontWeight.fwRegular};
+
   margin-top: 2px;
   margin-left: ${(props: ITextWrapper) => props.isCompact ? '5px' : '0px'};
+
+  ${styleForTruncatedText()}
+`
+
+const TertiaryTextWrapper = styled.span`
+  ${styleForTypographyType(Props.TypographyType.XSmall)}
+  font-weight: ${Variables.FontWeight.fwMedium};
+
+  ${styleForTruncatedText()}
+
+  ${(props: ITextWrapper) => {
+    if (!props.isCompact) {
+      return css`
+        display: block;
+      `
+    }
+  }}
 `
 
 export {
@@ -55,5 +86,7 @@ export {
   AvatarEntityWrapper,
   AvatarContainer,
   AvatarEntityInfo,
-  SecondaryTextWrapper
+  PrimaryTextWrapper,
+  SecondaryTextWrapper,
+  TertiaryTextWrapper
 }

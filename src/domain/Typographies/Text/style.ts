@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { Props, Variables } from '../../../common'
-import { styleForTypographyType } from '../services/textStyles'
+import { styleForTypographyType, styleForTruncatedText } from '../services/textStyles'
 
 export interface ITextWrapperProps {
   color?: Variables.Color
@@ -75,9 +75,7 @@ export const TextWrapper = styled.span`
   `}
 
   ${(props: ITextWrapperProps) => props.isTruncated && css`
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    ${styleForTruncatedText()}
   `}
 
   ${(props: ITextWrapperProps) => !props.isInline && css`
