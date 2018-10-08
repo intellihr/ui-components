@@ -14,7 +14,7 @@ interface ITextWrapper {
 
 const AvatarEntityWrapper = styled.div`
   align-items: center;
-  display: inline-flex;
+  display: flex;
   padding: 2px;
   color: ${Variables.Color.n700};
 
@@ -53,6 +53,7 @@ const PrimaryTextWrapper = styled.span`
       `
     }
   }}
+  ${styleForTruncatedText()}
 `
 
 const SecondaryTextWrapper = styled.span`
