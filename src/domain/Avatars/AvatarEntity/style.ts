@@ -64,6 +64,14 @@ const SecondaryTextWrapper = styled.span`
   margin-left: ${(props: ITextWrapper) => props.isCompact ? '5px' : '0px'};
 
   ${styleForTruncatedText()}
+  
+  ${(props: ITextWrapper) => {
+  if (!props.isCompact) {
+    return css`
+        display: block;
+      `
+    }
+}}
 `
 
 const TertiaryTextWrapper = styled.span`
