@@ -1,7 +1,7 @@
 {
   "name": "@intellihr/ui-components",
   "description": "A common React components library that is used in our company",
-  "version": "1.0.5-beta.115",
+  "version": "1.0.5-beta.116",
   "main": "./dist/",
   "types": "./types/index.d.ts",
   "files": [
@@ -19,6 +19,7 @@
     "@intellihr/icons": "0.0.6",
     "@intellihr/styled-components-breakpoint": "0.0.2",
     "better-react-spinkit": "2.0.4",
+    "body-scroll-lock": "2.5.7",
     "capitalize": "1.0.0",
     "chart.js": "2.7.2",
     "classnames": "2.2.5",

@@ -2,8 +2,9 @@
 
 ```jsx
   <CurrencyText
-    value={1000}
+    value={1000.499}
     prefix='AUD'
+    decimalPlace={2}
    />
 ```
 
@@ -39,3 +40,4 @@
 ```jsx
   <CurrencyText />
 ```
+
