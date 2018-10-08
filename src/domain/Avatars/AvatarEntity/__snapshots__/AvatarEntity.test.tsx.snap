@@ -14,37 +14,21 @@ exports[`<AvatarEntity /> should render a avatar entity with lots of data 1`] = 
     />
   </styled.div>
   <styled.div>
-    <Text
-      color="#424F5C"
-      isInline={false}
-      tag="span"
-      type="body"
-    >
-      John Wick
-    </Text>
     <styled.span
       isCompact={false}
     >
-      <Text
-        color="#667380"
-        isInline={false}
-        isTruncated={true}
-        tag="span"
-        type="xsmall"
-      >
-        Guy Killer
-      </Text>
+      John Wick
     </styled.span>
-    <Text
-      color="#667380"
-      isInline={false}
-      isTruncated={true}
-      tag="span"
-      type="xsmall"
-      weight="heavy"
+    <styled.span
+      isCompact={false}
+    >
+      Guy Killer
+    </styled.span>
+    <styled.span
+      isCompact={false}
     >
       In Cinemas 2019
-    </Text>
+    </styled.span>
   </styled.div>
 </styled.div>
 `;
@@ -61,14 +45,11 @@ exports[`<AvatarEntity /> should render a basic avatar entity 1`] = `
     />
   </styled.div>
   <styled.div>
-    <Text
-      color="#424F5C"
-      isInline={false}
-      tag="span"
-      type="body"
+    <styled.span
+      isCompact={false}
     >
       John Wick
-    </Text>
+    </styled.span>
   </styled.div>
 </styled.div>
 `;
@@ -85,14 +66,11 @@ exports[`<AvatarEntity /> should render a basic compact avatar entity 1`] = `
     />
   </styled.div>
   <styled.div>
-    <Text
-      color="#424F5C"
-      isInline={true}
-      tag="span"
-      type="body"
+    <styled.span
+      isCompact={true}
     >
       John Wick
-    </Text>
+    </styled.span>
   </styled.div>
 </styled.div>
 `;
@@ -111,26 +89,15 @@ exports[`<AvatarEntity /> should render a compact avatar entity with lots of dat
     />
   </styled.div>
   <styled.div>
-    <Text
-      color="#424F5C"
-      isInline={true}
-      tag="span"
-      type="body"
-    >
-      John Wick
-    </Text>
     <styled.span
       isCompact={true}
     >
-      <Text
-        color="#667380"
-        isInline={true}
-        isTruncated={true}
-        tag="span"
-        type="xsmall"
-      >
-        (Guy Killer)
-      </Text>
+      John Wick
+    </styled.span>
+    <styled.span
+      isCompact={true}
+    >
+      (Guy Killer)
     </styled.span>
   </styled.div>
 </styled.div>
