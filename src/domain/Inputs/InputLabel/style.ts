@@ -9,7 +9,7 @@ interface IStyledInputLabelProps extends React.HTMLProps<HTMLLabelElement> {
 const StyledInputLabel = styled.label`
   color: ${Variables.Color.n600};
   font-size: ${Variables.FontSize.fzSmall}px;
-  line-height: ${Variables.LineHeight.lhSmall}px;
+  line-height: ${Variables.LineHeight.lhDisplay}px;
 
   ${(props: IStyledInputLabelProps) => props.isRequired && css`
       &::after {
