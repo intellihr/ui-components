@@ -49,7 +49,7 @@ interface IManualMenuChildrenProps {
   closeMenu: () => void
 }
 
-class ManualMenu extends React.PureComponent<IManualMenuProps, never> {
+class ManualMenu extends React.Component<IManualMenuProps, never> {
   private get parentBoundingRect (): ClientRect | DOMRect {
     const {
       parentRef
