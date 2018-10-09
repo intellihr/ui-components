@@ -46,6 +46,18 @@ describe('<OptionList />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
+  it('should render a truncated option list', () => {
+    const wrapper = shallow(
+      <OptionList
+        truncated
+        handleClick={dummyClick}
+        options={exampleOptions}
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it('should render an option list with filtered options', () => {
     const handleClick = () => console.log('hey')
 

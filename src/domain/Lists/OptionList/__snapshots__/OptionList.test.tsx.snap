@@ -62,6 +62,72 @@ exports[`<OptionList /> should render a basic option list 1`] = `
 </styled.div>
 `;
 
+exports[`<OptionList /> should render a truncated option list 1`] = `
+<styled.div>
+  <styled.button
+    hidden={false}
+    key="0"
+    onClick={[Function]}
+    selected={false}
+    truncated={true}
+  >
+    <styled.span>
+      <img
+        src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/ge.png?raw=true"
+      />
+    </styled.span>
+    Georgia Lari (GEL)
+  </styled.button>
+  <styled.button
+    hidden={false}
+    key="1"
+    onClick={[Function]}
+    selected={false}
+    truncated={true}
+  >
+    <styled.span>
+      <img
+        src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/my.png?raw=true"
+      />
+    </styled.span>
+    Malaysia Ringgit (MYR)
+  </styled.button>
+  <styled.button
+    hidden={false}
+    key="2"
+    onClick={[Function]}
+    selected={false}
+    truncated={true}
+  >
+    <styled.span>
+      <img
+        src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/nz.png?raw=true"
+      />
+    </styled.span>
+    New Zealand Dollar (NZD)
+  </styled.button>
+  <styled.button
+    hidden={false}
+    key="3"
+    onClick={[Function]}
+    selected={false}
+    truncated={true}
+  >
+    <styled.span>
+      <img
+        src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/au.png?raw=true"
+      />
+    </styled.span>
+    Australian Dollar (AUD)
+    <styled.span>
+      <FontAwesomeIcon
+        type="star"
+      />
+    </styled.span>
+  </styled.button>
+</styled.div>
+`;
+
 exports[`<OptionList /> should render an option list with filtered options 1`] = `
 <styled.div>
   <styled.button

@@ -39,7 +39,8 @@ interface IOptionListProps {
   /** Currently selected value */
   selectedValue?: OptionValue
   /** Maximum height of the list */
-  maxHeight?: number
+  maxHeight?: number,
+  truncated?: boolean
 }
 
 class OptionList extends React.PureComponent<IOptionListProps> {
@@ -69,7 +70,8 @@ class OptionList extends React.PureComponent<IOptionListProps> {
     const {
       options,
       query,
-      selectedValue
+      selectedValue,
+      truncated
     } = this.props
 
     return map(options, (option, idx) => {
@@ -86,6 +88,7 @@ class OptionList extends React.PureComponent<IOptionListProps> {
         <OptionListButton
           key={idx}
           onClick={callback}
+          truncated={truncated}
           selected={value === selectedValue}
           hidden={this.hideOption(option.text, query)}
         >

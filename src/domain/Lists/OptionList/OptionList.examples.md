@@ -49,6 +49,34 @@ initialState = {
 />
 ```
 
+#### Truncated Option List
+
+```jsx
+const { FontAwesomeIcon } = require('@Domain/Icons');
+initialState = {
+  selectedOption: 1
+};
+
+<OptionList
+  truncated
+  selectedValue={state.selectedOption}
+  handleClick={(option) => {
+    setState({selectedOption: option.value})
+  }}
+  options={[
+    {
+      value: 1,
+      text: 'This is a very long option and should truncate on small screens',
+    },
+    {
+      value: 2,
+      text: 'This one is also very long and should also truncate on small screens'
+    }
+  ]}
+/>
+```
+
+
 #### Filtered Option List
 
 ```jsx

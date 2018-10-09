@@ -8,6 +8,7 @@ interface IOptionListWrapper {
 interface IOptionListButton {
   selected?: boolean
   hidden: boolean
+  truncated?: boolean
 }
 
 const OptionListWrapper = styled.div`
@@ -45,20 +46,22 @@ const OptionListButton = styled.button`
     background-color: ${Variables.Color.n200};
   }
 
-  ${(props: IOptionListButton) => {
-    if (props.selected) {
-      return css`
-        background-color: ${Variables.Color.i100};
-        color: ${Variables.Color.i600};
-        
-        &:hover,
-        &:focus {
-          background-color: ${Variables.Color.i100};
-        }
-      `
+  ${(props: IOptionListButton) => props.selected && css `
+    background-color: ${Variables.Color.i100};
+    color: ${Variables.Color.i600};
+    
+    &:hover,
+    &:focus {
+      background-color: ${Variables.Color.i100};
     }
-  }}
-
+  `}
+  
+  ${(props: IOptionListButton) => props.truncated && css`
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  `}
+  
   ${(props: IOptionListButton) => props.hidden && css`display: none;`}
 `
 
