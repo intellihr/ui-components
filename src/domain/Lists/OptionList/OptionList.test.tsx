@@ -49,7 +49,7 @@ describe('<OptionList />', () => {
   it('should render a truncated option list', () => {
     const wrapper = shallow(
       <OptionList
-        truncated
+        truncatedText
         handleClick={dummyClick}
         options={exampleOptions}
       />

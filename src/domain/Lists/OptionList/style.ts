@@ -8,7 +8,7 @@ interface IOptionListWrapper {
 interface IOptionListButton {
   selected?: boolean
   hidden: boolean
-  truncated?: boolean
+  truncatedText?: boolean
 }
 
 const OptionListWrapper = styled.div`
@@ -56,7 +56,7 @@ const OptionListButton = styled.button`
     }
   `}
   
-  ${(props: IOptionListButton) => props.truncated && css`
+  ${(props: IOptionListButton) => props.truncatedText && css`
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

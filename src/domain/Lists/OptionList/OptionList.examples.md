@@ -58,7 +58,7 @@ initialState = {
 };
 
 <OptionList
-  truncated
+  truncatedText
   selectedValue={state.selectedOption}
   handleClick={(option) => {
     setState({selectedOption: option.value})

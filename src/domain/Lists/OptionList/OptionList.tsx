@@ -42,12 +42,12 @@ interface IOptionListProps {
   /** Maximum height of the list */
   maxHeight?: number,
   /** whether the text in the options should truncate on long screens or not */
-  truncated?: boolean
+  truncatedText?: boolean
 }
 
 class OptionList extends React.PureComponent<IOptionListProps> {
   public static defaultProps: Partial<IOptionListProps> = {
-    truncated: false
+    truncatedText: false
   }
 
   public hiddenOptions = {
@@ -77,7 +77,7 @@ class OptionList extends React.PureComponent<IOptionListProps> {
       options,
       query,
       selectedValue,
-      truncated
+      truncatedText
     } = this.props
 
     return map(options, (option, idx) => {
@@ -94,7 +94,7 @@ class OptionList extends React.PureComponent<IOptionListProps> {
         <OptionListButton
           key={idx}
           onClick={callback}
-          truncated={truncated}
+          truncatedText={truncatedText}
           selected={value === selectedValue}
           hidden={this.hideOption(option.text, query)}
         >
