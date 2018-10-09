@@ -34,14 +34,6 @@ const DefaultDropdownButton = styled.button`
   }
 `
 
-const StyledToggleContainer = styled.span`
-  display: inline-block;
-
-  > * {
-    margin: 0;
-  }
-`
-
 const StyledContentWrapper = styled.div`
   background-color: ${Variables.Color.n100};
   border-radius: 4px;
@@ -239,7 +231,6 @@ const StyledSection = styled.li`
 
 export {
   DefaultDropdownButton,
-  StyledToggleContainer,
   StyledContentWrapper,
   StyledSection,
   StyledDropdownSectionList,
