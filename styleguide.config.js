@@ -171,6 +171,12 @@ module.exports = {
           ]
         },
         {
+          name: 'Popovers',
+          components: [
+            'src/domain/Popovers/Popover/Popover'
+          ]
+        },
+        {
           name: 'Reports',
           components: [
             'src/domain/Reports/ReportHeader/ReportHeader',
