@@ -21,7 +21,8 @@ class FilteredOptionList extends React.PureComponent<IFilteredOptionListProps, I
       textInputProps,
       handleClick,
       selectedValue,
-      maxHeight
+      maxHeight,
+      truncatedText
     } = this.props
 
     return (
@@ -33,6 +34,7 @@ class FilteredOptionList extends React.PureComponent<IFilteredOptionListProps, I
           handleChange={this.updateQueryValue}
         />
         <OptionList
+          truncatedText={truncatedText}
           selectedValue={selectedValue}
           handleClick={handleClick}
           options={options}

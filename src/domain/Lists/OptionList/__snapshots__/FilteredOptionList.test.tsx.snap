@@ -50,6 +50,7 @@ exports[`<FilteredOptionList /> should render a basic option list 1`] = `
       ]
     }
     query=""
+    truncatedText={false}
   />
 </React.Fragment>
 `;

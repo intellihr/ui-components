@@ -9,6 +9,7 @@ import {
 } from './style'
 import { Text } from '../../Typographies/Text'
 import { Props } from '../../../common'
+import { IListRow } from '../SmartList/ListRow/ListRow'
 
 type OptionClickCallback = (option: IOptionProps) => void
 
@@ -39,10 +40,16 @@ interface IOptionListProps {
   /** Currently selected value */
   selectedValue?: OptionValue
   /** Maximum height of the list */
-  maxHeight?: number
+  maxHeight?: number,
+  /** whether the text in the options should truncate */
+  truncatedText?: boolean
 }
 
 class OptionList extends React.PureComponent<IOptionListProps> {
+  public static defaultProps: Partial<IOptionListProps> = {
+    truncatedText: false
+  }
+
   public hiddenOptions = {
     query: '',
     hidden: 0
@@ -69,7 +76,8 @@ class OptionList extends React.PureComponent<IOptionListProps> {
     const {
       options,
       query,
-      selectedValue
+      selectedValue,
+      truncatedText
     } = this.props
 
     return map(options, (option, idx) => {
@@ -86,6 +94,7 @@ class OptionList extends React.PureComponent<IOptionListProps> {
         <OptionListButton
           key={idx}
           onClick={callback}
+          truncatedText={truncatedText}
           selected={value === selectedValue}
           hidden={this.hideOption(option.text, query)}
         >
