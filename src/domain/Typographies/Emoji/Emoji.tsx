@@ -15,14 +15,6 @@ class Emoji extends React.PureComponent<IEmojiProps> {
     type: Props.TypographyType.Body
   }
 
-  get fontSize (): number {
-    const {
-      type
-    } = this.props
-
-    return Variables.fontSizeMap[type]
-  }
-
   public render (): JSX.Element {
     const {
       emoji,
@@ -36,7 +28,7 @@ class Emoji extends React.PureComponent<IEmojiProps> {
         <EmojiComponent
           emoji={emoji}
           set='twitter'
-          size={this.fontSize!}
+          size={Variables.fontSizeMap[type]}
         />
       </EmojiWrapper>
     )
