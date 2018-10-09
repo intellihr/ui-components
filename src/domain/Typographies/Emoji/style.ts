@@ -4,20 +4,17 @@ import { styleForTypographyType } from '../services/textStyles'
 
 export interface IEmojiWrapperProps {
   textType?: Props.TypographyType
-  isFlag: boolean
 }
 
 const EmojiWrapper = styled.span`
   ${(props: IEmojiWrapperProps) => styleForTypographyType(props.textType)}
   
-  ${(props: IEmojiWrapperProps) => props.isFlag && css`
-
      > span {
-       display: inline-flex;
+       line-height: 14px;
        vertical-align: middle;
-       margin-right: 0.5rem;
+       margin-top: -0.13em;
+       display: inline-block;
      }  
-  `}
 `
 
 export {

@@ -1,6 +1,6 @@
 import React from 'react'
-import { Props, Variables } from '../../../common'
 import { Emoji as EmojiComponent } from 'emoji-mart'
+import { Props, Variables } from '../../../common'
 import { EmojiWrapper } from './style'
 
 interface IEmojiProps {
@@ -8,25 +8,17 @@ interface IEmojiProps {
   emoji: string
   /** Specify the type of text to use */
   type: Props.TypographyType
-  /** If true, displays with the flag format */
-  isFlag: boolean
 }
 
 class Emoji extends React.PureComponent<IEmojiProps> {
   public static defaultProps = {
-    type: Props.TypographyType.Body,
-    isFlag: false
+    type: Props.TypographyType.Body
   }
 
   get fontSize (): number {
     const {
-      type,
-      isFlag
+      type
     } = this.props
-
-    if (isFlag) {
-      return Variables.FontSize.fzDisplay
-    }
 
     return Variables.fontSizeMap[type]
   }
@@ -34,14 +26,12 @@ class Emoji extends React.PureComponent<IEmojiProps> {
   public render (): JSX.Element {
     const {
       emoji,
-      type,
-      isFlag
+      type
     } = this.props
 
     return (
       <EmojiWrapper
         textType={type}
-        isFlag={isFlag}
       >
         <EmojiComponent
           emoji={emoji}

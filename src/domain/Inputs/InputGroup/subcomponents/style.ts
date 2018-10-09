@@ -63,6 +63,11 @@ const InputGroupButton = styled.button`
   .left-component {
     margin-right: 0.5rem;
     flex: 1 0 auto;
+    
+    .emoji-mart-emoji {
+      height: 20px;
+      overflow: hidden;
+    }
   }
   
   .right-component {

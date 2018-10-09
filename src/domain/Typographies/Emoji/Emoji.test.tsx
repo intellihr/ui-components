@@ -14,15 +14,4 @@ describe('<Emoji />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
-
-  it('should render the Emoji with flag format', () => {
-    const wrapper = mount(
-      <Emoji
-        emoji='flag-au'
-        isFlag
-      />
-    )
-
-    expect(wrapper).toMatchSnapshot()
-  })
 })

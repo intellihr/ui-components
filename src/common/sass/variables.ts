@@ -96,6 +96,15 @@ namespace Variables {
     fzDisplayLarge =    36
   }
 
+  export const fontSizeMap: { [i in Props.TypographyType]: FontSize } = {
+    [Props.TypographyType.XSmall]:        14,
+    [Props.TypographyType.Small]:         18,
+    [Props.TypographyType.Body]:          20,
+    [Props.TypographyType.Heading]:       22,
+    [Props.TypographyType.Display]:       28,
+    [Props.TypographyType.DisplayLarge]:  40
+  }
+
   export enum FontWeight {
     fwRegular =         400,
     fwMedium =          600
@@ -122,15 +131,6 @@ namespace Variables {
     zIndexDropdownMenu =    3000,
     zIndexToaster =         4000,
     zIndexAbsoluteTop =     9999
-  }
-
-  export const fontSizeMap: { [i in Props.TypographyType]: FontSize } = {
-    [Props.TypographyType.Body]: FontSize.fzBody,
-    [Props.TypographyType.Display]: FontSize.fzDisplay,
-    [Props.TypographyType.DisplayLarge]: FontSize.fzDisplayLarge,
-    [Props.TypographyType.Heading]: FontSize.fzHeading,
-    [Props.TypographyType.Small]: FontSize.fzSmall,
-    [Props.TypographyType.XSmall]: FontSize.fzXSmall
   }
 }
 
