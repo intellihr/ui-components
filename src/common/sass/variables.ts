@@ -1,3 +1,5 @@
+import {Props} from '..'
+
 /**
  * The following variables are the core design variables for the entire design system
  *
@@ -85,28 +87,28 @@ namespace Variables {
     y600 = '#7F7012'
   }
 
-export enum FontSize {
-  fzXSmall =          12,
-  fzSmall =           14,
-  fzBody =            16,
-  fzHeading =         18,
-  fzDisplay =         24,
-  fzDisplayLarge =    36
-}
+  export enum FontSize {
+    fzXSmall =          12,
+    fzSmall =           14,
+    fzBody =            16,
+    fzHeading =         18,
+    fzDisplay =         24,
+    fzDisplayLarge =    36
+  }
 
-export enum FontWeight {
-  fwRegular =         400,
-  fwMedium =          600
-}
+  export enum FontWeight {
+    fwRegular =         400,
+    fwMedium =          600
+  }
 
-export enum LineHeight {
-  lhXSmall =          18,
-  lhSmall =           20,
-  lhBody =            24,
-  lhHeading =         24,
-  lhDisplay =         28,
-  lhDisplayLarge =    40
-}
+  export enum LineHeight {
+    lhXSmall =          18,
+    lhSmall =           20,
+    lhBody =            24,
+    lhHeading =         24,
+    lhDisplay =         28,
+    lhDisplayLarge =    40
+  }
 
   export enum Style {
     borderRadius = 4
@@ -120,6 +122,15 @@ export enum LineHeight {
     zIndexDropdownMenu =    3000,
     zIndexToaster =         4000,
     zIndexAbsoluteTop =     9999
+  }
+
+  export const fontSizeMap: { [i in Props.TypographyType]: FontSize } = {
+    [Props.TypographyType.Body]: FontSize.fzBody,
+    [Props.TypographyType.Display]: FontSize.fzDisplay,
+    [Props.TypographyType.DisplayLarge]: FontSize.fzDisplayLarge,
+    [Props.TypographyType.Heading]: FontSize.fzHeading,
+    [Props.TypographyType.Small]: FontSize.fzSmall,
+    [Props.TypographyType.XSmall]: FontSize.fzXSmall
   }
 }
 
