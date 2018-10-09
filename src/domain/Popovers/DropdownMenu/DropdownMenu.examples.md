@@ -48,7 +48,15 @@
 
 ```jsx
 <DropdownMenu
-  toggleComponent={<Button>Colored Dropdown</Button>}
+  toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+    <Button
+      onClick={toggleMenu}
+      innerRef={toggleComponentRef}
+      {...ariaProps}
+    >
+      Colored Dropdown
+    </Button>
+  }
   sections={[
     {
       text: 'Alert',
@@ -99,7 +107,15 @@ hiding the dropdown.
 ```jsx
 <React.Fragment>
   <DropdownMenu
-    toggleComponent={<Button>Anchored bottom left</Button>}
+    toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+      <Button
+        onClick={toggleMenu}
+        innerRef={toggleComponentRef}
+        {...ariaProps}
+      >
+        Anchored bottom left
+      </Button>
+    }
     sections={[
       {
         text: 'Item 1'
@@ -118,7 +134,15 @@ hiding the dropdown.
     }}
   />
   <DropdownMenu
-    toggleComponent={<Button>Anchored bottom right</Button>}
+    toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+      <Button
+        onClick={toggleMenu}
+        innerRef={toggleComponentRef}
+        {...ariaProps}
+      >
+        Anchored bottom right
+      </Button>
+    }
     sections={[
       {
         text: 'Item 1'
@@ -137,7 +161,15 @@ hiding the dropdown.
     }}
   />
   <DropdownMenu
-    toggleComponent={<Button>Drop upwards, top left</Button>}
+    toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+      <Button
+        onClick={toggleMenu}
+        innerRef={toggleComponentRef}
+        {...ariaProps}
+      >
+        Drop upwards, top left
+      </Button>
+    }
     sections={[
       {
         text: 'Item 1'
@@ -156,7 +188,15 @@ hiding the dropdown.
     }}
   />
   <DropdownMenu
-    toggleComponent={<Button>Anchored top right, open to right</Button>}
+    toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+      <Button
+        onClick={toggleMenu}
+        innerRef={toggleComponentRef}
+        {...ariaProps}
+      >
+        Anchored top right, open to right
+      </Button>
+    }
     sections={[
       {
         text: 'Item 1'
@@ -175,7 +215,15 @@ hiding the dropdown.
     }}
   />
   <DropdownMenu
-    toggleComponent={<Button>Anchored bottom left, open to left upwards</Button>}
+    toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+      <Button
+        onClick={toggleMenu}
+        innerRef={toggleComponentRef}
+        {...ariaProps}
+      >
+        Anchored bottom left, open to left upwards
+      </Button>
+    }
     sections={[
       {
         text: 'Item 1'
@@ -200,7 +248,6 @@ hiding the dropdown.
 
 ```jsx
 <DropdownMenu
-   toggleComponent={<Button>Custom</Button>}
    sections={[
      {
        onClick: () => alert('Test'),
@@ -227,7 +274,6 @@ hiding the dropdown.
 const { FontAwesomeIcon } = require('@Domain/Icons');
 
 <DropdownMenu
-   toggleComponent={<Button>Icons</Button>}
    sections={[
      {
        leftComponent: <FontAwesomeIcon type='hand-o-right' />,
@@ -245,8 +291,13 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 const { FontAwesomeIcon, IntelliIcon } = require('@Domain/Icons');
 
 <DropdownMenu
-   toggleComponent={
-     <div style={{ cursor: 'pointer' }} >
+   toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+     <div
+       onClick={toggleMenu}
+       ref={toggleComponentRef}
+       {...ariaProps}
+       style={{ cursor: 'pointer' }}
+     >
        <Avatar
          initials='JD'
          size='medium'
@@ -328,7 +379,15 @@ class ThingList extends React.PureComponent {
 }
 
 <DropdownMenu
-  toggleComponent={<Button>{state.selectedOption.label}</Button>}
+  toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+    <Button
+      onClick={toggleMenu}
+      innerRef={toggleComponentRef}
+      {...ariaProps}
+    >
+      {state.selectedOption.label}
+    </Button>
+  }
 >
   {({closeMenu}) => 
     <>

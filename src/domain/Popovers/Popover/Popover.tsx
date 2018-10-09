@@ -127,6 +127,14 @@ class Popover extends React.Component<IPopoverProps, never> {
       return new DOMRect()
     }
 
+    if (!parentRef.current.getBoundingClientRect) {
+      throw new Error(`
+        Unable to getBoundingClientRect for the ref passed to Popover.
+        This means that your ref was not for a dom node but instead for a react
+        element. Popover is only able to anchor correctly to dom nodes.
+      `)
+    }
+
     return parentRef.current.getBoundingClientRect()
   }
 

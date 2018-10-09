@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, RefObject } from 'react'
 import classNames from 'classnames'
 
 const style = require('./style.scss')
@@ -21,6 +21,8 @@ type ButtonSize = 'small' | 'medium' | 'large'
 interface IBaseButtonProps {
   /** Unique id of the button */
   id?: string
+  /** Ref to the base element of the button */
+  innerRef?: RefObject<any>
   /** Size of the button */
   size?: ButtonSize
   /** If the button should be 100% width */

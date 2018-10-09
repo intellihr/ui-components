@@ -1,4 +1,5 @@
 import React, { RefObject } from 'react'
+import FocusTrap from 'focus-trap-react'
 import { map } from 'lodash'
 import moment, { Moment } from 'moment'
 import uuid from 'uuid'
@@ -6,12 +7,11 @@ import { FontAwesomeIcon } from '../../Icons'
 import {
   DefaultDropdownButton,
   StyledContentWrapper,
-  StyledDropdownCustomContent, StyledDropdownSectionList,
-  StyledToggleContainer
+  StyledDropdownCustomContent,
+  StyledDropdownSectionList
 } from './subcomponents/style'
 import { ISectionProps, Section } from './subcomponents/Section'
 import { Popover, IPopoverPosition } from '../../Popovers'
-import FocusTrap from 'focus-trap-react'
 
 interface IDropdownMenuState {
   isDropdownOpen: boolean
@@ -30,12 +30,25 @@ interface IDropdownMenuProps {
   sections?: ISectionProps[],
   /**
    * The parent component that opens the dropdown and positions it on the page.
-   * This component will be wrapped in a span which will determine the onclick properties.
-   * Note: all margins will be removed.
+   * The callback is given a toggle menu prop which can be used to toggle the menu as needed.
    */
-  toggleComponent?: JSX.Element
+  toggleComponent?: (props: IDropdownMenuToggleComponentProps) => React.ReactElement<any>,
   /** Children to display as custom content instead of sections */
   children?: (props: IDropdownMenuChildrenProps) => React.ReactElement<any>
+}
+
+interface IDropdownMenuToggleComponentProps {
+  /** Callback to toggle opening/closing menu */
+  toggleMenu: () => void,
+  /** Ref for the toggle component, to anchor on the page */
+  toggleComponentRef: RefObject<any>,
+  /** Aria props for opening the menu */
+  ariaProps: {
+    role: 'button',
+    'aria-expanded': boolean,
+    'aria-owns'?: string,
+    'aria-haspopup': boolean
+  }
 }
 
 interface IDropdownMenuChildrenProps {
@@ -43,12 +56,17 @@ interface IDropdownMenuChildrenProps {
   closeMenu: () => void
 }
 
-class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenuState> {
+class DropdownMenu extends React.Component<IDropdownMenuProps, IDropdownMenuState> {
   public static Section = Section
   public static DefaultDropdownButton = DefaultDropdownButton
-  public static defaultProps = {
-    toggleComponent: (
-      <DefaultDropdownButton>
+
+  public static defaultProps: Partial<IDropdownMenuProps> = {
+    toggleComponent: ({ toggleMenu, toggleComponentRef, ariaProps }) => (
+      <DefaultDropdownButton
+        innerRef={toggleComponentRef}
+        onClick={toggleMenu}
+        {...ariaProps}
+      >
         <FontAwesomeIcon type='ellipsis-v' />
       </DefaultDropdownButton>
     )
@@ -58,7 +76,7 @@ class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenu
     isDropdownOpen: false
   }
 
-  private toggleComponentRef: RefObject<HTMLSpanElement> = React.createRef()
+  private toggleComponentRef: RefObject<any> = React.createRef()
 
   public render (): JSX.Element {
     return (
@@ -103,20 +121,16 @@ class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenu
     } = this.state
     const { toggleComponent } = this.props
 
-    return (
-      <span>
-        <StyledToggleContainer
-          onClick={this.openMenu}
-          innerRef={this.toggleComponentRef}
-          role='button'
-          aria-expanded={isDropdownOpen}
-          aria-owns={dropdownId}
-          aria-haspopup
-        >
-          {toggleComponent}
-        </StyledToggleContainer>
-      </span>
-    )
+    return toggleComponent && toggleComponent({
+      toggleMenu: this.openMenu,
+      toggleComponentRef: this.toggleComponentRef,
+      ariaProps: {
+        role: 'button',
+        'aria-expanded': isDropdownOpen,
+        'aria-owns': dropdownId,
+        'aria-haspopup': true
+      }
+    })
   }
 
   private get dropdownPopover (): JSX.Element | null {
