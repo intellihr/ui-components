@@ -4,7 +4,7 @@ exports[`<InputLabel /> should render a label 1`] = `
 .c0 {
   color: #667380;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 28px;
 }
 
 <InputLabel
@@ -26,7 +26,7 @@ exports[`<InputLabel /> should render a label with a 'for' attribute 1`] = `
 .c0 {
   color: #667380;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 28px;
 }
 
 <InputLabel
@@ -51,7 +51,7 @@ exports[`<InputLabel /> should render a label with a required marker 1`] = `
 .c0 {
   color: #667380;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 28px;
 }
 
 .c0::after {

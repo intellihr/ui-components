@@ -92,6 +92,16 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
     isHoverable
   />
 ```
+#### Very long name and position title
+
+```jsx
+  <AvatarEntity
+    initials='JW'
+    statusDot='primary'
+    primaryText='I am having a very very long name and i donot want the style to break because of my very very long name'
+    secondaryText='I am having a very very long position title and i donot want the style to break because of my very very long name'
+  />
+```
 
 #### Legacy
 
