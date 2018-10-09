@@ -1,84 +1,124 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DropdownMenu /> Render a dropdown using custom content should match the snapshot 1`] = `
-<React.Fragment>
-  <span>
-    <styled.span
-      aria-expanded={false}
-      aria-haspopup={true}
-      innerRef={
-        Object {
-          "current": null,
-        }
+<Fragment>
+  <styled.button
+    aria-expanded={false}
+    aria-haspopup={true}
+    innerRef={
+      Object {
+        "current": null,
       }
-      onClick={[Function]}
-      role="button"
-    >
-      <styled.button>
-        <FontAwesomeIcon
-          type="ellipsis-v"
-        />
-      </styled.button>
-    </styled.span>
-  </span>
-  <ManualMenu
-    dropdownAnchorPosition="auto"
+    }
+    onClick={[Function]}
+    role="button"
+  >
+    <FontAwesomeIcon
+      type="ellipsis-v"
+    />
+  </styled.button>
+  <Popover
     id=""
-    isDropdownOpen={false}
-    onDropdownClose={[Function]}
+    isOpen={false}
     parentAnchorPosition="auto"
     parentRef={
       Object {
         "current": null,
       }
     }
-  />
-</React.Fragment>
+    popoverAnchorPosition="auto"
+  >
+    <FocusTrap
+      _createFocusTrap={[Function]}
+      active={false}
+      focusTrapOptions={
+        Object {
+          "clickOutsideDeactivates": true,
+          "initialFocus": <body />,
+          "onDeactivate": [Function],
+          "returnFocusOnDeactivate": false,
+        }
+      }
+      paused={false}
+      tag="span"
+    >
+      <styled.div
+        role="menu"
+      >
+        <styled.div>
+          I am custom dropdown content!!
+        </styled.div>
+      </styled.div>
+    </FocusTrap>
+    <Component />
+  </Popover>
+</Fragment>
 `;
 
 exports[`<DropdownMenu /> Simple dropdown behaviour should match the snapshot 1`] = `
-<React.Fragment>
-  <span>
-    <styled.span
-      aria-expanded={false}
-      aria-haspopup={true}
-      innerRef={
-        Object {
-          "current": null,
-        }
+<Fragment>
+  <styled.button
+    aria-expanded={false}
+    aria-haspopup={true}
+    innerRef={
+      Object {
+        "current": null,
       }
-      onClick={[Function]}
-      role="button"
-    >
-      <styled.button>
-        <FontAwesomeIcon
-          type="ellipsis-v"
-        />
-      </styled.button>
-    </styled.span>
-  </span>
-  <ManualMenu
-    dropdownAnchorPosition="auto"
+    }
+    onClick={[Function]}
+    role="button"
+  >
+    <FontAwesomeIcon
+      type="ellipsis-v"
+    />
+  </styled.button>
+  <Popover
     id=""
-    isDropdownOpen={false}
-    onDropdownClose={[Function]}
+    isOpen={false}
     parentAnchorPosition="auto"
     parentRef={
       Object {
         "current": null,
       }
     }
-    sections={
-      Array [
+    popoverAnchorPosition="auto"
+  >
+    <FocusTrap
+      _createFocusTrap={[Function]}
+      active={false}
+      focusTrapOptions={
         Object {
-          "text": "Item 1",
-        },
-        Object {
-          "href": "https://www.intellihr.com.au",
-          "text": "Item 2",
-        },
-      ]
-    }
-  />
-</React.Fragment>
+          "clickOutsideDeactivates": true,
+          "initialFocus": <body />,
+          "onDeactivate": [Function],
+          "returnFocusOnDeactivate": false,
+        }
+      }
+      paused={false}
+      tag="span"
+    >
+      <styled.div
+        role="menu"
+      >
+        <styled.ul>
+          <Section
+            __closeMenuCallback={[Function]}
+            closeDropdownBehaviour="whenActionProvided"
+            key="0"
+            sectionType="default"
+            text="Item 1"
+          />
+          <Section
+            __closeMenuCallback={[Function]}
+            closeDropdownBehaviour="whenActionProvided"
+            href="https://www.intellihr.com.au"
+            key="1"
+            sectionType="default"
+            text="Item 2"
+          />
+        </styled.ul>
+      </styled.div>
+    </FocusTrap>
+  </Popover>
+</Fragment>
 `;

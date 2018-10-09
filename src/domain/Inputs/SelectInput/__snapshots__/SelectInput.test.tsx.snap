@@ -192,7 +192,9 @@ exports[`<SelectInput /> should render a select box with promise options 1`] = `
   resetValue=""
   searchPromptText="Type to search"
   value=""
-/>
+>
+  <Component />
+</Async>
 `;
 
 exports[`<SelectInput /> should render with async options 1`] = `
@@ -218,5 +220,7 @@ exports[`<SelectInput /> should render with async options 1`] = `
   resetValue=""
   searchPromptText="Type to search"
   value=""
-/>
+>
+  <Component />
+</Async>
 `;

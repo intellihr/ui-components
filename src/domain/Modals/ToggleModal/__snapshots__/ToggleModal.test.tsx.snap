@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ToggleModal /> should render a modal with a button 1`] = `
-<React.Fragment>
+<Fragment>
   <Button
     hasLegacyMargins={false}
     iconAlignment="left"
@@ -19,5 +19,5 @@ exports[`<ToggleModal /> should render a modal with a button 1`] = `
   >
     Hello this is a Modal
   </Modal>
-</React.Fragment>
+</Fragment>
 `;
