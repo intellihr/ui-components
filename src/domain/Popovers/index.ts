@@ -1,2 +1,7 @@
-export { DropdownMenu, IDropdownMenuProps, IDropdownMenuSectionProps } from './DropdownMenu'
+export {
+  DropdownMenu,
+  IDropdownMenuProps,
+  IDropdownMenuSectionProps,
+  IDropdownMenuToggleComponentProps
+} from './DropdownMenu'
 export { Popover, IPopoverPosition } from './Popover'

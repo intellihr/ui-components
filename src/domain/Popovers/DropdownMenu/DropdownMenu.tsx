@@ -216,5 +216,6 @@ class DropdownMenu extends React.Component<IDropdownMenuProps, IDropdownMenuStat
 
 export {
   IDropdownMenuProps,
+  IDropdownMenuToggleComponentProps,
   DropdownMenu
 }
