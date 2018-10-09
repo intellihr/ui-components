@@ -11,7 +11,7 @@ import {
   StyledToggleContainer
 } from './subcomponents/style'
 import { ISectionProps, Section } from './subcomponents/Section'
-import { Popover } from '../../Popovers/Popover'
+import { Popover } from '../../Popovers'
 import FocusTrap from 'focus-trap-react'
 
 interface IDropdownMenuState {

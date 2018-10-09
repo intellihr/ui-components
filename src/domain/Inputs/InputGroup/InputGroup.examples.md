@@ -3,7 +3,7 @@
 ```jsx
 const { NumberInput } = require('../NumberInput');
 const { TextInput } = require('../TextInput');
-const { DropdownMenu } = require('../../Menus/DropdownMenu');
+const { DropdownMenu } = require('../../Popovers/DropdownMenu');
 
 <InputGroup>
   <NumberInput
@@ -22,7 +22,7 @@ const { DropdownMenu } = require('../../Menus/DropdownMenu');
 ```jsx
 const { NumberInput } = require('../NumberInput');
 const { TextInput } = require('../TextInput');
-const { DropdownMenu } = require('../../Menus/DropdownMenu');
+const { DropdownMenu } = require('../../Popovers/DropdownMenu');
 
 <InputGroup>
   <NumberInput
@@ -53,7 +53,7 @@ const { DropdownMenu } = require('../../Menus/DropdownMenu');
 ```jsx
 const { FilteredOptionList } = require('../../Lists/OptionList');
 const { TextInput } = require('../TextInput');
-const { DropdownMenu } = require('../../Menus/DropdownMenu');
+const { DropdownMenu } = require('../../Popovers/DropdownMenu');
 const { FontAwesomeIcon } = require('../../Icons');
 
 const { map, filter, toLower } = require('lodash');
@@ -137,7 +137,7 @@ initialState = {
 ```jsx
 const { NumberInput } = require('../NumberInput');
 const { TextInput } = require('../TextInput');
-const { DropdownMenu } = require('../../Menus/DropdownMenu');
+const { DropdownMenu } = require('../../Popovers/DropdownMenu');
 const { FontAwesomeIcon } = require('../../Icons');
 
 const { map, filter, toLower } = require('lodash');
@@ -225,7 +225,7 @@ class ThingList extends React.PureComponent {
 ```jsx
 const { NumberInput } = require('../NumberInput');
 const { TextInput } = require('../TextInput');
-const { DropdownMenu } = require('../../Menus/DropdownMenu');
+const { DropdownMenu } = require('../../Popovers/DropdownMenu');
 const { FontAwesomeIcon } = require('../../Icons');
 
 const { map, filter, toLower } = require('lodash');

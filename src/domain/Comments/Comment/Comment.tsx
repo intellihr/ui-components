@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import {
   DropdownMenu,
   IDropdownMenuSectionProps
-} from '../../Menus'
+} from '../../Popovers'
 import {
   StyledComment,
   CommentActionMenuToggleButton

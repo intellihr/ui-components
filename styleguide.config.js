@@ -153,7 +153,6 @@ module.exports = {
         {
           name: 'Menus',
           components: [
-            'src/domain/Menus/DropdownMenu/DropdownMenu',
             'src/domain/Menus/Menu/Menu'
           ]
         },
@@ -173,6 +172,7 @@ module.exports = {
         {
           name: 'Popovers',
           components: [
+            'src/domain/Popovers/DropdownMenu/DropdownMenu',
             'src/domain/Popovers/Popover/Popover'
           ]
         },
