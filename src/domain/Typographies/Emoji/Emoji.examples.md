@@ -35,7 +35,7 @@
    <div>
      <Emoji
        emoji='flag-au'
-       isFlag={true}
+       isFlag
      />
      <Text type='body'>
        Australia Flag

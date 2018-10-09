@@ -16,8 +16,7 @@ const EmojiWrapper = styled.span`
        display: inline-flex;
        vertical-align: middle;
        margin-right: 0.5rem;
-     }
-     
+     }  
   `}
 `
 
