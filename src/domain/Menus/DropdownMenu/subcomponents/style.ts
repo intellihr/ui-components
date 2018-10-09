@@ -42,26 +42,6 @@ const StyledToggleContainer = styled.span`
   }
 `
 
-interface IStyledDropdownMenuProps {
-  transformOrigin: Props.IPositionXY
-}
-
-const StyledDropdownMenu = styled.span`
-  margin: 2px;
-  position: absolute;
-  width: min-content;
-  z-index: ${Variables.ZIndex.zIndexDropdownMenu};
-
-  transform: scale(0.1);
-  transform-origin: ${(props: IStyledDropdownMenuProps) => props.transformOrigin.xPos + ' ' + props.transformOrigin.yPos};
-  transition: transform 150ms cubic-bezier(0.5, 1.8, 0.9, 0.8);
-
-  &.entering,
-  &.entered {
-    transform: scale(1);
-  }
-`
-
 const StyledContentWrapper = styled.div`
   background-color: ${Variables.Color.n100};
   border-radius: 4px;
@@ -260,7 +240,6 @@ const StyledSection = styled.li`
 export {
   DefaultDropdownButton,
   StyledToggleContainer,
-  StyledDropdownMenu,
   StyledContentWrapper,
   StyledSection,
   StyledDropdownSectionList,

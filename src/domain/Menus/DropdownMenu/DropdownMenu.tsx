@@ -1,11 +1,18 @@
 import React, { RefObject } from 'react'
+import { map } from 'lodash'
 import moment, { Moment } from 'moment'
 import uuid from 'uuid'
 import { Props } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons'
-import { DefaultDropdownButton, StyledToggleContainer } from './subcomponents/style'
-import { IManualMenuChildrenProps, ManualMenu } from './subcomponents/ManualMenu'
+import {
+  DefaultDropdownButton,
+  StyledContentWrapper,
+  StyledDropdownCustomContent, StyledDropdownSectionList,
+  StyledToggleContainer
+} from './subcomponents/style'
 import { ISectionProps, Section } from './subcomponents/Section'
+import { Popover } from '../../Popovers/Popover'
+import FocusTrap from 'focus-trap-react'
 
 interface IDropdownMenuState {
   isDropdownOpen: boolean
@@ -29,64 +36,15 @@ interface IDropdownMenuProps {
    */
   toggleComponent?: JSX.Element
   /** Children to display as custom content instead of sections */
-  children?: (props: IManualMenuChildrenProps) => React.ReactElement<any>
+  children?: (props: IDropdownMenuChildrenProps) => React.ReactElement<any>
+}
+
+interface IDropdownMenuChildrenProps {
+  /** Callback to close the menu */
+  closeMenu: () => void
 }
 
 class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenuState> {
-  private get toggleComponent () {
-    const {
-      isDropdownOpen,
-      dropdownId
-    } = this.state
-    const { toggleComponent } = this.props
-
-    return (
-      <span>
-        <StyledToggleContainer
-          onClick={this.openMenu}
-          innerRef={this.toggleComponentRef}
-          role='button'
-          aria-expanded={isDropdownOpen}
-          aria-owns={dropdownId}
-          aria-haspopup
-        >
-          {toggleComponent}
-        </StyledToggleContainer>
-      </span>
-    )
-  }
-
-  private get dropdownMenu (): JSX.Element | null {
-    const {
-      isDropdownOpen,
-      dropdownId
-    } = this.state
-
-    const {
-      className,
-      sections,
-      parentAnchorPosition,
-      dropdownAnchorPosition,
-      children
-    } = this.props
-
-    return (
-      <ManualMenu
-        id={dropdownId || ''}
-        className={className}
-        isDropdownOpen={isDropdownOpen}
-        onDropdownClose={this.close}
-        sections={sections}
-        parentAnchorPosition={parentAnchorPosition}
-        dropdownAnchorPosition={dropdownAnchorPosition}
-        parentRef={this.toggleComponentRef}
-      >
-        {children}
-      </ManualMenu>
-    )
-  }
-
-  public static ManualMenu = ManualMenu
   public static Section = Section
   public static DefaultDropdownButton = DefaultDropdownButton
   public static defaultProps = {
@@ -107,7 +65,7 @@ class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenu
     return (
       <React.Fragment>
         {this.toggleComponent}
-        {this.dropdownMenu}
+        {this.dropdownPopover}
       </React.Fragment>
     )
   }
@@ -136,6 +94,109 @@ class DropdownMenu extends React.PureComponent<IDropdownMenuProps, IDropdownMenu
       isDropdownOpen: false,
       dropdownId: undefined,
       lastClosedTime: moment()
+    })
+  }
+
+  private get toggleComponent () {
+    const {
+      isDropdownOpen,
+      dropdownId
+    } = this.state
+    const { toggleComponent } = this.props
+
+    return (
+      <span>
+        <StyledToggleContainer
+          onClick={this.openMenu}
+          innerRef={this.toggleComponentRef}
+          role='button'
+          aria-expanded={isDropdownOpen}
+          aria-owns={dropdownId}
+          aria-haspopup
+        >
+          {toggleComponent}
+        </StyledToggleContainer>
+      </span>
+    )
+  }
+
+  private get dropdownPopover (): JSX.Element | null {
+    const {
+      isDropdownOpen,
+      dropdownId
+    } = this.state
+
+    const {
+      className,
+      parentAnchorPosition,
+      dropdownAnchorPosition,
+      children
+    } = this.props
+
+    return (
+      <Popover
+        id={dropdownId || ''}
+        isOpen={isDropdownOpen}
+        parentAnchorPosition={parentAnchorPosition}
+        popoverAnchorPosition={dropdownAnchorPosition}
+        parentRef={this.toggleComponentRef}
+      >
+        <FocusTrap
+          active={isDropdownOpen}
+          focusTrapOptions={{
+            onDeactivate: this.close,
+            initialFocus: document.body,
+            clickOutsideDeactivates: true,
+            returnFocusOnDeactivate: false
+          }}
+          tag='span'
+        >
+          <StyledContentWrapper
+            className={className}
+            role='menu'
+          >
+            {this.dropdownContent}
+          </StyledContentWrapper>
+        </FocusTrap>
+        {children}
+      </Popover>
+    )
+  }
+
+  private get dropdownContent (): JSX.Element | JSX.Element[] {
+    const {
+      sections,
+      children
+    } = this.props
+
+    if (!sections && children) {
+      return (
+        <StyledDropdownCustomContent>
+          {children({ closeMenu: this.close })}
+        </StyledDropdownCustomContent>
+      )
+    }
+
+    return (
+      <StyledDropdownSectionList>
+        {this.dropdownSections}
+      </StyledDropdownSectionList>
+    )
+  }
+
+  private get dropdownSections (): JSX.Element[] {
+    const {
+      sections
+    } = this.props
+
+    return map(sections, (section, index) => {
+      return (
+        <Section
+          key={index}
+          __closeMenuCallback={this.close}
+          {...section}
+        />
+      )
     })
   }
 }
