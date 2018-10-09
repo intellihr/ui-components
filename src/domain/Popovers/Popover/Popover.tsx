@@ -6,7 +6,7 @@ import { Props } from '../../../common'
 import { StyledPopover } from './style'
 
 interface IPopoverPosition {
-  xPos: Props.Position.Left | Props.Position.Center | Props.Position.Right,
+  xPos: Props.Position.Left | Props.Position.Right,
   yPos: Props.Position.Top | Props.Position.Bottom
 }
 
@@ -181,8 +181,6 @@ class Popover extends React.Component<IPopoverProps, never> {
     const x = (position.xPos === Props.Position.Left) ? boundingRect.left : boundingRect.right
     const y = (position.yPos === Props.Position.Top) ? boundingRect.top : boundingRect.bottom
 
-    console.log('offset', boundingRect, position, x, y)
-
     return {
       x: x + window.pageXOffset,
       y: y + window.pageYOffset
@@ -196,7 +194,7 @@ class Popover extends React.Component<IPopoverProps, never> {
       case Props.Position.Right:
         return { right: document.documentElement.clientWidth - this.parentAnchorOffset.x }
       default:
-        console.warn('DropdownMenu only supports Left and Right x positioning currently')
+        console.warn('Popover only supports Left and Right x positioning currently')
     }
   }
 
@@ -207,11 +205,12 @@ class Popover extends React.Component<IPopoverProps, never> {
       case Props.Position.Bottom:
         return { bottom: document.documentElement.clientHeight - this.parentAnchorOffset.y }
       default:
-        console.warn('DropdownMenu only supports Top and Bottom y positioning currently')
+        console.warn('Popover only supports Top and Bottom y positioning currently')
     }
   }
 }
 
 export {
+  IPopoverPosition,
   Popover
 }

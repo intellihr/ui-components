@@ -1,2 +1,2 @@
 export { DropdownMenu, IDropdownMenuProps, IDropdownMenuSectionProps } from './DropdownMenu'
-export { Popover } from './Popover'
+export { Popover, IPopoverPosition } from './Popover'

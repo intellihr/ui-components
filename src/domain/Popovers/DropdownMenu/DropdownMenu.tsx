@@ -2,7 +2,6 @@ import React, { RefObject } from 'react'
 import { map } from 'lodash'
 import moment, { Moment } from 'moment'
 import uuid from 'uuid'
-import { Props } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons'
 import {
   DefaultDropdownButton,
@@ -11,7 +10,7 @@ import {
   StyledToggleContainer
 } from './subcomponents/style'
 import { ISectionProps, Section } from './subcomponents/Section'
-import { Popover } from '../../Popovers'
+import { Popover, IPopoverPosition } from '../../Popovers'
 import FocusTrap from 'focus-trap-react'
 
 interface IDropdownMenuState {
@@ -22,9 +21,9 @@ interface IDropdownMenuState {
 
 interface IDropdownMenuProps {
   /** What position on the parent to anchor relative to; 'auto' will find best position automatically */
-  parentAnchorPosition?: Props.IPositionXY | 'auto',
+  parentAnchorPosition?: IPopoverPosition | 'auto',
   /** What position on the dropdown itself to place at the anchor position; 'auto' will find best position automatically */
-  dropdownAnchorPosition?: Props.IPositionXY | 'auto',
+  dropdownAnchorPosition?: IPopoverPosition | 'auto',
   /** Any custom class names */
   className?: string,
   /** The sections to render in the dropdown */
