@@ -41,7 +41,7 @@ interface IOptionListProps {
   selectedValue?: OptionValue
   /** Maximum height of the list */
   maxHeight?: number,
-  /** whether the text in the options should truncate on long screens or not */
+  /** whether the text in the options should truncate */
   truncatedText?: boolean
 }
 
