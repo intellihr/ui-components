@@ -35,8 +35,8 @@ $typography-styles: (
 
 @mixin add-typography-styles ($style) {
   font-size: map-get($style, font-size);
-  line-height: map-get($style, line-height);
   letter-spacing: map-get($style, letter-spacing);
+  line-height: map-get($style, line-height);
 }
 
 
@@ -48,9 +48,9 @@ $typography-styles: (
   }
 
   .emoji-mart-emoji {
-    line-height: 14px;
-    vertical-align: middle;
-    margin-top: -0.13em;
     display: inline-block;
+    line-height: 14px;
+    margin-top: -0.13em;
+    vertical-align: middle;
   }
 }
