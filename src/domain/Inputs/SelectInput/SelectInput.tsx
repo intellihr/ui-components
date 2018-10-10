@@ -138,6 +138,10 @@ export class SelectInput<O=ISelectInputOptions> extends React.PureComponent<ISel
       base.loadOptions = this.promiseOptions
     } else if (asyncOptions) {
       base.loadOptions = this.fetchAsyncOptions
+      // The default filter does not work well with async
+      if (!base.filterOptions) {
+        base.filterOptions = (fetchedOptions: any[]) => fetchedOptions
+      }
     } else if (optionComponent) {
       base.options = options
       base.optionComponent = optionComponent
