@@ -29,8 +29,8 @@ describe('<DropdownMenu />', () => {
       expect(
         wrapper
           .update()
-          .find('ManualMenu')
-          .prop('isDropdownOpen')
+          .find('Popover')
+          .prop('isOpen')
       ).toBeTruthy()
     })
   })
@@ -57,8 +57,8 @@ describe('<DropdownMenu />', () => {
       expect(
         wrapper
           .update()
-          .find('ManualMenu')
-          .prop('isDropdownOpen')
+          .find('Popover')
+          .prop('isOpen')
       ).toBeTruthy()
     })
   })

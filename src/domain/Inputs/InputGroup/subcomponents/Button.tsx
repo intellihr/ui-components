@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { RefObject } from 'react'
 import { InputGroupPosition } from '../InputGroup'
 import { FontAwesomeIcon } from '../../../Icons/FontAwesomeIcon'
 import { InputGroupButton } from './style'
@@ -10,6 +10,8 @@ interface IInputGroupButtonProps extends React.HTMLProps<HTMLButtonElement> {
   leftComponent?: JSX.Element
   /** A component that is shown to the right of the text */
   rightComponent?: JSX.Element
+  /** Ref to the internal button object */
+  innerRef?: RefObject<any>
 }
 
 class Button extends React.PureComponent<IInputGroupButtonProps> {
@@ -24,11 +26,16 @@ class Button extends React.PureComponent<IInputGroupButtonProps> {
       groupPosition,
       children,
       leftComponent,
-      rightComponent
+      rightComponent,
+      ref, // Ref is incompatible
+      innerRef,
+      ...props
     } = this.props
 
     return (
       <InputGroupButton
+        {...props}
+        innerRef={innerRef}
         onClick={onClick}
         disabled={disabled}
         groupPosition={groupPosition}

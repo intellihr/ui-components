@@ -191,57 +191,65 @@ exports[`<Modal /> should render a hidden modal 1`] = `
           }
         }
       >
-        <ModalPortal
-          ariaHideApp={false}
-          bodyOpenClassName="ReactModal__Body--open"
-          className="modal modal-size-medium c0__content"
-          closeTimeoutMS={0}
-          defaultStyles={
-            Object {
-              "content": Object {
-                "WebkitOverflowScrolling": "touch",
-                "background": "#fff",
-                "border": "1px solid #ccc",
-                "borderRadius": "4px",
-                "bottom": "40px",
-                "left": "40px",
-                "outline": "none",
-                "overflow": "auto",
-                "padding": "20px",
-                "position": "absolute",
-                "right": "40px",
-                "top": "40px",
-              },
-              "overlay": Object {
-                "backgroundColor": "rgba(255, 255, 255, 0.75)",
-                "bottom": 0,
-                "left": 0,
-                "position": "fixed",
-                "right": 0,
-                "top": 0,
-              },
-            }
+        <Portal
+          containerInfo={
+            <div
+              class="modal modal-size-medium c0"
+            />
           }
-          isOpen={false}
-          overlayClassName="modal-overlay"
-          overlayRef={[Function]}
-          parentSelector={[Function]}
-          portalClassName="modal modal-size-medium sc-bdVaJa c0"
-          shouldCloseOnEsc={true}
-          shouldCloseOnOverlayClick={true}
-          shouldFocusAfterRender={true}
-          shouldReturnFocusAfterClose={true}
-          style={
-            Object {
-              "content": Object {
-                "zIndex": 1001,
-              },
-              "overlay": Object {
-                "zIndex": 1000,
-              },
+        >
+          <ModalPortal
+            ariaHideApp={false}
+            bodyOpenClassName="ReactModal__Body--open"
+            className="modal modal-size-medium c0__content"
+            closeTimeoutMS={0}
+            defaultStyles={
+              Object {
+                "content": Object {
+                  "WebkitOverflowScrolling": "touch",
+                  "background": "#fff",
+                  "border": "1px solid #ccc",
+                  "borderRadius": "4px",
+                  "bottom": "40px",
+                  "left": "40px",
+                  "outline": "none",
+                  "overflow": "auto",
+                  "padding": "20px",
+                  "position": "absolute",
+                  "right": "40px",
+                  "top": "40px",
+                },
+                "overlay": Object {
+                  "backgroundColor": "rgba(255, 255, 255, 0.75)",
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "fixed",
+                  "right": 0,
+                  "top": 0,
+                },
+              }
             }
-          }
-        />
+            isOpen={false}
+            overlayClassName="modal-overlay"
+            overlayRef={[Function]}
+            parentSelector={[Function]}
+            portalClassName="modal modal-size-medium sc-bdVaJa c0"
+            shouldCloseOnEsc={true}
+            shouldCloseOnOverlayClick={true}
+            shouldFocusAfterRender={true}
+            shouldReturnFocusAfterClose={true}
+            style={
+              Object {
+                "content": Object {
+                  "zIndex": 1001,
+                },
+                "overlay": Object {
+                  "zIndex": 1000,
+                },
+              }
+            }
+          />
+        </Portal>
       </Modal>
     </ReactModalAdapter>
   </Styled(ReactModalAdapter)>

@@ -24,7 +24,8 @@ export class LinkButton extends BaseButton<ILinkButtonProps> {
     const {
       disabled,
       href,
-      anchorComponentProps
+      anchorComponentProps,
+      innerRef
     } = this.props
 
     return (
@@ -33,7 +34,10 @@ export class LinkButton extends BaseButton<ILinkButtonProps> {
         anchorComponentProps={anchorComponentProps}
         onClick={this.handleClick}
       >
-        <span className={classNames(this.buttonClass, { disabled })}>
+        <span
+          className={classNames(this.buttonClass, { disabled })}
+          ref={innerRef}
+        >
           {this.buttonContent}
         </span>
       </Anchor>

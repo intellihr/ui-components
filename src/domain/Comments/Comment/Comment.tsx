@@ -2,8 +2,9 @@ import React from 'react'
 import classNames from 'classnames'
 import {
   DropdownMenu,
-  IDropdownMenuSectionProps
-} from '../../Menus'
+  IDropdownMenuSectionProps,
+  IDropdownMenuToggleComponentProps
+} from '../../Popovers'
 import {
   StyledComment,
   CommentActionMenuToggleButton
@@ -31,7 +32,26 @@ export interface ICommentProps {
 }
 
 export class Comment extends React.Component<ICommentProps> {
-  get avatar (): JSX.Element {
+  public render (): JSX.Element {
+    const {
+      focused
+    } = this.props
+
+    return (
+      <StyledComment>
+        {this.avatar}
+        <div className={classNames(
+          'comment-container',
+          { focused }
+        )}>
+          {this.commentHeader}
+          {this.commentContent}
+        </div>
+      </StyledComment>
+    )
+  }
+
+  private get avatar (): JSX.Element {
     const {
       avatarComponent
     } = this.props
@@ -43,7 +63,7 @@ export class Comment extends React.Component<ICommentProps> {
     )
   }
 
-  get commentActions (): JSX.Element | null {
+  private get commentActions (): JSX.Element | null {
     const {
       actions,
       headerComponent
@@ -55,17 +75,25 @@ export class Comment extends React.Component<ICommentProps> {
 
     return (
       <DropdownMenu
-        toggleComponent={
-          <CommentActionMenuToggleButton>
-            <FontAwesomeIcon type='ellipsis-v' />
-          </CommentActionMenuToggleButton>
-        }
+        toggleComponent={this.dropdownMenuToggleComponent}
         sections={actions}
       />
     )
   }
+  
+  private dropdownMenuToggleComponent = (props: IDropdownMenuToggleComponentProps) => {
+    return (
+      <CommentActionMenuToggleButton
+        onClick={props.toggleMenu}
+        innerRef={props.toggleComponentRef}
+        {...props.ariaProps}
+      >
+        <FontAwesomeIcon type='ellipsis-v' />
+      </CommentActionMenuToggleButton>
+    )
+  }
 
-  get commentDate (): JSX.Element {
+  private get commentDate (): JSX.Element {
     const {
       dateComponent,
       pillComponent
@@ -79,7 +107,7 @@ export class Comment extends React.Component<ICommentProps> {
     )
   }
 
-  get commentTitle (): JSX.Element {
+  private get commentTitle (): JSX.Element {
     const {
       commentHeaderText,
       headerComponent
@@ -95,7 +123,7 @@ export class Comment extends React.Component<ICommentProps> {
     )
   }
 
-  get commentHeader (): JSX.Element {
+  private get commentHeader (): JSX.Element {
     const {
       headerComponent
     } = this.props
@@ -114,7 +142,7 @@ export class Comment extends React.Component<ICommentProps> {
     )
   }
 
-  get commentContent (): JSX.Element {
+  private get commentContent (): JSX.Element {
     const {
       commentBodyText
     } = this.props
@@ -125,25 +153,6 @@ export class Comment extends React.Component<ICommentProps> {
           text={commentBodyText}
         />
       </div>
-    )
-  }
-
-  public render (): JSX.Element {
-    const {
-      focused
-    } = this.props
-
-    return (
-      <StyledComment>
-        {this.avatar}
-        <div className={classNames(
-          'comment-container',
-          { focused }
-        )}>
-          {this.commentHeader}
-          {this.commentContent}
-        </div>
-      </StyledComment>
     )
   }
 }
