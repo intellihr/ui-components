@@ -204,6 +204,7 @@ exports[`<SelectInput /> should render with async options 1`] = `
   className="react-select-test selectInput"
   clearable={true}
   disabled={false}
+  filterOptions={[Function]}
   ignoreAccents={true}
   ignoreCase={true}
   isLoading={false}
