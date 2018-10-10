@@ -1,0 +1,56 @@
+@import '../../../common/sass/variables';
+
+$typography-styles: (
+  xsmall: (
+    font-size: $fz-xsmall,
+    line-height: $lh-xsmall,
+    letter-spacing: .02em
+  ),
+  small: (
+    font-size: $fz-small,
+    line-height: $lh-small,
+    letter-spacing: normal
+  ),
+  body: (
+    font-size: $fz-body,
+    line-height: $lh-body,
+    letter-spacing: normal
+  ),
+  heading: (
+    font-size: $fz-heading,
+    line-height: $lh-heading,
+    letter-spacing: .02em
+  ),
+  display: (
+    font-size: $fz-display,
+    line-height: $lh-display,
+    letter-spacing: .02em
+  ),
+  display-large: (
+    font-size: $fz-display-large,
+    line-height: $lh-display-large,
+    letter-spacing: .02em
+  )
+);
+
+@mixin add-typography-styles ($style) {
+  font-size: map-get($style, font-size);
+  line-height: map-get($style, line-height);
+  letter-spacing: map-get($style, letter-spacing);
+}
+
+
+:local(.ihrEmoji) {
+  @each $typography-size, $style in $typography-styles {
+    &.#{$typography-size} {
+      @include add-typography-styles($style);
+    }
+  }
+
+  .emoji-mart-emoji {
+    line-height: 14px;
+    vertical-align: middle;
+    margin-top: -0.13em;
+    display: inline-block;
+  }
+}

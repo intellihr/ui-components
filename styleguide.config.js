@@ -236,7 +236,8 @@ module.exports = {
             'src/domain/Typographies/FormattedText/FormattedText',
             'src/domain/Typographies/Text/Text',
             'src/domain/Typographies/CurrencyText/CurrencyText',
-            'src/domain/Typographies/Emoji/Emoji'
+            'src/domain/Typographies/Emoji/Emoji',
+            'src/domain/Typographies/TelephoneText/TelephoneText'
           ]
         }
       ]

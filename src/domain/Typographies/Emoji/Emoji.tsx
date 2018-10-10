@@ -1,7 +1,9 @@
 import React from 'react'
-import { Emoji as EmojiComponent } from 'emoji-mart'
+import { Emoji as EmojiMartEmoji } from 'emoji-mart'
+import classNames from 'classnames'
 import { Props, Variables } from '../../../common'
-import { EmojiWrapper } from './style'
+
+const style = require('./style.scss')
 
 interface IEmojiProps {
   /** emoji to display */
@@ -22,15 +24,13 @@ class Emoji extends React.PureComponent<IEmojiProps> {
     } = this.props
 
     return (
-      <EmojiWrapper
-        textType={type}
-      >
-        <EmojiComponent
+      <span className={classNames(style.ihrEmoji, type)}>
+        <EmojiMartEmoji
           emoji={emoji}
           set='twitter'
           size={Variables.fontSizeMap[type]}
         />
-      </EmojiWrapper>
+      </span>
     )
   }
 }
