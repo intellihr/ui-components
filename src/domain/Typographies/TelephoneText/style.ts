@@ -1,9 +1,10 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { Variables } from '../../../common'
 
 
 const CountryCodeWrapper = styled.span`
-  color: ${Variables.Color.n500};
+  color: ${Variables.Color.n600};
+  margin-left: 4px;
 `
 
 export {

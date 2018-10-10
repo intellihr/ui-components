@@ -3,22 +3,41 @@
 ```jsx
   <div>
     <TelephoneText
-      number='412341234'
-      countryCode='au'
-      dialCode='61'
+      phoneNumber='123123'
+      countryCode='se'
+      dialCode='46'
      />
-     <br/>
+    <br/>
     <TelephoneText
-      number='12341234'
+      phoneNumber='1231234'
+      countryCode='is'
+      dialCode='354'
+     />
+    <br/>
+    <TelephoneText
+      phoneNumber='12341234'
       countryCode='hk'
       dialCode='852'
      />
      <br/>
     <TelephoneText
-      number='1300123123'
+      phoneNumber='412341234'
+      countryCode='au'
+      dialCode='61'
+     />
+     <br/>
+    <TelephoneText
+      phoneNumber='1300123123'
       countryCode='au'
       dialCode='61'
      />
   </div>
 ```
 
+#### Telephone Text without prefix
+
+```jsx
+  <TelephoneText
+    phoneNumber='+61412341234'
+   />
+```

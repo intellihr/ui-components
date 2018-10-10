@@ -5,7 +5,7 @@ import { CountryCodeWrapper } from '../TelephoneText/style'
 
 interface ITelephoneTextProps {
   /** phone number to display */
-  number: string
+  phoneNumber: string
   /** country code to display */
   countryCode?: string
   /** dial code to display */
@@ -36,24 +36,37 @@ class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
           <CountryCodeWrapper>
             {` ${countryCode.toUpperCase()}`}
           </CountryCodeWrapper>
-          <span>{` (+ ${dialCode}) `}</span>
+          <span>{` (+${dialCode}) `}</span>
         </span>
       )
     }
   }
 
-  get number (): string {
+  get phoneNumber (): string {
     const {
-      number
+      countryCode,
+      dialCode,
+      phoneNumber
     } = this.props
 
-    return number
+    if (countryCode && dialCode && phoneNumber.length>5) {
+      let format = /(?!^)(\d{3})(?=(?:\d{3})*$)/g
+
+      if (phoneNumber.length === 8 || phoneNumber.length ===7){
+        format = /(?!^)(\d{4})(?=(?:\d{4})*$)/g
+      }
+
+      const formattedNumber = phoneNumber.replace(format, ' $1')
+      return formattedNumber
+    }
+
+    return phoneNumber
   }
 
   public render (): JSX.Element | string {
     return <span>
       {this.prefix}
-      {this.number}
+      {this.phoneNumber}
     </span>
   }
 }
