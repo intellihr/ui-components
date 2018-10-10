@@ -52,7 +52,7 @@
     <Button
       onClick={toggleMenu}
       innerRef={toggleComponentRef}
-      {...ariaProps}
+      buttonOverrides={{...ariaProps}}
     >
       Colored Dropdown
     </Button>
@@ -111,7 +111,7 @@ hiding the dropdown.
       <Button
         onClick={toggleMenu}
         innerRef={toggleComponentRef}
-        {...ariaProps}
+        buttonOverrides={{...ariaProps}}
       >
         Anchored bottom left
       </Button>
@@ -138,7 +138,7 @@ hiding the dropdown.
       <Button
         onClick={toggleMenu}
         innerRef={toggleComponentRef}
-        {...ariaProps}
+        buttonOverrides={{...ariaProps}}
       >
         Anchored bottom right
       </Button>
@@ -165,7 +165,7 @@ hiding the dropdown.
       <Button
         onClick={toggleMenu}
         innerRef={toggleComponentRef}
-        {...ariaProps}
+        buttonOverrides={{...ariaProps}}
       >
         Drop upwards, top left
       </Button>
@@ -192,7 +192,7 @@ hiding the dropdown.
       <Button
         onClick={toggleMenu}
         innerRef={toggleComponentRef}
-        {...ariaProps}
+        buttonOverrides={{...ariaProps}}
       >
         Anchored top right, open to right
       </Button>
@@ -219,7 +219,7 @@ hiding the dropdown.
       <Button
         onClick={toggleMenu}
         innerRef={toggleComponentRef}
-        {...ariaProps}
+        buttonOverrides={{...ariaProps}}
       >
         Anchored bottom left, open to left upwards
       </Button>
@@ -383,7 +383,7 @@ class ThingList extends React.PureComponent {
     <Button
       onClick={toggleMenu}
       innerRef={toggleComponentRef}
-      {...ariaProps}
+      buttonOverrides={{...ariaProps}}
     >
       {state.selectedOption.label}
     </Button>

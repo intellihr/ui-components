@@ -71,11 +71,13 @@ initialState = {
 
 <InputGroup>
   <DropdownMenu
-    toggleComponent={
+    toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
       <InputGroup.Button
-        type='input' 
+        onClick={toggleMenu}
+        innerRef={toggleComponentRef}
         groupPosition='left'
         leftComponent={state.selectedOption.leftComponent}
+        {...ariaProps}
       >
          {state.selectedOption.buttonText}
       </InputGroup.Button>
@@ -165,15 +167,15 @@ class ThingList extends React.PureComponent {
 
 <InputGroup>
   <DropdownMenu
-    toggleComponent={
-    <InputGroup.Button
-      type='input' 
-      groupPosition='left'
-      icon={<FontAwesomeIcon type='caret-down' />}
-      iconAlignment='right'
-    >
+    toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+      <InputGroup.Button
+        onClick={toggleMenu}
+        innerRef={toggleComponentRef}
+        groupPosition='left'
+        {...ariaProps}
+      >
       {state.selectedOption.label}
-    </InputGroup.Button>
+      </InputGroup.Button>
     }
   >
   {({closeMenu}) => 
@@ -253,15 +255,15 @@ class ThingList extends React.PureComponent {
 
 <InputGroup>
   <DropdownMenu
-    toggleComponent={
-    <InputGroup.Button
-      type='input' 
-      groupPosition='left'
-      icon={<FontAwesomeIcon type='caret-down' />}
-      iconAlignment='right'
-    >
+    toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+      <InputGroup.Button
+        onClick={toggleMenu}
+        innerRef={toggleComponentRef}
+        groupPosition='left'
+        {...ariaProps}
+      >
       {state.selectedOption.label}
-    </InputGroup.Button>
+      </InputGroup.Button>
     }
   >
   {({closeMenu}) => 
@@ -293,15 +295,15 @@ class ThingList extends React.PureComponent {
     groupPosition='middle'
   />
   <DropdownMenu
-    toggleComponent={
-    <InputGroup.Button
-      type='input' 
-      groupPosition='middle'
-      icon={<FontAwesomeIcon type='caret-down' />}
-      iconAlignment='right'
-    >
+    toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+      <InputGroup.Button
+        onClick={toggleMenu}
+        innerRef={toggleComponentRef}
+        groupPosition='middle'
+        {...ariaProps}
+      >
       {state.selectedOption.label}
-    </InputGroup.Button>
+      </InputGroup.Button>
     }
   >
   {({closeMenu}) => 
@@ -333,15 +335,15 @@ class ThingList extends React.PureComponent {
     groupPosition='middle'
   />
   <DropdownMenu
-    toggleComponent={
-    <InputGroup.Button
-      type='input' 
-      groupPosition='right'
-      icon={<FontAwesomeIcon type='caret-down' />}
-      iconAlignment='right'
-    >
+    toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+      <InputGroup.Button
+        onClick={toggleMenu}
+        innerRef={toggleComponentRef}
+        groupPosition='right'
+        {...ariaProps}
+      >
       {state.selectedOption.label}
-    </InputGroup.Button>
+      </InputGroup.Button>
     }
   >
   {({closeMenu}) => 
