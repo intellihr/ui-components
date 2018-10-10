@@ -1,12 +1,15 @@
 import styled from 'styled-components'
-import { Variables } from '../../../common'
+import { Text } from '../Text'
 
-
-const CountryCodeWrapper = styled.span`
-  color: ${Variables.Color.n600};
-  margin-left: 4px;
+const CountryCodeWrapper = styled(Text)`
+  margin-left: 8px;
+  margin-right: 4px;
 `
 
+const DialCodeWrapper = styled(Text)`
+  margin-right: 4px;
+`
 export {
-  CountryCodeWrapper
+  CountryCodeWrapper,
+  DialCodeWrapper
 }

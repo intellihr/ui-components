@@ -34,6 +34,54 @@
   </div>
 ```
 
+#### Styled Telephone Text
+
+```jsx
+  <div>
+    <TelephoneText
+      phoneNumber='412341234'
+      countryCode='au'
+      dialCode='61'
+      type='xsmall'
+     />
+    <br/>
+    <TelephoneText
+      phoneNumber='412341234'
+      countryCode='au'
+      dialCode='61'
+      type='small'
+     />
+    <br/>
+    <TelephoneText
+      phoneNumber='412341234'
+      countryCode='au'
+      dialCode='61'
+      type='body'
+     />
+    <br/>
+    <TelephoneText
+      phoneNumber='412341234'
+      countryCode='au'
+      dialCode='61'
+      type='heading'
+     />
+    <br/>
+    <TelephoneText
+      phoneNumber='412341234'
+      countryCode='au'
+      dialCode='61'
+      type='display'
+     />
+    <br/>
+    <TelephoneText
+      phoneNumber='412341234'
+      countryCode='au'
+      dialCode='61'
+      type='display-large'
+     />
+  </div>
+```
+
 #### Telephone Text without prefix
 
 ```jsx

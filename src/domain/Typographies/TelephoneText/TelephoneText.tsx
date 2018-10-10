@@ -1,7 +1,8 @@
 import React from 'react'
 import { Emoji } from '../Emoji'
-import { Props } from '../../../common'
-import { CountryCodeWrapper } from '../TelephoneText/style'
+import { Text } from '../Text'
+import { Props, Variables } from '../../../common'
+import { CountryCodeWrapper, DialCodeWrapper } from '../TelephoneText/style'
 
 interface ITelephoneTextProps {
   /** phone number to display */
@@ -10,8 +11,8 @@ interface ITelephoneTextProps {
   countryCode?: string
   /** dial code to display */
   dialCode?: string
-  /** Specify the type of text to use */
-  flagType: Props.TypographyType
+  /** Specify the type of text and flag to use */
+  type: Props.TypographyType
 }
 
 class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
@@ -19,55 +20,73 @@ class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
     flagType: Props.TypographyType.Body
   }
 
-  get prefix (): JSX.Element | undefined {
+  get prefix(): JSX.Element | undefined {
     const {
       countryCode,
       dialCode,
-      flagType
+      type
     } = this.props
 
     if (countryCode && dialCode) {
       return (
-        <span>
+        <>
           <Emoji
             emoji={`flag-${countryCode}`}
-            type={flagType}
+            type={type}
           />
-          <CountryCodeWrapper>
-            {` ${countryCode.toUpperCase()}`}
+          <CountryCodeWrapper
+            color={Variables.Color.n600}
+            type={type}
+            isUpper
+          >
+            {countryCode}
           </CountryCodeWrapper>
-          <span>{` (+${dialCode}) `}</span>
-        </span>
+          <DialCodeWrapper
+            type={type}
+          >
+            (+{dialCode})
+          </DialCodeWrapper>
+        </>
       )
     }
   }
 
-  get phoneNumber (): string {
+  get phoneNumber(): JSX.Element {
     const {
       countryCode,
       dialCode,
-      phoneNumber
+      phoneNumber,
+      type
     } = this.props
 
-    if (countryCode && dialCode && phoneNumber.length>5) {
+    let formattedPhoneNumber = phoneNumber
+
+    if (countryCode && dialCode && phoneNumber.length > 5) {
       let format = /(?!^)(\d{3})(?=(?:\d{3})*$)/g
 
-      if (phoneNumber.length === 8 || phoneNumber.length ===7){
+      if (phoneNumber.length === 8 || phoneNumber.length === 7) {
         format = /(?!^)(\d{4})(?=(?:\d{4})*$)/g
       }
 
-      const formattedNumber = phoneNumber.replace(format, ' $1')
-      return formattedNumber
+      formattedPhoneNumber=  phoneNumber.replace(format, ' $1')
     }
 
-    return phoneNumber
+    return (
+      <Text
+        type={type}
+      >
+        {formattedPhoneNumber}
+      </Text>
+    )
   }
 
-  public render (): JSX.Element | string {
-    return <span>
-      {this.prefix}
-      {this.phoneNumber}
-    </span>
+  public render(): JSX.Element {
+    return (
+      <span>
+        {this.prefix}
+        {this.phoneNumber}
+      </span>
+    )
   }
 }
 

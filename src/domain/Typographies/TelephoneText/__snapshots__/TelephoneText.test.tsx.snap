@@ -2,42 +2,66 @@
 
 exports[`<TelephoneText /> should render the Telephone Text 1`] = `
 <span>
-  <span>
-    <Emoji
-      emoji="flag-au"
-      type="body"
-    />
-    <styled.span>
-       AU
-    </styled.span>
-    <span>
-       (+61) 
-    </span>
-  </span>
-  412 341 234
+  <Emoji
+    emoji="flag-au"
+    type="body"
+  />
+  <Styled(Text)
+    color="#667380"
+    isUpper={true}
+  >
+    au
+  </Styled(Text)>
+  <Styled(Text)>
+    (+
+    61
+    )
+  </Styled(Text)>
+  <Text
+    isInline={true}
+    tag="span"
+    type="body"
+  >
+    412 341 234
+  </Text>
 </span>
 `;
 
 exports[`<TelephoneText /> should render the Telephone Text with flag type 1`] = `
 <span>
-  <span>
-    <Emoji
-      emoji="flag-au"
-      type="small"
-    />
-    <styled.span>
-       AU
-    </styled.span>
-    <span>
-       (+61) 
-    </span>
-  </span>
-  412 341 234
+  <Emoji
+    emoji="flag-au"
+    type="body"
+  />
+  <Styled(Text)
+    color="#667380"
+    isUpper={true}
+  >
+    au
+  </Styled(Text)>
+  <Styled(Text)>
+    (+
+    61
+    )
+  </Styled(Text)>
+  <Text
+    isInline={true}
+    tag="span"
+    type="body"
+  >
+    412 341 234
+  </Text>
 </span>
 `;
 
 exports[`<TelephoneText /> should render the Telephone Text without prefix 1`] = `
 <span>
-  +61412341234
+  <Text
+    isInline={true}
+    tag="span"
+    type="body"
+  >
+    +61412341234
+  </Text>
 </span>
 `;
