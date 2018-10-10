@@ -11,11 +11,13 @@ export class Button extends BaseButton<IButtonProps> {
     const {
       buttonOverrides,
       onClick,
-      disabled
+      disabled,
+      innerRef
     } = this.props
 
     return (
       <button
+        ref={innerRef}
         className={this.buttonClass}
         onClick={onClick}
         disabled={disabled}

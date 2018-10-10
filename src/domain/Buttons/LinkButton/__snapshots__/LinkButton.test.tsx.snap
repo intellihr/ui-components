@@ -8,9 +8,7 @@ exports[`<LinkButton /> should render a disabled link button 1`] = `
   <span
     className="button neutral disabled"
   >
-    <React.Fragment>
-      testing testing 123
-    </React.Fragment>
+    testing testing 123
   </span>
 </Anchor>
 `;
@@ -23,9 +21,7 @@ exports[`<LinkButton /> should render a link button with a simple text 1`] = `
   <span
     className="button neutral"
   >
-    <React.Fragment>
-      testing testing 123
-    </React.Fragment>
+    testing testing 123
   </span>
 </Anchor>
 `;
@@ -38,9 +34,7 @@ exports[`<LinkButton /> should render a link button with a size large 1`] = `
   <span
     className="button large neutral"
   >
-    <React.Fragment>
-      testing testing 123
-    </React.Fragment>
+    testing testing 123
   </span>
 </Anchor>
 `;
@@ -53,9 +47,7 @@ exports[`<LinkButton /> should render a link button with a type delete-subtle 1`
   <span
     className="button delete-subtle"
   >
-    <React.Fragment>
-      testing testing 123
-    </React.Fragment>
+    testing testing 123
   </span>
 </Anchor>
 `;
@@ -68,16 +60,14 @@ exports[`<LinkButton /> should render a link button with an icon 1`] = `
   <span
     className="button primary"
   >
-    <React.Fragment>
-      <span
-        className="button-icon left"
-      >
-        <FontAwesomeIcon
-          type="star"
-        />
-      </span>
-      Link Button with Icon
-    </React.Fragment>
+    <span
+      className="button-icon left"
+    >
+      <FontAwesomeIcon
+        type="star"
+      />
+    </span>
+    Link Button with Icon
   </span>
 </Anchor>
 `;
@@ -95,16 +85,14 @@ exports[`<LinkButton /> should render a link button with manual extra props for 
   <span
     className="button primary"
   >
-    <React.Fragment>
-      <span
-        className="button-icon left"
-      >
-        <FontAwesomeIcon
-          type="star"
-        />
-      </span>
-      Link Button with Icon
-    </React.Fragment>
+    <span
+      className="button-icon left"
+    >
+      <FontAwesomeIcon
+        type="star"
+      />
+    </span>
+    Link Button with Icon
   </span>
 </Anchor>
 `;

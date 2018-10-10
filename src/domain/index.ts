@@ -20,9 +20,10 @@ export { ActionLink, TextLink, UnstyledLink } from './Links'
  */
 export { List, SmartList, ActionList, ListRow, ListClickableColumn, ListColumn, OptionList, FilteredOptionList } from './Lists'
 
-export { Menu, MenuItem, DropdownMenu } from './Menus'
+export { Menu, MenuItem } from './Menus'
 export { Modal, ToggleModal } from './Modals'
 export { Pill } from './Pills'
+export { DropdownMenu, Popover } from './Popovers'
 export { ReportHeader, ReportInfo } from './Reports'
 export { TextSkeleton, ParagraphSkeleton, BlockSkeleton, CircleSkeleton } from './Skeletons'
 export { Spinner } from './Spinners'

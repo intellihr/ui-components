@@ -14,6 +14,7 @@ const InputGroupButton = styled.button`
   color: ${Variables.Color.n700};
   cursor: pointer;
   display: flex;
+  flex-shrink: 0;
   font-size: .9rem;
   font-weight: 600;
   height: 39px;
@@ -23,7 +24,6 @@ const InputGroupButton = styled.button`
   outline: none;
   text-align: center;
   transition: background-color .25s ease-out, color .25s ease-out;
-  flex: 0 0 0;
   min-width: 0;
 
   ${(props: IInputGroupButtonProps) => {

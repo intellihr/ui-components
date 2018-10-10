@@ -48,7 +48,15 @@
 
 ```jsx
 <DropdownMenu
-  toggleComponent={<Button>Colored Dropdown</Button>}
+  toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+    <Button
+      onClick={toggleMenu}
+      innerRef={toggleComponentRef}
+      buttonOverrides={{...ariaProps}}
+    >
+      Colored Dropdown
+    </Button>
+  }
   sections={[
     {
       text: 'Alert',
@@ -99,7 +107,15 @@ hiding the dropdown.
 ```jsx
 <React.Fragment>
   <DropdownMenu
-    toggleComponent={<Button>Anchored bottom left</Button>}
+    toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+      <Button
+        onClick={toggleMenu}
+        innerRef={toggleComponentRef}
+        buttonOverrides={{...ariaProps}}
+      >
+        Anchored bottom left
+      </Button>
+    }
     sections={[
       {
         text: 'Item 1'
@@ -118,7 +134,15 @@ hiding the dropdown.
     }}
   />
   <DropdownMenu
-    toggleComponent={<Button>Anchored bottom right</Button>}
+    toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+      <Button
+        onClick={toggleMenu}
+        innerRef={toggleComponentRef}
+        buttonOverrides={{...ariaProps}}
+      >
+        Anchored bottom right
+      </Button>
+    }
     sections={[
       {
         text: 'Item 1'
@@ -137,7 +161,15 @@ hiding the dropdown.
     }}
   />
   <DropdownMenu
-    toggleComponent={<Button>Drop upwards, top left</Button>}
+    toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+      <Button
+        onClick={toggleMenu}
+        innerRef={toggleComponentRef}
+        buttonOverrides={{...ariaProps}}
+      >
+        Drop upwards, top left
+      </Button>
+    }
     sections={[
       {
         text: 'Item 1'
@@ -156,7 +188,15 @@ hiding the dropdown.
     }}
   />
   <DropdownMenu
-    toggleComponent={<Button>Anchored top right, open to right</Button>}
+    toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+      <Button
+        onClick={toggleMenu}
+        innerRef={toggleComponentRef}
+        buttonOverrides={{...ariaProps}}
+      >
+        Anchored top right, open to right
+      </Button>
+    }
     sections={[
       {
         text: 'Item 1'
@@ -175,7 +215,15 @@ hiding the dropdown.
     }}
   />
   <DropdownMenu
-    toggleComponent={<Button>Anchored bottom left, open to left upwards</Button>}
+    toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+      <Button
+        onClick={toggleMenu}
+        innerRef={toggleComponentRef}
+        buttonOverrides={{...ariaProps}}
+      >
+        Anchored bottom left, open to left upwards
+      </Button>
+    }
     sections={[
       {
         text: 'Item 1'
@@ -200,7 +248,6 @@ hiding the dropdown.
 
 ```jsx
 <DropdownMenu
-   toggleComponent={<Button>Custom</Button>}
    sections={[
      {
        onClick: () => alert('Test'),
@@ -227,7 +274,6 @@ hiding the dropdown.
 const { FontAwesomeIcon } = require('@Domain/Icons');
 
 <DropdownMenu
-   toggleComponent={<Button>Icons</Button>}
    sections={[
      {
        leftComponent: <FontAwesomeIcon type='hand-o-right' />,
@@ -245,8 +291,13 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 const { FontAwesomeIcon, IntelliIcon } = require('@Domain/Icons');
 
 <DropdownMenu
-   toggleComponent={
-     <div style={{ cursor: 'pointer' }} >
+   toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+     <div
+       onClick={toggleMenu}
+       ref={toggleComponentRef}
+       {...ariaProps}
+       style={{ cursor: 'pointer' }}
+     >
        <Avatar
          initials='JD'
          size='medium'
@@ -296,77 +347,6 @@ const { FontAwesomeIcon, IntelliIcon } = require('@Domain/Icons');
 />
 ```
 
-#### Manual Dropdown Menu
-
-`DropdownMenu` provides a ManualMenu subcomponent, which can be used
-to manually manage the toggling and hiding of a dropdown menu, as
-well as specify its parent ref on the page.
-
-```jsx
-const { SelectInput } = require('@Domain/Inputs');
-
-class ManualExample extends React.PureComponent {
-  constructor () {
-    this.state = {
-      isOpen: false
-    }
-
-    this.anchorRef = React.createRef()
-  }
-
-  render () {
-    const {
-      isOpen
-    } = this.state
-
-    return (
-      <React.Fragment>
-        <Button
-          onClick={() => this.setState({ isOpen: true })}
-          buttonOverrides={{
-            'aria-haspopup': true,
-            'aria-expanded': isOpen,
-            'aria-owns': 'manual-menu-example'
-          }}
-        >
-          Show Menu
-        </Button>
-        <div
-          style={{
-            border: '1px black solid',
-            float: 'right',
-            padding: 10,
-            width: 200
-          }}
-          ref={this.anchorRef}
-        >
-          The dropdown will be anchored to this box
-        </div>
-        <DropdownMenu.ManualMenu
-          id='manual-menu-example'
-          isDropdownOpen={this.state.isOpen}
-          onDropdownClose={() => this.setState({ isOpen: false })}
-          sections={[
-            {
-              text: 'Item 1',
-              onClick: () => alert('Item 1')
-            },
-            {
-              text: 'Item 2',
-              href: 'https://www.intellihr.com.au'
-            }
-          ]}
-          parentRef={this.anchorRef}
-        />
-      </React.Fragment>
-    )
-  }
-}
-
-<ManualExample />
-
-```
-
 #### Custom children
 
 If the `sections` prop is not passed to the menu it will render the children as the content of the menu instead.
@@ -399,7 +379,15 @@ class ThingList extends React.PureComponent {
 }
 
 <DropdownMenu
-  toggleComponent={<Button>{state.selectedOption.label}</Button>}
+  toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+    <Button
+      onClick={toggleMenu}
+      innerRef={toggleComponentRef}
+      buttonOverrides={{...ariaProps}}
+    >
+      {state.selectedOption.label}
+    </Button>
+  }
 >
   {({closeMenu}) => 
     <>
