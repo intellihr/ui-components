@@ -27,13 +27,17 @@ const InputGroupButton = styled.button`
   min-width: 0;
 
   ${(props: IInputGroupButtonProps) => {
+    /* 
+      These border radiuses use IMPORTANT because of our current dependency on Foundation's Form styles.
+      Please remove the `!important` after this dependency has been removed.
+    */
     switch (props.groupPosition) {
       case 'left':
-        return css`border-radius: 4px 0 0 4px;`
+        return css`border-radius: 4px 0 0 4px !important;`
       case 'right':
-        return css`border-radius: 0 4px 4px 0;`
+        return css`border-radius: 0 4px 4px 0 !important;`
       default:
-        return css`border-radius: 0;`
+        return css`border-radius: 0 !important;`
     }
   }}
 
