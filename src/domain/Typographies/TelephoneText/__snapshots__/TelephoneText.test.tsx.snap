@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TelephoneText /> should render the Telephone Text 1`] = `
+<span>
+  <Emoji
+    emoji="flag-au"
+    type="body"
+  />
+  <Styled(Text)
+    color="#667380"
+    isUpper={true}
+    type="body"
+  >
+    au
+  </Styled(Text)>
+  <Styled(Text)
+    type="body"
+  >
+    (+
+    61
+    )
+  </Styled(Text)>
+  <Text
+    isInline={true}
+    tag="span"
+    type="body"
+  >
+    412 341 234
+  </Text>
+</span>
+`;
+
+exports[`<TelephoneText /> should render the Telephone Text with flag type 1`] = `
+<span>
+  <Emoji
+    emoji="flag-au"
+    type="body"
+  />
+  <Styled(Text)
+    color="#667380"
+    isUpper={true}
+    type="body"
+  >
+    au
+  </Styled(Text)>
+  <Styled(Text)
+    type="body"
+  >
+    (+
+    61
+    )
+  </Styled(Text)>
+  <Text
+    isInline={true}
+    tag="span"
+    type="body"
+  >
+    412 341 234
+  </Text>
+</span>
+`;
+
+exports[`<TelephoneText /> should render the Telephone Text without prefix 1`] = `
+<span>
+  <Text
+    isInline={true}
+    tag="span"
+    type="body"
+  >
+    +61412341234
+  </Text>
+</span>
+`;

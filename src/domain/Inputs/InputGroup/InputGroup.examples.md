@@ -64,7 +64,7 @@ initialState = {
     text: 'Georgia Lari (GEL)',
     value: 1,
     onClick: (option) => {setState({selectedOption: option}); closeMenu()},
-    leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/ge.png?raw=true' />,
+    leftComponent: <Emoji emoji='flag-ge' />,
     buttonText: 'GEL'
   }
 };
@@ -99,26 +99,26 @@ initialState = {
         {
           text: 'Georgia Lari (GEL)',
           value: 1,
-          leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/ge.png?raw=true' />,
+          leftComponent: <Emoji emoji='flag-ge' />,
           buttonText: 'GEL'
         },
         {
           text: 'Malaysia Ringgit (MYR)',
           value: 2,
-          leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/my.png?raw=true' />,
+          leftComponent: <Emoji emoji='flag-my' />,
           buttonText: 'MYR'
         },
         {
           text: 'New Zealand Dollar (NZD)',
           value: 3,
-          leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/nz.png?raw=true' />,
+          leftComponent: <Emoji emoji='flag-nz' />,
           buttonText: 'NZD'
         },
         {
           text: 'Australian Dollar (AUD)',
           value: 4,
           onClick: (option) => {alert('I have a custom onClick handler!'); setState({selectedOption: option}); closeMenu()},
-          leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/au.png?raw=true' />,
+          leftComponent: <Emoji emoji='flag-au' />,
           rightComponent: <FontAwesomeIcon type='star' />,
           buttonText: 'AUD'
         }
