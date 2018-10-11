@@ -9,10 +9,13 @@ exports[`<TelephoneText /> should render the Telephone Text 1`] = `
   <Styled(Text)
     color="#667380"
     isUpper={true}
+    type="body"
   >
     au
   </Styled(Text)>
-  <Styled(Text)>
+  <Styled(Text)
+    type="body"
+  >
     (+
     61
     )
@@ -36,10 +39,13 @@ exports[`<TelephoneText /> should render the Telephone Text with flag type 1`] =
   <Styled(Text)
     color="#667380"
     isUpper={true}
+    type="body"
   >
     au
   </Styled(Text)>
-  <Styled(Text)>
+  <Styled(Text)
+    type="body"
+  >
     (+
     61
     )
