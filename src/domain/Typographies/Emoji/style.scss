@@ -39,7 +39,6 @@ $typography-styles: (
   line-height: map-get($style, line-height);
 }
 
-
 :local(.ihrEmoji) {
   @each $typography-size, $style in $typography-styles {
     &.#{$typography-size} {

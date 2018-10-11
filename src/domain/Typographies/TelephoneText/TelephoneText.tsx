@@ -17,7 +17,7 @@ interface ITelephoneTextProps {
 
 class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
   public static defaultProps = {
-    flagType: Props.TypographyType.Body
+    type: Props.TypographyType.Body
   }
 
   get prefix(): JSX.Element | undefined {
