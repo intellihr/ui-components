@@ -12,6 +12,7 @@ describe('<Emoji />', () => {
       />
     )
 
-    expect(wrapper).toMatchSnapshot()
+    expect(wrapper.find('Emoji').exists()).toBeTruthy()
+    expect(wrapper.find('Emoji').prop('emoji')).toEqual('smiley')
   })
 })
