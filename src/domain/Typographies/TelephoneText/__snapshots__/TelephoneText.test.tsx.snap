@@ -2,13 +2,8 @@
 
 exports[`<TelephoneText /> should render the Telephone Text 1`] = `
 <span>
-  <Emoji
-    emoji="flag-au"
-    type="body"
-  />
   <Styled(Text)
     color="#667380"
-    isDisplayFlag={true}
     isUpper={true}
     type="body"
   >
@@ -33,13 +28,8 @@ exports[`<TelephoneText /> should render the Telephone Text 1`] = `
 
 exports[`<TelephoneText /> should render the Telephone Text with flag type 1`] = `
 <span>
-  <Emoji
-    emoji="flag-au"
-    type="body"
-  />
   <Styled(Text)
     color="#667380"
-    isDisplayFlag={true}
     isUpper={true}
     type="body"
   >
