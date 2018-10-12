@@ -44,11 +44,10 @@ $status-dot-styles: (
     }
   }
 
-  >.icon {
-    bottom: -2px;
-    font-size: 14px;
+  >.status-icon {
+    bottom: -4px;
     position: absolute;
-    right: 0;
+    right: -4px;
   }
 
   &.avatar-small {

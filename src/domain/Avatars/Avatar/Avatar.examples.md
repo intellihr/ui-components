@@ -129,6 +129,7 @@
 
 ```jsx
 
+const { Variables } = require('@Common');
 const { FontAwesomeIcon } = require('@Domain/Icons');
 
 <div>
@@ -136,7 +137,7 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
       <Avatar
         initials='JW'
         size='medium'
-        statusIcon={<FontAwesomeIcon type='arrow-right' color='#432df3' />}
+        statusIcon={<FontAwesomeIcon type='arrow-right' color={Variables.Color.i400} size='small'/>}
       />
     </div>
     <div>
@@ -144,7 +145,7 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
         initials='JW'
         size='medium'
         statusDot='success'
-        statusIcon={<FontAwesomeIcon type='arrow-right' color='#432df3' />}
+        statusIcon={<FontAwesomeIcon type='arrow-right' color={Variables.Color.i400} size='small' />}
       />
     </div>
 </div>

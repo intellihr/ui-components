@@ -5,7 +5,9 @@ exports[`<MenuItem /> should render a a menu item with a link 1`] = `
   <a
     href="www.google.com"
   >
-    Test menu item
+    <styled.span>
+      Test menu item
+    </styled.span>
   </a>
 </styled.li>
 `;
@@ -35,9 +37,11 @@ exports[`<MenuItem /> should render a menu item as a submenu if it has children 
       <a
         href="www.google.com"
       >
-        <IntelliIcon
-          type="clock"
-        />
+        <styled.span>
+          <IntelliIcon
+            type="clock"
+          />
+        </styled.span>
         <styled.span>
           Father
         </styled.span>
@@ -79,9 +83,11 @@ exports[`<MenuItem /> should render a menu item with Icon 1`] = `
   <a
     href="www.google.com"
   >
-    <IntelliIcon
-      type="clock"
-    />
+    <styled.span>
+      <IntelliIcon
+        type="clock"
+      />
+    </styled.span>
     <styled.span>
       Test menu item
     </styled.span>
@@ -96,7 +102,9 @@ exports[`<MenuItem /> should render a menu item with active state 1`] = `
   <a
     href="www.google.com"
   >
-    Test menu item
+    <styled.span>
+      Test menu item
+    </styled.span>
   </a>
 </styled.li>
 `;
@@ -106,9 +114,11 @@ exports[`<MenuItem /> should render a menu item with loading state 1`] = `
   <a
     href="www.google.com"
   >
-    <IntelliIcon
-      type="clock"
-    />
+    <styled.span>
+      <IntelliIcon
+        type="clock"
+      />
+    </styled.span>
     <styled.span>
       Test menu item
     </styled.span>
@@ -125,7 +135,9 @@ exports[`<MenuItem /> should render a menu item with loading state 1`] = `
 exports[`<MenuItem /> should render a simple menu item 1`] = `
 <styled.li>
   <a>
-    Test menu item
+    <styled.span>
+      Test menu item
+    </styled.span>
   </a>
 </styled.li>
 `;
