@@ -13,36 +13,59 @@ interface ITelephoneTextProps {
   dialCode?: string
   /** Specify the type of text and flag to use */
   type: Props.TypographyType
+  /** Specify the color of phone number to use */
+  color?: Variables.Color
+  /** If true, displays the flag */
+  isFlagDisplayed: boolean
 }
 
 class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
   public static defaultProps = {
-    type: Props.TypographyType.Body
+    type: Props.TypographyType.Body,
+    isFlagDisplayed: true
+  }
+
+  get flag(): JSX.Element | undefined {
+    const {
+      countryCode,
+      isFlagDisplayed,
+      type
+    } = this.props
+
+    if (countryCode && isFlagDisplayed) {
+      return(
+        <Emoji
+          emoji={`flag-${countryCode}`}
+          type={type}
+        />
+      )
+    }
   }
 
   get prefix(): JSX.Element | undefined {
     const {
       countryCode,
       dialCode,
-      type
+      isFlagDisplayed,
+      type,
+      color
     } = this.props
 
     if (countryCode && dialCode) {
       return (
         <>
-          <Emoji
-            emoji={`flag-${countryCode}`}
-            type={type}
-          />
+          {this.flag}
           <CountryCodeWrapper
             color={Variables.Color.n600}
             type={type}
+            isFlagDisplayed={isFlagDisplayed}
             isUpper
           >
             {countryCode}
           </CountryCodeWrapper>
           <DialCodeWrapper
             type={type}
+            color={color}
           >
             (+{dialCode})
           </DialCodeWrapper>
@@ -56,24 +79,30 @@ class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
       countryCode,
       dialCode,
       phoneNumber,
-      type
+      type,
+      color
     } = this.props
 
     let formattedPhoneNumber = phoneNumber
 
-    if (countryCode && dialCode && phoneNumber.length > 5) {
-      let format = /(?!^)(\d{3})(?=(?:\d{3})*$)/g
+    if (countryCode && dialCode) {
+      formattedPhoneNumber = phoneNumber.replace(/\s/g,'')
 
-      if (phoneNumber.length === 8 || phoneNumber.length === 7) {
-        format = /(?!^)(\d{4})(?=(?:\d{4})*$)/g
+      if (formattedPhoneNumber.length > 5) {
+        let format = /(?!^)(\d{3})(?=(?:\d{3})*$)/g
+
+        if (formattedPhoneNumber.length === 8 || formattedPhoneNumber.length === 7) {
+          format = /(?!^)(\d{4})(?=(?:\d{4})*$)/g
+        }
+
+        formattedPhoneNumber=  formattedPhoneNumber.replace(format, ' $1')
       }
-
-      formattedPhoneNumber=  phoneNumber.replace(format, ' $1')
     }
 
     return (
       <Text
         type={type}
+        color={color}
       >
         {formattedPhoneNumber}
       </Text>
