@@ -50,7 +50,6 @@ exports[`<DropdownMenu /> Render a dropdown using custom content should match th
         </styled.div>
       </styled.div>
     </FocusTrap>
-    <Component />
   </Popover>
 </Fragment>
 `;
