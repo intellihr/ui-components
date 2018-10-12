@@ -8,6 +8,7 @@ exports[`<TelephoneText /> should render the Telephone Text 1`] = `
   />
   <Styled(Text)
     color="#667380"
+    isDisplayFlag={true}
     isUpper={true}
     type="body"
   >
@@ -38,6 +39,7 @@ exports[`<TelephoneText /> should render the Telephone Text with flag type 1`] =
   />
   <Styled(Text)
     color="#667380"
+    isDisplayFlag={true}
     isUpper={true}
     type="body"
   >

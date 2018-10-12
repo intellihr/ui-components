@@ -34,7 +34,7 @@
   </div>
 ```
 
-#### Styled Telephone Text
+#### Telephone Text with Types
 
 ```jsx
   <div>
@@ -80,6 +80,33 @@
       type='display-large'
      />
   </div>
+```
+
+#### Telephone Text with color
+
+```jsx
+const { Variables } = require('../../../common');
+
+  <TelephoneText
+    phoneNumber='412341234'
+    countryCode='au'
+    dialCode='61'
+    color={Variables.Color.i400}
+   />
+```
+
+#### Telephone Text without flag
+
+```jsx
+const { Variables } = require('../../../common');
+
+  <TelephoneText
+    phoneNumber='412341234'
+    countryCode='au'
+    dialCode='61'
+    isDisplayFlag={false}
+    color={Variables.Color.i400}
+   />
 ```
 
 #### Telephone Text without prefix

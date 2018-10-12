@@ -1,9 +1,21 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Text } from '../Text'
 
+interface ICountryCodeWrapperProps {
+  isDisplayFlag?: boolean
+}
+
 const CountryCodeWrapper = styled(Text)`
-  margin-left: 8px;
+  
   margin-right: 4px;
+  
+  ${(props: ICountryCodeWrapperProps) => {
+  if (props.isDisplayFlag) {
+    return css`
+    margin-left: 8px;
+    `
+  }
+}}
 `
 
 const DialCodeWrapper = styled(Text)`
