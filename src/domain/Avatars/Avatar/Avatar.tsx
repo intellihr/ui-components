@@ -112,7 +112,11 @@ class Avatar extends React.Component<IAvatarProps> {
     } = this.props
 
     if (statusIcon) {
-      return statusIcon
+      return (
+        <span className='status-icon'>
+          {statusIcon}
+        </span>
+      )
     }
 
     return null

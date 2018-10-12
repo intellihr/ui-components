@@ -21,7 +21,6 @@ const MenuItemWrapper = styled.li`
 
     color: ${Variables.Color.n700};
     margin-left: 3px;
-    white-space: nowrap;
 
     &:hover {
       color: ${Variables.Color.n700};
@@ -36,12 +35,11 @@ const MenuItemWrapper = styled.li`
       font-weight: 600;
       margin-left: 0;
     }
-     
-     > .icon {
-      text-align: center;
-      vertical-align: top;
-    }
   }
+`
+
+const IconWrapper = styled.span`
+  margin-right: 0.25rem;
 `
 
 const LoadingIconWrapper = styled.span`
@@ -58,9 +56,11 @@ const SubMenuWrapper = styled.ul`
 
 const MenuItemLabelWrapper = styled.span`
   margin-left: 3px;
+  white-space: nowrap;
 `
 
 export {
+  IconWrapper,
   MenuItemWrapper,
   LoadingIconWrapper,
   SubMenuWrapper,
