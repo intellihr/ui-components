@@ -22,7 +22,7 @@ interface ITelephoneTextProps {
 class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
   public static defaultProps = {
     type: Props.TypographyType.Body,
-    isDisplayFlag: true
+    isFlagDisplayed: true
   }
 
   get flag(): JSX.Element | undefined {

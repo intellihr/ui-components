@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import { Text } from '../Text'
 
 interface ICountryCodeWrapperProps {
-  isFlagDisplayed?: boolean
+  isFlagDisplayed: boolean
 }
 
 const CountryCodeWrapper = styled(Text)`
