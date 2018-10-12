@@ -2,19 +2,17 @@ import styled, { css } from 'styled-components'
 import { Text } from '../Text'
 
 interface ICountryCodeWrapperProps {
-  isDisplayFlag?: boolean
+  isFlagDisplayed?: boolean
 }
 
 const CountryCodeWrapper = styled(Text)`
   
   margin-right: 4px;
   
-  ${(props: ICountryCodeWrapperProps) => {
-  if (props.isDisplayFlag) {
-    return css`
-    margin-left: 8px;
-    `
-  }
+  ${(props: ICountryCodeWrapperProps) => props.isFlagDisplayed && css`
+     margin-left: 8px;
+  `}
+
 }}
 `
 

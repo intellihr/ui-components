@@ -105,7 +105,6 @@ const { Variables } = require('../../../common');
     countryCode='au'
     dialCode='61'
     isDisplayFlag={false}
-    color={Variables.Color.i400}
    />
 ```
 

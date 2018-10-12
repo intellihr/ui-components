@@ -2,7 +2,7 @@ import React from 'react'
 import { Emoji } from '../Emoji'
 import { Text } from '../Text'
 import { Props, Variables } from '../../../common'
-import { CountryCodeWrapper, DialCodeWrapper} from '../TelephoneText/style'
+import { CountryCodeWrapper, DialCodeWrapper } from '../TelephoneText/style'
 
 interface ITelephoneTextProps {
   /** phone number to display */
@@ -16,7 +16,7 @@ interface ITelephoneTextProps {
   /** Specify the color of phone number to use */
   color?: Variables.Color
   /** If true, displays the flag */
-  isDisplayFlag: boolean
+  isFlagDisplayed: boolean
 }
 
 class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
@@ -25,14 +25,14 @@ class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
     isDisplayFlag: true
   }
 
-  get flag(): JSX.Element |undefined {
+  get flag(): JSX.Element | undefined {
     const {
       countryCode,
-      isDisplayFlag,
+      isFlagDisplayed,
       type
     } = this.props
 
-    if (countryCode && isDisplayFlag) {
+    if (countryCode && isFlagDisplayed) {
       return(
         <Emoji
           emoji={`flag-${countryCode}`}
@@ -46,7 +46,7 @@ class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
     const {
       countryCode,
       dialCode,
-      isDisplayFlag,
+      isFlagDisplayed,
       type,
       color
     } = this.props
@@ -58,7 +58,7 @@ class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
           <CountryCodeWrapper
             color={Variables.Color.n600}
             type={type}
-            isDisplayFlag={isDisplayFlag}
+            isFlagDisplayed={isFlagDisplayed}
             isUpper
           >
             {countryCode}
