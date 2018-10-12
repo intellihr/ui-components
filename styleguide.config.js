@@ -81,20 +81,14 @@ module.exports = {
         {
           name: 'Formats',
           components: [
-            'src/domain/Formats/IndentedElement/IndentedElement',
-            'src/domain/Formats/Field/Field'
+            'src/domain/Formats/Field/Field',
+            'src/domain/Formats/IndentedElement/IndentedElement'
           ]
         },
         {
           name: 'Forms',
           components: [
             'src/domain/Forms/VerticalForm/VerticalForm'
-          ]
-        },
-        {
-          name: 'Grid',
-          components: [
-            'src/domain/Grids/Grid/GridProvider'
           ]
         },
         {
@@ -112,9 +106,9 @@ module.exports = {
         {
           name: 'Inputs',
           components: [
-            'src/domain/Inputs/InputLabel/InputLabel',
             'src/domain/Inputs/Input/Input',
             'src/domain/Inputs/InputGroup/InputGroup',
+            'src/domain/Inputs/InputLabel/InputLabel',
             'src/domain/Inputs/SelectInput/SelectInput',
             'src/domain/Inputs/TextAreaInput/TextAreaInput'
           ]
@@ -144,10 +138,10 @@ module.exports = {
         {
           name: 'Lists',
           components: [
-            'src/domain/Lists/List/List',
             'src/domain/Lists/ActionList/ActionList',
-            'src/domain/Lists/SmartList/SmartList',
-            'src/domain/Lists/OptionList/OptionList'
+            'src/domain/Lists/List/List',
+            'src/domain/Lists/OptionList/OptionList',
+            'src/domain/Lists/SmartList/SmartList'
           ]
         },
         {
@@ -186,10 +180,10 @@ module.exports = {
         {
           name: 'Skeletons',
           components: [
-            'src/domain/Skeletons/TextSkeleton/TextSkeleton',
-            'src/domain/Skeletons/ParagraphSkeleton/ParagraphSkeleton',
             'src/domain/Skeletons/BlockSkeleton/BlockSkeleton',
-            'src/domain/Skeletons/CircleSkeleton/CircleSkeleton'
+            'src/domain/Skeletons/CircleSkeleton/CircleSkeleton',
+            'src/domain/Skeletons/ParagraphSkeleton/ParagraphSkeleton',
+            'src/domain/Skeletons/TextSkeleton/TextSkeleton'
           ]
         },
         {
@@ -233,11 +227,11 @@ module.exports = {
         {
           name: 'Typographies',
           components: [
-            'src/domain/Typographies/FormattedText/FormattedText',
-            'src/domain/Typographies/Text/Text',
             'src/domain/Typographies/CurrencyText/CurrencyText',
             'src/domain/Typographies/Emoji/Emoji',
-            'src/domain/Typographies/TelephoneText/TelephoneText'
+            'src/domain/Typographies/FormattedText/FormattedText',
+            'src/domain/Typographies/TelephoneText/TelephoneText',
+            'src/domain/Typographies/Text/Text'
           ]
         }
       ]
@@ -245,9 +239,15 @@ module.exports = {
     {
       name: 'Internal/Higher Order Components',
       components: [
+        'src/domain/Internals/Anchor/Anchor',
         'src/domain/Styles/hoc/withStyledBreakpoints',
-        'src/domain/Defaults/withDefaults/withDefaults',
-        'src/domain/Internals/Anchor/Anchor'
+        'src/domain/Defaults/withDefaults/withDefaults'
+      ]
+    },
+    {
+      name: 'Deprecated Components',
+      components: [
+        'src/domain/Grids/Grid/GridProvider'
       ]
     }
   ],
