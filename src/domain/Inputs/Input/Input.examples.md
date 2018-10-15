@@ -69,7 +69,6 @@ const { IntelliIcon } = require('@Domain/Icons');
 const { TextInput } = require('../TextInput');
 const { NumberInput } = require('../NumberInput');
 const { FontAwesomeIcon } = require('@Domain/Icons');
-const { IntelliIcon } = require('@Domain/Icons');
 
 <div>
   Text

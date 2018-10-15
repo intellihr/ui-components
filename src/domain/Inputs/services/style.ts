@@ -25,29 +25,27 @@ const InputWrapper = styled.div`
   if (props.disablePrefix && props.hasIcon) {
     return css `
       input {
-        text-indent: ${props.disablePrefix.length * 8 + 30}px;
+        text-indent: ${props.disablePrefix.length * 9 + 30}px;
       }
     `
   }
-    
   }}
 
 `
 const PrefixWrapper = styled.div`
-    position:absolute;
+    position: absolute;
     top: 8px;
     left: 4px;
     width: auto;
     
     .fa {
     color: ${Variables.Color.n400};
-    margin-left:8px;
+    margin-left: 8px;
   }
 `
 
 const DisableTextWrapper = styled.span`
-    margin-left:8px;
-    
+    margin-left: 8px;
 `
 export {
   InputWrapper,

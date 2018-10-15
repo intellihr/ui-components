@@ -150,8 +150,8 @@ export class Input extends React.PureComponent<InputProps> {
           hasIcon={!!icon}
         >
           <PrefixWrapper>
-          {icon}
-          <DisableTextWrapper>{disablePrefix} </DisableTextWrapper>
+            {icon}
+            <DisableTextWrapper> {disablePrefix} </DisableTextWrapper>
           </PrefixWrapper>
           {this.input()}
         </InputWrapper>
