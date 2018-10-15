@@ -63,6 +63,27 @@ const { IntelliIcon } = require('@Domain/Icons');
 </div>
 ```
 
+#### Input with Disable Prefix text
+
+```jsx
+const { TextInput } = require('../TextInput');
+const { NumberInput } = require('../NumberInput');
+const { FontAwesomeIcon } = require('@Domain/Icons');
+const { IntelliIcon } = require('@Domain/Icons');
+
+<div>
+  Text
+  <TextInput
+    icon={<FontAwesomeIcon type='facebook' />}
+    disablePrefix='Hello!' 
+  />
+  Number
+  <NumberInput
+    disablePrefix='(123)' 
+  />
+</div>
+```
+
 #### Input with highlightOnFocus
 
 ```jsx
