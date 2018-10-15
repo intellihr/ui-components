@@ -90,4 +90,16 @@ describe('<Input />', () => {
     expect(mockedEvent.target.select.mock.calls.length).toBe(0)
     expect(wrapper).toMatchSnapshot()
   })
+
+  it(`should render an input with a disable prefix text`, () => {
+    const wrapper = shallow(
+      <Input
+        name='test-input'
+        type='text'
+        disablePrefix='test'
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })

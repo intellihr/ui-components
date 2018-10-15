@@ -30,13 +30,41 @@ exports[`<Input /> should render an input 1`] = `
 />
 `;
 
-exports[`<Input /> should render an input with an icon 1`] = `
-<styled.div>
-  <Icon
-    isSpinning={false}
-    size="medium"
-    type="fa-check"
+exports[`<Input /> should render an input with a disable prefix text 1`] = `
+<styled.div
+  disablePrefix="test"
+  hasIcon={false}
+>
+  <styled.div>
+    <styled.span>
+      test
+       
+    </styled.span>
+  </styled.div>
+  <input
+    className="input "
+    id="test-input"
+    name="test-input"
+    onFocus={[Function]}
+    type="text"
   />
+</styled.div>
+`;
+
+exports[`<Input /> should render an input with an icon 1`] = `
+<styled.div
+  hasIcon={true}
+>
+  <styled.div>
+    <Icon
+      isSpinning={false}
+      size="medium"
+      type="fa-check"
+    />
+    <styled.span>
+       
+    </styled.span>
+  </styled.div>
   <input
     className="input "
     id="test-input"
