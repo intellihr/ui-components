@@ -1,7 +1,7 @@
 import React, { ChangeEventHandler } from 'react'
 import classNames from 'classnames'
 import { isNil } from 'lodash'
-import { InputWrapper } from '../services/style'
+import { InputWrapper, PrefixWrapper, DisabledTextWrapper } from '../services/style'
 import { InputGroupPosition } from '../InputGroup'
 
 const style = require('./style.scss')
@@ -47,6 +47,8 @@ interface IGenericInputProps {
   groupPosition?: InputGroupPosition
   /** Specify width of the input */
   width?: string
+  /** Disable Prefix to display in the input box */
+  disabledPrefix?: string
 }
 
 interface InputProps extends IGenericInputProps {
@@ -137,13 +139,20 @@ export class Input extends React.PureComponent<InputProps> {
 
   public render (): JSX.Element {
     const {
-      icon
+      icon,
+      disabledPrefix
     } = this.props
 
-    if (icon) {
+    if (icon || disabledPrefix) {
       return (
-        <InputWrapper>
-          {icon}
+        <InputWrapper
+          disabledPrefix={disabledPrefix}
+          hasIcon={!!icon}
+        >
+          <PrefixWrapper>
+            {icon}
+            <DisabledTextWrapper> {disabledPrefix} </DisabledTextWrapper>
+          </PrefixWrapper>
           {this.input()}
         </InputWrapper>
       )

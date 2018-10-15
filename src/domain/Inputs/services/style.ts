@@ -1,18 +1,50 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Variables } from '../../../common'
 
-export const InputWrapper = styled.div`
+export interface IInputWrappeProps {
+  disabledPrefix?: string
+  hasIcon: boolean
+}
+
+const InputWrapper = styled.div`
   position: relative;
   color: ${Variables.Color.n800};
 
   input {
     text-indent: 30px;
   }
+  
+  ${(props: IInputWrappeProps) => props.disabledPrefix && !props.hasIcon && css`
+     input {
+        text-indent: ${props.disabledPrefix.length * 10}px;
+      }
+  `}
+  
+  ${(props: IInputWrappeProps) => props.disabledPrefix && props.hasIcon && css`
+     input {
+        text-indent: ${props.disabledPrefix.length * 9 + 30}px;
+      }
+  `}
 
-  .fa {
+`
+const PrefixWrapper = styled.div`
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 8px;
+    left: 4px;
+    width: auto;
+    
+    .fa {
     color: ${Variables.Color.n400};
+    margin-left: 8px;
   }
 `
+
+const DisabledTextWrapper = styled.span`
+    margin-left: 8px;
+`
+
+export {
+  InputWrapper,
+  PrefixWrapper,
+  DisabledTextWrapper
+}
