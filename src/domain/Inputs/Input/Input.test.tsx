@@ -96,7 +96,7 @@ describe('<Input />', () => {
       <Input
         name='test-input'
         type='text'
-        disablePrefix='test'
+        disabledPrefix='test'
       />
     )
 

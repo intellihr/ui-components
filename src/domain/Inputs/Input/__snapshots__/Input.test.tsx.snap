@@ -32,7 +32,7 @@ exports[`<Input /> should render an input 1`] = `
 
 exports[`<Input /> should render an input with a disable prefix text 1`] = `
 <styled.div
-  disablePrefix="test"
+  disabledPrefix="test"
   hasIcon={false}
 >
   <styled.div>

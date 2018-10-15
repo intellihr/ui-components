@@ -74,11 +74,11 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
   Text
   <TextInput
     icon={<FontAwesomeIcon type='facebook' />}
-    disablePrefix='Hello!' 
+    disabledPrefix='Hello!' 
   />
   Number
   <NumberInput
-    disablePrefix='(123)' 
+    disabledPrefix='(123)' 
   />
 </div>
 ```
