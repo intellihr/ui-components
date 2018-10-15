@@ -142,8 +142,7 @@ class DropdownMenu extends React.Component<IDropdownMenuProps, IDropdownMenuStat
     const {
       className,
       parentAnchorPosition,
-      dropdownAnchorPosition,
-      children
+      dropdownAnchorPosition
     } = this.props
 
     return (
@@ -171,7 +170,6 @@ class DropdownMenu extends React.Component<IDropdownMenuProps, IDropdownMenuStat
             {this.dropdownContent}
           </StyledContentWrapper>
         </FocusTrap>
-        {children}
       </Popover>
     )
   }

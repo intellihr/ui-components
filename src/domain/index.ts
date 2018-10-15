@@ -39,4 +39,4 @@ export { VerticalTimeline, VerticalTimelineEvent } from './Timelines'
 
 export { Toast } from './Toasts'
 export { Tooltip } from './Tooltips'
-export { FormattedText, Text, CurrencyText } from './Typographies'
+export { FormattedText, Text, CurrencyText, Emoji, TelephoneText } from './Typographies'

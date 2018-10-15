@@ -1,4 +1,10 @@
-#### Grid system organisation
+## Deprecated
+
+**This component is deprecated and should not be used outside this library**
+
+Use [XYGrid](#!/XYGrid) instead as a more powerful, css-only solution.
+
+----
 
 React Context API is used through `styled-components`'s Theme Provider 
 (https://www.styled-components.com/docs/advanced) to allow the consumer to 

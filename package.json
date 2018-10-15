@@ -1,7 +1,7 @@
 {
   "name": "@intellihr/ui-components",
   "description": "A common React components library that is used in our company",
-  "version": "1.0.5-beta.119",
+  "version": "1.0.5-beta.120",
   "main": "./dist/",
   "types": "./types/index.d.ts",
   "files": [
@@ -24,7 +24,7 @@
     "chart.js": "2.7.2",
     "classnames": "2.2.5",
     "color": "3.0.0",
-    "emoji-mart": "2.6.1",
+    "emoji-mart": "2.8.1",
     "focus-trap-react": "3.1.2",
     "font-awesome": "4.7.0",
     "html-to-react": "1.3.3",
@@ -54,7 +54,7 @@
     "@types/chart.js": "2.7.14",
     "@types/classnames": "2.2.3",
     "@types/color": "3.0.0",
-    "@types/emoji-mart": "^2.2.1",
+    "@types/emoji-mart": "^2.8.1",
     "@types/enzyme": "3.1.9",
     "@types/foundation-sites": "^6.4.3",
     "@types/jest": "22.2.2",

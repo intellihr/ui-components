@@ -115,8 +115,8 @@ exports[`<Badge /> should render a spinning badge 1`] = `
   width: 1.28571em;
 }
 
-.c1.fa {
-  margin-right: .25rem;
+.c1.icon {
+  text-align: center;
   font-size: 1rem;
 }
 

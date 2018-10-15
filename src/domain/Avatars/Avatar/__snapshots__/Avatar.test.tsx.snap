@@ -58,8 +58,8 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
   width: 1.28571em;
 }
 
-.c0.fa {
-  margin-right: .25rem;
+.c0.icon {
+  text-align: center;
   font-size: 1rem;
 }
 

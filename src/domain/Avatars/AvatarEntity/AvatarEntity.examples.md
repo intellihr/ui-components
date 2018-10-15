@@ -18,13 +18,14 @@
 ```
 
 ```jsx
+const { Variables } = require('@Common');
 const { FontAwesomeIcon } = require('@Domain/Icons');
 
   <AvatarEntity
     initials='JW'
     statusDot='primary'
     statusIcon={
-      <FontAwesomeIcon type='arrow-right' color='#432df3' />
+      <FontAwesomeIcon type='arrow-right' color={Variables.Color.i400} size='small'/>
     }
     primaryText='John Wick'
     secondaryText='Guy Killer'
@@ -45,13 +46,14 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 
 
 ```jsx
+const { Variables } = require('@Common');
 const { FontAwesomeIcon } = require('@Domain/Icons');
 
   <AvatarEntity
     initials='JW'
     statusDot='success'
     statusIcon={
-      <FontAwesomeIcon type='arrow-right' color='#432df3' />
+      <FontAwesomeIcon type='arrow-right' color={Variables.Color.i400} size='xsmall' />
     }
     primaryText='John Wick'
     secondaryText='Guy Killer'
@@ -62,13 +64,14 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 #### isHoverable
 
 ```jsx
+const { Variables } = require('@Common');
 const { FontAwesomeIcon } = require('@Domain/Icons');
 
   <AvatarEntity
     initials='JW'
     statusDot='primary'
     statusIcon={
-      <FontAwesomeIcon type='arrow-right' color='#432df3' />
+      <FontAwesomeIcon type='arrow-right' color={Variables.Color.i400} size='small'/>
     }
     primaryText='John Wick'
     secondaryText='Guy Killer'
@@ -82,10 +85,6 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 
   <AvatarEntity
     initials='JW'
-    statusDot='success'
-    statusIcon={
-      <FontAwesomeIcon type='arrow-right' color='#432df3' />
-    }
     primaryText='John Wick'
     secondaryText='Guy Killer'
     isCompact
@@ -97,9 +96,8 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 ```jsx
   <AvatarEntity
     initials='JW'
-    statusDot='primary'
-    primaryText='I am having a very very long name and i donot want the style to break because of my very very long name'
-    secondaryText='I am having a very very long position title and i donot want the style to break because of my very very long name'
+    primaryText='I have a very very long name and I do not want the style to break because of my very very long name'
+    secondaryText='I have a very very long position title and I do not want the style to break because of it'
   />
 ```
 

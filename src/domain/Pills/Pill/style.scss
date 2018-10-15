@@ -3,12 +3,12 @@
 $pill-styles: (
   primary: (
     background-color: $i100,
-    text-color: $i400,
+    text-color: $i600,
     border-color: $i400
   ),
   secondary: (
     background-color: $b100,
-    text-color: $b400,
+    text-color: $b600,
     border-color: $b400
   ),
   success: (
@@ -23,12 +23,12 @@ $pill-styles: (
   ),
   alert: (
     background-color: $r100,
-    text-color: $r500,
+    text-color: $r600,
     border-color: $r300
   ),
   neutral: (
     background-color: $n200,
-    text-color: $n700,
+    text-color: $n800,
     border-color: $n400
   ),
   highlight: (
@@ -49,12 +49,12 @@ $pill-styles: (
 }
 
 %pill {
-  border-radius: 31px;
+  border-radius: 32px;
   display: inline-block;
-  font-size: 12px;
-  font-weight: normal;
-  line-height: 1;
-  padding: 4px 11px;
+  font-size: $fz-xsmall;
+  font-weight: $fw-medium;
+  line-height: 14px;
+  padding: 4px 8px;
   white-space: nowrap;
 
   @each $color, $value in $pill-styles {
@@ -68,12 +68,14 @@ $pill-styles: (
   }
 
   &.medium {
-    font-size: 14px;
+    font-size: $fz-small;
+    line-height: 16px;
   }
 
   &.large {
-    font-size: 15px;
-    padding: 4px 15px;
+    font-size: $fz-body;
+    line-height: 18px;
+    padding: 4px 12px;
   }
 
 }
