@@ -9,6 +9,7 @@ export interface IInputWrappeProps {
 const InputWrapper = styled.div`
   position: relative;
   color: ${Variables.Color.n800};
+  width: 100%;
 
   input {
     text-indent: 30px;
@@ -32,6 +33,7 @@ const PrefixWrapper = styled.div`
     top: 8px;
     left: 4px;
     width: auto;
+    user-select: none;
     
     .fa {
     color: ${Variables.Color.n400};
