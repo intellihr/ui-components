@@ -1,58 +1,78 @@
 import React from 'react'
 import { toLower, map } from 'lodash'
-import {
-  OptionListButton,
-  OptionListLeftComponent,
-  OptionListRightComponent,
-  OptionListWrapper,
-  StyledEmptyState
-} from './style'
 import { Text } from '../../Typographies/Text'
 import { Props } from '../../../common'
 
-type OptionClickCallback = (option: IOptionProps) => void
-
-type OptionValue = string | number | boolean
-
-interface IOptionProps {
-  /** A component that is shown to the left of the text */
-  leftComponent?: JSX.Element
-  /** A component that is shown to the right of the text */
-  rightComponent?: JSX.Element
-  /** Text to display */
-  text: string
-  /** Value of the option */
-  value: OptionValue
-  /** Callback when option is clicked. Overrides OptionList handleClick. */
-  onClick?: OptionClickCallback
-  /** Any other option property that will get passed with the onClick callback */
-  [x: string]: any
+interface IValueFilter {
+  kind: 'valueFilter'
+  /** String paths within the data to filter over */
+  paths: string[]
+  /** Case sensitive filtering? */
+  caseSensitive: boolean
+  /** Value to filter the above paths by */
+  filterValue?: string
 }
 
-interface IOptionListProps {
-  /** Array of options to display in the list */
-  options: IOptionProps[]
-  /** Query string to filter the options by */
-  query?: string
-  /** Default callback when an option is selected */
-  handleClick: OptionClickCallback
-  /** Currently selected value */
-  selectedValue?: OptionValue
-  /** Maximum height of the list */
-  maxHeight?: number,
-  /** whether the text in the options should truncate */
-  truncatedText?: boolean
+// Support multiple filter types in future
+type Filter = IValueFilter
+
+type DataFetchCallback = (args: IFilteredListProps) => any[]
+
+type RenderCallback = (args: IFilteredListProps | { row: any, filteredRows: any[], index: }) => JSX.Element | null | undefined
+
+interface IFilteredListProps {
+  /** Array of data to filter, or a promise callback for filter data */
+  data: any[] | DataFetchCallback
+  /** List of filters to apply to the data */
+  filters: Filter[]
+  /** Row rendering callback */
+  row?: RenderCallback
+  /** Body rendering callback  */
+  body?: RenderCallback
 }
 
-class OptionList extends React.PureComponent<IOptionListProps> {
-  public static defaultProps: Partial<IOptionListProps> = {
-    truncatedText: false
+interface IFilteredListState {
+  /** Array of data after fetching */
+  data: any[]
+  /** Array of filtered data */
+  filteredData: any[]
+}
+
+class FilteredList extends React.PureComponent<IFilteredListProps, IFilteredListState> {
+  public state: IFilteredListState = {
+    data: [],
+    filteredData: []
   }
 
-  public hiddenOptions = {
-    query: '',
-    hidden: 0
+  public render (): JSX.Element {
+    return (
+      <>
+        {this.rowComponents}
+        {this.bodyComponent}
+      </>
+    )
   }
+
+  private get rowComponents (): JSX.Element | null {
+    const {
+      row: rowCallback
+    } = this.props
+    const {
+      filteredData
+    } = this.state
+
+
+    if (!rowCallback) {
+      return null
+    }
+
+
+
+    return map(
+      filteredData,
+      (rowData, index) => this.props.row({ ...this.props, row: rowData, this.state.filteredData }))
+  }
+
 
   public hideOption = (optionText: string, query?: string) => {
     if (query !== this.hiddenOptions.query) {
@@ -133,20 +153,6 @@ class OptionList extends React.PureComponent<IOptionListProps> {
     }
 
     return filteredOptions
-  }
-
-  public render (): JSX.Element {
-    const {
-      maxHeight
-    } = this.props
-
-    return (
-      <OptionListWrapper
-        maxHeight={maxHeight}
-      >
-        {this.content}
-      </OptionListWrapper>
-    )
   }
 
   private onClickCallback = (option: IOptionProps) => {
