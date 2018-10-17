@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Input /> should highlight all text when focused and highlightOnFocus is true 1`] = `
-<input
+<styled.input
   className="input "
   id="test-input"
   name="test-input"
@@ -11,7 +11,7 @@ exports[`<Input /> should highlight all text when focused and highlightOnFocus i
 `;
 
 exports[`<Input /> should not highlight all text when focused and highlightOnFocus is false\` 1`] = `
-<input
+<styled.input
   className="input "
   id="test-input"
   name="test-input"
@@ -21,7 +21,7 @@ exports[`<Input /> should not highlight all text when focused and highlightOnFoc
 `;
 
 exports[`<Input /> should render an input 1`] = `
-<input
+<styled.input
   className="input "
   id="test-input"
   name="test-input"
@@ -42,7 +42,7 @@ exports[`<Input /> should render an input with a disable prefix text 1`] = `
        
     </styled.span>
   </styled.div>
-  <input
+  <styled.input
     className="input "
     id="test-input"
     name="test-input"
@@ -67,7 +67,7 @@ exports[`<Input /> should render an input with an icon 1`] = `
        
     </styled.span>
   </styled.div>
-  <input
+  <styled.input
     className="input "
     id="test-input"
     name="test-input"
@@ -78,7 +78,7 @@ exports[`<Input /> should render an input with an icon 1`] = `
 `;
 
 exports[`<Input /> should render with an onBlur function if handleBlur is passed in 1`] = `
-<input
+<styled.input
   className="input "
   id="test-input"
   name="test-input"
