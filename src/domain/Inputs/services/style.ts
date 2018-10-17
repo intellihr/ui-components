@@ -26,7 +26,6 @@ const InputWrapper = styled.div`
         text-indent: ${props.disabledPrefix.length * 9 + 30}px;
       }
   `}
-
 `
 const PrefixWrapper = styled.div`
     position: absolute;
