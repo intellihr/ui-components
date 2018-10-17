@@ -1,7 +1,5 @@
 import React from 'react'
-import { toLower, map } from 'lodash'
-import { Text } from '../../Typographies/Text'
-import { Props } from '../../../common'
+import { toLower, map, filter as lodashFilter, every, pick, values } from 'lodash'
 
 interface IValueFilter {
   kind: 'valueFilter'
@@ -10,25 +8,25 @@ interface IValueFilter {
   /** Case sensitive filtering? */
   caseSensitive: boolean
   /** Value to filter the above paths by */
-  filterValue?: string
+  filterValue: string
 }
 
 // Support multiple filter types in future
 type Filter = IValueFilter
 
-type DataFetchCallback = (args: IFilteredListProps) => any[]
+type DataFetchCallback = (filters?: Filter[]) => Promise<any[]>
 
-type RenderCallback = (args: IFilteredListProps | { row: any, filteredRows: any[], index: }) => JSX.Element | null | undefined
+type RenderCallback = (args: IFilteredListProps | { row: any, filteredRows: any[], index: number }) => JSX.Element | null | undefined
 
 interface IFilteredListProps {
   /** Array of data to filter, or a promise callback for filter data */
   data: any[] | DataFetchCallback
   /** List of filters to apply to the data */
-  filters: Filter[]
+  filters?: Filter[]
   /** Row rendering callback */
-  row?: RenderCallback
-  /** Body rendering callback  */
-  body?: RenderCallback
+  row?: RenderCallback,
+  /** What to show if there is no results returned */
+  noDataCallout?: JSX.Element | string
 }
 
 interface IFilteredListState {
@@ -38,139 +36,148 @@ interface IFilteredListState {
   filteredData: any[]
 }
 
-class FilteredList extends React.PureComponent<IFilteredListProps, IFilteredListState> {
+class FilteredList extends React.Component<IFilteredListProps, IFilteredListState> {
   public state: IFilteredListState = {
     data: [],
     filteredData: []
   }
 
-  public render (): JSX.Element {
-    return (
-      <>
-        {this.rowComponents}
-        {this.bodyComponent}
-      </>
+  public componentDidMount () {
+    const {
+      data,
+      filters
+    } = this.props
+
+    if (typeof data === 'function') {
+      return data(filters)
+        .then(result => {
+          this.setState(
+            {
+              data: result,
+              filteredData: this.filterData(result)
+            })
+        }
     )
+    }
+
+    const filteredData = this.filterData(data)
+    this.setState({data, filteredData})
   }
 
-  private get rowComponents (): JSX.Element | null {
+  public componentDidUpdate (oldProps: IFilteredListProps) {
     const {
-      row: rowCallback
+      data: oldData,
+      filters: oldFilters
+    } = oldProps
+
+    const {
+      data,
+      filters
     } = this.props
+
+    if (oldData !== data || oldFilters !== filters) {
+      if (typeof data === 'function') {
+        return data(filters)
+          .then(result => {
+            const filteredData = this.filterData(result)
+            if (filteredData !== this.state.filteredData) {
+              this.setState(
+                {
+                  data: result,
+                  filteredData
+                })
+            }
+          }
+          )
+      } else {
+        const filteredData = this.filterData(data)
+        if (filteredData !== this.state.filteredData) {
+          this.setState({data, filteredData})
+        }
+      }
+    }
+  }
+
+  public render ():  Array<JSX.Element | null> | JSX.Element | string | null {
     const {
-      filteredData
+      filteredData: filteredRows
     } = this.state
 
+    const {
+      row: rowCallback,
+      noDataCallout
+    } = this.props
+
+    if (!rowCallback) {
+      return noDataCallout || null
+    }
+
+    const results = map(filteredRows, this.renderRow)
+    return results.length > 0 ? results : noDataCallout || null
+  }
+
+  private renderRow = (rowData: any, index: number):  JSX.Element | null => {
+    const {
+      data,
+      filteredData: filteredRows
+    } = this.state
+
+    const {
+      row: rowCallback,
+      filters
+    } = this.props
 
     if (!rowCallback) {
       return null
     }
 
-
-
-    return map(
-      filteredData,
-      (rowData, index) => this.props.row({ ...this.props, row: rowData, this.state.filteredData }))
+    return (
+      <div key={index}>
+        {rowCallback({
+          filters,
+          data,
+          row: rowData,
+          filteredRows,
+          index
+       }) || null}
+       </div>
+    )
   }
 
+  private valueFilter (data: any, filter: IValueFilter) {
+    return every(values(pick(data, filter.paths)), (value: any) => {
+      let compared = String(value)
+      let filterValue = filter.filterValue
 
-  public hideOption = (optionText: string, query?: string) => {
-    if (query !== this.hiddenOptions.query) {
-      this.hiddenOptions = {
-        query: query || '',
-        hidden: 0
+      if (!filter.caseSensitive) {
+        compared = toLower(compared)
+        filterValue = toLower(filter.filterValue)
       }
-    }
 
-    if (query && !toLower(optionText).includes(toLower(query))) {
-      this.hiddenOptions.hidden++
-
-      return true
-    }
-
-    return false
-  }
-
-  get options (): JSX.Element[] {
-    const {
-      options,
-      query,
-      selectedValue,
-      truncatedText
-    } = this.props
-
-    return map(options, (option, idx) => {
-      const {
-        leftComponent,
-        rightComponent,
-        text,
-        value
-      } = option
-
-      const callback = () => this.onClickCallback(option)
-
-      return (
-        <OptionListButton
-          key={idx}
-          onClick={callback}
-          truncatedText={truncatedText}
-          selected={value === selectedValue}
-          hidden={this.hideOption(option.text, query)}
-        >
-          {leftComponent && <OptionListLeftComponent>{leftComponent}</OptionListLeftComponent>}
-          {text}
-          {rightComponent && <OptionListRightComponent>{rightComponent}</OptionListRightComponent>}
-        </OptionListButton>
-      )
+      return compared.includes(filterValue)
     })
   }
 
-  get content (): JSX.Element[] | JSX.Element {
-    const {
-      options
-    } = this.props
-
-    if (options.length === 0) {
-      return (
-        <StyledEmptyState>
-          <Text type={Props.TypographyType.Small}>
-            Sorry, We couldn't find any options
-          </Text>
-        </StyledEmptyState>
-      )
+  private filter (value: any, filter: Filter) {
+    switch (filter.kind) {
+      case 'valueFilter':
+        return this.valueFilter(value, filter)
+      default:
+        return false
     }
-
-    const filteredOptions = this.options
-
-    if (this.hiddenOptions.hidden === options.length) {
-      return (
-        <StyledEmptyState>
-          <Text type={Props.TypographyType.Small}>
-            Unfortunately, we couldn't find anything from your search
-          </Text>
-        </StyledEmptyState>
-      )
-    }
-
-    return filteredOptions
   }
 
-  private onClickCallback = (option: IOptionProps) => {
+  private filterData (data: any[]) : any[] {
     const {
-      handleClick
+      filters
     } = this.props
 
-    if (option.onClick) {
-      return option.onClick(option)
-    }
-
-    return handleClick(option)
+    return lodashFilter(data, (value) =>
+      every(filters, (filter) => this.filter(value, filter))
+    )
   }
 }
 
 export {
-  OptionList,
-  OptionClickCallback,
-  IOptionListProps,
-  IOptionProps
+  FilteredList
 }

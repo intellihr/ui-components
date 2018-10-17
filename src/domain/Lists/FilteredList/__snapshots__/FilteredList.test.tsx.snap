@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilteredList /> should render a basic filtered list 1`] = `
+Array [
+  <div
+    key="0"
+  />,
+  <div
+    key="1"
+  />,
+]
+`;
+
+exports[`<FilteredList /> should render a case sensitive filtered list 1`] = `
+Array [
+  <div
+    key="0"
+  />,
+]
+`;
+
+exports[`<FilteredList /> should render a filtered list with no filters 1`] = `
+Array [
+  <div
+    key="0"
+  />,
+  <div
+    key="1"
+  />,
+  <div
+    key="2"
+  />,
+  <div
+    key="3"
+  />,
+  <div
+    key="4"
+  />,
+]
+`;
+
+exports[`<FilteredList /> should render a filtered list with no results 1`] = `""`;
+
+exports[`<FilteredList /> should render a filtered list with no results and a no data callout string 1`] = `"could not find any results for your query"`;
+
+exports[`<FilteredList /> should render an async filtered list 1`] = `""`;
