@@ -4,38 +4,68 @@ exports[`<FilteredList /> should render a basic filtered list 1`] = `
 Array [
   <div
     key="0"
-  />,
+  >
+    <div>
+      United States
+    </div>
+  </div>,
   <div
     key="1"
-  />,
+  >
+    <div>
+      united states
+    </div>
+  </div>,
 ]
 `;
 
 exports[`<FilteredList /> should render a case sensitive filtered list 1`] = `
-Array [
-  <div
-    key="0"
-  />,
-]
+<div
+  key="0"
+>
+  <div>
+    united states
+  </div>
+</div>
 `;
 
 exports[`<FilteredList /> should render a filtered list with no filters 1`] = `
 Array [
   <div
     key="0"
-  />,
+  >
+    <div>
+      Australia
+    </div>
+  </div>,
   <div
     key="1"
-  />,
+  >
+    <div>
+      New Zealand
+    </div>
+  </div>,
   <div
     key="2"
-  />,
+  >
+    <div>
+      United States
+    </div>
+  </div>,
   <div
     key="3"
-  />,
+  >
+    <div>
+      united states
+    </div>
+  </div>,
   <div
     key="4"
-  />,
+  >
+    <div>
+      Europe
+    </div>
+  </div>,
 ]
 `;
 
