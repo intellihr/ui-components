@@ -62,18 +62,18 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
     this.setState({data, filteredData})
   }
 
-  public componentDidUpdate (oldProps: IFilteredListProps) {
+  public componentDidUpdate (prevProps: IFilteredListProps) {
     const {
-      data: oldData,
-      filters: oldFilters
-    } = oldProps
+      data: prevData,
+      filters: prevFilters
+    } = prevProps
 
     const {
       data,
       filters
     } = this.props
 
-    if (oldData !== data || oldFilters !== filters) {
+    if (prevData !== data || prevFilters !== filters) {
       if (typeof data === 'function') {
         return data(filters)
           .then(result => {
