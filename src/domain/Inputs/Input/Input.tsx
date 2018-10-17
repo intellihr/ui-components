@@ -1,7 +1,7 @@
 import React, { ChangeEventHandler } from 'react'
 import classNames from 'classnames'
 import { isNil } from 'lodash'
-import { InputWrapper, PrefixWrapper, DisabledTextWrapper } from '../services/style'
+import { InputWrapper, PrefixWrapper, DisabledTextWrapper, StyledInput } from '../services/style'
 import { InputGroupPosition } from '../InputGroup'
 
 const style = require('./style.scss')
@@ -114,7 +114,7 @@ export class Input extends React.PureComponent<InputProps> {
     } = this.props
 
     return (
-      <input
+      <StyledInput
         id={id || name}
         name={name}
         type={type}
