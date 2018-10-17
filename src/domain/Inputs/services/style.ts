@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { Variables } from '../../../common'
 
-export interface IInputWrappeProps {
+export interface IInputWrapperProps {
   disabledPrefix?: string
   hasIcon: boolean
 }
@@ -9,29 +9,30 @@ export interface IInputWrappeProps {
 const InputWrapper = styled.div`
   position: relative;
   color: ${Variables.Color.n800};
+  width: 100%;
 
   input {
     text-indent: 30px;
   }
   
-  ${(props: IInputWrappeProps) => props.disabledPrefix && !props.hasIcon && css`
+  ${(props: IInputWrapperProps) => props.disabledPrefix && !props.hasIcon && css`
      input {
         text-indent: ${props.disabledPrefix.length * 10}px;
       }
   `}
   
-  ${(props: IInputWrappeProps) => props.disabledPrefix && props.hasIcon && css`
+  ${(props: IInputWrapperProps) => props.disabledPrefix && props.hasIcon && css`
      input {
         text-indent: ${props.disabledPrefix.length * 9 + 30}px;
       }
   `}
-
 `
 const PrefixWrapper = styled.div`
     position: absolute;
-    top: 8px;
-    left: 4px;
     width: auto;
+    height: 39px;
+    padding: 8px;
+    border: 1px solid transparent;
     
     .fa {
     color: ${Variables.Color.n400};
@@ -41,10 +42,21 @@ const PrefixWrapper = styled.div`
 
 const DisabledTextWrapper = styled.span`
     margin-left: 8px;
+    line-height: 21px;
+    vertical-align: top;
+`
+
+const StyledInput = styled.input`
+  line-height: 16px;
+  
+  &::-ms-clear {
+    display: none;
+  }
 `
 
 export {
   InputWrapper,
   PrefixWrapper,
-  DisabledTextWrapper
+  DisabledTextWrapper,
+  StyledInput
 }
