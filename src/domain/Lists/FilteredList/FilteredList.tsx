@@ -79,14 +79,12 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
           .then(result => {
             const filteredData = this.filterData(result)
             if (filteredData !== this.state.filteredData) {
-              this.setState(
-                {
-                  data: result,
-                  filteredData
-                })
+              this.setState({
+                data: result,
+                filteredData
+              })
             }
-          }
-          )
+          })
       } else {
         const filteredData = this.filterData(data)
         if (filteredData !== this.state.filteredData) {
