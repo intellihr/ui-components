@@ -28,8 +28,7 @@ describe('<FilteredList />', () => {
       <FilteredList
         data={exampleData}
         row={row}
-      />,
-      { disableLifecycleMethods: false }
+      />
     )
 
     expect(wrapper).toMatchSnapshot()

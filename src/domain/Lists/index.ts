@@ -1,4 +1,5 @@
 export { ActionList } from './ActionList'
+export { FilteredList } from './FilteredList'
 export { List } from './List'
-export { SmartList, ListRow, ListClickableColumn, ListColumn } from './SmartList'
 export { OptionList, FilteredOptionList } from './OptionList'
+export { SmartList, ListRow, ListClickableColumn, ListColumn } from './SmartList'
