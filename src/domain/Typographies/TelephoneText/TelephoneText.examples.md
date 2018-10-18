@@ -104,7 +104,7 @@ const { Variables } = require('../../../common');
     phoneNumber='412341234'
     countryCode='au'
     dialCode='61'
-    isDisplayFlag={false}
+    isFlagDisplayed={false}
    />
 ```
 

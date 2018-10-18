@@ -18,7 +18,7 @@ export { ActionLink, TextLink, UnstyledLink } from './Links'
  * ListRow, ListClickableColumn and ListColum are here for legacy support.
  * They should be static properties of SmartList
  */
-export { List, SmartList, ActionList, ListRow, ListClickableColumn, ListColumn, OptionList, FilteredOptionList } from './Lists'
+export { List, SmartList, ActionList, ListRow, ListClickableColumn, ListColumn, OptionList, FilteredOptionList, FilteredList } from './Lists'
 
 export { Menu, MenuItem } from './Menus'
 export { Modal, ToggleModal } from './Modals'

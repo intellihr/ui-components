@@ -9,7 +9,6 @@ import {
 } from './style'
 import { Text } from '../../Typographies/Text'
 import { Props } from '../../../common'
-import { IListRow } from '../SmartList/ListRow/ListRow'
 
 type OptionClickCallback = (option: IOptionProps) => void
 

@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilteredList /> should render a basic filtered list 1`] = `
+Array [
+  <span
+    key="0"
+  >
+    <div>
+      United States
+    </div>
+  </span>,
+  <span
+    key="1"
+  >
+    <div>
+      united states
+    </div>
+  </span>,
+]
+`;
+
+exports[`<FilteredList /> should render a case sensitive filtered list 1`] = `
+<span
+  key="0"
+>
+  <div>
+    united states
+  </div>
+</span>
+`;
+
+exports[`<FilteredList /> should render a filtered list with no filters 1`] = `
+Array [
+  <span
+    key="0"
+  >
+    <div>
+      Australia
+    </div>
+  </span>,
+  <span
+    key="1"
+  >
+    <div>
+      New Zealand
+    </div>
+  </span>,
+  <span
+    key="2"
+  >
+    <div>
+      United States
+    </div>
+  </span>,
+  <span
+    key="3"
+  >
+    <div>
+      united states
+    </div>
+  </span>,
+  <span
+    key="4"
+  >
+    <div>
+      Europe
+    </div>
+  </span>,
+]
+`;
+
+exports[`<FilteredList /> should render a filtered list with no results 1`] = `""`;
+
+exports[`<FilteredList /> should render a filtered list with no results and a no data callout string 1`] = `"could not find any results for your query"`;
+
+exports[`<FilteredList /> should render an async filtered list 1`] = `
+Array [
+  <span
+    key="0"
+  >
+    <div>
+      Australia
+    </div>
+  </span>,
+  <span
+    key="1"
+  >
+    <div>
+      New Zealand
+    </div>
+  </span>,
+  <span
+    key="2"
+  >
+    <div>
+      United States
+    </div>
+  </span>,
+  <span
+    key="3"
+  >
+    <div>
+      united states
+    </div>
+  </span>,
+  <span
+    key="4"
+  >
+    <div>
+      Europe
+    </div>
+  </span>,
+]
+`;
+
+exports[`<FilteredList /> should render an async filtered list with error and errorComponent being a function 1`] = `
+<div>
+  rejected
+</div>
+`;
+
+exports[`<FilteredList /> should render an async filtered list with error and errorComponent being a string 1`] = `"blah"`;
