@@ -693,5 +693,9 @@ $button-styles: (
     margin: .5rem;
     padding: 0;
     width: 1.55rem;
+
+    > .fa {
+      margin: 0;
+    }
   }
 }

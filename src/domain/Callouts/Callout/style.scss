@@ -112,6 +112,24 @@ $callouts: (
     text-align: center;
     text-transform: uppercase;
   }
+
+  // Fix for form classes used in legacy callouts
+  > .ihr-form,
+  > .ihr-form-view {
+    > .field-container {
+      margin-bottom: 1em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  > p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 :local(.callout) {
