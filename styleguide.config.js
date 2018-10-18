@@ -139,6 +139,7 @@ module.exports = {
           name: 'Lists',
           components: [
             'src/domain/Lists/ActionList/ActionList',
+            'src/domain/Lists/FilteredList/FilteredList',
             'src/domain/Lists/List/List',
             'src/domain/Lists/OptionList/OptionList',
             'src/domain/Lists/SmartList/SmartList'
