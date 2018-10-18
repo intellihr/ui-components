@@ -38,4 +38,15 @@ describe('<TelephoneText />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it('should render the Telephone Text without flag', () => {
+    const wrapper = shallow(
+      <TelephoneText
+        phoneNumber='+61412341234'
+        isFlagDisplayed={false}
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })

@@ -62,6 +62,18 @@ exports[`<TelephoneText /> should render the Telephone Text with flag type 1`] =
 </span>
 `;
 
+exports[`<TelephoneText /> should render the Telephone Text without flag 1`] = `
+<span>
+  <Text
+    isInline={true}
+    tag="span"
+    type="body"
+  >
+    +61412341234
+  </Text>
+</span>
+`;
+
 exports[`<TelephoneText /> should render the Telephone Text without prefix 1`] = `
 <span>
   <Text
