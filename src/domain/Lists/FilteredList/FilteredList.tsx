@@ -17,109 +17,96 @@ type Filter = IValueFilter
 type DataFetchCallback = (filters?: Filter[]) => Promise<any[]>
 
 type RenderCallback = (args: IFilteredListProps | { row: any, filteredRows: any[], index: number }) => JSX.Element | null | undefined
+type ErrorCallback = (errors: any) => JSX.Element | null | undefined
 
 interface IFilteredListProps {
   /** Array of data to filter, or a promise callback for filter data */
-  data: any[] | DataFetchCallback
+  rowData: any[] | DataFetchCallback
   /** List of filters to apply to the data */
   filters?: Filter[]
   /** Row rendering callback */
-  row?: RenderCallback,
+  rowCallback?: RenderCallback
   /** What to show if there is no results returned */
-  noDataCallout?: JSX.Element | string
+  noDataComponent?: JSX.Element | string
+  /** What to show if there is an async error */
+  errorComponent?: ErrorCallback | JSX.Element | string
 }
 
 interface IFilteredListState {
   /** Array of data after fetching */
-  data: any[]
+  rowData: any[]
   /** Array of filtered data */
   filteredData: any[]
+  /** errors returned by the rowData callback */
+  errors: any
 }
 
 class FilteredList extends React.Component<IFilteredListProps, IFilteredListState> {
   public state: IFilteredListState = {
-    data: [],
-    filteredData: []
+    rowData: [],
+    filteredData: [],
+    errors: null
   }
 
   public componentDidMount () {
-    const {
-      data,
-      filters
-    } = this.props
-
-    if (typeof data === 'function') {
-      return data(filters)
-        .then(result => {
-          this.setState({
-            data: result,
-            filteredData: this.filterData(result)
-          })
-        })
-    }
-
-    const filteredData = this.filterData(data)
-    this.setState({data, filteredData})
+    return this.recalculateData()
   }
 
   public componentDidUpdate (prevProps: IFilteredListProps) {
     const {
-      data: prevData,
+      rowData: prevData,
       filters: prevFilters
     } = prevProps
 
     const {
-      data,
+      rowData,
       filters
     } = this.props
 
-    if (prevData !== data || prevFilters !== filters) {
-      if (typeof data === 'function') {
-        return data(filters)
-          .then(result => {
-            const filteredData = this.filterData(result)
-            if (filteredData !== this.state.filteredData) {
-              this.setState({
-                data: result,
-                filteredData
-              })
-            }
-          })
-      } else {
-        const filteredData = this.filterData(data)
-        if (filteredData !== this.state.filteredData) {
-          this.setState({data, filteredData})
-        }
-      }
+    if (prevData !== rowData || prevFilters !== filters) {
+      return this.recalculateData()
     }
   }
 
   public render ():  Array<JSX.Element | null> | JSX.Element | string | null {
     const {
-      filteredData: filteredRows
+      filteredData: filteredRows,
+      errors
     } = this.state
 
     const {
-      row: rowCallback,
-      noDataCallout
+      rowCallback,
+      noDataComponent,
+      errorComponent
     } = this.props
 
     if (!rowCallback) {
-      return noDataCallout || null
+      return noDataComponent || null
+    }
+
+    if (errors) {
+      if (errorComponent) {
+        if (typeof errorComponent === 'function') {
+          return errorComponent(errors) || null
+        }
+
+        return errorComponent || null
+      }
+      return null
     }
 
     const results = map(filteredRows, this.renderRow)
-    return results.length > 0 ? results : noDataCallout || null
+    return results.length > 0 ? results : noDataComponent || null
   }
 
-  private renderRow = (rowData: any, index: number):  JSX.Element | null => {
+  private renderRow = (row: any, index: number): JSX.Element | null => {
     const {
-      data,
+      rowData,
       filteredData: filteredRows
     } = this.state
 
     const {
-      row: rowCallback,
+      rowCallback,
       filters
     } = this.props
 
@@ -128,19 +115,19 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
     }
 
     return (
-      <div key={index}>
+      <span key={index}>
         {rowCallback({
           filters,
-          data,
-          row: rowData,
+          rowData,
+          row,
           filteredRows,
           index
        }) || null}
-       </div>
+       </span>
     )
   }
 
-  private valueFilter (data: any, filter: IValueFilter) {
+  private performValueFilter (data: any, filter: IValueFilter) {
     return every(values(pick(data, filter.paths)), (value: any) => {
       let compared = String(value)
       let filterValue = filter.filterValue
@@ -154,23 +141,49 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
     })
   }
 
-  private filter (value: any, filter: Filter) {
+  private performFilter (value: any, filter: Filter) {
     switch (filter.kind) {
       case 'valueFilter':
-        return this.valueFilter(value, filter)
+        return this.performValueFilter(value, filter)
       default:
         return false
     }
   }
 
-  private filterData (data: any[]) : any[] {
+  private performFiltersOnRowData (data: any[]) : any[] {
     const {
       filters
     } = this.props
 
     return lodashFilter(data, (value) =>
-      every(filters, (filter) => this.filter(value, filter))
+      every(filters, (filter) => this.performFilter(value, filter))
     )
+  }
+
+  private recalculateData () {
+    const {
+      rowData,
+      filters
+    } = this.props
+
+    if (typeof rowData === 'function') {
+      return rowData(filters)
+        .then(result => {
+          const filteredData = this.performFiltersOnRowData(result)
+          if (filteredData !== this.state.filteredData) {
+            this.setState({
+              rowData: result,
+              filteredData,
+              errors: null
+            })
+          }
+        }).catch((errors) => this.setState({errors}))
+    } else {
+      const filteredData = this.performFiltersOnRowData(rowData)
+      if (filteredData !== this.state.filteredData) {
+        this.setState({rowData, filteredData})
+      }
+    }
   }
 }
 

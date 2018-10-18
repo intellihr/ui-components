@@ -26,8 +26,8 @@ describe('<FilteredList />', () => {
 
     const wrapper = shallow(
       <FilteredList
-        data={exampleData}
-        row={row}
+        rowData={exampleData}
+        rowCallback={row}
       />
     )
 
@@ -48,8 +48,8 @@ describe('<FilteredList />', () => {
             filterValue: 'uni'
           }
         ]}
-        row={row}
-        data={exampleData}
+        rowCallback={row}
+        rowData={exampleData}
       />
     )
 
@@ -70,8 +70,8 @@ describe('<FilteredList />', () => {
             filterValue: 'uni'
           }
         ]}
-        row={row}
-        data={exampleData}
+        rowCallback={row}
+        rowData={exampleData}
       />
     )
 
@@ -79,7 +79,7 @@ describe('<FilteredList />', () => {
     expect(row).toBeCalled()
   })
 
-  it('should render an async filtered list', () => {
+  it('should render an async filtered list', async () => {
     const row = jest.fn((value: any) => <div>{value.row.value}</div>)
     const promise = new Promise<any[]>((resolve) => {
       resolve(exampleData)
@@ -93,16 +93,75 @@ describe('<FilteredList />', () => {
             kind: 'valueFilter',
             paths: ['value'],
             caseSensitive: false,
-            filterValue: 'un'
+            filterValue: ''
           }
         ]}
-        row={row}
-        data={query}
+        rowCallback={row}
+        rowData={query}
       />
     )
-    expect(promise).resolves.toBe(exampleData)
+    await expect(promise).resolves.toBe(exampleData)
     expect(wrapper).toMatchSnapshot()
     expect(query).toBeCalled()
+    expect(row).toBeCalled()
+  })
+
+  it('should render an async filtered list with error and errorComponent being a function', async () => {
+    const row = jest.fn((value: any) => <div>{value.row.value}</div>)
+    const promise = new Promise<any[]>((resolve, reject) => {
+      reject('rejected')
+    })
+    const query = jest.fn(() => promise)
+    const errorRow = jest.fn((error: any) => <div>{error}</div>)
+
+    const wrapper = shallow(
+      <FilteredList
+        filters={[
+          {
+            kind: 'valueFilter',
+            paths: ['value'],
+            caseSensitive: false,
+            filterValue: ''
+          }
+        ]}
+        errorComponent={errorRow}
+        rowCallback={row}
+        rowData={query}
+      />
+    )
+    await expect(promise).rejects.toBe('rejected')
+    expect(wrapper).toMatchSnapshot()
+    expect(query).toBeCalled()
+    expect(row).not.toBeCalled()
+    expect(errorRow).toBeCalledWith('rejected')
+  })
+
+  it('should render an async filtered list with error and errorComponent being a string', async () => {
+    const row = jest.fn((value: any) => <div>{value.row.value}</div>)
+    const promise = new Promise<any[]>((resolve, reject) => {
+      reject('rejected')
+    })
+    const query = jest.fn(() => promise)
+
+    const wrapper = shallow(
+      <FilteredList
+        filters={[
+          {
+            kind: 'valueFilter',
+            paths: ['value'],
+            caseSensitive: false,
+            filterValue: ''
+          }
+        ]}
+        errorComponent={'blah'}
+        rowCallback={row}
+        rowData={query}
+      />
+    )
+    await expect(promise).rejects.toBe('rejected')
+    expect(wrapper).toMatchSnapshot()
+    expect(query).toBeCalled()
+    expect(row).not.toBeCalled()
   })
 
   it('should render a filtered list with no results', () => {
@@ -118,8 +177,8 @@ describe('<FilteredList />', () => {
             filterValue: 'sdafgsadgfs'
           }
         ]}
-        row={row}
-        data={exampleData}
+        rowCallback={row}
+        rowData={exampleData}
       />
     )
 
@@ -140,9 +199,9 @@ describe('<FilteredList />', () => {
             filterValue: 'awsegsrgsgr'
           }
         ]}
-        row={row}
-        noDataCallout='could not find any results for your query'
-        data={exampleData}
+        rowCallback={row}
+        noDataComponent='could not find any results for your query'
+        rowData={exampleData}
       />
     )
 

@@ -13,8 +13,8 @@ initialState = {
     handleChange={(event) => setState({value: event.target.value})}
   />
   <FilteredList
-    row={row => <div>{row.row.value}</div>}
-    noDataCallout='could not find any results for your query'
+    rowCallback={row => <div>{row.row.value}</div>}
+    noDataComponent='could not find any results for your query'
     filters={[
         {
           kind: 'valueFilter',
@@ -23,7 +23,7 @@ initialState = {
           filterValue: state.value
         }
       ]}
-    data={[
+    rowData={[
       {
         value: 'Australia'
       },
@@ -67,14 +67,14 @@ initialState = {
     handleChange={(event) => setState({value2: event.target.value})}
   />
   <FilteredList
-    row={
+    rowCallback={
       row =>
        <div>
         <Text isInline={false} type='heading'>{row.row.value}</Text>
         <Text isInline={false} >{row.row.type}</Text>
       </div>
     }
-    noDataCallout='could not find any results for your query'
+    noDataComponent='could not find any results for your query'
     filters={[
         {
           kind: 'valueFilter',
@@ -89,7 +89,7 @@ initialState = {
           filterValue: state.value2
         }
       ]}
-    data={[
+    rowData={[
       {
         value: 'Australia',
         type: 'country'
@@ -117,8 +117,8 @@ initialState = {
 const { FontAwesomeIcon } = require('@Domain/Icons');
 
 <FilteredList
-  row={row => <div>{row.row.value}</div>}
-  data={[
+  rowCallback={row => <div>{row.row.value}</div>}
+  rowData={[
     {
       value: 1
     },
@@ -142,7 +142,7 @@ const { TextInput } = require('@Domain/Inputs');
 
 initialState = {
   value: 'aus',
-  promise: () => new Promise<any[]>((resolve, reject) => {
+  promise: () => new Promise((resolve, reject) => {
      resolve([
        {
          value: 'Australia'
@@ -164,11 +164,15 @@ initialState = {
 <div>
   <TextInput
       value={state.value}
-      handleChange={(event) => setState({value: event.target.value})}
+      handleChange={(event) => 
+        new Promise((resolve, reject) => {
+          resolve(setState({value: event.target.value}))
+        })
+      }
     />
   <FilteredList
-    row={row => <div>{row.row.value}</div>}
-    noDataCallout='could not find any results for your query'
+    rowCallback={row => <div>{row.row.value}</div>}
+    noDataComponent='could not find any results for your query'
     filters={[
         {
           kind: 'valueFilter',
@@ -177,7 +181,54 @@ initialState = {
           filterValue: state.value
         }
       ]}
-    data={state.promise}
+    rowData={state.promise}
+  />
+</div>
+```
+
+#### Async Filtered List with error
+
+```jsx
+const { TextInput } = require('@Domain/Inputs');
+
+initialState = {
+  value: 'type to error',
+  promise: (data) => new Promise((resolve, reject) => {
+     if (data[0].filterValue === 'type to error') {
+      resolve([
+        {
+          value: 'type to error'
+        }
+      ])
+     }
+     
+     reject('rejected')
+   })
+};
+
+
+<div>
+  <TextInput
+      value={state.value}
+      handleChange={(event) => 
+        new Promise((resolve, reject) => {
+          resolve(setState({value: event.target.value}))
+        })
+      }
+    />
+  <FilteredList
+    rowCallback={row => <div>{row.row.value}</div>}
+    noDataComponent='could not find any results for your query'
+    errorComponent={(error) => `error: ${error}`}
+    filters={[
+        {
+          kind: 'valueFilter',
+          paths: ['value'],
+          caseSensitive: false,
+          filterValue: state.value
+        }
+      ]}
+    rowData={state.promise}
   />
 </div>
 ```
