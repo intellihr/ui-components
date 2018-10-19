@@ -148,3 +148,14 @@ const { Variables } = require('../../../common');
      />
   </>
 ```
+
+#### Telephone Text with conflicting country information
+
+A `phoneNumber` with a dial code will always override the country formatting provided by the country code.
+
+```jsx
+    <TelephoneText
+      phoneNumber='+61412341234'
+      countryCode='SE'
+    />
+```

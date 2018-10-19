@@ -84,7 +84,9 @@ class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
       if (parsedPhoneNumber.isValid()) {
         formattedPhoneNumber = parsedPhoneNumber.formatInternational()
       }
-    } catch {}
+    } catch {
+      // @ts-ignore
+    }
 
     return (
       <Text
