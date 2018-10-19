@@ -1,41 +1,41 @@
 import React from 'react'
+import { toUpper, toLower } from 'lodash'
+import { parsePhoneNumber, CountryCode } from 'libphonenumber-js'
 import { Emoji } from '../Emoji'
 import { Text } from '../Text'
 import { Props, Variables } from '../../../common'
-import { CountryCodeWrapper, DialCodeWrapper } from '../TelephoneText/style'
+import { CountryCodeWrapper } from './style'
 
 interface ITelephoneTextProps {
   /** phone number to display */
   phoneNumber: string
   /** country code to display */
   countryCode?: string
-  /** dial code to display */
-  dialCode?: string
   /** Specify the type of text and flag to use */
   type: Props.TypographyType
   /** Specify the color of phone number to use */
   color?: Variables.Color
   /** If true, displays the flag */
-  isFlagDisplayed: boolean
+  showFlag?: boolean
 }
 
 class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
   public static defaultProps = {
     type: Props.TypographyType.Body,
-    isFlagDisplayed: true
+    showFlag: true
   }
 
   get flag(): JSX.Element | undefined {
     const {
       countryCode,
-      isFlagDisplayed,
+      showFlag,
       type
     } = this.props
 
-    if (countryCode && isFlagDisplayed) {
+    if (countryCode && showFlag) {
       return(
         <Emoji
-          emoji={`flag-${countryCode}`}
+          emoji={`flag-${toLower(countryCode)}`}
           type={type}
         />
       )
@@ -45,39 +45,32 @@ class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
   get prefix(): JSX.Element | undefined {
     const {
       countryCode,
-      dialCode,
-      isFlagDisplayed,
-      type,
-      color
+      showFlag,
+      type
     } = this.props
 
-    if (countryCode && dialCode) {
+    if (countryCode) {
       return (
         <>
           {this.flag}
           <CountryCodeWrapper
             color={Variables.Color.n600}
             type={type}
-            isFlagDisplayed={isFlagDisplayed}
+            showFlag={showFlag!}
             isUpper
           >
             {countryCode}
           </CountryCodeWrapper>
-          <DialCodeWrapper
-            type={type}
-            color={color}
-          >
-            (+{dialCode})
-          </DialCodeWrapper>
         </>
       )
     }
+
+    return undefined
   }
 
   get phoneNumber(): JSX.Element {
     const {
       countryCode,
-      dialCode,
       phoneNumber,
       type,
       color
@@ -85,19 +78,13 @@ class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
 
     let formattedPhoneNumber = phoneNumber
 
-    if (countryCode && dialCode) {
-      formattedPhoneNumber = phoneNumber.replace(/\s/g,'')
+    try {
+      const parsedPhoneNumber = parsePhoneNumber(phoneNumber, toUpper(countryCode) as CountryCode)
 
-      if (formattedPhoneNumber.length > 5) {
-        let format = /(?!^)(\d{3})(?=(?:\d{3})*$)/g
-
-        if (formattedPhoneNumber.length === 8 || formattedPhoneNumber.length === 7) {
-          format = /(?!^)(\d{4})(?=(?:\d{4})*$)/g
-        }
-
-        formattedPhoneNumber=  formattedPhoneNumber.replace(format, ' $1')
+      if (parsedPhoneNumber.isValid()) {
+        formattedPhoneNumber = parsedPhoneNumber.formatInternational()
       }
-    }
+    } catch {}
 
     return (
       <Text
