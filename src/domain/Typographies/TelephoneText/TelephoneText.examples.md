@@ -3,34 +3,65 @@
 ```jsx
   <div>
     <TelephoneText
-      phoneNumber='123123'
+      phoneNumber='123123123'
       countryCode='se'
-      dialCode='46'
      />
     <br/>
     <TelephoneText
-      phoneNumber='1231234'
+      phoneNumber='622 2222'
       countryCode='is'
-      dialCode='354'
      />
     <br/>
     <TelephoneText
-      phoneNumber='12341234'
+      phoneNumber='22342345'
       countryCode='hk'
-      dialCode='852'
      />
      <br/>
     <TelephoneText
       phoneNumber='412341234'
-      countryCode='au'
-      dialCode='61'
+      countryCode='AU'
      />
      <br/>
     <TelephoneText
       phoneNumber='1300123123'
-      countryCode='au'
-      dialCode='61'
+      countryCode='AU'
      />
+    <br/>
+    <TelephoneText
+      phoneNumber='132012'
+      countryCode='AU'
+    />
+  </div>
+```
+
+#### INVALID Telephone Text
+
+If either of the following are true:
+* `phoneNumber` isn't a valid phone number in `countryCode`
+* `countryCode` is missing and the `phoneNumber` does not include a valid country dial code
+
+`TelephoneText` will display `phoneNumber` as-is without any additional formatting. 
+
+```jsx
+  <div>
+    <TelephoneText
+      phoneNumber='1231231233333'
+      countryCode='se'
+    />
+    <br/>
+    <TelephoneText
+      phoneNumber='122 2222'
+      countryCode='is'
+    />
+    <br/>
+    <TelephoneText
+      phoneNumber='3 3 3 3 3 3 3 3'
+      countryCode='AU'
+    />
+    <br/>
+    <TelephoneText
+      phoneNumber='0733333333'
+    />
   </div>
 ```
 
@@ -40,43 +71,37 @@
   <div>
     <TelephoneText
       phoneNumber='412341234'
-      countryCode='au'
-      dialCode='61'
+      countryCode='AU'
       type='xsmall'
      />
     <br/>
     <TelephoneText
       phoneNumber='412341234'
-      countryCode='au'
-      dialCode='61'
+      countryCode='AU'
       type='small'
      />
     <br/>
     <TelephoneText
       phoneNumber='412341234'
-      countryCode='au'
-      dialCode='61'
+      countryCode='AU'
       type='body'
      />
     <br/>
     <TelephoneText
       phoneNumber='412341234'
-      countryCode='au'
-      dialCode='61'
+      countryCode='AU'
       type='heading'
      />
     <br/>
     <TelephoneText
       phoneNumber='412341234'
-      countryCode='au'
-      dialCode='61'
+      countryCode='AU'
       type='display'
      />
     <br/>
     <TelephoneText
       phoneNumber='412341234'
-      countryCode='au'
-      dialCode='61'
+      countryCode='AU'
       type='display-large'
      />
   </div>
@@ -89,8 +114,7 @@ const { Variables } = require('../../../common');
 
   <TelephoneText
     phoneNumber='412341234'
-    countryCode='au'
-    dialCode='61'
+    countryCode='AU'
     color={Variables.Color.i400}
    />
 ```
@@ -102,16 +126,36 @@ const { Variables } = require('../../../common');
 
   <TelephoneText
     phoneNumber='412341234'
-    countryCode='au'
-    dialCode='61'
-    isFlagDisplayed={false}
+    countryCode='AU'
+    showFlag={false}
    />
 ```
 
-#### Telephone Text without prefix
+#### Telephone Text without country information
 
 ```jsx
-  <TelephoneText
-    phoneNumber='+61412341234'
-   />
+  <>
+    With country dial code in phoneNumber:
+    <br/>
+    <TelephoneText
+      phoneNumber='+61412341234'
+     />
+     <br/><br/>
+     Without country dial code in phoneNumber:
+     <br/>
+     <TelephoneText
+       phoneNumber='412341234'
+     />
+  </>
+```
+
+#### Telephone Text with conflicting country information
+
+A `phoneNumber` with a dial code will always override the country formatting provided by the country code.
+
+```jsx
+    <TelephoneText
+      phoneNumber='+61412341234'
+      countryCode='SE'
+    />
 ```
