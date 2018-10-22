@@ -57,8 +57,6 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
     errors: null
   }
 
-  private debounceRecalculateData = debounce(this.recalculateData, 100, {maxWait: 1000})
-
   public componentDidMount () {
     return this.recalculateData()
   }
@@ -138,7 +136,7 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
     )
   }
 
-  private performValueFilter (data: any, filter: IValueFilter) {
+  private performValueFilter = (data: any, filter: IValueFilter) => {
     const dataGetter = partial(get, data)
     return some(map(filter.paths, dataGetter), (value: any) => {
       let compared = String(value)
@@ -153,7 +151,7 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
     })
   }
 
-  private performFilter (value: any, filter: Filter) {
+  private performFilter = (value: any, filter: Filter) => {
     switch (filter.kind) {
       case 'valueFilter':
         return this.performValueFilter(value, filter)
@@ -162,7 +160,7 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
     }
   }
 
-  private performFiltersOnRowData (data: any[]) : any[] {
+  private performFiltersOnRowData = (data: any[]) : any[] => {
     const {
       filters
     } = this.props
@@ -172,7 +170,7 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
     )
   }
 
-  private recalculateData () {
+  private recalculateData = () => {
     const {
       rowData,
       filters
@@ -197,6 +195,9 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
       }
     }
   }
+
+  // tslint:disable-next-line:member-ordering
+  private debounceRecalculateData = debounce(this.recalculateData, 200, {maxWait: 1000, leading: true})
 }
 
 export {
