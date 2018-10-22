@@ -1,5 +1,14 @@
 import React from 'react'
-import { toLower, map, filter as lodashFilter, every, pick, values, some, get, partial } from 'lodash'
+import {
+  toLower,
+  map,
+  filter as lodashFilter,
+  every,
+  debounce,
+  some,
+  get,
+  partial
+} from 'lodash'
 
 interface IValueFilter {
   kind: 'valueFilter'
@@ -64,7 +73,7 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
     } = this.props
 
     if (prevData !== rowData || prevFilters !== filters) {
-      return this.recalculateData()
+      return this.debounceRecalculateData()
     }
   }
 
@@ -127,7 +136,7 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
     )
   }
 
-  private performValueFilter (data: any, filter: IValueFilter) {
+  private performValueFilter = (data: any, filter: IValueFilter) => {
     const dataGetter = partial(get, data)
     return some(map(filter.paths, dataGetter), (value: any) => {
       let compared = String(value)
@@ -137,12 +146,12 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
         compared = toLower(compared)
         filterValue = toLower(filter.filterValue)
       }
-      
+
       return compared.includes(filterValue)
     })
   }
 
-  private performFilter (value: any, filter: Filter) {
+  private performFilter = (value: any, filter: Filter) => {
     switch (filter.kind) {
       case 'valueFilter':
         return this.performValueFilter(value, filter)
@@ -151,7 +160,7 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
     }
   }
 
-  private performFiltersOnRowData (data: any[]) : any[] {
+  private performFiltersOnRowData = (data: any[]) : any[] => {
     const {
       filters
     } = this.props
@@ -161,7 +170,7 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
     )
   }
 
-  private recalculateData () {
+  private recalculateData = () => {
     const {
       rowData,
       filters
@@ -186,6 +195,9 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
       }
     }
   }
+
+  // tslint:disable-next-line:member-ordering
+  private debounceRecalculateData = debounce(this.recalculateData, 200, {maxWait: 1000, leading: true})
 }
 
 export {
