@@ -34,8 +34,15 @@ exports[`<Input /> should render an input with a disable prefix text 1`] = `
 <styled.div
   disabledPrefix="test"
   hasIcon={false}
+  prefixWrapperWidth={0}
 >
-  <styled.div>
+  <styled.div
+    innerRef={
+      Object {
+        "current": null,
+      }
+    }
+  >
     <styled.span>
        
       test
@@ -55,8 +62,15 @@ exports[`<Input /> should render an input with a disable prefix text 1`] = `
 exports[`<Input /> should render an input with an icon 1`] = `
 <styled.div
   hasIcon={true}
+  prefixWrapperWidth={0}
 >
-  <styled.div>
+  <styled.div
+    innerRef={
+      Object {
+        "current": null,
+      }
+    }
+  >
     <Icon
       isSpinning={false}
       size="medium"
