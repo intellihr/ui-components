@@ -347,10 +347,12 @@ const { FontAwesomeIcon, IntelliIcon } = require('@Domain/Icons');
 />
 ```
 
-#### Custom children
+#### Custom children + hasInitialFocus prop
 
 If the `sections` prop is not passed to the menu it will render the children as the content of the menu instead.
 DropdownMenu takes `children` *as a function* and will pass through a callback to close the menu if needed.
+
+The `hasInitialFocus` can be used to specify that a child element needs to be hovered.
 
 ```jsx
 const { TextInput } = require('@Domain/Inputs');
@@ -388,6 +390,7 @@ class ThingList extends React.PureComponent {
       {state.selectedOption.label}
     </Button>
   }
+  hasInitialFocus
 >
   {({closeMenu}) => 
     <>

@@ -1,4 +1,5 @@
 import React, { RefObject } from 'react'
+import { FocusTarget } from 'focus-trap'
 import FocusTrap from 'focus-trap-react'
 import { map } from 'lodash'
 import moment, { Moment } from 'moment'
@@ -33,6 +34,13 @@ interface IDropdownMenuProps {
    * The callback is given a toggle menu prop which can be used to toggle the menu as needed.
    */
   toggleComponent?: (props: IDropdownMenuToggleComponentProps) => React.ReactElement<any>,
+  /** Whether to auto focus on an element when this menu is opened */
+  hasInitialFocus?: boolean
+  /**
+   * The element to focus on when hasInitialFocus is true; if not provided then the first dom element will be chosen.
+   * See focus-trap-react for details
+   */
+  initialFocusElement?: FocusTarget
   /** Children to display as custom content instead of sections */
   children?: (props: IDropdownMenuChildrenProps) => React.ReactElement<any>
 }
@@ -61,6 +69,7 @@ class DropdownMenu extends React.Component<IDropdownMenuProps, IDropdownMenuStat
   public static DefaultDropdownButton = DefaultDropdownButton
 
   public static defaultProps: Partial<IDropdownMenuProps> = {
+    hasInitialFocus: false,
     toggleComponent: ({ toggleMenu, toggleComponentRef, ariaProps }) => (
       <DefaultDropdownButton
         innerRef={toggleComponentRef}
@@ -133,6 +142,19 @@ class DropdownMenu extends React.Component<IDropdownMenuProps, IDropdownMenuStat
     })
   }
 
+  private get initialFocusProp (): FocusTarget | undefined {
+    const {
+      hasInitialFocus,
+      initialFocusElement
+    } = this.props
+
+    if (!hasInitialFocus) {
+      return document.body
+    }
+
+    return initialFocusElement
+  }
+
   private get dropdownPopover (): JSX.Element | null {
     const {
       isDropdownOpen,
@@ -157,7 +179,8 @@ class DropdownMenu extends React.Component<IDropdownMenuProps, IDropdownMenuStat
           active={isDropdownOpen}
           focusTrapOptions={{
             onDeactivate: this.close,
-            initialFocus: document.body,
+            initialFocus: this.initialFocusProp,
+            fallbackFocus: document.body,
             clickOutsideDeactivates: true,
             returnFocusOnDeactivate: false
           }}
