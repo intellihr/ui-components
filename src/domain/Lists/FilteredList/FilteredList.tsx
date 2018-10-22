@@ -1,5 +1,5 @@
 import React from 'react'
-import { toLower, map, filter as lodashFilter, every, pick, values } from 'lodash'
+import { toLower, map, filter as lodashFilter, every, pick, values, some, get, partial } from 'lodash'
 
 interface IValueFilter {
   kind: 'valueFilter'
@@ -128,7 +128,8 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
   }
 
   private performValueFilter (data: any, filter: IValueFilter) {
-    return every(values(pick(data, filter.paths)), (value: any) => {
+    const dataGetter = partial(get, data)
+    return some(map(filter.paths, dataGetter), (value: any) => {
       let compared = String(value)
       let filterValue = filter.filterValue
 
@@ -136,7 +137,7 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
         compared = toLower(compared)
         filterValue = toLower(filter.filterValue)
       }
-
+      
       return compared.includes(filterValue)
     })
   }

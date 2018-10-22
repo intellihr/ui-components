@@ -8,80 +8,50 @@ exports[`<TelephoneText /> should render the Telephone Text 1`] = `
   />
   <Styled(Text)
     color="#667380"
-    isFlagDisplayed={true}
     isUpper={true}
+    showFlag={true}
     type="body"
   >
     au
-  </Styled(Text)>
-  <Styled(Text)
-    type="body"
-  >
-    (+
-    61
-    )
   </Styled(Text)>
   <Text
     isInline={true}
     tag="span"
     type="body"
   >
-    412 341 234
+    +61 412 341 234
   </Text>
 </span>
 `;
 
-exports[`<TelephoneText /> should render the Telephone Text with flag type 1`] = `
+exports[`<TelephoneText /> should render the Telephone Text no flag 1`] = `
 <span>
-  <Emoji
-    emoji="flag-au"
-    type="body"
-  />
   <Styled(Text)
     color="#667380"
-    isFlagDisplayed={true}
     isUpper={true}
+    showFlag={false}
     type="body"
   >
     au
   </Styled(Text)>
-  <Styled(Text)
-    type="body"
-  >
-    (+
-    61
-    )
-  </Styled(Text)>
   <Text
     isInline={true}
     tag="span"
     type="body"
   >
-    412 341 234
+    +61 412 341 234
   </Text>
 </span>
 `;
 
-exports[`<TelephoneText /> should render the Telephone Text without flag 1`] = `
+exports[`<TelephoneText /> should render the Telephone Text with no country information 1`] = `
 <span>
   <Text
     isInline={true}
     tag="span"
     type="body"
   >
-    +61412341234
-  </Text>
-</span>
-`;
-
-exports[`<TelephoneText /> should render the Telephone Text without prefix 1`] = `
-<span>
-  <Text
-    isInline={true}
-    tag="span"
-    type="body"
-  >
-    +61412341234
+    33333333
   </Text>
 </span>
 `;

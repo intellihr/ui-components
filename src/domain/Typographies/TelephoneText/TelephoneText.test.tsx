@@ -9,41 +9,31 @@ describe('<TelephoneText />', () => {
       <TelephoneText
         phoneNumber='412341234'
         countryCode='au'
-        dialCode='61'
+        type={Props.TypographyType.Body}
       />
     )
 
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should render the Telephone Text with flag type', () => {
+  it('should render the Telephone Text no flag', () => {
     const wrapper = shallow(
       <TelephoneText
         phoneNumber='412341234'
         countryCode='au'
-        dialCode='61'
-        flagType={Props.TypographyType.Small}
+        type={Props.TypographyType.Body}
+        showFlag={false}
       />
     )
 
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should render the Telephone Text without prefix', () => {
+  it('should render the Telephone Text with no country information', () => {
     const wrapper = shallow(
       <TelephoneText
-        phoneNumber='+61412341234'
-      />
-    )
-
-    expect(wrapper).toMatchSnapshot()
-  })
-
-  it('should render the Telephone Text without flag', () => {
-    const wrapper = shallow(
-      <TelephoneText
-        phoneNumber='+61412341234'
-        isFlagDisplayed={false}
+        phoneNumber='33333333'
+        type={Props.TypographyType.Body}
       />
     )
 
