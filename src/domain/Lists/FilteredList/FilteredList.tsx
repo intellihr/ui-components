@@ -1,5 +1,14 @@
 import React from 'react'
-import { toLower, map, filter as lodashFilter, every, pick, values, some, get, partial } from 'lodash'
+import {
+  toLower,
+  map,
+  filter as lodashFilter,
+  every,
+  debounce,
+  some,
+  get,
+  partial
+} from 'lodash'
 
 interface IValueFilter {
   kind: 'valueFilter'
@@ -48,6 +57,8 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
     errors: null
   }
 
+  private debounceRecalculateData = debounce(this.recalculateData, 100, {maxWait: 1000})
+
   public componentDidMount () {
     return this.recalculateData()
   }
@@ -64,7 +75,7 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
     } = this.props
 
     if (prevData !== rowData || prevFilters !== filters) {
-      return this.recalculateData()
+      return this.debounceRecalculateData()
     }
   }
 
@@ -137,7 +148,7 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
         compared = toLower(compared)
         filterValue = toLower(filter.filterValue)
       }
-      
+
       return compared.includes(filterValue)
     })
   }
