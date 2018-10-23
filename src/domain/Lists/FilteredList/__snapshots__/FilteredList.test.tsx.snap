@@ -2,70 +2,70 @@
 
 exports[`<FilteredList /> should render a basic filtered list 1`] = `
 Array [
-  <span
+  <Fragment
     key="0"
   >
     <div>
       United States
     </div>
-  </span>,
-  <span
+  </Fragment>,
+  <Fragment
     key="1"
   >
     <div>
       united states
     </div>
-  </span>,
+  </Fragment>,
 ]
 `;
 
 exports[`<FilteredList /> should render a case sensitive filtered list 1`] = `
-<span
+<Fragment
   key="0"
 >
   <div>
     united states
   </div>
-</span>
+</Fragment>
 `;
 
 exports[`<FilteredList /> should render a filtered list with no filters 1`] = `
 Array [
-  <span
+  <Fragment
     key="0"
   >
     <div>
       Australia
     </div>
-  </span>,
-  <span
+  </Fragment>,
+  <Fragment
     key="1"
   >
     <div>
       New Zealand
     </div>
-  </span>,
-  <span
+  </Fragment>,
+  <Fragment
     key="2"
   >
     <div>
       United States
     </div>
-  </span>,
-  <span
+  </Fragment>,
+  <Fragment
     key="3"
   >
     <div>
       united states
     </div>
-  </span>,
-  <span
+  </Fragment>,
+  <Fragment
     key="4"
   >
     <div>
       Europe
     </div>
-  </span>,
+  </Fragment>,
 ]
 `;
 
@@ -75,41 +75,41 @@ exports[`<FilteredList /> should render a filtered list with no results and a no
 
 exports[`<FilteredList /> should render an async filtered list 1`] = `
 Array [
-  <span
+  <Fragment
     key="0"
   >
     <div>
       Australia
     </div>
-  </span>,
-  <span
+  </Fragment>,
+  <Fragment
     key="1"
   >
     <div>
       New Zealand
     </div>
-  </span>,
-  <span
+  </Fragment>,
+  <Fragment
     key="2"
   >
     <div>
       United States
     </div>
-  </span>,
-  <span
+  </Fragment>,
+  <Fragment
     key="3"
   >
     <div>
       united states
     </div>
-  </span>,
-  <span
+  </Fragment>,
+  <Fragment
     key="4"
   >
     <div>
       Europe
     </div>
-  </span>,
+  </Fragment>,
 ]
 `;
 

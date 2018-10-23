@@ -1,6 +1,6 @@
-import React, { ChangeEventHandler } from 'react'
+import React, { ChangeEventHandler, RefObject } from 'react'
 import classNames from 'classnames'
-import { isNil } from 'lodash'
+import { isNil, get } from 'lodash'
 import { InputWrapper, PrefixWrapper, DisabledTextWrapper, StyledInput } from '../services/style'
 import { InputGroupPosition } from '../InputGroup'
 
@@ -57,23 +57,6 @@ interface InputProps extends IGenericInputProps {
 }
 
 export class Input extends React.PureComponent<InputProps> {
-  constructor (props: InputProps) {
-    super(props)
-
-    this.onFocus = this.onFocus.bind(this)
-  }
-
-  public onFocus (e: React.FocusEvent<HTMLInputElement>): void {
-    const {
-      highlightOnFocus
-    } = this.props
-
-    if (highlightOnFocus) {
-      const input = e.target as HTMLInputElement
-      input.select()
-    }
-  }
-
   get classNames (): string {
     const {
       className,
@@ -91,6 +74,31 @@ export class Input extends React.PureComponent<InputProps> {
         }
       ]
     )
+  }
+
+  private prefixWrapperRef: RefObject<HTMLDivElement> = React.createRef()
+
+  public componentDidMount() {
+    const {
+      icon,
+      disabledPrefix
+    } = this.props
+
+    if (icon || disabledPrefix) {
+      // forceUpdate is required to for the ref to work
+      this.forceUpdate()
+    }
+  }
+
+  public onFocus = (e: React.FocusEvent<HTMLInputElement>): void => {
+    const {
+      highlightOnFocus
+    } = this.props
+
+    if (highlightOnFocus) {
+      const input = e.target as HTMLInputElement
+      input.select()
+    }
   }
 
   public input (): JSX.Element {
@@ -148,8 +156,11 @@ export class Input extends React.PureComponent<InputProps> {
         <InputWrapper
           disabledPrefix={disabledPrefix}
           hasIcon={!!icon}
+          prefixWrapperWidth={get(this.prefixWrapperRef, 'current.clientWidth', 0)}
         >
-          <PrefixWrapper>
+          <PrefixWrapper
+            innerRef={this.prefixWrapperRef}
+          >
             {icon}
             <DisabledTextWrapper> {disabledPrefix} </DisabledTextWrapper>
           </PrefixWrapper>

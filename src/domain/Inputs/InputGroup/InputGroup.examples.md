@@ -82,6 +82,7 @@ initialState = {
          {state.selectedOption.buttonText}
       </InputGroup.Button>
     }
+    hasInitialFocus
   >
   {({closeMenu}) => 
     <FilteredOptionList
@@ -177,6 +178,7 @@ class ThingList extends React.PureComponent {
       {state.selectedOption.label}
       </InputGroup.Button>
     }
+    hasInitialFocus
   >
   {({closeMenu}) => 
     <>
@@ -265,6 +267,7 @@ class ThingList extends React.PureComponent {
       {state.selectedOption.label}
       </InputGroup.Button>
     }
+    hasInitialFocus
   >
   {({closeMenu}) => 
     <>
@@ -305,6 +308,7 @@ class ThingList extends React.PureComponent {
       {state.selectedOption.label}
       </InputGroup.Button>
     }
+    hasInitialFocus
   >
   {({closeMenu}) => 
     <>
@@ -345,6 +349,7 @@ class ThingList extends React.PureComponent {
       {state.selectedOption.label}
       </InputGroup.Button>
     }
+    hasInitialFocus
   >
   {({closeMenu}) => 
     <>
