@@ -347,10 +347,16 @@ const { FontAwesomeIcon, IntelliIcon } = require('@Domain/Icons');
 />
 ```
 
-#### Custom children
+#### Custom children + hasInitialFocus prop
 
 If the `sections` prop is not passed to the menu it will render the children as the content of the menu instead.
 DropdownMenu takes `children` *as a function* and will pass through a callback to close the menu if needed.
+
+The `hasInitialFocus` can be used to specify that some child element of the menu needs focus when the menu is
+opened. The default behaviour is to focus the first element in the menu. The `initialFocusElement` prop can be
+used in tandem to choose which element gets the initial focus - this can be a dom element, css selector or function.
+See the [focus-trap-react](https://github.com/davidtheclark/focus-trap-react) library, which is used under the hood,
+for more details.
 
 ```jsx
 const { TextInput } = require('@Domain/Inputs');
@@ -388,10 +394,16 @@ class ThingList extends React.PureComponent {
       {state.selectedOption.label}
     </Button>
   }
+  hasInitialFocus
+  initialFocusElement='.selectMe'
 >
   {({closeMenu}) => 
     <>
       <TextInput
+        placeholder='dummy input'
+      />
+      <TextInput
+        className='selectMe'
         placeholder='Search country!'
         icon={<FontAwesomeIcon type='search' />}
         value={state.inputValue}

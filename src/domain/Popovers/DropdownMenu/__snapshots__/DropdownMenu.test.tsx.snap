@@ -34,6 +34,7 @@ exports[`<DropdownMenu /> Render a dropdown using custom content should match th
       focusTrapOptions={
         Object {
           "clickOutsideDeactivates": true,
+          "fallbackFocus": <body />,
           "initialFocus": <body />,
           "onDeactivate": [Function],
           "returnFocusOnDeactivate": false,
@@ -88,6 +89,7 @@ exports[`<DropdownMenu /> Simple dropdown behaviour should match the snapshot 1`
       focusTrapOptions={
         Object {
           "clickOutsideDeactivates": true,
+          "fallbackFocus": <body />,
           "initialFocus": <body />,
           "onDeactivate": [Function],
           "returnFocusOnDeactivate": false,
