@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import {
   toLower,
   map,
@@ -124,7 +124,7 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
     }
 
     return (
-      <span key={index}>
+      <Fragment key={index}>
         {rowCallback({
           filters,
           rowData,
@@ -132,7 +132,7 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
           filteredRows,
           index
        }) || null}
-       </span>
+      </Fragment>
     )
   }
 
