@@ -1,8 +1,7 @@
-import React from 'react'
 import styled, {css} from 'styled-components'
 import { Variables } from '../../../../common'
 
-interface IStyledInputLabelProps extends React.HTMLProps<HTMLLabelElement> {
+interface IStyledInputLabelProps {
   isRequired: boolean
 }
 
