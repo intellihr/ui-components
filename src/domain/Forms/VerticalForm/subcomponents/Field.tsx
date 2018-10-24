@@ -1,7 +1,6 @@
 import React from 'react'
 import { map, isString } from 'lodash'
-import { ErrorMessage, FieldWrapper } from './style'
-import { InputLabel } from '../../../Inputs/InputLabel'
+import { ErrorMessage, FieldWrapper, StyledInputLabel, StyledDescription } from './style'
 
 interface IVerticalFormFieldProps {
   /** HTML name of the input */
@@ -10,6 +9,8 @@ interface IVerticalFormFieldProps {
   isRequired?: boolean
   /** Text displayed above the input */
   label?: string
+  /** Descriptive text displayed above the input */
+  description?: string
   /** Array of error messages to display */
   errorMessages?: string | string[]
 }
@@ -42,12 +43,28 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
 
     if (label) {
       return (
-        <InputLabel
+        <StyledInputLabel
           htmlFor={inputName}
-          isRequired={isRequired}
+          isRequired={isRequired!}
         >
           {label}
-        </InputLabel>
+        </StyledInputLabel>
+      )
+    }
+
+    return null
+  }
+
+  private get description (): JSX.Element | null {
+    const {
+      description
+    } = this.props
+
+    if (description) {
+      return (
+        <StyledDescription>
+          {description}
+        </StyledDescription>
       )
     }
 
@@ -66,6 +83,7 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
     return (
       <FieldWrapper>
         {this.inputLabel}
+        {this.description}
         {children}
         {this.errorMessages}
       </FieldWrapper>

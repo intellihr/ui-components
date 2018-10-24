@@ -2,11 +2,11 @@
 
 exports[`<Field /> should render a vertical form field with a single error message 1`] = `
 <styled.div>
-  <InputLabel
+  <styled.label
     isRequired={false}
   >
     This is a test input
-  </InputLabel>
+  </styled.label>
   Children
   <styled.div>
     Just one error
@@ -16,11 +16,11 @@ exports[`<Field /> should render a vertical form field with a single error messa
 
 exports[`<Field /> should render a vertical form field with error messages 1`] = `
 <styled.div>
-  <InputLabel
+  <styled.label
     isRequired={false}
   >
     This is a test input
-  </InputLabel>
+  </styled.label>
   Children
   <styled.div>
     Error 1
@@ -35,12 +35,12 @@ exports[`<Field /> should render a vertical form field with nothing 1`] = `<styl
 
 exports[`<Field /> should render a vertical form field with regular props 1`] = `
 <styled.div>
-  <InputLabel
+  <styled.label
     htmlFor="testInput"
     isRequired={true}
   >
     This is a test input
-  </InputLabel>
+  </styled.label>
   Children
 </styled.div>
 `;

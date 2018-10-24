@@ -1,6 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import { Variables } from '../../../../common'
+
+interface IStyledInputLabelProps extends React.HTMLProps<HTMLLabelElement> {
+  isRequired: boolean
+}
 
 const FieldWrapper = styled.div`
   margin-bottom: 1rem;
@@ -15,7 +19,32 @@ const ErrorMessage = styled.div`
   color: ${Variables.Color.r400};
 `
 
+const StyledInputLabel = styled.label`
+  color: ${Variables.Color.n700};
+  font-size: ${Variables.FontSize.fzSmall}px;
+  line-height: ${Variables.LineHeight.lhSmall}px;
+  margin-bottom: 4px;
+
+  ${(props: IStyledInputLabelProps) => props.isRequired && css`
+      &::after {
+        color: ${Variables.Color.n400};
+        content: ' - required';
+        font-size: ${Variables.FontSize.fzSmall}px;
+        font-style: italic;
+      }
+    `
+  }}
+`
+const StyledDescription = styled.div`
+  color: ${Variables.Color.n600};
+  font-size: ${Variables.FontSize.fzSmall}px;
+  line-height: ${Variables.LineHeight.lhSmall}px;
+  margin-bottom: 8px;
+`
+
 export {
   FieldWrapper,
-  ErrorMessage
+  ErrorMessage,
+  StyledInputLabel,
+  StyledDescription
 }
