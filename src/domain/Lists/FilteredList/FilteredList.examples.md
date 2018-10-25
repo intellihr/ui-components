@@ -44,7 +44,7 @@ initialState = {
 #### Multiple Filtered List
 
 ```jsx
-const { TextInput, InputLabel } = require('@Domain/Inputs');
+const { TextInput } = require('@Domain/Inputs');
 
 initialState = {
   value1: '',
@@ -52,16 +52,13 @@ initialState = {
 };
 
 <div>
-  <InputLabel>
-    value
-  </InputLabel>
+  Value
   <TextInput
     value={state.value1}
     handleChange={(event) => setState({value1: event.target.value})}
   />
-  <InputLabel>
-    type
-  </InputLabel>
+
+  Type
   <TextInput
     value={state.value2}
     handleChange={(event) => setState({value2: event.target.value})}
