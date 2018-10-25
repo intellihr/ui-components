@@ -1,4 +1,5 @@
 import React from 'react'
+import { reduce } from 'lodash'
 import { TextWrapper } from './style'
 import { Props, Variables } from '../../../common'
 
@@ -21,6 +22,10 @@ export interface ITextProps {
   color?: Variables.Color
   /** Optional header tag to render the element with */
   tag?: 'h1' | 'h2' | 'h3' | 'p' | 'span'
+  /** HTML data attributes to display on the text tag */
+  dataAttributes?: {
+    [i: string]: any
+  }
 }
 
 export class Text extends React.PureComponent<ITextProps> {
@@ -40,6 +45,18 @@ export class Text extends React.PureComponent<ITextProps> {
     }
 
     return TextWrapper
+  }
+
+  get dataAttributes (): any {
+    const {
+      dataAttributes
+    } = this.props
+
+    return reduce(dataAttributes,(acc: any, dataValue: string, dataKey: string) => {
+      acc[`data-${dataKey}`] = dataValue
+
+      return acc
+    }, {})
   }
 
   public render (): JSX.Element {
@@ -65,6 +82,7 @@ export class Text extends React.PureComponent<ITextProps> {
         isUpper={isUpper}
         isTruncated={isTruncated}
         className={className}
+        {...this.dataAttributes}
       >
         {children}
       </TextTag>

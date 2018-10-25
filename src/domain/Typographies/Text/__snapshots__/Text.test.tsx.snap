@@ -61,6 +61,46 @@ exports[`<Text /> should render a text element as a h1 1`] = `
 </Text>
 `;
 
+exports[`<Text /> should render a text with data attributes 1`] = `
+.c0 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
+<Text
+  dataAttributes={
+    Object {
+      "otherKey": "myOtherKey",
+      "role": "myRole",
+    }
+  }
+  isInline={true}
+  tag="span"
+  type="body"
+>
+  <styled.span
+    data-otherKey="myOtherKey"
+    data-role="myRole"
+    isInline={true}
+    textType="body"
+  >
+    <span
+      className="c0"
+      data-otherKey="myOtherKey"
+      data-role="myRole"
+    >
+      Hello! I am text with data attributes
+    </span>
+  </styled.span>
+</Text>
+`;
+
 exports[`<Text /> should render an element with colored text 1`] = `
 .c0 {
   font-size: 16px;

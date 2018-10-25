@@ -105,3 +105,16 @@ const { Variables } = require('../../../common');
   </Text>
 </div>
 ```
+
+#### Data attribute
+
+```jsx
+  <Text
+    dataAttributes={{
+      role: 'myRole',
+      otherKey: 'myOtherKey',
+    }}
+  >
+    Hello! I am text with data attributes
+  </Text>
+```
