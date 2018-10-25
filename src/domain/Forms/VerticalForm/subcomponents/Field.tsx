@@ -6,7 +6,7 @@ interface IVerticalFormFieldProps {
   /** HTML name of the input */
   inputName?: string
   /** If true, marks the input as a required field */
-  isRequired: boolean
+  isRequired?: boolean
   /** Text displayed above the input */
   label?: string
   /** Descriptive text displayed above the input */
@@ -45,7 +45,7 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
       return (
         <StyledInputLabel
           htmlFor={inputName}
-          isRequired={isRequired}
+          isRequired={isRequired!}
         >
           {label}
         </StyledInputLabel>
