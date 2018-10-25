@@ -54,4 +54,17 @@ describe('<Field />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it(`should render a vertical form field with a description`, () => {
+    const wrapper = shallow(
+      <Field
+        label='This is a test input'
+        description='This is a test description'
+      >
+        Children
+      </Field>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })

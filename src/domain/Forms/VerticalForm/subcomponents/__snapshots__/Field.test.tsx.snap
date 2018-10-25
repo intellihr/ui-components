@@ -1,5 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Field /> should render a vertical form field with a description 1`] = `
+<styled.div>
+  <styled.label
+    isRequired={false}
+  >
+    This is a test input
+  </styled.label>
+  <styled.div>
+    This is a test description
+  </styled.div>
+  Children
+</styled.div>
+`;
+
 exports[`<Field /> should render a vertical form field with a single error message 1`] = `
 <styled.div>
   <styled.label
