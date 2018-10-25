@@ -6,15 +6,20 @@ exports[`<TelephoneText /> should render the Telephone Text 1`] = `
     emoji="flag-au"
     type="body"
   />
-  <Styled(Text)
-    color="#667380"
-    isUpper={true}
-    showFlag={true}
-    type="body"
+  <span
+    data-role="countryCode"
   >
-    au
-  </Styled(Text)>
+    <Styled(Text)
+      color="#667380"
+      isUpper={true}
+      showFlag={true}
+      type="body"
+    >
+      au
+    </Styled(Text)>
+  </span>
   <Text
+    data-role="phoneNumber"
     isInline={true}
     tag="span"
     type="body"
@@ -26,15 +31,20 @@ exports[`<TelephoneText /> should render the Telephone Text 1`] = `
 
 exports[`<TelephoneText /> should render the Telephone Text no flag 1`] = `
 <span>
-  <Styled(Text)
-    color="#667380"
-    isUpper={true}
-    showFlag={false}
-    type="body"
+  <span
+    data-role="countryCode"
   >
-    au
-  </Styled(Text)>
+    <Styled(Text)
+      color="#667380"
+      isUpper={true}
+      showFlag={false}
+      type="body"
+    >
+      au
+    </Styled(Text)>
+  </span>
   <Text
+    data-role="phoneNumber"
     isInline={true}
     tag="span"
     type="body"
@@ -47,6 +57,7 @@ exports[`<TelephoneText /> should render the Telephone Text no flag 1`] = `
 exports[`<TelephoneText /> should render the Telephone Text with no country information 1`] = `
 <span>
   <Text
+    data-role="phoneNumber"
     isInline={true}
     tag="span"
     type="body"
