@@ -1,12 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Field /> should render a vertical form field with a single error message 1`] = `
+exports[`<Field /> should render a vertical form field with a description 1`] = `
 <styled.div>
-  <InputLabel
+  <styled.label
     isRequired={false}
   >
     This is a test input
-  </InputLabel>
+  </styled.label>
+  <styled.div>
+    This is a test description
+  </styled.div>
+  Children
+</styled.div>
+`;
+
+exports[`<Field /> should render a vertical form field with a single error message 1`] = `
+<styled.div>
+  <styled.label
+    isRequired={false}
+  >
+    This is a test input
+  </styled.label>
   Children
   <styled.div>
     Just one error
@@ -16,11 +30,11 @@ exports[`<Field /> should render a vertical form field with a single error messa
 
 exports[`<Field /> should render a vertical form field with error messages 1`] = `
 <styled.div>
-  <InputLabel
+  <styled.label
     isRequired={false}
   >
     This is a test input
-  </InputLabel>
+  </styled.label>
   Children
   <styled.div>
     Error 1
@@ -35,12 +49,12 @@ exports[`<Field /> should render a vertical form field with nothing 1`] = `<styl
 
 exports[`<Field /> should render a vertical form field with regular props 1`] = `
 <styled.div>
-  <InputLabel
+  <styled.label
     htmlFor="testInput"
     isRequired={true}
   >
     This is a test input
-  </InputLabel>
+  </styled.label>
   Children
 </styled.div>
 `;
