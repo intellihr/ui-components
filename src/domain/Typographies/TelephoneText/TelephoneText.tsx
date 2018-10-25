@@ -91,13 +91,14 @@ class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
     }
 
     return (
-      <Text
-        type={type}
-        color={color}
-        data-role='phoneNumber'
-      >
-        {formattedPhoneNumber}
-      </Text>
+      <span data-role='phoneNumber'>
+        <Text
+          type={type}
+          color={color}
+        >
+          {formattedPhoneNumber}
+        </Text>
+      </span>
     )
   }
 

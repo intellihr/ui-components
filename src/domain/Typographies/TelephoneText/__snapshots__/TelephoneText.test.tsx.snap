@@ -18,14 +18,17 @@ exports[`<TelephoneText /> should render the Telephone Text 1`] = `
       au
     </Styled(Text)>
   </span>
-  <Text
+  <span
     data-role="phoneNumber"
-    isInline={true}
-    tag="span"
-    type="body"
   >
-    +61 412 341 234
-  </Text>
+    <Text
+      isInline={true}
+      tag="span"
+      type="body"
+    >
+      +61 412 341 234
+    </Text>
+  </span>
 </span>
 `;
 
@@ -43,26 +46,32 @@ exports[`<TelephoneText /> should render the Telephone Text no flag 1`] = `
       au
     </Styled(Text)>
   </span>
-  <Text
+  <span
     data-role="phoneNumber"
-    isInline={true}
-    tag="span"
-    type="body"
   >
-    +61 412 341 234
-  </Text>
+    <Text
+      isInline={true}
+      tag="span"
+      type="body"
+    >
+      +61 412 341 234
+    </Text>
+  </span>
 </span>
 `;
 
 exports[`<TelephoneText /> should render the Telephone Text with no country information 1`] = `
 <span>
-  <Text
+  <span
     data-role="phoneNumber"
-    isInline={true}
-    tag="span"
-    type="body"
   >
-    33333333
-  </Text>
+    <Text
+      isInline={true}
+      tag="span"
+      type="body"
+    >
+      33333333
+    </Text>
+  </span>
 </span>
 `;
