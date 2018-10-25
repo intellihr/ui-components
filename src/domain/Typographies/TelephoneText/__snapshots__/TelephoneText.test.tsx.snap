@@ -6,72 +6,77 @@ exports[`<TelephoneText /> should render the Telephone Text 1`] = `
     emoji="flag-au"
     type="body"
   />
-  <span
-    data-role="countryCode"
+  <Styled(Text)
+    color="#667380"
+    dataAttributes={
+      Object {
+        "role": "countryCode",
+      }
+    }
+    isUpper={true}
+    showFlag={true}
+    type="body"
   >
-    <Styled(Text)
-      color="#667380"
-      isUpper={true}
-      showFlag={true}
-      type="body"
-    >
-      au
-    </Styled(Text)>
-  </span>
-  <span
-    data-role="phoneNumber"
+    au
+  </Styled(Text)>
+  <Text
+    dataAttributes={
+      Object {
+        "role": "phoneNumber",
+      }
+    }
+    isInline={true}
+    tag="span"
+    type="body"
   >
-    <Text
-      isInline={true}
-      tag="span"
-      type="body"
-    >
-      +61 412 341 234
-    </Text>
-  </span>
+    +61 412 341 234
+  </Text>
 </span>
 `;
 
 exports[`<TelephoneText /> should render the Telephone Text no flag 1`] = `
 <span>
-  <span
-    data-role="countryCode"
+  <Styled(Text)
+    color="#667380"
+    dataAttributes={
+      Object {
+        "role": "countryCode",
+      }
+    }
+    isUpper={true}
+    showFlag={false}
+    type="body"
   >
-    <Styled(Text)
-      color="#667380"
-      isUpper={true}
-      showFlag={false}
-      type="body"
-    >
-      au
-    </Styled(Text)>
-  </span>
-  <span
-    data-role="phoneNumber"
+    au
+  </Styled(Text)>
+  <Text
+    dataAttributes={
+      Object {
+        "role": "phoneNumber",
+      }
+    }
+    isInline={true}
+    tag="span"
+    type="body"
   >
-    <Text
-      isInline={true}
-      tag="span"
-      type="body"
-    >
-      +61 412 341 234
-    </Text>
-  </span>
+    +61 412 341 234
+  </Text>
 </span>
 `;
 
 exports[`<TelephoneText /> should render the Telephone Text with no country information 1`] = `
 <span>
-  <span
-    data-role="phoneNumber"
+  <Text
+    dataAttributes={
+      Object {
+        "role": "phoneNumber",
+      }
+    }
+    isInline={true}
+    tag="span"
+    type="body"
   >
-    <Text
-      isInline={true}
-      tag="span"
-      type="body"
-    >
-      33333333
-    </Text>
-  </span>
+    33333333
+  </Text>
 </span>
 `;

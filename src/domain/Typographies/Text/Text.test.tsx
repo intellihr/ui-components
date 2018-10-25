@@ -68,4 +68,19 @@ describe('<Text />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it(`should render a text with data attributes`, () => {
+    const wrapper = mount(
+      <Text
+        dataAttributes={{
+          role: 'myRole',
+          otherKey: 'myOtherKey',
+        }}
+      >
+        Hello! I am text with data attributes
+      </Text>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })
