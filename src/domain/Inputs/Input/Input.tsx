@@ -78,13 +78,25 @@ export class Input extends React.PureComponent<InputProps> {
 
   private prefixWrapperRef: RefObject<HTMLDivElement> = React.createRef()
 
-  public componentDidMount() {
+  public componentDidMount () {
     const {
       icon,
       disabledPrefix
     } = this.props
 
     if (icon || disabledPrefix) {
+      // forceUpdate is required to for the ref to work
+      this.forceUpdate()
+    }
+  }
+
+  public componentDidUpdate (prevProps: InputProps) {
+    const {
+      icon,
+      disabledPrefix
+    } = this.props
+
+    if (icon || disabledPrefix && (!prevProps.icon && !prevProps.disabledPrefix)) {
       // forceUpdate is required to for the ref to work
       this.forceUpdate()
     }
