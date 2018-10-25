@@ -74,7 +74,7 @@ describe('<Text />', () => {
       <Text
         dataAttributes={{
           role: 'myRole',
-          otherKey: 'myOtherKey',
+          otherKey: 'myOtherKey'
         }}
       >
         Hello! I am text with data attributes
