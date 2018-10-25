@@ -53,14 +53,17 @@ class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
       return (
         <>
           {this.flag}
-          <CountryCodeWrapper
-            color={Variables.Color.n600}
-            type={type}
-            showFlag={showFlag!}
-            isUpper
-          >
-            {countryCode}
-          </CountryCodeWrapper>
+            <CountryCodeWrapper
+              color={Variables.Color.n600}
+              type={type}
+              showFlag={showFlag!}
+              isUpper
+              dataAttributes={{
+                role: 'countryCode'
+              }}
+            >
+              {countryCode}
+            </CountryCodeWrapper>
         </>
       )
     }
@@ -89,12 +92,15 @@ class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
     }
 
     return (
-      <Text
-        type={type}
-        color={color}
-      >
-        {formattedPhoneNumber}
-      </Text>
+        <Text
+          type={type}
+          color={color}
+          dataAttributes={{
+            role: 'phoneNumber'
+          }}
+        >
+          {formattedPhoneNumber}
+        </Text>
     )
   }
 

@@ -8,6 +8,11 @@ exports[`<TelephoneText /> should render the Telephone Text 1`] = `
   />
   <Styled(Text)
     color="#667380"
+    dataAttributes={
+      Object {
+        "role": "countryCode",
+      }
+    }
     isUpper={true}
     showFlag={true}
     type="body"
@@ -15,6 +20,11 @@ exports[`<TelephoneText /> should render the Telephone Text 1`] = `
     au
   </Styled(Text)>
   <Text
+    dataAttributes={
+      Object {
+        "role": "phoneNumber",
+      }
+    }
     isInline={true}
     tag="span"
     type="body"
@@ -28,6 +38,11 @@ exports[`<TelephoneText /> should render the Telephone Text no flag 1`] = `
 <span>
   <Styled(Text)
     color="#667380"
+    dataAttributes={
+      Object {
+        "role": "countryCode",
+      }
+    }
     isUpper={true}
     showFlag={false}
     type="body"
@@ -35,6 +50,11 @@ exports[`<TelephoneText /> should render the Telephone Text no flag 1`] = `
     au
   </Styled(Text)>
   <Text
+    dataAttributes={
+      Object {
+        "role": "phoneNumber",
+      }
+    }
     isInline={true}
     tag="span"
     type="body"
@@ -47,6 +67,11 @@ exports[`<TelephoneText /> should render the Telephone Text no flag 1`] = `
 exports[`<TelephoneText /> should render the Telephone Text with no country information 1`] = `
 <span>
   <Text
+    dataAttributes={
+      Object {
+        "role": "phoneNumber",
+      }
+    }
     isInline={true}
     tag="span"
     type="body"
