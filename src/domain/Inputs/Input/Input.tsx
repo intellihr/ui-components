@@ -96,7 +96,11 @@ export class Input extends React.PureComponent<InputProps> {
       disabledPrefix
     } = this.props
 
-    if (icon || disabledPrefix && (!prevProps.icon && !prevProps.disabledPrefix)) {
+    if (
+      (icon || disabledPrefix) &&
+      (!prevProps.icon && !prevProps.disabledPrefix) ||
+      disabledPrefix !== prevProps.disabledPrefix
+    ) {
       // forceUpdate is required to for the ref to work
       this.forceUpdate()
     }
