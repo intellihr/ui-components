@@ -1,5 +1,5 @@
 import React  from 'react'
-import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
+import { Utils } from '../../../common/services/utils'
 import Color from 'color'
 import styled, { StyledComponentClass } from 'styled-components'
 import ReactModal from 'react-modal'
@@ -34,9 +34,9 @@ class ReactModalAdapter extends React.PureComponent<IReactModalAdapter> {
 
   private setOverlayRef = (overlayRef: HTMLDivElement) => {
     if (!this.overlayRef && overlayRef) {
-      disableBodyScroll(overlayRef, { reserveScrollBarGap: true })
+      Utils.disableBodyScroll()
     } else if (this.overlayRef && !overlayRef) {
-      enableBodyScroll(this.overlayRef)
+      Utils.enableBodyScroll()
     }
 
     this.overlayRef = overlayRef
