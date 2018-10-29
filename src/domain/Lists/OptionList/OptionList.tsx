@@ -39,7 +39,9 @@ interface IOptionListProps {
   /** Currently selected value */
   selectedValue?: OptionValue
   /** Maximum height of the list */
-  maxHeight?: number,
+  maxHeight?: number
+  /** Fixed width of the list. If undefined, auto width will be used */
+  width?: string,
   /** whether the text in the options should truncate */
   truncatedText?: boolean
 }
@@ -137,12 +139,14 @@ class OptionList extends React.PureComponent<IOptionListProps> {
 
   public render (): JSX.Element {
     const {
-      maxHeight
+      maxHeight,
+      width
     } = this.props
 
     return (
       <OptionListWrapper
         maxHeight={maxHeight}
+        width={width}
       >
         {this.content}
       </OptionListWrapper>
