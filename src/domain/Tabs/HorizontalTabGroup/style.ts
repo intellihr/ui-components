@@ -46,21 +46,19 @@ const TabChevronButton = styled.button`
 const TabParent = styled.div`
   overflow: hidden;
   height: ${TabStyleConstants.GroupHeight}px;
-
 `
-const TabList = styled.ul`
 
-  overflow-y: hidden;
-  overflow-x: scroll;
+const TabList = styled.ul`
+  font-size: ${Variables.FontSize.fzBody}px;
   height: 100%;
-  margin-bottom: -100px;
+  line-height: ${TabStyleConstants.GroupHeight}px;
+  list-style-type: none;
+  margin: 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
   padding-bottom: 100px;
   padding-left: 0;
   position: relative;
-  margin: 0;
-  font-size: ${Variables.FontSize.fzBody}px;
-  line-height: ${TabStyleConstants.GroupHeight}px;
-  list-style-type: none;
   white-space: nowrap;
   
   &:after,
