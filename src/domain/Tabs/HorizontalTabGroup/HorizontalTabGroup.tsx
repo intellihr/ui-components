@@ -15,7 +15,8 @@ import {
   TabChevronButton,
   TabList,
   TabListItem,
-  TabListItemAnchor
+  TabListItemAnchor,
+  TabParent
 } from './style'
 
 export interface IHorizontalTab {
@@ -155,13 +156,15 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
     } = this.props
 
     return (
-      <TabList
-        innerRef={this.tabListRef}
-        onScroll={this.handleScrollUpdate}
-        role='tablist'
-      >
-        {map(tabs, this.listItemForTab)}
-      </TabList>
+      <TabParent>
+        <TabList
+          innerRef={this.tabListRef}
+          onScroll={this.handleScrollUpdate}
+          role='tablist'
+        >
+          {map(tabs, this.listItemForTab)}
+        </TabList>
+      </TabParent>
     )
   }
 
