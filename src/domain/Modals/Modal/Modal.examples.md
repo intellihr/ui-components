@@ -68,7 +68,7 @@ ModalExample.defaultProps = { showCloseButton: true };
   </div>
   
   <div>
-    <ModalExample buttonText='Lots of content' showCloseButton={false}>
+    <ModalExample buttonText='Lots of content' showCloseButton={true}>
       Modals will expand infinitely vertically to match their content, no matter how large it is
       
       <div style={{height: 2000, backgroundImage: 'linear-gradient(to bottom right, red, yellow)'}}>

@@ -2,78 +2,80 @@
 
 exports[`<HorizontalTabGroup /> Standard tabs with current index should match the snapshot 1`] = `
 <styled.div>
-  <styled.ul
-    innerRef={
-      Object {
-        "current": null,
+  <styled.div>
+    <styled.ul
+      innerRef={
+        Object {
+          "current": null,
+        }
       }
-    }
-    onScroll={[Function]}
-    role="tablist"
-  >
-    <styled.li
-      key="0"
-      role="tab"
+      onScroll={[Function]}
+      role="tablist"
     >
-      <styled.a
-        active={false}
-        aria-selected={false}
-        data-tabindex={0}
-        href="#"
-        onClick={[Function]}
+      <styled.li
+        key="0"
+        role="tab"
       >
-        Tab 1
-      </styled.a>
-    </styled.li>
-    <styled.li
-      key="1"
-      role="tab"
-    >
-      <styled.a
-        active={true}
-        aria-selected={true}
-        data-tabindex={1}
-        href="#second"
-        onClick={[Function]}
-      >
-        Tab 2
-      </styled.a>
-    </styled.li>
-    <styled.li
-      key="2"
-      role="tab"
-    >
-      <styled.a
-        active={false}
-        aria-selected={false}
-        data-tabindex={2}
-        href="#third"
-        onClick={[Function]}
-      >
-        <span
-          className="left-component"
+        <styled.a
+          active={false}
+          aria-selected={false}
+          data-tabindex={0}
+          href="#"
+          onClick={[Function]}
         >
-          <div
-            id="tab3left"
+          Tab 1
+        </styled.a>
+      </styled.li>
+      <styled.li
+        key="1"
+        role="tab"
+      >
+        <styled.a
+          active={true}
+          aria-selected={true}
+          data-tabindex={1}
+          href="#second"
+          onClick={[Function]}
+        >
+          Tab 2
+        </styled.a>
+      </styled.li>
+      <styled.li
+        key="2"
+        role="tab"
+      >
+        <styled.a
+          active={false}
+          aria-selected={false}
+          data-tabindex={2}
+          href="#third"
+          onClick={[Function]}
+        >
+          <span
+            className="left-component"
           >
-            Test me
-          </div>
-        </span>
-        Tab 3
-      </styled.a>
-    </styled.li>
-    <styled.li
-      key="3"
-      role="tab"
-    >
-      <styled.a
-        active={false}
-        aria-selected={false}
-        data-tabindex={3}
-        href="#"
-        onClick={[Function]}
-      />
-    </styled.li>
-  </styled.ul>
+            <div
+              id="tab3left"
+            >
+              Test me
+            </div>
+          </span>
+          Tab 3
+        </styled.a>
+      </styled.li>
+      <styled.li
+        key="3"
+        role="tab"
+      >
+        <styled.a
+          active={false}
+          aria-selected={false}
+          data-tabindex={3}
+          href="#"
+          onClick={[Function]}
+        />
+      </styled.li>
+    </styled.ul>
+  </styled.div>
 </styled.div>
 `;

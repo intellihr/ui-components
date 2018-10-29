@@ -39,6 +39,10 @@
     text='Highlight'
     color='highlight'
   />
+  <Pill
+    text='Dark'
+    color='dark'
+  />
 </div>
 ```
 

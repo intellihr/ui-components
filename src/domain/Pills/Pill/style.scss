@@ -35,6 +35,11 @@ $pill-styles: (
     background-color: $c100,
     text-color: $c600,
     border-color: $c400
+  ),
+  dark: (
+    background-color: $n700,
+    text-color: $n200,
+    border-color: $n100
   )
 );
 

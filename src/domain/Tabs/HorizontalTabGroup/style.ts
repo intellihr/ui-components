@@ -43,29 +43,28 @@ const TabChevronButton = styled.button`
   }
 `
 
+const TabParent = styled.div`
+  overflow: hidden;
+  height: ${TabStyleConstants.GroupHeight}px;
+`
+
 const TabList = styled.ul`
-  overflow-x: scroll;
-  overflow-y: hidden;
-  padding-left: 0;
-  position: relative;
-  margin: 0;
   font-size: ${Variables.FontSize.fzBody}px;
+  height: 100%;
   line-height: ${TabStyleConstants.GroupHeight}px;
   list-style-type: none;
+  margin: 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-bottom: 100px;
+  padding-left: 0;
+  position: relative;
   white-space: nowrap;
   
   &:after,
   &:before {
     display: table;
     content: ' ';
-  }
-  
-  -ms-overflow-style: none;
-  overflow: -moz-scrollbars-none;
-  
-  &::-webkit-scrollbar {
-    background: transparent;
-    width: 0;
   }
 `
 
@@ -125,6 +124,7 @@ export {
   TabGroupContainer,
   TabChevronButton,
   TabList,
+  TabParent,
   TabListItem,
   TabListItemAnchor
 }

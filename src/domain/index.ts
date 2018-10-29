@@ -29,7 +29,7 @@ export { TextSkeleton, ParagraphSkeleton, BlockSkeleton, CircleSkeleton } from '
 export { Spinner } from './Spinners'
 export { withStyledBreakpoints } from './Styles'
 export { DataTable } from './Tables'
-export { HorizontalTabs, HorizontalTabGroup } from './Tabs'
+export { HorizontalTabGroup } from './Tabs'
 
 /*
  * VerticalTimelineEvent is here for legacy support.
