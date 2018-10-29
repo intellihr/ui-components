@@ -121,6 +121,12 @@
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
       statusDot='neutral'
     />
+    <Avatar
+      initials='JW'
+      size='medium'
+      imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
+      statusDot='dark'
+    />
   </div>
 </div>
 ```
