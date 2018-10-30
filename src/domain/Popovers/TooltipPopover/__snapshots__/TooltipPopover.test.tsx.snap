@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TooltipPopover /> Render a popover using a custom trigger should match the snapshot 1`] = `
+<Fragment>
+  <span
+    aria-expanded={false}
+    aria-haspopup={true}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    role="button"
+  >
+    Custom trigger component
+  </span>
+  <Popover
+    id=""
+    isOpen={false}
+    parentAnchorPosition="auto"
+    parentRef={
+      Object {
+        "current": null,
+      }
+    }
+    popoverAnchorPosition="auto"
+  >
+    <styled.div>
+      Triggered Customly
+    </styled.div>
+  </Popover>
+</Fragment>
+`;
+
+exports[`<TooltipPopover /> Simple popover behaviour should match the snapshot 1`] = `
+<Fragment>
+  <span
+    aria-expanded={false}
+    aria-haspopup={true}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    role="button"
+  >
+    <FontAwesomeIcon
+      type="question-circle-o"
+    />
+  </span>
+  <Popover
+    id=""
+    isOpen={false}
+    parentAnchorPosition="auto"
+    parentRef={
+      Object {
+        "current": null,
+      }
+    }
+    popoverAnchorPosition="auto"
+  >
+    <styled.div>
+      Simple Popover
+    </styled.div>
+  </Popover>
+</Fragment>
+`;
