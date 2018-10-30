@@ -11,9 +11,9 @@ interface ITooltipPopoverMenuState {
 }
 
 interface ITooltipPopoverToggleComponentProps {
-  /** Callback to toggle opening/closing popover */
+  /** Callback to open the popover */
   openMenu: () => void,
-  /** Callback to toggle opening/closing popover */
+  /** Callback to close the popover */
   closeMenu: () => void,
   /** Ref for the toggle component, to anchor on the page */
   toggleComponentRef: RefObject<any>,
