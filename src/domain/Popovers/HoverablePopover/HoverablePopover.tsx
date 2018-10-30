@@ -64,6 +64,31 @@ class HoverablePopover extends React.Component<ITooltipPopoverProps, ITooltipPop
 
   private toggleComponentRef: RefObject<any> = React.createRef()
 
+  get toggleComponent () {
+    const {
+      isPopoverOpen,
+      popoverId
+    } = this.state
+
+    const {
+      toggleComponent
+    } = this.props
+
+    if (toggleComponent) {
+      return toggleComponent({
+        openMenu: this.openMenu,
+        closeMenu: this.closeMenu,
+        toggleComponentRef: this.toggleComponentRef,
+        ariaProps: {
+          role: 'button',
+          'aria-expanded': isPopoverOpen,
+          'aria-owns': popoverId,
+          'aria-haspopup': true
+        }
+      })
+    }
+  }
+
   public render (): JSX.Element {
     const {
       isPopoverOpen,
@@ -72,7 +97,6 @@ class HoverablePopover extends React.Component<ITooltipPopoverProps, ITooltipPop
 
     const {
       children,
-      toggleComponent,
       className,
       parentAnchorPosition,
       popoverAnchorPosition,
@@ -81,17 +105,7 @@ class HoverablePopover extends React.Component<ITooltipPopoverProps, ITooltipPop
 
     return (
       <Fragment>
-        {toggleComponent && toggleComponent({
-          openMenu: this.openMenu,
-          closeMenu: this.closeMenu,
-          toggleComponentRef: this.toggleComponentRef,
-          ariaProps: {
-            role: 'button',
-            'aria-expanded': isPopoverOpen,
-            'aria-owns': popoverId,
-            'aria-haspopup': true
-          }
-        })}
+        {this.toggleComponent}
         <Popover
           isOpen={isPopoverOpen}
           id={popoverId || ''}
@@ -116,16 +130,12 @@ class HoverablePopover extends React.Component<ITooltipPopoverProps, ITooltipPop
       isPopoverOpen
     } = this.state
 
-    if (isPopoverOpen) {
-      return
+    if (!isPopoverOpen) {
+      this.setState({
+        isPopoverOpen: true,
+        popoverId: uuid.v4()
+      })
     }
-
-
-    this.setState({
-      isPopoverOpen: true,
-      popoverId: uuid.v4()
-    })
-
   }
 
   private closeMenu = () => {
@@ -133,14 +143,12 @@ class HoverablePopover extends React.Component<ITooltipPopoverProps, ITooltipPop
       isPopoverOpen
     } = this.state
 
-    if (!isPopoverOpen) {
-      return
+    if (isPopoverOpen) {
+      this.setState({
+        isPopoverOpen: false,
+        popoverId: undefined
+      })
     }
-
-    this.setState({
-      isPopoverOpen: false,
-      popoverId: undefined
-    })
   }
 }
 

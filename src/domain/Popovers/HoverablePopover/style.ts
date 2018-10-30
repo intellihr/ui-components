@@ -11,8 +11,9 @@ const StyledTooltipContent = styled.div`
   border-radius: ${Variables.Style.borderRadius};
   box-shadow: 0 2px 4px rgba(38, 45, 51, 0.1);
   padding: 16px; 
-  
-  ${(props: IStyledPopoverProps) => props.width && css`width: ${props.width}px`}
+  width: max-content;
+
+  ${(props: IStyledPopoverProps) => props.width && css`max-width: ${props.width}px`}
 `
 
 export {
