@@ -1,5 +1,5 @@
 export {
-  HoverablePopover,
+  TooltipPopover,
   ITooltipPopoverProps,
   ITooltipPopoverToggleComponentProps
-} from './HoverablePopover'
+} from './TooltipPopover'

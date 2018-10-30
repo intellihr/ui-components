@@ -1,22 +1,22 @@
-#### Basic HoverablePopover
+#### Basic TooltipPopover
 
 ```jsx
-<HoverablePopover>
+<TooltipPopover>
   Pretty basic
-</HoverablePopover>
+</TooltipPopover>
 ```
 
-#### Custom Width HoverablePopover
+#### Custom Width TooltipPopover
 
 ```jsx
-<HoverablePopover width={200}>
+<TooltipPopover width={200}>
   This should have a width of 200 pixels
-</HoverablePopover>
+</TooltipPopover>
 ```
 
 #### Custom Trigger
 ```jsx
-  <HoverablePopover
+  <TooltipPopover
     toggleComponent={({ openMenu, closeMenu, toggleComponentRef, ariaProps }) =>
       <span
         onMouseEnter={openMenu}
@@ -29,11 +29,11 @@
     }
   >
     Triggered Customly
-  </HoverablePopover>
+  </TooltipPopover>
 
 ```
 
-#### HoverablePopover Alignment
+#### TooltipPopover Alignment
 
 By default, popovers will be positioned according to their location on the page.
 They will default to flipping direction after reaching a 2/3 cutoff on the page window.
@@ -47,7 +47,7 @@ hiding the popover.
 
 ```jsx
 <React.Fragment>
-  <HoverablePopover
+  <TooltipPopover
     parentAnchorPosition={{
       xPos: 'left',
       yPos: 'bottom'
@@ -68,9 +68,9 @@ hiding the popover.
     }
   >
     Bottom Left
-  </HoverablePopover>
+  </TooltipPopover>
   <br/>
-  <HoverablePopover
+  <TooltipPopover
     parentAnchorPosition={{
       xPos: 'right',
       yPos: 'bottom'
@@ -91,9 +91,9 @@ hiding the popover.
     }
   >
     Bottom Right
-  </HoverablePopover>
+  </TooltipPopover>
   <br/>
-  <HoverablePopover
+  <TooltipPopover
     parentAnchorPosition={{
       xPos: 'left',
       yPos: 'top'
@@ -114,9 +114,9 @@ hiding the popover.
     }
   >
     Up left
-  </HoverablePopover>
+  </TooltipPopover>
   <br/>
-  <HoverablePopover
+  <TooltipPopover
     parentAnchorPosition={{
       xPos: 'right',
       yPos: 'top'
@@ -137,9 +137,9 @@ hiding the popover.
     }
   >
     Top Right
-  </HoverablePopover>
+  </TooltipPopover>
   <br/>
-  <HoverablePopover
+  <TooltipPopover
     parentAnchorPosition={{
       xPos: 'left',
       yPos: 'bottom'
@@ -160,7 +160,7 @@ hiding the popover.
     }
   >
     Bottom Left Upwards
-  </HoverablePopover>
+  </TooltipPopover>
   <br/>
 </React.Fragment>
 ```

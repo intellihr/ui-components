@@ -1,9 +1,9 @@
 import React, { Fragment, RefObject } from 'react'
 import { FocusTarget } from 'focus-trap'
+import uuid from 'uuid'
 import { StyledTooltipContent } from './style'
 import { IPopoverPosition, Popover } from '../Popover'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
-import uuid from 'uuid'
 
 interface ITooltipPopoverMenuState {
   isPopoverOpen: boolean
@@ -38,13 +38,11 @@ interface ITooltipPopoverProps {
    * The callback is given open and close props which can be used to toggle the menu as needed.
    */
   toggleComponent?: (props: ITooltipPopoverToggleComponentProps) => React.ReactElement<any>,
-  /** Children to display in the tooltip */
-  children?: React.ReactElement<any>
   /** The width of the popover */
   width?: number
 }
 
-class HoverablePopover extends React.Component<ITooltipPopoverProps, ITooltipPopoverMenuState> {
+class TooltipPopover extends React.Component<ITooltipPopoverProps, ITooltipPopoverMenuState> {
   public static defaultProps: Partial<ITooltipPopoverProps> = {
     toggleComponent: ({ openMenu, closeMenu, toggleComponentRef, ariaProps }) => (
       <span
@@ -153,7 +151,7 @@ class HoverablePopover extends React.Component<ITooltipPopoverProps, ITooltipPop
 }
 
 export {
-  HoverablePopover,
+  TooltipPopover,
   ITooltipPopoverProps,
   ITooltipPopoverToggleComponentProps
 }

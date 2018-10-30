@@ -1,13 +1,13 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { HoverablePopover, ITooltipPopoverToggleComponentProps } from './HoverablePopover'
+import { TooltipPopover, ITooltipPopoverToggleComponentProps } from './TooltipPopover'
 
-describe('<HoverablePopover />', () => {
+describe('<TooltipPopover />', () => {
   describe('Simple popover behaviour', () => {
     const wrapper = shallow(
-      <HoverablePopover>
+      <TooltipPopover>
         Simple Popover
-      </HoverablePopover>
+      </TooltipPopover>
     )
 
     it('should match the snapshot', () => {
@@ -39,11 +39,11 @@ describe('<HoverablePopover />', () => {
       </span>
 
     const wrapper = shallow(
-      <HoverablePopover
+      <TooltipPopover
         toggleComponent={triggerComponent}
       >
         Triggered Customly
-      </HoverablePopover>
+      </TooltipPopover>
     )
 
     it('should match the snapshot', () => {

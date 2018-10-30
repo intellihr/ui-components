@@ -168,7 +168,7 @@ module.exports = {
           components: [
             'src/domain/Popovers/DropdownMenu/DropdownMenu',
             'src/domain/Popovers/Popover/Popover',
-            'src/domain/Popovers/HoverablePopover/HoverablePopover'
+            'src/domain/Popovers/TooltipPopover/TooltipPopover'
           ]
         },
         {

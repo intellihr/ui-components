@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<HoverablePopover /> Render a popover using a custom trigger should match the snapshot 1`] = `
+exports[`<TooltipPopover /> Render a popover using a custom trigger should match the snapshot 1`] = `
 <Fragment>
   <span
     aria-expanded={false}
@@ -29,7 +29,7 @@ exports[`<HoverablePopover /> Render a popover using a custom trigger should mat
 </Fragment>
 `;
 
-exports[`<HoverablePopover /> Simple popover behaviour should match the snapshot 1`] = `
+exports[`<TooltipPopover /> Simple popover behaviour should match the snapshot 1`] = `
 <Fragment>
   <span
     aria-expanded={false}

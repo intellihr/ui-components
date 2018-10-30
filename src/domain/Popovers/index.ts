@@ -5,8 +5,8 @@ export {
   IDropdownMenuToggleComponentProps
 } from './DropdownMenu'
 export {
-  HoverablePopover,
+  TooltipPopover,
   ITooltipPopoverProps,
   ITooltipPopoverToggleComponentProps
-} from './HoverablePopover'
+} from './TooltipPopover'
 export { Popover, IPopoverPosition } from './Popover'
