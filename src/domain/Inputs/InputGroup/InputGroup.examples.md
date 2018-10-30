@@ -91,10 +91,10 @@ initialState = {
         setState({selectedOption: option})
         closeMenu()
       }}
+      width={300}
       textInputProps={{
         icon: <FontAwesomeIcon type='search' />,
-        placeholder: 'Search country!',
-        width: 300
+        placeholder: 'Search country!'
       }}
       options={[
         {

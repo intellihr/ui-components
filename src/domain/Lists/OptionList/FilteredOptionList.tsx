@@ -17,6 +17,7 @@ class FilteredOptionList extends React.PureComponent<IFilteredOptionListProps, I
 
   public render (): JSX.Element {
     const {
+      width,
       options,
       textInputProps,
       handleClick,
@@ -29,6 +30,7 @@ class FilteredOptionList extends React.PureComponent<IFilteredOptionListProps, I
       <>
         <TextInput
           {...textInputProps}
+          width={width}
           name='filteredOptionListInput'
           value={this.state.query}
           handleChange={this.updateQueryValue}
@@ -40,6 +42,7 @@ class FilteredOptionList extends React.PureComponent<IFilteredOptionListProps, I
           options={options}
           query={this.state.query}
           maxHeight={maxHeight}
+          width={width}
         />
       </>
     )

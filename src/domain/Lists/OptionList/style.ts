@@ -3,6 +3,7 @@ import { Variables } from '../../../common'
 
 interface IOptionListWrapper {
   maxHeight?: number
+  width?: string
 }
 
 interface IOptionListButton {
@@ -21,6 +22,14 @@ const OptionListWrapper = styled.div`
     }
     
     return css`max-height: none`
+  }}
+  
+  ${(props: IOptionListWrapper) => {
+    if (props.width) {
+      return css`width: ${props.width}px;`
+    }
+      
+    return css`width: auto;`
   }}
 `
 
