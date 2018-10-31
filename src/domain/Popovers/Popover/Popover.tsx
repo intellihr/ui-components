@@ -6,8 +6,8 @@ import { Props } from '../../../common'
 import { StyledPopover } from './style'
 
 interface IPopoverPosition {
-  xPos: Props.Position.Left | Props.Position.Right,
-  yPos: Props.Position.Top | Props.Position.Bottom
+  xPos: Props.Position.Left | Props.Position.Right | Props.Position.Auto,
+  yPos: Props.Position.Top | Props.Position.Bottom | Props.Position.Auto
 }
 
 interface IPopoverProps {
@@ -106,7 +106,7 @@ class Popover extends React.Component<IPopoverProps, never> {
       <StyledPopover
         id={id}
         className={animationState}
-        transformOrigin={this.popoverAnchorPosition}
+        transformOrigin={{xPos: this.popoverAnchorXPosition, yPos: this.popoverAnchorYPosition}}
         style={{
           ...this.popoverXOffset,
           ...this.popoverYOffset
@@ -152,42 +152,61 @@ class Popover extends React.Component<IPopoverProps, never> {
     return parentYCenter < window.innerHeight * Popover.AUTO_FLIP_CUTOFF
   }
 
-  private get parentAnchorPosition (): IPopoverPosition {
-    const {
-      parentAnchorPosition
-    } = this.props
-
-    if (parentAnchorPosition !== 'auto') {
-      return parentAnchorPosition!
-    }
-
-    return {
-      xPos: this.parentInLeftSideOfWindow ? Props.Position.Left : Props.Position.Right,
-      yPos: this.parentInTopSideOfWindow ? Props.Position.Bottom : Props.Position.Top
-    }
-  }
-
-  private get popoverAnchorPosition (): IPopoverPosition {
+  private get popoverAnchorXPosition (): Props.Position {
     const {
       popoverAnchorPosition
     } = this.props
 
-    if (popoverAnchorPosition !== 'auto') {
-      return popoverAnchorPosition!
+
+    if (!popoverAnchorPosition || popoverAnchorPosition === 'auto' ||  popoverAnchorPosition.xPos === 'auto') {
+      return this.parentInLeftSideOfWindow ? Props.Position.Left : Props.Position.Right
     }
 
-    return {
-      xPos: this.parentInLeftSideOfWindow ? Props.Position.Left : Props.Position.Right,
-      yPos: this.parentInTopSideOfWindow ? Props.Position.Top : Props.Position.Bottom
+    return popoverAnchorPosition.xPos
+  }
+
+  private get popoverAnchorYPosition (): Props.Position {
+    const {
+      popoverAnchorPosition
+    } = this.props
+
+    if (!popoverAnchorPosition || popoverAnchorPosition === 'auto' ||  popoverAnchorPosition.yPos === 'auto') {
+      return this.parentInTopSideOfWindow ? Props.Position.Top : Props.Position.Bottom
     }
+
+    return popoverAnchorPosition.yPos
+  }
+
+  private get parentAnchorXPosition (): Props.Position {
+    const {
+      parentAnchorPosition
+    } = this.props
+
+
+    if (!parentAnchorPosition || parentAnchorPosition === 'auto' ||  parentAnchorPosition.xPos === 'auto') {
+      return this.parentInLeftSideOfWindow ? Props.Position.Left : Props.Position.Right
+    }
+
+    return parentAnchorPosition.xPos
+  }
+
+  private get parentAnchorYPosition (): Props.Position {
+    const {
+      parentAnchorPosition
+    } = this.props
+
+    if (!parentAnchorPosition || parentAnchorPosition === 'auto' ||  parentAnchorPosition.yPos === 'auto') {
+      return this.parentInTopSideOfWindow ? Props.Position.Bottom : Props.Position.Top
+    }
+
+    return parentAnchorPosition.yPos
   }
 
   private get parentAnchorOffset () {
     const boundingRect = this.parentBoundingRect
-    const position = this.parentAnchorPosition
 
-    const x = (position.xPos === Props.Position.Left) ? boundingRect.left : boundingRect.right
-    const y = (position.yPos === Props.Position.Top) ? boundingRect.top : boundingRect.bottom
+    const x = (this.parentAnchorXPosition === Props.Position.Left) ? boundingRect.left : boundingRect.right
+    const y = (this.parentAnchorYPosition === Props.Position.Top) ? boundingRect.top : boundingRect.bottom
 
     return {
       x: x + window.pageXOffset,
@@ -195,8 +214,9 @@ class Popover extends React.Component<IPopoverProps, never> {
     }
   }
 
+
   private get popoverXOffset () {
-    switch (this.popoverAnchorPosition.xPos) {
+    switch (this.popoverAnchorXPosition) {
       case Props.Position.Left:
         return { left: this.parentAnchorOffset.x }
       case Props.Position.Right:
@@ -207,7 +227,9 @@ class Popover extends React.Component<IPopoverProps, never> {
   }
 
   private get popoverYOffset () {
-    switch (this.popoverAnchorPosition.yPos) {
+    console.log(this.parentAnchorOffset)
+
+    switch (this.popoverAnchorYPosition) {
       case Props.Position.Top:
         return { top: this.parentAnchorOffset.y }
       case Props.Position.Bottom:

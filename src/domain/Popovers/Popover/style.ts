@@ -1,11 +1,12 @@
 import React from 'react'
 import styled, { StyledComponentClass, css } from 'styled-components'
-import { Variables } from '../../../common'
+import { Props, Variables } from '../../../common'
+import { IPopoverPosition } from './Popover'
 
 interface IStyledPopoverProps {
   transformOrigin: {
-    xPos: 'left' | 'center' | 'right',
-    yPos: 'top' | 'center' | 'bottom'
+    xPos: Props.Position,
+    yPos: Props.Position
   }
 }
 
@@ -28,3 +29,5 @@ const StyledPopover = styled.span`
 export {
   StyledPopover
 }
+
+
