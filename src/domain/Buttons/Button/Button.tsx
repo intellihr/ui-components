@@ -1,5 +1,6 @@
 import React from 'react'
 import { BaseButton, IBaseButtonProps } from '../BaseButton'
+import { Props } from '../../../common'
 
 export interface IButtonProps extends IBaseButtonProps {
   /** Button props passthrough */
@@ -12,11 +13,14 @@ export class Button extends BaseButton<IButtonProps> {
       buttonOverrides,
       onClick,
       disabled,
-      innerRef
+      innerRef,
+      componentContext
     } = this.props
 
     return (
       <button
+        data-component-type={Props.ComponentType.Button}
+        data-component-context={componentContext}
         ref={innerRef}
         className={this.buttonClass}
         onClick={onClick}
