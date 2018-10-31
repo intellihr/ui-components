@@ -4,6 +4,7 @@ import uuid from 'uuid'
 import { StyledTooltipContent } from './style'
 import { IPopoverPosition, Popover } from '../Popover'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
+import { Variables } from '../../../common'
 
 interface ITooltipPopoverMenuState {
   isPopoverOpen: boolean
@@ -51,7 +52,7 @@ class TooltipPopover extends React.Component<ITooltipPopoverProps, ITooltipPopov
         ref={toggleComponentRef}
         {...ariaProps}
       >
-        <FontAwesomeIcon type='question-circle-o' />
+        <FontAwesomeIcon type='question-circle-o' color={Variables.Color.n700} />
       </span>
     )
   }
@@ -110,6 +111,7 @@ class TooltipPopover extends React.Component<ITooltipPopoverProps, ITooltipPopov
           parentRef={this.toggleComponentRef}
           parentAnchorPosition={parentAnchorPosition}
           popoverAnchorPosition={popoverAnchorPosition}
+          animationType='tooltip'
         >
           <StyledTooltipContent
             className={className}

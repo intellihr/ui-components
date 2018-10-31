@@ -36,6 +36,8 @@ interface IPopoverProps {
   isOpen: boolean,
   /** Parent ref to anchor this to on the page */
   parentRef: RefObject<HTMLSpanElement>
+
+  animationType?: 'dropdown' | 'tooltip'
 }
 
 class Popover extends React.Component<IPopoverProps, never> {
@@ -43,7 +45,8 @@ class Popover extends React.Component<IPopoverProps, never> {
 
   public static defaultProps: Partial<IPopoverProps> = {
     parentAnchorPosition: 'auto',
-    popoverAnchorPosition: 'auto'
+    popoverAnchorPosition: 'auto',
+    animationType: 'dropdown'
   }
 
   private currentlyMounted: boolean = false
@@ -81,13 +84,14 @@ class Popover extends React.Component<IPopoverProps, never> {
 
   private get transition (): JSX.Element {
     const {
-      isOpen
+      isOpen,
+      animationType
     } = this.props
 
     return (
       <Transition
         in={isOpen}
-        timeout={100}
+        timeout={animationType === 'dropdown' ? 100 : 300}
         mountOnEnter
         unmountOnExit
       >
@@ -99,12 +103,14 @@ class Popover extends React.Component<IPopoverProps, never> {
   private animatedPopoverContent = (animationState: string) => {
     const {
       id,
-      children
+      children,
+      animationType
     } = this.props
 
     return (
       <StyledPopover
         id={id}
+        animationType={animationType!}
         className={animationState}
         transformOrigin={{xPos: this.popoverAnchorXPosition, yPos: this.popoverAnchorYPosition}}
         style={{

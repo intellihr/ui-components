@@ -1,13 +1,13 @@
 import React from 'react'
-import styled, { StyledComponentClass, css } from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Props, Variables } from '../../../common'
-import { IPopoverPosition } from './Popover'
 
 interface IStyledPopoverProps {
   transformOrigin: {
     xPos: Props.Position,
     yPos: Props.Position
-  }
+  },
+  animationType: 'dropdown' | 'tooltip'
 }
 
 const StyledPopover = styled.span`
@@ -16,14 +16,34 @@ const StyledPopover = styled.span`
   width: min-content;
   z-index: ${Variables.ZIndex.zIndexDropdownMenu};
 
-  transform: scale(0.1);
-  transform-origin: ${(props: IStyledPopoverProps) => props.transformOrigin.xPos + ' ' + props.transformOrigin.yPos};
-  transition: transform 150ms cubic-bezier(0.5, 1.8, 0.9, 0.8);
+  ${(props: IStyledPopoverProps) => {
 
-  &.entering,
-  &.entered {
-    transform: scale(1);
-  }
+  switch(props.animationType) {
+      case 'dropdown':
+        return css`
+          opacity: 0.9;
+          transform: scale(0.9);
+          transform-origin: ${props.transformOrigin.xPos + ' ' + props.transformOrigin.yPos};
+          transition: transform 150ms cubic-bezier(0.5, 1.8, 0.9, 0.8);
+        
+          &.entering,
+          &.entered {
+            opacity: 1;
+            transform: scale(1);
+          }
+        `
+      case 'tooltip':
+        return css`
+          opacity: 0.8;
+          transition: opacity 300ms cubic-bezier(.68,-.55,.265,1.55);
+          
+          &.entering,
+          &.entered {
+            opacity: 1;
+          }
+        `
+    }
+}}
 `
 
 export {
