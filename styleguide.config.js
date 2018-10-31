@@ -33,6 +33,10 @@ module.exports = {
         {
           name: 'Colors',
           content: 'src/domain/Internals/ExampleColorGrid/ExampleColorGrid.examples.md'
+        },
+        {
+          name: 'Automation',
+          content: 'docs/automation.md'
         }
       ]
     },
