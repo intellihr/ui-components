@@ -227,8 +227,6 @@ class Popover extends React.Component<IPopoverProps, never> {
   }
 
   private get popoverYOffset () {
-    console.log(this.parentAnchorOffset)
-
     switch (this.popoverAnchorYPosition) {
       case Props.Position.Top:
         return { top: this.parentAnchorOffset.y }
