@@ -12,6 +12,7 @@ exports[`<TooltipPopover /> Render a popover using a custom trigger should match
     Custom trigger component
   </span>
   <Popover
+    animationType="tooltip"
     id=""
     isOpen={false}
     parentAnchorPosition="auto"
@@ -39,10 +40,12 @@ exports[`<TooltipPopover /> Simple popover behaviour should match the snapshot 1
     role="button"
   >
     <FontAwesomeIcon
+      color="#424F5C"
       type="question-circle-o"
     />
   </span>
   <Popover
+    animationType="tooltip"
     id=""
     isOpen={false}
     parentAnchorPosition="auto"
