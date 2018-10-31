@@ -17,7 +17,7 @@ initialState = { value: false };
     name='example-checkbox'
     label='This is a checkbox input :)'
     value={state.value}
-    handleChange={() => setState({checkBoxValue: !state.value})}
+    handleChange={() => setState({value: !state.value})}
   />
 </div>
 ```

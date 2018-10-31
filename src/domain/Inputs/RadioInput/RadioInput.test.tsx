@@ -8,22 +8,22 @@ const dummyClick = () => console.log('hey')
 const exampleOptions =[{
     label:'123123',
     value:'option 1',
-    isDisabled:false,
+    isDisabled:false
   },
   {
     label:'this is option 2 (I am disabled)',
     value:'option 2',
-    isDisabled:true,
+    isDisabled:true
   },
   {
     label:'this is option 3',
     value:'option 3',
-    isDisabled:false,
+    isDisabled:false
   },
   {
     label:'this is option 4',
     value:'option 4',
-    isDisabled:false,
+    isDisabled:false
   }]
 
 describe('<RadioInput />', () => {
