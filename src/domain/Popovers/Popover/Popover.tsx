@@ -82,16 +82,32 @@ class Popover extends React.Component<IPopoverProps, never> {
   // tslint:disable-next-line:member-ordering
   private debounceOnWindowUpdate = debounce(this.onWindowUpdate, 100)
 
+
+  private get animationTimeout (): number {
+    const {
+      animationType
+    } = this.props
+
+
+    switch (animationType) {
+      case 'dropdown':
+        return 100
+      case 'tooltip':
+        return 300
+      default:
+        return 0
+    }
+  }
+
   private get transition (): JSX.Element {
     const {
-      isOpen,
-      animationType
+      isOpen
     } = this.props
 
     return (
       <Transition
         in={isOpen}
-        timeout={animationType === 'dropdown' ? 100 : 300}
+        timeout={this.animationTimeout}
         mountOnEnter
         unmountOnExit
       >

@@ -49,5 +49,3 @@ const StyledPopover = styled.span`
 export {
   StyledPopover
 }
-
-
