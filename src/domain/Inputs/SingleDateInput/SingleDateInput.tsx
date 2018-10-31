@@ -8,35 +8,38 @@ import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 
 const style = require('./style.scss')
 
-interface IDatePickerProps {
+interface ISingleDateInputProps {
   id: string
   dateFormat: string
+  handleChange?: (date: Moment | null) => void
+  isInvalid?: boolean
 }
 
-interface IDatePickerState {
+interface ISingleDateInputState {
   date: Moment | null
   focused: boolean
 }
 
-class DatePicker extends React.PureComponent<IDatePickerProps & SingleDatePickerShape, IDatePickerState> {
+class SingleDateInput extends React.PureComponent<ISingleDateInputProps & SingleDatePickerShape, ISingleDateInputState> {
   public static defaultProps = {
     dateFormat: 'DD/MM/YYYY'
   }
 
-  public state: IDatePickerState = {
+  public state: ISingleDateInputState = {
     date: null,
     focused: false
   }
 
   public render (): JSX.Element {
     const {
+      id,
       dateFormat
     } = this.props
 
     return (
-      <div className={style.boi}>
+      <div className={this.classNames}>
         <SingleDatePicker
-          {...this.props}
+          id={id}
           date={this.state.date}
           placeholder={moment().format(dateFormat)}
           displayFormat={dateFormat}
@@ -47,7 +50,7 @@ class DatePicker extends React.PureComponent<IDatePickerProps & SingleDatePicker
           block
           isOutsideRange={() => false}
           hideKeyboardShortcutsPanel
-          renderMonthText={(day: Moment) => day.format('MMM YYYY')}
+          renderMonthText={this.renderMonthText}
           navPrev={
             <div className={this.navigationButtonClassNames('left')}>
               <FontAwesomeIcon type='arrow-left'/>
@@ -63,7 +66,33 @@ class DatePicker extends React.PureComponent<IDatePickerProps & SingleDatePicker
     )
   }
 
-  private dateChange = (date: Moment | null) => this.setState({ date })
+  get classNames () {
+    const {
+      isInvalid
+    } = this.props
+
+    return classNames(
+      style.singleDatePickerOverrides,
+      {
+        'is-invalid-input': isInvalid
+      }
+    )
+  }
+
+  private renderMonthText = (day: Moment) => moment(day).format('MMM YYYY')
+
+  private dateChange = (date: Moment | null) => {
+    const {
+      handleChange
+    } = this.props
+
+    if (handleChange) {
+      handleChange(date)
+    }
+
+    this.setState({ date })
+  }
+
   private focusChange = ({ focused }: any) => this.setState({ focused })
 
   private navigationButtonClassNames: (side: 'left' | 'right') => string = (side: 'left' | 'right') => {
@@ -76,5 +105,5 @@ class DatePicker extends React.PureComponent<IDatePickerProps & SingleDatePicker
 }
 
 export {
-  DatePicker
+  SingleDateInput
 }

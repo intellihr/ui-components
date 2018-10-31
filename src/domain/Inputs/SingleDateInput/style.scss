@@ -1,7 +1,14 @@
 @import '../../../common/sass/variables';
 
-:local(.boi) {
+:local(.singleDatePickerOverrides) {
   // NOTE: the order of these styles DO matter
+  .CalendarMonth_caption {
+    > strong {
+      font-size: 18px;
+      font-weight: 600;
+      color: $n800;
+    }
+  }
 
   .CalendarDay:hover {
     background: $n400;
@@ -52,5 +59,16 @@
     line-height: 1.5;
     color: #424F5C;
     transition: border-color 0.3s ease-in-out, background-color 0.3s ease;
+  }
+
+  &.is-invalid-input {
+    input {
+      margin: 0;
+      border-color: #F25749;
+
+      &:not(:focus) {
+        background-color: #feeeed;
+      }
+    }
   }
 }

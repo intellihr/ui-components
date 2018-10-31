@@ -1,8 +1,8 @@
-#### Single Day Picker
+#### Single Date Input
 
 ```jsx
 <div>
-  <DatePicker 
+  <SingleDateInput 
     id='test'
   />
 </div>

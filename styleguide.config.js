@@ -110,7 +110,7 @@ module.exports = {
             'src/domain/Inputs/InputGroup/InputGroup',
             'src/domain/Inputs/SelectInput/SelectInput',
             'src/domain/Inputs/TextAreaInput/TextAreaInput',
-            'src/domain/Inputs/DatePicker/DatePicker'
+            'src/domain/Inputs/SingleDateInput/SingleDateInput'
           ]
         },
         {
