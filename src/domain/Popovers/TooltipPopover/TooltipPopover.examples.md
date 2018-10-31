@@ -73,6 +73,29 @@ hiding the popover.
   <TooltipPopover
     parentAnchorPosition={{
       xPos: 'right',
+      yPos: 'auto'
+    }}
+    popoverAnchorPosition={{
+      xPos: 'right',
+      yPos: 'auto'
+    }}
+    toggleComponent={({ openMenu, closeMenu, toggleComponentRef, ariaProps }) =>
+      <span
+        onMouseEnter={openMenu}
+        onMouseLeave={closeMenu}
+        ref={toggleComponentRef}
+        {...ariaProps}
+      >
+        Anchored right open auto
+      </span>
+    }
+  >
+    Anchored right
+  </TooltipPopover>
+  <br/>
+  <TooltipPopover
+    parentAnchorPosition={{
+      xPos: 'right',
       yPos: 'bottom'
     }}
     popoverAnchorPosition={{

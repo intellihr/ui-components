@@ -5,7 +5,8 @@ namespace Props {
     Right = 'right',
     Center = 'center',
     Top = 'top',
-    Bottom = 'bottom'
+    Bottom = 'bottom',
+    Auto = 'auto'
   }
 
   export interface IPositionXY {
