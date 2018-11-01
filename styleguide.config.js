@@ -112,6 +112,7 @@ module.exports = {
           components: [
             'src/domain/Inputs/Input/Input',
             'src/domain/Inputs/InputGroup/InputGroup',
+            'src/domain/Inputs/RadioInput/RadioInput',
             'src/domain/Inputs/SelectInput/SelectInput',
             'src/domain/Inputs/TextAreaInput/TextAreaInput'
           ]

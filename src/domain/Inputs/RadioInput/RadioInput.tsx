@@ -1,8 +1,8 @@
 import React, { ChangeEventHandler } from 'react'
 import uuid from 'uuid'
 import { map } from 'lodash'
-const style = require('./style.scss')
 import classNames from 'classnames'
+const style = require('./style.scss')
 
 export interface IRadioInputProps {
   /** Label to display next to the radio */
@@ -25,7 +25,7 @@ export interface IRadioOptionProps {
   /** Value of the option */
   value: any
   /** Callback when option is clicked. */
-  handleOneChange?: ChangeEventHandler<HTMLInputElement>
+  handleChange?: ChangeEventHandler<HTMLInputElement>
 }
 
 export class RadioInput extends React.PureComponent<IRadioInputProps> {
@@ -40,7 +40,7 @@ export class RadioInput extends React.PureComponent<IRadioInputProps> {
       const {
         isChecked,
         isDisabled,
-        handleOneChange,
+        handleChange: overrideHandleChange,
         value,
         label
       } = option
@@ -53,7 +53,7 @@ export class RadioInput extends React.PureComponent<IRadioInputProps> {
             value={value}
             checked={isChecked}
             disabled={isDisabled}
-            onChange={handleOneChange? handleOneChange: handleChange}
+            onChange={overrideHandleChange? overrideHandleChange: handleChange}
           />
           <span>{label}</span>
         </label>
