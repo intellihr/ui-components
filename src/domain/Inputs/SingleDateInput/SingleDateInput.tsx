@@ -1,5 +1,5 @@
 import 'react-dates/initialize'
-import 'react-dates/lib/css/_datepicker.css';
+import 'react-dates/lib/css/_datepicker.css'
 import React from 'react'
 import { SingleDatePicker, SingleDatePickerShape } from 'react-dates'
 import moment, { Moment } from 'moment'
@@ -8,8 +8,10 @@ import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 
 const style = require('./style.scss')
 
+type NavigationButtonSide = 'left' | 'right'
+
 interface ISingleDateInputProps {
-  id: string
+  name: string
   dateFormat: string
   handleChange?: (date: Moment | null) => void
   isInvalid?: boolean
@@ -32,14 +34,14 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps & Single
 
   public render (): JSX.Element {
     const {
-      id,
+      name,
       dateFormat
     } = this.props
 
     return (
       <div className={this.classNames}>
         <SingleDatePicker
-          id={id}
+          id={name}
           date={this.state.date}
           placeholder={moment().format(dateFormat)}
           displayFormat={dateFormat}
@@ -48,7 +50,7 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps & Single
           onFocusChange={this.focusChange}
           noBorder
           block
-          isOutsideRange={() => false}
+          isOutsideRange={this.disabledDateRange}
           hideKeyboardShortcutsPanel
           renderMonthText={this.renderMonthText}
           navPrev={
@@ -66,7 +68,7 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps & Single
     )
   }
 
-  get classNames () {
+  get classNames (): string {
     const {
       isInvalid
     } = this.props
@@ -79,23 +81,33 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps & Single
     )
   }
 
-  private renderMonthText = (day: Moment) => moment(day).format('MMM YYYY')
+  private disabledDateRange: () => boolean =
+    () => false
 
-  private dateChange = (date: Moment | null) => {
-    const {
-      handleChange
-    } = this.props
+  private renderMonthText: (day: Moment) => string =
+    (day) => moment(day).format('MMM YYYY')
 
-    if (handleChange) {
-      handleChange(date)
+  private dateChange: (date: Moment | null) => void =
+    (date) => {
+      const {
+        handleChange
+      } = this.props
+
+      if (handleChange) {
+        handleChange(date)
+      }
+
+      this.setState({ date })
     }
 
-    this.setState({ date })
-  }
+  private focusChange: (focusChangeArgs: { focused: boolean | null }) => void =
+    (focusChangeArgs) => {
+      this.setState({
+        focused: focusChangeArgs.focused || false
+      })
+    }
 
-  private focusChange = ({ focused }: any) => this.setState({ focused })
-
-  private navigationButtonClassNames: (side: 'left' | 'right') => string = (side: 'left' | 'right') => {
+  private navigationButtonClassNames: (side: NavigationButtonSide) => string = (side: NavigationButtonSide) => {
     return classNames(
       'DayPickerNavigation_button__default',
       'DayPickerNavigation_button__horizontalDefault',

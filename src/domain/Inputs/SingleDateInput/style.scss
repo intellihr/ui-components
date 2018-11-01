@@ -4,7 +4,7 @@
   // NOTE: the order of these styles DO matter
   .CalendarMonth_caption {
     > strong {
-      font-size: 18px;
+      font-size: $fz-heading;
       font-weight: 600;
       color: $n800;
     }
@@ -42,23 +42,17 @@
   }
 
   .DateInput_input {
-    display: block;
-    box-sizing: border-box;
-    width: 100%;
-    height: 2.4375rem;
-    margin: 0 0 1rem;
     padding: 0.5rem;
-    border: 1px solid #C5CED6;
-    border-radius: 4px;
-    background-color: #FFFFFF;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    font-family: "Open Sans", Arial, sans-serif;
-    font-size: 1rem;
-    font-weight: normal;
+    border: 1px solid $n400;
+    border-radius: $border-radius;
+    font-size: $fz-body;
     line-height: 1.5;
-    color: #424F5C;
+    color: $n700;
     transition: border-color 0.3s ease-in-out, background-color 0.3s ease;
+
+    &:hover {
+      background-color: $n150;
+    }
   }
 
   &.is-invalid-input {
