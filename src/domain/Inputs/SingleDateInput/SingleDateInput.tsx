@@ -104,12 +104,13 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps & Single
   private onChange: (e: FormEvent<HTMLDivElement>) => void =
     e => {
       const {
-        handleChange
+        handleChange,
+        dateFormat
       } = this.props
 
       const rawInputElement =  e.target as HTMLInputElement
 
-      if (handleChange) {
+      if (handleChange && moment(rawInputElement.value, dateFormat).isValid()) {
         handleChange(rawInputElement.value)
       }
     }
