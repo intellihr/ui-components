@@ -47,8 +47,8 @@ export class RadioInput extends React.PureComponent<IRadioInputProps> {
           <input
             key={idx}
             type='radio'
-            value = {value}
-            checked ={isChecked}
+            value={value}
+            checked={isChecked}
             disabled={isDisabled}
             onChange={handleOneChange? handleOneChange: handleChange}
           />
