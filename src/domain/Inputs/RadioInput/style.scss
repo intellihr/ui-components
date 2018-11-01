@@ -1,8 +1,7 @@
 @import '../../../common/sass/variables';
 
 :local(.radioInput) {
-  > label {
-
+  label {
     color: $n800;
     cursor: default;
     display: block;
@@ -10,52 +9,73 @@
     line-height: $lh-small;
     margin-bottom: 12px;
 
-    > span:before {
-      background-color: $n150;
-      border: 2px solid $n400;
-      border-radius: 50%;
-      content: "";
-      display: inline-block;
-      height: 16px;
-      margin-right: 12px;
-      vertical-align: middle;
-      width: 16px;
-
+    span {
+      &::before {
+        background-color: $n150;
+        border: 2px solid $n400;
+        border-radius: 50%;
+        content: '';
+        display: inline-block;
+        height: 16px;
+        margin-right: 12px;
+        vertical-align: middle;
+        width: 16px;
+      }
     }
 
-    > input:hover + span:before {
-      background-color: $n300;
-    }
+    input {
+      display: none;
 
-    > input:checked + span:before {
-      background-image: radial-gradient(
-              circle closest-side,
-              $i400 0%,
-              $i400 20%,
-              transparent 50%,
-              transparent 100%);
-      border-color: $i400;
-    }
+      &:hover {
 
-    > input:disabled:checked + span:before {
-      background-image: radial-gradient(
-              circle closest-side,
-              $n300 0%,
-              $n300 20%,
-              transparent 50%,
-              transparent 100%);
-      border-color: $n300;
-    }
+        & + span {
 
-    > input:disabled + span {
-      opacity: 0.5;
-    }
+          &::before {
+            background-color: $n300;
+          }
+        }
 
-    > input:disabled:hover + span:before, input:disabled + span:before {
-      background-color: $n150;
-      border-color: $n300;
-    }
+        &:disabled + span {
 
-    > input { display: none; }
+          &::before {
+            background-color: $n150;
+            border-color: $n300;
+          }
+        }
+      }
+
+      &:checked {
+        & + span {
+
+          &::before {
+            background-image: radial-gradient(circle closest-side, $i400 0%, $i400 20%, transparent 50%, transparent 100%);
+            border-color: $i400;
+          }
+        }
+
+        &:disabled + span {
+
+          &::before {
+            background-image: radial-gradient(circle closest-side, $n300 0%, $n300 20%, transparent 50%, transparent 100%);
+            border-color: $n300;
+          }
+        }
+      }
+
+      &:disabled {
+
+        & + span {
+
+          opacity: .5;
+
+          &::before {
+            background-color: $n150;
+            border-color: $n300;
+          }
+        }
+
+      }
+
+    }
   }
 }

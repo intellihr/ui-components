@@ -1,4 +1,5 @@
 import React, { ChangeEventHandler } from 'react'
+import uuid from 'uuid'
 import { map } from 'lodash'
 const style = require('./style.scss')
 import classNames from 'classnames'
@@ -10,6 +11,8 @@ export interface IRadioInputProps {
   options: IRadioOptionProps[]
   /** action when option is clicked */
   handleChange?: ChangeEventHandler<HTMLInputElement>
+  /** ID of the radio input */
+  id?: string
 }
 
 export interface IRadioOptionProps {
@@ -29,7 +32,8 @@ export class RadioInput extends React.PureComponent<IRadioInputProps> {
   get options (): JSX.Element[] {
     const {
       options,
-      handleChange
+      handleChange,
+      id
     } = this.props
 
     return map(options, (option, idx) => {
@@ -44,7 +48,7 @@ export class RadioInput extends React.PureComponent<IRadioInputProps> {
       return (
         <label>
           <input
-            key={idx}
+            key={id ? `${idx}-${id}` : uuid.v4()}
             type='radio'
             value={value}
             checked={isChecked}

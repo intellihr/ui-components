@@ -7,7 +7,7 @@ exports[`<RadioInput /> should render a radio input 1`] = `
   <label>
     <input
       disabled={false}
-      key="0"
+      key="0-key"
       onChange={[Function]}
       type="radio"
       value="option 1"
@@ -19,7 +19,7 @@ exports[`<RadioInput /> should render a radio input 1`] = `
   <label>
     <input
       disabled={true}
-      key="1"
+      key="1-key"
       onChange={[Function]}
       type="radio"
       value="option 2"
@@ -31,7 +31,7 @@ exports[`<RadioInput /> should render a radio input 1`] = `
   <label>
     <input
       disabled={false}
-      key="2"
+      key="2-key"
       onChange={[Function]}
       type="radio"
       value="option 3"
@@ -43,7 +43,7 @@ exports[`<RadioInput /> should render a radio input 1`] = `
   <label>
     <input
       disabled={false}
-      key="3"
+      key="3-key"
       onChange={[Function]}
       type="radio"
       value="option 4"
