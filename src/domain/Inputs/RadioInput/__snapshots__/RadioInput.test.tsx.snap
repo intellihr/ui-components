@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<RadioInput /> should render a radio input 1`] = `
-<styled.div>
-  <styled.label>
-    <styled.input
+<div
+  className="radioInput"
+>
+  <label>
+    <input
       disabled={false}
       key="0"
       onChange={[Function]}
@@ -13,9 +15,9 @@ exports[`<RadioInput /> should render a radio input 1`] = `
     <span>
       123123
     </span>
-  </styled.label>
-  <styled.label>
-    <styled.input
+  </label>
+  <label>
+    <input
       disabled={true}
       key="1"
       onChange={[Function]}
@@ -25,9 +27,9 @@ exports[`<RadioInput /> should render a radio input 1`] = `
     <span>
       this is option 2 (I am disabled)
     </span>
-  </styled.label>
-  <styled.label>
-    <styled.input
+  </label>
+  <label>
+    <input
       disabled={false}
       key="2"
       onChange={[Function]}
@@ -37,9 +39,9 @@ exports[`<RadioInput /> should render a radio input 1`] = `
     <span>
       this is option 3
     </span>
-  </styled.label>
-  <styled.label>
-    <styled.input
+  </label>
+  <label>
+    <input
       disabled={false}
       key="3"
       onChange={[Function]}
@@ -49,6 +51,6 @@ exports[`<RadioInput /> should render a radio input 1`] = `
     <span>
       this is option 4
     </span>
-  </styled.label>
-</styled.div>
+  </label>
+</div>
 `;

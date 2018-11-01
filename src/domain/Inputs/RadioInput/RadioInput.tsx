@@ -1,6 +1,7 @@
 import React, {ChangeEventHandler} from 'react'
 import{ map } from 'lodash'
-import { OptionLabel, StyledRadioInput, RadioGroup } from './style'
+const style = require('./style.scss')
+import classNames from 'classnames'
 
 export interface IRadioInputProps {
   /** Label to display next to the radio */
@@ -42,8 +43,8 @@ export class RadioInput extends React.PureComponent<IRadioInputProps> {
       } = option
 
       return (
-        <OptionLabel>
-          <StyledRadioInput
+        <label>
+          <input
             key={idx}
             type='radio'
             value = {value}
@@ -52,16 +53,16 @@ export class RadioInput extends React.PureComponent<IRadioInputProps> {
             onChange={handleOneChange? handleOneChange: handleChange}
           />
           <span>{label}</span>
-        </OptionLabel>
+        </label>
       )
     })
   }
 
   public render (): JSX.Element {
     return (
-      <RadioGroup>
+      <div className={classNames(style.radioInput)}>
       {this.options}
-      </RadioGroup>
+      </div>
     )
   }
 }

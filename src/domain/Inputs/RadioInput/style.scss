@@ -1,0 +1,61 @@
+@import '../../../common/sass/variables';
+
+:local(.radioInput) {
+  > label {
+
+    display: block;
+    cursor: default;
+    line-height: $lh-small;
+    color: $n800;
+    font-size: $fz-small;
+    margin-bottom: 12px;
+
+    > span:before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      background-color: $n150;
+      border: 2px solid $n400;
+      margin-right: 12px;
+
+    }
+
+    > input:hover + span:before {
+      background-color: $n300;
+    }
+
+    > input:checked + span:before {
+      border-color: $i400;
+      background-image: radial-gradient(
+              circle closest-side,
+              $i400 0%,
+              $i400 20%,
+              transparent 50%,
+              transparent 100%);
+    }
+
+    > input:disabled:checked + span:before {
+      border-color: $n300;
+      background-image: radial-gradient(
+              circle closest-side,
+              $n300 0%,
+              $n300 20%,
+              transparent 50%,
+              transparent 100%);
+    }
+
+    > input:disabled + span {
+      opacity: 0.5;
+    }
+
+    > input:disabled:hover + span:before, input:disabled + span:before {
+      border-color: $n300;
+      background-color: $n150;
+    }
+
+    > input { display: none; }
+  }
+}
