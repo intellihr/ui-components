@@ -30,7 +30,7 @@ describe('<RadioInput />', () => {
   it(`should render a radio input`, () => {
     const wrapper = shallow(
       <RadioInput
-        id={'key'}
+        id='key'
         handleChange={dummyClick}
         options={exampleOptions}
       />
