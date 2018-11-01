@@ -3,23 +3,23 @@
 :local(.radioInput) {
   > label {
 
-    display: block;
-    cursor: default;
-    line-height: $lh-small;
     color: $n800;
+    cursor: default;
+    display: block;
     font-size: $fz-small;
+    line-height: $lh-small;
     margin-bottom: 12px;
 
     > span:before {
-      content: "";
-      display: inline-block;
-      vertical-align: middle;
-      height: 16px;
-      width: 16px;
-      border-radius: 50%;
       background-color: $n150;
       border: 2px solid $n400;
+      border-radius: 50%;
+      content: "";
+      display: inline-block;
+      height: 16px;
       margin-right: 12px;
+      vertical-align: middle;
+      width: 16px;
 
     }
 
@@ -28,23 +28,23 @@
     }
 
     > input:checked + span:before {
-      border-color: $i400;
       background-image: radial-gradient(
               circle closest-side,
               $i400 0%,
               $i400 20%,
               transparent 50%,
               transparent 100%);
+      border-color: $i400;
     }
 
     > input:disabled:checked + span:before {
-      border-color: $n300;
       background-image: radial-gradient(
               circle closest-side,
               $n300 0%,
               $n300 20%,
               transparent 50%,
               transparent 100%);
+      border-color: $n300;
     }
 
     > input:disabled + span {
@@ -52,8 +52,8 @@
     }
 
     > input:disabled:hover + span:before, input:disabled + span:before {
-      border-color: $n300;
       background-color: $n150;
+      border-color: $n300;
     }
 
     > input { display: none; }

@@ -1,5 +1,5 @@
-import React, {ChangeEventHandler} from 'react'
-import{ map } from 'lodash'
+import React, { ChangeEventHandler } from 'react'
+import { map } from 'lodash'
 const style = require('./style.scss')
 import classNames from 'classnames'
 
@@ -26,7 +26,6 @@ export interface IRadioOptionProps {
 }
 
 export class RadioInput extends React.PureComponent<IRadioInputProps> {
-
   get options (): JSX.Element[] {
     const {
       options,
@@ -61,7 +60,7 @@ export class RadioInput extends React.PureComponent<IRadioInputProps> {
   public render (): JSX.Element {
     return (
       <div className={classNames(style.radioInput)}>
-      {this.options}
+        {this.options}
       </div>
     )
   }
