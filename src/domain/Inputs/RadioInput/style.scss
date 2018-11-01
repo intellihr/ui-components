@@ -27,16 +27,13 @@
       display: none;
 
       &:hover {
-
         & + span {
-
           &::before {
             background-color: $n300;
           }
         }
 
         &:disabled + span {
-
           &::before {
             background-color: $n150;
             border-color: $n300;
@@ -46,7 +43,6 @@
 
       &:checked {
         & + span {
-
           &::before {
             background-image: radial-gradient(circle closest-side, $i400 , $i400 50%, transparent 50%, transparent 100%);
             border-color: $i400;
@@ -54,7 +50,6 @@
         }
 
         &:disabled + span {
-
           &::before {
             background-image: radial-gradient(circle closest-side, $n300 , $n300 50%, transparent 50%, transparent 100%);
             border-color: $n300;
@@ -63,9 +58,7 @@
       }
 
       &:disabled {
-
         & + span {
-
           color: $n500;
 
           &::before {
