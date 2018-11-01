@@ -4,33 +4,35 @@
   // NOTE: the order of these styles DO matter
   .CalendarMonth_caption {
     > strong {
+      color: $n800;
       font-size: $fz-heading;
       font-weight: 600;
-      color: $n800;
     }
   }
 
-  .CalendarDay:hover {
-    background: $n400;
+  .CalendarDay {
+    &:hover {
+      background: $n400;
+    }
   }
 
   // Will edit everything selected including everything between a range of dates
   .CalendarDay__selected_span {
     background: $i400; //background
-    color: $n100; //text
-    border: 1px solid $i400; //default styles include a border
+    border: 1px solid $i400; //text
+    color: $n100; //default styles include a border
   }
 
   // Will edit selected date or the endpoints of a range of dates
   .CalendarDay__selected {
     background: $i400;
     color: $n100;
-  }
 
-  // Will edit when hovered over. _span style also has this property
-  .CalendarDay__selected:hover {
-    background: $i400;
-    color: $n100;
+    // Will edit when hovered over. _span style also has this property
+    &:hover {
+      background: $i400;
+      color: $n100;
+    }
   }
 
   .DayPickerNavigation_button__horizontalDefault {
@@ -38,17 +40,18 @@
   }
 
   .DateInput_fang {
-    top: 56px !important;
+    top: 56px !important; // sass-lint:disable-line no-important
   }
 
   .DateInput_input {
-    padding: 0.5rem;
     border: 1px solid $n400;
     border-radius: $border-radius;
-    font-size: $fz-body;
-    line-height: 1.5;
     color: $n700;
-    transition: border-color 0.3s ease-in-out, background-color 0.3s ease;
+    font-size: $fz-body;
+    font-weight: $fw-regular;
+    line-height: 1.5;
+    padding: .5rem;
+    transition: border-color .3s ease-in-out, background-color .3s ease;
 
     &:hover {
       background-color: $n150;
@@ -57,11 +60,15 @@
 
   &.is-invalid-input {
     input {
+      border-color: $r400;
       margin: 0;
-      border-color: #F25749;
 
       &:not(:focus) {
-        background-color: #feeeed;
+        background-color: mix($r400, #fff, 10%);
+
+        &::placeholder {
+          color: $r400;
+        }
       }
     }
   }

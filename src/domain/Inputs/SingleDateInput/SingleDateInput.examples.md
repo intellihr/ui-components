@@ -3,7 +3,7 @@
 ```jsx
 <div>
   <SingleDateInput 
-    id='test'
+    name='test'
   />
 </div>
 ```
