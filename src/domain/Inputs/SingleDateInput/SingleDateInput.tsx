@@ -110,7 +110,7 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps & Single
 
       const rawInputElement =  e.target as HTMLInputElement
 
-      if (handleChange && moment(rawInputElement.value, dateFormat).isValid()) {
+      if (handleChange && !moment(rawInputElement.value, dateFormat, true).isValid()) {
         handleChange(rawInputElement.value)
       }
     }
