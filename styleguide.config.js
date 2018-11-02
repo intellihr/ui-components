@@ -33,6 +33,10 @@ module.exports = {
         {
           name: 'Colors',
           content: 'src/domain/Internals/ExampleColorGrid/ExampleColorGrid.examples.md'
+        },
+        {
+          name: 'Automation',
+          content: 'docs/automation.md'
         }
       ]
     },
@@ -108,8 +112,10 @@ module.exports = {
           components: [
             'src/domain/Inputs/Input/Input',
             'src/domain/Inputs/InputGroup/InputGroup',
+            'src/domain/Inputs/RadioInput/RadioInput',
             'src/domain/Inputs/SelectInput/SelectInput',
-            'src/domain/Inputs/TextAreaInput/TextAreaInput'
+            'src/domain/Inputs/TextAreaInput/TextAreaInput',
+            'src/domain/Inputs/SingleDateInput/SingleDateInput'
           ]
         },
         {

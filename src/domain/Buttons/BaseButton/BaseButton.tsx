@@ -1,5 +1,6 @@
 import React, { Fragment, RefObject } from 'react'
 import classNames from 'classnames'
+import { Props } from '../../../common'
 
 const style = require('./style.scss')
 
@@ -44,7 +45,9 @@ interface IBaseButtonProps {
   /** Disable the button or not */
   disabled?: boolean
   /** onClick event */
-  onClick?: (event: React.MouseEvent<HTMLElement>) => void
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void,
+  /** The data-component-context */
+  componentContext?: string
 }
 
 class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
@@ -81,12 +84,15 @@ class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
     const {
       children,
       icon,
-      iconAlignment
+      iconAlignment,
+      componentContext
     } = this.props
 
     if (icon) {
       const iconComponent = (
         <span
+          data-component-type={Props.ComponentType.ButtonIcon}
+          data-component-context={componentContext}
           className={classNames('button-icon', iconAlignment)}
         >
           {icon}

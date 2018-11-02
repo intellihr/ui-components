@@ -39,6 +39,12 @@ namespace Props {
     Display = 'display',
     DisplayLarge = 'display-large'
   }
+
+  export enum ComponentType {
+    Button = 'button',
+    LinkButton = 'link_button',
+    ButtonIcon = 'button_icon'
+  }
 }
 
 export {

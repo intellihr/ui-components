@@ -2,6 +2,7 @@ import React, { MouseEvent } from 'react'
 import classNames from 'classnames'
 import { Anchor } from '../../Internals'
 import { BaseButton, IBaseButtonProps } from '../BaseButton'
+import { Props } from '../../../common'
 
 export interface ILinkButtonProps extends IBaseButtonProps {
   /** Weather the button is clickable or not */
@@ -25,7 +26,8 @@ export class LinkButton extends BaseButton<ILinkButtonProps> {
       disabled,
       href,
       anchorComponentProps,
-      innerRef
+      innerRef,
+      componentContext
     } = this.props
 
     return (
@@ -35,6 +37,8 @@ export class LinkButton extends BaseButton<ILinkButtonProps> {
         onClick={this.handleClick}
       >
         <span
+          data-component-type={Props.ComponentType.LinkButton}
+          data-component-context={componentContext}
           className={classNames(this.buttonClass, { disabled })}
           ref={innerRef}
         >
