@@ -1,6 +1,6 @@
 import 'react-dates/initialize'
 import 'react-dates/lib/css/_datepicker.css'
-import React from 'react'
+import React, { FormEvent } from 'react'
 import { SingleDatePicker, SingleDatePickerShape } from 'react-dates'
 import moment, { Moment } from 'moment'
 import classNames from 'classnames'
@@ -8,12 +8,10 @@ import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 
 const style = require('./style.scss')
 
-type NavigationButtonSide = 'left' | 'right'
-
 interface ISingleDateInputProps {
   name: string
   dateFormat: string
-  handleChange?: (date: Moment | null) => void
+  handleChange?: (date: Moment | string | null) => void
   isInvalid?: boolean
 }
 
@@ -39,7 +37,10 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps & Single
     } = this.props
 
     return (
-      <div className={this.classNames}>
+      <div
+        className={this.classNames}
+        onChange={this.onChange}
+      >
         <SingleDatePicker
           id={name}
           date={this.state.date}
@@ -85,35 +86,50 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps & Single
     () => false
 
   private renderMonthText: (day: Moment) => string =
-    (day) => moment(day).format('MMM YYYY')
+    day => moment(day).format('MMM YYYY')
 
   private dateChange: (date: Moment | null) => void =
-    (date) => {
+    date => {
       const {
         handleChange
       } = this.props
 
-      if (handleChange) {
+      if (handleChange && date !== null) {
         handleChange(date)
       }
 
       this.setState({ date })
     }
 
+  private onChange: (e: FormEvent<HTMLDivElement>) => void =
+    e => {
+      const {
+        handleChange,
+        dateFormat
+      } = this.props
+
+      const rawInputElement =  e.target as HTMLInputElement
+
+      if (handleChange && !moment(rawInputElement.value, dateFormat, true).isValid()) {
+        handleChange(rawInputElement.value)
+      }
+    }
+
   private focusChange: (focusChangeArgs: { focused: boolean | null }) => void =
-    (focusChangeArgs) => {
+    focusChangeArgs => {
       this.setState({
         focused: focusChangeArgs.focused || false
       })
     }
 
-  private navigationButtonClassNames: (side: NavigationButtonSide) => string = (side: NavigationButtonSide) => {
-    return classNames(
-      'DayPickerNavigation_button__default',
-      'DayPickerNavigation_button__horizontalDefault',
-      `DayPickerNavigation_${side}Button__horizontalDefault`
-    )
-  }
+  private navigationButtonClassNames: (side: 'left' | 'right') => string =
+    side => {
+      return classNames(
+        'DayPickerNavigation_button__default',
+        'DayPickerNavigation_button__horizontalDefault',
+        `DayPickerNavigation_${side}Button__horizontalDefault`
+      )
+    }
 }
 
 export {
