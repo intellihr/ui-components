@@ -39,6 +39,14 @@
     padding: 9px;
   }
 
+  .SingleDatePickerInput__disabled {
+    background: none;
+  }
+
+  .DateInput__disabled {
+    background: none;
+  }
+
   .DateInput_fang {
     top: 56px !important; // sass-lint:disable-line no-important
   }
@@ -59,6 +67,10 @@
   }
 
   &.is-invalid-input {
+    &:not(:focus) {
+      background-color: transparent;
+    }
+
     input {
       border-color: $r400;
       margin: 0;
@@ -70,6 +82,24 @@
           color: $r400;
         }
       }
+    }
+  }
+
+  &.input-group-left {
+    input {
+      border-radius: 4px 0 0 4px;
+    }
+  }
+
+  &.input-group-middle {
+    input {
+      border-radius: 0;
+    }
+  }
+
+  &.input-group-right {
+    input {
+      border-radius: 0 4px 4px 0;
     }
   }
 }
