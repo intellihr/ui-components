@@ -10,7 +10,7 @@
 
 ```jsx
 <TooltipPopover width={200}>
-  This should have a width of 200 pixels
+  This should have a width of 200 pixels andshouldalsobreaklinewhentoolong
 </TooltipPopover>
 ```
 
