@@ -4,7 +4,9 @@ import React, { FormEvent } from 'react'
 import { SingleDatePicker, SingleDatePickerShape } from 'react-dates'
 import moment, { Moment } from 'moment'
 import classNames from 'classnames'
+import { isNil } from 'lodash'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
+import { InputGroupPosition } from '../InputGroup'
 
 const style = require('./style.scss')
 
@@ -13,6 +15,8 @@ interface ISingleDateInputProps {
   dateFormat: string
   handleChange?: (date: Moment | string | null) => void
   isInvalid?: boolean
+  isDisabled?: boolean
+  groupPosition?: InputGroupPosition
 }
 
 interface ISingleDateInputState {
@@ -20,9 +24,11 @@ interface ISingleDateInputState {
   focused: boolean
 }
 
-class SingleDateInput extends React.PureComponent<ISingleDateInputProps & SingleDatePickerShape, ISingleDateInputState> {
+class SingleDateInput extends React.PureComponent<ISingleDateInputProps & Partial<SingleDatePickerShape>, ISingleDateInputState> {
   public static defaultProps = {
-    dateFormat: 'DD/MM/YYYY'
+    dateFormat: 'DD/MM/YYYY',
+    isInvalid: false,
+    isDisabled: false
   }
 
   public state: ISingleDateInputState = {
@@ -33,7 +39,8 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps & Single
   public render (): JSX.Element {
     const {
       name,
-      dateFormat
+      dateFormat,
+      isDisabled
     } = this.props
 
     return (
@@ -49,6 +56,7 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps & Single
           onDateChange={this.dateChange}
           focused={this.state.focused}
           onFocusChange={this.focusChange}
+          disabled={isDisabled}
           noBorder
           block
           isOutsideRange={this.disabledDateRange}
@@ -71,13 +79,15 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps & Single
 
   get classNames (): string {
     const {
-      isInvalid
+      isInvalid,
+      groupPosition
     } = this.props
 
     return classNames(
       style.singleDatePickerOverrides,
       {
-        'is-invalid-input': isInvalid
+        'is-invalid-input': isInvalid,
+        [`input-group-${groupPosition}`]: !isNil(groupPosition)
       }
     )
   }
