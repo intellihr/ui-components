@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoDataCallout Renders default without any children/primaryMessage/secondaryMessage or children 1`] = `
+<div
+  className="content"
+>
+  <div>
+    <Text
+      color="#424F5C"
+      isInline={true}
+      tag="h3"
+      type="heading"
+    >
+      Opps... We couldn't find anything for this section.
+    </Text>
+    <Text
+      color="#667380"
+      isInline={true}
+      tag="p"
+      type="body"
+    >
+      Please speak to your system admin or add information.
+    </Text>
+  </div>
+</div>
+`;
+
+exports[`NoDataCallout Renders successfully with both primary and secondaryMessage 1`] = `
+<div
+  className="content"
+>
+  <div>
+    <Text
+      color="#424F5C"
+      isInline={true}
+      tag="h3"
+      type="heading"
+    >
+      This is a primary message
+    </Text>
+    <Text
+      color="#667380"
+      isInline={true}
+      tag="p"
+      type="body"
+    >
+      This is a secondary message
+    </Text>
+  </div>
+</div>
+`;
+
+exports[`NoDataCallout Renders successfully with primaryMessage only 1`] = `
+<div
+  className="content"
+>
+  <div>
+    <Text
+      color="#424F5C"
+      isInline={true}
+      tag="h3"
+      type="heading"
+    >
+      This is a primary message
+    </Text>
+    <Text
+      color="#667380"
+      isInline={true}
+      tag="p"
+      type="body"
+    >
+      Please speak to your system admin or add information.
+    </Text>
+  </div>
+</div>
+`;
+
+exports[`NoDataCallout Renders successfully with secondaryMessage only 1`] = `
+<div
+  className="content"
+>
+  <div>
+    <Text
+      color="#424F5C"
+      isInline={true}
+      tag="h3"
+      type="heading"
+    >
+      Opps... We couldn't find anything for this section.
+    </Text>
+    <Text
+      color="#667380"
+      isInline={true}
+      tag="p"
+      type="body"
+    >
+      This is a secondary message
+    </Text>
+  </div>
+</div>
+`;

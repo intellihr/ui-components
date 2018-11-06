@@ -66,7 +66,8 @@ module.exports = {
         {
           name: 'Callouts',
           components: [
-            'src/domain/Callouts/Callout/Callout'
+            'src/domain/Callouts/Callout/Callout',
+            'src/domain/Callouts/NoDataCallout/NoDataCallout'
           ]
         },
         {
