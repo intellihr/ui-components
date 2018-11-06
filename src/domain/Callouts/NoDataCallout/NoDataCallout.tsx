@@ -10,6 +10,8 @@ export interface INoDataCalloutProps {
   children?: any
   primaryMessage?: string
   secondaryMessage?: string
+  /** The data-component-context */
+  componentContext?: string
 }
 
 export class NoDataCallout extends React.Component<INoDataCalloutProps> {
@@ -40,20 +42,28 @@ export class NoDataCallout extends React.Component<INoDataCalloutProps> {
   }
 
   public render (): JSX.Element {
-    const { children } = this.props
+    const { children, componentContext } = this.props
 
     if (!children) {
       return (
-        <div className={style.content}>
+        <div
+          className={style.content}
+          data-component-type={Props.ComponentType.NoDataCallout}
+          data-component-context={componentContext}
+        >
           {this.message}
         </div>
       )
     }
 
     return (
-        <div className={style.content}>
-          {children}
-        </div>
+      <div
+        className={style.content}
+        data-component-type={Props.ComponentType.NoDataCallout}
+        data-component-context={componentContext}
+      >
+        {children}
+      </div>
     )
   }
 }

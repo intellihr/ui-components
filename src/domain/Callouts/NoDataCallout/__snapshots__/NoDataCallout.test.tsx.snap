@@ -3,6 +3,7 @@
 exports[`NoDataCallout Renders default without any children/primaryMessage/secondaryMessage or children 1`] = `
 <div
   className="content"
+  data-component-type="no_data_callout"
 >
   <div>
     <Text
@@ -28,6 +29,7 @@ exports[`NoDataCallout Renders default without any children/primaryMessage/secon
 exports[`NoDataCallout Renders successfully with both primary and secondaryMessage 1`] = `
 <div
   className="content"
+  data-component-type="no_data_callout"
 >
   <div>
     <Text
@@ -53,6 +55,7 @@ exports[`NoDataCallout Renders successfully with both primary and secondaryMessa
 exports[`NoDataCallout Renders successfully with primaryMessage only 1`] = `
 <div
   className="content"
+  data-component-type="no_data_callout"
 >
   <div>
     <Text
@@ -78,6 +81,7 @@ exports[`NoDataCallout Renders successfully with primaryMessage only 1`] = `
 exports[`NoDataCallout Renders successfully with secondaryMessage only 1`] = `
 <div
   className="content"
+  data-component-type="no_data_callout"
 >
   <div>
     <Text

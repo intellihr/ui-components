@@ -43,7 +43,8 @@ namespace Props {
   export enum ComponentType {
     Button = 'button',
     LinkButton = 'link_button',
-    ButtonIcon = 'button_icon'
+    ButtonIcon = 'button_icon',
+    NoDataCallout = 'no_data_callout'
   }
 }
 
