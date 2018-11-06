@@ -6,6 +6,8 @@ export interface IFormattedCurrencyPrefixWrapperProps {
 }
 
 const FormattedCurrencyPrefixWrapper = styled.span`
+  margin-right: 8px;
+
   ${(props: IFormattedCurrencyPrefixWrapperProps) => {
   if (props.prefixType) {
     switch (props.prefixType) {
