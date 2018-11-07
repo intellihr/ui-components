@@ -1,8 +1,7 @@
 import React from 'react'
-import { Props } from '../../../common'
+import { Props, Variables } from '../../../common'
 import { BrickWrapper } from './style'
 import { Text } from '../Text'
-import { Variables } from '../../../common'
 
 export interface IBrickProps {
   /** Text to show inside the Brick  */
@@ -13,6 +12,8 @@ export interface IBrickProps {
   typographyType?: Props.TypographyType
   /** Extra classes to apply */
   className?: string
+  /** The data-component-context */
+  componentContext?: string
 }
 
 export class Brick extends React.PureComponent<IBrickProps> {
@@ -54,13 +55,16 @@ export class Brick extends React.PureComponent<IBrickProps> {
       text,
       color,
       typographyType,
-      className
+      className,
+      componentContext
     } = this.props
 
     return (
       <BrickWrapper
         color={color}
         className={className}
+        data-component-type={Props.ComponentType.Text}
+        data-component-context={componentContext}
       >
         <Text
           type={typographyType}
