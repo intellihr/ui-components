@@ -42,9 +42,9 @@ namespace Props {
 
   export enum ComponentType {
     Button = 'button',
-    LinkButton = 'link_button',
     ButtonIcon = 'button_icon',
-    EmptyState = 'empty_state'
+    EmptyState = 'empty_state',
+    LinkButton = 'link_button'
   }
 }
 

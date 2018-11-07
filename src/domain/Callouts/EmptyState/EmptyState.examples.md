@@ -25,18 +25,18 @@ When a buttonComponent is provided to the EmptyState component it will be shown 
 
 ```jsx.
 <EmptyState
-  buttonComponent=
-    <LinkButton
-      size='small'
-      href='www.google.com.au'
-      anchorComponentProps={{
+  buttonComponent={
+   <LinkButton
+     size='small'
+     href='www.google.com.au'
+     anchorComponentProps={{
        useReactRouter: false
-      }}
-    >
+     }}
+   >
      My Link
-    </LinkButton>
+   </LinkButton>
+  }
 >
-  
 </EmptyState>
 ```
 
