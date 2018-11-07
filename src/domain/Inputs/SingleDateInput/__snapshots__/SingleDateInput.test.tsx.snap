@@ -91,7 +91,7 @@ exports[`<SingleDateInput /> should render a disabled single date input 1`] = `
         "upArrowDownArrow": "up and down arrow keys",
       }
     }
-    placeholder="01/01/2019"
+    placeholder="31/12/2018"
     readOnly={false}
     regular={false}
     renderCalendarInfo={null}
@@ -204,7 +204,7 @@ exports[`<SingleDateInput /> should render a single date input 1`] = `
         "upArrowDownArrow": "up and down arrow keys",
       }
     }
-    placeholder="01/01/2019"
+    placeholder="31/12/2018"
     readOnly={false}
     regular={false}
     renderCalendarInfo={null}
@@ -317,7 +317,7 @@ exports[`<SingleDateInput /> should render an invalid single date input 1`] = `
         "upArrowDownArrow": "up and down arrow keys",
       }
     }
-    placeholder="01/01/2019"
+    placeholder="31/12/2018"
     readOnly={false}
     regular={false}
     renderCalendarInfo={null}
