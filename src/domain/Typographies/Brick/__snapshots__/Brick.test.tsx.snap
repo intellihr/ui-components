@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Brick /> should render a Brick with default values 1`] = `
+<styled.span
+  color="neutral"
+>
+  <Text
+    color="#262D33"
+    isInline={true}
+    tag="span"
+    type="body"
+  >
+    Test
+  </Text>
+</styled.span>
+`;
+
+exports[`<Brick /> should render a Brick with the alert color 1`] = `
+<styled.span
+  color="alert"
+>
+  <Text
+    color="#B30F00"
+    isInline={true}
+    tag="span"
+    type="body"
+  >
+    Test
+  </Text>
+</styled.span>
+`;
+
+exports[`<Brick /> should render a Brick with the heading typography 1`] = `
+<styled.span
+  color="neutral"
+>
+  <Text
+    color="#262D33"
+    isInline={true}
+    tag="span"
+    type="heading"
+  >
+    Test
+  </Text>
+</styled.span>
+`;
