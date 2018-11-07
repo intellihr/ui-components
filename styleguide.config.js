@@ -208,7 +208,7 @@ module.exports = {
         {
           name: 'Tabs',
           components: [
-            'src/domain/Tabs/HorizontalTabGroup/HorizontalTabGroup'
+            'src/domain/Tabs/ScrollingTabGroup/ScrollingTabGroup'
           ]
         },
         {
