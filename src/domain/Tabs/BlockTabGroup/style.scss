@@ -1,0 +1,61 @@
+@import '../../../common/sass/variables';
+
+:local(.ihrBlockTabGroup),
+.ihr-block-tab-group {
+  border: 1px solid $n300;
+  border-radius: $border-radius;
+  box-sizing: border-box;
+  height: 40px;
+  overflow: hidden;
+  width: 100%;
+
+  ul {
+    display: flex;
+    font-size: $fz-body;
+    height: 100%;
+    justify-content: space-around;
+    line-height: $lh-display-large;
+    list-style-type: none;
+    margin: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding-bottom: 100px;
+    padding-left: 0;
+    position: relative;
+    white-space: nowrap;
+
+    li {
+      display: inline-block;
+      width: 100%;
+
+      &:last-child {
+        a {
+          border-right: 0;
+        }
+      }
+
+      a {
+        background-color: $n200;
+        border-right: 1px solid $n300;
+        color: $n600;
+        display: block;
+        font-weight: $fw-medium;
+        line-height: $lh-display-large;
+        outline: none;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        transition: color .15s ease-in;
+
+        &.active,
+        &:active,
+        &:hover,
+        &:focus {
+          background-color: $n100;
+          color: $i400;
+        }
+
+      }
+    }
+  }
+}
