@@ -1,8 +1,8 @@
 import { shallow, mount } from 'enzyme'
 import React from 'react'
-import { HorizontalTabGroup } from './HorizontalTabGroup'
+import { ScrollingTabGroup } from './ScrollingTabGroup'
 
-describe('<HorizontalTabGroup />', () => {
+describe('<ScrollingTabGroup />', () => {
   const tabDefinitions = [
     {
       title: 'Tab 1'
@@ -23,7 +23,7 @@ describe('<HorizontalTabGroup />', () => {
 
   describe('Standard tabs with current index', () => {
     const wrapper = shallow(
-      <HorizontalTabGroup
+      <ScrollingTabGroup
         tabs={tabDefinitions}
         currentTab={1}
       />
@@ -56,7 +56,7 @@ describe('<HorizontalTabGroup />', () => {
     const onTabChange = jest.fn()
 
     const wrapper = mount(
-      <HorizontalTabGroup
+      <ScrollingTabGroup
         tabs={tabDefinitions}
         currentTab={1}
         onTabChange={onTabChange}
@@ -83,7 +83,7 @@ describe('<HorizontalTabGroup />', () => {
   describe('Scrolling', () => {
     const onScrollUpdate = jest.fn()
     const wrapper = mount(
-      <HorizontalTabGroup
+      <ScrollingTabGroup
         tabs={tabDefinitions}
         currentTab={1}
         onScrollUpdate={onScrollUpdate}
@@ -93,7 +93,7 @@ describe('<HorizontalTabGroup />', () => {
     afterEach(() => jest.restoreAllMocks())
 
     it('should scroll the tabs when current tab changes', async () => {
-      const instance = wrapper.instance() as HorizontalTabGroup
+      const instance = wrapper.instance() as ScrollingTabGroup
 
       // hack to simulate the props updating (can't await on wrapper.setProps)
       await instance.componentDidUpdate({
@@ -105,14 +105,14 @@ describe('<HorizontalTabGroup />', () => {
     })
 
     it('should scroll left', async () => {
-      const instance = wrapper.instance() as HorizontalTabGroup
+      const instance = wrapper.instance() as ScrollingTabGroup
       await instance.scrollLeft()
 
       expect(onScrollUpdate).toBeCalled()
     })
 
     it('should scroll right', async () => {
-      const instance = wrapper.instance() as HorizontalTabGroup
+      const instance = wrapper.instance() as ScrollingTabGroup
       await instance.scrollRight()
 
       expect(onScrollUpdate).toBeCalled()
