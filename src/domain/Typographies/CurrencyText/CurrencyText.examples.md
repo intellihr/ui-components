@@ -8,7 +8,7 @@
    />
 ```
 
-#### Formatted Currency Code
+#### Styled Currency Text
 
 ```jsx
    <div>
@@ -16,21 +16,51 @@
       value={1000}
       prefix='AUD'
       prefixType='xsmall'
-      isPrefixFormatted
+      type='heading'
     />
     <br/>
     <CurrencyText
       value={1000}
       prefix='AUD'
       prefixType='body'
-      isPrefixFormatted
+      type='xsmall'
     />
     <br/>
     <CurrencyText
       value={1000}
       prefix='AUD'
-      prefixType='display'
-      isPrefixFormatted
+      prefixType='display-large'
+      type='display'
+    />
+  </div>
+```
+
+#### Flex Aligned Currency Text
+
+```jsx
+   <div>
+    <CurrencyText
+      value={1000}
+      prefix='AUD'
+      prefixType='xsmall'
+      type='heading'
+      flexAlign
+    />
+    <br/>
+    <CurrencyText
+      value={1000}
+      prefix='AUD'
+      prefixType='body'
+      type='xsmall'
+      flexAlign
+    />
+    <br/>
+    <CurrencyText
+      value={1000}
+      prefix='AUD'
+      prefixType='display-large'
+      type='display'
+      flexAlign
     />
   </div>
 ```

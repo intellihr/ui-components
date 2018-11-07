@@ -1,75 +1,457 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<CurrencyText /> should render the Currency Text 1`] = `
+.c0 {
+  margin-right: 8px;
+}
+
+.c1 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 600;
+}
+
+.c2 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
 <CurrencyText
   decimalPlace={2}
-  isPrefixFormatted={false}
+  flexAlign={false}
   prefix="AUD"
-  prefixType="display"
+  prefixType="body"
+  type="body"
   value={1000.499}
 >
-  <span>
-    AUD
-     
-    1,000.50
-  </span>
+  <styled.span
+    flexAlign={false}
+  >
+    <span
+      className=""
+    >
+      <Styled(Text)
+        type="body"
+        weight="heavy"
+      >
+        <Text
+          className="c0"
+          isInline={true}
+          tag="span"
+          type="body"
+          weight="heavy"
+        >
+          <styled.span
+            className="c0"
+            isInline={true}
+            textType="body"
+            weight="heavy"
+          >
+            <span
+              className="c0 c1"
+            >
+              AUD
+            </span>
+          </styled.span>
+        </Text>
+      </Styled(Text)>
+      <Text
+        isInline={true}
+        tag="span"
+        type="body"
+      >
+        <styled.span
+          isInline={true}
+          textType="body"
+        >
+          <span
+            className="c2"
+          >
+            1,000.50
+          </span>
+        </styled.span>
+      </Text>
+    </span>
+  </styled.span>
 </CurrencyText>
 `;
 
 exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = `
-<CurrencyText
-  decimalPlace={0}
-  isPrefixFormatted={false}
-  prefix="AUD"
-  prefixType="display"
-  value={0}
->
-  <span>
-    AUD
-     
-    0
-  </span>
-</CurrencyText>
-`;
-
-exports[`<CurrencyText /> should render the Currency Text with isPrefixFormatted being true 1`] = `
 .c0 {
-  font-size: 24px;
-  line-height: 28px;
+  margin-right: 8px;
+}
+
+.c1 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
   font-weight: 600;
-  position: relative;
-  margin-right: .25rem;
-  bottom: .25rem;
+}
+
+.c2 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
 }
 
 <CurrencyText
   decimalPlace={0}
-  isPrefixFormatted={true}
+  flexAlign={false}
   prefix="AUD"
-  prefixType="display"
+  prefixType="body"
+  type="body"
+  value={0}
+>
+  <styled.span
+    flexAlign={false}
+  >
+    <span
+      className=""
+    >
+      <Styled(Text)
+        type="body"
+        weight="heavy"
+      >
+        <Text
+          className="c0"
+          isInline={true}
+          tag="span"
+          type="body"
+          weight="heavy"
+        >
+          <styled.span
+            className="c0"
+            isInline={true}
+            textType="body"
+            weight="heavy"
+          >
+            <span
+              className="c0 c1"
+            >
+              AUD
+            </span>
+          </styled.span>
+        </Text>
+      </Styled(Text)>
+      <Text
+        isInline={true}
+        tag="span"
+        type="body"
+      >
+        <styled.span
+          isInline={true}
+          textType="body"
+        >
+          <span
+            className="c2"
+          >
+            0
+          </span>
+        </styled.span>
+      </Text>
+    </span>
+  </styled.span>
+</CurrencyText>
+`;
+
+exports[`<CurrencyText /> should render the Currency Text with a center flex align 1`] = `
+.c1 {
+  margin-right: 8px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  font-size: 18px;
+  line-height: 24px;
+  -webkit-letter-spacing: -.02em;
+  -moz-letter-spacing: -.02em;
+  -ms-letter-spacing: -.02em;
+  letter-spacing: -.02em;
+  color: #424F5C;
+  font-weight: 600;
+}
+
+.c3 {
+  font-size: 12px;
+  line-height: 18px;
+  -webkit-letter-spacing: .02em;
+  -moz-letter-spacing: .02em;
+  -ms-letter-spacing: .02em;
+  letter-spacing: .02em;
+  color: #262D33;
+  font-weight: 400;
+}
+
+<CurrencyText
+  decimalPlace={0}
+  flexAlign={true}
+  prefix="AUD"
+  prefixType="heading"
+  type="xsmall"
   value={1000}
 >
-  <span>
-    <styled.span
-      prefixType="display"
+  <styled.span
+    flexAlign={true}
+  >
+    <span
+      className="c0"
     >
-      <span
-        className="c0"
+      <Styled(Text)
+        type="heading"
+        weight="heavy"
       >
-        AUD
-      </span>
-    </styled.span>
-     
-    1,000
-  </span>
+        <Text
+          className="c1"
+          isInline={true}
+          tag="span"
+          type="heading"
+          weight="heavy"
+        >
+          <styled.span
+            className="c1"
+            isInline={true}
+            textType="heading"
+            weight="heavy"
+          >
+            <span
+              className="c1 c2"
+            >
+              AUD
+            </span>
+          </styled.span>
+        </Text>
+      </Styled(Text)>
+      <Text
+        isInline={true}
+        tag="span"
+        type="xsmall"
+      >
+        <styled.span
+          isInline={true}
+          textType="xsmall"
+        >
+          <span
+            className="c3"
+          >
+            1,000
+          </span>
+        </styled.span>
+      </Text>
+    </span>
+  </styled.span>
+</CurrencyText>
+`;
+
+exports[`<CurrencyText /> should render the Currency Text with an extra small money style 1`] = `
+.c0 {
+  margin-right: 8px;
+}
+
+.c1 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 600;
+}
+
+.c2 {
+  font-size: 12px;
+  line-height: 18px;
+  -webkit-letter-spacing: .02em;
+  -moz-letter-spacing: .02em;
+  -ms-letter-spacing: .02em;
+  letter-spacing: .02em;
+  color: #262D33;
+  font-weight: 400;
+}
+
+<CurrencyText
+  decimalPlace={0}
+  flexAlign={false}
+  prefix="AUD"
+  prefixType="body"
+  type="xsmall"
+  value={1000}
+>
+  <styled.span
+    flexAlign={false}
+  >
+    <span
+      className=""
+    >
+      <Styled(Text)
+        type="body"
+        weight="heavy"
+      >
+        <Text
+          className="c0"
+          isInline={true}
+          tag="span"
+          type="body"
+          weight="heavy"
+        >
+          <styled.span
+            className="c0"
+            isInline={true}
+            textType="body"
+            weight="heavy"
+          >
+            <span
+              className="c0 c1"
+            >
+              AUD
+            </span>
+          </styled.span>
+        </Text>
+      </Styled(Text)>
+      <Text
+        isInline={true}
+        tag="span"
+        type="xsmall"
+      >
+        <styled.span
+          isInline={true}
+          textType="xsmall"
+        >
+          <span
+            className="c2"
+          >
+            1,000
+          </span>
+        </styled.span>
+      </Text>
+    </span>
+  </styled.span>
+</CurrencyText>
+`;
+
+exports[`<CurrencyText /> should render the Currency Text with an extra small prefix style 1`] = `
+.c0 {
+  margin-right: 8px;
+}
+
+.c1 {
+  font-size: 12px;
+  line-height: 18px;
+  -webkit-letter-spacing: .02em;
+  -moz-letter-spacing: .02em;
+  -ms-letter-spacing: .02em;
+  letter-spacing: .02em;
+  color: #262D33;
+  font-weight: 600;
+}
+
+.c2 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
+<CurrencyText
+  decimalPlace={0}
+  flexAlign={false}
+  prefix="AUD"
+  prefixType="xsmall"
+  type="body"
+  value={1000}
+>
+  <styled.span
+    flexAlign={false}
+  >
+    <span
+      className=""
+    >
+      <Styled(Text)
+        type="xsmall"
+        weight="heavy"
+      >
+        <Text
+          className="c0"
+          isInline={true}
+          tag="span"
+          type="xsmall"
+          weight="heavy"
+        >
+          <styled.span
+            className="c0"
+            isInline={true}
+            textType="xsmall"
+            weight="heavy"
+          >
+            <span
+              className="c0 c1"
+            >
+              AUD
+            </span>
+          </styled.span>
+        </Text>
+      </Styled(Text)>
+      <Text
+        isInline={true}
+        tag="span"
+        type="body"
+      >
+        <styled.span
+          isInline={true}
+          textType="body"
+        >
+          <span
+            className="c2"
+          >
+            1,000
+          </span>
+        </styled.span>
+      </Text>
+    </span>
+  </styled.span>
 </CurrencyText>
 `;
 
 exports[`<CurrencyText /> should render the Currency Text without value 1`] = `
 <CurrencyText
   decimalPlace={0}
-  isPrefixFormatted={false}
-  prefixType="display"
+  flexAlign={false}
+  prefixType="body"
+  type="body"
 >
   -
 </CurrencyText>

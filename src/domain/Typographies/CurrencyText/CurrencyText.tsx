@@ -1,7 +1,7 @@
 import React from 'react'
 import Numeral from 'numeral'
 import { padEnd } from 'lodash'
-import { FormattedCurrencyPrefixWrapper } from './style'
+import { StyledCurrencyText, StyledPrefixText } from './style'
 import { Props } from '../../../common'
 import { Text } from '../Text'
 
@@ -13,15 +13,19 @@ interface ICurrencyTextProps {
   /** Currency prefix to display */
   prefix?: string
   /** Currency prefix text type  */
-  prefixType?: Props.TypographyType.XSmall | Props.TypographyType.Body | Props.TypographyType.Display
+  prefixType?: Props.TypographyType
   /** decimal place to display */
   decimalPlace?:  number
+  /** Vertically aligns the currency prefix and monetary value */
+  flexAlign?: boolean
 }
 
 class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
   public static defaultProps: Partial<ICurrencyTextProps> = {
-    prefixType: Props.TypographyType.Display,
-    decimalPlace:  0
+    type: Props.TypographyType.Body,
+    prefixType: Props.TypographyType.Body,
+    decimalPlace:  0,
+    flexAlign: false
   }
 
   get prefix (): JSX.Element | null {
@@ -35,13 +39,16 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
     }
 
     return (
-      <FormattedCurrencyPrefixWrapper prefixType={prefixType}>
+      <StyledPrefixText
+        weight='heavy'
+        type={prefixType}
+      >
         {prefix}
-      </FormattedCurrencyPrefixWrapper>
+      </StyledPrefixText>
     )
   }
 
-  get formattedMoney(): JSX.Element {
+  get formattedValue (): JSX.Element {
     const {
       decimalPlace,
       value,
@@ -62,15 +69,18 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
 
   public render (): JSX.Element | string {
     const {
-      value
+      value,
+      flexAlign
     } = this.props
 
     if (value || value === 0) {
       return (
-        <span>
+        <StyledCurrencyText
+          flexAlign={flexAlign}
+        >
           {this.prefix}
-          {this.formattedMoney}
-        </span>
+          {this.formattedValue}
+        </StyledCurrencyText>
       )
     }
 

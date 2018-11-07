@@ -1,42 +1,27 @@
 import styled, { css } from 'styled-components'
-import { Variables } from '../../../common'
+import { Text } from '../Text'
 
-export interface IFormattedCurrencyPrefixWrapperProps {
-  prefixType?: 'xsmall' | 'body' | 'display'
+export interface IStyledCurrencyTextProps {
+  flexAlign?: boolean
 }
 
-const FormattedCurrencyPrefixWrapper = styled.span`
+const StyledPrefixText = styled(Text)`
   margin-right: 8px;
+`
 
-  ${(props: IFormattedCurrencyPrefixWrapperProps) => {
-  if (props.prefixType) {
-    switch (props.prefixType) {
-      case 'xsmall':
-        return css`
-            font-size: ${Variables.FontSize.fzXSmall}px;
-            line-height: ${Variables.LineHeight.lhXSmall}px;
-            font-weight: ${Variables.FontWeight.fwMedium};
+const StyledCurrencyText = styled.span`
+  ${(props: IStyledCurrencyTextProps) => {
+    if (props.flexAlign) {
+      return (css`
+        display: flex;
+        align-items: center;
         `
-      case 'body':
-        return css`
-            font-size: ${Variables.FontSize.fzBody}px;
-            line-height: ${Variables.LineHeight.lhBody}px;
-            font-weight: ${Variables.FontWeight.fwMedium};
-        `
-      case 'display':
-        return css`
-            font-size: ${Variables.FontSize.fzDisplay}px;
-            line-height: ${Variables.LineHeight.lhDisplay}px;
-            font-weight: ${Variables.FontWeight.fwMedium};
-            position: relative;
-            margin-right: .25rem;
-            bottom: .25rem;
-        `
+      )
     }
-  }
-}}
+  }}
 `
 
 export {
-  FormattedCurrencyPrefixWrapper
+  StyledPrefixText,
+  StyledCurrencyText
 }
