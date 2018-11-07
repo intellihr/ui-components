@@ -116,11 +116,17 @@ class DropdownMenu extends React.Component<IDropdownMenuProps, IDropdownMenuStat
   }
 
   private close = () => {
-    this.setState({
-      isDropdownOpen: false,
-      dropdownId: undefined,
-      lastClosedTime: moment()
-    })
+    const {
+      isDropdownOpen
+    } = this.state
+
+    if (isDropdownOpen) {
+      this.setState({
+        isDropdownOpen: false,
+        dropdownId: undefined,
+        lastClosedTime: moment()
+      })
+    }
   }
 
   private get toggleComponent () {

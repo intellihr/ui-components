@@ -7,7 +7,7 @@ initialState = {
   openTab: 0
 };
 
-<HorizontalTabGroup
+<ScrollingTabGroup
   onTabChange={(tab, index) => setState({ openTab: index })}
   currentTab={state.openTab}
   tabs={[
@@ -40,7 +40,7 @@ initialState = {
   openTab: 0
 };
 
-<HorizontalTabGroup
+<ScrollingTabGroup
   onTabChange={(tab, index) => setState({ openTab: index })}
   currentTab={state.openTab}
   tabs={[
@@ -69,7 +69,7 @@ Note that this doesn't work in the styleguide as anchors are used to link
 between pages.
 
 ```jsx
-<HorizontalTabGroup
+<ScrollingTabGroup
   currentTab='#goodbye'
   tabs={[
     {

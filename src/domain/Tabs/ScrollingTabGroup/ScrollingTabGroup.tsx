@@ -19,7 +19,7 @@ import {
   TabParent
 } from './style'
 
-export interface IHorizontalTab {
+export interface IScrollingTab {
   /** String title to use for this tab */
   title?: string
   /** Component positioned to the left of the title */
@@ -30,20 +30,20 @@ export interface IHorizontalTab {
   anchorId?: string
 }
 
-export interface IHorizontalTabGroupProps {
+export interface IScrollingTabGroupProps {
   /** The current tab selected (by anchor or index). This must be provided for the component to work. */
   currentTab: string | number
   /** A list of tabs and their content to render */
-  tabs: IHorizontalTab[]
+  tabs: IScrollingTab[]
   /** Whether to update the url of the page with anchors when changing tabs */
   anchorsUpdateUrl?: boolean
   /** Callback to run when clicking between tabs */
-  onTabChange?: (tab: IHorizontalTab, index: number) => void
+  onTabChange?: (tab: IScrollingTab, index: number) => void
   /** Callback when the scroll position changes */
   onScrollUpdate?: (newScrollValue: number) => void
 }
 
-export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps, never> {
+export class ScrollingTabGroup extends React.Component<IScrollingTabGroupProps, never> {
   public static defaultProps = {
     anchorsUpdateUrl: false
   }
@@ -73,7 +73,7 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
     this.currentlyMounted = false
   }
 
-  public componentDidUpdate (prevProps: Readonly<IHorizontalTabGroupProps>) {
+  public componentDidUpdate (prevProps: Readonly<IScrollingTabGroupProps>) {
     if (this.props.currentTab !== prevProps.currentTab) {
       return this.handleScrollToTab(
         this.indexForTab(this.props.currentTab)
@@ -183,7 +183,7 @@ export class HorizontalTabGroup extends React.Component<IHorizontalTabGroupProps
     )
   }
 
-  private listItemForTab = (tab: IHorizontalTab, index: number): JSX.Element => {
+  private listItemForTab = (tab: IScrollingTab, index: number): JSX.Element => {
     const currentTabIndex = this.currentTabIndex
 
     return (
