@@ -1,9 +1,6 @@
 import React from 'react'
 import { isNil } from 'lodash'
-import { Text } from '../../Typographies/Text/index'
 import { Props } from '../../../common/types/props'
-import { LinkButton } from '../../Buttons/LinkButton/index'
-import { Variables } from '../../../common/index'
 
 const style = require('./style.scss')
 
@@ -31,9 +28,9 @@ export class EmptyState extends React.Component<IEmptyStateProps> {
 
     if (!isNil(primaryMessage)) {
       return (
-        <Text type={Props.TypographyType.Heading} tag='h3' color={Variables.Color.n700}>
+        <div className={style.ihrPrimaryMessage}>
           {primaryMessage}
-        </Text>
+        </div>
       )
     }
     return null
@@ -46,9 +43,9 @@ export class EmptyState extends React.Component<IEmptyStateProps> {
 
     if (!isNil(secondaryMessage)) {
       return (
-        <Text color={Variables.Color.n600} tag='p'>
+        <div className={style.ihrSecondaryMessage}>
           {secondaryMessage}
-        </Text>
+        </div>
       )
     }
     return null

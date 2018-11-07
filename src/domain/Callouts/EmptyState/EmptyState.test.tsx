@@ -2,7 +2,7 @@ import { shallow } from 'enzyme'
 import React from 'react'
 
 import { EmptyState } from './EmptyState'
-import { LinkButton} from '../../Buttons/LinkButton'
+import { LinkButton } from '../../Buttons/LinkButton'
 
 describe('EmptyState', () => {
   it('Renders default empty state', () => {
@@ -27,15 +27,17 @@ describe('EmptyState', () => {
   })
 
   it('Renders successfully with both primaryMessage, secondaryMessage and buttonComponent', () => {
-    const buttonComponent = <LinkButton
-      size='small'
-      href='www.google.com.au'
-      anchorComponentProps={{
-        useReactRouter: false
-      }}
-    >
-      Add Address
-    </LinkButton>
+    const buttonComponent = (
+      <LinkButton
+        size='small'
+        href='www.google.com.au'
+        anchorComponentProps={{
+          useReactRouter: false
+        }}
+      >
+        Add Address
+      </LinkButton>
+    )
 
     const wrapper = shallow(
       <EmptyState

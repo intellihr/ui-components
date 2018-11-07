@@ -1,0 +1,62 @@
+@import '../../../common/sass/variables';
+
+:local(.ihrEmptyState),
+.ihr-empty-state {
+  background-color: $n150;
+  border-color: $n400;
+  border-width: 0;
+  flex-grow: 1;
+  padding: 48px;
+  text-align: center;
+}
+
+:local(.ihrPrimaryMessage),
+.ihr-primary-message {
+  color: $n700;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+  line-height: 24px;
+}
+
+:local(.ihrSecondaryMessage),
+.ihr-secondary-message {
+  color: $n600;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 24px;
+  margin: 10px 0 20px 0;
+}
+
+:local(.ihrButtonComponent),
+.ihr-button-component {
+  color: $n600;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 24px;
+  margin: 10px 0 20px 0;
+  span {
+    background-color: $n300;
+    border-color: transparent;
+    border-radius: 4px;
+    color: $n700;
+    font-size: .75rem;
+    font-weight: 600;
+    padding: .85em 1em;
+    &:hover {
+      background-color: $n400;
+      color: $n700;
+    }
+    &:active {
+      background-color: $n600;
+      color: $n100;
+    }
+    &:focus {
+      background-color: $n400;
+      border-color: $n600;
+      color: $n700;
+    }
+  }
+}

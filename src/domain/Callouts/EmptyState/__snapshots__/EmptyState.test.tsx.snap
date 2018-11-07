@@ -5,22 +5,16 @@ exports[`EmptyState Renders default empty state 1`] = `
   className="ihrEmptyState"
   data-component-type="empty_state"
 >
-  <Text
-    color="#424F5C"
-    isInline={true}
-    tag="h3"
-    type="heading"
+  <div
+    className="ihrPrimaryMessage"
   >
     Opps... We couldn't find anything for this section.
-  </Text>
-  <Text
-    color="#667380"
-    isInline={true}
-    tag="p"
-    type="body"
+  </div>
+  <div
+    className="ihrSecondaryMessage"
   >
     Please speak to your system admin or add information.
-  </Text>
+  </div>
 </div>
 `;
 
@@ -29,22 +23,16 @@ exports[`EmptyState Renders successfully with both primaryMessage, secondaryMess
   className="ihrEmptyState"
   data-component-type="empty_state"
 >
-  <Text
-    color="#424F5C"
-    isInline={true}
-    tag="h3"
-    type="heading"
+  <div
+    className="ihrPrimaryMessage"
   >
     This is a primary message
-  </Text>
-  <Text
-    color="#667380"
-    isInline={true}
-    tag="p"
-    type="body"
+  </div>
+  <div
+    className="ihrSecondaryMessage"
   >
     This is a secondary message
-  </Text>
+  </div>
   <LinkButton
     anchorComponentProps={
       Object {
@@ -68,22 +56,16 @@ exports[`EmptyState Renders successfully with primaryMessage only 1`] = `
   className="ihrEmptyState"
   data-component-type="empty_state"
 >
-  <Text
-    color="#424F5C"
-    isInline={true}
-    tag="h3"
-    type="heading"
+  <div
+    className="ihrPrimaryMessage"
   >
     This is a primary message
-  </Text>
-  <Text
-    color="#667380"
-    isInline={true}
-    tag="p"
-    type="body"
+  </div>
+  <div
+    className="ihrSecondaryMessage"
   >
     Please speak to your system admin or add information.
-  </Text>
+  </div>
 </div>
 `;
 
@@ -92,21 +74,15 @@ exports[`EmptyState Renders successfully with secondaryMessage only 1`] = `
   className="ihrEmptyState"
   data-component-type="empty_state"
 >
-  <Text
-    color="#424F5C"
-    isInline={true}
-    tag="h3"
-    type="heading"
+  <div
+    className="ihrPrimaryMessage"
   >
     Opps... We couldn't find anything for this section.
-  </Text>
-  <Text
-    color="#667380"
-    isInline={true}
-    tag="p"
-    type="body"
+  </div>
+  <div
+    className="ihrSecondaryMessage"
   >
     This is a secondary message
-  </Text>
+  </div>
 </div>
 `;
