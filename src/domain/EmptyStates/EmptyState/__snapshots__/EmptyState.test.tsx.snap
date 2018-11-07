@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmptyState Renders default empty state 1`] = `
+<div
+  className="ihrEmptyState"
+  data-component-type="empty_state"
+>
+  <Text
+    color="#424F5C"
+    isInline={true}
+    tag="h3"
+    type="heading"
+  >
+    Opps... We couldn't find anything for this section.
+  </Text>
+  <Text
+    color="#667380"
+    isInline={true}
+    tag="p"
+    type="body"
+  >
+    Please speak to your system admin or add information.
+  </Text>
+</div>
+`;
+
+exports[`EmptyState Renders successfully with both primaryMessage, secondaryMessage and buttonComponent 1`] = `
+<div
+  className="ihrEmptyState"
+  data-component-type="empty_state"
+>
+  <Text
+    color="#424F5C"
+    isInline={true}
+    tag="h3"
+    type="heading"
+  >
+    This is a primary message
+  </Text>
+  <Text
+    color="#667380"
+    isInline={true}
+    tag="p"
+    type="body"
+  >
+    This is a secondary message
+  </Text>
+  <LinkButton
+    anchorComponentProps={
+      Object {
+        "useReactRouter": false,
+      }
+    }
+    disabled={false}
+    hasLegacyMargins={false}
+    href="www.google.com.au"
+    iconAlignment="left"
+    size="small"
+    type="neutral"
+  >
+    Add Address
+  </LinkButton>
+</div>
+`;
+
+exports[`EmptyState Renders successfully with primaryMessage only 1`] = `
+<div
+  className="ihrEmptyState"
+  data-component-type="empty_state"
+>
+  <Text
+    color="#424F5C"
+    isInline={true}
+    tag="h3"
+    type="heading"
+  >
+    This is a primary message
+  </Text>
+  <Text
+    color="#667380"
+    isInline={true}
+    tag="p"
+    type="body"
+  >
+    Please speak to your system admin or add information.
+  </Text>
+</div>
+`;
+
+exports[`EmptyState Renders successfully with secondaryMessage only 1`] = `
+<div
+  className="ihrEmptyState"
+  data-component-type="empty_state"
+>
+  <Text
+    color="#424F5C"
+    isInline={true}
+    tag="h3"
+    type="heading"
+  >
+    Opps... We couldn't find anything for this section.
+  </Text>
+  <Text
+    color="#667380"
+    isInline={true}
+    tag="p"
+    type="body"
+  >
+    This is a secondary message
+  </Text>
+</div>
+`;

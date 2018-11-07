@@ -66,8 +66,7 @@ module.exports = {
         {
           name: 'Callouts',
           components: [
-            'src/domain/Callouts/Callout/Callout',
-            'src/domain/Callouts/NoDataCallout/NoDataCallout'
+            'src/domain/Callouts/Callout/Callout'
           ]
         },
         {
@@ -81,6 +80,12 @@ module.exports = {
           name: 'Comments',
           components: [
             'src/domain/Comments/Comment/Comment'
+          ]
+        },
+        {
+          name: 'EmptyStates',
+          components: [
+            'src/domain/EmptyStates/EmptyState/EmptyState'
           ]
         },
         {

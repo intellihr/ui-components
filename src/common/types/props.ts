@@ -44,7 +44,7 @@ namespace Props {
     Button = 'button',
     LinkButton = 'link_button',
     ButtonIcon = 'button_icon',
-    NoDataCallout = 'no_data_callout'
+    EmptyState = 'empty_state'
   }
 }
 
