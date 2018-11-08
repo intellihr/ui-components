@@ -35,7 +35,7 @@ export { ScrollingTabGroup } from './Tabs'
  * VerticalTimelineEvent is here for legacy support.
  * It should be a static property of VerticalTimeline
  */
-export { VerticalTimeline, VerticalTimelineEvent } from './Timelines'
+export { ModularTimeline, VerticalTimeline, VerticalTimelineEvent } from './Timelines'
 
 export { Toast } from './Toasts'
 export { Tooltip } from './Tooltips'

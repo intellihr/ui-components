@@ -1,1 +1,2 @@
-export * from './VerticalTimeline'
+export { ModularTimeline } from './ModularTimeline'
+export { VerticalTimeline, VerticalTimelineEvent } from './VerticalTimeline'

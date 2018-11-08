@@ -41,12 +41,14 @@ namespace Props {
   }
 
   export enum ComponentType {
+    Brick = 'brick',
     Button = 'button',
     ButtonIcon = 'button_icon',
     EmptyState = 'empty_state',
     LinkButton = 'link_button',
-    Brick = 'brick',
-    Text = 'text'
+    Text = 'text',
+    Timeline = 'timeline',
+    TimelineEvent = 'timeline_event'
   }
 
   export enum FunctionalColor {
