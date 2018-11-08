@@ -1,16 +1,18 @@
 #### Example timeline with context
 
 ```jsx
+const { Props } = require('@Common');
+
 <ModularTimeline
   events={[
     {
-      title: 'Upcoming',
+      title: <Text weight='heavy'>Upcoming</Text>,
       eventType: 'major',
       markerColor: 'none',
       timelineLineStyle: 'none'
     },
     {
-      title: 'Effective from 1 Jan 2019',
+      title: <Text type='small'>Effective from 1 Jan 2019</Text>,
       eventType: 'minor',
       markerColor: 'primary',
       timelineLineStyle: 'dashed',
@@ -18,37 +20,37 @@
       componentContext: 'example context for event'
     },
     {
-      title: 'Effective from 1 Dec 2018',
+      title: <Text type='small'>Effective from 1 Dec 2018</Text>,
       eventType: 'minor',
       markerColor: 'primary',
       timelineLineStyle: 'dashed',
       bodyContent: 'Some content goes here'
     },
     {
-      title: 'Today, 6 Nov 2018',
+      title: <Text weight='heavy'>Today, 6 Nov 2018</Text>,
       eventType: 'major',
       markerColor: 'primary'
     },
     {
-      title: '2011',
+      title: <Text weight='heavy'>2011</Text>,
       eventType: 'major'
     },
     {
-      title: 'Effective from 1 Jul 2011',
+      title: <Text type='small'>Effective from 1 Jul 2011</Text>,
       eventType: 'minor',
       bodyContent: 'Some content goes here'
     },
     {
-      title: 'Effective from 1 Jul 2011',
+      title: <Text type='small'>Effective from 1 Jul 2011</Text>,
       eventType: 'minor',
       bodyContent: 'Some content goes here'
     },
     {
-      title: '2010',
+      title: <Text weight='heavy'>2010</Text>,
       eventType: 'major'
     },
     {
-      title: 'Effective from 1 Jul 2011',
+      title: <Text type='small'>Effective from 1 Jul 2011</Text>,
       eventType: 'minor',
       bodyContent: 'Last bit of content here'
     }
