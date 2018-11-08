@@ -7,7 +7,7 @@ export interface IBrickProps {
   /** Text to show inside the Brick  */
   text: string
   /** Color of the brick  */
-  color?: 'alert' | 'success' | 'warning' | 'primary' | 'neutral' | 'secondary' | 'highlight' | 'dark'
+  color?: Props.FunctionalColor
   /** Specify the type of typography to use */
   typographyType?: Props.TypographyType
   /** Extra classes to apply */
@@ -18,57 +18,31 @@ export interface IBrickProps {
 
 export class Brick extends React.PureComponent<IBrickProps> {
   public static defaultProps: Partial<IBrickProps> = {
-    color: 'neutral',
+    color: Props.FunctionalColor.Neutral,
     typographyType: Props.TypographyType.Body
-  }
-
-  get textColor (): Variables.Color {
-    const {
-      color
-    } = this.props
-
-    switch (color) {
-      case 'alert':
-        return Variables.Color.r600
-      case 'success':
-        return Variables.Color.g600
-      case 'warning':
-        return Variables.Color.o600
-      case 'primary':
-        return Variables.Color.i600
-      case 'secondary':
-        return Variables.Color.b600
-      case 'highlight':
-        return Variables.Color.c600
-      case 'dark':
-        return Variables.Color.n200
-      default:
-        return Variables.Color.n800
-
-
-    }
-
   }
 
   public render (): JSX.Element {
     const {
       text,
-      color,
+      color = Props.FunctionalColor.Neutral,
       typographyType,
       className,
       componentContext
     } = this.props
 
+    const colors = Variables.functionalColors[color]
+
     return (
       <BrickWrapper
-        color={color}
+        color={colors.backgroundColor}
         className={className}
-        data-component-type={Props.ComponentType.Text}
+        data-component-type={Props.ComponentType.Brick}
         data-component-context={componentContext}
       >
         <Text
           type={typographyType}
-          color={this.textColor}
+          color={colors.textColor}
         >
           {text}
         </Text>
