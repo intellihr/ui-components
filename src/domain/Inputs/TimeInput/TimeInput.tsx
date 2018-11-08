@@ -1,4 +1,4 @@
-import React, {RefObject} from 'react'
+import React, { RefObject } from 'react'
 import { endsWith } from 'lodash'
 
 interface ITimeInputProps {
@@ -373,8 +373,6 @@ class TimeInput extends React.PureComponent<ITimeInputProps, ITimeInputState> {
     if (removedCharacter !== null && addedCharacter === null) {
       newValueAndPosition = this.getTimeAndPositionByRemovedCharacter(inputValue, position, oldValue, isPm)
     }
-
-    console.log(newValueAndPosition, 'newValueAndPosition')
 
     const [validatedTime, validatedCursorPosition] = this.validateTimeAndCursor(
       newValueAndPosition.newValue ? newValueAndPosition.newValue : oldValue,
