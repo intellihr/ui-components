@@ -12,7 +12,7 @@ import { Props } from '../../../common'
 
 type OptionClickCallback = (option: IOptionProps) => void
 
-type OptionValue = string | number | boolean | object
+type OptionValue = string | number | boolean
 
 interface IOptionProps {
   /** A component that is shown to the left of the text */
