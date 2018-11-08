@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TimeInput /> should render the 24 hour Time Input 1`] = `
+<input
+  name="timeNumber"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  type="text"
+  value="15:55"
+/>
+`;
+
+exports[`<TimeInput /> should render the am / pm Time Input 1`] = `
+<input
+  name="timeNumber"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  type="text"
+  value="03:55 pm"
+/>
+`;

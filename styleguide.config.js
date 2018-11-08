@@ -116,7 +116,8 @@ module.exports = {
             'src/domain/Inputs/RadioInput/RadioInput',
             'src/domain/Inputs/SelectInput/SelectInput',
             'src/domain/Inputs/TextAreaInput/TextAreaInput',
-            'src/domain/Inputs/SingleDateInput/SingleDateInput'
+            'src/domain/Inputs/SingleDateInput/SingleDateInput',
+            'src/domain/Inputs/TimeInput/TimeInput'
           ]
         },
         {
