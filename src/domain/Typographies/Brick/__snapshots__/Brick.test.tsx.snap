@@ -2,7 +2,8 @@
 
 exports[`<Brick /> should render a Brick with default values 1`] = `
 <styled.span
-  color="neutral"
+  color="#F5F7FA"
+  data-component-type="brick"
 >
   <Text
     color="#262D33"
@@ -17,7 +18,8 @@ exports[`<Brick /> should render a Brick with default values 1`] = `
 
 exports[`<Brick /> should render a Brick with the alert color 1`] = `
 <styled.span
-  color="alert"
+  color="#FFF1F0"
+  data-component-type="brick"
 >
   <Text
     color="#B30F00"
@@ -32,7 +34,8 @@ exports[`<Brick /> should render a Brick with the alert color 1`] = `
 
 exports[`<Brick /> should render a Brick with the heading typography 1`] = `
 <styled.span
-  color="neutral"
+  color="#F5F7FA"
+  data-component-type="brick"
 >
   <Text
     color="#262D33"
