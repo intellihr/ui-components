@@ -19,11 +19,13 @@ exports[`<Text /> should render a non-inline text element 1`] = `
   type="body"
 >
   <styled.span
+    data-component-type="text"
     isInline={false}
     textType="body"
   >
     <span
       className="c0"
+      data-component-type="text"
     >
       Hello, world!
     </span>
@@ -49,11 +51,13 @@ exports[`<Text /> should render a text element as a h1 1`] = `
   type="body"
 >
   <styled.h1
+    data-component-type="text"
     isInline={true}
     textType="body"
   >
     <h1
       className="c0"
+      data-component-type="text"
     >
       Hello, world!
     </h1>
@@ -85,6 +89,7 @@ exports[`<Text /> should render a text with data attributes 1`] = `
   type="body"
 >
   <styled.span
+    data-component-type="text"
     data-otherKey="myOtherKey"
     data-role="myRole"
     isInline={true}
@@ -92,6 +97,7 @@ exports[`<Text /> should render a text with data attributes 1`] = `
   >
     <span
       className="c0"
+      data-component-type="text"
       data-otherKey="myOtherKey"
       data-role="myRole"
     >
@@ -121,12 +127,14 @@ exports[`<Text /> should render an element with colored text 1`] = `
 >
   <styled.span
     color="#F25749"
+    data-component-type="text"
     isInline={true}
     textType="body"
   >
     <span
       className="c0"
       color="#F25749"
+      data-component-type="text"
     >
       Hello, world!
     </span>
@@ -152,11 +160,13 @@ exports[`<Text /> should render an element with heading text 1`] = `
   type="heading"
 >
   <styled.span
+    data-component-type="text"
     isInline={true}
     textType="heading"
   >
     <span
       className="c0"
+      data-component-type="text"
     >
       Hello, world!
     </span>
@@ -183,12 +193,14 @@ exports[`<Text /> should render an element with heavy text 1`] = `
   weight="heavy"
 >
   <styled.span
+    data-component-type="text"
     isInline={true}
     textType="body"
     weight="heavy"
   >
     <span
       className="c0"
+      data-component-type="text"
     >
       Hello, world!
     </span>
@@ -214,11 +226,13 @@ exports[`<Text /> should render an element with small text 1`] = `
   type="small"
 >
   <styled.span
+    data-component-type="text"
     isInline={true}
     textType="small"
   >
     <span
       className="c0"
+      data-component-type="text"
     >
       Hello, world!
     </span>
@@ -244,11 +258,13 @@ exports[`<Text /> should render an element with text 1`] = `
   type="body"
 >
   <styled.span
+    data-component-type="text"
     isInline={true}
     textType="body"
   >
     <span
       className="c0"
+      data-component-type="text"
     >
       Hello, world!
     </span>
@@ -276,12 +292,14 @@ exports[`<Text /> should render an element with the text converted to uppercase 
   type="body"
 >
   <styled.span
+    data-component-type="text"
     isInline={true}
     isUpper={true}
     textType="body"
   >
     <span
       className="c0"
+      data-component-type="text"
     >
       Hello, world!
     </span>
