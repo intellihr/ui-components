@@ -6,11 +6,8 @@ export interface IBrickWrapperProps {
 }
 
 export const BrickWrapper = styled.span`
-  border-radius: 4px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 4px;
-  padding-right: 4px;
+  border-radius: ${Variables.Style.borderRadius}px;
+  padding: 2px 4px;
   display: inline-block;
   word-break: break-word;
 

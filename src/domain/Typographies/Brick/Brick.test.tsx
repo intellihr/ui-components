@@ -18,7 +18,7 @@ describe('<Brick />', () => {
     const wrapper = shallow(
       <Brick
         text='Test'
-        color='alert'
+        color={Props.FunctionalColor.Alert}
       />
     )
 

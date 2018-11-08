@@ -45,7 +45,8 @@ namespace Props {
     ButtonIcon = 'button_icon',
     EmptyState = 'empty_state',
     LinkButton = 'link_button',
-    Brick = 'brick'
+    Brick = 'brick',
+    Text = 'text'
   }
 
   export enum FunctionalColor {

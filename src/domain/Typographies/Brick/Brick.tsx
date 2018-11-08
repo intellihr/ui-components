@@ -25,24 +25,24 @@ export class Brick extends React.PureComponent<IBrickProps> {
   public render (): JSX.Element {
     const {
       text,
-      color = Props.FunctionalColor.Neutral,
+      color,
       typographyType,
       className,
       componentContext
     } = this.props
 
-    const colors = Variables.functionalColors[color]
+    const brickColors = Variables.functionalColors[color!]
 
     return (
       <BrickWrapper
-        color={colors.backgroundColor}
+        color={brickColors.backgroundColor}
         className={className}
         data-component-type={Props.ComponentType.Brick}
         data-component-context={componentContext}
       >
         <Text
           type={typographyType}
-          color={colors.textColor}
+          color={brickColors.textColor}
         >
           {text}
         </Text>

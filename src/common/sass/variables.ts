@@ -110,7 +110,12 @@ namespace Variables {
     fwMedium =          600
   }
 
-  export const functionalColors: { [i in Props.FunctionalColor]: { textColor: Variables.Color, backgroundColor: Variables.Color } } = {
+  export interface IFunctionalColorProps {
+    textColor: Variables.Color
+    backgroundColor: Variables.Color
+  }
+
+  export const functionalColors: { [i in Props.FunctionalColor]: IFunctionalColorProps } = {
     [Props.FunctionalColor.Alert]: {
       textColor: Variables.Color.r600,
       backgroundColor: Variables.Color.r100
