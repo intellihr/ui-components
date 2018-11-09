@@ -1,5 +1,4 @@
 import React, { MouseEvent } from 'react'
-import classNames from 'classnames'
 import {
   isNumber,
   map,
@@ -7,7 +6,12 @@ import {
 } from 'lodash'
 import { Props } from '../../../common'
 
-const style = require('./style.scss')
+import {
+  TabGroupContainer,
+  TabList,
+  TabListItem,
+  TabListItemButton
+} from './style'
 
 export interface IBlockTab {
   /** String title to use for the tab */
@@ -45,15 +49,14 @@ export class BlockTabGroup extends React.Component<IBlockTabGroupProps, never> {
     }
 
     return (
-      <div
-        className={style.ihrBlockTabGroup}
+      <TabGroupContainer
         data-component-type={Props.ComponentType.BlockTabGroup}
         data-component-context={componentContext}
       >
-        <ul role='tablist'>
+        <TabList role='tablist'>
           {map(tabs, this.listItemForTab)}
-        </ul>
-      </div>
+        </TabList>
+      </TabGroupContainer>
     )
   }
 
@@ -62,15 +65,16 @@ export class BlockTabGroup extends React.Component<IBlockTabGroupProps, never> {
     const currentTabIndex = this.currentTabIndex
 
     return (
-        <li key={index} role='tab'>
-          <button
-            className={classNames(tabSize, currentTabIndex === index ? 'active' : '')}
+        <TabListItem key={index} role='tab'>
+          <TabListItemButton
+            active={currentTabIndex === index}
+            tabSize={tabSize}
             onClick={this.handleOnClick}
             aria-selected={currentTabIndex === index}
             data-tabindex={index}>
             {tab.title}
-          </button>
-        </li>
+          </TabListItemButton>
+        </TabListItem>
     )
   }
 

@@ -72,33 +72,3 @@ initialState = {
     ]}
 />
 ```
-
-#### Legacy support for BlockTabGroup
-
-```jsx
-
-<div class='ihr-block-tab-group'>
-  <ul role='tablist'>
-    <li role='tab'>
-       <button
-         class='active medium'
-         onClick={this.handleClickTab}
-         aria-selected
-         data-tabindex='0'
-       >
-          First Tab
-       </button>
-    </li>
-    <li role='tab'>
-       <button
-          class='medium'
-          onClick={this.handleClickTab}
-          aria-selected='false'
-          data-tabindex='1'
-        >
-          Second Tab
-       </button>
-    </li>
-  </ul>
-</div>
-```
