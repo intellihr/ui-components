@@ -12,6 +12,7 @@ import {
 } from './style/wrappers'
 import {
   MarkerColor,
+  MarkerType,
   TimelineEventTitle
 } from './style/titleMarker'
 
@@ -21,7 +22,7 @@ interface IModularTimelineEvent {
   /** Content to put inside the event body. When null, no body is provided */
   bodyContent?: JSX.Element | string,
   /** Event Type; major = greater importance and spacing */
-  eventType: 'major' | 'minor',
+  eventType: MarkerType,
   /** Changes color of the marker used */
   markerColor?: MarkerColor,
   /** Changes the line style used for this event */

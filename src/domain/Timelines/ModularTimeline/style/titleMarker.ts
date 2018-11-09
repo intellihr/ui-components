@@ -3,10 +3,11 @@ import styled, { css, StyledComponentClass } from 'styled-components'
 import { Variables } from '../../../../common'
 
 type MarkerColor = 'primary' | 'neutral' | 'transparent'
+type MarkerType = 'major' | 'minor'
 
 interface ITimelineTitleProps {
-  markerType: 'major' | 'minor',
-  markerColor: MarkerColor
+  markerColor: MarkerColor,
+  markerType: MarkerType
 }
 
 const markerColorMap = {
@@ -72,5 +73,6 @@ const TimelineEventTitle = styled.div<ITimelineTitleProps>`
 
 export {
   MarkerColor,
+  MarkerType,
   TimelineEventTitle
 }
