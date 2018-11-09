@@ -54,6 +54,7 @@
         &.small {
           font-size: $fz-xsmall;
           line-height: $lh-xsmall;
+          padding: 7px 0;
         }
 
         &.medium {
@@ -64,6 +65,7 @@
         &.large {
           font-size: $fz-body;
           line-height: $lh-display-large;
+          padding: 16px 0;
         }
 
       }
