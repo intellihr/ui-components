@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ModularTimeline /> should render a modular timeline 1`] = `
+<styled.div
+  data-component-type="timeline"
+>
+  <styled.div
+    bottomSpacing="normal"
+    data-component-type="timeline_event"
+    key="0"
+    timelineLineColor="neutral"
+    timelineLineStyle="none"
+  >
+    <styled.div
+      markerColor="transparent"
+      markerType="major"
+    >
+      Title 1
+    </styled.div>
+  </styled.div>
+  <styled.div
+    bottomSpacing="large"
+    data-component-context="example context for event"
+    data-component-type="timeline_event"
+    key="1"
+    timelineLineColor="primary"
+    timelineLineStyle="dashed"
+  >
+    <styled.div
+      markerColor="primary"
+      markerType="minor"
+    >
+      Title 2
+    </styled.div>
+    <styled.div>
+      Some content goes here
+    </styled.div>
+  </styled.div>
+  <styled.div
+    bottomSpacing="normal"
+    data-component-type="timeline_event"
+    key="2"
+    timelineLineColor="neutral"
+    timelineLineStyle="solid"
+  >
+    <styled.div
+      markerColor="neutral"
+      markerType="major"
+    >
+      Title 3
+    </styled.div>
+  </styled.div>
+  <styled.div
+    bottomSpacing="none"
+    data-component-type="timeline_event"
+    key="3"
+    timelineLineColor="neutral"
+    timelineLineStyle="none"
+  >
+    <styled.div
+      markerColor="neutral"
+      markerType="minor"
+    >
+      Title 4
+    </styled.div>
+    <styled.div>
+      Some content goes here
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
