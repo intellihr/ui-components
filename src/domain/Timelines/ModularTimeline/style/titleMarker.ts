@@ -2,9 +2,11 @@ import React from 'react'
 import styled, { css, StyledComponentClass } from 'styled-components'
 import { Variables } from '../../../../common'
 
+type MarkerColor = 'primary' | 'neutral' | 'transparent'
+
 interface ITimelineTitleProps {
   markerType: 'major' | 'minor',
-  markerColor: 'primary' | 'neutral' | 'none'
+  markerColor: MarkerColor
 }
 
 const markerColorMap = {
@@ -13,7 +15,7 @@ const markerColorMap = {
 }
 
 function colorsForEventMarker (props: ITimelineTitleProps): any {
-  if (props.markerColor === 'none') {
+  if (props.markerColor === 'transparent') {
     return null
   }
 
@@ -46,16 +48,19 @@ function offsetForMarker (props: ITimelineTitleProps): any {
 }
 
 const TimelineEventTitle = styled.div<ITimelineTitleProps>`
+  line-height: 1;
   position: relative;
+  white-space: nowrap; // Title will break line styling if wrapped
   width: 100%;
   
-  ${props => props.markerColor !== 'none' && css`
+  ${props => props.markerColor !== 'transparent' && css`
     ::before {
       position: absolute;
       content: '';
       border: solid 2px;
       border-radius: 50%;
       background-color: ${Variables.Color.n400};
+      background-clip: content-box; // Fix for IE
       
       height: ${diameterForMarker}px;
       width: ${diameterForMarker}px;
@@ -66,5 +71,6 @@ const TimelineEventTitle = styled.div<ITimelineTitleProps>`
 `
 
 export {
+  MarkerColor,
   TimelineEventTitle
 }

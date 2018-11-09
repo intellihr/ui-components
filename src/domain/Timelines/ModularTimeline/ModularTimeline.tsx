@@ -7,9 +7,11 @@ import {
   TimelineEventWrapper,
   TimelineEventBody,
   TimelineLineStyle,
+  TimelineLineColor,
   EventSpacing
 } from './style/wrappers'
 import {
+  MarkerColor,
   TimelineEventTitle
 } from './style/titleMarker'
 
@@ -20,10 +22,12 @@ interface IModularTimelineEvent {
   bodyContent?: JSX.Element | string,
   /** Event Type; major = greater importance and spacing */
   eventType: 'major' | 'minor',
-  /** Event Color; changes color of the marker used */
-  markerColor?: 'primary' | 'neutral' | 'none',
+  /** Changes color of the marker used */
+  markerColor?: MarkerColor,
   /** Changes the line style used for this event */
   timelineLineStyle?: TimelineLineStyle,
+  /** Changes color of the timeline line */
+  timelineLineColor?: TimelineLineColor,
   /** Component context for the event wrapper */
   componentContext?: string
 }
@@ -58,6 +62,7 @@ class ModularTimeline extends React.PureComponent<IModularTimelineProps> {
       bodyContent,
       eventType,
       markerColor = 'neutral',
+      timelineLineColor = 'neutral',
       componentContext
     } = event
 
@@ -67,6 +72,7 @@ class ModularTimeline extends React.PureComponent<IModularTimelineProps> {
         data-component-type={Props.ComponentType.TimelineEvent}
         data-component-context={componentContext}
         timelineLineStyle={this.getLineStyleForEvent(event, index)}
+        timelineLineColor={timelineLineColor}
         bottomSpacing={this.getBottomSpacingForEvent(event, index)}
       >
         <TimelineEventTitle
