@@ -124,7 +124,6 @@ class TooltipPopover extends React.Component<ITooltipPopoverProps, ITooltipPopov
     )
   }
 
-
   private openMenu = () => {
     const {
       isPopoverOpen

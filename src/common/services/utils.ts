@@ -77,14 +77,14 @@ namespace Utils {
 
   export function enableBodyScroll () {
     document.body.style.overflow = previousBodyOverflowSetting
-    if(isIosDevice()) {
+    if (isIosDevice()) {
       document.body.style.position = null
     }
   }
 
   export function disableBodyScroll () {
     document.body.style.overflow = 'hidden'
-    if(isIosDevice()) {
+    if (isIosDevice()) {
       document.body.style.position = 'fixed'
     }
   }

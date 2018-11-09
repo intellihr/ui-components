@@ -73,13 +73,13 @@ const StyledTitledSection = styled(SectionBorder)`
 
 const StyledTitledSectionHeaderRow = styled.div`
   @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
-    padding: ${verticalPaddingMobile}px ${horizontalPaddingMobile}px ${verticalPaddingMobile/2}px;
+    padding: ${verticalPaddingMobile}px ${horizontalPaddingMobile}px ${verticalPaddingMobile / 2}px;
   }
 `
 
 const StyledTitledSectionDescription = styled(SectionDescription)`
   @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
-    padding-bottom: ${verticalPaddingMobile/2}px;
+    padding-bottom: ${verticalPaddingMobile / 2}px;
   }
 
   @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {

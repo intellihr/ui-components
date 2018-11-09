@@ -35,7 +35,6 @@ describe('Utility functions', () => {
       expect(callback).toBeCalledWith(200)
     })
 
-
     it('should return early if the callback returns false', async () => {
       const callback = jest.fn(() => false)
 

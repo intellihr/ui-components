@@ -53,7 +53,7 @@ export class RadioInput extends React.PureComponent<IRadioInputProps> {
             value={value}
             checked={isChecked}
             disabled={isDisabled}
-            onChange={overrideHandleChange? overrideHandleChange: handleChange}
+            onChange={overrideHandleChange ? overrideHandleChange : handleChange}
           />
           <span>{label}</span>
         </label>
