@@ -5,6 +5,7 @@ import {
   map,
   toNumber
 } from 'lodash'
+import { Props } from '../../../common/types/props'
 
 const style = require('./style.scss')
 
@@ -24,6 +25,8 @@ export interface IBlockTabGroupProps {
   onTabChange?: (tab: IBlockTab, index: number) => void
   /** Size of the tab */
   tabSize?: TabSize
+  /** The data-component-context */
+  componentContext?: string
 }
 
 export class BlockTabGroup extends React.Component<IBlockTabGroupProps, never> {
@@ -33,7 +36,8 @@ export class BlockTabGroup extends React.Component<IBlockTabGroupProps, never> {
 
   public render (): JSX.Element | null {
     const {
-      tabs
+      tabs,
+      componentContext
     } = this.props
 
     if (tabs.length === 0) {
@@ -41,7 +45,11 @@ export class BlockTabGroup extends React.Component<IBlockTabGroupProps, never> {
     }
 
     return (
-      <div className={style.ihrBlockTabGroup}>
+      <div
+        className={style.ihrBlockTabGroup}
+        data-component-type={Props.ComponentType.BlockTabGroup}
+        data-component-context={componentContext}
+      >
         <ul role='tablist'>
           {map(tabs, this.listItemForTab)}
         </ul>
