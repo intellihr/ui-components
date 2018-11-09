@@ -82,12 +82,10 @@ class Popover extends React.Component<IPopoverProps, never> {
   // tslint:disable-next-line:member-ordering
   private debounceOnWindowUpdate = debounce(this.onWindowUpdate, 100)
 
-
   private get animationTimeout (): number {
     const {
       animationType
     } = this.props
-
 
     switch (animationType) {
       case 'dropdown':
@@ -179,7 +177,6 @@ class Popover extends React.Component<IPopoverProps, never> {
       popoverAnchorPosition
     } = this.props
 
-
     if (!popoverAnchorPosition || popoverAnchorPosition === 'auto' ||  popoverAnchorPosition.xPos === 'auto') {
       return this.parentInLeftSideOfWindow ? Props.Position.Left : Props.Position.Right
     }
@@ -203,7 +200,6 @@ class Popover extends React.Component<IPopoverProps, never> {
     const {
       parentAnchorPosition
     } = this.props
-
 
     if (!parentAnchorPosition || parentAnchorPosition === 'auto' ||  parentAnchorPosition.xPos === 'auto') {
       return this.parentInLeftSideOfWindow ? Props.Position.Left : Props.Position.Right
@@ -235,7 +231,6 @@ class Popover extends React.Component<IPopoverProps, never> {
       y: y + window.pageYOffset
     }
   }
-
 
   private get popoverXOffset () {
     switch (this.popoverAnchorXPosition) {
