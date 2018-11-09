@@ -575,12 +575,14 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                           >
                             <styled.h2
                               color="#424F5C"
+                              data-component-type="text"
                               isInline={true}
                               textType="heading"
                             >
                               <h2
                                 className="c4"
                                 color="#424F5C"
+                                data-component-type="text"
                               >
                                 Annotated Section
                               </h2>
@@ -594,12 +596,14 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                           >
                             <styled.span
                               color="#667380"
+                              data-component-type="text"
                               isInline={false}
                               textType="small"
                             >
                               <span
                                 className="c5"
                                 color="#667380"
+                                data-component-type="text"
                               >
                                 Annotated Description
                               </span>
@@ -755,12 +759,14 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                       >
                                         <styled.h2
                                           color="#424F5C"
+                                          data-component-type="text"
                                           isInline={true}
                                           textType="heading"
                                         >
                                           <h2
                                             className="c11"
                                             color="#424F5C"
+                                            data-component-type="text"
                                           >
                                             Titled Section
                                           </h2>
@@ -774,12 +780,14 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                       >
                                         <styled.span
                                           color="#667380"
+                                          data-component-type="text"
                                           isInline={false}
                                           textType="small"
                                         >
                                           <span
                                             className="c12"
                                             color="#667380"
+                                            data-component-type="text"
                                           >
                                             Titled Description
                                           </span>
@@ -1092,12 +1100,14 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                           >
                             <styled.h2
                               color="#424F5C"
+                              data-component-type="text"
                               isInline={true}
                               textType="heading"
                             >
                               <h2
                                 className="c4"
                                 color="#424F5C"
+                                data-component-type="text"
                               >
                                 Annotated Section
                               </h2>
@@ -1111,12 +1121,14 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                           >
                             <styled.span
                               color="#667380"
+                              data-component-type="text"
                               isInline={false}
                               textType="small"
                             >
                               <span
                                 className="c5"
                                 color="#667380"
+                                data-component-type="text"
                               >
                                 Annotated Description
                               </span>
@@ -1251,12 +1263,14 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                       >
                                         <styled.h2
                                           color="#424F5C"
+                                          data-component-type="text"
                                           isInline={true}
                                           textType="heading"
                                         >
                                           <h2
                                             className="c10"
                                             color="#424F5C"
+                                            data-component-type="text"
                                           >
                                             Titled Section
                                           </h2>
@@ -1270,12 +1284,14 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                       >
                                         <styled.span
                                           color="#667380"
+                                          data-component-type="text"
                                           isInline={false}
                                           textType="small"
                                         >
                                           <span
                                             className="c11"
                                             color="#667380"
+                                            data-component-type="text"
                                           >
                                             Titled Description
                                           </span>

@@ -66,7 +66,8 @@ module.exports = {
         {
           name: 'Callouts',
           components: [
-            'src/domain/Callouts/Callout/Callout'
+            'src/domain/Callouts/Callout/Callout',
+            'src/domain/Callouts/EmptyState/EmptyState',
           ]
         },
         {
@@ -233,6 +234,7 @@ module.exports = {
         {
           name: 'Typographies',
           components: [
+            'src/domain/Typographies/Brick/Brick',
             'src/domain/Typographies/CurrencyText/CurrencyText',
             'src/domain/Typographies/Emoji/Emoji',
             'src/domain/Typographies/FormattedText/FormattedText',

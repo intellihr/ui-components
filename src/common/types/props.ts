@@ -42,8 +42,22 @@ namespace Props {
 
   export enum ComponentType {
     Button = 'button',
+    ButtonIcon = 'button_icon',
+    EmptyState = 'empty_state',
     LinkButton = 'link_button',
-    ButtonIcon = 'button_icon'
+    Brick = 'brick',
+    Text = 'text'
+  }
+
+  export enum FunctionalColor {
+    Alert = 'alert',
+    Success = 'success',
+    Warning = 'warning',
+    Primary = 'primary',
+    Neutral = 'neutral',
+    Secondary = 'secondary',
+    Highlight = 'highlight',
+    Dark = 'dark'
   }
 }
 

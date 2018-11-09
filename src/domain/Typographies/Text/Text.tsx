@@ -26,6 +26,8 @@ export interface ITextProps {
   dataAttributes?: {
     [i: string]: any
   }
+  /** The data-component-context */
+  componentContext?: string
 }
 
 export class Text extends React.PureComponent<ITextProps> {
@@ -68,7 +70,8 @@ export class Text extends React.PureComponent<ITextProps> {
       isUpper,
       isTruncated,
       isInline,
-      color
+      color,
+      componentContext
     } = this.props
 
     const TextTag = this.textTag
@@ -82,6 +85,8 @@ export class Text extends React.PureComponent<ITextProps> {
         isUpper={isUpper}
         isTruncated={isTruncated}
         className={className}
+        data-component-type={Props.ComponentType.Text}
+        data-component-context={componentContext}
         {...this.dataAttributes}
       >
         {children}

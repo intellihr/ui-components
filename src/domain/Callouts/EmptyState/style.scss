@@ -1,0 +1,66 @@
+@import '../../../common/sass/variables';
+
+:local(.ihrEmptyState),
+.ihr-empty-state {
+  background-color: $n150;
+  border-color: $n400;
+  border-width: 0;
+  flex-grow: 1;
+  padding: 48px;
+  text-align: center;
+}
+
+:local(.ihrPrimaryMessage),
+.ihr-primary-message {
+  color: $n700;
+  font-size: $fz-heading;
+  font-weight: $fw-medium;
+  letter-spacing: -.02em;
+  line-height: $lh-body;
+}
+
+:local(.ihrSecondaryMessage),
+.ihr-secondary-message {
+  color: $n600;
+  font-size: $fz-body;
+  font-weight: $fw-regular;
+  letter-spacing: normal;
+  line-height: $lh-body;
+  margin: 10px 0 20px;
+}
+
+:local(.ihrButtonComponent),
+.ihr-button-component {
+  color: $n600;
+  font-size: $fz-body;
+  font-weight: $fw-regular;
+  letter-spacing: normal;
+  line-height: $lh-heading;
+  margin: 10px 0 20px;
+
+  span {
+    background-color: $n300;
+    border-color: transparent;
+    border-radius: $border-radius;
+    color: $n700;
+    font-size: $fz-xsmall;
+    font-weight: $fw-medium;
+    padding: .85em 1em;
+
+    &:hover {
+      background-color: $n400;
+      color: $n700;
+    }
+
+    &:active {
+      background-color: $n600;
+      color: $n100;
+    }
+
+    &:focus {
+      background-color: $n400;
+      border-color: $n600;
+      color: $n700;
+    }
+  }
+}
