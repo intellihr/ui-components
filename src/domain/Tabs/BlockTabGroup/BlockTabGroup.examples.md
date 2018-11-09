@@ -1,7 +1,25 @@
-#### List of two tabs
+#### List of two small tabs
 
 ```jsx
-const { FontAwesomeIcon } = require('@Domain/Icons');
+
+initialState = {
+  openTab: 0
+};
+
+<BlockTabGroup
+  onTabChange={(tab, index) => setState({ openTab: index })}
+  currentTab={state.openTab}
+  tabSize='small'
+  tabs={[
+      { title: 'Tab 1' },
+      { title: 'Tab 2' }
+    ]}
+/>
+```
+
+#### List of two standard tabs
+
+```jsx
 
 initialState = {
   openTab: 0
@@ -17,10 +35,28 @@ initialState = {
 />
 ```
 
+#### List of two large tabs
+
+```jsx
+
+initialState = {
+  openTab: 0
+};
+
+<BlockTabGroup
+  onTabChange={(tab, index) => setState({ openTab: index })}
+  currentTab={state.openTab}
+  tabSize='large'
+  tabs={[
+      { title: 'Tab 1' },
+      { title: 'Tab 2' }
+    ]}
+/>
+```
+
 #### Standard list of tabs
 
 ```jsx
-const { FontAwesomeIcon } = require('@Domain/Icons');
 
 initialState = {
   openTab: 0
@@ -37,28 +73,32 @@ initialState = {
 />
 ```
 
-#### Tabs with anchors
-
-Anchors can be used instead of onTabChange callbacks. This is useful for
-page-level tabs, where your SPA router can get the tab state from the url
-rather than storing it in the parent.
-
-Note that this doesn't work in the styleguide as anchors are used to link
-between pages.
+#### Legacy support for BlockTabGroup
 
 ```jsx
-<BlockTabGroup
-  currentTab='#tab2'
-  tabs={[
-    {
-      title: 'Tab 1',
-      anchorId: '#tab1'
-    },
-    {
-      title: 'Tab 2',
-      anchorId: '#tab2'
-    }
-  ]}
-  anchorsUpdateUrl
-/>
+
+<div class='ihr-block-tab-group'>
+  <ul role='tablist'>
+    <li role='tab'>
+       <button
+         class='active medium'
+         onClick={this.handleClickTab}
+         aria-selected
+         data-tabindex='0'
+       >
+          First Tab
+       </button>
+    </li>
+    <li role='tab'>
+       <button
+          class='medium'
+          onClick={this.handleClickTab}
+          aria-selected='false'
+          data-tabindex='1'
+        >
+          Second Tab
+       </button>
+    </li>
+  </ul>
+</div>
 ```

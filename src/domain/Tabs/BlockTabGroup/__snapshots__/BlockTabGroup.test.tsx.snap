@@ -11,43 +11,40 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
       key="0"
       role="tab"
     >
-      <a
+      <button
         aria-selected={false}
-        className=""
+        className="medium"
         data-tabindex={0}
-        href="#"
         onClick={[Function]}
       >
         Tab 1
-      </a>
+      </button>
     </li>
     <li
       key="1"
       role="tab"
     >
-      <a
+      <button
         aria-selected={true}
-        className="active"
+        className="medium active"
         data-tabindex={1}
-        href="#second"
         onClick={[Function]}
       >
         Tab 2
-      </a>
+      </button>
     </li>
     <li
       key="2"
       role="tab"
     >
-      <a
+      <button
         aria-selected={false}
-        className=""
+        className="medium"
         data-tabindex={2}
-        href="#third"
         onClick={[Function]}
       >
         Tab 3
-      </a>
+      </button>
     </li>
   </ul>
 </div>

@@ -1,4 +1,5 @@
 import React, { MouseEvent } from 'react'
+import classNames from 'classnames'
 import {
   isNumber,
   map,
@@ -10,23 +11,24 @@ const style = require('./style.scss')
 export interface IBlockTab {
   /** String title to use for the tab */
   title?: string
-  anchorId?: string
 }
 
+type TabSize = 'small' | 'medium' | 'large'
+
 export interface IBlockTabGroupProps {
-  /** The current tab selected (by anchor or index). */
+  /** The current tab selected */
   currentTab: string | number
   /** A list of tabs and their content to render */
   tabs: IBlockTab[]
-  /** Whether to update the url of the page with anchors when changing tabs */
-  anchorsUpdateUrl?: boolean
   /** Callback to run when clicking between tabs */
   onTabChange?: (tab: IBlockTab, index: number) => void
+  /** Size of the tab */
+  tabSize?: TabSize
 }
 
 export class BlockTabGroup extends React.Component<IBlockTabGroupProps, never> {
   public static defaultProps = {
-    anchorsUpdateUrl: false
+    tabSize: 'medium'
   }
 
   public render (): JSX.Element | null {
@@ -48,16 +50,18 @@ export class BlockTabGroup extends React.Component<IBlockTabGroupProps, never> {
   }
 
   private listItemForTab = (tab: IBlockTab, index: number): JSX.Element => {
+    const { tabSize } = this.props
     const currentTabIndex = this.currentTabIndex
 
     return (
         <li key={index} role='tab'>
-          <a
-            className={currentTabIndex === index ? 'active' : ''}
-            href={tab.anchorId || '#'}
-            onClick={this.handleClickTab}
+          <button
+            className={classNames(tabSize, currentTabIndex === index ? 'active' : '')}
+            onClick={this.handleOnClick}
             aria-selected={currentTabIndex === index}
-            data-tabindex={index}>{tab.title}</a>
+            data-tabindex={index}>
+            {tab.title}
+          </button>
         </li>
     )
   }
@@ -84,22 +88,16 @@ export class BlockTabGroup extends React.Component<IBlockTabGroupProps, never> {
   }
 
 
-  private handleClickTab = (event: MouseEvent<HTMLAnchorElement>) => {
+  private handleOnClick = (event: MouseEvent<HTMLButtonElement>) => {
     const {
       tabs,
-      onTabChange,
-      anchorsUpdateUrl
+      onTabChange
     } = this.props
 
     const newTabIndex = toNumber(event.currentTarget.dataset.tabindex || 0)
 
     if (onTabChange && (this.currentTabIndex !== newTabIndex)) {
       onTabChange(tabs[newTabIndex], newTabIndex)
-    }
-
-    // Don't use anchors as links if not intending to
-    if (!anchorsUpdateUrl) {
-      event.preventDefault()
     }
   }
 }
