@@ -5,7 +5,7 @@ import {
   map,
   toNumber
 } from 'lodash'
-import { Props } from '../../../common/types/props'
+import { Props } from '../../../common'
 
 const style = require('./style.scss')
 

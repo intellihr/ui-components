@@ -1,4 +1,4 @@
-#### List of two small tabs
+#### List of small tabs
 
 ```jsx
 
@@ -17,7 +17,7 @@ initialState = {
 />
 ```
 
-#### List of two standard tabs
+#### List of standard tabs
 
 ```jsx
 
@@ -35,7 +35,7 @@ initialState = {
 />
 ```
 
-#### List of two large tabs
+#### List of large tabs
 
 ```jsx
 
