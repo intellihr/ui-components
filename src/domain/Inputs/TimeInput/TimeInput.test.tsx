@@ -8,7 +8,7 @@ describe('<TimeInput />', () => {
   it('should render the 24 hour Time Input', () => {
     const wrapper = shallow(
       <TimeInput
-        value={'15:55'}
+        value='15:55'
         handleChange={dummyClick}
       />
     )
@@ -20,7 +20,7 @@ describe('<TimeInput />', () => {
     const wrapper = shallow(
       <TimeInput
         isTimeRange
-        value={'15:55'}
+        value='15:55'
         handleChange={dummyClick}
       />
     )
