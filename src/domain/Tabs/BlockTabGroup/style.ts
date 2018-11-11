@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components'
 import { Variables } from '../../../common'
 
-
 const TabGroupContainer = styled.div`
   border: 1px solid ${Variables.Color.n400};
   border-radius: ${Variables.Style.borderRadius};
@@ -22,11 +21,10 @@ const TabList = styled.ul`
 const TabListItem = styled.li`
   display: inline-block;
   width: 100%;
+  border-right: 1px solid ${Variables.Color.n400};
 
   &:last-child {
-    button {
-      border-right: 0;
-    }
+    border-right: 0;
   }
 `
 
@@ -63,18 +61,17 @@ function stylesFortabSizes (props: ITabListItemButtonProps): any {
 const TabListItemButton = styled.button`
   background-color: ${Variables.Color.n200};
   border-radius: 0;
-  border-right: 1px solid ${Variables.Color.n400};
   color: ${Variables.Color.n600};
   display: block;
   font-size: ${Variables.FontSize.fzSmall}px;
   font-weight: ${Variables.FontWeight.fwMedium}px;
   outline: none;
+  padding: 10px 0;
   position: relative;
   text-align: center;
   text-decoration: none;
   transition: color .15s ease-in;
   width: 100%;
-  padding:10px 0;
 
   ${(props: ITabListItemButtonProps) => props.active && css `&, `}
   &:active,

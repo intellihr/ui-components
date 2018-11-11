@@ -79,7 +79,6 @@ export class BlockTabGroup extends React.Component<IBlockTabGroupProps, never> {
   }
 
   private indexForTab = (tabIdentifier?: number | string): number => {
-
     if (!tabIdentifier) {
       return 0
     }
@@ -98,7 +97,6 @@ export class BlockTabGroup extends React.Component<IBlockTabGroupProps, never> {
 
     return this.indexForTab(currentTab)
   }
-
 
   private handleOnClick = (event: MouseEvent<HTMLButtonElement>) => {
     const {
