@@ -1,5 +1,7 @@
 #!/bin/sh -xe
 
+yarn build
+
 git config user.email "continuous.integration@intellihr.com.au"
 git config user.name "IntelliHR CI"
 
@@ -8,14 +10,14 @@ echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
 npm version "$RELEASE_VERSION" -m "[skip ci] Upgrade to %s"
 npm publish --access public
 
-git remote add gitlab "https://$GIT_USERNAME:$GIT_TOKEN@gitlab.com/intellihr/ui-components.git" || true
-git push --tags gitlab
+git remote add github "git@github.com:intellihr/ui-components.git" || true
+git push --tags github
 
-git pull --rebase gitlab develop
+git pull --rebase github develop
 
-sed -i -r "s/\sRELEASE_VERSION.*/ RELEASE_VERSION: $DEFAULT_RELEASE_VERSION/" .gitlab-ci.yml
+sed -i -r "s/final def RELEASE_VERSION.*/final def RELEASE_VERSION = '$DEFAULT_RELEASE_VERSION'/" Jenkinsfile-new
 
-git add .gitlab-ci.yml
+git add Jenkinsfile-new
 git commit -m "Reset to default release version $DEFAULT_RELEASE_VERSION" || true
 
-git push gitlab HEAD:develop
+git push github HEAD:develop
