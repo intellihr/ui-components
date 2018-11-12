@@ -57,7 +57,6 @@ function stylesFortabSizes (props: ITabListItemButtonProps): any {
   }
 }
 
-
 const TabListItemButton = styled.button`
   background-color: ${Variables.Color.n200};
   border-radius: 0;
