@@ -46,3 +46,14 @@ const { TextInput } = require('../TextInput');
   />
 </InputGroup>
 ```
+
+##### isMobile
+
+```jsx
+<div>
+  <SingleDateInput 
+    name='test-date-picker1'
+    isMobile
+  />
+</div>
+```

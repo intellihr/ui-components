@@ -1,42 +1,44 @@
 @import '../../../common/sass/variables';
 
 :local(.singleDatePickerOverrides) {
-  // NOTE: the order of these styles DO matter
-  .CalendarMonth_caption {
-    > strong {
-      color: $n800;
-      font-size: $fz-heading;
-      font-weight: 600;
+  .SingleDatePicker_picker {
+    // NOTE: the order of these styles DO matter
+    .CalendarMonth_caption {
+      > strong {
+        color: $n800;
+        font-size: $fz-heading;
+        font-weight: 600;
+      }
     }
-  }
 
-  .CalendarDay {
-    &:hover {
-      background: $n400;
+    .CalendarDay {
+      &:hover {
+        background: $n250;
+      }
     }
-  }
 
-  // Will edit everything selected including everything between a range of dates
-  .CalendarDay__selected_span {
-    background: $i400; //background
-    border: 1px solid $i400; //text
-    color: $n100; //default styles include a border
-  }
+    // Will edit everything selected including everything between a range of dates
+    .CalendarDay__selected_span {
+      background: $i400; //background
+      border: 1px solid $i400; //text
+      color: $n100; //default styles include a border
+    }
 
-  // Will edit selected date or the endpoints of a range of dates
-  .CalendarDay__selected {
-    background: $i400;
-    color: $n100;
-
-    // Will edit when hovered over. _span style also has this property
-    &:hover {
+    // Will edit selected date or the endpoints of a range of dates
+    .CalendarDay__selected {
       background: $i400;
       color: $n100;
-    }
-  }
 
-  .DayPickerNavigation_button__horizontalDefault {
-    padding: 9px;
+      // Will edit when hovered over. _span style also has this property
+      &:hover {
+        background: $i400;
+        color: $n100;
+      }
+    }
+
+    .DayPickerNavigation_button__horizontalDefault {
+      padding: 9px;
+    }
   }
 
   .SingleDatePickerInput__disabled {
