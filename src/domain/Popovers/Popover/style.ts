@@ -18,7 +18,7 @@ const StyledPopover = styled.span`
 
   ${(props: IStyledPopoverProps) => {
 
-  switch(props.animationType) {
+  switch (props.animationType) {
       case 'dropdown':
         return css`
           opacity: 0.9;

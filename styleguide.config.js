@@ -209,12 +209,14 @@ module.exports = {
         {
           name: 'Tabs',
           components: [
+            'src/domain/Tabs/BlockTabGroup/BlockTabGroup',
             'src/domain/Tabs/ScrollingTabGroup/ScrollingTabGroup'
           ]
         },
         {
           name: 'Timelines',
           components: [
+            'src/domain/Timelines/ModularTimeline/ModularTimeline',
             'src/domain/Timelines/VerticalTimeline/VerticalTimeline/VerticalTimeline',
             'src/domain/Timelines/VerticalTimeline/VerticalTimelineEvent/VerticalTimelineEvent'
           ]

@@ -240,10 +240,10 @@
   resolved "https://registry.yarnpkg.com/@intellihr/icons/-/icons-0.0.6.tgz#e50a28661f875f949527f9b45df1bccbec42491c"
   integrity sha512-jazn+0DA6wQI5X7oUmaT5bTvjwp0kvoO88PQkix56pYQgb8yOWZULeIs6Myx1wm8v5VGorm/VMIFh2FmtDJtDw==
 
-"@intellihr/standard-tslint@0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@intellihr/standard-tslint/-/standard-tslint-0.0.2.tgz#b12be04ff8225899c65f24a2b5f076f1e5cda94c"
-  integrity sha512-ZC4Tp9AM8thQQ/THDOs/Ko1CwI+DGJ7ClB4vKEPr+pPvYDk4JE9en1PWB9L692VTYuxhyveymJTJEz3+nt0rdw==
+"@intellihr/standard-tslint@0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@intellihr/standard-tslint/-/standard-tslint-0.0.3.tgz#9ea626a6e6e9ab762d00ca6c6148d0a080932fc7"
+  integrity sha512-pPf4ci8zwRPUX/py/eq+rog5Uo9O5tn9oGQ4tQv3KNvei+emfF3yqA3umtWAKMRNmXZiCyv8DT0CMMWqDJyHIQ==
 
 "@intellihr/styled-components-breakpoint@0.0.2":
   version "0.0.2"
