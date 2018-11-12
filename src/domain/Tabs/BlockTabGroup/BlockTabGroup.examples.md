@@ -30,7 +30,8 @@ initialState = {
   currentTab={state.openTab}
   tabs={[
       { title: 'Tab 1' },
-      { title: 'Tab 2' }
+      { title: 'Tab 2' },
+      { title: 'Tab 3' }
     ]}
 />
 ```
@@ -50,25 +51,6 @@ initialState = {
   tabs={[
       { title: 'Tab 1' },
       { title: 'Tab 2' }
-    ]}
-/>
-```
-
-#### Standard list of tabs
-
-```jsx
-
-initialState = {
-  openTab: 0
-};
-
-<BlockTabGroup
-  onTabChange={(tab, index) => setState({ openTab: index })}
-  currentTab={state.openTab}
-  tabs={[
-      { title: 'Tab 1' },
-      { title: 'Tab 2' },
-      { title: 'Tab 3'}
     ]}
 />
 ```
