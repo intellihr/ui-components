@@ -41,6 +41,7 @@ namespace Props {
   }
 
   export enum ComponentType {
+    BlockTabGroup = 'block_tab_group',
     Brick = 'brick',
     Button = 'button',
     ButtonIcon = 'button_icon',

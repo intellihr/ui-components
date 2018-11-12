@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BlockTabGroup /> Standard tabs with current index should match the snapshot 1`] = `
+<styled.div
+  data-component-type="block_tab_group"
+>
+  <styled.ul
+    role="tablist"
+  >
+    <styled.li
+      key="0"
+      role="tab"
+    >
+      <styled.button
+        active={false}
+        aria-selected={false}
+        data-tabindex={0}
+        onClick={[Function]}
+        tabSize="medium"
+      >
+        Tab 1
+      </styled.button>
+    </styled.li>
+    <styled.li
+      key="1"
+      role="tab"
+    >
+      <styled.button
+        active={true}
+        aria-selected={true}
+        data-tabindex={1}
+        onClick={[Function]}
+        tabSize="medium"
+      >
+        Tab 2
+      </styled.button>
+    </styled.li>
+    <styled.li
+      key="2"
+      role="tab"
+    >
+      <styled.button
+        active={false}
+        aria-selected={false}
+        data-tabindex={2}
+        onClick={[Function]}
+        tabSize="medium"
+      >
+        Tab 3
+      </styled.button>
+    </styled.li>
+  </styled.ul>
+</styled.div>
+`;
