@@ -3,7 +3,7 @@ import { Variables } from '../../../common'
 
 const TabGroupContainer = styled.div`
   border: 1px solid ${Variables.Color.n400};
-  border-radius: ${Variables.Style.borderRadius};
+  border-radius: ${Variables.Style.borderRadius}px;
   box-sizing: border-box;
   overflow: hidden;
   width: 100%;
