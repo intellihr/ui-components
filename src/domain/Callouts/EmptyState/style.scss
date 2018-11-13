@@ -14,7 +14,7 @@
 .ihr-primary-message {
   color: $n700;
   font-size: $fz-heading;
-  font-weight: $fw-medium;
+  font-weight: $fw-heavy;
   letter-spacing: -.02em;
   line-height: $lh-body;
 }
@@ -23,7 +23,7 @@
 .ihr-secondary-message {
   color: $n600;
   font-size: $fz-body;
-  font-weight: $fw-regular;
+  font-weight: $fw-normal;
   letter-spacing: normal;
   line-height: $lh-body;
   margin: 10px 0 20px;
@@ -33,7 +33,7 @@
 .ihr-button-component {
   color: $n600;
   font-size: $fz-body;
-  font-weight: $fw-regular;
+  font-weight: $fw-normal;
   letter-spacing: normal;
   line-height: $lh-heading;
   margin: 10px 0 20px;
@@ -44,7 +44,7 @@
     border-radius: $border-radius;
     color: $n700;
     font-size: $fz-xsmall;
-    font-weight: $fw-medium;
+    font-weight: $fw-heavy;
     padding: .85em 1em;
 
     &:hover {

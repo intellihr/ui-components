@@ -63,13 +63,13 @@ const TabListItemButton = styled.button`
   color: ${Variables.Color.n600};
   display: block;
   font-size: ${Variables.FontSize.fzSmall}px;
-  font-weight: ${Variables.FontWeight.fwMedium}px;
+  font-weight: ${Variables.FontWeight.fwHeavy};
   outline: none;
   padding: 10px 0;
   position: relative;
   text-align: center;
   text-decoration: none;
-  transition: color .15s ease-in;
+  transition: background-color .15s ease-in, color .15s ease-in;
   width: 100%;
 
   ${(props: ITabListItemButtonProps) => props.active && css `&, `}
