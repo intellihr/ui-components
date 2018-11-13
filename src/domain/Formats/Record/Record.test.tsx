@@ -2,7 +2,7 @@ import { mount } from 'enzyme'
 import React from 'react'
 import { Record } from './Record'
 
-describe('<Field />', () => {
+describe('<Record />', () => {
   it(`should render a Record component, creating a Text child with the provided text`, () => {
     const wrapper = mount(
       <Record
@@ -13,16 +13,6 @@ describe('<Field />', () => {
     )
     expect(wrapper).toMatchSnapshot()
   })
-
-  it(`should render a Record component, With no children provided`, () => {
-    const wrapper = mount(
-      <Record
-        name='Position Title'
-      />
-    )
-    expect(wrapper).toMatchSnapshot()
-  })
-
 
   it(`should render a Record component, creating a Text child with the provided number`, () => {
     const wrapper = mount(
