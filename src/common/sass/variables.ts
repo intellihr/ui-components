@@ -106,8 +106,8 @@ namespace Variables {
   }
 
   export enum FontWeight {
-    fwRegular =         400,
-    fwMedium =          600
+    fwNormal =         400,
+    fwHeavy =          600
   }
 
   export interface IFunctionalColorProps {

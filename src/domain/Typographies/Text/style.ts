@@ -43,11 +43,11 @@ export const TextWrapper = styled.span`
       switch (props.weight) {
         case 'normal':
           return css`
-            font-weight: ${Variables.FontWeight.fwRegular};
+            font-weight: ${Variables.FontWeight.fwNormal};
           `
         case 'heavy':
           return css`
-            font-weight: ${Variables.FontWeight.fwMedium};
+            font-weight: ${Variables.FontWeight.fwHeavy};
           `
       }
     }
@@ -57,7 +57,7 @@ export const TextWrapper = styled.span`
       case 'display':
       case 'display-large':
         return css`
-          font-weight: ${Variables.FontWeight.fwMedium};
+          font-weight: ${Variables.FontWeight.fwHeavy};
         `
 
       case 'xsmall':
@@ -65,7 +65,7 @@ export const TextWrapper = styled.span`
       case 'body':
       default:
         return css`
-          font-weight: ${Variables.FontWeight.fwRegular};
+          font-weight: ${Variables.FontWeight.fwNormal};
         `
     }
   }}

@@ -44,7 +44,7 @@ const AvatarEntityInfo = styled.div`
 `
 const PrimaryTextWrapper = styled.span`
   ${styleForTypographyType(Props.TypographyType.Body)}
-  font-weight: ${Variables.FontWeight.fwRegular};
+  font-weight: ${Variables.FontWeight.fwNormal};
 
   ${(props: ITextWrapper) => {
     if (!props.isCompact) {
@@ -58,7 +58,7 @@ const PrimaryTextWrapper = styled.span`
 
 const SecondaryTextWrapper = styled.span`
   ${styleForTypographyType(Props.TypographyType.XSmall)}
-  font-weight: ${Variables.FontWeight.fwRegular};
+  font-weight: ${Variables.FontWeight.fwNormal};
 
   margin-top: 2px;
   margin-left: ${(props: ITextWrapper) => props.isCompact ? '5px' : '0px'};
@@ -76,7 +76,7 @@ const SecondaryTextWrapper = styled.span`
 
 const TertiaryTextWrapper = styled.span`
   ${styleForTypographyType(Props.TypographyType.XSmall)}
-  font-weight: ${Variables.FontWeight.fwMedium};
+  font-weight: ${Variables.FontWeight.fwHeavy};
 
   ${styleForTruncatedText()}
 
