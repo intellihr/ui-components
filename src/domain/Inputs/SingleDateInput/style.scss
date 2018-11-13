@@ -1,6 +1,12 @@
 @import '../../../common/sass/variables';
 
 :local(.singleDatePickerOverrides) {
+  .CalendarMonth_table {
+    tr {
+      border-bottom: 0;
+    }
+  }
+
   .SingleDatePicker_picker {
     // NOTE: the order of these styles DO matter
     .CalendarMonth_caption {
