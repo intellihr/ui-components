@@ -86,7 +86,7 @@ module.exports = {
         {
           name: 'Formats',
           components: [
-            'src/domain/Formats/Field/Field',
+            'src/domain/Formats/Record/Record',
             'src/domain/Formats/IndentedElement/IndentedElement'
           ]
         },

@@ -49,7 +49,9 @@ namespace Props {
     LinkButton = 'link_button',
     Text = 'text',
     Timeline = 'timeline',
-    TimelineEvent = 'timeline_event'
+    TimelineEvent = 'timeline_event',
+    Record = 'record',
+    RecordName = 'record_name'
   }
 
   export enum FunctionalColor {
