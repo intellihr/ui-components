@@ -47,4 +47,45 @@ describe('<Field />', () => {
     )
     expect(wrapper).toMatchSnapshot()
   })
+
+  it(`should render a Record and tooltip with a custom tooltip and tooltipContent`, () => {
+    const wrapper = mount(
+      <Record
+        name='Position Title'
+        tooltipContent='a'
+        tooltipProps={{
+          toggleComponent: ({ openMenu, closeMenu, toggleComponentRef, ariaProps }) =>
+            <span
+              onMouseEnter={openMenu}
+              onMouseLeave={closeMenu}
+              ref={toggleComponentRef}
+              {...ariaProps}
+            />
+        }}
+      >
+        <p>Chief Executive Officer</p>
+      </Record>
+    )
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it(`should render a Record and no Tooltip with only a custom tooltip`, () => {
+    const wrapper = mount(
+      <Record
+        name='Position Title'
+        tooltipProps={{
+          toggleComponent: ({ openMenu, closeMenu, toggleComponentRef, ariaProps }) =>
+            <span
+              onMouseEnter={openMenu}
+              onMouseLeave={closeMenu}
+              ref={toggleComponentRef}
+              {...ariaProps}
+            />
+        }}
+      >
+        <p>Chief Executive Officer</p>
+      </Record>
+    )
+    expect(wrapper).toMatchSnapshot()
+  })
 })

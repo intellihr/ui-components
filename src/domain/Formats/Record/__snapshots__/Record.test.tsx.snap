@@ -1,5 +1,197 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Field /> should render a Record and no Tooltip with only a custom tooltip 1`] = `
+.c0 {
+  margin-bottom: 4px;
+}
+
+.c0 .label-component {
+  padding-right: .25rem;
+}
+
+.c1 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
+<Record
+  name="Position Title"
+  tooltipProps={
+    Object {
+      "toggleComponent": [Function],
+    }
+  }
+>
+  <div
+    data-component-type="record"
+  >
+    <styled.div
+      data-component-type="record_name"
+    >
+      <div
+        className="c0"
+        data-component-type="record_name"
+      >
+        <Text
+          className="label-component"
+          color="#424F5C"
+          isInline={true}
+          tag="span"
+          type="small"
+        >
+          <styled.span
+            className="label-component"
+            color="#424F5C"
+            data-component-type="text"
+            isInline={true}
+            textType="small"
+          >
+            <span
+              className="label-component c1"
+              color="#424F5C"
+              data-component-type="text"
+            >
+              Position Title
+            </span>
+          </styled.span>
+        </Text>
+      </div>
+    </styled.div>
+    <p
+      key=".0"
+    >
+      Chief Executive Officer
+    </p>
+  </div>
+</Record>
+`;
+
+exports[`<Field /> should render a Record and tooltip with a custom tooltip and tooltipContent 1`] = `
+.c0 {
+  margin-bottom: 4px;
+}
+
+.c0 .label-component {
+  padding-right: .25rem;
+}
+
+.c1 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
+<Record
+  name="Position Title"
+  tooltipContent="a"
+  tooltipProps={
+    Object {
+      "toggleComponent": [Function],
+    }
+  }
+>
+  <div
+    data-component-type="record"
+  >
+    <styled.div
+      data-component-type="record_name"
+    >
+      <div
+        className="c0"
+        data-component-type="record_name"
+      >
+        <Text
+          className="label-component"
+          color="#424F5C"
+          isInline={true}
+          tag="span"
+          type="small"
+        >
+          <styled.span
+            className="label-component"
+            color="#424F5C"
+            data-component-type="text"
+            isInline={true}
+            textType="small"
+          >
+            <span
+              className="label-component c1"
+              color="#424F5C"
+              data-component-type="text"
+            >
+              Position Title
+            </span>
+          </styled.span>
+        </Text>
+        <TooltipPopover
+          toggleComponent={[Function]}
+        >
+          <span
+            aria-expanded={false}
+            aria-haspopup={true}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="button"
+          />
+          <Popover
+            animationType="tooltip"
+            id=""
+            isOpen={false}
+            parentAnchorPosition="auto"
+            parentRef={
+              Object {
+                "current": <span
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  role="button"
+                />,
+              }
+            }
+            popoverAnchorPosition="auto"
+          >
+            <Portal
+              containerInfo={<body />}
+            >
+              <Transition
+                appear={false}
+                enter={true}
+                exit={true}
+                in={false}
+                mountOnEnter={true}
+                onEnter={[Function]}
+                onEntered={[Function]}
+                onEntering={[Function]}
+                onExit={[Function]}
+                onExited={[Function]}
+                onExiting={[Function]}
+                timeout={300}
+                unmountOnExit={true}
+              />
+            </Portal>
+          </Popover>
+        </TooltipPopover>
+      </div>
+    </styled.div>
+    <p
+      key=".0"
+    >
+      Chief Executive Officer
+    </p>
+  </div>
+</Record>
+`;
+
 exports[`<Field /> should render a Record component, creating a Text child with the provided number 1`] = `
 .c0 {
   margin-bottom: 4px;

@@ -10,7 +10,7 @@ interface IRecordProps {
   name: string
   /** The data-component-context */
   componentContext?: string
-  /** Component to sit to the right of the Label */
+  /** If true, will display a tooltip to the right of the 'name' containing this content */
   tooltipContent?: JSX.Element | string
   /** any extra tooltip props */
   tooltipProps?: ITooltipPopoverProps
