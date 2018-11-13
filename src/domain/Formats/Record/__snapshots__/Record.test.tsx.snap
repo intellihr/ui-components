@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Field /> should render a Record and no Tooltip with only a custom tooltip 1`] = `
+exports[`<Record /> should render a Record and no Tooltip with only a custom tooltip 1`] = `
 .c0 {
   margin-bottom: 4px;
 }
@@ -72,7 +72,7 @@ exports[`<Field /> should render a Record and no Tooltip with only a custom tool
 </Record>
 `;
 
-exports[`<Field /> should render a Record and tooltip with a custom tooltip and tooltipContent 1`] = `
+exports[`<Record /> should render a Record and tooltip with a custom tooltip and tooltipContent 1`] = `
 .c0 {
   margin-bottom: 4px;
 }
@@ -192,102 +192,7 @@ exports[`<Field /> should render a Record and tooltip with a custom tooltip and 
 </Record>
 `;
 
-exports[`<Field /> should render a Record component, With no children provided 1`] = `
-.c0 {
-  margin-bottom: 4px;
-}
-
-.c0 .label-component {
-  padding-right: .25rem;
-}
-
-.c1 {
-  font-size: 14px;
-  line-height: 20px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #424F5C;
-  font-weight: 400;
-}
-
-.c2 {
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #8FA1B3;
-  font-weight: 400;
-  display: block;
-}
-
-<Record
-  name="Position Title"
->
-  <div
-    data-component-type="record"
-  >
-    <styled.div
-      data-component-type="record_name"
-    >
-      <div
-        className="c0"
-        data-component-type="record_name"
-      >
-        <Text
-          className="label-component"
-          color="#424F5C"
-          isInline={true}
-          tag="span"
-          type="small"
-        >
-          <styled.span
-            className="label-component"
-            color="#424F5C"
-            data-component-type="text"
-            isInline={true}
-            textType="small"
-          >
-            <span
-              className="label-component c1"
-              color="#424F5C"
-              data-component-type="text"
-            >
-              Position Title
-            </span>
-          </styled.span>
-        </Text>
-      </div>
-    </styled.div>
-    <Text
-      color="#8FA1B3"
-      isInline={false}
-      tag="span"
-      type="body"
-    >
-      <styled.span
-        color="#8FA1B3"
-        data-component-type="text"
-        isInline={false}
-        textType="body"
-      >
-        <span
-          className="c2"
-          color="#8FA1B3"
-          data-component-type="text"
-        >
-          Not Provided
-        </span>
-      </styled.span>
-    </Text>
-  </div>
-</Record>
-`;
-
-exports[`<Field /> should render a Record component, creating a Text child with the provided number 1`] = `
+exports[`<Record /> should render a Record component, creating a Text child with the provided number 1`] = `
 .c0 {
   margin-bottom: 4px;
 }
@@ -382,7 +287,7 @@ exports[`<Field /> should render a Record component, creating a Text child with 
 </Record>
 `;
 
-exports[`<Field /> should render a Record component, creating a Text child with the provided text 1`] = `
+exports[`<Record /> should render a Record component, creating a Text child with the provided text 1`] = `
 .c0 {
   margin-bottom: 4px;
 }
@@ -477,7 +382,7 @@ exports[`<Field /> should render a Record component, creating a Text child with 
 </Record>
 `;
 
-exports[`<Field /> should render a Record component, with the provided component child 1`] = `
+exports[`<Record /> should render a Record component, with the provided component child 1`] = `
 .c0 {
   margin-bottom: 4px;
 }
@@ -544,7 +449,7 @@ exports[`<Field /> should render a Record component, with the provided component
 </Record>
 `;
 
-exports[`<Field /> should render a Record with a Tooltip 1`] = `
+exports[`<Record /> should render a Record with a Tooltip 1`] = `
 .c0 {
   margin-bottom: 4px;
 }
