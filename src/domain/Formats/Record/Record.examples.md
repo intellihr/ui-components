@@ -8,6 +8,14 @@
   </Record>
 ```
 
+#### Record with no Children
+
+```jsx
+  <Record
+    name='Position Title'
+  />
+```
+
 #### Record with a Component Child
 
 ```jsx

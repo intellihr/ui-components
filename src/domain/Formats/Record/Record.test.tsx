@@ -14,6 +14,16 @@ describe('<Field />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
+  it(`should render a Record component, With no children provided`, () => {
+    const wrapper = mount(
+      <Record
+        name='Position Title'
+      />
+    )
+    expect(wrapper).toMatchSnapshot()
+  })
+
+
   it(`should render a Record component, creating a Text child with the provided number`, () => {
     const wrapper = mount(
       <Record

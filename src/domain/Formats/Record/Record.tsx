@@ -17,10 +17,18 @@ interface IRecordProps {
 }
 
 class Record extends React.PureComponent <IRecordProps> {
-  get formattedChildren (): JSX.Element[] {
+  get formattedChildren (): JSX.Element[] | JSX.Element {
     const {
       children
     } = this.props
+
+    if (!children) {
+      return (
+        <Text color={Variables.Color.n500} isInline={false}>
+          Not Provided
+        </Text>
+      )
+    }
 
     return React.Children.map(
       children,
