@@ -194,14 +194,14 @@ pipeline {
       slackSend(
         channel: "#devops-log",
         color: 'danger',
-        message: "Jenkins UI-Components (${env.BRANCH}) <${env.BUILD_URL}|#${env.BUILD_NUMBER}> *FAILED*"
+        message: "Jenkins UI-Components (${env.BRANCH_NAME}) <${env.BUILD_URL}|#${env.BUILD_NUMBER}> *FAILED*"
       )
     }
     success {
       slackSend(
         channel: "#devops-log",
         color: 'good',
-        message: "Jenkins UI-Components (${env.BRANCH}) <${env.BUILD_URL}|#${env.BUILD_NUMBER}> *SUCCESSFUL*"
+        message: "Jenkins UI-Components (${env.BRANCH_NAME}) <${env.BUILD_URL}|#${env.BUILD_NUMBER}> *SUCCESSFUL*"
       )
     }
   }
