@@ -1,5 +1,17 @@
 #!/bin/sh -xe
 
+###
+# Deploy to NPM
+#
+# The whole deployment process is as following
+#   1. Build project which compiles the code and type definitions
+#   2. `npm version` which will create a new tag for deployment
+#   3. `npm publish` which will push files to NPM and publish a new version
+#   4. Push the new tag to GitHub
+#   5. Update the release version variable in Jenkinsfile if it is different than the default version
+#   6. Push new changes to develop
+###
+
 yarn build
 
 git config user.email "continuous.integration@intellihr.com.au"
