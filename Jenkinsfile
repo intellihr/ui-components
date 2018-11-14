@@ -18,18 +18,6 @@ def shouldSkipBuild() {
 
 def SKIP_BUILD = false
 
-final def DEFAULT_RELEASE_VERSION = 'prerelease'
-final def RELEASE_VERSION = 'prerelease'
-
-def shouldSkipBuild() {
-  return this.script.sh(
-    script: "git log -1 | grep '.*\\[ci skip\\].*'",
-    returnStatus: true
-  )
-}
-
-final def SKIP_BUILD = shouldSkipBuild()
-
 pipeline {
   agent any
 
