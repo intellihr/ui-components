@@ -1,13 +1,10 @@
 import React from 'react'
-import { Props, Variables } from '../../../common'
-import { BrickWrapper } from './style'
-import { Text } from '../Text'
+import { Props } from '../../../common'
+import { BrickColor, BrickWrapper } from './style'
 
 export interface IBrickProps {
-  /** Text to show inside the Brick  */
-  text: string
   /** Color of the brick  */
-  color?: Props.FunctionalColor
+  color?: BrickColor
   /** Specify the type of typography to use */
   typographyType?: Props.TypographyType
   /** Extra classes to apply */
@@ -17,35 +14,30 @@ export interface IBrickProps {
 }
 
 export class Brick extends React.PureComponent<IBrickProps> {
+  public static Color = BrickColor
   public static defaultProps: Partial<IBrickProps> = {
-    color: Props.FunctionalColor.Neutral,
+    color: BrickColor.Neutral,
     typographyType: Props.TypographyType.Body
   }
 
   public render (): JSX.Element {
     const {
-      text,
       color,
       typographyType,
       className,
-      componentContext
+      componentContext,
+      children
     } = this.props
-
-    const brickColors = Variables.functionalColors[color!]
 
     return (
       <BrickWrapper
-        color={brickColors.backgroundColor}
+        color={color}
         className={className}
+        typographyType={typographyType}
         data-component-type={Props.ComponentType.Brick}
         data-component-context={componentContext}
       >
-        <Text
-          type={typographyType}
-          color={brickColors.textColor}
-        >
-          {text}
-        </Text>
+        {children}
       </BrickWrapper>
     )
   }

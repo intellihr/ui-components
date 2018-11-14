@@ -53,17 +53,6 @@ namespace Props {
     Record = 'record',
     RecordName = 'record_name'
   }
-
-  export enum FunctionalColor {
-    Alert = 'alert',
-    Success = 'success',
-    Warning = 'warning',
-    Primary = 'primary',
-    Neutral = 'neutral',
-    Secondary = 'secondary',
-    Highlight = 'highlight',
-    Dark = 'dark'
-  }
 }
 
 export {

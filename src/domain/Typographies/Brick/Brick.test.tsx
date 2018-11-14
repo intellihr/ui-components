@@ -7,8 +7,9 @@ describe('<Brick />', () => {
   it('should render a Brick with default values', () => {
     const wrapper = shallow(
       <Brick
-        text='Test'
-      />
+      >
+        Test
+      </Brick>
     )
 
     expect(wrapper).toMatchSnapshot()
@@ -17,9 +18,10 @@ describe('<Brick />', () => {
   it('should render a Brick with the alert color', () => {
     const wrapper = shallow(
       <Brick
-        text='Test'
-        color={Props.FunctionalColor.Alert}
-      />
+        color={Brick.Color.Alert}
+      >
+        Test
+      </Brick>
     )
 
     expect(wrapper).toMatchSnapshot()
@@ -28,9 +30,10 @@ describe('<Brick />', () => {
   it('should render a Brick with the heading typography', () => {
     const wrapper = shallow(
       <Brick
-        text='Test'
         typographyType={Props.TypographyType.Heading}
-      />
+      >
+        Test
+      </Brick>
     )
 
     expect(wrapper).toMatchSnapshot()
