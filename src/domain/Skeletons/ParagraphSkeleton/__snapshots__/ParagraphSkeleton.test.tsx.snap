@@ -21,7 +21,7 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-size: 36px;
-  line-height: 40px;
+  line-height: 44px;
   -webkit-letter-spacing: -.02em;
   -moz-letter-spacing: -.02em;
   -ms-letter-spacing: -.02em;
