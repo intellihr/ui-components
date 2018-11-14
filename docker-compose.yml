@@ -1,18 +1,10 @@
 version: '3'
 services:
-  gitlab-ci:
-    image: ui-components:latest
-    volumes:
-      - .:/code
-    environment:
-      - DEFAULT_RELEASE_VERSION=${DEFAULT_RELEASE_VERSION}
-      - RELEASE_VERSION=${RELEASE_VERSION}
-      - NPM_TOKEN=${NPM_TOKEN}
-      - GIT_USERNAME=${GIT_USERNAME}
-      - GIT_TOKEN=${GIT_TOKEN}
+  base: &base
+    build: .
 
   code: &code
-    build: .
+    <<: *base
     volumes:
       - .:/code
     ports:
@@ -23,6 +15,9 @@ services:
     volumes:
       - .:/code
       - ui-components:/code/node_modules # Optimisation for Docker-Mac
+
+  jenkins:
+    <<: *base
 
 volumes:
   ui-components: ~
