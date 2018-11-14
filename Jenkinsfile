@@ -12,24 +12,6 @@ def skipBuild = false
 final def DEFAULT_RELEASE_VERSION = 'prerelease'
 final def RELEASE_VERSION = 'prerelease'
 
-def shouldSkipBuild() {
-  numberOfCommitToCheck = 1
-
-  hasMergeCommit = !sh(
-    script: "git log -${numberOfCommitToCheck} | grep 'Author: Jenkins <nobody@nowhere>'",
-    returnStatus: true
-  )
-
-  if (hasMergeCommit) {
-    numberOfCommitToCheck = 2
-  }
-
-  return !sh(
-    script: "git log -${numberOfCommitToCheck} | grep '.*\\[ci skip\\].*'",
-    returnStatus: true
-  )
-}
-
 pipeline {
   agent any
 
@@ -41,7 +23,7 @@ pipeline {
     stage('prepare') {
       steps {
         script {
-          skipBuild = shouldSkipBuild()
+          skipBuild = helper.shouldSkipBuild()
         }
       }
     }
