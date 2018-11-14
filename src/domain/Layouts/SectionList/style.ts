@@ -7,7 +7,7 @@ const verticalPaddingDesktop = 32
 const horizontalPaddingMobile = 16
 const verticalPaddingMobile = 24
 
-const Section = styled.div`  
+const StyledSectionWrapper = styled.div`  
   @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
     margin-left: ${horizontalMarginDesktop}px;
     margin-right: ${horizontalMarginDesktop}px;
@@ -24,7 +24,7 @@ const SectionBorder = styled.div`
   }
 `
 
-const UnStyledSection = styled.div`  
+const StyledUnstyledSection = styled.div`  
   @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
     padding: 0px ${horizontalPaddingMobile}px;
   }
@@ -120,6 +120,6 @@ export {
   StyledTitledSectionHeaderRow,
   StyledTitledSectionDescription,
   StyledTitledSectionBody,
-  Section,
-  UnStyledSection
+  StyledSectionWrapper,
+  StyledUnstyledSection
 }
