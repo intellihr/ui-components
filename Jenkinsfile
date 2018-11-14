@@ -184,4 +184,25 @@ pipeline {
       }
     }
   }
+
+  post {
+    always {
+      sh 'docker-compose down || true'
+      sh 'docker-compose rm -f -s -v || true'
+    }
+    failure {
+      slackSend(
+        channel: "#devops-log",
+        color: 'danger',
+        message: "Jenkins UI-Components (${env.BRANCH_NAME}) <${env.BUILD_URL}|#${env.BUILD_NUMBER}> *FAILED*"
+      )
+    }
+    success {
+      slackSend(
+        channel: "#devops-log",
+        color: 'good',
+        message: "Jenkins UI-Components (${env.BRANCH_NAME}) <${env.BUILD_URL}|#${env.BUILD_NUMBER}> *SUCCESSFUL*"
+      )
+    }
+  }
 }
