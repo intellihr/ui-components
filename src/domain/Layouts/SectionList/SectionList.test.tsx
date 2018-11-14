@@ -11,6 +11,9 @@ describe('<SectionList />', () => {
         <SectionList.Section>
           section 1
         </SectionList.Section>
+        <SectionList.UnStyledSection>
+          section 2
+        </SectionList.UnStyledSection>
         <SectionList.AnnotatedSection
           header='Annotated Section'
           description='Annotated Description'

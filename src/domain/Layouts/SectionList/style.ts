@@ -7,9 +7,12 @@ const verticalPaddingDesktop = 32
 const horizontalPaddingMobile = 16
 const verticalPaddingMobile = 24
 
-interface IStyledSectionProps {
-  removeBottomBorderPadding?: boolean
-}
+const Section = styled.div`  
+  @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
+    margin-left: ${horizontalMarginDesktop}px;
+    margin-right: ${horizontalMarginDesktop}px;
+  }
+`
 
 const SectionBorder = styled.div`  
   @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
@@ -21,21 +24,20 @@ const SectionBorder = styled.div`
   }
 `
 
+const UnStyledSection = styled.div`  
+  @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
+    padding: 0px ${horizontalPaddingMobile}px;
+  }
+`
+
 const StyledSection = styled(SectionBorder)`  
   @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
     padding: ${verticalPaddingMobile}px ${horizontalPaddingMobile}px;
   }
 
   @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
-    margin-left: ${horizontalMarginDesktop}px;
-    margin-right: ${horizontalMarginDesktop}px;
     padding-top: ${verticalPaddingDesktop}px;
     padding-bottom: ${verticalPaddingDesktop}px;
-    
-  ${(props: IStyledSectionProps) => props.removeBottomBorderPadding && css`
-    border-bottom: 0;
-    padding-bottom: 0;
-  `}
   }
 `
 
@@ -64,8 +66,6 @@ const StyledAnnotatedSectionDescription = styled(SectionDescription)`
 
 const StyledAnnotatedSection = styled(SectionBorder)`
   @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
-    margin-left: ${horizontalMarginDesktop}px;
-    margin-right: ${horizontalMarginDesktop}px;
     padding-top: ${verticalPaddingDesktop}px;
     padding-bottom: ${verticalPaddingDesktop}px;
   }
@@ -73,8 +73,6 @@ const StyledAnnotatedSection = styled(SectionBorder)`
 
 const StyledTitledSection = styled(SectionBorder)`
   @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
-    margin-left: ${horizontalMarginDesktop}px;
-    margin-right: ${horizontalMarginDesktop}px;
     padding-top: ${verticalPaddingDesktop}px;
     padding-bottom: ${verticalPaddingDesktop}px;
   }
@@ -122,5 +120,6 @@ export {
   StyledTitledSectionHeaderRow,
   StyledTitledSectionDescription,
   StyledTitledSectionBody,
-  IStyledSectionProps
+  Section,
+  UnStyledSection
 }
