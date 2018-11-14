@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components'
+import styled from 'styled-components'
 import { Variables } from '../../../common'
 import { SectionDescription } from './subcomponents/SectionDescription'
 

@@ -10,8 +10,7 @@ sub-components that provide responsive styling between mobile and desktop.
   </SectionList.Section>
   <SectionList.UnStyledSection>
     <Text>
-      This is a Section, it can be used to display data on the page with correct padding and will automatically
-      display a border below itself if another section is below it in the section list and you are on desktop.
+      This is a unstyled Section, it can be used to display data on the page with correct padding.
     </Text>
   </SectionList.UnStyledSection>
   <SectionList.AnnotatedSection
