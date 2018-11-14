@@ -4,6 +4,7 @@ RUN apk upgrade &&\
     apk --update add git openssh-client
 
 RUN npm install -g --unsafe-perm yarn &&\
+    chmod +x /usr/local/lib/node_modules/yarn/bin/yarn.js &&\
     rm -rf /var/cache/apk/*
 
 ENV GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no"

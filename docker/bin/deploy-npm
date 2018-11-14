@@ -15,9 +15,9 @@ git push --tags github
 
 git pull --rebase github develop
 
-sed -i -r "s/final def RELEASE_VERSION.*/final def RELEASE_VERSION = '$DEFAULT_RELEASE_VERSION'/" Jenkinsfile-new
+sed -i -r "s/final def RELEASE_VERSION.*/final def RELEASE_VERSION = '$DEFAULT_RELEASE_VERSION'/" Jenkinsfile
 
-git add Jenkinsfile-new
+git add Jenkinsfile
 git commit -m "[ci skip] Reset to default release version $DEFAULT_RELEASE_VERSION" || true
 
 git push github HEAD:develop
