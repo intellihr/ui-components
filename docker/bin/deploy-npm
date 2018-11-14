@@ -7,7 +7,7 @@ git config user.name "IntelliHR CI"
 
 echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
 
-npm version "$RELEASE_VERSION" -m "[skip ci] Upgrade to %s"
+npm version "$RELEASE_VERSION" -m "[ci skip] Upgrade to %s"
 npm publish --access public
 
 git remote add github "git@github.com:intellihr/ui-components.git" || true

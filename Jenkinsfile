@@ -10,6 +10,15 @@ def analyse = new net.intellihr.CodeAnalysis(this)
 final def DEFAULT_RELEASE_VERSION = 'prerelease'
 final def RELEASE_VERSION = 'prerelease'
 
+def shouldSkipBuild() {
+  return this.script.sh(
+    script: "git log -1 | grep '.*\\[ci skip\\].*'",
+    returnStatus: true
+  )
+}
+
+final def SKIP_BUILD = shouldSkipBuild()
+
 pipeline {
   agent any
 
@@ -21,6 +30,9 @@ pipeline {
     stage('Checkout gh-pages') {
       when {
         branch 'master'
+        expression {
+          !SKIP_BUILD
+        }
       }
       steps {
         sshagent (credentials: ['GITHUB_CI_SSH_KEY']) {
@@ -54,12 +66,22 @@ pipeline {
     }
 
     stage('Build') {
+      when {
+        expression {
+          !SKIP_BUILD
+        }
+      }
       steps {
         sh 'docker-compose build --force-rm jenkins'
       }
     }
 
     stage('tsc / lint / test') {
+      when {
+        expression {
+          !SKIP_BUILD
+        }
+      }
       parallel {
         stage('tsc') {
           steps {
@@ -112,6 +134,9 @@ pipeline {
     stage('Publish GitHub Page / NPM') {
       when {
         branch 'master'
+        expression {
+          !SKIP_BUILD
+        }
       }
       parallel {
         stage('Publish GitHub Page') {
