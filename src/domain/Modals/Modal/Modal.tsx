@@ -19,6 +19,10 @@ interface IBaseModalProps {
   offsetZIndex?: number
   /** Component that will be inserted into the modal */
   children?: JSX.Element | string
+  /** If true, will close when esc is pressed */
+  shouldCloseOnEsc?: boolean
+  /** If true, will close when overlay is clicked */
+  shouldCloseOnOverlayClick?: boolean
 }
 
 interface IModalProps extends IBaseModalProps {
@@ -38,7 +42,9 @@ class Modal extends React.PureComponent<IModalProps> {
       children,
       isOpen,
       handleClose,
-      offsetZIndex
+      offsetZIndex,
+      shouldCloseOnEsc,
+      shouldCloseOnOverlayClick
     } = this.props
 
     const modalOffsetBase = 2
@@ -49,6 +55,8 @@ class Modal extends React.PureComponent<IModalProps> {
         ariaHideApp={false}
         isOpen={isOpen}
         onRequestClose={handleClose}
+        shouldCloseOnEsc={shouldCloseOnEsc}
+        shouldCloseOnOverlayClick={shouldCloseOnOverlayClick}
         overlayClassName='modal-overlay'
         className={this.classNames}
         style={{
