@@ -2,93 +2,191 @@
 
 @Library('jenkins')
 import net.intellihr.Helper
-import net.intellihr.CodeAnalysis
 
 def helper = new net.intellihr.Helper(this)
-def analyse = new net.intellihr.CodeAnalysis(this)
+
+final def DEFAULT_RELEASE_VERSION = 'prerelease'
+final def RELEASE_VERSION = 'prerelease'
+
+def shouldSkipBuild() {
+  return this.script.sh(
+    script: "git log -1 | grep '.*\\[ci skip\\].*'",
+    returnStatus: true
+  )
+}
+
+final def SKIP_BUILD = shouldSkipBuild()
 
 pipeline {
-  agent {
-    dockerfile {
-      additionalBuildArgs '--force-rm'
-    }
+  agent any
+
+  environment {
+    COMPOSE_PROJECT_NAME = "$BUILD_TAG"
   }
 
   stages {
-    stage('Checkout gh-pages') {
+    stage('prepare') {
       steps {
-        dir ('/code') {
-          sshagent (credentials: ['GITHUB_CI']) {
-            sh '''
-              git fetch --no-tags --progress git@github.com:intellihr/ui-components.git \
-                +refs/heads/gh-pages:refs/remotes/origin/gh-pages
-            '''
+        script {
+            for (change in currentBuild.changeSets) {
+              for (commit in change.items) {
+                echo(commit.msg)
+              }
+            }
+        }
+      }
+    }
+
+    stage('Checkout gh-pages') {
+      when {
+        branch 'master'
+        expression {
+          !SKIP_BUILD
+        }
+      }
+      steps {
+        sshagent (credentials: ['GITHUB_CI_SSH_KEY']) {
+          script {
+            try {
+              sh '''
+                git fetch --no-tags --progress git@github.com:intellihr/ui-components.git \
+                  +refs/heads/gh-pages:refs/remotes/origin/gh-pages
+              '''
+            } catch (Exception e) {
+              sh 'rm -rf styleguide'
+              sh 'mkdir styleguide'
+              dir ('./styleguide') {
+                sh 'git init'
+                sh 'git checkout -b gh-pages'
+                sh '''
+                  git \
+                    -c user.email="continuous.integration@intellihr.com.au" \
+                    -c user.name="IntelliHR CI" \
+                    commit \
+                    --allow-empty \
+                    -m "Initial GitHub Page Branch"
+                '''
+                sh 'git remote add origin git@github.com:intellihr/ui-components.git'
+                sh 'git push --set-upstream origin gh-pages'
+              }
+            }
           }
         }
       }
     }
 
     stage('Build') {
+      when {
+        expression {
+          !SKIP_BUILD
+        }
+      }
       steps {
-        dir ('/code') {
-          sh 'yarn build'
+        sh 'docker-compose build --force-rm jenkins'
+      }
+    }
+
+    stage('tsc / lint / test') {
+      when {
+        expression {
+          !SKIP_BUILD
+        }
+      }
+      parallel {
+        stage('tsc') {
+          steps {
+            sh '''
+              docker-compose run \
+                --rm \
+                --name "$BUILD_TAG"-tsc \
+                jenkins \
+                ./node_modules/.bin/tsc
+            '''
+          }
+        }
+        stage('ts-lint') {
+          steps {
+            sh '''
+              docker-compose run \
+                --rm \
+                --name "$BUILD_TAG"-ts-lint \
+                jenkins \
+                yarn lint
+            '''
+          }
+        }
+        stage('sass-lint') {
+          steps {
+            sh '''
+              docker-compose run \
+                --rm \
+                --name "$BUILD_TAG"-sass-lint \
+                jenkins \
+                yarn lint:sass
+            '''
+          }
+        }
+        stage('test') {
+          steps {
+            sh '''
+              docker-compose run \
+                --rm \
+                --name "$BUILD_TAG"-test \
+                -e CI=true \
+                jenkins \
+                yarn test
+            '''
+          }
         }
       }
     }
 
-    stage('Publish gh-pages') {
+    stage('Publish GitHub Page / NPM') {
       when {
         branch 'master'
+        expression {
+          !SKIP_BUILD
+        }
       }
-
-      steps {
-        dir ('/code') {
-          sshagent (credentials: ['GITHUB_CI']) {
-            script {
-              try {
-                sh 'git add .'
-                sh 'git -c user.email="continuous.integration@intellihr.com.au" -c user.name="IntelliHR CI" commit -m "Update gh-pages as of $(git log \'--format=format:%H\' remotes/origin/master -1)"'
-                sh 'yarn gh-pages'
-              } catch (Exception e) {
-                echo 'No need to publish gh-pages...Skipping...'
+      parallel {
+        stage('Publish GitHub Page') {
+          steps {
+            sshagent (credentials: ['GITHUB_CI_SSH_KEY']) {
+              script {
+                try {
+                  sh '''
+                    docker-compose run --rm \
+                      --name "$BUILD_TAG"-gh-pages \
+                      --volume "$SSH_AUTH_SOCK":/tmp/agent.sock \
+                      -e SSH_AUTH_SOCK=/tmp/agent.sock \
+                      jenkins ./docker/bin/deploy-gh-page
+                  '''
+                } catch (Exception e) {
+                  echo 'No need to publish gh-pages...Skipping...'
+                }
               }
             }
           }
         }
-      }
-    }
-
-    stage('Publish NPM') {
-      when {
-        branch 'master'
-      }
-
-      steps {
-        dir ('/code') {
-          sshagent (credentials: ['GITHUB_CI']) {
-            sh 'git config user.email "continuous.integration@intellihr.com.au"'
-            sh 'git config user.name "IntelliHR CI"'
-          }
-
-          withNPM(npmrcConfig: 'npm-config') {
-            script {
-              try {
-                echo 'About to publish to npm'
-                sh 'npm version patch'
-              } catch (Exception e) {
-                echo 'No need to update the version...Skipping...'
+        stage('Publish NPM') {
+          steps {
+            sshagent (credentials: ['GITHUB_CI_SSH_KEY']) {
+              script {
+                env.NPM_TOKEN = helper.getSSMParameter('shared.NPM_TOKEN')
+                env.RELEASE_VERSION = RELEASE_VERSION
+                env.DEFAULT_RELEASE_VERSION = DEFAULT_RELEASE_VERSION
               }
-            }
-          }
 
-          sshagent (credentials: ['GITHUB_CI']) {
-            script {
-              try {
-                sh 'git branch'
-                sh 'git push origin master'
-              } catch (Exception e) {
-                echo 'Nothing to push...'
-              }
+              sh '''
+                  docker-compose run --rm \
+                    --name "$BUILD_TAG"-publish-npm \
+                    --volume "$SSH_AUTH_SOCK":/tmp/agent.sock \
+                    -e SSH_AUTH_SOCK=/tmp/agent.sock \
+                    -e NPM_TOKEN=$NPM_TOKEN \
+                    -e RELEASE_VERSION=$RELEASE_VERSION \
+                    -e DEFAULT_RELEASE_VERSION=$DEFAULT_RELEASE_VERSION \
+                    jenkins ./docker/bin/deploy-npm
+              '''
             }
           }
         }
