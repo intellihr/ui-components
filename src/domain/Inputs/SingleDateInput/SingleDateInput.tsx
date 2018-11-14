@@ -1,7 +1,7 @@
 import 'react-dates/initialize'
 import 'react-dates/lib/css/_datepicker.css'
 import React, { FormEvent } from 'react'
-import { SingleDatePicker, SingleDatePickerShape } from 'react-dates'
+import { SingleDatePicker } from 'react-dates'
 import moment, { Moment } from 'moment-timezone'
 import classNames from 'classnames'
 import { isNil } from 'lodash'
@@ -11,12 +11,20 @@ import { InputGroupPosition } from '../InputGroup'
 const style = require('./style.scss')
 
 interface ISingleDateInputProps {
+  /** Name and ID of the HTML input */
   name: string
+  /** Moment format to display the date in */
   dateFormat: string
+  /** Change handler called when the date is changed */
   handleChange?: (date: Moment | string | null) => void
+  /** If true, adds invalid styles to the input */
   isInvalid?: boolean
+  /** If true, adds disabled attribute to the input */
   isDisabled?: boolean
+  /** Updates border style depending on input group position */
   groupPosition?: InputGroupPosition
+  /** Applies recommended settings for mobile and tablet viewports */
+  isMobile?: boolean
 }
 
 interface ISingleDateInputState {
@@ -24,7 +32,7 @@ interface ISingleDateInputState {
   focused: boolean
 }
 
-class SingleDateInput extends React.PureComponent<ISingleDateInputProps & Partial<SingleDatePickerShape>, ISingleDateInputState> {
+class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingleDateInputState> {
   public static defaultProps = {
     dateFormat: 'DD/MM/YYYY',
     isInvalid: false,
@@ -40,7 +48,8 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps & Partia
     const {
       name,
       dateFormat,
-      isDisabled
+      isDisabled,
+      isMobile
     } = this.props
 
     return (
@@ -51,12 +60,13 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps & Partia
         <SingleDatePicker
           id={name}
           date={this.state.date}
-          placeholder={moment().format(dateFormat)}
+          placeholder={dateFormat}
           displayFormat={dateFormat}
           onDateChange={this.dateChange}
           focused={this.state.focused}
           onFocusChange={this.focusChange}
           disabled={isDisabled}
+          numberOfMonths={isMobile ? 1 : 2}
           noBorder
           block
           isOutsideRange={this.disabledDateRange}

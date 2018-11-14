@@ -1,0 +1,607 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Record /> should render a Record and no Tooltip with only a custom tooltip 1`] = `
+.c0 {
+  margin-bottom: 4px;
+}
+
+.c0 .label-component {
+  padding-right: .25rem;
+}
+
+.c1 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
+<Record
+  name="Position Title"
+  tooltipProps={
+    Object {
+      "toggleComponent": [Function],
+    }
+  }
+>
+  <div
+    data-component-type="record"
+  >
+    <styled.div
+      data-component-type="record_name"
+    >
+      <div
+        className="c0"
+        data-component-type="record_name"
+      >
+        <Text
+          className="label-component"
+          color="#424F5C"
+          isInline={true}
+          tag="span"
+          type="small"
+        >
+          <styled.span
+            className="label-component"
+            color="#424F5C"
+            data-component-type="text"
+            isInline={true}
+            textType="small"
+          >
+            <span
+              className="label-component c1"
+              color="#424F5C"
+              data-component-type="text"
+            >
+              Position Title
+            </span>
+          </styled.span>
+        </Text>
+      </div>
+    </styled.div>
+    <p
+      key=".0"
+    >
+      Chief Executive Officer
+    </p>
+  </div>
+</Record>
+`;
+
+exports[`<Record /> should render a Record and tooltip with a custom tooltip and tooltipContent 1`] = `
+.c0 {
+  margin-bottom: 4px;
+}
+
+.c0 .label-component {
+  padding-right: .25rem;
+}
+
+.c1 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
+<Record
+  name="Position Title"
+  tooltipContent="a"
+  tooltipProps={
+    Object {
+      "toggleComponent": [Function],
+    }
+  }
+>
+  <div
+    data-component-type="record"
+  >
+    <styled.div
+      data-component-type="record_name"
+    >
+      <div
+        className="c0"
+        data-component-type="record_name"
+      >
+        <Text
+          className="label-component"
+          color="#424F5C"
+          isInline={true}
+          tag="span"
+          type="small"
+        >
+          <styled.span
+            className="label-component"
+            color="#424F5C"
+            data-component-type="text"
+            isInline={true}
+            textType="small"
+          >
+            <span
+              className="label-component c1"
+              color="#424F5C"
+              data-component-type="text"
+            >
+              Position Title
+            </span>
+          </styled.span>
+        </Text>
+        <TooltipPopover
+          toggleComponent={[Function]}
+        >
+          <span
+            aria-expanded={false}
+            aria-haspopup={true}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="button"
+          />
+          <Popover
+            animationType="tooltip"
+            id=""
+            isOpen={false}
+            parentAnchorPosition="auto"
+            parentRef={
+              Object {
+                "current": <span
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  role="button"
+                />,
+              }
+            }
+            popoverAnchorPosition="auto"
+          >
+            <Portal
+              containerInfo={<body />}
+            >
+              <Transition
+                appear={false}
+                enter={true}
+                exit={true}
+                in={false}
+                mountOnEnter={true}
+                onEnter={[Function]}
+                onEntered={[Function]}
+                onEntering={[Function]}
+                onExit={[Function]}
+                onExited={[Function]}
+                onExiting={[Function]}
+                timeout={300}
+                unmountOnExit={true}
+              />
+            </Portal>
+          </Popover>
+        </TooltipPopover>
+      </div>
+    </styled.div>
+    <p
+      key=".0"
+    >
+      Chief Executive Officer
+    </p>
+  </div>
+</Record>
+`;
+
+exports[`<Record /> should render a Record component, creating a Text child with the provided number 1`] = `
+.c0 {
+  margin-bottom: 4px;
+}
+
+.c0 .label-component {
+  padding-right: .25rem;
+}
+
+.c1 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
+.c2 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #262D33;
+  font-weight: 400;
+}
+
+<Record
+  name="FTE"
+>
+  <div
+    data-component-type="record"
+  >
+    <styled.div
+      data-component-type="record_name"
+    >
+      <div
+        className="c0"
+        data-component-type="record_name"
+      >
+        <Text
+          className="label-component"
+          color="#424F5C"
+          isInline={true}
+          tag="span"
+          type="small"
+        >
+          <styled.span
+            className="label-component"
+            color="#424F5C"
+            data-component-type="text"
+            isInline={true}
+            textType="small"
+          >
+            <span
+              className="label-component c1"
+              color="#424F5C"
+              data-component-type="text"
+            >
+              FTE
+            </span>
+          </styled.span>
+        </Text>
+      </div>
+    </styled.div>
+    <Text
+      color="#262D33"
+      isInline={true}
+      key=".0"
+      tag="span"
+      type="body"
+    >
+      <styled.span
+        color="#262D33"
+        data-component-type="text"
+        isInline={true}
+        textType="body"
+      >
+        <span
+          className="c2"
+          color="#262D33"
+          data-component-type="text"
+        >
+          1.000
+        </span>
+      </styled.span>
+    </Text>
+  </div>
+</Record>
+`;
+
+exports[`<Record /> should render a Record component, creating a Text child with the provided text 1`] = `
+.c0 {
+  margin-bottom: 4px;
+}
+
+.c0 .label-component {
+  padding-right: .25rem;
+}
+
+.c1 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
+.c2 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #262D33;
+  font-weight: 400;
+}
+
+<Record
+  name="Position Title"
+>
+  <div
+    data-component-type="record"
+  >
+    <styled.div
+      data-component-type="record_name"
+    >
+      <div
+        className="c0"
+        data-component-type="record_name"
+      >
+        <Text
+          className="label-component"
+          color="#424F5C"
+          isInline={true}
+          tag="span"
+          type="small"
+        >
+          <styled.span
+            className="label-component"
+            color="#424F5C"
+            data-component-type="text"
+            isInline={true}
+            textType="small"
+          >
+            <span
+              className="label-component c1"
+              color="#424F5C"
+              data-component-type="text"
+            >
+              Position Title
+            </span>
+          </styled.span>
+        </Text>
+      </div>
+    </styled.div>
+    <Text
+      color="#262D33"
+      isInline={true}
+      key=".0"
+      tag="span"
+      type="body"
+    >
+      <styled.span
+        color="#262D33"
+        data-component-type="text"
+        isInline={true}
+        textType="body"
+      >
+        <span
+          className="c2"
+          color="#262D33"
+          data-component-type="text"
+        >
+          Chief Executive Officer
+        </span>
+      </styled.span>
+    </Text>
+  </div>
+</Record>
+`;
+
+exports[`<Record /> should render a Record component, with the provided component child 1`] = `
+.c0 {
+  margin-bottom: 4px;
+}
+
+.c0 .label-component {
+  padding-right: .25rem;
+}
+
+.c1 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
+<Record
+  name="Position Title"
+>
+  <div
+    data-component-type="record"
+  >
+    <styled.div
+      data-component-type="record_name"
+    >
+      <div
+        className="c0"
+        data-component-type="record_name"
+      >
+        <Text
+          className="label-component"
+          color="#424F5C"
+          isInline={true}
+          tag="span"
+          type="small"
+        >
+          <styled.span
+            className="label-component"
+            color="#424F5C"
+            data-component-type="text"
+            isInline={true}
+            textType="small"
+          >
+            <span
+              className="label-component c1"
+              color="#424F5C"
+              data-component-type="text"
+            >
+              Position Title
+            </span>
+          </styled.span>
+        </Text>
+      </div>
+    </styled.div>
+    <p
+      key=".0"
+    >
+      Chief Executive Officer
+    </p>
+  </div>
+</Record>
+`;
+
+exports[`<Record /> should render a Record with a Tooltip 1`] = `
+.c0 {
+  margin-bottom: 4px;
+}
+
+.c0 .label-component {
+  padding-right: .25rem;
+}
+
+.c2 {
+  width: 1.28571em;
+  color: #424F5C;
+}
+
+.c2.icon {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.c1 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
+<Record
+  name="Position Title"
+  tooltipContent="a"
+>
+  <div
+    data-component-type="record"
+  >
+    <styled.div
+      data-component-type="record_name"
+    >
+      <div
+        className="c0"
+        data-component-type="record_name"
+      >
+        <Text
+          className="label-component"
+          color="#424F5C"
+          isInline={true}
+          tag="span"
+          type="small"
+        >
+          <styled.span
+            className="label-component"
+            color="#424F5C"
+            data-component-type="text"
+            isInline={true}
+            textType="small"
+          >
+            <span
+              className="label-component c1"
+              color="#424F5C"
+              data-component-type="text"
+            >
+              Position Title
+            </span>
+          </styled.span>
+        </Text>
+        <TooltipPopover
+          toggleComponent={[Function]}
+        >
+          <span
+            aria-expanded={false}
+            aria-haspopup={true}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="button"
+          >
+            <FontAwesomeIcon
+              color="#424F5C"
+              type="question-circle-o"
+            >
+              <Icon
+                color="#424F5C"
+                isSpinning={false}
+                size="medium"
+                type="fa-question-circle-o"
+              >
+                <styled.i
+                  aria-hidden={true}
+                  className="icon fa fa-question-circle-o"
+                  color="#424F5C"
+                  size="medium"
+                >
+                  <i
+                    aria-hidden={true}
+                    className="icon fa fa-question-circle-o c2"
+                    color="#424F5C"
+                    size="medium"
+                  />
+                </styled.i>
+              </Icon>
+            </FontAwesomeIcon>
+          </span>
+          <Popover
+            animationType="tooltip"
+            id=""
+            isOpen={false}
+            parentAnchorPosition="auto"
+            parentRef={
+              Object {
+                "current": <span
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  role="button"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="icon fa fa-question-circle-o c2"
+                    color="#424F5C"
+                  />
+                </span>,
+              }
+            }
+            popoverAnchorPosition="auto"
+          >
+            <Portal
+              containerInfo={<body />}
+            >
+              <Transition
+                appear={false}
+                enter={true}
+                exit={true}
+                in={false}
+                mountOnEnter={true}
+                onEnter={[Function]}
+                onEntered={[Function]}
+                onEntering={[Function]}
+                onExit={[Function]}
+                onExited={[Function]}
+                onExiting={[Function]}
+                timeout={300}
+                unmountOnExit={true}
+              />
+            </Portal>
+          </Popover>
+        </TooltipPopover>
+      </div>
+    </styled.div>
+    <p
+      key=".0"
+    >
+      Chief Executive Officer
+    </p>
+  </div>
+</Record>
+`;
