@@ -34,7 +34,6 @@ pipeline {
           // method 2 - but this scans all changes in current build - of course you can only make it do the newest change though
           for (change in currentBuild.changeSets) {
             for (commit in change.items) {
-              echo(commit.msg)
               if (commit.msg.contains('[ci skip]')) {
                 env.SKIP_CI = 'true'
               }
