@@ -31,7 +31,7 @@ pipeline {
           for (change in currentBuild.changeSets) {
             for (commit in change.items) {
               echo(commit.msg)
-              if commit.msg.contains('[ci skip]') {
+              if (commit.msg.contains('[ci skip]')) {
                 env.SKIP_CI = 'true'
               }
             }
