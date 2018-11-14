@@ -15,7 +15,7 @@ def shouldSkipBuild() {
   )
 }
 
-final def SKIP_BUILD = shouldSkipBuild()
+def SKIP_BUILD = false
 
 pipeline {
   agent any
@@ -28,6 +28,8 @@ pipeline {
     stage('prepare') {
       steps {
         script {
+          SKIP_BUILD = shouldSkipBuild()
+
           for (change in currentBuild.changeSets) {
             for (commit in change.items) {
               echo(commit.msg)
