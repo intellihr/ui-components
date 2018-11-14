@@ -9,7 +9,7 @@ final def DEFAULT_RELEASE_VERSION = 'prerelease'
 final def RELEASE_VERSION = 'prerelease'
 
 def shouldSkipBuild() {
-  return this.script.sh(
+  return script.sh(
     script: "git log -1 | grep '.*\\[ci skip\\].*'",
     returnStatus: true
   )
@@ -28,8 +28,10 @@ pipeline {
     stage('prepare') {
       steps {
         script {
+          // method 1
           SKIP_BUILD = shouldSkipBuild()
 
+          // method 2 - but this scans all changes in current build - of course you can only make it do the newest change though
           for (change in currentBuild.changeSets) {
             for (commit in change.items) {
               echo(commit.msg)
