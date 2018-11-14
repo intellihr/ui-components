@@ -28,11 +28,14 @@ pipeline {
     stage('prepare') {
       steps {
         script {
-            for (change in currentBuild.changeSets) {
-              for (commit in change.items) {
-                echo(commit.msg)
+          for (change in currentBuild.changeSets) {
+            for (commit in change.items) {
+              echo(commit.msg)
+              if commit.msg.contains('[ci skip]') {
+                env.SKIP_CI = 'true'
               }
             }
+          }
         }
       }
     }
