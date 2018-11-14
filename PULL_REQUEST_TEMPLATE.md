@@ -1,4 +1,5 @@
 **The following MUST be checked prior to approval. If not relevant to your MR, remove the line from your description.**
+- [ ]  Update `releaseVersion` in `release-config.json` if it is lower
 - [ ]  Examples have been provided for any new components or functionality
 - [ ]  The `styleguide.config.js` has been updated to show the component in the ui-component page
 - [ ]  Test Coverage for any new or updated functionality
