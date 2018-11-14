@@ -9,7 +9,7 @@ final def DEFAULT_RELEASE_VERSION = 'prerelease'
 final def RELEASE_VERSION = 'prerelease'
 
 def shouldSkipBuild() {
-  return script.sh(
+  return sh(
     script: "git log -1 | grep '.*\\[ci skip\\].*'",
     returnStatus: true
   )
