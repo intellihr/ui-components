@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import { Variables } from '../../../common'
 import { SectionDescription } from './subcomponents/SectionDescription'
 
@@ -7,7 +7,11 @@ const verticalPaddingDesktop = 32
 const horizontalPaddingMobile = 16
 const verticalPaddingMobile = 24
 
-const SectionBorder = styled.div`
+interface IStyledSectionProps {
+  removeBottomBorderPadding?: boolean
+}
+
+const SectionBorder = styled.div`  
   @media only screen and (min-width: ${Variables.Breakpoint.breakpointTablet}px) {
      border-bottom: 1px solid ${Variables.Color.n300};
 
@@ -17,7 +21,7 @@ const SectionBorder = styled.div`
   }
 `
 
-const StyledSection = styled(SectionBorder)`
+const StyledSection = styled(SectionBorder)`  
   @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet - 1}px) {
     padding: ${verticalPaddingMobile}px ${horizontalPaddingMobile}px;
   }
@@ -27,6 +31,11 @@ const StyledSection = styled(SectionBorder)`
     margin-right: ${horizontalMarginDesktop}px;
     padding-top: ${verticalPaddingDesktop}px;
     padding-bottom: ${verticalPaddingDesktop}px;
+    
+  ${(props: IStyledSectionProps) => props.removeBottomBorderPadding && css`
+    border-bottom: 0;
+    padding-bottom: 0;
+  `}
   }
 `
 
@@ -112,5 +121,6 @@ export {
   StyledTitledSection,
   StyledTitledSectionHeaderRow,
   StyledTitledSectionDescription,
-  StyledTitledSectionBody
+  StyledTitledSectionBody,
+  IStyledSectionProps
 }

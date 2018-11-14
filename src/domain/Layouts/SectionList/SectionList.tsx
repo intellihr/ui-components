@@ -3,7 +3,12 @@ import { AnnotatedSection } from './subcomponents/AnnotatedSection'
 import { TitledSection } from './subcomponents/TitledSection'
 import { StyledSection } from './style'
 
-export class SectionList extends React.Component {
+export interface ISectionListProps {
+  /** Remove bottom border and bottom padding */
+  removeBottomBorderPadding?: boolean
+}
+
+export class SectionList extends React.Component<ISectionListProps, never> {
   public static Section = StyledSection
   public static AnnotatedSection = AnnotatedSection
   public static TitledSection = TitledSection
