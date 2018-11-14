@@ -17,6 +17,18 @@ def shouldSkipBuild() {
 
 def SKIP_BUILD = false
 
+final def DEFAULT_RELEASE_VERSION = 'prerelease'
+final def RELEASE_VERSION = 'prerelease'
+
+def shouldSkipBuild() {
+  return this.script.sh(
+    script: "git log -1 | grep '.*\\[ci skip\\].*'",
+    returnStatus: true
+  )
+}
+
+final def SKIP_BUILD = shouldSkipBuild()
+
 pipeline {
   agent any
 
@@ -25,24 +37,6 @@ pipeline {
   }
 
   stages {
-    stage('prepare') {
-      steps {
-        script {
-          // method 1
-          SKIP_BUILD = shouldSkipBuild()
-
-          // method 2 - but this scans all changes in current build - of course you can only make it do the newest change though
-          for (change in currentBuild.changeSets) {
-            for (commit in change.items) {
-              if (commit.msg.contains('[ci skip]')) {
-                env.SKIP_CI = 'true'
-              }
-            }
-          }
-        }
-      }
-    }
-
     stage('Checkout gh-pages') {
       when {
         branch 'master'
