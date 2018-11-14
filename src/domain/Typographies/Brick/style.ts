@@ -52,7 +52,6 @@ const colors = {
   }
 }
 
-
 export const BrickWrapper = styled.span<IBrickProps>`
   border-radius: ${Variables.Style.borderRadius}px;
   padding: 2px 4px;
