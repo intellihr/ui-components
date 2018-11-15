@@ -6,7 +6,8 @@ type AvatarGroupSize = 'small' | 'medium'
 
 interface IStyledAvatarGroupWrapperProps {
   avatarCount: number,
-  avatarGroupSize: AvatarGroupSize
+  avatarGroupSize: AvatarGroupSize,
+  isHoverable: boolean
 }
 
 interface IStyledAvatarProps {
@@ -62,6 +63,15 @@ const StyledAvatarGroupWrapper = styled.div<IStyledAvatarGroupWrapperProps>`
   
   height: ${radiusForSize}px;
   width: ${totalWidth}px;
+  
+  ${props => (props.isHoverable) && css`
+    cursor: pointer;
+    transition: opacity .1s ease-in;
+    
+    &:hover {
+      opacity: 0.5;
+    }
+  `}
 `
 
 const StyledAvatar = styled.div<IStyledAvatarProps>`
@@ -76,15 +86,11 @@ const StyledAvatar = styled.div<IStyledAvatarProps>`
   text-transform: uppercase;
   user-select: none;
   
-  ${props => {
-    if (props.isOverflow || props.isInitials) {
-      return css`
-        align-items: center;
-        display: flex;
-        justify-content: center;
-      `
-    }
-  }}
+  ${props => (props.isOverflow || props.isInitials) && css`
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  `}
   
   position: absolute;
   height: ${radiusForSize}px;

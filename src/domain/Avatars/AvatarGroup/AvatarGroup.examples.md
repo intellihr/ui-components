@@ -39,9 +39,66 @@
   />
 ```
 
-#### Using small inline with text
+#### Example of using small size with dropdowns
 
 ```jsx
+const avatars = [
+  {
+    initials: 'JW',
+    imageUrl: 'https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
+  },
+  {
+    initials: 'JW',
+    imageUrl: 'https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
+  },
+  {
+    initials: 'BD',
+    imageUrl: 'badimageurl'
+  },
+  {
+    initials: 'AB'
+  },
+  {
+    initials: 'JW',
+    imageUrl: 'https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
+  },
+  {
+    initials: 'JW',
+    imageUrl: 'https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
+  },
+  {
+    initials: 'JW',
+    imageUrl: 'https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
+  }
+];
+
+const dropdownSections = [
+  {
+    text: 'John Wick',
+    onClick: () => alert('Test')
+  },
+  {
+    text: 'John Wick',
+    href: 'https://www.intellihr.com.au'
+  },
+  {
+    text: 'Bad Image',
+    onClick: () => alert('Test')
+  },
+  {
+    text: 'Abe Babe',
+    onClick: () => alert('Test')
+  },
+  {
+    text: 'John Wick',
+    onClick: () => alert('Test')
+  },
+  {
+    text: 'John Wick',
+    onClick: () => alert('Test')
+  }
+];
+
 <div>
   <Text
     weight='heavy'
@@ -55,38 +112,18 @@
     assigned to Lyanna Moreton
   </Brick>
   {' '}
-  <AvatarGroup
-    size='small'
-    avatars={[
-      {
-        initials: 'JW',
-        imageUrl: 'https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      },
-      {
-        initials: 'JW',
-        imageUrl: 'https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      },
-      {
-        initials: 'BD',
-        imageUrl: 'badimageurl'
-      },
-      {
-        initials: 'AB'
-      },
-      {
-        initials: 'JW',
-        imageUrl: 'https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      },
-      {
-        initials: 'JW',
-        imageUrl: 'https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      },
-      {
-        initials: 'JW',
-        imageUrl: 'https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      }
-    ]}
+  <DropdownMenu
+    toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+      <AvatarGroup
+        avatars={avatars}
+        size='small'
+        isHoverable
+        onClick={toggleMenu}
+        wrapperRef={toggleComponentRef}
+        wrapperOverrides={ariaProps}
+      />
+    }
+    sections={dropdownSections}
   />
-
 </div>
 ```

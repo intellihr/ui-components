@@ -27,7 +27,9 @@ interface IAvatarGroup {
   /** Onclick event for the avatar group */
   onClick?: (event: React.MouseEvent<HTMLSpanElement>) => void,
   /** Component context */
-  componentContext?: string
+  componentContext?: string,
+  /** Inner ref to the wrapper */
+  wrapperRef?: React.RefObject<HTMLSpanElement>,
   /** Wrapper props passthrough */
   wrapperOverrides?: any
 }
@@ -57,18 +59,24 @@ class AvatarGroup extends React.PureComponent<IAvatarGroup, IAvatarGroupState> {
     const {
       size,
       componentContext,
-      onClick
+      onClick,
+      isHoverable,
+      wrapperRef,
+      wrapperOverrides
     } = this.props
 
     const truncatedAvatars = this.truncatedAvatars
 
     return (
       <StyledAvatarGroupWrapper
-        data-component-type={Props.ComponentType.AvatarGroup}
-        data-component-context={componentContext}
-        onClick={onClick}
         avatarCount={truncatedAvatars.length}
         avatarGroupSize={size!}
+        data-component-type={Props.ComponentType.AvatarGroup}
+        data-component-context={componentContext}
+        innerRef={wrapperRef}
+        isHoverable={isHoverable}
+        onClick={onClick}
+        {...wrapperOverrides}
       >
         {truncatedAvatars.map(this.getAvatarForProps).reverse()}
       </StyledAvatarGroupWrapper>
