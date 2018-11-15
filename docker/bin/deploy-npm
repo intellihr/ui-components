@@ -8,8 +8,6 @@
 #   2. `npm version` which will create a new tag for deployment
 #   3. `npm publish` which will push files to NPM and publish a new version
 #   4. Push the new tag to GitHub
-#   5. Update the release version if it is different than the default version
-#   6. Push new changes to develop
 ###
 
 yarn build
@@ -24,12 +22,3 @@ npm publish --access public
 
 git remote add github "git@github.com:intellihr/ui-components.git" || true
 git push --tags github
-
-git pull --rebase github develop
-
-sed -i -r "s/\"releaseVersion.*/\"releaseVersion\": \"$DEFAULT_RELEASE_VERSION\"/" release-config.json
-
-git add release-config.json
-git commit -m "[ci skip] Reset to default release version $DEFAULT_RELEASE_VERSION" || true
-
-git push github HEAD:develop
