@@ -6,12 +6,10 @@ import net.intellihr.CodeAnalysis
 
 def helper = new net.intellihr.Helper(this)
 def analyse = new net.intellihr.CodeAnalysis(this)
-def config
 
 def skipBuild = false
 
-def DEFAULT_RELEASE_VERSION
-def RELEASE_VERSION
+def RELEASE_VERSION = 'patch'
 
 pipeline {
   agent any
@@ -25,9 +23,30 @@ pipeline {
       steps {
         script {
           skipBuild = helper.shouldSkipBuild()
-          config = readJSON(file: 'release-config.json')
-          DEFAULT_RELEASE_VERSION = config.defaultReleaseVersion
-          RELEASE_VERSION = config.releaseVersion
+        }
+      }
+    }
+
+    stage('Detect Version') {
+      when {
+        branch 'master'
+      }
+      steps {
+        script {
+          def prId = helper.github.getPullRequestIdFromCommit('intellihr/ui-components', env.GIT_COMMIT)
+          if (prId != null) {
+            echo "Pull request ID: ${prId}"
+            for (label in helper.github.getPullRequestLabels('intellihr/ui-components', prId)) {
+              if (label == 'MAJOR') {
+                RELEASE_VERSION = 'major'
+                break
+              } else if (label == 'MINOR') {
+                RELEASE_VERSION = 'minor'
+                break
+              }
+            }
+          }
+          echo "The next release version is ${RELEASE_VERSION}"
         }
       }
     }
