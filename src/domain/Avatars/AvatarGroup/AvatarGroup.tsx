@@ -1,13 +1,14 @@
 import React from 'react'
 import { Props } from '../../../common'
 import {
+  AvatarGroupSize,
   StyledAvatarGroupWrapper,
   StyledAvatar
 } from './style'
 
 interface IAvatarGroupAvatar {
   /** The initials within the avatar (when the image fails to load) */
-  initials?: string
+  initials?: string,
   /** The image url to display as an avatar */
   imageUrl?: string
 }
@@ -15,6 +16,8 @@ interface IAvatarGroupAvatar {
 interface IAvatarGroup {
   /** The list of avatars to show in the group */
   avatars: IAvatarGroupAvatar[],
+  /** Size of the avatar group */
+  size?: AvatarGroupSize,
   /** The max number of avatars to display in the group; set to null for no limit */
   maxAvatarCount?: number | null,
   /** Whether to show an additional count if more avatars are provided than shown */
@@ -36,6 +39,7 @@ interface IAvatarGroupState {
 
 class AvatarGroup extends React.PureComponent<IAvatarGroup, IAvatarGroupState> {
   public static defaultProps: Partial<IAvatarGroup> = {
+    size: 'medium',
     maxAvatarCount: 6,
     showOverflowCount: true,
     isHoverable: false
@@ -51,19 +55,22 @@ class AvatarGroup extends React.PureComponent<IAvatarGroup, IAvatarGroupState> {
 
   public render (): JSX.Element {
     const {
+      size,
       componentContext,
-      onClick,
-      wrapperOverrides
+      onClick
     } = this.props
+
+    const truncatedAvatars = this.truncatedAvatars
 
     return (
       <StyledAvatarGroupWrapper
         data-component-type={Props.ComponentType.AvatarGroup}
         data-component-context={componentContext}
         onClick={onClick}
-        {...wrapperOverrides}
+        avatarCount={truncatedAvatars.length}
+        avatarGroupSize={size!}
       >
-        {this.truncatedAvatars.map(this.getAvatarForProps)}
+        {truncatedAvatars.map(this.getAvatarForProps).reverse()}
       </StyledAvatarGroupWrapper>
     )
   }
@@ -79,10 +86,12 @@ class AvatarGroup extends React.PureComponent<IAvatarGroup, IAvatarGroupState> {
       const truncatedAvatars = avatars.slice(0, maxAvatarCount)
 
       if (showOverflowCount) {
+        const overflowCount = Math.min(avatars.length - truncatedAvatars.length, 99)
+
         truncatedAvatars.pop()
 
         truncatedAvatars.push({
-          initials: `+${avatars.length - truncatedAvatars.length}`
+          initials: `+${overflowCount}`
         })
       }
 
@@ -94,6 +103,11 @@ class AvatarGroup extends React.PureComponent<IAvatarGroup, IAvatarGroupState> {
 
   private getAvatarForProps = (avatarProps: IAvatarGroupAvatar, index: number) => {
     const {
+      maxAvatarCount,
+      size
+    } = this.props
+
+    const {
       initials,
       imageUrl
     } = avatarProps
@@ -101,28 +115,23 @@ class AvatarGroup extends React.PureComponent<IAvatarGroup, IAvatarGroupState> {
     let avatarContent
 
     if (!imageUrl || this.state.avatarsFailedLoading.has(index)) {
-      avatarContent = (
-        <div className='avatar-initials-container'>
-          <span className='avatar-initials'>
-            {initials}
-          </span>
-        </div>
-      )
+      avatarContent = initials
     } else {
       avatarContent = (
-        <div className='avatar-picture-container'>
-          <img
-            data-img-index={index}
-            src={imageUrl}
-            onError={this.handleImageError}
-          />
-        </div>
+        <img
+          data-img-index={index}
+          src={imageUrl}
+          onError={this.handleImageError}
+        />
       )
     }
 
     return (
       <StyledAvatar
         key={index}
+        avatarIndex={index}
+        avatarGroupSize={size!}
+        isOverflow={maxAvatarCount !== null && index === maxAvatarCount! - 1}
       >
         {avatarContent}
       </StyledAvatar>
