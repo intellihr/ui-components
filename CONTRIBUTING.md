@@ -9,6 +9,7 @@ This file contains a set of guidelines for contributing to UI-Components. Guidel
 ## Table of Contents
 
 [Code Standard](#code-standard)
+  * [Version Control](#version-control)
   * [Folder Structure](#folder-structure)
       * [Structure Overview](#structure-overview)
       * [Structure Explained](#structure-explained)
@@ -18,6 +19,21 @@ This file contains a set of guidelines for contributing to UI-Components. Guidel
   * [Request Change of Code Standard](#request-change-of-code-standard)
 
 ## Code Standard
+
+### Version Control
+
+Before you create a PR,
+Please update `releaseVersion` in `release-config.json`
+if the version is lower than your changes
+
+Available Versions:
+
+* `major`: Changes with backward incompatibility
+* `minor`: Extra functionality with backward compatible changes
+* `patch`: Bug fixes or improvements with backward compatible changes
+
+When a new version is released by Jenkins,
+`releaseVersion` will be automatically reset to `defaultReleaseVersion`.
 
 ### Folder Structure
 
@@ -69,7 +85,7 @@ If your file is related to a single component, you should instead group it toget
 Two type objects are provided from common. `Props` contains enums for standard prop types (e.g.
 `Size` or `PositionXY`). `Variables` contains enums for the design system variables, like `Color`
 and `ZIndex`.
- 
+
 ```typescript
 import { Props, Variables } from '../../common'
 ```
@@ -121,27 +137,27 @@ styled-components is *highly encouraged*, but there are several reasons to prefe
       legacy classes to style older pages which are not using javascript. If your component is likely to need
       to be used on old `.blade.php` pages, then you can export both a js-specific class and a global classname
       as follows:
-      
+
       ```scss
       %my-component {
         // Your properties here
         color: red;
       }
-      
+
       :local(.my-component) {
         @extend %%my-component;
       }
-      
+
       .global-my-component-class {
         @extend %%my-component;
       }
       ```
-      
+
 2.    If your component relies on a third-party library which uses its own css. You should never mix css/scss
       and styled components in the same component. Ideally, look at the css for the library and see if you can
       recreate it yourself, but don't try to override properties using styled-components, and use `.scss` if
       there are no other options.
-      
+
 Aside: **NEVER** use class names from foundation or legacy sass to style your component. All styles for a component
 should be self-contained.
 

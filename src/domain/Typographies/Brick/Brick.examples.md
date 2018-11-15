@@ -2,44 +2,14 @@
 
 ```jsx
 <div>
-  <Brick
-    text='Alert!!!'
-    color='alert'
-  />
-
-  <Brick
-    text='Success'
-    color='success'
-  />
-
-  <Brick
-    text='Warning!'
-    color='warning'
-  />
-
-  <Brick
-    text='Primary'
-    color='primary'
-  />
-
-  <Brick
-    text='Neutral (default)'
-    color='neutral'
-  />
-
-  <Brick
-    text='Secondary'
-    color='secondary'
-  />
-
-  <Brick
-    text='Highlight'
-    color='highlight'
-  />
-  <Brick
-    text='Dark'
-    color='dark'
-  />
+  <Brick color='alert'>Alert!!!</Brick>
+  <Brick color='success'>Success</Brick>
+  <Brick color='warning'>Warning!</Brick>
+  <Brick color='primary'>Primary</Brick>
+  <Brick color='neutral'>Neutral (default)</Brick>
+  <Brick color='secondary'>Secondary</Brick>
+  <Brick color='highlight'>Highlight</Brick>
+  <Brick color='dark'>Dark</Brick>
 </div>
 ```
 
@@ -49,45 +19,51 @@
 <div>
   <div>
     <Brick
-      text='X-Small'
       color='dark'
       typographyType='xsmall'
-    />
+    >
+      X-Small
+    </Brick>
   </div>
   <div>
     <Brick
-      text='Small'
       color='dark'
       typographyType='small'
-    />
+    >
+      Small
+    </Brick>
   </div>
   <div>
     <Brick
-      text='Body (default)'
       color='dark'
       typographyType='body'
-    />
+    >
+      Body (default)
+    </Brick>
   </div>
   <div>
     <Brick
-      text='Heading'
       color='dark'
       typographyType='heading'
-    />
+    >
+      Heading
+    </Brick>
   </div>
   <div>
     <Brick
-      text='Display'
       color='dark'
       typographyType='display'
-    />
+    >
+      Display
+    </Brick>
   </div>
   <div>
     <Brick
-      text='Display Large'
       color='dark'
       typographyType='display-large'
-    />
+    >
+      display-large
+    </Brick>
   </div>
 </div>
 ```

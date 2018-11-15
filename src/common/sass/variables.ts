@@ -110,46 +110,6 @@ namespace Variables {
     fwHeavy =          600
   }
 
-  export interface IFunctionalColorProps {
-    textColor: Variables.Color
-    backgroundColor: Variables.Color
-  }
-
-  export const functionalColors: { [i in Props.FunctionalColor]: IFunctionalColorProps } = {
-    [Props.FunctionalColor.Alert]: {
-      textColor: Variables.Color.r600,
-      backgroundColor: Variables.Color.r100
-    },
-    [Props.FunctionalColor.Success]: {
-      textColor: Variables.Color.g600,
-      backgroundColor: Variables.Color.g100
-    },
-    [Props.FunctionalColor.Warning]: {
-      textColor: Variables.Color.o600,
-      backgroundColor: Variables.Color.o100
-    },
-    [Props.FunctionalColor.Primary]: {
-      textColor: Variables.Color.i600,
-      backgroundColor: Variables.Color.i100
-    },
-    [Props.FunctionalColor.Neutral]: {
-      textColor: Variables.Color.n800,
-      backgroundColor: Variables.Color.n200
-    },
-    [Props.FunctionalColor.Secondary]: {
-      textColor: Variables.Color.b600,
-      backgroundColor: Variables.Color.b100
-    },
-    [Props.FunctionalColor.Highlight]: {
-      textColor: Variables.Color.c600,
-      backgroundColor: Variables.Color.c100
-    },
-    [Props.FunctionalColor.Dark]: {
-      textColor: Variables.Color.n200,
-      backgroundColor: Variables.Color.n700
-    }
-  }
-
   export enum LineHeight {
     lhXSmall =          18,
     lhSmall =           20,
