@@ -188,7 +188,6 @@ pipeline {
               script {
                 env.NPM_TOKEN = helper.getSSMParameter('shared.NPM_TOKEN')
                 env.RELEASE_VERSION = RELEASE_VERSION
-                env.DEFAULT_RELEASE_VERSION = DEFAULT_RELEASE_VERSION
               }
 
               sh '''
@@ -198,7 +197,6 @@ pipeline {
                     -e SSH_AUTH_SOCK=/tmp/agent.sock \
                     -e NPM_TOKEN=$NPM_TOKEN \
                     -e RELEASE_VERSION=$RELEASE_VERSION \
-                    -e DEFAULT_RELEASE_VERSION=$DEFAULT_RELEASE_VERSION \
                     jenkins ./docker/bin/deploy-npm
               '''
             }
