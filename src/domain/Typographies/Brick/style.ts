@@ -1,10 +1,13 @@
-import styled, { css, StyledFunction } from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Props, Variables } from '../../../common'
 import { styleForTypographyType } from '../services/textStyles'
-import { Anchor } from '../../Internals/Anchor'
-import React from 'react'
-import { ITextLinkProps } from '../../Links/TextLink'
-import { IBrickProps } from './Brick'
+
+export interface IBrickWrapperProps {
+  /** Color of the brick  */
+  color?: BrickColor
+  /** Specify the type of typography to use */
+  typographyType?: Props.TypographyType
+}
 
 export enum BrickColor {
   Alert = 'alert',
@@ -52,14 +55,14 @@ const colors = {
   }
 }
 
-export const BrickWrapper = styled.span<IBrickProps>`
+export const BrickWrapper = styled.span<IBrickWrapperProps>`
   border-radius: ${Variables.Style.borderRadius}px;
   padding: 2px 4px;
   word-break: break-word;
 
-  ${(props: IBrickProps) => styleForTypographyType(props.typographyType)}
-  ${(props: IBrickProps) => {
-    const color = colors[props.color || BrickColor.Neutral]
+  ${(props: IBrickWrapperProps) => styleForTypographyType(props.typographyType)}
+  ${(props: IBrickWrapperProps) => {
+    const color = colors[props.color!]
     return css `
       background: ${color.backgroundColor};
       color: ${color.textColor};
