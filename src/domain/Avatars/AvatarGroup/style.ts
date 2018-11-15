@@ -58,7 +58,7 @@ function avatarOffset (props: IStyledAvatarProps): number {
 const StyledAvatarGroupWrapper = styled.div<IStyledAvatarGroupWrapperProps>`
   position: relative;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: bottom;
   
   height: ${radiusForSize}px;
   width: ${totalWidth}px;
@@ -76,9 +76,15 @@ const StyledAvatar = styled.div<IStyledAvatarProps>`
   text-transform: uppercase;
   user-select: none;
   
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  ${props => {
+    if (props.isOverflow || props.isInitials) {
+      return css`
+        align-items: center;
+        display: flex;
+        justify-content: center;
+      `
+    }
+  }}
   
   position: absolute;
   height: ${radiusForSize}px;
