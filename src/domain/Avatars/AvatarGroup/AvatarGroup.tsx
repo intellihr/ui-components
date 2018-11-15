@@ -94,9 +94,9 @@ class AvatarGroup extends React.PureComponent<IAvatarGroup, IAvatarGroupState> {
       const truncatedAvatars = avatars.slice(0, maxAvatarCount)
 
       if (showOverflowCount) {
-        const overflowCount = Math.min(avatars.length - truncatedAvatars.length, 99)
-
         truncatedAvatars.pop()
+
+        const overflowCount = Math.min(avatars.length - truncatedAvatars.length, 99)
 
         truncatedAvatars.push({
           initials: `+${overflowCount}`
