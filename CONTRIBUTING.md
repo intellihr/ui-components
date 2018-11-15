@@ -22,18 +22,14 @@ This file contains a set of guidelines for contributing to UI-Components. Guidel
 
 ### Version Control
 
-Before you create a PR,
-Please update `releaseVersion` in `release-config.json`
-if the version is lower than your changes
+Version Control is based on the version label of the release PR.
+intelliBot will automatically attach the corresponding label.
 
 Available Versions:
 
 * `major`: Changes with backward incompatibility
 * `minor`: Extra functionality with backward compatible changes
 * `patch`: Bug fixes or improvements with backward compatible changes
-
-When a new version is released by Jenkins,
-`releaseVersion` will be automatically reset to `defaultReleaseVersion`.
 
 ### Folder Structure
 
