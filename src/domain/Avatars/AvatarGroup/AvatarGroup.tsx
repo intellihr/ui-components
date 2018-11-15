@@ -113,8 +113,9 @@ class AvatarGroup extends React.PureComponent<IAvatarGroup, IAvatarGroupState> {
     } = avatarProps
 
     let avatarContent
+    const isInitials = !imageUrl || this.state.avatarsFailedLoading.has(index)
 
-    if (!imageUrl || this.state.avatarsFailedLoading.has(index)) {
+    if (isInitials) {
       avatarContent = initials
     } else {
       avatarContent = (
@@ -131,6 +132,7 @@ class AvatarGroup extends React.PureComponent<IAvatarGroup, IAvatarGroupState> {
         key={index}
         avatarIndex={index}
         avatarGroupSize={size!}
+        isInitials={isInitials}
         isOverflow={maxAvatarCount !== null && index === maxAvatarCount! - 1}
       >
         {avatarContent}

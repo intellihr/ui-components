@@ -12,13 +12,14 @@ interface IStyledAvatarGroupWrapperProps {
 interface IStyledAvatarProps {
   avatarIndex: number,
   avatarGroupSize: AvatarGroupSize,
+  isInitials: boolean,
   isOverflow: boolean
 }
 
 const avatarSizeMap = {
   small: {
     radius: 24,
-    overlap: 6,
+    overlap: 4,
     fontSize: 10
   },
   medium: {
@@ -65,7 +66,7 @@ const StyledAvatarGroupWrapper = styled.div<IStyledAvatarGroupWrapperProps>`
 
 const StyledAvatar = styled.div<IStyledAvatarProps>`
   background-color: ${Variables.Color.n200};
-  border: 1px solid ${Variables.Color.n100};
+  border: 1px solid ${props => (props.isOverflow || props.isInitials) ? Variables.Color.n400 : Variables.Color.n100};
   border-radius: 50%;
   color: ${props => props.isOverflow ? Variables.Color.n700 : Variables.Color.i400};
   overflow: hidden;

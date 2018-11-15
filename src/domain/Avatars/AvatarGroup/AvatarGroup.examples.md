@@ -16,7 +16,8 @@
         imageUrl: 'badimageurl'
       },
       {
-        initials: 'AB'
+        initials: 'AB',
+        imageUrl: 'https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
       },
       {
         initials: 'JW',
@@ -42,9 +43,18 @@
 
 ```jsx
 <div>
-  <Text>
-    assigned away from
+  <Text
+    weight='heavy'
+  >
+    Direct Reports
   </Text>
+  {' '}
+  <Brick
+    color='secondary'
+  >
+    assigned to Lyanna Moreton
+  </Brick>
+  {' '}
   <AvatarGroup
     size='small'
     avatars={[
