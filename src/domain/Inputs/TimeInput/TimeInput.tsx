@@ -1,33 +1,28 @@
-import React, { ChangeEventHandler, RefObject } from 'react'
+import React, {RefObject} from 'react'
 import { endsWith } from 'lodash'
 
 interface ITimeInputProps {
   /** time to display */
-  value: string
+  value?: string
   /** action when time number input is changed */
-  handleChange: (value: string) => void
+  handleChange?: any
   /** If true, displays the time with the am pm format */
   isTimeRange?: boolean
 }
 
 interface ITimeInputState {
-  /** the time to use for update the input */
-  value: string
-  /** the cursorPosition to use for update the input */
+  value: any
   cursorPosition: number
-  /** If true, user is focus on the input */
   isFocus: boolean
-  /** the cursorPosition before handling change */
   position: number | null
-  /** the added character when user inputs in the time input field */
   addedCharacter: string | null
-  /** the character before the removed character when user backspaces in the time input field */
   beforeRemovedCharacter: string | null
 }
 
 class TimeInput extends React.PureComponent<ITimeInputProps, ITimeInputState> {
   public static defaultProps: Partial<ITimeInputProps> = {
-    isTimeRange: false
+    isTimeRange: false,
+    value: '15:55'
   }
 
   public state: ITimeInputState = {
@@ -79,8 +74,7 @@ class TimeInput extends React.PureComponent<ITimeInputProps, ITimeInputState> {
     this.setState({isFocus:false})
   }
 
-  // change the displayed value for the 12 hour format display
-  private formattedTime = (value:string): string => {
+  private formattedTime = (value:string):string => {
     const {
       position,
       beforeRemovedCharacter,
@@ -89,21 +83,16 @@ class TimeInput extends React.PureComponent<ITimeInputProps, ITimeInputState> {
     } = this.state
 
     const editMode = (
-      /** return true if the user backspaces the first character of the time input */
       (position === 0 && beforeRemovedCharacter === undefined && addedCharacter === null) ||
-      /** return true if the user backspaces and the removed character is 0 */
       (beforeRemovedCharacter === '0') ||
-      /** return true if the user input character in front of the first character and the added character is 0, more than or equal to 2 or not a number */
       (position === 1 && (addedCharacter === '0' || !this.isNumber(addedCharacter) || Number(addedCharacter)>=2) )||
-      /** return true if the user input character in front of the second character and the added character is 0 */
       (position === 2 && addedCharacter === '0')
     ) && isFocus
     const hourNumber = Number(value.substr(0,2))
     const timeWithoutHour = value.substr(2)
 
     if (value && value.length === 5) {
-      // it converts to am when the hour is less than 12
-      if (hourNumber < 12) {
+      if (hourNumber <= 11) {
         if (hourNumber === 0) {
           if (editMode){
             return `00${timeWithoutHour} am`
@@ -120,7 +109,6 @@ class TimeInput extends React.PureComponent<ITimeInputProps, ITimeInputState> {
         return `${value} pm`
       }
 
-      // it converts to pm when the hour is more than 12
       if (hourNumber > 12) {
         if (hourNumber <= 21) {
           return `0${hourNumber-12}${timeWithoutHour} pm`
@@ -132,20 +120,20 @@ class TimeInput extends React.PureComponent<ITimeInputProps, ITimeInputState> {
     return value
   }
 
-  private isNumber = (value: string | null): boolean => {
+  private isNumber: any = (value: any) => {
     const num = Number(value)
     return !isNaN(num) && String(value) === String(num)
   }
 
-  private formatTimeItem = (value: string): string => {
+  private formatTimeItem = (value:any) => {
     return `${value || ''}00`.substr(0, 2)
   }
 
-  private validateTimeAndCursor = (value: string, defaultValue: string, cursorPosition: number = 0) => {
-    const [oldH, oldM] = defaultValue.split(':')
+  private validateTimeAndCursor: any = (value:any, defaultValue:any, colon = ':', cursorPosition = 0) => {
+    const [oldH, oldM] = defaultValue.split(colon)
 
     let newCursorPosition = Number(cursorPosition)
-    let [newH, newM] = value.split(':')
+    let [newH, newM] = value.split(colon)
 
     newH = this.formatTimeItem(newH)
     if (Number(newH[0]) > 2) {
@@ -166,18 +154,16 @@ class TimeInput extends React.PureComponent<ITimeInputProps, ITimeInputState> {
       newCursorPosition -= 1
     }
 
-    const validatedValue = `${newH}:${newM}`
+    const validatedValue = `${newH}${colon}${newM}`
 
     return [validatedValue, newCursorPosition]
   }
 
   private getTimeByAddedAmPm = (addedCharacter: string, oldValueHourNumber: number, oldValue: string, isPm: boolean): string => {
     if (isPm && addedCharacter === 'a') {
-      // oldValue (in 24 hour) minus 12 to be the new hour, and add the 0 in front it if it just in one digit
       return `${oldValueHourNumber<22 ? '0' : ''}${(Number(oldValue.substr(0, 2))-12).toString()}${oldValue.substr(2)}`
     }
     if (!isPm && addedCharacter === 'p') {
-      // oldValue (in 24 hour) plus 12 to be the new hour
       return `${(oldValueHourNumber+12)}${oldValue.substr(2)}`
     }
     return ''
@@ -354,7 +340,7 @@ class TimeInput extends React.PureComponent<ITimeInputProps, ITimeInputState> {
     }
   }
 
-  private timeChange: ChangeEventHandler<HTMLInputElement> = (event: any) => {
+  private timeChange: any = (event: any) => {
     const {
       handleChange,
       isTimeRange
@@ -363,7 +349,7 @@ class TimeInput extends React.PureComponent<ITimeInputProps, ITimeInputState> {
     const maxLength = isTimeRange? 8 : 5
 
     const oldValue = this.state.value
-    const inputEl = event.targetsrc/domain/Inputs/index.ts
+    const inputEl = event.target
     const inputValue = inputEl.value
     const position = inputEl.selectionEnd
     const isType = isTimeRange? inputValue.length > this.formattedTime(oldValue).length : inputValue.length > oldValue.length
@@ -388,14 +374,17 @@ class TimeInput extends React.PureComponent<ITimeInputProps, ITimeInputState> {
       newValueAndPosition = this.getTimeAndPositionByRemovedCharacter(inputValue, position, oldValue, isPm)
     }
 
+    console.log(newValueAndPosition, 'newValueAndPosition')
+
     const [validatedTime, validatedCursorPosition] = this.validateTimeAndCursor(
       newValueAndPosition.newValue ? newValueAndPosition.newValue : oldValue,
       oldValue,
+      ':',
       newValueAndPosition.newPosition
     )
 
-    this.setState({value: `${validatedTime}`, cursorPosition: Number(validatedCursorPosition)}, () => {
-      handleChange(`${validatedTime}`)
+    this.setState({value: validatedTime, cursorPosition: validatedCursorPosition}, () => {
+      handleChange(validatedTime)
     })
 
     event.persist()
