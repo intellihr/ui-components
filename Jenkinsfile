@@ -6,11 +6,12 @@ import net.intellihr.CodeAnalysis
 
 def helper = new net.intellihr.Helper(this)
 def analyse = new net.intellihr.CodeAnalysis(this)
+def config
 
 def skipBuild = false
 
-final def DEFAULT_RELEASE_VERSION = 'prerelease'
-final def RELEASE_VERSION = 'prerelease'
+def DEFAULT_RELEASE_VERSION
+def RELEASE_VERSION
 
 pipeline {
   agent any
@@ -24,6 +25,9 @@ pipeline {
       steps {
         script {
           skipBuild = helper.shouldSkipBuild()
+          config = readJSON(file: 'release-config.json')
+          DEFAULT_RELEASE_VERSION = config.defaultReleaseVersion
+          RELEASE_VERSION = config.releaseVersion
         }
       }
     }
