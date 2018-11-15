@@ -31,9 +31,9 @@ export class Brick extends React.PureComponent<IBrickProps> {
 
     return (
       <BrickWrapper
-        color={color}
+        color={color!}
         className={className}
-        typographyType={typographyType}
+        typographyType={typographyType!}
         data-component-type={Props.ComponentType.Brick}
         data-component-context={componentContext}
       >

@@ -2,14 +2,14 @@ import styled, { css } from 'styled-components'
 import { Props, Variables } from '../../../common'
 import { styleForTypographyType } from '../services/textStyles'
 
-export interface IBrickWrapperProps {
+interface IBrickWrapperProps {
   /** Color of the brick  */
-  color?: BrickColor
+  color: BrickColor
   /** Specify the type of typography to use */
-  typographyType?: Props.TypographyType
+  typographyType: Props.TypographyType
 }
 
-export enum BrickColor {
+enum BrickColor {
   Alert = 'alert',
   Success = 'success',
   Warning = 'warning',
@@ -55,17 +55,23 @@ const colors = {
   }
 }
 
-export const BrickWrapper = styled.span<IBrickWrapperProps>`
+const BrickWrapper = styled.span<IBrickWrapperProps>`
   border-radius: ${Variables.Style.borderRadius}px;
   padding: 2px 4px;
   word-break: break-word;
 
   ${(props: IBrickWrapperProps) => styleForTypographyType(props.typographyType)}
   ${(props: IBrickWrapperProps) => {
-    const color = colors[props.color!]
+    const color = colors[props.color]
     return css `
       background: ${color.backgroundColor};
       color: ${color.textColor};
     `
   }}
 `
+
+export {
+  BrickColor,
+  BrickWrapper,
+  IBrickWrapperProps
+}
