@@ -89,7 +89,7 @@ class TimeInput extends React.PureComponent<ITimeInputProps, ITimeInputState> {
     } = this.state
 
     const editMode = (
-      /** return true if the user backspaces the first character of the ime input */
+      /** return true if the user backspaces the first character of the time input */
       (position === 0 && beforeRemovedCharacter === undefined && addedCharacter === null) ||
       /** return true if the user backspaces and the removed character is 0 */
       (beforeRemovedCharacter === '0') ||
