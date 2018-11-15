@@ -2,48 +2,30 @@
 
 exports[`<Brick /> should render a Brick with default values 1`] = `
 <styled.span
-  color="#F5F7FA"
+  color="neutral"
   data-component-type="brick"
+  typographyType="body"
 >
-  <Text
-    color="#262D33"
-    isInline={true}
-    tag="span"
-    type="body"
-  >
-    Test
-  </Text>
+  Test
 </styled.span>
 `;
 
 exports[`<Brick /> should render a Brick with the alert color 1`] = `
 <styled.span
-  color="#FFF1F0"
+  color="alert"
   data-component-type="brick"
+  typographyType="body"
 >
-  <Text
-    color="#B30F00"
-    isInline={true}
-    tag="span"
-    type="body"
-  >
-    Test
-  </Text>
+  Test
 </styled.span>
 `;
 
 exports[`<Brick /> should render a Brick with the heading typography 1`] = `
 <styled.span
-  color="#F5F7FA"
+  color="neutral"
   data-component-type="brick"
+  typographyType="heading"
 >
-  <Text
-    color="#262D33"
-    isInline={true}
-    tag="span"
-    type="heading"
-  >
-    Test
-  </Text>
+  Test
 </styled.span>
 `;
