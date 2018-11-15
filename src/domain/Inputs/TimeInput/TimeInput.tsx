@@ -19,9 +19,9 @@ interface ITimeInputState {
   isFocus: boolean
   /** the cursorPosition before handling change */
   position: number | null
-  /** the added character when user input in the time input field */
+  /** the added character when user inputs in the time input field */
   addedCharacter: string | null
-  /** the character before the removed character when user backspace in the time input field */
+  /** the character before the removed character when user backspaces in the time input field */
   beforeRemovedCharacter: string | null
 }
 
@@ -79,6 +79,7 @@ class TimeInput extends React.PureComponent<ITimeInputProps, ITimeInputState> {
     this.setState({isFocus:false})
   }
 
+  // change the displayed value for the 12 hour format display
   private formattedTime = (value:string): string => {
     const {
       position,
@@ -88,16 +89,21 @@ class TimeInput extends React.PureComponent<ITimeInputProps, ITimeInputState> {
     } = this.state
 
     const editMode = (
+      /** return true if the user backspaces the first character of the ime input */
       (position === 0 && beforeRemovedCharacter === undefined && addedCharacter === null) ||
+      /** return true if the user backspaces and the removed character is 0 */
       (beforeRemovedCharacter === '0') ||
+      /** return true if the user input character in front of the first character and the added character is 0, more than or equal to 2 or not a number */
       (position === 1 && (addedCharacter === '0' || !this.isNumber(addedCharacter) || Number(addedCharacter)>=2) )||
+      /** return true if the user input character in front of the second character and the added character is 0 */
       (position === 2 && addedCharacter === '0')
     ) && isFocus
     const hourNumber = Number(value.substr(0,2))
     const timeWithoutHour = value.substr(2)
 
     if (value && value.length === 5) {
-      if (hourNumber <= 11) {
+      // it converts to am when the hour is less than 12
+      if (hourNumber < 12) {
         if (hourNumber === 0) {
           if (editMode){
             return `00${timeWithoutHour} am`
@@ -114,6 +120,7 @@ class TimeInput extends React.PureComponent<ITimeInputProps, ITimeInputState> {
         return `${value} pm`
       }
 
+      // it converts to pm when the hour is more than 12
       if (hourNumber > 12) {
         if (hourNumber <= 21) {
           return `0${hourNumber-12}${timeWithoutHour} pm`
@@ -125,16 +132,16 @@ class TimeInput extends React.PureComponent<ITimeInputProps, ITimeInputState> {
     return value
   }
 
-  private isNumber = (value: string | null) => {
+  private isNumber = (value: string | null): boolean => {
     const num = Number(value)
     return !isNaN(num) && String(value) === String(num)
   }
 
-  private formatTimeItem = (value: string) => {
+  private formatTimeItem = (value: string): string => {
     return `${value || ''}00`.substr(0, 2)
   }
 
-  private validateTimeAndCursor = (value: string, defaultValue: string, cursorPosition = 0) => {
+  private validateTimeAndCursor = (value: string, defaultValue: string, cursorPosition: number = 0) => {
     const [oldH, oldM] = defaultValue.split(':')
 
     let newCursorPosition = Number(cursorPosition)
@@ -166,9 +173,11 @@ class TimeInput extends React.PureComponent<ITimeInputProps, ITimeInputState> {
 
   private getTimeByAddedAmPm = (addedCharacter: string, oldValueHourNumber: number, oldValue: string, isPm: boolean): string => {
     if (isPm && addedCharacter === 'a') {
+      // oldValue (in 24 hour) minus 12 to be the new hour, and add the 0 in front it if it just in one digit
       return `${oldValueHourNumber<22 ? '0' : ''}${(Number(oldValue.substr(0, 2))-12).toString()}${oldValue.substr(2)}`
     }
     if (!isPm && addedCharacter === 'p') {
+      // oldValue (in 24 hour) plus 12 to be the new hour
       return `${(oldValueHourNumber+12)}${oldValue.substr(2)}`
     }
     return ''
