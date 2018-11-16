@@ -1,4 +1,4 @@
-export { Avatar, AvatarEntity } from './Avatars'
+export { Avatar, AvatarEntity, AvatarGroup } from './Avatars'
 export { Badge } from './Badges'
 export { BaseButton, Button, LinkButton } from './Buttons'
 export { Callout } from './Callouts'
