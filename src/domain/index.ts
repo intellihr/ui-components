@@ -39,4 +39,4 @@ export { ModularTimeline, VerticalTimeline, VerticalTimelineEvent } from './Time
 
 export { Toast } from './Toasts'
 export { Tooltip } from './Tooltips'
-export { FormattedText, Text, CurrencyText, Emoji, TelephoneText, Brick } from './Typographies'
+export { FormattedText, Text, CurrencyText, Emoji, TelephoneText, Brick, HintText } from './Typographies'
