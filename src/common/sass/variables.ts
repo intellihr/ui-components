@@ -115,8 +115,8 @@ namespace Variables {
     lhSmall =           20,
     lhBody =            24,
     lhHeading =         24,
-    lhDisplay =         28,
-    lhDisplayLarge =    40
+    lhDisplay =         32,
+    lhDisplayLarge =    44
   }
 
   export enum Style {

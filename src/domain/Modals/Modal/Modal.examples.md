@@ -29,7 +29,9 @@ class ModalExample extends React.PureComponent {
       showCloseButton,
       children,
       buttonText,
-      size
+      size,
+      shouldCloseOnOverlayClick,
+      shouldCloseOnEsc
     } = this.props
 
     return (
@@ -44,6 +46,8 @@ class ModalExample extends React.PureComponent {
           handleClose={this.handleClick}
           size={size || Props.Size.Medium}
           showCloseButton={showCloseButton}
+          shouldCloseOnOverlayClick={shouldCloseOnOverlayClick}
+          shouldCloseOnEsc={shouldCloseOnEsc}
         >
           {children}
         </Modal>
@@ -88,6 +92,37 @@ ModalExample.defaultProps = { showCloseButton: true };
       Extra large modals are sized to the big desktop browser width (1440px)
     </ModalExample>
   </div>
+  
+  <div>
+    <ModalExample buttonText='shouldCloseOnEsc = false' shouldCloseOnEsc={false}>
+      You can't close this with esc
+    </ModalExample>
+  </div>
+    
+  <div>
+    <ModalExample buttonText='shouldCloseOnOverlayClick = false' shouldCloseOnOverlayClick={false}>
+      You can't close this by clicking the overlay
+    </ModalExample>
+  </div>
+  
+  <div>
+    <ModalExample
+      buttonText='shouldCloseOnOverlayClick and shouldCloseOnEsc = false' 
+      shouldCloseOnEsc={false} 
+      shouldCloseOnOverlayClick={false}
+     >
+      You can ONLY close this with the close button
+    </ModalExample>
+  </div>
+</div>
+```
+
+#### shouldCloseOnEsc and shouldCloseOnOverlayClick
+
+```jsx
+
+<div style={{height: 2000}}>
+  The following is a dummy space to fill out the page and ensure it doesn't scroll when a modal is open
 </div>
 ```
 

@@ -70,7 +70,7 @@ exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-size: 24px;
-  line-height: 28px;
+  line-height: 32px;
   -webkit-letter-spacing: -.02em;
   -moz-letter-spacing: -.02em;
   -ms-letter-spacing: -.02em;
