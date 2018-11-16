@@ -41,28 +41,18 @@ namespace Props {
   }
 
   export enum ComponentType {
+    AvatarGroup = 'avatar_group',
     BlockTabGroup = 'block_tab_group',
     Brick = 'brick',
     Button = 'button',
     ButtonIcon = 'button_icon',
     EmptyState = 'empty_state',
     LinkButton = 'link_button',
+    Record = 'record',
+    RecordName = 'record_name',
     Text = 'text',
     Timeline = 'timeline',
-    TimelineEvent = 'timeline_event',
-    Record = 'record',
-    RecordName = 'record_name'
-  }
-
-  export enum FunctionalColor {
-    Alert = 'alert',
-    Success = 'success',
-    Warning = 'warning',
-    Primary = 'primary',
-    Neutral = 'neutral',
-    Secondary = 'secondary',
-    Highlight = 'highlight',
-    Dark = 'dark'
+    TimelineEvent = 'timeline_event'
   }
 }
 

@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AvatarGroup /> should render a basic avatar group 1`] = `
+<styled.div
+  avatarCount={2}
+  avatarGroupSize="medium"
+  data-component-context="test"
+  data-component-type="avatar_group"
+  isHoverable={false}
+>
+  <styled.div
+    avatarGroupSize="medium"
+    avatarIndex={1}
+    isInitials={true}
+    isOverflow={false}
+    key="1"
+  >
+    GR
+  </styled.div>
+  <styled.div
+    avatarGroupSize="medium"
+    avatarIndex={0}
+    isInitials={false}
+    isOverflow={false}
+    key="0"
+  >
+    <img
+      data-img-index={0}
+      onError={[Function]}
+      src="testurl"
+    />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<AvatarGroup /> should render an avatar group with many avatars 1`] = `
+<styled.div
+  avatarCount={10}
+  avatarGroupSize="medium"
+  data-component-type="avatar_group"
+  isHoverable={false}
+>
+  <styled.div
+    avatarGroupSize="medium"
+    avatarIndex={9}
+    isInitials={true}
+    isOverflow={true}
+    key="9"
+  >
+    +41
+  </styled.div>
+  <styled.div
+    avatarGroupSize="medium"
+    avatarIndex={8}
+    isInitials={true}
+    isOverflow={false}
+    key="8"
+  >
+    TT
+  </styled.div>
+  <styled.div
+    avatarGroupSize="medium"
+    avatarIndex={7}
+    isInitials={true}
+    isOverflow={false}
+    key="7"
+  >
+    TT
+  </styled.div>
+  <styled.div
+    avatarGroupSize="medium"
+    avatarIndex={6}
+    isInitials={true}
+    isOverflow={false}
+    key="6"
+  >
+    TT
+  </styled.div>
+  <styled.div
+    avatarGroupSize="medium"
+    avatarIndex={5}
+    isInitials={true}
+    isOverflow={false}
+    key="5"
+  >
+    TT
+  </styled.div>
+  <styled.div
+    avatarGroupSize="medium"
+    avatarIndex={4}
+    isInitials={true}
+    isOverflow={false}
+    key="4"
+  >
+    TT
+  </styled.div>
+  <styled.div
+    avatarGroupSize="medium"
+    avatarIndex={3}
+    isInitials={true}
+    isOverflow={false}
+    key="3"
+  >
+    TT
+  </styled.div>
+  <styled.div
+    avatarGroupSize="medium"
+    avatarIndex={2}
+    isInitials={true}
+    isOverflow={false}
+    key="2"
+  >
+    TT
+  </styled.div>
+  <styled.div
+    avatarGroupSize="medium"
+    avatarIndex={1}
+    isInitials={true}
+    isOverflow={false}
+    key="1"
+  >
+    TT
+  </styled.div>
+  <styled.div
+    avatarGroupSize="medium"
+    avatarIndex={0}
+    isInitials={true}
+    isOverflow={false}
+    key="0"
+  >
+    TT
+  </styled.div>
+</styled.div>
+`;

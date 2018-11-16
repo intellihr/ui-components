@@ -9,26 +9,7 @@ def analyse = new net.intellihr.CodeAnalysis(this)
 
 def skipBuild = false
 
-final def DEFAULT_RELEASE_VERSION = 'prerelease'
-final def RELEASE_VERSION = 'prerelease'
-
-def shouldSkipBuild() {
-  numberOfCommitToCheck = 1
-
-  hasMergeCommit = !sh(
-    script: "git log -${numberOfCommitToCheck} | grep 'Author: Jenkins <nobody@nowhere>'",
-    returnStatus: true
-  )
-
-  if (hasMergeCommit) {
-    numberOfCommitToCheck = 2
-  }
-
-  return !sh(
-    script: "git log -${numberOfCommitToCheck} | grep '.*\\[ci skip\\].*'",
-    returnStatus: true
-  )
-}
+def RELEASE_VERSION = 'patch'
 
 pipeline {
   agent any
@@ -41,7 +22,31 @@ pipeline {
     stage('prepare') {
       steps {
         script {
-          skipBuild = shouldSkipBuild()
+          skipBuild = helper.shouldSkipBuild()
+        }
+      }
+    }
+
+    stage('Detect Version') {
+      when {
+        branch 'master'
+      }
+      steps {
+        script {
+          def prId = helper.github.getPullRequestIdFromCommit('intellihr/ui-components', env.GIT_COMMIT)
+          if (prId != null) {
+            echo "Pull request ID: ${prId}"
+            for (label in helper.github.getPullRequestLabels('intellihr/ui-components', prId)) {
+              if (label == 'MAJOR') {
+                RELEASE_VERSION = 'major'
+                break
+              } else if (label == 'MINOR') {
+                RELEASE_VERSION = 'minor'
+                break
+              }
+            }
+          }
+          echo "The next release version is ${RELEASE_VERSION}"
         }
       }
     }
@@ -183,7 +188,6 @@ pipeline {
               script {
                 env.NPM_TOKEN = helper.getSSMParameter('shared.NPM_TOKEN')
                 env.RELEASE_VERSION = RELEASE_VERSION
-                env.DEFAULT_RELEASE_VERSION = DEFAULT_RELEASE_VERSION
               }
 
               sh '''
@@ -193,13 +197,33 @@ pipeline {
                     -e SSH_AUTH_SOCK=/tmp/agent.sock \
                     -e NPM_TOKEN=$NPM_TOKEN \
                     -e RELEASE_VERSION=$RELEASE_VERSION \
-                    -e DEFAULT_RELEASE_VERSION=$DEFAULT_RELEASE_VERSION \
                     jenkins ./docker/bin/deploy-npm
               '''
             }
           }
         }
       }
+    }
+  }
+
+  post {
+    always {
+      sh 'docker-compose down || true'
+      sh 'docker-compose rm -f -s -v || true'
+    }
+    failure {
+      slackSend(
+        channel: "#devops-log",
+        color: 'danger',
+        message: "Jenkins UI-Components (${env.BRANCH_NAME}) <${env.BUILD_URL}|#${env.BUILD_NUMBER}> *FAILED*"
+      )
+    }
+    success {
+      slackSend(
+        channel: "#devops-log",
+        color: 'good',
+        message: "Jenkins UI-Components (${env.BRANCH_NAME}) <${env.BUILD_URL}|#${env.BUILD_NUMBER}> *SUCCESSFUL*"
+      )
     }
   }
 }

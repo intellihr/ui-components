@@ -36,92 +36,6 @@ export interface IAvatarState {
 }
 
 class Avatar extends React.Component<IAvatarProps> {
-
-  get hoverDom (): JSX.Element | null {
-    const {
-      size,
-      hoverLabel,
-      hoverIcon
-    } = this.props
-
-    if (isNil(hoverLabel) && isNil(hoverIcon)) {
-      return null
-    }
-
-    return (
-      <div className={classNames('avatar-hover', `avatar-${size}`)}>
-        <FontAwesomeIcon type='camera' />
-        <span className='avatar-hover-label'>{hoverLabel}</span>
-      </div>
-    )
-  }
-
-  get picture (): JSX.Element {
-    const {
-      imageUrl,
-      imageData
-    } = this.props
-
-    const errorHandler = () => { this.setState({showInitials: true}) }
-
-    return (
-      <img
-        src={imageUrl || imageData}
-        onError={errorHandler}
-      />
-    )
-  }
-
-  get avatarContent (): JSX.Element {
-    const {
-      initials
-    } = this.props
-
-    if (this.state.showInitials) {
-      return (
-        <div className='avatar-initials-container'>
-          <span className='avatar-initials'>
-            {initials}
-          </span>
-        </div>
-      )
-    }
-
-    return (
-      <div className='avatar-picture-container'>
-        {this.picture}
-      </div>
-    )
-  }
-
-  get statusDot (): JSX.Element | null {
-    const {
-      statusDot
-    } = this.props
-
-    if (statusDot) {
-      return <span className={`status-dot ${statusDot}`} />
-    }
-
-    return null
-  }
-
-  get statusIcon (): JSX.Element | null {
-    const {
-      statusIcon
-    } = this.props
-
-    if (statusIcon) {
-      return (
-        <span className='status-icon'>
-          {statusIcon}
-        </span>
-      )
-    }
-
-    return null
-  }
-
   public static defaultProps: IAvatarProps = {
     size: Props.AvatarSize.Medium
   }
@@ -152,8 +66,6 @@ class Avatar extends React.Component<IAvatarProps> {
       handleClick
     } = this.props
 
-    const errorHandler = (event: React.MouseEvent<HTMLDivElement>) => isNil(handleClick) ? null : handleClick(event)
-
     return (
       <div className={classNames(
         style.Avatar,
@@ -165,7 +77,7 @@ class Avatar extends React.Component<IAvatarProps> {
             'avatar-inner-container',
             { 'with-hover': !isNil(handleClick) }
           )}
-          onClick={errorHandler}
+          onClick={this.handleAvatarClick}
         >
           {this.hoverDom}
           {this.avatarContent}
@@ -176,13 +88,108 @@ class Avatar extends React.Component<IAvatarProps> {
     )
   }
 
-  protected hasImage (props: IAvatarProps): boolean {
+  protected hasImage = (props: IAvatarProps): boolean => {
     const {
       imageUrl,
       imageData
     } = props
 
     return !isEmpty(imageUrl) || !isEmpty(imageData)
+  }
+
+  private handleAvatarClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    const {
+      handleClick
+    } = this.props
+
+    if (!isNil(handleClick)) {
+      handleClick(event)
+    }
+  }
+
+  private get hoverDom (): JSX.Element | null {
+    const {
+      size,
+      hoverLabel,
+      hoverIcon
+    } = this.props
+
+    if (isNil(hoverLabel) && isNil(hoverIcon)) {
+      return null
+    }
+
+    return (
+      <div className={classNames('avatar-hover', `avatar-${size}`)}>
+        <FontAwesomeIcon type='camera' />
+        <span className='avatar-hover-label'>{hoverLabel}</span>
+      </div>
+    )
+  }
+
+  private get avatarContent (): JSX.Element {
+    const {
+      initials
+    } = this.props
+
+    if (this.state.showInitials) {
+      return (
+        <div className='avatar-initials-container'>
+          <span className='avatar-initials'>
+            {initials}
+          </span>
+        </div>
+      )
+    }
+
+    return (
+      <div className='avatar-picture-container'>
+        {this.picture}
+      </div>
+    )
+  }
+
+  private get picture (): JSX.Element {
+    const {
+      imageUrl,
+      imageData
+    } = this.props
+
+    const errorHandler = () => { this.setState({showInitials: true}) }
+
+    return (
+      <img
+        src={imageUrl || imageData}
+        onError={errorHandler}
+      />
+    )
+  }
+
+  private get statusDot (): JSX.Element | null {
+    const {
+      statusDot
+    } = this.props
+
+    if (statusDot) {
+      return <span className={`status-dot ${statusDot}`} />
+    }
+
+    return null
+  }
+
+  private get statusIcon (): JSX.Element | null {
+    const {
+      statusIcon
+    } = this.props
+
+    if (statusIcon) {
+      return (
+        <span className='status-icon'>
+          {statusIcon}
+        </span>
+      )
+    }
+
+    return null
   }
 }
 
