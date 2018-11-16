@@ -39,7 +39,7 @@ const colors = {
   },
   [BrickColor.Neutral]: {
     textColor: Variables.Color.n800,
-    backgroundColor: Variables.Color.n200
+    backgroundColor: Variables.Color.n250
   },
   [BrickColor.Secondary]: {
     textColor: Variables.Color.b600,
