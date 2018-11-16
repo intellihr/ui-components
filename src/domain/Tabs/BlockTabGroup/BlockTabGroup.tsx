@@ -65,7 +65,11 @@ export class BlockTabGroup extends React.Component<IBlockTabGroupProps, never> {
     const currentTabIndex = this.currentTabIndex
 
     return (
-        <TabListItem key={index} role='tab'>
+        <TabListItem
+          key={index}
+          role='tab'
+          active={currentTabIndex === index}
+        >
           <TabListItemButton
             active={currentTabIndex === index}
             tabSize={tabSize}
