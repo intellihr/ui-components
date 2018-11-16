@@ -47,7 +47,8 @@ module.exports = {
           name: 'Avatars',
           components: [
             'src/domain/Avatars/Avatar/Avatar',
-            'src/domain/Avatars/AvatarEntity/AvatarEntity'
+            'src/domain/Avatars/AvatarEntity/AvatarEntity',
+            'src/domain/Avatars/AvatarGroup/AvatarGroup'
           ]
         },
         {

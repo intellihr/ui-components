@@ -1,2 +1,3 @@
-export * from './Avatar'
-export * from './AvatarEntity'
+export { Avatar, IAvatarProps } from './Avatar'
+export { AvatarEntity } from './AvatarEntity'
+export { AvatarGroup } from './AvatarGroup'

@@ -12,11 +12,14 @@ interface IInputGroupButtonProps extends React.HTMLProps<HTMLButtonElement> {
   rightComponent?: JSX.Element
   /** Ref to the internal button object */
   innerRef?: RefObject<any>
+  /** If true, displays a caret on the right of the button */
+  showCaret?: boolean
 }
 
 class Button extends React.PureComponent<IInputGroupButtonProps> {
   public static defaultProps: Partial<IInputGroupButtonProps> = {
-    groupPosition: 'left'
+    groupPosition: 'left',
+    showCaret: true
   }
 
   public render (): JSX.Element {
@@ -44,9 +47,21 @@ class Button extends React.PureComponent<IInputGroupButtonProps> {
         {leftComponent && <span className='left-component'>{leftComponent}</span>}
         {children}
         {rightComponent && <span className='right-component'>{rightComponent}</span>}
-        <FontAwesomeIcon className='right-component' type='caret-down' />
+        {this.caret}
       </InputGroupButton>
     )
+  }
+
+  get caret () {
+    const {
+      showCaret
+    } = this.props
+
+    if (showCaret) {
+      return <FontAwesomeIcon className='right-component' type='caret-down' />
+    }
+
+    return null
   }
 }
 
