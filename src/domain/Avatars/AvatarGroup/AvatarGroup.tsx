@@ -120,12 +120,10 @@ class AvatarGroup extends React.PureComponent<IAvatarGroup, IAvatarGroupState> {
       imageUrl
     } = avatarProps
 
-    let avatarContent
     const isInitials = !imageUrl || this.state.avatarsFailedLoading.has(index)
+    let avatarContent: JSX.Element | string | undefined = initials
 
-    if (isInitials) {
-      avatarContent = initials
-    } else {
+    if (!isInitials) {
       avatarContent = (
         <img
           data-img-index={index}
