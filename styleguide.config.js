@@ -241,6 +241,7 @@ module.exports = {
             'src/domain/Typographies/CurrencyText/CurrencyText',
             'src/domain/Typographies/Emoji/Emoji',
             'src/domain/Typographies/FormattedText/FormattedText',
+            'src/domain/Typographies/HintText/HintText',
             'src/domain/Typographies/TelephoneText/TelephoneText',
             'src/domain/Typographies/Text/Text'
           ]

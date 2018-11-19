@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Brick /> should render a basic hint text 1`] = `
+<styled.span
+  data-component-type="hint_text"
+>
+  <Tooltip
+    effect="solid"
+    iconColour="#424F5C"
+    message="Never trust a cat"
+    place="top"
+    withIcon={false}
+  >
+    Hover me for a tip :)
+  </Tooltip>
+</styled.span>
+`;
+
+exports[`<Brick /> should render a hint text with a different component as the child 1`] = `
+<styled.span
+  data-component-type="hint_text"
+>
+  <Tooltip
+    effect="solid"
+    iconColour="#424F5C"
+    message="Never trust a cat"
+    place="top"
+    withIcon={false}
+  >
+    <CurrencyText
+      decimalPlace={0}
+      flexAlign={false}
+      prefix="AUD"
+      prefixType="body"
+      type="body"
+      value={1000}
+    />
+  </Tooltip>
+</styled.span>
+`;

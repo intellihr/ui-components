@@ -7,6 +7,8 @@ const TooltipIcon = styled.i`
 `
 
 const TooltipWrapper = styled.span`
+  display: inline-block;
+
   .__react_component_tooltip {
     user-select: none;
     color: ${Variables.Color.n100};
