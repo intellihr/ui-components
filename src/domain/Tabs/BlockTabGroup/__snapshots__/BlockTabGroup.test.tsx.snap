@@ -8,6 +8,7 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
     role="tablist"
   >
     <styled.li
+      active={false}
       key="0"
       role="tab"
     >
@@ -22,6 +23,7 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
       </styled.button>
     </styled.li>
     <styled.li
+      active={true}
       key="1"
       role="tab"
     >
@@ -36,6 +38,7 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
       </styled.button>
     </styled.li>
     <styled.li
+      active={false}
       key="2"
       role="tab"
     >
