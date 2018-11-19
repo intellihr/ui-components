@@ -59,7 +59,7 @@ function avatarOffset (props: IStyledAvatarProps): number {
 const StyledAvatarGroupWrapper = styled.div<IStyledAvatarGroupWrapperProps>`
   position: relative;
   display: inline-block;
-  vertical-align: bottom;
+  vertical-align: middle;
   
   height: ${radiusForSize}px;
   width: ${totalWidth}px;
