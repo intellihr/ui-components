@@ -7,7 +7,6 @@ import { TooltipIcon, TooltipWrapper } from './style'
 
 export interface ITooltipProps {
   id?: string,
-  children: JSX.Element,
   message: string,
   place?: 'top' | 'right' | 'bottom' | 'left',
   effect?: 'solid' | 'float',
@@ -83,7 +82,7 @@ export class Tooltip extends React.Component<ITooltipProps> {
     )
   }
 
-  get content (): JSX.Element[] | JSX.Element {
+  get content (): JSX.Element {
     const {
       children,
       withIcon
@@ -92,10 +91,12 @@ export class Tooltip extends React.Component<ITooltipProps> {
     const tooltipTriggerElement = this.tooltipTriggerElement
 
     if (withIcon) {
-      return [
-        children,
-        tooltipTriggerElement
-      ]
+      return (
+        <>
+          {children}
+          {tooltipTriggerElement}
+        </>
+      )
     }
 
     return tooltipTriggerElement
