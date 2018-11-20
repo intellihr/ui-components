@@ -117,15 +117,6 @@ ModalExample.defaultProps = { showCloseButton: true };
 </div>
 ```
 
-#### shouldCloseOnEsc and shouldCloseOnOverlayClick
-
-```jsx
-
-<div style={{height: 2000}}>
-  The following is a dummy space to fill out the page and ensure it doesn't scroll when a modal is open
-</div>
-```
-
 #### Long pages
 ```jsx
 
