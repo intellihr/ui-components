@@ -62,8 +62,13 @@ exports[`<Modal /> should render a hidden modal 1`] = `
 
 @media only screen and (max-width:640px) {
   .c0 .modal-overlay {
-    overflow-y: hidden;
+    background-color: #FFFFFF;
+    height: 100%;
+    min-height: 100vh;
     padding: 0;
+    left: 0;
+    margin: 0;
+    top: 0;
   }
 }
 
@@ -72,17 +77,12 @@ exports[`<Modal /> should render a hidden modal 1`] = `
     border: 0;
     border-radius: 0;
     max-width: none;
-    overflow-y: scroll;
+    min-height: 100vh;
     position: initial;
     -webkit-transform: none;
     -ms-transform: none;
     transform: none;
-    -webkit-overflow-scrolling: touch;
-    height: 100%;
-    left: 0;
-    margin: 0;
-    min-height: 100vh;
-    top: 0;
+    padding-bottom: 100px;
   }
 }
 
