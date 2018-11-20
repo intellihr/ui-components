@@ -72,30 +72,6 @@ namespace Utils {
       setTimeout(update, msPerStep)
     })
   }
-
-  const previousBodyOverflowSetting = document.body && document.body.style && document.body.style.overflow
-
-  export function enableBodyScroll () {
-    document.body.style.overflow = previousBodyOverflowSetting
-    if (isIosDevice()) {
-      document.body.style.position = null
-    }
-  }
-
-  export function disableBodyScroll () {
-    document.body.style.overflow = 'hidden'
-    if (isIosDevice()) {
-      document.body.style.position = 'fixed'
-    }
-  }
-
-  export function isIosDevice () {
-    return typeof window !== 'undefined' &&
-      window.navigator &&
-      window.navigator.platform &&
-      /iPad|iPhone|iPod|(iPad Simulator)|(iPhone Simulator)|(iPod Simulator)/.test(window.navigator.platform)
-
-  }
 }
 
 export {

@@ -1,5 +1,5 @@
 import React  from 'react'
-import { Utils } from '../../../common/services/utils'
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import Color from 'color'
 import styled, { StyledComponentClass } from 'styled-components'
 import ReactModal from 'react-modal'
@@ -34,9 +34,9 @@ class ReactModalAdapter extends React.PureComponent<IReactModalAdapter> {
 
   private setOverlayRef = (overlayRef: HTMLDivElement) => {
     if (!this.overlayRef && overlayRef) {
-      Utils.disableBodyScroll()
+      disableBodyScroll(overlayRef, { reserveScrollBarGap: true })
     } else if (this.overlayRef && !overlayRef) {
-      Utils.enableBodyScroll()
+      enableBodyScroll(this.overlayRef)
     }
 
     this.overlayRef = overlayRef
@@ -82,8 +82,14 @@ const StyledReactModal = styled(ReactModalAdapter)`
     top: 0;
     
     @media only screen and (max-width: ${breakpointTablet}px) {
-      overflow-y: hidden;
+      background-color: ${Variables.Color.n100};
+      height: 100%;
+      min-height: 100vh;
       padding: 0;
+      
+      left: 0;
+      margin: 0;
+      top: 0;
     }
   }
 
@@ -104,16 +110,12 @@ const StyledReactModal = styled(ReactModalAdapter)`
       border-radius: 0;
 
       max-width: none;
-      overflow-y: scroll;
+      min-height: 100vh;
       position: initial;
       transform: none;
-      -webkit-overflow-scrolling: touch;
-
-      height: 100%;
-      left: 0;
-      margin: 0;
-      min-height: 100vh;
-      top: 0;
+      
+      // Add a bottom padding in mobile to counteract ios bottom bar
+      padding-bottom: 100px;
     }
 
     .modal-close-button {
