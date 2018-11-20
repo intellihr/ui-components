@@ -1,0 +1,7 @@
+.idea/
+coverage/
+dist/
+es/
+node_modules/
+types/
+yarn-error.log
