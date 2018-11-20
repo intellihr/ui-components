@@ -7,3 +7,4 @@
   * [Styleguide Structure](https://github.com/intellihr/ui-components/wiki/Code-Standards#styleguide-structure)
   * [Child Components](https://github.com/intellihr/ui-components/wiki/Code-Standards#child-components)
   * [Request Change of Code Standard](https://github.com/intellihr/ui-components/wiki/Code-Standards#request-change-of-code-standard)
+* [Contribute](https://github.com/intellihr/ui-components/wiki/Contribute)
