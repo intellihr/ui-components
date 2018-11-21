@@ -14,6 +14,10 @@ const styledAnchor: StyledFunction<ITextLinkProps> = styled(({ textType, ...rest
 export const TextLink = styledAnchor`
   transition: color .25s ease-out;
   
+            font-size: ${Variables.FontSize.fzXSmall}px;
+          line-height: ${Variables.LineHeight.lhXSmall}px;
+          letter-spacing: .02em;
+  
   ${(props: ITextLinkProps) => styleForTypographyType(props.textType)}
   
   &,

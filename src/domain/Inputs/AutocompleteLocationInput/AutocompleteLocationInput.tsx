@@ -1,7 +1,8 @@
 import React from 'react'
 import Geosuggest, { QueryType, Suggest } from 'react-geosuggest'
 import { Text } from '../../Typographies'
-import { Props, Variables} from '../../../common'
+import { TextLink } from '../../Links'
+import { Props } from '../../../common'
 
 const style = require('./style.scss')
 
@@ -33,14 +34,12 @@ export class AutocompleteLocationInput extends React.PureComponent<IAutocomplete
     } = this.props
 
     return (
-      <button
+      <TextLink
         onClick={onClickManualOptionButton}
-        type='button'
+        textType={Props.TypographyType.Small}
       >
-        <Text color={Variables.Color.b400} type={Props.TypographyType.Small}>
-          Click here to add it
-        </Text>
-      </button>
+        Click here to add it
+      </TextLink>
     )
   }
 
