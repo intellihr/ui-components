@@ -185,6 +185,8 @@ For other Typescript projects, there is no issue with using path mapping since n
 
 For Details Check [Here](https://lexi-lambda.github.io/blog/2016/08/24/understanding-the-npm-dependency-model/)
 
+https://goo.gl/kGAWSS
+
 ![Dependency Mind Map](https://drive.google.com/uc?id=1vg0quZCNcOvm7vz10rIK6WFqmIH_VHy3)
 
 #### Add `devDependencies`
