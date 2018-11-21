@@ -336,6 +336,12 @@ exports[`<SectionList /> should render a sectionList 1`] = `
 .c8 {
   -webkit-transition: color .25s ease-out;
   transition: color .25s ease-out;
+  font-size: 12px;
+  line-height: 18px;
+  -webkit-letter-spacing: .02em;
+  -moz-letter-spacing: .02em;
+  -ms-letter-spacing: .02em;
+  letter-spacing: .02em;
   font-size: 14px;
   line-height: 20px;
   -webkit-letter-spacing: normal;
@@ -911,6 +917,12 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
 .c7 {
   -webkit-transition: color .25s ease-out;
   transition: color .25s ease-out;
+  font-size: 12px;
+  line-height: 18px;
+  -webkit-letter-spacing: .02em;
+  -moz-letter-spacing: .02em;
+  -ms-letter-spacing: .02em;
+  letter-spacing: .02em;
   font-size: 14px;
   line-height: 20px;
   -webkit-letter-spacing: normal;
