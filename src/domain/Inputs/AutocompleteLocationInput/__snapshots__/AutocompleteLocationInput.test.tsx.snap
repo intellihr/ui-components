@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AutocompleteLocationInput /> should render the autocomplete location input 1`] = `
+<div
+  className="autocompleteLocationInput"
+>
+  <default_1$$1
+    autoActivateFirstSuggest={false}
+    disabled={false}
+    fixtures={Array []}
+    getSuggestLabel={[Function]}
+    highlightMatch={true}
+    ignoreEnter={false}
+    ignoreTab={false}
+    initialValue=""
+    maxFixtures={10}
+    minLength={1}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    placeholder="dummy placeholder"
+    queryDelay={250}
+    skipSuggest={[Function]}
+    style={Object {}}
+    types={null}
+  />
+  <span>
+    <Text
+      isInline={true}
+      tag="span"
+      type="small"
+    >
+      Can't find your address? 
+    </Text>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      <Text
+        color="#0F68FA"
+        isInline={true}
+        tag="span"
+        type="small"
+      >
+        Click here to add it
+      </Text>
+    </button>
+  </span>
+</div>
+`;
