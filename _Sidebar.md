@@ -1,3 +1,4 @@
+* [Introduction](https://github.com/intellihr/ui-components/wiki)
 * [Code Standard](https://github.com/intellihr/ui-components/wiki/Code-Standards)
   * [Version Control](https://github.com/intellihr/ui-components/wiki/Code-Standards#version-control)
   * [Folder Structure](https://github.com/intellihr/ui-components/wiki/Code-Standards#folder-structure)
