@@ -55,12 +55,6 @@ exports[`<FormattedText /> should render a big block of markdown 1`] = `
 .c1 {
   -webkit-transition: color .25s ease-out;
   transition: color .25s ease-out;
-  font-size: 12px;
-  line-height: 18px;
-  -webkit-letter-spacing: .02em;
-  -moz-letter-spacing: .02em;
-  -ms-letter-spacing: .02em;
-  letter-spacing: .02em;
   font-size: 16px;
   line-height: 24px;
   -webkit-letter-spacing: normal;
@@ -911,12 +905,6 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
 .c1 {
   -webkit-transition: color .25s ease-out;
   transition: color .25s ease-out;
-  font-size: 12px;
-  line-height: 18px;
-  -webkit-letter-spacing: .02em;
-  -moz-letter-spacing: .02em;
-  -ms-letter-spacing: .02em;
-  letter-spacing: .02em;
   font-size: 16px;
   line-height: 24px;
   -webkit-letter-spacing: normal;
