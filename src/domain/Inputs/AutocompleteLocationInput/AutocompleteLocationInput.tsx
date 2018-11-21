@@ -14,7 +14,7 @@ export interface IAutocompleteLocationInputProps {
   /** event for selected suggestion */
   onSuggestSelect?: (suggest: Suggest) => void
   /** onClick event for clinking the manual Option Button */
-  onClickManualOptionButton: (event: React.MouseEvent<HTMLElement>) => void,
+  onClickManualOptionButton: (event: React.MouseEvent<HTMLElement>) => void
   /** event for no result for the suggestion */
   onSuggestNoResults?:(userInput: string) => void
 }
