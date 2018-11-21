@@ -5,47 +5,46 @@
 
     .geosuggest__suggests {
       background-color: #fff;
-      border-top-color: #e6e6e6;
-      border-bottom-right-radius: 4px;
-      border-bottom-left-radius: 4px;
-      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
-      box-sizing: border-box;
-      margin-top: -1.5px;
-      max-height: 200px;
-      left: 0;
-      top: 100%;
-      width: 100%;
-      z-index: 1;
-      -webkit-overflow-scrolling: touch;
       border: 1px solid $n400;
-      transition: border-color .3s ease-in-out, background-color .3s ease;
-      margin-bottom: 1rem;
-      list-style-type: none;
-      line-height: 34px;
-      font-size: $fz-body;
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+      border-top-color: #e6e6e6;
+      box-sizing: border-box;
       cursor: pointer;
-      margin-left: 0px;
+      font-size: $fz-body;
+      left: 0;
+      line-height: 34px;
+      list-style-type: none;
+      margin-bottom: 1rem;
+      margin-left: 0;
+      margin-top: -1.5px;
       max-height: 198px;
       overflow-y: auto;
+      top: 100%;
+      transition: border-color .3s ease-in-out, background-color .3s ease;
+      width: 100%;
+      z-index: 1;
     }
+
     .geosuggest__suggests--hidden {
-      display:none;
+      display: none;
     }
 
     .geosuggest__item {
-      box-sizing: border-box;
       background-color: #fff;
-      color: #666666;
+      box-sizing: border-box;
+      color: #666;
       cursor: pointer;
       display: block;
-      padding: 8px 10px;
       height: 50px;
       overflow: hidden;
+      padding: 8px 10px;
       text-overflow: ellipsis;
       white-space: nowrap;
-    }
 
-    .geosuggest__item:hover {
-      background-color: #EEF5FF;
+      &:hover {
+        background-color: #eef5ff;
+      }
     }
-}}
+  }
+}

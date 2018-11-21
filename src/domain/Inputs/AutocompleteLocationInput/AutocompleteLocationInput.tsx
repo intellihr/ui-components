@@ -7,7 +7,7 @@ const style = require('./style.scss')
 
 export interface IAutocompleteLocationInputProps {
   /** the address types of return value. Types can be added to the array. 'geocode' for address, 'regions' for state,  'cities' for  suburb. If it is null, it will return all the value */
-  addressTypesIncluded?: QueryType[] | null
+  addressTypesIncluded?: QueryType[]
   /** Placeholder text to display when input is empty */
   placeholder?: string
   /** event for selected suggestion */
@@ -19,9 +19,29 @@ export interface IAutocompleteLocationInputProps {
 }
 
 export class AutocompleteLocationInput extends React.PureComponent<IAutocompleteLocationInputProps> {
-  public static defaultProps: Partial<IAutocompleteLocationInputProps> = {
-    addressTypesIncluded: null,
-    placeholder:''
+  get cannotFindAddressText (): JSX.Element{
+    return (
+      <Text isInline type={Props.TypographyType.Small}>
+        {`Can't find your address? `}
+      </Text>
+    )
+  }
+
+  get addLink (): JSX.Element{
+    const {
+      onClickManualOptionButton
+    } = this.props
+
+    return (
+      <button
+        onClick={onClickManualOptionButton}
+        type='button'
+      >
+        <Text color={Variables.Color.b400} type={Props.TypographyType.Small}>
+          Click here to add it
+        </Text>
+      </button>
+    )
   }
 
   public render (): JSX.Element {
@@ -29,7 +49,6 @@ export class AutocompleteLocationInput extends React.PureComponent<IAutocomplete
       addressTypesIncluded,
       placeholder,
       onSuggestSelect,
-      onClickManualOptionButton,
       onSuggestNoResults
     } = this.props
 
@@ -41,19 +60,8 @@ export class AutocompleteLocationInput extends React.PureComponent<IAutocomplete
           onSuggestSelect={onSuggestSelect}
           onSuggestNoResults={onSuggestNoResults}
         />
-        <span>
-          <Text isInline type={Props.TypographyType.Small}>
-            {`Can't find your address? `}
-          </Text>
-          <button
-            onClick={onClickManualOptionButton}
-            type='button'
-          >
-            <Text color={Variables.Color.b400} type={Props.TypographyType.Small}>
-            Click here to add it
-            </Text>
-          </button>
-        </span>
+        {this.cannotFindAddressText}
+        {this.addLink}
       </div>
     )
   }
