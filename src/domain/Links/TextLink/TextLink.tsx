@@ -31,8 +31,6 @@ const StyledTextLink = styledAnchor`
   }
 `
 
-// TextLink.displayName = 'TextLink'
-
 class TextLink<P> extends React.PureComponent<P & ITextLinkProps> {
   public render(): JSX.Element {
     return (
