@@ -2,14 +2,14 @@ import React from 'react'
 import Numeral from 'numeral'
 import { padEnd } from 'lodash'
 import { StyledCurrencyText, StyledPrefixText } from './style'
-import { Props } from '../../../common'
+import { Props, Variables } from '../../../common'
 import { Text } from '../Text'
 
 interface ICurrencyTextProps {
   /** Monetary value to display */
   value?: string | number
   /** Monetary value text type  */
-  type?: Props.TypographyType
+  valueType?: Props.TypographyType
   /** Currency prefix to display */
   prefix?: string
   /** Currency prefix text type  */
@@ -19,11 +19,15 @@ interface ICurrencyTextProps {
   /** Vertically aligns the currency prefix and monetary value */
   flexAlign?: boolean
   valueHint?: string
+  /** Monetary value text color */
+  valueColor?: Variables.Color
+  /** Currency prefix text color  */
+  prefixColor?: Variables.Color
 }
 
 class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
   public static defaultProps: Partial<ICurrencyTextProps> = {
-    type: Props.TypographyType.Body,
+    valueType: Props.TypographyType.Body,
     prefixType: Props.TypographyType.Body,
     decimalPlace:  0,
     flexAlign: false
@@ -32,7 +36,8 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
   get prefix (): JSX.Element | null {
     const {
       prefix,
-      prefixType
+      prefixType,
+      prefixColor
     } = this.props
 
     if (!prefix) {
@@ -43,6 +48,7 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
       <StyledPrefixText
         weight='heavy'
         type={prefixType}
+        color={prefixColor}
       >
         {prefix}
       </StyledPrefixText>
@@ -53,7 +59,8 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
     const {
       decimalPlace,
       value,
-      type,
+      valueType,
+      valueColor,
       valueHint
     } = this.props
 
@@ -64,7 +71,8 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
 
     return (
       <Text
-        type={type}
+        type={valueType}
+        color={valueColor}
         hint={valueHint}
       >
         {Numeral(value!.toString()).format(moneyFormat)}

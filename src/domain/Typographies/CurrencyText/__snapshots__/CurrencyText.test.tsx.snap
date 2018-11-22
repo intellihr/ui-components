@@ -32,8 +32,8 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
   flexAlign={false}
   prefix="AUD"
   prefixType="body"
-  type="body"
   value={1000.499}
+  valueType="body"
 >
   <styled.span
     flexAlign={false}
@@ -123,8 +123,8 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
   flexAlign={false}
   prefix="AUD"
   prefixType="body"
-  type="body"
   value={0}
+  valueType="body"
 >
   <styled.span
     flexAlign={false}
@@ -225,8 +225,8 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
   flexAlign={true}
   prefix="AUD"
   prefixType="heading"
-  type="xsmall"
   value={1000}
+  valueType="xsmall"
 >
   <styled.span
     flexAlign={true}
@@ -284,6 +284,197 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
 </CurrencyText>
 `;
 
+exports[`<CurrencyText /> should render the Currency Text with a red money color 1`] = `
+.c0 {
+  margin-right: 8px;
+}
+
+.c1 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 600;
+}
+
+.c2 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #FFD2CC;
+  font-weight: 400;
+}
+
+<CurrencyText
+  decimalPlace={0}
+  flexAlign={false}
+  prefix="AUD"
+  prefixType="body"
+  value={1000}
+  valueColor="#FFD2CC"
+  valueType="body"
+>
+  <styled.span
+    flexAlign={false}
+  >
+    <span
+      className=""
+    >
+      <Styled(Text)
+        type="body"
+        weight="heavy"
+      >
+        <Text
+          className="c0"
+          isInline={true}
+          tag="span"
+          type="body"
+          weight="heavy"
+        >
+          <styled.span
+            className="c0"
+            data-component-type="text"
+            isInline={true}
+            textType="body"
+            weight="heavy"
+          >
+            <span
+              className="c0 c1"
+              data-component-type="text"
+            >
+              AUD
+            </span>
+          </styled.span>
+        </Text>
+      </Styled(Text)>
+      <Text
+        color="#FFD2CC"
+        isInline={true}
+        tag="span"
+        type="body"
+      >
+        <styled.span
+          color="#FFD2CC"
+          data-component-type="text"
+          isInline={true}
+          textType="body"
+        >
+          <span
+            className="c2"
+            color="#FFD2CC"
+            data-component-type="text"
+          >
+            1,000
+          </span>
+        </styled.span>
+      </Text>
+    </span>
+  </styled.span>
+</CurrencyText>
+`;
+
+exports[`<CurrencyText /> should render the Currency Text with a red prefix color 1`] = `
+.c0 {
+  margin-right: 8px;
+}
+
+.c1 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #FFD2CC;
+  font-weight: 600;
+}
+
+.c2 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
+<CurrencyText
+  decimalPlace={0}
+  flexAlign={false}
+  prefix="AUD"
+  prefixColor="#FFD2CC"
+  prefixType="body"
+  value={1000}
+  valueType="body"
+>
+  <styled.span
+    flexAlign={false}
+  >
+    <span
+      className=""
+    >
+      <Styled(Text)
+        color="#FFD2CC"
+        type="body"
+        weight="heavy"
+      >
+        <Text
+          className="c0"
+          color="#FFD2CC"
+          isInline={true}
+          tag="span"
+          type="body"
+          weight="heavy"
+        >
+          <styled.span
+            className="c0"
+            color="#FFD2CC"
+            data-component-type="text"
+            isInline={true}
+            textType="body"
+            weight="heavy"
+          >
+            <span
+              className="c0 c1"
+              color="#FFD2CC"
+              data-component-type="text"
+            >
+              AUD
+            </span>
+          </styled.span>
+        </Text>
+      </Styled(Text)>
+      <Text
+        isInline={true}
+        tag="span"
+        type="body"
+      >
+        <styled.span
+          data-component-type="text"
+          isInline={true}
+          textType="body"
+        >
+          <span
+            className="c2"
+            data-component-type="text"
+          >
+            1,000
+          </span>
+        </styled.span>
+      </Text>
+    </span>
+  </styled.span>
+</CurrencyText>
+`;
+
 exports[`<CurrencyText /> should render the Currency Text with an extra small money style 1`] = `
 .c0 {
   margin-right: 8px;
@@ -316,8 +507,8 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
   flexAlign={false}
   prefix="AUD"
   prefixType="body"
-  type="xsmall"
   value={1000}
+  valueType="xsmall"
 >
   <styled.span
     flexAlign={false}
@@ -407,8 +598,8 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
   flexAlign={false}
   prefix="AUD"
   prefixType="xsmall"
-  type="body"
   value={1000}
+  valueType="body"
 >
   <styled.span
     flexAlign={false}
@@ -471,7 +662,7 @@ exports[`<CurrencyText /> should render the Currency Text without value 1`] = `
   decimalPlace={0}
   flexAlign={false}
   prefixType="body"
-  type="body"
+  valueType="body"
 >
   -
 </CurrencyText>
