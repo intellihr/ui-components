@@ -8,6 +8,20 @@
    />
 ```
 
+#### Colored Currency Text
+
+```jsx
+  const { Variables } = require('@Common');
+
+  <CurrencyText
+    value={1000.499}
+    prefix='AUD'
+    prefixColor={Variables.Color.g400}
+    color={Variables.Color.r400}
+    decimalPlace={2}
+   />
+```
+
 #### Styled Currency Text
 
 ```jsx

@@ -2,7 +2,7 @@ import React from 'react'
 import Numeral from 'numeral'
 import { padEnd } from 'lodash'
 import { StyledCurrencyText, StyledPrefixText } from './style'
-import { Props } from '../../../common'
+import { Props, Variables } from '../../../common'
 import { Text } from '../Text'
 
 interface ICurrencyTextProps {
@@ -19,6 +19,10 @@ interface ICurrencyTextProps {
   /** Vertically aligns the currency prefix and monetary value */
   flexAlign?: boolean
   valueHint?: string
+  /** Monetary value text color */
+  color?: Variables.Color
+  /** Currency prefix text color  */
+  prefixColor?: Variables.Color
 }
 
 class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
@@ -32,7 +36,8 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
   get prefix (): JSX.Element | null {
     const {
       prefix,
-      prefixType
+      prefixType,
+      prefixColor
     } = this.props
 
     if (!prefix) {
@@ -43,6 +48,7 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
       <StyledPrefixText
         weight='heavy'
         type={prefixType}
+        color={prefixColor}
       >
         {prefix}
       </StyledPrefixText>
@@ -54,6 +60,7 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
       decimalPlace,
       value,
       type,
+      color,
       valueHint
     } = this.props
 
@@ -65,6 +72,7 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
     return (
       <Text
         type={type}
+        color={color}
         hint={valueHint}
       >
         {Numeral(value!.toString()).format(moneyFormat)}

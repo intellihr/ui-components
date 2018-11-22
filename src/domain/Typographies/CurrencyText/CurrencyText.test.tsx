@@ -2,7 +2,7 @@ import React from 'react'
 import { mount } from 'enzyme'
 
 import { CurrencyText } from './CurrencyText'
-import { Props } from '../../../common'
+import { Props, Variables } from '../../../common'
 
 describe('<CurrencyText />', () => {
   it('should render the Currency Text', () => {
@@ -11,6 +11,30 @@ describe('<CurrencyText />', () => {
         value={1000.499}
         prefix='AUD'
         decimalPlace={2}
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should render the Currency Text with a red prefix color', () => {
+    const wrapper = mount(
+      <CurrencyText
+        value={1000}
+        prefix='AUD'
+        prefixColor={Variables.Color.r200}
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should render the Currency Text with a red money color', () => {
+    const wrapper = mount(
+      <CurrencyText
+        value={1000}
+        prefix='AUD'
+        color={Variables.Color.r200}
       />
     )
 
