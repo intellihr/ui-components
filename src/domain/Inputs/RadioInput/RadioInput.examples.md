@@ -31,7 +31,7 @@ initialState = { value: 'option 2' };
           value:'option 4',
           isChecked:state.value === 'option 4',
           isDisabled:false,
-          handleChange: (event) => { setState({value: event.target.value}); alert('I have a custom onClick handler!'); closeMenu()}
+          handleChange: (event) => { setState({value: event.target.value}); alert('I have a custom onClick handler!');}
         }
       ]}
   />

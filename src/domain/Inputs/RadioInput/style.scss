@@ -30,6 +30,7 @@
         & + span {
           &::before {
             background-color: $n300;
+            cursor: pointer;
           }
         }
 
@@ -37,6 +38,7 @@
           &::before {
             background-color: $n150;
             border-color: $n300;
+            cursor: not-allowed;
           }
         }
       }
@@ -46,6 +48,7 @@
           &::before {
             background-image: radial-gradient(circle closest-side, $i400 , $i400 50%, transparent 50%, transparent 100%);
             border-color: $i400;
+            cursor: pointer;
           }
         }
 
@@ -53,6 +56,7 @@
           &::before {
             background-image: radial-gradient(circle closest-side, $n300 , $n300 50%, transparent 50%, transparent 100%);
             border-color: $n300;
+            cursor: not-allowed;
           }
         }
       }
@@ -64,6 +68,7 @@
           &::before {
             background-color: $n150;
             border-color: $n300;
+            cursor: not-allowed;
           }
         }
 

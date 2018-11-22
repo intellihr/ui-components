@@ -1,0 +1,49 @@
+@import '../../../common/sass/variables';
+
+:local(.autocompleteLocationInput) {
+  .geosuggest__suggests-wrapper {
+    .geosuggest__suggests {
+      background-color: #fff;
+      border: 1px solid $n400;
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+      border-top-color: #e6e6e6;
+      box-sizing: border-box;
+      cursor: pointer;
+      font-size: $fz-body;
+      left: 0;
+      line-height: 34px;
+      list-style-type: none;
+      margin-bottom: 1rem;
+      margin-left: 0;
+      margin-top: -1.5px;
+      max-height: 198px;
+      overflow-y: auto;
+      top: 100%;
+      transition: border-color .3s ease-in-out, background-color .3s ease;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .geosuggest__suggests--hidden {
+      display: none;
+    }
+
+    .geosuggest__item {
+      background-color: #fff;
+      box-sizing: border-box;
+      color: #666;
+      cursor: pointer;
+      display: block;
+      height: 50px;
+      overflow: hidden;
+      padding: 8px 10px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      &:hover {
+        background-color: #eef5ff;
+      }
+    }
+  }
+}
