@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Brick /> should render a basic hint text 1`] = `
+exports[`<Brick /> should render a basic hint wrapper 1`] = `
 <styled.span
-  data-component-type="hint_text"
+  data-component-type="hint_wrapper"
 >
   <Tooltip
     effect="solid"
@@ -16,9 +16,9 @@ exports[`<Brick /> should render a basic hint text 1`] = `
 </styled.span>
 `;
 
-exports[`<Brick /> should render a hint text with a different component as the child 1`] = `
+exports[`<Brick /> should render a hint wrapper around a brick 1`] = `
 <styled.span
-  data-component-type="hint_text"
+  data-component-type="hint_wrapper"
 >
   <Tooltip
     effect="solid"
@@ -27,14 +27,12 @@ exports[`<Brick /> should render a hint text with a different component as the c
     place="top"
     withIcon={false}
   >
-    <CurrencyText
-      decimalPlace={0}
-      flexAlign={false}
-      prefix="AUD"
-      prefixType="body"
-      type="body"
-      value={1000}
-    />
+    <Brick
+      color="neutral"
+      typographyType="body"
+    >
+      Hover me for a tip :)
+    </Brick>
   </Tooltip>
 </styled.span>
 `;

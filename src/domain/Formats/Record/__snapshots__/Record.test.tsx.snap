@@ -450,14 +450,6 @@ exports[`<Record /> should render a Record component, with the provided componen
 `;
 
 exports[`<Record /> should render a Record with a Tooltip 1`] = `
-.c0 {
-  margin-bottom: 4px;
-}
-
-.c0 .label-component {
-  padding-right: .25rem;
-}
-
 .c2 {
   width: 1.28571em;
   color: #424F5C;
@@ -466,6 +458,14 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
 .c2.icon {
   text-align: center;
   font-size: 1rem;
+}
+
+.c0 {
+  margin-bottom: 4px;
+}
+
+.c0 .label-component {
+  padding-right: .25rem;
 }
 
 .c1 {

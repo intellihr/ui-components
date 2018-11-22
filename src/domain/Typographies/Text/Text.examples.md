@@ -118,3 +118,13 @@ const { Variables } = require('../../../common');
     Hello! I am text with data attributes
   </Text>
 ```
+
+#### Hint
+
+```jsx
+  <Text
+    hint='Hello'
+  >
+    Hover me
+  </Text>
+```
