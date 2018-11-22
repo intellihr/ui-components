@@ -124,12 +124,3 @@ const initialState = { textInputValue: '' };
     </Button>
   </VerticalForm>
 ```
-
-
-actionMessage={
-      <TextLink
-        onClick={(e)=> alert('I am the action message')}
-      >
-        Click here to add it
-      </TextLink>
-      }
