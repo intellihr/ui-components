@@ -34,7 +34,7 @@ describe('<CurrencyText />', () => {
       <CurrencyText
         value={1000}
         prefix='AUD'
-        color={Variables.Color.r200}
+        valueColor={Variables.Color.r200}
       />
     )
 
@@ -58,7 +58,7 @@ describe('<CurrencyText />', () => {
       <CurrencyText
         value={1000}
         prefix='AUD'
-        type={Props.TypographyType.XSmall}
+        valueType={Props.TypographyType.XSmall}
       />
     )
 
@@ -70,7 +70,7 @@ describe('<CurrencyText />', () => {
       <CurrencyText
         value={1000}
         prefix='AUD'
-        type={Props.TypographyType.XSmall}
+        valueType={Props.TypographyType.XSmall}
         prefixType={Props.TypographyType.Heading}
         flexAlign
       />

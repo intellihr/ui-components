@@ -9,7 +9,7 @@ interface ICurrencyTextProps {
   /** Monetary value to display */
   value?: string | number
   /** Monetary value text type  */
-  type?: Props.TypographyType
+  valueType?: Props.TypographyType
   /** Currency prefix to display */
   prefix?: string
   /** Currency prefix text type  */
@@ -20,14 +20,14 @@ interface ICurrencyTextProps {
   flexAlign?: boolean
   valueHint?: string
   /** Monetary value text color */
-  color?: Variables.Color
+  valueColor?: Variables.Color
   /** Currency prefix text color  */
   prefixColor?: Variables.Color
 }
 
 class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
   public static defaultProps: Partial<ICurrencyTextProps> = {
-    type: Props.TypographyType.Body,
+    valueType: Props.TypographyType.Body,
     prefixType: Props.TypographyType.Body,
     decimalPlace:  0,
     flexAlign: false
@@ -59,8 +59,8 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
     const {
       decimalPlace,
       value,
-      type,
-      color,
+      valueType,
+      valueColor,
       valueHint
     } = this.props
 
@@ -71,8 +71,8 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
 
     return (
       <Text
-        type={type}
-        color={color}
+        type={valueType}
+        color={valueColor}
         hint={valueHint}
       >
         {Numeral(value!.toString()).format(moneyFormat)}

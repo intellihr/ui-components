@@ -17,7 +17,7 @@
     value={1000.499}
     prefix='AUD'
     prefixColor={Variables.Color.g400}
-    color={Variables.Color.r400}
+    valueColor={Variables.Color.r400}
     decimalPlace={2}
    />
 ```
@@ -30,21 +30,21 @@
       value={1000}
       prefix='AUD'
       prefixType='xsmall'
-      type='heading'
+      valueType='heading'
     />
     <br/>
     <CurrencyText
       value={1000}
       prefix='AUD'
       prefixType='body'
-      type='xsmall'
+      valueType='xsmall'
     />
     <br/>
     <CurrencyText
       value={1000}
       prefix='AUD'
       prefixType='display-large'
-      type='display'
+      valueType='display'
     />
   </div>
 ```
@@ -57,7 +57,7 @@
       value={1000}
       prefix='AUD'
       prefixType='xsmall'
-      type='heading'
+      valueType='heading'
       flexAlign
     />
     <br/>
@@ -65,7 +65,7 @@
       value={1000}
       prefix='AUD'
       prefixType='body'
-      type='xsmall'
+      valueType='xsmall'
       flexAlign
     />
     <br/>
@@ -73,7 +73,7 @@
       value={1000}
       prefix='AUD'
       prefixType='display-large'
-      type='display'
+      valueType='display'
       flexAlign
     />
   </div>
