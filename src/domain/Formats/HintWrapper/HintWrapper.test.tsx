@@ -1,31 +1,30 @@
 import { shallow } from 'enzyme'
 import React from 'react'
-import { HintText } from './HintText'
-import { CurrencyText } from '../CurrencyText'
+import { HintWrapper } from './HintWrapper'
+import { Brick } from '../../Typographies/Brick'
 
 describe('<Brick />', () => {
-  it('should render a basic hint text', () => {
+  it('should render a basic hint wrapper', () => {
     const wrapper = shallow(
-      <HintText
+      <HintWrapper
         hint='Never trust a cat'
       >
         Hover me for a tip :)
-      </HintText>
+      </HintWrapper>
     )
 
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should render a hint text with a different component as the child', () => {
+  it('should render a hint wrapper around a brick', () => {
     const wrapper = shallow(
-      <HintText
+      <HintWrapper
         hint='Never trust a cat'
       >
-        <CurrencyText
-          value={1000}
-          prefix='AUD'
-        />
-      </HintText>
+        <Brick>
+          Hover me for a tip :)
+        </Brick>
+      </HintWrapper>
     )
 
     expect(wrapper).toMatchSnapshot()

@@ -2,6 +2,7 @@ import React from 'react'
 import { reduce } from 'lodash'
 import { TextWrapper } from './style'
 import { Props, Variables } from '../../../common'
+import { HintWrapper } from '../../Formats/HintWrapper'
 
 export interface ITextProps {
   /** Text to display */
@@ -28,6 +29,8 @@ export interface ITextProps {
   }
   /** The data-component-context */
   componentContext?: string
+  /** String to pass to HintWrapper */
+  hint?: string
 }
 
 export class Text extends React.PureComponent<ITextProps> {
@@ -71,12 +74,13 @@ export class Text extends React.PureComponent<ITextProps> {
       isTruncated,
       isInline,
       color,
-      componentContext
+      componentContext,
+      hint
     } = this.props
 
     const TextTag = this.textTag
 
-    return (
+    const text = (
       <TextTag
         textType={type}
         color={color}
@@ -92,5 +96,17 @@ export class Text extends React.PureComponent<ITextProps> {
         {children}
       </TextTag>
     )
+
+    if (hint) {
+      return (
+        <HintWrapper
+          hint={hint}
+        >
+          {text}
+        </HintWrapper>
+      )
+    }
+
+    return text
   }
 }

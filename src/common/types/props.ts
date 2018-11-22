@@ -47,7 +47,7 @@ namespace Props {
     Button = 'button',
     ButtonIcon = 'button_icon',
     EmptyState = 'empty_state',
-    HintText = 'hint_text',
+    HintWrapper = 'hint_wrapper',
     LinkButton = 'link_button',
     Record = 'record',
     RecordName = 'record_name',
