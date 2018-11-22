@@ -68,7 +68,10 @@ const initialState = { textInputValue: '' };
       label='This is a test input'
       actionMessage={
             <TextLink
-              onClick={(e)=> alert('I am the action message')}
+              onClick={(e)=> {
+                e.preventDefault();
+                alert('I am the action message')
+              }}
               textType='small'
             >
               Click Here!

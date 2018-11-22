@@ -29,21 +29,25 @@ exports[`<TextLink /> should render a text link 1`] = `
 <TextLink
   href="/lol"
 >
-  <Component
-    className="c0"
+  <Styled(Component)
     href="/lol"
   >
-    <Anchor
+    <Component
       className="c0"
       href="/lol"
     >
-      <a
+      <Anchor
         className="c0"
         href="/lol"
       >
-        Text link me
-      </a>
-    </Anchor>
-  </Component>
+        <a
+          className="c0"
+          href="/lol"
+        >
+          Text link me
+        </a>
+      </Anchor>
+    </Component>
+  </Styled(Component)>
 </TextLink>
 `;
