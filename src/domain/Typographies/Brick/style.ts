@@ -57,9 +57,10 @@ const colors = {
 
 const BrickWrapper = styled.span<IBrickWrapperProps>`
   border-radius: ${Variables.Style.borderRadius}px;
-  padding: 2px 4px;
+  display: inline-block;
+  padding: 1px 4px;
   word-break: break-word;
-
+  
   ${(props: IBrickWrapperProps) => styleForTypographyType(props.typographyType)}
   ${(props: IBrickWrapperProps) => {
     const color = colors[props.color]

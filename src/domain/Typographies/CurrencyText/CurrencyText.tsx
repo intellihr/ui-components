@@ -18,6 +18,7 @@ interface ICurrencyTextProps {
   decimalPlace?:  number
   /** Vertically aligns the currency prefix and monetary value */
   flexAlign?: boolean
+  valueHint?: string
 }
 
 class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
@@ -52,7 +53,8 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
     const {
       decimalPlace,
       value,
-      type
+      type,
+      valueHint
     } = this.props
 
     let moneyFormat = '0,0.'
@@ -61,7 +63,10 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
     }
 
     return (
-      <Text type={type}>
+      <Text
+        type={type}
+        hint={valueHint}
+      >
         {Numeral(value!.toString()).format(moneyFormat)}
       </Text>
     )
