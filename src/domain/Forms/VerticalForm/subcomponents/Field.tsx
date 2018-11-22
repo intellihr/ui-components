@@ -11,6 +11,8 @@ interface IVerticalFormFieldProps {
   label?: string
   /** Descriptive text displayed above the input */
   description?: string
+  /** action text link displayed below the input */
+  actionMessage?: JSX.Element
   /** Array of error messages to display */
   errorMessages?: string | string[]
 }
@@ -77,7 +79,8 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
 
   public render (): JSX.Element {
     const {
-      children
+      children,
+      actionMessage
     } = this.props
 
     return (
@@ -86,6 +89,7 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
         {this.description}
         {children}
         {this.errorMessages}
+        {actionMessage}
       </FieldWrapper>
     )
   }
