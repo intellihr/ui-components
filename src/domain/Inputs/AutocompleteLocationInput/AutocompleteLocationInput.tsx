@@ -1,8 +1,5 @@
 import React from 'react'
 import Geosuggest, { QueryType, Suggest } from 'react-geosuggest'
-import { Text } from '../../Typographies'
-import { TextLink } from '../../Links'
-import { Props } from '../../../common'
 
 const style = require('./style.scss')
 
@@ -13,36 +10,13 @@ export interface IAutocompleteLocationInputProps {
   placeholder?: string
   /** event for selected suggestion */
   onSuggestSelect?: (suggest: Suggest) => void
-  /** onClick event for clinking the manual Option Button */
+  /** onClick event for clicking the manual Option Button */
   onClickManualOptionButton: (event: React.MouseEvent<HTMLElement>) => void
   /** event for no result for the suggestion */
   onSuggestNoResults?:(userInput: string) => void
 }
 
 export class AutocompleteLocationInput extends React.PureComponent<IAutocompleteLocationInputProps> {
-  get cannotFindAddressText (): JSX.Element{
-    return (
-      <Text isInline type={Props.TypographyType.Small}>
-        {`Can't find your address? `}
-      </Text>
-    )
-  }
-
-  get addLink (): JSX.Element{
-    const {
-      onClickManualOptionButton
-    } = this.props
-
-    return (
-      <TextLink
-        onClick={onClickManualOptionButton}
-        textType={Props.TypographyType.Small}
-      >
-        Click here to add it
-      </TextLink>
-    )
-  }
-
   public render (): JSX.Element {
     const {
       addressTypesIncluded,
@@ -59,8 +33,6 @@ export class AutocompleteLocationInput extends React.PureComponent<IAutocomplete
           onSuggestSelect={onSuggestSelect}
           onSuggestNoResults={onSuggestNoResults}
         />
-        {this.cannotFindAddressText}
-        {this.addLink}
       </div>
     )
   }
