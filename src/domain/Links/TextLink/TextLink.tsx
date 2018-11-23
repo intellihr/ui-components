@@ -11,7 +11,7 @@ interface ITextLinkProps extends IAnchorProps {
 
 const styledAnchor: StyledFunction<ITextLinkProps> = styled(({ textType, ...rest }) => <Anchor {...rest} />)
 
-const StyledTextLink = styledAnchor`
+export const TextLink = styledAnchor`
   transition: color .25s ease-out;
   
   ${(props: ITextLinkProps) => styleForTypographyType(props.textType)}
@@ -31,17 +31,8 @@ const StyledTextLink = styledAnchor`
   }
 `
 
-class TextLink<P> extends React.PureComponent<P & ITextLinkProps> {
-  public render(): JSX.Element {
-    return (
-      <StyledTextLink
-        {...this.props}
-      />
-    )
-  }
-}
+TextLink.displayName = 'TextLink'
 
 export {
-  TextLink,
   ITextLinkProps
 }
