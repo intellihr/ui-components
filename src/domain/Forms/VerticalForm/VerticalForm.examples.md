@@ -53,6 +53,45 @@ const initialState = { textInputValue: '' };
   </VerticalForm>
 ```
 
+Field with action message
+
+```jsx
+const { TextInput } = require('../../Inputs');
+const { TextLink } = require('../../Links');
+const initialState = { textInputValue: '' };
+
+  <VerticalForm
+    onSubmit={() => alert(`Test input: ${state.textInputValue}`)}
+  >
+    <VerticalForm.Field
+      inputName='testInput'
+      label='This is a test input'
+      actionMessage={
+            <TextLink
+              onClick={(e)=> {
+                e.preventDefault();
+                alert('I am the action message')
+              }}
+              textType='small'
+            >
+              Click Here!
+            </TextLink>
+            }
+      isRequired
+    >
+      <TextInput
+        name='testInput'
+        handleChange={(e) => setState({ textInputValue: e.target.value })}
+      />
+    </VerticalForm.Field>
+    <Button
+       type='primary'
+    >
+      Submit me :)
+    </Button>
+  </VerticalForm>
+```
+
 Field with errors & required
 
 ```jsx

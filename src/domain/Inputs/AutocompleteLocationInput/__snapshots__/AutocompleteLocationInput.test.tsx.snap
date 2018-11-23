@@ -22,18 +22,5 @@ exports[`<AutocompleteLocationInput /> should render the autocomplete location i
     skipSuggest={[Function]}
     style={Object {}}
   />
-  <Text
-    isInline={true}
-    tag="span"
-    type="small"
-  >
-    Can't find your address? 
-  </Text>
-  <TextLink
-    onClick={[Function]}
-    textType="small"
-  >
-    Click here to add it
-  </TextLink>
 </div>
 `;
