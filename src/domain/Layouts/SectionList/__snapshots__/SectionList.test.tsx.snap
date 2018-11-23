@@ -646,28 +646,23 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                               href="#"
                               textType="small"
                             >
-                              <Styled(Component)
+                              <Component
+                                className="c8"
                                 href="#"
                                 textType="small"
                               >
-                                <Component
+                                <Anchor
                                   className="c8"
                                   href="#"
-                                  textType="small"
                                 >
-                                  <Anchor
+                                  <a
                                     className="c8"
                                     href="#"
                                   >
-                                    <a
-                                      className="c8"
-                                      href="#"
-                                    >
-                                      Annotated Link
-                                    </a>
-                                  </Anchor>
-                                </Component>
-                              </Styled(Component)>
+                                    Annotated Link
+                                  </a>
+                                </Anchor>
+                              </Component>
                             </TextLink>
                           </div>
                         </SectionDescription>
@@ -1181,28 +1176,23 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                               href="#"
                               textType="small"
                             >
-                              <Styled(Component)
+                              <Component
+                                className="c7"
                                 href="#"
                                 textType="small"
                               >
-                                <Component
+                                <Anchor
                                   className="c7"
                                   href="#"
-                                  textType="small"
                                 >
-                                  <Anchor
+                                  <a
                                     className="c7"
                                     href="#"
                                   >
-                                    <a
-                                      className="c7"
-                                      href="#"
-                                    >
-                                      Annotated Link
-                                    </a>
-                                  </Anchor>
-                                </Component>
-                              </Styled(Component)>
+                                    Annotated Link
+                                  </a>
+                                </Anchor>
+                              </Component>
                             </TextLink>
                           </div>
                         </SectionDescription>
