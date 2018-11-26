@@ -353,27 +353,33 @@ Ordered/multi-level lists:
                 href="http://www.intellihr.com.au"
                 target="_blank"
               >
-                <Component
+                <Styled(Component)
                   anchorComponent="a"
-                  className="c1"
                   href="http://www.intellihr.com.au"
                   target="_blank"
                 >
-                  <Anchor
+                  <Component
                     anchorComponent="a"
                     className="c1"
                     href="http://www.intellihr.com.au"
                     target="_blank"
                   >
-                    <a
+                    <Anchor
+                      anchorComponent="a"
                       className="c1"
                       href="http://www.intellihr.com.au"
                       target="_blank"
                     >
-                      http://www.intellihr.com.au
-                    </a>
-                  </Anchor>
-                </Component>
+                      <a
+                        className="c1"
+                        href="http://www.intellihr.com.au"
+                        target="_blank"
+                      >
+                        http://www.intellihr.com.au
+                      </a>
+                    </Anchor>
+                  </Component>
+                </Styled(Component)>
               </TextLink>
             </Component>
             
@@ -387,27 +393,33 @@ Ordered/multi-level lists:
                 href="http://www.google.com"
                 target="_blank"
               >
-                <Component
+                <Styled(Component)
                   anchorComponent="a"
-                  className="c1"
                   href="http://www.google.com"
                   target="_blank"
                 >
-                  <Anchor
+                  <Component
                     anchorComponent="a"
                     className="c1"
                     href="http://www.google.com"
                     target="_blank"
                   >
-                    <a
+                    <Anchor
+                      anchorComponent="a"
                       className="c1"
                       href="http://www.google.com"
                       target="_blank"
                     >
-                      Inline link
-                    </a>
-                  </Anchor>
-                </Component>
+                      <a
+                        className="c1"
+                        href="http://www.google.com"
+                        target="_blank"
+                      >
+                        Inline link
+                      </a>
+                    </Anchor>
+                  </Component>
+                </Styled(Component)>
               </TextLink>
             </Component>
           </p>
@@ -971,27 +983,33 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
                 href="http://www.heyguy.com"
                 target="_blank"
               >
-                <Component
+                <Styled(Component)
                   anchorComponent="a"
-                  className="c1"
                   href="http://www.heyguy.com"
                   target="_blank"
                 >
-                  <Anchor
+                  <Component
                     anchorComponent="a"
                     className="c1"
                     href="http://www.heyguy.com"
                     target="_blank"
                   >
-                    <a
+                    <Anchor
+                      anchorComponent="a"
                       className="c1"
                       href="http://www.heyguy.com"
                       target="_blank"
                     >
-                      http://www.heyguy.com
-                    </a>
-                  </Anchor>
-                </Component>
+                      <a
+                        className="c1"
+                        href="http://www.heyguy.com"
+                        target="_blank"
+                      >
+                        http://www.heyguy.com
+                      </a>
+                    </Anchor>
+                  </Component>
+                </Styled(Component)>
               </TextLink>
             </Component>
           </p>
