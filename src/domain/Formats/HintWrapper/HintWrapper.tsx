@@ -23,30 +23,6 @@ class HintWrapper extends React.PureComponent<IHintWrapperProps> {
     hintType: HintWrapperType.Tooltip
   }
 
-  private popoverToggle = ({ openMenu, closeMenu, toggleComponentRef, ariaProps }: ITooltipPopoverToggleComponentProps) => {
-    const {
-      children,
-      componentContext
-    } = this.props
-
-    const dataComponentValues = {
-      'data-component-type': Props.ComponentType.HintWrapper,
-      'data-component-context': componentContext
-    }
-
-    return (
-      <StyledHintWrapper
-        {...dataComponentValues}
-        onMouseEnter={openMenu}
-        onMouseLeave={closeMenu}
-        innerRef={toggleComponentRef}
-        {...ariaProps}
-      >
-        {children}
-      </StyledHintWrapper>
-    )
-  }
-
   public render (): JSX.Element {
     const {
       children,
@@ -79,6 +55,30 @@ class HintWrapper extends React.PureComponent<IHintWrapperProps> {
         >
           {children}
         </Tooltip>
+      </StyledHintWrapper>
+    )
+  }
+
+  private popoverToggle = ({ openMenu, closeMenu, toggleComponentRef, ariaProps }: ITooltipPopoverToggleComponentProps) => {
+    const {
+      children,
+      componentContext
+    } = this.props
+
+    const dataComponentValues = {
+      'data-component-type': Props.ComponentType.HintWrapper,
+      'data-component-context': componentContext
+    }
+
+    return (
+      <StyledHintWrapper
+        {...dataComponentValues}
+        onMouseEnter={openMenu}
+        onMouseLeave={closeMenu}
+        innerRef={toggleComponentRef}
+        {...ariaProps}
+      >
+        {children}
       </StyledHintWrapper>
     )
   }
