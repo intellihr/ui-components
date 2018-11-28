@@ -95,7 +95,8 @@ describe('<Text />', () => {
       </Text>
     )
 
-    expect(wrapper).toMatchSnapshot()
+    expect(wrapper.find('HintWrapper').exists()).toBeTruthy()
+    expect(wrapper.find('TooltipPopover').exists()).toBeTruthy()
   })
 
   it(`should render a text with a tooltip hint`, () => {
@@ -108,6 +109,7 @@ describe('<Text />', () => {
       </Text>
     )
 
-    expect(wrapper).toMatchSnapshot()
+    expect(wrapper.find('HintWrapper').exists()).toBeTruthy()
+    expect(wrapper.find('Tooltip').exists()).toBeTruthy()
   })
 })

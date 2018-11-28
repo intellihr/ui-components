@@ -3,7 +3,7 @@ import React from 'react'
 import { HintWrapper, HintWrapperType } from './HintWrapper'
 import { Brick } from '../../Typographies/Brick'
 
-describe('<Brick />', () => {
+describe('<HintWrapper />', () => {
   it('should render a basic hint wrapper', () => {
     const wrapper = shallow(
       <HintWrapper

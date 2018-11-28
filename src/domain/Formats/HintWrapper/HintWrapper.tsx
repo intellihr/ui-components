@@ -2,7 +2,7 @@ import React from 'react'
 import { Props } from '../../../common'
 import { StyledHintWrapper } from './style'
 import { Tooltip } from '../../Tooltips/Tooltip'
-import { TooltipPopover } from '../../Popovers/TooltipPopover'
+import { TooltipPopover, ITooltipPopoverToggleComponentProps } from '../../Popovers/TooltipPopover'
 
 enum HintWrapperType {
   Popover = 'popover',
@@ -23,12 +23,36 @@ class HintWrapper extends React.PureComponent<IHintWrapperProps> {
     hintType: HintWrapperType.Tooltip
   }
 
+  popoverToggle = ({ openMenu, closeMenu, toggleComponentRef, ariaProps }: ITooltipPopoverToggleComponentProps) => {
+    const {
+      children,
+      componentContext
+    } = this.props
+
+    const dataComponentValues = {
+      'data-component-type': Props.ComponentType.HintWrapper,
+      'data-component-context': componentContext
+    }
+
+    return (
+      <StyledHintWrapper
+        {...dataComponentValues}
+        onMouseEnter={openMenu}
+        onMouseLeave={closeMenu}
+        innerRef={toggleComponentRef}
+        {...ariaProps}
+      >
+        {children}
+      </StyledHintWrapper>
+    )
+  }
+
   public render (): JSX.Element {
     const {
-      componentContext,
       children,
       hint,
-      hintType
+      hintType,
+      componentContext
     } = this.props
 
     const dataComponentValues = {
@@ -39,18 +63,7 @@ class HintWrapper extends React.PureComponent<IHintWrapperProps> {
     if (hintType === HintWrapperType.Popover) {
       return (
         <TooltipPopover
-          toggleComponent={
-            ({ openMenu, closeMenu, toggleComponentRef, ariaProps }) =>
-              <StyledHintWrapper
-                {...dataComponentValues}
-                onMouseEnter={openMenu}
-                onMouseLeave={closeMenu}
-                innerRef={toggleComponentRef}
-                {...ariaProps}
-              >
-                {children}
-              </StyledHintWrapper>
-          }
+          toggleComponent={this.popoverToggle}
         >
           {hint}
         </TooltipPopover>
