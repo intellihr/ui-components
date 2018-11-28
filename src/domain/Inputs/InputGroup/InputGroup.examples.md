@@ -54,6 +54,26 @@ const { DropdownMenu } = require('../../Popovers/DropdownMenu');
 const { TextInput } = require('../TextInput');
 
 <InputGroup>
+  <InputGroup.Button
+    groupPosition='left'
+    showCaret={false}
+  >
+    Blah
+  </InputGroup.Button>
+  <TextInput
+    disabledPrefix='+61'
+    groupPosition='right'
+    placeholder='1234 5678'
+  />
+</InputGroup>
+```
+
+#### Input Group with Button
+
+```jsx
+const { TextInput } = require('../TextInput');
+
+<InputGroup>
   <TextInput
     value='1234-5678-9012'
     groupPosition='left'
