@@ -23,7 +23,7 @@ class HintWrapper extends React.PureComponent<IHintWrapperProps> {
     hintType: HintWrapperType.Tooltip
   }
 
-  popoverToggle = ({ openMenu, closeMenu, toggleComponentRef, ariaProps }: ITooltipPopoverToggleComponentProps) => {
+  private popoverToggle = ({ openMenu, closeMenu, toggleComponentRef, ariaProps }: ITooltipPopoverToggleComponentProps) => {
     const {
       children,
       componentContext
