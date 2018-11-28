@@ -1,4 +1,5 @@
-#### Hint Brick
+#### Tooltip Hint
+A hint wrapper can be applied to any element - by default it will be styled as a tooltip
 
 ```jsx
 const { Brick } = require('../../');
@@ -10,6 +11,28 @@ const { Brick } = require('../../');
     <Brick>
       Hover me for a tip :)
     </Brick>
+  </HintWrapper>
+</div>
+```
+
+#### Popover Hint
+The content for both the tooltip and popover style of hint can take either a string, or a JSX Element
+```jsx
+const { Variables } = require('../../../common');
+
+<div>
+  <HintWrapper
+    hint={
+      <>
+        <Text type='heading' isInline={false}>Tooltip Heading</Text>
+        <Text type='small'>Some explanation of an element</Text>
+      </>
+    }
+    hintType='popover'
+  >
+    <Text>
+      Hover me for a tip :)
+    </Text>
   </HintWrapper>
 </div>
 ```

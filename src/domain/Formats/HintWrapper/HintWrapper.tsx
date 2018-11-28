@@ -2,26 +2,64 @@ import React from 'react'
 import { Props } from '../../../common'
 import { StyledHintWrapper } from './style'
 import { Tooltip } from '../../Tooltips/Tooltip'
+import { TooltipPopover } from '../../Popovers/TooltipPopover'
 
-export interface IHintWrapperProps {
+enum HintWrapperType {
+  Popover = 'popover',
+  Tooltip = 'tooltip'
+}
+
+interface IHintWrapperProps {
   /** The hint text to display on hover */
-  hint: string
+  hint: JSX.Element | string
+  /** The hint type to display on hover */
+  hintType?: HintWrapperType
   /** The data-component-context */
   componentContext?: string
 }
 
-export class HintWrapper extends React.PureComponent<IHintWrapperProps> {
+class HintWrapper extends React.PureComponent<IHintWrapperProps> {
+  public static defaultProps: Partial<IHintWrapperProps> = {
+    hintType: HintWrapperType.Tooltip
+  }
+
   public render (): JSX.Element {
     const {
       componentContext,
       children,
-      hint
+      hint,
+      hintType
     } = this.props
+
+    const dataComponentValues = {
+      'data-component-type': Props.ComponentType.HintWrapper,
+      'data-component-context': componentContext
+    }
+
+    if (hintType === HintWrapperType.Popover) {
+      return (
+        <TooltipPopover
+          toggleComponent={
+            ({ openMenu, closeMenu, toggleComponentRef, ariaProps }) =>
+              <StyledHintWrapper
+                {...dataComponentValues}
+                onMouseEnter={openMenu}
+                onMouseLeave={closeMenu}
+                innerRef={toggleComponentRef}
+                {...ariaProps}
+              >
+                {children}
+              </StyledHintWrapper>
+          }
+        >
+          {hint}
+        </TooltipPopover>
+      )
+    }
 
     return (
       <StyledHintWrapper
-        data-component-type={Props.ComponentType.HintWrapper}
-        data-component-context={componentContext}
+        {...dataComponentValues}
       >
         <Tooltip
           message={hint}
@@ -31,4 +69,10 @@ export class HintWrapper extends React.PureComponent<IHintWrapperProps> {
       </StyledHintWrapper>
     )
   }
+}
+
+export {
+  HintWrapper,
+  HintWrapperType,
+  IHintWrapperProps
 }
