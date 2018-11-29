@@ -1,5 +1,7 @@
 import React, { RefObject } from 'react'
 import Geosuggest, { QueryType, Suggest } from 'react-geosuggest'
+import {ISmartListState} from '../../Lists/SmartList/SmartList'
+import {IAvatarProps, IAvatarState} from '../../Avatars/Avatar/Avatar'
 
 const style = require('./style.scss')
 
@@ -22,8 +24,24 @@ export interface IAutocompleteLocationInputProps {
   initialValue?: string
 }
 
-export class AutocompleteLocationInput extends React.PureComponent<IAutocompleteLocationInputProps> {
+export interface IAutocompleteLocationInputState {
+  isDisabled: boolean
+}
+
+export class AutocompleteLocationInput extends React.PureComponent<IAutocompleteLocationInputProps, IAutocompleteLocationInputState> {
+  public state: IAutocompleteLocationInputState = {
+    isDisabled: false
+  }
+
   private geosuggestRef: RefObject<any> = React.createRef()
+
+  constructor (props: IAutocompleteLocationInputProps) {
+    super(props)
+
+    this.state = {
+      isDisabled: !!props.isDisabled
+    }
+  }
 
   public componentDidMount () {
     const {
@@ -38,12 +56,19 @@ export class AutocompleteLocationInput extends React.PureComponent<IAutocomplete
 
   public componentDidUpdate (prevProps: IAutocompleteLocationInputProps) {
     const {
-      onResetClick
+      onResetClick,
+      isDisabled
     } = this.props
 
     if (onResetClick && (onResetClick !== prevProps.onResetClick)) {
       // forceUpdate is required to for the ref to work
       this.forceUpdate()
+    }
+
+    if (this.state.isDisabled !== isDisabled) {
+      this.setState({
+        isDisabled: !!isDisabled
+      })
     }
   }
 
@@ -65,7 +90,6 @@ export class AutocompleteLocationInput extends React.PureComponent<IAutocomplete
       placeholder,
       onSuggestSelect,
       onSuggestNoResults,
-      isDisabled,
       initialValue
     } = this.props
 
@@ -79,7 +103,7 @@ export class AutocompleteLocationInput extends React.PureComponent<IAutocomplete
           types={addressTypesIncluded!}
           onSuggestSelect={onSuggestSelect}
           onSuggestNoResults={onSuggestNoResults}
-          disabled={isDisabled}
+          disabled={this.state.isDisabled}
         />
       </div>
     )
@@ -95,5 +119,11 @@ export class AutocompleteLocationInput extends React.PureComponent<IAutocomplete
     }
 
     this.geosuggestRef.current.clear()
+
+    this.setState({
+      isDisabled: false
+    }, () => {
+      this.geosuggestRef.current.input.focus()
+    })
   }
 }
