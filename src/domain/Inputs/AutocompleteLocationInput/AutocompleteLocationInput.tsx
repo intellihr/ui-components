@@ -4,7 +4,7 @@ import Geosuggest, { QueryType, Suggest } from 'react-geosuggest'
 const style = require('./style.scss')
 
 export interface IAutocompleteLocationInputProps {
-  /** the address types of return value. Types can be added to the array. 'geocode' for address, '(regions)' for state,  '(cities)' for  suburb. If it is null, it will return all the value */
+  /** the address types of suggestion option values. Types can be added to the array. 'geocode' for address, '(regions)' for state,  '(cities)' for  suburb. If it is null, it will return all the value */
   addressTypesIncluded?: QueryType[]
   /** Placeholder text to display when input is empty */
   placeholder?: string
