@@ -122,7 +122,9 @@ const { Variables } = require('../../../common');
 #### Hint (Tooltip)
 ```jsx
   <Text
-    hint='I can be a string or a JSX Element!'
+    hintOptions={{
+      hint: 'I can be a string or a JSX Element!'
+    }}
   >
     Hover me
   </Text>
@@ -131,8 +133,10 @@ const { Variables } = require('../../../common');
 #### Hint (Popover)
 ```jsx
   <Text
-    hint='I can be a string or a JSX Element!'
-    hintType='popover'
+    hintOptions={{
+      hint: 'I can be a string or a JSX Element!',
+      hintType: 'popover'
+    }}
   >
     Hover me
   </Text>

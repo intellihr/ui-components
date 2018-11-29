@@ -8,6 +8,17 @@
 </Tooltip>
 ```
 
+#### Simple Tooltip with a set width
+
+```jsx
+<Tooltip
+  message='This div should have a tooltip that will be a maximum of 250px wide.'
+  width={250}
+>
+ <div>This div should have a tooltip</div>
+</Tooltip>
+```
+
 #### Simple Tooltip with on show event
 
 ```jsx

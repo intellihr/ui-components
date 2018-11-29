@@ -4,6 +4,7 @@ import { padEnd } from 'lodash'
 import { StyledCurrencyText, StyledPrefixText } from './style'
 import { Props, Variables } from '../../../common'
 import { Text } from '../Text'
+import { IHintWrapperProps } from '../../Formats/HintWrapper'
 
 interface ICurrencyTextProps {
   /** Monetary value to display */
@@ -18,7 +19,8 @@ interface ICurrencyTextProps {
   decimalPlace?:  number
   /** Vertically aligns the currency prefix and monetary value */
   flexAlign?: boolean
-  valueHint?: string
+  /** The options for the hint to apply to the value */
+  valueHintOptions?: IHintWrapperProps
   /** Monetary value text color */
   valueColor?: Variables.Color
   /** Currency prefix text color  */
@@ -61,7 +63,7 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
       value,
       valueType,
       valueColor,
-      valueHint
+      valueHintOptions
     } = this.props
 
     let moneyFormat = '0,0.'
@@ -73,7 +75,7 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
       <Text
         type={valueType}
         color={valueColor}
-        hint={valueHint}
+        hintOptions={valueHintOptions}
       >
         {Numeral(value!.toString()).format(moneyFormat)}
       </Text>
