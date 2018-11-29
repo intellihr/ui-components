@@ -24,3 +24,34 @@ exports[`<AutocompleteLocationInput /> should render the autocomplete location i
   />
 </div>
 `;
+
+exports[`<AutocompleteLocationInput /> should render the disabled autocomplete location input 1`] = `
+<div
+  className="autocompleteLocationInput"
+>
+  <span
+    className="autocomplete-reset"
+    onClick={[Function]}
+  >
+    ×
+  </span>
+  <default_1$$1
+    autoActivateFirstSuggest={false}
+    disabled={true}
+    fixtures={Array []}
+    getSuggestLabel={[Function]}
+    highlightMatch={true}
+    ignoreEnter={false}
+    ignoreTab={false}
+    initialValue="dummy value"
+    maxFixtures={10}
+    minLength={1}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    placeholder="Search places"
+    queryDelay={250}
+    skipSuggest={[Function]}
+    style={Object {}}
+  />
+</div>
+`;

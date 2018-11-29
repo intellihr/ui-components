@@ -1,6 +1,5 @@
-import React, {RefObject} from 'react'
+import React, { RefObject } from 'react'
 import Geosuggest, { QueryType, Suggest } from 'react-geosuggest'
-import {InputProps} from '../Input'
 
 const style = require('./style.scss')
 
@@ -19,7 +18,8 @@ export interface IAutocompleteLocationInputProps {
   isDisabled?: boolean
   /** If true, displays reset button and fires callback when clicked */
   onResetClick?: () => void
-  initialValue?: any
+  /** value used as the initial value to start */
+  initialValue?: string
 }
 
 export class AutocompleteLocationInput extends React.PureComponent<IAutocompleteLocationInputProps> {

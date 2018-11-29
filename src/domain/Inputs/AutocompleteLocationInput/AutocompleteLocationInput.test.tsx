@@ -16,3 +16,18 @@ describe('<AutocompleteLocationInput />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 })
+
+describe('<AutocompleteLocationInput />', () => {
+  it('should render the disabled autocomplete location input', () => {
+    const wrapper = shallow(
+      <AutocompleteLocationInput
+        initialValue='dummy value'
+        onClickManualOptionButton={dummyClick}
+        isDisabled
+        onResetClick={dummyClick}
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+})
