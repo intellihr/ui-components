@@ -2,7 +2,7 @@ import React from 'react'
 import { reduce } from 'lodash'
 import { TextWrapper } from './style'
 import { Props, Variables } from '../../../common'
-import { HintWrapper, HintWrapperType } from '../../Formats/HintWrapper'
+import { HintWrapper, IHintWrapperProps } from '../../Formats/HintWrapper'
 
 export interface ITextProps {
   /** Text to display */
@@ -29,10 +29,8 @@ export interface ITextProps {
   }
   /** The data-component-context */
   componentContext?: string
-  /** The content of the hint to pass through to HintWrapper */
-  hint?: JSX.Element | string
-  /** The type of hint to pass through to HintWrapper */
-  hintType?: HintWrapperType
+  /** The props for the hint to apply to the text */
+  hintComponentProps?: IHintWrapperProps
 }
 
 export class Text extends React.PureComponent<ITextProps> {
@@ -77,8 +75,7 @@ export class Text extends React.PureComponent<ITextProps> {
       isInline,
       color,
       componentContext,
-      hint,
-      hintType
+      hintComponentProps
     } = this.props
 
     const TextTag = this.textTag
@@ -100,11 +97,10 @@ export class Text extends React.PureComponent<ITextProps> {
       </TextTag>
     )
 
-    if (hint) {
+    if (hintComponentProps) {
       return (
         <HintWrapper
-          hint={hint}
-          hintType={hintType}
+          {...hintComponentProps}
         >
           {text}
         </HintWrapper>

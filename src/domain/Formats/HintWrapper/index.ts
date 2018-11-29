@@ -1,1 +1,5 @@
-export { HintWrapper, HintWrapperType } from './HintWrapper'
+export {
+  HintWrapper,
+  HintWrapperType,
+  IHintWrapperProps
+} from './HintWrapper'
