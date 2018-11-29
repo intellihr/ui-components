@@ -119,11 +119,20 @@ const { Variables } = require('../../../common');
   </Text>
 ```
 
-#### Hint
-
+#### Hint (Tooltip)
 ```jsx
   <Text
-    hint='Hello'
+    hint='I can be a string or a JSX Element!'
+  >
+    Hover me
+  </Text>
+```
+
+#### Hint (Popover)
+```jsx
+  <Text
+    hint='I can be a string or a JSX Element!'
+    hintType='popover'
   >
     Hover me
   </Text>
