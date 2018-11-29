@@ -23,6 +23,29 @@ exports[`<Tooltip /> should render a tooltip with a custom class name 1`] = `
 </styled.span>
 `;
 
+exports[`<Tooltip /> should render a tooltip with a set width 1`] = `
+<styled.span
+  data-for="test-tooltip"
+  data-tip={true}
+  key="test-tooltip"
+  width={250}
+>
+  <div>
+    This div should have a tooltip
+  </div>
+  <ReactTooltip
+    effect="solid"
+    id="test-tooltip"
+    insecure={true}
+    place="top"
+    resizeHide={true}
+    wrapper="div"
+  >
+    Tooltip message
+  </ReactTooltip>
+</styled.span>
+`;
+
 exports[`<Tooltip /> should render a tooltip with the child element 1`] = `
 <styled.span
   data-for="test-tooltip"

@@ -12,7 +12,8 @@ export interface ITooltipProps {
   effect?: 'solid' | 'float',
   onShow?: () => void,
   withIcon?: boolean,
-  iconColour?: string
+  iconColour?: string,
+  width?: number,
   className?: string
 }
 
@@ -42,6 +43,7 @@ export class Tooltip extends React.Component<ITooltipProps> {
       effect,
       onShow,
       id,
+      width,
       className
     } = this.props
 
@@ -67,6 +69,7 @@ export class Tooltip extends React.Component<ITooltipProps> {
         key={tooltipElementKey}
         data-tip
         data-for={tooltipId}
+        width={width}
       >
         {tooltipElement}
 

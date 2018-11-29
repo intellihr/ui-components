@@ -98,4 +98,19 @@ describe('<CurrencyText />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
+  it('should render the Currency Text with a value hint', () => {
+    const wrapper = mount(
+      <CurrencyText
+        value={0}
+        prefix='AUD'
+        valueHintComponentProps={{
+          hint: 'I am a hint',
+          width: 250
+        }}
+      />
+    )
+
+    expect(wrapper.find('HintWrapper').exists()).toBeTruthy()
+    expect(wrapper.find('Tooltip').exists()).toBeTruthy()
+  })
 })

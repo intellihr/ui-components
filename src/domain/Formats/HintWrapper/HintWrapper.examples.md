@@ -36,3 +36,17 @@ const { Variables } = require('../../../common');
   </HintWrapper>
 </div>
 ```
+
+#### Hint with a Custom Width
+```jsx
+<div>
+  <HintWrapper
+    hint='Never trust a cat said the man with the hat'
+    width={200}
+  >
+    <Text>
+      Hover me for a tip :)
+    </Text>
+  </HintWrapper>
+</div>
+```

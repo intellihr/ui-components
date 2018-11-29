@@ -1,5 +1,4 @@
 import React, { Fragment, RefObject } from 'react'
-import { FocusTarget } from 'focus-trap'
 import uuid from 'uuid'
 import { StyledTooltipContent } from './style'
 import { IPopoverPosition, Popover } from '../Popover'
