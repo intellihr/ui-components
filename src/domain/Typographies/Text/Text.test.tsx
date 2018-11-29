@@ -88,7 +88,7 @@ describe('<Text />', () => {
   it(`should render a text with a popover hint`, () => {
     const wrapper = mount(
       <Text
-        hintOptions={{
+        hintComponentProps={{
           hint: 'Test',
           hintType: HintWrapperType.Popover
         }}
@@ -104,9 +104,9 @@ describe('<Text />', () => {
   it(`should render a text with a tooltip hint`, () => {
     const wrapper = mount(
       <Text
-      hintOptions={{
-        hint: 'Test',
-        hintType: HintWrapperType.Tooltip
+        hintComponentProps={{
+          hint: 'Test',
+          hintType: HintWrapperType.Tooltip
       }}
       >
         Hello! I am text with a hint

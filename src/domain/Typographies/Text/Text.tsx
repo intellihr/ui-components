@@ -29,8 +29,8 @@ export interface ITextProps {
   }
   /** The data-component-context */
   componentContext?: string
-  /** The options for the hint to apply to the text */
-  hintOptions?: IHintWrapperProps
+  /** The props for the hint to apply to the text */
+  hintComponentProps?: IHintWrapperProps
 }
 
 export class Text extends React.PureComponent<ITextProps> {
@@ -75,7 +75,7 @@ export class Text extends React.PureComponent<ITextProps> {
       isInline,
       color,
       componentContext,
-      hintOptions
+      hintComponentProps
     } = this.props
 
     const TextTag = this.textTag
@@ -97,10 +97,10 @@ export class Text extends React.PureComponent<ITextProps> {
       </TextTag>
     )
 
-    if (hintOptions) {
+    if (hintComponentProps) {
       return (
         <HintWrapper
-          {...hintOptions}
+          {...hintComponentProps}
         >
           {text}
         </HintWrapper>

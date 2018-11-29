@@ -15,7 +15,7 @@
     value={1000.499}
     prefix='AUD'
     decimalPlace={2}
-    valueHintOptions={{
+    valueHintComponentProps={{
       hint: 'Some hint regarding the currency value',
       hintType: 'popover',
       width: 250

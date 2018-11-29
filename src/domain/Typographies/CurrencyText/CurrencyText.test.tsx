@@ -103,7 +103,7 @@ describe('<CurrencyText />', () => {
       <CurrencyText
         value={0}
         prefix='AUD'
-        valueHintOptions={{
+        valueHintComponentProps={{
           hint: 'I am a hint',
           width: 250
         }}

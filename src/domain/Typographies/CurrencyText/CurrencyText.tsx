@@ -20,7 +20,7 @@ interface ICurrencyTextProps {
   /** Vertically aligns the currency prefix and monetary value */
   flexAlign?: boolean
   /** The options for the hint to apply to the value */
-  valueHintOptions?: IHintWrapperProps
+  valueHintComponentProps?: IHintWrapperProps
   /** Monetary value text color */
   valueColor?: Variables.Color
   /** Currency prefix text color  */
@@ -63,7 +63,7 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
       value,
       valueType,
       valueColor,
-      valueHintOptions
+      valueHintComponentProps
     } = this.props
 
     let moneyFormat = '0,0.'
@@ -75,7 +75,7 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
       <Text
         type={valueType}
         color={valueColor}
-        hintOptions={valueHintOptions}
+        hintComponentProps={valueHintComponentProps}
       >
         {Numeral(value!.toString()).format(moneyFormat)}
       </Text>
