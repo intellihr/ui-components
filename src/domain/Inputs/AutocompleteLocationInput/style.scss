@@ -1,6 +1,8 @@
 @import '../../../common/sass/variables';
 
 :local(.autocompleteLocationInput) {
+  position: relative;
+
   .geosuggest__suggests-wrapper {
     .geosuggest__suggests {
       background-color: #fff;
@@ -44,6 +46,20 @@
       &:hover {
         background-color: #eef5ff;
       }
+    }
+  }
+
+  .autocomplete-reset {
+    color: #999;
+    cursor: pointer;
+    position: absolute;
+    line-height: 40px;
+    vertical-align: top;
+    right: 0;
+    padding: 0 12px;
+
+    &:hover {
+      color: #DB4C60;
     }
   }
 }

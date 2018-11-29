@@ -1,10 +1,11 @@
-import React from 'react'
+import React, {RefObject} from 'react'
 import Geosuggest, { QueryType, Suggest } from 'react-geosuggest'
+import {InputProps} from '../Input'
 
 const style = require('./style.scss')
 
 export interface IAutocompleteLocationInputProps {
-  /** the address types of return value. Types can be added to the array. 'geocode' for address, 'regions' for state,  'cities' for  suburb. If it is null, it will return all the value */
+  /** the address types of return value. Types can be added to the array. 'geocode' for address, '(regions)' for state,  '(cities)' for  suburb. If it is null, it will return all the value */
   addressTypesIncluded?: QueryType[]
   /** Placeholder text to display when input is empty */
   placeholder?: string
@@ -14,26 +15,85 @@ export interface IAutocompleteLocationInputProps {
   onClickManualOptionButton: (event: React.MouseEvent<HTMLElement>) => void
   /** event for no result for the suggestion */
   onSuggestNoResults?:(userInput: string) => void
+  /** If true, sets input to disabled state */
+  isDisabled?: boolean
+  /** If true, displays reset button and fires callback when clicked */
+  onResetClick?: () => void
+  initialValue?: any
 }
 
 export class AutocompleteLocationInput extends React.PureComponent<IAutocompleteLocationInputProps> {
+  private geosuggestRef: RefObject<any> = React.createRef()
+
+  public componentDidMount () {
+    const {
+      onResetClick
+    } = this.props
+
+    if (onResetClick) {
+      // forceUpdate is required to for the ref to work
+      this.forceUpdate()
+    }
+  }
+
+  public componentDidUpdate (prevProps: IAutocompleteLocationInputProps) {
+    const {
+      onResetClick
+    } = this.props
+
+    if (onResetClick && (onResetClick !== prevProps.onResetClick)) {
+      // forceUpdate is required to for the ref to work
+      this.forceUpdate()
+    }
+  }
+
+  get resetButton(): JSX.Element | null{
+    const {
+      onResetClick
+    } = this.props
+
+    if (onResetClick) {
+      return <span onClick={this.handleReset} className='autocomplete-reset'>×</span>
+    }
+
+    return null
+  }
+
   public render (): JSX.Element {
     const {
       addressTypesIncluded,
       placeholder,
       onSuggestSelect,
-      onSuggestNoResults
+      onSuggestNoResults,
+      isDisabled,
+      initialValue
     } = this.props
 
     return (
       <div className={style.autocompleteLocationInput}>
+        {this.resetButton}
         <Geosuggest
+          ref={this.geosuggestRef}
+          initialValue={initialValue}
           placeholder={placeholder}
           types={addressTypesIncluded!}
           onSuggestSelect={onSuggestSelect}
           onSuggestNoResults={onSuggestNoResults}
+          disabled={isDisabled}
         />
       </div>
     )
+  }
+
+  private handleReset = () => {
+    const {
+      onResetClick
+    } = this.props
+
+    if (onResetClick) {
+      onResetClick()
+    }
+
+    this.geosuggestRef.current.clear()
   }
 }
