@@ -18,7 +18,7 @@ interface IVerticalFormFieldProps {
 }
 
 class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
-  private get errorMessages (): JSX.Element | JSX.Element[] | null {
+  private get errorMessages (): JSX.Element | Array<JSX.Element | null> | null {
     const {
       errorMessages
     } = this.props
@@ -28,8 +28,8 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
         return this.errorMessageWrapper(errorMessages)
       }
 
-      return map(errorMessages, (error: string) => {
-        return this.errorMessageWrapper(error)
+      return map(errorMessages, (errorMessage: string, idx: number) => {
+        return this.errorMessageWrapper(errorMessage, idx)
       })
     }
 
@@ -94,9 +94,15 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
     )
   }
 
-  private errorMessageWrapper = (message: string) => {
+  private errorMessageWrapper = (message: string, idx?: number) => {
+    if (!message) {
+      return null
+    }
+
     return (
-      <ErrorMessage>
+      <ErrorMessage
+        key={idx || undefined}
+      >
         {message}
       </ErrorMessage>
     )

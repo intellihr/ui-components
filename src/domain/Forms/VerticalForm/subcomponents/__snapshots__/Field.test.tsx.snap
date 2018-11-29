@@ -53,7 +53,9 @@ exports[`<Field /> should render a vertical form field with error messages 1`] =
   <styled.div>
     Error 1
   </styled.div>
-  <styled.div>
+  <styled.div
+    key="1"
+  >
     Error 2
   </styled.div>
 </styled.div>
