@@ -1,7 +1,7 @@
 #### Simple Tooltip
 
 ```jsx
-<Tooltip 
+<Tooltip
   message='Tooltip message'
 >
  <div>This div should have a tooltip</div>
@@ -11,7 +11,7 @@
 #### Simple Tooltip with on show event
 
 ```jsx
-<Tooltip 
+<Tooltip
   message='Tooltip message'
   onShow={() => console.log('I have just appeared')}
 >
@@ -19,10 +19,28 @@
 </Tooltip>
 ```
 
+#### Tooltip with JSX Elements as content
+
+```jsx
+const { Variables } = require('../../../common');
+
+<Tooltip
+  message={
+    <>
+      <Text type='heading' isInline={false} color={Variables.Color.n100}>Tooltip Heading</Text>
+      <Text type='small' color={Variables.Color.n100}>Some explanation of an element</Text>
+    </>
+  }
+>
+ <div>This div should have a tooltip</div>
+</Tooltip>
+```
+
+
 #### Tooltip with icon
 
 ```jsx
-<Tooltip 
+<Tooltip
   message='Tooltip message'
   withIcon
 >

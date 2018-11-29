@@ -2,7 +2,8 @@ import React from 'react'
 import { mount } from 'enzyme'
 
 import { Text } from './Text'
-import { Variables } from '../../../common'
+import { Variables, Props } from '../../../common'
+import { HintWrapperType } from '../../Formats/HintWrapper'
 
 describe('<Text />', () => {
   it(`should render an element with text`, () => {
@@ -31,7 +32,7 @@ describe('<Text />', () => {
 
   it(`should render an element with small text`, () => {
     const wrapper = mount(
-      <Text type='small'>Hello, world!</Text>
+      <Text type={Props.TypographyType.Small}>Hello, world!</Text>
     )
 
     expect(wrapper).toMatchSnapshot()
@@ -39,7 +40,7 @@ describe('<Text />', () => {
 
   it(`should render an element with heading text`, () => {
     const wrapper = mount(
-      <Text type='heading'>Hello, world!</Text>
+      <Text type={Props.TypographyType.Heading}>Hello, world!</Text>
     )
 
     expect(wrapper).toMatchSnapshot()
@@ -82,5 +83,33 @@ describe('<Text />', () => {
     )
 
     expect(wrapper).toMatchSnapshot()
+  })
+
+  it(`should render a text with a popover hint`, () => {
+    const wrapper = mount(
+      <Text
+        hint='Test'
+        hintType={HintWrapperType.Popover}
+      >
+        Hello! I am text with a hint
+      </Text>
+    )
+
+    expect(wrapper.find('HintWrapper').exists()).toBeTruthy()
+    expect(wrapper.find('TooltipPopover').exists()).toBeTruthy()
+  })
+
+  it(`should render a text with a tooltip hint`, () => {
+    const wrapper = mount(
+      <Text
+        hint='Test'
+        hintType={HintWrapperType.Tooltip}
+      >
+        Hello! I am text with a hint
+      </Text>
+    )
+
+    expect(wrapper.find('HintWrapper').exists()).toBeTruthy()
+    expect(wrapper.find('Tooltip').exists()).toBeTruthy()
   })
 })

@@ -7,7 +7,7 @@ import { TooltipIcon, TooltipWrapper } from './style'
 
 export interface ITooltipProps {
   id?: string,
-  message: string,
+  message: JSX.Element | string,
   place?: 'top' | 'right' | 'bottom' | 'left',
   effect?: 'solid' | 'float',
   onShow?: () => void,
