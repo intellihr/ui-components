@@ -52,14 +52,14 @@
   .autocomplete-reset {
     color: #999;
     cursor: pointer;
-    position: absolute;
     line-height: 40px;
-    vertical-align: top;
-    right: 0;
     padding: 0 12px;
+    position: absolute;
+    right: 0;
+    vertical-align: top;
 
     &:hover {
-      color: #DB4C60;
+      color: #db4c60;
     }
   }
 }
