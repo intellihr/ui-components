@@ -5,7 +5,7 @@
 
   .geosuggest__suggests-wrapper {
     .geosuggest__suggests {
-      background-color: #fff;
+      background-color: $n100;
       border: 1px solid $n400;
       border-bottom-left-radius: $border-radius;
       border-bottom-right-radius: $border-radius;
@@ -32,7 +32,7 @@
     }
 
     .geosuggest__item {
-      background-color: #fff;
+      background-color: $n100;
       box-sizing: border-box;
       color: #666;
       cursor: pointer;
