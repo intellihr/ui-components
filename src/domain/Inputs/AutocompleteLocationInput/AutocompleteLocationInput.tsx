@@ -1,26 +1,24 @@
 import React, { RefObject } from 'react'
 import Geosuggest, { QueryType, Suggest } from 'react-geosuggest'
-import {ISmartListState} from '../../Lists/SmartList/SmartList'
-import {IAvatarProps, IAvatarState} from '../../Avatars/Avatar/Avatar'
 
 const style = require('./style.scss')
 
 export interface IAutocompleteLocationInputProps {
-  /** the address types of suggestion option values. Types can be added to the array. 'geocode' for address, '(regions)' for state,  '(cities)' for  suburb. If it is null, it will return all the value */
+  /** The address types of suggestion option values. Types can be added to the array. 'geocode' for address, '(regions)' for state,  '(cities)' for  suburb. If it is null, it will return all the value */
   addressTypesIncluded?: QueryType[]
   /** Placeholder text to display when input is empty */
   placeholder?: string
-  /** event for selected suggestion */
+  /** Event for selected suggestion */
   onSuggestSelect?: (suggest: Suggest) => void
   /** onClick event for clicking the manual Option Button */
   onClickManualOptionButton: (event: React.MouseEvent<HTMLElement>) => void
-  /** event for no result for the suggestion */
+  /** Event for no result for the suggestion */
   onSuggestNoResults?:(userInput: string) => void
   /** If true, sets input to disabled state */
   isDisabled?: boolean
   /** If true, displays reset button and fires callback when clicked */
   onResetClick?: () => void
-  /** value used as the initial value to start */
+  /** Value used as the initial value to start */
   initialValue?: string
 }
 

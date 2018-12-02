@@ -21,6 +21,9 @@ export interface IStatusIndicatorProps {
 
     /** Should the label use a hollow icon  */
     isHollow?: boolean
+
+    /** Extra classes to apply  */
+    className?: string
   }
 
 export class StatusIndicator extends React.Component<IStatusIndicatorProps> {
@@ -54,11 +57,12 @@ export class StatusIndicator extends React.Component<IStatusIndicatorProps> {
       text,
       color,
       textColor,
-      isHollow
+      isHollow,
+      className
     } = this.props
 
     return (
-      <span className={classNames(style.StatusIndicator, 'dot-status-label')}>
+      <span className={classNames(style.StatusIndicator, className, 'dot-status-label')}>
         <FontAwesomeIcon
           type={isHollow ? 'circle-o' : 'circle'}
           color={color}
