@@ -9,7 +9,6 @@
       border: 1px solid $n400;
       border-bottom-left-radius: $border-radius;
       border-bottom-right-radius: $border-radius;
-      border-top-color: #e6e6e6;
       box-sizing: border-box;
       cursor: pointer;
       font-size: $fz-body;
@@ -34,7 +33,7 @@
     .geosuggest__item {
       background-color: $n100;
       box-sizing: border-box;
-      color: #666;
+      color: $n700;
       cursor: pointer;
       display: block;
       height: 50px;
@@ -44,13 +43,13 @@
       white-space: nowrap;
 
       &:hover {
-        background-color: #eef5ff;
+        background-color: $n200;
       }
     }
   }
 
   .autocomplete-reset {
-    color: #999;
+    color: $n700;
     cursor: pointer;
     line-height: 40px;
     padding: 0 12px;
@@ -59,7 +58,7 @@
     vertical-align: top;
 
     &:hover {
-      color: #db4c60;
+      color: $r600;
     }
   }
 }
