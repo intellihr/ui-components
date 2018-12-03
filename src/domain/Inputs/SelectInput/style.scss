@@ -3,7 +3,7 @@
 @import '../../../common/sass/variables';
 
 :local(.selectInput) {
-  .Select {
+  &.Select {
     &.is-focused {
       .Select-control {
         border: 1px solid $i400;
@@ -58,7 +58,21 @@
       }
     }
 
+    .Select-option {
+      color: $n700;
+
+      &.is-focused {
+        background-color: $n200;
+      }
+
+      &.is-selected {
+        background-color: $i100;
+        color: $i600;
+      }
+    }
+
     .Select-menu-outer {
+      border-top-color: $n400;
       margin-bottom: 40px;
     }
   }
