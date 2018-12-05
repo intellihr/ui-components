@@ -80,8 +80,13 @@ export class AutocompleteLocationInput extends React.PureComponent<IAutocomplete
   public componentDidUpdate (prevProps: IAutocompleteLocationInputProps) {
     const {
       onResetClick,
-      isDisabled
+      isDisabled,
+      biasCountry
     } = this.props
+
+    if (biasCountry !== prevProps.biasCountry) {
+      this.generateBiasLocation()
+    }
 
     if (onResetClick && (onResetClick !== prevProps.onResetClick)) {
       // forceUpdate is required to for the ref to work
