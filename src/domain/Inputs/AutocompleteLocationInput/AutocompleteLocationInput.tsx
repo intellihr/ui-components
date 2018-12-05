@@ -20,15 +20,37 @@ export interface IAutocompleteLocationInputProps {
   onResetClick?: () => void
   /** Value used as the initial value to start */
   initialValue?: string
+  /** The country to bias the search results around */
+  biasCountry?: string
+  /** the bias radius, defaults to 1000m */
+  radius?: number
 }
 
 export interface IAutocompleteLocationInputState {
-  isDisabled: boolean
+  isDisabled: boolean,
+  location: google.maps.LatLng | null
 }
 
 export class AutocompleteLocationInput extends React.PureComponent<IAutocompleteLocationInputProps, IAutocompleteLocationInputState> {
+  get resetButton(): JSX.Element | null{
+    const {
+      onResetClick
+    } = this.props
+
+    if (onResetClick) {
+      return <span onClick={this.handleReset} className='autocomplete-reset'>×</span>
+    }
+
+    return null
+  }
+
+  public static defaultProps: Partial<IAutocompleteLocationInputProps> = {
+    radius: 1000
+  }
+
   public state: IAutocompleteLocationInputState = {
-    isDisabled: false
+    isDisabled: false,
+    location: null
   }
 
   private geosuggestRef: RefObject<any> = React.createRef()
@@ -37,7 +59,8 @@ export class AutocompleteLocationInput extends React.PureComponent<IAutocomplete
     super(props)
 
     this.state = {
-      isDisabled: !!props.isDisabled
+      isDisabled: !!props.isDisabled,
+      location: null
     }
   }
 
@@ -45,6 +68,8 @@ export class AutocompleteLocationInput extends React.PureComponent<IAutocomplete
     const {
       onResetClick
     } = this.props
+
+    this.generateBiasLocation()
 
     if (onResetClick) {
       // forceUpdate is required to for the ref to work
@@ -70,26 +95,19 @@ export class AutocompleteLocationInput extends React.PureComponent<IAutocomplete
     }
   }
 
-  get resetButton(): JSX.Element | null{
-    const {
-      onResetClick
-    } = this.props
-
-    if (onResetClick) {
-      return <span onClick={this.handleReset} className='autocomplete-reset'>×</span>
-    }
-
-    return null
-  }
-
   public render (): JSX.Element {
     const {
       addressTypesIncluded,
       placeholder,
       onSuggestSelect,
       onSuggestNoResults,
-      initialValue
+      initialValue,
+      radius
     } = this.props
+
+    const {
+      location
+    } = this.state
 
     return (
       <div className={style.autocompleteLocationInput}>
@@ -101,10 +119,34 @@ export class AutocompleteLocationInput extends React.PureComponent<IAutocomplete
           types={addressTypesIncluded!}
           onSuggestSelect={onSuggestSelect}
           onSuggestNoResults={onSuggestNoResults}
+          location={location ? location : undefined}
+          radius={location ? radius : undefined}
           disabled={this.state.isDisabled}
         />
       </div>
     )
+  }
+
+  private generateBiasLocation = () => {
+    const {
+      biasCountry
+    } = this.props
+
+    const googleMaps = ((window as any).google && (window as any).google.maps)
+    if (biasCountry && googleMaps) {
+      const geocoder = new googleMaps.Geocoder()
+      const options: google.maps.GeocoderRequest = {
+        address: biasCountry
+      }
+
+      geocoder.geocode(options, (results: any, status: any) => {
+        if (status === googleMaps.GeocoderStatus.OK) {
+          const gmaps = results[0]
+          const location = gmaps.geometry.location
+          this.setState({location})
+        }
+      })
+    }
   }
 
   private handleReset = () => {
