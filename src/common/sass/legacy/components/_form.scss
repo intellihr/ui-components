@@ -49,6 +49,10 @@
       @extend .medium-offset-4;
     }
   }
+
+  .auto-expand-text-area {
+    overflow: hidden;
+  }
 }
 
 .input-group-label {
