@@ -42,7 +42,8 @@
       text-overflow: ellipsis;
       white-space: nowrap;
 
-      &:hover {
+      &:hover,
+      &.geosuggest__item--active {
         background-color: $n200;
       }
     }
