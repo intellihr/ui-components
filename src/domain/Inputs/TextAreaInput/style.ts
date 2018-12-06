@@ -4,6 +4,7 @@ import AutosizeTextarea from 'react-autosize-textarea'
 
 const StyledAutosizeTextarea = styled(AutosizeTextarea)`
   min-height: 39px;
+  resize: none;
 `
 
 export {
