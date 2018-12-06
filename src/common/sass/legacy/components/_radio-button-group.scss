@@ -2,7 +2,8 @@
 
 .radio-button-group {
   @extend .button-group;
-  display: inline-grid;
+  display: inline-flex;
+  flex-direction: column;
 
   .button {
     background-color: $n300;
@@ -10,6 +11,7 @@
     border-left: none;
     min-width: 240px;
     margin-bottom: 1px;
+    align-self: stretch;
   }
 
   input {

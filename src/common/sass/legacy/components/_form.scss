@@ -45,10 +45,6 @@
   .input-container {
     @extend .column;
     @extend .medium-12;
-
-    &:first-child {
-      @extend .medium-offset-4;
-    }
   }
 }
 
