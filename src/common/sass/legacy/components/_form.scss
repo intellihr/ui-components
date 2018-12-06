@@ -18,7 +18,7 @@
 
   .label-container {
     @extend .column;
-    @extend .medium-4;
+    @extend .medium-12;
 
     label {
       font-size: $global-font-size;
@@ -39,11 +39,12 @@
         @include form-label-middle;
       }
     }
+
   }
 
   .input-container {
     @extend .column;
-    @extend .medium-8;
+    @extend .medium-12;
 
     &:first-child {
       @extend .medium-offset-4;
@@ -71,7 +72,7 @@
 
   .value-container {
     @extend .column;
-    @extend .medium-8;
+    @extend .medium-12;
 
     &:first-child {
       @extend .medium-offset-4;

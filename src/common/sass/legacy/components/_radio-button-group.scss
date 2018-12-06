@@ -2,11 +2,14 @@
 
 .radio-button-group {
   @extend .button-group;
+  display: inline-grid;
 
   .button {
     background-color: $n300;
     color: $n700;
     border-left: none;
+    min-width: 240px;
+    margin-bottom: 1px;
   }
 
   input {
