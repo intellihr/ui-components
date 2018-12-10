@@ -1,14 +1,11 @@
 @import '../../variables';
-
 .form-radio-button-group {
   display: inline-flex;
   flex-direction: column;
   max-width: 900px;
-
   input {
     display: none;
   }
-
   .radio-button {
     align-self: stretch;
     background-color: $n100;
@@ -23,7 +20,7 @@
     padding: 10px 24px 10px 44px;
     position: relative;
     transition: all .25s ease-out, color .25s ease-out;
-
+    word-break: break-all;
     &:before {
       background-color: $n150;
       border: 2px solid $n400;
@@ -38,7 +35,6 @@
       vertical-align: top;
       width: 20px;
     }
-
     &:after {
       content: '';
       display: inline-block;
@@ -52,27 +48,22 @@
       vertical-align: top;
       width: 16px;
     }
-
     &:hover {
       background-color: $n200;
-
       &:before {
         background-color: $n300;
         border-color: $n600;
       }
     }
   }
-
   input:checked + .radio-button {
     background-color: $i100;
     border-color: $i600;
     color: $i600;
-
     &:before {
       background-color: $i100;
       border-color: $i400;
     }
-
     &:after {
       background-position: center;
       background-image: radial-gradient(circle closest-side, $i400, $i400 50%, transparent 50%, transparent 100%);
@@ -81,11 +72,9 @@
       opacity: 1;
       transform: scale(1);
     }
-
     &:hover {
       background-color: $i100;
       border-color: $i400;
-
       &:before {
         background-color: $i100;
         border-color: $i400;
