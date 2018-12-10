@@ -23,6 +23,7 @@
     padding: 10px 24px 10px 44px;
     position: relative;
     transition: all .25s ease-out, color .25s ease-out;
+    word-break: break-all;
 
     &:before {
       background-color: $n150;
