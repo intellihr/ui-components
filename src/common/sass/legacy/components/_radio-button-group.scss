@@ -5,26 +5,6 @@
   display: inline-flex;
   flex-direction: column;
 
-  &.ratings {
-    display: inline-flex;
-    flex-direction: row;
-    .button {
-      min-width: auto;
-      margin-right: 8px;
-      background-color: $n100;
-      border: 1px solid $n300;
-      &:hover, &:focus{
-        background-color: $n200;
-        color: $n700;
-       }
-    }
-    input:checked + .button {
-      background-color: $i100;
-      border:1px solid $i600;
-      color: $i600;
-    }
-  }
-
   .button {
     background-color: $n300;
     color: $n700;
