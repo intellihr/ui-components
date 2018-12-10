@@ -16,13 +16,17 @@
     }
   }
 
-  .label-container {
-    @extend .column;
-    @extend .medium-12;
+  .form-content-container {
+    .label-container {
+      @extend .column;
+      @extend .medium-12;
 
-    label {
-      font-size: $global-font-size;
-      line-height: $global-lineheight;
+      label {
+        padding-bottom: 0;
+        padding-top: 0;
+        font-size: $global-font-size;
+        line-height: $global-lineheight;
+      }
     }
   }
 
