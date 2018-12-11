@@ -9,6 +9,13 @@
     display: none;
   }
 
+  .checkbox-description {
+    font-size: $fz-small;
+    line-height: $lh-small;
+    color: $n600;
+    margin-bottom: 1rem;
+  }
+
   .checkbox-button {
     align-self: stretch;
     background-color: $n100;
