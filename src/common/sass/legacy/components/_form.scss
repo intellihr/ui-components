@@ -35,6 +35,53 @@
   .input-tail {
     margin-top: -.75rem;
   }
+
+  .form-control-container {
+    background-color: white;
+    border-top: 1px solid #EDF1F5;
+    bottom: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    position: fixed;
+
+    &.fullscreen {
+      width: 100%;
+      left: 0;
+    }
+
+    &:not(.fullscreen) {
+      @include breakpoint(tablet up) {
+        width: calc(100% - 250px);
+        left: 250px;
+      }
+
+      @include breakpoint(tablet down) {
+        width: 100%;
+        left: 0;
+      }
+    }
+
+    .info-text {
+      &.hidden {
+        display: none;
+      }
+
+      color: $n600;
+      float: right;
+      padding: 8px;
+    }
+
+    .form-instance-buttons {
+      margin: 12px auto 0;
+      max-width: 900px;
+      width: 100%;
+      float: none;
+
+      .button {
+        margin-bottom: 12px;
+      }
+    }
+  }
 }
 
 .ihr-form {
