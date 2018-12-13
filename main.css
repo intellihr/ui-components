@@ -10322,9 +10322,7 @@ input.is-invalid-input:focus { border-color: #FF8A80; }
 
 .initials-badge { background-color: #F5F7FA; text-transform: uppercase; }
 
-.radio-button-group { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
-
-.radio-button-group .button { background-color: #E1E6EB; color: #424F5C; border-left: none; min-width: 240px; margin-bottom: 1px; -ms-flex-item-align: stretch; align-self: stretch; }
+.radio-button-group .button { background-color: #E1E6EB; color: #424F5C; border-left: none; }
 
 .radio-button-group input { display: none; }
 
