@@ -92,6 +92,34 @@ const initialState = { textInputValue: '' };
   </VerticalForm>
 ```
 
+Field with tooltip
+
+```jsx
+const { TextInput } = require('../../Inputs');
+const initialState = { textInputValue: '' };
+
+  <VerticalForm
+    onSubmit={() => alert(`Test input: ${state.textInputValue}`)}
+  >
+    <VerticalForm.Field
+      inputName='testInput'
+      label='This is a test input'
+      tooltipMessage='I am a test tooltip'
+      isRequired
+    >
+      <TextInput
+        name='testInput'
+        handleChange={(e) => setState({ textInputValue: e.target.value })}
+      />
+    </VerticalForm.Field>
+    <Button
+       type='primary'
+    >
+      Submit me :)
+    </Button>
+  </VerticalForm>
+```
+
 Field with errors & required
 
 ```jsx

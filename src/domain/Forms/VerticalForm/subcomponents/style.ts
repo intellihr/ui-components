@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import { Variables } from '../../../../common'
+import { TooltipPopover } from '../../../Popovers/TooltipPopover'
 
 interface IStyledInputLabelProps {
   isRequired: boolean
@@ -16,6 +17,10 @@ const FieldWrapper = styled.div`
 const ErrorMessage = styled.div`
   font-size: ${Variables.FontSize.fzSmall}px;
   color: ${Variables.Color.r400};
+`
+
+const StyledTooltipPopover = styled.span`
+  margin-left: 4px;
 `
 
 const StyledInputLabel = styled.label`
@@ -45,5 +50,6 @@ export {
   FieldWrapper,
   ErrorMessage,
   StyledInputLabel,
-  StyledDescription
+  StyledDescription,
+  StyledTooltipPopover
 }
