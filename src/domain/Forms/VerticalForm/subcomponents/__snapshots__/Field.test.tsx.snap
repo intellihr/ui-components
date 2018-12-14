@@ -14,6 +14,24 @@ exports[`<Field /> should render a vertical form field with a action message 1`]
 </styled.div>
 `;
 
+exports[`<Field /> should render a vertical form field with a action message 2`] = `
+<styled.div>
+  <styled.label
+    isRequired={false}
+  >
+    This is a test input
+    <styled.span>
+      <TooltipPopover
+        toggleComponent={[Function]}
+      >
+        I am a test tooltip
+      </TooltipPopover>
+    </styled.span>
+  </styled.label>
+  Children
+</styled.div>
+`;
+
 exports[`<Field /> should render a vertical form field with a description 1`] = `
 <styled.div>
   <styled.label
