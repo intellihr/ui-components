@@ -23,6 +23,7 @@ exports[`<Field /> should render a vertical form field with a action message 2`]
     <styled.span>
       <TooltipPopover
         toggleComponent={[Function]}
+        width={100}
       >
         I am a test tooltip
       </TooltipPopover>

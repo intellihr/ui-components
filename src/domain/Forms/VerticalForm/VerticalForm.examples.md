@@ -105,6 +105,7 @@ const initialState = { textInputValue: '' };
       inputName='testInput'
       label='This is a test input'
       tooltipMessage='I am a test tooltip'
+      tooltipProps={{width: 100}}
       isRequired
     >
       <TextInput
