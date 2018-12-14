@@ -1,7 +1,7 @@
 import React from 'react'
 import { map, isString } from 'lodash'
 import { ErrorMessage, FieldWrapper, StyledInputLabel, StyledDescription, StyledTooltipPopover } from './style'
-import {TooltipPopover} from '../../../Popovers/TooltipPopover'
+import { ITooltipPopoverProps, TooltipPopover } from '../../../Popovers/TooltipPopover'
 
 interface IVerticalFormFieldProps {
   /** HTML name of the input */
@@ -18,6 +18,9 @@ interface IVerticalFormFieldProps {
   errorMessages?: string | string[]
   /** Message of tooltip to show */
   tooltipMessage?: JSX.Element | string
+  /** any extra tooltip props */
+  tooltipProps?: ITooltipPopoverProps
+
 }
 
 class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
@@ -41,13 +44,14 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
 
   private get tooltip (): JSX.Element | null {
     const {
-      tooltipMessage
+      tooltipMessage,
+      tooltipProps
     } = this.props
 
     if (tooltipMessage) {
       return (
         <StyledTooltipPopover>
-          <TooltipPopover>
+          <TooltipPopover {...tooltipProps}>
             {tooltipMessage}
           </TooltipPopover>
         </StyledTooltipPopover>
