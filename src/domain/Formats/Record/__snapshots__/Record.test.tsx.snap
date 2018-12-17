@@ -519,9 +519,10 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
         <TooltipPopover
           toggleComponent={[Function]}
         >
-          <span
+          <button
             aria-expanded={false}
             aria-haspopup={true}
+            className="popoverTrigger"
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             role="button"
@@ -551,7 +552,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                 </styled.i>
               </Icon>
             </FontAwesomeIcon>
-          </span>
+          </button>
           <Popover
             animationType="tooltip"
             id=""
@@ -559,9 +560,10 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
             parentAnchorPosition="auto"
             parentRef={
               Object {
-                "current": <span
+                "current": <button
                   aria-expanded="false"
                   aria-haspopup="true"
+                  class="popoverTrigger"
                   role="button"
                 >
                   <i
@@ -569,7 +571,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                     class="icon fa fa-question-circle-o c2"
                     color="#424F5C"
                   />
-                </span>,
+                </button>,
               }
             }
             popoverAnchorPosition="auto"

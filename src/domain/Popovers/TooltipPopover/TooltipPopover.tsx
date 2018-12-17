@@ -4,6 +4,7 @@ import { StyledTooltipContent } from './style'
 import { IPopoverPosition, Popover } from '../Popover'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { Variables } from '../../../common'
+const { popoverTrigger } = require('./style.scss')
 
 interface ITooltipPopoverMenuState {
   isPopoverOpen: boolean
@@ -45,14 +46,15 @@ interface ITooltipPopoverProps {
 class TooltipPopover extends React.Component<ITooltipPopoverProps, ITooltipPopoverMenuState> {
   public static defaultProps: Partial<ITooltipPopoverProps> = {
     toggleComponent: ({ openMenu, closeMenu, toggleComponentRef, ariaProps }) => (
-      <span
-        onMouseEnter={openMenu}
-        onMouseLeave={closeMenu}
-        ref={toggleComponentRef}
-        {...ariaProps}
-      >
-        <FontAwesomeIcon type='question-circle-o' color={Variables.Color.n700} />
-      </span>
+      <button
+          className={popoverTrigger}
+          onMouseEnter={openMenu}
+          onMouseLeave={closeMenu}
+          ref={toggleComponentRef}
+          {...ariaProps}
+        >
+          <FontAwesomeIcon type='question-circle-o' color={Variables.Color.n700} />
+      </button>
     )
   }
 
