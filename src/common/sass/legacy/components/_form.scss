@@ -97,6 +97,10 @@
   .input-container {
     @extend .column;
     @extend .medium-12;
+
+    .form-error {
+      margin-top: 4px;
+    }
   }
 
   .auto-expand-text-area {
