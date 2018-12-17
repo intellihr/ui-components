@@ -49,6 +49,7 @@ class TooltipPopover extends React.Component<ITooltipPopoverProps, ITooltipPopov
       <button
           className={popoverTrigger}
           onMouseEnter={openMenu}
+          type='button'
           onMouseLeave={closeMenu}
           ref={toggleComponentRef}
           {...ariaProps}

@@ -17,7 +17,7 @@ const StyledTooltipContent = styled.div`
   ${styleForLineBreakText()}
   ${(props: IStyledPopoverProps) => props.width && css`max-width: ${props.width}px`}
 `
-
+ 
 export {
   StyledTooltipContent
 }

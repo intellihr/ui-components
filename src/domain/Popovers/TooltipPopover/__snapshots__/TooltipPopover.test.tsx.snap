@@ -39,6 +39,7 @@ exports[`<TooltipPopover /> Simple popover behaviour should match the snapshot 1
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     role="button"
+    type="button"
   >
     <FontAwesomeIcon
       color="#424F5C"
