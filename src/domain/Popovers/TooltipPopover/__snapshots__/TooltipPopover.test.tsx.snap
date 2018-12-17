@@ -32,9 +32,10 @@ exports[`<TooltipPopover /> Render a popover using a custom trigger should match
 
 exports[`<TooltipPopover /> Simple popover behaviour should match the snapshot 1`] = `
 <Fragment>
-  <span
+  <button
     aria-expanded={false}
     aria-haspopup={true}
+    className="popoverTrigger"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     role="button"
@@ -43,7 +44,7 @@ exports[`<TooltipPopover /> Simple popover behaviour should match the snapshot 1
       color="#424F5C"
       type="question-circle-o"
     />
-  </span>
+  </button>
   <Popover
     animationType="tooltip"
     id=""
