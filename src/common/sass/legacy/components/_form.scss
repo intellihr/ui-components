@@ -40,8 +40,6 @@
     background-color: white;
     border-top: 1px solid #EDF1F5;
     bottom: 0;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
     position: fixed;
 
     &.fullscreen {
@@ -61,13 +59,50 @@
       }
     }
 
+    .progress-bar {
+      vertical-align: top;
+      background-color: $n250;
+      height: 4px;
+      width: 100%;
+      position: relative;
+      left: 0;
+
+
+      & > span {
+        width: 0;
+        transition: all .3s ease-in-out;
+        height: 100%;
+        display: block;
+        background-color: $i300;
+      }
+    }
+
+    .right-content {
+      padding-right: 0.5rem;
+      float: right;
+    }
+
+    .left-content {
+      padding-left: 0.5rem;
+      float: left;
+    }
+
+    .main-text {
+      color: $n700;
+      padding: 8px;
+      vertical-align: center;
+
+      @include breakpoint(tablet down) {
+        display: none;
+      }
+    }
+
     .info-text {
       &.hidden {
         display: none;
       }
 
       color: $n600;
-      float: right;
       padding: 8px;
     }
 
