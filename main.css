@@ -10168,7 +10168,7 @@ table.hover.striped tr:nth-of-type(even):hover { background-color: #E1E6EB; }
 
 .ihr-form .input-tail, .ihr-form-view .input-tail { margin-top: -12px; margin-top: -.75rem; }
 
-.ihr-form .form-control-container, .ihr-form-view .form-control-container { background-color: white; border-top: 1px solid #EDF1F5; bottom: 0; padding-left: 8px; padding-left: 0.5rem; padding-right: 8px; padding-right: 0.5rem; position: fixed; }
+.ihr-form .form-control-container, .ihr-form-view .form-control-container { background-color: white; border-top: 1px solid #EDF1F5; bottom: 0; position: fixed; }
 
 .ihr-form .form-control-container.fullscreen, .ihr-form-view .form-control-container.fullscreen { width: 100%; left: 0; }
 
@@ -10176,7 +10176,19 @@ table.hover.striped tr:nth-of-type(even):hover { background-color: #E1E6EB; }
 
 @media screen and (max-width: 64.5625em) { .ihr-form .form-control-container:not(.fullscreen), .ihr-form-view .form-control-container:not(.fullscreen) { width: 100%; left: 0; } }
 
-.ihr-form .form-control-container .info-text, .ihr-form-view .form-control-container .info-text { color: #667380; float: right; padding: 8px; }
+.ihr-form .form-control-container .progress-bar, .ihr-form-view .form-control-container .progress-bar { vertical-align: top; background-color: #EDF1F5; height: 4px; width: 100%; position: relative; left: 0; }
+
+.ihr-form .form-control-container .progress-bar > span, .ihr-form-view .form-control-container .progress-bar > span { width: 0; -webkit-transition: all .3s ease-in-out; transition: all .3s ease-in-out; height: 100%; display: block; background-color: #7362F5; }
+
+.ihr-form .form-control-container .right-content, .ihr-form-view .form-control-container .right-content { padding-right: 8px; padding-right: 0.5rem; float: right; }
+
+.ihr-form .form-control-container .left-content, .ihr-form-view .form-control-container .left-content { padding-left: 8px; padding-left: 0.5rem; float: left; }
+
+.ihr-form .form-control-container .main-text, .ihr-form-view .form-control-container .main-text { color: #424F5C; padding: 8px; vertical-align: center; }
+
+@media screen and (max-width: 64.5625em) { .ihr-form .form-control-container .main-text, .ihr-form-view .form-control-container .main-text { display: none; } }
+
+.ihr-form .form-control-container .info-text, .ihr-form-view .form-control-container .info-text { color: #667380; padding: 8px; }
 
 .ihr-form .form-control-container .info-text.hidden, .ihr-form-view .form-control-container .info-text.hidden { display: none; }
 
