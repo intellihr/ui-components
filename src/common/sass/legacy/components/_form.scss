@@ -1,6 +1,65 @@
 @import '~foundation-sites/scss/foundation';
 @import '../../variables';
 
+.ihr-form,
+.ihr-form-view {
+  @include limit-width;
+
+  .field-container {
+    @extend .row;
+
+    margin-bottom: 1em;
+
+    &:last-child {
+      margin-bottom: 2em;
+    }
+  }
+
+  .form-content-container {
+    .label-container {
+      @extend .column;
+      @extend .medium-12;
+
+      label {
+        padding-bottom: 0;
+        padding-top: 0;
+        font-size: $global-font-size;
+        line-height: $global-lineheight;
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+  // this element follows an input element
+  .input-tail {
+    margin-top: -.75rem;
+  }
+}
+
+.ihr-form {
+  .label-container {
+    @include breakpoint(medium) {
+      label {
+        @include form-label-middle;
+      }
+    }
+
+  }
+
+  .input-container {
+    @extend .column;
+    @extend .medium-12;
+
+    .form-error {
+      margin-top: 4px;
+    }
+  }
+
+  .auto-expand-text-area {
+    overflow: hidden;
+  }
+}
+
 .input-group-label {
   &.disabled {
     .fa {
@@ -101,6 +160,117 @@ input.is-invalid-input:focus {
     &.select2-results__option--highlighted[aria-selected] {
       background-color: $i100;
       color: $n700;
+    }
+  }
+}
+
+.form-completed-container, .ihr-form {
+  .form-control-container {
+    background-color: white;
+    border-top: 1px solid #EDF1F5;
+    bottom: 0;
+    position: fixed;
+
+    &.fullscreen {
+      width: 100%;
+      left: 0;
+    }
+
+    &:not(.fullscreen) {
+      @include breakpoint(tablet up) {
+        width: calc(100% - 250px);
+        left: 250px;
+      }
+
+      @include breakpoint(tablet down) {
+        width: 100%;
+        left: 0;
+      }
+    }
+
+    .progress-bar {
+      vertical-align: top;
+      background-color: $n250;
+      height: 4px;
+      width: 100%;
+      position: relative;
+      left: 0;
+
+
+      & > span {
+        width: 0;
+        transition: all .3s ease-in-out;
+        height: 100%;
+        display: block;
+        background-color: $i300;
+      }
+    }
+
+    .right-content {
+      padding-right: 0.5rem;
+      float: right;
+    }
+
+    .left-content {
+      padding-left: 0.5rem;
+      float: left;
+    }
+
+    .main-text {
+      color: $n700;
+      padding: 8px;
+      vertical-align: center;
+
+      @include breakpoint(tablet down) {
+        display: none;
+      }
+    }
+
+    .info-text {
+      &.hidden {
+        display: none;
+      }
+
+      color: $n600;
+      padding: 8px;
+    }
+
+    .form-instance-buttons {
+      margin: 12px auto 0;
+      max-width: 900px;
+      width: 100%;
+      float: none;
+
+      .button {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+@media print {
+  @page {
+    size: auto;
+    margin: 0mm;
+  }
+  .print {
+    #offCanvasLeft {
+      display:  none;
+    }
+    .position-left.reveal-for-large ~ .off-canvas-content{
+      margin-left:0;
+    }
+    .ihr-layout{
+      display: block;
+    }
+    .ihr-layout__top{
+      display: none;
+    }
+    .ihr-layout__content{
+      margin-top:40px;
+    }
+    .form-control-container {
+      display: none;
     }
   }
 }
