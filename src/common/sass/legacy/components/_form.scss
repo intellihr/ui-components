@@ -255,19 +255,19 @@ input.is-invalid-input:focus {
   }
   .print {
     #offCanvasLeft {
-      display:  none;
-    }
-    .position-left.reveal-for-large ~ .off-canvas-content{
-      margin-left:0;
-    }
-    .ihr-layout{
-      display: block;
-    }
-    .ihr-layout__top{
       display: none;
     }
-    .ihr-layout__content{
-      margin-top:40px;
+    .position-left.reveal-for-large ~ .off-canvas-content {
+      margin-left: 0px;
+    }
+    .ihr-layout {
+      display: block;
+    }
+    .ihr-layout__top {
+      display: none;
+    }
+    .ihr-layout__content {
+      margin-top: 40px;
     }
     .form-control-container {
       display: none;
