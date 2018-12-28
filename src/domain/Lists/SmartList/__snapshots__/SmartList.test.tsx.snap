@@ -2641,6 +2641,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
     >
       <div
         className="callout"
+        data-component-type="callout"
       >
         <div
           className="content"
