@@ -4,7 +4,7 @@ import React from 'react'
 const style = require('./style.scss')
 
 export interface ICalloutProps {
-  type: 'info' | 'success' | 'error' | 'warning' | 'preview' | 'no-data' | ''
+  type: 'info' | 'success' | 'error' | 'warning' | 'preview-mode' | 'edit-mode' | 'no-data' | ''
   children?: any
   className?: string
   message?: string

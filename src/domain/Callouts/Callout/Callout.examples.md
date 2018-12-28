@@ -70,7 +70,18 @@ Used when showing a preview of a form.
 </Callout>
 ```
 
-#### No Data Callout - DEPRECATED: Please use EmptyState component instead
+#### Edit Mode
+
+Used when in the edit mode of a page or form.
+
+```jsx
+<Callout type="edit-mode">
+  Edit Mode
+</Callout>
+```
+
+#### No Data Callout
+##### DEPRECATED: Please use EmptyState component instead
 
 Used in place of an element when there is no data to be shown.
 
