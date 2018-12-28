@@ -46,6 +46,7 @@ namespace Props {
     Brick = 'brick',
     Button = 'button',
     ButtonIcon = 'button_icon',
+    Callout = 'callout',
     EmptyState = 'empty_state',
     HintWrapper = 'hint_wrapper',
     LinkButton = 'link_button',
