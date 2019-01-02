@@ -46,10 +46,22 @@ const StyledDescription = styled.div`
   margin-bottom: 8px;
 `
 
+const StyledLeftAlignControls = styled.div`
+  display: flex;
+  justify-content: flex-start;
+`
+
+const StyledRightAlignControls = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`
+
 export {
   FieldWrapper,
   ErrorMessage,
   StyledInputLabel,
   StyledDescription,
-  StyledTooltipPopover
+  StyledTooltipPopover,
+  StyledLeftAlignControls,
+  StyledRightAlignControls
 }
