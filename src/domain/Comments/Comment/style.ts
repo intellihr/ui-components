@@ -66,6 +66,7 @@ const StyledComment = styled.div`
 
     >.comment-content {
       margin-top: .5rem;
+      word-break: break-word;
     }
   }
 `
