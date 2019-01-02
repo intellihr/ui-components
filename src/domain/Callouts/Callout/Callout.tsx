@@ -1,16 +1,19 @@
 import classNames from 'classnames'
 import { isEmpty } from 'lodash'
 import React from 'react'
+import { Props } from '../../../common'
+
 const style = require('./style.scss')
 
 export interface ICalloutProps {
-  type: 'info' | 'success' | 'error' | 'warning' | 'preview' | 'no-data' | ''
+  type: 'info' | 'success' | 'error' | 'warning' | 'preview-mode' | 'edit-mode' | 'no-data' | ''
   children?: any
   className?: string
   message?: string
   messages?: string[]
   justifyCenter?: boolean
-  shouldFocus?: boolean
+  shouldFocus?: boolean,
+  componentContext?: string,
 }
 
 export interface ICalloutState {
@@ -101,7 +104,10 @@ export class Callout extends React.Component<ICalloutProps, ICalloutState> {
   }
 
   public render (): JSX.Element | null {
-    const { children } = this.props
+    const {
+      componentContext,
+      children
+    } = this.props
 
     if (isEmpty(this.messages) && !children) {
       return null
@@ -111,6 +117,8 @@ export class Callout extends React.Component<ICalloutProps, ICalloutState> {
       <div
         className={classNames(this.classNames)}
         ref={node => { this.node = node }}
+        data-component-type={Props.ComponentType.Callout}
+        data-component-context={componentContext}
       >
         <div className={style.content}>
           {this.messagesList}
