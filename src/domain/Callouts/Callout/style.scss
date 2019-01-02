@@ -7,7 +7,8 @@ $callouts: (
   warning:       (background: $o100, border: $o400, color: $n800, title: $n700),
   error:         (background: $r100, border: $r400, color: $n800, title: $n700),
   no-data:       (background: $n150, border: $n400, color: $n800, title: $n700),
-  preview-mode:  (background: $n150, border: $n150, color: $n600, title: $n700)
+  preview-mode:  (background: $n150, border: $n150, color: $n600, title: $n700),
+  edit-mode:     (background: $b100, border: $b100, color: $b500, title: $n700)
 );
 
 @mixin add-callout ($background, $border, $color, $title) {
@@ -105,6 +106,7 @@ $callouts: (
   }
 
   // Form preview, etc
+  &.edit-mode,
   &.preview-mode {
     font-size: .9rem;
     font-weight: 600;
