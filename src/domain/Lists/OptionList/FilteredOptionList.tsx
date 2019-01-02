@@ -29,11 +29,11 @@ class FilteredOptionList extends React.PureComponent<IFilteredOptionListProps, I
     return (
       <>
         <TextInput
-          {...textInputProps}
           width={width}
           name='filteredOptionListInput'
           value={this.state.query}
           handleChange={this.updateQueryValue}
+          {...textInputProps}
         />
         <OptionList
           truncatedText={truncatedText}
