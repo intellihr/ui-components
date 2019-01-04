@@ -2,51 +2,37 @@ import { shallow } from 'enzyme'
 import React from 'react'
 
 import { RadioInput } from './RadioInput'
-import { Props } from '../../../common'
+import { FontAwesomeIcon } from '@Domain/Icons'
 
-const dummyClick = () => console.log('hey')
-
-const exampleOptions =[{
-    label:'123123',
-    value:'option 1',
-    isDisabled:false
-  },
-  {
-    label:'this is option 2 (I am disabled)',
-    value:'option 2',
-    isDisabled:true
-  },
-  {
-    label:'this is option 3',
-    value:'option 3',
-    isDisabled:false
-  },
-  {
-    label:'this is option 4',
-    value:'option 4',
-    isDisabled:false
-  }]
-
-describe('<RadioInput />', () => {
-  it(`should render a radio input`, () => {
+describe('<CheckboxInput />', () => {
+  it(`should render a checkbox input without button`, () => {
     const wrapper = shallow(
       <RadioInput
-        id='key'
-        handleChange={dummyClick}
-        options={exampleOptions}
+        name='test-input'
+        label='Hey I am a test string'
       />
     )
 
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a radio input with horizontal buttons`, () => {
+  it(`should render a checkbox input with button`, () => {
     const wrapper = shallow(
       <RadioInput
-        id='key'
-        handleChange={dummyClick}
-        options={exampleOptions}
-        orientation={Props.Orientation.Horizontal}
+        name='test-button-input'
+        label='Hey I am a test string'
+        isButton
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it(`should render a checkbox input with a component as the label`, () => {
+    const wrapper = shallow(
+      <RadioInput
+        name='test-jsx-input'
+        label={<FontAwesomeIcon type='star' />}
       />
     )
 

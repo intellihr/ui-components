@@ -1,84 +1,136 @@
 @import '../../../common/sass/variables';
 
-:local(.radioInput) {
-  label {
-    color: $n800;
-    cursor: default;
-    display: block;
-    font-size: $fz-small;
-    line-height: $lh-small;
-    margin-bottom: 12px;
+:local(.radioInput)  {
 
-    &.horizontal-radio-group {
-      display: inline-block;
-      margin-right: 32px;
-    }
+  input {
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    width: 0;
 
-    span {
+    &:disabled + .radio {
+      color: $n500;
+      cursor: not-allowed;
+
       &::before {
         background-color: $n150;
-        border: 2px solid $n400;
-        border-radius: 50%;
-        content: '';
-        display: inline-block;
-        height: 16px;
-        margin-right: 12px;
-        vertical-align: middle;
-        width: 16px;
+        border-color: $n300;
       }
     }
 
-    input {
-      display: none;
+    &:checked + .radio {
+      border-color: $i600;
+
+      &::before {
+        border-color: $i400;
+      }
+
+      &::after {
+        background-image: radial-gradient(circle closest-side, $i400, $i400 50%, transparent 50%, transparent 100%);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 1;
+        transform: scale(1);
+      }
 
       &:hover {
-        & + span {
-          &::before {
-            background-color: $n300;
-            cursor: pointer;
-          }
-        }
+        border-color: $i400;
 
-        &:disabled + span {
-          &::before {
-            background-color: $n150;
-            border-color: $n300;
-            cursor: not-allowed;
-          }
+        &::before {
+          border-color: $i400;
         }
       }
+    }
 
-      &:checked {
-        & + span {
-          &::before {
-            background-image: radial-gradient(circle closest-side, $i400 , $i400 50%, transparent 50%, transparent 100%);
-            border-color: $i400;
-            cursor: pointer;
-          }
-        }
+    &:checked + .radio-button {
+      background-color: $i100;
+      color: $i600;
 
-        &:disabled + span {
-          &::before {
-            background-image: radial-gradient(circle closest-side, $n300 , $n300 50%, transparent 50%, transparent 100%);
-            border-color: $n300;
-            cursor: not-allowed;
-          }
-        }
+      &::before {
+        background-color: $i100;
       }
 
-      &:disabled {
-        & + span {
-          color: $n500;
+      &:hover {
+        background-color: $i100;
 
-          &::before {
-            background-color: $n150;
-            border-color: $n300;
-            cursor: not-allowed;
-          }
+        &::before {
+          background-color: $i100;
         }
-
       }
+    }
 
+    &:disabled + .radio-button {
+      background-color: $n150;
+      color: $n500;
+      cursor: not-allowed;
+
+      &::before {
+        background-color: $n150;
+        border-color: $n300;
+      }
+    }
+  }
+
+  .radio {
+    align-self: stretch;
+    color: $n800;
+    cursor: pointer;
+    font-size: $fz-small;
+    line-height: $lh-small;
+    margin-bottom: 8px;
+    margin-left: 0;
+    min-width: 240px;
+    padding: 10px 24px 10px 44px;
+    position: relative;
+    transition: .25s ease-out, color .25s ease-out;
+    word-break: break-all;
+
+    &::before {
+      background-color: $n150;
+      border: 2px solid $n400;
+      border-radius: 50%;
+      content: '';
+      display: inline-block;
+      height: 20px;
+      left: 12px;
+      position: absolute;
+      top: 10px;
+      transition: .25s ease-out;
+      vertical-align: top;
+      width: 20px;
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      height: 16px;
+      left: 14px;
+      opacity: 0;
+      position: absolute;
+      top: 12px;
+      transform: scale(.8);
+      transition: .25s ease-out;
+      vertical-align: top;
+      width: 16px;
+    }
+
+    &:hover {
+      &::before {
+        background-color: $n300;
+        border-color: $n600;
+      }
+    }
+  }
+
+  .radio-button {
+    background-color: $n100;
+    border: 1px solid $n300;
+    border-radius: $border-radius;
+
+    &:hover {
+      background-color: $n200;
     }
   }
 }
+
