@@ -1,0 +1,84 @@
+@import '../../../common/sass/variables';
+
+:local(.radioInputGroup) {
+  label {
+    color: $n800;
+    cursor: default;
+    display: block;
+    font-size: $fz-small;
+    line-height: $lh-small;
+    margin-bottom: 12px;
+
+    &.horizontal-radio-group {
+      display: inline-block;
+      margin-right: 32px;
+    }
+
+    span {
+      &::before {
+        background-color: $n150;
+        border: 2px solid $n400;
+        border-radius: 50%;
+        content: '';
+        display: inline-block;
+        height: 16px;
+        margin-right: 12px;
+        vertical-align: middle;
+        width: 16px;
+      }
+    }
+
+    input {
+      display: none;
+
+      &:hover {
+        & + span {
+          &::before {
+            background-color: $n300;
+            cursor: pointer;
+          }
+        }
+
+        &:disabled + span {
+          &::before {
+            background-color: $n150;
+            border-color: $n300;
+            cursor: not-allowed;
+          }
+        }
+      }
+
+      &:checked {
+        & + span {
+          &::before {
+            background-image: radial-gradient(circle closest-side, $i400 , $i400 50%, transparent 50%, transparent 100%);
+            border-color: $i400;
+            cursor: pointer;
+          }
+        }
+
+        &:disabled + span {
+          &::before {
+            background-image: radial-gradient(circle closest-side, $n300 , $n300 50%, transparent 50%, transparent 100%);
+            border-color: $n300;
+            cursor: not-allowed;
+          }
+        }
+      }
+
+      &:disabled {
+        & + span {
+          color: $n500;
+
+          &::before {
+            background-color: $n150;
+            border-color: $n300;
+            cursor: not-allowed;
+          }
+        }
+
+      }
+
+    }
+  }
+}
