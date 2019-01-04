@@ -7,13 +7,20 @@ const style = require('./style.scss')
 export interface ICheckboxProps extends IGenericInputProps {
   /** Label to display next to the checkbox */
   label: JSX.Element | string
+  /** If true, the checkbox would wrapped by an outside button */
+  isButton?: boolean
 }
 
 export class CheckboxInput extends React.PureComponent<ICheckboxProps> {
+  public static defaultProps: Partial<ICheckboxProps> = {
+    isButton: false
+  }
+
   get infoLabel (): JSX.Element | null {
     const {
       name,
-      label
+      label,
+      isButton
     } = this.props
 
     if (!label) {
@@ -23,7 +30,7 @@ export class CheckboxInput extends React.PureComponent<ICheckboxProps> {
     return (
       <label
         htmlFor={name}
-        className={classNames('checkbox-button')}
+        className={classNames('checkbox', { 'checkbox-button': isButton })}
       >
         {label}
       </label>

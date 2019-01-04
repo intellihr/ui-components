@@ -5,18 +5,19 @@ exports[`<CheckboxInput /> should render a checkbox input with a component as th
   className="checkbox-input checkboxInput"
 >
   <Input
+    isButton={false}
     isChecked={false}
     label={
       <FontAwesomeIcon
         type="star"
       />
     }
-    name="test-input"
+    name="test-jsx-input"
     type="checkbox"
   />
   <label
-    className="checkbox-button"
-    htmlFor="test-input"
+    className="checkbox"
+    htmlFor="test-jsx-input"
   >
     <FontAwesomeIcon
       type="star"
@@ -25,18 +26,39 @@ exports[`<CheckboxInput /> should render a checkbox input with a component as th
 </div>
 `;
 
-exports[`<CheckboxInput /> should render a checkbox input with a string label 1`] = `
+exports[`<CheckboxInput /> should render a checkbox input with button 1`] = `
 <div
   className="checkbox-input checkboxInput"
 >
   <Input
+    isButton={true}
+    isChecked={false}
+    label="Hey I am a test string"
+    name="test-button-input"
+    type="checkbox"
+  />
+  <label
+    className="checkbox checkbox-button"
+    htmlFor="test-button-input"
+  >
+    Hey I am a test string
+  </label>
+</div>
+`;
+
+exports[`<CheckboxInput /> should render a checkbox input without button 1`] = `
+<div
+  className="checkbox-input checkboxInput"
+>
+  <Input
+    isButton={false}
     isChecked={false}
     label="Hey I am a test string"
     name="test-input"
     type="checkbox"
   />
   <label
-    className="checkbox-button"
+    className="checkbox"
     htmlFor="test-input"
   >
     Hey I am a test string

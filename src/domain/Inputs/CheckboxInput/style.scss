@@ -7,25 +7,54 @@
     opacity: 0;
     position: absolute;
     width: 0;
+
+    &:checked + .checkbox {
+      border-color: $i600;
+
+      &::before {
+        border-color: $i400;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+
+      &:hover {
+        border-color: $i400;
+
+        &::before {
+          border-color: $i400;
+        }
+      }
+    }
+
+    &:checked + .checkbox-button {
+      background-color: $i100;
+      color: $i600;
+
+      &:hover {
+        background-color: $i100;
+
+        &::before {
+          background-color: $i100;
+        }
+      }
+    }
   }
 
-  .checkbox-button {
+  .checkbox {
     align-self: stretch;
-    background-color: $n100;
-    border: 1px solid $n300;
-    border-radius: $border-radius;
     color: $n800;
     cursor: pointer;
     font-size: $fz-small;
     line-height: $lh-small;
-    margin-bottom: 8px;
-    margin-left: 0px;
+    margin-left: 0;
     min-width: 240px;
     padding: 10px 24px 10px 44px;
     position: relative;
-    transition: all .25s ease-out,color .25s ease-out;
+    transition: .25s ease-out, color .25s ease-out;
 
-    &:before {
+    &::before {
       background-color: $n150;
       border: 2px solid $n400;
       border-radius: $border-radius;
@@ -35,21 +64,21 @@
       left: 12px;
       position: absolute;
       top: 10px;
-      transition: all .25s ease-out,color .25s ease-out;
+      transition: .25s ease-out, color .25s ease-out;
       vertical-align: top;
       width: 20px;
     }
 
-    &:after {
+    &::after {
       background: $i400;
       border-radius: $border-radius;
       box-shadow:
-              2px 0 0 $i400,
-              4px 0 0 $i400,
-              4px -2px 0 $i400,
-              4px -4px 0 $i400,
-              4px -6px 0 $i400,
-              4px -8px 0 $i400;
+      2px 0 0 $i400,
+      4px 0 0 $i400,
+      4px -2px 0 $i400,
+      4px -4px 0 $i400,
+      4px -6px 0 $i400,
+      4px -8px 0 $i400;
       content: '';
       height: 3px;
       left: 16px;
@@ -57,41 +86,26 @@
       position: absolute;
       top: 19px;
       transform: rotate(45deg);
-      transition: all .25s ease-out;
+      transition: .25s ease-out;
       width: 3px;
     }
 
     &:hover {
-      background-color: $n200;
 
-      &:before {
+      &::before {
         background-color: $n300;
         border-color: $n600;
       }
     }
   }
 
-  input:checked + .checkbox-button {
-    background-color: $i100;
-    border-color: $i600;
-    color: $i600;
-
-    &:before {
-      border-color: $i400;
-    }
-
-    &:after {
-      opacity: 1;
-    }
+  .checkbox-button {
+    background-color: $n100;
+    border: 1px solid $n300;
+    border-radius: $border-radius;
 
     &:hover {
-      background-color: $i100;
-      border-color: $i400;
-
-      &:before {
-        background-color: $i100;
-        border-color: $i400;
-      }
+      background-color: $n200;
     }
   }
 }

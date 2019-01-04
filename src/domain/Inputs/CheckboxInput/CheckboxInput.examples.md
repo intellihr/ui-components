@@ -11,6 +11,20 @@ initialState = { value: false };
 />
 ```
 
+#### Input Button
+
+```jsx
+initialState = { button: false };
+
+<CheckboxInput
+  isButton
+  name='button-checkbox'
+  label='This is a checkbox input button'
+  value={state.button}
+  handleChange={() => setState({button: !state.button})}
+/>
+```
+
 #### Input with JSX
 
 ```jsx
