@@ -13,6 +13,7 @@ initialState = { value: false };
   Number
   <NumberInput />
   Checkbox
+  <br/>
   <CheckboxInput
     name='example-checkbox'
     label='This is a checkbox input :)'
