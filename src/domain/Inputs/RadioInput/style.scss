@@ -9,6 +9,11 @@
     line-height: $lh-small;
     margin-bottom: 12px;
 
+    &.horizontal-radio-group {
+      display: inline-block;
+      margin-right: 32px;
+    }
+
     span {
       &::before {
         background-color: $n150;

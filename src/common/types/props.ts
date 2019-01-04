@@ -56,6 +56,11 @@ namespace Props {
     Timeline = 'timeline',
     TimelineEvent = 'timeline_event'
   }
+
+  export enum Orientation {
+    Vertical = 'vertical',
+    Horizontal = 'horizontal'
+  }
 }
 
 export {
