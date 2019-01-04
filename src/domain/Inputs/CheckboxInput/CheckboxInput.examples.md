@@ -14,13 +14,13 @@ initialState = { value: false };
 #### Input with JSX
 
 ```jsx
-initialState = { value: false };
+initialState = { star: false };
 const { FontAwesomeIcon } = require('../../Icons');
 
 <CheckboxInput
-  name='example-checkbox'
+  name='star-checkbox'
   label={<div><FontAwesomeIcon type='star' /> I am a star</div>}
-  value={state.value}
-  handleChange={() => setState({value: !state.value})}
+  value={state.star}
+  handleChange={() => setState({star: !state.star})}
 />
 ```
