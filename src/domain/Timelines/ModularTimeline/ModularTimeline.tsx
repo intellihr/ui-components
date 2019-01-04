@@ -20,7 +20,7 @@ interface IModularTimelineEvent {
   /** Headline name of the event */
   title: JSX.Element | string,
   /** Content to put inside the event body. When null, no body is provided */
-  bodyContent?: JSX.Element | Array<string|JSX.Element> | string,
+  bodyContent?: JSX.Element | Array<JSX.Element|string> | string,
   /** Event Type; major = greater importance and spacing */
   eventType: MarkerType,
   /** Changes color of the marker used */
@@ -87,15 +87,17 @@ class ModularTimeline extends React.PureComponent<IModularTimelineProps> {
     )
   }
 
-  private getBodyContent = (bodyContent?: JSX.Element | Array<string|JSX.Element> | string): JSX.Element | JSX.Element[] | null => {{
+  private getBodyContent = (bodyContent?: JSX.Element | Array<JSX.Element|string> | string): JSX.Element | JSX.Element[] | null => {{
     if (!bodyContent) {
       return null
     }
 
     if (Array.isArray(bodyContent)) {
-      return map(bodyContent, (content: JSX.Element | string) => {
+      return map(bodyContent, (content: JSX.Element | string, index) => {
         return (
-          <TimelineEventBody>
+          <TimelineEventBody
+            key={index}
+          >
             {content}
           </TimelineEventBody>
         )

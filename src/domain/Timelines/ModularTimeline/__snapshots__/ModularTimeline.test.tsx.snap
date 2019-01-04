@@ -80,13 +80,19 @@ exports[`<ModularTimeline /> should render a modular timeline 1`] = `
     >
       Title 5
     </styled.div>
-    <styled.div>
+    <styled.div
+      key="0"
+    >
       Some content goes here
     </styled.div>
-    <styled.div>
+    <styled.div
+      key="1"
+    >
       More content under the same event
     </styled.div>
-    <styled.div>
+    <styled.div
+      key="2"
+    >
       Three distinct event body wrappers
     </styled.div>
   </styled.div>
