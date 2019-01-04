@@ -1,48 +1,87 @@
 #### Basic Input
 
  ```jsx
-<RadioInput
-  name='example-radio'
-  label='This is a radio input'
-/>
-```
+initialState = { value: 'No' };
 
-#### Disable Input
-
- ```jsx
-<RadioInput
-  isDisabled
-  name='disable-radio'
-  label='This is a disabled radio input'
-/>
+<div>
+  <RadioInput
+   name='yes'
+   label='Yes'
+   value='Yes'
+   isChecked={state.value === 'Yes'}
+   handleChange={(event) => setState({value: event.target.value})}
+  />
+  <RadioInput
+   name='no'
+   label='No'
+   value='No'
+   isChecked={state.value === 'No'}
+   handleChange={(event) => setState({value: event.target.value})}
+  />
+  <RadioInput
+    isDisabled
+    name='no-comment'
+    label='No comment (disalbed radio)' 
+    isChecked={state.value === 'No comment'}
+    handleChange={(event) => setState({value: event.target.value})}
+  />
+</div>
 ```
 
  #### Input Button
 
  ```jsx
-<RadioInput
-  isButton
-  name='button-checkbox'
-  label='This is a radio input button'
-/>
-```
+initialState = { button: 'No' };
 
- #### Disabled Input Button
-
- ```jsx
-<RadioInput
-  isButton
-  isDisabled
-  name='button-disabled-checkbox'
-  label='This is a disabled radio input button'
-/>
+<div>
+  <RadioInput
+   isButton
+   name='button-yes'
+   label='Yes'
+   value='Yes'
+   isChecked={state.button === 'Yes'}
+   handleChange={(event) => setState({button: event.target.value})}
+  />
+  <RadioInput
+   isButton
+   name='button-no'
+   label='No'
+   value='No'
+   isChecked={state.button === 'No'}
+   handleChange={(event) => setState({button: event.target.value})}
+  />
+  <RadioInput
+    isButton
+    isDisabled
+    name='button-no-comment'
+    label='No comment (disalbed radio)' 
+    isChecked={state.button === 'No comment'}
+    handleChange={(event) => setState({button: event.target.value})}
+  />
+</div>
 ```
 
  #### Input with JSX
 
  ```jsx
 const { FontAwesomeIcon } = require('../../Icons');
- <RadioInput
-  name='star-checkbox'
-  label={<div><FontAwesomeIcon type='star' /> I am a star</div>}
-/>
+
+initialState = { star: 'Yes' };
+
+<div>
+  <RadioInput
+   name='star-yes'
+   label={<div><FontAwesomeIcon type='star' /> I have a star!</div>}
+   value='Yes'
+   isChecked={state.star === 'Yes'}
+   handleChange={(event) => setState({star: event.target.value})}
+  />
+  <RadioInput
+   name='star-no'
+   label={<div><Emoji emoji='cry' /> I don't have a star </div>}
+   value='No'
+   isChecked={state.star === 'No'}
+   handleChange={(event) => setState({star: event.target.value})}
+  />
+</div>
+```

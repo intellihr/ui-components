@@ -4,15 +4,15 @@ import classNames from 'classnames'
 
 const style = require('./style.scss')
 
-export interface ICheckboxProps extends IGenericInputProps {
+export interface IRadioInputProps extends IGenericInputProps {
   /** Label to display next to the radio */
   label: JSX.Element | string
-  /** If true, the radio input would wrapped by an outside button */
+  /** If true, the radio input is wrapped with a button */
   isButton?: boolean
 }
 
-export class RadioInput extends React.PureComponent<ICheckboxProps> {
-  public static defaultProps: Partial<ICheckboxProps> = {
+export class RadioInput extends React.PureComponent<IRadioInputProps> {
+  public static defaultProps: Partial<IRadioInputProps> = {
     isButton: false,
     isDisabled: false
   }

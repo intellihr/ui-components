@@ -1,36 +1,37 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { RadioInputGroup } from './RadioInputGroup'
+import { RadioSet } from './RadioSet'
 import { Props } from '../../../common'
 
 const dummyClick = () => console.log('hey')
 
-const exampleOptions =[{
+const exampleOptions = [{
+    name: 'option-1',
     label:'123123',
-    value:'option 1',
-    isDisabled:false
+    value:'option 1'
   },
   {
+    name: 'option-2',
     label:'this is option 2 (I am disabled)',
     value:'option 2',
     isDisabled:true
   },
   {
+    name: 'option-3',
     label:'this is option 3',
-    value:'option 3',
-    isDisabled:false
+    value:'option 3'
   },
   {
+    name: 'option-4',
     label:'this is option 4',
-    value:'option 4',
-    isDisabled:false
+    value:'option 4'
   }]
 
-describe('<RadioInput />', () => {
-  it(`should render a radio input`, () => {
+describe('<RadioSet />', () => {
+  it(`should render a radio Set`, () => {
     const wrapper = shallow(
-      <RadioInputGroup
+      <RadioSet
         id='key'
         handleChange={dummyClick}
         options={exampleOptions}
@@ -40,9 +41,9 @@ describe('<RadioInput />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a radio input with horizontal buttons`, () => {
+  it(`should render a radio set with horizontal buttons`, () => {
     const wrapper = shallow(
-      <RadioInputGroup
+      <RadioSet
         id='key'
         handleChange={dummyClick}
         options={exampleOptions}

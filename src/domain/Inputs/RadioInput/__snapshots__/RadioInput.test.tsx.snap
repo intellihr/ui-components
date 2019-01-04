@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<CheckboxInput /> should render a checkbox input with a component as the label 1`] = `
+exports[`<RadioInput /> should render a radio input with a component as the label 1`] = `
 <div
   className="radioInput"
 >
@@ -26,7 +26,7 @@ exports[`<CheckboxInput /> should render a checkbox input with a component as th
 </div>
 `;
 
-exports[`<CheckboxInput /> should render a checkbox input with button 1`] = `
+exports[`<RadioInput /> should render a radio input with button 1`] = `
 <div
   className="radioInput"
 >
@@ -46,7 +46,7 @@ exports[`<CheckboxInput /> should render a checkbox input with button 1`] = `
 </div>
 `;
 
-exports[`<CheckboxInput /> should render a checkbox input without button 1`] = `
+exports[`<RadioInput /> should render a radio input without button 1`] = `
 <div
   className="radioInput"
 >

@@ -8,6 +8,10 @@
     position: absolute;
     width: 0;
 
+    & + .radio {
+      width: 100%;
+    }
+
     &:disabled + .radio {
       color: $n500;
       cursor: not-allowed;
@@ -78,9 +82,8 @@
     cursor: pointer;
     font-size: $fz-small;
     line-height: $lh-small;
-    margin-bottom: 8px;
     margin-left: 0;
-    min-width: 240px;
+    margin-right: 0;
     padding: 10px 24px 10px 44px;
     position: relative;
     transition: .25s ease-out, color .25s ease-out;
@@ -127,6 +130,7 @@
     background-color: $n100;
     border: 1px solid $n300;
     border-radius: $border-radius;
+    min-width: 240px;
 
     &:hover {
       background-color: $n200;

@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioSet /> should render a radio Set 1`] = `
+<styled.div
+  orientation="vertical"
+>
+  <Styled(RadioInput)
+    handleChange={[Function]}
+    key="0-key"
+    label="123123"
+    name="option-1"
+    value="option 1"
+  />
+  <Styled(RadioInput)
+    handleChange={[Function]}
+    isDisabled={true}
+    key="1-key"
+    label="this is option 2 (I am disabled)"
+    name="option-2"
+    value="option 2"
+  />
+  <Styled(RadioInput)
+    handleChange={[Function]}
+    key="2-key"
+    label="this is option 3"
+    name="option-3"
+    value="option 3"
+  />
+  <Styled(RadioInput)
+    handleChange={[Function]}
+    key="3-key"
+    label="this is option 4"
+    name="option-4"
+    value="option 4"
+  />
+</styled.div>
+`;
+
+exports[`<RadioSet /> should render a radio set with horizontal buttons 1`] = `
+<styled.div
+  orientation="horizontal"
+>
+  <Styled(RadioInput)
+    handleChange={[Function]}
+    key="0-key"
+    label="123123"
+    name="option-1"
+    value="option 1"
+  />
+  <Styled(RadioInput)
+    handleChange={[Function]}
+    isDisabled={true}
+    key="1-key"
+    label="this is option 2 (I am disabled)"
+    name="option-2"
+    value="option 2"
+  />
+  <Styled(RadioInput)
+    handleChange={[Function]}
+    key="2-key"
+    label="this is option 3"
+    name="option-3"
+    value="option 3"
+  />
+  <Styled(RadioInput)
+    handleChange={[Function]}
+    key="3-key"
+    label="this is option 4"
+    name="option-4"
+    value="option 4"
+  />
+</styled.div>
+`;

@@ -4,8 +4,8 @@ import React from 'react'
 import { RadioInput } from './RadioInput'
 import { FontAwesomeIcon } from '@Domain/Icons'
 
-describe('<CheckboxInput />', () => {
-  it(`should render a checkbox input without button`, () => {
+describe('<RadioInput />', () => {
+  it(`should render a radio input without button`, () => {
     const wrapper = shallow(
       <RadioInput
         name='test-input'
@@ -16,7 +16,7 @@ describe('<CheckboxInput />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a checkbox input with button`, () => {
+  it(`should render a radio input with button`, () => {
     const wrapper = shallow(
       <RadioInput
         name='test-button-input'
@@ -28,7 +28,7 @@ describe('<CheckboxInput />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a checkbox input with a component as the label`, () => {
+  it(`should render a radio input with a component as the label`, () => {
     const wrapper = shallow(
       <RadioInput
         name='test-jsx-input'
