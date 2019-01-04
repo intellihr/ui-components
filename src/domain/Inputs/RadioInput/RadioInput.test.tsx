@@ -2,6 +2,7 @@ import { shallow } from 'enzyme'
 import React from 'react'
 
 import { RadioInput } from './RadioInput'
+import { Props } from '../../../common'
 
 const dummyClick = () => console.log('hey')
 
@@ -33,6 +34,19 @@ describe('<RadioInput />', () => {
         id='key'
         handleChange={dummyClick}
         options={exampleOptions}
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it(`should render a radio input with horizontal buttons`, () => {
+    const wrapper = shallow(
+      <RadioInput
+        id='key'
+        handleChange={dummyClick}
+        options={exampleOptions}
+        orientation={Props.Orientation.Horizontal}
       />
     )
 

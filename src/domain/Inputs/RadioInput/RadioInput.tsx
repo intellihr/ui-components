@@ -2,6 +2,7 @@ import React, { ChangeEventHandler } from 'react'
 import uuid from 'uuid'
 import { map } from 'lodash'
 import classNames from 'classnames'
+import { Props } from '../../../common'
 const style = require('./style.scss')
 
 export interface IRadioInputProps {
@@ -13,6 +14,8 @@ export interface IRadioInputProps {
   handleChange?: ChangeEventHandler<HTMLInputElement>
   /** ID of the radio input */
   id?: string
+  /** Specify the orientation of the radio group */
+  orientation?: Props.Orientation
 }
 
 export interface IRadioOptionProps {
@@ -29,11 +32,16 @@ export interface IRadioOptionProps {
 }
 
 export class RadioInput extends React.PureComponent<IRadioInputProps> {
+  public static defaultProps: Partial<IRadioInputProps> = {
+    orientation: Props.Orientation.Vertical
+  }
+
   get options (): JSX.Element[] {
     const {
       options,
       handleChange,
-      id
+      id,
+      orientation
     } = this.props
 
     return map(options, (option, idx) => {
@@ -46,7 +54,9 @@ export class RadioInput extends React.PureComponent<IRadioInputProps> {
       } = option
 
       return (
-        <label>
+        <label
+          className={orientation === Props.Orientation.Horizontal ? 'horizontal-radio-group' : undefined}
+        >
           <input
             key={id ? `${idx}-${id}` : uuid.v4()}
             type='radio'
