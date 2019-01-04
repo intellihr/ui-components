@@ -32,6 +32,15 @@ describe('<ModularTimeline />', () => {
             title: 'Title 4',
             eventType: 'minor',
             bodyContent: 'Some content goes here'
+          },
+          {
+            title: 'Title 5',
+            eventType: 'minor',
+            bodyContent: [
+              'Some content goes here',
+              'More content under the same event',
+              'Three distinct event body wrappers'
+            ]
           }
         ]}
       />
@@ -40,6 +49,6 @@ describe('<ModularTimeline />', () => {
     expect(wrapper).toMatchSnapshot()
     expect(
       wrapper.find({ 'data-component-type': Props.ComponentType.TimelineEvent }).length
-    ).toEqual(4)
+    ).toEqual(5)
   })
 })
