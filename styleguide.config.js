@@ -167,6 +167,12 @@ module.exports = {
           ]
         },
         {
+          name: 'Navigation',
+          components: [
+            'src/domain/Navigation/BreadcrumbGroup/BreadcrumbGroup'
+          ]
+        },
+        {
           name: 'Pills',
           components: [
             'src/domain/Pills/Pill/Pill'

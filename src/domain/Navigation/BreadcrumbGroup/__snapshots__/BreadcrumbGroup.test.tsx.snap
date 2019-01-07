@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PageLayout /> should render a breadcrumb by itself 1`] = `
+.c0,
+.c0:link,
+.c0:visited,
+.c0:hover,
+.c0:active {
+  color: inherit;
+}
+
+<Breadcrumb
+  to="/test"
+  type="base"
+  useReactRouter={true}
+>
+  <span
+    className="baseCrumb"
+    data-component-type="breadcrumb"
+  >
+    <UnstyledLink
+      anchorComponentProps={
+        Object {
+          "useReactRouter": true,
+        }
+      }
+      href="/test"
+    >
+      <Anchor
+        anchorComponentProps={
+          Object {
+            "useReactRouter": true,
+          }
+        }
+        className="c0"
+        href="/test"
+      >
+        <a
+          className="c0"
+          href="/test"
+        >
+          Create
+        </a>
+      </Anchor>
+    </UnstyledLink>
+  </span>
+</Breadcrumb>
+`;
+
+exports[`<PageLayout /> should render a simple breadcrumbGroup 1`] = `
+.c0,
+.c0:link,
+.c0:visited,
+.c0:hover,
+.c0:active {
+  color: inherit;
+}
+
+<BreadcrumbGroup>
+  <div
+    className="breadcrumbs"
+    data-component-type="breadcrumb_group"
+  >
+    <Breadcrumb
+      to="/test"
+      type="base"
+      useReactRouter={true}
+    >
+      <span
+        className="baseCrumb"
+        data-component-type="breadcrumb"
+      >
+        <UnstyledLink
+          anchorComponentProps={
+            Object {
+              "useReactRouter": true,
+            }
+          }
+          href="/test"
+        >
+          <Anchor
+            anchorComponentProps={
+              Object {
+                "useReactRouter": true,
+              }
+            }
+            className="c0"
+            href="/test"
+          >
+            <a
+              className="c0"
+              href="/test"
+            >
+              Dashboard
+            </a>
+          </Anchor>
+        </UnstyledLink>
+      </span>
+    </Breadcrumb>
+    <Breadcrumb
+      to="/test"
+      type="base"
+      useReactRouter={false}
+    >
+      <span
+        className="baseCrumb"
+        data-component-type="breadcrumb"
+      >
+        <UnstyledLink
+          anchorComponentProps={
+            Object {
+              "useReactRouter": false,
+            }
+          }
+          href="/test"
+        >
+          <Anchor
+            anchorComponentProps={
+              Object {
+                "useReactRouter": false,
+              }
+            }
+            className="c0"
+            href="/test"
+          >
+            <a
+              className="c0"
+              href="/test"
+            >
+              Tasks
+            </a>
+          </Anchor>
+        </UnstyledLink>
+      </span>
+    </Breadcrumb>
+    <Breadcrumb
+      to="/test"
+      type="active"
+      useReactRouter={true}
+    >
+      <span
+        className="activeCrumb"
+        data-component-type="breadcrumb"
+      >
+        <UnstyledLink
+          anchorComponentProps={
+            Object {
+              "useReactRouter": true,
+            }
+          }
+          href="/test"
+        >
+          <Anchor
+            anchorComponentProps={
+              Object {
+                "useReactRouter": true,
+              }
+            }
+            className="c0"
+            href="/test"
+          >
+            <a
+              className="c0"
+              href="/test"
+            >
+              Create
+            </a>
+          </Anchor>
+        </UnstyledLink>
+      </span>
+    </Breadcrumb>
+  </div>
+</BreadcrumbGroup>
+`;
