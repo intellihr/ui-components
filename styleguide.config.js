@@ -61,7 +61,8 @@ module.exports = {
           name: 'Buttons',
           components: [
             'src/domain/Buttons/Button/Button',
-            'src/domain/Buttons/LinkButton/LinkButton'
+            'src/domain/Buttons/LinkButton/LinkButton',
+            'src/domain/Buttons/ButtonGroup/ButtonGroup'
           ]
         },
         {
