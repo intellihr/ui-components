@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonGroup /> should render a button group with buttons and link buttons 1`] = `
+.c0 > a,
+.c0 > button {
+  margin-right: 0.5rem;
+}
+
+.c0 > a:last-child,
+.c0 > button:last-child {
+  margin-right: 0px;
+}
+
+<ButtonGroup
+  buttons={
+    Array [
+      <Button
+        hasLegacyMargins={false}
+        iconAlignment="left"
+        type="neutral"
+      >
+        Button 1
+      </Button>,
+      <LinkButton
+        disabled={false}
+        hasLegacyMargins={false}
+        iconAlignment="left"
+        type="neutral"
+      >
+        Button 2
+      </LinkButton>,
+    ]
+  }
+>
+  <styled.span
+    data-component-type="button_group"
+  >
+    <span
+      className="c0"
+      data-component-type="button_group"
+    >
+      <Button
+        hasLegacyMargins={false}
+        iconAlignment="left"
+        key="button1"
+        type="neutral"
+      >
+        <button
+          className="button neutral"
+          data-component-type="button"
+        >
+          Button 1
+        </button>
+      </Button>
+      <LinkButton
+        disabled={false}
+        hasLegacyMargins={false}
+        iconAlignment="left"
+        key="button2"
+        type="neutral"
+      >
+        <Anchor
+          href="#"
+          onClick={[Function]}
+        >
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            <span
+              className="button neutral"
+              data-component-type="link_button"
+            >
+              Button 2
+            </span>
+          </a>
+        </Anchor>
+      </LinkButton>
+    </span>
+  </styled.span>
+</ButtonGroup>
+`;
