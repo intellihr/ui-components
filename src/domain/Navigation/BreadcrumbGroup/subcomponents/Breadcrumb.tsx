@@ -1,18 +1,22 @@
 import React from 'react'
-import { UnstyledLink } from '../../../Links/UnstyledLink'
 import { Props } from '../../../../common'
+import { Anchor } from '../../../Internals/Anchor'
 
 const style = require('../style.scss')
 
 interface IBreadcrumbProps {
   /** where to navigate to */
-  to: string
+  href: string
   /** if to use react router or not */
   useReactRouter?: boolean
   /** the type of breadcrumb this element is */
   type?: 'base' | 'active'
   /** The data-component-context */
   componentContext?: string
+  /** Object with extra props to pass to the anchor */
+  anchorComponentProps?: {
+    [i: string]: any
+  }
 }
 
 class Breadcrumb extends React.PureComponent<IBreadcrumbProps> {
@@ -23,8 +27,8 @@ class Breadcrumb extends React.PureComponent<IBreadcrumbProps> {
 
   public render (): JSX.Element {
     const {
-      to,
-      useReactRouter,
+      href,
+      anchorComponentProps,
       children,
       type,
       componentContext
@@ -36,14 +40,12 @@ class Breadcrumb extends React.PureComponent<IBreadcrumbProps> {
         data-component-type={Props.ComponentType.Breadcrumb}
         data-component-context={componentContext}
       >
-        <UnstyledLink
-          href={to}
-          anchorComponentProps={{
-            useReactRouter
-          }}
+        <Anchor
+          href={href}
+          anchorComponentProps={anchorComponentProps}
         >
           {children}
-        </UnstyledLink>
+        </Anchor>
       </span>
     )
   }

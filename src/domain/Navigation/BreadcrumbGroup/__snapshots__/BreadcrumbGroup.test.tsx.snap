@@ -1,16 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PageLayout /> should render a breadcrumb by itself 1`] = `
-.c0,
-.c0:link,
-.c0:visited,
-.c0:hover,
-.c0:active {
-  color: inherit;
-}
-
 <Breadcrumb
-  to="/test"
+  href="/test"
   type="base"
   useReactRouter={true}
 >
@@ -18,51 +10,27 @@ exports[`<PageLayout /> should render a breadcrumb by itself 1`] = `
     className="baseCrumb"
     data-component-type="breadcrumb"
   >
-    <UnstyledLink
-      anchorComponentProps={
-        Object {
-          "useReactRouter": true,
-        }
-      }
+    <Anchor
       href="/test"
     >
-      <Anchor
-        anchorComponentProps={
-          Object {
-            "useReactRouter": true,
-          }
-        }
-        className="c0"
+      <a
         href="/test"
       >
-        <a
-          className="c0"
-          href="/test"
-        >
-          Create
-        </a>
-      </Anchor>
-    </UnstyledLink>
+        Create
+      </a>
+    </Anchor>
   </span>
 </Breadcrumb>
 `;
 
 exports[`<PageLayout /> should render a simple breadcrumbGroup 1`] = `
-.c0,
-.c0:link,
-.c0:visited,
-.c0:hover,
-.c0:active {
-  color: inherit;
-}
-
 <BreadcrumbGroup>
   <div
     className="breadcrumbs"
     data-component-type="breadcrumb_group"
   >
     <Breadcrumb
-      to="/test"
+      href="/test"
       type="base"
       useReactRouter={true}
     >
@@ -70,43 +38,32 @@ exports[`<PageLayout /> should render a simple breadcrumbGroup 1`] = `
         className="baseCrumb"
         data-component-type="breadcrumb"
       >
-        <UnstyledLink
-          anchorComponentProps={
-            Object {
-              "useReactRouter": true,
-            }
-          }
+        <Anchor
           href="/test"
         >
-          <Anchor
-            anchorComponentProps={
-              Object {
-                "useReactRouter": true,
-              }
-            }
-            className="c0"
+          <a
             href="/test"
           >
-            <a
-              className="c0"
-              href="/test"
-            >
-              Dashboard
-            </a>
-          </Anchor>
-        </UnstyledLink>
+            Dashboard
+          </a>
+        </Anchor>
       </span>
     </Breadcrumb>
     <Breadcrumb
-      to="/test"
+      anchorComponentProps={
+        Object {
+          "useReactRouter": false,
+        }
+      }
+      href="/test"
       type="base"
-      useReactRouter={false}
+      useReactRouter={true}
     >
       <span
         className="baseCrumb"
         data-component-type="breadcrumb"
       >
-        <UnstyledLink
+        <Anchor
           anchorComponentProps={
             Object {
               "useReactRouter": false,
@@ -114,27 +71,16 @@ exports[`<PageLayout /> should render a simple breadcrumbGroup 1`] = `
           }
           href="/test"
         >
-          <Anchor
-            anchorComponentProps={
-              Object {
-                "useReactRouter": false,
-              }
-            }
-            className="c0"
+          <a
             href="/test"
           >
-            <a
-              className="c0"
-              href="/test"
-            >
-              Tasks
-            </a>
-          </Anchor>
-        </UnstyledLink>
+            Tasks
+          </a>
+        </Anchor>
       </span>
     </Breadcrumb>
     <Breadcrumb
-      to="/test"
+      href="/test"
       type="active"
       useReactRouter={true}
     >
@@ -142,31 +88,15 @@ exports[`<PageLayout /> should render a simple breadcrumbGroup 1`] = `
         className="activeCrumb"
         data-component-type="breadcrumb"
       >
-        <UnstyledLink
-          anchorComponentProps={
-            Object {
-              "useReactRouter": true,
-            }
-          }
+        <Anchor
           href="/test"
         >
-          <Anchor
-            anchorComponentProps={
-              Object {
-                "useReactRouter": true,
-              }
-            }
-            className="c0"
+          <a
             href="/test"
           >
-            <a
-              className="c0"
-              href="/test"
-            >
-              Create
-            </a>
-          </Anchor>
-        </UnstyledLink>
+            Create
+          </a>
+        </Anchor>
       </span>
     </Breadcrumb>
   </div>

@@ -1,12 +1,17 @@
 @import '../../../common/sass/variables';
 
 @mixin base-crumb {
-  color: $i400;
   float: left;
   font-size: 12px;
 
   a {
-    color: $i400;
+    &,
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      color: $i400;
+    }
 
     &:hover {
       text-decoration: underline;
@@ -46,8 +51,13 @@
 .ihr-breadcrumbs__crumb--active {
   @include base-crumb;
 
-  &,
   a {
-    color: $n700;
+    &,
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      color: $n700;
+    }
   }
 }
