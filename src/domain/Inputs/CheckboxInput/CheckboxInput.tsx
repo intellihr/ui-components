@@ -4,15 +4,15 @@ import classNames from 'classnames'
 
 const style = require('./style.scss')
 
-export interface ICheckboxProps extends IGenericInputProps {
+export interface ICheckboxInputProps extends IGenericInputProps {
   /** Label to display next to the checkbox */
   label: JSX.Element | string
   /** If true, the checkbox would wrapped by an outside button */
   isButton?: boolean
 }
 
-export class CheckboxInput extends React.PureComponent<ICheckboxProps> {
-  public static defaultProps: Partial<ICheckboxProps> = {
+export class CheckboxInput extends React.PureComponent<ICheckboxInputProps> {
+  public static defaultProps: Partial<ICheckboxInputProps> = {
     isButton: false
   }
 

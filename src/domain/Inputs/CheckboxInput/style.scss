@@ -8,6 +8,20 @@
     position: absolute;
     width: 0;
 
+    & + .checkbox {
+      width: 100%;
+    }
+
+    &:disabled + .checkbox {
+      color: $n500;
+      cursor: not-allowed;
+
+      &::before {
+        background-color: $n150;
+        border-color: $n300;
+      }
+    }
+
     &:checked + .checkbox {
       border-color: $i600;
 
@@ -40,6 +54,17 @@
         }
       }
     }
+
+    &:disabled + .checkbox-button {
+      background-color: $n150;
+      color: $n500;
+      cursor: not-allowed;
+
+      &::before {
+        background-color: $n150;
+        border-color: $n300;
+      }
+    }
   }
 
   .checkbox {
@@ -49,7 +74,7 @@
     font-size: $fz-small;
     line-height: $lh-small;
     margin-left: 0;
-    min-width: 240px;
+    margin-right: 0;
     padding: 10px 24px 10px 44px;
     position: relative;
     transition: .25s ease-out, color .25s ease-out;
@@ -103,6 +128,7 @@
     background-color: $n100;
     border: 1px solid $n300;
     border-radius: $border-radius;
+    min-width: 240px;
 
     &:hover {
       background-color: $n200;
