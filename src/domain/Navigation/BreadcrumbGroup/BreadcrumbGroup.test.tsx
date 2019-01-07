@@ -3,7 +3,7 @@ import React from 'react'
 
 import { BreadcrumbGroup } from './BreadcrumbGroup'
 
-describe('<PageLayout />', () => {
+describe('<BreadcrumbGroup />', () => {
   it(`should render a simple breadcrumbGroup`, () => {
     const wrapper = mount(
       <BreadcrumbGroup>

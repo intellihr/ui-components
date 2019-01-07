@@ -4,17 +4,19 @@
   float: left;
   font-size: 12px;
 
-  a {
-    &,
-    &:link,
-    &:visited,
-    &:hover,
-    &:active {
-      color: $i400;
-    }
+  &,
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: $i400;
+  }
 
-    &:hover {
-      text-decoration: underline;
+  &:hover {
+    text-decoration: underline;
+
+    &::after {
+      text-decoration: none;
     }
   }
 
@@ -22,6 +24,7 @@
     &::after {
       color: #667380;
       content: '/';
+      display: inline-block;
       margin: 0 12px;
       opacity: 1;
       position: relative;
@@ -51,13 +54,11 @@
 .ihr-breadcrumbs__crumb--active {
   @include base-crumb;
 
-  a {
-    &,
-    &:link,
-    &:visited,
-    &:hover,
-    &:active {
-      color: $n700;
-    }
+  &,
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: $n700;
   }
 }

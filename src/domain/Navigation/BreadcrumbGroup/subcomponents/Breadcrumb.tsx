@@ -35,18 +35,15 @@ class Breadcrumb extends React.PureComponent<IBreadcrumbProps> {
     } = this.props
 
     return (
-      <span
+      <Anchor
+        href={href}
         className={style[`${type}Crumb`]}
         data-component-type={Props.ComponentType.Breadcrumb}
         data-component-context={componentContext}
+        anchorComponentProps={anchorComponentProps}
       >
-        <Anchor
-          href={href}
-          anchorComponentProps={anchorComponentProps}
-        >
-          {children}
-        </Anchor>
-      </span>
+        {children}
+      </Anchor>
     )
   }
 }
