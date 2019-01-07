@@ -5,7 +5,7 @@ import { StyledButtonGroup } from './style'
 
 export interface IButtonGroupProps {
   /** The Buttons/LinkButtons to render in the group */
-  buttons: (Button|LinkButton)[]
+  buttons: Array<Button|LinkButton>
   /** Extra classes to apply */
   className?: string
   /** Component context */
