@@ -2,6 +2,9 @@ import React from 'react'
 import classNames from 'classnames'
 import { Props, Variables } from '../../../common'
 import { StyledReactModal } from './style'
+import { Header } from './subcomponents/Header'
+import { Content } from './subcomponents/Content'
+import { Footer } from './subcomponents/Footer'
 
 interface IBaseModalProps {
   /**
@@ -23,6 +26,8 @@ interface IBaseModalProps {
   shouldCloseOnEsc?: boolean
   /** If true, will close when overlay is clicked */
   shouldCloseOnOverlayClick?: boolean
+  /** If true, will modify styles to work with subcomponents */
+  useSubcomponents?: boolean
 }
 
 interface IModalProps extends IBaseModalProps {
@@ -31,10 +36,15 @@ interface IModalProps extends IBaseModalProps {
 }
 
 class Modal extends React.PureComponent<IModalProps> {
+  public static Header = Header
+  public static Content = Content
+  public static Footer = Footer
+
   public static defaultProps: Partial<IModalProps> = {
     size: Props.Size.Medium,
     offsetZIndex: 0,
-    showCloseButton: true
+    showCloseButton: true,
+    useSubcomponents: false
   }
 
   public render (): JSX.Element {
@@ -77,13 +87,17 @@ class Modal extends React.PureComponent<IModalProps> {
   private get classNames (): string {
     const {
       className,
-      size
+      size,
+      useSubcomponents
     } = this.props
 
     return classNames(
       'modal',
       `modal-size-${size}`,
-      className
+      className,
+      {
+        'subcomponent-modal-style': useSubcomponents
+      }
     )
   }
 
