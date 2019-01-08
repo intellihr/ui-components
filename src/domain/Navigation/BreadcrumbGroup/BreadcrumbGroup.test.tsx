@@ -7,13 +7,13 @@ describe('<BreadcrumbGroup />', () => {
   it(`should render a simple breadcrumbGroup`, () => {
     const wrapper = mount(
       <BreadcrumbGroup>
-        <BreadcrumbGroup.Breadcrumb href='/test'>
+        <BreadcrumbGroup.Breadcrumb to='/test'>
           Dashboard
         </BreadcrumbGroup.Breadcrumb>
-        <BreadcrumbGroup.Breadcrumb href='/test' anchorComponentProps={{useReactRouter: false}}>
+        <BreadcrumbGroup.Breadcrumb to='/test' anchorComponentProps={{useReactRouter: false}}>
           Tasks
         </BreadcrumbGroup.Breadcrumb>
-        <BreadcrumbGroup.Breadcrumb href='/test' type='active'>
+        <BreadcrumbGroup.Breadcrumb to='/test' type='active'>
           Create
         </BreadcrumbGroup.Breadcrumb>
       </BreadcrumbGroup>
@@ -24,7 +24,7 @@ describe('<BreadcrumbGroup />', () => {
 
   it(`should render a breadcrumb by itself`, () => {
     const wrapper = mount(
-      <BreadcrumbGroup.Breadcrumb href='/test'>
+      <BreadcrumbGroup.Breadcrumb to='/test'>
         Create
       </BreadcrumbGroup.Breadcrumb>
     )

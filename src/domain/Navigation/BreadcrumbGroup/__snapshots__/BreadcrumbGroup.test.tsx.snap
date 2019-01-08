@@ -2,11 +2,20 @@
 
 exports[`<BreadcrumbGroup /> should render a breadcrumb by itself 1`] = `
 <Breadcrumb
-  href="/test"
+  anchorComponentProps={
+    Object {
+      "useReactRouter": true,
+    }
+  }
+  to="/test"
   type="base"
-  useReactRouter={true}
 >
   <Anchor
+    anchorComponentProps={
+      Object {
+        "useReactRouter": true,
+      }
+    }
     className="baseCrumb"
     data-component-type="breadcrumb"
     href="/test"
@@ -29,11 +38,20 @@ exports[`<BreadcrumbGroup /> should render a simple breadcrumbGroup 1`] = `
     data-component-type="breadcrumb_group"
   >
     <Breadcrumb
-      href="/test"
+      anchorComponentProps={
+        Object {
+          "useReactRouter": true,
+        }
+      }
+      to="/test"
       type="base"
-      useReactRouter={true}
     >
       <Anchor
+        anchorComponentProps={
+          Object {
+            "useReactRouter": true,
+          }
+        }
         className="baseCrumb"
         data-component-type="breadcrumb"
         href="/test"
@@ -53,9 +71,8 @@ exports[`<BreadcrumbGroup /> should render a simple breadcrumbGroup 1`] = `
           "useReactRouter": false,
         }
       }
-      href="/test"
+      to="/test"
       type="base"
-      useReactRouter={true}
     >
       <Anchor
         anchorComponentProps={
@@ -77,11 +94,20 @@ exports[`<BreadcrumbGroup /> should render a simple breadcrumbGroup 1`] = `
       </Anchor>
     </Breadcrumb>
     <Breadcrumb
-      href="/test"
+      anchorComponentProps={
+        Object {
+          "useReactRouter": true,
+        }
+      }
+      to="/test"
       type="active"
-      useReactRouter={true}
     >
       <Anchor
+        anchorComponentProps={
+          Object {
+            "useReactRouter": true,
+          }
+        }
         className="activeCrumb"
         data-component-type="breadcrumb"
         href="/test"

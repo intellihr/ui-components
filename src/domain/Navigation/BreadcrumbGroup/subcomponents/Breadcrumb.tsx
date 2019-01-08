@@ -6,9 +6,7 @@ const style = require('../style.scss')
 
 interface IBreadcrumbProps {
   /** where to navigate to */
-  href: string
-  /** if to use react router or not */
-  useReactRouter?: boolean
+  to: string
   /** the type of breadcrumb this element is */
   type?: 'base' | 'active'
   /** The data-component-context */
@@ -21,13 +19,15 @@ interface IBreadcrumbProps {
 
 class Breadcrumb extends React.PureComponent<IBreadcrumbProps> {
   public static defaultProps = {
-    useReactRouter: true,
-    type: 'base'
+    type: 'base',
+    anchorComponentProps: {
+      useReactRouter: true
+    }
   }
 
   public render (): JSX.Element {
     const {
-      href,
+      to,
       anchorComponentProps,
       children,
       type,
@@ -36,7 +36,7 @@ class Breadcrumb extends React.PureComponent<IBreadcrumbProps> {
 
     return (
       <Anchor
-        href={href}
+        href={to}
         className={style[`${type}Crumb`]}
         data-component-type={Props.ComponentType.Breadcrumb}
         data-component-context={componentContext}
