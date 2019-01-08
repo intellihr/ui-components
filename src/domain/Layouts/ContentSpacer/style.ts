@@ -2,17 +2,19 @@ import styled from 'styled-components'
 
 interface IContentSpacerContentItemProps {
   /** Size of the space between this content item and the next */
-  spacingSize?: 'small' | 'medium' | 'large'
+  spacingSize?: 'small' | 'medium' | 'large' | 'xlarge'
 }
 
-function spacingForContentItem(props: IContentSpacerContentItemProps): number {
+const spacingForContentItem = (props: IContentSpacerContentItemProps): number => {
   switch (props.spacingSize) {
     case 'small':
       return 24
     case 'medium':
-      return 48
+      return 32
     case 'large':
-      return 80
+      return 40
+    case 'xlarge':
+      return 56
     default:
       return 0
   }
@@ -21,7 +23,7 @@ function spacingForContentItem(props: IContentSpacerContentItemProps): number {
 const StyledContentItem = styled.div<IContentSpacerContentItemProps>`
   margin-bottom: ${spacingForContentItem}px;
 
-  :last-child {
+  &:last-child {
     margin-bottom: 0px;
   }
 `

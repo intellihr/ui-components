@@ -21,7 +21,11 @@ describe('<ContentSpacer />', () => {
             spacingSize: 'large'
           },
           {
-            content: <div>d</div>
+            content: <div>d</div>,
+            spacingSize: 'xlarge'
+          },
+          {
+            content: <div>e</div>
           }
         ]}
       />
