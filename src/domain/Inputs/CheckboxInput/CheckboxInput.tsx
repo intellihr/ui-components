@@ -7,7 +7,7 @@ const style = require('./style.scss')
 export interface ICheckboxInputProps extends IGenericInputProps {
   /** Label to display next to the checkbox */
   label: JSX.Element | string
-  /** If true, the checkbox would wrapped by an outside button */
+  /** If true, the checkbox is wrapped by a button */
   isButton?: boolean
 }
 

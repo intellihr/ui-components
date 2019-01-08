@@ -30,9 +30,22 @@ const exampleOptions = [
   }]
 
 describe('<CheckboxSet />', () => {
-  it(`should render a checkbox Set`, () => {
+  it(`should render a checkbox set`, () => {
     const wrapper = shallow(
       <CheckboxSet
+        id='key'
+        handleChange={dummyClick}
+        options={exampleOptions}
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it(`should render a checkbox button set`, () => {
+    const wrapper = shallow(
+      <CheckboxSet
+        useButtonStyle
         id='key'
         handleChange={dummyClick}
         options={exampleOptions}

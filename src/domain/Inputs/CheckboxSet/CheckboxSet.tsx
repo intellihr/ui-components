@@ -1,13 +1,10 @@
 import React, { ChangeEventHandler } from 'react'
-import { RadioSetWrapper, StyledRadioInput } from './style'
-import uuid from 'uuid'
 import { map } from 'lodash'
 import { Props } from '../../../common'
 import { ICheckboxInputProps } from '../CheckboxInput'
+import { CheckboxSetWrapper, StyledCheckboxInput } from './style'
 
 export interface ICheckboxSetProps {
-  /** Label to display next to the radio */
-  label?: JSX.Element | string
   /** Array of options to display in the list */
   options: ICheckboxInputProps[]
   /** action when option is clicked */
@@ -16,6 +13,8 @@ export interface ICheckboxSetProps {
   id?: string
   /** Specify the orientation of the radio group */
   orientation?: Props.Orientation
+  /** If true, all checkbox inputs are wrapped with a button */
+  useButtonStyle?: boolean
 }
 
 export class CheckboxSet extends React.PureComponent<ICheckboxSetProps> {
@@ -27,13 +26,15 @@ export class CheckboxSet extends React.PureComponent<ICheckboxSetProps> {
     const {
       options,
       handleChange,
-      id
+      id,
+      useButtonStyle
     } = this.props
 
     return map(options, (option, idx) =>
-      <StyledRadioInput
-        key={id ? `${idx}-${id}` : uuid.v4()}
+      <StyledCheckboxInput
+        key={id ? `${idx}-${id}` : idx}
         handleChange={handleChange}
+        isButton={useButtonStyle}
         {... option}
       />
     )
@@ -45,9 +46,9 @@ export class CheckboxSet extends React.PureComponent<ICheckboxSetProps> {
     } = this.props
 
     return (
-      <RadioSetWrapper orientation={orientation!}>
+      <CheckboxSetWrapper orientation={orientation!}>
         {this.options}
-      </RadioSetWrapper>
+      </CheckboxSetWrapper>
     )
   }
 }

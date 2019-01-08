@@ -1,6 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<CheckboxSet /> should render a checkbox Set 1`] = `
+exports[`<CheckboxSet /> should render a checkbox button set 1`] = `
+<styled.div
+  orientation="vertical"
+>
+  <Styled(CheckboxInput)
+    handleChange={[Function]}
+    isButton={true}
+    key="0-key"
+    label="123123"
+    name="option-1"
+    value="option 1"
+  />
+  <Styled(CheckboxInput)
+    handleChange={[Function]}
+    isButton={true}
+    isDisabled={true}
+    key="1-key"
+    label="this is option 2 (I am disabled)"
+    name="option-2"
+    value="option 2"
+  />
+  <Styled(CheckboxInput)
+    handleChange={[Function]}
+    isButton={true}
+    key="2-key"
+    label="this is option 3"
+    name="option-3"
+    value="option 3"
+  />
+  <Styled(CheckboxInput)
+    handleChange={[Function]}
+    isButton={true}
+    key="3-key"
+    label="this is option 4"
+    name="option-4"
+    value="option 4"
+  />
+</styled.div>
+`;
+
+exports[`<CheckboxSet /> should render a checkbox set 1`] = `
 <styled.div
   orientation="vertical"
 >

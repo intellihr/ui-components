@@ -2,15 +2,15 @@ import styled, {css} from 'styled-components'
 import { CheckboxInput } from '../../Inputs'
 import { Props } from '../../../common'
 
-interface IRadioSetWrapperProps {
+interface ICheckboxSetWrapperProps {
   orientation: Props.Orientation
 }
 
-export const RadioSetWrapper = styled.div`
+export const CheckboxSetWrapper = styled.div`
   display: inline-flex;
   max-width: 100%;
     
-  ${(props: IRadioSetWrapperProps) => {
+  ${(props: ICheckboxSetWrapperProps) => {
   if (props.orientation === Props.Orientation.Vertical) {
     return css`
         flex-direction: column
@@ -24,6 +24,6 @@ export const RadioSetWrapper = styled.div`
 }}
 `
 
-export const StyledRadioInput = styled(CheckboxInput)`
+export const StyledCheckboxInput = styled(CheckboxInput)`
   margin-bottom: 8px;
 `

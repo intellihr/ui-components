@@ -19,7 +19,7 @@ initialState = { option1: false, option2: false, option3: false, option4: false}
       },
       {
         name: 'option3',
-        label:'this is option 3 (diabled)',
+        label:'this is option 3 (I am disabled)',
         value: state.option3,
         isDisabled: true
       },
@@ -40,32 +40,29 @@ initialState = { option1: false, option2: false, option3: false, option4: false}
 initialState = { button1: false, button2: false, button3: false, button4: false};
 
 <CheckboxSet
+  useButtonStyle
   handleChange={(event) => setState({[event.target.name]: !state[event.target.name]})}
   options={[
       {
         name: 'button1',
         label:'this is option 1',
-        value: state.button1,
-        isButton: true
+        value: state.button1
       },
       {
         name: 'button2',
         label:'this is option 2',
-        value: state.button2,
-        isButton: true
+        value: state.button2
       },
       {
         name: 'button3',
-        label:'this is option 3 (diabled)',
+        label:'this is option 3 (I am disabled)',
         value: state.button3,
-        isButton: true,
         isDisabled: true
       },
       {
         name: 'button4',
         label:'this is option 4 (I have a special action)',
         value: state.button4,
-        isButton: true,
         handleChange: (event) => { setState({[event.target.name]: !state[event.target.name]});  alert('I have a custom onClick handler!');}
       }
     ]}
@@ -95,7 +92,7 @@ initialState = { horizontal1: false, horizontal2: false, horizontal3: false, hor
       },
       {
         name: 'horizontal3',
-        label:'this is option 3',
+        label:'this is option 3 (I am disabled)',
         value: state.horizontal3,
         isDisabled: true
       },
