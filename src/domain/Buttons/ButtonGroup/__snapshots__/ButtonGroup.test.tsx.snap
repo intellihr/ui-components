@@ -11,27 +11,7 @@ exports[`<ButtonGroup /> should render a button group with buttons and link butt
   margin-right: 0px;
 }
 
-<ButtonGroup
-  buttons={
-    Array [
-      <Button
-        hasLegacyMargins={false}
-        iconAlignment="left"
-        type="neutral"
-      >
-        Button 1
-      </Button>,
-      <LinkButton
-        disabled={false}
-        hasLegacyMargins={false}
-        iconAlignment="left"
-        type="neutral"
-      >
-        Button 2
-      </LinkButton>,
-    ]
-  }
->
+<ButtonGroup>
   <styled.span
     data-component-type="button_group"
   >
@@ -52,6 +32,7 @@ exports[`<ButtonGroup /> should render a button group with buttons and link butt
           Button 1
         </button>
       </Button>
+      ,
       <LinkButton
         disabled={false}
         hasLegacyMargins={false}

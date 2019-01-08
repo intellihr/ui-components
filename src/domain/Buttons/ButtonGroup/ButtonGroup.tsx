@@ -4,18 +4,18 @@ import { Props } from '../../../common/types/props'
 import { StyledButtonGroup } from './style'
 
 export interface IButtonGroupProps {
-  /** The Buttons/LinkButtons to render in the group */
-  buttons: Array<Button|LinkButton>
   /** Extra classes to apply */
   className?: string
   /** Component context */
   componentContext?: string
+  /** The buttons nested inside the group */
+  children: Button | LinkButton
 }
 
 class ButtonGroup extends React.PureComponent<IButtonGroupProps> {
   public render (): JSX.Element | null {
     const {
-      buttons,
+      children,
       className,
       componentContext
     } = this.props
@@ -26,7 +26,7 @@ class ButtonGroup extends React.PureComponent<IButtonGroupProps> {
         data-component-context={componentContext}
         className={className}
       >
-        {buttons}
+        {children}
       </StyledButtonGroup>
     )
   }
