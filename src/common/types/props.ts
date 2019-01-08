@@ -47,6 +47,8 @@ namespace Props {
     Button = 'button',
     ButtonIcon = 'button_icon',
     Callout = 'callout',
+    ContentSpacer = 'content_spacer',
+    ContentSpacerItem = 'content_spacer_item',
     EmptyState = 'empty_state',
     HintWrapper = 'hint_wrapper',
     LinkButton = 'link_button',
