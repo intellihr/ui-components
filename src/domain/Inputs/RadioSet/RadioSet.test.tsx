@@ -41,6 +41,19 @@ describe('<RadioSet />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
+  it(`should render a radio Button Set`, () => {
+    const wrapper = shallow(
+      <RadioSet
+        useButtonStyle
+        id='key'
+        handleChange={dummyClick}
+        options={exampleOptions}
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it(`should render a radio set with horizontal buttons`, () => {
     const wrapper = shallow(
       <RadioSet

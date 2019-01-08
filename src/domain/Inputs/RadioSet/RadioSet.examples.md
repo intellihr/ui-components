@@ -42,37 +42,34 @@ initialState = { value: 'option 1' };
 initialState = { button: 'option 1' };
 
 <RadioSet
+  useButtonStyle
   handleChange={(event) => setState({button: event.target.value})}
   options={[
       {
         name: 'button-option-1',
         label:'this is option 1',
         value:'option 1',
-        isChecked:state.button === 'option 1',
-        isButton: true
+        isChecked:state.button === 'option 1'
       },
       {
         name: 'button-option-2',
         label:'this is option 2 (I am disabled)',
         value:'option 2',
         isChecked:state.buton === 'option 2',
-        isDisabled:true,
-        isButton: true
+        isDisabled:true
       },
       {
         name: 'button-option-3',
         label:'this is option 3',
         value:'option 3',
-        isChecked:state.button === 'option 3',
-        isButton: true
+        isChecked:state.button === 'option 3'
       },
       {
         name: 'button-option-4',
         label:'this is option 4 (I have a special action)',
         value:'option 4',
         isChecked:state.button === 'option 4',
-        handleChange: (event) => { setState({button: event.target.value}); alert('I have a custom onClick handler!');},
-        isButton: true
+        handleChange: (event) => { setState({button: event.target.value}); alert('I have a custom onClick handler!');}
       }
     ]}
 />

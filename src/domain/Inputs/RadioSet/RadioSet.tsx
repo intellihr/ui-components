@@ -13,24 +13,29 @@ export interface IRadioSetProps {
   id?: string
   /** Specify the orientation of the radio set */
   orientation?: Props.Orientation
+  /** If true, all radio inputs are wrapped with a button */
+  useButtonStyle?: boolean
 }
 
 export class RadioSet extends React.PureComponent<IRadioSetProps> {
   public static defaultProps: Partial<IRadioSetProps> = {
-    orientation: Props.Orientation.Vertical
+    orientation: Props.Orientation.Vertical,
+    useButtonStyle: false
   }
 
   get options (): JSX.Element[] {
     const {
       options,
       handleChange,
-      id
+      id,
+      useButtonStyle
     } = this.props
 
     return map(options, (option, idx) =>
       <StyledRadioInput
         key={id ? `${idx}-${id}` : idx}
         handleChange={handleChange}
+        isButton={useButtonStyle}
         {... option}
       />
     )
