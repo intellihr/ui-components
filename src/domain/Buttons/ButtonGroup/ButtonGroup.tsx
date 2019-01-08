@@ -1,5 +1,4 @@
 import React from 'react'
-import { Button, LinkButton } from 'src/domain/Buttons'
 import { Props } from '../../../common/types/props'
 import { StyledButtonGroup } from './style'
 
@@ -9,7 +8,7 @@ export interface IButtonGroupProps {
   /** Component context */
   componentContext?: string
   /** The buttons nested inside the group */
-  children: Button | LinkButton
+  children: JSX.Element | JSX.Element[]
 }
 
 class ButtonGroup extends React.PureComponent<IButtonGroupProps> {
