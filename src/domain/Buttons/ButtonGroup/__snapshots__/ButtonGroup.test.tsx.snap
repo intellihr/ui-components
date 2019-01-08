@@ -3,7 +3,7 @@
 exports[`<ButtonGroup /> should render a button group with buttons and link buttons 1`] = `
 .c0 > a,
 .c0 > button {
-  margin-right: 0.5rem;
+  margin-right: 8px;
 }
 
 .c0 > a:last-child,

@@ -13,7 +13,7 @@ export interface IButtonGroupProps {
 }
 
 class ButtonGroup extends React.PureComponent<IButtonGroupProps> {
-  public render (): JSX.Element | null {
+  public render (): JSX.Element {
     const {
       children,
       className,
