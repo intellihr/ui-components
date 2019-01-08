@@ -7,7 +7,7 @@ exports[`<BreadcrumbGroup /> should render a breadcrumb by itself 1`] = `
       "useReactRouter": true,
     }
   }
-  to="/test"
+  href="/test"
   type="base"
 >
   <Anchor
@@ -43,7 +43,7 @@ exports[`<BreadcrumbGroup /> should render a simple breadcrumbGroup 1`] = `
           "useReactRouter": true,
         }
       }
-      to="/test"
+      href="/test"
       type="base"
     >
       <Anchor
@@ -71,7 +71,7 @@ exports[`<BreadcrumbGroup /> should render a simple breadcrumbGroup 1`] = `
           "useReactRouter": false,
         }
       }
-      to="/test"
+      href="/test"
       type="base"
     >
       <Anchor
@@ -99,7 +99,7 @@ exports[`<BreadcrumbGroup /> should render a simple breadcrumbGroup 1`] = `
           "useReactRouter": true,
         }
       }
-      to="/test"
+      href="/test"
       type="active"
     >
       <Anchor
