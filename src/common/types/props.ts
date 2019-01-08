@@ -43,6 +43,8 @@ namespace Props {
   export enum ComponentType {
     AvatarGroup = 'avatar_group',
     BlockTabGroup = 'block_tab_group',
+    Breadcrumb = 'breadcrumb',
+    BreadcrumbGroup = 'breadcrumb_group',
     Brick = 'brick',
     Button = 'button',
     ButtonIcon = 'button_icon',

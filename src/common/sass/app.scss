@@ -15,7 +15,6 @@
 @include foundation-typography;
 @include foundation-forms;
 @include foundation-accordion-menu;
-@include foundation-breadcrumbs;
 @include foundation-button-group;
 @include foundation-close-button;
 @include foundation-menu;
@@ -42,7 +41,6 @@ $fa-font-path: '~font-awesome/fonts';
 
 // Components
 @import 'legacy/components/box';
-@import 'legacy/components/breadcrumbs';
 @import 'legacy/components/button-group';
 @import 'legacy/components/checkbox-button-group';
 @import 'legacy/components/dropdown';

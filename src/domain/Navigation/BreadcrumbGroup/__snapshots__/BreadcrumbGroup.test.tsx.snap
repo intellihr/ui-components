@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BreadcrumbGroup /> should render a breadcrumb by itself 1`] = `
+<Breadcrumb
+  anchorComponentProps={
+    Object {
+      "useReactRouter": true,
+    }
+  }
+  href="/test"
+  type="base"
+>
+  <Anchor
+    anchorComponentProps={
+      Object {
+        "useReactRouter": true,
+      }
+    }
+    className="baseCrumb"
+    data-component-type="breadcrumb"
+    href="/test"
+  >
+    <a
+      className="baseCrumb"
+      data-component-type="breadcrumb"
+      href="/test"
+    >
+      Create
+    </a>
+  </Anchor>
+</Breadcrumb>
+`;
+
+exports[`<BreadcrumbGroup /> should render a simple breadcrumbGroup 1`] = `
+<BreadcrumbGroup>
+  <div
+    className="breadcrumbs"
+    data-component-type="breadcrumb_group"
+  >
+    <Breadcrumb
+      anchorComponentProps={
+        Object {
+          "useReactRouter": true,
+        }
+      }
+      href="/test"
+      type="base"
+    >
+      <Anchor
+        anchorComponentProps={
+          Object {
+            "useReactRouter": true,
+          }
+        }
+        className="baseCrumb"
+        data-component-type="breadcrumb"
+        href="/test"
+      >
+        <a
+          className="baseCrumb"
+          data-component-type="breadcrumb"
+          href="/test"
+        >
+          Dashboard
+        </a>
+      </Anchor>
+    </Breadcrumb>
+    <Breadcrumb
+      anchorComponentProps={
+        Object {
+          "useReactRouter": false,
+        }
+      }
+      href="/test"
+      type="base"
+    >
+      <Anchor
+        anchorComponentProps={
+          Object {
+            "useReactRouter": false,
+          }
+        }
+        className="baseCrumb"
+        data-component-type="breadcrumb"
+        href="/test"
+      >
+        <a
+          className="baseCrumb"
+          data-component-type="breadcrumb"
+          href="/test"
+        >
+          Tasks
+        </a>
+      </Anchor>
+    </Breadcrumb>
+    <Breadcrumb
+      anchorComponentProps={
+        Object {
+          "useReactRouter": true,
+        }
+      }
+      href="/test"
+      type="active"
+    >
+      <Anchor
+        anchorComponentProps={
+          Object {
+            "useReactRouter": true,
+          }
+        }
+        className="activeCrumb"
+        data-component-type="breadcrumb"
+        href="/test"
+      >
+        <a
+          className="activeCrumb"
+          data-component-type="breadcrumb"
+          href="/test"
+        >
+          Create
+        </a>
+      </Anchor>
+    </Breadcrumb>
+  </div>
+</BreadcrumbGroup>
+`;

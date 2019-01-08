@@ -1,0 +1,64 @@
+@import '../../../common/sass/variables';
+
+@mixin base-crumb {
+  float: left;
+  font-size: 12px;
+
+  &,
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: $i400;
+  }
+
+  &:hover {
+    text-decoration: underline;
+
+    &::after {
+      text-decoration: none;
+    }
+  }
+
+  &:not(:last-child) {
+    &::after {
+      color: #667380;
+      content: '/';
+      display: inline-block;
+      margin: 0 12px;
+      opacity: 1;
+      position: relative;
+      top: 0;
+    }
+  }
+}
+
+:local(.breadcrumbs),
+.ihr-breadcrumbs {
+  list-style: none;
+  margin: 0;
+
+  &::before,
+  &::after {
+    content: ' ';
+    display: table;
+  }
+}
+
+:local(.baseCrumb),
+.ihr-breadcrumbs__crumb {
+  @include base-crumb;
+}
+
+:local(.activeCrumb),
+.ihr-breadcrumbs__crumb--active {
+  @include base-crumb;
+
+  &,
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: $n700;
+  }
+}
