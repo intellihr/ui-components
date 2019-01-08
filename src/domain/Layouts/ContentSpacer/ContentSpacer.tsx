@@ -4,7 +4,7 @@ import { Props } from '../../../common/'
 
 interface IContentSpacerContentItemProps {
   /** Size of the space between this content item and the next */
-  size?: 'small' | 'medium' | 'large',
+  spacingSize?: 'small' | 'medium' | 'large',
   /** Content item */
   content: JSX.Element,
   /** Component context for the content item */
@@ -14,7 +14,7 @@ interface IContentSpacerContentItemProps {
 interface IContentSpacerProps {
   /** Provide an array of items for the content */
   contentItems: IContentSpacerContentItemProps[],
-  /** Component context for the overall content spacer*/
+  /** Component context for the overall content spacer */
   componentContext?: string
 }
 
@@ -31,16 +31,18 @@ class ContentSpacer extends React.Component<IContentSpacerProps> {
         data-component-context={componentContext}
       >
         {contentItems.map((contentItem: IContentSpacerContentItemProps, index: number) => {
-          return (
-            <StyledContentItem
-              size={contentItem.size}
-              key={index}
-              data-component-type={Props.ComponentType.ContentSpacerItem}
-              data-component-context={contentItem.componentContext}
-            >
-              {contentItem.content}
-            </StyledContentItem>
-          )
+          if (contentItem.content) {
+            return (
+              <StyledContentItem
+                spacingSize={contentItem.spacingSize}
+                key={index}
+                data-component-type={Props.ComponentType.ContentSpacerItem}
+                data-component-context={contentItem.componentContext}
+              >
+                {contentItem.content}
+              </StyledContentItem>
+            )
+          }
         })}
       </div>
     )

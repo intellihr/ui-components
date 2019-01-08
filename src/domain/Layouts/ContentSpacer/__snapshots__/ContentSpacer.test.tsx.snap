@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ContentSpacer /> should render a content spacer with no sizes defined 1`] = `
+exports[`<ContentSpacer /> should render a content spacer with no spacing sizes defined 1`] = `
 .c0 {
+  margin-bottom: 0px;
+}
+
+.c0:last-child {
   margin-bottom: 0px;
 }
 
@@ -16,16 +20,6 @@ exports[`<ContentSpacer /> should render a content spacer with no sizes defined 
       Object {
         "content": <div>
           b
-        </div>,
-      },
-      Object {
-        "content": <div>
-          c
-        </div>,
-      },
-      Object {
-        "content": <div>
-          d
         </div>,
       },
     ]
@@ -57,32 +51,6 @@ exports[`<ContentSpacer /> should render a content spacer with no sizes defined 
       >
         <div>
           b
-        </div>
-      </div>
-    </styled.div>
-    <styled.div
-      data-component-type="content_spacer_item"
-      key="2"
-    >
-      <div
-        className="c0"
-        data-component-type="content_spacer_item"
-      >
-        <div>
-          c
-        </div>
-      </div>
-    </styled.div>
-    <styled.div
-      data-component-type="content_spacer_item"
-      key="3"
-    >
-      <div
-        className="c0"
-        data-component-type="content_spacer_item"
-      >
-        <div>
-          d
         </div>
       </div>
     </styled.div>
@@ -90,20 +58,36 @@ exports[`<ContentSpacer /> should render a content spacer with no sizes defined 
 </ContentSpacer>
 `;
 
-exports[`<ContentSpacer /> should render a content spacer with varying sizes 1`] = `
+exports[`<ContentSpacer /> should render a content spacer with varying spacing sizes 1`] = `
 .c0 {
   margin-bottom: 24px;
+}
+
+.c0:last-child {
+  margin-bottom: 0px;
 }
 
 .c1 {
   margin-bottom: 48px;
 }
 
+.c1:last-child {
+  margin-bottom: 0px;
+}
+
 .c2 {
   margin-bottom: 80px;
 }
 
+.c2:last-child {
+  margin-bottom: 0px;
+}
+
 .c3 {
+  margin-bottom: 0px;
+}
+
+.c3:last-child {
   margin-bottom: 0px;
 }
 
@@ -114,19 +98,19 @@ exports[`<ContentSpacer /> should render a content spacer with varying sizes 1`]
         "content": <div>
           a
         </div>,
-        "size": "small",
+        "spacingSize": "small",
       },
       Object {
         "content": <div>
           b
         </div>,
-        "size": "medium",
+        "spacingSize": "medium",
       },
       Object {
         "content": <div>
           c
         </div>,
-        "size": "large",
+        "spacingSize": "large",
       },
       Object {
         "content": <div>
@@ -142,12 +126,11 @@ exports[`<ContentSpacer /> should render a content spacer with varying sizes 1`]
     <styled.div
       data-component-type="content_spacer_item"
       key="0"
-      size="small"
+      spacingSize="small"
     >
       <div
         className="c0"
         data-component-type="content_spacer_item"
-        size="small"
       >
         <div>
           a
@@ -157,12 +140,11 @@ exports[`<ContentSpacer /> should render a content spacer with varying sizes 1`]
     <styled.div
       data-component-type="content_spacer_item"
       key="1"
-      size="medium"
+      spacingSize="medium"
     >
       <div
         className="c1"
         data-component-type="content_spacer_item"
-        size="medium"
       >
         <div>
           b
@@ -172,12 +154,11 @@ exports[`<ContentSpacer /> should render a content spacer with varying sizes 1`]
     <styled.div
       data-component-type="content_spacer_item"
       key="2"
-      size="large"
+      spacingSize="large"
     >
       <div
         className="c2"
         data-component-type="content_spacer_item"
-        size="large"
       >
         <div>
           c

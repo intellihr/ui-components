@@ -4,21 +4,21 @@ import React from 'react'
 import { ContentSpacer } from './ContentSpacer'
 
 describe('<ContentSpacer />', () => {
-  it(`should render a content spacer with varying sizes`, () => {
+  it(`should render a content spacer with varying spacing sizes`, () => {
     const wrapper = mount(
       <ContentSpacer
         contentItems={[
           {
             content: <div>a</div>,
-            size: 'small'
+            spacingSize: 'small'
           },
           {
             content: <div>b</div>,
-            size: 'medium'
+            spacingSize: 'medium'
           },
           {
             content: <div>c</div>,
-            size: 'large'
+            spacingSize: 'large'
           },
           {
             content: <div>d</div>
@@ -30,7 +30,7 @@ describe('<ContentSpacer />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a content spacer with no sizes defined`, () => {
+  it(`should render a content spacer with no spacing sizes defined`, () => {
     const wrapper = mount(
       <ContentSpacer
         contentItems={[
@@ -39,12 +39,6 @@ describe('<ContentSpacer />', () => {
           },
           {
             content: <div>b</div>
-          },
-          {
-            content: <div>c</div>
-          },
-          {
-            content: <div>d</div>
           }
         ]}
       />
