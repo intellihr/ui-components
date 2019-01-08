@@ -1,80 +1,58 @@
-import React, { ChangeEventHandler } from 'react'
-import uuid from 'uuid'
-import { map } from 'lodash'
+import React from 'react'
+import { IGenericInputProps, Input } from '../Input'
 import classNames from 'classnames'
-import { Props } from '../../../common'
+
 const style = require('./style.scss')
 
-export interface IRadioInputProps {
+export interface IRadioInputProps extends IGenericInputProps {
   /** Label to display next to the radio */
-  label?: JSX.Element | string
-  /** Array of options to display in the list */
-  options: IRadioOptionProps[]
-  /** action when option is clicked */
-  handleChange?: ChangeEventHandler<HTMLInputElement>
-  /** ID of the radio input */
-  id?: string
-  /** Specify the orientation of the radio group */
-  orientation?: Props.Orientation
-}
-
-export interface IRadioOptionProps {
-  /** Specify if input is checked */
-  isChecked?: boolean
-  /** If true, sets input to disabled state */
-  isDisabled?: boolean
-  /** Label to display */
-  label: string
-  /** Value of the option */
-  value: any
-  /** Callback when option is clicked. */
-  handleChange?: ChangeEventHandler<HTMLInputElement>
+  label: JSX.Element | string
+  /** If true, the radio input is wrapped with a button */
+  isButton?: boolean
 }
 
 export class RadioInput extends React.PureComponent<IRadioInputProps> {
   public static defaultProps: Partial<IRadioInputProps> = {
-    orientation: Props.Orientation.Vertical
+    isButton: false,
+    isDisabled: false
   }
 
-  get options (): JSX.Element[] {
+  get infoLabel (): JSX.Element | null {
     const {
-      options,
-      handleChange,
-      id,
-      orientation
+      name,
+      label,
+      isButton
     } = this.props
 
-    return map(options, (option, idx) => {
-      const {
-        isChecked,
-        isDisabled,
-        handleChange: overrideHandleChange,
-        value,
-        label
-      } = option
+    if (!label) {
+      return null
+    }
 
-      return (
-        <label
-          className={orientation === Props.Orientation.Horizontal ? 'horizontal-radio-group' : undefined}
-        >
-          <input
-            key={id ? `${idx}-${id}` : uuid.v4()}
-            type='radio'
-            value={value}
-            checked={isChecked}
-            disabled={isDisabled}
-            onChange={overrideHandleChange ? overrideHandleChange : handleChange}
-          />
-          <span>{label}</span>
-        </label>
-      )
-    })
+    return (
+      <label
+        htmlFor={name}
+        className={classNames('radio', { 'radio-button': isButton })}
+      >
+        {label}
+      </label>
+    )
   }
 
   public render (): JSX.Element {
+    const {
+      className,
+      ...props
+    } = this.props
+
     return (
-      <div className={classNames(style.radioInput)}>
-        {this.options}
+      <div
+        className={classNames( style.radioInput, className)}
+      >
+        <Input
+          {...props}
+          type='radio'
+        />
+        {this.infoLabel}
       </div>
     )
   }
