@@ -1,6 +1,7 @@
 ```jsx
-const React = require('react')
-const { Props } = require('../../../')
+const React = require('react');
+const { Props } = require('../../../');
+const { Button } = require('@Domain/Buttons');
 
 class ModalExample extends React.PureComponent {
   constructor () {
@@ -31,7 +32,8 @@ class ModalExample extends React.PureComponent {
       buttonText,
       size,
       shouldCloseOnOverlayClick,
-      shouldCloseOnEsc
+      shouldCloseOnEsc,
+      useSubcomponents
     } = this.props
 
     return (
@@ -48,6 +50,7 @@ class ModalExample extends React.PureComponent {
           showCloseButton={showCloseButton}
           shouldCloseOnOverlayClick={shouldCloseOnOverlayClick}
           shouldCloseOnEsc={shouldCloseOnEsc}
+          useSubcomponents={useSubcomponents}
         >
           {children}
         </Modal>
@@ -59,6 +62,31 @@ class ModalExample extends React.PureComponent {
 ModalExample.defaultProps = { showCloseButton: true };
 
 <div>
+  <div>
+    <ModalExample buttonText='Subcomponent style' useSubcomponents={true}>
+      <Modal.Header>
+        Hello
+      </Modal.Header>
+      <Modal.Content>
+        This is my modal content :) This is my modal content :) This is my modal content :)
+        This is my modal content :) This is my modal content :) This is my modal content :)
+        This is my modal content :) This is my modal content :) This is my modal content :)
+        This is my modal content :) This is my modal content :) This is my modal content :)
+      </Modal.Content>
+      <Modal.Footer
+        leftControls={
+          <Button>Back</Button>
+        }
+        rightControls={
+          <>
+            <Button type='cancel'>Cancel</Button>
+            <Button type='primary'>Next</Button>
+          </>
+        }
+      />
+    </ModalExample>
+  </div>
+
   <div>
     <ModalExample buttonText='Simple default modal implementation'>
       <h1>Hello this is a Modal</h1>

@@ -22,8 +22,8 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
     isActive={true}
     url='#'
     label='Item 2'
-  /> 
-  <MenuItem 
+  />
+  <MenuItem
     isOpen={true}
     label='Item 3'
   >
@@ -35,6 +35,36 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
       url='#'
       label='Item 3B'
       className='active'
+    />
+    <MenuItem
+      isOpen
+      label='Item 3C'
+      overflowWhenOpen='visible'
+    >
+      <div
+        style={{
+          position: 'relative',
+          height: '1.5rem',
+          backgroundColor: '#eee'
+        }}
+      >
+        <div
+          style={{
+            position: 'absolute',
+            top: '5px',
+            left: '5rem',
+            width: '5rem',
+            height: '3rem',
+            backgroundColor: 'lightblue',
+            padding: '.25rem'
+          }}
+        >
+          Overflow
+        </div>
+      </div>
+    </MenuItem>
+    <MenuItem
+      label='Item 3D'
     />
   </MenuItem>
 </Menu>
@@ -65,8 +95,8 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
     isLoading={true}
     url='#'
     label='Item 2'
-  /> 
-  <MenuItem 
+  />
+  <MenuItem
     isOpen={true}
     label='Item 3'
   >

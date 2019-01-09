@@ -116,6 +116,8 @@ module.exports = {
           components: [
             'src/domain/Inputs/Input/Input',
             'src/domain/Inputs/InputGroup/InputGroup',
+            'src/domain/Inputs/CheckboxInput/CheckboxInput',
+            'src/domain/Inputs/CheckboxSet/CheckboxSet',
             'src/domain/Inputs/RadioInput/RadioInput',
             'src/domain/Inputs/RadioSet/RadioSet',
             'src/domain/Inputs/SelectInput/SelectInput',

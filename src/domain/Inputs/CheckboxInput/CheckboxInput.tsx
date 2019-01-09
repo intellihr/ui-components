@@ -1,18 +1,26 @@
 import React from 'react'
-import { InfoLabel } from './style'
 import { IGenericInputProps, Input } from '../Input'
 import classNames from 'classnames'
 
-export interface ICheckboxProps extends IGenericInputProps {
+const style = require('./style.scss')
+
+export interface ICheckboxInputProps extends IGenericInputProps {
   /** Label to display next to the checkbox */
-  label?: JSX.Element | string
+  label: JSX.Element | string
+  /** If true, the checkbox is wrapped by a button */
+  isButton?: boolean
 }
 
-export class CheckboxInput extends React.PureComponent<ICheckboxProps> {
+export class CheckboxInput extends React.PureComponent<ICheckboxInputProps> {
+  public static defaultProps: Partial<ICheckboxInputProps> = {
+    isButton: false
+  }
+
   get infoLabel (): JSX.Element | null {
     const {
       name,
-      label
+      label,
+      isButton
     } = this.props
 
     if (!label) {
@@ -20,11 +28,12 @@ export class CheckboxInput extends React.PureComponent<ICheckboxProps> {
     }
 
     return (
-      <InfoLabel
+      <label
         htmlFor={name}
+        className={classNames('checkbox', { 'checkbox-button': isButton })}
       >
         {label}
-      </InfoLabel>
+      </label>
     )
   }
 
@@ -37,7 +46,7 @@ export class CheckboxInput extends React.PureComponent<ICheckboxProps> {
 
     return (
       <div
-        className={classNames('checkbox-input', className)}
+        className={classNames('checkbox-input', style.checkboxInput, className)}
       >
         <Input
           {...props}
