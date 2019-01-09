@@ -40,6 +40,22 @@ When a buttonComponent is provided to the EmptyState component it will be shown 
 </EmptyState>
 ```
 
+### EmptyState message with null messages
+Hide the default messages by providing `null` as the value
+
+```jsx.
+<div>
+  <EmptyState
+    primaryMessage={null}
+  >
+  </EmptyState>
+  <EmptyState
+    secondaryMessage={null}
+  >
+  </EmptyState>
+</div>
+```
+
 ### EmptyState support for legacy pages
 The empty state supports legacy pages
 
