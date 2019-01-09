@@ -50,6 +50,8 @@ namespace Props {
     ButtonIcon = 'button_icon',
     ButtonGroup = 'button_group',
     Callout = 'callout',
+    ContentSpacer = 'content_spacer',
+    ContentSpacerItem = 'content_spacer_item',
     EmptyState = 'empty_state',
     HintWrapper = 'hint_wrapper',
     LinkButton = 'link_button',

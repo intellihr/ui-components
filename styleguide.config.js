@@ -126,6 +126,7 @@ module.exports = {
         {
           name: 'Layouts',
           components: [
+            'src/domain/Layouts/ContentSpacer/ContentSpacer',
             'src/domain/Layouts/PageLayout/PageLayout',
             'src/domain/Layouts/SectionList/SectionList',
             'src/domain/Layouts/XYGrid/XYGrid'
