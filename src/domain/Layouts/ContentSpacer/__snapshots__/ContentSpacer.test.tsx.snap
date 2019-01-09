@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ContentSpacer /> should render a content spacer with no spacing sizes defined 1`] = `
+.c0 {
+  margin-bottom: 0px;
+}
+
+.c0:last-child {
+  margin-bottom: 0px;
+}
+
+<ContentSpacer
+  contentItems={
+    Array [
+      Object {
+        "content": <div>
+          a
+        </div>,
+      },
+      Object {
+        "content": <div>
+          b
+        </div>,
+      },
+    ]
+  }
+>
+  <div
+    data-component-type="content_spacer"
+  >
+    <styled.div
+      data-component-type="content_spacer_item"
+      key="0"
+    >
+      <div
+        className="c0"
+        data-component-type="content_spacer_item"
+      >
+        <div>
+          a
+        </div>
+      </div>
+    </styled.div>
+    <styled.div
+      data-component-type="content_spacer_item"
+      key="1"
+    >
+      <div
+        className="c0"
+        data-component-type="content_spacer_item"
+      >
+        <div>
+          b
+        </div>
+      </div>
+    </styled.div>
+  </div>
+</ContentSpacer>
+`;
+
+exports[`<ContentSpacer /> should render a content spacer with varying spacing sizes 1`] = `
+.c0 {
+  margin-bottom: 24px;
+}
+
+.c0:last-child {
+  margin-bottom: 0px;
+}
+
+.c1 {
+  margin-bottom: 32px;
+}
+
+.c1:last-child {
+  margin-bottom: 0px;
+}
+
+.c2 {
+  margin-bottom: 40px;
+}
+
+.c2:last-child {
+  margin-bottom: 0px;
+}
+
+.c3 {
+  margin-bottom: 56px;
+}
+
+.c3:last-child {
+  margin-bottom: 0px;
+}
+
+.c4 {
+  margin-bottom: 0px;
+}
+
+.c4:last-child {
+  margin-bottom: 0px;
+}
+
+<ContentSpacer
+  contentItems={
+    Array [
+      Object {
+        "content": <div>
+          a
+        </div>,
+        "spacingSize": "small",
+      },
+      Object {
+        "content": <div>
+          b
+        </div>,
+        "spacingSize": "medium",
+      },
+      Object {
+        "content": <div>
+          c
+        </div>,
+        "spacingSize": "large",
+      },
+      Object {
+        "content": <div>
+          d
+        </div>,
+        "spacingSize": "xlarge",
+      },
+      Object {
+        "content": <div>
+          e
+        </div>,
+      },
+    ]
+  }
+>
+  <div
+    data-component-type="content_spacer"
+  >
+    <styled.div
+      data-component-type="content_spacer_item"
+      key="0"
+      spacingSize="small"
+    >
+      <div
+        className="c0"
+        data-component-type="content_spacer_item"
+      >
+        <div>
+          a
+        </div>
+      </div>
+    </styled.div>
+    <styled.div
+      data-component-type="content_spacer_item"
+      key="1"
+      spacingSize="medium"
+    >
+      <div
+        className="c1"
+        data-component-type="content_spacer_item"
+      >
+        <div>
+          b
+        </div>
+      </div>
+    </styled.div>
+    <styled.div
+      data-component-type="content_spacer_item"
+      key="2"
+      spacingSize="large"
+    >
+      <div
+        className="c2"
+        data-component-type="content_spacer_item"
+      >
+        <div>
+          c
+        </div>
+      </div>
+    </styled.div>
+    <styled.div
+      data-component-type="content_spacer_item"
+      key="3"
+      spacingSize="xlarge"
+    >
+      <div
+        className="c3"
+        data-component-type="content_spacer_item"
+      >
+        <div>
+          d
+        </div>
+      </div>
+    </styled.div>
+    <styled.div
+      data-component-type="content_spacer_item"
+      key="4"
+    >
+      <div
+        className="c4"
+        data-component-type="content_spacer_item"
+      >
+        <div>
+          e
+        </div>
+      </div>
+    </styled.div>
+  </div>
+</ContentSpacer>
+`;

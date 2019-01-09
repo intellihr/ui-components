@@ -61,7 +61,8 @@ module.exports = {
           name: 'Buttons',
           components: [
             'src/domain/Buttons/Button/Button',
-            'src/domain/Buttons/LinkButton/LinkButton'
+            'src/domain/Buttons/LinkButton/LinkButton',
+            'src/domain/Buttons/ButtonGroup/ButtonGroup'
           ]
         },
         {
@@ -116,6 +117,7 @@ module.exports = {
             'src/domain/Inputs/Input/Input',
             'src/domain/Inputs/InputGroup/InputGroup',
             'src/domain/Inputs/RadioInput/RadioInput',
+            'src/domain/Inputs/RadioSet/RadioSet',
             'src/domain/Inputs/SelectInput/SelectInput',
             'src/domain/Inputs/TextAreaInput/TextAreaInput',
             'src/domain/Inputs/SingleDateInput/SingleDateInput'
@@ -124,6 +126,7 @@ module.exports = {
         {
           name: 'Layouts',
           components: [
+            'src/domain/Layouts/ContentSpacer/ContentSpacer',
             'src/domain/Layouts/PageLayout/PageLayout',
             'src/domain/Layouts/SectionList/SectionList',
             'src/domain/Layouts/XYGrid/XYGrid'
