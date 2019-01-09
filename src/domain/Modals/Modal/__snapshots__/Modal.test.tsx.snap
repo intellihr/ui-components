@@ -35,6 +35,16 @@ exports[`<Modal /> should render a hidden modal 1`] = `
   position: relative;
 }
 
+.c0 .modal.subcomponent-modal-style {
+  padding: 0;
+}
+
+.c0 .modal.subcomponent-modal-style .modal-close-button {
+  right: 29px;
+  top: 33px;
+  line-height: 14px;
+}
+
 .c0 .modal .modal-close-button {
   cursor: pointer;
   position: absolute;
@@ -133,6 +143,7 @@ exports[`<Modal /> should render a hidden modal 1`] = `
   offsetZIndex={0}
   showCloseButton={true}
   size="medium"
+  useSubcomponents={false}
 >
   <Styled(ReactModalAdapter)
     ariaHideApp={false}

@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> should render modal footer 1`] = `
+.c0 {
+  height: 80px;
+  background-color: #FAFBFC;
+  padding: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+<Footer
+  leftControls={
+    <UNDEFINED>
+      Left Controls
+    </UNDEFINED>
+  }
+  rightControls={
+    <UNDEFINED>
+      Right Controls
+    </UNDEFINED>
+  }
+>
+  <styled.div>
+    <div
+      className="c0"
+    >
+      <styled.div>
+        <div
+          className="c1"
+        >
+          Left Controls
+        </div>
+      </styled.div>
+      <styled.div>
+        <div
+          className="c1"
+        >
+          Right Controls
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
+</Footer>
+`;

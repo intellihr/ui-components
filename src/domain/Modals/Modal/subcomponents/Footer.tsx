@@ -2,8 +2,8 @@ import React from 'react'
 import { StyledModalFooter, StyledModalControls } from './style'
 
 interface IFooterProps {
-  leftControls: JSX.Element
-  rightControls: JSX.Element
+  leftControls?: JSX.Element
+  rightControls?: JSX.Element
 }
 
 class Footer extends React.PureComponent<IFooterProps, never> {
