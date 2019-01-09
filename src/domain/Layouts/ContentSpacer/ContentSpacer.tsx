@@ -13,7 +13,7 @@ interface IContentSpacerContentItemProps {
 
 interface IContentSpacerProps {
   /** Provide an array of items for the content */
-  contentItems: Array<IContentSpacerContentItemProps>,
+  contentItems: IContentSpacerContentItemProps[],
   /** Component context for the overall content spacer */
   componentContext?: string
 }
