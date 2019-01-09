@@ -84,4 +84,17 @@ describe('<MenuItem />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it('should render a menu item which overflowWhenOpen prop is passed to the Collapsible component', () => {
+    const wrapper = shallow(
+      <MenuItem
+        label='Test menu item'
+        overflowWhenOpen='visible'
+      >
+        Something
+      </MenuItem>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })
