@@ -1,55 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<CheckboxInput /> should render a checkbox input 1`] = `
-<div
-  className="checkbox-input"
->
-  <Input
-    isChecked={false}
-    name="test-input"
-    type="checkbox"
-  />
-</div>
-`;
-
 exports[`<CheckboxInput /> should render a checkbox input with a component as the label 1`] = `
 <div
-  className="checkbox-input"
+  className="checkbox-input checkboxInput"
 >
   <Input
+    isButton={false}
     isChecked={false}
     label={
       <FontAwesomeIcon
         type="star"
       />
     }
-    name="test-input"
+    name="test-jsx-input"
     type="checkbox"
   />
-  <styled.label
-    htmlFor="test-input"
+  <label
+    className="checkbox"
+    htmlFor="test-jsx-input"
   >
     <FontAwesomeIcon
       type="star"
     />
-  </styled.label>
+  </label>
 </div>
 `;
 
-exports[`<CheckboxInput /> should render a checkbox input with a string label 1`] = `
+exports[`<CheckboxInput /> should render a checkbox input with button 1`] = `
 <div
-  className="checkbox-input"
+  className="checkbox-input checkboxInput"
 >
   <Input
+    isButton={true}
+    isChecked={false}
+    label="Hey I am a test string"
+    name="test-button-input"
+    type="checkbox"
+  />
+  <label
+    className="checkbox checkbox-button"
+    htmlFor="test-button-input"
+  >
+    Hey I am a test string
+  </label>
+</div>
+`;
+
+exports[`<CheckboxInput /> should render a checkbox input without button 1`] = `
+<div
+  className="checkbox-input checkboxInput"
+>
+  <Input
+    isButton={false}
     isChecked={false}
     label="Hey I am a test string"
     name="test-input"
     type="checkbox"
   />
-  <styled.label
+  <label
+    className="checkbox"
     htmlFor="test-input"
   >
     Hey I am a test string
-  </styled.label>
+  </label>
 </div>
 `;

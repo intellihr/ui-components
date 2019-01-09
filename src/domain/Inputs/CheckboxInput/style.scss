@@ -1,0 +1,137 @@
+@import '../../../common/sass/variables';
+
+:local(.checkboxInput) {
+
+  input {
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    width: 0;
+
+    & + .checkbox {
+      width: 100%;
+    }
+
+    &:disabled + .checkbox {
+      color: $n500;
+      cursor: not-allowed;
+
+      &::before {
+        background-color: $n150;
+        border-color: $n300;
+      }
+    }
+
+    &:checked + .checkbox {
+      border-color: $i600;
+
+      &::before {
+        border-color: $i400;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+
+      &:hover {
+        border-color: $i400;
+
+        &::before {
+          border-color: $i400;
+        }
+      }
+    }
+
+    &:checked + .checkbox-button {
+      background-color: $i100;
+      color: $i600;
+
+      &:hover {
+        background-color: $i100;
+
+        &::before {
+          background-color: $i100;
+        }
+      }
+    }
+
+    &:disabled + .checkbox-button {
+      background-color: $n150;
+      color: $n500;
+      cursor: not-allowed;
+
+      &::before {
+        background-color: $n150;
+        border-color: $n300;
+      }
+    }
+  }
+
+  .checkbox {
+    align-self: stretch;
+    color: $n800;
+    cursor: pointer;
+    font-size: $fz-small;
+    line-height: $lh-small;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px 24px 10px 44px;
+    position: relative;
+    transition: .25s ease-out, color .25s ease-out;
+
+    &::before {
+      background-color: $n150;
+      border: 2px solid $n400;
+      border-radius: $border-radius;
+      content: '';
+      display: inline-block;
+      height: 20px;
+      left: 12px;
+      position: absolute;
+      top: 10px;
+      transition: .25s ease-out, color .25s ease-out;
+      vertical-align: top;
+      width: 20px;
+    }
+
+    &::after {
+      background: $i400;
+      border-radius: $border-radius;
+      box-shadow:
+      2px 0 0 $i400,
+      4px 0 0 $i400,
+      4px -2px 0 $i400,
+      4px -4px 0 $i400,
+      4px -6px 0 $i400,
+      4px -8px 0 $i400;
+      content: '';
+      height: 3px;
+      left: 16px;
+      opacity: 0;
+      position: absolute;
+      top: 19px;
+      transform: rotate(45deg);
+      transition: .25s ease-out;
+      width: 3px;
+    }
+
+    &:hover {
+
+      &::before {
+        background-color: $n300;
+        border-color: $n600;
+      }
+    }
+  }
+
+  .checkbox-button {
+    background-color: $n100;
+    border: 1px solid $n300;
+    border-radius: $border-radius;
+    min-width: 240px;
+
+    &:hover {
+      background-color: $n200;
+    }
+  }
+}
