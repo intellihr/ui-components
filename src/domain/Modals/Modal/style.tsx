@@ -105,6 +105,16 @@ const StyledReactModal = styled(ReactModalAdapter)`
     padding: 1.5rem;
     position: relative;
 
+    &.subcomponent-modal-style {
+      padding: 0;
+      
+      .modal-close-button {
+        right: 29px;
+        top: 33px;
+        line-height: 14px;
+      }
+    }
+
     @media only screen and (max-width: ${breakpointTablet}px) {
       border: 0;
       border-radius: 0;
