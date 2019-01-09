@@ -6,9 +6,9 @@ const style = require('./style.scss')
 
 export interface IEmptyStateProps {
   /** The message to be shown in the first line as a title/heading */
-  primaryMessage?: string
+  primaryMessage?: string | null
   /** The message to be shown in the second line as a sub title */
-  secondaryMessage?: string
+  secondaryMessage?: string | null
   /** This will accept the button component */
   buttonComponent?: JSX.Element
   /** The data-component-context */
@@ -17,7 +17,7 @@ export interface IEmptyStateProps {
 
 export class EmptyState extends React.Component<IEmptyStateProps> {
   public static defaultProps: Partial<IEmptyStateProps> = {
-    primaryMessage: `Opps... We couldn't find anything for this section.`,
+    primaryMessage: `Oops... We couldn't find anything for this section.`,
     secondaryMessage: `Please speak to your system admin or add information.`
   }
 

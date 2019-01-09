@@ -26,6 +26,16 @@ describe('EmptyState', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
+  it('Renders successfully with null messages', () => {
+    const wrapper = shallow(
+      <EmptyState
+        primaryMessage={null}
+        secondaryMessage={null}
+      />
+    )
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it('Renders successfully with both primaryMessage, secondaryMessage and buttonComponent', () => {
     const buttonComponent = (
       <LinkButton

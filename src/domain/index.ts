@@ -1,7 +1,7 @@
 export { Avatar, AvatarEntity, AvatarGroup } from './Avatars'
 export { Badge } from './Badges'
 export { BaseButton, Button, ButtonGroup, LinkButton } from './Buttons'
-export { Callout } from './Callouts'
+export { Callout, EmptyState } from './Callouts'
 export { RadarChart, TimeBasedLineChart } from './Charts'
 export { Comment } from './Comments'
 export { DefaultsConsumer, DefaultsProvider, withDefaults } from './Defaults'
