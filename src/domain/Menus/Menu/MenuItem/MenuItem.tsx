@@ -13,9 +13,14 @@ export interface IMenuItemProps {
   isLoading?: boolean
   isOpen?: boolean
   handleSizeChange?: () => void
+  overflowWhenOpen?: 'hidden' | 'visible' | 'auto' | 'scroll' | 'inherit' | 'initial' | 'unset'
 }
 
 export class MenuItem extends React.PureComponent<IMenuItemProps> {
+  public static defaultProps: Pick<IMenuItemProps, 'overflowWhenOpen'> = {
+    overflowWhenOpen: 'hidden'
+  }
+
   get icon (): JSX.Element | undefined {
     const { icon } = this.props
 
@@ -88,7 +93,8 @@ export class MenuItem extends React.PureComponent<IMenuItemProps> {
     const {
       children,
       isOpen,
-      handleSizeChange
+      handleSizeChange,
+      overflowWhenOpen
     } = this.props
 
     if (children) {
@@ -99,6 +105,7 @@ export class MenuItem extends React.PureComponent<IMenuItemProps> {
           transitionTime={250}
           onOpen={handleSizeChange}
           onClose={handleSizeChange}
+          overflowWhenOpen={overflowWhenOpen}
         >
           <SubMenuWrapper>
             {children}
