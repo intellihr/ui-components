@@ -78,10 +78,10 @@ ModalExample.defaultProps = { showCloseButton: true };
           <Button>Back</Button>
         }
         rightControls={
-          <>
+          <ButtonGroup>
             <Button type='cancel'>Cancel</Button>
             <Button type='primary'>Next</Button>
-          </>
+          </ButtonGroup>
         }
       />
     </ModalExample>
@@ -92,51 +92,51 @@ ModalExample.defaultProps = { showCloseButton: true };
       <h1>Hello this is a Modal</h1>
     </ModalExample>
   </div>
-  
+
   <div>
     <ModalExample buttonText='No close button' showCloseButton={false}>
       I don't have a close button but you can still hide me by pressing escape, clicking outside, or handling your own close state.
     </ModalExample>
   </div>
-  
+
   <div>
     <ModalExample buttonText='Lots of content' showCloseButton={true}>
       Modals will expand infinitely vertically to match their content, no matter how large it is
-      
+
       <div style={{height: 2000, backgroundImage: 'linear-gradient(to bottom right, red, yellow)'}}>
         The following is a dummy space to fill out the modal
       </div>
     </ModalExample>
   </div>
-  
+
   <div>
     <ModalExample buttonText='Size = large' size={Props.Size.Large}>
       Large modals are sized to the standard desktop browser width (1024px)
     </ModalExample>
   </div>
-  
+
   <div>
     <ModalExample buttonText='Size = xLarge' size={Props.Size.XLarge}>
       Extra large modals are sized to the big desktop browser width (1440px)
     </ModalExample>
   </div>
-  
+
   <div>
     <ModalExample buttonText='shouldCloseOnEsc = false' shouldCloseOnEsc={false}>
       You can't close this with esc
     </ModalExample>
   </div>
-    
+
   <div>
     <ModalExample buttonText='shouldCloseOnOverlayClick = false' shouldCloseOnOverlayClick={false}>
       You can't close this by clicking the overlay
     </ModalExample>
   </div>
-  
+
   <div>
     <ModalExample
-      buttonText='shouldCloseOnOverlayClick and shouldCloseOnEsc = false' 
-      shouldCloseOnEsc={false} 
+      buttonText='shouldCloseOnOverlayClick and shouldCloseOnEsc = false'
+      shouldCloseOnEsc={false}
       shouldCloseOnOverlayClick={false}
      >
       You can ONLY close this with the close button
