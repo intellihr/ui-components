@@ -88,22 +88,26 @@ initialState = { horizontalValue: 'option 1' };
     handleChange={(event) => setState({horizontalValue: event.target.value})}
     options={[
         {
+          name: 'horizontal-option-1',
           label:'this is option 1',
           value:'option 1',
           isChecked:state.horizontalValue === 'option 1',
         },
         {
+          name: 'horizontal-option-2',
           label:'this is option 2 (I am disabled)',
           value:'option 2',
           isChecked:state.horizontalValue === 'option 2',
           isDisabled:true
         },
         {
+          name: 'horizontal-option-3',
           label:'this is option 3',
           value:'option 3',
           isChecked:state.horizontalValue === 'option 3',
         },
         {
+          name: 'horizontal-option-4',
           label:'this is option 4 (I have a special action)',
           value:'option 4',
           isChecked:state.horizontalValue === 'option 4',
@@ -111,6 +115,7 @@ initialState = { horizontalValue: 'option 1' };
           handleChange: (event) => { setState({horizontalValue: event.target.value}); alert('I have a custom onClick handler!');}
         },
         {
+          name: 'horizontal-option-5',
           label:'final option is very looooooooooong',
           value:'option 5',
           isChecked:state.horizontalValue === 'option 5',
