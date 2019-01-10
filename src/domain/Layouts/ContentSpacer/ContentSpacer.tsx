@@ -6,7 +6,7 @@ interface IContentSpacerContentItemProps {
   /** Size of the space between this content item and the next */
   spacingSize?: 'small' | 'medium' | 'large' | 'xlarge',
   /** Content item */
-  content: JSX.Element,
+  content?: JSX.Element,
   /** Component context for the content item */
   componentContext?: string
 }
@@ -32,14 +32,10 @@ class ContentSpacer extends React.Component<IContentSpacerProps> {
       >
         {
           contentItems.reduce((acc: JSX.Element[], contentItem) => {
-            if (!contentItem.content) {
-              return acc
-            }
-
             return [
               ...acc,
               <StyledContentItem
-                spacingSize={contentItem.spacingSize}
+                spacingSize={contentItem.content && contentItem.spacingSize}
                 key={acc.length}
                 data-component-type={Props.ComponentType.ContentSpacerItem}
                 data-component-context={contentItem.componentContext}
