@@ -58,6 +58,60 @@ exports[`<ContentSpacer /> should render a content spacer with no spacing sizes 
 </ContentSpacer>
 `;
 
+exports[`<ContentSpacer /> should render a content spacer with null content 1`] = `
+.c0 {
+  margin-bottom: 0px;
+}
+
+.c0:last-child {
+  margin-bottom: 0px;
+}
+
+<ContentSpacer
+  contentItems={
+    Array [
+      Object {
+        "content": null,
+        "spacingSize": "medium",
+      },
+      Object {
+        "content": <div>
+          a
+        </div>,
+      },
+    ]
+  }
+>
+  <div
+    data-component-type="content_spacer"
+  >
+    <styled.div
+      data-component-type="content_spacer_item"
+      key="0"
+      spacingSize={null}
+    >
+      <div
+        className="c0"
+        data-component-type="content_spacer_item"
+      />
+    </styled.div>
+    <styled.div
+      data-component-type="content_spacer_item"
+      key="1"
+    >
+      <div
+        className="c0"
+        data-component-type="content_spacer_item"
+      >
+        <div>
+          a
+        </div>
+      </div>
+    </styled.div>
+  </div>
+</ContentSpacer>
+`;
+
 exports[`<ContentSpacer /> should render a content spacer with varying spacing sizes 1`] = `
 .c0 {
   margin-bottom: 24px;
