@@ -106,141 +106,143 @@ hiding the dropdown.
 
 ```jsx
 <React.Fragment>
-  <DropdownMenu
-    toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
-      <Button
-        onClick={toggleMenu}
-        innerRef={toggleComponentRef}
-        buttonOverrides={{...ariaProps}}
-      >
-        Anchored bottom left
-      </Button>
-    }
-    sections={[
-      {
-        text: 'Item 1'
-      },
-      {
-        text: 'Item 2'
+  <ButtonGroup>
+    <DropdownMenu
+      toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+        <Button
+          onClick={toggleMenu}
+          innerRef={toggleComponentRef}
+          buttonOverrides={{...ariaProps}}
+        >
+          Anchored bottom left
+        </Button>
       }
-    ]}
-    parentAnchorPosition={{
-      xPos: 'left',
-      yPos: 'bottom'
-    }}
-    dropdownAnchorPosition={{
-      xPos: 'left',
-      yPos: 'top'
-    }}
-  />
-  <DropdownMenu
-    toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
-      <Button
-        onClick={toggleMenu}
-        innerRef={toggleComponentRef}
-        buttonOverrides={{...ariaProps}}
-      >
-        Anchored bottom right
-      </Button>
-    }
-    sections={[
-      {
-        text: 'Item 1'
-      },
-      {
-        text: 'Item 2'
+      sections={[
+        {
+          text: 'Item 1'
+        },
+        {
+          text: 'Item 2'
+        }
+      ]}
+      parentAnchorPosition={{
+        xPos: 'left',
+        yPos: 'bottom'
+      }}
+      dropdownAnchorPosition={{
+        xPos: 'left',
+        yPos: 'top'
+      }}
+    />
+    <DropdownMenu
+      toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+        <Button
+          onClick={toggleMenu}
+          innerRef={toggleComponentRef}
+          buttonOverrides={{...ariaProps}}
+        >
+          Anchored bottom right
+        </Button>
       }
-    ]}
-    parentAnchorPosition={{
-      xPos: 'right',
-      yPos: 'bottom'
-    }}
-    dropdownAnchorPosition={{
-      xPos: 'right',
-      yPos: 'top'
-    }}
-  />
-  <DropdownMenu
-    toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
-      <Button
-        onClick={toggleMenu}
-        innerRef={toggleComponentRef}
-        buttonOverrides={{...ariaProps}}
-      >
-        Drop upwards, top left
-      </Button>
-    }
-    sections={[
-      {
-        text: 'Item 1'
-      },
-      {
-        text: 'Item 2'
+      sections={[
+        {
+          text: 'Item 1'
+        },
+        {
+          text: 'Item 2'
+        }
+      ]}
+      parentAnchorPosition={{
+        xPos: 'right',
+        yPos: 'bottom'
+      }}
+      dropdownAnchorPosition={{
+        xPos: 'right',
+        yPos: 'top'
+      }}
+    />
+    <DropdownMenu
+      toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+        <Button
+          onClick={toggleMenu}
+          innerRef={toggleComponentRef}
+          buttonOverrides={{...ariaProps}}
+        >
+          Drop upwards, top left
+        </Button>
       }
-    ]}
-    parentAnchorPosition={{
-      xPos: 'left',
-      yPos: 'top'
-    }}
-    dropdownAnchorPosition={{
-      xPos: 'left',
-      yPos: 'bottom'
-    }}
-  />
-  <DropdownMenu
-    toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
-      <Button
-        onClick={toggleMenu}
-        innerRef={toggleComponentRef}
-        buttonOverrides={{...ariaProps}}
-      >
-        Anchored top right, open to right
-      </Button>
-    }
-    sections={[
-      {
-        text: 'Item 1'
-      },
-      {
-        text: 'Item 2'
+      sections={[
+        {
+          text: 'Item 1'
+        },
+        {
+          text: 'Item 2'
+        }
+      ]}
+      parentAnchorPosition={{
+        xPos: 'left',
+        yPos: 'top'
+      }}
+      dropdownAnchorPosition={{
+        xPos: 'left',
+        yPos: 'bottom'
+      }}
+    />
+    <DropdownMenu
+      toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+        <Button
+          onClick={toggleMenu}
+          innerRef={toggleComponentRef}
+          buttonOverrides={{...ariaProps}}
+        >
+          Anchored top right, open to right
+        </Button>
       }
-    ]}
-    parentAnchorPosition={{
-      xPos: 'right',
-      yPos: 'top'
-    }}
-    dropdownAnchorPosition={{
-      xPos: 'left',
-      yPos: 'top'
-    }}
-  />
-  <DropdownMenu
-    toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
-      <Button
-        onClick={toggleMenu}
-        innerRef={toggleComponentRef}
-        buttonOverrides={{...ariaProps}}
-      >
-        Anchored bottom left, open to left upwards
-      </Button>
-    }
-    sections={[
-      {
-        text: 'Item 1'
-      },
-      {
-        text: 'Item 2'
+      sections={[
+        {
+          text: 'Item 1'
+        },
+        {
+          text: 'Item 2'
+        }
+      ]}
+      parentAnchorPosition={{
+        xPos: 'right',
+        yPos: 'top'
+      }}
+      dropdownAnchorPosition={{
+        xPos: 'left',
+        yPos: 'top'
+      }}
+    />
+    <DropdownMenu
+      toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
+        <Button
+          onClick={toggleMenu}
+          innerRef={toggleComponentRef}
+          buttonOverrides={{...ariaProps}}
+        >
+          Anchored bottom left, open to left upwards
+        </Button>
       }
-    ]}
-    parentAnchorPosition={{
-      xPos: 'left',
-      yPos: 'bottom'
-    }}
-    dropdownAnchorPosition={{
-      xPos: 'right',
-      yPos: 'bottom'
-    }}
-  />
+      sections={[
+        {
+          text: 'Item 1'
+        },
+        {
+          text: 'Item 2'
+        }
+      ]}
+      parentAnchorPosition={{
+        xPos: 'left',
+        yPos: 'bottom'
+      }}
+      dropdownAnchorPosition={{
+        xPos: 'right',
+        yPos: 'bottom'
+      }}
+    />
+  </ButtonGroup>
 </React.Fragment>
 ```
 
@@ -369,16 +371,16 @@ initialState = { selectedOption: {value: 1, label: 'AUD'}, inputValue: '' };
 class ThingList extends React.PureComponent {
   get options () {
     const { options, query } = this.props
-    
-    return _.filter(options, option => {  
+
+    return _.filter(options, option => {
       return _.toLower(option.label).includes(query)
     })
   }
-  
+
   render () {
     const { handleClick } = this.props
-  
-    return _.map(this.options, (option) => {    
+
+    return _.map(this.options, (option) => {
       return <Button key={option.value} onClick={() => handleClick(option)}>{option.label}</Button>
     })
   }
@@ -397,7 +399,7 @@ class ThingList extends React.PureComponent {
   hasInitialFocus
   initialFocusElement='.selectMe'
 >
-  {({closeMenu}) => 
+  {({closeMenu}) =>
     <>
       <TextInput
         placeholder='dummy input'
