@@ -84,7 +84,7 @@
     line-height: $lh-small;
     margin-left: 0;
     margin-right: 0;
-    padding: 10px 24px 10px 44px;
+    padding: 10px 24px 10px 32px;
     position: relative;
     transition: .25s ease-out, color .25s ease-out;
     word-break: break-all;
@@ -96,7 +96,7 @@
       content: '';
       display: inline-block;
       height: 20px;
-      left: 12px;
+      left: 0;
       position: absolute;
       top: 10px;
       transition: .25s ease-out;
@@ -108,7 +108,7 @@
       content: '';
       display: inline-block;
       height: 16px;
-      left: 14px;
+      left: 2px;
       opacity: 0;
       position: absolute;
       top: 12px;
@@ -116,6 +116,18 @@
       transition: .25s ease-out;
       vertical-align: top;
       width: 16px;
+    }
+
+    &.radio-button {
+      padding: 10px 24px 10px 44px;
+
+      &::before {
+        left: 12px;
+      }
+
+      &::after {
+        left: 14px;
+      }
     }
 
     &:hover {

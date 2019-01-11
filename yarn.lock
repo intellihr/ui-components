@@ -235,10 +235,10 @@
   dependencies:
     loader-utils "^1.1.0"
 
-"@intellihr/icons@0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@intellihr/icons/-/icons-0.0.6.tgz#e50a28661f875f949527f9b45df1bccbec42491c"
-  integrity sha512-jazn+0DA6wQI5X7oUmaT5bTvjwp0kvoO88PQkix56pYQgb8yOWZULeIs6Myx1wm8v5VGorm/VMIFh2FmtDJtDw==
+"@intellihr/icons@0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@intellihr/icons/-/icons-0.0.8.tgz#83b93f257077b713b529e7afcd8cf97d6f3b0de6"
+  integrity sha512-YecWxEqNAUCt/enxM2eGNe/dklc8Z7l2jV1ew3uxDFeyDvLhCb3P949h97SoP91H7cLsPCLcdn/jRM3NjcfHPQ==
 
 "@intellihr/standard-tslint@0.0.3":
   version "0.0.3"

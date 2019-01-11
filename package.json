@@ -1,7 +1,7 @@
 {
   "name": "@intellihr/ui-components",
   "description": "A common React components library that is used in our company",
-  "version": "7.0.0",
+  "version": "9.0.0",
   "main": "./dist/",
   "types": "./types/index.d.ts",
   "files": [
@@ -16,7 +16,7 @@
     "styled-components": "^3.3.2"
   },
   "dependencies": {
-    "@intellihr/icons": "0.0.6",
+    "@intellihr/icons": "0.0.8",
     "@intellihr/styled-components-breakpoint": "0.0.2",
     "better-react-spinkit": "2.0.4",
     "body-scroll-lock": "2.5.10",
