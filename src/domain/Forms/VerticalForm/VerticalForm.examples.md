@@ -3,28 +3,32 @@
 ```jsx
   <VerticalForm>
       <VerticalForm.LeftAlignControls>
-        <Button
-           type='primary'
-        >
-          Left aligned controls
-        </Button>
+        <ButtonGroup>
+          <Button
+            type='primary'
+          >
+            Left aligned controls
+          </Button>
+          <Button
+            type='neutral'
+          >
+            Cancel
+          </Button>
+        </ButtonGroup>
+      </VerticalForm.LeftAlignControls>
+    <VerticalForm.RightAlignControls>
+      <ButtonGroup>
         <Button
           type='neutral'
         >
           Cancel
         </Button>
-      </VerticalForm.LeftAlignControls>
-    <VerticalForm.RightAlignControls>
-      <Button
-        type='neutral'
-      >
-        Cancel
-      </Button>
-      <Button
-         type='primary'
-      >
-        Right aligned controls
-      </Button>
+        <Button
+          type='primary'
+        >
+          Right aligned controls
+        </Button>
+      </ButtonGroup>
     </VerticalForm.RightAlignControls>
   </VerticalForm>
 ```
@@ -53,16 +57,18 @@ const initialState = { textInputValue: '' };
       />
     </VerticalForm.Field>
     <VerticalForm.RightAlignControls>
-      <Button
-        type='neutral'
-      >
-        Cancel
-      </Button>
-      <Button
-         type='primary'
-      >
-        Submit me :)
-      </Button>
+      <ButtonGroup>
+        <Button
+          type='neutral'
+        >
+          Cancel
+        </Button>
+        <Button
+          type='primary'
+        >
+          Submit me :)
+        </Button>
+      </ButtonGroup>
     </VerticalForm.RightAlignControls>
   </VerticalForm>
 ```
@@ -184,7 +190,7 @@ const initialState = { textInputValue: '' };
       label='This is a test input'
       errorMessages={[
         'You can pass in an array of error messages. (Or just a single string)',
-        'Each error will be on a separate line :)'  
+        'Each error will be on a separate line :)'
       ]}
     >
       <TextInput

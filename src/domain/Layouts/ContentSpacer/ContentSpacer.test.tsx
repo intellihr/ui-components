@@ -50,4 +50,23 @@ describe('<ContentSpacer />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it(`should render a content spacer with null content`, () => {
+    const wrapper = mount(
+      <ContentSpacer
+        contentItems={[
+          {
+            content: null,
+            spacingSize: 'medium'
+
+          },
+          {
+            content: <div>a</div>
+          }
+        ]}
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })
