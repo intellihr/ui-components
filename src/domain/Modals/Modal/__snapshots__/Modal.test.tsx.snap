@@ -37,6 +37,13 @@ exports[`<Modal /> should render a hidden modal 1`] = `
 
 .c0 .modal.subcomponent-modal-style {
   padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .c0 .modal.subcomponent-modal-style .modal-close-button {
