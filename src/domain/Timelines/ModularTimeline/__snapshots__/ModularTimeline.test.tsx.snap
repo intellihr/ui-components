@@ -32,7 +32,9 @@ exports[`<ModularTimeline /> should render a modular timeline 1`] = `
     >
       Title 2
     </styled.div>
-    <styled.div>
+    <styled.div
+      type="neutral"
+    >
       Some content goes here
     </styled.div>
   </styled.div>
@@ -63,7 +65,9 @@ exports[`<ModularTimeline /> should render a modular timeline 1`] = `
     >
       Title 4
     </styled.div>
-    <styled.div>
+    <styled.div
+      type="neutral"
+    >
       Some content goes here
     </styled.div>
   </styled.div>
@@ -82,16 +86,19 @@ exports[`<ModularTimeline /> should render a modular timeline 1`] = `
     </styled.div>
     <styled.div
       key="0"
+      type="neutral"
     >
       Some content goes here
     </styled.div>
     <styled.div
       key="1"
+      type="alert"
     >
       More content under the same event
     </styled.div>
     <styled.div
       key="2"
+      type="neutral"
     >
       Three distinct event body wrappers
     </styled.div>
