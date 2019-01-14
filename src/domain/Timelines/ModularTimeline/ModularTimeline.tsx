@@ -16,11 +16,16 @@ import {
   TimelineEventTitle
 } from './style/titleMarker'
 
+interface IModularTimelineBodyItem {
+  content: JSX.Element | string
+  type?: 'neutral' | 'alert'
+}
+
 interface IModularTimelineEvent {
   /** Headline name of the event */
   title: JSX.Element | string,
   /** Content to put inside the event body. When null, no body is provided */
-  bodyContent?: JSX.Element | Array<JSX.Element|string> | string,
+  body?: IModularTimelineBodyItem | IModularTimelineBodyItem[],
   /** Event Type; major = greater importance and spacing */
   eventType: MarkerType,
   /** Changes color of the marker used */
@@ -60,7 +65,7 @@ class ModularTimeline extends React.PureComponent<IModularTimelineProps> {
   private getComponentForEvent = (event: IModularTimelineEvent, index: number): JSX.Element => {
     const {
       title,
-      bodyContent,
+      body,
       eventType,
       markerColor = 'neutral',
       timelineLineColor = 'neutral',
@@ -82,31 +87,34 @@ class ModularTimeline extends React.PureComponent<IModularTimelineProps> {
         >
           {title}
         </TimelineEventTitle>
-        {this.getBodyContent(bodyContent)}
+        {this.getBodyContent(body)}
       </TimelineEventWrapper>
     )
   }
 
-  private getBodyContent = (bodyContent?: JSX.Element | Array<JSX.Element|string> | string): JSX.Element | JSX.Element[] | null => {{
-    if (!bodyContent) {
+  private getBodyContent = (body?: IModularTimelineBodyItem | IModularTimelineBodyItem[]): JSX.Element | JSX.Element[] | null => {{
+    if (!body) {
       return null
     }
 
-    if (Array.isArray(bodyContent)) {
-      return map(bodyContent, (content: JSX.Element | string, index) => {
+    if (Array.isArray(body)) {
+      return body.map((item: IModularTimelineBodyItem, index) => {
         return (
           <TimelineEventBody
             key={index}
+            type={item.type || 'neutral'}
           >
-            {content}
+            {item.content}
           </TimelineEventBody>
         )
       })
     }
 
     return (
-      <TimelineEventBody>
-        {bodyContent}
+      <TimelineEventBody
+        type={body.type || 'neutral'}
+      >
+        {body.content}
       </TimelineEventBody>
     )
   }}

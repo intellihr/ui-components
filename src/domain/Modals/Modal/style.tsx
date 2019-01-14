@@ -107,6 +107,8 @@ const StyledReactModal = styled(ReactModalAdapter)`
 
     &.subcomponent-modal-style {
       padding: 0;
+      display: flex;
+      flex-direction: column;
       
       .modal-close-button {
         right: 29px;

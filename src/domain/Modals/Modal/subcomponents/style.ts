@@ -10,6 +10,7 @@ const StyledModalHeader = styled.div`
 
 const StyledModalContent = styled.div`
   padding: 16px 24px;
+  flex-grow: 1;
 `
 
 const StyledModalFooter = styled.div`

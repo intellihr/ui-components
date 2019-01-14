@@ -29,7 +29,9 @@ function effectiveFromText (date) {
       markerColor: 'primary',
       timelineLineStyle: 'dashed',
       timelineLineColor: 'primary',
-      bodyContent: 'Some content goes here',
+      body: {
+        content: 'Some content goes here'
+      },
       componentContext: 'example context for event'
     },
     {
@@ -38,7 +40,9 @@ function effectiveFromText (date) {
       markerColor: 'primary',
       timelineLineStyle: 'dashed',
       timelineLineColor: 'primary',
-      bodyContent: 'Some content goes here'
+      body: {
+        content: 'Some content goes here'
+      }
     },
     {
       title: <Text weight='heavy' size='small'>Today, 6 Nov 2018</Text>,
@@ -52,12 +56,16 @@ function effectiveFromText (date) {
     {
       title: effectiveFromText('1 Jul 2011'),
       eventType: 'minor',
-      bodyContent: 'Some content goes here'
+      body: {
+        content: 'Some content goes here'
+      }
     },
     {
       title: effectiveFromText('1 Jul 2011'),
       eventType: 'minor',
-      bodyContent: 'Some content goes here'
+      body: {
+        content: 'Some content goes here'
+      }
     },
     {
       title: <Text weight='heavy' size='small'>2010</Text>,
@@ -70,7 +78,9 @@ function effectiveFromText (date) {
         </>
       ),
       eventType: 'minor',
-      bodyContent: 'Last bit of content here'
+      body: {
+        content: 'Last bit of content here'
+      }
     }
   ]}
   componentContext='example'
@@ -107,7 +117,9 @@ const { Props } = require('@Common');
       markerColor: 'neutral',
       timelineLineStyle: 'solid',
       timelineLineColor: 'primary',
-      bodyContent: 'Some content goes here'
+      body: {
+        content: 'Some content goes here'
+      }
     },
     {
       title: 'Last event can be specified with lineStyle: none',
@@ -124,15 +136,24 @@ const { Props } = require('@Common');
       title: 'Note that titles are required, while body is not',
       eventType: 'minor',
       timelineLineStyle: 'dashed',
-      bodyContent: 'Some content goes here'
+      body: {
+        content: 'Some content goes here'
+      }
     },
     {
       title: 'Multiple bodies, one event',
       eventType: 'minor',
-      bodyContent: [
-        'A single event can have multiple content bodies',
-        'To represent distinct items for a single point in time',
-        ':)'
+      body: [
+        {
+          content: 'A single event can have multiple content bodies'
+        },
+        {
+          content: 'To represent distinct items for a single point in time',
+          type: 'alert'
+        },
+        {
+          content: ':)'
+        }
       ]
     },
     {
