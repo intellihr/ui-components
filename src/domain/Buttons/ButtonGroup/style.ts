@@ -6,7 +6,7 @@ const StyledButtonGroup = styled.span`
     margin-right: 8px;
 
     &:last-child {
-      margin-right: 0px;
+      margin-right: 0;
     }
   }
 `
