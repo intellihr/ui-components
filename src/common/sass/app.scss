@@ -14,22 +14,9 @@
 @include foundation-grid;
 @include foundation-typography;
 @include foundation-forms;
-@include foundation-accordion-menu;
-@include foundation-button-group;
-@include foundation-close-button;
-@include foundation-menu;
-@include foundation-dropdown-menu;
-@include foundation-off-canvas;
-@include foundation-pagination;
-@include foundation-reveal;
-@include foundation-switch;
 @include foundation-table;
-@include foundation-title-bar;
 @include foundation-tooltip;
 @include foundation-visibility-classes;
-@include foundation-float-classes;
-
-@include foundation-flex-classes; // to include when using flex-box mode
 @include foundation-xy-grid-classes;
 
 // Intelli-icons
@@ -39,25 +26,8 @@
 $fa-font-path: '~font-awesome/fonts';
 @import '~font-awesome/scss/font-awesome';
 
-// Components
-@import 'legacy/components/box';
-@import 'legacy/components/button-group';
-@import 'legacy/components/checkbox-button-group';
-@import 'legacy/components/dropdown';
+// Legacy components & styles
 @import 'legacy/components/form';
-@import 'legacy/components/feature-panel';
-@import 'legacy/components/grid';
-@import 'legacy/components/icon';
-@import 'legacy/components/label-group';
-@import 'legacy/components/modal';
 @import 'legacy/components/person-tag';
-@import 'legacy/components/radio-button-group';
-@import 'legacy/components/form-radio-button-group';
-@import 'legacy/components/form-ratings-group';
 @import 'legacy/components/table';
-@import 'legacy/components/tabs';
-@import 'legacy/components/tenant-logo';
-@import 'legacy/components/title-bar';
 @import 'legacy/components/typography';
-@import 'legacy/components/metric-group';
-@import 'legacy/components/animation';
