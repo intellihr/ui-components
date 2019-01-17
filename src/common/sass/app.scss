@@ -39,25 +39,8 @@
 $fa-font-path: '~font-awesome/fonts';
 @import '~font-awesome/scss/font-awesome';
 
-// Components
-@import 'legacy/components/box';
-@import 'legacy/components/button-group';
-@import 'legacy/components/checkbox-button-group';
-@import 'legacy/components/dropdown';
+// Legacy components & styles
 @import 'legacy/components/form';
-@import 'legacy/components/feature-panel';
-@import 'legacy/components/grid';
-@import 'legacy/components/icon';
-@import 'legacy/components/label-group';
-@import 'legacy/components/modal';
 @import 'legacy/components/person-tag';
-@import 'legacy/components/radio-button-group';
-@import 'legacy/components/form-radio-button-group';
-@import 'legacy/components/form-ratings-group';
 @import 'legacy/components/table';
-@import 'legacy/components/tabs';
-@import 'legacy/components/tenant-logo';
-@import 'legacy/components/title-bar';
 @import 'legacy/components/typography';
-@import 'legacy/components/metric-group';
-@import 'legacy/components/animation';

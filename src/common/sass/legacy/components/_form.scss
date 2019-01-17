@@ -1,13 +1,8 @@
 @import '~foundation-sites/scss/foundation';
 @import '../../variables';
 
-.input-group-label {
-  &.disabled {
-    .fa {
-      color: $n400;
-    }
-  }
-}
+// Overrides and styles for form inputs
+// Should hopefully be removed as all styles are moved to individual components
 
 input,
 select,
@@ -37,6 +32,10 @@ select {
   }
 }
 
+input.is-invalid-input:focus {
+  border-color: $r300;
+}
+
 .input-group {
   > :last-child {
     border-left: 0;
@@ -44,12 +43,16 @@ select {
   }
 }
 
-.form-error {
-  font-weight: 600;
+.input-group-label {
+  &.disabled {
+    .fa {
+      color: $n400;
+    }
+  }
 }
 
-input.is-invalid-input:focus {
-  border-color: $r300;
+.form-error {
+  font-weight: 600;
 }
 
 .select2 {
