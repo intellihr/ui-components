@@ -8,7 +8,7 @@ exports[`<ButtonGroup /> should render a button group with buttons and link butt
 
 .c0 > a:last-child,
 .c0 > button:last-child {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 <ButtonGroup>
