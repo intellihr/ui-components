@@ -612,6 +612,7 @@ $button-styles: (
 
   &.small {
     font-size: .75rem;
+    padding: 10px 12px;
 
     .button-icon {
       > .fa {
@@ -622,6 +623,7 @@ $button-styles: (
 
   &.large {
     font-size: 1.25rem;
+    padding: 17px 20px;
 
     .button-icon {
       > .fa {
