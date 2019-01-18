@@ -308,6 +308,28 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
       </Button>
     </ButtonGroup>
   </div>
+  <div>
+    <ButtonGroup>
+      <Button 
+        icon={<FontAwesomeIcon type='star' />} 
+        size='small' 
+      >
+        small
+      </Button>
+      <Button 
+        icon={<FontAwesomeIcon type='star' />} 
+        size='medium' 
+      >
+        medium
+      </Button>
+      <Button 
+        icon={<FontAwesomeIcon type='star' />} 
+        size='large' 
+      >
+        large
+      </Button>
+    </ButtonGroup>
+  </div>
 </div>
 ```
 
