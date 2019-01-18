@@ -19,6 +19,7 @@ export class RadioInput extends React.PureComponent<IRadioInputProps> {
 
   get infoLabel (): JSX.Element | null {
     const {
+      id,
       name,
       label,
       isButton
@@ -30,7 +31,7 @@ export class RadioInput extends React.PureComponent<IRadioInputProps> {
 
     return (
       <label
-        htmlFor={name}
+        htmlFor={id || name}
         className={classNames('radio', { 'radio-button': isButton })}
       >
         {label}

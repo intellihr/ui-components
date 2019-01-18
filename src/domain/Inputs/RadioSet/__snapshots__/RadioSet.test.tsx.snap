@@ -6,35 +6,43 @@ exports[`<RadioSet /> should render a radio Button Set 1`] = `
 >
   <Styled(RadioInput)
     handleChange={[Function]}
+    id="radio-input-set-0"
     isButton={true}
-    key="0-key"
+    isChecked={false}
+    key="radio-input-set-0"
     label="123123"
-    name="option-1"
+    name="radio-input-set"
     value="option 1"
   />
   <Styled(RadioInput)
     handleChange={[Function]}
+    id="radio-input-set-1"
     isButton={true}
+    isChecked={false}
     isDisabled={true}
-    key="1-key"
+    key="radio-input-set-1"
     label="this is option 2 (I am disabled)"
-    name="option-2"
+    name="radio-input-set"
     value="option 2"
   />
   <Styled(RadioInput)
     handleChange={[Function]}
+    id="radio-input-set-2"
     isButton={true}
-    key="2-key"
+    isChecked={false}
+    key="radio-input-set-2"
     label="this is option 3"
-    name="option-3"
+    name="radio-input-set"
     value="option 3"
   />
   <Styled(RadioInput)
     handleChange={[Function]}
+    id="radio-input-set-3"
     isButton={true}
-    key="3-key"
+    isChecked={false}
+    key="radio-input-set-3"
     label="this is option 4"
-    name="option-4"
+    name="radio-input-set"
     value="option 4"
   />
 </styled.div>
@@ -46,35 +54,43 @@ exports[`<RadioSet /> should render a radio Set 1`] = `
 >
   <Styled(RadioInput)
     handleChange={[Function]}
+    id="radio-input-set-0"
     isButton={false}
-    key="0-key"
+    isChecked={false}
+    key="radio-input-set-0"
     label="123123"
-    name="option-1"
+    name="radio-input-set"
     value="option 1"
   />
   <Styled(RadioInput)
     handleChange={[Function]}
+    id="radio-input-set-1"
     isButton={false}
+    isChecked={false}
     isDisabled={true}
-    key="1-key"
+    key="radio-input-set-1"
     label="this is option 2 (I am disabled)"
-    name="option-2"
+    name="radio-input-set"
     value="option 2"
   />
   <Styled(RadioInput)
     handleChange={[Function]}
+    id="radio-input-set-2"
     isButton={false}
-    key="2-key"
+    isChecked={false}
+    key="radio-input-set-2"
     label="this is option 3"
-    name="option-3"
+    name="radio-input-set"
     value="option 3"
   />
   <Styled(RadioInput)
     handleChange={[Function]}
+    id="radio-input-set-3"
     isButton={false}
-    key="3-key"
+    isChecked={false}
+    key="radio-input-set-3"
     label="this is option 4"
-    name="option-4"
+    name="radio-input-set"
     value="option 4"
   />
 </styled.div>
@@ -86,35 +102,43 @@ exports[`<RadioSet /> should render a radio set with horizontal buttons 1`] = `
 >
   <Styled(RadioInput)
     handleChange={[Function]}
+    id="radio-input-set-0"
     isButton={false}
-    key="0-key"
+    isChecked={false}
+    key="radio-input-set-0"
     label="123123"
-    name="option-1"
+    name="radio-input-set"
     value="option 1"
   />
   <Styled(RadioInput)
     handleChange={[Function]}
+    id="radio-input-set-1"
     isButton={false}
+    isChecked={false}
     isDisabled={true}
-    key="1-key"
+    key="radio-input-set-1"
     label="this is option 2 (I am disabled)"
-    name="option-2"
+    name="radio-input-set"
     value="option 2"
   />
   <Styled(RadioInput)
     handleChange={[Function]}
+    id="radio-input-set-2"
     isButton={false}
-    key="2-key"
+    isChecked={false}
+    key="radio-input-set-2"
     label="this is option 3"
-    name="option-3"
+    name="radio-input-set"
     value="option 3"
   />
   <Styled(RadioInput)
     handleChange={[Function]}
+    id="radio-input-set-3"
     isButton={false}
-    key="3-key"
+    isChecked={false}
+    key="radio-input-set-3"
     label="this is option 4"
-    name="option-4"
+    name="radio-input-set"
     value="option 4"
   />
 </styled.div>
