@@ -1,6 +1,8 @@
 @import '~foundation-sites/scss/foundation';
 @import '../../variables';
 
+// Old version of avatar entity; kept here for now to show off in the style guide
+// Should be removed once we're satisfied we can port to avatar entity in future
 .person-tag {
   align-items: center;
   display: flex;

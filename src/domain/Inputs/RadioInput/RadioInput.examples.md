@@ -21,7 +21,7 @@ initialState = { value: 'No' };
   <RadioInput
     isDisabled
     name='no-comment'
-    label='No comment (disalbed radio)' 
+    label='No comment (disabled radio)' 
     isChecked={state.value === 'No comment'}
     handleChange={(event) => setState({value: event.target.value})}
   />
@@ -54,7 +54,7 @@ initialState = { button: 'No' };
     isButton
     isDisabled
     name='button-no-comment'
-    label='No comment (disalbed radio)' 
+    label='No comment (disabled radio)' 
     isChecked={state.button === 'No comment'}
     handleChange={(event) => setState({button: event.target.value})}
   />

@@ -10,8 +10,9 @@ const DefaultDropdownButton = styled.button`
   cursor: pointer;
   margin: 0;
   outline: none;
-  padding: .5rem .3rem;
+  padding: 7px 6px;
   transition: background-color .25s ease-out, color .25s ease-out;
+  vertical-align: bottom;
 
   &:hover {
     background-color: ${Variables.Color.n200};
