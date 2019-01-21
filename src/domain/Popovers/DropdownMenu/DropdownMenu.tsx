@@ -70,15 +70,23 @@ class DropdownMenu extends React.Component<IDropdownMenuProps, IDropdownMenuStat
 
   public static defaultProps: Partial<IDropdownMenuProps> = {
     hasInitialFocus: false,
-    toggleComponent: ({ toggleMenu, toggleComponentRef, ariaProps }) => (
-      <DefaultDropdownButton
-        innerRef={toggleComponentRef}
-        onClick={toggleMenu}
-        {...ariaProps}
-      >
-        <FontAwesomeIcon type='ellipsis-v' />
-      </DefaultDropdownButton>
-    )
+    toggleComponent: ({ toggleMenu, toggleComponentRef, ariaProps }) => {
+      const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+        event.preventDefault()
+        event.stopPropagation()
+        toggleMenu()
+      }
+
+      return (
+        <DefaultDropdownButton
+          innerRef={toggleComponentRef}
+          onClick={handleClick}
+          {...ariaProps}
+        >
+          <FontAwesomeIcon type='ellipsis-v' />
+        </DefaultDropdownButton>
+      )
+    }
   }
 
   public state: IDropdownMenuState = {
