@@ -61,5 +61,7 @@ export class LinkButton extends BaseButton<ILinkButtonProps> {
     if (disabled) {
       event.preventDefault()
     }
+
+    event.stopPropagation()
   }
 }
