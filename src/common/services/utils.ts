@@ -72,6 +72,33 @@ namespace Utils {
       setTimeout(update, msPerStep)
     })
   }
+
+  interface IMediaQueryBetweenArgs {
+    minPx?: number,
+    maxPx?: number
+  }
+
+  /**
+   * Returns a media query string between two pixel arguments.
+   * The higher amount will be calculated as maxPx - 1 to account for overlaps.
+   *
+   * If higher isn't provided, there will be no maximum.
+   * If lower isn't provided, there will be no minimum.
+   */
+  export function mediaQueryBetweenSizes (args: IMediaQueryBetweenArgs): string {
+    let maxWidthRestriction = ''
+    let minWidthRestriction = ''
+
+    if (args.maxPx) {
+      maxWidthRestriction = ` and (max-width: ${args.maxPx - 1}px)`
+    }
+
+    if (args.minPx) {
+      minWidthRestriction = ` and (min-width: ${args.minPx}px)`
+    }
+
+    return `@media only screen${minWidthRestriction}${maxWidthRestriction}`
+  }
 }
 
 export {

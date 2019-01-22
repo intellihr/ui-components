@@ -1,4 +1,5 @@
 export { ContentSpacer } from './ContentSpacer'
+export { GridLayout } from './GridLayout'
 export { PageLayout } from './PageLayout'
 export { SectionList } from './SectionList'
 export { XYGrid } from './XYGrid'
