@@ -66,6 +66,12 @@ module.exports = {
           ]
         },
         {
+          name: 'Boards',
+          components: [
+            'src/domain/Boards/Board/Board'
+          ]
+        },
+        {
           name: 'Buttons',
           components: [
             'src/domain/Buttons/Button/Button',

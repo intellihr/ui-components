@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tile /> should render a board tile with nothing 1`] = `
+<styled.div
+  isCompact={true}
+/>
+`;
+
+exports[`<Tile /> should render a compacted board tile 1`] = `
+<styled.div
+  isCompact={true}
+>
+  <styled.label>
+    This is a test tile
+  </styled.label>
+  Children
+</styled.div>
+`;
+
+exports[`<Tile /> should render a non-compact board tile 1`] = `
+<styled.div
+  isCompact={false}
+>
+  <styled.label>
+    This is a test tile
+  </styled.label>
+  Children
+</styled.div>
+`;
