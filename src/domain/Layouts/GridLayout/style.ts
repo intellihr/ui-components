@@ -69,6 +69,52 @@ function getPxForGutterSize(size: GutterSize) {
   return 0
 }
 
+function getPropertiesForHorizontalAlignment(alignment: HorizontalAlignment) {
+  switch (alignment) {
+    case HorizontalAlignment.Left:
+      return css`
+        justify-content: flex-start;
+      `
+    case HorizontalAlignment.Right:
+      return css`
+        justify-content: flex-end;
+      `
+    case HorizontalAlignment.Center:
+      return css`
+        justify-content: center;
+      `
+    case HorizontalAlignment.Justify:
+      return css`
+        justify-content: space-between;
+      `
+    case HorizontalAlignment.Spaced:
+      return css`
+        justify-content: space-around;
+      `
+  }
+}
+
+function getPropertiesForVerticalAlignment(alignment: VerticalAlignment) {
+  switch (alignment) {
+    case VerticalAlignment.Top:
+      return css`
+        align-items: flex-start;
+      `
+    case VerticalAlignment.Bottom:
+      return css`
+        align-items: flex-end;
+      `
+    case VerticalAlignment.Middle:
+      return css`
+        align-items: center;
+      `
+    case VerticalAlignment.Stretch:
+      return css`
+        align-items: stretch;
+      `
+  }
+}
+
 function gridStyleForProps(props: IStyledGridLayoutProps) {
   const xMarginGutterSize = getPxForGutterSize(props.gutterMarginX)
   const yMarginGutterSize = getPxForGutterSize(props.gutterMarginY)
@@ -92,6 +138,8 @@ function gridStyleForProps(props: IStyledGridLayoutProps) {
   return css`
     ${leftRightMarginGutters}
     ${topBottomMarginGutters}
+    ${getPropertiesForHorizontalAlignment(props.horizontalAlignment)}
+    ${getPropertiesForVerticalAlignment(props.verticalAlignment)}
   `
 }
 

@@ -60,7 +60,7 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
   public static defaultProps: Partial<IGridLayoutProps> = {
     gridColumns: 12,
     horizontalAlignment: HorizontalAlignment.Left,
-    verticalAlignment: VerticalAlignment.Top,
+    verticalAlignment: VerticalAlignment.Stretch,
     gutterMarginX: GutterSize.None,
     gutterMarginY: GutterSize.None,
     gutterPaddingX: GutterSize.None,

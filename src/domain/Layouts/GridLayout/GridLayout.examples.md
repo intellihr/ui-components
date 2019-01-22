@@ -95,8 +95,8 @@ const style = {
 };
 
 <GridLayout
-  gutterMarginX='medium'
-  gutterMarginY='small'
+  gutterMarginX={GridLayout.GutterSize.Medium}
+  gutterMarginY={GridLayout.GutterSize.Small}
   cells={[
     {
       size: { min: 10 },
@@ -128,11 +128,11 @@ avoided unless you have a good use case:
 ```jsx
 const { Variables } = require('@Common');
 
-let text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec libero et libero molestie eleifend. Donec dignissim vel erat eu cursus.';
+const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec libero et libero molestie eleifend. Donec dignissim vel erat eu cursus.';
 
 <GridLayout
-  gutterMarginX='small'
-  gutterMarginY='small'
+  gutterMarginX={GridLayout.GutterSize.Small}
+  gutterMarginY={GridLayout.GutterSize.Small}
   cells={[
     {
       size: { min: 4 },
@@ -205,66 +205,70 @@ const style = {
 };
 
 <>
-  <GridLayout>
-    <GridLayout.Cell size={{ min: 4 }}>
-      <div style={style}>
-        <span>Aligned to</span>
-      </div>
-    </GridLayout.Cell>
-    <GridLayout.Cell size={{ min: 4 }}>
-      <div style={style}>
-        <span>the left</span>
-      </div>
-    </GridLayout.Cell>
-  </GridLayout>
-  <GridLayout horizontalAlignment={GridLayout.HorizontalAlignment.Right}>
-    <GridLayout.Cell size={{ min: 4 }}>
-      <div style={style}>
-        <span>Aligned to</span>
-      </div>
-    </GridLayout.Cell>
-    <GridLayout.Cell size={{ min: 4 }}>
-      <div style={style}>
-        <span>the right</span>
-      </div>
-    </GridLayout.Cell>
-  </GridLayout>
-  <GridLayout horizontalAlignment={GridLayout.HorizontalAlignment.Center}>
-    <GridLayout.Cell size={{ min: 4 }}>
-      <div style={style}>
-        <span>Aligned to</span>
-      </div>
-    </GridLayout.Cell>
-    <GridLayout.Cell size={{ min: 4 }}>
-      <div style={style}>
-        <span>the center</span>
-      </div>
-    </GridLayout.Cell>
-  </GridLayout>
-  <GridLayout horizontalAlignment={GridLayout.HorizontalAlignment.Justify}>
-    <GridLayout.Cell size={{ min: 4 }}>
-      <div style={style}>
-        <span>Aligned to</span>
-      </div>
-    </GridLayout.Cell>
-    <GridLayout.Cell size={{ min: 4 }}>
-      <div style={style}>
-        <span>the edges</span>
-      </div>
-    </GridLayout.Cell>
-  </GridLayout>
-  <GridLayout horizontalAlignment={GridLayout.HorizontalAlignment.Spaced}>
-    <GridLayout.Cell size={{ min: 4 }}>
-      <div style={style}>
-        <span>Aligned to</span>
-      </div>
-    </GridLayout.Cell>
-    <GridLayout.Cell size={{ min: 4 }}>
-      <div style={style}>
-        <span>the space around</span>
-      </div>
-    </GridLayout.Cell>
-  </GridLayout>
+  <GridLayout
+    cells={[
+      {
+        size: { min: 4 },
+        content: <div style={style}>Aligned to</div>
+      },
+      {
+        size: { min: 4 },
+        content: <div style={style}>the left (default)</div>
+      }
+    ]}
+  />
+  <GridLayout
+    horizontalAlignment={GridLayout.HorizontalAlignment.Right}
+    cells={[
+      {
+        size: { min: 4 },
+        content: <div style={style}>Aligned to</div>
+      },
+      {
+        size: { min: 4 },
+        content: <div style={style}>the right</div>
+      }
+    ]}
+  />
+  <GridLayout
+    horizontalAlignment={GridLayout.HorizontalAlignment.Center}
+    cells={[
+      {
+        size: { min: 4 },
+        content: <div style={style}>Aligned to</div>
+      },
+      {
+        size: { min: 4 },
+        content: <div style={style}>the center</div>
+      }
+    ]}
+  />
+  <GridLayout
+    horizontalAlignment={GridLayout.HorizontalAlignment.Justify}
+    cells={[
+      {
+        size: { min: 4 },
+        content: <div style={style}>Aligned to</div>
+      },
+      {
+        size: { min: 4 },
+        content: <div style={style}>push to the edges</div>
+      }
+    ]}
+  />
+  <GridLayout
+    horizontalAlignment={GridLayout.HorizontalAlignment.Spaced}
+    cells={[
+      {
+        size: { min: 4 },
+        content: <div style={style}>Aligned to</div>
+      },
+      {
+        size: { min: 4 },
+        content: <div style={style}>spread evenly</div>
+      }
+    ]}
+  />
 </>
 ```
 
@@ -282,55 +286,136 @@ const style = {
   height: '100%',
   textAlign: 'center'
 };
+const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id eros consequat ex faucibus pellentesque nec non ipsum. Nulla facilisis libero vitae nisi varius ultricies. Nullam aliquet sollicitudin luctus. Donec sit amet risus et est pellentesque consectetur. Cras eu nisl est. Quisque auctor magna at nulla ultrices, non molestie tortor iaculis.';
 
 <>
-  <GridLayout verticalAlignment={GridLayout.VerticalAlignment.Top}>
-    <GridLayout.Cell size={{ min: 4 }}>
-      <div style={style}>
-        <span>Aligned to the top (default)</span>
-      </div>
-    </GridLayout.Cell>
-    <GridLayout.Cell size={{ min: 4 }}>
-      <div style={style}>
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id eros consequat ex faucibus pellentesque nec non ipsum. Nulla facilisis libero vitae nisi varius ultricies. Nullam aliquet sollicitudin luctus. Donec sit amet risus et est pellentesque consectetur. Cras eu nisl est. Quisque auctor magna at nulla ultrices, non molestie tortor iaculis.</span>
-      </div>
-    </GridLayout.Cell>
-  </GridLayout>
-  <GridLayout verticalAlignment={GridLayout.VerticalAlignment.Middle}>
-    <GridLayout.Cell size={{ min: 4 }}>
-      <div style={style}>
-        <span>Aligned to the middle</span>
-      </div>
-    </GridLayout.Cell>
-    <GridLayout.Cell size={{ min: 4 }}>
-      <div style={style}>
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id eros consequat ex faucibus pellentesque nec non ipsum. Nulla facilisis libero vitae nisi varius ultricies. Nullam aliquet sollicitudin luctus. Donec sit amet risus et est pellentesque consectetur. Cras eu nisl est. Quisque auctor magna at nulla ultrices, non molestie tortor iaculis.</span>
-      </div>
-    </GridLayout.Cell>
-  </GridLayout>
-  <GridLayout verticalAlignment={GridLayout.VerticalAlignment.Bottom}>
-    <GridLayout.Cell size={{ min: 4 }}>
-      <div style={style}>
-        <span>Aligned to the bottom</span>
-      </div>
-    </GridLayout.Cell>
-    <GridLayout.Cell size={{ min: 4 }}>
-      <div style={style}>
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id eros consequat ex faucibus pellentesque nec non ipsum. Nulla facilisis libero vitae nisi varius ultricies. Nullam aliquet sollicitudin luctus. Donec sit amet risus et est pellentesque consectetur. Cras eu nisl est. Quisque auctor magna at nulla ultrices, non molestie tortor iaculis.</span>
-      </div>
-    </GridLayout.Cell>
-  </GridLayout>
-  <GridLayout verticalAlignment={GridLayout.VerticalAlignment.Stretch}>
-    <GridLayout.Cell size={{ min: 4 }}>
-      <div style={style}>
-        <span>Stretched to have the same height</span>
-      </div>
-    </GridLayout.Cell>
-    <GridLayout.Cell size={{ min: 4 }}>
-      <div style={style}>
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id eros consequat ex faucibus pellentesque nec non ipsum. Nulla facilisis libero vitae nisi varius ultricies. Nullam aliquet sollicitudin luctus. Donec sit amet risus et est pellentesque consectetur. Cras eu nisl est. Quisque auctor magna at nulla ultrices, non molestie tortor iaculis.</span>
-      </div>
-    </GridLayout.Cell>
-  </GridLayout>
+  <GridLayout
+    verticalAlignment={GridLayout.VerticalAlignment.Top}
+    cells={[
+      {
+        size: { min: 4 },
+        content: <div style={style}>Aligned to the top</div>
+      },
+      {
+        size: { min: 4 },
+        content: <div style={style}>{text}</div>
+      }
+    ]}
+  />
+  <GridLayout
+    verticalAlignment={GridLayout.VerticalAlignment.Middle}
+    cells={[
+      {
+        size: { min: 4 },
+        content: <div style={style}>Aligned to the middle</div>
+      },
+      {
+        size: { min: 4 },
+        content: <div style={style}>{text}</div>
+      }
+    ]}
+  />
+  <GridLayout
+    verticalAlignment={GridLayout.VerticalAlignment.Bottom}
+    cells={[
+      {
+        size: { min: 4 },
+        content: <div style={style}>Aligned to the bottom</div>
+      },
+      {
+        size: { min: 4 },
+        content: <div style={style}>{text}</div>
+      }
+    ]}
+  />
+  <GridLayout
+    verticalAlignment={GridLayout.VerticalAlignment.Stretch}
+    cells={[
+      {
+        size: { min: 4 },
+        content: <div style={style}>Stretched to have the same height (default behaviour)</div>
+      },
+      {
+        size: { min: 4 },
+        content: <div style={style}>{text}</div>
+      }
+    ]}
+  />
 </>
+```
+
+#### Alternate grid patterns
+
+Grids don't __have__ to be 12 grids. The `gridColumns` prop lets you specify the number
+of columns cells are given in. Note that giving numbers smaller than the cells will
+cause funky behaviour.
+
+```jsx
+const { Variables } = require('@Common');
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
+<GridLayout
+  gridColumns={20}
+  cells={[
+    {
+      size: { min: 10 },
+      content: <div style={style}/>
+    },
+    {
+      size: { min: 2 },
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 3, tablet: 7 },
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 5, tablet: 1 },
+      content: <div style={style}/>
+    }
+  ]}
+/>
+```
+
+You can design some makeshift vertical stacks using full widths:
+
+```jsx
+const { Variables } = require('@Common');
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
+const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id eros consequat ex faucibus pellentesque nec non ipsum. Nulla facilisis libero vitae nisi varius ultricies. Nullam aliquet sollicitudin luctus. Donec sit amet risus et est pellentesque consectetur. Cras eu nisl est. Quisque auctor magna at nulla ultrices, non molestie tortor iaculis.';
+
+<GridLayout
+  gutterMarginY='large'
+  cells={[
+    {
+      size: { min: 12 },
+      content: <div style={style}>{text}</div>
+    },
+    {
+      size: { min: 12 },
+      content: <div style={style}>{text}</div>
+    },
+    {
+      size: { min: 12 },
+      content: <div style={style}>{text}</div>
+    },
+    {
+      size: { min: 12 },
+      content: <div style={style}>{text}</div>
+    }
+  ]}
+/>
 ```
