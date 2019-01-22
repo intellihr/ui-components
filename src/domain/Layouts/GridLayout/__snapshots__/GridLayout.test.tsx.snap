@@ -299,6 +299,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   verticalAlignment="stretch"
 >
   <styled.div
+    data-component-type="grid_layout"
     gutterMarginX="medium"
     gutterMarginY="none"
     horizontalAlignment="center"
@@ -306,8 +307,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   >
     <div
       className="c0"
+      data-component-type="grid_layout"
     >
       <styled.div
+        data-component-type="grid_layout_cell"
         gridColumns={12}
         gutterMarginX="medium"
         gutterMarginY="none"
@@ -333,6 +336,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
       >
         <div
           className="c1"
+          data-component-type="grid_layout_cell"
         >
           <div>
             1
@@ -340,6 +344,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
         </div>
       </styled.div>
       <styled.div
+        data-component-type="grid_layout_cell"
         gridColumns={12}
         gutterMarginX="medium"
         gutterMarginY="none"
@@ -365,6 +370,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
       >
         <div
           className="c2"
+          data-component-type="grid_layout_cell"
         >
           <div>
             2
@@ -372,6 +378,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
         </div>
       </styled.div>
       <styled.div
+        data-component-type="grid_layout_cell"
         gridColumns={12}
         gutterMarginX="medium"
         gutterMarginY="none"
@@ -397,6 +404,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
       >
         <div
           className="c3"
+          data-component-type="grid_layout_cell"
         >
           <div>
             3
@@ -404,6 +412,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
         </div>
       </styled.div>
       <styled.div
+        data-component-type="grid_layout_cell"
         gridColumns={12}
         gutterMarginX="medium"
         gutterMarginY="none"
@@ -429,6 +438,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
       >
         <div
           className="c4"
+          data-component-type="grid_layout_cell"
         >
           <div>
             4
@@ -436,6 +446,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
         </div>
       </styled.div>
       <styled.div
+        data-component-type="grid_layout_cell"
         gridColumns={12}
         gutterMarginX="medium"
         gutterMarginY="none"
@@ -461,6 +472,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
       >
         <div
           className="c5"
+          data-component-type="grid_layout_cell"
         >
           <div>
             5

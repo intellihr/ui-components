@@ -18,8 +18,6 @@ enum VerticalAlignment {
 
 enum GutterSize {
   None = 'none',
-
-  // TODO: note that the following are all the same for now
   Small = 'small',
   Medium = 'medium',
   Large = 'large'

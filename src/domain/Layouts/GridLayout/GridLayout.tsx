@@ -9,6 +9,8 @@ import {
   StyledGridLayout,
   VerticalAlignment
 } from './style'
+import { Props } from '../../../common'
+import { StyledButtonGroup } from '../../Buttons/ButtonGroup/style'
 
 interface ICellSizeDefinition {
   min?: number | 'auto' | 'shrink',
@@ -26,30 +28,34 @@ interface ICellOffsetDefinition {
 
 interface IGridLayoutCell {
   /** The content to place within the cell */
-  content: JSX.Element | string | undefined
+  content: JSX.Element | string | undefined,
   /** The size this cell takes up within the grid */
   size?: ICellSizeDefinition | 'auto' | 'shrink',
   /** The cell offset from the edge of the grid */
-  offset?: ICellOffsetDefinition
+  offset?: ICellOffsetDefinition,
+  /** Component context */
+  componentContext?: string
 }
 
 interface IGridLayoutProps {
   /** The cells to place within the grid */
-  cells: IGridLayoutCell[]
+  cells: IGridLayoutCell[],
   /** The horizontal alignment of the items within the grid */
-  horizontalAlignment?: HorizontalAlignment
+  horizontalAlignment?: HorizontalAlignment,
   /** The vertical alignment of the items within the grid */
-  verticalAlignment?: VerticalAlignment
+  verticalAlignment?: VerticalAlignment,
   /** Adds gutters between cells as margin in the x direction */
-  gutterMarginX?: GutterSize
+  gutterMarginX?: GutterSize,
   /** Adds gutters between cells as margin in the y direction */
-  gutterMarginY?: GutterSize
+  gutterMarginY?: GutterSize,
   /** Adds gutters between cells as padding in the x direction */
-  gutterPaddingX?: GutterSize
+  gutterPaddingX?: GutterSize,
   /** Adds gutters between cells as padding in the y direction */
-  gutterPaddingY?: GutterSize
+  gutterPaddingY?: GutterSize,
   /** Determines the amount of columns within the grid */
-  gridColumns?: number
+  gridColumns?: number,
+  /** Component context */
+  componentContext?: string
 }
 
 export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
@@ -75,7 +81,8 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
       gutterMarginY,
       horizontalAlignment,
       verticalAlignment,
-      cells
+      cells,
+      componentContext
     } = this.props
 
     return (
@@ -84,6 +91,8 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
         verticalAlignment={verticalAlignment!}
         gutterMarginX={gutterMarginX!}
         gutterMarginY={gutterMarginY!}
+        data-component-type={Props.ComponentType.GridLayout}
+        data-component-context={componentContext}
       >
         {map(cells, this.getCellForDefinition)}
       </StyledGridLayout>
@@ -101,7 +110,8 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
     const {
       content,
       size,
-      offset
+      offset,
+      componentContext
     } = cell
 
     return (
@@ -114,6 +124,8 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
         gutterMarginY={gutterMarginY!}
         gutterPaddingX={gutterPaddingX!}
         gutterPaddingY={gutterPaddingY!}
+        data-component-type={Props.ComponentType.GridLayoutCell}
+        data-component-context={componentContext}
       >
         {content}
       </StyledCell>
