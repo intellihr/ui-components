@@ -107,10 +107,10 @@ export class SelectInput<O=ISelectInputOptions> extends React.PureComponent<ISel
       onOpen,
       filterOptions,
       noResultsText,
-      handleChange
+      handleChange,
+      closeOnSelect,
+      removeSelected
     } = this.props
-
-    const value = this.props.value
 
     const base: any = {
       name: multi ? `${name}[]` : name,
@@ -131,7 +131,9 @@ export class SelectInput<O=ISelectInputOptions> extends React.PureComponent<ISel
       openOnFocus,
       onOpen,
       filterOptions,
-      noResultsText
+      noResultsText,
+      closeOnSelect,
+      removeSelected
     }
 
     if (promiseOptions) {
