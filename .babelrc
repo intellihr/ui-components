@@ -1,11 +1,12 @@
 {
   "presets": [
     [
-      "env", {
-	"targets": {
-	  "browsers": "defaults"
-	},
-	"useBuiltIns": true
+      "env",
+      {
+        "targets": {
+          "browsers": "defaults"
+        },
+	      "useBuiltIns": true
       }
     ]
   ],
