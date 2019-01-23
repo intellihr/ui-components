@@ -121,6 +121,7 @@ exports[`<SectionList /> should render a section list with a titled section with
                                   <Styled(SectionDescription)>
                                     <SectionDescription
                                       className="c4"
+                                      links={Array []}
                                     >
                                       <div
                                         className="c4"
@@ -259,7 +260,9 @@ exports[`<SectionList /> should render a section list with an annotated section 
           </div>
         </styled.div>
       </Styled(styled.div)>
-      <AnnotatedSection>
+      <AnnotatedSection
+        links={Array []}
+      >
         <Styled(styled.div)>
           <styled.div
             className="c3"
@@ -289,9 +292,12 @@ exports[`<SectionList /> should render a section list with an annotated section 
                     <div
                       className="ihrCell desktop-4 tablet-4 min-12"
                     >
-                      <Styled(SectionDescription)>
+                      <Styled(SectionDescription)
+                        links={Array []}
+                      >
                         <SectionDescription
                           className="c4"
+                          links={Array []}
                         >
                           <div
                             className="c4"
@@ -342,6 +348,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  display: inline;
 }
 
 .c8,
@@ -546,6 +553,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
           }
         }
         linkText="Annotated Link"
+        links={Array []}
       >
         <Styled(styled.div)>
           <styled.div
@@ -585,6 +593,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                           }
                         }
                         linkText="Annotated Link"
+                        links={Array []}
                       >
                         <SectionDescription
                           className="c5"
@@ -596,6 +605,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                             }
                           }
                           linkText="Annotated Link"
+                          links={Array []}
                         >
                           <div
                             className="c5"
@@ -644,15 +654,18 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                             </Text>
                             <TextLink
                               href="#"
+                              isInline={true}
                               textType="small"
                             >
                               <Styled(Component)
                                 href="#"
+                                isInline={true}
                                 textType="small"
                               >
                                 <Component
                                   className="c8"
                                   href="#"
+                                  isInline={true}
                                   textType="small"
                                 >
                                   <Anchor
@@ -785,6 +798,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                       className="c12"
                                       description="Titled Description"
                                       header="Titled Section"
+                                      links={Array []}
                                     >
                                       <div
                                         className="c12"
@@ -922,6 +936,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  display: inline;
 }
 
 .c7,
@@ -1081,6 +1096,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
           }
         }
         linkText="Annotated Link"
+        links={Array []}
       >
         <Styled(styled.div)>
           <styled.div
@@ -1120,6 +1136,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                           }
                         }
                         linkText="Annotated Link"
+                        links={Array []}
                       >
                         <SectionDescription
                           className="c4"
@@ -1131,6 +1148,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                             }
                           }
                           linkText="Annotated Link"
+                          links={Array []}
                         >
                           <div
                             className="c4"
@@ -1179,15 +1197,18 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                             </Text>
                             <TextLink
                               href="#"
+                              isInline={true}
                               textType="small"
                             >
                               <Styled(Component)
                                 href="#"
+                                isInline={true}
                                 textType="small"
                               >
                                 <Component
                                   className="c7"
                                   href="#"
+                                  isInline={true}
                                   textType="small"
                                 >
                                   <Anchor
@@ -1299,6 +1320,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                       className="c10"
                                       description="Titled Description"
                                       header="Titled Section"
+                                      links={Array []}
                                     >
                                       <div
                                         className="c10"
