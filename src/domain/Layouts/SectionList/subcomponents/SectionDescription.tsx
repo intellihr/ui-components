@@ -3,22 +3,35 @@ import { TextLink } from '../../../Links/TextLink'
 import { Text } from '../../../Typographies/Text'
 import { Props, Variables } from '../../../../common'
 
+export interface ILinkProps {
+  [i: string]: any
+}
+
+export interface ILink {
+  text: string,
+  props: ILinkProps
+}
+
 export interface ISectionDescriptionProps {
   /** The title for what is displayed */
   header?: string,
   /** The description for what is displayed */
   description?: string,
-  /** The text for the call to action */
+  /** (Deprecated - please use `links`) The text for the call to action */
   linkText?: string,
   /** The className of the component (used by styled components) */
   className?: string,
-  /** Any extra link props */
-  linkProps?: {
-    [i: string]: any
-  }
+  /** (Deprecated - please use `links`) Any extra link props */
+  linkProps?: ILinkProps,
+  /** The settings for the list of links */
+  links?: ILink[]
 }
 
 class SectionDescription extends React.PureComponent<ISectionDescriptionProps> {
+  public static defaultProps: Pick<ISectionDescriptionProps, 'links'> = {
+    links: []
+  }
+
   get description () {
     const {
       description
@@ -55,22 +68,29 @@ class SectionDescription extends React.PureComponent<ISectionDescriptionProps> {
     }
   }
 
-  get link () {
-    const {
-      linkText,
-      linkProps
-    } = this.props
-
-    if (linkText && linkProps) {
-      return (
-        <TextLink
-          textType={Props.TypographyType.Small}
-          {...linkProps}
-        >
-          {linkText}
-        </TextLink>
-      )
+  public renderLink = (linkText?: string, linkProps?: ILinkProps): JSX.Element | null => {
+    if (!(linkText && linkProps)) {
+      return null
     }
+
+    return (
+      <TextLink
+        textType={Props.TypographyType.Small}
+        {...linkProps}
+      >
+        {linkText}
+      </TextLink>
+    )
+  }
+
+  public renderLinks = () => {
+    const { links, linkText, linkProps } = this.props
+
+    if (!links!.length) {
+      return this.renderLink(linkText, linkProps)
+    }
+
+    return links!.map(({ text, props }: ILink) => this.renderLink(text, { ...props, isInline: false }))
   }
 
   public render (): JSX.Element {
@@ -82,7 +102,7 @@ class SectionDescription extends React.PureComponent<ISectionDescriptionProps> {
       <div className={className}>
         {this.header}
         {this.description}
-        {this.link}
+        {this.renderLinks()}
       </div>
     )
   }

@@ -35,7 +35,7 @@ export interface ISmartList {
   /** Style for cursor */
   cursor?: 'auto' | 'pointer'
   /** Limit of rows that will be shown by default */
-  limit?: number
+  limit?: number | null
   /** Flag to select if headers should be displayed for each column */
   showHeaderRow?: boolean
   /** Flag to select if the background color of rows should change on hover */
@@ -203,7 +203,7 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
 
     if (this.canLimitData) {
       if (this.state.paginationButton) {
-        rows = take(filter(rows, ['props.hideRow', false]), limit)
+        rows = take(filter(rows, ['props.hideRow', false]), limit!)
       }
 
       const visibleRowsCount = size(filter(this.data, item => !item.hide))
@@ -258,7 +258,7 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
 
   public showAllRowContent (visibleRowsCount: number) {
     if (this.state.paginationButton) {
-      return `Show All (${visibleRowsCount})`
+      return `Show All (${visibleRowsCount} in Total)`
     }
 
     return 'Collapse'

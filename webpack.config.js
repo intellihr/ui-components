@@ -45,7 +45,9 @@ module.exports = {
       },
       {
         test: /\.tsx?$/,
-        exclude: /(node_modules)/,
+        exclude: [
+          path.resolve(__dirname, 'node_modules')
+        ],
         use: [
           {
             loader: 'awesome-typescript-loader',
@@ -59,7 +61,11 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: /node_modules\/(?!(react-styleguidist|foundation-sites)\/).*/,
+        include: [
+          path.resolve(__dirname, 'src'),
+          path.resolve(__dirname, 'node_modules/foundation-sites'),
+          path.resolve(__dirname, 'node_modules/react-styleguidist')
+        ],
         use: {
           loader: 'babel-loader',
           options: {

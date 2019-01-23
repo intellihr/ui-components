@@ -13,4 +13,17 @@ describe('<TextLink />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it('should render a text link with display block', () => {
+    const wrapper = mount(
+      <TextLink
+        href='#'
+        isInline={false}
+      >
+        Block text link
+      </TextLink>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })

@@ -61,6 +61,7 @@ exports[`<FormattedText /> should render a big block of markdown 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  display: inline;
 }
 
 .c1,
@@ -351,17 +352,20 @@ Ordered/multi-level lists:
               <TextLink
                 anchorComponent="a"
                 href="http://www.intellihr.com.au"
+                isInline={true}
                 target="_blank"
               >
                 <Styled(Component)
                   anchorComponent="a"
                   href="http://www.intellihr.com.au"
+                  isInline={true}
                   target="_blank"
                 >
                   <Component
                     anchorComponent="a"
                     className="c1"
                     href="http://www.intellihr.com.au"
+                    isInline={true}
                     target="_blank"
                   >
                     <Anchor
@@ -391,17 +395,20 @@ Ordered/multi-level lists:
               <TextLink
                 anchorComponent="a"
                 href="http://www.google.com"
+                isInline={true}
                 target="_blank"
               >
                 <Styled(Component)
                   anchorComponent="a"
                   href="http://www.google.com"
+                  isInline={true}
                   target="_blank"
                 >
                   <Component
                     anchorComponent="a"
                     className="c1"
                     href="http://www.google.com"
+                    isInline={true}
                     target="_blank"
                   >
                     <Anchor
@@ -923,6 +930,7 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  display: inline;
 }
 
 .c1,
@@ -981,17 +989,20 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
               <TextLink
                 anchorComponent="a"
                 href="http://www.heyguy.com"
+                isInline={true}
                 target="_blank"
               >
                 <Styled(Component)
                   anchorComponent="a"
                   href="http://www.heyguy.com"
+                  isInline={true}
                   target="_blank"
                 >
                   <Component
                     anchorComponent="a"
                     className="c1"
                     href="http://www.heyguy.com"
+                    isInline={true}
                     target="_blank"
                   >
                     <Anchor

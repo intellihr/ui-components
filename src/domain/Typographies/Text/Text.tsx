@@ -19,6 +19,8 @@ export interface ITextProps {
   isTruncated?: boolean
   /** If true, will display the text inline */
   isInline?: boolean
+  /** If true, will italicize the text */
+  isItalic?: boolean
   /** Color of the text */
   color?: Variables.Color
   /** Optional header tag to render the element with */
@@ -73,6 +75,7 @@ export class Text extends React.PureComponent<ITextProps> {
       isUpper,
       isTruncated,
       isInline,
+      isItalic,
       color,
       componentContext,
       hintComponentProps
@@ -85,6 +88,7 @@ export class Text extends React.PureComponent<ITextProps> {
         textType={type}
         color={color}
         isInline={isInline}
+        isItalic={isItalic}
         weight={weight}
         isUpper={isUpper}
         isTruncated={isTruncated}
