@@ -9,6 +9,7 @@ export interface ITextWrapperProps {
   weight?: 'normal' | 'heavy'
   textType?: Props.TypographyType
   isTruncated?: boolean
+  isItalic?: boolean
 }
 
 export const TextWrapper = styled.span`
@@ -80,5 +81,9 @@ export const TextWrapper = styled.span`
 
   ${(props: ITextWrapperProps) => !props.isInline && css`
     display: block;
+  `}
+  
+  ${(props: ITextWrapperProps) => props.isItalic && css`
+    font-style: italic;
   `}
 `
