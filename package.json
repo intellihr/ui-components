@@ -111,6 +111,7 @@
     "react-dom": "16.3.1",
     "react-styleguidist": "7.0.4",
     "react-test-renderer": "16.3.1",
+    "rimraf": "^2.6.3",
     "sass-lint": "1.12.1",
     "sass-lint-auto-fix": "^0.2.8",
     "sass-loader": "6.0.7",
@@ -133,8 +134,8 @@
   },
   "scripts": {
     "postinstall": "npm rebuild node-sass",
-    "clean": "rm -rf dist/* && rm -rf es/*",
-    "compile": "rm -rf es/* && tsc",
+    "clean": "rimraf es dist",
+    "compile": "rimraf es && tsc",
     "test": "cross-env NODE_ENV=test jest --coverage",
     "test:ci": "cross-env NODE_ENV=test jest --silent --ci --coverage --colors",
     "lint": "tslint -t stylish -c ./tslint.json \"src/**/*.{ts,tsx}\"",
