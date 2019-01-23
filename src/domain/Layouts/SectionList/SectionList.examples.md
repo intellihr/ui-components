@@ -16,7 +16,30 @@ sub-components that provide responsive styling between mobile and desktop.
   <SectionList.AnnotatedSection
     header='Annotated Section'
     description='This is an annotated section, which enables sections to have a description.'
-    linkText='Action that can be taken'
+    links={[
+      {
+        text: 'Action that can be taken',
+        props: {
+          href: '#'
+        }
+      },
+      {
+        text: 'Action that can be taken',
+        props: {
+          href: '#'
+        }
+      }
+    ]}
+  >
+    <Text>
+      As is the same with a Section, content can be passed into an Annotated Section which will then be displayed
+      inside the section.
+    </Text>
+  </SectionList.AnnotatedSection>
+  <SectionList.AnnotatedSection
+    header='Annotated Section (Deprecated)'
+    description='This is the deprecated annotated section, which enables sections to have a description and only one link.'
+    linkText='The only link'
     linkProps={{href: '#'}}
   >
     <Text>

@@ -5,28 +5,34 @@ import {
   StyledAnnotatedSectionBody,
   StyledAnnotatedSection
 } from '../style'
+import { ILinkProps, ILink } from './SectionDescription'
 
 export interface IAnnotatedSectionProps {
   /** The title for what is displayed */
   header?: string,
   /** The description for what is displayed */
   description?: string,
-  /** The text for the call to action */
+  /** (Deprecated - please use `links`) The text for the call to action */
   linkText?: string,
-  /** Any extra link props */
-  linkProps?: {
-    [i: string]: any
-  }
+  /** (Deprecated - please use `links`) Any extra link props */
+  linkProps?: ILinkProps,
+  /** The settings for the list of links */
+  links?: ILink[]
 }
 
 class AnnotatedSection extends React.PureComponent<IAnnotatedSectionProps> {
+  public static defaultProps: Pick<IAnnotatedSectionProps, 'links'> = {
+    links: []
+  }
+
   public render (): JSX.Element {
     const {
       children,
       header,
       description,
       linkText,
-      linkProps
+      linkProps,
+      links
     } = this.props
 
     return (
@@ -38,6 +44,7 @@ class AnnotatedSection extends React.PureComponent<IAnnotatedSectionProps> {
               description={description}
               linkText={linkText}
               linkProps={linkProps}
+              links={links!}
             />
           </XYGrid.Cell>
           {children &&

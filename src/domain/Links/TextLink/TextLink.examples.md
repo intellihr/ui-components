@@ -43,6 +43,19 @@
   >
     Display Large Link
   </TextLink>
+  <br />
+  <TextLink
+    textType='body'
+    isInline={false}
+  >
+    Block TextLink 1
+  </TextLink>
+  <TextLink
+    textType='body'
+    isInline={false}
+  >
+    Block TextLink 2
+  </TextLink>
 </div>
 ```
 
