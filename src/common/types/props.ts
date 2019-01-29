@@ -54,6 +54,8 @@ namespace Props {
     ContentSpacerItem = 'content_spacer_item',
     EmptyState = 'empty_state',
     HintWrapper = 'hint_wrapper',
+    GridLayout = 'grid_layout',
+    GridLayoutCell = 'grid_layout_cell',
     LinkButton = 'link_button',
     Record = 'record',
     RecordName = 'record_name',
