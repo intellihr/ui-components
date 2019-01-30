@@ -88,15 +88,14 @@ as these won't change the width of the underlying cells (so elements will size c
 const { Variables } = require('@Common');
 const style = {
   backgroundColor: Variables.Color.n400,
-  border: `2px solid ${Variables.Color.n100}`,
   minHeight: '2rem',
   height: '100%',
   width: '100%'
 };
 
 <GridLayout
-  gutterMarginX={GridLayout.GutterSize.Medium}
-  gutterMarginY={GridLayout.GutterSize.Small}
+  gutterMarginX={Variables.Spacing.sMedium}
+  gutterMarginY={Variables.Spacing.sSmall}
   cells={[
     {
       size: { min: 10 },
@@ -131,8 +130,8 @@ const { Variables } = require('@Common');
 const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec libero et libero molestie eleifend. Donec dignissim vel erat eu cursus.';
 
 <GridLayout
-  gutterMarginX={GridLayout.GutterSize.Small}
-  gutterMarginY={GridLayout.GutterSize.Small}
+  gutterPaddingX={Variables.Spacing.sSmall}
+  gutterPaddingY={Variables.Spacing.sSmall}
   cells={[
     {
       size: { min: 4 },
@@ -156,6 +155,59 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
     }
   ]}
 />
+```
+
+Gutters support all sizes taken from `Spacing` and `Layout`:
+```jsx
+const { Variables } = require('@Common');
+const style = {
+  backgroundColor: Variables.Color.n400,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
+<>
+  <GridLayout
+    gutterMarginX={Variables.Spacing.s2XSmall}
+    cells={[
+      {
+        size: { min: 6 },
+        content: <div style={style}>spacing-2xsmall gutters</div>
+      },
+      {
+        size: { min: 6 },
+        content: <div style={style}/>
+      }
+    ]}
+  />
+  <GridLayout
+    gutterMarginX={Variables.Spacing.sMedium}
+    cells={[
+      {
+        size: { min: 6 },
+        content: <div style={style}>spacing-medium gutters</div>
+      },
+      {
+        size: { min: 6 },
+        content: <div style={style}/>
+      }
+    ]}
+  />
+  <GridLayout
+    gutterMarginX={Variables.Layout.lLarge}
+    cells={[
+      {
+        size: { min: 6 },
+        content: <div style={style}>layout-large gutters</div>
+      },
+      {
+        size: { min: 6 },
+        content: <div style={style}/>
+      }
+    ]}
+  />
+</>
 ```
 
 #### Offsets
