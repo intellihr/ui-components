@@ -48,12 +48,7 @@
     "react-tooltip": "3.6.1",
     "react-transition-group": "2.4.0",
     "utility-types": "2.0.0",
-    "uuid": "3.2.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.0.0-beta.51",
-    "@epegzz/sass-vars-loader": "3.2.3",
-    "@intellihr/standard-tslint": "0.0.3",
+    "uuid": "3.2.1",
     "@types/capitalize": "1.0.1",
     "@types/chart.js": "2.7.14",
     "@types/classnames": "2.2.3",
@@ -78,7 +73,12 @@
     "@types/react-test-renderer": "16.0.1",
     "@types/react-tooltip": "^3.3.5",
     "@types/react-transition-group": "^2.0.11",
-    "@types/uuid": "^3.4.3",
+    "@types/uuid": "^3.4.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.51",
+    "@epegzz/sass-vars-loader": "3.2.3",
+    "@intellihr/standard-tslint": "0.0.3",
     "awesome-typescript-loader": "^5.2.0",
     "babel-jest": "^23.0.1",
     "babel-loader": "^7.1.4",
