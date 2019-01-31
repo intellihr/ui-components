@@ -10,7 +10,6 @@ import {
   VerticalAlignment
 } from './style'
 import { Props } from '../../../common'
-import { StyledButtonGroup } from '../../Buttons/ButtonGroup/style'
 
 interface ICellSizeDefinition {
   min?: number | 'auto' | 'shrink',
@@ -61,16 +60,15 @@ interface IGridLayoutProps {
 export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
   public static HorizontalAlignment = HorizontalAlignment
   public static VerticalAlignment = VerticalAlignment
-  public static GutterSize = GutterSize
 
   public static defaultProps: Partial<IGridLayoutProps> = {
     gridColumns: 12,
     horizontalAlignment: HorizontalAlignment.Left,
     verticalAlignment: VerticalAlignment.Stretch,
-    gutterMarginX: GutterSize.None,
-    gutterMarginY: GutterSize.None,
-    gutterPaddingX: GutterSize.None,
-    gutterPaddingY: GutterSize.None
+    gutterMarginX: 'none',
+    gutterMarginY: 'none',
+    gutterPaddingX: 'none',
+    gutterPaddingY: 'none'
   }
 
   private static breakpointOrder = ['min', 'tablet', 'desktop', 'bigDesktop']

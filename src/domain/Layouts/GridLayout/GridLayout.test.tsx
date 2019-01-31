@@ -1,6 +1,7 @@
 import { mount } from 'enzyme'
 import React from 'react'
 
+import { Variables } from '../../../common'
 import { GridLayout } from './GridLayout'
 
 describe('<GridLayout />', () => {
@@ -9,8 +10,8 @@ describe('<GridLayout />', () => {
       <GridLayout
         horizontalAlignment={GridLayout.HorizontalAlignment.Center}
         verticalAlignment={GridLayout.VerticalAlignment.Stretch}
-        gutterMarginX={GridLayout.GutterSize.Medium}
-        gutterPaddingY={GridLayout.GutterSize.Large}
+        gutterMarginX={Variables.Spacing.s2XSmall}
+        gutterPaddingY={Variables.Layout.l2XSmall}
         cells={[
           {
             size: { min: 10 },

@@ -16,12 +16,7 @@ enum VerticalAlignment {
   Stretch = 'stretch'
 }
 
-enum GutterSize {
-  None = 'none',
-  Small = 'small',
-  Medium = 'medium',
-  Large = 'large'
-}
+type GutterSize = 'none' | Variables.Spacing | Variables.Layout
 
 interface IStyledGridLayoutProps {
   horizontalAlignment: HorizontalAlignment,
@@ -55,16 +50,11 @@ interface IStyledCellProps {
 }
 
 function getPxForGutterSize(size: GutterSize) {
-  switch (size) {
-    case GutterSize.Large:
-      return 32
-    case GutterSize.Medium:
-      return 24
-    case GutterSize.Small:
-      return 16
+  if (size === 'none') {
+    return 0
   }
 
-  return 0
+  return size
 }
 
 function getPropertiesForHorizontalAlignment(alignment: HorizontalAlignment) {
