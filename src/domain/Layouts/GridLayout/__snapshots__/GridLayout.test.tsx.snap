@@ -1,0 +1,485 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GridLayout /> should render a GridLayout 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-left: -4px;
+  margin-right: -4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.c1 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.c2 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.c3 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.c4 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.c5 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+@media only screen and (max-width:639px) {
+  .c1 {
+    width: calc(83.33333333333333% - 8px);
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c1 {
+    width: calc(83.33333333333333% - 8px);
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c1 {
+    width: calc(83.33333333333333% - 8px);
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c1 {
+    width: calc(83.33333333333333% - 8px);
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c2 {
+    width: calc(16.666666666666668% - 8px);
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c2 {
+    width: calc(16.666666666666668% - 8px);
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c2 {
+    width: calc(16.666666666666668% - 8px);
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c2 {
+    width: calc(16.666666666666668% - 8px);
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c3 {
+    -webkit-flex: 1 1 0px;
+    -ms-flex: 1 1 0px;
+    flex: 1 1 0px;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c3 {
+    width: calc(33.333333333333336% - 8px);
+    margin-left: calc(16.666666666666668% + 4px);
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c3 {
+    width: calc(25% - 8px);
+    margin-left: calc(16.666666666666668% + 4px);
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c3 {
+    width: calc(25% - 8px);
+    margin-left: calc(16.666666666666668% + 4px);
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c4 {
+    -webkit-flex: 1 1 0px;
+    -ms-flex: 1 1 0px;
+    flex: 1 1 0px;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c4 {
+    width: calc(33.333333333333336% - 8px);
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c4 {
+    width: calc(50% - 8px);
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c4 {
+    width: calc(50% - 8px);
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c5 {
+    -webkit-flex: 1 1 0px;
+    -ms-flex: 1 1 0px;
+    flex: 1 1 0px;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c5 {
+    -webkit-flex: 1 1 0px;
+    -ms-flex: 1 1 0px;
+    flex: 1 1 0px;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c5 {
+    -webkit-flex: 1 1 0px;
+    -ms-flex: 1 1 0px;
+    flex: 1 1 0px;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c5 {
+    -webkit-flex: 1 1 0px;
+    -ms-flex: 1 1 0px;
+    flex: 1 1 0px;
+    width: auto;
+  }
+}
+
+<GridLayout
+  cells={
+    Array [
+      Object {
+        "content": <div>
+          1
+        </div>,
+        "size": Object {
+          "min": 10,
+        },
+      },
+      Object {
+        "content": <div>
+          2
+        </div>,
+        "size": Object {
+          "min": 2,
+        },
+      },
+      Object {
+        "content": <div>
+          3
+        </div>,
+        "offset": Object {
+          "tablet": 2,
+        },
+        "size": Object {
+          "desktop": 3,
+          "tablet": 4,
+        },
+      },
+      Object {
+        "content": <div>
+          4
+        </div>,
+        "size": Object {
+          "desktop": 6,
+          "tablet": 4,
+        },
+      },
+      Object {
+        "content": <div>
+          5
+        </div>,
+        "size": "auto",
+      },
+    ]
+  }
+  gridColumns={12}
+  gutterMarginX={4}
+  gutterMarginY="none"
+  gutterPaddingX="none"
+  gutterPaddingY={16}
+  horizontalAlignment="center"
+  verticalAlignment="stretch"
+>
+  <styled.div
+    data-component-type="grid_layout"
+    gutterMarginX={4}
+    gutterMarginY="none"
+    horizontalAlignment="center"
+    verticalAlignment="stretch"
+  >
+    <div
+      className="c0"
+      data-component-type="grid_layout"
+    >
+      <styled.div
+        data-component-type="grid_layout_cell"
+        gridColumns={12}
+        gutterMarginX={4}
+        gutterMarginY="none"
+        gutterPaddingX="none"
+        gutterPaddingY={16}
+        key="0"
+        offsetsForBreakpoints={
+          Object {
+            "bigDesktop": 0,
+            "desktop": 0,
+            "min": 0,
+            "tablet": 0,
+          }
+        }
+        sizesForBreakpoints={
+          Object {
+            "bigDesktop": 10,
+            "desktop": 10,
+            "min": 10,
+            "tablet": 10,
+          }
+        }
+      >
+        <div
+          className="c1"
+          data-component-type="grid_layout_cell"
+        >
+          <div>
+            1
+          </div>
+        </div>
+      </styled.div>
+      <styled.div
+        data-component-type="grid_layout_cell"
+        gridColumns={12}
+        gutterMarginX={4}
+        gutterMarginY="none"
+        gutterPaddingX="none"
+        gutterPaddingY={16}
+        key="1"
+        offsetsForBreakpoints={
+          Object {
+            "bigDesktop": 0,
+            "desktop": 0,
+            "min": 0,
+            "tablet": 0,
+          }
+        }
+        sizesForBreakpoints={
+          Object {
+            "bigDesktop": 2,
+            "desktop": 2,
+            "min": 2,
+            "tablet": 2,
+          }
+        }
+      >
+        <div
+          className="c2"
+          data-component-type="grid_layout_cell"
+        >
+          <div>
+            2
+          </div>
+        </div>
+      </styled.div>
+      <styled.div
+        data-component-type="grid_layout_cell"
+        gridColumns={12}
+        gutterMarginX={4}
+        gutterMarginY="none"
+        gutterPaddingX="none"
+        gutterPaddingY={16}
+        key="2"
+        offsetsForBreakpoints={
+          Object {
+            "bigDesktop": 2,
+            "desktop": 2,
+            "min": 0,
+            "tablet": 2,
+          }
+        }
+        sizesForBreakpoints={
+          Object {
+            "bigDesktop": 3,
+            "desktop": 3,
+            "min": "auto",
+            "tablet": 4,
+          }
+        }
+      >
+        <div
+          className="c3"
+          data-component-type="grid_layout_cell"
+        >
+          <div>
+            3
+          </div>
+        </div>
+      </styled.div>
+      <styled.div
+        data-component-type="grid_layout_cell"
+        gridColumns={12}
+        gutterMarginX={4}
+        gutterMarginY="none"
+        gutterPaddingX="none"
+        gutterPaddingY={16}
+        key="3"
+        offsetsForBreakpoints={
+          Object {
+            "bigDesktop": 0,
+            "desktop": 0,
+            "min": 0,
+            "tablet": 0,
+          }
+        }
+        sizesForBreakpoints={
+          Object {
+            "bigDesktop": 6,
+            "desktop": 6,
+            "min": "auto",
+            "tablet": 4,
+          }
+        }
+      >
+        <div
+          className="c4"
+          data-component-type="grid_layout_cell"
+        >
+          <div>
+            4
+          </div>
+        </div>
+      </styled.div>
+      <styled.div
+        data-component-type="grid_layout_cell"
+        gridColumns={12}
+        gutterMarginX={4}
+        gutterMarginY="none"
+        gutterPaddingX="none"
+        gutterPaddingY={16}
+        key="4"
+        offsetsForBreakpoints={
+          Object {
+            "bigDesktop": 0,
+            "desktop": 0,
+            "min": 0,
+            "tablet": 0,
+          }
+        }
+        sizesForBreakpoints={
+          Object {
+            "bigDesktop": "auto",
+            "desktop": "auto",
+            "min": "auto",
+            "tablet": "auto",
+          }
+        }
+      >
+        <div
+          className="c5"
+          data-component-type="grid_layout_cell"
+        >
+          <div>
+            5
+          </div>
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
+</GridLayout>
+`;

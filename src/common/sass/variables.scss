@@ -100,6 +100,17 @@ $fw-normal:              400;
 $fw-heavy:               600;
 
 // --------------
+// Layout
+// --------------
+$layout-2xsmall:          16px;
+$layout-xsmall:           24px;
+$layout-small:            32px;
+$layout-medium:           40px;
+$layout-large:            64px;
+$layout-xlarge:           80px;
+$layout-2xlarge:         120px;
+
+// --------------
 // Line Heights
 // --------------
 $lh-xsmall:               18px;
@@ -108,6 +119,19 @@ $lh-body:                 24px;
 $lh-heading:              24px;
 $lh-display:              32px;
 $lh-display-large:        44px;
+
+// --------------
+// Spacing
+// --------------
+$spacing-3xsmall:          2px;
+$spacing-2xsmall:          4px;
+$spacing-xsmall:           8px;
+$spacing-small:           12px;
+$spacing-medium:          16px;
+$spacing-large:           24px;
+$spacing-xlarge:          32px;
+$spacing-2xlarge:         40px;
+$spacing-3xlarge:         48px;
 
 // --------------
 // Style

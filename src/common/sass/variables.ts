@@ -110,6 +110,16 @@ namespace Variables {
     fwHeavy =          600
   }
 
+  export enum Layout {
+    l2XSmall =    16,
+    lXSmall =     24,
+    lSmall =      32,
+    lMedium =     40,
+    lLarge =      64,
+    lXLarge =     80,
+    l2XLarge =   120
+  }
+
   export enum LineHeight {
     lhXSmall =          18,
     lhSmall =           20,
@@ -117,6 +127,18 @@ namespace Variables {
     lhHeading =         24,
     lhDisplay =         32,
     lhDisplayLarge =    44
+  }
+
+  export enum Spacing {
+    s3XSmall =    2,
+    s2XSmall =    4,
+    sXSmall =     8,
+    sSmall =     12,
+    sMedium =    16,
+    sLarge =     24,
+    sXLarge =    32,
+    s2XLarge =   40,
+    s3XLarge =   48
   }
 
   export enum Style {

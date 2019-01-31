@@ -54,8 +54,6 @@ function styleForTruncatedText (): any {
 function styleForLineBreakText (): any {
   return css`
     overflow-wrap: break-word;
-    word-break: break-all;
-    word-break: break-word;
     word-wrap: break-word;
   `
 }
