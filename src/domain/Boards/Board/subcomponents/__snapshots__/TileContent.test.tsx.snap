@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TileContent /> should render a tile content button 1`] = `
+<styled.div>
+  <styled.div>
+    <div>
+      <styled.img
+        src="dummy string"
+      />
+      <Styled(Text)
+        color="#432DF3"
+        isInline={false}
+        type="body"
+      >
+        dummy button title
+      </Styled(Text)>
+      <Styled(Text)
+        color="#262D33"
+        isInline={false}
+        type="xsmall"
+      >
+        dummy button description
+      </Styled(Text)>
+    </div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<TileContent /> should render a tile content with headings 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div>
+      <Styled(Text)
+        color="#F25749"
+        isUpper={true}
+        textWidth={46}
+        type="display-large"
+      >
+        1
+      </Styled(Text)>
+      <Styled(Text)
+        color="#F25749"
+        isUpper={true}
+        type="heading"
+      >
+        dummy heading
+      </Styled(Text)>
+    </styled.div>
+    <styled.div>
+      <Styled(Text)
+        color="#262D33"
+        isUpper={true}
+        textWidth={46}
+        type="display"
+      >
+        35
+      </Styled(Text)>
+      <Styled(Text)
+        color="#262D33"
+        isUpper={true}
+        type="small"
+      >
+        dummy subheading
+      </Styled(Text)>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<TileContent /> should render a tile content with label 1`] = `
+<styled.div>
+  <styled.label>
+    dummy label
+  </styled.label>
+  <styled.div
+    hasTitleLabel={true}
+  >
+    <div />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<TileContent /> should render a tile content with nothing 1`] = `
+<styled.div>
+  <styled.div
+    hasTitleLabel={false}
+  >
+    <div />
+  </styled.div>
+</styled.div>
+`;

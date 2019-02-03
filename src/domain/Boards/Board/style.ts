@@ -5,8 +5,7 @@ const BoardWrapper = styled.div`
   display: flex;
   align-content: stretch; 
   flex-wrap: wrap;
-  margin-right: -24px;
-  margin-bottom: -24px;
+  margin: 0 -24px -24px 0;
 `
 
 const StyledBoardLabel = styled.label`

@@ -2,28 +2,72 @@
 
 exports[`<Tile /> should render a board tile with nothing 1`] = `
 <styled.div
-  isCompact={true}
+  isHoverable={false}
+  onClick={[Function]}
+  tabIndex={0}
+  tileSize="medium"
 />
 `;
 
-exports[`<Tile /> should render a compacted board tile 1`] = `
+exports[`<Tile /> should render a hoverable board tile 1`] = `
 <styled.div
-  isCompact={true}
+  isHoverable={true}
+  onClick={[Function]}
+  tabIndex={0}
+  tileSize="medium"
+/>
+`;
+
+exports[`<Tile /> should render a hoverable board tile with hover label 1`] = `
+<styled.div
+  isHoverable={true}
+  onClick={[Function]}
+  tabIndex={0}
+  tileSize="medium"
 >
-  <styled.label>
-    This is a test tile
-  </styled.label>
-  Children
+  <Styled(Text)
+    color="#432DF3"
+    isUpper={true}
+    type="small"
+  >
+    hover label
+  </Styled(Text)>
 </styled.div>
 `;
 
-exports[`<Tile /> should render a non-compact board tile 1`] = `
+exports[`<Tile /> should render a large board tile 1`] = `
 <styled.div
-  isCompact={false}
->
-  <styled.label>
-    This is a test tile
-  </styled.label>
-  Children
-</styled.div>
+  isHoverable={false}
+  onClick={[Function]}
+  tabIndex={0}
+  tileSize="large"
+/>
+`;
+
+exports[`<Tile /> should render a medium board tile 1`] = `
+<styled.div
+  isHoverable={false}
+  onClick={[Function]}
+  tabIndex={0}
+  tileSize="medium"
+/>
+`;
+
+exports[`<Tile /> should render a small board tile 1`] = `
+<styled.div
+  isHoverable={false}
+  onClick={[Function]}
+  tabIndex={0}
+  tileSize="small"
+/>
+`;
+
+exports[`<Tile /> should render an anchor board tile 1`] = `
+<Styled(UnstyledLink)
+  href="#dummy"
+  isHoverable={false}
+  onClick={[Function]}
+  tabIndex={0}
+  tileSize="medium"
+/>
 `;
