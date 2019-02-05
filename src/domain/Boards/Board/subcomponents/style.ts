@@ -169,6 +169,18 @@ const StyledHoverLabel = styled(Text)`
     bottom: 0;
     transition: .25s ease-out;
   }
+  
+  ${StyledAnchorTile}:hover & {
+    opacity: 1;
+    bottom: 0;
+    transition: .25s ease-out;
+  }
+  
+  @media (max-width: 1033px) {
+    opacity: 1;
+    bottom: 0;
+    transition: .25s ease-out;
+  }
 `
 
 const TileContentWrapper = styled.div`
