@@ -1,6 +1,7 @@
 import { shallow } from 'enzyme'
 import React from 'react'
-import { HintWrapper, HintWrapperType } from './HintWrapper'
+import { Props } from '../../../common'
+import { HintWrapper } from './HintWrapper'
 import { Brick } from '../../Typographies/Brick'
 
 describe('<HintWrapper />', () => {
@@ -34,7 +35,7 @@ describe('<HintWrapper />', () => {
     const wrapper = shallow(
       <HintWrapper
         hint='Never trust a cat'
-        hintType={HintWrapperType.Popover}
+        hintType={Props.HintWrapperType.Popover}
       >
         Hover me for a tip :)
       </HintWrapper>
