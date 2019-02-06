@@ -11,13 +11,15 @@
 #### Currency Text With A Value Hint
 
 ```jsx
+  const { Props } = require('@Common');
+
   <CurrencyText
     value={1000.499}
     prefix='AUD'
     decimalPlace={2}
     valueHintComponentProps={{
       hint: 'Some hint regarding the currency value',
-      hintType: 'popover',
+      hintType: Props.HintWrapperType.Popover,
       width: 250
     }}
    />

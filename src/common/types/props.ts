@@ -68,6 +68,11 @@ namespace Props {
     Vertical = 'vertical',
     Horizontal = 'horizontal'
   }
+
+  export enum HintWrapperType {
+    Popover = 'popover',
+    Tooltip = 'tooltip'
+  }
 }
 
 export {
