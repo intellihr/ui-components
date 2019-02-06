@@ -1,10 +1,10 @@
 import React from 'react'
-import styled, { StyledComponentClass, css } from 'styled-components'
+import styled from 'styled-components'
 import { Variables } from '../../../../common'
 
 const StyledModalHeader = styled.div`
   height: 80px;
-  background-color: ${Variables.Color.n150};
+  background-color: ${Variables.Color.n200};
   padding: 24px;
 `
 
@@ -15,7 +15,7 @@ const StyledModalContent = styled.div`
 
 const StyledModalFooter = styled.div`
   height: 80px;
-  background-color: ${Variables.Color.n150};
+  background-color: ${Variables.Color.n200};
   padding: 20px;
   display: flex;
   justify-content: space-between;
