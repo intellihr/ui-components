@@ -132,10 +132,12 @@ const { Variables } = require('../../../common');
 
 #### Hint (Popover)
 ```jsx
+  const { Props } = require('@Common');
+
   <Text
     hintComponentProps={{
       hint: 'I can be a string or a JSX Element!',
-      hintType: 'popover'
+      hintType: Props.HintWrapperType.Popover
     }}
   >
     Hover me

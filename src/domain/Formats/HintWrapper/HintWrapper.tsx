@@ -4,16 +4,11 @@ import { StyledHintWrapper } from './style'
 import { Tooltip } from '../../Tooltips/Tooltip'
 import { TooltipPopover, ITooltipPopoverToggleComponentProps } from '../../Popovers/TooltipPopover'
 
-enum HintWrapperType {
-  Popover = 'popover',
-  Tooltip = 'tooltip'
-}
-
 interface IHintWrapperProps {
   /** The hint text to display on hover */
   hint: JSX.Element | string
   /** The hint type to display on hover */
-  hintType?: HintWrapperType
+  hintType?: Props.HintWrapperType
   /** The width of the hint object */
   width?: number
   /** The data-component-context */
@@ -22,7 +17,7 @@ interface IHintWrapperProps {
 
 class HintWrapper extends React.PureComponent<IHintWrapperProps> {
   public static defaultProps: Partial<IHintWrapperProps> = {
-    hintType: HintWrapperType.Tooltip
+    hintType: Props.HintWrapperType.Tooltip
   }
 
   public render (): JSX.Element {
@@ -39,7 +34,7 @@ class HintWrapper extends React.PureComponent<IHintWrapperProps> {
       'data-component-context': componentContext
     }
 
-    if (hintType === HintWrapperType.Popover) {
+    if (hintType === Props.HintWrapperType.Popover) {
       return (
         <TooltipPopover
           toggleComponent={this.popoverToggle}
@@ -91,6 +86,5 @@ class HintWrapper extends React.PureComponent<IHintWrapperProps> {
 
 export {
   HintWrapper,
-  HintWrapperType,
   IHintWrapperProps
 }

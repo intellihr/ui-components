@@ -3,7 +3,6 @@ import { mount } from 'enzyme'
 
 import { Text } from './Text'
 import { Variables, Props } from '../../../common'
-import { HintWrapperType } from '../../Formats/HintWrapper'
 
 describe('<Text />', () => {
   it(`should render an element with text`, () => {
@@ -90,7 +89,7 @@ describe('<Text />', () => {
       <Text
         hintComponentProps={{
           hint: 'Test',
-          hintType: HintWrapperType.Popover
+          hintType: Props.HintWrapperType.Popover
         }}
       >
         Hello! I am text with a hint
@@ -106,7 +105,7 @@ describe('<Text />', () => {
       <Text
         hintComponentProps={{
           hint: 'Test',
-          hintType: HintWrapperType.Tooltip
+          hintType: Props.HintWrapperType.Tooltip
       }}
       >
         Hello! I am text with a hint
