@@ -9,6 +9,8 @@ export interface IMenuItemProps {
   label: string
   icon?: JSX.Element
   render?: (label: string, iconContent?: JSX.Element, url?: string) => JSX.Element
+  /** Donot render menu styling if set to true */
+  isUnStyledMenu?: boolean
   className?: string
   isLoading?: boolean
   isOpen?: boolean
@@ -65,12 +67,21 @@ export class MenuItem extends React.PureComponent<IMenuItemProps> {
   get component () {
     const {
       render,
+      isUnStyledMenu,
       url,
       label,
       className
     } = this.props
 
     if (render) {
+      if (isUnStyledMenu) {
+        return(
+          <div className={className}>
+            {render(label, this.icon, url)}
+          </div>
+        )
+      }
+
       return (
         <MenuItemWrapper className={className}>
           {render(label, this.icon, url)}
