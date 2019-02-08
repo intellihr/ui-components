@@ -18,7 +18,7 @@ import {
 
 interface IModularTimelineBodyItem {
   content: JSX.Element | string
-  type?: 'neutral' | 'alert'
+  type?: 'neutral' | 'red' | 'green' | 'cyan'
 }
 
 interface IModularTimelineEvent {

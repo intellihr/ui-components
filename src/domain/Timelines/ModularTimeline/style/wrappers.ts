@@ -13,7 +13,7 @@ interface ITimelineEventWrapperProps {
 }
 
 interface ITimelineEventBodyProps {
-  type: 'neutral' | 'alert'
+  type: 'neutral' | 'red' | 'green' | 'cyan'
 }
 
 const lineColorMap = {
@@ -38,10 +38,20 @@ function spacingForEventSpacing(props: ITimelineEventWrapperProps): number {
 
 function timelineEventBodyStyle(props: ITimelineEventBodyProps): InterpolationValue[] {
   switch (props.type) {
-    case 'alert':
+    case 'red':
       return css`
         background-color: ${Variables.Color.r100};
         border: ${Variables.Color.r200} solid 1px;
+      `
+    case 'green':
+      return css`
+        background-color: ${Variables.Color.g100};
+        border: ${Variables.Color.g300} solid 1px;
+      `
+    case 'cyan':
+      return css`
+        background-color: ${Variables.Color.c100};
+        border: ${Variables.Color.c300} solid 1px;
       `
     default:
       return css`
