@@ -46,7 +46,7 @@ describe('<ModularTimeline />', () => {
               },
               {
                 content: 'More content under the same event',
-                type: 'alert'
+                type: 'red'
               },
               {
                 content: 'Three distinct event body wrappers'
