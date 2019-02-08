@@ -44,6 +44,13 @@
     Display Large Link
   </TextLink>
   <br />
+</div>
+```
+
+#### Inline (false)
+
+```jsx
+<div>
   <TextLink
     textType='body'
     isInline={false}
@@ -57,6 +64,16 @@
     Block TextLink 2
   </TextLink>
 </div>
+```
+
+#### Underline on hover
+```jsx
+  <TextLink
+    href='#'
+    underlineOnHover
+  >
+    I'm underlined when you hover over me!
+  </TextLink>
 ```
 
 #### Using a default component

@@ -8,6 +8,7 @@ import { styleForTypographyType } from '../../Typographies/services/textStyles'
 interface ITextLinkProps extends IAnchorProps {
   textType?: Props.TypographyType
   isInline?: boolean
+  underlineOnHover?: boolean
 }
 
 const styledAnchor: StyledFunction<ITextLinkProps> = styled(({ textType, isInline, ...rest }) => <Anchor {...rest} />)
@@ -31,6 +32,15 @@ const StyledTextLink = styledAnchor`
 
   &:hover {
     color: ${Variables.Color.i500};
+    ${
+      ({ underlineOnHover }: ITextLinkProps) => {
+        if (underlineOnHover) {
+          return css`
+            text-decoration: underline;
+          `
+        }
+      }
+    }
   }
 
   &:active {
