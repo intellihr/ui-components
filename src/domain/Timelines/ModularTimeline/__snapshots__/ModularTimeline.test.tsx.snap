@@ -92,7 +92,7 @@ exports[`<ModularTimeline /> should render a modular timeline 1`] = `
     </styled.div>
     <styled.div
       key="1"
-      type="alert"
+      type="red"
     >
       More content under the same event
     </styled.div>

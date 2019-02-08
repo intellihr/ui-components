@@ -149,7 +149,15 @@ const { Props } = require('@Common');
         },
         {
           content: 'To represent distinct items for a single point in time',
-          type: 'alert'
+          type: 'red'
+        },
+        {
+          content: '',
+          type: 'green'
+        },
+        {
+          content: '',
+          type: 'cyan'
         },
         {
           content: ':)'
@@ -162,7 +170,6 @@ const { Props } = require('@Common');
       timelineLineStyle: 'none',
       bodyContent: <div style={{ height: 200, backgroundColor: 'white' }}>Body also supports any component or html</div>
     },
-    
     {
       title: 'Markers can be used even with lineStyle: none',
       eventType: 'major',
