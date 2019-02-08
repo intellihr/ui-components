@@ -26,4 +26,17 @@ describe('<TextLink />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it('should render a text link with underline on hover', () => {
+    const wrapper = mount(
+      <TextLink
+        href='#'
+        underlineOnHover
+      >
+        Underline text link on hover
+      </TextLink>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })
