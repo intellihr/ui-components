@@ -31,6 +31,14 @@ module.exports = {
           content: 'src/domain/Defaults/Defaults/Defaults.examples.md'
         },
         {
+          name: 'Spacing',
+          content: 'src/domain/Internals/ExampleSpacingVariables/ExampleSpacingVariables.examples.md'
+        },
+        {
+          name: 'Layout',
+          content: 'src/domain/Internals/ExampleLayoutVariables/ExampleLayoutVariables.examples.md'
+        },
+        {
           name: 'Colors',
           content: 'src/domain/Internals/ExampleColorGrid/ExampleColorGrid.examples.md'
         },
