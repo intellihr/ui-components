@@ -63,6 +63,7 @@ exports[`<MenuItem /> should render a menu item as a submenu if it has children 
         />
       }
       label="Son"
+      menuWrapperStyle="text"
       overflowWhenOpen="hidden"
       url="www.google.com"
     />
@@ -73,6 +74,7 @@ exports[`<MenuItem /> should render a menu item as a submenu if it has children 
         />
       }
       label="Devil"
+      menuWrapperStyle="text"
       overflowWhenOpen="hidden"
       url="www.google.com"
     />
