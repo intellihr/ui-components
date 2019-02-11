@@ -1,7 +1,14 @@
 import React from 'react'
 import Collapsible from 'react-collapsible'
-import { IconWrapper, LoadingIconWrapper, MenuItemWrapper, SubMenuWrapper, MenuItemLabelWrapper } from './style'
 import { FontAwesomeIcon } from '../../../Icons'
+import {
+  IconWrapper,
+  LoadingIconWrapper,
+  CustomMenuItemWrapper,
+  TextMenuItemWrapper,
+  SubMenuWrapper,
+  MenuItemLabelWrapper
+} from './style'
 
 export interface IMenuItemProps {
   /** HTML id to use for the menu */
@@ -9,8 +16,7 @@ export interface IMenuItemProps {
   label: string
   icon?: JSX.Element
   render?: (label: string, iconContent?: JSX.Element, url?: string) => JSX.Element
-  /** Donot render menu styling if set to true */
-  isUnStyledMenu?: boolean
+  menuWrapperStyle?: 'text' | 'custom'
   className?: string
   isLoading?: boolean
   isOpen?: boolean
@@ -19,8 +25,9 @@ export interface IMenuItemProps {
 }
 
 export class MenuItem extends React.PureComponent<IMenuItemProps> {
-  public static defaultProps: Pick<IMenuItemProps, 'overflowWhenOpen'> = {
-    overflowWhenOpen: 'hidden'
+  public static defaultProps: Partial<IMenuItemProps> = {
+    overflowWhenOpen: 'hidden',
+    menuWrapperStyle: 'text'
   }
 
   get icon (): JSX.Element | undefined {
@@ -67,36 +74,36 @@ export class MenuItem extends React.PureComponent<IMenuItemProps> {
   get component () {
     const {
       render,
-      isUnStyledMenu,
       url,
       label,
-      className
+      className,
+      menuWrapperStyle
     } = this.props
 
     if (render) {
-      if (isUnStyledMenu) {
+      if (menuWrapperStyle === 'custom') {
         return(
-          <div className={className}>
+          <CustomMenuItemWrapper className={className}>
             {render(label, this.icon, url)}
-          </div>
+          </CustomMenuItemWrapper>
         )
       }
 
       return (
-        <MenuItemWrapper className={className}>
+        <TextMenuItemWrapper className={className}>
           {render(label, this.icon, url)}
-        </MenuItemWrapper>
+        </TextMenuItemWrapper>
       )
     }
 
     return (
-      <MenuItemWrapper className={className}>
+      <TextMenuItemWrapper className={className}>
         <a href={url}>
           {this.icon}
           {this.label}
           {this.loadingIcon}
         </a>
-      </MenuItemWrapper>
+      </TextMenuItemWrapper>
     )
   }
 

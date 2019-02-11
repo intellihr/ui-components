@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
 import { Variables } from '../../../../common'
 
-const MenuItemWrapper = styled.li`
+const TextMenuItemWrapper = styled.li`
   &.active {
     a {
       border-left: 3px solid ${Variables.Color.i400};
@@ -59,9 +59,13 @@ const MenuItemLabelWrapper = styled.span`
   white-space: nowrap;
 `
 
+const CustomMenuItemWrapper = styled.span`
+`
+
 export {
   IconWrapper,
-  MenuItemWrapper,
+  TextMenuItemWrapper,
+  CustomMenuItemWrapper,
   LoadingIconWrapper,
   SubMenuWrapper,
   MenuItemLabelWrapper
