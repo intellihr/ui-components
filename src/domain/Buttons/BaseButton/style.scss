@@ -526,17 +526,25 @@ $button-styles: (
   &:disabled,
   &.disabled,
   &[disabled] {
-    background-color: $background-color;
-    border-color: $border-color;
-    color: $text-color;
     cursor: not-allowed;
-    opacity: 1;
+  }
 
-    &:focus,
-    &:hover {
+  &:not(.loading) {
+    &:disabled,
+    &.disabled,
+    &[disabled] {
       background-color: $background-color;
       border-color: $border-color;
       color: $text-color;
+      cursor: not-allowed;
+      opacity: 1;
+
+      &:focus,
+      &:hover {
+        background-color: $background-color;
+        border-color: $border-color;
+        color: $text-color;
+      }
     }
   }
 }

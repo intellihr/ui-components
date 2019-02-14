@@ -111,6 +111,9 @@
       <Button type='secondary-borderless' disabled onClick={() => alert('secondary-borderless')}>
         secondary-borderless
       </Button>
+      <Button type='success-borderless' disabled onClick={() => alert('success-borderless')}>
+        success-borderless
+      </Button>
       <Button type='warning-borderless' disabled onClick={() => alert('warning-borderless')}>
         warning-borderless
       </Button>
@@ -177,6 +180,9 @@
       </Button>
       <Button type='secondary-hollow' disabled onClick={() => alert('secondary-hollow')}>
         secondary-hollow
+      </Button>
+      <Button type='success-hollow' disabled onClick={() => alert('success-hollow')}>
+        success-hollow
       </Button>
       <Button type='warning-hollow' disabled onClick={() => alert('warning-hollow')}>
         warning-hollow
@@ -326,6 +332,184 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
         icon={<FontAwesomeIcon type='star' />} 
         size='large' 
       >
+        large
+      </Button>
+    </ButtonGroup>
+  </div>
+</div>
+```
+
+#### Loading buttons
+
+```jsx
+<div>
+  <div>
+    <h3>Enabled</h3>
+    <ButtonGroup>
+      <Button loading type='primary' onClick={() => alert('primary')}>
+        primary
+      </Button>
+      <Button loading type='secondary' onClick={() => alert('secondary')}>
+        secondary
+      </Button>
+      <Button loading type='success' onClick={() => alert('success')}>
+        success
+      </Button>
+      <Button loading type='warning' onClick={() => alert('warning')}>
+        warning
+      </Button>
+      <Button loading type='alert' onClick={() => alert('alert')}>
+        alert
+      </Button>
+      <Button loading type='neutral' onClick={() => alert('neutral')}>
+        neutral
+      </Button>
+      <Button loading type='highlight' onClick={() => alert('highlight')}>
+        highlight
+      </Button>
+      <Button loading type='light' onClick={() => alert('light')}>
+        light
+      </Button>
+      <Button loading type='dark' onClick={() => alert('dark')}>
+        dark
+      </Button>
+    </ButtonGroup>
+  </div>
+  <div>
+    <h3>Disabled</h3>
+    <ButtonGroup>
+      <Button loading type='primary' disabled onClick={() => alert('primary')}>
+        primary
+      </Button>
+      <Button loading type='secondary' disabled onClick={() => alert('secondary')}>
+        secondary
+      </Button>
+      <Button loading type='success' disabled onClick={() => alert('success')}>
+        success
+      </Button>
+      <Button loading type='warning' disabled onClick={() => alert('warning')}>
+        warning
+      </Button>
+      <Button loading type='alert' disabled onClick={() => alert('alert')}>
+        alert
+      </Button>
+      <Button loading type='neutral' disabled onClick={() => alert('neutral')}>
+        neutral
+      </Button>
+      <Button loading type='highlight' disabled onClick={() => alert('highlight')}>
+        highlight
+      </Button>
+      <Button loading type='light' disabled onClick={() => alert('light')}>
+        light
+      </Button>
+      <Button loading type='dark' disabled onClick={() => alert('dark')}>
+        dark
+      </Button>
+    </ButtonGroup>
+  </div>
+  <div>
+    <h3>Borderless Disabled</h3>
+    <ButtonGroup>
+      <Button loading disabled type='primary-borderless' disabled onClick={() => alert('primary-borderless')}>
+        primary-borderless
+      </Button>
+      <Button loading disabled type='secondary-borderless' disabled onClick={() => alert('secondary-borderless')}>
+        secondary-borderless
+      </Button>
+      <Button loading disabled type='success-borderless' disabled onClick={() => alert('success-borderless')}>
+        success-borderless
+      </Button>
+      <Button loading disabled type='warning-borderless' disabled onClick={() => alert('warning-borderless')}>
+        warning-borderless
+      </Button>
+      <Button loading disabled type='alert-borderless' disabled onClick={() => alert('alert-borderless')}>
+        alert-borderless
+      </Button>
+      <Button loading disabled type='neutral-borderless' disabled onClick={() => alert('neutral-borderless')}>
+        neutral-borderless
+      </Button>
+      <Button loading disabled type='highlight-borderless' disabled onClick={() => alert('highlight-borderless')}>
+        highlight-borderless
+      </Button>
+      <Button loading disabled type='light-borderless' disabled onClick={() => alert('light-borderless')}>
+        light-borderless
+      </Button>
+      <Button loading disabled type='dark-borderless' disabled onClick={() => alert('dark-borderless')}>
+        dark-borderless
+      </Button>
+    </ButtonGroup>
+  </div>
+  <div>
+    <h3>Hollow Disabled</h3>
+    <ButtonGroup>
+      <Button loading type='primary-hollow' disabled onClick={() => alert('primary-hollow')}>
+        primary-hollow
+      </Button>
+      <Button loading type='secondary-hollow' disabled onClick={() => alert('secondary-hollow')}>
+        secondary-hollow
+      </Button>
+      <Button loading type='success-hollow' disabled onClick={() => alert('success-hollow')}>
+        success-hollow
+      </Button>
+      <Button loading type='warning-hollow' disabled onClick={() => alert('warning-hollow')}>
+        warning-hollow
+      </Button>
+      <Button loading type='alert-hollow' disabled onClick={() => alert('alert-hollow')}>
+        alert-hollow
+      </Button>
+      <Button loading type='neutral-hollow' disabled onClick={() => alert('neutral-hollow')}>
+        neutral-hollow
+      </Button>
+      <Button loading type='highlight-hollow' disabled onClick={() => alert('highlight-hollow')}>
+        highlight-hollow
+      </Button>
+      <Button loading type='light-hollow' disabled onClick={() => alert('light-hollow')}>
+        light-hollow
+      </Button>
+      <Button loading type='dark-hollow' disabled onClick={() => alert('dark-hollow')}>
+        dark-hollow
+      </Button>
+    </ButtonGroup>
+  </div>
+  <div>
+    <h3>Special Case Diabled</h3>
+    <ButtonGroup>
+      <Button loading type='add' disabled onClick={() => alert('add')}>
+        add
+      </Button>
+      <Button loading type='add-subtle' disabled onClick={() => alert('add-subtle')}>
+        add-subtle
+      </Button>
+      <Button loading type='delete' disabled onClick={() => alert('delete')}>
+        delete
+      </Button>
+      <Button loading type='delete-subtle' disabled onClick={() => alert('delete-subtle')}>
+        delete-subtle
+      </Button>
+      <Button loading type='resolve' disabled onClick={() => alert('resolve')}>
+        resolve
+      </Button>
+      <Button loading type='skip' disabled onClick={() => alert('skip')}>
+        skip
+      </Button>
+      <Button loading type='cancel' disabled onClick={() => alert('cancel')}>
+        cancel
+      </Button>
+      <Button loading type='menu-action' disabled onClick={() => alert('menu-action')}>
+        menu-action
+      </Button>
+    </ButtonGroup>
+  </div>
+  <div>
+    <h3>Sizes</h3>
+    <ButtonGroup>
+      <Button loading size='small' type='primary'  onClick={() => alert('small')}>
+        small
+      </Button>
+      <Button loading size='medium' type='primary'  onClick={() => alert('medium')}>
+        medium
+      </Button>
+      <Button loading size='large' type='primary'  onClick={() => alert('large')}>
         large
       </Button>
     </ButtonGroup>

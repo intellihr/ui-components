@@ -2,6 +2,8 @@ import classNames from 'classnames'
 import React, { Fragment, RefObject } from 'react'
 
 import { Props } from '../../../common'
+import { Spinner } from '../../Spinners/Spinner'
+import { spinnerColour } from './style'
 
 const style = require('./style.scss')
 
@@ -49,13 +51,16 @@ interface IBaseButtonProps {
   onClick?: (event: React.MouseEvent<HTMLElement>) => void,
   /** The data-component-context */
   componentContext?: string
+  /** If true, shows a spinner instead of the regular button content */
+  loading?: boolean
 }
 
 class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
   public static defaultProps: Partial<IBaseButtonProps> = {
     hasLegacyMargins: false,
     type: 'neutral',
-    iconAlignment: 'left'
+    iconAlignment: 'left',
+    loading: false
   }
 
   get buttonClass (): string {
@@ -64,7 +69,8 @@ class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
       type,
       className,
       fullWidth,
-      hasLegacyMargins
+      hasLegacyMargins,
+      loading
     } = this.props
 
     return classNames(
@@ -76,7 +82,8 @@ class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
       ],
       {
         'full-width': fullWidth,
-        'legacy-margins': hasLegacyMargins
+        'legacy-margins': hasLegacyMargins,
+        'loading': loading
       }
     )
   }
@@ -86,8 +93,20 @@ class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
       children,
       icon,
       iconAlignment,
-      componentContext
+      componentContext,
+      loading,
+      type
     } = this.props
+
+    if (loading) {
+      return (
+        <Spinner
+          type='three-bounce'
+          size={10}
+          color={spinnerColour[type!]}
+        />
+      )
+    }
 
     if (icon) {
       const iconComponent = (
@@ -102,22 +121,22 @@ class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
 
       if (iconAlignment === 'right') {
         return (
-          <Fragment>
+          <>
             {children}
             {iconComponent}
-          </Fragment>
+          </>
         )
       }
 
       return (
-        <Fragment>
+        <>
           {iconComponent}
           {children}
-        </Fragment>
+        </>
       )
     }
 
-    return <Fragment>{children}</Fragment>
+    return <>{children}</>
   }
 }
 

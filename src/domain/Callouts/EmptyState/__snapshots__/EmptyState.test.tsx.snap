@@ -43,6 +43,7 @@ exports[`EmptyState Renders successfully with both primaryMessage, secondaryMess
     hasLegacyMargins={false}
     href="www.google.com.au"
     iconAlignment="left"
+    loading={false}
     size="small"
     type="neutral"
   >

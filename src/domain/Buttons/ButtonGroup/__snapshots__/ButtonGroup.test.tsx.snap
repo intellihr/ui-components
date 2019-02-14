@@ -23,6 +23,7 @@ exports[`<ButtonGroup /> should render a button group with buttons and link butt
         hasLegacyMargins={false}
         iconAlignment="left"
         key="button1"
+        loading={false}
         type="neutral"
       >
         <button
@@ -38,6 +39,7 @@ exports[`<ButtonGroup /> should render a button group with buttons and link butt
         hasLegacyMargins={false}
         iconAlignment="left"
         key="button2"
+        loading={false}
         type="neutral"
       >
         <Anchor
