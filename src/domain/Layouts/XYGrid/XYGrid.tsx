@@ -1,5 +1,6 @@
-import React from 'react'
 import classNames from 'classnames'
+import React from 'react'
+
 import { Cell } from './subcomponents/Cell'
 
 const style = require('./style.scss')
@@ -60,7 +61,7 @@ export class XYGrid extends React.PureComponent<IXYGridProps, never> {
     )
   }
 
-  private get classNames(): string {
+  private get classNames (): string {
     const {
       vertical,
       gutterMarginX,

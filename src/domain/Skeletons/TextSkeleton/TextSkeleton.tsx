@@ -1,7 +1,8 @@
 import React from 'react'
-import { TextSkeletonWrapper } from './style'
-import { ISkeletonProps } from '../interfaces'
+
 import { Props } from '../../../common'
+import { ISkeletonProps } from '../interfaces'
+import { TextSkeletonWrapper } from './style'
 
 export interface ITextSkeletonProps extends ISkeletonProps {
   /** Width of the skeleton */

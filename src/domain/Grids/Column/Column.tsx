@@ -1,5 +1,5 @@
+import { isNil, keys, reduce } from 'lodash'
 import React from 'react'
-import { reduce, isNil, keys } from 'lodash'
 import { Col } from 'react-styled-flexboxgrid'
 
 interface IColumnProps {
@@ -13,7 +13,7 @@ class Column extends React.PureComponent<IColumnProps> {
     sm: 12
   }
 
-  get dimensions () : IColumnProps {
+  get dimensions (): IColumnProps {
     const {
       sm,
       md,
@@ -28,8 +28,7 @@ class Column extends React.PureComponent<IColumnProps> {
     return reduce(dimensions,
                  (acc: IColumnProps,
                           key: string,
-                          index: number): IColumnProps =>
-      {
+                          index: number): IColumnProps => {
       const sizeValue = that.props[key as keyof IColumnProps]
 
       if (!isNil(sizeValue)) {
@@ -43,7 +42,8 @@ class Column extends React.PureComponent<IColumnProps> {
 
   public render (): JSX.Element {
     return (
-      <Col type='row'
+      <Col
+        type='row'
         {...this.props}
         {...this.dimensions}
       />

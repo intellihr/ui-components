@@ -1,6 +1,7 @@
 import styled, {css} from 'styled-components'
-import { RadioInput } from '../../Inputs'
+
 import { Props } from '../../../common'
+import { RadioInput } from '../../Inputs'
 
 interface IRadioSetWrapperProps {
   orientation: Props.Orientation
@@ -9,7 +10,7 @@ interface IRadioSetWrapperProps {
 export const RadioSetWrapper = styled.div`
   display: inline-flex;
   max-width: 100%;
-    
+
   ${(props: IRadioSetWrapperProps) => {
     if (props.orientation === Props.Orientation.Vertical) {
       return css`
@@ -18,7 +19,7 @@ export const RadioSetWrapper = styled.div`
     }
     return css`
       flex-direction: row;
-      flex-wrap: wrap;  
+      flex-wrap: wrap;
     `
   }}
 `

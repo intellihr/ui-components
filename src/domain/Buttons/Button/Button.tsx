@@ -1,6 +1,7 @@
 import React from 'react'
-import { BaseButton, IBaseButtonProps } from '../BaseButton'
+
 import { Props } from '../../../common'
+import { BaseButton, IBaseButtonProps } from '../BaseButton'
 
 export interface IButtonProps extends IBaseButtonProps {
   /** Button props passthrough */

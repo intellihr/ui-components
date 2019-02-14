@@ -1,5 +1,6 @@
 import { shallow } from 'enzyme'
 import React from 'react'
+
 import { IntelliIcon } from '@Domain/Icons'
 import { MenuItem } from './MenuItem'
 

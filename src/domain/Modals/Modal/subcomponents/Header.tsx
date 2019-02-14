@@ -1,6 +1,7 @@
 import React from 'react'
-import { Text } from '../../../Typographies/Text'
+
 import { Props } from '../../../../common'
+import { Text } from '../../../Typographies/Text'
 import { StyledModalHeader } from './style'
 
 interface IHeaderProps {

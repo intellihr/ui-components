@@ -1,9 +1,9 @@
 import { mount } from 'enzyme'
 import React from 'react'
 
-import { ButtonGroup } from './ButtonGroup'
 import { Button } from '../Button'
 import { LinkButton } from '../LinkButton'
+import { ButtonGroup } from './ButtonGroup'
 
 describe('<ButtonGroup />', () => {
   it(`should render a button group with buttons and link buttons`, () => {

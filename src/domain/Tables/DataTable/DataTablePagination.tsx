@@ -1,5 +1,5 @@
-import React from 'react'
 import classNames from 'classnames'
+import React from 'react'
 
 export interface IDataTablePaginationState {
   /** Currently selected page - stored here to allow async changes */
@@ -136,7 +136,7 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
     return (
       <button
         key={key}
-        className={classNames({'current': page === pageNo}, 'page-button', '-btn')}
+        className={classNames({current: page === pageNo}, 'page-button', '-btn')}
         onClick={clickHandler}
       >
         {pageNo + 1}

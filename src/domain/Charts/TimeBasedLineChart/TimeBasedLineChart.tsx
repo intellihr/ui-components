@@ -1,6 +1,7 @@
-import React from 'react'
-import { Line, ChartData } from 'react-chartjs-2'
 import { merge } from 'lodash'
+import React from 'react'
+import { ChartData, Line } from 'react-chartjs-2'
+
 import { getTimeBasedLineChartDefaultOptions } from './chartOptions'
 
 export interface IDataSet {
@@ -132,12 +133,14 @@ export class TimeBasedLineChart extends React.PureComponent<ITimeBasedLineChartP
   }
   public render () {
     const { labels, ...props } = this.props
-    return (<BaseLineChart
-      datasets={this.datasets}
-      options={getTimeBasedLineChartDefaultOptions(this.props)}
-      labels={labels}
-      {...props}
-    />)
+    return (
+      <BaseLineChart
+        datasets={this.datasets}
+        options={getTimeBasedLineChartDefaultOptions(this.props)}
+        labels={labels}
+        {...props}
+      />
+    )
   }
 }
 

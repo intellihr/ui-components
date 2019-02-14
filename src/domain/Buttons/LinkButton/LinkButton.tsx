@@ -1,8 +1,9 @@
-import React, { MouseEvent } from 'react'
 import classNames from 'classnames'
+import React, { MouseEvent } from 'react'
+
+import { Props } from '../../../common'
 import { Anchor } from '../../Internals'
 import { BaseButton, IBaseButtonProps } from '../BaseButton'
-import { Props } from '../../../common'
 
 export interface ILinkButtonProps extends IBaseButtonProps {
   /** Weather the button is clickable or not */

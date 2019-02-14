@@ -13,7 +13,7 @@ export interface IAutocompleteLocationInputProps {
   /** onClick event for clicking the manual Option Button */
   onClickManualOptionButton: (event: React.MouseEvent<HTMLElement>) => void
   /** Event for no result for the suggestion */
-  onSuggestNoResults?:(userInput: string) => void
+  onSuggestNoResults?: (userInput: string) => void
   /** If true, sets input to disabled state */
   isDisabled?: boolean
   /** If true, displays reset button and fires callback when clicked */
@@ -32,7 +32,7 @@ export interface IAutocompleteLocationInputState {
 }
 
 export class AutocompleteLocationInput extends React.PureComponent<IAutocompleteLocationInputProps, IAutocompleteLocationInputState> {
-  get resetButton(): JSX.Element | null{
+  get resetButton (): JSX.Element | null {
     const {
       onResetClick
     } = this.props

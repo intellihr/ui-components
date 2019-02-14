@@ -1,4 +1,7 @@
 import React from 'react'
+
+import { Avatar, IAvatarProps } from '../'
+import { Props, Variables } from '../../../common'
 import {
   AvatarContainer,
   AvatarEntityInfo,
@@ -7,9 +10,6 @@ import {
   SecondaryTextWrapper,
   TertiaryTextWrapper
 } from './style'
-import { Avatar, IAvatarProps } from '../'
-import { Text } from '../../Typographies'
-import { Props, Variables } from '../../../common'
 
 export interface IAvatarEntity {
   /** The primary text */
@@ -39,15 +39,17 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
       isCompact
     } = this.props
 
-    return <AvatarContainer>
-      <Avatar
-        initials={initials}
-        imageUrl={imageUrl}
-        statusDot={statusDot}
-        statusIcon={statusIcon}
-        size={isCompact ? Props.AvatarSize.Small : Props.AvatarSize.Medium}
-      />
-    </AvatarContainer>
+    return (
+      <AvatarContainer>
+        <Avatar
+          initials={initials}
+          imageUrl={imageUrl}
+          statusDot={statusDot}
+          statusIcon={statusIcon}
+          size={isCompact ? Props.AvatarSize.Small : Props.AvatarSize.Medium}
+        />
+      </AvatarContainer>
+    )
   }
 
   get primaryText (): JSX.Element {

@@ -1,5 +1,6 @@
 import React from 'react'
-import styled, { css, StyledComponentClass } from 'styled-components'
+import styled, { StyledComponentClass, css } from 'styled-components'
+
 import { Variables } from '../../../common'
 
 const TabStyleConstants = {
@@ -37,7 +38,7 @@ const TabChevronButton = styled.button`
     color: ${Variables.Color.n400};
     cursor: not-allowed;
   }
-  
+
   .fa {
     margin: 0;
   }
@@ -60,7 +61,7 @@ const TabList = styled.ul`
   padding-left: 0;
   position: relative;
   white-space: nowrap;
-  
+
   &:after,
   &:before {
     display: table;
@@ -92,18 +93,18 @@ const TabListItemAnchor = styled.a`
     bottom: -2px;
     content: '';
     height: 2px;
-    left: 0; 
+    left: 0;
     position: absolute;
     transition: all .15s ease-in-out;
     width: 100%;
   }
-  
+
   ${(props: ITabListItemAnchorProps) => props.active && css`&,`}
   &:active,
   &:hover,
   &:focus {
     color: ${Variables.Color.i400};
-  
+
     &:before {
       background-color: ${Variables.Color.i400};
       bottom: 0;

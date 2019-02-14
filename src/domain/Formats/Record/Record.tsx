@@ -1,9 +1,10 @@
+import { isNumber, isString } from 'lodash'
 import React from 'react'
-import { isString, isNumber } from 'lodash'
-import { Text } from '../../Typographies/Text'
-import { FieldLabelWrapper } from './style'
+
 import { Props, Variables } from '../../../common'
 import { ITooltipPopoverProps, TooltipPopover } from '../../Popovers/TooltipPopover'
+import { Text } from '../../Typographies/Text'
+import { FieldLabelWrapper } from './style'
 
 interface IRecordProps {
   /** Label text */
@@ -87,7 +88,7 @@ class Record extends React.PureComponent <IRecordProps> {
     )
   }
 
-  private formattedChild = (child: string | number | JSX.Element) : JSX.Element => {
+  private formattedChild = (child: string | number | JSX.Element): JSX.Element => {
     const {
       componentContext
     } = this.props

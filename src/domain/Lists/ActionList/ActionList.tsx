@@ -1,5 +1,8 @@
+import { cloneDeep, isEmpty, map } from 'lodash'
 import React from 'react'
-import { isEmpty, map, cloneDeep } from 'lodash'
+
+import { TextLink } from '../../Links'
+import { List } from '../List'
 import {
   ActionDescriptionWrapper,
   ActionLinksWrapper,
@@ -7,8 +10,6 @@ import {
   ActionListHeaderWrapper,
   ActionTitleWrapper
 } from './style'
-import { List } from '../List'
-import { TextLink } from '../../Links'
 
 interface IActionLink {
   linkUrl: string
@@ -31,7 +32,6 @@ interface IActionList {
 }
 
 class ActionList extends React.PureComponent<IActionList> {
-
   get actions (): IAction[] {
     const {
       action,
@@ -52,7 +52,7 @@ class ActionList extends React.PureComponent<IActionList> {
   }
 
   get actionsList (): JSX.Element {
-    const actionsList = map(this.actions, (action, index) =>
+    const actionsList = map(this.actions, (action, index) => (
       <div key={`action-${index}`}>
         <ActionTitleWrapper>
           {action.title}
@@ -61,7 +61,7 @@ class ActionList extends React.PureComponent<IActionList> {
         {this.descriptionForAction(action.description)}
         {this.actionLinksForAction(action.actionLinks)}
       </div>
-    )
+    ))
 
     return (
       <List type='ordered'>
@@ -123,7 +123,7 @@ class ActionList extends React.PureComponent<IActionList> {
       return null
     }
 
-    const textLinkComponents = map(actionLinks, (actionLink, index) =>
+    const textLinkComponents = map(actionLinks, (actionLink, index) => (
       <TextLink
         key={`action-link-${index}`}
         href={actionLink.linkUrl}
@@ -132,7 +132,7 @@ class ActionList extends React.PureComponent<IActionList> {
       >
         {actionLink.linkText}
       </TextLink>
-    )
+    ))
 
     return (
       <ActionLinksWrapper>

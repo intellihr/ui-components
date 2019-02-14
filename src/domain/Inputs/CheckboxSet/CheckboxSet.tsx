@@ -1,5 +1,6 @@
-import React, { ChangeEventHandler } from 'react'
 import { map } from 'lodash'
+import React, { ChangeEventHandler } from 'react'
+
 import { Props } from '../../../common'
 import { ICheckboxInputProps } from '../CheckboxInput'
 import { CheckboxSetWrapper, StyledCheckboxInput } from './style'
@@ -30,13 +31,14 @@ export class CheckboxSet extends React.PureComponent<ICheckboxSetProps> {
       useButtonStyle
     } = this.props
 
-    return map(options, (option, idx) =>
-      <StyledCheckboxInput
-        key={id ? `${idx}-${id}` : idx}
-        handleChange={handleChange}
-        isButton={useButtonStyle}
-        {... option}
-      />
+    return map(options, (option, idx) => (
+        <StyledCheckboxInput
+          key={id ? `${idx}-${id}` : idx}
+          handleChange={handleChange}
+          isButton={useButtonStyle}
+          {... option}
+        />
+      )
     )
   }
 

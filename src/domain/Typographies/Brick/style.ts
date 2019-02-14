@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+
 import { Props, Variables } from '../../../common'
 import { styleForTypographyType } from '../services/textStyles'
 
@@ -60,7 +61,7 @@ const BrickWrapper = styled.span<IBrickWrapperProps>`
   display: inline-block;
   padding: 1px 4px;
   word-break: break-word;
-  
+
   ${(props: IBrickWrapperProps) => styleForTypographyType(props.typographyType)}
   ${(props: IBrickWrapperProps) => {
     const color = colors[props.color]

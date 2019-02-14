@@ -1,6 +1,7 @@
 import React from 'react'
 import { Subtract } from 'utility-types'
-import { IDefaults, DefaultsConsumer } from '../Defaults'
+
+import { DefaultsConsumer, IDefaults } from '../Defaults'
 
 interface IWithDefaults {
   defaults: IDefaults

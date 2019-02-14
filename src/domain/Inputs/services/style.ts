@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+
 import { Variables } from '../../../common'
 
 export interface IInputWrapperProps {
@@ -13,13 +14,13 @@ const InputWrapper = styled.div`
   position: relative;
   color: ${Variables.Color.n800};
   width: 100%;
-  
+
   ${(props: IInputWrapperProps) => css`
      input {
         text-indent: ${props.prefixWrapperWidth - wrapperPadding}px;
       }
   `}
- 
+
 `
 const PrefixWrapper = styled.div`
     position: absolute;
@@ -28,7 +29,7 @@ const PrefixWrapper = styled.div`
     padding: ${wrapperPadding}px;
     border: 1px solid transparent;
     line-height: 16px;
-    
+
     .fa {
     color: ${Variables.Color.n400};
     line-height: 21px;
@@ -45,7 +46,7 @@ const DisabledTextWrapper = styled.span`
 
 const StyledInput = styled.input`
   line-height: 16px;
-  
+
   &::-ms-clear {
     display: none;
   }

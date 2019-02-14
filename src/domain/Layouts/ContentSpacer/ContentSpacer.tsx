@@ -1,6 +1,7 @@
 import React from 'react'
-import { StyledContentItem } from './style'
+
 import { Props } from '../../../common/'
+import { StyledContentItem } from './style'
 
 interface IContentSpacerContentItemProps {
   /** Size of the space between this content item and the next */

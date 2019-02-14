@@ -1,4 +1,5 @@
 import moment from 'moment'
+
 import { Variables } from '../../../common'
 import { createGradient } from './createGradient'
 

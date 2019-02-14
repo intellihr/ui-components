@@ -1,5 +1,6 @@
-import React, { Fragment, RefObject } from 'react'
 import classNames from 'classnames'
+import React, { Fragment, RefObject } from 'react'
+
 import { Props } from '../../../common'
 
 const style = require('./style.scss')
@@ -100,16 +101,20 @@ class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
       )
 
       if (iconAlignment === 'right') {
-        return <Fragment>
-          {children}
-          {iconComponent}
-        </Fragment>
+        return (
+          <Fragment>
+            {children}
+            {iconComponent}
+          </Fragment>
+        )
       }
 
-      return <Fragment>
-        {iconComponent}
-        {children}
-      </Fragment>
+      return (
+        <Fragment>
+          {iconComponent}
+          {children}
+        </Fragment>
+      )
     }
 
     return <Fragment>{children}</Fragment>

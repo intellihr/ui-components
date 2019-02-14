@@ -1,7 +1,8 @@
-import React from 'react'
 import { shallow } from 'enzyme'
-import { FilteredOptionList } from './FilteredOptionList'
+import React from 'react'
+
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
+import { FilteredOptionList } from './FilteredOptionList'
 import { IOptionProps } from './OptionList'
 
 const exampleOptions = [

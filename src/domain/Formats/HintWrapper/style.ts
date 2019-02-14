@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+
 import { Variables } from '../../../common'
 
 const StyledHintWrapper = styled.span`

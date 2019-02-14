@@ -1,7 +1,8 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+
 import { Props, Variables } from '../../../common'
-import { styleForTypographyType, styleForTruncatedText } from '../../Typographies/services/textStyles'
+import { styleForTruncatedText, styleForTypographyType } from '../../Typographies/services/textStyles'
 
 interface IAvatarEntityWrapper {
   className?: string,
@@ -64,7 +65,7 @@ const SecondaryTextWrapper = styled.span`
   margin-left: ${(props: ITextWrapper) => props.isCompact ? '5px' : '0px'};
 
   ${styleForTruncatedText()}
-  
+
   ${(props: ITextWrapper) => {
   if (!props.isCompact) {
     return css`

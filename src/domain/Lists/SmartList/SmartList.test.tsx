@@ -1,8 +1,9 @@
 /* tslint:disable:jsx-no-lambda */
-import React from 'react'
 import { mount } from 'enzyme'
-import { SmartList } from './SmartList'
+import React from 'react'
+
 import { ListColumn } from './ListColumn'
+import { SmartList } from './SmartList'
 
 export interface ITestSmartListItem {
   name: string,

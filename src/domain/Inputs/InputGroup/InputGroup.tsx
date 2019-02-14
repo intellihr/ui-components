@@ -1,6 +1,7 @@
 import React from 'react'
-import { Button } from './subcomponents/Button'
+
 import { InputGroupWrapper } from './style'
+import { Button } from './subcomponents/Button'
 
 type InputGroupPosition = 'left' | 'middle' | 'right'
 

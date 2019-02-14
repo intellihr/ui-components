@@ -1,5 +1,6 @@
-import React from 'react'
 import classNames from 'classnames'
+import React from 'react'
+
 import { Region } from './subcomponents/Region'
 const style = require('./style.scss')
 

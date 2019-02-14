@@ -1,32 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
-.c0 {
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-}
-
-.c1 {
-  text-align: right;
-  width: 4rem;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.c2 {
-  position: relative;
-}
-
-.c2::before {
-  content: '';
-  position: absolute;
-  top: 12px;
-  left: 87px;
-  height: calc(100% - 16px);
-  width: 2px;
-  background: #E1E6EB;
-}
-
 .c3 {
   margin: 40px 0;
   position: relative;
@@ -78,6 +52,32 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
 
 .c7 {
   margin-left: 7rem;
+}
+
+.c0 {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.c1 {
+  text-align: right;
+  width: 4rem;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.c2 {
+  position: relative;
+}
+
+.c2::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 87px;
+  height: calc(100% - 16px);
+  width: 2px;
+  background: #E1E6EB;
 }
 
 <VerticalTimeline
@@ -145,32 +145,6 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
 `;
 
 exports[`<VerticalTimeline /> should render a vertical timeline without a year 1`] = `
-.c0 {
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-}
-
-.c1 {
-  text-align: right;
-  width: 4rem;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.c2 {
-  position: relative;
-}
-
-.c2::before {
-  content: '';
-  position: absolute;
-  top: 12px;
-  left: 87px;
-  height: calc(100% - 16px);
-  width: 2px;
-  background: #E1E6EB;
-}
-
 .c3 {
   margin: 40px 0;
   position: relative;
@@ -222,6 +196,32 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
 
 .c7 {
   margin-left: 7rem;
+}
+
+.c0 {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.c1 {
+  text-align: right;
+  width: 4rem;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.c2 {
+  position: relative;
+}
+
+.c2::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 87px;
+  height: calc(100% - 16px);
+  width: 2px;
+  background: #E1E6EB;
 }
 
 <VerticalTimeline>

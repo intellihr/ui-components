@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+
 import { Variables } from '../../../common'
 import { SmartList } from '../../Lists'
 import { StyledExample } from './style'

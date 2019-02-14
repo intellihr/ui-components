@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components'
+
 import { Variables } from '../../common'
 
 const progress = keyframes`

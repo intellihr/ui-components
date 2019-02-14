@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+
 import { Variables } from '../../../../common'
 
 const StyledModalHeader = styled.div`

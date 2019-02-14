@@ -1,7 +1,8 @@
 import React from 'react'
 import styled, { StyledFunction, css } from 'styled-components'
-import { Anchor, IAnchorProps } from '../../Internals/Anchor'
+
 import { Props, Variables } from '../../../common'
+import { Anchor, IAnchorProps } from '../../Internals/Anchor'
 import { styleForTypographyType } from '../../Typographies/services/textStyles'
 
 // tslint:disable-next-line:no-empty-interface
@@ -53,7 +54,7 @@ class TextLink<P> extends React.PureComponent<P & ITextLinkProps> {
     isInline: true
   }
 
-  public render(): JSX.Element {
+  public render (): JSX.Element {
     return (
       <StyledTextLink
         {...this.props}

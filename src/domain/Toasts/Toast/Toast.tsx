@@ -1,5 +1,6 @@
-import React from 'react'
 import classNames from 'classnames'
+import React from 'react'
+
 import { IntelliIcon } from '../../Icons'
 const style = require('./style.scss')
 

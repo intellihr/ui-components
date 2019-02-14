@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+
 import { Utils, Variables } from '../../../common'
 
 enum HorizontalAlignment {
@@ -49,7 +50,7 @@ interface IStyledCellProps {
   gutterPaddingY: GutterSize
 }
 
-function getPxForGutterSize(size: GutterSize) {
+function getPxForGutterSize (size: GutterSize) {
   if (size === 'none') {
     return 0
   }
@@ -57,7 +58,7 @@ function getPxForGutterSize(size: GutterSize) {
   return size
 }
 
-function getPropertiesForHorizontalAlignment(alignment: HorizontalAlignment) {
+function getPropertiesForHorizontalAlignment (alignment: HorizontalAlignment) {
   switch (alignment) {
     case HorizontalAlignment.Left:
       return css`
@@ -82,7 +83,7 @@ function getPropertiesForHorizontalAlignment(alignment: HorizontalAlignment) {
   }
 }
 
-function getPropertiesForVerticalAlignment(alignment: VerticalAlignment) {
+function getPropertiesForVerticalAlignment (alignment: VerticalAlignment) {
   switch (alignment) {
     case VerticalAlignment.Top:
       return css`
@@ -103,7 +104,7 @@ function getPropertiesForVerticalAlignment(alignment: VerticalAlignment) {
   }
 }
 
-function gridStyleForProps(props: IStyledGridLayoutProps) {
+function gridStyleForProps (props: IStyledGridLayoutProps) {
   const xMarginGutterSize = getPxForGutterSize(props.gutterMarginX)
   const yMarginGutterSize = getPxForGutterSize(props.gutterMarginY)
   let leftRightMarginGutters
@@ -134,11 +135,11 @@ function gridStyleForProps(props: IStyledGridLayoutProps) {
 const StyledGridLayout = styled.div<IStyledGridLayoutProps>`
   display: flex;
   flex-flow: row wrap;
-  
+
   ${gridStyleForProps}
 `
 
-function cellStyleForPropsAtBreakpoint(
+function cellStyleForPropsAtBreakpoint (
   props: IStyledCellProps,
   breakpoint: keyof IStyledCellSizes
 ) {
@@ -192,7 +193,7 @@ function cellStyleForPropsAtBreakpoint(
   `
 }
 
-function cellStyleForProps(props: IStyledCellProps) {
+function cellStyleForProps (props: IStyledCellProps) {
   const xPaddingGutterSize = getPxForGutterSize(props.gutterPaddingX)
   const yPaddingGutterSize = getPxForGutterSize(props.gutterPaddingY)
   const xMarginGutterSize = getPxForGutterSize(props.gutterMarginX)
@@ -244,29 +245,29 @@ const StyledCell = styled.div<IStyledCellProps>`
   min-height: 0;
   min-width: 0;
   width: 100%;
-  
+
   ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
     ${(props: IStyledCellProps) => cellStyleForPropsAtBreakpoint(props, 'min')}
   }
-  
+
   ${Utils.mediaQueryBetweenSizes({
     minPx: Variables.Breakpoint.breakpointTablet,
     maxPx: Variables.Breakpoint.breakpointDesktop
   })} {
     ${(props: IStyledCellProps) => cellStyleForPropsAtBreakpoint(props, 'tablet')}
   }
-  
+
   ${Utils.mediaQueryBetweenSizes({
     minPx: Variables.Breakpoint.breakpointDesktop,
     maxPx: Variables.Breakpoint.breakpointBigDesktop
   })} {
     ${(props: IStyledCellProps) => cellStyleForPropsAtBreakpoint(props, 'desktop')}
   }
-  
+
   ${Utils.mediaQueryBetweenSizes({ minPx: Variables.Breakpoint.breakpointBigDesktop })} {
     ${(props: IStyledCellProps) => cellStyleForPropsAtBreakpoint(props, 'bigDesktop')}
   }
-  
+
   ${cellStyleForProps}
 `
 

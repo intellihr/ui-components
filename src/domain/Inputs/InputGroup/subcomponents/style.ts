@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { StyledComponentClass, css } from 'styled-components'
+
 import { Variables } from '../../../../common'
 import { InputGroupPosition } from '../InputGroup'
 
@@ -27,7 +28,7 @@ const InputGroupButton = styled.button`
   min-width: 0;
 
   ${(props: IInputGroupButtonProps) => {
-    /* 
+    /*
       These border radiuses use IMPORTANT because of our current dependency on Foundation's Form styles.
       Please remove the `!important` after this dependency has been removed.
     */
@@ -45,7 +46,7 @@ const InputGroupButton = styled.button`
     cursor: not-allowed;
     background-color: ${Variables.Color.n150};
     color: ${Variables.Color.n400};
-    
+
     &:hover {
       background-color: ${Variables.Color.n150};
     }
@@ -54,26 +55,26 @@ const InputGroupButton = styled.button`
   &:hover {
     background-color: ${Variables.Color.n250};
   }
-  
+
   &:active {
     background-color: ${Variables.Color.n250};
   }
-  
+
   &:focus {
     background-color: ${Variables.Color.n200};
     border-color: ${Variables.Color.i400};
   }
-  
+
   .left-component {
     margin-right: 0.5rem;
     flex: 1 0 auto;
-    
+
     .emoji-mart-emoji {
       height: 20px;
       overflow: hidden;
     }
   }
-  
+
   .right-component {
     margin-left: 0.5rem;
     flex: 1 0 auto;

@@ -1,5 +1,6 @@
 import React from 'react'
-import styled, { css, InterpolationValue, StyledComponentClass } from 'styled-components'
+import styled, { InterpolationValue, StyledComponentClass, css } from 'styled-components'
+
 import { Variables } from '../../../../common'
 
 type TimelineLineStyle = 'solid' | 'dashed' | 'none'
@@ -21,11 +22,11 @@ const lineColorMap = {
   neutral: Variables.Color.n250
 }
 
-function colorForTimeline(props: ITimelineEventWrapperProps): string {
+function colorForTimeline (props: ITimelineEventWrapperProps): string {
   return lineColorMap[props.timelineLineColor]
 }
 
-function spacingForEventSpacing(props: ITimelineEventWrapperProps): number {
+function spacingForEventSpacing (props: ITimelineEventWrapperProps): number {
   switch (props.bottomSpacing) {
     case 'normal':
       return 16
@@ -36,7 +37,7 @@ function spacingForEventSpacing(props: ITimelineEventWrapperProps): number {
   }
 }
 
-function timelineEventBodyStyle(props: ITimelineEventBodyProps): InterpolationValue[] {
+function timelineEventBodyStyle (props: ITimelineEventBodyProps): InterpolationValue[] {
   switch (props.type) {
     case 'red':
       return css`
@@ -69,14 +70,14 @@ const TimelineEventWrapper = styled.div<ITimelineEventWrapperProps>`
   margin-left: 48px;
   margin-bottom: ${spacingForEventSpacing}px;
   position: relative;
-  
+
   ::before {
     content: '';
     position: absolute;
     width: 2px;
     left: -25px;
     top: 12px;
-    border-left: ${colorForTimeline} ${props => props.timelineLineStyle} 2px;
+    border-left: ${colorForTimeline} ${(props) => props.timelineLineStyle} 2px;
     height: calc(100% + ${spacingForEventSpacing}px);
   }
 `
@@ -85,7 +86,7 @@ const TimelineEventBody = styled.div<ITimelineEventBodyProps>`
   ${timelineEventBodyStyle}
   border-radius: ${Variables.Style.borderRadius}px;
   margin-top: 8px;
-  
+
   padding: 12px;
   width: 100%;
 `

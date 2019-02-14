@@ -1,10 +1,11 @@
-import React from 'react'
 import { mount } from 'enzyme'
+import React from 'react'
+
 import { DefaultsProvider } from '../Defaults'
 import { withDefaults } from './withDefaults'
 
 describe('withDefaults', () => {
-  const Consumer = withDefaults(props => {
+  const Consumer = withDefaults((props) => {
     props.mockFn(props.defaults)
     return <div />
   })

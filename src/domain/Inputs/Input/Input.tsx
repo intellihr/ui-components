@@ -1,7 +1,8 @@
-import React, { ChangeEventHandler, RefObject } from 'react'
 import classNames from 'classnames'
-import { isNil, get } from 'lodash'
-import { InputWrapper, PrefixWrapper, DisabledTextWrapper, StyledInput } from '../services/style'
+import { get, isNil } from 'lodash'
+import React, { ChangeEventHandler, RefObject } from 'react'
+
+import { DisabledTextWrapper, InputWrapper, PrefixWrapper, StyledInput } from '../services/style'
 import { InputGroupPosition } from '../InputGroup'
 
 const style = require('./style.scss')

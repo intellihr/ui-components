@@ -1,12 +1,13 @@
-import React from 'react'
-import ReactDOMServer from 'react-dom/server'
-import { Radar, defaults as chartJSDefaults } from 'react-chartjs-2'
-import { forEach, merge, get } from 'lodash'
+import classNames from 'classnames'
 import Color from 'color'
 import { Parser as HtmlToReactParser } from 'html-to-react'
-import classNames from 'classnames'
-import { Legend } from '../../Legends'
+import { forEach, get, merge } from 'lodash'
+import React from 'react'
+import { Radar, defaults as chartJSDefaults } from 'react-chartjs-2'
+import ReactDOMServer from 'react-dom/server'
+
 import { Variables } from '../../../common'
+import { Legend } from '../../Legends'
 
 const style = require('./style.scss')
 

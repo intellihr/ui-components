@@ -1,8 +1,8 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { RadioSet } from './RadioSet'
 import { Props } from '../../../common'
+import { RadioSet } from './RadioSet'
 
 const dummyClick = () => console.log('hey')
 

@@ -1,10 +1,11 @@
 import React from 'react'
+
 import {
-  VerticalTimelineEventWrapper,
+  EventContent,
   EventDate,
   EventDot,
-  EventContent,
-  EventMarkerWrapper
+  EventMarkerWrapper,
+  VerticalTimelineEventWrapper
 } from './style'
 
 interface IVerticalTimelineEventProps {

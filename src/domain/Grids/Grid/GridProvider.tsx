@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid as StyledGrid } from 'react-styled-flexboxgrid'
 import { ThemeProvider } from 'styled-components'
+
 import { Variables } from '../../../common'
 import { pxToRem } from '../../Styles'
 

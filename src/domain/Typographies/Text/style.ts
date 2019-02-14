@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
+
 import { Props, Variables } from '../../../common'
-import { styleForTypographyType, styleForTruncatedText } from '../services/textStyles'
+import { styleForTruncatedText, styleForTypographyType } from '../services/textStyles'
 
 export interface ITextWrapperProps {
   color?: Variables.Color
@@ -82,7 +83,7 @@ export const TextWrapper = styled.span`
   ${(props: ITextWrapperProps) => !props.isInline && css`
     display: block;
   `}
-  
+
   ${(props: ITextWrapperProps) => props.isItalic && css`
     font-style: italic;
   `}

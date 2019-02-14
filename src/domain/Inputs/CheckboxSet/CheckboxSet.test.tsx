@@ -1,8 +1,8 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { CheckboxSet } from './CheckboxSet'
 import { Props } from '../../../common'
+import { CheckboxSet } from './CheckboxSet'
 
 const dummyClick = () => console.log('hey')
 

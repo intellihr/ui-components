@@ -1,5 +1,6 @@
-import { shallow, mount } from 'enzyme'
+import { mount, shallow } from 'enzyme'
 import React from 'react'
+
 import { ScrollingTabGroup } from './ScrollingTabGroup'
 
 describe('<ScrollingTabGroup />', () => {

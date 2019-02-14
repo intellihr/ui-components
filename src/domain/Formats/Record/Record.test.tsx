@@ -1,5 +1,6 @@
 import { mount } from 'enzyme'
 import React from 'react'
+
 import { Record } from './Record'
 
 describe('<Record />', () => {

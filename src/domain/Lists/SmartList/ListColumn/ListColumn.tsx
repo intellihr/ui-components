@@ -1,9 +1,10 @@
-import React from 'react'
-import { isNil, get } from 'lodash'
 import classNames from 'classnames'
+import { get, isNil } from 'lodash'
+import React from 'react'
+
 import { Row } from '../../../Grids/Row'
-import { ListHeader } from '../ListHeader'
 import { TextSkeleton } from '../../../Skeletons'
+import { ListHeader } from '../ListHeader'
 import { ISmartListSkeletonOptions } from '../SmartList'
 
 export interface ISize {
@@ -101,13 +102,15 @@ class ListColumn extends React.PureComponent<IListColumn> {
     } = this.props
 
     const content = (
-      <div className={classNames(
-        'list-column',
-        this.cellClassNames,
-        {
-          'text-right': alignRight
-        }
-      )}>
+      <div
+        className={classNames(
+          'list-column',
+          this.cellClassNames,
+          {
+            'text-right': alignRight
+          }
+        )}
+      >
         {this.cellContent}
       </div>
     )

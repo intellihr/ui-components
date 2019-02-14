@@ -1,8 +1,8 @@
-import React from 'react'
 import { mount } from 'enzyme'
+import React from 'react'
 
-import { CurrencyText } from './CurrencyText'
 import { Props, Variables } from '../../../common'
+import { CurrencyText } from './CurrencyText'
 
 describe('<CurrencyText />', () => {
   it('should render the Currency Text', () => {

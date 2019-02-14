@@ -1,10 +1,11 @@
 import React from 'react'
+
 import { XYGrid } from '../../XYGrid'
 import {
-  StyledTitledSectionDescription,
-  StyledTitledSectionHeaderRow,
+  StyledTitledSection,
   StyledTitledSectionBody,
-  StyledTitledSection
+  StyledTitledSectionDescription,
+  StyledTitledSectionHeaderRow
 } from '../style'
 
 export interface ITitledSectionProps {

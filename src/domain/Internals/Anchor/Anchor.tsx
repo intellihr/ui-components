@@ -1,6 +1,7 @@
-import React from 'react'
 import { isString } from 'lodash'
-import { IDefaults, DefaultsConsumer } from '../../Defaults'
+import React from 'react'
+
+import { DefaultsConsumer, IDefaults } from '../../Defaults'
 
 interface IAnchorProps extends React.HTMLProps<HTMLAnchorElement> {
   /** Alternative prop to render using if you don't want the default */

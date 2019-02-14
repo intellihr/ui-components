@@ -1,14 +1,14 @@
-import React, { Fragment } from 'react'
 import {
-  toLower,
-  map,
-  filter as lodashFilter,
-  every,
   debounce,
-  some,
+  every,
+  filter as lodashFilter,
   get,
-  partial
+  map,
+  partial,
+  some,
+  toLower
 } from 'lodash'
+import React, { Fragment } from 'react'
 
 interface IValueFilter {
   kind: 'valueFilter'
@@ -77,7 +77,7 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
     }
   }
 
-  public render ():  Array<JSX.Element | null> | JSX.Element | string | null {
+  public render (): Array<JSX.Element | null> | JSX.Element | string | null {
     const {
       filteredData: filteredRows,
       errors
@@ -160,7 +160,7 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
     }
   }
 
-  private performFiltersOnRowData = (data: any[]) : any[] => {
+  private performFiltersOnRowData = (data: any[]): any[] => {
     const {
       filters
     } = this.props
@@ -178,7 +178,7 @@ class FilteredList extends React.Component<IFilteredListProps, IFilteredListStat
 
     if (typeof rowData === 'function') {
       return rowData(filters)
-        .then(result => {
+        .then((result) => {
           const filteredData = this.performFiltersOnRowData(result)
           if (filteredData !== this.state.filteredData) {
             this.setState({
