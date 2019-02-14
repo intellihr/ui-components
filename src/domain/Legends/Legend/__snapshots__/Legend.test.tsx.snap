@@ -1,6 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Legend /> should render a legend 1`] = `
+.c1 {
+  width: 1.28571em;
+  color: rgb(0,255,0);
+}
+
+.c1.icon {
+  text-align: center;
+  font-size: .75rem;
+}
+
+.c3 {
+  width: 1.28571em;
+  color: rgb(0,0,255);
+}
+
+.c3.icon {
+  text-align: center;
+  font-size: .75rem;
+}
+
 .c0 {
   margin: 0;
   padding: 0;
@@ -31,26 +51,6 @@ exports[`<Legend /> should render a legend 1`] = `
   margin-left: 5px;
   white-space: nowrap;
   width: 100%;
-}
-
-.c1 {
-  width: 1.28571em;
-  color: rgb(0,255,0);
-}
-
-.c1.icon {
-  text-align: center;
-  font-size: .75rem;
-}
-
-.c3 {
-  width: 1.28571em;
-  color: rgb(0,0,255);
-}
-
-.c3.icon {
-  text-align: center;
-  font-size: .75rem;
 }
 
 <Legend
