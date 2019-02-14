@@ -139,8 +139,7 @@ module.exports = {
             'src/domain/Layouts/ContentSpacer/ContentSpacer',
             'src/domain/Layouts/GridLayout/GridLayout',
             'src/domain/Layouts/PageLayout/PageLayout',
-            'src/domain/Layouts/SectionList/SectionList',
-            'src/domain/Layouts/XYGrid/XYGrid'
+            'src/domain/Layouts/SectionList/SectionList'
           ]
         },
         {
@@ -279,7 +278,8 @@ module.exports = {
     {
       name: 'Deprecated Components',
       components: [
-        'src/domain/Grids/Grid/GridProvider'
+        'src/domain/Grids/Grid/GridProvider',
+        'src/domain/Layouts/XYGrid/XYGrid'
       ]
     }
   ],

@@ -1,3 +1,11 @@
+## Deprecated
+
+**This component is deprecated and should not be used**
+
+Use [GridLayout](#!/GridLayout) instead as it does not rely on Foundation to work.
+
+----
+
 The XYGrid is a wrapper for Foundation's [XY Grid](https://foundation.zurb.com/sites/docs/xy-grid.html) with
 support for being used within react components.
 
