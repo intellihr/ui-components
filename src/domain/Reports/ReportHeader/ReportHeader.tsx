@@ -1,14 +1,15 @@
-import React from 'react'
 import { isEmpty } from 'lodash'
+import React from 'react'
+
 import { FontAwesomeIcon } from '../../Icons'
 import {
-  Wrapper,
-  TitleBox,
+  ArrowIcon,
   HelpContentBox,
   IconBox,
-  ArrowIcon,
   IconText,
-  Title
+  Title,
+  TitleBox,
+  Wrapper
 } from './style'
 
 const InfoIcon = () => (
@@ -176,16 +177,18 @@ export class ReportHeader extends React.PureComponent<IReportHeader, IReportHead
     } = this.props
 
     if (showHelper && !isEmpty(renderHelperContent)) {
-      return (<Wrapper
-        onMouseEnter={this.onMouseEnter}
-        onMouseLeave={this.onMouseLeave}
-        onClick={this.handleClick}
-      >
-        <IconText>
-          {this.text}
-        </IconText>
-        {this.icon}
-      </Wrapper>)
+      return (
+        <Wrapper
+          onMouseEnter={this.onMouseEnter}
+          onMouseLeave={this.onMouseLeave}
+          onClick={this.handleClick}
+        >
+          <IconText>
+            {this.text}
+          </IconText>
+          {this.icon}
+        </Wrapper>
+      )
     }
 
     return null
@@ -197,7 +200,7 @@ export class ReportHeader extends React.PureComponent<IReportHeader, IReportHead
     } = this.props
     return (
       <Title>
-        { renderTitle }
+        {renderTitle}
       </Title>
     )
   }

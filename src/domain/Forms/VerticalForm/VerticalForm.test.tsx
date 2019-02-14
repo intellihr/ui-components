@@ -1,8 +1,8 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { VerticalForm } from './VerticalForm'
 import { Input } from '../../Inputs'
+import { VerticalForm } from './VerticalForm'
 
 describe('<VerticalForm />', () => {
   it(`should render a form`, () => {

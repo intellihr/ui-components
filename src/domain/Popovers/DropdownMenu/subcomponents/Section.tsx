@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { Anchor } from '../../../Internals'
 import { StyledSection } from './style'
 

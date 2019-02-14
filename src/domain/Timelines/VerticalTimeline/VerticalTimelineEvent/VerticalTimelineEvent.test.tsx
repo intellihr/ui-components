@@ -1,7 +1,8 @@
 import { mount } from 'enzyme'
 import React from 'react'
-import { VerticalTimelineEvent } from '../VerticalTimelineEvent'
+
 import { Avatar } from '@Domain/Avatars'
+import { VerticalTimelineEvent } from '../VerticalTimelineEvent'
 
 describe('<VerticalTimelineEvent />', () => {
   it(`should render a vertical timeline event`, () => {

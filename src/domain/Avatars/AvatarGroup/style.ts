@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+
 import { Variables } from '../../../common'
 
 type AvatarGroupSize = 'small' | 'medium'
@@ -60,14 +61,14 @@ const StyledAvatarGroupWrapper = styled.div<IStyledAvatarGroupWrapperProps>`
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  
+
   height: ${radiusForSize}px;
   width: ${totalWidth}px;
-  
-  ${props => (props.isHoverable) && css`
+
+  ${(props) => (props.isHoverable) && css`
     cursor: pointer;
     transition: opacity .1s ease-in;
-    
+
     &:hover {
       opacity: 0.5;
     }
@@ -76,22 +77,22 @@ const StyledAvatarGroupWrapper = styled.div<IStyledAvatarGroupWrapperProps>`
 
 const StyledAvatar = styled.div<IStyledAvatarProps>`
   background-color: ${Variables.Color.n200};
-  border: 1px solid ${props => (props.isOverflow || props.isInitials) ? Variables.Color.n400 : Variables.Color.n100};
+  border: 1px solid ${(props) => (props.isOverflow || props.isInitials) ? Variables.Color.n400 : Variables.Color.n100};
   border-radius: 50%;
-  color: ${props => props.isOverflow ? Variables.Color.n700 : Variables.Color.i400};
+  color: ${(props) => props.isOverflow ? Variables.Color.n700 : Variables.Color.i400};
   overflow: hidden;
-  
+
   font-size: ${fontsizeForSize}px;
   font-weight: 600;
   text-transform: uppercase;
   user-select: none;
-  
-  ${props => (props.isOverflow || props.isInitials) && css`
+
+  ${(props) => (props.isOverflow || props.isInitials) && css`
     align-items: center;
     display: flex;
     justify-content: center;
   `}
-  
+
   position: absolute;
   height: ${radiusForSize}px;
   width: ${radiusForSize}px;

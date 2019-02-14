@@ -1,8 +1,8 @@
-import React from 'react'
 import { mount } from 'enzyme'
+import React from 'react'
 
+import { Props, Variables } from '../../../common'
 import { Text } from './Text'
-import { Variables, Props } from '../../../common'
 
 describe('<Text />', () => {
   it(`should render an element with text`, () => {

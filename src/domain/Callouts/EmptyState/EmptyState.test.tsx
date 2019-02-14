@@ -1,8 +1,8 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { EmptyState } from './EmptyState'
 import { LinkButton } from '../../Buttons/LinkButton'
+import { EmptyState } from './EmptyState'
 
 describe('EmptyState', () => {
   it('Renders default empty state', () => {
@@ -51,10 +51,10 @@ describe('EmptyState', () => {
 
     const wrapper = shallow(
       <EmptyState
-              primaryMessage='This is a primary message'
-              secondaryMessage='This is a secondary message'
-              buttonComponent={buttonComponent}
-            />
+        primaryMessage='This is a primary message'
+        secondaryMessage='This is a secondary message'
+        buttonComponent={buttonComponent}
+      />
     )
     expect(wrapper).toMatchSnapshot()
   })

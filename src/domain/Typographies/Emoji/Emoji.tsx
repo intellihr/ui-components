@@ -1,6 +1,7 @@
-import React from 'react'
-import { Emoji as EmojiMartEmoji } from 'emoji-mart'
 import classNames from 'classnames'
+import { Emoji as EmojiMartEmoji } from 'emoji-mart'
+import React from 'react'
+
 import { Props, Variables } from '../../../common'
 
 const style = require('./style.scss')

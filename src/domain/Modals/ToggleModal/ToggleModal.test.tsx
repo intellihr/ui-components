@@ -1,7 +1,8 @@
+import { mount, shallow } from 'enzyme'
 import React from 'react'
-import { shallow, mount } from 'enzyme'
-import { ToggleModal } from './ToggleModal'
+
 import { Button } from '@Domain/Buttons'
+import { ToggleModal } from './ToggleModal'
 
 describe('<ToggleModal />', () => {
   const trigger = ({toggle}) => (

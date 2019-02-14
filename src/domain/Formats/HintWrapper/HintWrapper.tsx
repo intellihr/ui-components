@@ -1,8 +1,9 @@
 import React from 'react'
+
 import { Props } from '../../../common'
-import { StyledHintWrapper } from './style'
+import { ITooltipPopoverToggleComponentProps, TooltipPopover } from '../../Popovers/TooltipPopover'
 import { Tooltip } from '../../Tooltips/Tooltip'
-import { TooltipPopover, ITooltipPopoverToggleComponentProps } from '../../Popovers/TooltipPopover'
+import { StyledHintWrapper } from './style'
 
 interface IHintWrapperProps {
   /** The hint text to display on hover */

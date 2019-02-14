@@ -1,7 +1,8 @@
 import React from 'react'
 import { Row as StyledRow } from 'react-styled-flexboxgrid'
-import { GridProvider } from '../Grid'
+
 import { Column } from '../Column'
+import { GridProvider } from '../Grid'
 
 class Row extends React.PureComponent<any> {
   public static Column = Column

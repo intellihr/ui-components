@@ -1,5 +1,8 @@
+import { map, toLower } from 'lodash'
 import React from 'react'
-import { toLower, map } from 'lodash'
+
+import { Props } from '../../../common'
+import { Text } from '../../Typographies/Text'
 import {
   OptionListButton,
   OptionListLeftComponent,
@@ -7,8 +10,6 @@ import {
   OptionListWrapper,
   StyledEmptyState
 } from './style'
-import { Text } from '../../Typographies/Text'
-import { Props } from '../../../common'
 
 type OptionClickCallback = (option: IOptionProps) => void
 

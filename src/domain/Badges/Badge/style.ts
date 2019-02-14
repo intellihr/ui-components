@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+
 import { Variables } from '../../../common'
 
 interface IBadgeWrapper {
@@ -52,12 +53,12 @@ const BadgeWrapper = styled.span`
     }
   }}
   }
-  
+
   ${(props: IBadgeWrapper) => props.hasBorder && css`
     border: 1px solid ${Variables.Color.n400};
     box-shadow: 0 2px 2px rgba(0,0,0,0.24);
   `}
-  
+
   border-radius: 50%;
   display: inline-block;
   font-weight: 600;

@@ -1,8 +1,8 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { RadioInput } from './RadioInput'
 import { FontAwesomeIcon } from '@Domain/Icons'
+import { RadioInput } from './RadioInput'
 
 describe('<RadioInput />', () => {
   it(`should render a radio input without button`, () => {

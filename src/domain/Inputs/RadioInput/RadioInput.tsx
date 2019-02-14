@@ -1,6 +1,7 @@
-import React from 'react'
-import { IGenericInputProps, Input } from '../Input'
 import classNames from 'classnames'
+import React from 'react'
+
+import { IGenericInputProps, Input } from '../Input'
 
 const style = require('./style.scss')
 

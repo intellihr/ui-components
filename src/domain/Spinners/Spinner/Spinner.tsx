@@ -1,6 +1,7 @@
-import React from 'react'
+import { FadingCircle, ThreeBounce } from 'better-react-spinkit'
 import classNames from 'classnames'
-import { ThreeBounce, FadingCircle } from 'better-react-spinkit'
+import React from 'react'
+
 import { Variables } from '../../../common'
 import { SpinnerWrapper } from './style'
 

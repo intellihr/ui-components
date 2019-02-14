@@ -38,14 +38,14 @@ const BadgeWrapper = styled.span`
 
 const StyledIcon = styled.i`
    width: 1.28571em;
- 
+
   ${(props: IStyledIconProps) => props.color && css`
     color: ${props.color};
   `}
 
   &.icon {
     text-align: center;
-  
+
   ${(props: IStyledIconProps) => {
     if (props.customSize) {
       return css`

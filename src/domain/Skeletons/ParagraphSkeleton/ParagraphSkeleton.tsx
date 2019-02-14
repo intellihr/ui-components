@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { Props } from '../../../common'
 import { ISkeletonProps } from '../interfaces'
 import { TextSkeleton } from '../TextSkeleton'
@@ -26,26 +27,26 @@ class ParagraphSkeleton extends React.Component<ISkeletonProps> {
     return (
       <div className={className}>
         <TextSkeleton
-            showSkeleton
-            type={Props.TypographyType.DisplayLarge}
-            width={200}
-          />
-          <TextSkeleton
-            showSkeleton
-          />
-          <TextSkeleton
-            showSkeleton
-          />
-          <TextSkeleton
-            showSkeleton
-          />
-          <TextSkeleton
-            showSkeleton
-          />
-          <TextSkeleton
-            showSkeleton
-            width={'50%'}
-          />
+          showSkeleton
+          type={Props.TypographyType.DisplayLarge}
+          width={200}
+        />
+        <TextSkeleton
+          showSkeleton
+        />
+        <TextSkeleton
+          showSkeleton
+        />
+        <TextSkeleton
+          showSkeleton
+        />
+        <TextSkeleton
+          showSkeleton
+        />
+        <TextSkeleton
+          showSkeleton
+          width={'50%'}
+        />
       </div>
     )
   }

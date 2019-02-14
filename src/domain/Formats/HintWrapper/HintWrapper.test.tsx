@@ -1,8 +1,9 @@
 import { shallow } from 'enzyme'
 import React from 'react'
+
 import { Props } from '../../../common'
-import { HintWrapper } from './HintWrapper'
 import { Brick } from '../../Typographies/Brick'
+import { HintWrapper } from './HintWrapper'
 
 describe('<HintWrapper />', () => {
   it('should render a basic hint wrapper', () => {

@@ -1,8 +1,9 @@
 import classNames from 'classnames'
 import React from 'react'
+
+import { Props, Variables } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons'
 import { Text } from '../../Typographies/Text'
-import { Props, Variables } from '../../../common'
 
 const style = require('./StatusIndicator.scss')
 

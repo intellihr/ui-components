@@ -1,6 +1,7 @@
-import React from 'react'
 import { mount } from 'enzyme'
-import { DefaultsProvider, DefaultsConsumer } from './Defaults'
+import React from 'react'
+
+import { DefaultsConsumer, DefaultsProvider } from './Defaults'
 
 describe('<Defaults />', () => {
   it('should provide default values', () => {
@@ -9,7 +10,7 @@ describe('<Defaults />', () => {
     const wrapper = mount(
       <DefaultsProvider>
         <DefaultsConsumer>
-          {defaults => mockFn(defaults)}
+          {(defaults) => mockFn(defaults)}
         </DefaultsConsumer>
       </DefaultsProvider>
     )
@@ -27,7 +28,7 @@ describe('<Defaults />', () => {
         }}
       >
         <DefaultsConsumer>
-          {defaults => mockFn(defaults)}
+          {(defaults) => mockFn(defaults)}
         </DefaultsConsumer>
       </DefaultsProvider>
     )
@@ -51,7 +52,7 @@ describe('<Defaults />', () => {
         }}
       >
         <DefaultsConsumer>
-          {defaults => mockFn(defaults)}
+          {(defaults) => mockFn(defaults)}
         </DefaultsConsumer>
       </DefaultsProvider>
     )
@@ -64,7 +65,7 @@ describe('<Defaults />', () => {
 
     const wrapper = mount(
       <DefaultsConsumer>
-        {defaults => mockFn(defaults)}
+        {(defaults) => mockFn(defaults)}
       </DefaultsConsumer>
     )
 

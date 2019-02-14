@@ -1,14 +1,15 @@
+import classNames from 'classnames'
+import { every, fill, filter, isArray, isEmpty, isNil, map, size, take, times } from 'lodash'
 import React from 'react'
 import uuid from 'uuid'
-import { fill, times, map, take, filter, size, isEmpty, every, isNil, isArray } from 'lodash'
-import classNames from 'classnames'
-import { Row } from '../../Grids/Row'
+
 import { Callout } from '../../Callouts'
+import { Row } from '../../Grids/Row'
+import { ISkeletonProps } from '../../Skeletons'
 import { Spinner } from '../../Spinners'
 import { ListClickableColumn } from './ListClickableColumn'
-import { ListRow } from './ListRow'
 import { ListColumn } from './ListColumn'
-import { ISkeletonProps } from '../../Skeletons'
+import { ListRow } from './ListRow'
 
 const style = require('./style.scss')
 
@@ -136,10 +137,12 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
 
     if (showHeaderRow) {
       return (
-        <div className={classNames(
-          'header-row',
-          {'hide-for-small-only': hideHeaderOnSmall}
-        )}>
+        <div
+          className={classNames(
+            'header-row',
+            {'hide-for-small-only': hideHeaderOnSmall}
+          )}
+        >
           <Row>
             {this.cloneTableElement(0, true)}
           </Row>
@@ -199,14 +202,14 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
       limit
     } = this.props
 
-    let rows: JSX.Element[] = times(this.data.length, i => this.listRow(i))
+    let rows: JSX.Element[] = times(this.data.length, (i) => this.listRow(i))
 
     if (this.canLimitData) {
       if (this.state.paginationButton) {
         rows = take(filter(rows, ['props.hideRow', false]), limit!)
       }
 
-      const visibleRowsCount = size(filter(this.data, item => !item.hide))
+      const visibleRowsCount = size(filter(this.data, (item) => !item.hide))
 
       if (!isNil(limit) && visibleRowsCount > 0 && visibleRowsCount > limit) {
         rows.push(
@@ -296,11 +299,13 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
     }
 
     return (
-      <div className={classNames(
-        style.SmartList,
-        'smart-list',
-        { 'hover-bg': showHoverBg }
-      )}>
+      <div
+        className={classNames(
+          style.SmartList,
+          'smart-list',
+          { 'hover-bg': showHoverBg }
+        )}
+      >
         {this.title}
         {this.headerRow}
 

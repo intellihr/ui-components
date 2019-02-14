@@ -1,7 +1,8 @@
 import React from 'react'
+
+import { StyledSection, StyledSectionWrapper, StyledUnstyledSection } from './style'
 import { AnnotatedSection } from './subcomponents/AnnotatedSection'
 import { TitledSection } from './subcomponents/TitledSection'
-import { StyledSectionWrapper, StyledSection, StyledUnstyledSection } from './style'
 
 export class SectionList extends React.Component {
   public static Section = StyledSection

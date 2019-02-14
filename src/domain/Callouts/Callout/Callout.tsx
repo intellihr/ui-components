@@ -1,6 +1,7 @@
 import classNames from 'classnames'
 import { isEmpty } from 'lodash'
 import React from 'react'
+
 import { Props } from '../../../common'
 
 const style = require('./style.scss')
@@ -116,7 +117,7 @@ export class Callout extends React.Component<ICalloutProps, ICalloutState> {
     return (
       <div
         className={classNames(this.classNames)}
-        ref={node => { this.node = node }}
+        ref={(node) => { this.node = node }}
         data-component-type={Props.ComponentType.Callout}
         data-component-context={componentContext}
       >

@@ -1,6 +1,7 @@
 import React, { ChangeEventHandler } from 'react'
-import { RadioSetWrapper, StyledRadioInput } from './style'
+
 import { Props } from '../../../common'
+import { RadioSetWrapper, StyledRadioInput } from './style'
 
 interface IRadioSetOption {
   label: JSX.Element | string

@@ -1,5 +1,6 @@
 import { shallow } from 'enzyme'
 import React from 'react'
+
 import { SelectInput } from './SelectInput'
 
 describe('<SelectInput />', () => {
@@ -47,7 +48,7 @@ describe('<SelectInput />', () => {
   })
 
   it('should render a select box with promise options', () => {
-    const promiseOptions = () => new Promise(resolve => [
+    const promiseOptions = () => new Promise((resolve) => [
       {
         label: 'option1',
         value: 'value1'

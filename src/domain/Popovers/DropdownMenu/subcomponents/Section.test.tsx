@@ -1,5 +1,6 @@
+import { mount, shallow } from 'enzyme'
 import React from 'react'
-import { shallow, mount } from 'enzyme'
+
 import { FontAwesomeIcon } from '@Domain/Icons'
 import { Section } from './Section'
 
@@ -18,7 +19,7 @@ describe('<Section />', () => {
           text='Item 3'
           href='https://intellihr.com.au'
           componentProps={{
-            style: {'fontWeight': 600}
+            style: {fontWeight: 600}
           }}
         />
         <Section
@@ -76,7 +77,7 @@ describe('<Section />', () => {
         wrapper
           .find('li')
           .find('div')
-          .filterWhere(element => element.text() === 'asdf')
+          .filterWhere((element) => element.text() === 'asdf')
           .exists()
       ).toBeTruthy()
     })

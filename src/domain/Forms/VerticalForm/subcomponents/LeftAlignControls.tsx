@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { StyledLeftAlignControls } from './style'
 
 class LeftAlignControls extends React.PureComponent<{}, never> {

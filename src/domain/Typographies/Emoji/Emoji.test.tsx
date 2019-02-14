@@ -1,7 +1,8 @@
-import React from 'react'
 import { shallow } from 'enzyme'
-import { Emoji } from './Emoji'
+import React from 'react'
+
 import { Props } from '../../../common'
+import { Emoji } from './Emoji'
 
 describe('<Emoji />', () => {
   it('should render the Emoji', () => {

@@ -1,5 +1,6 @@
-import { Props, Variables } from '../../../common'
 import { css } from 'styled-components'
+
+import { Props, Variables } from '../../../common'
 
 function styleForTypographyType (type?: Props.TypographyType): any {
   switch (type) {

@@ -1,5 +1,6 @@
-import { ChartData } from 'react-chartjs-2'
 import { get, toNumber } from 'lodash'
+import { ChartData } from 'react-chartjs-2'
+
 import { IChartTooltipItem, ITimeBasedLineChartProps } from './TimeBasedLineChart'
 
 export const getTimeBasedLineChartDefaultOptions = (props: ITimeBasedLineChartProps) => {
@@ -78,7 +79,7 @@ export const getTimeBasedLineChartDefaultOptions = (props: ITimeBasedLineChartPr
             if (yTickLabels) {
               let tickLabel = null
 
-              Object.keys(yTickLabels).forEach(key => {
+              Object.keys(yTickLabels).forEach((key) => {
                 if (parseInt(key, 10) === parseInt(label, 10)) {
                   tickLabel = yTickLabels[key]
                 }
@@ -107,7 +108,7 @@ export const getTimeBasedLineChartDefaultOptions = (props: ITimeBasedLineChartPr
           let valueLabel = tooltipItem.yLabel
 
           if (yTickLabels) {
-            Object.keys(yTickLabels).forEach(key => {
+            Object.keys(yTickLabels).forEach((key) => {
               if (toNumber(key) === toNumber(get(tooltipItem, ['yLabel'], ''))) {
                 valueLabel = yTickLabels[key]
               }

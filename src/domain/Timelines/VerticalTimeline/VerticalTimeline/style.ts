@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
+
 import { Variables } from '../../../../common'
 
 const VerticalTimelineWrapper = styled.div`

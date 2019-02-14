@@ -1,10 +1,11 @@
 import React from 'react'
-import {
-  VerticalTimelineWrapper,
-  TimelineYearHeading,
-  Timeline
-} from './style'
+
 import { VerticalTimelineEvent } from '../VerticalTimelineEvent'
+import {
+  Timeline,
+  TimelineYearHeading,
+  VerticalTimelineWrapper
+} from './style'
 
 interface IVerticalTimelineProps {
   /** Children VerticalTimelineEvent components to display on the timeline */

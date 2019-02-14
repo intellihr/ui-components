@@ -1,7 +1,8 @@
+import { isString, map } from 'lodash'
 import React from 'react'
-import { map, isString } from 'lodash'
-import { ErrorMessage, FieldWrapper, StyledInputLabel, StyledDescription, StyledTooltipPopover } from './style'
+
 import { ITooltipPopoverProps, TooltipPopover } from '../../../Popovers/TooltipPopover'
+import { ErrorMessage, FieldWrapper, StyledDescription, StyledInputLabel, StyledTooltipPopover } from './style'
 
 interface IVerticalFormFieldProps {
   /** HTML name of the input */

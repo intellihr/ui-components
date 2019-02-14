@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { Tooltip } from '../../../Tooltips'
 
 const style = require('./style.scss')

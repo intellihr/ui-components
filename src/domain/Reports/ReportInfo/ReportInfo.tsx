@@ -1,13 +1,14 @@
-import React from 'react'
 import { isEmpty } from 'lodash'
+import React from 'react'
+
 import { Variables } from '../../../common'
 import {
-  MainBox,
   Col,
+  Description,
   HighLightBox,
   HighLightCaption,
   HighlighImageBlock,
-  Description
+  MainBox
 } from './style'
 
 export interface IHighlightSection {

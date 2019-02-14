@@ -1,5 +1,7 @@
-import React from 'react'
 import { map } from 'lodash'
+import React from 'react'
+
+import { Props } from '../../../common'
 import {
   GutterSize,
   HorizontalAlignment,
@@ -9,7 +11,6 @@ import {
   StyledGridLayout,
   VerticalAlignment
 } from './style'
-import { Props } from '../../../common'
 
 interface ICellSizeDefinition {
   min?: number | 'auto' | 'shrink',

@@ -1,8 +1,8 @@
-import React from 'react'
 import { shallow } from 'enzyme'
+import React from 'react'
 
-import { ModularTimeline } from './ModularTimeline'
 import { Props } from '../../../common'
+import { ModularTimeline } from './ModularTimeline'
 
 describe('<ModularTimeline />', () => {
   it(`should render a modular timeline`, () => {

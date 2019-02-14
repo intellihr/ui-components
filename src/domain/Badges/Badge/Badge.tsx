@@ -1,7 +1,8 @@
 import React from 'react'
+
+import { Variables } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons'
 import { BadgeWrapper } from './style'
-import { Variables } from '../../../common'
 
 interface IBadgeProps {
   /** Label of the badge  */

@@ -1,7 +1,8 @@
-import React from 'react'
 import { shallow } from 'enzyme'
-import { TelephoneText } from './TelephoneText'
+import React from 'react'
+
 import { Props } from '../../../common'
+import { TelephoneText } from './TelephoneText'
 
 describe('<TelephoneText />', () => {
   it('should render the Telephone Text', () => {

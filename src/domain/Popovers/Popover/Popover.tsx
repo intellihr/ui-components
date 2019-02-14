@@ -1,7 +1,8 @@
+import { debounce } from 'lodash'
 import React, { RefObject } from 'react'
 import ReactDOM from 'react-dom'
-import { debounce } from 'lodash'
 import { Transition } from 'react-transition-group'
+
 import { Props } from '../../../common'
 import { StyledPopover } from './style'
 

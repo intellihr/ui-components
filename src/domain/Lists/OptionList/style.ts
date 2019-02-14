@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+
 import { Variables } from '../../../common'
 
 interface IOptionListWrapper {
@@ -20,15 +21,15 @@ const OptionListWrapper = styled.div`
         overflow-y: auto;
       `
     }
-    
+
     return css`max-height: none`
   }}
-  
+
   ${(props: IOptionListWrapper) => {
     if (props.width) {
       return css`width: ${props.width}px;`
     }
-      
+
     return css`width: auto;`
   }}
 `
@@ -58,19 +59,19 @@ const OptionListButton = styled.button`
   ${(props: IOptionListButton) => props.selected && css `
     background-color: ${Variables.Color.i100};
     color: ${Variables.Color.i600};
-    
+
     &:hover,
     &:focus {
       background-color: ${Variables.Color.i100};
     }
   `}
-  
+
   ${(props: IOptionListButton) => props.truncatedText && css`
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   `}
-  
+
   ${(props: IOptionListButton) => props.hidden && css`display: none;`}
 `
 

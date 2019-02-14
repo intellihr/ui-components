@@ -1,8 +1,9 @@
-import React  from 'react'
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import Color from 'color'
-import styled, { StyledComponentClass } from 'styled-components'
+import React from 'react'
 import ReactModal from 'react-modal'
+import styled, { StyledComponentClass } from 'styled-components'
+
 import { Variables } from '../../../common'
 
 interface IReactModalAdapter extends ReactModal.Props {
@@ -80,13 +81,13 @@ const StyledReactModal = styled(ReactModalAdapter)`
     left: 0;
     right: 0;
     top: 0;
-    
+
     @media only screen and (max-width: ${breakpointTablet}px) {
       background-color: ${Variables.Color.n100};
       height: 100%;
       min-height: 100vh;
       padding: 0;
-      
+
       left: 0;
       margin: 0;
       top: 0;
@@ -109,7 +110,7 @@ const StyledReactModal = styled(ReactModalAdapter)`
       padding: 0;
       display: flex;
       flex-direction: column;
-      
+
       .modal-close-button {
         right: 29px;
         top: 33px;
@@ -125,7 +126,7 @@ const StyledReactModal = styled(ReactModalAdapter)`
       min-height: 100vh;
       position: initial;
       transform: none;
-      
+
       // Add a bottom padding in mobile to counteract ios bottom bar
       padding-bottom: 100px;
     }

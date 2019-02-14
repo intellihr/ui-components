@@ -1,5 +1,6 @@
-import { shallow, mount } from 'enzyme'
+import { mount, shallow } from 'enzyme'
 import React from 'react'
+
 import { FormattedText } from './FormattedText'
 
 const sampleMarkdown = `
@@ -70,7 +71,7 @@ Unordered Lists:
  * Wow
  * Eat carrots
  * Eat things which aren't carrots
- 
+
 Ordered/multi-level lists:
 
  1. Nothing wrong with me

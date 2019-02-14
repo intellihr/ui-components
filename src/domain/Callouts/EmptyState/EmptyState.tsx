@@ -1,5 +1,6 @@
-import React from 'react'
 import { isNil } from 'lodash'
+import React from 'react'
+
 import { Props } from '../../../common/types/props'
 
 const style = require('./style.scss')
@@ -21,7 +22,7 @@ export class EmptyState extends React.Component<IEmptyStateProps> {
     secondaryMessage: `Please speak to your system admin or add information.`
   }
 
-  get primaryMessage () : JSX.Element | null {
+  get primaryMessage (): JSX.Element | null {
     const {
       primaryMessage
     } = this.props
@@ -36,7 +37,7 @@ export class EmptyState extends React.Component<IEmptyStateProps> {
     return null
   }
 
-  get secondaryMessage () : JSX.Element | null {
+  get secondaryMessage (): JSX.Element | null {
     const {
       secondaryMessage
     } = this.props

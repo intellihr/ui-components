@@ -1,9 +1,10 @@
 import React, { Fragment, RefObject } from 'react'
 import uuid from 'uuid'
-import { StyledTooltipContent } from './style'
-import { IPopoverPosition, Popover } from '../Popover'
-import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
+
 import { Variables } from '../../../common'
+import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
+import { IPopoverPosition, Popover } from '../Popover'
+import { StyledTooltipContent } from './style'
 const { popoverTrigger } = require('./style.scss')
 
 interface ITooltipPopoverMenuState {
@@ -47,14 +48,14 @@ class TooltipPopover extends React.Component<ITooltipPopoverProps, ITooltipPopov
   public static defaultProps: Partial<ITooltipPopoverProps> = {
     toggleComponent: ({ openMenu, closeMenu, toggleComponentRef, ariaProps }) => (
       <button
-          className={popoverTrigger}
-          onMouseEnter={openMenu}
-          type='button'
-          onMouseLeave={closeMenu}
-          ref={toggleComponentRef}
-          {...ariaProps}
-        >
-          <FontAwesomeIcon type='question-circle-o' color={Variables.Color.n700} />
+        className={popoverTrigger}
+        onMouseEnter={openMenu}
+        type='button'
+        onMouseLeave={closeMenu}
+        ref={toggleComponentRef}
+        {...ariaProps}
+      >
+        <FontAwesomeIcon type='question-circle-o' color={Variables.Color.n700} />
       </button>
     )
   }
@@ -81,7 +82,7 @@ class TooltipPopover extends React.Component<ITooltipPopoverProps, ITooltipPopov
         closeMenu: this.closeMenu,
         toggleComponentRef: this.toggleComponentRef,
         ariaProps: {
-          role: 'button',
+          'role': 'button',
           'aria-expanded': isPopoverOpen,
           'aria-owns': popoverId,
           'aria-haspopup': true
