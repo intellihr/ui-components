@@ -339,38 +339,38 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 </div>
 ```
 
-#### Loading buttons
+#### Spinner buttons
 
 ```jsx
 <div>
   <div>
     <h3>Enabled</h3>
     <ButtonGroup>
-      <Button loading type='primary' onClick={() => alert('primary')}>
+      <Button showSpinner type='primary' onClick={() => alert('primary')}>
         primary
       </Button>
-      <Button loading type='secondary' onClick={() => alert('secondary')}>
+      <Button showSpinner type='secondary' onClick={() => alert('secondary')}>
         secondary
       </Button>
-      <Button loading type='success' onClick={() => alert('success')}>
+      <Button showSpinner type='success' onClick={() => alert('success')}>
         success
       </Button>
-      <Button loading type='warning' onClick={() => alert('warning')}>
+      <Button showSpinner type='warning' onClick={() => alert('warning')}>
         warning
       </Button>
-      <Button loading type='alert' onClick={() => alert('alert')}>
+      <Button showSpinner type='alert' onClick={() => alert('alert')}>
         alert
       </Button>
-      <Button loading type='neutral' onClick={() => alert('neutral')}>
+      <Button showSpinner type='neutral' onClick={() => alert('neutral')}>
         neutral
       </Button>
-      <Button loading type='highlight' onClick={() => alert('highlight')}>
+      <Button showSpinner type='highlight' onClick={() => alert('highlight')}>
         highlight
       </Button>
-      <Button loading type='light' onClick={() => alert('light')}>
+      <Button showSpinner type='light' onClick={() => alert('light')}>
         light
       </Button>
-      <Button loading type='dark' onClick={() => alert('dark')}>
+      <Button showSpinner type='dark' onClick={() => alert('dark')}>
         dark
       </Button>
     </ButtonGroup>
@@ -378,31 +378,31 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
   <div>
     <h3>Disabled</h3>
     <ButtonGroup>
-      <Button loading type='primary' disabled onClick={() => alert('primary')}>
+      <Button showSpinner type='primary' disabled onClick={() => alert('primary')}>
         primary
       </Button>
-      <Button loading type='secondary' disabled onClick={() => alert('secondary')}>
+      <Button showSpinner type='secondary' disabled onClick={() => alert('secondary')}>
         secondary
       </Button>
-      <Button loading type='success' disabled onClick={() => alert('success')}>
+      <Button showSpinner type='success' disabled onClick={() => alert('success')}>
         success
       </Button>
-      <Button loading type='warning' disabled onClick={() => alert('warning')}>
+      <Button showSpinner type='warning' disabled onClick={() => alert('warning')}>
         warning
       </Button>
-      <Button loading type='alert' disabled onClick={() => alert('alert')}>
+      <Button showSpinner type='alert' disabled onClick={() => alert('alert')}>
         alert
       </Button>
-      <Button loading type='neutral' disabled onClick={() => alert('neutral')}>
+      <Button showSpinner type='neutral' disabled onClick={() => alert('neutral')}>
         neutral
       </Button>
-      <Button loading type='highlight' disabled onClick={() => alert('highlight')}>
+      <Button showSpinner type='highlight' disabled onClick={() => alert('highlight')}>
         highlight
       </Button>
-      <Button loading type='light' disabled onClick={() => alert('light')}>
+      <Button showSpinner type='light' disabled onClick={() => alert('light')}>
         light
       </Button>
-      <Button loading type='dark' disabled onClick={() => alert('dark')}>
+      <Button showSpinner type='dark' disabled onClick={() => alert('dark')}>
         dark
       </Button>
     </ButtonGroup>
@@ -410,31 +410,31 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
   <div>
     <h3>Borderless Disabled</h3>
     <ButtonGroup>
-      <Button loading disabled type='primary-borderless' disabled onClick={() => alert('primary-borderless')}>
+      <Button showSpinner disabled type='primary-borderless' disabled onClick={() => alert('primary-borderless')}>
         primary-borderless
       </Button>
-      <Button loading disabled type='secondary-borderless' disabled onClick={() => alert('secondary-borderless')}>
+      <Button showSpinner disabled type='secondary-borderless' disabled onClick={() => alert('secondary-borderless')}>
         secondary-borderless
       </Button>
-      <Button loading disabled type='success-borderless' disabled onClick={() => alert('success-borderless')}>
+      <Button showSpinner disabled type='success-borderless' disabled onClick={() => alert('success-borderless')}>
         success-borderless
       </Button>
-      <Button loading disabled type='warning-borderless' disabled onClick={() => alert('warning-borderless')}>
+      <Button showSpinner disabled type='warning-borderless' disabled onClick={() => alert('warning-borderless')}>
         warning-borderless
       </Button>
-      <Button loading disabled type='alert-borderless' disabled onClick={() => alert('alert-borderless')}>
+      <Button showSpinner disabled type='alert-borderless' disabled onClick={() => alert('alert-borderless')}>
         alert-borderless
       </Button>
-      <Button loading disabled type='neutral-borderless' disabled onClick={() => alert('neutral-borderless')}>
+      <Button showSpinner disabled type='neutral-borderless' disabled onClick={() => alert('neutral-borderless')}>
         neutral-borderless
       </Button>
-      <Button loading disabled type='highlight-borderless' disabled onClick={() => alert('highlight-borderless')}>
+      <Button showSpinner disabled type='highlight-borderless' disabled onClick={() => alert('highlight-borderless')}>
         highlight-borderless
       </Button>
-      <Button loading disabled type='light-borderless' disabled onClick={() => alert('light-borderless')}>
+      <Button showSpinner disabled type='light-borderless' disabled onClick={() => alert('light-borderless')}>
         light-borderless
       </Button>
-      <Button loading disabled type='dark-borderless' disabled onClick={() => alert('dark-borderless')}>
+      <Button showSpinner disabled type='dark-borderless' disabled onClick={() => alert('dark-borderless')}>
         dark-borderless
       </Button>
     </ButtonGroup>
@@ -442,31 +442,31 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
   <div>
     <h3>Hollow Disabled</h3>
     <ButtonGroup>
-      <Button loading type='primary-hollow' disabled onClick={() => alert('primary-hollow')}>
+      <Button showSpinner type='primary-hollow' disabled onClick={() => alert('primary-hollow')}>
         primary-hollow
       </Button>
-      <Button loading type='secondary-hollow' disabled onClick={() => alert('secondary-hollow')}>
+      <Button showSpinner type='secondary-hollow' disabled onClick={() => alert('secondary-hollow')}>
         secondary-hollow
       </Button>
-      <Button loading type='success-hollow' disabled onClick={() => alert('success-hollow')}>
+      <Button showSpinner type='success-hollow' disabled onClick={() => alert('success-hollow')}>
         success-hollow
       </Button>
-      <Button loading type='warning-hollow' disabled onClick={() => alert('warning-hollow')}>
+      <Button showSpinner type='warning-hollow' disabled onClick={() => alert('warning-hollow')}>
         warning-hollow
       </Button>
-      <Button loading type='alert-hollow' disabled onClick={() => alert('alert-hollow')}>
+      <Button showSpinner type='alert-hollow' disabled onClick={() => alert('alert-hollow')}>
         alert-hollow
       </Button>
-      <Button loading type='neutral-hollow' disabled onClick={() => alert('neutral-hollow')}>
+      <Button showSpinner type='neutral-hollow' disabled onClick={() => alert('neutral-hollow')}>
         neutral-hollow
       </Button>
-      <Button loading type='highlight-hollow' disabled onClick={() => alert('highlight-hollow')}>
+      <Button showSpinner type='highlight-hollow' disabled onClick={() => alert('highlight-hollow')}>
         highlight-hollow
       </Button>
-      <Button loading type='light-hollow' disabled onClick={() => alert('light-hollow')}>
+      <Button showSpinner type='light-hollow' disabled onClick={() => alert('light-hollow')}>
         light-hollow
       </Button>
-      <Button loading type='dark-hollow' disabled onClick={() => alert('dark-hollow')}>
+      <Button showSpinner type='dark-hollow' disabled onClick={() => alert('dark-hollow')}>
         dark-hollow
       </Button>
     </ButtonGroup>
@@ -474,28 +474,28 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
   <div>
     <h3>Special Case Diabled</h3>
     <ButtonGroup>
-      <Button loading type='add' disabled onClick={() => alert('add')}>
+      <Button showSpinner type='add' disabled onClick={() => alert('add')}>
         add
       </Button>
-      <Button loading type='add-subtle' disabled onClick={() => alert('add-subtle')}>
+      <Button showSpinner type='add-subtle' disabled onClick={() => alert('add-subtle')}>
         add-subtle
       </Button>
-      <Button loading type='delete' disabled onClick={() => alert('delete')}>
+      <Button showSpinner type='delete' disabled onClick={() => alert('delete')}>
         delete
       </Button>
-      <Button loading type='delete-subtle' disabled onClick={() => alert('delete-subtle')}>
+      <Button showSpinner type='delete-subtle' disabled onClick={() => alert('delete-subtle')}>
         delete-subtle
       </Button>
-      <Button loading type='resolve' disabled onClick={() => alert('resolve')}>
+      <Button showSpinner type='resolve' disabled onClick={() => alert('resolve')}>
         resolve
       </Button>
-      <Button loading type='skip' disabled onClick={() => alert('skip')}>
+      <Button showSpinner type='skip' disabled onClick={() => alert('skip')}>
         skip
       </Button>
-      <Button loading type='cancel' disabled onClick={() => alert('cancel')}>
+      <Button showSpinner type='cancel' disabled onClick={() => alert('cancel')}>
         cancel
       </Button>
-      <Button loading type='menu-action' disabled onClick={() => alert('menu-action')}>
+      <Button showSpinner type='menu-action' disabled onClick={() => alert('menu-action')}>
         menu-action
       </Button>
     </ButtonGroup>
@@ -503,13 +503,13 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
   <div>
     <h3>Sizes</h3>
     <ButtonGroup>
-      <Button loading size='small' type='primary'  onClick={() => alert('small')}>
+      <Button showSpinner size='small' type='primary'  onClick={() => alert('small')}>
         small
       </Button>
-      <Button loading size='medium' type='primary'  onClick={() => alert('medium')}>
+      <Button showSpinner size='medium' type='primary'  onClick={() => alert('medium')}>
         medium
       </Button>
-      <Button loading size='large' type='primary'  onClick={() => alert('large')}>
+      <Button showSpinner size='large' type='primary'  onClick={() => alert('large')}>
         large
       </Button>
     </ButtonGroup>

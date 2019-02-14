@@ -88,7 +88,7 @@ it('should render a button with a spinner', () => {
   const wrapper = mount(
     <Button
       id='test-button-spinner'
-      loading
+      showSpinner
     >
       test
     </Button>

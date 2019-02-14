@@ -52,7 +52,7 @@ interface IBaseButtonProps {
   /** The data-component-context */
   componentContext?: string
   /** If true, shows a spinner instead of the regular button content */
-  loading?: boolean
+  showSpinner?: boolean
 }
 
 class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
@@ -60,7 +60,7 @@ class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
     hasLegacyMargins: false,
     type: 'neutral',
     iconAlignment: 'left',
-    loading: false
+    showSpinner: false
   }
 
   get buttonClass (): string {
@@ -70,7 +70,7 @@ class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
       className,
       fullWidth,
       hasLegacyMargins,
-      loading
+      showSpinner
     } = this.props
 
     return classNames(
@@ -83,7 +83,7 @@ class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
       {
         'full-width': fullWidth,
         'legacy-margins': hasLegacyMargins,
-        'loading': loading
+        'show-spinner': showSpinner
       }
     )
   }
@@ -94,11 +94,11 @@ class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
       icon,
       iconAlignment,
       componentContext,
-      loading,
+      showSpinner,
       type
     } = this.props
 
-    if (loading) {
+    if (showSpinner) {
       return (
         <Spinner
           type='three-bounce'

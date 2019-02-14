@@ -5,8 +5,8 @@ exports[`<ToggleModal /> should render a modal with a button 1`] = `
   <Button
     hasLegacyMargins={false}
     iconAlignment="left"
-    loading={false}
     onClick={[Function]}
+    showSpinner={false}
     type="primary"
   >
     Click Me

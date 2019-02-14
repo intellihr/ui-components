@@ -529,7 +529,7 @@ $button-styles: (
     cursor: not-allowed;
   }
 
-  &:not(.loading) {
+  &:not(.show-spinner) {
     &:disabled,
     &.disabled,
     &[disabled] {

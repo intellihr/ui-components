@@ -10,7 +10,7 @@ exports[`<Button /> should render a button with a simple text 1`] = `
   hasLegacyMargins={false}
   iconAlignment="left"
   id="test-button"
-  loading={false}
+  showSpinner={false}
   type="neutral"
 >
   <button
@@ -32,7 +32,7 @@ exports[`<Button /> should render a button with a size large 1`] = `
   hasLegacyMargins={false}
   iconAlignment="left"
   id="test-button-large"
-  loading={false}
+  showSpinner={false}
   size="large"
   type="neutral"
 >
@@ -55,7 +55,7 @@ exports[`<Button /> should render a button with a type delete-subtle 1`] = `
   hasLegacyMargins={false}
   iconAlignment="left"
   id="test-button-delete-subtle"
-  loading={false}
+  showSpinner={false}
   type="delete-subtle"
 >
   <button
@@ -86,7 +86,7 @@ exports[`<Button /> should render a button with an icon 1`] = `
   }
   iconAlignment="right"
   id="test-button-icon"
-  loading={false}
+  showSpinner={false}
   type="primary-hollow"
 >
   <button
@@ -135,7 +135,7 @@ exports[`<Button /> should render a disabled button 1`] = `
   hasLegacyMargins={false}
   iconAlignment="left"
   id="test-button-disabled"
-  loading={false}
+  showSpinner={false}
   type="neutral"
 >
   <button
@@ -185,11 +185,11 @@ exports[`should render a button with a spinner 1`] = `
   hasLegacyMargins={false}
   iconAlignment="left"
   id="test-button-spinner"
-  loading={true}
+  showSpinner={true}
   type="neutral"
 >
   <button
-    className="button neutral loading"
+    className="button neutral show-spinner"
     data-component-type="button"
   >
     <Spinner
