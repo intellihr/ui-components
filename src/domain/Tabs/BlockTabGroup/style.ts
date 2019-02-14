@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+
 import { Variables } from '../../../common'
 
 interface ITabListItem {
@@ -60,7 +61,7 @@ const TabListItem = styled.li<ITabListItem>`
   &:last-child {
     border-right: 0;
   }
-  
+
   ${(props: ITabListItem) => props.active && css`
     ::after {
       content: '';
@@ -94,7 +95,7 @@ const TabListItemButton = styled.button<ITabListItemButtonProps>`
     background-color: ${Variables.Color.n100};
     color: ${Variables.Color.i400};
   `}
-  
+
   ${(props: ITabListItemButtonProps) => !props.active && css `
     &:hover,
     &:focus {
@@ -102,7 +103,7 @@ const TabListItemButton = styled.button<ITabListItemButtonProps>`
       color: ${Variables.Color.n700};
     }
   `}
-  
+
   ${stylesFortabSizes}
 `
 

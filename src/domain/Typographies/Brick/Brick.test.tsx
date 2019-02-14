@@ -1,7 +1,8 @@
 import { shallow } from 'enzyme'
 import React from 'react'
-import { Brick } from './Brick'
+
 import { Props } from '../../../common'
+import { Brick } from './Brick'
 
 describe('<Brick />', () => {
   it('should render a Brick with default values', () => {

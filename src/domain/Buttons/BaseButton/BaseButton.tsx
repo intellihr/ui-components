@@ -1,6 +1,9 @@
-import React, { Fragment, RefObject } from 'react'
 import classNames from 'classnames'
+import React, { Fragment, RefObject } from 'react'
+
 import { Props } from '../../../common'
+import { Spinner } from '../../Spinners/Spinner'
+import { spinnerColour } from './style'
 
 const style = require('./style.scss')
 
@@ -48,13 +51,16 @@ interface IBaseButtonProps {
   onClick?: (event: React.MouseEvent<HTMLElement>) => void,
   /** The data-component-context */
   componentContext?: string
+  /** If true, shows a spinner instead of the regular button content */
+  showSpinner?: boolean
 }
 
 class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
   public static defaultProps: Partial<IBaseButtonProps> = {
     hasLegacyMargins: false,
     type: 'neutral',
-    iconAlignment: 'left'
+    iconAlignment: 'left',
+    showSpinner: false
   }
 
   get buttonClass (): string {
@@ -63,7 +69,8 @@ class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
       type,
       className,
       fullWidth,
-      hasLegacyMargins
+      hasLegacyMargins,
+      showSpinner
     } = this.props
 
     return classNames(
@@ -75,7 +82,8 @@ class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
       ],
       {
         'full-width': fullWidth,
-        'legacy-margins': hasLegacyMargins
+        'legacy-margins': hasLegacyMargins,
+        'show-spinner': showSpinner
       }
     )
   }
@@ -85,8 +93,20 @@ class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
       children,
       icon,
       iconAlignment,
-      componentContext
+      componentContext,
+      showSpinner,
+      type
     } = this.props
+
+    if (showSpinner) {
+      return (
+        <Spinner
+          type='three-bounce'
+          size={10}
+          color={spinnerColour[type!]}
+        />
+      )
+    }
 
     if (icon) {
       const iconComponent = (
@@ -100,19 +120,23 @@ class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
       )
 
       if (iconAlignment === 'right') {
-        return <Fragment>
-          {children}
-          {iconComponent}
-        </Fragment>
+        return (
+          <>
+            {children}
+            {iconComponent}
+          </>
+        )
       }
 
-      return <Fragment>
-        {iconComponent}
-        {children}
-      </Fragment>
+      return (
+        <>
+          {iconComponent}
+          {children}
+        </>
+      )
     }
 
-    return <Fragment>{children}</Fragment>
+    return <>{children}</>
   }
 }
 

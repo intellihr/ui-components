@@ -1,9 +1,10 @@
+import { CountryCode, parsePhoneNumber } from 'libphonenumber-js'
+import { toLower, toUpper } from 'lodash'
 import React from 'react'
-import { toUpper, toLower } from 'lodash'
-import { parsePhoneNumber, CountryCode } from 'libphonenumber-js'
+
+import { Props, Variables } from '../../../common'
 import { Emoji } from '../Emoji'
 import { Text } from '../Text'
-import { Props, Variables } from '../../../common'
 import { CountryCodeWrapper } from './style'
 
 interface ITelephoneTextProps {
@@ -25,7 +26,7 @@ class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
     showFlag: true
   }
 
-  get flag(): JSX.Element | undefined {
+  get flag (): JSX.Element | undefined {
     const {
       countryCode,
       showFlag,
@@ -42,7 +43,7 @@ class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
     }
   }
 
-  get prefix(): JSX.Element | undefined {
+  get prefix (): JSX.Element | undefined {
     const {
       countryCode,
       showFlag,
@@ -71,7 +72,7 @@ class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
     return undefined
   }
 
-  get phoneNumber(): JSX.Element {
+  get phoneNumber (): JSX.Element {
     const {
       countryCode,
       phoneNumber,
@@ -104,7 +105,7 @@ class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
     )
   }
 
-  public render(): JSX.Element {
+  public render (): JSX.Element {
     return (
       <span>
         {this.prefix}

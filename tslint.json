@@ -1,5 +1,20 @@
 {
   "extends": ["@intellihr/standard-tslint"],
+  "rules": {
+    "intellihr/sorted-imports": [
+      true,
+      {
+        "grouped-imports": true,
+        "import-sources-order": "lowercase-first",
+        "module-source-path": "full",
+        "named-imports-order": "lowercase-last",
+        "path-aliases": [
+          "@Common",
+          "@Domain"
+        ]
+      }
+    ]
+  },
   "linterOptions": {
     "exclude": [
       "node_modules/**/*.ts"

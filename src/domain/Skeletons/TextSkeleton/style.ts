@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { Props } from '../../../common'
 import { styleForTypographyType } from '../../Typographies/services/textStyles'
 import { SkeletonWrapper } from '../style'

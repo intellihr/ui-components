@@ -1,8 +1,9 @@
-import React from 'react'
 import { reduce } from 'lodash'
-import { TextWrapper } from './style'
+import React from 'react'
+
 import { Props, Variables } from '../../../common'
 import { HintWrapper, IHintWrapperProps } from '../../Formats/HintWrapper'
+import { TextWrapper } from './style'
 
 export interface ITextProps {
   /** Text to display */

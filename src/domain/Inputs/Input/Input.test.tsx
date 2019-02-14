@@ -1,8 +1,8 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { Input } from './Input'
 import { Icon } from '@Domain/Icons'
+import { Input } from './Input'
 
 describe('<Input />', () => {
   it(`should render an input`, () => {

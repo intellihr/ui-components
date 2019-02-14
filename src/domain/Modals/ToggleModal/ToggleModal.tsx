@@ -1,5 +1,6 @@
 import React from 'react'
-import { Modal, IBaseModalProps } from '../Modal'
+
+import { IBaseModalProps, Modal } from '../Modal'
 
 interface IToggleArguments {
   toggle: () => void

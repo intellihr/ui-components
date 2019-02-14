@@ -1,11 +1,11 @@
-import React, { MouseEvent } from 'react'
 import {
   isNumber,
   map,
   toNumber
 } from 'lodash'
-import { Props } from '../../../common'
+import React, { MouseEvent } from 'react'
 
+import { Props } from '../../../common'
 import {
   TabGroupContainer,
   TabList,
@@ -75,7 +75,8 @@ export class BlockTabGroup extends React.Component<IBlockTabGroupProps, never> {
             tabSize={tabSize}
             onClick={this.handleOnClick}
             aria-selected={currentTabIndex === index}
-            data-tabindex={index}>
+            data-tabindex={index}
+          >
             {tab.title}
           </TabListItemButton>
         </TabListItem>

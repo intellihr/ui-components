@@ -1,10 +1,12 @@
-import React, { RefObject } from 'react'
 import { FocusTarget } from 'focus-trap'
 import FocusTrap from 'focus-trap-react'
 import { map } from 'lodash'
 import moment, { Moment } from 'moment'
+import React, { RefObject } from 'react'
 import uuid from 'uuid'
+
 import { FontAwesomeIcon } from '../../Icons'
+import { IPopoverPosition, Popover } from '../../Popovers'
 import {
   DefaultDropdownButton,
   StyledContentWrapper,
@@ -12,7 +14,6 @@ import {
   StyledDropdownSectionList
 } from './subcomponents/style'
 import { ISectionProps, Section } from './subcomponents/Section'
-import { Popover, IPopoverPosition } from '../../Popovers'
 
 interface IDropdownMenuState {
   isDropdownOpen: boolean
@@ -148,7 +149,7 @@ class DropdownMenu extends React.Component<IDropdownMenuProps, IDropdownMenuStat
       toggleMenu: this.openMenu,
       toggleComponentRef: this.toggleComponentRef,
       ariaProps: {
-        role: 'button',
+        'role': 'button',
         'aria-expanded': isDropdownOpen,
         'aria-owns': dropdownId,
         'aria-haspopup': true

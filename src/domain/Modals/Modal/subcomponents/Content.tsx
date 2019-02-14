@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { StyledModalContent } from './style'
 
 class Content extends React.PureComponent<{}, never> {

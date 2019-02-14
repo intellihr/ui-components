@@ -1,6 +1,7 @@
 import React from 'react'
-import { LegendWrapper, LegendLabel } from './style'
+
 import { FontAwesomeIcon } from '../../Icons'
+import { LegendLabel, LegendWrapper } from './style'
 
 export interface ILegendDataset {
   colour: string

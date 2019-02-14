@@ -1,10 +1,11 @@
-import React from 'react'
-import Numeral from 'numeral'
 import { padEnd } from 'lodash'
-import { StyledCurrencyText, StyledPrefixText } from './style'
+import Numeral from 'numeral'
+import React from 'react'
+
 import { Props, Variables } from '../../../common'
-import { Text } from '../Text'
 import { IHintWrapperProps } from '../../Formats/HintWrapper'
+import { Text } from '../Text'
+import { StyledCurrencyText, StyledPrefixText } from './style'
 
 interface ICurrencyTextProps {
   /** Monetary value to display */
@@ -16,7 +17,7 @@ interface ICurrencyTextProps {
   /** Currency prefix text type  */
   prefixType?: Props.TypographyType
   /** decimal place to display */
-  decimalPlace?:  number
+  decimalPlace?: number
   /** Vertically aligns the currency prefix and monetary value */
   flexAlign?: boolean
   /** The options for the hint to apply to the value */

@@ -1,8 +1,8 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { CheckboxInput } from './CheckboxInput'
 import { FontAwesomeIcon } from '@Domain/Icons'
+import { CheckboxInput } from './CheckboxInput'
 
 describe('<CheckboxInput />', () => {
   it(`should render a checkbox input without button`, () => {

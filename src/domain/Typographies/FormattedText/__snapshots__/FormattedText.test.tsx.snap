@@ -44,14 +44,6 @@ exports[`<FormattedText /> should not include a custom text renderer 1`] = `
 `;
 
 exports[`<FormattedText /> should render a big block of markdown 1`] = `
-.c0 {
-  white-space: pre-wrap;
-}
-
-.c0 .react-markdown-block > :last-child {
-  margin-bottom: 0;
-}
-
 .c1 {
   -webkit-transition: color .25s ease-out;
   transition: color .25s ease-out;
@@ -76,6 +68,14 @@ exports[`<FormattedText /> should render a big block of markdown 1`] = `
 
 .c1:active {
   color: #0F0080;
+}
+
+.c0 {
+  white-space: pre-wrap;
+}
+
+.c0 .react-markdown-block > :last-child {
+  margin-bottom: 0;
 }
 
 <FormattedText
@@ -148,7 +148,7 @@ Unordered Lists:
  * Wow
  * Eat carrots
  * Eat things which aren't carrots
- 
+
 Ordered/multi-level lists:
 
  1. Nothing wrong with me
@@ -243,7 +243,7 @@ Unordered Lists:
  * Wow
  * Eat carrots
  * Eat things which aren't carrots
- 
+
 Ordered/multi-level lists:
 
  1. Nothing wrong with me
@@ -783,7 +783,7 @@ Ordered/multi-level lists:
             key="list-66-1"
             ordered={false}
             start={null}
-            tight={false}
+            tight={true}
           >
             <ul>
               <ListItem
@@ -807,14 +807,10 @@ Ordered/multi-level lists:
               <ListItem
                 checked={null}
                 key="listItem-68-1"
-                tight={false}
+                tight={true}
               >
                 <li>
-                  <p
-                    key="paragraph-68-4"
-                  >
-                    Eat things which aren't carrots
-                  </p>
+                  Eat things which aren't carrots
                 </li>
               </ListItem>
             </ul>
@@ -913,14 +909,6 @@ Ordered/multi-level lists:
 `;
 
 exports[`<FormattedText /> should render any urls as links 1`] = `
-.c0 {
-  white-space: pre-wrap;
-}
-
-.c0 .react-markdown-block > :last-child {
-  margin-bottom: 0;
-}
-
 .c1 {
   -webkit-transition: color .25s ease-out;
   transition: color .25s ease-out;
@@ -945,6 +933,14 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
 
 .c1:active {
   color: #0F0080;
+}
+
+.c0 {
+  white-space: pre-wrap;
+}
+
+.c0 .react-markdown-block > :last-child {
+  margin-bottom: 0;
 }
 
 <FormattedText

@@ -6,7 +6,7 @@ const MenuWrapper = styled.ul`
   margin: 0;
   list-style: none;
   position: relative;
-  
+
   li {
     display: block;
   }

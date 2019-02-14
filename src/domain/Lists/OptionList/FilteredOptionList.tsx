@@ -1,6 +1,7 @@
 import React from 'react'
+
+import { IGenericInputProps, TextInput } from '../../Inputs'
 import { IOptionListProps, OptionList } from './OptionList'
-import { TextInput, IGenericInputProps } from '../../Inputs'
 
 interface IFilteredOptionListProps extends IOptionListProps {
   textInputProps?: IGenericInputProps

@@ -1,5 +1,6 @@
 import React from 'react'
-import { Input, IGenericInputProps } from '../Input'
+
+import { IGenericInputProps, Input } from '../Input'
 
 export class TextInput extends React.PureComponent<IGenericInputProps> {
   public render (): JSX.Element {

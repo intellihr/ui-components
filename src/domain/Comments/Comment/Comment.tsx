@@ -1,16 +1,17 @@
-import React from 'react'
 import classNames from 'classnames'
+import React from 'react'
+
+import { FontAwesomeIcon } from '../../Icons'
 import {
   DropdownMenu,
   IDropdownMenuSectionProps,
   IDropdownMenuToggleComponentProps
 } from '../../Popovers'
-import {
-  StyledComment,
-  CommentActionMenuToggleButton
-} from './style'
-import { FontAwesomeIcon } from '../../Icons'
 import { FormattedText } from '../../Typographies'
+import {
+  CommentActionMenuToggleButton,
+  StyledComment
+} from './style'
 
 export interface ICommentProps {
   /** the name of the person who posted the comment */
@@ -40,10 +41,12 @@ export class Comment extends React.Component<ICommentProps> {
     return (
       <StyledComment>
         {this.avatar}
-        <div className={classNames(
-          'comment-container',
-          { focused }
-        )}>
+        <div
+          className={classNames(
+            'comment-container',
+            { focused }
+          )}
+        >
           {this.commentHeader}
           {this.commentContent}
         </div>
@@ -80,7 +83,7 @@ export class Comment extends React.Component<ICommentProps> {
       />
     )
   }
-  
+
   private dropdownMenuToggleComponent = (props: IDropdownMenuToggleComponentProps) => {
     return (
       <CommentActionMenuToggleButton
@@ -129,10 +132,12 @@ export class Comment extends React.Component<ICommentProps> {
     } = this.props
 
     return (
-      <div className={classNames(
-        'comment-header-container',
-        { 'with-status-update': !(!headerComponent) }
-      )}>
+      <div
+        className={classNames(
+          'comment-header-container',
+          { 'with-status-update': !(!headerComponent) }
+        )}
+      >
         {this.commentTitle}
 
         {this.commentDate}

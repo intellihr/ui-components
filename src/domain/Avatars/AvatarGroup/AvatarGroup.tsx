@@ -1,9 +1,10 @@
 import React from 'react'
+
 import { Props } from '../../../common'
 import {
   AvatarGroupSize,
-  StyledAvatarGroupWrapper,
-  StyledAvatar
+  StyledAvatar,
+  StyledAvatarGroupWrapper
 } from './style'
 
 interface IAvatarGroupAvatar {

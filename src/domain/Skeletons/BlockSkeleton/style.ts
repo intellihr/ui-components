@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { SkeletonWrapper } from '../style'
 
 export interface IBlockSkeletonWrapperProps {

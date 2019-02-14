@@ -1,5 +1,6 @@
 import React from 'react'
-import styled, { css, StyledComponentClass } from 'styled-components'
+import styled, { StyledComponentClass, css } from 'styled-components'
+
 import { Variables } from '../../../../common'
 
 type MarkerColor = 'primary' | 'neutral' | 'transparent'
@@ -53,8 +54,8 @@ const TimelineEventTitle = styled.div<ITimelineTitleProps>`
   position: relative;
   white-space: nowrap; // Title will break line styling if wrapped
   width: 100%;
-  
-  ${props => props.markerColor !== 'transparent' && css`
+
+  ${(props) => props.markerColor !== 'transparent' && css`
     ::before {
       position: absolute;
       content: '';
@@ -62,7 +63,7 @@ const TimelineEventTitle = styled.div<ITimelineTitleProps>`
       border-radius: 50%;
       background-color: ${Variables.Color.n400};
       background-clip: content-box; // Fix for IE
-      
+
       height: ${diameterForMarker}px;
       width: ${diameterForMarker}px;
       ${offsetForMarker}

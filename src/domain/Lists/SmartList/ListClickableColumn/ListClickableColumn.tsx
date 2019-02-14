@@ -1,6 +1,7 @@
-import React from 'react'
 import classNames from 'classnames'
 import { isNil } from 'lodash'
+import React from 'react'
+
 import { Anchor } from '../../../Internals'
 
 const style = require('./style.scss')

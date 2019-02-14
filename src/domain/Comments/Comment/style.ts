@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { StyledComponentClass } from 'styled-components'
+
 import { Variables } from '../../../common'
 
 const StyledComment = styled.div`
@@ -18,8 +19,8 @@ const StyledComment = styled.div`
     border-radius: .75rem;
     flex-grow: 1;
     padding: .85rem 1.2rem;
-    
-    &.focused {     
+
+    &.focused {
         background-color: ${Variables.Color.i100};
     }
 

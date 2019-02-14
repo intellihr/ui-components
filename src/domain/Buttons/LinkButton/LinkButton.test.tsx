@@ -1,8 +1,8 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { LinkButton } from './LinkButton'
 import { FontAwesomeIcon } from '@Domain/Icons'
+import { LinkButton } from './LinkButton'
 
 describe('<LinkButton />', () => {
   it(`should render a link button with a simple text`, () => {

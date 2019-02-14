@@ -1,6 +1,6 @@
-import React from 'react'
 import classNames from 'classnames'
-import { isString, isPlainObject, kebabCase, reduce } from 'lodash'
+import { isPlainObject, isString, kebabCase, reduce } from 'lodash'
+import React from 'react'
 
 const style = require('../style.scss')
 

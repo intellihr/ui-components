@@ -1,6 +1,7 @@
 import styled, {css} from 'styled-components'
-import { CheckboxInput } from '../../Inputs'
+
 import { Props } from '../../../common'
+import { CheckboxInput } from '../../Inputs'
 
 interface ICheckboxSetWrapperProps {
   orientation: Props.Orientation
@@ -9,7 +10,7 @@ interface ICheckboxSetWrapperProps {
 export const CheckboxSetWrapper = styled.div`
   display: inline-flex;
   max-width: 100%;
-    
+
   ${(props: ICheckboxSetWrapperProps) => {
   if (props.orientation === Props.Orientation.Vertical) {
     return css`
@@ -19,7 +20,7 @@ export const CheckboxSetWrapper = styled.div`
   return css`
       flex-direction: row;
       flex-wrap: wrap;
-      
+
     `
 }}
 `

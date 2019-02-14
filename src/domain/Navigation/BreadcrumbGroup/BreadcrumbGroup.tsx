@@ -1,6 +1,7 @@
 import React from 'react'
-import { Breadcrumb } from './subcomponents/Breadcrumb'
+
 import { Props } from '../../../common'
+import { Breadcrumb } from './subcomponents/Breadcrumb'
 
 const style = require('./style.scss')
 

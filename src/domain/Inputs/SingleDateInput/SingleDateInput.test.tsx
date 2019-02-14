@@ -1,6 +1,7 @@
 import { shallow } from 'enzyme'
-import React from 'react'
 import moment from 'moment-timezone'
+import React from 'react'
+
 import { SingleDateInput } from './SingleDateInput'
 
 moment.tz.setDefault('America/Denver')

@@ -1,7 +1,8 @@
-import React from 'react'
 import { mount } from 'enzyme'
-import { CircleSkeleton } from './CircleSkeleton'
+import React from 'react'
+
 import { Props } from '../../../common'
+import { CircleSkeleton } from './CircleSkeleton'
 
 describe('<CircleSkeleton />', () => {
   it('should render a circle skeleton', () => {

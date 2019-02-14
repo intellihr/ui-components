@@ -1,6 +1,7 @@
-import React from 'react'
 import { shallow } from 'enzyme'
-import { TooltipPopover, ITooltipPopoverToggleComponentProps } from './TooltipPopover'
+import React from 'react'
+
+import { ITooltipPopoverToggleComponentProps, TooltipPopover } from './TooltipPopover'
 
 describe('<TooltipPopover />', () => {
   describe('Simple popover behaviour', () => {
@@ -28,15 +29,16 @@ describe('<TooltipPopover />', () => {
   })
 
   describe('Render a popover using a custom trigger', () => {
-    const triggerComponent = ({ openMenu, closeMenu, toggleComponentRef, ariaProps }: ITooltipPopoverToggleComponentProps) =>
-      <span
-        onMouseEnter={openMenu}
-        onMouseLeave={closeMenu}
-        ref={toggleComponentRef}
-        {...ariaProps}
-      >
-        Custom trigger component
-      </span>
+    const triggerComponent = ({ openMenu, closeMenu, toggleComponentRef, ariaProps }: ITooltipPopoverToggleComponentProps) => (
+        <span
+          onMouseEnter={openMenu}
+          onMouseLeave={closeMenu}
+          ref={toggleComponentRef}
+          {...ariaProps}
+        >
+          Custom trigger component
+        </span>
+      )
 
     const wrapper = shallow(
       <TooltipPopover

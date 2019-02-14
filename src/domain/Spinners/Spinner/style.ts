@@ -7,20 +7,20 @@ export const SpinnerWrapper = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  
+
   &.left {
     float: left
   }
-  
+
   &.center {
     display: flex;
     justify-content: center;
   }
-  
+
   &.right {
     float: right;
   }
-  
+
   &.inline {
     display: inline-block;
     vertical-align: middle;

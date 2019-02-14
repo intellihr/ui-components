@@ -1,7 +1,8 @@
 import React from 'react'
+
+import { Props, Variables } from '../../../../common'
 import { TextLink } from '../../../Links/TextLink'
 import { Text } from '../../../Typographies/Text'
-import { Props, Variables } from '../../../../common'
 
 export interface ILinkProps {
   [i: string]: any

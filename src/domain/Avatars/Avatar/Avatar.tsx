@@ -1,11 +1,12 @@
-import React from 'react'
 import classNames from 'classnames'
 import {
-  isNil,
-  isEmpty
+  isEmpty,
+  isNil
 } from 'lodash'
-import { FontAwesomeIcon } from '../../Icons'
+import React from 'react'
+
 import { Props } from '../../../common'
+import { FontAwesomeIcon } from '../../Icons'
 const style = require('./Avatar.scss')
 
 export interface IAvatarProps {
@@ -67,11 +68,13 @@ class Avatar extends React.Component<IAvatarProps> {
     } = this.props
 
     return (
-      <div className={classNames(
-        style.Avatar,
-        className,
-        `avatar-${size}`
-      )}>
+      <div
+        className={classNames(
+          style.Avatar,
+          className,
+          `avatar-${size}`
+        )}
+      >
         <div
           className={classNames(
             'avatar-inner-container',

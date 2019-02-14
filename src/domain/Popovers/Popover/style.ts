@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+
 import { Props, Variables } from '../../../common'
 
 interface IStyledPopoverProps {
@@ -25,7 +26,7 @@ const StyledPopover = styled.span`
           transform: scale(0.9);
           transform-origin: ${props.transformOrigin.xPos + ' ' + props.transformOrigin.yPos};
           transition: transform 150ms cubic-bezier(0.5, 1.8, 0.9, 0.8);
-        
+
           &.entering,
           &.entered {
             opacity: 1;
@@ -36,7 +37,7 @@ const StyledPopover = styled.span`
         return css`
           opacity: 0.8;
           transition: opacity 300ms cubic-bezier(.68,-.55,.265,1.55);
-          
+
           &.entering,
           &.entered {
             opacity: 1;

@@ -1,10 +1,11 @@
-import React from 'react'
 import classNames from 'classnames'
+import React from 'react'
+
 import { Props, Variables } from '../../../common'
 import { StyledReactModal } from './style'
-import { Header } from './subcomponents/Header'
 import { Content } from './subcomponents/Content'
 import { Footer } from './subcomponents/Footer'
+import { Header } from './subcomponents/Header'
 
 interface IBaseModalProps {
   /**

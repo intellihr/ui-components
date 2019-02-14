@@ -1,8 +1,8 @@
-import React from 'react'
-import classNames from 'classnames'
 import capitalize from 'capitalize'
+import classNames from 'classnames'
+import { cloneDeep, debounce, every, isEmpty } from 'lodash'
+import React from 'react'
 import Select, { Async, Creatable, OnChangeHandler, ReactSelectProps } from 'react-select'
-import { every, isEmpty, cloneDeep, debounce } from 'lodash'
 const style = require('./style.scss')
 
 export interface ISelectInputOptions {
@@ -147,7 +147,7 @@ export class SelectInput<O=ISelectInputOptions> extends React.PureComponent<ISel
     } else if (optionComponent) {
       base.options = options
       base.optionComponent = optionComponent
-    } else if (options && this.isISelectInputOptions(options)){
+    } else if (options && this.isISelectInputOptions(options)) {
       base.options = this.prepareOptions(options)
     }
 
@@ -171,12 +171,12 @@ export class SelectInput<O=ISelectInputOptions> extends React.PureComponent<ISel
       if (asyncOptions) {
         asyncOptions(input)
           .then(this.prepareOptions)
-          .then(options => {
+          .then((options) => {
             this.asyncFetchedOptions = this.asyncFetchedOptions.concat(options || [])
             this.preselectValue(options)
             callback(null, { options: options || [] })
           })
-          .catch(error => callback(error))
+          .catch((error) => callback(error))
       }
     },
     500
@@ -233,7 +233,7 @@ export class SelectInput<O=ISelectInputOptions> extends React.PureComponent<ISel
   private isISelectInputOptions = (options: any[]): options is ISelectInputOptions[] => {
     return every(
       options,
-      option => {
+      (option) => {
         const matched = option.value !== undefined && option.label !== undefined
 
         if (!matched) {
@@ -292,7 +292,7 @@ export class SelectInput<O=ISelectInputOptions> extends React.PureComponent<ISel
       if (!this.cachedOptions) {
         return Promise
           .resolve(promiseOptions())
-          .then(options => {
+          .then((options) => {
             this.cachedOptions = {
               options: this.prepareOptions(options) || []
               // Complete options is not working: https://github.com/JedWatson/react-select/issues/1514
@@ -301,7 +301,7 @@ export class SelectInput<O=ISelectInputOptions> extends React.PureComponent<ISel
 
             return this.cachedOptions
           })
-          .then(cachedOptions => {
+          .then((cachedOptions) => {
             this.preselectValue(cachedOptions.options)
 
             return cachedOptions

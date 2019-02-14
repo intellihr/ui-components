@@ -1,6 +1,7 @@
 import React, { RefObject } from 'react'
-import { InputGroupPosition } from '../InputGroup'
+
 import { FontAwesomeIcon } from '../../../Icons/FontAwesomeIcon'
+import { InputGroupPosition } from '../InputGroup'
 import { InputGroupButton } from './style'
 
 interface IInputGroupButtonProps extends React.HTMLProps<HTMLButtonElement> {

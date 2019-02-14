@@ -1,17 +1,18 @@
-import React, { ChangeEvent } from 'react'
-import ReactTable, { TableProps, Column, SortingRule, Filter, FilterFunction } from 'react-table'
 import classNames from 'classnames'
 import {
-  get,
   filter,
-  isString,
+  get,
   isFunction,
+  isString,
   lowerCase
 } from 'lodash'
-import { Callout } from '../../Callouts'
-import { DataTablePagination, IDataTablePaginationProps } from './DataTablePagination'
-import { TextInput } from '../../Inputs'
+import React, { ChangeEvent } from 'react'
+import ReactTable, { Column, Filter, FilterFunction, SortingRule, TableProps } from 'react-table'
+
 import { Props } from '../../../common'
+import { Callout } from '../../Callouts'
+import { TextInput } from '../../Inputs'
+import { DataTablePagination, IDataTablePaginationProps } from './DataTablePagination'
 const style = require('./DataTable.scss')
 
 type AlignmentOption = Props.Position.Left | Props.Position.Center | Props.Position.Right
@@ -246,20 +247,22 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
 
     const filteredData = this.filteredData
 
-    return <ReactTable
-      {...this.defaultReactTableProps}
-      data={filteredData}
-      columns={this.columns}
-      className={this.classNames}
-      showPagination={showPagination}
-      showPaginationBottom={filteredData.length > 0}
-      showPageSizeOptions={showPagination}
-      defaultPageSize={defaultPageSize ? defaultPageSize : 25}
-      pageSize={showPagination ? undefined : filteredData.length}
-      sortable={sortable}
-      defaultSorted={defaultSorted}
-      {...reactTableOverrides}
-    />
+    return (
+      <ReactTable
+        {...this.defaultReactTableProps}
+        data={filteredData}
+        columns={this.columns}
+        className={this.classNames}
+        showPagination={showPagination}
+        showPaginationBottom={filteredData.length > 0}
+        showPageSizeOptions={showPagination}
+        defaultPageSize={defaultPageSize ? defaultPageSize : 25}
+        pageSize={showPagination ? undefined : filteredData.length}
+        sortable={sortable}
+        defaultSorted={defaultSorted}
+        {...reactTableOverrides}
+      />
+    )
   }
 }
 

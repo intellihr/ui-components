@@ -1,5 +1,6 @@
 import React from 'react'
-import { StyledModalFooter, StyledModalControls } from './style'
+
+import { StyledModalControls, StyledModalFooter } from './style'
 
 interface IFooterProps {
   leftControls?: JSX.Element

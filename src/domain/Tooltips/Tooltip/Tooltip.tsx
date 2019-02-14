@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactTooltip from 'react-tooltip'
 import uuid from 'uuid'
+
 import { Variables } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons'
 import { TooltipIcon, TooltipWrapper } from './style'
@@ -25,7 +26,7 @@ export class Tooltip extends React.Component<ITooltipProps> {
     iconColour: Variables.Color.n700
   }
 
-  get tooltipId ():string {
+  get tooltipId (): string {
     const {
       id
     } = this.props

@@ -1,4 +1,5 @@
 import React from 'react'
+
 import {
   IndentedWrapper
 } from './style'

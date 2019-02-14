@@ -1,5 +1,6 @@
-import React from 'react'
 import { mount } from 'enzyme'
+import React from 'react'
+
 import { Props } from '../../../common'
 import { DataTable } from './DataTable'
 
@@ -89,12 +90,12 @@ describe('<DataTable />', () => {
       <DataTable
         data={[
           {
-            'name': 'Frederigo Mallebone',
-            'age': '15'
+            name: 'Frederigo Mallebone',
+            age: '15'
           },
           {
-            'name': 'Sutherlan Caulfield',
-            'age': '35'
+            name: 'Sutherlan Caulfield',
+            age: '35'
           }
         ]}
         columns={[
@@ -127,12 +128,12 @@ describe('<DataTable />', () => {
         tableId='test-table'
         data={[
           {
-            'name': 'Frederigo Mallebone',
-            'age': '15'
+            name: 'Frederigo Mallebone',
+            age: '15'
           },
           {
-            'name': 'Sutherlan Caulfield',
-            'age': '35'
+            name: 'Sutherlan Caulfield',
+            age: '35'
           }
         ]}
         columns={[
@@ -183,12 +184,12 @@ describe('<DataTable />', () => {
         tableId='test-table'
         data={[
           {
-            'name': 'Sam',
-            'age': '15'
+            name: 'Sam',
+            age: '15'
           },
           {
-            'name': 'Some other guy',
-            'age': '35'
+            name: 'Some other guy',
+            age: '35'
           }
         ]}
         columns={[

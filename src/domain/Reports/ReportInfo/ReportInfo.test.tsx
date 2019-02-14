@@ -1,7 +1,8 @@
 import { shallow } from 'enzyme'
 import React from 'react'
-import { ReportInfo } from './ReportInfo'
+
 import { Variables } from '../../../common'
+import { ReportInfo } from './ReportInfo'
 
 describe('<ReportInfo />', () => {
   it('should render a ReportInfo', () => {
@@ -31,14 +32,14 @@ describe('<ReportInfo />', () => {
         description='Hello! I am blue report info.'
         highlights={[
           {
-            'caption': 'I am Highlight 1.',
-            'title': 'highlight 1 title',
-            'imageUrl': 'https://i1.wp.com/www.foot.com/wp-content/uploads/2017/03/placeholder.gif?ssl=1'
+            caption: 'I am Highlight 1.',
+            title: 'highlight 1 title',
+            imageUrl: 'https://i1.wp.com/www.foot.com/wp-content/uploads/2017/03/placeholder.gif?ssl=1'
           },
           {
-            'caption': 'I am Highlight 2.',
-            'title': 'highlight 2 title',
-            'imageUrl': 'https://i1.wp.com/www.foot.com/wp-content/uploads/2017/03/placeholder.gif?ssl=1'
+            caption: 'I am Highlight 2.',
+            title: 'highlight 2 title',
+            imageUrl: 'https://i1.wp.com/www.foot.com/wp-content/uploads/2017/03/placeholder.gif?ssl=1'
           }
         ]}
       />

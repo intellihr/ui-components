@@ -1,5 +1,6 @@
-import React from 'react'
 import { shallow } from 'enzyme'
+import React from 'react'
+
 import { AutocompleteLocationInput } from './AutocompleteLocationInput'
 
 const dummyClick = () => console.log('hey')

@@ -1,8 +1,8 @@
 import { mount } from 'enzyme'
 import React from 'react'
 
-import { Button } from './Button'
 import { FontAwesomeIcon } from '@Domain/Icons'
+import { Button } from './Button'
 
 describe('<Button />', () => {
   it(`should render a button with a simple text`, () => {
@@ -82,4 +82,17 @@ describe('<Button />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+})
+
+it('should render a button with a spinner', () => {
+  const wrapper = mount(
+    <Button
+      id='test-button-spinner'
+      showSpinner
+    >
+      test
+    </Button>
+  )
+
+  expect(wrapper).toMatchSnapshot()
 })

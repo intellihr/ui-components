@@ -1,11 +1,12 @@
 import React from 'react'
+
 import { XYGrid } from '../../XYGrid'
 import {
-  StyledAnnotatedSectionDescription,
+  StyledAnnotatedSection,
   StyledAnnotatedSectionBody,
-  StyledAnnotatedSection
+  StyledAnnotatedSectionDescription
 } from '../style'
-import { ILinkProps, ILink } from './SectionDescription'
+import { ILink, ILinkProps } from './SectionDescription'
 
 export interface IAnnotatedSectionProps {
   /** The title for what is displayed */

@@ -1,7 +1,8 @@
-import React from 'react'
 import { shallow } from 'enzyme'
-import { InputGroup } from './InputGroup'
+import React from 'react'
+
 import { TextInput } from '../TextInput'
+import { InputGroup } from './InputGroup'
 
 describe('<InputGroup />', () => {
   it('should render a simple input group', () => {

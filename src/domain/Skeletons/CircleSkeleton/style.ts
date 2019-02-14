@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+
 import { Props } from '../../../common'
 import { SkeletonWrapper } from '../style'
 

@@ -1,4 +1,3 @@
-import React, { MouseEvent, RefObject } from 'react'
 import {
   clamp,
   debounce,
@@ -7,16 +6,18 @@ import {
   map,
   toNumber
 } from 'lodash'
+import React, { MouseEvent, RefObject } from 'react'
+
 import { Utils } from '../../../common'
 import { IntelliIcon } from '../../Icons'
 import {
-  TabStyleConstants,
-  TabGroupContainer,
   TabChevronButton,
+  TabGroupContainer,
   TabList,
   TabListItem,
   TabListItemAnchor,
-  TabParent
+  TabParent,
+  TabStyleConstants
 } from './style'
 
 export interface IScrollingTab {
@@ -217,7 +218,7 @@ export class ScrollingTabGroup extends React.Component<IScrollingTabGroupProps, 
       return tabIdentifier
     }
 
-    const tabIndex = findIndex(tabs, { 'anchorId': tabIdentifier })
+    const tabIndex = findIndex(tabs, { anchorId: tabIdentifier })
 
     return (tabIndex === -1) ? 0 : tabIndex
   }

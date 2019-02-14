@@ -1,20 +1,20 @@
-import React from 'react'
 import { map } from 'lodash'
-import { Props } from '../../../common/'
+import React from 'react'
 
-import {
-  TimelineWrapper,
-  TimelineEventWrapper,
-  TimelineEventBody,
-  TimelineLineStyle,
-  TimelineLineColor,
-  EventSpacing
-} from './style/wrappers'
+import { Props } from '../../../common/'
 import {
   MarkerColor,
   MarkerType,
   TimelineEventTitle
 } from './style/titleMarker'
+import {
+  EventSpacing,
+  TimelineEventBody,
+  TimelineEventWrapper,
+  TimelineLineColor,
+  TimelineLineStyle,
+  TimelineWrapper
+} from './style/wrappers'
 
 interface IModularTimelineBodyItem {
   content: JSX.Element | string

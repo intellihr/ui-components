@@ -6,7 +6,7 @@ const ActionDescriptionWrapper = styled.div`
 
 const ActionLinksWrapper = styled.div`
   margin-top: 14px;
-  
+
   .action-link {
     display: block;
     margin-top: 0;

@@ -1,10 +1,11 @@
-import 'react-dates/initialize'
-import 'react-dates/lib/css/_datepicker.css'
-import React, { FormEvent } from 'react'
-import { SingleDatePicker } from 'react-dates'
-import moment, { Moment } from 'moment-timezone'
 import classNames from 'classnames'
 import { isNil } from 'lodash'
+import moment, { Moment } from 'moment-timezone'
+import React, { FormEvent } from 'react'
+import { SingleDatePicker } from 'react-dates'
+import 'react-dates/initialize'
+import 'react-dates/lib/css/_datepicker.css'
+
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { InputGroupPosition } from '../InputGroup'
 
@@ -75,13 +76,11 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
           navPrev={
             <div className={this.navigationButtonClassNames('left')}>
               <FontAwesomeIcon type='arrow-left'/>
-            </div>
-          }
+            </div>}
           navNext={
             <div className={this.navigationButtonClassNames('right')}>
               <FontAwesomeIcon type='arrow-right'/>
-            </div>
-          }
+            </div>}
         />
       </div>
     )
@@ -106,10 +105,10 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
     () => false
 
   private renderMonthText: (day: Moment) => string =
-    day => moment(day).format('MMM YYYY')
+    (day) => moment(day).format('MMM YYYY')
 
   private dateChange: (date: Moment | null) => void =
-    date => {
+    (date) => {
       const {
         handleChange
       } = this.props
@@ -122,7 +121,7 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
     }
 
   private onChange: (e: FormEvent<HTMLDivElement>) => void =
-    e => {
+    (e) => {
       const {
         handleChange,
         dateFormat
@@ -136,14 +135,14 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
     }
 
   private focusChange: (focusChangeArgs: { focused: boolean | null }) => void =
-    focusChangeArgs => {
+    (focusChangeArgs) => {
       this.setState({
         focused: focusChangeArgs.focused || false
       })
     }
 
   private navigationButtonClassNames: (side: 'left' | 'right') => string =
-    side => {
+    (side) => {
       return classNames(
         'DayPickerNavigation_button__default',
         'DayPickerNavigation_button__horizontalDefault',

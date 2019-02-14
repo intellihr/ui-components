@@ -1,5 +1,6 @@
-import React from 'react'
 import styledBreakpoint from '@intellihr/styled-components-breakpoint'
+import React from 'react'
+
 import { Variables } from '../../../common'
 
 interface IWithStyledBreakpoints {

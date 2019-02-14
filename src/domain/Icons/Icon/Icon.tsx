@@ -1,7 +1,8 @@
-import React from 'react'
 import classNames from 'classnames'
 import { includes } from 'lodash'
-import { StyledIcon, BadgeWrapper } from './style'
+import React from 'react'
+
+import { BadgeWrapper, StyledIcon } from './style'
 
 interface IIconProps {
   /** FontAwesome or alternate name of the icon to display */

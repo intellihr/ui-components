@@ -1,11 +1,12 @@
-import React from 'react'
 import { map } from 'lodash'
-import {
-  WrappedList,
-  ColorBox,
-  ColorName
-} from './style'
+import React from 'react'
+
 import { Variables } from '../../../common'
+import {
+  ColorBox,
+  ColorName,
+  WrappedList
+} from './style'
 
 interface IColorDefinition {
   colorHex: Variables.Color,

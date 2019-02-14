@@ -240,10 +240,13 @@
   resolved "https://registry.yarnpkg.com/@intellihr/icons/-/icons-0.0.8.tgz#83b93f257077b713b529e7afcd8cf97d6f3b0de6"
   integrity sha512-YecWxEqNAUCt/enxM2eGNe/dklc8Z7l2jV1ew3uxDFeyDvLhCb3P949h97SoP91H7cLsPCLcdn/jRM3NjcfHPQ==
 
-"@intellihr/standard-tslint@0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@intellihr/standard-tslint/-/standard-tslint-0.0.3.tgz#9ea626a6e6e9ab762d00ca6c6148d0a080932fc7"
-  integrity sha512-pPf4ci8zwRPUX/py/eq+rog5Uo9O5tn9oGQ4tQv3KNvei+emfF3yqA3umtWAKMRNmXZiCyv8DT0CMMWqDJyHIQ==
+"@intellihr/standard-tslint@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@intellihr/standard-tslint/-/standard-tslint-2.0.0.tgz#182e75672210553367347593b0308425aaa22f80"
+  integrity sha512-/T5QfA/M+RTbLN059FO1kL7usuhApPBegm9rZJyL8BZOH8rEjnh7lJBIFML7fQJCWiVx7TUKeBplA+vStrgkQw==
+  dependencies:
+    tslint-react "^3.6.0"
+    tsutils "^3.5.1"
 
 "@intellihr/styled-components-breakpoint@0.0.2":
   version "0.0.2"
@@ -12023,6 +12026,13 @@ tsutils@^2.13.1, tsutils@^2.27.2:
   version "2.29.0"
   resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-2.29.0.tgz#32b488501467acbedd4b85498673a0812aca0b99"
   integrity sha512-g5JVHCIJwzfISaXpXE1qvNalca5Jwob6FjI4AoPlqMusJ6ftFE7IkkFoMhVLRgK+4Kx3gkzb8UZK5t5yTTvEmA==
+  dependencies:
+    tslib "^1.8.1"
+
+tsutils@^3.5.1:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-3.8.0.tgz#7a3dbadc88e465596440622b65c04edc8e187ae5"
+  integrity sha512-XQdPhgcoTbCD8baXC38PQ0vpTZ8T3YrE+vR66YIj/xvDt1//8iAhafpIT/4DmvzzC1QFapEImERu48Pa01dIUA==
   dependencies:
     tslib "^1.8.1"
 

@@ -10,7 +10,7 @@ describe('<Comment />', () => {
         commentBodyText='A very recent comment'
         commentHeaderText='Example Person Name'
         dateComponent={<span>just now</span>}
-        pillComponent={ <div>pill</div>}
+        pillComponent={<div>pill</div>}
         avatarComponent={<div>avatar</div>}
         actions={[{
           text: 'Edit',
@@ -29,7 +29,7 @@ describe('<Comment />', () => {
         commentBodyText='A very recent comment'
         commentHeaderText='Example Person Name'
         dateComponent={<span>just now</span>}
-        pillComponent={ <div>pill</div>}
+        pillComponent={<div>pill</div>}
         avatarComponent={<div>avatar</div>}
       />
     )

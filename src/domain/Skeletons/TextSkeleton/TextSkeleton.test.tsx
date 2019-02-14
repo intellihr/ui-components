@@ -1,7 +1,8 @@
-import React from 'react'
 import { mount } from 'enzyme'
-import { TextSkeleton } from './TextSkeleton'
+import React from 'react'
+
 import { Props } from '../../../common'
+import { TextSkeleton } from './TextSkeleton'
 
 describe('<TextSkeleton />', () => {
   it('should render a text skeleton', () => {
