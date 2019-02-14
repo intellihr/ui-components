@@ -83,3 +83,16 @@ describe('<Button />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 })
+
+it('should render a button with a spinner', () => {
+  const wrapper = mount(
+    <Button
+      id='test-button-spinner'
+      showSpinner
+    >
+      test
+    </Button>
+  )
+
+  expect(wrapper).toMatchSnapshot()
+})
