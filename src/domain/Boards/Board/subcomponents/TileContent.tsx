@@ -1,16 +1,19 @@
 import React from 'react'
+
 import { Props, Variables } from '../../../../common'
 import {
-  StyledFigureText,
-  HeadingWrapper,
-  StyledHeadingText,
-  ContentWrapper,
-  IconWrapper,
-  HeadingLine,
-  StyledTileLabel,
-  ButtonContentWrapper,
   ButtonDescriptionText,
+  ButtonTextContentWrapper,
   ButtonTitleText,
+  ButtonWrapper,
+  ContentWrapper,
+  HeadingLine,
+  HeadingWrapper,
+  StyleFontAwesomeIcon,
+  StyledFigureText,
+  StyledHeadingText,
+  StyledIntelliIcon,
+  StyledTileLabel,
   TileContentWrapper
 } from './style'
 
@@ -29,10 +32,12 @@ interface IBoardTileContentProps {
   isHeadingWarning?: boolean
   /** If true, displays subheading in a warning style */
   isSubheadingWarning?: boolean
-  /** button icon href displayed in the tile */
-  iconHref?: string
+  /** If true, displays icon in intelliIcon set. If false, displays icon in fontawesome set */
+  isIntelliIcon?: boolean
+  /** button icon displayed in the tile */
+  icon?: string
   /** button title displayed in the tile */
-  buttonTitle?:string
+  buttonTitle?: string
   /** button description displayed after button title */
   buttonDescription?: string
 }
@@ -40,7 +45,8 @@ interface IBoardTileContentProps {
 class TileContent extends React.PureComponent<IBoardTileContentProps, never> {
   public static defaultProps: Partial<IBoardTileContentProps> = {
     isHeadingWarning: false,
-    isSubheadingWarning: false
+    isSubheadingWarning: false,
+    isIntelliIcon: false
   }
 
   private get headingFigure (): JSX.Element | null {
@@ -152,10 +158,10 @@ class TileContent extends React.PureComponent<IBoardTileContentProps, never> {
         <HeadingWrapper>
           <HeadingLine>
             {this.headingFigure}
-          {this.heading}
+            {this.heading}
           </HeadingLine>
           <HeadingLine>
-           {this.subheadingFigure}
+            {this.subheadingFigure}
             {this.subheading}
           </HeadingLine>
         </HeadingWrapper>
@@ -167,13 +173,15 @@ class TileContent extends React.PureComponent<IBoardTileContentProps, never> {
 
   private get icon (): JSX.Element | null {
     const {
-      iconHref
+      isIntelliIcon,
+      icon
     } = this.props
 
-    if (iconHref) {
-      return (
-        <IconWrapper src={iconHref} />
-      )
+    const IconTag = isIntelliIcon ? StyledIntelliIcon : StyleFontAwesomeIcon
+
+    if (icon) {
+
+        return <IconTag type={icon} color={Variables.Color.i300} size='xlarge' />
     }
 
     return null
@@ -188,8 +196,7 @@ class TileContent extends React.PureComponent<IBoardTileContentProps, never> {
       return (
         <ButtonTitleText
           type={Props.TypographyType.Body}
-          color={Variables.Color.i400}
-          isInline={false}
+          color={Variables.Color.n700}
         >
           {buttonTitle}
         </ButtonTitleText>
@@ -207,9 +214,8 @@ class TileContent extends React.PureComponent<IBoardTileContentProps, never> {
     if (buttonDescription) {
       return (
         <ButtonDescriptionText
-          type={Props.TypographyType.XSmall}
-          color={Variables.Color.n800}
-          isInline={false}
+          type={Props.TypographyType.Small}
+          color={Variables.Color.n600}
         >
           {buttonDescription}
         </ButtonDescriptionText>
@@ -233,7 +239,6 @@ class TileContent extends React.PureComponent<IBoardTileContentProps, never> {
         <>
           {children}
         </>
-
       )
     }
 
@@ -253,19 +258,15 @@ class TileContent extends React.PureComponent<IBoardTileContentProps, never> {
   }
 
   private get button (): JSX.Element | null {
-    const {
-      children
-    } = this.props
 
     return (
-      <ButtonContentWrapper>
-        <div>
-          {this.icon}
-          {this.buttonTitle}
-          {this.buttonDescription}
-          {children}
-        </div>
-      </ButtonContentWrapper>
+      <ButtonWrapper>
+        {this.icon}
+        <ButtonTextContentWrapper>
+        {this.buttonTitle}
+        {this.buttonDescription}
+        </ButtonTextContentWrapper>
+      </ButtonWrapper>
     )
   }
 

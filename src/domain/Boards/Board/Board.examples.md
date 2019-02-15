@@ -156,10 +156,11 @@
 >
  <Board.Tile
    size='large'
+   isButton
  >
    <Board.Tile.TileContent
-    iconHref='https://i.imgur.com/ou4mYN4.jpg'
-    buttonTitle='Large Tile button'
+    icon='plus-square'
+    buttonTitle='Large Tile button with a font awesome icon'
     buttonDescription='I am the tile description'
    >
     </Board.Tile.TileContent>
@@ -167,10 +168,12 @@
  
  <Board.Tile
    size='medium'
+   isButton
  >
    <Board.Tile.TileContent
-    iconHref='https://i.imgur.com/ou4mYN4.jpg'
-    buttonTitle='Medium Tile button'
+    isIntelliIcon
+    icon='smile'
+    buttonTitle='Medium Tile button with an IntelliIcon'
     buttonDescription='I am the tile description'
    >
    </Board.Tile.TileContent>
@@ -178,42 +181,51 @@
  
  <Board.Tile
     size='medium'
+    isButton
+    isAdmin
   >
     <Board.Tile.TileContent
-     iconHref='https://i.imgur.com/ou4mYN4.jpg'
+     icon='comments'
      buttonTitle='Medium Tile button button button button button button button button button button'
-     buttonDescription='I have a max content in 3 lines: the long long long long long long long long long long long long long long long long long long long long long long tile description'
+     buttonDescription='I have a max content in 2 lines: the long long long long long long long long long long long long long long long long long long long long long long tile description'
     >
     </Board.Tile.TileContent>
   </Board.Tile>
  
  <Board.Tile
    size='small'
+   isButton
  >
   <Board.Tile.TileContent
-    iconHref='https://i.imgur.com/ou4mYN4.jpg'
-    buttonTitle='Small Tile button title text has max in 2 lines'
-    buttonDescription='The tile description will be hidden if it is out of 3 lines'
+    isIntelliIcon
+    icon='smile'
+    buttonTitle='Small Tile button with an IntelliIcon'
+    buttonDescription='The tile description will be hidden if it is out of 2 lines'
   >
   </Board.Tile.TileContent>
  </Board.Tile>
  
  <Board.Tile
-     size='small'
-   >
-    <Board.Tile.TileContent
-      buttonTitle='small Tile button title text with icon'
-      buttonDescription='I am a small tile content button without icon. The tile description will be hidden if it is out of 3 lines'
-    >
-    </Board.Tile.TileContent>
-   </Board.Tile>
+   size='small'
+   isButton
+ >
+  <Board.Tile.TileContent
+    icon='exclamation-triangle'
+    buttonTitle='small Tile button title text with a font awesome icon'
+    buttonDescription='I am a small tile content.'
+  >
+  </Board.Tile.TileContent>
+ </Board.Tile>
    
  <Board.Tile
-    size='small'
+    size='medium'
+    isButton
+    isAdmin
   >
    <Board.Tile.TileContent
-     buttonTitle='small Tile button'
-     buttonDescription='I am a small tile contentbutton without icon. The tile description will be hidden if it is out of 3 lines'
+     icon='plus-square'
+     buttonTitle='small admin Tile button with a font awesome icon'
+     buttonDescription=' be hidden if it is out of 2 lines'
    >
    </Board.Tile.TileContent>
   </Board.Tile>
@@ -267,27 +279,14 @@
   </Board.Tile>
   
   <Board.Tile
-   size='small'
-   isHoverable
-   hoverLabel='hover label'
-  >
-     <Board.Tile.TileContent
-       iconHref='https://i.imgur.com/ou4mYN4.jpg'
-       buttonTitle='Small Tile button title text has max in 2 lines'
-       buttonDescription='The tile description will be hidden if it is out of 3 lines'
-     >
-     </Board.Tile.TileContent>
-  </Board.Tile>
-  
-  <Board.Tile
      size='small'
      isHoverable
      hoverLabel='hover label'
   >
      <Board.Tile.TileContent
-        buttonTitle='small Tile button'
-        buttonDescription='I am a small tile content button without icon. The tile description will be hidden if it is out of 3 lines'
+       label='This is a small test tile'
      >
+       I am the centered content. 
      </Board.Tile.TileContent>
   </Board.Tile>
     

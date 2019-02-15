@@ -1,5 +1,6 @@
 import React from 'react'
-import { StyledBoardLabel, BoardWrapper} from './style'
+
+import { BoardWrapper, StyledBoardLabel} from './style'
 import { Tile } from './subcomponents/Tile'
 
 interface IBoardProps {

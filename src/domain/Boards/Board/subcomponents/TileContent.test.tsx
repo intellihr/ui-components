@@ -33,10 +33,22 @@ describe('<TileContent />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a tile content button`, () => {
+  it(`should render a tile content button with a font awesome icon`, () => {
     const wrapper = shallow(
       <TileContent
-        iconHref='dummy string'
+        icon='star'
+        buttonTitle='dummy button title'
+        buttonDescription='dummy button description'
+      />
+    )
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it(`should render a tile content button with an IntelliIcon`, () => {
+    const wrapper = shallow(
+      <TileContent
+        isIntelliIcon
+        icon='smile'
         buttonTitle='dummy button title'
         buttonDescription='dummy button description'
       />

@@ -1,14 +1,19 @@
-import React from 'react'
 import { isNil } from 'lodash'
-import { StyledAnchorTile, StyledHoverLabel, StyleTileButton } from './style'
-import { TileContent } from './TileContent'
+import React from 'react'
+
 import { Props, Variables } from '../../../../common'
+import { StyleTileButton, StyledAnchorTile, StyledHoverLabel } from './style'
+import { TileContent } from './TileContent'
 
 interface IBoardTileProps {
   /** tile displayed in the size style */
   size?: Props.TileSize
   /** If yes the color of the tile will change when it is hovered */
   isHoverable?: boolean
+  /** If yes the tile would in button style */
+  isButton?: boolean
+  /** If yes the tile would in admin style */
+  isAdmin?: boolean
   /** onClick event */
   onClick?: (event: React.MouseEvent<HTMLElement>) => void
   /** Anchor href used when clicking between tabs */
@@ -26,7 +31,9 @@ class Tile extends React.PureComponent<IBoardTileProps, never> {
 
   public static defaultProps: Partial<IBoardTileProps> = {
     size: Props.TileSize.Medium,
-    isHoverable: false
+    isHoverable: true,
+    isButton: false,
+    isAdmin: false
   }
 
   private get hoverLabel (): JSX.Element | null {
@@ -56,7 +63,9 @@ class Tile extends React.PureComponent<IBoardTileProps, never> {
       size,
       isHoverable,
       anchorHref,
-      linkProps
+      linkProps,
+      isButton,
+      isAdmin
     } = this.props
 
     const TileTag = anchorHref ? StyledAnchorTile : StyleTileButton
@@ -68,7 +77,9 @@ class Tile extends React.PureComponent<IBoardTileProps, never> {
         onClick={this.onClick}
         href={anchorHref}
         anchorComponentProps={linkProps}
-        tabIndex={ 0 }
+        tabIndex={0}
+        isButton={isButton}
+        isAdmin={isAdmin}
       >
         {children}
         {this.hoverLabel}

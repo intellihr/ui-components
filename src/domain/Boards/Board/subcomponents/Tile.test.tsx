@@ -1,8 +1,8 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { Tile } from './Tile'
 import { Props } from '../../../../common'
+import { Tile } from './Tile'
 
 describe('<Tile />', () => {
   it(`should render a board tile with nothing`, () => {
@@ -54,6 +54,27 @@ describe('<Tile />', () => {
       <Tile
         isHoverable
         hoverLabel='hover label'
+      />
+    )
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it(`should render a hoverable board tile button with hover label`, () => {
+    const wrapper = shallow(
+      <Tile
+        isHoverable
+        isButton
+      />
+    )
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it(`should render a hoverable board tile button for admin with hover label`, () => {
+    const wrapper = shallow(
+      <Tile
+        isHoverable
+        isButton
+        isAdmin
       />
     )
     expect(wrapper).toMatchSnapshot()

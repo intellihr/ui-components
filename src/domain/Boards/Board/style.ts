@@ -1,9 +1,10 @@
 import styled from 'styled-components'
+
 import { Variables } from '../../../common'
 
 const BoardWrapper = styled.div`
   display: flex;
-  align-content: stretch; 
+  align-content: stretch;
   flex-wrap: wrap;
   margin: 0 -24px -24px 0;
 `

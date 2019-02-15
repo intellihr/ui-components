@@ -1,11 +1,15 @@
 import styled, { css } from 'styled-components'
-import { Props, Variables} from '../../../../common'
-import { Text } from '../../../Typographies/Text'
+
+import { Props, Variables } from '../../../../common'
+import { FontAwesomeIcon, IntelliIcon } from '../../../Icons'
 import { UnstyledLink } from '../../../Links/UnstyledLink'
+import { Text } from '../../../Typographies/Text'
 
 interface IStyledTileProps {
   tileSize?: Props.TileSize
   isHoverable?: boolean
+  isButton?: boolean
+  isAdmin?: boolean
 }
 
 interface IContentWrapperProps {
@@ -24,23 +28,38 @@ const TileStyles = css`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.13);
   transition: background-color 0.15s ease-in;
   margin: 0 24px 24px 0;
-  
+
   ${(props: IStyledTileProps) => props.isHoverable && css`
-  
+
       :hover {
         background-color: ${Variables.Color.n250};
         transition: .25s ease-out;
       }
     `
   }}
-  
+
+  ${(props: IStyledTileProps) => (props.isHoverable && props.isButton && props.isAdmin) && css`
+
+      background-color: ${Variables.Color.n100};
+      border: 1px solid ${Variables.Color.n400};
+      border-style: dashed;
+
+      :hover {
+        border: 1px solid ${Variables.Color.i400};
+        background-color: ${Variables.Color.n100};
+        border-style: dashed;
+        transition: .25s ease-out;
+      }
+    `
+  }}
+
   ${(props: IStyledTileProps) => {
     switch (props.tileSize) {
       case Props.TileSize.Small:
         return css`
           width: 210px;
           min-height: 230px;
-          
+
           @media (max-width: 443px) {
             width: calc(100% - 24px);
           }
@@ -48,7 +67,7 @@ const TileStyles = css`
       case Props.TileSize.Medium:
         return css`
           width: 286px;
-          
+
           @media (max-width: 595px) {
             width: calc(100% - 24px);
           }
@@ -58,6 +77,12 @@ const TileStyles = css`
           width: calc(100% - 24px);
         `
     }
+  }}
+
+  ${(props: IStyledTileProps) => props.isButton && css`
+      min-height: 100px;
+      height: 100px;
+    `
   }}
 
 `
@@ -101,7 +126,6 @@ const StyledHeadingText = styled(Text)`
 const HeadingLine = styled.div`
   display: flex;
   align-items: baseline;
-  
 `
 
 const HeadingWrapper = styled.div`
@@ -119,7 +143,7 @@ const ContentWrapper = styled.div`
   align-items: center;
   text-align: center;
   height: calc(100% - 40px);
-  
+
    ${(props: IContentWrapperProps) => {
     if (!props.hasTitleLabel) {
       return css`
@@ -129,29 +153,28 @@ const ContentWrapper = styled.div`
   }}
 `
 
-const ButtonContentWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 24px;
-`
 const ButtonDescriptionText = styled(Text)`
-  max-height: 54px;
+  display: block;
+  height: 40px;
   overflow: hidden;
-  margin: 8px auto;
+  position: relative;
+  top: -8px;
 `
 
 const ButtonTitleText = styled(Text)`
-  margin-top: 24px;
-  max-height: 48px;
+  width: 100%;
+  display: inline-block;
+  white-space: nowrap;
   overflow: hidden;
-`
-const IconWrapper = styled.img`
-  height: 120px;
-  display: block;
-  margin: 0 auto;
+  text-overflow: ellipsis;
+
+  ${StyleTileButton}:hover & {
+    color: ${Variables.Color.i400};
+  }
+
+  ${StyledAnchorTile}:hover & {
+    color: ${Variables.Color.i400};
+  }
 `
 
 const StyledHoverLabel = styled(Text)`
@@ -163,19 +186,19 @@ const StyledHoverLabel = styled(Text)`
   max-width: 90%;
   text-transform: uppercase;
   padding: 16px;
-  
+
   ${StyleTileButton}:hover & {
     opacity: 1;
     bottom: 0;
     transition: .25s ease-out;
   }
-  
+
   ${StyledAnchorTile}:hover & {
     opacity: 1;
     bottom: 0;
     transition: .25s ease-out;
   }
-  
+
   @media (max-width: 1033px) {
     opacity: 1;
     bottom: 0;
@@ -189,18 +212,43 @@ const TileContentWrapper = styled.div`
   width: 100%;
   position: relative;
 `
+const IconStyles = css`
+  width: 32px;
+  height: auto;
+  margin: 6px 16px 0 4px;
+  display: inline-block;
+`
+const StyleFontAwesomeIcon = styled(FontAwesomeIcon)`
+  ${IconStyles};
+`
 
+const StyledIntelliIcon = styled(IntelliIcon)`
+  ${IconStyles};
+`
+
+const ButtonWrapper = styled.div`
+  display: flex;
+  align-items: baseline;
+`
+
+const ButtonTextContentWrapper = styled.div`
+  width: calc(100% - 64px);
+  top: -8px;
+  position: relative;
+`
 export {
+  ButtonTextContentWrapper,
+  ButtonWrapper,
+  StyleFontAwesomeIcon,
   StyledTileLabel,
   StyleTileButton,
   StyledAnchorTile,
   StyledFigureText,
+  StyledIntelliIcon,
   HeadingWrapper,
   StyledHeadingText,
   ContentWrapper,
-  IconWrapper,
   HeadingLine,
-  ButtonContentWrapper,
   ButtonDescriptionText,
   ButtonTitleText,
   StyledHoverLabel,
