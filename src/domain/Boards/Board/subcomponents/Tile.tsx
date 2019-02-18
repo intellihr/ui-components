@@ -24,6 +24,8 @@ interface IBoardTileProps {
   linkProps?: {
     [i: string]: any
   }
+  /** children of this tile */
+  children?: React.ReactElement<any>
 }
 
 class Tile extends React.PureComponent<IBoardTileProps, never> {
@@ -81,7 +83,7 @@ class Tile extends React.PureComponent<IBoardTileProps, never> {
         isButton={isButton}
         isAdmin={isAdmin}
       >
-        {children}
+        {children && React.cloneElement(children, {isButton, isAdmin})}
         {this.hoverLabel}
       </TileTag>
     )

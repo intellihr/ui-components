@@ -14,6 +14,7 @@ interface IStyledTileProps {
 
 interface IContentWrapperProps {
   hasTitleLabel?: boolean
+  hasHoverMargin?: boolean
 }
 
 interface IStyledFigureTextProps {
@@ -22,6 +23,10 @@ interface IStyledFigureTextProps {
 
 interface IButtonDescriptionTextProps {
   hasLongDescription?: boolean
+}
+
+interface IWrapperProps {
+  hasHoverMargin?: boolean
 }
 
 const TileStyles = css`
@@ -154,6 +159,11 @@ const ContentWrapper = styled.div`
         `
     }
   }}
+
+   ${(props: IContentWrapperProps) => props.hasHoverMargin && css`
+      margin-bottom: 24px;
+    `
+  }}
 `
 
 const ButtonDescriptionText = styled(Text)`
@@ -167,6 +177,10 @@ const ButtonDescriptionText = styled(Text)`
       height: 60px;
     `
   }}
+
+  @media (max-width: 600px) {
+    text-align: center;
+  }
 `
 
 const ButtonTitleText = styled(Text)`
@@ -182,6 +196,10 @@ const ButtonTitleText = styled(Text)`
 
   ${StyledAnchorTile}:hover & {
     color: ${Variables.Color.i400};
+  }
+
+  @media (max-width: 600px) {
+    text-align: center;
   }
 `
 
@@ -223,7 +241,7 @@ const TileContentWrapper = styled.div`
 const IconStyles = css`
   width: 32px;
   height: auto;
-  margin: 6px 16px 0 4px;
+  margin: 6px 16px 16px 4px;
   display: inline-block;
 `
 const StyleFontAwesomeIcon = styled(FontAwesomeIcon)`
@@ -237,11 +255,31 @@ const StyledIntelliIcon = styled(IntelliIcon)`
 const ButtonWrapper = styled.div`
   display: flex;
   margin-bottom: -8px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ${(props: IWrapperProps) => props.hasHoverMargin && css`
+      margin-bottom: 24px;
+    `
+  }}
 `
 
+const ChildrenWrapper = styled.div`
+  ${(props: IWrapperProps) => props.hasHoverMargin && css`
+      margin-bottom: 24px;
+    `
+  }}
+`
 const ButtonTextContentWrapper = styled.div`
   width: calc(100% - 60px);
   position: relative;
+
+  @media (max-width: 600px) {
+    width: calc(100% - 8px);
+  }
 `
 export {
   ButtonTextContentWrapper,
@@ -259,5 +297,6 @@ export {
   ButtonDescriptionText,
   ButtonTitleText,
   StyledHoverLabel,
-  TileContentWrapper
+  TileContentWrapper,
+  ChildrenWrapper
 }

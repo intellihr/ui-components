@@ -2,52 +2,20 @@
 
 exports[`<TileContent /> should render a tile content button with a font awesome icon 1`] = `
 <styled.div>
-  <styled.div>
-    <Styled(FontAwesomeIcon)
-      color="#7362F5"
-      size="xlarge"
-      type="star"
-    />
-    <styled.div>
-      <Styled(Text)
-        color="#424F5C"
-        type="body"
-      >
-        dummy button title
-      </Styled(Text)>
-      <Styled(Text)
-        color="#667380"
-        type="small"
-      >
-        dummy button description
-      </Styled(Text)>
-    </styled.div>
+  <styled.div
+    hasTitleLabel={false}
+  >
+    <div />
   </styled.div>
 </styled.div>
 `;
 
 exports[`<TileContent /> should render a tile content button with an IntelliIcon 1`] = `
 <styled.div>
-  <styled.div>
-    <Styled(IntelliIcon)
-      color="#7362F5"
-      size="xlarge"
-      type="smile"
-    />
-    <styled.div>
-      <Styled(Text)
-        color="#424F5C"
-        type="body"
-      >
-        dummy button title
-      </Styled(Text)>
-      <Styled(Text)
-        color="#667380"
-        type="small"
-      >
-        dummy button description
-      </Styled(Text)>
-    </styled.div>
+  <styled.div
+    hasTitleLabel={false}
+  >
+    <div />
   </styled.div>
 </styled.div>
 `;
@@ -90,6 +58,7 @@ exports[`<TileContent /> should render a tile content with headings 1`] = `
       </Styled(Text)>
     </styled.div>
   </styled.div>
+  <styled.div />
 </styled.div>
 `;
 

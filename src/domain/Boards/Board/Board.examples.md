@@ -185,10 +185,9 @@
     isAdmin
   >
     <Board.Tile.TileContent
-     isAdmin
      icon='comments'
      buttonTitle='Medium Tile button button button button button button button button button button'
-     buttonDescription='max 3 line and tt will enlarge the height of entire tiles in same row.'
+     buttonDescription='max 3 line: it will enlarge the height of entire tiles in same row.'
     >
     </Board.Tile.TileContent>
   </Board.Tile>
@@ -224,7 +223,6 @@
     isAdmin
   >
    <Board.Tile.TileContent
-     isAdmin
      icon='plus-square'
      buttonTitle='small admin Tile button with a font awesome icon'
      buttonDescription=' admin content be hidden if it is out of 3 lines'
@@ -262,9 +260,9 @@
         headingFigure='5'
         subheading='subheading'
         subheadingFigure='1'
+        hasHoverMargin
      >
          <img src='https://i.imgur.com/ou4mYN4.jpg' />
-         I am the content
         </Board.Tile.TileContent>
   </Board.Tile>
   

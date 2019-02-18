@@ -6,6 +6,7 @@ import {
   ButtonTextContentWrapper,
   ButtonTitleText,
   ButtonWrapper,
+  ChildrenWrapper,
   ContentWrapper,
   HeadingLine,
   HeadingWrapper,
@@ -40,8 +41,12 @@ interface IBoardTileContentProps {
   buttonTitle?: string
   /** button description displayed after button title */
   buttonDescription?: string
+  /** If yes the tile content would has a margin to ensure the hover label does not overlap with the content */
+  hasHoverMargin?: boolean
   /** If yes the tile content would in admin style */
   isAdmin?: boolean
+  /** If yes the tile content would in button style */
+  isButton?: boolean
 }
 
 class TileContent extends React.PureComponent<IBoardTileContentProps, never> {
@@ -235,24 +240,28 @@ class TileContent extends React.PureComponent<IBoardTileContentProps, never> {
       subheading,
       children,
       label,
-      buttonTitle
+      hasHoverMargin,
+      isButton
     } = this.props
 
     if (heading || subheading) {
       return (
-        <>
+        <ChildrenWrapper
+          hasHoverMargin={hasHoverMargin}
+        >
           {children}
-        </>
+        </ChildrenWrapper>
       )
     }
 
-    if (buttonTitle) {
+    if (isButton) {
       return this.button
     }
 
     return (
       <ContentWrapper
         hasTitleLabel={!!label}
+        hasHoverMargin={hasHoverMargin}
       >
         <div>
           {children}
@@ -262,9 +271,14 @@ class TileContent extends React.PureComponent<IBoardTileContentProps, never> {
   }
 
   private get button (): JSX.Element | null {
+    const {
+      hasHoverMargin
+    } = this.props
 
     return (
-      <ButtonWrapper>
+      <ButtonWrapper
+        hasHoverMargin={hasHoverMargin}
+      >
         {this.icon}
         <ButtonTextContentWrapper>
         {this.buttonTitle}
