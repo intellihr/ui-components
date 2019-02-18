@@ -40,6 +40,8 @@ interface IBoardTileContentProps {
   buttonTitle?: string
   /** button description displayed after button title */
   buttonDescription?: string
+  /** If yes the tile content would in admin style */
+  isAdmin?: boolean
 }
 
 class TileContent extends React.PureComponent<IBoardTileContentProps, never> {
@@ -208,7 +210,8 @@ class TileContent extends React.PureComponent<IBoardTileContentProps, never> {
 
   private get buttonDescription (): JSX.Element | null {
     const {
-      buttonDescription
+      buttonDescription,
+      isAdmin
     } = this.props
 
     if (buttonDescription) {
@@ -216,6 +219,7 @@ class TileContent extends React.PureComponent<IBoardTileContentProps, never> {
         <ButtonDescriptionText
           type={Props.TypographyType.Small}
           color={Variables.Color.n600}
+          hasLongDescription={isAdmin && buttonDescription.length > 48}
         >
           {buttonDescription}
         </ButtonDescriptionText>

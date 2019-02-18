@@ -20,6 +20,10 @@ interface IStyledFigureTextProps {
   textWidth: number
 }
 
+interface IButtonDescriptionTextProps {
+  hasLongDescription?: boolean
+}
+
 const TileStyles = css`
   background-color: ${Variables.Color.n200};
   border-radius: 4px;
@@ -81,7 +85,6 @@ const TileStyles = css`
 
   ${(props: IStyledTileProps) => props.isButton && css`
       min-height: 100px;
-      height: 100px;
     `
   }}
 
@@ -159,6 +162,11 @@ const ButtonDescriptionText = styled(Text)`
   overflow: hidden;
   position: relative;
   top: -8px;
+
+  ${(props: IButtonDescriptionTextProps) => props.hasLongDescription && css`
+      height: 60px;
+    `
+  }}
 `
 
 const ButtonTitleText = styled(Text)`
@@ -228,12 +236,11 @@ const StyledIntelliIcon = styled(IntelliIcon)`
 
 const ButtonWrapper = styled.div`
   display: flex;
-  align-items: baseline;
+  margin-bottom: -8px;
 `
 
 const ButtonTextContentWrapper = styled.div`
-  width: calc(100% - 64px);
-  top: -8px;
+  width: calc(100% - 60px);
   position: relative;
 `
 export {

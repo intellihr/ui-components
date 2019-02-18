@@ -185,9 +185,10 @@
     isAdmin
   >
     <Board.Tile.TileContent
+     isAdmin
      icon='comments'
      buttonTitle='Medium Tile button button button button button button button button button button'
-     buttonDescription='I have a max content in 2 lines: the long long long long long long long long long long long long long long long long long long long long long long tile description'
+     buttonDescription='max 3 line and tt will enlarge the height of entire tiles in same row.'
     >
     </Board.Tile.TileContent>
   </Board.Tile>
@@ -223,9 +224,10 @@
     isAdmin
   >
    <Board.Tile.TileContent
+     isAdmin
      icon='plus-square'
      buttonTitle='small admin Tile button with a font awesome icon'
-     buttonDescription=' be hidden if it is out of 2 lines'
+     buttonDescription=' admin content be hidden if it is out of 3 lines'
    >
    </Board.Tile.TileContent>
   </Board.Tile>
