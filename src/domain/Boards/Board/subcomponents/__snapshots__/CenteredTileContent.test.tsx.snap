@@ -5,9 +5,7 @@ exports[`<CenteredTileContent /> should render a centered tile content with chil
   <styled.div
     hasTitleLabel={false}
   >
-    <div>
-      children
-    </div>
+    children
   </styled.div>
 </styled.div>
 `;
@@ -19,9 +17,7 @@ exports[`<CenteredTileContent /> should render a centered tile content with labe
   </styled.label>
   <styled.div
     hasTitleLabel={true}
-  >
-    <div />
-  </styled.div>
+  />
 </styled.div>
 `;
 
@@ -29,8 +25,6 @@ exports[`<CenteredTileContent /> should render a centered tile content with noth
 <styled.div>
   <styled.div
     hasTitleLabel={false}
-  >
-    <div />
-  </styled.div>
+  />
 </styled.div>
 `;

@@ -1,19 +1,13 @@
 import React from 'react'
 
-import { Props, Variables } from '../../../../common'
+import { Variables } from '../../../../common'
+import { Icon, IconType } from '../../../Icons'
 import {
-  ButtonDescriptionText,
+  ButtonDescriptionLabel,
   ButtonTextContentWrapper,
-  ButtonTitleText,
+  ButtonTitleLabel,
   ButtonWrapper,
-  CenteredContentWrapper,
-  ChildrenWrapper,
-  HeadingLine,
-  HeadingWrapper,
-  StyleFontAwesomeIcon,
-  StyledFigureText,
-  StyledHeadingText,
-  StyledIntelliIcon,
+  StyledIconWrapper,
   StyledTileLabel,
   TileContentWrapper
 } from './style'
@@ -21,36 +15,27 @@ import {
 interface IBoardButtonTileContentProps {
   /** Text displayed above the content of tile */
   label?: string
-  /** If true, displays icon in intelliIcon set. If false, displays icon in fontawesome set */
-  isIntelliIcon?: boolean
-  /** button icon displayed in the tile */
-  icon?: string
+  /** button icon type displayed in the tile */
+  iconType?: IconType
   /** button title displayed in the tile */
   buttonTitle?: string
   /** button description displayed after button title */
   buttonDescription?: string
-  /** If yes the tile content would has a margin to ensure the hover label does not overlap with the content */
-  hasHoverMargin?: boolean
-  /** If yes the tile content would in admin style */
-  isAdmin?: boolean
 }
 
 class ButtonTileContent extends React.PureComponent<IBoardButtonTileContentProps, never> {
-  public static defaultProps: Partial<IBoardButtonTileContentProps> = {
-    isIntelliIcon: false
-  }
 
   private get icon (): JSX.Element | null {
     const {
-      isIntelliIcon,
-      icon
+      iconType
     } = this.props
 
-    const IconTag = isIntelliIcon ? StyledIntelliIcon : StyleFontAwesomeIcon
-
-    if (icon) {
-
-        return <IconTag type={icon} color={Variables.Color.i300} size='xlarge' />
+    if (iconType) {
+        return (
+          <StyledIconWrapper>
+            <Icon type={iconType} color={Variables.Color.i300} size='xlarge' />
+          </StyledIconWrapper>
+        )
     }
 
     return null
@@ -63,12 +48,9 @@ class ButtonTileContent extends React.PureComponent<IBoardButtonTileContentProps
 
     if (buttonTitle) {
       return (
-        <ButtonTitleText
-          type={Props.TypographyType.Body}
-          color={Variables.Color.n700}
-        >
+        <ButtonTitleLabel>
           {buttonTitle}
-        </ButtonTitleText>
+        </ButtonTitleLabel>
       )
     }
 
@@ -77,19 +59,14 @@ class ButtonTileContent extends React.PureComponent<IBoardButtonTileContentProps
 
   private get buttonDescription (): JSX.Element | null {
     const {
-      buttonDescription,
-      isAdmin
+      buttonDescription
     } = this.props
 
     if (buttonDescription) {
       return (
-        <ButtonDescriptionText
-          type={Props.TypographyType.Small}
-          color={Variables.Color.n600}
-          hasLongDescription={isAdmin && buttonDescription.length > 48}
-        >
+        <ButtonDescriptionLabel>
           {buttonDescription}
-        </ButtonDescriptionText>
+        </ButtonDescriptionLabel>
       )
     }
 
@@ -97,14 +74,8 @@ class ButtonTileContent extends React.PureComponent<IBoardButtonTileContentProps
   }
 
   private get content (): JSX.Element | null {
-    const {
-      hasHoverMargin
-    } = this.props
-
     return (
-      <ButtonWrapper
-        hasHoverMargin={hasHoverMargin}
-      >
+      <ButtonWrapper>
         {this.icon}
         <ButtonTextContentWrapper>
         {this.buttonTitle}

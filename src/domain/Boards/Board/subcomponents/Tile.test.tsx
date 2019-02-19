@@ -23,21 +23,21 @@ describe('<Tile />', () => {
 
   it(`should render a large board tile`, () => {
     const wrapper = shallow(
-      <Tile size={Props.TileSize.Large} />
+      <Tile size='large' />
     )
     expect(wrapper).toMatchSnapshot()
   })
 
   it(`should render a medium board tile`, () => {
     const wrapper = shallow(
-      <Tile size={Props.TileSize.Medium} />
+      <Tile size='medium' />
     )
     expect(wrapper).toMatchSnapshot()
   })
 
   it(`should render a small board tile`, () => {
     const wrapper = shallow(
-      <Tile size={Props.TileSize.Small} />
+      <Tile size='small' />
     )
     expect(wrapper).toMatchSnapshot()
   })
@@ -67,11 +67,11 @@ describe('<Tile />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a hoverable board tile button for admin with hover label`, () => {
+  it(`should render a hoverable board tile button in hollow style with hover label`, () => {
     const wrapper = shallow(
       <Tile
         isButton
-        isAdmin
+        type='hollow'
       />
     )
     expect(wrapper).toMatchSnapshot()

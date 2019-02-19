@@ -23,7 +23,7 @@ describe('<ButtonTileContent />', () => {
   it(`should render a button tile content with a font awesome icon`, () => {
     const wrapper = shallow(
       <ButtonTileContent
-        icon='star'
+        iconType='fa-star'
         buttonTitle='dummy button title'
         buttonDescription='dummy button description'
       />
@@ -34,8 +34,7 @@ describe('<ButtonTileContent />', () => {
   it(`should render a button tile content with an IntelliIcon`, () => {
     const wrapper = shallow(
       <ButtonTileContent
-        isIntelliIcon
-        icon='smile'
+        iconType='intelli-icon-alert'
         buttonTitle='dummy button title'
         buttonDescription='dummy button description'
       />
@@ -43,11 +42,10 @@ describe('<ButtonTileContent />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a button tile content in the admin style`, () => {
+  it(`should render a button tile content in the hollow style`, () => {
     const wrapper = shallow(
       <ButtonTileContent
-        isAdmin
-        icon='star'
+        iconType='fa-star'
         buttonTitle='dummy button title'
         buttonDescription='dummy button description'
       />

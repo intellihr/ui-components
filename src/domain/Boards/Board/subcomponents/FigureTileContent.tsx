@@ -1,19 +1,10 @@
 import React from 'react'
 
-import { Props, Variables } from '../../../../common'
 import {
-  ButtonDescriptionText,
-  ButtonTextContentWrapper,
-  ButtonTitleText,
-  ButtonWrapper,
-  CenteredContentWrapper,
-  ChildrenWrapper,
   HeadingLine,
   HeadingWrapper,
-  StyleFontAwesomeIcon,
-  StyledFigureText,
-  StyledHeadingText,
-  StyledIntelliIcon,
+  StyledFigureLabel,
+  StyledHeadinglabel,
   StyledTileLabel,
   TileContentWrapper
 } from './style'
@@ -29,36 +20,33 @@ interface IBoardFigureTileContentProps {
   subheading?: string
   /** Text displayed in the subheading */
   subheadingFigure?: string
-  /** If true, displays heading in a warning style */
-  isHeadingWarning?: boolean
-  /** If true, displays subheading in a warning style */
-  isSubheadingWarning?: boolean
-  /** If yes the tile content would has a margin to ensure the hover label does not overlap with the content */
-  hasHoverMargin?: boolean
+  /** The displayed color style of heading */
+  headingStyle?: 'success' | 'warning' | 'alert' | 'none'
+  /** The displayed color style of subheading */
+  subheadingStyle?: 'success' | 'warning' | 'alert' | 'none'
 }
 
 class FigureTileContent extends React.PureComponent<IBoardFigureTileContentProps, never> {
   public static defaultProps: Partial<IBoardFigureTileContentProps> = {
-    isHeadingWarning: false,
-    isSubheadingWarning: false
+    headingStyle: 'none',
+    subheadingStyle: 'none'
   }
 
   private get headingFigure (): JSX.Element | null {
     const {
       headingFigure,
-      isHeadingWarning
+      headingStyle
     } = this.props
 
     if (headingFigure) {
       return (
-        <StyledFigureText
-          type={Props.TypographyType.DisplayLarge}
-          color={isHeadingWarning ? Variables.Color.r400 : Variables.Color.n800}
-          isUpper
+        <StyledFigureLabel
+          isHeading
+          labelStyle={headingStyle!}
           textWidth={this.figureTextWidth}
         >
           {headingFigure}
-        </StyledFigureText>
+        </StyledFigureLabel>
       )
     }
 
@@ -68,18 +56,17 @@ class FigureTileContent extends React.PureComponent<IBoardFigureTileContentProps
   private get heading (): JSX.Element | null {
     const {
       heading,
-      isHeadingWarning
+      headingStyle
     } = this.props
 
     if (heading) {
       return (
-        <StyledHeadingText
-          type={Props.TypographyType.Heading}
-          color={isHeadingWarning ? Variables.Color.r400 : Variables.Color.n800}
-          isUpper
+        <StyledHeadinglabel
+          isHeading
+          labelStyle={headingStyle!}
         >
           {heading}
-        </StyledHeadingText>
+        </StyledHeadinglabel>
       )
     }
 
@@ -89,19 +76,17 @@ class FigureTileContent extends React.PureComponent<IBoardFigureTileContentProps
   private get subheadingFigure (): JSX.Element | null {
     const {
       subheadingFigure,
-      isSubheadingWarning
+      subheadingStyle
     } = this.props
 
     if (subheadingFigure) {
       return (
-        <StyledFigureText
-          type={Props.TypographyType.Display}
-          color={isSubheadingWarning ? Variables.Color.r400 : Variables.Color.n800}
-          isUpper
+        <StyledFigureLabel
+          labelStyle={subheadingStyle!}
           textWidth={this.figureTextWidth}
         >
           {subheadingFigure}
-        </StyledFigureText>
+        </StyledFigureLabel>
       )
     }
 
@@ -111,18 +96,16 @@ class FigureTileContent extends React.PureComponent<IBoardFigureTileContentProps
   private get subheading (): JSX.Element | null {
     const {
       subheading,
-      isSubheadingWarning
+      subheadingStyle
     } = this.props
 
     if (subheading) {
       return (
-        <StyledHeadingText
-          type={Props.TypographyType.Small}
-          isUpper
-          color={isSubheadingWarning ? Variables.Color.r400 : Variables.Color.n800}
+        <StyledHeadinglabel
+          labelStyle={subheadingStyle!}
         >
           {subheading}
-        </StyledHeadingText>
+        </StyledHeadinglabel>
       )
     }
 
@@ -167,16 +150,13 @@ class FigureTileContent extends React.PureComponent<IBoardFigureTileContentProps
 
   private get content (): JSX.Element {
     const {
-      children,
-      hasHoverMargin
+      children
     } = this.props
 
     return (
-      <ChildrenWrapper
-        hasHoverMargin={hasHoverMargin}
-      >
+      <div>
         {children}
-      </ChildrenWrapper>
+      </div>
     )
   }
 

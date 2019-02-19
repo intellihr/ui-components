@@ -39,8 +39,36 @@ describe('<FigureTileContent />', () => {
         headingFigure='1'
         subheading='dummy subheading'
         subheadingFigure='35'
-        isHeadingWarning
-        isSubheadingWarning
+        headingStyle='warning'
+        subheadingStyle='warning'
+      />
+    )
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it(`should render a figure tile content with alert headings`, () => {
+    const wrapper = shallow(
+      <FigureTileContent
+        heading='dummy heading'
+        headingFigure='1'
+        subheading='dummy subheading'
+        subheadingFigure='35'
+        headingStyle='alert'
+        subheadingStyle='alert'
+      />
+    )
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it(`should render a figure tile content with success headings`, () => {
+    const wrapper = shallow(
+      <FigureTileContent
+        heading='dummy heading'
+        headingFigure='1'
+        subheading='dummy subheading'
+        subheadingFigure='35'
+        headingStyle='success'
+        subheadingStyle='success'
       />
     )
     expect(wrapper).toMatchSnapshot()

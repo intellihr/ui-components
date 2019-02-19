@@ -36,7 +36,7 @@
   
  <Board.Tile
   size='small'
-  onClick= {() => { alert('I am not hoverable!') }}
+  onClick= {() => { alert('I am a small tile') }}
  >
  </Board.Tile>
 </Board>
@@ -157,11 +157,11 @@
  >
    <Board.Tile.FigureTileContent
      label='This is a medium styled content tile'
-     heading='long long long long long heading'
+     heading='alert! alert! alert! alert! alert!'
      headingFigure='5'
-     isHeadingWarning
+     headingStyle='alert'
    >
-    I have a warning heading only
+    I have a alert heading only
     "Sunset is the time of day when our sky meets the outer space solar winds. There are blue, pink, and purple swirls, spinning and twisting, like clouds of balloons caught in a whirlwind. The sun moves slowly to hide behind the line of horizon, while the moon races to take its place in prominence atop the night sky. People slow to a crawl, entranced, fully forgetting the deeds that must still be done. There is a coolness, a calmness, when the sun does set."
    </Board.Tile.FigureTileContent>
  </Board.Tile>
@@ -173,9 +173,9 @@
      label='This is a medium styled content tile'
      subheading='long long long long long subheading'
      subheadingFigure='10'
-     isSubheadingWarning
+     subheadingStyle='alert'
    >
-   I have a warning heading only
+   I have a alert heading only
    </Board.Tile.FigureTileContent>
  </Board.Tile>
  
@@ -184,11 +184,12 @@
  >
    <Board.Tile.FigureTileContent
      label='This is a small styled content tile'
-     heading='heading'
+     heading='warning!'
      headingFigure='1'
-     subheading='subheading'
+     headingStyle='warning'
+     subheading='success!'
      subheadingFigure='10'
-     isSubheadingWarning
+     subheadingStyle='success'
    >
    </Board.Tile.FigureTileContent>
  </Board.Tile>
@@ -206,7 +207,7 @@
    isButton
  >
    <Board.Tile.ButtonTileContent
-    icon='plus-square'
+    iconType='fa-plus-square'
     buttonTitle='Large Tile button with a font awesome icon'
     buttonDescription='I am the tile description'
    >
@@ -218,8 +219,7 @@
    isButton
  >
    <Board.Tile.ButtonTileContent
-    isIntelliIcon
-    icon='smile'
+    iconType='intelli-icon-smile'
     buttonTitle='Medium Tile button with an IntelliIcon'
     buttonDescription='I am the tile description'
    >
@@ -228,13 +228,13 @@
  
  <Board.Tile
     size='medium'
+    type='hollow'
     isButton
-    isAdmin
   >
     <Board.Tile.ButtonTileContent
-     icon='comments'
+     iconType='fa-comments'
      buttonTitle='Medium Tile button button button button button button button button button button'
-     buttonDescription='max 3 line: it will enlarge the height of entire tiles in same row.'
+     buttonDescription='Button description has a maximum line 3: it will be hidden if it is out of 3 lines'
     >
     </Board.Tile.ButtonTileContent>
   </Board.Tile>
@@ -244,10 +244,9 @@
    isButton
  >
   <Board.Tile.ButtonTileContent
-    isIntelliIcon
-    icon='smile'
+    iconType='intelli-icon-smile'
     buttonTitle='Small Tile button with an IntelliIcon'
-    buttonDescription='The tile description will be hidden if it is out of 2 lines'
+    buttonDescription='The tile description will be hidden if it is out of 3 lines'
   >
   </Board.Tile.ButtonTileContent>
  </Board.Tile>
@@ -257,7 +256,7 @@
    isButton
  >
   <Board.Tile.ButtonTileContent
-    icon='exclamation-triangle'
+    iconType='fa-exclamation-triangle'
     buttonTitle='small Tile button title text with a font awesome icon'
     buttonDescription='I am a small tile content.'
   >
@@ -266,11 +265,11 @@
    
  <Board.Tile
     size='medium'
+    type='hollow'
     isButton
-    isAdmin
   >
    <Board.Tile.ButtonTileContent
-     icon='plus-square'
+     iconType='fa-plus-square'
      buttonTitle='small admin Tile button with a font awesome icon'
      buttonDescription=' admin content be hidden if it is out of 3 lines'
    >
@@ -307,7 +306,6 @@
         headingFigure='5'
         subheading='subheading'
         subheadingFigure='1'
-        hasHoverMargin
      >
          <img src='https://i.imgur.com/ou4mYN4.jpg' />
         </Board.Tile.FigureTileContent>

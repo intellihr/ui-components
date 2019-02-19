@@ -1,27 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ButtonTileContent /> should render a button tile content in the admin style 1`] = `
+exports[`<ButtonTileContent /> should render a button tile content in the hollow style 1`] = `
 <styled.div>
   <styled.div>
-    <Styled(FontAwesomeIcon)
-      color="#7362F5"
-      size="xlarge"
-      type="star"
-    />
     <styled.div>
-      <Styled(Text)
-        color="#424F5C"
-        type="body"
-      >
+      <Icon
+        color="#7362F5"
+        isSpinning={false}
+        size="xlarge"
+        type="fa-star"
+      />
+    </styled.div>
+    <styled.div>
+      <styled.label>
         dummy button title
-      </Styled(Text)>
-      <Styled(Text)
-        color="#667380"
-        hasLongDescription={false}
-        type="small"
-      >
+      </styled.label>
+      <styled.label>
         dummy button description
-      </Styled(Text)>
+      </styled.label>
     </styled.div>
   </styled.div>
 </styled.div>
@@ -30,24 +26,21 @@ exports[`<ButtonTileContent /> should render a button tile content in the admin 
 exports[`<ButtonTileContent /> should render a button tile content with a font awesome icon 1`] = `
 <styled.div>
   <styled.div>
-    <Styled(FontAwesomeIcon)
-      color="#7362F5"
-      size="xlarge"
-      type="star"
-    />
     <styled.div>
-      <Styled(Text)
-        color="#424F5C"
-        type="body"
-      >
+      <Icon
+        color="#7362F5"
+        isSpinning={false}
+        size="xlarge"
+        type="fa-star"
+      />
+    </styled.div>
+    <styled.div>
+      <styled.label>
         dummy button title
-      </Styled(Text)>
-      <Styled(Text)
-        color="#667380"
-        type="small"
-      >
+      </styled.label>
+      <styled.label>
         dummy button description
-      </Styled(Text)>
+      </styled.label>
     </styled.div>
   </styled.div>
 </styled.div>
@@ -56,24 +49,21 @@ exports[`<ButtonTileContent /> should render a button tile content with a font a
 exports[`<ButtonTileContent /> should render a button tile content with an IntelliIcon 1`] = `
 <styled.div>
   <styled.div>
-    <Styled(IntelliIcon)
-      color="#7362F5"
-      size="xlarge"
-      type="smile"
-    />
     <styled.div>
-      <Styled(Text)
-        color="#424F5C"
-        type="body"
-      >
+      <Icon
+        color="#7362F5"
+        isSpinning={false}
+        size="xlarge"
+        type="intelli-icon-alert"
+      />
+    </styled.div>
+    <styled.div>
+      <styled.label>
         dummy button title
-      </Styled(Text)>
-      <Styled(Text)
-        color="#667380"
-        type="small"
-      >
+      </styled.label>
+      <styled.label>
         dummy button description
-      </Styled(Text)>
+      </styled.label>
     </styled.div>
   </styled.div>
 </styled.div>

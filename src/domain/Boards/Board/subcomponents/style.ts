@@ -1,42 +1,39 @@
 import styled, { css } from 'styled-components'
 
-import { Props, Variables } from '../../../../common'
-import { FontAwesomeIcon, IntelliIcon } from '../../../Icons'
+import { Variables } from '../../../../common'
 import { UnstyledLink } from '../../../Links/UnstyledLink'
-import { Text } from '../../../Typographies/Text'
 
 interface IStyledTileProps {
-  tileSize?: Props.TileSize
-  isHoverable?: boolean
-  isButton?: boolean
-  isAdmin?: boolean
+  tileSize: 'small'|'medium'|'large'
+  isHoverable: boolean
+  isButton: boolean
+  type: 'default'|'hollow'
+  hasHoverLabel: boolean
 }
 
 interface IContentWrapperProps {
   hasTitleLabel?: boolean
-  hasHoverMargin?: boolean
 }
 
-interface IStyledFigureTextProps {
+interface IStyledHeadingLabelProps {
+  isHeading?: boolean
+  labelStyle: 'success' | 'warning' | 'alert' | 'none'
+}
+
+interface IStyledFigureLabelProps {
+  isHeading?: boolean
   textWidth: number
-}
-
-interface IButtonDescriptionTextProps {
-  hasLongDescription?: boolean
-}
-
-interface IWrapperProps {
-  hasHoverMargin?: boolean
+  labelStyle: 'success' | 'warning' | 'alert' | 'none'
 }
 
 const TileStyles = css`
   background-color: ${Variables.Color.n200};
-  border-radius: 4px;
+  border-radius: ${Variables.Style.borderRadius}px;
   min-height: 300px;
-  padding: 16px;
+  padding: ${Variables.Spacing.sMedium}px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.13);
   transition: background-color 0.15s ease-in;
-  margin: 0 24px 24px 0;
+  margin: 0 ${Variables.Spacing.sLarge}px ${Variables.Spacing.sLarge}px 0;
 
   ${(props: IStyledTileProps) => props.isHoverable && css`
       cursor: pointer;
@@ -48,7 +45,7 @@ const TileStyles = css`
     `
   }}
 
-  ${(props: IStyledTileProps) => (props.isHoverable && props.isButton && props.isAdmin) && css`
+  ${(props: IStyledTileProps) => (props.isHoverable && props.isButton && props.type === 'hollow') && css`
 
       background-color: ${Variables.Color.n100};
       border: 1px solid ${Variables.Color.n400};
@@ -65,26 +62,26 @@ const TileStyles = css`
 
   ${(props: IStyledTileProps) => {
     switch (props.tileSize) {
-      case Props.TileSize.Small:
+      case 'small':
         return css`
           width: 210px;
           min-height: 230px;
 
           @media (max-width: 443px) {
-            width: calc(100% - 24px);
+            width: calc(100% - ${Variables.Spacing.sLarge}px);
           }
         `
-      case Props.TileSize.Medium:
+      case 'medium':
         return css`
           width: 286px;
 
           @media (max-width: 595px) {
-            width: calc(100% - 24px);
+            width: calc(100% - ${Variables.Spacing.sLarge}px);
           }
         `
-      case Props.TileSize.Large:
+      case 'large':
         return css`
-          width: calc(100% - 24px);
+          width: calc(100% - ${Variables.Spacing.sLarge}px);
         `
     }
   }}
@@ -94,7 +91,13 @@ const TileStyles = css`
     `
   }}
 
+  ${(props: IStyledTileProps) => props.hasHoverLabel && css`
+
+      padding-bottom: 40px;
+    `
+  }}
 `
+
 const StyleTileButton = styled.div`
   ${TileStyles};
   outline: 0;
@@ -111,25 +114,87 @@ const StyledTileLabel = styled.label`
   line-height: ${Variables.LineHeight.lhSmall}px;
   font-weight: ${Variables.FontWeight.fwHeavy};
   text-transform: uppercase;
-  margin-bottom: 4px;
+  margin-bottom: ${Variables.Spacing.s2XSmall}px;
   height: 40px;
   overflow: hidden;
 `
 
-const StyledFigureText = styled(Text)`
-  ${(props: IStyledFigureTextProps) => {
+const StyledFigureLabel = styled.label`
+  ${(props: IStyledFigureLabelProps) => {
+    switch (props.labelStyle) {
+      case 'success':
+        return css`
+            color: ${Variables.Color.g400};
+          `
+      case 'warning':
+        return css`
+            color: ${Variables.Color.o400};
+          `
+      case 'alert':
+        return css`
+            color: ${Variables.Color.r400};
+          `
+      case 'none':
+        return css`
+            color: ${Variables.Color.n800};
+          `
+    }
+  }}
+
+  ${(props: IStyledFigureLabelProps) => {
     return css`
       width: ${props.textWidth}px;
       display: inline-block;
+      font-size: ${Variables.FontSize.fzDisplay}px;
+      line-height: ${Variables.LineHeight.lhDisplay}px;
+      font-weight: ${Variables.FontWeight.fwHeavy};
+      text-transform: uppercase;
+    `
+  }}
+
+  ${(props: IStyledFigureLabelProps) => props.isHeading && css`
+      font-size: ${Variables.FontSize.fzDisplayLarge}px;
+      line-height: ${Variables.LineHeight.lhDisplayLarge}px;
     `
   }}
 `
 
-const StyledHeadingText = styled(Text)`
+const StyledHeadinglabel = styled.label`
+  font-size: ${Variables.FontSize.fzSmall}px;
+  line-height: ${Variables.LineHeight.lhSmall}px;
+  font-weight: ${Variables.FontWeight.fwHeavy};
+  text-transform: uppercase;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;
+
+  ${(props: IStyledHeadingLabelProps) => {
+  switch (props.labelStyle) {
+    case 'success':
+      return css`
+            color: ${Variables.Color.g400};
+          `
+      case 'warning':
+        return css`
+            color: ${Variables.Color.o400};
+          `
+      case 'alert':
+        return css`
+            color: ${Variables.Color.r400};
+          `
+      case 'none':
+        return css`
+            color: ${Variables.Color.n800};
+          `
+    }
+  }}
+
+  ${(props: IStyledHeadingLabelProps) => props.isHeading && css`
+      font-size: ${Variables.FontSize.fzHeading}px;
+      line-height: ${Variables.LineHeight.lhHeading}px;
+    `
+  }}
 `
 
 const HeadingLine = styled.div`
@@ -151,7 +216,7 @@ const CenteredContentWrapper = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: calc(100% - 40px);
+  height: calc(100% - ${Variables.Spacing.s2XLarge}px);
 
    ${(props: IContentWrapperProps) => {
     if (!props.hasTitleLabel) {
@@ -160,31 +225,27 @@ const CenteredContentWrapper = styled.div`
         `
     }
   }}
-
-   ${(props: IContentWrapperProps) => props.hasHoverMargin && css`
-      margin-bottom: 24px;
-    `
-  }}
 `
 
-const ButtonDescriptionText = styled(Text)`
+const ButtonDescriptionLabel = styled.label`
+  font-size: ${Variables.FontSize.fzSmall}px;
+  line-height: ${Variables.LineHeight.lhSmall}px;
+  color: ${Variables.Color.n600};
   display: block;
-  height: 40px;
+  height: 60px;
   overflow: hidden;
   position: relative;
-  top: -8px;
-
-  ${(props: IButtonDescriptionTextProps) => props.hasLongDescription && css`
-      height: 60px;
-    `
-  }}
+  top: -${Variables.Spacing.sXSmall}px;
 
   @media (max-width: 600px) {
     text-align: center;
   }
 `
 
-const ButtonTitleText = styled(Text)`
+const ButtonTitleLabel = styled.label`
+  font-size: ${Variables.FontSize.fzBody}px;
+  line-height: ${Variables.LineHeight.lhBody}px;
+  color: ${Variables.Color.n700};
   width: 100%;
   display: inline-block;
   white-space: nowrap;
@@ -204,15 +265,19 @@ const ButtonTitleText = styled(Text)`
   }
 `
 
-const StyledHoverLabel = styled(Text)`
+const StyledHoverLabel = styled.label`
+  font-size: ${Variables.FontSize.fzSmall}px;
+  line-height: ${Variables.LineHeight.lhSmall}px;
+  color: ${Variables.Color.i400};
+  text-transform: uppercase;
   opacity: 0;
   text-align: right;
   position: absolute;
-  bottom: -8px;
+  bottom: -${Variables.Spacing.sXSmall}px;
   right: 0;
   max-width: 90%;
   text-transform: uppercase;
-  padding: 16px;
+  padding: ${Variables.Spacing.sMedium}px;
 
   ${StyleTileButton}:hover & {
     opacity: 1;
@@ -239,43 +304,25 @@ const TileContentWrapper = styled.div`
   width: 100%;
   position: relative;
 `
-const IconStyles = css`
-  width: 32px;
+const StyledIconWrapper = styled.div`
+  width: ${Variables.Spacing.sXLarge}px;
   height: auto;
-  margin: 6px 16px 16px 4px;
+  margin: ${Variables.Spacing.s2XSmall}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px 0;
   display: inline-block;
-`
-const StyleFontAwesomeIcon = styled(FontAwesomeIcon)`
-  ${IconStyles};
-`
-
-const StyledIntelliIcon = styled(IntelliIcon)`
-  ${IconStyles};
 `
 
 const ButtonWrapper = styled.div`
   display: flex;
-  margin-bottom: -8px;
+  margin-bottom: -${Variables.Spacing.sXSmall}px;
 
   @media (max-width: 600px) {
     flex-direction: column;
     align-items: center;
   }
-
-  ${(props: IWrapperProps) => props.hasHoverMargin && css`
-      margin-bottom: 24px;
-    `
-  }}
 `
 
-const ChildrenWrapper = styled.div`
-  ${(props: IWrapperProps) => props.hasHoverMargin && css`
-      margin-bottom: 24px;
-    `
-  }}
-`
 const ButtonTextContentWrapper = styled.div`
-  width: calc(100% - 60px);
+  width: calc(100% - 56px);
   position: relative;
 
   @media (max-width: 600px) {
@@ -285,19 +332,17 @@ const ButtonTextContentWrapper = styled.div`
 export {
   ButtonTextContentWrapper,
   ButtonWrapper,
-  StyleFontAwesomeIcon,
+  StyledIconWrapper,
   StyledTileLabel,
   StyleTileButton,
   StyledAnchorTile,
-  StyledFigureText,
-  StyledIntelliIcon,
+  StyledFigureLabel,
   HeadingWrapper,
-  StyledHeadingText,
+  StyledHeadinglabel,
   CenteredContentWrapper,
   HeadingLine,
-  ButtonDescriptionText,
-  ButtonTitleText,
+  ButtonDescriptionLabel,
+  ButtonTitleLabel,
   StyledHoverLabel,
-  TileContentWrapper,
-  ChildrenWrapper
+  TileContentWrapper
 }

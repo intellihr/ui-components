@@ -31,12 +31,6 @@ namespace Props {
     XLarge = 'xlarge'
   }
 
-  export enum TileSize {
-    Small = 'small',
-    Medium = 'medium',
-    Large = 'large'
-  }
-
   export enum TypographyType {
     XSmall = 'xsmall',
     Small = 'small',

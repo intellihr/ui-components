@@ -2,108 +2,104 @@
 
 exports[`<Tile /> should render a board tile with nothing 1`] = `
 <styled.div
-  isAdmin={false}
+  hasHoverLabel={false}
   isButton={false}
   isHoverable={true}
-  onClick={[Function]}
   tabIndex={0}
   tileSize="medium"
+  type="default"
 />
 `;
 
-exports[`<Tile /> should render a hoverable board tile button for admin with hover label 1`] = `
+exports[`<Tile /> should render a hoverable board tile button in hollow style with hover label 1`] = `
 <styled.div
-  isAdmin={true}
+  hasHoverLabel={false}
   isButton={true}
   isHoverable={true}
-  onClick={[Function]}
   tabIndex={0}
   tileSize="medium"
+  type="hollow"
 />
 `;
 
 exports[`<Tile /> should render a hoverable board tile button with hover label 1`] = `
 <styled.div
-  isAdmin={false}
+  hasHoverLabel={false}
   isButton={true}
   isHoverable={true}
-  onClick={[Function]}
   tabIndex={0}
   tileSize="medium"
+  type="default"
 />
 `;
 
 exports[`<Tile /> should render a hoverable board tile with hover label 1`] = `
 <styled.div
-  isAdmin={false}
+  hasHoverLabel={true}
   isButton={false}
   isHoverable={true}
-  onClick={[Function]}
   tabIndex={0}
   tileSize="medium"
+  type="default"
 >
-  <Styled(Text)
-    color="#432DF3"
-    isUpper={true}
-    type="small"
-  >
+  <styled.label>
     hover label
-  </Styled(Text)>
+  </styled.label>
 </styled.div>
 `;
 
 exports[`<Tile /> should render a large board tile 1`] = `
 <styled.div
-  isAdmin={false}
+  hasHoverLabel={false}
   isButton={false}
   isHoverable={true}
-  onClick={[Function]}
   tabIndex={0}
   tileSize="large"
+  type="default"
 />
 `;
 
 exports[`<Tile /> should render a medium board tile 1`] = `
 <styled.div
-  isAdmin={false}
+  hasHoverLabel={false}
   isButton={false}
   isHoverable={true}
-  onClick={[Function]}
   tabIndex={0}
   tileSize="medium"
+  type="default"
 />
 `;
 
 exports[`<Tile /> should render a non-hoverable board tile 1`] = `
 <styled.div
-  isAdmin={false}
+  hasHoverLabel={false}
   isButton={false}
   isHoverable={false}
-  onClick={[Function]}
   tabIndex={0}
   tileSize="medium"
+  type="default"
 />
 `;
 
 exports[`<Tile /> should render a small board tile 1`] = `
 <styled.div
-  isAdmin={false}
+  hasHoverLabel={false}
   isButton={false}
   isHoverable={true}
-  onClick={[Function]}
   tabIndex={0}
   tileSize="small"
+  type="default"
 />
 `;
 
 exports[`<Tile /> should render an anchor board tile 1`] = `
 <Styled(UnstyledLink)
+  hasHoverLabel={false}
   href="#dummy"
-  isAdmin={false}
   isButton={false}
   isHoverable={true}
-  onClick={[Function]}
   tabIndex={0}
   tileSize="medium"
+  type="default"
 />
 `;
