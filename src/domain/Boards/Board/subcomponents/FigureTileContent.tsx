@@ -6,8 +6,8 @@ import {
   ButtonTextContentWrapper,
   ButtonTitleText,
   ButtonWrapper,
+  CenteredContentWrapper,
   ChildrenWrapper,
-  ContentWrapper,
   HeadingLine,
   HeadingWrapper,
   StyleFontAwesomeIcon,
@@ -18,7 +18,7 @@ import {
   TileContentWrapper
 } from './style'
 
-interface IBoardTileContentProps {
+interface IBoardFigureTileContentProps {
   /** Text displayed above the content of tile */
   label?: string
   /** Text displayed at the top of tile content */
@@ -33,27 +33,14 @@ interface IBoardTileContentProps {
   isHeadingWarning?: boolean
   /** If true, displays subheading in a warning style */
   isSubheadingWarning?: boolean
-  /** If true, displays icon in intelliIcon set. If false, displays icon in fontawesome set */
-  isIntelliIcon?: boolean
-  /** button icon displayed in the tile */
-  icon?: string
-  /** button title displayed in the tile */
-  buttonTitle?: string
-  /** button description displayed after button title */
-  buttonDescription?: string
   /** If yes the tile content would has a margin to ensure the hover label does not overlap with the content */
   hasHoverMargin?: boolean
-  /** If yes the tile content would in admin style */
-  isAdmin?: boolean
-  /** If yes the tile content would in button style */
-  isButton?: boolean
 }
 
-class TileContent extends React.PureComponent<IBoardTileContentProps, never> {
-  public static defaultProps: Partial<IBoardTileContentProps> = {
+class FigureTileContent extends React.PureComponent<IBoardFigureTileContentProps, never> {
+  public static defaultProps: Partial<IBoardFigureTileContentProps> = {
     isHeadingWarning: false,
-    isSubheadingWarning: false,
-    isIntelliIcon: false
+    isSubheadingWarning: false
   }
 
   private get headingFigure (): JSX.Element | null {
@@ -178,113 +165,18 @@ class TileContent extends React.PureComponent<IBoardTileContentProps, never> {
     return null
   }
 
-  private get icon (): JSX.Element | null {
+  private get content (): JSX.Element {
     const {
-      isIntelliIcon,
-      icon
-    } = this.props
-
-    const IconTag = isIntelliIcon ? StyledIntelliIcon : StyleFontAwesomeIcon
-
-    if (icon) {
-
-        return <IconTag type={icon} color={Variables.Color.i300} size='xlarge' />
-    }
-
-    return null
-  }
-
-  private get buttonTitle (): JSX.Element | null {
-    const {
-      buttonTitle
-    } = this.props
-
-    if (buttonTitle) {
-      return (
-        <ButtonTitleText
-          type={Props.TypographyType.Body}
-          color={Variables.Color.n700}
-        >
-          {buttonTitle}
-        </ButtonTitleText>
-      )
-    }
-
-    return null
-  }
-
-  private get buttonDescription (): JSX.Element | null {
-    const {
-      buttonDescription,
-      isAdmin
-    } = this.props
-
-    if (buttonDescription) {
-      return (
-        <ButtonDescriptionText
-          type={Props.TypographyType.Small}
-          color={Variables.Color.n600}
-          hasLongDescription={isAdmin && buttonDescription.length > 48}
-        >
-          {buttonDescription}
-        </ButtonDescriptionText>
-      )
-    }
-
-    return null
-  }
-
-  private get content (): JSX.Element | null {
-    const {
-      heading,
-      subheading,
       children,
-      label,
-      hasHoverMargin,
-      isButton
-    } = this.props
-
-    if (heading || subheading) {
-      return (
-        <ChildrenWrapper
-          hasHoverMargin={hasHoverMargin}
-        >
-          {children}
-        </ChildrenWrapper>
-      )
-    }
-
-    if (isButton) {
-      return this.button
-    }
-
-    return (
-      <ContentWrapper
-        hasTitleLabel={!!label}
-        hasHoverMargin={hasHoverMargin}
-      >
-        <div>
-          {children}
-        </div>
-      </ContentWrapper>
-    )
-  }
-
-  private get button (): JSX.Element | null {
-    const {
       hasHoverMargin
     } = this.props
 
     return (
-      <ButtonWrapper
+      <ChildrenWrapper
         hasHoverMargin={hasHoverMargin}
       >
-        {this.icon}
-        <ButtonTextContentWrapper>
-        {this.buttonTitle}
-        {this.buttonDescription}
-        </ButtonTextContentWrapper>
-      </ButtonWrapper>
+        {children}
+      </ChildrenWrapper>
     )
   }
 
@@ -317,5 +209,5 @@ class TileContent extends React.PureComponent<IBoardTileContentProps, never> {
 }
 
 export {
-  TileContent
+  FigureTileContent
 }

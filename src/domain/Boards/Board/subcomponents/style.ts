@@ -39,6 +39,7 @@ const TileStyles = css`
   margin: 0 24px 24px 0;
 
   ${(props: IStyledTileProps) => props.isHoverable && css`
+      cursor: pointer;
 
       :hover {
         background-color: ${Variables.Color.n250};
@@ -143,7 +144,7 @@ const HeadingWrapper = styled.div`
   height: 76px;
 `
 
-const ContentWrapper = styled.div`
+const CenteredContentWrapper = styled.div`
   width: 100%;
   min-height: 230px;
   display: flex;
@@ -292,7 +293,7 @@ export {
   StyledIntelliIcon,
   HeadingWrapper,
   StyledHeadingText,
-  ContentWrapper,
+  CenteredContentWrapper,
   HeadingLine,
   ButtonDescriptionText,
   ButtonTitleText,

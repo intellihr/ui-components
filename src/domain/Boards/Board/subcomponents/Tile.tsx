@@ -3,7 +3,9 @@ import React from 'react'
 
 import { Props, Variables } from '../../../../common'
 import { StyleTileButton, StyledAnchorTile, StyledHoverLabel } from './style'
-import { TileContent } from './TileContent'
+import { ButtonTileContent } from './ButtonTileContent'
+import { CenteredTileContent } from './CenteredTileContent'
+import { FigureTileContent } from './FigureTileContent'
 
 interface IBoardTileProps {
   /** tile displayed in the size style */
@@ -29,7 +31,9 @@ interface IBoardTileProps {
 }
 
 class Tile extends React.PureComponent<IBoardTileProps, never> {
-  public static TileContent = TileContent
+  public static CenteredTileContent = CenteredTileContent
+  public static FigureTileContent = FigureTileContent
+  public static ButtonTileContent = ButtonTileContent
 
   public static defaultProps: Partial<IBoardTileProps> = {
     size: Props.TileSize.Medium,
@@ -83,7 +87,7 @@ class Tile extends React.PureComponent<IBoardTileProps, never> {
         isButton={isButton}
         isAdmin={isAdmin}
       >
-        {children && React.cloneElement(children, {isButton, isAdmin})}
+        {children && React.cloneElement(children, {isAdmin})}
         {this.hoverLabel}
       </TileTag>
     )

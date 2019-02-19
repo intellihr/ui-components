@@ -11,17 +11,6 @@ exports[`<Tile /> should render a board tile with nothing 1`] = `
 />
 `;
 
-exports[`<Tile /> should render a hoverable board tile 1`] = `
-<styled.div
-  isAdmin={false}
-  isButton={false}
-  isHoverable={true}
-  onClick={[Function]}
-  tabIndex={0}
-  tileSize="medium"
-/>
-`;
-
 exports[`<Tile /> should render a hoverable board tile button for admin with hover label 1`] = `
 <styled.div
   isAdmin={true}
@@ -79,6 +68,17 @@ exports[`<Tile /> should render a medium board tile 1`] = `
   isAdmin={false}
   isButton={false}
   isHoverable={true}
+  onClick={[Function]}
+  tabIndex={0}
+  tileSize="medium"
+/>
+`;
+
+exports[`<Tile /> should render a non-hoverable board tile 1`] = `
+<styled.div
+  isAdmin={false}
+  isButton={false}
+  isHoverable={false}
   onClick={[Function]}
   tabIndex={0}
   tileSize="medium"

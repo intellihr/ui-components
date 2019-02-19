@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonTileContent /> should render a button tile content in the admin style 1`] = `
+<styled.div>
+  <styled.div>
+    <Styled(FontAwesomeIcon)
+      color="#7362F5"
+      size="xlarge"
+      type="star"
+    />
+    <styled.div>
+      <Styled(Text)
+        color="#424F5C"
+        type="body"
+      >
+        dummy button title
+      </Styled(Text)>
+      <Styled(Text)
+        color="#667380"
+        hasLongDescription={false}
+        type="small"
+      >
+        dummy button description
+      </Styled(Text)>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<ButtonTileContent /> should render a button tile content with a font awesome icon 1`] = `
+<styled.div>
+  <styled.div>
+    <Styled(FontAwesomeIcon)
+      color="#7362F5"
+      size="xlarge"
+      type="star"
+    />
+    <styled.div>
+      <Styled(Text)
+        color="#424F5C"
+        type="body"
+      >
+        dummy button title
+      </Styled(Text)>
+      <Styled(Text)
+        color="#667380"
+        type="small"
+      >
+        dummy button description
+      </Styled(Text)>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<ButtonTileContent /> should render a button tile content with an IntelliIcon 1`] = `
+<styled.div>
+  <styled.div>
+    <Styled(IntelliIcon)
+      color="#7362F5"
+      size="xlarge"
+      type="smile"
+    />
+    <styled.div>
+      <Styled(Text)
+        color="#424F5C"
+        type="body"
+      >
+        dummy button title
+      </Styled(Text)>
+      <Styled(Text)
+        color="#667380"
+        type="small"
+      >
+        dummy button description
+      </Styled(Text)>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<ButtonTileContent /> should render a button tile content with label 1`] = `
+<styled.div>
+  <styled.label>
+    dummy label
+  </styled.label>
+  <styled.div>
+    <styled.div />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<ButtonTileContent /> should render a button tile content with nothing 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div />
+  </styled.div>
+</styled.div>
+`;
