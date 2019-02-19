@@ -3,10 +3,11 @@ import { includes } from 'lodash'
 import React from 'react'
 
 import { BadgeWrapper, StyledIcon } from './style'
+import { IconType } from './types'
 
 interface IIconProps {
   /** FontAwesome or alternate name of the icon to display */
-  type: string
+  type: IconType
   /** Multiplies icon size by this amount */
   size?: 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge'
   /** Custom sizes for icons */
