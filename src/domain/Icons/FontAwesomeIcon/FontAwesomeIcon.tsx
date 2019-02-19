@@ -1,8 +1,14 @@
 import React from 'react'
 
+import { Omit } from '../../../common'
 import { IIconProps, Icon } from '../Icon'
+import { FontAwesomeIconType, FontAwesomeIconTypeNoPrefix } from '../Icon/types'
 
-export class FontAwesomeIcon extends React.PureComponent<IIconProps> {
+interface IFontAwesomeIconProps extends Omit<IIconProps, 'type'> {
+  type: FontAwesomeIconTypeNoPrefix
+}
+
+export class FontAwesomeIcon extends React.PureComponent<IFontAwesomeIconProps> {
   public render (): JSX.Element {
     const {
       type
@@ -11,7 +17,7 @@ export class FontAwesomeIcon extends React.PureComponent<IIconProps> {
     return (
       <Icon
         {...this.props}
-        type={`fa-${type}`}
+        type={`fa-${type}` as FontAwesomeIconType}
       />
     )
   }
