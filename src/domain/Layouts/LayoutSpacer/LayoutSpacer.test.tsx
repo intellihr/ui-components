@@ -1,12 +1,12 @@
 import { mount } from 'enzyme'
 import React from 'react'
 
-import { ContentSpacer } from './ContentSpacer'
+import { LayoutSpacer } from './LayoutSpacer'
 
-describe('<ContentSpacer />', () => {
-  it(`should render a content spacer with varying spacing sizes`, () => {
+describe('<LayoutSpacer />', () => {
+  it(`should render a layout spacer with varying spacing sizes`, () => {
     const wrapper = mount(
-      <ContentSpacer
+      <LayoutSpacer
         contentItems={[
           {
             content: <div>a</div>,
@@ -34,9 +34,9 @@ describe('<ContentSpacer />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a content spacer with no spacing sizes defined`, () => {
+  it(`should render a layout spacer with no spacing sizes defined`, () => {
     const wrapper = mount(
-      <ContentSpacer
+      <LayoutSpacer
         contentItems={[
           {
             content: <div>a</div>
@@ -51,9 +51,9 @@ describe('<ContentSpacer />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a content spacer with null content`, () => {
+  it(`should render a layout spacer with null content`, () => {
     const wrapper = mount(
-      <ContentSpacer
+      <LayoutSpacer
         contentItems={[
           {
             content: null,

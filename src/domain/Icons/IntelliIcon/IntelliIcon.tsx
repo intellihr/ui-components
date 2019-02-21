@@ -1,8 +1,14 @@
 import React from 'react'
 
+import { Omit } from '../../../common'
 import { IIconProps, Icon } from '../Icon'
+import { IntelliIconType, IntelliIconTypeNoPrefix } from '../Icon/types'
 
-export class IntelliIcon extends React.PureComponent<IIconProps> {
+interface IIntelliIconProps extends Omit<IIconProps, 'type'> {
+  type: IntelliIconTypeNoPrefix
+}
+
+export class IntelliIcon extends React.PureComponent<IIntelliIconProps> {
   public render (): JSX.Element {
     const {
       type
@@ -11,7 +17,7 @@ export class IntelliIcon extends React.PureComponent<IIconProps> {
     return (
       <Icon
         {...this.props}
-        type={`intelli-icon-${type}`}
+        type={`intelli-icon-${type}` as IntelliIconType}
       />
     )
   }

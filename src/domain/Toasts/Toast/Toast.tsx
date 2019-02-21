@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import React from 'react'
 
-import { IntelliIcon } from '../../Icons'
+import { IntelliIcon, IntelliIconTypeNoPrefix } from '../../Icons'
 const style = require('./style.scss')
 
 export interface IToastProps {
@@ -33,7 +33,7 @@ export class Toast extends React.PureComponent<IToastProps> {
       type
     } = this.props
 
-    let iconName = 'check'
+    let iconName: IntelliIconTypeNoPrefix = 'check'
 
     if (type === 'alert') {
       iconName = 'alert'
