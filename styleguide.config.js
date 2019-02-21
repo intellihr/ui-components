@@ -129,15 +129,16 @@ module.exports = {
         {
           name: 'Inputs',
           components: [
-            'src/domain/Inputs/Input/Input.tsx',
-            'src/domain/Inputs/InputGroup/InputGroup.tsx',
             'src/domain/Inputs/CheckboxInput/CheckboxInput.tsx',
             'src/domain/Inputs/CheckboxSet/CheckboxSet.tsx',
+            'src/domain/Inputs/IconPicker/IconPicker.tsx',
+            'src/domain/Inputs/Input/Input.tsx',
+            'src/domain/Inputs/InputGroup/InputGroup.tsx',
             'src/domain/Inputs/RadioInput/RadioInput.tsx',
             'src/domain/Inputs/RadioSet/RadioSet.tsx',
             'src/domain/Inputs/SelectInput/SelectInput.tsx',
-            'src/domain/Inputs/TextAreaInput/TextAreaInput.tsx',
-            'src/domain/Inputs/SingleDateInput/SingleDateInput.tsx'
+            'src/domain/Inputs/SingleDateInput/SingleDateInput.tsx',
+            'src/domain/Inputs/TextAreaInput/TextAreaInput.tsx'
           ]
         },
         {

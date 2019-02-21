@@ -58,7 +58,7 @@ interface IGridLayoutProps {
   componentContext?: string
 }
 
-export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
+class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
   public static HorizontalAlignment = HorizontalAlignment
   public static VerticalAlignment = VerticalAlignment
 
@@ -176,4 +176,9 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
 
     return offsets
   }
+}
+
+export {
+  IGridLayoutCell,
+  GridLayout
 }
