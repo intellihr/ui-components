@@ -3,7 +3,7 @@ import React from 'react'
 import { Props } from '../../../common/'
 import { StyledContentItem } from './style'
 
-interface IContentSpacerContentItemProps {
+interface ILayoutSpacerContentItemProps {
   /** Size of the space between this content item and the next */
   spacingSize?: 'small' | 'medium' | 'large' | 'xlarge',
   /** Content item */
@@ -12,14 +12,14 @@ interface IContentSpacerContentItemProps {
   componentContext?: string
 }
 
-interface IContentSpacerProps {
+interface ILayoutSpacerProps {
   /** Provide an array of items for the content */
-  contentItems: IContentSpacerContentItemProps[],
+  contentItems: ILayoutSpacerContentItemProps[],
   /** Component context for the overall content spacer */
   componentContext?: string
 }
 
-class ContentSpacer extends React.Component<IContentSpacerProps> {
+class LayoutSpacer extends React.Component<ILayoutSpacerProps> {
   public render (): JSX.Element {
     const {
       contentItems,
@@ -28,7 +28,7 @@ class ContentSpacer extends React.Component<IContentSpacerProps> {
 
     return (
       <div
-        data-component-type={Props.ComponentType.ContentSpacer}
+        data-component-type={Props.ComponentType.LayoutSpacer}
         data-component-context={componentContext}
       >
         {
@@ -38,7 +38,7 @@ class ContentSpacer extends React.Component<IContentSpacerProps> {
               <StyledContentItem
                 spacingSize={contentItem.content && contentItem.spacingSize}
                 key={acc.length}
-                data-component-type={Props.ComponentType.ContentSpacerItem}
+                data-component-type={Props.ComponentType.LayoutSpacerItem}
                 data-component-context={contentItem.componentContext}
               >
                 {contentItem.content}
@@ -52,6 +52,6 @@ class ContentSpacer extends React.Component<IContentSpacerProps> {
 }
 
 export {
-  ContentSpacer,
-  IContentSpacerContentItemProps
+  LayoutSpacer,
+  ILayoutSpacerContentItemProps
 }

@@ -1,4 +1,4 @@
-export { ContentSpacer } from './ContentSpacer'
+export { LayoutSpacer } from './LayoutSpacer'
 export { GridLayout } from './GridLayout'
 export { PageLayout } from './PageLayout'
 export { SectionList } from './SectionList'

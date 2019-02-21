@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
-interface IContentSpacerContentItemProps {
+interface ILayoutSpacerContentItemProps {
   /** Size of the space between this content item and the next */
   spacingSize?: 'small' | 'medium' | 'large' | 'xlarge'
 }
 
-const spacingForContentItem = (props: IContentSpacerContentItemProps): number => {
+const spacingForContentItem = (props: ILayoutSpacerContentItemProps): number => {
   switch (props.spacingSize) {
     case 'small':
       return 24
@@ -20,7 +20,7 @@ const spacingForContentItem = (props: IContentSpacerContentItemProps): number =>
   }
 }
 
-const StyledContentItem = styled.div<IContentSpacerContentItemProps>`
+const StyledContentItem = styled.div<ILayoutSpacerContentItemProps>`
   margin-bottom: ${spacingForContentItem}px;
 
   &:last-child {
