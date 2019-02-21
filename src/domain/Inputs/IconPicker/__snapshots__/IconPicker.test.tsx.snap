@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<IconPicker /> should render an Icon Picker 1`] = `
+<GridLayout
+  cells={
+    Array [
+      Object {
+        "content": <UNDEFINED>
+          <Styled(Input)
+            handleChange={[Function]}
+            id="icon-picker-intelli-icon-australia-0"
+            isChecked={false}
+            name="icon-picker"
+            type="radio"
+            value="intelli-icon-australia"
+          />
+          <styled.label
+            checked={false}
+            htmlFor="icon-picker-intelli-icon-australia-0"
+          >
+            <Styled(Icon)
+              color="#424F5C"
+              size="large"
+              type="intelli-icon-australia"
+            />
+          </styled.label>
+        </UNDEFINED>,
+        "size": "shrink",
+      },
+      Object {
+        "content": <UNDEFINED>
+          <Styled(Input)
+            handleChange={[Function]}
+            id="icon-picker-intelli-icon-card-1"
+            isChecked={false}
+            name="icon-picker"
+            type="radio"
+            value="intelli-icon-card"
+          />
+          <styled.label
+            checked={false}
+            htmlFor="icon-picker-intelli-icon-card-1"
+          >
+            <Styled(Icon)
+              color="#424F5C"
+              size="large"
+              type="intelli-icon-card"
+            />
+          </styled.label>
+        </UNDEFINED>,
+        "size": "shrink",
+      },
+      Object {
+        "content": <UNDEFINED>
+          <Styled(Input)
+            handleChange={[Function]}
+            id="icon-picker-intelli-icon-book-2"
+            isChecked={false}
+            name="icon-picker"
+            type="radio"
+            value="intelli-icon-book"
+          />
+          <styled.label
+            checked={false}
+            htmlFor="icon-picker-intelli-icon-book-2"
+          >
+            <Styled(Icon)
+              color="#424F5C"
+              size="large"
+              type="intelli-icon-book"
+            />
+          </styled.label>
+        </UNDEFINED>,
+        "size": "shrink",
+      },
+    ]
+  }
+  gridColumns={12}
+  gutterMarginX={8}
+  gutterMarginY={8}
+  gutterPaddingX="none"
+  gutterPaddingY="none"
+  horizontalAlignment="left"
+  verticalAlignment="stretch"
+/>
+`;

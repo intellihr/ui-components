@@ -1,4 +1,4 @@
-#### Vertical Radio Set
+#### Icon Picker
 
 ```jsx
 initialState = { value: 'option 1' };
@@ -7,6 +7,25 @@ initialState = { value: 'option 1' };
   name='icon-picker'
   value={state.value}
   handleChange={(event) => setState({value: event.target.value})}
-  icons={['fa-apple', 'fa-archive', 'intelli-icon-australia', 'intelli-icon-avatar']}
+  icons={
+    [
+      'intelli-icon-australia',
+      'intelli-icon-card',
+      'intelli-icon-book',
+      'intelli-icon-check',
+      'intelli-icon-check-list-2',
+      'intelli-icon-check-list-4',
+      'intelli-icon-check-list-3',
+      'intelli-icon-clock',
+      'intelli-icon-mini-dialog',
+      'intelli-icon-people-2',
+      'intelli-icon-line-chart',
+      'intelli-icon-heart',
+      'intelli-icon-glasses-2',
+      'intelli-icon-copy',
+      'intelli-icon-config-2',
+      'intelli-icon-config'
+    ]
+  }
 />
 ```

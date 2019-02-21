@@ -22,40 +22,6 @@ export class IconPicker extends React.PureComponent<IIconPickerProps> {
     value: undefined
   }
 
-  get options (): IGridLayoutCell[] {
-    const {
-      icons,
-      handleChange,
-      value,
-      name
-    } = this.props
-
-    return icons.map((icon, idx): IGridLayoutCell => {
-      const checked = value === icon
-      return {
-        size: 'shrink',
-        content: ( <>
-          <StyledIconInput
-            name={name}
-            id={`${name}-${icon}-${idx}`}
-            value={icon}
-            handleChange={handleChange}
-            isChecked={checked}
-            type='radio'
-            />
-          <StyledIconArea checked={checked} htmlFor={`${name}-${icon}-${idx}`}>
-            <StyledIcon
-              type={icon}
-              color={checked ? Variables.Color.i300 : Variables.Color.n700 }
-              size={'large'}
-            />
-          </StyledIconArea>
-        </>
-       )
-    }
-    })
-  }
-
   public render (): JSX.Element {
     return (
       <GridLayout
@@ -63,6 +29,49 @@ export class IconPicker extends React.PureComponent<IIconPickerProps> {
         gutterMarginX={Variables.Spacing.sXSmall}
         cells={this.options}
       />
+    )
+  }
+
+  private get options (): IGridLayoutCell[] {
+    const {
+      icons
+    } = this.props
+
+    return icons.map((icon, idx): IGridLayoutCell => {
+      return {
+        size: 'shrink',
+        content: this.iconInput(icon, idx)
+    }
+    })
+  }
+
+  private iconInput = (icon: IconType, idx: number) => {
+    const {
+      handleChange,
+      value,
+      name
+    } = this.props
+
+    const checked = value === icon
+
+    return (
+      <>
+        <StyledIconInput
+          name={name}
+          id={`${name}-${icon}-${idx}`}
+          value={icon}
+          handleChange={handleChange}
+          isChecked={checked}
+          type='radio'
+        />
+        <StyledIconArea checked={checked} htmlFor={`${name}-${icon}-${idx}`}>
+          <StyledIcon
+            type={icon}
+            color={checked ? Variables.Color.i300 : Variables.Color.n700 }
+            size={'large'}
+          />
+        </StyledIconArea>
+      </>
     )
   }
 }
