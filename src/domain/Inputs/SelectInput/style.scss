@@ -34,7 +34,7 @@
 
     .Select-control {
       border: 1px solid $n400;
-      margin-bottom: 1rem;
+      margin-bottom: 0;
       transition: border-color .3s ease-in-out, background-color .3s ease;
 
       &:hover {

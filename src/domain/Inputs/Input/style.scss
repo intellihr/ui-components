@@ -1,4 +1,8 @@
 :local(.input) {
+  &[type='text'], &[type='password'], &[type='date'], &[type='email'], &[type='number'], &[type='url'] {
+    margin: 0;
+  }
+
   &.input-group-left {
     border-radius: 4px 0 0 4px;
   }
