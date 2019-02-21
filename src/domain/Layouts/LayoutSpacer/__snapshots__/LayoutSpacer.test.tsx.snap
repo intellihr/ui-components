@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ContentSpacer /> should render a content spacer with no spacing sizes defined 1`] = `
+exports[`<LayoutSpacer /> should render a layout spacer with no spacing sizes defined 1`] = `
 .c0 {
   margin-bottom: 0px;
 }
@@ -9,7 +9,7 @@ exports[`<ContentSpacer /> should render a content spacer with no spacing sizes 
   margin-bottom: 0px;
 }
 
-<ContentSpacer
+<LayoutSpacer
   contentItems={
     Array [
       Object {
@@ -26,15 +26,15 @@ exports[`<ContentSpacer /> should render a content spacer with no spacing sizes 
   }
 >
   <div
-    data-component-type="content_spacer"
+    data-component-type="layout_spacer"
   >
     <styled.div
-      data-component-type="content_spacer_item"
+      data-component-type="layout_spacer_item"
       key="0"
     >
       <div
         className="c0"
-        data-component-type="content_spacer_item"
+        data-component-type="layout_spacer_item"
       >
         <div>
           a
@@ -42,12 +42,12 @@ exports[`<ContentSpacer /> should render a content spacer with no spacing sizes 
       </div>
     </styled.div>
     <styled.div
-      data-component-type="content_spacer_item"
+      data-component-type="layout_spacer_item"
       key="1"
     >
       <div
         className="c0"
-        data-component-type="content_spacer_item"
+        data-component-type="layout_spacer_item"
       >
         <div>
           b
@@ -55,10 +55,10 @@ exports[`<ContentSpacer /> should render a content spacer with no spacing sizes 
       </div>
     </styled.div>
   </div>
-</ContentSpacer>
+</LayoutSpacer>
 `;
 
-exports[`<ContentSpacer /> should render a content spacer with null content 1`] = `
+exports[`<LayoutSpacer /> should render a layout spacer with null content 1`] = `
 .c0 {
   margin-bottom: 0px;
 }
@@ -67,7 +67,7 @@ exports[`<ContentSpacer /> should render a content spacer with null content 1`] 
   margin-bottom: 0px;
 }
 
-<ContentSpacer
+<LayoutSpacer
   contentItems={
     Array [
       Object {
@@ -83,25 +83,25 @@ exports[`<ContentSpacer /> should render a content spacer with null content 1`] 
   }
 >
   <div
-    data-component-type="content_spacer"
+    data-component-type="layout_spacer"
   >
     <styled.div
-      data-component-type="content_spacer_item"
+      data-component-type="layout_spacer_item"
       key="0"
       spacingSize={null}
     >
       <div
         className="c0"
-        data-component-type="content_spacer_item"
+        data-component-type="layout_spacer_item"
       />
     </styled.div>
     <styled.div
-      data-component-type="content_spacer_item"
+      data-component-type="layout_spacer_item"
       key="1"
     >
       <div
         className="c0"
-        data-component-type="content_spacer_item"
+        data-component-type="layout_spacer_item"
       >
         <div>
           a
@@ -109,10 +109,10 @@ exports[`<ContentSpacer /> should render a content spacer with null content 1`] 
       </div>
     </styled.div>
   </div>
-</ContentSpacer>
+</LayoutSpacer>
 `;
 
-exports[`<ContentSpacer /> should render a content spacer with varying spacing sizes 1`] = `
+exports[`<LayoutSpacer /> should render a layout spacer with varying spacing sizes 1`] = `
 .c0 {
   margin-bottom: 24px;
 }
@@ -153,7 +153,7 @@ exports[`<ContentSpacer /> should render a content spacer with varying spacing s
   margin-bottom: 0px;
 }
 
-<ContentSpacer
+<LayoutSpacer
   contentItems={
     Array [
       Object {
@@ -189,16 +189,16 @@ exports[`<ContentSpacer /> should render a content spacer with varying spacing s
   }
 >
   <div
-    data-component-type="content_spacer"
+    data-component-type="layout_spacer"
   >
     <styled.div
-      data-component-type="content_spacer_item"
+      data-component-type="layout_spacer_item"
       key="0"
       spacingSize="small"
     >
       <div
         className="c0"
-        data-component-type="content_spacer_item"
+        data-component-type="layout_spacer_item"
       >
         <div>
           a
@@ -206,13 +206,13 @@ exports[`<ContentSpacer /> should render a content spacer with varying spacing s
       </div>
     </styled.div>
     <styled.div
-      data-component-type="content_spacer_item"
+      data-component-type="layout_spacer_item"
       key="1"
       spacingSize="medium"
     >
       <div
         className="c1"
-        data-component-type="content_spacer_item"
+        data-component-type="layout_spacer_item"
       >
         <div>
           b
@@ -220,13 +220,13 @@ exports[`<ContentSpacer /> should render a content spacer with varying spacing s
       </div>
     </styled.div>
     <styled.div
-      data-component-type="content_spacer_item"
+      data-component-type="layout_spacer_item"
       key="2"
       spacingSize="large"
     >
       <div
         className="c2"
-        data-component-type="content_spacer_item"
+        data-component-type="layout_spacer_item"
       >
         <div>
           c
@@ -234,13 +234,13 @@ exports[`<ContentSpacer /> should render a content spacer with varying spacing s
       </div>
     </styled.div>
     <styled.div
-      data-component-type="content_spacer_item"
+      data-component-type="layout_spacer_item"
       key="3"
       spacingSize="xlarge"
     >
       <div
         className="c3"
-        data-component-type="content_spacer_item"
+        data-component-type="layout_spacer_item"
       >
         <div>
           d
@@ -248,12 +248,12 @@ exports[`<ContentSpacer /> should render a content spacer with varying spacing s
       </div>
     </styled.div>
     <styled.div
-      data-component-type="content_spacer_item"
+      data-component-type="layout_spacer_item"
       key="4"
     >
       <div
         className="c4"
-        data-component-type="content_spacer_item"
+        data-component-type="layout_spacer_item"
       >
         <div>
           e
@@ -261,5 +261,5 @@ exports[`<ContentSpacer /> should render a content spacer with varying spacing s
       </div>
     </styled.div>
   </div>
-</ContentSpacer>
+</LayoutSpacer>
 `;

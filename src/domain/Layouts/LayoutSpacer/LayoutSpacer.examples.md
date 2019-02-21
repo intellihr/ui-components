@@ -9,7 +9,7 @@ Note: This is intended for spacing out high level components on a page
 ```jsx
 const { Variables } = require('@Common');
 
-<ContentSpacer
+<LayoutSpacer
   contentItems={[
     {
       content: <div style={{backgroundColor: Variables.Color.n200, height: '100px'}}>No bottom margin</div>
