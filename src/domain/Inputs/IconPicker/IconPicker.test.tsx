@@ -1,8 +1,8 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { IconPicker } from './IconPicker'
 import { IconType } from '../../Icons/Icon'
+import { IconPicker } from './IconPicker'
 
 const dummyClick = () => console.log('hey')
 

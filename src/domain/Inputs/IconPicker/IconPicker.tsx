@@ -1,10 +1,10 @@
 import React, { ChangeEventHandler } from 'react'
 
-import { Variables } from '../../../common'
-import { StyledIcon, StyledIconArea, StyledIconInput } from './style'
+import { Props, Variables } from '../../../common'
 import { IconType } from '../../Icons/Icon'
 import { GridLayout } from '../../Layouts/GridLayout'
 import { IGridLayoutCell } from '../../Layouts/GridLayout/GridLayout'
+import { StyledIcon, StyledIconArea, StyledIconInput } from './style'
 
 export interface IIconPickerProps {
   /** Array of icons to display in the list */
@@ -15,6 +15,8 @@ export interface IIconPickerProps {
   value?: string | number
   /** The name property of the icon picker */
   name: string
+  /** The data-component-context */
+  componentContext?: string
 }
 
 export class IconPicker extends React.PureComponent<IIconPickerProps> {
@@ -23,12 +25,22 @@ export class IconPicker extends React.PureComponent<IIconPickerProps> {
   }
 
   public render (): JSX.Element {
+    const {
+      componentContext
+    } = this.props
+
     return (
-      <GridLayout
-        gutterMarginY={Variables.Spacing.sXSmall}
-        gutterMarginX={Variables.Spacing.sXSmall}
-        cells={this.options}
-      />
+      <div
+        data-component-type={Props.ComponentType.IconPicker}
+        data-component-context={componentContext}
+      >
+        <GridLayout
+          componentContext={componentContext}
+          gutterMarginY={Variables.Spacing.sXSmall}
+          gutterMarginX={Variables.Spacing.sXSmall}
+          cells={this.options}
+        />
+      </div>
     )
   }
 
@@ -67,7 +79,7 @@ export class IconPicker extends React.PureComponent<IIconPickerProps> {
         <StyledIconArea checked={checked} htmlFor={`${name}-${icon}-${idx}`}>
           <StyledIcon
             type={icon}
-            color={checked ? Variables.Color.i300 : Variables.Color.n700 }
+            color={checked ? Variables.Color.i300 : Variables.Color.n700}
             size={'large'}
           />
         </StyledIconArea>

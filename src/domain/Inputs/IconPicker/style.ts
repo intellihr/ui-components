@@ -1,9 +1,9 @@
 import styled, {css} from 'styled-components'
 
-import { Input } from '../Input'
 import { Variables } from '../../../common'
 import { Icon } from '../../Icons/Icon'
 import { GridLayout } from '../../Layouts/GridLayout'
+import { Input } from '../Input'
 
 interface IStyledIconAreaProps {
   checked: boolean
@@ -22,14 +22,14 @@ const StyledIconArea = styled.label<IStyledIconAreaProps>`
       return css`
         background: ${Variables.Color.i100};
         border-color: ${Variables.Color.i600};
-        
+
         &:hover {
           border-color: ${Variables.Color.i400};
         }
       `
       }
 
-      return css`  
+      return css`
          &:hover {
           background: ${Variables.Color.n200};
         }
