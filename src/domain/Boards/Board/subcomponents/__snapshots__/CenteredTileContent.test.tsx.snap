@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CenteredTileContent /> should render a centered tile content with children 1`] = `
+<styled.div>
+  <styled.div
+    hasTitleLabel={false}
+  >
+    children
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<CenteredTileContent /> should render a centered tile content with label 1`] = `
+<styled.div>
+  <styled.label>
+    dummy label
+  </styled.label>
+  <styled.div
+    hasTitleLabel={true}
+  />
+</styled.div>
+`;
+
+exports[`<CenteredTileContent /> should render a centered tile content with nothing 1`] = `
+<styled.div>
+  <styled.div
+    hasTitleLabel={false}
+  />
+</styled.div>
+`;

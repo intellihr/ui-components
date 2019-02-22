@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FigureTileContent /> should render a figure tile content with alert headings 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div>
+      <styled.label
+        isHeading={true}
+        labelStyle="alert"
+        textWidth={46}
+      >
+        1
+      </styled.label>
+      <styled.label
+        isHeading={true}
+        labelStyle="alert"
+      >
+        dummy heading
+      </styled.label>
+    </styled.div>
+    <styled.div>
+      <styled.label
+        labelStyle="alert"
+        textWidth={46}
+      >
+        35
+      </styled.label>
+      <styled.label
+        labelStyle="alert"
+      >
+        dummy subheading
+      </styled.label>
+    </styled.div>
+  </styled.div>
+  <div />
+</styled.div>
+`;
+
+exports[`<FigureTileContent /> should render a figure tile content with heading only 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div>
+      <styled.label
+        isHeading={true}
+        labelStyle="none"
+        textWidth={36}
+      >
+        1
+      </styled.label>
+      <styled.label
+        isHeading={true}
+        labelStyle="none"
+      >
+        dummy heading
+      </styled.label>
+    </styled.div>
+    <styled.div />
+  </styled.div>
+  <div />
+</styled.div>
+`;
+
+exports[`<FigureTileContent /> should render a figure tile content with label 1`] = `
+<styled.div>
+  <styled.label>
+    dummy label
+  </styled.label>
+  <div />
+</styled.div>
+`;
+
+exports[`<FigureTileContent /> should render a figure tile content with normal headings 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div>
+      <styled.label
+        isHeading={true}
+        labelStyle="none"
+        textWidth={46}
+      >
+        1
+      </styled.label>
+      <styled.label
+        isHeading={true}
+        labelStyle="none"
+      >
+        dummy heading
+      </styled.label>
+    </styled.div>
+    <styled.div>
+      <styled.label
+        labelStyle="none"
+        textWidth={46}
+      >
+        35
+      </styled.label>
+      <styled.label
+        labelStyle="none"
+      >
+        dummy subheading
+      </styled.label>
+    </styled.div>
+  </styled.div>
+  <div />
+</styled.div>
+`;
+
+exports[`<FigureTileContent /> should render a figure tile content with nothing 1`] = `
+<styled.div>
+  <div />
+</styled.div>
+`;
+
+exports[`<FigureTileContent /> should render a figure tile content with subheading only 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div />
+    <styled.div>
+      <styled.label
+        labelStyle="none"
+        textWidth={46}
+      >
+        35
+      </styled.label>
+      <styled.label
+        labelStyle="none"
+      >
+        dummy subheading
+      </styled.label>
+    </styled.div>
+  </styled.div>
+  <div />
+</styled.div>
+`;
+
+exports[`<FigureTileContent /> should render a figure tile content with success headings 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div>
+      <styled.label
+        isHeading={true}
+        labelStyle="success"
+        textWidth={46}
+      >
+        1
+      </styled.label>
+      <styled.label
+        isHeading={true}
+        labelStyle="success"
+      >
+        dummy heading
+      </styled.label>
+    </styled.div>
+    <styled.div>
+      <styled.label
+        labelStyle="success"
+        textWidth={46}
+      >
+        35
+      </styled.label>
+      <styled.label
+        labelStyle="success"
+      >
+        dummy subheading
+      </styled.label>
+    </styled.div>
+  </styled.div>
+  <div />
+</styled.div>
+`;
+
+exports[`<FigureTileContent /> should render a figure tile content with warning headings 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div>
+      <styled.label
+        isHeading={true}
+        labelStyle="warning"
+        textWidth={46}
+      >
+        1
+      </styled.label>
+      <styled.label
+        isHeading={true}
+        labelStyle="warning"
+      >
+        dummy heading
+      </styled.label>
+    </styled.div>
+    <styled.div>
+      <styled.label
+        labelStyle="warning"
+        textWidth={46}
+      >
+        35
+      </styled.label>
+      <styled.label
+        labelStyle="warning"
+      >
+        dummy subheading
+      </styled.label>
+    </styled.div>
+  </styled.div>
+  <div />
+</styled.div>
+`;

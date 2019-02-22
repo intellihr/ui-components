@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonTileContent /> should render a button tile content in the hollow style 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div>
+      <Icon
+        color="#7362F5"
+        isSpinning={false}
+        size="xlarge"
+        type="fa-star"
+      />
+    </styled.div>
+    <styled.div>
+      <styled.label>
+        dummy button title
+      </styled.label>
+      <styled.label>
+        dummy button description
+      </styled.label>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<ButtonTileContent /> should render a button tile content with a font awesome icon 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div>
+      <Icon
+        color="#7362F5"
+        isSpinning={false}
+        size="xlarge"
+        type="fa-star"
+      />
+    </styled.div>
+    <styled.div>
+      <styled.label>
+        dummy button title
+      </styled.label>
+      <styled.label>
+        dummy button description
+      </styled.label>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<ButtonTileContent /> should render a button tile content with an IntelliIcon 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div>
+      <Icon
+        color="#7362F5"
+        isSpinning={false}
+        size="xlarge"
+        type="intelli-icon-alert"
+      />
+    </styled.div>
+    <styled.div>
+      <styled.label>
+        dummy button title
+      </styled.label>
+      <styled.label>
+        dummy button description
+      </styled.label>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<ButtonTileContent /> should render a button tile content with label 1`] = `
+<styled.div>
+  <styled.label>
+    dummy label
+  </styled.label>
+  <styled.div>
+    <styled.div />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<ButtonTileContent /> should render a button tile content with nothing 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div />
+  </styled.div>
+</styled.div>
+`;
