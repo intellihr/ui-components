@@ -1,6 +1,8 @@
 #### Functional Color LinkButtons
 
 ```jsx
+import { ButtonGroup } from '@Domain/Buttons';
+
 <div>
   <div>
     <h3>Enabled</h3>
@@ -66,6 +68,8 @@
 #### Borderless LinkButtons
 
 ```jsx
+import { ButtonGroup } from '@Domain/Buttons';
+
 <div>
   <div>
     <h3>Enabled</h3>
@@ -130,6 +134,8 @@
 
 #### hollow LinkButtons
 ```jsx
+import { ButtonGroup } from '@Domain/Buttons';
+
 <div>
   <div>
     <h3>Enabled</h3>
@@ -195,6 +201,8 @@
 #### Special Case LinkButtons
 
 ```jsx
+import { ButtonGroup } from '@Domain/Buttons';
+
 <div>
   <div>
     <h3>Enabled</h3>
@@ -260,6 +268,8 @@
 
 #### LinkButton sizes
 ```jsx
+import { ButtonGroup } from '@Domain/Buttons';
+
 <div>
   <ButtonGroup>
     <LinkButton size='small' href='#'>
@@ -277,7 +287,8 @@
 
 #### Link buttons with Icons
 ```jsx
-const { FontAwesomeIcon } = require('@Domain/Icons');
+import { ButtonGroup } from '@Domain/Buttons';
+import { FontAwesomeIcon } from '@Domain/Icons';
 
 <div>
   <div>

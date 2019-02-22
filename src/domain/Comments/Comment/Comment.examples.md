@@ -1,6 +1,8 @@
 #### A simple comment
 ```jsx
-const { Props } = require('@Common');
+import { Props } from '@Common';
+import { Avatar } from '@Domain/Avatars';
+import { Pill } from '@Domain/Pills';
 
 <Comment
   commentBodyText='A very recent comment'
@@ -13,7 +15,9 @@ const { Props } = require('@Common');
 
 #### A focused comment
 ```jsx
-const { Props } = require('@Common');
+import { Props } from '@Common';
+import { Avatar } from '@Domain/Avatars';
+import { Pill } from '@Domain/Pills';
 
 <Comment
   focused
@@ -27,7 +31,9 @@ const { Props } = require('@Common');
 
 #### Comment with some actions attached to it
 ```jsx
-const { Props } = require('@Common');
+import { Props } from '@Common';
+import { Avatar } from '@Domain/Avatars';
+import { Pill } from '@Domain/Pills';
 
 <Comment
   commentBodyText='A very recent comment'
@@ -55,7 +61,10 @@ const { Props } = require('@Common');
 
 Comments that have a header Component will not render actionMenu and will be considered a system generated comment
 ```jsx
-const { Props, Variables } = require('@Common');
+import { Props, Variables } from '@Common';
+import { Avatar } from '@Domain/Avatars';
+import { Pill } from '@Domain/Pills';
+import { Text } from '@Domain/Typographies';
 
 <Comment
   commentHeaderText='Example Person Name'
@@ -68,15 +77,15 @@ const { Props, Variables } = require('@Common');
         isHeavy
         color={Variables.Color.g400}
       >
-        approved
-      </Text>
+        approved 
+      </Text> 
       Joshua Brady's
       <Text
         isHeavy
         color={Variables.Color.i400}
       >
-        qualification
-      </Text>
+        qualification 
+      </Text> 
       with a very long message to test how a long message would look.
     </span>
   )}

@@ -1,6 +1,8 @@
 #### Functional Color Buttons
 
 ```jsx
+import { ButtonGroup } from '@Domain/Buttons';
+
 <div>
   <div>
     <h3>Enabled</h3>
@@ -69,6 +71,8 @@
 #### Borderless Buttons
 
 ```jsx
+import { ButtonGroup } from '@Domain/Buttons';
+
 <div>
   <div>
     <h3>Enabled</h3>
@@ -139,6 +143,8 @@
 
 #### hollow Buttons
 ```jsx
+import { ButtonGroup } from '@Domain/Buttons';
+
 <div>
   <div>
     <h3>Enabled</h3>
@@ -210,6 +216,8 @@
 #### Special Case Buttons
 
 ```jsx
+import { ButtonGroup } from '@Domain/Buttons';
+
 <div>
   <div>
     <h3>Enabled</h3>
@@ -275,6 +283,8 @@
 
 #### Button sizes
 ```jsx
+import { ButtonGroup } from '@Domain/Buttons';
+
 <div>
   <ButtonGroup>
     <Button size='small' onClick={() => alert('small')}>
@@ -292,7 +302,8 @@
 
 #### Buttons with Icons
 ```jsx
-const { FontAwesomeIcon } = require('@Domain/Icons');
+import { ButtonGroup } from '@Domain/Buttons';
+import { FontAwesomeIcon } from '@Domain/Icons';
 
 <div>
   <div>
@@ -342,6 +353,8 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 #### Spinner buttons
 
 ```jsx
+import { ButtonGroup } from '@Domain/Buttons';
+
 <div>
   <div>
     <h3>Enabled</h3>

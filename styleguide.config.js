@@ -50,19 +50,20 @@ module.exports = {
     },
     {
       name: 'UI Components',
+      sectionDepth: 2,
       sections: [
         {
           name: 'Avatars',
           components: [
-            'src/domain/Avatars/Avatar/Avatar',
-            'src/domain/Avatars/AvatarEntity/AvatarEntity',
-            'src/domain/Avatars/AvatarGroup/AvatarGroup'
+            'src/domain/Avatars/Avatar/Avatar.tsx',
+            'src/domain/Avatars/AvatarEntity/AvatarEntity.tsx',
+            'src/domain/Avatars/AvatarGroup/AvatarGroup.tsx'
           ]
         },
         {
           name: 'Badges',
           components: [
-            'src/domain/Badges/Badge/Badge'
+            'src/domain/Badges/Badge/Badge.tsx'
           ]
         },
         {
@@ -74,201 +75,200 @@ module.exports = {
         {
           name: 'Buttons',
           components: [
-            'src/domain/Buttons/Button/Button',
-            'src/domain/Buttons/LinkButton/LinkButton',
-            'src/domain/Buttons/ButtonGroup/ButtonGroup'
+            'src/domain/Buttons/Button/Button.tsx',
+            'src/domain/Buttons/LinkButton/LinkButton.tsx',
+            'src/domain/Buttons/ButtonGroup/ButtonGroup.tsx'
           ]
         },
         {
           name: 'Callouts',
           components: [
-            'src/domain/Callouts/Callout/Callout',
-            'src/domain/Callouts/EmptyState/EmptyState',
+            'src/domain/Callouts/Callout/Callout.tsx',
+            'src/domain/Callouts/EmptyState/EmptyState.tsx',
           ]
         },
         {
           name: 'Charts',
           components: [
-            'src/domain/Charts/RadarChart/RadarChart',
-            'src/domain/Charts/TimeBasedLineChart/TimeBasedLineChart'
+            'src/domain/Charts/RadarChart/RadarChart.tsx',
+            'src/domain/Charts/TimeBasedLineChart/TimeBasedLineChart.tsx'
           ]
         },
         {
           name: 'Comments',
           components: [
-            'src/domain/Comments/Comment/Comment'
+            'src/domain/Comments/Comment/Comment.tsx'
           ]
         },
         {
           name: 'Formats',
           components: [
-            'src/domain/Formats/Record/Record',
-            'src/domain/Formats/IndentedElement/IndentedElement',
-            'src/domain/Formats/HintWrapper/HintWrapper',
+            'src/domain/Formats/Record/Record.tsx',
+            'src/domain/Formats/IndentedElement/IndentedElement.tsx',
+            'src/domain/Formats/HintWrapper/HintWrapper.tsx',
           ]
         },
         {
           name: 'Forms',
           components: [
-            'src/domain/Forms/VerticalForm/VerticalForm'
+            'src/domain/Forms/VerticalForm/VerticalForm.tsx'
           ]
         },
         {
           name: 'Icons',
           components: [
-            'src/domain/Icons/Icon/Icon'
+            'src/domain/Icons/Icon/Icon.tsx'
           ]
         },
         {
           name: 'Indicators',
           components: [
-            'src/domain/Indicators/StatusIndicator/StatusIndicator'
+            'src/domain/Indicators/StatusIndicator/StatusIndicator.tsx'
           ]
         },
         {
           name: 'Inputs',
           components: [
-            'src/domain/Inputs/Input/Input',
-            'src/domain/Inputs/InputGroup/InputGroup',
-            'src/domain/Inputs/CheckboxInput/CheckboxInput',
-            'src/domain/Inputs/CheckboxSet/CheckboxSet',
-            'src/domain/Inputs/RadioInput/RadioInput',
-            'src/domain/Inputs/RadioSet/RadioSet',
-            'src/domain/Inputs/SelectInput/SelectInput',
-            'src/domain/Inputs/TextAreaInput/TextAreaInput',
-            'src/domain/Inputs/SingleDateInput/SingleDateInput'
+            'src/domain/Inputs/Input/Input.tsx',
+            'src/domain/Inputs/InputGroup/InputGroup.tsx',
+            'src/domain/Inputs/CheckboxInput/CheckboxInput.tsx',
+            'src/domain/Inputs/CheckboxSet/CheckboxSet.tsx',
+            'src/domain/Inputs/RadioInput/RadioInput.tsx',
+            'src/domain/Inputs/RadioSet/RadioSet.tsx',
+            'src/domain/Inputs/SelectInput/SelectInput.tsx',
+            'src/domain/Inputs/TextAreaInput/TextAreaInput.tsx',
+            'src/domain/Inputs/SingleDateInput/SingleDateInput.tsx'
           ]
         },
         {
           name: 'Layouts',
           components: [
-            'src/domain/Layouts/LayoutSpacer/LayoutSpacer',
-            'src/domain/Layouts/GridLayout/GridLayout',
-            'src/domain/Layouts/PageLayout/PageLayout',
-            'src/domain/Layouts/SectionList/SectionList'
+            'src/domain/Layouts/LayoutSpacer/LayoutSpacer.tsx',
+            'src/domain/Layouts/GridLayout/GridLayout.tsx',
+            'src/domain/Layouts/PageLayout/PageLayout.tsx',
+            'src/domain/Layouts/SectionList/SectionList.tsx'
           ]
         },
         {
           name: 'Legends',
           components: [
-            'src/domain/Legends/Legend/Legend'
+            'src/domain/Legends/Legend/Legend.tsx'
           ]
         },
         {
           name: 'Links',
           components: [
-            'src/domain/Links/ActionLink/ActionLink',
-            'src/domain/Links/TextLink/TextLink',
-            'src/domain/Links/UnstyledLink/UnstyledLink'
+            'src/domain/Links/ActionLink/ActionLink.tsx',
+            'src/domain/Links/TextLink/TextLink.tsx',
+            'src/domain/Links/UnstyledLink/UnstyledLink.tsx'
           ]
         },
         {
           name: 'Lists',
           components: [
-            'src/domain/Lists/ActionList/ActionList',
-            'src/domain/Lists/FilteredList/FilteredList',
-            'src/domain/Lists/List/List',
-            'src/domain/Lists/OptionList/OptionList',
-            'src/domain/Lists/SmartList/SmartList'
+            'src/domain/Lists/ActionList/ActionList.tsx',
+            'src/domain/Lists/FilteredList/FilteredList.tsx',
+            'src/domain/Lists/List/List.tsx',
+            'src/domain/Lists/OptionList/OptionList.tsx',
+            'src/domain/Lists/SmartList/SmartList.tsx'
           ]
         },
         {
           name: 'Menus',
           components: [
-            'src/domain/Menus/Menu/Menu'
+            'src/domain/Menus/Menu/Menu.tsx'
           ]
         },
         {
           name: 'Modals',
           components: [
-            'src/domain/Modals/Modal/Modal',
-            'src/domain/Modals/ToggleModal/ToggleModal'
+            'src/domain/Modals/Modal/Modal.tsx',
+            'src/domain/Modals/ToggleModal/ToggleModal.tsx'
           ]
         },
         {
           name: 'Navigation',
           components: [
-            'src/domain/Navigation/BreadcrumbGroup/BreadcrumbGroup'
+            'src/domain/Navigation/BreadcrumbGroup/BreadcrumbGroup.tsx'
           ]
         },
         {
           name: 'Pills',
           components: [
-            'src/domain/Pills/Pill/Pill'
+            'src/domain/Pills/Pill/Pill.tsx'
           ]
         },
         {
           name: 'Popovers',
           components: [
-            'src/domain/Popovers/DropdownMenu/DropdownMenu',
-            'src/domain/Popovers/Popover/Popover',
-            'src/domain/Popovers/TooltipPopover/TooltipPopover'
+            'src/domain/Popovers/DropdownMenu/DropdownMenu.tsx',
+            'src/domain/Popovers/Popover/Popover.tsx',
+            'src/domain/Popovers/TooltipPopover/TooltipPopover.tsx'
           ]
         },
         {
           name: 'Reports',
           components: [
-            'src/domain/Reports/ReportHeader/ReportHeader',
-            'src/domain/Reports/ReportInfo/ReportInfo'
+            'src/domain/Reports/ReportHeader/ReportHeader.tsx',
+            'src/domain/Reports/ReportInfo/ReportInfo.tsx'
           ]
         },
         {
           name: 'Skeletons',
           components: [
-            'src/domain/Skeletons/BlockSkeleton/BlockSkeleton',
-            'src/domain/Skeletons/CircleSkeleton/CircleSkeleton',
-            'src/domain/Skeletons/ParagraphSkeleton/ParagraphSkeleton',
-            'src/domain/Skeletons/TextSkeleton/TextSkeleton'
+            'src/domain/Skeletons/BlockSkeleton/BlockSkeleton.tsx',
+            'src/domain/Skeletons/CircleSkeleton/CircleSkeleton.tsx',
+            'src/domain/Skeletons/ParagraphSkeleton/ParagraphSkeleton.tsx',
+            'src/domain/Skeletons/TextSkeleton/TextSkeleton.tsx'
           ]
         },
         {
           name: 'Spinners',
           components: [
-            'src/domain/Spinners/Spinner/Spinner'
+            'src/domain/Spinners/Spinner/Spinner.tsx'
           ]
         },
         {
           name: 'Tables',
           components: [
-            'src/domain/Tables/DataTable/DataTable'
+            'src/domain/Tables/DataTable/DataTable.tsx'
           ]
         },
         {
           name: 'Tabs',
           components: [
-            'src/domain/Tabs/BlockTabGroup/BlockTabGroup',
-            'src/domain/Tabs/ScrollingTabGroup/ScrollingTabGroup'
+            'src/domain/Tabs/BlockTabGroup/BlockTabGroup.tsx',
+            'src/domain/Tabs/ScrollingTabGroup/ScrollingTabGroup.tsx'
           ]
         },
         {
           name: 'Timelines',
           components: [
-            'src/domain/Timelines/ModularTimeline/ModularTimeline',
-            'src/domain/Timelines/VerticalTimeline/VerticalTimeline/VerticalTimeline',
-            'src/domain/Timelines/VerticalTimeline/VerticalTimelineEvent/VerticalTimelineEvent'
+            'src/domain/Timelines/ModularTimeline/ModularTimeline.tsx',
+            'src/domain/Timelines/VerticalTimeline/VerticalTimeline/VerticalTimeline.tsx'
           ]
         },
         {
           name: 'Toasts',
           components: [
-            'src/domain/Toasts/Toast/Toast'
+            'src/domain/Toasts/Toast/Toast.tsx'
           ]
         },
         {
           name: 'Tooltips',
           components: [
-            'src/domain/Tooltips/Tooltip/Tooltip'
+            'src/domain/Tooltips/Tooltip/Tooltip.tsx'
           ]
         },
         {
           name: 'Typographies',
           components: [
-            'src/domain/Typographies/Brick/Brick',
-            'src/domain/Typographies/CurrencyText/CurrencyText',
-            'src/domain/Typographies/Emoji/Emoji',
-            'src/domain/Typographies/FormattedText/FormattedText',
-            'src/domain/Typographies/TelephoneText/TelephoneText',
-            'src/domain/Typographies/Text/Text'
+            'src/domain/Typographies/Brick/Brick.tsx',
+            'src/domain/Typographies/CurrencyText/CurrencyText.tsx',
+            'src/domain/Typographies/Emoji/Emoji.tsx',
+            'src/domain/Typographies/FormattedText/FormattedText.tsx',
+            'src/domain/Typographies/TelephoneText/TelephoneText.tsx',
+            'src/domain/Typographies/Text/Text.tsx'
           ]
         }
       ]
@@ -276,21 +276,20 @@ module.exports = {
     {
       name: 'Internal/Higher Order Components',
       components: [
-        'src/domain/Internals/Anchor/Anchor',
-        'src/domain/Styles/hoc/withStyledBreakpoints',
-        'src/domain/Defaults/withDefaults/withDefaults'
+        'src/domain/Internals/Anchor/Anchor.tsx',
+        'src/domain/Defaults/withDefaults/withDefaults.tsx'
       ]
     },
     {
       name: 'Deprecated Components',
       components: [
-        'src/domain/Grids/Grid/GridProvider',
-        'src/domain/Layouts/XYGrid/XYGrid'
+        'src/domain/Grids/Grid/GridProvider.tsx',
+        'src/domain/Layouts/XYGrid/XYGrid.tsx'
       ]
     }
   ],
-  showUsage: false,
-  showCode: false,
+  usageMode: 'collapse',
+  exampleMode: 'collapse',
   updateExample: function (props, exampleFilePath) {
     // magically require components
     /**
@@ -324,9 +323,9 @@ module.exports = {
           const c = v[1] // object name(s)
 
           if (_.isArray(c)) {
-            return `const { ${c.join(', ')} } = require("${p}");`
+            return `import { ${c.join(', ')} } from '${p}';`
           } else {
-            return `const { ${c} } = require("${p}");`
+            return `import { ${c} } from '${p}';`
           }
         })
 

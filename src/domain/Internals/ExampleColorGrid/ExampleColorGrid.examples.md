@@ -1,6 +1,5 @@
 #### Primary
 ```jsx
-const { ColorsGrid } = require('./ExampleColorGrid');
 const { Variables } = require('@Common');
 
 <ExampleColorGrid
@@ -43,7 +42,7 @@ const { Variables } = require('@Common');
 
 #### Neutrals
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
 
 <ExampleColorGrid
   colors={[

@@ -23,7 +23,9 @@ The below message will be shown if both primary and secondary message is provide
 ### EmptyState message with buttonComponent provided
 When a buttonComponent is provided to the EmptyState component it will be shown accordingly.
 
-```jsx.
+```jsx
+import { LinkButton } from '@Domain/Buttons';
+
 <EmptyState
   buttonComponent={
    <LinkButton
@@ -43,7 +45,7 @@ When a buttonComponent is provided to the EmptyState component it will be shown 
 ### EmptyState message with null messages
 Hide the default messages by providing `null` as the value
 
-```jsx.
+```jsx
 <div>
   <EmptyState
     primaryMessage={null}
@@ -59,7 +61,7 @@ Hide the default messages by providing `null` as the value
 ### EmptyState support for legacy pages
 The empty state supports legacy pages
 
-```jsx.
+```jsx
 <div class='ihr-empty-state'>
   <div class='ihr-primary-message'>
     This is my primary message

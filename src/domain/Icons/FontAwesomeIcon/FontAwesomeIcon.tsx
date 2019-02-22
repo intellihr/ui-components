@@ -11,7 +11,7 @@ interface IFontAwesomeIconProps extends Omit<IIconProps, 'type'> {
 export class FontAwesomeIcon extends React.PureComponent<IFontAwesomeIconProps> {
   public render (): JSX.Element {
     const {
-      type
+      type,
     } = this.props
 
     return (
