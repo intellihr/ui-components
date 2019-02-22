@@ -6,8 +6,8 @@ module.exports = {
   title: 'IntelliHR Design System',
   require: [
     require.resolve('babel-polyfill'),
-    path.resolve(__dirname, 'src/index.ts'),
-    path.resolve(__dirname, 'src/common/sass/style.ts')
+    path.resolve(__dirname, 'src/common/sass/style.ts'),
+    path.resolve(__dirname, 'src/index.ts')
   ],
   propsParser: docGenTypescript.withCustomConfig('./tsconfig.json').parse,
   getComponentPathLine (componentPath) {
@@ -63,6 +63,12 @@ module.exports = {
           name: 'Badges',
           components: [
             'src/domain/Badges/Badge/Badge'
+          ]
+        },
+        {
+          name: 'Boards',
+          components: [
+            'src/domain/Boards/Board/Board'
           ]
         },
         {
