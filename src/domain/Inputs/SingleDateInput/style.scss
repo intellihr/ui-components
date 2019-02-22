@@ -68,6 +68,7 @@
     line-height: 1.5;
     padding: .5rem;
     transition: border-color .3s ease-in-out, background-color .3s ease;
+    margin: 0;
 
     &:hover {
       background-color: $n150;

@@ -1,5 +1,7 @@
 :local(.input) {
-  &[type='text'], &[type='password'], &[type='date'], &[type='email'], &[type='number'], &[type='url'] {
+  &[type='text'],
+  &[type='date'],
+  &[type='number'] {
     margin: 0;
   }
 
