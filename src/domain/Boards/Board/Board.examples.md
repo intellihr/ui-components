@@ -205,6 +205,7 @@
  <Board.Tile
    size='large'
    isButton
+   anchorHref='#'
  >
    <Board.Tile.ButtonTileContent
     iconType='fa-plus-square'
@@ -234,7 +235,7 @@
     <Board.Tile.ButtonTileContent
      iconType='fa-comments'
      buttonTitle='Medium Tile button button button button button button button button button button'
-     buttonDescription='Button description has a maximum line 3: it will be hidden if it is out of 3 lines'
+     buttonDescription='Button description has a maximum line count of 3. This means that long content will have text hidden if the content goes over 3 lines in length.'
     >
     </Board.Tile.ButtonTileContent>
   </Board.Tile>
@@ -246,7 +247,7 @@
   <Board.Tile.ButtonTileContent
     iconType='intelli-icon-smile'
     buttonTitle='Small Tile button with an IntelliIcon'
-    buttonDescription='The tile description will be hidden if it is out of 3 lines'
+    buttonDescription='Button description has a maximum line count of 3. This means that long content will have text hidden if the content goes over 3 lines in length.'
   >
   </Board.Tile.ButtonTileContent>
  </Board.Tile>

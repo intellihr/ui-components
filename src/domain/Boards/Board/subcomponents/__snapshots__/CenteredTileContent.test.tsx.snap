@@ -12,9 +12,9 @@ exports[`<CenteredTileContent /> should render a centered tile content with chil
 
 exports[`<CenteredTileContent /> should render a centered tile content with label 1`] = `
 <styled.div>
-  <styled.label>
+  <styled.span>
     dummy label
-  </styled.label>
+  </styled.span>
   <styled.div
     hasTitleLabel={true}
   />
