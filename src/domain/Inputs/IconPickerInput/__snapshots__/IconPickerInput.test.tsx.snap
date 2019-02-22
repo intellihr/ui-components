@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<IconPicker /> should render an Icon Picker 1`] = `
+exports[`<IconPickerInput /> should render an Icon Picker 1`] = `
 <div
   data-component-type="icon_picker"
 >
@@ -9,20 +9,20 @@ exports[`<IconPicker /> should render an Icon Picker 1`] = `
       Array [
         Object {
           "content": <UNDEFINED>
-            <Styled(Input)
-              handleChange={[Function]}
+            <styled.input
+              checked={true}
               id="icon-picker-intelli-icon-australia-0"
-              isChecked={false}
               name="icon-picker"
+              onChange={[Function]}
               type="radio"
               value="intelli-icon-australia"
             />
             <styled.label
-              checked={false}
               htmlFor="icon-picker-intelli-icon-australia-0"
+              isChecked={true}
             >
               <Styled(Icon)
-                color="#424F5C"
+                color="#7362F5"
                 size="large"
                 type="intelli-icon-australia"
               />
@@ -32,17 +32,17 @@ exports[`<IconPicker /> should render an Icon Picker 1`] = `
         },
         Object {
           "content": <UNDEFINED>
-            <Styled(Input)
-              handleChange={[Function]}
+            <styled.input
+              checked={false}
               id="icon-picker-intelli-icon-card-1"
-              isChecked={false}
               name="icon-picker"
+              onChange={[Function]}
               type="radio"
               value="intelli-icon-card"
             />
             <styled.label
-              checked={false}
               htmlFor="icon-picker-intelli-icon-card-1"
+              isChecked={false}
             >
               <Styled(Icon)
                 color="#424F5C"
@@ -55,17 +55,17 @@ exports[`<IconPicker /> should render an Icon Picker 1`] = `
         },
         Object {
           "content": <UNDEFINED>
-            <Styled(Input)
-              handleChange={[Function]}
+            <styled.input
+              checked={false}
               id="icon-picker-intelli-icon-book-2"
-              isChecked={false}
               name="icon-picker"
+              onChange={[Function]}
               type="radio"
               value="intelli-icon-book"
             />
             <styled.label
-              checked={false}
               htmlFor="icon-picker-intelli-icon-book-2"
+              isChecked={false}
             >
               <Styled(Icon)
                 color="#424F5C"

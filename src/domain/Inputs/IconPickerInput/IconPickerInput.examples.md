@@ -1,12 +1,12 @@
 #### Icon Picker
 
 ```jsx
-initialState = { value: 'option 1' };
+initialState = { value: null };
 
-<IconPicker
+<IconPickerInput
   name='icon-picker'
   value={state.value}
-  handleChange={(event) => setState({value: event.target.value})}
+  onChange={(event) => setState({value: event.target.value})}
   icons={
     [
       'intelli-icon-australia',

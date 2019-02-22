@@ -10,20 +10,16 @@ export interface IIconPickerProps {
   /** Array of icons to display in the list */
   icons: IconType[]
   /** action triggered when icons are clicked */
-  handleChange?: ChangeEventHandler<HTMLInputElement>
+  onChange?: ChangeEventHandler<HTMLInputElement>
   /** The currently selected icon */
-  value?: string | number
+  value: IconType | null
   /** The name property of the icon picker */
   name: string
   /** The data-component-context */
   componentContext?: string
 }
 
-export class IconPicker extends React.PureComponent<IIconPickerProps> {
-  public static defaultProps: Partial<IIconPickerProps> = {
-    value: undefined
-  }
-
+export class IconPickerInput extends React.PureComponent<IIconPickerProps> {
   public render (): JSX.Element {
     const {
       componentContext
@@ -59,12 +55,12 @@ export class IconPicker extends React.PureComponent<IIconPickerProps> {
 
   private iconInput = (icon: IconType, idx: number) => {
     const {
-      handleChange,
+      onChange,
       value,
       name
     } = this.props
 
-    const checked = value === icon
+    const isChecked = value === icon
 
     return (
       <>
@@ -72,15 +68,15 @@ export class IconPicker extends React.PureComponent<IIconPickerProps> {
           name={name}
           id={`${name}-${icon}-${idx}`}
           value={icon}
-          handleChange={handleChange}
-          isChecked={checked}
+          onChange={onChange}
+          checked={isChecked}
           type='radio'
         />
-        <StyledIconArea checked={checked} htmlFor={`${name}-${icon}-${idx}`}>
+        <StyledIconArea isChecked={isChecked} htmlFor={`${name}-${icon}-${idx}`}>
           <StyledIcon
             type={icon}
-            color={checked ? Variables.Color.i300 : Variables.Color.n700}
-            size={'large'}
+            color={isChecked ? Variables.Color.i300 : Variables.Color.n700}
+            size='large'
           />
         </StyledIconArea>
       </>

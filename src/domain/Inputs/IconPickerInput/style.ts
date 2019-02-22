@@ -2,11 +2,9 @@ import styled, {css} from 'styled-components'
 
 import { Variables } from '../../../common'
 import { Icon } from '../../Icons/Icon'
-import { GridLayout } from '../../Layouts/GridLayout'
-import { Input } from '../Input'
 
 interface IStyledIconAreaProps {
-  checked: boolean
+  isChecked: boolean
 }
 
 const StyledIconArea = styled.label<IStyledIconAreaProps>`
@@ -18,7 +16,7 @@ const StyledIconArea = styled.label<IStyledIconAreaProps>`
   transition: .25s ease-out, color .25s ease-out;
 
   ${(props: IStyledIconAreaProps) => {
-    if (props.checked) {
+    if (props.isChecked) {
       return css`
         background: ${Variables.Color.i100};
         border-color: ${Variables.Color.i600};
@@ -42,7 +40,7 @@ const StyledIcon = styled(Icon)`
   vertical-align: middle;
 `
 
-const StyledIconInput = styled(Input)`
+const StyledIconInput = styled.input`
   height: 0;
   opacity: 0;
   position: absolute;

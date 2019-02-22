@@ -1,7 +1,7 @@
 export { AutocompleteLocationInput } from './AutocompleteLocationInput'
 export { CheckboxInput } from './CheckboxInput'
 export { CheckboxSet } from './CheckboxSet'
-export { IconPicker } from './IconPicker'
+export { IconPickerInput } from './IconPickerInput'
 export { Input, IGenericInputProps } from './Input'
 export { InputGroup } from './InputGroup'
 export { NumberInput } from './NumberInput'
