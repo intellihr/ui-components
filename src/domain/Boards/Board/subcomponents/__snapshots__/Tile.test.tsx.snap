@@ -42,9 +42,9 @@ exports[`<Tile /> should render a hoverable board tile with hover label 1`] = `
   tileSize="medium"
   type="default"
 >
-  <styled.label>
+  <styled.span>
     hover label
-  </styled.label>
+  </styled.span>
 </styled.div>
 `;
 

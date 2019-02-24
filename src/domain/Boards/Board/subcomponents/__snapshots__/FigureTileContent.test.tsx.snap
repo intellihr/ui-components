@@ -4,32 +4,32 @@ exports[`<FigureTileContent /> should render a figure tile content with alert he
 <styled.div>
   <styled.div>
     <styled.div>
-      <styled.label
+      <styled.span
         isHeading={true}
         labelStyle="alert"
         textWidth={46}
       >
         1
-      </styled.label>
-      <styled.label
+      </styled.span>
+      <styled.span
         isHeading={true}
         labelStyle="alert"
       >
         dummy heading
-      </styled.label>
+      </styled.span>
     </styled.div>
     <styled.div>
-      <styled.label
+      <styled.span
         labelStyle="alert"
         textWidth={46}
       >
         35
-      </styled.label>
-      <styled.label
+      </styled.span>
+      <styled.span
         labelStyle="alert"
       >
         dummy subheading
-      </styled.label>
+      </styled.span>
     </styled.div>
   </styled.div>
   <div />
@@ -40,19 +40,19 @@ exports[`<FigureTileContent /> should render a figure tile content with heading 
 <styled.div>
   <styled.div>
     <styled.div>
-      <styled.label
+      <styled.span
         isHeading={true}
         labelStyle="none"
         textWidth={36}
       >
         1
-      </styled.label>
-      <styled.label
+      </styled.span>
+      <styled.span
         isHeading={true}
         labelStyle="none"
       >
         dummy heading
-      </styled.label>
+      </styled.span>
     </styled.div>
     <styled.div />
   </styled.div>
@@ -62,9 +62,9 @@ exports[`<FigureTileContent /> should render a figure tile content with heading 
 
 exports[`<FigureTileContent /> should render a figure tile content with label 1`] = `
 <styled.div>
-  <styled.label>
+  <styled.span>
     dummy label
-  </styled.label>
+  </styled.span>
   <div />
 </styled.div>
 `;
@@ -73,32 +73,32 @@ exports[`<FigureTileContent /> should render a figure tile content with normal h
 <styled.div>
   <styled.div>
     <styled.div>
-      <styled.label
+      <styled.span
         isHeading={true}
         labelStyle="none"
         textWidth={46}
       >
         1
-      </styled.label>
-      <styled.label
+      </styled.span>
+      <styled.span
         isHeading={true}
         labelStyle="none"
       >
         dummy heading
-      </styled.label>
+      </styled.span>
     </styled.div>
     <styled.div>
-      <styled.label
+      <styled.span
         labelStyle="none"
         textWidth={46}
       >
         35
-      </styled.label>
-      <styled.label
+      </styled.span>
+      <styled.span
         labelStyle="none"
       >
         dummy subheading
-      </styled.label>
+      </styled.span>
     </styled.div>
   </styled.div>
   <div />
@@ -116,17 +116,17 @@ exports[`<FigureTileContent /> should render a figure tile content with subheadi
   <styled.div>
     <styled.div />
     <styled.div>
-      <styled.label
+      <styled.span
         labelStyle="none"
         textWidth={46}
       >
         35
-      </styled.label>
-      <styled.label
+      </styled.span>
+      <styled.span
         labelStyle="none"
       >
         dummy subheading
-      </styled.label>
+      </styled.span>
     </styled.div>
   </styled.div>
   <div />
@@ -137,32 +137,32 @@ exports[`<FigureTileContent /> should render a figure tile content with success 
 <styled.div>
   <styled.div>
     <styled.div>
-      <styled.label
+      <styled.span
         isHeading={true}
         labelStyle="success"
         textWidth={46}
       >
         1
-      </styled.label>
-      <styled.label
+      </styled.span>
+      <styled.span
         isHeading={true}
         labelStyle="success"
       >
         dummy heading
-      </styled.label>
+      </styled.span>
     </styled.div>
     <styled.div>
-      <styled.label
+      <styled.span
         labelStyle="success"
         textWidth={46}
       >
         35
-      </styled.label>
-      <styled.label
+      </styled.span>
+      <styled.span
         labelStyle="success"
       >
         dummy subheading
-      </styled.label>
+      </styled.span>
     </styled.div>
   </styled.div>
   <div />
@@ -173,32 +173,32 @@ exports[`<FigureTileContent /> should render a figure tile content with warning 
 <styled.div>
   <styled.div>
     <styled.div>
-      <styled.label
+      <styled.span
         isHeading={true}
         labelStyle="warning"
         textWidth={46}
       >
         1
-      </styled.label>
-      <styled.label
+      </styled.span>
+      <styled.span
         isHeading={true}
         labelStyle="warning"
       >
         dummy heading
-      </styled.label>
+      </styled.span>
     </styled.div>
     <styled.div>
-      <styled.label
+      <styled.span
         labelStyle="warning"
         textWidth={46}
       >
         35
-      </styled.label>
-      <styled.label
+      </styled.span>
+      <styled.span
         labelStyle="warning"
       >
         dummy subheading
-      </styled.label>
+      </styled.span>
     </styled.div>
   </styled.div>
   <div />

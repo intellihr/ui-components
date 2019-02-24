@@ -12,12 +12,12 @@ exports[`<ButtonTileContent /> should render a button tile content in the hollow
       />
     </styled.div>
     <styled.div>
-      <styled.label>
+      <styled.span>
         dummy button title
-      </styled.label>
-      <styled.label>
+      </styled.span>
+      <styled.span>
         dummy button description
-      </styled.label>
+      </styled.span>
     </styled.div>
   </styled.div>
 </styled.div>
@@ -35,12 +35,12 @@ exports[`<ButtonTileContent /> should render a button tile content with a font a
       />
     </styled.div>
     <styled.div>
-      <styled.label>
+      <styled.span>
         dummy button title
-      </styled.label>
-      <styled.label>
+      </styled.span>
+      <styled.span>
         dummy button description
-      </styled.label>
+      </styled.span>
     </styled.div>
   </styled.div>
 </styled.div>
@@ -58,12 +58,12 @@ exports[`<ButtonTileContent /> should render a button tile content with an Intel
       />
     </styled.div>
     <styled.div>
-      <styled.label>
+      <styled.span>
         dummy button title
-      </styled.label>
-      <styled.label>
+      </styled.span>
+      <styled.span>
         dummy button description
-      </styled.label>
+      </styled.span>
     </styled.div>
   </styled.div>
 </styled.div>
@@ -71,9 +71,9 @@ exports[`<ButtonTileContent /> should render a button tile content with an Intel
 
 exports[`<ButtonTileContent /> should render a button tile content with label 1`] = `
 <styled.div>
-  <styled.label>
+  <styled.span>
     dummy label
-  </styled.label>
+  </styled.span>
   <styled.div>
     <styled.div />
   </styled.div>

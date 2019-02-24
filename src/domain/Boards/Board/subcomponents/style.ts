@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 import { Variables } from '../../../../common'
-import { UnstyledLink } from '../../../Links/UnstyledLink'
+import { IUnstyledLinkProps, UnstyledLink } from '../../../Links/UnstyledLink'
 
 interface IStyledTileProps {
   tileSize: 'small'|'medium'|'large'
@@ -36,7 +36,6 @@ const TileStyles = css`
   margin: 0 ${Variables.Spacing.sLarge}px ${Variables.Spacing.sLarge}px 0;
 
   ${(props: IStyledTileProps) => props.isHoverable && css`
-      cursor: pointer;
 
       :hover {
         background-color: ${Variables.Color.n250};
@@ -48,13 +47,11 @@ const TileStyles = css`
   ${(props: IStyledTileProps) => (props.isHoverable && props.isButton && props.type === 'hollow') && css`
 
       background-color: ${Variables.Color.n100};
-      border: 1px solid ${Variables.Color.n400};
-      border-style: dashed;
+      border: 1px dashed ${Variables.Color.n400};
 
       :hover {
-        border: 1px solid ${Variables.Color.i400};
+        border: 1px dashed ${Variables.Color.i400};
         background-color: ${Variables.Color.n100};
-        border-style: dashed;
         transition: .25s ease-out;
       }
     `
@@ -73,7 +70,7 @@ const TileStyles = css`
         `
       case 'medium':
         return css`
-          width: 286px;
+          width: 370px;
 
           @media (max-width: 595px) {
             width: calc(100% - ${Variables.Spacing.sLarge}px);
@@ -92,7 +89,6 @@ const TileStyles = css`
   }}
 
   ${(props: IStyledTileProps) => props.hasHoverLabel && css`
-
       padding-bottom: 40px;
     `
   }}
@@ -102,14 +98,24 @@ const StyleTileButton = styled.div`
   ${TileStyles};
   outline: 0;
   position: relative;
+
+  ${(props) => props.onClick && css`
+      cursor: pointer;
+    `
+  }}
 `
 
 const StyledAnchorTile = styled(UnstyledLink)`
   ${TileStyles};
   position: relative;
+
+  ${(props) => (props.onClick || props.href) && css`
+      cursor: pointer;
+    `
+  }}
 `
 
-const StyledTileLabel = styled.label`
+const StyledTileLabel = styled.span`
   font-size: ${Variables.FontSize.fzSmall}px;
   line-height: ${Variables.LineHeight.lhSmall}px;
   font-weight: ${Variables.FontWeight.fwHeavy};
@@ -119,7 +125,7 @@ const StyledTileLabel = styled.label`
   overflow: hidden;
 `
 
-const StyledFigureLabel = styled.label`
+const StyledFigureLabel = styled.span`
   ${(props: IStyledFigureLabelProps) => {
     switch (props.labelStyle) {
       case 'success':
@@ -159,7 +165,7 @@ const StyledFigureLabel = styled.label`
   }}
 `
 
-const StyledHeadinglabel = styled.label`
+const StyledHeadinglabel = styled.span`
   font-size: ${Variables.FontSize.fzSmall}px;
   line-height: ${Variables.LineHeight.lhSmall}px;
   font-weight: ${Variables.FontWeight.fwHeavy};
@@ -227,7 +233,7 @@ const CenteredContentWrapper = styled.div`
   }}
 `
 
-const ButtonDescriptionLabel = styled.label`
+const ButtonDescriptionLabel = styled.span`
   font-size: ${Variables.FontSize.fzSmall}px;
   line-height: ${Variables.LineHeight.lhSmall}px;
   color: ${Variables.Color.n600};
@@ -242,7 +248,7 @@ const ButtonDescriptionLabel = styled.label`
   }
 `
 
-const ButtonTitleLabel = styled.label`
+const ButtonTitleLabel = styled.span`
   font-size: ${Variables.FontSize.fzBody}px;
   line-height: ${Variables.LineHeight.lhBody}px;
   color: ${Variables.Color.n700};
@@ -265,7 +271,7 @@ const ButtonTitleLabel = styled.label`
   }
 `
 
-const StyledHoverLabel = styled.label`
+const StyledHoverLabel = styled.span`
   font-size: ${Variables.FontSize.fzSmall}px;
   line-height: ${Variables.LineHeight.lhSmall}px;
   color: ${Variables.Color.i400};
@@ -276,7 +282,6 @@ const StyledHoverLabel = styled.label`
   bottom: -${Variables.Spacing.sXSmall}px;
   right: 0;
   max-width: 90%;
-  text-transform: uppercase;
   padding: ${Variables.Spacing.sMedium}px;
 
   ${StyleTileButton}:hover & {
