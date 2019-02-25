@@ -9,6 +9,8 @@
 #### Report header with helper content
 
 ```jsx
+import { ReportInfo } from '@Domain/Reports';
+
 <ReportHeader
   primaryText='How To Read This Chart'
   secondaryText='Hide Info'

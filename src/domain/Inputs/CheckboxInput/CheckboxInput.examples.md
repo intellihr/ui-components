@@ -47,8 +47,9 @@ initialState = { button: false, button2: false };
 #### Input with JSX
 
 ```jsx
+import { FontAwesomeIcon } from '@Domain/Icons';
+
 initialState = { star: false };
-const { FontAwesomeIcon } = require('../../Icons');
 
 <CheckboxInput
   name='star-checkbox'

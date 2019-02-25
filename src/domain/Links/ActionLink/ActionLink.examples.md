@@ -13,7 +13,7 @@ Your text here
 Since `ActionLink` is an implementation of `Anchor` it will use the `AnchorComponent` that
 can be provided to the `DefaultsProvider` as follows.
 ```jsx
-const { DefaultsProvider } = require("@Domain/Defaults");
+import { DefaultsProvider } from '@Domain/Defaults';
 
 <DefaultsProvider
   value={{
@@ -32,7 +32,7 @@ You can also provide props down to the `AnchorComponent` the same way that is do
 by using the `anchorComponentProps` key, for example.
 
 ```jsx
-const { DefaultsProvider } = require("@Domain/Defaults");
+import { DefaultsProvider } from '@Domain/Defaults';
 
 <DefaultsProvider
   value={{

@@ -1,6 +1,8 @@
 #### Basic Emoji
 
 ```jsx
+import { Text } from '@Domain/Typographies';
+
   <div>
     <Emoji
       emoji='angry'

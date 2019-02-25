@@ -66,7 +66,8 @@ initialState = { value: 'option 1' };
 #### Horizontal Radio Set
 
 ```jsx
-const { Props } = require('@Common');
+import { Props } from '@Common';
+
 initialState = { value: 'option 1' };
 
 <div>

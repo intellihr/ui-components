@@ -72,8 +72,8 @@ initialState = { button1: false, button2: false, button3: false, button4: false}
 #### Horizontal Checkbox Set
 
 ```jsx
+import { Props } from '@Common';
 
-const { Props } = require('@Common');
 initialState = { horizontal1: false, horizontal2: false, horizontal3: false, horixontal4: false, horixontal5: false};
 
 <CheckboxSet

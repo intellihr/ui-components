@@ -1,9 +1,8 @@
 #### Basic Input Group
 
 ```jsx
-const { NumberInput } = require('../NumberInput');
-const { TextInput } = require('../TextInput');
-const { DropdownMenu } = require('../../Popovers/DropdownMenu');
+import { NumberInput, TextInput } from '@Domain/Inputs';
+import { DropdownMenu } from '@Domain/Popovers';
 
 <InputGroup>
   <NumberInput
@@ -20,9 +19,8 @@ const { DropdownMenu } = require('../../Popovers/DropdownMenu');
 #### Input Group with 5 inputs
 
 ```jsx
-const { NumberInput } = require('../NumberInput');
-const { TextInput } = require('../TextInput');
-const { DropdownMenu } = require('../../Popovers/DropdownMenu');
+import { NumberInput, TextInput } from '@Domain/Inputs';
+import { DropdownMenu } from '@Domain/Popovers';
 
 <InputGroup>
   <NumberInput
@@ -51,7 +49,7 @@ const { DropdownMenu } = require('../../Popovers/DropdownMenu');
 #### Input Group with Button
 
 ```jsx
-const { TextInput } = require('../TextInput');
+import { TextInput } from '@Domain/Inputs';
 
 <InputGroup>
   <InputGroup.Button
@@ -71,7 +69,7 @@ const { TextInput } = require('../TextInput');
 #### Input Group with Button
 
 ```jsx
-const { TextInput } = require('../TextInput');
+import { TextInput } from '@Domain/Inputs';
 
 <InputGroup>
   <TextInput
@@ -90,12 +88,14 @@ const { TextInput } = require('../TextInput');
 #### Input Group with Dropdown Button
 
 ```jsx
-const { FilteredOptionList } = require('../../Lists/OptionList');
-const { TextInput } = require('../TextInput');
-const { DropdownMenu } = require('../../Popovers/DropdownMenu');
-const { FontAwesomeIcon } = require('../../Icons');
+import { map, filter, toLower } from 'lodash';
 
-const { map, filter, toLower } = require('lodash');
+import { FontAwesomeIcon } from '@Domain/Icons';
+import { TextInput } from '@Domain/Inputs';
+import { FilteredOptionList } from '@Domain/Lists';
+import { DropdownMenu } from '@Domain/Popovers';
+import { Emoji } from '@Domain/Typographies';
+
 let textInput;
 
 initialState = {
@@ -177,12 +177,13 @@ initialState = {
 #### Input Group with Dropdown Button and many inputs
 
 ```jsx
-const { NumberInput } = require('../NumberInput');
-const { TextInput } = require('../TextInput');
-const { DropdownMenu } = require('../../Popovers/DropdownMenu');
-const { FontAwesomeIcon } = require('../../Icons');
+import { map, filter, toLower } from 'lodash';
 
-const { map, filter, toLower } = require('lodash');
+import { Button } from '@Domain/Buttons';
+import { FontAwesomeIcon } from '@Domain/Icons';
+import { NumberInput, TextInput } from '@Domain/Inputs';
+import { DropdownMenu } from '@Domain/Popovers';
+
 let textInput;
 
 initialState = { selectedOption: {value: 1, label: 'AUD'}, inputValue: '' };
@@ -266,12 +267,13 @@ class ThingList extends React.PureComponent {
 #### Input Group with Dropdown Button in any position
 
 ```jsx
-const { NumberInput } = require('../NumberInput');
-const { TextInput } = require('../TextInput');
-const { DropdownMenu } = require('../../Popovers/DropdownMenu');
-const { FontAwesomeIcon } = require('../../Icons');
+import { map, filter, toLower } from 'lodash';
 
-const { map, filter, toLower } = require('lodash');
+import { Button } from '@Domain/Buttons';
+import { FontAwesomeIcon } from '@Domain/Icons';
+import { NumberInput, TextInput } from '@Domain/Inputs';
+import { DropdownMenu } from '@Domain/Popovers';
+
 let textInput;
 
 initialState = { selectedOption: {value: 1, label: 'AUD'}, inputValue: '' };

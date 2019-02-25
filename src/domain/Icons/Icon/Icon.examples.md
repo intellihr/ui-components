@@ -1,7 +1,8 @@
 #### Basic FontAwesome Icon
 
 ```jsx
-const { FontAwesomeIcon } = require('../FontAwesomeIcon');
+import { FontAwesomeIcon } from '@Domain/Icons';
+
   <FontAwesomeIcon
     type='star'
   />
@@ -10,7 +11,8 @@ const { FontAwesomeIcon } = require('../FontAwesomeIcon');
 #### Basic Intelli Icon
 
 ```jsx
-const { IntelliIcon } = require('../IntelliIcon');
+import { IntelliIcon } from '@Domain/Icons';
+
   <IntelliIcon
     type='smile'
   />
@@ -19,7 +21,8 @@ const { IntelliIcon } = require('../IntelliIcon');
 #### Extra large Icon
 
 ```jsx
-const { FontAwesomeIcon } = require('../FontAwesomeIcon');
+import { FontAwesomeIcon } from '@Domain/Icons';
+
   <FontAwesomeIcon
     type='star'
     size='xlarge'
@@ -29,7 +32,8 @@ const { FontAwesomeIcon } = require('../FontAwesomeIcon');
 #### Spinning Icon
 
 ```jsx
-const { FontAwesomeIcon } = require('../FontAwesomeIcon');
+import { FontAwesomeIcon } from '@Domain/Icons';
+
   <FontAwesomeIcon
     type='star'
     isSpinning
@@ -39,7 +43,8 @@ const { FontAwesomeIcon } = require('../FontAwesomeIcon');
 #### Coloured Icon
 
 ```jsx
-const { FontAwesomeIcon } = require('../FontAwesomeIcon');
+import { FontAwesomeIcon } from '@Domain/Icons';
+
   <FontAwesomeIcon
     type='star'
     color='rgb(204,204,0)'
@@ -51,7 +56,8 @@ const { FontAwesomeIcon } = require('../FontAwesomeIcon');
 Icon props can be used together!
 
 ```jsx
-const { FontAwesomeIcon } = require('../FontAwesomeIcon');
+import { FontAwesomeIcon } from '@Domain/Icons';
+
   <FontAwesomeIcon
     type='star'
     color='rgb(204,204,0)'
@@ -63,7 +69,8 @@ const { FontAwesomeIcon } = require('../FontAwesomeIcon');
 #### Icon with badge
 
 ```jsx
-const { FontAwesomeIcon } = require('../FontAwesomeIcon');
+import { Badge } from '@Domain/Badges';
+import { FontAwesomeIcon } from '@Domain/Icons';
 
 <div>
   <div>
@@ -114,7 +121,8 @@ const { FontAwesomeIcon } = require('../FontAwesomeIcon');
 #### Icon fetching
 
 ```jsx
-const { FontAwesomeIcon } = require('../FontAwesomeIcon');
+import { Badge } from '@Domain/Badges';
+import { FontAwesomeIcon } from '@Domain/Icons';
 
 <div>
   <div>

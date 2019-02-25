@@ -1,7 +1,6 @@
 ```jsx
-const React = require('react');
-const { Props } = require('../../../');
-const { Button } = require('@Domain/Buttons');
+import { Props } from '@Common';
+import { Button, ButtonGroup } from '@Domain/Buttons';
 
 class ModalExample extends React.PureComponent {
   constructor () {
@@ -37,7 +36,7 @@ class ModalExample extends React.PureComponent {
     } = this.props
 
     return (
-      <React.Fragment>
+      <>
         <Button
           onClick={this.handleClick}
         >
@@ -54,7 +53,7 @@ class ModalExample extends React.PureComponent {
         >
           {children}
         </Modal>
-      </React.Fragment>
+      </>
     )
   }
 }

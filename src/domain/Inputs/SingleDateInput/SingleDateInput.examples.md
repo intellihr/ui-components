@@ -31,8 +31,7 @@
 
 ##### Wrapped with InputGroup
 ```jsx
-const { InputGroup } = require('../InputGroup');
-const { TextInput } = require('../TextInput');
+import { InputGroup, TextInput } from '@Domain/Inputs';
 
 <InputGroup>
   <SingleDateInput

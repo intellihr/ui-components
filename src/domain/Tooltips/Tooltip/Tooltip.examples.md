@@ -33,7 +33,8 @@
 #### Tooltip with JSX Elements as content
 
 ```jsx
-const { Variables } = require('../../../common');
+import { Variables } from '@Common';
+import { Text } from '@Domain/Typographies';
 
 <Tooltip
   message={

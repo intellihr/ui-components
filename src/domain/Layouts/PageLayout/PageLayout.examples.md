@@ -3,7 +3,7 @@
 This layout is used for pages that display profile details for an entity.
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
 
 <PageLayout layoutType='profile'>
   <PageLayout.Region regionType='top'>
@@ -22,7 +22,7 @@ const { Variables } = require('@Common');
 This layout should be used for most pages
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
 
 <PageLayout layoutType='simple'>
   <PageLayout.Region regionType='top'>
@@ -39,7 +39,7 @@ const { Variables } = require('@Common');
 This layout should be used for pages that require fullscreen such as the org chart
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
 
 <PageLayout layoutType='fullscreen'>
   <PageLayout.Region regionType='top'>
@@ -57,7 +57,7 @@ This layout should be used for forms, it is a quick fix to center them on the pa
 since they are a max width of 900 instead of 1440
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
 
 <PageLayout layoutType='form'>
   <PageLayout.Region regionType='top'>
@@ -73,7 +73,7 @@ const { Variables } = require('@Common');
 
 Layouts can be used in plain html files by using global class names
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
 
 <div class='ihr-layout ihr-layout--profile'>
   <div class='ihr-layout__top'>
@@ -88,7 +88,7 @@ const { Variables } = require('@Common');
 </div>
 ```
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
 
 <div class='ihr-layout ihr-layout--simple'>
   <div class='ihr-layout__top'>
@@ -100,7 +100,7 @@ const { Variables } = require('@Common');
 </div>
 ```
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
 
 <div class='ihr-layout ihr-layout--form'>
   <div class='ihr-layout__top'>
@@ -112,7 +112,7 @@ const { Variables } = require('@Common');
 </div>
 ```
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
 
 <div class='ihr-layout ihr-layout--fullscreen'>
   <div class='ihr-layout__top'>

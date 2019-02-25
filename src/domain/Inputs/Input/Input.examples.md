@@ -1,9 +1,7 @@
 #### Basic Input
 
 ```jsx
-const { TextInput } = require('../TextInput');
-const { NumberInput } = require('../NumberInput');
-const { CheckboxInput } = require('../CheckboxInput');
+import { CheckboxInput, NumberInput, TextInput } from '@Domain/Inputs';
 
 initialState = { value: false };
 
@@ -25,8 +23,7 @@ initialState = { value: false };
 #### Input with Attributes
 
 ```jsx
-const { TextInput } = require('../TextInput');
-const { NumberInput } = require('../NumberInput');
+import { NumberInput, TextInput } from '@Domain/Inputs';
 
 <div>
   Text
@@ -46,10 +43,8 @@ const { NumberInput } = require('../NumberInput');
 #### Input with Icon
 
 ```jsx
-const { TextInput } = require('../TextInput');
-const { NumberInput } = require('../NumberInput');
-const { FontAwesomeIcon } = require('@Domain/Icons');
-const { IntelliIcon } = require('@Domain/Icons');
+import { NumberInput, TextInput } from '@Domain/Inputs';
+import { FontAwesomeIcon, IntelliIcon } from '@Domain/Icons';
 
 <div>
   Text
@@ -66,9 +61,8 @@ const { IntelliIcon } = require('@Domain/Icons');
 #### Input with Disable Prefix text
 
 ```jsx
-const { TextInput } = require('../TextInput');
-const { NumberInput } = require('../NumberInput');
-const { FontAwesomeIcon } = require('@Domain/Icons');
+import { NumberInput, TextInput } from '@Domain/Inputs';
+import { FontAwesomeIcon } from '@Domain/Icons';
 
 <div>
   Text
@@ -86,8 +80,7 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 #### Input with highlightOnFocus
 
 ```jsx
-const { TextInput } = require('../TextInput');
-const { NumberInput } = require('../NumberInput');
+import { NumberInput, TextInput } from '@Domain/Inputs';
 
 <div>
   Text
@@ -106,8 +99,7 @@ const { NumberInput } = require('../NumberInput');
 #### Input with handleChange
 
 ```jsx
-const { TextInput } = require('../TextInput');
-const { NumberInput } = require('../NumberInput');
+import { NumberInput, TextInput } from '@Domain/Inputs';
 
 <div>
   Text
@@ -132,7 +124,7 @@ const { NumberInput } = require('../NumberInput');
 #### Invalid Input
 
 ```jsx
-const { TextInput } = require('../TextInput');
+import { TextInput } from '@Domain/Inputs';
 
 <TextInput
   isInvalid
@@ -142,7 +134,7 @@ const { TextInput } = require('../TextInput');
 #### Disabled Input
 
 ```jsx
-const { TextInput } = require('../TextInput');
+import { TextInput } from '@Domain/Inputs';
 
 <TextInput
   isDisabled

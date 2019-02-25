@@ -1,6 +1,9 @@
 SectionLists are used when needing to stack a bunch grouped information on a page. It also contains some useful
 sub-components that provide responsive styling between mobile and desktop.
 ```jsx
+import { Button, ButtonGroup } from '@Domain/Buttons';
+import { Text } from '@Domain/Typographies';
+
 <SectionList>
   <SectionList.Section>
     <Text>

@@ -48,8 +48,9 @@
 #### Indented select input options
 
 ```jsx
+import { SelectInput } from '@Domain/Inputs';
+
 initialState = { value: null };
-const { SelectInput } = require('@Domain/Inputs');
 
 class CustomOption extends React.PureComponent {
   render () {
@@ -95,7 +96,7 @@ class CustomOption extends React.PureComponent {
 #### Indented smart list cell content
 
 ```jsx
-const { ListColumn } = require('@Domain/Lists');
+import { ListColumn, SmartList } from '@Domain/Lists';
 
 <SmartList
   data={[

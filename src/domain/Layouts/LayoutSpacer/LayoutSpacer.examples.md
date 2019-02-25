@@ -1,13 +1,11 @@
-#### Content Spacer
-
-The content spacer is used to add a margin to the bottom of content items to space them out using standardised spacing.
+The layout spacer is used to add a margin to the bottom of content items to space them out using standardised spacing.
 
 The null content and the last content item will always have no spacing (even if a spacing size is defined); this is to accomodate for situations where the last item may not be rendered (eg. because the user doesn't have permission to see it).
 
 Note: This is intended for spacing out high level components on a page
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
 
 <LayoutSpacer
   contentItems={[

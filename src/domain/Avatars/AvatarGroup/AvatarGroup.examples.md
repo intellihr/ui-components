@@ -84,6 +84,9 @@ Or the limit can be removed entirely:
 supports many dropdown props.
 
 ```jsx
+import { DropdownMenu } from '@Domain/Popovers';
+import { Brick, Text } from '@Domain/Typographies';
+
 const avatarInfo = [
   {
     initials: 'JW',

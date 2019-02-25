@@ -47,6 +47,8 @@
 #### Action list used in callout with default header message
 
 ```jsx
+import { Callout } from '@Domain/Callouts';
+
 <div>
   <Callout
     type='warning'

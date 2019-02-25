@@ -2,7 +2,7 @@
 A hint wrapper can be applied to any element - by default it will be styled as a tooltip
 
 ```jsx
-const { Brick } = require('../../');
+import { Brick } from '@Domain/Typographies';
 
 <div>
   <HintWrapper
@@ -18,7 +18,8 @@ const { Brick } = require('../../');
 #### Popover Hint
 The content for both the tooltip and popover style of hint can take either a string, or a JSX Element
 ```jsx
-const { Variables } = require('../../../common');
+import { Variables } from '@Common';
+import { Brick, Text } from '@Domain/Typographies';
 
 <div>
   <HintWrapper
@@ -39,6 +40,8 @@ const { Variables } = require('../../../common');
 
 #### Hint with a Custom Width
 ```jsx
+import { Brick, Text } from '@Domain/Typographies';
+
 <div>
   <HintWrapper
     hint='Never trust a cat said the man with the hat'

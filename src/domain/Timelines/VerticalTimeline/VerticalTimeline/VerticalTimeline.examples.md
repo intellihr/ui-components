@@ -1,23 +1,25 @@
 ```jsx
+import { Avatar } from '@Domain/Avatars';
+
 <VerticalTimeline
   year='2007'
 >
-  <VerticalTimelineEvent
+  <VerticalTimeline.Event
     eventDate='Apr 16'
   >
-    Hey, whats up. This is the timeline component. First you need a VerticalTimeline component and inside that all you need are VerticalTimelineEvent components.
-  </VerticalTimelineEvent>
-  <VerticalTimelineEvent
+    Hey, whats up. This is the timeline component. First you need a VerticalTimeline component and inside that all you need are VerticalTimeline.Event components.
+  </VerticalTimeline.Event>
+  <VerticalTimeline.Event
     eventDate='Apr 19'
   >
     Each timeline event will show up separately.
-  </VerticalTimelineEvent>
-  <VerticalTimelineEvent
+  </VerticalTimeline.Event>
+  <VerticalTimeline.Event
     eventDate='Jun 2'
   >
     Like this!
-  </VerticalTimelineEvent>
-  <VerticalTimelineEvent
+  </VerticalTimeline.Event>
+  <VerticalTimeline.Event
     eventDate='Jun 2'
     markerComponent={
       <Avatar
@@ -27,8 +29,8 @@
     }
   >
     You can also override the default event marker with a component like Avatar
-  </VerticalTimelineEvent>
-  <VerticalTimelineEvent
+  </VerticalTimeline.Event>
+  <VerticalTimeline.Event
     eventDate='Jun 2'
     markerComponent={
       <Avatar 
@@ -38,6 +40,6 @@
     }
   >
     And display a picture!
-  </VerticalTimelineEvent>
+  </VerticalTimeline.Event>
 </VerticalTimeline>
 ```

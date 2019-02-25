@@ -16,7 +16,7 @@ Cell sizing work from the given size upwards, and will default to 12 otherwise.
 To size for all screen positions, use `small: X`
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
 const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
@@ -51,7 +51,7 @@ shared between every cell with auto sizing.
 These options can be provided on a size basis or for the entire size on every screen.
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
 const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
@@ -82,7 +82,7 @@ Gutters can be added as margins and/or as padding between cells. Generally, you'
 as these won't change the width of the underlying cells (so elements will size correctly to their parents.)
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
 const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
@@ -117,7 +117,7 @@ Padding can be useful for spacing text and other elements without needing wrappe
 avoided unless you have a good use case:
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
 
 <XYGrid
   gutterPaddingX
@@ -149,7 +149,7 @@ These offsets can optionally change depending upon the breakpoints as well.
 The following will be offset on desktop, but not on smaller sizes:
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
 const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
@@ -173,7 +173,7 @@ const style = {
 Horizontal alignment can be applied to the grid to affect the items within it.
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
 const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
@@ -251,7 +251,7 @@ const style = {
 Vertical alignment can be applied to the grid to affect the items within it.
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
 const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
@@ -324,7 +324,7 @@ Vertical grids will always expand to fit their container's height. If the parent
 height, then they won't expand. This can be a bit of a gotcha, so be warned.
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
 const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
@@ -360,7 +360,7 @@ const styleSmall = {
 Vertical grids can be used as a makeshift stack when no sizes are provided:
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
 const style = {
   backgroundColor: Variables.Color.n200,
   border: `2px solid ${Variables.Color.n100}`,
@@ -398,7 +398,7 @@ Grids use the same classes as Foundation's XY grid, except instead of `grid-x`,
 `grid-y` and `cell` the `ihr-grid-x`, `ihr-grid-y` and `ihr-cell` prefixes are used.
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
 const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
