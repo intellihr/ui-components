@@ -1,0 +1,1 @@
+export { IconPickerInput } from './IconPickerInput'
