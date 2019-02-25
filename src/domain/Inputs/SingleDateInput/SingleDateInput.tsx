@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import { isNil } from 'lodash'
-import moment, { Moment } from 'moment-timezone'
+import moment, { Moment } from 'moment'
 import React, { FormEvent } from 'react'
 import { SingleDatePicker } from 'react-dates'
 import 'react-dates/initialize'
@@ -73,14 +73,16 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
           isOutsideRange={this.disabledDateRange}
           hideKeyboardShortcutsPanel
           renderMonthText={this.renderMonthText}
-          navPrev={
+          navPrev={(
             <div className={this.navigationButtonClassNames('left')}>
               <FontAwesomeIcon type='arrow-left'/>
-            </div>}
-          navNext={
+            </div>
+          )}
+          navNext={(
             <div className={this.navigationButtonClassNames('right')}>
               <FontAwesomeIcon type='arrow-right'/>
-            </div>}
+            </div>
+          )}
         />
       </div>
     )

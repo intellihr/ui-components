@@ -1,10 +1,8 @@
 import { shallow } from 'enzyme'
-import moment from 'moment-timezone'
 import React from 'react'
 
 import { SingleDateInput } from './SingleDateInput'
 
-moment.tz.setDefault('America/Denver')
 Date.now = jest.fn().mockReturnValue('2018-12-31T14:00:00+00:00')
 
 describe('<SingleDateInput />', () => {
