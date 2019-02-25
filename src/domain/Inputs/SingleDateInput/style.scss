@@ -74,6 +74,10 @@
     }
   }
 
+  .DateInput_input__disabled {
+    color: $n600;
+  }
+
   &.is-invalid-input {
     &:not(:focus) {
       background-color: transparent;

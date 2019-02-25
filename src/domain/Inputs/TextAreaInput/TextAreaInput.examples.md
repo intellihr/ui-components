@@ -11,6 +11,21 @@ initialState = { value: '' };
 </div>
 ```
 
+#### Disabled text area
+
+```jsx
+initialState = { value: '' };
+
+<div>
+  <TextAreaInput
+    value={state.value}
+    handleChange={(e) => setState({value: e.value})}
+    isDisabled
+    value="Text area is disabled so you can't change this text"
+  />
+</div>
+```
+
 #### Customize with props
 
 ```jsx

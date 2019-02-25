@@ -95,3 +95,23 @@ const simulateServerSideFiltering = (input) => new Promise((resolve, reject) => 
   asyncOptions={simulateServerSideFiltering}
 />
 ```
+
+#### Disabled Select Input
+
+```jsx
+<SelectInput
+  name='testInput'
+  value={20}
+  isDisabled
+  options={[
+    {
+      label: 'Hello World',
+      value: 20
+    },
+    {
+      label: 'Try selecting me',
+      value: 40
+    }
+  ]}
+/>
+```
