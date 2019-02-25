@@ -35,6 +35,7 @@
 
 ._3lIegt5ctRroDWirYOBcg9 span:focus, .ihr-button-component span:focus { background-color: #C5CED6; border-color: #667380; color: #424F5C; }
 ._34CmOZwOoIFJuQHkD73bjb ul { position: absolute; }
+._1ws_FEQREuncuaxqLQss0l { cursor: pointer; outline: 0; }
 ._2KJdFV_f2_YV_45PNtBoTY, .button { border: 1px solid transparent; border-radius: 4px; cursor: pointer; display: inline-block; font-size: 14.4px; font-size: .9rem; font-weight: 600; line-height: 1; outline: none; padding: 12px 14px; text-align: center; -webkit-transition: background-color .25s ease-out, color .25s ease-out; transition: background-color .25s ease-out, color .25s ease-out; }
 
 ._2KJdFV_f2_YV_45PNtBoTY .fa, .button .fa { vertical-align: baseline; vertical-align: initial; }
@@ -592,7 +593,6 @@
 .button.remove:active, .button.remove.active { background-color: #F25749; color: #FFFFFF; }
 
 .button.remove > .fa { margin: 0; }
-._1ws_FEQREuncuaxqLQss0l { cursor: pointer; outline: 0; }
 ._3n6cOI4dx8IBYy3jzvJEBt.input-group-left { border-radius: 4px 0 0 4px; }
 
 ._3n6cOI4dx8IBYy3jzvJEBt.input-group-middle { border-radius: 0; }
