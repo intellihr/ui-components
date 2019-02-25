@@ -135,6 +135,7 @@ function gridStyleForProps (props: IStyledGridLayoutProps) {
 const StyledGridLayout = styled.div<IStyledGridLayoutProps>`
   display: flex;
   flex-flow: row wrap;
+  flex: 1 0 auto;
 
   ${gridStyleForProps}
 `

@@ -9,6 +9,9 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   -webkit-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
   margin-left: -4px;
   margin-right: -4px;
   -webkit-box-pack: center;
