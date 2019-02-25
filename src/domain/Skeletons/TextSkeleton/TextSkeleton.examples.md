@@ -28,6 +28,8 @@ Provide width either as a number to be converted to px, or as a string containin
 #### Text Skeleton for Different Text Types
 
 ```jsx
+import { Text } from '@Domain/Typographies';
+
 <>
   <div>
     <Text type='xsmall' isInline={false}>

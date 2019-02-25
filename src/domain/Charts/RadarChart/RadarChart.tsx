@@ -25,17 +25,17 @@ interface ITooltipItems {
   yLabel: string
 }
 
-export interface IRadarChartDataLabels {
+interface IRadarChartDataLabels {
   [key: number]: string
 }
 
-export interface IRadarChartDatasets {
+interface IRadarChartDatasets {
   label: string
   data: number[]
   colour?: string
 }
 
-export interface IRadarChartProps {
+interface IRadarChartProps {
   /** Strings to display instead of the default numerical labels on each tick */
   dataLabels?: IRadarChartDataLabels
   /** Array of labels that are placed clockwise around the edge of the chart.  */
@@ -70,7 +70,7 @@ merge(chartJSDefaults, {
 
 const htmlToReactParser = new HtmlToReactParser()
 
-export class RadarChart extends React.Component<IRadarChartProps> {
+class RadarChart extends React.Component<IRadarChartProps> {
 
   get options (): object {
     const {
@@ -212,4 +212,11 @@ export class RadarChart extends React.Component<IRadarChartProps> {
 
     return `${datasetName}: ${dataPointValue}`
   }
+}
+
+export {
+  IRadarChartDataLabels,
+  IRadarChartDatasets,
+  IRadarChartProps,
+  RadarChart
 }

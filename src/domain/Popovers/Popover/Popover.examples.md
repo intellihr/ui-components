@@ -5,6 +5,8 @@ To do fancy management of this component, see the `DropdownMenu` component
 implementation.
 
 ```jsx
+import { Button } from '@Domain/Buttons';
+
 class PopoverExample extends React.PureComponent {
   constructor () {
     this.state = {

@@ -28,6 +28,8 @@
 #### Empty data table
 
 ```jsx
+import { Callout } from '@Domain/Callouts';
+
 <DataTable
   data={[]}
   columns={[
@@ -47,7 +49,7 @@
 #### DataTable with right or center aligned content
 
 ```jsx
-const { Props } = require('@Common');
+import { Props } from '@Common';
 
 <DataTable
   data={[
@@ -82,6 +84,8 @@ const { Props } = require('@Common');
 Hold shift to sort on multiple columns
 
 ```jsx
+import { Callout } from '@Domain/Callouts';
+
 <DataTable
   data={[
     {
@@ -116,6 +120,8 @@ Hold shift to sort on multiple columns
 #### Custom Column Components + widths + accessors
 
 ```jsx
+import { DropdownMenu } from '@Domain/Popovers';
+
 <DataTable
   data={[
     {
@@ -167,6 +173,8 @@ Hold shift to sort on multiple columns
 #### Custom Filters
 
 ```jsx
+import { Callout } from '@Domain/Callouts';
+
 <DataTable
   data={[
     {

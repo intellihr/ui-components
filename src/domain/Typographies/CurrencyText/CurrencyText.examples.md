@@ -11,7 +11,7 @@
 #### Currency Text With A Value Hint
 
 ```jsx
-  const { Props } = require('@Common');
+  import { Props } from '@Common';
 
   <CurrencyText
     value={1000.499}
@@ -28,7 +28,7 @@
 #### Colored Currency Text
 
 ```jsx
-  const { Variables } = require('@Common');
+  import { Variables } from '@Common';
 
   <CurrencyText
     value={1000.499}

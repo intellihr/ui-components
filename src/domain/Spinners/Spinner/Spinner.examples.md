@@ -61,6 +61,8 @@
 ##### Page
 
 ```jsx
+import { Button } from '@Domain/Buttons';
+
 initialState = { showSpinner: false };
 
 <div>

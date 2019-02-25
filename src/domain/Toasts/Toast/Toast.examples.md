@@ -19,6 +19,8 @@
 #### Toast with handleClose function
 
 ```jsx
+import { Button } from '@Domain/Buttons'; 
+
 initialState = { showToast: true };
 
 <div>
@@ -36,6 +38,8 @@ initialState = { showToast: true };
 #### Toast with onMount function
 
 ```jsx
+import { Button } from '@Domain/Buttons'; 
+
 initialState = { showToast: false };
 
 <div>
@@ -56,6 +60,10 @@ initialState = { showToast: false };
 #### Custom Content
 
 ```jsx
+import { Avatar } from '@Domain/Avatars';
+import { Button } from '@Domain/Buttons';
+import { VerticalTimeline } from '@Domain/Timelines';
+
   <Toast
     handleClose={() => alert('close button clicked')}
   >
@@ -66,22 +74,22 @@ initialState = { showToast: false };
     <VerticalTimeline
       year='2007'
     >
-      <VerticalTimelineEvent
+      <VerticalTimeline.Event
         eventDate='Apr 16'
       >
-        Hey, whats up. This is the timeline component. First you need a VerticalTimeline component and inside that all you need are VerticalTimelineEvent components.
-      </VerticalTimelineEvent>
-      <VerticalTimelineEvent
+        Hey, whats up. This is the timeline component. First you need a VerticalTimeline component and inside that all you need are VerticalTimeline.Event components.
+      </VerticalTimeline.Event>
+      <VerticalTimeline.Event
         eventDate='Apr 19'
       >
         Each timeline event will show up separately.
-      </VerticalTimelineEvent>
-      <VerticalTimelineEvent
+      </VerticalTimeline.Event>
+      <VerticalTimeline.Event
         eventDate='Jun 2'
       >
         Like this!
-      </VerticalTimelineEvent>
-      <VerticalTimelineEvent
+      </VerticalTimeline.Event>
+      <VerticalTimeline.Event
         eventDate='Jun 2'
         markerComponent={
           <Avatar
@@ -91,8 +99,8 @@ initialState = { showToast: false };
         }
       >
         You can also override the default event marker with a component like Avatar
-      </VerticalTimelineEvent>
-      <VerticalTimelineEvent
+      </VerticalTimeline.Event>
+      <VerticalTimeline.Event
         eventDate='Jun 2'
         markerComponent={
           <Avatar 
@@ -102,7 +110,7 @@ initialState = { showToast: false };
         }
       >
         And display a picture!
-      </VerticalTimelineEvent>
+      </VerticalTimeline.Event>
     </VerticalTimeline>
   </Toast>
 ```

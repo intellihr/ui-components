@@ -27,7 +27,7 @@
 #### Coloured dot
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
 
 <div>
   <StatusIndicator
@@ -48,7 +48,7 @@ const { Variables } = require('@Common');
 #### Coloured text
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
 
 <StatusIndicator
   text='Approved'
@@ -60,7 +60,7 @@ const { Variables } = require('@Common');
 #### Coloured text and dot
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
 
 <StatusIndicator
   text='Approved'

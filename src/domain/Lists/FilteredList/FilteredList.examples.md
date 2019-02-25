@@ -1,7 +1,7 @@
 #### Simple Filtered List
 
 ```jsx
-const { TextInput } = require('@Domain/Inputs');
+import { TextInput } from '@Domain/Inputs';
 
 initialState = {
   value: 'aus'
@@ -44,7 +44,8 @@ initialState = {
 #### Multiple Filtered List
 
 ```jsx
-const { TextInput } = require('@Domain/Inputs');
+import { TextInput } from '@Domain/Inputs';
+import { Text } from '@Domain/Typographies';
 
 initialState = {
   value1: '',
@@ -111,8 +112,6 @@ initialState = {
 #### Filtered List with no filters
 
 ```jsx
-const { FontAwesomeIcon } = require('@Domain/Icons');
-
 <FilteredList
   rowCallback={row => <div>{row.row.value}</div>}
   rowData={[
@@ -135,7 +134,7 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 #### Async Filtered List
 
 ```jsx
-const { TextInput } = require('@Domain/Inputs');
+import { TextInput } from '@Domain/Inputs';
 
 initialState = {
   value: 'aus',
@@ -186,7 +185,7 @@ initialState = {
 #### Async Filtered List with error
 
 ```jsx
-const { TextInput } = require('@Domain/Inputs');
+import { TextInput } from '@Domain/Inputs';
 
 initialState = {
   value: 'type to error',

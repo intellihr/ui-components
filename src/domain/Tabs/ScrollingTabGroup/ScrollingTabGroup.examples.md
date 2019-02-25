@@ -1,7 +1,7 @@
 #### Standard list of tabs
 
 ```jsx
-const { FontAwesomeIcon } = require('@Domain/Icons');
+import { FontAwesomeIcon } from '@Domain/Icons';
 
 initialState = {
   openTab: 0
@@ -34,7 +34,7 @@ initialState = {
 #### Many Tabs
 
 ```jsx
-const { FontAwesomeIcon } = require('@Domain/Icons');
+import { FontAwesomeIcon } from '@Domain/Icons';
 
 initialState = {
   openTab: 0

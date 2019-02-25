@@ -64,7 +64,8 @@ initialState = { button: 'No' };
  #### Input with JSX
 
  ```jsx
-const { FontAwesomeIcon } = require('../../Icons');
+import { FontAwesomeIcon } from '@Domain/Icons';
+import { Emoji } from '@Domain/Typographies';
 
 initialState = { star: 'Yes' };
 

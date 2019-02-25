@@ -57,7 +57,7 @@ initialState = { value: null };
 #### Async Options (Server-side filtering)
 
 ```jsx
-const { includes, reduce } = require('lodash')
+import { includes, reduce } from 'lodash';
 
 const options = [
   {
@@ -68,9 +68,9 @@ const options = [
     label: 'Try selecting me',
     value: 40
   }
-]
+];
 
-initialState = { value: null }
+initialState = { value: null };
 
 const simulateServerSideFiltering = (input) => new Promise((resolve, reject) => {
   if (!input) {
