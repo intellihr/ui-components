@@ -6,11 +6,11 @@ import { IconPickerInput } from './IconPickerInput'
 
 const dummyClick = () => console.log('hey')
 
-const testIcons = [
+const testIcons: IconType[] = [
   'intelli-icon-australia',
   'intelli-icon-card',
   'intelli-icon-book'
-] as IconType[]
+]
 
 describe('<IconPickerInput />', () => {
   it(`should render an Icon Picker`, () => {

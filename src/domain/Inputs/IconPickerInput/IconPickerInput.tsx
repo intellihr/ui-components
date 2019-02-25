@@ -61,18 +61,19 @@ export class IconPickerInput extends React.PureComponent<IIconPickerProps> {
     } = this.props
 
     const isChecked = value === icon
+    const iconId = `${name}-${icon}-${idx}`
 
     return (
       <>
         <StyledIconInput
           name={name}
-          id={`${name}-${icon}-${idx}`}
+          id={iconId}
           value={icon}
           onChange={onChange}
           checked={isChecked}
           type='radio'
         />
-        <StyledIconArea isChecked={isChecked} htmlFor={`${name}-${icon}-${idx}`}>
+        <StyledIconArea isChecked={isChecked} htmlFor={iconId}>
           <StyledIcon
             type={icon}
             color={isChecked ? Variables.Color.i300 : Variables.Color.n700}
