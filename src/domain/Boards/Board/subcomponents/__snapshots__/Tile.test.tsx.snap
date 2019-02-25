@@ -93,13 +93,17 @@ exports[`<Tile /> should render a small board tile 1`] = `
 `;
 
 exports[`<Tile /> should render an anchor board tile 1`] = `
-<Styled(Component)
+<styled.div
   hasHoverLabel={false}
-  href="#dummy"
   isButton={false}
   isHoverable={true}
+  isLink={true}
   tabIndex={0}
   tileSize="medium"
   type="default"
-/>
+>
+  <Anchor
+    href="#dummy"
+  />
+</styled.div>
 `;

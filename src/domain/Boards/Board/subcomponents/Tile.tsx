@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { Anchor } from '../../../Internals/Anchor'
 import { StyleTileButton, StyledAnchorTile, StyledHoverLabel } from './style'
 import { ButtonTileContent } from './ButtonTileContent'
 import { CenteredTileContent } from './CenteredTileContent'
@@ -74,15 +75,20 @@ class Tile extends React.PureComponent<IBoardTileProps, never> {
           tileSize={size!}
           isHoverable={isHoverable!}
           onClick={onClick}
-          href={anchorHref}
-          anchorComponentProps={anchorComponentProps}
           tabIndex={0}
           isButton={isButton!}
           type={type!}
           hasHoverLabel={!!hoverLabel}
+          isLink={(onClick || anchorHref) !== null}
         >
-          {children}
-          {this.hoverLabel}
+          <Anchor
+            onClick={onClick}
+            href={anchorHref}
+            anchorComponentProps={anchorComponentProps}
+          >
+            {children}
+            {this.hoverLabel}
+          </Anchor>
         </StyledAnchorTile>
       )
     }
