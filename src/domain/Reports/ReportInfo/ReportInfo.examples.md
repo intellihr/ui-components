@@ -9,7 +9,7 @@
 #### Report info with text color
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
 
 <ReportInfo
   description="Hello! I am blue report info."

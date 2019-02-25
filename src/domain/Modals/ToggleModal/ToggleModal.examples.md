@@ -7,7 +7,7 @@ by yourself.
 #### Toggle Modal with Button
 
 ```jsx
-const { Button } = require('@Domain/Buttons');
+import { Button } from '@Domain/Buttons';
 
 <ToggleModal
   trigger={({toggle}) => (
@@ -26,12 +26,12 @@ const { Button } = require('@Domain/Buttons');
 #### Toggle Modal with Anchor
 
 ```jsx
-const { Anchor } = require('@Domain/Internals');
+import { Anchor } from '@Domain/Internals';
 
 <ToggleModal
   trigger={({toggle}) => (
     <Anchor
-      href='#!/ToggleModal'
+      href='#/UI Components/Modals/ToggleModal'
       onClick={toggle}
     >
       Click Me

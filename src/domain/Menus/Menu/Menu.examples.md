@@ -1,8 +1,8 @@
 #### Generic Menu
 
 ```jsx
-const { MenuItem } = require('./MenuItem');
-const { FontAwesomeIcon } = require('@Domain/Icons');
+import { FontAwesomeIcon } from '@Domain/Icons';
+import { MenuItem } from './MenuItem';
 
 <Menu>
   <MenuItem
@@ -73,8 +73,8 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 #### Menu with loading menu item
 
 ```jsx
-const { MenuItem } = require('./MenuItem');
-const { FontAwesomeIcon } = require('@Domain/Icons');
+import { FontAwesomeIcon } from '@Domain/Icons';
+import { MenuItem } from './MenuItem';
 
 <Menu>
   <MenuItem

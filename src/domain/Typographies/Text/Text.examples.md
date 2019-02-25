@@ -94,7 +94,7 @@ const { Variables } = require('../../../common');
 #### Mix and Match
 
 ```jsx
-const { Variables } = require('../../../common');
+import { Variables } from '@Common';
 
 <div>
   <Text isInline={false} color={Variables.Color.r400}>

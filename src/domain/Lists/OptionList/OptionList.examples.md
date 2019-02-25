@@ -1,7 +1,7 @@
 #### Simple Option List
 
 ```jsx
-const { FontAwesomeIcon } = require('@Domain/Icons');
+import { FontAwesomeIcon } from '@Domain/Icons';
 
 initialState = {
   selectedOption: {
@@ -52,7 +52,8 @@ initialState = {
 #### Truncated Option List
 
 ```jsx
-const { FontAwesomeIcon } = require('@Domain/Icons');
+import { FontAwesomeIcon } from '@Domain/Icons';
+
 initialState = {
   selectedOption: 1
 };
@@ -80,8 +81,8 @@ initialState = {
 #### Filtered Option List
 
 ```jsx
-const { FilteredOptionList } = require('./FilteredOptionList');
-const { FontAwesomeIcon } = require('@Domain/Icons');
+import { FontAwesomeIcon } from '@Domain/Icons';
+import { FilteredOptionList } from '@Domain/Lists';
 
 initialState = {
   selectedOption: {

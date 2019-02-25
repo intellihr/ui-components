@@ -47,6 +47,8 @@
 #### Dropdown Menu using strip colors
 
 ```jsx
+import { Button } from '@Domain/Buttons';
+
 <DropdownMenu
   toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
     <Button
@@ -105,7 +107,9 @@ Alignment also determines the animation direction for showing and
 hiding the dropdown.
 
 ```jsx
-<React.Fragment>
+import { Button, ButtonGroup } from '@Domain/Buttons';
+
+<>
   <ButtonGroup>
     <DropdownMenu
       toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
@@ -243,12 +247,14 @@ hiding the dropdown.
       }}
     />
   </ButtonGroup>
-</React.Fragment>
+</>
 ```
 
 #### Custom Components
 
 ```jsx
+import { Callout } from '@Domain/Callouts';
+
 <DropdownMenu
    sections={[
      {
@@ -273,7 +279,7 @@ hiding the dropdown.
 #### Left and right section components
 
 ```jsx
-const { FontAwesomeIcon } = require('@Domain/Icons');
+import { FontAwesomeIcon } from '@Domain/Icons';
 
 <DropdownMenu
    sections={[
@@ -290,7 +296,8 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 #### Profile Menu Example
 
 ```jsx
-const { FontAwesomeIcon, IntelliIcon } = require('@Domain/Icons');
+import { Avatar } from '@Domain/Avatars';
+import { FontAwesomeIcon, IntelliIcon } from '@Domain/Icons';
 
 <DropdownMenu
    toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
@@ -361,9 +368,11 @@ See the [focus-trap-react](https://github.com/davidtheclark/focus-trap-react) li
 for more details.
 
 ```jsx
-const { TextInput } = require('@Domain/Inputs');
-const { FontAwesomeIcon } = require('@Domain/Icons');
-const _ = require('lodash');
+import _ from 'lodash';
+import { Button } from '@Domain/Buttons';
+import { FontAwesomeIcon } from '@Domain/Icons';
+import { TextInput } from '@Domain/Inputs';
+
 let textInput;
 
 initialState = { selectedOption: {value: 1, label: 'AUD'}, inputValue: '' };

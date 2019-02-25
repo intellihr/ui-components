@@ -1,6 +1,8 @@
 ### Form Control Wrappers
 
 ```jsx
+import { ButtonGroup, Button } from '@Domain/Buttons';
+
   <VerticalForm>
       <VerticalForm.LeftAlignControls>
         <ButtonGroup>
@@ -40,8 +42,10 @@
 Basic field
 
 ```jsx
-const { TextInput } = require('../../Inputs');
-const initialState = { textInputValue: '' };
+import { ButtonGroup, Button } from '@Domain/Buttons';
+import { TextInput } from '@Domain/Inputs';
+
+initialState = { textInputValue: '' };
 
   <VerticalForm
     onSubmit={() => alert(`Test input: ${state.textInputValue}`)}
@@ -76,8 +80,10 @@ const initialState = { textInputValue: '' };
 Field with description
 
 ```jsx
-const { TextInput } = require('../../Inputs');
-const initialState = { textInputValue: '' };
+import { ButtonGroup, Button } from '@Domain/Buttons';
+import { TextInput } from '@Domain/Inputs';
+
+initialState = { textInputValue: '' };
 
   <VerticalForm
     onSubmit={() => alert(`Test input: ${state.textInputValue}`)}
@@ -106,9 +112,11 @@ const initialState = { textInputValue: '' };
 Field with action message
 
 ```jsx
-const { TextInput } = require('../../Inputs');
-const { TextLink } = require('../../Links');
-const initialState = { textInputValue: '' };
+import { Button } from '@Domain/Buttons';
+import { TextInput } from '@Domain/Inputs';
+import { TextLink } from '@Domain/Links';
+
+initialState = { textInputValue: '' };
 
   <VerticalForm
     onSubmit={() => alert(`Test input: ${state.textInputValue}`)}
@@ -147,8 +155,10 @@ const initialState = { textInputValue: '' };
 Field with tooltip
 
 ```jsx
-const { TextInput } = require('../../Inputs');
-const initialState = { textInputValue: '' };
+import { Button } from '@Domain/Buttons';
+import { TextInput } from '@Domain/Inputs';
+
+initialState = { textInputValue: '' };
 
   <VerticalForm
     onSubmit={() => alert(`Test input: ${state.textInputValue}`)}
@@ -178,8 +188,10 @@ const initialState = { textInputValue: '' };
 Field with errors & required
 
 ```jsx
-const { TextInput } = require('../../Inputs');
-const initialState = { textInputValue: '' };
+import { Button } from '@Domain/Buttons';
+import { TextInput } from '@Domain/Inputs';
+
+initialState = { textInputValue: '' };
 
   <VerticalForm
     onSubmit={() => alert(`Test input: ${state.textInputValue}`)}

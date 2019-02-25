@@ -46,7 +46,7 @@ Alignment also determines the animation direction for showing and
 hiding the popover.
 
 ```jsx
-<React.Fragment>
+<>
   <TooltipPopover
     parentAnchorPosition={{
       xPos: 'left',
@@ -185,5 +185,5 @@ hiding the popover.
     Bottom Left Upwards
   </TooltipPopover>
   <br/>
-</React.Fragment>
+</>
 ```

@@ -274,7 +274,7 @@ module.exports = {
       ]
     },
     {
-      name: 'Internal/Higher Order Components',
+      name: 'Internal Components',
       components: [
         'src/domain/Internals/Anchor/Anchor.tsx',
         'src/domain/Defaults/withDefaults/withDefaults.tsx'

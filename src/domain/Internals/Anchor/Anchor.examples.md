@@ -15,7 +15,7 @@ the default `<a></a>` tags.
 #### Using a default component
 
 ```jsx
-const { DefaultsProvider } = require("@Domain/Defaults");
+import { DefaultsProvider } from '@Domain/Defaults';
 
 <DefaultsProvider
   value={{
@@ -35,7 +35,9 @@ need to extend certain components such as `UnstyledLink` to use tools like react
 for example.
 
 ```jsx
-const { DefaultsProvider } = require("@Domain/Defaults");
+import { Button } from '@Domain/Buttons';
+import { DefaultsProvider } from '@Domain/Defaults';
+import { UnstyledLink } from '@Domain/Links';
 
 <DefaultsProvider
   value={{
@@ -54,6 +56,8 @@ const { DefaultsProvider } = require("@Domain/Defaults");
 #### Using a prop
 
 ```jsx
+import { Button } from '@Domain/Buttons';
+
 <Anchor
   href='#'
   anchorComponent={({ children }) => <Button>{children}</Button>}

@@ -8,7 +8,8 @@ Cell sizing work from the given size upwards, and will default to 12 otherwise.
 To size for all screen positions, use `min: X`
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
+
 const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
@@ -50,7 +51,8 @@ shared between every cell with auto sizing.
 These options can be provided on a size basis or for the entire size on every screen.
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
+
 const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
@@ -85,7 +87,8 @@ Gutters can be added as margins and/or as padding between cells. Generally, you'
 as these won't change the width of the underlying cells (so elements will size correctly to their parents.)
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
+
 const style = {
   backgroundColor: Variables.Color.n400,
   minHeight: '2rem',
@@ -125,7 +128,8 @@ Padding can be useful for spacing text and other elements without needing wrappe
 avoided unless you have a good use case:
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
+
 
 const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec libero et libero molestie eleifend. Donec dignissim vel erat eu cursus.';
 
@@ -159,7 +163,8 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
 
 Gutters support all sizes taken from `Spacing` and `Layout`:
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
+
 const style = {
   backgroundColor: Variables.Color.n400,
   minHeight: '2rem',
@@ -218,7 +223,8 @@ These offsets can optionally change depending upon the breakpoints as well.
 The following will be offset on desktop, but not on smaller sizes:
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
+
 const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
@@ -247,7 +253,8 @@ const style = {
 Horizontal alignment can be applied to the grid to affect the items within it.
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
+
 const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
@@ -329,7 +336,8 @@ const style = {
 Vertical alignment can be applied to the grid to affect the items within it.
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
+
 const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
@@ -403,7 +411,8 @@ of columns cells are given in. Note that giving numbers smaller than the cells w
 cause funky behaviour.
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
+
 const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
@@ -438,7 +447,8 @@ const style = {
 You can design some makeshift vertical stacks using full widths:
 
 ```jsx
-const { Variables } = require('@Common');
+import { Variables } from '@Common';
+
 const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,

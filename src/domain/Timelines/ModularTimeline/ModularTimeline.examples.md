@@ -4,7 +4,9 @@
 as it will screw up the line styling**
 
 ```jsx
-const { Props } = require('@Common');
+import { Props } from '@Common';
+import { Pill } from '@Domain/Pills';
+import { Text } from '@Domain/Typographies';
 
 function effectiveFromText (date) {
   return (
@@ -94,7 +96,9 @@ The timeline accepts line styles and colors in any order, allowing for many flex
 of events to be supported.
 
 ```jsx
-const { Props } = require('@Common');
+import { Props } from '@Common';
+import { Pill } from '@Domain/Pills';
+import { Text } from '@Domain/Typographies';
 
 <ModularTimeline
   events={[
