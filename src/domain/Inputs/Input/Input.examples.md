@@ -138,5 +138,6 @@ import { TextInput } from '@Domain/Inputs';
 
 <TextInput
   isDisabled
+  value="Disabled input. Can't change this text"
 />
 ```
