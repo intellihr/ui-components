@@ -66,8 +66,14 @@ module.exports = {
         test: /\.js$/,
         include: [
           path.resolve(__dirname, 'src'),
+
+          // Manual hacks for packages which don't support ie11
           path.resolve(__dirname, 'node_modules/foundation-sites'),
-          path.resolve(__dirname, 'node_modules/react-styleguidist')
+          path.resolve(__dirname, 'node_modules/react-styleguidist'),
+          path.resolve(__dirname, 'node_modules/ansi-styles'),
+          path.resolve(__dirname, 'node_modules/chalk'),
+          path.resolve(__dirname, 'node_modules/react-dev-utils'),
+          path.resolve(__dirname, 'node_modules/strip-ansi')
         ],
         use: {
           loader: 'babel-loader',

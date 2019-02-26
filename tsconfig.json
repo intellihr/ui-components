@@ -11,8 +11,8 @@
       "dom"
     ],
     "moduleResolution": "node",
-    "module": "commonjs",
-    "target": "es6",
+    "module": "esnext",
+    "target": "es5",
     "sourceMap": true,
     "noUnusedLocals": false,
     "noImplicitAny": true,
