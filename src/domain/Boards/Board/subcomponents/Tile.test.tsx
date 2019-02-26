@@ -1,7 +1,6 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { Props } from '../../../../common'
 import { Tile } from './Tile'
 
 describe('<Tile />', () => {
