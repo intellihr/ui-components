@@ -28,7 +28,6 @@
     "@types/jest": "22.2.2",
     "@types/jquery": "3.3.1",
     "@types/lodash": "4.14.107",
-    "@types/moment-timezone": "^0.5.9",
     "@types/numeral": "^0.0.25",
     "@types/react": "^16.4.6",
     "@types/react-chartjs-2": "2.5.7",
@@ -56,7 +55,6 @@
     "libphonenumber-js": "^1.6.4",
     "lodash": "4.17.10",
     "moment": "2.22.1",
-    "moment-timezone": "^0.5.23",
     "numeral": "^2.0.6",
     "react-autosize-textarea": "4.0.0",
     "react-chartjs-2": "2.7.0",
@@ -79,7 +77,6 @@
     "@babel/core": "^7.0.0-beta.51",
     "@epegzz/sass-vars-loader": "3.2.3",
     "@intellihr/standard-tslint": "^2.0.0",
-    "awesome-typescript-loader": "^5.2.0",
     "babel-jest": "^23.0.1",
     "babel-loader": "^7.1.4",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
@@ -123,6 +120,7 @@
     "stylelint-config-styled-components": "0.1.1",
     "stylelint-processor-styled-components": "1.3.1",
     "ts-jest": "22.4.3",
+    "ts-loader": "^5.3.3",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.14.0",
     "tslint-react": "^3.6.0",
@@ -130,12 +128,12 @@
     "url-loader": "1.0.1",
     "webpack": "4.5.0",
     "webpack-cli": "2.0.14",
-    "webpack-node-externals": "1.7.2"
+    "webpack-node-externals": "1.7.2",
+    "webpackbar": "^3.1.5"
   },
   "scripts": {
     "postinstall": "npm rebuild node-sass",
-    "clean": "rimraf es dist",
-    "compile": "rimraf es && tsc",
+    "clean": "rimraf dist types",
     "test": "cross-env NODE_ENV=test jest --coverage",
     "test:ci": "cross-env NODE_ENV=test jest --silent --ci --coverage --colors",
     "lint": "tslint -t stylish -c ./tslint.json \"src/**/*.{ts,tsx}\"",
@@ -143,12 +141,11 @@
     "lint:css": "stylelint \"src/**/*.{ts,tsx}\"",
     "lint:sass": "sass-lint --verbose",
     "lint:sass:fix": "sass-lint-auto-fix -c .sass-lint.yml --verbose",
-    "build": "npm run clean && webpack",
-    "build:watch": "webpack --watch",
+    "build": "npm run clean && webpack --display=minimal",
+    "build:watch": "npm run clean && webpack --watch --display=minimal",
     "styleguide:build": "styleguidist build",
     "styleguide": "styleguidist server",
-    "codequality": "docker run --env CODECLIMATE_FORMAT=html --env SOURCE_CODE=$(pwd) --volume $(pwd):/code --volume /var/run/docker.sock:/var/run/docker.sock quay.io/intellihr/codequality /code",
-    "rebuild": "rm -Rf public/build node_modules public/js/bundle.js && yarn && yarn run build"
+    "codequality": "docker run --env CODECLIMATE_FORMAT=html --env SOURCE_CODE=$(pwd) --volume $(pwd):/code --volume /var/run/docker.sock:/var/run/docker.sock quay.io/intellihr/codequality /code"
   },
   "repository": {
     "type": "git",
