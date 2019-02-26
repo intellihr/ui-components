@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<IconPickerInput /> should render an Icon Picker 1`] = `
+<div
+  data-component-type="icon_picker"
+>
+  <GridLayout
+    cells={
+      Array [
+        Object {
+          "content": <UNDEFINED>
+            <styled.input
+              checked={true}
+              id="icon-picker-intelli-icon-australia-0"
+              name="icon-picker"
+              onChange={[Function]}
+              type="radio"
+              value="intelli-icon-australia"
+            />
+            <styled.label
+              htmlFor="icon-picker-intelli-icon-australia-0"
+              isChecked={true}
+            >
+              <Styled(Icon)
+                color="#7362F5"
+                size="large"
+                type="intelli-icon-australia"
+              />
+            </styled.label>
+          </UNDEFINED>,
+          "size": "shrink",
+        },
+        Object {
+          "content": <UNDEFINED>
+            <styled.input
+              checked={false}
+              id="icon-picker-intelli-icon-card-1"
+              name="icon-picker"
+              onChange={[Function]}
+              type="radio"
+              value="intelli-icon-card"
+            />
+            <styled.label
+              htmlFor="icon-picker-intelli-icon-card-1"
+              isChecked={false}
+            >
+              <Styled(Icon)
+                color="#424F5C"
+                size="large"
+                type="intelli-icon-card"
+              />
+            </styled.label>
+          </UNDEFINED>,
+          "size": "shrink",
+        },
+        Object {
+          "content": <UNDEFINED>
+            <styled.input
+              checked={false}
+              id="icon-picker-intelli-icon-book-2"
+              name="icon-picker"
+              onChange={[Function]}
+              type="radio"
+              value="intelli-icon-book"
+            />
+            <styled.label
+              htmlFor="icon-picker-intelli-icon-book-2"
+              isChecked={false}
+            >
+              <Styled(Icon)
+                color="#424F5C"
+                size="large"
+                type="intelli-icon-book"
+              />
+            </styled.label>
+          </UNDEFINED>,
+          "size": "shrink",
+        },
+      ]
+    }
+    gridColumns={12}
+    gutterMarginX={8}
+    gutterMarginY={8}
+    gutterPaddingX="none"
+    gutterPaddingY="none"
+    horizontalAlignment="left"
+    verticalAlignment="stretch"
+  />
+</div>
+`;

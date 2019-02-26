@@ -177,3 +177,7 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
     return offsets
   }
 }
+
+export {
+  IGridLayoutCell
+}

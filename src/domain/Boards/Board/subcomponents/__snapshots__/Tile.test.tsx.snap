@@ -93,7 +93,7 @@ exports[`<Tile /> should render a small board tile 1`] = `
 `;
 
 exports[`<Tile /> should render an anchor board tile 1`] = `
-<Styled(UnstyledLink)
+<Styled(Component)
   hasHoverLabel={false}
   href="#dummy"
   isButton={false}

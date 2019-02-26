@@ -1,7 +1,8 @@
-import styled, { css } from 'styled-components'
+import React from 'react'
+import styled, { StyledFunction, css } from 'styled-components'
 
 import { Variables } from '../../../../common'
-import { IUnstyledLinkProps, UnstyledLink } from '../../../Links/UnstyledLink'
+import { Anchor, IAnchorProps } from '../../../Internals/Anchor'
 
 interface IStyledTileProps {
   tileSize: 'small'|'medium'|'large'
@@ -99,17 +100,37 @@ const StyleTileButton = styled.div`
   outline: 0;
   position: relative;
 
-  ${(props) => props.onClick && css`
+  ${(props) => props.isHoverable && css`
       cursor: pointer;
     `
   }}
 `
 
-const StyledAnchorTile = styled(UnstyledLink)`
+const styledAnchor: StyledFunction<IStyledTileProps & IAnchorProps> = styled(
+  (
+    {
+      tileSize,
+      isHoverable,
+      isButton,
+      type,
+      hasHoverLabel,
+      ...rest
+    }) => <Anchor {...rest} />
+)
+
+const StyledAnchorTile = styledAnchor`
+  &,
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: inherit;
+  }
+
   ${TileStyles};
   position: relative;
 
-  ${(props) => (props.onClick || props.href) && css`
+  ${(props) => props.isHoverable && css`
       cursor: pointer;
     `
   }}

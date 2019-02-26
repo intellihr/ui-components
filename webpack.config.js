@@ -2,6 +2,7 @@ const nodeExternals = require('webpack-node-externals')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const WebpackBar = require('webpackbar')
 
 module.exports = {
   mode: 'development',
@@ -15,6 +16,7 @@ module.exports = {
     }
   },
   plugins: [
+    new WebpackBar(),
     new ExtractTextPlugin('[name].css'),
     new CopyWebpackPlugin([{
       from: path.resolve(__dirname, 'src/common/sass'),
@@ -50,12 +52,13 @@ module.exports = {
         ],
         use: [
           {
-            loader: 'awesome-typescript-loader',
+            loader: 'babel-loader',
             options: {
-              useBabel: true,
-              useCache: true,
-              cacheDirectory: path.resolve(__dirname, 'node_modules/.cache/awcache')
+              cacheDirectory: true
             }
+          },
+          {
+            loader: 'ts-loader'
           }
         ]
       },
@@ -63,8 +66,14 @@ module.exports = {
         test: /\.js$/,
         include: [
           path.resolve(__dirname, 'src'),
+
+          // Manual hacks for packages which don't support ie11
           path.resolve(__dirname, 'node_modules/foundation-sites'),
-          path.resolve(__dirname, 'node_modules/react-styleguidist')
+          path.resolve(__dirname, 'node_modules/react-styleguidist'),
+          path.resolve(__dirname, 'node_modules/ansi-styles'),
+          path.resolve(__dirname, 'node_modules/chalk'),
+          path.resolve(__dirname, 'node_modules/react-dev-utils'),
+          path.resolve(__dirname, 'node_modules/strip-ansi')
         ],
         use: {
           loader: 'babel-loader',
