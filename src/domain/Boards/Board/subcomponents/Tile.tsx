@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { Props } from '../../../../common'
 import { StyleTileButton, StyledAnchorTile, StyledHoverLabel } from './style'
 import { ButtonTileContent } from './ButtonTileContent'
 import { CenteredTileContent } from './CenteredTileContent'
@@ -24,6 +25,8 @@ interface IBoardTileProps {
   anchorComponentProps?: {
     [i: string]: any
   }
+  /** The data-component-context */
+  componentContext?: string
 }
 
 class Tile extends React.PureComponent<IBoardTileProps, never> {
@@ -65,19 +68,26 @@ class Tile extends React.PureComponent<IBoardTileProps, never> {
       isButton,
       type,
       onClick,
-      hoverLabel
+      hoverLabel,
+      componentContext
     } = this.props
+
+    const commonProps = {
+      'tileSize': size!,
+      'isHoverable': isHoverable!,
+      onClick,
+      'tabIndex': 0,
+      'isButton': isButton!,
+      'type': type!,
+      'hasHoverLabel': !!hoverLabel,
+      'data-component-type': Props.ComponentType.Tile,
+      'data-component-context': componentContext
+    }
 
     if (anchorHref) {
       return (
         <StyledAnchorTile
-          tileSize={size!}
-          isHoverable={isHoverable!}
-          onClick={onClick}
-          tabIndex={0}
-          isButton={isButton!}
-          type={type!}
-          hasHoverLabel={!!hoverLabel}
+          {...commonProps}
           href={anchorHref}
           anchorComponentProps={anchorComponentProps}
         >
@@ -89,13 +99,7 @@ class Tile extends React.PureComponent<IBoardTileProps, never> {
 
     return (
       <StyleTileButton
-        tileSize={size!}
-        isHoverable={isHoverable!}
-        onClick={onClick}
-        tabIndex={0}
-        isButton={isButton!}
-        type={type!}
-        hasHoverLabel={!!hoverLabel}
+        {...commonProps}
       >
         {children}
         {this.hoverLabel}
