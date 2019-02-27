@@ -16,7 +16,6 @@ const StyledBoardLabel = styled.label`
   line-height: ${Variables.LineHeight.lhHeading}px;
   font-weight: ${Variables.FontWeight.fwHeavy};
   color: ${Variables.Color.n700};
-  text-transform: capitalize;
   margin-bottom: 12px;
 `
 

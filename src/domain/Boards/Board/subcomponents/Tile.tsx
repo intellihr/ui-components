@@ -11,7 +11,7 @@ interface IBoardTileProps {
   size?: 'small'|'medium'|'large'
   /** If yes the color of the tile will change when it is hovered */
   isHoverable?: boolean
-  /** If yes the tile would in button style */
+  /** If yes the tile will use the minimum size of a button */
   isButton?: boolean
   /** the style of tile */
   type?: 'default'|'hollow'
