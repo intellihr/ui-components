@@ -2,7 +2,9 @@ import styled from 'styled-components'
 
 import { Variables } from '../../../common'
 
-const BoardWrapper = styled.div`
+const BoardWrapper = styled.div``
+
+const BoardTilesWrapper = styled.div`
   display: flex;
   align-content: stretch;
   flex-wrap: wrap;
@@ -20,5 +22,6 @@ const StyledBoardLabel = styled.label`
 
 export {
   StyledBoardLabel,
-  BoardWrapper
+  BoardWrapper,
+  BoardTilesWrapper
 }
