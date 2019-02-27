@@ -17,6 +17,12 @@
           background-color: $n200;
           cursor: not-allowed;
         }
+
+        .Select-value {
+          .Select-value-label {
+            color: $n600;
+          }
+        }
       }
     }
 

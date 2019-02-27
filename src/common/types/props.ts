@@ -43,6 +43,7 @@ namespace Props {
   export enum ComponentType {
     AvatarGroup = 'avatar_group',
     BlockTabGroup = 'block_tab_group',
+    Board = 'board',
     Breadcrumb = 'breadcrumb',
     BreadcrumbGroup = 'breadcrumb_group',
     Brick = 'brick',
@@ -61,6 +62,7 @@ namespace Props {
     Record = 'record',
     RecordName = 'record_name',
     Text = 'text',
+    Tile = 'tile',
     Timeline = 'timeline',
     TimelineEvent = 'timeline_event'
   }

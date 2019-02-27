@@ -1,4 +1,11 @@
+@import '../../../common/sass/variables';
+
 :local(.input) {
+  &:disabled,
+  &[disabled] {
+    color: $n600;
+  }
+
   &.input-group-left {
     border-radius: 4px 0 0 4px;
   }

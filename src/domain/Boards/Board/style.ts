@@ -2,7 +2,9 @@ import styled from 'styled-components'
 
 import { Variables } from '../../../common'
 
-const BoardWrapper = styled.div`
+const BoardWrapper = styled.div``
+
+const BoardTilesWrapper = styled.div`
   display: flex;
   align-content: stretch;
   flex-wrap: wrap;
@@ -14,11 +16,11 @@ const StyledBoardLabel = styled.label`
   line-height: ${Variables.LineHeight.lhHeading}px;
   font-weight: ${Variables.FontWeight.fwHeavy};
   color: ${Variables.Color.n700};
-  text-transform: capitalize;
   margin-bottom: 12px;
 `
 
 export {
   StyledBoardLabel,
-  BoardWrapper
+  BoardWrapper,
+  BoardTilesWrapper
 }

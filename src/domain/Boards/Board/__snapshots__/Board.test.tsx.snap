@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Board /> should render a board 1`] = `
-<Fragment>
+<styled.div
+  data-component-type="board"
+>
   <styled.label>
      
     Basic board
@@ -12,5 +14,5 @@ exports[`<Board /> should render a board 1`] = `
     Children
      
   </styled.div>
-</Fragment>
+</styled.div>
 `;

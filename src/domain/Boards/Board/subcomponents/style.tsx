@@ -28,33 +28,41 @@ interface IStyledFigureLabelProps {
 }
 
 const TileStyles = css`
-  background-color: ${Variables.Color.n200};
   border-radius: ${Variables.Style.borderRadius}px;
   min-height: 300px;
   padding: ${Variables.Spacing.sMedium}px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.13);
-  transition: background-color 0.15s ease-in;
   margin: 0 ${Variables.Spacing.sLarge}px ${Variables.Spacing.sLarge}px 0;
 
-  ${(props: IStyledTileProps) => props.isHoverable && css`
-
-      :hover {
-        background-color: ${Variables.Color.n250};
-        transition: .25s ease-out;
-      }
-    `
-  }}
-
-  ${(props: IStyledTileProps) => (props.isHoverable && props.isButton && props.type === 'hollow') && css`
-
-      background-color: ${Variables.Color.n100};
-      border: 1px dashed ${Variables.Color.n400};
-
-      :hover {
-        border: 1px dashed ${Variables.Color.i400};
+  ${(props: IStyledTileProps) => {
+    if (props.type === 'hollow') {
+      return css`
         background-color: ${Variables.Color.n100};
-        transition: .25s ease-out;
-      }
+        border: 1px dashed ${Variables.Color.n400};
+
+        ${props.isHoverable && css`
+          cursor: pointer;
+          transition: background-color 0.15s ease-in, border-color 0.15s ease-in;
+
+          :hover {
+            border: 1px dashed ${Variables.Color.i400};
+            background-color: ${Variables.Color.n100};
+          }
+        `}
+      `
+    }
+
+    return css`
+      background-color: ${Variables.Color.n200};
+
+      ${props.isHoverable && css`
+        cursor: pointer;
+        transition: background-color 0.15s ease-in, border-color 0.15s ease-in;
+
+        :hover {
+          background-color: ${Variables.Color.n250};
+        }
+      `}
     `
   }}
 
@@ -99,11 +107,6 @@ const StyleTileButton = styled.div`
   ${TileStyles};
   outline: 0;
   position: relative;
-
-  ${(props) => props.isHoverable && css`
-      cursor: pointer;
-    `
-  }}
 `
 
 const styledAnchor: StyledFunction<IStyledTileProps & IAnchorProps> = styled(
@@ -129,11 +132,6 @@ const StyledAnchorTile = styledAnchor`
 
   ${TileStyles};
   position: relative;
-
-  ${(props) => props.isHoverable && css`
-      cursor: pointer;
-    `
-  }}
 `
 
 const StyledTileLabel = styled.span`
