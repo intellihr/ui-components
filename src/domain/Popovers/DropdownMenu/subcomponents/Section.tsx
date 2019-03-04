@@ -39,6 +39,8 @@ interface ISectionProps {
   __closeMenuCallback?: (event: React.SyntheticEvent<HTMLLIElement>, section: ISectionProps) => void
   /** Use the hover style without using href or onClick */
   styleOnHover?: boolean
+  /** Stop propagation of click event */
+  stopPropagation?: boolean
 }
 
 class Section extends React.PureComponent<ISectionProps, never> {
@@ -119,8 +121,13 @@ class Section extends React.PureComponent<ISectionProps, never> {
       href,
       onClick,
       closeDropdownBehaviour,
-      __closeMenuCallback
+      __closeMenuCallback,
+      stopPropagation
     } = this.props
+
+    if (stopPropagation) {
+      event.stopPropagation()
+    }
 
     if (closeDropdownBehaviour === 'always') {
       __closeMenuCallback!(event, this.props)
