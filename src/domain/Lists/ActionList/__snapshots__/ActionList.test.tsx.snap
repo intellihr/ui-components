@@ -52,6 +52,7 @@ exports[`<ActionList /> should render a simple action list with a link 1`] = `
             href="/test-url"
             isInline={true}
             key="action-link-0"
+            type="anchor"
           >
             Test Link Text
           </TextLink>

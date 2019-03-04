@@ -47,6 +47,7 @@ exports[`<FormattedText /> should render a big block of markdown 1`] = `
 .c1 {
   -webkit-transition: color .25s ease-out;
   transition: color .25s ease-out;
+  cursor: pointer;
   font-size: 16px;
   line-height: 24px;
   -webkit-letter-spacing: normal;
@@ -354,12 +355,14 @@ Ordered/multi-level lists:
                 href="http://www.intellihr.com.au"
                 isInline={true}
                 target="_blank"
+                type="anchor"
               >
                 <Styled(Component)
                   anchorComponent="a"
                   href="http://www.intellihr.com.au"
                   isInline={true}
                   target="_blank"
+                  type="anchor"
                 >
                   <Component
                     anchorComponent="a"
@@ -367,17 +370,20 @@ Ordered/multi-level lists:
                     href="http://www.intellihr.com.au"
                     isInline={true}
                     target="_blank"
+                    type="anchor"
                   >
                     <Anchor
                       anchorComponent="a"
                       className="c1"
                       href="http://www.intellihr.com.au"
                       target="_blank"
+                      type="anchor"
                     >
                       <a
                         className="c1"
                         href="http://www.intellihr.com.au"
                         target="_blank"
+                        type="anchor"
                       >
                         http://www.intellihr.com.au
                       </a>
@@ -397,12 +403,14 @@ Ordered/multi-level lists:
                 href="http://www.google.com"
                 isInline={true}
                 target="_blank"
+                type="anchor"
               >
                 <Styled(Component)
                   anchorComponent="a"
                   href="http://www.google.com"
                   isInline={true}
                   target="_blank"
+                  type="anchor"
                 >
                   <Component
                     anchorComponent="a"
@@ -410,17 +418,20 @@ Ordered/multi-level lists:
                     href="http://www.google.com"
                     isInline={true}
                     target="_blank"
+                    type="anchor"
                   >
                     <Anchor
                       anchorComponent="a"
                       className="c1"
                       href="http://www.google.com"
                       target="_blank"
+                      type="anchor"
                     >
                       <a
                         className="c1"
                         href="http://www.google.com"
                         target="_blank"
+                        type="anchor"
                       >
                         Inline link
                       </a>
@@ -912,6 +923,7 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
 .c1 {
   -webkit-transition: color .25s ease-out;
   transition: color .25s ease-out;
+  cursor: pointer;
   font-size: 16px;
   line-height: 24px;
   -webkit-letter-spacing: normal;
@@ -987,12 +999,14 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
                 href="http://www.heyguy.com"
                 isInline={true}
                 target="_blank"
+                type="anchor"
               >
                 <Styled(Component)
                   anchorComponent="a"
                   href="http://www.heyguy.com"
                   isInline={true}
                   target="_blank"
+                  type="anchor"
                 >
                   <Component
                     anchorComponent="a"
@@ -1000,17 +1014,20 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
                     href="http://www.heyguy.com"
                     isInline={true}
                     target="_blank"
+                    type="anchor"
                   >
                     <Anchor
                       anchorComponent="a"
                       className="c1"
                       href="http://www.heyguy.com"
                       target="_blank"
+                      type="anchor"
                     >
                       <a
                         className="c1"
                         href="http://www.heyguy.com"
                         target="_blank"
+                        type="anchor"
                       >
                         http://www.heyguy.com
                       </a>

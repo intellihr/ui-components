@@ -342,6 +342,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
 .c8 {
   -webkit-transition: color .25s ease-out;
   transition: color .25s ease-out;
+  cursor: pointer;
   font-size: 14px;
   line-height: 20px;
   -webkit-letter-spacing: normal;
@@ -656,25 +657,30 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                               href="#"
                               isInline={true}
                               textType="small"
+                              type="anchor"
                             >
                               <Styled(Component)
                                 href="#"
                                 isInline={true}
                                 textType="small"
+                                type="anchor"
                               >
                                 <Component
                                   className="c8"
                                   href="#"
                                   isInline={true}
                                   textType="small"
+                                  type="anchor"
                                 >
                                   <Anchor
                                     className="c8"
                                     href="#"
+                                    type="anchor"
                                   >
                                     <a
                                       className="c8"
                                       href="#"
+                                      type="anchor"
                                     >
                                       Annotated Link
                                     </a>
@@ -934,6 +940,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
 .c7 {
   -webkit-transition: color .25s ease-out;
   transition: color .25s ease-out;
+  cursor: pointer;
   font-size: 14px;
   line-height: 20px;
   -webkit-letter-spacing: normal;
@@ -1203,25 +1210,30 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                               href="#"
                               isInline={true}
                               textType="small"
+                              type="anchor"
                             >
                               <Styled(Component)
                                 href="#"
                                 isInline={true}
                                 textType="small"
+                                type="anchor"
                               >
                                 <Component
                                   className="c7"
                                   href="#"
                                   isInline={true}
                                   textType="small"
+                                  type="anchor"
                                 >
                                   <Anchor
                                     className="c7"
                                     href="#"
+                                    type="anchor"
                                   >
                                     <a
                                       className="c7"
                                       href="#"
+                                      type="anchor"
                                     >
                                       Annotated Link
                                     </a>

@@ -47,6 +47,61 @@
 </div>
 ```
 
+#### Text link Button
+
+```jsx
+<div>
+  <TextLink
+    type='button'
+    textType='xsmall'
+    onClick= {() => { alert('I am a xsmall text link') }}
+  >
+  xSmall Link Button
+  </TextLink>
+  <br />
+  <TextLink
+    type='button'
+    textType='small'
+    onClick= {() => { alert('I am a small text link') }}
+  >
+    Small Link
+  </TextLink>
+  <br />
+  <TextLink
+    type='button'
+    textType='body'
+    onClick= {() => { alert('I am a body text link') }}
+  >
+    Body Link
+  </TextLink>
+  <br />
+  <TextLink
+    type='button'
+    textType='heading'
+    onClick= {() => { alert('I am a heading text link') }}
+  >
+    Heading Link
+  </TextLink>
+  <br />
+  <TextLink
+    type='button'
+    textType='display'
+    onClick= {() => { alert('I am a display text link') }}
+  >
+    Display Link
+  </TextLink>
+  <br />
+  <TextLink
+    type='button'
+    textType='display-large'
+    onClick= {() => { alert('I am a display large text link') }}
+  >
+    Display Large Link
+  </TextLink>
+  <br />
+</div>
+```
+
 #### Inline (false)
 
 ```jsx
