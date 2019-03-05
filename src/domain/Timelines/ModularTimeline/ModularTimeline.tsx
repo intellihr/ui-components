@@ -36,6 +36,8 @@ interface IModularTimelineEvent {
   timelineLineColor?: TimelineLineColor,
   /** Component context for the event wrapper */
   componentContext?: string
+  /** Overrides the automatic bottom spacing calculation. Defaults to `auto` */
+  bottomSpacingSize?: 'auto' | 'normal' | 'large'
 }
 
 interface IModularTimelineProps {
@@ -140,13 +142,17 @@ class ModularTimeline extends React.PureComponent<IModularTimelineProps> {
       return 'none'
     }
 
-    const nextEvent = events[index + 1]
+    if (!event.bottomSpacingSize || event.bottomSpacingSize === 'auto') {
+      const nextEvent = events[index + 1]
 
-    if (nextEvent.eventType === 'major') {
-      return 'large'
+      if (nextEvent.eventType === 'major') {
+        return 'large'
+      }
+
+      return 'normal'
     }
 
-    return 'normal'
+    return event.bottomSpacingSize
   }
 }
 
