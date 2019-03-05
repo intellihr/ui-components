@@ -141,8 +141,9 @@ import { Text } from '@Domain/Typographies';
       eventType: 'minor',
       timelineLineStyle: 'dashed',
       body: {
-        content: 'Some content goes here'
-      }
+        content: 'Some content goes here. Bottom spacing is large too :)'
+      },
+      bottomSpacingSize: 'large'
     },
     {
       title: 'Multiple bodies, one event',

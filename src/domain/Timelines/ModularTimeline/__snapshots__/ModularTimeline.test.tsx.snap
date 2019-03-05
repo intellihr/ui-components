@@ -53,7 +53,7 @@ exports[`<ModularTimeline /> should render a modular timeline 1`] = `
     </styled.div>
   </styled.div>
   <styled.div
-    bottomSpacing="normal"
+    bottomSpacing="large"
     data-component-type="timeline_event"
     key="3"
     timelineLineColor="neutral"
