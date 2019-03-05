@@ -5,7 +5,6 @@ import { Icon, IconType } from '../../../Icons'
 import {
   ButtonDescriptionLabel,
   ButtonTextContentWrapper,
-  ButtonTitleLabel,
   ButtonWrapper,
   StyledIconWrapper,
   StyledTileLabel,
@@ -17,8 +16,6 @@ interface IBoardButtonTileContentProps {
   label?: string
   /** button icon type displayed in the tile */
   iconType?: IconType
-  /** button title displayed in the tile */
-  buttonTitle?: string
   /** button description displayed after button title */
   buttonDescription?: string
 }
@@ -43,14 +40,14 @@ class ButtonTileContent extends React.PureComponent<IBoardButtonTileContentProps
 
   private get buttonTitle (): JSX.Element | null {
     const {
-      buttonTitle
+      label
     } = this.props
 
-    if (buttonTitle) {
+    if (label) {
       return (
-        <ButtonTitleLabel>
-          {buttonTitle}
-        </ButtonTitleLabel>
+        <StyledTileLabel>
+          {label}
+        </StyledTileLabel>
       )
     }
 
@@ -85,27 +82,10 @@ class ButtonTileContent extends React.PureComponent<IBoardButtonTileContentProps
     )
   }
 
-  private get tileLabel (): JSX.Element | null {
-    const {
-      label
-    } = this.props
-
-    if (label) {
-      return (
-        <StyledTileLabel>
-          {label}
-        </StyledTileLabel>
-      )
-    }
-
-    return null
-  }
-
   public render (): JSX.Element {
     return (
       <TileContentWrapper
       >
-        {this.tileLabel}
         {this.content}
       </TileContentWrapper>
     )

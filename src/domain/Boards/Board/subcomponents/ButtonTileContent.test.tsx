@@ -6,7 +6,7 @@ import { ButtonTileContent } from './ButtonTileContent'
 describe('<ButtonTileContent />', () => {
   it(`should render a button tile content with nothing`, () => {
     const wrapper = shallow(
-      <ButtonTileContent  />
+      <ButtonTileContent />
     )
     expect(wrapper).toMatchSnapshot()
   })
@@ -24,7 +24,7 @@ describe('<ButtonTileContent />', () => {
     const wrapper = shallow(
       <ButtonTileContent
         iconType='fa-star'
-        buttonTitle='dummy button title'
+        label='dummy button title'
         buttonDescription='dummy button description'
       />
     )
@@ -35,7 +35,7 @@ describe('<ButtonTileContent />', () => {
     const wrapper = shallow(
       <ButtonTileContent
         iconType='intelli-icon-alert'
-        buttonTitle='dummy button title'
+        label='dummy button title'
         buttonDescription='dummy button description'
       />
     )
@@ -46,7 +46,7 @@ describe('<ButtonTileContent />', () => {
     const wrapper = shallow(
       <ButtonTileContent
         iconType='fa-star'
-        buttonTitle='dummy button title'
+        label='dummy button title'
         buttonDescription='dummy button description'
       />
     )

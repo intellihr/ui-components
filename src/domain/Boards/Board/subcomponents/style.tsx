@@ -98,7 +98,7 @@ const TileStyles = css`
   }}
 
   ${(props: IStyledTileProps) => props.hasHoverLabel && css`
-      padding-bottom: 40px;
+      padding-bottom: ${Variables.Spacing.s3XLarge}px;
     `
   }}
 `
@@ -135,13 +135,26 @@ const StyledAnchorTile = styledAnchor`
 `
 
 const StyledTileLabel = styled.span`
-  font-size: ${Variables.FontSize.fzSmall}px;
-  line-height: ${Variables.LineHeight.lhSmall}px;
-  font-weight: ${Variables.FontWeight.fwHeavy};
-  text-transform: uppercase;
-  margin-bottom: ${Variables.Spacing.s2XSmall}px;
-  height: 40px;
+  font-size: ${Variables.FontSize.fzBody}px;
+  line-height: ${Variables.LineHeight.lhBody}px;
+  color: ${Variables.Color.n700};
+  width: 100%;
+  display: inline-block;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
+
+  ${StyleTileButton}:hover & {
+    color: ${Variables.Color.i400};
+  }
+
+  ${StyledAnchorTile}:hover & {
+    color: ${Variables.Color.i400};
+  }
+
+  @media (max-width: 600px) {
+    text-align: center;
+  }
 `
 
 const StyledFigureLabel = styled.span`
@@ -267,34 +280,11 @@ const ButtonDescriptionLabel = styled.span`
   }
 `
 
-const ButtonTitleLabel = styled.span`
+const StyledHoverLabel = styled.span`
   font-size: ${Variables.FontSize.fzBody}px;
   line-height: ${Variables.LineHeight.lhBody}px;
-  color: ${Variables.Color.n700};
-  width: 100%;
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-  ${StyleTileButton}:hover & {
-    color: ${Variables.Color.i400};
-  }
-
-  ${StyledAnchorTile}:hover & {
-    color: ${Variables.Color.i400};
-  }
-
-  @media (max-width: 600px) {
-    text-align: center;
-  }
-`
-
-const StyledHoverLabel = styled.span`
-  font-size: ${Variables.FontSize.fzSmall}px;
-  line-height: ${Variables.LineHeight.lhSmall}px;
   color: ${Variables.Color.i400};
-  text-transform: uppercase;
+  font-weight: ${Variables.FontWeight.fwHeavy};
   opacity: 0;
   text-align: right;
   position: absolute;
@@ -302,6 +292,10 @@ const StyledHoverLabel = styled.span`
   right: 0;
   max-width: 90%;
   padding: ${Variables.Spacing.sMedium}px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   ${StyleTileButton}:hover & {
     opacity: 1;
@@ -366,7 +360,6 @@ export {
   CenteredContentWrapper,
   HeadingLine,
   ButtonDescriptionLabel,
-  ButtonTitleLabel,
   StyledHoverLabel,
   TileContentWrapper
 }

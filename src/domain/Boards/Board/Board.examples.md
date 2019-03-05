@@ -209,7 +209,7 @@
  >
    <Board.Tile.ButtonTileContent
     iconType='fa-plus-square'
-    buttonTitle='Large Tile button with a font awesome icon'
+    label='Large Tile button with a font awesome icon'
     buttonDescription='I am the tile description'
    >
     </Board.Tile.ButtonTileContent>
@@ -221,7 +221,7 @@
  >
    <Board.Tile.ButtonTileContent
     iconType='intelli-icon-smile'
-    buttonTitle='Medium Tile button with an IntelliIcon'
+    label='Medium Tile button with an IntelliIcon'
     buttonDescription='I am the tile description'
    >
    </Board.Tile.ButtonTileContent>
@@ -234,7 +234,7 @@
   >
     <Board.Tile.ButtonTileContent
      iconType='fa-comments'
-     buttonTitle='Medium Tile button button button button button button button button button button'
+     label='Medium Tile button button button button button button button button button button'
      buttonDescription='Button description has a maximum line count of 3. This means that long content will have text hidden if the content goes over 3 lines in length.'
     >
     </Board.Tile.ButtonTileContent>
@@ -246,7 +246,7 @@
  >
   <Board.Tile.ButtonTileContent
     iconType='intelli-icon-smile'
-    buttonTitle='Small Tile button with an IntelliIcon'
+    label='Small Tile button with an IntelliIcon'
     buttonDescription='Button description has a maximum line count of 3. This means that long content will have text hidden if the content goes over 3 lines in length.'
   >
   </Board.Tile.ButtonTileContent>
@@ -258,7 +258,7 @@
  >
   <Board.Tile.ButtonTileContent
     iconType='fa-exclamation-triangle'
-    buttonTitle='small Tile button title text with a font awesome icon'
+    label='small Tile button title text with a font awesome icon'
     buttonDescription='I am a small tile content.'
   >
   </Board.Tile.ButtonTileContent>
@@ -271,7 +271,7 @@
   >
    <Board.Tile.ButtonTileContent
      iconType='fa-plus-square'
-     buttonTitle='small admin Tile button with a font awesome icon'
+     label='small admin Tile button with a font awesome icon'
      buttonDescription=' admin content be hidden if it is out of 3 lines'
    >
    </Board.Tile.ButtonTileContent>
@@ -315,7 +315,7 @@
   <Board.Tile
      size='medium'
      isHoverable
-     hoverLabel='I am a long long long long hover label!'
+     hoverLabel='truncated hover label should be one row only'
   >
      <Board.Tile.CenteredTileContent
        label='This is a medium test tile'
