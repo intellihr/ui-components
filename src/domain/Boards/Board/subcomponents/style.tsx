@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { StyledFunction, css } from 'styled-components'
 
-import { Variables } from '../../../../common'
+import {Utils, Variables} from '../../../../common'
 import { Anchor, IAnchorProps } from '../../../Internals/Anchor'
 
 interface IStyledTileProps {
@@ -152,7 +152,7 @@ const StyledTileLabel = styled.span`
     color: ${Variables.Color.i400};
   }
 
-  @media (max-width: 600px) {
+  ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
     text-align: center;
   }
 `
