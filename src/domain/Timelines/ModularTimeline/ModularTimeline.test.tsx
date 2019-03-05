@@ -35,7 +35,8 @@ describe('<ModularTimeline />', () => {
             eventType: 'minor',
             body: {
               content: 'Some content goes here'
-            }
+            },
+            bottomSpacingSize: 'large'
           },
           {
             title: 'Title 5',
