@@ -4,6 +4,7 @@ exports[`<TextLink /> should render a text link 1`] = `
 .c0 {
   -webkit-transition: color .25s ease-out;
   transition: color .25s ease-out;
+  cursor: pointer;
   font-size: 16px;
   line-height: 24px;
   -webkit-letter-spacing: normal;
@@ -30,23 +31,28 @@ exports[`<TextLink /> should render a text link 1`] = `
 <TextLink
   href="/lol"
   isInline={true}
+  type="anchor"
 >
   <Styled(Component)
     href="/lol"
     isInline={true}
+    type="anchor"
   >
     <Component
       className="c0"
       href="/lol"
       isInline={true}
+      type="anchor"
     >
       <Anchor
         className="c0"
         href="/lol"
+        type="anchor"
       >
         <a
           className="c0"
           href="/lol"
+          type="anchor"
         >
           Text link me
         </a>
@@ -56,10 +62,56 @@ exports[`<TextLink /> should render a text link 1`] = `
 </TextLink>
 `;
 
+exports[`<TextLink /> should render a text link button 1`] = `
+.c0 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  display: inline;
+  outline: 0;
+}
+
+.c0,
+.c0:link,
+.c0:visited {
+  color: #432DF3;
+}
+
+.c0:hover {
+  color: #2512B3;
+}
+
+.c0:active {
+  color: #0F0080;
+}
+
+<TextLink
+  isInline={true}
+  type="button"
+>
+  <styled.button
+    isInline={true}
+  >
+    <button
+      className="c0"
+    >
+      Text link me
+    </button>
+  </styled.button>
+</TextLink>
+`;
+
 exports[`<TextLink /> should render a text link with display block 1`] = `
 .c0 {
   -webkit-transition: color .25s ease-out;
   transition: color .25s ease-out;
+  cursor: pointer;
   font-size: 16px;
   line-height: 24px;
   -webkit-letter-spacing: normal;
@@ -86,23 +138,28 @@ exports[`<TextLink /> should render a text link with display block 1`] = `
 <TextLink
   href="#"
   isInline={false}
+  type="anchor"
 >
   <Styled(Component)
     href="#"
     isInline={false}
+    type="anchor"
   >
     <Component
       className="c0"
       href="#"
       isInline={false}
+      type="anchor"
     >
       <Anchor
         className="c0"
         href="#"
+        type="anchor"
       >
         <a
           className="c0"
           href="#"
+          type="anchor"
         >
           Block text link
         </a>
@@ -116,6 +173,7 @@ exports[`<TextLink /> should render a text link with underline on hover 1`] = `
 .c0 {
   -webkit-transition: color .25s ease-out;
   transition: color .25s ease-out;
+  cursor: pointer;
   font-size: 16px;
   line-height: 24px;
   -webkit-letter-spacing: normal;
@@ -144,27 +202,32 @@ exports[`<TextLink /> should render a text link with underline on hover 1`] = `
 <TextLink
   href="#"
   isInline={true}
+  type="anchor"
   underlineOnHover={true}
 >
   <Styled(Component)
     href="#"
     isInline={true}
+    type="anchor"
     underlineOnHover={true}
   >
     <Component
       className="c0"
       href="#"
       isInline={true}
+      type="anchor"
       underlineOnHover={true}
     >
       <Anchor
         className="c0"
         href="#"
+        type="anchor"
         underlineOnHover={true}
       >
         <a
           className="c0"
           href="#"
+          type="anchor"
           underlineOnHover={true}
         >
           Underline text link on hover

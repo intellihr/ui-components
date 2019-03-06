@@ -5,22 +5,33 @@ import { Props, Variables } from '../../../common'
 import { Anchor, IAnchorProps } from '../../Internals/Anchor'
 import { styleForTypographyType } from '../../Typographies/services/textStyles'
 
-// tslint:disable-next-line:no-empty-interface
-interface ITextLinkProps extends IAnchorProps {
+interface ITextLinkCommonProps {
   textType?: Props.TypographyType
   isInline?: boolean
   underlineOnHover?: boolean
 }
 
-const styledAnchor: StyledFunction<ITextLinkProps> = styled(({ textType, isInline, ...rest }) => <Anchor {...rest} />)
+interface ITextLinkAnchorProps extends IAnchorProps, ITextLinkCommonProps {
+  type?: 'anchor'
+}
 
-const StyledTextLink = styledAnchor`
+interface ITextLinkButtonProps extends ITextLinkCommonProps {
+  type?: 'button'
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void
+}
+
+type ITextLinkProps = ITextLinkAnchorProps | ITextLinkButtonProps
+
+const styledAnchor: StyledFunction<ITextLinkAnchorProps> = styled(({ textType, isInline, ...rest }) => <Anchor {...rest} />)
+
+const TextLinkStyles = css`
   transition: color .25s ease-out;
+  cursor: pointer;
 
   ${(props: ITextLinkProps) => styleForTypographyType(props.textType)}
 
   ${
-    ({ isInline }: ITextLinkProps) => css`
+    ({isInline}: ITextLinkProps) => css`
       display: ${isInline && 'inline' || 'block'};
     `
   }
@@ -34,7 +45,7 @@ const StyledTextLink = styledAnchor`
   &:hover {
     color: ${Variables.Color.i500};
     ${
-      ({ underlineOnHover }: ITextLinkProps) => {
+      ({underlineOnHover}: ITextLinkProps) => {
         if (underlineOnHover) {
           return css`
             text-decoration: underline;
@@ -49,17 +60,51 @@ const StyledTextLink = styledAnchor`
   }
 `
 
+const StyledTextLink = styledAnchor`
+  ${TextLinkStyles};
+`
+const StyledTextButton = styled.button`
+  ${TextLinkStyles};
+  outline: 0;
+`
+
 class TextLink<P> extends React.PureComponent<P & ITextLinkProps> {
-  public static defaultProps: Pick<ITextLinkProps, 'isInline'> = {
-    isInline: true
+  public static defaultProps: Partial<ITextLinkProps> = {
+    isInline: true,
+    type: 'anchor'
   }
 
   public render (): JSX.Element {
-    return (
-      <StyledTextLink
-        {...this.props}
-      />
-    )
+    if (this.isButton(this.props)) {
+      const {
+        onClick,
+        children,
+        textType,
+        isInline,
+        underlineOnHover
+      } = this.props
+
+      return (
+        <StyledTextButton
+          textType={textType}
+          isInline={isInline}
+          underlineOnHover={underlineOnHover}
+          onClick={onClick}
+        >
+          {children}
+        </StyledTextButton>
+      )
+    } else {
+      return (
+        <StyledTextLink
+          {...this.props}
+        />
+      )
+    }
+  }
+
+  private isButton (props: ITextLinkProps): props is ITextLinkButtonProps {
+    return this.props.type === 'button'
   }
 }
 
