@@ -71,11 +71,12 @@ exports[`<ButtonTileContent /> should render a button tile content with an Intel
 
 exports[`<ButtonTileContent /> should render a button tile content with label 1`] = `
 <styled.div>
-  <styled.span>
-    dummy label
-  </styled.span>
   <styled.div>
-    <styled.div />
+    <styled.div>
+      <styled.span>
+        dummy label
+      </styled.span>
+    </styled.div>
   </styled.div>
 </styled.div>
 `;
