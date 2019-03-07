@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HorizontalRule /> should render a horizontal rule 1`] = `
+.c0 {
+  border-bottom: 1px solid #C5CED6;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  margin-left: 24px;
+  margin-right: 0px;
+}
+
+<hr
+  className="c0"
+/>
+`;
