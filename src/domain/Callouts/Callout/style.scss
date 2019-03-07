@@ -21,6 +21,7 @@ $callouts: (
   border: 1px solid;
   border-radius: 4px;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
   padding: 1rem;
