@@ -19,7 +19,6 @@
 
 ._3lIegt5ctRroDWirYOBcg9 span:focus, .ihr-button-component span:focus { background-color: #C5CED6; border-color: #667380; color: #424F5C; }
 ._34CmOZwOoIFJuQHkD73bjb ul { position: absolute; }
-._1ws_FEQREuncuaxqLQss0l { cursor: pointer; outline: 0; }
 ._2KJdFV_f2_YV_45PNtBoTY, .button { border: 1px solid transparent; border-radius: 4px; cursor: pointer; display: inline-block; font-size: 14.4px; font-size: .9rem; font-weight: 600; line-height: 1; outline: none; padding: 12px 14px; text-align: center; -webkit-transition: background-color .25s ease-out, color .25s ease-out; transition: background-color .25s ease-out, color .25s ease-out; }
 
 ._2KJdFV_f2_YV_45PNtBoTY .fa, .button .fa { vertical-align: baseline; vertical-align: initial; }
@@ -577,6 +576,7 @@
 .button.remove:active, .button.remove.active { background-color: #F25749; color: #FFFFFF; }
 
 .button.remove > .fa { margin: 0; }
+._1ws_FEQREuncuaxqLQss0l { cursor: pointer; outline: 0; }
 ._1i7jjfXDEYgMRLC0NP9ZKH.xsmall { font-size: 12px; letter-spacing: 0.02em; line-height: 18px; }
 
 ._1i7jjfXDEYgMRLC0NP9ZKH.small { font-size: 14px; letter-spacing: normal; line-height: 20px; }
@@ -1158,7 +1158,7 @@
 ._2Z9R9asHIoy521P2DUF8O9.Select .Select-option.is-selected { background-color: #EFEDFF; color: #0F0080; }
 
 ._2Z9R9asHIoy521P2DUF8O9.Select .Select-menu-outer { border-top-color: #C5CED6; margin-bottom: 40px; }
-._2PAB-P-22TgstsblGzgSuW, .callout { border: 1px solid; border-radius: 4px; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; padding: 16px; padding: 1rem; position: relative; background-color: #F5F7FA; border-color: #C5CED6; color: #262D33; }
+._2PAB-P-22TgstsblGzgSuW, .callout { border: 1px solid; border-radius: 4px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; padding: 16px; padding: 1rem; position: relative; background-color: #F5F7FA; border-color: #C5CED6; color: #262D33; }
 
 ._2PAB-P-22TgstsblGzgSuW h1, .callout h1, ._2PAB-P-22TgstsblGzgSuW h2, .callout h2, ._2PAB-P-22TgstsblGzgSuW h3, .callout h3, ._2PAB-P-22TgstsblGzgSuW h4, .callout h4, ._2PAB-P-22TgstsblGzgSuW h5, .callout h5, ._2PAB-P-22TgstsblGzgSuW h6, .callout h6 { font-size: 17.6px; font-size: 1.1rem; font-weight: 600; }
 
