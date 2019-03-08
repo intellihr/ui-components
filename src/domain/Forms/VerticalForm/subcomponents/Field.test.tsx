@@ -85,6 +85,36 @@ describe('<Field />', () => {
     const wrapper = shallow(
       <Field
         label='This is a test input'
+        actionMessage={<div>This is a test action message</div>}
+      >
+        Children
+      </Field>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it(`should render a vertical form field with a hint`, () => {
+    const wrapper = shallow(
+      <Field
+        label='This is a test input'
+        hintOptions={{
+          hint: <div> This is a test hint in hint popover style </div>,
+          label: 'This is a test hint label',
+          hintWrapperProps: { width: 200 }
+        }}
+      >
+        Children
+      </Field>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it(`should render a vertical form field with a action message`, () => {
+    const wrapper = shallow(
+      <Field
+        label='This is a test input'
         tooltipMessage='I am a test tooltip'
         tooltipProps={{width: 100}}
       >
