@@ -224,6 +224,12 @@ module.exports = {
           ]
         },
         {
+          name: 'Spacers',
+          components: [
+            'src/domain/Spacers/HorizontalRule/HorizontalRule.tsx'
+          ]
+        },
+        {
           name: 'Spinners',
           components: [
             'src/domain/Spinners/Spinner/Spinner.tsx'
