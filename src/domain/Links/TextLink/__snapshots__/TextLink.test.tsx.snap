@@ -97,9 +97,11 @@ exports[`<TextLink /> should render a text link button 1`] = `
 >
   <styled.button
     isInline={true}
+    type="button"
   >
     <button
       className="c0"
+      type="button"
     >
       Text link me
     </button>
