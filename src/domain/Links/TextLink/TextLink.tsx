@@ -28,10 +28,10 @@ const TextLinkStyles = css`
   transition: color .25s ease-out;
   cursor: pointer;
 
-  ${(props: ITextLinkProps) => styleForTypographyType(props.textType)}
+  ${(props: ITextLinkCommonProps) => styleForTypographyType(props.textType)}
 
   ${
-    ({isInline}: ITextLinkProps) => css`
+    ({isInline}: ITextLinkCommonProps) => css`
       display: ${isInline && 'inline' || 'block'};
     `
   }
@@ -45,7 +45,7 @@ const TextLinkStyles = css`
   &:hover {
     color: ${Variables.Color.i500};
     ${
-      ({underlineOnHover}: ITextLinkProps) => {
+      ({underlineOnHover}: ITextLinkCommonProps) => {
         if (underlineOnHover) {
           return css`
             text-decoration: underline;
@@ -77,15 +77,16 @@ class TextLink<P> extends React.PureComponent<P & ITextLinkProps> {
   public render (): JSX.Element {
     if (this.isButton(this.props)) {
       const {
-        onClick,
         children,
-        textType,
         isInline,
+        onClick,
+        textType,
         underlineOnHover
       } = this.props
 
       return (
         <StyledTextButton
+          type='button'
           textType={textType}
           isInline={isInline}
           underlineOnHover={underlineOnHover}
