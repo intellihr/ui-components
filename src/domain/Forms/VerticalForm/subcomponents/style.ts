@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components'
 
-import { Variables } from '../../../../common'
-import { TooltipPopover } from '../../../Popovers/TooltipPopover'
+import { Utils, Variables } from '../../../../common'
 
 interface IStyledInputLabelProps {
   isRequired: boolean
@@ -29,6 +28,11 @@ const StyledInputLabel = styled.label`
   font-size: ${Variables.FontSize.fzSmall}px;
   line-height: ${Variables.LineHeight.lhSmall}px;
   margin-bottom: 4px;
+  display: block;
+
+  ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
+    width: 100%;
+  }
 
   ${(props: IStyledInputLabelProps) => props.isRequired && css`
       &::after {
@@ -57,6 +61,16 @@ const StyledRightAlignControls = styled.div`
   justify-content: flex-end;
 `
 
+const StyledLabelWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
+    flex-wrap: wrap;
+    margin-bottom: ${Variables.Spacing.s2XSmall}px;
+  }
+`
 export {
   FieldWrapper,
   ErrorMessage,
@@ -64,5 +78,6 @@ export {
   StyledDescription,
   StyledTooltipPopover,
   StyledLeftAlignControls,
-  StyledRightAlignControls
+  StyledRightAlignControls,
+  StyledLabelWrapper
 }

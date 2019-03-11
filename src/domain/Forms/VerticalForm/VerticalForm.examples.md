@@ -185,6 +185,42 @@ initialState = { textInputValue: '' };
   </VerticalForm>
 ```
 
+Field with hint
+
+```jsx
+import { Button } from '@Domain/Buttons';
+import { TextInput } from '@Domain/Inputs';
+
+initialState = { textInputValue: '' };
+
+  <VerticalForm
+    onSubmit={() => alert(`Test input: ${state.textInputValue}`)}
+  >
+    <VerticalForm.Field
+      inputName='testInput'
+      hintOptions={{
+        hint: <div> This is a test hint in the hint popover style </div>,
+        label: 'This is a test hint label',
+        hintWrapperProps: { width: 200 }
+      }}
+      label='This is a test input'
+      isRequired
+    >
+      <TextInput
+        name='testInput'
+        handleChange={(e) => setState({ textInputValue: e.target.value })}
+      />
+    </VerticalForm.Field>
+    <VerticalForm.RightAlignControls>
+      <Button
+         type='primary'
+      >
+        Submit me :)
+      </Button>
+    </VerticalForm.RightAlignControls>
+  </VerticalForm>
+```
+
 Field with errors & required
 
 ```jsx
