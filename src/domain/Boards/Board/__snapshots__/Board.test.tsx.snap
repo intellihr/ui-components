@@ -4,11 +4,37 @@ exports[`<Board /> should render a board 1`] = `
 <styled.div
   data-component-type="board"
 >
-  <styled.label>
+  <styled.div>
+    <styled.label>
+       
+      Basic board
+       
+    </styled.label>
+  </styled.div>
+  <styled.div>
      
-    Basic board
+    Children
      
-  </styled.label>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<Board /> should render a board with a right component 1`] = `
+<styled.div
+  data-component-type="board"
+>
+  <styled.div>
+    <styled.label>
+       
+      Basic board
+       
+    </styled.label>
+     
+    <div>
+      This is a test right component
+    </div>
+     
+  </styled.div>
   <styled.div>
      
     Children

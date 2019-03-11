@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Variables } from '../../../common'
+import { Utils, Variables } from '../../../common'
 
 const BoardWrapper = styled.div``
 
@@ -17,10 +17,25 @@ const StyledBoardLabel = styled.label`
   font-weight: ${Variables.FontWeight.fwHeavy};
   color: ${Variables.Color.n700};
   margin-bottom: 12px;
+
+  ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
+    width: 100%;
+  }
+`
+
+const StyledHeadingWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
+    flex-wrap: wrap;
+    margin-bottom: ${Variables.Spacing.s2XSmall}px;
+  }
 `
 
 export {
   StyledBoardLabel,
   BoardWrapper,
-  BoardTilesWrapper
+  BoardTilesWrapper,
+  StyledHeadingWrapper
 }

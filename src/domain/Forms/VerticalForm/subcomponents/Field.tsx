@@ -1,8 +1,19 @@
 import { isString, map } from 'lodash'
 import React from 'react'
+import { IHintWrapperProps } from 'src/domain/Formats/HintWrapper'
 
+import { Props } from '../../../../common'
+import { HintWrapper } from '../../../Formats'
 import { ITooltipPopoverProps, TooltipPopover } from '../../../Popovers/TooltipPopover'
-import { ErrorMessage, FieldWrapper, StyledDescription, StyledInputLabel, StyledTooltipPopover } from './style'
+import { Text } from '../../../Typographies/Text'
+import {
+  ErrorMessage,
+  FieldWrapper,
+  StyledDescription,
+  StyledInputLabel,
+  StyledLabelWrapper,
+  StyledTooltipPopover
+} from './style'
 
 interface IVerticalFormFieldProps {
   /** HTML name of the input */
@@ -21,7 +32,12 @@ interface IVerticalFormFieldProps {
   tooltipMessage?: JSX.Element | string
   /** any extra tooltip props */
   tooltipProps?: ITooltipPopoverProps
-
+  /** Popover hint after the label */
+  hintOptions?: {
+    hint: JSX.Element | string
+    label: string
+    hintWrapperProps?: Partial<IHintWrapperProps>
+  }
 }
 
 class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
@@ -100,6 +116,37 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
     return null
   }
 
+  private get hint (): JSX.Element | null {
+    const {
+      hintOptions
+    } = this.props
+
+    if (hintOptions) {
+      return (
+        <HintWrapper
+          hint={hintOptions.hint}
+          hintType={Props.HintWrapperType.Popover}
+          {...hintOptions.hintWrapperProps}
+        >
+          <Text type={Props.TypographyType.XSmall}>
+            {hintOptions.label}
+          </Text>
+        </HintWrapper>
+      )
+    }
+
+    return null
+  }
+
+  private get label (): JSX.Element {
+    return (
+      <StyledLabelWrapper>
+        {this.inputLabel}
+        {this.hint}
+      </StyledLabelWrapper>
+    )
+  }
+
   public static defaultProps = {
     isRequired: false
   }
@@ -112,7 +159,7 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
 
     return (
       <FieldWrapper>
-        {this.inputLabel}
+        {this.label}
         {this.description}
         {children}
         {this.errorMessages}
