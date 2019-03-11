@@ -15,4 +15,17 @@ describe('<Board />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it(`should render a board with a right component`, () => {
+    const wrapper = shallow(
+      <Board
+        label='Basic board'
+        rightComponent={<div>This is a test right component</div>}
+      >
+        Children
+      </Board>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })

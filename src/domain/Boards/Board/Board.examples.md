@@ -68,6 +68,33 @@
 </Board>
 ```
 
+#### Board with right component
+   
+```jsx
+import { TextLink } from '@Domain/Links';
+
+<Board
+ label='Basic tiles'
+ rightComponent={
+  <TextLink
+    onClick={(e)=> {
+      e.preventDefault();
+      alert('I am the right component')
+    }}
+    textType='small'
+  >
+    I am the message
+  </TextLink>
+ }
+>
+ <Board.Tile
+  size='large'
+  onClick= {() => { alert('I am a large tile') }}
+ >
+ </Board.Tile>
+</Board>
+```
+
 #### Board with tiles with anchor href
    
 ```jsx

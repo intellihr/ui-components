@@ -23,22 +23,6 @@ exports[`<Field /> should render a vertical form field with a action message 2`]
       isRequired={false}
     >
       This is a test input
-    </styled.label>
-  </styled.div>
-  Children
-  <div>
-    This is a test action message
-  </div>
-</styled.div>
-`;
-
-exports[`<Field /> should render a vertical form field with a action message 3`] = `
-<styled.div>
-  <styled.div>
-    <styled.label
-      isRequired={false}
-    >
-      This is a test input
       <styled.span>
         <TooltipPopover
           toggleComponent={[Function]}
