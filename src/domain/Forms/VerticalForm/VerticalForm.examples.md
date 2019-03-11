@@ -214,7 +214,7 @@ initialState = { textInputValue: '' };
     <VerticalForm.RightAlignControls>
       <Button
          type='primary'
-      >
+      >	
         Submit me :)
       </Button>
     </VerticalForm.RightAlignControls>

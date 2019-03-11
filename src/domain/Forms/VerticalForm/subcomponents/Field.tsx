@@ -1,9 +1,9 @@
 import { isString, map } from 'lodash'
 import React from 'react'
+import { IHintWrapperProps } from 'src/domain/Formats/HintWrapper'
 
 import { Props } from '../../../../common'
 import { HintWrapper } from '../../../Formats'
-import { IHintWrapperProps } from '../../../Formats/HintWrapper'
 import { ITooltipPopoverProps, TooltipPopover } from '../../../Popovers/TooltipPopover'
 import { Text } from '../../../Typographies/Text'
 import {
