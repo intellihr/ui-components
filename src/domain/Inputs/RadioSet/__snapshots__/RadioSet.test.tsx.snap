@@ -12,6 +12,7 @@ exports[`<RadioSet /> should render a radio Button Set 1`] = `
     key="radio-input-set-0"
     label="123123"
     name="radio-input-set"
+    spacing="normal"
     value="option 1"
   />
   <Styled(RadioInput)
@@ -23,6 +24,7 @@ exports[`<RadioSet /> should render a radio Button Set 1`] = `
     key="radio-input-set-1"
     label="this is option 2 (I am disabled)"
     name="radio-input-set"
+    spacing="normal"
     value="option 2"
   />
   <Styled(RadioInput)
@@ -33,6 +35,7 @@ exports[`<RadioSet /> should render a radio Button Set 1`] = `
     key="radio-input-set-2"
     label="this is option 3"
     name="radio-input-set"
+    spacing="normal"
     value="option 3"
   />
   <Styled(RadioInput)
@@ -43,6 +46,7 @@ exports[`<RadioSet /> should render a radio Button Set 1`] = `
     key="radio-input-set-3"
     label="this is option 4"
     name="radio-input-set"
+    spacing="normal"
     value="option 4"
   />
 </styled.div>
@@ -60,6 +64,7 @@ exports[`<RadioSet /> should render a radio Set 1`] = `
     key="radio-input-set-0"
     label="123123"
     name="radio-input-set"
+    spacing="normal"
     value="option 1"
   />
   <Styled(RadioInput)
@@ -71,6 +76,7 @@ exports[`<RadioSet /> should render a radio Set 1`] = `
     key="radio-input-set-1"
     label="this is option 2 (I am disabled)"
     name="radio-input-set"
+    spacing="normal"
     value="option 2"
   />
   <Styled(RadioInput)
@@ -81,6 +87,7 @@ exports[`<RadioSet /> should render a radio Set 1`] = `
     key="radio-input-set-2"
     label="this is option 3"
     name="radio-input-set"
+    spacing="normal"
     value="option 3"
   />
   <Styled(RadioInput)
@@ -91,6 +98,59 @@ exports[`<RadioSet /> should render a radio Set 1`] = `
     key="radio-input-set-3"
     label="this is option 4"
     name="radio-input-set"
+    spacing="normal"
+    value="option 4"
+  />
+</styled.div>
+`;
+
+exports[`<RadioSet /> should render a radio Set with a tight spacing 1`] = `
+<styled.div
+  orientation="vertical"
+>
+  <Styled(RadioInput)
+    handleChange={[Function]}
+    id="radio-input-set-0"
+    isButton={false}
+    isChecked={false}
+    key="radio-input-set-0"
+    label="123123"
+    name="radio-input-set"
+    spacing="tight"
+    value="option 1"
+  />
+  <Styled(RadioInput)
+    handleChange={[Function]}
+    id="radio-input-set-1"
+    isButton={false}
+    isChecked={false}
+    isDisabled={true}
+    key="radio-input-set-1"
+    label="this is option 2 (I am disabled)"
+    name="radio-input-set"
+    spacing="tight"
+    value="option 2"
+  />
+  <Styled(RadioInput)
+    handleChange={[Function]}
+    id="radio-input-set-2"
+    isButton={false}
+    isChecked={false}
+    key="radio-input-set-2"
+    label="this is option 3"
+    name="radio-input-set"
+    spacing="tight"
+    value="option 3"
+  />
+  <Styled(RadioInput)
+    handleChange={[Function]}
+    id="radio-input-set-3"
+    isButton={false}
+    isChecked={false}
+    key="radio-input-set-3"
+    label="this is option 4"
+    name="radio-input-set"
+    spacing="tight"
     value="option 4"
   />
 </styled.div>
@@ -108,6 +168,7 @@ exports[`<RadioSet /> should render a radio set with horizontal buttons 1`] = `
     key="radio-input-set-0"
     label="123123"
     name="radio-input-set"
+    spacing="normal"
     value="option 1"
   />
   <Styled(RadioInput)
@@ -119,6 +180,7 @@ exports[`<RadioSet /> should render a radio set with horizontal buttons 1`] = `
     key="radio-input-set-1"
     label="this is option 2 (I am disabled)"
     name="radio-input-set"
+    spacing="normal"
     value="option 2"
   />
   <Styled(RadioInput)
@@ -129,6 +191,7 @@ exports[`<RadioSet /> should render a radio set with horizontal buttons 1`] = `
     key="radio-input-set-2"
     label="this is option 3"
     name="radio-input-set"
+    spacing="normal"
     value="option 3"
   />
   <Styled(RadioInput)
@@ -139,6 +202,7 @@ exports[`<RadioSet /> should render a radio set with horizontal buttons 1`] = `
     key="radio-input-set-3"
     label="this is option 4"
     name="radio-input-set"
+    spacing="normal"
     value="option 4"
   />
 </styled.div>

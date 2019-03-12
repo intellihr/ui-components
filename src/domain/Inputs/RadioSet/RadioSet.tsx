@@ -22,13 +22,16 @@ export interface IRadioSetProps {
   value?: string | number
   /** The name property of the radio inputs */
   name: string
+  /** the spacing of radio set */
+  spacing?: 'normal' | 'tight'
 }
 
 export class RadioSet extends React.PureComponent<IRadioSetProps> {
   public static defaultProps: Partial<IRadioSetProps> = {
     orientation: Props.Orientation.Vertical,
     useButtonStyle: false,
-    value: undefined
+    value: undefined,
+    spacing: 'normal'
   }
 
   get options (): JSX.Element[] {
@@ -37,13 +40,15 @@ export class RadioSet extends React.PureComponent<IRadioSetProps> {
       handleChange,
       useButtonStyle,
       value,
-      name
+      name,
+      spacing
     } = this.props
 
     return options.map((option, idx) => {
       return (
         <StyledRadioInput
           key={`${name}-${idx}`}
+          spacing={spacing!}
           handleChange={handleChange}
           isButton={useButtonStyle}
           isChecked={value === option.value}

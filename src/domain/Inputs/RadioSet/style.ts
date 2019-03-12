@@ -7,6 +7,10 @@ interface IRadioSetWrapperProps {
   orientation: Props.Orientation
 }
 
+interface IStyledRadioInputProps {
+  spacing?: 'normal' | 'tight'
+}
+
 export const RadioSetWrapper = styled.div`
   display: inline-flex;
   max-width: 100%;
@@ -26,4 +30,17 @@ export const RadioSetWrapper = styled.div`
 
 export const StyledRadioInput = styled(RadioInput)`
   margin-bottom: 8px;
+
+  ${(props: IStyledRadioInputProps) => {
+  switch (props.spacing) {
+    case 'normal':
+      return css`
+          margin-bottom: 8px;
+        `
+    case 'tight':
+      return css`
+        margin-bottom: 0;
+      `
+    }
+  }}
 `
