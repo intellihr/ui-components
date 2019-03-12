@@ -1,18 +1,9 @@
 import React from 'react'
 
 import { Props, Variables } from '../../../../common'
-import {
-  FontAwesomeIcon,
-  Icon,
-  IntelliIcon
-} from '../../../Icons'
-import {
-  Text
- } from '../../../Typographies'
-import {
-  StyledTileLabel,
-  TileContentWrapper
-} from './style'
+import { Icon, IconType } from '../../../Icons'
+import { Text } from '../../../Typographies'
+import { StyledTileLabel, TileContentWrapper } from './style'
 import {
   CenteredContentHeading,
   CenteredContentImage,
@@ -25,7 +16,7 @@ import {
 interface IBoardCenteredTileContentProps {
   /** Text displayed above the content of tile */
   label?: string,
-  icon?: FontAwesomeIcon | Icon | IntelliIcon,
+  iconType?: IconType,
   image?: string,
   heading?: string,
   subheading?: string,
@@ -70,18 +61,10 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
 
   private get icon (): JSX.Element | null {
     const {
-      icon,
+      iconType,
       image,
       heading
     } = this.props
-
-    console.log(icon, image)
-    console.log(icon && image)
-    console.log(!icon && !image)
-
-    if (!icon && !image) {
-      return null
-    }
 
     if (image) {
       return (
@@ -94,11 +77,15 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
       )
     }
 
-    return (
-      <CenteredContentImageWrapper>
-        {icon}
-      </CenteredContentImageWrapper>
-    )
+    if (iconType) {
+      return (
+        <CenteredContentImageWrapper>
+          <Icon type={iconType} color={Variables.Color.inherit} customSize={5} />
+        </CenteredContentImageWrapper>
+      )
+    }
+
+    return null
   }
 
   private get heading (): JSX.Element | null {

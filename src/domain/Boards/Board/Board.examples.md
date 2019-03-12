@@ -368,10 +368,7 @@ import { TextLink } from '@Domain/Links';
 #### Tile of type Card
 
 ```jsx
-  import {
-    FontAwesomeIcon,
-    IntelliIcon
-  } from '@Domain/Icons';
+  import { IconType } from '@Domain/Icons';
 
   <Board
     label='A collection of cards'
@@ -405,7 +402,8 @@ import { TextLink } from '@Domain/Links';
       type='card'
     >
       <Board.Tile.CenteredTileContent
-        icon={<IntelliIcon type='smile' customSize={5} />}
+        // icon={<IntelliIcon type='smile' customSize={5} />}
+        iconType='intelli-icon-smile'
         heading='Jeffrey'
         subheading='Harmless guy'
         text="Oh, it's a bit of this, a bit of that. It's called a Jeffrey."
