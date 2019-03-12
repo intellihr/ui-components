@@ -14,7 +14,7 @@ interface IBoardTileProps {
   /** If yes the tile will use the minimum size of a button */
   isButton?: boolean
   /** the style of tile */
-  type?: 'default'|'hollow'
+  type?: 'default'|'hollow'|'card'
   /** onClick event */
   onClick?: (event: React.MouseEvent<HTMLElement>) => void
   /** Anchor href used when clicking between tabs */
