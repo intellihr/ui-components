@@ -1,5 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<CenteredTileContent /> should render a centerd tile with an icon instead of an image 1`] = `
+<styled.div>
+  <styled.div
+    hasTitleLabel={false}
+  >
+    <styled.div>
+      <Icon
+        color="inherit"
+        customSize={5}
+        isSpinning={false}
+        size="medium"
+        type="intelli-icon-smile"
+      />
+    </styled.div>
+    <styled.div>
+      <Text
+        color="inherit"
+        isInline={false}
+        tag="span"
+        type="display-large"
+      >
+        Jeffrey
+      </Text>
+    </styled.div>
+    <styled.div>
+      <Text
+        color="inherit"
+        isInline={false}
+        isUpper={true}
+        tag="span"
+        type="body"
+      >
+        Harmless guy
+      </Text>
+    </styled.div>
+    <styled.div>
+      <Text
+        isInline={false}
+        tag="span"
+        type="small"
+      >
+        Oh, it is a bit of this, a bit of that. It is called a Jeffrey.
+      </Text>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
+
 exports[`<CenteredTileContent /> should render a centered tile content with children 1`] = `
 <styled.div>
   <styled.div
@@ -26,5 +74,50 @@ exports[`<CenteredTileContent /> should render a centered tile content with noth
   <styled.div
     hasTitleLabel={false}
   />
+</styled.div>
+`;
+
+exports[`<CenteredTileContent /> should render a centered tile with an image, heading, subheading and a text 1`] = `
+<styled.div>
+  <styled.div
+    hasTitleLabel={false}
+  >
+    <styled.div>
+      <styled.img
+        alt="An example heading"
+        src="an.example.url/to/an/image"
+      />
+    </styled.div>
+    <styled.div>
+      <Text
+        color="inherit"
+        isInline={false}
+        tag="span"
+        type="display-large"
+      >
+        An example heading
+      </Text>
+    </styled.div>
+    <styled.div>
+      <Text
+        color="inherit"
+        isInline={false}
+        isUpper={true}
+        tag="span"
+        type="body"
+      >
+        Oh look there is a subheading
+      </Text>
+    </styled.div>
+    <styled.div>
+      <Text
+        isInline={false}
+        tag="span"
+        type="small"
+      >
+        When a merge isn’t resolved automatically, git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge.
+      </Text>
+    </styled.div>
+  </styled.div>
 </styled.div>
 `;
