@@ -378,10 +378,10 @@ import { TextLink } from '@Domain/Links';
       type='card'
     >
       <Board.Tile.CenteredTileContent
-        image='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
+        imageSrc='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
         heading='John Wick'
         subheading='The boogeyman'
-        text="People keep asking if I'm back and I haven't really had an answer. But now, yeah, I'm thinkin' I'm back. So you can either hand over your son or you can die screaming alongside him!"
+        description="People keep asking if I'm back and I haven't really had an answer. But now, yeah, I'm thinkin' I'm back. So you can either hand over your son or you can die screaming alongside him!"
       />
     </Board.Tile>
 
@@ -390,10 +390,10 @@ import { TextLink } from '@Domain/Links';
       type='card'
     >
       <Board.Tile.CenteredTileContent
-        image='https://consequenceofsound.files.wordpress.com/2018/05/liam-neeson-taken.jpg?quality=80&w=807'
+        imageSrc='https://consequenceofsound.files.wordpress.com/2018/05/liam-neeson-taken.jpg?quality=80&w=807'
         heading='Bryan Mills'
         subheading='Preventer'
-        text="If you let my daughter go now, that'll be the end of it. I will not look for you, I will not pursue you. But if you don't, I will look for you, I will find you, and I will kill you."
+        description="If you let my daughter go now, that'll be the end of it. I will not look for you, I will not pursue you. But if you don't, I will look for you, I will find you, and I will kill you."
       />
     </Board.Tile>
 
@@ -402,11 +402,10 @@ import { TextLink } from '@Domain/Links';
       type='card'
     >
       <Board.Tile.CenteredTileContent
-        // icon={<IntelliIcon type='smile' customSize={5} />}
         iconType='intelli-icon-smile'
         heading='Jeffrey'
         subheading='Harmless guy'
-        text="Oh, it's a bit of this, a bit of that. It's called a Jeffrey."
+        description="Oh, it's a bit of this, a bit of that. It's called a Jeffrey."
       />
     </Board.Tile>
   </Board>

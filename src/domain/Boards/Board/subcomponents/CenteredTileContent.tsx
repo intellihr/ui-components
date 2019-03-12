@@ -5,11 +5,11 @@ import { Icon, IconType } from '../../../Icons'
 import { Text } from '../../../Typographies'
 import { StyledTileLabel, TileContentWrapper } from './style'
 import {
+  CenteredContentDescription,
   CenteredContentHeading,
   CenteredContentImage,
   CenteredContentImageWrapper,
   CenteredContentSubheading,
-  CenteredContentText,
   CenteredContentWrapper
 } from './styles/centeredTileContent'
 
@@ -17,10 +17,10 @@ interface IBoardCenteredTileContentProps {
   /** Text displayed above the content of tile */
   label?: string,
   iconType?: IconType,
-  image?: string,
+  imageSrc?: string,
   heading?: string,
   subheading?: string,
-  text?: string
+  description?: string
 }
 
 class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentProps, never> {
@@ -38,7 +38,7 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
         {this.icon}
         {this.heading}
         {this.subheading}
-        {this.text}
+        {this.description}
       </CenteredContentWrapper>
     )
   }
@@ -62,15 +62,15 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
   private get icon (): JSX.Element | null {
     const {
       iconType,
-      image,
+      imageSrc,
       heading
     } = this.props
 
-    if (image) {
+    if (imageSrc) {
       return (
         <CenteredContentImageWrapper>
           <CenteredContentImage
-            src={image}
+            src={imageSrc}
             alt={heading}
           />
         </CenteredContentImageWrapper>
@@ -80,7 +80,7 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
     if (iconType) {
       return (
         <CenteredContentImageWrapper>
-          <Icon type={iconType} color={Variables.Color.inherit} customSize={5} />
+          <Icon type={iconType} customSize={5} />
         </CenteredContentImageWrapper>
       )
     }
@@ -133,21 +133,21 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
     )
   }
 
-  private get text (): JSX.Element | null {
+  private get description (): JSX.Element | null {
     const {
-      text
+      description
     } = this.props
 
-    if (text === undefined || text === '') {
+    if (description === undefined || description === '') {
       return null
     }
 
     return (
-      <CenteredContentText>
+      <CenteredContentDescription>
         <Text isInline={false} type={Props.TypographyType.Small}>
-          {text}
+          {description}
         </Text>
-      </CenteredContentText>
+      </CenteredContentDescription>
     )
   }
 

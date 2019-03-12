@@ -56,15 +56,15 @@ const CenteredContentSubheading = styled.div`
   margin-top: 32px;
 `
 
-const CenteredContentText = styled.div`
+const CenteredContentDescription = styled.div`
   margin-top: 8px;
 `
 
 export {
+  CenteredContentDescription,
   CenteredContentWrapper,
   CenteredContentHeading,
   CenteredContentImage,
   CenteredContentImageWrapper,
-  CenteredContentText,
   CenteredContentSubheading
 }
