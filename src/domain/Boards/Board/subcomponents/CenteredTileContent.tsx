@@ -99,13 +99,7 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
 
     return (
       <CenteredContentHeading>
-        <Text
-          isInline={false}
-          type={Props.TypographyType.DisplayLarge}
-          color={Variables.Color.inherit}
-        >
-          {heading}
-        </Text>
+        {heading}
       </CenteredContentHeading>
     )
   }
@@ -121,14 +115,7 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
 
     return (
       <CenteredContentSubheading>
-        <Text
-          isInline={false}
-          type={Props.TypographyType.Body}
-          color={Variables.Color.inherit}
-          isUpper
-        >
-          {subheading}
-        </Text>
+        {subheading}
       </CenteredContentSubheading>
     )
   }
@@ -144,9 +131,7 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
 
     return (
       <CenteredContentDescription>
-        <Text isInline={false} type={Props.TypographyType.Small}>
-          {description}
-        </Text>
+        {description}
       </CenteredContentDescription>
     )
   }
