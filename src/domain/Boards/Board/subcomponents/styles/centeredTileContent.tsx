@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 
 import { Variables } from '../../../../../common'
+import { StyleTileButton } from '../style'
 
 interface IContentWrapperProps {
   hasTitleLabel?: boolean
@@ -36,7 +37,9 @@ const CenteredContentImageWrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  ${CenteredContentWrapper}:hover & {
+  transition: color 0.15s ease-in, background-color 0.15s ease-in;
+  ${StyleTileButton}:hover & {
+    color: ${Variables.Color.i500};
     background-color: ${Variables.Color.n200};
   }
 `
@@ -49,15 +52,41 @@ const CenteredContentImage = styled.img`
 `
 
 const CenteredContentHeading = styled.div`
-  margin-top: 16px;
+  margin-top: ${Variables.Spacing.sMedium}px;
+  font-weight: ${Variables.FontWeight.fwHeavy};
+  line-height: ${Variables.LineHeight.lhDisplayLarge}px;
+  font-size: ${Variables.FontSize.fzDisplayLarge}px;
+  color: ${Variables.Color.n800};
+  text-align: center;
+
+  transition: color 0.15s ease-in;
+  ${StyleTileButton}:hover & {
+    color: ${Variables.Color.i500};
+  }
 `
 
 const CenteredContentSubheading = styled.div`
-  margin-top: 32px;
+  margin-top: ${Variables.Spacing.sXLarge}px;
+  font-weight: ${Variables.FontWeight.fwNormal};
+  line-height: ${Variables.LineHeight.lhBody}px;
+  font-size: ${Variables.FontSize.fzBody}px;
+  color: ${Variables.Color.n600};
+  text-transform: uppercase;
+  text-align: center;
+
+  transition: color 0.15s ease-in;
+  ${StyleTileButton}:hover & {
+    color: ${Variables.Color.i500};
+  }
 `
 
 const CenteredContentDescription = styled.div`
-  margin-top: 8px;
+  margin-top: ${Variables.Spacing.sXSmall}px;
+  font-weight: ${Variables.FontWeight.fwNormal};
+  line-height: ${Variables.LineHeight.lhXSmall}px;
+  font-size: ${Variables.FontSize.fzXSmall}px;
+  color: ${Variables.Color.n600};
+  text-align: center;
 `
 
 export {

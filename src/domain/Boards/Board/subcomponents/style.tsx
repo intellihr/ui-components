@@ -43,7 +43,6 @@ const TileStyles = css`
 
           :hover {
             transform: translateY(-8px);
-            color: ${Variables.Color.i500};
             box-shadow: 0 4px 10px 4px ${Variables.Color.n300};
           }
         `}
