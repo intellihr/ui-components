@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Props } from '../../../../common'
-import { StyleTileButton, StyledAnchorTile, StyledHoverLabel } from './style'
+import { StyledAnchorTile, StyledHoverLabel, StyledTileButton } from './style'
 import { ButtonTileContent } from './ButtonTileContent'
 import { CenteredTileContent } from './CenteredTileContent'
 import { FigureTileContent } from './FigureTileContent'
@@ -98,12 +98,12 @@ class Tile extends React.PureComponent<IBoardTileProps, never> {
     }
 
     return (
-      <StyleTileButton
+      <StyledTileButton
         {...commonProps}
       >
         {children}
         {this.hoverLabel}
-      </StyleTileButton>
+      </StyledTileButton>
     )
   }
 }
