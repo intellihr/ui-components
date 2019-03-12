@@ -18,6 +18,9 @@ namespace Variables {
   }
 
   export enum Color {
+    // CSS
+    inherit = 'inherit',
+
     // Neutral
     n100 = '#FFFFFF',
     n150 = '#FAFBFC',
