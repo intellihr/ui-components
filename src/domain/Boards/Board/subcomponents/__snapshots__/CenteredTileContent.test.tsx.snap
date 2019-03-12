@@ -7,7 +7,6 @@ exports[`<CenteredTileContent /> should render a centerd tile with an icon inste
   >
     <styled.div>
       <Icon
-        color="inherit"
         customSize={5}
         isSpinning={false}
         size="medium"
@@ -15,34 +14,13 @@ exports[`<CenteredTileContent /> should render a centerd tile with an icon inste
       />
     </styled.div>
     <styled.div>
-      <Text
-        color="inherit"
-        isInline={false}
-        tag="span"
-        type="display-large"
-      >
-        Jeffrey
-      </Text>
+      Jeffrey
     </styled.div>
     <styled.div>
-      <Text
-        color="inherit"
-        isInline={false}
-        isUpper={true}
-        tag="span"
-        type="body"
-      >
-        Harmless guy
-      </Text>
+      Harmless guy
     </styled.div>
     <styled.div>
-      <Text
-        isInline={false}
-        tag="span"
-        type="small"
-      >
-        Oh, it is a bit of this, a bit of that. It is called a Jeffrey.
-      </Text>
+      Oh, it is a bit of this, a bit of that. It is called a Jeffrey.
     </styled.div>
   </styled.div>
 </styled.div>
@@ -89,34 +67,13 @@ exports[`<CenteredTileContent /> should render a centered tile with an image, he
       />
     </styled.div>
     <styled.div>
-      <Text
-        color="inherit"
-        isInline={false}
-        tag="span"
-        type="display-large"
-      >
-        An example heading
-      </Text>
+      An example heading
     </styled.div>
     <styled.div>
-      <Text
-        color="inherit"
-        isInline={false}
-        isUpper={true}
-        tag="span"
-        type="body"
-      >
-        Oh look there is a subheading
-      </Text>
+      Oh look there is a subheading
     </styled.div>
     <styled.div>
-      <Text
-        isInline={false}
-        tag="span"
-        type="small"
-      >
-        When a merge isn’t resolved automatically, git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge.
-      </Text>
+      When a merge isn’t resolved automatically, git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge.
     </styled.div>
   </styled.div>
 </styled.div>

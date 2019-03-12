@@ -36,7 +36,7 @@ describe('<CenteredTileContent />', () => {
         imageSrc='an.example.url/to/an/image'
         heading='An example heading'
         subheading='Oh look there is a subheading'
-        text='When a merge isn’t resolved automatically, git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge.'
+        description='When a merge isn’t resolved automatically, git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge.'
       />
     )
 
@@ -49,7 +49,7 @@ describe('<CenteredTileContent />', () => {
         iconType='intelli-icon-smile'
         heading='Jeffrey'
         subheading='Harmless guy'
-        text='Oh, it is a bit of this, a bit of that. It is called a Jeffrey.'
+        description='Oh, it is a bit of this, a bit of that. It is called a Jeffrey.'
       />
     )
 
