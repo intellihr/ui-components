@@ -69,7 +69,7 @@
 ```
 
 #### Board with right component
-   
+
 ```jsx
 import { TextLink } from '@Domain/Links';
 
@@ -376,6 +376,7 @@ import { TextLink } from '@Domain/Links';
     <Board.Tile
       size='medium'
       type='card'
+      anchorHref='https://en.wikipedia.org/wiki/John_Wick_(film)'
     >
       <Board.Tile.CenteredTileContent
         imageSrc='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
@@ -388,6 +389,7 @@ import { TextLink } from '@Domain/Links';
     <Board.Tile
       size='medium'
       type='card'
+      anchorHref='https://en.wikipedia.org/wiki/Taken_(film)'
     >
       <Board.Tile.CenteredTileContent
         imageSrc='https://consequenceofsound.files.wordpress.com/2018/05/liam-neeson-taken.jpg?quality=80&w=807'
@@ -405,7 +407,7 @@ import { TextLink } from '@Domain/Links';
         iconType='intelli-icon-smile'
         heading='Jeffrey'
         subheading='Harmless guy'
-        description="Oh, it's a bit of this, a bit of that. It's called a Jeffrey."
+        description="Oh, it's a bit of this, a bit of that. It's called a Jeffrey. It won't redirect you anywhere."
       />
     </Board.Tile>
   </Board>
