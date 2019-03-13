@@ -26,7 +26,7 @@ exports[`<CenteredTileContent /> should render a centerd tile with an icon inste
 </styled.div>
 `;
 
-exports[`<CenteredTileContent /> should render a centerd tile with an icon instead of an image and pill in the top right corner 1`] = `
+exports[`<CenteredTileContent /> should render a centerd tile with an icon instead of an image and a Pill in the top right corner 1`] = `
 <styled.div>
   <styled.div
     hasTitleLabel={false}
@@ -88,7 +88,7 @@ exports[`<CenteredTileContent /> should render a centered tile content with noth
 </styled.div>
 `;
 
-exports[`<CenteredTileContent /> should render a centered tile with an image, heading, subheading and a text 1`] = `
+exports[`<CenteredTileContent /> should render a centered tile with an image, heading, subheading and a description 1`] = `
 <styled.div>
   <styled.div
     hasTitleLabel={false}
