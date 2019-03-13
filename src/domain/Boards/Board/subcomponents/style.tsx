@@ -8,12 +8,8 @@ interface IStyledTileProps {
   tileSize: 'small'|'medium'|'large'
   isHoverable: boolean
   isButton: boolean
-  type: 'default'|'hollow'
+  type: 'default'|'hollow'|'card'
   hasHoverLabel: boolean
-}
-
-interface IContentWrapperProps {
-  hasTitleLabel?: boolean
 }
 
 interface IStyledHeadingLabelProps {
@@ -35,6 +31,23 @@ const TileStyles = css`
   margin: 0 ${Variables.Spacing.sLarge}px ${Variables.Spacing.sLarge}px 0;
 
   ${(props: IStyledTileProps) => {
+    if (props.type === 'card') {
+      return css`
+        background-color: ${Variables.Color.n100};
+        box-shadow: 0 0 8px ${Variables.Color.n300};
+
+        ${props.isHoverable && css`
+          cursor: pointer;
+          transition: transform 0.15s ease-in, color 0.15s ease-in, box-shadow 0.15s ease-in;
+
+          :hover {
+            transform: translateY(-8px);
+            box-shadow: 0 4px 10px 4px ${Variables.Color.n300};
+          }
+        `}
+      `
+    }
+
     if (props.type === 'hollow') {
       return css`
         background-color: ${Variables.Color.n100};
@@ -103,7 +116,7 @@ const TileStyles = css`
   }}
 `
 
-const StyleTileButton = styled.div`
+const StyledTileButton = styled.div`
   ${TileStyles};
   outline: 0;
   position: relative;
@@ -144,7 +157,7 @@ const StyledTileLabel = styled.span`
   overflow: hidden;
   text-overflow: ellipsis;
 
-  ${StyleTileButton}:hover & {
+  ${StyledTileButton}:hover & {
     color: ${Variables.Color.i400};
   }
 
@@ -247,24 +260,6 @@ const HeadingWrapper = styled.div`
   height: 76px;
 `
 
-const CenteredContentWrapper = styled.div`
-  width: 100%;
-  min-height: 230px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: calc(100% - ${Variables.Spacing.s2XLarge}px);
-
-   ${(props: IContentWrapperProps) => {
-    if (!props.hasTitleLabel) {
-      return css`
-           min-height: 270px;
-        `
-    }
-  }}
-`
-
 const ButtonDescriptionLabel = styled.span`
   font-size: ${Variables.FontSize.fzSmall}px;
   line-height: ${Variables.LineHeight.lhSmall}px;
@@ -297,7 +292,7 @@ const StyledHoverLabel = styled.span`
   overflow: hidden;
   text-overflow: ellipsis;
 
-  ${StyleTileButton}:hover & {
+  ${StyledTileButton}:hover & {
     opacity: 1;
     bottom: 0;
     transition: .25s ease-out;
@@ -352,12 +347,11 @@ export {
   ButtonWrapper,
   StyledIconWrapper,
   StyledTileLabel,
-  StyleTileButton,
+  StyledTileButton,
   StyledAnchorTile,
   StyledFigureLabel,
   HeadingWrapper,
   StyledHeadinglabel,
-  CenteredContentWrapper,
   HeadingLine,
   ButtonDescriptionLabel,
   StyledHoverLabel,
