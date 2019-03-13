@@ -114,7 +114,7 @@ exports[`<Tile /> should render an anchor board tile 1`] = `
 />
 `;
 
-exports[`<Tile /> should render an anchor board tile in new tab if openLinkInNewTab is true 1`] = `
+exports[`<Tile /> should render an anchor board tile in new tab if anchorOpenInNewTab is true 1`] = `
 <Styled(Component)
   data-component-type="tile"
   hasHoverLabel={false}
