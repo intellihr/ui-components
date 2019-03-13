@@ -30,7 +30,7 @@ describe('<CenteredTileContent />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should render a centered tile with an image, heading, subheading and a text', () => {
+  it('should render a centered tile with an image, heading, subheading and a description', () => {
     const wrapper = shallow(
       <CenteredTileContent
         imageSrc='an.example.url/to/an/image'
@@ -56,7 +56,7 @@ describe('<CenteredTileContent />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should render a centerd tile with an icon instead of an image and pill in the top right corner', () => {
+  it('should render a centerd tile with an icon instead of an image and a Pill in the top right corner', () => {
     const wrapper = shallow(
       <CenteredTileContent
         iconType='intelli-icon-smile'
