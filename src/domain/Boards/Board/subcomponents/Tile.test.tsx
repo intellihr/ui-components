@@ -20,6 +20,16 @@ describe('<Tile />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
+  it(`should render an anchor board tile in new tab if anchorOpenInNewTab is true`, () => {
+    const wrapper = shallow(
+      <Tile
+        anchorHref='#dummy'
+        anchorOpenInNewTab
+      />
+    )
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it(`should render a large board tile`, () => {
     const wrapper = shallow(
       <Tile size='large' />

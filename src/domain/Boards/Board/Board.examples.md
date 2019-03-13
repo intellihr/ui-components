@@ -112,12 +112,13 @@ import { TextLink } from '@Domain/Links';
     anchorHref='#'
   >
   </Board.Tile>
-
-  <Board.Tile
-    size='small'
-    anchorHref='#'
-  >
-  </Board.Tile>
+  
+ <Board.Tile
+   size='small'
+   anchorHref='#'
+   anchorOpenInNewTab
+ >
+ </Board.Tile>
 </Board>
 ```
 
