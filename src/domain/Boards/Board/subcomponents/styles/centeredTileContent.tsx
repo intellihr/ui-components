@@ -65,7 +65,9 @@ const CenteredContentImage = styled.img`
 `
 
 const CenteredContentHeading = styled.div`
+  width: 100%;
   margin-top: ${Variables.Spacing.sMedium}px;
+  padding: 0 ${Variables.Spacing.sSmall}px;
   font-weight: ${Variables.FontWeight.fwHeavy};
   line-height: ${Variables.LineHeight.lhDisplayLarge}px;
   font-size: ${Variables.FontSize.fzDisplayLarge}px;
@@ -83,6 +85,7 @@ const CenteredContentHeading = styled.div`
 `
 
 const CenteredContentSubheading = styled.div`
+  width: 100%;
   margin-top: ${Variables.Spacing.sXLarge}px;
   font-weight: ${Variables.FontWeight.fwNormal};
   line-height: ${Variables.LineHeight.lhBody}px;
@@ -102,7 +105,9 @@ const CenteredContentSubheading = styled.div`
 `
 
 const CenteredContentDescription = styled.div`
+  width: 100%;
   margin-top: ${Variables.Spacing.sXSmall}px;
+  padding: 0 ${Variables.Spacing.sSmall}px;
   margin-bottom: ${Variables.Spacing.sXLarge}px;
   font-weight: ${Variables.FontWeight.fwNormal};
   line-height: ${Variables.LineHeight.lhXSmall}px;
