@@ -116,8 +116,14 @@ import { TextLink } from '@Domain/Links';
   <Board.Tile
     size='small'
     anchorHref='#'
-  >
   </Board.Tile>
+  
+ <Board.Tile
+   size='small'
+   anchorHref='#'
+   openLinkInNewTab
+ >
+ </Board.Tile>
 </Board>
 ```
 
