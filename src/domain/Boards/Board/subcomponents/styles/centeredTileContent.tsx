@@ -51,7 +51,7 @@ const CenteredContentImageWrapper = styled.div`
   }
 `
 
-const CenteredContentRHSPill = styled.div`
+const CenteredContentTopRightComponentWrapper = styled.div`
   position: absolute;
   top: 0;
   right: 0;
@@ -114,9 +114,9 @@ const CenteredContentDescription = styled.div`
 export {
   CenteredContentDescription,
   CenteredContentWrapper,
+  CenteredContentTopRightComponentWrapper,
   CenteredContentHeading,
   CenteredContentImage,
   CenteredContentImageWrapper,
-  CenteredContentRHSPill,
   CenteredContentSubheading
 }

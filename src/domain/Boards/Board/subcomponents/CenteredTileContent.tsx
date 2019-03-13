@@ -7,8 +7,8 @@ import {
   CenteredContentHeading,
   CenteredContentImage,
   CenteredContentImageWrapper,
-  CenteredContentRHSPill,
   CenteredContentSubheading,
+  CenteredContentTopRightComponentWrapper,
   CenteredContentWrapper
 } from './styles/centeredTileContent'
 
@@ -54,9 +54,9 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
     }
 
     return (
-      <CenteredContentRHSPill>
+      <CenteredContentTopRightComponentWrapper>
         {topRightComponent}
-      </CenteredContentRHSPill>
+      </CenteredContentTopRightComponentWrapper>
     )
   }
 
