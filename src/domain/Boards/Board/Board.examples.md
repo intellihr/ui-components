@@ -369,6 +369,7 @@ import { TextLink } from '@Domain/Links';
 
 ```jsx
   import { IconType } from '@Domain/Icons';
+  import { Pill } from '@Domain/Pills';
 
   <Board
     label='A collection of cards'
@@ -380,6 +381,12 @@ import { TextLink } from '@Domain/Links';
     >
       <Board.Tile.CenteredTileContent
         imageSrc='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
+        topRightComponent={
+          <Pill
+            text='Rated R'
+            color='alert'
+          />
+        }
         heading='John Wick'
         subheading='The boogeyman'
         description="People keep asking if I'm back and I haven't really had an answer. But now, yeah, I'm thinkin' I'm back. So you can either hand over your son or you can die screaming alongside him!"
@@ -408,6 +415,24 @@ import { TextLink } from '@Domain/Links';
         heading='Jeffrey'
         subheading='Harmless guy'
         description="Oh, it's a bit of this, a bit of that. It's called a Jeffrey. It won't redirect you anywhere."
+      />
+    </Board.Tile>
+
+    <Board.Tile
+      size='medium'
+      type='card'
+    >
+      <Board.Tile.CenteredTileContent
+        iconType='fa-umbrella'
+        topRightComponent={
+          <Pill
+            text='Enabled'
+            color='success'
+          />
+        }
+        heading='Integrations'
+        subheading='An enabled integration'
+        description="This card is showcasing a feature that allows you to pass a component to a card that will be displayed in the top right hand side corner."
       />
     </Board.Tile>
   </Board>

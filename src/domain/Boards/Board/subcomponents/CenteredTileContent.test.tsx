@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { IntelliIcon } from '../../../Icons'
+import { Pill } from '../../../Pills'
 import { CenteredTileContent } from './CenteredTileContent'
 
 describe('<CenteredTileContent />', () => {
@@ -47,6 +47,25 @@ describe('<CenteredTileContent />', () => {
     const wrapper = shallow(
       <CenteredTileContent
         iconType='intelli-icon-smile'
+        heading='Jeffrey'
+        subheading='Harmless guy'
+        description='Oh, it is a bit of this, a bit of that. It is called a Jeffrey.'
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should render a centerd tile with an icon instead of an image and pill in the top right corner', () => {
+    const wrapper = shallow(
+      <CenteredTileContent
+        iconType='intelli-icon-smile'
+        topRightComponent={
+          <Pill
+            text='Testing a pill component'
+            color='success'
+          />
+        }
         heading='Jeffrey'
         subheading='Harmless guy'
         description='Oh, it is a bit of this, a bit of that. It is called a Jeffrey.'

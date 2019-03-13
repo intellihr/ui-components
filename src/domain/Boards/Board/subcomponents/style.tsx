@@ -35,7 +35,7 @@ const TileStyles = css`
       return css`
         background-color: ${Variables.Color.n100};
         box-shadow: 0 0 8px ${Variables.Color.n300};
-        padding: 38px 24px 44px 24px;
+        /* padding: 0 24px 44px 24px; */
 
         ${props.isHoverable && css`
           cursor: pointer;

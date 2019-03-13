@@ -31,6 +31,7 @@ const CenteredContentImageWrapper = styled.div`
   height: 94px;
   overflow: hidden;
   border-radius: 50%;
+  margin-top: ${Variables.Spacing.sXLarge}px;
 
   display: flex;
   flex-flow: column;
@@ -48,6 +49,12 @@ const CenteredContentImageWrapper = styled.div`
     color: ${Variables.Color.i500};
     background-color: ${Variables.Color.n200};
   }
+`
+
+const CenteredContentRHSPill = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
 `
 
 const CenteredContentImage = styled.img`
@@ -96,6 +103,7 @@ const CenteredContentSubheading = styled.div`
 
 const CenteredContentDescription = styled.div`
   margin-top: ${Variables.Spacing.sXSmall}px;
+  margin-bottom: ${Variables.Spacing.sXLarge}px;
   font-weight: ${Variables.FontWeight.fwNormal};
   line-height: ${Variables.LineHeight.lhXSmall}px;
   font-size: ${Variables.FontSize.fzXSmall}px;
@@ -109,5 +117,6 @@ export {
   CenteredContentHeading,
   CenteredContentImage,
   CenteredContentImageWrapper,
+  CenteredContentRHSPill,
   CenteredContentSubheading
 }

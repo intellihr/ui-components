@@ -1,14 +1,13 @@
 import React from 'react'
 
-import { Props, Variables } from '../../../../common'
 import { Icon, IconType } from '../../../Icons'
-import { Text } from '../../../Typographies'
 import { StyledTileLabel, TileContentWrapper } from './style'
 import {
   CenteredContentDescription,
   CenteredContentHeading,
   CenteredContentImage,
   CenteredContentImageWrapper,
+  CenteredContentRHSPill,
   CenteredContentSubheading,
   CenteredContentWrapper
 } from './styles/centeredTileContent'
@@ -16,6 +15,7 @@ import {
 interface IBoardCenteredTileContentProps {
   /** Text displayed above the content of tile */
   label?: string,
+  topRightComponent?: JSX.Element,
   iconType?: IconType,
   imageSrc?: string,
   heading?: string,
@@ -35,11 +35,28 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
         hasTitleLabel={!!label}
       >
         {children}
+        {this.topRightComponent}
         {this.icon}
         {this.heading}
         {this.subheading}
         {this.description}
       </CenteredContentWrapper>
+    )
+  }
+
+  private get topRightComponent (): JSX.Element | null {
+    const {
+      topRightComponent
+    } = this.props
+
+    if (!topRightComponent) {
+      return null
+    }
+
+    return (
+      <CenteredContentRHSPill>
+        {topRightComponent}
+      </CenteredContentRHSPill>
     )
   }
 
@@ -93,7 +110,7 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
       heading
     } = this.props
 
-    if (heading && heading !== '') {
+    if (!heading || heading === '') {
       return null
     }
 
@@ -109,7 +126,7 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
       subheading
     } = this.props
 
-    if (subheading && subheading !== '') {
+    if (!subheading || subheading === '') {
       return null
     }
 
@@ -125,7 +142,7 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
       description
     } = this.props
 
-    if (description || description === '') {
+    if (!description || description === '') {
       return null
     }
 
