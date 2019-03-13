@@ -87,6 +87,7 @@ const CenteredContentHeading = styled.div`
 const CenteredContentSubheading = styled.div`
   width: 100%;
   margin-top: ${Variables.Spacing.sXLarge}px;
+  padding: 0 ${Variables.Spacing.sSmall}px;
   font-weight: ${Variables.FontWeight.fwNormal};
   line-height: ${Variables.LineHeight.lhBody}px;
   font-size: ${Variables.FontSize.fzBody}px;
