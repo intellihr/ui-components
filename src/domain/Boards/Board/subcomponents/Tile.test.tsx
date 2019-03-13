@@ -24,7 +24,7 @@ describe('<Tile />', () => {
     const wrapper = shallow(
       <Tile
         anchorHref='#dummy'
-        openLinkInNewTab
+        anchorOpenInNewTab
       />
     )
     expect(wrapper).toMatchSnapshot()

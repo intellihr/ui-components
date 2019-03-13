@@ -25,8 +25,8 @@ interface IBoardTileProps {
   anchorComponentProps?: {
     [i: string]: any
   }
-  /** Open link in new tab */
-  openLinkInNewTab: boolean
+  /** Open anchor href in new tab */
+  anchorOpenInNewTab: boolean
   /** The data-component-context */
   componentContext?: string
 }
@@ -66,7 +66,7 @@ class Tile extends React.PureComponent<IBoardTileProps, never> {
       size,
       isHoverable,
       anchorHref,
-      openLinkInNewTab,
+      anchorOpenInNewTab,
       anchorComponentProps,
       isButton,
       type,
@@ -87,7 +87,7 @@ class Tile extends React.PureComponent<IBoardTileProps, never> {
       'data-component-context': componentContext
     }
 
-    const target = openLinkInNewTab ? '_blank' : ''
+    const target = anchorOpenInNewTab ? '_blank' : ''
 
     if (anchorHref) {
       return (
