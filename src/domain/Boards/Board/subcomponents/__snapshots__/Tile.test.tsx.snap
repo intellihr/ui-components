@@ -108,6 +108,21 @@ exports[`<Tile /> should render an anchor board tile 1`] = `
   isButton={false}
   isHoverable={true}
   tabIndex={0}
+  target=""
+  tileSize="medium"
+  type="default"
+/>
+`;
+
+exports[`<Tile /> should render an anchor board tile in new tab if anchorOpenInNewTab is true 1`] = `
+<Styled(Component)
+  data-component-type="tile"
+  hasHoverLabel={false}
+  href="#dummy"
+  isButton={false}
+  isHoverable={true}
+  tabIndex={0}
+  target="_blank"
   tileSize="medium"
   type="default"
 />

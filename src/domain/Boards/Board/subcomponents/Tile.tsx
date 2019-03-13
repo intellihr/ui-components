@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Props } from '../../../../common'
-import { StyleTileButton, StyledAnchorTile, StyledHoverLabel } from './style'
+import { StyledAnchorTile, StyledHoverLabel, StyledTileButton } from './style'
 import { ButtonTileContent } from './ButtonTileContent'
 import { CenteredTileContent } from './CenteredTileContent'
 import { FigureTileContent } from './FigureTileContent'
@@ -14,7 +14,7 @@ interface IBoardTileProps {
   /** If yes the tile will use the minimum size of a button */
   isButton?: boolean
   /** the style of tile */
-  type?: 'default'|'hollow'
+  type?: 'default'|'hollow'|'card'
   /** onClick event */
   onClick?: (event: React.MouseEvent<HTMLElement>) => void
   /** Anchor href used when clicking between tabs */
@@ -25,6 +25,8 @@ interface IBoardTileProps {
   anchorComponentProps?: {
     [i: string]: any
   }
+  /** Open anchor href in new tab */
+  anchorOpenInNewTab: boolean
   /** The data-component-context */
   componentContext?: string
 }
@@ -64,6 +66,7 @@ class Tile extends React.PureComponent<IBoardTileProps, never> {
       size,
       isHoverable,
       anchorHref,
+      anchorOpenInNewTab,
       anchorComponentProps,
       isButton,
       type,
@@ -84,11 +87,14 @@ class Tile extends React.PureComponent<IBoardTileProps, never> {
       'data-component-context': componentContext
     }
 
+    const target = anchorOpenInNewTab ? '_blank' : ''
+
     if (anchorHref) {
       return (
         <StyledAnchorTile
           {...commonProps}
           href={anchorHref}
+          target={target}
           anchorComponentProps={anchorComponentProps}
         >
           {children}
@@ -98,12 +104,12 @@ class Tile extends React.PureComponent<IBoardTileProps, never> {
     }
 
     return (
-      <StyleTileButton
+      <StyledTileButton
         {...commonProps}
       >
         {children}
         {this.hoverLabel}
-      </StyleTileButton>
+      </StyledTileButton>
     )
   }
 }

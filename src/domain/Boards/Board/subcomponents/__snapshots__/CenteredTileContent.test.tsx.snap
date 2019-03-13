@@ -1,5 +1,64 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<CenteredTileContent /> should render a centerd tile with an icon instead of an image 1`] = `
+<styled.div>
+  <styled.div
+    hasTitleLabel={false}
+  >
+    <styled.div>
+      <Icon
+        customSize={5}
+        isSpinning={false}
+        size="medium"
+        type="intelli-icon-smile"
+      />
+    </styled.div>
+    <styled.div>
+      Jeffrey
+    </styled.div>
+    <styled.div>
+      Harmless guy
+    </styled.div>
+    <styled.div>
+      Oh, it is a bit of this, a bit of that. It is called a Jeffrey.
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<CenteredTileContent /> should render a centerd tile with an icon instead of an image and a Pill in the top right corner 1`] = `
+<styled.div>
+  <styled.div
+    hasTitleLabel={false}
+  >
+    <styled.div>
+      <Pill
+        color="success"
+        size="small"
+        text="Testing a pill component"
+      />
+    </styled.div>
+    <styled.div>
+      <Icon
+        customSize={5}
+        isSpinning={false}
+        size="medium"
+        type="intelli-icon-smile"
+      />
+    </styled.div>
+    <styled.div>
+      Jeffrey
+    </styled.div>
+    <styled.div>
+      Harmless guy
+    </styled.div>
+    <styled.div>
+      Oh, it is a bit of this, a bit of that. It is called a Jeffrey.
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
+
 exports[`<CenteredTileContent /> should render a centered tile content with children 1`] = `
 <styled.div>
   <styled.div
@@ -26,5 +85,29 @@ exports[`<CenteredTileContent /> should render a centered tile content with noth
   <styled.div
     hasTitleLabel={false}
   />
+</styled.div>
+`;
+
+exports[`<CenteredTileContent /> should render a centered tile with an image, heading, subheading and a description 1`] = `
+<styled.div>
+  <styled.div
+    hasTitleLabel={false}
+  >
+    <styled.div>
+      <styled.img
+        alt="An example heading"
+        src="an.example.url/to/an/image"
+      />
+    </styled.div>
+    <styled.div>
+      An example heading
+    </styled.div>
+    <styled.div>
+      Oh look there is a subheading
+    </styled.div>
+    <styled.div>
+      When a merge isn’t resolved automatically, git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge.
+    </styled.div>
+  </styled.div>
 </styled.div>
 `;
