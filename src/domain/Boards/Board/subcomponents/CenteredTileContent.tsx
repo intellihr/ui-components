@@ -93,7 +93,7 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
       heading
     } = this.props
 
-    if (heading === undefined) {
+    if (heading && heading !== '') {
       return null
     }
 
@@ -109,7 +109,7 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
       subheading
     } = this.props
 
-    if (subheading === undefined) {
+    if (subheading && subheading !== '') {
       return null
     }
 
@@ -125,7 +125,7 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
       description
     } = this.props
 
-    if (description === undefined || description === '') {
+    if (description || description === '') {
       return null
     }
 
