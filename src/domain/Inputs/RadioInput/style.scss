@@ -2,6 +2,8 @@
 
 :local(.radioInput)  {
 
+  $icon-width: 20px;
+
   input {
     height: 0;
     opacity: 0;
@@ -84,7 +86,7 @@
     line-height: $lh-small;
     margin-left: 0;
     margin-right: 0;
-    padding: 4px 16px 4px 32px;
+    padding: $spacing-2xsmall $spacing-medium $spacing-2xsmall $spacing-xlarge;
     position: relative;
     transition: .25s ease-out, color .25s ease-out;
     word-break: break-all;
@@ -95,13 +97,13 @@
       border-radius: 50%;
       content: '';
       display: inline-block;
-      height: 20px;
+      height: $icon-width;
       left: 0;
       position: absolute;
       top: 4px;
       transition: .25s ease-out;
       vertical-align: top;
-      width: 20px;
+      width: $icon-width;
     }
 
     &::after {
@@ -119,16 +121,16 @@
     }
 
     &.radio-button {
-      padding: 10px 24px 10px 44px;
+      padding: $spacing-small $spacing-large $spacing-small ($icon-width + $spacing-large);
 
       &::before {
         left: 12px;
-        top: 10px;
+        top: 12px;
       }
 
       &::after {
         left: 14px;
-        top: 12px;
+        top: 14px;
       }
     }
 

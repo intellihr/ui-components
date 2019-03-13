@@ -1,6 +1,6 @@
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 
-import { Props } from '../../../common'
+import { Props, Variables } from '../../../common'
 import { RadioInput } from '../../Inputs'
 
 interface IRadioSetWrapperProps {
@@ -29,13 +29,11 @@ export const RadioSetWrapper = styled.div`
 `
 
 export const StyledRadioInput = styled(RadioInput)`
-  margin-bottom: 8px;
-
   ${(props: IStyledRadioInputProps) => {
   switch (props.spacing) {
     case 'normal':
       return css`
-          margin-bottom: 8px;
+          margin-bottom: ${Variables.Spacing.sXSmall}px;
         `
     case 'tight':
       return css`

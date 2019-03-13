@@ -1,10 +1,14 @@
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 
-import { Props } from '../../../common'
+import { Props, Variables } from '../../../common'
 import { CheckboxInput } from '../../Inputs'
 
 interface ICheckboxSetWrapperProps {
   orientation: Props.Orientation
+}
+
+interface IStyledCheckboxInputProps {
+  spacing?: 'normal' | 'tight'
 }
 
 export const CheckboxSetWrapper = styled.div`
@@ -26,5 +30,16 @@ export const CheckboxSetWrapper = styled.div`
 `
 
 export const StyledCheckboxInput = styled(CheckboxInput)`
-  margin-bottom: 8px;
+  ${(props: IStyledCheckboxInputProps) => {
+  switch (props.spacing) {
+    case 'normal':
+      return css`
+          margin-bottom: ${Variables.Spacing.sXSmall}px;
+        `
+    case 'tight':
+      return css`
+        margin-bottom: 0;
+      `
+    }
+  }}
 `

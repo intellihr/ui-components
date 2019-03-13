@@ -10,6 +10,7 @@ exports[`<CheckboxSet /> should render a checkbox button set 1`] = `
     key="0-key"
     label="123123"
     name="option-1"
+    spacing="normal"
     value="option 1"
   />
   <Styled(CheckboxInput)
@@ -19,6 +20,7 @@ exports[`<CheckboxSet /> should render a checkbox button set 1`] = `
     key="1-key"
     label="this is option 2 (I am disabled)"
     name="option-2"
+    spacing="normal"
     value="option 2"
   />
   <Styled(CheckboxInput)
@@ -27,6 +29,7 @@ exports[`<CheckboxSet /> should render a checkbox button set 1`] = `
     key="2-key"
     label="this is option 3"
     name="option-3"
+    spacing="normal"
     value="option 3"
   />
   <Styled(CheckboxInput)
@@ -35,6 +38,7 @@ exports[`<CheckboxSet /> should render a checkbox button set 1`] = `
     key="3-key"
     label="this is option 4"
     name="option-4"
+    spacing="normal"
     value="option 4"
   />
 </styled.div>
@@ -49,6 +53,7 @@ exports[`<CheckboxSet /> should render a checkbox set 1`] = `
     key="0-key"
     label="123123"
     name="option-1"
+    spacing="normal"
     value="option 1"
   />
   <Styled(CheckboxInput)
@@ -57,6 +62,7 @@ exports[`<CheckboxSet /> should render a checkbox set 1`] = `
     key="1-key"
     label="this is option 2 (I am disabled)"
     name="option-2"
+    spacing="normal"
     value="option 2"
   />
   <Styled(CheckboxInput)
@@ -64,6 +70,7 @@ exports[`<CheckboxSet /> should render a checkbox set 1`] = `
     key="2-key"
     label="this is option 3"
     name="option-3"
+    spacing="normal"
     value="option 3"
   />
   <Styled(CheckboxInput)
@@ -71,6 +78,7 @@ exports[`<CheckboxSet /> should render a checkbox set 1`] = `
     key="3-key"
     label="this is option 4"
     name="option-4"
+    spacing="normal"
     value="option 4"
   />
 </styled.div>
@@ -85,6 +93,7 @@ exports[`<CheckboxSet /> should render a checkbox set with horizontal buttons 1`
     key="0-key"
     label="123123"
     name="option-1"
+    spacing="normal"
     value="option 1"
   />
   <Styled(CheckboxInput)
@@ -93,6 +102,7 @@ exports[`<CheckboxSet /> should render a checkbox set with horizontal buttons 1`
     key="1-key"
     label="this is option 2 (I am disabled)"
     name="option-2"
+    spacing="normal"
     value="option 2"
   />
   <Styled(CheckboxInput)
@@ -100,6 +110,7 @@ exports[`<CheckboxSet /> should render a checkbox set with horizontal buttons 1`
     key="2-key"
     label="this is option 3"
     name="option-3"
+    spacing="normal"
     value="option 3"
   />
   <Styled(CheckboxInput)
@@ -107,6 +118,47 @@ exports[`<CheckboxSet /> should render a checkbox set with horizontal buttons 1`
     key="3-key"
     label="this is option 4"
     name="option-4"
+    spacing="normal"
+    value="option 4"
+  />
+</styled.div>
+`;
+
+exports[`<CheckboxSet /> should render a checkbox set with tight spacing 1`] = `
+<styled.div
+  orientation="vertical"
+>
+  <Styled(CheckboxInput)
+    handleChange={[Function]}
+    key="0-key"
+    label="123123"
+    name="option-1"
+    spacing="tight"
+    value="option 1"
+  />
+  <Styled(CheckboxInput)
+    handleChange={[Function]}
+    isDisabled={true}
+    key="1-key"
+    label="this is option 2 (I am disabled)"
+    name="option-2"
+    spacing="tight"
+    value="option 2"
+  />
+  <Styled(CheckboxInput)
+    handleChange={[Function]}
+    key="2-key"
+    label="this is option 3"
+    name="option-3"
+    spacing="tight"
+    value="option 3"
+  />
+  <Styled(CheckboxInput)
+    handleChange={[Function]}
+    key="3-key"
+    label="this is option 4"
+    name="option-4"
+    spacing="tight"
     value="option 4"
   />
 </styled.div>
