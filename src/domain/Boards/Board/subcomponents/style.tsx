@@ -3,6 +3,11 @@ import styled, { StyledFunction, css } from 'styled-components'
 
 import {Utils, Variables} from '../../../../common'
 import { Anchor, IAnchorProps } from '../../../Internals/Anchor'
+import {
+  CenteredContentHeading,
+  CenteredContentImageWrapper,
+  CenteredContentSubheading
+} from './styles/centeredTileContent'
 
 interface IStyledTileProps {
   tileSize: 'small'|'medium'|'fullWidth'
@@ -118,6 +123,19 @@ const TileStyles = css`
     ${(props: IStyledTileProps) => props.isHoverable && css`
       ${StyledTileLabel} {
         color: ${Variables.Color.i400};
+      }
+
+      ${CenteredContentHeading} {
+        color: ${Variables.Color.i500};
+      }
+
+      ${CenteredContentSubheading} {
+        color: ${Variables.Color.i500};
+      }
+
+      ${CenteredContentImageWrapper} {
+        background-color: ${Variables.Color.n200};
+        color: ${Variables.Color.i500};
       }
    `}
   }

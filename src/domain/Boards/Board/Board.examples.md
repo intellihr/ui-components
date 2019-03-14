@@ -42,7 +42,7 @@
 </Board>
 ```
 
-#### Board with tiles that are not hoverable
+#### Board with tiles that are hoverable
 
 ```jsx
 <Board
@@ -50,19 +50,19 @@
 >
   <Board.Tile
     size='fullWidth'
-    isHoverable={false}
+    isHoverable
   >
   </Board.Tile>
 
   <Board.Tile
     size='medium'
-    isHoverable={false}
+    isHoverable
   >
   </Board.Tile>
 
   <Board.Tile
     size='small'
-    isHoverable={false}
+    isHoverable
   >
   </Board.Tile>
 </Board>
@@ -379,6 +379,7 @@ import { TextLink } from '@Domain/Links';
     <Board.Tile
       size='medium'
       type='card'
+      isHoverable
       anchorHref='https://en.wikipedia.org/wiki/John_Wick_(film)'
     >
       <Board.Tile.CenteredTileContent
@@ -398,6 +399,7 @@ import { TextLink } from '@Domain/Links';
     <Board.Tile
       size='medium'
       type='card'
+      isHoverable
       anchorHref='https://en.wikipedia.org/wiki/Taken_(film)'
     >
       <Board.Tile.CenteredTileContent
@@ -411,6 +413,7 @@ import { TextLink } from '@Domain/Links';
     <Board.Tile
       size='medium'
       type='card'
+      isHoverable
     >
       <Board.Tile.CenteredTileContent
         iconType='intelli-icon-smile'
@@ -423,6 +426,7 @@ import { TextLink } from '@Domain/Links';
     <Board.Tile
       size='medium'
       type='card'
+      isHoverable
     >
       <Board.Tile.CenteredTileContent
         iconType='fa-umbrella'
