@@ -8,7 +8,7 @@ import { FigureTileContent } from './FigureTileContent'
 
 interface IBoardTileProps {
   /** tile displayed in the size style */
-  size?: 'small'|'medium'|'large'
+  size?: 'small'|'medium'|'fullWidth'
   /** If yes the color of the tile will change when it is hovered */
   isHoverable?: boolean
   /** If yes the tile will use the minimum size of a button */
@@ -38,7 +38,7 @@ class Tile extends React.PureComponent<IBoardTileProps, never> {
 
   public static defaultProps: Partial<IBoardTileProps> = {
     size: 'medium',
-    isHoverable: true,
+    isHoverable: false,
     isButton: false,
     type: 'default'
   }

@@ -53,7 +53,7 @@ describe('<Tile />', () => {
 
   it(`should render a non-hoverable board tile`, () => {
     const wrapper = shallow(
-      <Tile isHoverable={false} />
+      <Tile />
     )
     expect(wrapper).toMatchSnapshot()
   })
@@ -61,6 +61,7 @@ describe('<Tile />', () => {
   it(`should render a hoverable board tile with hover label`, () => {
     const wrapper = shallow(
       <Tile
+        isHoverable
         hoverLabel='hover label'
       />
     )
@@ -70,6 +71,7 @@ describe('<Tile />', () => {
   it(`should render a hoverable board tile button with hover label`, () => {
     const wrapper = shallow(
       <Tile
+        isHoverable
         isButton
       />
     )
@@ -79,6 +81,7 @@ describe('<Tile />', () => {
   it(`should render a hoverable board tile button in hollow style with hover label`, () => {
     const wrapper = shallow(
       <Tile
+        isHoverable
         isButton
         type='hollow'
       />

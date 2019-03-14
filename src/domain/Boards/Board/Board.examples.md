@@ -5,8 +5,8 @@
  label='Basic tiles'
 >
   <Board.Tile
-    size='large'
-    onClick= {() => { alert('I am a large tile') }}
+    size='fullWidth'
+    onClick= {() => { alert('I am a full width tile') }}
   >
   </Board.Tile>
 
@@ -49,7 +49,7 @@
   label='Basic tiles'
 >
   <Board.Tile
-    size='large'
+    size='fullWidth'
     isHoverable={false}
   >
   </Board.Tile>
@@ -88,8 +88,8 @@ import { TextLink } from '@Domain/Links';
  }
 >
  <Board.Tile
-  size='large'
-  onClick= {() => { alert('I am a large tile') }}
+  size='fullWidth'
+  onClick= {() => { alert('I am a full width tile') }}
  >
  </Board.Tile>
 </Board>
@@ -102,7 +102,7 @@ import { TextLink } from '@Domain/Links';
   label='Basic tiles'
 >
   <Board.Tile
-    size='large'
+    size='fullWidth'
     anchorHref='#'
   >
   </Board.Tile>
@@ -130,10 +130,10 @@ import { TextLink } from '@Domain/Links';
   label='Centered tile contents'
 >
   <Board.Tile
-    size='large'
+    size='fullWidth'
    >
     <Board.Tile.CenteredTileContent
-      label='This is a large test tile'
+      label='This is a full width test tile'
     >
       I am the centered content
     </Board.Tile.CenteredTileContent>
@@ -168,10 +168,10 @@ import { TextLink } from '@Domain/Links';
  label='Styled tile content headings'
 >
   <Board.Tile
-    size='large'
+    size='fullWidth'
   >
     <Board.Tile.FigureTileContent
-      label='This is a large styled content tile'
+      label='This is a full width styled content tile'
       heading='heading'
       headingFigure='12'
       subheading='subheading'
@@ -231,13 +231,14 @@ import { TextLink } from '@Domain/Links';
  label='Styled tile content buttons'
 >
   <Board.Tile
-    size='large'
+    size='fullWidth'
     isButton
+    isHoverable
     anchorHref='#'
   >
     <Board.Tile.ButtonTileContent
       iconType='fa-plus-square'
-      label='Large Tile button with a font awesome icon'
+      label='Full width Tile button with a font awesome icon'
       buttonDescription='I am the tile description'
     >
     </Board.Tile.ButtonTileContent>
@@ -314,7 +315,7 @@ import { TextLink } from '@Domain/Links';
   label='Centered tile contents'
 >
   <Board.Tile
-    size='large'
+    size='fullWidth'
     isHoverable
     hoverLabel='hover label'
   >

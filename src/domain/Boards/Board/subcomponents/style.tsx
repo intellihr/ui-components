@@ -5,7 +5,7 @@ import {Utils, Variables} from '../../../../common'
 import { Anchor, IAnchorProps } from '../../../Internals/Anchor'
 
 interface IStyledTileProps {
-  tileSize: 'small'|'medium'|'large'
+  tileSize: 'small'|'medium'|'fullWidth'
   isHoverable: boolean
   isButton: boolean
   type: 'default'|'hollow'|'card'
@@ -98,7 +98,7 @@ const TileStyles = css`
             width: calc(100% - ${Variables.Spacing.sLarge}px);
           }
         `
-      case 'large':
+      case 'fullWidth':
         return css`
           width: calc(100% - ${Variables.Spacing.sLarge}px);
         `
@@ -114,6 +114,13 @@ const TileStyles = css`
       padding-bottom: ${Variables.Spacing.s3XLarge}px;
     `
   }}
+  &:hover {
+    ${(props: IStyledTileProps) => props.isHoverable && css`
+      ${StyledTileLabel} {
+        color: ${Variables.Color.i400};
+      }
+   `}
+  }
 `
 
 const StyledTileButton = styled.div`
@@ -156,14 +163,6 @@ const StyledTileLabel = styled.span`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-
-  ${StyledTileButton}:hover & {
-    color: ${Variables.Color.i400};
-  }
-
-  ${StyledAnchorTile}:hover & {
-    color: ${Variables.Color.i400};
-  }
 
   ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
     text-align: center;
