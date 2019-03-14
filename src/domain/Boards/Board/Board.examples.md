@@ -6,13 +6,11 @@
 >
   <Board.Tile
     size='fullWidth'
-    onClick= {() => { alert('I am a full width tile') }}
   >
   </Board.Tile>
 
   <Board.Tile
     size='medium'
-    onClick= {() => { alert('I am a medium tile') }}
   >
   </Board.Tile>
 

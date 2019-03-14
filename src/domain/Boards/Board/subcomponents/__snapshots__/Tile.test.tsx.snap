@@ -6,7 +6,6 @@ exports[`<Tile /> should render a board tile with nothing 1`] = `
   hasHoverLabel={false}
   isButton={false}
   isHoverable={false}
-  tabIndex={0}
   tileSize="medium"
   type="default"
 />
@@ -18,7 +17,6 @@ exports[`<Tile /> should render a hoverable board tile button in hollow style wi
   hasHoverLabel={false}
   isButton={true}
   isHoverable={true}
-  tabIndex={0}
   tileSize="medium"
   type="hollow"
 />
@@ -30,7 +28,6 @@ exports[`<Tile /> should render a hoverable board tile button with hover label 1
   hasHoverLabel={false}
   isButton={true}
   isHoverable={true}
-  tabIndex={0}
   tileSize="medium"
   type="default"
 />
@@ -42,7 +39,6 @@ exports[`<Tile /> should render a hoverable board tile with hover label 1`] = `
   hasHoverLabel={true}
   isButton={false}
   isHoverable={true}
-  tabIndex={0}
   tileSize="medium"
   type="default"
 >
@@ -58,7 +54,6 @@ exports[`<Tile /> should render a large board tile 1`] = `
   hasHoverLabel={false}
   isButton={false}
   isHoverable={false}
-  tabIndex={0}
   tileSize="large"
   type="default"
 />
@@ -70,7 +65,6 @@ exports[`<Tile /> should render a medium board tile 1`] = `
   hasHoverLabel={false}
   isButton={false}
   isHoverable={false}
-  tabIndex={0}
   tileSize="medium"
   type="default"
 />
@@ -82,7 +76,6 @@ exports[`<Tile /> should render a non-hoverable board tile 1`] = `
   hasHoverLabel={false}
   isButton={false}
   isHoverable={false}
-  tabIndex={0}
   tileSize="medium"
   type="default"
 />
@@ -94,7 +87,6 @@ exports[`<Tile /> should render a small board tile 1`] = `
   hasHoverLabel={false}
   isButton={false}
   isHoverable={false}
-  tabIndex={0}
   tileSize="small"
   type="default"
 />
@@ -107,7 +99,6 @@ exports[`<Tile /> should render an anchor board tile 1`] = `
   href="#dummy"
   isButton={false}
   isHoverable={false}
-  tabIndex={0}
   target=""
   tileSize="medium"
   type="default"
@@ -121,7 +112,6 @@ exports[`<Tile /> should render an anchor board tile in new tab if anchorOpenInN
   href="#dummy"
   isButton={false}
   isHoverable={false}
-  tabIndex={0}
   target="_blank"
   tileSize="medium"
   type="default"
