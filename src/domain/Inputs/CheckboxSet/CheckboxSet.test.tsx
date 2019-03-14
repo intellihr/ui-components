@@ -55,6 +55,19 @@ describe('<CheckboxSet />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
+  it(`should render a checkbox set with tight spacing`, () => {
+    const wrapper = shallow(
+      <CheckboxSet
+        spacing='tight'
+        id='key'
+        handleChange={dummyClick}
+        options={exampleOptions}
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it(`should render a checkbox set with horizontal buttons`, () => {
     const wrapper = shallow(
       <CheckboxSet

@@ -37,6 +37,19 @@ describe('<RadioSet />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
+  it(`should render a radio Set with a tight spacing`, () => {
+    const wrapper = shallow(
+      <RadioSet
+        name='radio-input-set'
+        spacing='tight'
+        handleChange={dummyClick}
+        options={exampleOptions}
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it(`should render a radio Button Set`, () => {
     const wrapper = shallow(
       <RadioSet

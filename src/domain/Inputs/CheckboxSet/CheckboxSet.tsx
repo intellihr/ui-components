@@ -16,11 +16,14 @@ export interface ICheckboxSetProps {
   orientation?: Props.Orientation
   /** If true, all checkbox inputs are wrapped with a button */
   useButtonStyle?: boolean
+  /** the spacing of checkbox set */
+  spacing?: 'normal' | 'tight'
 }
 
 export class CheckboxSet extends React.PureComponent<ICheckboxSetProps> {
   public static defaultProps: Partial<ICheckboxSetProps> = {
-    orientation: Props.Orientation.Vertical
+    orientation: Props.Orientation.Vertical,
+    spacing: 'normal'
   }
 
   get options (): JSX.Element[] {
@@ -28,12 +31,14 @@ export class CheckboxSet extends React.PureComponent<ICheckboxSetProps> {
       options,
       handleChange,
       id,
-      useButtonStyle
+      useButtonStyle,
+      spacing
     } = this.props
 
     return map(options, (option, idx) => (
         <StyledCheckboxInput
           key={id ? `${idx}-${id}` : idx}
+          spacing={spacing!}
           handleChange={handleChange}
           isButton={useButtonStyle}
           {... option}
