@@ -161,6 +161,56 @@ import { TextLink } from '@Domain/Links';
 </Board>
 ```
 
+#### Board with centered tile contents which has a limited content width
+
+```jsx
+<Board
+  label='Centered tile contents'
+>
+  <Board.Tile
+    size='medium'
+   >
+    <Board.Tile.CenteredTileContent
+      label='This is a medium test tile without a limited content width'
+    >
+      "Sunset is the time of day when our sky meets the outer space solar winds. There are blue, pink, and purple swirls, spinning and twisting, like clouds of balloons caught in a whirlwind. The sun moves slowly to hide behind the line of horizon, while the moon races to take its place in prominence atop the night sky. People slow to a crawl, entranced, fully forgetting the deeds that must still be done. There is a coolness, a calmness, when the sun does set."
+    </Board.Tile.CenteredTileContent>
+  </Board.Tile>
+  
+  <Board.Tile
+    size='medium'
+   >
+    <Board.Tile.CenteredTileContent
+      label='This is a medium test tile with a limited content width'
+      limitedContentWidth='medium'
+    >
+      "Sunset is the time of day when our sky meets the outer space solar winds. There are blue, pink, and purple swirls, spinning and twisting, like clouds of balloons caught in a whirlwind. The sun moves slowly to hide behind the line of horizon, while the moon races to take its place in prominence atop the night sky. People slow to a crawl, entranced, fully forgetting the deeds that must still be done. There is a coolness, a calmness, when the sun does set."
+    </Board.Tile.CenteredTileContent>
+  </Board.Tile>
+  
+  <Board.Tile
+    size='small'
+   >
+    <Board.Tile.CenteredTileContent
+      label='This is a small test tile without a limited content width'
+    >
+      "Sunset is the time of day when our sky meets the outer space solar winds. There are blue, pink, and purple swirls, spinning and twisting, like clouds of balloons caught in a whirlwind. The sun moves slowly to hide behind the line of horizon, while the moon races to take its place in prominence atop the night sky. People slow to a crawl, entranced, fully forgetting the deeds that must still be done. There is a coolness, a calmness, when the sun does set."
+    </Board.Tile.CenteredTileContent>
+  </Board.Tile>
+  
+  <Board.Tile
+    size='small'
+   >
+    <Board.Tile.CenteredTileContent
+      label='This is a small test tile with a limited content width'
+      limitedContentWidth='small'
+    >
+      "Sunset is the time of day when our sky meets the outer space solar winds. There are blue, pink, and purple swirls, spinning and twisting, like clouds of balloons caught in a whirlwind. The sun moves slowly to hide behind the line of horizon, while the moon races to take its place in prominence atop the night sky. People slow to a crawl, entranced, fully forgetting the deeds that must still be done. There is a coolness, a calmness, when the sun does set."
+    </Board.Tile.CenteredTileContent>
+  </Board.Tile>
+</Board>
+```
+
 #### Board with figure tile content
 
 ```jsx

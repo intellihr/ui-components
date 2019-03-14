@@ -20,19 +20,26 @@ interface IBoardCenteredTileContentProps {
   imageSrc?: string,
   heading?: string,
   subheading?: string,
-  description?: string
+  description?: string,
+  limitedContentWidth?: 'none' | 'small' | 'medium'
 }
 
 class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentProps, never> {
+  public static defaultProps: Partial<IBoardCenteredTileContentProps> = {
+    limitedContentWidth: 'none'
+  }
+
   private get content (): JSX.Element | null {
     const {
       children,
-      label
+      label,
+      limitedContentWidth
     } = this.props
 
     return (
       <CenteredContentWrapper
         hasTitleLabel={!!label}
+        limitedContentWidth={limitedContentWidth!}
       >
         {children}
         {this.topRightComponent}
@@ -154,8 +161,14 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
   }
 
   public render (): JSX.Element {
+    const {
+      limitedContentWidth
+    } = this.props
+
     return (
-      <TileContentWrapper>
+      <TileContentWrapper
+        limitedContentWidth={limitedContentWidth!}
+      >
         {this.tileLabel}
         {this.content}
       </TileContentWrapper>

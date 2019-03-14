@@ -30,6 +30,15 @@ describe('<CenteredTileContent />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
+  it(`should render a centered tile content with a limited content width`, () => {
+    const wrapper = shallow(
+      <CenteredTileContent
+        limitedContentWidth='small'
+      />
+    )
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it('should render a centered tile with an image, heading, subheading and a description', () => {
     const wrapper = shallow(
       <CenteredTileContent
@@ -43,7 +52,7 @@ describe('<CenteredTileContent />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should render a centerd tile with an icon instead of an image', () => {
+  it('should render a centered tile with an icon instead of an image', () => {
     const wrapper = shallow(
       <CenteredTileContent
         iconType='intelli-icon-smile'
