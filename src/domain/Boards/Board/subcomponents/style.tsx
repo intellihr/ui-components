@@ -141,7 +141,7 @@ const TileStyles = css`
   }
 `
 
-const StyledTileButton = styled.div`
+const StyledTile = styled.div`
   ${TileStyles};
   outline: 0;
   position: relative;
@@ -309,7 +309,7 @@ const StyledHoverLabel = styled.span`
   overflow: hidden;
   text-overflow: ellipsis;
 
-  ${StyledTileButton}:hover & {
+  ${StyledTile}:hover & {
     opacity: 1;
     bottom: 0;
     transition: .25s ease-out;
@@ -363,8 +363,8 @@ export {
   ButtonTextContentWrapper,
   ButtonWrapper,
   StyledIconWrapper,
+  StyledTile,
   StyledTileLabel,
-  StyledTileButton,
   StyledAnchorTile,
   StyledFigureLabel,
   HeadingWrapper,
