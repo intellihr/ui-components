@@ -5,14 +5,12 @@
  label='Basic tiles'
 >
   <Board.Tile
-    size='large'
-    onClick= {() => { alert('I am a large tile') }}
+    size='fullWidth'
   >
   </Board.Tile>
 
   <Board.Tile
     size='medium'
-    onClick= {() => { alert('I am a medium tile') }}
   >
   </Board.Tile>
 
@@ -42,27 +40,27 @@
 </Board>
 ```
 
-#### Board with tiles that are not hoverable
+#### Board with tiles that are hoverable
 
 ```jsx
 <Board
   label='Basic tiles'
 >
   <Board.Tile
-    size='large'
-    isHoverable={false}
+    size='fullWidth'
+    isHoverable
   >
   </Board.Tile>
 
   <Board.Tile
     size='medium'
-    isHoverable={false}
+    isHoverable
   >
   </Board.Tile>
 
   <Board.Tile
     size='small'
-    isHoverable={false}
+    isHoverable
   >
   </Board.Tile>
 </Board>
@@ -88,8 +86,8 @@ import { TextLink } from '@Domain/Links';
  }
 >
  <Board.Tile
-  size='large'
-  onClick= {() => { alert('I am a large tile') }}
+  size='fullWidth'
+  onClick= {() => { alert('I am a full width tile') }}
  >
  </Board.Tile>
 </Board>
@@ -102,7 +100,7 @@ import { TextLink } from '@Domain/Links';
   label='Basic tiles'
 >
   <Board.Tile
-    size='large'
+    size='fullWidth'
     anchorHref='#'
   >
   </Board.Tile>
@@ -130,10 +128,10 @@ import { TextLink } from '@Domain/Links';
   label='Centered tile contents'
 >
   <Board.Tile
-    size='large'
+    size='fullWidth'
    >
     <Board.Tile.CenteredTileContent
-      label='This is a large test tile'
+      label='This is a full width test tile'
     >
       I am the centered content
     </Board.Tile.CenteredTileContent>
@@ -161,6 +159,56 @@ import { TextLink } from '@Domain/Links';
 </Board>
 ```
 
+#### Board with centered tile contents which has a limited content width
+
+```jsx
+<Board
+  label='Centered tile contents'
+>
+  <Board.Tile
+    size='medium'
+   >
+    <Board.Tile.CenteredTileContent
+      label='This is a medium test tile without a limited content width'
+    >
+      "Sunset is the time of day when our sky meets the outer space solar winds. There are blue, pink, and purple swirls, spinning and twisting, like clouds of balloons caught in a whirlwind. The sun moves slowly to hide behind the line of horizon, while the moon races to take its place in prominence atop the night sky. People slow to a crawl, entranced, fully forgetting the deeds that must still be done. There is a coolness, a calmness, when the sun does set."
+    </Board.Tile.CenteredTileContent>
+  </Board.Tile>
+  
+  <Board.Tile
+    size='medium'
+   >
+    <Board.Tile.CenteredTileContent
+      label='This is a medium test tile with a limited content width'
+      limitedContentWidth='medium'
+    >
+      "Sunset is the time of day when our sky meets the outer space solar winds. There are blue, pink, and purple swirls, spinning and twisting, like clouds of balloons caught in a whirlwind. The sun moves slowly to hide behind the line of horizon, while the moon races to take its place in prominence atop the night sky. People slow to a crawl, entranced, fully forgetting the deeds that must still be done. There is a coolness, a calmness, when the sun does set."
+    </Board.Tile.CenteredTileContent>
+  </Board.Tile>
+  
+  <Board.Tile
+    size='small'
+   >
+    <Board.Tile.CenteredTileContent
+      label='This is a small test tile without a limited content width'
+    >
+      "Sunset is the time of day when our sky meets the outer space solar winds. There are blue, pink, and purple swirls, spinning and twisting, like clouds of balloons caught in a whirlwind. The sun moves slowly to hide behind the line of horizon, while the moon races to take its place in prominence atop the night sky. People slow to a crawl, entranced, fully forgetting the deeds that must still be done. There is a coolness, a calmness, when the sun does set."
+    </Board.Tile.CenteredTileContent>
+  </Board.Tile>
+  
+  <Board.Tile
+    size='small'
+   >
+    <Board.Tile.CenteredTileContent
+      label='This is a small test tile with a limited content width'
+      limitedContentWidth='small'
+    >
+      "Sunset is the time of day when our sky meets the outer space solar winds. There are blue, pink, and purple swirls, spinning and twisting, like clouds of balloons caught in a whirlwind. The sun moves slowly to hide behind the line of horizon, while the moon races to take its place in prominence atop the night sky. People slow to a crawl, entranced, fully forgetting the deeds that must still be done. There is a coolness, a calmness, when the sun does set."
+    </Board.Tile.CenteredTileContent>
+  </Board.Tile>
+</Board>
+```
+
 #### Board with figure tile content
 
 ```jsx
@@ -168,10 +216,10 @@ import { TextLink } from '@Domain/Links';
  label='Styled tile content headings'
 >
   <Board.Tile
-    size='large'
+    size='fullWidth'
   >
     <Board.Tile.FigureTileContent
-      label='This is a large styled content tile'
+      label='This is a full width styled content tile'
       heading='heading'
       headingFigure='12'
       subheading='subheading'
@@ -231,13 +279,14 @@ import { TextLink } from '@Domain/Links';
  label='Styled tile content buttons'
 >
   <Board.Tile
-    size='large'
+    size='fullWidth'
     isButton
+    isHoverable
     anchorHref='#'
   >
     <Board.Tile.ButtonTileContent
       iconType='fa-plus-square'
-      label='Large Tile button with a font awesome icon'
+      label='Full width Tile button with a font awesome icon'
       buttonDescription='I am the tile description'
     >
     </Board.Tile.ButtonTileContent>
@@ -314,7 +363,7 @@ import { TextLink } from '@Domain/Links';
   label='Centered tile contents'
 >
   <Board.Tile
-    size='large'
+    size='fullWidth'
     isHoverable
     hoverLabel='hover label'
   >
@@ -378,6 +427,7 @@ import { TextLink } from '@Domain/Links';
     <Board.Tile
       size='medium'
       type='card'
+      isHoverable
       anchorHref='https://en.wikipedia.org/wiki/John_Wick_(film)'
     >
       <Board.Tile.CenteredTileContent
@@ -397,6 +447,7 @@ import { TextLink } from '@Domain/Links';
     <Board.Tile
       size='medium'
       type='card'
+      isHoverable
       anchorHref='https://en.wikipedia.org/wiki/Taken_(film)'
     >
       <Board.Tile.CenteredTileContent
@@ -410,6 +461,7 @@ import { TextLink } from '@Domain/Links';
     <Board.Tile
       size='medium'
       type='card'
+      isHoverable
     >
       <Board.Tile.CenteredTileContent
         iconType='intelli-icon-smile'
@@ -422,6 +474,7 @@ import { TextLink } from '@Domain/Links';
     <Board.Tile
       size='medium'
       type='card'
+      isHoverable
     >
       <Board.Tile.CenteredTileContent
         iconType='fa-umbrella'

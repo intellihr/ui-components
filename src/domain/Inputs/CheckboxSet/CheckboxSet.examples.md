@@ -33,6 +33,42 @@ initialState = { option1: false, option2: false, option3: false, option4: false}
 />
 ```
 
+#### Vertical Checkbox Set with tight spacing
+
+```jsx
+
+initialState = { optionTight1: false, optionTight2: false, optionTight3: false, optionTight4: false};
+
+<CheckboxSet
+  spacing='tight'
+  handleChange={(event) => setState({[event.target.name]: !state[event.target.name]})}
+  options={[
+      {
+        name: 'option1',
+        label:'this is option 1',
+        value: state.optionTight1
+      },
+      {
+        name: 'option2',
+        label:'this is option 2',
+        value: state.option2
+      },
+      {
+        name: 'option3',
+        label:'this is option 3 (I am disabled)',
+        value: state.option3,
+        isDisabled: true
+      },
+      {
+        name: 'option4',
+        label:'this is option 4 (I have a special action)',
+        value: state.option4,
+        handleChange: (event) => { setState({[event.target.name]: !state[event.target.name]});  alert('I have a custom onClick handler!');}
+      }
+    ]}
+/>
+```
+
 #### Vertical Checkbox Button Set
 
 ```jsx
@@ -77,6 +113,49 @@ import { Props } from '@Common';
 initialState = { horizontal1: false, horizontal2: false, horizontal3: false, horixontal4: false, horixontal5: false};
 
 <CheckboxSet
+  orientation={Props.Orientation.Horizontal}
+  handleChange={(event) => setState({[event.target.name]: !state[event.target.name]})}
+  options={[
+      {
+        name: 'horizontal1',
+        label:'this is option 1',
+        value: state.horizontal1
+      },
+      {
+        name: 'horizontal2',
+        label:'this is option 2',
+        value: state.horizontal2
+      },
+      {
+        name: 'horizontal3',
+        label:'this is option 3 (I am disabled)',
+        value: state.horizontal3,
+        isDisabled: true
+      },
+      {
+        name: 'horizontal4',
+        label:'this is option 4 (I have a special action)',
+        value: state.horizontal4,
+        handleChange: (event) => { setState({[event.target.name]: !state[event.target.name]});  alert('I have a custom onClick handler!');}
+      },
+      {
+        name: 'horizontal5',
+        label:'final option is very looooooooooong',
+        value:state.horizontal5,
+      }
+    ]}
+/>
+```
+
+#### Horizontal Checkbox Set with tight spacing
+
+```jsx
+import { Props } from '@Common';
+
+initialState = { horizontal1: false, horizontal2: false, horizontal3: false, horixontal4: false, horixontal5: false};
+
+<CheckboxSet
+  spacing='tight'
   orientation={Props.Orientation.Horizontal}
   handleChange={(event) => setState({[event.target.name]: !state[event.target.name]})}
   options={[

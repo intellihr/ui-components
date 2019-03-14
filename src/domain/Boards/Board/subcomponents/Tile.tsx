@@ -1,14 +1,14 @@
 import React from 'react'
 
 import { Props } from '../../../../common'
-import { StyledAnchorTile, StyledHoverLabel, StyledTileButton } from './style'
+import {StyledAnchorTile, StyledHoverLabel, StyledTile } from './style'
 import { ButtonTileContent } from './ButtonTileContent'
 import { CenteredTileContent } from './CenteredTileContent'
 import { FigureTileContent } from './FigureTileContent'
 
 interface IBoardTileProps {
   /** tile displayed in the size style */
-  size?: 'small'|'medium'|'large'
+  size?: 'small'|'medium'|'fullWidth'
   /** If yes the color of the tile will change when it is hovered */
   isHoverable?: boolean
   /** If yes the tile will use the minimum size of a button */
@@ -26,7 +26,7 @@ interface IBoardTileProps {
     [i: string]: any
   }
   /** Open anchor href in new tab */
-  anchorOpenInNewTab: boolean
+  anchorOpenInNewTab?: boolean
   /** The data-component-context */
   componentContext?: string
 }
@@ -38,9 +38,10 @@ class Tile extends React.PureComponent<IBoardTileProps, never> {
 
   public static defaultProps: Partial<IBoardTileProps> = {
     size: 'medium',
-    isHoverable: true,
+    isHoverable: false,
     isButton: false,
-    type: 'default'
+    type: 'default',
+    anchorOpenInNewTab: false
   }
 
   private get hoverLabel (): JSX.Element | null {
@@ -78,8 +79,6 @@ class Tile extends React.PureComponent<IBoardTileProps, never> {
     const commonProps = {
       'tileSize': size!,
       'isHoverable': isHoverable!,
-      onClick,
-      'tabIndex': 0,
       'isButton': isButton!,
       'type': type!,
       'hasHoverLabel': !!hoverLabel,
@@ -103,13 +102,26 @@ class Tile extends React.PureComponent<IBoardTileProps, never> {
       )
     }
 
+    if (!anchorHref && onClick) {
+      return (
+        <StyledTile
+          {...commonProps}
+          onClick={onClick}
+          tabIndex={0}
+        >
+          {children}
+          {this.hoverLabel}
+        </StyledTile>
+      )
+    }
+
     return (
-      <StyledTileButton
+      <StyledTile
         {...commonProps}
       >
         {children}
         {this.hoverLabel}
-      </StyledTileButton>
+      </StyledTile>
     )
   }
 }

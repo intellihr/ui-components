@@ -28,9 +28,9 @@ initialState = { value: 'No' };
 </div>
 ```
 
- #### Input Button
+#### Input Button
 
- ```jsx
+```jsx
 initialState = { button: 'No' };
 
 <div>

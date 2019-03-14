@@ -3,9 +3,14 @@ import styled, { StyledFunction, css } from 'styled-components'
 
 import {Utils, Variables} from '../../../../common'
 import { Anchor, IAnchorProps } from '../../../Internals/Anchor'
+import {
+  CenteredContentHeading,
+  CenteredContentImageWrapper,
+  CenteredContentSubheading
+} from './styles/centeredTileContent'
 
 interface IStyledTileProps {
-  tileSize: 'small'|'medium'|'large'
+  tileSize: 'small'|'medium'|'fullWidth'
   isHoverable: boolean
   isButton: boolean
   type: 'default'|'hollow'|'card'
@@ -21,6 +26,10 @@ interface IStyledFigureLabelProps {
   isHeading?: boolean
   textWidth: number
   labelStyle: 'success' | 'warning' | 'alert' | 'none'
+}
+
+interface ITileContentWrapperProps {
+  limitedContentWidth?: 'none' | 'small' | 'medium'
 }
 
 const TileStyles = css`
@@ -86,7 +95,7 @@ const TileStyles = css`
           width: 210px;
           min-height: 230px;
 
-          @media (max-width: 443px) {
+          ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
             width: calc(100% - ${Variables.Spacing.sLarge}px);
           }
         `
@@ -94,11 +103,11 @@ const TileStyles = css`
         return css`
           width: 370px;
 
-          @media (max-width: 595px) {
+          ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
             width: calc(100% - ${Variables.Spacing.sLarge}px);
           }
         `
-      case 'large':
+      case 'fullWidth':
         return css`
           width: calc(100% - ${Variables.Spacing.sLarge}px);
         `
@@ -114,9 +123,29 @@ const TileStyles = css`
       padding-bottom: ${Variables.Spacing.s3XLarge}px;
     `
   }}
+  &:hover {
+    ${(props: IStyledTileProps) => props.isHoverable && css`
+      ${StyledTileLabel} {
+        color: ${Variables.Color.i400};
+      }
+
+      ${CenteredContentHeading} {
+        color: ${Variables.Color.i500};
+      }
+
+      ${CenteredContentSubheading} {
+        color: ${Variables.Color.i500};
+      }
+
+      ${CenteredContentImageWrapper} {
+        background-color: ${Variables.Color.n200};
+        color: ${Variables.Color.i500};
+      }
+   `}
+  }
 `
 
-const StyledTileButton = styled.div`
+const StyledTile = styled.div`
   ${TileStyles};
   outline: 0;
   position: relative;
@@ -156,14 +185,6 @@ const StyledTileLabel = styled.span`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-
-  ${StyledTileButton}:hover & {
-    color: ${Variables.Color.i400};
-  }
-
-  ${StyledAnchorTile}:hover & {
-    color: ${Variables.Color.i400};
-  }
 
   ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
     text-align: center;
@@ -270,7 +291,7 @@ const ButtonDescriptionLabel = styled.span`
   position: relative;
   top: -${Variables.Spacing.sXSmall}px;
 
-  @media (max-width: 600px) {
+  ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
     text-align: center;
   }
 `
@@ -292,7 +313,7 @@ const StyledHoverLabel = styled.span`
   overflow: hidden;
   text-overflow: ellipsis;
 
-  ${StyledTileButton}:hover & {
+  ${StyledTile}:hover & {
     opacity: 1;
     bottom: 0;
     transition: .25s ease-out;
@@ -304,7 +325,7 @@ const StyledHoverLabel = styled.span`
     transition: .25s ease-out;
   }
 
-  @media (max-width: 1033px) {
+  ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointDesktop })} {
     opacity: 1;
     bottom: 0;
     transition: .25s ease-out;
@@ -314,8 +335,18 @@ const StyledHoverLabel = styled.span`
 const TileContentWrapper = styled.div`
   height: 100%;
   display: block;
-  width: 100%;
   position: relative;
+  width: 100%;
+
+  ${(props: ITileContentWrapperProps) => {
+  if (props.limitedContentWidth && !(props.limitedContentWidth === 'none')) {
+    return css`
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      `
+    }
+  }}
 `
 const StyledIconWrapper = styled.div`
   width: ${Variables.Spacing.sXLarge}px;
@@ -328,7 +359,7 @@ const ButtonWrapper = styled.div`
   display: flex;
   margin-bottom: -${Variables.Spacing.sXSmall}px;
 
-  @media (max-width: 600px) {
+  ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
     flex-direction: column;
     align-items: center;
   }
@@ -338,7 +369,7 @@ const ButtonTextContentWrapper = styled.div`
   width: calc(100% - 56px);
   position: relative;
 
-  @media (max-width: 600px) {
+  ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
     width: calc(100% - 8px);
   }
 `
@@ -346,8 +377,8 @@ export {
   ButtonTextContentWrapper,
   ButtonWrapper,
   StyledIconWrapper,
+  StyledTile,
   StyledTileLabel,
-  StyledTileButton,
   StyledAnchorTile,
   StyledFigureLabel,
   HeadingWrapper,
