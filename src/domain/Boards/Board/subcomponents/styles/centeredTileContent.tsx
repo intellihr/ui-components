@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components'
 
 import { Variables } from '../../../../../common'
-import { StyledAnchorTile, StyledTileButton } from '../style'
 
 interface IContentWrapperProps {
   hasTitleLabel?: boolean
@@ -39,16 +38,6 @@ const CenteredContentImageWrapper = styled.div`
   align-items: center;
 
   transition: color 0.15s ease-in, background-color 0.15s ease-in;
-
-  ${StyledAnchorTile}:hover & {
-    color: ${Variables.Color.i500};
-    background-color: ${Variables.Color.n200};
-  }
-
-  ${StyledTileButton}:hover & {
-    color: ${Variables.Color.i500};
-    background-color: ${Variables.Color.n200};
-  }
 `
 
 const CenteredContentTopRightComponentWrapper = styled.div`
@@ -73,15 +62,7 @@ const CenteredContentHeading = styled.div`
   font-size: ${Variables.FontSize.fzDisplayLarge}px;
   color: ${Variables.Color.n800};
   text-align: center;
-
   transition: color 0.15s ease-in;
-  ${StyledAnchorTile}:hover & {
-    color: ${Variables.Color.i500};
-  }
-
-  ${StyledTileButton}:hover & {
-    color: ${Variables.Color.i500};
-  }
 `
 
 const CenteredContentSubheading = styled.div`
@@ -94,15 +75,7 @@ const CenteredContentSubheading = styled.div`
   color: ${Variables.Color.n600};
   text-transform: uppercase;
   text-align: center;
-
   transition: color 0.15s ease-in;
-  ${StyledAnchorTile}:hover & {
-    color: ${Variables.Color.i500};
-  }
-
-  ${StyledTileButton}:hover & {
-    color: ${Variables.Color.i500};
-  }
 `
 
 const CenteredContentDescription = styled.div`
