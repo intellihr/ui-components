@@ -28,6 +28,10 @@ interface IStyledFigureLabelProps {
   labelStyle: 'success' | 'warning' | 'alert' | 'none'
 }
 
+interface ITileContentWrapperProps {
+  limitedContentWidth?: 'none' | 'small' | 'medium'
+}
+
 const TileStyles = css`
   border-radius: ${Variables.Style.borderRadius}px;
   min-height: 300px;
@@ -91,7 +95,7 @@ const TileStyles = css`
           width: 210px;
           min-height: 230px;
 
-          @media (max-width: 443px) {
+          ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
             width: calc(100% - ${Variables.Spacing.sLarge}px);
           }
         `
@@ -99,7 +103,7 @@ const TileStyles = css`
         return css`
           width: 370px;
 
-          @media (max-width: 595px) {
+          ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
             width: calc(100% - ${Variables.Spacing.sLarge}px);
           }
         `
@@ -287,7 +291,7 @@ const ButtonDescriptionLabel = styled.span`
   position: relative;
   top: -${Variables.Spacing.sXSmall}px;
 
-  @media (max-width: 600px) {
+  ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
     text-align: center;
   }
 `
@@ -321,7 +325,7 @@ const StyledHoverLabel = styled.span`
     transition: .25s ease-out;
   }
 
-  @media (max-width: 1033px) {
+  ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointDesktop })} {
     opacity: 1;
     bottom: 0;
     transition: .25s ease-out;
@@ -331,8 +335,18 @@ const StyledHoverLabel = styled.span`
 const TileContentWrapper = styled.div`
   height: 100%;
   display: block;
-  width: 100%;
   position: relative;
+  width: 100%;
+
+  ${(props: ITileContentWrapperProps) => {
+  if (props.limitedContentWidth && !(props.limitedContentWidth === 'none')) {
+    return css`
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      `
+    }
+  }}
 `
 const StyledIconWrapper = styled.div`
   width: ${Variables.Spacing.sXLarge}px;
@@ -345,7 +359,7 @@ const ButtonWrapper = styled.div`
   display: flex;
   margin-bottom: -${Variables.Spacing.sXSmall}px;
 
-  @media (max-width: 600px) {
+  ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
     flex-direction: column;
     align-items: center;
   }
@@ -355,7 +369,7 @@ const ButtonTextContentWrapper = styled.div`
   width: calc(100% - 56px);
   position: relative;
 
-  @media (max-width: 600px) {
+  ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
     width: calc(100% - 8px);
   }
 `

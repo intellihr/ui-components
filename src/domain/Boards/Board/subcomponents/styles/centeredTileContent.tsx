@@ -4,6 +4,7 @@ import { Variables } from '../../../../../common'
 
 interface IContentWrapperProps {
   hasTitleLabel?: boolean
+  limitedContentWidth: 'none' | 'small' | 'medium'
 }
 
 const CenteredContentWrapper = styled.div`
@@ -21,6 +22,27 @@ const CenteredContentWrapper = styled.div`
       return css`
         min-height: 270px;
       `
+    }
+  }}
+
+   ${(props: IContentWrapperProps) => {
+  switch (props.limitedContentWidth) {
+    case 'small':
+      return css`
+          max-width: 210px;
+          `
+    case 'medium':
+      return css`
+          max-width: 370px;
+        `
+    case 'none':
+      return css`
+          max-width: 100%;
+        `
+    default:
+      return css`
+          max-width: 100%;
+        `
     }
   }}
 `

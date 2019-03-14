@@ -1,35 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<CenteredTileContent /> should render a centerd tile with an icon instead of an image 1`] = `
-<styled.div>
-  <styled.div
-    hasTitleLabel={false}
-  >
-    <styled.div>
-      <Icon
-        customSize={5}
-        isSpinning={false}
-        size="medium"
-        type="intelli-icon-smile"
-      />
-    </styled.div>
-    <styled.div>
-      Jeffrey
-    </styled.div>
-    <styled.div>
-      Harmless guy
-    </styled.div>
-    <styled.div>
-      Oh, it is a bit of this, a bit of that. It is called a Jeffrey.
-    </styled.div>
-  </styled.div>
-</styled.div>
-`;
-
 exports[`<CenteredTileContent /> should render a centerd tile with an icon instead of an image and a Pill in the top right corner 1`] = `
-<styled.div>
+<styled.div
+  limitedContentWidth="none"
+>
   <styled.div
     hasTitleLabel={false}
+    limitedContentWidth="none"
   >
     <styled.div>
       <Pill
@@ -59,10 +36,24 @@ exports[`<CenteredTileContent /> should render a centerd tile with an icon inste
 </styled.div>
 `;
 
-exports[`<CenteredTileContent /> should render a centered tile content with children 1`] = `
-<styled.div>
+exports[`<CenteredTileContent /> should render a centered tile content with a limited content width 1`] = `
+<styled.div
+  limitedContentWidth="small"
+>
   <styled.div
     hasTitleLabel={false}
+    limitedContentWidth="small"
+  />
+</styled.div>
+`;
+
+exports[`<CenteredTileContent /> should render a centered tile content with children 1`] = `
+<styled.div
+  limitedContentWidth="none"
+>
+  <styled.div
+    hasTitleLabel={false}
+    limitedContentWidth="none"
   >
     children
   </styled.div>
@@ -70,28 +61,66 @@ exports[`<CenteredTileContent /> should render a centered tile content with chil
 `;
 
 exports[`<CenteredTileContent /> should render a centered tile content with label 1`] = `
-<styled.div>
+<styled.div
+  limitedContentWidth="none"
+>
   <styled.span>
     dummy label
   </styled.span>
   <styled.div
     hasTitleLabel={true}
+    limitedContentWidth="none"
   />
 </styled.div>
 `;
 
 exports[`<CenteredTileContent /> should render a centered tile content with nothing 1`] = `
-<styled.div>
+<styled.div
+  limitedContentWidth="none"
+>
   <styled.div
     hasTitleLabel={false}
+    limitedContentWidth="none"
   />
 </styled.div>
 `;
 
-exports[`<CenteredTileContent /> should render a centered tile with an image, heading, subheading and a description 1`] = `
-<styled.div>
+exports[`<CenteredTileContent /> should render a centered tile with an icon instead of an image 1`] = `
+<styled.div
+  limitedContentWidth="none"
+>
   <styled.div
     hasTitleLabel={false}
+    limitedContentWidth="none"
+  >
+    <styled.div>
+      <Icon
+        customSize={5}
+        isSpinning={false}
+        size="medium"
+        type="intelli-icon-smile"
+      />
+    </styled.div>
+    <styled.div>
+      Jeffrey
+    </styled.div>
+    <styled.div>
+      Harmless guy
+    </styled.div>
+    <styled.div>
+      Oh, it is a bit of this, a bit of that. It is called a Jeffrey.
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<CenteredTileContent /> should render a centered tile with an image, heading, subheading and a description 1`] = `
+<styled.div
+  limitedContentWidth="none"
+>
+  <styled.div
+    hasTitleLabel={false}
+    limitedContentWidth="none"
   >
     <styled.div>
       <styled.img
