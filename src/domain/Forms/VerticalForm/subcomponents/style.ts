@@ -7,7 +7,7 @@ interface IStyledInputLabelProps {
 }
 
 const FieldWrapper = styled.div`
-  margin-bottom: 1rem;
+  margin-bottom: ${Variables.Spacing.sLarge}px;
 
   input, textarea, .Select .Select-control {
     margin: 0;
