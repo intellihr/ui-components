@@ -87,16 +87,6 @@ exports[`<LayoutSpacer /> should render a layout spacer with null content 1`] = 
   >
     <styled.div
       data-component-type="layout_spacer_item"
-      key="0"
-      spacingSize={null}
-    >
-      <div
-        className="c0"
-        data-component-type="layout_spacer_item"
-      />
-    </styled.div>
-    <styled.div
-      data-component-type="layout_spacer_item"
       key="1"
     >
       <div

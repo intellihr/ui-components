@@ -7,7 +7,7 @@ interface ILayoutSpacerContentItemProps {
   /** Size of the space between this content item and the next */
   spacingSize?: 'small' | 'medium' | 'large' | 'xlarge',
   /** Content item */
-  content?: JSX.Element,
+  content?: JSX.Element | JSX.Element[] | null,
   /** Component context for the content item */
   componentContext?: string
 }
@@ -32,19 +32,22 @@ class LayoutSpacer extends React.Component<ILayoutSpacerProps> {
         data-component-context={componentContext}
       >
         {
-          contentItems.reduce((acc: JSX.Element[], contentItem) => {
-            return [
-              ...acc,
+          contentItems.map((contentItem, index) => {
+            if (!contentItem.content) {
+              return null
+            }
+
+            return (
               <StyledContentItem
-                spacingSize={contentItem.content && contentItem.spacingSize}
-                key={acc.length}
+                key={index}
+                spacingSize={contentItem.spacingSize}
                 data-component-type={Props.ComponentType.LayoutSpacerItem}
                 data-component-context={contentItem.componentContext}
               >
                 {contentItem.content}
               </StyledContentItem>
-            ]
-          }, [])
+            )
+          })
         }
       </div>
     )

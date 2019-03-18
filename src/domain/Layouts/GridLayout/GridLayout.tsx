@@ -28,7 +28,7 @@ interface ICellOffsetDefinition {
 
 interface IGridLayoutCell {
   /** The content to place within the cell */
-  content: JSX.Element | string | undefined,
+  content?: JSX.Element | string | null,
   /** The size this cell takes up within the grid */
   size?: ICellSizeDefinition | 'auto' | 'shrink',
   /** The cell offset from the edge of the grid */
