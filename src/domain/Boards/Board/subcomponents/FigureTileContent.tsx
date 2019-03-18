@@ -15,11 +15,11 @@ interface IBoardFigureTileContentProps {
   /** Text displayed at the top of tile content */
   heading?: string
   /** Text displayed in the heading */
-  headingFigure?: string
+  headingFigure?: string | number
   /** Text displayed after heading */
   subheading?: string
   /** Text displayed in the subheading */
-  subheadingFigure?: string
+  subheadingFigure?: string | number
   /** The displayed color style of heading */
   headingStyle?: 'success' | 'warning' | 'alert' | 'none'
   /** The displayed color style of subheading */
@@ -118,8 +118,8 @@ class FigureTileContent extends React.PureComponent<IBoardFigureTileContentProps
       subheadingFigure
     } = this.props
 
-    const headingFigureTextLength = headingFigure ? headingFigure.length : 0
-    const subheadingFigureTextLength = subheadingFigure ? subheadingFigure.length : 0
+    const headingFigureTextLength = headingFigure ? headingFigure.toString().length : 0
+    const subheadingFigureTextLength = subheadingFigure ? subheadingFigure.toString().length : 0
 
     return Math.max(headingFigureTextLength * 20, subheadingFigureTextLength * 15) + 16
   }
@@ -178,8 +178,7 @@ class FigureTileContent extends React.PureComponent<IBoardFigureTileContentProps
 
   public render (): JSX.Element {
     return (
-      <TileContentWrapper
-      >
+      <TileContentWrapper>
         {this.tileLabel}
         {this.headings}
         {this.content}

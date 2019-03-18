@@ -21,8 +21,6 @@ interface IBaseModalProps {
   size?: Props.Size.Medium | Props.Size.Large | Props.Size.XLarge
   /** The offset amount for the Z index of the modal */
   offsetZIndex?: number
-  /** Component that will be inserted into the modal */
-  children?: JSX.Element | string
   /** If true, will close when esc is pressed */
   shouldCloseOnEsc?: boolean
   /** If true, will close when overlay is clicked */
