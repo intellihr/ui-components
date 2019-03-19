@@ -183,6 +183,7 @@ const StyledTileLabel = styled.span`
   width: 100%;
   display: block;
   white-space: nowrap;
+  margin-bottom: ${Variables.Spacing.s2XSmall}px;
   overflow: hidden;
   position: relative;
   text-overflow: ellipsis;
@@ -288,6 +289,7 @@ const ButtonDescriptionLabel = styled.span`
   color: ${Variables.Color.n600};
   display: block;
   height: 60px;
+  margin-bottom: ${Variables.Spacing.s2XSmall}px;
   overflow: hidden;
   position: relative;
 
