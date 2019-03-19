@@ -3,6 +3,7 @@ import React from 'react'
 import { Icon, IconType } from '../../../Icons'
 import { StyledTileLabel, TileContentWrapper } from './style'
 import {
+  CenteredContentChildrenWrapper,
   CenteredContentDescription,
   CenteredContentHeading,
   CenteredContentImage,
@@ -41,7 +42,7 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
         hasTitleLabel={!!label}
         limitedContentWidth={limitedContentWidth!}
       >
-        {children}
+        {children && <CenteredContentChildrenWrapper>{children}</CenteredContentChildrenWrapper>}
         {this.topRightComponent}
         {this.icon}
         {this.heading}

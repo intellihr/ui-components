@@ -9,42 +9,40 @@ interface IContentWrapperProps {
 
 const CenteredContentWrapper = styled.div`
   width: 100%;
-  min-height: 230px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  height: 100%;
+  display: table;
+  table-layout: fixed;
 
   ${(props: IContentWrapperProps) => {
-    if (!props.hasTitleLabel) {
+    if (props.hasTitleLabel) {
       return css`
-        min-height: 270px;
+        height: calc(100% - 40px);
       `
     }
   }}
 
-   ${(props: IContentWrapperProps) => {
-  switch (props.limitedContentWidth) {
-    case 'small':
-      return css`
-          max-width: 210px;
+  ${(props: IContentWrapperProps) => {
+    switch (props.limitedContentWidth) {
+      case 'small':
+        return css`
+            max-width: 210px;
+            `
+      case 'medium':
+        return css`
+            max-width: 370px;
           `
-    case 'medium':
-      return css`
-          max-width: 370px;
-        `
-    case 'none':
-      return css`
-          max-width: 100%;
-        `
-    default:
-      return css`
-          max-width: 100%;
-        `
-    }
+      case 'none':
+        return css`
+            max-width: 100%;
+          `
+      }
   }}
+`
+
+const CenteredContentChildrenWrapper = styled.div`
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
 `
 
 const CenteredContentImageWrapper = styled.div`
@@ -53,6 +51,8 @@ const CenteredContentImageWrapper = styled.div`
   overflow: hidden;
   border-radius: 50%;
   margin-top: ${Variables.Spacing.sXLarge}px;
+  margin-left: auto;
+  margin-right: auto;
 
   display: flex;
   flex-flow: column;
@@ -113,6 +113,7 @@ const CenteredContentDescription = styled.div`
 `
 
 export {
+  CenteredContentChildrenWrapper,
   CenteredContentDescription,
   CenteredContentWrapper,
   CenteredContentTopRightComponentWrapper,
