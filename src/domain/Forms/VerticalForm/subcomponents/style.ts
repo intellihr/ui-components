@@ -65,11 +65,8 @@ const StyledLabelWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-
-  ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
-    flex-wrap: wrap;
-    margin-bottom: ${Variables.Spacing.s2XSmall}px;
-  }
+  flex-wrap: wrap;
+  margin-bottom: ${Variables.Spacing.s3XSmall}px;
 `
 
 export {
