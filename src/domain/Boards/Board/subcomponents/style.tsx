@@ -181,9 +181,11 @@ const StyledTileLabel = styled.span`
   line-height: ${Variables.LineHeight.lhBody}px;
   color: ${Variables.Color.n700};
   width: 100%;
-  display: inline-block;
+  display: block;
   white-space: nowrap;
+  margin-bottom: ${Variables.Spacing.s2XSmall}px;
   overflow: hidden;
+  position: relative;
   text-overflow: ellipsis;
 
   ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
@@ -287,9 +289,9 @@ const ButtonDescriptionLabel = styled.span`
   color: ${Variables.Color.n600};
   display: block;
   height: 60px;
+  margin-bottom: ${Variables.Spacing.s2XSmall}px;
   overflow: hidden;
   position: relative;
-  top: -${Variables.Spacing.sXSmall}px;
 
   ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
     text-align: center;
