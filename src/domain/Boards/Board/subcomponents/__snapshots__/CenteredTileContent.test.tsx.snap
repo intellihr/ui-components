@@ -55,7 +55,9 @@ exports[`<CenteredTileContent /> should render a centered tile content with chil
     hasTitleLabel={false}
     limitedContentWidth="none"
   >
-    children
+    <styled.div>
+      children
+    </styled.div>
   </styled.div>
 </styled.div>
 `;
