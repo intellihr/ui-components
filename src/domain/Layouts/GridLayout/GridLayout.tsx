@@ -1,25 +1,21 @@
-import { isNumber, isPlainObject, map } from 'lodash'
 import React from 'react'
 
 import { Props } from '../../../common'
 import {
   GutterSize,
   HorizontalAlignment,
-  IStyledCellOffsets,
-  IStyledCellSizes,
-  IStyledGridGutters,
   StyledCell,
   StyledGridLayout,
   VerticalAlignment
 } from './style'
 
-type AllowedCellSize = number | 'auto' | 'shrink' | 'fullWidth'
+type CellSize = number | 'auto' | 'shrink' | 'fullWidth'
 
 interface ICellSizeDefinition {
-  min?: AllowedCellSize,
-  tablet?: AllowedCellSize,
-  desktop?: AllowedCellSize,
-  bigDesktop?: AllowedCellSize
+  min?: CellSize,
+  tablet?: CellSize,
+  desktop?: CellSize,
+  bigDesktop?: CellSize
 }
 
 interface ICellOffsetDefinition {
@@ -40,9 +36,9 @@ interface IGridLayoutCell {
   /** The content to place within the cell */
   content?: JSX.Element | string | null,
   /** The size this cell takes up within the grid */
-  size?: ICellSizeDefinition | AllowedCellSize,
+  size?: ICellSizeDefinition | CellSize,
   /** The cell offset from the edge of the grid */
-  offset?: ICellOffsetDefinition,
+  offset?: ICellOffsetDefinition | number,
   /** Component context */
   componentContext?: string
 }
@@ -82,133 +78,61 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
     gutterPaddingY: 'none'
   }
 
-  private static breakpointOrder: Array<keyof IStyledCellSizes> = ['min', 'tablet', 'desktop', 'bigDesktop']
-
   public render (): JSX.Element {
     const {
-      gridColumns,
       gutterMarginX,
       gutterMarginY,
-      gutterPaddingX,
-      gutterPaddingY,
       horizontalAlignment,
       verticalAlignment,
       cells,
       componentContext
     } = this.props
 
-    const gutterMarginXForBreakpoints = this.fillInGutterDefinition(gutterMarginX!)
-    const gutterMarginYForBreakpoints = this.fillInGutterDefinition(gutterMarginY!)
-    const gutterPaddingXForBreakpoints = this.fillInGutterDefinition(gutterPaddingX!)
-    const gutterPaddingYForBreakpoints = this.fillInGutterDefinition(gutterPaddingY!)
-
     return (
       <StyledGridLayout
         horizontalAlignment={horizontalAlignment!}
         verticalAlignment={verticalAlignment!}
-        gutterMarginXForBreakpoints={gutterMarginXForBreakpoints}
-        gutterMarginYForBreakpoints={gutterMarginYForBreakpoints}
+        gutterMarginX={gutterMarginX!}
+        gutterMarginY={gutterMarginY!}
         data-component-type={Props.ComponentType.GridLayout}
         data-component-context={componentContext}
       >
-        {cells.map((cell, index) => {
-          const {
-            content,
-            size,
-            offset,
-            componentContext
-          } = cell
-
-          return (
-            <StyledCell
-              key={index}
-              gridColumns={gridColumns!}
-              sizesForBreakpoints={this.fillInCellSizeDefinition(size || 'fullWidth')}
-              offsetsForBreakpoints={this.fillInCellOffsetDefinition(offset || {})}
-              gutterMarginXForBreakpoints={gutterMarginXForBreakpoints}
-              gutterMarginYForBreakpoints={gutterMarginYForBreakpoints}
-              gutterPaddingXForBreakpoints={gutterPaddingXForBreakpoints}
-              gutterPaddingYForBreakpoints={gutterPaddingYForBreakpoints}
-              data-component-type={Props.ComponentType.GridLayoutCell}
-              data-component-context={componentContext}
-            >
-              {content}
-            </StyledCell>
-          )
-        })}
+        {cells.map(this.getCellForDefinition)}
       </StyledGridLayout>
     )
   }
 
-  private fillInGutterDefinition = (gutterDefinition: IGutterSizeDefinition | GutterSize) => {
-    const gutters: IStyledGridGutters = {
-      min: 'none',
-      tablet: 'none',
-      desktop: 'none',
-      bigDesktop: 'none'
-    }
-    let lastGutter: GutterSize | undefined
+  private getCellForDefinition = (cell: IGridLayoutCell, index: number): JSX.Element => {
+    const {
+      gridColumns,
+      gutterMarginX,
+      gutterMarginY,
+      gutterPaddingX,
+      gutterPaddingY
+    } = this.props
+    const {
+      content,
+      size,
+      offset,
+      componentContext
+    } = cell
 
-    // Iterate through the list and fill out any missing gutters
-    for (const bkpt of GridLayout.breakpointOrder) {
-      if (!isPlainObject(gutterDefinition)) {
-        gutters[bkpt] = gutterDefinition as GutterSize
-      } else {
-        const currentGutter = (gutterDefinition as IGutterSizeDefinition)[bkpt as keyof IStyledGridGutters]
-        if (currentGutter) {
-          lastGutter = currentGutter
-        }
-        gutters[bkpt] = lastGutter || 'none'
-      }
-    }
-
-    return gutters
-  }
-
-  private fillInCellSizeDefinition = (sizeDefinition: ICellSizeDefinition | AllowedCellSize): IStyledCellSizes => {
-    const sizes: IStyledCellSizes = {
-      min: 'fullWidth',
-      tablet: 'fullWidth',
-      desktop: 'fullWidth',
-      bigDesktop: 'fullWidth'
-    }
-    let lastSize: AllowedCellSize | undefined
-
-    // Iterate through the list and fill out any missing sizes
-    for (const bkpt of GridLayout.breakpointOrder) {
-      if (sizeDefinition === 'auto' || sizeDefinition === 'shrink' || sizeDefinition === 'fullWidth' || isNumber(sizeDefinition)) {
-        sizes[bkpt] = sizeDefinition as 'auto' | 'shrink' | 'fullWidth' | number
-      } else {
-        const currentSize = sizeDefinition[bkpt]
-        if (currentSize) {
-          lastSize = currentSize
-        }
-        sizes[bkpt] = lastSize || 'fullWidth'
-      }
-    }
-
-    return sizes
-  }
-
-  private fillInCellOffsetDefinition = (offsetDefinition: ICellOffsetDefinition): IStyledCellOffsets => {
-    const offsets: IStyledCellOffsets = {
-      min: 0,
-      tablet: 0,
-      desktop: 0,
-      bigDesktop: 0
-    }
-    let lastOffset: number | undefined
-
-    for (const bkpt of GridLayout.breakpointOrder) {
-      // Iterate through the list and fill out any missing offsets
-      const currentOffset = offsetDefinition[bkpt as keyof IStyledCellOffsets]
-      if (currentOffset) {
-        lastOffset = currentOffset
-      }
-      offsets[bkpt as keyof IStyledCellOffsets] = lastOffset || 0
-    }
-
-    return offsets
+    return (
+      <StyledCell
+        key={index}
+        gridColumns={gridColumns!}
+        sizes={size || 'auto'}
+        offsets={offset || 0}
+        gutterMarginX={gutterMarginX!}
+        gutterMarginY={gutterMarginY!}
+        gutterPaddingX={gutterPaddingX!}
+        gutterPaddingY={gutterPaddingY!}
+        data-component-type={Props.ComponentType.GridLayoutCell}
+        data-component-context={componentContext}
+      >
+        {content}
+      </StyledCell>
+    )
   }
 }
 

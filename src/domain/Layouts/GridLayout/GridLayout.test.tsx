@@ -11,14 +11,14 @@ describe('<GridLayout />', () => {
         horizontalAlignment={GridLayout.HorizontalAlignment.Center}
         verticalAlignment={GridLayout.VerticalAlignment.Stretch}
         gutterMarginX={Variables.Spacing.s2XSmall}
-        gutterPaddingY={Variables.Layout.l2XSmall}
+        gutterPaddingY={{ min: Variables.Layout.l2XSmall, desktop: 'none' }}
         cells={[
           {
-            size: { min: 10 },
+            size: 10,
             content: <div>1</div>
           },
           {
-            size: { min: 2 },
+            size: 2,
             content: <div>2</div>
           },
           {
@@ -32,6 +32,7 @@ describe('<GridLayout />', () => {
           },
           {
             size: 'auto',
+            offset: 3,
             content: <div>5</div>
           }
         ]}
