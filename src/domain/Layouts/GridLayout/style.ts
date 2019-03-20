@@ -185,15 +185,15 @@ function gridStyleForPropsAtBreakpoint (
 
   if (xMarginGutterSize > 0) {
     leftRightMarginGutters = css`
-      margin-left: -${xMarginGutterSize}px;
-      margin-right: -${xMarginGutterSize}px;
+      margin-left: -${xMarginGutterSize / 2}px;
+      margin-right: -${xMarginGutterSize / 2}px;
     `
   }
 
   if (yMarginGutterSize > 0) {
     topBottomMarginGutters = css`
-      margin-top: -${yMarginGutterSize}px;
-      margin-bottom: -${yMarginGutterSize}px;
+      margin-top: -${yMarginGutterSize / 2}px;
+      margin-bottom: -${yMarginGutterSize / 2}px;
     `
   }
 
@@ -269,29 +269,29 @@ function cellStyleForSizeAndGutters (
 
   if (gutters.paddingXPx > 0) {
     leftRightPaddingGutters = css`
-      padding-left: ${gutters.paddingXPx}px;
-      padding-right: ${gutters.paddingXPx}px;
+      padding-left: ${gutters.paddingXPx / 2}px;
+      padding-right: ${gutters.paddingXPx / 2}px;
     `
   }
 
   if (gutters.paddingYPx > 0) {
     topBottomPaddingGutters = css`
-      padding-top: ${gutters.paddingYPx}px;
-      padding-bottom: ${gutters.paddingYPx}px;
+      padding-top: ${gutters.paddingYPx / 2}px;
+      padding-bottom: ${gutters.paddingYPx / 2}px;
     `
   }
 
   if (gutters.marginXPx > 0) {
     leftRightMarginGutters = css`
-      margin-left: ${gutters.marginXPx}px;
-      margin-right: ${gutters.marginXPx}px;
+      margin-left: ${gutters.marginXPx / 2}px;
+      margin-right: ${gutters.marginXPx / 2}px;
     `
   }
 
   if (gutters.marginYPx > 0) {
     topBottomMarginGutters = css`
-      margin-top: ${gutters.marginYPx}px;
-      margin-bottom: ${gutters.marginYPx}px;
+      margin-top: ${gutters.marginYPx / 2}px;
+      margin-bottom: ${gutters.marginYPx / 2}px;
     `
   }
 
@@ -310,7 +310,7 @@ function cellStyleForSizeAndGutters (
 
     if (gutters.marginXPx > 0) {
       flexProperties = css`
-        width: calc(${widthPercentage}% - ${gutters.marginXPx * 2}px);
+        width: calc(${widthPercentage}% - ${gutters.marginXPx}px);
       `
     } else {
       flexProperties = css`
@@ -324,7 +324,7 @@ function cellStyleForSizeAndGutters (
 
     if (gutters.marginXPx > 0) {
       offsetProperties = css`
-        margin-left: calc(${offsetPercentage}% + ${gutters.marginXPx}px);
+        margin-left: calc(${offsetPercentage}% + ${gutters.marginXPx / 2}px);
       `
     } else {
       offsetProperties = css`

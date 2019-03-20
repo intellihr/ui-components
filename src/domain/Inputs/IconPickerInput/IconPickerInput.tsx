@@ -32,8 +32,8 @@ export class IconPickerInput extends React.PureComponent<IIconPickerProps> {
       >
         <GridLayout
           componentContext={componentContext}
-          gutterMarginY={Variables.Spacing.s2XSmall}
-          gutterMarginX={Variables.Spacing.s2XSmall}
+          gutterMarginY={Variables.Spacing.sXSmall}
+          gutterMarginX={Variables.Spacing.sXSmall}
           cells={this.options}
         />
       </div>
