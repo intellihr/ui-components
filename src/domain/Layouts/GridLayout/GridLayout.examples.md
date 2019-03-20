@@ -3,9 +3,11 @@ support for being used within react components.
 
 #### Simple sizing (different screen sizes)
 
-GridLayout works off a 12 position based grid. Any cells going off this will be positioned on the next row.
-Cell sizing work from the given size upwards, and will default to 12 otherwise.
-To size for all screen positions, use `min: X`
+GridLayout works using a 12 position-based grid.
+Any cells exceeding this will be positioned on the next row.
+
+Sizes can be given for all screen breakpoints, or can be
+individualised per breakpoint using `{ min: X, tablet: Y}` setup.
 
 ```jsx
 import { Variables } from '@Common';
@@ -21,11 +23,11 @@ const style = {
 <GridLayout
   cells={[
     {
-      size: { min: 10 },
+      size: 10,
       content: <div style={style}/>
     },
     {
-      size: { min: 2 },
+      size: 2,
       content: <div style={style}/>
     },
     {
@@ -44,11 +46,12 @@ const style = {
 />
 ```
 
-#### Auto and shrink cells
+#### Auto, shrink and fullWidth cells
 
 `shrink` will fit the cell to its content. `auto` will expand the cell to the rest of its row,
 shared between every cell with auto sizing.
-These options can be provided on a size basis or for the entire size on every screen.
+These options can be provided on a per-breakpoint basis or as an overall size across all
+breakpoints.
 
 ```jsx
 import { Variables } from '@Common';
@@ -81,6 +84,38 @@ const styleSmall = {
 />
 ```
 
+`size: 'fullWidth'` is a synonym for `size: 12` and can be semantically used wherever a full
+width cell is desired. The following will be three fullWidth cells on tablet or lower sizes:
+
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
+<GridLayout
+  cells={[
+    {
+      size: { desktop: 3, min: 'fullWidth' },
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 6, min: 'fullWidth' },
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 3, min: 'fullWidth' },
+      content: <div style={style}/>
+    }
+  ]}
+/>
+```
+
 #### Gutters
 
 Gutters can be added as margins and/or as padding between cells. Generally, you'll want to use margins,
@@ -101,11 +136,11 @@ const style = {
   gutterMarginY={Variables.Spacing.sSmall}
   cells={[
     {
-      size: { min: 10 },
+      size: 10,
       content: <div style={style}/>
     },
     {
-      size: { min: 2 },
+      size: 2,
       content: <div style={style}/>
     },
     {
@@ -138,23 +173,23 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
   gutterPaddingY={Variables.Spacing.sSmall}
   cells={[
     {
-      size: { min: 4 },
+      size: 4,
       content: text
     },
     {
-      size: { min: 4 },
+      size: 4,
       content: text
     },
     {
-      size: { min: 4 },
+      size: 4,
       content: text
     },
     {
-      size: { min: 4 },
+      size: 4,
       content: text
     },
     {
-      size: { min: 4 },
+      size: 4,
       content: text
     }
   ]}
@@ -177,11 +212,11 @@ const style = {
     gutterMarginX={Variables.Spacing.s2XSmall}
     cells={[
       {
-        size: { min: 6 },
+        size: 6,
         content: <div style={style}>spacing-2xsmall gutters</div>
       },
       {
-        size: { min: 6 },
+        size: 6,
         content: <div style={style}/>
       }
     ]}
@@ -190,11 +225,11 @@ const style = {
     gutterMarginX={Variables.Spacing.sMedium}
     cells={[
       {
-        size: { min: 6 },
+        size: 6,
         content: <div style={style}>spacing-medium gutters</div>
       },
       {
-        size: { min: 6 },
+        size: 6,
         content: <div style={style}/>
       }
     ]}
@@ -203,16 +238,56 @@ const style = {
     gutterMarginX={Variables.Layout.lLarge}
     cells={[
       {
-        size: { min: 6 },
+        size: 6,
         content: <div style={style}>layout-large gutters</div>
       },
       {
-        size: { min: 6 },
+        size: 6,
         content: <div style={style}/>
       }
     ]}
   />
 </>
+```
+
+Gutters also support being customised per breakpoint. The following will have large gutters
+on desktop but small gutters on mobile:
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
+<GridLayout
+  gutterMarginX={{ desktop: Variables.Spacing.sLarge, min: Variables.Spacing.sSmall }}
+  gutterMarginY={{ desktop: Variables.Spacing.sLarge, min: Variables.Spacing.sSmall }}
+  cells={[
+    {
+      size: 10,
+      content: <div style={style}/>
+    },
+    {
+      size: 2,
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 3, tablet: 4 },
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 6, tablet: 4 },
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 3, tablet: 4 },
+      content: <div style={style}/>
+    }
+  ]}
+/>
 ```
 
 #### Offsets
@@ -236,12 +311,12 @@ const style = {
 <GridLayout
   cells={[
     {
-      size: { min: 4 },
+      size: 4,
       offset: { desktop: 7 },
       content: <div style={style}/>
     },
     {
-      size: { min: 1 },
+      size: 1,
       content: <div style={style}/>
     }
   ]}
@@ -267,11 +342,11 @@ const style = {
   <GridLayout
     cells={[
       {
-        size: { min: 4 },
+        size: 4,
         content: <div style={style}>Aligned to</div>
       },
       {
-        size: { min: 4 },
+        size: 4,
         content: <div style={style}>the left (default)</div>
       }
     ]}
@@ -280,11 +355,11 @@ const style = {
     horizontalAlignment={GridLayout.HorizontalAlignment.Right}
     cells={[
       {
-        size: { min: 4 },
+        size: 4,
         content: <div style={style}>Aligned to</div>
       },
       {
-        size: { min: 4 },
+        size: 4,
         content: <div style={style}>the right</div>
       }
     ]}
@@ -293,11 +368,11 @@ const style = {
     horizontalAlignment={GridLayout.HorizontalAlignment.Center}
     cells={[
       {
-        size: { min: 4 },
+        size: 4,
         content: <div style={style}>Aligned to</div>
       },
       {
-        size: { min: 4 },
+        size: 4,
         content: <div style={style}>the center</div>
       }
     ]}
@@ -306,11 +381,11 @@ const style = {
     horizontalAlignment={GridLayout.HorizontalAlignment.Justify}
     cells={[
       {
-        size: { min: 4 },
+        size: 4,
         content: <div style={style}>Aligned to</div>
       },
       {
-        size: { min: 4 },
+        size: 4,
         content: <div style={style}>push to the edges</div>
       }
     ]}
@@ -319,11 +394,11 @@ const style = {
     horizontalAlignment={GridLayout.HorizontalAlignment.Spaced}
     cells={[
       {
-        size: { min: 4 },
+        size: 4,
         content: <div style={style}>Aligned to</div>
       },
       {
-        size: { min: 4 },
+        size: 4,
         content: <div style={style}>spread evenly</div>
       }
     ]}
@@ -353,11 +428,11 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id 
     verticalAlignment={GridLayout.VerticalAlignment.Top}
     cells={[
       {
-        size: { min: 4 },
+        size: 4,
         content: <div style={style}>Aligned to the top</div>
       },
       {
-        size: { min: 4 },
+        size: 4,
         content: <div style={style}>{text}</div>
       }
     ]}
@@ -366,11 +441,11 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id 
     verticalAlignment={GridLayout.VerticalAlignment.Middle}
     cells={[
       {
-        size: { min: 4 },
+        size: 4,
         content: <div style={style}>Aligned to the middle</div>
       },
       {
-        size: { min: 4 },
+        size: 4,
         content: <div style={style}>{text}</div>
       }
     ]}
@@ -379,11 +454,11 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id 
     verticalAlignment={GridLayout.VerticalAlignment.Bottom}
     cells={[
       {
-        size: { min: 4 },
+        size: 4,
         content: <div style={style}>Aligned to the bottom</div>
       },
       {
-        size: { min: 4 },
+        size: 4,
         content: <div style={style}>{text}</div>
       }
     ]}
@@ -392,11 +467,11 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id 
     verticalAlignment={GridLayout.VerticalAlignment.Stretch}
     cells={[
       {
-        size: { min: 4 },
+        size: 4,
         content: <div style={style}>Stretched to have the same height (default behaviour)</div>
       },
       {
-        size: { min: 4 },
+        size: 4,
         content: <div style={style}>{text}</div>
       }
     ]}
@@ -425,11 +500,11 @@ const style = {
   gridColumns={20}
   cells={[
     {
-      size: { min: 10 },
+      size: 10,
       content: <div style={style}/>
     },
     {
-      size: { min: 2 },
+      size: 2,
       content: <div style={style}/>
     },
     {
@@ -463,19 +538,19 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id 
   gutterMarginY='large'
   cells={[
     {
-      size: { min: 12 },
+      size: 'fullWidth',
       content: <div style={style}>{text}</div>
     },
     {
-      size: { min: 12 },
+      size: 'fullWidth',
       content: <div style={style}>{text}</div>
     },
     {
-      size: { min: 12 },
+      size: 'fullWidth',
       content: <div style={style}>{text}</div>
     },
     {
-      size: { min: 12 },
+      size: 'fullWidth',
       content: <div style={style}>{text}</div>
     }
   ]}
