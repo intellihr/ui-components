@@ -12,8 +12,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
-  margin-left: -4px;
-  margin-right: -4px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -34,10 +32,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   min-height: 0;
   min-width: 0;
   width: 100%;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  margin-left: 4px;
-  margin-right: 4px;
 }
 
 .c2 {
@@ -50,10 +44,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   min-height: 0;
   min-width: 0;
   width: 100%;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  margin-left: 4px;
-  margin-right: 4px;
 }
 
 .c3 {
@@ -66,10 +56,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   min-height: 0;
   min-width: 0;
   width: 100%;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  margin-left: 4px;
-  margin-right: 4px;
 }
 
 .c4 {
@@ -82,10 +68,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   min-height: 0;
   min-width: 0;
   width: 100%;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  margin-left: 4px;
-  margin-right: 4px;
 }
 
 .c5 {
@@ -98,71 +80,127 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   min-height: 0;
   min-width: 0;
   width: 100%;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  margin-left: 4px;
-  margin-right: 4px;
+}
+
+@media only screen and (max-width:639px) {
+  .c0 {
+    margin-left: -4px;
+    margin-right: -4px;
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c0 {
+    margin-left: -4px;
+    margin-right: -4px;
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c0 {
+    margin-left: -4px;
+    margin-right: -4px;
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c0 {
+    margin-left: -4px;
+    margin-right: -4px;
+  }
 }
 
 @media only screen and (max-width:639px) {
   .c1 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-left: 4px;
+    margin-right: 4px;
     width: calc(83.33333333333333% - 8px);
   }
 }
 
 @media only screen and (min-width:640px) and (max-width:1033px) {
   .c1 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-left: 4px;
+    margin-right: 4px;
     width: calc(83.33333333333333% - 8px);
   }
 }
 
 @media only screen and (min-width:1034px) and (max-width:1439px) {
   .c1 {
+    margin-left: 4px;
+    margin-right: 4px;
     width: calc(83.33333333333333% - 8px);
   }
 }
 
 @media only screen and (min-width:1440px) {
   .c1 {
+    margin-left: 4px;
+    margin-right: 4px;
     width: calc(83.33333333333333% - 8px);
   }
 }
 
 @media only screen and (max-width:639px) {
   .c2 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-left: 4px;
+    margin-right: 4px;
     width: calc(16.666666666666668% - 8px);
   }
 }
 
 @media only screen and (min-width:640px) and (max-width:1033px) {
   .c2 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-left: 4px;
+    margin-right: 4px;
     width: calc(16.666666666666668% - 8px);
   }
 }
 
 @media only screen and (min-width:1034px) and (max-width:1439px) {
   .c2 {
+    margin-left: 4px;
+    margin-right: 4px;
     width: calc(16.666666666666668% - 8px);
   }
 }
 
 @media only screen and (min-width:1440px) {
   .c2 {
+    margin-left: 4px;
+    margin-right: 4px;
     width: calc(16.666666666666668% - 8px);
   }
 }
 
 @media only screen and (max-width:639px) {
   .c3 {
-    -webkit-flex: 1 1 0px;
-    -ms-flex: 1 1 0px;
-    flex: 1 1 0px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    -webkit-flex: 1 1 0;
+    -ms-flex: 1 1 0;
+    flex: 1 1 0;
     width: auto;
   }
 }
 
 @media only screen and (min-width:640px) and (max-width:1033px) {
   .c3 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-left: 4px;
+    margin-right: 4px;
     width: calc(33.333333333333336% - 8px);
     margin-left: calc(16.666666666666668% + 4px);
   }
@@ -170,6 +208,8 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
 
 @media only screen and (min-width:1034px) and (max-width:1439px) {
   .c3 {
+    margin-left: 4px;
+    margin-right: 4px;
     width: calc(25% - 8px);
     margin-left: calc(16.666666666666668% + 4px);
   }
@@ -177,6 +217,8 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
 
 @media only screen and (min-width:1440px) {
   .c3 {
+    margin-left: 4px;
+    margin-right: 4px;
     width: calc(25% - 8px);
     margin-left: calc(16.666666666666668% + 4px);
   }
@@ -184,64 +226,92 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
 
 @media only screen and (max-width:639px) {
   .c4 {
-    -webkit-flex: 1 1 0px;
-    -ms-flex: 1 1 0px;
-    flex: 1 1 0px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    -webkit-flex: 1 1 0;
+    -ms-flex: 1 1 0;
+    flex: 1 1 0;
     width: auto;
   }
 }
 
 @media only screen and (min-width:640px) and (max-width:1033px) {
   .c4 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-left: 4px;
+    margin-right: 4px;
     width: calc(33.333333333333336% - 8px);
   }
 }
 
 @media only screen and (min-width:1034px) and (max-width:1439px) {
   .c4 {
+    margin-left: 4px;
+    margin-right: 4px;
     width: calc(50% - 8px);
   }
 }
 
 @media only screen and (min-width:1440px) {
   .c4 {
+    margin-left: 4px;
+    margin-right: 4px;
     width: calc(50% - 8px);
   }
 }
 
 @media only screen and (max-width:639px) {
   .c5 {
-    -webkit-flex: 1 1 0px;
-    -ms-flex: 1 1 0px;
-    flex: 1 1 0px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    -webkit-flex: 1 1 0;
+    -ms-flex: 1 1 0;
+    flex: 1 1 0;
     width: auto;
+    margin-left: calc(25% + 4px);
   }
 }
 
 @media only screen and (min-width:640px) and (max-width:1033px) {
   .c5 {
-    -webkit-flex: 1 1 0px;
-    -ms-flex: 1 1 0px;
-    flex: 1 1 0px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    -webkit-flex: 1 1 0;
+    -ms-flex: 1 1 0;
+    flex: 1 1 0;
     width: auto;
+    margin-left: calc(25% + 4px);
   }
 }
 
 @media only screen and (min-width:1034px) and (max-width:1439px) {
   .c5 {
-    -webkit-flex: 1 1 0px;
-    -ms-flex: 1 1 0px;
-    flex: 1 1 0px;
+    margin-left: 4px;
+    margin-right: 4px;
+    -webkit-flex: 1 1 0;
+    -ms-flex: 1 1 0;
+    flex: 1 1 0;
     width: auto;
+    margin-left: calc(25% + 4px);
   }
 }
 
 @media only screen and (min-width:1440px) {
   .c5 {
-    -webkit-flex: 1 1 0px;
-    -ms-flex: 1 1 0px;
-    flex: 1 1 0px;
+    margin-left: 4px;
+    margin-right: 4px;
+    -webkit-flex: 1 1 0;
+    -ms-flex: 1 1 0;
+    flex: 1 1 0;
     width: auto;
+    margin-left: calc(25% + 4px);
   }
 }
 
@@ -252,17 +322,13 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
         "content": <div>
           1
         </div>,
-        "size": Object {
-          "min": 10,
-        },
+        "size": 10,
       },
       Object {
         "content": <div>
           2
         </div>,
-        "size": Object {
-          "min": 2,
-        },
+        "size": 2,
       },
       Object {
         "content": <div>
@@ -289,6 +355,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
         "content": <div>
           5
         </div>,
+        "offset": 3,
         "size": "auto",
       },
     ]
@@ -297,7 +364,12 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   gutterMarginX={4}
   gutterMarginY="none"
   gutterPaddingX="none"
-  gutterPaddingY={16}
+  gutterPaddingY={
+    Object {
+      "desktop": "none",
+      "min": 16,
+    }
+  }
   horizontalAlignment="center"
   verticalAlignment="stretch"
 >
@@ -318,28 +390,20 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
         gutterMarginX={4}
         gutterMarginY="none"
         gutterPaddingX="none"
-        gutterPaddingY={16}
+        gutterPaddingY={
+          Object {
+            "desktop": "none",
+            "min": 16,
+          }
+        }
         key="0"
-        offsetsForBreakpoints={
-          Object {
-            "bigDesktop": 0,
-            "desktop": 0,
-            "min": 0,
-            "tablet": 0,
-          }
-        }
-        sizesForBreakpoints={
-          Object {
-            "bigDesktop": 10,
-            "desktop": 10,
-            "min": 10,
-            "tablet": 10,
-          }
-        }
+        offsets={0}
+        sizes={10}
       >
         <div
           className="c1"
           data-component-type="grid_layout_cell"
+          sizes={10}
         >
           <div>
             1
@@ -352,28 +416,20 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
         gutterMarginX={4}
         gutterMarginY="none"
         gutterPaddingX="none"
-        gutterPaddingY={16}
+        gutterPaddingY={
+          Object {
+            "desktop": "none",
+            "min": 16,
+          }
+        }
         key="1"
-        offsetsForBreakpoints={
-          Object {
-            "bigDesktop": 0,
-            "desktop": 0,
-            "min": 0,
-            "tablet": 0,
-          }
-        }
-        sizesForBreakpoints={
-          Object {
-            "bigDesktop": 2,
-            "desktop": 2,
-            "min": 2,
-            "tablet": 2,
-          }
-        }
+        offsets={0}
+        sizes={2}
       >
         <div
           className="c2"
           data-component-type="grid_layout_cell"
+          sizes={2}
         >
           <div>
             2
@@ -386,21 +442,21 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
         gutterMarginX={4}
         gutterMarginY="none"
         gutterPaddingX="none"
-        gutterPaddingY={16}
-        key="2"
-        offsetsForBreakpoints={
+        gutterPaddingY={
           Object {
-            "bigDesktop": 2,
-            "desktop": 2,
-            "min": 0,
+            "desktop": "none",
+            "min": 16,
+          }
+        }
+        key="2"
+        offsets={
+          Object {
             "tablet": 2,
           }
         }
-        sizesForBreakpoints={
+        sizes={
           Object {
-            "bigDesktop": 3,
             "desktop": 3,
-            "min": "auto",
             "tablet": 4,
           }
         }
@@ -408,6 +464,12 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
         <div
           className="c3"
           data-component-type="grid_layout_cell"
+          sizes={
+            Object {
+              "desktop": 3,
+              "tablet": 4,
+            }
+          }
         >
           <div>
             3
@@ -420,21 +482,17 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
         gutterMarginX={4}
         gutterMarginY="none"
         gutterPaddingX="none"
-        gutterPaddingY={16}
-        key="3"
-        offsetsForBreakpoints={
+        gutterPaddingY={
           Object {
-            "bigDesktop": 0,
-            "desktop": 0,
-            "min": 0,
-            "tablet": 0,
+            "desktop": "none",
+            "min": 16,
           }
         }
-        sizesForBreakpoints={
+        key="3"
+        offsets={0}
+        sizes={
           Object {
-            "bigDesktop": 6,
             "desktop": 6,
-            "min": "auto",
             "tablet": 4,
           }
         }
@@ -442,6 +500,12 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
         <div
           className="c4"
           data-component-type="grid_layout_cell"
+          sizes={
+            Object {
+              "desktop": 6,
+              "tablet": 4,
+            }
+          }
         >
           <div>
             4
@@ -454,28 +518,20 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
         gutterMarginX={4}
         gutterMarginY="none"
         gutterPaddingX="none"
-        gutterPaddingY={16}
+        gutterPaddingY={
+          Object {
+            "desktop": "none",
+            "min": 16,
+          }
+        }
         key="4"
-        offsetsForBreakpoints={
-          Object {
-            "bigDesktop": 0,
-            "desktop": 0,
-            "min": 0,
-            "tablet": 0,
-          }
-        }
-        sizesForBreakpoints={
-          Object {
-            "bigDesktop": "auto",
-            "desktop": "auto",
-            "min": "auto",
-            "tablet": "auto",
-          }
-        }
+        offsets={3}
+        sizes="auto"
       >
         <div
           className="c5"
           data-component-type="grid_layout_cell"
+          sizes="auto"
         >
           <div>
             5

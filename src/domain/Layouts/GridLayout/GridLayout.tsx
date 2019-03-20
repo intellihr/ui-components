@@ -1,22 +1,21 @@
-import { map } from 'lodash'
 import React from 'react'
 
 import { Props } from '../../../common'
 import {
   GutterSize,
   HorizontalAlignment,
-  IStyledCellOffsets,
-  IStyledCellSizes,
   StyledCell,
   StyledGridLayout,
   VerticalAlignment
 } from './style'
 
+type CellSize = number | 'auto' | 'shrink' | 'fullWidth'
+
 interface ICellSizeDefinition {
-  min?: number | 'auto' | 'shrink',
-  tablet?: number | 'auto' | 'shrink',
-  desktop?: number | 'auto' | 'shrink',
-  bigDesktop?: number | 'auto' | 'shrink'
+  min?: CellSize,
+  tablet?: CellSize,
+  desktop?: CellSize,
+  bigDesktop?: CellSize
 }
 
 interface ICellOffsetDefinition {
@@ -26,13 +25,20 @@ interface ICellOffsetDefinition {
   bigDesktop?: number
 }
 
+interface IGutterSizeDefinition {
+  min?: GutterSize,
+  tablet?: GutterSize,
+  desktop?: GutterSize,
+  bigDesktop?: GutterSize
+}
+
 interface IGridLayoutCell {
   /** The content to place within the cell */
   content?: JSX.Element | string | null,
   /** The size this cell takes up within the grid */
-  size?: ICellSizeDefinition | 'auto' | 'shrink',
+  size?: ICellSizeDefinition | CellSize,
   /** The cell offset from the edge of the grid */
-  offset?: ICellOffsetDefinition,
+  offset?: ICellOffsetDefinition | number,
   /** Component context */
   componentContext?: string
 }
@@ -45,13 +51,13 @@ interface IGridLayoutProps {
   /** The vertical alignment of the items within the grid */
   verticalAlignment?: VerticalAlignment,
   /** Adds gutters between cells as margin in the x direction */
-  gutterMarginX?: GutterSize,
+  gutterMarginX?: IGutterSizeDefinition | GutterSize,
   /** Adds gutters between cells as margin in the y direction */
-  gutterMarginY?: GutterSize,
+  gutterMarginY?: IGutterSizeDefinition | GutterSize,
   /** Adds gutters between cells as padding in the x direction */
-  gutterPaddingX?: GutterSize,
+  gutterPaddingX?: IGutterSizeDefinition | GutterSize,
   /** Adds gutters between cells as padding in the y direction */
-  gutterPaddingY?: GutterSize,
+  gutterPaddingY?: IGutterSizeDefinition | GutterSize,
   /** Determines the amount of columns within the grid */
   gridColumns?: number,
   /** Component context */
@@ -72,8 +78,6 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
     gutterPaddingY: 'none'
   }
 
-  private static breakpointOrder = ['min', 'tablet', 'desktop', 'bigDesktop']
-
   public render (): JSX.Element {
     const {
       gutterMarginX,
@@ -93,7 +97,7 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
         data-component-type={Props.ComponentType.GridLayout}
         data-component-context={componentContext}
       >
-        {map(cells, this.getCellForDefinition)}
+        {cells.map(this.getCellForDefinition)}
       </StyledGridLayout>
     )
   }
@@ -117,8 +121,8 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
       <StyledCell
         key={index}
         gridColumns={gridColumns!}
-        sizesForBreakpoints={this.fillInCellSizeDefinition(size || {})}
-        offsetsForBreakpoints={this.fillInCellOffsetDefinition(offset || {})}
+        sizes={size || 'auto'}
+        offsets={offset || 0}
         gutterMarginX={gutterMarginX!}
         gutterMarginY={gutterMarginY!}
         gutterPaddingX={gutterPaddingX!}
@@ -129,52 +133,6 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
         {content}
       </StyledCell>
     )
-  }
-
-  private fillInCellSizeDefinition = (sizeDefinition: ICellSizeDefinition | 'auto' | 'shrink'): IStyledCellSizes => {
-    const sizes: IStyledCellSizes = {
-      min: 'auto',
-      tablet: 'auto',
-      desktop: 'auto',
-      bigDesktop: 'auto'
-    }
-    let lastSize: number | 'auto' | 'shrink' | undefined
-
-    // Iterate through the list and fill out any missing sizes
-    for (const bkpt of GridLayout.breakpointOrder) {
-      if (sizeDefinition === 'auto' || sizeDefinition === 'shrink') {
-        sizes[bkpt as keyof IStyledCellSizes] = sizeDefinition as 'auto' | 'shrink'
-      } else {
-        const currentSize = sizeDefinition[bkpt as keyof IStyledCellSizes]
-        if (currentSize) {
-          lastSize = currentSize
-        }
-        sizes[bkpt as keyof IStyledCellSizes] = lastSize || 'auto'
-      }
-    }
-
-    return sizes
-  }
-
-  private fillInCellOffsetDefinition = (offsetDefinition: ICellOffsetDefinition): IStyledCellOffsets => {
-    const offsets: IStyledCellOffsets = {
-      min: 0,
-      tablet: 0,
-      desktop: 0,
-      bigDesktop: 0
-    }
-    let lastOffset: number | undefined
-
-    for (const bkpt of GridLayout.breakpointOrder) {
-      // Iterate through the list and fill out any missing offsets
-      const currentOffset = offsetDefinition[bkpt as keyof IStyledCellOffsets]
-      if (currentOffset) {
-        lastOffset = currentOffset
-      }
-      offsets[bkpt as keyof IStyledCellOffsets] = lastOffset || 0
-    }
-
-    return offsets
   }
 }
 
