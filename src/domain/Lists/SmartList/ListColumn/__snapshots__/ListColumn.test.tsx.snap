@@ -80,6 +80,7 @@ exports[`<ListColumn /> should render a list column with number content 1`] = `
       >
         <div
           className="list-column"
+          data-component-type="smart_list_column"
         >
           100
         </div>
@@ -169,6 +170,7 @@ exports[`<ListColumn /> should render a list column with the right header 1`] = 
       >
         <div
           className="list-column"
+          data-component-type="smart_list_column"
         >
           <ListHeader
             label="Test"
@@ -266,6 +268,7 @@ exports[`<ListColumn /> should render a list column with the right non-header ce
       >
         <div
           className="list-column"
+          data-component-type="smart_list_column"
         >
           <div>
             Test Name

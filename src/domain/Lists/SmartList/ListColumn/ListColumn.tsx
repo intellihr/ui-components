@@ -2,6 +2,7 @@ import classNames from 'classnames'
 import { get, isNil } from 'lodash'
 import React from 'react'
 
+import { Props } from '../../../../common'
 import { Row } from '../../../Grids/Row'
 import { TextSkeleton } from '../../../Skeletons'
 import { ListHeader } from '../ListHeader'
@@ -39,6 +40,8 @@ export interface IListColumn {
   order?: any
   /** Skeleton options */
   skeletonOptions?: ISmartListSkeletonOptions
+  /** The data-component-context */
+  componentContext?: string
 }
 
 class ListColumn extends React.PureComponent<IListColumn> {
@@ -98,7 +101,8 @@ class ListColumn extends React.PureComponent<IListColumn> {
   public render (): JSX.Element {
     const {
       alignRight,
-      size
+      size,
+      componentContext
     } = this.props
 
     const content = (
@@ -110,6 +114,8 @@ class ListColumn extends React.PureComponent<IListColumn> {
             'text-right': alignRight
           }
         )}
+        data-component-type={Props.ComponentType.SmartListColumn}
+        data-component-context={componentContext}
       >
         {this.cellContent}
       </div>

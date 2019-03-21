@@ -62,6 +62,8 @@ namespace Props {
     LinkButton = 'link_button',
     Record = 'record',
     RecordName = 'record_name',
+    SmartList = 'smart_list',
+    SmartListColumn = 'smart_list_column',
     Text = 'text',
     Tile = 'tile',
     Timeline = 'timeline',
