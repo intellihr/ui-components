@@ -29,6 +29,7 @@ exports[`<ButtonGroup /> should render a button group with buttons and link butt
         <button
           className="button neutral"
           data-component-type="button"
+          type="button"
         >
           Button 1
         </button>

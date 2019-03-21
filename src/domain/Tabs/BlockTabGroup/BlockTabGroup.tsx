@@ -71,6 +71,7 @@ export class BlockTabGroup extends React.Component<IBlockTabGroupProps, never> {
           active={currentTabIndex === index}
         >
           <TabListItemButton
+            type='button'
             active={currentTabIndex === index}
             tabSize={tabSize}
             onClick={this.handleOnClick}

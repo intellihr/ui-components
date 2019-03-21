@@ -16,6 +16,7 @@ exports[`<Button /> should render a button with a simple text 1`] = `
   <button
     className="button neutral"
     data-component-type="button"
+    type="button"
   >
     testing testing 123
   </button>
@@ -39,6 +40,7 @@ exports[`<Button /> should render a button with a size large 1`] = `
   <button
     className="button large neutral"
     data-component-type="button"
+    type="button"
   >
     testing testing 123
   </button>
@@ -61,6 +63,7 @@ exports[`<Button /> should render a button with a type delete-subtle 1`] = `
   <button
     className="button delete-subtle"
     data-component-type="button"
+    type="button"
   >
     testing testing 123
   </button>
@@ -92,6 +95,7 @@ exports[`<Button /> should render a button with an icon 1`] = `
   <button
     className="button primary-hollow"
     data-component-type="button"
+    type="button"
   >
     primary-hollow
     <span
@@ -141,6 +145,7 @@ exports[`<Button /> should render a disabled button 1`] = `
   <button
     className="button neutral"
     data-component-type="button"
+    type="button"
   >
     testing testing 123
   </button>
@@ -191,6 +196,7 @@ exports[`should render a button with a spinner 1`] = `
   <button
     className="button neutral show-spinner"
     data-component-type="button"
+    type="button"
   >
     <Spinner
       color="#424F5C"
