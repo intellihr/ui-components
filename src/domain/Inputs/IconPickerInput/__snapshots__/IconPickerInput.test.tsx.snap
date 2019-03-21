@@ -79,8 +79,8 @@ exports[`<IconPickerInput /> should render an Icon Picker 1`] = `
       ]
     }
     gridColumns={12}
-    gutterMarginX={4}
-    gutterMarginY={4}
+    gutterMarginX={8}
+    gutterMarginY={8}
     gutterPaddingX="none"
     gutterPaddingY="none"
     horizontalAlignment="left"
