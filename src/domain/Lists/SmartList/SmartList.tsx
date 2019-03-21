@@ -3,6 +3,7 @@ import { every, fill, filter, isArray, isEmpty, isNil, map, size, take, times } 
 import React from 'react'
 import uuid from 'uuid'
 
+import { Props } from '../../../common'
 import { Callout } from '../../Callouts'
 import { Row } from '../../Grids/Row'
 import { ISkeletonProps } from '../../Skeletons'
@@ -47,6 +48,8 @@ export interface ISmartList {
   rowWrapper?: (props: object) => JSX.Element
   /** Skeleton Options */
   skeletonOptions?: ISmartListSkeletonOptions
+  /** The data-component-context */
+  componentContext?: string
 }
 
 export interface ISmartListState {
@@ -284,7 +287,8 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
   public render (): JSX.Element {
     const {
       data,
-      showHoverBg
+      showHoverBg,
+      componentContext
     } = this.props
 
     const {
@@ -305,6 +309,8 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
           'smart-list',
           { 'hover-bg': showHoverBg }
         )}
+        data-component-type={Props.ComponentType.SmartList}
+        data-component-context={componentContext}
       >
         {this.title}
         {this.headerRow}
