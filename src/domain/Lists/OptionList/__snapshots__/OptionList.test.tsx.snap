@@ -8,6 +8,7 @@ exports[`<OptionList /> should render a basic option list 1`] = `
     onClick={[Function]}
     selected={false}
     truncatedText={false}
+    type="button"
   >
     <styled.span>
       <img
@@ -22,6 +23,7 @@ exports[`<OptionList /> should render a basic option list 1`] = `
     onClick={[Function]}
     selected={false}
     truncatedText={false}
+    type="button"
   >
     <styled.span>
       <img
@@ -36,6 +38,7 @@ exports[`<OptionList /> should render a basic option list 1`] = `
     onClick={[Function]}
     selected={false}
     truncatedText={false}
+    type="button"
   >
     <styled.span>
       <img
@@ -50,6 +53,7 @@ exports[`<OptionList /> should render a basic option list 1`] = `
     onClick={[Function]}
     selected={false}
     truncatedText={false}
+    type="button"
   >
     <styled.span>
       <img
@@ -74,6 +78,7 @@ exports[`<OptionList /> should render a truncated option list 1`] = `
     onClick={[Function]}
     selected={false}
     truncatedText={true}
+    type="button"
   >
     <styled.span>
       <img
@@ -88,6 +93,7 @@ exports[`<OptionList /> should render a truncated option list 1`] = `
     onClick={[Function]}
     selected={false}
     truncatedText={true}
+    type="button"
   >
     <styled.span>
       <img
@@ -102,6 +108,7 @@ exports[`<OptionList /> should render a truncated option list 1`] = `
     onClick={[Function]}
     selected={false}
     truncatedText={true}
+    type="button"
   >
     <styled.span>
       <img
@@ -116,6 +123,7 @@ exports[`<OptionList /> should render a truncated option list 1`] = `
     onClick={[Function]}
     selected={false}
     truncatedText={true}
+    type="button"
   >
     <styled.span>
       <img
@@ -140,6 +148,7 @@ exports[`<OptionList /> should render an option list with filtered options 1`] =
     onClick={[Function]}
     selected={false}
     truncatedText={false}
+    type="button"
   >
     <styled.span>
       <img
@@ -154,6 +163,7 @@ exports[`<OptionList /> should render an option list with filtered options 1`] =
     onClick={[Function]}
     selected={false}
     truncatedText={false}
+    type="button"
   >
     <styled.span>
       <img
@@ -168,6 +178,7 @@ exports[`<OptionList /> should render an option list with filtered options 1`] =
     onClick={[Function]}
     selected={false}
     truncatedText={false}
+    type="button"
   >
     <styled.span>
       <img
@@ -182,6 +193,7 @@ exports[`<OptionList /> should render an option list with filtered options 1`] =
     onClick={[Function]}
     selected={false}
     truncatedText={false}
+    type="button"
   >
     <styled.span>
       <img

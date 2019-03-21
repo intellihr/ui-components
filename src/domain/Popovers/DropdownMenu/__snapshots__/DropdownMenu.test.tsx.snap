@@ -12,6 +12,7 @@ exports[`<DropdownMenu /> Render a dropdown using custom content should match th
     }
     onClick={[Function]}
     role="button"
+    type="button"
   >
     <FontAwesomeIcon
       type="ellipsis-v"
@@ -68,6 +69,7 @@ exports[`<DropdownMenu /> Simple dropdown behaviour should match the snapshot 1`
     }
     onClick={[Function]}
     role="button"
+    type="button"
   >
     <FontAwesomeIcon
       type="ellipsis-v"
