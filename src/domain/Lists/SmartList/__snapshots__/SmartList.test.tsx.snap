@@ -140,6 +140,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
 >
   <div
     className="SmartList smart-list hover-bg"
+    data-component-type="smart_list"
   >
     <div
       className="list-title"
@@ -232,6 +233,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <ListHeader
                                 label=""
@@ -295,6 +297,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <ListHeader
                                 label=""
@@ -358,6 +361,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <ListHeader
                                 label=""
@@ -495,6 +499,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <div>
                                 <b>
@@ -563,6 +568,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               11 Nov 2004
                             </div>
@@ -624,6 +630,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               Expired
                             </div>
@@ -759,6 +766,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <div>
                                 <b>
@@ -827,6 +835,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               05 Feb 2017
                             </div>
@@ -888,6 +897,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               Current
                             </div>
@@ -1046,6 +1056,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
 >
   <div
     className="SmartList smart-list hover-bg"
+    data-component-type="smart_list"
   >
     <div
       className="header-row"
@@ -1133,6 +1144,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <ListHeader
                                 label="Qualification"
@@ -1202,6 +1214,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <ListHeader
                                 label="Expiry Date"
@@ -1271,6 +1284,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <ListHeader
                                 label="Status"
@@ -1414,6 +1428,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <div>
                                 <b>
@@ -1482,6 +1497,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               11 Nov 2004
                             </div>
@@ -1543,6 +1559,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               Expired
                             </div>
@@ -1678,6 +1695,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <div>
                                 <b>
@@ -1746,6 +1764,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               05 Feb 2017
                             </div>
@@ -1807,6 +1826,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               Current
                             </div>
@@ -1926,6 +1946,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
 >
   <div
     className="SmartList smart-list hover-bg"
+    data-component-type="smart_list"
   >
     <div
       className="header-row"
@@ -2013,6 +2034,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <ListHeader
                                 label="Qualification"
@@ -2156,6 +2178,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <div>
                                 <b>
@@ -2298,6 +2321,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <div>
                                 <b>
@@ -2448,6 +2472,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
 >
   <div
     className="SmartList smart-list hover-bg"
+    data-component-type="smart_list"
   >
     <div
       className="header-row"
@@ -2520,6 +2545,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <ListHeader
                                 label=""
@@ -2568,6 +2594,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <ListHeader
                                 label=""
@@ -2616,6 +2643,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <ListHeader
                                 label=""
@@ -2804,6 +2832,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
 >
   <div
     className="SmartList smart-list hover-bg"
+    data-component-type="smart_list"
   >
     <div
       className="header-row"
@@ -2883,6 +2912,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <ListHeader
                                 label="Test1"
@@ -2944,6 +2974,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <ListHeader
                                 label="Test2"
@@ -3005,6 +3036,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <ListHeader
                                 label="Test3"
@@ -3133,6 +3165,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <TextSkeleton
                                 showSkeleton={true}
@@ -3204,6 +3237,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <TextSkeleton
                                 showSkeleton={true}
@@ -3275,6 +3309,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <TextSkeleton
                                 showSkeleton={true}
@@ -3413,6 +3448,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <TextSkeleton
                                 showSkeleton={true}
@@ -3484,6 +3520,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <TextSkeleton
                                 showSkeleton={true}
@@ -3555,6 +3592,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <TextSkeleton
                                 showSkeleton={true}
@@ -3693,6 +3731,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <TextSkeleton
                                 showSkeleton={true}
@@ -3764,6 +3803,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <TextSkeleton
                                 showSkeleton={true}
@@ -3835,6 +3875,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <TextSkeleton
                                 showSkeleton={true}
@@ -3973,6 +4014,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <TextSkeleton
                                 showSkeleton={true}
@@ -4044,6 +4086,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <TextSkeleton
                                 showSkeleton={true}
@@ -4115,6 +4158,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <TextSkeleton
                                 showSkeleton={true}
@@ -4253,6 +4297,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <TextSkeleton
                                 showSkeleton={true}
@@ -4324,6 +4369,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <TextSkeleton
                                 showSkeleton={true}
@@ -4395,6 +4441,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                           >
                             <div
                               className="list-column"
+                              data-component-type="smart_list_column"
                             >
                               <TextSkeleton
                                 showSkeleton={true}
