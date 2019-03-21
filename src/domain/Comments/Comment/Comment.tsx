@@ -87,6 +87,7 @@ export class Comment extends React.Component<ICommentProps> {
   private dropdownMenuToggleComponent = (props: IDropdownMenuToggleComponentProps) => {
     return (
       <CommentActionMenuToggleButton
+        type='button'
         onClick={props.toggleMenu}
         innerRef={props.toggleComponentRef}
         {...props.ariaProps}

@@ -30,6 +30,7 @@ exports[`<DataTablePagination /> Pagination with few pages should match the snap
       className="page-button -btn"
       key="0"
       onClick={[Function]}
+      type="button"
     >
       1
     </button>
@@ -37,6 +38,7 @@ exports[`<DataTablePagination /> Pagination with few pages should match the snap
       className="page-button -btn"
       key="1"
       onClick={[Function]}
+      type="button"
     >
       2
     </button>
@@ -44,6 +46,7 @@ exports[`<DataTablePagination /> Pagination with few pages should match the snap
       className="current page-button -btn"
       key="2"
       onClick={[Function]}
+      type="button"
     >
       3
     </button>
@@ -89,6 +92,7 @@ exports[`<DataTablePagination /> Pagination with many pages should match the sna
       className="page-button -btn"
       key="0"
       onClick={[Function]}
+      type="button"
     >
       1
     </button>
@@ -96,6 +100,7 @@ exports[`<DataTablePagination /> Pagination with many pages should match the sna
       className="page-button -btn"
       key="1"
       onClick={[Function]}
+      type="button"
     >
       2
     </button>
@@ -103,6 +108,7 @@ exports[`<DataTablePagination /> Pagination with many pages should match the sna
       className="page-button -btn"
       key="2"
       onClick={[Function]}
+      type="button"
     >
       3
     </button>
@@ -110,6 +116,7 @@ exports[`<DataTablePagination /> Pagination with many pages should match the sna
       className="current page-button -btn"
       key="3"
       onClick={[Function]}
+      type="button"
     >
       4
     </button>
@@ -117,6 +124,7 @@ exports[`<DataTablePagination /> Pagination with many pages should match the sna
       className="page-button -btn"
       key="4"
       onClick={[Function]}
+      type="button"
     >
       5
     </button>
@@ -130,6 +138,7 @@ exports[`<DataTablePagination /> Pagination with many pages should match the sna
       className="page-button -btn"
       key="6"
       onClick={[Function]}
+      type="button"
     >
       30
     </button>

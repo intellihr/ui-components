@@ -137,6 +137,7 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
       <button
         key={key}
         className={classNames({current: page === pageNo}, 'page-button', '-btn')}
+        type='button'
         onClick={clickHandler}
       >
         {pageNo + 1}

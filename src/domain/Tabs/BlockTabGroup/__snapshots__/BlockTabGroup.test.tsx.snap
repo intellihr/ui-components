@@ -18,6 +18,7 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
         data-tabindex={0}
         onClick={[Function]}
         tabSize="medium"
+        type="button"
       >
         Tab 1
       </styled.button>
@@ -33,6 +34,7 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
         data-tabindex={1}
         onClick={[Function]}
         tabSize="medium"
+        type="button"
       >
         Tab 2
       </styled.button>
@@ -48,6 +50,7 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
         data-tabindex={2}
         onClick={[Function]}
         tabSize="medium"
+        type="button"
       >
         Tab 3
       </styled.button>

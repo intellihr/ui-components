@@ -95,6 +95,7 @@ class OptionList extends React.PureComponent<IOptionListProps> {
       return (
         <OptionListButton
           key={idx}
+          type='button'
           onClick={callback}
           truncatedText={truncatedText}
           selected={value === selectedValue}

@@ -26,6 +26,7 @@ export class Button extends BaseButton<IButtonProps> {
         className={this.buttonClass}
         onClick={onClick}
         disabled={disabled}
+        type='button'
         {...buttonOverrides}
       >
         {this.buttonContent}

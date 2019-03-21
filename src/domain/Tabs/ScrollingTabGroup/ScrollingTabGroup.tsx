@@ -114,6 +114,7 @@ export class ScrollingTabGroup extends React.Component<IScrollingTabGroupProps, 
 
     return (
       <TabChevronButton
+        type='button'
         disabled={isOnLeft}
         float='left'
         onClick={this.scrollLeft}
@@ -138,6 +139,7 @@ export class ScrollingTabGroup extends React.Component<IScrollingTabGroupProps, 
 
     return (
       <TabChevronButton
+        type='button'
         disabled={isOnRight}
         float='right'
         onClick={this.scrollRight}
