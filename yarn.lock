@@ -263,12 +263,13 @@
   resolved "https://registry.yarnpkg.com/@intellihr/icons/-/icons-0.0.8.tgz#83b93f257077b713b529e7afcd8cf97d6f3b0de6"
   integrity sha512-YecWxEqNAUCt/enxM2eGNe/dklc8Z7l2jV1ew3uxDFeyDvLhCb3P949h97SoP91H7cLsPCLcdn/jRM3NjcfHPQ==
 
-"@intellihr/standard-tslint@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@intellihr/standard-tslint/-/standard-tslint-2.0.0.tgz#182e75672210553367347593b0308425aaa22f80"
-  integrity sha512-/T5QfA/M+RTbLN059FO1kL7usuhApPBegm9rZJyL8BZOH8rEjnh7lJBIFML7fQJCWiVx7TUKeBplA+vStrgkQw==
+"@intellihr/standard-tslint@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@intellihr/standard-tslint/-/standard-tslint-2.1.1.tgz#bf9b9bc583c5ee53623896a82c29d3d0d8ab6fc4"
+  integrity sha512-74jd5qWYQU+ylcMfMet6Cu9pIL5Epv+sIzN6SQRciqI7B4u3v5QuJtyTIAKecjG9T8dHyF2gqaoSaHyKVUXseA==
   dependencies:
     tslint-react "^3.6.0"
+    tslint-react-hooks "^2.0.0"
     tsutils "^3.5.1"
 
 "@intellihr/styled-components-breakpoint@0.0.2":
@@ -12751,6 +12752,11 @@ tslint-config-prettier@^1.14.0:
   version "1.14.0"
   resolved "https://registry.yarnpkg.com/tslint-config-prettier/-/tslint-config-prettier-1.14.0.tgz#860b36634e53f4c70c64c51ff3ef7fd9bbab7676"
   integrity sha512-SomD+aLvAwoihMtyCfkhhWKt9wcpSY2ZpgDV6OuxLYi8+7uOwE2g03aa+jJLSmY0Ys8s3ZLM5Iwfuwu3giCSQQ==
+
+tslint-react-hooks@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/tslint-react-hooks/-/tslint-react-hooks-2.0.0.tgz#452d7eed160420023dc1f26ad3b08ad861fb5d05"
+  integrity sha512-SC0BvRVX+SaSrT/kVcD/xzunBzleeX3TPHX010g9EfXPKLQzyg971VU/j1HnfutvPILDI1Qkhjqseb1+WIBiOw==
 
 tslint-react@^3.6.0:
   version "3.6.0"
