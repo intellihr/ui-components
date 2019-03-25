@@ -29,6 +29,7 @@ const spinnerColour = {
   'dark-hollow': Variables.Color.n700,
   'light-hollow': Variables.Color.n700,
   'cancel': Variables.Color.n700,
+  'back': Variables.Color.n700,
   'add': Variables.Color.i400,
   'add-subtle': Variables.Color.n700,
   'delete': Variables.Color.r500,
