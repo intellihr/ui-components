@@ -2,7 +2,6 @@
 
 ```jsx
 import { ButtonGroup } from '@Domain/Buttons';
-import { Variables } from '@Common';
 
 <div>
   <div>

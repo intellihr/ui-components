@@ -1,7 +1,6 @@
 import { css } from 'styled-components'
 
 import { Props, Utils, Variables } from '../../../common'
-import { GutterSize } from '../../Layouts/GridLayout/style'
 
 interface IBreakpointMargins {
   min?: Variables.Spacing | Variables.Layout | 'none'
@@ -13,7 +12,7 @@ interface IBreakpointMargins {
 const breakpointOrder: ReadonlyArray<keyof IBreakpointMargins> = ['min', 'tablet', 'desktop', 'bigDesktop']
 
 function getMarginSizeAtBreakpoint (breakpoint: keyof IBreakpointMargins, margin: IBreakpointMargins): number {
-  let lastMargin: GutterSize = 'none'
+  let lastMargin: Variables.Spacing | Variables.Layout | 'none' = 'none'
 
   for (const curBreakpoint of breakpointOrder) {
     lastMargin = margin[curBreakpoint] || lastMargin
@@ -26,49 +25,49 @@ function getMarginSizeAtBreakpoint (breakpoint: keyof IBreakpointMargins, margin
   return lastMargin === 'none' ? 0 : lastMargin
 }
 
-function getMargin (type: 'top' | 'bottom' | 'left' | 'right', margin?: Props.Margin) {
-  if (margin) {
-    if (typeof margin === 'number') {
-      return css`
-        margin-${type}: ${margin}px;
-      `
-    }
+function styleForMargin (type: 'top' | 'bottom' | 'left' | 'right', margin?: Props.Margin) {
+  if (!margin) {
+    return null
+  }
 
+  if (typeof margin === 'number') {
     return css`
-      ${Utils.mediaQueryBetweenSizes({maxPx: Variables.Breakpoint.breakpointTablet})} {
-        margin-${type}: ${getMarginSizeAtBreakpoint('min', margin)}px;
-      }
-
-      ${Utils.mediaQueryBetweenSizes({
-        minPx: Variables.Breakpoint.breakpointTablet,
-        maxPx: Variables.Breakpoint.breakpointDesktop
-      })} {
-        margin-${type}: ${getMarginSizeAtBreakpoint('tablet', margin)}px;
-      }
-
-      ${Utils.mediaQueryBetweenSizes({
-        minPx: Variables.Breakpoint.breakpointDesktop,
-        maxPx: Variables.Breakpoint.breakpointBigDesktop
-      })} {
-        margin-${type}: ${getMarginSizeAtBreakpoint('desktop', margin)}px;
-      }
-
-      ${Utils.mediaQueryBetweenSizes({minPx: Variables.Breakpoint.breakpointBigDesktop})} {
-        margin-${type}: ${getMarginSizeAtBreakpoint('bigDesktop', margin)}px;
-      }
+      margin-${type}: ${margin}px;
     `
   }
 
-  return null
+  return css`
+    ${Utils.mediaQueryBetweenSizes({maxPx: Variables.Breakpoint.breakpointTablet})} {
+      margin-${type}: ${getMarginSizeAtBreakpoint('min', margin)}px;
+    }
+
+    ${Utils.mediaQueryBetweenSizes({
+      minPx: Variables.Breakpoint.breakpointTablet,
+      maxPx: Variables.Breakpoint.breakpointDesktop
+    })} {
+      margin-${type}: ${getMarginSizeAtBreakpoint('tablet', margin)}px;
+    }
+
+    ${Utils.mediaQueryBetweenSizes({
+      minPx: Variables.Breakpoint.breakpointDesktop,
+      maxPx: Variables.Breakpoint.breakpointBigDesktop
+    })} {
+      margin-${type}: ${getMarginSizeAtBreakpoint('desktop', margin)}px;
+    }
+
+    ${Utils.mediaQueryBetweenSizes({minPx: Variables.Breakpoint.breakpointBigDesktop})} {
+      margin-${type}: ${getMarginSizeAtBreakpoint('bigDesktop', margin)}px;
+    }
+  `
 }
 
-function styleForMargins (margins?: Props.IMargins): any {
+function styleForMargins (margins?: Props.IMargins) {
   if (margins) {
     return css`
-      ${getMargin('top', margins.top)}
-      ${getMargin('bottom', margins.bottom)}
-      ${getMargin('left', margins.left)}
-      ${getMargin('right', margins.right)}
+      ${styleForMargin('top', margins.top)}
+      ${styleForMargin('bottom', margins.bottom)}
+      ${styleForMargin('left', margins.left)}
+      ${styleForMargin('right', margins.right)}
     `
   }
 
