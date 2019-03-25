@@ -10,10 +10,9 @@ interface IBreakpointMargins {
   bigDesktop?: Variables.Spacing | Variables.Layout | 'none'
 }
 
-type Breakpoint = 'min' | 'tablet'| 'desktop' | 'bigDesktop'
-const breakpointOrder: ReadonlyArray<Breakpoint> = ['min', 'tablet', 'desktop', 'bigDesktop']
+const breakpointOrder: ReadonlyArray<keyof IBreakpointMargins> = ['min', 'tablet', 'desktop', 'bigDesktop']
 
-function getMarginSizeAtBreakpoint (margin: IBreakpointMargins, breakpoint: Breakpoint): number {
+function getMarginSizeAtBreakpoint (breakpoint: keyof IBreakpointMargins, margin: IBreakpointMargins): number {
   let lastMargin: GutterSize = 'none'
 
   for (const curBreakpoint of breakpointOrder) {
@@ -27,37 +26,37 @@ function getMarginSizeAtBreakpoint (margin: IBreakpointMargins, breakpoint: Brea
   return lastMargin === 'none' ? 0 : lastMargin
 }
 
-function getMargin (type: 'top' | 'bottom' | 'left' | 'right', margin?: Props.margin): any {
+function getMargin (type: 'top' | 'bottom' | 'left' | 'right', margin?: Props.Margin) {
   if (margin) {
     if (typeof margin === 'number') {
       return css`
-      margin-${type}: ${margin}px;
-    `
+        margin-${type}: ${margin}px;
+      `
     }
 
     return css`
-    ${Utils.mediaQueryBetweenSizes({maxPx: Variables.Breakpoint.breakpointTablet})} {
-      margin-${type}: ${getMarginSizeAtBreakpoint(margin, 'min')}px;
-    }
+      ${Utils.mediaQueryBetweenSizes({maxPx: Variables.Breakpoint.breakpointTablet})} {
+        margin-${type}: ${getMarginSizeAtBreakpoint('min', margin)}px;
+      }
 
-    ${Utils.mediaQueryBetweenSizes({
-      minPx: Variables.Breakpoint.breakpointTablet,
-      maxPx: Variables.Breakpoint.breakpointDesktop
-    })} {
-      margin-${type}: ${getMarginSizeAtBreakpoint(margin, 'tablet')}px;
-    }
+      ${Utils.mediaQueryBetweenSizes({
+        minPx: Variables.Breakpoint.breakpointTablet,
+        maxPx: Variables.Breakpoint.breakpointDesktop
+      })} {
+        margin-${type}: ${getMarginSizeAtBreakpoint('tablet', margin)}px;
+      }
 
-    ${Utils.mediaQueryBetweenSizes({
-      minPx: Variables.Breakpoint.breakpointDesktop,
-      maxPx: Variables.Breakpoint.breakpointBigDesktop
-    })} {
-      margin-${type}: ${getMarginSizeAtBreakpoint(margin, 'desktop')}px;
-    }
+      ${Utils.mediaQueryBetweenSizes({
+        minPx: Variables.Breakpoint.breakpointDesktop,
+        maxPx: Variables.Breakpoint.breakpointBigDesktop
+      })} {
+        margin-${type}: ${getMarginSizeAtBreakpoint('desktop', margin)}px;
+      }
 
-    ${Utils.mediaQueryBetweenSizes({minPx: Variables.Breakpoint.breakpointBigDesktop})} {
-      margin-${type}: ${getMarginSizeAtBreakpoint(margin, 'bigDesktop')}px;
-    }
-  `
+      ${Utils.mediaQueryBetweenSizes({minPx: Variables.Breakpoint.breakpointBigDesktop})} {
+        margin-${type}: ${getMarginSizeAtBreakpoint('bigDesktop', margin)}px;
+      }
+    `
   }
 
   return null

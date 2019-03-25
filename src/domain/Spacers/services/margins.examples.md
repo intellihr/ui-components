@@ -59,3 +59,9 @@ import { Button } from '@Domain/Buttons';
   Spaced Button
 </Button>
 ```
+
+#### Supported Components
+
+The components that support breakpoints are:
+* Button
+* Callout

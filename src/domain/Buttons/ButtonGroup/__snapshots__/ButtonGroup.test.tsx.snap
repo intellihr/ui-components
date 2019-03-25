@@ -26,13 +26,19 @@ exports[`<ButtonGroup /> should render a button group with buttons and link butt
         showSpinner={false}
         type="neutral"
       >
-        <button
+        <styled.button
           className="button neutral"
           data-component-type="button"
           type="button"
         >
-          Button 1
-        </button>
+          <button
+            className="button neutral "
+            data-component-type="button"
+            type="button"
+          >
+            Button 1
+          </button>
+        </styled.button>
       </Button>
       ,
       <LinkButton

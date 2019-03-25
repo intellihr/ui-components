@@ -877,13 +877,19 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                     showSpinner={false}
                                     type="primary"
                                   >
-                                    <button
+                                    <styled.button
                                       className="button primary"
                                       data-component-type="button"
                                       type="button"
                                     >
-                                      Action 1
-                                    </button>
+                                      <button
+                                        className="button primary "
+                                        data-component-type="button"
+                                        type="button"
+                                      >
+                                        Action 1
+                                      </button>
+                                    </styled.button>
                                   </Button>
                                   <Button
                                     hasLegacyMargins={false}
@@ -892,13 +898,19 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                     showSpinner={false}
                                     type="primary"
                                   >
-                                    <button
+                                    <styled.button
                                       className="button primary"
                                       data-component-type="button"
                                       type="button"
                                     >
-                                      Action 2
-                                    </button>
+                                      <button
+                                        className="button primary "
+                                        data-component-type="button"
+                                        type="button"
+                                      >
+                                        Action 2
+                                      </button>
+                                    </styled.button>
                                   </Button>
                                 </div>
                               </Cell>
@@ -1411,13 +1423,19 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                     showSpinner={false}
                                     type="primary"
                                   >
-                                    <button
+                                    <styled.button
                                       className="button primary"
                                       data-component-type="button"
                                       type="button"
                                     >
-                                      Action 1
-                                    </button>
+                                      <button
+                                        className="button primary "
+                                        data-component-type="button"
+                                        type="button"
+                                      >
+                                        Action 1
+                                      </button>
+                                    </styled.button>
                                   </Button>
                                   <Button
                                     hasLegacyMargins={false}
@@ -1426,13 +1444,19 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                     showSpinner={false}
                                     type="primary"
                                   >
-                                    <button
+                                    <styled.button
                                       className="button primary"
                                       data-component-type="button"
                                       type="button"
                                     >
-                                      Action 2
-                                    </button>
+                                      <button
+                                        className="button primary "
+                                        data-component-type="button"
+                                        type="button"
+                                      >
+                                        Action 2
+                                      </button>
+                                    </styled.button>
                                   </Button>
                                 </div>
                               </Cell>

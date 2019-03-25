@@ -4,9 +4,11 @@ import { Omit, Props } from '../../../common'
 import { BaseButton, IBaseButtonProps } from '../BaseButton'
 import { MarginButton } from './style'
 
-export interface IButtonProps extends IBaseButtonProps, Props.IMarginProps {
+export interface IButtonProps extends IBaseButtonProps {
   /** Button props passthrough */
   buttonOverrides?: Omit<React.HTMLProps<HTMLButtonElement>, 'ref'>
+  /** The margins around the component */
+  margins?: Props.IMargins
 }
 
 export class Button extends BaseButton<IButtonProps> {

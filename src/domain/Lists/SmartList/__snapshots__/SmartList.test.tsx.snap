@@ -2667,16 +2667,22 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
       shouldFocus={false}
       type=""
     >
-      <div
+      <styled.div
         className="callout"
         data-component-type="callout"
+        innerRef={[Function]}
       >
         <div
-          className="content"
+          className="callout "
+          data-component-type="callout"
         >
-          No Results found.
+          <div
+            className="content"
+          >
+            No Results found.
+          </div>
         </div>
-      </div>
+      </styled.div>
     </Callout>
   </div>
 </SmartList>

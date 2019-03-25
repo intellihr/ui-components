@@ -7,15 +7,17 @@ import { MarginCallout } from './style'
 
 const style = require('./style.scss')
 
-export interface ICalloutProps extends Props.IMarginProps {
+export interface ICalloutProps {
   type: 'info' | 'success' | 'error' | 'warning' | 'preview-mode' | 'edit-mode' | 'no-data' | ''
   children?: any
   className?: string
   message?: string
   messages?: string[]
   justifyCenter?: boolean
-  shouldFocus?: boolean,
-  componentContext?: string,
+  shouldFocus?: boolean
+  componentContext?: string
+  /** The margins around the component */
+  margins?: Props.IMargins
 }
 
 export interface ICalloutState {
@@ -120,6 +122,7 @@ export class Callout extends React.Component<ICalloutProps, ICalloutState> {
       <MarginCallout
         margins={margins}
         className={classNames(this.classNames)}
+        // tslint:disable-next-line:jsx-no-lambda
         innerRef={(node) => { this.node = node }}
         data-component-type={Props.ComponentType.Callout}
         data-component-context={componentContext}

@@ -4,12 +4,8 @@ import styled from 'styled-components'
 import { Props } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
 
-const MarginButton = styled.button<React.HTMLProps<HTMLButtonElement> & Props.IMarginProps>`
-   ${(props: Props.IMarginProps) => {
-     console.log(props.margins)
-     console.log(styleForMargins(props.margins))
-     return styleForMargins(props.margins)
-   }}
+const MarginButton = styled.button<{margins?: Props.IMargins}>`
+   ${(props: {margins?: Props.IMargins}) => styleForMargins(props.margins)}
 `
 
 export {
