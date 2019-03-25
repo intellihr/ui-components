@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import React, { Fragment, RefObject } from 'react'
+import React, { RefObject } from 'react'
 
 import { Props } from '../../../common'
 import { Spinner } from '../../Spinners/Spinner'

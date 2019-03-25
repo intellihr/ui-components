@@ -3,10 +3,11 @@ import { isEmpty } from 'lodash'
 import React from 'react'
 
 import { Props } from '../../../common'
+import { MarginCallout } from './style'
 
 const style = require('./style.scss')
 
-export interface ICalloutProps {
+export interface ICalloutProps extends Props.IMarginProps {
   type: 'info' | 'success' | 'error' | 'warning' | 'preview-mode' | 'edit-mode' | 'no-data' | ''
   children?: any
   className?: string
@@ -107,7 +108,8 @@ export class Callout extends React.Component<ICalloutProps, ICalloutState> {
   public render (): JSX.Element | null {
     const {
       componentContext,
-      children
+      children,
+      margins
     } = this.props
 
     if (isEmpty(this.messages) && !children) {
@@ -115,9 +117,10 @@ export class Callout extends React.Component<ICalloutProps, ICalloutState> {
     }
 
     return (
-      <div
+      <MarginCallout
+        margins={margins}
         className={classNames(this.classNames)}
-        ref={(node) => { this.node = node }}
+        innerRef={(node) => { this.node = node }}
         data-component-type={Props.ComponentType.Callout}
         data-component-context={componentContext}
       >
@@ -125,7 +128,7 @@ export class Callout extends React.Component<ICalloutProps, ICalloutState> {
           {this.messagesList}
           {children}
         </div>
-      </div>
+      </MarginCallout>
     )
   }
 }
