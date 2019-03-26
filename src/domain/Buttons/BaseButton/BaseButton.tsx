@@ -1,7 +1,8 @@
 import classNames from 'classnames'
-import React, { Fragment, RefObject } from 'react'
+import React, { RefObject } from 'react'
 
 import { Props } from '../../../common'
+import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { Spinner } from '../../Spinners/Spinner'
 import { spinnerColour } from './style'
 
@@ -18,7 +19,7 @@ type ButtonType =
   'primary-hollow' | 'secondary-hollow' | 'success-hollow' | 'warning-hollow' | 'alert-hollow' |
   'neutral-hollow' | 'highlight-hollow' | 'light-hollow' | 'dark-hollow' |
 
-  'add' |'add-subtle' | 'delete-subtle' | 'delete' | 'resolve' | 'skip' | 'cancel' | 'menu-action'
+  'add' |'add-subtle' | 'delete-subtle' | 'delete' | 'resolve' | 'skip' | 'cancel' | 'menu-action' | 'back'
 
 type ButtonSize = 'small' | 'medium' | 'large'
 
@@ -108,14 +109,16 @@ class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
       )
     }
 
-    if (icon) {
+    if (icon || type === 'back') {
+      const buttonIcon = icon || <FontAwesomeIcon type='arrow-left' />
+
       const iconComponent = (
         <span
           data-component-type={Props.ComponentType.ButtonIcon}
           data-component-context={componentContext}
           className={classNames('button-icon', iconAlignment)}
         >
-          {icon}
+          {buttonIcon}
         </span>
       )
 

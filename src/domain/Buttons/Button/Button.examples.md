@@ -243,6 +243,9 @@ import { ButtonGroup } from '@Domain/Buttons';
       <Button type='cancel' onClick={() => alert('cancel')}>
         cancel
       </Button>
+      <Button type='back' onClick={() => alert('back')}>
+        back
+      </Button>
       <Button type='menu-action' onClick={() => alert('menu-action')}>
         menu-action
       </Button>
@@ -271,6 +274,9 @@ import { ButtonGroup } from '@Domain/Buttons';
       </Button>
       <Button type='cancel' disabled onClick={() => alert('cancel')}>
         cancel
+      </Button>
+      <Button type='back' disabled onClick={() => alert('back')}>
+        back
       </Button>
       <Button type='menu-action' disabled onClick={() => alert('menu-action')}>
         menu-action
@@ -327,21 +333,21 @@ import { FontAwesomeIcon } from '@Domain/Icons';
   </div>
   <div>
     <ButtonGroup>
-      <Button 
-        icon={<FontAwesomeIcon type='star' />} 
-        size='small' 
+      <Button
+        icon={<FontAwesomeIcon type='star' />}
+        size='small'
       >
         small
       </Button>
-      <Button 
-        icon={<FontAwesomeIcon type='star' />} 
-        size='medium' 
+      <Button
+        icon={<FontAwesomeIcon type='star' />}
+        size='medium'
       >
         medium
       </Button>
-      <Button 
-        icon={<FontAwesomeIcon type='star' />} 
-        size='large' 
+      <Button
+        icon={<FontAwesomeIcon type='star' />}
+        size='large'
       >
         large
       </Button>
@@ -354,6 +360,7 @@ import { FontAwesomeIcon } from '@Domain/Icons';
 
 ```jsx
 import { ButtonGroup } from '@Domain/Buttons';
+import { FontAwesomeIcon } from '@Domain/Icons';
 
 <div>
   <div>
@@ -507,6 +514,9 @@ import { ButtonGroup } from '@Domain/Buttons';
       </Button>
       <Button showSpinner type='cancel' disabled onClick={() => alert('cancel')}>
         cancel
+      </Button>
+      <Button showSpinner type='back' disabled onClick={() => alert('back')}>
+        back
       </Button>
       <Button showSpinner type='menu-action' disabled onClick={() => alert('menu-action')}>
         menu-action
