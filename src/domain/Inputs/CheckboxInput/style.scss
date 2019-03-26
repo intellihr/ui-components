@@ -24,6 +24,22 @@
       }
     }
 
+    &:focus + label {
+      &.checkbox {
+        border-color: $i400;
+
+        &::before {
+          background-color: $n300;
+          border-color: $i400;
+        }
+      }
+
+      &.checkbox-button {
+        background-color: $n200;
+        border-color: $i400;
+      }
+    }
+
     &:checked + .checkbox {
       border-color: $i600;
 
