@@ -422,6 +422,20 @@ $button-styles: (
     focus-text-color: $n800,
     focus-border-color: $n400
   ),
+  back: (
+    background-color: transparent,
+    border: transparent,
+    text-color: $n700,
+    disabled-background-color: transparent,
+    disabled-text-color: $n400,
+    hover-background-color: transparent,
+    hover-text-color: $n800,
+    active-background-color: transparent,
+    active-text-color: $n800,
+    focus-background-color: transparent,
+    focus-text-color: $i400,
+    focus-border-color: transparent
+  ),
   add: (
     background-color: transparent,
     border: transparent,
@@ -599,6 +613,10 @@ $button-styles: (
   padding: 12px 14px;
   text-align: center;
   transition: background-color .25s ease-out, color .25s ease-out;
+
+  &.back {
+    padding-left: 0;
+  }
 
   .fa {
     vertical-align: initial;
