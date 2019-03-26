@@ -14,6 +14,23 @@
       width: 100%;
     }
 
+
+    &:focus + label {
+      &.radio {
+        border-color: $i400;
+
+        &::before {
+          background-color: $n300;
+          border-color: $i400;
+        }
+      }
+
+      &.radio-button {
+        background-color: $n200;
+        border-color: $i400;
+      }
+    }
+
     &:disabled + .radio {
       color: $n500;
       cursor: not-allowed;

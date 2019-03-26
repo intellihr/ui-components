@@ -45,6 +45,11 @@ const StyledIconInput = styled.input`
   opacity: 0;
   position: absolute;
   width: 0;
+
+  &:focus + label {
+    border-color: ${Variables.Color.i400};
+    background: ${Variables.Color.n200};
+  }
 `
 
 export {
