@@ -1,11 +1,14 @@
 import React from 'react'
 
-import { Props } from '../../../common'
+import { Omit, Props } from '../../../common'
 import { BaseButton, IBaseButtonProps } from '../BaseButton'
+import { MarginButton } from './style'
 
 export interface IButtonProps extends IBaseButtonProps {
   /** Button props passthrough */
-  buttonOverrides?: React.HTMLProps<HTMLButtonElement>
+  buttonOverrides?: Omit<React.HTMLProps<HTMLButtonElement>, 'ref'>
+  /** The margins around the component */
+  margins?: Props.IMargins
 }
 
 export class Button extends BaseButton<IButtonProps> {
@@ -15,14 +18,16 @@ export class Button extends BaseButton<IButtonProps> {
       onClick,
       disabled,
       innerRef,
-      componentContext
+      componentContext,
+      margins
     } = this.props
 
     return (
-      <button
+      <MarginButton
+        margins={margins}
         data-component-type={Props.ComponentType.Button}
         data-component-context={componentContext}
-        ref={innerRef}
+        innerRef={innerRef}
         className={this.buttonClass}
         onClick={onClick}
         disabled={disabled}
@@ -30,7 +35,7 @@ export class Button extends BaseButton<IButtonProps> {
         {...buttonOverrides}
       >
         {this.buttonContent}
-      </button>
+      </MarginButton>
     )
   }
 }

@@ -13,13 +13,19 @@ exports[`<Button /> should render a button with a simple text 1`] = `
   showSpinner={false}
   type="neutral"
 >
-  <button
+  <styled.button
     className="button neutral"
     data-component-type="button"
     type="button"
   >
-    testing testing 123
-  </button>
+    <button
+      className="button neutral "
+      data-component-type="button"
+      type="button"
+    >
+      testing testing 123
+    </button>
+  </styled.button>
 </Button>
 `;
 
@@ -37,13 +43,19 @@ exports[`<Button /> should render a button with a size large 1`] = `
   size="large"
   type="neutral"
 >
-  <button
+  <styled.button
     className="button large neutral"
     data-component-type="button"
     type="button"
   >
-    testing testing 123
-  </button>
+    <button
+      className="button large neutral "
+      data-component-type="button"
+      type="button"
+    >
+      testing testing 123
+    </button>
+  </styled.button>
 </Button>
 `;
 
@@ -60,13 +72,19 @@ exports[`<Button /> should render a button with a type delete-subtle 1`] = `
   showSpinner={false}
   type="delete-subtle"
 >
-  <button
+  <styled.button
     className="button delete-subtle"
     data-component-type="button"
     type="button"
   >
-    testing testing 123
-  </button>
+    <button
+      className="button delete-subtle "
+      data-component-type="button"
+      type="button"
+    >
+      testing testing 123
+    </button>
+  </styled.button>
 </Button>
 `;
 
@@ -92,39 +110,45 @@ exports[`<Button /> should render a button with an icon 1`] = `
   showSpinner={false}
   type="primary-hollow"
 >
-  <button
+  <styled.button
     className="button primary-hollow"
     data-component-type="button"
     type="button"
   >
-    primary-hollow
-    <span
-      className="button-icon right"
-      data-component-type="button_icon"
+    <button
+      className="button primary-hollow "
+      data-component-type="button"
+      type="button"
     >
-      <FontAwesomeIcon
-        type="star"
+      primary-hollow
+      <span
+        className="button-icon right"
+        data-component-type="button_icon"
       >
-        <Icon
-          isSpinning={false}
-          size="medium"
-          type="fa-star"
+        <FontAwesomeIcon
+          type="star"
         >
-          <styled.i
-            aria-hidden={true}
-            className="icon fa fa-star"
+          <Icon
+            isSpinning={false}
             size="medium"
+            type="fa-star"
           >
-            <i
+            <styled.i
               aria-hidden={true}
-              className="icon fa fa-star c0"
+              className="icon fa fa-star"
               size="medium"
-            />
-          </styled.i>
-        </Icon>
-      </FontAwesomeIcon>
-    </span>
-  </button>
+            >
+              <i
+                aria-hidden={true}
+                className="icon fa fa-star c0"
+                size="medium"
+              />
+            </styled.i>
+          </Icon>
+        </FontAwesomeIcon>
+      </span>
+    </button>
+  </styled.button>
 </Button>
 `;
 
@@ -142,13 +166,19 @@ exports[`<Button /> should render a disabled button 1`] = `
   showSpinner={false}
   type="neutral"
 >
-  <button
+  <styled.button
     className="button neutral"
     data-component-type="button"
     type="button"
   >
-    testing testing 123
-  </button>
+    <button
+      className="button neutral "
+      data-component-type="button"
+      type="button"
+    >
+      testing testing 123
+    </button>
+  </styled.button>
 </Button>
 `;
 
@@ -193,33 +223,38 @@ exports[`should render a button with a spinner 1`] = `
   showSpinner={true}
   type="neutral"
 >
-  <button
+  <styled.button
     className="button neutral show-spinner"
     data-component-type="button"
     type="button"
   >
-    <Spinner
-      color="#424F5C"
-      size={10}
-      type="three-bounce"
+    <button
+      className="button neutral show-spinner "
+      data-component-type="button"
+      type="button"
     >
-      <styled.div
-        className="spinner"
+      <Spinner
+        color="#424F5C"
+        size={10}
+        type="three-bounce"
       >
-        <div
-          className="spinner c0"
+        <styled.div
+          className="spinner"
         >
-          <ThreeBounce
-            color="#424F5C"
-            duration="1.5s"
-            gutter={2}
-            scaleEnd={1}
-            scaleStart={0}
-            size={10}
-            timingFunction="ease-in-out"
+          <div
+            className="spinner c0"
           >
-            <Base
-              css="
+            <ThreeBounce
+              color="#424F5C"
+              duration="1.5s"
+              gutter={2}
+              scaleEnd={1}
+              scaleStart={0}
+              size={10}
+              timingFunction="ease-in-out"
+            >
+              <Base
+                css="
         @-webkit-keyframes brsk-three-bounce {
           0%, 80%, 100% {
             -webkit-transform: scale(0);
@@ -240,80 +275,81 @@ exports[`should render a button with a spinner 1`] = `
           }
         }
       "
-            >
-              <span>
-                <style>
-                   @-webkit-keyframes brsk-three-bounce { 0%, 80%, 100% { -webkit-transform: scale(0); } 40% { -webkit-transform: scale(1); } } @keyframes brsk-three-bounce { 0%, 80%, 100% { transform: scale(0); -webkit-transform: scale(0); } 40% { transform: scale(1); -webkit-transform: scale(1); } } 
-                </style>
-                <div
-                  style={
-                    Object {
-                      "WebkitAnimationDelay": "-0.32s",
-                      "WebkitAnimationDuration": "1.5s",
-                      "WebkitAnimationIterationCount": "infinite",
-                      "WebkitAnimationName": "brsk-three-bounce",
-                      "WebkitAnimationTimingFunction": "ease-in-out",
-                      "animationDelay": "-0.32s",
-                      "animationDuration": "1.5s",
-                      "animationIterationCount": "infinite",
-                      "animationName": "brsk-three-bounce",
-                      "animationTimingFunction": "ease-in-out",
-                      "backgroundColor": "#424F5C",
-                      "borderRadius": "100%",
-                      "display": "inline-block",
-                      "height": 10,
-                      "marginRight": 2,
-                      "width": 10,
+              >
+                <span>
+                  <style>
+                     @-webkit-keyframes brsk-three-bounce { 0%, 80%, 100% { -webkit-transform: scale(0); } 40% { -webkit-transform: scale(1); } } @keyframes brsk-three-bounce { 0%, 80%, 100% { transform: scale(0); -webkit-transform: scale(0); } 40% { transform: scale(1); -webkit-transform: scale(1); } } 
+                  </style>
+                  <div
+                    style={
+                      Object {
+                        "WebkitAnimationDelay": "-0.32s",
+                        "WebkitAnimationDuration": "1.5s",
+                        "WebkitAnimationIterationCount": "infinite",
+                        "WebkitAnimationName": "brsk-three-bounce",
+                        "WebkitAnimationTimingFunction": "ease-in-out",
+                        "animationDelay": "-0.32s",
+                        "animationDuration": "1.5s",
+                        "animationIterationCount": "infinite",
+                        "animationName": "brsk-three-bounce",
+                        "animationTimingFunction": "ease-in-out",
+                        "backgroundColor": "#424F5C",
+                        "borderRadius": "100%",
+                        "display": "inline-block",
+                        "height": 10,
+                        "marginRight": 2,
+                        "width": 10,
+                      }
                     }
-                  }
-                />
-                <div
-                  style={
-                    Object {
-                      "WebkitAnimationDelay": "-0.16s",
-                      "WebkitAnimationDuration": "1.5s",
-                      "WebkitAnimationIterationCount": "infinite",
-                      "WebkitAnimationName": "brsk-three-bounce",
-                      "WebkitAnimationTimingFunction": "ease-in-out",
-                      "animationDelay": "-0.16s",
-                      "animationDuration": "1.5s",
-                      "animationIterationCount": "infinite",
-                      "animationName": "brsk-three-bounce",
-                      "animationTimingFunction": "ease-in-out",
-                      "backgroundColor": "#424F5C",
-                      "borderRadius": "100%",
-                      "display": "inline-block",
-                      "height": 10,
-                      "marginRight": 2,
-                      "width": 10,
+                  />
+                  <div
+                    style={
+                      Object {
+                        "WebkitAnimationDelay": "-0.16s",
+                        "WebkitAnimationDuration": "1.5s",
+                        "WebkitAnimationIterationCount": "infinite",
+                        "WebkitAnimationName": "brsk-three-bounce",
+                        "WebkitAnimationTimingFunction": "ease-in-out",
+                        "animationDelay": "-0.16s",
+                        "animationDuration": "1.5s",
+                        "animationIterationCount": "infinite",
+                        "animationName": "brsk-three-bounce",
+                        "animationTimingFunction": "ease-in-out",
+                        "backgroundColor": "#424F5C",
+                        "borderRadius": "100%",
+                        "display": "inline-block",
+                        "height": 10,
+                        "marginRight": 2,
+                        "width": 10,
+                      }
                     }
-                  }
-                />
-                <div
-                  style={
-                    Object {
-                      "WebkitAnimationDuration": "1.5s",
-                      "WebkitAnimationIterationCount": "infinite",
-                      "WebkitAnimationName": "brsk-three-bounce",
-                      "WebkitAnimationTimingFunction": "ease-in-out",
-                      "animationDuration": "1.5s",
-                      "animationIterationCount": "infinite",
-                      "animationName": "brsk-three-bounce",
-                      "animationTimingFunction": "ease-in-out",
-                      "backgroundColor": "#424F5C",
-                      "borderRadius": "100%",
-                      "display": "inline-block",
-                      "height": 10,
-                      "width": 10,
+                  />
+                  <div
+                    style={
+                      Object {
+                        "WebkitAnimationDuration": "1.5s",
+                        "WebkitAnimationIterationCount": "infinite",
+                        "WebkitAnimationName": "brsk-three-bounce",
+                        "WebkitAnimationTimingFunction": "ease-in-out",
+                        "animationDuration": "1.5s",
+                        "animationIterationCount": "infinite",
+                        "animationName": "brsk-three-bounce",
+                        "animationTimingFunction": "ease-in-out",
+                        "backgroundColor": "#424F5C",
+                        "borderRadius": "100%",
+                        "display": "inline-block",
+                        "height": 10,
+                        "width": 10,
+                      }
                     }
-                  }
-                />
-              </span>
-            </Base>
-          </ThreeBounce>
-        </div>
-      </styled.div>
-    </Spinner>
-  </button>
+                  />
+                </span>
+              </Base>
+            </ThreeBounce>
+          </div>
+        </styled.div>
+      </Spinner>
+    </button>
+  </styled.button>
 </Button>
 `;
