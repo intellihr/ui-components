@@ -83,6 +83,7 @@ exports[`<IconPickerInput /> should render an Icon Picker 1`] = `
     gutterMarginY={8}
     gutterPaddingX="none"
     gutterPaddingY="none"
+    hideOverflow={false}
     horizontalAlignment="left"
     verticalAlignment="stretch"
   />

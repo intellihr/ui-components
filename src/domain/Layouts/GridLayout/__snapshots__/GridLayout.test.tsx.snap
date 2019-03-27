@@ -370,6 +370,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
       "min": 16,
     }
   }
+  hideOverflow={false}
   horizontalAlignment="center"
   verticalAlignment="stretch"
 >
@@ -377,6 +378,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     data-component-type="grid_layout"
     gutterMarginX={4}
     gutterMarginY="none"
+    hideOverflow={false}
     horizontalAlignment="center"
     verticalAlignment="stretch"
   >

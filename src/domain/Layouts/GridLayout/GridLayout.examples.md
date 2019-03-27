@@ -556,3 +556,39 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id 
   ]}
 />
 ```
+
+
+
+#### Hiding overflow
+
+GridLayouts can be setup to hide the overflow of their children,
+This is quite useful in cases where you have grid layouts within
+other grid layouts.
+
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%',
+  'margin-left': '100px',
+  'margin-right': '100px'
+};
+
+<GridLayout
+  hideOverflow
+  cells={[
+    {
+      size: 10,
+      content: <div style={style}/>
+    },
+    {
+      size: 2,
+      content: <div style={style}/>
+    }
+  ]}
+/>
+```
