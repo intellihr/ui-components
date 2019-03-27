@@ -47,7 +47,8 @@ interface IStyledGridLayoutProps {
   horizontalAlignment: HorizontalAlignment,
   verticalAlignment: VerticalAlignment,
   gutterMarginX: GutterSize | IStyledGridGutters,
-  gutterMarginY: GutterSize | IStyledGridGutters
+  gutterMarginY: GutterSize | IStyledGridGutters,
+  hideOverflow: boolean
 }
 
 interface IStyledCellProps {
@@ -182,6 +183,7 @@ function gridStyleForPropsAtBreakpoint (
   const yMarginGutterSize = getGutterPxAtBreakpoint(props.gutterMarginY, breakpoint)
   let leftRightMarginGutters
   let topBottomMarginGutters
+  let overflow
 
   if (xMarginGutterSize > 0) {
     leftRightMarginGutters = css`
@@ -197,7 +199,14 @@ function gridStyleForPropsAtBreakpoint (
     `
   }
 
+  if (props.hideOverflow) {
+    overflow = css`
+      overflow: hidden;
+    `
+  }
+
   return css`
+    ${overflow}
     ${leftRightMarginGutters}
     ${topBottomMarginGutters}
   `

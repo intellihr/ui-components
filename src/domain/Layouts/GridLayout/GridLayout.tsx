@@ -62,6 +62,8 @@ interface IGridLayoutProps {
   gridColumns?: number,
   /** Component context */
   componentContext?: string
+  /** If the grid should hide overflow from cell margins extending outside the width of the grid. */
+  hideOverflow?: boolean
 }
 
 export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
@@ -69,6 +71,7 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
   public static VerticalAlignment = VerticalAlignment
 
   public static defaultProps: Partial<IGridLayoutProps> = {
+    hideOverflow: false,
     gridColumns: 12,
     horizontalAlignment: HorizontalAlignment.Left,
     verticalAlignment: VerticalAlignment.Stretch,
@@ -80,12 +83,13 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
 
   public render (): JSX.Element {
     const {
+      cells,
+      componentContext,
       gutterMarginX,
       gutterMarginY,
+      hideOverflow,
       horizontalAlignment,
-      verticalAlignment,
-      cells,
-      componentContext
+      verticalAlignment
     } = this.props
 
     return (
@@ -94,6 +98,7 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
         verticalAlignment={verticalAlignment!}
         gutterMarginX={gutterMarginX!}
         gutterMarginY={gutterMarginY!}
+        hideOverflow={hideOverflow!}
         data-component-type={Props.ComponentType.GridLayout}
         data-component-context={componentContext}
       >
