@@ -1,3 +1,5 @@
+import { Variables } from '..'
+
 // tslint:disable-next-line:no-namespace
 namespace Props {
   export enum Position {
@@ -12,6 +14,20 @@ namespace Props {
   export interface IPositionXY {
     xPos: Position.Left | Position.Right,
     yPos: Position.Top | Position.Bottom
+  }
+
+  export type Margin = Variables.Spacing | Variables.Layout | {
+    min?: Variables.Spacing | Variables.Layout | 'none'
+    tablet?: Variables.Spacing | Variables.Layout | 'none'
+    desktop?: Variables.Spacing | Variables.Layout | 'none'
+    bigDesktop?: Variables.Spacing | Variables.Layout | 'none'
+  }
+
+  export interface IMargins {
+    top?: Margin
+    bottom?: Margin
+    left?: Margin
+    right?: Margin
   }
 
   export enum Size {
