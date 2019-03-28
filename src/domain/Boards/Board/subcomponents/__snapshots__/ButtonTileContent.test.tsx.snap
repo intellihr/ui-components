@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ButtonTileContent /> should render a button tile content in the hollow style 1`] = `
-<styled.div>
+<styled.div
+  title="dummy button title"
+>
   <styled.div>
     <styled.div>
       <Icon
@@ -24,7 +26,9 @@ exports[`<ButtonTileContent /> should render a button tile content in the hollow
 `;
 
 exports[`<ButtonTileContent /> should render a button tile content with a font awesome icon 1`] = `
-<styled.div>
+<styled.div
+  title="dummy button title"
+>
   <styled.div>
     <styled.div>
       <Icon
@@ -47,7 +51,9 @@ exports[`<ButtonTileContent /> should render a button tile content with a font a
 `;
 
 exports[`<ButtonTileContent /> should render a button tile content with an IntelliIcon 1`] = `
-<styled.div>
+<styled.div
+  title="dummy button title"
+>
   <styled.div>
     <styled.div>
       <Icon
@@ -70,7 +76,9 @@ exports[`<ButtonTileContent /> should render a button tile content with an Intel
 `;
 
 exports[`<ButtonTileContent /> should render a button tile content with label 1`] = `
-<styled.div>
+<styled.div
+  title="dummy label"
+>
   <styled.div>
     <styled.div>
       <styled.span>

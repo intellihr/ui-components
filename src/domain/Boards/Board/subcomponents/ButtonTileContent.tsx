@@ -83,8 +83,13 @@ class ButtonTileContent extends React.PureComponent<IBoardButtonTileContentProps
   }
 
   public render (): JSX.Element {
+    const {
+      label
+    } = this.props
+
     return (
       <TileContentWrapper
+        title={label}
       >
         {this.content}
       </TileContentWrapper>
