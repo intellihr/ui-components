@@ -222,11 +222,11 @@ import { ButtonGroup } from '@Domain/Buttons';
       <LinkButton type='resolve' href='#'>
         resolve
       </LinkButton>
-      <LinkButton type='skip' href='#'>
-        skip
-      </LinkButton>
       <LinkButton type='cancel' href='#'>
         cancel
+      </LinkButton>
+      <LinkButton type='back' href='#'>
+        back
       </LinkButton>
       <LinkButton type='menu-action' href='#'>
         menu-action
@@ -251,11 +251,11 @@ import { ButtonGroup } from '@Domain/Buttons';
       <LinkButton disabled type='resolve' href='#'>
         resolve
       </LinkButton>
-      <LinkButton disabled type='skip' href='#'>
-        skip
-      </LinkButton>
       <LinkButton disabled type='cancel' href='#'>
         cancel
+      </LinkButton>
+      <LinkButton disabled type='back' href='#'>
+        back
       </LinkButton>
       <LinkButton type='menu-action' disabled  href='#'>
         menu-action

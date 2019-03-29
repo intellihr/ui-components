@@ -35,7 +35,6 @@ const spinnerColour = {
   'delete': Variables.Color.r500,
   'delete-subtle': Variables.Color.n700,
   'resolve': Variables.Color.n700,
-  'skip': Variables.Color.n700,
   'menu-action': Variables.Color.n700
 }
 
