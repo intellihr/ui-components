@@ -558,6 +558,10 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id 
 ```
 
 #### Animation
+
+Cells can be animated with transitions when added or removed from the gridlayout. Animations can be specified per
+cell or for the entire grid.
+
 ```jsx
 import { Variables } from '@Common';
 import { Button } from '@Domain/Buttons';

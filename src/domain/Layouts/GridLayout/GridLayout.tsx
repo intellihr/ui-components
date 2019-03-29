@@ -35,6 +35,11 @@ interface IGutterSizeDefinition {
 }
 
 interface IGridLayoutCell {
+  /**
+   * Key for the cell. This is important for animations, as cells with the same key will be kept unanimated
+   * when transitioning. Defaults to the index of the cell.
+   */
+  key?: string | number,
   /** The content to place within the cell */
   content?: JSX.Element | string | null,
   /** The size this cell takes up within the grid */
@@ -120,6 +125,7 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
       animationStyle: gridAnimationStyle
     } = this.props
     const {
+      key,
       content,
       size,
       offset,
@@ -128,9 +134,12 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
     } = cell
 
     return (
-      <CSSTransition classNames='grid-layout-cell-animation' timeout={200}>
+      <CSSTransition
+        key={(key !== undefined) ? key : index}
+        classNames='grid-layout-cell-animation'
+        timeout={200}
+      >
         <StyledCell
-          key={index}
           gridColumns={gridColumns!}
           sizes={size || 'auto'}
           offsets={offset || 0}
