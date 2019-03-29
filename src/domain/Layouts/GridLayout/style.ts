@@ -297,7 +297,7 @@ function cellStyleForSizeAndGutters (
 
   if (size === 'auto') {
     flexProperties = css`
-      flex: 1 1 0;
+      flex: 1 1 0%;
       width: auto;
     `
   } else if (size === 'shrink') {
