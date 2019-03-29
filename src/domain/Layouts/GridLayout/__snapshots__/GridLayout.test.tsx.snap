@@ -188,9 +188,9 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     padding-bottom: 8px;
     margin-left: 2px;
     margin-right: 2px;
-    -webkit-flex: 1 1 0;
-    -ms-flex: 1 1 0;
-    flex: 1 1 0;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
     width: auto;
   }
 }
@@ -230,9 +230,9 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     padding-bottom: 8px;
     margin-left: 2px;
     margin-right: 2px;
-    -webkit-flex: 1 1 0;
-    -ms-flex: 1 1 0;
-    flex: 1 1 0;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
     width: auto;
   }
 }
@@ -269,9 +269,9 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     padding-bottom: 8px;
     margin-left: 2px;
     margin-right: 2px;
-    -webkit-flex: 1 1 0;
-    -ms-flex: 1 1 0;
-    flex: 1 1 0;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
     width: auto;
     margin-left: calc(25% + 2px);
   }
@@ -283,9 +283,9 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     padding-bottom: 8px;
     margin-left: 2px;
     margin-right: 2px;
-    -webkit-flex: 1 1 0;
-    -ms-flex: 1 1 0;
-    flex: 1 1 0;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
     width: auto;
     margin-left: calc(25% + 2px);
   }
@@ -295,9 +295,9 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   .c5 {
     margin-left: 2px;
     margin-right: 2px;
-    -webkit-flex: 1 1 0;
-    -ms-flex: 1 1 0;
-    flex: 1 1 0;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
     width: auto;
     margin-left: calc(25% + 2px);
   }
@@ -307,9 +307,9 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   .c5 {
     margin-left: 2px;
     margin-right: 2px;
-    -webkit-flex: 1 1 0;
-    -ms-flex: 1 1 0;
-    flex: 1 1 0;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
     width: auto;
     margin-left: calc(25% + 2px);
   }
