@@ -21,6 +21,7 @@ enum VerticalAlignment {
 type GutterSize = 'none' | Variables.Spacing | Variables.Layout
 type CellSize = number | 'auto' | 'shrink' | 'fullWidth'
 type CellOffset = number
+type CellAnimation = 'none' | 'fadeInOut' | 'zoomInOut'
 
 interface IStyledCellSizes {
   min?: CellSize,
@@ -57,7 +58,8 @@ interface IStyledCellProps {
   gutterMarginX: GutterSize | IStyledGridGutters,
   gutterMarginY: GutterSize | IStyledGridGutters,
   gutterPaddingX: GutterSize | IStyledGridGutters,
-  gutterPaddingY: GutterSize | IStyledGridGutters
+  gutterPaddingY: GutterSize | IStyledGridGutters,
+  animationStyle: CellAnimation
 }
 
 const breakpointOrder: ReadonlyArray<keyof IStyledCellSizes> = ['min', 'tablet', 'desktop', 'bigDesktop']
@@ -297,7 +299,7 @@ function cellStyleForSizeAndGutters (
 
   if (size === 'auto') {
     flexProperties = css`
-      flex: 1 1 0;
+      flex: 1 1 0%;
       width: auto;
     `
   } else if (size === 'shrink') {
@@ -409,6 +411,50 @@ function cellStyleForProps (props: IStyledCellProps) {
   `
 }
 
+function cellAnimationForProps (props: IStyledCellProps) {
+  if (props.animationStyle === 'fadeInOut') {
+    return css`
+      transition: opacity 200ms ease-in-out;
+
+      &.grid-layout-cell-animation-enter {
+        opacity: 0;
+      }
+
+      &.grid-layout-cell-animation-enter-active {
+        opacity: 1;
+      }
+
+      &.grid-layout-cell-animation-exit {
+        opacity: 1;
+      }
+
+      &.grid-layout-cell-animation-exit-active {
+        opacity: 0;
+      }
+    `
+  } else if (props.animationStyle === 'zoomInOut') {
+    return css`
+      transition: transform 200ms ease-in-out;
+
+      &.grid-layout-cell-animation-enter {
+        transform: scale(0.1);
+      }
+
+      &.grid-layout-cell-animation-enter-active {
+        transform: scale(1.0);
+      }
+
+      &.grid-layout-cell-animation-exit {
+        transform: scale(1.0);
+      }
+
+      &.grid-layout-cell-animation-exit-active {
+        transform: scale(0.1);
+      }
+    `
+  }
+}
+
 const StyledCell = styled.div<IStyledCellProps>`
   flex: 0 0 auto;
   flex-basis: auto;
@@ -417,6 +463,7 @@ const StyledCell = styled.div<IStyledCellProps>`
   width: 100%;
 
   ${cellStyleForProps}
+  ${cellAnimationForProps}
 `
 
 export {
@@ -427,5 +474,6 @@ export {
   StyledCell,
   HorizontalAlignment,
   VerticalAlignment,
-  GutterSize
+  GutterSize,
+  CellAnimation
 }

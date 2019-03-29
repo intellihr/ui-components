@@ -188,9 +188,9 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     padding-bottom: 8px;
     margin-left: 2px;
     margin-right: 2px;
-    -webkit-flex: 1 1 0;
-    -ms-flex: 1 1 0;
-    flex: 1 1 0;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
     width: auto;
   }
 }
@@ -230,9 +230,9 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     padding-bottom: 8px;
     margin-left: 2px;
     margin-right: 2px;
-    -webkit-flex: 1 1 0;
-    -ms-flex: 1 1 0;
-    flex: 1 1 0;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
     width: auto;
   }
 }
@@ -269,9 +269,9 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     padding-bottom: 8px;
     margin-left: 2px;
     margin-right: 2px;
-    -webkit-flex: 1 1 0;
-    -ms-flex: 1 1 0;
-    flex: 1 1 0;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
     width: auto;
     margin-left: calc(25% + 2px);
   }
@@ -283,9 +283,9 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     padding-bottom: 8px;
     margin-left: 2px;
     margin-right: 2px;
-    -webkit-flex: 1 1 0;
-    -ms-flex: 1 1 0;
-    flex: 1 1 0;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
     width: auto;
     margin-left: calc(25% + 2px);
   }
@@ -295,9 +295,9 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   .c5 {
     margin-left: 2px;
     margin-right: 2px;
-    -webkit-flex: 1 1 0;
-    -ms-flex: 1 1 0;
-    flex: 1 1 0;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
     width: auto;
     margin-left: calc(25% + 2px);
   }
@@ -307,9 +307,9 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   .c5 {
     margin-left: 2px;
     margin-right: 2px;
-    -webkit-flex: 1 1 0;
-    -ms-flex: 1 1 0;
-    flex: 1 1 0;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
     width: auto;
     margin-left: calc(25% + 2px);
   }
@@ -384,160 +384,285 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
       className="c0"
       data-component-type="grid_layout"
     >
-      <styled.div
-        data-component-type="grid_layout_cell"
-        gridColumns={12}
-        gutterMarginX={4}
-        gutterMarginY="none"
-        gutterPaddingX="none"
-        gutterPaddingY={
-          Object {
-            "desktop": "none",
-            "min": 16,
-          }
-        }
-        key="0"
-        offsets={0}
-        sizes={10}
+      <TransitionGroup
+        childFactory={[Function]}
+        component={null}
       >
-        <div
-          className="c1"
-          data-component-type="grid_layout_cell"
-          sizes={10}
+        <CSSTransition
+          classNames="grid-layout-cell-animation"
+          in={true}
+          key=".$0"
+          onExited={[Function]}
+          timeout={200}
         >
-          <div>
-            1
-          </div>
-        </div>
-      </styled.div>
-      <styled.div
-        data-component-type="grid_layout_cell"
-        gridColumns={12}
-        gutterMarginX={4}
-        gutterMarginY="none"
-        gutterPaddingX="none"
-        gutterPaddingY={
-          Object {
-            "desktop": "none",
-            "min": 16,
-          }
-        }
-        key="1"
-        offsets={0}
-        sizes={2}
-      >
-        <div
-          className="c2"
-          data-component-type="grid_layout_cell"
-          sizes={2}
+          <Transition
+            appear={false}
+            enter={true}
+            exit={true}
+            in={true}
+            mountOnEnter={false}
+            onEnter={[Function]}
+            onEntered={[Function]}
+            onEntering={[Function]}
+            onExit={[Function]}
+            onExited={[Function]}
+            onExiting={[Function]}
+            timeout={200}
+            unmountOnExit={false}
+          >
+            <styled.div
+              animationStyle="none"
+              data-component-type="grid_layout_cell"
+              gridColumns={12}
+              gutterMarginX={4}
+              gutterMarginY="none"
+              gutterPaddingX="none"
+              gutterPaddingY={
+                Object {
+                  "desktop": "none",
+                  "min": 16,
+                }
+              }
+              offsets={0}
+              sizes={10}
+            >
+              <div
+                className="c1"
+                data-component-type="grid_layout_cell"
+                sizes={10}
+              >
+                <div>
+                  1
+                </div>
+              </div>
+            </styled.div>
+          </Transition>
+        </CSSTransition>
+        <CSSTransition
+          classNames="grid-layout-cell-animation"
+          in={true}
+          key=".$1"
+          onExited={[Function]}
+          timeout={200}
         >
-          <div>
-            2
-          </div>
-        </div>
-      </styled.div>
-      <styled.div
-        data-component-type="grid_layout_cell"
-        gridColumns={12}
-        gutterMarginX={4}
-        gutterMarginY="none"
-        gutterPaddingX="none"
-        gutterPaddingY={
-          Object {
-            "desktop": "none",
-            "min": 16,
-          }
-        }
-        key="2"
-        offsets={
-          Object {
-            "tablet": 2,
-          }
-        }
-        sizes={
-          Object {
-            "desktop": 3,
-            "tablet": 4,
-          }
-        }
-      >
-        <div
-          className="c3"
-          data-component-type="grid_layout_cell"
-          sizes={
-            Object {
-              "desktop": 3,
-              "tablet": 4,
-            }
-          }
+          <Transition
+            appear={false}
+            enter={true}
+            exit={true}
+            in={true}
+            mountOnEnter={false}
+            onEnter={[Function]}
+            onEntered={[Function]}
+            onEntering={[Function]}
+            onExit={[Function]}
+            onExited={[Function]}
+            onExiting={[Function]}
+            timeout={200}
+            unmountOnExit={false}
+          >
+            <styled.div
+              animationStyle="none"
+              data-component-type="grid_layout_cell"
+              gridColumns={12}
+              gutterMarginX={4}
+              gutterMarginY="none"
+              gutterPaddingX="none"
+              gutterPaddingY={
+                Object {
+                  "desktop": "none",
+                  "min": 16,
+                }
+              }
+              offsets={0}
+              sizes={2}
+            >
+              <div
+                className="c2"
+                data-component-type="grid_layout_cell"
+                sizes={2}
+              >
+                <div>
+                  2
+                </div>
+              </div>
+            </styled.div>
+          </Transition>
+        </CSSTransition>
+        <CSSTransition
+          classNames="grid-layout-cell-animation"
+          in={true}
+          key=".$2"
+          onExited={[Function]}
+          timeout={200}
         >
-          <div>
-            3
-          </div>
-        </div>
-      </styled.div>
-      <styled.div
-        data-component-type="grid_layout_cell"
-        gridColumns={12}
-        gutterMarginX={4}
-        gutterMarginY="none"
-        gutterPaddingX="none"
-        gutterPaddingY={
-          Object {
-            "desktop": "none",
-            "min": 16,
-          }
-        }
-        key="3"
-        offsets={0}
-        sizes={
-          Object {
-            "desktop": 6,
-            "tablet": 4,
-          }
-        }
-      >
-        <div
-          className="c4"
-          data-component-type="grid_layout_cell"
-          sizes={
-            Object {
-              "desktop": 6,
-              "tablet": 4,
-            }
-          }
+          <Transition
+            appear={false}
+            enter={true}
+            exit={true}
+            in={true}
+            mountOnEnter={false}
+            onEnter={[Function]}
+            onEntered={[Function]}
+            onEntering={[Function]}
+            onExit={[Function]}
+            onExited={[Function]}
+            onExiting={[Function]}
+            timeout={200}
+            unmountOnExit={false}
+          >
+            <styled.div
+              animationStyle="none"
+              data-component-type="grid_layout_cell"
+              gridColumns={12}
+              gutterMarginX={4}
+              gutterMarginY="none"
+              gutterPaddingX="none"
+              gutterPaddingY={
+                Object {
+                  "desktop": "none",
+                  "min": 16,
+                }
+              }
+              offsets={
+                Object {
+                  "tablet": 2,
+                }
+              }
+              sizes={
+                Object {
+                  "desktop": 3,
+                  "tablet": 4,
+                }
+              }
+            >
+              <div
+                className="c3"
+                data-component-type="grid_layout_cell"
+                sizes={
+                  Object {
+                    "desktop": 3,
+                    "tablet": 4,
+                  }
+                }
+              >
+                <div>
+                  3
+                </div>
+              </div>
+            </styled.div>
+          </Transition>
+        </CSSTransition>
+        <CSSTransition
+          classNames="grid-layout-cell-animation"
+          in={true}
+          key=".$3"
+          onExited={[Function]}
+          timeout={200}
         >
-          <div>
-            4
-          </div>
-        </div>
-      </styled.div>
-      <styled.div
-        data-component-type="grid_layout_cell"
-        gridColumns={12}
-        gutterMarginX={4}
-        gutterMarginY="none"
-        gutterPaddingX="none"
-        gutterPaddingY={
-          Object {
-            "desktop": "none",
-            "min": 16,
-          }
-        }
-        key="4"
-        offsets={3}
-        sizes="auto"
-      >
-        <div
-          className="c5"
-          data-component-type="grid_layout_cell"
-          sizes="auto"
+          <Transition
+            appear={false}
+            enter={true}
+            exit={true}
+            in={true}
+            mountOnEnter={false}
+            onEnter={[Function]}
+            onEntered={[Function]}
+            onEntering={[Function]}
+            onExit={[Function]}
+            onExited={[Function]}
+            onExiting={[Function]}
+            timeout={200}
+            unmountOnExit={false}
+          >
+            <styled.div
+              animationStyle="none"
+              data-component-type="grid_layout_cell"
+              gridColumns={12}
+              gutterMarginX={4}
+              gutterMarginY="none"
+              gutterPaddingX="none"
+              gutterPaddingY={
+                Object {
+                  "desktop": "none",
+                  "min": 16,
+                }
+              }
+              offsets={0}
+              sizes={
+                Object {
+                  "desktop": 6,
+                  "tablet": 4,
+                }
+              }
+            >
+              <div
+                className="c4"
+                data-component-type="grid_layout_cell"
+                sizes={
+                  Object {
+                    "desktop": 6,
+                    "tablet": 4,
+                  }
+                }
+              >
+                <div>
+                  4
+                </div>
+              </div>
+            </styled.div>
+          </Transition>
+        </CSSTransition>
+        <CSSTransition
+          classNames="grid-layout-cell-animation"
+          in={true}
+          key=".$4"
+          onExited={[Function]}
+          timeout={200}
         >
-          <div>
-            5
-          </div>
-        </div>
-      </styled.div>
+          <Transition
+            appear={false}
+            enter={true}
+            exit={true}
+            in={true}
+            mountOnEnter={false}
+            onEnter={[Function]}
+            onEntered={[Function]}
+            onEntering={[Function]}
+            onExit={[Function]}
+            onExited={[Function]}
+            onExiting={[Function]}
+            timeout={200}
+            unmountOnExit={false}
+          >
+            <styled.div
+              animationStyle="none"
+              data-component-type="grid_layout_cell"
+              gridColumns={12}
+              gutterMarginX={4}
+              gutterMarginY="none"
+              gutterPaddingX="none"
+              gutterPaddingY={
+                Object {
+                  "desktop": "none",
+                  "min": 16,
+                }
+              }
+              offsets={3}
+              sizes="auto"
+            >
+              <div
+                className="c5"
+                data-component-type="grid_layout_cell"
+                sizes="auto"
+              >
+                <div>
+                  5
+                </div>
+              </div>
+            </styled.div>
+          </Transition>
+        </CSSTransition>
+      </TransitionGroup>
     </div>
   </styled.div>
 </GridLayout>
