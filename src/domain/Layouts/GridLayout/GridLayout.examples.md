@@ -556,3 +556,83 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id 
   ]}
 />
 ```
+
+#### Animation
+
+Cells can be animated with transitions when added or removed from the gridlayout. Animations can be specified per
+cell or for the entire grid.
+
+```jsx
+import { Variables } from '@Common';
+import { Button } from '@Domain/Buttons';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
+initialState = { cells: [
+  {
+    size: 6,
+    content: <div style={style} />
+  },
+  {
+    size: 6,
+    content: <div style={style} />
+  },
+  {
+    size: 6,
+    content: <div style={style} />
+  }
+] };
+
+<>
+  <Button onClick={() => {
+      const newCells = [
+        ...state.cells,
+        {
+          size: 6,
+          content: <div style={style} />
+        }
+      ]
+      
+      setState({ cells: newCells })
+    }}
+  >
+    Add Cell
+  </Button>
+  <Button onClick={() => {
+      const newCells = [
+        ...state.cells,
+        {
+          size: 6,
+          content: <div style={style} />,
+          animationStyle: 'zoomInOut'
+        }
+      ]
+      
+      setState({ cells: newCells })
+    }}
+  >
+    Add ZOOMER Cell
+  </Button>
+  <Button 
+    onClick={() => {
+      const newCells = [...state.cells]
+      newCells.pop()
+      
+      setState({ cells: newCells })
+    }}
+  >
+    Remove Cell
+  </Button>
+  <GridLayout
+    gutterMarginX={Variables.Layout.lLarge}
+    gutterMarginY={Variables.Layout.lSmall}
+    cells={state.cells}
+    animationStyle='fadeInOut'
+  />
+</>
+```

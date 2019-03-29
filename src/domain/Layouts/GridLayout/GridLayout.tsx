@@ -1,7 +1,9 @@
 import React from 'react'
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 import { Props } from '../../../common'
 import {
+  CellAnimation,
   GutterSize,
   HorizontalAlignment,
   StyledCell,
@@ -33,12 +35,19 @@ interface IGutterSizeDefinition {
 }
 
 interface IGridLayoutCell {
+  /**
+   * Key for the cell. This is important for animations, as cells with the same key will be kept unanimated
+   * when transitioning. Defaults to the index of the cell.
+   */
+  key?: string | number,
   /** The content to place within the cell */
   content?: JSX.Element | string | null,
   /** The size this cell takes up within the grid */
   size?: ICellSizeDefinition | CellSize,
   /** The cell offset from the edge of the grid */
   offset?: ICellOffsetDefinition | number,
+  /** Animation style for adding/removing the cell (overrides the grid style) */
+  animationStyle?: CellAnimation
   /** Component context */
   componentContext?: string
 }
@@ -60,6 +69,8 @@ interface IGridLayoutProps {
   gutterPaddingY?: IGutterSizeDefinition | GutterSize,
   /** Determines the amount of columns within the grid */
   gridColumns?: number,
+  /** Animation style for adding/removing cells to the grid */
+  animationStyle?: CellAnimation
   /** Component context */
   componentContext?: string
 }
@@ -97,7 +108,9 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
         data-component-type={Props.ComponentType.GridLayout}
         data-component-context={componentContext}
       >
-        {cells.map(this.getCellForDefinition)}
+        <TransitionGroup component={null}>
+          {cells.map(this.getCellForDefinition)}
+        </TransitionGroup>
       </StyledGridLayout>
     )
   }
@@ -108,30 +121,39 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
       gutterMarginX,
       gutterMarginY,
       gutterPaddingX,
-      gutterPaddingY
+      gutterPaddingY,
+      animationStyle: gridAnimationStyle
     } = this.props
     const {
+      key,
       content,
       size,
       offset,
-      componentContext
+      componentContext,
+      animationStyle: cellAnimationStyle
     } = cell
 
     return (
-      <StyledCell
-        key={index}
-        gridColumns={gridColumns!}
-        sizes={size || 'auto'}
-        offsets={offset || 0}
-        gutterMarginX={gutterMarginX!}
-        gutterMarginY={gutterMarginY!}
-        gutterPaddingX={gutterPaddingX!}
-        gutterPaddingY={gutterPaddingY!}
-        data-component-type={Props.ComponentType.GridLayoutCell}
-        data-component-context={componentContext}
+      <CSSTransition
+        key={(key !== undefined) ? key : index}
+        classNames='grid-layout-cell-animation'
+        timeout={200}
       >
-        {content}
-      </StyledCell>
+        <StyledCell
+          gridColumns={gridColumns!}
+          sizes={size || 'auto'}
+          offsets={offset || 0}
+          gutterMarginX={gutterMarginX!}
+          gutterMarginY={gutterMarginY!}
+          gutterPaddingX={gutterPaddingX!}
+          gutterPaddingY={gutterPaddingY!}
+          animationStyle={cellAnimationStyle || gridAnimationStyle || 'none'}
+          data-component-type={Props.ComponentType.GridLayoutCell}
+          data-component-context={componentContext}
+        >
+          {content}
+        </StyledCell>
+      </CSSTransition>
     )
   }
 }
