@@ -19,7 +19,7 @@ type ButtonType =
   'primary-hollow' | 'secondary-hollow' | 'success-hollow' | 'warning-hollow' | 'alert-hollow' |
   'neutral-hollow' | 'highlight-hollow' | 'light-hollow' | 'dark-hollow' |
 
-  'add' |'add-subtle' | 'delete-subtle' | 'delete' | 'resolve' | 'skip' | 'cancel' | 'menu-action' | 'back'
+  'add' |'add-subtle' | 'delete-subtle' | 'delete' | 'resolve' | 'cancel' | 'menu-action' | 'back'
 
 type ButtonSize = 'small' | 'medium' | 'large'
 

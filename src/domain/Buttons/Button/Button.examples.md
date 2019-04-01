@@ -237,9 +237,6 @@ import { ButtonGroup } from '@Domain/Buttons';
       <Button type='resolve' onClick={() => alert('resolve')}>
         resolve
       </Button>
-      <Button type='skip' onClick={() => alert('skip')}>
-        skip
-      </Button>
       <Button type='cancel' onClick={() => alert('cancel')}>
         cancel
       </Button>
@@ -268,9 +265,6 @@ import { ButtonGroup } from '@Domain/Buttons';
       </Button>
       <Button type='resolve' disabled onClick={() => alert('resolve')}>
         resolve
-      </Button>
-      <Button type='skip' disabled onClick={() => alert('skip')}>
-        skip
       </Button>
       <Button type='cancel' disabled onClick={() => alert('cancel')}>
         cancel
@@ -508,9 +502,6 @@ import { FontAwesomeIcon } from '@Domain/Icons';
       </Button>
       <Button showSpinner type='resolve' disabled onClick={() => alert('resolve')}>
         resolve
-      </Button>
-      <Button showSpinner type='skip' disabled onClick={() => alert('skip')}>
-        skip
       </Button>
       <Button showSpinner type='cancel' disabled onClick={() => alert('cancel')}>
         cancel
