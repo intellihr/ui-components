@@ -406,6 +406,35 @@ const style = {
 </>
 ```
 
+Horizontal alignment also support being customised per breakpoint. The following will have left horizontal alignment
+on desktop but right horizontal alignment on mobile:
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  width: '100%',
+  textAlign: 'center'
+};
+
+<GridLayout
+  horizontalAlignment={{ desktop: GridLayout.HorizontalAlignment.Left, min: GridLayout.HorizontalAlignment.Right }}
+  cells={[
+          {
+            size: 4,
+            content: <div style={style}>Aligned to Left in desktop</div>
+          },
+          {
+            size: 4,
+            content: <div style={style}>right in mobile</div>
+          }
+        ]}
+/>
+
+```
+
 #### Vertical Alignment
 
 Vertical alignment can be applied to the grid to affect the items within it.
