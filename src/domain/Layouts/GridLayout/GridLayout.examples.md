@@ -508,6 +508,38 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id 
 </>
 ```
 
+Vertical alignment also support being customised per breakpoint. The following will have top vertical alignment
+on desktop but bottom vertical alignment on mobile:
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  width: '100%',
+  height: '100%',
+  textAlign: 'center'
+};
+const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id eros consequat ex faucibus pellentesque nec non ipsum. Nulla facilisis libero vitae nisi varius ultricies. Nullam aliquet sollicitudin luctus. Donec sit amet risus et est pellentesque consectetur. Cras eu nisl est. Quisque auctor magna at nulla ultrices, non molestie tortor iaculis.';
+
+
+<GridLayout
+    verticalAlignment={{ desktop: GridLayout.VerticalAlignment.Top, min: GridLayout.VerticalAlignment.Bottom }}
+    cells={[
+      {
+        size: 4,
+        content: <div style={style}>Alignment change with breakpoint</div>
+      },
+      {
+        size: 4,
+        content: <div style={style}>{text}</div>
+      }
+    ]}
+  />
+
+```
+
 #### Alternate grid patterns
 
 Grids don't __have__ to be 12 grids. The `gridColumns` prop lets you specify the number

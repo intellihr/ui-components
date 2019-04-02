@@ -41,6 +41,13 @@ interface IHorizontalAlignmentDefinition {
   bigDesktop?: HorizontalAlignment
 }
 
+interface IVerticalAlignmentDefinition {
+  min?: VerticalAlignment,
+  tablet?: VerticalAlignment,
+  desktop?: VerticalAlignment,
+  bigDesktop?: VerticalAlignment
+}
+
 interface IGridLayoutCell {
   /**
    * Key for the cell. This is important for animations, as cells with the same key will be kept unanimated
@@ -65,7 +72,7 @@ interface IGridLayoutProps {
   /** The horizontal alignment of the items within the grid */
   horizontalAlignment?: IHorizontalAlignmentDefinition | HorizontalAlignment,
   /** The vertical alignment of the items within the grid */
-  verticalAlignment?: VerticalAlignment,
+  verticalAlignment?: IVerticalAlignmentDefinition | VerticalAlignment,
   /** Adds gutters between cells as margin in the x direction */
   gutterMarginX?: IGutterSizeDefinition | GutterSize,
   /** Adds gutters between cells as margin in the y direction */

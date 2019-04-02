@@ -12,14 +12,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
 }
 
 .c1 {
@@ -86,6 +78,14 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   .c0 {
     margin-left: -2px;
     margin-right: -2px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
   }
 }
 
@@ -93,6 +93,14 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   .c0 {
     margin-left: -2px;
     margin-right: -2px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
   }
 }
 
@@ -100,6 +108,14 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   .c0 {
     margin-left: -2px;
     margin-right: -2px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
   }
 }
 
@@ -107,6 +123,14 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   .c0 {
     margin-left: -2px;
     margin-right: -2px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
   }
 }
 

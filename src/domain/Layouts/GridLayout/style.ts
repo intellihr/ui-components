@@ -51,9 +51,16 @@ interface IStyledHorizontalAlignment {
   bigDesktop?: HorizontalAlignment
 }
 
+interface IStyledVerticalAlignment {
+  min?: VerticalAlignment,
+  tablet?: VerticalAlignment,
+  desktop?: VerticalAlignment,
+  bigDesktop?: VerticalAlignment
+}
+
 interface IStyledGridLayoutProps {
   horizontalAlignment: HorizontalAlignment | IStyledHorizontalAlignment,
-  verticalAlignment: VerticalAlignment,
+  verticalAlignment: VerticalAlignment | IStyledVerticalAlignment,
   gutterMarginX: GutterSize | IStyledGridGutters,
   gutterMarginY: GutterSize | IStyledGridGutters
 }
@@ -85,6 +92,10 @@ function isGutterSize (gutters: GutterSize | IStyledGridGutters): gutters is Gut
 
 function isHorizontalAlignment (horizontalAlignment: HorizontalAlignment | IStyledHorizontalAlignment): horizontalAlignment is HorizontalAlignment {
   return !isPlainObject(horizontalAlignment)
+}
+
+function isVerticalAlignment (verticalAlignment: VerticalAlignment | IStyledVerticalAlignment): verticalAlignment is VerticalAlignment {
+  return !isPlainObject(verticalAlignment)
 }
 
 function getSizeAtBreakpoint (size: CellSize | IStyledCellSizes, breakpoint: keyof IStyledCellSizes): CellSize {
@@ -159,6 +170,24 @@ function getHorizontalAlignmentAtBreakpoint (horizontalAlignment: HorizontalAlig
   return lastAlignment
 }
 
+function getVerticalAlignmentAtBreakpoint (verticalAlignment: VerticalAlignment | IStyledVerticalAlignment, breakpoint: keyof IStyledVerticalAlignment): VerticalAlignment {
+  if (isVerticalAlignment(verticalAlignment)) {
+    return verticalAlignment
+  }
+
+  let lastAlignment: VerticalAlignment = VerticalAlignment.Stretch
+
+  for (const curBreakpoint of breakpointOrder) {
+    lastAlignment = verticalAlignment[curBreakpoint] || lastAlignment
+
+    if (curBreakpoint === breakpoint) {
+      break
+    }
+  }
+
+  return lastAlignment
+}
+
 function getPropertiesForHorizontalAlignment (alignment: HorizontalAlignment) {
   switch (alignment) {
     case HorizontalAlignment.Left:
@@ -212,6 +241,7 @@ function gridStyleForPropsAtBreakpoint (
   const xMarginGutterSize = getGutterPxAtBreakpoint(props.gutterMarginX, breakpoint)
   const yMarginGutterSize = getGutterPxAtBreakpoint(props.gutterMarginY, breakpoint)
   const horizontalAlignment = getHorizontalAlignmentAtBreakpoint(props.horizontalAlignment, breakpoint)
+  const verticalAlignment = getVerticalAlignmentAtBreakpoint(props.verticalAlignment, breakpoint)
   let leftRightMarginGutters
   let topBottomMarginGutters
 
@@ -233,6 +263,7 @@ function gridStyleForPropsAtBreakpoint (
     ${leftRightMarginGutters}
     ${topBottomMarginGutters}
     ${getPropertiesForHorizontalAlignment(horizontalAlignment)}
+    ${getPropertiesForVerticalAlignment(verticalAlignment)}
   `
 }
 
@@ -259,8 +290,6 @@ function gridStyleForProps (props: IStyledGridLayoutProps) {
     ${Utils.mediaQueryBetweenSizes({ minPx: Variables.Breakpoint.breakpointBigDesktop })} {
       ${gridStyleForPropsAtBreakpoint(props, 'bigDesktop')}
     }
-
-    ${getPropertiesForVerticalAlignment(props.verticalAlignment)}
   `
 }
 
