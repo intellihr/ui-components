@@ -44,9 +44,23 @@ interface IStyledGridGutters {
   bigDesktop?: GutterSize
 }
 
+interface IStyledHorizontalAlignment {
+  min?: HorizontalAlignment,
+  tablet?: HorizontalAlignment,
+  desktop?: HorizontalAlignment,
+  bigDesktop?: HorizontalAlignment
+}
+
+interface IStyledVerticalAlignment {
+  min?: VerticalAlignment,
+  tablet?: VerticalAlignment,
+  desktop?: VerticalAlignment,
+  bigDesktop?: VerticalAlignment
+}
+
 interface IStyledGridLayoutProps {
-  horizontalAlignment: HorizontalAlignment,
-  verticalAlignment: VerticalAlignment,
+  horizontalAlignment: HorizontalAlignment | IStyledHorizontalAlignment,
+  verticalAlignment: VerticalAlignment | IStyledVerticalAlignment,
   gutterMarginX: GutterSize | IStyledGridGutters,
   gutterMarginY: GutterSize | IStyledGridGutters
 }
@@ -74,6 +88,14 @@ function isCellOffset (offset: CellOffset | IStyledCellOffsets): offset is CellO
 
 function isGutterSize (gutters: GutterSize | IStyledGridGutters): gutters is GutterSize {
   return !isPlainObject(gutters)
+}
+
+function isHorizontalAlignment (horizontalAlignment: HorizontalAlignment | IStyledHorizontalAlignment): horizontalAlignment is HorizontalAlignment {
+  return !isPlainObject(horizontalAlignment)
+}
+
+function isVerticalAlignment (verticalAlignment: VerticalAlignment | IStyledVerticalAlignment): verticalAlignment is VerticalAlignment {
+  return !isPlainObject(verticalAlignment)
 }
 
 function getSizeAtBreakpoint (size: CellSize | IStyledCellSizes, breakpoint: keyof IStyledCellSizes): CellSize {
@@ -130,6 +152,42 @@ function getGutterPxAtBreakpoint (gutter: GutterSize | IStyledGridGutters, break
   return lastGutter === 'none' ? 0 : lastGutter
 }
 
+function getHorizontalAlignmentAtBreakpoint (horizontalAlignment: HorizontalAlignment | IStyledHorizontalAlignment, breakpoint: keyof IStyledHorizontalAlignment): HorizontalAlignment {
+  if (isHorizontalAlignment(horizontalAlignment)) {
+    return horizontalAlignment
+  }
+
+  let lastAlignment: HorizontalAlignment = HorizontalAlignment.Left
+
+  for (const curBreakpoint of breakpointOrder) {
+    lastAlignment = horizontalAlignment[curBreakpoint] || lastAlignment
+
+    if (curBreakpoint === breakpoint) {
+      break
+    }
+  }
+
+  return lastAlignment
+}
+
+function getVerticalAlignmentAtBreakpoint (verticalAlignment: VerticalAlignment | IStyledVerticalAlignment, breakpoint: keyof IStyledVerticalAlignment): VerticalAlignment {
+  if (isVerticalAlignment(verticalAlignment)) {
+    return verticalAlignment
+  }
+
+  let lastAlignment: VerticalAlignment = VerticalAlignment.Stretch
+
+  for (const curBreakpoint of breakpointOrder) {
+    lastAlignment = verticalAlignment[curBreakpoint] || lastAlignment
+
+    if (curBreakpoint === breakpoint) {
+      break
+    }
+  }
+
+  return lastAlignment
+}
+
 function getPropertiesForHorizontalAlignment (alignment: HorizontalAlignment) {
   switch (alignment) {
     case HorizontalAlignment.Left:
@@ -182,6 +240,8 @@ function gridStyleForPropsAtBreakpoint (
 ) {
   const xMarginGutterSize = getGutterPxAtBreakpoint(props.gutterMarginX, breakpoint)
   const yMarginGutterSize = getGutterPxAtBreakpoint(props.gutterMarginY, breakpoint)
+  const horizontalAlignment = getHorizontalAlignmentAtBreakpoint(props.horizontalAlignment, breakpoint)
+  const verticalAlignment = getVerticalAlignmentAtBreakpoint(props.verticalAlignment, breakpoint)
   let leftRightMarginGutters
   let topBottomMarginGutters
 
@@ -202,6 +262,8 @@ function gridStyleForPropsAtBreakpoint (
   return css`
     ${leftRightMarginGutters}
     ${topBottomMarginGutters}
+    ${getPropertiesForHorizontalAlignment(horizontalAlignment)}
+    ${getPropertiesForVerticalAlignment(verticalAlignment)}
   `
 }
 
@@ -228,9 +290,6 @@ function gridStyleForProps (props: IStyledGridLayoutProps) {
     ${Utils.mediaQueryBetweenSizes({ minPx: Variables.Breakpoint.breakpointBigDesktop })} {
       ${gridStyleForPropsAtBreakpoint(props, 'bigDesktop')}
     }
-
-    ${getPropertiesForHorizontalAlignment(props.horizontalAlignment)}
-    ${getPropertiesForVerticalAlignment(props.verticalAlignment)}
   `
 }
 

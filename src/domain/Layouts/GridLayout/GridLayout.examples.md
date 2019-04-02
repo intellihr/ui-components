@@ -406,6 +406,35 @@ const style = {
 </>
 ```
 
+Horizontal alignment also support being customised per breakpoint. The following will have left horizontal alignment
+on desktop but right horizontal alignment on mobile:
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  width: '100%',
+  textAlign: 'center'
+};
+
+<GridLayout
+  horizontalAlignment={{ desktop: GridLayout.HorizontalAlignment.Left, min: GridLayout.HorizontalAlignment.Right }}
+  cells={[
+          {
+            size: 4,
+            content: <div style={style}>Aligned to Left in desktop</div>
+          },
+          {
+            size: 4,
+            content: <div style={style}>right in mobile</div>
+          }
+        ]}
+/>
+
+```
+
 #### Vertical Alignment
 
 Vertical alignment can be applied to the grid to affect the items within it.
@@ -477,6 +506,38 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id 
     ]}
   />
 </>
+```
+
+Vertical alignment also support being customised per breakpoint. The following will have top vertical alignment
+on desktop but bottom vertical alignment on mobile:
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  width: '100%',
+  height: '100%',
+  textAlign: 'center'
+};
+const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id eros consequat ex faucibus pellentesque nec non ipsum. Nulla facilisis libero vitae nisi varius ultricies. Nullam aliquet sollicitudin luctus. Donec sit amet risus et est pellentesque consectetur. Cras eu nisl est. Quisque auctor magna at nulla ultrices, non molestie tortor iaculis.';
+
+
+<GridLayout
+    verticalAlignment={{ desktop: GridLayout.VerticalAlignment.Top, min: GridLayout.VerticalAlignment.Bottom }}
+    cells={[
+      {
+        size: 4,
+        content: <div style={style}>Alignment change with breakpoint</div>
+      },
+      {
+        size: 4,
+        content: <div style={style}>{text}</div>
+      }
+    ]}
+  />
+
 ```
 
 #### Alternate grid patterns
