@@ -31,7 +31,7 @@ class Record extends React.PureComponent <IRecordProps> {
       )
     }
 
-    return React.Children.map(
+    return React.Children.map<any, React.ReactNode>(
       children,
       this.formattedChild
     )
@@ -88,7 +88,7 @@ class Record extends React.PureComponent <IRecordProps> {
     )
   }
 
-  private formattedChild = (child: string | number | JSX.Element): JSX.Element => {
+  private formattedChild = (child?: React.ReactNode) => {
     const {
       componentContext
     } = this.props
