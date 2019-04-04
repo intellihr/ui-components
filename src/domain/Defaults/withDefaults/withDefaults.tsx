@@ -1,5 +1,4 @@
 import React from 'react'
-import { Subtract } from 'utility-types'
 
 import { DefaultsConsumer, IDefaults } from '../Defaults'
 
@@ -8,7 +7,7 @@ interface IWithDefaults {
 }
 
 const withDefaults = <P extends IWithDefaults>(DefaultsAwareComponent: React.ComponentType<P>) => (
-  class extends React.PureComponent<Subtract<P, IWithDefaults>> {
+  class extends React.PureComponent<P> {
     public render (): JSX.Element {
       return (
         <DefaultsConsumer>

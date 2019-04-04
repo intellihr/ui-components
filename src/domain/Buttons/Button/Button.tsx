@@ -6,7 +6,7 @@ import { MarginButton } from './style'
 
 export interface IButtonProps extends IBaseButtonProps {
   /** Button props passthrough */
-  buttonOverrides?: Omit<React.HTMLProps<HTMLButtonElement>, 'ref'>
+  buttonOverrides?: Omit<React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>, 'ref'>
   /** The margins around the component */
   margins?: Props.IMargins
 }
