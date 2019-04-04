@@ -66,7 +66,7 @@ class Popover extends React.Component<IPopoverProps, never> {
     window.removeEventListener('scroll', this.debounceOnWindowUpdate)
   }
 
-  public render (): React.ReactPortal {
+  public render () {
     return ReactDOM.createPortal(
       this.transition,
       document.body
