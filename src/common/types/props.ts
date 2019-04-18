@@ -67,14 +67,14 @@ namespace Props {
     ButtonGroup = 'button_group',
     ButtonIcon = 'button_icon',
     Callout = 'callout',
-    LayoutSpacer = 'layout_spacer',
-    LayoutSpacerItem = 'layout_spacer_item',
     EmptyState = 'empty_state',
     GridLayout = 'grid_layout',
     GridLayoutCell = 'grid_layout_cell',
     HintWrapper = 'hint_wrapper',
     HorizontalRule = 'horizontal_rule',
     IconPicker = 'icon_picker',
+    LayoutSpacer = 'layout_spacer',
+    LayoutSpacerItem = 'layout_spacer_item',
     LinkButton = 'link_button',
     Record = 'record',
     RecordName = 'record_name',
@@ -83,7 +83,9 @@ namespace Props {
     Text = 'text',
     Tile = 'tile',
     Timeline = 'timeline',
-    TimelineEvent = 'timeline_event'
+    TimelineEvent = 'timeline_event',
+    ToggleSwitch = 'toggle_switch',
+    ToggleSwitchInput = 'toggle_switch_input'
   }
 
   export enum Orientation {

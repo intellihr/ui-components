@@ -129,6 +129,7 @@ module.exports = {
         {
           name: 'Inputs',
           components: [
+            'src/domain/Inputs/ToggleSwitch/ToggleSwitch.tsx',
             'src/domain/Inputs/CheckboxInput/CheckboxInput.tsx',
             'src/domain/Inputs/CheckboxSet/CheckboxSet.tsx',
             'src/domain/Inputs/IconPickerInput/IconPickerInput.tsx',

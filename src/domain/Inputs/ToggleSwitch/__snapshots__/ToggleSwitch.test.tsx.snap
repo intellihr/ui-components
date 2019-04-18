@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ToggleSwitch /> should render a checked ToggleSwitch 1`] = `
+<styled.div
+  data-component-type="toggle_switch"
+>
+  <GridLayout
+    cells={
+      Array [
+        Object {
+          "content": <UNDEFINED>
+            <Text
+              isInline={false}
+              tag="span"
+              type="heading"
+              weight="heavy"
+            >
+              This is a Toggle Switch
+            </Text>
+            <Text
+              isInline={true}
+              tag="span"
+              type="small"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Text>
+          </UNDEFINED>,
+          "size": "auto",
+        },
+        Object {
+          "content": <ToggleSwitchInput
+            checked={true}
+            componentContext={undefined}
+            disabled={undefined}
+            name="test-input"
+            onChange={undefined}
+          />,
+          "size": "shrink",
+        },
+      ]
+    }
+    gridColumns={12}
+    gutterMarginX={24}
+    gutterMarginY="none"
+    gutterPaddingX="none"
+    gutterPaddingY="none"
+    horizontalAlignment="left"
+    verticalAlignment="stretch"
+  />
+</styled.div>
+`;
+
+exports[`<ToggleSwitch /> should render a disabled ToggleSwitch 1`] = `
+<styled.div
+  data-component-type="toggle_switch"
+>
+  <GridLayout
+    cells={
+      Array [
+        Object {
+          "content": <UNDEFINED>
+            <Text
+              isInline={false}
+              tag="span"
+              type="heading"
+              weight="heavy"
+            >
+              This is a Toggle Switch
+            </Text>
+            <Text
+              isInline={true}
+              tag="span"
+              type="small"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Text>
+          </UNDEFINED>,
+          "size": "auto",
+        },
+        Object {
+          "content": <ToggleSwitchInput
+            checked={false}
+            componentContext={undefined}
+            disabled={true}
+            name="test-input"
+            onChange={undefined}
+          />,
+          "size": "shrink",
+        },
+      ]
+    }
+    gridColumns={12}
+    gutterMarginX={24}
+    gutterMarginY="none"
+    gutterPaddingX="none"
+    gutterPaddingY="none"
+    horizontalAlignment="left"
+    verticalAlignment="stretch"
+  />
+</styled.div>
+`;
+
+exports[`<ToggleSwitch /> should render a disabled and checked ToggleSwitch 1`] = `
+<styled.div
+  data-component-type="toggle_switch"
+>
+  <GridLayout
+    cells={
+      Array [
+        Object {
+          "content": <UNDEFINED>
+            <Text
+              isInline={false}
+              tag="span"
+              type="heading"
+              weight="heavy"
+            >
+              This is a Toggle Switch
+            </Text>
+            <Text
+              isInline={true}
+              tag="span"
+              type="small"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Text>
+          </UNDEFINED>,
+          "size": "auto",
+        },
+        Object {
+          "content": <ToggleSwitchInput
+            checked={true}
+            componentContext={undefined}
+            disabled={true}
+            name="test-input"
+            onChange={undefined}
+          />,
+          "size": "shrink",
+        },
+      ]
+    }
+    gridColumns={12}
+    gutterMarginX={24}
+    gutterMarginY="none"
+    gutterPaddingX="none"
+    gutterPaddingY="none"
+    horizontalAlignment="left"
+    verticalAlignment="stretch"
+  />
+</styled.div>
+`;
+
+exports[`<ToggleSwitch /> should render a unchecked ToggleSwitch 1`] = `
+<styled.div
+  data-component-type="toggle_switch"
+>
+  <GridLayout
+    cells={
+      Array [
+        Object {
+          "content": <UNDEFINED>
+            <Text
+              isInline={false}
+              tag="span"
+              type="heading"
+              weight="heavy"
+            >
+              This is a Toggle Switch
+            </Text>
+            <Text
+              isInline={true}
+              tag="span"
+              type="small"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Text>
+          </UNDEFINED>,
+          "size": "auto",
+        },
+        Object {
+          "content": <ToggleSwitchInput
+            checked={false}
+            componentContext={undefined}
+            disabled={undefined}
+            name="test-input"
+            onChange={undefined}
+          />,
+          "size": "shrink",
+        },
+      ]
+    }
+    gridColumns={12}
+    gutterMarginX={24}
+    gutterMarginY="none"
+    gutterPaddingX="none"
+    gutterPaddingY="none"
+    horizontalAlignment="left"
+    verticalAlignment="stretch"
+  />
+</styled.div>
+`;
