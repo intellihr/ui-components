@@ -4,11 +4,11 @@ import React from 'react'
 import { Props } from '../../../../../common'
 import { StyledFocus, StyledSwitch, StyledToggleInput, StyledToggler } from './style'
 
-export interface IToggleSwitchInputState {
+interface IToggleSwitchInputState {
   focused: boolean
 }
 
-export interface IToggleSwitchInputProps {
+interface IToggleSwitchInputProps {
   /** Called when the checkbox is toggled */
   onChange?: ChangeEventHandler<HTMLInputElement>
   /** The form name of the input */
@@ -22,7 +22,7 @@ export interface IToggleSwitchInputProps {
   componentContext?: string
 }
 
-export class ToggleSwitchInput extends React.PureComponent<IToggleSwitchInputProps, IToggleSwitchInputState> {
+class ToggleSwitchInput extends React.PureComponent<IToggleSwitchInputProps, IToggleSwitchInputState> {
   public readonly state = {
     focused: false
   }
@@ -74,4 +74,10 @@ export class ToggleSwitchInput extends React.PureComponent<IToggleSwitchInputPro
   private handleFocus = () => {
     this.setState({focused: true})
   }
+}
+
+export {
+  IToggleSwitchInputProps,
+  IToggleSwitchInputState,
+  ToggleSwitchInput
 }

@@ -34,9 +34,9 @@ const StyledSwitch = styled.label<ISwitch>`
   ${(props: ISwitch) => {
     if (props.disabled) {
       return css`
-          cursor: not-allowed;
-          background-color: ${Variables.Color.n400};
-        `
+        cursor: not-allowed;
+        background-color: ${Variables.Color.n400};
+      `
     }
 
     if (props.checked) {
@@ -94,8 +94,8 @@ const StyledFocus = styled.div<IFocus>`
   ${(props: IFocus) => {
     if (props.focused) {
       return css`
-            border-color: ${Variables.Color.i400};
-          `
+        border-color: ${Variables.Color.i400};
+      `
     }
   }}
 `

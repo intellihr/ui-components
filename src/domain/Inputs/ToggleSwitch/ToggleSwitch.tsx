@@ -3,10 +3,10 @@ import React, { ChangeEventHandler } from 'react'
 import { Props, Variables } from '../../../common'
 import { GridLayout } from '../../Layouts/GridLayout'
 import { Text } from '../../Typographies/Text'
-import { MarginToggleSwitch, StyledChildren } from './style'
+import { MarginToggleSwitch } from './style'
 import { ToggleSwitchInput } from './subcomponents/ToggleSwitchInput'
 
-export interface IToggleSwitchInputProps {
+interface IToggleSwitchProps {
   /** Called when the checkbox is toggled */
   onChange?: ChangeEventHandler<HTMLInputElement>
   /** The form value of the input */
@@ -19,8 +19,6 @@ export interface IToggleSwitchInputProps {
   checked: boolean
   /** If the input is disabled */
   disabled?: boolean
-  /** If the ToggleSwitch is a child of another ToggleSwitch */
-  isChild?: boolean
 
   /** The margins around the component */
   margins?: Props.IMargins
@@ -28,23 +26,7 @@ export interface IToggleSwitchInputProps {
   componentContext?: string
 }
 
-export class ToggleSwitch extends React.PureComponent<IToggleSwitchInputProps> {
-  private get children () {
-    const {
-      children
-    } = this.props
-
-    if (children) {
-     return (
-        <StyledChildren>
-          {children}
-        </StyledChildren>
-      )
-    }
-
-    return
-  }
-
+class ToggleSwitch extends React.PureComponent<IToggleSwitchProps> {
   public render (): JSX.Element {
     const {
       name,
@@ -54,14 +36,12 @@ export class ToggleSwitch extends React.PureComponent<IToggleSwitchInputProps> {
       title,
       description,
       margins,
-      isChild,
       componentContext
     } = this.props
 
     return (
       <MarginToggleSwitch
         margins={margins}
-        isChild={isChild}
         data-component-type={Props.ComponentType.ToggleSwitch}
         data-component-context={componentContext}
       >
@@ -74,7 +54,7 @@ export class ToggleSwitch extends React.PureComponent<IToggleSwitchInputProps> {
                 <>
                   <Text
                     isInline={false}
-                    type={isChild ? Props.TypographyType.Small : Props.TypographyType.Heading}
+                    type={Props.TypographyType.Heading}
                     weight='heavy'
                   >
                     {title}
@@ -97,8 +77,12 @@ export class ToggleSwitch extends React.PureComponent<IToggleSwitchInputProps> {
             }
           ]}
         />
-        {this.children}
       </MarginToggleSwitch>
     )
   }
+}
+
+export {
+  ToggleSwitch,
+  IToggleSwitchProps
 }

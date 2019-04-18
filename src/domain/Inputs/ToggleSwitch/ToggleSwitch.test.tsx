@@ -57,25 +57,4 @@ describe('<ToggleSwitch />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
-
-  it(`should render a ToggleSwitch with children`, () => {
-    const wrapper = shallow(
-      <ToggleSwitch
-        checked
-        name='test-input'
-        title='This is a Toggle Switch'
-        description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      >
-        <ToggleSwitch
-          checked
-          isChild
-          name='test-input'
-          title='This is a Toggle Switch'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-        />
-      </ToggleSwitch>
-    )
-
-    expect(wrapper).toMatchSnapshot()
-  })
 })
