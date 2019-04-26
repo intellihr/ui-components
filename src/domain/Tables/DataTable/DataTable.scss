@@ -17,6 +17,7 @@
   display: flex;
   flex-direction: column;
   overflow: auto;
+  position: relative;
 
   .rt-table {
     align-items: stretch;
@@ -254,6 +255,11 @@
     flex-direction: column;
   }
 
+  .page-details {
+    color: $n600;
+    font-size: $fz-small;
+  }
+
   .pagination-top {
     .-pagination {
       margin-bottom: 10px;
@@ -267,6 +273,7 @@
   .pagination-bottom {
     .-pagination {
       border-top: solid 1px $n300;
+      padding-top: $spacing-medium;
 
       .search-filter,
       .page-size-options {
@@ -304,6 +311,7 @@
     }
 
     .page-navigation {
+      align-items: center;
       display: flex;
       height: 100%;
     }
@@ -317,7 +325,6 @@
     .-previous,
     .-next {
       flex: 1;
-      text-align: center;
     }
 
     .-center {
@@ -334,18 +341,19 @@
     .-btn {
       background: transparent;
       border: 0;
-      border-radius: 4px;
+      border-radius: 13px;
       color: $n800;
       cursor: pointer;
       display: block;
       font-size: .875rem;
-      height: 100%;
-      line-height: 1.5;
+      height: 26px;
+      margin-left: $spacing-2xsmall;
       margin-right: 1px;
+      margin-right: $spacing-2xsmall;
+      min-width: 26px;
       outline: none;
-      padding: .1875rem .625rem;
+      padding: 0 $spacing-xsmall;
       transition: color, background-color .1s ease;
-      width: auto;
 
       &:not([disabled]) {
         &:hover,
@@ -383,6 +391,7 @@
     }
   }
 
+
   .-loading {
     background: $n150;
     bottom: 0;
@@ -404,7 +413,6 @@
       position: absolute;
       text-align: center;
       top: 50%;
-      transform: translateY(-52%);
       transition: height, width .3s cubic-bezier(.25, .46, .45, .94);
       width: 100%;
     }
@@ -413,10 +421,34 @@
       opacity: 1;
       pointer-events: all;
       z-index: 2;
-
-      > div {
-        transform: translateY(50%);
-      }
     }
+  }
+
+  .-loading {
+      background: rgba(255,255,255,0.85);
+      pointer-events: none;
+      transition: all .3s ease;
+  }
+
+  .-loading > div {
+      color: rgba(0,0,0,0.6);
+      display: block;
+      font-size: $fz-small;
+      left: 0;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      transition: all .15s cubic-bezier(.25,.46,.45,.94);
+      width: 100%
+  }
+  
+  .-loading.-active {
+      opacity: 1;
+      pointer-events: all;
+      z-index: 2;
+  }
+
+  .loading-title {
+    color: $i400;
   }
 }

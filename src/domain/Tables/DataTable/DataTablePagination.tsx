@@ -1,5 +1,6 @@
 import classNames from 'classnames'
 import React from 'react'
+import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon';
 
 export interface IDataTablePaginationState {
   /** Currently selected page - stored here to allow async changes */
@@ -7,8 +8,7 @@ export interface IDataTablePaginationState {
 }
 
 export interface IDataTablePaginationProps {
-  /** Data to paginate - only used to get total number of rows */
-  data: any[]
+  totalCount: number
   /** Currently selected page */
   page: number
   /** Page count */
@@ -25,10 +25,6 @@ export interface IDataTablePaginationProps {
   canPrevious: boolean
   /** Classnames */
   className?: string
-  /** Back button text */
-  previousText?: string
-  /** Forward button text */
-  nextText?: string
   /** Custom component to render within this component */
   customComponent?: JSX.Element
   /** Page changing callback */
@@ -38,12 +34,7 @@ export interface IDataTablePaginationProps {
 }
 
 export class DataTablePagination extends React.Component<IDataTablePaginationProps, IDataTablePaginationState> {
-  public static defaultProps: Partial<IDataTablePaginationProps> = {
-    previousText: 'Previous',
-    nextText: 'Next'
-  }
-
-  constructor (props: IDataTablePaginationProps) {
+  constructor(props: IDataTablePaginationProps) {
     super(props)
 
     this.state = {
@@ -51,7 +42,7 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
     }
   }
 
-  public componentWillReceiveProps (nextProps: IDataTablePaginationProps) {
+  public componentWillReceiveProps(nextProps: IDataTablePaginationProps) {
     this.setState({
       page: nextProps.page
     })
@@ -136,7 +127,7 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
     return (
       <button
         key={key}
-        className={classNames({current: page === pageNo}, 'page-button', '-btn')}
+        className={classNames({ current: page === pageNo }, 'page-button', '-btn')}
         type='button'
         onClick={clickHandler}
       >
@@ -145,7 +136,7 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
     )
   }
 
-  get pagination () {
+  get pagination() {
     const { pages } = this.props
     const { page } = this.state
 
@@ -177,14 +168,14 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
     return response
   }
 
-  get pageDetails () {
+  get pageDetails() {
     const {
       pageSize,
-      data
+      totalCount
     } = this.props
     const { page } = this.state
 
-    const entryCount = data.length
+    const entryCount = totalCount
     const nextPage = page + 1
     const maxPossibleCurrentPageIndex = nextPage * pageSize
     const maxActualCurrentPageIndex = Math.min(entryCount, maxPossibleCurrentPageIndex)
@@ -197,7 +188,7 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
     )
   }
 
-  get pageSizeOptions () {
+  get pageSizeOptions() {
     const {
       showPageSizeOptions,
       pageSizeOptions,
@@ -227,13 +218,11 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
     }
   }
 
-  public render () {
+  public render() {
     const {
       canPrevious,
       canNext,
       className,
-      previousText,
-      nextText,
       customComponent
     } = this.props
 
@@ -249,7 +238,7 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
             onClick={this.decrementPage}
             disabled={!canPrevious}
           >
-            {previousText}
+            <FontAwesomeIcon type='chevron-left' />
           </button>
           {this.pagination}
           <button
@@ -258,7 +247,7 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
             onClick={this.incrementPage}
             disabled={!canNext}
           >
-            {nextText}
+            <FontAwesomeIcon type='chevron-right' />
           </button>
         </div>
       </div>
