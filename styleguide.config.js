@@ -246,7 +246,7 @@ module.exports = {
           name: 'Tables',
           components: [
             'src/domain/Tables/DataTable/DataTable/DataTable.tsx',
-
+            'src/domain/Tables/DataTable/AsyncDataTable/AsyncDataTable.tsx'
           ]
         },
         {
