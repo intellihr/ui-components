@@ -10,11 +10,11 @@ module.exports = {
     path.resolve(__dirname, 'src/index.ts')
   ],
   propsParser: docGenTypescript.withCustomConfig('./tsconfig.json').parse,
-  getComponentPathLine (componentPath) {
+  getComponentPathLine(componentPath) {
     const name = path.basename(componentPath, '.tsx')
     return `import { ${name} } from '@intellihr/ui-components';`
   },
-  getExampleFilename (componentPath) {
+  getExampleFilename(componentPath) {
     return componentPath.replace(/\.tsx?$/, '.examples.md')
   },
   pagePerSection: true,
@@ -245,7 +245,8 @@ module.exports = {
         {
           name: 'Tables',
           components: [
-            'src/domain/Tables/DataTable/DataTable.tsx'
+            'src/domain/Tables/DataTable/DataTable/DataTable.tsx',
+
           ]
         },
         {

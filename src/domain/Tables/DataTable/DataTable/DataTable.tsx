@@ -7,59 +7,19 @@ import {
   lowerCase
 } from 'lodash'
 import React, { ChangeEvent } from 'react'
-import ReactTable, { Column, Filter, FilterFunction, SortingRule, TableProps } from 'react-table'
+import ReactTable, { Filter, FilterFunction, TableProps } from 'react-table'
+import {
+  IDataTableColumn,
+  IDataTableState,
+  IDataTableProps,
+  AlignmentOption
+} from "../types"
+import { Props } from '../../../../common'
 
-import { Props } from '../../../common'
-import { Callout } from '../../Callouts'
-import { TextInput } from '../../Inputs'
-import { DataTablePagination, IDataTablePaginationProps } from './DataTablePagination'
-const style = require('./DataTable.scss')
-
-type AlignmentOption = Props.Position.Left | Props.Position.Center | Props.Position.Right
-type PageSizeOption = 10 | 25 | 50 | 100
-
-interface IDataTableColumn extends Column {
-  /** Alignment for the header on the column */
-  headerAlignment?: AlignmentOption
-
-  /** Alignment for the content in the column */
-  columnAlignment?: AlignmentOption
-}
-
-interface IDataTableState {
-  /** Currently applied search filter */
-  searchFilter: string | null
-}
-
-interface IDataTableProps {
-  /** Name for this table */
-  tableId?: string
-  /** List of all row data */
-  data: any[]
-  /** Column definitions for the table */
-  columns: IDataTableColumn[]
-  /** Whether the table can be sorted on its columns */
-  sortable?: boolean
-  /** Default sorting properties */
-  defaultSorted?: SortingRule[]
-  /** Whether the table should be paginated */
-  showPagination?: boolean
-  /** Default page size (only applicable if paginated) */
-  defaultPageSize?: PageSizeOption
-  /** Whether we should add a search filter - requires pagination  */
-  showSearchFilter?: boolean
-  /** Show vertical delineation between columns  */
-  showVerticalLines?: boolean
-  /** Placeholder replacement for when there is no data  */
-  noDataComponent?: JSX.Element
-
-  /**
-   * Overrides for react-table props which can be applied to this table.
-   * Supports all options from https://www.npmjs.com/package/react-table.
-   * Use this if you need to provide any custom alterations to how the table works.
-   */
-  reactTableOverrides?: Partial<TableProps>
-}
+import { Callout } from '../../../Callouts'
+import { TextInput } from '../../../Inputs'
+import { DataTablePagination, IDataTablePaginationProps } from '../DataTablePagination'
+const style = require('../DataTable.scss')
 
 class DataTable extends React.Component<IDataTableProps, IDataTableState> {
   public static defaultProps: Partial<IDataTableProps> = {
@@ -71,7 +31,7 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
     tableId: 'datatable'
   }
 
-  constructor (props: IDataTableProps) {
+  constructor(props: IDataTableProps) {
     super(props)
 
     this.state = {
@@ -127,7 +87,7 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
     return false
   }
 
-  get filteredData (): any[] {
+  get filteredData(): any[] {
     const { data, showSearchFilter } = this.props
     const { searchFilter } = this.state
 
@@ -138,7 +98,7 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
     return filter(data, this.shouldFilterRow)
   }
 
-  get columns (): IDataTableColumn[] {
+  get columns(): IDataTableColumn[] {
     const { columns } = this.props
 
     return columns.map((column) => {
@@ -151,7 +111,7 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
     })
   }
 
-  public columnClassName (alignment: AlignmentOption | undefined): string | undefined {
+  public columnClassName(alignment: AlignmentOption | undefined): string | undefined {
     switch (alignment) {
       case Props.Position.Right:
         return 'content-right'
@@ -166,7 +126,7 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
     })
   }
 
-  get searchFilterComponent (): JSX.Element | undefined {
+  get searchFilterComponent(): JSX.Element | undefined {
     const {
       showSearchFilter,
       tableId
@@ -199,17 +159,18 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
     )
   }
 
-  public paginationComponent = (props: IDataTablePaginationProps): JSX.Element => {
+  public paginationComponent = (props: any): JSX.Element => {
     return (
       <DataTablePagination
         key='pagination'
+        totalCount={props.data.length}
         {...props}
         customComponent={this.searchFilterComponent}
       />
     )
   }
 
-  get defaultReactTableProps (): Partial<TableProps> {
+  get defaultReactTableProps(): Partial<TableProps> {
     return {
       resizable: false,
       minRows: 0,
@@ -221,7 +182,7 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
     }
   }
 
-  get classNames (): string {
+  get classNames(): string {
     const {
       tableId,
       showVerticalLines
@@ -236,7 +197,7 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
     )
   }
 
-  public render (): JSX.Element {
+  public render(): JSX.Element {
     const {
       showPagination,
       defaultPageSize,
@@ -267,8 +228,5 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
 }
 
 export {
-  IDataTableColumn,
-  IDataTableState,
-  IDataTableProps,
   DataTable
 }
