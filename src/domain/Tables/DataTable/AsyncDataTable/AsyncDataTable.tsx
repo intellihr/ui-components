@@ -71,6 +71,7 @@ function AsyncDataTable({
       className={getClassNames()}
       columns={columns}
       data={data}
+      page={page}
       pages={Math.ceil(totalCount / pageSize)}
       pageSize={pageSize}
       onPageChange={onPageChange}

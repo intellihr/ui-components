@@ -57,6 +57,8 @@ interface IAsyncDataTableProps extends IBaseDataTableProps {
     pageSize: number
     /**  Whether the component is waiting for data */
     loading: boolean
+    /** The current page index to optionally control the component */
+    page?: number
     /**
      * Callback to set new page data when the user navigates to
      * a new page
