@@ -28,6 +28,10 @@ interface IAsyncDataTableProps extends IBaseDataTableProps {
   componentContext?: string
 }
 
+interface ITableSpinnerProps {
+  loading: boolean
+}
+
 const AsyncDataTable: React.SFC<IAsyncDataTableProps> = ({
   componentContext,
   data,
@@ -111,7 +115,7 @@ const AsyncDataTable: React.SFC<IAsyncDataTableProps> = ({
   )
 }
 
-const TableSpinner = (props: any) => {
+const TableSpinner = (props: ITableSpinnerProps) => {
   return (
     <div className={`-loading ${props.loading ? '-active' : ''}`} >
       <div className='-loading-inner'>
