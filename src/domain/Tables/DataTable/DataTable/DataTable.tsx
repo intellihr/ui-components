@@ -18,7 +18,7 @@ import {
   IDataTableColumn
 } from '../types'
 import { IBaseDataTableProps } from '../types'
-import { DataTablePagination } from '../DataTablePagination'
+import { DataTablePagination, IDataTablePaginationProps } from '../DataTablePagination'
 const style = require('../DataTable.scss')
 
 type PageSizeOption = 10 | 25 | 50 | 100
@@ -192,12 +192,12 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
     )
   }
 
-  public paginationComponent = (props: any): JSX.Element => {
+  public paginationComponent = (paginationProps: IDataTablePaginationProps): JSX.Element => {
     return (
       <DataTablePagination
         key='pagination'
-        totalCount={props.data.length}
-        {...props}
+        totalCount={this.props.data.length}
+        {...paginationProps}
         customComponent={this.searchFilterComponent}
       />
     )
