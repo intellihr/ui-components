@@ -69,26 +69,22 @@ const AsyncDataTable: React.SFC<IAsyncDataTableProps> = ({
     return null
   }
 
-  const defaultReactTableProps = (): Partial<TableProps> => {
-    return {
-      resizable: false,
-      minRows: 0,
-      showPaginationTop: false,
-      showPaginationBottom: true,
-      NoDataComponent,
-      PaginationComponent
-    }
+  const defaultReactTableProps = {
+    resizable: false,
+    minRows: 0,
+    showPaginationTop: false,
+    showPaginationBottom: true,
+    NoDataComponent,
+    PaginationComponent
   }
 
-  const getClassNames = (): string => {
-    return classNames(
-      style.DataTable,
-      `data-table-${tableId}`,
-      {
-        'show-vertical-lines': showVerticalLines
-      }
-    )
-  }
+  const classes = classNames(
+    style.DataTable,
+    `data-table-${tableId}`,
+    {
+      'show-vertical-lines': showVerticalLines
+    }
+  )
 
   return (
     <div
@@ -96,8 +92,8 @@ const AsyncDataTable: React.SFC<IAsyncDataTableProps> = ({
       data-component-context={componentContext}
     >
       <ReactTable
-        {...defaultReactTableProps()}
-        className={getClassNames()}
+        {...defaultReactTableProps}
+        className={classes}
         columns={columns}
         data={data}
         page={page}
