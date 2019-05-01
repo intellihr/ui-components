@@ -42,7 +42,7 @@ const AsyncDataTable: React.SFC<IAsyncDataTableProps> = ({
   showVerticalLines = false,
   tableId = 'datatable'
 }) => {
-  const getNoDataComponent = (props: any): JSX.Element => {
+  const NoDataComponent = (props: any): JSX.Element => {
     if (noDataComponent) { return noDataComponent }
 
     return (
@@ -52,7 +52,7 @@ const AsyncDataTable: React.SFC<IAsyncDataTableProps> = ({
     )
   }
 
-  const getPaginationComponent = (props: IDataTablePaginationProps): JSX.Element | null => {
+  const PaginationComponent = (props: IDataTablePaginationProps): JSX.Element | null => {
     if (totalCount > pageSize) {
       return (
         <DataTablePagination
@@ -71,8 +71,8 @@ const AsyncDataTable: React.SFC<IAsyncDataTableProps> = ({
       minRows: 0,
       showPaginationTop: false,
       showPaginationBottom: true,
-      NoDataComponent: getNoDataComponent,
-      PaginationComponent: getPaginationComponent
+      NoDataComponent: NoDataComponent,
+      PaginationComponent: PaginationComponent
     }
   }
 
