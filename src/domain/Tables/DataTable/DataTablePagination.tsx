@@ -1,6 +1,7 @@
 import classNames from 'classnames'
 import React from 'react'
-import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon';
+
+import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 
 export interface IDataTablePaginationState {
   /** Currently selected page - stored here to allow async changes */
@@ -34,7 +35,7 @@ export interface IDataTablePaginationProps {
 }
 
 export class DataTablePagination extends React.Component<IDataTablePaginationProps, IDataTablePaginationState> {
-  constructor(props: IDataTablePaginationProps) {
+  constructor (props: IDataTablePaginationProps) {
     super(props)
 
     this.state = {
@@ -42,7 +43,7 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
     }
   }
 
-  public componentWillReceiveProps(nextProps: IDataTablePaginationProps) {
+  public componentWillReceiveProps (nextProps: IDataTablePaginationProps) {
     this.setState({
       page: nextProps.page
     })
@@ -136,7 +137,7 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
     )
   }
 
-  get pagination() {
+  get pagination () {
     const { pages } = this.props
     const { page } = this.state
 
@@ -168,7 +169,7 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
     return response
   }
 
-  get pageDetails() {
+  get pageDetails () {
     const {
       pageSize,
       totalCount
@@ -188,7 +189,7 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
     )
   }
 
-  get pageSizeOptions() {
+  get pageSizeOptions () {
     const {
       showPageSizeOptions,
       pageSizeOptions,
@@ -218,7 +219,7 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
     }
   }
 
-  public render() {
+  public render () {
     const {
       canPrevious,
       canNext,

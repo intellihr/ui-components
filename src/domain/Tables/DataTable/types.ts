@@ -1,5 +1,6 @@
-import { Props } from '../../../common'
 import { Column, SortingRule, TableProps } from 'react-table'
+
+import { Props } from '../../../common'
 
 type AlignmentOption = Props.Position.Left | Props.Position.Center | Props.Position.Right
 type PageSizeOption = 10 | 25 | 50 | 100

@@ -4,6 +4,7 @@ import React from 'react'
 import { AsyncDataTable } from './AsyncDataTable'
 
 describe('AsyncDataTable', () => {
+    const mockOnPageChange = jest.fn()
     const wrapper = mount(
         <AsyncDataTable
             data={[
@@ -29,7 +30,7 @@ describe('AsyncDataTable', () => {
             pageSize={1}
             totalCount={2}
             loading={false}
-            onPageChange={() => { }}
+            onPageChange={mockOnPageChange}
         />
     )
 
@@ -47,7 +48,7 @@ describe('AsyncDataTable', () => {
     })
 })
 
-describe("onPageChange changes page", () => {
+describe('onPageChange changes page', () => {
     const mockOnPageChange = jest.fn()
     const wrapper = mount(
         <AsyncDataTable
@@ -96,7 +97,7 @@ describe("onPageChange changes page", () => {
     })
 })
 
-describe("Empty AsyncDataTable", () => {
+describe('Empty AsyncDataTable', () => {
     const mockOnPageChange = jest.fn()
     const wrapper = mount(
         <AsyncDataTable
@@ -127,7 +128,7 @@ describe("Empty AsyncDataTable", () => {
     })
 })
 
-describe("Loading AsyncDataTable", () => {
+describe('Loading AsyncDataTable', () => {
     const mockOnPageChange = jest.fn()
     const wrapper = mount(
         <AsyncDataTable
@@ -154,8 +155,7 @@ describe("Loading AsyncDataTable", () => {
     })
 })
 
-
-describe("Set noDataComponent on AsyncDataTable", () => {
+describe('Set noDataComponent on AsyncDataTable', () => {
     const mockOnPageChange = jest.fn()
     const wrapper = mount(
         <AsyncDataTable

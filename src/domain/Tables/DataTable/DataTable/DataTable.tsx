@@ -8,16 +8,16 @@ import {
 } from 'lodash'
 import React, { ChangeEvent } from 'react'
 import ReactTable, { Filter, FilterFunction, TableProps } from 'react-table'
-import {
-  IDataTableColumn,
-  IDataTableState,
-  IDataTableProps,
-  AlignmentOption
-} from "../types"
-import { Props } from '../../../../common'
 
+import { Props } from '../../../../common'
 import { Callout } from '../../../Callouts'
 import { TextInput } from '../../../Inputs'
+import {
+  AlignmentOption,
+  IDataTableColumn,
+  IDataTableProps,
+  IDataTableState
+} from '../types'
 import { DataTablePagination, IDataTablePaginationProps } from '../DataTablePagination'
 const style = require('../DataTable.scss')
 
@@ -31,7 +31,7 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
     tableId: 'datatable'
   }
 
-  constructor(props: IDataTableProps) {
+  constructor (props: IDataTableProps) {
     super(props)
 
     this.state = {
@@ -87,7 +87,7 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
     return false
   }
 
-  get filteredData(): any[] {
+  get filteredData (): any[] {
     const { data, showSearchFilter } = this.props
     const { searchFilter } = this.state
 
@@ -98,7 +98,7 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
     return filter(data, this.shouldFilterRow)
   }
 
-  get columns(): IDataTableColumn[] {
+  get columns (): IDataTableColumn[] {
     const { columns } = this.props
 
     return columns.map((column) => {
@@ -111,7 +111,7 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
     })
   }
 
-  public columnClassName(alignment: AlignmentOption | undefined): string | undefined {
+  public columnClassName (alignment: AlignmentOption | undefined): string | undefined {
     switch (alignment) {
       case Props.Position.Right:
         return 'content-right'
@@ -126,7 +126,7 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
     })
   }
 
-  get searchFilterComponent(): JSX.Element | undefined {
+  get searchFilterComponent (): JSX.Element | undefined {
     const {
       showSearchFilter,
       tableId
@@ -170,7 +170,7 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
     )
   }
 
-  get defaultReactTableProps(): Partial<TableProps> {
+  get defaultReactTableProps (): Partial<TableProps> {
     return {
       resizable: false,
       minRows: 0,
@@ -182,7 +182,7 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
     }
   }
 
-  get classNames(): string {
+  get classNames (): string {
     const {
       tableId,
       showVerticalLines
@@ -197,7 +197,7 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
     )
   }
 
-  public render(): JSX.Element {
+  public render (): JSX.Element {
     const {
       showPagination,
       defaultPageSize,

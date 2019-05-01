@@ -2,11 +2,11 @@ import classNames from 'classnames'
 import React from 'react'
 import ReactTable, { TableProps } from 'react-table'
 
+import { Props } from '../../../../common'
 import { Callout } from '../../../Callouts'
+import { Spinner } from '../../../Spinners/Spinner'
+import { IAsyncDataTableProps } from '../types'
 import { DataTablePagination, IDataTablePaginationProps } from '../DataTablePagination'
-import { IAsyncDataTableProps } from "../types"
-import { Spinner } from "../../../Spinners/Spinner"
-import { Props } from '../../../../common';
 const style = require('../DataTable.scss')
 
 const AsyncDataTable: React.SFC<IAsyncDataTableProps> = ({
@@ -94,13 +94,13 @@ const AsyncDataTable: React.SFC<IAsyncDataTableProps> = ({
 
 const TableSpinner = (props: any) => {
   return (
-    <div className={`-loading ${props.loading ? "-active" : ""}`} >
-      <div className="-loading-inner">
+    <div className={`-loading ${props.loading ? '-active' : ''}`} >
+      <div className='-loading-inner'>
         <Spinner
           type='three-bounce'
           position='center'
         />
-        <div className="loading-title">Loading</div>
+        <div className='loading-title'>Loading</div>
       </div>
     </div >
   )
