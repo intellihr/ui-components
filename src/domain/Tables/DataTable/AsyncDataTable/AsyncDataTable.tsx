@@ -71,8 +71,8 @@ const AsyncDataTable: React.SFC<IAsyncDataTableProps> = ({
       minRows: 0,
       showPaginationTop: false,
       showPaginationBottom: true,
-      NoDataComponent: NoDataComponent,
-      PaginationComponent: PaginationComponent
+      NoDataComponent,
+      PaginationComponent
     }
   }
 
