@@ -1,15 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AsyncDataTable should match the snapshot 1`] = `
-.c0 {
-  width: 1.28571em;
-}
-
-.c0.icon {
-  text-align: center;
-  font-size: 1rem;
-}
-
 .c1.page {
   position: fixed;
   top: 50%;
@@ -43,6 +34,15 @@ exports[`AsyncDataTable should match the snapshot 1`] = `
   vertical-align: middle;
 }
 
+.c0 {
+  width: 1.28571em;
+}
+
+.c0.icon {
+  text-align: center;
+  font-size: 1rem;
+}
+
 <AsyncDataTable
   columns={
     Array [
@@ -69,7 +69,7 @@ exports[`AsyncDataTable should match the snapshot 1`] = `
     ]
   }
   loading={false}
-  onPageChange={[Function]}
+  onPageChange={[MockFunction]}
   pageSize={1}
   totalCount={2}
 >
@@ -205,7 +205,7 @@ exports[`AsyncDataTable should match the snapshot 1`] = `
       noDataText="No rows found"
       ofText="of"
       onFetchData={[Function]}
-      onPageChange={[Function]}
+      onPageChange={[MockFunction]}
       originalKey="_original"
       pageSize={1}
       pageSizeOptions={
@@ -2227,15 +2227,6 @@ exports[`Empty AsyncDataTable should match the snapshot 1`] = `
 `;
 
 exports[`Loading AsyncDataTable should match the snapshot 1`] = `
-.c0 {
-  width: 1.28571em;
-}
-
-.c0.icon {
-  text-align: center;
-  font-size: 1rem;
-}
-
 .c1.page {
   position: fixed;
   top: 50%;
@@ -2267,6 +2258,15 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
 .c1.inline {
   display: inline-block;
   vertical-align: middle;
+}
+
+.c0 {
+  width: 1.28571em;
+}
+
+.c0.icon {
+  text-align: center;
+  font-size: 1rem;
 }
 
 <AsyncDataTable
@@ -3405,15 +3405,6 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
 `;
 
 exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
-.c0 {
-  width: 1.28571em;
-}
-
-.c0.icon {
-  text-align: center;
-  font-size: 1rem;
-}
-
 .c1.page {
   position: fixed;
   top: 50%;
@@ -3445,6 +3436,15 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
 .c1.inline {
   display: inline-block;
   vertical-align: middle;
+}
+
+.c0 {
+  width: 1.28571em;
+}
+
+.c0.icon {
+  text-align: center;
+  font-size: 1rem;
 }
 
 <AsyncDataTable
@@ -4568,15 +4568,6 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
 `;
 
 exports[`onPageChange changes page should match the snapshot 1`] = `
-.c0 {
-  width: 1.28571em;
-}
-
-.c0.icon {
-  text-align: center;
-  font-size: 1rem;
-}
-
 .c1.page {
   position: fixed;
   top: 50%;
@@ -4608,6 +4599,15 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
 .c1.inline {
   display: inline-block;
   vertical-align: middle;
+}
+
+.c0 {
+  width: 1.28571em;
+}
+
+.c0.icon {
+  text-align: center;
+  font-size: 1rem;
 }
 
 <AsyncDataTable
