@@ -65,6 +65,8 @@ interface IAsyncDataTableProps extends IBaseDataTableProps {
      * @param pageIndex The new page number the user has selected
      */
     onPageChange: (pageIndex: number) => void
+    /** The component context */
+    componentContext?: string
 }
 
 export {

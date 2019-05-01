@@ -1,14 +1,16 @@
 import classNames from 'classnames'
-import React, { useState } from 'react'
+import React from 'react'
 import ReactTable, { TableProps } from 'react-table'
 
 import { Callout } from '../../../Callouts'
 import { DataTablePagination, IDataTablePaginationProps } from '../DataTablePagination'
 import { IAsyncDataTableProps } from "../types"
 import { Spinner } from "../../../Spinners/Spinner"
+import { Props } from '../../../../common';
 const style = require('../DataTable.scss')
 
-function AsyncDataTable({
+const AsyncDataTable: React.SFC<IAsyncDataTableProps> = ({
+  componentContext,
   data,
   page,
   columns,
@@ -20,7 +22,7 @@ function AsyncDataTable({
   noDataComponent,
   showVerticalLines = false,
   tableId = 'datatable'
-}: IAsyncDataTableProps): JSX.Element {
+}) => {
   const getNoDataComponent = (props: any): JSX.Element => {
     if (noDataComponent) { return noDataComponent }
 
@@ -66,22 +68,27 @@ function AsyncDataTable({
   }
 
   return (
-    <ReactTable
-      {...defaultReactTableProps()}
-      className={getClassNames()}
-      columns={columns}
-      data={data}
-      page={page}
-      pages={Math.ceil(totalCount / pageSize)}
-      pageSize={pageSize}
-      onPageChange={onPageChange}
-      loading={loading}
-      LoadingComponent={TableSpinner}
-      showPageSizeOptions={false}
-      sortable={false}
-      manual
-      {...reactTableOverrides}
-    />
+    <div
+      data-component-type={Props.ComponentType.AsyncDataTable}
+      data-component-context={componentContext}
+    >
+      <ReactTable
+        {...defaultReactTableProps()}
+        className={getClassNames()}
+        columns={columns}
+        data={data}
+        page={page}
+        pages={Math.ceil(totalCount / pageSize)}
+        pageSize={pageSize}
+        onPageChange={onPageChange}
+        loading={loading}
+        LoadingComponent={TableSpinner}
+        showPageSizeOptions={false}
+        sortable={false}
+        manual
+        {...reactTableOverrides}
+      />
+    </div>
   )
 }
 
