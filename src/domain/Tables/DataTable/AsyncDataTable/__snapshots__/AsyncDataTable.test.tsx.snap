@@ -503,7 +503,7 @@ exports[`AsyncDataTable should match the snapshot 1`] = `
         <div
           className="pagination-bottom"
         >
-          <getPaginationComponent
+          <PaginationComponent
             AggregatedComponent={[Function]}
             ExpanderComponent={[Function]}
             FilterComponent={[Function]}
@@ -1299,7 +1299,7 @@ exports[`AsyncDataTable should match the snapshot 1`] = `
                 </div>
               </div>
             </DataTablePagination>
-          </getPaginationComponent>
+          </PaginationComponent>
         </div>
         <TableSpinner
           loading={false}
@@ -1769,7 +1769,7 @@ exports[`Empty AsyncDataTable should match the snapshot 1`] = `
         <div
           className="pagination-bottom"
         >
-          <getPaginationComponent
+          <PaginationComponent
             AggregatedComponent={[Function]}
             ExpanderComponent={[Function]}
             FilterComponent={[Function]}
@@ -2060,7 +2060,7 @@ exports[`Empty AsyncDataTable should match the snapshot 1`] = `
             subRowsKey="_subRows"
           />
         </div>
-        <getNoDataComponent>
+        <NoDataComponent>
           <Callout
             justifyCenter={false}
             messages={Array []}
@@ -2084,7 +2084,7 @@ exports[`Empty AsyncDataTable should match the snapshot 1`] = `
               </div>
             </styled.div>
           </Callout>
-        </getNoDataComponent>
+        </NoDataComponent>
         <TableSpinner
           loading={false}
           loadingText="Loading..."
@@ -2562,7 +2562,7 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
         <div
           className="pagination-bottom"
         >
-          <getPaginationComponent
+          <PaginationComponent
             AggregatedComponent={[Function]}
             ExpanderComponent={[Function]}
             FilterComponent={[Function]}
@@ -3236,9 +3236,9 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                 </div>
               </div>
             </DataTablePagination>
-          </getPaginationComponent>
+          </PaginationComponent>
         </div>
-        <getNoDataComponent>
+        <NoDataComponent>
           <Callout
             justifyCenter={false}
             messages={Array []}
@@ -3262,7 +3262,7 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
               </div>
             </styled.div>
           </Callout>
-        </getNoDataComponent>
+        </NoDataComponent>
         <TableSpinner
           loading={true}
           loadingText="Loading..."
@@ -3745,7 +3745,7 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
         <div
           className="pagination-bottom"
         >
-          <getPaginationComponent
+          <PaginationComponent
             AggregatedComponent={[Function]}
             ExpanderComponent={[Function]}
             FilterComponent={[Function]}
@@ -4419,13 +4419,13 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                 </div>
               </div>
             </DataTablePagination>
-          </getPaginationComponent>
+          </PaginationComponent>
         </div>
-        <getNoDataComponent>
+        <NoDataComponent>
           <div>
             hello
           </div>
-        </getNoDataComponent>
+        </NoDataComponent>
         <TableSpinner
           loading={false}
           loadingText="Loading..."
@@ -5086,7 +5086,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
         <div
           className="pagination-bottom"
         >
-          <getPaginationComponent
+          <PaginationComponent
             AggregatedComponent={[Function]}
             ExpanderComponent={[Function]}
             FilterComponent={[Function]}
@@ -5882,7 +5882,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                 </div>
               </div>
             </DataTablePagination>
-          </getPaginationComponent>
+          </PaginationComponent>
         </div>
         <TableSpinner
           loading={false}
