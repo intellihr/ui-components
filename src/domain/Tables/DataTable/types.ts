@@ -1,9 +1,8 @@
-import { Column, SortingRule, TableProps } from 'react-table'
+import { Column, TableProps } from 'react-table'
 
 import { Props } from '../../../common'
 
 type AlignmentOption = Props.Position.Left | Props.Position.Center | Props.Position.Right
-type PageSizeOption = 10 | 25 | 50 | 100
 
 interface IDataTableColumn extends Column {
     /** Alignment for the header on the column */
@@ -11,11 +10,6 @@ interface IDataTableColumn extends Column {
 
     /** Alignment for the content in the column */
     columnAlignment?: AlignmentOption
-}
-
-interface IDataTableState {
-    /** Currently applied search filter */
-    searchFilter: string | null
 }
 
 interface IBaseDataTableProps {
@@ -38,42 +32,8 @@ interface IBaseDataTableProps {
     reactTableOverrides?: Partial<TableProps>
 }
 
-interface IDataTableProps extends IBaseDataTableProps {
-    /** Whether the table can be sorted on its columns */
-    sortable?: boolean
-    /** Default sorting properties */
-    defaultSorted?: SortingRule[]
-    /** Whether the table should be paginated */
-    showPagination?: boolean
-    /** Default page size (only applicable if paginated) */
-    defaultPageSize?: PageSizeOption
-    /** Whether we should add a search filter - requires pagination  */
-    showSearchFilter?: boolean
-}
-
-interface IAsyncDataTableProps extends IBaseDataTableProps {
-    /** The total number of data entries */
-    totalCount: number
-    /**  The number of entries to be displayed at once */
-    pageSize: number
-    /**  Whether the component is waiting for data */
-    loading: boolean
-    /** The current page index to optionally control the component */
-    page?: number
-    /**
-     * Callback to set new page data when the user navigates to
-     * a new page
-     * @param pageIndex The new page number the user has selected
-     */
-    onPageChange: (pageIndex: number) => void
-    /** The component context */
-    componentContext?: string
-}
-
 export {
     AlignmentOption,
-    IDataTableColumn,
-    IDataTableState,
-    IDataTableProps,
-    IAsyncDataTableProps
+    IBaseDataTableProps,
+    IDataTableColumn
 }

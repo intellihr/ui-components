@@ -5,9 +5,28 @@ import ReactTable, { TableProps } from 'react-table'
 import { Props } from '../../../../common'
 import { Callout } from '../../../Callouts'
 import { Spinner } from '../../../Spinners/Spinner'
-import { IAsyncDataTableProps } from '../types'
+import { IBaseDataTableProps } from '../types'
 import { DataTablePagination, IDataTablePaginationProps } from '../DataTablePagination'
 const style = require('../DataTable.scss')
+
+interface IAsyncDataTableProps extends IBaseDataTableProps {
+  /** The total number of data entries */
+  totalCount: number
+  /**  The number of entries to be displayed at once */
+  pageSize: number
+  /**  Whether the component is waiting for data */
+  loading: boolean
+  /** The current page index to optionally control the component */
+  page?: number
+  /**
+   * Callback to set new page data when the user navigates to
+   * a new page
+   * @param pageIndex The new page number the user has selected
+   */
+  onPageChange: (pageIndex: number) => void
+  /** The component context */
+  componentContext?: string
+}
 
 const AsyncDataTable: React.SFC<IAsyncDataTableProps> = ({
   componentContext,

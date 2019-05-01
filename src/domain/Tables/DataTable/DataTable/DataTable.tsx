@@ -7,19 +7,52 @@ import {
   lowerCase
 } from 'lodash'
 import React, { ChangeEvent } from 'react'
-import ReactTable, { Filter, FilterFunction, TableProps } from 'react-table'
+import { SortingRule } from 'react-table'
+import ReactTable, { Column, Filter, FilterFunction, TableProps } from 'react-table'
 
 import { Props } from '../../../../common'
 import { Callout } from '../../../Callouts'
 import { TextInput } from '../../../Inputs'
 import {
   AlignmentOption,
-  IDataTableColumn,
-  IDataTableProps,
-  IDataTableState
+  IDataTableColumn
 } from '../types'
-import { DataTablePagination, IDataTablePaginationProps } from '../DataTablePagination'
+import { IBaseDataTableProps } from '../types'
+import { DataTablePagination } from '../DataTablePagination'
 const style = require('../DataTable.scss')
+
+type PageSizeOption = 10 | 25 | 50 | 100
+
+interface IDataTableState {
+  /** Currently applied search filter */
+  searchFilter: string | null
+}
+
+interface IDataTableProps extends IBaseDataTableProps {
+  /** Whether the table can be sorted on its columns */
+  sortable?: boolean
+  /** Default sorting properties */
+  defaultSorted?: SortingRule[]
+  /** Whether the table should be paginated */
+  showPagination?: boolean
+  /** Default page size (only applicable if paginated) */
+  defaultPageSize?: PageSizeOption
+  /** Whether we should add a search filter - requires pagination  */
+  showSearchFilter?: boolean
+}
+
+interface IDataTableProps extends IBaseDataTableProps {
+  /** Whether the table can be sorted on its columns */
+  sortable?: boolean
+  /** Default sorting properties */
+  defaultSorted?: SortingRule[]
+  /** Whether the table should be paginated */
+  showPagination?: boolean
+  /** Default page size (only applicable if paginated) */
+  defaultPageSize?: PageSizeOption
+  /** Whether we should add a search filter - requires pagination  */
+  showSearchFilter?: boolean
+}
 
 class DataTable extends React.Component<IDataTableProps, IDataTableState> {
   public static defaultProps: Partial<IDataTableProps> = {
