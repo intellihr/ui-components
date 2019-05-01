@@ -348,7 +348,6 @@
       font-size: .875rem;
       height: 26px;
       margin-left: $spacing-2xsmall;
-      margin-right: 1px;
       margin-right: $spacing-2xsmall;
       min-width: 26px;
       outline: none;
@@ -391,9 +390,8 @@
     }
   }
 
-
   .-loading {
-    background: $n150;
+    background: rgba(255, 255, 255, .85);
     bottom: 0;
     display: block;
     left: 0;
@@ -402,18 +400,17 @@
     position: absolute;
     right: 0;
     top: 0;
-    transition: opacity, width, height .3s ease;
+    transition: opacity .3s ease;
     z-index: -1;
 
     > div {
       color: $n700;
       display: block;
-      font-size: 15px;
+      font-size: $fz-small;
       left: 0;
       position: absolute;
       text-align: center;
       top: 50%;
-      transition: height, width .3s cubic-bezier(.25, .46, .45, .94);
       width: 100%;
     }
 
@@ -422,30 +419,6 @@
       pointer-events: all;
       z-index: 2;
     }
-  }
-
-  .-loading {
-      background: rgba(255,255,255,0.85);
-      pointer-events: none;
-      transition: all .3s ease;
-  }
-
-  .-loading > div {
-      color: rgba(0,0,0,0.6);
-      display: block;
-      font-size: $fz-small;
-      left: 0;
-      position: absolute;
-      text-align: center;
-      top: 50%;
-      transition: all .15s cubic-bezier(.25,.46,.45,.94);
-      width: 100%
-  }
-  
-  .-loading.-active {
-      opacity: 1;
-      pointer-events: all;
-      z-index: 2;
   }
 
   .loading-title {
