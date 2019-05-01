@@ -341,3 +341,24 @@ function MockDataProvider() {
 
 <MockDataProvider/>
 ```
+
+#### Empty AsyncDataTable
+```jsx
+<AsyncDataTable
+  data={[]}
+  columns={[
+    {
+      Header: 'Name',
+      accessor: 'name'
+    },
+    {
+      Header: 'Age',
+      accessor: 'age'
+    }
+  ]}
+  pageSize={1}
+  totalCount={0}
+  loading={false}
+  onPageChange={pageIndex => {}}
+/>
+```
