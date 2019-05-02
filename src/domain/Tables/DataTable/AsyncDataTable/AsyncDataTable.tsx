@@ -128,5 +128,7 @@ const TableSpinner = (props: ITableSpinnerProps) => {
 const MemoizedAsyncDataTable = React.memo(AsyncDataTable)
 
 export {
+  // Enzyme doesn't like React.memo, this export is for testing purposes
+  AsyncDataTable as NonMemoizedAsyncDataTable,
   MemoizedAsyncDataTable as AsyncDataTable
 }

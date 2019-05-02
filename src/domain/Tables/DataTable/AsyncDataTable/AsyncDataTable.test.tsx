@@ -1,12 +1,12 @@
 import { mount } from 'enzyme'
 import React from 'react'
 
-import { AsyncDataTable } from './AsyncDataTable'
+import { NonMemoizedAsyncDataTable } from './AsyncDataTable'
 
 describe('AsyncDataTable', () => {
     const mockOnPageChange = jest.fn()
     const wrapper = mount(
-        <AsyncDataTable
+        <NonMemoizedAsyncDataTable
             data={[
                 {
                     name: 'Frederigo Mallebone',
@@ -51,7 +51,7 @@ describe('AsyncDataTable', () => {
 describe('onPageChange changes page', () => {
     const mockOnPageChange = jest.fn()
     const wrapper = mount(
-        <AsyncDataTable
+        <NonMemoizedAsyncDataTable
             data={[
                 {
                     name: 'Frederigo Mallebone',
@@ -100,7 +100,7 @@ describe('onPageChange changes page', () => {
 describe('Empty AsyncDataTable', () => {
     const mockOnPageChange = jest.fn()
     const wrapper = mount(
-        <AsyncDataTable
+        <NonMemoizedAsyncDataTable
             data={[]}
             columns={[
                 {
@@ -131,7 +131,7 @@ describe('Empty AsyncDataTable', () => {
 describe('Loading AsyncDataTable', () => {
     const mockOnPageChange = jest.fn()
     const wrapper = mount(
-        <AsyncDataTable
+        <NonMemoizedAsyncDataTable
             data={[]}
             columns={[
                 {
@@ -158,7 +158,7 @@ describe('Loading AsyncDataTable', () => {
 describe('Set noDataComponent on AsyncDataTable', () => {
     const mockOnPageChange = jest.fn()
     const wrapper = mount(
-        <AsyncDataTable
+        <NonMemoizedAsyncDataTable
             data={[]}
             columns={[
                 {
