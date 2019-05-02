@@ -7,8 +7,7 @@ import {
   lowerCase
 } from 'lodash'
 import React, { ChangeEvent } from 'react'
-import { SortingRule } from 'react-table'
-import ReactTable, { Column, Filter, FilterFunction, TableProps } from 'react-table'
+import ReactTable, { Filter, FilterFunction, SortingRule, TableProps } from 'react-table'
 
 import { Props } from '../../../../common'
 import { Callout } from '../../../Callouts'
