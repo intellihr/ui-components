@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import React from 'react'
-import ReactTable, { TableProps } from 'react-table'
+import ReactTable from 'react-table'
 
 import { Props } from '../../../../common'
 import { Callout } from '../../../Callouts'
@@ -125,6 +125,8 @@ const TableSpinner = (props: ITableSpinnerProps) => {
   )
 }
 
+const MemoizedAsyncDataTable = React.memo(AsyncDataTable)
+
 export {
-  AsyncDataTable
+  MemoizedAsyncDataTable as AsyncDataTable
 }
