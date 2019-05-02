@@ -11,6 +11,7 @@ describe('<DataTablePagination />', () => {
 
     const wrapper = shallow(
       <DataTablePagination
+        totalCount={70}
         data={data}
         pages={3}
         page={2}
@@ -47,6 +48,7 @@ describe('<DataTablePagination />', () => {
     const wrapper = shallow(
       <DataTablePagination
         data={data}
+        totalCount={295}
         pages={30}
         page={3}
         pageSize={10}

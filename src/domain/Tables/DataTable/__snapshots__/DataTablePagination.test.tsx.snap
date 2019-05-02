@@ -10,8 +10,9 @@ exports[`<DataTablePagination /> Pagination with few pages should match the snap
     Showing 
     50
      to 
-    NaN
+    70
      of 
+    70
      entries
   </div>
   <div
@@ -75,8 +76,9 @@ exports[`<DataTablePagination /> Pagination with many pages should match the sna
     Showing 
     30
      to 
-    NaN
+    40
      of 
+    295
      entries
   </div>
   <div
