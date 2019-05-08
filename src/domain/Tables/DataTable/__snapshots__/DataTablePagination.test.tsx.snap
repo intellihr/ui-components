@@ -24,7 +24,9 @@ exports[`<DataTablePagination /> Pagination with few pages should match the snap
       onClick={[Function]}
       type="button"
     >
-      Previous
+      <FontAwesomeIcon
+        type="chevron-left"
+      />
     </button>
     <button
       className="page-button -btn"
@@ -56,7 +58,9 @@ exports[`<DataTablePagination /> Pagination with few pages should match the snap
       onClick={[Function]}
       type="button"
     >
-      Next
+      <FontAwesomeIcon
+        type="chevron-right"
+      />
     </button>
   </div>
 </div>
@@ -86,7 +90,9 @@ exports[`<DataTablePagination /> Pagination with many pages should match the sna
       onClick={[Function]}
       type="button"
     >
-      Previous
+      <FontAwesomeIcon
+        type="chevron-left"
+      />
     </button>
     <button
       className="page-button -btn"
@@ -148,7 +154,9 @@ exports[`<DataTablePagination /> Pagination with many pages should match the sna
       onClick={[Function]}
       type="button"
     >
-      Next
+      <FontAwesomeIcon
+        type="chevron-right"
+      />
     </button>
   </div>
 </div>

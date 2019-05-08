@@ -7,37 +7,27 @@ import {
   lowerCase
 } from 'lodash'
 import React, { ChangeEvent } from 'react'
-import ReactTable, { Column, Filter, FilterFunction, SortingRule, TableProps } from 'react-table'
+import ReactTable, { Filter, FilterFunction, SortingRule, TableProps } from 'react-table'
 
-import { Props } from '../../../common'
-import { Callout } from '../../Callouts'
-import { TextInput } from '../../Inputs'
-import { DataTablePagination, IDataTablePaginationProps } from './DataTablePagination'
-const style = require('./DataTable.scss')
+import { Props } from '../../../../common'
+import { Callout } from '../../../Callouts'
+import { TextInput } from '../../../Inputs'
+import {
+  AlignmentOption,
+  IDataTableColumn
+} from '../types'
+import { IBaseDataTableProps } from '../types'
+import { DataTablePagination, IDataTablePaginationProps } from '../DataTablePagination'
+const style = require('../DataTable.scss')
 
-type AlignmentOption = Props.Position.Left | Props.Position.Center | Props.Position.Right
 type PageSizeOption = 10 | 25 | 50 | 100
-
-interface IDataTableColumn extends Column {
-  /** Alignment for the header on the column */
-  headerAlignment?: AlignmentOption
-
-  /** Alignment for the content in the column */
-  columnAlignment?: AlignmentOption
-}
 
 interface IDataTableState {
   /** Currently applied search filter */
   searchFilter: string | null
 }
 
-interface IDataTableProps {
-  /** Name for this table */
-  tableId?: string
-  /** List of all row data */
-  data: any[]
-  /** Column definitions for the table */
-  columns: IDataTableColumn[]
+interface IDataTableProps extends IBaseDataTableProps {
   /** Whether the table can be sorted on its columns */
   sortable?: boolean
   /** Default sorting properties */
@@ -48,17 +38,19 @@ interface IDataTableProps {
   defaultPageSize?: PageSizeOption
   /** Whether we should add a search filter - requires pagination  */
   showSearchFilter?: boolean
-  /** Show vertical delineation between columns  */
-  showVerticalLines?: boolean
-  /** Placeholder replacement for when there is no data  */
-  noDataComponent?: JSX.Element
+}
 
-  /**
-   * Overrides for react-table props which can be applied to this table.
-   * Supports all options from https://www.npmjs.com/package/react-table.
-   * Use this if you need to provide any custom alterations to how the table works.
-   */
-  reactTableOverrides?: Partial<TableProps>
+interface IDataTableProps extends IBaseDataTableProps {
+  /** Whether the table can be sorted on its columns */
+  sortable?: boolean
+  /** Default sorting properties */
+  defaultSorted?: SortingRule[]
+  /** Whether the table should be paginated */
+  showPagination?: boolean
+  /** Default page size (only applicable if paginated) */
+  defaultPageSize?: PageSizeOption
+  /** Whether we should add a search filter - requires pagination  */
+  showSearchFilter?: boolean
 }
 
 class DataTable extends React.Component<IDataTableProps, IDataTableState> {
@@ -199,11 +191,12 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
     )
   }
 
-  public paginationComponent = (props: IDataTablePaginationProps): JSX.Element => {
+  public paginationComponent = (paginationProps: IDataTablePaginationProps): JSX.Element => {
     return (
       <DataTablePagination
         key='pagination'
-        {...props}
+        totalCount={this.props.data.length}
+        {...paginationProps}
         customComponent={this.searchFilterComponent}
       />
     )
@@ -267,8 +260,5 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
 }
 
 export {
-  IDataTableColumn,
-  IDataTableState,
-  IDataTableProps,
   DataTable
 }

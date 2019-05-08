@@ -57,6 +57,7 @@ namespace Props {
   }
 
   export enum ComponentType {
+    AsyncDataTable = 'async_data_table',
     AvatarGroup = 'avatar_group',
     BlockTabGroup = 'block_tab_group',
     Board = 'board',
