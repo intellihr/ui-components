@@ -1,7 +1,7 @@
 import { mount } from 'enzyme'
 import React from 'react'
 
-import { Props } from '../../../common'
+import { Props } from '../../../../common'
 import { DataTable } from './DataTable'
 
 describe('<DataTable />', () => {
