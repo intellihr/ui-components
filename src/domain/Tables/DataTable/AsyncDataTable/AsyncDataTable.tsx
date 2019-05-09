@@ -24,6 +24,8 @@ interface IAsyncDataTableProps extends IBaseDataTableProps {
    * @param pageIndex The new page number the user has selected
    */
   onPageChange: (pageIndex: number) => void
+  /** Text to display when there are no rows, defaults to react-table's default message */
+  noDataText?: string
   /** The component context */
   componentContext?: string
 }
@@ -43,6 +45,7 @@ const AsyncDataTable: React.SFC<IAsyncDataTableProps> = ({
   onPageChange,
   reactTableOverrides,
   noDataComponent,
+  noDataText,
   showVerticalLines = false,
   tableId = 'datatable'
 }) => {
@@ -104,6 +107,7 @@ const AsyncDataTable: React.SFC<IAsyncDataTableProps> = ({
         LoadingComponent={TableSpinner}
         showPageSizeOptions={false}
         sortable={false}
+        noDataText={noDataText}
         manual
         {...reactTableOverrides}
       />
