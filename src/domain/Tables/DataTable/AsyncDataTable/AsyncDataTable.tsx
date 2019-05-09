@@ -24,8 +24,6 @@ interface IAsyncDataTableProps extends IBaseDataTableProps {
    * @param pageIndex The new page number the user has selected
    */
   onPageChange: (pageIndex: number) => void
-  /** Text to display when there are no rows, defaults to react-table's default message */
-  noDataText?: string
   /** The component context */
   componentContext?: string
 }
