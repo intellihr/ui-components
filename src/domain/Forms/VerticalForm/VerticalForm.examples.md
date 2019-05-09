@@ -257,3 +257,27 @@ initialState = { textInputValue: '' };
     </VerticalForm.RightAlignControls>
   </VerticalForm>
 ```
+
+field without bottom margin
+
+```jsx
+import { ButtonGroup, Button } from '@Domain/Buttons';
+import { TextInput } from '@Domain/Inputs';
+
+initialState = { textInputValue: '' };
+
+  <VerticalForm
+    onSubmit={() => alert(`Test input: ${state.textInputValue}`)}
+  >
+    <VerticalForm.Field
+      inputName='testInput'
+      label='This is a test input'
+      showBottomMargin={false}
+    >
+      <TextInput
+        name='testInput'
+        handleChange={(e) => setState({ textInputValue: e.target.value })}
+      />
+    </VerticalForm.Field>
+  </VerticalForm>
+```
