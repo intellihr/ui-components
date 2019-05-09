@@ -6,8 +6,15 @@ interface IStyledInputLabelProps {
   isRequired: boolean
 }
 
+interface IFieldWrapperProps {
+  showBottomMargin: boolean
+}
+
 const FieldWrapper = styled.div`
-  margin-bottom: ${Variables.Spacing.sLarge}px;
+  ${(props: IFieldWrapperProps) => props.showBottomMargin && css`
+      margin-bottom: ${Variables.Spacing.sLarge}px;
+    `
+  }
 
   input, textarea, .Select .Select-control {
     margin: 0;
