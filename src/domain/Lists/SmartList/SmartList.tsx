@@ -69,7 +69,7 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
     showHeaderRow: true,
     showHoverBg: true,
     hideHeaderOnSmall: false,
-    limit: 5,
+    limit: null,
     skeletonOptions: {
       showSkeleton: false,
       numberOfRows: 5
