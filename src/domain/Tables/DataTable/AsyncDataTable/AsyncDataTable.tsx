@@ -43,6 +43,7 @@ const AsyncDataTable: React.SFC<IAsyncDataTableProps> = ({
   onPageChange,
   reactTableOverrides,
   noDataComponent,
+  noDataText,
   showVerticalLines = false,
   tableId = 'datatable'
 }) => {
@@ -104,6 +105,7 @@ const AsyncDataTable: React.SFC<IAsyncDataTableProps> = ({
         LoadingComponent={TableSpinner}
         showPageSizeOptions={false}
         sortable={false}
+        noDataText={noDataText}
         manual
         {...reactTableOverrides}
       />
