@@ -46,6 +46,36 @@ const style = {
 />
 ```
 
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
+<GridLayout>
+    <GridLayout.Cell size={10}>
+      <div style={style}/>
+    </GridLayout.Cell>
+    <GridLayout.Cell size={2}>
+      <div style={style}/>
+    </GridLayout.Cell>
+    <GridLayout.Cell size={{  desktop: 3, tablet: 4 } }>
+      <div style={style}/>
+    </GridLayout.Cell>
+    <GridLayout.Cell size={{  desktop: 6, tablet: 4 } }>
+      <div style={style}/>
+    </GridLayout.Cell>
+    <GridLayout.Cell size={{  desktop: 3, tablet: 4 } }>
+      <div style={style}/>
+    </GridLayout.Cell>
+</GridLayout>
+```
+
 #### Auto, shrink and fullWidth cells
 
 `shrink` will fit the cell to its content. `auto` will expand the cell to the rest of its row,
@@ -84,6 +114,33 @@ const styleSmall = {
 />
 ```
 
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+const styleSmall = {
+  backgroundColor: Variables.Color.g200,
+  border: `2px solid ${Variables.Color.n100}`,
+  color: Variables.Color.g600,
+  padding: '6px'
+};
+
+<GridLayout>
+  <GridLayout.Cell size = {{  desktop: 'shrink', min: 'auto' } }>
+    <div style={styleSmall}>I shrink to my content :)</div>
+  </GridLayout.Cell>
+  <GridLayout.Cell size = {'auto'}>
+    <div style={style} />
+  </GridLayout.Cell>
+</GridLayout>
+```
+
 `size: 'fullWidth'` is a synonym for `size: 12` and can be semantically used wherever a full
 width cell is desired. The following will be three fullWidth cells on tablet or lower sizes:
 
@@ -114,6 +171,30 @@ const style = {
     }
   ]}
 />
+```
+
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
+<GridLayout>
+  <GridLayout.Cell size = {{  desktop: 3, min: 'fullWidth' } }>
+    <div style={style} />
+  </GridLayout.Cell>
+  <GridLayout.Cell size = {{  desktop: 6, min: 'fullWidth' }}>
+    <div style={style} />
+  </GridLayout.Cell>
+  <GridLayout.Cell size = {{  desktop: 3, min: 'fullWidth' } }>
+    <div style={style} />
+  </GridLayout.Cell>
+</GridLayout>
 ```
 
 #### Gutters
@@ -158,6 +239,37 @@ const style = {
   ]}
 />
 ```
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
+<GridLayout
+  gutterMarginX={Variables.Spacing.sMedium}
+  gutterMarginY={Variables.Spacing.sSmall}
+>
+  <GridLayout.Cell size = {10}>
+    <div style={style} />
+  </GridLayout.Cell>
+  <GridLayout.Cell size = {2}>
+    <div style={style} />
+  </GridLayout.Cell>
+  <GridLayout.Cell size = {{  desktop: 3, tablet: 4 } }>
+    <div style={style} />
+  </GridLayout.Cell>
+  <GridLayout.Cell size = {{  desktop: 6, tablet: 4 } }>
+    <div style={style} />
+  </GridLayout.Cell>
+  <GridLayout.Cell size = {{  desktop: 3, tablet: 4 } }>
+    <div style={style} />
+  </GridLayout.Cell>
+</GridLayout>
+```
 
 Padding can be useful for spacing text and other elements without needing wrappers, but should generally be
 avoided unless you have a good use case:
@@ -194,6 +306,34 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
     }
   ]}
 />
+```
+
+```jsx
+import { Variables } from '@Common';
+
+
+const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec libero et libero molestie eleifend. Donec dignissim vel erat eu cursus.';
+
+<GridLayout
+  gutterPaddingX={Variables.Spacing.sSmall}
+  gutterPaddingY={Variables.Spacing.sSmall}
+>
+  <GridLayout.Cell size = {4}>
+    {text}
+  </GridLayout.Cell>
+  <GridLayout.Cell size = {4}>
+    {text}
+  </GridLayout.Cell>
+  <GridLayout.Cell size = {4}>
+    {text}
+  </GridLayout.Cell>
+  <GridLayout.Cell size = {4}>
+    {text}
+  </GridLayout.Cell>
+  <GridLayout.Cell size = {4}>
+    {text}
+  </GridLayout.Cell>
+</GridLayout>
 ```
 
 Gutters support all sizes taken from `Spacing` and `Layout`:
@@ -250,6 +390,52 @@ const style = {
 </>
 ```
 
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
+<>
+  <GridLayout
+    gutterMarginX={Variables.Spacing.s2XSmall}
+  >
+    <GridLayout.Cell size={6}>
+      <div style={style}>spacing-2xsmall gutters</div>
+    </GridLayout.Cell>
+    <GridLayout.Cell size={6}>
+       <div style={style}/>
+    </GridLayout.Cell>
+  </GridLayout>
+
+  <GridLayout
+    gutterMarginX={Variables.Spacing.sMedium}
+  >
+    <GridLayout.Cell size={6}>
+      <div style={style}>spacing-medium gutters</div>
+    </GridLayout.Cell>
+    <GridLayout.Cell size={6}>
+       <div style={style}/>
+    </GridLayout.Cell>
+  </GridLayout>
+
+  <GridLayout
+    gutterMarginX={Variables.Layout.lLarge}
+  >
+    <GridLayout.Cell size={6}>
+      <div style={style}>layout-large gutters</div>
+    </GridLayout.Cell>
+    <GridLayout.Cell size={6}>
+       <div style={style}/>
+    </GridLayout.Cell>
+  </GridLayout>
+</>
+```
+
 Gutters also support being customised per breakpoint. The following will have large gutters
 on desktop but small gutters on mobile:
 ```jsx
@@ -290,6 +476,37 @@ const style = {
 />
 ```
 
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
+<GridLayout
+  gutterMarginX={{ desktop: Variables.Spacing.sLarge, min: Variables.Spacing.sSmall }}
+  gutterMarginY={{ desktop: Variables.Spacing.sLarge, min: Variables.Spacing.sSmall }}
+>
+  <GridLayout.Cell size = {10}>
+    <div style={style} />
+  </GridLayout.Cell>
+  <GridLayout.Cell size = {2}>
+    <div style={style} />
+  </GridLayout.Cell>
+  <GridLayout.Cell size = {{  desktop: 3, tablet: 4 } }>
+    <div style={style} />
+  </GridLayout.Cell>
+  <GridLayout.Cell size = {{  desktop: 6, tablet: 4 } }>
+    <div style={style} />
+  </GridLayout.Cell>
+  <GridLayout.Cell size = {{  desktop: 3, tablet: 4 } }>
+    <div style={style} />
+  </GridLayout.Cell>
+</GridLayout>
+```
 #### Offsets
 
 Offsets can be added to cells to position them at a column distance from the side of the grid.
@@ -321,6 +538,27 @@ const style = {
     }
   ]}
 />
+```
+
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
+<GridLayout>
+  <GridLayout.Cell size={4} offset={{  desktop: 7 } }>
+    <div style={style}/>
+  </GridLayout.Cell>
+  <GridLayout.Cell size={1}>
+    <div style={style}/>
+  </GridLayout.Cell>
+</GridLayout>
 ```
 
 #### Horizontal Alignment
