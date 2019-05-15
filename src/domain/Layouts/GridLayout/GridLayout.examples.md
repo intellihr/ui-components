@@ -27,13 +27,13 @@ const style = {
     <GridLayout.Cell size={2}>
       <div style={style}/>
     </GridLayout.Cell>
-    <GridLayout.Cell size={{  desktop: 3, tablet: 4 } }>
+    <GridLayout.Cell size={{  desktop: 3, tablet: 4 }}>
       <div style={style}/>
     </GridLayout.Cell>
-    <GridLayout.Cell size={{  desktop: 6, tablet: 4 } }>
+    <GridLayout.Cell size={{  desktop: 6, tablet: 4 }}>
       <div style={style}/>
     </GridLayout.Cell>
-    <GridLayout.Cell size={{  desktop: 3, tablet: 4 } }>
+    <GridLayout.Cell size={{  desktop: 3, tablet: 4 }}>
       <div style={style}/>
     </GridLayout.Cell>
 </GridLayout>
@@ -64,7 +64,7 @@ const styleSmall = {
 };
 
 <GridLayout>
-  <GridLayout.Cell size = {{  desktop: 'shrink', min: 'auto' } }>
+  <GridLayout.Cell size = {{  desktop: 'shrink', min: 'auto' }}>
     <div style={styleSmall}>I shrink to my content :)</div>
   </GridLayout.Cell>
   <GridLayout.Cell size = {'auto'}>
@@ -88,13 +88,13 @@ const style = {
 };
 
 <GridLayout>
-  <GridLayout.Cell size = {{  desktop: 3, min: 'fullWidth' } }>
+  <GridLayout.Cell size = {{  desktop: 3, min: 'fullWidth' }}>
     <div style={style} />
   </GridLayout.Cell>
   <GridLayout.Cell size = {{  desktop: 6, min: 'fullWidth' }}>
     <div style={style} />
   </GridLayout.Cell>
-  <GridLayout.Cell size = {{  desktop: 3, min: 'fullWidth' } }>
+  <GridLayout.Cell size = {{  desktop: 3, min: 'fullWidth' }}>
     <div style={style} />
   </GridLayout.Cell>
 </GridLayout>
@@ -125,13 +125,13 @@ const style = {
   <GridLayout.Cell size = {2}>
     <div style={style} />
   </GridLayout.Cell>
-  <GridLayout.Cell size = {{  desktop: 3, tablet: 4 } }>
+  <GridLayout.Cell size = {{  desktop: 3, tablet: 4 }}>
     <div style={style} />
   </GridLayout.Cell>
-  <GridLayout.Cell size = {{  desktop: 6, tablet: 4 } }>
+  <GridLayout.Cell size = {{  desktop: 6, tablet: 4 }}>
     <div style={style} />
   </GridLayout.Cell>
-  <GridLayout.Cell size = {{  desktop: 3, tablet: 4 } }>
+  <GridLayout.Cell size = {{  desktop: 3, tablet: 4 }}>
     <div style={style} />
   </GridLayout.Cell>
 </GridLayout>
@@ -238,13 +238,13 @@ const style = {
   <GridLayout.Cell size = {2}>
     <div style={style} />
   </GridLayout.Cell>
-  <GridLayout.Cell size = {{  desktop: 3, tablet: 4 } }>
+  <GridLayout.Cell size = {{  desktop: 3, tablet: 4 }}>
     <div style={style} />
   </GridLayout.Cell>
-  <GridLayout.Cell size = {{  desktop: 6, tablet: 4 } }>
+  <GridLayout.Cell size = {{  desktop: 6, tablet: 4 }}>
     <div style={style} />
   </GridLayout.Cell>
-  <GridLayout.Cell size = {{  desktop: 3, tablet: 4 } }>
+  <GridLayout.Cell size = {{  desktop: 3, tablet: 4 }}>
     <div style={style} />
   </GridLayout.Cell>
 </GridLayout>
@@ -268,7 +268,7 @@ const style = {
 };
 
 <GridLayout>
-  <GridLayout.Cell size={4} offset={{  desktop: 7 } }>
+  <GridLayout.Cell size={4} offset={{  desktop: 7 }}>
     <div style={style}/>
   </GridLayout.Cell>
   <GridLayout.Cell size={1}>
