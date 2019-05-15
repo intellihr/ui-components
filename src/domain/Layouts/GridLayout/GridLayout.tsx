@@ -111,7 +111,7 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
       componentContext,
       cells,
       children,
-      animationStyle
+      animationStyle: gridAnimationStyle
     } = this.props
 
     let renderChildren: Array<React.ReactElement<IStyledCellProps>> = [<></>]
@@ -123,7 +123,7 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
         React.ReactElement,
         React.ReactElement<IStyledCellProps>
       >(children, (child, index) => {
-        const { size, offset } = child.props
+        const { size, offset, animationStyle: cellAnimationStyle } = child.props
         return (
           <CSSTransition
             key={index}
@@ -135,8 +135,8 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
             {React.cloneElement(child, {
               size: size || 'auto',
               offset: offset || 0,
+              animationStyle: cellAnimationStyle ? cellAnimationStyle : gridAnimationStyle,
               gridColumns,
-              animationStyle,
               gutterMarginX,
               gutterMarginY,
               gutterPaddingX,
