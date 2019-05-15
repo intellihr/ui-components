@@ -644,6 +644,65 @@ const style = {
 </>
 ```
 
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  width: '100%',
+  textAlign: 'center'
+};
+
+<>
+  <GridLayout>
+    <GridLayout.Cell size={4}>
+      <div style={style}>Aligned to</div>
+    </GridLayout.Cell>
+    <GridLayout.Cell size={4}>
+      <div style={style}>the left (default)</div>
+    </GridLayout.Cell>
+  </GridLayout>
+
+  <GridLayout horizontalAlignment={GridLayout.HorizontalAlignment.Right}>
+    <GridLayout.Cell size={4}>
+      <div style={style}>Aligned to</div>
+    </GridLayout.Cell>
+    <GridLayout.Cell size={4}>
+      <div style={style}>the right</div>
+    </GridLayout.Cell>
+  </GridLayout>
+
+  <GridLayout horizontalAlignment={GridLayout.HorizontalAlignment.Center}>
+    <GridLayout.Cell size={4}>
+      <div style={style}>Aligned to</div>
+    </GridLayout.Cell>
+    <GridLayout.Cell size={4}>
+        <div style={style}>the center</div>
+    </GridLayout.Cell>
+  </GridLayout>
+
+  <GridLayout horizontalAlignment={GridLayout.HorizontalAlignment.Justify}>
+    <GridLayout.Cell size={4}>
+      <div style={style}>Aligned to</div>
+    </GridLayout.Cell>
+    <GridLayout.Cell size={4}>
+        <div style={style}>push to the edges</div>
+    </GridLayout.Cell>
+  </GridLayout>
+
+  <GridLayout horizontalAlignment={GridLayout.HorizontalAlignment.Spaced}>
+    <GridLayout.Cell size={4}>
+      <div style={style}>Aligned to</div>
+    </GridLayout.Cell>
+    <GridLayout.Cell size={4}>
+        <div style={style}>spread evenly</div>
+    </GridLayout.Cell>
+  </GridLayout>
+</>
+
+```
 Horizontal alignment also support being customised per breakpoint. The following will have left horizontal alignment
 on desktop but right horizontal alignment on mobile:
 ```jsx
@@ -673,6 +732,28 @@ const style = {
 
 ```
 
+
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  width: '100%',
+  textAlign: 'center'
+};
+
+<GridLayout horizontalAlignment={{ desktop: GridLayout.HorizontalAlignment.Left, min: GridLayout.HorizontalAlignment.Right }}>
+  <GridLayout.Cell size={4}>
+    <div style={style}>Aligned to Left in desktop</div>
+  </GridLayout.Cell>
+  <GridLayout.Cell size={4}>
+    <div style={style}>right in mobile</div>
+  </GridLayout.Cell>
+</GridLayout>
+
+```
 #### Vertical Alignment
 
 Vertical alignment can be applied to the grid to affect the items within it.
@@ -746,6 +827,58 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id 
 </>
 ```
 
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  width: '100%',
+  height: '100%',
+  textAlign: 'center'
+};
+const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id eros consequat ex faucibus pellentesque nec non ipsum. Nulla facilisis libero vitae nisi varius ultricies. Nullam aliquet sollicitudin luctus. Donec sit amet risus et est pellentesque consectetur. Cras eu nisl est. Quisque auctor magna at nulla ultrices, non molestie tortor iaculis.';
+
+<>
+  <GridLayout verticalAlignment={GridLayout.VerticalAlignment.Top}>
+    <GridLayout.Cell size={4}>
+      <div style={style}>Aligned to the top</div>
+    </GridLayout.Cell>
+    <GridLayout.Cell size={4}>
+      <div style={style}>{text}</div>
+    </GridLayout.Cell>
+  </GridLayout>
+
+  <GridLayout verticalAlignment={GridLayout.VerticalAlignment.Middle}>
+    <GridLayout.Cell size={4}>
+      <div style={style}>Aligned to the middle</div>
+    </GridLayout.Cell>
+    <GridLayout.Cell size={4}>
+      <div style={style}>{text}</div>
+    </GridLayout.Cell>
+  </GridLayout>
+
+  <GridLayout verticalAlignment={GridLayout.VerticalAlignment.Bottom}>
+    <GridLayout.Cell size={4}>
+      <div style={style}>Aligned to the bottom</div>
+    </GridLayout.Cell>
+    <GridLayout.Cell size={4}>
+      <div style={style}>{text}</div>
+    </GridLayout.Cell>
+  </GridLayout>
+
+  <GridLayout verticalAlignment={GridLayout.VerticalAlignment.Stretch}>
+    <GridLayout.Cell size={4}>
+      <div style={style}>Stretched to have the same height (default behaviour)</div>
+    </GridLayout.Cell>
+    <GridLayout.Cell size={4}>
+      <div style={style}>{text}</div>
+    </GridLayout.Cell>
+  </GridLayout>
+</>
+```
+
 Vertical alignment also support being customised per breakpoint. The following will have top vertical alignment
 on desktop but bottom vertical alignment on mobile:
 ```jsx
@@ -776,6 +909,28 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id 
     ]}
   />
 
+```
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  width: '100%',
+  height: '100%',
+  textAlign: 'center'
+};
+const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id eros consequat ex faucibus pellentesque nec non ipsum. Nulla facilisis libero vitae nisi varius ultricies. Nullam aliquet sollicitudin luctus. Donec sit amet risus et est pellentesque consectetur. Cras eu nisl est. Quisque auctor magna at nulla ultrices, non molestie tortor iaculis.';
+
+<GridLayout verticalAlignment={{ desktop: GridLayout.VerticalAlignment.Top, min: GridLayout.VerticalAlignment.Bottom }}>
+    <GridLayout.Cell size={4}>
+      <div style={style}>Alignment change with breakpoint</div>
+    </GridLayout.Cell>
+    <GridLayout.Cell size={4}>
+      <div style={style}>{text}</div>
+    </GridLayout.Cell>
+</GridLayout>
 ```
 
 #### Alternate grid patterns
@@ -818,6 +973,33 @@ const style = {
 />
 ```
 
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
+<GridLayout gridColumns={20}>
+    <GridLayout.Cell size={10}>
+      <div style={style}/>
+    </GridLayout.Cell>
+    <GridLayout.Cell size={2}>
+      <div style={style}/>
+    </GridLayout.Cell>
+    <GridLayout.Cell size={{ desktop: 3, tablet: 7 }}>
+      <div style={style}/>
+    </GridLayout.Cell>
+    <GridLayout.Cell size={{ desktop: 5, tablet: 1 }}>
+      <div style={style}/>
+    </GridLayout.Cell>
+</GridLayout>
+```
+
 You can design some makeshift vertical stacks using full widths:
 
 ```jsx
@@ -854,6 +1036,35 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id 
     }
   ]}
 />
+```
+
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
+const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id eros consequat ex faucibus pellentesque nec non ipsum. Nulla facilisis libero vitae nisi varius ultricies. Nullam aliquet sollicitudin luctus. Donec sit amet risus et est pellentesque consectetur. Cras eu nisl est. Quisque auctor magna at nulla ultrices, non molestie tortor iaculis.';
+
+<GridLayout jgutterMarginY='large'>
+    <GridLayout.Cell size={'fullWidth'}>
+      <div style={style}>{text}</div>
+    </GridLayout.Cell>
+    <GridLayout.Cell size={'fullWidth'}>
+      <div style={style}>{text}</div>
+    </GridLayout.Cell>
+    <GridLayout.Cell size={'fullWidth'}>
+      <div style={style}>{text}</div>
+    </GridLayout.Cell>
+    <GridLayout.Cell size={'fullWidth'}>
+      <div style={style}>{text}</div>
+    </GridLayout.Cell>
+</GridLayout>
 ```
 
 #### Animation
@@ -934,4 +1145,83 @@ initialState = { cells: [
     animationStyle='fadeInOut'
   />
 </>
+```
+
+```jsx
+import { useState } from "react";
+import { Variables } from '@Common';
+import { Button } from '@Domain/Buttons';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
+function ParentComponent() {
+  const [data, setData] = useState([
+    {
+      size: 6,
+      content: <div style={style} />
+    },
+    {
+      size: 6,
+      content: <div style={style} />
+    },
+    {
+      size: 6,
+      content: <div style={style} />
+    }
+  ])
+
+  return (
+    <>
+      <Button onClick={() => {
+          const newData = [...data, { size: 6, content: <div style={style} /> }]
+          setData(newData)
+        }}
+      >
+        Add Cell
+      </Button>
+      <Button onClick={() => {
+          const newData = [...data, { 
+              size: 6,
+              content: <div style={style} />,
+              animationStyle: 'zoomInOut'
+           }]
+          setData(newData)
+        }}
+      >
+        Add ZOOMER Cell
+      </Button>
+      <Button 
+        onClick={() => {
+          const newData = [...data]
+          newData.pop()
+          setData(newData)
+        }}
+      >
+        Remove Cell
+      </Button>
+      <GridLayout
+        gutterMarginX={Variables.Layout.lLarge}
+        gutterMarginY={Variables.Layout.lSmall}
+        cells={state.cells}
+        animationStyle='fadeInOut'
+      >
+        {data.map((item, index) => {
+          return (
+            <GridLayout.Cell key={index} size={item.size} animationStyle={item.animationStyle}>
+              {item.content}
+            </GridLayout.Cell>
+          )
+        })}
+      </GridLayout>
+    </>
+  )
+}
+
+<ParentComponent />
+
 ```
