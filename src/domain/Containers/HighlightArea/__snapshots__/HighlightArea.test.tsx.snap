@@ -10,11 +10,9 @@ exports[`<HighLightArea /> should render a HighlightArea 1`] = `
 
 <HighlightArea
   color="grey"
-  margins={16}
 >
   <styled.div
     color="grey"
-    margins={16}
   >
     <div
       className="c0"

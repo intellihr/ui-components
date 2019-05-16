@@ -6,7 +6,6 @@ import { Variables } from '@Common';
 
 <HighlightArea 
     color="grey" 
-    margins={Variables.Spacing.sMedium}
 >
     Hello
 </HighlightArea>
