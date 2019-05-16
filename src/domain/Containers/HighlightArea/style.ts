@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { Variables } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
-import { Color, IHighlightAreaProps } from './HighlightArea'
+import { HightLightAreaColors, IHighlightAreaProps } from './HighlightArea'
 
 interface IColorOption {
   border: Variables.Color,
@@ -10,7 +10,7 @@ interface IColorOption {
 }
 
 type ColorOptions = {
-  [K in Color]: IColorOption
+  [K in HightLightAreaColors]: IColorOption
 }
 
 const ColorOptions: ColorOptions = {
