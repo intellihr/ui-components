@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<DataTable /> Aligned DataTable should match the snapshot 1`] = `
-<DataTable
+exports[`<LegacyDataTable /> Aligned DataTable should match the snapshot 1`] = `
+<LegacyDataTable
   columns={
     Array [
       Object {
@@ -482,11 +482,11 @@ exports[`<DataTable /> Aligned DataTable should match the snapshot 1`] = `
       </LoadingComponent>
     </div>
   </ReactTable>
-</DataTable>
+</LegacyDataTable>
 `;
 
-exports[`<DataTable /> Basic DataTable should match the snapshot 1`] = `
-<DataTable
+exports[`<LegacyDataTable /> Basic DataTable should match the snapshot 1`] = `
+<LegacyDataTable
   columns={
     Array [
       Object {
@@ -959,5 +959,5 @@ exports[`<DataTable /> Basic DataTable should match the snapshot 1`] = `
       </LoadingComponent>
     </div>
   </ReactTable>
-</DataTable>
+</LegacyDataTable>
 `;
