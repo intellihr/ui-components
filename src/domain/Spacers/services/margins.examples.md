@@ -64,4 +64,5 @@ import { Button } from '@Domain/Buttons';
 
 The components that support breakpoints are:
 * Button
+* Brick
 * Callout
