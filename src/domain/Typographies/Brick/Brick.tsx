@@ -12,6 +12,8 @@ export interface IBrickProps {
   className?: string
   /** The data-component-context */
   componentContext?: string
+  /** The margins around the component */
+  margins?: Props.IMargins
 }
 
 export class Brick extends React.PureComponent<IBrickProps> {
@@ -27,11 +29,13 @@ export class Brick extends React.PureComponent<IBrickProps> {
       typographyType,
       className,
       componentContext,
-      children
+      children,
+      margins
     } = this.props
 
     return (
       <BrickWrapper
+        margins={margins}
         color={color!}
         className={className}
         typographyType={typographyType!}
