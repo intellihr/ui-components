@@ -60,8 +60,8 @@ describe('<GridLayout /> with children cells', () => {
           <div>2</div>
         </GridLayout.Cell>
 
-        <GridLayout.Cell 
-          size={{ desktop: 3, tablet: 4 }} 
+        <GridLayout.Cell
+          size={{ desktop: 3, tablet: 4 }}
           offset={{ tablet: 2 }}
         >
           <div>3</div>
@@ -71,8 +71,8 @@ describe('<GridLayout /> with children cells', () => {
           <div>4</div>
         </GridLayout.Cell>
 
-        <GridLayout.Cell 
-          size='auto' 
+        <GridLayout.Cell
+          size='auto'
           offset={3}
         >
           <div>5</div>
