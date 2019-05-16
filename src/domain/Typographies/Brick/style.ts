@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 
 import { Props, Variables } from '../../../common'
+import { styleForMargins } from '../../Spacers/services/margins'
 import { styleForTypographyType } from '../services/textStyles'
 
 interface IBrickWrapperProps {
@@ -8,6 +9,8 @@ interface IBrickWrapperProps {
   color: BrickColor
   /** Specify the type of typography to use */
   typographyType: Props.TypographyType
+  /** The margins around the component */
+  margins?: Props.IMargins
 }
 
 enum BrickColor {
@@ -62,6 +65,7 @@ const BrickWrapper = styled.span<IBrickWrapperProps>`
   padding: 1px 4px;
   word-break: break-word;
 
+  ${(props: IBrickWrapperProps) => styleForMargins(props.margins)}
   ${(props: IBrickWrapperProps) => styleForTypographyType(props.typographyType)}
   ${(props: IBrickWrapperProps) => {
     const color = colors[props.color]
