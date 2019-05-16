@@ -2,12 +2,12 @@ import { mount } from 'enzyme'
 import React from 'react'
 
 import { Props } from '../../../../common'
-import { DataTable } from './DataTable'
+import { LegacyDataTable } from './LegacyDataTable'
 
-describe('<DataTable />', () => {
+describe('<LegacyDataTable />', () => {
   describe('Basic DataTable', () => {
     const wrapper = mount(
-      <DataTable
+      <LegacyDataTable
         data={[
           {
             name: 'Tanner Linsley',
@@ -47,7 +47,7 @@ describe('<DataTable />', () => {
 
   describe('Aligned DataTable', () => {
     const wrapper = mount(
-      <DataTable
+      <LegacyDataTable
         data={[
           {
             name: 'Tanner Linsley',
@@ -87,7 +87,7 @@ describe('<DataTable />', () => {
 
   describe('Paginated DataTable', () => {
     const wrapper = mount(
-      <DataTable
+      <LegacyDataTable
         data={[
           {
             name: 'Frederigo Mallebone',
@@ -124,7 +124,7 @@ describe('<DataTable />', () => {
 
   describe('Filtered DataTable', () => {
     const wrapper = mount(
-      <DataTable
+      <LegacyDataTable
         tableId='test-table'
         data={[
           {
@@ -180,7 +180,7 @@ describe('<DataTable />', () => {
     const filterToSam = jest.fn((_: any, row: any) => row.name === 'Sam')
 
     const wrapper = mount(
-      <DataTable
+      <LegacyDataTable
         tableId='test-table'
         data={[
           {

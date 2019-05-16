@@ -1,4 +1,4 @@
-#### Basic AsyncDataTable
+#### Basic LegacyAsyncDataTable
 
 ```jsx
 import { useState } from 'react'
@@ -319,7 +319,7 @@ function MockDataProvider() {
     }
 
     return (
-      <AsyncDataTable
+      <LegacyAsyncDataTable
         data={data}
         columns={[
           {
@@ -342,9 +342,9 @@ function MockDataProvider() {
 <MockDataProvider/>
 ```
 
-#### Empty AsyncDataTable
+#### Empty LegacyAsyncDataTable
 ```jsx
-<AsyncDataTable
+<LegacyAsyncDataTable
   data={[]}
   columns={[
     {

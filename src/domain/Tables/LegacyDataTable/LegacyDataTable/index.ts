@@ -1,0 +1,1 @@
+export { LegacyDataTable } from './LegacyDataTable'

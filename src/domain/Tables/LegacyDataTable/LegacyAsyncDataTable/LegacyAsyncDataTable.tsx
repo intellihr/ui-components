@@ -32,7 +32,7 @@ interface ITableSpinnerProps {
   loading: boolean
 }
 
-const AsyncDataTable: React.SFC<IAsyncDataTableProps> = ({
+const LegacyAsyncDataTable: React.SFC<IAsyncDataTableProps> = ({
   componentContext,
   data,
   page,
@@ -127,10 +127,10 @@ const TableSpinner = (props: ITableSpinnerProps) => {
   )
 }
 
-const MemoizedAsyncDataTable = React.memo(AsyncDataTable)
+const MemoizedAsyncDataTable = React.memo(LegacyAsyncDataTable)
 
 export {
   // Enzyme doesn't like React.memo, this export is for testing purposes
-  AsyncDataTable as NonMemoizedAsyncDataTable,
-  MemoizedAsyncDataTable as AsyncDataTable
+  LegacyAsyncDataTable as NonMemoizedAsyncDataTable,
+  MemoizedAsyncDataTable as LegacyAsyncDataTable
 }
