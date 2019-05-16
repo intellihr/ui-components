@@ -71,6 +71,7 @@ namespace Props {
     EmptyState = 'empty_state',
     GridLayout = 'grid_layout',
     GridLayoutCell = 'grid_layout_cell',
+    HightlightArea = 'highlight_area',
     HintWrapper = 'hint_wrapper',
     HorizontalRule = 'horizontal_rule',
     IconPicker = 'icon_picker',

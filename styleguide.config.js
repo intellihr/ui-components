@@ -101,6 +101,12 @@ module.exports = {
           ]
         },
         {
+          name: 'Containers',
+          components: [
+            'src/domain/Containers/HighlightArea/HighlightArea.tsx'
+          ]
+        },
+        {
           name: 'Formats',
           components: [
             'src/domain/Formats/Record/Record.tsx',

@@ -1,0 +1,1 @@
+export { HighlightArea } from './HighlightArea'
