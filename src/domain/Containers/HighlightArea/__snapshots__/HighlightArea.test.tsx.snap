@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HighLightArea /> should render a HighlightArea 1`] = `
+.c0 {
+  border: 1px solid #C5CED6;
+  background-color: #F5F7FA;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+<HighlightArea
+  color="grey"
+  margins={16}
+>
+  <styled.div
+    color="grey"
+    margins={16}
+  >
+    <div
+      className="c0"
+      color="grey"
+    >
+      Hello
+    </div>
+  </styled.div>
+</HighlightArea>
+`;
