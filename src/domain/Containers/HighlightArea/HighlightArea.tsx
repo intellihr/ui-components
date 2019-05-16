@@ -3,7 +3,7 @@ import React from 'react'
 import { Props } from '../../../common'
 import { StyledHighlightArea } from './style'
 
-type Color = 'grey' | 'gray'
+type Color = 'grey'
 
 interface IHighlightAreaProps {
   /** Background color of the highlight area */

@@ -13,14 +13,11 @@ type ColorOptions = {
   [K in Color]: IColorOption
 }
 
-const grey: IColorOption = {
-  border: Variables.Color.n400,
-  background: Variables.Color.n200
-}
-
 const ColorOptions: ColorOptions = {
-  grey,
-  gray: grey
+  grey: {
+    border: Variables.Color.n400,
+    background: Variables.Color.n200
+  }
 }
 
 const StyledHighlightArea = styled.div<IHighlightAreaProps>`
