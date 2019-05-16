@@ -19,7 +19,7 @@ interface IHighlightAreaProps {
 const HighlightArea: React.FC<IHighlightAreaProps> = ({ componentContext, color, margins, children }) => {
   return (
     <div
-      data-component-type={Props.ComponentType.Container}
+      data-component-type={Props.ComponentType.HightlightArea}
       data-component-context={componentContext}
     >
       <StyledHighlightArea color={color} margins={margins}>
