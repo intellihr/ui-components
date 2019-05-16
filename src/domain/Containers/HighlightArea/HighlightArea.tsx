@@ -3,11 +3,11 @@ import React from 'react'
 import { Props } from '../../../common'
 import { StyledHighlightArea } from './style'
 
-type Color = 'grey'
+type HightLightAreaColors = 'grey'
 
 interface IHighlightAreaProps {
   /** Background color of the highlight area */
-  color: Color
+  color: HightLightAreaColors
   /** Margins around the highlight area */
   margins?: Props.IMargins
   /** Children components */
@@ -30,7 +30,7 @@ const HighlightArea: React.FC<IHighlightAreaProps> = ({ componentContext, color,
 }
 
 export {
-  Color,
+  HightLightAreaColors,
   IHighlightAreaProps,
   HighlightArea
 }
