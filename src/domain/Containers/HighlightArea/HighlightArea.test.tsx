@@ -1,7 +1,6 @@
 import { mount } from 'enzyme'
 import React from 'react'
 
-import { Variables } from '../../../common'
 import { HighlightArea } from './HighlightArea'
 
 describe('<HighLightArea />', () => {
@@ -9,7 +8,6 @@ describe('<HighLightArea />', () => {
         const wrapper = mount(
             <HighlightArea
                 color='grey'
-                margins={Variables.Spacing.sMedium}
             >
                 Hello
             </HighlightArea>
