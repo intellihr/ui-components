@@ -123,10 +123,10 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
         React.ReactElement,
         React.ReactElement<IStyledCellProps>
       >(children, (child, index) => {
-        const { size, offset, animationStyle: cellAnimationStyle } = child.props
+        const { key, size, offset, animationStyle: cellAnimationStyle } = child.props
         return (
           <CSSTransition
-            key={index}
+            key={key !== undefined ? key : index}
             classNames='grid-layout-cell-animation'
             timeout={200}
             data-component-type={Props.ComponentType.GridLayoutCell}

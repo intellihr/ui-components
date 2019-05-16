@@ -66,6 +66,11 @@ interface IStyledGridLayoutProps {
 }
 
 interface IStyledCellProps {
+  /**
+   * Key for the cell. This is important for animations, as cells with the same key will be kept unanimated
+   * when transitioning. Defaults to the index of the cell.
+   */
+  key?: string | number
   gridColumns?: number
   size?: CellSize | IStyledCellSizes
   offset?: CellOffset | IStyledCellOffsets
