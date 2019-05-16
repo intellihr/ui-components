@@ -61,7 +61,7 @@ interface IGridLayoutCell {
 }
 
 interface IGridLayoutProps {
-  children: React.ReactElement<IStyledCellProps>
+  children: Array<React.ReactElement<IStyledCellProps>> | React.ReactElement<IStyledCellProps> 
   /** The cells to place within the grid */
   cells?: IGridLayoutCell[]
   /** The horizontal alignment of the items within the grid */
