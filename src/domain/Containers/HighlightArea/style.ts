@@ -24,7 +24,7 @@ const StyledHighlightArea = styled.div<IHighlightAreaProps>`
   border: 1px solid ${ (props: IHighlightAreaProps) => ColorOptions[props.color].border};
   background-color: ${(props: IHighlightAreaProps) => ColorOptions[props.color].background};
   padding: ${Variables.Spacing.sMedium}px;
-  border-radius: 4px;
+  border-radius: ${Variables.Style.borderRadius}px;
   ${(props: IHighlightAreaProps) => styleForMargins(props.margins)}
 `
 
