@@ -10,7 +10,7 @@ describe('<HighLightArea />', () => {
         color='grey'
       >
         Hello
-            </HighlightArea>
+      </HighlightArea>
     )
     expect(wrapper).toMatchSnapshot()
   })

@@ -11,15 +11,19 @@ exports[`<HighLightArea /> should render a HighlightArea 1`] = `
 <HighlightArea
   color="grey"
 >
-  <styled.div
-    color="grey"
+  <div
+    data-component-type="container"
   >
-    <div
-      className="c0"
+    <styled.div
       color="grey"
     >
-      Hello
-    </div>
-  </styled.div>
+      <div
+        className="c0"
+        color="grey"
+      >
+        Hello
+      </div>
+    </styled.div>
+  </div>
 </HighlightArea>
 `;
