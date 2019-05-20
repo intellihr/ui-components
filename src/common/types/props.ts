@@ -78,6 +78,7 @@ namespace Props {
     LayoutSpacer = 'layout_spacer',
     LayoutSpacerItem = 'layout_spacer_item',
     LinkButton = 'link_button',
+    Pagination = 'pagination',
     Record = 'record',
     RecordName = 'record_name',
     SmartList = 'smart_list',

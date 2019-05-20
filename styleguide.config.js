@@ -201,6 +201,12 @@ module.exports = {
           ]
         },
         {
+          name: 'Pagination',
+          components: [
+            'src/domain/Pagination/Pagination/Pagination.tsx'
+          ]
+        },
+        {
           name: 'Pills',
           components: [
             'src/domain/Pills/Pill/Pill.tsx'
