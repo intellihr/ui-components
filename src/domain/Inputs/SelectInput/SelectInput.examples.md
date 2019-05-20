@@ -20,6 +20,32 @@ initialState = { value: null };
 />
 ```
 
+#### Multi Select Input
+
+```jsx
+
+initialState = { value: [] };
+
+<SelectInput
+  name='testInput'
+  value={state.value}
+  multi
+  options={[
+    {
+      label: 'Hello World',
+      value: 20
+    },
+    {
+      label: 'Try selecting me',
+      value: 40
+    }
+  ]}
+  handleChange={options => {
+  setState({ value: options })
+  }}
+/>
+```
+
 #### Select Input with ability to create new elements
 
 ```jsx
