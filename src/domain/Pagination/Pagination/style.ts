@@ -2,8 +2,12 @@ import styled, { css } from 'styled-components'
 
 import { Variables } from '../../../common'
 
-interface IStylePaginationPageButton {
+interface IStylePaginationButton {
   isCurrent?: boolean
+}
+
+interface IStyleChevronIcon {
+  arrowDirection: 'left' | 'right'
 }
 
 const EllipsisWrapper = styled.div`
@@ -15,11 +19,33 @@ const EllipsisWrapper = styled.div`
   text-align: center;
 `
 
+const ChevronIconWrapper = styled.span`
+  ${(props: IStyleChevronIcon) => {
+    if (props.arrowDirection === 'left') {
+      return css`
+        position: relative;
+        top: 1px;
+        right: 1px;
+      `
+    }
+
+    if (props.arrowDirection === 'right') {
+      return css`
+        position: relative;
+        top: 1px;
+        left: 1px;
+      `
+    }
+}}
+`
+
 const StylePaginationButton = styled.button`
   border: 0;
   border-radius: 28px;
-  color: ${Variables.Color.n800};
+  color: ${Variables.Color.n700};
   cursor: pointer;
+  font-size: ${Variables.FontSize.fzSmall}px;
+  line-height: ${Variables.LineHeight.lhSmall}px;
   height: 28px;
   margin-left: ${Variables.Spacing.s2XSmall}px;
   margin-right: ${Variables.Spacing.s2XSmall}px;
@@ -30,28 +56,30 @@ const StylePaginationButton = styled.button`
   text-align: center;
   padding: ${Variables.Spacing.s2XSmall}px;
 
-  ${(props: IStylePaginationPageButton) => {
-    if (props.isCurrent) {
-      return css`
-        background-color: ${Variables.Color.i400};
-        color: ${Variables.Color.n100};
-        `
-    }
-    return css `
-      &:hover {
-         background-color: ${Variables.Color.n300};
-      }
-    `
-  }}
-
   &:disabled {
      color: ${Variables.Color.n400};
      cursor: not-allowed;
      background: transparent;
   }
+
+  ${(props: IStylePaginationButton) => {
+    if (props.isCurrent) {
+      return css`
+        background-color: ${Variables.Color.i400};
+        font-weight: ${Variables.FontWeight.fwHeavy};
+        color: ${Variables.Color.n100};
+        `
+    }
+    return css `
+      &:hover, &:focus {
+         background-color: ${Variables.Color.n300};
+      }
+    `
+  }}
 `
 
 export {
   EllipsisWrapper,
-  StylePaginationButton
+  StylePaginationButton,
+  ChevronIconWrapper
 }

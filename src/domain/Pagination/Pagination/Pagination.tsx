@@ -1,10 +1,11 @@
 import React from 'react'
 
 import { Props, Variables } from '../../../common'
-import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
+import {FontAwesomeIcon} from '../../Icons/FontAwesomeIcon'
 import { GridLayout } from '../../Layouts/GridLayout'
 import { IGridLayoutCell } from '../../Layouts/GridLayout/GridLayout'
-import { EllipsisWrapper, StylePaginationButton } from './style'
+import { Text } from '../../Typographies/Text'
+import { ChevronIconWrapper, EllipsisWrapper, StylePaginationButton } from './style'
 
 interface IPaginationProps {
   /** Current selected page number */
@@ -44,9 +45,12 @@ export class Pagination extends React.PureComponent<IPaginationProps> {
       const maxActualCurrentPageIndex = maxCurrentPageIndex <= totalCount ? maxCurrentPageIndex : totalCount
 
       return (
-        <div>
-          Showing {pageStartingIndex} to {maxActualCurrentPageIndex} of {totalCount} entries
-        </div>
+        <Text
+          color={Variables.Color.n600}
+          type={Props.TypographyType.Small}
+        >
+          Showing {pageStartingIndex.toString()} to {maxActualCurrentPageIndex.toString()} of {totalCount.toString()} entries
+        </Text>
       )
     }
 
@@ -63,7 +67,9 @@ export class Pagination extends React.PureComponent<IPaginationProps> {
         disabled={currentPage <= 1}
         onClick={this.changePage(currentPage - 1)}
       >
-        <FontAwesomeIcon type='chevron-left' />
+        <ChevronIconWrapper arrowDirection='left'>
+          <FontAwesomeIcon  type='chevron-left' />
+        </ChevronIconWrapper>
       </StylePaginationButton>
     )
   }
@@ -80,7 +86,9 @@ export class Pagination extends React.PureComponent<IPaginationProps> {
         disabled={hasMorePages ? hasMorePages : totalPages <= currentPage}
         onClick={this.changePage(currentPage + 1)}
       >
-        <FontAwesomeIcon type='chevron-right' />
+        <ChevronIconWrapper arrowDirection='right'>
+          <FontAwesomeIcon  type='chevron-right' />
+        </ChevronIconWrapper>
       </StylePaginationButton>
     )
   }
@@ -145,11 +153,11 @@ export class Pagination extends React.PureComponent<IPaginationProps> {
 
       // Ellipse in the middle (1 ... 59 60 61 ... 100)
       pageNumberArray.push(this.buttonForPage(1))
-      pageNumberArray.push(<EllipsisWrapper key={`pagination-ellipsis`}>...</EllipsisWrapper>)
+      pageNumberArray.push(<EllipsisWrapper key={`pagination-ellipsis-1`}>...</EllipsisWrapper>)
       for (let i = (currentPage - 2); i < (currentPage + 1); i++) {
         pageNumberArray.push(this.buttonForPage(i + 1))
       }
-      pageNumberArray.push(<EllipsisWrapper key={`pagination-ellipsis`}>...</EllipsisWrapper>)
+      pageNumberArray.push(<EllipsisWrapper key={`pagination-ellipsis-2`}>...</EllipsisWrapper>)
       pageNumberArray.push(this.buttonForPage(totalPages))
 
       return pageNumberArray
