@@ -1,0 +1,256 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Pagination /> should render a pagination with details 1`] = `
+<GridLayout
+  cells={
+    Array [
+      Object {
+        "content": <div>
+          Showing 
+          1
+           to 
+          10
+           of 
+          105
+           entries
+        </div>,
+        "size": Object {
+          "desktop": 6,
+          "min": 12,
+        },
+      },
+      Object {
+        "content": <UNDEFINED>
+          <styled.button
+            disabled={true}
+            onClick={[Function]}
+          >
+            <FontAwesomeIcon
+              type="chevron-left"
+            />
+          </styled.button>
+          <styled.button
+            isCurrent={true}
+            onClick={[Function]}
+          >
+            1
+          </styled.button>
+          <styled.button
+            isCurrent={false}
+            onClick={[Function]}
+          >
+            2
+          </styled.button>
+          <styled.button
+            isCurrent={false}
+            onClick={[Function]}
+          >
+            3
+          </styled.button>
+          <styled.button
+            isCurrent={false}
+            onClick={[Function]}
+          >
+            4
+          </styled.button>
+          <styled.button
+            isCurrent={false}
+            onClick={[Function]}
+          >
+            5
+          </styled.button>
+          <styled.div>
+            ...
+          </styled.div>
+          <styled.button
+            isCurrent={false}
+            onClick={[Function]}
+          >
+            11
+          </styled.button>
+          <styled.button
+            disabled={false}
+            onClick={[Function]}
+          >
+            <FontAwesomeIcon
+              type="chevron-right"
+            />
+          </styled.button>
+        </UNDEFINED>,
+        "size": Object {
+          "desktop": 6,
+          "min": 12,
+        },
+      },
+    ]
+  }
+  data-component-type="pagination"
+  gridColumns={12}
+  gutterMarginX="none"
+  gutterMarginY={12}
+  gutterPaddingX="none"
+  gutterPaddingY="none"
+  horizontalAlignment="justify"
+  verticalAlignment="stretch"
+/>
+`;
+
+exports[`<Pagination /> should render a pagination without details 1`] = `
+<GridLayout
+  cells={
+    Array [
+      Object {
+        "content": <UNDEFINED>
+          <styled.button
+            disabled={true}
+            onClick={[Function]}
+          >
+            <FontAwesomeIcon
+              type="chevron-left"
+            />
+          </styled.button>
+          <styled.button
+            isCurrent={true}
+            onClick={[Function]}
+          >
+            1
+          </styled.button>
+          <styled.button
+            isCurrent={false}
+            onClick={[Function]}
+          >
+            2
+          </styled.button>
+          <styled.button
+            isCurrent={false}
+            onClick={[Function]}
+          >
+            3
+          </styled.button>
+          <styled.button
+            isCurrent={false}
+            onClick={[Function]}
+          >
+            4
+          </styled.button>
+          <styled.button
+            isCurrent={false}
+            onClick={[Function]}
+          >
+            5
+          </styled.button>
+          <styled.div>
+            ...
+          </styled.div>
+          <styled.button
+            isCurrent={false}
+            onClick={[Function]}
+          >
+            10
+          </styled.button>
+          <styled.button
+            disabled={false}
+            onClick={[Function]}
+          >
+            <FontAwesomeIcon
+              type="chevron-right"
+            />
+          </styled.button>
+        </UNDEFINED>,
+        "size": Object {
+          "desktop": 6,
+          "min": 12,
+        },
+      },
+    ]
+  }
+  data-component-type="pagination"
+  gridColumns={12}
+  gutterMarginX="none"
+  gutterMarginY={12}
+  gutterPaddingX="none"
+  gutterPaddingY="none"
+  horizontalAlignment="justify"
+  verticalAlignment="stretch"
+/>
+`;
+
+exports[`<Pagination /> should render a pagination without details 2`] = `
+<GridLayout
+  cells={
+    Array [
+      Object {
+        "content": <UNDEFINED>
+          <styled.button
+            disabled={true}
+            onClick={[Function]}
+          >
+            <FontAwesomeIcon
+              type="chevron-left"
+            />
+          </styled.button>
+          <styled.button
+            isCurrent={true}
+            onClick={[Function]}
+          >
+            1
+          </styled.button>
+          <styled.button
+            isCurrent={false}
+            onClick={[Function]}
+          >
+            2
+          </styled.button>
+          <styled.button
+            isCurrent={false}
+            onClick={[Function]}
+          >
+            3
+          </styled.button>
+          <styled.button
+            isCurrent={false}
+            onClick={[Function]}
+          >
+            4
+          </styled.button>
+          <styled.button
+            isCurrent={false}
+            onClick={[Function]}
+          >
+            5
+          </styled.button>
+          <styled.div>
+            ...
+          </styled.div>
+          <styled.button
+            isCurrent={false}
+            onClick={[Function]}
+          >
+            11
+          </styled.button>
+          <styled.button
+            disabled={false}
+            onClick={[Function]}
+          >
+            <FontAwesomeIcon
+              type="chevron-right"
+            />
+          </styled.button>
+        </UNDEFINED>,
+        "size": Object {
+          "desktop": 6,
+          "min": 12,
+        },
+      },
+    ]
+  }
+  data-component-type="pagination"
+  gridColumns={12}
+  gutterMarginX="none"
+  gutterMarginY={12}
+  gutterPaddingX="none"
+  gutterPaddingY="none"
+  horizontalAlignment="justify"
+  verticalAlignment="stretch"
+/>
+`;
