@@ -68,6 +68,7 @@ interface IStyledGridLayoutProps {
 interface IStyledCellProps {
   gridColumns: number,
   sizes: CellSize | IStyledCellSizes,
+  alignments: HorizontalAlignment | IStyledHorizontalAlignment,
   offsets: CellOffset | IStyledCellOffsets,
   gutterMarginX: GutterSize | IStyledGridGutters,
   gutterMarginY: GutterSize | IStyledGridGutters,
@@ -304,6 +305,7 @@ const StyledGridLayout = styled.div<IStyledGridLayoutProps>`
 interface ICellStyleArguments {
   gridColumns: number
   size: CellSize
+  alignment: HorizontalAlignment
   offset: CellOffset
   gutters: {
     marginXPx: number,
@@ -317,6 +319,7 @@ function cellStyleForSizeAndGutters (
   {
     gridColumns,
     size,
+    alignment,
     offset,
     gutters
   }: ICellStyleArguments
@@ -395,12 +398,15 @@ function cellStyleForSizeAndGutters (
   }
 
   return css`
+    display: flex;
+
     ${leftRightPaddingGutters}
     ${topBottomPaddingGutters}
     ${leftRightMarginGutters}
     ${topBottomMarginGutters}
     ${flexProperties}
     ${offsetProperties}
+    ${getPropertiesForHorizontalAlignment(alignment)}
   `
 }
 
@@ -411,6 +417,7 @@ function cellStyleForProps (props: IStyledCellProps) {
         gridColumns: props.gridColumns,
         size: getSizeAtBreakpoint(props.sizes, 'min'),
         offset: getOffsetAtBreakpoint(props.offsets, 'min'),
+        alignment: getHorizontalAlignmentAtBreakpoint(props.alignments, 'min'),
         gutters: {
           marginXPx: getGutterPxAtBreakpoint(props.gutterMarginX, 'min'),
           marginYPx: getGutterPxAtBreakpoint(props.gutterMarginY, 'min'),
@@ -428,6 +435,7 @@ function cellStyleForProps (props: IStyledCellProps) {
         gridColumns: props.gridColumns,
         size: getSizeAtBreakpoint(props.sizes, 'tablet'),
         offset: getOffsetAtBreakpoint(props.offsets, 'tablet'),
+        alignment: getHorizontalAlignmentAtBreakpoint(props.alignments, 'tablet'),
         gutters: {
           marginXPx: getGutterPxAtBreakpoint(props.gutterMarginX, 'tablet'),
           marginYPx: getGutterPxAtBreakpoint(props.gutterMarginY, 'tablet'),
@@ -445,6 +453,7 @@ function cellStyleForProps (props: IStyledCellProps) {
         gridColumns: props.gridColumns,
         size: getSizeAtBreakpoint(props.sizes, 'desktop'),
         offset: getOffsetAtBreakpoint(props.offsets, 'desktop'),
+        alignment: getHorizontalAlignmentAtBreakpoint(props.alignments, 'desktop'),
         gutters: {
           marginXPx: getGutterPxAtBreakpoint(props.gutterMarginX, 'desktop'),
           marginYPx: getGutterPxAtBreakpoint(props.gutterMarginY, 'desktop'),
@@ -459,6 +468,7 @@ function cellStyleForProps (props: IStyledCellProps) {
         gridColumns: props.gridColumns,
         size: getSizeAtBreakpoint(props.sizes, 'bigDesktop'),
         offset: getOffsetAtBreakpoint(props.offsets, 'bigDesktop'),
+        alignment: getHorizontalAlignmentAtBreakpoint(props.alignments, 'bigDesktop'),
         gutters: {
           marginXPx: getGutterPxAtBreakpoint(props.gutterMarginX, 'bigDesktop'),
           marginYPx: getGutterPxAtBreakpoint(props.gutterMarginY, 'bigDesktop'),
