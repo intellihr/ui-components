@@ -20,7 +20,7 @@ describe('<Pagination />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a pagination without details`, () => {
+  it(`should render a pagination without details by passing limited variables`, () => {
     const wrapper = shallow(
       <Pagination
         currentPage={1}
@@ -32,7 +32,7 @@ describe('<Pagination />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a pagination without details`, () => {
+  it(`should render a pagination without details by passing props hasPageDetails`, () => {
     const wrapper = shallow(
       <Pagination
         hasPageDetails={false}

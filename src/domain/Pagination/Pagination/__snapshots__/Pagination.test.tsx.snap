@@ -5,7 +5,12 @@ exports[`<Pagination /> should render a pagination with details 1`] = `
   cells={
     Array [
       Object {
-        "content": <div>
+        "content": <Text
+          color="#667380"
+          isInline={true}
+          tag="span"
+          type="small"
+        >
           Showing 
           1
            to 
@@ -13,7 +18,7 @@ exports[`<Pagination /> should render a pagination with details 1`] = `
            of 
           105
            entries
-        </div>,
+        </Text>,
         "size": Object {
           "desktop": 6,
           "min": 12,
@@ -25,9 +30,13 @@ exports[`<Pagination /> should render a pagination with details 1`] = `
             disabled={true}
             onClick={[Function]}
           >
-            <FontAwesomeIcon
-              type="chevron-left"
-            />
+            <styled.span
+              arrowDirection="left"
+            >
+              <FontAwesomeIcon
+                type="chevron-left"
+              />
+            </styled.span>
           </styled.button>
           <styled.button
             isCurrent={true}
@@ -72,9 +81,13 @@ exports[`<Pagination /> should render a pagination with details 1`] = `
             disabled={false}
             onClick={[Function]}
           >
-            <FontAwesomeIcon
-              type="chevron-right"
-            />
+            <styled.span
+              arrowDirection="right"
+            >
+              <FontAwesomeIcon
+                type="chevron-right"
+              />
+            </styled.span>
           </styled.button>
         </UNDEFINED>,
         "size": Object {
@@ -95,7 +108,7 @@ exports[`<Pagination /> should render a pagination with details 1`] = `
 />
 `;
 
-exports[`<Pagination /> should render a pagination without details 1`] = `
+exports[`<Pagination /> should render a pagination without details by passing limited variables 1`] = `
 <GridLayout
   cells={
     Array [
@@ -105,9 +118,13 @@ exports[`<Pagination /> should render a pagination without details 1`] = `
             disabled={true}
             onClick={[Function]}
           >
-            <FontAwesomeIcon
-              type="chevron-left"
-            />
+            <styled.span
+              arrowDirection="left"
+            >
+              <FontAwesomeIcon
+                type="chevron-left"
+              />
+            </styled.span>
           </styled.button>
           <styled.button
             isCurrent={true}
@@ -152,9 +169,13 @@ exports[`<Pagination /> should render a pagination without details 1`] = `
             disabled={false}
             onClick={[Function]}
           >
-            <FontAwesomeIcon
-              type="chevron-right"
-            />
+            <styled.span
+              arrowDirection="right"
+            >
+              <FontAwesomeIcon
+                type="chevron-right"
+              />
+            </styled.span>
           </styled.button>
         </UNDEFINED>,
         "size": Object {
@@ -175,7 +196,7 @@ exports[`<Pagination /> should render a pagination without details 1`] = `
 />
 `;
 
-exports[`<Pagination /> should render a pagination without details 2`] = `
+exports[`<Pagination /> should render a pagination without details by passing props hasPageDetails 1`] = `
 <GridLayout
   cells={
     Array [
@@ -185,9 +206,13 @@ exports[`<Pagination /> should render a pagination without details 2`] = `
             disabled={true}
             onClick={[Function]}
           >
-            <FontAwesomeIcon
-              type="chevron-left"
-            />
+            <styled.span
+              arrowDirection="left"
+            >
+              <FontAwesomeIcon
+                type="chevron-left"
+              />
+            </styled.span>
           </styled.button>
           <styled.button
             isCurrent={true}
@@ -232,9 +257,13 @@ exports[`<Pagination /> should render a pagination without details 2`] = `
             disabled={false}
             onClick={[Function]}
           >
-            <FontAwesomeIcon
-              type="chevron-right"
-            />
+            <styled.span
+              arrowDirection="right"
+            >
+              <FontAwesomeIcon
+                type="chevron-right"
+              />
+            </styled.span>
           </styled.button>
         </UNDEFINED>,
         "size": Object {
