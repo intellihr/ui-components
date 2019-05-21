@@ -7,7 +7,7 @@
     currentPage={state.page}
     totalCount={105}
     pageSize={10}
-    totalPages={10}
+    totalPages={11}
     handlePageChange={(page) => setState({page})}
   />
 ```

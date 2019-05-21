@@ -1,9 +1,10 @@
 import React from 'react'
 
-import { Props } from '../../../common'
-import { Button } from '../../Buttons'
+import { Props, Variables } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
-import {GridLayout} from '../../Layouts/GridLayout'
+import { GridLayout } from '../../Layouts/GridLayout'
+import { IGridLayoutCell } from '../../Layouts/GridLayout/GridLayout'
+import { EllipsisWrapper, StylePaginationButton } from './style'
 
 interface IPaginationProps {
   /** Current selected page number */
@@ -58,12 +59,12 @@ export class Pagination extends React.PureComponent<IPaginationProps> {
     } = this.props
 
     return (
-      <Button
+      <StylePaginationButton
         disabled={currentPage <= 1}
         onClick={this.changePage(currentPage - 1)}
       >
         <FontAwesomeIcon type='chevron-left' />
-      </Button>
+      </StylePaginationButton>
     )
   }
 
@@ -75,16 +76,16 @@ export class Pagination extends React.PureComponent<IPaginationProps> {
     } = this.props
 
     return (
-      <Button
+      <StylePaginationButton
         disabled={hasMorePages ? hasMorePages : totalPages <= currentPage}
         onClick={this.changePage(currentPage + 1)}
       >
         <FontAwesomeIcon type='chevron-right' />
-      </Button>
+      </StylePaginationButton>
     )
   }
 
-  get paginationCells () {
+  get paginationCells (): IGridLayoutCell[] {
     const pagination = (
       <>
         {this.previousPageButton}
@@ -95,15 +96,15 @@ export class Pagination extends React.PureComponent<IPaginationProps> {
 
     if (this.pageDetails) {
       return ([{
-        size: 6,
+        size: { desktop: 6, min: 12 },
         content: this.pageDetails
       }, {
-        size: 6,
+        size: { desktop: 6, min: 12 },
         content: pagination
       }])
     }
     return ([{
-      size: 6,
+      size: { desktop: 6, min: 12 },
       content: pagination
     }])
   }
@@ -124,7 +125,7 @@ export class Pagination extends React.PureComponent<IPaginationProps> {
         for (let i = 0; i < 5; i++) {
           pageNumberArray.push(this.buttonForPage(i + 1))
         }
-        pageNumberArray.push(<span>...</span>)
+        pageNumberArray.push(<EllipsisWrapper key={`pagination-ellipsis`}>...</EllipsisWrapper>)
         pageNumberArray.push(this.buttonForPage(totalPages))
 
         return pageNumberArray
@@ -133,7 +134,7 @@ export class Pagination extends React.PureComponent<IPaginationProps> {
       // Ellipse in the beginning (1 ... 6 7 8 9 10)
       if (currentPage <= totalPages && currentPage >= (totalPages - 4)) {
         pageNumberArray.push(this.buttonForPage(1))
-        pageNumberArray.push(<span>...</span>)
+        pageNumberArray.push(<EllipsisWrapper key={`pagination-ellipsis`}>...</EllipsisWrapper>)
 
         for (let i = (totalPages - 5); i < totalPages; i++) {
           pageNumberArray.push(this.buttonForPage(i + 1))
@@ -144,11 +145,11 @@ export class Pagination extends React.PureComponent<IPaginationProps> {
 
       // Ellipse in the middle (1 ... 59 60 61 ... 100)
       pageNumberArray.push(this.buttonForPage(1))
-      pageNumberArray.push(<span>...</span>)
+      pageNumberArray.push(<EllipsisWrapper key={`pagination-ellipsis`}>...</EllipsisWrapper>)
       for (let i = (currentPage - 2); i < (currentPage + 1); i++) {
         pageNumberArray.push(this.buttonForPage(i + 1))
       }
-      pageNumberArray.push(<span>...</span>)
+      pageNumberArray.push(<EllipsisWrapper key={`pagination-ellipsis`}>...</EllipsisWrapper>)
       pageNumberArray.push(this.buttonForPage(totalPages))
 
       return pageNumberArray
@@ -169,6 +170,8 @@ export class Pagination extends React.PureComponent<IPaginationProps> {
 
     return (
       <GridLayout
+        gutterMarginY={Variables.Spacing.sSmall}
+        horizontalAlignment={GridLayout.HorizontalAlignment.Justify}
         data-component-type={Props.ComponentType.Pagination}
         data-component-context={componentContext}
         cells={this.paginationCells}
@@ -188,13 +191,13 @@ export class Pagination extends React.PureComponent<IPaginationProps> {
     const { currentPage } = this.props
 
     return (
-      <Button
+      <StylePaginationButton
         key={`pagination-${pageNumber}`}
-        type={currentPage === pageNumber ? 'primary' : undefined}
+        isCurrent={currentPage === pageNumber}
         onClick={this.changePage(pageNumber)}
       >
         {pageNumber}
-      </Button>
+      </StylePaginationButton>
     )
   }
 }
