@@ -58,6 +58,8 @@ interface IGridLayoutCell {
   content?: JSX.Element | string | null,
   /** The size this cell takes up within the grid */
   size?: ICellSizeDefinition | CellSize,
+  /** The content alignment in this cell */
+  horizontalAlignment?: IHorizontalAlignmentDefinition | HorizontalAlignment,
   /** The cell offset from the edge of the grid */
   offset?: ICellOffsetDefinition | number,
   /** Animation style for adding/removing the cell (overrides the grid style) */
@@ -142,6 +144,7 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
       key,
       content,
       size,
+      horizontalAlignment,
       offset,
       componentContext,
       animationStyle: cellAnimationStyle
@@ -156,6 +159,7 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
         <StyledCell
           gridColumns={gridColumns!}
           sizes={size || 'auto'}
+          horizontalAlignments={horizontalAlignment || HorizontalAlignment.Left}
           offsets={offset || 0}
           gutterMarginX={gutterMarginX!}
           gutterMarginY={gutterMarginY!}
