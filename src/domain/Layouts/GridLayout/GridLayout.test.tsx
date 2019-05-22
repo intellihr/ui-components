@@ -19,7 +19,8 @@ describe('<GridLayout />', () => {
           },
           {
             size: 2,
-            content: <div>2</div>
+            content: <div>2</div>,
+            alignment: {desktop: 'right', min: 'center'}
           },
           {
             size: { desktop: 3, tablet: 4 },

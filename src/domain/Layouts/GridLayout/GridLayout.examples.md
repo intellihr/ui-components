@@ -540,6 +540,65 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id 
 
 ```
 
+#### Cell Alignment
+
+Cell alignment can be applied to the grid cell to affect the cell content.
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem'
+};
+
+<GridLayout
+  cells={[
+          {
+            size: 4,
+            content: <div style={style}>aligned to left</div>,
+            alignment: GridLayout.HorizontalAlignment.Left
+          },
+          {
+            size: 4,
+            content: <div style={style}>aligned to center</div>,
+            alignment: GridLayout.HorizontalAlignment.Center
+          },
+          {
+            size: 4,
+            content: <div style={style}>aligned to right</div>,
+            alignment: GridLayout.HorizontalAlignment.Right
+          }
+        ]}
+/>
+```
+
+Cell alignment also support being customised per breakpoint. The following will have right cell alignment
+on desktop but center cell alignment on mobile:
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem'
+};
+
+<GridLayout
+  cells={[
+          {
+            size: 2,
+            content: <div style={style}>normal content</div>
+          },
+          {
+            size: 10,
+            content: <div style={style}>right in desktop, center in mobile</div>,
+            alignment: { desktop: GridLayout.HorizontalAlignment.Right, min: GridLayout.HorizontalAlignment.Center}
+          }
+        ]}
+/>
+```
+
 #### Alternate grid patterns
 
 Grids don't __have__ to be 12 grids. The `gridColumns` prop lets you specify the number
