@@ -136,78 +136,146 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
 
 @media only screen and (max-width:639px) {
   .c1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     padding-top: 8px;
     padding-bottom: 8px;
     margin-left: 2px;
     margin-right: 2px;
     width: calc(83.33333333333333% - 4px);
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
 @media only screen and (min-width:640px) and (max-width:1033px) {
   .c1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     padding-top: 8px;
     padding-bottom: 8px;
     margin-left: 2px;
     margin-right: 2px;
     width: calc(83.33333333333333% - 4px);
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
 @media only screen and (min-width:1034px) and (max-width:1439px) {
   .c1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     margin-left: 2px;
     margin-right: 2px;
     width: calc(83.33333333333333% - 4px);
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
 @media only screen and (min-width:1440px) {
   .c1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     margin-left: 2px;
     margin-right: 2px;
     width: calc(83.33333333333333% - 4px);
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
 @media only screen and (max-width:639px) {
   .c2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     padding-top: 8px;
     padding-bottom: 8px;
     margin-left: 2px;
     margin-right: 2px;
     width: calc(16.666666666666668% - 4px);
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
 @media only screen and (min-width:640px) and (max-width:1033px) {
   .c2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     padding-top: 8px;
     padding-bottom: 8px;
     margin-left: 2px;
     margin-right: 2px;
     width: calc(16.666666666666668% - 4px);
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
 @media only screen and (min-width:1034px) and (max-width:1439px) {
   .c2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     margin-left: 2px;
     margin-right: 2px;
     width: calc(16.666666666666668% - 4px);
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
 @media only screen and (min-width:1440px) {
   .c2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     margin-left: 2px;
     margin-right: 2px;
     width: calc(16.666666666666668% - 4px);
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
 @media only screen and (max-width:639px) {
   .c3 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     padding-top: 8px;
     padding-bottom: 8px;
     margin-left: 2px;
@@ -216,40 +284,72 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     -ms-flex: 1 1 0%;
     flex: 1 1 0%;
     width: auto;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
 @media only screen and (min-width:640px) and (max-width:1033px) {
   .c3 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     padding-top: 8px;
     padding-bottom: 8px;
     margin-left: 2px;
     margin-right: 2px;
     width: calc(33.333333333333336% - 4px);
     margin-left: calc(16.666666666666668% + 2px);
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
 @media only screen and (min-width:1034px) and (max-width:1439px) {
   .c3 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     margin-left: 2px;
     margin-right: 2px;
     width: calc(25% - 4px);
     margin-left: calc(16.666666666666668% + 2px);
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
 @media only screen and (min-width:1440px) {
   .c3 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     margin-left: 2px;
     margin-right: 2px;
     width: calc(25% - 4px);
     margin-left: calc(16.666666666666668% + 2px);
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
 @media only screen and (max-width:639px) {
   .c4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     padding-top: 8px;
     padding-bottom: 8px;
     margin-left: 2px;
@@ -258,37 +358,69 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     -ms-flex: 1 1 0%;
     flex: 1 1 0%;
     width: auto;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
 @media only screen and (min-width:640px) and (max-width:1033px) {
   .c4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     padding-top: 8px;
     padding-bottom: 8px;
     margin-left: 2px;
     margin-right: 2px;
     width: calc(33.333333333333336% - 4px);
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
 @media only screen and (min-width:1034px) and (max-width:1439px) {
   .c4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     margin-left: 2px;
     margin-right: 2px;
     width: calc(50% - 4px);
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
 @media only screen and (min-width:1440px) {
   .c4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     margin-left: 2px;
     margin-right: 2px;
     width: calc(50% - 4px);
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
 @media only screen and (max-width:639px) {
   .c5 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     padding-top: 8px;
     padding-bottom: 8px;
     margin-left: 2px;
@@ -298,11 +430,19 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     flex: 1 1 0%;
     width: auto;
     margin-left: calc(25% + 2px);
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
 @media only screen and (min-width:640px) and (max-width:1033px) {
   .c5 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     padding-top: 8px;
     padding-bottom: 8px;
     margin-left: 2px;
@@ -312,11 +452,19 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     flex: 1 1 0%;
     width: auto;
     margin-left: calc(25% + 2px);
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
 @media only screen and (min-width:1034px) and (max-width:1439px) {
   .c5 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     margin-left: 2px;
     margin-right: 2px;
     -webkit-flex: 1 1 0%;
@@ -324,11 +472,19 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     flex: 1 1 0%;
     width: auto;
     margin-left: calc(25% + 2px);
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
 @media only screen and (min-width:1440px) {
   .c5 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     margin-left: 2px;
     margin-right: 2px;
     -webkit-flex: 1 1 0%;
@@ -336,6 +492,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     flex: 1 1 0%;
     width: auto;
     margin-left: calc(25% + 2px);
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
@@ -349,6 +509,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
         "size": 10,
       },
       Object {
+        "alignment": Object {
+          "desktop": "right",
+          "min": "center",
+        },
         "content": <div>
           2
         </div>,
@@ -447,6 +611,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   "min": 16,
                 }
               }
+              horizontalAlignments="left"
               offsets={0}
               sizes={10}
             >
@@ -497,6 +662,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   "min": 16,
                 }
               }
+              horizontalAlignments="left"
               offsets={0}
               sizes={2}
             >
@@ -547,6 +713,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   "min": 16,
                 }
               }
+              horizontalAlignments="left"
               offsets={
                 Object {
                   "tablet": 2,
@@ -611,6 +778,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   "min": 16,
                 }
               }
+              horizontalAlignments="left"
               offsets={0}
               sizes={
                 Object {
@@ -671,6 +839,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   "min": 16,
                 }
               }
+              horizontalAlignments="left"
               offsets={3}
               sizes="auto"
             >
