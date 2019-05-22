@@ -1,7 +1,9 @@
 import classNames from 'classnames'
-import React, { ChangeEventHandler } from 'react'
+import React, { ChangeEventHandler, RefObject } from 'react'
 
-import { StyledAutosizeTextarea } from '../../Inputs/TextAreaInput/style'
+import { StyledAutosizeTextarea, StyledGifButton } from '../../Inputs/TextAreaInput/style'
+import { TenorGifSelector } from './TenorGifSelector'
+// import { Tooltip } from "@Domain/ToolTips"
 
 interface ITextAreaInputProps {
   /** ID of the input */
@@ -39,7 +41,7 @@ class TextAreaInput extends React.PureComponent<ITextAreaInputProps> {
 
     return classNames(
       className,
-      {'is-invalid-input': isInvalid}
+      { 'is-invalid-input': isInvalid }
     )
   }
 
@@ -55,18 +57,30 @@ class TextAreaInput extends React.PureComponent<ITextAreaInputProps> {
       isHTML5Required
     } = this.props
 
+    const insertMarkdown = (markdown: string) => {
+      console.log(markdown)
+    }
+
     return (
-      <StyledAutosizeTextarea
-        id={id || name}
-        name={name}
-        onChange={handleChange}
-        value={value}
-        className={this.classNames}
-        disabled={isDisabled}
-        rows={rows}
-        placeholder={placeholder}
-        required={isHTML5Required}
-      />
+      <div style={{ position: 'relative' }}>
+        <StyledAutosizeTextarea
+          id={id || name}
+          name={name}
+          onChange={handleChange}
+          value={value}
+          className={this.classNames}
+          disabled={isDisabled}
+          rows={rows}
+          placeholder={placeholder}
+          required={isHTML5Required}
+        />
+        {!isDisabled && (
+          <TenorGifSelector
+            apiKey='GKN6X4G4CUZJ'
+            insertMarkdown={insertMarkdown}
+          />
+        )}
+      </div>
     )
   }
 }
