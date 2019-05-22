@@ -213,10 +213,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     margin-left: 2px;
     margin-right: 2px;
     width: calc(16.666666666666668% - 4px);
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
@@ -231,10 +231,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     margin-left: 2px;
     margin-right: 2px;
     width: calc(16.666666666666668% - 4px);
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
@@ -247,10 +247,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     margin-left: 2px;
     margin-right: 2px;
     width: calc(16.666666666666668% - 4px);
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
@@ -263,10 +263,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     margin-left: 2px;
     margin-right: 2px;
     width: calc(16.666666666666668% - 4px);
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
@@ -599,7 +599,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
             unmountOnExit={false}
           >
             <styled.div
-              alignments="left"
               animationStyle="none"
               data-component-type="grid_layout_cell"
               gridColumns={12}
@@ -612,6 +611,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   "min": 16,
                 }
               }
+              horizontalAlignments="left"
               offsets={0}
               sizes={10}
             >
@@ -650,12 +650,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
             unmountOnExit={false}
           >
             <styled.div
-              alignments={
-                Object {
-                  "desktop": "right",
-                  "min": "center",
-                }
-              }
               animationStyle="none"
               data-component-type="grid_layout_cell"
               gridColumns={12}
@@ -668,6 +662,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   "min": 16,
                 }
               }
+              horizontalAlignments="left"
               offsets={0}
               sizes={2}
             >
@@ -706,7 +701,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
             unmountOnExit={false}
           >
             <styled.div
-              alignments="left"
               animationStyle="none"
               data-component-type="grid_layout_cell"
               gridColumns={12}
@@ -719,6 +713,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   "min": 16,
                 }
               }
+              horizontalAlignments="left"
               offsets={
                 Object {
                   "tablet": 2,
@@ -771,7 +766,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
             unmountOnExit={false}
           >
             <styled.div
-              alignments="left"
               animationStyle="none"
               data-component-type="grid_layout_cell"
               gridColumns={12}
@@ -784,6 +778,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   "min": 16,
                 }
               }
+              horizontalAlignments="left"
               offsets={0}
               sizes={
                 Object {
@@ -832,7 +827,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
             unmountOnExit={false}
           >
             <styled.div
-              alignments="left"
               animationStyle="none"
               data-component-type="grid_layout_cell"
               gridColumns={12}
@@ -845,6 +839,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   "min": 16,
                 }
               }
+              horizontalAlignments="left"
               offsets={3}
               sizes="auto"
             >
