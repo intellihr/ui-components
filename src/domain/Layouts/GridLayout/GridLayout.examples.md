@@ -556,18 +556,21 @@ const style = {
   cells={[
           {
             size: 4,
+            displayType: 'flex',
             content: <div style={style}>aligned to left</div>,
-            horizontalAlignment: GridLayout.HorizontalAlignment.Left
+            flexHorizontalAlignment: GridLayout.HorizontalAlignment.Left
           },
           {
             size: 4,
+            displayType: 'flex',
             content: <div style={style}>aligned to center</div>,
-            horizontalAlignment: GridLayout.HorizontalAlignment.Center
+            flexHorizontalAlignment: GridLayout.HorizontalAlignment.Center
           },
           {
             size: 4,
+            displayType: 'flex',
             content: <div style={style}>aligned to right</div>,
-            horizontalAlignment: GridLayout.HorizontalAlignment.Right
+            flexHorizontalAlignment: GridLayout.HorizontalAlignment.Right
           }
         ]}
 />
@@ -592,8 +595,9 @@ const style = {
           },
           {
             size: 10,
+            displayType: 'flex',
             content: <div style={style}>right in desktop, center in mobile</div>,
-            horizontalAlignment: { desktop: GridLayout.HorizontalAlignment.Right, min: GridLayout.HorizontalAlignment.Center}
+            flexHorizontalAlignment: { desktop: GridLayout.HorizontalAlignment.Right, min: GridLayout.HorizontalAlignment.Center}
           }
         ]}
 />

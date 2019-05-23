@@ -12,6 +12,7 @@ import {
 } from './style'
 
 type CellSize = number | 'auto' | 'shrink' | 'fullWidth'
+type CellDisplayType =  'block' | 'flex'
 
 interface ICellSizeDefinition {
   min?: CellSize,
@@ -58,8 +59,10 @@ interface IGridLayoutCell {
   content?: JSX.Element | string | null,
   /** The size this cell takes up within the grid */
   size?: ICellSizeDefinition | CellSize,
-  /** The content alignment in this cell */
-  horizontalAlignment?: IHorizontalAlignmentDefinition | HorizontalAlignment,
+  /** The display type of this cell */
+  displayType?: CellDisplayType
+  /** The content alignment in this cell when the cell is in flex display type */
+  flexHorizontalAlignment?: IHorizontalAlignmentDefinition | HorizontalAlignment,
   /** The cell offset from the edge of the grid */
   offset?: ICellOffsetDefinition | number,
   /** Animation style for adding/removing the cell (overrides the grid style) */
@@ -144,7 +147,8 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
       key,
       content,
       size,
-      horizontalAlignment,
+      displayType,
+      flexHorizontalAlignment,
       offset,
       componentContext,
       animationStyle: cellAnimationStyle
@@ -159,7 +163,8 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
         <StyledCell
           gridColumns={gridColumns!}
           sizes={size || 'auto'}
-          horizontalAlignments={horizontalAlignment || HorizontalAlignment.Left}
+          displayType={displayType || 'block'}
+          flexHorizontalAlignments={flexHorizontalAlignment || HorizontalAlignment.Left}
           offsets={offset || 0}
           gutterMarginX={gutterMarginX!}
           gutterMarginY={gutterMarginY!}
