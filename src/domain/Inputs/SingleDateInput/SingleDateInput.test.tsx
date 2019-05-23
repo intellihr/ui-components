@@ -1,14 +1,15 @@
 import { shallow } from 'enzyme'
+import moment from 'moment'
 import React from 'react'
 
 import { SingleDateInput } from './SingleDateInput'
-
-Date.now = jest.fn().mockReturnValue('2018-12-31T14:00:00+00:00')
 
 describe('<SingleDateInput />', () => {
   it('should render a single date input', () => {
     const wrapper = shallow(
       <SingleDateInput
+        value={moment('2018-12-31T14:00:00+00:00')}
+        handleChange={jest.fn()}
         name='test-date-input'
         dateFormat='DD/MM/YYYY'
       />
@@ -21,6 +22,8 @@ describe('<SingleDateInput />', () => {
     const wrapper = shallow(
       <SingleDateInput
         isDisabled
+        value={moment('2018-12-31T14:00:00+00:00')}
+        handleChange={jest.fn()}
         name='test-date-input'
         dateFormat='DD/MM/YYYY'
       />
@@ -33,6 +36,8 @@ describe('<SingleDateInput />', () => {
     const wrapper = shallow(
       <SingleDateInput
         isInvalid
+        value={moment('2018-12-31T14:00:00+00:00')}
+        handleChange={jest.fn()}
         name='test-date-input'
         dateFormat='DD/MM/YYYY'
       />

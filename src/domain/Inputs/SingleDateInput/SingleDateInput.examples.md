@@ -1,8 +1,13 @@
 #### Single Date Input
-
 ```jsx
+import moment from 'moment'
+
+initialState = { value: moment() };
+
 <div>
   <SingleDateInput 
+    value={state.value}
+    handleChange={date => setState({ value: date })}
     name='test-date-picker1'
   />
 </div>
