@@ -4,6 +4,7 @@ import { Variables } from '../../../common'
 
 interface IStylePaginationButton {
   isCurrent?: boolean
+  chevron?: 'left' | 'right'
 }
 
 interface IStyleChevronIcon {
@@ -61,6 +62,20 @@ const StylePaginationButton = styled.button`
      cursor: not-allowed;
      background: transparent;
   }
+
+  ${(props: IStylePaginationButton) => {
+    if (props.chevron === 'left') {
+      return css `
+          margin-left: 0;
+        `
+    }
+
+    if (props.chevron === 'right') {
+      return css `
+            margin-right: 0;
+          `
+    }
+  }}
 
   ${(props: IStylePaginationButton) => {
     if (props.isCurrent) {

@@ -201,9 +201,12 @@ module.exports = {
           ]
         },
         {
-          name: 'Pagination',
-          components: [
-            'src/domain/Pagination/Pagination/Pagination.tsx'
+          name: 'Paginators',
+          sections: [
+            {
+              name: 'Pagination',
+              content: 'src/domain/Paginators/Pagination/pagination.examples.md'
+            }
           ]
         },
         {

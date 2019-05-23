@@ -1,0 +1,1 @@
+export { PaginationDetails } from './PaginationDetails'

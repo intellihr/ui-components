@@ -1,69 +1,49 @@
 import React from 'react'
 
-import { Props, Variables } from '../../../common'
-import {FontAwesomeIcon} from '../../Icons/FontAwesomeIcon'
-import { GridLayout } from '../../Layouts/GridLayout'
-import { IGridLayoutCell } from '../../Layouts/GridLayout/GridLayout'
-import { Text } from '../../Typographies/Text'
+import { Props } from '../../../common'
+import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { ChevronIconWrapper, EllipsisWrapper, StylePaginationButton } from './style'
 
-interface IPaginationProps {
+interface IPaginationButtonsProps {
   /** Current selected page number */
   currentPage: number
   /** Total page number */
   totalPages: number
-  /** Total count of item. It is required to display page details */
-  totalCount?: number
-  /** Row size per page. It is required to display page details */
-  pageSize?: number
   /** Page changing callback */
   handlePageChange: (page: number) => void
   /** The data-component-context */
   componentContext?: string
-  /** If true, display page detail */
-  hasPageDetails?: boolean
   /** If there are any more pages after the current one */
   hasMorePages?: boolean
 }
 
-export class Pagination extends React.PureComponent<IPaginationProps> {
-  public static defaultProps: Partial<IPaginationProps> = {
-    hasPageDetails: true
-  }
+export class PaginationButtons extends React.PureComponent<IPaginationButtonsProps> {
 
-  get pageDetails () {
+  public render (): JSX.Element {
     const {
-      currentPage,
-      pageSize,
-      totalCount,
-      hasPageDetails
+      componentContext
     } = this.props
 
-    if (hasPageDetails && totalCount && pageSize) {
-      const pageStartingIndex = (currentPage - 1) * pageSize + 1
-      const maxCurrentPageIndex = currentPage * pageSize
-      const maxActualCurrentPageIndex = maxCurrentPageIndex <= totalCount ? maxCurrentPageIndex : totalCount
-
-      return (
-        <Text
-          color={Variables.Color.n600}
-          type={Props.TypographyType.Small}
-        >
-          Showing {pageStartingIndex.toString()} to {maxActualCurrentPageIndex.toString()} of {totalCount.toString()} entries
-        </Text>
-      )
-    }
-
-    return null
+    return (
+      <div
+        data-component-type={Props.ComponentType.PaginationButtons}
+        data-component-context={componentContext}
+      >
+        {this.previousPageButton}
+        {this.paginationPageButtons}
+        {this.nextPageButton}
+      </div>
+    )
   }
 
-  get previousPageButton () {
+  private get previousPageButton () {
     const {
       currentPage
     } = this.props
 
     return (
       <StylePaginationButton
+        chevron='left'
         disabled={currentPage <= 1}
         onClick={this.changePage(currentPage - 1)}
       >
@@ -74,7 +54,7 @@ export class Pagination extends React.PureComponent<IPaginationProps> {
     )
   }
 
-  get nextPageButton () {
+  private get nextPageButton () {
     const {
       currentPage,
       totalPages,
@@ -83,6 +63,7 @@ export class Pagination extends React.PureComponent<IPaginationProps> {
 
     return (
       <StylePaginationButton
+        chevron='right'
         disabled={hasMorePages ? hasMorePages : totalPages <= currentPage}
         onClick={this.changePage(currentPage + 1)}
       >
@@ -93,31 +74,7 @@ export class Pagination extends React.PureComponent<IPaginationProps> {
     )
   }
 
-  get paginationCells (): IGridLayoutCell[] {
-    const pagination = (
-      <>
-        {this.previousPageButton}
-        {this.paginationPageButtons}
-        {this.nextPageButton}
-      </>
-    )
-
-    if (this.pageDetails) {
-      return ([{
-        size: { desktop: 6, min: 12 },
-        content: this.pageDetails
-      }, {
-        size: { desktop: 6, min: 12 },
-        content: pagination
-      }])
-    }
-    return ([{
-      size: { desktop: 6, min: 12 },
-      content: pagination
-    }])
-  }
-
-  get paginationPageButtons () {
+  private get paginationPageButtons () {
     const {
       totalPages,
       currentPage
@@ -169,22 +126,6 @@ export class Pagination extends React.PureComponent<IPaginationProps> {
     }
 
     return pageNumberArray
-  }
-
-  public render (): JSX.Element {
-    const {
-      componentContext
-    } = this.props
-
-    return (
-      <GridLayout
-        gutterMarginY={Variables.Spacing.sSmall}
-        horizontalAlignment={GridLayout.HorizontalAlignment.Justify}
-        data-component-type={Props.ComponentType.Pagination}
-        data-component-context={componentContext}
-        cells={this.paginationCells}
-      />
-    )
   }
 
   private changePage = (pageNumber: number) => () => {
