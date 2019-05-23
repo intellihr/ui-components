@@ -190,6 +190,7 @@ const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, setGif }) 
   const handleGifClick = (url: string) => () => {
     setGif(url)
     toggleOpened()
+    setSearchTerm("")
   }
 
   const handleSearchTermChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
