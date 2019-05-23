@@ -25,6 +25,7 @@ export { List, SmartList, ActionList, ListRow, ListClickableColumn, ListColumn, 
 export { Menu, MenuItem } from './Menus'
 export { Modal, ToggleModal } from './Modals'
 export { BreadcrumbGroup } from './Navigation'
+export { PaginationButtons, PaginationDetails } from './Paginators'
 export { Pill } from './Pills'
 export { DropdownMenu, TooltipPopover, Popover } from './Popovers'
 export { ReportHeader, ReportInfo } from './Reports'
