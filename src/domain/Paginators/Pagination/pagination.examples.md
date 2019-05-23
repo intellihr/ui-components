@@ -31,7 +31,7 @@
                           totalPages={props.totalPages}
                           handlePageChange={(page) => setState({page})}
                         />,
-               flexHorizontalAlignment: { desktop: GridLayout.HorizontalAlignment.Right ,min: GridLayout.HorizontalAlignment.Center }
+               flexHorizontalAlignment: { desktop: GridLayout.HorizontalAlignment.Right, min: GridLayout.HorizontalAlignment.Center }
              }
            ]}
   />

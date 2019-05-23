@@ -12,7 +12,7 @@ import {
 } from './style'
 
 type CellSize = number | 'auto' | 'shrink' | 'fullWidth'
-type CellDisplayType =  'block' | 'flex'
+type CellDisplayType = 'block' | 'flex'
 
 interface ICellSizeDefinition {
   min?: CellSize,

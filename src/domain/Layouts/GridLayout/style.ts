@@ -22,7 +22,7 @@ type GutterSize = 'none' | Variables.Spacing | Variables.Layout
 type CellSize = number | 'auto' | 'shrink' | 'fullWidth'
 type CellOffset = number
 type CellAnimation = 'none' | 'fadeInOut' | 'zoomInOut'
-type CellDisplayType =  'block' | 'flex'
+type CellDisplayType = 'block' | 'flex'
 
 interface IStyledCellSizes {
   min?: CellSize,
@@ -403,7 +403,7 @@ function cellStyleForSizeAndGutters (
   }
 
   if (displayType === 'flex') {
-    flexHorizontalAlignmentProperties =  css `
+    flexHorizontalAlignmentProperties = css `
       display: flex;
 
       ${getPropertiesForHorizontalAlignment(flexHorizontalAlignment)}
