@@ -11,6 +11,22 @@ initialState = { value: '' };
 </div>
 ```
 
+#### Text Area Input with GIFs
+
+```jsx
+initialState = { value: '', gifUrl: '' };
+
+<div>
+  <TextAreaInput
+    value={state.value}
+    handleChange={(e) => setState({value: e.value})}
+    gifUrl={state.gifUrl}
+    handleGifChange={(url) => setState({gifUrl: url})}
+    tenorApiKey='NT1UWSP1UJ3G'
+  />
+</div>
+```
+
 #### Disabled text area
 
 ```jsx

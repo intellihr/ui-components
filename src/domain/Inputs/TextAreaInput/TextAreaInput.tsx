@@ -1,9 +1,9 @@
 import classNames from 'classnames'
-import React, { ChangeEventHandler, RefObject } from 'react'
+import React, { ChangeEventHandler } from 'react'
 
-import { StyledAutosizeTextarea, StyledGifButton } from '../../Inputs/TextAreaInput/style'
+import { Button } from '../../Buttons'
+import { StyledAutosizeTextarea, StyledGif, StyledMainGifContainer, StyledTextAreaContainer } from '../../Inputs/TextAreaInput/style'
 import { TenorGifSelector } from './TenorGifSelector'
-// import { Tooltip } from "@Domain/ToolTips"
 
 interface ITextAreaInputProps {
   /** ID of the input */
@@ -26,63 +26,78 @@ interface ITextAreaInputProps {
   placeholder?: string
   /** If true, use HTML5 required attribute */
   isHTML5Required?: boolean
+  /** tenorApiKey */
+  tenorApiKey?: string
+  /** Value of the selected gif url */
+  gifUrl?: string
+  /** Gives parent access to the gif url when it is selected */
+  handleGifChange?: (url: string) => void
 }
 
-class TextAreaInput extends React.PureComponent<ITextAreaInputProps> {
-  public static defaultProps: Partial<ITextAreaInputProps> = {
-    rows: 2
+const TextAreaInput: React.FC<ITextAreaInputProps> = ({
+  className,
+  isInvalid,
+  id,
+  name,
+  value,
+  handleChange,
+  isDisabled,
+  placeholder,
+  isHTML5Required,
+  rows = 2,
+  gifUrl,
+  handleGifChange,
+  tenorApiKey
+}) => {
+  const gifsEnabled = (gifUrl !== undefined) && (handleGifChange !== undefined) && (tenorApiKey !== undefined)
+  const showGifs = !isDisabled && gifsEnabled
+
+  const getClassNames = () => {
+    return classNames(className, {
+      'is-invalid-input': isInvalid
+    })
   }
 
-  get classNames (): string {
-    const {
-      className,
-      isInvalid
-    } = this.props
-
-    return classNames(
-      className,
-      { 'is-invalid-input': isInvalid }
-    )
-  }
-
-  public render (): JSX.Element {
-    const {
-      id,
-      name,
-      value,
-      handleChange,
-      isDisabled,
-      rows,
-      placeholder,
-      isHTML5Required
-    } = this.props
-
-    const insertMarkdown = (markdown: string) => {
-      console.log(markdown)
+  const clearGif = () => {
+    if (handleGifChange !== undefined) {
+      handleGifChange('')
     }
-
-    return (
-      <div style={{ position: 'relative' }}>
-        <StyledAutosizeTextarea
-          id={id || name}
-          name={name}
-          onChange={handleChange}
-          value={value}
-          className={this.classNames}
-          disabled={isDisabled}
-          rows={rows}
-          placeholder={placeholder}
-          required={isHTML5Required}
-        />
-        {!isDisabled && (
-          <TenorGifSelector
-            apiKey='GKN6X4G4CUZJ'
-            insertMarkdown={insertMarkdown}
-          />
-        )}
-      </div>
-    )
   }
+
+  return (
+    <StyledTextAreaContainer>
+      <StyledAutosizeTextarea
+        id={id || name}
+        name={name}
+        onChange={handleChange}
+        value={value}
+        className={getClassNames()}
+        disabled={isDisabled}
+        rows={rows}
+        placeholder={placeholder}
+        required={isHTML5Required}
+        gifsEnabled={showGifs}
+      />
+      {showGifs && (
+        <>
+          <StyledMainGifContainer>
+            {gifUrl !== '' && (
+              <>
+                <StyledGif src={gifUrl} />
+                <Button className='button remove' onClick={clearGif}>
+                  <span className='fa fa-times' />
+                </Button>
+              </>
+            )}
+          </StyledMainGifContainer>
+          <TenorGifSelector
+            apiKey={tenorApiKey!}
+            setGif={handleGifChange!}
+          />
+        </>
+      )}
+    </StyledTextAreaContainer>
+  )
 }
 
 export {
