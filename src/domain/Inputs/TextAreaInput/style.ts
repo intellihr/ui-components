@@ -10,17 +10,14 @@ interface IStyledGifButtonProps {
 
 interface IStyledAutosizeTextArea {
   gifsEnabled: boolean
-}
-
-interface IStyledMainContainerProps {
   hasGif: boolean
 }
 
-const StyledMainGifContainer = styled.div<IStyledMainContainerProps>`
+const StyledMainGifContainer = styled.div`
   border: 1px solid ${Variables.Color.n400};
   border-radius: 0 0 4px 4px;
   padding: ${Variables.Spacing.sSmall}px;
-  background-color: ${(props) => props.hasGif ? Variables.Color.n150 : undefined};
+  background-color: ${Variables.Color.n150};
   min-height: ${Variables.Spacing.s2XLarge}px;
   transition: border-color 0.3s ease-in-out;
   display: flex;
@@ -32,11 +29,11 @@ const StyledAutosizeTextarea = styled(AutosizeTextarea)<IStyledAutosizeTextArea>
   min-height: 39px;
   resize: none;
   margin-bottom: ${(props) => props.gifsEnabled ? 0 : undefined};
-  border-radius: ${(props) => props.gifsEnabled ? '4px 4px 0 0' : undefined};
-  border-bottom: ${(props) => props.gifsEnabled ? 'none' : undefined};
+  border-radius: ${(props) => props.gifsEnabled && props.hasGif ? '4px 4px 0 0' : undefined};
+  border-bottom: ${(props) => props.gifsEnabled && props.hasGif ? 'none' : undefined};
 
   &:focus {
-    border-bottom: ${(props) => props.gifsEnabled ? 'none' : undefined};
+    border-bottom: ${(props) => props.gifsEnabled && props.hasGif ? 'none' : undefined};
   }
 
   &:focus + ${StyledMainGifContainer} {

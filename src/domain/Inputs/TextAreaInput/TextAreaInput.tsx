@@ -49,6 +49,7 @@ const TextAreaInput: React.FC<ITextAreaInputProps> = ({
   handleGifChange,
   tenorApiKey
 }) => {
+  const hasGif = gifUrl !== ''
   const gifsEnabled = (gifUrl !== undefined) && (handleGifChange !== undefined) && (tenorApiKey !== undefined)
   const showGifs = !isDisabled && gifsEnabled
 
@@ -75,19 +76,20 @@ const TextAreaInput: React.FC<ITextAreaInputProps> = ({
         placeholder={placeholder}
         required={isHTML5Required}
         gifsEnabled={showGifs}
+        hasGif={hasGif}
       />
       {showGifs && (
         <>
-          <StyledMainGifContainer hasGif={gifUrl !== ''}>
-            {gifUrl !== '' && (
+          {hasGif && (
+            <StyledMainGifContainer>
               <>
                 <StyledGif src={gifUrl} />
                 <Button className='button remove' onClick={clearGif}>
                   <span className='fa fa-times' />
                 </Button>
               </>
-            )}
-          </StyledMainGifContainer>
+            </StyledMainGifContainer>
+          )}
           <TenorGifSelector
             apiKey={tenorApiKey!}
             setGif={handleGifChange!}
