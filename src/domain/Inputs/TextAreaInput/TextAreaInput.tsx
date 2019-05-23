@@ -52,26 +52,24 @@ const TextAreaInput: React.FC<ITextAreaInputProps> = ({
   const gifsEnabled = (gifUrl !== undefined) && (handleGifChange !== undefined) && (tenorApiKey !== undefined)
   const showGifs = !isDisabled && gifsEnabled
 
-  const getClassNames = () => {
-    return classNames(className, {
-      'is-invalid-input': isInvalid
-    })
-  }
-
   const clearGif = () => {
     if (handleGifChange !== undefined) {
       handleGifChange('')
     }
   }
 
+  const finalClassName = classNames(className, {
+    'is-invalid-input': isInvalid
+  })
+
   return (
     <StyledTextAreaContainer>
       <StyledAutosizeTextarea
+        className={finalClassName}
         id={id || name}
         name={name}
         onChange={handleChange}
         value={value}
-        className={getClassNames()}
         disabled={isDisabled}
         rows={rows}
         placeholder={placeholder}
