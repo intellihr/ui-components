@@ -12,15 +12,20 @@ interface IStyledAutosizeTextArea {
   gifsEnabled: boolean
 }
 
-const StyledMainGifContainer = styled.div`
+interface IStyledMainContainerProps {
+  hasGif: boolean
+}
+
+const StyledMainGifContainer = styled.div<IStyledMainContainerProps>`
   border: 1px solid ${Variables.Color.n400};
   border-radius: 0 0 4px 4px;
   padding: ${Variables.Spacing.sSmall}px;
-  background-color: ${Variables.Color.n150};
+  background-color: ${props => props.hasGif ? Variables.Color.n150 : undefined};
   min-height: ${Variables.Spacing.s2XLarge}px;
   transition: border-color 0.3s ease-in-out;
   display: flex;
   justify-content: center;
+  border-top: none;
 `
 
 const StyledAutosizeTextarea = styled(AutosizeTextarea)<IStyledAutosizeTextArea>`
@@ -36,7 +41,8 @@ const StyledAutosizeTextarea = styled(AutosizeTextarea)<IStyledAutosizeTextArea>
 
   &:focus + ${StyledMainGifContainer} {
     border-color: ${Variables.Color.i400};
-    border-top-color: ${Variables.Color.n400}
+    border-top-color: ${Variables.Color.n400};
+    border-top: none;
   }
 
   &:disabled,

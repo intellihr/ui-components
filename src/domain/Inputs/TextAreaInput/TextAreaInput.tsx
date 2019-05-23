@@ -80,7 +80,7 @@ const TextAreaInput: React.FC<ITextAreaInputProps> = ({
       />
       {showGifs && (
         <>
-          <StyledMainGifContainer>
+          <StyledMainGifContainer hasGif={gifUrl !== ""}>
             {gifUrl !== '' && (
               <>
                 <StyledGif src={gifUrl} />
