@@ -557,17 +557,17 @@ const style = {
           {
             size: 4,
             content: <div style={style}>aligned to left</div>,
-            alignment: GridLayout.HorizontalAlignment.Left
+            horizontalAlignment: GridLayout.HorizontalAlignment.Left
           },
           {
             size: 4,
             content: <div style={style}>aligned to center</div>,
-            alignment: GridLayout.HorizontalAlignment.Center
+            horizontalAlignment: GridLayout.HorizontalAlignment.Center
           },
           {
             size: 4,
             content: <div style={style}>aligned to right</div>,
-            alignment: GridLayout.HorizontalAlignment.Right
+            horizontalAlignment: GridLayout.HorizontalAlignment.Right
           }
         ]}
 />
@@ -593,7 +593,7 @@ const style = {
           {
             size: 10,
             content: <div style={style}>right in desktop, center in mobile</div>,
-            alignment: { desktop: GridLayout.HorizontalAlignment.Right, min: GridLayout.HorizontalAlignment.Center}
+            horizontalAlignment: { desktop: GridLayout.HorizontalAlignment.Right, min: GridLayout.HorizontalAlignment.Center}
           }
         ]}
 />

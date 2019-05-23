@@ -201,6 +201,15 @@ module.exports = {
           ]
         },
         {
+          name: 'Paginators',
+          sections: [
+            {
+              name: 'Pagination',
+              content: 'src/domain/Paginators/Pagination/pagination.examples.md'
+            }
+          ]
+        },
+        {
           name: 'Pills',
           components: [
             'src/domain/Pills/Pill/Pill.tsx'
