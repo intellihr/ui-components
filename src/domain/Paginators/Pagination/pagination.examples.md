@@ -22,7 +22,7 @@
                           totalCount={props.totalCount}
                           pageSize={props.pageSize}
                         />,
-               horizontalAlignment: { desktop: GridLayout.HorizontalAlignment.Left, min: GridLayout.HorizontalAlignment.Center }
+               flexHorizontalAlignment: { desktop: GridLayout.HorizontalAlignment.Left, min: GridLayout.HorizontalAlignment.Center }
              },
              {
                size: { desktop: 6, min: 12 },
@@ -31,7 +31,7 @@
                           totalPages={props.totalPages}
                           handlePageChange={(page) => setState({page})}
                         />,
-               horizontalAlignment: { desktop: GridLayout.HorizontalAlignment.Right ,min: GridLayout.HorizontalAlignment.Center }
+               flexHorizontalAlignment: { desktop: GridLayout.HorizontalAlignment.Right, min: GridLayout.HorizontalAlignment.Center }
              }
            ]}
   />
