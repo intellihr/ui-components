@@ -1,6 +1,7 @@
 import classNames from 'classnames'
 import React, { ChangeEventHandler } from 'react'
 
+import { Props } from '../../../common'
 import { Button } from '../../Buttons'
 import { StyledAutosizeTextarea, StyledGif, StyledMainGifContainer, StyledTextAreaContainer } from '../../Inputs/TextAreaInput/style'
 import { TenorGifSelector } from './TenorGifSelector'
@@ -35,16 +36,16 @@ interface ITextAreaInputProps {
 }
 
 const TextAreaInput: React.FC<ITextAreaInputProps> = ({
-  className,
-  isInvalid,
   id,
+  className,
   name,
+  placeholder,
   value,
   handleChange,
-  isDisabled,
-  placeholder,
-  isHTML5Required,
   rows = 2,
+  isInvalid,
+  isDisabled,
+  isHTML5Required,
   gifUrl,
   handleGifChange,
   tenorApiKey
@@ -59,32 +60,37 @@ const TextAreaInput: React.FC<ITextAreaInputProps> = ({
     }
   }
 
-  const finalClassName = classNames(className, {
+  const classes = classNames(className, {
     'is-invalid-input': isInvalid
   })
 
   return (
     <StyledTextAreaContainer>
-      <StyledAutosizeTextarea
-        className={finalClassName}
-        id={id || name}
-        name={name}
-        onChange={handleChange}
-        value={value}
-        disabled={isDisabled}
-        rows={rows}
-        placeholder={placeholder}
-        required={isHTML5Required}
-        gifsEnabled={showGifs}
-        hasGif={hasGif}
-      />
+      <div data-component-type={Props.ComponentType.TextAreaInput}>
+        <StyledAutosizeTextarea
+          className={classes}
+          id={id || name}
+          name={name}
+          onChange={handleChange}
+          value={value}
+          disabled={isDisabled}
+          rows={rows}
+          placeholder={placeholder}
+          required={isHTML5Required}
+          gifsEnabled={showGifs}
+          hasGif={hasGif}
+        />
+      </div>
       {showGifs && (
         <>
           {hasGif && (
             <StyledMainGifContainer>
               <>
                 <StyledGif src={gifUrl} />
-                <Button className='button remove' onClick={clearGif}>
+                <Button
+                  className='button remove'
+                  onClick={clearGif}
+                >
                   <span className='fa fa-times' />
                 </Button>
               </>

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 
+import { Props } from '../../../../common'
 import { useClickOutside } from '../../../../common/hooks'
 import { Icon } from '../../../Icons'
 import { StyledGifButton, StyledGifContainer, StyledGifList, StyledScrollArea } from '../../../Inputs/TextAreaInput/style'
@@ -215,11 +216,12 @@ const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, setGif }) 
   })
 
   return (
-    <>
+    <div data-component-type={Props.ComponentType.TenorGifSelector}>
       <StyledGifButton
         innerRef={anchorRef}
         opened={opened}
         onClick={toggleOpened}
+        data-component-type={Props.ComponentType.Button}
       >
         GIF
       </StyledGifButton>
@@ -241,7 +243,7 @@ const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, setGif }) 
           </StyledScrollArea>
         </StyledGifList>
       </Popover>
-    </>
+    </div>
   )
 }
 
