@@ -35,7 +35,8 @@ function useClickOutside<T extends HTMLElement> (initial: boolean, toggleRef: Re
   return {
     ref,
     opened,
-    toggleOpened
+    toggleOpened,
+    close
   }
 }
 

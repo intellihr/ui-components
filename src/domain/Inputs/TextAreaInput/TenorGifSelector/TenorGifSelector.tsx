@@ -81,7 +81,7 @@ const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, handleGifC
   const markerGifRef = useRef<HTMLDivElement>(null)
   const [markerIndex, setMarkerIndex] = useState(-1)
 
-  const { ref: gifListRef, opened, toggleOpened } = useClickOutside<HTMLDivElement>(false, anchorRef)
+  const { ref: gifListRef, opened, toggleOpened, close } = useClickOutside<HTMLDivElement>(false, anchorRef)
 
   const searchEndpoint = `${api}search`
   const searchParameters: IParameters = {
@@ -181,7 +181,7 @@ const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, handleGifC
 
   const handleGifClick = (url: string) => () => {
     handleGifChange(url)
-    toggleOpened()
+    close()
     setSearchTerm('')
   }
 
