@@ -1,6 +1,6 @@
-import { RefObject, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
-function useClickOutside<T extends HTMLElement> (initial: boolean, toggleRef: RefObject<Element>) {
+function useClickOutside<T extends HTMLElement>(initial: boolean, toggleRef: React.RefObject<Element>) {
   const [opened, setOpened] = useState(initial)
   const ref = useRef<T>(null)
 
@@ -12,10 +12,10 @@ function useClickOutside<T extends HTMLElement> (initial: boolean, toggleRef: Re
   }, [])
 
   const handleClickOutside: EventListener = (event) => {
-    // only if ref has been assigned to
+    // Only if ref has been assigned to
     if (ref.current) {
       const clickedNode = event.target
-      // to keep typescript happy
+      // To keep TypeScript happy
       if (clickedNode instanceof Node) {
         if (!ref.current.contains(clickedNode) && !(clickedNode === toggleRef.current)) {
           close()
@@ -24,11 +24,11 @@ function useClickOutside<T extends HTMLElement> (initial: boolean, toggleRef: Re
     }
   }
 
-  function close () {
+  function close() {
     setOpened(false)
   }
 
-  function toggleOpened () {
+  function toggleOpened() {
     setOpened(!opened)
   }
 
