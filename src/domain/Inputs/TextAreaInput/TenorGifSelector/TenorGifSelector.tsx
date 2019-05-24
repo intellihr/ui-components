@@ -6,11 +6,14 @@ import { Icon } from '../../../Icons'
 import { StyledGifButton, StyledGifContainer, StyledGifList, StyledScrollArea } from '../../../Inputs/TextAreaInput/style'
 import { Popover } from '../../../Popovers'
 import { TextInput } from '../../TextInput'
+import { IParameters, parameterize } from './services'
 import { PoweredByTenor } from './PoweredByTenorLogo'
 
 interface ITenorGifSelectorProps {
+  /** A tenor api key to access the endpoint */
   apiKey: string
-  setGif: (gifURL: string) => void
+  /** Gives parent access to the gif url when it is selected */
+  handleGifChange: (gifURL: string) => void
 }
 
 type FormatTypes = 'gif' | 'tinygif'
@@ -51,24 +54,12 @@ interface IGifObject {
   url: string
 }
 
-interface IParameters {
-  [key: string]: string | number
-}
-
 interface IQueryResults {
   results: IGifObject[]
   next: string | number
 }
 
-function parameterize (url: string, urlParameters: IParameters): string {
-  return Object.entries(urlParameters).reduce<string>((accumulator, entry, index, parameters) => {
-    const [key, value] = entry
-    const param = `${key}=${value}${index === parameters.length - 1 ? '' : '&'}`
-    return accumulator + param
-  }, `${url}?`)
-}
-
-const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, setGif }) => {
+const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, handleGifChange }) => {
   const api = 'https://api.tenor.com/v1/'
   const commonParameters = {
     limit: 15,
@@ -189,7 +180,7 @@ const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, setGif }) 
   }, [loading, markerGifRef.current, scrollAreaRef.current])
 
   const handleGifClick = (url: string) => () => {
-    setGif(url)
+    handleGifChange(url)
     toggleOpened()
     setSearchTerm('')
   }

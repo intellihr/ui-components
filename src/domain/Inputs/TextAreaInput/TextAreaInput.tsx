@@ -102,7 +102,7 @@ const TextAreaInput: React.FC<ITextAreaInputProps> = ({
           )}
           <TenorGifSelector
             apiKey={tenorApiKey!}
-            setGif={handleGifChange!}
+            handleGifChange={handleGifChange!}
           />
         </>
       )}
