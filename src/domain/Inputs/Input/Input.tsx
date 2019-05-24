@@ -2,6 +2,7 @@ import classNames from 'classnames'
 import { get, isNil } from 'lodash'
 import React, { ChangeEventHandler, RefObject } from 'react'
 
+import { Props } from '../../../common'
 import { DisabledTextWrapper, InputWrapper, PrefixWrapper, StyledInput } from '../services/style'
 import { InputGroupPosition } from '../InputGroup'
 
@@ -158,6 +159,7 @@ export class Input extends React.PureComponent<InputProps> {
         required={isHTML5Required}
         autoFocus={autoFocus}
         style={width ? { width } : undefined}
+        data-component-type={Props.ComponentType.TextInput}
       />
     )
   }
