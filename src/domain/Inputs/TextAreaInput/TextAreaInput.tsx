@@ -27,12 +27,14 @@ interface ITextAreaInputProps {
   placeholder?: string
   /** If true, use HTML5 required attribute */
   isHTML5Required?: boolean
-  /** tenorApiKey */
+  /** A tenor api key to access the endpoint */
   tenorApiKey?: string
   /** Value of the selected gif url */
   gifUrl?: string
   /** Gives parent access to the gif url when it is selected */
   handleGifChange?: (url: string) => void
+  /** The component context */
+  componentContext?: string
 }
 
 const TextAreaInput: React.FC<ITextAreaInputProps> = ({
@@ -48,7 +50,8 @@ const TextAreaInput: React.FC<ITextAreaInputProps> = ({
   isHTML5Required,
   gifUrl,
   handleGifChange,
-  tenorApiKey
+  tenorApiKey,
+  componentContext
 }) => {
   const hasGif = gifUrl !== ''
   const gifsEnabled = (gifUrl !== undefined) && (handleGifChange !== undefined) && (tenorApiKey !== undefined)
@@ -65,22 +68,23 @@ const TextAreaInput: React.FC<ITextAreaInputProps> = ({
   })
 
   return (
-    <StyledTextAreaContainer>
-      <div data-component-type={Props.ComponentType.TextAreaInput}>
-        <StyledAutosizeTextarea
-          className={classes}
-          id={id || name}
-          name={name}
-          onChange={handleChange}
-          value={value}
-          disabled={isDisabled}
-          rows={rows}
-          placeholder={placeholder}
-          required={isHTML5Required}
-          gifsEnabled={showGifs}
-          hasGif={hasGif}
-        />
-      </div>
+    <StyledTextAreaContainer
+      data-component-type={Props.ComponentType.TextAreaInput}
+      data-component-context={componentContext}
+    >
+      <StyledAutosizeTextarea
+        className={classes}
+        id={id || name}
+        name={name}
+        onChange={handleChange}
+        value={value}
+        disabled={isDisabled}
+        rows={rows}
+        placeholder={placeholder}
+        required={isHTML5Required}
+        gifsEnabled={showGifs}
+        hasGif={hasGif}
+      />
       {showGifs && (
         <>
           {hasGif && (
