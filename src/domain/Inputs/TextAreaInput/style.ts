@@ -32,9 +32,9 @@ const StyledAutosizeTextarea = styled(AutosizeTextarea)<IStyledAutosizeTextArea>
   resize: none;
   margin-bottom: ${(props) => props.gifsEnabled ? 0 : undefined};
   border-radius: ${(props) => props.gifsEnabled && props.hasGif ? '4px 4px 0 0' : undefined};
-  /** 
-  * Don't want a border bottom on the text area when there is a gif, 
-  * but need to assign '0px solid <color>' instead of 'none' to keep the color from flickering 
+  /**
+  * Don't want a border bottom on the text area when there is a gif,
+  * but need to assign '0px solid <color>' instead of 'none' to keep the color from flickering
   * from black to n400 when a gif is removed.
   */
   border-bottom: ${(props) => props.gifsEnabled && props.hasGif ? '0px solid' + Variables.Color.n400 : undefined};
