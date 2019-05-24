@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-function useClickOutside<T extends HTMLElement>(initial: boolean, toggleRef: React.RefObject<Element>) {
+function useClickOutside<T extends HTMLElement> (initial: boolean, toggleRef: React.RefObject<Element>) {
   const [opened, setOpened] = useState(initial)
   const ref = useRef<T>(null)
 
@@ -24,11 +24,11 @@ function useClickOutside<T extends HTMLElement>(initial: boolean, toggleRef: Rea
     }
   }
 
-  function close() {
+  function close () {
     setOpened(false)
   }
 
-  function toggleOpened() {
+  function toggleOpened () {
     setOpened(!opened)
   }
 

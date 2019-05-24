@@ -111,6 +111,6 @@ const TextAreaInput: React.FC<ITextAreaInputProps> = ({
 }
 
 export {
-  TextAreaInput,
-  ITextAreaInputProps
+  ITextAreaInputProps,
+  TextAreaInput
 }

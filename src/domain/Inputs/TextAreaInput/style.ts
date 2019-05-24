@@ -9,7 +9,9 @@ interface IStyledGifButtonProps {
 }
 
 interface IStyledAutosizeTextArea {
+  /** If the necessary props are passed in to enable gifs */
   gifsEnabled: boolean
+  /** If a gif has been selected */
   hasGif: boolean
 }
 
@@ -50,7 +52,7 @@ const StyledGifButton = styled.div<IStyledGifButtonProps>`
  cursor: pointer;
  position: absolute;
  border-radius: ${Variables.Style.borderRadius}px;
- /* This needs to be 6px, otherwise it look uggo */
+ /* This needs to be 6px, otherwise it look tragic */
  bottom: 6px;
  right: ${Variables.Spacing.sXSmall}px;
  padding: ${Variables.Spacing.s2XSmall}px;
@@ -100,10 +102,10 @@ const StyledTextAreaContainer = styled.div`
 export {
   StyledAutosizeTextarea,
   StyledGifButton,
-  StyledGifList,
   StyledGifContainer,
-  StyledScrollArea,
-  StyledMainGifContainer,
   StyledGif,
+  StyledGifList,
+  StyledMainGifContainer,
+  StyledScrollArea,
   StyledTextAreaContainer
 }
