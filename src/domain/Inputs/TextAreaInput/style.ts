@@ -21,7 +21,7 @@ const StyledMainGifContainer = styled.div`
   min-height: ${Variables.Spacing.s2XLarge}px;
   border: 1px solid ${Variables.Color.n400};
   border-top: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 ${Variables.Style.borderRadius}px ${Variables.Style.borderRadius}px;
   padding: ${Variables.Spacing.sSmall}px;
   background-color: ${Variables.Color.n150};
   transition: border-color 0.3s ease-in-out;
@@ -31,7 +31,7 @@ const StyledAutosizeTextarea = styled(AutosizeTextarea)<IStyledAutosizeTextArea>
   min-height: 39px;
   resize: none;
   margin-bottom: ${(props) => props.gifsEnabled ? 0 : undefined};
-  border-radius: ${(props) => props.gifsEnabled && props.hasGif ? '4px 4px 0 0' : undefined};
+  border-radius: ${(props) => props.gifsEnabled && props.hasGif ? `${Variables.Style.borderRadius}px ${Variables.Style.borderRadius}px 0 0` : undefined};
   /**
   * Don't want a border bottom on the text area when there is a gif,
   * but need to assign '0px solid <color>' instead of 'none' to keep the color from flickering
@@ -85,7 +85,7 @@ const StyledGifList = styled.div`
 `
 
 const StyledGifContainer = styled.div`
-  margin-bottom: 4px;
+  margin-bottom: ${Variables.Spacing.s2XSmall}px;
 `
 
 const StyledScrollArea = styled.div`
