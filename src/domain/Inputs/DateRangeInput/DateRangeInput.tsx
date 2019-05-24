@@ -1,8 +1,8 @@
 import classNames from 'classnames'
 import { isNil } from 'lodash'
 import moment, { Moment } from 'moment'
-import React, { FormEvent } from 'react'
-import { SingleDatePicker } from 'react-dates'
+import React from 'react'
+import { DateRangePicker, FocusedInputShape } from 'react-dates'
 import 'react-dates/initialize'
 import 'react-dates/lib/css/_datepicker.css'
 
@@ -11,13 +11,11 @@ import { InputGroupPosition } from '../InputGroup'
 
 const style = require('./style.scss')
 
-interface ISingleDateInputProps {
+interface IDateRangeInputProps {
   /** Name and ID of the HTML input */
   name: string
   /** Moment format to display the date in */
   dateFormat: string
-  /** Change handler called when the date is changed */
-  handleChange?: (date: Moment | string | null) => void
   /** If true, adds invalid styles to the input */
   isInvalid?: boolean
   /** If true, adds disabled attribute to the input */
@@ -26,52 +24,61 @@ interface ISingleDateInputProps {
   groupPosition?: InputGroupPosition
   /** Applies recommended settings for mobile and tablet viewports */
   isMobile?: boolean
-  value: Moment | null
-  placeholder?: string
+  startDate: Moment | null
+  endDate: Moment | null
+  startDatePlaceholder?: string
+  endDatePlaceholder?: string
+  /** Change handler called when the date is changed */
+  handleDatesChange: (dates: { startDate: Moment | null, endDate: Moment | null}) => void
 }
 
-interface ISingleDateInputState {
-  focused: boolean
+interface IDateRangeInputState {
+  focusedInput: FocusedInputShape | null
 }
 
-class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingleDateInputState> {
+class DateRangeInput extends React.PureComponent<IDateRangeInputProps, IDateRangeInputState> {
   public static defaultProps = {
     dateFormat: 'DD/MM/YYYY',
     isInvalid: false,
     isDisabled: false
   }
 
-  public state: ISingleDateInputState = {
-    focused: false
+  public state: IDateRangeInputState = {
+    focusedInput: null
   }
 
   public render (): JSX.Element {
     const {
       name,
-      dateFormat,
       isDisabled,
       isMobile,
-      value,
-      placeholder
+      startDate,
+      endDate,
+      startDatePlaceholder,
+      endDatePlaceholder,
+      dateFormat
     } = this.props
 
     return (
       <div
         className={this.classNames}
-        onChange={this.onChange}
       >
-        <SingleDatePicker
-          id={name}
-          date={value}
-          placeholder={placeholder || dateFormat}
+        <DateRangePicker
+          startDateId={`${name}-start`}
+          startDate={startDate}
+          endDateId={`${name}-end`}
+          endDate={endDate}
+          startDatePlaceholderText={startDatePlaceholder || dateFormat}
+          endDatePlaceholderText={endDatePlaceholder || dateFormat}
           displayFormat={dateFormat}
-          onDateChange={this.dateChange}
-          focused={this.state.focused}
-          onFocusChange={this.focusChange}
+          onDatesChange={this.onDatesChange}
+          focusedInput={this.state.focusedInput}
+          onFocusChange={this.onFocusChange}
           disabled={isDisabled}
           numberOfMonths={isMobile ? 1 : 2}
-          noBorder
-          block
+          showClearDates
+          customArrowIcon={<FontAwesomeIcon type='arrow-right'/>}
+          customCloseIcon={<FontAwesomeIcon type='times'/>}
           isOutsideRange={this.disabledDateRange}
           hideKeyboardShortcutsPanel
           renderMonthText={this.renderMonthText}
@@ -97,7 +104,7 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
     } = this.props
 
     return classNames(
-      style.singleDatePickerOverrides,
+      style.dateRangePickerOverrides,
       {
         'is-invalid-input': isInvalid,
         [`input-group-${groupPosition}`]: !isNil(groupPosition)
@@ -105,41 +112,23 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
     )
   }
 
+  private onFocusChange = (focusedInput: FocusedInputShape | null) => {
+    this.setState({ focusedInput })
+  }
+
+  private onDatesChange = (dates: { startDate: Moment | null, endDate: Moment | null}) => {
+    const {
+      handleDatesChange
+      } = this.props
+
+    handleDatesChange(dates)
+  }
+
   private disabledDateRange: () => boolean =
     () => false
 
   private renderMonthText: (day: Moment) => string =
     (day) => moment(day).format('MMM YYYY')
-
-  private dateChange: (date: Moment | null) => void =
-    (date) => {
-      const {
-        handleChange
-      } = this.props
-
-      if (handleChange && date !== null) {
-        handleChange(date)
-      }
-   }
-
-  private onChange: (e: FormEvent<HTMLDivElement>) => void =
-    (e) => {
-      const {
-        handleChange
-      } = this.props
-
-      const rawInputElement =  e.target as HTMLInputElement
-      if (handleChange) {
-        handleChange(moment(rawInputElement.value, moment.ISO_8601))
-      }
-    }
-
-  private focusChange: (focusChangeArgs: { focused: boolean | null }) => void =
-    (focusChangeArgs) => {
-      this.setState({
-        focused: focusChangeArgs.focused || false
-      })
-    }
 
   private navigationButtonClassNames: (side: 'left' | 'right') => string =
     (side) => {
@@ -152,5 +141,5 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
 }
 
 export {
-  SingleDateInput
+  DateRangeInput
 }

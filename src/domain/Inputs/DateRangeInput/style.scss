@@ -1,0 +1,150 @@
+@import '../../../common/sass/variables';
+
+:local(.dateRangePickerOverrides) {
+  .CalendarMonth_table {
+    tr {
+      border-bottom: 0;
+    }
+  }
+
+  .DateRangePicker_picker {
+    // NOTE: the order of these styles DO matter
+    .CalendarMonth_caption {
+      > strong {
+        color: $n800;
+        font-size: $fz-heading;
+        font-weight: 600;
+      }
+    }
+
+    .CalendarDay {
+      &:hover {
+        background: $n250;
+      }
+    }
+
+    // Will edit everything selected including everything between a range of dates
+    .CalendarDay__selected_span {
+      background: $i400; //background
+      border: 1px solid $i400; //text
+      color: $n100; //default styles include a border
+    }
+
+    // Will edit a range of dates
+    .CalendarDay__selected {
+      background: $i100;
+      color: $n400;
+
+      // Will edit when hovered over. _span style also has this property
+      &:hover {
+        background: $i400;
+        color: $n100;
+      }
+    }
+
+    // Will edit the endpoints of a range of dates
+    .CalendarDay__selected_start, .CalendarDay__selected_end {
+      background: $i400;
+      color: $n100;
+
+      // Will edit when hovered over. _span style also has this property
+      &:hover {
+        background: $i400;
+        color: $n100;
+      }
+    }
+
+    .DayPickerNavigation_button__horizontalDefault {
+      padding: 9px;
+    }
+  }
+
+  .DateRangePickerInput {
+    padding-right: 0;
+    border-radius: 4px;
+    border-color: $n400;
+
+    &:focus, &:hover {
+      border-color: $i400;
+      outline: none;
+    }
+  }
+
+  .DateInput .DateInput_input {
+    border: 0;
+    background: transparent;
+    margin: 0;
+    text-align: center;
+    color: $n700;
+    font-size: $fz-body;
+    font-weight: $fw-normal;
+    line-height: 1.5;
+    padding: .5rem;
+    transition: color .3s ease-in-out;
+
+    &:focus, &:hover {
+      color: $i400;
+    }
+  }
+
+  .DateRangePickerInput_clearDates {
+    position: relative;
+    top: 20px;
+    margin: 0;
+    padding-left: 0;
+    outline: none;
+  }
+
+  .DateRangePickerInput__disabled {
+    &:focus, &:hover {
+      border-color: $n400;
+      color: $n600;
+    }
+  }
+
+  &.is-invalid-input {
+    &:not(:focus) {
+      background-color: transparent;
+    }
+
+    input {
+      background-color: transparent;
+      color: $r400;
+
+      &::placeholder {
+        color: $r400;
+      }
+    }
+
+    .DateInput {
+      background: none;
+    }
+
+    .DateRangePickerInput {
+      border-color: $r400;
+      background-color: mix($r400, #fff, 10%);
+
+      &:focus, &:hover {
+        color: $n400;
+      }
+    }
+  }
+
+  &.input-group-left {
+    input {
+      border-radius: 4px 0 0 4px;
+    }
+  }
+
+  &.input-group-middle {
+    input {
+      border-radius: 0;
+    }
+  }
+
+  &.input-group-right {
+    input {
+      border-radius: 0 4px 4px 0;
+    }
+  }
+}
