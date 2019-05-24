@@ -51,6 +51,8 @@ interface IGenericInputProps {
   width?: string
   /** Disable Prefix to display in the input box */
   disabledPrefix?: string
+  /** The component context */
+  componentContext?: string
 }
 
 interface InputProps extends IGenericInputProps {
@@ -136,7 +138,8 @@ export class Input extends React.PureComponent<InputProps> {
       autoFocus,
       handleKeyDown,
       isChecked,
-      width
+      width,
+      componentContext
     } = this.props
 
     return (
@@ -160,6 +163,7 @@ export class Input extends React.PureComponent<InputProps> {
         autoFocus={autoFocus}
         style={width ? { width } : undefined}
         data-component-type={Props.ComponentType.TextInput}
+        data-component-contex={componentContext}
       />
     )
   }
