@@ -21,7 +21,7 @@ type FormatTypes = 'gif' | 'tinygif'
 interface IMediaObject {
   /** The url to the GIF */
   url: string
-  /** The dimensiosn of the image [width, height] */
+  /** The dimensions of the image [width, height] */
   dims: [number, number]
   /** A url to a preview image of the GIF */
   preview: string
