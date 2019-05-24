@@ -14,15 +14,15 @@ interface IStyledAutosizeTextArea {
 }
 
 const StyledMainGifContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  min-height: ${Variables.Spacing.s2XLarge}px;
   border: 1px solid ${Variables.Color.n400};
+  border-top: none;
   border-radius: 0 0 4px 4px;
   padding: ${Variables.Spacing.sSmall}px;
   background-color: ${Variables.Color.n150};
-  min-height: ${Variables.Spacing.s2XLarge}px;
   transition: border-color 0.3s ease-in-out;
-  display: flex;
-  justify-content: center;
-  border-top: none;
 `
 
 const StyledAutosizeTextarea = styled(AutosizeTextarea)<IStyledAutosizeTextArea>`
@@ -38,8 +38,6 @@ const StyledAutosizeTextarea = styled(AutosizeTextarea)<IStyledAutosizeTextArea>
 
   &:focus + ${StyledMainGifContainer} {
     border-color: ${Variables.Color.i400};
-    border-top-color: ${Variables.Color.n400};
-    border-top: none;
   }
 
   &:disabled,
