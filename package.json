@@ -43,7 +43,7 @@
     "@types/react-transition-group": "2.0.11",
     "@types/uuid": "^3.4.3",
     "better-react-spinkit": "2.0.4",
-    "body-scroll-lock": "2.5.10",
+    "body-scroll-lock": "2.6.1",
     "capitalize": "2.0.0",
     "chart.js": "2.7.2",
     "classnames": "2.2.5",
