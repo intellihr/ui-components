@@ -6775,13 +6775,12 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-libphonenumber-js@1.6.4:
-  version "1.6.4"
-  resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.6.4.tgz#479b5f8fcd88b9d29069d0b0d62c633cb29d539e"
-  integrity sha512-R9hmSOPampkuYA3kJNoZo1i/z90vhi7iHkEmWPGmIkNIuk/U7bKouiydP6S/bxPmmLZVkPJWEGFyaF0vKifFGw==
+libphonenumber-js@1.7.18:
+  version "1.7.18"
+  resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.7.18.tgz#1f1ef1d9ed97c03b119e05728b6a301901e5e633"
+  integrity sha512-9qFKBTa2oVBY4fxvEu0f2ywwmldvZqOnWj1OTcCz4a7dTMMDC9tF1KVRIb01Bhl+39hfeGlzwQGTmd1NsRbRhQ==
   dependencies:
     minimist "^1.2.0"
-    semver-compare "^1.0.0"
     xml2js "^0.4.17"
 
 line-height@^0.3.1:
@@ -10599,11 +10598,6 @@ selfsigned@^1.9.1:
   integrity sha512-vmZenZ+8Al3NLHkWnhBQ0x6BkML1eCP2xEi3JE+f3D9wW9fipD9NNJHYtE9XJM4TsPaHGZJIamrSI6MTg1dU2Q==
   dependencies:
     node-forge "0.7.5"
-
-semver-compare@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/semver-compare/-/semver-compare-1.0.0.tgz#0dee216a1c941ab37e9efb1788f6afc5ff5537fc"
-  integrity sha1-De4hahyUGrN+nvsXiPavxf9VN/w=
 
 "semver@2 || 3 || 4 || 5", semver@^5.3.0, semver@^5.4.1, semver@^5.5.0, semver@^5.6.0:
   version "5.6.0"
