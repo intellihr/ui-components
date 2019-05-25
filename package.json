@@ -70,7 +70,7 @@
     "react-table": "6.8.6",
     "react-tooltip": "3.6.1",
     "react-transition-group": "4.0.1",
-    "utility-types": "2.0.0",
+    "utility-types": "3.7.0",
     "uuid": "3.3.2"
   },
   "devDependencies": {
