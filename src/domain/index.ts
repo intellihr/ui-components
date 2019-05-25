@@ -5,6 +5,7 @@ export { BaseButton, Button, ButtonGroup, LinkButton } from './Buttons'
 export { Callout, EmptyState } from './Callouts'
 export { RadarChart, TimeBasedLineChart } from './Charts'
 export { Comment } from './Comments'
+export { HighlightArea } from './Containers'
 export { DefaultsConsumer, DefaultsProvider, withDefaults } from './Defaults'
 export { IndentedElement, Record, HintWrapper } from './Formats'
 export { VerticalForm } from './Forms'
@@ -16,7 +17,7 @@ export { Legend } from './Legends'
 export { GridProvider, Row } from './Grids'
 export { ActionLink, TextLink, UnstyledLink } from './Links'
 /*
- * ListRow, ListClickableColumn and ListColum are here for legacy support.
+ * ListRow, ListClickableColumn and ListColumn are here for legacy support.
  * They should be static properties of SmartList
  */
 export { List, SmartList, ActionList, ListRow, ListClickableColumn, ListColumn, OptionList, FilteredOptionList, FilteredList } from './Lists'
@@ -24,6 +25,7 @@ export { List, SmartList, ActionList, ListRow, ListClickableColumn, ListColumn, 
 export { Menu, MenuItem } from './Menus'
 export { Modal, ToggleModal } from './Modals'
 export { BreadcrumbGroup } from './Navigation'
+export { PaginationButtons, PaginationDetails } from './Paginators'
 export { Pill } from './Pills'
 export { DropdownMenu, TooltipPopover, Popover } from './Popovers'
 export { ReportHeader, ReportInfo } from './Reports'
@@ -31,7 +33,7 @@ export { TextSkeleton, ParagraphSkeleton, BlockSkeleton, CircleSkeleton } from '
 export { HorizontalRule } from './Spacers'
 export { Spinner } from './Spinners'
 export { withStyledBreakpoints } from './Styles'
-export { DataTable, AsyncDataTable } from './Tables'
+export { LegacyDataTable, LegacyAsyncDataTable } from './Tables'
 export { BlockTabGroup, ScrollingTabGroup } from './Tabs'
 
 /*

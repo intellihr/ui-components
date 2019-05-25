@@ -1,0 +1,1 @@
+export { LegacyAsyncDataTable } from './LegacyAsyncDataTable'

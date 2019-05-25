@@ -14,6 +14,8 @@ import {
   VerticalAlignment
 } from './style'
 
+type CellDisplayType = 'block' | 'flex'
+
 interface ICellOffsetDefinition {
   min?: number
   tablet?: number
@@ -52,6 +54,10 @@ interface IGridLayoutCell {
   content?: JSX.Element | string | null
   /** The size this cell takes up within the grid */
   size?: IStyledCellSizes | CellSize
+  /** The display type of this cell */
+  displayType?: CellDisplayType
+  /** The content alignment in this cell when the cell is in flex display type */
+  flexHorizontalAlignment?: IHorizontalAlignmentDefinition | HorizontalAlignment
   /** The cell offset from the edge of the grid */
   offset?: ICellOffsetDefinition | number
   /** Animation style for adding/removing the cell (overrides the grid style) */
@@ -177,6 +183,8 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
       key,
       content,
       size,
+      displayType,
+      flexHorizontalAlignment,
       offset,
       componentContext,
       animationStyle: cellAnimationStyle
@@ -193,6 +201,8 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
           offset={offset || 0}
           animationStyle={cellAnimationStyle || gridAnimationStyle || 'none'}
           gridColumns={gridColumns!}
+          displayType={displayType || 'block'}
+          flexHorizontalAlignments={flexHorizontalAlignment || HorizontalAlignment.Left}
           gutterMarginX={gutterMarginX!}
           gutterMarginY={gutterMarginY!}
           gutterPaddingX={gutterPaddingX!}

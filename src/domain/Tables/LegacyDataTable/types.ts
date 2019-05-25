@@ -23,6 +23,8 @@ interface IBaseDataTableProps {
   showVerticalLines?: boolean
   /** Placeholder replacement for when there is no data  */
   noDataComponent?: JSX.Element
+  /** Text to display when there are no rows, defaults to react-table's default message */
+  noDataText?: string
 
   /**
    * Overrides for react-table props which can be applied to this table.

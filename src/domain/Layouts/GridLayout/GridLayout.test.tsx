@@ -19,7 +19,9 @@ describe('<GridLayout />', () => {
           },
           {
             size: 2,
-            content: <div>2</div>
+            content: <div>2</div>,
+            displayType: 'flex',
+            flexHorizontalAlignment: { desktop: GridLayout.HorizontalAlignment.Right, min: GridLayout.HorizontalAlignment.Center }
           },
           {
             size: { desktop: 3, tablet: 4 },

@@ -53,7 +53,7 @@ interface IDataTableProps extends IBaseDataTableProps {
   showSearchFilter?: boolean
 }
 
-class DataTable extends React.Component<IDataTableProps, IDataTableState> {
+class LegacyDataTable extends React.Component<IDataTableProps, IDataTableState> {
   public static defaultProps: Partial<IDataTableProps> = {
     sortable: false,
     showPagination: false,
@@ -235,7 +235,8 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
       defaultPageSize,
       sortable,
       defaultSorted,
-      reactTableOverrides
+      reactTableOverrides,
+      noDataText
     } = this.props
 
     const filteredData = this.filteredData
@@ -244,6 +245,7 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
       <ReactTable
         {...this.defaultReactTableProps}
         data={filteredData}
+        noDataText={noDataText}
         columns={this.columns}
         className={this.classNames}
         showPagination={showPagination}
@@ -260,5 +262,5 @@ class DataTable extends React.Component<IDataTableProps, IDataTableState> {
 }
 
 export {
-  DataTable
+  LegacyDataTable
 }

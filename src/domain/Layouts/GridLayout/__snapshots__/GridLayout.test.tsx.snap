@@ -177,6 +177,14 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     margin-left: 2px;
     margin-right: 2px;
     width: calc(16.666666666666668% - 4px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 
@@ -187,6 +195,14 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     margin-left: 2px;
     margin-right: 2px;
     width: calc(16.666666666666668% - 4px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 
@@ -195,6 +211,14 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     margin-left: 2px;
     margin-right: 2px;
     width: calc(16.666666666666668% - 4px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
   }
 }
 
@@ -203,6 +227,14 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     margin-left: 2px;
     margin-right: 2px;
     width: calc(16.666666666666668% - 4px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
   }
 }
 
@@ -352,6 +384,11 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
         "content": <div>
           2
         </div>,
+        "displayType": "flex",
+        "flexHorizontalAlignment": Object {
+          "desktop": "right",
+          "min": "center",
+        },
         "size": 2,
       },
       Object {
@@ -437,6 +474,8 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
             <styled.div
               animationStyle="none"
               data-component-type="grid_layout_cell"
+              displayType="block"
+              flexHorizontalAlignments="left"
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
@@ -488,6 +527,13 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
             <styled.div
               animationStyle="none"
               data-component-type="grid_layout_cell"
+              displayType="flex"
+              flexHorizontalAlignments={
+                Object {
+                  "desktop": "right",
+                  "min": "center",
+                }
+              }
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
@@ -539,6 +585,8 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
             <styled.div
               animationStyle="none"
               data-component-type="grid_layout_cell"
+              displayType="block"
+              flexHorizontalAlignments="left"
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
@@ -608,6 +656,8 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
             <styled.div
               animationStyle="none"
               data-component-type="grid_layout_cell"
+              displayType="block"
+              flexHorizontalAlignments="left"
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
@@ -669,6 +719,8 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
             <styled.div
               animationStyle="none"
               data-component-type="grid_layout_cell"
+              displayType="block"
+              flexHorizontalAlignments="left"
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"

@@ -87,6 +87,7 @@ export class SelectInput<O=ISelectInputOptions> extends React.PureComponent<ISel
 
   get selectProps (): any {
     const {
+      id,
       name,
       resetValue,
       clearable,
@@ -113,6 +114,7 @@ export class SelectInput<O=ISelectInputOptions> extends React.PureComponent<ISel
     } = this.props
 
     const base: any = {
+      id: id || name,
       name: multi ? `${name}[]` : name,
       resetValue,
       clearable,

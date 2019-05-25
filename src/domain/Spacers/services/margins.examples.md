@@ -62,6 +62,8 @@ import { Button } from '@Domain/Buttons';
 
 #### Supported Components
 
-The components that support breakpoints are:
+The components that support margins are:
 * Button
+* Brick
 * Callout
+* HighlightArea

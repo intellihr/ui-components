@@ -101,6 +101,12 @@ module.exports = {
           ]
         },
         {
+          name: 'Containers',
+          components: [
+            'src/domain/Containers/HighlightArea/HighlightArea.tsx'
+          ]
+        },
+        {
           name: 'Formats',
           components: [
             'src/domain/Formats/Record/Record.tsx',
@@ -195,6 +201,15 @@ module.exports = {
           ]
         },
         {
+          name: 'Paginators',
+          sections: [
+            {
+              name: 'Pagination',
+              content: 'src/domain/Paginators/Pagination/pagination.examples.md'
+            }
+          ]
+        },
+        {
           name: 'Pills',
           components: [
             'src/domain/Pills/Pill/Pill.tsx'
@@ -245,8 +260,8 @@ module.exports = {
         {
           name: 'Tables',
           components: [
-            'src/domain/Tables/DataTable/AsyncDataTable/AsyncDataTable.tsx',
-            'src/domain/Tables/DataTable/DataTable/DataTable.tsx'
+            'src/domain/Tables/LegacyDataTable/LegacyAsyncDataTable/LegacyAsyncDataTable.tsx',
+            'src/domain/Tables/LegacyDataTable/LegacyDataTable/LegacyDataTable.tsx'
           ]
         },
         {

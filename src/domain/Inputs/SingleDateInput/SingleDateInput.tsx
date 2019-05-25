@@ -26,10 +26,10 @@ interface ISingleDateInputProps {
   groupPosition?: InputGroupPosition
   /** Applies recommended settings for mobile and tablet viewports */
   isMobile?: boolean
+  value: Moment | null
 }
 
 interface ISingleDateInputState {
-  date: Moment | null
   focused: boolean
 }
 
@@ -41,7 +41,6 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
   }
 
   public state: ISingleDateInputState = {
-    date: null,
     focused: false
   }
 
@@ -50,7 +49,8 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
       name,
       dateFormat,
       isDisabled,
-      isMobile
+      isMobile,
+      value
     } = this.props
 
     return (
@@ -60,7 +60,7 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
       >
         <SingleDatePicker
           id={name}
-          date={this.state.date}
+          date={value}
           placeholder={dateFormat}
           displayFormat={dateFormat}
           onDateChange={this.dateChange}
@@ -118,21 +118,17 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
       if (handleChange && date !== null) {
         handleChange(date)
       }
-
-      this.setState({ date })
-    }
+   }
 
   private onChange: (e: FormEvent<HTMLDivElement>) => void =
     (e) => {
       const {
-        handleChange,
-        dateFormat
+        handleChange
       } = this.props
 
       const rawInputElement =  e.target as HTMLInputElement
-
-      if (handleChange && !moment(rawInputElement.value, dateFormat, true).isValid()) {
-        handleChange(rawInputElement.value)
+      if (handleChange) {
+        handleChange(moment(rawInputElement.value, moment.ISO_8601))
       }
     }
 

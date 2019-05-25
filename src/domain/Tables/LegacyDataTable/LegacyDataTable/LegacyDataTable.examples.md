@@ -1,7 +1,7 @@
-#### Basic DataTable
+#### Basic LegacyDataTable
 
 ```jsx
-<DataTable
+<LegacyDataTable
   data={[
     {
       name: 'Tanner Linsley',
@@ -30,7 +30,7 @@
 ```jsx
 import { Callout } from '@Domain/Callouts';
 
-<DataTable
+<LegacyDataTable
   data={[]}
   columns={[
     {
@@ -46,12 +46,12 @@ import { Callout } from '@Domain/Callouts';
 />
 ```
 
-#### DataTable with right or center aligned content
+#### LegacyDataTable with right or center aligned content
 
 ```jsx
 import { Props } from '@Common';
 
-<DataTable
+<LegacyDataTable
   data={[
     {
       name: 'Tanner Linsley',
@@ -79,14 +79,14 @@ import { Props } from '@Common';
 />
 ```
 
-#### Sortable DataTable + default sorting
+#### Sortable LegacyDataTable + default sorting
 
 Hold shift to sort on multiple columns
 
 ```jsx
 import { Callout } from '@Domain/Callouts';
 
-<DataTable
+<LegacyDataTable
   data={[
     {
       name: 'Tanner Linsley',
@@ -122,7 +122,7 @@ import { Callout } from '@Domain/Callouts';
 ```jsx
 import { DropdownMenu } from '@Domain/Popovers';
 
-<DataTable
+<LegacyDataTable
   data={[
     {
       name: 'Tanner Linsley',
@@ -175,7 +175,7 @@ import { DropdownMenu } from '@Domain/Popovers';
 ```jsx
 import { Callout } from '@Domain/Callouts';
 
-<DataTable
+<LegacyDataTable
   data={[
     {
       name: 'Tanner Linsley',
@@ -207,10 +207,10 @@ import { Callout } from '@Domain/Callouts';
 />
 ```
 
-#### Paginated + filterable DataTable
+#### Paginated + filterable LegacyDataTable
 
 ```jsx
-<DataTable
+<LegacyDataTable
   data={[{
     "name": "Frederigo Mallebone",
     "age": "15"
@@ -533,13 +533,13 @@ import { Callout } from '@Domain/Callouts';
 />
 ```
 
-#### DataTable with custom overrides
+#### LegacyDataTable with custom overrides
 
 The data table uses [react-table](https://react-table.js.org/#/story/readme) under the hood, and many of the
-props used there can be used as overrides to customise DataTable as you need.
+props used there can be used as overrides to customise LegacyDataTable as you need.
 
 ```jsx
-<DataTable
+<LegacyDataTable
   data={[
     {
       name: 'Tanner Linsley',

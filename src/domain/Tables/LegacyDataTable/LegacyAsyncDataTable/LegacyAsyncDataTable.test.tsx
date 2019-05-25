@@ -1,9 +1,9 @@
 import { mount } from 'enzyme'
 import React from 'react'
 
-import { NonMemoizedAsyncDataTable } from './AsyncDataTable'
+import { NonMemoizedAsyncDataTable } from './LegacyAsyncDataTable'
 
-describe('AsyncDataTable', () => {
+describe('LegacyAsyncDataTable', () => {
     const mockOnPageChange = jest.fn()
     const wrapper = mount(
         <NonMemoizedAsyncDataTable
