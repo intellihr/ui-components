@@ -174,10 +174,10 @@
   resolved "https://registry.yarnpkg.com/@types/capitalize/-/capitalize-1.0.1.tgz#8d4cc32df8d916f6897530c01cda0c5207ef5184"
   integrity sha512-GpKm6eL8EhNtlDdNDM/r8dAz8kdoYWjU4GFZGc4NARYNJgsoBjaVSo5tDAUebTr/uDioWULKpk44KgmFyFBlPw==
 
-"@types/chart.js@2.7.14":
-  version "2.7.14"
-  resolved "https://registry.yarnpkg.com/@types/chart.js/-/chart.js-2.7.14.tgz#4c4602b3ae2285ef4a196e4e11ec168342c0ec28"
-  integrity sha512-6SwFiPZqmUgvUrc1YeKN2txK1IsbFkXFoUugwj/qf3ltqWXZbFjuILjmnzO7kTTi+Vs0ftwpZbPVb24GBuH59A==
+"@types/chart.js@2.7.52":
+  version "2.7.52"
+  resolved "https://registry.yarnpkg.com/@types/chart.js/-/chart.js-2.7.52.tgz#30a12c838fa8909ea76918afeaaf48069d18b2dc"
+  integrity sha512-h4Md9c0FYPoqHyPeo3sG+wBIDFGz6GubulKUopsmFkSSW2ieyI2phjlj+FjqzTwhrWwR9dbw/HlCW3axj+tWug==
 
 "@types/cheerio@*":
   version "0.22.7"
