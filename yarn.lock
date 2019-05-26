@@ -274,10 +274,10 @@
   dependencies:
     react-chartjs-2 "*"
 
-"@types/react-collapsible@2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@types/react-collapsible/-/react-collapsible-2.2.0.tgz#f362051a0cbe5776cb0637d047caf3042b5f4bc5"
-  integrity sha512-lzp4ZUhgAKFC9i0AN2kALA9KRNXAEGb13hq5aHA0DLYOL/bcu+75acm2/fbtnxPvvaGJ7AyuVunER5sEWCBOHg==
+"@types/react-collapsible@2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@types/react-collapsible/-/react-collapsible-2.2.1.tgz#2f32ed5e6a02e7556bc70fba9f1ebd75f74ac282"
+  integrity sha512-BcTmyKLFTN3NuXAAAeATtNUlnQm/h2Xlp7lzwwLc/hXR4B8ja9mHfAFoRuHh/bkqict2I8/YB+OkMRr3ApYd9Q==
   dependencies:
     "@types/react" "*"
 
