@@ -208,10 +208,10 @@
   dependencies:
     "@types/color-convert" "*"
 
-"@types/emoji-mart@2.8.1":
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/@types/emoji-mart/-/emoji-mart-2.8.1.tgz#0de7741f5a5d1e651570f9736e3ae3372358333b"
-  integrity sha512-KgNfPD3ZqyM03cruProEysdA8h8HxQNsN10AI8ixpwjKof+pcMdGoG3bpJT4wAwPefWJ25gPevJolDCs5vW4Zg==
+"@types/emoji-mart@2.8.4":
+  version "2.8.4"
+  resolved "https://registry.yarnpkg.com/@types/emoji-mart/-/emoji-mart-2.8.4.tgz#a7935eb3260edf9cbb9d9c4d1470f256bcddb45c"
+  integrity sha512-C3J+8nwZxAkgb06+835suFCutyFyz3G4aUFGMlJTvl0ANmE8hj8HUfL92GXNRkJspw+8ciXB6OuwscFFPA56iA==
   dependencies:
     "@types/react" "*"
 
