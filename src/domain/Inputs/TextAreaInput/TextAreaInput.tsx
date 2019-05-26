@@ -2,8 +2,8 @@ import classNames from 'classnames'
 import React, { ChangeEventHandler } from 'react'
 
 import { Props } from '../../../common'
-import { Button } from '../../Buttons'
 import { StyledAutosizeTextarea, StyledGif, StyledMainGifContainer, StyledTextAreaContainer } from '../../Inputs/TextAreaInput/style'
+import { GifSection } from './GifSection'
 import { TenorGifSelector } from './TenorGifSelector'
 
 interface ITextAreaInputProps {
@@ -85,27 +85,20 @@ const TextAreaInput: React.FC<ITextAreaInputProps> = ({
         gifsEnabled={showGifs}
         hasGif={hasGif}
       />
-      {showGifs && (
+      {showGifs &&
         <>
-          {hasGif && (
-            <StyledMainGifContainer>
-              <>
-                <StyledGif src={gifUrl} />
-                <Button
-                  className='button remove'
-                  onClick={clearGif}
-                >
-                  <span className='fa fa-times' />
-                </Button>
-              </>
-            </StyledMainGifContainer>
-          )}
+          <GifSection
+            clearGif={clearGif}
+            handleGifChange={handleGifChange!}
+            showGifs={showGifs}
+            gifUrl={gifUrl!}
+          />
           <TenorGifSelector
             apiKey={tenorApiKey!}
             handleGifChange={handleGifChange!}
           />
         </>
-      )}
+      }
     </StyledTextAreaContainer>
   )
 }
