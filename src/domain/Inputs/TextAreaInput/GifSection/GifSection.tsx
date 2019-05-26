@@ -3,14 +3,14 @@ import React from 'react'
 import { Button } from '../../../Buttons'
 import { StyledGif, StyledMainGifContainer } from '../style'
 
-interface GifSectionProps {
+interface IGifSectionProps {
   showGifs: boolean
   gifUrl: string
   handleGifChange: (url: string) => void
   clearGif: () => void
 }
 
-const GifSection: React.FC<GifSectionProps> = ({
+const GifSection: React.FC<IGifSectionProps> = ({
   showGifs,
   gifUrl,
   clearGif
