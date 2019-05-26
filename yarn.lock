@@ -319,10 +319,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-table@6.7.11":
-  version "6.7.11"
-  resolved "https://registry.yarnpkg.com/@types/react-table/-/react-table-6.7.11.tgz#26e85411981054af7dd657ef81e249baa6aee3d5"
-  integrity sha512-zAuI4+7cQMRfV70h63yqsVNBI3mbXh8VgKc8NMnzqF0qxw5dUJaYAE7/bVXk0JQaWIbpaTbUSUu5Cho1r0XByA==
+"@types/react-table@6.8.1":
+  version "6.8.1"
+  resolved "https://registry.yarnpkg.com/@types/react-table/-/react-table-6.8.1.tgz#ff92b25677a220356064321234fd89ba590db1e3"
+  integrity sha512-56wi1s7+H4eGbtXsppNz/OeBeUiPQZnJYLxia0ZpwcD47VfYFE1EkbVadEoJshJIjR4nbSQSF/AgJHvC/ZwHaQ==
   dependencies:
     "@types/react" "*"
 
@@ -9810,16 +9810,7 @@ read-pkg@^3.0.0:
     string_decoder "~1.1.1"
     util-deprecate "~1.0.1"
 
-readable-stream@^3.0.2, readable-stream@^3.0.6:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-3.3.0.tgz#cb8011aad002eb717bf040291feba8569c986fb9"
-  integrity sha512-EsI+s3k3XsW+fU8fQACLN59ky34AZ14LoeVZpYwmZvldCFo0r0gnelwF2TcMjLor/BTL5aDJVBMkss0dthToPw==
-  dependencies:
-    inherits "^2.0.3"
-    string_decoder "^1.1.1"
-    util-deprecate "^1.0.1"
-
-readable-stream@^3.1.1:
+readable-stream@^3.0.2, readable-stream@^3.0.6, readable-stream@^3.1.1:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-3.3.0.tgz#cb8011aad002eb717bf040291feba8569c986fb9"
   integrity sha512-EsI+s3k3XsW+fU8fQACLN59ky34AZ14LoeVZpYwmZvldCFo0r0gnelwF2TcMjLor/BTL5aDJVBMkss0dthToPw==
