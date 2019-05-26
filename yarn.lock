@@ -9389,10 +9389,10 @@ react-collapsible@2.2.0:
   resolved "https://registry.yarnpkg.com/react-collapsible/-/react-collapsible-2.2.0.tgz#257abef5b96a330d9249810761cac29a3d82f268"
   integrity sha512-xnkMUj4p6fh2yOeTuZDNK4p+dNK/0iSqOQTujvmLgHKtNNd+aIGhfE5HTKGcareekyhi3Q2OXUFogkimzrgSjQ==
 
-react-dates@^18.1.1:
-  version "18.1.1"
-  resolved "https://registry.yarnpkg.com/react-dates/-/react-dates-18.1.1.tgz#174c4e5de14d0c22d7c4a3294ba1ab618aaebb26"
-  integrity sha512-qpuVNgkXQm3ZDnDwUdCVMBvgeakutk+hamIZ0it8colmqa2ZgpIs/ZsAIENwGQJ4PLsBJzbM+F+HKnR3mKanIA==
+react-dates@^20.2.0:
+  version "20.2.0"
+  resolved "https://registry.yarnpkg.com/react-dates/-/react-dates-20.2.0.tgz#0ecd6d19bd94b49382604bebbc85d2c916d0d929"
+  integrity sha512-ufpczVs48f5DP4KDKvU+YuDdeBB3RnFuZriCcHX9m5KLimee+W7Cqad8t0m3o/i1CwOYwuHCEAdZBrqgeSYWZw==
   dependencies:
     airbnb-prop-types "^2.10.0"
     consolidated-events "^1.1.1 || ^2.0.0"
