@@ -34,29 +34,39 @@ type Media = {
 }
 
 interface IGifObject {
-  /** A unix timestamp representing when this post was created */
-  created: number
-  /** True if this post contains audio(only video formats support audio, the gif image file format can not contain audio information) */
-  hasaudio: boolean
+  // /** A unix timestamp representing when this post was created */
+  // created: number
+  // /** True if this post contains audio(only video formats support audio, the gif image file format can not contain audio information) */
+  // hasaudio: boolean
   /** Tenor result identifier */
   id: string
   /**  Array of Media objects containig the url to the GIFs */
   media: Media[]
-  /**  An array of tags for the post */
-  tags: string[]
-  /** The title of the post */
-  title: string
-  /** the full URL to view the post on tenor.com */
-  itemurl: string
-  /** True if this post contains captions */
-  hascaption: boolean
-  /** a short URL to view the post on tenor.com */
-  url: string
+  // /**  An array of tags for the post */
+  // tags: string[]
+  // /** The title of the post */
+  // title: string
+  // /** the full URL to view the post on tenor.com */
+  // itemurl: string
+  // /** True if this post contains captions */
+  // hascaption: boolean
+  // /** a short URL to view the post on tenor.com */
+  // url: string
 }
 
 interface IQueryResults {
   results: IGifObject[]
   next: string | number
+}
+
+function transformResults (gifs: IGifObject[]): IGifObject[] {
+  return gifs.map((gif) => {
+    const { id, media } = gif
+    return {
+      id,
+      media
+    } as IGifObject
+  })
 }
 
 const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, handleGifChange }) => {
@@ -104,6 +114,7 @@ const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, handleGifC
       .then((response) => response.json())
       .then(
         ({ results }: IQueryResults) => {
+          results = transformResults(results)
           setTrending(results)
           setGifs(results)
           setLoading(false)
@@ -127,10 +138,7 @@ const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, handleGifC
             // Don't set the results if it's stale
             if (isLatestResult) {
               const halfwayPoint = Math.floor(results.length / 2)
-              setMarkerIndex(halfwayPoint)
-              setGifs(results)
-              setNextID(next.toString())
-              setLoading(false)
+              update(next, results, halfwayPoint)
             }
           })
     }
@@ -142,6 +150,7 @@ const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, handleGifC
 
   // Infinite scroll
   useEffect(() => {
+    // Don't initiate another fetch if the previous one has not completed
     if (!loading) {
       const observer = new IntersectionObserver(
         (entries) => {
@@ -155,10 +164,7 @@ const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, handleGifC
                   .then((response) => response.json())
                   .then(({ results, next }: IQueryResults) => {
                     const nextMarker = gifs.length + Math.floor(results.length / 2)
-                    setMarkerIndex(nextMarker)
-                    setGifs([...gifs, ...results])
-                    setNextID(next.toString())
-                    setLoading(false)
+                    update(next, results, nextMarker, true)
                   })
               }
             }
@@ -178,6 +184,16 @@ const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, handleGifC
       }
     }
   }, [loading, markerGifRef.current, scrollAreaRef.current])
+
+  function update (next: string | number, gifResults: IGifObject[], marker: number, more: boolean = false): void {
+    gifResults = transformResults(gifResults)
+    if (more) { gifResults = [...gifs, ...gifResults] }
+
+    setMarkerIndex(marker)
+    setGifs(gifResults)
+    setNextID(next.toString())
+    setLoading(false)
+  }
 
   const handleGifClick = (url: string) => () => {
     handleGifChange(url)

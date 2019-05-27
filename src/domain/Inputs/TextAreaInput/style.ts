@@ -28,7 +28,7 @@ const StyledMainGifContainer = styled.div`
   align-items: flex-start;
 `
 
-const StyledAutosizeTextarea = styled(AutosizeTextarea) <IStyledAutosizeTextArea>`
+const StyledAutosizeTextarea = styled(AutosizeTextarea)<IStyledAutosizeTextArea>`
   min-height: 39px;
   resize: none;
   margin-bottom: ${(props) => props.gifsEnabled ? 0 : undefined};
