@@ -17,7 +17,6 @@ interface IStyledAutosizeTextArea {
 
 const StyledMainGifContainer = styled.div`
   display: flex;
-  justify-content: center;
   min-height: ${Variables.Spacing.s2XLarge}px;
   border: 1px solid ${Variables.Color.n400};
   border-top: none;
@@ -25,9 +24,11 @@ const StyledMainGifContainer = styled.div`
   padding: ${Variables.Spacing.sSmall}px;
   background-color: ${Variables.Color.n150};
   transition: border-color 0.3s ease-in-out;
+  justify-content: center;
+  align-items: flex-start;
 `
 
-const StyledAutosizeTextarea = styled(AutosizeTextarea)<IStyledAutosizeTextArea>`
+const StyledAutosizeTextarea = styled(AutosizeTextarea) <IStyledAutosizeTextArea>`
   min-height: 39px;
   resize: none;
   margin-bottom: ${(props) => props.gifsEnabled ? 0 : undefined};
@@ -96,12 +97,23 @@ const StyledScrollArea = styled.div`
 `
 
 const StyledGif = styled.img`
- border-radius: ${Variables.Style.borderRadius}px;
- height: 120px;
+  border-radius: ${Variables.Style.borderRadius}px;
+  height: 120px;
 `
 
 const StyledTextAreaContainer = styled.div`
   position: relative;
+`
+
+const StyledRemoveButton = styled.div`
+  cursor: pointer;
+  margin-left: ${Variables.Spacing.sSmall}px;
+  color: ${Variables.Color.n500};
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: ${Variables.Color.r400};
+  }
 `
 
 export {
@@ -111,6 +123,7 @@ export {
   StyledGif,
   StyledGifList,
   StyledMainGifContainer,
+  StyledRemoveButton,
   StyledScrollArea,
   StyledTextAreaContainer
 }

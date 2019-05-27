@@ -1,12 +1,15 @@
 import React from 'react'
 
-import { Button } from '../../../Buttons'
-import { StyledGif, StyledMainGifContainer } from '../style'
+import { StyledGif, StyledMainGifContainer, StyledRemoveButton } from '../style'
 
 interface IGifSectionProps {
+  /** If gifs related stuff should be shown */
   showGifs: boolean
+  /** url of the gif */
   gifUrl: string
+  /** Callback to change the gif */
   handleGifChange: (url: string) => void
+  /** Callback to remove the gif */
   clearGif: () => void
 }
 
@@ -22,12 +25,9 @@ const GifSection: React.FC<IGifSectionProps> = ({
       {showGifs && hasGif && (
         <StyledMainGifContainer>
           <StyledGif src={gifUrl} />
-          <Button
-            className='button remove'
-            onClick={clearGif}
-          >
-            <span className='fa fa-times' />
-          </Button>
+          <StyledRemoveButton onClick={clearGif}>
+            Remove
+          </StyledRemoveButton>
         </StyledMainGifContainer>
       )}
     </>
