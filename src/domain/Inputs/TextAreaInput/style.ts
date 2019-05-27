@@ -28,7 +28,7 @@ const StyledMainGifContainer = styled.div`
   align-items: flex-start;
 `
 
-const StyledAutosizeTextarea = styled(AutosizeTextarea)<IStyledAutosizeTextArea>`
+const StyledAutosizeTextarea = styled(AutosizeTextarea) <IStyledAutosizeTextArea>`
   min-height: 39px;
   resize: none;
   margin-bottom: ${(props) => props.gifsEnabled ? 0 : undefined};
@@ -109,7 +109,7 @@ const StyledRemoveButton = styled.div`
   cursor: pointer;
   margin-left: ${Variables.Spacing.sSmall}px;
   color: ${Variables.Color.n500};
-  transition: color 0.3s ease-in-out;
+  font-size: ${Variables.FontSize.fzSmall}px;
 
   &:hover {
     color: ${Variables.Color.r400};
