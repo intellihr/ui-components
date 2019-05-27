@@ -1,10 +1,11 @@
 import classNames from 'classnames'
-import React, { ChangeEventHandler } from 'react'
+import React, { useContext } from 'react'
 
 import { Props } from '../../../common'
-import { StyledAutosizeTextarea, StyledGif, StyledMainGifContainer, StyledTextAreaContainer } from '../../Inputs/TextAreaInput/style'
+import { StyledAutosizeTextarea, StyledTextAreaContainer } from '../../Inputs/TextAreaInput/style'
 import { GifSection } from './GifSection'
 import { TenorGifSelector } from './TenorGifSelector'
+import { DefaultsContext } from '../../Defaults'
 
 interface ITextAreaInputProps {
   /** ID of the input */
@@ -16,7 +17,7 @@ interface ITextAreaInputProps {
   /** If true, adds invalid input class to component */
   isInvalid?: boolean
   /** Function passed to `onChange` prop */
-  handleChange?: ChangeEventHandler<HTMLTextAreaElement>
+  handleChange?: React.ChangeEventHandler<HTMLTextAreaElement>
   /** Value of the input */
   value?: string
   /** If true, sets input to disabled state */
@@ -50,9 +51,9 @@ const TextAreaInput: React.FC<ITextAreaInputProps> = ({
   isHTML5Required,
   gifUrl,
   handleGifChange,
-  tenorApiKey,
   componentContext
 }) => {
+  const { tenorApiKey } = useContext(DefaultsContext)
   const hasGif = gifUrl !== ''
   const gifsEnabled = (gifUrl !== undefined) && (handleGifChange !== undefined) && (tenorApiKey !== undefined)
   const showGifs = !isDisabled && gifsEnabled

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useState, useEffect, useRef, useContext } from 'react'
 
 import { Props } from '../../../../common'
 import { useClickOutside } from '../../../../common/hooks'
@@ -34,24 +34,10 @@ type Media = {
 }
 
 interface IGifObject {
-  // /** A unix timestamp representing when this post was created */
-  // created: number
-  // /** True if this post contains audio(only video formats support audio, the gif image file format can not contain audio information) */
-  // hasaudio: boolean
   /** Tenor result identifier */
   id: string
   /**  Array of Media objects containig the url to the GIFs */
   media: Media[]
-  // /**  An array of tags for the post */
-  // tags: string[]
-  // /** The title of the post */
-  // title: string
-  // /** the full URL to view the post on tenor.com */
-  // itemurl: string
-  // /** True if this post contains captions */
-  // hascaption: boolean
-  // /** a short URL to view the post on tenor.com */
-  // url: string
 }
 
 interface IQueryResults {
@@ -71,13 +57,6 @@ function transformResults(gifs: IGifObject[]): IGifObject[] {
 
 const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, handleGifChange }) => {
   const api = 'https://api.tenor.com/v1/'
-  const commonParameters = {
-    limit: 15,
-    locale: 'en_AU',
-    contentfilter: 'high',
-    media_filter: 'minimal',
-    key: apiKey
-  }
 
   const [searchTerm, setSearchTerm] = useState('')
   const [gifs, setGifs] = useState<IGifObject[]>([])
@@ -94,6 +73,13 @@ const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, handleGifC
   const { ref: gifListRef, opened, toggleOpened, close } = useClickOutside<HTMLDivElement>(false, anchorRef)
 
   const searchEndpoint = `${api}search`
+  const commonParameters = {
+    limit: 15,
+    locale: 'en_AU',
+    contentfilter: 'high',
+    media_filter: 'minimal',
+    key: apiKey
+  }
   const searchParameters: IParameters = {
     q: searchTerm,
     ...commonParameters
