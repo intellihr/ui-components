@@ -2,10 +2,10 @@ import classNames from 'classnames'
 import React, { useContext } from 'react'
 
 import { Props } from '../../../common'
+import { DefaultsContext } from '../../Defaults'
 import { StyledAutosizeTextarea, StyledTextAreaContainer } from '../../Inputs/TextAreaInput/style'
 import { GifSection } from './GifSection'
 import { TenorGifSelector } from './TenorGifSelector'
-import { DefaultsContext } from '../../Defaults'
 
 interface ITextAreaInputProps {
   /** ID of the input */

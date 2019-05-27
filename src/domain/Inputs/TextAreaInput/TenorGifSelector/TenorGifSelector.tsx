@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useContext } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 
 import { Props } from '../../../../common'
 import { useClickOutside } from '../../../../common/hooks'
@@ -45,7 +45,7 @@ interface IQueryResults {
   next: string | number
 }
 
-function transformResults(gifs: IGifObject[]): IGifObject[] {
+function transformResults (gifs: IGifObject[]): IGifObject[] {
   return gifs.map((gif) => {
     const { id, media } = gif
     return {
@@ -171,7 +171,7 @@ const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, handleGifC
     }
   }, [loading, markerGifRef.current, scrollAreaRef.current])
 
-  function update(next: string | number, gifResults: IGifObject[], marker: number, more: boolean = false): void {
+  function update (next: string | number, gifResults: IGifObject[], marker: number, more: boolean = false): void {
     gifResults = transformResults(gifResults)
     if (more) { gifResults = [...gifs, ...gifResults] }
 
