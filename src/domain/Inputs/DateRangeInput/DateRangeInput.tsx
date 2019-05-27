@@ -1,35 +1,35 @@
 import classNames from 'classnames'
-import {isNil} from 'lodash'
-import moment, {Moment} from 'moment'
+import moment, { Moment } from 'moment'
 import React from 'react'
-import {DateRangePicker, FocusedInputShape} from 'react-dates'
+import { DateRangePicker, FocusedInputShape } from 'react-dates'
 import 'react-dates/initialize'
 import 'react-dates/lib/css/_datepicker.css'
 
-import {FontAwesomeIcon} from '../../Icons/FontAwesomeIcon'
-import {InputGroupPosition} from '../InputGroup'
-import {Props, Variables} from '../../../common'
-import {Text} from '../../Typographies/Text'
+import { Variables } from '../../../common'
+import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
+import { Text } from '../../Typographies/Text'
 
 const style = require('./style.scss')
 
 interface IDateRangeInputProps {
-  /** Name and ID of the HTML input */
+  /** Name of the HTML input */
   name: string
+  /** Start Date of the input */
+  startDate: Moment | null
+  /** End Date of the input */
+  endDate: Moment | null
+  /** Placeholder of the start Date */
+  startDatePlaceholder?: string
+  /** Placeholder of the end Date */
+  endDatePlaceholder?: string
   /** Moment format to display the date in */
   dateFormat: string
   /** If true, adds invalid styles to the input */
   isInvalid?: boolean
   /** If true, adds disabled attribute to the input */
   isDisabled?: boolean
-  /** Updates border style depending on input group position */
-  groupPosition?: InputGroupPosition
   /** Applies recommended settings for mobile and tablet viewports */
   isMobile?: boolean
-  startDate: Moment | null
-  endDate: Moment | null
-  startDatePlaceholder?: string
-  endDatePlaceholder?: string
   /** Change handler called when the date is changed */
   handleDatesChange: (dates: { startDate: Moment | null, endDate: Moment | null}) => void
 }
@@ -102,15 +102,13 @@ class DateRangeInput extends React.PureComponent<IDateRangeInputProps, IDateRang
 
   get classNames (): string {
     const {
-      isInvalid,
-      groupPosition
+      isInvalid
     } = this.props
 
     return classNames(
       style.dateRangePickerOverrides,
       {
-        'is-invalid-input': isInvalid,
-        [`input-group-${groupPosition}`]: !isNil(groupPosition)
+        'is-invalid-input': isInvalid
       }
     )
   }

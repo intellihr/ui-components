@@ -1,7 +1,5 @@
 #### Date Range Input
 ```jsx
-import moment from 'moment';
-
 initialState = { startDate: null , endDate: null };
 
 <DateRangeInput
@@ -16,8 +14,6 @@ initialState = { startDate: null , endDate: null };
 
 #### Date Range Input with date format
 ```jsx
-import moment from 'moment';
-
 initialState = { startDate: null , endDate: null };
 
 <DateRangeInput
@@ -54,7 +50,7 @@ initialState = { startDate: moment() , endDate: moment() };
 ```jsx
 import moment from 'moment';
 
-initialState = { startDate: null , endDate: null };
+initialState = { startDate: moment() , endDate: moment() };
 
 <DateRangeInput
   isInvalid
@@ -70,13 +66,11 @@ initialState = { startDate: null , endDate: null };
 ##### isMobile
 
 ```jsx
-import moment from 'moment';
-
 initialState = { startDate: null , endDate: null };
 
 <DateRangeInput
   isMobile
-  name='test-date-picker3'
+  name='test-date-picker4'
   startDate={state.startDate}
   endDate={state.endDate}
   startDatePlaceholder='Start Date'

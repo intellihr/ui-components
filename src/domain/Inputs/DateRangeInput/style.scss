@@ -13,7 +13,7 @@
       > strong {
         color: $n800;
         font-size: $fz-heading;
-        font-weight: 600;
+        font-weight: $fw-heavy;
       }
     }
 
@@ -23,39 +23,26 @@
       }
     }
 
-    // Will edit everything selected including everything between a range of dates
+    // the range of dates when user are picking the dates
     .CalendarDay__hovered_span {
-      background: $i100; //background
-      border: 1px solid #e4e7e7;
-      color: #484848; //default styles include a border
-    }
-
-    // Will edit everything selected including everything between a range of dates
-    .CalendarDay__selected_span {
-      background: $i100; //background
-      border: 1px solid #e4e7e7;
-      color: #484848; //default styles include a border
-    }
-
-    // Will edit a range of dates
-    .CalendarDay__selected {
       background: $i100;
-      color: $n400;
-
-      // Will edit when hovered over. _span style also has this property
-      &:hover {
-        background: $i400;
-        color: $n100;
-      }
+      border: 1px solid #e4e7e7; //default border styles
+      color: #484848; //default color styles
     }
 
-    // Will edit the endpoints of a range of dates
+    // the range of dates that user are selected
+    .CalendarDay__selected_span {
+      background: $i100;
+      border: 1px solid #e4e7e7; //default border styles
+      color: #484848; //default color styles
+    }
+
+    // the start date adn end date that user are selected
     .CalendarDay__selected_start, .CalendarDay__selected_end {
       background: $i400;
       border: 1px solid $i100;
       color: $n100;
 
-      // Will edit when hovered over. _span style also has this property
       &:hover {
         background: $i400;
         color: $n100;
@@ -71,7 +58,7 @@
     display: flex;
     align-items: center;
     padding-right: 0;
-    border-radius: 4px;
+    border-radius: $border-radius;
     border-color: $n400;
 
     &:focus, &:hover {
@@ -82,7 +69,7 @@
 
   .DateInput {
     background: none;
-    height: 40px;
+    height: $spacing-2xlarge;
   }
 
   .DateInput_input {
@@ -100,6 +87,15 @@
     &:focus, &:hover {
       color: $i400;
     }
+
+    &:disabled {
+      color: $n700;
+      background: none;
+    }
+  }
+
+  .DateRangePickerInput_arrow {
+    cursor: default;
   }
 
   .DateRangePickerInput_clearDates {
@@ -112,6 +108,11 @@
 
     &:focus, &:hover {
       color: $n800;
+    }
+
+    &:disabled {
+      color: $n600;
+      cursor: not-allowed;
     }
   }
 
@@ -134,6 +135,10 @@
       &::placeholder {
         color: $r400;
       }
+
+      &:focus, &:hover {
+        color: $n700;
+      }
     }
 
     .DateInput {
@@ -143,28 +148,6 @@
     .DateRangePickerInput {
       border-color: $r400;
       background-color: mix($r400, #fff, 10%);
-
-      &:focus, &:hover {
-        color: $n400;
-      }
-    }
-  }
-
-  &.input-group-left {
-    input {
-      border-radius: 4px 0 0 4px;
-    }
-  }
-
-  &.input-group-middle {
-    input {
-      border-radius: 0;
-    }
-  }
-
-  &.input-group-right {
-    input {
-      border-radius: 0 4px 4px 0;
     }
   }
 }
