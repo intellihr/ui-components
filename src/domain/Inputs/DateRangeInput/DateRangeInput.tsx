@@ -1,13 +1,15 @@
 import classNames from 'classnames'
-import { isNil } from 'lodash'
-import moment, { Moment } from 'moment'
+import {isNil} from 'lodash'
+import moment, {Moment} from 'moment'
 import React from 'react'
-import { DateRangePicker, FocusedInputShape } from 'react-dates'
+import {DateRangePicker, FocusedInputShape} from 'react-dates'
 import 'react-dates/initialize'
 import 'react-dates/lib/css/_datepicker.css'
 
-import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
-import { InputGroupPosition } from '../InputGroup'
+import {FontAwesomeIcon} from '../../Icons/FontAwesomeIcon'
+import {InputGroupPosition} from '../InputGroup'
+import {Props, Variables} from '../../../common'
+import {Text} from '../../Typographies/Text'
 
 const style = require('./style.scss')
 
@@ -64,6 +66,7 @@ class DateRangeInput extends React.PureComponent<IDateRangeInputProps, IDateRang
         className={this.classNames}
       >
         <DateRangePicker
+          block
           startDateId={`${name}-start`}
           startDate={startDate}
           endDateId={`${name}-end`}
@@ -77,8 +80,8 @@ class DateRangeInput extends React.PureComponent<IDateRangeInputProps, IDateRang
           disabled={isDisabled}
           numberOfMonths={isMobile ? 1 : 2}
           showClearDates
-          customArrowIcon={<FontAwesomeIcon type='arrow-right'/>}
-          customCloseIcon={<FontAwesomeIcon type='times'/>}
+          customArrowIcon={<Text color={Variables.Color.n600} weight='heavy'>→</Text>}
+          customCloseIcon={<span>×</span>}
           isOutsideRange={this.disabledDateRange}
           hideKeyboardShortcutsPanel
           renderMonthText={this.renderMonthText}
