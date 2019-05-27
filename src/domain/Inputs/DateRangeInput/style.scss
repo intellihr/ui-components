@@ -30,15 +30,16 @@
       color: #484848; //default color styles
     }
 
-    // the range of dates that user are selected
+    // the range of dates have selected
     .CalendarDay__selected_span {
       background: $i100;
       border: 1px solid #e4e7e7; //default border styles
       color: #484848; //default color styles
     }
 
-    // the start date adn end date that user are selected
-    .CalendarDay__selected_start, .CalendarDay__selected_end {
+    // the start date and end date have selected
+    .CalendarDay__selected_start,
+    .CalendarDay__selected_end {
       background: $i400;
       border: 1px solid $i100;
       color: $n100;
@@ -55,13 +56,14 @@
   }
 
   .DateRangePickerInput {
-    display: flex;
     align-items: center;
-    padding-right: 0;
-    border-radius: $border-radius;
     border-color: $n400;
+    border-radius: $border-radius;
+    display: flex;
+    padding-right: 0;
 
-    &:focus, &:hover {
+    &:focus,
+    &:hover {
       border-color: $i400;
       outline: none;
     }
@@ -70,32 +72,36 @@
   .DateInput {
     background: none;
     height: $spacing-2xlarge;
-  }
 
-  .DateInput_input {
-    border: 0;
-    background: none;
-    margin: 0;
-    text-align: center;
-    color: $n700;
-    font-size: $fz-body;
-    font-weight: $fw-normal;
-    line-height: $lh-body;
-    padding: .5rem;
-    transition: color .3s ease-in-out;
-
-    &:focus, &:hover {
-      color: $i400;
-    }
-
-    &:disabled {
-      color: $n700;
+    .DateInput_input {
       background: none;
+      border: 0;
+      color: $n700;
+      font-size: $fz-body;
+      font-weight: $fw-normal;
+      line-height: $lh-body;
+      margin: 0;
+      padding: .5rem;
+      text-align: center;
+      transition: color .3s ease-in-out;
+
+      &:focus,
+      &:hover {
+        color: $i400;
+      }
+
+      &:disabled {
+        background: none;
+        color: $n700;
+      }
     }
   }
+
 
   .DateRangePickerInput_arrow {
     cursor: default;
+    position: relative;
+    top: -1px;
   }
 
   .DateRangePickerInput_clearDates {
@@ -106,7 +112,8 @@
     outline: none;
     transition: color .3s ease-in-out;
 
-    &:focus, &:hover {
+    &:focus,
+    &:hover {
       color: $n800;
     }
 
@@ -117,7 +124,8 @@
   }
 
   .DateRangePickerInput__disabled {
-    &:focus, &:hover {
+    &:focus,
+    &:hover {
       border-color: $n400;
       color: $n600;
     }
@@ -136,7 +144,8 @@
         color: $r400;
       }
 
-      &:focus, &:hover {
+      &:focus,
+      &:hover {
         color: $n700;
       }
     }
@@ -146,8 +155,8 @@
     }
 
     .DateRangePickerInput {
-      border-color: $r400;
       background-color: mix($r400, #fff, 10%);
+      border-color: $r400;
     }
   }
 }

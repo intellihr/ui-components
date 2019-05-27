@@ -42,7 +42,8 @@ class DateRangeInput extends React.PureComponent<IDateRangeInputProps, IDateRang
   public static defaultProps = {
     dateFormat: 'DD/MM/YYYY',
     isInvalid: false,
-    isDisabled: false
+    isDisabled: false,
+    isMobile: false
   }
 
   public state: IDateRangeInputState = {
@@ -125,14 +126,11 @@ class DateRangeInput extends React.PureComponent<IDateRangeInputProps, IDateRang
     handleDatesChange(dates)
   }
 
-  private disabledDateRange: () => boolean =
-    () => false
+  private disabledDateRange = () => false
 
-  private renderMonthText: (day: Moment) => string =
-    (day) => moment(day).format('MMM YYYY')
+  private renderMonthText = (day: Moment) => moment(day).format('MMM YYYY')
 
-  private navigationButtonClassNames: (side: 'left' | 'right') => string =
-    (side) => {
+  private navigationButtonClassNames = (side: 'left' | 'right') => {
       return classNames(
         'DayPickerNavigation_button__default',
         'DayPickerNavigation_button__horizontalDefault',
