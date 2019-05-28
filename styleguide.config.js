@@ -109,7 +109,8 @@ module.exports = {
         {
           name: 'Filters',
           components: [
-            'src/domain/Filters/FilterTag/FilterTag.tsx'
+            'src/domain/Filters/FilterTag/FilterTag.tsx',
+            'src/domain/Filters/FilterDropdown/FilterDropdown.tsx'
           ]
         },
         {

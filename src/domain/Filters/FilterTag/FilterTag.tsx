@@ -7,15 +7,15 @@ import { BrickColor } from '../../Typographies/Brick/style'
 import { Text } from '../../Typographies/Text'
 import { StyledDeleteButton, TagWrapper } from './style'
 
-interface IFilterOption {
-  field: 'string'
-  operator: 'string'
-  value: 'string'
+export interface IFilterTagOption {
+  field: string
+  operator: string
+  value: string
 }
 
 export interface IFilterTagProps {
-  options: IFilterOption[]
-  handleDelete: (option: IFilterOption) => void
+  options: IFilterTagOption[]
+  handleDelete: (option: IFilterTagOption) => void
 }
 
 export class FilterTag extends React.PureComponent<IFilterTagProps> {
@@ -35,7 +35,7 @@ export class FilterTag extends React.PureComponent<IFilterTagProps> {
     return null
   }
 
-  private renderTag = (option: IFilterOption, index: number) => {
+  private renderTag = (option: IFilterTagOption, index: number) => {
     return (
       <TagWrapper id={`tag-${index}`}>
         <Brick
@@ -69,7 +69,7 @@ export class FilterTag extends React.PureComponent<IFilterTagProps> {
     )
   }
 
-  private deleteTag = (option: IFilterOption) => () => {
+  private deleteTag = (option: IFilterTagOption) => () => {
     const {
       handleDelete
     } = this.props
