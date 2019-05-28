@@ -114,7 +114,7 @@ export class GridLayout extends React.PureComponent<GridLayoutProps, never> {
     gutterPaddingY: 'none'
   }
 
-  public render(): JSX.Element {
+  public render (): JSX.Element {
     const {
       gridColumns,
       gutterMarginX,
@@ -124,7 +124,7 @@ export class GridLayout extends React.PureComponent<GridLayoutProps, never> {
       horizontalAlignment,
       verticalAlignment,
       componentContext,
-      animationStyle: gridAnimationStyle,
+      animationStyle: gridAnimationStyle
     } = this.props
 
     let renderChildren: Array<React.ReactElement<IStyledCellProps>> = [<></>]
