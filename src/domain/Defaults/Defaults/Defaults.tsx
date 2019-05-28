@@ -4,8 +4,8 @@ import { GridProvider } from '../../Grids'
 
 interface IDefaults {
   /** Anchor component used for clickable links */
-  tenorApiKey?: string
   AnchorComponent?: React.ComponentType<any>
+  tenorApiKey?: string
 }
 
 interface IDefaultsProviders {
