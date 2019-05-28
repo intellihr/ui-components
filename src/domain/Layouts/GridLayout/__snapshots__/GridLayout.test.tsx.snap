@@ -181,10 +181,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
@@ -199,10 +199,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
@@ -215,10 +215,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
@@ -231,10 +231,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
@@ -528,12 +528,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
               animationStyle="none"
               data-component-type="grid_layout_cell"
               displayType="flex"
-              flexHorizontalAlignments={
-                Object {
-                  "desktop": "right",
-                  "min": "center",
-                }
-              }
+              flexHorizontalAlignments="left"
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
@@ -779,18 +774,6 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
   width: 100%;
 }
 
-.c2 {
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  min-height: 0;
-  min-width: 0;
-  width: 100%;
-}
-
 .c3 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -827,6 +810,18 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
   width: 100%;
 }
 
+.c2 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+}
+
 @media only screen and (max-width:639px) {
   .c0 {
     margin-left: -2px;
@@ -920,42 +915,6 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
     margin-left: 2px;
     margin-right: 2px;
     width: calc(83.33333333333333% - 4px);
-  }
-}
-
-@media only screen and (max-width:639px) {
-  .c2 {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    margin-left: 2px;
-    margin-right: 2px;
-    width: calc(16.666666666666668% - 4px);
-  }
-}
-
-@media only screen and (min-width:640px) and (max-width:1033px) {
-  .c2 {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    margin-left: 2px;
-    margin-right: 2px;
-    width: calc(16.666666666666668% - 4px);
-  }
-}
-
-@media only screen and (min-width:1034px) and (max-width:1439px) {
-  .c2 {
-    margin-left: 2px;
-    margin-right: 2px;
-    width: calc(16.666666666666668% - 4px);
-  }
-}
-
-@media only screen and (min-width:1440px) {
-  .c2 {
-    margin-left: 2px;
-    margin-right: 2px;
-    width: calc(16.666666666666668% - 4px);
   }
 }
 
@@ -1089,6 +1048,42 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
     flex: 1 1 0%;
     width: auto;
     margin-left: calc(25% + 2px);
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c2 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(16.666666666666668% - 4px);
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c2 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(16.666666666666668% - 4px);
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c2 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(16.666666666666668% - 4px);
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c2 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(16.666666666666668% - 4px);
   }
 }
 
@@ -1147,6 +1142,8 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
           >
             <styled.div
               data-component-type="grid_layout_cell"
+              displayType="block"
+              flexHorizontalAlignments="left"
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
@@ -1199,6 +1196,8 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
           >
             <styled.div
               data-component-type="grid_layout_cell"
+              displayType="block"
+              flexHorizontalAlignments="left"
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
@@ -1251,6 +1250,8 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
           >
             <styled.div
               data-component-type="grid_layout_cell"
+              displayType="block"
+              flexHorizontalAlignments="left"
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
@@ -1321,6 +1322,8 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
           >
             <styled.div
               data-component-type="grid_layout_cell"
+              displayType="block"
+              flexHorizontalAlignments="left"
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
@@ -1383,6 +1386,8 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
           >
             <styled.div
               data-component-type="grid_layout_cell"
+              displayType="block"
+              flexHorizontalAlignments="left"
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
