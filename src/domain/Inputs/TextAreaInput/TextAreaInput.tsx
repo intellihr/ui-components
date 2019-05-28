@@ -91,7 +91,6 @@ const TextAreaInput: React.FC<ITextAreaInputProps> = ({
           <GifSection
             clearGif={clearGif}
             handleGifChange={handleGifChange!}
-            showGifs={showGifs}
             gifUrl={gifUrl!}
           />
           <TenorGifSelector

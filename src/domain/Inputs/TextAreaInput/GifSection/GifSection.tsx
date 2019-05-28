@@ -3,8 +3,6 @@ import React from 'react'
 import { StyledGif, StyledMainGifContainer, StyledRemoveButton } from '../style'
 
 interface IGifSectionProps {
-  /** If gifs related stuff should be shown */
-  showGifs: boolean
   /** url of the gif */
   gifUrl: string
   /** Callback to change the gif */
@@ -14,7 +12,6 @@ interface IGifSectionProps {
 }
 
 const GifSection: React.FC<IGifSectionProps> = ({
-  showGifs,
   gifUrl,
   clearGif
 }) => {
@@ -22,7 +19,7 @@ const GifSection: React.FC<IGifSectionProps> = ({
 
   return (
     <>
-      {showGifs && hasGif && (
+      {hasGif && (
         <StyledMainGifContainer>
           <StyledGif src={gifUrl} />
           <StyledRemoveButton onClick={clearGif}>
