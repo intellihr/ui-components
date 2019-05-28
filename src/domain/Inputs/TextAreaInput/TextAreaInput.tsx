@@ -28,8 +28,6 @@ interface ITextAreaInputProps {
   placeholder?: string
   /** If true, use HTML5 required attribute */
   isHTML5Required?: boolean
-  /** A tenor api key to access the endpoint */
-  tenorApiKey?: string
   /** Value of the selected gif url */
   gifUrl?: string
   /** Gives parent access to the gif url when it is selected */
