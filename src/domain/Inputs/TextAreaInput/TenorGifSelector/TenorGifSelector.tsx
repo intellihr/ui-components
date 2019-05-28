@@ -29,15 +29,11 @@ interface IMediaObject {
   size: number
 }
 
-type Media = {
-  [K in FormatTypes]: IMediaObject
-}
-
 interface IGifObject {
   /** Tenor result identifier */
   id: string
-  /**  Array of Media objects containig the url to the GIFs */
-  media: Media[]
+  /**  Array of objects with keys of FormatTypes and values of MediaObjects */
+  media: Array<{ [K in FormatTypes]: IMediaObject }>
 }
 
 interface IQueryResults {
