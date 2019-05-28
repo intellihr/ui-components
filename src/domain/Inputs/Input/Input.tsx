@@ -163,7 +163,7 @@ export class Input extends React.PureComponent<InputProps> {
         autoFocus={autoFocus}
         style={width ? { width } : undefined}
         data-component-type={Props.ComponentType.TextInput}
-        data-component-contex={componentContext}
+        data-component-context={componentContext}
       />
     )
   }
