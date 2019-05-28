@@ -66,10 +66,7 @@ interface IGridLayoutCell {
   componentContext?: string
 }
 
-interface IGridLayoutProps {
-  children: Array<React.ReactElement<IStyledCellProps>> | React.ReactElement<IStyledCellProps>
-  /** The cells to place within the grid */
-  cells?: IGridLayoutCell[]
+interface IGridLayoutBaseProps {
   /** The horizontal alignment of the items within the grid */
   horizontalAlignment?: IHorizontalAlignmentDefinition | HorizontalAlignment
   /** The vertical alignment of the items within the grid */
@@ -90,12 +87,24 @@ interface IGridLayoutProps {
   componentContext?: string
 }
 
-export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
+interface IGridLayoutPropsWithCells extends IGridLayoutBaseProps {
+  /** The cell objects to place within the grid */
+  cells: IGridLayoutCell[]
+}
+
+interface IGridLayoutPropsWithChildren extends IGridLayoutBaseProps {
+  /** The cell components to place within the grid */
+  children: Array<React.ReactElement<IStyledCellProps>> | React.ReactElement<IStyledCellProps>
+}
+
+type GridLayoutProps = IGridLayoutPropsWithCells | IGridLayoutPropsWithChildren
+
+export class GridLayout extends React.PureComponent<GridLayoutProps, never> {
   public static Cell = StyledCell
   public static HorizontalAlignment = HorizontalAlignment
   public static VerticalAlignment = VerticalAlignment
 
-  public static defaultProps: Partial<IGridLayoutProps> = {
+  public static defaultProps: Partial<GridLayoutProps> = {
     gridColumns: 12,
     horizontalAlignment: HorizontalAlignment.Left,
     verticalAlignment: VerticalAlignment.Stretch,
@@ -105,7 +114,7 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
     gutterPaddingY: 'none'
   }
 
-  public render (): JSX.Element {
+  public render(): JSX.Element {
     const {
       gridColumns,
       gutterMarginX,
@@ -115,20 +124,18 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
       horizontalAlignment,
       verticalAlignment,
       componentContext,
-      cells,
-      children,
-      animationStyle: gridAnimationStyle
+      animationStyle: gridAnimationStyle,
     } = this.props
 
     let renderChildren: Array<React.ReactElement<IStyledCellProps>> = [<></>]
 
-    if (cells) {
-      renderChildren = cells.map(this.getCellForDefinition)
-    } else if (children) {
+    if ('cells' in this.props) {
+      renderChildren = this.props.cells.map(this.getCellForDefinition)
+    } else if ('children' in this.props) {
       renderChildren = React.Children.map<
         React.ReactElement,
         React.ReactElement<IStyledCellProps>
-      >(children, (child, index) => {
+      >(this.props.children, (child, index) => {
         const { key, size, offset, animationStyle: cellAnimationStyle, flexHorizontalAlignments, displayType } = child.props
         return (
           <CSSTransition
