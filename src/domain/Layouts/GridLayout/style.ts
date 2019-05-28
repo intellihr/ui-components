@@ -423,7 +423,7 @@ function cellStyleForSizeAndGutters (
   }
 
   if (displayType === 'flex') {
-    flexHorizontalAlignmentProperties = css `
+    flexHorizontalAlignmentProperties = css`
       display: flex;
 
       ${getPropertiesForHorizontalAlignment(flexHorizontalAlignment)}
@@ -455,72 +455,72 @@ function cellStyleForProps (props: IStyledCellProps) {
   return css`
     ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
       ${cellStyleForSizeAndGutters({
-        gridColumns,
-        size: getSizeAtBreakpoint(size, 'min'),
-        offset: getOffsetAtBreakpoint(offset, 'min'),
-        displayType: props.displayType,
-        flexHorizontalAlignment: getHorizontalAlignmentAtBreakpoint(props.flexHorizontalAlignments, 'min'),
-        gutters: {
-          marginXPx: getGutterPxAtBreakpoint(gutterMarginX, 'min'),
-          marginYPx: getGutterPxAtBreakpoint(gutterMarginY, 'min'),
-          paddingXPx: getGutterPxAtBreakpoint(gutterPaddingX, 'min'),
-          paddingYPx: getGutterPxAtBreakpoint(gutterPaddingY, 'min')
-        }
-      })}
+    gridColumns,
+    size: getSizeAtBreakpoint(size, 'min'),
+    offset: getOffsetAtBreakpoint(offset, 'min'),
+    displayType: props.displayType,
+    flexHorizontalAlignment: getHorizontalAlignmentAtBreakpoint(props.flexHorizontalAlignments, 'min'),
+    gutters: {
+      marginXPx: getGutterPxAtBreakpoint(gutterMarginX, 'min'),
+      marginYPx: getGutterPxAtBreakpoint(gutterMarginY, 'min'),
+      paddingXPx: getGutterPxAtBreakpoint(gutterPaddingX, 'min'),
+      paddingYPx: getGutterPxAtBreakpoint(gutterPaddingY, 'min')
+    }
+  })}
     }
 
     ${Utils.mediaQueryBetweenSizes({
-      minPx: Variables.Breakpoint.breakpointTablet,
-      maxPx: Variables.Breakpoint.breakpointDesktop
-    })} {
+    minPx: Variables.Breakpoint.breakpointTablet,
+    maxPx: Variables.Breakpoint.breakpointDesktop
+  })} {
       ${cellStyleForSizeAndGutters({
-        gridColumns,
-        size: getSizeAtBreakpoint(size, 'tablet'),
-        offset: getOffsetAtBreakpoint(offset, 'tablet'),
-        displayType: props.displayType,
-        flexHorizontalAlignment: getHorizontalAlignmentAtBreakpoint(props.flexHorizontalAlignments, 'tablet'),
-        gutters: {
-          marginXPx: getGutterPxAtBreakpoint(gutterMarginX, 'tablet'),
-          marginYPx: getGutterPxAtBreakpoint(gutterMarginY, 'tablet'),
-          paddingXPx: getGutterPxAtBreakpoint(gutterPaddingX, 'tablet'),
-          paddingYPx: getGutterPxAtBreakpoint(gutterPaddingY, 'tablet')
-        }
-      })}
+    gridColumns,
+    size: getSizeAtBreakpoint(size, 'tablet'),
+    offset: getOffsetAtBreakpoint(offset, 'tablet'),
+    displayType: props.displayType,
+    flexHorizontalAlignment: getHorizontalAlignmentAtBreakpoint(props.flexHorizontalAlignments, 'tablet'),
+    gutters: {
+      marginXPx: getGutterPxAtBreakpoint(gutterMarginX, 'tablet'),
+      marginYPx: getGutterPxAtBreakpoint(gutterMarginY, 'tablet'),
+      paddingXPx: getGutterPxAtBreakpoint(gutterPaddingX, 'tablet'),
+      paddingYPx: getGutterPxAtBreakpoint(gutterPaddingY, 'tablet')
+    }
+  })}
     }
 
     ${Utils.mediaQueryBetweenSizes({
-      minPx: Variables.Breakpoint.breakpointDesktop,
-      maxPx: Variables.Breakpoint.breakpointBigDesktop
-    })} {
+    minPx: Variables.Breakpoint.breakpointDesktop,
+    maxPx: Variables.Breakpoint.breakpointBigDesktop
+  })} {
       ${cellStyleForSizeAndGutters({
-        gridColumns,
-        size: getSizeAtBreakpoint(size, 'desktop'),
-        offset: getOffsetAtBreakpoint(offset, 'desktop'),
-        displayType: props.displayType,
-        flexHorizontalAlignment: getHorizontalAlignmentAtBreakpoint(props.flexHorizontalAlignments, 'desktop'),
-        gutters: {
-          marginXPx: getGutterPxAtBreakpoint(gutterMarginX, 'desktop'),
-          marginYPx: getGutterPxAtBreakpoint(gutterMarginY, 'desktop'),
-          paddingXPx: getGutterPxAtBreakpoint(gutterPaddingX, 'desktop'),
-          paddingYPx: getGutterPxAtBreakpoint(gutterPaddingY, 'desktop')
-        }
-      })}
+    gridColumns,
+    size: getSizeAtBreakpoint(size, 'desktop'),
+    offset: getOffsetAtBreakpoint(offset, 'desktop'),
+    displayType: props.displayType,
+    flexHorizontalAlignment: getHorizontalAlignmentAtBreakpoint(props.flexHorizontalAlignments, 'desktop'),
+    gutters: {
+      marginXPx: getGutterPxAtBreakpoint(gutterMarginX, 'desktop'),
+      marginYPx: getGutterPxAtBreakpoint(gutterMarginY, 'desktop'),
+      paddingXPx: getGutterPxAtBreakpoint(gutterPaddingX, 'desktop'),
+      paddingYPx: getGutterPxAtBreakpoint(gutterPaddingY, 'desktop')
+    }
+  })}
     }
 
     ${Utils.mediaQueryBetweenSizes({ minPx: Variables.Breakpoint.breakpointBigDesktop })} {
       ${cellStyleForSizeAndGutters({
-        gridColumns,
-        size: getSizeAtBreakpoint(size, 'bigDesktop'),
-        offset: getOffsetAtBreakpoint(offset, 'bigDesktop'),
-        displayType: props.displayType,
-        flexHorizontalAlignment: getHorizontalAlignmentAtBreakpoint(props.flexHorizontalAlignments, 'bigDesktop'),
-        gutters: {
-          marginXPx: getGutterPxAtBreakpoint(gutterMarginX, 'bigDesktop'),
-          marginYPx: getGutterPxAtBreakpoint(gutterMarginY, 'bigDesktop'),
-          paddingXPx: getGutterPxAtBreakpoint(gutterPaddingX, 'bigDesktop'),
-          paddingYPx: getGutterPxAtBreakpoint(gutterPaddingY, 'bigDesktop')
-        }
-      })}
+    gridColumns,
+    size: getSizeAtBreakpoint(size, 'bigDesktop'),
+    offset: getOffsetAtBreakpoint(offset, 'bigDesktop'),
+    displayType: props.displayType,
+    flexHorizontalAlignment: getHorizontalAlignmentAtBreakpoint(props.flexHorizontalAlignments, 'bigDesktop'),
+    gutters: {
+      marginXPx: getGutterPxAtBreakpoint(gutterMarginX, 'bigDesktop'),
+      marginYPx: getGutterPxAtBreakpoint(gutterMarginY, 'bigDesktop'),
+      paddingXPx: getGutterPxAtBreakpoint(gutterPaddingX, 'bigDesktop'),
+      paddingYPx: getGutterPxAtBreakpoint(gutterPaddingY, 'bigDesktop')
+    }
+  })}
     }
   `
 }

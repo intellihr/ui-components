@@ -57,7 +57,7 @@ interface IGridLayoutCell {
   /** The display type of this cell */
   displayType?: CellDisplayType
   /** The content alignment in this cell when the cell is in flex display type */
-  flexHorizontalAlignment?: IHorizontalAlignmentDefinition | HorizontalAlignment
+  flexHorizontalAlignments?: IHorizontalAlignmentDefinition | HorizontalAlignment
   /** The cell offset from the edge of the grid */
   offset?: ICellOffsetDefinition | number
   /** Animation style for adding/removing the cell (overrides the grid style) */
@@ -129,7 +129,7 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
         React.ReactElement,
         React.ReactElement<IStyledCellProps>
       >(children, (child, index) => {
-        const { key, size, offset, animationStyle: cellAnimationStyle } = child.props
+        const { key, size, offset, animationStyle: cellAnimationStyle, flexHorizontalAlignments, displayType } = child.props
         return (
           <CSSTransition
             key={key !== undefined ? key : index}
@@ -142,6 +142,8 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
               size: size || 'auto',
               offset: offset || 0,
               animationStyle: cellAnimationStyle ? cellAnimationStyle : gridAnimationStyle,
+              displayType: displayType || 'block',
+              flexHorizontalAlignments: flexHorizontalAlignments || HorizontalAlignment.Left,
               gridColumns,
               gutterMarginX,
               gutterMarginY,
@@ -184,7 +186,7 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
       content,
       size,
       displayType,
-      flexHorizontalAlignment,
+      flexHorizontalAlignments,
       offset,
       componentContext,
       animationStyle: cellAnimationStyle
@@ -202,7 +204,7 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
           animationStyle={cellAnimationStyle || gridAnimationStyle || 'none'}
           gridColumns={gridColumns!}
           displayType={displayType || 'block'}
-          flexHorizontalAlignments={flexHorizontalAlignment || HorizontalAlignment.Left}
+          flexHorizontalAlignments={flexHorizontalAlignments || HorizontalAlignment.Left}
           gutterMarginX={gutterMarginX!}
           gutterMarginY={gutterMarginY!}
           gutterPaddingX={gutterPaddingX!}
