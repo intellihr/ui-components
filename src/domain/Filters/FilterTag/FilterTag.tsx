@@ -7,27 +7,27 @@ import { BrickColor } from '../../Typographies/Brick/style'
 import { Text } from '../../Typographies/Text'
 import { StyledDeleteButton, TagWrapper } from './style'
 
-export interface IFilterTagOption {
+export interface IFilterTagDetail {
   field: string
   operator: string
   value: string
 }
 
 export interface IFilterTagProps {
-  options: IFilterTagOption[]
-  handleDelete: (option: IFilterTagOption) => void
+  tags: IFilterTagDetail[]
+  handleDelete: (option: IFilterTagDetail) => void
 }
 
 export class FilterTag extends React.PureComponent<IFilterTagProps> {
   public render (): JSX.Element | null {
     const {
-      options
+      tags
     } = this.props
 
-    if (options) {
+    if (tags) {
       return (
         <>
-          {options.map((option, index) => this.renderTag(option, index))}
+          {tags.map((tag, index) => this.renderTag(tag, index))}
         </>
       )
     }
@@ -35,7 +35,7 @@ export class FilterTag extends React.PureComponent<IFilterTagProps> {
     return null
   }
 
-  private renderTag = (option: IFilterTagOption, index: number) => {
+  private renderTag = (tag: IFilterTagDetail, index: number) => {
     return (
       <TagWrapper id={`tag-${index}`}>
         <Brick
@@ -46,17 +46,17 @@ export class FilterTag extends React.PureComponent<IFilterTagProps> {
             color={Variables.Color.n800}
             type={Props.TypographyType.XSmall}
           >
-            {`${option.field} ${option.operator} `}
+            {`${tag.field} ${tag.operator} `}
           </Text>
           <Text
             color={Variables.Color.n800}
             type={Props.TypographyType.XSmall}
             weight='heavy'
           >
-            {option.value}
+            {tag.value}
           </Text>
           <StyledDeleteButton
-            onClick={this.deleteTag(option)}
+            onClick={this.deleteTag(tag)}
           >
             <FontAwesomeIcon
               size='xsmall'
@@ -69,11 +69,11 @@ export class FilterTag extends React.PureComponent<IFilterTagProps> {
     )
   }
 
-  private deleteTag = (option: IFilterTagOption) => () => {
+  private deleteTag = (selectedTag: IFilterTagDetail) => () => {
     const {
       handleDelete
     } = this.props
 
-    handleDelete(option)
+    handleDelete(selectedTag)
   }
 }

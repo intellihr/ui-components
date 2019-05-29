@@ -2,7 +2,7 @@
 
 ```jsx
 initialState = {
-  options: [
+  tags: [
     { 
       field: 'Type',
       operator: 'is',
@@ -17,7 +17,7 @@ initialState = {
 };
 
 <FilterTag
-  options = {state.options}
-  handleDelete = {(selectedOption) => { setState({ options: state.options.filter(option => !Object.is(option, selectedOption)) }) }}
+  tags = {state.tags}
+  handleDelete = {(selectedTag) => { setState({ tags: state.tags.filter(tag => !Object.is(tag, selectedTag)) }) }}
 />
 ```

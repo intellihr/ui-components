@@ -4,11 +4,11 @@
 import { Button } from '@Domain/Buttons';
 
 initialState = {
-  options: [
+  filters: [
     { 
       field: 'Type',
       type: 'select',
-      value: [
+      selectOptions: [
         'Product Training',
         'Personal Development',
         'Soft Skill'
@@ -17,7 +17,7 @@ initialState = {
     {
       field: 'Training Provider',
       type: 'select',
-      value: [
+      selectOptions: [
         'Internal',
         'External',
         'Others'
@@ -37,7 +37,7 @@ initialState = {
         Add filter
       </Button>
     }
-  options = {state.options}
-  handleFilter = {(option) => alert(`Filter Applied: ${option.field} ${option.operator} ${option.value}`)}
+  filters = {state.filters}
+  handleFilter = {(filter) => alert(`Filter Applied: ${filter.field} ${filter.operator} ${filter.value}`)}
 />
 ```
