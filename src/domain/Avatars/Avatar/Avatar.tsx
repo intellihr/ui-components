@@ -7,6 +7,7 @@ import React from 'react'
 
 import { Props } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons'
+import { AvatarPicture, AvatarPictureContainer } from './style'
 const style = require('./Avatar.scss')
 
 export interface IAvatarProps {
@@ -131,7 +132,9 @@ class Avatar extends React.Component<IAvatarProps> {
 
   private get avatarContent (): JSX.Element {
     const {
-      initials
+      initials,
+      imageUrl,
+      imageData
     } = this.props
 
     if (this.state.showInitials) {
@@ -145,9 +148,9 @@ class Avatar extends React.Component<IAvatarProps> {
     }
 
     return (
-      <div className='avatar-picture-container'>
+      <AvatarPictureContainer imageUrl={imageUrl || imageData || ''}>
         {this.picture}
-      </div>
+      </AvatarPictureContainer>
     )
   }
 
@@ -160,7 +163,7 @@ class Avatar extends React.Component<IAvatarProps> {
     const errorHandler = () => { this.setState({showInitials: true}) }
 
     return (
-      <img
+      <AvatarPicture
         src={imageUrl || imageData}
         onError={errorHandler}
       />

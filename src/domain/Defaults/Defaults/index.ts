@@ -1,1 +1,1 @@
-export { defaults, IDefaults, DefaultsConsumer, DefaultsProvider } from './Defaults'
+export { defaults, IDefaults, DefaultsConsumer, DefaultsProvider, DefaultsContext } from './Defaults'

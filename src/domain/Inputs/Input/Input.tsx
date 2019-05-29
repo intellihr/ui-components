@@ -2,6 +2,7 @@ import classNames from 'classnames'
 import { get, isNil } from 'lodash'
 import React, { ChangeEventHandler, RefObject } from 'react'
 
+import { Props } from '../../../common'
 import { DisabledTextWrapper, InputWrapper, PrefixWrapper, StyledInput } from '../services/style'
 import { InputGroupPosition } from '../InputGroup'
 
@@ -50,6 +51,8 @@ interface IGenericInputProps {
   width?: string
   /** Disable Prefix to display in the input box */
   disabledPrefix?: string
+  /** The component context */
+  componentContext?: string
 }
 
 interface InputProps extends IGenericInputProps {
@@ -135,7 +138,8 @@ export class Input extends React.PureComponent<InputProps> {
       autoFocus,
       handleKeyDown,
       isChecked,
-      width
+      width,
+      componentContext
     } = this.props
 
     return (
@@ -158,6 +162,8 @@ export class Input extends React.PureComponent<InputProps> {
         required={isHTML5Required}
         autoFocus={autoFocus}
         style={width ? { width } : undefined}
+        data-component-type={Props.ComponentType.TextInput}
+        data-component-context={componentContext}
       />
     )
   }

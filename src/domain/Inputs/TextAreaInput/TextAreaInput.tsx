@@ -1,7 +1,11 @@
 import classNames from 'classnames'
-import React, { ChangeEventHandler } from 'react'
+import React, { useContext } from 'react'
 
-import { StyledAutosizeTextarea } from '../../Inputs/TextAreaInput/style'
+import { Props } from '../../../common'
+import { DefaultsContext } from '../../Defaults'
+import { StyledAutosizeTextarea, StyledTextAreaContainer } from '../../Inputs/TextAreaInput/style'
+import { GifSection } from './GifSection'
+import { TenorGifSelector } from './TenorGifSelector'
 
 interface ITextAreaInputProps {
   /** ID of the input */
@@ -13,7 +17,7 @@ interface ITextAreaInputProps {
   /** If true, adds invalid input class to component */
   isInvalid?: boolean
   /** Function passed to `onChange` prop */
-  handleChange?: ChangeEventHandler<HTMLTextAreaElement>
+  handleChange?: React.ChangeEventHandler<HTMLTextAreaElement>
   /** Value of the input */
   value?: string
   /** If true, sets input to disabled state */
@@ -24,54 +28,80 @@ interface ITextAreaInputProps {
   placeholder?: string
   /** If true, use HTML5 required attribute */
   isHTML5Required?: boolean
+  /** Value of the selected gif url */
+  gifUrl?: string
+  /** Gives parent access to the gif url when it is selected */
+  handleGifChange?: (url: string) => void
+  /** The component context */
+  componentContext?: string
 }
 
-class TextAreaInput extends React.PureComponent<ITextAreaInputProps> {
-  public static defaultProps: Partial<ITextAreaInputProps> = {
-    rows: 2
+const TextAreaInput: React.FC<ITextAreaInputProps> = ({
+  id,
+  className,
+  name,
+  placeholder,
+  value,
+  handleChange,
+  rows = 2,
+  isInvalid,
+  isDisabled,
+  isHTML5Required,
+  gifUrl,
+  handleGifChange,
+  componentContext
+}) => {
+  const { tenorApiKey } = useContext(DefaultsContext)
+  const hasGif = gifUrl !== ''
+  const gifsEnabled = (gifUrl !== undefined) && (handleGifChange !== undefined) && (tenorApiKey !== undefined)
+  const showGifs = !isDisabled && gifsEnabled
+
+  const clearGif = () => {
+    if (handleGifChange !== undefined) {
+      handleGifChange('')
+    }
   }
 
-  get classNames (): string {
-    const {
-      className,
-      isInvalid
-    } = this.props
+  const classes = classNames(className, {
+    'is-invalid-input': isInvalid
+  })
 
-    return classNames(
-      className,
-      {'is-invalid-input': isInvalid}
-    )
-  }
-
-  public render (): JSX.Element {
-    const {
-      id,
-      name,
-      value,
-      handleChange,
-      isDisabled,
-      rows,
-      placeholder,
-      isHTML5Required
-    } = this.props
-
-    return (
+  return (
+    <StyledTextAreaContainer
+      data-component-type={Props.ComponentType.TextAreaInput}
+      data-component-context={componentContext}
+    >
       <StyledAutosizeTextarea
+        className={classes}
         id={id || name}
         name={name}
         onChange={handleChange}
         value={value}
-        className={this.classNames}
         disabled={isDisabled}
         rows={rows}
         placeholder={placeholder}
         required={isHTML5Required}
+        gifsEnabled={showGifs}
+        hasGif={hasGif}
       />
-    )
-  }
+      {showGifs &&
+        <>
+          <GifSection
+            clearGif={clearGif}
+            handleGifChange={handleGifChange!}
+            gifUrl={gifUrl!}
+          />
+          <TenorGifSelector
+            apiKey={tenorApiKey!}
+            handleGifChange={handleGifChange!}
+          />
+        </>
+      }
+    </StyledTextAreaContainer>
+  )
 }
 
 export {
-  TextAreaInput,
-  ITextAreaInputProps
+  ITextAreaInputProps,
+  TextAreaInput
 }

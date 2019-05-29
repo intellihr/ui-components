@@ -27,6 +27,7 @@ interface ISingleDateInputProps {
   /** Applies recommended settings for mobile and tablet viewports */
   isMobile?: boolean
   value: Moment | null
+  placeholder?: string
 }
 
 interface ISingleDateInputState {
@@ -50,7 +51,8 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
       dateFormat,
       isDisabled,
       isMobile,
-      value
+      value,
+      placeholder
     } = this.props
 
     return (
@@ -61,7 +63,7 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
         <SingleDatePicker
           id={name}
           date={value}
-          placeholder={dateFormat}
+          placeholder={placeholder || dateFormat}
           displayFormat={dateFormat}
           onDateChange={this.dateChange}
           focused={this.state.focused}
