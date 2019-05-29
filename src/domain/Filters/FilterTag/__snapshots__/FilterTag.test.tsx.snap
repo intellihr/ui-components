@@ -2,11 +2,10 @@
 
 exports[`<FilterTag /> should render the filter tag 1`] = `
 <Fragment>
-  <styled.span
-    id="tag-0"
-  >
+  <styled.span>
     <Brick
       color="neutral"
+      key="tag-0"
       typographyType="xsmall"
     >
       <Text
@@ -37,11 +36,10 @@ exports[`<FilterTag /> should render the filter tag 1`] = `
       </styled.button>
     </Brick>
   </styled.span>
-  <styled.span
-    id="tag-1"
-  >
+  <styled.span>
     <Brick
       color="neutral"
+      key="tag-1"
       typographyType="xsmall"
     >
       <Text

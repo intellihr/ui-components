@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilterController /> should render the filter controller 1`] = `
+<Fragment>
+  <InputGroup>
+    <FilterDropdown
+      filters={
+        Array [
+          Object {
+            "field": "Type",
+            "selectOptions": Array [
+              "Product Training",
+              "Personal Development",
+              "Soft Skill",
+            ],
+            "type": "select",
+          },
+          Object {
+            "field": "Training Provider",
+            "selectOptions": Array [
+              "Internal",
+              "External",
+              "Others",
+            ],
+            "type": "select",
+          },
+        ]
+      }
+      handleFilter={[Function]}
+      tableName="training"
+      toggleComponent={[Function]}
+    />
+    <TextInput
+      groupPosition="right"
+      handleChange={[Function]}
+      icon={
+        <FontAwesomeIcon
+          type="search"
+        />
+      }
+      name="filterControllerSearchInput"
+      placeholder="Search training"
+    />
+  </InputGroup>
+  <FilterTag
+    handleDelete={[Function]}
+    tags={Array []}
+  />
+</Fragment>
+`;

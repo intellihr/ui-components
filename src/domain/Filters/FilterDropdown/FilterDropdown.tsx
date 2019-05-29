@@ -9,12 +9,12 @@ import { Text } from '../../Typographies/Text'
 import { OperatorTextWrapper, StyledDropdownMenu } from './style'
 
 export interface IFilterDropdownProps {
-  /** table name the the filters applied to */
+  /** table name that the filters applied to */
   tableName: string
   /** filter selection of this filter dropdown */
   filters: IFilterDropdownFilter[]
   /** Callback when a filter is added */
-  handleFilter: (option: ISelectedFilter) => void
+  handleFilter: (selectedFilter: ISelectedFilter) => void
   /**
    * The parent component that opens the filter dropdown and positions it on the page.
    * The callback is given a toggle menu prop which can be used to toggle the menu as needed.
@@ -22,7 +22,7 @@ export interface IFilterDropdownProps {
   toggleComponent: (props: IDropdownMenuToggleComponentProps) => React.ReactElement<any>
 }
 
-interface IFilterDropdownFilter {
+export interface IFilterDropdownFilter {
   type?: 'select'
   field: string
   selectOptions: string[]

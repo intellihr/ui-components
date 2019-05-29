@@ -15,7 +15,7 @@ export interface IFilterTagDetail {
 
 export interface IFilterTagProps {
   tags: IFilterTagDetail[]
-  handleDelete: (option: IFilterTagDetail) => void
+  handleDelete: (selectedTag: IFilterTagDetail) => void
 }
 
 export class FilterTag extends React.PureComponent<IFilterTagProps> {
@@ -37,8 +37,9 @@ export class FilterTag extends React.PureComponent<IFilterTagProps> {
 
   private renderTag = (tag: IFilterTagDetail, index: number) => {
     return (
-      <TagWrapper id={`tag-${index}`}>
+      <TagWrapper>
         <Brick
+          key={`tag-${index}`}
           typographyType={Props.TypographyType.XSmall}
           color={BrickColor.Neutral}
         >
