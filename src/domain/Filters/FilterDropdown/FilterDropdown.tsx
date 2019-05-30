@@ -14,7 +14,7 @@ export interface IFilterDropdownProps {
   /** filter selection of this filter dropdown */
   filters: IFilterDropdownFilter[]
   /** Callback when a filter is added */
-  handleFilter: (selectedFilter: ISelectedFilter) => void
+  onFilterAdded: (selectedFilter: ISelectedFilter) => void
   /**
    * The parent component that opens the filter dropdown and positions it on the page.
    * The callback is given a toggle menu prop which can be used to toggle the menu as needed.
@@ -181,10 +181,11 @@ export class FilterDropdown extends React.PureComponent<IFilterDropdownProps, IF
 
   private applyFilter = (selectedFilter: ISelectedFilter, closeMenu: () => void) => () => {
     const {
-      handleFilter
+      onFilterAdded
     } = this.props
 
-    handleFilter(selectedFilter)
+    onFilterAdded(selectedFilter)
     closeMenu()
+    this.setState({ selectedFilter: { field: '', operator:  '', value: '' }})
   }
 }

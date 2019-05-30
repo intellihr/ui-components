@@ -35,8 +35,8 @@ describe('<FilterDropdown />', () => {
       <FilterDropdown
         tableName='training'
         toggleComponent={toggleComponent}
-        filters = {filters}
-        handleFilter = {dummyHandleFilter}
+        filters={filters}
+        handleFilter={dummyHandleFilter}
       />
     )
 

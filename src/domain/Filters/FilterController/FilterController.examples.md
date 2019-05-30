@@ -1,6 +1,8 @@
 #### Filter Dropdown
 
 ```jsx
+import { isEqual } from 'lodash';
+
 initialState = {
   searchValue: null,
   filters: [
@@ -31,8 +33,8 @@ initialState = {
   filters = {state.filters}
   tags = {state.tags}
   searchValue = {state.searchValue}
-  handleFilter = {(filter) => { setState({ tags:  state.tags.concat(filter) }) }}
-  handleTagDelete = {(selectedTag) => { setState({ tags: state.tags.filter(tag => !Object.is(tag, selectedTag)) }) }}
-  handleSearchChange = {(event) => { setState({ searchValue: event.target.value }); console.log(event.target.value) }}
+  onFilterAdded = {(filter) => { state.tags.every(tag => !isEqual(tag, filter)) && setState({ tags: state.tags.concat(filter) }) }}
+  onTagDeleted = {(deletedTag) => { setState({ tags: state.tags.filter(tag => !isEqual(tag, deletedTag)) }) }}
+  onSearchUpdated = {(event) => { setState({ searchValue: event.target.value }); console.log('search value updated:', event.target.value) }}
 />
 ```

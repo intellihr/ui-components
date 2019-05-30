@@ -1,11 +1,10 @@
 import React from 'react'
 
-import { Props, Variables } from '../../../common'
-import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
-import { Brick } from '../../Typographies/Brick'
-import { BrickColor } from '../../Typographies/Brick/style'
-import { Text } from '../../Typographies/Text'
-import { StyledDeleteButton, TagWrapper } from './style'
+import {Props, Variables} from '../../../common'
+import {Brick} from '../../Typographies/Brick'
+import {BrickColor} from '../../Typographies/Brick/style'
+import {Text} from '../../Typographies/Text'
+import {StyledCross, StyledDeleteButton, TagWrapper} from './style'
 
 export interface IFilterTagDetail {
   field: string
@@ -15,7 +14,7 @@ export interface IFilterTagDetail {
 
 export interface IFilterTagProps {
   tags: IFilterTagDetail[]
-  handleDelete: (selectedTag: IFilterTagDetail) => void
+  onTagDeleted: (selectedTag: IFilterTagDetail) => void
 }
 
 export class FilterTag extends React.PureComponent<IFilterTagProps> {
@@ -59,22 +58,18 @@ export class FilterTag extends React.PureComponent<IFilterTagProps> {
           <StyledDeleteButton
             onClick={this.deleteTag(tag)}
           >
-            <FontAwesomeIcon
-              size='xsmall'
-              type='times'
-              color={Variables.Color.n600}
-            />
+            <StyledCross>×</StyledCross>
           </StyledDeleteButton>
         </Brick>
       </TagWrapper>
     )
   }
 
-  private deleteTag = (selectedTag: IFilterTagDetail) => () => {
+  private deleteTag = (deletedTag: IFilterTagDetail) => () => {
     const {
-      handleDelete
+      onTagDeleted
     } = this.props
 
-    handleDelete(selectedTag)
+    onTagDeleted(deletedTag)
   }
 }

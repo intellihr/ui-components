@@ -34,12 +34,12 @@ describe('<FilterController />', () => {
     const wrapper = shallow(
       <FilterController
         tableName='training'
-        filters = {filters}
-        tags = {[]}
-        searchValue = 'val'
-        handleFilter = {dummyHandleFilter}
-        handleTagDelete = {handleTagDelete}
-        handleSearchChange = {handleSearchChange}
+        filters={filters}
+        tags={[]}
+        searchValue='val'
+        handleFilter={dummyHandleFilter}
+        handleTagDelete={handleTagDelete}
+        handleSearchChange={handleSearchChange}
       />
     )
 

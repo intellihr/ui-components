@@ -1,10 +1,11 @@
-import React, {ChangeEventHandler} from 'react'
+import React, { ChangeEventHandler } from 'react'
 
-import { FilterDropdown, IFilterDropdownFilter, ISelectedFilter } from '../FilterDropdown/FilterDropdown'
-import { FilterTag, IFilterTagDetail } from '../FilterTag/FilterTag'
+import { Props } from '../../../common'
+import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { InputGroup } from '../../Inputs/InputGroup'
 import { TextInput } from '../../Inputs/TextInput'
-import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
+import { FilterDropdown, IFilterDropdownFilter, ISelectedFilter } from '../FilterDropdown/FilterDropdown'
+import { FilterTag, IFilterTagDetail } from '../FilterTag/FilterTag'
 
 export interface IFilterTagProps {
   /** table name of this filter controller */
@@ -14,11 +15,13 @@ export interface IFilterTagProps {
   /** filter tags of this filter controller */
   tags: IFilterTagDetail[]
   /** Callback when a filter is added */
-  handleFilter: (selectedFilter: ISelectedFilter) => void
+  onFilterAdded: (selectedFilter: ISelectedFilter) => void
   /** Callback when a tag is deleted */
-  handleTagDelete: (selectedTag: IFilterTagDetail) => void
+  onTagDeleted: (selectedTag: IFilterTagDetail) => void
   /** Callback when input is added in search bar */
-  handleSearchChange: ChangeEventHandler<HTMLInputElement>
+  onSearchUpdated: ChangeEventHandler<HTMLInputElement>
+  /** The margins around the component */
+  margins?: Props.IMargins
 }
 
 export class FilterController extends React.PureComponent<IFilterTagProps> {
@@ -26,30 +29,30 @@ export class FilterController extends React.PureComponent<IFilterTagProps> {
     const {
       tableName,
       filters,
-      handleFilter,
+      onFilterAdded,
       tags,
-      handleTagDelete,
-      handleSearchChange
+      onTagDeleted,
+      onSearchUpdated
     } = this.props
 
     return (
       <>
         <InputGroup>
           <FilterDropdown
-            tableName='training'
+            tableName={tableName}
             toggleComponent={this.filterButton}
             filters={filters}
-            handleFilter={handleFilter}
+            onFilterAdded={onFilterAdded}
           />
           <TextInput
             icon={<FontAwesomeIcon type='search' />}
             name='filterControllerSearchInput'
             placeholder={`Search ${tableName}`}
             groupPosition='right'
-            handleChange={handleSearchChange}
+            handleChange={onSearchUpdated}
           />
         </InputGroup>
-        <FilterTag tags={tags} handleDelete={handleTagDelete}/>
+        <FilterTag tags={tags} onTagDeleted={onTagDeleted} />
       </>
     )
   }

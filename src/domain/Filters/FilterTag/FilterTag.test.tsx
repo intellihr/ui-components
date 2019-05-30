@@ -23,8 +23,8 @@ describe('<FilterTag />', () => {
   it(`should render the filter tag`, () => {
     const wrapper = shallow(
       <FilterTag
-        tags = {tags}
-        handleDelete = {dummyHandleDelete}
+        tags={tags}
+        handleDelete={dummyHandleDelete}
       />
     )
 
