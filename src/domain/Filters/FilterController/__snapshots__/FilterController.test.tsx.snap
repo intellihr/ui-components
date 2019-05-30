@@ -26,13 +26,11 @@ exports[`<FilterController /> should render the filter controller 1`] = `
           },
         ]
       }
-      handleFilter={[Function]}
       tableName="training"
       toggleComponent={[Function]}
     />
     <TextInput
       groupPosition="right"
-      handleChange={[Function]}
       icon={
         <FontAwesomeIcon
           type="search"
@@ -43,7 +41,6 @@ exports[`<FilterController /> should render the filter controller 1`] = `
     />
   </InputGroup>
   <FilterTag
-    handleDelete={[Function]}
     tags={Array []}
   />
 </Fragment>

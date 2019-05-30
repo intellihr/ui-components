@@ -28,11 +28,9 @@ exports[`<FilterTag /> should render the filter tag 1`] = `
       <styled.button
         onClick={[Function]}
       >
-        <FontAwesomeIcon
-          color="#667380"
-          size="xsmall"
-          type="times"
-        />
+        <styled.span>
+          ×
+        </styled.span>
       </styled.button>
     </Brick>
   </styled.span>
@@ -62,11 +60,9 @@ exports[`<FilterTag /> should render the filter tag 1`] = `
       <styled.button
         onClick={[Function]}
       >
-        <FontAwesomeIcon
-          color="#667380"
-          size="xsmall"
-          type="times"
-        />
+        <styled.span>
+          ×
+        </styled.span>
       </styled.button>
     </Brick>
   </styled.span>
