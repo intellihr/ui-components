@@ -64,6 +64,7 @@
 
     &:focus,
     &:hover {
+      background-color: $n200;
       border-color: $i400;
       outline: none;
     }
@@ -95,8 +96,11 @@
         color: $n700;
       }
     }
-  }
 
+    .DateInput_input__disabled {
+      font-style: normal;
+    }
+  }
 
   .DateRangePickerInput_arrow {
     cursor: default;
@@ -114,7 +118,7 @@
 
     &:focus,
     &:hover {
-      color: $n800;
+      color: $r600;
     }
 
     &:disabled {
@@ -124,10 +128,12 @@
   }
 
   .DateRangePickerInput__disabled {
+    background-color: $n200;
+
     &:focus,
     &:hover {
       border-color: $n400;
-      color: $n600;
+      cursor: not-allowed;
     }
   }
 
