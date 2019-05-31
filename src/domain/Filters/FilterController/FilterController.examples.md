@@ -1,4 +1,4 @@
-#### Filter Dropdown
+#### Filter Controller
 
 ```jsx
 import { isEqual } from 'lodash';
@@ -36,5 +36,6 @@ initialState = {
   onFilterAdded = {(filter) => { setState({ tags: (state.tags.filter(tag => tag.field !== filter.field)).concat(filter) }) }}
   onTagDeleted = {(deletedTag) => { setState({ tags: state.tags.filter(tag => !isEqual(tag, deletedTag)) }) }}
   onSearchUpdated = {(event) => { setState({ searchValue: event.target.value }); console.log('search value updated:', event.target.value) }}
+  onSearchCleared = {(event) => { setState({ searchValue: '' }); alert('clear search value') }}
 />
 ```

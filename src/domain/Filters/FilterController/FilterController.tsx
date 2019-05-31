@@ -14,12 +14,16 @@ export interface IFilterTagProps {
   filters: IFilterDropdownFilter[]
   /** filter tags of this filter controller */
   tags: IFilterTagDetail[]
+  /** search value of this filter controller */
+  searchValue?: string
   /** Callback when a filter is added */
   onFilterAdded: (selectedFilter: ISelectedFilter) => void
   /** Callback when a tag is deleted */
   onTagDeleted: (selectedTag: IFilterTagDetail) => void
   /** Callback when input is added in search bar */
   onSearchUpdated: ChangeEventHandler<HTMLInputElement>
+  /** Callback when input is cleared in search bar */
+  onSearchCleared: (e: React.MouseEvent<HTMLButtonElement>) => void
   /** The margins around the component */
   margins?: Props.IMargins
 }
@@ -32,7 +36,9 @@ export class FilterController extends React.PureComponent<IFilterTagProps> {
       onFilterAdded,
       tags,
       onTagDeleted,
-      onSearchUpdated
+      onSearchUpdated,
+      onSearchCleared,
+      searchValue
     } = this.props
 
     return (
@@ -48,8 +54,10 @@ export class FilterController extends React.PureComponent<IFilterTagProps> {
             icon={<FontAwesomeIcon type='search' />}
             name='filterControllerSearchInput'
             placeholder={`Search ${tableName}`}
+            value={searchValue}
             groupPosition='right'
             handleChange={onSearchUpdated}
+            handleClear={onSearchCleared}
           />
         </InputGroup>
         <FilterTag tags={tags} onTagDeleted={onTagDeleted} />

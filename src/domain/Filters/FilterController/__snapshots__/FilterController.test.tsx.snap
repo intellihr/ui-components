@@ -38,6 +38,7 @@ exports[`<FilterController /> should render the filter controller 1`] = `
       }
       name="filterControllerSearchInput"
       placeholder="Search training"
+      value="val"
     />
   </InputGroup>
   <FilterTag
