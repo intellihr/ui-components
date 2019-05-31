@@ -141,3 +141,17 @@ import { TextInput } from '@Domain/Inputs';
   value="Disabled input. Can't change this text"
 />
 ```
+
+#### Input with handleClear
+
+```jsx
+import { TextInput } from '@Domain/Inputs';
+
+initialState = { textValue: 'I have a clear button' };
+
+<TextInput
+    value={state.textValue}
+    handleClear={() => {setState({textValue: ''}); alert('clear value')}} 
+    handleChange={(e) => {setState({textValue: e.target.value})}}
+  />
+```
