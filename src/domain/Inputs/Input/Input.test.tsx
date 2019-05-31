@@ -4,6 +4,8 @@ import React from 'react'
 import { Icon } from '@Domain/Icons'
 import { Input } from './Input'
 
+const dummyClick = () => console.log('hey')
+
 describe('<Input />', () => {
   it(`should render an input`, () => {
     const wrapper = shallow(
@@ -97,6 +99,18 @@ describe('<Input />', () => {
         name='test-input'
         type='text'
         disabledPrefix='test'
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it(`should render an input with a clear button`, () => {
+    const wrapper = shallow(
+      <Input
+        name='test-input'
+        type='text'
+        handleClear={dummyClick}
       />
     )
 

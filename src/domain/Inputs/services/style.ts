@@ -6,6 +6,8 @@ export interface IInputWrapperProps {
   disabledPrefix?: string
   hasIcon: boolean
   prefixWrapperWidth: number
+  hasTextIndent: boolean
+  hasClearButton: boolean
 }
 
 const wrapperPadding = 8
@@ -15,9 +17,15 @@ const InputWrapper = styled.div`
   color: ${Variables.Color.n800};
   width: 100%;
 
-  ${(props: IInputWrapperProps) => css`
+  ${(props: IInputWrapperProps) => props.hasTextIndent && css`
      input {
         text-indent: ${props.prefixWrapperWidth - wrapperPadding}px;
+      }
+  `}
+
+  ${(props: IInputWrapperProps) => props.hasClearButton && css`
+      input {
+        padding-right: 32px;
       }
   `}
 
@@ -52,9 +60,22 @@ const StyledInput = styled.input`
   }
 `
 
+const StyleClearButton = styled.button`
+    position: absolute;
+    top: 11px;
+    right: 12px;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      color: ${Variables.Color.r600};
+    }
+`
+
 export {
   InputWrapper,
   PrefixWrapper,
   DisabledTextWrapper,
-  StyledInput
+  StyledInput,
+  StyleClearButton
 }
