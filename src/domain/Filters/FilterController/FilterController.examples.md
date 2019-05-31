@@ -33,7 +33,7 @@ initialState = {
   filters = {state.filters}
   tags = {state.tags}
   searchValue = {state.searchValue}
-  onFilterAdded = {(filter) => { state.tags.every(tag => !isEqual(tag, filter)) && setState({ tags: state.tags.concat(filter) }) }}
+  onFilterAdded = {(filter) => { setState({ tags: (state.tags.filter(tag => tag.field !== filter.field)).concat(filter) }) }}
   onTagDeleted = {(deletedTag) => { setState({ tags: state.tags.filter(tag => !isEqual(tag, deletedTag)) }) }}
   onSearchUpdated = {(event) => { setState({ searchValue: event.target.value }); console.log('search value updated:', event.target.value) }}
 />
