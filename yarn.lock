@@ -215,10 +215,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/enzyme@3.1.9":
-  version "3.1.9"
-  resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-3.1.9.tgz#fbd97f3beb7cad76fc9c6f04c97d77f4834522ef"
-  integrity sha512-spu+IYTIxDaaRBP12eYCpFJNQwtANX1ZxxXLk8SaCVjZnNUaIPtY7ek6ATdn5GykIf/E7L2lWnC3gQUl5b8kpQ==
+"@types/enzyme@3.9.3":
+  version "3.9.3"
+  resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-3.9.3.tgz#d1029c0edd353d7b00f3924803eb88216460beed"
+  integrity sha512-jDKoZiiMA3lGO3skSO7dfqEHNvmiTLLV+PHD9EBQVlJANJvpY6qq1zzjRI24ZOtG7F+CS7BVWDXKewRmN8PjHQ==
   dependencies:
     "@types/cheerio" "*"
     "@types/react" "*"
