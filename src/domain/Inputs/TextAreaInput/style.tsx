@@ -9,7 +9,7 @@ interface IStyledGifButtonProps {
   opened: boolean
 }
 
-interface IStyledAutosizeTextArea {
+interface IStyledAutosizeTextAreaProps {
   /** If the necessary props are passed in to enable gifs */
   gifsEnabled: boolean
   /** If a gif has been selected */
@@ -29,7 +29,7 @@ const StyledMainGifContainer = styled.div`
   align-items: flex-start;
 `
 
-const textArea: StyledFunction<IStyledAutosizeTextArea> = styled(({ hasGif, gifsEnabled, ...rest }) => <AutosizeTextarea {...rest} />)
+const textArea: StyledFunction<IStyledAutosizeTextAreaProps> = styled(({ hasGif, gifsEnabled, ...rest }) => <AutosizeTextarea {...rest} />)
 
 const StyledAutosizeTextarea = textArea`
   min-height: 39px;
