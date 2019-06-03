@@ -155,3 +155,22 @@ initialState = { textValue: 'I have a clear button' };
     handleChange={(e) => {setState({textValue: e.target.value})}}
   />
 ```
+
+#### Input with margins
+
+```jsx
+import { CheckboxInput, NumberInput, TextInput } from '@Domain/Inputs';
+
+initialState = { value: false };
+
+<div>
+  <TextInput
+   margins={{
+     top: 20,
+     left: 20,
+     right: 20,
+     bottom: 20
+   }}
+ />
+</div>
+```

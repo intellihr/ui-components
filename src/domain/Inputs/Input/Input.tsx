@@ -55,6 +55,8 @@ interface IGenericInputProps {
   componentContext?: string
   /** Handle clear button events */
   handleClear?: (e: React.MouseEvent<HTMLButtonElement>) => void
+  /** The margins around the component */
+  margins?: Props.IMargins
 }
 
 interface InputProps extends IGenericInputProps {
@@ -141,7 +143,8 @@ export class Input extends React.PureComponent<InputProps> {
       handleKeyDown,
       isChecked,
       width,
-      componentContext
+      componentContext,
+      margins
     } = this.props
 
     return (
@@ -166,6 +169,7 @@ export class Input extends React.PureComponent<InputProps> {
         style={width ? { width } : undefined}
         data-component-type={Props.ComponentType.TextInput}
         data-component-context={componentContext}
+        margins={margins}
       />
     )
   }
