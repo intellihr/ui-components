@@ -1,6 +1,7 @@
 import React from 'react'
 import AutosizeTextarea from 'react-autosize-textarea'
 import styled, { StyledFunction } from 'styled-components'
+
 import { Variables } from '../../../common'
 
 interface IStyledAutosizeTextAreaProps {
