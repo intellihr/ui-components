@@ -20,7 +20,7 @@
     "@intellihr/styled-components-breakpoint": "0.0.2",
     "@types/capitalize": "1.0.1",
     "@types/chart.js": "2.7.52",
-    "@types/classnames": "2.2.3",
+    "@types/classnames": "2.2.8",
     "@types/color": "3.0.0",
     "@types/emoji-mart": "2.8.4",
     "@types/enzyme": "3.1.9",
