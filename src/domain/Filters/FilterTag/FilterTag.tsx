@@ -1,13 +1,13 @@
 import React from 'react'
 
-import {Props, Variables} from '../../../common'
-import {Brick} from '../../Typographies/Brick'
-import {BrickColor} from '../../Typographies/Brick/style'
-import {Text} from '../../Typographies/Text'
-import {StyledCross, StyledDeleteButton, TagWrapper} from './style'
+import { Props, Variables } from '../../../common'
+import { Brick } from '../../Typographies/Brick'
+import { BrickColor } from '../../Typographies/Brick/style'
+import { Text } from '../../Typographies/Text'
+import { StyledCross, StyledDeleteButton } from './style'
 
 export interface IFilterTagDetail {
-  field: string
+  fieldName: string
   operator: string
   value: string
 }
@@ -36,32 +36,31 @@ export class FilterTag extends React.PureComponent<IFilterTagProps> {
 
   private renderTag = (tag: IFilterTagDetail, index: number) => {
     return (
-      <TagWrapper>
-        <Brick
-          key={`tag-${index}`}
-          typographyType={Props.TypographyType.XSmall}
-          color={BrickColor.Neutral}
+      <Brick
+        key={`tag-${tag.fieldName}-${index}`}
+        margins={{right: Variables.Spacing.sXSmall}}
+        typographyType={Props.TypographyType.Small}
+        color={BrickColor.Neutral}
+      >
+        <Text
+          color={Variables.Color.n800}
+          type={Props.TypographyType.Small}
         >
-          <Text
-            color={Variables.Color.n800}
-            type={Props.TypographyType.XSmall}
-          >
-            {`${tag.field} ${tag.operator} `}
-          </Text>
-          <Text
-            color={Variables.Color.n800}
-            type={Props.TypographyType.XSmall}
-            weight='heavy'
-          >
-            {tag.value}
-          </Text>
-          <StyledDeleteButton
-            onClick={this.deleteTag(tag)}
-          >
-            <StyledCross>×</StyledCross>
-          </StyledDeleteButton>
-        </Brick>
-      </TagWrapper>
+          {`${tag.fieldName} ${tag.operator} `}
+        </Text>
+        <Text
+          color={Variables.Color.n800}
+          type={Props.TypographyType.Small}
+          weight='heavy'
+        >
+          {tag.value}
+        </Text>
+        <StyledDeleteButton
+          onClick={this.deleteTag(tag)}
+        >
+          <StyledCross>×</StyledCross>
+        </StyledDeleteButton>
+      </Brick>
     )
   }
 

@@ -1,48 +1,85 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<FilterController /> should render the filter controller 1`] = `
-<Fragment>
-  <InputGroup>
+<styled.div
+  margins={
+    Object {
+      "bottom": 20,
+      "left": 20,
+      "right": 20,
+      "top": 20,
+    }
+  }
+>
+  <InputGroup
+    margins={
+      Object {
+        "bottom": 8,
+      }
+    }
+  >
     <FilterDropdown
+      filterMessage="dummy filter message:"
       filters={
         Array [
           Object {
-            "field": "Type",
+            "fieldName": "Type",
             "selectOptions": Array [
-              "Product Training",
-              "Personal Development",
-              "Soft Skill",
+              Object {
+                "label": "Product Training",
+                "value": "Product Training",
+              },
+              Object {
+                "label": "Personal Development",
+                "value": "Personal Development",
+              },
+              Object {
+                "label": "Soft Skill",
+                "value": "Soft Skill",
+              },
             ],
-            "type": "select",
+            "type": "SINGLE_SELECT",
           },
           Object {
-            "field": "Training Provider",
+            "fieldName": "Training Provider",
             "selectOptions": Array [
-              "Internal",
-              "External",
-              "Others",
+              Object {
+                "label": "Internal",
+                "value": "Internal",
+              },
+              Object {
+                "label": "External",
+                "value": "External",
+              },
+              Object {
+                "label": "Others",
+                "value": "Others",
+              },
             ],
-            "type": "select",
+            "type": "SINGLE_SELECT",
           },
         ]
       }
-      tableName="training"
+      onFilterAdded={[Function]}
       toggleComponent={[Function]}
     />
     <TextInput
       groupPosition="right"
+      handleChange={[Function]}
+      handleClear={[Function]}
       icon={
         <FontAwesomeIcon
           type="search"
         />
       }
       name="filterControllerSearchInput"
-      placeholder="Search training"
-      value="val"
+      placeholder="dummy search placeholder"
+      value="dummy search value"
     />
   </InputGroup>
   <FilterTag
+    onTagDeleted={[Function]}
     tags={Array []}
   />
-</Fragment>
+</styled.div>
 `;

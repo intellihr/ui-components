@@ -5,29 +5,47 @@ import { Button } from '@Domain/Buttons';
 
 initialState = {
   filters: [
-    { 
-      field: 'Type',
-      type: 'select',
-      selectOptions: [
-        'Product Training',
-        'Personal Development',
-        'Soft Skill'
-      ]
-    },
-    {
-      field: 'Training Provider',
-      type: 'select',
-      selectOptions: [
-        'Internal',
-        'External',
-        'Others'
-      ]
-    }
-  ]
+      { 
+        fieldName: 'Type',
+        type: FilterDropdown.FilterDropdownFilterType,
+        selectOptions: [
+          {
+            label: 'Product Training',
+            value: 'Product Training'
+          },
+          {
+            label: 'Personal Development',
+            value: 'Personal Development'
+          },
+          {
+            label: 'Soft Skill',
+            value: 'Soft Skill'
+          }
+        ]
+      },
+      {
+        fieldName: 'Training Provider',
+        type: 'SINGLE_SELECT',
+        selectOptions: [
+          {
+            label: 'Internal',
+            value: 'Internal'
+          },
+          {
+            label: 'External',
+            value: 'External'
+          },
+          {
+            label: 'Others',
+            value: 'Others'
+          }
+        ]
+      }
+    ]
 };
 
 <FilterDropdown
-  tableName='training'
+  filterMessage='Show all training where:'
   toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
       <Button
         onClick={toggleMenu}
@@ -38,6 +56,6 @@ initialState = {
       </Button>
     }
   filters = {state.filters}
-  handleFilter = {(filter) => alert(`Filter Applied: ${filter.field} ${filter.operator} ${filter.value}`)}
+  onFilterAdded = {(filter) => alert(`Filter Applied: ${filter.fieldName} ${filter.operator} ${filter.value}`)}
 />
 ```

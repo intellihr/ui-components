@@ -1,15 +1,18 @@
 import React, { ChangeEventHandler } from 'react'
 
-import { Props } from '../../../common'
+import { Props, Variables } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { InputGroup } from '../../Inputs/InputGroup'
 import { TextInput } from '../../Inputs/TextInput'
-import { FilterDropdown, IFilterDropdownFilter, ISelectedFilter } from '../FilterDropdown/FilterDropdown'
+import { FilterDropdown, IFilterDropdownFilter } from '../FilterDropdown/FilterDropdown'
 import { FilterTag, IFilterTagDetail } from '../FilterTag/FilterTag'
+import { ControllerWrapper } from './style'
 
-export interface IFilterTagProps {
-  /** table name of this filter controller */
-  tableName: string
+export interface IFilterControllerProps {
+  /** filter dropdown message of this filter controller */
+  filterMessage?: string
+  /** search input placeholder of this filter controller */
+  searchPlaceholder?: string
   /** filter selection of this filter controller */
   filters: IFilterDropdownFilter[]
   /** filter tags of this filter controller */
@@ -17,7 +20,7 @@ export interface IFilterTagProps {
   /** search value of this filter controller */
   searchValue?: string
   /** Callback when a filter is added */
-  onFilterAdded: (selectedFilter: ISelectedFilter) => void
+  onFilterAdded: (selectedFilter: IFilterTagDetail) => void
   /** Callback when a tag is deleted */
   onTagDeleted: (selectedTag: IFilterTagDetail) => void
   /** Callback when input is added in search bar */
@@ -28,24 +31,30 @@ export interface IFilterTagProps {
   margins?: Props.IMargins
 }
 
-export class FilterController extends React.PureComponent<IFilterTagProps> {
+export class FilterController extends React.PureComponent<IFilterControllerProps> {
+  public static defaultProps: Partial<IFilterControllerProps> = {
+    searchPlaceholder: 'Search'
+  }
+
   public render (): JSX.Element | null {
     const {
-      tableName,
+      filterMessage,
+      searchPlaceholder,
       filters,
       onFilterAdded,
       tags,
       onTagDeleted,
       onSearchUpdated,
       onSearchCleared,
-      searchValue
+      searchValue,
+      margins
     } = this.props
 
     return (
-      <>
-        <InputGroup>
+      <ControllerWrapper margins={margins}>
+        <InputGroup margins={{ bottom: Variables.Spacing.sXSmall }}>
           <FilterDropdown
-            tableName={tableName}
+            filterMessage={filterMessage}
             toggleComponent={this.filterButton}
             filters={filters}
             onFilterAdded={onFilterAdded}
@@ -53,7 +62,7 @@ export class FilterController extends React.PureComponent<IFilterTagProps> {
           <TextInput
             icon={<FontAwesomeIcon type='search' />}
             name='filterControllerSearchInput'
-            placeholder={`Search ${tableName}`}
+            placeholder={searchPlaceholder}
             value={searchValue}
             groupPosition='right'
             handleChange={onSearchUpdated}
@@ -61,7 +70,7 @@ export class FilterController extends React.PureComponent<IFilterTagProps> {
           />
         </InputGroup>
         <FilterTag tags={tags} onTagDeleted={onTagDeleted} />
-      </>
+      </ControllerWrapper>
     )
   }
 

@@ -3,16 +3,16 @@ import React from 'react'
 
 import { FilterTag } from './FilterTag'
 
-const dummyHandleDelete = (selectedTag) => console.log(selectedTag)
+const dummyHandleDelete = () => alert('dummy')
 
 const tags = [
   {
-    field: 'Type',
+    fieldName: 'Type',
     operator: 'is',
     value: 'Product Training'
   },
   {
-    field: 'Training Provider',
+    fieldName: 'Training Provider',
     operator: 'is',
     value: 'AWS'
   }
@@ -24,7 +24,7 @@ describe('<FilterTag />', () => {
     const wrapper = shallow(
       <FilterTag
         tags={tags}
-        handleDelete={dummyHandleDelete}
+        onTagDeleted={dummyHandleDelete}
       />
     )
 

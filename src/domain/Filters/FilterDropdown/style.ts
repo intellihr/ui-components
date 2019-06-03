@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+import { Variables } from '../../../common'
 import { DropdownMenu } from '../../Popovers/DropdownMenu'
 
 const StyledDropdownMenu = styled(DropdownMenu)`
@@ -7,8 +8,8 @@ const StyledDropdownMenu = styled(DropdownMenu)`
 `
 
 const OperatorTextWrapper = styled.div`
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: ${Variables.Spacing.sXSmall}px;
+  margin-bottom: ${Variables.Spacing.sXSmall}px;
 `
 
 export {

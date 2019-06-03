@@ -1,42 +1,61 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { FilterDropdown } from './FilterDropdown'
+import { IDropdownMenuToggleComponentProps } from '../../Popovers/DropdownMenu'
+import { FilterDropdown, IFilterDropdownFilter } from './FilterDropdown'
 
-const dummyHandleFilter = (filter) => console.log(filter)
+const dummyHandleFilter = () => alert('dummy')
 
-const filters = [
+const filters: IFilterDropdownFilter[] = [
   {
-    field: 'Type',
-    type: 'select',
+    fieldName: 'Type',
+    type: 'SINGLE_SELECT',
     selectOptions: [
-      'Product Training',
-      'Personal Development',
-      'Soft Skill'
+      {
+        label: 'Product Training',
+        value: 'Product Training'
+      },
+      {
+        label: 'Personal Development',
+        value: 'Personal Development'
+      },
+      {
+        label: 'Soft Skill',
+        value: 'Soft Skill'
+      }
     ]
   },
   {
-    field: 'Training Provider',
-    type: 'select',
+    fieldName: 'Training Provider',
+    type: 'SINGLE_SELECT',
     selectOptions: [
-      'Internal',
-      'External',
-      'Others'
+      {
+        label: 'Internal',
+        value: 'Internal'
+      },
+      {
+        label: 'External',
+        value: 'External'
+      },
+      {
+        label: 'Others',
+        value: 'Others'
+      }
     ]
   }
 ]
 
-const toggleComponent = ({ toggleMenu, toggleComponentRef, ariaProps }) => <button onClick={toggleMenu}>dropdown </button>
+const toggleComponent = ({ toggleMenu, toggleComponentRef, ariaProps }: IDropdownMenuToggleComponentProps) => <button onClick={toggleMenu}>dropdown </button>
 
 describe('<FilterDropdown />', () => {
 
   it(`should render the filter dropdown`, () => {
     const wrapper = shallow(
       <FilterDropdown
-        tableName='training'
+        filterMessage='filter msg:'
         toggleComponent={toggleComponent}
         filters={filters}
-        handleFilter={dummyHandleFilter}
+        onFilterAdded={dummyHandleFilter}
       />
     )
 

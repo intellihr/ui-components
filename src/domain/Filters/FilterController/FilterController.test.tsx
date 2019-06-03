@@ -1,29 +1,46 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
+import { IFilterDropdownFilter } from '../FilterDropdown/FilterDropdown'
 import { FilterController } from './FilterController'
 
-const dummyHandleFilter = (filter) => console.log(filter)
-const handleTagDelete = (selectedTag) => console.log(selectedTag)
-const handleSearchChange = (event) => console.log(event)
+const dummyFunction = () => alert('dummy')
 
-const filters = [
+const filters: IFilterDropdownFilter[] = [
   {
-    field: 'Type',
-    type: 'select',
+    fieldName: 'Type',
+    type: 'SINGLE_SELECT',
     selectOptions: [
-      'Product Training',
-      'Personal Development',
-      'Soft Skill'
+      {
+        label: 'Product Training',
+        value: 'Product Training'
+      },
+      {
+        label: 'Personal Development',
+        value: 'Personal Development'
+      },
+      {
+        label: 'Soft Skill',
+        value: 'Soft Skill'
+      }
     ]
   },
   {
-    field: 'Training Provider',
-    type: 'select',
+    fieldName: 'Training Provider',
+    type: 'SINGLE_SELECT',
     selectOptions: [
-      'Internal',
-      'External',
-      'Others'
+      {
+        label: 'Internal',
+        value: 'Internal'
+      },
+      {
+        label: 'External',
+        value: 'External'
+      },
+      {
+        label: 'Others',
+        value: 'Others'
+      }
     ]
   }
 ]
@@ -33,13 +50,21 @@ describe('<FilterController />', () => {
   it(`should render the filter controller`, () => {
     const wrapper = shallow(
       <FilterController
-        tableName='training'
+        margins={{
+          top: 20,
+          left: 20,
+          right: 20,
+          bottom: 20
+        }}
+        filterMessage='dummy filter message:'
+        searchPlaceholder='dummy search placeholder'
         filters={filters}
         tags={[]}
-        searchValue='val'
-        handleFilter={dummyHandleFilter}
-        handleTagDelete={handleTagDelete}
-        handleSearchChange={handleSearchChange}
+        searchValue='dummy search value'
+        onFilterAdded={dummyFunction}
+        onTagDeleted={dummyFunction}
+        onSearchUpdated={dummyFunction}
+        onSearchCleared={dummyFunction}
       />
     )
 

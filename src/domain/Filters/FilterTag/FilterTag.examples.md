@@ -4,12 +4,12 @@
 initialState = {
   tags: [
     { 
-      field: 'Type',
+      fieldName: 'Type',
       operator: 'is',
       value: 'Product Training'
     },
     {
-      field: 'Training Provider',
+      fieldName: 'Training Provider',
       operator: 'is',
       value: 'AWS'
     }
@@ -18,6 +18,6 @@ initialState = {
 
 <FilterTag
   tags = {state.tags}
-  handleDelete = {(selectedTag) => { setState({ tags: state.tags.filter(tag => !Object.is(tag, selectedTag)) }) }}
+  onTagDeleted = {(selectedTag) => { setState({ tags: state.tags.filter(tag => !Object.is(tag, selectedTag)) }) }}
 />
 ```
