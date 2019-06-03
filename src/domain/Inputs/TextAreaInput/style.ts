@@ -1,7 +1,12 @@
 import AutosizeTextarea from 'react-autosize-textarea'
 import styled from 'styled-components'
 
-import { Variables } from '../../../common'
+import { Props, Variables } from '../../../common'
+import { styleForMargins } from '../../Spacers/services/margins'
+
+interface IStyledTextAreaContainerProps {
+  margins?: Props.IMargins
+}
 
 interface IStyledGifButtonProps {
   /** If the popover gif list is opened */
@@ -103,6 +108,7 @@ const StyledGif = styled.img`
 
 const StyledTextAreaContainer = styled.div`
   position: relative;
+  ${(props: IStyledTextAreaContainerProps) => styleForMargins(props.margins)}
 `
 
 const StyledRemoveButton = styled.div`
