@@ -1,5 +1,6 @@
+import React from 'react'
 import AutosizeTextarea from 'react-autosize-textarea'
-import styled from 'styled-components'
+import styled, { StyledFunction } from 'styled-components'
 
 import { Variables } from '../../../common'
 
@@ -28,7 +29,9 @@ const StyledMainGifContainer = styled.div`
   align-items: flex-start;
 `
 
-const StyledAutosizeTextarea = styled(AutosizeTextarea) <IStyledAutosizeTextArea>`
+const textArea: StyledFunction<IStyledAutosizeTextArea> = styled(({ hasGif, gifsEnabled, ...rest }) => <AutosizeTextarea {...rest} />)
+
+const StyledAutosizeTextarea = textArea`
   min-height: 39px;
   resize: none;
   margin-bottom: ${(props) => props.gifsEnabled ? 0 : undefined};
