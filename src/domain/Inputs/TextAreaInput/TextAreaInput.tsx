@@ -32,6 +32,8 @@ interface ITextAreaInputProps {
   gifUrl?: string
   /** Gives parent access to the gif url when it is selected */
   handleGifChange?: (url: string) => void
+  /** Margins around the text area */
+  margins?: Props.IMargins
   /** The component context */
   componentContext?: string
 }
@@ -49,6 +51,7 @@ const TextAreaInput: React.FC<ITextAreaInputProps> = ({
   isHTML5Required,
   gifUrl,
   handleGifChange,
+  margins,
   componentContext
 }) => {
   const { tenorApiKey } = useContext(DefaultsContext)
@@ -70,6 +73,7 @@ const TextAreaInput: React.FC<ITextAreaInputProps> = ({
     <StyledTextAreaContainer
       data-component-type={Props.ComponentType.TextAreaInput}
       data-component-context={componentContext}
+      margins={margins}
     >
       <StyledAutosizeTextarea
         className={classes}

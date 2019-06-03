@@ -3,7 +3,7 @@ import { get, isNil } from 'lodash'
 import React, { ChangeEventHandler, RefObject } from 'react'
 
 import { Props } from '../../../common'
-import { DisabledTextWrapper, InputWrapper, PrefixWrapper, StyledInput } from '../services/style'
+import { DisabledTextWrapper, InputWrapper, PrefixWrapper, StyleClearButton, StyledInput } from '../services/style'
 import { InputGroupPosition } from '../InputGroup'
 
 const style = require('./style.scss')
@@ -53,6 +53,10 @@ interface IGenericInputProps {
   disabledPrefix?: string
   /** The component context */
   componentContext?: string
+  /** Handle clear button events */
+  handleClear?: (e: React.MouseEvent<HTMLButtonElement>) => void
+  /** The margins around the component */
+  margins?: Props.IMargins
 }
 
 interface InputProps extends IGenericInputProps {
@@ -139,7 +143,8 @@ export class Input extends React.PureComponent<InputProps> {
       handleKeyDown,
       isChecked,
       width,
-      componentContext
+      componentContext,
+      margins
     } = this.props
 
     return (
@@ -164,6 +169,7 @@ export class Input extends React.PureComponent<InputProps> {
         style={width ? { width } : undefined}
         data-component-type={Props.ComponentType.TextInput}
         data-component-context={componentContext}
+        margins={margins}
       />
     )
   }
@@ -171,28 +177,59 @@ export class Input extends React.PureComponent<InputProps> {
   public render (): JSX.Element {
     const {
       icon,
-      disabledPrefix
+      disabledPrefix,
+      handleClear
     } = this.props
 
-    if (icon || disabledPrefix) {
+    if (icon || disabledPrefix || handleClear) {
       return (
         <InputWrapper
           disabledPrefix={disabledPrefix}
           hasIcon={!!icon}
+          hasClearButton={!!handleClear}
+          hasTextIndent={!!(icon || disabledPrefix)}
           prefixWrapperWidth={get(this.prefixWrapperRef, 'current.clientWidth', 0)}
         >
-          <PrefixWrapper
-            innerRef={this.prefixWrapperRef}
-          >
-            {icon}
-            <DisabledTextWrapper> {disabledPrefix} </DisabledTextWrapper>
-          </PrefixWrapper>
+          {this.prefix}
           {this.input()}
+          {this.clearButton}
         </InputWrapper>
       )
     }
 
     return this.input()
+  }
+
+  private get prefix (): JSX.Element | null {
+    const {
+      icon,
+      disabledPrefix
+    } = this.props
+
+    if (icon || disabledPrefix) {
+      return (
+        <PrefixWrapper
+          innerRef={this.prefixWrapperRef}
+        >
+          {icon}
+          <DisabledTextWrapper> {disabledPrefix} </DisabledTextWrapper>
+        </PrefixWrapper>
+      )
+    }
+
+    return null
+  }
+
+  private get clearButton (): JSX.Element | null {
+    const {
+      handleClear
+    } = this.props
+
+    if (handleClear) {
+      return <StyleClearButton onClick={handleClear}>×</StyleClearButton>
+    }
+
+    return null
   }
 }
 

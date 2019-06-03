@@ -1,6 +1,6 @@
 import capitalize from 'capitalize'
 import classNames from 'classnames'
-import { cloneDeep, debounce, every, isEmpty } from 'lodash'
+import { cloneDeep, debounce, every, isEmpty, isEqual } from 'lodash'
 import React from 'react'
 import Select, { Async, Creatable, OnChangeHandler, ReactSelectProps } from 'react-select'
 const style = require('./style.scss')
@@ -188,11 +188,15 @@ export class SelectInput<O=ISelectInputOptions> extends React.PureComponent<ISel
     this.initialPreselectValue()
   }
 
-  public componentDidUpdate () {
+  public componentDidUpdate (prevProps: ISelectInputProps<O>) {
     // There is no onClear event for the dropdown
     // This is a workaround
     // see: https://github.com/JedWatson/react-select/issues/1309
     this.setState({preselectValue: ''})
+
+    if (!isEqual(prevProps.options, this.props.options)) {
+      this.initialPreselectValue()
+    }
   }
 
   public componentWillReceiveProps (nextProps: ISelectInputProps<O>) {
@@ -261,14 +265,14 @@ export class SelectInput<O=ISelectInputOptions> extends React.PureComponent<ISel
     }
   }
 
-  private preselectValue = (options: any): void => {
+  private preselectValue = (options?: any[]): void => {
     const {
       isRequired,
       value,
       multi
     } = this.props
 
-    if (isRequired && isEmpty(value) && options.length === 1) {
+    if (isRequired && isEmpty(value) && options && options.length === 1) {
       let changeValue = options[0].value
 
       if (multi) {
