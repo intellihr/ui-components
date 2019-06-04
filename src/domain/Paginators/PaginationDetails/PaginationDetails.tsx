@@ -14,6 +14,8 @@ interface IPaginationDetailsProps {
   pageSize: number
   /** The data-component-context */
   componentContext?: string
+  /** The margins around the component */
+  margins?: Props.IMargins
 }
 
 export class PaginationDetails extends React.PureComponent<IPaginationDetailsProps> {
@@ -22,7 +24,8 @@ export class PaginationDetails extends React.PureComponent<IPaginationDetailsPro
       currentPage,
       pageSize,
       totalCount,
-      componentContext
+      componentContext,
+      margins
     } = this.props
 
     const pageStartingIndex = (currentPage - 1) * pageSize + 1
@@ -31,6 +34,7 @@ export class PaginationDetails extends React.PureComponent<IPaginationDetailsPro
 
     return (
       <Text
+        margins={margins}
         color={Variables.Color.n600}
         type={Props.TypographyType.Small}
         data-component-type={Props.ComponentType.PaginationDetails}
