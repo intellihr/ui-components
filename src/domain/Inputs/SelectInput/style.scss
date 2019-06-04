@@ -81,5 +81,62 @@
       border-top-color: $n400;
       margin-bottom: 40px;
     }
+
+    .Select-input > input {
+      line-height: 38px; // Magic number to account for border-width
+      padding: 0;
+    }
+
+    &.Select--multi {
+      .Select-control {
+        height: 40px;
+      }
+
+      .Select-placeholder {
+        line-height: 38px; // Magic number to account for border-width
+      }
+
+      .Select-multi-value-wrapper {
+        align-items: flex-start;
+        display: flex;
+
+        // The following nesting is needed to overwrite library specificity
+        .Select-value {
+          .Select-value-label {
+            color: $n800;
+            padding: $spacing-3xsmall 0 $spacing-3xsmall $spacing-2xsmall;
+          }
+        }
+      }
+
+      .Select-value {
+        align-items: center;
+        background-color: $n250;
+        border: 0;
+        border-radius: $border-radius;
+        color: $n800;
+        display: flex;
+        flex-direction: row-reverse;
+        font-size: $fz-small;
+        line-height: $lh-small;
+        margin: 7px 0 7px $spacing-xsmall; // Magic number to account for border-width
+      }
+
+      .Select-value-icon {
+        align-items: center;
+        background-color: transparent;
+        border: 0;
+        border-radius: 0 $border-radius $border-radius 0;
+        color: $n700;
+        display: flex;
+        height: 100%;
+        padding: 0 $spacing-2xsmall 0 $spacing-xsmall;
+
+        &:hover {
+          background-color: transparent;
+          color: $r600;
+        }
+      }
+    }
   }
 }
