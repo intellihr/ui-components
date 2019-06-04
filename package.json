@@ -110,7 +110,7 @@
     "react-test-renderer": "16.8.6",
     "rimraf": "^2.6.3",
     "sass-lint": "1.12.1",
-    "sass-lint-auto-fix": "^0.2.8",
+    "sass-lint-auto-fix": "^0.17.0",
     "sass-loader": "6.0.7",
     "snazzy": "8.0.0",
     "style-loader": "0.20.3",
