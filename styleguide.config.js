@@ -107,6 +107,14 @@ module.exports = {
           ]
         },
         {
+          name: 'Filters',
+          components: [
+            'src/domain/Filters/AddFilterDropdownMenu/AddFilterDropdownMenu.tsx',
+            'src/domain/Filters/FilterController/FilterController.tsx',
+            'src/domain/Filters/FilterTag/FilterTag.tsx'
+          ]
+        },
+        {
           name: 'Formats',
           components: [
             'src/domain/Formats/Record/Record.tsx',
