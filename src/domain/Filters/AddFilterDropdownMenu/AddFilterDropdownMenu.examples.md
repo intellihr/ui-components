@@ -7,7 +7,7 @@ initialState = {
   filters: [
       { 
         fieldName: 'Type',
-        type: FilterDropdown.FilterDropdownFilterType,
+        type: 'SINGLE_SELECT',
         selectOptions: [
           {
             label: 'Product Training',
@@ -44,7 +44,7 @@ initialState = {
     ]
 };
 
-<FilterDropdown
+<AddFilterDropdownMenu
   filterMessage='Show all training where:'
   toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
       <Button

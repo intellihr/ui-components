@@ -65,7 +65,7 @@ initialState = {
 import { isEqual } from 'lodash';
 
 initialState = {
-  searchValue: null,
+  searchValue: '',
   filters: [
     { 
       fieldName: 'Gender',

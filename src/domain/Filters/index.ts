@@ -1,3 +1,3 @@
 export { FilterController } from './FilterController'
-export { FilterDropdown } from './FilterDropdown'
+export { AddFilterDropdownMenu } from './AddFilterDropdownMenu'
 export { FilterTag } from './FilterTag'
