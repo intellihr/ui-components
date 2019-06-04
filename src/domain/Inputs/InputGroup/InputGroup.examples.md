@@ -418,3 +418,32 @@ class ThingList extends React.PureComponent {
   </DropdownMenu>
 </InputGroup>
 ```
+
+
+#### Input Group with Margins
+
+```jsx
+import { TextInput } from '@Domain/Inputs';
+
+<InputGroup
+  margins={{
+    top: 20,
+    left: 20,
+    right: 20,
+    bottom: 20
+  }}
+>
+  <InputGroup.Button
+    groupPosition='left'
+    showCaret={false}
+  >
+    Blah
+  </InputGroup.Button>
+  <TextInput
+    disabledPrefix='+61'
+    groupPosition='right'
+    placeholder='1234 5678'
+  />
+</InputGroup>
+```
+

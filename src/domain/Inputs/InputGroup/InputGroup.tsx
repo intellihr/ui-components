@@ -1,20 +1,28 @@
 import React from 'react'
 
+import { Props } from '../../../common'
 import { InputGroupWrapper } from './style'
 import { Button } from './subcomponents/Button'
 
 type InputGroupPosition = 'left' | 'middle' | 'right'
 
-export class InputGroup extends React.PureComponent<{}> {
+interface IInputGroupProps {
+  margins?: Props.IMargins
+}
+
+export class InputGroup extends React.PureComponent<IInputGroupProps> {
   public static Button = Button
 
   public render (): JSX.Element {
     const {
-      children
+      children,
+      margins
     } = this.props
 
     return (
-      <InputGroupWrapper>
+      <InputGroupWrapper
+        margins={margins}
+      >
         {children}
       </InputGroupWrapper>
     )
