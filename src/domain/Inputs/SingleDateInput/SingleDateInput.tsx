@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import { isNil } from 'lodash'
 import moment, { Moment } from 'moment'
-import React, { FormEvent } from 'react'
+import React from 'react'
 import { SingleDatePicker } from 'react-dates'
 import 'react-dates/initialize'
 import 'react-dates/lib/css/_datepicker.css'
@@ -15,9 +15,9 @@ interface ISingleDateInputProps {
   /** Name and ID of the HTML input */
   name: string
   /** Moment format to display the date in */
-  dateFormat: string
+  dateFormat?: string
   /** Change handler called when the date is changed */
-  handleChange?: (date: Moment | string | null) => void
+  handleChange?: (date: Moment | null) => void
   /** If true, adds invalid styles to the input */
   isInvalid?: boolean
   /** If true, adds disabled attribute to the input */
@@ -26,8 +26,10 @@ interface ISingleDateInputProps {
   groupPosition?: InputGroupPosition
   /** Applies recommended settings for mobile and tablet viewports */
   isMobile?: boolean
-  value: Moment | null
+  /** Placeholder text for the input; defaults to the date format */
   placeholder?: string
+  /** Value for the input (Note: in redux, this must be a moment object - strings are invalid) */
+  value: Moment | null
 }
 
 interface ISingleDateInputState {
@@ -38,7 +40,8 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
   public static defaultProps = {
     dateFormat: 'DD/MM/YYYY',
     isInvalid: false,
-    isDisabled: false
+    isDisabled: false,
+    isMobile: false
   }
 
   public state: ISingleDateInputState = {
@@ -58,23 +61,22 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
     return (
       <div
         className={this.classNames}
-        onChange={this.onChange}
       >
         <SingleDatePicker
           id={name}
           date={value}
-          placeholder={placeholder || dateFormat}
-          displayFormat={dateFormat}
-          onDateChange={this.dateChange}
-          focused={this.state.focused}
-          onFocusChange={this.focusChange}
           disabled={isDisabled}
+          displayFormat={dateFormat}
+          placeholder={placeholder || dateFormat}
           numberOfMonths={isMobile ? 1 : 2}
+          focused={this.state.focused}
+          onDateChange={this.handleDateChange}
+          onFocusChange={this.handleFocusChange}
+          isOutsideRange={this.disabledDateRange}
+          renderMonthText={this.renderMonthText}
           noBorder
           block
-          isOutsideRange={this.disabledDateRange}
           hideKeyboardShortcutsPanel
-          renderMonthText={this.renderMonthText}
           navPrev={(
             <div className={this.navigationButtonClassNames('left')}>
               <FontAwesomeIcon type='arrow-left'/>
@@ -105,50 +107,33 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
     )
   }
 
-  private disabledDateRange: () => boolean =
-    () => false
+  private disabledDateRange = () => false
 
-  private renderMonthText: (day: Moment) => string =
-    (day) => moment(day).format('MMM YYYY')
+  private renderMonthText = (day: Moment) => moment(day).format('MMM YYYY')
 
-  private dateChange: (date: Moment | null) => void =
-    (date) => {
-      const {
-        handleChange
-      } = this.props
+  private handleDateChange = (date: Moment | null) => {
+    const {
+      handleChange
+    } = this.props
 
-      if (handleChange && date !== null) {
-        handleChange(date)
-      }
-   }
-
-  private onChange: (e: FormEvent<HTMLDivElement>) => void =
-    (e) => {
-      const {
-        handleChange
-      } = this.props
-
-      const rawInputElement =  e.target as HTMLInputElement
-      if (handleChange) {
-        handleChange(moment(rawInputElement.value, moment.ISO_8601))
-      }
+    if (handleChange) {
+      handleChange(date)
     }
+  }
 
-  private focusChange: (focusChangeArgs: { focused: boolean | null }) => void =
-    (focusChangeArgs) => {
-      this.setState({
-        focused: focusChangeArgs.focused || false
-      })
-    }
+  private handleFocusChange = (focusChangeArgs: { focused: boolean | null }) => {
+    this.setState({
+      focused: focusChangeArgs.focused || false
+    })
+  }
 
-  private navigationButtonClassNames: (side: 'left' | 'right') => string =
-    (side) => {
-      return classNames(
-        'DayPickerNavigation_button__default',
-        'DayPickerNavigation_button__horizontalDefault',
-        `DayPickerNavigation_${side}Button__horizontalDefault`
-      )
-    }
+  private navigationButtonClassNames = (side: 'left' | 'right') => {
+    return classNames(
+      'DayPickerNavigation_button__default',
+      'DayPickerNavigation_button__horizontalDefault',
+      `DayPickerNavigation_${side}Button__horizontalDefault`
+    )
+  }
 }
 
 export {
