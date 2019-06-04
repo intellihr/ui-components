@@ -4,7 +4,7 @@ import { Variables } from '../../../../common'
 
 const PoweredByTenor = () => {
   return (
-    <div style={{ width: '90px', height: '25px', margin: '-15px 0 5px 128px', userSelect: 'none' }}>
+    <div style={{ width: '90px', height: '25px', margin: '0 0 5px 128px', userSelect: 'none' }}>
       <svg viewBox='0 0 712 96' version='1.1'>
         <g id='Page-1' stroke='none' strokeWidth='1' fill='#333' fillRule='evenodd'>
           <g id='Powered_by_Tenor_OneLine' fill={Variables.Color.n500}>
@@ -38,5 +38,5 @@ const PoweredByTenor = () => {
 }
 
 export {
-    PoweredByTenor
+  PoweredByTenor
 }
