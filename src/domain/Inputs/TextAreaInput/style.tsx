@@ -1,5 +1,6 @@
+import React from 'react'
 import AutosizeTextarea from 'react-autosize-textarea'
-import styled from 'styled-components'
+import styled, { StyledFunction } from 'styled-components'
 
 import { Props, Variables } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
@@ -8,16 +9,34 @@ interface IStyledTextAreaContainerProps {
   margins?: Props.IMargins
 }
 
+interface IStyledAutosizeTextAreaProps {
+  /** Custom classname to use */
+  className?: string
+  /** ID of the input */
+  id?: string
+  /** Name of the input */
+  name: string
+  /** Value change handler */
+  onChange?: React.ChangeEventHandler<HTMLTextAreaElement>
+  /** Value of the input */
+  value?: string
+  /** If true, sets input to disabled state */
+  disabled?: boolean
+  /** Number of rows to initially display */
+  rows?: number
+  /** Placeholder text to display when input is empty */
+  placeholder?: string
+  /** If true, use HTML5 required attribute */
+  required?: boolean
+  /** If the necessary props are passed in to enable gifs */
+  gifsEnabled?: boolean
+  /** If a gif has been selected */
+  hasGif?: boolean
+}
+
 interface IStyledGifButtonProps {
   /** If the popover gif list is opened */
   opened: boolean
-}
-
-interface IStyledAutosizeTextArea {
-  /** If the necessary props are passed in to enable gifs */
-  gifsEnabled: boolean
-  /** If a gif has been selected */
-  hasGif: boolean
 }
 
 const StyledMainGifContainer = styled.div`
@@ -33,7 +52,9 @@ const StyledMainGifContainer = styled.div`
   align-items: flex-start;
 `
 
-const StyledAutosizeTextarea = styled(AutosizeTextarea) <IStyledAutosizeTextArea>`
+const textArea: StyledFunction<IStyledAutosizeTextAreaProps> = styled(({ hasGif, gifsEnabled, ...rest }) => <AutosizeTextarea {...rest} />)
+
+const StyledAutosizeTextarea = textArea`
   min-height: 39px;
   resize: none;
   margin-bottom: ${(props) => props.gifsEnabled ? 0 : undefined};
