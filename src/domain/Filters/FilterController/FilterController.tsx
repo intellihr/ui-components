@@ -4,7 +4,7 @@ import { Props, Variables } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { InputGroup } from '../../Inputs/InputGroup'
 import { TextInput } from '../../Inputs/TextInput'
-import { FilterDropdown, IFilterDropdownFilter } from '../FilterDropdown/FilterDropdown'
+import { AddFilterDropdownMenu, IAddFilterDropdownMenuFilter } from '../AddFilterDropdownMenu/AddFilterDropdownMenu'
 import { FilterTag, IFilterTagDetail } from '../FilterTag/FilterTag'
 import { ControllerWrapper } from './style'
 
@@ -14,7 +14,7 @@ export interface IFilterControllerProps {
   /** search input placeholder of this filter controller */
   searchPlaceholder?: string
   /** filter selection of this filter controller */
-  filters: IFilterDropdownFilter[]
+  filters: IAddFilterDropdownMenuFilter[]
   /** filter tags of this filter controller */
   tags: IFilterTagDetail[]
   /** search value of this filter controller */
@@ -53,7 +53,7 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
     return (
       <ControllerWrapper margins={margins}>
         <InputGroup margins={{ bottom: Variables.Spacing.sXSmall }}>
-          <FilterDropdown
+          <AddFilterDropdownMenu
             filterMessage={filterMessage}
             toggleComponent={this.filterButton}
             filters={filters}

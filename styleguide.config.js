@@ -109,7 +109,7 @@ module.exports = {
         {
           name: 'Filters',
           components: [
-            'src/domain/Filters/FilterDropdown/FilterDropdown.tsx',
+            'src/domain/Filters/AddFilterDropdownMenu/AddFilterDropdownMenu.tsx',
             'src/domain/Filters/FilterController/FilterController.tsx',
             'src/domain/Filters/FilterTag/FilterTag.tsx'
           ]

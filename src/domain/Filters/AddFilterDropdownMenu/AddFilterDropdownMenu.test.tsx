@@ -2,11 +2,11 @@ import { shallow } from 'enzyme'
 import React from 'react'
 
 import { IDropdownMenuToggleComponentProps } from '../../Popovers/DropdownMenu'
-import { FilterDropdown, IFilterDropdownFilter } from './FilterDropdown'
+import { AddFilterDropdownMenu, IAddFilterDropdownMenuFilter } from './AddFilterDropdownMenu'
 
 const dummyHandleFilter = () => alert('dummy')
 
-const filters: IFilterDropdownFilter[] = [
+const filters: IAddFilterDropdownMenuFilter[] = [
   {
     fieldName: 'Type',
     type: 'SINGLE_SELECT',
@@ -51,7 +51,7 @@ describe('<FilterDropdown />', () => {
 
   it(`should render the filter dropdown`, () => {
     const wrapper = shallow(
-      <FilterDropdown
+      <AddFilterDropdownMenu
         filterMessage='filter msg:'
         toggleComponent={toggleComponent}
         filters={filters}

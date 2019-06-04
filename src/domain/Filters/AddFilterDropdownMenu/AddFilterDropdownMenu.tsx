@@ -9,11 +9,11 @@ import { Text } from '../../Typographies/Text'
 import { IFilterTagDetail } from '../FilterTag/FilterTag'
 import { OperatorTextWrapper, StyledDropdownMenu } from './style'
 
-export interface IFilterDropdownProps {
+export interface IAddFilterDropdownMenuProps {
   /** table name that the filters applied to */
   filterMessage: string
   /** filter selection of this filter dropdown */
-  filters: IFilterDropdownFilter[]
+  filters: IAddFilterDropdownMenuFilter[]
   /** Callback when a filter is added */
   onFilterAdded: (selectedFilter: IFilterTagDetail) => void
   /**
@@ -23,7 +23,7 @@ export interface IFilterDropdownProps {
   toggleComponent: (props: IDropdownMenuToggleComponentProps) => React.ReactElement<any>
 }
 
-export interface IFilterDropdownFilter {
+export interface IAddFilterDropdownMenuFilter {
   type: 'SINGLE_SELECT' | 'NUMBER'
   fieldName: string
   selectOptions: Array<{
@@ -32,18 +32,18 @@ export interface IFilterDropdownFilter {
   }>
 }
 
-export interface IFilterDropdownState {
+export interface IAddFilterDropdownMenuState {
   fieldName: string
   operator: string
   value: string
 }
 
-export class FilterDropdown extends React.PureComponent<IFilterDropdownProps, IFilterDropdownState> {
-  public static defaultProps: Partial<IFilterDropdownProps> = {
+export class AddFilterDropdownMenu extends React.PureComponent<IAddFilterDropdownMenuProps, IAddFilterDropdownMenuState> {
+  public static defaultProps: Partial<IAddFilterDropdownMenuProps> = {
     filterMessage: 'Show all items where:'
   }
 
-  public state: IFilterDropdownState = {
+  public state: IAddFilterDropdownMenuState = {
     fieldName: '',
     operator:  '',
     value: ''
@@ -95,7 +95,7 @@ export class FilterDropdown extends React.PureComponent<IFilterDropdownProps, IF
     } = this.props
 
     if (filters) {
-      return filters.map((filter: IFilterDropdownFilter) => (
+      return filters.map((filter: IAddFilterDropdownMenuFilter) => (
         {
           label: filter.fieldName,
           value: filter.fieldName
@@ -109,7 +109,7 @@ export class FilterDropdown extends React.PureComponent<IFilterDropdownProps, IF
       filters
     } = this.props
 
-    const selectedFilter = filters.find((filter: IFilterDropdownFilter) => filter.fieldName === option.value)
+    const selectedFilter = filters.find((filter: IAddFilterDropdownMenuFilter) => filter.fieldName === option.value)
 
     if (selectedFilter) {
       let operator
@@ -162,7 +162,7 @@ export class FilterDropdown extends React.PureComponent<IFilterDropdownProps, IF
       filters
     } = this.props
 
-    const selectedFilter = filters.find((filter: IFilterDropdownFilter) => filter.fieldName === this.state.fieldName)
+    const selectedFilter = filters.find((filter: IAddFilterDropdownMenuFilter) => filter.fieldName === this.state.fieldName)
 
     if (selectedFilter) {
       return selectedFilter.selectOptions
