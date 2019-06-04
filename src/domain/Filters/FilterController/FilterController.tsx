@@ -29,6 +29,8 @@ export interface IFilterControllerProps {
   onSearchCleared: (e: React.MouseEvent<HTMLButtonElement>) => void
   /** The margins around the component */
   margins?: Props.IMargins
+  /** The data-component-context */
+  componentContext?: string
 }
 
 export class FilterController extends React.PureComponent<IFilterControllerProps> {
@@ -47,13 +49,19 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
       onSearchUpdated,
       onSearchCleared,
       searchValue,
-      margins
+      margins,
+      componentContext
     } = this.props
 
     return (
-      <ControllerWrapper margins={margins}>
+      <ControllerWrapper
+        margins={margins}
+        data-component-type={Props.ComponentType.FilterController}
+        data-component-context={componentContext}
+      >
         <InputGroup margins={{ bottom: Variables.Spacing.sXSmall }}>
           <AddFilterDropdownMenu
+            componentContext={`${componentContext}-dropdown-menu`}
             filterMessage={filterMessage}
             toggleComponent={this.filterButton}
             filters={filters}
@@ -69,7 +77,11 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
             handleClear={onSearchCleared}
           />
         </InputGroup>
-        <FilterTag tags={tags} onTagDeleted={onTagDeleted} />
+        <FilterTag
+          componentContext={`${componentContext}-filter-tag`}
+          tags={tags}
+          onTagDeleted={onTagDeleted}
+        />
       </ControllerWrapper>
     )
   }

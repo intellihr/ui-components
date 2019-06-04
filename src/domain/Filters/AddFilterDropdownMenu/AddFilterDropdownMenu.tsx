@@ -21,6 +21,8 @@ export interface IAddFilterDropdownMenuProps {
    * The callback is given a toggle menu prop which can be used to toggle the menu as needed.
    */
   toggleComponent: (props: IDropdownMenuToggleComponentProps) => React.ReactElement<any>
+  /** The data-component-context */
+  componentContext?: string
 }
 
 export interface IAddFilterDropdownMenuFilter {
@@ -51,12 +53,14 @@ export class AddFilterDropdownMenu extends React.PureComponent<IAddFilterDropdow
 
   public render (): JSX.Element {
     const {
-      toggleComponent
+      toggleComponent,
+      componentContext
     } = this.props
 
     return (
       <StyledDropdownMenu
         toggleComponent={toggleComponent}
+        data-component-context={componentContext}
       >
         {({closeMenu}) => this.renderDropdown(closeMenu)}
       </StyledDropdownMenu>

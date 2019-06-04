@@ -5,6 +5,7 @@ import moment, { Moment } from 'moment'
 import React, { RefObject } from 'react'
 import uuid from 'uuid'
 
+import { Props } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons'
 import { IPopoverPosition, Popover } from '../../Popovers'
 import {
@@ -44,6 +45,8 @@ interface IDropdownMenuProps {
   initialFocusElement?: FocusTarget
   /** Children to display as custom content instead of sections */
   children?: (props: IDropdownMenuChildrenProps) => React.ReactElement<any>
+  /** The data-component-context */
+  componentContext?: string
 }
 
 interface IDropdownMenuToggleComponentProps {
@@ -98,8 +101,15 @@ class DropdownMenu extends React.Component<IDropdownMenuProps, IDropdownMenuStat
   private toggleComponentRef: RefObject<any> = React.createRef()
 
   public render (): JSX.Element {
+    const {
+      componentContext
+    } = this.props
+
     return (
-      <React.Fragment>
+      <React.Fragment
+        data-component-type={Props.ComponentType.DropdownMenu}
+        data-component-context={componentContext}
+      >
         {this.toggleComponent}
         {this.dropdownPopover}
       </React.Fragment>

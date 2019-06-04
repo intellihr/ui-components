@@ -15,19 +15,25 @@ export interface IFilterTagDetail {
 export interface IFilterTagProps {
   tags: IFilterTagDetail[]
   onTagDeleted: (selectedTag: IFilterTagDetail) => void
+  /** The data-component-context */
+  componentContext?: string
 }
 
 export class FilterTag extends React.PureComponent<IFilterTagProps> {
   public render (): JSX.Element | null {
     const {
-      tags
+      tags,
+      componentContext
     } = this.props
 
     if (tags) {
       return (
-        <>
+        <div
+          data-component-type={Props.ComponentType.FilterTag}
+          data-component-context={componentContext}
+        >
           {tags.map((tag, index) => this.renderTag(tag, index))}
-        </>
+        </div>
       )
     }
 
