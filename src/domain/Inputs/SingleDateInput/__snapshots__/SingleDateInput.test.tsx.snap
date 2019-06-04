@@ -3,7 +3,6 @@
 exports[`<SingleDateInput /> should render a disabled single date input 1`] = `
 <div
   className="singleDatePickerOverrides"
-  onChange={[Function]}
 >
   <withStyles(SingleDatePicker)
     anchorDirection="left"
@@ -116,7 +115,6 @@ exports[`<SingleDateInput /> should render a disabled single date input 1`] = `
 exports[`<SingleDateInput /> should render a single date input 1`] = `
 <div
   className="singleDatePickerOverrides"
-  onChange={[Function]}
 >
   <withStyles(SingleDatePicker)
     anchorDirection="left"
@@ -229,7 +227,6 @@ exports[`<SingleDateInput /> should render a single date input 1`] = `
 exports[`<SingleDateInput /> should render an invalid single date input 1`] = `
 <div
   className="singleDatePickerOverrides is-invalid-input"
-  onChange={[Function]}
 >
   <withStyles(SingleDatePicker)
     anchorDirection="left"
