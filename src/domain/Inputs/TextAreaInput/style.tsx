@@ -74,6 +74,10 @@ const StyledAutosizeTextarea = textArea`
     border-color: ${Variables.Color.i400};
   }
 
+  &.is-invalid-input:not(:focus) + ${StyledMainGifContainer} {
+    border-color: ${Variables.Color.r400};
+  }
+
   &:disabled,
   &[disabled] {
     color: ${Variables.Color.n600}
