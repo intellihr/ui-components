@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<FilterTag /> should render the filter tag 1`] = `
-<Fragment>
+<div
+  data-component-type="filter_tag"
+>
   <Brick
     color="neutral"
     key="tag-Type-0"
@@ -72,5 +74,5 @@ exports[`<FilterTag /> should render the filter tag 1`] = `
       </styled.span>
     </styled.button>
   </Brick>
-</Fragment>
+</div>
 `;

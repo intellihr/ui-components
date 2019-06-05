@@ -44,6 +44,8 @@ interface IDropdownMenuProps {
   initialFocusElement?: FocusTarget
   /** Children to display as custom content instead of sections */
   children?: (props: IDropdownMenuChildrenProps) => React.ReactElement<any>
+  /** The data-component-context */
+  componentContext?: string
 }
 
 interface IDropdownMenuToggleComponentProps {
@@ -98,6 +100,7 @@ class DropdownMenu extends React.Component<IDropdownMenuProps, IDropdownMenuStat
   private toggleComponentRef: RefObject<any> = React.createRef()
 
   public render (): JSX.Element {
+
     return (
       <React.Fragment>
         {this.toggleComponent}
@@ -180,11 +183,13 @@ class DropdownMenu extends React.Component<IDropdownMenuProps, IDropdownMenuStat
     const {
       className,
       parentAnchorPosition,
-      dropdownAnchorPosition
+      dropdownAnchorPosition,
+      componentContext
     } = this.props
 
     return (
       <Popover
+        componentContext={componentContext}
         id={dropdownId || ''}
         isOpen={isDropdownOpen}
         parentAnchorPosition={parentAnchorPosition}

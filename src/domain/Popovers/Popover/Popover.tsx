@@ -39,6 +39,8 @@ interface IPopoverProps {
   parentRef: RefObject<HTMLSpanElement>
 
   animationType?: 'dropdown' | 'tooltip'
+  /** The data-component-context */
+  componentContext?: string
 }
 
 class Popover extends React.Component<IPopoverProps, never> {
@@ -119,11 +121,14 @@ class Popover extends React.Component<IPopoverProps, never> {
     const {
       id,
       children,
-      animationType
+      animationType,
+      componentContext
     } = this.props
 
     return (
       <StyledPopover
+        data-component-type={Props.ComponentType.Popover}
+        data-component-context={componentContext}
         id={id}
         animationType={animationType!}
         className={animationState}

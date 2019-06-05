@@ -2,6 +2,7 @@
 
 exports[`<FilterController /> should render the filter controller 1`] = `
 <styled.div
+  data-component-type="filter_controller"
   margins={
     Object {
       "bottom": 20,
