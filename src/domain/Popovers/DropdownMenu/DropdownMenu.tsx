@@ -5,7 +5,6 @@ import moment, { Moment } from 'moment'
 import React, { RefObject } from 'react'
 import uuid from 'uuid'
 
-import { Props } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons'
 import { IPopoverPosition, Popover } from '../../Popovers'
 import {
@@ -101,15 +100,9 @@ class DropdownMenu extends React.Component<IDropdownMenuProps, IDropdownMenuStat
   private toggleComponentRef: RefObject<any> = React.createRef()
 
   public render (): JSX.Element {
-    const {
-      componentContext
-    } = this.props
 
     return (
-      <React.Fragment
-        data-component-type={Props.ComponentType.DropdownMenu}
-        data-component-context={componentContext}
-      >
+      <React.Fragment>
         {this.toggleComponent}
         {this.dropdownPopover}
       </React.Fragment>
@@ -190,11 +183,13 @@ class DropdownMenu extends React.Component<IDropdownMenuProps, IDropdownMenuStat
     const {
       className,
       parentAnchorPosition,
-      dropdownAnchorPosition
+      dropdownAnchorPosition,
+      componentContext
     } = this.props
 
     return (
       <Popover
+        componentContext={componentContext}
         id={dropdownId || ''}
         isOpen={isDropdownOpen}
         parentAnchorPosition={parentAnchorPosition}

@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DropdownMenu /> Render a dropdown using custom content should match the snapshot 1`] = `
-<Fragment
-  data-component-type="dropdown_menu"
->
+<Fragment>
   <styled.button
     aria-expanded={false}
     aria-haspopup={true}
@@ -60,9 +58,7 @@ exports[`<DropdownMenu /> Render a dropdown using custom content should match th
 `;
 
 exports[`<DropdownMenu /> Simple dropdown behaviour should match the snapshot 1`] = `
-<Fragment
-  data-component-type="dropdown_menu"
->
+<Fragment>
   <styled.button
     aria-expanded={false}
     aria-haspopup={true}

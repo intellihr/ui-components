@@ -61,7 +61,7 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
       >
         <InputGroup margins={{ bottom: Variables.Spacing.sXSmall }}>
           <AddFilterDropdownMenu
-            componentContext={`${componentContext}-dropdown-menu`}
+            componentContext={componentContext && `${componentContext}-dropdown-menu`}
             filterMessage={filterMessage}
             toggleComponent={this.filterButton}
             filters={filters}
@@ -78,7 +78,7 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
           />
         </InputGroup>
         <FilterTag
-          componentContext={`${componentContext}-filter-tag`}
+          componentContext={componentContext && `${componentContext}-filter-tag`}
           tags={tags}
           onTagDeleted={onTagDeleted}
         />

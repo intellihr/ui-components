@@ -60,7 +60,7 @@ export class AddFilterDropdownMenu extends React.PureComponent<IAddFilterDropdow
     return (
       <StyledDropdownMenu
         toggleComponent={toggleComponent}
-        data-component-context={componentContext}
+        componentContext={componentContext}
       >
         {({closeMenu}) => this.renderDropdown(closeMenu)}
       </StyledDropdownMenu>

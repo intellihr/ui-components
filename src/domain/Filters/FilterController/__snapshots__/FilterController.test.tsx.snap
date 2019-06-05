@@ -20,7 +20,6 @@ exports[`<FilterController /> should render the filter controller 1`] = `
     }
   >
     <AddFilterDropdownMenu
-      componentContext="undefined-dropdown-menu"
       filterMessage="dummy filter message:"
       filters={
         Array [
@@ -80,7 +79,6 @@ exports[`<FilterController /> should render the filter controller 1`] = `
     />
   </InputGroup>
   <FilterTag
-    componentContext="undefined-filter-tag"
     onTagDeleted={[Function]}
     tags={Array []}
   />
