@@ -41,6 +41,7 @@ const MenuItemWrapper = styled.li`
 
 const IconWrapper = styled.span`
   margin-right: 0.25rem;
+  vertical-align: top;
 `
 
 const LoadingIconWrapper = styled.span`
@@ -56,8 +57,9 @@ const SubMenuWrapper = styled.ul`
 `
 
 const MenuItemLabelWrapper = styled.span`
-  margin-left: 3px;
+  margin-left: 7.5px;
   white-space: nowrap;
+  vertical-align: top;
 `
 
 export {
