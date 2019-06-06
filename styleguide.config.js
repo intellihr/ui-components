@@ -107,6 +107,14 @@ module.exports = {
           ]
         },
         {
+          name: 'Filters',
+          components: [
+            'src/domain/Filters/AddFilterDropdownMenu/AddFilterDropdownMenu.tsx',
+            'src/domain/Filters/FilterController/FilterController.tsx',
+            'src/domain/Filters/FilterTag/FilterTag.tsx'
+          ]
+        },
+        {
           name: 'Formats',
           components: [
             'src/domain/Formats/Record/Record.tsx',
@@ -138,6 +146,7 @@ module.exports = {
             'src/domain/Inputs/ToggleSwitch/ToggleSwitch.tsx',
             'src/domain/Inputs/CheckboxInput/CheckboxInput.tsx',
             'src/domain/Inputs/CheckboxSet/CheckboxSet.tsx',
+            'src/domain/Inputs/DateRangeInput/DateRangeInput.tsx',
             'src/domain/Inputs/IconPickerInput/IconPickerInput.tsx',
             'src/domain/Inputs/Input/Input.tsx',
             'src/domain/Inputs/InputGroup/InputGroup.tsx',

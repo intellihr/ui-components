@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilterController /> should render the filter controller 1`] = `
+<styled.div
+  data-component-type="filter_controller"
+  margins={
+    Object {
+      "bottom": 20,
+      "left": 20,
+      "right": 20,
+      "top": 20,
+    }
+  }
+>
+  <InputGroup
+    margins={
+      Object {
+        "bottom": 8,
+      }
+    }
+  >
+    <AddFilterDropdownMenu
+      filterMessage="dummy filter message:"
+      filters={
+        Array [
+          Object {
+            "fieldName": "Type",
+            "selectOptions": Array [
+              Object {
+                "label": "Product Training",
+                "value": "Product Training",
+              },
+              Object {
+                "label": "Personal Development",
+                "value": "Personal Development",
+              },
+              Object {
+                "label": "Soft Skill",
+                "value": "Soft Skill",
+              },
+            ],
+            "type": "SINGLE_SELECT",
+          },
+          Object {
+            "fieldName": "Training Provider",
+            "selectOptions": Array [
+              Object {
+                "label": "Internal",
+                "value": "Internal",
+              },
+              Object {
+                "label": "External",
+                "value": "External",
+              },
+              Object {
+                "label": "Others",
+                "value": "Others",
+              },
+            ],
+            "type": "SINGLE_SELECT",
+          },
+        ]
+      }
+      onFilterAdded={[Function]}
+      toggleComponent={[Function]}
+    />
+    <TextInput
+      groupPosition="right"
+      handleChange={[Function]}
+      handleClear={[Function]}
+      icon={
+        <FontAwesomeIcon
+          type="search"
+        />
+      }
+      name="filterControllerSearchInput"
+      placeholder="dummy search placeholder"
+      value="dummy search value"
+    />
+  </InputGroup>
+  <FilterTag
+    onTagDeleted={[Function]}
+    tags={Array []}
+  />
+</styled.div>
+`;

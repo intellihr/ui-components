@@ -22,6 +22,7 @@ const MenuItemWrapper = styled.li`
 
     color: ${Variables.Color.n700};
     margin-left: 3px;
+    height: 50px;
 
     &:hover {
       color: ${Variables.Color.n700};
@@ -41,6 +42,7 @@ const MenuItemWrapper = styled.li`
 
 const IconWrapper = styled.span`
   margin-right: 0.25rem;
+  vertical-align: top;
 `
 
 const LoadingIconWrapper = styled.span`
@@ -56,8 +58,9 @@ const SubMenuWrapper = styled.ul`
 `
 
 const MenuItemLabelWrapper = styled.span`
-  margin-left: 3px;
+  margin-left: 7.5px;
   white-space: nowrap;
+  vertical-align: top;
 `
 
 export {

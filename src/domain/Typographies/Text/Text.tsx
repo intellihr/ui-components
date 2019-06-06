@@ -34,6 +34,8 @@ export interface ITextProps {
   componentContext?: string
   /** The props for the hint to apply to the text */
   hintComponentProps?: IHintWrapperProps
+  /** The margins around the component */
+  margins?: Props.IMargins
 }
 
 export class Text extends React.PureComponent<ITextProps> {
@@ -79,13 +81,15 @@ export class Text extends React.PureComponent<ITextProps> {
       isItalic,
       color,
       componentContext,
-      hintComponentProps
+      hintComponentProps,
+      margins
     } = this.props
 
     const TextTag = this.textTag
 
     const text = (
       <TextTag
+        margins={margins}
         textType={type}
         color={color}
         isInline={isInline}

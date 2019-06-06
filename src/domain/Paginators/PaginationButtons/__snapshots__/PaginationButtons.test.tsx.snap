@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PaginationButtons /> should render the pagination buttons 1`] = `
-<div
+<styled.div
   data-component-type="pagination_buttons"
 >
   <styled.button
@@ -77,5 +77,93 @@ exports[`<PaginationButtons /> should render the pagination buttons 1`] = `
       />
     </styled.span>
   </styled.button>
-</div>
+</styled.div>
+`;
+
+exports[`<PaginationButtons /> should render the pagination buttons with margin 1`] = `
+<styled.div
+  data-component-type="pagination_buttons"
+  margins={
+    Object {
+      "bottom": 20,
+      "left": 20,
+      "right": 20,
+      "top": 20,
+    }
+  }
+>
+  <styled.button
+    chevron="left"
+    disabled={true}
+    onClick={[Function]}
+  >
+    <styled.span
+      arrowDirection="left"
+    >
+      <FontAwesomeIcon
+        type="chevron-left"
+      />
+    </styled.span>
+  </styled.button>
+  <styled.button
+    isCurrent={true}
+    key="pagination-1"
+    onClick={[Function]}
+  >
+    1
+  </styled.button>
+  <styled.button
+    isCurrent={false}
+    key="pagination-2"
+    onClick={[Function]}
+  >
+    2
+  </styled.button>
+  <styled.button
+    isCurrent={false}
+    key="pagination-3"
+    onClick={[Function]}
+  >
+    3
+  </styled.button>
+  <styled.button
+    isCurrent={false}
+    key="pagination-4"
+    onClick={[Function]}
+  >
+    4
+  </styled.button>
+  <styled.button
+    isCurrent={false}
+    key="pagination-5"
+    onClick={[Function]}
+  >
+    5
+  </styled.button>
+  <styled.div
+    key="pagination-ellipsis"
+  >
+    ...
+  </styled.div>
+  <styled.button
+    isCurrent={false}
+    key="pagination-10"
+    onClick={[Function]}
+  >
+    10
+  </styled.button>
+  <styled.button
+    chevron="right"
+    disabled={false}
+    onClick={[Function]}
+  >
+    <styled.span
+      arrowDirection="right"
+    >
+      <FontAwesomeIcon
+        type="chevron-right"
+      />
+    </styled.span>
+  </styled.button>
+</styled.div>
 `;

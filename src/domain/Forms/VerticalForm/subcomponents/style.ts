@@ -16,7 +16,7 @@ const FieldWrapper = styled.div`
     `
   }
 
-  input, textarea, .Select .Select-control {
+  textarea, .Select .Select-control {
     margin: 0;
   }
 `

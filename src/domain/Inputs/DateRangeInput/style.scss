@@ -1,0 +1,168 @@
+@import '../../../common/sass/variables';
+
+:local(.dateRangePickerOverrides) {
+  .CalendarMonth_table {
+    tr {
+      border-bottom: 0;
+    }
+  }
+
+  .DateRangePicker_picker {
+    // NOTE: the order of these styles DO matter
+    .CalendarMonth_caption {
+      > strong {
+        color: $n800;
+        font-size: $fz-heading;
+        font-weight: $fw-heavy;
+      }
+    }
+
+    .CalendarDay {
+      &:hover {
+        background: $n250;
+      }
+    }
+
+    // the range of dates when user are picking the dates
+    .CalendarDay__hovered_span {
+      background: $i100;
+      border: 1px solid #e4e7e7; //default border styles
+      color: #484848; //default color styles
+    }
+
+    // the range of dates have selected
+    .CalendarDay__selected_span {
+      background: $i100;
+      border: 1px solid #e4e7e7; //default border styles
+      color: #484848; //default color styles
+    }
+
+    // the start date and end date have selected
+    .CalendarDay__selected_start,
+    .CalendarDay__selected_end {
+      background: $i400;
+      border: 1px solid $i100;
+      color: $n100;
+
+      &:hover {
+        background: $i400;
+        color: $n100;
+      }
+    }
+
+    .DayPickerNavigation_button__horizontalDefault {
+      padding: 9px;
+    }
+  }
+
+  .DateRangePickerInput {
+    align-items: center;
+    border-color: $n400;
+    border-radius: $border-radius;
+    display: flex;
+    padding-right: 0;
+
+    &:focus,
+    &:hover {
+      background-color: $n200;
+      border-color: $i400;
+      outline: none;
+    }
+  }
+
+  .DateInput {
+    background: none;
+    height: $spacing-2xlarge;
+
+    .DateInput_input {
+      background: none;
+      border: 0;
+      color: $n700;
+      font-size: $fz-body;
+      font-weight: $fw-normal;
+      line-height: $lh-body;
+      margin: 0;
+      padding: .5rem;
+      text-align: center;
+      transition: color .3s ease-in-out;
+
+      &:focus,
+      &:hover {
+        color: $i400;
+      }
+
+      &:disabled {
+        background: none;
+        color: $n700;
+      }
+    }
+
+    .DateInput_input__disabled {
+      font-style: normal;
+    }
+  }
+
+  .DateRangePickerInput_arrow {
+    cursor: default;
+    position: relative;
+    top: -1px;
+  }
+
+  .DateRangePickerInput_clearDates {
+    color: $n600;
+    font-size: $fz-heading;
+    font-weight: $fw-heavy;
+    line-height: $lh-heading;
+    outline: none;
+    transition: color .3s ease-in-out;
+
+    &:focus,
+    &:hover {
+      color: $r600;
+    }
+
+    &:disabled {
+      color: $n600;
+      cursor: not-allowed;
+    }
+  }
+
+  .DateRangePickerInput__disabled {
+    background-color: $n200;
+
+    &:focus,
+    &:hover {
+      border-color: $n400;
+      cursor: not-allowed;
+    }
+  }
+
+  &.is-invalid-input {
+    &:not(:focus) {
+      background-color: transparent;
+    }
+
+    input {
+      background-color: transparent;
+      color: $r400;
+
+      &::placeholder {
+        color: $r400;
+      }
+
+      &:focus,
+      &:hover {
+        color: $n700;
+      }
+    }
+
+    .DateInput {
+      background: none;
+    }
+
+    .DateRangePickerInput {
+      background-color: mix($r400, #fff, 10%);
+      border-color: $r400;
+    }
+  }
+}

@@ -11,6 +11,26 @@ initialState = { value: '' };
 </div>
 ```
 
+#### Text Area Input with GIFs
+
+```jsx
+import { DefaultsProvider } from '@Domain/Defaults';
+initialState = { value: '', gifUrl: '' };
+
+<div>
+  <DefaultsProvider value={{
+    tenorApiKey: 'NT1UWSP1UJ3G'
+  }}>
+    <TextAreaInput
+      value={state.value}
+      handleChange={(e) => setState({value: e.value})}
+      gifUrl={state.gifUrl}
+      handleGifChange={(url) => setState({gifUrl: url})}
+    />
+  </DefaultsProvider>
+</div>
+```
+
 #### Disabled text area
 
 ```jsx

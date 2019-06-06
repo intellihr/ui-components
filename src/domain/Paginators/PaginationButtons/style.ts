@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 
-import { Variables } from '../../../common'
+import { Props, Variables } from '../../../common'
+import { styleForMargins } from '../../Spacers/services/margins'
 
 interface IStylePaginationButton {
   isCurrent?: boolean
@@ -10,6 +11,14 @@ interface IStylePaginationButton {
 interface IStyleChevronIcon {
   arrowDirection: 'left' | 'right'
 }
+
+interface IButtonWrapperProps {
+  margins?: Props.IMargins
+}
+
+const ButtonsWrapper = styled.div`
+  ${(props: IButtonWrapperProps) => styleForMargins(props.margins)}
+`
 
 const EllipsisWrapper = styled.div`
   color: ${Variables.Color.n800};
@@ -96,5 +105,6 @@ const StylePaginationButton = styled.button`
 export {
   EllipsisWrapper,
   StylePaginationButton,
-  ChevronIconWrapper
+  ChevronIconWrapper,
+  ButtonsWrapper
 }

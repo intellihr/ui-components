@@ -1,6 +1,7 @@
 export { AutocompleteLocationInput } from './AutocompleteLocationInput'
 export { CheckboxInput } from './CheckboxInput'
 export { CheckboxSet } from './CheckboxSet'
+export { DateRangeInput } from './DateRangeInput'
 export { IconPickerInput } from './IconPickerInput'
 export { Input, IGenericInputProps } from './Input'
 export { InputGroup } from './InputGroup'

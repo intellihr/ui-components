@@ -143,3 +143,18 @@ import { Variables } from '@Common';
     Hover me
   </Text>
 ```
+
+#### Margin
+
+```jsx
+  <Text
+    margins={{
+         top: 20,
+         left: 20,
+         right: 20,
+         bottom: 20
+       }}
+  >
+    Hello! I have special margin
+  </Text>
+```

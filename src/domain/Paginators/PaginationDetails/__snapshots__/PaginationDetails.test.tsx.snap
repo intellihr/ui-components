@@ -17,3 +17,29 @@ exports[`<PaginationDetails /> should render a pagination details 1`] = `
    entries
 </Text>
 `;
+
+exports[`<PaginationDetails /> should render a pagination details with margin 1`] = `
+<Text
+  color="#667380"
+  data-component-type="pagination_details"
+  isInline={true}
+  margins={
+    Object {
+      "bottom": 20,
+      "left": 20,
+      "right": 20,
+      "top": 20,
+    }
+  }
+  tag="span"
+  type="small"
+>
+  Showing 
+  1
+   to 
+  10
+   of 
+  10
+   entries
+</Text>
+`;

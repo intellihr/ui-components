@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 
 import { Props, Variables } from '../../../common'
+import { styleForMargins } from '../../Spacers/services/margins'
 import { styleForTruncatedText, styleForTypographyType } from '../services/textStyles'
 
 export interface ITextWrapperProps {
@@ -11,9 +12,12 @@ export interface ITextWrapperProps {
   textType?: Props.TypographyType
   isTruncated?: boolean
   isItalic?: boolean
+  margins?: Props.IMargins
 }
 
 export const TextWrapper = styled.span`
+  ${(props: ITextWrapperProps) => styleForMargins(props.margins)}
+
   ${(props: ITextWrapperProps) => styleForTypographyType(props.textType)}
 
   ${(props: ITextWrapperProps) => {
