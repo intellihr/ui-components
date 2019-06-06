@@ -22,6 +22,7 @@ const MenuItemWrapper = styled.li`
 
     color: ${Variables.Color.n700};
     margin-left: 3px;
+    height: 50px;
 
     &:hover {
       color: ${Variables.Color.n700};
