@@ -115,4 +115,21 @@ describe('<Text />', () => {
     expect(wrapper.find('HintWrapper').exists()).toBeTruthy()
     expect(wrapper.find('Tooltip').exists()).toBeTruthy()
   })
+
+  it(`should render a text with margin`, () => {
+    const wrapper = mount(
+      <Text
+        margins={{
+          top: 20,
+          left: 20,
+          right: 20,
+          bottom: 20
+        }}
+      >
+        Hello! I have special margin
+      </Text>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })

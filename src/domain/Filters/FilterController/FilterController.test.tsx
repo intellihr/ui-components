@@ -1,12 +1,12 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { IFilterDropdownFilter } from '../FilterDropdown/FilterDropdown'
+import { IAddFilterDropdownMenuFilter } from '../AddFilterDropdownMenu/AddFilterDropdownMenu'
 import { FilterController } from './FilterController'
 
 const dummyFunction = () => alert('dummy')
 
-const filters: IFilterDropdownFilter[] = [
+const filters: IAddFilterDropdownMenuFilter[] = [
   {
     fieldName: 'Type',
     type: 'SINGLE_SELECT',
