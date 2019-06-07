@@ -352,9 +352,9 @@
     "@types/react" "*"
 
 "@types/react-tooltip@^3.3.5":
-  version "3.3.5"
-  resolved "https://registry.yarnpkg.com/@types/react-tooltip/-/react-tooltip-3.3.5.tgz#7b1b16ce00d76436328106a6ca7c4ad60de525d6"
-  integrity sha512-wpWzjtMWBPymIoYjqZTeWX1v5dJe4V1akmcTM6iZwSS/cL8jdi6dFt4BoLXDOxgL5tEe/9yVBlQD+MAYvexBfw==
+  version "3.9.2"
+  resolved "https://registry.yarnpkg.com/@types/react-tooltip/-/react-tooltip-3.9.2.tgz#c46ee03cc8631ec1b130feef02af119dbe3639d2"
+  integrity sha512-nw8yikdyULgQoZWSkMgjMVd7nnrjlnUJc4U8NtuxCmTIloEgQTJpI6O/KrWTBK8cNP67KZy/fGgjZ9rOQsdwBQ==
   dependencies:
     "@types/react" "*"
 
