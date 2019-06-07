@@ -1,21 +1,20 @@
 import React from 'react'
 
 import { Variables } from '../../../common'
-import { Button } from '../../Buttons/Button'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { GridLayout } from '../../Layouts/GridLayout'
 import { DropdownMenu, IDropdownMenuToggleComponentProps } from '../../Popovers/DropdownMenu'
 import { ISectionProps } from '../../Popovers/DropdownMenu/subcomponents/Section'
-import { CardWrapper, ExpandComponentWrapper } from './style'
+import { CardWrapper, ExpandComponentWrapper, StyleActionButton, StyleToggleButton } from './style'
 
 interface ICardProps {
+  name: string
   /** the component that shows even in collapse mode */
   collapseComponent: JSX.Element
   /** the component that shows in expand mode only */
   expandComponent: JSX.Element
   /** If true, the card is in expand style */
   isExpanded?: boolean
-  name: string
 }
 
 interface ICardListProps {
@@ -27,7 +26,15 @@ interface ICardListProps {
   onCardToggle: (card: ICardProps) => void
 }
 
-export class CardList extends React.PureComponent<ICardListProps> {
+interface ICardListState {
+  isActionButtonHover: boolean
+}
+
+export class CardList extends React.PureComponent<ICardListProps,ICardListState> {
+  public state: ICardListState = {
+    isActionButtonHover: false
+  }
+
   public render (): JSX.Element {
     const {
       cards
@@ -52,6 +59,8 @@ export class CardList extends React.PureComponent<ICardListProps> {
       <CardWrapper
         onClick={this.onToggleCard(card)}
         key={`${name}-${index}`}
+        isExpanded={!!isExpanded}
+        hasHoverStyle={!this.state.isActionButtonHover}
       >
         <GridLayout
           gutterPaddingX={Variables.Spacing.sSmall}
@@ -63,8 +72,7 @@ export class CardList extends React.PureComponent<ICardListProps> {
             {
               size: 'shrink',
               content: this.cardRightComponent(card),
-              displayType: 'flex',
-              flexHorizontalAlignment: GridLayout.HorizontalAlignment.Right
+              displayType: 'flex'
             }
           ]}
         />
@@ -75,7 +83,7 @@ export class CardList extends React.PureComponent<ICardListProps> {
     )
   }
 
-  private onToggleCard = (card: ICardProps) => (event: React.MouseEvent<HTMLDivElement>) => {
+  private onToggleCard = (card: ICardProps) => () => {
     const {
       onCardToggle
     } = this.props
@@ -89,16 +97,14 @@ export class CardList extends React.PureComponent<ICardListProps> {
         gutterPaddingX={Variables.Spacing.sSmall}
         cells={[
           {
-            size: 5,
+            size: 6,
             content: this.actionButtonDropdownMenu(card),
-            displayType: 'flex',
-            flexHorizontalAlignment: GridLayout.HorizontalAlignment.Right
+            displayType: 'flex'
           },
           {
-            size: 5,
-            content: this.toggleButton,
-            displayType: 'flex',
-            flexHorizontalAlignment: GridLayout.HorizontalAlignment.Right
+            size: 6,
+            content: this.toggleButton(card),
+            displayType: 'flex'
           }
         ]}
       />
@@ -118,21 +124,40 @@ export class CardList extends React.PureComponent<ICardListProps> {
     )
   }
 
-  private actionButton = ({ toggleMenu, toggleComponentRef, ariaProps }: IDropdownMenuToggleComponentProps) => (
-    <Button
-      onClick={toggleMenu}
-      innerRef={toggleComponentRef}
-      buttonOverrides={{...ariaProps}}
-    >
-      <FontAwesomeIcon color={Variables.Color.n800} type='ellipsis-v'/>
-    </Button>
+  private actionButton = ({ toggleMenu, toggleComponentRef}: IDropdownMenuToggleComponentProps) => (
+    <div>
+      <StyleActionButton
+        onClick={this.handleActionButtonClick(toggleMenu)}
+        onMouseOver={this.handleActionButtonMouseOver}
+        onMouseOut={this.handleActionButtonMouseOut}
+        innerRef={toggleComponentRef}
+      >
+        <FontAwesomeIcon type='ellipsis-v'/>
+      </StyleActionButton>
+    </div>
   )
 
-  private get toggleButton (): JSX.Element {
+  private toggleButton = (card: ICardProps) => {
     return(
-      <Button >
-        <FontAwesomeIcon color={Variables.Color.n800} type='chevron-down'/>
-      </Button>
+      <div>
+        <StyleToggleButton isExpanded={!!card.isExpanded} hasParentHoverStyle={!this.state.isActionButtonHover}>
+          <FontAwesomeIcon type='chevron-down'/>
+        </StyleToggleButton>
+      </div>
     )
+  }
+
+  private handleActionButtonClick = (toggleMenu: () => void) => (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation()
+    event.preventDefault()
+    toggleMenu()
+  }
+
+  private handleActionButtonMouseOver = () => {
+    this.setState({ isActionButtonHover: true })
+  }
+
+  private handleActionButtonMouseOut = () => {
+    this.setState({ isActionButtonHover: false })
   }
 }
