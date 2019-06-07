@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 
 import { Variables } from '../../../common'
 
@@ -23,39 +23,15 @@ const CardWrapper = styled.div`
   background-color: ${Variables.Color.n100};
   border: 1px solid ${Variables.Color.n250};
   border-radius: ${Variables.Style.borderRadius}px;
-  transition: background-color .25s ease-out;
   transition: height .5s;
-  cursor: pointer;
 
   ${(props: ICardWrapperProps) => props.hasHoverStyle && css`
+      cursor: pointer;
       &:hover {
       background-color: ${Variables.Color.n200};
+      transition: background-color .25s ease-out;
     }
   `}
-
-  ${(props: ICardWrapperProps) => {
-      if (props.isExpanded) {
-        return css`
-          animation-name: animate-out;
-          animation-duration: 0.5s;
-          animation-iteration-count: 1;
-          animation-direction: alternate;
-          animation-timing-function: ease-in-out;
-          animation-fill-mode: both;
-          animation-delay: 0s;
-        `
-      }
-
-      return css`
-          animation-name: animate-in;
-          animation-duration: 0.6s;
-          animation-iteration-count: 1;
-          animation-direction: normal;
-          animation-timing-function: ease-in;
-          animation-fill-mode: both;
-          animation-delay: 0s;
-        `
-  }}
 `
 
 const ButtonStyle = css`
@@ -68,6 +44,7 @@ const ButtonStyle = css`
   &:hover {
     color: ${Variables.Color.n800};
     background-color: ${Variables.Color.n300};
+    transition: all .25s ease-out;
   }
 `
 
@@ -99,14 +76,57 @@ const StyleActionButton = styled.button`
   }
 `
 
+const AnimateIn = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(-${Variables.Spacing.s3XSmall});
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+  }
+`
+
+const AnimateOut = keyframes`
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-${Variables.Spacing.s3XSmall});
+  }
+
+  100% {
+    opacity: 0;
+  }
+`
+
 const ExpandComponentWrapper = styled.div`
   display: none;
+  animation-name: ${AnimateOut};
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 0s;
 
   ${(props: IExpandComponentWrapperProps) => props.isExpanded && css`
       display: block;
+      animation-name: ${AnimateIn};
+      animation-duration: 0.6s;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-timing-function: ease-in;
+      animation-fill-mode: both;
+      animation-delay: 0s;
   `}
 `
-
 
 export {
   CardWrapper,

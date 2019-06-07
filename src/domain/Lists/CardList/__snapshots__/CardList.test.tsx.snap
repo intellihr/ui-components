@@ -1,0 +1,286 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CardList /> should render a card list skeleton 1`] = `
+<Fragment>
+  <BlockSkeleton
+    height={100}
+    showSkeleton={true}
+  />
+  <BlockSkeleton
+    height={100}
+    showSkeleton={true}
+  />
+  <BlockSkeleton
+    height={100}
+    showSkeleton={true}
+  />
+</Fragment>
+`;
+
+exports[`<CardList /> should render a simple card list with actions only 1`] = `
+<Fragment>
+  <styled.div
+    hasHoverStyle={false}
+    isExpanded={false}
+    key="test3-0"
+    onClick={[Function]}
+  >
+    <GridLayout
+      cells={
+        Array [
+          Object {
+            "content": <div>
+              test3
+            </div>,
+            "size": "auto",
+          },
+          Object {
+            "content": <GridLayout
+              cells={
+                Array [
+                  Object {
+                    "content": <DropdownMenu
+                      hasInitialFocus={false}
+                      sections={
+                        Array [
+                          Object {
+                            "href": "https://www.google.com.au",
+                            "text": "action1",
+                          },
+                          Object {
+                            "href": "https://www.google.com.au",
+                            "text": "action2",
+                          },
+                        ]
+                      }
+                      toggleComponent={[Function]}
+                    />,
+                    "displayType": "flex",
+                    "size": "shrink",
+                  },
+                ]
+              }
+              gridColumns={12}
+              gutterMarginX="none"
+              gutterMarginY="none"
+              gutterPaddingX={12}
+              gutterPaddingY="none"
+              horizontalAlignment="justify"
+              verticalAlignment="stretch"
+            />,
+            "displayType": "flex",
+            "size": "shrink",
+          },
+        ]
+      }
+      gridColumns={12}
+      gutterMarginX="none"
+      gutterMarginY="none"
+      gutterPaddingX={12}
+      gutterPaddingY="none"
+      horizontalAlignment="left"
+      verticalAlignment="stretch"
+    />
+    <styled.div
+      isExpanded={false}
+    />
+  </styled.div>
+</Fragment>
+`;
+
+exports[`<CardList /> should render a simple card list with expand component and actions 1`] = `
+<Fragment>
+  <styled.div
+    hasHoverStyle={true}
+    isExpanded={false}
+    key="test1-0"
+    onClick={[Function]}
+  >
+    <GridLayout
+      cells={
+        Array [
+          Object {
+            "content": <div>
+              test1
+            </div>,
+            "size": "auto",
+          },
+          Object {
+            "content": <GridLayout
+              cells={
+                Array [
+                  Object {
+                    "content": <DropdownMenu
+                      hasInitialFocus={false}
+                      sections={
+                        Array [
+                          Object {
+                            "href": "https://www.google.com.au",
+                            "text": "action1",
+                          },
+                          Object {
+                            "href": "https://www.google.com.au",
+                            "text": "action2",
+                          },
+                        ]
+                      }
+                      toggleComponent={[Function]}
+                    />,
+                    "displayType": "flex",
+                    "size": "shrink",
+                  },
+                  Object {
+                    "content": <div>
+                      <styled.button
+                        hasParentHoverStyle={true}
+                        isExpanded={false}
+                      >
+                        <FontAwesomeIcon
+                          type="chevron-down"
+                        />
+                      </styled.button>
+                    </div>,
+                    "displayType": "flex",
+                    "size": "shrink",
+                  },
+                ]
+              }
+              gridColumns={12}
+              gutterMarginX="none"
+              gutterMarginY="none"
+              gutterPaddingX={12}
+              gutterPaddingY="none"
+              horizontalAlignment="justify"
+              verticalAlignment="stretch"
+            />,
+            "displayType": "flex",
+            "size": "shrink",
+          },
+        ]
+      }
+      gridColumns={12}
+      gutterMarginX="none"
+      gutterMarginY="none"
+      gutterPaddingX={12}
+      gutterPaddingY="none"
+      horizontalAlignment="left"
+      verticalAlignment="stretch"
+    />
+    <styled.div
+      isExpanded={false}
+    >
+      <div>
+        test1
+      </div>
+    </styled.div>
+  </styled.div>
+</Fragment>
+`;
+
+exports[`<CardList /> should render a simple card list with expand component only 1`] = `
+<Fragment>
+  <styled.div
+    hasHoverStyle={true}
+    isExpanded={false}
+    key="test2-0"
+    onClick={[Function]}
+  >
+    <GridLayout
+      cells={
+        Array [
+          Object {
+            "content": <div>
+              test2
+            </div>,
+            "size": "auto",
+          },
+          Object {
+            "content": <GridLayout
+              cells={
+                Array [
+                  Object {
+                    "content": <div>
+                      <styled.button
+                        hasParentHoverStyle={true}
+                        isExpanded={false}
+                      >
+                        <FontAwesomeIcon
+                          type="chevron-down"
+                        />
+                      </styled.button>
+                    </div>,
+                    "displayType": "flex",
+                    "size": "shrink",
+                  },
+                ]
+              }
+              gridColumns={12}
+              gutterMarginX="none"
+              gutterMarginY="none"
+              gutterPaddingX={12}
+              gutterPaddingY="none"
+              horizontalAlignment="justify"
+              verticalAlignment="stretch"
+            />,
+            "displayType": "flex",
+            "size": "shrink",
+          },
+        ]
+      }
+      gridColumns={12}
+      gutterMarginX="none"
+      gutterMarginY="none"
+      gutterPaddingX={12}
+      gutterPaddingY="none"
+      horizontalAlignment="left"
+      verticalAlignment="stretch"
+    />
+    <styled.div
+      isExpanded={false}
+    >
+      <div>
+        test2
+      </div>
+    </styled.div>
+  </styled.div>
+</Fragment>
+`;
+
+exports[`<CardList /> should render a simple card list without expand component and actions 1`] = `
+<Fragment>
+  <styled.div
+    hasHoverStyle={false}
+    isExpanded={false}
+    key="test4-0"
+    onClick={[Function]}
+  >
+    <GridLayout
+      cells={
+        Array [
+          Object {
+            "content": <div>
+              test4
+            </div>,
+            "size": "auto",
+          },
+          Object {
+            "content": null,
+            "displayType": "flex",
+            "size": "shrink",
+          },
+        ]
+      }
+      gridColumns={12}
+      gutterMarginX="none"
+      gutterMarginY="none"
+      gutterPaddingX={12}
+      gutterPaddingY="none"
+      horizontalAlignment="left"
+      verticalAlignment="stretch"
+    />
+    <styled.div
+      isExpanded={false}
+    />
+  </styled.div>
+</Fragment>
+`;
