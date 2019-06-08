@@ -1,7 +1,9 @@
 import { isPlainObject } from 'lodash'
+import React from 'react'
 import styled, { css } from 'styled-components'
 
 import { Utils, Variables } from '../../../common'
+import { Props } from '../../../common'
 
 enum HorizontalAlignment {
   Left = 'left',
@@ -67,23 +69,17 @@ interface IStyledGridLayoutProps {
 }
 
 interface IStyledCellProps {
-  /**
-   * Key for the cell. This is important for animations, as cells with the same key will be kept unanimated
-   * when transitioning. Defaults to the index of the cell.
-   */
-  key?: string | number
-  gridColumns?: number
-  size?: CellSize | IStyledCellSizes
-  offset?: CellOffset | IStyledCellOffsets
-  gutterMarginX?: GutterSize | IStyledGridGutters
-  gutterMarginY?: GutterSize | IStyledGridGutters
-  gutterPaddingX?: GutterSize | IStyledGridGutters
-  gutterPaddingY?: GutterSize | IStyledGridGutters
-  animationStyle?: CellAnimation
-  /** Component context */
-  componentContext?: string
+  gridColumns: number
+  size: CellSize | IStyledCellSizes
+  offset: CellOffset | IStyledCellOffsets
+  gutterMarginX: GutterSize | IStyledGridGutters
+  gutterMarginY: GutterSize | IStyledGridGutters
+  gutterPaddingX: GutterSize | IStyledGridGutters
+  gutterPaddingY: GutterSize | IStyledGridGutters
+  animationStyle: CellAnimation
   displayType: CellDisplayType
-  flexHorizontalAlignments: HorizontalAlignment | IStyledHorizontalAlignment
+  flexHorizontalAlignment: HorizontalAlignment | IStyledHorizontalAlignment
+  componentContext?: string
 }
 
 const breakpointOrder: ReadonlyArray<keyof IStyledCellSizes> = ['min', 'tablet', 'desktop', 'bigDesktop']
@@ -293,25 +289,25 @@ function gridStyleForPropsAtBreakpoint (props: IStyledGridLayoutProps, breakpoin
 function gridStyleForProps (props: IStyledGridLayoutProps) {
   return css`
     ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
-      ${gridStyleForPropsAtBreakpoint(props, 'min')};
+      ${gridStyleForPropsAtBreakpoint(props, 'min')}
     }
 
     ${Utils.mediaQueryBetweenSizes({
     minPx: Variables.Breakpoint.breakpointTablet,
     maxPx: Variables.Breakpoint.breakpointDesktop
   })} {
-      ${gridStyleForPropsAtBreakpoint(props, 'tablet')};
+      ${gridStyleForPropsAtBreakpoint(props, 'tablet')}
     }
 
     ${Utils.mediaQueryBetweenSizes({
     minPx: Variables.Breakpoint.breakpointDesktop,
     maxPx: Variables.Breakpoint.breakpointBigDesktop
   })} {
-      ${gridStyleForPropsAtBreakpoint(props, 'desktop')};
+      ${gridStyleForPropsAtBreakpoint(props, 'desktop')}
     }
 
     ${Utils.mediaQueryBetweenSizes({ minPx: Variables.Breakpoint.breakpointBigDesktop })} {
-      ${gridStyleForPropsAtBreakpoint(props, 'bigDesktop')};
+      ${gridStyleForPropsAtBreakpoint(props, 'bigDesktop')}
     }
   `
 }
@@ -459,7 +455,7 @@ function cellStyleForProps (props: IStyledCellProps) {
     size: getSizeAtBreakpoint(size, 'min'),
     offset: getOffsetAtBreakpoint(offset, 'min'),
     displayType: props.displayType,
-    flexHorizontalAlignment: getHorizontalAlignmentAtBreakpoint(props.flexHorizontalAlignments, 'min'),
+    flexHorizontalAlignment: getHorizontalAlignmentAtBreakpoint(props.flexHorizontalAlignment, 'min'),
     gutters: {
       marginXPx: getGutterPxAtBreakpoint(gutterMarginX, 'min'),
       marginYPx: getGutterPxAtBreakpoint(gutterMarginY, 'min'),
@@ -478,7 +474,7 @@ function cellStyleForProps (props: IStyledCellProps) {
     size: getSizeAtBreakpoint(size, 'tablet'),
     offset: getOffsetAtBreakpoint(offset, 'tablet'),
     displayType: props.displayType,
-    flexHorizontalAlignment: getHorizontalAlignmentAtBreakpoint(props.flexHorizontalAlignments, 'tablet'),
+    flexHorizontalAlignment: getHorizontalAlignmentAtBreakpoint(props.flexHorizontalAlignment, 'tablet'),
     gutters: {
       marginXPx: getGutterPxAtBreakpoint(gutterMarginX, 'tablet'),
       marginYPx: getGutterPxAtBreakpoint(gutterMarginY, 'tablet'),
@@ -497,7 +493,7 @@ function cellStyleForProps (props: IStyledCellProps) {
     size: getSizeAtBreakpoint(size, 'desktop'),
     offset: getOffsetAtBreakpoint(offset, 'desktop'),
     displayType: props.displayType,
-    flexHorizontalAlignment: getHorizontalAlignmentAtBreakpoint(props.flexHorizontalAlignments, 'desktop'),
+    flexHorizontalAlignment: getHorizontalAlignmentAtBreakpoint(props.flexHorizontalAlignment, 'desktop'),
     gutters: {
       marginXPx: getGutterPxAtBreakpoint(gutterMarginX, 'desktop'),
       marginYPx: getGutterPxAtBreakpoint(gutterMarginY, 'desktop'),
@@ -513,7 +509,7 @@ function cellStyleForProps (props: IStyledCellProps) {
     size: getSizeAtBreakpoint(size, 'bigDesktop'),
     offset: getOffsetAtBreakpoint(offset, 'bigDesktop'),
     displayType: props.displayType,
-    flexHorizontalAlignment: getHorizontalAlignmentAtBreakpoint(props.flexHorizontalAlignments, 'bigDesktop'),
+    flexHorizontalAlignment: getHorizontalAlignmentAtBreakpoint(props.flexHorizontalAlignment, 'bigDesktop'),
     gutters: {
       marginXPx: getGutterPxAtBreakpoint(gutterMarginX, 'bigDesktop'),
       marginYPx: getGutterPxAtBreakpoint(gutterMarginY, 'bigDesktop'),
@@ -580,11 +576,65 @@ const StyledCell = styled.div<IStyledCellProps>`
   ${cellAnimationForProps}
 `
 
+interface ICellProps {
+  key?: string | number
+  gridColumns?: number
+  size?: CellSize | IStyledCellSizes
+  offset?: CellOffset | IStyledCellOffsets
+  gutterMarginX?: GutterSize | IStyledGridGutters
+  gutterMarginY?: GutterSize | IStyledGridGutters
+  gutterPaddingX?: GutterSize | IStyledGridGutters
+  gutterPaddingY?: GutterSize | IStyledGridGutters
+  animationStyle?: CellAnimation
+  /** Component context */
+  componentContext?: string
+  displayType: CellDisplayType
+  flexHorizontalAlignment: HorizontalAlignment | IStyledHorizontalAlignment
+  'data-component-type'?: string
+  'data-component-context'?: string
+}
+
+const Cell: React.FC<ICellProps> = ({
+  children,
+  gridColumns,
+  size,
+  offset,
+  gutterMarginX,
+  gutterMarginY,
+  gutterPaddingX,
+  gutterPaddingY,
+  animationStyle,
+  displayType,
+  flexHorizontalAlignment,
+  componentContext
+}) => {
+  return (
+    <StyledCell
+      size={size || 'auto'}
+      offset={offset || 0}
+      animationStyle={animationStyle || 'none'}
+      gridColumns={gridColumns!}
+      displayType={displayType || 'block'}
+      flexHorizontalAlignment={flexHorizontalAlignment || HorizontalAlignment.Left}
+      gutterMarginX={gutterMarginX!}
+      gutterMarginY={gutterMarginY!}
+      gutterPaddingX={gutterPaddingX!}
+      gutterPaddingY={gutterPaddingY!}
+      data-component-type={Props.ComponentType.GridLayoutCell}
+      data-component-context={componentContext}
+    >
+      {children}
+    </StyledCell>
+  )
+}
+
 export {
+  Cell,
   CellAnimation,
   CellSize,
   GutterSize,
   HorizontalAlignment,
+  ICellProps,
   IStyledCellOffsets,
   IStyledCellProps,
   IStyledCellSizes,

@@ -20,6 +20,43 @@ const style = {
   width: '100%'
 };
 
+<GridLayout
+  cells={[
+    {
+      size: 10,
+      content: <div style={style}/>
+    },
+    {
+      size: 2,
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 3, tablet: 4 },
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 6, tablet: 4 },
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 3, tablet: 4 },
+      content: <div style={style}/>
+    }
+  ]}
+/>
+```
+
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
 <GridLayout>
     <GridLayout.Cell size={10}>
       <div style={style}/>
@@ -63,6 +100,37 @@ const styleSmall = {
   padding: '6px'
 };
 
+<GridLayout
+  cells={[
+    {
+      size: { desktop: 'shrink', min: 'auto' },
+      content: <div style={styleSmall}>I shrink to my content :)</div>
+    },
+    {
+      size: 'auto',
+      content: <div style={style} />
+    }
+  ]}
+/>
+```
+
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+const styleSmall = {
+  backgroundColor: Variables.Color.g200,
+  border: `2px solid ${Variables.Color.n100}`,
+  color: Variables.Color.g600,
+  padding: '6px'
+};
+
 <GridLayout>
   <GridLayout.Cell size = {{  desktop: 'shrink', min: 'auto' }}>
     <div style={styleSmall}>I shrink to my content :)</div>
@@ -75,6 +143,35 @@ const styleSmall = {
 
 `size: 'fullWidth'` is a synonym for `size: 12` and can be semantically used wherever a full
 width cell is desired. The following will be three fullWidth cells on tablet or lower sizes:
+
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
+<GridLayout
+  cells={[
+    {
+      size: { desktop: 3, min: 'fullWidth' },
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 6, min: 'fullWidth' },
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 3, min: 'fullWidth' },
+      content: <div style={style}/>
+    }
+  ]}
+/>
+```
 
 ```jsx
 import { Variables } from '@Common';
@@ -118,6 +215,44 @@ const style = {
 <GridLayout
   gutterMarginX={Variables.Spacing.sMedium}
   gutterMarginY={Variables.Spacing.sSmall}
+  cells={[
+    {
+      size: 10,
+      content: <div style={style}/>
+    },
+    {
+      size: 2,
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 3, tablet: 4 },
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 6, tablet: 4 },
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 3, tablet: 4 },
+      content: <div style={style}/>
+    }
+  ]}
+/>
+```
+
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
+<GridLayout
+  gutterMarginX={Variables.Spacing.sMedium}
+  gutterMarginY={Variables.Spacing.sSmall}
 >
   <GridLayout.Cell size = {10}>
     <div style={style} />
@@ -139,6 +274,40 @@ const style = {
 
 Padding can be useful for spacing text and other elements without needing wrappers, but should generally be
 avoided unless you have a good use case:
+
+```jsx
+import { Variables } from '@Common';
+
+
+const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec libero et libero molestie eleifend. Donec dignissim vel erat eu cursus.';
+
+<GridLayout
+  gutterPaddingX={Variables.Spacing.sSmall}
+  gutterPaddingY={Variables.Spacing.sSmall}
+  cells={[
+    {
+      size: 4,
+      content: text
+    },
+    {
+      size: 4,
+      content: text
+    },
+    {
+      size: 4,
+      content: text
+    },
+    {
+      size: 4,
+      content: text
+    },
+    {
+      size: 4,
+      content: text
+    }
+  ]}
+/>
+```
 
 ```jsx
 import { Variables } from '@Common';
@@ -168,6 +337,59 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
 ```
 
 Gutters support all sizes taken from `Spacing` and `Layout`:
+
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
+<>
+  <GridLayout
+    gutterMarginX={Variables.Spacing.s2XSmall}
+    cells={[
+      {
+        size: 6,
+        content: <div style={style}>spacing-2xsmall gutters</div>
+      },
+      {
+        size: 6,
+        content: <div style={style}/>
+      }
+    ]}
+  />
+  <GridLayout
+    gutterMarginX={Variables.Spacing.sMedium}
+    cells={[
+      {
+        size: 6,
+        content: <div style={style}>spacing-medium gutters</div>
+      },
+      {
+        size: 6,
+        content: <div style={style}/>
+      }
+    ]}
+  />
+  <GridLayout
+    gutterMarginX={Variables.Layout.lLarge}
+    cells={[
+      {
+        size: 6,
+        content: <div style={style}>layout-large gutters</div>
+      },
+      {
+        size: 6,
+        content: <div style={style}/>
+      }
+    ]}
+  />
+</>
+```
 
 ```jsx
 import { Variables } from '@Common';
@@ -231,6 +453,44 @@ const style = {
 <GridLayout
   gutterMarginX={{ desktop: Variables.Spacing.sLarge, min: Variables.Spacing.sSmall }}
   gutterMarginY={{ desktop: Variables.Spacing.sLarge, min: Variables.Spacing.sSmall }}
+  cells={[
+    {
+      size: 10,
+      content: <div style={style}/>
+    },
+    {
+      size: 2,
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 3, tablet: 4 },
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 6, tablet: 4 },
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 3, tablet: 4 },
+      content: <div style={style}/>
+    }
+  ]}
+/>
+```
+
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
+<GridLayout
+  gutterMarginX={{ desktop: Variables.Spacing.sLarge, min: Variables.Spacing.sSmall }}
+  gutterMarginY={{ desktop: Variables.Spacing.sLarge, min: Variables.Spacing.sSmall }}
 >
   <GridLayout.Cell size = {10}>
     <div style={style} />
@@ -267,6 +527,32 @@ const style = {
   width: '100%'
 };
 
+<GridLayout
+  cells={[
+    {
+      size: 4,
+      offset: { desktop: 7 },
+      content: <div style={style}/>
+    },
+    {
+      size: 1,
+      content: <div style={style}/>
+    }
+  ]}
+/>
+```
+
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
 <GridLayout>
   <GridLayout.Cell size={4} offset={{  desktop: 7 }}>
     <div style={style}/>
@@ -280,6 +566,85 @@ const style = {
 #### Horizontal Alignment
 
 Horizontal alignment can be applied to the grid to affect the items within it.
+
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  width: '100%',
+  textAlign: 'center'
+};
+
+<>
+  <GridLayout
+    cells={[
+      {
+        size: 4,
+        content: <div style={style}>Aligned to</div>
+      },
+      {
+        size: 4,
+        content: <div style={style}>the left (default)</div>
+      }
+    ]}
+  />
+  <GridLayout
+    horizontalAlignment={GridLayout.HorizontalAlignment.Right}
+    cells={[
+      {
+        size: 4,
+        content: <div style={style}>Aligned to</div>
+      },
+      {
+        size: 4,
+        content: <div style={style}>the right</div>
+      }
+    ]}
+  />
+  <GridLayout
+    horizontalAlignment={GridLayout.HorizontalAlignment.Center}
+    cells={[
+      {
+        size: 4,
+        content: <div style={style}>Aligned to</div>
+      },
+      {
+        size: 4,
+        content: <div style={style}>the center</div>
+      }
+    ]}
+  />
+  <GridLayout
+    horizontalAlignment={GridLayout.HorizontalAlignment.Justify}
+    cells={[
+      {
+        size: 4,
+        content: <div style={style}>Aligned to</div>
+      },
+      {
+        size: 4,
+        content: <div style={style}>push to the edges</div>
+      }
+    ]}
+  />
+  <GridLayout
+    horizontalAlignment={GridLayout.HorizontalAlignment.Spaced}
+    cells={[
+      {
+        size: 4,
+        content: <div style={style}>Aligned to</div>
+      },
+      {
+        size: 4,
+        content: <div style={style}>spread evenly</div>
+      }
+    ]}
+  />
+</>
+```
 
 ```jsx
 import { Variables } from '@Common';
@@ -338,10 +703,36 @@ const style = {
     </GridLayout.Cell>
   </GridLayout>
 </>
-
 ```
+
 Horizontal alignment also support being customised per breakpoint. The following will have left horizontal alignment
 on desktop but right horizontal alignment on mobile:
+
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  width: '100%',
+  textAlign: 'center'
+};
+
+<GridLayout
+  horizontalAlignment={{ desktop: GridLayout.HorizontalAlignment.Left, min: GridLayout.HorizontalAlignment.Right }}
+  cells={[
+          {
+            size: 4,
+            content: <div style={style}>Aligned to Left in desktop</div>
+          },
+          {
+            size: 4,
+            content: <div style={style}>right in mobile</div>
+          }
+        ]}
+/>
+```
 
 ```jsx
 import { Variables } from '@Common';
@@ -367,6 +758,75 @@ const style = {
 #### Vertical Alignment
 
 Vertical alignment can be applied to the grid to affect the items within it.
+
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  width: '100%',
+  height: '100%',
+  textAlign: 'center'
+};
+const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id eros consequat ex faucibus pellentesque nec non ipsum. Nulla facilisis libero vitae nisi varius ultricies. Nullam aliquet sollicitudin luctus. Donec sit amet risus et est pellentesque consectetur. Cras eu nisl est. Quisque auctor magna at nulla ultrices, non molestie tortor iaculis.';
+
+<>
+  <GridLayout
+    verticalAlignment={GridLayout.VerticalAlignment.Top}
+    cells={[
+      {
+        size: 4,
+        content: <div style={style}>Aligned to the top</div>
+      },
+      {
+        size: 4,
+        content: <div style={style}>{text}</div>
+      }
+    ]}
+  />
+  <GridLayout
+    verticalAlignment={GridLayout.VerticalAlignment.Middle}
+    cells={[
+      {
+        size: 4,
+        content: <div style={style}>Aligned to the middle</div>
+      },
+      {
+        size: 4,
+        content: <div style={style}>{text}</div>
+      }
+    ]}
+  />
+  <GridLayout
+    verticalAlignment={GridLayout.VerticalAlignment.Bottom}
+    cells={[
+      {
+        size: 4,
+        content: <div style={style}>Aligned to the bottom</div>
+      },
+      {
+        size: 4,
+        content: <div style={style}>{text}</div>
+      }
+    ]}
+  />
+  <GridLayout
+    verticalAlignment={GridLayout.VerticalAlignment.Stretch}
+    cells={[
+      {
+        size: 4,
+        content: <div style={style}>Stretched to have the same height (default behaviour)</div>
+      },
+      {
+        size: 4,
+        content: <div style={style}>{text}</div>
+      }
+    ]}
+  />
+</>
+```
 
 ```jsx
 import { Variables } from '@Common';
@@ -422,6 +882,35 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id 
 
 Vertical alignment also support being customised per breakpoint. The following will have top vertical alignment
 on desktop but bottom vertical alignment on mobile:
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  width: '100%',
+  height: '100%',
+  textAlign: 'center'
+};
+const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id eros consequat ex faucibus pellentesque nec non ipsum. Nulla facilisis libero vitae nisi varius ultricies. Nullam aliquet sollicitudin luctus. Donec sit amet risus et est pellentesque consectetur. Cras eu nisl est. Quisque auctor magna at nulla ultrices, non molestie tortor iaculis.';
+
+
+<GridLayout
+    verticalAlignment={{ desktop: GridLayout.VerticalAlignment.Top, min: GridLayout.VerticalAlignment.Bottom }}
+    cells={[
+      {
+        size: 4,
+        content: <div style={style}>Alignment change with breakpoint</div>
+      },
+      {
+        size: 4,
+        content: <div style={style}>{text}</div>
+      }
+    ]}
+  />
+
+```
 
 ```jsx
 import { Variables } from '@Common';
@@ -449,6 +938,7 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id 
 #### Cell Alignment
 
 Cell alignment can be applied to the grid cell to affect the cell content.
+
 ```jsx
 import { Variables } from '@Common';
 
@@ -482,8 +972,43 @@ const style = {
 />
 ```
 
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem'
+};
+
+<GridLayout>
+  <GridLayout.Cell
+    size={4}
+    displayType='flex'
+    flexHorizontalAlignment={GridLayout.HorizontalAlignment.Left}
+  >
+    <div style={style}>aligned to left</div>
+  </GridLayout.Cell>
+  <GridLayout.Cell
+    size={4}
+    displayType='flex'
+    flexHorizontalAlignment={GridLayout.HorizontalAlignment.Center}
+  >
+    <div style={style}>aligned to center</div>
+  </GridLayout.Cell>
+  <GridLayout.Cell
+    size={4}
+    displayType='flex'
+    flexHorizontalAlignment={GridLayout.HorizontalAlignment.Right}
+  >
+    <div style={style}>aligned to right</div>
+  </GridLayout.Cell>
+</GridLayout>
+```
+
 Cell alignment also support being customised per breakpoint. The following will have right cell alignment
 on desktop but center cell alignment on mobile:
+
 ```jsx
 import { Variables } from '@Common';
 
@@ -507,6 +1032,31 @@ const style = {
           }
         ]}
 />
+```
+
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem'
+};
+
+<GridLayout>
+  <GridLayout.Cell
+    size={2}
+  >
+    <div style={style}>normal content</div>
+  </GridLayout.Cell>
+  <GridLayout.Cell
+    size={10}
+    displayType='flex'
+    flexHorizontalAlignment={{ desktop: GridLayout.HorizontalAlignment.Right, min: GridLayout.HorizontalAlignment.Center }}
+  >
+    <div style={style}>right in desktop, center in mobile</div>
+  </GridLayout.Cell>
+</GridLayout>
 ```
 
 #### Alternate grid patterns
@@ -579,6 +1129,83 @@ Cells can be animated with transitions when added or removed from the gridlayout
 cell or for the entire grid.
 
 ```jsx
+import { Variables } from '@Common';
+import { Button } from '@Domain/Buttons';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
+initialState = { cells: [
+  {
+    size: 6,
+    content: <div style={style} />
+  },
+  {
+    size: 6,
+    content: <div style={style} />
+  },
+  {
+    size: 6,
+    content: <div style={style} />
+  }
+] };
+
+<>
+  <Button onClick={() => {
+      const newCells = [
+        ...state.cells,
+        {
+          size: 6,
+          content: <div style={style} />
+        }
+      ]
+      
+      setState({ cells: newCells })
+    }}
+  >
+    Add Cell
+  </Button>
+  <Button onClick={() => {
+      const newCells = [
+        ...state.cells,
+        {
+          size: 6,
+          content: <div style={style} />,
+          animationStyle: 'zoomInOut'
+        }
+      ]
+      
+      setState({ cells: newCells })
+    }}
+  >
+    Add ZOOMER Cell
+  </Button>
+  <Button 
+    onClick={() => {
+      const newCells = [...state.cells]
+      newCells.pop()
+      
+      setState({ cells: newCells })
+    }}
+  >
+    Remove Cell
+  </Button>
+  <br />
+  <br />
+  <GridLayout
+    gutterMarginX={Variables.Layout.lLarge}
+    gutterMarginY={Variables.Layout.lSmall}
+    cells={state.cells}
+    animationStyle='fadeInOut'
+  />
+</>
+```
+
+```jsx
 import { useState } from "react";
 import { Variables } from '@Common';
 import { Button } from '@Domain/Buttons';
@@ -641,7 +1268,6 @@ function ParentComponent() {
       <GridLayout
         gutterMarginX={Variables.Layout.lSmall}
         gutterMarginY={Variables.Layout.lSmall}
-        cells={state.cells}
         animationStyle='fadeInOut'
       >
         {data.map((item, index) => {
