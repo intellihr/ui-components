@@ -5,6 +5,7 @@ import { GridProvider } from '../../Grids'
 interface IDefaults {
   /** Anchor component used for clickable links */
   AnchorComponent?: React.ComponentType<any>
+  tenorApiKey?: string
 }
 
 interface IDefaultsProviders {
@@ -12,8 +13,7 @@ interface IDefaultsProviders {
   children?: React.ReactNode
 }
 
-const defaults: IDefaults = {
-}
+const defaults: IDefaults = {}
 
 const DefaultsContext: React.Context<IDefaults> = React.createContext(defaults)
 
@@ -44,5 +44,6 @@ export {
   IDefaultsProviders,
   DefaultsConsumer,
   DefaultsProvider,
+  DefaultsContext,
   defaults
 }

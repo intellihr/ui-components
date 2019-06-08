@@ -3,6 +3,7 @@
 exports[`<Input /> should highlight all text when focused and highlightOnFocus is true 1`] = `
 <styled.input
   className="input "
+  data-component-type="text_input"
   id="test-input"
   name="test-input"
   onFocus={[Function]}
@@ -13,6 +14,7 @@ exports[`<Input /> should highlight all text when focused and highlightOnFocus i
 exports[`<Input /> should not highlight all text when focused and highlightOnFocus is false\` 1`] = `
 <styled.input
   className="input "
+  data-component-type="text_input"
   id="test-input"
   name="test-input"
   onFocus={[Function]}
@@ -23,6 +25,7 @@ exports[`<Input /> should not highlight all text when focused and highlightOnFoc
 exports[`<Input /> should render an input 1`] = `
 <styled.input
   className="input "
+  data-component-type="text_input"
   id="test-input"
   name="test-input"
   onFocus={[Function]}
@@ -30,10 +33,35 @@ exports[`<Input /> should render an input 1`] = `
 />
 `;
 
+exports[`<Input /> should render an input with a clear button 1`] = `
+<styled.div
+  hasClearButton={true}
+  hasIcon={false}
+  hasTextIndent={false}
+  prefixWrapperWidth={0}
+>
+  <styled.input
+    className="input "
+    data-component-type="text_input"
+    id="test-input"
+    name="test-input"
+    onFocus={[Function]}
+    type="text"
+  />
+  <styled.button
+    onClick={[Function]}
+  >
+    ×
+  </styled.button>
+</styled.div>
+`;
+
 exports[`<Input /> should render an input with a disable prefix text 1`] = `
 <styled.div
   disabledPrefix="test"
+  hasClearButton={false}
   hasIcon={false}
+  hasTextIndent={true}
   prefixWrapperWidth={0}
 >
   <styled.div
@@ -51,6 +79,7 @@ exports[`<Input /> should render an input with a disable prefix text 1`] = `
   </styled.div>
   <styled.input
     className="input "
+    data-component-type="text_input"
     id="test-input"
     name="test-input"
     onFocus={[Function]}
@@ -61,7 +90,9 @@ exports[`<Input /> should render an input with a disable prefix text 1`] = `
 
 exports[`<Input /> should render an input with an icon 1`] = `
 <styled.div
+  hasClearButton={false}
   hasIcon={true}
+  hasTextIndent={true}
   prefixWrapperWidth={0}
 >
   <styled.div
@@ -83,6 +114,7 @@ exports[`<Input /> should render an input with an icon 1`] = `
   </styled.div>
   <styled.input
     className="input "
+    data-component-type="text_input"
     id="test-input"
     name="test-input"
     onFocus={[Function]}
@@ -94,6 +126,7 @@ exports[`<Input /> should render an input with an icon 1`] = `
 exports[`<Input /> should render with an onBlur function if handleBlur is passed in 1`] = `
 <styled.input
   className="input "
+  data-component-type="text_input"
   id="test-input"
   name="test-input"
   onBlur={[Function]}

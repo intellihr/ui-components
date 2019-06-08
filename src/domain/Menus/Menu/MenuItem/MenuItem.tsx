@@ -9,7 +9,7 @@ export interface IMenuItemProps {
   url?: string
   label: string
   icon?: JSX.Element
-  render?: (label: string, iconContent?: JSX.Element, url?: string) => JSX.Element
+  render?: (label: JSX.Element, iconContent?: JSX.Element, url?: string) => JSX.Element
   className?: string
   isLoading?: boolean
   isOpen?: boolean
@@ -67,14 +67,13 @@ export class MenuItem extends React.PureComponent<IMenuItemProps> {
     const {
       render,
       url,
-      label,
       className
     } = this.props
 
     if (render) {
       return (
         <MenuItemWrapper className={className}>
-          {render(label, this.icon, url)}
+          {render(this.label, this.icon, url)}
         </MenuItemWrapper>
       )
     }

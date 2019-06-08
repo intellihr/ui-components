@@ -39,6 +39,8 @@ interface IPopoverProps {
   parentRef: RefObject<HTMLSpanElement>
 
   animationType?: 'dropdown' | 'tooltip'
+  /** The data-component-context */
+  componentContext?: string
 }
 
 class Popover extends React.Component<IPopoverProps, never> {
@@ -119,15 +121,18 @@ class Popover extends React.Component<IPopoverProps, never> {
     const {
       id,
       children,
-      animationType
+      animationType,
+      componentContext
     } = this.props
 
     return (
       <StyledPopover
+        data-component-type={Props.ComponentType.Popover}
+        data-component-context={componentContext}
         id={id}
         animationType={animationType!}
         className={animationState}
-        transformOrigin={{xPos: this.popoverAnchorXPosition, yPos: this.popoverAnchorYPosition}}
+        transformOrigin={{ xPos: this.popoverAnchorXPosition, yPos: this.popoverAnchorYPosition }}
         style={{
           ...this.popoverXOffset,
           ...this.popoverYOffset
@@ -178,7 +183,7 @@ class Popover extends React.Component<IPopoverProps, never> {
       popoverAnchorPosition
     } = this.props
 
-    if (!popoverAnchorPosition || popoverAnchorPosition === 'auto' ||  popoverAnchorPosition.xPos === 'auto') {
+    if (!popoverAnchorPosition || popoverAnchorPosition === 'auto' || popoverAnchorPosition.xPos === 'auto') {
       return this.parentInLeftSideOfWindow ? Props.Position.Left : Props.Position.Right
     }
 
@@ -190,7 +195,7 @@ class Popover extends React.Component<IPopoverProps, never> {
       popoverAnchorPosition
     } = this.props
 
-    if (!popoverAnchorPosition || popoverAnchorPosition === 'auto' ||  popoverAnchorPosition.yPos === 'auto') {
+    if (!popoverAnchorPosition || popoverAnchorPosition === 'auto' || popoverAnchorPosition.yPos === 'auto') {
       return this.parentInTopSideOfWindow ? Props.Position.Top : Props.Position.Bottom
     }
 
@@ -202,7 +207,7 @@ class Popover extends React.Component<IPopoverProps, never> {
       parentAnchorPosition
     } = this.props
 
-    if (!parentAnchorPosition || parentAnchorPosition === 'auto' ||  parentAnchorPosition.xPos === 'auto') {
+    if (!parentAnchorPosition || parentAnchorPosition === 'auto' || parentAnchorPosition.xPos === 'auto') {
       return this.parentInLeftSideOfWindow ? Props.Position.Left : Props.Position.Right
     }
 
@@ -214,7 +219,7 @@ class Popover extends React.Component<IPopoverProps, never> {
       parentAnchorPosition
     } = this.props
 
-    if (!parentAnchorPosition || parentAnchorPosition === 'auto' ||  parentAnchorPosition.yPos === 'auto') {
+    if (!parentAnchorPosition || parentAnchorPosition === 'auto' || parentAnchorPosition.yPos === 'auto') {
       return this.parentInTopSideOfWindow ? Props.Position.Bottom : Props.Position.Top
     }
 

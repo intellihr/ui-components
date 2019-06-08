@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilterTag /> should render the filter tag 1`] = `
+<div
+  data-component-type="filter_tag"
+>
+  <Brick
+    color="neutral"
+    key="tag-Type-0"
+    margins={
+      Object {
+        "right": 8,
+      }
+    }
+    typographyType="small"
+  >
+    <Text
+      color="#262D33"
+      isInline={true}
+      tag="span"
+      type="small"
+    >
+      Type is 
+    </Text>
+    <Text
+      color="#262D33"
+      isInline={true}
+      tag="span"
+      type="small"
+      weight="heavy"
+    >
+      Product Training
+    </Text>
+    <styled.button
+      onClick={[Function]}
+    >
+      <styled.span>
+        ×
+      </styled.span>
+    </styled.button>
+  </Brick>
+  <Brick
+    color="neutral"
+    key="tag-Training Provider-1"
+    margins={
+      Object {
+        "right": 8,
+      }
+    }
+    typographyType="small"
+  >
+    <Text
+      color="#262D33"
+      isInline={true}
+      tag="span"
+      type="small"
+    >
+      Training Provider is 
+    </Text>
+    <Text
+      color="#262D33"
+      isInline={true}
+      tag="span"
+      type="small"
+      weight="heavy"
+    >
+      AWS
+    </Text>
+    <styled.button
+      onClick={[Function]}
+    >
+      <styled.span>
+        ×
+      </styled.span>
+    </styled.button>
+  </Brick>
+</div>
+`;

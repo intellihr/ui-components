@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Props } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
-import { ChevronIconWrapper, EllipsisWrapper, StylePaginationButton } from './style'
+import { ButtonsWrapper, ChevronIconWrapper, EllipsisWrapper, StylePaginationButton } from './style'
 
 interface IPaginationButtonsProps {
   /** Current selected page number */
@@ -15,24 +15,28 @@ interface IPaginationButtonsProps {
   componentContext?: string
   /** If there are any more pages after the current one */
   hasMorePages?: boolean
+  /** The margins around the component */
+  margins?: Props.IMargins
 }
 
 export class PaginationButtons extends React.PureComponent<IPaginationButtonsProps> {
 
   public render (): JSX.Element {
     const {
-      componentContext
+      componentContext,
+      margins
     } = this.props
 
     return (
-      <div
+      <ButtonsWrapper
+        margins={margins}
         data-component-type={Props.ComponentType.PaginationButtons}
         data-component-context={componentContext}
       >
         {this.previousPageButton}
         {this.paginationPageButtons}
         {this.nextPageButton}
-      </div>
+      </ButtonsWrapper>
     )
   }
 

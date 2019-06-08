@@ -107,6 +107,58 @@ exports[`<Text /> should render a text with data attributes 1`] = `
 </Text>
 `;
 
+exports[`<Text /> should render a text with margin 1`] = `
+.c0 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
+<Text
+  isInline={true}
+  margins={
+    Object {
+      "bottom": 20,
+      "left": 20,
+      "right": 20,
+      "top": 20,
+    }
+  }
+  tag="span"
+  type="body"
+>
+  <styled.span
+    data-component-type="text"
+    isInline={true}
+    margins={
+      Object {
+        "bottom": 20,
+        "left": 20,
+        "right": 20,
+        "top": 20,
+      }
+    }
+    textType="body"
+  >
+    <span
+      className="c0"
+      data-component-type="text"
+    >
+      Hello! I have special margin
+    </span>
+  </styled.span>
+</Text>
+`;
+
 exports[`<Text /> should render an element with colored text 1`] = `
 .c0 {
   font-size: 16px;
