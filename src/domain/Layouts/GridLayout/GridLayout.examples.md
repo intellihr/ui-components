@@ -1076,6 +1076,40 @@ const style = {
   width: '100%'
 };
 
+<GridLayout
+  gridColumns={20}
+  cells={[
+    {
+      size: 10,
+      content: <div style={style}/>
+    },
+    {
+      size: 2,
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 3, tablet: 7 },
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 5, tablet: 1 },
+      content: <div style={style}/>
+    }
+  ]}
+/>
+```
+
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
 <GridLayout gridColumns={20}>
     <GridLayout.Cell size={10}>
       <div style={style}/>
@@ -1093,6 +1127,42 @@ const style = {
 ```
 
 You can design some makeshift vertical stacks using full widths:
+
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
+const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id eros consequat ex faucibus pellentesque nec non ipsum. Nulla facilisis libero vitae nisi varius ultricies. Nullam aliquet sollicitudin luctus. Donec sit amet risus et est pellentesque consectetur. Cras eu nisl est. Quisque auctor magna at nulla ultrices, non molestie tortor iaculis.';
+
+<GridLayout
+  gutterMarginY='large'
+  cells={[
+    {
+      size: 'fullWidth',
+      content: <div style={style}>{text}</div>
+    },
+    {
+      size: 'fullWidth',
+      content: <div style={style}>{text}</div>
+    },
+    {
+      size: 'fullWidth',
+      content: <div style={style}>{text}</div>
+    },
+    {
+      size: 'fullWidth',
+      content: <div style={style}>{text}</div>
+    }
+  ]}
+/>
+```
 
 ```jsx
 import { Variables } from '@Common';
