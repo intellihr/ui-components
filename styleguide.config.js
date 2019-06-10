@@ -88,6 +88,12 @@ module.exports = {
           ]
         },
         {
+          name: 'Cards',
+          components: [
+            'src/domain/Cards/Card/Card.tsx'
+          ]
+        },
+        {
           name: 'Charts',
           components: [
             'src/domain/Charts/RadarChart/RadarChart.tsx',
@@ -184,7 +190,6 @@ module.exports = {
           name: 'Lists',
           components: [
             'src/domain/Lists/ActionList/ActionList.tsx',
-            'src/domain/Lists/CardList/CardList.tsx',
             'src/domain/Lists/FilteredList/FilteredList.tsx',
             'src/domain/Lists/List/List.tsx',
             'src/domain/Lists/OptionList/OptionList.tsx',

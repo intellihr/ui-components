@@ -1,6 +1,7 @@
 import styled, { css, keyframes } from 'styled-components'
 
-import { Variables } from '../../../common'
+import { Props, Variables } from '../../../common'
+import { styleForMargins } from '../../Spacers/services/margins'
 
 export interface IExpandComponentWrapperProps {
   isExpanded: boolean
@@ -8,7 +9,8 @@ export interface IExpandComponentWrapperProps {
 
 export interface ICardWrapperProps {
   isExpanded: boolean,
-  hasHoverStyle: boolean
+  hasHoverStyle: boolean,
+  margins?: Props.IMargins
 }
 
 export interface IStyleToggleButtonProps {
@@ -16,14 +18,29 @@ export interface IStyleToggleButtonProps {
   hasParentHoverStyle: boolean
 }
 
+export interface IStyleActionButtonProps {
+  hasRightMargin: boolean
+}
+
+const ContentWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+const CollapsedComponentWrapper = styled.div`
+    width: auto;
+    flex: 1 1 0%;
+`
+
 const CardWrapper = styled.div`
-  height: auto;
-  margin-bottom: 8px;
-  padding: ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px
+  margin: 0;
+
+  ${(props: ICardWrapperProps) => styleForMargins(props.margins)}}
+
+  padding: ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px;
   background-color: ${Variables.Color.n100};
   border: 1px solid ${Variables.Color.n250};
   border-radius: ${Variables.Style.borderRadius}px;
-  transition: height .5s;
 
   ${(props: ICardWrapperProps) => props.hasHoverStyle && css`
       cursor: pointer;
@@ -50,9 +67,11 @@ const ButtonStyle = css`
 
 const StyleToggleButton = styled.button`
   ${ButtonStyle};
+  transition: all .25s ease-out;
 
   ${(props: IStyleToggleButtonProps) => props.isExpanded && css`
       transform: rotate(180deg);
+      transition: all .25s ease-out;
   `}
 
   ${(props: IStyleToggleButtonProps) => props.hasParentHoverStyle && css`
@@ -74,6 +93,11 @@ const StyleActionButton = styled.button`
   &:hover ${CardWrapper} {
     background-color: ${Variables.Color.n100};
   }
+
+  ${(props: IStyleActionButtonProps) => props.hasRightMargin && css`
+
+      margin-right: ${Variables.Spacing.sMedium}px;
+  `}
 `
 
 const AnimateIn = keyframes`
@@ -107,7 +131,11 @@ const AnimateOut = keyframes`
 `
 
 const ExpandComponentWrapper = styled.div`
-  display: none;
+  height: auto;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .5s;
+  max-height: 0;
   animation-name: ${AnimateOut};
   animation-duration: 0.5s;
   animation-iteration-count: 1;
@@ -117,7 +145,7 @@ const ExpandComponentWrapper = styled.div`
   animation-delay: 0s;
 
   ${(props: IExpandComponentWrapperProps) => props.isExpanded && css`
-      display: block;
+      max-height: 999px;
       animation-name: ${AnimateIn};
       animation-duration: 0.6s;
       animation-iteration-count: 1;
@@ -132,5 +160,7 @@ export {
   CardWrapper,
   ExpandComponentWrapper,
   StyleActionButton,
-  StyleToggleButton
+  StyleToggleButton,
+  ContentWrapper,
+  CollapsedComponentWrapper
 }

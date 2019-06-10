@@ -1,5 +1,4 @@
 export { ActionList } from './ActionList'
-export { CardList } from './CardList'
 export { FilteredList } from './FilteredList'
 export { List } from './List'
 export { OptionList, FilteredOptionList } from './OptionList'

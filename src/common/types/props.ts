@@ -68,6 +68,7 @@ namespace Props {
     ButtonGroup = 'button_group',
     ButtonIcon = 'button_icon',
     Callout = 'callout',
+    Card = 'card',
     EmptyState = 'empty_state',
     GridLayout = 'grid_layout',
     GridLayoutCell = 'grid_layout_cell',

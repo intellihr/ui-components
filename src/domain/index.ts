@@ -3,6 +3,7 @@ export { Badge } from './Badges'
 export { Board } from './Boards'
 export { BaseButton, Button, ButtonGroup, LinkButton } from './Buttons'
 export { Callout, EmptyState } from './Callouts'
+export { Card } from './Cards'
 export { RadarChart, TimeBasedLineChart } from './Charts'
 export { Comment } from './Comments'
 export { HighlightArea } from './Containers'
@@ -21,7 +22,7 @@ export { ActionLink, TextLink, UnstyledLink } from './Links'
  * ListRow, ListClickableColumn and ListColumn are here for legacy support.
  * They should be static properties of SmartList
  */
-export { CardList, List, SmartList, ActionList, ListRow, ListClickableColumn, ListColumn, OptionList, FilteredOptionList, FilteredList } from './Lists'
+export { List, SmartList, ActionList, ListRow, ListClickableColumn, ListColumn, OptionList, FilteredOptionList, FilteredList } from './Lists'
 
 export { Menu, MenuItem } from './Menus'
 export { Modal, ToggleModal } from './Modals'

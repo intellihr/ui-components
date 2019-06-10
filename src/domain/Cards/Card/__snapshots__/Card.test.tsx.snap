@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CardList /> should render a expanded card with actions only 1`] = `
+<styled.div
+  data-component-type="card"
+  hasHoverStyle={false}
+  isExpanded={false}
+  key="card1"
+  onClick={[Function]}
+>
+  <styled.div>
+    <styled.div>
+      <div>
+        test2
+      </div>
+    </styled.div>
+    <DropdownMenu
+      hasInitialFocus={false}
+      sections={
+        Array [
+          Object {
+            "href": "https://www.google.com.au",
+            "text": "action1",
+          },
+          Object {
+            "href": "https://www.google.com.au",
+            "text": "action2",
+          },
+        ]
+      }
+      toggleComponent={[Function]}
+    />
+  </styled.div>
+  <styled.div
+    isExpanded={false}
+  />
+</styled.div>
+`;
+
+exports[`<CardList /> should render a expanded card with expanded component only 1`] = `
+<styled.div
+  data-component-type="card"
+  hasHoverStyle={true}
+  isExpanded={false}
+  key="card1"
+  onClick={[Function]}
+>
+  <styled.div>
+    <styled.div>
+      <div>
+        test2
+      </div>
+    </styled.div>
+    <styled.button
+      hasParentHoverStyle={true}
+      isExpanded={false}
+    >
+      <FontAwesomeIcon
+        type="chevron-down"
+      />
+    </styled.button>
+  </styled.div>
+  <styled.div
+    isExpanded={false}
+  >
+    <div>
+      test2
+    </div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<CardList /> should render a expanded card without expand component and actions 1`] = `
+<styled.div
+  data-component-type="card"
+  hasHoverStyle={false}
+  isExpanded={false}
+  key="card1"
+  onClick={[Function]}
+>
+  <styled.div>
+    <styled.div>
+      <div>
+        test2
+      </div>
+    </styled.div>
+  </styled.div>
+  <styled.div
+    isExpanded={false}
+  />
+</styled.div>
+`;
+
+exports[`<CardList /> should render a simple expanded card with expanded component and actions  1`] = `
+<styled.div
+  data-component-type="card"
+  hasHoverStyle={true}
+  isExpanded={false}
+  key="card1"
+  onClick={[Function]}
+>
+  <styled.div>
+    <styled.div>
+      <div>
+        test2
+      </div>
+    </styled.div>
+    <DropdownMenu
+      hasInitialFocus={false}
+      sections={
+        Array [
+          Object {
+            "href": "https://www.google.com.au",
+            "text": "action1",
+          },
+          Object {
+            "href": "https://www.google.com.au",
+            "text": "action2",
+          },
+        ]
+      }
+      toggleComponent={[Function]}
+    />
+    <styled.button
+      hasParentHoverStyle={true}
+      isExpanded={false}
+    >
+      <FontAwesomeIcon
+        type="chevron-down"
+      />
+    </styled.button>
+  </styled.div>
+  <styled.div
+    isExpanded={false}
+  >
+    <div>
+      test2
+    </div>
+  </styled.div>
+</styled.div>
+`;
