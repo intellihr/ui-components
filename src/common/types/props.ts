@@ -68,6 +68,7 @@ namespace Props {
     ButtonGroup = 'button_group',
     ButtonIcon = 'button_icon',
     Callout = 'callout',
+    Card = 'card',
     EmptyState = 'empty_state',
     FilterController = 'filter_controller',
     FilterTag = 'filter_tag',

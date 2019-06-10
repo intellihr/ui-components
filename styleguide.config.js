@@ -88,6 +88,12 @@ module.exports = {
           ]
         },
         {
+          name: 'Cards',
+          components: [
+            'src/domain/Cards/Card/Card.tsx'
+          ]
+        },
+        {
           name: 'Charts',
           components: [
             'src/domain/Charts/RadarChart/RadarChart.tsx',
