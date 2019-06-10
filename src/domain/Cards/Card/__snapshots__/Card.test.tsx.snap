@@ -5,7 +5,6 @@ exports[`<CardList /> should render a expanded card with actions only 1`] = `
   data-component-type="card"
   hasHoverStyle={false}
   isExpanded={false}
-  key="card1"
   onClick={[Function]}
 >
   <styled.div>
@@ -42,7 +41,6 @@ exports[`<CardList /> should render a expanded card with expanded component only
   data-component-type="card"
   hasHoverStyle={true}
   isExpanded={false}
-  key="card1"
   onClick={[Function]}
 >
   <styled.div>
@@ -55,9 +53,11 @@ exports[`<CardList /> should render a expanded card with expanded component only
       hasParentHoverStyle={true}
       isExpanded={false}
     >
-      <FontAwesomeIcon
-        type="chevron-down"
-      />
+      <styled.span>
+        <FontAwesomeIcon
+          type="chevron-down"
+        />
+      </styled.span>
     </styled.button>
   </styled.div>
   <styled.div
@@ -75,7 +75,6 @@ exports[`<CardList /> should render a expanded card without expand component and
   data-component-type="card"
   hasHoverStyle={false}
   isExpanded={false}
-  key="card1"
   onClick={[Function]}
 >
   <styled.div>
@@ -96,7 +95,6 @@ exports[`<CardList /> should render a simple expanded card with expanded compone
   data-component-type="card"
   hasHoverStyle={true}
   isExpanded={false}
-  key="card1"
   onClick={[Function]}
 >
   <styled.div>
@@ -125,9 +123,11 @@ exports[`<CardList /> should render a simple expanded card with expanded compone
       hasParentHoverStyle={true}
       isExpanded={false}
     >
-      <FontAwesomeIcon
-        type="chevron-down"
-      />
+      <styled.span>
+        <FontAwesomeIcon
+          type="chevron-down"
+        />
+      </styled.span>
     </styled.button>
   </styled.div>
   <styled.div

@@ -23,7 +23,7 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
             }}
     isExpanded= {state.card1}
     onCardToggle= {() => setState({ card1: !state.card1})}
-    actions= {[
+    dropdownSections= {[
         {
           text: 'homepage',
           href: 'https://intellihr.github.io/ui-components/',
@@ -36,7 +36,7 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
           stopPropagation: true
         }
       ]}
-    collapsedComponent= {
+    mainContent= {
       <GridLayout
         gutterPaddingX={Variables.Spacing.sSmall}
         gutterPaddingY={Variables.Spacing.sSmall}
@@ -52,7 +52,7 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
         ]}
       />
     }
-    expandedComponent= {
+    extraContent= {
       <GridLayout
         gutterPaddingX={Variables.Spacing.sSmall}
         gutterPaddingY={Variables.Spacing.sSmall}
@@ -73,7 +73,7 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
       name= 'card2'
       isExpanded= {state.card2}
       onCardToggle= {() => setState({ card2: !state.card2})}
-      actions= {[
+      dropdownSections= {[
           {
             text: 'google',
             href: 'https://www.google.com.au',
@@ -86,7 +86,7 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
             stopPropagation: true
           }
         ]}
-      collapsedComponent= {
+      mainContent= {
         <GridLayout
           gutterPaddingX={Variables.Spacing.sSmall}
           gutterPaddingY={Variables.Spacing.sSmall}
@@ -102,7 +102,7 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
           ]}
         />
       }
-      expandedComponent= {
+      extraContent= {
         <GridLayout
           gutterPaddingX={Variables.Spacing.sSmall}
           gutterPaddingY={Variables.Spacing.sSmall}
@@ -137,7 +137,7 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
     name= 'cardWithOutAction'
     isExpanded= {state.cardWithOutAction}
     onCardToggle= {() => setState({ cardWithOutAction: !state.cardWithOutAction})}
-    collapsedComponent= {
+    mainContent= {
       <GridLayout
         gutterPaddingX={Variables.Spacing.sSmall}
         gutterPaddingY={Variables.Spacing.sSmall}
@@ -153,7 +153,7 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
         ]}
       />
     }
-    expandedComponent= {
+    extraContent= {
       <GridLayout
         gutterPaddingX={Variables.Spacing.sSmall}
         gutterPaddingY={Variables.Spacing.sSmall}
@@ -172,7 +172,7 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
   />
 ```
 
-#### Expanded Card without expand component
+#### Card with actions
 
 ```jsx
 import { Button } from '@Domain/Buttons';
@@ -187,7 +187,7 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
     name= 'cardWithOutExpand'
     isExpanded= {state.cardWithOutExpand}
     onCardToggle= {() => setState({ cardWithOutExpand: !state.cardWithOutExpand})}
-    actions= {[
+    dropdownSections= {[
               {
                 text: 'google',
                 href: 'https://www.google.com.au',
@@ -200,7 +200,7 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
                 stopPropagation: true
               }
             ]}
-    collapsedComponent= {
+    mainContent= {
       <GridLayout
         gutterPaddingX={Variables.Spacing.sSmall}
         gutterPaddingY={Variables.Spacing.sSmall}
@@ -219,7 +219,7 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
   />
 ```
 
-#### Expanded Card without expand component and actions
+#### Simple card
 
 ```jsx
 import { Button } from '@Domain/Buttons';
@@ -234,7 +234,7 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
     name= 'cardWithOutAll'
     isExpanded= {state.cardWithOutAll}
     onCardToggle= {() => setState({ cardWithOutAll: !state.cardWithOutAll})}
-    collapsedComponent= {
+    mainContent= {
       <GridLayout
         gutterPaddingX={Variables.Spacing.sSmall}
         gutterPaddingY={Variables.Spacing.sSmall}

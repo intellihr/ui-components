@@ -27,7 +27,7 @@ const ContentWrapper = styled.div`
   align-items: center;
 `
 
-const CollapsedComponentWrapper = styled.div`
+const MainContentWrapper = styled.div`
     width: auto;
     flex: 1 1 0%;
 `
@@ -50,13 +50,16 @@ const CardWrapper = styled.div`
     }
   `}
 `
-
+const ChevronIconWrapper = styled.span`
+  top: -1px;
+`
 const ButtonStyle = css`
   outline: none;
   color: ${Variables.Color.n600};
   width: 28px;
   height: 28px;
   border-radius: 50%;
+  cursor: pointer;
 
   &:hover {
     color: ${Variables.Color.n800};
@@ -130,7 +133,7 @@ const AnimateOut = keyframes`
   }
 `
 
-const ExpandComponentWrapper = styled.div`
+const ExtraComponentWrapper = styled.div`
   height: auto;
   max-height: 0;
   overflow: hidden;
@@ -145,7 +148,7 @@ const ExpandComponentWrapper = styled.div`
   animation-delay: 0s;
 
   ${(props: IExpandComponentWrapperProps) => props.isExpanded && css`
-      max-height: 999px;
+      max-height: 999px; // Magic number to keep animation working when expanding
       animation-name: ${AnimateIn};
       animation-duration: 0.6s;
       animation-iteration-count: 1;
@@ -158,9 +161,10 @@ const ExpandComponentWrapper = styled.div`
 
 export {
   CardWrapper,
-  ExpandComponentWrapper,
+  ExtraComponentWrapper,
   StyleActionButton,
   StyleToggleButton,
   ContentWrapper,
-  CollapsedComponentWrapper
+  MainContentWrapper,
+  ChevronIconWrapper
 }

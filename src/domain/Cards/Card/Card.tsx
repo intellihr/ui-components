@@ -5,24 +5,23 @@ import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { DropdownMenu, IDropdownMenuToggleComponentProps } from '../../Popovers/DropdownMenu'
 import { ISectionProps } from '../../Popovers/DropdownMenu/subcomponents/Section'
 import {
-  CardWrapper,
-  CollapsedComponentWrapper,
+  CardWrapper, ChevronIconWrapper,
   ContentWrapper,
-  ExpandComponentWrapper,
+  ExtraComponentWrapper,
+  MainContentWrapper,
   StyleActionButton,
   StyleToggleButton
 } from './style'
 
 interface IExpandedCardProps {
-  name: string
   /** the component that shows even in collapse mode */
-  collapsedComponent: JSX.Element
+  mainContent: JSX.Element
   /** the component that shows in expand mode only */
-  expandedComponent?: JSX.Element
+  extraContent?: JSX.Element
   /** If true, the card is in expand style */
   isExpanded?: boolean
-  /** Array of actions to display in all the cards action button popover */
-  actions?: ISectionProps[]
+  /** dropwon sections to show in the cards action button dropdown */
+  dropdownSections?: ISectionProps[]
   /** callback when user toggle card */
   onCardToggle?: () => void
   /** The margins around the component */
@@ -42,10 +41,9 @@ export class Card extends React.PureComponent<IExpandedCardProps,IExpandedCardSt
 
   public render (): JSX.Element {
     const {
-      collapsedComponent,
-      expandedComponent,
+      mainContent,
+      extraContent,
       isExpanded,
-      name,
       onCardToggle,
       componentContext,
       margins
@@ -55,33 +53,32 @@ export class Card extends React.PureComponent<IExpandedCardProps,IExpandedCardSt
       <CardWrapper
         margins={margins}
         onClick={onCardToggle}
-        key={`${name}`}
         isExpanded={!!isExpanded}
-        hasHoverStyle={!this.state.isActionButtonHover && !!expandedComponent}
+        hasHoverStyle={!this.state.isActionButtonHover && !!extraContent}
         data-component-type={Props.ComponentType.Card}
         data-component-context={componentContext}
       >
         <ContentWrapper>
-          <CollapsedComponentWrapper>{collapsedComponent}</CollapsedComponentWrapper>
+          <MainContentWrapper>{mainContent}</MainContentWrapper>
           {this.actionButtonDropdownMenu}
           {this.toggleButton}
         </ContentWrapper>
-        <ExpandComponentWrapper isExpanded={!!isExpanded}>
-          {expandedComponent}
-        </ExpandComponentWrapper>
+        <ExtraComponentWrapper isExpanded={!!isExpanded}>
+          {extraContent}
+        </ExtraComponentWrapper>
       </CardWrapper>
     )
   }
 
   private get actionButtonDropdownMenu (): JSX.Element | null {
     const {
-      actions
+      dropdownSections
     } = this.props
 
-    if (actions) {
+    if (dropdownSections) {
       return(
         <DropdownMenu
-          sections={actions}
+          sections={dropdownSections}
           toggleComponent={this.actionButton}
         />
       )
@@ -90,13 +87,13 @@ export class Card extends React.PureComponent<IExpandedCardProps,IExpandedCardSt
     return null
   }
 
-  private actionButton = ({ toggleMenu, toggleComponentRef}: IDropdownMenuToggleComponentProps) => (
+  private actionButton = ({ toggleMenu, toggleComponentRef }: IDropdownMenuToggleComponentProps) => (
     <StyleActionButton
       onClick={this.handleActionButtonClick(toggleMenu)}
       onMouseOver={this.handleActionButtonMouseOver}
       onMouseOut={this.handleActionButtonMouseOut}
       innerRef={toggleComponentRef}
-      hasRightMargin={!!this.props.expandedComponent}
+      hasRightMargin={!!this.props.extraContent}
     >
       <FontAwesomeIcon type='ellipsis-v'/>
     </StyleActionButton>
@@ -104,14 +101,16 @@ export class Card extends React.PureComponent<IExpandedCardProps,IExpandedCardSt
 
   private get toggleButton (): JSX.Element | undefined {
     const {
-      expandedComponent,
+      extraContent,
       isExpanded
     } = this.props
 
-    if (expandedComponent) {
+    if (extraContent) {
       return(
         <StyleToggleButton isExpanded={!!isExpanded} hasParentHoverStyle={!this.state.isActionButtonHover}>
-          <FontAwesomeIcon type='chevron-down'/>
+          <ChevronIconWrapper>
+            <FontAwesomeIcon type='chevron-down'/>
+          </ChevronIconWrapper>
         </StyleToggleButton>
       )
     }
