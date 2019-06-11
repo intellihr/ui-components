@@ -16,7 +16,7 @@ type ColorOptions = {
 const ColorOptions: ColorOptions = {
   grey: {
     border: Variables.Color.n400,
-    background: Variables.Color.n200
+    background: Variables.Color.n150
   }
 }
 
