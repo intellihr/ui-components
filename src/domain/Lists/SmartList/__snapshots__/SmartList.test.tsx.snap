@@ -2661,29 +2661,21 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
         </GridProvider>
       </Row>
     </div>
-    <Callout
-      justifyCenter={false}
-      messages={Array []}
-      shouldFocus={false}
-      type=""
+    <EmptyState
+      primaryMessage="No Results found."
+      secondaryMessage={null}
     >
-      <styled.div
-        className="callout"
-        data-component-type="callout"
-        innerRef={[Function]}
+      <div
+        className="ihrEmptyState"
+        data-component-type="empty_state"
       >
         <div
-          className="callout "
-          data-component-type="callout"
+          className="ihrPrimaryMessage"
         >
-          <div
-            className="content"
-          >
-            No Results found.
-          </div>
+          No Results found.
         </div>
-      </styled.div>
-    </Callout>
+      </div>
+    </EmptyState>
   </div>
 </SmartList>
 `;
