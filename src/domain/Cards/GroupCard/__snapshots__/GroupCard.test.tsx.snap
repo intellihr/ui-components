@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GroupCard /> should render a group card with body contents and  their actions  1`] = `
+<styled.div
+  data-component-type="group_card"
+>
+  <styled.div
+    hasHoverStyle={true}
+    isExpanded={false}
+    onClick={[Function]}
+  >
+    <styled.div>
+      <styled.div>
+        <div>
+          headingContent
+        </div>
+      </styled.div>
+      <styled.button
+        isExpanded={false}
+      >
+        <styled.span>
+          <FontAwesomeIcon
+            type="chevron-down"
+          />
+        </styled.span>
+      </styled.button>
+    </styled.div>
+  </styled.div>
+  <styled.div
+    isExpanded={false}
+  >
+    <styled.div>
+      <styled.div>
+        <styled.div>
+          <styled.div>
+            <div>
+              mainContent
+            </div>
+          </styled.div>
+          <DropdownMenu
+            hasInitialFocus={false}
+            sections={
+              Array [
+                Object {
+                  "href": "https://www.google.com.au",
+                  "text": "action1",
+                },
+                Object {
+                  "href": "https://www.google.com.au",
+                  "text": "action2",
+                },
+              ]
+            }
+            toggleComponent={[Function]}
+          />
+        </styled.div>
+        <div>
+          mainContent
+        </div>
+      </styled.div>
+      <styled.div>
+        <styled.div>
+          <styled.div>
+            <div>
+              mainContent
+            </div>
+          </styled.div>
+        </styled.div>
+        <div>
+          mainContent
+        </div>
+      </styled.div>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<GroupCard /> should render a group card without body contents 1`] = `
+<styled.div
+  data-component-type="group_card"
+>
+  <styled.div
+    hasHoverStyle={false}
+    isExpanded={false}
+    onClick={[Function]}
+  >
+    <styled.div>
+      <styled.div>
+        <div>
+          headingContent
+        </div>
+      </styled.div>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;

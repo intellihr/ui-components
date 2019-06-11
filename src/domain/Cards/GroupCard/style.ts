@@ -8,17 +8,17 @@ export interface IExpandComponentWrapperProps {
 }
 
 export interface ICardWrapperProps {
+  isExpanded: boolean,
   hasHoverStyle: boolean,
   margins?: Props.IMargins
 }
 
 export interface IStyleToggleButtonProps {
   isExpanded: boolean,
-  hasParentHoverStyle: boolean
 }
 
-export interface IStyleActionButtonProps {
-  hasRightMargin: boolean
+export interface IGroupCardWrapperProps {
+  margins?: Props.IMargins
 }
 
 const ContentWrapper = styled.div`
@@ -26,18 +26,25 @@ const ContentWrapper = styled.div`
   align-items: center;
 `
 
+const HeadingContentWrapper = styled.div`
+    width: auto;
+    flex: 1 1 0%;
+`
+
 const MainContentWrapper = styled.div`
     width: auto;
     flex: 1 1 0%;
 `
 
-const CardWrapper = styled.div`
+const GroupCardWrapper = styled.div`
   margin: 0;
+  ${(props: IGroupCardWrapperProps) => styleForMargins(props.margins)}}
+`
 
-  ${(props: ICardWrapperProps) => styleForMargins(props.margins)}}
-
+const GroupWrapper = styled.div`
+  margin: 0;
   padding: ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px;
-  background-color: ${Variables.Color.n100};
+  background-color: ${Variables.Color.n150};
   border: 1px solid ${Variables.Color.n250};
   border-radius: ${Variables.Style.borderRadius}px;
 
@@ -47,6 +54,10 @@ const CardWrapper = styled.div`
       background-color: ${Variables.Color.n200};
       transition: background-color .25s ease-out;
     }
+  `}
+
+  ${(props: ICardWrapperProps) => props.isExpanded && css`
+      border-radius: ${Variables.Style.borderRadius}px ${Variables.Style.borderRadius}px 0 0;
   `}
 `
 const ChevronIconWrapper = styled.span`
@@ -76,30 +87,15 @@ const StyleToggleButton = styled.button`
       transition: all .25s ease-out;
   `}
 
-  ${(props: IStyleToggleButtonProps) => props.hasParentHoverStyle && css`
-    ${CardWrapper}:hover & {
-      color: ${Variables.Color.n800};
-      background-color: ${Variables.Color.n300};
-    }
-  `}
+  ${GroupWrapper}:hover & {
+    color: ${Variables.Color.n800};
+    background-color: ${Variables.Color.n300};
+    transition: all .25s ease-out;
+  }
 `
 
 const StyleActionButton = styled.button`
   ${ButtonStyle};
-
-  &:hover ${StyleToggleButton} {
-    background-color: transparent;
-    color: ${Variables.Color.n600};
-  }
-
-  &:hover ${CardWrapper} {
-    background-color: ${Variables.Color.n100};
-  }
-
-  ${(props: IStyleActionButtonProps) => props.hasRightMargin && css`
-
-      margin-right: ${Variables.Spacing.sMedium}px;
-  `}
 `
 
 const AnimateIn = keyframes`
@@ -132,7 +128,11 @@ const AnimateOut = keyframes`
   }
 `
 
-const ExtraComponentWrapper = styled.div`
+const BodyContentsWrapper = styled.div`
+  padding: 0;
+  border: 1px solid ${Variables.Color.n250};
+  border-top: 0;
+  border-radius: 0 0 ${Variables.Style.borderRadius}px ${Variables.Style.borderRadius}px;
   height: auto;
   max-height: 0;
   overflow: hidden;
@@ -158,12 +158,33 @@ const ExtraComponentWrapper = styled.div`
   `}
 `
 
+const BodyContentsDetailsWrapper = styled.div`
+  padding: ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px;
+`
+
+const BodyContentWrapper = styled.div`
+  border-bottom: 1px solid ${Variables.Color.n250};
+  padding: ${Variables.Spacing.sLarge}px 0;
+
+  :first-child {
+    padding-top: 0;
+  }
+
+  :last-child {
+    border-bottom: 0;
+    padding-bottom: ${Variables.Spacing.sXSmall}px;
+  }
+`
 export {
-  CardWrapper,
-  ExtraComponentWrapper,
+  GroupWrapper,
+  BodyContentsWrapper,
   StyleActionButton,
   StyleToggleButton,
   ContentWrapper,
+  HeadingContentWrapper,
+  ChevronIconWrapper,
   MainContentWrapper,
-  ChevronIconWrapper
+  GroupCardWrapper,
+  BodyContentsDetailsWrapper,
+  BodyContentWrapper
 }

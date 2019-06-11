@@ -13,7 +13,7 @@ import {
   StyleToggleButton
 } from './style'
 
-interface IExpandedCardProps {
+interface ICardProps {
   /** the component that shows even in collapse mode */
   mainContent: JSX.Element
   /** the component that shows in expand mode only */
@@ -30,12 +30,12 @@ interface IExpandedCardProps {
   componentContext?: string
 }
 
-interface IExpandedCardState {
+interface ICardState {
   isActionButtonHover: boolean
 }
 
-export class Card extends React.PureComponent<IExpandedCardProps,IExpandedCardState> {
-  public state: IExpandedCardState = {
+export class Card extends React.PureComponent<ICardProps,ICardState> {
+  public state: ICardState = {
     isActionButtonHover: false
   }
 
@@ -53,7 +53,6 @@ export class Card extends React.PureComponent<IExpandedCardProps,IExpandedCardSt
       <CardWrapper
         margins={margins}
         onClick={onCardToggle}
-        isExpanded={!!isExpanded}
         hasHoverStyle={!this.state.isActionButtonHover && !!extraContent}
         data-component-type={Props.ComponentType.Card}
         data-component-context={componentContext}

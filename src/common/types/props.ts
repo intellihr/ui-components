@@ -74,6 +74,7 @@ namespace Props {
     FilterTag = 'filter_tag',
     GridLayout = 'grid_layout',
     GridLayoutCell = 'grid_layout_cell',
+    GroupCard = 'group_card',
     HightlightArea = 'highlight_area',
     HintWrapper = 'hint_wrapper',
     HorizontalRule = 'horizontal_rule',

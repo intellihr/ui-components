@@ -5,14 +5,13 @@ import { Card } from './Card'
 
 const dummyFunction = () => (alert('dummy'))
 
-describe('<CardList />', () => {
-  it('should render a simple expanded card with expanded component and actions ', () => {
+describe('<Card />', () => {
+  it('should render a card with main content and dropdownSections ', () => {
     const wrapper = shallow(
       <Card
         mainContent={<div>test2</div>}
         extraContent={<div>test2</div>}
         onCardToggle={dummyFunction}
-        name='card1'
         isExpanded={false}
         dropdownSections={[
           {
@@ -30,13 +29,12 @@ describe('<CardList />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should render a expanded card with expanded component only', () => {
+  it('should render a card with main content only', () => {
     const wrapper = shallow(
       <Card
         mainContent={<div>test2</div>}
         extraContent={<div>test2</div>}
         onCardToggle={dummyFunction}
-        name='card1'
         isExpanded={false}
       />
     )
@@ -44,12 +42,11 @@ describe('<CardList />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should render a expanded card with actions only', () => {
+  it('should render a ard with dropdownSections only', () => {
     const wrapper = shallow(
       <Card
         mainContent={<div>test2</div>}
         onCardToggle={dummyFunction}
-        name='card1'
         isExpanded={false}
         dropdownSections={[
           {
@@ -67,12 +64,11 @@ describe('<CardList />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should render a expanded card without expand component and actions', () => {
+  it('should render a card without main content and dropdownSections', () => {
     const wrapper = shallow(
       <Card
         mainContent={<div>test2</div>}
         onCardToggle={dummyFunction}
-        name='card1'
         isExpanded={false}
       />
     )
