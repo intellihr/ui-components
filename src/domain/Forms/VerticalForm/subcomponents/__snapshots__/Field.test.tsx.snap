@@ -135,9 +135,7 @@ exports[`<Field /> should render a vertical form field with error messages 1`] =
 exports[`<Field /> should render a vertical form field with nothing 1`] = `
 <styled.div
   showBottomMargin={true}
->
-  <styled.div />
-</styled.div>
+/>
 `;
 
 exports[`<Field /> should render a vertical form field with regular props 1`] = `
@@ -168,6 +166,14 @@ exports[`<Field /> should render a vertical form field without bottom margin 1`]
       This is a test input
     </styled.label>
   </styled.div>
+  Children
+</styled.div>
+`;
+
+exports[`<Field /> should render a vertical form field without label 1`] = `
+<styled.div
+  showBottomMargin={true}
+>
   Children
 </styled.div>
 `;
