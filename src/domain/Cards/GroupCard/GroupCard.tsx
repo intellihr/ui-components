@@ -5,14 +5,18 @@ import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { DropdownMenu, IDropdownMenuToggleComponentProps } from '../../Popovers/DropdownMenu'
 import { ISectionProps } from '../../Popovers/DropdownMenu/subcomponents/Section'
 import {
-  BodyContentWrapper,
-  BodyContentsDetailsWrapper,
-  BodyContentsWrapper,
   ChevronIconWrapper,
-  ContentWrapper,
-  GroupCardWrapper,
-  GroupWrapper,
-  HeadingContentWrapper, MainContentWrapper, StyleActionButton, StyleToggleButton
+  StyledFlexContent,
+  StyledPrimaryContent
+} from '../services/style'
+import {
+  StyledBodyActionButton,
+  StyledBodyContent,
+  StyledBodyContents,
+  StyledGroupCard,
+  StyledGroupCardToggleButton,
+  StyledGroupExtraCard,
+  StyledGroupMainCard
 } from './style'
 
 interface IGroupCardExtraContentProps {
@@ -37,6 +41,9 @@ interface IGroupCardProps {
 }
 
 export class GroupCard extends React.PureComponent<IGroupCardProps> {
+  public static defaultProps: Partial<IGroupCardProps> = {
+    isExpanded: false
+  }
 
   public render (): JSX.Element {
     const {
@@ -49,23 +56,23 @@ export class GroupCard extends React.PureComponent<IGroupCardProps> {
     } = this.props
 
     return(
-      <GroupCardWrapper
+      <StyledGroupCard
         margins={margins}
         data-component-type={Props.ComponentType.GroupCard}
         data-component-context={componentContext}
       >
-        <GroupWrapper
+        <StyledGroupMainCard
           onClick={onCardToggle}
           isExpanded={!!isExpanded && !!bodyContents}
           hasHoverStyle={!!bodyContents}
         >
-          <ContentWrapper>
-            <HeadingContentWrapper>{headingContent}</HeadingContentWrapper>
+          <StyledFlexContent>
+            <StyledPrimaryContent>{headingContent}</StyledPrimaryContent>
             {this.toggleButton}
-          </ContentWrapper>
-        </GroupWrapper>
+          </StyledFlexContent>
+        </StyledGroupMainCard>
         {this.bodyContentCards}
-      </GroupCardWrapper>
+      </StyledGroupCard>
     )
   }
 
@@ -77,11 +84,11 @@ export class GroupCard extends React.PureComponent<IGroupCardProps> {
 
     if (bodyContents) {
       return (
-        <BodyContentsWrapper isExpanded={!!isExpanded}>
-          <BodyContentsDetailsWrapper>
+        <StyledGroupExtraCard isExpanded={!!isExpanded}>
+          <StyledBodyContents>
             {bodyContents.map(this.bodyContent)}
-          </BodyContentsDetailsWrapper>
-        </BodyContentsWrapper>
+          </StyledBodyContents>
+        </StyledGroupExtraCard>
       )
     }
   }
@@ -94,11 +101,11 @@ export class GroupCard extends React.PureComponent<IGroupCardProps> {
 
     if (bodyContents) {
       return(
-        <StyleToggleButton isExpanded={!!isExpanded}>
+        <StyledGroupCardToggleButton isExpanded={!!isExpanded}>
           <ChevronIconWrapper>
             <FontAwesomeIcon type='chevron-down'/>
           </ChevronIconWrapper>
-        </StyleToggleButton>
+        </StyledGroupCardToggleButton>
       )
     }
   }
@@ -112,13 +119,13 @@ export class GroupCard extends React.PureComponent<IGroupCardProps> {
 
     if (mainContent) {
       return(
-        <BodyContentWrapper>
-          <ContentWrapper>
-            <MainContentWrapper>{mainContent}</MainContentWrapper>
+        <StyledBodyContent>
+          <StyledFlexContent>
+            <StyledPrimaryContent>{mainContent}</StyledPrimaryContent>
             {this.actionButtonDropdownMenu(dropdownSections)}
-          </ContentWrapper>
+          </StyledFlexContent>
           {extraContent}
-        </BodyContentWrapper>
+        </StyledBodyContent>
       )
     }
   }
@@ -136,13 +143,14 @@ export class GroupCard extends React.PureComponent<IGroupCardProps> {
     return null
   }
 
-  private actionButton = ({ toggleMenu, toggleComponentRef }: IDropdownMenuToggleComponentProps) => (
-    <StyleActionButton
+  private actionButton = ({ toggleMenu, toggleComponentRef, ariaProps }: IDropdownMenuToggleComponentProps) => (
+    <StyledBodyActionButton
       onClick={this.handleActionButtonClick(toggleMenu)}
       innerRef={toggleComponentRef}
+      {...ariaProps}
     >
       <FontAwesomeIcon type='ellipsis-v'/>
-    </StyleActionButton>
+    </StyledBodyActionButton>
   )
 
   private handleActionButtonClick = (toggleMenu: () => void) => (event: React.MouseEvent<HTMLButtonElement>) => {
