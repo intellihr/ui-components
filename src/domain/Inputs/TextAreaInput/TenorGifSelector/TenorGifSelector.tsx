@@ -1,10 +1,11 @@
-import React, { useContext, useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 import { Props } from '../../../../common'
 import { useClickOutside } from '../../../../common/hooks'
 import { Icon } from '../../../Icons'
 import { StyledGifButton, StyledGifContainer, StyledGifList, StyledScrollArea } from '../../../Inputs/TextAreaInput/style'
 import { Popover } from '../../../Popovers'
+require('intersection-observer')
 import { TextInput } from '../../TextInput'
 import { IParameters, parameterize } from './services'
 import { PoweredByTenor } from './PoweredByTenorLogo'
@@ -135,8 +136,8 @@ const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, handleGifC
     // Don't initiate another fetch if the previous one has not completed
     if (!loading) {
       const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
+        (entries: any) => {
+          entries.forEach((entry: any) => {
             if (entry.intersectionRatio > 0 && entry.intersectionRatio < 1) {
               const { top } = entry.boundingClientRect
               const parentHeight = scrollAreaRef.current!.clientHeight
