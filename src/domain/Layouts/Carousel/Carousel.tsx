@@ -4,7 +4,7 @@ import {
 } from 'lodash'
 import React, { RefObject } from 'react'
 
-import { Utils } from '../../../common'
+import { Props, Utils } from '../../../common'
 import { IntelliIcon } from '../../Icons'
 import {
   CarouselChevronButton,
@@ -15,12 +15,14 @@ import {
   CarouselTile
 } from './style'
 
-export interface IScrollingTabGroupProps {
+export interface ICarouselProps {
   /** Callback when the scroll position changes */
   onScrollUpdate?: (newScrollValue: number) => void
+  /** The data-component-context */
+  componentContext?: string
 }
 
-export class Carousel extends React.PureComponent<IScrollingTabGroupProps, never> {
+export class Carousel extends React.PureComponent<ICarouselProps, never> {
   public static Tile = CarouselTile
 
   private carouselListRef: RefObject<HTMLUListElement> = React.createRef()
@@ -49,8 +51,15 @@ export class Carousel extends React.PureComponent<IScrollingTabGroupProps, never
   }
 
   public render (): JSX.Element | null {
+    const {
+      componentContext
+    } = this.props
+
     return (
-      <CarouselContainer>
+      <CarouselContainer
+        data-component-context={componentContext}
+        data-component-type={Props.ComponentType.Carousel}
+      >
         {this.leftChevron}
         {this.carouselList}
         {this.rightChevron}

@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Carousel /> Carousel with custom children should match the snapshot 1`] = `
-<styled.div>
+<styled.div
+  data-component-type="carousel"
+>
   <styled.div>
     <styled.ul
       innerRef={
@@ -22,7 +24,9 @@ exports[`<Carousel /> Carousel with custom children should match the snapshot 1`
 `;
 
 exports[`<Carousel /> Standard Carousel should match the snapshot 1`] = `
-<styled.div>
+<styled.div
+  data-component-type="carousel"
+>
   <styled.div>
     <styled.ul
       innerRef={

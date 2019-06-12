@@ -1,17 +1,65 @@
 #### Carousel
 
 ```jsx
+import { Statistic } from '@Domain/Formats';
+
 <Carousel>
-  <Carousel.Tile/>
-  <Carousel.Tile/>
-  <Carousel.Tile/>
-  <Carousel.Tile/>
-  <Carousel.Tile/>
-  <Carousel.Tile/>
-  <Carousel.Tile/>
-  <Carousel.Tile/>
-  <Carousel.Tile/>
-  <Carousel.Tile/>
+  <Carousel.Tile>
+    <Statistic
+      title='Total Cost'
+      prefix='AUD'
+      value='99.00'
+    />
+  </Carousel.Tile>
+  <Carousel.Tile>
+    <Statistic
+      title='Total Cost'
+      prefix='AUD'
+      value='99.00'
+    />
+  </Carousel.Tile>
+  <Carousel.Tile>
+    <Statistic
+      title='Total Cost'
+      prefix='AUD'
+      value='99.00'
+    />
+  </Carousel.Tile>
+  <Carousel.Tile>
+    <Statistic
+      title='Total Cost'
+      prefix='AUD'
+      value='99.00'
+    />
+  </Carousel.Tile>
+  <Carousel.Tile>
+    <Statistic
+      title='Total Cost'
+      prefix='AUD'
+      value='99.00'
+    />
+  </Carousel.Tile>
+  <Carousel.Tile>
+    <Statistic
+      title='Total Cost'
+      prefix='AUD'
+      value='99.00'
+    />
+  </Carousel.Tile>
+  <Carousel.Tile>
+    <Statistic
+      title='Total Cost'
+      prefix='AUD'
+      value='99.00'
+    />
+  </Carousel.Tile>
+  <Carousel.Tile>
+    <Statistic
+      title='Total Cost'
+      prefix='AUD'
+      value='99.00'
+    />
+  </Carousel.Tile>
 </Carousel>
 ```
 
