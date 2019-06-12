@@ -9,7 +9,11 @@ exports[`<SingleDateInput /> should render a disabled single date input 1`] = `
     appendToBody={false}
     block={true}
     calendarInfoPosition="bottom"
-    customCloseIcon={null}
+    customCloseIcon={
+      <span>
+        ×
+      </span>
+    }
     customInputIcon={null}
     date={"2018-12-31T14:00:00.000Z"}
     daySize={39}
@@ -100,7 +104,7 @@ exports[`<SingleDateInput /> should render a disabled single date input 1`] = `
     reopenPickerOnClearDate={false}
     required={false}
     screenReaderInputMessage=""
-    showClearDate={false}
+    showClearDate={true}
     showDefaultInputIcon={false}
     small={false}
     verticalHeight={null}
@@ -121,7 +125,11 @@ exports[`<SingleDateInput /> should render a single date input 1`] = `
     appendToBody={false}
     block={true}
     calendarInfoPosition="bottom"
-    customCloseIcon={null}
+    customCloseIcon={
+      <span>
+        ×
+      </span>
+    }
     customInputIcon={null}
     date={"2018-12-31T14:00:00.000Z"}
     daySize={39}
@@ -212,7 +220,7 @@ exports[`<SingleDateInput /> should render a single date input 1`] = `
     reopenPickerOnClearDate={false}
     required={false}
     screenReaderInputMessage=""
-    showClearDate={false}
+    showClearDate={true}
     showDefaultInputIcon={false}
     small={false}
     verticalHeight={null}
@@ -233,7 +241,11 @@ exports[`<SingleDateInput /> should render an invalid single date input 1`] = `
     appendToBody={false}
     block={true}
     calendarInfoPosition="bottom"
-    customCloseIcon={null}
+    customCloseIcon={
+      <span>
+        ×
+      </span>
+    }
     customInputIcon={null}
     date={"2018-12-31T14:00:00.000Z"}
     daySize={39}
@@ -324,7 +336,7 @@ exports[`<SingleDateInput /> should render an invalid single date input 1`] = `
     reopenPickerOnClearDate={false}
     required={false}
     screenReaderInputMessage=""
-    showClearDate={false}
+    showClearDate={true}
     showDefaultInputIcon={false}
     small={false}
     verticalHeight={null}

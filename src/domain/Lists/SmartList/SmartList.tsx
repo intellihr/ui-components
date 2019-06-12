@@ -4,7 +4,7 @@ import React from 'react'
 import uuid from 'uuid'
 
 import { Props } from '../../../common'
-import { Callout } from '../../Callouts'
+import { EmptyState } from '../../Callouts'
 import { Row } from '../../Grids/Row'
 import { ISkeletonProps } from '../../Skeletons'
 import { Spinner } from '../../Spinners'
@@ -253,9 +253,10 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
 
     if (isEmpty(this.data) || every(this.data, ['hide', true])) {
       return (
-        <Callout type='' shouldFocus={false}>
-          {emptyListText}
-        </Callout>
+        <EmptyState
+          primaryMessage={emptyListText}
+          secondaryMessage={null}
+        />
       )
     }
 

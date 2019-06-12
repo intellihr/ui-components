@@ -76,6 +76,8 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
           renderMonthText={this.renderMonthText}
           noBorder
           block
+          showClearDate
+          customCloseIcon={<span>×</span>}
           hideKeyboardShortcutsPanel
           navPrev={(
             <div className={this.navigationButtonClassNames('left')}>

@@ -140,13 +140,21 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
     return null
   }
 
-  private get label (): JSX.Element {
-    return (
-      <StyledLabelWrapper>
-        {this.inputLabel}
-        {this.hint}
-      </StyledLabelWrapper>
-    )
+  private get label (): JSX.Element | null {
+    const {
+      label
+    } = this.props
+
+    if (label) {
+      return (
+        <StyledLabelWrapper>
+          {this.inputLabel}
+          {this.hint}
+        </StyledLabelWrapper>
+      )
+    }
+
+    return null
   }
 
   public static defaultProps = {
