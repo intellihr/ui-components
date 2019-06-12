@@ -124,9 +124,10 @@ module.exports = {
         {
           name: 'Formats',
           components: [
-            'src/domain/Formats/Record/Record.tsx',
-            'src/domain/Formats/IndentedElement/IndentedElement.tsx',
             'src/domain/Formats/HintWrapper/HintWrapper.tsx',
+            'src/domain/Formats/IndentedElement/IndentedElement.tsx',
+            'src/domain/Formats/Record/Record.tsx',
+            'src/domain/Formats/Statistic/Statistic.tsx',
           ]
         },
         {
