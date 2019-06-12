@@ -17,13 +17,17 @@ interface IStatistcProps {
 
 export const Statistic: React.FC<IStatistcProps> = (
   {
+    componentContext,
     prefix,
     value,
     title
   }
 ) => {
   return (
-    <div>
+    <div
+      data-component-context={componentContext}
+      data-component-type={Props.ComponentType.Statistic}
+    >
       <TitleText>
         <Text type={Props.TypographyType.Small} isInline={false}>{title}</Text>
       </TitleText>

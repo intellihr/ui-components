@@ -89,6 +89,7 @@ namespace Props {
     RecordName = 'record_name',
     SmartList = 'smart_list',
     SmartListColumn = 'smart_list_column',
+    Statistic = 'statistic',
     TenorGifSelector = 'tenor_gif_selector',
     Text = 'text',
     TextAreaInput = 'text_area_input',

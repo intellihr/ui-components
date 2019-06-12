@@ -32,7 +32,9 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
   title="Total Cost"
   value="99.00"
 >
-  <div>
+  <div
+    data-component-type="statistic"
+  >
     <styled.div>
       <div
         className="c0"
@@ -130,7 +132,9 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
   title="Total Cost"
   value="99.00"
 >
-  <div>
+  <div
+    data-component-type="statistic"
+  >
     <styled.div>
       <div
         className="c0"
