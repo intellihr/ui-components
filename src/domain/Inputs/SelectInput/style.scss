@@ -74,7 +74,7 @@
     }
 
     .Select-clear {
-      font-weight: 600;
+      font-weight: $fw-heavy;
     }
 
     .Select-option {
@@ -118,7 +118,7 @@
 
         // The following nesting is needed to overwrite library specificity
         .Select-value {
-          margin: 7px 0 0 8px;
+          margin: 7px 0 0 $spacing-xsmall;
 
           .Select-value-label {
             color: $n800;
