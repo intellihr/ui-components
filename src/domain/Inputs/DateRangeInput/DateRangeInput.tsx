@@ -32,6 +32,8 @@ interface IDateRangeInputProps {
   isMobile?: boolean
   /** Change handler called when the date is changed */
   handleDatesChange: (dates: { startDate: Moment | null, endDate: Moment | null}) => void
+  /** If true, adds inline styles to the input */
+  isInline?: boolean
 }
 
 interface IDateRangeInputState {
@@ -43,7 +45,8 @@ class DateRangeInput extends React.PureComponent<IDateRangeInputProps, IDateRang
     dateFormat: 'DD/MM/YYYY',
     isInvalid: false,
     isDisabled: false,
-    isMobile: false
+    isMobile: false,
+    isInline:false
   }
 
   public state: IDateRangeInputState = {
@@ -59,7 +62,8 @@ class DateRangeInput extends React.PureComponent<IDateRangeInputProps, IDateRang
       endDate,
       startDatePlaceholder,
       endDatePlaceholder,
-      dateFormat
+      dateFormat,
+      isInline
     } = this.props
 
     return (
@@ -67,7 +71,7 @@ class DateRangeInput extends React.PureComponent<IDateRangeInputProps, IDateRang
         className={this.classNames}
       >
         <DateRangePicker
-          block
+          block={!isInline}
           startDateId={`${name}-start`}
           startDate={startDate}
           endDateId={`${name}-end`}
@@ -103,13 +107,15 @@ class DateRangeInput extends React.PureComponent<IDateRangeInputProps, IDateRang
 
   get classNames (): string {
     const {
-      isInvalid
+      isInvalid,
+      isInline
     } = this.props
 
     return classNames(
       style.dateRangePickerOverrides,
       {
-        'is-invalid-input': isInvalid
+        'is-invalid-input': isInvalid,
+        'is-inline': isInline
       }
     )
   }

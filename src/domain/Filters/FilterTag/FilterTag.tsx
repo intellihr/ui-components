@@ -8,7 +8,7 @@ import { StyledCross, StyledDeleteButton } from './style'
 
 export interface IFilterTagDetail {
   fieldName: string
-  operator: string
+  operator?: string
   value: string
 }
 
