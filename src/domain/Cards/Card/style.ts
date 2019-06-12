@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-import { Props, Variables } from '../../../common'
+import { Props, Utils, Variables } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
 import { cardButtonStyle, cardCollpaseAnimation, cardExpandAnimation } from '../services/style'
 
@@ -56,6 +56,10 @@ const StyledCardToggleButton = styled.button`
       background-color: ${Variables.Color.n300};
     }
   `}
+
+  ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
+    display: none;
+  }
 `
 
 const StyledActionButton = styled.button`
@@ -74,6 +78,10 @@ const StyledActionButton = styled.button`
 
       margin-right: ${Variables.Spacing.sMedium}px;
   `}
+
+  ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
+    margin-right: 0
+  }
 `
 
 const StyledExtraContent = styled.div`
