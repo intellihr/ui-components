@@ -38,8 +38,17 @@
       }
     }
 
+    &.has-value {
+      .Select-control {
+        &:hover {
+          background-color: $n100;
+        }
+      }
+    }
+
     .Select-control {
       border: 1px solid $n400;
+      cursor: pointer;
       margin-bottom: 1rem;
       transition: border-color .3s ease-in-out, background-color .3s ease;
 
@@ -62,6 +71,10 @@
           color: $r600;
         }
       }
+    }
+
+    .Select-clear {
+      font-weight: 600;
     }
 
     .Select-option {
@@ -99,9 +112,14 @@
       .Select-multi-value-wrapper {
         align-items: flex-start;
         display: flex;
+        flex-wrap: wrap;
+        padding-bottom: $spacing-2xsmall;
+        padding-right: $spacing-xsmall;
 
         // The following nesting is needed to overwrite library specificity
         .Select-value {
+          margin: 7px 0 0 8px;
+
           .Select-value-label {
             color: $n800;
             padding: $spacing-3xsmall 0 $spacing-3xsmall $spacing-2xsmall;
