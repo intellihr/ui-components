@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-import { Props, Variables } from '../../../common'
+import { Props, Utils, Variables } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
 import { cardButtonStyle, cardCollpaseAnimation, cardExpandAnimation } from '../services/style'
 
@@ -61,6 +61,10 @@ const StyledGroupCardToggleButton = styled.button`
     background-color: ${Variables.Color.n300};
     transition: all .25s ease-out;
   }
+
+  ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
+    display: none;
+  }
 `
 
 const StyledBodyActionButton = styled.button`
@@ -79,7 +83,7 @@ const StyledGroupExtraCard = styled.div`
   ${cardCollpaseAnimation}
 
   ${(props: IStyledGroupExtraCardProps) => props.isExpanded && css`
-      max-height: 999px; // Magic number to keep animation working when expanding
+      max-height: 9999px; // Magic number to keep animation working when expanding
       ${cardExpandAnimation}
   `}
 `
