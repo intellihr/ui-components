@@ -1,8 +1,7 @@
 import React from 'react'
 
-import { Props, Variables } from '../../../common'
-import { Text } from '../../Typographies/Text'
-import { PrefixText, TitleText } from './style'
+import { Props } from '../../../common'
+import { PrefixText, TitleText, ValueText } from './style'
 
 interface IStatistcProps {
   /** the statistic title */
@@ -29,14 +28,14 @@ export const Statistic: React.FC<IStatistcProps> = (
       data-component-type={Props.ComponentType.Statistic}
     >
       <TitleText>
-        <Text type={Props.TypographyType.Small} isInline={false}>{title}</Text>
+        {title}
       </TitleText>
       {prefix && (
         <PrefixText>
-          <Text type={Props.TypographyType.Heading} color={Variables.Color.n800}>{prefix}</Text>
+          {prefix}
         </PrefixText>
       )}
-      <Text type={Props.TypographyType.Display} color={Variables.Color.n800}>{value}</Text>
+      <ValueText>{value}</ValueText>
     </div>
   )
 }

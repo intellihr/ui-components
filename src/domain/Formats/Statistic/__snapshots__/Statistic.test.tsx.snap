@@ -3,29 +3,23 @@
 exports[`<Statistic /> should render Statistic Record component 1`] = `
 .c0 {
   margin-bottom: 4px;
-}
-
-.c1 {
   font-size: 14px;
   line-height: 20px;
   -webkit-letter-spacing: normal;
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
-  color: #262D33;
-  font-weight: 400;
-  display: block;
 }
 
-.c2 {
+.c1 {
+  color: #262D33;
+  font-weight: 600;
   font-size: 24px;
   line-height: 32px;
   -webkit-letter-spacing: -.02em;
   -moz-letter-spacing: -.02em;
   -ms-letter-spacing: -.02em;
   letter-spacing: -.02em;
-  color: #262D33;
-  font-weight: 600;
 }
 
 <Statistic
@@ -39,92 +33,52 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
       <div
         className="c0"
       >
-        <Text
-          isInline={false}
-          tag="span"
-          type="small"
-        >
-          <styled.span
-            data-component-type="text"
-            isInline={false}
-            textType="small"
-          >
-            <span
-              className="c1"
-              data-component-type="text"
-            >
-              Total Cost
-            </span>
-          </styled.span>
-        </Text>
+        Total Cost
       </div>
     </styled.div>
-    <Text
-      color="#262D33"
-      isInline={true}
-      tag="span"
-      type="display"
-    >
-      <styled.span
-        color="#262D33"
-        data-component-type="text"
-        isInline={true}
-        textType="display"
+    <styled.span>
+      <span
+        className="c1"
       >
-        <span
-          className="c2"
-          color="#262D33"
-          data-component-type="text"
-        >
-          99.00
-        </span>
-      </styled.span>
-    </Text>
+        99.00
+      </span>
+    </styled.span>
   </div>
 </Statistic>
 `;
 
 exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
-.c2 {
-  margin-right: 8px;
-}
-
-.c0 {
-  margin-bottom: 4px;
-}
-
 .c1 {
-  font-size: 14px;
-  line-height: 20px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
   color: #262D33;
-  font-weight: 400;
-  display: block;
-}
-
-.c3 {
+  margin-right: 8px;
+  font-weight: 600;
   font-size: 18px;
   line-height: 24px;
   -webkit-letter-spacing: -.02em;
   -moz-letter-spacing: -.02em;
   -ms-letter-spacing: -.02em;
   letter-spacing: -.02em;
-  color: #262D33;
-  font-weight: 600;
 }
 
-.c4 {
+.c0 {
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+}
+
+.c2 {
+  color: #262D33;
+  font-weight: 600;
   font-size: 24px;
   line-height: 32px;
   -webkit-letter-spacing: -.02em;
   -moz-letter-spacing: -.02em;
   -ms-letter-spacing: -.02em;
   letter-spacing: -.02em;
-  color: #262D33;
-  font-weight: 600;
 }
 
 <Statistic
@@ -139,74 +93,23 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
       <div
         className="c0"
       >
-        <Text
-          isInline={false}
-          tag="span"
-          type="small"
-        >
-          <styled.span
-            data-component-type="text"
-            isInline={false}
-            textType="small"
-          >
-            <span
-              className="c1"
-              data-component-type="text"
-            >
-              Total Cost
-            </span>
-          </styled.span>
-        </Text>
+        Total Cost
       </div>
     </styled.div>
     <styled.span>
       <span
-        className="c2"
+        className="c1"
       >
-        <Text
-          color="#262D33"
-          isInline={true}
-          tag="span"
-          type="heading"
-        >
-          <styled.span
-            color="#262D33"
-            data-component-type="text"
-            isInline={true}
-            textType="heading"
-          >
-            <span
-              className="c3"
-              color="#262D33"
-              data-component-type="text"
-            >
-              AUD
-            </span>
-          </styled.span>
-        </Text>
+        AUD
       </span>
     </styled.span>
-    <Text
-      color="#262D33"
-      isInline={true}
-      tag="span"
-      type="display"
-    >
-      <styled.span
-        color="#262D33"
-        data-component-type="text"
-        isInline={true}
-        textType="display"
+    <styled.span>
+      <span
+        className="c2"
       >
-        <span
-          className="c4"
-          color="#262D33"
-          data-component-type="text"
-        >
-          99.00
-        </span>
-      </styled.span>
-    </Text>
+        99.00
+      </span>
+    </styled.span>
   </div>
 </Statistic>
 `;
