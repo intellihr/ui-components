@@ -65,6 +65,7 @@ describe('<FilterController />', () => {
         onTagDeleted={dummyFunction}
         onSearchUpdated={dummyFunction}
         onSearchCleared={dummyFunction}
+        rightComponent={<div>RightComponent</div>}
       />
     )
 

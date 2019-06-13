@@ -1,4 +1,4 @@
-#### Expanded Card
+#### Expandable Card
 
 ```jsx
 import { Button } from '@Domain/Buttons';
@@ -16,7 +16,6 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
     {state.allCards ? 'Collapse All' : 'Expand All'}
   </Button>
   <Card
-    name= 'card1'
     margins={{
               top:12,
               bottom: 4
@@ -70,7 +69,6 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
     }
   />
   <Card
-      name= 'card2'
       isExpanded= {state.card2}
       onCardToggle= {() => setState({ card2: !state.card2})}
       dropdownSections= {[
@@ -134,7 +132,6 @@ initialState = { cardWithOutAction: false };
 const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec libero et libero molestie eleifend. Donec dignissim vel erat eu cursus.';
  
 <Card
-    name= 'cardWithOutAction'
     isExpanded= {state.cardWithOutAction}
     onCardToggle= {() => setState({ cardWithOutAction: !state.cardWithOutAction})}
     mainContent= {
@@ -184,7 +181,6 @@ initialState = { cardWithOutExpand: false };
 const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec libero et libero molestie eleifend. Donec dignissim vel erat eu cursus.';
  
 <Card
-    name= 'cardWithOutExpand'
     isExpanded= {state.cardWithOutExpand}
     onCardToggle= {() => setState({ cardWithOutExpand: !state.cardWithOutExpand})}
     dropdownSections= {[
@@ -231,7 +227,6 @@ initialState = { cardWithOutAll: false };
 const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec libero et libero molestie eleifend. Donec dignissim vel erat eu cursus.';
  
 <Card
-    name= 'cardWithOutAll'
     isExpanded= {state.cardWithOutAll}
     onCardToggle= {() => setState({ cardWithOutAll: !state.cardWithOutAll})}
     mainContent= {
