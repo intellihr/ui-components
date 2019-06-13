@@ -69,6 +69,7 @@ namespace Props {
     ButtonIcon = 'button_icon',
     Callout = 'callout',
     Card = 'card',
+    Carousel = 'carousel',
     EmptyState = 'empty_state',
     FilterController = 'filter_controller',
     FilterTag = 'filter_tag',

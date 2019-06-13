@@ -168,6 +168,7 @@ module.exports = {
         {
           name: 'Layouts',
           components: [
+            'src/domain/Layouts/Carousel/Carousel.tsx',
             'src/domain/Layouts/LayoutSpacer/LayoutSpacer.tsx',
             'src/domain/Layouts/GridLayout/GridLayout.tsx',
             'src/domain/Layouts/PageLayout/PageLayout.tsx',

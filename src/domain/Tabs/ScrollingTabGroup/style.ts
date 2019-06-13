@@ -53,14 +53,20 @@ const TabList = styled.ul`
   font-size: ${Variables.FontSize.fzBody}px;
   height: 100%;
   line-height: ${TabStyleConstants.GroupHeight}px;
+  -ms-overflow-style: none;
   list-style-type: none;
   margin: 0;
   overflow-x: scroll;
   overflow-y: hidden;
-  padding-bottom: 100px;
   padding-left: 0;
   position: relative;
+  scrollbar-width: none;
   white-space: nowrap;
+
+  &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+  }
 
   &:after,
   &:before {
