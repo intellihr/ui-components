@@ -53,8 +53,8 @@ $toast-styles: (
 
 
   >.toast-content {
-    margin-top: $spacing-xsmall;
     flex: auto;
+    margin-top: $spacing-xsmall;
     padding: 0 .575rem;
     position: relative;
     top: -.375rem;

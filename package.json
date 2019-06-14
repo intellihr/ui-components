@@ -140,7 +140,7 @@
     "lint:fix": "tslint -t stylish --fix -c ./tslint.json \"src/**/*.{ts,tsx}\"",
     "lint:css": "stylelint \"src/**/*.{ts,tsx}\"",
     "lint:sass": "sass-lint --verbose",
-    "lint:sass:fix": "sass-lint-auto-fix -c .sass-lint.yml --verbose",
+    "lint:sass:fix": "sass-lint-auto-fix -c .sass-lint.yml",
     "build": "npm run clean && webpack --display=minimal",
     "build:watch": "npm run clean && webpack --watch --display=minimal",
     "styleguide:build": "styleguidist build",
