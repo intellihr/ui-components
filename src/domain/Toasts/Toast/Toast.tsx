@@ -21,12 +21,12 @@ export class Toast extends React.PureComponent<IToastProps> {
     type: 'success'
   }
 
-  public componentDidMount() {
+  public componentDidMount () {
     const { onMount } = this.props
-    if (onMount) onMount()
+    if (onMount) { onMount() }
   }
 
-  public render(): JSX.Element {
+  public render (): JSX.Element {
     const {
       type,
       heading,
