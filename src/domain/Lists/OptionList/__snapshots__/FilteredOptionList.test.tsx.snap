@@ -4,6 +4,11 @@ exports[`<FilteredOptionList /> should render a basic option list 1`] = `
 <Fragment>
   <TextInput
     handleChange={[Function]}
+    margins={
+      Object {
+        "bottom": 16,
+      }
+    }
     name="filteredOptionListInput"
     value=""
   />
