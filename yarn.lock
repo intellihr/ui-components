@@ -2924,6 +2924,11 @@ cookie-signature@1.0.6:
   resolved "https://registry.yarnpkg.com/cookie-signature/-/cookie-signature-1.0.6.tgz#e303a882b342cc3ee8ca513a79999734dab3ae2c"
   integrity sha1-4wOogrNCzD7oylE6eZmXNNqzriw=
 
+cookie@0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.3.1.tgz#e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb"
+  integrity sha1-5+Ch+e9DtMi6klxcWpboBtFoc7s=
+
 cookie@0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.4.0.tgz#beb437e7022b3b6d49019d088665303ebe9c14ba"
@@ -5119,7 +5124,6 @@ gonzales-pe-sl@^4.2.3:
 
 "gonzales-pe-sl@github:srowhani/gonzales-pe#dev":
   version "4.2.3"
-  uid "3b052416074edc280f7d04bbe40b2e410693c4a3"
   resolved "https://codeload.github.com/srowhani/gonzales-pe/tar.gz/3b052416074edc280f7d04bbe40b2e410693c4a3"
   dependencies:
     minimist "1.1.x"
@@ -10588,7 +10592,7 @@ sass-lint-auto-fix@^0.17.0:
     chalk "^2.3.2"
     commander "^2.15.1"
     glob "^7.1.2"
-    gonzales-pe-sl "github:srowhani/gonzales-pe#dev"
+    gonzales-pe-sl srowhani/gonzales-pe#dev
     js-yaml "^3.11.0"
     sass-lint "^1.12.1"
 

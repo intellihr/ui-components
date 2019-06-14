@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Carousel /> Carousel with custom children should match the snapshot 1`] = `
+<styled.div
+  data-component-type="carousel"
+>
+  <styled.div>
+    <styled.ul
+      innerRef={
+        Object {
+          "current": null,
+        }
+      }
+      onScroll={[Function]}
+      role="tablist"
+    >
+      <div />
+      <div />
+      <div />
+      <div />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<Carousel /> Standard Carousel should match the snapshot 1`] = `
+<styled.div
+  data-component-type="carousel"
+>
+  <styled.div>
+    <styled.ul
+      innerRef={
+        Object {
+          "current": null,
+        }
+      }
+      onScroll={[Function]}
+      role="tablist"
+    >
+      <styled.div />
+      <styled.div />
+      <styled.div />
+      <styled.div />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;
