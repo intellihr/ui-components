@@ -5122,8 +5122,9 @@ gonzales-pe-sl@^4.2.3:
   dependencies:
     minimist "1.1.x"
 
-"gonzales-pe-sl@github:srowhani/gonzales-pe#dev":
+gonzales-pe-sl@srowhani/gonzales-pe#dev:
   version "4.2.3"
+  uid "3b052416074edc280f7d04bbe40b2e410693c4a3"
   resolved "https://codeload.github.com/srowhani/gonzales-pe/tar.gz/3b052416074edc280f7d04bbe40b2e410693c4a3"
   dependencies:
     minimist "1.1.x"
@@ -9725,10 +9726,10 @@ react-string-replace@0.4.1:
   dependencies:
     lodash "^4.17.4"
 
-react-styled-flexboxgrid@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/react-styled-flexboxgrid/-/react-styled-flexboxgrid-2.4.0.tgz#208474f068b12abf4550c3918c9481ab750cc79e"
-  integrity sha512-9zydHFB2a03Z6tEoAiGxpbUd4Z5VHaFaOMCl3Uv/QVoQYHdoDQ+qWqPiPkMrII264O/75JCU/jG8NPSpd5q1+g==
+react-styled-flexboxgrid@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/react-styled-flexboxgrid/-/react-styled-flexboxgrid-3.1.0.tgz#be0d472c0be8f981a4dc3a390a870ce2785644c0"
+  integrity sha512-K2Cz5giccqSbcL6KH+xcI5OL6bzZ+8POSYzKJQXthwnrMVVNjwAQ8NQaK3/zShz52CZwTgsYGwJFCnFIvQ6b8g==
   dependencies:
     lodash.isinteger "^4.0.4"
 
