@@ -1,27 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<CircleSkeleton /> should render a circle skeleton 1`] = `
-.c1 {
-  -webkit-animation: jXsTbE .8s linear infinite alternate;
-  animation: jXsTbE .8s linear infinite alternate;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: #E1E6EB;
-  border: 1px solid #E1E6EB;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.c0 {
-  border-radius: 50%;
-  line-height: 1rem;
-  height: 72px;
-  width: 72px;
-}
-
 <CircleSkeleton
   showSkeleton={true}
   size="large"
@@ -29,41 +8,78 @@ exports[`<CircleSkeleton /> should render a circle skeleton 1`] = `
   <Styled(styled.span)
     size="large"
   >
-    <styled.span
-      className="c0"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bwzfXH",
+            "isStatic": false,
+            "lastClassName": "fOrFKV",
+            "rules": Array [
+              "
+  animation: ",
+              "
+  ",
+              Keyframes {
+                "id": "sc-keyframes-jXsTbE",
+                "inject": [Function],
+                "name": "jXsTbE",
+                "rules": Array [
+                  "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
+                  "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
+                ],
+                "toString": [Function],
+              },
+              " .8s linear infinite alternate;
+",
+              ";
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: ",
+              "#E1E6EB",
+              ";
+  border: 1px solid ",
+              "#E1E6EB",
+              ";
+  display: inline-flex;
+",
+              "
+  border-radius: 50%;
+  line-height: 1rem;
+
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "Styled(styled.span)",
+          "foldedComponentIds": Array [
+            "sc-bdVaJa",
+          ],
+          "render": [Function],
+          "styledComponentId": "sc-bwzfXH",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
       size="large"
     >
       <span
-        className="c0 c1"
+        className="fOrFKV"
         size="large"
       />
-    </styled.span>
+    </StyledComponent>
   </Styled(styled.span)>
 </CircleSkeleton>
 `;
 
 exports[`<CircleSkeleton /> should render a circle skeleton with set size 1`] = `
-.c1 {
-  -webkit-animation: jXsTbE .8s linear infinite alternate;
-  animation: jXsTbE .8s linear infinite alternate;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: #E1E6EB;
-  border: 1px solid #E1E6EB;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.c0 {
-  border-radius: 50%;
-  line-height: 1rem;
-  height: 30px;
-  width: 30px;
-}
-
 <CircleSkeleton
   showSkeleton={true}
   size="small"
@@ -71,15 +87,73 @@ exports[`<CircleSkeleton /> should render a circle skeleton with set size 1`] = 
   <Styled(styled.span)
     size="small"
   >
-    <styled.span
-      className="c0"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bwzfXH",
+            "isStatic": false,
+            "lastClassName": "jhnSAP",
+            "rules": Array [
+              "
+  animation: ",
+              "
+  ",
+              Keyframes {
+                "id": "sc-keyframes-jXsTbE",
+                "inject": [Function],
+                "name": "jXsTbE",
+                "rules": Array [
+                  "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
+                  "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
+                ],
+                "toString": [Function],
+              },
+              " .8s linear infinite alternate;
+",
+              ";
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: ",
+              "#E1E6EB",
+              ";
+  border: 1px solid ",
+              "#E1E6EB",
+              ";
+  display: inline-flex;
+",
+              "
+  border-radius: 50%;
+  line-height: 1rem;
+
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "Styled(styled.span)",
+          "foldedComponentIds": Array [
+            "sc-bdVaJa",
+          ],
+          "render": [Function],
+          "styledComponentId": "sc-bwzfXH",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
       size="small"
     >
       <span
-        className="c0 c1"
+        className="jhnSAP"
         size="small"
       />
-    </styled.span>
+    </StyledComponent>
   </Styled(styled.span)>
 </CircleSkeleton>
 `;

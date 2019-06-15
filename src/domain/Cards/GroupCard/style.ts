@@ -47,7 +47,7 @@ const StyledGroupMainCard = styled.div`
   `}
 `
 
-const StyledGroupCardToggleButton = styled.button`
+const StyledGroupCardToggleButton = styled.button<IStyledGroupCardToggleButtonProps>`
   ${cardButtonStyle};
   transition: all .25s ease-out;
 

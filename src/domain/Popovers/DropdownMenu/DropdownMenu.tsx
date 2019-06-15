@@ -83,7 +83,7 @@ class DropdownMenu extends React.Component<IDropdownMenuProps, IDropdownMenuStat
       return (
         <DefaultDropdownButton
           type='button'
-          innerRef={toggleComponentRef}
+          ref={toggleComponentRef}
           onClick={handleClick}
           {...ariaProps}
         >

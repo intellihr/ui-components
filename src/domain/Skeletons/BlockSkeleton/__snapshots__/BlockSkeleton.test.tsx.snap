@@ -1,64 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<BlockSkeleton /> should render a block skeleton 1`] = `
-.c1 {
-  -webkit-animation: jXsTbE .8s linear infinite alternate;
-  animation: jXsTbE .8s linear infinite alternate;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: #E1E6EB;
-  border: 1px solid #E1E6EB;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.c0 {
-  border-radius: 4px;
-  line-height: 1rem;
-  width: 100%;
-  height: 1rem;
-}
-
 <BlockSkeleton
   showSkeleton={true}
 >
   <Styled(styled.span)>
-    <styled.span
-      className="c0"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bwzfXH",
+            "isStatic": false,
+            "lastClassName": "ebKBvE",
+            "rules": Array [
+              "
+  animation: ",
+              "
+  ",
+              Keyframes {
+                "id": "sc-keyframes-jXsTbE",
+                "inject": [Function],
+                "name": "jXsTbE",
+                "rules": Array [
+                  "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
+                  "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
+                ],
+                "toString": [Function],
+              },
+              " .8s linear infinite alternate;
+",
+              ";
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: ",
+              "#E1E6EB",
+              ";
+  border: 1px solid ",
+              "#E1E6EB",
+              ";
+  display: inline-flex;
+",
+              "
+  border-radius: 4px;
+  line-height: 1rem;
+  width: ",
+              [Function],
+              ";
+  height: ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "Styled(styled.span)",
+          "foldedComponentIds": Array [
+            "sc-bdVaJa",
+          ],
+          "render": [Function],
+          "styledComponentId": "sc-bwzfXH",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
       <span
-        className="c0 c1"
+        className="ebKBvE"
       />
-    </styled.span>
+    </StyledComponent>
   </Styled(styled.span)>
 </BlockSkeleton>
 `;
 
 exports[`<BlockSkeleton /> should render a block skeleton with set width and height 1`] = `
-.c1 {
-  -webkit-animation: jXsTbE .8s linear infinite alternate;
-  animation: jXsTbE .8s linear infinite alternate;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: #E1E6EB;
-  border: 1px solid #E1E6EB;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.c0 {
-  border-radius: 4px;
-  line-height: 1rem;
-  width: 400px;
-  height: 200px;
-}
-
 <BlockSkeleton
   height={200}
   showSkeleton={true}
@@ -68,17 +86,77 @@ exports[`<BlockSkeleton /> should render a block skeleton with set width and hei
     height="200px"
     width="400px"
   >
-    <styled.span
-      className="c0"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bwzfXH",
+            "isStatic": false,
+            "lastClassName": "hbqOVe",
+            "rules": Array [
+              "
+  animation: ",
+              "
+  ",
+              Keyframes {
+                "id": "sc-keyframes-jXsTbE",
+                "inject": [Function],
+                "name": "jXsTbE",
+                "rules": Array [
+                  "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
+                  "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
+                ],
+                "toString": [Function],
+              },
+              " .8s linear infinite alternate;
+",
+              ";
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: ",
+              "#E1E6EB",
+              ";
+  border: 1px solid ",
+              "#E1E6EB",
+              ";
+  display: inline-flex;
+",
+              "
+  border-radius: 4px;
+  line-height: 1rem;
+  width: ",
+              [Function],
+              ";
+  height: ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "Styled(styled.span)",
+          "foldedComponentIds": Array [
+            "sc-bdVaJa",
+          ],
+          "render": [Function],
+          "styledComponentId": "sc-bwzfXH",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
       height="200px"
       width="400px"
     >
       <span
-        className="c0 c1"
+        className="hbqOVe"
         height="200px"
         width="400px"
       />
-    </styled.span>
+    </StyledComponent>
   </Styled(styled.span)>
 </BlockSkeleton>
 `;

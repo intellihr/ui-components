@@ -128,7 +128,7 @@ export class Carousel extends React.PureComponent<ICarouselProps, never> {
     return (
       <CarouselParent>
         <CarouselList
-          innerRef={this.carouselListRef}
+          ref={this.carouselListRef}
           onScroll={this.handleScrollUpdate}
           role='tablist'
         >

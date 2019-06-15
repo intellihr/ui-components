@@ -2,7 +2,7 @@
 
 exports[`Callout Renders successfully 1`] = `
 <div
-  className="callout success justify-center "
+  className="callout success justify-center lgEvmq"
   data-component-context={undefined}
   data-component-type="callout"
 >
@@ -21,7 +21,7 @@ exports[`Callout Renders successfully 1`] = `
 
 exports[`Callout Renders successfully when both messages and message is passed 1`] = `
 <div
-  className="callout info "
+  className="callout info lgEvmq"
   data-component-context={undefined}
   data-component-type="callout"
 >
@@ -48,7 +48,7 @@ exports[`Callout Renders successfully when both messages and message is passed 1
 
 exports[`Callout Renders successfully when messages are passed 1`] = `
 <div
-  className="callout warning "
+  className="callout warning lgEvmq"
   data-component-context={undefined}
   data-component-type="callout"
 >
@@ -72,7 +72,7 @@ exports[`Callout Renders successfully when messages are passed 1`] = `
 
 exports[`Callout Renders successfully when messages has length 1 1`] = `
 <div
-  className="callout info justify-center "
+  className="callout info justify-center lgEvmq"
   data-component-context={undefined}
   data-component-type="callout"
 >
@@ -88,7 +88,6 @@ exports[`Callout Renders successfully when only message is passed 1`] = `
 <styled.div
   className="callout info"
   data-component-type="callout"
-  innerRef={[Function]}
 >
   <div
     className="content"

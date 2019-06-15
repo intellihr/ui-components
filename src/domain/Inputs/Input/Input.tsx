@@ -209,7 +209,7 @@ export class Input extends React.PureComponent<InputProps> {
     if (icon || disabledPrefix) {
       return (
         <PrefixWrapper
-          innerRef={this.prefixWrapperRef}
+          ref={this.prefixWrapperRef}
         >
           {icon}
           <DisabledTextWrapper> {disabledPrefix} </DisabledTextWrapper>

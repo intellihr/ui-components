@@ -98,7 +98,7 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
     return (
       <InputGroup.Button
         onClick={toggleMenu}
-        innerRef={toggleComponentRef}
+        ref={toggleComponentRef}
         groupPosition='left'
         {...ariaProps}
       >

@@ -5,9 +5,9 @@ import { Variables } from '../../../common'
 import { Anchor, IAnchorProps } from '../../Internals/Anchor'
 
 // tslint:disable-next-line:no-empty-interface
-interface IActionLinkProps extends IAnchorProps {}
+interface IActionLinkProps extends IAnchorProps { }
 
-const styledAnchor: StyledFunction<IActionLinkProps> = styled(Anchor)
+const styledAnchor: StyledFunction<(props: IActionLinkProps) => React.ReactElement> = styled(Anchor)
 
 export const ActionLink = styledAnchor`
   font-weight: 600;

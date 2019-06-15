@@ -1,33 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TextSkeleton /> should render a text skeleton 1`] = `
-.c1 {
-  -webkit-animation: jXsTbE .8s linear infinite alternate;
-  animation: jXsTbE .8s linear infinite alternate;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: #E1E6EB;
-  border: 1px solid #E1E6EB;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.c0 {
-  border-radius: 4px;
-  width: 100%;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-}
-
 <TextSkeleton
   showSkeleton={true}
   type="body"
@@ -35,48 +8,83 @@ exports[`<TextSkeleton /> should render a text skeleton 1`] = `
   <Styled(styled.span)
     textType="body"
   >
-    <styled.span
-      className="c0"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bwzfXH",
+            "isStatic": false,
+            "lastClassName": "hLTnhI",
+            "rules": Array [
+              "
+  animation: ",
+              "
+  ",
+              Keyframes {
+                "id": "sc-keyframes-jXsTbE",
+                "inject": [Function],
+                "name": "jXsTbE",
+                "rules": Array [
+                  "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
+                  "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
+                ],
+                "toString": [Function],
+              },
+              " .8s linear infinite alternate;
+",
+              ";
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: ",
+              "#E1E6EB",
+              ";
+  border: 1px solid ",
+              "#E1E6EB",
+              ";
+  display: inline-flex;
+",
+              "
+  border-radius: 4px;
+  width: ",
+              [Function],
+              ";
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "Styled(styled.span)",
+          "foldedComponentIds": Array [
+            "sc-bdVaJa",
+          ],
+          "render": [Function],
+          "styledComponentId": "sc-bwzfXH",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
       textType="body"
     >
       <span
-        className="c0 c1"
+        className="hLTnhI"
       >
         ‌
       </span>
-    </styled.span>
+    </StyledComponent>
   </Styled(styled.span)>
 </TextSkeleton>
 `;
 
 exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
-.c1 {
-  -webkit-animation: jXsTbE .8s linear infinite alternate;
-  animation: jXsTbE .8s linear infinite alternate;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: #E1E6EB;
-  border: 1px solid #E1E6EB;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.c0 {
-  border-radius: 4px;
-  width: 100%;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 24px;
-  line-height: 32px;
-  -webkit-letter-spacing: -.02em;
-  -moz-letter-spacing: -.02em;
-  -ms-letter-spacing: -.02em;
-  letter-spacing: -.02em;
-}
-
 <TextSkeleton
   showSkeleton={true}
   type="display"
@@ -84,48 +92,83 @@ exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
   <Styled(styled.span)
     textType="display"
   >
-    <styled.span
-      className="c0"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bwzfXH",
+            "isStatic": false,
+            "lastClassName": "fJMnpR",
+            "rules": Array [
+              "
+  animation: ",
+              "
+  ",
+              Keyframes {
+                "id": "sc-keyframes-jXsTbE",
+                "inject": [Function],
+                "name": "jXsTbE",
+                "rules": Array [
+                  "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
+                  "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
+                ],
+                "toString": [Function],
+              },
+              " .8s linear infinite alternate;
+",
+              ";
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: ",
+              "#E1E6EB",
+              ";
+  border: 1px solid ",
+              "#E1E6EB",
+              ";
+  display: inline-flex;
+",
+              "
+  border-radius: 4px;
+  width: ",
+              [Function],
+              ";
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "Styled(styled.span)",
+          "foldedComponentIds": Array [
+            "sc-bdVaJa",
+          ],
+          "render": [Function],
+          "styledComponentId": "sc-bwzfXH",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
       textType="display"
     >
       <span
-        className="c0 c1"
+        className="fJMnpR"
       >
         ‌
       </span>
-    </styled.span>
+    </StyledComponent>
   </Styled(styled.span)>
 </TextSkeleton>
 `;
 
 exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
-.c1 {
-  -webkit-animation: jXsTbE .8s linear infinite alternate;
-  animation: jXsTbE .8s linear infinite alternate;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: #E1E6EB;
-  border: 1px solid #E1E6EB;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.c0 {
-  border-radius: 4px;
-  width: 250px;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-}
-
 <TextSkeleton
   showSkeleton={true}
   type="body"
@@ -135,18 +178,80 @@ exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
     textType="body"
     width="250px"
   >
-    <styled.span
-      className="c0"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bwzfXH",
+            "isStatic": false,
+            "lastClassName": "dUpGfC",
+            "rules": Array [
+              "
+  animation: ",
+              "
+  ",
+              Keyframes {
+                "id": "sc-keyframes-jXsTbE",
+                "inject": [Function],
+                "name": "jXsTbE",
+                "rules": Array [
+                  "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
+                  "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
+                ],
+                "toString": [Function],
+              },
+              " .8s linear infinite alternate;
+",
+              ";
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: ",
+              "#E1E6EB",
+              ";
+  border: 1px solid ",
+              "#E1E6EB",
+              ";
+  display: inline-flex;
+",
+              "
+  border-radius: 4px;
+  width: ",
+              [Function],
+              ";
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "Styled(styled.span)",
+          "foldedComponentIds": Array [
+            "sc-bdVaJa",
+          ],
+          "render": [Function],
+          "styledComponentId": "sc-bwzfXH",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
       textType="body"
       width="250px"
     >
       <span
-        className="c0 c1"
+        className="dUpGfC"
         width="250px"
       >
         ‌
       </span>
-    </styled.span>
+    </StyledComponent>
   </Styled(styled.span)>
 </TextSkeleton>
 `;

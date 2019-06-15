@@ -4,11 +4,6 @@ exports[`<ScrollingTabGroup /> Standard tabs with current index should match the
 <styled.div>
   <styled.div>
     <styled.ul
-      innerRef={
-        Object {
-          "current": null,
-        }
-      }
       onScroll={[Function]}
       role="tablist"
     >

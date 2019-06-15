@@ -45,24 +45,12 @@ export class Text extends React.PureComponent<ITextProps> {
     tag: 'span'
   }
 
-  get textTag (): any {
-    const {
-      tag
-    } = this.props
-
-    if (tag) {
-      return TextWrapper.withComponent(tag)
-    }
-
-    return TextWrapper
-  }
-
   get dataAttributes (): any {
     const {
       dataAttributes
     } = this.props
 
-    return reduce(dataAttributes,(acc: any, dataValue: string, dataKey: string) => {
+    return reduce(dataAttributes, (acc: any, dataValue: string, dataKey: string) => {
       acc[`data-${dataKey}`] = dataValue
 
       return acc
@@ -82,13 +70,13 @@ export class Text extends React.PureComponent<ITextProps> {
       color,
       componentContext,
       hintComponentProps,
-      margins
+      margins,
+      tag
     } = this.props
 
-    const TextTag = this.textTag
-
     const text = (
-      <TextTag
+      <TextWrapper
+        as={tag}
         margins={margins}
         textType={type}
         color={color}
@@ -103,7 +91,7 @@ export class Text extends React.PureComponent<ITextProps> {
         {...this.dataAttributes}
       >
         {children}
-      </TextTag>
+      </TextWrapper>
     )
 
     if (hintComponentProps) {
