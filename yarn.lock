@@ -393,10 +393,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-table@6.7.11":
-  version "6.7.11"
-  resolved "https://registry.yarnpkg.com/@types/react-table/-/react-table-6.7.11.tgz#26e85411981054af7dd657ef81e249baa6aee3d5"
-  integrity sha512-zAuI4+7cQMRfV70h63yqsVNBI3mbXh8VgKc8NMnzqF0qxw5dUJaYAE7/bVXk0JQaWIbpaTbUSUu5Cho1r0XByA==
+"@types/react-table@6.8.3":
+  version "6.8.3"
+  resolved "https://registry.yarnpkg.com/@types/react-table/-/react-table-6.8.3.tgz#7b6bf6cab964f3f692625000fa708ed07a26fa76"
+  integrity sha512-N1gU4+u9qUTHy3V+uJ0BRIE+c++B4RCZDTCW8HIDRSLR9ieEN8M0uc05yhOKN8hgA8JgxAFuNYbqztxjTKbpaA==
   dependencies:
     "@types/react" "*"
 
