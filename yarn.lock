@@ -133,12 +133,14 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@epegzz/sass-vars-loader@3.2.3":
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/@epegzz/sass-vars-loader/-/sass-vars-loader-3.2.3.tgz#b8808cfd71d2fd6a77897b4f3164347269441be4"
-  integrity sha512-j9gNqTThnw8+SQB4AXgVVKouUNMgLW6HshYua4IS/Ocm+mDki3/lDbqrGteYDmtoFzX3j6s/yT4KjMp6XUP0wQ==
+"@epegzz/sass-vars-loader@4.3.1":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@epegzz/sass-vars-loader/-/sass-vars-loader-4.3.1.tgz#dffc694b9135a755a2fc5bab85bbf94c564bb98b"
+  integrity sha512-w3Ud/3c3PBAI8Hbjc6C91pjv+7m7PZjE93eBcMSuHRmo8dVhmaE1Mt6/JZIK5B49FguT8ojCkYUsS2wAxodk9Q==
   dependencies:
     loader-utils "^1.1.0"
+    require-from-string "^2.0.2"
+    typescript "^3.3.3"
 
 "@intellihr/icons@0.0.8":
   version "0.0.8"
@@ -5109,8 +5111,9 @@ gonzales-pe-sl@^4.2.3:
   dependencies:
     minimist "1.1.x"
 
-"gonzales-pe-sl@github:srowhani/gonzales-pe#dev":
+gonzales-pe-sl@srowhani/gonzales-pe#dev:
   version "4.2.3"
+  uid "3b052416074edc280f7d04bbe40b2e410693c4a3"
   resolved "https://codeload.github.com/srowhani/gonzales-pe/tar.gz/3b052416074edc280f7d04bbe40b2e410693c4a3"
   dependencies:
     minimist "1.1.x"
@@ -10337,7 +10340,7 @@ require-directory@^2.1.1:
   resolved "https://registry.yarnpkg.com/require-directory/-/require-directory-2.1.1.tgz#8c64ad5fd30dab1c976e2344ffe7f792a6a6df42"
   integrity sha1-jGStX9MNqxyXbiNE/+f3kqam30I=
 
-require-from-string@^2.0.1:
+require-from-string@^2.0.1, require-from-string@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/require-from-string/-/require-from-string-2.0.2.tgz#89a7fdd938261267318eafe14f9c32e598c36909"
   integrity sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==
@@ -11928,6 +11931,11 @@ typescript@3.4.5:
   version "3.4.5"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.4.5.tgz#2d2618d10bb566572b8d7aad5180d84257d70a99"
   integrity sha512-YycBxUb49UUhdNMU5aJ7z5Ej2XGmaIBL0x34vZ82fn3hGvD+bgrMrVDpatgz2f7YxUMJxMkbWxJZeAvDxVe7Vw==
+
+typescript@^3.3.3:
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.5.2.tgz#a09e1dc69bc9551cadf17dba10ee42cf55e5d56c"
+  integrity sha512-7KxJovlYhTX5RaRbUdkAXN1KUZ8PwWlTzQdHV6xNqvuFOs7+WBo10TQUqT19Q/Jz2hk5v9TQDIhyLhhJY4p5AA==
 
 ua-parser-js@^0.7.18:
   version "0.7.18"

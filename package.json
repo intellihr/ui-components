@@ -75,7 +75,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.51",
-    "@epegzz/sass-vars-loader": "3.2.3",
+    "@epegzz/sass-vars-loader": "4.3.1",
     "@intellihr/standard-tslint": "^2.1.1",
     "babel-jest": "^23.0.1",
     "babel-loader": "^7.1.4",
