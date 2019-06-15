@@ -5121,8 +5121,9 @@ gonzales-pe-sl@^4.2.3:
   dependencies:
     minimist "1.1.x"
 
-"gonzales-pe-sl@github:srowhani/gonzales-pe#dev":
+gonzales-pe-sl@srowhani/gonzales-pe#dev:
   version "4.2.3"
+  uid "3b052416074edc280f7d04bbe40b2e410693c4a3"
   resolved "https://codeload.github.com/srowhani/gonzales-pe/tar.gz/3b052416074edc280f7d04bbe40b2e410693c4a3"
   dependencies:
     minimist "1.1.x"
@@ -9714,10 +9715,10 @@ react-chartjs-2@*, react-chartjs-2@2.7.6:
     lodash "^4.17.4"
     prop-types "^15.5.8"
 
-react-collapsible@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/react-collapsible/-/react-collapsible-2.2.0.tgz#257abef5b96a330d9249810761cac29a3d82f268"
-  integrity sha512-xnkMUj4p6fh2yOeTuZDNK4p+dNK/0iSqOQTujvmLgHKtNNd+aIGhfE5HTKGcareekyhi3Q2OXUFogkimzrgSjQ==
+react-collapsible@2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/react-collapsible/-/react-collapsible-2.6.0.tgz#8cc18e8b88c46032b21c119833cd6922344636c9"
+  integrity sha512-r4JSoqh3C3sUIzEr9eXtDC4WPNZsOffO1EeA3ZvyS7JeDIOwmfov9p/380XyewFhqW2B8MHY8IHQ2x1HH5PTxQ==
 
 react-dates@^20.2.0:
   version "20.2.0"

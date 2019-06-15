@@ -58,7 +58,7 @@
     "numeral": "2.0.6",
     "react-autosize-textarea": "7.0.0",
     "react-chartjs-2": "2.7.6",
-    "react-collapsible": "2.2.0",
+    "react-collapsible": "2.6.0",
     "react-dates": "^20.2.0",
     "react-geosuggest": "^2.9.0",
     "react-linkify": "0.2.2",
