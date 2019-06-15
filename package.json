@@ -68,7 +68,7 @@
     "react-string-replace": "0.4.1",
     "react-styled-flexboxgrid": "2.4.0",
     "react-table": "6.8.6",
-    "react-tooltip": "3.6.1",
+    "react-tooltip": "3.10.0",
     "react-transition-group": "4.0.1",
     "utility-types": "3.7.0",
     "uuid": "3.3.2"
