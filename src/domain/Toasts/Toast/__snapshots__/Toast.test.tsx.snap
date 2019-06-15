@@ -9,11 +9,16 @@ exports[`<Toast /> should call the onMount function if given one 1`] = `
     size="xsmall"
     type="alert"
   />
-  <span
-    className="toast-content"
+  <div
+    className="toast-content no-heading"
   >
-    Yahallo!
-  </span>
+    <div
+      className="toast-heading"
+    />
+    <div>
+      Yahallo!
+    </div>
+  </div>
   <span
     className="fa-container toast-close-span"
     onClick={[Function]}
@@ -36,11 +41,16 @@ exports[`<Toast /> should render a toast of a default type, which is success 1`]
     size="xsmall"
     type="check"
   />
-  <span
-    className="toast-content"
+  <div
+    className="toast-content no-heading"
   >
-    Yo ... whaazzzaaaap!!!
-  </span>
+    <div
+      className="toast-heading"
+    />
+    <div>
+      Yo ... whaazzzaaaap!!!
+    </div>
+  </div>
   <span
     className="fa-container toast-close-span"
     onClick={[Function]}
@@ -63,11 +73,16 @@ exports[`<Toast /> should render an alert toast 1`] = `
     size="xsmall"
     type="alert"
   />
-  <span
-    className="toast-content"
+  <div
+    className="toast-content no-heading"
   >
-    Surprise @#$%^&*!!!
-  </span>
+    <div
+      className="toast-heading"
+    />
+    <div>
+      Surprise @#$%^&*!!!
+    </div>
+  </div>
   <span
     className="fa-container toast-close-span"
     onClick={[Function]}

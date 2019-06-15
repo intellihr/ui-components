@@ -1,7 +1,7 @@
 #### Basic Toast
 
 ```jsx
-  <Toast>
+  <Toast heading={"Greetings"}>
     Hello this is a test toast!
   </Toast>
 ```
