@@ -4970,6 +4970,12 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
           1,
         ],
       ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
     }
   }
   pageSize={1}
@@ -5113,6 +5119,12 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
             Array [
               1,
             ],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": undefined,
+            },
           ],
         }
       }

@@ -31,22 +31,20 @@ exports[`<MenuItem /> should render a menu item as a submenu if it has children 
   transitionCloseTime={null}
   transitionTime={250}
   trigger={
-    <UNDEFINED
-      className={undefined}
-    >
+    <ForwardRef(styled.li)>
       <a
         href="www.google.com"
       >
-        <UNDEFINED>
+        <ForwardRef(styled.span)>
           <IntelliIcon
             type="clock"
           />
-        </UNDEFINED>
-        <UNDEFINED>
+        </ForwardRef(styled.span)>
+        <ForwardRef(styled.span)>
           Father
-        </UNDEFINED>
+        </ForwardRef(styled.span)>
       </a>
-    </UNDEFINED>
+    </ForwardRef(styled.li)>
   }
   triggerClassName=""
   triggerDisabled={false}
@@ -99,17 +97,13 @@ exports[`<MenuItem /> should render a menu item which overflowWhenOpen prop is p
   transitionCloseTime={null}
   transitionTime={250}
   trigger={
-    <UNDEFINED
-      className={undefined}
-    >
-      <a
-        href={undefined}
-      >
-        <UNDEFINED>
+    <ForwardRef(styled.li)>
+      <a>
+        <ForwardRef(styled.span)>
           Test menu item
-        </UNDEFINED>
+        </ForwardRef(styled.span)>
       </a>
-    </UNDEFINED>
+    </ForwardRef(styled.li)>
   }
   triggerClassName=""
   triggerDisabled={false}
