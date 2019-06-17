@@ -19,15 +19,11 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
   will-change: opacity;
   background-color: #E1E6EB;
   border: 1px solid #E1E6EB;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: block;
 }
 
 .c1 {
   border-radius: 4px;
-  width: 100%;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-size: 16px;
@@ -43,10 +39,7 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
   will-change: opacity;
   background-color: #E1E6EB;
   border: 1px solid #E1E6EB;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: block;
 }
 
 .c2 {
@@ -67,10 +60,7 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
   will-change: opacity;
   background-color: #E1E6EB;
   border: 1px solid #E1E6EB;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: block;
 }
 
 <ParagraphSkeleton

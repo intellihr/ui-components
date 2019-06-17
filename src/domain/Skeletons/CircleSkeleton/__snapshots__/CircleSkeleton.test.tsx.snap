@@ -13,10 +13,7 @@ exports[`<CircleSkeleton /> should render a circle skeleton 1`] = `
   will-change: opacity;
   background-color: #E1E6EB;
   border: 1px solid #E1E6EB;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: block;
 }
 
 <CircleSkeleton
@@ -47,10 +44,7 @@ exports[`<CircleSkeleton /> should render a circle skeleton with set size 1`] = 
   will-change: opacity;
   background-color: #E1E6EB;
   border: 1px solid #E1E6EB;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: block;
 }
 
 <CircleSkeleton
