@@ -7,7 +7,7 @@ import {
   lowerCase
 } from 'lodash'
 import React, { ChangeEvent } from 'react'
-import ReactTable, { Filter, FilterFunction, SortingRule, TableProps } from 'react-table'
+import ReactTable, { DefaultFilterFunction, Filter, SortingRule, TableProps } from 'react-table'
 
 import { Props } from '../../../../common'
 import { Callout } from '../../../Callouts'
@@ -109,7 +109,7 @@ class LegacyDataTable extends React.Component<IDataTableProps, IDataTableState> 
         value: searchFilter
       }
 
-      const filterMethod: FilterFunction = column.filterMethod || this.defaultFilterMethod
+      const filterMethod: DefaultFilterFunction = column.filterMethod || this.defaultFilterMethod
 
       if (filterMethod(currentFilter, row, column)) {
         return true

@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { Variables } from '../../../common'
 import { IGenericInputProps, TextInput } from '../../Inputs'
 import { IOptionListProps, OptionList } from './OptionList'
 
@@ -34,6 +35,7 @@ class FilteredOptionList extends React.PureComponent<IFilteredOptionListProps, I
           name='filteredOptionListInput'
           value={this.state.query}
           handleChange={this.updateQueryValue}
+          margins={{ bottom: Variables.Spacing.sMedium }}
           {...textInputProps}
         />
         <OptionList
