@@ -3,7 +3,6 @@
 exports[`<TextSkeleton /> should render a text skeleton 1`] = `
 .c0 {
   border-radius: 4px;
-  width: 100%;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-size: 16px;
@@ -19,10 +18,7 @@ exports[`<TextSkeleton /> should render a text skeleton 1`] = `
   will-change: opacity;
   background-color: #E1E6EB;
   border: 1px solid #E1E6EB;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: block;
 }
 
 <TextSkeleton
@@ -44,7 +40,6 @@ exports[`<TextSkeleton /> should render a text skeleton 1`] = `
 exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
 .c0 {
   border-radius: 4px;
-  width: 100%;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-size: 24px;
@@ -60,10 +55,7 @@ exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
   will-change: opacity;
   background-color: #E1E6EB;
   border: 1px solid #E1E6EB;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: block;
 }
 
 <TextSkeleton
@@ -101,10 +93,7 @@ exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
   will-change: opacity;
   background-color: #E1E6EB;
   border: 1px solid #E1E6EB;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: block;
 }
 
 <TextSkeleton

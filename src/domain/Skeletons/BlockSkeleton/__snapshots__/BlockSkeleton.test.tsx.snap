@@ -4,7 +4,6 @@ exports[`<BlockSkeleton /> should render a block skeleton 1`] = `
 .c0 {
   border-radius: 4px;
   line-height: 1rem;
-  width: 100%;
   height: 1rem;
   -webkit-animation: jXsTbE .8s linear infinite alternate;
   animation: jXsTbE .8s linear infinite alternate;
@@ -13,10 +12,7 @@ exports[`<BlockSkeleton /> should render a block skeleton 1`] = `
   will-change: opacity;
   background-color: #E1E6EB;
   border: 1px solid #E1E6EB;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: block;
 }
 
 <BlockSkeleton
@@ -43,10 +39,7 @@ exports[`<BlockSkeleton /> should render a block skeleton with set width and hei
   will-change: opacity;
   background-color: #E1E6EB;
   border: 1px solid #E1E6EB;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: block;
 }
 
 <BlockSkeleton
