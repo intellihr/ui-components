@@ -1,13 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<HighLightArea /> should render a HighlightArea 1`] = `
-.c0 {
-  border: 1px solid #C5CED6;
-  background-color: #FAFBFC;
-  padding: 16px;
-  border-radius: 4px;
-}
-
 <HighlightArea
   color="grey"
 >
@@ -15,13 +8,57 @@ exports[`<HighLightArea /> should render a HighlightArea 1`] = `
     color="grey"
     data-component-type="highlight_area"
   >
-    <div
-      className="c0"
+    <StyledComponent
       color="grey"
       data-component-type="highlight_area"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "jHnPgP",
+            "rules": Array [
+              "
+  border: 1px solid ",
+              [Function],
+              ";
+  background-color: ",
+              [Function],
+              ";
+  padding: ",
+              "16",
+              "px;
+  border-radius: ",
+              "4",
+              "px;
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      Hello
-    </div>
+      <div
+        className="jHnPgP"
+        color="grey"
+        data-component-type="highlight_area"
+      >
+        Hello
+      </div>
+    </StyledComponent>
   </styled.div>
 </HighlightArea>
 `;

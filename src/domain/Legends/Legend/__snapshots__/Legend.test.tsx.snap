@@ -1,58 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Legend /> should render a legend 1`] = `
-.c1 {
-  width: 1.28571em;
-  color: rgb(0,255,0);
-}
-
-.c1.icon {
-  text-align: center;
-  font-size: .75rem;
-}
-
-.c3 {
-  width: 1.28571em;
-  color: rgb(0,0,255);
-}
-
-.c3.icon {
-  text-align: center;
-  font-size: .75rem;
-}
-
-.c0 {
-  margin: 0;
-  padding: 0;
-}
-
-.c0 li {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: .8rem;
-  margin-bottom: 3px;
-}
-
-.c0 li:last-child {
-  margin-bottom: 0;
-}
-
-.c0 li i {
-  font-size: 10px;
-}
-
-.c2 {
-  margin-left: 5px;
-  white-space: nowrap;
-  width: 100%;
-}
-
 <Legend
   datasets={
     Array [
@@ -68,84 +16,276 @@ exports[`<Legend /> should render a legend 1`] = `
   }
 >
   <styled.ul>
-    <ul
-      className="c0"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-htpNat",
+            "isStatic": true,
+            "lastClassName": "eydzFE",
+            "rules": Array [
+              "
+  margin: 0;
+  padding: 0;
+
+  li {
+    align-items: center;
+    display: flex;
+    font-size: .8rem;
+    margin-bottom: 3px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    i {
+      font-size: 10px;
+    }
+  }
+",
+            ],
+          },
+          "displayName": "styled.ul",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-htpNat",
+          "target": "ul",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      <li
-        key="0"
+      <ul
+        className="eydzFE"
       >
-        <FontAwesomeIcon
-          color="rgb(0,255,0)"
-          size="xsmall"
-          type="circle"
+        <li
+          key="0"
         >
-          <Icon
+          <FontAwesomeIcon
             color="rgb(0,255,0)"
-            isSpinning={false}
             size="xsmall"
-            type="fa-circle"
+            type="circle"
           >
-            <styled.i
-              aria-hidden={true}
-              className="icon fa fa-circle"
+            <Icon
               color="rgb(0,255,0)"
+              isSpinning={false}
               size="xsmall"
+              type="fa-circle"
             >
-              <i
+              <styled.i
                 aria-hidden={true}
-                className="icon fa fa-circle c1"
+                className="icon fa fa-circle"
                 color="rgb(0,255,0)"
                 size="xsmall"
-              />
-            </styled.i>
-          </Icon>
-        </FontAwesomeIcon>
-        <styled.span>
-          <span
-            className="c2"
-          >
-            I am the green dataset
-          </span>
-        </styled.span>
-      </li>
-      <li
-        key="1"
-      >
-        <FontAwesomeIcon
-          color="rgb(0,0,255)"
-          size="xsmall"
-          type="circle"
-        >
-          <Icon
-            color="rgb(0,0,255)"
-            isSpinning={false}
-            size="xsmall"
-            type="fa-circle"
-          >
-            <styled.i
-              aria-hidden={true}
-              className="icon fa fa-circle"
-              color="rgb(0,0,255)"
-              size="xsmall"
+              >
+                <StyledComponent
+                  aria-hidden={true}
+                  className="icon fa fa-circle"
+                  color="rgb(0,255,0)"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bwzfXH",
+                        "isStatic": false,
+                        "lastClassName": "fmvdLz",
+                        "rules": Array [
+                          "
+   width: 1.28571em;
+
+  ",
+                          [Function],
+                          "
+
+  &.icon {
+    text-align: center;
+
+  ",
+                          [Function],
+                          "
+  }
+",
+                        ],
+                      },
+                      "displayName": "styled.i",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-bwzfXH",
+                      "target": "i",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  size="xsmall"
+                >
+                  <i
+                    aria-hidden={true}
+                    className="icon fa fa-circle cKoKge"
+                    color="rgb(0,255,0)"
+                    size="xsmall"
+                  />
+                </StyledComponent>
+              </styled.i>
+            </Icon>
+          </FontAwesomeIcon>
+          <styled.span>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bxivhb",
+                    "isStatic": true,
+                    "lastClassName": "fWsUlI",
+                    "rules": Array [
+                      "
+  margin-left: 5px;
+  white-space: nowrap;
+  width: 100%;
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bxivhb",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
             >
-              <i
+              <span
+                className="fWsUlI"
+              >
+                I am the green dataset
+              </span>
+            </StyledComponent>
+          </styled.span>
+        </li>
+        <li
+          key="1"
+        >
+          <FontAwesomeIcon
+            color="rgb(0,0,255)"
+            size="xsmall"
+            type="circle"
+          >
+            <Icon
+              color="rgb(0,0,255)"
+              isSpinning={false}
+              size="xsmall"
+              type="fa-circle"
+            >
+              <styled.i
                 aria-hidden={true}
-                className="icon fa fa-circle c3"
+                className="icon fa fa-circle"
                 color="rgb(0,0,255)"
                 size="xsmall"
-              />
-            </styled.i>
-          </Icon>
-        </FontAwesomeIcon>
-        <styled.span>
-          <span
-            className="c2"
-          >
-            I am BLUE!
-          </span>
-        </styled.span>
-      </li>
-    </ul>
+              >
+                <StyledComponent
+                  aria-hidden={true}
+                  className="icon fa fa-circle"
+                  color="rgb(0,0,255)"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bwzfXH",
+                        "isStatic": false,
+                        "lastClassName": "fmvdLz",
+                        "rules": Array [
+                          "
+   width: 1.28571em;
+
+  ",
+                          [Function],
+                          "
+
+  &.icon {
+    text-align: center;
+
+  ",
+                          [Function],
+                          "
+  }
+",
+                        ],
+                      },
+                      "displayName": "styled.i",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-bwzfXH",
+                      "target": "i",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  size="xsmall"
+                >
+                  <i
+                    aria-hidden={true}
+                    className="icon fa fa-circle fmvdLz"
+                    color="rgb(0,0,255)"
+                    size="xsmall"
+                  />
+                </StyledComponent>
+              </styled.i>
+            </Icon>
+          </FontAwesomeIcon>
+          <styled.span>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bxivhb",
+                    "isStatic": true,
+                    "lastClassName": "fWsUlI",
+                    "rules": Array [
+                      "
+  margin-left: 5px;
+  white-space: nowrap;
+  width: 100%;
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bxivhb",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <span
+                className="fWsUlI"
+              >
+                I am BLUE!
+              </span>
+            </StyledComponent>
+          </styled.span>
+        </li>
+      </ul>
+    </StyledComponent>
   </styled.ul>
 </Legend>
 `;

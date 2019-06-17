@@ -1,18 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Text /> should render a non-inline text element 1`] = `
-.c0 {
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #424F5C;
-  font-weight: 400;
-  display: block;
-}
-
 <Text
   isInline={false}
   tag="span"
@@ -23,28 +11,78 @@ exports[`<Text /> should render a non-inline text element 1`] = `
     isInline={false}
     textType="body"
   >
-    <span
-      className="c0"
+    <StyledComponent
       data-component-type="text"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-jTzLTM",
+            "isStatic": false,
+            "lastClassName": "CObAe",
+            "rules": Array [
+              "
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-jTzLTM",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      isInline={false}
+      textType="body"
     >
-      Hello, world!
-    </span>
+      <span
+        className="CObAe"
+        data-component-type="text"
+      >
+        Hello, world!
+      </span>
+    </StyledComponent>
   </styled.span>
 </Text>
 `;
 
 exports[`<Text /> should render a text element as a h1 1`] = `
-.c0 {
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #424F5C;
-  font-weight: 400;
-}
-
 <Text
   isInline={true}
   tag="h1"
@@ -55,28 +93,78 @@ exports[`<Text /> should render a text element as a h1 1`] = `
     isInline={true}
     textType="body"
   >
-    <h1
-      className="c0"
+    <StyledComponent
       data-component-type="text"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-fjdhpX",
+            "isStatic": false,
+            "lastClassName": "ctnFRD",
+            "rules": Array [
+              "
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.h1",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-fjdhpX",
+          "target": "h1",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      isInline={true}
+      textType="body"
     >
-      Hello, world!
-    </h1>
+      <h1
+        className="ctnFRD"
+        data-component-type="text"
+      >
+        Hello, world!
+      </h1>
+    </StyledComponent>
   </styled.h1>
 </Text>
 `;
 
 exports[`<Text /> should render a text with data attributes 1`] = `
-.c0 {
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #424F5C;
-  font-weight: 400;
-}
-
 <Text
   dataAttributes={
     Object {
@@ -95,34 +183,82 @@ exports[`<Text /> should render a text with data attributes 1`] = `
     isInline={true}
     textType="body"
   >
-    <span
-      className="c0"
+    <StyledComponent
       data-component-type="text"
       data-otherKey="myOtherKey"
       data-role="myRole"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-jzJRlG",
+            "isStatic": false,
+            "lastClassName": "TQvZr",
+            "rules": Array [
+              "
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-jzJRlG",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      isInline={true}
+      textType="body"
     >
-      Hello! I am text with data attributes
-    </span>
+      <span
+        className="TQvZr"
+        data-component-type="text"
+        data-otherKey="myOtherKey"
+        data-role="myRole"
+      >
+        Hello! I am text with data attributes
+      </span>
+    </StyledComponent>
   </styled.span>
 </Text>
 `;
 
 exports[`<Text /> should render a text with margin 1`] = `
-.c0 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #424F5C;
-  font-weight: 400;
-}
-
 <Text
   isInline={true}
   margins={
@@ -149,28 +285,86 @@ exports[`<Text /> should render a text with margin 1`] = `
     }
     textType="body"
   >
-    <span
-      className="c0"
+    <StyledComponent
       data-component-type="text"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-chPdSV",
+            "isStatic": false,
+            "lastClassName": "gReSio",
+            "rules": Array [
+              "
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-chPdSV",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      isInline={true}
+      margins={
+        Object {
+          "bottom": 20,
+          "left": 20,
+          "right": 20,
+          "top": 20,
+        }
+      }
+      textType="body"
     >
-      Hello! I have special margin
-    </span>
+      <span
+        className="gReSio"
+        data-component-type="text"
+      >
+        Hello! I have special margin
+      </span>
+    </StyledComponent>
   </styled.span>
 </Text>
 `;
 
 exports[`<Text /> should render an element with colored text 1`] = `
-.c0 {
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #F25749;
-  font-weight: 400;
-}
-
 <Text
   color="#F25749"
   isInline={true}
@@ -183,29 +377,80 @@ exports[`<Text /> should render an element with colored text 1`] = `
     isInline={true}
     textType="body"
   >
-    <span
-      className="c0"
+    <StyledComponent
       color="#F25749"
       data-component-type="text"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-iwsKbI",
+            "isStatic": false,
+            "lastClassName": "iyoxNw",
+            "rules": Array [
+              "
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-iwsKbI",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      isInline={true}
+      textType="body"
     >
-      Hello, world!
-    </span>
+      <span
+        className="iyoxNw"
+        color="#F25749"
+        data-component-type="text"
+      >
+        Hello, world!
+      </span>
+    </StyledComponent>
   </styled.span>
 </Text>
 `;
 
 exports[`<Text /> should render an element with heading text 1`] = `
-.c0 {
-  font-size: 18px;
-  line-height: 24px;
-  -webkit-letter-spacing: -.02em;
-  -moz-letter-spacing: -.02em;
-  -ms-letter-spacing: -.02em;
-  letter-spacing: -.02em;
-  color: #424F5C;
-  font-weight: 600;
-}
-
 <Text
   isInline={true}
   tag="span"
@@ -216,28 +461,78 @@ exports[`<Text /> should render an element with heading text 1`] = `
     isInline={true}
     textType="heading"
   >
-    <span
-      className="c0"
+    <StyledComponent
       data-component-type="text"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-gqjmRU",
+            "isStatic": false,
+            "lastClassName": "eCzpRn",
+            "rules": Array [
+              "
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-gqjmRU",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      isInline={true}
+      textType="heading"
     >
-      Hello, world!
-    </span>
+      <span
+        className="eCzpRn"
+        data-component-type="text"
+      >
+        Hello, world!
+      </span>
+    </StyledComponent>
   </styled.span>
 </Text>
 `;
 
 exports[`<Text /> should render an element with heavy text 1`] = `
-.c0 {
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #424F5C;
-  font-weight: 600;
-}
-
 <Text
   isInline={true}
   tag="span"
@@ -250,28 +545,79 @@ exports[`<Text /> should render an element with heavy text 1`] = `
     textType="body"
     weight="heavy"
   >
-    <span
-      className="c0"
+    <StyledComponent
       data-component-type="text"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-dnqmqq",
+            "isStatic": false,
+            "lastClassName": "bjkYFA",
+            "rules": Array [
+              "
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-dnqmqq",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      isInline={true}
+      textType="body"
+      weight="heavy"
     >
-      Hello, world!
-    </span>
+      <span
+        className="bjkYFA"
+        data-component-type="text"
+      >
+        Hello, world!
+      </span>
+    </StyledComponent>
   </styled.span>
 </Text>
 `;
 
 exports[`<Text /> should render an element with small text 1`] = `
-.c0 {
-  font-size: 14px;
-  line-height: 20px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #262D33;
-  font-weight: 400;
-}
-
 <Text
   isInline={true}
   tag="span"
@@ -282,28 +628,78 @@ exports[`<Text /> should render an element with small text 1`] = `
     isInline={true}
     textType="small"
   >
-    <span
-      className="c0"
+    <StyledComponent
       data-component-type="text"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-gZMcBi",
+            "isStatic": false,
+            "lastClassName": "bEdVCa",
+            "rules": Array [
+              "
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-gZMcBi",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      isInline={true}
+      textType="small"
     >
-      Hello, world!
-    </span>
+      <span
+        className="bEdVCa"
+        data-component-type="text"
+      >
+        Hello, world!
+      </span>
+    </StyledComponent>
   </styled.span>
 </Text>
 `;
 
 exports[`<Text /> should render an element with text 1`] = `
-.c0 {
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #424F5C;
-  font-weight: 400;
-}
-
 <Text
   isInline={true}
   tag="span"
@@ -314,29 +710,78 @@ exports[`<Text /> should render an element with text 1`] = `
     isInline={true}
     textType="body"
   >
-    <span
-      className="c0"
+    <StyledComponent
       data-component-type="text"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-htoDjs",
+            "isStatic": false,
+            "lastClassName": "dqhJLs",
+            "rules": Array [
+              "
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-htoDjs",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      isInline={true}
+      textType="body"
     >
-      Hello, world!
-    </span>
+      <span
+        className="dqhJLs"
+        data-component-type="text"
+      >
+        Hello, world!
+      </span>
+    </StyledComponent>
   </styled.span>
 </Text>
 `;
 
 exports[`<Text /> should render an element with the text converted to uppercase 1`] = `
-.c0 {
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #424F5C;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
 <Text
   isInline={true}
   isUpper={true}
@@ -349,12 +794,74 @@ exports[`<Text /> should render an element with the text converted to uppercase 
     isUpper={true}
     textType="body"
   >
-    <span
-      className="c0"
+    <StyledComponent
       data-component-type="text"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-VigVT",
+            "isStatic": false,
+            "lastClassName": "cWksYM",
+            "rules": Array [
+              "
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-VigVT",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      isInline={true}
+      isUpper={true}
+      textType="body"
     >
-      Hello, world!
-    </span>
+      <span
+        className="cWksYM"
+        data-component-type="text"
+      >
+        Hello, world!
+      </span>
+    </StyledComponent>
   </styled.span>
 </Text>
 `;

@@ -1,32 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<CurrencyText /> should render the Currency Text 1`] = `
-.c0 {
-  margin-right: 8px;
-}
-
-.c1 {
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #424F5C;
-  font-weight: 600;
-}
-
-.c2 {
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #424F5C;
-  font-weight: 400;
-}
-
 <CurrencyText
   decimalPlace={2}
   flexAlign={false}
@@ -38,86 +12,246 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
   <styled.span
     flexAlign={false}
   >
-    <span
-      className=""
+    <StyledComponent
+      flexAlign={false}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-dnqmqq",
+            "isStatic": false,
+            "lastClassName": "jhXmei",
+            "rules": Array [
+              "
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-dnqmqq",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      <Styled(Text)
-        type="body"
-        weight="heavy"
+      <span
+        className="jhXmei"
       >
-        <Text
-          className="c0"
-          isInline={true}
-          tag="span"
+        <Styled(Text)
           type="body"
           weight="heavy"
         >
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-htoDjs",
+                  "isStatic": true,
+                  "lastClassName": "jYtsma",
+                  "rules": Array [
+                    "
+  margin-right: 8px;
+",
+                  ],
+                },
+                "displayName": "Styled(Text)",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-htoDjs",
+                "target": [Function],
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+                Symbol(Symbol.hasInstance): [Function],
+              }
+            }
+            forwardedRef={null}
+            type="body"
+            weight="heavy"
+          >
+            <Text
+              className="jYtsma"
+              isInline={true}
+              tag="span"
+              type="body"
+              weight="heavy"
+            >
+              <styled.span
+                className="jYtsma"
+                data-component-type="text"
+                isInline={true}
+                textType="body"
+                weight="heavy"
+              >
+                <StyledComponent
+                  className="jYtsma"
+                  data-component-type="text"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-iwsKbI",
+                        "isStatic": false,
+                        "lastClassName": "dZpafq",
+                        "rules": Array [
+                          "
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+",
+                        ],
+                      },
+                      "displayName": "styled.span",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-iwsKbI",
+                      "target": "span",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  isInline={true}
+                  textType="body"
+                  weight="heavy"
+                >
+                  <span
+                    className="jYtsma dZpafq"
+                    data-component-type="text"
+                  >
+                    AUD
+                  </span>
+                </StyledComponent>
+              </styled.span>
+            </Text>
+          </StyledComponent>
+        </Styled(Text)>
+        <Text
+          isInline={true}
+          tag="span"
+          type="body"
+        >
           <styled.span
-            className="c0"
             data-component-type="text"
             isInline={true}
             textType="body"
-            weight="heavy"
           >
-            <span
-              className="c0 c1"
+            <StyledComponent
               data-component-type="text"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-gZMcBi",
+                    "isStatic": false,
+                    "lastClassName": "lfJmzq",
+                    "rules": Array [
+                      "
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-gZMcBi",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              isInline={true}
+              textType="body"
             >
-              AUD
-            </span>
+              <span
+                className="lfJmzq"
+                data-component-type="text"
+              >
+                1,000.50
+              </span>
+            </StyledComponent>
           </styled.span>
         </Text>
-      </Styled(Text)>
-      <Text
-        isInline={true}
-        tag="span"
-        type="body"
-      >
-        <styled.span
-          data-component-type="text"
-          isInline={true}
-          textType="body"
-        >
-          <span
-            className="c2"
-            data-component-type="text"
-          >
-            1,000.50
-          </span>
-        </styled.span>
-      </Text>
-    </span>
+      </span>
+    </StyledComponent>
   </styled.span>
 </CurrencyText>
 `;
 
 exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = `
-.c0 {
-  margin-right: 8px;
-}
-
-.c1 {
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #424F5C;
-  font-weight: 600;
-}
-
-.c2 {
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #424F5C;
-  font-weight: 400;
-}
-
 <CurrencyText
   decimalPlace={0}
   flexAlign={false}
@@ -129,97 +263,246 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
   <styled.span
     flexAlign={false}
   >
-    <span
-      className=""
+    <StyledComponent
+      flexAlign={false}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-dnqmqq",
+            "isStatic": false,
+            "lastClassName": "jhXmei",
+            "rules": Array [
+              "
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-dnqmqq",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      <Styled(Text)
-        type="body"
-        weight="heavy"
+      <span
+        className="jhXmei"
       >
-        <Text
-          className="c0"
-          isInline={true}
-          tag="span"
+        <Styled(Text)
           type="body"
           weight="heavy"
         >
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-htoDjs",
+                  "isStatic": true,
+                  "lastClassName": "jYtsma",
+                  "rules": Array [
+                    "
+  margin-right: 8px;
+",
+                  ],
+                },
+                "displayName": "Styled(Text)",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-htoDjs",
+                "target": [Function],
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+                Symbol(Symbol.hasInstance): [Function],
+              }
+            }
+            forwardedRef={null}
+            type="body"
+            weight="heavy"
+          >
+            <Text
+              className="jYtsma"
+              isInline={true}
+              tag="span"
+              type="body"
+              weight="heavy"
+            >
+              <styled.span
+                className="jYtsma"
+                data-component-type="text"
+                isInline={true}
+                textType="body"
+                weight="heavy"
+              >
+                <StyledComponent
+                  className="jYtsma"
+                  data-component-type="text"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-kpOJdX",
+                        "isStatic": false,
+                        "lastClassName": "ckOReH",
+                        "rules": Array [
+                          "
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+",
+                        ],
+                      },
+                      "displayName": "styled.span",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-kpOJdX",
+                      "target": "span",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  isInline={true}
+                  textType="body"
+                  weight="heavy"
+                >
+                  <span
+                    className="jYtsma ckOReH"
+                    data-component-type="text"
+                  >
+                    AUD
+                  </span>
+                </StyledComponent>
+              </styled.span>
+            </Text>
+          </StyledComponent>
+        </Styled(Text)>
+        <Text
+          isInline={true}
+          tag="span"
+          type="body"
+        >
           <styled.span
-            className="c0"
             data-component-type="text"
             isInline={true}
             textType="body"
-            weight="heavy"
           >
-            <span
-              className="c0 c1"
+            <StyledComponent
               data-component-type="text"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-dxgOiQ",
+                    "isStatic": false,
+                    "lastClassName": "gReTBS",
+                    "rules": Array [
+                      "
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-dxgOiQ",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              isInline={true}
+              textType="body"
             >
-              AUD
-            </span>
+              <span
+                className="gReTBS"
+                data-component-type="text"
+              >
+                0
+              </span>
+            </StyledComponent>
           </styled.span>
         </Text>
-      </Styled(Text)>
-      <Text
-        isInline={true}
-        tag="span"
-        type="body"
-      >
-        <styled.span
-          data-component-type="text"
-          isInline={true}
-          textType="body"
-        >
-          <span
-            className="c2"
-            data-component-type="text"
-          >
-            0
-          </span>
-        </styled.span>
-      </Text>
-    </span>
+      </span>
+    </StyledComponent>
   </styled.span>
 </CurrencyText>
 `;
 
 exports[`<CurrencyText /> should render the Currency Text with a center flex align 1`] = `
-.c1 {
-  margin-right: 8px;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c2 {
-  font-size: 18px;
-  line-height: 24px;
-  -webkit-letter-spacing: -.02em;
-  -moz-letter-spacing: -.02em;
-  -ms-letter-spacing: -.02em;
-  letter-spacing: -.02em;
-  color: #424F5C;
-  font-weight: 600;
-}
-
-.c3 {
-  font-size: 12px;
-  line-height: 18px;
-  -webkit-letter-spacing: .02em;
-  -moz-letter-spacing: .02em;
-  -ms-letter-spacing: .02em;
-  letter-spacing: .02em;
-  color: #262D33;
-  font-weight: 400;
-}
-
 <CurrencyText
   decimalPlace={0}
   flexAlign={true}
@@ -231,86 +514,246 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
   <styled.span
     flexAlign={true}
   >
-    <span
-      className="c0"
+    <StyledComponent
+      flexAlign={true}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-dnqmqq",
+            "isStatic": false,
+            "lastClassName": "fsaikI",
+            "rules": Array [
+              "
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-dnqmqq",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      <Styled(Text)
-        type="heading"
-        weight="heavy"
+      <span
+        className="fsaikI"
       >
-        <Text
-          className="c1"
-          isInline={true}
-          tag="span"
+        <Styled(Text)
           type="heading"
           weight="heavy"
         >
-          <styled.span
-            className="c1"
-            data-component-type="text"
-            isInline={true}
-            textType="heading"
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-htoDjs",
+                  "isStatic": true,
+                  "lastClassName": "jYtsma",
+                  "rules": Array [
+                    "
+  margin-right: 8px;
+",
+                  ],
+                },
+                "displayName": "Styled(Text)",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-htoDjs",
+                "target": [Function],
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+                Symbol(Symbol.hasInstance): [Function],
+              }
+            }
+            forwardedRef={null}
+            type="heading"
             weight="heavy"
           >
-            <span
-              className="c1 c2"
-              data-component-type="text"
+            <Text
+              className="jYtsma"
+              isInline={true}
+              tag="span"
+              type="heading"
+              weight="heavy"
             >
-              AUD
-            </span>
+              <styled.span
+                className="jYtsma"
+                data-component-type="text"
+                isInline={true}
+                textType="heading"
+                weight="heavy"
+              >
+                <StyledComponent
+                  className="jYtsma"
+                  data-component-type="text"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-kgoBCf",
+                        "isStatic": false,
+                        "lastClassName": "kaSPFl",
+                        "rules": Array [
+                          "
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+",
+                        ],
+                      },
+                      "displayName": "styled.span",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-kgoBCf",
+                      "target": "span",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  isInline={true}
+                  textType="heading"
+                  weight="heavy"
+                >
+                  <span
+                    className="jYtsma kaSPFl"
+                    data-component-type="text"
+                  >
+                    AUD
+                  </span>
+                </StyledComponent>
+              </styled.span>
+            </Text>
+          </StyledComponent>
+        </Styled(Text)>
+        <Text
+          isInline={true}
+          tag="span"
+          type="xsmall"
+        >
+          <styled.span
+            data-component-type="text"
+            isInline={true}
+            textType="xsmall"
+          >
+            <StyledComponent
+              data-component-type="text"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-kGXeez",
+                    "isStatic": false,
+                    "lastClassName": "hPKcfE",
+                    "rules": Array [
+                      "
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-kGXeez",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              isInline={true}
+              textType="xsmall"
+            >
+              <span
+                className="hPKcfE"
+                data-component-type="text"
+              >
+                1,000
+              </span>
+            </StyledComponent>
           </styled.span>
         </Text>
-      </Styled(Text)>
-      <Text
-        isInline={true}
-        tag="span"
-        type="xsmall"
-      >
-        <styled.span
-          data-component-type="text"
-          isInline={true}
-          textType="xsmall"
-        >
-          <span
-            className="c3"
-            data-component-type="text"
-          >
-            1,000
-          </span>
-        </styled.span>
-      </Text>
-    </span>
+      </span>
+    </StyledComponent>
   </styled.span>
 </CurrencyText>
 `;
 
 exports[`<CurrencyText /> should render the Currency Text with a red money color 1`] = `
-.c0 {
-  margin-right: 8px;
-}
-
-.c1 {
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #424F5C;
-  font-weight: 600;
-}
-
-.c2 {
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #FFD2CC;
-  font-weight: 400;
-}
-
 <CurrencyText
   decimalPlace={0}
   flexAlign={false}
@@ -323,89 +766,250 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
   <styled.span
     flexAlign={false}
   >
-    <span
-      className=""
+    <StyledComponent
+      flexAlign={false}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-dnqmqq",
+            "isStatic": false,
+            "lastClassName": "jhXmei",
+            "rules": Array [
+              "
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-dnqmqq",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      <Styled(Text)
-        type="body"
-        weight="heavy"
+      <span
+        className="jhXmei"
       >
-        <Text
-          className="c0"
-          isInline={true}
-          tag="span"
+        <Styled(Text)
           type="body"
           weight="heavy"
         >
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-htoDjs",
+                  "isStatic": true,
+                  "lastClassName": "jYtsma",
+                  "rules": Array [
+                    "
+  margin-right: 8px;
+",
+                  ],
+                },
+                "displayName": "Styled(Text)",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-htoDjs",
+                "target": [Function],
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+                Symbol(Symbol.hasInstance): [Function],
+              }
+            }
+            forwardedRef={null}
+            type="body"
+            weight="heavy"
+          >
+            <Text
+              className="jYtsma"
+              isInline={true}
+              tag="span"
+              type="body"
+              weight="heavy"
+            >
+              <styled.span
+                className="jYtsma"
+                data-component-type="text"
+                isInline={true}
+                textType="body"
+                weight="heavy"
+              >
+                <StyledComponent
+                  className="jYtsma"
+                  data-component-type="text"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-jTzLTM",
+                        "isStatic": false,
+                        "lastClassName": "fMrGYK",
+                        "rules": Array [
+                          "
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+",
+                        ],
+                      },
+                      "displayName": "styled.span",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-jTzLTM",
+                      "target": "span",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  isInline={true}
+                  textType="body"
+                  weight="heavy"
+                >
+                  <span
+                    className="jYtsma fMrGYK"
+                    data-component-type="text"
+                  >
+                    AUD
+                  </span>
+                </StyledComponent>
+              </styled.span>
+            </Text>
+          </StyledComponent>
+        </Styled(Text)>
+        <Text
+          color="#FFD2CC"
+          isInline={true}
+          tag="span"
+          type="body"
+        >
           <styled.span
-            className="c0"
+            color="#FFD2CC"
             data-component-type="text"
             isInline={true}
             textType="body"
-            weight="heavy"
           >
-            <span
-              className="c0 c1"
+            <StyledComponent
+              color="#FFD2CC"
               data-component-type="text"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-fjdhpX",
+                    "isStatic": false,
+                    "lastClassName": "gqCvSV",
+                    "rules": Array [
+                      "
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-fjdhpX",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              isInline={true}
+              textType="body"
             >
-              AUD
-            </span>
+              <span
+                className="gqCvSV"
+                color="#FFD2CC"
+                data-component-type="text"
+              >
+                1,000
+              </span>
+            </StyledComponent>
           </styled.span>
         </Text>
-      </Styled(Text)>
-      <Text
-        color="#FFD2CC"
-        isInline={true}
-        tag="span"
-        type="body"
-      >
-        <styled.span
-          color="#FFD2CC"
-          data-component-type="text"
-          isInline={true}
-          textType="body"
-        >
-          <span
-            className="c2"
-            color="#FFD2CC"
-            data-component-type="text"
-          >
-            1,000
-          </span>
-        </styled.span>
-      </Text>
-    </span>
+      </span>
+    </StyledComponent>
   </styled.span>
 </CurrencyText>
 `;
 
 exports[`<CurrencyText /> should render the Currency Text with a red prefix color 1`] = `
-.c0 {
-  margin-right: 8px;
-}
-
-.c1 {
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #FFD2CC;
-  font-weight: 600;
-}
-
-.c2 {
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #424F5C;
-  font-weight: 400;
-}
-
 <CurrencyText
   decimalPlace={0}
   flexAlign={false}
@@ -418,90 +1022,252 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
   <styled.span
     flexAlign={false}
   >
-    <span
-      className=""
+    <StyledComponent
+      flexAlign={false}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-dnqmqq",
+            "isStatic": false,
+            "lastClassName": "jhXmei",
+            "rules": Array [
+              "
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-dnqmqq",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      <Styled(Text)
-        color="#FFD2CC"
-        type="body"
-        weight="heavy"
+      <span
+        className="jhXmei"
       >
-        <Text
-          className="c0"
+        <Styled(Text)
           color="#FFD2CC"
-          isInline={true}
-          tag="span"
           type="body"
           weight="heavy"
         >
-          <styled.span
-            className="c0"
+          <StyledComponent
             color="#FFD2CC"
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-htoDjs",
+                  "isStatic": true,
+                  "lastClassName": "jYtsma",
+                  "rules": Array [
+                    "
+  margin-right: 8px;
+",
+                  ],
+                },
+                "displayName": "Styled(Text)",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-htoDjs",
+                "target": [Function],
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+                Symbol(Symbol.hasInstance): [Function],
+              }
+            }
+            forwardedRef={null}
+            type="body"
+            weight="heavy"
+          >
+            <Text
+              className="jYtsma"
+              color="#FFD2CC"
+              isInline={true}
+              tag="span"
+              type="body"
+              weight="heavy"
+            >
+              <styled.span
+                className="jYtsma"
+                color="#FFD2CC"
+                data-component-type="text"
+                isInline={true}
+                textType="body"
+                weight="heavy"
+              >
+                <StyledComponent
+                  className="jYtsma"
+                  color="#FFD2CC"
+                  data-component-type="text"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-gqjmRU",
+                        "isStatic": false,
+                        "lastClassName": "bCWfKz",
+                        "rules": Array [
+                          "
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+",
+                        ],
+                      },
+                      "displayName": "styled.span",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-gqjmRU",
+                      "target": "span",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  isInline={true}
+                  textType="body"
+                  weight="heavy"
+                >
+                  <span
+                    className="jYtsma bCWfKz"
+                    color="#FFD2CC"
+                    data-component-type="text"
+                  >
+                    AUD
+                  </span>
+                </StyledComponent>
+              </styled.span>
+            </Text>
+          </StyledComponent>
+        </Styled(Text)>
+        <Text
+          isInline={true}
+          tag="span"
+          type="body"
+        >
+          <styled.span
             data-component-type="text"
             isInline={true}
             textType="body"
-            weight="heavy"
           >
-            <span
-              className="c0 c1"
-              color="#FFD2CC"
+            <StyledComponent
               data-component-type="text"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-VigVT",
+                    "isStatic": false,
+                    "lastClassName": "cnqWBl",
+                    "rules": Array [
+                      "
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-VigVT",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              isInline={true}
+              textType="body"
             >
-              AUD
-            </span>
+              <span
+                className="cnqWBl"
+                data-component-type="text"
+              >
+                1,000
+              </span>
+            </StyledComponent>
           </styled.span>
         </Text>
-      </Styled(Text)>
-      <Text
-        isInline={true}
-        tag="span"
-        type="body"
-      >
-        <styled.span
-          data-component-type="text"
-          isInline={true}
-          textType="body"
-        >
-          <span
-            className="c2"
-            data-component-type="text"
-          >
-            1,000
-          </span>
-        </styled.span>
-      </Text>
-    </span>
+      </span>
+    </StyledComponent>
   </styled.span>
 </CurrencyText>
 `;
 
 exports[`<CurrencyText /> should render the Currency Text with an extra small money style 1`] = `
-.c0 {
-  margin-right: 8px;
-}
-
-.c1 {
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #424F5C;
-  font-weight: 600;
-}
-
-.c2 {
-  font-size: 12px;
-  line-height: 18px;
-  -webkit-letter-spacing: .02em;
-  -moz-letter-spacing: .02em;
-  -ms-letter-spacing: .02em;
-  letter-spacing: .02em;
-  color: #262D33;
-  font-weight: 400;
-}
-
 <CurrencyText
   decimalPlace={0}
   flexAlign={false}
@@ -513,86 +1279,246 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
   <styled.span
     flexAlign={false}
   >
-    <span
-      className=""
+    <StyledComponent
+      flexAlign={false}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-dnqmqq",
+            "isStatic": false,
+            "lastClassName": "jhXmei",
+            "rules": Array [
+              "
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-dnqmqq",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      <Styled(Text)
-        type="body"
-        weight="heavy"
+      <span
+        className="jhXmei"
       >
-        <Text
-          className="c0"
-          isInline={true}
-          tag="span"
+        <Styled(Text)
           type="body"
           weight="heavy"
         >
-          <styled.span
-            className="c0"
-            data-component-type="text"
-            isInline={true}
-            textType="body"
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-htoDjs",
+                  "isStatic": true,
+                  "lastClassName": "jYtsma",
+                  "rules": Array [
+                    "
+  margin-right: 8px;
+",
+                  ],
+                },
+                "displayName": "Styled(Text)",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-htoDjs",
+                "target": [Function],
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+                Symbol(Symbol.hasInstance): [Function],
+              }
+            }
+            forwardedRef={null}
+            type="body"
             weight="heavy"
           >
-            <span
-              className="c0 c1"
-              data-component-type="text"
+            <Text
+              className="jYtsma"
+              isInline={true}
+              tag="span"
+              type="body"
+              weight="heavy"
             >
-              AUD
-            </span>
+              <styled.span
+                className="jYtsma"
+                data-component-type="text"
+                isInline={true}
+                textType="body"
+                weight="heavy"
+              >
+                <StyledComponent
+                  className="jYtsma"
+                  data-component-type="text"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-kAzzGY",
+                        "isStatic": false,
+                        "lastClassName": "cjLXWi",
+                        "rules": Array [
+                          "
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+",
+                        ],
+                      },
+                      "displayName": "styled.span",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-kAzzGY",
+                      "target": "span",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  isInline={true}
+                  textType="body"
+                  weight="heavy"
+                >
+                  <span
+                    className="jYtsma cjLXWi"
+                    data-component-type="text"
+                  >
+                    AUD
+                  </span>
+                </StyledComponent>
+              </styled.span>
+            </Text>
+          </StyledComponent>
+        </Styled(Text)>
+        <Text
+          isInline={true}
+          tag="span"
+          type="xsmall"
+        >
+          <styled.span
+            data-component-type="text"
+            isInline={true}
+            textType="xsmall"
+          >
+            <StyledComponent
+              data-component-type="text"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-chPdSV",
+                    "isStatic": false,
+                    "lastClassName": "jNESTR",
+                    "rules": Array [
+                      "
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-chPdSV",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              isInline={true}
+              textType="xsmall"
+            >
+              <span
+                className="jNESTR"
+                data-component-type="text"
+              >
+                1,000
+              </span>
+            </StyledComponent>
           </styled.span>
         </Text>
-      </Styled(Text)>
-      <Text
-        isInline={true}
-        tag="span"
-        type="xsmall"
-      >
-        <styled.span
-          data-component-type="text"
-          isInline={true}
-          textType="xsmall"
-        >
-          <span
-            className="c2"
-            data-component-type="text"
-          >
-            1,000
-          </span>
-        </styled.span>
-      </Text>
-    </span>
+      </span>
+    </StyledComponent>
   </styled.span>
 </CurrencyText>
 `;
 
 exports[`<CurrencyText /> should render the Currency Text with an extra small prefix style 1`] = `
-.c0 {
-  margin-right: 8px;
-}
-
-.c1 {
-  font-size: 12px;
-  line-height: 18px;
-  -webkit-letter-spacing: .02em;
-  -moz-letter-spacing: .02em;
-  -ms-letter-spacing: .02em;
-  letter-spacing: .02em;
-  color: #262D33;
-  font-weight: 600;
-}
-
-.c2 {
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #424F5C;
-  font-weight: 400;
-}
-
 <CurrencyText
   decimalPlace={0}
   flexAlign={false}
@@ -604,55 +1530,241 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
   <styled.span
     flexAlign={false}
   >
-    <span
-      className=""
+    <StyledComponent
+      flexAlign={false}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-dnqmqq",
+            "isStatic": false,
+            "lastClassName": "jhXmei",
+            "rules": Array [
+              "
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-dnqmqq",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      <Styled(Text)
-        type="xsmall"
-        weight="heavy"
+      <span
+        className="jhXmei"
       >
-        <Text
-          className="c0"
-          isInline={true}
-          tag="span"
+        <Styled(Text)
           type="xsmall"
           weight="heavy"
         >
-          <styled.span
-            className="c0"
-            data-component-type="text"
-            isInline={true}
-            textType="xsmall"
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-htoDjs",
+                  "isStatic": true,
+                  "lastClassName": "jYtsma",
+                  "rules": Array [
+                    "
+  margin-right: 8px;
+",
+                  ],
+                },
+                "displayName": "Styled(Text)",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-htoDjs",
+                "target": [Function],
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+                Symbol(Symbol.hasInstance): [Function],
+              }
+            }
+            forwardedRef={null}
+            type="xsmall"
             weight="heavy"
           >
-            <span
-              className="c0 c1"
-              data-component-type="text"
+            <Text
+              className="jYtsma"
+              isInline={true}
+              tag="span"
+              type="xsmall"
+              weight="heavy"
             >
-              AUD
-            </span>
+              <styled.span
+                className="jYtsma"
+                data-component-type="text"
+                isInline={true}
+                textType="xsmall"
+                weight="heavy"
+              >
+                <StyledComponent
+                  className="jYtsma"
+                  data-component-type="text"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-jzJRlG",
+                        "isStatic": false,
+                        "lastClassName": "jszpoG",
+                        "rules": Array [
+                          "
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+",
+                        ],
+                      },
+                      "displayName": "styled.span",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-jzJRlG",
+                      "target": "span",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  isInline={true}
+                  textType="xsmall"
+                  weight="heavy"
+                >
+                  <span
+                    className="jYtsma jszpoG"
+                    data-component-type="text"
+                  >
+                    AUD
+                  </span>
+                </StyledComponent>
+              </styled.span>
+            </Text>
+          </StyledComponent>
+        </Styled(Text)>
+        <Text
+          isInline={true}
+          tag="span"
+          type="body"
+        >
+          <styled.span
+            data-component-type="text"
+            isInline={true}
+            textType="body"
+          >
+            <StyledComponent
+              data-component-type="text"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-cSHVUG",
+                    "isStatic": false,
+                    "lastClassName": "hAeNFo",
+                    "rules": Array [
+                      "
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-cSHVUG",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              isInline={true}
+              textType="body"
+            >
+              <span
+                className="hAeNFo"
+                data-component-type="text"
+              >
+                1,000
+              </span>
+            </StyledComponent>
           </styled.span>
         </Text>
-      </Styled(Text)>
-      <Text
-        isInline={true}
-        tag="span"
-        type="body"
-      >
-        <styled.span
-          data-component-type="text"
-          isInline={true}
-          textType="body"
-        >
-          <span
-            className="c2"
-            data-component-type="text"
-          >
-            1,000
-          </span>
-        </styled.span>
-      </Text>
-    </span>
+      </span>
+    </StyledComponent>
   </styled.span>
 </CurrencyText>
 `;

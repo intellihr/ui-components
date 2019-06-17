@@ -1,150 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Modal /> should render a hidden modal 1`] = `
-.c0 .modal-overlay {
-  background-color: rgba(38,45,51,0.45);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  overflow-y: auto;
-  padding: 1rem 0;
-  position: fixed;
-  -webkit-overflow-scrolling: touch;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-}
-
-.c0 .modal {
-  background-color: #FFFFFF;
-  border: 1px solid #C5CED6;
-  border-radius: 4px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  height: auto;
-  margin: auto;
-  outline: none;
-  overflow-y: visible;
-  padding: 1.5rem;
-  position: relative;
-}
-
-.c0 .modal.subcomponent-modal-style {
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c0 .modal.subcomponent-modal-style .modal-close-button {
-  right: 29px;
-  top: 33px;
-  line-height: 14px;
-}
-
-.c0 .modal .modal-close-button {
-  cursor: pointer;
-  position: absolute;
-  right: 1rem;
-  top: 0.5rem;
-  color: #262D33;
-  font-size: 2em;
-  line-height: 1;
-}
-
-.c0 .modal.modal-size-xlarge {
-  min-width: 1380px;
-  width: 1380px;
-}
-
-.c0 .modal.modal-size-large {
-  min-width: 974px;
-  width: 974px;
-}
-
-.c0 .modal.modal-size-medium {
-  min-width: 580px;
-  width: 580px;
-}
-
-@media only screen and (max-width:640px) {
-  .c0 .modal-overlay {
-    background-color: #FFFFFF;
-    height: 100%;
-    min-height: 100vh;
-    padding: 0;
-    left: 0;
-    margin: 0;
-    top: 0;
-  }
-}
-
-@media only screen and (max-width:640px) {
-  .c0 .modal {
-    border: 0;
-    border-radius: 0;
-    max-width: none;
-    min-height: 100vh;
-    position: initial;
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
-    padding-bottom: 100px;
-  }
-}
-
-@media only screen and (max-width:640px) {
-  .c0 .modal .modal-close-button {
-    position: fixed;
-    will-change: scroll-position;
-  }
-}
-
-@media only screen and (max-width:1440px) {
-  .c0 .modal.modal-size-xlarge {
-    min-width: 0;
-    width: 90%;
-  }
-}
-
-@media only screen and (max-width:640px) {
-  .c0 .modal.modal-size-xlarge {
-    min-width: 0;
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width:1034px) {
-  .c0 .modal.modal-size-large {
-    min-width: 0;
-    width: 90%;
-  }
-}
-
-@media only screen and (max-width:640px) {
-  .c0 .modal.modal-size-large {
-    min-width: 0;
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width:640px) {
-  .c0 .modal.modal-size-medium {
-    min-width: 0;
-    width: 100%;
-  }
-}
-
 <Modal
   isOpen={false}
   offsetZIndex={0}
@@ -168,9 +24,195 @@ exports[`<Modal /> should render a hidden modal 1`] = `
       }
     }
   >
-    <ReactModalAdapter
+    <StyledComponent
       ariaHideApp={false}
-      className="modal modal-size-medium c0"
+      className="modal modal-size-medium"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": true,
+            "lastClassName": "fPmWbg",
+            "rules": Array [
+              "
+  .modal-overlay {
+    background-color: ",
+              "rgba(38, 45, 51, 0.45)",
+              ";
+
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 1rem 0;
+    position: fixed;
+    -webkit-overflow-scrolling: touch;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    @media only screen and (max-width: ",
+              "640",
+              "px) {
+      background-color: ",
+              "#FFFFFF",
+              ";
+      height: 100%;
+      min-height: 100vh;
+      padding: 0;
+
+      left: 0;
+      margin: 0;
+      top: 0;
+    }
+  }
+
+  .modal {
+    background-color: ",
+              "#FFFFFF",
+              ";
+    border: 1px solid ",
+              "#C5CED6",
+              ";
+    border-radius: ",
+              "4",
+              "px;
+    flex-shrink: 0;
+    height: auto;
+    margin: auto;
+    outline: none;
+    overflow-y: visible;
+    padding: 1.5rem;
+    position: relative;
+
+    &.subcomponent-modal-style {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+
+      .modal-close-button {
+        right: 29px;
+        top: 33px;
+        line-height: 14px;
+      }
+    }
+
+    @media only screen and (max-width: ",
+              "640",
+              "px) {
+      border: 0;
+      border-radius: 0;
+
+      max-width: none;
+      min-height: 100vh;
+      position: initial;
+      transform: none;
+
+      // Add a bottom padding in mobile to counteract ios bottom bar
+      padding-bottom: 100px;
+    }
+
+    .modal-close-button {
+      cursor: pointer;
+
+      position: absolute;
+      right: 1rem;
+      top: 0.5rem;
+
+      color: ",
+              "#262D33",
+              ";
+      font-size: 2em;
+      line-height: 1;
+
+      @media only screen and (max-width: ",
+              "640",
+              "px) {
+        position: fixed;
+        will-change: scroll-position;
+      }
+    }
+
+    &.modal-size-xlarge {
+      min-width: ",
+              "1380",
+              "px;
+      width: ",
+              "1380",
+              "px;
+
+      @media only screen and (max-width: ",
+              "1440",
+              "px) {
+        min-width: 0;
+        width: 90%;
+      }
+
+      @media only screen and (max-width: ",
+              "640",
+              "px) {
+        min-width: 0;
+        width: 100%;
+      }
+    }
+
+    &.modal-size-large {
+      min-width: ",
+              "974",
+              "px;
+      width: ",
+              "974",
+              "px;
+
+      @media only screen and (max-width: ",
+              "1034",
+              "px) {
+        min-width: 0;
+        width: 90%;
+      }
+
+      @media only screen and (max-width: ",
+              "640",
+              "px) {
+        min-width: 0;
+        width: 100%;
+      }
+    }
+
+    &.modal-size-medium {
+      min-width: ",
+              "580",
+              "px;
+      width: ",
+              "580",
+              "px;
+
+      @media only screen and (max-width: ",
+              "640",
+              "px) {
+        min-width: 0;
+        width: 100%;
+      }
+    }
+  }
+",
+            ],
+          },
+          "displayName": "Styled(ReactModalAdapter)",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": [Function],
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+          Symbol(Symbol.hasInstance): [Function],
+        }
+      }
+      forwardedRef={null}
       isOpen={false}
       overlayClassName="modal-overlay"
       style={
@@ -184,20 +226,11 @@ exports[`<Modal /> should render a hidden modal 1`] = `
         }
       }
     >
-      <Modal
+      <ReactModalAdapter
         ariaHideApp={false}
-        bodyOpenClassName="ReactModal__Body--open"
-        className="modal modal-size-medium c0__content"
-        closeTimeoutMS={0}
+        className="modal modal-size-medium fPmWbg"
         isOpen={false}
         overlayClassName="modal-overlay"
-        overlayRef={[Function]}
-        parentSelector={[Function]}
-        portalClassName="modal modal-size-medium sc-bdVaJa c0"
-        shouldCloseOnEsc={true}
-        shouldCloseOnOverlayClick={true}
-        shouldFocusAfterRender={true}
-        shouldReturnFocusAfterClose={true}
         style={
           Object {
             "content": Object {
@@ -209,67 +242,93 @@ exports[`<Modal /> should render a hidden modal 1`] = `
           }
         }
       >
-        <Portal
-          containerInfo={
-            <div
-              class="modal modal-size-medium c0"
-            />
+        <Modal
+          ariaHideApp={false}
+          bodyOpenClassName="ReactModal__Body--open"
+          className="modal modal-size-medium fPmWbg__content"
+          closeTimeoutMS={0}
+          isOpen={false}
+          overlayClassName="modal-overlay"
+          overlayRef={[Function]}
+          parentSelector={[Function]}
+          portalClassName="modal modal-size-medium sc-bdVaJa fPmWbg"
+          shouldCloseOnEsc={true}
+          shouldCloseOnOverlayClick={true}
+          shouldFocusAfterRender={true}
+          shouldReturnFocusAfterClose={true}
+          style={
+            Object {
+              "content": Object {
+                "zIndex": 1001,
+              },
+              "overlay": Object {
+                "zIndex": 1000,
+              },
+            }
           }
         >
-          <ModalPortal
-            ariaHideApp={false}
-            bodyOpenClassName="ReactModal__Body--open"
-            className="modal modal-size-medium c0__content"
-            closeTimeoutMS={0}
-            defaultStyles={
-              Object {
-                "content": Object {
-                  "WebkitOverflowScrolling": "touch",
-                  "background": "#fff",
-                  "border": "1px solid #ccc",
-                  "borderRadius": "4px",
-                  "bottom": "40px",
-                  "left": "40px",
-                  "outline": "none",
-                  "overflow": "auto",
-                  "padding": "20px",
-                  "position": "absolute",
-                  "right": "40px",
-                  "top": "40px",
-                },
-                "overlay": Object {
-                  "backgroundColor": "rgba(255, 255, 255, 0.75)",
-                  "bottom": 0,
-                  "left": 0,
-                  "position": "fixed",
-                  "right": 0,
-                  "top": 0,
-                },
-              }
+          <Portal
+            containerInfo={
+              <div
+                class="modal modal-size-medium fPmWbg"
+              />
             }
-            isOpen={false}
-            overlayClassName="modal-overlay"
-            overlayRef={[Function]}
-            parentSelector={[Function]}
-            portalClassName="modal modal-size-medium sc-bdVaJa c0"
-            shouldCloseOnEsc={true}
-            shouldCloseOnOverlayClick={true}
-            shouldFocusAfterRender={true}
-            shouldReturnFocusAfterClose={true}
-            style={
-              Object {
-                "content": Object {
-                  "zIndex": 1001,
-                },
-                "overlay": Object {
-                  "zIndex": 1000,
-                },
+          >
+            <ModalPortal
+              ariaHideApp={false}
+              bodyOpenClassName="ReactModal__Body--open"
+              className="modal modal-size-medium fPmWbg__content"
+              closeTimeoutMS={0}
+              defaultStyles={
+                Object {
+                  "content": Object {
+                    "WebkitOverflowScrolling": "touch",
+                    "background": "#fff",
+                    "border": "1px solid #ccc",
+                    "borderRadius": "4px",
+                    "bottom": "40px",
+                    "left": "40px",
+                    "outline": "none",
+                    "overflow": "auto",
+                    "padding": "20px",
+                    "position": "absolute",
+                    "right": "40px",
+                    "top": "40px",
+                  },
+                  "overlay": Object {
+                    "backgroundColor": "rgba(255, 255, 255, 0.75)",
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "fixed",
+                    "right": 0,
+                    "top": 0,
+                  },
+                }
               }
-            }
-          />
-        </Portal>
-      </Modal>
-    </ReactModalAdapter>
+              isOpen={false}
+              overlayClassName="modal-overlay"
+              overlayRef={[Function]}
+              parentSelector={[Function]}
+              portalClassName="modal modal-size-medium sc-bdVaJa fPmWbg"
+              shouldCloseOnEsc={true}
+              shouldCloseOnOverlayClick={true}
+              shouldFocusAfterRender={true}
+              shouldReturnFocusAfterClose={true}
+              style={
+                Object {
+                  "content": Object {
+                    "zIndex": 1001,
+                  },
+                  "overlay": Object {
+                    "zIndex": 1000,
+                  },
+                }
+              }
+            />
+          </Portal>
+        </Modal>
+      </ReactModalAdapter>
+    </StyledComponent>
   </Styled(ReactModalAdapter)>
 </Modal>
 `;
