@@ -13,7 +13,7 @@ exports[`<BlockSkeleton /> should render a block skeleton 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "cgbmPR",
+            "lastClassName": "iGZNSN",
             "rules": Array [
               "
   border-radius: 4px;
@@ -43,7 +43,7 @@ exports[`<BlockSkeleton /> should render a block skeleton 1`] = `
       forwardedRef={null}
     >
       <span
-        className="cgbmPR"
+        className="iGZNSN"
       />
     </StyledComponent>
   </styled.span>
@@ -68,7 +68,7 @@ exports[`<BlockSkeleton /> should render a block skeleton with set width and hei
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "bRczKh",
+            "lastClassName": "jLAxRj",
             "rules": Array [
               "
   border-radius: 4px;
@@ -100,7 +100,7 @@ exports[`<BlockSkeleton /> should render a block skeleton with set width and hei
       width="400px"
     >
       <span
-        className="bRczKh"
+        className="jLAxRj"
         height="200px"
         width="400px"
       />

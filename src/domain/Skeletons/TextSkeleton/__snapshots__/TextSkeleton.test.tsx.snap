@@ -16,7 +16,7 @@ exports[`<TextSkeleton /> should render a text skeleton 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "gqbyiJ",
+            "lastClassName": "kUTXSP",
             "rules": Array [
               "
   border-radius: 4px;
@@ -48,7 +48,7 @@ exports[`<TextSkeleton /> should render a text skeleton 1`] = `
       textType="body"
     >
       <span
-        className="gqbyiJ"
+        className="kUTXSP"
       >
         ‌
       </span>
@@ -73,7 +73,7 @@ exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "kmNkbV",
+            "lastClassName": "exyoyx",
             "rules": Array [
               "
   border-radius: 4px;
@@ -105,7 +105,7 @@ exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
       textType="display"
     >
       <span
-        className="kmNkbV"
+        className="exyoyx"
       >
         ‌
       </span>
@@ -132,7 +132,7 @@ exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "fGVnbx",
+            "lastClassName": "kKqXIj",
             "rules": Array [
               "
   border-radius: 4px;
@@ -165,7 +165,7 @@ exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
       width="250px"
     >
       <span
-        className="fGVnbx"
+        className="kKqXIj"
         width="250px"
       >
         ‌
