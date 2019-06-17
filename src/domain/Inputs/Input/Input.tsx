@@ -59,12 +59,12 @@ interface IGenericInputProps {
   margins?: Props.IMargins
 }
 
-interface InputProps extends IGenericInputProps {
+interface IInputProps extends IGenericInputProps {
   /** Type of input to display */
   type: string
 }
 
-export class Input extends React.PureComponent<InputProps> {
+export class Input extends React.PureComponent<IInputProps> {
   get classNames (): string {
     const {
       className,
@@ -98,7 +98,7 @@ export class Input extends React.PureComponent<InputProps> {
     }
   }
 
-  public componentDidUpdate (prevProps: InputProps) {
+  public componentDidUpdate (prevProps: IInputProps) {
     const {
       icon,
       disabledPrefix
@@ -235,5 +235,5 @@ export class Input extends React.PureComponent<InputProps> {
 
 export {
   IGenericInputProps,
-  InputProps
+  IInputProps as InputProps
 }

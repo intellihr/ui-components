@@ -19,7 +19,7 @@ const animateProgressRule = css`
 function styleForSkeletons (margins?: Props.IMargins) {
   return (
     css`
-    animation: ${progress} .8s linear infinite alternate;
+    animation: ${animateProgressRule};
     backface-visibility: hidden;
     will-change: opacity;
     background-color: ${Variables.Color.n300};
