@@ -16,7 +16,7 @@ const animateProgressRule = css`
   ${progress} .8s linear infinite alternate;
 `
 
-function styleForSkeletons(margins?: Props.IMargins) {
+function styleForSkeletons (margins?: Props.IMargins) {
   return (
     css`
     animation: ${progress} .8s linear infinite alternate;
