@@ -8,7 +8,7 @@ export interface ITextWrapperProps {
   color?: Variables.Color
   isInline?: boolean
   isUpper?: boolean
-  weight?: 'normal' | 'heavy'
+  weight?: 'normal' | 'heavy' | 'chonky'
   textType?: Props.TypographyType
   isTruncated?: boolean
   isItalic?: boolean
@@ -54,6 +54,10 @@ export const TextWrapper = styled.span`
         case 'heavy':
           return css`
             font-weight: ${Variables.FontWeight.fwHeavy};
+          `
+        case 'chonky':
+          return css`
+            font-weight: ${Variables.FontWeight.fwChonky};
           `
       }
     }
