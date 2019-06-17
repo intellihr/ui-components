@@ -63,7 +63,7 @@ class LegacyDataTable extends React.Component<IDataTableProps, IDataTableState> 
     tableId: 'datatable'
   }
 
-  constructor(props: IDataTableProps) {
+  constructor (props: IDataTableProps) {
     super(props)
 
     this.state = {
@@ -119,7 +119,7 @@ class LegacyDataTable extends React.Component<IDataTableProps, IDataTableState> 
     return false
   }
 
-  get filteredData(): any[] {
+  get filteredData (): any[] {
     const { data, showSearchFilter } = this.props
     const { searchFilter } = this.state
 
@@ -130,7 +130,7 @@ class LegacyDataTable extends React.Component<IDataTableProps, IDataTableState> 
     return filter(data, this.shouldFilterRow)
   }
 
-  get columns(): IDataTableColumn[] {
+  get columns (): IDataTableColumn[] {
     const { columns } = this.props
 
     return columns.map((column) => {
@@ -143,7 +143,7 @@ class LegacyDataTable extends React.Component<IDataTableProps, IDataTableState> 
     })
   }
 
-  public columnClassName(alignment: AlignmentOption | undefined): string | undefined {
+  public columnClassName (alignment: AlignmentOption | undefined): string | undefined {
     switch (alignment) {
       case Props.Position.Right:
         return 'content-right'
@@ -158,7 +158,7 @@ class LegacyDataTable extends React.Component<IDataTableProps, IDataTableState> 
     })
   }
 
-  get searchFilterComponent(): JSX.Element | undefined {
+  get searchFilterComponent (): JSX.Element | undefined {
     const {
       showSearchFilter,
       tableId
@@ -202,7 +202,7 @@ class LegacyDataTable extends React.Component<IDataTableProps, IDataTableState> 
     )
   }
 
-  get defaultReactTableProps(): Partial<TableProps> {
+  get defaultReactTableProps (): Partial<TableProps> {
     return {
       resizable: false,
       minRows: 0,
@@ -214,7 +214,7 @@ class LegacyDataTable extends React.Component<IDataTableProps, IDataTableState> 
     }
   }
 
-  get classNames(): string {
+  get classNames (): string {
     const {
       tableId,
       showVerticalLines
@@ -229,7 +229,7 @@ class LegacyDataTable extends React.Component<IDataTableProps, IDataTableState> 
     )
   }
 
-  public render(): JSX.Element {
+  public render (): JSX.Element {
     const {
       showPagination,
       defaultPageSize,
