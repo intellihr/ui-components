@@ -5,7 +5,7 @@ exports[`<TextSkeleton /> should render a text skeleton 1`] = `
   showSkeleton={true}
   type="body"
 >
-  <Styled(styled.span)
+  <styled.span
     textType="body"
   >
     <StyledComponent
@@ -14,33 +14,10 @@ exports[`<TextSkeleton /> should render a text skeleton 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
+            "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "jtnlvv",
+            "lastClassName": "fsJqtE",
             "rules": Array [
-              "
-  animation: ",
-              Keyframes {
-                "id": "sc-keyframes-jXsTbE",
-                "inject": [Function],
-                "name": "jXsTbE",
-                "rules": Array [
-                  "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                  "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                ],
-                "toString": [Function],
-              },
-              " .8s linear infinite alternate;
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-              "#E1E6EB",
-              ";
-  border: 1px solid ",
-              "#E1E6EB",
-              ";
-  display: inline-flex;
-",
               "
   border-radius: 4px;
   width: ",
@@ -48,19 +25,19 @@ exports[`<TextSkeleton /> should render a text skeleton 1`] = `
               ";
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-
   ",
               [Function],
-              "
+              ";
+  ",
+              [Function],
+              ";
 ",
             ],
           },
-          "displayName": "Styled(styled.span)",
-          "foldedComponentIds": Array [
-            "sc-bdVaJa",
-          ],
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
+          "styledComponentId": "sc-bdVaJa",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -71,12 +48,12 @@ exports[`<TextSkeleton /> should render a text skeleton 1`] = `
       textType="body"
     >
       <span
-        className="jtnlvv"
+        className="fsJqtE"
       >
         ‌
       </span>
     </StyledComponent>
-  </Styled(styled.span)>
+  </styled.span>
 </TextSkeleton>
 `;
 
@@ -85,7 +62,7 @@ exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
   showSkeleton={true}
   type="display"
 >
-  <Styled(styled.span)
+  <styled.span
     textType="display"
   >
     <StyledComponent
@@ -94,33 +71,10 @@ exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
+            "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "kCXKcy",
+            "lastClassName": "dcJPYZ",
             "rules": Array [
-              "
-  animation: ",
-              Keyframes {
-                "id": "sc-keyframes-jXsTbE",
-                "inject": [Function],
-                "name": "jXsTbE",
-                "rules": Array [
-                  "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                  "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                ],
-                "toString": [Function],
-              },
-              " .8s linear infinite alternate;
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-              "#E1E6EB",
-              ";
-  border: 1px solid ",
-              "#E1E6EB",
-              ";
-  display: inline-flex;
-",
               "
   border-radius: 4px;
   width: ",
@@ -128,19 +82,19 @@ exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
               ";
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-
   ",
               [Function],
-              "
+              ";
+  ",
+              [Function],
+              ";
 ",
             ],
           },
-          "displayName": "Styled(styled.span)",
-          "foldedComponentIds": Array [
-            "sc-bdVaJa",
-          ],
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
+          "styledComponentId": "sc-bdVaJa",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -151,12 +105,12 @@ exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
       textType="display"
     >
       <span
-        className="kCXKcy"
+        className="dcJPYZ"
       >
         ‌
       </span>
     </StyledComponent>
-  </Styled(styled.span)>
+  </styled.span>
 </TextSkeleton>
 `;
 
@@ -166,7 +120,7 @@ exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
   type="body"
   width={250}
 >
-  <Styled(styled.span)
+  <styled.span
     textType="body"
     width="250px"
   >
@@ -176,33 +130,10 @@ exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
+            "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "ctcCfY",
+            "lastClassName": "cRKbsz",
             "rules": Array [
-              "
-  animation: ",
-              Keyframes {
-                "id": "sc-keyframes-jXsTbE",
-                "inject": [Function],
-                "name": "jXsTbE",
-                "rules": Array [
-                  "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                  "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                ],
-                "toString": [Function],
-              },
-              " .8s linear infinite alternate;
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-              "#E1E6EB",
-              ";
-  border: 1px solid ",
-              "#E1E6EB",
-              ";
-  display: inline-flex;
-",
               "
   border-radius: 4px;
   width: ",
@@ -210,19 +141,19 @@ exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
               ";
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-
   ",
               [Function],
-              "
+              ";
+  ",
+              [Function],
+              ";
 ",
             ],
           },
-          "displayName": "Styled(styled.span)",
-          "foldedComponentIds": Array [
-            "sc-bdVaJa",
-          ],
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
+          "styledComponentId": "sc-bdVaJa",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -234,12 +165,12 @@ exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
       width="250px"
     >
       <span
-        className="ctcCfY"
+        className="cRKbsz"
         width="250px"
       >
         ‌
       </span>
     </StyledComponent>
-  </Styled(styled.span)>
+  </styled.span>
 </TextSkeleton>
 `;

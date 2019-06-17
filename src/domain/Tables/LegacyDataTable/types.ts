@@ -12,7 +12,7 @@ interface IDataTableColumn extends Column {
   columnAlignment?: AlignmentOption
 
   /** Override to only allow DefaultFilterFunction */
-  filterMethod: DefaultFilterFunction
+  filterMethod?: DefaultFilterFunction
 }
 
 interface IBaseDataTableProps {

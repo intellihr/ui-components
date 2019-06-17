@@ -4,40 +4,17 @@ exports[`<BlockSkeleton /> should render a block skeleton 1`] = `
 <BlockSkeleton
   showSkeleton={true}
 >
-  <Styled(styled.span)>
+  <styled.span>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
+            "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "ldvstH",
+            "lastClassName": "kFoKYz",
             "rules": Array [
-              "
-  animation: ",
-              Keyframes {
-                "id": "sc-keyframes-jXsTbE",
-                "inject": [Function],
-                "name": "jXsTbE",
-                "rules": Array [
-                  "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                  "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                ],
-                "toString": [Function],
-              },
-              " .8s linear infinite alternate;
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-              "#E1E6EB",
-              ";
-  border: 1px solid ",
-              "#E1E6EB",
-              ";
-  display: inline-flex;
-",
               "
   border-radius: 4px;
   line-height: 1rem;
@@ -47,15 +24,16 @@ exports[`<BlockSkeleton /> should render a block skeleton 1`] = `
   height: ",
               [Function],
               ";
+  ",
+              [Function],
+              ";
 ",
             ],
           },
-          "displayName": "Styled(styled.span)",
-          "foldedComponentIds": Array [
-            "sc-bdVaJa",
-          ],
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
+          "styledComponentId": "sc-bdVaJa",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -65,10 +43,10 @@ exports[`<BlockSkeleton /> should render a block skeleton 1`] = `
       forwardedRef={null}
     >
       <span
-        className="ldvstH"
+        className="kFoKYz"
       />
     </StyledComponent>
-  </Styled(styled.span)>
+  </styled.span>
 </BlockSkeleton>
 `;
 
@@ -78,7 +56,7 @@ exports[`<BlockSkeleton /> should render a block skeleton with set width and hei
   showSkeleton={true}
   width={400}
 >
-  <Styled(styled.span)
+  <styled.span
     height="200px"
     width="400px"
   >
@@ -88,33 +66,10 @@ exports[`<BlockSkeleton /> should render a block skeleton with set width and hei
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
+            "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "hwdFnQ",
+            "lastClassName": "cFtEup",
             "rules": Array [
-              "
-  animation: ",
-              Keyframes {
-                "id": "sc-keyframes-jXsTbE",
-                "inject": [Function],
-                "name": "jXsTbE",
-                "rules": Array [
-                  "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                  "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                ],
-                "toString": [Function],
-              },
-              " .8s linear infinite alternate;
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-              "#E1E6EB",
-              ";
-  border: 1px solid ",
-              "#E1E6EB",
-              ";
-  display: inline-flex;
-",
               "
   border-radius: 4px;
   line-height: 1rem;
@@ -124,15 +79,16 @@ exports[`<BlockSkeleton /> should render a block skeleton with set width and hei
   height: ",
               [Function],
               ";
+  ",
+              [Function],
+              ";
 ",
             ],
           },
-          "displayName": "Styled(styled.span)",
-          "foldedComponentIds": Array [
-            "sc-bdVaJa",
-          ],
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
+          "styledComponentId": "sc-bdVaJa",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -144,11 +100,11 @@ exports[`<BlockSkeleton /> should render a block skeleton with set width and hei
       width="400px"
     >
       <span
-        className="hwdFnQ"
+        className="cFtEup"
         height="200px"
         width="400px"
       />
     </StyledComponent>
-  </Styled(styled.span)>
+  </styled.span>
 </BlockSkeleton>
 `;
