@@ -181,10 +181,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 
@@ -199,10 +199,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 
@@ -215,10 +215,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
   }
 }
 
@@ -231,10 +231,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
   }
 }
 
@@ -475,7 +475,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
               animationStyle="none"
               data-component-type="grid_layout_cell"
               displayType="block"
-              flexHorizontalAlignments="left"
+              flexHorizontalAlignment="left"
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
@@ -528,7 +528,12 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
               animationStyle="none"
               data-component-type="grid_layout_cell"
               displayType="flex"
-              flexHorizontalAlignments="left"
+              flexHorizontalAlignment={
+                Object {
+                  "desktop": "right",
+                  "min": "center",
+                }
+              }
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
@@ -581,7 +586,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
               animationStyle="none"
               data-component-type="grid_layout_cell"
               displayType="block"
-              flexHorizontalAlignments="left"
+              flexHorizontalAlignment="left"
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
@@ -652,7 +657,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
               animationStyle="none"
               data-component-type="grid_layout_cell"
               displayType="block"
-              flexHorizontalAlignments="left"
+              flexHorizontalAlignment="left"
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
@@ -715,7 +720,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
               animationStyle="none"
               data-component-type="grid_layout_cell"
               displayType="block"
-              flexHorizontalAlignments="left"
+              flexHorizontalAlignment="left"
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
@@ -1118,7 +1123,6 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
       >
         <CSSTransition
           classNames="grid-layout-cell-animation"
-          data-component-type="grid_layout_cell"
           in={true}
           key=".$0/.0"
           onExited={[Function]}
@@ -1126,7 +1130,6 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
         >
           <Transition
             appear={false}
-            data-component-type="grid_layout_cell"
             enter={true}
             exit={true}
             in={true}
@@ -1140,10 +1143,8 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
             timeout={200}
             unmountOnExit={false}
           >
-            <styled.div
+            <Cell
               data-component-type="grid_layout_cell"
-              displayType="block"
-              flexHorizontalAlignments="left"
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
@@ -1154,25 +1155,42 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
                   "min": 16,
                 }
               }
-              offset={0}
               size={10}
             >
-              <div
-                className="c1"
+              <styled.div
+                animationStyle="none"
                 data-component-type="grid_layout_cell"
+                displayType="block"
+                flexHorizontalAlignment="left"
+                gridColumns={12}
+                gutterMarginX={4}
+                gutterMarginY="none"
+                gutterPaddingX="none"
+                gutterPaddingY={
+                  Object {
+                    "desktop": "none",
+                    "min": 16,
+                  }
+                }
                 offset={0}
                 size={10}
               >
-                <div>
-                  1
+                <div
+                  className="c1"
+                  data-component-type="grid_layout_cell"
+                  offset={0}
+                  size={10}
+                >
+                  <div>
+                    1
+                  </div>
                 </div>
-              </div>
-            </styled.div>
+              </styled.div>
+            </Cell>
           </Transition>
         </CSSTransition>
         <CSSTransition
           classNames="grid-layout-cell-animation"
-          data-component-type="grid_layout_cell"
           in={true}
           key=".$1/.1"
           onExited={[Function]}
@@ -1180,7 +1198,6 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
         >
           <Transition
             appear={false}
-            data-component-type="grid_layout_cell"
             enter={true}
             exit={true}
             in={true}
@@ -1194,10 +1211,8 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
             timeout={200}
             unmountOnExit={false}
           >
-            <styled.div
+            <Cell
               data-component-type="grid_layout_cell"
-              displayType="block"
-              flexHorizontalAlignments="left"
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
@@ -1208,25 +1223,42 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
                   "min": 16,
                 }
               }
-              offset={0}
               size={2}
             >
-              <div
-                className="c2"
+              <styled.div
+                animationStyle="none"
                 data-component-type="grid_layout_cell"
+                displayType="block"
+                flexHorizontalAlignment="left"
+                gridColumns={12}
+                gutterMarginX={4}
+                gutterMarginY="none"
+                gutterPaddingX="none"
+                gutterPaddingY={
+                  Object {
+                    "desktop": "none",
+                    "min": 16,
+                  }
+                }
                 offset={0}
                 size={2}
               >
-                <div>
-                  2
+                <div
+                  className="c2"
+                  data-component-type="grid_layout_cell"
+                  offset={0}
+                  size={2}
+                >
+                  <div>
+                    2
+                  </div>
                 </div>
-              </div>
-            </styled.div>
+              </styled.div>
+            </Cell>
           </Transition>
         </CSSTransition>
         <CSSTransition
           classNames="grid-layout-cell-animation"
-          data-component-type="grid_layout_cell"
           in={true}
           key=".$2/.2"
           onExited={[Function]}
@@ -1234,7 +1266,6 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
         >
           <Transition
             appear={false}
-            data-component-type="grid_layout_cell"
             enter={true}
             exit={true}
             in={true}
@@ -1248,10 +1279,8 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
             timeout={200}
             unmountOnExit={false}
           >
-            <styled.div
+            <Cell
               data-component-type="grid_layout_cell"
-              displayType="block"
-              flexHorizontalAlignments="left"
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
@@ -1274,9 +1303,21 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
                 }
               }
             >
-              <div
-                className="c3"
+              <styled.div
+                animationStyle="none"
                 data-component-type="grid_layout_cell"
+                displayType="block"
+                flexHorizontalAlignment="left"
+                gridColumns={12}
+                gutterMarginX={4}
+                gutterMarginY="none"
+                gutterPaddingX="none"
+                gutterPaddingY={
+                  Object {
+                    "desktop": "none",
+                    "min": 16,
+                  }
+                }
                 offset={
                   Object {
                     "tablet": 2,
@@ -1289,16 +1330,31 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
                   }
                 }
               >
-                <div>
-                  3
+                <div
+                  className="c3"
+                  data-component-type="grid_layout_cell"
+                  offset={
+                    Object {
+                      "tablet": 2,
+                    }
+                  }
+                  size={
+                    Object {
+                      "desktop": 3,
+                      "tablet": 4,
+                    }
+                  }
+                >
+                  <div>
+                    3
+                  </div>
                 </div>
-              </div>
-            </styled.div>
+              </styled.div>
+            </Cell>
           </Transition>
         </CSSTransition>
         <CSSTransition
           classNames="grid-layout-cell-animation"
-          data-component-type="grid_layout_cell"
           in={true}
           key=".$3/.3"
           onExited={[Function]}
@@ -1306,7 +1362,6 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
         >
           <Transition
             appear={false}
-            data-component-type="grid_layout_cell"
             enter={true}
             exit={true}
             in={true}
@@ -1320,10 +1375,8 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
             timeout={200}
             unmountOnExit={false}
           >
-            <styled.div
+            <Cell
               data-component-type="grid_layout_cell"
-              displayType="block"
-              flexHorizontalAlignments="left"
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
@@ -1334,7 +1387,6 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
                   "min": 16,
                 }
               }
-              offset={0}
               size={
                 Object {
                   "desktop": 6,
@@ -1342,9 +1394,21 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
                 }
               }
             >
-              <div
-                className="c4"
+              <styled.div
+                animationStyle="none"
                 data-component-type="grid_layout_cell"
+                displayType="block"
+                flexHorizontalAlignment="left"
+                gridColumns={12}
+                gutterMarginX={4}
+                gutterMarginY="none"
+                gutterPaddingX="none"
+                gutterPaddingY={
+                  Object {
+                    "desktop": "none",
+                    "min": 16,
+                  }
+                }
                 offset={0}
                 size={
                   Object {
@@ -1353,16 +1417,27 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
                   }
                 }
               >
-                <div>
-                  4
+                <div
+                  className="c4"
+                  data-component-type="grid_layout_cell"
+                  offset={0}
+                  size={
+                    Object {
+                      "desktop": 6,
+                      "tablet": 4,
+                    }
+                  }
+                >
+                  <div>
+                    4
+                  </div>
                 </div>
-              </div>
-            </styled.div>
+              </styled.div>
+            </Cell>
           </Transition>
         </CSSTransition>
         <CSSTransition
           classNames="grid-layout-cell-animation"
-          data-component-type="grid_layout_cell"
           in={true}
           key=".$4/.4"
           onExited={[Function]}
@@ -1370,7 +1445,6 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
         >
           <Transition
             appear={false}
-            data-component-type="grid_layout_cell"
             enter={true}
             exit={true}
             in={true}
@@ -1384,10 +1458,8 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
             timeout={200}
             unmountOnExit={false}
           >
-            <styled.div
+            <Cell
               data-component-type="grid_layout_cell"
-              displayType="block"
-              flexHorizontalAlignments="left"
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
@@ -1401,17 +1473,36 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
               offset={3}
               size="auto"
             >
-              <div
-                className="c5"
+              <styled.div
+                animationStyle="none"
                 data-component-type="grid_layout_cell"
+                displayType="block"
+                flexHorizontalAlignment="left"
+                gridColumns={12}
+                gutterMarginX={4}
+                gutterMarginY="none"
+                gutterPaddingX="none"
+                gutterPaddingY={
+                  Object {
+                    "desktop": "none",
+                    "min": 16,
+                  }
+                }
                 offset={3}
                 size="auto"
               >
-                <div>
-                  5
+                <div
+                  className="c5"
+                  data-component-type="grid_layout_cell"
+                  offset={3}
+                  size="auto"
+                >
+                  <div>
+                    5
+                  </div>
                 </div>
-              </div>
-            </styled.div>
+              </styled.div>
+            </Cell>
           </Transition>
         </CSSTransition>
       </TransitionGroup>
