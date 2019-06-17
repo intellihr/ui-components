@@ -12,8 +12,11 @@ exports[`<Toast /> should call the onMount function if given one 1`] = `
   <div
     className="toast-content no-heading"
   >
-    <div
-      className="toast-heading"
+    <Text
+      isInline={true}
+      tag="span"
+      type="body"
+      weight="heavy"
     />
     <div>
       Yahallo!
@@ -44,8 +47,11 @@ exports[`<Toast /> should render a toast of a default type, which is success 1`]
   <div
     className="toast-content no-heading"
   >
-    <div
-      className="toast-heading"
+    <Text
+      isInline={true}
+      tag="span"
+      type="body"
+      weight="heavy"
     />
     <div>
       Yo ... whaazzzaaaap!!!
@@ -76,8 +82,11 @@ exports[`<Toast /> should render an alert toast 1`] = `
   <div
     className="toast-content no-heading"
   >
-    <div
-      className="toast-heading"
+    <Text
+      isInline={true}
+      tag="span"
+      type="body"
+      weight="heavy"
     />
     <div>
       Surprise @#$%^&*!!!

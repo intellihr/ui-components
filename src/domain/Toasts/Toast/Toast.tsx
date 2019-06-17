@@ -2,6 +2,7 @@ import classNames from 'classnames'
 import React from 'react'
 
 import { IntelliIcon, IntelliIconTypeNoPrefix } from '../../Icons'
+import { Text } from '../../Typographies/Text'
 const style = require('./style.scss')
 
 export interface IToastProps {
@@ -21,12 +22,12 @@ export class Toast extends React.PureComponent<IToastProps> {
     type: 'success'
   }
 
-  public componentDidMount () {
+  public componentDidMount() {
     const { onMount } = this.props
     if (onMount) { onMount() }
   }
 
-  public render (): JSX.Element {
+  public render(): JSX.Element {
     const {
       type,
       heading,
@@ -52,7 +53,7 @@ export class Toast extends React.PureComponent<IToastProps> {
         />
 
         <div className={classes}>
-          <div className='toast-heading'>{heading}</div>
+          <Text weight='heavy'>{heading}</Text>
           <div>{children}</div>
         </div>
 
