@@ -23,7 +23,8 @@ class TextSkeleton extends React.Component<ITextSkeletonProps> {
       type,
       width,
       children,
-      className
+      className,
+      margins
     } = this.props
 
     if (!showSkeleton) {
@@ -39,6 +40,7 @@ class TextSkeleton extends React.Component<ITextSkeletonProps> {
         textType={type}
         width={typeof width === 'number' ? `${width}px` : width}
         className={className}
+        margins={margins}
       >
         {String.fromCharCode(8204)}
       </TextSkeletonWrapper>

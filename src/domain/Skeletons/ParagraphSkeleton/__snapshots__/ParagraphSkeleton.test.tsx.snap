@@ -1,7 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
-.c1 {
+.c0 {
+  border-radius: 4px;
+  width: 200px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 36px;
+  line-height: 44px;
+  -webkit-letter-spacing: -.02em;
+  -moz-letter-spacing: -.02em;
+  -ms-letter-spacing: -.02em;
+  letter-spacing: -.02em;
   -webkit-animation: jXsTbE .8s linear infinite alternate;
   animation: jXsTbE .8s linear infinite alternate;
   -webkit-backface-visibility: hidden;
@@ -15,20 +25,7 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
   display: inline-flex;
 }
 
-.c0 {
-  border-radius: 4px;
-  width: 200px;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 36px;
-  line-height: 44px;
-  -webkit-letter-spacing: -.02em;
-  -moz-letter-spacing: -.02em;
-  -ms-letter-spacing: -.02em;
-  letter-spacing: -.02em;
-}
-
-.c2 {
+.c1 {
   border-radius: 4px;
   width: 100%;
   margin-top: 0.5rem;
@@ -39,9 +36,20 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-animation: jXsTbE .8s linear infinite alternate;
+  animation: jXsTbE .8s linear infinite alternate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: #E1E6EB;
+  border: 1px solid #E1E6EB;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
-.c3 {
+.c2 {
   border-radius: 4px;
   width: 50%;
   margin-top: 0.5rem;
@@ -52,134 +60,117 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-animation: jXsTbE .8s linear infinite alternate;
+  animation: jXsTbE .8s linear infinite alternate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: #E1E6EB;
+  border: 1px solid #E1E6EB;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 <ParagraphSkeleton
   showSkeleton={true}
 >
-  <div>
-    <TextSkeleton
-      showSkeleton={true}
-      type="display-large"
-      width={200}
+  <styled.div>
+    <div
+      className=""
     >
-      <Styled(styled.span)
-        textType="display-large"
-        width="200px"
+      <TextSkeleton
+        showSkeleton={true}
+        type="display-large"
+        width={200}
       >
         <styled.span
-          className="c0"
           textType="display-large"
           width="200px"
         >
           <span
-            className="c0 c1"
+            className="c0"
             width="200px"
           >
             ‌
           </span>
         </styled.span>
-      </Styled(styled.span)>
-    </TextSkeleton>
-    <TextSkeleton
-      showSkeleton={true}
-      type="body"
-    >
-      <Styled(styled.span)
-        textType="body"
+      </TextSkeleton>
+      <TextSkeleton
+        showSkeleton={true}
+        type="body"
       >
         <styled.span
-          className="c2"
           textType="body"
         >
           <span
-            className="c2 c1"
+            className="c1"
           >
             ‌
           </span>
         </styled.span>
-      </Styled(styled.span)>
-    </TextSkeleton>
-    <TextSkeleton
-      showSkeleton={true}
-      type="body"
-    >
-      <Styled(styled.span)
-        textType="body"
+      </TextSkeleton>
+      <TextSkeleton
+        showSkeleton={true}
+        type="body"
       >
         <styled.span
-          className="c2"
           textType="body"
         >
           <span
-            className="c2 c1"
+            className="c1"
           >
             ‌
           </span>
         </styled.span>
-      </Styled(styled.span)>
-    </TextSkeleton>
-    <TextSkeleton
-      showSkeleton={true}
-      type="body"
-    >
-      <Styled(styled.span)
-        textType="body"
+      </TextSkeleton>
+      <TextSkeleton
+        showSkeleton={true}
+        type="body"
       >
         <styled.span
-          className="c2"
           textType="body"
         >
           <span
-            className="c2 c1"
+            className="c1"
           >
             ‌
           </span>
         </styled.span>
-      </Styled(styled.span)>
-    </TextSkeleton>
-    <TextSkeleton
-      showSkeleton={true}
-      type="body"
-    >
-      <Styled(styled.span)
-        textType="body"
+      </TextSkeleton>
+      <TextSkeleton
+        showSkeleton={true}
+        type="body"
       >
         <styled.span
-          className="c2"
           textType="body"
         >
           <span
-            className="c2 c1"
+            className="c1"
           >
             ‌
           </span>
         </styled.span>
-      </Styled(styled.span)>
-    </TextSkeleton>
-    <TextSkeleton
-      showSkeleton={true}
-      type="body"
-      width="50%"
-    >
-      <Styled(styled.span)
-        textType="body"
+      </TextSkeleton>
+      <TextSkeleton
+        showSkeleton={true}
+        type="body"
         width="50%"
       >
         <styled.span
-          className="c3"
           textType="body"
           width="50%"
         >
           <span
-            className="c3 c1"
+            className="c2"
             width="50%"
           >
             ‌
           </span>
         </styled.span>
-      </Styled(styled.span)>
-    </TextSkeleton>
-  </div>
+      </TextSkeleton>
+    </div>
+  </styled.div>
 </ParagraphSkeleton>
 `;

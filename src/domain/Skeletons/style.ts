@@ -1,6 +1,7 @@
-import styled, { keyframes } from 'styled-components'
+import { css, keyframes } from 'styled-components'
 
-import { Variables } from '../../common'
+import { Props, Variables } from '../../common'
+import { styleForMargins } from '../Spacers/services/margins'
 
 const progress = keyframes`
   0% {
@@ -12,11 +13,20 @@ const progress = keyframes`
   }
 `
 
-export const SkeletonWrapper = styled.span`
-  animation: ${progress} .8s linear infinite alternate;
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ${Variables.Color.n300};
-  border: 1px solid ${Variables.Color.n300};
-  display: inline-flex;
-`
+function styleForSkeletons (margins?: Props.IMargins) {
+ return (
+   css`
+    animation: ${progress} .8s linear infinite alternate;
+    backface-visibility: hidden;
+    will-change: opacity;
+    background-color: ${Variables.Color.n300};
+    border: 1px solid ${Variables.Color.n300};
+    display: inline-flex;
+    ${() => styleForMargins(margins)};
+  `
+ )
+}
+
+export {
+  styleForSkeletons
+}

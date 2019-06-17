@@ -3,6 +3,7 @@ import React from 'react'
 import { Props } from '../../../common'
 import { ISkeletonProps } from '../interfaces'
 import { TextSkeleton } from '../TextSkeleton'
+import { ParagraphSkeletonWrapper } from './style'
 
 class ParagraphSkeleton extends React.Component<ISkeletonProps> {
   public static defaultProps: Partial<ISkeletonProps> = {
@@ -13,7 +14,8 @@ class ParagraphSkeleton extends React.Component<ISkeletonProps> {
     const {
       showSkeleton,
       children,
-      className
+      className,
+      margins
     } = this.props
 
     if (!showSkeleton) {
@@ -25,7 +27,10 @@ class ParagraphSkeleton extends React.Component<ISkeletonProps> {
     }
 
     return (
-      <div className={className}>
+      <ParagraphSkeletonWrapper
+        className={className}
+        margins={margins}
+      >
         <TextSkeleton
           showSkeleton
           type={Props.TypographyType.DisplayLarge}
@@ -47,7 +52,7 @@ class ParagraphSkeleton extends React.Component<ISkeletonProps> {
           showSkeleton
           width={'50%'}
         />
-      </div>
+      </ParagraphSkeletonWrapper>
     )
   }
 }
