@@ -23,6 +23,12 @@
       }
     }
 
+    .CalendarDay__today {
+      background-color: $n250;
+      color: $n800;
+      font-weight: $fw-heavy;
+    }
+
     // Will edit everything selected including everything between a range of dates
     .CalendarDay__selected_span {
       background: $i400; //background
