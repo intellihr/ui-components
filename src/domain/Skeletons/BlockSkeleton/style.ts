@@ -12,7 +12,7 @@ export interface IBlockSkeletonWrapperProps {
 export const BlockSkeletonWrapper = styled.span`
   border-radius: 4px;
   line-height: 1rem;
-  width: ${(props: IBlockSkeletonWrapperProps) => props.width ? `${props.width}` : '100%'};
+  width: ${(props: IBlockSkeletonWrapperProps) => props.width ? `${props.width}` : null};
   height: ${(props: IBlockSkeletonWrapperProps) => props.height ? `${props.height}` : '1rem'};
   ${(props: IBlockSkeletonWrapperProps) => styleForSkeletons(props.margins)};
 `

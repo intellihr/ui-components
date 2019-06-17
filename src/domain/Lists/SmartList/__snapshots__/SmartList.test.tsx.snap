@@ -2727,7 +2727,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
 
 .c4 {
   border-radius: 4px;
-  width: 100%;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-size: 16px;
@@ -2743,10 +2742,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
   will-change: opacity;
   background-color: #E1E6EB;
   border: 1px solid #E1E6EB;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: block;
 }
 
 @media only screen and (min-width:0em) {
