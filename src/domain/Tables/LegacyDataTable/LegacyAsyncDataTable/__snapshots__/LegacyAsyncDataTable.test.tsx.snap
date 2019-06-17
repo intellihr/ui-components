@@ -4970,6 +4970,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
           1,
         ],
       ],
+      "results": undefined,
     }
   }
   pageSize={1}
@@ -5114,6 +5115,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
               1,
             ],
           ],
+          "results": undefined,
         }
       }
       originalKey="_original"

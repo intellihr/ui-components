@@ -252,29 +252,62 @@ Ordered/multi-level lists:
     * With
       - me?
 "
+<<<<<<< HEAD
           sourcePos={false}
           transformLinkUri={[Function]}
         >
           <div
             className="react-markdown-block"
             key="root-1-1"
+=======
+        sourcePos={false}
+        transformLinkUri={[Function]}
+      >
+        <Root
+          className="react-markdown-block"
+          key="root-1-1"
+        >
+          <div
+            className="react-markdown-block"
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
           >
             <p
               key="paragraph-2-1"
             >
+<<<<<<< HEAD
               FormattedText supports all syntax supported by markdown.
+=======
+              <TextRenderer
+                key="text-2-1"
+                nodeKey="text-2-1"
+                value="FormattedText supports all syntax supported by markdown."
+              >
+                FormattedText supports all syntax supported by markdown.
+              </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
             </p>
             <Heading
               key="heading-4-1"
               level={2}
             >
               <h2>
+<<<<<<< HEAD
                 Typography
+=======
+                <TextRenderer
+                  key="text-4-1"
+                  nodeKey="text-4-1"
+                  value="Typography"
+                >
+                  Typography
+                </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
               </h2>
             </Heading>
             <p
               key="paragraph-6-1"
             >
+<<<<<<< HEAD
               Multiple line breaks will be collapsed to a single paragraph:
             </p>
             <p
@@ -296,6 +329,53 @@ Ordered/multi-level lists:
             >
               <h2>
                 H2
+=======
+              <TextRenderer
+                key="text-6-1"
+                nodeKey="text-6-1"
+                value="Multiple line breaks will be collapsed to a single paragraph:"
+              >
+                Multiple line breaks will be collapsed to a single paragraph:
+              </TextRenderer>
+            </p>
+            <p
+              key="paragraph-11-1"
+            >
+              <TextRenderer
+                key="text-11-1"
+                nodeKey="text-11-1"
+                value="See?"
+              >
+                See?
+              </TextRenderer>
+            </p>
+            <Heading
+              key="heading-13-1"
+              level={1}
+            >
+              <h1>
+                <TextRenderer
+                  key="text-13-3"
+                  nodeKey="text-13-3"
+                  value="H1"
+                >
+                  H1
+                </TextRenderer>
+              </h1>
+            </Heading>
+            <Heading
+              key="heading-14-1"
+              level={2}
+            >
+              <h2>
+                <TextRenderer
+                  key="text-14-4"
+                  nodeKey="text-14-4"
+                  value="H2"
+                >
+                  H2
+                </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
               </h2>
             </Heading>
             <Heading
@@ -303,7 +383,17 @@ Ordered/multi-level lists:
               level={3}
             >
               <h3>
+<<<<<<< HEAD
                 H3
+=======
+                <TextRenderer
+                  key="text-15-5"
+                  nodeKey="text-15-5"
+                  value="H3"
+                >
+                  H3
+                </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
               </h3>
             </Heading>
             <Heading
@@ -311,7 +401,17 @@ Ordered/multi-level lists:
               level={4}
             >
               <h4>
+<<<<<<< HEAD
                 H4
+=======
+                <TextRenderer
+                  key="text-16-6"
+                  nodeKey="text-16-6"
+                  value="H4"
+                >
+                  H4
+                </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
               </h4>
             </Heading>
             <Heading
@@ -319,7 +419,17 @@ Ordered/multi-level lists:
               level={5}
             >
               <h5>
+<<<<<<< HEAD
                 H5
+=======
+                <TextRenderer
+                  key="text-17-7"
+                  nodeKey="text-17-7"
+                  value="H5"
+                >
+                  H5
+                </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
               </h5>
             </Heading>
             <Heading
@@ -327,7 +437,17 @@ Ordered/multi-level lists:
               level={6}
             >
               <h6>
+<<<<<<< HEAD
                 H6
+=======
+                <TextRenderer
+                  key="text-18-8"
+                  nodeKey="text-18-8"
+                  value="H6"
+                >
+                  H6
+                </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
               </h6>
             </Heading>
             <hr
@@ -338,7 +458,17 @@ Ordered/multi-level lists:
               level={2}
             >
               <h2>
+<<<<<<< HEAD
                 Links
+=======
+                <TextRenderer
+                  key="text-22-1"
+                  nodeKey="text-22-1"
+                  value="Links"
+                >
+                  Links
+                </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
               </h2>
             </Heading>
             <p
@@ -362,7 +492,11 @@ Ordered/multi-level lists:
                     target="_blank"
                     type="anchor"
                   >
+<<<<<<< HEAD
                     <StyledComponent
+=======
+                    <Component
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                       anchorComponent="a"
                       forwardedComponent={
                         Object {
@@ -431,21 +565,33 @@ Ordered/multi-level lists:
                       target="_blank"
                       type="anchor"
                     >
+<<<<<<< HEAD
                       <Component
                         anchorComponent="a"
                         className="bponwI"
+=======
+                      <Anchor
+                        anchorComponent="a"
+                        className="c1"
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                         href="http://www.intellihr.com.au"
                         isInline={true}
                         target="_blank"
                         type="anchor"
                       >
+<<<<<<< HEAD
                         <Anchor
                           anchorComponent="a"
                           className="bponwI"
+=======
+                        <a
+                          className="c1"
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                           href="http://www.intellihr.com.au"
                           target="_blank"
                           type="anchor"
                         >
+<<<<<<< HEAD
                           <a
                             className="bponwI"
                             href="http://www.intellihr.com.au"
@@ -462,6 +608,30 @@ Ordered/multi-level lists:
               </Component>
               
 
+=======
+                          <TextRenderer
+                            key="text-24-1"
+                            nodeKey="text-24-1"
+                            value="http://www.intellihr.com.au"
+                          >
+                            http://www.intellihr.com.au
+                          </TextRenderer>
+                        </a>
+                      </Anchor>
+                    </Component>
+                  </Styled(Component)>
+                </TextLink>
+              </Component>
+              <TextRenderer
+                key="text-24-28"
+                nodeKey="text-24-28"
+                value="
+"
+              >
+                
+
+              </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
               <Component
                 href="http://www.google.com"
                 key="link-25-1"
@@ -480,7 +650,11 @@ Ordered/multi-level lists:
                     target="_blank"
                     type="anchor"
                   >
+<<<<<<< HEAD
                     <StyledComponent
+=======
+                    <Component
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                       anchorComponent="a"
                       forwardedComponent={
                         Object {
@@ -549,21 +723,33 @@ Ordered/multi-level lists:
                       target="_blank"
                       type="anchor"
                     >
+<<<<<<< HEAD
                       <Component
                         anchorComponent="a"
                         className="bponwI"
+=======
+                      <Anchor
+                        anchorComponent="a"
+                        className="c1"
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                         href="http://www.google.com"
                         isInline={true}
                         target="_blank"
                         type="anchor"
                       >
+<<<<<<< HEAD
                         <Anchor
                           anchorComponent="a"
                           className="bponwI"
+=======
+                        <a
+                          className="c1"
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                           href="http://www.google.com"
                           target="_blank"
                           type="anchor"
                         >
+<<<<<<< HEAD
                           <a
                             className="bponwI"
                             href="http://www.google.com"
@@ -575,6 +761,18 @@ Ordered/multi-level lists:
                         </Anchor>
                       </Component>
                     </StyledComponent>
+=======
+                          <TextRenderer
+                            key="text-25-2"
+                            nodeKey="text-25-2"
+                            value="Inline link"
+                          >
+                            Inline link
+                          </TextRenderer>
+                        </a>
+                      </Anchor>
+                    </Component>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                   </Styled(Component)>
                 </TextLink>
               </Component>
@@ -587,7 +785,17 @@ Ordered/multi-level lists:
               level={2}
             >
               <h2>
+<<<<<<< HEAD
                 Images
+=======
+                <TextRenderer
+                  key="text-29-1"
+                  nodeKey="text-29-1"
+                  value="Images"
+                >
+                  Images
+                </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
               </h2>
             </Heading>
             <p
@@ -608,18 +816,43 @@ Ordered/multi-level lists:
               level={2}
             >
               <h2>
+<<<<<<< HEAD
                 Code
+=======
+                <TextRenderer
+                  key="text-35-1"
+                  nodeKey="text-35-1"
+                  value="Code"
+                >
+                  Code
+                </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
               </h2>
             </Heading>
             <p
               key="paragraph-38-1"
             >
+<<<<<<< HEAD
               Inline code with 
               <InlineCode
                 inline={true}
                 key="inlineCode-38-18"
                 value="blah"
               >
+=======
+              <TextRenderer
+                key="text-38-1"
+                nodeKey="text-38-1"
+                value="Inline code with "
+              >
+                Inline code with 
+              </TextRenderer>
+              <InlineCode
+                inline={true}
+                key="inlineCode-38-18"
+                value="blah"
+              >
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                 <code>
                   blah
                 </code>
@@ -633,13 +866,33 @@ Ordered/multi-level lists:
               level={2}
             >
               <h2>
+<<<<<<< HEAD
                 Tables
+=======
+                <TextRenderer
+                  key="text-42-1"
+                  nodeKey="text-42-1"
+                  value="Tables"
+                >
+                  Tables
+                </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
               </h2>
             </Heading>
             <p
               key="paragraph-44-1"
             >
+<<<<<<< HEAD
               Colons can be used to align columns.
+=======
+              <TextRenderer
+                key="text-44-1"
+                nodeKey="text-44-1"
+                value="Colons can be used to align columns."
+              >
+                Colons can be used to align columns.
+              </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
             </p>
             <bound SimpleRenderer
               columnAlignment={
@@ -681,7 +934,17 @@ Ordered/multi-level lists:
                           key="tableCell-46-3"
                         >
                           <th>
+<<<<<<< HEAD
                             Tables
+=======
+                            <TextRenderer
+                              key="text-46-3"
+                              nodeKey="text-46-3"
+                              value="Tables"
+                            >
+                              Tables
+                            </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                           </th>
                         </TableCell>
                         <TableCell
@@ -696,7 +959,17 @@ Ordered/multi-level lists:
                               }
                             }
                           >
+<<<<<<< HEAD
                             Are
+=======
+                            <TextRenderer
+                              key="text-46-19"
+                              nodeKey="text-46-19"
+                              value="Are"
+                            >
+                              Are
+                            </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                           </th>
                         </TableCell>
                         <TableCell
@@ -711,7 +984,17 @@ Ordered/multi-level lists:
                               }
                             }
                           >
+<<<<<<< HEAD
                             Cool
+=======
+                            <TextRenderer
+                              key="text-46-35"
+                              nodeKey="text-46-35"
+                              value="Cool"
+                            >
+                              Cool
+                            </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                           </th>
                         </TableCell>
                       </tr>
@@ -747,7 +1030,17 @@ Ordered/multi-level lists:
                           key="tableCell-48-3"
                         >
                           <td>
+<<<<<<< HEAD
                             col 3 is
+=======
+                            <TextRenderer
+                              key="text-48-3"
+                              nodeKey="text-48-3"
+                              value="col 3 is"
+                            >
+                              col 3 is
+                            </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                           </td>
                         </TableCell>
                         <TableCell
@@ -762,7 +1055,17 @@ Ordered/multi-level lists:
                               }
                             }
                           >
+<<<<<<< HEAD
                             right-aligned
+=======
+                            <TextRenderer
+                              key="text-48-19"
+                              nodeKey="text-48-19"
+                              value="right-aligned"
+                            >
+                              right-aligned
+                            </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                           </td>
                         </TableCell>
                         <TableCell
@@ -777,7 +1080,17 @@ Ordered/multi-level lists:
                               }
                             }
                           >
+<<<<<<< HEAD
                             $1600
+=======
+                            <TextRenderer
+                              key="text-48-35"
+                              nodeKey="text-48-35"
+                              value="$1600"
+                            >
+                              $1600
+                            </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                           </td>
                         </TableCell>
                       </tr>
@@ -800,7 +1113,17 @@ Ordered/multi-level lists:
                           key="tableCell-49-3"
                         >
                           <td>
+<<<<<<< HEAD
                             col 2 is
+=======
+                            <TextRenderer
+                              key="text-49-3"
+                              nodeKey="text-49-3"
+                              value="col 2 is"
+                            >
+                              col 2 is
+                            </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                           </td>
                         </TableCell>
                         <TableCell
@@ -815,7 +1138,17 @@ Ordered/multi-level lists:
                               }
                             }
                           >
+<<<<<<< HEAD
                             centered
+=======
+                            <TextRenderer
+                              key="text-49-19"
+                              nodeKey="text-49-19"
+                              value="centered"
+                            >
+                              centered
+                            </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                           </td>
                         </TableCell>
                         <TableCell
@@ -830,7 +1163,17 @@ Ordered/multi-level lists:
                               }
                             }
                           >
+<<<<<<< HEAD
                             $12
+=======
+                            <TextRenderer
+                              key="text-49-37"
+                              nodeKey="text-49-37"
+                              value="$12"
+                            >
+                              $12
+                            </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                           </td>
                         </TableCell>
                       </tr>
@@ -853,7 +1196,17 @@ Ordered/multi-level lists:
                           key="tableCell-50-3"
                         >
                           <td>
+<<<<<<< HEAD
                             zebra stripes
+=======
+                            <TextRenderer
+                              key="text-50-3"
+                              nodeKey="text-50-3"
+                              value="zebra stripes"
+                            >
+                              zebra stripes
+                            </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                           </td>
                         </TableCell>
                         <TableCell
@@ -868,7 +1221,17 @@ Ordered/multi-level lists:
                               }
                             }
                           >
+<<<<<<< HEAD
                             are neat
+=======
+                            <TextRenderer
+                              key="text-50-19"
+                              nodeKey="text-50-19"
+                              value="are neat"
+                            >
+                              are neat
+                            </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                           </td>
                         </TableCell>
                         <TableCell
@@ -883,7 +1246,17 @@ Ordered/multi-level lists:
                               }
                             }
                           >
+<<<<<<< HEAD
                             $1
+=======
+                            <TextRenderer
+                              key="text-50-38"
+                              nodeKey="text-50-38"
+                              value="$1"
+                            >
+                              $1
+                            </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                           </td>
                         </TableCell>
                       </tr>
@@ -898,6 +1271,7 @@ Ordered/multi-level lists:
             <Heading
               key="heading-54-1"
               level={2}
+<<<<<<< HEAD
             >
               <h2>
                 Quotes
@@ -929,6 +1303,64 @@ Ordered/multi-level lists:
               Unordered Lists:
             </p>
             <List
+=======
+            >
+              <h2>
+                <TextRenderer
+                  key="text-54-1"
+                  nodeKey="text-54-1"
+                  value="Quotes"
+                >
+                  Quotes
+                </TextRenderer>
+              </h2>
+            </Heading>
+            <blockquote
+              key="blockquote-57-1"
+            >
+              <p
+                key="paragraph-57-3"
+              >
+                <TextRenderer
+                  key="text-57-3"
+                  nodeKey="text-57-3"
+                  value="What the navy seal did you just navy seal about me, you little navy seal? I'll have you know I navy sealed top of my class in the navy seals, and I've been involved in numerous secret raids on the navy seals, and I have over 300 confirmed..."
+                >
+                  What the navy seal did you just navy seal about me, you little navy seal? I'll have you know I navy sealed top of my class in the navy seals, and I've been involved in numerous secret raids on the navy seals, and I have over 300 confirmed...
+                </TextRenderer>
+              </p>
+            </blockquote>
+            <hr
+              key="thematicBreak-59-1"
+            />
+            <Heading
+              key="heading-61-1"
+              level={2}
+            >
+              <h2>
+                <TextRenderer
+                  key="text-61-1"
+                  nodeKey="text-61-1"
+                  value="Lists"
+                >
+                  Lists
+                </TextRenderer>
+              </h2>
+            </Heading>
+            <p
+              key="paragraph-64-1"
+            >
+              <TextRenderer
+                key="text-64-1"
+                nodeKey="text-64-1"
+                value="Unordered Lists:"
+              >
+                Unordered Lists:
+              </TextRenderer>
+            </p>
+            <List
+              depth={0}
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
               key="list-66-1"
               ordered={false}
               start={null}
@@ -937,29 +1369,77 @@ Ordered/multi-level lists:
               <ul>
                 <ListItem
                   checked={null}
+<<<<<<< HEAD
                   key="listItem-66-1"
                   tight={true}
                 >
                   <li>
                     Wow
+=======
+                  index={0}
+                  key="listItem-66-1"
+                  ordered={false}
+                  tight={true}
+                >
+                  <li>
+                    <TextRenderer
+                      key="text-66-4"
+                      nodeKey="text-66-4"
+                      value="Wow"
+                    >
+                      Wow
+                    </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                   </li>
                 </ListItem>
                 <ListItem
                   checked={null}
+<<<<<<< HEAD
                   key="listItem-67-1"
                   tight={true}
                 >
                   <li>
                     Eat carrots
+=======
+                  index={1}
+                  key="listItem-67-1"
+                  ordered={false}
+                  tight={true}
+                >
+                  <li>
+                    <TextRenderer
+                      key="text-67-4"
+                      nodeKey="text-67-4"
+                      value="Eat carrots"
+                    >
+                      Eat carrots
+                    </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                   </li>
                 </ListItem>
                 <ListItem
                   checked={null}
+<<<<<<< HEAD
                   key="listItem-68-1"
                   tight={true}
                 >
                   <li>
                     Eat things which aren't carrots
+=======
+                  index={2}
+                  key="listItem-68-1"
+                  ordered={false}
+                  tight={true}
+                >
+                  <li>
+                    <TextRenderer
+                      key="text-68-4"
+                      nodeKey="text-68-4"
+                      value="Eat things which aren't carrots"
+                    >
+                      Eat things which aren't carrots
+                    </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                   </li>
                 </ListItem>
               </ul>
@@ -967,9 +1447,22 @@ Ordered/multi-level lists:
             <p
               key="paragraph-70-1"
             >
+<<<<<<< HEAD
               Ordered/multi-level lists:
             </p>
             <List
+=======
+              <TextRenderer
+                key="text-70-1"
+                nodeKey="text-70-1"
+                value="Ordered/multi-level lists:"
+              >
+                Ordered/multi-level lists:
+              </TextRenderer>
+            </p>
+            <List
+              depth={0}
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
               key="list-72-1"
               ordered={true}
               start={1}
@@ -978,30 +1471,80 @@ Ordered/multi-level lists:
               <ol>
                 <ListItem
                   checked={null}
+<<<<<<< HEAD
                   key="listItem-72-1"
                   tight={true}
                 >
                   <li>
                     Nothing wrong with me
+=======
+                  index={0}
+                  key="listItem-72-1"
+                  ordered={true}
+                  tight={true}
+                >
+                  <li>
+                    <TextRenderer
+                      key="text-72-5"
+                      nodeKey="text-72-5"
+                      value="Nothing wrong with me"
+                    >
+                      Nothing wrong with me
+                    </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                   </li>
                 </ListItem>
                 <ListItem
                   checked={null}
+<<<<<<< HEAD
                   key="listItem-73-1"
                   tight={true}
                 >
                   <li>
                     Nothing wrong with me
+=======
+                  index={1}
+                  key="listItem-73-1"
+                  ordered={true}
+                  tight={true}
+                >
+                  <li>
+                    <TextRenderer
+                      key="text-73-5"
+                      nodeKey="text-73-5"
+                      value="Nothing wrong with me"
+                    >
+                      Nothing wrong with me
+                    </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                   </li>
                 </ListItem>
                 <ListItem
                   checked={null}
+<<<<<<< HEAD
                   key="listItem-74-1"
                   tight={true}
                 >
                   <li>
                     Nothing
                     <List
+=======
+                  index={2}
+                  key="listItem-74-1"
+                  ordered={true}
+                  tight={true}
+                >
+                  <li>
+                    <TextRenderer
+                      key="text-74-5"
+                      nodeKey="text-74-5"
+                      value="Nothing"
+                    >
+                      Nothing
+                    </TextRenderer>
+                    <List
+                      depth={1}
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                       key="list-75-5"
                       ordered={false}
                       start={null}
@@ -1010,21 +1553,55 @@ Ordered/multi-level lists:
                       <ul>
                         <ListItem
                           checked={null}
+<<<<<<< HEAD
                           key="listItem-75-5"
                           tight={true}
                         >
                           <li>
                             Wrong
+=======
+                          index={0}
+                          key="listItem-75-5"
+                          ordered={false}
+                          tight={true}
+                        >
+                          <li>
+                            <TextRenderer
+                              key="text-75-7"
+                              nodeKey="text-75-7"
+                              value="Wrong"
+                            >
+                              Wrong
+                            </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                           </li>
                         </ListItem>
                         <ListItem
                           checked={null}
+<<<<<<< HEAD
                           key="listItem-76-5"
                           tight={true}
                         >
                           <li>
                             With
                             <List
+=======
+                          index={1}
+                          key="listItem-76-5"
+                          ordered={false}
+                          tight={true}
+                        >
+                          <li>
+                            <TextRenderer
+                              key="text-76-7"
+                              nodeKey="text-76-7"
+                              value="With"
+                            >
+                              With
+                            </TextRenderer>
+                            <List
+                              depth={2}
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                               key="list-77-7"
                               ordered={false}
                               start={null}
@@ -1033,11 +1610,27 @@ Ordered/multi-level lists:
                               <ul>
                                 <ListItem
                                   checked={null}
+<<<<<<< HEAD
                                   key="listItem-77-7"
                                   tight={true}
                                 >
                                   <li>
                                     me?
+=======
+                                  index={0}
+                                  key="listItem-77-7"
+                                  ordered={false}
+                                  tight={true}
+                                >
+                                  <li>
+                                    <TextRenderer
+                                      key="text-77-9"
+                                      nodeKey="text-77-9"
+                                      value="me?"
+                                    >
+                                      me?
+                                    </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                                   </li>
                                 </ListItem>
                               </ul>
@@ -1051,9 +1644,15 @@ Ordered/multi-level lists:
               </ol>
             </List>
           </div>
+<<<<<<< HEAD
         </ReactMarkdown>
       </div>
     </StyledComponent>
+=======
+        </Root>
+      </ReactMarkdown>
+    </div>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
   </styled.div>
 </FormattedText>
 `;
@@ -1117,12 +1716,24 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
           source="http://www.heyguy.com
 
         also this one http://www.ozbargain.com.au"
+<<<<<<< HEAD
           sourcePos={false}
           transformLinkUri={[Function]}
         >
           <div
             className="react-markdown-block"
             key="root-1-1"
+=======
+        sourcePos={false}
+        transformLinkUri={[Function]}
+      >
+        <Root
+          className="react-markdown-block"
+          key="root-1-1"
+        >
+          <div
+            className="react-markdown-block"
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
           >
             <p
               key="paragraph-1-1"
@@ -1145,7 +1756,11 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
                     target="_blank"
                     type="anchor"
                   >
+<<<<<<< HEAD
                     <StyledComponent
+=======
+                    <Component
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                       anchorComponent="a"
                       forwardedComponent={
                         Object {
@@ -1214,21 +1829,33 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
                       target="_blank"
                       type="anchor"
                     >
+<<<<<<< HEAD
                       <Component
                         anchorComponent="a"
                         className="bponwI"
+=======
+                      <Anchor
+                        anchorComponent="a"
+                        className="c1"
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                         href="http://www.heyguy.com"
                         isInline={true}
                         target="_blank"
                         type="anchor"
                       >
+<<<<<<< HEAD
                         <Anchor
                           anchorComponent="a"
                           className="bponwI"
+=======
+                        <a
+                          className="c1"
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                           href="http://www.heyguy.com"
                           target="_blank"
                           type="anchor"
                         >
+<<<<<<< HEAD
                           <a
                             className="bponwI"
                             href="http://www.heyguy.com"
@@ -1240,6 +1867,18 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
                         </Anchor>
                       </Component>
                     </StyledComponent>
+=======
+                          <TextRenderer
+                            key="text-1-1"
+                            nodeKey="text-1-1"
+                            value="http://www.heyguy.com"
+                          >
+                            http://www.heyguy.com
+                          </TextRenderer>
+                        </a>
+                      </Anchor>
+                    </Component>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
                   </Styled(Component)>
                 </TextLink>
               </Component>
@@ -1256,9 +1895,15 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
               </pre>
             </CodeBlock>
           </div>
+<<<<<<< HEAD
         </ReactMarkdown>
       </div>
     </StyledComponent>
+=======
+        </Root>
+      </ReactMarkdown>
+    </div>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
   </styled.div>
 </FormattedText>
 `;
@@ -1322,17 +1967,39 @@ exports[`<FormattedText /> should render the formatted text 1`] = `
           source="Hello. I am a piece of paragraph text.
 
         This should be on a new line :)"
+<<<<<<< HEAD
           sourcePos={false}
           transformLinkUri={[Function]}
         >
           <div
             className="react-markdown-block"
             key="root-1-1"
+=======
+        sourcePos={false}
+        transformLinkUri={[Function]}
+      >
+        <Root
+          className="react-markdown-block"
+          key="root-1-1"
+        >
+          <div
+            className="react-markdown-block"
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
           >
             <p
               key="paragraph-1-1"
             >
+<<<<<<< HEAD
               Hello. I am a piece of paragraph text.
+=======
+              <TextRenderer
+                key="text-1-1"
+                nodeKey="text-1-1"
+                value="Hello. I am a piece of paragraph text."
+              >
+                Hello. I am a piece of paragraph text.
+              </TextRenderer>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
             </p>
             <CodeBlock
               key="code-3-1"
@@ -1346,9 +2013,15 @@ exports[`<FormattedText /> should render the formatted text 1`] = `
               </pre>
             </CodeBlock>
           </div>
+<<<<<<< HEAD
         </ReactMarkdown>
       </div>
     </StyledComponent>
+=======
+        </Root>
+      </ReactMarkdown>
+    </div>
+>>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
   </styled.div>
 </FormattedText>
 `;
