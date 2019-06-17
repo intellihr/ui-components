@@ -107,7 +107,8 @@ namespace Variables {
 
   export enum FontWeight {
     fwNormal =         400,
-    fwHeavy =          600
+    fwHeavy =          600,
+    fwChonky =         700
   }
 
   export enum Layout {
