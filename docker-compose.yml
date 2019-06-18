@@ -8,8 +8,16 @@ services:
     ports:
       - 6060
     volumes:
-      - .:/var/task:delegated
-      - ui-components:/var/task/node_modules # Optimisation for Docker-Mac
+      - ./src:/var/task/src:delegated
+      - ./docs:/var/task/docs:delegated
+      - ./dist:/var/task/dist:delegated
+      - ./types:/var/task/types:delegated
+      - node-cache:/var/task/node_modules/.cache
+
+  jenkins:
+    build:
+      context: .
+      dockerfile: Dockerfile-jenkins
 
 volumes:
-  ui-components: ~
+  node-cache: ~

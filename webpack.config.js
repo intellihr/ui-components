@@ -15,7 +15,9 @@ module.exports = {
     }
   },
   plugins: [
-    new WebpackBar(),
+    new WebpackBar({
+      reporters: ['fancy'], // Webpackbar disables itself in docker by default
+    }),
     new ExtractTextPlugin('[name].css'),
     new CopyWebpackPlugin([{
       from: path.resolve(__dirname, 'src/common/sass'),
