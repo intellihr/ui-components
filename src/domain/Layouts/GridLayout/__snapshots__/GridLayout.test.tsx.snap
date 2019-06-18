@@ -12,6 +12,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 
 .c1 {
@@ -432,6 +436,14 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     }
   }
   horizontalAlignment="center"
+  margins={
+    Object {
+      "bottom": 4,
+      "left": 4,
+      "right": 4,
+      "top": 4,
+    }
+  }
   verticalAlignment="stretch"
 >
   <styled.div
@@ -439,6 +451,14 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
     gutterMarginX={4}
     gutterMarginY="none"
     horizontalAlignment="center"
+    margins={
+      Object {
+        "bottom": 4,
+        "left": 4,
+        "right": 4,
+        "top": 4,
+      }
+    }
     verticalAlignment="stretch"
   >
     <div

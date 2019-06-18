@@ -1,7 +1,8 @@
 import { isPlainObject } from 'lodash'
 import styled, { css } from 'styled-components'
 
-import { Utils, Variables } from '../../../common'
+import {Props, Utils, Variables} from '../../../common'
+import {styleForMargins} from '../../Spacers/services/margins'
 
 enum HorizontalAlignment {
   Left = 'left',
@@ -63,7 +64,8 @@ interface IStyledGridLayoutProps {
   horizontalAlignment: HorizontalAlignment | IStyledHorizontalAlignment,
   verticalAlignment: VerticalAlignment | IStyledVerticalAlignment,
   gutterMarginX: GutterSize | IStyledGridGutters,
-  gutterMarginY: GutterSize | IStyledGridGutters
+  gutterMarginY: GutterSize | IStyledGridGutters,
+  margins?: Props.IMargins
 }
 
 interface IStyledCellProps {
@@ -302,6 +304,7 @@ const StyledGridLayout = styled.div<IStyledGridLayoutProps>`
   flex: 1 0 auto;
 
   ${gridStyleForProps}
+  ${(props: IStyledGridLayoutProps) => styleForMargins(props.margins)}
 `
 
 interface ICellStyleArguments {

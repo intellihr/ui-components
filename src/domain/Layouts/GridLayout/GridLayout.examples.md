@@ -760,3 +760,48 @@ initialState = { cells: [
   />
 </>
 ```
+
+#### Custom margins
+
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  height: '100%',
+  width: '100%'
+};
+
+<GridLayout
+  margins={{
+        top: 20,
+        left: 20,
+        right: 20,
+        bottom: 20
+      }}
+  cells={[
+    {
+      size: 10,
+      content: <div style={style}/>
+    },
+    {
+      size: 2,
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 3, tablet: 4 },
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 6, tablet: 4 },
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 3, tablet: 4 },
+      content: <div style={style}/>
+    }
+  ]}
+/>
+```

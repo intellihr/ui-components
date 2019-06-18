@@ -8,6 +8,12 @@ describe('<GridLayout />', () => {
   it(`should render a GridLayout`, () => {
     const wrapper = mount(
       <GridLayout
+        margins={{
+          top: Variables.Spacing.s2XSmall,
+          left: Variables.Spacing.s2XSmall,
+          right: Variables.Spacing.s2XSmall,
+          bottom: Variables.Spacing.s2XSmall
+        }}
         horizontalAlignment={GridLayout.HorizontalAlignment.Center}
         verticalAlignment={GridLayout.VerticalAlignment.Stretch}
         gutterMarginX={Variables.Spacing.s2XSmall}
