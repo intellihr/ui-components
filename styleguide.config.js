@@ -9,14 +9,14 @@ const TRANSFORMS_FOR_IE11 = {
   test: /\.jsx?$/,
   include: /node_modules\/(?=(acorn-jsx|regexpu-core|unicode-match-property-ecmascript|unicode-match-property-value-ecmascript|react-dev-utils|ansi-styles|ansi-regex|chalk|strip-ansi)\/).*/,
   use: {
-    loader: "babel-loader",
+    loader: 'babel-loader',
     options: {
       presets: [
         [
-          "@babel/preset-env",
+          '@babel/preset-env',
           {
             targets: {
-              ie: "11"
+              ie: '11'
             }
           }
         ]

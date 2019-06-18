@@ -1,7 +1,8 @@
 module.exports = {
   moduleFileExtensions: [
     'ts',
-    'tsx'
+    'tsx',
+    'js'
   ],
   transformIgnorePatterns: [
     'node_modules/(?!(foundation-sites)/)'
@@ -23,11 +24,13 @@ module.exports = {
   ],
   globals: {
     'ts-jest': {
-      tsConfigFile: 'tsconfig-jest.json',
-      useBabelrc: true
+      tsConfig: 'tsconfig-jest.json',
+      babelConfig: {
+        presets: ['@babel/preset-env']
+      }
     }
   },
-  setupTestFrameworkScriptFile: './setupTest.ts',
+  setupFilesAfterEnv: ['./setupTest.ts'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   moduleNameMapper: {
     '\\.(scss|css)$': 'identity-obj-proxy',
