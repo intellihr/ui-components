@@ -52,11 +52,11 @@ A tag can be provided to turn any of the Text options into a Heading, or paragra
     <Text isInline={false} weight='normal'>
       Normal (default)
     </Text>
-    <Text isInline={false} weight='heavy'>
-      Heavy
+    <Text isInline={false} weight='semi-bold'>
+      Semi Bold
     </Text>
-    <Text weight='chonky'>
-      Chonky
+    <Text weight='bold'>
+      Bold
     </Text>
   </div>
 ```

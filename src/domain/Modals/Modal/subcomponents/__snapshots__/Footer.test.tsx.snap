@@ -24,14 +24,14 @@ exports[`<Footer /> should render modal footer 1`] = `
 
 <Footer
   leftControls={
-    <React.Fragment>
+    <UNDEFINED>
       Left Controls
-    </React.Fragment>
+    </UNDEFINED>
   }
   rightControls={
-    <React.Fragment>
+    <UNDEFINED>
       Right Controls
-    </React.Fragment>
+    </UNDEFINED>
   }
 >
   <styled.div>

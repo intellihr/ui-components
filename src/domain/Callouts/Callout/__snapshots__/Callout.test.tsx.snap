@@ -3,6 +3,7 @@
 exports[`Callout Renders successfully 1`] = `
 <div
   className="callout success justify-center "
+  data-component-context={undefined}
   data-component-type="callout"
 >
   <div
@@ -21,6 +22,7 @@ exports[`Callout Renders successfully 1`] = `
 exports[`Callout Renders successfully when both messages and message is passed 1`] = `
 <div
   className="callout info "
+  data-component-context={undefined}
   data-component-type="callout"
 >
   <div
@@ -47,6 +49,7 @@ exports[`Callout Renders successfully when both messages and message is passed 1
 exports[`Callout Renders successfully when messages are passed 1`] = `
 <div
   className="callout warning "
+  data-component-context={undefined}
   data-component-type="callout"
 >
   <div
@@ -70,6 +73,7 @@ exports[`Callout Renders successfully when messages are passed 1`] = `
 exports[`Callout Renders successfully when messages has length 1 1`] = `
 <div
   className="callout info justify-center "
+  data-component-context={undefined}
   data-component-type="callout"
 >
   <div

@@ -13,7 +13,7 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
   -ms-letter-spacing: normal;
   letter-spacing: normal;
   color: #424F5C;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .c2 {
@@ -104,7 +104,7 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
   -ms-letter-spacing: normal;
   letter-spacing: normal;
   color: #424F5C;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .c2 {
@@ -297,7 +297,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
   -ms-letter-spacing: normal;
   letter-spacing: normal;
   color: #424F5C;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .c2 {
@@ -392,7 +392,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
   -ms-letter-spacing: normal;
   letter-spacing: normal;
   color: #FFD2CC;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .c2 {
@@ -488,7 +488,7 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
   -ms-letter-spacing: normal;
   letter-spacing: normal;
   color: #424F5C;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .c2 {
@@ -579,7 +579,7 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
   -ms-letter-spacing: .02em;
   letter-spacing: .02em;
   color: #262D33;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .c2 {

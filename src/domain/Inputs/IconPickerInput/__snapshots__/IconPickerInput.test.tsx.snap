@@ -8,7 +8,7 @@ exports[`<IconPickerInput /> should render an Icon Picker 1`] = `
     cells={
       Array [
         Object {
-          "content": <React.Fragment>
+          "content": <UNDEFINED>
             <styled.input
               checked={true}
               id="icon-picker-intelli-icon-australia-0"
@@ -27,11 +27,11 @@ exports[`<IconPickerInput /> should render an Icon Picker 1`] = `
                 type="intelli-icon-australia"
               />
             </styled.label>
-          </React.Fragment>,
+          </UNDEFINED>,
           "size": "shrink",
         },
         Object {
-          "content": <React.Fragment>
+          "content": <UNDEFINED>
             <styled.input
               checked={false}
               id="icon-picker-intelli-icon-card-1"
@@ -50,11 +50,11 @@ exports[`<IconPickerInput /> should render an Icon Picker 1`] = `
                 type="intelli-icon-card"
               />
             </styled.label>
-          </React.Fragment>,
+          </UNDEFINED>,
           "size": "shrink",
         },
         Object {
-          "content": <React.Fragment>
+          "content": <UNDEFINED>
             <styled.input
               checked={false}
               id="icon-picker-intelli-icon-book-2"
@@ -73,7 +73,7 @@ exports[`<IconPickerInput /> should render an Icon Picker 1`] = `
                 type="intelli-icon-book"
               />
             </styled.label>
-          </React.Fragment>,
+          </UNDEFINED>,
           "size": "shrink",
         },
       ]

@@ -221,7 +221,7 @@ const StyledFigureLabel = styled.span`
       display: inline-block;
       font-size: ${Variables.FontSize.fzDisplay}px;
       line-height: ${Variables.LineHeight.lhDisplay}px;
-      font-weight: ${Variables.FontWeight.fwHeavy};
+      font-weight: ${Variables.FontWeight.fwSemiBold};
       text-transform: uppercase;
     `
   }}
@@ -236,7 +236,7 @@ const StyledFigureLabel = styled.span`
 const StyledHeadinglabel = styled.span`
   font-size: ${Variables.FontSize.fzSmall}px;
   line-height: ${Variables.LineHeight.lhSmall}px;
-  font-weight: ${Variables.FontWeight.fwHeavy};
+  font-weight: ${Variables.FontWeight.fwSemiBold};
   text-transform: uppercase;
   white-space: nowrap;
   overflow: hidden;
@@ -302,7 +302,7 @@ const StyledHoverLabel = styled.span`
   font-size: ${Variables.FontSize.fzBody}px;
   line-height: ${Variables.LineHeight.lhBody}px;
   color: ${Variables.Color.i400};
-  font-weight: ${Variables.FontWeight.fwHeavy};
+  font-weight: ${Variables.FontWeight.fwSemiBold};
   opacity: 0;
   text-align: right;
   position: absolute;

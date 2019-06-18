@@ -14,7 +14,7 @@
 .ihr-primary-message {
   color: $n700;
   font-size: $fz-heading;
-  font-weight: $fw-heavy;
+  font-weight: $fw-semi-bold;
   letter-spacing: -.02em;
   line-height: $lh-body;
 }
@@ -44,7 +44,7 @@
     border-radius: $border-radius;
     color: $n700;
     font-size: $fz-xsmall;
-    font-weight: $fw-heavy;
+    font-weight: $fw-semi-bold;
     padding: .85em 1em;
 
     &:hover {

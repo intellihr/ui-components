@@ -8,7 +8,7 @@ export interface ITextWrapperProps {
   color?: Variables.Color
   isInline?: boolean
   isUpper?: boolean
-  weight?: 'normal' | 'heavy' | 'chonky'
+  weight?: 'normal' | 'semi-bold' | 'bold'
   textType?: Props.TypographyType
   isTruncated?: boolean
   isItalic?: boolean
@@ -51,13 +51,13 @@ export const TextWrapper = styled.span`
           return css`
             font-weight: ${Variables.FontWeight.fwNormal};
           `
-        case 'heavy':
+        case 'semi-bold':
           return css`
-            font-weight: ${Variables.FontWeight.fwHeavy};
+            font-weight: ${Variables.FontWeight.fwSemiBold};
           `
-        case 'chonky':
+        case 'bold':
           return css`
-            font-weight: ${Variables.FontWeight.fwChonky};
+            font-weight: ${Variables.FontWeight.fwBold};
           `
       }
     }
@@ -67,7 +67,7 @@ export const TextWrapper = styled.span`
       case 'display':
       case 'display-large':
         return css`
-          font-weight: ${Variables.FontWeight.fwHeavy};
+          font-weight: ${Variables.FontWeight.fwSemiBold};
         `
 
       case 'xsmall':

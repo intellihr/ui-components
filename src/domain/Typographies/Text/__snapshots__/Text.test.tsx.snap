@@ -235,7 +235,7 @@ exports[`<Text /> should render an element with heavy text 1`] = `
   -ms-letter-spacing: normal;
   letter-spacing: normal;
   color: #424F5C;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 <Text

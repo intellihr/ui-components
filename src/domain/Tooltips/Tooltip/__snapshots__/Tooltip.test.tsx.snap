@@ -11,7 +11,6 @@ exports[`<Tooltip /> should render a tooltip with a custom class name 1`] = `
     This div should have a tooltip
   </div>
   <ReactTooltip
-    clickable={false}
     effect="solid"
     id="test-tooltip"
     insecure={true}
@@ -35,7 +34,6 @@ exports[`<Tooltip /> should render a tooltip with a set width 1`] = `
     This div should have a tooltip
   </div>
   <ReactTooltip
-    clickable={false}
     effect="solid"
     id="test-tooltip"
     insecure={true}
@@ -58,7 +56,6 @@ exports[`<Tooltip /> should render a tooltip with the child element 1`] = `
     This div should have a tooltip
   </div>
   <ReactTooltip
-    clickable={false}
     effect="solid"
     id="test-tooltip"
     insecure={true}

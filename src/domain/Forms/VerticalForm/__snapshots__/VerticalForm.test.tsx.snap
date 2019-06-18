@@ -16,7 +16,6 @@ exports[`<VerticalForm /> should render with an onChange and onSubmit attributes
       "calls": Array [
         Array [],
       ],
-      "results": undefined,
     }
   }
   onSubmit={
@@ -24,7 +23,6 @@ exports[`<VerticalForm /> should render with an onChange and onSubmit attributes
       "calls": Array [
         Array [],
       ],
-      "results": undefined,
     }
   }
 >
