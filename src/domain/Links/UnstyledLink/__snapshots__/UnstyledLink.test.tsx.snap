@@ -1,55 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TextLink /> should render a text link 1`] = `
+.c0,
+.c0:link,
+.c0:visited,
+.c0:hover,
+.c0:active {
+  color: inherit;
+}
+
 <UnstyledLink
   href="/lol"
 >
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "sc-bdVaJa",
-          "isStatic": true,
-          "lastClassName": "gNkBYZ",
-          "rules": Array [
-            "
-  &,
-  &:link,
-  &:visited,
-  &:hover,
-  &:active {
-    color: inherit;
-  }
-",
-          ],
-        },
-        "displayName": "UnstyledLink",
-        "foldedComponentIds": Array [],
-        "render": [Function],
-        "styledComponentId": "sc-bdVaJa",
-        "target": [Function],
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-        Symbol(Symbol.hasInstance): [Function],
-      }
-    }
-    forwardedRef={null}
+  <Anchor
+    className="c0"
     href="/lol"
   >
-    <Anchor
-      className="gNkBYZ"
+    <a
+      className="c0"
       href="/lol"
     >
-      <a
-        className="gNkBYZ"
-        href="/lol"
-      >
-        Text link me
-      </a>
-    </Anchor>
-  </StyledComponent>
+      Text link me
+    </a>
+  </Anchor>
 </UnstyledLink>
 `;

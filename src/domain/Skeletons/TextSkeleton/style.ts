@@ -12,7 +12,7 @@ export interface ITextSkeletonWrapperProps {
 
 export const TextSkeletonWrapper = styled.span`
   border-radius: 4px;
-  width: ${(props: ITextSkeletonWrapperProps) => props.width ? `${props.width}` : '100%'};
+  width: ${(props: ITextSkeletonWrapperProps) => props.width ? `${props.width}` : null};
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   ${(props: ITextSkeletonWrapperProps) => styleForTypographyType(props.textType)};

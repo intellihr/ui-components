@@ -1,376 +1,166 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
+.c0 {
+  border-radius: 4px;
+  width: 200px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 36px;
+  line-height: 44px;
+  -webkit-letter-spacing: -.02em;
+  -moz-letter-spacing: -.02em;
+  -ms-letter-spacing: -.02em;
+  letter-spacing: -.02em;
+  -webkit-animation: jXsTbE .8s linear infinite alternate;
+  animation: jXsTbE .8s linear infinite alternate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: #E1E6EB;
+  border: 1px solid #E1E6EB;
+  display: block;
+}
+
+.c1 {
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-animation: jXsTbE .8s linear infinite alternate;
+  animation: jXsTbE .8s linear infinite alternate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: #E1E6EB;
+  border: 1px solid #E1E6EB;
+  display: block;
+}
+
+.c2 {
+  border-radius: 4px;
+  width: 50%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-animation: jXsTbE .8s linear infinite alternate;
+  animation: jXsTbE .8s linear infinite alternate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: #E1E6EB;
+  border: 1px solid #E1E6EB;
+  display: block;
+}
+
 <ParagraphSkeleton
   showSkeleton={true}
 >
   <styled.div>
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
-            "isStatic": false,
-            "lastClassName": "cBcNyd",
-            "rules": Array [
-              "
-  ",
-              [Function],
-              ";
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className=""
     >
-      <div
-        className="cBcNyd"
+      <TextSkeleton
+        showSkeleton={true}
+        type="display-large"
+        width={200}
       >
-        <TextSkeleton
-          showSkeleton={true}
-          type="display-large"
-          width={200}
+        <styled.span
+          textType="display-large"
+          width="200px"
         >
-          <styled.span
-            textType="display-large"
+          <span
+            className="c0"
             width="200px"
           >
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-bdVaJa",
-                    "isStatic": false,
-                    "lastClassName": "iizbSI",
-                    "rules": Array [
-                      "
-  border-radius: 4px;
-  width: ",
-                      [Function],
-                      ";
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  ",
-                      [Function],
-                      ";
-  ",
-                      [Function],
-                      ";
-",
-                    ],
-                  },
-                  "displayName": "styled.span",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "sc-bdVaJa",
-                  "target": "span",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-              textType="display-large"
-              width="200px"
-            >
-              <span
-                className="erCZCV"
-                width="200px"
-              >
-                ‌
-              </span>
-            </StyledComponent>
-          </styled.span>
-        </TextSkeleton>
-        <TextSkeleton
-          showSkeleton={true}
-          type="body"
+            ‌
+          </span>
+        </styled.span>
+      </TextSkeleton>
+      <TextSkeleton
+        showSkeleton={true}
+        type="body"
+      >
+        <styled.span
+          textType="body"
         >
-          <styled.span
-            textType="body"
+          <span
+            className="c1"
           >
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-bdVaJa",
-                    "isStatic": false,
-                    "lastClassName": "iizbSI",
-                    "rules": Array [
-                      "
-  border-radius: 4px;
-  width: ",
-                      [Function],
-                      ";
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  ",
-                      [Function],
-                      ";
-  ",
-                      [Function],
-                      ";
-",
-                    ],
-                  },
-                  "displayName": "styled.span",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "sc-bdVaJa",
-                  "target": "span",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-              textType="body"
-            >
-              <span
-                className="fsJqtE"
-              >
-                ‌
-              </span>
-            </StyledComponent>
-          </styled.span>
-        </TextSkeleton>
-        <TextSkeleton
-          showSkeleton={true}
-          type="body"
+            ‌
+          </span>
+        </styled.span>
+      </TextSkeleton>
+      <TextSkeleton
+        showSkeleton={true}
+        type="body"
+      >
+        <styled.span
+          textType="body"
         >
-          <styled.span
-            textType="body"
+          <span
+            className="c1"
           >
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-bdVaJa",
-                    "isStatic": false,
-                    "lastClassName": "iizbSI",
-                    "rules": Array [
-                      "
-  border-radius: 4px;
-  width: ",
-                      [Function],
-                      ";
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  ",
-                      [Function],
-                      ";
-  ",
-                      [Function],
-                      ";
-",
-                    ],
-                  },
-                  "displayName": "styled.span",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "sc-bdVaJa",
-                  "target": "span",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-              textType="body"
-            >
-              <span
-                className="fsJqtE"
-              >
-                ‌
-              </span>
-            </StyledComponent>
-          </styled.span>
-        </TextSkeleton>
-        <TextSkeleton
-          showSkeleton={true}
-          type="body"
+            ‌
+          </span>
+        </styled.span>
+      </TextSkeleton>
+      <TextSkeleton
+        showSkeleton={true}
+        type="body"
+      >
+        <styled.span
+          textType="body"
         >
-          <styled.span
-            textType="body"
+          <span
+            className="c1"
           >
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-bdVaJa",
-                    "isStatic": false,
-                    "lastClassName": "iizbSI",
-                    "rules": Array [
-                      "
-  border-radius: 4px;
-  width: ",
-                      [Function],
-                      ";
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  ",
-                      [Function],
-                      ";
-  ",
-                      [Function],
-                      ";
-",
-                    ],
-                  },
-                  "displayName": "styled.span",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "sc-bdVaJa",
-                  "target": "span",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-              textType="body"
-            >
-              <span
-                className="fsJqtE"
-              >
-                ‌
-              </span>
-            </StyledComponent>
-          </styled.span>
-        </TextSkeleton>
-        <TextSkeleton
-          showSkeleton={true}
-          type="body"
+            ‌
+          </span>
+        </styled.span>
+      </TextSkeleton>
+      <TextSkeleton
+        showSkeleton={true}
+        type="body"
+      >
+        <styled.span
+          textType="body"
         >
-          <styled.span
-            textType="body"
+          <span
+            className="c1"
           >
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-bdVaJa",
-                    "isStatic": false,
-                    "lastClassName": "iizbSI",
-                    "rules": Array [
-                      "
-  border-radius: 4px;
-  width: ",
-                      [Function],
-                      ";
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  ",
-                      [Function],
-                      ";
-  ",
-                      [Function],
-                      ";
-",
-                    ],
-                  },
-                  "displayName": "styled.span",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "sc-bdVaJa",
-                  "target": "span",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-              textType="body"
-            >
-              <span
-                className="fsJqtE"
-              >
-                ‌
-              </span>
-            </StyledComponent>
-          </styled.span>
-        </TextSkeleton>
-        <TextSkeleton
-          showSkeleton={true}
-          type="body"
+            ‌
+          </span>
+        </styled.span>
+      </TextSkeleton>
+      <TextSkeleton
+        showSkeleton={true}
+        type="body"
+        width="50%"
+      >
+        <styled.span
+          textType="body"
           width="50%"
         >
-          <styled.span
-            textType="body"
+          <span
+            className="c2"
             width="50%"
           >
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-bdVaJa",
-                    "isStatic": false,
-                    "lastClassName": "iizbSI",
-                    "rules": Array [
-                      "
-  border-radius: 4px;
-  width: ",
-                      [Function],
-                      ";
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  ",
-                      [Function],
-                      ";
-  ",
-                      [Function],
-                      ";
-",
-                    ],
-                  },
-                  "displayName": "styled.span",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "sc-bdVaJa",
-                  "target": "span",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-              textType="body"
-              width="50%"
-            >
-              <span
-                className="iizbSI"
-                width="50%"
-              >
-                ‌
-              </span>
-            </StyledComponent>
-          </styled.span>
-        </TextSkeleton>
-      </div>
-    </StyledComponent>
+            ‌
+          </span>
+        </styled.span>
+      </TextSkeleton>
+    </div>
   </styled.div>
 </ParagraphSkeleton>
 `;

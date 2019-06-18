@@ -1,6 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TextLink /> should render a text link 1`] = `
+.c0 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  display: inline;
+}
+
+.c0,
+.c0:link,
+.c0:visited {
+  color: #432DF3;
+}
+
+.c0:hover {
+  color: #2512B3;
+}
+
+.c0:active {
+  color: #0F0080;
+}
+
 <TextLink
   href="/lol"
   isInline={true}
@@ -11,99 +38,59 @@ exports[`<TextLink /> should render a text link 1`] = `
     isInline={true}
     type="anchor"
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
-            "isStatic": false,
-            "lastClassName": "hqCXqt",
-            "rules": Array [
-              "
-  ",
-              "
-  transition: color .25s ease-out;
-  cursor: pointer;
-
-  ",
-              [Function],
-              "
-
-  ",
-              [Function],
-              "
-
-  &,
-  &:link,
-  &:visited {
-    color: ",
-              "#432DF3",
-              ";
-  }
-
-  &:hover {
-    color: ",
-              "#2512B3",
-              ";
-    ",
-              [Function],
-              "
-  }
-
-  &:active {
-    color: ",
-              "#0F0080",
-              ";
-  }
-",
-              ";
-",
-            ],
-          },
-          "displayName": "Styled(Component)",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
-          "target": [Function],
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-          Symbol(Symbol.hasInstance): [Function],
-        }
-      }
-      forwardedRef={null}
+    <Component
+      className="c0"
       href="/lol"
       isInline={true}
       type="anchor"
     >
-      <Component
-        className="hqCXqt"
+      <Anchor
+        className="c0"
         href="/lol"
-        isInline={true}
         type="anchor"
       >
-        <Anchor
-          className="hqCXqt"
+        <a
+          className="c0"
           href="/lol"
           type="anchor"
         >
-          <a
-            className="hqCXqt"
-            href="/lol"
-            type="anchor"
-          >
-            Text link me
-          </a>
-        </Anchor>
-      </Component>
-    </StyledComponent>
+          Text link me
+        </a>
+      </Anchor>
+    </Component>
   </Styled(Component)>
 </TextLink>
 `;
 
 exports[`<TextLink /> should render a text link button 1`] = `
+.c0 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  display: inline;
+  outline: 0;
+}
+
+.c0,
+.c0:link,
+.c0:visited {
+  color: #432DF3;
+}
+
+.c0:hover {
+  color: #2512B3;
+}
+
+.c0:active {
+  color: #0F0080;
+}
+
 <TextLink
   isInline={true}
   type="button"
@@ -112,84 +99,44 @@ exports[`<TextLink /> should render a text link button 1`] = `
     isInline={true}
     type="button"
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
-            "isStatic": false,
-            "lastClassName": "bedTht",
-            "rules": Array [
-              "
-  ",
-              "
-  transition: color .25s ease-out;
-  cursor: pointer;
-
-  ",
-              [Function],
-              "
-
-  ",
-              [Function],
-              "
-
-  &,
-  &:link,
-  &:visited {
-    color: ",
-              "#432DF3",
-              ";
-  }
-
-  &:hover {
-    color: ",
-              "#2512B3",
-              ";
-    ",
-              [Function],
-              "
-  }
-
-  &:active {
-    color: ",
-              "#0F0080",
-              ";
-  }
-",
-              ";
-  outline: 0;
-",
-            ],
-          },
-          "displayName": "styled.button",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
-          "target": "button",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-      isInline={true}
+    <button
+      className="c0"
       type="button"
     >
-      <button
-        className="bedTht"
-        type="button"
-      >
-        Text link me
-      </button>
-    </StyledComponent>
+      Text link me
+    </button>
   </styled.button>
 </TextLink>
 `;
 
 exports[`<TextLink /> should render a text link with display block 1`] = `
+.c0 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  display: block;
+}
+
+.c0,
+.c0:link,
+.c0:visited {
+  color: #432DF3;
+}
+
+.c0:hover {
+  color: #2512B3;
+}
+
+.c0:active {
+  color: #0F0080;
+}
+
 <TextLink
   href="#"
   isInline={false}
@@ -200,99 +147,60 @@ exports[`<TextLink /> should render a text link with display block 1`] = `
     isInline={false}
     type="anchor"
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
-            "isStatic": false,
-            "lastClassName": "ftWmR",
-            "rules": Array [
-              "
-  ",
-              "
-  transition: color .25s ease-out;
-  cursor: pointer;
-
-  ",
-              [Function],
-              "
-
-  ",
-              [Function],
-              "
-
-  &,
-  &:link,
-  &:visited {
-    color: ",
-              "#432DF3",
-              ";
-  }
-
-  &:hover {
-    color: ",
-              "#2512B3",
-              ";
-    ",
-              [Function],
-              "
-  }
-
-  &:active {
-    color: ",
-              "#0F0080",
-              ";
-  }
-",
-              ";
-",
-            ],
-          },
-          "displayName": "Styled(Component)",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
-          "target": [Function],
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-          Symbol(Symbol.hasInstance): [Function],
-        }
-      }
-      forwardedRef={null}
+    <Component
+      className="c0"
       href="#"
       isInline={false}
       type="anchor"
     >
-      <Component
-        className="ftWmR"
+      <Anchor
+        className="c0"
         href="#"
-        isInline={false}
         type="anchor"
       >
-        <Anchor
-          className="ftWmR"
+        <a
+          className="c0"
           href="#"
           type="anchor"
         >
-          <a
-            className="ftWmR"
-            href="#"
-            type="anchor"
-          >
-            Block text link
-          </a>
-        </Anchor>
-      </Component>
-    </StyledComponent>
+          Block text link
+        </a>
+      </Anchor>
+    </Component>
   </Styled(Component)>
 </TextLink>
 `;
 
 exports[`<TextLink /> should render a text link with underline on hover 1`] = `
+.c0 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  display: inline;
+}
+
+.c0,
+.c0:link,
+.c0:visited {
+  color: #432DF3;
+}
+
+.c0:hover {
+  color: #2512B3;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c0:active {
+  color: #0F0080;
+}
+
 <TextLink
   href="#"
   isInline={true}
@@ -305,98 +213,29 @@ exports[`<TextLink /> should render a text link with underline on hover 1`] = `
     type="anchor"
     underlineOnHover={true}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
-            "isStatic": false,
-            "lastClassName": "cHnwZo",
-            "rules": Array [
-              "
-  ",
-              "
-  transition: color .25s ease-out;
-  cursor: pointer;
-
-  ",
-              [Function],
-              "
-
-  ",
-              [Function],
-              "
-
-  &,
-  &:link,
-  &:visited {
-    color: ",
-              "#432DF3",
-              ";
-  }
-
-  &:hover {
-    color: ",
-              "#2512B3",
-              ";
-    ",
-              [Function],
-              "
-  }
-
-  &:active {
-    color: ",
-              "#0F0080",
-              ";
-  }
-",
-              ";
-",
-            ],
-          },
-          "displayName": "Styled(Component)",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
-          "target": [Function],
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-          Symbol(Symbol.hasInstance): [Function],
-        }
-      }
-      forwardedRef={null}
+    <Component
+      className="c0"
       href="#"
       isInline={true}
       type="anchor"
       underlineOnHover={true}
     >
-      <Component
-        className="cHnwZo"
+      <Anchor
+        className="c0"
         href="#"
-        isInline={true}
         type="anchor"
         underlineOnHover={true}
       >
-        <Anchor
-          className="cHnwZo"
+        <a
+          className="c0"
           href="#"
           type="anchor"
           underlineOnHover={true}
         >
-          <a
-            className="cHnwZo"
-            href="#"
-            type="anchor"
-            underlineOnHover={true}
-          >
-            Underline text link on hover
-          </a>
-        </Anchor>
-      </Component>
-    </StyledComponent>
+          Underline text link on hover
+        </a>
+      </Anchor>
+    </Component>
   </Styled(Component)>
 </TextLink>
 `;

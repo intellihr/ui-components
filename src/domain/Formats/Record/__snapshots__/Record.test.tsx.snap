@@ -1,6 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Record /> should render a Record and no Tooltip with only a custom tooltip 1`] = `
+.c0 {
+  margin-bottom: 4px;
+}
+
+.c0 .label-component {
+  padding-right: .25rem;
+}
+
+.c1 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
 <Record
   name="Position Title"
   tooltipProps={
@@ -15,129 +34,34 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
     <styled.div
       data-component-type="record_name"
     >
-      <StyledComponent
+      <div
+        className="c0"
         data-component-type="record_name"
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-htoDjs",
-              "isStatic": true,
-              "lastClassName": "fMKwrI",
-              "rules": Array [
-                "
-  margin-bottom: 4px;
-  .label-component {
-    padding-right: .25rem;
-  }
-",
-              ],
-            },
-            "displayName": "styled.div",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "sc-htoDjs",
-            "target": "div",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
       >
-        <div
-          className="fMKwrI"
-          data-component-type="record_name"
+        <Text
+          className="label-component"
+          color="#424F5C"
+          isInline={true}
+          tag="span"
+          type="small"
         >
-          <Text
+          <styled.span
             className="label-component"
             color="#424F5C"
+            data-component-type="text"
             isInline={true}
-            tag="span"
-            type="small"
+            textType="small"
           >
-            <styled.span
-              className="label-component"
+            <span
+              className="label-component c1"
               color="#424F5C"
               data-component-type="text"
-              isInline={true}
-              textType="small"
             >
-              <StyledComponent
-                className="label-component"
-                color="#424F5C"
-                data-component-type="text"
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-jzJRlG",
-                      "isStatic": false,
-                      "lastClassName": "gHovpS",
-                      "rules": Array [
-                        "
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-",
-                      ],
-                    },
-                    "displayName": "styled.span",
-                    "foldedComponentIds": Array [],
-                    "render": [Function],
-                    "styledComponentId": "sc-jzJRlG",
-                    "target": "span",
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
-                isInline={true}
-                textType="small"
-              >
-                <span
-                  className="label-component gHovpS"
-                  color="#424F5C"
-                  data-component-type="text"
-                >
-                  Position Title
-                </span>
-              </StyledComponent>
-            </styled.span>
-          </Text>
-        </div>
-      </StyledComponent>
+              Position Title
+            </span>
+          </styled.span>
+        </Text>
+      </div>
     </styled.div>
     <p
       key=".0"
@@ -149,6 +73,25 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
 `;
 
 exports[`<Record /> should render a Record and tooltip with a custom tooltip and tooltipContent 1`] = `
+.c0 {
+  margin-bottom: 4px;
+}
+
+.c0 .label-component {
+  padding-right: .25rem;
+}
+
+.c1 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
 <Record
   name="Position Title"
   tooltipContent="a"
@@ -164,176 +107,81 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
     <styled.div
       data-component-type="record_name"
     >
-      <StyledComponent
+      <div
+        className="c0"
         data-component-type="record_name"
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-htoDjs",
-              "isStatic": true,
-              "lastClassName": "fMKwrI",
-              "rules": Array [
-                "
-  margin-bottom: 4px;
-  .label-component {
-    padding-right: .25rem;
-  }
-",
-              ],
-            },
-            "displayName": "styled.div",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "sc-htoDjs",
-            "target": "div",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
       >
-        <div
-          className="fMKwrI"
-          data-component-type="record_name"
+        <Text
+          className="label-component"
+          color="#424F5C"
+          isInline={true}
+          tag="span"
+          type="small"
         >
-          <Text
+          <styled.span
             className="label-component"
             color="#424F5C"
+            data-component-type="text"
             isInline={true}
-            tag="span"
-            type="small"
-          >
-            <styled.span
-              className="label-component"
-              color="#424F5C"
-              data-component-type="text"
-              isInline={true}
-              textType="small"
-            >
-              <StyledComponent
-                className="label-component"
-                color="#424F5C"
-                data-component-type="text"
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-fjdhpX",
-                      "isStatic": false,
-                      "lastClassName": "iflFsS",
-                      "rules": Array [
-                        "
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-",
-                      ],
-                    },
-                    "displayName": "styled.span",
-                    "foldedComponentIds": Array [],
-                    "render": [Function],
-                    "styledComponentId": "sc-fjdhpX",
-                    "target": "span",
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
-                isInline={true}
-                textType="small"
-              >
-                <span
-                  className="label-component iflFsS"
-                  color="#424F5C"
-                  data-component-type="text"
-                >
-                  Position Title
-                </span>
-              </StyledComponent>
-            </styled.span>
-          </Text>
-          <TooltipPopover
-            toggleComponent={[Function]}
+            textType="small"
           >
             <span
-              aria-expanded={false}
-              aria-haspopup={true}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              role="button"
-            />
-            <Popover
-              animationType="tooltip"
-              id=""
-              isOpen={false}
-              parentAnchorPosition="auto"
-              parentRef={
-                Object {
-                  "current": <span
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    role="button"
-                  />,
-                }
-              }
-              popoverAnchorPosition="auto"
+              className="label-component c1"
+              color="#424F5C"
+              data-component-type="text"
             >
-              <Portal
-                containerInfo={<body />}
-              >
-                <Transition
-                  appear={false}
-                  enter={true}
-                  exit={true}
-                  in={false}
-                  mountOnEnter={true}
-                  onEnter={[Function]}
-                  onEntered={[Function]}
-                  onEntering={[Function]}
-                  onExit={[Function]}
-                  onExited={[Function]}
-                  onExiting={[Function]}
-                  timeout={300}
-                  unmountOnExit={true}
-                />
-              </Portal>
-            </Popover>
-          </TooltipPopover>
-        </div>
-      </StyledComponent>
+              Position Title
+            </span>
+          </styled.span>
+        </Text>
+        <TooltipPopover
+          toggleComponent={[Function]}
+        >
+          <span
+            aria-expanded={false}
+            aria-haspopup={true}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="button"
+          />
+          <Popover
+            animationType="tooltip"
+            id=""
+            isOpen={false}
+            parentAnchorPosition="auto"
+            parentRef={
+              Object {
+                "current": <span
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  role="button"
+                />,
+              }
+            }
+            popoverAnchorPosition="auto"
+          >
+            <Portal
+              containerInfo={<body />}
+            >
+              <Transition
+                appear={false}
+                enter={true}
+                exit={true}
+                in={false}
+                mountOnEnter={true}
+                onEnter={[Function]}
+                onEntered={[Function]}
+                onEntering={[Function]}
+                onExit={[Function]}
+                onExited={[Function]}
+                onExiting={[Function]}
+                timeout={300}
+                unmountOnExit={true}
+              />
+            </Portal>
+          </Popover>
+        </TooltipPopover>
+      </div>
     </styled.div>
     <p
       key=".0"
@@ -345,6 +193,36 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
 `;
 
 exports[`<Record /> should render a Record component, creating a Text child with the provided number 1`] = `
+.c0 {
+  margin-bottom: 4px;
+}
+
+.c0 .label-component {
+  padding-right: .25rem;
+}
+
+.c1 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
+.c2 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #262D33;
+  font-weight: 400;
+}
+
 <Record
   name="FTE"
 >
@@ -354,129 +232,34 @@ exports[`<Record /> should render a Record component, creating a Text child with
     <styled.div
       data-component-type="record_name"
     >
-      <StyledComponent
+      <div
+        className="c0"
         data-component-type="record_name"
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-htoDjs",
-              "isStatic": true,
-              "lastClassName": "fMKwrI",
-              "rules": Array [
-                "
-  margin-bottom: 4px;
-  .label-component {
-    padding-right: .25rem;
-  }
-",
-              ],
-            },
-            "displayName": "styled.div",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "sc-htoDjs",
-            "target": "div",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
       >
-        <div
-          className="fMKwrI"
-          data-component-type="record_name"
+        <Text
+          className="label-component"
+          color="#424F5C"
+          isInline={true}
+          tag="span"
+          type="small"
         >
-          <Text
+          <styled.span
             className="label-component"
             color="#424F5C"
+            data-component-type="text"
             isInline={true}
-            tag="span"
-            type="small"
+            textType="small"
           >
-            <styled.span
-              className="label-component"
+            <span
+              className="label-component c1"
               color="#424F5C"
               data-component-type="text"
-              isInline={true}
-              textType="small"
             >
-              <StyledComponent
-                className="label-component"
-                color="#424F5C"
-                data-component-type="text"
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-gZMcBi",
-                      "isStatic": false,
-                      "lastClassName": "ftCBQJ",
-                      "rules": Array [
-                        "
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-",
-                      ],
-                    },
-                    "displayName": "styled.span",
-                    "foldedComponentIds": Array [],
-                    "render": [Function],
-                    "styledComponentId": "sc-gZMcBi",
-                    "target": "span",
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
-                isInline={true}
-                textType="small"
-              >
-                <span
-                  className="label-component ftCBQJ"
-                  color="#424F5C"
-                  data-component-type="text"
-                >
-                  FTE
-                </span>
-              </StyledComponent>
-            </styled.span>
-          </Text>
-        </div>
-      </StyledComponent>
+              FTE
+            </span>
+          </styled.span>
+        </Text>
+      </div>
     </styled.div>
     <Text
       color="#262D33"
@@ -491,75 +274,13 @@ exports[`<Record /> should render a Record component, creating a Text child with
         isInline={true}
         textType="body"
       >
-        <StyledComponent
+        <span
+          className="c2"
           color="#262D33"
           data-component-type="text"
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-gqjmRU",
-                "isStatic": false,
-                "lastClassName": "lirchM",
-                "rules": Array [
-                  "
-  ",
-                  [Function],
-                  "
-
-  ",
-                  [Function],
-                  "
-
-  ",
-                  [Function],
-                  "
-
-  ",
-                  [Function],
-                  "
-
-  ",
-                  [Function],
-                  "
-
-  ",
-                  [Function],
-                  "
-
-  ",
-                  [Function],
-                  "
-
-  ",
-                  [Function],
-                  "
-",
-                ],
-              },
-              "displayName": "styled.span",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "sc-gqjmRU",
-              "target": "span",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
-          isInline={true}
-          textType="body"
         >
-          <span
-            className="lirchM"
-            color="#262D33"
-            data-component-type="text"
-          >
-            1.000
-          </span>
-        </StyledComponent>
+          1.000
+        </span>
       </styled.span>
     </Text>
   </div>
@@ -567,6 +288,36 @@ exports[`<Record /> should render a Record component, creating a Text child with
 `;
 
 exports[`<Record /> should render a Record component, creating a Text child with the provided text 1`] = `
+.c0 {
+  margin-bottom: 4px;
+}
+
+.c0 .label-component {
+  padding-right: .25rem;
+}
+
+.c1 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
+.c2 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #262D33;
+  font-weight: 400;
+}
+
 <Record
   name="Position Title"
 >
@@ -576,129 +327,34 @@ exports[`<Record /> should render a Record component, creating a Text child with
     <styled.div
       data-component-type="record_name"
     >
-      <StyledComponent
+      <div
+        className="c0"
         data-component-type="record_name"
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-htoDjs",
-              "isStatic": true,
-              "lastClassName": "fMKwrI",
-              "rules": Array [
-                "
-  margin-bottom: 4px;
-  .label-component {
-    padding-right: .25rem;
-  }
-",
-              ],
-            },
-            "displayName": "styled.div",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "sc-htoDjs",
-            "target": "div",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
       >
-        <div
-          className="fMKwrI"
-          data-component-type="record_name"
+        <Text
+          className="label-component"
+          color="#424F5C"
+          isInline={true}
+          tag="span"
+          type="small"
         >
-          <Text
+          <styled.span
             className="label-component"
             color="#424F5C"
+            data-component-type="text"
             isInline={true}
-            tag="span"
-            type="small"
+            textType="small"
           >
-            <styled.span
-              className="label-component"
+            <span
+              className="label-component c1"
               color="#424F5C"
               data-component-type="text"
-              isInline={true}
-              textType="small"
             >
-              <StyledComponent
-                className="label-component"
-                color="#424F5C"
-                data-component-type="text"
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-dnqmqq",
-                      "isStatic": false,
-                      "lastClassName": "kepwtO",
-                      "rules": Array [
-                        "
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-",
-                      ],
-                    },
-                    "displayName": "styled.span",
-                    "foldedComponentIds": Array [],
-                    "render": [Function],
-                    "styledComponentId": "sc-dnqmqq",
-                    "target": "span",
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
-                isInline={true}
-                textType="small"
-              >
-                <span
-                  className="label-component kepwtO"
-                  color="#424F5C"
-                  data-component-type="text"
-                >
-                  Position Title
-                </span>
-              </StyledComponent>
-            </styled.span>
-          </Text>
-        </div>
-      </StyledComponent>
+              Position Title
+            </span>
+          </styled.span>
+        </Text>
+      </div>
     </styled.div>
     <Text
       color="#262D33"
@@ -713,75 +369,13 @@ exports[`<Record /> should render a Record component, creating a Text child with
         isInline={true}
         textType="body"
       >
-        <StyledComponent
+        <span
+          className="c2"
           color="#262D33"
           data-component-type="text"
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-iwsKbI",
-                "isStatic": false,
-                "lastClassName": "byTmxO",
-                "rules": Array [
-                  "
-  ",
-                  [Function],
-                  "
-
-  ",
-                  [Function],
-                  "
-
-  ",
-                  [Function],
-                  "
-
-  ",
-                  [Function],
-                  "
-
-  ",
-                  [Function],
-                  "
-
-  ",
-                  [Function],
-                  "
-
-  ",
-                  [Function],
-                  "
-
-  ",
-                  [Function],
-                  "
-",
-                ],
-              },
-              "displayName": "styled.span",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "sc-iwsKbI",
-              "target": "span",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
-          isInline={true}
-          textType="body"
         >
-          <span
-            className="byTmxO"
-            color="#262D33"
-            data-component-type="text"
-          >
-            Chief Executive Officer
-          </span>
-        </StyledComponent>
+          Chief Executive Officer
+        </span>
       </styled.span>
     </Text>
   </div>
@@ -789,6 +383,25 @@ exports[`<Record /> should render a Record component, creating a Text child with
 `;
 
 exports[`<Record /> should render a Record component, with the provided component child 1`] = `
+.c0 {
+  margin-bottom: 4px;
+}
+
+.c0 .label-component {
+  padding-right: .25rem;
+}
+
+.c1 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
 <Record
   name="Position Title"
 >
@@ -798,129 +411,34 @@ exports[`<Record /> should render a Record component, with the provided componen
     <styled.div
       data-component-type="record_name"
     >
-      <StyledComponent
+      <div
+        className="c0"
         data-component-type="record_name"
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-htoDjs",
-              "isStatic": true,
-              "lastClassName": "fMKwrI",
-              "rules": Array [
-                "
-  margin-bottom: 4px;
-  .label-component {
-    padding-right: .25rem;
-  }
-",
-              ],
-            },
-            "displayName": "styled.div",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "sc-htoDjs",
-            "target": "div",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
       >
-        <div
-          className="fMKwrI"
-          data-component-type="record_name"
+        <Text
+          className="label-component"
+          color="#424F5C"
+          isInline={true}
+          tag="span"
+          type="small"
         >
-          <Text
+          <styled.span
             className="label-component"
             color="#424F5C"
+            data-component-type="text"
             isInline={true}
-            tag="span"
-            type="small"
+            textType="small"
           >
-            <styled.span
-              className="label-component"
+            <span
+              className="label-component c1"
               color="#424F5C"
               data-component-type="text"
-              isInline={true}
-              textType="small"
             >
-              <StyledComponent
-                className="label-component"
-                color="#424F5C"
-                data-component-type="text"
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-VigVT",
-                      "isStatic": false,
-                      "lastClassName": "gRhxyG",
-                      "rules": Array [
-                        "
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-",
-                      ],
-                    },
-                    "displayName": "styled.span",
-                    "foldedComponentIds": Array [],
-                    "render": [Function],
-                    "styledComponentId": "sc-VigVT",
-                    "target": "span",
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
-                isInline={true}
-                textType="small"
-              >
-                <span
-                  className="label-component gRhxyG"
-                  color="#424F5C"
-                  data-component-type="text"
-                >
-                  Position Title
-                </span>
-              </StyledComponent>
-            </styled.span>
-          </Text>
-        </div>
-      </StyledComponent>
+              Position Title
+            </span>
+          </styled.span>
+        </Text>
+      </div>
     </styled.div>
     <p
       key=".0"
@@ -932,6 +450,35 @@ exports[`<Record /> should render a Record component, with the provided componen
 `;
 
 exports[`<Record /> should render a Record with a Tooltip 1`] = `
+.c2 {
+  width: 1.28571em;
+  color: #424F5C;
+}
+
+.c2.icon {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.c0 {
+  margin-bottom: 4px;
+}
+
+.c0 .label-component {
+  padding-right: .25rem;
+}
+
+.c1 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
 <Record
   name="Position Title"
   tooltipContent="a"
@@ -942,256 +489,117 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
     <styled.div
       data-component-type="record_name"
     >
-      <StyledComponent
+      <div
+        className="c0"
         data-component-type="record_name"
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-htoDjs",
-              "isStatic": true,
-              "lastClassName": "fMKwrI",
-              "rules": Array [
-                "
-  margin-bottom: 4px;
-  .label-component {
-    padding-right: .25rem;
-  }
-",
-              ],
-            },
-            "displayName": "styled.div",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "sc-htoDjs",
-            "target": "div",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
       >
-        <div
-          className="fMKwrI"
-          data-component-type="record_name"
+        <Text
+          className="label-component"
+          color="#424F5C"
+          isInline={true}
+          tag="span"
+          type="small"
         >
-          <Text
+          <styled.span
             className="label-component"
             color="#424F5C"
+            data-component-type="text"
             isInline={true}
-            tag="span"
-            type="small"
+            textType="small"
           >
-            <styled.span
-              className="label-component"
+            <span
+              className="label-component c1"
               color="#424F5C"
               data-component-type="text"
-              isInline={true}
-              textType="small"
             >
-              <StyledComponent
-                className="label-component"
-                color="#424F5C"
-                data-component-type="text"
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-jTzLTM",
-                      "isStatic": false,
-                      "lastClassName": "ksWUla",
-                      "rules": Array [
-                        "
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-
-  ",
-                        [Function],
-                        "
-",
-                      ],
-                    },
-                    "displayName": "styled.span",
-                    "foldedComponentIds": Array [],
-                    "render": [Function],
-                    "styledComponentId": "sc-jTzLTM",
-                    "target": "span",
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
-                isInline={true}
-                textType="small"
-              >
-                <span
-                  className="label-component ksWUla"
-                  color="#424F5C"
-                  data-component-type="text"
-                >
-                  Position Title
-                </span>
-              </StyledComponent>
-            </styled.span>
-          </Text>
-          <TooltipPopover
-            toggleComponent={[Function]}
+              Position Title
+            </span>
+          </styled.span>
+        </Text>
+        <TooltipPopover
+          toggleComponent={[Function]}
+        >
+          <button
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="popoverTrigger"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="button"
+            type="button"
           >
-            <button
-              aria-expanded={false}
-              aria-haspopup={true}
-              className="popoverTrigger"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              role="button"
-              type="button"
+            <FontAwesomeIcon
+              color="#424F5C"
+              type="question-circle-o"
             >
-              <FontAwesomeIcon
+              <Icon
                 color="#424F5C"
-                type="question-circle-o"
+                isSpinning={false}
+                size="medium"
+                type="fa-question-circle-o"
               >
-                <Icon
+                <styled.i
+                  aria-hidden={true}
+                  className="icon fa fa-question-circle-o"
                   color="#424F5C"
-                  isSpinning={false}
                   size="medium"
-                  type="fa-question-circle-o"
                 >
-                  <styled.i
+                  <i
                     aria-hidden={true}
-                    className="icon fa fa-question-circle-o"
+                    className="icon fa fa-question-circle-o c2"
                     color="#424F5C"
                     size="medium"
-                  >
-                    <StyledComponent
-                      aria-hidden={true}
-                      className="icon fa fa-question-circle-o"
-                      color="#424F5C"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "sc-bwzfXH",
-                            "isStatic": false,
-                            "lastClassName": "xCrrR",
-                            "rules": Array [
-                              "
-   width: 1.28571em;
-
-  ",
-                              [Function],
-                              "
-
-  &.icon {
-    text-align: center;
-
-  ",
-                              [Function],
-                              "
-  }
-",
-                            ],
-                          },
-                          "displayName": "styled.i",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "sc-bwzfXH",
-                          "target": "i",
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      size="medium"
-                    >
-                      <i
-                        aria-hidden={true}
-                        className="icon fa fa-question-circle-o xCrrR"
-                        color="#424F5C"
-                        size="medium"
-                      />
-                    </StyledComponent>
-                  </styled.i>
-                </Icon>
-              </FontAwesomeIcon>
-            </button>
-            <Popover
-              animationType="tooltip"
-              id=""
-              isOpen={false}
-              parentAnchorPosition="auto"
-              parentRef={
-                Object {
-                  "current": <button
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    class="popoverTrigger"
-                    role="button"
-                    type="button"
-                  >
-                    <i
-                      aria-hidden="true"
-                      class="icon fa fa-question-circle-o xCrrR"
-                      color="#424F5C"
-                    />
-                  </button>,
-                }
+                  />
+                </styled.i>
+              </Icon>
+            </FontAwesomeIcon>
+          </button>
+          <Popover
+            animationType="tooltip"
+            id=""
+            isOpen={false}
+            parentAnchorPosition="auto"
+            parentRef={
+              Object {
+                "current": <button
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  class="popoverTrigger"
+                  role="button"
+                  type="button"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="icon fa fa-question-circle-o c2"
+                    color="#424F5C"
+                  />
+                </button>,
               }
-              popoverAnchorPosition="auto"
+            }
+            popoverAnchorPosition="auto"
+          >
+            <Portal
+              containerInfo={<body />}
             >
-              <Portal
-                containerInfo={<body />}
-              >
-                <Transition
-                  appear={false}
-                  enter={true}
-                  exit={true}
-                  in={false}
-                  mountOnEnter={true}
-                  onEnter={[Function]}
-                  onEntered={[Function]}
-                  onEntering={[Function]}
-                  onExit={[Function]}
-                  onExited={[Function]}
-                  onExiting={[Function]}
-                  timeout={300}
-                  unmountOnExit={true}
-                />
-              </Portal>
-            </Popover>
-          </TooltipPopover>
-        </div>
-      </StyledComponent>
+              <Transition
+                appear={false}
+                enter={true}
+                exit={true}
+                in={false}
+                mountOnEnter={true}
+                onEnter={[Function]}
+                onEntered={[Function]}
+                onEntering={[Function]}
+                onExit={[Function]}
+                onExited={[Function]}
+                onExiting={[Function]}
+                timeout={300}
+                unmountOnExit={true}
+              />
+            </Portal>
+          </Popover>
+        </TooltipPopover>
+      </div>
     </styled.div>
     <p
       key=".0"

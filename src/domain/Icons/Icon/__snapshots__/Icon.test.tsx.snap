@@ -1,6 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Icon /> should render a large icon 1`] = `
+.c0 {
+  width: 1.28571em;
+}
+
+.c0.icon {
+  text-align: center;
+  font-size: 1.3125rem;
+}
+
 <Icon
   isSpinning={false}
   size="large"
@@ -11,59 +20,25 @@ exports[`<Icon /> should render a large icon 1`] = `
     className="icon fa circle"
     size="large"
   >
-    <StyledComponent
+    <i
       aria-hidden={true}
-      className="icon fa circle"
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
-            "isStatic": false,
-            "lastClassName": "XwtFX",
-            "rules": Array [
-              "
-   width: 1.28571em;
-
-  ",
-              [Function],
-              "
-
-  &.icon {
-    text-align: center;
-
-  ",
-              [Function],
-              "
-  }
-",
-            ],
-          },
-          "displayName": "styled.i",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
-          "target": "i",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+      className="icon fa circle c0"
       size="large"
-    >
-      <i
-        aria-hidden={true}
-        className="icon fa circle XwtFX"
-        size="large"
-      />
-    </StyledComponent>
+    />
   </styled.i>
 </Icon>
 `;
 
 exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
+.c0 {
+  width: 1.28571em;
+}
+
+.c0.icon {
+  text-align: center;
+  font-size: 1rem;
+}
+
 <Icon
   isSpinning={false}
   size="medium"
@@ -74,59 +49,61 @@ exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
     className="icon fa intelli-icon-avatar"
     size="medium"
   >
-    <StyledComponent
+    <i
       aria-hidden={true}
-      className="icon fa intelli-icon-avatar"
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
-            "isStatic": false,
-            "lastClassName": "gvHWRV",
-            "rules": Array [
-              "
-   width: 1.28571em;
-
-  ",
-              [Function],
-              "
-
-  &.icon {
-    text-align: center;
-
-  ",
-              [Function],
-              "
-  }
-",
-            ],
-          },
-          "displayName": "styled.i",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
-          "target": "i",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+      className="icon fa intelli-icon-avatar c0"
       size="medium"
-    >
-      <i
-        aria-hidden={true}
-        className="icon fa intelli-icon-avatar gvHWRV"
-        size="medium"
-      />
-    </StyledComponent>
+    />
   </styled.i>
 </Icon>
 `;
 
 exports[`<Icon /> should render an icon with a badge 1`] = `
+.c1 {
+  position: absolute;
+  margin-top: -9px;
+  margin-left: -15px;
+}
+
+.c0 {
+  width: 1.28571em;
+}
+
+.c0.icon {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.c2 {
+  background-color: #1A2B3C;
+  color: #1A293C;
+  border: 1px solid #C5CED6;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.24);
+  border-radius: 50%;
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c2,
+.c2 .fa {
+  font-size: 15px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+}
+
+.c2 .refresh-icon {
+  background-color: transparent;
+  position: relative;
+  top: -1px;
+  left: -1px;
+}
+
 <Icon
   badge={
     <Badge
@@ -146,184 +123,56 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
     className="icon fa fa-check"
     size="xlarge"
   >
-    <StyledComponent
+    <i
       aria-hidden={true}
-      className="icon fa fa-check"
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
-            "isStatic": false,
-            "lastClassName": "ncspi",
-            "rules": Array [
-              "
-   width: 1.28571em;
-
-  ",
-              [Function],
-              "
-
-  &.icon {
-    text-align: center;
-
-  ",
-              [Function],
-              "
-  }
-",
-            ],
-          },
-          "displayName": "styled.i",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
-          "target": "i",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+      className="icon fa fa-check c0"
       size="xlarge"
-    >
-      <i
-        aria-hidden={true}
-        className="icon fa fa-check ncspi"
-        size="xlarge"
-      />
-    </StyledComponent>
+    />
   </styled.i>
   <styled.span
     size="xlarge"
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
-            "isStatic": false,
-            "lastClassName": "eLLZRT",
-            "rules": Array [
-              "
-  position: absolute;
-
-  ",
-              [Function],
-              "
-",
-            ],
-          },
-          "displayName": "styled.span",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
-          "target": "span",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <span
+      className="c1"
       size="xlarge"
     >
-      <span
-        className="eLLZRT"
-        size="xlarge"
+      <Badge
+        backgroundColor="#1A2B3C"
+        color="#1A293C"
+        hasBorder={true}
+        label={6}
+        size="medium"
       >
-        <Badge
+        <styled.span
           backgroundColor="#1A2B3C"
           color="#1A293C"
           hasBorder={true}
-          label={6}
           size="medium"
         >
-          <styled.span
-            backgroundColor="#1A2B3C"
+          <span
+            className="c2"
             color="#1A293C"
-            hasBorder={true}
             size="medium"
           >
-            <StyledComponent
-              backgroundColor="#1A2B3C"
-              color="#1A293C"
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-htpNat",
-                    "isStatic": false,
-                    "lastClassName": "bQSWNu",
-                    "rules": Array [
-                      "
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  &, .fa {
-  ",
-                      [Function],
-                      "
-  }
-
-  ",
-                      [Function],
-                      "
-
-  border-radius: 50%;
-  display: inline-block;
-  font-weight: 600;
-  text-align: center;
-  user-select: none;
-
-  .refresh-icon {
-    background-color: transparent;
-    position: relative;
-    top: -1px;
-    left: -1px;
-  }
-",
-                    ],
-                  },
-                  "displayName": "styled.span",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "sc-htpNat",
-                  "target": "span",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-              hasBorder={true}
-              size="medium"
-            >
-              <span
-                className="bQSWNu"
-                color="#1A293C"
-                size="medium"
-              >
-                6
-              </span>
-            </StyledComponent>
-          </styled.span>
-        </Badge>
-      </span>
-    </StyledComponent>
+            6
+          </span>
+        </styled.span>
+      </Badge>
+    </span>
   </styled.span>
 </Icon>
 `;
 
 exports[`<Icon /> should render icon with a custom size 1`] = `
+.c0 {
+  width: 1.28571em;
+}
+
+.c0.icon {
+  text-align: center;
+  font-size: 2.6rem;
+}
+
 <Icon
   customSize={2.6}
   isSpinning={false}
@@ -336,60 +185,26 @@ exports[`<Icon /> should render icon with a custom size 1`] = `
     customSize={2.6}
     size="medium"
   >
-    <StyledComponent
+    <i
       aria-hidden={true}
-      className="icon fa fa-check"
-      customSize={2.6}
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
-            "isStatic": false,
-            "lastClassName": "jdtxAT",
-            "rules": Array [
-              "
-   width: 1.28571em;
-
-  ",
-              [Function],
-              "
-
-  &.icon {
-    text-align: center;
-
-  ",
-              [Function],
-              "
-  }
-",
-            ],
-          },
-          "displayName": "styled.i",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
-          "target": "i",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+      className="icon fa fa-check c0"
       size="medium"
-    >
-      <i
-        aria-hidden={true}
-        className="icon fa fa-check jdtxAT"
-        size="medium"
-      />
-    </StyledComponent>
+    />
   </styled.i>
 </Icon>
 `;
 
 exports[`<Icon /> should render icon with colour 1`] = `
+.c0 {
+  width: 1.28571em;
+  color: #1A2B3C;
+}
+
+.c0.icon {
+  text-align: center;
+  font-size: 1rem;
+}
+
 <Icon
   color="#1A2B3C"
   isSpinning={false}
@@ -402,61 +217,26 @@ exports[`<Icon /> should render icon with colour 1`] = `
     color="#1A2B3C"
     size="medium"
   >
-    <StyledComponent
+    <i
       aria-hidden={true}
-      className="icon fa fa-check"
+      className="icon fa fa-check c0"
       color="#1A2B3C"
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
-            "isStatic": false,
-            "lastClassName": "gcIcGN",
-            "rules": Array [
-              "
-   width: 1.28571em;
-
-  ",
-              [Function],
-              "
-
-  &.icon {
-    text-align: center;
-
-  ",
-              [Function],
-              "
-  }
-",
-            ],
-          },
-          "displayName": "styled.i",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
-          "target": "i",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
       size="medium"
-    >
-      <i
-        aria-hidden={true}
-        className="icon fa fa-check gcIcGN"
-        color="#1A2B3C"
-        size="medium"
-      />
-    </StyledComponent>
+    />
   </styled.i>
 </Icon>
 `;
 
 exports[`<Icon /> should render icon with no size or colour 1`] = `
+.c0 {
+  width: 1.28571em;
+}
+
+.c0.icon {
+  text-align: center;
+  font-size: 1rem;
+}
+
 <Icon
   isSpinning={false}
   size="medium"
@@ -467,59 +247,25 @@ exports[`<Icon /> should render icon with no size or colour 1`] = `
     className="icon fa fa-check"
     size="medium"
   >
-    <StyledComponent
+    <i
       aria-hidden={true}
-      className="icon fa fa-check"
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
-            "isStatic": false,
-            "lastClassName": "gvHWRV",
-            "rules": Array [
-              "
-   width: 1.28571em;
-
-  ",
-              [Function],
-              "
-
-  &.icon {
-    text-align: center;
-
-  ",
-              [Function],
-              "
-  }
-",
-            ],
-          },
-          "displayName": "styled.i",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
-          "target": "i",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+      className="icon fa fa-check c0"
       size="medium"
-    >
-      <i
-        aria-hidden={true}
-        className="icon fa fa-check gvHWRV"
-        size="medium"
-      />
-    </StyledComponent>
+    />
   </styled.i>
 </Icon>
 `;
 
 exports[`<Icon /> should render icon with size 1`] = `
+.c0 {
+  width: 1.28571em;
+}
+
+.c0.icon {
+  text-align: center;
+  font-size: 1rem;
+}
+
 <Icon
   isSpinning={false}
   size="medium"
@@ -530,54 +276,11 @@ exports[`<Icon /> should render icon with size 1`] = `
     className="icon fa fa-check"
     size="medium"
   >
-    <StyledComponent
+    <i
       aria-hidden={true}
-      className="icon fa fa-check"
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
-            "isStatic": false,
-            "lastClassName": "gvHWRV",
-            "rules": Array [
-              "
-   width: 1.28571em;
-
-  ",
-              [Function],
-              "
-
-  &.icon {
-    text-align: center;
-
-  ",
-              [Function],
-              "
-  }
-",
-            ],
-          },
-          "displayName": "styled.i",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
-          "target": "i",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+      className="icon fa fa-check c0"
       size="medium"
-    >
-      <i
-        aria-hidden={true}
-        className="icon fa fa-check gvHWRV"
-        size="medium"
-      />
-    </StyledComponent>
+    />
   </styled.i>
 </Icon>
 `;

@@ -1,922 +1,603 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SectionList /> should render a section list with a titled section without props 1`] = `
-<SectionList>
-  <styled.div>
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-VigVT",
-            "isStatic": true,
-            "lastClassName": "jhxKbA",
-            "rules": Array [
-              "
-  @media only screen and (min-width: ",
-              "640",
-              "px) {
-    margin-left: ",
-              "24",
-              "px;
-    margin-right: ",
-              "24",
-              "px;
+@media only screen and (min-width:640px) {
+  .c0 {
+    margin-left: 24px;
+    margin-right: 24px;
   }
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-VigVT",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-    >
-      <div
-        className="jhxKbA"
-      >
-        <TitledSection>
-          <Styled(styled.div)>
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-kgoBCf",
-                    "isStatic": true,
-                    "lastClassName": "kwEPzG",
-                    "rules": Array [
-                      "
-  @media only screen and (min-width: ",
-                      "640",
-                      "px) {
-     border-bottom: 1px solid ",
-                      "#E1E6EB",
-                      ";
+}
 
-    :last-child {
-      border-bottom: 0;
-    }
-  }
-",
-                      "
-  @media only screen and (min-width: ",
-                      "640",
-                      "px) {
-    padding-top: ",
-                      "32",
-                      "px;
-    padding-bottom: ",
-                      "32",
-                      "px;
-  }
-",
-                    ],
-                  },
-                  "displayName": "Styled(styled.div)",
-                  "foldedComponentIds": Array [
-                    "sc-jTzLTM",
-                  ],
-                  "render": [Function],
-                  "styledComponentId": "sc-kgoBCf",
-                  "target": "div",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-            >
-              <div
-                className="kwEPzG"
-              >
-                <XYGrid
-                  gutterMarginX={false}
-                  gutterMarginY={false}
-                  gutterPaddingX={false}
-                  gutterPaddingY={false}
-                  vertical={false}
-                >
-                  <div
-                    className="ihrGridX"
-                  >
-                    <Cell
-                      size={
-                        Object {
-                          "min": 12,
-                        }
-                      }
-                    >
-                      <div
-                        className="ihrCell min-12"
-                      >
-                        <styled.div>
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-kGXeez",
-                                  "isStatic": true,
-                                  "lastClassName": "gLXEYS",
-                                  "rules": Array [
-                                    "
-  @media only screen and (max-width: ",
-                                    "639",
-                                    "px) {
-    padding: ",
-                                    "24",
-                                    "px ",
-                                    "16",
-                                    "px ",
-                                    "12",
-                                    "px;
-  }
-",
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-kGXeez",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                          >
-                            <div
-                              className="gLXEYS"
-                            >
-                              <XYGrid
-                                gutterMarginX={false}
-                                gutterMarginY={false}
-                                gutterPaddingX={false}
-                                gutterPaddingY={false}
-                                vertical={false}
-                                verticalAlignment="middle"
-                              >
-                                <div
-                                  className="ihrGridX align-middle"
-                                >
-                                  <Cell
-                                    size={
-                                      Object {
-                                        "desktop": "auto",
-                                        "min": 12,
-                                        "tablet": "auto",
-                                      }
-                                    }
-                                  >
-                                    <div
-                                      className="ihrCell desktop-auto tablet-auto min-12"
-                                    >
-                                      <Styled(SectionDescription)>
-                                        <StyledComponent
-                                          forwardedComponent={
-                                            Object {
-                                              "$$typeof": Symbol(react.forward_ref),
-                                              "attrs": Array [],
-                                              "componentStyle": ComponentStyle {
-                                                "componentId": "sc-kpOJdX",
-                                                "isStatic": true,
-                                                "lastClassName": "iORaxr",
-                                                "rules": Array [
-                                                  "
-  @media only screen and (max-width: ",
-                                                  "639",
-                                                  "px) {
-    padding-bottom: ",
-                                                  "12",
-                                                  "px;
+@media only screen and (min-width:640px) {
+  .c2 {
+    border-bottom: 1px solid #E1E6EB;
   }
 
-  @media only screen and (min-width: ",
-                                                  "640",
-                                                  "px) {
-    margin-right: ",
-                                                  "24",
-                                                  "px;
+  .c2:last-child {
+    border-bottom: 0;
   }
-",
-                                                ],
-                                              },
-                                              "displayName": "Styled(SectionDescription)",
-                                              "foldedComponentIds": Array [],
-                                              "render": [Function],
-                                              "styledComponentId": "sc-kpOJdX",
-                                              "target": [Function],
-                                              "toString": [Function],
-                                              "warnTooManyClasses": [Function],
-                                              "withComponent": [Function],
-                                              Symbol(Symbol.hasInstance): [Function],
-                                            }
-                                          }
-                                          forwardedRef={null}
-                                        >
-                                          <SectionDescription
-                                            className="iORaxr"
-                                            links={Array []}
-                                          >
-                                            <div
-                                              className="iORaxr"
-                                            />
-                                          </SectionDescription>
-                                        </StyledComponent>
-                                      </Styled(SectionDescription)>
-                                    </div>
-                                  </Cell>
-                                  <Cell
-                                    size={
-                                      Object {
-                                        "desktop": "shrink",
-                                        "min": 12,
-                                        "tablet": "shrink",
-                                      }
-                                    }
-                                  >
-                                    <div
-                                      className="ihrCell desktop-shrink tablet-shrink min-12"
-                                    />
-                                  </Cell>
-                                </div>
-                              </XYGrid>
-                            </div>
-                          </StyledComponent>
-                        </styled.div>
-                      </div>
-                    </Cell>
-                    <Cell
-                      size={
-                        Object {
-                          "min": 12,
-                        }
-                      }
-                    >
-                      <div
-                        className="ihrCell min-12"
-                      >
-                        <StyledTitledSectionBody>
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-dxgOiQ",
-                                  "isStatic": true,
-                                  "lastClassName": "fmwaVT",
-                                  "rules": Array [
-                                    "
-  @media only screen and (min-width: ",
-                                    "640",
-                                    "px) {
+}
+
+@media only screen and (min-width:640px) {
+  .c1 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c3 {
+    padding: 24px 16px 12px;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c4 {
+    padding-bottom: 12px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c4 {
+    margin-right: 24px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c5 {
     padding-top: 1.5rem;
   }
+}
 
-  @media only screen and (max-width: ",
-                                    "639",
-                                    "px) {
-    background-color: ",
-                                    "#FAFBFC",
-                                    ";
-    border-top: 1px solid ",
-                                    "#E1E6EB",
-                                    ";
-    border-bottom: 1px solid ",
-                                    "#E1E6EB",
-                                    ";
-    padding: ",
-                                    "24",
-                                    "px ",
-                                    "16",
-                                    "px;
+@media only screen and (max-width:639px) {
+  .c5 {
+    background-color: #FAFBFC;
+    border-top: 1px solid #E1E6EB;
+    border-bottom: 1px solid #E1E6EB;
+    padding: 24px 16px;
   }
-",
-                                  ],
-                                },
-                                "displayName": "StyledTitledSectionBody",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-dxgOiQ",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
+}
+
+<SectionList>
+  <styled.div>
+    <div
+      className="c0"
+    >
+      <TitledSection>
+        <Styled(styled.div)>
+          <styled.div
+            className="c1"
+          >
+            <div
+              className="c1 c2"
+            >
+              <XYGrid
+                gutterMarginX={false}
+                gutterMarginY={false}
+                gutterPaddingX={false}
+                gutterPaddingY={false}
+                vertical={false}
+              >
+                <div
+                  className="ihrGridX"
+                >
+                  <Cell
+                    size={
+                      Object {
+                        "min": 12,
+                      }
+                    }
+                  >
+                    <div
+                      className="ihrCell min-12"
+                    >
+                      <styled.div>
+                        <div
+                          className="c3"
+                        >
+                          <XYGrid
+                            gutterMarginX={false}
+                            gutterMarginY={false}
+                            gutterPaddingX={false}
+                            gutterPaddingY={false}
+                            vertical={false}
+                            verticalAlignment="middle"
                           >
                             <div
-                              className="fmwaVT"
+                              className="ihrGridX align-middle"
                             >
-                              section 1
+                              <Cell
+                                size={
+                                  Object {
+                                    "desktop": "auto",
+                                    "min": 12,
+                                    "tablet": "auto",
+                                  }
+                                }
+                              >
+                                <div
+                                  className="ihrCell desktop-auto tablet-auto min-12"
+                                >
+                                  <Styled(SectionDescription)>
+                                    <SectionDescription
+                                      className="c4"
+                                      links={Array []}
+                                    >
+                                      <div
+                                        className="c4"
+                                      />
+                                    </SectionDescription>
+                                  </Styled(SectionDescription)>
+                                </div>
+                              </Cell>
+                              <Cell
+                                size={
+                                  Object {
+                                    "desktop": "shrink",
+                                    "min": 12,
+                                    "tablet": "shrink",
+                                  }
+                                }
+                              >
+                                <div
+                                  className="ihrCell desktop-shrink tablet-shrink min-12"
+                                />
+                              </Cell>
                             </div>
-                          </StyledComponent>
-                        </StyledTitledSectionBody>
-                      </div>
-                    </Cell>
-                  </div>
-                </XYGrid>
-              </div>
-            </StyledComponent>
-          </Styled(styled.div)>
-        </TitledSection>
-      </div>
-    </StyledComponent>
+                          </XYGrid>
+                        </div>
+                      </styled.div>
+                    </div>
+                  </Cell>
+                  <Cell
+                    size={
+                      Object {
+                        "min": 12,
+                      }
+                    }
+                  >
+                    <div
+                      className="ihrCell min-12"
+                    >
+                      <StyledTitledSectionBody>
+                        <div
+                          className="c5"
+                        >
+                          section 1
+                        </div>
+                      </StyledTitledSectionBody>
+                    </div>
+                  </Cell>
+                </div>
+              </XYGrid>
+            </div>
+          </styled.div>
+        </Styled(styled.div)>
+      </TitledSection>
+    </div>
   </styled.div>
 </SectionList>
 `;
 
 exports[`<SectionList /> should render a section list with an annotated section without props 1`] = `
+@media only screen and (min-width:640px) {
+  .c0 {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c2 {
+    border-bottom: 1px solid #E1E6EB;
+  }
+
+  .c2:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c1 {
+    padding: 24px 16px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c1 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c5 {
+    margin-left: 24px;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c5 {
+    background-color: #FAFBFC;
+    border-top: 1px solid #E1E6EB;
+    border-bottom: 1px solid #E1E6EB;
+    padding: 24px 16px;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c4 {
+    padding: 24px 16px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c4 {
+    margin-right: 24px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c3 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
 <SectionList>
   <styled.div>
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-VigVT",
-            "isStatic": true,
-            "lastClassName": "jhxKbA",
-            "rules": Array [
-              "
-  @media only screen and (min-width: ",
-              "640",
-              "px) {
-    margin-left: ",
-              "24",
-              "px;
-    margin-right: ",
-              "24",
-              "px;
-  }
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-VigVT",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
     >
-      <div
-        className="jhxKbA"
+      <Styled(styled.div)>
+        <styled.div
+          className="c1"
+        >
+          <div
+            className="c1 c2"
+          >
+            section 1
+          </div>
+        </styled.div>
+      </Styled(styled.div)>
+      <AnnotatedSection
+        links={Array []}
       >
         <Styled(styled.div)>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-jzJRlG",
-                  "isStatic": true,
-                  "lastClassName": "gtSRLE",
-                  "rules": Array [
-                    "
-  @media only screen and (min-width: ",
-                    "640",
-                    "px) {
-     border-bottom: 1px solid ",
-                    "#E1E6EB",
-                    ";
-
-    :last-child {
-      border-bottom: 0;
-    }
-  }
-",
-                    "
-  @media only screen and (max-width: ",
-                    "639",
-                    "px) {
-    padding: ",
-                    "24",
-                    "px ",
-                    "16",
-                    "px;
-  }
-
-  @media only screen and (min-width: ",
-                    "640",
-                    "px) {
-    padding-top: ",
-                    "32",
-                    "px;
-    padding-bottom: ",
-                    "32",
-                    "px;
-  }
-",
-                  ],
-                },
-                "displayName": "Styled(styled.div)",
-                "foldedComponentIds": Array [
-                  "sc-jTzLTM",
-                ],
-                "render": [Function],
-                "styledComponentId": "sc-jzJRlG",
-                "target": "div",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
+          <styled.div
+            className="c3"
           >
             <div
-              className="gtSRLE"
+              className="c3 c2"
             >
-              section 1
-            </div>
-          </StyledComponent>
-        </Styled(styled.div)>
-        <AnnotatedSection
-          links={Array []}
-        >
-          <Styled(styled.div)>
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-chPdSV",
-                    "isStatic": true,
-                    "lastClassName": "jEjlJs",
-                    "rules": Array [
-                      "
-  @media only screen and (min-width: ",
-                      "640",
-                      "px) {
-     border-bottom: 1px solid ",
-                      "#E1E6EB",
-                      ";
-
-    :last-child {
-      border-bottom: 0;
-    }
-  }
-",
-                      "
-  @media only screen and (min-width: ",
-                      "640",
-                      "px) {
-    padding-top: ",
-                      "32",
-                      "px;
-    padding-bottom: ",
-                      "32",
-                      "px;
-  }
-",
-                    ],
-                  },
-                  "displayName": "Styled(styled.div)",
-                  "foldedComponentIds": Array [
-                    "sc-jTzLTM",
-                  ],
-                  "render": [Function],
-                  "styledComponentId": "sc-chPdSV",
-                  "target": "div",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-            >
-              <div
-                className="jEjlJs"
+              <XYGrid
+                gutterMarginX={false}
+                gutterMarginY={false}
+                gutterPaddingX={false}
+                gutterPaddingY={false}
+                vertical={false}
               >
-                <XYGrid
-                  gutterMarginX={false}
-                  gutterMarginY={false}
-                  gutterPaddingX={false}
-                  gutterPaddingY={false}
-                  vertical={false}
+                <div
+                  className="ihrGridX"
                 >
-                  <div
-                    className="ihrGridX"
-                  >
-                    <Cell
-                      size={
-                        Object {
-                          "desktop": 4,
-                          "min": 12,
-                          "tablet": 4,
-                        }
+                  <Cell
+                    size={
+                      Object {
+                        "desktop": 4,
+                        "min": 12,
+                        "tablet": 4,
                       }
+                    }
+                  >
+                    <div
+                      className="ihrCell desktop-4 tablet-4 min-12"
                     >
-                      <div
-                        className="ihrCell desktop-4 tablet-4 min-12"
+                      <Styled(SectionDescription)
+                        links={Array []}
                       >
-                        <Styled(SectionDescription)
+                        <SectionDescription
+                          className="c4"
                           links={Array []}
                         >
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-kAzzGY",
-                                  "isStatic": true,
-                                  "lastClassName": "mcZUJ",
-                                  "rules": Array [
-                                    "
-  @media only screen and (max-width: ",
-                                    "639",
-                                    "px) {
-    padding: ",
-                                    "24",
-                                    "px ",
-                                    "16",
-                                    "px;
-  }
-
-  @media only screen and (min-width: ",
-                                    "640",
-                                    "px) {
-    margin-right: ",
-                                    "24",
-                                    "px;
-  }
-",
-                                  ],
-                                },
-                                "displayName": "Styled(SectionDescription)",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-kAzzGY",
-                                "target": [Function],
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            links={Array []}
-                          >
-                            <SectionDescription
-                              className="mcZUJ"
-                              links={Array []}
-                            >
-                              <div
-                                className="mcZUJ"
-                              />
-                            </SectionDescription>
-                          </StyledComponent>
-                        </Styled(SectionDescription)>
-                      </div>
-                    </Cell>
-                    <Cell
-                      size={
-                        Object {
-                          "desktop": 8,
-                          "min": 12,
-                          "tablet": 8,
-                        }
+                          <div
+                            className="c4"
+                          />
+                        </SectionDescription>
+                      </Styled(SectionDescription)>
+                    </div>
+                  </Cell>
+                  <Cell
+                    size={
+                      Object {
+                        "desktop": 8,
+                        "min": 12,
+                        "tablet": 8,
                       }
+                    }
+                  >
+                    <div
+                      className="ihrCell desktop-8 tablet-8 min-12"
                     >
-                      <div
-                        className="ihrCell desktop-8 tablet-8 min-12"
-                      >
-                        <StyledAnnotatedSectionBody>
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-cSHVUG",
-                                  "isStatic": true,
-                                  "lastClassName": "kuElXM",
-                                  "rules": Array [
-                                    "
-  @media only screen and (min-width: ",
-                                    "640",
-                                    "px) {
-    margin-left: ",
-                                    "24",
-                                    "px;
-  }
-
-  @media only screen and (max-width: ",
-                                    "639",
-                                    "px) {
-    background-color: ",
-                                    "#FAFBFC",
-                                    ";
-    border-top: 1px solid ",
-                                    "#E1E6EB",
-                                    ";
-    border-bottom: 1px solid ",
-                                    "#E1E6EB",
-                                    ";
-    padding: ",
-                                    "24",
-                                    "px ",
-                                    "16",
-                                    "px;
-  }
-",
-                                  ],
-                                },
-                                "displayName": "StyledAnnotatedSectionBody",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-cSHVUG",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                          >
-                            <div
-                              className="kuElXM"
-                            >
-                              section 2
-                            </div>
-                          </StyledComponent>
-                        </StyledAnnotatedSectionBody>
-                      </div>
-                    </Cell>
-                  </div>
-                </XYGrid>
-              </div>
-            </StyledComponent>
-          </Styled(styled.div)>
-        </AnnotatedSection>
-      </div>
-    </StyledComponent>
+                      <StyledAnnotatedSectionBody>
+                        <div
+                          className="c5"
+                        >
+                          section 2
+                        </div>
+                      </StyledAnnotatedSectionBody>
+                    </div>
+                  </Cell>
+                </div>
+              </XYGrid>
+            </div>
+          </styled.div>
+        </Styled(styled.div)>
+      </AnnotatedSection>
+    </div>
   </styled.div>
 </SectionList>
 `;
 
 exports[`<SectionList /> should render a sectionList 1`] = `
+.c8 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  display: inline;
+}
+
+.c8,
+.c8:link,
+.c8:visited {
+  color: #432DF3;
+}
+
+.c8:hover {
+  color: #2512B3;
+}
+
+.c8:active {
+  color: #0F0080;
+}
+
+.c6 {
+  font-size: 18px;
+  line-height: 24px;
+  -webkit-letter-spacing: -.02em;
+  -moz-letter-spacing: -.02em;
+  -ms-letter-spacing: -.02em;
+  letter-spacing: -.02em;
+  color: #424F5C;
+  font-weight: 600;
+}
+
+.c7 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #667380;
+  font-weight: 400;
+  display: block;
+}
+
+.c13 {
+  font-size: 18px;
+  line-height: 24px;
+  -webkit-letter-spacing: -.02em;
+  -moz-letter-spacing: -.02em;
+  -ms-letter-spacing: -.02em;
+  letter-spacing: -.02em;
+  color: #424F5C;
+  font-weight: 600;
+}
+
+.c14 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #667380;
+  font-weight: 400;
+  display: block;
+}
+
+@media only screen and (min-width:640px) {
+  .c0 {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c2 {
+    border-bottom: 1px solid #E1E6EB;
+  }
+
+  .c2:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c3 {
+    padding: 0px 16px;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c1 {
+    padding: 24px 16px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c1 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c9 {
+    margin-left: 24px;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c9 {
+    background-color: #FAFBFC;
+    border-top: 1px solid #E1E6EB;
+    border-bottom: 1px solid #E1E6EB;
+    padding: 24px 16px;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c5 {
+    padding: 24px 16px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c5 {
+    margin-right: 24px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c4 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c10 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c11 {
+    padding: 24px 16px 12px;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c12 {
+    padding-bottom: 12px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c12 {
+    margin-right: 24px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c15 {
+    padding-top: 1.5rem;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c15 {
+    background-color: #FAFBFC;
+    border-top: 1px solid #E1E6EB;
+    border-bottom: 1px solid #E1E6EB;
+    padding: 24px 16px;
+  }
+}
+
 <SectionList>
   <styled.div>
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-VigVT",
-            "isStatic": true,
-            "lastClassName": "jhxKbA",
-            "rules": Array [
-              "
-  @media only screen and (min-width: ",
-              "640",
-              "px) {
-    margin-left: ",
-              "24",
-              "px;
-    margin-right: ",
-              "24",
-              "px;
-  }
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-VigVT",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
     >
-      <div
-        className="jhxKbA"
+      <Styled(styled.div)>
+        <styled.div
+          className="c1"
+        >
+          <div
+            className="c1 c2"
+          >
+            section 1
+          </div>
+        </styled.div>
+      </Styled(styled.div)>
+      <styled.div>
+        <div
+          className="c3"
+        >
+          section 2
+        </div>
+      </styled.div>
+      <AnnotatedSection
+        description="Annotated Description"
+        header="Annotated Section"
+        linkProps={
+          Object {
+            "href": "#",
+          }
+        }
+        linkText="Annotated Link"
+        links={Array []}
       >
         <Styled(styled.div)>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-jzJRlG",
-                  "isStatic": true,
-                  "lastClassName": "gtSRLE",
-                  "rules": Array [
-                    "
-  @media only screen and (min-width: ",
-                    "640",
-                    "px) {
-     border-bottom: 1px solid ",
-                    "#E1E6EB",
-                    ";
-
-    :last-child {
-      border-bottom: 0;
-    }
-  }
-",
-                    "
-  @media only screen and (max-width: ",
-                    "639",
-                    "px) {
-    padding: ",
-                    "24",
-                    "px ",
-                    "16",
-                    "px;
-  }
-
-  @media only screen and (min-width: ",
-                    "640",
-                    "px) {
-    padding-top: ",
-                    "32",
-                    "px;
-    padding-bottom: ",
-                    "32",
-                    "px;
-  }
-",
-                  ],
-                },
-                "displayName": "Styled(styled.div)",
-                "foldedComponentIds": Array [
-                  "sc-jTzLTM",
-                ],
-                "render": [Function],
-                "styledComponentId": "sc-jzJRlG",
-                "target": "div",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
+          <styled.div
+            className="c4"
           >
             <div
-              className="gtSRLE"
+              className="c4 c2"
             >
-              section 1
-            </div>
-          </StyledComponent>
-        </Styled(styled.div)>
-        <styled.div>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-fjdhpX",
-                  "isStatic": true,
-                  "lastClassName": "plWQs",
-                  "rules": Array [
-                    "
-  @media only screen and (max-width: ",
-                    "639",
-                    "px) {
-    padding: 0px ",
-                    "16",
-                    "px;
-  }
-",
-                  ],
-                },
-                "displayName": "styled.div",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-fjdhpX",
-                "target": "div",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-          >
-            <div
-              className="plWQs"
-            >
-              section 2
-            </div>
-          </StyledComponent>
-        </styled.div>
-        <AnnotatedSection
-          description="Annotated Description"
-          header="Annotated Section"
-          linkProps={
-            Object {
-              "href": "#",
-            }
-          }
-          linkText="Annotated Link"
-          links={Array []}
-        >
-          <Styled(styled.div)>
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-chPdSV",
-                    "isStatic": true,
-                    "lastClassName": "jEjlJs",
-                    "rules": Array [
-                      "
-  @media only screen and (min-width: ",
-                      "640",
-                      "px) {
-     border-bottom: 1px solid ",
-                      "#E1E6EB",
-                      ";
-
-    :last-child {
-      border-bottom: 0;
-    }
-  }
-",
-                      "
-  @media only screen and (min-width: ",
-                      "640",
-                      "px) {
-    padding-top: ",
-                      "32",
-                      "px;
-    padding-bottom: ",
-                      "32",
-                      "px;
-  }
-",
-                    ],
-                  },
-                  "displayName": "Styled(styled.div)",
-                  "foldedComponentIds": Array [
-                    "sc-jTzLTM",
-                  ],
-                  "render": [Function],
-                  "styledComponentId": "sc-chPdSV",
-                  "target": "div",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-            >
-              <div
-                className="jEjlJs"
+              <XYGrid
+                gutterMarginX={false}
+                gutterMarginY={false}
+                gutterPaddingX={false}
+                gutterPaddingY={false}
+                vertical={false}
               >
-                <XYGrid
-                  gutterMarginX={false}
-                  gutterMarginY={false}
-                  gutterPaddingX={false}
-                  gutterPaddingY={false}
-                  vertical={false}
+                <div
+                  className="ihrGridX"
                 >
-                  <div
-                    className="ihrGridX"
-                  >
-                    <Cell
-                      size={
-                        Object {
-                          "desktop": 4,
-                          "min": 12,
-                          "tablet": 4,
-                        }
+                  <Cell
+                    size={
+                      Object {
+                        "desktop": 4,
+                        "min": 12,
+                        "tablet": 4,
                       }
+                    }
+                  >
+                    <div
+                      className="ihrCell desktop-4 tablet-4 min-12"
                     >
-                      <div
-                        className="ihrCell desktop-4 tablet-4 min-12"
+                      <Styled(SectionDescription)
+                        description="Annotated Description"
+                        header="Annotated Section"
+                        linkProps={
+                          Object {
+                            "href": "#",
+                          }
+                        }
+                        linkText="Annotated Link"
+                        links={Array []}
                       >
-                        <Styled(SectionDescription)
+                        <SectionDescription
+                          className="c5"
                           description="Annotated Description"
                           header="Annotated Section"
                           linkProps={
@@ -927,1231 +608,563 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                           linkText="Annotated Link"
                           links={Array []}
                         >
-                          <StyledComponent
-                            description="Annotated Description"
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-kAzzGY",
-                                  "isStatic": true,
-                                  "lastClassName": "mcZUJ",
-                                  "rules": Array [
-                                    "
-  @media only screen and (max-width: ",
-                                    "639",
-                                    "px) {
-    padding: ",
-                                    "24",
-                                    "px ",
-                                    "16",
-                                    "px;
-  }
-
-  @media only screen and (min-width: ",
-                                    "640",
-                                    "px) {
-    margin-right: ",
-                                    "24",
-                                    "px;
-  }
-",
-                                  ],
-                                },
-                                "displayName": "Styled(SectionDescription)",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-kAzzGY",
-                                "target": [Function],
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            header="Annotated Section"
-                            linkProps={
-                              Object {
-                                "href": "#",
-                              }
-                            }
-                            linkText="Annotated Link"
-                            links={Array []}
+                          <div
+                            className="c5"
                           >
-                            <SectionDescription
-                              className="mcZUJ"
-                              description="Annotated Description"
-                              header="Annotated Section"
-                              linkProps={
-                                Object {
-                                  "href": "#",
-                                }
-                              }
-                              linkText="Annotated Link"
-                              links={Array []}
+                            <Text
+                              color="#424F5C"
+                              isInline={true}
+                              tag="h2"
+                              type="heading"
                             >
-                              <div
-                                className="mcZUJ"
+                              <styled.h2
+                                color="#424F5C"
+                                data-component-type="text"
+                                isInline={true}
+                                textType="heading"
                               >
-                                <Text
+                                <h2
+                                  className="c6"
                                   color="#424F5C"
-                                  isInline={true}
-                                  tag="h2"
-                                  type="heading"
+                                  data-component-type="text"
                                 >
-                                  <styled.h2
-                                    color="#424F5C"
-                                    data-component-type="text"
-                                    isInline={true}
-                                    textType="heading"
-                                  >
-                                    <StyledComponent
-                                      color="#424F5C"
-                                      data-component-type="text"
-                                      forwardedComponent={
-                                        Object {
-                                          "$$typeof": Symbol(react.forward_ref),
-                                          "attrs": Array [],
-                                          "componentStyle": ComponentStyle {
-                                            "componentId": "sc-ckVGcZ",
-                                            "isStatic": false,
-                                            "lastClassName": "chOFyI",
-                                            "rules": Array [
-                                              "
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-",
-                                            ],
-                                          },
-                                          "displayName": "styled.h2",
-                                          "foldedComponentIds": Array [],
-                                          "render": [Function],
-                                          "styledComponentId": "sc-ckVGcZ",
-                                          "target": "h2",
-                                          "toString": [Function],
-                                          "warnTooManyClasses": [Function],
-                                          "withComponent": [Function],
-                                        }
-                                      }
-                                      forwardedRef={null}
-                                      isInline={true}
-                                      textType="heading"
-                                    >
-                                      <h2
-                                        className="chOFyI"
-                                        color="#424F5C"
-                                        data-component-type="text"
-                                      >
-                                        Annotated Section
-                                      </h2>
-                                    </StyledComponent>
-                                  </styled.h2>
-                                </Text>
-                                <Text
+                                  Annotated Section
+                                </h2>
+                              </styled.h2>
+                            </Text>
+                            <Text
+                              color="#667380"
+                              isInline={false}
+                              tag="span"
+                              type="small"
+                            >
+                              <styled.span
+                                color="#667380"
+                                data-component-type="text"
+                                isInline={false}
+                                textType="small"
+                              >
+                                <span
+                                  className="c7"
                                   color="#667380"
-                                  isInline={false}
-                                  tag="span"
-                                  type="small"
+                                  data-component-type="text"
                                 >
-                                  <styled.span
-                                    color="#667380"
-                                    data-component-type="text"
-                                    isInline={false}
-                                    textType="small"
-                                  >
-                                    <StyledComponent
-                                      color="#667380"
-                                      data-component-type="text"
-                                      forwardedComponent={
-                                        Object {
-                                          "$$typeof": Symbol(react.forward_ref),
-                                          "attrs": Array [],
-                                          "componentStyle": ComponentStyle {
-                                            "componentId": "sc-jKJlTe",
-                                            "isStatic": false,
-                                            "lastClassName": "hXTtfO",
-                                            "rules": Array [
-                                              "
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-",
-                                            ],
-                                          },
-                                          "displayName": "styled.span",
-                                          "foldedComponentIds": Array [],
-                                          "render": [Function],
-                                          "styledComponentId": "sc-jKJlTe",
-                                          "target": "span",
-                                          "toString": [Function],
-                                          "warnTooManyClasses": [Function],
-                                          "withComponent": [Function],
-                                        }
-                                      }
-                                      forwardedRef={null}
-                                      isInline={false}
-                                      textType="small"
-                                    >
-                                      <span
-                                        className="hXTtfO"
-                                        color="#667380"
-                                        data-component-type="text"
-                                      >
-                                        Annotated Description
-                                      </span>
-                                    </StyledComponent>
-                                  </styled.span>
-                                </Text>
-                                <TextLink
+                                  Annotated Description
+                                </span>
+                              </styled.span>
+                            </Text>
+                            <TextLink
+                              href="#"
+                              isInline={true}
+                              textType="small"
+                              type="anchor"
+                            >
+                              <Styled(Component)
+                                href="#"
+                                isInline={true}
+                                textType="small"
+                                type="anchor"
+                              >
+                                <Component
+                                  className="c8"
                                   href="#"
                                   isInline={true}
                                   textType="small"
                                   type="anchor"
                                 >
-                                  <Styled(Component)
+                                  <Anchor
+                                    className="c8"
                                     href="#"
-                                    isInline={true}
-                                    textType="small"
                                     type="anchor"
                                   >
-                                    <StyledComponent
-                                      forwardedComponent={
-                                        Object {
-                                          "$$typeof": Symbol(react.forward_ref),
-                                          "attrs": Array [],
-                                          "componentStyle": ComponentStyle {
-                                            "componentId": "sc-EHOje",
-                                            "isStatic": false,
-                                            "lastClassName": "egRpnQ",
-                                            "rules": Array [
-                                              "
-  ",
-                                              "
-  transition: color .25s ease-out;
-  cursor: pointer;
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  &,
-  &:link,
-  &:visited {
-    color: ",
-                                              "#432DF3",
-                                              ";
-  }
-
-  &:hover {
-    color: ",
-                                              "#2512B3",
-                                              ";
-    ",
-                                              [Function],
-                                              "
-  }
-
-  &:active {
-    color: ",
-                                              "#0F0080",
-                                              ";
-  }
-",
-                                              ";
-",
-                                            ],
-                                          },
-                                          "displayName": "Styled(Component)",
-                                          "foldedComponentIds": Array [],
-                                          "render": [Function],
-                                          "styledComponentId": "sc-EHOje",
-                                          "target": [Function],
-                                          "toString": [Function],
-                                          "warnTooManyClasses": [Function],
-                                          "withComponent": [Function],
-                                          Symbol(Symbol.hasInstance): [Function],
-                                        }
-                                      }
-                                      forwardedRef={null}
+                                    <a
+                                      className="c8"
                                       href="#"
-                                      isInline={true}
-                                      textType="small"
                                       type="anchor"
                                     >
-                                      <Component
-                                        className="egRpnQ"
-                                        href="#"
-                                        isInline={true}
-                                        textType="small"
-                                        type="anchor"
-                                      >
-                                        <Anchor
-                                          className="egRpnQ"
-                                          href="#"
-                                          type="anchor"
-                                        >
-                                          <a
-                                            className="egRpnQ"
-                                            href="#"
-                                            type="anchor"
-                                          >
-                                            Annotated Link
-                                          </a>
-                                        </Anchor>
-                                      </Component>
-                                    </StyledComponent>
-                                  </Styled(Component)>
-                                </TextLink>
-                              </div>
-                            </SectionDescription>
-                          </StyledComponent>
-                        </Styled(SectionDescription)>
-                      </div>
-                    </Cell>
-                    <Cell
-                      size={
-                        Object {
-                          "desktop": 8,
-                          "min": 12,
-                          "tablet": 8,
-                        }
+                                      Annotated Link
+                                    </a>
+                                  </Anchor>
+                                </Component>
+                              </Styled(Component)>
+                            </TextLink>
+                          </div>
+                        </SectionDescription>
+                      </Styled(SectionDescription)>
+                    </div>
+                  </Cell>
+                  <Cell
+                    size={
+                      Object {
+                        "desktop": 8,
+                        "min": 12,
+                        "tablet": 8,
                       }
-                    >
-                      <div
-                        className="ihrCell desktop-8 tablet-8 min-12"
-                      >
-                        <StyledAnnotatedSectionBody>
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-cSHVUG",
-                                  "isStatic": true,
-                                  "lastClassName": "kuElXM",
-                                  "rules": Array [
-                                    "
-  @media only screen and (min-width: ",
-                                    "640",
-                                    "px) {
-    margin-left: ",
-                                    "24",
-                                    "px;
-  }
-
-  @media only screen and (max-width: ",
-                                    "639",
-                                    "px) {
-    background-color: ",
-                                    "#FAFBFC",
-                                    ";
-    border-top: 1px solid ",
-                                    "#E1E6EB",
-                                    ";
-    border-bottom: 1px solid ",
-                                    "#E1E6EB",
-                                    ";
-    padding: ",
-                                    "24",
-                                    "px ",
-                                    "16",
-                                    "px;
-  }
-",
-                                  ],
-                                },
-                                "displayName": "StyledAnnotatedSectionBody",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-cSHVUG",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                          >
-                            <div
-                              className="kuElXM"
-                            >
-                              section 2
-                            </div>
-                          </StyledComponent>
-                        </StyledAnnotatedSectionBody>
-                      </div>
-                    </Cell>
-                  </div>
-                </XYGrid>
-              </div>
-            </StyledComponent>
-          </Styled(styled.div)>
-        </AnnotatedSection>
-        <TitledSection
-          actionItems={
-            Array [
-              <Button
-                hasLegacyMargins={false}
-                iconAlignment="left"
-                showSpinner={false}
-                type="primary"
-              >
-                Action 1
-              </Button>,
-              <Button
-                hasLegacyMargins={false}
-                iconAlignment="left"
-                showSpinner={false}
-                type="primary"
-              >
-                Action 2
-              </Button>,
-            ]
-          }
-          description="Titled Description"
-          header="Titled Section"
-        >
-          <Styled(styled.div)>
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-kgoBCf",
-                    "isStatic": true,
-                    "lastClassName": "kwEPzG",
-                    "rules": Array [
-                      "
-  @media only screen and (min-width: ",
-                      "640",
-                      "px) {
-     border-bottom: 1px solid ",
-                      "#E1E6EB",
-                      ";
-
-    :last-child {
-      border-bottom: 0;
-    }
-  }
-",
-                      "
-  @media only screen and (min-width: ",
-                      "640",
-                      "px) {
-    padding-top: ",
-                      "32",
-                      "px;
-    padding-bottom: ",
-                      "32",
-                      "px;
-  }
-",
-                    ],
-                  },
-                  "displayName": "Styled(styled.div)",
-                  "foldedComponentIds": Array [
-                    "sc-jTzLTM",
-                  ],
-                  "render": [Function],
-                  "styledComponentId": "sc-kgoBCf",
-                  "target": "div",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-            >
-              <div
-                className="kwEPzG"
-              >
-                <XYGrid
-                  gutterMarginX={false}
-                  gutterMarginY={false}
-                  gutterPaddingX={false}
-                  gutterPaddingY={false}
-                  vertical={false}
-                >
-                  <div
-                    className="ihrGridX"
+                    }
                   >
-                    <Cell
-                      size={
-                        Object {
-                          "min": 12,
-                        }
-                      }
+                    <div
+                      className="ihrCell desktop-8 tablet-8 min-12"
                     >
-                      <div
-                        className="ihrCell min-12"
-                      >
-                        <styled.div>
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-kGXeez",
-                                  "isStatic": true,
-                                  "lastClassName": "gLXEYS",
-                                  "rules": Array [
-                                    "
-  @media only screen and (max-width: ",
-                                    "639",
-                                    "px) {
-    padding: ",
-                                    "24",
-                                    "px ",
-                                    "16",
-                                    "px ",
-                                    "12",
-                                    "px;
-  }
-",
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-kGXeez",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
+                      <StyledAnnotatedSectionBody>
+                        <div
+                          className="c9"
+                        >
+                          section 2
+                        </div>
+                      </StyledAnnotatedSectionBody>
+                    </div>
+                  </Cell>
+                </div>
+              </XYGrid>
+            </div>
+          </styled.div>
+        </Styled(styled.div)>
+      </AnnotatedSection>
+      <TitledSection
+        actionItems={
+          Array [
+            <Button
+              hasLegacyMargins={false}
+              iconAlignment="left"
+              showSpinner={false}
+              type="primary"
+            >
+              Action 1
+            </Button>,
+            <Button
+              hasLegacyMargins={false}
+              iconAlignment="left"
+              showSpinner={false}
+              type="primary"
+            >
+              Action 2
+            </Button>,
+          ]
+        }
+        description="Titled Description"
+        header="Titled Section"
+      >
+        <Styled(styled.div)>
+          <styled.div
+            className="c10"
+          >
+            <div
+              className="c10 c2"
+            >
+              <XYGrid
+                gutterMarginX={false}
+                gutterMarginY={false}
+                gutterPaddingX={false}
+                gutterPaddingY={false}
+                vertical={false}
+              >
+                <div
+                  className="ihrGridX"
+                >
+                  <Cell
+                    size={
+                      Object {
+                        "min": 12,
+                      }
+                    }
+                  >
+                    <div
+                      className="ihrCell min-12"
+                    >
+                      <styled.div>
+                        <div
+                          className="c11"
+                        >
+                          <XYGrid
+                            gutterMarginX={false}
+                            gutterMarginY={false}
+                            gutterPaddingX={false}
+                            gutterPaddingY={false}
+                            vertical={false}
+                            verticalAlignment="middle"
                           >
                             <div
-                              className="gLXEYS"
+                              className="ihrGridX align-middle"
                             >
-                              <XYGrid
-                                gutterMarginX={false}
-                                gutterMarginY={false}
-                                gutterPaddingX={false}
-                                gutterPaddingY={false}
-                                vertical={false}
-                                verticalAlignment="middle"
+                              <Cell
+                                size={
+                                  Object {
+                                    "desktop": "auto",
+                                    "min": 12,
+                                    "tablet": "auto",
+                                  }
+                                }
                               >
                                 <div
-                                  className="ihrGridX align-middle"
+                                  className="ihrCell desktop-auto tablet-auto min-12"
                                 >
-                                  <Cell
-                                    size={
-                                      Object {
-                                        "desktop": "auto",
-                                        "min": 12,
-                                        "tablet": "auto",
-                                      }
-                                    }
+                                  <Styled(SectionDescription)
+                                    description="Titled Description"
+                                    header="Titled Section"
                                   >
-                                    <div
-                                      className="ihrCell desktop-auto tablet-auto min-12"
+                                    <SectionDescription
+                                      className="c12"
+                                      description="Titled Description"
+                                      header="Titled Section"
+                                      links={Array []}
                                     >
-                                      <Styled(SectionDescription)
-                                        description="Titled Description"
-                                        header="Titled Section"
+                                      <div
+                                        className="c12"
                                       >
-                                        <StyledComponent
-                                          description="Titled Description"
-                                          forwardedComponent={
-                                            Object {
-                                              "$$typeof": Symbol(react.forward_ref),
-                                              "attrs": Array [],
-                                              "componentStyle": ComponentStyle {
-                                                "componentId": "sc-kpOJdX",
-                                                "isStatic": true,
-                                                "lastClassName": "iORaxr",
-                                                "rules": Array [
-                                                  "
-  @media only screen and (max-width: ",
-                                                  "639",
-                                                  "px) {
-    padding-bottom: ",
-                                                  "12",
-                                                  "px;
-  }
-
-  @media only screen and (min-width: ",
-                                                  "640",
-                                                  "px) {
-    margin-right: ",
-                                                  "24",
-                                                  "px;
-  }
-",
-                                                ],
-                                              },
-                                              "displayName": "Styled(SectionDescription)",
-                                              "foldedComponentIds": Array [],
-                                              "render": [Function],
-                                              "styledComponentId": "sc-kpOJdX",
-                                              "target": [Function],
-                                              "toString": [Function],
-                                              "warnTooManyClasses": [Function],
-                                              "withComponent": [Function],
-                                              Symbol(Symbol.hasInstance): [Function],
-                                            }
-                                          }
-                                          forwardedRef={null}
-                                          header="Titled Section"
+                                        <Text
+                                          color="#424F5C"
+                                          isInline={true}
+                                          tag="h2"
+                                          type="heading"
                                         >
-                                          <SectionDescription
-                                            className="iORaxr"
-                                            description="Titled Description"
-                                            header="Titled Section"
-                                            links={Array []}
+                                          <styled.h2
+                                            color="#424F5C"
+                                            data-component-type="text"
+                                            isInline={true}
+                                            textType="heading"
                                           >
-                                            <div
-                                              className="iORaxr"
+                                            <h2
+                                              className="c13"
+                                              color="#424F5C"
+                                              data-component-type="text"
                                             >
-                                              <Text
-                                                color="#424F5C"
-                                                isInline={true}
-                                                tag="h2"
-                                                type="heading"
-                                              >
-                                                <styled.h2
-                                                  color="#424F5C"
-                                                  data-component-type="text"
-                                                  isInline={true}
-                                                  textType="heading"
-                                                >
-                                                  <StyledComponent
-                                                    color="#424F5C"
-                                                    data-component-type="text"
-                                                    forwardedComponent={
-                                                      Object {
-                                                        "$$typeof": Symbol(react.forward_ref),
-                                                        "attrs": Array [],
-                                                        "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-eNQAEJ",
-                                                          "isStatic": false,
-                                                          "lastClassName": "bDHOBC",
-                                                          "rules": Array [
-                                                            "
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-",
-                                                          ],
-                                                        },
-                                                        "displayName": "styled.h2",
-                                                        "foldedComponentIds": Array [],
-                                                        "render": [Function],
-                                                        "styledComponentId": "sc-eNQAEJ",
-                                                        "target": "h2",
-                                                        "toString": [Function],
-                                                        "warnTooManyClasses": [Function],
-                                                        "withComponent": [Function],
-                                                      }
-                                                    }
-                                                    forwardedRef={null}
-                                                    isInline={true}
-                                                    textType="heading"
-                                                  >
-                                                    <h2
-                                                      className="bDHOBC"
-                                                      color="#424F5C"
-                                                      data-component-type="text"
-                                                    >
-                                                      Titled Section
-                                                    </h2>
-                                                  </StyledComponent>
-                                                </styled.h2>
-                                              </Text>
-                                              <Text
-                                                color="#667380"
-                                                isInline={false}
-                                                tag="span"
-                                                type="small"
-                                              >
-                                                <styled.span
-                                                  color="#667380"
-                                                  data-component-type="text"
-                                                  isInline={false}
-                                                  textType="small"
-                                                >
-                                                  <StyledComponent
-                                                    color="#667380"
-                                                    data-component-type="text"
-                                                    forwardedComponent={
-                                                      Object {
-                                                        "$$typeof": Symbol(react.forward_ref),
-                                                        "attrs": Array [],
-                                                        "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-hMqMXs",
-                                                          "isStatic": false,
-                                                          "lastClassName": "gjjFwY",
-                                                          "rules": Array [
-                                                            "
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-",
-                                                          ],
-                                                        },
-                                                        "displayName": "styled.span",
-                                                        "foldedComponentIds": Array [],
-                                                        "render": [Function],
-                                                        "styledComponentId": "sc-hMqMXs",
-                                                        "target": "span",
-                                                        "toString": [Function],
-                                                        "warnTooManyClasses": [Function],
-                                                        "withComponent": [Function],
-                                                      }
-                                                    }
-                                                    forwardedRef={null}
-                                                    isInline={false}
-                                                    textType="small"
-                                                  >
-                                                    <span
-                                                      className="gjjFwY"
-                                                      color="#667380"
-                                                      data-component-type="text"
-                                                    >
-                                                      Titled Description
-                                                    </span>
-                                                  </StyledComponent>
-                                                </styled.span>
-                                              </Text>
-                                            </div>
-                                          </SectionDescription>
-                                        </StyledComponent>
-                                      </Styled(SectionDescription)>
-                                    </div>
-                                  </Cell>
-                                  <Cell
-                                    size={
-                                      Object {
-                                        "desktop": "shrink",
-                                        "min": 12,
-                                        "tablet": "shrink",
-                                      }
-                                    }
-                                  >
-                                    <div
-                                      className="ihrCell desktop-shrink tablet-shrink min-12"
-                                    >
-                                      <Button
-                                        hasLegacyMargins={false}
-                                        iconAlignment="left"
-                                        key="1"
-                                        showSpinner={false}
-                                        type="primary"
-                                      >
-                                        <styled.button
-                                          className="button primary"
-                                          data-component-type="button"
-                                          type="button"
+                                              Titled Section
+                                            </h2>
+                                          </styled.h2>
+                                        </Text>
+                                        <Text
+                                          color="#667380"
+                                          isInline={false}
+                                          tag="span"
+                                          type="small"
                                         >
-                                          <StyledComponent
-                                            className="button primary"
-                                            data-component-type="button"
-                                            forwardedComponent={
-                                              Object {
-                                                "$$typeof": Symbol(react.forward_ref),
-                                                "attrs": Array [],
-                                                "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-bxivhb",
-                                                  "isStatic": false,
-                                                  "lastClassName": "kLyrAW",
-                                                  "rules": Array [
-                                                    "
-   ",
-                                                    [Function],
-                                                    "
-",
-                                                  ],
-                                                },
-                                                "displayName": "styled.button",
-                                                "foldedComponentIds": Array [],
-                                                "render": [Function],
-                                                "styledComponentId": "sc-bxivhb",
-                                                "target": "button",
-                                                "toString": [Function],
-                                                "warnTooManyClasses": [Function],
-                                                "withComponent": [Function],
-                                              }
-                                            }
-                                            forwardedRef={null}
-                                            type="button"
+                                          <styled.span
+                                            color="#667380"
+                                            data-component-type="text"
+                                            isInline={false}
+                                            textType="small"
                                           >
-                                            <button
-                                              className="button primary kLyrAW"
-                                              data-component-type="button"
-                                              type="button"
+                                            <span
+                                              className="c14"
+                                              color="#667380"
+                                              data-component-type="text"
                                             >
-                                              Action 1
-                                            </button>
-                                          </StyledComponent>
-                                        </styled.button>
-                                      </Button>
-                                      <Button
-                                        hasLegacyMargins={false}
-                                        iconAlignment="left"
-                                        key="2"
-                                        showSpinner={false}
-                                        type="primary"
-                                      >
-                                        <styled.button
-                                          className="button primary"
-                                          data-component-type="button"
-                                          type="button"
-                                        >
-                                          <StyledComponent
-                                            className="button primary"
-                                            data-component-type="button"
-                                            forwardedComponent={
-                                              Object {
-                                                "$$typeof": Symbol(react.forward_ref),
-                                                "attrs": Array [],
-                                                "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-bxivhb",
-                                                  "isStatic": false,
-                                                  "lastClassName": "kLyrAW",
-                                                  "rules": Array [
-                                                    "
-   ",
-                                                    [Function],
-                                                    "
-",
-                                                  ],
-                                                },
-                                                "displayName": "styled.button",
-                                                "foldedComponentIds": Array [],
-                                                "render": [Function],
-                                                "styledComponentId": "sc-bxivhb",
-                                                "target": "button",
-                                                "toString": [Function],
-                                                "warnTooManyClasses": [Function],
-                                                "withComponent": [Function],
-                                              }
-                                            }
-                                            forwardedRef={null}
-                                            type="button"
-                                          >
-                                            <button
-                                              className="button primary kLyrAW"
-                                              data-component-type="button"
-                                              type="button"
-                                            >
-                                              Action 2
-                                            </button>
-                                          </StyledComponent>
-                                        </styled.button>
-                                      </Button>
-                                    </div>
-                                  </Cell>
+                                              Titled Description
+                                            </span>
+                                          </styled.span>
+                                        </Text>
+                                      </div>
+                                    </SectionDescription>
+                                  </Styled(SectionDescription)>
                                 </div>
-                              </XYGrid>
+                              </Cell>
+                              <Cell
+                                size={
+                                  Object {
+                                    "desktop": "shrink",
+                                    "min": 12,
+                                    "tablet": "shrink",
+                                  }
+                                }
+                              >
+                                <div
+                                  className="ihrCell desktop-shrink tablet-shrink min-12"
+                                >
+                                  <Button
+                                    hasLegacyMargins={false}
+                                    iconAlignment="left"
+                                    key="1"
+                                    showSpinner={false}
+                                    type="primary"
+                                  >
+                                    <styled.button
+                                      className="button primary"
+                                      data-component-type="button"
+                                      type="button"
+                                    >
+                                      <button
+                                        className="button primary "
+                                        data-component-type="button"
+                                        type="button"
+                                      >
+                                        Action 1
+                                      </button>
+                                    </styled.button>
+                                  </Button>
+                                  <Button
+                                    hasLegacyMargins={false}
+                                    iconAlignment="left"
+                                    key="2"
+                                    showSpinner={false}
+                                    type="primary"
+                                  >
+                                    <styled.button
+                                      className="button primary"
+                                      data-component-type="button"
+                                      type="button"
+                                    >
+                                      <button
+                                        className="button primary "
+                                        data-component-type="button"
+                                        type="button"
+                                      >
+                                        Action 2
+                                      </button>
+                                    </styled.button>
+                                  </Button>
+                                </div>
+                              </Cell>
                             </div>
-                          </StyledComponent>
-                        </styled.div>
-                      </div>
-                    </Cell>
-                    <Cell
-                      size={
-                        Object {
-                          "min": 12,
-                        }
+                          </XYGrid>
+                        </div>
+                      </styled.div>
+                    </div>
+                  </Cell>
+                  <Cell
+                    size={
+                      Object {
+                        "min": 12,
                       }
+                    }
+                  >
+                    <div
+                      className="ihrCell min-12"
                     >
-                      <div
-                        className="ihrCell min-12"
-                      >
-                        <StyledTitledSectionBody>
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-dxgOiQ",
-                                  "isStatic": true,
-                                  "lastClassName": "fmwaVT",
-                                  "rules": Array [
-                                    "
-  @media only screen and (min-width: ",
-                                    "640",
-                                    "px) {
-    padding-top: 1.5rem;
-  }
-
-  @media only screen and (max-width: ",
-                                    "639",
-                                    "px) {
-    background-color: ",
-                                    "#FAFBFC",
-                                    ";
-    border-top: 1px solid ",
-                                    "#E1E6EB",
-                                    ";
-    border-bottom: 1px solid ",
-                                    "#E1E6EB",
-                                    ";
-    padding: ",
-                                    "24",
-                                    "px ",
-                                    "16",
-                                    "px;
-  }
-",
-                                  ],
-                                },
-                                "displayName": "StyledTitledSectionBody",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-dxgOiQ",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                          >
-                            <div
-                              className="fmwaVT"
-                            >
-                              section 3
-                            </div>
-                          </StyledComponent>
-                        </StyledTitledSectionBody>
-                      </div>
-                    </Cell>
-                  </div>
-                </XYGrid>
-              </div>
-            </StyledComponent>
-          </Styled(styled.div)>
-        </TitledSection>
-      </div>
-    </StyledComponent>
+                      <StyledTitledSectionBody>
+                        <div
+                          className="c15"
+                        >
+                          section 3
+                        </div>
+                      </StyledTitledSectionBody>
+                    </div>
+                  </Cell>
+                </div>
+              </XYGrid>
+            </div>
+          </styled.div>
+        </Styled(styled.div)>
+      </TitledSection>
+    </div>
   </styled.div>
 </SectionList>
 `;
 
 exports[`<SectionList /> should render sectionList items with no children 1`] = `
+.c7 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  display: inline;
+}
+
+.c7,
+.c7:link,
+.c7:visited {
+  color: #432DF3;
+}
+
+.c7:hover {
+  color: #2512B3;
+}
+
+.c7:active {
+  color: #0F0080;
+}
+
+.c5 {
+  font-size: 18px;
+  line-height: 24px;
+  -webkit-letter-spacing: -.02em;
+  -moz-letter-spacing: -.02em;
+  -ms-letter-spacing: -.02em;
+  letter-spacing: -.02em;
+  color: #424F5C;
+  font-weight: 600;
+}
+
+.c6 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #667380;
+  font-weight: 400;
+  display: block;
+}
+
+.c11 {
+  font-size: 18px;
+  line-height: 24px;
+  -webkit-letter-spacing: -.02em;
+  -moz-letter-spacing: -.02em;
+  -ms-letter-spacing: -.02em;
+  letter-spacing: -.02em;
+  color: #424F5C;
+  font-weight: 600;
+}
+
+.c12 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #667380;
+  font-weight: 400;
+  display: block;
+}
+
+@media only screen and (min-width:640px) {
+  .c0 {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c2 {
+    border-bottom: 1px solid #E1E6EB;
+  }
+
+  .c2:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c1 {
+    padding: 24px 16px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c1 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c4 {
+    padding: 24px 16px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c4 {
+    margin-right: 24px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c3 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c8 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c9 {
+    padding: 24px 16px 12px;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c10 {
+    padding-bottom: 12px;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .c10 {
+    margin-right: 24px;
+  }
+}
+
 <SectionList>
   <styled.div>
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-VigVT",
-            "isStatic": true,
-            "lastClassName": "jhxKbA",
-            "rules": Array [
-              "
-  @media only screen and (min-width: ",
-              "640",
-              "px) {
-    margin-left: ",
-              "24",
-              "px;
-    margin-right: ",
-              "24",
-              "px;
-  }
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-VigVT",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
     >
-      <div
-        className="jhxKbA"
+      <Styled(styled.div)>
+        <styled.div
+          className="c1"
+        >
+          <div
+            className="c1 c2"
+          />
+        </styled.div>
+      </Styled(styled.div)>
+      <AnnotatedSection
+        description="Annotated Description"
+        header="Annotated Section"
+        linkProps={
+          Object {
+            "href": "#",
+          }
+        }
+        linkText="Annotated Link"
+        links={Array []}
       >
         <Styled(styled.div)>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-jzJRlG",
-                  "isStatic": true,
-                  "lastClassName": "gtSRLE",
-                  "rules": Array [
-                    "
-  @media only screen and (min-width: ",
-                    "640",
-                    "px) {
-     border-bottom: 1px solid ",
-                    "#E1E6EB",
-                    ";
-
-    :last-child {
-      border-bottom: 0;
-    }
-  }
-",
-                    "
-  @media only screen and (max-width: ",
-                    "639",
-                    "px) {
-    padding: ",
-                    "24",
-                    "px ",
-                    "16",
-                    "px;
-  }
-
-  @media only screen and (min-width: ",
-                    "640",
-                    "px) {
-    padding-top: ",
-                    "32",
-                    "px;
-    padding-bottom: ",
-                    "32",
-                    "px;
-  }
-",
-                  ],
-                },
-                "displayName": "Styled(styled.div)",
-                "foldedComponentIds": Array [
-                  "sc-jTzLTM",
-                ],
-                "render": [Function],
-                "styledComponentId": "sc-jzJRlG",
-                "target": "div",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
+          <styled.div
+            className="c3"
           >
             <div
-              className="gtSRLE"
-            />
-          </StyledComponent>
-        </Styled(styled.div)>
-        <AnnotatedSection
-          description="Annotated Description"
-          header="Annotated Section"
-          linkProps={
-            Object {
-              "href": "#",
-            }
-          }
-          linkText="Annotated Link"
-          links={Array []}
-        >
-          <Styled(styled.div)>
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-chPdSV",
-                    "isStatic": true,
-                    "lastClassName": "jEjlJs",
-                    "rules": Array [
-                      "
-  @media only screen and (min-width: ",
-                      "640",
-                      "px) {
-     border-bottom: 1px solid ",
-                      "#E1E6EB",
-                      ";
-
-    :last-child {
-      border-bottom: 0;
-    }
-  }
-",
-                      "
-  @media only screen and (min-width: ",
-                      "640",
-                      "px) {
-    padding-top: ",
-                      "32",
-                      "px;
-    padding-bottom: ",
-                      "32",
-                      "px;
-  }
-",
-                    ],
-                  },
-                  "displayName": "Styled(styled.div)",
-                  "foldedComponentIds": Array [
-                    "sc-jTzLTM",
-                  ],
-                  "render": [Function],
-                  "styledComponentId": "sc-chPdSV",
-                  "target": "div",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
+              className="c3 c2"
             >
-              <div
-                className="jEjlJs"
+              <XYGrid
+                gutterMarginX={false}
+                gutterMarginY={false}
+                gutterPaddingX={false}
+                gutterPaddingY={false}
+                vertical={false}
               >
-                <XYGrid
-                  gutterMarginX={false}
-                  gutterMarginY={false}
-                  gutterPaddingX={false}
-                  gutterPaddingY={false}
-                  vertical={false}
+                <div
+                  className="ihrGridX"
                 >
-                  <div
-                    className="ihrGridX"
-                  >
-                    <Cell
-                      size={
-                        Object {
-                          "desktop": 4,
-                          "min": 12,
-                          "tablet": 4,
-                        }
+                  <Cell
+                    size={
+                      Object {
+                        "desktop": 4,
+                        "min": 12,
+                        "tablet": 4,
                       }
+                    }
+                  >
+                    <div
+                      className="ihrCell desktop-4 tablet-4 min-12"
                     >
-                      <div
-                        className="ihrCell desktop-4 tablet-4 min-12"
+                      <Styled(SectionDescription)
+                        description="Annotated Description"
+                        header="Annotated Section"
+                        linkProps={
+                          Object {
+                            "href": "#",
+                          }
+                        }
+                        linkText="Annotated Link"
+                        links={Array []}
                       >
-                        <Styled(SectionDescription)
+                        <SectionDescription
+                          className="c4"
                           description="Annotated Description"
                           header="Annotated Section"
                           linkProps={
@@ -2162,885 +1175,304 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                           linkText="Annotated Link"
                           links={Array []}
                         >
-                          <StyledComponent
-                            description="Annotated Description"
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-kAzzGY",
-                                  "isStatic": true,
-                                  "lastClassName": "mcZUJ",
-                                  "rules": Array [
-                                    "
-  @media only screen and (max-width: ",
-                                    "639",
-                                    "px) {
-    padding: ",
-                                    "24",
-                                    "px ",
-                                    "16",
-                                    "px;
-  }
-
-  @media only screen and (min-width: ",
-                                    "640",
-                                    "px) {
-    margin-right: ",
-                                    "24",
-                                    "px;
-  }
-",
-                                  ],
-                                },
-                                "displayName": "Styled(SectionDescription)",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-kAzzGY",
-                                "target": [Function],
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            header="Annotated Section"
-                            linkProps={
-                              Object {
-                                "href": "#",
-                              }
-                            }
-                            linkText="Annotated Link"
-                            links={Array []}
+                          <div
+                            className="c4"
                           >
-                            <SectionDescription
-                              className="mcZUJ"
-                              description="Annotated Description"
-                              header="Annotated Section"
-                              linkProps={
-                                Object {
-                                  "href": "#",
-                                }
-                              }
-                              linkText="Annotated Link"
-                              links={Array []}
+                            <Text
+                              color="#424F5C"
+                              isInline={true}
+                              tag="h2"
+                              type="heading"
                             >
-                              <div
-                                className="mcZUJ"
+                              <styled.h2
+                                color="#424F5C"
+                                data-component-type="text"
+                                isInline={true}
+                                textType="heading"
                               >
-                                <Text
+                                <h2
+                                  className="c5"
                                   color="#424F5C"
-                                  isInline={true}
-                                  tag="h2"
-                                  type="heading"
+                                  data-component-type="text"
                                 >
-                                  <styled.h2
-                                    color="#424F5C"
-                                    data-component-type="text"
-                                    isInline={true}
-                                    textType="heading"
-                                  >
-                                    <StyledComponent
-                                      color="#424F5C"
-                                      data-component-type="text"
-                                      forwardedComponent={
-                                        Object {
-                                          "$$typeof": Symbol(react.forward_ref),
-                                          "attrs": Array [],
-                                          "componentStyle": ComponentStyle {
-                                            "componentId": "sc-kEYyzF",
-                                            "isStatic": false,
-                                            "lastClassName": "ggwGqa",
-                                            "rules": Array [
-                                              "
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-",
-                                            ],
-                                          },
-                                          "displayName": "styled.h2",
-                                          "foldedComponentIds": Array [],
-                                          "render": [Function],
-                                          "styledComponentId": "sc-kEYyzF",
-                                          "target": "h2",
-                                          "toString": [Function],
-                                          "warnTooManyClasses": [Function],
-                                          "withComponent": [Function],
-                                        }
-                                      }
-                                      forwardedRef={null}
-                                      isInline={true}
-                                      textType="heading"
-                                    >
-                                      <h2
-                                        className="ggwGqa"
-                                        color="#424F5C"
-                                        data-component-type="text"
-                                      >
-                                        Annotated Section
-                                      </h2>
-                                    </StyledComponent>
-                                  </styled.h2>
-                                </Text>
-                                <Text
+                                  Annotated Section
+                                </h2>
+                              </styled.h2>
+                            </Text>
+                            <Text
+                              color="#667380"
+                              isInline={false}
+                              tag="span"
+                              type="small"
+                            >
+                              <styled.span
+                                color="#667380"
+                                data-component-type="text"
+                                isInline={false}
+                                textType="small"
+                              >
+                                <span
+                                  className="c6"
                                   color="#667380"
-                                  isInline={false}
-                                  tag="span"
-                                  type="small"
+                                  data-component-type="text"
                                 >
-                                  <styled.span
-                                    color="#667380"
-                                    data-component-type="text"
-                                    isInline={false}
-                                    textType="small"
-                                  >
-                                    <StyledComponent
-                                      color="#667380"
-                                      data-component-type="text"
-                                      forwardedComponent={
-                                        Object {
-                                          "$$typeof": Symbol(react.forward_ref),
-                                          "attrs": Array [],
-                                          "componentStyle": ComponentStyle {
-                                            "componentId": "sc-kkGfuU",
-                                            "isStatic": false,
-                                            "lastClassName": "dZWDrz",
-                                            "rules": Array [
-                                              "
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-",
-                                            ],
-                                          },
-                                          "displayName": "styled.span",
-                                          "foldedComponentIds": Array [],
-                                          "render": [Function],
-                                          "styledComponentId": "sc-kkGfuU",
-                                          "target": "span",
-                                          "toString": [Function],
-                                          "warnTooManyClasses": [Function],
-                                          "withComponent": [Function],
-                                        }
-                                      }
-                                      forwardedRef={null}
-                                      isInline={false}
-                                      textType="small"
-                                    >
-                                      <span
-                                        className="dZWDrz"
-                                        color="#667380"
-                                        data-component-type="text"
-                                      >
-                                        Annotated Description
-                                      </span>
-                                    </StyledComponent>
-                                  </styled.span>
-                                </Text>
-                                <TextLink
+                                  Annotated Description
+                                </span>
+                              </styled.span>
+                            </Text>
+                            <TextLink
+                              href="#"
+                              isInline={true}
+                              textType="small"
+                              type="anchor"
+                            >
+                              <Styled(Component)
+                                href="#"
+                                isInline={true}
+                                textType="small"
+                                type="anchor"
+                              >
+                                <Component
+                                  className="c7"
                                   href="#"
                                   isInline={true}
                                   textType="small"
                                   type="anchor"
                                 >
-                                  <Styled(Component)
+                                  <Anchor
+                                    className="c7"
                                     href="#"
-                                    isInline={true}
-                                    textType="small"
                                     type="anchor"
                                   >
-                                    <StyledComponent
-                                      forwardedComponent={
-                                        Object {
-                                          "$$typeof": Symbol(react.forward_ref),
-                                          "attrs": Array [],
-                                          "componentStyle": ComponentStyle {
-                                            "componentId": "sc-EHOje",
-                                            "isStatic": false,
-                                            "lastClassName": "egRpnQ",
-                                            "rules": Array [
-                                              "
-  ",
-                                              "
-  transition: color .25s ease-out;
-  cursor: pointer;
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  &,
-  &:link,
-  &:visited {
-    color: ",
-                                              "#432DF3",
-                                              ";
-  }
-
-  &:hover {
-    color: ",
-                                              "#2512B3",
-                                              ";
-    ",
-                                              [Function],
-                                              "
-  }
-
-  &:active {
-    color: ",
-                                              "#0F0080",
-                                              ";
-  }
-",
-                                              ";
-",
-                                            ],
-                                          },
-                                          "displayName": "Styled(Component)",
-                                          "foldedComponentIds": Array [],
-                                          "render": [Function],
-                                          "styledComponentId": "sc-EHOje",
-                                          "target": [Function],
-                                          "toString": [Function],
-                                          "warnTooManyClasses": [Function],
-                                          "withComponent": [Function],
-                                          Symbol(Symbol.hasInstance): [Function],
-                                        }
-                                      }
-                                      forwardedRef={null}
+                                    <a
+                                      className="c7"
                                       href="#"
-                                      isInline={true}
-                                      textType="small"
                                       type="anchor"
                                     >
-                                      <Component
-                                        className="egRpnQ"
-                                        href="#"
-                                        isInline={true}
-                                        textType="small"
-                                        type="anchor"
-                                      >
-                                        <Anchor
-                                          className="egRpnQ"
-                                          href="#"
-                                          type="anchor"
-                                        >
-                                          <a
-                                            className="egRpnQ"
-                                            href="#"
-                                            type="anchor"
-                                          >
-                                            Annotated Link
-                                          </a>
-                                        </Anchor>
-                                      </Component>
-                                    </StyledComponent>
-                                  </Styled(Component)>
-                                </TextLink>
-                              </div>
-                            </SectionDescription>
-                          </StyledComponent>
-                        </Styled(SectionDescription)>
-                      </div>
-                    </Cell>
-                  </div>
-                </XYGrid>
-              </div>
-            </StyledComponent>
-          </Styled(styled.div)>
-        </AnnotatedSection>
-        <TitledSection
-          actionItems={
-            Array [
-              <Button
-                hasLegacyMargins={false}
-                iconAlignment="left"
-                showSpinner={false}
-                type="primary"
-              >
-                Action 1
-              </Button>,
-              <Button
-                hasLegacyMargins={false}
-                iconAlignment="left"
-                showSpinner={false}
-                type="primary"
-              >
-                Action 2
-              </Button>,
-            ]
-          }
-          description="Titled Description"
-          header="Titled Section"
-        >
-          <Styled(styled.div)>
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-kgoBCf",
-                    "isStatic": true,
-                    "lastClassName": "kwEPzG",
-                    "rules": Array [
-                      "
-  @media only screen and (min-width: ",
-                      "640",
-                      "px) {
-     border-bottom: 1px solid ",
-                      "#E1E6EB",
-                      ";
-
-    :last-child {
-      border-bottom: 0;
-    }
-  }
-",
-                      "
-  @media only screen and (min-width: ",
-                      "640",
-                      "px) {
-    padding-top: ",
-                      "32",
-                      "px;
-    padding-bottom: ",
-                      "32",
-                      "px;
-  }
-",
-                    ],
-                  },
-                  "displayName": "Styled(styled.div)",
-                  "foldedComponentIds": Array [
-                    "sc-jTzLTM",
-                  ],
-                  "render": [Function],
-                  "styledComponentId": "sc-kgoBCf",
-                  "target": "div",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
+                                      Annotated Link
+                                    </a>
+                                  </Anchor>
+                                </Component>
+                              </Styled(Component)>
+                            </TextLink>
+                          </div>
+                        </SectionDescription>
+                      </Styled(SectionDescription)>
+                    </div>
+                  </Cell>
+                </div>
+              </XYGrid>
+            </div>
+          </styled.div>
+        </Styled(styled.div)>
+      </AnnotatedSection>
+      <TitledSection
+        actionItems={
+          Array [
+            <Button
+              hasLegacyMargins={false}
+              iconAlignment="left"
+              showSpinner={false}
+              type="primary"
             >
-              <div
-                className="kwEPzG"
+              Action 1
+            </Button>,
+            <Button
+              hasLegacyMargins={false}
+              iconAlignment="left"
+              showSpinner={false}
+              type="primary"
+            >
+              Action 2
+            </Button>,
+          ]
+        }
+        description="Titled Description"
+        header="Titled Section"
+      >
+        <Styled(styled.div)>
+          <styled.div
+            className="c8"
+          >
+            <div
+              className="c8 c2"
+            >
+              <XYGrid
+                gutterMarginX={false}
+                gutterMarginY={false}
+                gutterPaddingX={false}
+                gutterPaddingY={false}
+                vertical={false}
               >
-                <XYGrid
-                  gutterMarginX={false}
-                  gutterMarginY={false}
-                  gutterPaddingX={false}
-                  gutterPaddingY={false}
-                  vertical={false}
+                <div
+                  className="ihrGridX"
                 >
-                  <div
-                    className="ihrGridX"
-                  >
-                    <Cell
-                      size={
-                        Object {
-                          "min": 12,
-                        }
+                  <Cell
+                    size={
+                      Object {
+                        "min": 12,
                       }
+                    }
+                  >
+                    <div
+                      className="ihrCell min-12"
                     >
-                      <div
-                        className="ihrCell min-12"
-                      >
-                        <styled.div>
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-kGXeez",
-                                  "isStatic": true,
-                                  "lastClassName": "gLXEYS",
-                                  "rules": Array [
-                                    "
-  @media only screen and (max-width: ",
-                                    "639",
-                                    "px) {
-    padding: ",
-                                    "24",
-                                    "px ",
-                                    "16",
-                                    "px ",
-                                    "12",
-                                    "px;
-  }
-",
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-kGXeez",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
+                      <styled.div>
+                        <div
+                          className="c9"
+                        >
+                          <XYGrid
+                            gutterMarginX={false}
+                            gutterMarginY={false}
+                            gutterPaddingX={false}
+                            gutterPaddingY={false}
+                            vertical={false}
+                            verticalAlignment="middle"
                           >
                             <div
-                              className="gLXEYS"
+                              className="ihrGridX align-middle"
                             >
-                              <XYGrid
-                                gutterMarginX={false}
-                                gutterMarginY={false}
-                                gutterPaddingX={false}
-                                gutterPaddingY={false}
-                                vertical={false}
-                                verticalAlignment="middle"
+                              <Cell
+                                size={
+                                  Object {
+                                    "desktop": "auto",
+                                    "min": 12,
+                                    "tablet": "auto",
+                                  }
+                                }
                               >
                                 <div
-                                  className="ihrGridX align-middle"
+                                  className="ihrCell desktop-auto tablet-auto min-12"
                                 >
-                                  <Cell
-                                    size={
-                                      Object {
-                                        "desktop": "auto",
-                                        "min": 12,
-                                        "tablet": "auto",
-                                      }
-                                    }
+                                  <Styled(SectionDescription)
+                                    description="Titled Description"
+                                    header="Titled Section"
                                   >
-                                    <div
-                                      className="ihrCell desktop-auto tablet-auto min-12"
+                                    <SectionDescription
+                                      className="c10"
+                                      description="Titled Description"
+                                      header="Titled Section"
+                                      links={Array []}
                                     >
-                                      <Styled(SectionDescription)
-                                        description="Titled Description"
-                                        header="Titled Section"
+                                      <div
+                                        className="c10"
                                       >
-                                        <StyledComponent
-                                          description="Titled Description"
-                                          forwardedComponent={
-                                            Object {
-                                              "$$typeof": Symbol(react.forward_ref),
-                                              "attrs": Array [],
-                                              "componentStyle": ComponentStyle {
-                                                "componentId": "sc-kpOJdX",
-                                                "isStatic": true,
-                                                "lastClassName": "iORaxr",
-                                                "rules": Array [
-                                                  "
-  @media only screen and (max-width: ",
-                                                  "639",
-                                                  "px) {
-    padding-bottom: ",
-                                                  "12",
-                                                  "px;
-  }
-
-  @media only screen and (min-width: ",
-                                                  "640",
-                                                  "px) {
-    margin-right: ",
-                                                  "24",
-                                                  "px;
-  }
-",
-                                                ],
-                                              },
-                                              "displayName": "Styled(SectionDescription)",
-                                              "foldedComponentIds": Array [],
-                                              "render": [Function],
-                                              "styledComponentId": "sc-kpOJdX",
-                                              "target": [Function],
-                                              "toString": [Function],
-                                              "warnTooManyClasses": [Function],
-                                              "withComponent": [Function],
-                                              Symbol(Symbol.hasInstance): [Function],
-                                            }
-                                          }
-                                          forwardedRef={null}
-                                          header="Titled Section"
+                                        <Text
+                                          color="#424F5C"
+                                          isInline={true}
+                                          tag="h2"
+                                          type="heading"
                                         >
-                                          <SectionDescription
-                                            className="iORaxr"
-                                            description="Titled Description"
-                                            header="Titled Section"
-                                            links={Array []}
+                                          <styled.h2
+                                            color="#424F5C"
+                                            data-component-type="text"
+                                            isInline={true}
+                                            textType="heading"
                                           >
-                                            <div
-                                              className="iORaxr"
+                                            <h2
+                                              className="c11"
+                                              color="#424F5C"
+                                              data-component-type="text"
                                             >
-                                              <Text
-                                                color="#424F5C"
-                                                isInline={true}
-                                                tag="h2"
-                                                type="heading"
-                                              >
-                                                <styled.h2
-                                                  color="#424F5C"
-                                                  data-component-type="text"
-                                                  isInline={true}
-                                                  textType="heading"
-                                                >
-                                                  <StyledComponent
-                                                    color="#424F5C"
-                                                    data-component-type="text"
-                                                    forwardedComponent={
-                                                      Object {
-                                                        "$$typeof": Symbol(react.forward_ref),
-                                                        "attrs": Array [],
-                                                        "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-iAyFgw",
-                                                          "isStatic": false,
-                                                          "lastClassName": "bvrQhr",
-                                                          "rules": Array [
-                                                            "
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-",
-                                                          ],
-                                                        },
-                                                        "displayName": "styled.h2",
-                                                        "foldedComponentIds": Array [],
-                                                        "render": [Function],
-                                                        "styledComponentId": "sc-iAyFgw",
-                                                        "target": "h2",
-                                                        "toString": [Function],
-                                                        "warnTooManyClasses": [Function],
-                                                        "withComponent": [Function],
-                                                      }
-                                                    }
-                                                    forwardedRef={null}
-                                                    isInline={true}
-                                                    textType="heading"
-                                                  >
-                                                    <h2
-                                                      className="bvrQhr"
-                                                      color="#424F5C"
-                                                      data-component-type="text"
-                                                    >
-                                                      Titled Section
-                                                    </h2>
-                                                  </StyledComponent>
-                                                </styled.h2>
-                                              </Text>
-                                              <Text
-                                                color="#667380"
-                                                isInline={false}
-                                                tag="span"
-                                                type="small"
-                                              >
-                                                <styled.span
-                                                  color="#667380"
-                                                  data-component-type="text"
-                                                  isInline={false}
-                                                  textType="small"
-                                                >
-                                                  <StyledComponent
-                                                    color="#667380"
-                                                    data-component-type="text"
-                                                    forwardedComponent={
-                                                      Object {
-                                                        "$$typeof": Symbol(react.forward_ref),
-                                                        "attrs": Array [],
-                                                        "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-hSdWYo",
-                                                          "isStatic": false,
-                                                          "lastClassName": "cIuVyC",
-                                                          "rules": Array [
-                                                            "
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-
-  ",
-                                                            [Function],
-                                                            "
-",
-                                                          ],
-                                                        },
-                                                        "displayName": "styled.span",
-                                                        "foldedComponentIds": Array [],
-                                                        "render": [Function],
-                                                        "styledComponentId": "sc-hSdWYo",
-                                                        "target": "span",
-                                                        "toString": [Function],
-                                                        "warnTooManyClasses": [Function],
-                                                        "withComponent": [Function],
-                                                      }
-                                                    }
-                                                    forwardedRef={null}
-                                                    isInline={false}
-                                                    textType="small"
-                                                  >
-                                                    <span
-                                                      className="cIuVyC"
-                                                      color="#667380"
-                                                      data-component-type="text"
-                                                    >
-                                                      Titled Description
-                                                    </span>
-                                                  </StyledComponent>
-                                                </styled.span>
-                                              </Text>
-                                            </div>
-                                          </SectionDescription>
-                                        </StyledComponent>
-                                      </Styled(SectionDescription)>
-                                    </div>
-                                  </Cell>
-                                  <Cell
-                                    size={
-                                      Object {
-                                        "desktop": "shrink",
-                                        "min": 12,
-                                        "tablet": "shrink",
-                                      }
-                                    }
-                                  >
-                                    <div
-                                      className="ihrCell desktop-shrink tablet-shrink min-12"
-                                    >
-                                      <Button
-                                        hasLegacyMargins={false}
-                                        iconAlignment="left"
-                                        key="1"
-                                        showSpinner={false}
-                                        type="primary"
-                                      >
-                                        <styled.button
-                                          className="button primary"
-                                          data-component-type="button"
-                                          type="button"
+                                              Titled Section
+                                            </h2>
+                                          </styled.h2>
+                                        </Text>
+                                        <Text
+                                          color="#667380"
+                                          isInline={false}
+                                          tag="span"
+                                          type="small"
                                         >
-                                          <StyledComponent
-                                            className="button primary"
-                                            data-component-type="button"
-                                            forwardedComponent={
-                                              Object {
-                                                "$$typeof": Symbol(react.forward_ref),
-                                                "attrs": Array [],
-                                                "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-bxivhb",
-                                                  "isStatic": false,
-                                                  "lastClassName": "kLyrAW",
-                                                  "rules": Array [
-                                                    "
-   ",
-                                                    [Function],
-                                                    "
-",
-                                                  ],
-                                                },
-                                                "displayName": "styled.button",
-                                                "foldedComponentIds": Array [],
-                                                "render": [Function],
-                                                "styledComponentId": "sc-bxivhb",
-                                                "target": "button",
-                                                "toString": [Function],
-                                                "warnTooManyClasses": [Function],
-                                                "withComponent": [Function],
-                                              }
-                                            }
-                                            forwardedRef={null}
-                                            type="button"
+                                          <styled.span
+                                            color="#667380"
+                                            data-component-type="text"
+                                            isInline={false}
+                                            textType="small"
                                           >
-                                            <button
-                                              className="button primary kLyrAW"
-                                              data-component-type="button"
-                                              type="button"
+                                            <span
+                                              className="c12"
+                                              color="#667380"
+                                              data-component-type="text"
                                             >
-                                              Action 1
-                                            </button>
-                                          </StyledComponent>
-                                        </styled.button>
-                                      </Button>
-                                      <Button
-                                        hasLegacyMargins={false}
-                                        iconAlignment="left"
-                                        key="2"
-                                        showSpinner={false}
-                                        type="primary"
-                                      >
-                                        <styled.button
-                                          className="button primary"
-                                          data-component-type="button"
-                                          type="button"
-                                        >
-                                          <StyledComponent
-                                            className="button primary"
-                                            data-component-type="button"
-                                            forwardedComponent={
-                                              Object {
-                                                "$$typeof": Symbol(react.forward_ref),
-                                                "attrs": Array [],
-                                                "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-bxivhb",
-                                                  "isStatic": false,
-                                                  "lastClassName": "kLyrAW",
-                                                  "rules": Array [
-                                                    "
-   ",
-                                                    [Function],
-                                                    "
-",
-                                                  ],
-                                                },
-                                                "displayName": "styled.button",
-                                                "foldedComponentIds": Array [],
-                                                "render": [Function],
-                                                "styledComponentId": "sc-bxivhb",
-                                                "target": "button",
-                                                "toString": [Function],
-                                                "warnTooManyClasses": [Function],
-                                                "withComponent": [Function],
-                                              }
-                                            }
-                                            forwardedRef={null}
-                                            type="button"
-                                          >
-                                            <button
-                                              className="button primary kLyrAW"
-                                              data-component-type="button"
-                                              type="button"
-                                            >
-                                              Action 2
-                                            </button>
-                                          </StyledComponent>
-                                        </styled.button>
-                                      </Button>
-                                    </div>
-                                  </Cell>
+                                              Titled Description
+                                            </span>
+                                          </styled.span>
+                                        </Text>
+                                      </div>
+                                    </SectionDescription>
+                                  </Styled(SectionDescription)>
                                 </div>
-                              </XYGrid>
+                              </Cell>
+                              <Cell
+                                size={
+                                  Object {
+                                    "desktop": "shrink",
+                                    "min": 12,
+                                    "tablet": "shrink",
+                                  }
+                                }
+                              >
+                                <div
+                                  className="ihrCell desktop-shrink tablet-shrink min-12"
+                                >
+                                  <Button
+                                    hasLegacyMargins={false}
+                                    iconAlignment="left"
+                                    key="1"
+                                    showSpinner={false}
+                                    type="primary"
+                                  >
+                                    <styled.button
+                                      className="button primary"
+                                      data-component-type="button"
+                                      type="button"
+                                    >
+                                      <button
+                                        className="button primary "
+                                        data-component-type="button"
+                                        type="button"
+                                      >
+                                        Action 1
+                                      </button>
+                                    </styled.button>
+                                  </Button>
+                                  <Button
+                                    hasLegacyMargins={false}
+                                    iconAlignment="left"
+                                    key="2"
+                                    showSpinner={false}
+                                    type="primary"
+                                  >
+                                    <styled.button
+                                      className="button primary"
+                                      data-component-type="button"
+                                      type="button"
+                                    >
+                                      <button
+                                        className="button primary "
+                                        data-component-type="button"
+                                        type="button"
+                                      >
+                                        Action 2
+                                      </button>
+                                    </styled.button>
+                                  </Button>
+                                </div>
+                              </Cell>
                             </div>
-                          </StyledComponent>
-                        </styled.div>
-                      </div>
-                    </Cell>
-                  </div>
-                </XYGrid>
-              </div>
-            </StyledComponent>
-          </Styled(styled.div)>
-        </TitledSection>
-      </div>
-    </StyledComponent>
+                          </XYGrid>
+                        </div>
+                      </styled.div>
+                    </div>
+                  </Cell>
+                </div>
+              </XYGrid>
+            </div>
+          </styled.div>
+        </Styled(styled.div)>
+      </TitledSection>
+    </div>
   </styled.div>
 </SectionList>
 `;

@@ -1,6 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TextSkeleton /> should render a text skeleton 1`] = `
+.c0 {
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-animation: jXsTbE .8s linear infinite alternate;
+  animation: jXsTbE .8s linear infinite alternate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: #E1E6EB;
+  border: 1px solid #E1E6EB;
+  display: block;
+}
+
 <TextSkeleton
   showSkeleton={true}
   type="body"
@@ -8,56 +28,36 @@ exports[`<TextSkeleton /> should render a text skeleton 1`] = `
   <styled.span
     textType="body"
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
-            "isStatic": false,
-            "lastClassName": "fsJqtE",
-            "rules": Array [
-              "
-  border-radius: 4px;
-  width: ",
-              [Function],
-              ";
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  ",
-              [Function],
-              ";
-  ",
-              [Function],
-              ";
-",
-            ],
-          },
-          "displayName": "styled.span",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
-          "target": "span",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-      textType="body"
+    <span
+      className="c0"
     >
-      <span
-        className="fsJqtE"
-      >
-        ‌
-      </span>
-    </StyledComponent>
+      ‌
+    </span>
   </styled.span>
 </TextSkeleton>
 `;
 
 exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
+.c0 {
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 24px;
+  line-height: 32px;
+  -webkit-letter-spacing: -.02em;
+  -moz-letter-spacing: -.02em;
+  -ms-letter-spacing: -.02em;
+  letter-spacing: -.02em;
+  -webkit-animation: jXsTbE .8s linear infinite alternate;
+  animation: jXsTbE .8s linear infinite alternate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: #E1E6EB;
+  border: 1px solid #E1E6EB;
+  display: block;
+}
+
 <TextSkeleton
   showSkeleton={true}
   type="display"
@@ -65,56 +65,37 @@ exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
   <styled.span
     textType="display"
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
-            "isStatic": false,
-            "lastClassName": "dcJPYZ",
-            "rules": Array [
-              "
-  border-radius: 4px;
-  width: ",
-              [Function],
-              ";
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  ",
-              [Function],
-              ";
-  ",
-              [Function],
-              ";
-",
-            ],
-          },
-          "displayName": "styled.span",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
-          "target": "span",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-      textType="display"
+    <span
+      className="c0"
     >
-      <span
-        className="dcJPYZ"
-      >
-        ‌
-      </span>
-    </StyledComponent>
+      ‌
+    </span>
   </styled.span>
 </TextSkeleton>
 `;
 
 exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
+.c0 {
+  border-radius: 4px;
+  width: 250px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-animation: jXsTbE .8s linear infinite alternate;
+  animation: jXsTbE .8s linear infinite alternate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: #E1E6EB;
+  border: 1px solid #E1E6EB;
+  display: block;
+}
+
 <TextSkeleton
   showSkeleton={true}
   type="body"
@@ -124,53 +105,12 @@ exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
     textType="body"
     width="250px"
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
-            "isStatic": false,
-            "lastClassName": "cRKbsz",
-            "rules": Array [
-              "
-  border-radius: 4px;
-  width: ",
-              [Function],
-              ";
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  ",
-              [Function],
-              ";
-  ",
-              [Function],
-              ";
-",
-            ],
-          },
-          "displayName": "styled.span",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
-          "target": "span",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-      textType="body"
+    <span
+      className="c0"
       width="250px"
     >
-      <span
-        className="cRKbsz"
-        width="250px"
-      >
-        ‌
-      </span>
-    </StyledComponent>
+      ‌
+    </span>
   </styled.span>
 </TextSkeleton>
 `;

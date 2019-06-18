@@ -1,6 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ListColumn /> should render a list column with number content 1`] = `
+.c0 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
 <ListColumn
   alignRight={false}
   cell={[Function]}
@@ -35,86 +74,62 @@ exports[`<ListColumn /> should render a list column with number content 1`] = `
       sm={6}
       type="row"
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-htpNat",
-              "isStatic": false,
-              "lastClassName": "cdrDft",
-              "rules": Array [
-                "
-  box-sizing: border-box;
-  flex: 0 0 auto;
-  padding-right: ",
-                [Function],
-                "rem;
-  padding-left: ",
-                [Function],
-                "rem;
-
-  ",
-                [Function],
-                "
-
-  ",
-                [Function],
-                "
-
-  ",
-                [Function],
-                "
-",
-              ],
-            },
-            "displayName": "Col",
-            "foldedComponentIds": Array [],
-            "propTypes": Object {
-              "children": [Function],
-              "lg": [Function],
-              "lgOffset": [Function],
-              "md": [Function],
-              "mdOffset": [Function],
-              "reverse": [Function],
-              "sm": [Function],
-              "smOffset": [Function],
-              "xs": [Function],
-              "xsOffset": [Function],
-            },
-            "render": [Function],
-            "styledComponentId": "sc-htpNat",
-            "target": "div",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        lg={6}
-        md={6}
-        sm={6}
+      <div
+        className="c0"
         type="row"
       >
         <div
-          className="cdrDft"
-          type="row"
+          className="list-column"
+          data-component-type="smart_list_column"
         >
-          <div
-            className="list-column"
-            data-component-type="smart_list_column"
-          >
-            100
-          </div>
+          100
         </div>
-      </StyledComponent>
+      </div>
     </Col>
   </Column>
 </ListColumn>
 `;
 
 exports[`<ListColumn /> should render a list column with the right header 1`] = `
+.c0 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
 <ListColumn
   alignRight={false}
   cell={[Function]}
@@ -149,94 +164,70 @@ exports[`<ListColumn /> should render a list column with the right header 1`] = 
       sm={6}
       type="row"
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-htpNat",
-              "isStatic": false,
-              "lastClassName": "cdrDft",
-              "rules": Array [
-                "
-  box-sizing: border-box;
-  flex: 0 0 auto;
-  padding-right: ",
-                [Function],
-                "rem;
-  padding-left: ",
-                [Function],
-                "rem;
-
-  ",
-                [Function],
-                "
-
-  ",
-                [Function],
-                "
-
-  ",
-                [Function],
-                "
-",
-              ],
-            },
-            "displayName": "Col",
-            "foldedComponentIds": Array [],
-            "propTypes": Object {
-              "children": [Function],
-              "lg": [Function],
-              "lgOffset": [Function],
-              "md": [Function],
-              "mdOffset": [Function],
-              "reverse": [Function],
-              "sm": [Function],
-              "smOffset": [Function],
-              "xs": [Function],
-              "xsOffset": [Function],
-            },
-            "render": [Function],
-            "styledComponentId": "sc-htpNat",
-            "target": "div",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        lg={6}
-        md={6}
-        sm={6}
+      <div
+        className="c0"
         type="row"
       >
         <div
-          className="cdrDft"
-          type="row"
+          className="list-column"
+          data-component-type="smart_list_column"
         >
-          <div
-            className="list-column"
-            data-component-type="smart_list_column"
+          <ListHeader
+            label="Test"
           >
-            <ListHeader
-              label="Test"
+            <span
+              className="ListHeader"
             >
-              <span
-                className="ListHeader"
-              >
-                Test
-              </span>
-            </ListHeader>
-          </div>
+              Test
+            </span>
+          </ListHeader>
         </div>
-      </StyledComponent>
+      </div>
     </Col>
   </Column>
 </ListColumn>
 `;
 
 exports[`<ListColumn /> should render a list column with the right non-header cell content 1`] = `
+.c0 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
 <ListColumn
   alignRight={false}
   cell={[Function]}
@@ -271,82 +262,19 @@ exports[`<ListColumn /> should render a list column with the right non-header ce
       sm={6}
       type="row"
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-htpNat",
-              "isStatic": false,
-              "lastClassName": "cdrDft",
-              "rules": Array [
-                "
-  box-sizing: border-box;
-  flex: 0 0 auto;
-  padding-right: ",
-                [Function],
-                "rem;
-  padding-left: ",
-                [Function],
-                "rem;
-
-  ",
-                [Function],
-                "
-
-  ",
-                [Function],
-                "
-
-  ",
-                [Function],
-                "
-",
-              ],
-            },
-            "displayName": "Col",
-            "foldedComponentIds": Array [],
-            "propTypes": Object {
-              "children": [Function],
-              "lg": [Function],
-              "lgOffset": [Function],
-              "md": [Function],
-              "mdOffset": [Function],
-              "reverse": [Function],
-              "sm": [Function],
-              "smOffset": [Function],
-              "xs": [Function],
-              "xsOffset": [Function],
-            },
-            "render": [Function],
-            "styledComponentId": "sc-htpNat",
-            "target": "div",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        lg={6}
-        md={6}
-        sm={6}
+      <div
+        className="c0"
         type="row"
       >
         <div
-          className="cdrDft"
-          type="row"
+          className="list-column"
+          data-component-type="smart_list_column"
         >
-          <div
-            className="list-column"
-            data-component-type="smart_list_column"
-          >
-            <div>
-              Test Name
-            </div>
+          <div>
+            Test Name
           </div>
         </div>
-      </StyledComponent>
+      </div>
     </Col>
   </Column>
 </ListColumn>

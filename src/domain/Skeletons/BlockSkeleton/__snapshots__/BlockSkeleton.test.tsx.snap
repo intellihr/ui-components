@@ -1,56 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<BlockSkeleton /> should render a block skeleton 1`] = `
+.c0 {
+  border-radius: 4px;
+  line-height: 1rem;
+  height: 1rem;
+  -webkit-animation: jXsTbE .8s linear infinite alternate;
+  animation: jXsTbE .8s linear infinite alternate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: #E1E6EB;
+  border: 1px solid #E1E6EB;
+  display: block;
+}
+
 <BlockSkeleton
   showSkeleton={true}
 >
   <styled.span>
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
-            "isStatic": false,
-            "lastClassName": "kFoKYz",
-            "rules": Array [
-              "
-  border-radius: 4px;
-  line-height: 1rem;
-  width: ",
-              [Function],
-              ";
-  height: ",
-              [Function],
-              ";
-  ",
-              [Function],
-              ";
-",
-            ],
-          },
-          "displayName": "styled.span",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
-          "target": "span",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-    >
-      <span
-        className="kFoKYz"
-      />
-    </StyledComponent>
+    <span
+      className="c0"
+    />
   </styled.span>
 </BlockSkeleton>
 `;
 
 exports[`<BlockSkeleton /> should render a block skeleton with set width and height 1`] = `
+.c0 {
+  border-radius: 4px;
+  line-height: 1rem;
+  width: 400px;
+  height: 200px;
+  -webkit-animation: jXsTbE .8s linear infinite alternate;
+  animation: jXsTbE .8s linear infinite alternate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: #E1E6EB;
+  border: 1px solid #E1E6EB;
+  display: block;
+}
+
 <BlockSkeleton
   height={200}
   showSkeleton={true}
@@ -60,51 +51,11 @@ exports[`<BlockSkeleton /> should render a block skeleton with set width and hei
     height="200px"
     width="400px"
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
-            "isStatic": false,
-            "lastClassName": "cFtEup",
-            "rules": Array [
-              "
-  border-radius: 4px;
-  line-height: 1rem;
-  width: ",
-              [Function],
-              ";
-  height: ",
-              [Function],
-              ";
-  ",
-              [Function],
-              ";
-",
-            ],
-          },
-          "displayName": "styled.span",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
-          "target": "span",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <span
+      className="c0"
       height="200px"
       width="400px"
-    >
-      <span
-        className="cFtEup"
-        height="200px"
-        width="400px"
-      />
-    </StyledComponent>
+    />
   </styled.span>
 </BlockSkeleton>
 `;

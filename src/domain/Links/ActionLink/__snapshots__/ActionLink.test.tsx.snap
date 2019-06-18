@@ -1,77 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ActionLink /> should render an action link 1`] = `
-<ActionLink
-  href="/lol"
->
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "sc-bdVaJa",
-          "isStatic": true,
-          "lastClassName": "jaxnrg",
-          "rules": Array [
-            "
+.c0 {
   font-weight: 600;
   font-size: .9375rem;
   text-transform: uppercase;
+  -webkit-transition: color .25s ease-out;
   transition: color .25s ease-out;
+}
 
-  &,
-  &:link,
-  &:visited {
-    color: ",
-            "#432DF3",
-            ";
-  }
+.c0,
+.c0:link,
+.c0:visited {
+  color: #432DF3;
+}
 
-  &:hover {
-    color: ",
-            "#2512B3",
-            "
-  }
+.c0:hover {
+  color: #2512B3;
+}
 
-  &:active {
-    color: ",
-            "#0F0080",
-            "
-  }
-",
-          ],
-        },
-        "displayName": "ActionLink",
-        "foldedComponentIds": Array [],
-        "render": [Function],
-        "styledComponentId": "sc-bdVaJa",
-        "target": [Function],
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-        Symbol(Symbol.hasInstance): [Function],
-      }
-    }
-    forwardedRef={null}
+.c0:active {
+  color: #0F0080;
+}
+
+<ActionLink
+  href="/lol"
+>
+  <Anchor
+    className="c0"
     href="/lol"
   >
-    <Anchor
-      className="jaxnrg"
+    <a
+      className="c0"
       href="/lol"
     >
-      <a
-        className="jaxnrg"
-        href="/lol"
-      >
-        Grrr I am action man
-      </a>
-    </Anchor>
-  </StyledComponent>
+      Grrr I am action man
+    </a>
+  </Anchor>
 </ActionLink>
 `;
 
 exports[`<ActionLink /> should render an action link with a replacement anchor tag 1`] = `
+.c0 {
+  font-weight: 600;
+  font-size: .9375rem;
+  text-transform: uppercase;
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+}
+
+.c0,
+.c0:link,
+.c0:visited {
+  color: #432DF3;
+}
+
+.c0:hover {
+  color: #2512B3;
+}
+
+.c0:active {
+  color: #0F0080;
+}
+
 <DefaultsProvider
   value={
     Object {
@@ -82,74 +73,21 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
   <ActionLink
     href="#"
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
-            "isStatic": true,
-            "lastClassName": "jaxnrg",
-            "rules": Array [
-              "
-  font-weight: 600;
-  font-size: .9375rem;
-  text-transform: uppercase;
-  transition: color .25s ease-out;
-
-  &,
-  &:link,
-  &:visited {
-    color: ",
-              "#432DF3",
-              ";
-  }
-
-  &:hover {
-    color: ",
-              "#2512B3",
-              "
-  }
-
-  &:active {
-    color: ",
-              "#0F0080",
-              "
-  }
-",
-            ],
-          },
-          "displayName": "ActionLink",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
-          "target": [Function],
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-          Symbol(Symbol.hasInstance): [Function],
-        }
-      }
-      forwardedRef={null}
+    <Anchor
+      className="c0"
       href="#"
     >
-      <Anchor
-        className="jaxnrg"
+      <AnchorComponent
+        className="c0"
         href="#"
       >
-        <AnchorComponent
-          className="jaxnrg"
-          href="#"
+        <a
+          href="/allTheFeelsUgh"
         >
-          <a
-            href="/allTheFeelsUgh"
-          >
-            Replacement default text
-          </a>
-        </AnchorComponent>
-      </Anchor>
-    </StyledComponent>
+          Replacement default text
+        </a>
+      </AnchorComponent>
+    </Anchor>
   </ActionLink>
 </DefaultsProvider>
 `;

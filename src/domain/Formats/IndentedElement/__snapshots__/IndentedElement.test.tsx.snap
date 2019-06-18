@@ -1,95 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<IndentedElement /> should render an element with no indent 1`] = `
+.c0 {
+  padding-left: 0px;
+}
+
 <IndentedElement
   depth={0}
 >
   <styled.div
     depth={0}
   >
-    <StyledComponent
-      depth={0}
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
-            "isStatic": false,
-            "lastClassName": "fvKsMw",
-            "rules": Array [
-              "
-  padding-left: ",
-              [Function],
-              ";
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
     >
-      <div
-        className="fvKsMw"
-      >
-        Hello I am not indented
-      </div>
-    </StyledComponent>
+      Hello I am not indented
+    </div>
   </styled.div>
 </IndentedElement>
 `;
 
 exports[`<IndentedElement /> should render an indented element 1`] = `
+.c0 {
+  padding-left: 64px;
+}
+
 <IndentedElement
   depth={2}
 >
   <styled.div
     depth={2}
   >
-    <StyledComponent
-      depth={2}
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
-            "isStatic": false,
-            "lastClassName": "ckkVDv",
-            "rules": Array [
-              "
-  padding-left: ",
-              [Function],
-              ";
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
     >
-      <div
-        className="ckkVDv"
-      >
-        WOW! I'm depth level two :)
-      </div>
-    </StyledComponent>
+      WOW! I'm depth level two :)
+    </div>
   </styled.div>
 </IndentedElement>
 `;

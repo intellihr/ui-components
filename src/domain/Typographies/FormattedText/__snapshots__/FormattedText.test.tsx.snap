@@ -44,6 +44,41 @@ exports[`<FormattedText /> should not include a custom text renderer 1`] = `
 `;
 
 exports[`<FormattedText /> should render a big block of markdown 1`] = `
+.c1 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  display: inline;
+}
+
+.c1,
+.c1:link,
+.c1:visited {
+  color: #432DF3;
+}
+
+.c1:hover {
+  color: #2512B3;
+}
+
+.c1:active {
+  color: #0F0080;
+}
+
+.c0 {
+  white-space: pre-wrap;
+}
+
+.c0 .react-markdown-block > :last-child {
+  margin-bottom: 0;
+}
+
 <FormattedText
   renderEmojis={false}
   text="
@@ -126,55 +161,22 @@ Ordered/multi-level lists:
 "
 >
   <styled.div>
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-ifAKCX",
-            "isStatic": true,
-            "lastClassName": "hvTAOU",
-            "rules": Array [
-              "
-  white-space: pre-wrap;
-
-  .react-markdown-block {
-    > :last-child {
-      margin-bottom: 0;
-    }
-  }
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-ifAKCX",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
     >
-      <div
-        className="hvTAOU"
-      >
-        <ReactMarkdown
-          astPlugins={Array []}
-          className="react-markdown-block"
-          escapeHtml={true}
-          plugins={Array []}
-          rawSourcePos={false}
-          renderers={
-            Object {
-              "link": [Function],
-            }
+      <ReactMarkdown
+        astPlugins={Array []}
+        className="react-markdown-block"
+        escapeHtml={true}
+        plugins={Array []}
+        rawSourcePos={false}
+        renderers={
+          Object {
+            "link": [Function],
           }
-          skipHtml={false}
-          source="
+        }
+        skipHtml={false}
+        source="
 FormattedText supports all syntax supported by markdown.
 
 Typography
@@ -252,1110 +254,1004 @@ Ordered/multi-level lists:
     * With
       - me?
 "
-          sourcePos={false}
-          transformLinkUri={[Function]}
+        sourcePos={false}
+        transformLinkUri={[Function]}
+      >
+        <Root
+          className="react-markdown-block"
+          key="root-1-1"
         >
-          <Root
+          <div
             className="react-markdown-block"
-            key="root-1-1"
           >
-            <div
-              className="react-markdown-block"
+            <p
+              key="paragraph-2-1"
             >
-              <p
-                key="paragraph-2-1"
+              <TextRenderer
+                key="text-2-1"
+                nodeKey="text-2-1"
+                value="FormattedText supports all syntax supported by markdown."
               >
+                FormattedText supports all syntax supported by markdown.
+              </TextRenderer>
+            </p>
+            <Heading
+              key="heading-4-1"
+              level={2}
+            >
+              <h2>
                 <TextRenderer
-                  key="text-2-1"
-                  nodeKey="text-2-1"
-                  value="FormattedText supports all syntax supported by markdown."
+                  key="text-4-1"
+                  nodeKey="text-4-1"
+                  value="Typography"
                 >
-                  FormattedText supports all syntax supported by markdown.
+                  Typography
                 </TextRenderer>
-              </p>
-              <Heading
-                key="heading-4-1"
-                level={2}
+              </h2>
+            </Heading>
+            <p
+              key="paragraph-6-1"
+            >
+              <TextRenderer
+                key="text-6-1"
+                nodeKey="text-6-1"
+                value="Multiple line breaks will be collapsed to a single paragraph:"
               >
-                <h2>
-                  <TextRenderer
-                    key="text-4-1"
-                    nodeKey="text-4-1"
-                    value="Typography"
-                  >
-                    Typography
-                  </TextRenderer>
-                </h2>
-              </Heading>
-              <p
-                key="paragraph-6-1"
+                Multiple line breaks will be collapsed to a single paragraph:
+              </TextRenderer>
+            </p>
+            <p
+              key="paragraph-11-1"
+            >
+              <TextRenderer
+                key="text-11-1"
+                nodeKey="text-11-1"
+                value="See?"
               >
+                See?
+              </TextRenderer>
+            </p>
+            <Heading
+              key="heading-13-1"
+              level={1}
+            >
+              <h1>
                 <TextRenderer
-                  key="text-6-1"
-                  nodeKey="text-6-1"
-                  value="Multiple line breaks will be collapsed to a single paragraph:"
+                  key="text-13-3"
+                  nodeKey="text-13-3"
+                  value="H1"
                 >
-                  Multiple line breaks will be collapsed to a single paragraph:
+                  H1
                 </TextRenderer>
-              </p>
-              <p
-                key="paragraph-11-1"
-              >
+              </h1>
+            </Heading>
+            <Heading
+              key="heading-14-1"
+              level={2}
+            >
+              <h2>
                 <TextRenderer
-                  key="text-11-1"
-                  nodeKey="text-11-1"
-                  value="See?"
+                  key="text-14-4"
+                  nodeKey="text-14-4"
+                  value="H2"
                 >
-                  See?
+                  H2
                 </TextRenderer>
-              </p>
-              <Heading
-                key="heading-13-1"
-                level={1}
+              </h2>
+            </Heading>
+            <Heading
+              key="heading-15-1"
+              level={3}
+            >
+              <h3>
+                <TextRenderer
+                  key="text-15-5"
+                  nodeKey="text-15-5"
+                  value="H3"
+                >
+                  H3
+                </TextRenderer>
+              </h3>
+            </Heading>
+            <Heading
+              key="heading-16-1"
+              level={4}
+            >
+              <h4>
+                <TextRenderer
+                  key="text-16-6"
+                  nodeKey="text-16-6"
+                  value="H4"
+                >
+                  H4
+                </TextRenderer>
+              </h4>
+            </Heading>
+            <Heading
+              key="heading-17-1"
+              level={5}
+            >
+              <h5>
+                <TextRenderer
+                  key="text-17-7"
+                  nodeKey="text-17-7"
+                  value="H5"
+                >
+                  H5
+                </TextRenderer>
+              </h5>
+            </Heading>
+            <Heading
+              key="heading-18-1"
+              level={6}
+            >
+              <h6>
+                <TextRenderer
+                  key="text-18-8"
+                  nodeKey="text-18-8"
+                  value="H6"
+                >
+                  H6
+                </TextRenderer>
+              </h6>
+            </Heading>
+            <hr
+              key="thematicBreak-20-1"
+            />
+            <Heading
+              key="heading-22-1"
+              level={2}
+            >
+              <h2>
+                <TextRenderer
+                  key="text-22-1"
+                  nodeKey="text-22-1"
+                  value="Links"
+                >
+                  Links
+                </TextRenderer>
+              </h2>
+            </Heading>
+            <p
+              key="paragraph-24-1"
+            >
+              <Component
+                href="http://www.intellihr.com.au"
+                key="link-24-1"
               >
-                <h1>
-                  <TextRenderer
-                    key="text-13-3"
-                    nodeKey="text-13-3"
-                    value="H1"
-                  >
-                    H1
-                  </TextRenderer>
-                </h1>
-              </Heading>
-              <Heading
-                key="heading-14-1"
-                level={2}
-              >
-                <h2>
-                  <TextRenderer
-                    key="text-14-4"
-                    nodeKey="text-14-4"
-                    value="H2"
-                  >
-                    H2
-                  </TextRenderer>
-                </h2>
-              </Heading>
-              <Heading
-                key="heading-15-1"
-                level={3}
-              >
-                <h3>
-                  <TextRenderer
-                    key="text-15-5"
-                    nodeKey="text-15-5"
-                    value="H3"
-                  >
-                    H3
-                  </TextRenderer>
-                </h3>
-              </Heading>
-              <Heading
-                key="heading-16-1"
-                level={4}
-              >
-                <h4>
-                  <TextRenderer
-                    key="text-16-6"
-                    nodeKey="text-16-6"
-                    value="H4"
-                  >
-                    H4
-                  </TextRenderer>
-                </h4>
-              </Heading>
-              <Heading
-                key="heading-17-1"
-                level={5}
-              >
-                <h5>
-                  <TextRenderer
-                    key="text-17-7"
-                    nodeKey="text-17-7"
-                    value="H5"
-                  >
-                    H5
-                  </TextRenderer>
-                </h5>
-              </Heading>
-              <Heading
-                key="heading-18-1"
-                level={6}
-              >
-                <h6>
-                  <TextRenderer
-                    key="text-18-8"
-                    nodeKey="text-18-8"
-                    value="H6"
-                  >
-                    H6
-                  </TextRenderer>
-                </h6>
-              </Heading>
-              <hr
-                key="thematicBreak-20-1"
-              />
-              <Heading
-                key="heading-22-1"
-                level={2}
-              >
-                <h2>
-                  <TextRenderer
-                    key="text-22-1"
-                    nodeKey="text-22-1"
-                    value="Links"
-                  >
-                    Links
-                  </TextRenderer>
-                </h2>
-              </Heading>
-              <p
-                key="paragraph-24-1"
-              >
-                <Component
+                <TextLink
+                  anchorComponent="a"
                   href="http://www.intellihr.com.au"
-                  key="link-24-1"
+                  isInline={true}
+                  target="_blank"
+                  type="anchor"
                 >
-                  <TextLink
+                  <Styled(Component)
                     anchorComponent="a"
                     href="http://www.intellihr.com.au"
                     isInline={true}
                     target="_blank"
                     type="anchor"
                   >
-                    <Styled(Component)
+                    <Component
                       anchorComponent="a"
+                      className="c1"
                       href="http://www.intellihr.com.au"
                       isInline={true}
                       target="_blank"
                       type="anchor"
                     >
-                      <StyledComponent
+                      <Anchor
                         anchorComponent="a"
-                        forwardedComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "attrs": Array [],
-                            "componentStyle": ComponentStyle {
-                              "componentId": "sc-bwzfXH",
-                              "isStatic": false,
-                              "lastClassName": "bponwI",
-                              "rules": Array [
-                                "
-  ",
-                                "
-  transition: color .25s ease-out;
-  cursor: pointer;
-
-  ",
-                                [Function],
-                                "
-
-  ",
-                                [Function],
-                                "
-
-  &,
-  &:link,
-  &:visited {
-    color: ",
-                                "#432DF3",
-                                ";
-  }
-
-  &:hover {
-    color: ",
-                                "#2512B3",
-                                ";
-    ",
-                                [Function],
-                                "
-  }
-
-  &:active {
-    color: ",
-                                "#0F0080",
-                                ";
-  }
-",
-                                ";
-",
-                              ],
-                            },
-                            "displayName": "Styled(Component)",
-                            "foldedComponentIds": Array [],
-                            "render": [Function],
-                            "styledComponentId": "sc-bwzfXH",
-                            "target": [Function],
-                            "toString": [Function],
-                            "warnTooManyClasses": [Function],
-                            "withComponent": [Function],
-                            Symbol(Symbol.hasInstance): [Function],
-                          }
-                        }
-                        forwardedRef={null}
+                        className="c1"
                         href="http://www.intellihr.com.au"
-                        isInline={true}
                         target="_blank"
                         type="anchor"
                       >
-                        <Component
-                          anchorComponent="a"
-                          className="bponwI"
+                        <a
+                          className="c1"
                           href="http://www.intellihr.com.au"
-                          isInline={true}
                           target="_blank"
                           type="anchor"
                         >
-                          <Anchor
-                            anchorComponent="a"
-                            className="bponwI"
-                            href="http://www.intellihr.com.au"
-                            target="_blank"
-                            type="anchor"
+                          <TextRenderer
+                            key="text-24-1"
+                            nodeKey="text-24-1"
+                            value="http://www.intellihr.com.au"
                           >
-                            <a
-                              className="bponwI"
-                              href="http://www.intellihr.com.au"
-                              target="_blank"
-                              type="anchor"
-                            >
-                              <TextRenderer
-                                key="text-24-1"
-                                nodeKey="text-24-1"
-                                value="http://www.intellihr.com.au"
-                              >
-                                http://www.intellihr.com.au
-                              </TextRenderer>
-                            </a>
-                          </Anchor>
-                        </Component>
-                      </StyledComponent>
-                    </Styled(Component)>
-                  </TextLink>
-                </Component>
-                <TextRenderer
-                  key="text-24-28"
-                  nodeKey="text-24-28"
-                  value="
+                            http://www.intellihr.com.au
+                          </TextRenderer>
+                        </a>
+                      </Anchor>
+                    </Component>
+                  </Styled(Component)>
+                </TextLink>
+              </Component>
+              <TextRenderer
+                key="text-24-28"
+                nodeKey="text-24-28"
+                value="
 "
-                >
-                  
+              >
+                
 
-                </TextRenderer>
-                <Component
+              </TextRenderer>
+              <Component
+                href="http://www.google.com"
+                key="link-25-1"
+              >
+                <TextLink
+                  anchorComponent="a"
                   href="http://www.google.com"
-                  key="link-25-1"
+                  isInline={true}
+                  target="_blank"
+                  type="anchor"
                 >
-                  <TextLink
+                  <Styled(Component)
                     anchorComponent="a"
                     href="http://www.google.com"
                     isInline={true}
                     target="_blank"
                     type="anchor"
                   >
-                    <Styled(Component)
+                    <Component
                       anchorComponent="a"
+                      className="c1"
                       href="http://www.google.com"
                       isInline={true}
                       target="_blank"
                       type="anchor"
                     >
-                      <StyledComponent
+                      <Anchor
                         anchorComponent="a"
-                        forwardedComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "attrs": Array [],
-                            "componentStyle": ComponentStyle {
-                              "componentId": "sc-bwzfXH",
-                              "isStatic": false,
-                              "lastClassName": "bponwI",
-                              "rules": Array [
-                                "
-  ",
-                                "
-  transition: color .25s ease-out;
-  cursor: pointer;
-
-  ",
-                                [Function],
-                                "
-
-  ",
-                                [Function],
-                                "
-
-  &,
-  &:link,
-  &:visited {
-    color: ",
-                                "#432DF3",
-                                ";
-  }
-
-  &:hover {
-    color: ",
-                                "#2512B3",
-                                ";
-    ",
-                                [Function],
-                                "
-  }
-
-  &:active {
-    color: ",
-                                "#0F0080",
-                                ";
-  }
-",
-                                ";
-",
-                              ],
-                            },
-                            "displayName": "Styled(Component)",
-                            "foldedComponentIds": Array [],
-                            "render": [Function],
-                            "styledComponentId": "sc-bwzfXH",
-                            "target": [Function],
-                            "toString": [Function],
-                            "warnTooManyClasses": [Function],
-                            "withComponent": [Function],
-                            Symbol(Symbol.hasInstance): [Function],
-                          }
-                        }
-                        forwardedRef={null}
+                        className="c1"
                         href="http://www.google.com"
-                        isInline={true}
                         target="_blank"
                         type="anchor"
                       >
-                        <Component
-                          anchorComponent="a"
-                          className="bponwI"
+                        <a
+                          className="c1"
                           href="http://www.google.com"
-                          isInline={true}
                           target="_blank"
                           type="anchor"
                         >
-                          <Anchor
-                            anchorComponent="a"
-                            className="bponwI"
-                            href="http://www.google.com"
-                            target="_blank"
-                            type="anchor"
+                          <TextRenderer
+                            key="text-25-2"
+                            nodeKey="text-25-2"
+                            value="Inline link"
                           >
-                            <a
-                              className="bponwI"
-                              href="http://www.google.com"
-                              target="_blank"
-                              type="anchor"
+                            Inline link
+                          </TextRenderer>
+                        </a>
+                      </Anchor>
+                    </Component>
+                  </Styled(Component)>
+                </TextLink>
+              </Component>
+            </p>
+            <hr
+              key="thematicBreak-27-1"
+            />
+            <Heading
+              key="heading-29-1"
+              level={2}
+            >
+              <h2>
+                <TextRenderer
+                  key="text-29-1"
+                  nodeKey="text-29-1"
+                  value="Images"
+                >
+                  Images
+                </TextRenderer>
+              </h2>
+            </Heading>
+            <p
+              key="paragraph-31-1"
+            >
+              <img
+                alt="Alt text"
+                key="image-31-1"
+                src="https://i.imgur.com/eyUDgtd.jpg"
+                title="Title Text"
+              />
+            </p>
+            <hr
+              key="thematicBreak-33-1"
+            />
+            <Heading
+              key="heading-35-1"
+              level={2}
+            >
+              <h2>
+                <TextRenderer
+                  key="text-35-1"
+                  nodeKey="text-35-1"
+                  value="Code"
+                >
+                  Code
+                </TextRenderer>
+              </h2>
+            </Heading>
+            <p
+              key="paragraph-38-1"
+            >
+              <TextRenderer
+                key="text-38-1"
+                nodeKey="text-38-1"
+                value="Inline code with "
+              >
+                Inline code with 
+              </TextRenderer>
+              <InlineCode
+                inline={true}
+                key="inlineCode-38-18"
+                value="blah"
+              >
+                <code>
+                  blah
+                </code>
+              </InlineCode>
+            </p>
+            <hr
+              key="thematicBreak-40-1"
+            />
+            <Heading
+              key="heading-42-1"
+              level={2}
+            >
+              <h2>
+                <TextRenderer
+                  key="text-42-1"
+                  nodeKey="text-42-1"
+                  value="Tables"
+                >
+                  Tables
+                </TextRenderer>
+              </h2>
+            </Heading>
+            <p
+              key="paragraph-44-1"
+            >
+              <TextRenderer
+                key="text-44-1"
+                nodeKey="text-44-1"
+                value="Colons can be used to align columns."
+              >
+                Colons can be used to align columns.
+              </TextRenderer>
+            </p>
+            <bound SimpleRenderer
+              columnAlignment={
+                Array [
+                  null,
+                  "center",
+                  "right",
+                ]
+              }
+              key="table-46-1"
+            >
+              <table>
+                <bound SimpleRenderer
+                  columnAlignment={
+                    Array [
+                      null,
+                      "center",
+                      "right",
+                    ]
+                  }
+                  key="tableHead-46-1"
+                >
+                  <thead>
+                    <bound SimpleRenderer
+                      columnAlignment={
+                        Array [
+                          null,
+                          "center",
+                          "right",
+                        ]
+                      }
+                      isHeader={true}
+                      key="tableRow-46-1"
+                    >
+                      <tr>
+                        <TableCell
+                          align={null}
+                          isHeader={true}
+                          key="tableCell-46-3"
+                        >
+                          <th>
+                            <TextRenderer
+                              key="text-46-3"
+                              nodeKey="text-46-3"
+                              value="Tables"
                             >
-                              <TextRenderer
-                                key="text-25-2"
-                                nodeKey="text-25-2"
-                                value="Inline link"
-                              >
-                                Inline link
-                              </TextRenderer>
-                            </a>
-                          </Anchor>
-                        </Component>
-                      </StyledComponent>
-                    </Styled(Component)>
-                  </TextLink>
-                </Component>
-              </p>
-              <hr
-                key="thematicBreak-27-1"
-              />
-              <Heading
-                key="heading-29-1"
-                level={2}
-              >
-                <h2>
-                  <TextRenderer
-                    key="text-29-1"
-                    nodeKey="text-29-1"
-                    value="Images"
-                  >
-                    Images
-                  </TextRenderer>
-                </h2>
-              </Heading>
+                              Tables
+                            </TextRenderer>
+                          </th>
+                        </TableCell>
+                        <TableCell
+                          align="center"
+                          isHeader={true}
+                          key="tableCell-46-19"
+                        >
+                          <th
+                            style={
+                              Object {
+                                "textAlign": "center",
+                              }
+                            }
+                          >
+                            <TextRenderer
+                              key="text-46-19"
+                              nodeKey="text-46-19"
+                              value="Are"
+                            >
+                              Are
+                            </TextRenderer>
+                          </th>
+                        </TableCell>
+                        <TableCell
+                          align="right"
+                          isHeader={true}
+                          key="tableCell-46-35"
+                        >
+                          <th
+                            style={
+                              Object {
+                                "textAlign": "right",
+                              }
+                            }
+                          >
+                            <TextRenderer
+                              key="text-46-35"
+                              nodeKey="text-46-35"
+                              value="Cool"
+                            >
+                              Cool
+                            </TextRenderer>
+                          </th>
+                        </TableCell>
+                      </tr>
+                    </bound SimpleRenderer>
+                  </thead>
+                </bound SimpleRenderer>
+                <bound SimpleRenderer
+                  columnAlignment={
+                    Array [
+                      null,
+                      "center",
+                      "right",
+                    ]
+                  }
+                  key="tableBody-48-1"
+                >
+                  <tbody>
+                    <bound SimpleRenderer
+                      columnAlignment={
+                        Array [
+                          null,
+                          "center",
+                          "right",
+                        ]
+                      }
+                      isHeader={false}
+                      key="tableRow-48-1"
+                    >
+                      <tr>
+                        <TableCell
+                          align={null}
+                          isHeader={false}
+                          key="tableCell-48-3"
+                        >
+                          <td>
+                            <TextRenderer
+                              key="text-48-3"
+                              nodeKey="text-48-3"
+                              value="col 3 is"
+                            >
+                              col 3 is
+                            </TextRenderer>
+                          </td>
+                        </TableCell>
+                        <TableCell
+                          align="center"
+                          isHeader={false}
+                          key="tableCell-48-19"
+                        >
+                          <td
+                            style={
+                              Object {
+                                "textAlign": "center",
+                              }
+                            }
+                          >
+                            <TextRenderer
+                              key="text-48-19"
+                              nodeKey="text-48-19"
+                              value="right-aligned"
+                            >
+                              right-aligned
+                            </TextRenderer>
+                          </td>
+                        </TableCell>
+                        <TableCell
+                          align="right"
+                          isHeader={false}
+                          key="tableCell-48-35"
+                        >
+                          <td
+                            style={
+                              Object {
+                                "textAlign": "right",
+                              }
+                            }
+                          >
+                            <TextRenderer
+                              key="text-48-35"
+                              nodeKey="text-48-35"
+                              value="$1600"
+                            >
+                              $1600
+                            </TextRenderer>
+                          </td>
+                        </TableCell>
+                      </tr>
+                    </bound SimpleRenderer>
+                    <bound SimpleRenderer
+                      columnAlignment={
+                        Array [
+                          null,
+                          "center",
+                          "right",
+                        ]
+                      }
+                      isHeader={false}
+                      key="tableRow-49-1"
+                    >
+                      <tr>
+                        <TableCell
+                          align={null}
+                          isHeader={false}
+                          key="tableCell-49-3"
+                        >
+                          <td>
+                            <TextRenderer
+                              key="text-49-3"
+                              nodeKey="text-49-3"
+                              value="col 2 is"
+                            >
+                              col 2 is
+                            </TextRenderer>
+                          </td>
+                        </TableCell>
+                        <TableCell
+                          align="center"
+                          isHeader={false}
+                          key="tableCell-49-19"
+                        >
+                          <td
+                            style={
+                              Object {
+                                "textAlign": "center",
+                              }
+                            }
+                          >
+                            <TextRenderer
+                              key="text-49-19"
+                              nodeKey="text-49-19"
+                              value="centered"
+                            >
+                              centered
+                            </TextRenderer>
+                          </td>
+                        </TableCell>
+                        <TableCell
+                          align="right"
+                          isHeader={false}
+                          key="tableCell-49-37"
+                        >
+                          <td
+                            style={
+                              Object {
+                                "textAlign": "right",
+                              }
+                            }
+                          >
+                            <TextRenderer
+                              key="text-49-37"
+                              nodeKey="text-49-37"
+                              value="$12"
+                            >
+                              $12
+                            </TextRenderer>
+                          </td>
+                        </TableCell>
+                      </tr>
+                    </bound SimpleRenderer>
+                    <bound SimpleRenderer
+                      columnAlignment={
+                        Array [
+                          null,
+                          "center",
+                          "right",
+                        ]
+                      }
+                      isHeader={false}
+                      key="tableRow-50-1"
+                    >
+                      <tr>
+                        <TableCell
+                          align={null}
+                          isHeader={false}
+                          key="tableCell-50-3"
+                        >
+                          <td>
+                            <TextRenderer
+                              key="text-50-3"
+                              nodeKey="text-50-3"
+                              value="zebra stripes"
+                            >
+                              zebra stripes
+                            </TextRenderer>
+                          </td>
+                        </TableCell>
+                        <TableCell
+                          align="center"
+                          isHeader={false}
+                          key="tableCell-50-19"
+                        >
+                          <td
+                            style={
+                              Object {
+                                "textAlign": "center",
+                              }
+                            }
+                          >
+                            <TextRenderer
+                              key="text-50-19"
+                              nodeKey="text-50-19"
+                              value="are neat"
+                            >
+                              are neat
+                            </TextRenderer>
+                          </td>
+                        </TableCell>
+                        <TableCell
+                          align="right"
+                          isHeader={false}
+                          key="tableCell-50-38"
+                        >
+                          <td
+                            style={
+                              Object {
+                                "textAlign": "right",
+                              }
+                            }
+                          >
+                            <TextRenderer
+                              key="text-50-38"
+                              nodeKey="text-50-38"
+                              value="$1"
+                            >
+                              $1
+                            </TextRenderer>
+                          </td>
+                        </TableCell>
+                      </tr>
+                    </bound SimpleRenderer>
+                  </tbody>
+                </bound SimpleRenderer>
+              </table>
+            </bound SimpleRenderer>
+            <hr
+              key="thematicBreak-52-1"
+            />
+            <Heading
+              key="heading-54-1"
+              level={2}
+            >
+              <h2>
+                <TextRenderer
+                  key="text-54-1"
+                  nodeKey="text-54-1"
+                  value="Quotes"
+                >
+                  Quotes
+                </TextRenderer>
+              </h2>
+            </Heading>
+            <blockquote
+              key="blockquote-57-1"
+            >
               <p
-                key="paragraph-31-1"
-              >
-                <img
-                  alt="Alt text"
-                  key="image-31-1"
-                  src="https://i.imgur.com/eyUDgtd.jpg"
-                  title="Title Text"
-                />
-              </p>
-              <hr
-                key="thematicBreak-33-1"
-              />
-              <Heading
-                key="heading-35-1"
-                level={2}
-              >
-                <h2>
-                  <TextRenderer
-                    key="text-35-1"
-                    nodeKey="text-35-1"
-                    value="Code"
-                  >
-                    Code
-                  </TextRenderer>
-                </h2>
-              </Heading>
-              <p
-                key="paragraph-38-1"
+                key="paragraph-57-3"
               >
                 <TextRenderer
-                  key="text-38-1"
-                  nodeKey="text-38-1"
-                  value="Inline code with "
+                  key="text-57-3"
+                  nodeKey="text-57-3"
+                  value="What the navy seal did you just navy seal about me, you little navy seal? I'll have you know I navy sealed top of my class in the navy seals, and I've been involved in numerous secret raids on the navy seals, and I have over 300 confirmed..."
                 >
-                  Inline code with 
+                  What the navy seal did you just navy seal about me, you little navy seal? I'll have you know I navy sealed top of my class in the navy seals, and I've been involved in numerous secret raids on the navy seals, and I have over 300 confirmed...
                 </TextRenderer>
-                <InlineCode
-                  inline={true}
-                  key="inlineCode-38-18"
-                  value="blah"
-                >
-                  <code>
-                    blah
-                  </code>
-                </InlineCode>
               </p>
-              <hr
-                key="thematicBreak-40-1"
-              />
-              <Heading
-                key="heading-42-1"
-                level={2}
-              >
-                <h2>
-                  <TextRenderer
-                    key="text-42-1"
-                    nodeKey="text-42-1"
-                    value="Tables"
-                  >
-                    Tables
-                  </TextRenderer>
-                </h2>
-              </Heading>
-              <p
-                key="paragraph-44-1"
-              >
+            </blockquote>
+            <hr
+              key="thematicBreak-59-1"
+            />
+            <Heading
+              key="heading-61-1"
+              level={2}
+            >
+              <h2>
                 <TextRenderer
-                  key="text-44-1"
-                  nodeKey="text-44-1"
-                  value="Colons can be used to align columns."
+                  key="text-61-1"
+                  nodeKey="text-61-1"
+                  value="Lists"
                 >
-                  Colons can be used to align columns.
+                  Lists
                 </TextRenderer>
-              </p>
-              <bound SimpleRenderer
-                columnAlignment={
-                  Array [
-                    null,
-                    "center",
-                    "right",
-                  ]
-                }
-                key="table-46-1"
+              </h2>
+            </Heading>
+            <p
+              key="paragraph-64-1"
+            >
+              <TextRenderer
+                key="text-64-1"
+                nodeKey="text-64-1"
+                value="Unordered Lists:"
               >
-                <table>
-                  <bound SimpleRenderer
-                    columnAlignment={
-                      Array [
-                        null,
-                        "center",
-                        "right",
-                      ]
-                    }
-                    key="tableHead-46-1"
-                  >
-                    <thead>
-                      <bound SimpleRenderer
-                        columnAlignment={
-                          Array [
-                            null,
-                            "center",
-                            "right",
-                          ]
-                        }
-                        isHeader={true}
-                        key="tableRow-46-1"
-                      >
-                        <tr>
-                          <TableCell
-                            align={null}
-                            isHeader={true}
-                            key="tableCell-46-3"
-                          >
-                            <th>
-                              <TextRenderer
-                                key="text-46-3"
-                                nodeKey="text-46-3"
-                                value="Tables"
-                              >
-                                Tables
-                              </TextRenderer>
-                            </th>
-                          </TableCell>
-                          <TableCell
-                            align="center"
-                            isHeader={true}
-                            key="tableCell-46-19"
-                          >
-                            <th
-                              style={
-                                Object {
-                                  "textAlign": "center",
-                                }
-                              }
-                            >
-                              <TextRenderer
-                                key="text-46-19"
-                                nodeKey="text-46-19"
-                                value="Are"
-                              >
-                                Are
-                              </TextRenderer>
-                            </th>
-                          </TableCell>
-                          <TableCell
-                            align="right"
-                            isHeader={true}
-                            key="tableCell-46-35"
-                          >
-                            <th
-                              style={
-                                Object {
-                                  "textAlign": "right",
-                                }
-                              }
-                            >
-                              <TextRenderer
-                                key="text-46-35"
-                                nodeKey="text-46-35"
-                                value="Cool"
-                              >
-                                Cool
-                              </TextRenderer>
-                            </th>
-                          </TableCell>
-                        </tr>
-                      </bound SimpleRenderer>
-                    </thead>
-                  </bound SimpleRenderer>
-                  <bound SimpleRenderer
-                    columnAlignment={
-                      Array [
-                        null,
-                        "center",
-                        "right",
-                      ]
-                    }
-                    key="tableBody-48-1"
-                  >
-                    <tbody>
-                      <bound SimpleRenderer
-                        columnAlignment={
-                          Array [
-                            null,
-                            "center",
-                            "right",
-                          ]
-                        }
-                        isHeader={false}
-                        key="tableRow-48-1"
-                      >
-                        <tr>
-                          <TableCell
-                            align={null}
-                            isHeader={false}
-                            key="tableCell-48-3"
-                          >
-                            <td>
-                              <TextRenderer
-                                key="text-48-3"
-                                nodeKey="text-48-3"
-                                value="col 3 is"
-                              >
-                                col 3 is
-                              </TextRenderer>
-                            </td>
-                          </TableCell>
-                          <TableCell
-                            align="center"
-                            isHeader={false}
-                            key="tableCell-48-19"
-                          >
-                            <td
-                              style={
-                                Object {
-                                  "textAlign": "center",
-                                }
-                              }
-                            >
-                              <TextRenderer
-                                key="text-48-19"
-                                nodeKey="text-48-19"
-                                value="right-aligned"
-                              >
-                                right-aligned
-                              </TextRenderer>
-                            </td>
-                          </TableCell>
-                          <TableCell
-                            align="right"
-                            isHeader={false}
-                            key="tableCell-48-35"
-                          >
-                            <td
-                              style={
-                                Object {
-                                  "textAlign": "right",
-                                }
-                              }
-                            >
-                              <TextRenderer
-                                key="text-48-35"
-                                nodeKey="text-48-35"
-                                value="$1600"
-                              >
-                                $1600
-                              </TextRenderer>
-                            </td>
-                          </TableCell>
-                        </tr>
-                      </bound SimpleRenderer>
-                      <bound SimpleRenderer
-                        columnAlignment={
-                          Array [
-                            null,
-                            "center",
-                            "right",
-                          ]
-                        }
-                        isHeader={false}
-                        key="tableRow-49-1"
-                      >
-                        <tr>
-                          <TableCell
-                            align={null}
-                            isHeader={false}
-                            key="tableCell-49-3"
-                          >
-                            <td>
-                              <TextRenderer
-                                key="text-49-3"
-                                nodeKey="text-49-3"
-                                value="col 2 is"
-                              >
-                                col 2 is
-                              </TextRenderer>
-                            </td>
-                          </TableCell>
-                          <TableCell
-                            align="center"
-                            isHeader={false}
-                            key="tableCell-49-19"
-                          >
-                            <td
-                              style={
-                                Object {
-                                  "textAlign": "center",
-                                }
-                              }
-                            >
-                              <TextRenderer
-                                key="text-49-19"
-                                nodeKey="text-49-19"
-                                value="centered"
-                              >
-                                centered
-                              </TextRenderer>
-                            </td>
-                          </TableCell>
-                          <TableCell
-                            align="right"
-                            isHeader={false}
-                            key="tableCell-49-37"
-                          >
-                            <td
-                              style={
-                                Object {
-                                  "textAlign": "right",
-                                }
-                              }
-                            >
-                              <TextRenderer
-                                key="text-49-37"
-                                nodeKey="text-49-37"
-                                value="$12"
-                              >
-                                $12
-                              </TextRenderer>
-                            </td>
-                          </TableCell>
-                        </tr>
-                      </bound SimpleRenderer>
-                      <bound SimpleRenderer
-                        columnAlignment={
-                          Array [
-                            null,
-                            "center",
-                            "right",
-                          ]
-                        }
-                        isHeader={false}
-                        key="tableRow-50-1"
-                      >
-                        <tr>
-                          <TableCell
-                            align={null}
-                            isHeader={false}
-                            key="tableCell-50-3"
-                          >
-                            <td>
-                              <TextRenderer
-                                key="text-50-3"
-                                nodeKey="text-50-3"
-                                value="zebra stripes"
-                              >
-                                zebra stripes
-                              </TextRenderer>
-                            </td>
-                          </TableCell>
-                          <TableCell
-                            align="center"
-                            isHeader={false}
-                            key="tableCell-50-19"
-                          >
-                            <td
-                              style={
-                                Object {
-                                  "textAlign": "center",
-                                }
-                              }
-                            >
-                              <TextRenderer
-                                key="text-50-19"
-                                nodeKey="text-50-19"
-                                value="are neat"
-                              >
-                                are neat
-                              </TextRenderer>
-                            </td>
-                          </TableCell>
-                          <TableCell
-                            align="right"
-                            isHeader={false}
-                            key="tableCell-50-38"
-                          >
-                            <td
-                              style={
-                                Object {
-                                  "textAlign": "right",
-                                }
-                              }
-                            >
-                              <TextRenderer
-                                key="text-50-38"
-                                nodeKey="text-50-38"
-                                value="$1"
-                              >
-                                $1
-                              </TextRenderer>
-                            </td>
-                          </TableCell>
-                        </tr>
-                      </bound SimpleRenderer>
-                    </tbody>
-                  </bound SimpleRenderer>
-                </table>
-              </bound SimpleRenderer>
-              <hr
-                key="thematicBreak-52-1"
-              />
-              <Heading
-                key="heading-54-1"
-                level={2}
-              >
-                <h2>
-                  <TextRenderer
-                    key="text-54-1"
-                    nodeKey="text-54-1"
-                    value="Quotes"
-                  >
-                    Quotes
-                  </TextRenderer>
-                </h2>
-              </Heading>
-              <blockquote
-                key="blockquote-57-1"
-              >
-                <p
-                  key="paragraph-57-3"
+                Unordered Lists:
+              </TextRenderer>
+            </p>
+            <List
+              depth={0}
+              key="list-66-1"
+              ordered={false}
+              start={null}
+              tight={true}
+            >
+              <ul>
+                <ListItem
+                  checked={null}
+                  index={0}
+                  key="listItem-66-1"
+                  ordered={false}
+                  tight={true}
                 >
-                  <TextRenderer
-                    key="text-57-3"
-                    nodeKey="text-57-3"
-                    value="What the navy seal did you just navy seal about me, you little navy seal? I'll have you know I navy sealed top of my class in the navy seals, and I've been involved in numerous secret raids on the navy seals, and I have over 300 confirmed..."
-                  >
-                    What the navy seal did you just navy seal about me, you little navy seal? I'll have you know I navy sealed top of my class in the navy seals, and I've been involved in numerous secret raids on the navy seals, and I have over 300 confirmed...
-                  </TextRenderer>
-                </p>
-              </blockquote>
-              <hr
-                key="thematicBreak-59-1"
-              />
-              <Heading
-                key="heading-61-1"
-                level={2}
-              >
-                <h2>
-                  <TextRenderer
-                    key="text-61-1"
-                    nodeKey="text-61-1"
-                    value="Lists"
-                  >
-                    Lists
-                  </TextRenderer>
-                </h2>
-              </Heading>
-              <p
-                key="paragraph-64-1"
-              >
-                <TextRenderer
-                  key="text-64-1"
-                  nodeKey="text-64-1"
-                  value="Unordered Lists:"
+                  <li>
+                    <TextRenderer
+                      key="text-66-4"
+                      nodeKey="text-66-4"
+                      value="Wow"
+                    >
+                      Wow
+                    </TextRenderer>
+                  </li>
+                </ListItem>
+                <ListItem
+                  checked={null}
+                  index={1}
+                  key="listItem-67-1"
+                  ordered={false}
+                  tight={true}
                 >
-                  Unordered Lists:
-                </TextRenderer>
-              </p>
-              <List
-                depth={0}
-                key="list-66-1"
-                ordered={false}
-                start={null}
-                tight={true}
-              >
-                <ul>
-                  <ListItem
-                    checked={null}
-                    index={0}
-                    key="listItem-66-1"
-                    ordered={false}
-                    tight={true}
-                  >
-                    <li>
-                      <TextRenderer
-                        key="text-66-4"
-                        nodeKey="text-66-4"
-                        value="Wow"
-                      >
-                        Wow
-                      </TextRenderer>
-                    </li>
-                  </ListItem>
-                  <ListItem
-                    checked={null}
-                    index={1}
-                    key="listItem-67-1"
-                    ordered={false}
-                    tight={true}
-                  >
-                    <li>
-                      <TextRenderer
-                        key="text-67-4"
-                        nodeKey="text-67-4"
-                        value="Eat carrots"
-                      >
-                        Eat carrots
-                      </TextRenderer>
-                    </li>
-                  </ListItem>
-                  <ListItem
-                    checked={null}
-                    index={2}
-                    key="listItem-68-1"
-                    ordered={false}
-                    tight={true}
-                  >
-                    <li>
-                      <TextRenderer
-                        key="text-68-4"
-                        nodeKey="text-68-4"
-                        value="Eat things which aren't carrots"
-                      >
-                        Eat things which aren't carrots
-                      </TextRenderer>
-                    </li>
-                  </ListItem>
-                </ul>
-              </List>
-              <p
-                key="paragraph-70-1"
-              >
-                <TextRenderer
-                  key="text-70-1"
-                  nodeKey="text-70-1"
-                  value="Ordered/multi-level lists:"
+                  <li>
+                    <TextRenderer
+                      key="text-67-4"
+                      nodeKey="text-67-4"
+                      value="Eat carrots"
+                    >
+                      Eat carrots
+                    </TextRenderer>
+                  </li>
+                </ListItem>
+                <ListItem
+                  checked={null}
+                  index={2}
+                  key="listItem-68-1"
+                  ordered={false}
+                  tight={true}
                 >
-                  Ordered/multi-level lists:
-                </TextRenderer>
-              </p>
-              <List
-                depth={0}
-                key="list-72-1"
-                ordered={true}
-                start={1}
-                tight={true}
+                  <li>
+                    <TextRenderer
+                      key="text-68-4"
+                      nodeKey="text-68-4"
+                      value="Eat things which aren't carrots"
+                    >
+                      Eat things which aren't carrots
+                    </TextRenderer>
+                  </li>
+                </ListItem>
+              </ul>
+            </List>
+            <p
+              key="paragraph-70-1"
+            >
+              <TextRenderer
+                key="text-70-1"
+                nodeKey="text-70-1"
+                value="Ordered/multi-level lists:"
               >
-                <ol>
-                  <ListItem
-                    checked={null}
-                    index={0}
-                    key="listItem-72-1"
-                    ordered={true}
-                    tight={true}
-                  >
-                    <li>
-                      <TextRenderer
-                        key="text-72-5"
-                        nodeKey="text-72-5"
-                        value="Nothing wrong with me"
-                      >
-                        Nothing wrong with me
-                      </TextRenderer>
-                    </li>
-                  </ListItem>
-                  <ListItem
-                    checked={null}
-                    index={1}
-                    key="listItem-73-1"
-                    ordered={true}
-                    tight={true}
-                  >
-                    <li>
-                      <TextRenderer
-                        key="text-73-5"
-                        nodeKey="text-73-5"
-                        value="Nothing wrong with me"
-                      >
-                        Nothing wrong with me
-                      </TextRenderer>
-                    </li>
-                  </ListItem>
-                  <ListItem
-                    checked={null}
-                    index={2}
-                    key="listItem-74-1"
-                    ordered={true}
-                    tight={true}
-                  >
-                    <li>
-                      <TextRenderer
-                        key="text-74-5"
-                        nodeKey="text-74-5"
-                        value="Nothing"
-                      >
-                        Nothing
-                      </TextRenderer>
-                      <List
-                        depth={1}
-                        key="list-75-5"
-                        ordered={false}
-                        start={null}
-                        tight={true}
-                      >
-                        <ul>
-                          <ListItem
-                            checked={null}
-                            index={0}
-                            key="listItem-75-5"
-                            ordered={false}
-                            tight={true}
-                          >
-                            <li>
-                              <TextRenderer
-                                key="text-75-7"
-                                nodeKey="text-75-7"
-                                value="Wrong"
-                              >
-                                Wrong
-                              </TextRenderer>
-                            </li>
-                          </ListItem>
-                          <ListItem
-                            checked={null}
-                            index={1}
-                            key="listItem-76-5"
-                            ordered={false}
-                            tight={true}
-                          >
-                            <li>
-                              <TextRenderer
-                                key="text-76-7"
-                                nodeKey="text-76-7"
-                                value="With"
-                              >
-                                With
-                              </TextRenderer>
-                              <List
-                                depth={2}
-                                key="list-77-7"
-                                ordered={false}
-                                start={null}
-                                tight={true}
-                              >
-                                <ul>
-                                  <ListItem
-                                    checked={null}
-                                    index={0}
-                                    key="listItem-77-7"
-                                    ordered={false}
-                                    tight={true}
-                                  >
-                                    <li>
-                                      <TextRenderer
-                                        key="text-77-9"
-                                        nodeKey="text-77-9"
-                                        value="me?"
-                                      >
-                                        me?
-                                      </TextRenderer>
-                                    </li>
-                                  </ListItem>
-                                </ul>
-                              </List>
-                            </li>
-                          </ListItem>
-                        </ul>
-                      </List>
-                    </li>
-                  </ListItem>
-                </ol>
-              </List>
-            </div>
-          </Root>
-        </ReactMarkdown>
-      </div>
-    </StyledComponent>
+                Ordered/multi-level lists:
+              </TextRenderer>
+            </p>
+            <List
+              depth={0}
+              key="list-72-1"
+              ordered={true}
+              start={1}
+              tight={true}
+            >
+              <ol>
+                <ListItem
+                  checked={null}
+                  index={0}
+                  key="listItem-72-1"
+                  ordered={true}
+                  tight={true}
+                >
+                  <li>
+                    <TextRenderer
+                      key="text-72-5"
+                      nodeKey="text-72-5"
+                      value="Nothing wrong with me"
+                    >
+                      Nothing wrong with me
+                    </TextRenderer>
+                  </li>
+                </ListItem>
+                <ListItem
+                  checked={null}
+                  index={1}
+                  key="listItem-73-1"
+                  ordered={true}
+                  tight={true}
+                >
+                  <li>
+                    <TextRenderer
+                      key="text-73-5"
+                      nodeKey="text-73-5"
+                      value="Nothing wrong with me"
+                    >
+                      Nothing wrong with me
+                    </TextRenderer>
+                  </li>
+                </ListItem>
+                <ListItem
+                  checked={null}
+                  index={2}
+                  key="listItem-74-1"
+                  ordered={true}
+                  tight={true}
+                >
+                  <li>
+                    <TextRenderer
+                      key="text-74-5"
+                      nodeKey="text-74-5"
+                      value="Nothing"
+                    >
+                      Nothing
+                    </TextRenderer>
+                    <List
+                      depth={1}
+                      key="list-75-5"
+                      ordered={false}
+                      start={null}
+                      tight={true}
+                    >
+                      <ul>
+                        <ListItem
+                          checked={null}
+                          index={0}
+                          key="listItem-75-5"
+                          ordered={false}
+                          tight={true}
+                        >
+                          <li>
+                            <TextRenderer
+                              key="text-75-7"
+                              nodeKey="text-75-7"
+                              value="Wrong"
+                            >
+                              Wrong
+                            </TextRenderer>
+                          </li>
+                        </ListItem>
+                        <ListItem
+                          checked={null}
+                          index={1}
+                          key="listItem-76-5"
+                          ordered={false}
+                          tight={true}
+                        >
+                          <li>
+                            <TextRenderer
+                              key="text-76-7"
+                              nodeKey="text-76-7"
+                              value="With"
+                            >
+                              With
+                            </TextRenderer>
+                            <List
+                              depth={2}
+                              key="list-77-7"
+                              ordered={false}
+                              start={null}
+                              tight={true}
+                            >
+                              <ul>
+                                <ListItem
+                                  checked={null}
+                                  index={0}
+                                  key="listItem-77-7"
+                                  ordered={false}
+                                  tight={true}
+                                >
+                                  <li>
+                                    <TextRenderer
+                                      key="text-77-9"
+                                      nodeKey="text-77-9"
+                                      value="me?"
+                                    >
+                                      me?
+                                    </TextRenderer>
+                                  </li>
+                                </ListItem>
+                              </ul>
+                            </List>
+                          </li>
+                        </ListItem>
+                      </ul>
+                    </List>
+                  </li>
+                </ListItem>
+              </ol>
+            </List>
+          </div>
+        </Root>
+      </ReactMarkdown>
+    </div>
   </styled.div>
 </FormattedText>
 `;
 
 exports[`<FormattedText /> should render any urls as links 1`] = `
+.c1 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  display: inline;
+}
+
+.c1,
+.c1:link,
+.c1:visited {
+  color: #432DF3;
+}
+
+.c1:hover {
+  color: #2512B3;
+}
+
+.c1:active {
+  color: #0F0080;
+}
+
+.c0 {
+  white-space: pre-wrap;
+}
+
+.c0 .react-markdown-block > :last-child {
+  margin-bottom: 0;
+}
+
 <FormattedText
   renderEmojis={false}
   text="http://www.heyguy.com
@@ -1363,214 +1259,118 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
         also this one http://www.ozbargain.com.au"
 >
   <styled.div>
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-ifAKCX",
-            "isStatic": true,
-            "lastClassName": "hvTAOU",
-            "rules": Array [
-              "
-  white-space: pre-wrap;
-
-  .react-markdown-block {
-    > :last-child {
-      margin-bottom: 0;
-    }
-  }
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-ifAKCX",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
     >
-      <div
-        className="hvTAOU"
-      >
-        <ReactMarkdown
-          astPlugins={Array []}
-          className="react-markdown-block"
-          escapeHtml={true}
-          plugins={Array []}
-          rawSourcePos={false}
-          renderers={
-            Object {
-              "link": [Function],
-            }
+      <ReactMarkdown
+        astPlugins={Array []}
+        className="react-markdown-block"
+        escapeHtml={true}
+        plugins={Array []}
+        rawSourcePos={false}
+        renderers={
+          Object {
+            "link": [Function],
           }
-          skipHtml={false}
-          source="http://www.heyguy.com
+        }
+        skipHtml={false}
+        source="http://www.heyguy.com
 
         also this one http://www.ozbargain.com.au"
-          sourcePos={false}
-          transformLinkUri={[Function]}
+        sourcePos={false}
+        transformLinkUri={[Function]}
+      >
+        <Root
+          className="react-markdown-block"
+          key="root-1-1"
         >
-          <Root
+          <div
             className="react-markdown-block"
-            key="root-1-1"
           >
-            <div
-              className="react-markdown-block"
+            <p
+              key="paragraph-1-1"
             >
-              <p
-                key="paragraph-1-1"
+              <Component
+                href="http://www.heyguy.com"
+                key="link-1-1"
               >
-                <Component
+                <TextLink
+                  anchorComponent="a"
                   href="http://www.heyguy.com"
-                  key="link-1-1"
+                  isInline={true}
+                  target="_blank"
+                  type="anchor"
                 >
-                  <TextLink
+                  <Styled(Component)
                     anchorComponent="a"
                     href="http://www.heyguy.com"
                     isInline={true}
                     target="_blank"
                     type="anchor"
                   >
-                    <Styled(Component)
+                    <Component
                       anchorComponent="a"
+                      className="c1"
                       href="http://www.heyguy.com"
                       isInline={true}
                       target="_blank"
                       type="anchor"
                     >
-                      <StyledComponent
+                      <Anchor
                         anchorComponent="a"
-                        forwardedComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "attrs": Array [],
-                            "componentStyle": ComponentStyle {
-                              "componentId": "sc-bwzfXH",
-                              "isStatic": false,
-                              "lastClassName": "bponwI",
-                              "rules": Array [
-                                "
-  ",
-                                "
-  transition: color .25s ease-out;
-  cursor: pointer;
-
-  ",
-                                [Function],
-                                "
-
-  ",
-                                [Function],
-                                "
-
-  &,
-  &:link,
-  &:visited {
-    color: ",
-                                "#432DF3",
-                                ";
-  }
-
-  &:hover {
-    color: ",
-                                "#2512B3",
-                                ";
-    ",
-                                [Function],
-                                "
-  }
-
-  &:active {
-    color: ",
-                                "#0F0080",
-                                ";
-  }
-",
-                                ";
-",
-                              ],
-                            },
-                            "displayName": "Styled(Component)",
-                            "foldedComponentIds": Array [],
-                            "render": [Function],
-                            "styledComponentId": "sc-bwzfXH",
-                            "target": [Function],
-                            "toString": [Function],
-                            "warnTooManyClasses": [Function],
-                            "withComponent": [Function],
-                            Symbol(Symbol.hasInstance): [Function],
-                          }
-                        }
-                        forwardedRef={null}
+                        className="c1"
                         href="http://www.heyguy.com"
-                        isInline={true}
                         target="_blank"
                         type="anchor"
                       >
-                        <Component
-                          anchorComponent="a"
-                          className="bponwI"
+                        <a
+                          className="c1"
                           href="http://www.heyguy.com"
-                          isInline={true}
                           target="_blank"
                           type="anchor"
                         >
-                          <Anchor
-                            anchorComponent="a"
-                            className="bponwI"
-                            href="http://www.heyguy.com"
-                            target="_blank"
-                            type="anchor"
+                          <TextRenderer
+                            key="text-1-1"
+                            nodeKey="text-1-1"
+                            value="http://www.heyguy.com"
                           >
-                            <a
-                              className="bponwI"
-                              href="http://www.heyguy.com"
-                              target="_blank"
-                              type="anchor"
-                            >
-                              <TextRenderer
-                                key="text-1-1"
-                                nodeKey="text-1-1"
-                                value="http://www.heyguy.com"
-                              >
-                                http://www.heyguy.com
-                              </TextRenderer>
-                            </a>
-                          </Anchor>
-                        </Component>
-                      </StyledComponent>
-                    </Styled(Component)>
-                  </TextLink>
-                </Component>
-              </p>
-              <CodeBlock
-                key="code-3-1"
-                language={null}
-                value="    also this one http://www.ozbargain.com.au"
-              >
-                <pre>
-                  <code>
-                        also this one http://www.ozbargain.com.au
-                  </code>
-                </pre>
-              </CodeBlock>
-            </div>
-          </Root>
-        </ReactMarkdown>
-      </div>
-    </StyledComponent>
+                            http://www.heyguy.com
+                          </TextRenderer>
+                        </a>
+                      </Anchor>
+                    </Component>
+                  </Styled(Component)>
+                </TextLink>
+              </Component>
+            </p>
+            <CodeBlock
+              key="code-3-1"
+              language={null}
+              value="    also this one http://www.ozbargain.com.au"
+            >
+              <pre>
+                <code>
+                      also this one http://www.ozbargain.com.au
+                </code>
+              </pre>
+            </CodeBlock>
+          </div>
+        </Root>
+      </ReactMarkdown>
+    </div>
   </styled.div>
 </FormattedText>
 `;
 
 exports[`<FormattedText /> should render the formatted text 1`] = `
+.c0 {
+  white-space: pre-wrap;
+}
+
+.c0 .react-markdown-block > :last-child {
+  margin-bottom: 0;
+}
+
 <FormattedText
   renderEmojis={false}
   text="Hello. I am a piece of paragraph text.
@@ -1578,94 +1378,60 @@ exports[`<FormattedText /> should render the formatted text 1`] = `
         This should be on a new line :)"
 >
   <styled.div>
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-ifAKCX",
-            "isStatic": true,
-            "lastClassName": "hvTAOU",
-            "rules": Array [
-              "
-  white-space: pre-wrap;
-
-  .react-markdown-block {
-    > :last-child {
-      margin-bottom: 0;
-    }
-  }
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-ifAKCX",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
     >
-      <div
-        className="hvTAOU"
-      >
-        <ReactMarkdown
-          astPlugins={Array []}
-          className="react-markdown-block"
-          escapeHtml={true}
-          plugins={Array []}
-          rawSourcePos={false}
-          renderers={
-            Object {
-              "link": [Function],
-            }
+      <ReactMarkdown
+        astPlugins={Array []}
+        className="react-markdown-block"
+        escapeHtml={true}
+        plugins={Array []}
+        rawSourcePos={false}
+        renderers={
+          Object {
+            "link": [Function],
           }
-          skipHtml={false}
-          source="Hello. I am a piece of paragraph text.
+        }
+        skipHtml={false}
+        source="Hello. I am a piece of paragraph text.
 
         This should be on a new line :)"
-          sourcePos={false}
-          transformLinkUri={[Function]}
+        sourcePos={false}
+        transformLinkUri={[Function]}
+      >
+        <Root
+          className="react-markdown-block"
+          key="root-1-1"
         >
-          <Root
+          <div
             className="react-markdown-block"
-            key="root-1-1"
           >
-            <div
-              className="react-markdown-block"
+            <p
+              key="paragraph-1-1"
             >
-              <p
-                key="paragraph-1-1"
+              <TextRenderer
+                key="text-1-1"
+                nodeKey="text-1-1"
+                value="Hello. I am a piece of paragraph text."
               >
-                <TextRenderer
-                  key="text-1-1"
-                  nodeKey="text-1-1"
-                  value="Hello. I am a piece of paragraph text."
-                >
-                  Hello. I am a piece of paragraph text.
-                </TextRenderer>
-              </p>
-              <CodeBlock
-                key="code-3-1"
-                language={null}
-                value="    This should be on a new line :)"
-              >
-                <pre>
-                  <code>
-                        This should be on a new line :)
-                  </code>
-                </pre>
-              </CodeBlock>
-            </div>
-          </Root>
-        </ReactMarkdown>
-      </div>
-    </StyledComponent>
+                Hello. I am a piece of paragraph text.
+              </TextRenderer>
+            </p>
+            <CodeBlock
+              key="code-3-1"
+              language={null}
+              value="    This should be on a new line :)"
+            >
+              <pre>
+                <code>
+                      This should be on a new line :)
+                </code>
+              </pre>
+            </CodeBlock>
+          </div>
+        </Root>
+      </ReactMarkdown>
+    </div>
   </styled.div>
 </FormattedText>
 `;

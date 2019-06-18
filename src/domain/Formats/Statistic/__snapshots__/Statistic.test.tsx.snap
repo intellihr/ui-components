@@ -1,6 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Statistic /> should render Statistic Record component 1`] = `
+.c0 {
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+}
+
+.c1 {
+  color: #262D33;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  -webkit-letter-spacing: -.02em;
+  -moz-letter-spacing: -.02em;
+  -ms-letter-spacing: -.02em;
+  letter-spacing: -.02em;
+}
+
 <Statistic
   title="Total Cost"
   value="99.00"
@@ -9,111 +30,57 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
     data-component-type="statistic"
   >
     <styled.div>
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-bwzfXH",
-              "isStatic": true,
-              "lastClassName": "cHrMUA",
-              "rules": Array [
-                "
-  margin-bottom: ",
-                "4",
-                "px;
-
- ",
-                "
-          font-size: ",
-                "14",
-                "px;
-          line-height: ",
-                "20",
-                "px;
-          letter-spacing: normal;
-        ",
-                "
-",
-              ],
-            },
-            "displayName": "styled.div",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "sc-bwzfXH",
-            "target": "div",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
+      <div
+        className="c0"
       >
-        <div
-          className="cHrMUA"
-        >
-          Total Cost
-        </div>
-      </StyledComponent>
+        Total Cost
+      </div>
     </styled.div>
     <styled.span>
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-htpNat",
-              "isStatic": true,
-              "lastClassName": "bNBzpE",
-              "rules": Array [
-                "
-  color: ",
-                "#262D33",
-                ";
-  font-weight: ",
-                "600",
-                ";
-
- ",
-                "
-          font-size: ",
-                "24",
-                "px;
-          line-height: ",
-                "32",
-                "px;
-          letter-spacing: -.02em;
-        ",
-                "
-",
-              ],
-            },
-            "displayName": "styled.span",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "sc-htpNat",
-            "target": "span",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
+      <span
+        className="c1"
       >
-        <span
-          className="bNBzpE"
-        >
-          99.00
-        </span>
-      </StyledComponent>
+        99.00
+      </span>
     </styled.span>
   </div>
 </Statistic>
 `;
 
 exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
+.c1 {
+  color: #262D33;
+  margin-right: 8px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  -webkit-letter-spacing: -.02em;
+  -moz-letter-spacing: -.02em;
+  -ms-letter-spacing: -.02em;
+  letter-spacing: -.02em;
+}
+
+.c0 {
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+}
+
+.c2 {
+  color: #262D33;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  -webkit-letter-spacing: -.02em;
+  -moz-letter-spacing: -.02em;
+  -ms-letter-spacing: -.02em;
+  letter-spacing: -.02em;
+}
+
 <Statistic
   prefix="AUD"
   title="Total Cost"
@@ -123,160 +90,25 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
     data-component-type="statistic"
   >
     <styled.div>
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-bwzfXH",
-              "isStatic": true,
-              "lastClassName": "cHrMUA",
-              "rules": Array [
-                "
-  margin-bottom: ",
-                "4",
-                "px;
-
- ",
-                "
-          font-size: ",
-                "14",
-                "px;
-          line-height: ",
-                "20",
-                "px;
-          letter-spacing: normal;
-        ",
-                "
-",
-              ],
-            },
-            "displayName": "styled.div",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "sc-bwzfXH",
-            "target": "div",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
+      <div
+        className="c0"
       >
-        <div
-          className="cHrMUA"
-        >
-          Total Cost
-        </div>
-      </StyledComponent>
+        Total Cost
+      </div>
     </styled.div>
     <styled.span>
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
-              "isStatic": true,
-              "lastClassName": "jfujsv",
-              "rules": Array [
-                "
-  color: ",
-                "#262D33",
-                ";
-  margin-right: ",
-                "8",
-                "px;
-  font-weight: ",
-                "600",
-                ";
-
-  ",
-                "
-          font-size: ",
-                "18",
-                "px;
-          line-height: ",
-                "24",
-                "px;
-          letter-spacing: -.02em;
-        ",
-                "
-",
-              ],
-            },
-            "displayName": "styled.span",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
-            "target": "span",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
+      <span
+        className="c1"
       >
-        <span
-          className="jfujsv"
-        >
-          AUD
-        </span>
-      </StyledComponent>
+        AUD
+      </span>
     </styled.span>
     <styled.span>
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-htpNat",
-              "isStatic": true,
-              "lastClassName": "bNBzpE",
-              "rules": Array [
-                "
-  color: ",
-                "#262D33",
-                ";
-  font-weight: ",
-                "600",
-                ";
-
- ",
-                "
-          font-size: ",
-                "24",
-                "px;
-          line-height: ",
-                "32",
-                "px;
-          letter-spacing: -.02em;
-        ",
-                "
-",
-              ],
-            },
-            "displayName": "styled.span",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "sc-htpNat",
-            "target": "span",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
+      <span
+        className="c2"
       >
-        <span
-          className="bNBzpE"
-        >
-          99.00
-        </span>
-      </StyledComponent>
+        99.00
+      </span>
     </styled.span>
   </div>
 </Statistic>
