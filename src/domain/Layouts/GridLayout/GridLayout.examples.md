@@ -778,10 +778,10 @@ const style = {
   gutterMarginX={Variables.Spacing.sMedium}
   gutterMarginY={Variables.Spacing.sSmall}
   margins={{
-        top: 20,
-        left: 20,
-        right: 20,
-        bottom: 20
+        top: Variables.Spacing.sMedium,
+        left: Variables.Spacing.sMedium,
+        right: Variables.Spacing.sMedium,
+        bottom: Variables.Spacing.sMedium
       }}
   cells={[
     {
@@ -808,6 +808,8 @@ const style = {
 />
 ```
 
+Margins also support being customised per breakpoint.
+
 ```jsx
 import { Variables } from '@Common';
 
@@ -815,16 +817,17 @@ const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
   minHeight: '2rem',
+  minWidth:'1px',
   height: '100%',
   width: '100%'
 };
 
 <GridLayout
   margins={{
-        top: 20,
-        left: 20,
-        right: 20,
-        bottom: 20
+        top: { desktop: Variables.Spacing.sMedium, min:'none'},
+        left: Variables.Spacing.sMedium,
+        right: Variables.Spacing.sMedium,
+        bottom: Variables.Spacing.sMedium
       }}
   cells={[
     {

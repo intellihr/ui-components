@@ -12,10 +12,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  margin-left: 4px;
-  margin-right: 4px;
 }
 
 .c1 {
@@ -80,8 +76,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
 
 @media only screen and (max-width:639px) {
   .c0 {
-    margin-left: -2px;
-    margin-right: -2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -95,8 +93,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
 
 @media only screen and (min-width:640px) and (max-width:1033px) {
   .c0 {
-    margin-left: -2px;
-    margin-right: -2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -110,8 +110,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
 
 @media only screen and (min-width:1034px) and (max-width:1439px) {
   .c0 {
-    margin-left: -2px;
-    margin-right: -2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -125,8 +127,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
 
 @media only screen and (min-width:1440px) {
   .c0 {
-    margin-left: -2px;
-    margin-right: -2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;

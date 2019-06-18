@@ -2,7 +2,7 @@ import { isPlainObject } from 'lodash'
 import styled, { css } from 'styled-components'
 
 import { Props, Utils, Variables } from '../../../common'
-import { getMarginSizeAtBreakpoint, styleForMargins } from '../../Spacers/services/margins'
+import { getMarginSizeAtBreakpoint } from '../../Spacers/services/margins'
 
 enum HorizontalAlignment {
   Left = 'left',
@@ -251,40 +251,39 @@ function gridStyleForPropsAtBreakpoint (
   let rightMarginGutters
   let topMarginGutters
   let bottomMarginGutters
+  let leftMargin = 0
+  let rightMargin = 0
+  let topMargin = 0
+  let bottomMargin = 0
 
-  if (!props.margins && xMarginGutterSize > 0) {
+  if (props.margins) {
+    leftMargin = gridMarginStyleAtBreakpoint(breakpoint, props.margins.left)
+    rightMargin = gridMarginStyleAtBreakpoint(breakpoint, props.margins.right)
+    topMargin = gridMarginStyleAtBreakpoint(breakpoint, props.margins.top)
+    bottomMargin = gridMarginStyleAtBreakpoint(breakpoint, props.margins.bottom)
+  }
+
+  if (xMarginGutterSize > 0 || leftMargin > 0) {
     leftMarginGutters = css`
-        margin-left: -${xMarginGutterSize / 2}px;
+        margin-left: ${leftMargin - xMarginGutterSize / 2}px;
       `
+  }
+
+  if (xMarginGutterSize > 0 || rightMargin > 0) {
     rightMarginGutters = css`
-        margin-right: -${xMarginGutterSize / 2}px;
+        margin-right: ${rightMargin - xMarginGutterSize / 2}px;
       `
   }
 
-  if (!props.margins && yMarginGutterSize > 0) {
+  if (yMarginGutterSize > 0 || topMargin > 0) {
     topMarginGutters = css`
-        margin-top: -${yMarginGutterSize / 2}px;
-      `
-    bottomMarginGutters = css`
-        margin-bottom: -${yMarginGutterSize / 2}px;
+        margin-top: ${topMargin - yMarginGutterSize / 2}px;
       `
   }
 
-  if (props.margins && xMarginGutterSize > 0) {
-    leftMarginGutters = css`
-        ${gridMarginStyleAtBreakpoint('left', breakpoint, xMarginGutterSize, props.margins.left )}
-      `
-    rightMarginGutters = css`
-        ${gridMarginStyleAtBreakpoint('right', breakpoint, xMarginGutterSize, props.margins.right )}
-      `
-  }
-
-  if (props.margins && yMarginGutterSize > 0) {
-    topMarginGutters = css`
-        ${gridMarginStyleAtBreakpoint('top', breakpoint, yMarginGutterSize, props.margins.top )}
-      `
+  if (yMarginGutterSize > 0 || bottomMargin > 0) {
     bottomMarginGutters = css`
-        ${gridMarginStyleAtBreakpoint('bottom', breakpoint, yMarginGutterSize, props.margins.bottom )}
+        margin-bottom: ${bottomMargin - yMarginGutterSize / 2}px;
       `
   }
 
@@ -298,22 +297,16 @@ function gridStyleForPropsAtBreakpoint (
   `
   }
 
-function gridMarginStyleAtBreakpoint (type: 'top' | 'bottom' | 'left' | 'right', breakpoint: keyof IStyledGridGutters, marginGutterSize: number, margin?: Props.Margin) {
-  if (!margin) {
-    return css`
-      margin-${type}: null;
-    `
+function gridMarginStyleAtBreakpoint (breakpoint: keyof IStyledGridGutters, margin?: Props.Margin) {
+  if (!margin || margin === 'none') {
+    return 0
   }
 
   if (typeof margin === 'number') {
-    return css`
-      margin-${type}: ${margin - marginGutterSize / 2}px;
-    `
+    return margin
   }
 
-  return css`
-    margin-${type}: ${getMarginSizeAtBreakpoint(breakpoint, margin) - marginGutterSize / 2}px;
-  `
+  return getMarginSizeAtBreakpoint(breakpoint, margin)
 }
 
 function gridStyleForProps (props: IStyledGridLayoutProps) {
@@ -348,7 +341,6 @@ const StyledGridLayout = styled.div<IStyledGridLayoutProps>`
   flex: 1 0 auto;
 
   ${gridStyleForProps}
-  ${(props: IStyledGridLayoutProps) => (!!props.gutterMarginX) && (!!props.gutterMarginY) && styleForMargins(props.margins)}
 `
 
 interface ICellStyleArguments {
