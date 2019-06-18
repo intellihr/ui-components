@@ -1,8 +1,8 @@
 import { mount } from 'enzyme'
 import React from 'react'
 
-import { Badge } from './Badge'
 import { Variables } from '../../../common'
+import { Badge } from './Badge'
 
 describe('<Badge />', () => {
   it('should render a small badge', () => {

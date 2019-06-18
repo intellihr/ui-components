@@ -9,8 +9,6 @@ ENV GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no"
 
 WORKDIR /var/task
 
-ENV NODE_ENV production
-
 ADD package.json /var/task
 ADD yarn.lock /var/task
 

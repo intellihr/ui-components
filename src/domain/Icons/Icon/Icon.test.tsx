@@ -1,9 +1,9 @@
 import { mount } from 'enzyme'
 import React from 'react'
 
+import { Variables } from '../../../common'
 import { Badge } from '../../Badges'
 import { Icon } from './Icon'
-import { Variables } from '../../../common'
 
 describe('<Icon />', () => {
   it('should render icon with no size or colour', () => {
