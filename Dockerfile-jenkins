@@ -1,0 +1,19 @@
+FROM node:10.15.0-alpine
+
+RUN apk upgrade &&\
+    apk --update add git openssh-client
+
+RUN rm -rf /var/cache/apk/*
+
+ENV GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no"
+
+WORKDIR /var/task
+
+ENV NODE_ENV production
+
+ADD package.json /var/task
+ADD yarn.lock /var/task
+
+RUN yarn --frozen-lockfile
+
+ADD . /var/task

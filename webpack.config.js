@@ -1,4 +1,3 @@
-const nodeExternals = require('webpack-node-externals')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -32,54 +31,23 @@ module.exports = {
     filename: '[name].js',
     libraryTarget: 'commonjs'
   },
-  externals: [nodeExternals()],
   module: {
     rules: [
       {
         test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-        use: [{
+        use: {
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
             outputPath: 'fonts/' // where the fonts will go
           }
-        }]
+        }
       },
       {
-        test: /\.tsx?$/,
-        exclude: [
-          path.resolve(__dirname, 'node_modules')
-        ],
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              cacheDirectory: true
-            }
-          },
-          {
-            loader: 'ts-loader'
-          }
-        ]
-      },
-      {
-        test: /\.js$/,
-        include: [
-          path.resolve(__dirname, 'src'),
-
-          // Manual hacks for packages which don't support ie11
-          path.resolve(__dirname, 'node_modules/foundation-sites'),
-          path.resolve(__dirname, 'node_modules/react-styleguidist'),
-          path.resolve(__dirname, 'node_modules/ansi-styles'),
-          path.resolve(__dirname, 'node_modules/chalk'),
-          path.resolve(__dirname, 'node_modules/react-dev-utils'),
-          path.resolve(__dirname, 'node_modules/strip-ansi')
-        ],
+        test: /\.(tsx?)$/,
+        exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            cacheDirectory: true
-          }
+          loader: 'ts-loader'
         }
       },
       {
