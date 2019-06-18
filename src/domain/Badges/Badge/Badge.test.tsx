@@ -2,14 +2,15 @@ import { mount } from 'enzyme'
 import React from 'react'
 
 import { Badge } from './Badge'
+import { Variables } from '../../../common'
 
 describe('<Badge />', () => {
   it('should render a small badge', () => {
     const wrapper = mount(
       <Badge
         label={6}
-        backgroundColor='#1A2B3C'
-        color='#1A293C'
+        backgroundColor={Variables.Color.b100}
+        color={Variables.Color.b600}
       />
     )
 
@@ -20,8 +21,8 @@ describe('<Badge />', () => {
     const wrapper = mount(
       <Badge
         label={6}
-        backgroundColor='#1A2B3C'
-        color='#1A293C'
+        backgroundColor={Variables.Color.b100}
+        color={Variables.Color.b600}
         size='large'
       />
     )
@@ -33,8 +34,8 @@ describe('<Badge />', () => {
     const wrapper = mount(
       <Badge
         label={6}
-        backgroundColor='#1A2B3C'
-        color='#1A293C'
+        backgroundColor={Variables.Color.b100}
+        color={Variables.Color.b600}
         pending
       />
     )

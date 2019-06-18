@@ -1,8 +1,9 @@
 import { mount } from 'enzyme'
 import React from 'react'
 
-import { Badge } from '@Domain/Badges'
+import { Badge } from '../../Badges'
 import { Icon } from './Icon'
+import { Variables } from '../../../common'
 
 describe('<Icon />', () => {
   it('should render icon with no size or colour', () => {
@@ -29,7 +30,7 @@ describe('<Icon />', () => {
   it('should render a large icon', () => {
     const wrapper = mount(
       <Icon
-        type='circle'
+        type='fa-circle'
         size='large'
       />
     )
@@ -77,8 +78,8 @@ describe('<Icon />', () => {
         badge={
           <Badge
             label={6}
-            backgroundColor='#1A2B3C'
-            color='#1A293C'
+            backgroundColor={Variables.Color.b200}
+            color={Variables.Color.b200}
           />
         }
       />
