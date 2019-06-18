@@ -48,14 +48,16 @@ A tag can be provided to turn any of the Text options into a Heading, or paragra
 #### Weight
 
 ```jsx
+import { Variables } from '@Common';
+
   <div>
-    <Text isInline={false} weight='normal'>
+    <Text isInline={false} weight={Variables.FontWeight.fwNormal}>
       Normal (default)
     </Text>
-    <Text isInline={false} weight='semi-bold'>
+    <Text isInline={false} weight={Variables.FontWeight.fwSemiBold}>
       Semi Bold
     </Text>
-    <Text weight='bold'>
+    <Text weight={Variables.FontWeight.fwBold}>
       Bold
     </Text>
   </div>
