@@ -2,8 +2,10 @@
 
 exports[`<SelectInput /> should render a creatable select box 1`] = `
 <CreatableSelect
+  autoFocus={false}
   className="react-select-test selectInput"
   clearable={true}
+  closeOnSelect={true}
   disabled={false}
   filterOptions={[Function]}
   id="test"
@@ -16,6 +18,7 @@ exports[`<SelectInput /> should render a creatable select box 1`] = `
   newOptionCreator={[Function]}
   onBlurResetsInput={true}
   onCloseResetsInput={true}
+  onInputChange={[Function]}
   onNewOptionClick={[Function]}
   onSelectResetsInput={true}
   openOnFocus={false}
@@ -33,6 +36,7 @@ exports[`<SelectInput /> should render a creatable select box 1`] = `
   }
   placeholder="Please Select"
   promptTextCreator={[Function]}
+  removeSelected={true}
   resetValue=""
   shouldKeyDownEventCreateNewOption={[Function]}
   showNewOptionAtTop={true}
@@ -43,6 +47,7 @@ exports[`<SelectInput /> should render a creatable select box 1`] = `
 exports[`<SelectInput /> should render a multi select box with options 1`] = `
 <Select
   arrowRenderer={[Function]}
+  autoFocus={false}
   autosize={true}
   backspaceRemoves={true}
   backspaceToRemoveMessage="Press backspace to remove {label}"
@@ -73,6 +78,7 @@ exports[`<SelectInput /> should render a multi select box with options 1`] = `
   noResultsText="No results found"
   onBlurResetsInput={true}
   onCloseResetsInput={true}
+  onInputChange={[Function]}
   onSelectResetsInput={true}
   openOnClick={true}
   openOnFocus={false}
@@ -109,6 +115,7 @@ exports[`<SelectInput /> should render a multi select box with options 1`] = `
 exports[`<SelectInput /> should render a select box with options 1`] = `
 <Select
   arrowRenderer={[Function]}
+  autoFocus={false}
   autosize={true}
   backspaceRemoves={true}
   backspaceToRemoveMessage="Press backspace to remove {label}"
@@ -139,6 +146,7 @@ exports[`<SelectInput /> should render a select box with options 1`] = `
   noResultsText="No results found"
   onBlurResetsInput={true}
   onCloseResetsInput={true}
+  onInputChange={[Function]}
   onSelectResetsInput={true}
   openOnClick={true}
   openOnFocus={false}
@@ -170,63 +178,4 @@ exports[`<SelectInput /> should render a select box with options 1`] = `
   valueComponent={[Function]}
   valueKey="value"
 />
-`;
-
-exports[`<SelectInput /> should render a select box with promise options 1`] = `
-<Async
-  autoload={true}
-  cache={Object {}}
-  className="react-select-test selectInput"
-  clearable={true}
-  disabled={false}
-  id="test"
-  ignoreAccents={true}
-  ignoreCase={true}
-  isLoading={false}
-  loadOptions={[Function]}
-  loadingPlaceholder="Loading..."
-  multi={false}
-  name="test"
-  onBlurResetsInput={true}
-  onCloseResetsInput={true}
-  onSelectResetsInput={true}
-  openOnFocus={false}
-  options={Array []}
-  placeholder="Please Select"
-  resetValue=""
-  searchPromptText="Type to search"
-  value=""
->
-  <Component />
-</Async>
-`;
-
-exports[`<SelectInput /> should render with async options 1`] = `
-<Async
-  autoload={true}
-  cache={Object {}}
-  className="react-select-test selectInput"
-  clearable={true}
-  disabled={false}
-  filterOptions={[Function]}
-  id="test"
-  ignoreAccents={true}
-  ignoreCase={true}
-  isLoading={false}
-  loadOptions={[Function]}
-  loadingPlaceholder="Loading..."
-  multi={false}
-  name="test"
-  onBlurResetsInput={true}
-  onCloseResetsInput={true}
-  onSelectResetsInput={true}
-  openOnFocus={false}
-  options={Array []}
-  placeholder="Please Select"
-  resetValue=""
-  searchPromptText="Type to search"
-  value=""
->
-  <Component />
-</Async>
 `;

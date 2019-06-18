@@ -20,7 +20,8 @@ class CircleSkeleton extends React.Component<ICircleSkeletonProps> {
       showSkeleton,
       size,
       children,
-      className
+      className,
+      margins
     } = this.props
 
     if (!showSkeleton) {
@@ -35,6 +36,7 @@ class CircleSkeleton extends React.Component<ICircleSkeletonProps> {
       <CircleSkeletonWrapper
         size={size}
         className={className}
+        margins={margins}
       />
     )
   }

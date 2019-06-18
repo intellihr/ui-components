@@ -253,6 +253,7 @@ module.exports = {
           components: [
             'src/domain/Skeletons/BlockSkeleton/BlockSkeleton.tsx',
             'src/domain/Skeletons/CircleSkeleton/CircleSkeleton.tsx',
+            'src/domain/Skeletons/FormSkeleton/FormSkeleton.tsx',
             'src/domain/Skeletons/ParagraphSkeleton/ParagraphSkeleton.tsx',
             'src/domain/Skeletons/TextSkeleton/TextSkeleton.tsx'
           ]

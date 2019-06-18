@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { Props } from '../../../common'
 import { ISkeletonProps } from '../interfaces'
 import { BlockSkeletonWrapper } from './style'
 
@@ -21,7 +22,8 @@ class BlockSkeleton extends React.Component<IBlockSkeletonProps> {
       width,
       height,
       children,
-      className
+      className,
+      margins
     } = this.props
 
     if (!showSkeleton) {
@@ -37,6 +39,7 @@ class BlockSkeleton extends React.Component<IBlockSkeletonProps> {
         width={typeof width === 'number' ? `${width}px` : width}
         height={typeof height === 'number' ? `${height}px` : height}
         className={className}
+        margins={margins}
       />
     )
   }

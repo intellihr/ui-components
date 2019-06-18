@@ -40,30 +40,7 @@ describe('<SelectInput />', () => {
             value: 'value2'
           }
         ]}
-        multi
-      />
-    )
-
-    expect(wrapper).toMatchSnapshot()
-  })
-
-  it('should render a select box with promise options', () => {
-    const promiseOptions = () => new Promise((resolve) => [
-      {
-        label: 'option1',
-        value: 'value1'
-      },
-      {
-        label: 'option2',
-        value: 'value2'
-      }
-    ])
-
-    const wrapper = shallow(
-      <SelectInput
-        name='test'
-        value=''
-        promiseOptions={promiseOptions}
+        isMultiSelect
       />
     )
 
@@ -85,23 +62,7 @@ describe('<SelectInput />', () => {
             value: 'value2'
           }
         ]}
-        handleNewOption={console.log}
-      />
-    )
-
-    expect(wrapper).toMatchSnapshot()
-  })
-
-  it('should render with async options', () => {
-    const asyncOptions = async (input) => {
-      return []
-    }
-
-    const wrapper = shallow(
-      <SelectInput
-        name='test'
-        value=''
-        asyncOptions={asyncOptions}
+        onNewOptionCreated={console.log}
       />
     )
 
