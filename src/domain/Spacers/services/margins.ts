@@ -75,5 +75,6 @@ function styleForMargins (margins?: Props.IMargins) {
 }
 
 export {
-  styleForMargins
+  styleForMargins,
+  getMarginSizeAtBreakpoint
 }
