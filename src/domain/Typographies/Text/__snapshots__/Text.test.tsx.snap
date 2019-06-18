@@ -226,8 +226,9 @@ exports[`<Text /> should render an element with heading text 1`] = `
 </Text>
 `;
 
-exports[`<Text /> should render an element with heavy text 1`] = `
+exports[`<Text /> should render an element with semi bold text 1`] = `
 .c0 {
+  font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   -webkit-letter-spacing: normal;
@@ -242,13 +243,13 @@ exports[`<Text /> should render an element with heavy text 1`] = `
   isInline={true}
   tag="span"
   type="body"
-  weight="heavy"
+  weight={600}
 >
   <styled.span
     data-component-type="text"
     isInline={true}
     textType="body"
-    weight="heavy"
+    weight={600}
   >
     <span
       className="c0"
