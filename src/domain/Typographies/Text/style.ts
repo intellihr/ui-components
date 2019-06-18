@@ -16,7 +16,6 @@ export interface ITextWrapperProps {
 }
 
 export const TextWrapper = styled.span`
-  font-weight: ${(props: ITextWrapperProps) => props.weight};
 
   ${(props: ITextWrapperProps) => styleForMargins(props.margins)}
 
@@ -47,6 +46,12 @@ export const TextWrapper = styled.span`
   }}
 
   ${(props: ITextWrapperProps) => {
+    if (props.weight) {
+      return css`
+        font-weight: ${props.weight};
+      `
+    }
+
     switch (props.textType) {
       case 'heading':
       case 'display':
