@@ -13,7 +13,7 @@ exports[`<ToggleSwitch /> should render a checked ToggleSwitch 1`] = `
               isInline={false}
               tag="span"
               type="heading"
-              weight="heavy"
+              weight={600}
             >
               This is a Toggle Switch
             </Text>
@@ -60,7 +60,7 @@ exports[`<ToggleSwitch /> should render a disabled ToggleSwitch 1`] = `
               isInline={false}
               tag="span"
               type="heading"
-              weight="heavy"
+              weight={600}
             >
               This is a Toggle Switch
             </Text>
@@ -108,7 +108,7 @@ exports[`<ToggleSwitch /> should render a disabled and checked ToggleSwitch 1`] 
               isInline={false}
               tag="span"
               type="heading"
-              weight="heavy"
+              weight={600}
             >
               This is a Toggle Switch
             </Text>
@@ -156,7 +156,7 @@ exports[`<ToggleSwitch /> should render a unchecked ToggleSwitch 1`] = `
               isInline={false}
               tag="span"
               type="heading"
-              weight="heavy"
+              weight={600}
             >
               This is a Toggle Switch
             </Text>

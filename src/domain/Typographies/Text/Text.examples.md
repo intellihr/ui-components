@@ -103,7 +103,7 @@ import { Variables } from '@Common';
   <Text isInline={false} color={Variables.Color.r400}>
     Hello!
   </Text>
-  <Text type='small' weight='heavy' isUpper>
+  <Text type='small' weight={Variables.FontWeight.fwSemiBold} isUpper>
     I am text
   </Text>
 </div>
