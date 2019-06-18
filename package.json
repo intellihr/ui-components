@@ -1,7 +1,7 @@
 {
   "name": "@intellihr/ui-components",
   "description": "A common React components library that is used in our company",
-  "version": "25.0.0",
+  "version": "26.2.0",
   "main": "./dist/",
   "types": "./types/index.d.ts",
   "files": [
@@ -18,7 +18,6 @@
   "dependencies": {
     "@intellihr/icons": "0.0.8",
     "@intellihr/styled-components-breakpoint": "0.0.2",
-    "@types/capitalize": "1.0.1",
     "@types/chart.js": "2.7.52",
     "@types/classnames": "2.2.8",
     "@types/color": "3.0.0",
@@ -44,7 +43,6 @@
     "@types/uuid": "^3.4.3",
     "better-react-spinkit": "2.0.4",
     "body-scroll-lock": "2.6.1",
-    "capitalize": "2.0.0",
     "chart.js": "2.8.0",
     "classnames": "2.2.5",
     "color": "3.1.1",
