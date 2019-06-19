@@ -20,6 +20,8 @@ export interface ICarouselProps {
   onScrollUpdate?: (newScrollValue: number) => void
   /** The data-component-context */
   componentContext?: string
+  /** The margins around the component */
+  margins?: Props.IMargins
 }
 
 export class Carousel extends React.PureComponent<ICarouselProps, never> {
@@ -52,13 +54,15 @@ export class Carousel extends React.PureComponent<ICarouselProps, never> {
 
   public render (): JSX.Element | null {
     const {
-      componentContext
+      componentContext,
+      margins
     } = this.props
 
     return (
       <CarouselContainer
         data-component-context={componentContext}
         data-component-type={Props.ComponentType.Carousel}
+        margins={margins}
       >
         {this.leftChevron}
         {this.carouselList}
