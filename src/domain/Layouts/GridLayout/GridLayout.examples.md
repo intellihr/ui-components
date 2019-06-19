@@ -16,6 +16,7 @@ const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
   minHeight: '2rem',
+  minWidth: '1px',
   height: '100%',
   width: '100%'
 };
@@ -60,6 +61,7 @@ const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
   minHeight: '2rem',
+  minWidth: '1px',
   height: '100%',
   width: '100%'
 };
@@ -94,6 +96,7 @@ const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
   minHeight: '2rem',
+  minWidth: '1px',
   height: '100%',
   width: '100%'
 };
@@ -127,6 +130,7 @@ import { Variables } from '@Common';
 const style = {
   backgroundColor: Variables.Color.n400,
   minHeight: '2rem',
+  minWidth: '1px',
   height: '100%',
   width: '100%'
 };
@@ -203,6 +207,7 @@ import { Variables } from '@Common';
 const style = {
   backgroundColor: Variables.Color.n400,
   minHeight: '2rem',
+  minWidth: '1px',
   height: '100%',
   width: '100%'
 };
@@ -258,6 +263,7 @@ import { Variables } from '@Common';
 const style = {
   backgroundColor: Variables.Color.n400,
   minHeight: '2rem',
+  minWidth: '1px',
   height: '100%',
   width: '100%'
 };
@@ -304,6 +310,7 @@ const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
   minHeight: '2rem',
+  minWidth: '1px',
   height: '100%',
   width: '100%'
 };
@@ -334,6 +341,7 @@ const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
   minHeight: '2rem',
+  minWidth: '1px',
   width: '100%',
   textAlign: 'center'
 };
@@ -415,6 +423,7 @@ const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
   minHeight: '2rem',
+  minWidth: '1px',
   width: '100%',
   textAlign: 'center'
 };
@@ -446,6 +455,7 @@ const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
   minHeight: '2rem',
+  minWidth: '1px',
   width: '100%',
   height: '100%',
   textAlign: 'center'
@@ -517,6 +527,7 @@ const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
   minHeight: '2rem',
+  minWidth: '1px',
   width: '100%',
   height: '100%',
   textAlign: 'center'
@@ -549,7 +560,8 @@ import { Variables } from '@Common';
 const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
-  minHeight: '2rem'
+  minHeight: '2rem',
+  minWidth: '1px'
 };
 
 <GridLayout
@@ -584,7 +596,8 @@ import { Variables } from '@Common';
 const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
-  minHeight: '2rem'
+  minHeight: '2rem',
+  minWidth: '1px'
 };
 
 <GridLayout
@@ -616,6 +629,7 @@ const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
   minHeight: '2rem',
+  minWidth: '1px',
   height: '100%',
   width: '100%'
 };
@@ -652,6 +666,7 @@ const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
   minHeight: '2rem',
+  minWidth: '1px',
   height: '100%',
   width: '100%'
 };
@@ -693,6 +708,7 @@ import { Button } from '@Domain/Buttons';
 const style = {
   backgroundColor: Variables.Color.n400,
   minHeight: '2rem',
+  minWidth: '1px',
   height: '100%',
   width: '100%'
 };
@@ -770,6 +786,7 @@ const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
   minHeight: '2rem',
+  minWidth: '1px',
   height: '100%',
   width: '100%'
 };
@@ -817,7 +834,7 @@ const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
   minHeight: '2rem',
-  minWidth:'1px',
+  minWidth: '1px',
   height: '100%',
   width: '100%'
 };

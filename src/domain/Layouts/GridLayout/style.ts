@@ -247,21 +247,14 @@ function gridStyleForPropsAtBreakpoint (
   const yMarginGutterSize = getGutterPxAtBreakpoint(props.gutterMarginY, breakpoint)
   const horizontalAlignment = getHorizontalAlignmentAtBreakpoint(props.horizontalAlignment, breakpoint)
   const verticalAlignment = getVerticalAlignmentAtBreakpoint(props.verticalAlignment, breakpoint)
+  const leftMargin = props.margins ? gridMarginStyleAtBreakpoint(breakpoint, props.margins.left) : 0
+  const rightMargin = props.margins ? gridMarginStyleAtBreakpoint(breakpoint, props.margins.right) : 0
+  const topMargin = props.margins ? gridMarginStyleAtBreakpoint(breakpoint, props.margins.top) : 0
+  const bottomMargin = props.margins ? gridMarginStyleAtBreakpoint(breakpoint, props.margins.bottom) : 0
   let leftMarginGutters
   let rightMarginGutters
   let topMarginGutters
   let bottomMarginGutters
-  let leftMargin = 0
-  let rightMargin = 0
-  let topMargin = 0
-  let bottomMargin = 0
-
-  if (props.margins) {
-    leftMargin = gridMarginStyleAtBreakpoint(breakpoint, props.margins.left)
-    rightMargin = gridMarginStyleAtBreakpoint(breakpoint, props.margins.right)
-    topMargin = gridMarginStyleAtBreakpoint(breakpoint, props.margins.top)
-    bottomMargin = gridMarginStyleAtBreakpoint(breakpoint, props.margins.bottom)
-  }
 
   if (xMarginGutterSize > 0 || leftMargin > 0) {
     leftMarginGutters = css`
@@ -581,8 +574,8 @@ function cellAnimationForProps (props: IStyledCellProps) {
 const StyledCell = styled.div<IStyledCellProps>`
   flex: 0 0 auto;
   flex-basis: auto;
-  min-height: 0;
-  min-width: 0;
+  min-height: 1px;
+  min-width: 1px;
   width: 100%;
 
   ${cellStyleForProps}

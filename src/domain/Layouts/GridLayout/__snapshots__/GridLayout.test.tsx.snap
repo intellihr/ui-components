@@ -21,8 +21,8 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
-  min-height: 0;
-  min-width: 0;
+  min-height: 1px;
+  min-width: 1px;
   width: 100%;
 }
 
@@ -33,8 +33,8 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
-  min-height: 0;
-  min-width: 0;
+  min-height: 1px;
+  min-width: 1px;
   width: 100%;
 }
 
@@ -45,8 +45,8 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
-  min-height: 0;
-  min-width: 0;
+  min-height: 1px;
+  min-width: 1px;
   width: 100%;
 }
 
@@ -57,8 +57,8 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
-  min-height: 0;
-  min-width: 0;
+  min-height: 1px;
+  min-width: 1px;
   width: 100%;
 }
 
@@ -69,8 +69,752 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
-  min-height: 0;
-  min-width: 0;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+}
+
+@media only screen and (max-width:639px) {
+  .c0 {
+    margin-left: -2px;
+    margin-right: -2px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c0 {
+    margin-left: -2px;
+    margin-right: -2px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c0 {
+    margin-left: -2px;
+    margin-right: -2px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c0 {
+    margin-left: -2px;
+    margin-right: -2px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c1 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(83.33333333333333% - 4px);
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c1 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(83.33333333333333% - 4px);
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c1 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(83.33333333333333% - 4px);
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c1 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(83.33333333333333% - 4px);
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c2 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(16.666666666666668% - 4px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c2 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(16.666666666666668% - 4px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c2 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(16.666666666666668% - 4px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c2 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(16.666666666666668% - 4px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c3 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c3 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(33.333333333333336% - 4px);
+    margin-left: calc(16.666666666666668% + 2px);
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c3 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(25% - 4px);
+    margin-left: calc(16.666666666666668% + 2px);
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c3 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(25% - 4px);
+    margin-left: calc(16.666666666666668% + 2px);
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c4 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c4 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(33.333333333333336% - 4px);
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c4 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(50% - 4px);
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c4 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(50% - 4px);
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c5 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    width: auto;
+    margin-left: calc(25% + 2px);
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c5 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    width: auto;
+    margin-left: calc(25% + 2px);
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c5 {
+    margin-left: 2px;
+    margin-right: 2px;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    width: auto;
+    margin-left: calc(25% + 2px);
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c5 {
+    margin-left: 2px;
+    margin-right: 2px;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    width: auto;
+    margin-left: calc(25% + 2px);
+  }
+}
+
+<GridLayout
+  cells={
+    Array [
+      Object {
+        "content": <div>
+          1
+        </div>,
+        "size": 10,
+      },
+      Object {
+        "content": <div>
+          2
+        </div>,
+        "displayType": "flex",
+        "flexHorizontalAlignment": Object {
+          "desktop": "right",
+          "min": "center",
+        },
+        "size": 2,
+      },
+      Object {
+        "content": <div>
+          3
+        </div>,
+        "offset": Object {
+          "tablet": 2,
+        },
+        "size": Object {
+          "desktop": 3,
+          "tablet": 4,
+        },
+      },
+      Object {
+        "content": <div>
+          4
+        </div>,
+        "size": Object {
+          "desktop": 6,
+          "tablet": 4,
+        },
+      },
+      Object {
+        "content": <div>
+          5
+        </div>,
+        "offset": 3,
+        "size": "auto",
+      },
+    ]
+  }
+  gridColumns={12}
+  gutterMarginX={4}
+  gutterMarginY="none"
+  gutterPaddingX="none"
+  gutterPaddingY={
+    Object {
+      "desktop": "none",
+      "min": 16,
+    }
+  }
+  horizontalAlignment="center"
+  verticalAlignment="stretch"
+>
+  <styled.div
+    data-component-type="grid_layout"
+    gutterMarginX={4}
+    gutterMarginY="none"
+    horizontalAlignment="center"
+    verticalAlignment="stretch"
+  >
+    <div
+      className="c0"
+      data-component-type="grid_layout"
+    >
+      <TransitionGroup
+        childFactory={[Function]}
+        component={null}
+      >
+        <CSSTransition
+          classNames="grid-layout-cell-animation"
+          in={true}
+          key=".$0"
+          onExited={[Function]}
+          timeout={200}
+        >
+          <Transition
+            appear={false}
+            enter={true}
+            exit={true}
+            in={true}
+            mountOnEnter={false}
+            onEnter={[Function]}
+            onEntered={[Function]}
+            onEntering={[Function]}
+            onExit={[Function]}
+            onExited={[Function]}
+            onExiting={[Function]}
+            timeout={200}
+            unmountOnExit={false}
+          >
+            <styled.div
+              animationStyle="none"
+              data-component-type="grid_layout_cell"
+              displayType="block"
+              flexHorizontalAlignments="left"
+              gridColumns={12}
+              gutterMarginX={4}
+              gutterMarginY="none"
+              gutterPaddingX="none"
+              gutterPaddingY={
+                Object {
+                  "desktop": "none",
+                  "min": 16,
+                }
+              }
+              offsets={0}
+              sizes={10}
+            >
+              <div
+                className="c1"
+                data-component-type="grid_layout_cell"
+                sizes={10}
+              >
+                <div>
+                  1
+                </div>
+              </div>
+            </styled.div>
+          </Transition>
+        </CSSTransition>
+        <CSSTransition
+          classNames="grid-layout-cell-animation"
+          in={true}
+          key=".$1"
+          onExited={[Function]}
+          timeout={200}
+        >
+          <Transition
+            appear={false}
+            enter={true}
+            exit={true}
+            in={true}
+            mountOnEnter={false}
+            onEnter={[Function]}
+            onEntered={[Function]}
+            onEntering={[Function]}
+            onExit={[Function]}
+            onExited={[Function]}
+            onExiting={[Function]}
+            timeout={200}
+            unmountOnExit={false}
+          >
+            <styled.div
+              animationStyle="none"
+              data-component-type="grid_layout_cell"
+              displayType="flex"
+              flexHorizontalAlignments={
+                Object {
+                  "desktop": "right",
+                  "min": "center",
+                }
+              }
+              gridColumns={12}
+              gutterMarginX={4}
+              gutterMarginY="none"
+              gutterPaddingX="none"
+              gutterPaddingY={
+                Object {
+                  "desktop": "none",
+                  "min": 16,
+                }
+              }
+              offsets={0}
+              sizes={2}
+            >
+              <div
+                className="c2"
+                data-component-type="grid_layout_cell"
+                sizes={2}
+              >
+                <div>
+                  2
+                </div>
+              </div>
+            </styled.div>
+          </Transition>
+        </CSSTransition>
+        <CSSTransition
+          classNames="grid-layout-cell-animation"
+          in={true}
+          key=".$2"
+          onExited={[Function]}
+          timeout={200}
+        >
+          <Transition
+            appear={false}
+            enter={true}
+            exit={true}
+            in={true}
+            mountOnEnter={false}
+            onEnter={[Function]}
+            onEntered={[Function]}
+            onEntering={[Function]}
+            onExit={[Function]}
+            onExited={[Function]}
+            onExiting={[Function]}
+            timeout={200}
+            unmountOnExit={false}
+          >
+            <styled.div
+              animationStyle="none"
+              data-component-type="grid_layout_cell"
+              displayType="block"
+              flexHorizontalAlignments="left"
+              gridColumns={12}
+              gutterMarginX={4}
+              gutterMarginY="none"
+              gutterPaddingX="none"
+              gutterPaddingY={
+                Object {
+                  "desktop": "none",
+                  "min": 16,
+                }
+              }
+              offsets={
+                Object {
+                  "tablet": 2,
+                }
+              }
+              sizes={
+                Object {
+                  "desktop": 3,
+                  "tablet": 4,
+                }
+              }
+            >
+              <div
+                className="c3"
+                data-component-type="grid_layout_cell"
+                sizes={
+                  Object {
+                    "desktop": 3,
+                    "tablet": 4,
+                  }
+                }
+              >
+                <div>
+                  3
+                </div>
+              </div>
+            </styled.div>
+          </Transition>
+        </CSSTransition>
+        <CSSTransition
+          classNames="grid-layout-cell-animation"
+          in={true}
+          key=".$3"
+          onExited={[Function]}
+          timeout={200}
+        >
+          <Transition
+            appear={false}
+            enter={true}
+            exit={true}
+            in={true}
+            mountOnEnter={false}
+            onEnter={[Function]}
+            onEntered={[Function]}
+            onEntering={[Function]}
+            onExit={[Function]}
+            onExited={[Function]}
+            onExiting={[Function]}
+            timeout={200}
+            unmountOnExit={false}
+          >
+            <styled.div
+              animationStyle="none"
+              data-component-type="grid_layout_cell"
+              displayType="block"
+              flexHorizontalAlignments="left"
+              gridColumns={12}
+              gutterMarginX={4}
+              gutterMarginY="none"
+              gutterPaddingX="none"
+              gutterPaddingY={
+                Object {
+                  "desktop": "none",
+                  "min": 16,
+                }
+              }
+              offsets={0}
+              sizes={
+                Object {
+                  "desktop": 6,
+                  "tablet": 4,
+                }
+              }
+            >
+              <div
+                className="c4"
+                data-component-type="grid_layout_cell"
+                sizes={
+                  Object {
+                    "desktop": 6,
+                    "tablet": 4,
+                  }
+                }
+              >
+                <div>
+                  4
+                </div>
+              </div>
+            </styled.div>
+          </Transition>
+        </CSSTransition>
+        <CSSTransition
+          classNames="grid-layout-cell-animation"
+          in={true}
+          key=".$4"
+          onExited={[Function]}
+          timeout={200}
+        >
+          <Transition
+            appear={false}
+            enter={true}
+            exit={true}
+            in={true}
+            mountOnEnter={false}
+            onEnter={[Function]}
+            onEntered={[Function]}
+            onEntering={[Function]}
+            onExit={[Function]}
+            onExited={[Function]}
+            onExiting={[Function]}
+            timeout={200}
+            unmountOnExit={false}
+          >
+            <styled.div
+              animationStyle="none"
+              data-component-type="grid_layout_cell"
+              displayType="block"
+              flexHorizontalAlignments="left"
+              gridColumns={12}
+              gutterMarginX={4}
+              gutterMarginY="none"
+              gutterPaddingX="none"
+              gutterPaddingY={
+                Object {
+                  "desktop": "none",
+                  "min": 16,
+                }
+              }
+              offsets={3}
+              sizes="auto"
+            >
+              <div
+                className="c5"
+                data-component-type="grid_layout_cell"
+                sizes="auto"
+              >
+                <div>
+                  5
+                </div>
+              </div>
+            </styled.div>
+          </Transition>
+        </CSSTransition>
+      </TransitionGroup>
+    </div>
+  </styled.div>
+</GridLayout>
+`;
+
+exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.c1 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+}
+
+.c2 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+}
+
+.c3 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+}
+
+.c4 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+}
+
+.c5 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
   width: 100%;
 }
 
