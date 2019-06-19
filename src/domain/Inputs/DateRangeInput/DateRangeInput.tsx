@@ -85,7 +85,7 @@ class DateRangeInput extends React.PureComponent<IDateRangeInputProps, IDateRang
           disabled={isDisabled}
           numberOfMonths={isMobile ? 1 : 2}
           showClearDates
-          customArrowIcon={<Text color={Variables.Color.n600} weight='heavy'>→</Text>}
+          customArrowIcon={<Text color={Variables.Color.n600} weight={Variables.FontWeight.fwSemiBold}>→</Text>}
           customCloseIcon={<span>×</span>}
           isOutsideRange={this.disabledDateRange}
           hideKeyboardShortcutsPanel

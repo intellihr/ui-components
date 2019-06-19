@@ -20,7 +20,7 @@ const CarouselChevronButton = styled.button`
   color: ${Variables.Color.n600};
   cursor: pointer;
   float: ${(props: ITabChevronButtonProps) => props.float};
-  font-weight: ${Variables.FontWeight.fwHeavy};
+  font-weight: ${Variables.FontWeight.fwSemiBold};
   margin: 0 ${CarouselStyleConstants.MarginSize / 2}px;
   outline: none;
   text-align: center;
