@@ -49,7 +49,6 @@ A tag can be provided to turn any of the Text options into a Heading, or paragra
 
 ```jsx
 const { Variables } = require('../../../common');
-// import { Variables } from '@Common';
 
   <div>
     <Text isInline={false} weight={Variables.FontWeight.fwNormal}>
