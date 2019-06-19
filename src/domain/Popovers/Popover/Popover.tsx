@@ -54,24 +54,28 @@ class Popover extends React.Component<IPopoverProps, never> {
 
   private currentlyMounted: boolean = false
 
-  public componentDidMount () {
+  public componentDidMount() {
     this.currentlyMounted = true
 
     window.addEventListener('resize', this.onWindowUpdate)
     window.addEventListener('scroll', this.debounceOnWindowUpdate)
   }
 
-  public componentWillUnmount () {
+  public componentWillUnmount() {
     this.currentlyMounted = false
 
     window.removeEventListener('resize', this.onWindowUpdate)
     window.removeEventListener('scroll', this.debounceOnWindowUpdate)
   }
 
-  public render () {
-    return ReactDOM.createPortal(
-      this.transition,
-      document.body
+  public render() {
+    return (
+      <>
+        {ReactDOM.createPortal(
+          this.transition,
+          document.body
+        )}
+      </>
     )
   }
 
@@ -85,7 +89,7 @@ class Popover extends React.Component<IPopoverProps, never> {
   // tslint:disable-next-line:member-ordering
   private debounceOnWindowUpdate = debounce(this.onWindowUpdate, 100)
 
-  private get animationTimeout (): number {
+  private get animationTimeout(): number {
     const {
       animationType
     } = this.props
@@ -100,7 +104,7 @@ class Popover extends React.Component<IPopoverProps, never> {
     }
   }
 
-  private get transition (): JSX.Element {
+  private get transition(): JSX.Element {
     const {
       isOpen
     } = this.props
@@ -143,7 +147,7 @@ class Popover extends React.Component<IPopoverProps, never> {
     )
   }
 
-  private get parentBoundingRect (): ClientRect | DOMRect {
+  private get parentBoundingRect(): ClientRect | DOMRect {
     const {
       parentRef
     } = this.props
@@ -164,21 +168,21 @@ class Popover extends React.Component<IPopoverProps, never> {
     return parentRef.current.getBoundingClientRect()
   }
 
-  private get parentInLeftSideOfWindow (): boolean {
+  private get parentInLeftSideOfWindow(): boolean {
     const boundingRect = this.parentBoundingRect
     const parentXCenter = boundingRect.left + boundingRect.width / 2
 
     return parentXCenter < window.innerWidth * Popover.AUTO_FLIP_CUTOFF
   }
 
-  private get parentInTopSideOfWindow (): boolean {
+  private get parentInTopSideOfWindow(): boolean {
     const boundingRect = this.parentBoundingRect
     const parentYCenter = boundingRect.top + boundingRect.height / 2
 
     return parentYCenter < window.innerHeight * Popover.AUTO_FLIP_CUTOFF
   }
 
-  private get popoverAnchorXPosition (): Props.Position {
+  private get popoverAnchorXPosition(): Props.Position {
     const {
       popoverAnchorPosition
     } = this.props
@@ -190,7 +194,7 @@ class Popover extends React.Component<IPopoverProps, never> {
     return popoverAnchorPosition.xPos
   }
 
-  private get popoverAnchorYPosition (): Props.Position {
+  private get popoverAnchorYPosition(): Props.Position {
     const {
       popoverAnchorPosition
     } = this.props
@@ -202,7 +206,7 @@ class Popover extends React.Component<IPopoverProps, never> {
     return popoverAnchorPosition.yPos
   }
 
-  private get parentAnchorXPosition (): Props.Position {
+  private get parentAnchorXPosition(): Props.Position {
     const {
       parentAnchorPosition
     } = this.props
@@ -214,7 +218,7 @@ class Popover extends React.Component<IPopoverProps, never> {
     return parentAnchorPosition.xPos
   }
 
-  private get parentAnchorYPosition (): Props.Position {
+  private get parentAnchorYPosition(): Props.Position {
     const {
       parentAnchorPosition
     } = this.props
@@ -226,7 +230,7 @@ class Popover extends React.Component<IPopoverProps, never> {
     return parentAnchorPosition.yPos
   }
 
-  private get parentAnchorOffset () {
+  private get parentAnchorOffset() {
     const boundingRect = this.parentBoundingRect
 
     const x = (this.parentAnchorXPosition === Props.Position.Left) ? boundingRect.left : boundingRect.right
@@ -238,7 +242,7 @@ class Popover extends React.Component<IPopoverProps, never> {
     }
   }
 
-  private get popoverXOffset () {
+  private get popoverXOffset() {
     switch (this.popoverAnchorXPosition) {
       case Props.Position.Left:
         return { left: this.parentAnchorOffset.x }
@@ -249,7 +253,7 @@ class Popover extends React.Component<IPopoverProps, never> {
     }
   }
 
-  private get popoverYOffset () {
+  private get popoverYOffset() {
     switch (this.popoverAnchorYPosition) {
       case Props.Position.Top:
         return { top: this.parentAnchorOffset.y }
