@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { IntelliIcon } from '@Domain/Icons'
+import { IntelliIcon } from '../../../Icons'
 import { MenuItem } from './MenuItem'
 
 describe('<MenuItem />', () => {

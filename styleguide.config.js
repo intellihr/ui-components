@@ -1,13 +1,41 @@
 const path = require('path')
 const _ = require('lodash')
 const docGenTypescript = require('react-docgen-typescript')
+const webpackConfig = require('./webpack.config');
+
+// Styleguidist includes some packages which are es6 and must be converted to work in ie11
+// See: https://github.com/styleguidist/react-styleguidist/pull/1327
+const TRANSFORMS_FOR_IE11 = {
+  test: /\.jsx?$/,
+  include: /node_modules\/(?=(acorn-jsx|regexpu-core|unicode-match-property-ecmascript|unicode-match-property-value-ecmascript|react-dev-utils|ansi-styles|ansi-regex|chalk|strip-ansi)\/).*/,
+  use: {
+    loader: 'babel-loader',
+    options: {
+      presets: [
+        [
+          '@babel/preset-env',
+          {
+            targets: {
+              ie: '11'
+            }
+          }
+        ]
+      ]
+    }
+  }
+};
+webpackConfig.module.rules = [
+  TRANSFORMS_FOR_IE11,
+  ...webpackConfig.module.rules
+];
 
 module.exports = {
+  webpackConfig,
   title: 'IntelliHR Design System',
   require: [
-    require.resolve('babel-polyfill'),
-    path.resolve(__dirname, 'src/common/sass/style.ts'),
-    path.resolve(__dirname, 'src/index.ts')
+    require.resolve('core-js/stable'),
+    require.resolve('regenerator-runtime/runtime'),
+    path.resolve(__dirname, 'src/common/sass/app.scss')
   ],
   propsParser: docGenTypescript.withCustomConfig('./tsconfig.json').parse,
   getComponentPathLine(componentPath) {

@@ -24,7 +24,7 @@ describe('<ListClickableColumn />', () => {
   })
 
   it('should render a list row wrapped and clickable with url to redirect', () => {
-    const urlForRow = (row) => 'test-url.test'
+    const urlForRow = () => 'test-url.test'
 
     const wrapper = mount(
       <ListClickableColumn
@@ -40,7 +40,7 @@ describe('<ListClickableColumn />', () => {
   })
 
   it('should render a list row wrapped and clickable with click events', () => {
-    const handleClick = (row) => console.log('I clicked this row')
+    const handleClick = () => console.log('I clicked this row')
 
     let wrapper = mount(
       <ListClickableColumn
@@ -54,7 +54,7 @@ describe('<ListClickableColumn />', () => {
 
     expect(wrapper).toMatchSnapshot()
 
-    const handleLeftClick = (row) => console.log('I left clicked this row')
+    const handleLeftClick = () => console.log('I left clicked this row')
 
     wrapper = mount(
       <ListClickableColumn
@@ -84,7 +84,7 @@ describe('<ListClickableColumn />', () => {
   })
 
   it('should render a simple list row with a simple redirect', () => {
-    const urlForRow = (row) => 'test-url.test'
+    const urlForRow = () => 'test-url.test'
 
     const wrapper = mount(
       <ListClickableColumn

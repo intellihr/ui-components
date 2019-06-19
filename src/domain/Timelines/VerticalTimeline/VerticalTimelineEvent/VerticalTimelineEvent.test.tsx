@@ -1,7 +1,8 @@
 import { mount } from 'enzyme'
 import React from 'react'
 
-import { Avatar } from '@Domain/Avatars'
+import { Props } from '../../../../common'
+import { Avatar } from '../../../Avatars'
 import { VerticalTimelineEvent } from '../VerticalTimelineEvent'
 
 describe('<VerticalTimelineEvent />', () => {
@@ -33,7 +34,7 @@ describe('<VerticalTimelineEvent />', () => {
         markerComponent={
           <Avatar
             initials='JW'
-            size='small'
+            size={Props.AvatarSize.Small}
           />
         }
       >

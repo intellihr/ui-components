@@ -87,6 +87,7 @@ exports[`<Comment /> should render a header and no actions 1`] = `
     >
       <FormattedText
         renderEmojis={false}
+        text="A comment"
       />
     </div>
   </div>

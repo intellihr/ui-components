@@ -22,7 +22,7 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
   letter-spacing: -.02em;
 }
 
-<Statistic
+<Component
   title="Total Cost"
   value="99.00"
 >
@@ -44,7 +44,7 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
       </span>
     </styled.span>
   </div>
-</Statistic>
+</Component>
 `;
 
 exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
@@ -81,7 +81,7 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
   letter-spacing: -.02em;
 }
 
-<Statistic
+<Component
   prefix="AUD"
   title="Total Cost"
   value="99.00"
@@ -111,5 +111,5 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
       </span>
     </styled.span>
   </div>
-</Statistic>
+</Component>
 `;
