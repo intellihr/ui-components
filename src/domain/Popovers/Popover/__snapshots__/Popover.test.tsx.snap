@@ -1,49 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Popover /> Popover rendering when closed should match the snapshot 1`] = `
-<Portal
-  containerInfo={<body />}
->
-  <Transition
-    appear={false}
-    enter={true}
-    exit={true}
-    in={false}
-    mountOnEnter={true}
-    onEnter={[Function]}
-    onEntered={[Function]}
-    onEntering={[Function]}
-    onExit={[Function]}
-    onExited={[Function]}
-    onExiting={[Function]}
-    timeout={100}
-    unmountOnExit={true}
+<Fragment>
+  <Portal
+    containerInfo={<body />}
   >
-    <Component />
-  </Transition>
-</Portal>
+    <Transition
+      appear={false}
+      enter={true}
+      exit={true}
+      in={false}
+      mountOnEnter={true}
+      onEnter={[Function]}
+      onEntered={[Function]}
+      onEntering={[Function]}
+      onExit={[Function]}
+      onExited={[Function]}
+      onExiting={[Function]}
+      timeout={100}
+      unmountOnExit={true}
+    >
+      <Component />
+    </Transition>
+  </Portal>
+</Fragment>
 `;
 
 exports[`<Popover /> Popover rendering when open should match the snapshot 1`] = `
-<Portal
-  containerInfo={<body />}
->
-  <Transition
-    appear={false}
-    enter={true}
-    exit={true}
-    in={true}
-    mountOnEnter={true}
-    onEnter={[Function]}
-    onEntered={[Function]}
-    onEntering={[Function]}
-    onExit={[Function]}
-    onExited={[Function]}
-    onExiting={[Function]}
-    timeout={100}
-    unmountOnExit={true}
+<Fragment>
+  <Portal
+    containerInfo={<body />}
   >
-    <Component />
-  </Transition>
-</Portal>
+    <Transition
+      appear={false}
+      enter={true}
+      exit={true}
+      in={true}
+      mountOnEnter={true}
+      onEnter={[Function]}
+      onEntered={[Function]}
+      onEntering={[Function]}
+      onExit={[Function]}
+      onExited={[Function]}
+      onExiting={[Function]}
+      timeout={100}
+      unmountOnExit={true}
+    >
+      <Component />
+    </Transition>
+  </Portal>
+</Fragment>
 `;
