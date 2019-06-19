@@ -1,9 +1,14 @@
-import React from 'react'
-import styled, { StyledComponentClass } from 'styled-components'
+import styled from 'styled-components'
 
-import { Variables } from '../../../common'
+import { Props, Variables } from '../../../common'
+import { styleForMargins } from '../../Spacers/services/margins'
 
-const StyledComment = styled.div`
+interface StyledCommentProps {
+  margins?: Props.IMargins
+}
+
+const StyledComment = styled.div<StyledCommentProps>`
+  ${(props) => styleForMargins(props.margins)}
   display: flex;
   flex-flow: row;
   margin: 1.125rem 0;
