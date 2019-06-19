@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Variables } from '../../../common'
+import { Props, Variables } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons'
 import { BadgeWrapper } from './style'
 
@@ -17,52 +17,28 @@ interface IBadgeProps {
   size?: 'small' | 'medium' | 'large'
   /** Show border */
   hasBorder?: boolean
+  /** Margins around the component */
+  margins?: Props.IMargins
 }
 
-class Badge extends React.PureComponent<IBadgeProps> {
-  public static defaultProps: Partial<IBadgeProps> = {
-    size: 'small',
-    hasBorder: true
-  }
-
-  get label (): number | string | JSX.Element | undefined {
-    const {
-      pending,
-      label
-    } = this.props
-
-    if (pending) {
-      return (
+const Badge: React.FC<IBadgeProps> = ({ size = 'small', hasBorder = true, pending, label, backgroundColor, color, margins }) => {
+  return (
+    <BadgeWrapper
+      color={color}
+      size={size}
+      backgroundColor={backgroundColor}
+      hasBorder={hasBorder}
+      margins={margins}
+    >
+      {pending ? (
         <FontAwesomeIcon
           type='refresh'
           isSpinning
           className='refresh-icon'
         />
-      )
-    }
-
-    return label
-  }
-
-  public render (): JSX.Element {
-    const {
-      backgroundColor,
-      color,
-      size,
-      hasBorder
-    } = this.props
-
-    return (
-      <BadgeWrapper
-        color={color}
-        size={size}
-        backgroundColor={backgroundColor}
-        hasBorder={hasBorder}
-      >
-        {this.label}
-      </BadgeWrapper>
-    )
-  }
+      ) : label}
+    </BadgeWrapper>
+  )
 }
 
 export {

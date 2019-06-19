@@ -1,8 +1,16 @@
 import styled from 'styled-components'
 
 import { Utils, Variables } from '../../../common'
+import { styleForMargins } from '../../Spacers/services/margins'
+import { Props } from '../../../common'
 
-const BoardWrapper = styled.div``
+interface IBoardWrapperProps {
+  margins?: Props.IMargins
+}
+
+const BoardWrapper = styled.div<IBoardWrapperProps>`
+  ${props => styleForMargins(props.margins)}
+`
 
 const BoardTilesWrapper = styled.div`
   display: flex;
