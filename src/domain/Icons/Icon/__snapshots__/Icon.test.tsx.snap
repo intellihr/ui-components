@@ -109,9 +109,7 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
     <Badge
       backgroundColor="#1A2B3C"
       color="#1A293C"
-      hasBorder={true}
       label={6}
-      size="small"
     />
   }
   isSpinning={false}
@@ -139,7 +137,6 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
       <Badge
         backgroundColor="#1A2B3C"
         color="#1A293C"
-        hasBorder={true}
         label={6}
         size="medium"
       >

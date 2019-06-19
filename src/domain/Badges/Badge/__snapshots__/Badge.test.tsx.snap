@@ -34,7 +34,6 @@ exports[`<Badge /> should render a large badge 1`] = `
 <Badge
   backgroundColor="#1A2B3C"
   color="#1A293C"
-  hasBorder={true}
   label={6}
   size="large"
 >
@@ -89,9 +88,7 @@ exports[`<Badge /> should render a small badge 1`] = `
 <Badge
   backgroundColor="#1A2B3C"
   color="#1A293C"
-  hasBorder={true}
   label={6}
-  size="small"
 >
   <styled.span
     backgroundColor="#1A2B3C"
@@ -153,10 +150,8 @@ exports[`<Badge /> should render a spinning badge 1`] = `
 <Badge
   backgroundColor="#1A2B3C"
   color="#1A293C"
-  hasBorder={true}
   label={6}
   pending={true}
-  size="small"
 >
   <styled.span
     backgroundColor="#1A2B3C"
