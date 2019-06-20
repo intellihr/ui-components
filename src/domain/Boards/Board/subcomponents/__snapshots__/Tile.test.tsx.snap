@@ -54,7 +54,7 @@ exports[`<Tile /> should render a large board tile 1`] = `
   hasHoverLabel={false}
   isButton={false}
   isHoverable={false}
-  tileSize="large"
+  tileSize="fullWidth"
   type="default"
 />
 `;

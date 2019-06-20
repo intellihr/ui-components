@@ -1,34 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`withDefaults should overwrite default values 1`] = `
-Array [
-  Array [
-    Object {
-      "breakpoints": Object {
-        "large": 200,
-        "medium": 100,
-        "small": 0,
-        "xlarge": 300,
-        "xxlarge": 400,
-      },
-    },
-  ],
-]
-`;
-
 exports[`withDefaults should provide default values 1`] = `
 Array [
   Array [
-    Object {},
-  ],
-]
-`;
-
-exports[`withDefaults should provide values with defaults 1`] = `
-Array [
-  Array [
     Object {
-      "AnchorComponent": [Function],
+      "defaults": Object {},
     },
   ],
 ]
@@ -37,7 +13,18 @@ Array [
 exports[`withDefaults should still provide default values without Provider 1`] = `
 Array [
   Array [
-    Object {},
+    Object {
+      "defaults": Object {},
+      "mockFn": [MockFunction] {
+        "calls": [Circular],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
+    },
   ],
 ]
 `;

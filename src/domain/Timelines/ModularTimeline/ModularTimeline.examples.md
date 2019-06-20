@@ -4,7 +4,7 @@
 as it will screw up the line styling**
 
 ```jsx
-import { Props } from '@Common';
+import { Props, Variables } from '@Common';
 import { Pill } from '@Domain/Pills';
 import { Text } from '@Domain/Typographies';
 
@@ -12,7 +12,7 @@ function effectiveFromText (date) {
   return (
     <>
       <Text type='xsmall'>Effective from </Text>
-      <Text type='xsmall' weight='heavy'>{date}</Text>
+      <Text type='xsmall' weight={Variables.FontWeight.fwSemiBold}>{date}</Text>
     </>
   )
 }
@@ -20,7 +20,7 @@ function effectiveFromText (date) {
 <ModularTimeline
   events={[
     {
-      title: <Text weight='heavy' size='small'>Upcoming</Text>,
+      title: <Text weight={Variables.FontWeight.fwSemiBold} size='small'>Upcoming</Text>,
       eventType: 'major',
       markerColor: 'transparent',
       timelineLineStyle: 'none'
@@ -47,12 +47,12 @@ function effectiveFromText (date) {
       }
     },
     {
-      title: <Text weight='heavy' size='small'>Today, 6 Nov 2018</Text>,
+      title: <Text weight={Variables.FontWeight.fwSemiBold} size='small'>Today, 6 Nov 2018</Text>,
       eventType: 'major',
       markerColor: 'primary'
     },
     {
-      title: <Text weight='heavy' size='small'>2011</Text>,
+      title: <Text weight={Variables.FontWeight.fwSemiBold} size='small'>2011</Text>,
       eventType: 'major'
     },
     {
@@ -70,7 +70,7 @@ function effectiveFromText (date) {
       }
     },
     {
-      title: <Text weight='heavy' size='small'>2010</Text>,
+      title: <Text weight={Variables.FontWeight.fwSemiBold} size='small'>2010</Text>,
       eventType: 'major'
     },
     {
@@ -103,7 +103,7 @@ import { Text } from '@Domain/Typographies';
 <ModularTimeline
   events={[
     {
-      title: <Text weight='heavy'>Timeline 1</Text>,
+      title: <Text weight={Variables.FontWeight.fwSemiBold}>Timeline 1</Text>,
       eventType: 'major',
       markerColor: 'transparent',
       timelineLineStyle: 'none'
@@ -131,7 +131,7 @@ import { Text } from '@Domain/Typographies';
       timelineLineStyle: 'none'
     },
     {
-      title: <Text weight='heavy'>Timeline 2</Text>,
+      title: <Text weight={Variables.FontWeight.fwSemiBold}>Timeline 2</Text>,
       eventType: 'major',
       markerColor: 'transparent',
       timelineLineStyle: 'none'

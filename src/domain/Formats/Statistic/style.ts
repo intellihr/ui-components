@@ -6,7 +6,7 @@ import { styleForTypographyType } from '../../Typographies/services/textStyles'
 const PrefixText = styled.span`
   color: ${Variables.Color.n800};
   margin-right: ${Variables.Spacing.sXSmall}px;
-  font-weight: ${Variables.FontWeight.fwHeavy};
+  font-weight: ${Variables.FontWeight.fwSemiBold};
 
   ${styleForTypographyType(Props.TypographyType.Heading)}
 `
@@ -19,7 +19,7 @@ const TitleText = styled.div`
 
 const ValueText = styled.span`
   color: ${Variables.Color.n800};
-  font-weight: ${Variables.FontWeight.fwHeavy};
+  font-weight: ${Variables.FontWeight.fwSemiBold};
 
  ${styleForTypographyType(Props.TypographyType.Display)}
 `

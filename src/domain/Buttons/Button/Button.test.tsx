@@ -1,7 +1,7 @@
 import { mount } from 'enzyme'
 import React from 'react'
 
-import { FontAwesomeIcon } from '@Domain/Icons'
+import { FontAwesomeIcon } from '../../Icons'
 import { Button } from './Button'
 
 describe('<Button />', () => {
@@ -9,7 +9,7 @@ describe('<Button />', () => {
     const wrapper = mount(
       <Button
         id='test-button'
-        buttonComponentProps={{
+        buttonOverrides={{
           onClick: () => alert('yo')
         }}
       >
@@ -24,7 +24,7 @@ describe('<Button />', () => {
     const wrapper = mount(
       <Button
         id='test-button-disabled'
-        buttonComponentProps={{
+        buttonOverrides={{
           onClick: () => alert('yo'),
           disabled: true
         }}
@@ -41,7 +41,7 @@ describe('<Button />', () => {
       <Button
         id='test-button-delete-subtle'
         type='delete-subtle'
-        buttonComponentProps={{
+        buttonOverrides={{
           onClick: () => alert('yo')
         }}
       >
@@ -57,7 +57,7 @@ describe('<Button />', () => {
       <Button
         id='test-button-large'
         size='large'
-        buttonComponentProps={{
+        buttonOverrides={{
           onClick: () => alert('yo')
         }}
       >

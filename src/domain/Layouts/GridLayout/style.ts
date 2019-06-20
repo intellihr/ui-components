@@ -1,7 +1,8 @@
 import { isPlainObject } from 'lodash'
 import styled, { css } from 'styled-components'
 
-import { Utils, Variables } from '../../../common'
+import { Props, Utils, Variables } from '../../../common'
+import { getMarginSizeAtBreakpoint } from '../../Spacers/services/margins'
 
 enum HorizontalAlignment {
   Left = 'left',
@@ -63,7 +64,8 @@ interface IStyledGridLayoutProps {
   horizontalAlignment: HorizontalAlignment | IStyledHorizontalAlignment,
   verticalAlignment: VerticalAlignment | IStyledVerticalAlignment,
   gutterMarginX: GutterSize | IStyledGridGutters,
-  gutterMarginY: GutterSize | IStyledGridGutters
+  gutterMarginY: GutterSize | IStyledGridGutters,
+  margins?: Props.IMargins
 }
 
 interface IStyledCellProps {
@@ -245,29 +247,59 @@ function gridStyleForPropsAtBreakpoint (
   const yMarginGutterSize = getGutterPxAtBreakpoint(props.gutterMarginY, breakpoint)
   const horizontalAlignment = getHorizontalAlignmentAtBreakpoint(props.horizontalAlignment, breakpoint)
   const verticalAlignment = getVerticalAlignmentAtBreakpoint(props.verticalAlignment, breakpoint)
-  let leftRightMarginGutters
-  let topBottomMarginGutters
+  const leftMargin = props.margins ? gridMarginStyleAtBreakpoint(breakpoint, props.margins.left) : 0
+  const rightMargin = props.margins ? gridMarginStyleAtBreakpoint(breakpoint, props.margins.right) : 0
+  const topMargin = props.margins ? gridMarginStyleAtBreakpoint(breakpoint, props.margins.top) : 0
+  const bottomMargin = props.margins ? gridMarginStyleAtBreakpoint(breakpoint, props.margins.bottom) : 0
+  let leftMarginGutters
+  let rightMarginGutters
+  let topMarginGutters
+  let bottomMarginGutters
 
-  if (xMarginGutterSize > 0) {
-    leftRightMarginGutters = css`
-      margin-left: -${xMarginGutterSize / 2}px;
-      margin-right: -${xMarginGutterSize / 2}px;
-    `
+  if (xMarginGutterSize > 0 || leftMargin > 0) {
+    leftMarginGutters = css`
+        margin-left: ${leftMargin - xMarginGutterSize / 2}px;
+      `
   }
 
-  if (yMarginGutterSize > 0) {
-    topBottomMarginGutters = css`
-      margin-top: -${yMarginGutterSize / 2}px;
-      margin-bottom: -${yMarginGutterSize / 2}px;
-    `
+  if (xMarginGutterSize > 0 || rightMargin > 0) {
+    rightMarginGutters = css`
+        margin-right: ${rightMargin - xMarginGutterSize / 2}px;
+      `
+  }
+
+  if (yMarginGutterSize > 0 || topMargin > 0) {
+    topMarginGutters = css`
+        margin-top: ${topMargin - yMarginGutterSize / 2}px;
+      `
+  }
+
+  if (yMarginGutterSize > 0 || bottomMargin > 0) {
+    bottomMarginGutters = css`
+        margin-bottom: ${bottomMargin - yMarginGutterSize / 2}px;
+      `
   }
 
   return css`
-    ${leftRightMarginGutters}
-    ${topBottomMarginGutters}
+    ${leftMarginGutters}
+    ${rightMarginGutters}
+    ${topMarginGutters}
+    ${bottomMarginGutters}
     ${getPropertiesForHorizontalAlignment(horizontalAlignment)}
     ${getPropertiesForVerticalAlignment(verticalAlignment)}
   `
+  }
+
+function gridMarginStyleAtBreakpoint (breakpoint: keyof IStyledGridGutters, margin?: Props.Margin) {
+  if (!margin || margin === 'none') {
+    return 0
+  }
+
+  if (typeof margin === 'number') {
+    return margin
+  }
+
+  return getMarginSizeAtBreakpoint(breakpoint, margin)
 }
 
 function gridStyleForProps (props: IStyledGridLayoutProps) {
@@ -542,8 +574,8 @@ function cellAnimationForProps (props: IStyledCellProps) {
 const StyledCell = styled.div<IStyledCellProps>`
   flex: 0 0 auto;
   flex-basis: auto;
-  min-height: 0;
-  min-width: 0;
+  min-height: 1px;
+  min-width: 1px;
   width: 100%;
 
   ${cellStyleForProps}
