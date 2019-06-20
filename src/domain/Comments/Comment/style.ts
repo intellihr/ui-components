@@ -3,11 +3,11 @@ import styled from 'styled-components'
 import { Props, Variables } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
 
-interface StyledCommentProps {
+interface IStyledCommentProps {
   margins?: Props.IMargins
 }
 
-const StyledComment = styled.div<StyledCommentProps>`
+const StyledComment = styled.div<IStyledCommentProps>`
   ${(props) => styleForMargins(props.margins)}
   display: flex;
   flex-flow: row;

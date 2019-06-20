@@ -1,11 +1,18 @@
 import React from 'react'
 import styled, { StyledFunction } from 'styled-components'
 
-import { Variables, Props } from '../../../common'
+import { Props, Variables } from '../../../common'
 import { DropdownMenu } from '../../Popovers/DropdownMenu'
-import { styleForMargins } from '../../Spacers/services/margins';
+import { IDropdownMenuToggleComponentProps } from '../../Popovers/DropdownMenu'
+import { styleForMargins } from '../../Spacers/services/margins'
 
-const dropdownMenu: StyledFunction<{ margins?: Props.IMargins }> = styled(({ margins, children, ...rest }) => <DropdownMenu {...rest} />)
+interface IStyledDropdownMenuProps {
+  margins?: Props.IMargins
+  toggleComponent: (props: IDropdownMenuToggleComponentProps) => React.ReactElement<any>
+  componentContext?: string
+}
+
+const dropdownMenu: StyledFunction<IStyledDropdownMenuProps> = styled(({ margins, children, ...rest }) => <DropdownMenu {...rest} />)
 
 const StyledDropdownMenu = dropdownMenu`
   ${(props) => styleForMargins(props.margins)}

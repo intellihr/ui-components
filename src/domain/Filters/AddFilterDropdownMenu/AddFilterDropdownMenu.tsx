@@ -2,16 +2,16 @@ import React, { useState } from 'react'
 
 import { Props, Variables } from '../../../common'
 import { VerticalForm } from '../..//Forms/VerticalForm'
-import { IDropdownMenuToggleComponentProps } from '../..//Popovers/DropdownMenu'
 import { Button } from '../../Buttons/Button'
 import { SelectInput } from '../../Inputs/SelectInput'
+import { IDropdownMenuToggleComponentProps } from '../../Popovers/DropdownMenu'
 import { Text } from '../../Typographies/Text'
 import { IFilterTagDetail } from '../FilterTag/FilterTag'
 import { OperatorTextWrapper, StyledDropdownMenu } from './style'
 
 export interface IAddFilterDropdownMenuProps {
   /** table name that the filters applied to */
-  filterMessage: string
+  filterMessage?: string
   /** filter selection of this filter dropdown */
   filters: IAddFilterDropdownMenuFilter[]
   /** Callback when a filter is added */
@@ -36,15 +36,15 @@ export interface IAddFilterDropdownMenuFilter {
   }>
 }
 
-interface SelectOption {
+interface ISelectOption {
   label: string
   value: string | number
 }
 
 export const AddFilterDropdownMenu: React.FC<IAddFilterDropdownMenuProps> = ({
+  filterMessage = 'Show all items where:',
   toggleComponent,
   componentContext,
-  filterMessage,
   filters,
   onFilterAdded,
   margins
@@ -53,7 +53,7 @@ export const AddFilterDropdownMenu: React.FC<IAddFilterDropdownMenuProps> = ({
   const [operator, setOperator] = useState('')
   const [value, setValue] = useState('')
 
-  function getFieldInputOptions(): Array<SelectOption> | undefined {
+  function getFieldInputOptions (): ISelectOption[] | undefined {
     if (filters) {
       return filters.map((filter: IAddFilterDropdownMenuFilter) => (
         {
@@ -64,26 +64,23 @@ export const AddFilterDropdownMenu: React.FC<IAddFilterDropdownMenuProps> = ({
     }
   }
 
-  function handleFieldChange(option: any) {
+  function handleFieldChange (option: any) {
     const selectedFilter = filters.find((filter: IAddFilterDropdownMenuFilter) => filter.fieldName === option.value)
 
     if (selectedFilter) {
-      let operator
       if (selectedFilter.type === 'SINGLE_SELECT') {
-        operator = 'is'
-
-        setOperator(operator)
+        setOperator('is')
       }
     }
 
     setFieldName(option.value)
   }
 
-  function handleValueChange(option: any) {
+  function handleValueChange (option: any) {
     setValue(option.value)
   }
 
-  function valueInputOption(): Array<{ label: string, value: string | number | boolean }> | undefined {
+  function valueInputOption (): Array<{ label: string, value: string | number | boolean }> | undefined {
     const selectedFilter = filters.find((filter: IAddFilterDropdownMenuFilter) => filter.fieldName === fieldName)
 
     if (selectedFilter) {
@@ -91,7 +88,7 @@ export const AddFilterDropdownMenu: React.FC<IAddFilterDropdownMenuProps> = ({
     }
   }
 
-  function applyFilter(closeMenu: () => void) {
+  function applyFilter (closeMenu: () => void) {
     return () => {
       onFilterAdded({ fieldName, operator, value })
       closeMenu()
@@ -107,7 +104,7 @@ export const AddFilterDropdownMenu: React.FC<IAddFilterDropdownMenuProps> = ({
       toggleComponent={toggleComponent}
       componentContext={componentContext}
     >
-      {({ closeMenu }) =>
+      {({ closeMenu }: { closeMenu: (() => void) }) =>
         <>
           <VerticalForm.Field
             inputName='filterDropdownFieldInput'
@@ -146,11 +143,10 @@ export const AddFilterDropdownMenu: React.FC<IAddFilterDropdownMenuProps> = ({
                 onClick={applyFilter(closeMenu)}
               >
                 Add Filter
-          </Button>
+              </Button>
             </>
           }
-        </>
-      }
+        </>}
     </StyledDropdownMenu>
   )
 }
