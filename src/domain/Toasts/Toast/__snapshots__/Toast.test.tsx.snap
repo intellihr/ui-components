@@ -16,7 +16,7 @@ exports[`<Toast /> should call the onMount function if given one 1`] = `
       isInline={true}
       tag="span"
       type="body"
-      weight="heavy"
+      weight={600}
     />
     <div>
       Yahallo!
@@ -51,7 +51,7 @@ exports[`<Toast /> should render a toast of a default type, which is success 1`]
       isInline={true}
       tag="span"
       type="body"
-      weight="heavy"
+      weight={600}
     />
     <div>
       Yo ... whaazzzaaaap!!!
@@ -86,7 +86,7 @@ exports[`<Toast /> should render an alert toast 1`] = `
       isInline={true}
       tag="span"
       type="body"
-      weight="heavy"
+      weight={600}
     />
     <div>
       Surprise @#$%^&*!!!

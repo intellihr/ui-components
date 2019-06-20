@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import React from 'react'
-import { Variables } from 'src/common'
 
+import { Variables } from '../../../common'
 import { IntelliIcon, IntelliIconTypeNoPrefix } from '../../Icons'
 import { Text } from '../../Typographies/Text'
 const style = require('./style.scss')
