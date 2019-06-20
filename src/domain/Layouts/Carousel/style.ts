@@ -86,6 +86,14 @@ const CarouselTile = styled.div`
   border: 1px solid ${Variables.Color.n250};
   background-color: ${Variables.Color.n150};
   margin: 0 ${Variables.Spacing.sXSmall / 2}px;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+   &:last-of-type {
+    margin-right: 0;
+  }
 `
 
 export {
