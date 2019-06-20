@@ -22,7 +22,7 @@ const BoardTilesWrapper = styled.div`
 const StyledBoardLabel = styled.label`
   font-size: ${Variables.FontSize.fzHeading}px;
   line-height: ${Variables.LineHeight.lhHeading}px;
-  font-weight: ${Variables.FontWeight.fwHeavy};
+  font-weight: ${Variables.FontWeight.fwSemiBold};
   color: ${Variables.Color.n700};
   margin-bottom: 12px;
 

@@ -27,7 +27,7 @@ exports[`<FilterTag /> should render the filter tag 1`] = `
       isInline={true}
       tag="span"
       type="small"
-      weight="heavy"
+      weight={600}
     >
       Product Training
     </Text>
@@ -62,7 +62,7 @@ exports[`<FilterTag /> should render the filter tag 1`] = `
       isInline={true}
       tag="span"
       type="small"
-      weight="heavy"
+      weight={600}
     >
       AWS
     </Text>

@@ -1,23 +1,23 @@
 version: '3'
 services:
-  base: &base
-    build: .
-
-  code: &code
-    <<: *base
-    volumes:
-      - .:/code
+  local:
+    build:
+      context: .
+      dockerfile: Dockerfile-local
+    command: yarn styleguide
     ports:
-      - 6060:6060
-
-  code-mac:
-    <<: *code
+      - 6060
     volumes:
-      - .:/code
-      - ui-components:/code/node_modules # Optimisation for Docker-Mac
+      - ./src:/var/task/src:delegated
+      - ./docs:/var/task/docs:delegated
+      - ./dist:/var/task/dist:delegated
+      - ./types:/var/task/types:delegated
+      - node-cache:/var/task/node_modules/.cache
 
   jenkins:
-    <<: *base
+    build:
+      context: .
+      dockerfile: Dockerfile-jenkins
 
 volumes:
-  ui-components: ~
+  node-cache: ~

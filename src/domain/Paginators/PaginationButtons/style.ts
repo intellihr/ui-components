@@ -90,7 +90,7 @@ const StylePaginationButton = styled.button`
     if (props.isCurrent) {
       return css`
         background-color: ${Variables.Color.i400};
-        font-weight: ${Variables.FontWeight.fwHeavy};
+        font-weight: ${Variables.FontWeight.fwSemiBold};
         color: ${Variables.Color.n100};
         `
     }

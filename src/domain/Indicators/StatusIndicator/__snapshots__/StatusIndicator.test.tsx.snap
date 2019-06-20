@@ -5,7 +5,7 @@ exports[`<StatusIndicator /> should render a dot status label 1`] = `
   className="StatusIndicator dot-status-label"
 >
   <FontAwesomeIcon
-    color="rgb(192, 48, 0)"
+    color="#CADDFC"
     type="circle"
   />
   <Text

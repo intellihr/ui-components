@@ -8,7 +8,7 @@ export interface ITextWrapperProps {
   color?: Variables.Color
   isInline?: boolean
   isUpper?: boolean
-  weight?: 'normal' | 'heavy'
+  weight?: Variables.FontWeight
   textType?: Props.TypographyType
   isTruncated?: boolean
   isItalic?: boolean
@@ -16,6 +16,7 @@ export interface ITextWrapperProps {
 }
 
 export const TextWrapper = styled.span`
+
   ${(props: ITextWrapperProps) => styleForMargins(props.margins)}
 
   ${(props: ITextWrapperProps) => styleForTypographyType(props.textType)}
@@ -46,16 +47,9 @@ export const TextWrapper = styled.span`
 
   ${(props: ITextWrapperProps) => {
     if (props.weight) {
-      switch (props.weight) {
-        case 'normal':
-          return css`
-            font-weight: ${Variables.FontWeight.fwNormal};
-          `
-        case 'heavy':
-          return css`
-            font-weight: ${Variables.FontWeight.fwHeavy};
-          `
-      }
+      return css`
+        font-weight: ${props.weight};
+      `
     }
 
     switch (props.textType) {
@@ -63,7 +57,7 @@ export const TextWrapper = styled.span`
       case 'display':
       case 'display-large':
         return css`
-          font-weight: ${Variables.FontWeight.fwHeavy};
+          font-weight: ${Variables.FontWeight.fwSemiBold};
         `
 
       case 'xsmall':

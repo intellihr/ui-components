@@ -1,0 +1,5 @@
+version: '3'
+services:
+  local:
+    ports:
+      - 6060:6060
