@@ -2,8 +2,8 @@
 
 exports[`<Badge /> should render a large badge 1`] = `
 .c0 {
-  background-color: #1A2B3C;
-  color: #1A293C;
+  background-color: #EDF4FF;
+  color: #00368C;
   border: 1px solid #C5CED6;
   box-shadow: 0 2px 2px rgba(0,0,0,0.24);
   border-radius: 50%;
@@ -32,20 +32,20 @@ exports[`<Badge /> should render a large badge 1`] = `
 }
 
 <Badge
-  backgroundColor="#1A2B3C"
-  color="#1A293C"
+  backgroundColor="#EDF4FF"
+  color="#00368C"
   label={6}
   size="large"
 >
   <styled.span
-    backgroundColor="#1A2B3C"
-    color="#1A293C"
+    backgroundColor="#EDF4FF"
+    color="#00368C"
     hasBorder={true}
     size="large"
   >
     <span
       className="c0"
-      color="#1A293C"
+      color="#00368C"
       size="large"
     >
       6
@@ -56,8 +56,8 @@ exports[`<Badge /> should render a large badge 1`] = `
 
 exports[`<Badge /> should render a small badge 1`] = `
 .c0 {
-  background-color: #1A2B3C;
-  color: #1A293C;
+  background-color: #EDF4FF;
+  color: #00368C;
   border: 1px solid #C5CED6;
   box-shadow: 0 2px 2px rgba(0,0,0,0.24);
   border-radius: 50%;
@@ -86,19 +86,19 @@ exports[`<Badge /> should render a small badge 1`] = `
 }
 
 <Badge
-  backgroundColor="#1A2B3C"
-  color="#1A293C"
+  backgroundColor="#EDF4FF"
+  color="#00368C"
   label={6}
 >
   <styled.span
-    backgroundColor="#1A2B3C"
-    color="#1A293C"
+    backgroundColor="#EDF4FF"
+    color="#00368C"
     hasBorder={true}
     size="small"
   >
     <span
       className="c0"
-      color="#1A293C"
+      color="#00368C"
       size="small"
     >
       6
@@ -118,8 +118,8 @@ exports[`<Badge /> should render a spinning badge 1`] = `
 }
 
 .c0 {
-  background-color: #1A2B3C;
-  color: #1A293C;
+  background-color: #EDF4FF;
+  color: #00368C;
   border: 1px solid #C5CED6;
   box-shadow: 0 2px 2px rgba(0,0,0,0.24);
   border-radius: 50%;
@@ -148,20 +148,20 @@ exports[`<Badge /> should render a spinning badge 1`] = `
 }
 
 <Badge
-  backgroundColor="#1A2B3C"
-  color="#1A293C"
+  backgroundColor="#EDF4FF"
+  color="#00368C"
   label={6}
   pending={true}
 >
   <styled.span
-    backgroundColor="#1A2B3C"
-    color="#1A293C"
+    backgroundColor="#EDF4FF"
+    color="#00368C"
     hasBorder={true}
     size="small"
   >
     <span
       className="c0"
-      color="#1A293C"
+      color="#00368C"
       size="small"
     >
       <FontAwesomeIcon
