@@ -66,6 +66,11 @@ import { isEqual } from 'lodash';
 import { DateRangeInput } from '@Domain/Inputs';
 import { Button } from '@Domain/Buttons';
 
+const style = {
+    display: 'flex',
+    alignItems: 'center'
+};
+
 initialState = {
   startDate: null,
   endDate:null,
@@ -121,7 +126,7 @@ initialState = {
   onTagDeleted = {(deletedTag) => { setState({ tags: state.tags.filter(tag => !isEqual(tag, deletedTag)) }) }}
   onSearchUpdated = {(event) => { setState({ searchValue: event.target.value }); console.log('search value updated:', event.target.value) }}
   onSearchCleared = {(event) => { setState({ searchValue: '' }); alert('clear search value') }}
-  rightComponent = { <div>
+  rightComponent = { <div style={style}>
                        <DateRangeInput
                        isInline
                        name='filter-date-picker'
