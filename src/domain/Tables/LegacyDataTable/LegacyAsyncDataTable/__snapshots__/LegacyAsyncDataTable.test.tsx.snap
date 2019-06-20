@@ -4645,11 +4645,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
       ],
       "results": Array [
         Object {
-<<<<<<< HEAD
-          "isThrow": false,
-=======
           "type": "return",
->>>>>>> 959acc5474b16120e31cd822eae1e334c971547b
           "value": undefined,
         },
       ],
@@ -4799,11 +4795,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
           ],
           "results": Array [
             Object {
-<<<<<<< HEAD
-              "isThrow": false,
-=======
               "type": "return",
->>>>>>> 959acc5474b16120e31cd822eae1e334c971547b
               "value": undefined,
             },
           ],
