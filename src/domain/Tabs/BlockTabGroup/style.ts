@@ -82,7 +82,7 @@ const TabListItemButton = styled.button<ITabListItemButtonProps>`
   cursor: pointer;
   display: block;
   font-size: ${Variables.FontSize.fzSmall}px;
-  font-weight: ${Variables.FontWeight.fwHeavy};
+  font-weight: ${Variables.FontWeight.fwSemiBold};
   outline: none;
   padding: 10px 0;
   position: relative;

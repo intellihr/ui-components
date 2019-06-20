@@ -43,21 +43,21 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
     >
       <Styled(Text)
         type="body"
-        weight="heavy"
+        weight={600}
       >
         <Text
           className="c0"
           isInline={true}
           tag="span"
           type="body"
-          weight="heavy"
+          weight={600}
         >
           <styled.span
             className="c0"
             data-component-type="text"
             isInline={true}
             textType="body"
-            weight="heavy"
+            weight={600}
           >
             <span
               className="c0 c1"
@@ -134,21 +134,21 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
     >
       <Styled(Text)
         type="body"
-        weight="heavy"
+        weight={600}
       >
         <Text
           className="c0"
           isInline={true}
           tag="span"
           type="body"
-          weight="heavy"
+          weight={600}
         >
           <styled.span
             className="c0"
             data-component-type="text"
             isInline={true}
             textType="body"
-            weight="heavy"
+            weight={600}
           >
             <span
               className="c0 c1"
@@ -236,21 +236,21 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
     >
       <Styled(Text)
         type="heading"
-        weight="heavy"
+        weight={600}
       >
         <Text
           className="c1"
           isInline={true}
           tag="span"
           type="heading"
-          weight="heavy"
+          weight={600}
         >
           <styled.span
             className="c1"
             data-component-type="text"
             isInline={true}
             textType="heading"
-            weight="heavy"
+            weight={600}
           >
             <span
               className="c1 c2"
@@ -328,21 +328,21 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
     >
       <Styled(Text)
         type="body"
-        weight="heavy"
+        weight={600}
       >
         <Text
           className="c0"
           isInline={true}
           tag="span"
           type="body"
-          weight="heavy"
+          weight={600}
         >
           <styled.span
             className="c0"
             data-component-type="text"
             isInline={true}
             textType="body"
-            weight="heavy"
+            weight={600}
           >
             <span
               className="c0 c1"
@@ -424,7 +424,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
       <Styled(Text)
         color="#FFD2CC"
         type="body"
-        weight="heavy"
+        weight={600}
       >
         <Text
           className="c0"
@@ -432,7 +432,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
           isInline={true}
           tag="span"
           type="body"
-          weight="heavy"
+          weight={600}
         >
           <styled.span
             className="c0"
@@ -440,7 +440,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
             data-component-type="text"
             isInline={true}
             textType="body"
-            weight="heavy"
+            weight={600}
           >
             <span
               className="c0 c1"
@@ -518,21 +518,21 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
     >
       <Styled(Text)
         type="body"
-        weight="heavy"
+        weight={600}
       >
         <Text
           className="c0"
           isInline={true}
           tag="span"
           type="body"
-          weight="heavy"
+          weight={600}
         >
           <styled.span
             className="c0"
             data-component-type="text"
             isInline={true}
             textType="body"
-            weight="heavy"
+            weight={600}
           >
             <span
               className="c0 c1"
@@ -609,21 +609,21 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
     >
       <Styled(Text)
         type="xsmall"
-        weight="heavy"
+        weight={600}
       >
         <Text
           className="c0"
           isInline={true}
           tag="span"
           type="xsmall"
-          weight="heavy"
+          weight={600}
         >
           <styled.span
             className="c0"
             data-component-type="text"
             isInline={true}
             textType="xsmall"
-            weight="heavy"
+            weight={600}
           >
             <span
               className="c0 c1"

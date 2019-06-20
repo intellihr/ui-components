@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { Icon } from '@Domain/Icons'
+import { Icon } from '../../Icons'
 import { Input } from './Input'
 
 const dummyClick = () => console.log('hey')

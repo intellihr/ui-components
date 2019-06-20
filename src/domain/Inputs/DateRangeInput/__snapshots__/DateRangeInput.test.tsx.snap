@@ -15,7 +15,7 @@ exports[`<DateRangeInput /> should render a date range input 1`] = `
         isInline={true}
         tag="span"
         type="body"
-        weight="heavy"
+        weight={600}
       >
         →
       </Text>
@@ -149,7 +149,7 @@ exports[`<DateRangeInput /> should render a date range input with date format 1`
         isInline={true}
         tag="span"
         type="body"
-        weight="heavy"
+        weight={600}
       >
         →
       </Text>
@@ -283,7 +283,7 @@ exports[`<DateRangeInput /> should render a disabled date range input 1`] = `
         isInline={true}
         tag="span"
         type="body"
-        weight="heavy"
+        weight={600}
       >
         →
       </Text>
@@ -417,7 +417,7 @@ exports[`<DateRangeInput /> should render a mobile date range input 1`] = `
         isInline={true}
         tag="span"
         type="body"
-        weight="heavy"
+        weight={600}
       >
         →
       </Text>
@@ -551,7 +551,7 @@ exports[`<DateRangeInput /> should render an invalid date range input 1`] = `
         isInline={true}
         tag="span"
         type="body"
-        weight="heavy"
+        weight={600}
       >
         →
       </Text>

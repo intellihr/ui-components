@@ -1,15 +1,22 @@
 import styled from 'styled-components'
 
-import { Variables } from '../../../common'
+import { Props, Variables } from '../../../common'
+import { styleForMargins } from '../../Spacers/services/margins'
 
 const CarouselStyleConstants = {
   MarginSize: Variables.Spacing.sMedium,
   ScrollDuration: 250
 }
 
+interface ICarouselContainerProps {
+  /** Margins around the highlight area */
+  margins?: Props.IMargins
+}
+
 const CarouselContainer = styled.div`
   width: 100%;
   display: flex;
+  ${(props: ICarouselContainerProps) => styleForMargins(props.margins)}
 `
 
 interface ITabChevronButtonProps {
@@ -20,7 +27,7 @@ const CarouselChevronButton = styled.button`
   color: ${Variables.Color.n600};
   cursor: pointer;
   float: ${(props: ITabChevronButtonProps) => props.float};
-  font-weight: ${Variables.FontWeight.fwHeavy};
+  font-weight: ${Variables.FontWeight.fwSemiBold};
   margin: 0 ${CarouselStyleConstants.MarginSize / 2}px;
   outline: none;
   text-align: center;

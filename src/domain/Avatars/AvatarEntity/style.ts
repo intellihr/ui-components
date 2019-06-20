@@ -1,4 +1,3 @@
-import React from 'react'
 import styled, { css } from 'styled-components'
 
 import { Props, Variables } from '../../../common'
@@ -77,7 +76,7 @@ const SecondaryTextWrapper = styled.span`
 
 const TertiaryTextWrapper = styled.span`
   ${styleForTypographyType(Props.TypographyType.XSmall)}
-  font-weight: ${Variables.FontWeight.fwHeavy};
+  font-weight: ${Variables.FontWeight.fwSemiBold};
 
   ${styleForTruncatedText()}
 

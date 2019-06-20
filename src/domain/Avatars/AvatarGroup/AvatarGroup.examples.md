@@ -84,6 +84,7 @@ Or the limit can be removed entirely:
 supports many dropdown props.
 
 ```jsx
+import { Variables } from '@Common';
 import { DropdownMenu } from '@Domain/Popovers';
 import { Brick, Text } from '@Domain/Typographies';
 
@@ -133,7 +134,7 @@ const avatarInfo = [
 
 <div>
   <Text
-    weight='heavy'
+    weight={Variables.FontWeight.fwSemiBold}
   >
     Direct Reports
   </Text>

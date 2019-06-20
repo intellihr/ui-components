@@ -1,4 +1,3 @@
-import React from 'react'
 import styled, { StyledComponentClass, css } from 'styled-components'
 
 import { Variables } from '../../../common'
@@ -87,7 +86,7 @@ interface ITabListItemAnchorProps {
 const TabListItemAnchor = styled.a`
   color: ${Variables.Color.n600};
   display: block;
-  font-weight: ${Variables.FontWeight.fwHeavy};
+  font-weight: ${Variables.FontWeight.fwSemiBold};
   line-height: ${TabStyleConstants.GroupHeight}px;
   outline: none;
   position: relative;

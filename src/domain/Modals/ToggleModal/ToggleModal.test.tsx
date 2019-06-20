@@ -1,11 +1,11 @@
 import { mount, shallow } from 'enzyme'
 import React from 'react'
 
-import { Button } from '@Domain/Buttons'
+import { Button } from '../../Buttons'
 import { ToggleModal } from './ToggleModal'
 
 describe('<ToggleModal />', () => {
-  const trigger = ({toggle}) => (
+  const trigger = ({toggle}: any) => (
     <Button
       type='primary'
       onClick={toggle}

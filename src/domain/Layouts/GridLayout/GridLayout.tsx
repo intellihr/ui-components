@@ -92,6 +92,8 @@ interface IGridLayoutProps {
   animationStyle?: CellAnimation
   /** Component context */
   componentContext?: string
+  /** The margins around the component */
+  margins?: Props.IMargins
 }
 
 export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
@@ -115,11 +117,13 @@ export class GridLayout extends React.PureComponent<IGridLayoutProps, never> {
       horizontalAlignment,
       verticalAlignment,
       cells,
-      componentContext
+      componentContext,
+      margins
     } = this.props
 
     return (
       <StyledGridLayout
+        margins={margins}
         horizontalAlignment={horizontalAlignment!}
         verticalAlignment={verticalAlignment!}
         gutterMarginX={gutterMarginX!}

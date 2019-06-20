@@ -13,9 +13,9 @@ describe('<Text />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render an element with heavy text`, () => {
+  it(`should render an element with semi bold text`, () => {
     const wrapper = mount(
-      <Text weight='heavy'>Hello, world!</Text>
+      <Text weight={Variables.FontWeight.fwSemiBold}>Hello, world!</Text>
     )
 
     expect(wrapper).toMatchSnapshot()
