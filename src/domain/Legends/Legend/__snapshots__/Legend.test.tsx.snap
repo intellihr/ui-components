@@ -81,7 +81,6 @@ exports[`<Legend /> should render a legend 1`] = `
         >
           <Icon
             color="rgb(0,255,0)"
-            isSpinning={false}
             size="xsmall"
             type="fa-circle"
           >
@@ -118,7 +117,6 @@ exports[`<Legend /> should render a legend 1`] = `
         >
           <Icon
             color="rgb(0,0,255)"
-            isSpinning={false}
             size="xsmall"
             type="fa-circle"
           >

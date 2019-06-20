@@ -534,8 +534,6 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
             >
               <Icon
                 color="#424F5C"
-                isSpinning={false}
-                size="medium"
                 type="fa-question-circle-o"
               >
                 <styled.i

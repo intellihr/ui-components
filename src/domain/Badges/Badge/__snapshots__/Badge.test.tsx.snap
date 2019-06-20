@@ -172,7 +172,6 @@ exports[`<Badge /> should render a spinning badge 1`] = `
         <Icon
           className="refresh-icon"
           isSpinning={true}
-          size="medium"
           type="fa-refresh"
         >
           <styled.i

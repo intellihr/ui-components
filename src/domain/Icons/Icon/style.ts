@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
-import { Props } from "../../../common"
+
+import { Props } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
 type size = 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge'
 

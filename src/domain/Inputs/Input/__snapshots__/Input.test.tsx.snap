@@ -103,8 +103,6 @@ exports[`<Input /> should render an input with an icon 1`] = `
     }
   >
     <Icon
-      isSpinning={false}
-      size="medium"
       type="fa-check"
     />
     <styled.span>
