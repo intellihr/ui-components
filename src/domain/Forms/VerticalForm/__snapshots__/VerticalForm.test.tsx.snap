@@ -18,7 +18,11 @@ exports[`<VerticalForm /> should render with an onChange and onSubmit attributes
       ],
       "results": Array [
         Object {
+<<<<<<< HEAD
           "isThrow": false,
+=======
+          "type": "return",
+>>>>>>> 959acc5474b16120e31cd822eae1e334c971547b
           "value": undefined,
         },
       ],
@@ -31,7 +35,11 @@ exports[`<VerticalForm /> should render with an onChange and onSubmit attributes
       ],
       "results": Array [
         Object {
+<<<<<<< HEAD
           "isThrow": false,
+=======
+          "type": "return",
+>>>>>>> 959acc5474b16120e31cd822eae1e334c971547b
           "value": undefined,
         },
       ],

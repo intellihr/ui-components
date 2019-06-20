@@ -8,10 +8,7 @@ module.exports = {
     'node_modules/(?!(foundation-sites)/)'
   ],
   transform: {
-    '^.+\\.(ts|tsx)?$': 'ts-jest',
-    '^.+\\.(js|jsx)?$': 'babel-jest',
-    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-    '<rootDir>/assetsTransformer.js'
+    '^.+\\.(ts|tsx)?$': 'ts-jest'
   },
   testRegex: './src/.*\\.test.(ts|tsx)$',
   collectCoverage: true,
@@ -27,11 +24,13 @@ module.exports = {
   ],
   globals: {
     'ts-jest': {
-      tsConfigFile: 'tsconfig-jest.json',
-      useBabelrc: true
+      tsConfig: 'tsconfig-jest.json',
+      babelConfig: {
+        presets: ['@babel/preset-env']
+      }
     }
   },
-  setupTestFrameworkScriptFile: './setupTest.ts',
+  setupFilesAfterEnv: ['./setupTest.ts'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   moduleNameMapper: {
     '\\.(scss|css)$': 'identity-obj-proxy',

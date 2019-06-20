@@ -49,7 +49,7 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
 
     return (
       <StyledPrefixText
-        weight='heavy'
+        weight={Variables.FontWeight.fwSemiBold}
         type={prefixType}
         color={prefixColor}
       >

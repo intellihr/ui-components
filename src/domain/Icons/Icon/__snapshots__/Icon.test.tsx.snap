@@ -13,16 +13,16 @@ exports[`<Icon /> should render a large icon 1`] = `
 <Icon
   isSpinning={false}
   size="large"
-  type="circle"
+  type="fa-circle"
 >
   <styled.i
     aria-hidden={true}
-    className="icon fa circle"
+    className="icon fa fa-circle"
     size="large"
   >
     <i
       aria-hidden={true}
-      className="icon fa circle c0"
+      className="icon fa fa-circle c0"
       size="large"
     />
   </styled.i>
@@ -75,8 +75,8 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
 }
 
 .c2 {
-  background-color: #1A2B3C;
-  color: #1A293C;
+  background-color: #CADDFC;
+  color: #CADDFC;
   border: 1px solid #C5CED6;
   box-shadow: 0 2px 2px rgba(0,0,0,0.24);
   border-radius: 50%;
@@ -107,8 +107,8 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
 <Icon
   badge={
     <Badge
-      backgroundColor="#1A2B3C"
-      color="#1A293C"
+      backgroundColor="#CADDFC"
+      color="#CADDFC"
       hasBorder={true}
       label={6}
       size="small"
@@ -137,21 +137,21 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
       size="xlarge"
     >
       <Badge
-        backgroundColor="#1A2B3C"
-        color="#1A293C"
+        backgroundColor="#CADDFC"
+        color="#CADDFC"
         hasBorder={true}
         label={6}
         size="medium"
       >
         <styled.span
-          backgroundColor="#1A2B3C"
-          color="#1A293C"
+          backgroundColor="#CADDFC"
+          color="#CADDFC"
           hasBorder={true}
           size="medium"
         >
           <span
             className="c2"
-            color="#1A293C"
+            color="#CADDFC"
             size="medium"
           >
             6

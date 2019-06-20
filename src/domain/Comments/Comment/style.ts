@@ -35,7 +35,7 @@ const StyledComment = styled.div`
         >.comment-header-person-name {
           display: inline-block; // This is added for the weird span -2px height
           font-size: ${Variables.FontSize.fzBody}px;
-          font-weight: ${Variables.FontWeight.fwHeavy};
+          font-weight: ${Variables.FontWeight.fwSemiBold};
           line-height: ${Variables.LineHeight.lhBody}px;
         }
       }
