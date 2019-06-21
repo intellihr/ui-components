@@ -97,7 +97,7 @@ const StyledBodyContent = styled.div`
   padding: ${Variables.Spacing.sLarge}px 0;
 
   :first-child {
-    padding-top: 0;
+    padding-top: ${Variables.Spacing.sXSmall}px;
   }
 
   :last-child {
