@@ -23,6 +23,12 @@
       }
     }
 
+    .CalendarDay__today {
+      background-color: $n250;
+      color: $n800;
+      font-weight: $fw-semi-bold;
+    }
+
     // the range of dates when user are picking the dates
     .CalendarDay__hovered_span {
       background: $i100;
@@ -60,6 +66,7 @@
     border-color: $n400;
     border-radius: $border-radius;
     display: flex;
+    height: 39px;
     padding-right: 0;
 
     &:focus,
@@ -72,7 +79,6 @@
 
   .DateInput {
     background: none;
-    height: $spacing-2xlarge;
 
     .DateInput_input {
       background: none;
@@ -80,9 +86,9 @@
       color: $n700;
       font-size: $fz-body;
       font-weight: $fw-normal;
-      line-height: $lh-body;
+      line-height: 16px;
       margin: 0;
-      padding: $spacing-2xsmall;
+      padding: $spacing-xsmall;
       text-align: center;
       transition: color .3s ease-in-out;
 
@@ -100,10 +106,6 @@
     .DateInput_input__disabled {
       font-style: normal;
     }
-  }
-
-  .DateRangePicker {
-    min-width: 292px;
   }
 
   .DateRangePickerInput_arrow {
@@ -144,6 +146,17 @@
 
   &.is-inline {
     display: inline-block;
+
+    .DateRangePickerInput_clearDates {
+      line-height: $lh-small;
+      margin: 0;
+      padding: $spacing-xsmall $spacing-small;
+      position: relative;
+    }
+
+    .DateRangePickerInput_clearDates__hide {
+      display: none;
+    }
   }
 
   &.is-invalid-input {
