@@ -2,6 +2,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const WebpackBar = require('webpackbar')
+const nodeExternals = require('webpack-node-externals')
 
 module.exports = {
   mode: 'development',
@@ -23,6 +24,9 @@ module.exports = {
       from: path.resolve(__dirname, 'src/common/sass'),
       to: path.resolve(__dirname, 'dist/sass')
     }])
+  ],
+  externals: [
+    nodeExternals()
   ],
   entry: {
     index: './src/index.ts',
