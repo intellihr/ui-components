@@ -220,7 +220,6 @@ exports[`<SectionList /> should render a section list with a titled section with
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
                                               "withComponent": [Function],
-                                              Symbol(Symbol.hasInstance): [Function],
                                             }
                                           }
                                           forwardedRef={null}
@@ -572,7 +571,6 @@ exports[`<SectionList /> should render a section list with an annotated section 
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -967,7 +965,6 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -1019,9 +1016,10 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-gqjmRU",
                                             "isStatic": false,
-                                            "lastClassName": "cTuehh",
+                                            "lastClassName": "ldFfjA",
                                             "rules": Array [
                                               "
+
   ",
                                               [Function],
                                               "
@@ -1071,7 +1069,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                       textType="heading"
                                     >
                                       <h2
-                                        className="gOjnQu"
+                                        className="LzDaN"
                                         color="#424F5C"
                                         data-component-type="text"
                                       >
@@ -1104,9 +1102,10 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-gqjmRU",
                                             "isStatic": false,
-                                            "lastClassName": "cTuehh",
+                                            "lastClassName": "ldFfjA",
                                             "rules": Array [
                                               "
+
   ",
                                               [Function],
                                               "
@@ -1156,7 +1155,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                       textType="small"
                                     >
                                       <span
-                                        className="cTuehh"
+                                        className="ldFfjA"
                                         color="#667380"
                                         data-component-type="text"
                                       >
@@ -1236,7 +1235,6 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
                                           "withComponent": [Function],
-                                          Symbol(Symbol.hasInstance): [Function],
                                         }
                                       }
                                       forwardedRef={null}
@@ -1560,7 +1558,6 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
                                               "withComponent": [Function],
-                                              Symbol(Symbol.hasInstance): [Function],
                                             }
                                           }
                                           forwardedRef={null}
@@ -1599,9 +1596,10 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "sc-gqjmRU",
                                                           "isStatic": false,
-                                                          "lastClassName": "cTuehh",
+                                                          "lastClassName": "ldFfjA",
                                                           "rules": Array [
                                                             "
+
   ",
                                                             [Function],
                                                             "
@@ -1651,7 +1649,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                                     textType="heading"
                                                   >
                                                     <h2
-                                                      className="gOjnQu"
+                                                      className="LzDaN"
                                                       color="#424F5C"
                                                       data-component-type="text"
                                                     >
@@ -1684,9 +1682,10 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "sc-gqjmRU",
                                                           "isStatic": false,
-                                                          "lastClassName": "cTuehh",
+                                                          "lastClassName": "ldFfjA",
                                                           "rules": Array [
                                                             "
+
   ",
                                                             [Function],
                                                             "
@@ -1736,7 +1735,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                                     textType="small"
                                                   >
                                                     <span
-                                                      className="cTuehh"
+                                                      className="ldFfjA"
                                                       color="#667380"
                                                       data-component-type="text"
                                                     >
@@ -2210,7 +2209,6 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
                               }
                             }
                             forwardedRef={null}
@@ -2262,9 +2260,10 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-gqjmRU",
                                             "isStatic": false,
-                                            "lastClassName": "cTuehh",
+                                            "lastClassName": "ldFfjA",
                                             "rules": Array [
                                               "
+
   ",
                                               [Function],
                                               "
@@ -2314,7 +2313,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                       textType="heading"
                                     >
                                       <h2
-                                        className="gOjnQu"
+                                        className="LzDaN"
                                         color="#424F5C"
                                         data-component-type="text"
                                       >
@@ -2347,9 +2346,10 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-gqjmRU",
                                             "isStatic": false,
-                                            "lastClassName": "cTuehh",
+                                            "lastClassName": "ldFfjA",
                                             "rules": Array [
                                               "
+
   ",
                                               [Function],
                                               "
@@ -2399,7 +2399,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                       textType="small"
                                     >
                                       <span
-                                        className="cTuehh"
+                                        className="ldFfjA"
                                         color="#667380"
                                         data-component-type="text"
                                       >
@@ -2479,7 +2479,6 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
                                           "withComponent": [Function],
-                                          Symbol(Symbol.hasInstance): [Function],
                                         }
                                       }
                                       forwardedRef={null}
@@ -2729,7 +2728,6 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
                                               "withComponent": [Function],
-                                              Symbol(Symbol.hasInstance): [Function],
                                             }
                                           }
                                           forwardedRef={null}
@@ -2768,9 +2766,10 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "sc-gqjmRU",
                                                           "isStatic": false,
-                                                          "lastClassName": "cTuehh",
+                                                          "lastClassName": "ldFfjA",
                                                           "rules": Array [
                                                             "
+
   ",
                                                             [Function],
                                                             "
@@ -2820,7 +2819,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                                     textType="heading"
                                                   >
                                                     <h2
-                                                      className="gOjnQu"
+                                                      className="LzDaN"
                                                       color="#424F5C"
                                                       data-component-type="text"
                                                     >
@@ -2853,9 +2852,10 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "sc-gqjmRU",
                                                           "isStatic": false,
-                                                          "lastClassName": "cTuehh",
+                                                          "lastClassName": "ldFfjA",
                                                           "rules": Array [
                                                             "
+
   ",
                                                             [Function],
                                                             "
@@ -2905,7 +2905,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                                     textType="small"
                                                   >
                                                     <span
-                                                      className="cTuehh"
+                                                      className="ldFfjA"
                                                       color="#667380"
                                                       data-component-type="text"
                                                     >

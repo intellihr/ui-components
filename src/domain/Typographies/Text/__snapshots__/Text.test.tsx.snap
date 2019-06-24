@@ -22,9 +22,10 @@ exports[`<Text /> should render a non-inline text element 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-gzVnrw",
             "isStatic": false,
-            "lastClassName": "hhBmuh",
+            "lastClassName": "cLkjew",
             "rules": Array [
               "
+
   ",
               [Function],
               "
@@ -74,7 +75,7 @@ exports[`<Text /> should render a non-inline text element 1`] = `
       textType="body"
     >
       <span
-        className="hhBmuh"
+        className="cLkjew"
         data-component-type="text"
       >
         Hello, world!
@@ -106,9 +107,10 @@ exports[`<Text /> should render a text element as a h1 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-gzVnrw",
             "isStatic": false,
-            "lastClassName": "ftogVA",
+            "lastClassName": "ccQvFO",
             "rules": Array [
               "
+
   ",
               [Function],
               "
@@ -158,7 +160,7 @@ exports[`<Text /> should render a text element as a h1 1`] = `
       textType="body"
     >
       <h1
-        className="ftogVA"
+        className="ccQvFO"
         data-component-type="text"
       >
         Hello, world!
@@ -200,9 +202,10 @@ exports[`<Text /> should render a text with data attributes 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-gzVnrw",
             "isStatic": false,
-            "lastClassName": "ftogVA",
+            "lastClassName": "ccQvFO",
             "rules": Array [
               "
+
   ",
               [Function],
               "
@@ -252,7 +255,7 @@ exports[`<Text /> should render a text with data attributes 1`] = `
       textType="body"
     >
       <span
-        className="ftogVA"
+        className="ccQvFO"
         data-component-type="text"
         data-otherKey="myOtherKey"
         data-role="myRole"
@@ -302,9 +305,10 @@ exports[`<Text /> should render a text with margin 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-gzVnrw",
             "isStatic": false,
-            "lastClassName": "ksDXSn",
+            "lastClassName": "hKJaBA",
             "rules": Array [
               "
+
   ",
               [Function],
               "
@@ -362,7 +366,7 @@ exports[`<Text /> should render a text with margin 1`] = `
       textType="body"
     >
       <span
-        className="ksDXSn"
+        className="hKJaBA"
         data-component-type="text"
       >
         Hello! I have special margin
@@ -397,9 +401,10 @@ exports[`<Text /> should render an element with colored text 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-gzVnrw",
             "isStatic": false,
-            "lastClassName": "kGJWZj",
+            "lastClassName": "laNfsg",
             "rules": Array [
               "
+
   ",
               [Function],
               "
@@ -449,7 +454,7 @@ exports[`<Text /> should render an element with colored text 1`] = `
       textType="body"
     >
       <span
-        className="kGJWZj"
+        className="laNfsg"
         color="#F25749"
         data-component-type="text"
       >
@@ -482,9 +487,10 @@ exports[`<Text /> should render an element with heading text 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-gzVnrw",
             "isStatic": false,
-            "lastClassName": "eLrgvV",
+            "lastClassName": "ePBcfr",
             "rules": Array [
               "
+
   ",
               [Function],
               "
@@ -534,7 +540,7 @@ exports[`<Text /> should render an element with heading text 1`] = `
       textType="heading"
     >
       <span
-        className="eLrgvV"
+        className="ePBcfr"
         data-component-type="text"
       >
         Hello, world!
@@ -544,19 +550,19 @@ exports[`<Text /> should render an element with heading text 1`] = `
 </Text>
 `;
 
-exports[`<Text /> should render an element with heavy text 1`] = `
+exports[`<Text /> should render an element with semi bold text 1`] = `
 <Text
   isInline={true}
   tag="span"
   type="body"
-  weight="heavy"
+  weight={600}
 >
   <styled.span
     as="span"
     data-component-type="text"
     isInline={true}
     textType="body"
-    weight="heavy"
+    weight={600}
   >
     <StyledComponent
       as="span"
@@ -568,9 +574,10 @@ exports[`<Text /> should render an element with heavy text 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-gzVnrw",
             "isStatic": false,
-            "lastClassName": "bxeate",
+            "lastClassName": "kbnzwI",
             "rules": Array [
               "
+
   ",
               [Function],
               "
@@ -618,10 +625,10 @@ exports[`<Text /> should render an element with heavy text 1`] = `
       forwardedRef={null}
       isInline={true}
       textType="body"
-      weight="heavy"
+      weight={600}
     >
       <span
-        className="bxeate"
+        className="kbnzwI"
         data-component-type="text"
       >
         Hello, world!
@@ -653,9 +660,10 @@ exports[`<Text /> should render an element with small text 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-gzVnrw",
             "isStatic": false,
-            "lastClassName": "iAZXlY",
+            "lastClassName": "gCixKX",
             "rules": Array [
               "
+
   ",
               [Function],
               "
@@ -705,7 +713,7 @@ exports[`<Text /> should render an element with small text 1`] = `
       textType="small"
     >
       <span
-        className="iAZXlY"
+        className="gCixKX"
         data-component-type="text"
       >
         Hello, world!
@@ -737,9 +745,10 @@ exports[`<Text /> should render an element with text 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-gzVnrw",
             "isStatic": false,
-            "lastClassName": "ftogVA",
+            "lastClassName": "ccQvFO",
             "rules": Array [
               "
+
   ",
               [Function],
               "
@@ -789,7 +798,7 @@ exports[`<Text /> should render an element with text 1`] = `
       textType="body"
     >
       <span
-        className="ftogVA"
+        className="ccQvFO"
         data-component-type="text"
       >
         Hello, world!
@@ -823,9 +832,10 @@ exports[`<Text /> should render an element with the text converted to uppercase 
           "componentStyle": ComponentStyle {
             "componentId": "sc-gzVnrw",
             "isStatic": false,
-            "lastClassName": "lmOJxA",
+            "lastClassName": "jJEQbd",
             "rules": Array [
               "
+
   ",
               [Function],
               "
@@ -876,7 +886,7 @@ exports[`<Text /> should render an element with the text converted to uppercase 
       textType="body"
     >
       <span
-        className="lmOJxA"
+        className="jJEQbd"
         data-component-type="text"
       >
         Hello, world!

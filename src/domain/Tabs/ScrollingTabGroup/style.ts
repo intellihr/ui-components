@@ -86,7 +86,7 @@ interface ITabListItemAnchorProps {
 const TabListItemAnchor = styled.a`
   color: ${Variables.Color.n600};
   display: block;
-  font-weight: ${Variables.FontWeight.fwHeavy};
+  font-weight: ${Variables.FontWeight.fwSemiBold};
   line-height: ${TabStyleConstants.GroupHeight}px;
   outline: none;
   position: relative;

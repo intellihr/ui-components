@@ -17,15 +17,15 @@ export interface ICommentProps {
   /** the name of the person who posted the comment */
   commentHeaderText: string,
   /** Displays the comment in a focused state */
-  focused: boolean,
+  focused?: boolean,
   /** The component to render to the left of the comment box */
-  avatarComponent: React.Component,
+  avatarComponent: JSX.Element,
   /** A pill to be displayed right before the date label of the comment (use a span to persist the inline diplay behaviour) */
-  pillComponent?: React.Component,
+  pillComponent?: JSX.Element,
   /** Additional text to display in the array header (preferable a span HTML element) */
-  headerComponent?: React.Component,
+  headerComponent?: JSX.Element,
   /** Use DateText component from the list of alreay defined components (a string should work too) */
-  dateComponent: React.Component,
+  dateComponent: JSX.Element,
   /** Comment text string */
   commentBodyText: string,
   /** an array of sectionProps from the DropdownMenu to render the submenu sections */

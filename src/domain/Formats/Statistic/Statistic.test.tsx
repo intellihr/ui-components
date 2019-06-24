@@ -24,4 +24,15 @@ describe('<Statistic />', () => {
     )
     expect(wrapper).toMatchSnapshot()
   })
+
+  it(`should render not provided when no value is provided`, () => {
+    const wrapper = mount(
+      <Statistic
+        title='Total Cost'
+        prefix='AUD'
+        value={null}
+      />
+    )
+    expect(wrapper).toMatchSnapshot()
+  })
 })

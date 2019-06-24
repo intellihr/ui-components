@@ -2,21 +2,21 @@
 
 exports[`<Badge /> should render a large badge 1`] = `
 <Badge
-  backgroundColor="#1A2B3C"
-  color="#1A293C"
+  backgroundColor="#EDF4FF"
+  color="#00368C"
   hasBorder={true}
   label={6}
   size="large"
 >
   <styled.span
-    backgroundColor="#1A2B3C"
-    color="#1A293C"
+    backgroundColor="#EDF4FF"
+    color="#00368C"
     hasBorder={true}
     size="large"
   >
     <StyledComponent
-      backgroundColor="#1A2B3C"
-      color="#1A293C"
+      backgroundColor="#EDF4FF"
+      color="#00368C"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -24,7 +24,7 @@ exports[`<Badge /> should render a large badge 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-htpNat",
             "isStatic": false,
-            "lastClassName": "frKdnk",
+            "lastClassName": "hvtFFA",
             "rules": Array [
               "
   ",
@@ -75,8 +75,8 @@ exports[`<Badge /> should render a large badge 1`] = `
       size="large"
     >
       <span
-        className="frKdnk"
-        color="#1A293C"
+        className="hvtFFA"
+        color="#00368C"
         size="large"
       >
         6
@@ -88,21 +88,21 @@ exports[`<Badge /> should render a large badge 1`] = `
 
 exports[`<Badge /> should render a small badge 1`] = `
 <Badge
-  backgroundColor="#1A2B3C"
-  color="#1A293C"
+  backgroundColor="#EDF4FF"
+  color="#00368C"
   hasBorder={true}
   label={6}
   size="small"
 >
   <styled.span
-    backgroundColor="#1A2B3C"
-    color="#1A293C"
+    backgroundColor="#EDF4FF"
+    color="#00368C"
     hasBorder={true}
     size="small"
   >
     <StyledComponent
-      backgroundColor="#1A2B3C"
-      color="#1A293C"
+      backgroundColor="#EDF4FF"
+      color="#00368C"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -110,7 +110,7 @@ exports[`<Badge /> should render a small badge 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-htpNat",
             "isStatic": false,
-            "lastClassName": "dsAMKk",
+            "lastClassName": "dXFPJA",
             "rules": Array [
               "
   ",
@@ -161,8 +161,8 @@ exports[`<Badge /> should render a small badge 1`] = `
       size="small"
     >
       <span
-        className="dsAMKk"
-        color="#1A293C"
+        className="dXFPJA"
+        color="#00368C"
         size="small"
       >
         6
@@ -174,22 +174,22 @@ exports[`<Badge /> should render a small badge 1`] = `
 
 exports[`<Badge /> should render a spinning badge 1`] = `
 <Badge
-  backgroundColor="#1A2B3C"
-  color="#1A293C"
+  backgroundColor="#EDF4FF"
+  color="#00368C"
   hasBorder={true}
   label={6}
   pending={true}
   size="small"
 >
   <styled.span
-    backgroundColor="#1A2B3C"
-    color="#1A293C"
+    backgroundColor="#EDF4FF"
+    color="#00368C"
     hasBorder={true}
     size="small"
   >
     <StyledComponent
-      backgroundColor="#1A2B3C"
-      color="#1A293C"
+      backgroundColor="#EDF4FF"
+      color="#00368C"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -197,7 +197,7 @@ exports[`<Badge /> should render a spinning badge 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-htpNat",
             "isStatic": false,
-            "lastClassName": "dsAMKk",
+            "lastClassName": "dXFPJA",
             "rules": Array [
               "
   ",
@@ -248,8 +248,8 @@ exports[`<Badge /> should render a spinning badge 1`] = `
       size="small"
     >
       <span
-        className="dsAMKk"
-        color="#1A293C"
+        className="dXFPJA"
+        color="#00368C"
         size="small"
       >
         <FontAwesomeIcon

@@ -53,7 +53,7 @@ import { Button } from '@Domain/Buttons';
   toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
     <Button
       onClick={toggleMenu}
-      innerRef={toggleComponentRef}
+      ref={toggleComponentRef}
       buttonOverrides={{...ariaProps}}
     >
       Colored Dropdown
@@ -115,7 +115,7 @@ import { Button, ButtonGroup } from '@Domain/Buttons';
       toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
         <Button
           onClick={toggleMenu}
-          innerRef={toggleComponentRef}
+          ref={toggleComponentRef}
           buttonOverrides={{...ariaProps}}
         >
           Anchored bottom left
@@ -142,7 +142,7 @@ import { Button, ButtonGroup } from '@Domain/Buttons';
       toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
         <Button
           onClick={toggleMenu}
-          innerRef={toggleComponentRef}
+          ref={toggleComponentRef}
           buttonOverrides={{...ariaProps}}
         >
           Anchored bottom right
@@ -169,7 +169,7 @@ import { Button, ButtonGroup } from '@Domain/Buttons';
       toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
         <Button
           onClick={toggleMenu}
-          innerRef={toggleComponentRef}
+          ref={toggleComponentRef}
           buttonOverrides={{...ariaProps}}
         >
           Drop upwards, top left
@@ -196,7 +196,7 @@ import { Button, ButtonGroup } from '@Domain/Buttons';
       toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
         <Button
           onClick={toggleMenu}
-          innerRef={toggleComponentRef}
+          ref={toggleComponentRef}
           buttonOverrides={{...ariaProps}}
         >
           Anchored top right, open to right
@@ -223,7 +223,7 @@ import { Button, ButtonGroup } from '@Domain/Buttons';
       toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
         <Button
           onClick={toggleMenu}
-          innerRef={toggleComponentRef}
+          ref={toggleComponentRef}
           buttonOverrides={{...ariaProps}}
         >
           Anchored bottom left, open to left upwards
@@ -399,7 +399,7 @@ class ThingList extends React.PureComponent {
   toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
     <Button
       onClick={toggleMenu}
-      innerRef={toggleComponentRef}
+      ref={toggleComponentRef}
       buttonOverrides={{...ariaProps}}
     >
       {state.selectedOption.label}

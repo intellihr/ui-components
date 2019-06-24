@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Statistic /> should render Statistic Record component 1`] = `
-<Statistic
+<Component
   title="Total Cost"
   value="99.00"
 >
@@ -15,9 +15,9 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bwzfXH",
+              "componentId": "sc-htpNat",
               "isStatic": true,
-              "lastClassName": "cHrMUA",
+              "lastClassName": "gdTfPL",
               "rules": Array [
                 "
   margin-bottom: ",
@@ -41,7 +41,7 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
             "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-bwzfXH",
+            "styledComponentId": "sc-htpNat",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -51,7 +51,7 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
         forwardedRef={null}
       >
         <div
-          className="cHrMUA"
+          className="gdTfPL"
         >
           Total Cost
         </div>
@@ -64,9 +64,9 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-htpNat",
+              "componentId": "sc-bxivhb",
               "isStatic": true,
-              "lastClassName": "bNBzpE",
+              "lastClassName": "dWvAjs",
               "rules": Array [
                 "
   color: ",
@@ -93,7 +93,7 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
             "displayName": "styled.span",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-htpNat",
+            "styledComponentId": "sc-bxivhb",
             "target": "span",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -103,18 +103,18 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
         forwardedRef={null}
       >
         <span
-          className="bNBzpE"
+          className="dWvAjs"
         >
           99.00
         </span>
       </StyledComponent>
     </styled.span>
   </div>
-</Statistic>
+</Component>
 `;
 
 exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
-<Statistic
+<Component
   prefix="AUD"
   title="Total Cost"
   value="99.00"
@@ -129,9 +129,9 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bwzfXH",
+              "componentId": "sc-htpNat",
               "isStatic": true,
-              "lastClassName": "cHrMUA",
+              "lastClassName": "gdTfPL",
               "rules": Array [
                 "
   margin-bottom: ",
@@ -155,7 +155,7 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
             "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-bwzfXH",
+            "styledComponentId": "sc-htpNat",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -165,7 +165,7 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
         forwardedRef={null}
       >
         <div
-          className="cHrMUA"
+          className="gdTfPL"
         >
           Total Cost
         </div>
@@ -178,9 +178,9 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
+              "componentId": "sc-bwzfXH",
               "isStatic": true,
-              "lastClassName": "jfujsv",
+              "lastClassName": "bHSMIU",
               "rules": Array [
                 "
   color: ",
@@ -210,7 +210,7 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
             "displayName": "styled.span",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
+            "styledComponentId": "sc-bwzfXH",
             "target": "span",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -220,7 +220,7 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
         forwardedRef={null}
       >
         <span
-          className="jfujsv"
+          className="bHSMIU"
         >
           AUD
         </span>
@@ -233,9 +233,9 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-htpNat",
+              "componentId": "sc-bxivhb",
               "isStatic": true,
-              "lastClassName": "bNBzpE",
+              "lastClassName": "dWvAjs",
               "rules": Array [
                 "
   color: ",
@@ -262,7 +262,7 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
             "displayName": "styled.span",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-htpNat",
+            "styledComponentId": "sc-bxivhb",
             "target": "span",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -272,12 +272,123 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
         forwardedRef={null}
       >
         <span
-          className="bNBzpE"
+          className="dWvAjs"
         >
           99.00
         </span>
       </StyledComponent>
     </styled.span>
   </div>
-</Statistic>
+</Component>
+`;
+
+exports[`<Statistic /> should render not provided when no value is provided 1`] = `
+<Component
+  prefix="AUD"
+  title="Total Cost"
+  value={null}
+>
+  <div
+    data-component-type="statistic"
+  >
+    <styled.div>
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-htpNat",
+              "isStatic": true,
+              "lastClassName": "gdTfPL",
+              "rules": Array [
+                "
+  margin-bottom: ",
+                "4",
+                "px;
+
+ ",
+                "
+          font-size: ",
+                "14",
+                "px;
+          line-height: ",
+                "20",
+                "px;
+          letter-spacing: normal;
+        ",
+                "
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-htpNat",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+      >
+        <div
+          className="gdTfPL"
+        >
+          Total Cost
+        </div>
+      </StyledComponent>
+    </styled.div>
+    <styled.span>
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": true,
+              "lastClassName": "eoMxsT",
+              "rules": Array [
+                "
+  color: ",
+                "#667380",
+                ";
+
+ ",
+                "
+          font-size: ",
+                "16",
+                "px;
+          line-height: ",
+                "24",
+                "px;
+          letter-spacing: normal;
+        ",
+                "
+",
+              ],
+            },
+            "displayName": "styled.span",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "span",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+      >
+        <span
+          className="eoMxsT"
+        >
+          Not Provided
+        </span>
+      </StyledComponent>
+    </styled.span>
+  </div>
+</Component>
 `;

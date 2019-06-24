@@ -13,7 +13,7 @@ import { Variables } from '@Common';
     <div style={{backgroundColor: Variables.Color.n500, height: '240px'}}/>
   </PageLayout.Region>
   <PageLayout.Region regionType='content'>
-    <div style={{backgroundColor: Variables.Color.n600, height: '500px'}}/>
+    <div style={{backgroundColor: Variables.Color.n600, height: '500px', borderRadius: '4px'}}/>
   </PageLayout.Region>
 </PageLayout>
 ```
@@ -83,7 +83,7 @@ import { Variables } from '@Common';
     <div style={{backgroundColor: Variables.Color.n500, height: '240px'}}/>
   </div>
   <div class='ihr-layout__content'>
-    <div style={{backgroundColor: Variables.Color.n600, height: '500px'}}/>
+    <div style={{backgroundColor: Variables.Color.n600, height: '500px', borderRadius: '4px'}}/>
   </div>
 </div>
 ```

@@ -49,7 +49,7 @@ initialState = {
   toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
       <Button
         onClick={toggleMenu}
-        innerRef={toggleComponentRef}
+        ref={toggleComponentRef}
         buttonOverrides={{...ariaProps}}
       >
         Add filter

@@ -13,7 +13,7 @@
       > strong {
         color: $n800;
         font-size: $fz-heading;
-        font-weight: $fw-heavy;
+        font-weight: $fw-semi-bold;
       }
     }
 
@@ -21,6 +21,12 @@
       &:hover {
         background: $n250;
       }
+    }
+
+    .CalendarDay__today {
+      background-color: $n250;
+      color: $n800;
+      font-weight: $fw-semi-bold;
     }
 
     // the range of dates when user are picking the dates
@@ -60,6 +66,7 @@
     border-color: $n400;
     border-radius: $border-radius;
     display: flex;
+    height: 39px;
     padding-right: 0;
 
     &:focus,
@@ -72,7 +79,6 @@
 
   .DateInput {
     background: none;
-    height: $spacing-2xlarge;
 
     .DateInput_input {
       background: none;
@@ -80,9 +86,9 @@
       color: $n700;
       font-size: $fz-body;
       font-weight: $fw-normal;
-      line-height: $lh-body;
+      line-height: 16px;
       margin: 0;
-      padding: $spacing-2xsmall;
+      padding: $spacing-xsmall;
       text-align: center;
       transition: color .3s ease-in-out;
 
@@ -102,10 +108,6 @@
     }
   }
 
-  .DateRangePicker {
-    min-width: 292px;
-  }
-
   .DateRangePickerInput_arrow {
     cursor: default;
     position: relative;
@@ -115,7 +117,7 @@
   .DateRangePickerInput_clearDates {
     color: $n600;
     font-size: $fz-heading;
-    font-weight: $fw-heavy;
+    font-weight: $fw-semi-bold;
     line-height: $lh-heading;
     margin-right: $spacing-2xsmall;
     outline: none;
@@ -144,6 +146,17 @@
 
   &.is-inline {
     display: inline-block;
+
+    .DateRangePickerInput_clearDates {
+      line-height: $lh-small;
+      margin: 0;
+      padding: $spacing-xsmall $spacing-small;
+      position: relative;
+    }
+
+    .DateRangePickerInput_clearDates__hide {
+      display: none;
+    }
   }
 
   &.is-invalid-input {

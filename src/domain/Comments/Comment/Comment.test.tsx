@@ -40,6 +40,7 @@ describe('<Comment />', () => {
     const wrapper = shallow(
       <Comment
         commentHeaderText='Example Person Name'
+        commentBodyText='A comment'
         dateComponent={<span>just now</span>}
         avatarComponent={<div>avatar</div>}
         headerComponent={<div>header</div>}

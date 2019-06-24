@@ -4972,7 +4972,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
       ],
       "results": Array [
         Object {
-          "isThrow": false,
+          "type": "return",
           "value": undefined,
         },
       ],
@@ -5122,7 +5122,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
           ],
           "results": Array [
             Object {
-              "isThrow": false,
+              "type": "return",
               "value": undefined,
             },
           ],

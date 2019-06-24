@@ -55,7 +55,7 @@ class ToggleSwitch extends React.PureComponent<IToggleSwitchProps> {
                   <Text
                     isInline={false}
                     type={Props.TypographyType.Heading}
-                    weight='heavy'
+                    weight={Variables.FontWeight.fwSemiBold}
                   >
                     {title}
                   </Text>

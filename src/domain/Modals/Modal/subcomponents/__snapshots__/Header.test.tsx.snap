@@ -58,9 +58,10 @@ exports[`<Header /> should render modal header 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-gzVnrw",
                     "isStatic": false,
-                    "lastClassName": "bnZDDk",
+                    "lastClassName": "hGWjGc",
                     "rules": Array [
                       "
+
   ",
                       [Function],
                       "
@@ -110,7 +111,7 @@ exports[`<Header /> should render modal header 1`] = `
               textType="display"
             >
               <span
-                className="bnZDDk"
+                className="hGWjGc"
                 data-component-type="text"
               >
                 Header Text

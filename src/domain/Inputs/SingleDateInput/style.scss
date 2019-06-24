@@ -26,7 +26,7 @@
     .CalendarDay__today {
       background-color: $n250;
       color: $n800;
-      font-weight: $fw-heavy;
+      font-weight: $fw-semi-bold;
     }
 
     // Will edit everything selected including everything between a range of dates
@@ -53,13 +53,16 @@
     }
   }
 
+  .SingleDatePickerInput__showClearDate {
+    padding-right: 0;
+  }
+
   .SingleDatePickerInput_clearDate {
     color: $n700;
     font-size: $fz-heading;
     line-height: $lh-heading;
     outline: none;
     position: absolute;
-    right: 30px;
     top: 19.5px;
     transition: color .3s ease-in-out;
 

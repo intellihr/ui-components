@@ -13,7 +13,7 @@ export interface ITextProps {
   /** If true, displays the text in uppercase */
   isUpper?: boolean
   /** Specify the text font weight */
-  weight?: 'normal' | 'heavy'
+  weight?: Variables.FontWeight
   /** Specify the type of text to use */
   type?: Props.TypographyType
   /** If true, will truncate overflowing text */

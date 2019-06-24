@@ -4,16 +4,16 @@ exports[`<Icon /> should render a large icon 1`] = `
 <Icon
   isSpinning={false}
   size="large"
-  type="circle"
+  type="fa-circle"
 >
   <styled.i
     aria-hidden={true}
-    className="icon fa circle"
+    className="icon fa fa-circle"
     size="large"
   >
     <StyledComponent
       aria-hidden={true}
-      className="icon fa circle"
+      className="icon fa fa-circle"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -55,7 +55,7 @@ exports[`<Icon /> should render a large icon 1`] = `
     >
       <i
         aria-hidden={true}
-        className="icon fa circle XwtFX"
+        className="icon fa fa-circle XwtFX"
         size="large"
       />
     </StyledComponent>
@@ -130,8 +130,8 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
 <Icon
   badge={
     <Badge
-      backgroundColor="#1A2B3C"
-      color="#1A293C"
+      backgroundColor="#CADDFC"
+      color="#CADDFC"
       hasBorder={true}
       label={6}
       size="small"
@@ -235,21 +235,21 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
         size="xlarge"
       >
         <Badge
-          backgroundColor="#1A2B3C"
-          color="#1A293C"
+          backgroundColor="#CADDFC"
+          color="#CADDFC"
           hasBorder={true}
           label={6}
           size="medium"
         >
           <styled.span
-            backgroundColor="#1A2B3C"
-            color="#1A293C"
+            backgroundColor="#CADDFC"
+            color="#CADDFC"
             hasBorder={true}
             size="medium"
           >
             <StyledComponent
-              backgroundColor="#1A2B3C"
-              color="#1A293C"
+              backgroundColor="#CADDFC"
+              color="#CADDFC"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -257,7 +257,7 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-htpNat",
                     "isStatic": false,
-                    "lastClassName": "bQSWNu",
+                    "lastClassName": "csULxC",
                     "rules": Array [
                       "
   ",
@@ -308,8 +308,8 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
               size="medium"
             >
               <span
-                className="bQSWNu"
-                color="#1A293C"
+                className="csULxC"
+                color="#CADDFC"
                 size="medium"
               >
                 6

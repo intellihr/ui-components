@@ -77,9 +77,10 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-gzVnrw",
                       "isStatic": false,
-                      "lastClassName": "kBjkQB",
+                      "lastClassName": "ibWsCg",
                       "rules": Array [
                         "
+
   ",
                         [Function],
                         "
@@ -129,7 +130,7 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
                 textType="small"
               >
                 <span
-                  className="label-component kBjkQB"
+                  className="label-component ibWsCg"
                   color="#424F5C"
                   data-component-type="text"
                 >
@@ -228,9 +229,10 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-gzVnrw",
                       "isStatic": false,
-                      "lastClassName": "kBjkQB",
+                      "lastClassName": "ibWsCg",
                       "rules": Array [
                         "
+
   ",
                         [Function],
                         "
@@ -280,7 +282,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
                 textType="small"
               >
                 <span
-                  className="label-component kBjkQB"
+                  className="label-component ibWsCg"
                   color="#424F5C"
                   data-component-type="text"
                 >
@@ -420,9 +422,10 @@ exports[`<Record /> should render a Record component, creating a Text child with
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-gzVnrw",
                       "isStatic": false,
-                      "lastClassName": "swbai",
+                      "lastClassName": "cLpffh",
                       "rules": Array [
                         "
+
   ",
                         [Function],
                         "
@@ -472,7 +475,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                 textType="small"
               >
                 <span
-                  className="label-component kBjkQB"
+                  className="label-component ibWsCg"
                   color="#424F5C"
                   data-component-type="text"
                 >
@@ -509,9 +512,10 @@ exports[`<Record /> should render a Record component, creating a Text child with
               "componentStyle": ComponentStyle {
                 "componentId": "sc-gzVnrw",
                 "isStatic": false,
-                "lastClassName": "swbai",
+                "lastClassName": "cLpffh",
                 "rules": Array [
                   "
+
   ",
                   [Function],
                   "
@@ -561,7 +565,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
           textType="body"
         >
           <span
-            className="swbai"
+            className="cLpffh"
             color="#262D33"
             data-component-type="text"
           >
@@ -646,9 +650,10 @@ exports[`<Record /> should render a Record component, creating a Text child with
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-gzVnrw",
                       "isStatic": false,
-                      "lastClassName": "swbai",
+                      "lastClassName": "cLpffh",
                       "rules": Array [
                         "
+
   ",
                         [Function],
                         "
@@ -698,7 +703,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                 textType="small"
               >
                 <span
-                  className="label-component kBjkQB"
+                  className="label-component ibWsCg"
                   color="#424F5C"
                   data-component-type="text"
                 >
@@ -735,9 +740,10 @@ exports[`<Record /> should render a Record component, creating a Text child with
               "componentStyle": ComponentStyle {
                 "componentId": "sc-gzVnrw",
                 "isStatic": false,
-                "lastClassName": "swbai",
+                "lastClassName": "cLpffh",
                 "rules": Array [
                   "
+
   ",
                   [Function],
                   "
@@ -787,7 +793,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
           textType="body"
         >
           <span
-            className="swbai"
+            className="cLpffh"
             color="#262D33"
             data-component-type="text"
           >
@@ -872,9 +878,10 @@ exports[`<Record /> should render a Record component, with the provided componen
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-gzVnrw",
                       "isStatic": false,
-                      "lastClassName": "kBjkQB",
+                      "lastClassName": "ibWsCg",
                       "rules": Array [
                         "
+
   ",
                         [Function],
                         "
@@ -924,7 +931,7 @@ exports[`<Record /> should render a Record component, with the provided componen
                 textType="small"
               >
                 <span
-                  className="label-component kBjkQB"
+                  className="label-component ibWsCg"
                   color="#424F5C"
                   data-component-type="text"
                 >
@@ -1018,9 +1025,10 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-gzVnrw",
                       "isStatic": false,
-                      "lastClassName": "kBjkQB",
+                      "lastClassName": "ibWsCg",
                       "rules": Array [
                         "
+
   ",
                         [Function],
                         "
@@ -1070,7 +1078,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                 textType="small"
               >
                 <span
-                  className="label-component kBjkQB"
+                  className="label-component ibWsCg"
                   color="#424F5C"
                   data-component-type="text"
                 >

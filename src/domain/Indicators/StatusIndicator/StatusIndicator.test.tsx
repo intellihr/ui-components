@@ -1,6 +1,7 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
+import { Variables } from '../../../common'
 import { StatusIndicator } from './StatusIndicator'
 
 describe('<StatusIndicator />', () => {
@@ -18,7 +19,7 @@ describe('<StatusIndicator />', () => {
     const wrapper = shallow(
       <StatusIndicator
         text='Test'
-        color='rgb(192, 48, 0)'
+        color={Variables.Color.b200}
       />
     )
 

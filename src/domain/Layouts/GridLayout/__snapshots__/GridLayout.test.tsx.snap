@@ -80,7 +80,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "dyOuOa",
+            "lastClassName": "gNsTMN",
             "rules": Array [
               "
   display: flex;
@@ -110,7 +110,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
       verticalAlignment="stretch"
     >
       <div
-        className="dyOuOa"
+        className="gNsTMN"
         data-component-type="grid_layout"
       >
         <TransitionGroup
@@ -169,13 +169,13 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "hPXGJc",
+                        "lastClassName": "cedMmC",
                         "rules": Array [
                           "
   flex: 0 0 auto;
   flex-basis: auto;
-  min-height: 0;
-  min-width: 0;
+  min-height: 1px;
+  min-width: 1px;
   width: 100%;
 
   ",
@@ -212,7 +212,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   sizes={10}
                 >
                   <div
-                    className="boDdfZ"
+                    className="hQXgrG"
                     data-component-type="grid_layout_cell"
                     sizes={10}
                   >
@@ -286,13 +286,13 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "hPXGJc",
+                        "lastClassName": "cedMmC",
                         "rules": Array [
                           "
   flex: 0 0 auto;
   flex-basis: auto;
-  min-height: 0;
-  min-width: 0;
+  min-height: 1px;
+  min-width: 1px;
   width: 100%;
 
   ",
@@ -329,7 +329,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   sizes={2}
                 >
                   <div
-                    className="dkzFMW"
+                    className="eSzZAP"
                     data-component-type="grid_layout_cell"
                     sizes={2}
                   >
@@ -402,13 +402,13 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "hPXGJc",
+                        "lastClassName": "cedMmC",
                         "rules": Array [
                           "
   flex: 0 0 auto;
   flex-basis: auto;
-  min-height: 0;
-  min-width: 0;
+  min-height: 1px;
+  min-width: 1px;
   width: 100%;
 
   ",
@@ -454,7 +454,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   }
                 >
                   <div
-                    className="eDnddy"
+                    className="lDDKC"
                     data-component-type="grid_layout_cell"
                     sizes={
                       Object {
@@ -528,13 +528,13 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "hPXGJc",
+                        "lastClassName": "cedMmC",
                         "rules": Array [
                           "
   flex: 0 0 auto;
   flex-basis: auto;
-  min-height: 0;
-  min-width: 0;
+  min-height: 1px;
+  min-width: 1px;
   width: 100%;
 
   ",
@@ -576,7 +576,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   }
                 >
                   <div
-                    className="cAmRDl"
+                    className="ibmclT"
                     data-component-type="grid_layout_cell"
                     sizes={
                       Object {
@@ -645,13 +645,13 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "hPXGJc",
+                        "lastClassName": "cedMmC",
                         "rules": Array [
                           "
   flex: 0 0 auto;
   flex-basis: auto;
-  min-height: 0;
-  min-width: 0;
+  min-height: 1px;
+  min-width: 1px;
   width: 100%;
 
   ",
@@ -688,7 +688,738 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   sizes="auto"
                 >
                   <div
-                    className="hPXGJc"
+                    className="cedMmC"
+                    data-component-type="grid_layout_cell"
+                    sizes="auto"
+                  >
+                    <div>
+                      5
+                    </div>
+                  </div>
+                </StyledComponent>
+              </styled.div>
+            </Transition>
+          </CSSTransition>
+        </TransitionGroup>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</GridLayout>
+`;
+
+exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
+<GridLayout
+  cells={
+    Array [
+      Object {
+        "content": <div>
+          1
+        </div>,
+        "size": 10,
+      },
+      Object {
+        "content": <div>
+          2
+        </div>,
+        "displayType": "flex",
+        "flexHorizontalAlignment": Object {
+          "desktop": "right",
+          "min": "center",
+        },
+        "size": 2,
+      },
+      Object {
+        "content": <div>
+          3
+        </div>,
+        "offset": Object {
+          "tablet": 2,
+        },
+        "size": Object {
+          "desktop": 3,
+          "tablet": 4,
+        },
+      },
+      Object {
+        "content": <div>
+          4
+        </div>,
+        "size": Object {
+          "desktop": 6,
+          "tablet": 4,
+        },
+      },
+      Object {
+        "content": <div>
+          5
+        </div>,
+        "offset": 3,
+        "size": "auto",
+      },
+    ]
+  }
+  gridColumns={12}
+  gutterMarginX={4}
+  gutterMarginY="none"
+  gutterPaddingX="none"
+  gutterPaddingY={
+    Object {
+      "desktop": "none",
+      "min": 16,
+    }
+  }
+  horizontalAlignment="center"
+  margins={
+    Object {
+      "bottom": 4,
+      "left": 4,
+      "right": 4,
+      "top": 4,
+    }
+  }
+  verticalAlignment="stretch"
+>
+  <styled.div
+    data-component-type="grid_layout"
+    gutterMarginX={4}
+    gutterMarginY="none"
+    horizontalAlignment="center"
+    margins={
+      Object {
+        "bottom": 4,
+        "left": 4,
+        "right": 4,
+        "top": 4,
+      }
+    }
+    verticalAlignment="stretch"
+  >
+    <StyledComponent
+      data-component-type="grid_layout"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "bLCxgh",
+            "rules": Array [
+              "
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 0 auto;
+
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      gutterMarginX={4}
+      gutterMarginY="none"
+      horizontalAlignment="center"
+      margins={
+        Object {
+          "bottom": 4,
+          "left": 4,
+          "right": 4,
+          "top": 4,
+        }
+      }
+      verticalAlignment="stretch"
+    >
+      <div
+        className="bLCxgh"
+        data-component-type="grid_layout"
+      >
+        <TransitionGroup
+          childFactory={[Function]}
+          component={null}
+        >
+          <CSSTransition
+            classNames="grid-layout-cell-animation"
+            in={true}
+            key=".$0"
+            onExited={[Function]}
+            timeout={200}
+          >
+            <Transition
+              appear={false}
+              enter={true}
+              exit={true}
+              in={true}
+              mountOnEnter={false}
+              onEnter={[Function]}
+              onEntered={[Function]}
+              onEntering={[Function]}
+              onExit={[Function]}
+              onExited={[Function]}
+              onExiting={[Function]}
+              timeout={200}
+              unmountOnExit={false}
+            >
+              <styled.div
+                animationStyle="none"
+                data-component-type="grid_layout_cell"
+                displayType="block"
+                flexHorizontalAlignments="left"
+                gridColumns={12}
+                gutterMarginX={4}
+                gutterMarginY="none"
+                gutterPaddingX="none"
+                gutterPaddingY={
+                  Object {
+                    "desktop": "none",
+                    "min": 16,
+                  }
+                }
+                offsets={0}
+                sizes={10}
+              >
+                <StyledComponent
+                  animationStyle="none"
+                  data-component-type="grid_layout_cell"
+                  displayType="block"
+                  flexHorizontalAlignments="left"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bwzfXH",
+                        "isStatic": false,
+                        "lastClassName": "cedMmC",
+                        "rules": Array [
+                          "
+  flex: 0 0 auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+
+  ",
+                          [Function],
+                          "
+  ",
+                          [Function],
+                          "
+",
+                        ],
+                      },
+                      "displayName": "styled.div",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-bwzfXH",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  gridColumns={12}
+                  gutterMarginX={4}
+                  gutterMarginY="none"
+                  gutterPaddingX="none"
+                  gutterPaddingY={
+                    Object {
+                      "desktop": "none",
+                      "min": 16,
+                    }
+                  }
+                  offsets={0}
+                  sizes={10}
+                >
+                  <div
+                    className="hQXgrG"
+                    data-component-type="grid_layout_cell"
+                    sizes={10}
+                  >
+                    <div>
+                      1
+                    </div>
+                  </div>
+                </StyledComponent>
+              </styled.div>
+            </Transition>
+          </CSSTransition>
+          <CSSTransition
+            classNames="grid-layout-cell-animation"
+            in={true}
+            key=".$1"
+            onExited={[Function]}
+            timeout={200}
+          >
+            <Transition
+              appear={false}
+              enter={true}
+              exit={true}
+              in={true}
+              mountOnEnter={false}
+              onEnter={[Function]}
+              onEntered={[Function]}
+              onEntering={[Function]}
+              onExit={[Function]}
+              onExited={[Function]}
+              onExiting={[Function]}
+              timeout={200}
+              unmountOnExit={false}
+            >
+              <styled.div
+                animationStyle="none"
+                data-component-type="grid_layout_cell"
+                displayType="flex"
+                flexHorizontalAlignments={
+                  Object {
+                    "desktop": "right",
+                    "min": "center",
+                  }
+                }
+                gridColumns={12}
+                gutterMarginX={4}
+                gutterMarginY="none"
+                gutterPaddingX="none"
+                gutterPaddingY={
+                  Object {
+                    "desktop": "none",
+                    "min": 16,
+                  }
+                }
+                offsets={0}
+                sizes={2}
+              >
+                <StyledComponent
+                  animationStyle="none"
+                  data-component-type="grid_layout_cell"
+                  displayType="flex"
+                  flexHorizontalAlignments={
+                    Object {
+                      "desktop": "right",
+                      "min": "center",
+                    }
+                  }
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bwzfXH",
+                        "isStatic": false,
+                        "lastClassName": "cedMmC",
+                        "rules": Array [
+                          "
+  flex: 0 0 auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+
+  ",
+                          [Function],
+                          "
+  ",
+                          [Function],
+                          "
+",
+                        ],
+                      },
+                      "displayName": "styled.div",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-bwzfXH",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  gridColumns={12}
+                  gutterMarginX={4}
+                  gutterMarginY="none"
+                  gutterPaddingX="none"
+                  gutterPaddingY={
+                    Object {
+                      "desktop": "none",
+                      "min": 16,
+                    }
+                  }
+                  offsets={0}
+                  sizes={2}
+                >
+                  <div
+                    className="eSzZAP"
+                    data-component-type="grid_layout_cell"
+                    sizes={2}
+                  >
+                    <div>
+                      2
+                    </div>
+                  </div>
+                </StyledComponent>
+              </styled.div>
+            </Transition>
+          </CSSTransition>
+          <CSSTransition
+            classNames="grid-layout-cell-animation"
+            in={true}
+            key=".$2"
+            onExited={[Function]}
+            timeout={200}
+          >
+            <Transition
+              appear={false}
+              enter={true}
+              exit={true}
+              in={true}
+              mountOnEnter={false}
+              onEnter={[Function]}
+              onEntered={[Function]}
+              onEntering={[Function]}
+              onExit={[Function]}
+              onExited={[Function]}
+              onExiting={[Function]}
+              timeout={200}
+              unmountOnExit={false}
+            >
+              <styled.div
+                animationStyle="none"
+                data-component-type="grid_layout_cell"
+                displayType="block"
+                flexHorizontalAlignments="left"
+                gridColumns={12}
+                gutterMarginX={4}
+                gutterMarginY="none"
+                gutterPaddingX="none"
+                gutterPaddingY={
+                  Object {
+                    "desktop": "none",
+                    "min": 16,
+                  }
+                }
+                offsets={
+                  Object {
+                    "tablet": 2,
+                  }
+                }
+                sizes={
+                  Object {
+                    "desktop": 3,
+                    "tablet": 4,
+                  }
+                }
+              >
+                <StyledComponent
+                  animationStyle="none"
+                  data-component-type="grid_layout_cell"
+                  displayType="block"
+                  flexHorizontalAlignments="left"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bwzfXH",
+                        "isStatic": false,
+                        "lastClassName": "cedMmC",
+                        "rules": Array [
+                          "
+  flex: 0 0 auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+
+  ",
+                          [Function],
+                          "
+  ",
+                          [Function],
+                          "
+",
+                        ],
+                      },
+                      "displayName": "styled.div",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-bwzfXH",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  gridColumns={12}
+                  gutterMarginX={4}
+                  gutterMarginY="none"
+                  gutterPaddingX="none"
+                  gutterPaddingY={
+                    Object {
+                      "desktop": "none",
+                      "min": 16,
+                    }
+                  }
+                  offsets={
+                    Object {
+                      "tablet": 2,
+                    }
+                  }
+                  sizes={
+                    Object {
+                      "desktop": 3,
+                      "tablet": 4,
+                    }
+                  }
+                >
+                  <div
+                    className="lDDKC"
+                    data-component-type="grid_layout_cell"
+                    sizes={
+                      Object {
+                        "desktop": 3,
+                        "tablet": 4,
+                      }
+                    }
+                  >
+                    <div>
+                      3
+                    </div>
+                  </div>
+                </StyledComponent>
+              </styled.div>
+            </Transition>
+          </CSSTransition>
+          <CSSTransition
+            classNames="grid-layout-cell-animation"
+            in={true}
+            key=".$3"
+            onExited={[Function]}
+            timeout={200}
+          >
+            <Transition
+              appear={false}
+              enter={true}
+              exit={true}
+              in={true}
+              mountOnEnter={false}
+              onEnter={[Function]}
+              onEntered={[Function]}
+              onEntering={[Function]}
+              onExit={[Function]}
+              onExited={[Function]}
+              onExiting={[Function]}
+              timeout={200}
+              unmountOnExit={false}
+            >
+              <styled.div
+                animationStyle="none"
+                data-component-type="grid_layout_cell"
+                displayType="block"
+                flexHorizontalAlignments="left"
+                gridColumns={12}
+                gutterMarginX={4}
+                gutterMarginY="none"
+                gutterPaddingX="none"
+                gutterPaddingY={
+                  Object {
+                    "desktop": "none",
+                    "min": 16,
+                  }
+                }
+                offsets={0}
+                sizes={
+                  Object {
+                    "desktop": 6,
+                    "tablet": 4,
+                  }
+                }
+              >
+                <StyledComponent
+                  animationStyle="none"
+                  data-component-type="grid_layout_cell"
+                  displayType="block"
+                  flexHorizontalAlignments="left"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bwzfXH",
+                        "isStatic": false,
+                        "lastClassName": "cedMmC",
+                        "rules": Array [
+                          "
+  flex: 0 0 auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+
+  ",
+                          [Function],
+                          "
+  ",
+                          [Function],
+                          "
+",
+                        ],
+                      },
+                      "displayName": "styled.div",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-bwzfXH",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  gridColumns={12}
+                  gutterMarginX={4}
+                  gutterMarginY="none"
+                  gutterPaddingX="none"
+                  gutterPaddingY={
+                    Object {
+                      "desktop": "none",
+                      "min": 16,
+                    }
+                  }
+                  offsets={0}
+                  sizes={
+                    Object {
+                      "desktop": 6,
+                      "tablet": 4,
+                    }
+                  }
+                >
+                  <div
+                    className="ibmclT"
+                    data-component-type="grid_layout_cell"
+                    sizes={
+                      Object {
+                        "desktop": 6,
+                        "tablet": 4,
+                      }
+                    }
+                  >
+                    <div>
+                      4
+                    </div>
+                  </div>
+                </StyledComponent>
+              </styled.div>
+            </Transition>
+          </CSSTransition>
+          <CSSTransition
+            classNames="grid-layout-cell-animation"
+            in={true}
+            key=".$4"
+            onExited={[Function]}
+            timeout={200}
+          >
+            <Transition
+              appear={false}
+              enter={true}
+              exit={true}
+              in={true}
+              mountOnEnter={false}
+              onEnter={[Function]}
+              onEntered={[Function]}
+              onEntering={[Function]}
+              onExit={[Function]}
+              onExited={[Function]}
+              onExiting={[Function]}
+              timeout={200}
+              unmountOnExit={false}
+            >
+              <styled.div
+                animationStyle="none"
+                data-component-type="grid_layout_cell"
+                displayType="block"
+                flexHorizontalAlignments="left"
+                gridColumns={12}
+                gutterMarginX={4}
+                gutterMarginY="none"
+                gutterPaddingX="none"
+                gutterPaddingY={
+                  Object {
+                    "desktop": "none",
+                    "min": 16,
+                  }
+                }
+                offsets={3}
+                sizes="auto"
+              >
+                <StyledComponent
+                  animationStyle="none"
+                  data-component-type="grid_layout_cell"
+                  displayType="block"
+                  flexHorizontalAlignments="left"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bwzfXH",
+                        "isStatic": false,
+                        "lastClassName": "cedMmC",
+                        "rules": Array [
+                          "
+  flex: 0 0 auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+
+  ",
+                          [Function],
+                          "
+  ",
+                          [Function],
+                          "
+",
+                        ],
+                      },
+                      "displayName": "styled.div",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-bwzfXH",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  gridColumns={12}
+                  gutterMarginX={4}
+                  gutterMarginY="none"
+                  gutterPaddingX="none"
+                  gutterPaddingY={
+                    Object {
+                      "desktop": "none",
+                      "min": 16,
+                    }
+                  }
+                  offsets={3}
+                  sizes="auto"
+                >
+                  <div
+                    className="cedMmC"
                     data-component-type="grid_layout_cell"
                     sizes="auto"
                   >

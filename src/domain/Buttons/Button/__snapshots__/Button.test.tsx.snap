@@ -2,7 +2,7 @@
 
 exports[`<Button /> should render a button with a simple text 1`] = `
 <Button
-  buttonComponentProps={
+  buttonOverrides={
     Object {
       "onClick": [Function],
     }
@@ -16,6 +16,7 @@ exports[`<Button /> should render a button with a simple text 1`] = `
   <styled.button
     className="button neutral"
     data-component-type="button"
+    onClick={[Function]}
     type="button"
   >
     <StyledComponent
@@ -48,11 +49,13 @@ exports[`<Button /> should render a button with a simple text 1`] = `
         }
       }
       forwardedRef={null}
+      onClick={[Function]}
       type="button"
     >
       <button
         className="button neutral kLyrAW"
         data-component-type="button"
+        onClick={[Function]}
         type="button"
       >
         testing testing 123
@@ -64,7 +67,7 @@ exports[`<Button /> should render a button with a simple text 1`] = `
 
 exports[`<Button /> should render a button with a size large 1`] = `
 <Button
-  buttonComponentProps={
+  buttonOverrides={
     Object {
       "onClick": [Function],
     }
@@ -79,6 +82,7 @@ exports[`<Button /> should render a button with a size large 1`] = `
   <styled.button
     className="button large neutral"
     data-component-type="button"
+    onClick={[Function]}
     type="button"
   >
     <StyledComponent
@@ -111,11 +115,13 @@ exports[`<Button /> should render a button with a size large 1`] = `
         }
       }
       forwardedRef={null}
+      onClick={[Function]}
       type="button"
     >
       <button
         className="button large neutral kLyrAW"
         data-component-type="button"
+        onClick={[Function]}
         type="button"
       >
         testing testing 123
@@ -127,7 +133,7 @@ exports[`<Button /> should render a button with a size large 1`] = `
 
 exports[`<Button /> should render a button with a type delete-subtle 1`] = `
 <Button
-  buttonComponentProps={
+  buttonOverrides={
     Object {
       "onClick": [Function],
     }
@@ -141,6 +147,7 @@ exports[`<Button /> should render a button with a type delete-subtle 1`] = `
   <styled.button
     className="button delete-subtle"
     data-component-type="button"
+    onClick={[Function]}
     type="button"
   >
     <StyledComponent
@@ -173,11 +180,13 @@ exports[`<Button /> should render a button with a type delete-subtle 1`] = `
         }
       }
       forwardedRef={null}
+      onClick={[Function]}
       type="button"
     >
       <button
         className="button delete-subtle kLyrAW"
         data-component-type="button"
+        onClick={[Function]}
         type="button"
       >
         testing testing 123
@@ -320,7 +329,7 @@ exports[`<Button /> should render a button with an icon 1`] = `
 
 exports[`<Button /> should render a disabled button 1`] = `
 <Button
-  buttonComponentProps={
+  buttonOverrides={
     Object {
       "disabled": true,
       "onClick": [Function],
@@ -335,11 +344,14 @@ exports[`<Button /> should render a disabled button 1`] = `
   <styled.button
     className="button neutral"
     data-component-type="button"
+    disabled={true}
+    onClick={[Function]}
     type="button"
   >
     <StyledComponent
       className="button neutral"
       data-component-type="button"
+      disabled={true}
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -367,11 +379,14 @@ exports[`<Button /> should render a disabled button 1`] = `
         }
       }
       forwardedRef={null}
+      onClick={[Function]}
       type="button"
     >
       <button
         className="button neutral kLyrAW"
         data-component-type="button"
+        disabled={true}
+        onClick={[Function]}
         type="button"
       >
         testing testing 123

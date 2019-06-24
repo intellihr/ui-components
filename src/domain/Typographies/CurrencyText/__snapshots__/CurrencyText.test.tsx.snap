@@ -47,7 +47,7 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
       >
         <Styled(Text)
           type="body"
-          weight="heavy"
+          weight={600}
         >
           <StyledComponent
             forwardedComponent={
@@ -72,19 +72,18 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
-                Symbol(Symbol.hasInstance): [Function],
               }
             }
             forwardedRef={null}
             type="body"
-            weight="heavy"
+            weight={600}
           >
             <Text
               className="jYtsma"
               isInline={true}
               tag="span"
               type="body"
-              weight="heavy"
+              weight={600}
             >
               <styled.span
                 as="span"
@@ -92,7 +91,7 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
                 data-component-type="text"
                 isInline={true}
                 textType="body"
-                weight="heavy"
+                weight={600}
               >
                 <StyledComponent
                   as="span"
@@ -105,9 +104,10 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-gzVnrw",
                         "isStatic": false,
-                        "lastClassName": "ftogVA",
+                        "lastClassName": "ccQvFO",
                         "rules": Array [
                           "
+
   ",
                           [Function],
                           "
@@ -155,10 +155,10 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
                   forwardedRef={null}
                   isInline={true}
                   textType="body"
-                  weight="heavy"
+                  weight={600}
                 >
                   <span
-                    className="jYtsma bxeate"
+                    className="jYtsma kbnzwI"
                     data-component-type="text"
                   >
                     AUD
@@ -189,9 +189,10 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-gzVnrw",
                     "isStatic": false,
-                    "lastClassName": "ftogVA",
+                    "lastClassName": "ccQvFO",
                     "rules": Array [
                       "
+
   ",
                       [Function],
                       "
@@ -241,7 +242,7 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
               textType="body"
             >
               <span
-                className="ftogVA"
+                className="ccQvFO"
                 data-component-type="text"
               >
                 1,000.50
@@ -302,7 +303,7 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
       >
         <Styled(Text)
           type="body"
-          weight="heavy"
+          weight={600}
         >
           <StyledComponent
             forwardedComponent={
@@ -327,19 +328,18 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
-                Symbol(Symbol.hasInstance): [Function],
               }
             }
             forwardedRef={null}
             type="body"
-            weight="heavy"
+            weight={600}
           >
             <Text
               className="jYtsma"
               isInline={true}
               tag="span"
               type="body"
-              weight="heavy"
+              weight={600}
             >
               <styled.span
                 as="span"
@@ -347,7 +347,7 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
                 data-component-type="text"
                 isInline={true}
                 textType="body"
-                weight="heavy"
+                weight={600}
               >
                 <StyledComponent
                   as="span"
@@ -360,9 +360,10 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-gzVnrw",
                         "isStatic": false,
-                        "lastClassName": "ftogVA",
+                        "lastClassName": "ccQvFO",
                         "rules": Array [
                           "
+
   ",
                           [Function],
                           "
@@ -410,10 +411,10 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
                   forwardedRef={null}
                   isInline={true}
                   textType="body"
-                  weight="heavy"
+                  weight={600}
                 >
                   <span
-                    className="jYtsma bxeate"
+                    className="jYtsma kbnzwI"
                     data-component-type="text"
                   >
                     AUD
@@ -444,9 +445,10 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-gzVnrw",
                     "isStatic": false,
-                    "lastClassName": "ftogVA",
+                    "lastClassName": "ccQvFO",
                     "rules": Array [
                       "
+
   ",
                       [Function],
                       "
@@ -496,7 +498,7 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
               textType="body"
             >
               <span
-                className="ftogVA"
+                className="ccQvFO"
                 data-component-type="text"
               >
                 0
@@ -557,7 +559,7 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
       >
         <Styled(Text)
           type="heading"
-          weight="heavy"
+          weight={600}
         >
           <StyledComponent
             forwardedComponent={
@@ -582,19 +584,18 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
-                Symbol(Symbol.hasInstance): [Function],
               }
             }
             forwardedRef={null}
             type="heading"
-            weight="heavy"
+            weight={600}
           >
             <Text
               className="jYtsma"
               isInline={true}
               tag="span"
               type="heading"
-              weight="heavy"
+              weight={600}
             >
               <styled.span
                 as="span"
@@ -602,7 +603,7 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
                 data-component-type="text"
                 isInline={true}
                 textType="heading"
-                weight="heavy"
+                weight={600}
               >
                 <StyledComponent
                   as="span"
@@ -615,9 +616,10 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-gzVnrw",
                         "isStatic": false,
-                        "lastClassName": "bNWtpE",
+                        "lastClassName": "eIWenM",
                         "rules": Array [
                           "
+
   ",
                           [Function],
                           "
@@ -665,10 +667,10 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
                   forwardedRef={null}
                   isInline={true}
                   textType="heading"
-                  weight="heavy"
+                  weight={600}
                 >
                   <span
-                    className="jYtsma kQNdqh"
+                    className="jYtsma fpUbIX"
                     data-component-type="text"
                   >
                     AUD
@@ -699,9 +701,10 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-gzVnrw",
                     "isStatic": false,
-                    "lastClassName": "bNWtpE",
+                    "lastClassName": "eIWenM",
                     "rules": Array [
                       "
+
   ",
                       [Function],
                       "
@@ -751,7 +754,7 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
               textType="xsmall"
             >
               <span
-                className="bNWtpE"
+                className="eIWenM"
                 data-component-type="text"
               >
                 1,000
@@ -813,7 +816,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
       >
         <Styled(Text)
           type="body"
-          weight="heavy"
+          weight={600}
         >
           <StyledComponent
             forwardedComponent={
@@ -838,19 +841,18 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
-                Symbol(Symbol.hasInstance): [Function],
               }
             }
             forwardedRef={null}
             type="body"
-            weight="heavy"
+            weight={600}
           >
             <Text
               className="jYtsma"
               isInline={true}
               tag="span"
               type="body"
-              weight="heavy"
+              weight={600}
             >
               <styled.span
                 as="span"
@@ -858,7 +860,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
                 data-component-type="text"
                 isInline={true}
                 textType="body"
-                weight="heavy"
+                weight={600}
               >
                 <StyledComponent
                   as="span"
@@ -871,9 +873,10 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-gzVnrw",
                         "isStatic": false,
-                        "lastClassName": "lesBUw",
+                        "lastClassName": "jmxVcK",
                         "rules": Array [
                           "
+
   ",
                           [Function],
                           "
@@ -921,10 +924,10 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
                   forwardedRef={null}
                   isInline={true}
                   textType="body"
-                  weight="heavy"
+                  weight={600}
                 >
                   <span
-                    className="jYtsma bxeate"
+                    className="jYtsma kbnzwI"
                     data-component-type="text"
                   >
                     AUD
@@ -958,9 +961,10 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-gzVnrw",
                     "isStatic": false,
-                    "lastClassName": "lesBUw",
+                    "lastClassName": "jmxVcK",
                     "rules": Array [
                       "
+
   ",
                       [Function],
                       "
@@ -1010,7 +1014,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
               textType="body"
             >
               <span
-                className="lesBUw"
+                className="jmxVcK"
                 color="#FFD2CC"
                 data-component-type="text"
               >
@@ -1074,7 +1078,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
         <Styled(Text)
           color="#FFD2CC"
           type="body"
-          weight="heavy"
+          weight={600}
         >
           <StyledComponent
             color="#FFD2CC"
@@ -1100,12 +1104,11 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
-                Symbol(Symbol.hasInstance): [Function],
               }
             }
             forwardedRef={null}
             type="body"
-            weight="heavy"
+            weight={600}
           >
             <Text
               className="jYtsma"
@@ -1113,7 +1116,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
               isInline={true}
               tag="span"
               type="body"
-              weight="heavy"
+              weight={600}
             >
               <styled.span
                 as="span"
@@ -1122,7 +1125,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
                 data-component-type="text"
                 isInline={true}
                 textType="body"
-                weight="heavy"
+                weight={600}
               >
                 <StyledComponent
                   as="span"
@@ -1136,9 +1139,10 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-gzVnrw",
                         "isStatic": false,
-                        "lastClassName": "ftogVA",
+                        "lastClassName": "ccQvFO",
                         "rules": Array [
                           "
+
   ",
                           [Function],
                           "
@@ -1186,10 +1190,10 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
                   forwardedRef={null}
                   isInline={true}
                   textType="body"
-                  weight="heavy"
+                  weight={600}
                 >
                   <span
-                    className="jYtsma rbmFo"
+                    className="jYtsma JcdKA"
                     color="#FFD2CC"
                     data-component-type="text"
                   >
@@ -1221,9 +1225,10 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-gzVnrw",
                     "isStatic": false,
-                    "lastClassName": "ftogVA",
+                    "lastClassName": "ccQvFO",
                     "rules": Array [
                       "
+
   ",
                       [Function],
                       "
@@ -1273,7 +1278,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
               textType="body"
             >
               <span
-                className="ftogVA"
+                className="ccQvFO"
                 data-component-type="text"
               >
                 1,000
@@ -1334,7 +1339,7 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
       >
         <Styled(Text)
           type="body"
-          weight="heavy"
+          weight={600}
         >
           <StyledComponent
             forwardedComponent={
@@ -1359,19 +1364,18 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
-                Symbol(Symbol.hasInstance): [Function],
               }
             }
             forwardedRef={null}
             type="body"
-            weight="heavy"
+            weight={600}
           >
             <Text
               className="jYtsma"
               isInline={true}
               tag="span"
               type="body"
-              weight="heavy"
+              weight={600}
             >
               <styled.span
                 as="span"
@@ -1379,7 +1383,7 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
                 data-component-type="text"
                 isInline={true}
                 textType="body"
-                weight="heavy"
+                weight={600}
               >
                 <StyledComponent
                   as="span"
@@ -1392,9 +1396,10 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-gzVnrw",
                         "isStatic": false,
-                        "lastClassName": "bNWtpE",
+                        "lastClassName": "eIWenM",
                         "rules": Array [
                           "
+
   ",
                           [Function],
                           "
@@ -1442,10 +1447,10 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
                   forwardedRef={null}
                   isInline={true}
                   textType="body"
-                  weight="heavy"
+                  weight={600}
                 >
                   <span
-                    className="jYtsma bxeate"
+                    className="jYtsma kbnzwI"
                     data-component-type="text"
                   >
                     AUD
@@ -1476,9 +1481,10 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-gzVnrw",
                     "isStatic": false,
-                    "lastClassName": "bNWtpE",
+                    "lastClassName": "eIWenM",
                     "rules": Array [
                       "
+
   ",
                       [Function],
                       "
@@ -1528,7 +1534,7 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
               textType="xsmall"
             >
               <span
-                className="bNWtpE"
+                className="eIWenM"
                 data-component-type="text"
               >
                 1,000
@@ -1589,7 +1595,7 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
       >
         <Styled(Text)
           type="xsmall"
-          weight="heavy"
+          weight={600}
         >
           <StyledComponent
             forwardedComponent={
@@ -1614,19 +1620,18 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
-                Symbol(Symbol.hasInstance): [Function],
               }
             }
             forwardedRef={null}
             type="xsmall"
-            weight="heavy"
+            weight={600}
           >
             <Text
               className="jYtsma"
               isInline={true}
               tag="span"
               type="xsmall"
-              weight="heavy"
+              weight={600}
             >
               <styled.span
                 as="span"
@@ -1634,7 +1639,7 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
                 data-component-type="text"
                 isInline={true}
                 textType="xsmall"
-                weight="heavy"
+                weight={600}
               >
                 <StyledComponent
                   as="span"
@@ -1647,9 +1652,10 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-gzVnrw",
                         "isStatic": false,
-                        "lastClassName": "ftogVA",
+                        "lastClassName": "ccQvFO",
                         "rules": Array [
                           "
+
   ",
                           [Function],
                           "
@@ -1697,10 +1703,10 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
                   forwardedRef={null}
                   isInline={true}
                   textType="xsmall"
-                  weight="heavy"
+                  weight={600}
                 >
                   <span
-                    className="jYtsma bhGdGC"
+                    className="jYtsma hxkjuH"
                     data-component-type="text"
                   >
                     AUD
@@ -1731,9 +1737,10 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-gzVnrw",
                     "isStatic": false,
-                    "lastClassName": "ftogVA",
+                    "lastClassName": "ccQvFO",
                     "rules": Array [
                       "
+
   ",
                       [Function],
                       "
@@ -1783,7 +1790,7 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
               textType="body"
             >
               <span
-                className="ftogVA"
+                className="ccQvFO"
                 data-component-type="text"
               >
                 1,000
