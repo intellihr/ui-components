@@ -4,501 +4,373 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
 <ParagraphSkeleton
   showSkeleton={true}
 >
-  <div>
-    <TextSkeleton
-      showSkeleton={true}
-      type="display-large"
-      width={200}
+  <styled.div>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bwzfXH",
+            "isStatic": false,
+            "lastClassName": "cBcNyd",
+            "rules": Array [
+              "
+  ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bwzfXH",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      <Styled(styled.span)
-        textType="display-large"
-        width="200px"
+      <div
+        className="cBcNyd"
       >
-        <StyledComponent
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-bwzfXH",
-                "isStatic": false,
-                "lastClassName": "hcwCUb",
-                "rules": Array [
-                  "
-  animation: ",
-                  "
-  ",
-                  Keyframes {
-                    "id": "sc-keyframes-jXsTbE",
-                    "inject": [Function],
-                    "name": "jXsTbE",
-                    "rules": Array [
-                      "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                      "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                    ],
-                    "toString": [Function],
-                  },
-                  " .8s linear infinite alternate;
-",
-                  ";
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-                  "#E1E6EB",
-                  ";
-  border: 1px solid ",
-                  "#E1E6EB",
-                  ";
-  display: inline-flex;
-",
-                  "
-  border-radius: 4px;
-  width: ",
-                  [Function],
-                  ";
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-
-  ",
-                  [Function],
-                  "
-",
-                ],
-              },
-              "displayName": "Styled(styled.span)",
-              "foldedComponentIds": Array [
-                "sc-bdVaJa",
-              ],
-              "render": [Function],
-              "styledComponentId": "sc-bwzfXH",
-              "target": "span",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
-          textType="display-large"
-          width="200px"
+        <TextSkeleton
+          showSkeleton={true}
+          type="display-large"
+          width={200}
         >
-          <span
-            className="jcPfIW"
+          <styled.span
+            textType="display-large"
             width="200px"
           >
-            ‌
-          </span>
-        </StyledComponent>
-      </Styled(styled.span)>
-    </TextSkeleton>
-    <TextSkeleton
-      showSkeleton={true}
-      type="body"
-    >
-      <Styled(styled.span)
-        textType="body"
-      >
-        <StyledComponent
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-bwzfXH",
-                "isStatic": false,
-                "lastClassName": "hcwCUb",
-                "rules": Array [
-                  "
-  animation: ",
-                  "
-  ",
-                  Keyframes {
-                    "id": "sc-keyframes-jXsTbE",
-                    "inject": [Function],
-                    "name": "jXsTbE",
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bdVaJa",
+                    "isStatic": false,
+                    "lastClassName": "gTUOXq",
                     "rules": Array [
-                      "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                      "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                    ],
-                    "toString": [Function],
-                  },
-                  " .8s linear infinite alternate;
-",
-                  ";
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-                  "#E1E6EB",
-                  ";
-  border: 1px solid ",
-                  "#E1E6EB",
-                  ";
-  display: inline-flex;
-",
-                  "
+                      "
   border-radius: 4px;
   width: ",
-                  [Function],
-                  ";
+                      [Function],
+                      ";
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-
   ",
-                  [Function],
-                  "
+                      [Function],
+                      ";
+  ",
+                      [Function],
+                      ";
 ",
-                ],
-              },
-              "displayName": "Styled(styled.span)",
-              "foldedComponentIds": Array [
-                "sc-bdVaJa",
-              ],
-              "render": [Function],
-              "styledComponentId": "sc-bwzfXH",
-              "target": "span",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
-          textType="body"
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bdVaJa",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              textType="display-large"
+              width="200px"
+            >
+              <span
+                className="judogs"
+                width="200px"
+              >
+                ‌
+              </span>
+            </StyledComponent>
+          </styled.span>
+        </TextSkeleton>
+        <TextSkeleton
+          showSkeleton={true}
+          type="body"
         >
-          <span
-            className="hLTnhI"
+          <styled.span
+            textType="body"
           >
-            ‌
-          </span>
-        </StyledComponent>
-      </Styled(styled.span)>
-    </TextSkeleton>
-    <TextSkeleton
-      showSkeleton={true}
-      type="body"
-    >
-      <Styled(styled.span)
-        textType="body"
-      >
-        <StyledComponent
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-bwzfXH",
-                "isStatic": false,
-                "lastClassName": "hcwCUb",
-                "rules": Array [
-                  "
-  animation: ",
-                  "
-  ",
-                  Keyframes {
-                    "id": "sc-keyframes-jXsTbE",
-                    "inject": [Function],
-                    "name": "jXsTbE",
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bdVaJa",
+                    "isStatic": false,
+                    "lastClassName": "gTUOXq",
                     "rules": Array [
-                      "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                      "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                    ],
-                    "toString": [Function],
-                  },
-                  " .8s linear infinite alternate;
-",
-                  ";
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-                  "#E1E6EB",
-                  ";
-  border: 1px solid ",
-                  "#E1E6EB",
-                  ";
-  display: inline-flex;
-",
-                  "
+                      "
   border-radius: 4px;
   width: ",
-                  [Function],
-                  ";
+                      [Function],
+                      ";
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-
   ",
-                  [Function],
-                  "
+                      [Function],
+                      ";
+  ",
+                      [Function],
+                      ";
 ",
-                ],
-              },
-              "displayName": "Styled(styled.span)",
-              "foldedComponentIds": Array [
-                "sc-bdVaJa",
-              ],
-              "render": [Function],
-              "styledComponentId": "sc-bwzfXH",
-              "target": "span",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
-          textType="body"
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bdVaJa",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              textType="body"
+            >
+              <span
+                className="kUTXSP"
+              >
+                ‌
+              </span>
+            </StyledComponent>
+          </styled.span>
+        </TextSkeleton>
+        <TextSkeleton
+          showSkeleton={true}
+          type="body"
         >
-          <span
-            className="hLTnhI"
+          <styled.span
+            textType="body"
           >
-            ‌
-          </span>
-        </StyledComponent>
-      </Styled(styled.span)>
-    </TextSkeleton>
-    <TextSkeleton
-      showSkeleton={true}
-      type="body"
-    >
-      <Styled(styled.span)
-        textType="body"
-      >
-        <StyledComponent
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-bwzfXH",
-                "isStatic": false,
-                "lastClassName": "hcwCUb",
-                "rules": Array [
-                  "
-  animation: ",
-                  "
-  ",
-                  Keyframes {
-                    "id": "sc-keyframes-jXsTbE",
-                    "inject": [Function],
-                    "name": "jXsTbE",
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bdVaJa",
+                    "isStatic": false,
+                    "lastClassName": "gTUOXq",
                     "rules": Array [
-                      "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                      "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                    ],
-                    "toString": [Function],
-                  },
-                  " .8s linear infinite alternate;
-",
-                  ";
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-                  "#E1E6EB",
-                  ";
-  border: 1px solid ",
-                  "#E1E6EB",
-                  ";
-  display: inline-flex;
-",
-                  "
+                      "
   border-radius: 4px;
   width: ",
-                  [Function],
-                  ";
+                      [Function],
+                      ";
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-
   ",
-                  [Function],
-                  "
+                      [Function],
+                      ";
+  ",
+                      [Function],
+                      ";
 ",
-                ],
-              },
-              "displayName": "Styled(styled.span)",
-              "foldedComponentIds": Array [
-                "sc-bdVaJa",
-              ],
-              "render": [Function],
-              "styledComponentId": "sc-bwzfXH",
-              "target": "span",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
-          textType="body"
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bdVaJa",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              textType="body"
+            >
+              <span
+                className="kUTXSP"
+              >
+                ‌
+              </span>
+            </StyledComponent>
+          </styled.span>
+        </TextSkeleton>
+        <TextSkeleton
+          showSkeleton={true}
+          type="body"
         >
-          <span
-            className="hLTnhI"
+          <styled.span
+            textType="body"
           >
-            ‌
-          </span>
-        </StyledComponent>
-      </Styled(styled.span)>
-    </TextSkeleton>
-    <TextSkeleton
-      showSkeleton={true}
-      type="body"
-    >
-      <Styled(styled.span)
-        textType="body"
-      >
-        <StyledComponent
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-bwzfXH",
-                "isStatic": false,
-                "lastClassName": "hcwCUb",
-                "rules": Array [
-                  "
-  animation: ",
-                  "
-  ",
-                  Keyframes {
-                    "id": "sc-keyframes-jXsTbE",
-                    "inject": [Function],
-                    "name": "jXsTbE",
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bdVaJa",
+                    "isStatic": false,
+                    "lastClassName": "gTUOXq",
                     "rules": Array [
-                      "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                      "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                    ],
-                    "toString": [Function],
-                  },
-                  " .8s linear infinite alternate;
-",
-                  ";
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-                  "#E1E6EB",
-                  ";
-  border: 1px solid ",
-                  "#E1E6EB",
-                  ";
-  display: inline-flex;
-",
-                  "
+                      "
   border-radius: 4px;
   width: ",
-                  [Function],
-                  ";
+                      [Function],
+                      ";
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-
   ",
-                  [Function],
-                  "
+                      [Function],
+                      ";
+  ",
+                      [Function],
+                      ";
 ",
-                ],
-              },
-              "displayName": "Styled(styled.span)",
-              "foldedComponentIds": Array [
-                "sc-bdVaJa",
-              ],
-              "render": [Function],
-              "styledComponentId": "sc-bwzfXH",
-              "target": "span",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
-          textType="body"
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bdVaJa",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              textType="body"
+            >
+              <span
+                className="kUTXSP"
+              >
+                ‌
+              </span>
+            </StyledComponent>
+          </styled.span>
+        </TextSkeleton>
+        <TextSkeleton
+          showSkeleton={true}
+          type="body"
         >
-          <span
-            className="hLTnhI"
+          <styled.span
+            textType="body"
           >
-            ‌
-          </span>
-        </StyledComponent>
-      </Styled(styled.span)>
-    </TextSkeleton>
-    <TextSkeleton
-      showSkeleton={true}
-      type="body"
-      width="50%"
-    >
-      <Styled(styled.span)
-        textType="body"
-        width="50%"
-      >
-        <StyledComponent
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-bwzfXH",
-                "isStatic": false,
-                "lastClassName": "hcwCUb",
-                "rules": Array [
-                  "
-  animation: ",
-                  "
-  ",
-                  Keyframes {
-                    "id": "sc-keyframes-jXsTbE",
-                    "inject": [Function],
-                    "name": "jXsTbE",
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bdVaJa",
+                    "isStatic": false,
+                    "lastClassName": "gTUOXq",
                     "rules": Array [
-                      "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                      "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                    ],
-                    "toString": [Function],
-                  },
-                  " .8s linear infinite alternate;
-",
-                  ";
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-                  "#E1E6EB",
-                  ";
-  border: 1px solid ",
-                  "#E1E6EB",
-                  ";
-  display: inline-flex;
-",
-                  "
+                      "
   border-radius: 4px;
   width: ",
-                  [Function],
-                  ";
+                      [Function],
+                      ";
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-
   ",
-                  [Function],
-                  "
+                      [Function],
+                      ";
+  ",
+                      [Function],
+                      ";
 ",
-                ],
-              },
-              "displayName": "Styled(styled.span)",
-              "foldedComponentIds": Array [
-                "sc-bdVaJa",
-              ],
-              "render": [Function],
-              "styledComponentId": "sc-bwzfXH",
-              "target": "span",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
-          textType="body"
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bdVaJa",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              textType="body"
+            >
+              <span
+                className="kUTXSP"
+              >
+                ‌
+              </span>
+            </StyledComponent>
+          </styled.span>
+        </TextSkeleton>
+        <TextSkeleton
+          showSkeleton={true}
+          type="body"
           width="50%"
         >
-          <span
-            className="hcwCUb"
+          <styled.span
+            textType="body"
             width="50%"
           >
-            ‌
-          </span>
-        </StyledComponent>
-      </Styled(styled.span)>
-    </TextSkeleton>
-  </div>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bdVaJa",
+                    "isStatic": false,
+                    "lastClassName": "gTUOXq",
+                    "rules": Array [
+                      "
+  border-radius: 4px;
+  width: ",
+                      [Function],
+                      ";
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  ",
+                      [Function],
+                      ";
+  ",
+                      [Function],
+                      ";
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bdVaJa",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              textType="body"
+              width="50%"
+            >
+              <span
+                className="gTUOXq"
+                width="50%"
+              >
+                ‌
+              </span>
+            </StyledComponent>
+          </styled.span>
+        </TextSkeleton>
+      </div>
+    </StyledComponent>
+  </styled.div>
 </ParagraphSkeleton>
 `;

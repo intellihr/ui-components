@@ -5,7 +5,7 @@ exports[`<CircleSkeleton /> should render a circle skeleton 1`] = `
   showSkeleton={true}
   size="large"
 >
-  <Styled(styled.span)
+  <styled.span
     size="large"
   >
     <StyledComponent
@@ -14,37 +14,10 @@ exports[`<CircleSkeleton /> should render a circle skeleton 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
+            "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "fOrFKV",
+            "lastClassName": "iaTydT",
             "rules": Array [
-              "
-  animation: ",
-              "
-  ",
-              Keyframes {
-                "id": "sc-keyframes-jXsTbE",
-                "inject": [Function],
-                "name": "jXsTbE",
-                "rules": Array [
-                  "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                  "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                ],
-                "toString": [Function],
-              },
-              " .8s linear infinite alternate;
-",
-              ";
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-              "#E1E6EB",
-              ";
-  border: 1px solid ",
-              "#E1E6EB",
-              ";
-  display: inline-flex;
-",
               "
   border-radius: 50%;
   line-height: 1rem;
@@ -52,15 +25,17 @@ exports[`<CircleSkeleton /> should render a circle skeleton 1`] = `
   ",
               [Function],
               "
+
+  ",
+              [Function],
+              ";
 ",
             ],
           },
-          "displayName": "Styled(styled.span)",
-          "foldedComponentIds": Array [
-            "sc-bdVaJa",
-          ],
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
+          "styledComponentId": "sc-bdVaJa",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -71,11 +46,11 @@ exports[`<CircleSkeleton /> should render a circle skeleton 1`] = `
       size="large"
     >
       <span
-        className="fOrFKV"
+        className="iaTydT"
         size="large"
       />
     </StyledComponent>
-  </Styled(styled.span)>
+  </styled.span>
 </CircleSkeleton>
 `;
 
@@ -84,7 +59,7 @@ exports[`<CircleSkeleton /> should render a circle skeleton with set size 1`] = 
   showSkeleton={true}
   size="small"
 >
-  <Styled(styled.span)
+  <styled.span
     size="small"
   >
     <StyledComponent
@@ -93,37 +68,10 @@ exports[`<CircleSkeleton /> should render a circle skeleton with set size 1`] = 
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
+            "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "jhnSAP",
+            "lastClassName": "jjIqES",
             "rules": Array [
-              "
-  animation: ",
-              "
-  ",
-              Keyframes {
-                "id": "sc-keyframes-jXsTbE",
-                "inject": [Function],
-                "name": "jXsTbE",
-                "rules": Array [
-                  "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                  "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                ],
-                "toString": [Function],
-              },
-              " .8s linear infinite alternate;
-",
-              ";
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-              "#E1E6EB",
-              ";
-  border: 1px solid ",
-              "#E1E6EB",
-              ";
-  display: inline-flex;
-",
               "
   border-radius: 50%;
   line-height: 1rem;
@@ -131,15 +79,17 @@ exports[`<CircleSkeleton /> should render a circle skeleton with set size 1`] = 
   ",
               [Function],
               "
+
+  ",
+              [Function],
+              ";
 ",
             ],
           },
-          "displayName": "Styled(styled.span)",
-          "foldedComponentIds": Array [
-            "sc-bdVaJa",
-          ],
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
+          "styledComponentId": "sc-bdVaJa",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -150,10 +100,10 @@ exports[`<CircleSkeleton /> should render a circle skeleton with set size 1`] = 
       size="small"
     >
       <span
-        className="jhnSAP"
+        className="jjIqES"
         size="small"
       />
     </StyledComponent>
-  </Styled(styled.span)>
+  </styled.span>
 </CircleSkeleton>
 `;

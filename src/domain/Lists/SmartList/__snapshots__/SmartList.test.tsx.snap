@@ -6151,7 +6151,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                       showSkeleton={true}
                                       type="body"
                                     >
-                                      <Styled(styled.span)
+                                      <styled.span
                                         textType="body"
                                       >
                                         <StyledComponent
@@ -6160,37 +6160,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-bZQynM",
+                                                "componentId": "sc-EHOje",
                                                 "isStatic": false,
-                                                "lastClassName": "yaPim",
+                                                "lastClassName": "kdYvqS",
                                                 "rules": Array [
-                                                  "
-  animation: ",
-                                                  "
-  ",
-                                                  Keyframes {
-                                                    "id": "sc-keyframes-jXsTbE",
-                                                    "inject": [Function],
-                                                    "name": "jXsTbE",
-                                                    "rules": Array [
-                                                      "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                      "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                    ],
-                                                    "toString": [Function],
-                                                  },
-                                                  " .8s linear infinite alternate;
-",
-                                                  ";
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-                                                  "#E1E6EB",
-                                                  ";
-  border: 1px solid ",
-                                                  "#E1E6EB",
-                                                  ";
-  display: inline-flex;
-",
                                                   "
   border-radius: 4px;
   width: ",
@@ -6198,19 +6171,19 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                                   ";
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-
   ",
                                                   [Function],
-                                                  "
+                                                  ";
+  ",
+                                                  [Function],
+                                                  ";
 ",
                                                 ],
                                               },
-                                              "displayName": "Styled(styled.span)",
-                                              "foldedComponentIds": Array [
-                                                "sc-EHOje",
-                                              ],
+                                              "displayName": "styled.span",
+                                              "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-bZQynM",
+                                              "styledComponentId": "sc-EHOje",
                                               "target": "span",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -6221,12 +6194,12 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="yaPim"
+                                            className="kdYvqS"
                                           >
                                             ‌
                                           </span>
                                         </StyledComponent>
-                                      </Styled(styled.span)>
+                                      </styled.span>
                                     </TextSkeleton>
                                   </div>
                                 </div>
@@ -6348,7 +6321,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                       showSkeleton={true}
                                       type="body"
                                     >
-                                      <Styled(styled.span)
+                                      <styled.span
                                         textType="body"
                                       >
                                         <StyledComponent
@@ -6357,37 +6330,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-bZQynM",
+                                                "componentId": "sc-EHOje",
                                                 "isStatic": false,
-                                                "lastClassName": "yaPim",
+                                                "lastClassName": "kdYvqS",
                                                 "rules": Array [
-                                                  "
-  animation: ",
-                                                  "
-  ",
-                                                  Keyframes {
-                                                    "id": "sc-keyframes-jXsTbE",
-                                                    "inject": [Function],
-                                                    "name": "jXsTbE",
-                                                    "rules": Array [
-                                                      "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                      "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                    ],
-                                                    "toString": [Function],
-                                                  },
-                                                  " .8s linear infinite alternate;
-",
-                                                  ";
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-                                                  "#E1E6EB",
-                                                  ";
-  border: 1px solid ",
-                                                  "#E1E6EB",
-                                                  ";
-  display: inline-flex;
-",
                                                   "
   border-radius: 4px;
   width: ",
@@ -6395,19 +6341,19 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                                   ";
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-
   ",
                                                   [Function],
-                                                  "
+                                                  ";
+  ",
+                                                  [Function],
+                                                  ";
 ",
                                                 ],
                                               },
-                                              "displayName": "Styled(styled.span)",
-                                              "foldedComponentIds": Array [
-                                                "sc-EHOje",
-                                              ],
+                                              "displayName": "styled.span",
+                                              "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-bZQynM",
+                                              "styledComponentId": "sc-EHOje",
                                               "target": "span",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -6418,12 +6364,12 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="yaPim"
+                                            className="kdYvqS"
                                           >
                                             ‌
                                           </span>
                                         </StyledComponent>
-                                      </Styled(styled.span)>
+                                      </styled.span>
                                     </TextSkeleton>
                                   </div>
                                 </div>
@@ -6545,7 +6491,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                       showSkeleton={true}
                                       type="body"
                                     >
-                                      <Styled(styled.span)
+                                      <styled.span
                                         textType="body"
                                       >
                                         <StyledComponent
@@ -6554,37 +6500,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-bZQynM",
+                                                "componentId": "sc-EHOje",
                                                 "isStatic": false,
-                                                "lastClassName": "yaPim",
+                                                "lastClassName": "kdYvqS",
                                                 "rules": Array [
-                                                  "
-  animation: ",
-                                                  "
-  ",
-                                                  Keyframes {
-                                                    "id": "sc-keyframes-jXsTbE",
-                                                    "inject": [Function],
-                                                    "name": "jXsTbE",
-                                                    "rules": Array [
-                                                      "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                      "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                    ],
-                                                    "toString": [Function],
-                                                  },
-                                                  " .8s linear infinite alternate;
-",
-                                                  ";
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-                                                  "#E1E6EB",
-                                                  ";
-  border: 1px solid ",
-                                                  "#E1E6EB",
-                                                  ";
-  display: inline-flex;
-",
                                                   "
   border-radius: 4px;
   width: ",
@@ -6592,19 +6511,19 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                                   ";
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-
   ",
                                                   [Function],
-                                                  "
+                                                  ";
+  ",
+                                                  [Function],
+                                                  ";
 ",
                                                 ],
                                               },
-                                              "displayName": "Styled(styled.span)",
-                                              "foldedComponentIds": Array [
-                                                "sc-EHOje",
-                                              ],
+                                              "displayName": "styled.span",
+                                              "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-bZQynM",
+                                              "styledComponentId": "sc-EHOje",
                                               "target": "span",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -6615,12 +6534,12 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="yaPim"
+                                            className="kdYvqS"
                                           >
                                             ‌
                                           </span>
                                         </StyledComponent>
-                                      </Styled(styled.span)>
+                                      </styled.span>
                                     </TextSkeleton>
                                   </div>
                                 </div>
@@ -6956,7 +6875,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                       showSkeleton={true}
                                       type="body"
                                     >
-                                      <Styled(styled.span)
+                                      <styled.span
                                         textType="body"
                                       >
                                         <StyledComponent
@@ -6965,37 +6884,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-bZQynM",
+                                                "componentId": "sc-EHOje",
                                                 "isStatic": false,
-                                                "lastClassName": "yaPim",
+                                                "lastClassName": "kdYvqS",
                                                 "rules": Array [
-                                                  "
-  animation: ",
-                                                  "
-  ",
-                                                  Keyframes {
-                                                    "id": "sc-keyframes-jXsTbE",
-                                                    "inject": [Function],
-                                                    "name": "jXsTbE",
-                                                    "rules": Array [
-                                                      "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                      "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                    ],
-                                                    "toString": [Function],
-                                                  },
-                                                  " .8s linear infinite alternate;
-",
-                                                  ";
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-                                                  "#E1E6EB",
-                                                  ";
-  border: 1px solid ",
-                                                  "#E1E6EB",
-                                                  ";
-  display: inline-flex;
-",
                                                   "
   border-radius: 4px;
   width: ",
@@ -7003,19 +6895,19 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                                   ";
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-
   ",
                                                   [Function],
-                                                  "
+                                                  ";
+  ",
+                                                  [Function],
+                                                  ";
 ",
                                                 ],
                                               },
-                                              "displayName": "Styled(styled.span)",
-                                              "foldedComponentIds": Array [
-                                                "sc-EHOje",
-                                              ],
+                                              "displayName": "styled.span",
+                                              "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-bZQynM",
+                                              "styledComponentId": "sc-EHOje",
                                               "target": "span",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -7026,12 +6918,12 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="yaPim"
+                                            className="kdYvqS"
                                           >
                                             ‌
                                           </span>
                                         </StyledComponent>
-                                      </Styled(styled.span)>
+                                      </styled.span>
                                     </TextSkeleton>
                                   </div>
                                 </div>
@@ -7153,7 +7045,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                       showSkeleton={true}
                                       type="body"
                                     >
-                                      <Styled(styled.span)
+                                      <styled.span
                                         textType="body"
                                       >
                                         <StyledComponent
@@ -7162,37 +7054,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-bZQynM",
+                                                "componentId": "sc-EHOje",
                                                 "isStatic": false,
-                                                "lastClassName": "yaPim",
+                                                "lastClassName": "kdYvqS",
                                                 "rules": Array [
-                                                  "
-  animation: ",
-                                                  "
-  ",
-                                                  Keyframes {
-                                                    "id": "sc-keyframes-jXsTbE",
-                                                    "inject": [Function],
-                                                    "name": "jXsTbE",
-                                                    "rules": Array [
-                                                      "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                      "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                    ],
-                                                    "toString": [Function],
-                                                  },
-                                                  " .8s linear infinite alternate;
-",
-                                                  ";
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-                                                  "#E1E6EB",
-                                                  ";
-  border: 1px solid ",
-                                                  "#E1E6EB",
-                                                  ";
-  display: inline-flex;
-",
                                                   "
   border-radius: 4px;
   width: ",
@@ -7200,19 +7065,19 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                                   ";
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-
   ",
                                                   [Function],
-                                                  "
+                                                  ";
+  ",
+                                                  [Function],
+                                                  ";
 ",
                                                 ],
                                               },
-                                              "displayName": "Styled(styled.span)",
-                                              "foldedComponentIds": Array [
-                                                "sc-EHOje",
-                                              ],
+                                              "displayName": "styled.span",
+                                              "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-bZQynM",
+                                              "styledComponentId": "sc-EHOje",
                                               "target": "span",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -7223,12 +7088,12 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="yaPim"
+                                            className="kdYvqS"
                                           >
                                             ‌
                                           </span>
                                         </StyledComponent>
-                                      </Styled(styled.span)>
+                                      </styled.span>
                                     </TextSkeleton>
                                   </div>
                                 </div>
@@ -7350,7 +7215,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                       showSkeleton={true}
                                       type="body"
                                     >
-                                      <Styled(styled.span)
+                                      <styled.span
                                         textType="body"
                                       >
                                         <StyledComponent
@@ -7359,37 +7224,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-bZQynM",
+                                                "componentId": "sc-EHOje",
                                                 "isStatic": false,
-                                                "lastClassName": "yaPim",
+                                                "lastClassName": "kdYvqS",
                                                 "rules": Array [
-                                                  "
-  animation: ",
-                                                  "
-  ",
-                                                  Keyframes {
-                                                    "id": "sc-keyframes-jXsTbE",
-                                                    "inject": [Function],
-                                                    "name": "jXsTbE",
-                                                    "rules": Array [
-                                                      "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                      "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                    ],
-                                                    "toString": [Function],
-                                                  },
-                                                  " .8s linear infinite alternate;
-",
-                                                  ";
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-                                                  "#E1E6EB",
-                                                  ";
-  border: 1px solid ",
-                                                  "#E1E6EB",
-                                                  ";
-  display: inline-flex;
-",
                                                   "
   border-radius: 4px;
   width: ",
@@ -7397,19 +7235,19 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                                   ";
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-
   ",
                                                   [Function],
-                                                  "
+                                                  ";
+  ",
+                                                  [Function],
+                                                  ";
 ",
                                                 ],
                                               },
-                                              "displayName": "Styled(styled.span)",
-                                              "foldedComponentIds": Array [
-                                                "sc-EHOje",
-                                              ],
+                                              "displayName": "styled.span",
+                                              "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-bZQynM",
+                                              "styledComponentId": "sc-EHOje",
                                               "target": "span",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -7420,12 +7258,12 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="yaPim"
+                                            className="kdYvqS"
                                           >
                                             ‌
                                           </span>
                                         </StyledComponent>
-                                      </Styled(styled.span)>
+                                      </styled.span>
                                     </TextSkeleton>
                                   </div>
                                 </div>
@@ -7761,7 +7599,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                       showSkeleton={true}
                                       type="body"
                                     >
-                                      <Styled(styled.span)
+                                      <styled.span
                                         textType="body"
                                       >
                                         <StyledComponent
@@ -7770,37 +7608,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-bZQynM",
+                                                "componentId": "sc-EHOje",
                                                 "isStatic": false,
-                                                "lastClassName": "yaPim",
+                                                "lastClassName": "kdYvqS",
                                                 "rules": Array [
-                                                  "
-  animation: ",
-                                                  "
-  ",
-                                                  Keyframes {
-                                                    "id": "sc-keyframes-jXsTbE",
-                                                    "inject": [Function],
-                                                    "name": "jXsTbE",
-                                                    "rules": Array [
-                                                      "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                      "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                    ],
-                                                    "toString": [Function],
-                                                  },
-                                                  " .8s linear infinite alternate;
-",
-                                                  ";
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-                                                  "#E1E6EB",
-                                                  ";
-  border: 1px solid ",
-                                                  "#E1E6EB",
-                                                  ";
-  display: inline-flex;
-",
                                                   "
   border-radius: 4px;
   width: ",
@@ -7808,19 +7619,19 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                                   ";
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-
   ",
                                                   [Function],
-                                                  "
+                                                  ";
+  ",
+                                                  [Function],
+                                                  ";
 ",
                                                 ],
                                               },
-                                              "displayName": "Styled(styled.span)",
-                                              "foldedComponentIds": Array [
-                                                "sc-EHOje",
-                                              ],
+                                              "displayName": "styled.span",
+                                              "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-bZQynM",
+                                              "styledComponentId": "sc-EHOje",
                                               "target": "span",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -7831,12 +7642,12 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="yaPim"
+                                            className="kdYvqS"
                                           >
                                             ‌
                                           </span>
                                         </StyledComponent>
-                                      </Styled(styled.span)>
+                                      </styled.span>
                                     </TextSkeleton>
                                   </div>
                                 </div>
@@ -7958,7 +7769,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                       showSkeleton={true}
                                       type="body"
                                     >
-                                      <Styled(styled.span)
+                                      <styled.span
                                         textType="body"
                                       >
                                         <StyledComponent
@@ -7967,37 +7778,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-bZQynM",
+                                                "componentId": "sc-EHOje",
                                                 "isStatic": false,
-                                                "lastClassName": "yaPim",
+                                                "lastClassName": "kdYvqS",
                                                 "rules": Array [
-                                                  "
-  animation: ",
-                                                  "
-  ",
-                                                  Keyframes {
-                                                    "id": "sc-keyframes-jXsTbE",
-                                                    "inject": [Function],
-                                                    "name": "jXsTbE",
-                                                    "rules": Array [
-                                                      "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                      "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                    ],
-                                                    "toString": [Function],
-                                                  },
-                                                  " .8s linear infinite alternate;
-",
-                                                  ";
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-                                                  "#E1E6EB",
-                                                  ";
-  border: 1px solid ",
-                                                  "#E1E6EB",
-                                                  ";
-  display: inline-flex;
-",
                                                   "
   border-radius: 4px;
   width: ",
@@ -8005,19 +7789,19 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                                   ";
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-
   ",
                                                   [Function],
-                                                  "
+                                                  ";
+  ",
+                                                  [Function],
+                                                  ";
 ",
                                                 ],
                                               },
-                                              "displayName": "Styled(styled.span)",
-                                              "foldedComponentIds": Array [
-                                                "sc-EHOje",
-                                              ],
+                                              "displayName": "styled.span",
+                                              "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-bZQynM",
+                                              "styledComponentId": "sc-EHOje",
                                               "target": "span",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -8028,12 +7812,12 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="yaPim"
+                                            className="kdYvqS"
                                           >
                                             ‌
                                           </span>
                                         </StyledComponent>
-                                      </Styled(styled.span)>
+                                      </styled.span>
                                     </TextSkeleton>
                                   </div>
                                 </div>
@@ -8155,7 +7939,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                       showSkeleton={true}
                                       type="body"
                                     >
-                                      <Styled(styled.span)
+                                      <styled.span
                                         textType="body"
                                       >
                                         <StyledComponent
@@ -8164,37 +7948,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-bZQynM",
+                                                "componentId": "sc-EHOje",
                                                 "isStatic": false,
-                                                "lastClassName": "yaPim",
+                                                "lastClassName": "kdYvqS",
                                                 "rules": Array [
-                                                  "
-  animation: ",
-                                                  "
-  ",
-                                                  Keyframes {
-                                                    "id": "sc-keyframes-jXsTbE",
-                                                    "inject": [Function],
-                                                    "name": "jXsTbE",
-                                                    "rules": Array [
-                                                      "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                      "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                    ],
-                                                    "toString": [Function],
-                                                  },
-                                                  " .8s linear infinite alternate;
-",
-                                                  ";
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-                                                  "#E1E6EB",
-                                                  ";
-  border: 1px solid ",
-                                                  "#E1E6EB",
-                                                  ";
-  display: inline-flex;
-",
                                                   "
   border-radius: 4px;
   width: ",
@@ -8202,19 +7959,19 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                                   ";
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-
   ",
                                                   [Function],
-                                                  "
+                                                  ";
+  ",
+                                                  [Function],
+                                                  ";
 ",
                                                 ],
                                               },
-                                              "displayName": "Styled(styled.span)",
-                                              "foldedComponentIds": Array [
-                                                "sc-EHOje",
-                                              ],
+                                              "displayName": "styled.span",
+                                              "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-bZQynM",
+                                              "styledComponentId": "sc-EHOje",
                                               "target": "span",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -8225,12 +7982,12 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="yaPim"
+                                            className="kdYvqS"
                                           >
                                             ‌
                                           </span>
                                         </StyledComponent>
-                                      </Styled(styled.span)>
+                                      </styled.span>
                                     </TextSkeleton>
                                   </div>
                                 </div>
@@ -8566,7 +8323,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                       showSkeleton={true}
                                       type="body"
                                     >
-                                      <Styled(styled.span)
+                                      <styled.span
                                         textType="body"
                                       >
                                         <StyledComponent
@@ -8575,37 +8332,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-bZQynM",
+                                                "componentId": "sc-EHOje",
                                                 "isStatic": false,
-                                                "lastClassName": "yaPim",
+                                                "lastClassName": "kdYvqS",
                                                 "rules": Array [
-                                                  "
-  animation: ",
-                                                  "
-  ",
-                                                  Keyframes {
-                                                    "id": "sc-keyframes-jXsTbE",
-                                                    "inject": [Function],
-                                                    "name": "jXsTbE",
-                                                    "rules": Array [
-                                                      "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                      "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                    ],
-                                                    "toString": [Function],
-                                                  },
-                                                  " .8s linear infinite alternate;
-",
-                                                  ";
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-                                                  "#E1E6EB",
-                                                  ";
-  border: 1px solid ",
-                                                  "#E1E6EB",
-                                                  ";
-  display: inline-flex;
-",
                                                   "
   border-radius: 4px;
   width: ",
@@ -8613,19 +8343,19 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                                   ";
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-
   ",
                                                   [Function],
-                                                  "
+                                                  ";
+  ",
+                                                  [Function],
+                                                  ";
 ",
                                                 ],
                                               },
-                                              "displayName": "Styled(styled.span)",
-                                              "foldedComponentIds": Array [
-                                                "sc-EHOje",
-                                              ],
+                                              "displayName": "styled.span",
+                                              "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-bZQynM",
+                                              "styledComponentId": "sc-EHOje",
                                               "target": "span",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -8636,12 +8366,12 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="yaPim"
+                                            className="kdYvqS"
                                           >
                                             ‌
                                           </span>
                                         </StyledComponent>
-                                      </Styled(styled.span)>
+                                      </styled.span>
                                     </TextSkeleton>
                                   </div>
                                 </div>
@@ -8763,7 +8493,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                       showSkeleton={true}
                                       type="body"
                                     >
-                                      <Styled(styled.span)
+                                      <styled.span
                                         textType="body"
                                       >
                                         <StyledComponent
@@ -8772,37 +8502,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-bZQynM",
+                                                "componentId": "sc-EHOje",
                                                 "isStatic": false,
-                                                "lastClassName": "yaPim",
+                                                "lastClassName": "kdYvqS",
                                                 "rules": Array [
-                                                  "
-  animation: ",
-                                                  "
-  ",
-                                                  Keyframes {
-                                                    "id": "sc-keyframes-jXsTbE",
-                                                    "inject": [Function],
-                                                    "name": "jXsTbE",
-                                                    "rules": Array [
-                                                      "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                      "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                    ],
-                                                    "toString": [Function],
-                                                  },
-                                                  " .8s linear infinite alternate;
-",
-                                                  ";
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-                                                  "#E1E6EB",
-                                                  ";
-  border: 1px solid ",
-                                                  "#E1E6EB",
-                                                  ";
-  display: inline-flex;
-",
                                                   "
   border-radius: 4px;
   width: ",
@@ -8810,19 +8513,19 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                                   ";
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-
   ",
                                                   [Function],
-                                                  "
+                                                  ";
+  ",
+                                                  [Function],
+                                                  ";
 ",
                                                 ],
                                               },
-                                              "displayName": "Styled(styled.span)",
-                                              "foldedComponentIds": Array [
-                                                "sc-EHOje",
-                                              ],
+                                              "displayName": "styled.span",
+                                              "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-bZQynM",
+                                              "styledComponentId": "sc-EHOje",
                                               "target": "span",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -8833,12 +8536,12 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="yaPim"
+                                            className="kdYvqS"
                                           >
                                             ‌
                                           </span>
                                         </StyledComponent>
-                                      </Styled(styled.span)>
+                                      </styled.span>
                                     </TextSkeleton>
                                   </div>
                                 </div>
@@ -8960,7 +8663,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                       showSkeleton={true}
                                       type="body"
                                     >
-                                      <Styled(styled.span)
+                                      <styled.span
                                         textType="body"
                                       >
                                         <StyledComponent
@@ -8969,37 +8672,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-bZQynM",
+                                                "componentId": "sc-EHOje",
                                                 "isStatic": false,
-                                                "lastClassName": "yaPim",
+                                                "lastClassName": "kdYvqS",
                                                 "rules": Array [
-                                                  "
-  animation: ",
-                                                  "
-  ",
-                                                  Keyframes {
-                                                    "id": "sc-keyframes-jXsTbE",
-                                                    "inject": [Function],
-                                                    "name": "jXsTbE",
-                                                    "rules": Array [
-                                                      "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                      "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                    ],
-                                                    "toString": [Function],
-                                                  },
-                                                  " .8s linear infinite alternate;
-",
-                                                  ";
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-                                                  "#E1E6EB",
-                                                  ";
-  border: 1px solid ",
-                                                  "#E1E6EB",
-                                                  ";
-  display: inline-flex;
-",
                                                   "
   border-radius: 4px;
   width: ",
@@ -9007,19 +8683,19 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                                   ";
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-
   ",
                                                   [Function],
-                                                  "
+                                                  ";
+  ",
+                                                  [Function],
+                                                  ";
 ",
                                                 ],
                                               },
-                                              "displayName": "Styled(styled.span)",
-                                              "foldedComponentIds": Array [
-                                                "sc-EHOje",
-                                              ],
+                                              "displayName": "styled.span",
+                                              "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-bZQynM",
+                                              "styledComponentId": "sc-EHOje",
                                               "target": "span",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -9030,12 +8706,12 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="yaPim"
+                                            className="kdYvqS"
                                           >
                                             ‌
                                           </span>
                                         </StyledComponent>
-                                      </Styled(styled.span)>
+                                      </styled.span>
                                     </TextSkeleton>
                                   </div>
                                 </div>
@@ -9371,7 +9047,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                       showSkeleton={true}
                                       type="body"
                                     >
-                                      <Styled(styled.span)
+                                      <styled.span
                                         textType="body"
                                       >
                                         <StyledComponent
@@ -9380,37 +9056,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-bZQynM",
+                                                "componentId": "sc-EHOje",
                                                 "isStatic": false,
-                                                "lastClassName": "yaPim",
+                                                "lastClassName": "kdYvqS",
                                                 "rules": Array [
-                                                  "
-  animation: ",
-                                                  "
-  ",
-                                                  Keyframes {
-                                                    "id": "sc-keyframes-jXsTbE",
-                                                    "inject": [Function],
-                                                    "name": "jXsTbE",
-                                                    "rules": Array [
-                                                      "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                      "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                    ],
-                                                    "toString": [Function],
-                                                  },
-                                                  " .8s linear infinite alternate;
-",
-                                                  ";
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-                                                  "#E1E6EB",
-                                                  ";
-  border: 1px solid ",
-                                                  "#E1E6EB",
-                                                  ";
-  display: inline-flex;
-",
                                                   "
   border-radius: 4px;
   width: ",
@@ -9418,19 +9067,19 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                                   ";
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-
   ",
                                                   [Function],
-                                                  "
+                                                  ";
+  ",
+                                                  [Function],
+                                                  ";
 ",
                                                 ],
                                               },
-                                              "displayName": "Styled(styled.span)",
-                                              "foldedComponentIds": Array [
-                                                "sc-EHOje",
-                                              ],
+                                              "displayName": "styled.span",
+                                              "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-bZQynM",
+                                              "styledComponentId": "sc-EHOje",
                                               "target": "span",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -9441,12 +9090,12 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="yaPim"
+                                            className="kdYvqS"
                                           >
                                             ‌
                                           </span>
                                         </StyledComponent>
-                                      </Styled(styled.span)>
+                                      </styled.span>
                                     </TextSkeleton>
                                   </div>
                                 </div>
@@ -9568,7 +9217,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                       showSkeleton={true}
                                       type="body"
                                     >
-                                      <Styled(styled.span)
+                                      <styled.span
                                         textType="body"
                                       >
                                         <StyledComponent
@@ -9577,37 +9226,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-bZQynM",
+                                                "componentId": "sc-EHOje",
                                                 "isStatic": false,
-                                                "lastClassName": "yaPim",
+                                                "lastClassName": "kdYvqS",
                                                 "rules": Array [
-                                                  "
-  animation: ",
-                                                  "
-  ",
-                                                  Keyframes {
-                                                    "id": "sc-keyframes-jXsTbE",
-                                                    "inject": [Function],
-                                                    "name": "jXsTbE",
-                                                    "rules": Array [
-                                                      "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                      "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                    ],
-                                                    "toString": [Function],
-                                                  },
-                                                  " .8s linear infinite alternate;
-",
-                                                  ";
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-                                                  "#E1E6EB",
-                                                  ";
-  border: 1px solid ",
-                                                  "#E1E6EB",
-                                                  ";
-  display: inline-flex;
-",
                                                   "
   border-radius: 4px;
   width: ",
@@ -9615,19 +9237,19 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                                   ";
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-
   ",
                                                   [Function],
-                                                  "
+                                                  ";
+  ",
+                                                  [Function],
+                                                  ";
 ",
                                                 ],
                                               },
-                                              "displayName": "Styled(styled.span)",
-                                              "foldedComponentIds": Array [
-                                                "sc-EHOje",
-                                              ],
+                                              "displayName": "styled.span",
+                                              "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-bZQynM",
+                                              "styledComponentId": "sc-EHOje",
                                               "target": "span",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -9638,12 +9260,12 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="yaPim"
+                                            className="kdYvqS"
                                           >
                                             ‌
                                           </span>
                                         </StyledComponent>
-                                      </Styled(styled.span)>
+                                      </styled.span>
                                     </TextSkeleton>
                                   </div>
                                 </div>
@@ -9765,7 +9387,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                       showSkeleton={true}
                                       type="body"
                                     >
-                                      <Styled(styled.span)
+                                      <styled.span
                                         textType="body"
                                       >
                                         <StyledComponent
@@ -9774,37 +9396,10 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-bZQynM",
+                                                "componentId": "sc-EHOje",
                                                 "isStatic": false,
-                                                "lastClassName": "yaPim",
+                                                "lastClassName": "kdYvqS",
                                                 "rules": Array [
-                                                  "
-  animation: ",
-                                                  "
-  ",
-                                                  Keyframes {
-                                                    "id": "sc-keyframes-jXsTbE",
-                                                    "inject": [Function],
-                                                    "name": "jXsTbE",
-                                                    "rules": Array [
-                                                      "@-webkit-keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                      "@keyframes jXsTbE{0%{opacity:.45;}to{opacity:.9;}}",
-                                                    ],
-                                                    "toString": [Function],
-                                                  },
-                                                  " .8s linear infinite alternate;
-",
-                                                  ";
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: ",
-                                                  "#E1E6EB",
-                                                  ";
-  border: 1px solid ",
-                                                  "#E1E6EB",
-                                                  ";
-  display: inline-flex;
-",
                                                   "
   border-radius: 4px;
   width: ",
@@ -9812,19 +9407,19 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                                   ";
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-
   ",
                                                   [Function],
-                                                  "
+                                                  ";
+  ",
+                                                  [Function],
+                                                  ";
 ",
                                                 ],
                                               },
-                                              "displayName": "Styled(styled.span)",
-                                              "foldedComponentIds": Array [
-                                                "sc-EHOje",
-                                              ],
+                                              "displayName": "styled.span",
+                                              "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-bZQynM",
+                                              "styledComponentId": "sc-EHOje",
                                               "target": "span",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -9835,12 +9430,12 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="yaPim"
+                                            className="kdYvqS"
                                           >
                                             ‌
                                           </span>
                                         </StyledComponent>
-                                      </Styled(styled.span)>
+                                      </styled.span>
                                     </TextSkeleton>
                                   </div>
                                 </div>

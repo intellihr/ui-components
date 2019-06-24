@@ -2,12 +2,7 @@
 
 exports[`Callout Renders successfully 1`] = `
 <div
-<<<<<<< HEAD
   className="callout success justify-center lgEvmq"
-  data-component-context={undefined}
-=======
-  className="callout success justify-center "
->>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
   data-component-type="callout"
 >
   <div
@@ -25,12 +20,7 @@ exports[`Callout Renders successfully 1`] = `
 
 exports[`Callout Renders successfully when both messages and message is passed 1`] = `
 <div
-<<<<<<< HEAD
   className="callout info lgEvmq"
-  data-component-context={undefined}
-=======
-  className="callout info "
->>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
   data-component-type="callout"
 >
   <div
@@ -56,12 +46,7 @@ exports[`Callout Renders successfully when both messages and message is passed 1
 
 exports[`Callout Renders successfully when messages are passed 1`] = `
 <div
-<<<<<<< HEAD
   className="callout warning lgEvmq"
-  data-component-context={undefined}
-=======
-  className="callout warning "
->>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
   data-component-type="callout"
 >
   <div
@@ -84,12 +69,7 @@ exports[`Callout Renders successfully when messages are passed 1`] = `
 
 exports[`Callout Renders successfully when messages has length 1 1`] = `
 <div
-<<<<<<< HEAD
   className="callout info justify-center lgEvmq"
-  data-component-context={undefined}
-=======
-  className="callout info justify-center "
->>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
   data-component-type="callout"
 >
   <div

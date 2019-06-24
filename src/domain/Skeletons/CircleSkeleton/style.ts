@@ -1,13 +1,14 @@
 import styled, { css } from 'styled-components'
 
 import { Props } from '../../../common'
-import { SkeletonWrapper } from '../style'
+import { styleForSkeletons } from '../style'
 
 export interface ICircleSkeletonWrapperProps {
   size?: Props.AvatarSize
+  margins?: Props.IMargins
 }
 
-export const CircleSkeletonWrapper = styled(SkeletonWrapper)`
+export const CircleSkeletonWrapper = styled.span`
   border-radius: 50%;
   line-height: 1rem;
 
@@ -35,4 +36,6 @@ export const CircleSkeletonWrapper = styled(SkeletonWrapper)`
         `
     }
   }}
+
+  ${(props: ICircleSkeletonWrapperProps) => styleForSkeletons(props.margins)};
 `

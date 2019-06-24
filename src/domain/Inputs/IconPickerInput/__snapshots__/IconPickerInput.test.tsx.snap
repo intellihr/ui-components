@@ -8,13 +8,8 @@ exports[`<IconPickerInput /> should render an Icon Picker 1`] = `
     cells={
       Array [
         Object {
-<<<<<<< HEAD
-          "content": <UNDEFINED>
-            <UNDEFINED
-=======
           "content": <React.Fragment>
-            <styled.input
->>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
+            <ForwardRef(styled.input)
               checked={true}
               id="icon-picker-intelli-icon-australia-0"
               name="icon-picker"
@@ -22,32 +17,22 @@ exports[`<IconPickerInput /> should render an Icon Picker 1`] = `
               type="radio"
               value="intelli-icon-australia"
             />
-            <UNDEFINED
+            <ForwardRef(styled.label)
               htmlFor="icon-picker-intelli-icon-australia-0"
               isChecked={true}
             >
-              <UNDEFINED
+              <ForwardRef(Styled(Icon))
                 color="#7362F5"
                 size="large"
                 type="intelli-icon-australia"
               />
-<<<<<<< HEAD
-            </UNDEFINED>
-          </UNDEFINED>,
-          "size": "shrink",
-        },
-        Object {
-          "content": <UNDEFINED>
-            <UNDEFINED
-=======
-            </styled.label>
+            </ForwardRef(styled.label)>
           </React.Fragment>,
           "size": "shrink",
         },
         Object {
           "content": <React.Fragment>
-            <styled.input
->>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
+            <ForwardRef(styled.input)
               checked={false}
               id="icon-picker-intelli-icon-card-1"
               name="icon-picker"
@@ -55,32 +40,22 @@ exports[`<IconPickerInput /> should render an Icon Picker 1`] = `
               type="radio"
               value="intelli-icon-card"
             />
-            <UNDEFINED
+            <ForwardRef(styled.label)
               htmlFor="icon-picker-intelli-icon-card-1"
               isChecked={false}
             >
-              <UNDEFINED
+              <ForwardRef(Styled(Icon))
                 color="#424F5C"
                 size="large"
                 type="intelli-icon-card"
               />
-<<<<<<< HEAD
-            </UNDEFINED>
-          </UNDEFINED>,
-          "size": "shrink",
-        },
-        Object {
-          "content": <UNDEFINED>
-            <UNDEFINED
-=======
-            </styled.label>
+            </ForwardRef(styled.label)>
           </React.Fragment>,
           "size": "shrink",
         },
         Object {
           "content": <React.Fragment>
-            <styled.input
->>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
+            <ForwardRef(styled.input)
               checked={false}
               id="icon-picker-intelli-icon-book-2"
               name="icon-picker"
@@ -88,22 +63,17 @@ exports[`<IconPickerInput /> should render an Icon Picker 1`] = `
               type="radio"
               value="intelli-icon-book"
             />
-            <UNDEFINED
+            <ForwardRef(styled.label)
               htmlFor="icon-picker-intelli-icon-book-2"
               isChecked={false}
             >
-              <UNDEFINED
+              <ForwardRef(Styled(Icon))
                 color="#424F5C"
                 size="large"
                 type="intelli-icon-book"
               />
-<<<<<<< HEAD
-            </UNDEFINED>
-          </UNDEFINED>,
-=======
-            </styled.label>
+            </ForwardRef(styled.label)>
           </React.Fragment>,
->>>>>>> b1f90f41b4a4b0cdaa39ee1baf1ddaac8c10c990
           "size": "shrink",
         },
       ]

@@ -4,7 +4,7 @@ exports[`<AutocompleteLocationInput /> should render the autocomplete location i
 <div
   className="autocompleteLocationInput"
 >
-  <default_1$$1
+  <default_1$1
     autoActivateFirstSuggest={false}
     disabled={false}
     fixtures={Array []}
@@ -35,7 +35,7 @@ exports[`<AutocompleteLocationInput /> should render the disabled autocomplete l
   >
     ×
   </span>
-  <default_1$$1
+  <default_1$1
     autoActivateFirstSuggest={false}
     disabled={true}
     fixtures={Array []}
