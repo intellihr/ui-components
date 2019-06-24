@@ -113,7 +113,7 @@ initialState = {
     toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
       <InputGroup.Button
         onClick={toggleMenu}
-        ref={toggleComponentRef}
+        innerRef={toggleComponentRef}
         groupPosition='left'
         leftComponent={state.selectedOption.leftComponent}
         {...ariaProps}
@@ -211,7 +211,7 @@ class ThingList extends React.PureComponent {
     toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
       <InputGroup.Button
         onClick={toggleMenu}
-        ref={toggleComponentRef}
+        innerRef={toggleComponentRef}
         groupPosition='left'
         {...ariaProps}
       >
@@ -301,7 +301,7 @@ class ThingList extends React.PureComponent {
     toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
       <InputGroup.Button
         onClick={toggleMenu}
-        ref={toggleComponentRef}
+        innerRef={toggleComponentRef}
         groupPosition='left'
         {...ariaProps}
       >
@@ -342,7 +342,7 @@ class ThingList extends React.PureComponent {
     toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
       <InputGroup.Button
         onClick={toggleMenu}
-        ref={toggleComponentRef}
+        innerRef={toggleComponentRef}
         groupPosition='middle'
         {...ariaProps}
       >
@@ -383,7 +383,7 @@ class ThingList extends React.PureComponent {
     toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
       <InputGroup.Button
         onClick={toggleMenu}
-        ref={toggleComponentRef}
+        innerRef={toggleComponentRef}
         groupPosition='right'
         {...ariaProps}
       >
