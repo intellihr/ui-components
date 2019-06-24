@@ -102,3 +102,11 @@
   <CurrencyText />
 ```
 
+#### Using Currency Text formatter externally
+
+CurrencyText exports it's formatter so that it can be used in
+other places
+
+```jsx
+  <div>{CurrencyText.formatter(1000, 2)}</div>
+```

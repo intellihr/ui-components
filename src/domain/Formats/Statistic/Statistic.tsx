@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Props } from '../../../common'
-import { PrefixText, TitleText, ValueText } from './style'
+import { NotProvidedText, PrefixText, TitleText, ValueText } from './style'
 
 interface IStatistcProps {
   /** the statistic title */
@@ -11,7 +11,7 @@ interface IStatistcProps {
   /** Text that goes before the statistic */
   prefix?: string
   /** The statistic value */
-  value?: string
+  value?: string | null
 }
 
 export const Statistic: React.FC<IStatistcProps> = (
@@ -22,18 +22,26 @@ export const Statistic: React.FC<IStatistcProps> = (
     title
   }
 ) => {
+  if (!value) {
+    return (
+      <div
+        data-component-context={componentContext}
+        data-component-type={Props.ComponentType.Statistic}
+      >
+        <TitleText>{title}</TitleText>
+        <NotProvidedText>Not Provided</NotProvidedText>
+      </div>
+    )
+  }
+
   return (
     <div
       data-component-context={componentContext}
       data-component-type={Props.ComponentType.Statistic}
     >
-      <TitleText>
-        {title}
-      </TitleText>
+      <TitleText>{title}</TitleText>
       {prefix && (
-        <PrefixText>
-          {prefix}
-        </PrefixText>
+        <PrefixText>{prefix}</PrefixText>
       )}
       <ValueText>{value}</ValueText>
     </div>

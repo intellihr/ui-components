@@ -32,7 +32,6 @@
       border-radius: $border-radius;
       margin-top: -41px;
       max-width:  $breakpoint-big-desktop / 12 * 10;
-      overflow: hidden;
       width: 100% / 12 * 10;
     }
   }
@@ -51,7 +50,6 @@
     .ihr-layout__content {
       border-bottom-left-radius: $border-radius;
       border-bottom-right-radius: $border-radius;
-      overflow: hidden;
       width: 100%;
     }
   }

@@ -195,7 +195,7 @@ export class SelectInput extends React.PureComponent<ISelectInputProps> {
     if (onInputChange) {
       onInputChange(input)
     }
-  }, 500)
+  }, 500, {maxWait: 1000})
 
   // We debounce the callback but onInputChange must always return the current input text to work correctly
   private onInputChange = (input: string): string => {

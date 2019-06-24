@@ -3,6 +3,12 @@ import styled from 'styled-components'
 import { Props, Variables } from '../../../common'
 import { styleForTypographyType } from '../../Typographies/services/textStyles'
 
+const NotProvidedText = styled.span`
+  color: ${Variables.Color.n600};
+
+ ${styleForTypographyType(Props.TypographyType.Body)}
+`
+
 const PrefixText = styled.span`
   color: ${Variables.Color.n800};
   margin-right: ${Variables.Spacing.sXSmall}px;
@@ -25,6 +31,7 @@ const ValueText = styled.span`
 `
 
 export {
+  NotProvidedText,
   PrefixText,
   TitleText,
   ValueText
