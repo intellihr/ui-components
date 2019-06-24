@@ -28,6 +28,8 @@ interface ICurrencyTextProps {
   prefixColor?: Variables.Color
 }
 
+type Formatter = (value: string | number, decimalPlace?: number) => string
+
 class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
   public static defaultProps: Partial<ICurrencyTextProps> = {
     valueType: Props.TypographyType.Body,
@@ -36,7 +38,7 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
     flexAlign: false
   }
 
-  public static formatter: any = (value: string | number, decimalPlace?: number) => {
+  public static formatter: Formatter = (value, decimalPlace) => {
     let moneyFormat = '0,0.'
     if (decimalPlace) {
       moneyFormat = padEnd(moneyFormat, moneyFormat.length + decimalPlace, '0')
