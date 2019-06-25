@@ -1,5 +1,4 @@
 import { isPlainObject } from 'lodash'
-import React from 'react'
 import styled, { css } from 'styled-components'
 
 import { Props, Utils, Variables } from '../../../common'
@@ -80,7 +79,6 @@ interface IStyledCellProps {
   animationStyle: CellAnimation
   displayType: CellDisplayType
   flexHorizontalAlignment: HorizontalAlignment | IStyledHorizontalAlignment
-  componentContext?: string
 }
 
 const breakpointOrder: ReadonlyArray<keyof IStyledCellSizes> = ['min', 'tablet', 'desktop', 'bigDesktop']
@@ -607,69 +605,17 @@ const StyledCell = styled.div<IStyledCellProps>`
   ${cellAnimationForProps}
 `
 
-interface ICellProps {
-  key?: string | number
-  gridColumns?: number
-  size?: CellSize | IStyledCellSizes
-  offset?: CellOffset | IStyledCellOffsets
-  gutterMarginX?: GutterSize | IStyledGridGutters
-  gutterMarginY?: GutterSize | IStyledGridGutters
-  gutterPaddingX?: GutterSize | IStyledGridGutters
-  gutterPaddingY?: GutterSize | IStyledGridGutters
-  animationStyle?: CellAnimation
-  /** Component context */
-  componentContext?: string
-  displayType?: CellDisplayType
-  flexHorizontalAlignment?: HorizontalAlignment | IStyledHorizontalAlignment
-  'data-component-type'?: string
-  'data-component-context'?: string
-}
-
-const Cell: React.FC<ICellProps> = ({
-  children,
-  gridColumns,
-  size,
-  offset,
-  gutterMarginX,
-  gutterMarginY,
-  gutterPaddingX,
-  gutterPaddingY,
-  animationStyle,
-  displayType,
-  flexHorizontalAlignment,
-  componentContext
-}) => {
-  return (
-    <StyledCell
-      size={size || 'auto'}
-      offset={offset || 0}
-      animationStyle={animationStyle || 'none'}
-      gridColumns={gridColumns!}
-      displayType={displayType || 'block'}
-      flexHorizontalAlignment={flexHorizontalAlignment || HorizontalAlignment.Left}
-      gutterMarginX={gutterMarginX!}
-      gutterMarginY={gutterMarginY!}
-      gutterPaddingX={gutterPaddingX!}
-      gutterPaddingY={gutterPaddingY!}
-      data-component-type={Props.ComponentType.GridLayoutCell}
-      data-component-context={componentContext}
-    >
-      {children}
-    </StyledCell>
-  )
-}
-
 export {
-  Cell,
   CellAnimation,
+  CellOffset,
   CellSize,
   GutterSize,
   HorizontalAlignment,
-  ICellProps,
   IStyledCellOffsets,
   IStyledCellProps,
   IStyledCellSizes,
   IStyledGridGutters,
+  IStyledHorizontalAlignment,
   StyledGridLayout,
   StyledCell,
   VerticalAlignment
