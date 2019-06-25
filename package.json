@@ -1,7 +1,7 @@
 {
   "name": "@intellihr/ui-components",
   "description": "A common React components library that is used in our company",
-  "version": "27.0.0",
+  "version": "28.0.0",
   "main": "./dist/",
   "types": "./types/index.d.ts",
   "files": [
@@ -16,7 +16,7 @@
     "styled-components": "^3.3.2"
   },
   "dependencies": {
-    "@intellihr/icons": "0.0.8",
+    "@intellihr/icons": "^0.0.9",
     "@intellihr/styled-components-breakpoint": "0.0.2",
     "@types/chart.js": "2.7.52",
     "@types/classnames": "2.2.8",
@@ -138,7 +138,7 @@
     "lint:fix": "tslint -t stylish --fix -c ./tslint.json \"src/**/*.{ts,tsx}\"",
     "lint:css": "stylelint \"src/**/*.{ts,tsx}\"",
     "lint:sass": "sass-lint --verbose",
-    "lint:sass:fix": "sass-lint-auto-fix -c .sass-lint.yml --verbose",
+    "lint:sass:fix": "sass-lint-auto-fix -c .sass-lint.yml",
     "build": "npm run clean && webpack --display=minimal",
     "build:watch": "npm run clean && webpack --watch --display=minimal",
     "styleguide:build": "styleguidist build",
