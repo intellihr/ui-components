@@ -1921,7 +1921,6 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
             unmountOnExit={false}
           >
             <Cell
-              data-component-type="grid_layout_cell"
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
@@ -1989,7 +1988,6 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
             unmountOnExit={false}
           >
             <Cell
-              data-component-type="grid_layout_cell"
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
@@ -2057,7 +2055,6 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
             unmountOnExit={false}
           >
             <Cell
-              data-component-type="grid_layout_cell"
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
@@ -2153,7 +2150,6 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
             unmountOnExit={false}
           >
             <Cell
-              data-component-type="grid_layout_cell"
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
@@ -2236,7 +2232,6 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
             unmountOnExit={false}
           >
             <Cell
-              data-component-type="grid_layout_cell"
               gridColumns={12}
               gutterMarginX={4}
               gutterMarginY="none"
