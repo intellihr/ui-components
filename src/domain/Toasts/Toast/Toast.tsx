@@ -1,10 +1,13 @@
 import classNames from 'classnames'
 import React from 'react'
 
+import { Variables } from '../../../common'
 import { IntelliIcon, IntelliIconTypeNoPrefix } from '../../Icons'
+import { Text } from '../../Typographies/Text'
 const style = require('./style.scss')
 
 export interface IToastProps {
+  heading?: string
   /** Function run when component is mounted (usually a timer if required) */
   onMount?: () => void
   /** Function called when close button is clicked */
@@ -21,74 +24,50 @@ export class Toast extends React.PureComponent<IToastProps> {
   }
 
   public componentDidMount () {
-    const {
-      onMount
-    } = this.props
-
+    const { onMount } = this.props
     if (onMount) { onMount() }
-  }
-
-  get icon (): JSX.Element {
-    const {
-      type
-    } = this.props
-
-    let iconName: IntelliIconTypeNoPrefix = 'check'
-
-    if (type === 'alert') {
-      iconName = 'alert'
-    }
-
-    return (
-      <IntelliIcon
-        type={iconName}
-        size='xsmall'
-        className='toast-icon'
-      />
-    )
-  }
-
-  get closeButton (): JSX.Element {
-    const {
-      handleClose
-    } = this.props
-
-    return (
-      <span
-        className={classNames('fa-container', 'toast-close-span')}
-        onClick={handleClose}
-      >
-        <IntelliIcon
-          type='cross-small'
-          size='xsmall'
-          className='toast-close'
-        />
-      </span>
-    )
-  }
-
-  get content (): JSX.Element {
-    const {
-      children
-    } = this.props
-
-    return (
-      <span className='toast-content'>
-        {children}
-      </span>
-    )
   }
 
   public render (): JSX.Element {
     const {
-      type
+      type,
+      heading,
+      children,
+      handleClose
     } = this.props
+
+    let iconName: IntelliIconTypeNoPrefix = 'check'
+    if (type === 'alert') {
+      iconName = 'alert'
+    }
+
+    const classes = classNames('toast-content', {
+      'no-heading': heading === undefined
+    })
 
     return (
       <div className={classNames(style.ToastClass, type)}>
-        {this.icon}
-        {this.content}
-        {this.closeButton}
+        <IntelliIcon
+          type={iconName}
+          size='xsmall'
+          className='toast-icon'
+        />
+
+        <div className={classes}>
+          <Text weight={Variables.FontWeight.fwSemiBold}>{heading}</Text>
+          <div>{children}</div>
+        </div>
+
+        <span
+          className={classNames('fa-container', 'toast-close-span')}
+          onClick={handleClose}
+        >
+          <IntelliIcon
+            type='cross-small'
+            size='xsmall'
+            className='toast-close'
+          />
+        </span>
       </div>
     )
   }
