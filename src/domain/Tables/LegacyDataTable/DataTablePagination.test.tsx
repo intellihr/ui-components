@@ -7,12 +7,10 @@ describe('<DataTablePagination />', () => {
   describe('Pagination with few pages', () => {
     const onPageChange = jest.fn()
     const onPageSizeChange = jest.fn()
-    const data = Array(70)
 
     const wrapper = shallow(
       <DataTablePagination
         totalCount={70}
-        data={data}
         pages={3}
         page={2}
         pageSize={25}
@@ -43,11 +41,9 @@ describe('<DataTablePagination />', () => {
   describe('Pagination with many pages', () => {
     const onPageChange = jest.fn()
     const onPageSizeChange = jest.fn()
-    const data = Array(295)
 
     const wrapper = shallow(
       <DataTablePagination
-        data={data}
         totalCount={295}
         pages={30}
         page={3}

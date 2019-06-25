@@ -78,3 +78,19 @@ initialState = { startDate: null , endDate: null };
   handleDatesChange={dates => setState({ startDate: dates.startDate, endDate: dates.endDate  })}
 />
 ```
+
+##### isInLine
+
+```jsx
+initialState = { startDate: null , endDate: null };
+
+<DateRangeInput
+  isInline
+  name='test-date-picker5'
+  startDate={state.startDate}
+  endDate={state.endDate}
+  startDatePlaceholder='Start Date'
+  endDatePlaceholder='End Date'
+  handleDatesChange={dates => setState({ startDate: dates.startDate, endDate: dates.endDate  })}
+/>
+```

@@ -1,5 +1,6 @@
-export { LayoutSpacer } from './LayoutSpacer'
+export { Carousel } from './Carousel'
 export { GridLayout } from './GridLayout'
+export { LayoutSpacer } from './LayoutSpacer'
 export { PageLayout } from './PageLayout'
 export { SectionList } from './SectionList'
 export { XYGrid } from './XYGrid'

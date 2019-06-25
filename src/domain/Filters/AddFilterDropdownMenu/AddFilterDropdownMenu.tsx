@@ -85,7 +85,6 @@ export class AddFilterDropdownMenu extends React.PureComponent<IAddFilterDropdow
             options={this.fieldInputOptions}
             placeholder='Select a filter'
             handleChange={this.handleFieldChange}
-            resetValue=''
           />
         </VerticalForm.Field>
         {this.filterOptionContent(closeMenu)}

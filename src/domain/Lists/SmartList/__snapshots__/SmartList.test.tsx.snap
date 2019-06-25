@@ -2661,29 +2661,21 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
         </GridProvider>
       </Row>
     </div>
-    <Callout
-      justifyCenter={false}
-      messages={Array []}
-      shouldFocus={false}
-      type=""
+    <EmptyState
+      primaryMessage="No Results found."
+      secondaryMessage={null}
     >
-      <styled.div
-        className="callout"
-        data-component-type="callout"
-        innerRef={[Function]}
+      <div
+        className="ihrEmptyState"
+        data-component-type="empty_state"
       >
         <div
-          className="callout "
-          data-component-type="callout"
+          className="ihrPrimaryMessage"
         >
-          <div
-            className="content"
-          >
-            No Results found.
-          </div>
+          No Results found.
         </div>
-      </styled.div>
-    </Callout>
+      </div>
+    </EmptyState>
   </div>
 </SmartList>
 `;
@@ -2733,23 +2725,8 @@ exports[`<SmartList /> should render skeleton 1`] = `
   padding-left: 0rem;
 }
 
-.c5 {
-  -webkit-animation: jXsTbE .8s linear infinite alternate;
-  animation: jXsTbE .8s linear infinite alternate;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  will-change: opacity;
-  background-color: #E1E6EB;
-  border: 1px solid #E1E6EB;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
 .c4 {
   border-radius: 4px;
-  width: 100%;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-size: 16px;
@@ -2758,6 +2735,14 @@ exports[`<SmartList /> should render skeleton 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-animation: jXsTbE .8s linear infinite alternate;
+  animation: jXsTbE .8s linear infinite alternate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: #E1E6EB;
+  border: 1px solid #E1E6EB;
+  display: block;
 }
 
 @media only screen and (min-width:0em) {
@@ -3177,20 +3162,15 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 showSkeleton={true}
                                 type="body"
                               >
-                                <Styled(styled.span)
+                                <styled.span
                                   textType="body"
                                 >
-                                  <styled.span
+                                  <span
                                     className="c4"
-                                    textType="body"
                                   >
-                                    <span
-                                      className="c4 c5"
-                                    >
-                                      ‌
-                                    </span>
-                                  </styled.span>
-                                </Styled(styled.span)>
+                                    ‌
+                                  </span>
+                                </styled.span>
                               </TextSkeleton>
                             </div>
                           </div>
@@ -3249,20 +3229,15 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 showSkeleton={true}
                                 type="body"
                               >
-                                <Styled(styled.span)
+                                <styled.span
                                   textType="body"
                                 >
-                                  <styled.span
+                                  <span
                                     className="c4"
-                                    textType="body"
                                   >
-                                    <span
-                                      className="c4 c5"
-                                    >
-                                      ‌
-                                    </span>
-                                  </styled.span>
-                                </Styled(styled.span)>
+                                    ‌
+                                  </span>
+                                </styled.span>
                               </TextSkeleton>
                             </div>
                           </div>
@@ -3321,20 +3296,15 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 showSkeleton={true}
                                 type="body"
                               >
-                                <Styled(styled.span)
+                                <styled.span
                                   textType="body"
                                 >
-                                  <styled.span
+                                  <span
                                     className="c4"
-                                    textType="body"
                                   >
-                                    <span
-                                      className="c4 c5"
-                                    >
-                                      ‌
-                                    </span>
-                                  </styled.span>
-                                </Styled(styled.span)>
+                                    ‌
+                                  </span>
+                                </styled.span>
                               </TextSkeleton>
                             </div>
                           </div>
@@ -3460,20 +3430,15 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 showSkeleton={true}
                                 type="body"
                               >
-                                <Styled(styled.span)
+                                <styled.span
                                   textType="body"
                                 >
-                                  <styled.span
+                                  <span
                                     className="c4"
-                                    textType="body"
                                   >
-                                    <span
-                                      className="c4 c5"
-                                    >
-                                      ‌
-                                    </span>
-                                  </styled.span>
-                                </Styled(styled.span)>
+                                    ‌
+                                  </span>
+                                </styled.span>
                               </TextSkeleton>
                             </div>
                           </div>
@@ -3532,20 +3497,15 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 showSkeleton={true}
                                 type="body"
                               >
-                                <Styled(styled.span)
+                                <styled.span
                                   textType="body"
                                 >
-                                  <styled.span
+                                  <span
                                     className="c4"
-                                    textType="body"
                                   >
-                                    <span
-                                      className="c4 c5"
-                                    >
-                                      ‌
-                                    </span>
-                                  </styled.span>
-                                </Styled(styled.span)>
+                                    ‌
+                                  </span>
+                                </styled.span>
                               </TextSkeleton>
                             </div>
                           </div>
@@ -3604,20 +3564,15 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 showSkeleton={true}
                                 type="body"
                               >
-                                <Styled(styled.span)
+                                <styled.span
                                   textType="body"
                                 >
-                                  <styled.span
+                                  <span
                                     className="c4"
-                                    textType="body"
                                   >
-                                    <span
-                                      className="c4 c5"
-                                    >
-                                      ‌
-                                    </span>
-                                  </styled.span>
-                                </Styled(styled.span)>
+                                    ‌
+                                  </span>
+                                </styled.span>
                               </TextSkeleton>
                             </div>
                           </div>
@@ -3743,20 +3698,15 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 showSkeleton={true}
                                 type="body"
                               >
-                                <Styled(styled.span)
+                                <styled.span
                                   textType="body"
                                 >
-                                  <styled.span
+                                  <span
                                     className="c4"
-                                    textType="body"
                                   >
-                                    <span
-                                      className="c4 c5"
-                                    >
-                                      ‌
-                                    </span>
-                                  </styled.span>
-                                </Styled(styled.span)>
+                                    ‌
+                                  </span>
+                                </styled.span>
                               </TextSkeleton>
                             </div>
                           </div>
@@ -3815,20 +3765,15 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 showSkeleton={true}
                                 type="body"
                               >
-                                <Styled(styled.span)
+                                <styled.span
                                   textType="body"
                                 >
-                                  <styled.span
+                                  <span
                                     className="c4"
-                                    textType="body"
                                   >
-                                    <span
-                                      className="c4 c5"
-                                    >
-                                      ‌
-                                    </span>
-                                  </styled.span>
-                                </Styled(styled.span)>
+                                    ‌
+                                  </span>
+                                </styled.span>
                               </TextSkeleton>
                             </div>
                           </div>
@@ -3887,20 +3832,15 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 showSkeleton={true}
                                 type="body"
                               >
-                                <Styled(styled.span)
+                                <styled.span
                                   textType="body"
                                 >
-                                  <styled.span
+                                  <span
                                     className="c4"
-                                    textType="body"
                                   >
-                                    <span
-                                      className="c4 c5"
-                                    >
-                                      ‌
-                                    </span>
-                                  </styled.span>
-                                </Styled(styled.span)>
+                                    ‌
+                                  </span>
+                                </styled.span>
                               </TextSkeleton>
                             </div>
                           </div>
@@ -4026,20 +3966,15 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 showSkeleton={true}
                                 type="body"
                               >
-                                <Styled(styled.span)
+                                <styled.span
                                   textType="body"
                                 >
-                                  <styled.span
+                                  <span
                                     className="c4"
-                                    textType="body"
                                   >
-                                    <span
-                                      className="c4 c5"
-                                    >
-                                      ‌
-                                    </span>
-                                  </styled.span>
-                                </Styled(styled.span)>
+                                    ‌
+                                  </span>
+                                </styled.span>
                               </TextSkeleton>
                             </div>
                           </div>
@@ -4098,20 +4033,15 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 showSkeleton={true}
                                 type="body"
                               >
-                                <Styled(styled.span)
+                                <styled.span
                                   textType="body"
                                 >
-                                  <styled.span
+                                  <span
                                     className="c4"
-                                    textType="body"
                                   >
-                                    <span
-                                      className="c4 c5"
-                                    >
-                                      ‌
-                                    </span>
-                                  </styled.span>
-                                </Styled(styled.span)>
+                                    ‌
+                                  </span>
+                                </styled.span>
                               </TextSkeleton>
                             </div>
                           </div>
@@ -4170,20 +4100,15 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 showSkeleton={true}
                                 type="body"
                               >
-                                <Styled(styled.span)
+                                <styled.span
                                   textType="body"
                                 >
-                                  <styled.span
+                                  <span
                                     className="c4"
-                                    textType="body"
                                   >
-                                    <span
-                                      className="c4 c5"
-                                    >
-                                      ‌
-                                    </span>
-                                  </styled.span>
-                                </Styled(styled.span)>
+                                    ‌
+                                  </span>
+                                </styled.span>
                               </TextSkeleton>
                             </div>
                           </div>
@@ -4309,20 +4234,15 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 showSkeleton={true}
                                 type="body"
                               >
-                                <Styled(styled.span)
+                                <styled.span
                                   textType="body"
                                 >
-                                  <styled.span
+                                  <span
                                     className="c4"
-                                    textType="body"
                                   >
-                                    <span
-                                      className="c4 c5"
-                                    >
-                                      ‌
-                                    </span>
-                                  </styled.span>
-                                </Styled(styled.span)>
+                                    ‌
+                                  </span>
+                                </styled.span>
                               </TextSkeleton>
                             </div>
                           </div>
@@ -4381,20 +4301,15 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 showSkeleton={true}
                                 type="body"
                               >
-                                <Styled(styled.span)
+                                <styled.span
                                   textType="body"
                                 >
-                                  <styled.span
+                                  <span
                                     className="c4"
-                                    textType="body"
                                   >
-                                    <span
-                                      className="c4 c5"
-                                    >
-                                      ‌
-                                    </span>
-                                  </styled.span>
-                                </Styled(styled.span)>
+                                    ‌
+                                  </span>
+                                </styled.span>
                               </TextSkeleton>
                             </div>
                           </div>
@@ -4453,20 +4368,15 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 showSkeleton={true}
                                 type="body"
                               >
-                                <Styled(styled.span)
+                                <styled.span
                                   textType="body"
                                 >
-                                  <styled.span
+                                  <span
                                     className="c4"
-                                    textType="body"
                                   >
-                                    <span
-                                      className="c4 c5"
-                                    >
-                                      ‌
-                                    </span>
-                                  </styled.span>
-                                </Styled(styled.span)>
+                                    ‌
+                                  </span>
+                                </styled.span>
                               </TextSkeleton>
                             </div>
                           </div>

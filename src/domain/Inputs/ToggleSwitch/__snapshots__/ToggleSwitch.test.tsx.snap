@@ -8,12 +8,12 @@ exports[`<ToggleSwitch /> should render a checked ToggleSwitch 1`] = `
     cells={
       Array [
         Object {
-          "content": <UNDEFINED>
+          "content": <React.Fragment>
             <Text
               isInline={false}
               tag="span"
               type="heading"
-              weight="heavy"
+              weight={600}
             >
               This is a Toggle Switch
             </Text>
@@ -24,16 +24,13 @@ exports[`<ToggleSwitch /> should render a checked ToggleSwitch 1`] = `
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </Text>
-          </UNDEFINED>,
+          </React.Fragment>,
           "size": "auto",
         },
         Object {
           "content": <ToggleSwitchInput
             checked={true}
-            componentContext={undefined}
-            disabled={undefined}
             name="test-input"
-            onChange={undefined}
           />,
           "size": "shrink",
         },
@@ -58,12 +55,12 @@ exports[`<ToggleSwitch /> should render a disabled ToggleSwitch 1`] = `
     cells={
       Array [
         Object {
-          "content": <UNDEFINED>
+          "content": <React.Fragment>
             <Text
               isInline={false}
               tag="span"
               type="heading"
-              weight="heavy"
+              weight={600}
             >
               This is a Toggle Switch
             </Text>
@@ -74,16 +71,14 @@ exports[`<ToggleSwitch /> should render a disabled ToggleSwitch 1`] = `
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </Text>
-          </UNDEFINED>,
+          </React.Fragment>,
           "size": "auto",
         },
         Object {
           "content": <ToggleSwitchInput
             checked={false}
-            componentContext={undefined}
             disabled={true}
             name="test-input"
-            onChange={undefined}
           />,
           "size": "shrink",
         },
@@ -108,12 +103,12 @@ exports[`<ToggleSwitch /> should render a disabled and checked ToggleSwitch 1`] 
     cells={
       Array [
         Object {
-          "content": <UNDEFINED>
+          "content": <React.Fragment>
             <Text
               isInline={false}
               tag="span"
               type="heading"
-              weight="heavy"
+              weight={600}
             >
               This is a Toggle Switch
             </Text>
@@ -124,16 +119,14 @@ exports[`<ToggleSwitch /> should render a disabled and checked ToggleSwitch 1`] 
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </Text>
-          </UNDEFINED>,
+          </React.Fragment>,
           "size": "auto",
         },
         Object {
           "content": <ToggleSwitchInput
             checked={true}
-            componentContext={undefined}
             disabled={true}
             name="test-input"
-            onChange={undefined}
           />,
           "size": "shrink",
         },
@@ -158,12 +151,12 @@ exports[`<ToggleSwitch /> should render a unchecked ToggleSwitch 1`] = `
     cells={
       Array [
         Object {
-          "content": <UNDEFINED>
+          "content": <React.Fragment>
             <Text
               isInline={false}
               tag="span"
               type="heading"
-              weight="heavy"
+              weight={600}
             >
               This is a Toggle Switch
             </Text>
@@ -174,16 +167,13 @@ exports[`<ToggleSwitch /> should render a unchecked ToggleSwitch 1`] = `
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </Text>
-          </UNDEFINED>,
+          </React.Fragment>,
           "size": "auto",
         },
         Object {
           "content": <ToggleSwitchInput
             checked={false}
-            componentContext={undefined}
-            disabled={undefined}
             name="test-input"
-            onChange={undefined}
           />,
           "size": "shrink",
         },

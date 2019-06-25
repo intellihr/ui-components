@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Statistic /> should render Statistic Record component 1`] = `
+.c0 {
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+}
+
+.c1 {
+  color: #262D33;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  -webkit-letter-spacing: -.02em;
+  -moz-letter-spacing: -.02em;
+  -ms-letter-spacing: -.02em;
+  letter-spacing: -.02em;
+}
+
+<Component
+  title="Total Cost"
+  value="99.00"
+>
+  <div
+    data-component-type="statistic"
+  >
+    <styled.div>
+      <div
+        className="c0"
+      >
+        Total Cost
+      </div>
+    </styled.div>
+    <styled.span>
+      <span
+        className="c1"
+      >
+        99.00
+      </span>
+    </styled.span>
+  </div>
+</Component>
+`;
+
+exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
+.c1 {
+  color: #262D33;
+  margin-right: 8px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  -webkit-letter-spacing: -.02em;
+  -moz-letter-spacing: -.02em;
+  -ms-letter-spacing: -.02em;
+  letter-spacing: -.02em;
+}
+
+.c0 {
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+}
+
+.c2 {
+  color: #262D33;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  -webkit-letter-spacing: -.02em;
+  -moz-letter-spacing: -.02em;
+  -ms-letter-spacing: -.02em;
+  letter-spacing: -.02em;
+}
+
+<Component
+  prefix="AUD"
+  title="Total Cost"
+  value="99.00"
+>
+  <div
+    data-component-type="statistic"
+  >
+    <styled.div>
+      <div
+        className="c0"
+      >
+        Total Cost
+      </div>
+    </styled.div>
+    <styled.span>
+      <span
+        className="c1"
+      >
+        AUD
+      </span>
+    </styled.span>
+    <styled.span>
+      <span
+        className="c2"
+      >
+        99.00
+      </span>
+    </styled.span>
+  </div>
+</Component>
+`;
+
+exports[`<Statistic /> should render not provided when no value is provided 1`] = `
+.c1 {
+  color: #667380;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+}
+
+.c0 {
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+}
+
+<Component
+  prefix="AUD"
+  title="Total Cost"
+  value={null}
+>
+  <div
+    data-component-type="statistic"
+  >
+    <styled.div>
+      <div
+        className="c0"
+      >
+        Total Cost
+      </div>
+    </styled.div>
+    <styled.span>
+      <span
+        className="c1"
+      >
+        Not Provided
+      </span>
+    </styled.span>
+  </div>
+</Component>
+`;

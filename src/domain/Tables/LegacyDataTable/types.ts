@@ -1,4 +1,4 @@
-import { Column, TableProps } from 'react-table'
+import { Column, DefaultFilterFunction, TableProps } from 'react-table'
 
 import { Props } from '../../../common'
 
@@ -10,6 +10,9 @@ interface IDataTableColumn extends Column {
 
   /** Alignment for the content in the column */
   columnAlignment?: AlignmentOption
+
+  /** Override to only allow DefaultFilterFunction */
+  filterMethod?: DefaultFilterFunction
 }
 
 interface IBaseDataTableProps {

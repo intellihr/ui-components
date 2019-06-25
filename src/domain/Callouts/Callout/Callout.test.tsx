@@ -2,7 +2,7 @@ import { shallow } from 'enzyme'
 import React from 'react'
 import reactRenderer from 'react-test-renderer'
 
-import { Callout } from '../Callout'
+import { Callout } from './Callout'
 
 describe('Callout', () => {
   it('Renders successfully', () => {
@@ -48,7 +48,7 @@ describe('Callout', () => {
     )
 
     expect(wrapper).toMatchSnapshot()
-    expect(wrapper.instance().props.type).toEqual('info')
+    expect((wrapper.instance().props as any).type).toEqual('info')
   })
 
   it('Renders successfully when both messages and message is passed', () => {

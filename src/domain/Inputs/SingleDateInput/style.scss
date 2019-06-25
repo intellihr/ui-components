@@ -23,6 +23,12 @@
       }
     }
 
+    .CalendarDay__today {
+      background-color: $n250;
+      color: $n800;
+      font-weight: $fw-semi-bold;
+    }
+
     // Will edit everything selected including everything between a range of dates
     .CalendarDay__selected_span {
       background: $i400; //background
@@ -47,6 +53,30 @@
     }
   }
 
+  .SingleDatePickerInput__showClearDate {
+    padding-right: 0;
+  }
+
+  .SingleDatePickerInput_clearDate {
+    color: $n700;
+    font-size: $fz-heading;
+    line-height: $lh-heading;
+    outline: none;
+    position: absolute;
+    top: 19.5px;
+    transition: color .3s ease-in-out;
+
+    &:focus,
+    &:hover {
+      color: $r600;
+    }
+
+    &:disabled {
+      color: $n600;
+      cursor: not-allowed;
+    }
+  }
+
   .SingleDatePickerInput__disabled {
     background: none;
   }
@@ -66,6 +96,7 @@
     font-size: $fz-body;
     font-weight: $fw-normal;
     line-height: 1.5;
+    margin-bottom: 0;
     padding: .5rem;
     transition: border-color .3s ease-in-out, background-color .3s ease;
 

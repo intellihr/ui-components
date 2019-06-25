@@ -8,7 +8,7 @@ import { StyledCross, StyledDeleteButton } from './style'
 
 export interface IFilterTagDetail {
   fieldName: string
-  operator: string
+  operator?: string
   value: string
 }
 
@@ -57,7 +57,7 @@ export class FilterTag extends React.PureComponent<IFilterTagProps> {
         <Text
           color={Variables.Color.n800}
           type={Props.TypographyType.Small}
-          weight='heavy'
+          weight={Variables.FontWeight.fwSemiBold}
         >
           {tag.value}
         </Text>

@@ -12,72 +12,77 @@ exports[`<FilterController /> should render the filter controller 1`] = `
     }
   }
 >
-  <InputGroup
-    margins={
-      Object {
-        "bottom": 8,
-      }
-    }
+  <styled.div
+    hasBottomMargin={false}
   >
-    <AddFilterDropdownMenu
-      filterMessage="dummy filter message:"
-      filters={
-        Array [
-          Object {
-            "fieldName": "Type",
-            "selectOptions": Array [
+    <styled.div
+      hasRightMargin={true}
+    >
+      <InputGroup>
+        <AddFilterDropdownMenu
+          filterMessage="dummy filter message:"
+          filters={
+            Array [
               Object {
-                "label": "Product Training",
-                "value": "Product Training",
+                "fieldName": "Type",
+                "selectOptions": Array [
+                  Object {
+                    "label": "Product Training",
+                    "value": "Product Training",
+                  },
+                  Object {
+                    "label": "Personal Development",
+                    "value": "Personal Development",
+                  },
+                  Object {
+                    "label": "Soft Skill",
+                    "value": "Soft Skill",
+                  },
+                ],
+                "type": "SINGLE_SELECT",
               },
               Object {
-                "label": "Personal Development",
-                "value": "Personal Development",
+                "fieldName": "Training Provider",
+                "selectOptions": Array [
+                  Object {
+                    "label": "Internal",
+                    "value": "Internal",
+                  },
+                  Object {
+                    "label": "External",
+                    "value": "External",
+                  },
+                  Object {
+                    "label": "Others",
+                    "value": "Others",
+                  },
+                ],
+                "type": "SINGLE_SELECT",
               },
-              Object {
-                "label": "Soft Skill",
-                "value": "Soft Skill",
-              },
-            ],
-            "type": "SINGLE_SELECT",
-          },
-          Object {
-            "fieldName": "Training Provider",
-            "selectOptions": Array [
-              Object {
-                "label": "Internal",
-                "value": "Internal",
-              },
-              Object {
-                "label": "External",
-                "value": "External",
-              },
-              Object {
-                "label": "Others",
-                "value": "Others",
-              },
-            ],
-            "type": "SINGLE_SELECT",
-          },
-        ]
-      }
-      onFilterAdded={[Function]}
-      toggleComponent={[Function]}
-    />
-    <TextInput
-      groupPosition="right"
-      handleChange={[Function]}
-      handleClear={[Function]}
-      icon={
-        <FontAwesomeIcon
-          type="search"
+            ]
+          }
+          onFilterAdded={[Function]}
+          toggleComponent={[Function]}
         />
-      }
-      name="filterControllerSearchInput"
-      placeholder="dummy search placeholder"
-      value="dummy search value"
-    />
-  </InputGroup>
+        <TextInput
+          groupPosition="right"
+          handleChange={[Function]}
+          handleClear={[Function]}
+          icon={
+            <FontAwesomeIcon
+              type="search"
+            />
+          }
+          name="filterControllerSearchInput"
+          placeholder="dummy search placeholder"
+          value="dummy search value"
+        />
+      </InputGroup>
+    </styled.div>
+    <div>
+      RightComponent
+    </div>
+  </styled.div>
   <FilterTag
     onTagDeleted={[Function]}
     tags={Array []}

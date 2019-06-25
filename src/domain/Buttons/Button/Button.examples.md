@@ -217,12 +217,13 @@ import { ButtonGroup } from '@Domain/Buttons';
 
 ```jsx
 import { ButtonGroup } from '@Domain/Buttons';
+import { FontAwesomeIcon } from '@Domain/Icons';
 
 <div>
   <div>
     <h3>Enabled</h3>
     <ButtonGroup>
-      <Button type='add' onClick={() => alert('add')}>
+      <Button type='add' icon={<FontAwesomeIcon type='plus' />} onClick={() => alert('add')}>
         add
       </Button>
       <Button type='add-subtle' onClick={() => alert('add-subtle')}>

@@ -48,12 +48,17 @@ A tag can be provided to turn any of the Text options into a Heading, or paragra
 #### Weight
 
 ```jsx
+const { Variables } = require('../../../common');
+
   <div>
-    <Text isInline={false} weight='normal'>
+    <Text isInline={false} weight={Variables.FontWeight.fwNormal}>
       Normal (default)
     </Text>
-    <Text weight='heavy'>
-      Heavy
+    <Text isInline={false} weight={Variables.FontWeight.fwSemiBold}>
+      Semi Bold
+    </Text>
+    <Text weight={Variables.FontWeight.fwBold}>
+      Bold
     </Text>
   </div>
 ```
@@ -100,7 +105,7 @@ import { Variables } from '@Common';
   <Text isInline={false} color={Variables.Color.r400}>
     Hello!
   </Text>
-  <Text type='small' weight='heavy' isUpper>
+  <Text type='small' weight={Variables.FontWeight.fwSemiBold} isUpper>
     I am text
   </Text>
 </div>

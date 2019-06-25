@@ -36,6 +36,15 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
     flexAlign: false
   }
 
+  public static formatter = (value: string | number, decimalPlace?: number) => {
+    let moneyFormat = '0,0.'
+    if (decimalPlace) {
+      moneyFormat = padEnd(moneyFormat, moneyFormat.length + decimalPlace, '0')
+    }
+
+    return Numeral(value.toString()).format(moneyFormat)
+  }
+
   get prefix (): JSX.Element | null {
     const {
       prefix,
@@ -49,7 +58,7 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
 
     return (
       <StyledPrefixText
-        weight='heavy'
+        weight={Variables.FontWeight.fwSemiBold}
         type={prefixType}
         color={prefixColor}
       >
@@ -67,18 +76,13 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
       valueHintComponentProps
     } = this.props
 
-    let moneyFormat = '0,0.'
-    if (decimalPlace) {
-      moneyFormat = padEnd(moneyFormat, moneyFormat.length + decimalPlace, '0')
-    }
-
     return (
       <Text
         type={valueType}
         color={valueColor}
         hintComponentProps={valueHintComponentProps}
       >
-        {Numeral(value!.toString()).format(moneyFormat)}
+        {CurrencyText.formatter(value!, decimalPlace)}
       </Text>
     )
   }

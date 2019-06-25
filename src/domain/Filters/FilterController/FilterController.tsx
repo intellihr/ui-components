@@ -1,12 +1,12 @@
 import React, { ChangeEventHandler } from 'react'
 
-import { Props, Variables } from '../../../common'
+import { Props } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { InputGroup } from '../../Inputs/InputGroup'
 import { TextInput } from '../../Inputs/TextInput'
 import { AddFilterDropdownMenu, IAddFilterDropdownMenuFilter } from '../AddFilterDropdownMenu/AddFilterDropdownMenu'
 import { FilterTag, IFilterTagDetail } from '../FilterTag/FilterTag'
-import { ControllerWrapper } from './style'
+import { ControllerWrapper, StyledController, StyledLeftComponent } from './style'
 
 export interface IFilterControllerProps {
   /** filter dropdown message of this filter controller */
@@ -31,6 +31,8 @@ export interface IFilterControllerProps {
   margins?: Props.IMargins
   /** The data-component-context */
   componentContext?: string
+  /** A component that is shown to the right of the search bar */
+  rightComponent?: JSX.Element
 }
 
 export class FilterController extends React.PureComponent<IFilterControllerProps> {
@@ -50,7 +52,8 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
       onSearchCleared,
       searchValue,
       margins,
-      componentContext
+      componentContext,
+      rightComponent
     } = this.props
 
     return (
@@ -59,24 +62,29 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
         data-component-type={Props.ComponentType.FilterController}
         data-component-context={componentContext}
       >
-        <InputGroup margins={{ bottom: Variables.Spacing.sXSmall }}>
-          <AddFilterDropdownMenu
-            componentContext={componentContext && `${componentContext}-dropdown-menu`}
-            filterMessage={filterMessage}
-            toggleComponent={this.filterButton}
-            filters={filters}
-            onFilterAdded={onFilterAdded}
-          />
-          <TextInput
-            icon={<FontAwesomeIcon type='search' />}
-            name='filterControllerSearchInput'
-            placeholder={searchPlaceholder}
-            value={searchValue}
-            groupPosition='right'
-            handleChange={onSearchUpdated}
-            handleClear={onSearchCleared}
-          />
-        </InputGroup>
+        <StyledController hasBottomMargin={tags.length > 0}>
+          <StyledLeftComponent hasRightMargin={!!rightComponent}>
+            <InputGroup>
+              <AddFilterDropdownMenu
+                componentContext={componentContext && `${componentContext}-dropdown-menu`}
+                filterMessage={filterMessage}
+                toggleComponent={this.filterButton}
+                filters={filters}
+                onFilterAdded={onFilterAdded}
+              />
+              <TextInput
+                icon={<FontAwesomeIcon type='search' />}
+                name='filterControllerSearchInput'
+                placeholder={searchPlaceholder}
+                value={searchValue}
+                groupPosition='right'
+                handleChange={onSearchUpdated}
+                handleClear={onSearchCleared}
+              />
+            </InputGroup>
+          </StyledLeftComponent>
+          {rightComponent}
+        </StyledController>
         <FilterTag
           componentContext={componentContext && `${componentContext}-filter-tag`}
           tags={tags}

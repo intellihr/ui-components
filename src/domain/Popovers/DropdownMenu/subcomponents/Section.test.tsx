@@ -1,7 +1,7 @@
 import { mount, shallow } from 'enzyme'
 import React from 'react'
 
-import { FontAwesomeIcon } from '@Domain/Icons'
+import { FontAwesomeIcon } from '../../../Icons'
 import { Section } from './Section'
 
 describe('<Section />', () => {

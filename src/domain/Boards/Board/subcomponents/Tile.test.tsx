@@ -32,7 +32,7 @@ describe('<Tile />', () => {
 
   it(`should render a large board tile`, () => {
     const wrapper = shallow(
-      <Tile size='large' />
+      <Tile size='fullWidth' />
     )
     expect(wrapper).toMatchSnapshot()
   })

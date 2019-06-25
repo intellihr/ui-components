@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> should render a ard with dropdownSections only 1`] = `
+<styled.div
+  data-component-type="card"
+  hasHoverStyle={false}
+  onClick={[Function]}
+>
+  <styled.div>
+    <styled.div>
+      <div>
+        test2
+      </div>
+    </styled.div>
+    <DropdownMenu
+      hasInitialFocus={false}
+      sections={
+        Array [
+          Object {
+            "href": "https://www.google.com.au",
+            "text": "action1",
+          },
+          Object {
+            "href": "https://www.google.com.au",
+            "text": "action2",
+          },
+        ]
+      }
+      toggleComponent={[Function]}
+    />
+  </styled.div>
+  <styled.div
+    isExpanded={false}
+  />
+</styled.div>
+`;
+
+exports[`<Card /> should render a card with main content and dropdownSections  1`] = `
+<styled.div
+  data-component-type="card"
+  hasHoverStyle={true}
+  onClick={[Function]}
+>
+  <styled.div>
+    <styled.div>
+      <div>
+        test2
+      </div>
+    </styled.div>
+    <DropdownMenu
+      hasInitialFocus={false}
+      sections={
+        Array [
+          Object {
+            "href": "https://www.google.com.au",
+            "text": "action1",
+          },
+          Object {
+            "href": "https://www.google.com.au",
+            "text": "action2",
+          },
+        ]
+      }
+      toggleComponent={[Function]}
+    />
+    <styled.button
+      hasParentHoverStyle={true}
+      isExpanded={false}
+    >
+      <styled.span>
+        <FontAwesomeIcon
+          type="chevron-down"
+        />
+      </styled.span>
+    </styled.button>
+  </styled.div>
+  <styled.div
+    isExpanded={false}
+  >
+    <div>
+      test2
+    </div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<Card /> should render a card with main content only 1`] = `
+<styled.div
+  data-component-type="card"
+  hasHoverStyle={true}
+  onClick={[Function]}
+>
+  <styled.div>
+    <styled.div>
+      <div>
+        test2
+      </div>
+    </styled.div>
+    <styled.button
+      hasParentHoverStyle={true}
+      isExpanded={false}
+    >
+      <styled.span>
+        <FontAwesomeIcon
+          type="chevron-down"
+        />
+      </styled.span>
+    </styled.button>
+  </styled.div>
+  <styled.div
+    isExpanded={false}
+  >
+    <div>
+      test2
+    </div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<Card /> should render a card without main content and dropdownSections 1`] = `
+<styled.div
+  data-component-type="card"
+  hasHoverStyle={false}
+  onClick={[Function]}
+>
+  <styled.div>
+    <styled.div>
+      <div>
+        test2
+      </div>
+    </styled.div>
+  </styled.div>
+  <styled.div
+    isExpanded={false}
+  />
+</styled.div>
+`;

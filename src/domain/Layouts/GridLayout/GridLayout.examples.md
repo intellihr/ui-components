@@ -16,6 +16,7 @@ const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
   minHeight: '2rem',
+  minWidth: '1px',
   height: '100%',
   width: '100%'
 };
@@ -90,6 +91,7 @@ const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
   minHeight: '2rem',
+  minWidth: '1px',
   height: '100%',
   width: '100%'
 };
@@ -151,6 +153,7 @@ const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
   minHeight: '2rem',
+  minWidth: '1px',
   height: '100%',
   width: '100%'
 };
@@ -208,6 +211,7 @@ import { Variables } from '@Common';
 const style = {
   backgroundColor: Variables.Color.n400,
   minHeight: '2rem',
+  minWidth: '1px',
   height: '100%',
   width: '100%'
 };
@@ -344,6 +348,7 @@ import { Variables } from '@Common';
 const style = {
   backgroundColor: Variables.Color.n400,
   minHeight: '2rem',
+  minWidth: '1px',
   height: '100%',
   width: '100%'
 };
@@ -446,6 +451,7 @@ import { Variables } from '@Common';
 const style = {
   backgroundColor: Variables.Color.n400,
   minHeight: '2rem',
+  minWidth: '1px',
   height: '100%',
   width: '100%'
 };
@@ -523,6 +529,7 @@ const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
   minHeight: '2rem',
+  minWidth: '1px',
   height: '100%',
   width: '100%'
 };
@@ -574,6 +581,7 @@ const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
   minHeight: '2rem',
+  minWidth: '1px',
   width: '100%',
   textAlign: 'center'
 };
@@ -715,6 +723,7 @@ const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
   minHeight: '2rem',
+  minWidth: '1px',
   width: '100%',
   textAlign: 'center'
 };
@@ -766,6 +775,7 @@ const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
   minHeight: '2rem',
+  minWidth: '1px',
   width: '100%',
   height: '100%',
   textAlign: 'center'
@@ -889,6 +899,7 @@ const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
   minHeight: '2rem',
+  minWidth: '1px',
   width: '100%',
   height: '100%',
   textAlign: 'center'
@@ -945,7 +956,8 @@ import { Variables } from '@Common';
 const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
-  minHeight: '2rem'
+  minHeight: '2rem',
+  minWidth: '1px'
 };
 
 <GridLayout
@@ -1015,7 +1027,8 @@ import { Variables } from '@Common';
 const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
-  minHeight: '2rem'
+  minHeight: '2rem',
+  minWidth: '1px'
 };
 
 <GridLayout
@@ -1072,6 +1085,7 @@ const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
   minHeight: '2rem',
+  minWidth: '1px',
   height: '100%',
   width: '100%'
 };
@@ -1135,6 +1149,7 @@ const style = {
   backgroundColor: Variables.Color.n400,
   border: `2px solid ${Variables.Color.n100}`,
   minHeight: '2rem',
+  minWidth: '1px',
   height: '100%',
   width: '100%'
 };
@@ -1205,6 +1220,7 @@ import { Button } from '@Domain/Buttons';
 const style = {
   backgroundColor: Variables.Color.n400,
   minHeight: '2rem',
+  minWidth: '1px',
   height: '100%',
   width: '100%'
 };
@@ -1353,4 +1369,96 @@ function ParentComponent() {
 }
 
 <ParentComponent />
+#### Custom margins
+
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  minWidth: '1px',
+  height: '100%',
+  width: '100%'
+};
+
+<GridLayout
+  gutterMarginX={Variables.Spacing.sMedium}
+  gutterMarginY={Variables.Spacing.sSmall}
+  margins={{
+        top: Variables.Spacing.sMedium,
+        left: Variables.Spacing.sMedium,
+        right: Variables.Spacing.sMedium,
+        bottom: Variables.Spacing.sMedium
+      }}
+  cells={[
+    {
+      size: 10,
+      content: <div style={style}/>
+    },
+    {
+      size: 2,
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 3, tablet: 4 },
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 6, tablet: 4 },
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 3, tablet: 4 },
+      content: <div style={style}/>
+    }
+  ]}
+/>
+```
+
+Margins also support being customised per breakpoint.
+
+```jsx
+import { Variables } from '@Common';
+
+const style = {
+  backgroundColor: Variables.Color.n400,
+  border: `2px solid ${Variables.Color.n100}`,
+  minHeight: '2rem',
+  minWidth: '1px',
+  height: '100%',
+  width: '100%'
+};
+
+<GridLayout
+  margins={{
+        top: { desktop: Variables.Spacing.sMedium, min:'none'},
+        left: Variables.Spacing.sMedium,
+        right: Variables.Spacing.sMedium,
+        bottom: Variables.Spacing.sMedium
+      }}
+  cells={[
+    {
+      size: 10,
+      content: <div style={style}/>
+    },
+    {
+      size: 2,
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 3, tablet: 4 },
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 6, tablet: 4 },
+      content: <div style={style}/>
+    },
+    {
+      size: { desktop: 3, tablet: 4 },
+      content: <div style={style}/>
+    }
+  ]}
+/>
 ```

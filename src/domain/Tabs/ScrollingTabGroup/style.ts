@@ -1,4 +1,3 @@
-import React from 'react'
 import styled, { StyledComponentClass, css } from 'styled-components'
 
 import { Variables } from '../../../common'
@@ -53,14 +52,20 @@ const TabList = styled.ul`
   font-size: ${Variables.FontSize.fzBody}px;
   height: 100%;
   line-height: ${TabStyleConstants.GroupHeight}px;
+  -ms-overflow-style: none;
   list-style-type: none;
   margin: 0;
   overflow-x: scroll;
   overflow-y: hidden;
-  padding-bottom: 100px;
   padding-left: 0;
   position: relative;
+  scrollbar-width: none;
   white-space: nowrap;
+
+  &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+  }
 
   &:after,
   &:before {
@@ -81,7 +86,7 @@ interface ITabListItemAnchorProps {
 const TabListItemAnchor = styled.a`
   color: ${Variables.Color.n600};
   display: block;
-  font-weight: ${Variables.FontWeight.fwHeavy};
+  font-weight: ${Variables.FontWeight.fwSemiBold};
   line-height: ${TabStyleConstants.GroupHeight}px;
   outline: none;
   position: relative;

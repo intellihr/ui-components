@@ -3,7 +3,7 @@
 exports[`<HighLightArea /> should render a HighlightArea 1`] = `
 .c0 {
   border: 1px solid #C5CED6;
-  background-color: #F5F7FA;
+  background-color: #FAFBFC;
   padding: 16px;
   border-radius: 4px;
 }

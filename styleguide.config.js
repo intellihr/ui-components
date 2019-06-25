@@ -1,13 +1,41 @@
 const path = require('path')
 const _ = require('lodash')
 const docGenTypescript = require('react-docgen-typescript')
+const webpackConfig = require('./webpack.config');
+
+// Styleguidist includes some packages which are es6 and must be converted to work in ie11
+// See: https://github.com/styleguidist/react-styleguidist/pull/1327
+const TRANSFORMS_FOR_IE11 = {
+  test: /\.jsx?$/,
+  include: /node_modules\/(?=(acorn-jsx|regexpu-core|unicode-match-property-ecmascript|unicode-match-property-value-ecmascript|react-dev-utils|ansi-styles|ansi-regex|chalk|strip-ansi)\/).*/,
+  use: {
+    loader: 'babel-loader',
+    options: {
+      presets: [
+        [
+          '@babel/preset-env',
+          {
+            targets: {
+              ie: '11'
+            }
+          }
+        ]
+      ]
+    }
+  }
+};
+webpackConfig.module.rules = [
+  TRANSFORMS_FOR_IE11,
+  ...webpackConfig.module.rules
+];
 
 module.exports = {
+  webpackConfig,
   title: 'IntelliHR Design System',
   require: [
-    require.resolve('babel-polyfill'),
-    path.resolve(__dirname, 'src/common/sass/style.ts'),
-    path.resolve(__dirname, 'src/index.ts')
+    require.resolve('core-js/stable'),
+    require.resolve('regenerator-runtime/runtime'),
+    path.resolve(__dirname, 'src/common/sass/app.scss')
   ],
   propsParser: docGenTypescript.withCustomConfig('./tsconfig.json').parse,
   getComponentPathLine(componentPath) {
@@ -88,6 +116,13 @@ module.exports = {
           ]
         },
         {
+          name: 'Cards',
+          components: [
+            'src/domain/Cards/Card/Card.tsx',
+            'src/domain/Cards/GroupCard/GroupCard.tsx'
+          ]
+        },
+        {
           name: 'Charts',
           components: [
             'src/domain/Charts/RadarChart/RadarChart.tsx',
@@ -117,9 +152,10 @@ module.exports = {
         {
           name: 'Formats',
           components: [
-            'src/domain/Formats/Record/Record.tsx',
-            'src/domain/Formats/IndentedElement/IndentedElement.tsx',
             'src/domain/Formats/HintWrapper/HintWrapper.tsx',
+            'src/domain/Formats/IndentedElement/IndentedElement.tsx',
+            'src/domain/Formats/Record/Record.tsx',
+            'src/domain/Formats/Statistic/Statistic.tsx',
           ]
         },
         {
@@ -160,6 +196,7 @@ module.exports = {
         {
           name: 'Layouts',
           components: [
+            'src/domain/Layouts/Carousel/Carousel.tsx',
             'src/domain/Layouts/LayoutSpacer/LayoutSpacer.tsx',
             'src/domain/Layouts/GridLayout/GridLayout.tsx',
             'src/domain/Layouts/PageLayout/PageLayout.tsx',
@@ -244,6 +281,7 @@ module.exports = {
           components: [
             'src/domain/Skeletons/BlockSkeleton/BlockSkeleton.tsx',
             'src/domain/Skeletons/CircleSkeleton/CircleSkeleton.tsx',
+            'src/domain/Skeletons/FormSkeleton/FormSkeleton.tsx',
             'src/domain/Skeletons/ParagraphSkeleton/ParagraphSkeleton.tsx',
             'src/domain/Skeletons/TextSkeleton/TextSkeleton.tsx'
           ]

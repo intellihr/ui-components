@@ -1,7 +1,7 @@
 import { mount } from 'enzyme'
 import React from 'react'
 
-import { DefaultsProvider } from '@Domain/Defaults'
+import { DefaultsProvider } from '../../Defaults'
 import { ActionLink } from './ActionLink'
 
 describe('<ActionLink />', () => {

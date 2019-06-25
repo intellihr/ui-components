@@ -79,7 +79,7 @@ const CenteredContentHeading = styled.div`
   width: 100%;
   margin-top: ${Variables.Spacing.sMedium}px;
   padding: 0 ${Variables.Spacing.sSmall}px;
-  font-weight: ${Variables.FontWeight.fwHeavy};
+  font-weight: ${Variables.FontWeight.fwSemiBold};
   line-height: ${Variables.LineHeight.lhDisplayLarge}px;
   font-size: ${Variables.FontSize.fzDisplayLarge}px;
   color: ${Variables.Color.n800};

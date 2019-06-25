@@ -16,12 +16,24 @@ exports[`<VerticalForm /> should render with an onChange and onSubmit attributes
       "calls": Array [
         Array [],
       ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
     }
   }
   onSubmit={
     [MockFunction] {
       "calls": Array [
         Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
       ],
     }
   }
