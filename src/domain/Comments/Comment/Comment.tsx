@@ -89,7 +89,7 @@ export class Comment extends React.Component<ICommentProps> {
       <CommentActionMenuToggleButton
         type='button'
         onClick={props.toggleMenu}
-        innerRef={props.toggleComponentRef}
+        ref={props.toggleComponentRef}
         {...props.ariaProps}
       >
         <FontAwesomeIcon type='ellipsis-v' />

@@ -39,11 +39,12 @@ class Button extends React.PureComponent<IInputGroupButtonProps> {
     return (
       <InputGroupButton
         {...props}
-        innerRef={innerRef}
+        ref={innerRef}
         onClick={onClick}
         disabled={disabled}
         groupPosition={groupPosition}
         type='button'
+        as={undefined}
       >
         {leftComponent && <span className='left-component'>{leftComponent}</span>}
         {children}

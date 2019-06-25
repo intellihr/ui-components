@@ -32,27 +32,97 @@ exports[`<LayoutSpacer /> should render a layout spacer with no spacing sizes de
       data-component-type="layout_spacer_item"
       key="0"
     >
-      <div
-        className="c0"
+      <StyledComponent
         data-component-type="layout_spacer_item"
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "
+  margin-bottom: ",
+                [Function],
+                "px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
       >
-        <div>
-          a
+        <div
+          className="c0"
+          data-component-type="layout_spacer_item"
+        >
+          <div>
+            a
+          </div>
         </div>
-      </div>
+      </StyledComponent>
     </styled.div>
     <styled.div
       data-component-type="layout_spacer_item"
       key="1"
     >
-      <div
-        className="c0"
+      <StyledComponent
         data-component-type="layout_spacer_item"
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "
+  margin-bottom: ",
+                [Function],
+                "px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
       >
-        <div>
-          b
+        <div
+          className="c0"
+          data-component-type="layout_spacer_item"
+        >
+          <div>
+            b
+          </div>
         </div>
-      </div>
+      </StyledComponent>
     </styled.div>
   </div>
 </LayoutSpacer>
@@ -89,14 +159,49 @@ exports[`<LayoutSpacer /> should render a layout spacer with null content 1`] = 
       data-component-type="layout_spacer_item"
       key="1"
     >
-      <div
-        className="c0"
+      <StyledComponent
         data-component-type="layout_spacer_item"
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "
+  margin-bottom: ",
+                [Function],
+                "px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
       >
-        <div>
-          a
+        <div
+          className="c0"
+          data-component-type="layout_spacer_item"
+        >
+          <div>
+            a
+          </div>
         </div>
-      </div>
+      </StyledComponent>
     </styled.div>
   </div>
 </LayoutSpacer>
@@ -186,69 +291,248 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
       key="0"
       spacingSize="small"
     >
-      <div
-        className="c0"
+      <StyledComponent
         data-component-type="layout_spacer_item"
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c4",
+              "rules": Array [
+                "
+  margin-bottom: ",
+                [Function],
+                "px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        spacingSize="small"
       >
-        <div>
-          a
+        <div
+          className="c0"
+          data-component-type="layout_spacer_item"
+        >
+          <div>
+            a
+          </div>
         </div>
-      </div>
+      </StyledComponent>
     </styled.div>
     <styled.div
       data-component-type="layout_spacer_item"
       key="1"
       spacingSize="medium"
     >
-      <div
-        className="c1"
+      <StyledComponent
         data-component-type="layout_spacer_item"
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c4",
+              "rules": Array [
+                "
+  margin-bottom: ",
+                [Function],
+                "px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        spacingSize="medium"
       >
-        <div>
-          b
+        <div
+          className="c1"
+          data-component-type="layout_spacer_item"
+        >
+          <div>
+            b
+          </div>
         </div>
-      </div>
+      </StyledComponent>
     </styled.div>
     <styled.div
       data-component-type="layout_spacer_item"
       key="2"
       spacingSize="large"
     >
-      <div
-        className="c2"
+      <StyledComponent
         data-component-type="layout_spacer_item"
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c4",
+              "rules": Array [
+                "
+  margin-bottom: ",
+                [Function],
+                "px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        spacingSize="large"
       >
-        <div>
-          c
+        <div
+          className="c2"
+          data-component-type="layout_spacer_item"
+        >
+          <div>
+            c
+          </div>
         </div>
-      </div>
+      </StyledComponent>
     </styled.div>
     <styled.div
       data-component-type="layout_spacer_item"
       key="3"
       spacingSize="xlarge"
     >
-      <div
-        className="c3"
+      <StyledComponent
         data-component-type="layout_spacer_item"
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c4",
+              "rules": Array [
+                "
+  margin-bottom: ",
+                [Function],
+                "px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        spacingSize="xlarge"
       >
-        <div>
-          d
+        <div
+          className="c3"
+          data-component-type="layout_spacer_item"
+        >
+          <div>
+            d
+          </div>
         </div>
-      </div>
+      </StyledComponent>
     </styled.div>
     <styled.div
       data-component-type="layout_spacer_item"
       key="4"
     >
-      <div
-        className="c4"
+      <StyledComponent
         data-component-type="layout_spacer_item"
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c4",
+              "rules": Array [
+                "
+  margin-bottom: ",
+                [Function],
+                "px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
       >
-        <div>
-          e
+        <div
+          className="c4"
+          data-component-type="layout_spacer_item"
+        >
+          <div>
+            e
+          </div>
         </div>
-      </div>
+      </StyledComponent>
     </styled.div>
   </div>
 </LayoutSpacer>

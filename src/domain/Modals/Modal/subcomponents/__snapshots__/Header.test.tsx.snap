@@ -1,12 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Header /> should render modal header 1`] = `
-.c0 {
-  height: 80px;
-  background-color: #F5F7FA;
-  padding: 24px;
-}
-
 .c1 {
   font-size: 24px;
   line-height: 32px;
@@ -18,30 +12,132 @@ exports[`<Header /> should render modal header 1`] = `
   font-weight: 600;
 }
 
+.c0 {
+  height: 80px;
+  background-color: #F5F7FA;
+  padding: 24px;
+}
+
 <Header>
   <styled.div>
-    <div
-      className="c0"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-htoDjs",
+            "isStatic": true,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  height: 80px;
+  background-color: ",
+              "#F5F7FA",
+              ";
+  padding: 24px;
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-htoDjs",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      <Text
-        isInline={true}
-        tag="span"
-        type="display"
+      <div
+        className="c0"
       >
-        <styled.span
-          data-component-type="text"
+        <Text
           isInline={true}
-          textType="display"
+          tag="span"
+          type="display"
         >
-          <span
-            className="c1"
+          <styled.span
+            as="span"
             data-component-type="text"
+            isInline={true}
+            textType="display"
           >
-            Header Text
-          </span>
-        </styled.span>
-      </Text>
-    </div>
+            <StyledComponent
+              as="span"
+              data-component-type="text"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-gzVnrw",
+                    "isStatic": false,
+                    "lastClassName": "c1",
+                    "rules": Array [
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-gzVnrw",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              isInline={true}
+              textType="display"
+            >
+              <span
+                className="c1"
+                data-component-type="text"
+              >
+                Header Text
+              </span>
+            </StyledComponent>
+          </styled.span>
+        </Text>
+      </div>
+    </StyledComponent>
   </styled.div>
 </Header>
 `;

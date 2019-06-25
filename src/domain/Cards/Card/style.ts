@@ -62,7 +62,7 @@ const StyledCardToggleButton = styled.button`
   }
 `
 
-const StyledActionButton = styled.button`
+const StyledActionButton = styled.button<IStyleActionButtonProps>`
   ${cardButtonStyle};
 
   &:hover ${StyledCardToggleButton} {

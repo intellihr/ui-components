@@ -12,11 +12,14 @@ const progress = keyframes`
     opacity: .9;
   }
 `
+const animateProgressRule = css`
+  ${progress} .8s linear infinite alternate;
+`
 
 function styleForSkeletons (margins?: Props.IMargins) {
- return (
-   css`
-    animation: ${progress} .8s linear infinite alternate;
+  return (
+    css`
+    animation: ${animateProgressRule};
     backface-visibility: hidden;
     will-change: opacity;
     background-color: ${Variables.Color.n300};
@@ -24,7 +27,7 @@ function styleForSkeletons (margins?: Props.IMargins) {
     display: block;
     ${() => styleForMargins(margins)};
   `
- )
+  )
 }
 
 export {
