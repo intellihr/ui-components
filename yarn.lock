@@ -721,10 +721,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@intellihr/icons@0.0.8":
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/@intellihr/icons/-/icons-0.0.8.tgz#83b93f257077b713b529e7afcd8cf97d6f3b0de6"
-  integrity sha512-YecWxEqNAUCt/enxM2eGNe/dklc8Z7l2jV1ew3uxDFeyDvLhCb3P949h97SoP91H7cLsPCLcdn/jRM3NjcfHPQ==
+"@intellihr/icons@^0.0.9":
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/@intellihr/icons/-/icons-0.0.9.tgz#5278a37ee4927eee40c098e13b67836f5ed58268"
+  integrity sha512-1T5cvqago6hEqCcKIhgcue3EMZ1BgeuNVdITHyT5A6lfM2dHaxPXiJRdpN3LGDWisWecIuISLuKvtB/okwvByw==
 
 "@intellihr/standard-tslint@^2.1.1":
   version "2.1.1"
