@@ -1367,8 +1367,9 @@ function ParentComponent() {
     </>
   )
 }
-
 <ParentComponent />
+```
+
 #### Custom margins
 
 ```jsx
