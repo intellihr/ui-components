@@ -1,6 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Icon /> should render a large icon 1`] = `
+.c0 {
+  width: 1.28571em;
+}
+
+.c0.icon {
+  text-align: center;
+  font-size: 1.3125rem;
+}
+
 <Icon
   isSpinning={false}
   size="large"
@@ -21,7 +30,7 @@ exports[`<Icon /> should render a large icon 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bwzfXH",
             "isStatic": false,
-            "lastClassName": "XwtFX",
+            "lastClassName": "c0",
             "rules": Array [
               "
    width: 1.28571em;
@@ -55,7 +64,7 @@ exports[`<Icon /> should render a large icon 1`] = `
     >
       <i
         aria-hidden={true}
-        className="icon fa fa-circle XwtFX"
+        className="icon fa fa-circle c0"
         size="large"
       />
     </StyledComponent>
@@ -64,6 +73,15 @@ exports[`<Icon /> should render a large icon 1`] = `
 `;
 
 exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
+.c0 {
+  width: 1.28571em;
+}
+
+.c0.icon {
+  text-align: center;
+  font-size: 1rem;
+}
+
 <Icon
   isSpinning={false}
   size="medium"
@@ -84,7 +102,7 @@ exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bwzfXH",
             "isStatic": false,
-            "lastClassName": "gvHWRV",
+            "lastClassName": "c0",
             "rules": Array [
               "
    width: 1.28571em;
@@ -118,7 +136,7 @@ exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
     >
       <i
         aria-hidden={true}
-        className="icon fa intelli-icon-avatar gvHWRV"
+        className="icon fa intelli-icon-avatar c0"
         size="medium"
       />
     </StyledComponent>
@@ -127,6 +145,51 @@ exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
 `;
 
 exports[`<Icon /> should render an icon with a badge 1`] = `
+.c1 {
+  position: absolute;
+  margin-top: -9px;
+  margin-left: -15px;
+}
+
+.c0 {
+  width: 1.28571em;
+}
+
+.c0.icon {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.c2 {
+  background-color: #CADDFC;
+  color: #CADDFC;
+  border: 1px solid #C5CED6;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.24);
+  border-radius: 50%;
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c2,
+.c2 .fa {
+  font-size: 15px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+}
+
+.c2 .refresh-icon {
+  background-color: transparent;
+  position: relative;
+  top: -1px;
+  left: -1px;
+}
+
 <Icon
   badge={
     <Badge
@@ -156,7 +219,7 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bwzfXH",
             "isStatic": false,
-            "lastClassName": "ncspi",
+            "lastClassName": "c0",
             "rules": Array [
               "
    width: 1.28571em;
@@ -190,7 +253,7 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
     >
       <i
         aria-hidden={true}
-        className="icon fa fa-check ncspi"
+        className="icon fa fa-check c0"
         size="xlarge"
       />
     </StyledComponent>
@@ -206,7 +269,7 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "eLLZRT",
+            "lastClassName": "c1",
             "rules": Array [
               "
   position: absolute;
@@ -231,7 +294,7 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
       size="xlarge"
     >
       <span
-        className="eLLZRT"
+        className="c1"
         size="xlarge"
       >
         <Badge
@@ -257,7 +320,7 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-htpNat",
                     "isStatic": false,
-                    "lastClassName": "csULxC",
+                    "lastClassName": "c2",
                     "rules": Array [
                       "
   ",
@@ -308,7 +371,7 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
               size="medium"
             >
               <span
-                className="csULxC"
+                className="c2"
                 color="#CADDFC"
                 size="medium"
               >
@@ -324,6 +387,15 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
 `;
 
 exports[`<Icon /> should render icon with a custom size 1`] = `
+.c0 {
+  width: 1.28571em;
+}
+
+.c0.icon {
+  text-align: center;
+  font-size: 2.6rem;
+}
+
 <Icon
   customSize={2.6}
   isSpinning={false}
@@ -347,7 +419,7 @@ exports[`<Icon /> should render icon with a custom size 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bwzfXH",
             "isStatic": false,
-            "lastClassName": "jdtxAT",
+            "lastClassName": "c0",
             "rules": Array [
               "
    width: 1.28571em;
@@ -381,7 +453,7 @@ exports[`<Icon /> should render icon with a custom size 1`] = `
     >
       <i
         aria-hidden={true}
-        className="icon fa fa-check jdtxAT"
+        className="icon fa fa-check c0"
         size="medium"
       />
     </StyledComponent>
@@ -390,6 +462,16 @@ exports[`<Icon /> should render icon with a custom size 1`] = `
 `;
 
 exports[`<Icon /> should render icon with colour 1`] = `
+.c0 {
+  width: 1.28571em;
+  color: #1A2B3C;
+}
+
+.c0.icon {
+  text-align: center;
+  font-size: 1rem;
+}
+
 <Icon
   color="#1A2B3C"
   isSpinning={false}
@@ -413,7 +495,7 @@ exports[`<Icon /> should render icon with colour 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bwzfXH",
             "isStatic": false,
-            "lastClassName": "gcIcGN",
+            "lastClassName": "c0",
             "rules": Array [
               "
    width: 1.28571em;
@@ -447,7 +529,7 @@ exports[`<Icon /> should render icon with colour 1`] = `
     >
       <i
         aria-hidden={true}
-        className="icon fa fa-check gcIcGN"
+        className="icon fa fa-check c0"
         color="#1A2B3C"
         size="medium"
       />
@@ -457,6 +539,15 @@ exports[`<Icon /> should render icon with colour 1`] = `
 `;
 
 exports[`<Icon /> should render icon with no size or colour 1`] = `
+.c0 {
+  width: 1.28571em;
+}
+
+.c0.icon {
+  text-align: center;
+  font-size: 1rem;
+}
+
 <Icon
   isSpinning={false}
   size="medium"
@@ -477,7 +568,7 @@ exports[`<Icon /> should render icon with no size or colour 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bwzfXH",
             "isStatic": false,
-            "lastClassName": "gvHWRV",
+            "lastClassName": "c0",
             "rules": Array [
               "
    width: 1.28571em;
@@ -511,7 +602,7 @@ exports[`<Icon /> should render icon with no size or colour 1`] = `
     >
       <i
         aria-hidden={true}
-        className="icon fa fa-check gvHWRV"
+        className="icon fa fa-check c0"
         size="medium"
       />
     </StyledComponent>
@@ -520,6 +611,15 @@ exports[`<Icon /> should render icon with no size or colour 1`] = `
 `;
 
 exports[`<Icon /> should render icon with size 1`] = `
+.c0 {
+  width: 1.28571em;
+}
+
+.c0.icon {
+  text-align: center;
+  font-size: 1rem;
+}
+
 <Icon
   isSpinning={false}
   size="medium"
@@ -540,7 +640,7 @@ exports[`<Icon /> should render icon with size 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bwzfXH",
             "isStatic": false,
-            "lastClassName": "gvHWRV",
+            "lastClassName": "c0",
             "rules": Array [
               "
    width: 1.28571em;
@@ -574,7 +674,7 @@ exports[`<Icon /> should render icon with size 1`] = `
     >
       <i
         aria-hidden={true}
-        className="icon fa fa-check gvHWRV"
+        className="icon fa fa-check c0"
         size="medium"
       />
     </StyledComponent>

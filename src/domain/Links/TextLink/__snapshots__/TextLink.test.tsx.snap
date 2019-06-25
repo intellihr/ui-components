@@ -1,6 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TextLink /> should render a text link 1`] = `
+.c0 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  display: inline;
+}
+
+.c0,
+.c0:link,
+.c0:visited {
+  color: #432DF3;
+}
+
+.c0:hover {
+  color: #2512B3;
+}
+
+.c0:active {
+  color: #0F0080;
+}
+
 <TextLink
   href="/lol"
   isInline={true}
@@ -19,7 +46,7 @@ exports[`<TextLink /> should render a text link 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "hqCXqt",
+            "lastClassName": "c0",
             "rules": Array [
               "
   ",
@@ -78,18 +105,18 @@ exports[`<TextLink /> should render a text link 1`] = `
       type="anchor"
     >
       <Component
-        className="hqCXqt"
+        className="c0"
         href="/lol"
         isInline={true}
         type="anchor"
       >
         <Anchor
-          className="hqCXqt"
+          className="c0"
           href="/lol"
           type="anchor"
         >
           <a
-            className="hqCXqt"
+            className="c0"
             href="/lol"
             type="anchor"
           >
@@ -103,6 +130,34 @@ exports[`<TextLink /> should render a text link 1`] = `
 `;
 
 exports[`<TextLink /> should render a text link button 1`] = `
+.c0 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  display: inline;
+  outline: 0;
+}
+
+.c0,
+.c0:link,
+.c0:visited {
+  color: #432DF3;
+}
+
+.c0:hover {
+  color: #2512B3;
+}
+
+.c0:active {
+  color: #0F0080;
+}
+
 <TextLink
   isInline={true}
   type="button"
@@ -119,7 +174,7 @@ exports[`<TextLink /> should render a text link button 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bwzfXH",
             "isStatic": false,
-            "lastClassName": "bedTht",
+            "lastClassName": "c0",
             "rules": Array [
               "
   ",
@@ -178,7 +233,7 @@ exports[`<TextLink /> should render a text link button 1`] = `
       type="button"
     >
       <button
-        className="bedTht"
+        className="c0"
         type="button"
       >
         Text link me
@@ -189,6 +244,33 @@ exports[`<TextLink /> should render a text link button 1`] = `
 `;
 
 exports[`<TextLink /> should render a text link with display block 1`] = `
+.c0 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  display: block;
+}
+
+.c0,
+.c0:link,
+.c0:visited {
+  color: #432DF3;
+}
+
+.c0:hover {
+  color: #2512B3;
+}
+
+.c0:active {
+  color: #0F0080;
+}
+
 <TextLink
   href="#"
   isInline={false}
@@ -207,7 +289,7 @@ exports[`<TextLink /> should render a text link with display block 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "ftWmR",
+            "lastClassName": "c0",
             "rules": Array [
               "
   ",
@@ -266,18 +348,18 @@ exports[`<TextLink /> should render a text link with display block 1`] = `
       type="anchor"
     >
       <Component
-        className="ftWmR"
+        className="c0"
         href="#"
         isInline={false}
         type="anchor"
       >
         <Anchor
-          className="ftWmR"
+          className="c0"
           href="#"
           type="anchor"
         >
           <a
-            className="ftWmR"
+            className="c0"
             href="#"
             type="anchor"
           >
@@ -291,6 +373,35 @@ exports[`<TextLink /> should render a text link with display block 1`] = `
 `;
 
 exports[`<TextLink /> should render a text link with underline on hover 1`] = `
+.c0 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  display: inline;
+}
+
+.c0,
+.c0:link,
+.c0:visited {
+  color: #432DF3;
+}
+
+.c0:hover {
+  color: #2512B3;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c0:active {
+  color: #0F0080;
+}
+
 <TextLink
   href="#"
   isInline={true}
@@ -311,7 +422,7 @@ exports[`<TextLink /> should render a text link with underline on hover 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "cHnwZo",
+            "lastClassName": "c0",
             "rules": Array [
               "
   ",
@@ -371,20 +482,20 @@ exports[`<TextLink /> should render a text link with underline on hover 1`] = `
       underlineOnHover={true}
     >
       <Component
-        className="cHnwZo"
+        className="c0"
         href="#"
         isInline={true}
         type="anchor"
         underlineOnHover={true}
       >
         <Anchor
-          className="cHnwZo"
+          className="c0"
           href="#"
           type="anchor"
           underlineOnHover={true}
         >
           <a
-            className="cHnwZo"
+            className="c0"
             href="#"
             type="anchor"
             underlineOnHover={true}

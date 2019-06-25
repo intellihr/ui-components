@@ -1,6 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TextLink /> should render a text link 1`] = `
+.c0,
+.c0:link,
+.c0:visited,
+.c0:hover,
+.c0:active {
+  color: inherit;
+}
+
 <UnstyledLink
   href="/lol"
 >
@@ -12,7 +20,7 @@ exports[`<TextLink /> should render a text link 1`] = `
         "componentStyle": ComponentStyle {
           "componentId": "sc-bdVaJa",
           "isStatic": true,
-          "lastClassName": "gNkBYZ",
+          "lastClassName": "c0",
           "rules": Array [
             "
   &,
@@ -39,11 +47,11 @@ exports[`<TextLink /> should render a text link 1`] = `
     href="/lol"
   >
     <Anchor
-      className="gNkBYZ"
+      className="c0"
       href="/lol"
     >
       <a
-        className="gNkBYZ"
+        className="c0"
         href="/lol"
       >
         Text link me

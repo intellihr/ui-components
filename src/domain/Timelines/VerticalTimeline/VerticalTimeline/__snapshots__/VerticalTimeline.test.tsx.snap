@@ -1,6 +1,85 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
+.c3 {
+  margin: 40px 0;
+  position: relative;
+}
+
+.c3:first-child {
+  margin-top: 0;
+}
+
+.c3:last-child {
+  margin-bottom: 0;
+}
+
+.c5 {
+  position: absolute;
+  width: auto;
+  height: 0;
+  left: 88px;
+  top: 12px;
+}
+
+.c5 > * {
+  top: -50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.c4 {
+  text-align: right;
+  color: #667380;
+  position: absolute;
+  width: 4rem;
+  font-size: 14px;
+  top: 6px;
+  line-height: 1;
+}
+
+.c6 {
+  border: 2px solid #E1E6EB;
+  position: absolute;
+  left: 50%;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: white;
+}
+
+.c7 {
+  margin-left: 7rem;
+}
+
+.c0 {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.c1 {
+  text-align: right;
+  width: 4rem;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.c2 {
+  position: relative;
+}
+
+.c2::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 87px;
+  height: calc(100% - 16px);
+  width: 2px;
+  background: #E1E6EB;
+}
+
 <VerticalTimeline
   year="2006"
 >
@@ -16,7 +95,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-EHOje",
             "isStatic": true,
-            "lastClassName": "bNnMYM",
+            "lastClassName": "c0",
             "rules": Array [
               "
   margin-bottom: 20px;
@@ -37,7 +116,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
       forwardedRef={null}
     >
       <div
-        className="vertical-timeline bNnMYM"
+        className="vertical-timeline c0"
       >
         <styled.div>
           <StyledComponent
@@ -48,7 +127,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-bZQynM",
                   "isStatic": true,
-                  "lastClassName": "gsgehy",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   text-align: right;
@@ -71,7 +150,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
             forwardedRef={null}
           >
             <div
-              className="gsgehy"
+              className="c1"
             >
               2006
             </div>
@@ -86,7 +165,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-gzVnrw",
                   "isStatic": true,
-                  "lastClassName": "kuURQc",
+                  "lastClassName": "c2",
                   "rules": Array [
                     "
   position: relative;
@@ -118,7 +197,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
             forwardedRef={null}
           >
             <div
-              className="kuURQc"
+              className="c2"
             >
               <VerticalTimelineEvent
                 eventDate="21 Apr"
@@ -135,7 +214,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                         "componentStyle": ComponentStyle {
                           "componentId": "sc-bdVaJa",
                           "isStatic": true,
-                          "lastClassName": "eGMeTK",
+                          "lastClassName": "c3",
                           "rules": Array [
                             "
   margin: 40px 0;
@@ -164,7 +243,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                     forwardedRef={null}
                   >
                     <div
-                      className="vertical-timeline-event eGMeTK"
+                      className="vertical-timeline-event c3"
                     >
                       <styled.span>
                         <StyledComponent
@@ -175,7 +254,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-htpNat",
                                 "isStatic": true,
-                                "lastClassName": "dhpAfq",
+                                "lastClassName": "c4",
                                 "rules": Array [
                                   "
   text-align: right;
@@ -203,7 +282,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                           forwardedRef={null}
                         >
                           <span
-                            className="dhpAfq"
+                            className="c4"
                           >
                             21 Apr
                           </span>
@@ -218,7 +297,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-bwzfXH",
                                 "isStatic": true,
-                                "lastClassName": "iPWyQt",
+                                "lastClassName": "c5",
                                 "rules": Array [
                                   "
   position: absolute;
@@ -247,7 +326,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                           forwardedRef={null}
                         >
                           <div
-                            className="iPWyQt"
+                            className="c5"
                           >
                             <styled.span>
                               <StyledComponent
@@ -258,7 +337,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": true,
-                                      "lastClassName": "jUfIlj",
+                                      "lastClassName": "c6",
                                       "rules": Array [
                                         "
   border: 2px solid ",
@@ -287,7 +366,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                                 forwardedRef={null}
                               >
                                 <span
-                                  className="jUfIlj"
+                                  className="c6"
                                 />
                               </StyledComponent>
                             </styled.span>
@@ -303,7 +382,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-ifAKCX",
                                 "isStatic": true,
-                                "lastClassName": "PTGTz",
+                                "lastClassName": "c7",
                                 "rules": Array [
                                   "
   margin-left: 7rem;
@@ -323,7 +402,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                           forwardedRef={null}
                         >
                           <div
-                            className="PTGTz"
+                            className="c7"
                           >
                             Event that happened
                           </div>
@@ -343,6 +422,85 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
 `;
 
 exports[`<VerticalTimeline /> should render a vertical timeline without a year 1`] = `
+.c3 {
+  margin: 40px 0;
+  position: relative;
+}
+
+.c3:first-child {
+  margin-top: 0;
+}
+
+.c3:last-child {
+  margin-bottom: 0;
+}
+
+.c5 {
+  position: absolute;
+  width: auto;
+  height: 0;
+  left: 88px;
+  top: 12px;
+}
+
+.c5 > * {
+  top: -50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.c4 {
+  text-align: right;
+  color: #667380;
+  position: absolute;
+  width: 4rem;
+  font-size: 14px;
+  top: 6px;
+  line-height: 1;
+}
+
+.c6 {
+  border: 2px solid #E1E6EB;
+  position: absolute;
+  left: 50%;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: white;
+}
+
+.c7 {
+  margin-left: 7rem;
+}
+
+.c0 {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.c1 {
+  text-align: right;
+  width: 4rem;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.c2 {
+  position: relative;
+}
+
+.c2::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 87px;
+  height: calc(100% - 16px);
+  width: 2px;
+  background: #E1E6EB;
+}
+
 <VerticalTimeline>
   <styled.div
     className="vertical-timeline"
@@ -356,7 +514,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
           "componentStyle": ComponentStyle {
             "componentId": "sc-EHOje",
             "isStatic": true,
-            "lastClassName": "bNnMYM",
+            "lastClassName": "c0",
             "rules": Array [
               "
   margin-bottom: 20px;
@@ -377,7 +535,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
       forwardedRef={null}
     >
       <div
-        className="vertical-timeline bNnMYM"
+        className="vertical-timeline c0"
       >
         <styled.div>
           <StyledComponent
@@ -388,7 +546,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-bZQynM",
                   "isStatic": true,
-                  "lastClassName": "gsgehy",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   text-align: right;
@@ -411,7 +569,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
             forwardedRef={null}
           >
             <div
-              className="gsgehy"
+              className="c1"
             />
           </StyledComponent>
         </styled.div>
@@ -424,7 +582,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-gzVnrw",
                   "isStatic": true,
-                  "lastClassName": "kuURQc",
+                  "lastClassName": "c2",
                   "rules": Array [
                     "
   position: relative;
@@ -456,7 +614,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
             forwardedRef={null}
           >
             <div
-              className="kuURQc"
+              className="c2"
             >
               <VerticalTimelineEvent
                 eventDate="21 Apr"
@@ -473,7 +631,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                         "componentStyle": ComponentStyle {
                           "componentId": "sc-bdVaJa",
                           "isStatic": true,
-                          "lastClassName": "eGMeTK",
+                          "lastClassName": "c3",
                           "rules": Array [
                             "
   margin: 40px 0;
@@ -502,7 +660,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                     forwardedRef={null}
                   >
                     <div
-                      className="vertical-timeline-event eGMeTK"
+                      className="vertical-timeline-event c3"
                     >
                       <styled.span>
                         <StyledComponent
@@ -513,7 +671,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-htpNat",
                                 "isStatic": true,
-                                "lastClassName": "dhpAfq",
+                                "lastClassName": "c4",
                                 "rules": Array [
                                   "
   text-align: right;
@@ -541,7 +699,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                           forwardedRef={null}
                         >
                           <span
-                            className="dhpAfq"
+                            className="c4"
                           >
                             21 Apr
                           </span>
@@ -556,7 +714,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-bwzfXH",
                                 "isStatic": true,
-                                "lastClassName": "iPWyQt",
+                                "lastClassName": "c5",
                                 "rules": Array [
                                   "
   position: absolute;
@@ -585,7 +743,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                           forwardedRef={null}
                         >
                           <div
-                            className="iPWyQt"
+                            className="c5"
                           >
                             <styled.span>
                               <StyledComponent
@@ -596,7 +754,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": true,
-                                      "lastClassName": "jUfIlj",
+                                      "lastClassName": "c6",
                                       "rules": Array [
                                         "
   border: 2px solid ",
@@ -625,7 +783,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                                 forwardedRef={null}
                               >
                                 <span
-                                  className="jUfIlj"
+                                  className="c6"
                                 />
                               </StyledComponent>
                             </styled.span>
@@ -641,7 +799,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-ifAKCX",
                                 "isStatic": true,
-                                "lastClassName": "PTGTz",
+                                "lastClassName": "c7",
                                 "rules": Array [
                                   "
   margin-left: 7rem;
@@ -661,7 +819,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                           forwardedRef={null}
                         >
                           <div
-                            className="PTGTz"
+                            className="c7"
                           >
                             Event that happened
                           </div>

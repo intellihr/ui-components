@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<IndentedElement /> should render an element with no indent 1`] = `
+.c0 {
+  padding-left: 0px;
+}
+
 <IndentedElement
   depth={0}
 >
@@ -16,7 +20,7 @@ exports[`<IndentedElement /> should render an element with no indent 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "fvKsMw",
+            "lastClassName": "c0",
             "rules": Array [
               "
   padding-left: ",
@@ -38,7 +42,7 @@ exports[`<IndentedElement /> should render an element with no indent 1`] = `
       forwardedRef={null}
     >
       <div
-        className="fvKsMw"
+        className="c0"
       >
         Hello I am not indented
       </div>
@@ -48,6 +52,10 @@ exports[`<IndentedElement /> should render an element with no indent 1`] = `
 `;
 
 exports[`<IndentedElement /> should render an indented element 1`] = `
+.c0 {
+  padding-left: 64px;
+}
+
 <IndentedElement
   depth={2}
 >
@@ -63,7 +71,7 @@ exports[`<IndentedElement /> should render an indented element 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "ckkVDv",
+            "lastClassName": "c0",
             "rules": Array [
               "
   padding-left: ",
@@ -85,7 +93,7 @@ exports[`<IndentedElement /> should render an indented element 1`] = `
       forwardedRef={null}
     >
       <div
-        className="ckkVDv"
+        className="c0"
       >
         WOW! I'm depth level two :)
       </div>

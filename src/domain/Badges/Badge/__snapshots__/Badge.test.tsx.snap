@@ -1,6 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Badge /> should render a large badge 1`] = `
+.c0 {
+  background-color: #EDF4FF;
+  color: #00368C;
+  border: 1px solid #C5CED6;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.24);
+  border-radius: 50%;
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c0,
+.c0 .fa {
+  font-size: 21px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.c0 .refresh-icon {
+  background-color: transparent;
+  position: relative;
+  top: -1px;
+  left: -1px;
+}
+
 <Badge
   backgroundColor="#EDF4FF"
   color="#00368C"
@@ -24,7 +54,7 @@ exports[`<Badge /> should render a large badge 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-htpNat",
             "isStatic": false,
-            "lastClassName": "hvtFFA",
+            "lastClassName": "c0",
             "rules": Array [
               "
   ",
@@ -75,7 +105,7 @@ exports[`<Badge /> should render a large badge 1`] = `
       size="large"
     >
       <span
-        className="hvtFFA"
+        className="c0"
         color="#00368C"
         size="large"
       >
@@ -87,6 +117,36 @@ exports[`<Badge /> should render a large badge 1`] = `
 `;
 
 exports[`<Badge /> should render a small badge 1`] = `
+.c0 {
+  background-color: #EDF4FF;
+  color: #00368C;
+  border: 1px solid #C5CED6;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.24);
+  border-radius: 50%;
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c0,
+.c0 .fa {
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+}
+
+.c0 .refresh-icon {
+  background-color: transparent;
+  position: relative;
+  top: -1px;
+  left: -1px;
+}
+
 <Badge
   backgroundColor="#EDF4FF"
   color="#00368C"
@@ -110,7 +170,7 @@ exports[`<Badge /> should render a small badge 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-htpNat",
             "isStatic": false,
-            "lastClassName": "dXFPJA",
+            "lastClassName": "c0",
             "rules": Array [
               "
   ",
@@ -161,7 +221,7 @@ exports[`<Badge /> should render a small badge 1`] = `
       size="small"
     >
       <span
-        className="dXFPJA"
+        className="c0"
         color="#00368C"
         size="small"
       >
@@ -173,6 +233,45 @@ exports[`<Badge /> should render a small badge 1`] = `
 `;
 
 exports[`<Badge /> should render a spinning badge 1`] = `
+.c1 {
+  width: 1.28571em;
+}
+
+.c1.icon {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.c0 {
+  background-color: #EDF4FF;
+  color: #00368C;
+  border: 1px solid #C5CED6;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.24);
+  border-radius: 50%;
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c0,
+.c0 .fa {
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+}
+
+.c0 .refresh-icon {
+  background-color: transparent;
+  position: relative;
+  top: -1px;
+  left: -1px;
+}
+
 <Badge
   backgroundColor="#EDF4FF"
   color="#00368C"
@@ -197,7 +296,7 @@ exports[`<Badge /> should render a spinning badge 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-htpNat",
             "isStatic": false,
-            "lastClassName": "dXFPJA",
+            "lastClassName": "c0",
             "rules": Array [
               "
   ",
@@ -248,7 +347,7 @@ exports[`<Badge /> should render a spinning badge 1`] = `
       size="small"
     >
       <span
-        className="dXFPJA"
+        className="c0"
         color="#00368C"
         size="small"
       >
@@ -278,7 +377,7 @@ exports[`<Badge /> should render a spinning badge 1`] = `
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
                       "isStatic": false,
-                      "lastClassName": "gvHWRV",
+                      "lastClassName": "c1",
                       "rules": Array [
                         "
    width: 1.28571em;
@@ -312,7 +411,7 @@ exports[`<Badge /> should render a spinning badge 1`] = `
               >
                 <i
                   aria-hidden={true}
-                  className="refresh-icon icon fa fa-refresh fa-spin gvHWRV"
+                  className="refresh-icon icon fa fa-refresh fa-spin c1"
                   size="medium"
                 />
               </StyledComponent>

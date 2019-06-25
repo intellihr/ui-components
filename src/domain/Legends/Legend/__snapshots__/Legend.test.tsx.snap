@@ -1,6 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Legend /> should render a legend 1`] = `
+.c1 {
+  width: 1.28571em;
+  color: rgb(0,255,0);
+}
+
+.c1.icon {
+  text-align: center;
+  font-size: .75rem;
+}
+
+.c3 {
+  width: 1.28571em;
+  color: rgb(0,0,255);
+}
+
+.c3.icon {
+  text-align: center;
+  font-size: .75rem;
+}
+
+.c0 {
+  margin: 0;
+  padding: 0;
+}
+
+.c0 li {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: .8rem;
+  margin-bottom: 3px;
+}
+
+.c0 li:last-child {
+  margin-bottom: 0;
+}
+
+.c0 li i {
+  font-size: 10px;
+}
+
+.c2 {
+  margin-left: 5px;
+  white-space: nowrap;
+  width: 100%;
+}
+
 <Legend
   datasets={
     Array [
@@ -24,7 +76,7 @@ exports[`<Legend /> should render a legend 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-htpNat",
             "isStatic": true,
-            "lastClassName": "eydzFE",
+            "lastClassName": "c0",
             "rules": Array [
               "
   margin: 0;
@@ -60,7 +112,7 @@ exports[`<Legend /> should render a legend 1`] = `
       forwardedRef={null}
     >
       <ul
-        className="eydzFE"
+        className="c0"
       >
         <li
           key="0"
@@ -93,7 +145,7 @@ exports[`<Legend /> should render a legend 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "fmvdLz",
+                        "lastClassName": "c3",
                         "rules": Array [
                           "
    width: 1.28571em;
@@ -127,7 +179,7 @@ exports[`<Legend /> should render a legend 1`] = `
                 >
                   <i
                     aria-hidden={true}
-                    className="icon fa fa-circle cKoKge"
+                    className="icon fa fa-circle c1"
                     color="rgb(0,255,0)"
                     size="xsmall"
                   />
@@ -144,7 +196,7 @@ exports[`<Legend /> should render a legend 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bxivhb",
                     "isStatic": true,
-                    "lastClassName": "fWsUlI",
+                    "lastClassName": "c2",
                     "rules": Array [
                       "
   margin-left: 5px;
@@ -166,7 +218,7 @@ exports[`<Legend /> should render a legend 1`] = `
               forwardedRef={null}
             >
               <span
-                className="fWsUlI"
+                className="c2"
               >
                 I am the green dataset
               </span>
@@ -204,7 +256,7 @@ exports[`<Legend /> should render a legend 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "fmvdLz",
+                        "lastClassName": "c3",
                         "rules": Array [
                           "
    width: 1.28571em;
@@ -238,7 +290,7 @@ exports[`<Legend /> should render a legend 1`] = `
                 >
                   <i
                     aria-hidden={true}
-                    className="icon fa fa-circle fmvdLz"
+                    className="icon fa fa-circle c3"
                     color="rgb(0,0,255)"
                     size="xsmall"
                   />
@@ -255,7 +307,7 @@ exports[`<Legend /> should render a legend 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bxivhb",
                     "isStatic": true,
-                    "lastClassName": "fWsUlI",
+                    "lastClassName": "c2",
                     "rules": Array [
                       "
   margin-left: 5px;
@@ -277,7 +329,7 @@ exports[`<Legend /> should render a legend 1`] = `
               forwardedRef={null}
             >
               <span
-                className="fWsUlI"
+                className="c2"
               >
                 I am BLUE!
               </span>

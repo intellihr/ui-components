@@ -1,6 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<CircleSkeleton /> should render a circle skeleton 1`] = `
+.c0 {
+  border-radius: 50%;
+  line-height: 1rem;
+  height: 72px;
+  width: 72px;
+  -webkit-animation: jXsTbE .8s linear infinite alternate;
+  animation: jXsTbE .8s linear infinite alternate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: #E1E6EB;
+  border: 1px solid #E1E6EB;
+  display: block;
+}
+
 <CircleSkeleton
   showSkeleton={true}
   size="large"
@@ -16,7 +31,7 @@ exports[`<CircleSkeleton /> should render a circle skeleton 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "iaTydT",
+            "lastClassName": "c0",
             "rules": Array [
               "
   border-radius: 50%;
@@ -46,7 +61,7 @@ exports[`<CircleSkeleton /> should render a circle skeleton 1`] = `
       size="large"
     >
       <span
-        className="iaTydT"
+        className="c0"
         size="large"
       />
     </StyledComponent>
@@ -55,6 +70,21 @@ exports[`<CircleSkeleton /> should render a circle skeleton 1`] = `
 `;
 
 exports[`<CircleSkeleton /> should render a circle skeleton with set size 1`] = `
+.c0 {
+  border-radius: 50%;
+  line-height: 1rem;
+  height: 30px;
+  width: 30px;
+  -webkit-animation: jXsTbE .8s linear infinite alternate;
+  animation: jXsTbE .8s linear infinite alternate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: #E1E6EB;
+  border: 1px solid #E1E6EB;
+  display: block;
+}
+
 <CircleSkeleton
   showSkeleton={true}
   size="small"
@@ -70,7 +100,7 @@ exports[`<CircleSkeleton /> should render a circle skeleton with set size 1`] = 
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "jjIqES",
+            "lastClassName": "c0",
             "rules": Array [
               "
   border-radius: 50%;
@@ -100,7 +130,7 @@ exports[`<CircleSkeleton /> should render a circle skeleton with set size 1`] = 
       size="small"
     >
       <span
-        className="jjIqES"
+        className="c0"
         size="small"
       />
     </StyledComponent>

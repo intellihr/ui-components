@@ -1,6 +1,376 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<GridLayout /> should render a GridLayout 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.c1 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+}
+
+.c2 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+}
+
+.c3 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+}
+
+.c4 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+}
+
+.c5 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+}
+
+@media only screen and (max-width:639px) {
+  .c0 {
+    margin-left: -2px;
+    margin-right: -2px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c0 {
+    margin-left: -2px;
+    margin-right: -2px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c0 {
+    margin-left: -2px;
+    margin-right: -2px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c0 {
+    margin-left: -2px;
+    margin-right: -2px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c1 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(83.33333333333333% - 4px);
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c1 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(83.33333333333333% - 4px);
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c1 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(83.33333333333333% - 4px);
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c1 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(83.33333333333333% - 4px);
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c2 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(16.666666666666668% - 4px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c2 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(16.666666666666668% - 4px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c2 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(16.666666666666668% - 4px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c2 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(16.666666666666668% - 4px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c3 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c3 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(33.333333333333336% - 4px);
+    margin-left: calc(16.666666666666668% + 2px);
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c3 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(25% - 4px);
+    margin-left: calc(16.666666666666668% + 2px);
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c3 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(25% - 4px);
+    margin-left: calc(16.666666666666668% + 2px);
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c4 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c4 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(33.333333333333336% - 4px);
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c4 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(50% - 4px);
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c4 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(50% - 4px);
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c5 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    width: auto;
+    margin-left: calc(25% + 2px);
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c5 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    width: auto;
+    margin-left: calc(25% + 2px);
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c5 {
+    margin-left: 2px;
+    margin-right: 2px;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    width: auto;
+    margin-left: calc(25% + 2px);
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c5 {
+    margin-left: 2px;
+    margin-right: 2px;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    width: auto;
+    margin-left: calc(25% + 2px);
+  }
+}
+
 <GridLayout
   cells={
     Array [
@@ -80,7 +450,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "gNsTMN",
+            "lastClassName": "c0",
             "rules": Array [
               "
   display: flex;
@@ -110,7 +480,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
       verticalAlignment="stretch"
     >
       <div
-        className="gNsTMN"
+        className="c0"
         data-component-type="grid_layout"
       >
         <TransitionGroup
@@ -169,7 +539,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "cedMmC",
+                        "lastClassName": "c5",
                         "rules": Array [
                           "
   flex: 0 0 auto;
@@ -212,7 +582,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   sizes={10}
                 >
                   <div
-                    className="hQXgrG"
+                    className="c1"
                     data-component-type="grid_layout_cell"
                     sizes={10}
                   >
@@ -286,7 +656,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "cedMmC",
+                        "lastClassName": "c5",
                         "rules": Array [
                           "
   flex: 0 0 auto;
@@ -329,7 +699,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   sizes={2}
                 >
                   <div
-                    className="eSzZAP"
+                    className="c2"
                     data-component-type="grid_layout_cell"
                     sizes={2}
                   >
@@ -402,7 +772,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "cedMmC",
+                        "lastClassName": "c5",
                         "rules": Array [
                           "
   flex: 0 0 auto;
@@ -454,7 +824,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   }
                 >
                   <div
-                    className="lDDKC"
+                    className="c3"
                     data-component-type="grid_layout_cell"
                     sizes={
                       Object {
@@ -528,7 +898,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "cedMmC",
+                        "lastClassName": "c5",
                         "rules": Array [
                           "
   flex: 0 0 auto;
@@ -576,7 +946,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   }
                 >
                   <div
-                    className="ibmclT"
+                    className="c4"
                     data-component-type="grid_layout_cell"
                     sizes={
                       Object {
@@ -645,7 +1015,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "cedMmC",
+                        "lastClassName": "c5",
                         "rules": Array [
                           "
   flex: 0 0 auto;
@@ -688,7 +1058,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   sizes="auto"
                 >
                   <div
-                    className="cedMmC"
+                    className="c5"
                     data-component-type="grid_layout_cell"
                     sizes="auto"
                   >
@@ -708,6 +1078,384 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
 `;
 
 exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.c1 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+}
+
+.c2 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+}
+
+.c3 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+}
+
+.c4 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+}
+
+.c5 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+}
+
+@media only screen and (max-width:639px) {
+  .c0 {
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c0 {
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c0 {
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c0 {
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c1 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(83.33333333333333% - 4px);
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c1 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(83.33333333333333% - 4px);
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c1 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(83.33333333333333% - 4px);
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c1 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(83.33333333333333% - 4px);
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c2 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(16.666666666666668% - 4px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c2 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(16.666666666666668% - 4px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c2 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(16.666666666666668% - 4px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c2 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(16.666666666666668% - 4px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c3 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c3 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(33.333333333333336% - 4px);
+    margin-left: calc(16.666666666666668% + 2px);
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c3 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(25% - 4px);
+    margin-left: calc(16.666666666666668% + 2px);
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c3 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(25% - 4px);
+    margin-left: calc(16.666666666666668% + 2px);
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c4 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c4 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(33.333333333333336% - 4px);
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c4 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(50% - 4px);
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c4 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(50% - 4px);
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c5 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    width: auto;
+    margin-left: calc(25% + 2px);
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c5 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    width: auto;
+    margin-left: calc(25% + 2px);
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c5 {
+    margin-left: 2px;
+    margin-right: 2px;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    width: auto;
+    margin-left: calc(25% + 2px);
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c5 {
+    margin-left: 2px;
+    margin-right: 2px;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    width: auto;
+    margin-left: calc(25% + 2px);
+  }
+}
+
 <GridLayout
   cells={
     Array [
@@ -803,7 +1551,7 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "bLCxgh",
+            "lastClassName": "c0",
             "rules": Array [
               "
   display: flex;
@@ -841,7 +1589,7 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
       verticalAlignment="stretch"
     >
       <div
-        className="bLCxgh"
+        className="c0"
         data-component-type="grid_layout"
       >
         <TransitionGroup
@@ -900,7 +1648,7 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "cedMmC",
+                        "lastClassName": "c5",
                         "rules": Array [
                           "
   flex: 0 0 auto;
@@ -943,7 +1691,7 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                   sizes={10}
                 >
                   <div
-                    className="hQXgrG"
+                    className="c1"
                     data-component-type="grid_layout_cell"
                     sizes={10}
                   >
@@ -1017,7 +1765,7 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "cedMmC",
+                        "lastClassName": "c5",
                         "rules": Array [
                           "
   flex: 0 0 auto;
@@ -1060,7 +1808,7 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                   sizes={2}
                 >
                   <div
-                    className="eSzZAP"
+                    className="c2"
                     data-component-type="grid_layout_cell"
                     sizes={2}
                   >
@@ -1133,7 +1881,7 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "cedMmC",
+                        "lastClassName": "c5",
                         "rules": Array [
                           "
   flex: 0 0 auto;
@@ -1185,7 +1933,7 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                   }
                 >
                   <div
-                    className="lDDKC"
+                    className="c3"
                     data-component-type="grid_layout_cell"
                     sizes={
                       Object {
@@ -1259,7 +2007,7 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "cedMmC",
+                        "lastClassName": "c5",
                         "rules": Array [
                           "
   flex: 0 0 auto;
@@ -1307,7 +2055,7 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                   }
                 >
                   <div
-                    className="ibmclT"
+                    className="c4"
                     data-component-type="grid_layout_cell"
                     sizes={
                       Object {
@@ -1376,7 +2124,7 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "cedMmC",
+                        "lastClassName": "c5",
                         "rules": Array [
                           "
   flex: 0 0 auto;
@@ -1419,7 +2167,7 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                   sizes="auto"
                 >
                   <div
-                    className="cedMmC"
+                    className="c5"
                     data-component-type="grid_layout_cell"
                     sizes="auto"
                   >

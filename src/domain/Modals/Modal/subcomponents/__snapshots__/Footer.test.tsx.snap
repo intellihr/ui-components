@@ -1,6 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Footer /> should render modal footer 1`] = `
+.c0 {
+  height: 80px;
+  background-color: #F5F7FA;
+  padding: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 <Footer
   leftControls={
     <React.Fragment>
@@ -22,7 +43,7 @@ exports[`<Footer /> should render modal footer 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-htpNat",
             "isStatic": true,
-            "lastClassName": "hWGtD",
+            "lastClassName": "c0",
             "rules": Array [
               "
   height: 80px;
@@ -48,7 +69,7 @@ exports[`<Footer /> should render modal footer 1`] = `
       forwardedRef={null}
     >
       <div
-        className="hWGtD"
+        className="c0"
       >
         <styled.div>
           <StyledComponent
@@ -59,7 +80,7 @@ exports[`<Footer /> should render modal footer 1`] = `
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-bxivhb",
                   "isStatic": true,
-                  "lastClassName": "cDFCAd",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   display: flex;
@@ -79,7 +100,7 @@ exports[`<Footer /> should render modal footer 1`] = `
             forwardedRef={null}
           >
             <div
-              className="cDFCAd"
+              className="c1"
             >
               Left Controls
             </div>
@@ -94,7 +115,7 @@ exports[`<Footer /> should render modal footer 1`] = `
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-bxivhb",
                   "isStatic": true,
-                  "lastClassName": "cDFCAd",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   display: flex;
@@ -114,7 +135,7 @@ exports[`<Footer /> should render modal footer 1`] = `
             forwardedRef={null}
           >
             <div
-              className="cDFCAd"
+              className="c1"
             >
               Right Controls
             </div>

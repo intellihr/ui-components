@@ -1,6 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ActionLink /> should render an action link 1`] = `
+.c0 {
+  font-weight: 600;
+  font-size: .9375rem;
+  text-transform: uppercase;
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+}
+
+.c0,
+.c0:link,
+.c0:visited {
+  color: #432DF3;
+}
+
+.c0:hover {
+  color: #2512B3;
+}
+
+.c0:active {
+  color: #0F0080;
+}
+
 <ActionLink
   href="/lol"
 >
@@ -12,7 +34,7 @@ exports[`<ActionLink /> should render an action link 1`] = `
         "componentStyle": ComponentStyle {
           "componentId": "sc-bdVaJa",
           "isStatic": true,
-          "lastClassName": "jaxnrg",
+          "lastClassName": "c0",
           "rules": Array [
             "
   font-weight: 600;
@@ -56,11 +78,11 @@ exports[`<ActionLink /> should render an action link 1`] = `
     href="/lol"
   >
     <Anchor
-      className="jaxnrg"
+      className="c0"
       href="/lol"
     >
       <a
-        className="jaxnrg"
+        className="c0"
         href="/lol"
       >
         Grrr I am action man
@@ -71,6 +93,28 @@ exports[`<ActionLink /> should render an action link 1`] = `
 `;
 
 exports[`<ActionLink /> should render an action link with a replacement anchor tag 1`] = `
+.c0 {
+  font-weight: 600;
+  font-size: .9375rem;
+  text-transform: uppercase;
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+}
+
+.c0,
+.c0:link,
+.c0:visited {
+  color: #432DF3;
+}
+
+.c0:hover {
+  color: #2512B3;
+}
+
+.c0:active {
+  color: #0F0080;
+}
+
 <DefaultsProvider
   value={
     Object {
@@ -89,7 +133,7 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": true,
-            "lastClassName": "jaxnrg",
+            "lastClassName": "c0",
             "rules": Array [
               "
   font-weight: 600;
@@ -133,11 +177,11 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
       href="#"
     >
       <Anchor
-        className="jaxnrg"
+        className="c0"
         href="#"
       >
         <AnchorComponent
-          className="jaxnrg"
+          className="c0"
           href="#"
         >
           <a

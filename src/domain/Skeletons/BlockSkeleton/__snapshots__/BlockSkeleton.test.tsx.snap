@@ -1,6 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<BlockSkeleton /> should render a block skeleton 1`] = `
+.c0 {
+  border-radius: 4px;
+  line-height: 1rem;
+  height: 1rem;
+  -webkit-animation: jXsTbE .8s linear infinite alternate;
+  animation: jXsTbE .8s linear infinite alternate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: #E1E6EB;
+  border: 1px solid #E1E6EB;
+  display: block;
+}
+
 <BlockSkeleton
   showSkeleton={true}
 >
@@ -13,7 +27,7 @@ exports[`<BlockSkeleton /> should render a block skeleton 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "iGZNSN",
+            "lastClassName": "c0",
             "rules": Array [
               "
   border-radius: 4px;
@@ -43,7 +57,7 @@ exports[`<BlockSkeleton /> should render a block skeleton 1`] = `
       forwardedRef={null}
     >
       <span
-        className="iGZNSN"
+        className="c0"
       />
     </StyledComponent>
   </styled.span>
@@ -51,6 +65,21 @@ exports[`<BlockSkeleton /> should render a block skeleton 1`] = `
 `;
 
 exports[`<BlockSkeleton /> should render a block skeleton with set width and height 1`] = `
+.c0 {
+  border-radius: 4px;
+  line-height: 1rem;
+  width: 400px;
+  height: 200px;
+  -webkit-animation: jXsTbE .8s linear infinite alternate;
+  animation: jXsTbE .8s linear infinite alternate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: #E1E6EB;
+  border: 1px solid #E1E6EB;
+  display: block;
+}
+
 <BlockSkeleton
   height={200}
   showSkeleton={true}
@@ -68,7 +97,7 @@ exports[`<BlockSkeleton /> should render a block skeleton with set width and hei
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "jLAxRj",
+            "lastClassName": "c0",
             "rules": Array [
               "
   border-radius: 4px;
@@ -100,7 +129,7 @@ exports[`<BlockSkeleton /> should render a block skeleton with set width and hei
       width="400px"
     >
       <span
-        className="jLAxRj"
+        className="c0"
         height="200px"
         width="400px"
       />

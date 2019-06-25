@@ -1,6 +1,59 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] = `
+.c0 {
+  margin: 40px 0;
+  position: relative;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  position: absolute;
+  width: auto;
+  height: 0;
+  left: 88px;
+  top: 12px;
+}
+
+.c2 > * {
+  top: -50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.c1 {
+  text-align: right;
+  color: #667380;
+  position: absolute;
+  width: 4rem;
+  font-size: 14px;
+  top: 6px;
+  line-height: 1;
+}
+
+.c3 {
+  border: 2px solid #E1E6EB;
+  position: absolute;
+  left: 50%;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: white;
+}
+
+.c4 {
+  margin-left: 7rem;
+}
+
 <VerticalTimelineEvent
   eventDate="21 Apr"
 >
@@ -16,7 +69,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
           "componentStyle": ComponentStyle {
             "componentId": "sc-gqjmRU",
             "isStatic": true,
-            "lastClassName": "ctKPeX",
+            "lastClassName": "c0",
             "rules": Array [
               "
   margin: 40px 0;
@@ -45,7 +98,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
       forwardedRef={null}
     >
       <div
-        className="vertical-timeline-event ctKPeX"
+        className="vertical-timeline-event c0"
       >
         <styled.span>
           <StyledComponent
@@ -56,7 +109,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-jTzLTM",
                   "isStatic": true,
-                  "lastClassName": "jMUJSG",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   text-align: right;
@@ -84,7 +137,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
             forwardedRef={null}
           >
             <span
-              className="jMUJSG"
+              className="c1"
             >
               21 Apr
             </span>
@@ -99,7 +152,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-VigVT",
                   "isStatic": true,
-                  "lastClassName": "cpBRs",
+                  "lastClassName": "c2",
                   "rules": Array [
                     "
   position: absolute;
@@ -128,7 +181,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
             forwardedRef={null}
           >
             <div
-              className="cpBRs"
+              className="c2"
             >
               <styled.span>
                 <StyledComponent
@@ -139,7 +192,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-fjdhpX",
                         "isStatic": true,
-                        "lastClassName": "gHHBwg",
+                        "lastClassName": "c3",
                         "rules": Array [
                           "
   border: 2px solid ",
@@ -168,7 +221,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
                   forwardedRef={null}
                 >
                   <span
-                    className="gHHBwg"
+                    className="c3"
                   />
                 </StyledComponent>
               </styled.span>
@@ -184,7 +237,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-jzJRlG",
                   "isStatic": true,
-                  "lastClassName": "beNDTL",
+                  "lastClassName": "c4",
                   "rules": Array [
                     "
   margin-left: 7rem;
@@ -204,7 +257,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
             forwardedRef={null}
           >
             <div
-              className="beNDTL"
+              className="c4"
             >
               Hey this is the child content of the event!
             </div>
@@ -217,6 +270,48 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
 `;
 
 exports[`<VerticalTimelineEvent /> should render a vertical timeline event with a custom event marker 1`] = `
+.c0 {
+  margin: 40px 0;
+  position: relative;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  position: absolute;
+  width: auto;
+  height: 0;
+  left: 88px;
+  top: 12px;
+}
+
+.c2 > * {
+  top: -50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.c1 {
+  text-align: right;
+  color: #667380;
+  position: absolute;
+  width: 4rem;
+  font-size: 14px;
+  top: 6px;
+  line-height: 1;
+}
+
+.c3 {
+  margin-left: 7rem;
+}
+
 <VerticalTimelineEvent
   markerComponent={
     <Avatar
@@ -237,7 +332,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
           "componentStyle": ComponentStyle {
             "componentId": "sc-gqjmRU",
             "isStatic": true,
-            "lastClassName": "ctKPeX",
+            "lastClassName": "c0",
             "rules": Array [
               "
   margin: 40px 0;
@@ -266,7 +361,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
       forwardedRef={null}
     >
       <div
-        className="vertical-timeline-event ctKPeX"
+        className="vertical-timeline-event c0"
       >
         <styled.span>
           <StyledComponent
@@ -277,7 +372,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-jTzLTM",
                   "isStatic": true,
-                  "lastClassName": "jMUJSG",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   text-align: right;
@@ -305,7 +400,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
             forwardedRef={null}
           >
             <span
-              className="jMUJSG"
+              className="c1"
             />
           </StyledComponent>
         </styled.span>
@@ -318,7 +413,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-VigVT",
                   "isStatic": true,
-                  "lastClassName": "cpBRs",
+                  "lastClassName": "c2",
                   "rules": Array [
                     "
   position: absolute;
@@ -347,7 +442,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
             forwardedRef={null}
           >
             <div
-              className="cpBRs"
+              className="c2"
             >
               <Avatar
                 initials="JW"
@@ -384,7 +479,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-jzJRlG",
                   "isStatic": true,
-                  "lastClassName": "beNDTL",
+                  "lastClassName": "c3",
                   "rules": Array [
                     "
   margin-left: 7rem;
@@ -404,7 +499,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
             forwardedRef={null}
           >
             <div
-              className="beNDTL"
+              className="c3"
             >
               Hey this is the child content of the event!
             </div>
@@ -417,6 +512,59 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
 `;
 
 exports[`<VerticalTimelineEvent /> should render a vertical timeline event without an event date 1`] = `
+.c0 {
+  margin: 40px 0;
+  position: relative;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  position: absolute;
+  width: auto;
+  height: 0;
+  left: 88px;
+  top: 12px;
+}
+
+.c2 > * {
+  top: -50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.c1 {
+  text-align: right;
+  color: #667380;
+  position: absolute;
+  width: 4rem;
+  font-size: 14px;
+  top: 6px;
+  line-height: 1;
+}
+
+.c3 {
+  border: 2px solid #E1E6EB;
+  position: absolute;
+  left: 50%;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: white;
+}
+
+.c4 {
+  margin-left: 7rem;
+}
+
 <VerticalTimelineEvent>
   <styled.div
     className="vertical-timeline-event"
@@ -430,7 +578,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
           "componentStyle": ComponentStyle {
             "componentId": "sc-gqjmRU",
             "isStatic": true,
-            "lastClassName": "ctKPeX",
+            "lastClassName": "c0",
             "rules": Array [
               "
   margin: 40px 0;
@@ -459,7 +607,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
       forwardedRef={null}
     >
       <div
-        className="vertical-timeline-event ctKPeX"
+        className="vertical-timeline-event c0"
       >
         <styled.span>
           <StyledComponent
@@ -470,7 +618,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-jTzLTM",
                   "isStatic": true,
-                  "lastClassName": "jMUJSG",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   text-align: right;
@@ -498,7 +646,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
             forwardedRef={null}
           >
             <span
-              className="jMUJSG"
+              className="c1"
             />
           </StyledComponent>
         </styled.span>
@@ -511,7 +659,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-VigVT",
                   "isStatic": true,
-                  "lastClassName": "cpBRs",
+                  "lastClassName": "c2",
                   "rules": Array [
                     "
   position: absolute;
@@ -540,7 +688,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
             forwardedRef={null}
           >
             <div
-              className="cpBRs"
+              className="c2"
             >
               <styled.span>
                 <StyledComponent
@@ -551,7 +699,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-fjdhpX",
                         "isStatic": true,
-                        "lastClassName": "gHHBwg",
+                        "lastClassName": "c3",
                         "rules": Array [
                           "
   border: 2px solid ",
@@ -580,7 +728,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
                   forwardedRef={null}
                 >
                   <span
-                    className="gHHBwg"
+                    className="c3"
                   />
                 </StyledComponent>
               </styled.span>
@@ -596,7 +744,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-jzJRlG",
                   "isStatic": true,
-                  "lastClassName": "beNDTL",
+                  "lastClassName": "c4",
                   "rules": Array [
                     "
   margin-left: 7rem;
@@ -616,7 +764,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
             forwardedRef={null}
           >
             <div
-              className="beNDTL"
+              className="c4"
             >
               Hey this is the child content of the event!
             </div>

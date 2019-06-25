@@ -1,6 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Header /> should render modal header 1`] = `
+.c1 {
+  font-size: 24px;
+  line-height: 32px;
+  -webkit-letter-spacing: -.02em;
+  -moz-letter-spacing: -.02em;
+  -ms-letter-spacing: -.02em;
+  letter-spacing: -.02em;
+  color: #424F5C;
+  font-weight: 600;
+}
+
+.c0 {
+  height: 80px;
+  background-color: #F5F7FA;
+  padding: 24px;
+}
+
 <Header>
   <styled.div>
     <StyledComponent
@@ -11,7 +28,7 @@ exports[`<Header /> should render modal header 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-htoDjs",
             "isStatic": true,
-            "lastClassName": "iPlMfp",
+            "lastClassName": "c0",
             "rules": Array [
               "
   height: 80px;
@@ -35,7 +52,7 @@ exports[`<Header /> should render modal header 1`] = `
       forwardedRef={null}
     >
       <div
-        className="iPlMfp"
+        className="c0"
       >
         <Text
           isInline={true}
@@ -58,7 +75,7 @@ exports[`<Header /> should render modal header 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-gzVnrw",
                     "isStatic": false,
-                    "lastClassName": "hGWjGc",
+                    "lastClassName": "c1",
                     "rules": Array [
                       "
 
@@ -111,7 +128,7 @@ exports[`<Header /> should render modal header 1`] = `
               textType="display"
             >
               <span
-                className="hGWjGc"
+                className="c1"
                 data-component-type="text"
               >
                 Header Text

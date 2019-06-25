@@ -1,6 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Content /> should render modal content 1`] = `
+.c0 {
+  padding: 16px 24px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
 <Content>
   <styled.div>
     <StyledComponent
@@ -11,7 +19,7 @@ exports[`<Content /> should render modal content 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bwzfXH",
             "isStatic": true,
-            "lastClassName": "hLBqqI",
+            "lastClassName": "c0",
             "rules": Array [
               "
   padding: 16px 24px;
@@ -32,7 +40,7 @@ exports[`<Content /> should render modal content 1`] = `
       forwardedRef={null}
     >
       <div
-        className="hLBqqI"
+        className="c0"
       >
         Content Text
       </div>

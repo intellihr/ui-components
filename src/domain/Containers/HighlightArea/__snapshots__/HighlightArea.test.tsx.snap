@@ -1,6 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<HighLightArea /> should render a HighlightArea 1`] = `
+.c0 {
+  border: 1px solid #C5CED6;
+  background-color: #FAFBFC;
+  padding: 16px;
+  border-radius: 4px;
+}
+
 <HighlightArea
   color="grey"
 >
@@ -18,7 +25,7 @@ exports[`<HighLightArea /> should render a HighlightArea 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "jHnPgP",
+            "lastClassName": "c0",
             "rules": Array [
               "
   border: 1px solid ",
@@ -52,7 +59,7 @@ exports[`<HighLightArea /> should render a HighlightArea 1`] = `
       forwardedRef={null}
     >
       <div
-        className="jHnPgP"
+        className="c0"
         color="grey"
         data-component-type="highlight_area"
       >

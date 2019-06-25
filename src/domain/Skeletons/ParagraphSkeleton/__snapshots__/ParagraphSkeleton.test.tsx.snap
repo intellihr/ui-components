@@ -1,6 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
+.c0 {
+  border-radius: 4px;
+  width: 200px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 36px;
+  line-height: 44px;
+  -webkit-letter-spacing: -.02em;
+  -moz-letter-spacing: -.02em;
+  -ms-letter-spacing: -.02em;
+  letter-spacing: -.02em;
+  -webkit-animation: jXsTbE .8s linear infinite alternate;
+  animation: jXsTbE .8s linear infinite alternate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: #E1E6EB;
+  border: 1px solid #E1E6EB;
+  display: block;
+}
+
+.c1 {
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-animation: jXsTbE .8s linear infinite alternate;
+  animation: jXsTbE .8s linear infinite alternate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: #E1E6EB;
+  border: 1px solid #E1E6EB;
+  display: block;
+}
+
+.c2 {
+  border-radius: 4px;
+  width: 50%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-animation: jXsTbE .8s linear infinite alternate;
+  animation: jXsTbE .8s linear infinite alternate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: #E1E6EB;
+  border: 1px solid #E1E6EB;
+  display: block;
+}
+
 <ParagraphSkeleton
   showSkeleton={true}
 >
@@ -35,7 +97,7 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
       forwardedRef={null}
     >
       <div
-        className="cBcNyd"
+        className=""
       >
         <TextSkeleton
           showSkeleton={true}
@@ -54,7 +116,7 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bdVaJa",
                     "isStatic": false,
-                    "lastClassName": "gTUOXq",
+                    "lastClassName": "c2",
                     "rules": Array [
                       "
   border-radius: 4px;
@@ -87,7 +149,7 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
               width="200px"
             >
               <span
-                className="judogs"
+                className="c0"
                 width="200px"
               >
                 ‌
@@ -110,7 +172,7 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bdVaJa",
                     "isStatic": false,
-                    "lastClassName": "gTUOXq",
+                    "lastClassName": "c2",
                     "rules": Array [
                       "
   border-radius: 4px;
@@ -142,7 +204,7 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
               textType="body"
             >
               <span
-                className="kUTXSP"
+                className="c1"
               >
                 ‌
               </span>
@@ -164,7 +226,7 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bdVaJa",
                     "isStatic": false,
-                    "lastClassName": "gTUOXq",
+                    "lastClassName": "c2",
                     "rules": Array [
                       "
   border-radius: 4px;
@@ -196,7 +258,7 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
               textType="body"
             >
               <span
-                className="kUTXSP"
+                className="c1"
               >
                 ‌
               </span>
@@ -218,7 +280,7 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bdVaJa",
                     "isStatic": false,
-                    "lastClassName": "gTUOXq",
+                    "lastClassName": "c2",
                     "rules": Array [
                       "
   border-radius: 4px;
@@ -250,7 +312,7 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
               textType="body"
             >
               <span
-                className="kUTXSP"
+                className="c1"
               >
                 ‌
               </span>
@@ -272,7 +334,7 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bdVaJa",
                     "isStatic": false,
-                    "lastClassName": "gTUOXq",
+                    "lastClassName": "c2",
                     "rules": Array [
                       "
   border-radius: 4px;
@@ -304,7 +366,7 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
               textType="body"
             >
               <span
-                className="kUTXSP"
+                className="c1"
               >
                 ‌
               </span>
@@ -328,7 +390,7 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bdVaJa",
                     "isStatic": false,
-                    "lastClassName": "gTUOXq",
+                    "lastClassName": "c2",
                     "rules": Array [
                       "
   border-radius: 4px;
@@ -361,7 +423,7 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
               width="50%"
             >
               <span
-                className="gTUOXq"
+                className="c2"
                 width="50%"
               >
                 ‌

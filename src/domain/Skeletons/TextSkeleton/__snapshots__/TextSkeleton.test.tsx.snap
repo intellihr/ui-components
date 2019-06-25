@@ -1,6 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TextSkeleton /> should render a text skeleton 1`] = `
+.c0 {
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-animation: jXsTbE .8s linear infinite alternate;
+  animation: jXsTbE .8s linear infinite alternate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: #E1E6EB;
+  border: 1px solid #E1E6EB;
+  display: block;
+}
+
 <TextSkeleton
   showSkeleton={true}
   type="body"
@@ -16,7 +36,7 @@ exports[`<TextSkeleton /> should render a text skeleton 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "kUTXSP",
+            "lastClassName": "c0",
             "rules": Array [
               "
   border-radius: 4px;
@@ -48,7 +68,7 @@ exports[`<TextSkeleton /> should render a text skeleton 1`] = `
       textType="body"
     >
       <span
-        className="kUTXSP"
+        className="c0"
       >
         ‌
       </span>
@@ -58,6 +78,26 @@ exports[`<TextSkeleton /> should render a text skeleton 1`] = `
 `;
 
 exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
+.c0 {
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 24px;
+  line-height: 32px;
+  -webkit-letter-spacing: -.02em;
+  -moz-letter-spacing: -.02em;
+  -ms-letter-spacing: -.02em;
+  letter-spacing: -.02em;
+  -webkit-animation: jXsTbE .8s linear infinite alternate;
+  animation: jXsTbE .8s linear infinite alternate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: #E1E6EB;
+  border: 1px solid #E1E6EB;
+  display: block;
+}
+
 <TextSkeleton
   showSkeleton={true}
   type="display"
@@ -73,7 +113,7 @@ exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "exyoyx",
+            "lastClassName": "c0",
             "rules": Array [
               "
   border-radius: 4px;
@@ -105,7 +145,7 @@ exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
       textType="display"
     >
       <span
-        className="exyoyx"
+        className="c0"
       >
         ‌
       </span>
@@ -115,6 +155,27 @@ exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
 `;
 
 exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
+.c0 {
+  border-radius: 4px;
+  width: 250px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-animation: jXsTbE .8s linear infinite alternate;
+  animation: jXsTbE .8s linear infinite alternate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: #E1E6EB;
+  border: 1px solid #E1E6EB;
+  display: block;
+}
+
 <TextSkeleton
   showSkeleton={true}
   type="body"
@@ -132,7 +193,7 @@ exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "kKqXIj",
+            "lastClassName": "c0",
             "rules": Array [
               "
   border-radius: 4px;
@@ -165,7 +226,7 @@ exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
       width="250px"
     >
       <span
-        className="kKqXIj"
+        className="c0"
         width="250px"
       >
         ‌

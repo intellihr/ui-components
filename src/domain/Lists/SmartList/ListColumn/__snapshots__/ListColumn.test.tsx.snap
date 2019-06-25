@@ -1,6 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ListColumn /> should render a list column with number content 1`] = `
+.c0 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
 <ListColumn
   alignRight={false}
   cell={[Function]}
@@ -43,7 +82,7 @@ exports[`<ListColumn /> should render a list column with number content 1`] = `
             "componentStyle": ComponentStyle {
               "componentId": "sc-htpNat",
               "isStatic": false,
-              "lastClassName": "cdrDft",
+              "lastClassName": "c0",
               "rules": Array [
                 "
   box-sizing: border-box;
@@ -98,7 +137,7 @@ exports[`<ListColumn /> should render a list column with number content 1`] = `
         type="row"
       >
         <div
-          className="cdrDft"
+          className="c0"
           type="row"
         >
           <div
@@ -115,6 +154,45 @@ exports[`<ListColumn /> should render a list column with number content 1`] = `
 `;
 
 exports[`<ListColumn /> should render a list column with the right header 1`] = `
+.c0 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
 <ListColumn
   alignRight={false}
   cell={[Function]}
@@ -157,7 +235,7 @@ exports[`<ListColumn /> should render a list column with the right header 1`] = 
             "componentStyle": ComponentStyle {
               "componentId": "sc-htpNat",
               "isStatic": false,
-              "lastClassName": "cdrDft",
+              "lastClassName": "c0",
               "rules": Array [
                 "
   box-sizing: border-box;
@@ -212,7 +290,7 @@ exports[`<ListColumn /> should render a list column with the right header 1`] = 
         type="row"
       >
         <div
-          className="cdrDft"
+          className="c0"
           type="row"
         >
           <div
@@ -237,6 +315,45 @@ exports[`<ListColumn /> should render a list column with the right header 1`] = 
 `;
 
 exports[`<ListColumn /> should render a list column with the right non-header cell content 1`] = `
+.c0 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
 <ListColumn
   alignRight={false}
   cell={[Function]}
@@ -279,7 +396,7 @@ exports[`<ListColumn /> should render a list column with the right non-header ce
             "componentStyle": ComponentStyle {
               "componentId": "sc-htpNat",
               "isStatic": false,
-              "lastClassName": "cdrDft",
+              "lastClassName": "c0",
               "rules": Array [
                 "
   box-sizing: border-box;
@@ -334,7 +451,7 @@ exports[`<ListColumn /> should render a list column with the right non-header ce
         type="row"
       >
         <div
-          className="cdrDft"
+          className="c0"
           type="row"
         >
           <div

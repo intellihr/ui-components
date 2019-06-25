@@ -1,6 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Text /> should render a non-inline text element 1`] = `
+.c0 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+  display: block;
+}
+
 <Text
   isInline={false}
   tag="span"
@@ -22,7 +34,7 @@ exports[`<Text /> should render a non-inline text element 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-gzVnrw",
             "isStatic": false,
-            "lastClassName": "cLkjew",
+            "lastClassName": "c0",
             "rules": Array [
               "
 
@@ -75,7 +87,7 @@ exports[`<Text /> should render a non-inline text element 1`] = `
       textType="body"
     >
       <span
-        className="cLkjew"
+        className="c0"
         data-component-type="text"
       >
         Hello, world!
@@ -86,6 +98,17 @@ exports[`<Text /> should render a non-inline text element 1`] = `
 `;
 
 exports[`<Text /> should render a text element as a h1 1`] = `
+.c0 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
 <Text
   isInline={true}
   tag="h1"
@@ -107,7 +130,7 @@ exports[`<Text /> should render a text element as a h1 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-gzVnrw",
             "isStatic": false,
-            "lastClassName": "ccQvFO",
+            "lastClassName": "c0",
             "rules": Array [
               "
 
@@ -160,7 +183,7 @@ exports[`<Text /> should render a text element as a h1 1`] = `
       textType="body"
     >
       <h1
-        className="ccQvFO"
+        className="c0"
         data-component-type="text"
       >
         Hello, world!
@@ -171,6 +194,17 @@ exports[`<Text /> should render a text element as a h1 1`] = `
 `;
 
 exports[`<Text /> should render a text with data attributes 1`] = `
+.c0 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
 <Text
   dataAttributes={
     Object {
@@ -202,7 +236,7 @@ exports[`<Text /> should render a text with data attributes 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-gzVnrw",
             "isStatic": false,
-            "lastClassName": "ccQvFO",
+            "lastClassName": "c0",
             "rules": Array [
               "
 
@@ -255,7 +289,7 @@ exports[`<Text /> should render a text with data attributes 1`] = `
       textType="body"
     >
       <span
-        className="ccQvFO"
+        className="c0"
         data-component-type="text"
         data-otherKey="myOtherKey"
         data-role="myRole"
@@ -268,6 +302,21 @@ exports[`<Text /> should render a text with data attributes 1`] = `
 `;
 
 exports[`<Text /> should render a text with margin 1`] = `
+.c0 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
 <Text
   isInline={true}
   margins={
@@ -305,7 +354,7 @@ exports[`<Text /> should render a text with margin 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-gzVnrw",
             "isStatic": false,
-            "lastClassName": "hKJaBA",
+            "lastClassName": "c0",
             "rules": Array [
               "
 
@@ -366,7 +415,7 @@ exports[`<Text /> should render a text with margin 1`] = `
       textType="body"
     >
       <span
-        className="hKJaBA"
+        className="c0"
         data-component-type="text"
       >
         Hello! I have special margin
@@ -377,6 +426,17 @@ exports[`<Text /> should render a text with margin 1`] = `
 `;
 
 exports[`<Text /> should render an element with colored text 1`] = `
+.c0 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #F25749;
+  font-weight: 400;
+}
+
 <Text
   color="#F25749"
   isInline={true}
@@ -401,7 +461,7 @@ exports[`<Text /> should render an element with colored text 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-gzVnrw",
             "isStatic": false,
-            "lastClassName": "laNfsg",
+            "lastClassName": "c0",
             "rules": Array [
               "
 
@@ -454,7 +514,7 @@ exports[`<Text /> should render an element with colored text 1`] = `
       textType="body"
     >
       <span
-        className="laNfsg"
+        className="c0"
         color="#F25749"
         data-component-type="text"
       >
@@ -466,6 +526,17 @@ exports[`<Text /> should render an element with colored text 1`] = `
 `;
 
 exports[`<Text /> should render an element with heading text 1`] = `
+.c0 {
+  font-size: 18px;
+  line-height: 24px;
+  -webkit-letter-spacing: -.02em;
+  -moz-letter-spacing: -.02em;
+  -ms-letter-spacing: -.02em;
+  letter-spacing: -.02em;
+  color: #424F5C;
+  font-weight: 600;
+}
+
 <Text
   isInline={true}
   tag="span"
@@ -487,7 +558,7 @@ exports[`<Text /> should render an element with heading text 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-gzVnrw",
             "isStatic": false,
-            "lastClassName": "ePBcfr",
+            "lastClassName": "c0",
             "rules": Array [
               "
 
@@ -540,7 +611,7 @@ exports[`<Text /> should render an element with heading text 1`] = `
       textType="heading"
     >
       <span
-        className="ePBcfr"
+        className="c0"
         data-component-type="text"
       >
         Hello, world!
@@ -551,6 +622,17 @@ exports[`<Text /> should render an element with heading text 1`] = `
 `;
 
 exports[`<Text /> should render an element with semi bold text 1`] = `
+.c0 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 600;
+}
+
 <Text
   isInline={true}
   tag="span"
@@ -574,7 +656,7 @@ exports[`<Text /> should render an element with semi bold text 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-gzVnrw",
             "isStatic": false,
-            "lastClassName": "kbnzwI",
+            "lastClassName": "c0",
             "rules": Array [
               "
 
@@ -628,7 +710,7 @@ exports[`<Text /> should render an element with semi bold text 1`] = `
       weight={600}
     >
       <span
-        className="kbnzwI"
+        className="c0"
         data-component-type="text"
       >
         Hello, world!
@@ -639,6 +721,17 @@ exports[`<Text /> should render an element with semi bold text 1`] = `
 `;
 
 exports[`<Text /> should render an element with small text 1`] = `
+.c0 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #262D33;
+  font-weight: 400;
+}
+
 <Text
   isInline={true}
   tag="span"
@@ -660,7 +753,7 @@ exports[`<Text /> should render an element with small text 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-gzVnrw",
             "isStatic": false,
-            "lastClassName": "gCixKX",
+            "lastClassName": "c0",
             "rules": Array [
               "
 
@@ -713,7 +806,7 @@ exports[`<Text /> should render an element with small text 1`] = `
       textType="small"
     >
       <span
-        className="gCixKX"
+        className="c0"
         data-component-type="text"
       >
         Hello, world!
@@ -724,6 +817,17 @@ exports[`<Text /> should render an element with small text 1`] = `
 `;
 
 exports[`<Text /> should render an element with text 1`] = `
+.c0 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
 <Text
   isInline={true}
   tag="span"
@@ -745,7 +849,7 @@ exports[`<Text /> should render an element with text 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-gzVnrw",
             "isStatic": false,
-            "lastClassName": "ccQvFO",
+            "lastClassName": "c0",
             "rules": Array [
               "
 
@@ -798,7 +902,7 @@ exports[`<Text /> should render an element with text 1`] = `
       textType="body"
     >
       <span
-        className="ccQvFO"
+        className="c0"
         data-component-type="text"
       >
         Hello, world!
@@ -809,6 +913,18 @@ exports[`<Text /> should render an element with text 1`] = `
 `;
 
 exports[`<Text /> should render an element with the text converted to uppercase 1`] = `
+.c0 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
 <Text
   isInline={true}
   isUpper={true}
@@ -832,7 +948,7 @@ exports[`<Text /> should render an element with the text converted to uppercase 
           "componentStyle": ComponentStyle {
             "componentId": "sc-gzVnrw",
             "isStatic": false,
-            "lastClassName": "jJEQbd",
+            "lastClassName": "c0",
             "rules": Array [
               "
 
@@ -886,7 +1002,7 @@ exports[`<Text /> should render an element with the text converted to uppercase 
       textType="body"
     >
       <span
-        className="jJEQbd"
+        className="c0"
         data-component-type="text"
       >
         Hello, world!

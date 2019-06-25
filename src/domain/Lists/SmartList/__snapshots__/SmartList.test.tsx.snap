@@ -1,6 +1,110 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SmartList /> should render a headerless Smart List displaying the right data with the right title 1`] = `
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 0rem;
+  margin-left: 0rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c2 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:40em) {
+  .c2 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64.625em) {
+  .c2 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:40em) {
+  .c3 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64.625em) {
+  .c3 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+  }
+}
+
 <SmartList
   cursor="auto"
   data={
@@ -77,7 +181,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
                       "isStatic": false,
-                      "lastClassName": "gEKcfF",
+                      "lastClassName": "c0",
                       "rules": Array [
                         "
   margin-right: auto;
@@ -112,7 +216,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                 forwardedRef={null}
               >
                 <div
-                  className="gEKcfF"
+                  className="c0"
                 >
                   <Row>
                     <StyledComponent
@@ -123,7 +227,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-htpNat",
                             "isStatic": false,
-                            "lastClassName": "kMGEbB",
+                            "lastClassName": "c1",
                             "rules": Array [
                               "
   box-sizing: border-box;
@@ -211,7 +315,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                       forwardedRef={null}
                     >
                       <div
-                        className="kMGEbB"
+                        className="c1"
                       >
                         <ListColumn
                           alignRight={false}
@@ -269,7 +373,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -324,7 +428,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                                 type="row"
                               >
                                 <div
-                                  className="gOIzFL"
+                                  className="c2"
                                   type="row"
                                 >
                                   <div
@@ -396,7 +500,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -451,7 +555,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -523,7 +627,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -578,7 +682,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -658,7 +762,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
                       "isStatic": false,
-                      "lastClassName": "gEKcfF",
+                      "lastClassName": "c0",
                       "rules": Array [
                         "
   margin-right: auto;
@@ -693,7 +797,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                 forwardedRef={null}
               >
                 <div
-                  className="gEKcfF"
+                  className="c0"
                 >
                   <Row
                     className="item-row cursor-auto"
@@ -713,7 +817,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-htpNat",
                             "isStatic": false,
-                            "lastClassName": "kMGEbB",
+                            "lastClassName": "c1",
                             "rules": Array [
                               "
   box-sizing: border-box;
@@ -807,7 +911,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                       }
                     >
                       <div
-                        className="item-row cursor-auto kMGEbB"
+                        className="item-row cursor-auto c1"
                         onClick={[Function]}
                         style={
                           Object {
@@ -871,7 +975,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -926,7 +1030,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                                 type="row"
                               >
                                 <div
-                                  className="gOIzFL"
+                                  className="c2"
                                   type="row"
                                 >
                                   <div
@@ -1003,7 +1107,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -1058,7 +1162,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -1128,7 +1232,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -1183,7 +1287,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -1261,7 +1365,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
                       "isStatic": false,
-                      "lastClassName": "gEKcfF",
+                      "lastClassName": "c0",
                       "rules": Array [
                         "
   margin-right: auto;
@@ -1296,7 +1400,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                 forwardedRef={null}
               >
                 <div
-                  className="gEKcfF"
+                  className="c0"
                 >
                   <Row
                     className="item-row cursor-auto"
@@ -1316,7 +1420,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-htpNat",
                             "isStatic": false,
-                            "lastClassName": "kMGEbB",
+                            "lastClassName": "c1",
                             "rules": Array [
                               "
   box-sizing: border-box;
@@ -1410,7 +1514,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                       }
                     >
                       <div
-                        className="item-row cursor-auto kMGEbB"
+                        className="item-row cursor-auto c1"
                         onClick={[Function]}
                         style={
                           Object {
@@ -1474,7 +1578,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -1529,7 +1633,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                                 type="row"
                               >
                                 <div
-                                  className="gOIzFL"
+                                  className="c2"
                                   type="row"
                                 >
                                   <div
@@ -1606,7 +1710,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -1661,7 +1765,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -1731,7 +1835,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -1786,7 +1890,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -1815,6 +1919,110 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
 `;
 
 exports[`<SmartList /> should render an Smart List displaying the right data with the right headers 1`] = `
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 0rem;
+  margin-left: 0rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c2 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:40em) {
+  .c2 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64.625em) {
+  .c2 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:40em) {
+  .c3 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64.625em) {
+  .c3 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+  }
+}
+
 <SmartList
   cursor="auto"
   data={
@@ -1885,7 +2093,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
                       "isStatic": false,
-                      "lastClassName": "gEKcfF",
+                      "lastClassName": "c0",
                       "rules": Array [
                         "
   margin-right: auto;
@@ -1920,7 +2128,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                 forwardedRef={null}
               >
                 <div
-                  className="gEKcfF"
+                  className="c0"
                 >
                   <Row>
                     <StyledComponent
@@ -1931,7 +2139,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-htpNat",
                             "isStatic": false,
-                            "lastClassName": "kMGEbB",
+                            "lastClassName": "c1",
                             "rules": Array [
                               "
   box-sizing: border-box;
@@ -2019,7 +2227,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                       forwardedRef={null}
                     >
                       <div
-                        className="kMGEbB"
+                        className="c1"
                       >
                         <ListColumn
                           alignRight={false}
@@ -2077,7 +2285,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -2132,7 +2340,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                                 type="row"
                               >
                                 <div
-                                  className="gOIzFL"
+                                  className="c2"
                                   type="row"
                                 >
                                   <div
@@ -2210,7 +2418,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -2265,7 +2473,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -2343,7 +2551,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -2398,7 +2606,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -2484,7 +2692,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
                       "isStatic": false,
-                      "lastClassName": "gEKcfF",
+                      "lastClassName": "c0",
                       "rules": Array [
                         "
   margin-right: auto;
@@ -2519,7 +2727,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                 forwardedRef={null}
               >
                 <div
-                  className="gEKcfF"
+                  className="c0"
                 >
                   <Row
                     className="item-row cursor-auto"
@@ -2539,7 +2747,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-htpNat",
                             "isStatic": false,
-                            "lastClassName": "kMGEbB",
+                            "lastClassName": "c1",
                             "rules": Array [
                               "
   box-sizing: border-box;
@@ -2633,7 +2841,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                       }
                     >
                       <div
-                        className="item-row cursor-auto kMGEbB"
+                        className="item-row cursor-auto c1"
                         onClick={[Function]}
                         style={
                           Object {
@@ -2697,7 +2905,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -2752,7 +2960,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                                 type="row"
                               >
                                 <div
-                                  className="gOIzFL"
+                                  className="c2"
                                   type="row"
                                 >
                                   <div
@@ -2829,7 +3037,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -2884,7 +3092,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -2954,7 +3162,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -3009,7 +3217,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -3087,7 +3295,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
                       "isStatic": false,
-                      "lastClassName": "gEKcfF",
+                      "lastClassName": "c0",
                       "rules": Array [
                         "
   margin-right: auto;
@@ -3122,7 +3330,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                 forwardedRef={null}
               >
                 <div
-                  className="gEKcfF"
+                  className="c0"
                 >
                   <Row
                     className="item-row cursor-auto"
@@ -3142,7 +3350,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-htpNat",
                             "isStatic": false,
-                            "lastClassName": "kMGEbB",
+                            "lastClassName": "c1",
                             "rules": Array [
                               "
   box-sizing: border-box;
@@ -3236,7 +3444,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                       }
                     >
                       <div
-                        className="item-row cursor-auto kMGEbB"
+                        className="item-row cursor-auto c1"
                         onClick={[Function]}
                         style={
                           Object {
@@ -3300,7 +3508,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -3355,7 +3563,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                                 type="row"
                               >
                                 <div
-                                  className="gOIzFL"
+                                  className="c2"
                                   type="row"
                                 >
                                   <div
@@ -3432,7 +3640,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -3487,7 +3695,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -3557,7 +3765,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -3612,7 +3820,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -3641,6 +3849,71 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
 `;
 
 exports[`<SmartList /> should render an Smart List with a single column 1`] = `
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 0rem;
+  margin-left: 0rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c2 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:40em) {
+  .c2 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64.625em) {
+  .c2 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
 <SmartList
   cursor="auto"
   data={
@@ -3711,7 +3984,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
                       "isStatic": false,
-                      "lastClassName": "gEKcfF",
+                      "lastClassName": "c0",
                       "rules": Array [
                         "
   margin-right: auto;
@@ -3746,7 +4019,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
                 forwardedRef={null}
               >
                 <div
-                  className="gEKcfF"
+                  className="c0"
                 >
                   <Row>
                     <StyledComponent
@@ -3757,7 +4030,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-htpNat",
                             "isStatic": false,
-                            "lastClassName": "kMGEbB",
+                            "lastClassName": "c1",
                             "rules": Array [
                               "
   box-sizing: border-box;
@@ -3845,7 +4118,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
                       forwardedRef={null}
                     >
                       <div
-                        className="kMGEbB"
+                        className="c1"
                       >
                         <ListColumn
                           alignRight={false}
@@ -3903,7 +4176,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "gOIzFL",
+                                      "lastClassName": "c2",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -3958,7 +4231,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
                                 type="row"
                               >
                                 <div
-                                  className="gOIzFL"
+                                  className="c2"
                                   type="row"
                                 >
                                   <div
@@ -4044,7 +4317,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
                       "isStatic": false,
-                      "lastClassName": "gEKcfF",
+                      "lastClassName": "c0",
                       "rules": Array [
                         "
   margin-right: auto;
@@ -4079,7 +4352,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
                 forwardedRef={null}
               >
                 <div
-                  className="gEKcfF"
+                  className="c0"
                 >
                   <Row
                     className="item-row cursor-auto"
@@ -4099,7 +4372,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-htpNat",
                             "isStatic": false,
-                            "lastClassName": "kMGEbB",
+                            "lastClassName": "c1",
                             "rules": Array [
                               "
   box-sizing: border-box;
@@ -4193,7 +4466,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
                       }
                     >
                       <div
-                        className="item-row cursor-auto kMGEbB"
+                        className="item-row cursor-auto c1"
                         onClick={[Function]}
                         style={
                           Object {
@@ -4257,7 +4530,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "gOIzFL",
+                                      "lastClassName": "c2",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -4312,7 +4585,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
                                 type="row"
                               >
                                 <div
-                                  className="gOIzFL"
+                                  className="c2"
                                   type="row"
                                 >
                                   <div
@@ -4397,7 +4670,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
                       "isStatic": false,
-                      "lastClassName": "gEKcfF",
+                      "lastClassName": "c0",
                       "rules": Array [
                         "
   margin-right: auto;
@@ -4432,7 +4705,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
                 forwardedRef={null}
               >
                 <div
-                  className="gEKcfF"
+                  className="c0"
                 >
                   <Row
                     className="item-row cursor-auto"
@@ -4452,7 +4725,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-htpNat",
                             "isStatic": false,
-                            "lastClassName": "kMGEbB",
+                            "lastClassName": "c1",
                             "rules": Array [
                               "
   box-sizing: border-box;
@@ -4546,7 +4819,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
                       }
                     >
                       <div
-                        className="item-row cursor-auto kMGEbB"
+                        className="item-row cursor-auto c1"
                         onClick={[Function]}
                         style={
                           Object {
@@ -4610,7 +4883,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "gOIzFL",
+                                      "lastClassName": "c2",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -4665,7 +4938,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
                                 type="row"
                               >
                                 <div
-                                  className="gOIzFL"
+                                  className="c2"
                                   type="row"
                                 >
                                   <div
@@ -4701,6 +4974,110 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
 `;
 
 exports[`<SmartList /> should render an empty Smart List displaying the right data empty list text 1`] = `
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 0rem;
+  margin-left: 0rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c2 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:40em) {
+  .c2 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64.625em) {
+  .c2 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:40em) {
+  .c3 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64.625em) {
+  .c3 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+  }
+}
+
 <SmartList
   cursor="auto"
   data={Array []}
@@ -4756,7 +5133,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
                       "isStatic": false,
-                      "lastClassName": "gEKcfF",
+                      "lastClassName": "c0",
                       "rules": Array [
                         "
   margin-right: auto;
@@ -4791,7 +5168,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
                 forwardedRef={null}
               >
                 <div
-                  className="gEKcfF"
+                  className="c0"
                 >
                   <Row>
                     <StyledComponent
@@ -4802,7 +5179,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-htpNat",
                             "isStatic": false,
-                            "lastClassName": "kMGEbB",
+                            "lastClassName": "c1",
                             "rules": Array [
                               "
   box-sizing: border-box;
@@ -4890,7 +5267,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
                       forwardedRef={null}
                     >
                       <div
-                        className="kMGEbB"
+                        className="c1"
                       >
                         <ListColumn
                           alignRight={false}
@@ -4933,7 +5310,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -4988,7 +5365,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
                                 type="row"
                               >
                                 <div
-                                  className="gOIzFL"
+                                  className="c2"
                                   type="row"
                                 >
                                   <div
@@ -5045,7 +5422,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -5100,7 +5477,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -5157,7 +5534,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -5212,7 +5589,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -5258,6 +5635,130 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
 `;
 
 exports[`<SmartList /> should render skeleton 1`] = `
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 0rem;
+  margin-left: 0rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+.c4 {
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-animation: jXsTbE .8s linear infinite alternate;
+  animation: jXsTbE .8s linear infinite alternate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+  background-color: #E1E6EB;
+  border: 1px solid #E1E6EB;
+  display: block;
+}
+
+@media only screen and (min-width:0em) {
+  .c2 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:40em) {
+  .c2 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64.625em) {
+  .c2 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:40em) {
+  .c3 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64.625em) {
+  .c3 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+  }
+}
+
 <SmartList
   cursor="auto"
   emptyListText="No Results found."
@@ -5312,7 +5813,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
                       "isStatic": false,
-                      "lastClassName": "gEKcfF",
+                      "lastClassName": "c0",
                       "rules": Array [
                         "
   margin-right: auto;
@@ -5347,7 +5848,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                 forwardedRef={null}
               >
                 <div
-                  className="gEKcfF"
+                  className="c0"
                 >
                   <Row>
                     <StyledComponent
@@ -5358,7 +5859,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-htpNat",
                             "isStatic": false,
-                            "lastClassName": "kMGEbB",
+                            "lastClassName": "c1",
                             "rules": Array [
                               "
   box-sizing: border-box;
@@ -5446,7 +5947,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                       forwardedRef={null}
                     >
                       <div
-                        className="kMGEbB"
+                        className="c1"
                       >
                         <ListColumn
                           alignRight={false}
@@ -5496,7 +5997,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -5551,7 +6052,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 type="row"
                               >
                                 <div
-                                  className="gOIzFL"
+                                  className="c2"
                                   type="row"
                                 >
                                   <div
@@ -5621,7 +6122,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -5676,7 +6177,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -5746,7 +6247,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -5801,7 +6302,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -5880,7 +6381,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
                       "isStatic": false,
-                      "lastClassName": "gEKcfF",
+                      "lastClassName": "c0",
                       "rules": Array [
                         "
   margin-right: auto;
@@ -5915,7 +6416,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                 forwardedRef={null}
               >
                 <div
-                  className="gEKcfF"
+                  className="c0"
                 >
                   <Row
                     className="item-row cursor-auto"
@@ -5935,7 +6436,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-htpNat",
                             "isStatic": false,
-                            "lastClassName": "kMGEbB",
+                            "lastClassName": "c1",
                             "rules": Array [
                               "
   box-sizing: border-box;
@@ -6029,7 +6530,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                       }
                     >
                       <div
-                        className="item-row cursor-auto kMGEbB"
+                        className="item-row cursor-auto c1"
                         onClick={[Function]}
                         style={
                           Object {
@@ -6085,7 +6586,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -6140,7 +6641,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 type="row"
                               >
                                 <div
-                                  className="gOIzFL"
+                                  className="c2"
                                   type="row"
                                 >
                                   <div
@@ -6162,7 +6663,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "sc-gzVnrw",
                                                 "isStatic": false,
-                                                "lastClassName": "iuhmZg",
+                                                "lastClassName": "c4",
                                                 "rules": Array [
                                                   "
   border-radius: 4px;
@@ -6194,7 +6695,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="iuhmZg"
+                                            className="c4"
                                           >
                                             ‌
                                           </span>
@@ -6255,7 +6756,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -6310,7 +6811,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -6332,7 +6833,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "sc-gzVnrw",
                                                 "isStatic": false,
-                                                "lastClassName": "iuhmZg",
+                                                "lastClassName": "c4",
                                                 "rules": Array [
                                                   "
   border-radius: 4px;
@@ -6364,7 +6865,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="iuhmZg"
+                                            className="c4"
                                           >
                                             ‌
                                           </span>
@@ -6425,7 +6926,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -6480,7 +6981,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -6502,7 +7003,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "sc-gzVnrw",
                                                 "isStatic": false,
-                                                "lastClassName": "iuhmZg",
+                                                "lastClassName": "c4",
                                                 "rules": Array [
                                                   "
   border-radius: 4px;
@@ -6534,7 +7035,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="iuhmZg"
+                                            className="c4"
                                           >
                                             ‌
                                           </span>
@@ -6604,7 +7105,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
                       "isStatic": false,
-                      "lastClassName": "gEKcfF",
+                      "lastClassName": "c0",
                       "rules": Array [
                         "
   margin-right: auto;
@@ -6639,7 +7140,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                 forwardedRef={null}
               >
                 <div
-                  className="gEKcfF"
+                  className="c0"
                 >
                   <Row
                     className="item-row cursor-auto"
@@ -6659,7 +7160,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-htpNat",
                             "isStatic": false,
-                            "lastClassName": "kMGEbB",
+                            "lastClassName": "c1",
                             "rules": Array [
                               "
   box-sizing: border-box;
@@ -6753,7 +7254,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                       }
                     >
                       <div
-                        className="item-row cursor-auto kMGEbB"
+                        className="item-row cursor-auto c1"
                         onClick={[Function]}
                         style={
                           Object {
@@ -6809,7 +7310,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -6864,7 +7365,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 type="row"
                               >
                                 <div
-                                  className="gOIzFL"
+                                  className="c2"
                                   type="row"
                                 >
                                   <div
@@ -6886,7 +7387,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "sc-gzVnrw",
                                                 "isStatic": false,
-                                                "lastClassName": "iuhmZg",
+                                                "lastClassName": "c4",
                                                 "rules": Array [
                                                   "
   border-radius: 4px;
@@ -6918,7 +7419,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="iuhmZg"
+                                            className="c4"
                                           >
                                             ‌
                                           </span>
@@ -6979,7 +7480,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -7034,7 +7535,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -7056,7 +7557,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "sc-gzVnrw",
                                                 "isStatic": false,
-                                                "lastClassName": "iuhmZg",
+                                                "lastClassName": "c4",
                                                 "rules": Array [
                                                   "
   border-radius: 4px;
@@ -7088,7 +7589,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="iuhmZg"
+                                            className="c4"
                                           >
                                             ‌
                                           </span>
@@ -7149,7 +7650,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -7204,7 +7705,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -7226,7 +7727,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "sc-gzVnrw",
                                                 "isStatic": false,
-                                                "lastClassName": "iuhmZg",
+                                                "lastClassName": "c4",
                                                 "rules": Array [
                                                   "
   border-radius: 4px;
@@ -7258,7 +7759,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="iuhmZg"
+                                            className="c4"
                                           >
                                             ‌
                                           </span>
@@ -7328,7 +7829,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
                       "isStatic": false,
-                      "lastClassName": "gEKcfF",
+                      "lastClassName": "c0",
                       "rules": Array [
                         "
   margin-right: auto;
@@ -7363,7 +7864,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                 forwardedRef={null}
               >
                 <div
-                  className="gEKcfF"
+                  className="c0"
                 >
                   <Row
                     className="item-row cursor-auto"
@@ -7383,7 +7884,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-htpNat",
                             "isStatic": false,
-                            "lastClassName": "kMGEbB",
+                            "lastClassName": "c1",
                             "rules": Array [
                               "
   box-sizing: border-box;
@@ -7477,7 +7978,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                       }
                     >
                       <div
-                        className="item-row cursor-auto kMGEbB"
+                        className="item-row cursor-auto c1"
                         onClick={[Function]}
                         style={
                           Object {
@@ -7533,7 +8034,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -7588,7 +8089,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 type="row"
                               >
                                 <div
-                                  className="gOIzFL"
+                                  className="c2"
                                   type="row"
                                 >
                                   <div
@@ -7610,7 +8111,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "sc-gzVnrw",
                                                 "isStatic": false,
-                                                "lastClassName": "iuhmZg",
+                                                "lastClassName": "c4",
                                                 "rules": Array [
                                                   "
   border-radius: 4px;
@@ -7642,7 +8143,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="iuhmZg"
+                                            className="c4"
                                           >
                                             ‌
                                           </span>
@@ -7703,7 +8204,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -7758,7 +8259,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -7780,7 +8281,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "sc-gzVnrw",
                                                 "isStatic": false,
-                                                "lastClassName": "iuhmZg",
+                                                "lastClassName": "c4",
                                                 "rules": Array [
                                                   "
   border-radius: 4px;
@@ -7812,7 +8313,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="iuhmZg"
+                                            className="c4"
                                           >
                                             ‌
                                           </span>
@@ -7873,7 +8374,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -7928,7 +8429,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -7950,7 +8451,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "sc-gzVnrw",
                                                 "isStatic": false,
-                                                "lastClassName": "iuhmZg",
+                                                "lastClassName": "c4",
                                                 "rules": Array [
                                                   "
   border-radius: 4px;
@@ -7982,7 +8483,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="iuhmZg"
+                                            className="c4"
                                           >
                                             ‌
                                           </span>
@@ -8052,7 +8553,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
                       "isStatic": false,
-                      "lastClassName": "gEKcfF",
+                      "lastClassName": "c0",
                       "rules": Array [
                         "
   margin-right: auto;
@@ -8087,7 +8588,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                 forwardedRef={null}
               >
                 <div
-                  className="gEKcfF"
+                  className="c0"
                 >
                   <Row
                     className="item-row cursor-auto"
@@ -8107,7 +8608,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-htpNat",
                             "isStatic": false,
-                            "lastClassName": "kMGEbB",
+                            "lastClassName": "c1",
                             "rules": Array [
                               "
   box-sizing: border-box;
@@ -8201,7 +8702,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                       }
                     >
                       <div
-                        className="item-row cursor-auto kMGEbB"
+                        className="item-row cursor-auto c1"
                         onClick={[Function]}
                         style={
                           Object {
@@ -8257,7 +8758,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -8312,7 +8813,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 type="row"
                               >
                                 <div
-                                  className="gOIzFL"
+                                  className="c2"
                                   type="row"
                                 >
                                   <div
@@ -8334,7 +8835,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "sc-gzVnrw",
                                                 "isStatic": false,
-                                                "lastClassName": "iuhmZg",
+                                                "lastClassName": "c4",
                                                 "rules": Array [
                                                   "
   border-radius: 4px;
@@ -8366,7 +8867,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="iuhmZg"
+                                            className="c4"
                                           >
                                             ‌
                                           </span>
@@ -8427,7 +8928,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -8482,7 +8983,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -8504,7 +9005,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "sc-gzVnrw",
                                                 "isStatic": false,
-                                                "lastClassName": "iuhmZg",
+                                                "lastClassName": "c4",
                                                 "rules": Array [
                                                   "
   border-radius: 4px;
@@ -8536,7 +9037,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="iuhmZg"
+                                            className="c4"
                                           >
                                             ‌
                                           </span>
@@ -8597,7 +9098,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -8652,7 +9153,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -8674,7 +9175,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "sc-gzVnrw",
                                                 "isStatic": false,
-                                                "lastClassName": "iuhmZg",
+                                                "lastClassName": "c4",
                                                 "rules": Array [
                                                   "
   border-radius: 4px;
@@ -8706,7 +9207,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="iuhmZg"
+                                            className="c4"
                                           >
                                             ‌
                                           </span>
@@ -8776,7 +9277,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
                       "isStatic": false,
-                      "lastClassName": "gEKcfF",
+                      "lastClassName": "c0",
                       "rules": Array [
                         "
   margin-right: auto;
@@ -8811,7 +9312,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                 forwardedRef={null}
               >
                 <div
-                  className="gEKcfF"
+                  className="c0"
                 >
                   <Row
                     className="item-row cursor-auto"
@@ -8831,7 +9332,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-htpNat",
                             "isStatic": false,
-                            "lastClassName": "kMGEbB",
+                            "lastClassName": "c1",
                             "rules": Array [
                               "
   box-sizing: border-box;
@@ -8925,7 +9426,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                       }
                     >
                       <div
-                        className="item-row cursor-auto kMGEbB"
+                        className="item-row cursor-auto c1"
                         onClick={[Function]}
                         style={
                           Object {
@@ -8981,7 +9482,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -9036,7 +9537,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 type="row"
                               >
                                 <div
-                                  className="gOIzFL"
+                                  className="c2"
                                   type="row"
                                 >
                                   <div
@@ -9058,7 +9559,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "sc-gzVnrw",
                                                 "isStatic": false,
-                                                "lastClassName": "iuhmZg",
+                                                "lastClassName": "c4",
                                                 "rules": Array [
                                                   "
   border-radius: 4px;
@@ -9090,7 +9591,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="iuhmZg"
+                                            className="c4"
                                           >
                                             ‌
                                           </span>
@@ -9151,7 +9652,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -9206,7 +9707,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -9228,7 +9729,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "sc-gzVnrw",
                                                 "isStatic": false,
-                                                "lastClassName": "iuhmZg",
+                                                "lastClassName": "c4",
                                                 "rules": Array [
                                                   "
   border-radius: 4px;
@@ -9260,7 +9761,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="iuhmZg"
+                                            className="c4"
                                           >
                                             ‌
                                           </span>
@@ -9321,7 +9822,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
                                       "isStatic": false,
-                                      "lastClassName": "dXMvpo",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "
   box-sizing: border-box;
@@ -9376,7 +9877,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                 type="row"
                               >
                                 <div
-                                  className="dXMvpo"
+                                  className="c3"
                                   type="row"
                                 >
                                   <div
@@ -9398,7 +9899,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "sc-gzVnrw",
                                                 "isStatic": false,
-                                                "lastClassName": "iuhmZg",
+                                                "lastClassName": "c4",
                                                 "rules": Array [
                                                   "
   border-radius: 4px;
@@ -9430,7 +9931,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                           textType="body"
                                         >
                                           <span
-                                            className="iuhmZg"
+                                            className="c4"
                                           >
                                             ‌
                                           </span>

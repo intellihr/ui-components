@@ -44,6 +44,41 @@ exports[`<FormattedText /> should not include a custom text renderer 1`] = `
 `;
 
 exports[`<FormattedText /> should render a big block of markdown 1`] = `
+.c1 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  display: inline;
+}
+
+.c1,
+.c1:link,
+.c1:visited {
+  color: #432DF3;
+}
+
+.c1:hover {
+  color: #2512B3;
+}
+
+.c1:active {
+  color: #0F0080;
+}
+
+.c0 {
+  white-space: pre-wrap;
+}
+
+.c0 .react-markdown-block > :last-child {
+  margin-bottom: 0;
+}
+
 <FormattedText
   renderEmojis={false}
   text="
@@ -134,7 +169,7 @@ Ordered/multi-level lists:
           "componentStyle": ComponentStyle {
             "componentId": "sc-ifAKCX",
             "isStatic": true,
-            "lastClassName": "hvTAOU",
+            "lastClassName": "c0",
             "rules": Array [
               "
   white-space: pre-wrap;
@@ -160,7 +195,7 @@ Ordered/multi-level lists:
       forwardedRef={null}
     >
       <div
-        className="hvTAOU"
+        className="c0"
       >
         <ReactMarkdown
           astPlugins={Array []}
@@ -440,7 +475,7 @@ Ordered/multi-level lists:
                             "componentStyle": ComponentStyle {
                               "componentId": "sc-bwzfXH",
                               "isStatic": false,
-                              "lastClassName": "bponwI",
+                              "lastClassName": "c1",
                               "rules": Array [
                                 "
   ",
@@ -501,7 +536,7 @@ Ordered/multi-level lists:
                       >
                         <Component
                           anchorComponent="a"
-                          className="bponwI"
+                          className="c1"
                           href="http://www.intellihr.com.au"
                           isInline={true}
                           target="_blank"
@@ -509,13 +544,13 @@ Ordered/multi-level lists:
                         >
                           <Anchor
                             anchorComponent="a"
-                            className="bponwI"
+                            className="c1"
                             href="http://www.intellihr.com.au"
                             target="_blank"
                             type="anchor"
                           >
                             <a
-                              className="bponwI"
+                              className="c1"
                               href="http://www.intellihr.com.au"
                               target="_blank"
                               type="anchor"
@@ -570,7 +605,7 @@ Ordered/multi-level lists:
                             "componentStyle": ComponentStyle {
                               "componentId": "sc-bwzfXH",
                               "isStatic": false,
-                              "lastClassName": "bponwI",
+                              "lastClassName": "c1",
                               "rules": Array [
                                 "
   ",
@@ -631,7 +666,7 @@ Ordered/multi-level lists:
                       >
                         <Component
                           anchorComponent="a"
-                          className="bponwI"
+                          className="c1"
                           href="http://www.google.com"
                           isInline={true}
                           target="_blank"
@@ -639,13 +674,13 @@ Ordered/multi-level lists:
                         >
                           <Anchor
                             anchorComponent="a"
-                            className="bponwI"
+                            className="c1"
                             href="http://www.google.com"
                             target="_blank"
                             type="anchor"
                           >
                             <a
-                              className="bponwI"
+                              className="c1"
                               href="http://www.google.com"
                               target="_blank"
                               type="anchor"
@@ -1354,6 +1389,41 @@ Ordered/multi-level lists:
 `;
 
 exports[`<FormattedText /> should render any urls as links 1`] = `
+.c1 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  display: inline;
+}
+
+.c1,
+.c1:link,
+.c1:visited {
+  color: #432DF3;
+}
+
+.c1:hover {
+  color: #2512B3;
+}
+
+.c1:active {
+  color: #0F0080;
+}
+
+.c0 {
+  white-space: pre-wrap;
+}
+
+.c0 .react-markdown-block > :last-child {
+  margin-bottom: 0;
+}
+
 <FormattedText
   renderEmojis={false}
   text="http://www.heyguy.com
@@ -1369,7 +1439,7 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-ifAKCX",
             "isStatic": true,
-            "lastClassName": "hvTAOU",
+            "lastClassName": "c0",
             "rules": Array [
               "
   white-space: pre-wrap;
@@ -1395,7 +1465,7 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
       forwardedRef={null}
     >
       <div
-        className="hvTAOU"
+        className="c0"
       >
         <ReactMarkdown
           astPlugins={Array []}
@@ -1452,7 +1522,7 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
                             "componentStyle": ComponentStyle {
                               "componentId": "sc-bwzfXH",
                               "isStatic": false,
-                              "lastClassName": "bponwI",
+                              "lastClassName": "c1",
                               "rules": Array [
                                 "
   ",
@@ -1513,7 +1583,7 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
                       >
                         <Component
                           anchorComponent="a"
-                          className="bponwI"
+                          className="c1"
                           href="http://www.heyguy.com"
                           isInline={true}
                           target="_blank"
@@ -1521,13 +1591,13 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
                         >
                           <Anchor
                             anchorComponent="a"
-                            className="bponwI"
+                            className="c1"
                             href="http://www.heyguy.com"
                             target="_blank"
                             type="anchor"
                           >
                             <a
-                              className="bponwI"
+                              className="c1"
                               href="http://www.heyguy.com"
                               target="_blank"
                               type="anchor"
@@ -1568,6 +1638,14 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
 `;
 
 exports[`<FormattedText /> should render the formatted text 1`] = `
+.c0 {
+  white-space: pre-wrap;
+}
+
+.c0 .react-markdown-block > :last-child {
+  margin-bottom: 0;
+}
+
 <FormattedText
   renderEmojis={false}
   text="Hello. I am a piece of paragraph text.
@@ -1583,7 +1661,7 @@ exports[`<FormattedText /> should render the formatted text 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-ifAKCX",
             "isStatic": true,
-            "lastClassName": "hvTAOU",
+            "lastClassName": "c0",
             "rules": Array [
               "
   white-space: pre-wrap;
@@ -1609,7 +1687,7 @@ exports[`<FormattedText /> should render the formatted text 1`] = `
       forwardedRef={null}
     >
       <div
-        className="hvTAOU"
+        className="c0"
       >
         <ReactMarkdown
           astPlugins={Array []}
