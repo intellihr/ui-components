@@ -67,4 +67,5 @@ The components that support margins are:
 * Brick
 * Callout
 * Carousel
+* FilterController
 * HighlightArea
