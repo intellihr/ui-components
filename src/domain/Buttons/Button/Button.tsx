@@ -27,7 +27,7 @@ export class Button extends BaseButton<IButtonProps> {
         margins={margins}
         data-component-type={Props.ComponentType.Button}
         data-component-context={componentContext}
-        innerRef={innerRef}
+        ref={innerRef}
         className={this.buttonClass}
         onClick={onClick}
         disabled={disabled}

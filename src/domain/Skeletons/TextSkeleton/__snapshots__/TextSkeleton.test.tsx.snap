@@ -28,11 +28,51 @@ exports[`<TextSkeleton /> should render a text skeleton 1`] = `
   <styled.span
     textType="body"
   >
-    <span
-      className="c0"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  border-radius: 4px;
+  width: ",
+              [Function],
+              ";
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  ",
+              [Function],
+              ";
+  ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      textType="body"
     >
-      ‌
-    </span>
+      <span
+        className="c0"
+      >
+        ‌
+      </span>
+    </StyledComponent>
   </styled.span>
 </TextSkeleton>
 `;
@@ -65,11 +105,51 @@ exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
   <styled.span
     textType="display"
   >
-    <span
-      className="c0"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  border-radius: 4px;
+  width: ",
+              [Function],
+              ";
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  ",
+              [Function],
+              ";
+  ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      textType="display"
     >
-      ‌
-    </span>
+      <span
+        className="c0"
+      >
+        ‌
+      </span>
+    </StyledComponent>
   </styled.span>
 </TextSkeleton>
 `;
@@ -105,12 +185,53 @@ exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
     textType="body"
     width="250px"
   >
-    <span
-      className="c0"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  border-radius: 4px;
+  width: ",
+              [Function],
+              ";
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  ",
+              [Function],
+              ";
+  ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      textType="body"
       width="250px"
     >
-      ‌
-    </span>
+      <span
+        className="c0"
+        width="250px"
+      >
+        ‌
+      </span>
+    </StyledComponent>
   </styled.span>
 </TextSkeleton>
 `;

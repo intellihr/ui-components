@@ -4,9 +4,9 @@ import styled, { StyledFunction } from 'styled-components'
 import { Anchor, IAnchorProps } from '../../Internals/Anchor/Anchor'
 
 // tslint:disable-next-line:no-empty-interface
-interface IUnstyledLinkProps extends IAnchorProps {}
+interface IUnstyledLinkProps extends IAnchorProps { }
 
-const styledAnchor: StyledFunction<IUnstyledLinkProps> = styled(Anchor)
+const styledAnchor: StyledFunction<(props: IUnstyledLinkProps) => React.ReactElement> = styled(Anchor)
 
 export const UnstyledLink = styledAnchor`
   &,

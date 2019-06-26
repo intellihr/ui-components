@@ -60,35 +60,211 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
   <styled.div
     className="vertical-timeline-event"
   >
-    <div
-      className="vertical-timeline-event c0"
+    <StyledComponent
+      className="vertical-timeline-event"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-gqjmRU",
+            "isStatic": true,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  margin: 40px 0;
+  position: relative;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-gqjmRU",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      <styled.span>
-        <span
-          className="c1"
-        >
-          21 Apr
-        </span>
-      </styled.span>
-      <styled.div>
-        <div
-          className="c2"
-        >
-          <styled.span>
+      <div
+        className="vertical-timeline-event c0"
+      >
+        <styled.span>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-jTzLTM",
+                  "isStatic": true,
+                  "lastClassName": "c1",
+                  "rules": Array [
+                    "
+  text-align: right;
+  color: ",
+                    "#667380",
+                    ";
+  position: absolute;
+  width: 4rem;
+  font-size: 14px;
+  top: 6px;
+  line-height: 1;
+",
+                  ],
+                },
+                "displayName": "styled.span",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-jTzLTM",
+                "target": "span",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
             <span
-              className="c3"
-            />
-          </styled.span>
-        </div>
-      </styled.div>
-      <styled.div>
-        <div
-          className="c4"
-        >
-          Hey this is the child content of the event!
-        </div>
-      </styled.div>
-    </div>
+              className="c1"
+            >
+              21 Apr
+            </span>
+          </StyledComponent>
+        </styled.span>
+        <styled.div>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-VigVT",
+                  "isStatic": true,
+                  "lastClassName": "c2",
+                  "rules": Array [
+                    "
+  position: absolute;
+  width: auto;
+  height: 0;
+  left: 88px;
+  top: 12px;
+
+  > * {
+    top: -50%;
+    transform: translate(-50%, -50%);
+  }
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-VigVT",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <div
+              className="c2"
+            >
+              <styled.span>
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-fjdhpX",
+                        "isStatic": true,
+                        "lastClassName": "c3",
+                        "rules": Array [
+                          "
+  border: 2px solid ",
+                          "#E1E6EB",
+                          ";
+  position: absolute;
+  left: 50%;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: white;
+",
+                        ],
+                      },
+                      "displayName": "styled.span",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-fjdhpX",
+                      "target": "span",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                >
+                  <span
+                    className="c3"
+                  />
+                </StyledComponent>
+              </styled.span>
+            </div>
+          </StyledComponent>
+        </styled.div>
+        <styled.div>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-jzJRlG",
+                  "isStatic": true,
+                  "lastClassName": "c4",
+                  "rules": Array [
+                    "
+  margin-left: 7rem;
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-jzJRlG",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <div
+              className="c4"
+            >
+              Hey this is the child content of the event!
+            </div>
+          </StyledComponent>
+        </styled.div>
+      </div>
+    </StyledComponent>
   </styled.div>
 </VerticalTimelineEvent>
 `;
@@ -147,51 +323,190 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
   <styled.div
     className="vertical-timeline-event"
   >
-    <div
-      className="vertical-timeline-event c0"
+    <StyledComponent
+      className="vertical-timeline-event"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-gqjmRU",
+            "isStatic": true,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  margin: 40px 0;
+  position: relative;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-gqjmRU",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      <styled.span>
-        <span
-          className="c1"
-        />
-      </styled.span>
-      <styled.div>
-        <div
-          className="c2"
-        >
-          <Avatar
-            initials="JW"
-            size="small"
+      <div
+        className="vertical-timeline-event c0"
+      >
+        <styled.span>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-jTzLTM",
+                  "isStatic": true,
+                  "lastClassName": "c1",
+                  "rules": Array [
+                    "
+  text-align: right;
+  color: ",
+                    "#667380",
+                    ";
+  position: absolute;
+  width: 4rem;
+  font-size: 14px;
+  top: 6px;
+  line-height: 1;
+",
+                  ],
+                },
+                "displayName": "styled.span",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-jTzLTM",
+                "target": "span",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <span
+              className="c1"
+            />
+          </StyledComponent>
+        </styled.span>
+        <styled.div>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-VigVT",
+                  "isStatic": true,
+                  "lastClassName": "c2",
+                  "rules": Array [
+                    "
+  position: absolute;
+  width: auto;
+  height: 0;
+  left: 88px;
+  top: 12px;
+
+  > * {
+    top: -50%;
+    transform: translate(-50%, -50%);
+  }
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-VigVT",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
           >
             <div
-              className="Avatar avatar-small"
+              className="c2"
             >
-              <div
-                className="avatar-inner-container"
-                onClick={[Function]}
+              <Avatar
+                initials="JW"
+                size="small"
               >
                 <div
-                  className="avatar-initials-container"
+                  className="Avatar avatar-small"
                 >
-                  <span
-                    className="avatar-initials"
+                  <div
+                    className="avatar-inner-container"
+                    onClick={[Function]}
                   >
-                    JW
-                  </span>
+                    <div
+                      className="avatar-initials-container"
+                    >
+                      <span
+                        className="avatar-initials"
+                      >
+                        JW
+                      </span>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </Avatar>
             </div>
-          </Avatar>
-        </div>
-      </styled.div>
-      <styled.div>
-        <div
-          className="c3"
-        >
-          Hey this is the child content of the event!
-        </div>
-      </styled.div>
-    </div>
+          </StyledComponent>
+        </styled.div>
+        <styled.div>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-jzJRlG",
+                  "isStatic": true,
+                  "lastClassName": "c3",
+                  "rules": Array [
+                    "
+  margin-left: 7rem;
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-jzJRlG",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <div
+              className="c3"
+            >
+              Hey this is the child content of the event!
+            </div>
+          </StyledComponent>
+        </styled.div>
+      </div>
+    </StyledComponent>
   </styled.div>
 </VerticalTimelineEvent>
 `;
@@ -254,33 +569,209 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
   <styled.div
     className="vertical-timeline-event"
   >
-    <div
-      className="vertical-timeline-event c0"
+    <StyledComponent
+      className="vertical-timeline-event"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-gqjmRU",
+            "isStatic": true,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  margin: 40px 0;
+  position: relative;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-gqjmRU",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      <styled.span>
-        <span
-          className="c1"
-        />
-      </styled.span>
-      <styled.div>
-        <div
-          className="c2"
-        >
-          <styled.span>
+      <div
+        className="vertical-timeline-event c0"
+      >
+        <styled.span>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-jTzLTM",
+                  "isStatic": true,
+                  "lastClassName": "c1",
+                  "rules": Array [
+                    "
+  text-align: right;
+  color: ",
+                    "#667380",
+                    ";
+  position: absolute;
+  width: 4rem;
+  font-size: 14px;
+  top: 6px;
+  line-height: 1;
+",
+                  ],
+                },
+                "displayName": "styled.span",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-jTzLTM",
+                "target": "span",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
             <span
-              className="c3"
+              className="c1"
             />
-          </styled.span>
-        </div>
-      </styled.div>
-      <styled.div>
-        <div
-          className="c4"
-        >
-          Hey this is the child content of the event!
-        </div>
-      </styled.div>
-    </div>
+          </StyledComponent>
+        </styled.span>
+        <styled.div>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-VigVT",
+                  "isStatic": true,
+                  "lastClassName": "c2",
+                  "rules": Array [
+                    "
+  position: absolute;
+  width: auto;
+  height: 0;
+  left: 88px;
+  top: 12px;
+
+  > * {
+    top: -50%;
+    transform: translate(-50%, -50%);
+  }
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-VigVT",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <div
+              className="c2"
+            >
+              <styled.span>
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-fjdhpX",
+                        "isStatic": true,
+                        "lastClassName": "c3",
+                        "rules": Array [
+                          "
+  border: 2px solid ",
+                          "#E1E6EB",
+                          ";
+  position: absolute;
+  left: 50%;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: white;
+",
+                        ],
+                      },
+                      "displayName": "styled.span",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-fjdhpX",
+                      "target": "span",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                >
+                  <span
+                    className="c3"
+                  />
+                </StyledComponent>
+              </styled.span>
+            </div>
+          </StyledComponent>
+        </styled.div>
+        <styled.div>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-jzJRlG",
+                  "isStatic": true,
+                  "lastClassName": "c4",
+                  "rules": Array [
+                    "
+  margin-left: 7rem;
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-jzJRlG",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <div
+              className="c4"
+            >
+              Hey this is the child content of the event!
+            </div>
+          </StyledComponent>
+        </styled.div>
+      </div>
+    </StyledComponent>
   </styled.div>
 </VerticalTimelineEvent>
 `;

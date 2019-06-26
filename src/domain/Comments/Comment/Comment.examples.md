@@ -10,6 +10,7 @@ import { Pill } from '@Domain/Pills';
   dateComponent={<span>just now</span>}
   pillComponent={ <Pill text='pill' />}
   avatarComponent={<Avatar size={Props.AvatarSize.Small} initials='EN' />}
+  margins={{top: 100}}
 />
 ```
 

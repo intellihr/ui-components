@@ -1,5 +1,4 @@
-import React from 'react'
-import styled, { InterpolationValue, StyledComponentClass, css } from 'styled-components'
+import styled, { FlattenSimpleInterpolation, css } from 'styled-components'
 
 import { Variables } from '../../../../common'
 
@@ -37,7 +36,7 @@ function spacingForEventSpacing (props: ITimelineEventWrapperProps): number {
   }
 }
 
-function timelineEventBodyStyle (props: ITimelineEventBodyProps): InterpolationValue[] {
+function timelineEventBodyStyle (props: ITimelineEventBodyProps): FlattenSimpleInterpolation {
   switch (props.type) {
     case 'red':
       return css`

@@ -22,7 +22,7 @@ interface ITextLinkButtonProps extends ITextLinkCommonProps {
 
 type ITextLinkProps = ITextLinkAnchorProps | ITextLinkButtonProps
 
-const styledAnchor: StyledFunction<ITextLinkAnchorProps> = styled(({ textType, isInline, ...rest }) => <Anchor {...rest} />)
+const styledAnchor: StyledFunction<(props: ITextLinkAnchorProps) => React.ReactElement> = styled(({ textType, isInline, ...rest }) => <Anchor {...rest} />)
 
 const TextLinkStyles = css`
   transition: color .25s ease-out;
@@ -31,7 +31,7 @@ const TextLinkStyles = css`
   ${(props: ITextLinkCommonProps) => styleForTypographyType(props.textType)}
 
   ${
-    ({isInline}: ITextLinkCommonProps) => css`
+  ({ isInline }: ITextLinkCommonProps) => css`
       display: ${isInline && 'inline' || 'block'};
     `
   }
@@ -45,14 +45,14 @@ const TextLinkStyles = css`
   &:hover {
     color: ${Variables.Color.i500};
     ${
-      ({underlineOnHover}: ITextLinkCommonProps) => {
-        if (underlineOnHover) {
-          return css`
+  ({ underlineOnHover }: ITextLinkCommonProps) => {
+    if (underlineOnHover) {
+      return css`
             text-decoration: underline;
           `
-        }
-      }
     }
+  }
+  }
   }
 
   &:active {
@@ -99,6 +99,7 @@ class TextLink<P> extends React.PureComponent<P & ITextLinkProps> {
       return (
         <StyledTextLink
           {...this.props}
+          as={undefined}
         />
       )
     }

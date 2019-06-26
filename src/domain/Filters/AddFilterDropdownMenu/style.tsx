@@ -13,7 +13,7 @@ interface IStyledDropdownMenuProps {
   children?: (props: { closeMenu: () => void }) => React.ReactElement<any>
 }
 
-const dropdownMenu: StyledFunction<IStyledDropdownMenuProps> = styled(({ margins, ...rest }) => <DropdownMenu {...rest} />)
+const dropdownMenu: StyledFunction<(props: IStyledDropdownMenuProps) => React.ReactElement> = styled(({ margins, ...rest }) => <DropdownMenu {...rest} />)
 
 const StyledDropdownMenu = dropdownMenu`
   ${(props) => styleForMargins(props.margins)}

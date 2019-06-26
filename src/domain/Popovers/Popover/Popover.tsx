@@ -69,9 +69,13 @@ class Popover extends React.Component<IPopoverProps, never> {
   }
 
   public render () {
-    return ReactDOM.createPortal(
-      this.transition,
-      document.body
+    return (
+      <>
+        {ReactDOM.createPortal(
+          this.transition,
+          document.body
+        )}
+      </>
     )
   }
 

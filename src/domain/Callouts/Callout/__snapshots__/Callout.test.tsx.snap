@@ -84,7 +84,6 @@ exports[`Callout Renders successfully when only message is passed 1`] = `
 <styled.div
   className="callout info"
   data-component-type="callout"
-  innerRef={[Function]}
 >
   <div
     className="content"

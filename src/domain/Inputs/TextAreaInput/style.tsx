@@ -52,7 +52,7 @@ const StyledMainGifContainer = styled.div`
   align-items: flex-start;
 `
 
-const textArea: StyledFunction<IStyledAutosizeTextAreaProps> = styled(({ hasGif, gifsEnabled, ...rest }) => <AutosizeTextarea {...rest} />)
+const textArea: StyledFunction<(props: IStyledAutosizeTextAreaProps) => React.ReactElement> = styled(({ hasGif, gifsEnabled, ...rest }) => <AutosizeTextarea {...rest} />)
 
 const StyledAutosizeTextarea = textArea`
   min-height: 39px;

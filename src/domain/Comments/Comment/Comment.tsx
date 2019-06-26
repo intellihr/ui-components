@@ -51,7 +51,7 @@ export const Comment: React.FC<ICommentProps> = ({
       <CommentActionMenuToggleButton
         type='button'
         onClick={props.toggleMenu}
-        innerRef={props.toggleComponentRef}
+        ref={props.toggleComponentRef}
         {...props.ariaProps}
       >
         <FontAwesomeIcon type='ellipsis-v' />

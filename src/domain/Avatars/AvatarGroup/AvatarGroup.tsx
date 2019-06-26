@@ -74,7 +74,7 @@ class AvatarGroup extends React.PureComponent<IAvatarGroup, IAvatarGroupState> {
         avatarGroupSize={size!}
         data-component-type={Props.ComponentType.AvatarGroup}
         data-component-context={componentContext}
-        innerRef={wrapperRef}
+        ref={wrapperRef}
         isHoverable={isHoverable}
         onClick={onClick}
         {...wrapperOverrides}
