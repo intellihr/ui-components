@@ -4,7 +4,11 @@ import { Props } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { InputGroup } from '../../Inputs/InputGroup'
 import { TextInput } from '../../Inputs/TextInput'
-import { AddFilterDropdownMenu, IAddFilterDropdownMenuFilter } from '../AddFilterDropdownMenu/AddFilterDropdownMenu'
+import {
+  AddFilterDropdownMenu,
+  IAddFilterDetail,
+  IAddFilterDropdownMenuFilter
+} from '../AddFilterDropdownMenu/AddFilterDropdownMenu'
 import { FilterTag, IFilterTagDetail } from '../FilterTag/FilterTag'
 import { ControllerWrapper, StyledController, StyledLeftComponent } from './style'
 
@@ -20,7 +24,7 @@ export interface IFilterControllerProps {
   /** search value of this filter controller */
   searchValue?: string
   /** Callback when a filter is added */
-  onFilterAdded: (selectedFilter: IFilterTagDetail) => void
+  onFilterAdded: (selectedFilter: IAddFilterDetail) => void
   /** Callback when a tag is deleted */
   onTagDeleted: (selectedTag: IFilterTagDetail) => void
   /** Callback when input is added in search bar */

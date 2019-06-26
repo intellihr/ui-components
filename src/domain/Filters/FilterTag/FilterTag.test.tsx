@@ -1,20 +1,28 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { FilterTag } from './FilterTag'
+import { FilterTag, IFilterTagDetail } from './FilterTag'
 
 const dummyHandleDelete = () => alert('dummy')
 
-const tags = [
+const tags: IFilterTagDetail[] = [
   {
-    fieldName: 'Type',
+    field: 'type',
+    label: 'Type',
     operator: 'is',
-    value: 'Product Training'
+    fieldValues:[{
+      label: 'Product Training',
+      value: 'product_training_id'
+    }, {
+      label: 'IT Training',
+      value: 'it_training_id'
+    }]
   },
   {
-    fieldName: 'Training Provider',
-    operator: 'is',
-    value: 'AWS'
+    field: 'complete_at',
+    label: 'Complete date',
+    operator: 'from',
+    fieldValues:'01/01/2019,31/05/2019'
   }
 ]
 

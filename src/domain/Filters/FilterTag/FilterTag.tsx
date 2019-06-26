@@ -6,20 +6,26 @@ import { BrickColor } from '../../Typographies/Brick/style'
 import { Text } from '../../Typographies/Text'
 import { StyledCross, StyledDeleteButton } from './style'
 
-export interface IFilterTagDetail {
-  fieldName: string
-  operator?: string
+interface IFieldValue {
+  label: string
   value: string
 }
 
-export interface IFilterTagProps {
+interface IFilterTagDetail {
+  field: string
+  label: string
+  operator?: 'is' | 'from'
+  fieldValues: IFieldValue[] | string
+}
+
+interface IFilterTagProps {
   tags: IFilterTagDetail[]
   onTagDeleted: (selectedTag: IFilterTagDetail) => void
   /** The data-component-context */
   componentContext?: string
 }
 
-export class FilterTag extends React.PureComponent<IFilterTagProps> {
+class FilterTag extends React.PureComponent<IFilterTagProps> {
   public render (): JSX.Element | null {
     const {
       tags,
@@ -32,7 +38,7 @@ export class FilterTag extends React.PureComponent<IFilterTagProps> {
           data-component-type={Props.ComponentType.FilterTag}
           data-component-context={componentContext}
         >
-          {tags.map((tag, index) => this.renderTag(tag, index))}
+          {tags.map((tag) => this.renderTag(tag))}
         </div>
       )
     }
@@ -40,10 +46,10 @@ export class FilterTag extends React.PureComponent<IFilterTagProps> {
     return null
   }
 
-  private renderTag = (tag: IFilterTagDetail, index: number) => {
+  private renderTag = (tag: IFilterTagDetail) => {
     return (
       <Brick
-        key={`tag-${tag.fieldName}-${index}`}
+        key={`tag-${tag.field}`}
         margins={{right: Variables.Spacing.sXSmall}}
         typographyType={Props.TypographyType.Small}
         color={BrickColor.Neutral}
@@ -52,21 +58,78 @@ export class FilterTag extends React.PureComponent<IFilterTagProps> {
           color={Variables.Color.n800}
           type={Props.TypographyType.Small}
         >
-          {`${tag.fieldName} ${tag.operator} `}
+          {`${tag.label} ${tag.operator} `}
         </Text>
-        <Text
-          color={Variables.Color.n800}
-          type={Props.TypographyType.Small}
-          weight={Variables.FontWeight.fwSemiBold}
-        >
-          {tag.value}
-        </Text>
+        {this.tagValue(tag)}
         <StyledDeleteButton
           onClick={this.deleteTag(tag)}
         >
           <StyledCross>×</StyledCross>
         </StyledDeleteButton>
       </Brick>
+    )
+  }
+
+  private tagValue = (tag: IFilterTagDetail) => {
+    if (tag.operator === 'from' && typeof  tag.fieldValues === 'string' && tag.fieldValues.indexOf(',') > 0) {
+      const start = tag.fieldValues.split(',')[0]
+      const end = tag.fieldValues.split(',')[1]
+
+      return (
+        <>
+          <Text
+            color={Variables.Color.n800}
+            type={Props.TypographyType.Small}
+            weight={Variables.FontWeight.fwSemiBold}
+          >
+            {start}
+          </Text>
+          <Text
+            color={Variables.Color.n800}
+            type={Props.TypographyType.Small}
+          >
+            {' to '}
+          </Text>
+          <Text
+            color={Variables.Color.n800}
+            type={Props.TypographyType.Small}
+            weight={Variables.FontWeight.fwSemiBold}
+          >
+            {end}
+          </Text>
+        </>
+      )
+    }
+
+    if (typeof  tag.fieldValues === 'object') {
+      return (
+        tag.fieldValues.map((fieldValue, index) => {
+          return (
+            <>
+              {index !== 0 && this.seperator}
+              <Text
+                key={fieldValue.value}
+                color={Variables.Color.n800}
+                type={Props.TypographyType.Small}
+                weight={Variables.FontWeight.fwSemiBold}
+              >
+                {fieldValue.label}
+              </Text>
+            </>
+          )
+        })
+      )
+    }
+  }
+
+  private get seperator () {
+    return (
+      <Text
+        color={Variables.Color.n800}
+        type={Props.TypographyType.Small}
+      >
+        {' or '}
+      </Text>
     )
   }
 
@@ -77,4 +140,10 @@ export class FilterTag extends React.PureComponent<IFilterTagProps> {
 
     onTagDeleted(deletedTag)
   }
+}
+
+export {
+  IFilterTagDetail,
+  FilterTag,
+  IFieldValue
 }

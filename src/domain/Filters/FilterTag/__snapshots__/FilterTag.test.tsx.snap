@@ -6,7 +6,7 @@ exports[`<FilterTag /> should render the filter tag 1`] = `
 >
   <Brick
     color="neutral"
-    key="tag-Type-0"
+    key="tag-type"
     margins={
       Object {
         "right": 8,
@@ -25,11 +25,30 @@ exports[`<FilterTag /> should render the filter tag 1`] = `
     <Text
       color="#262D33"
       isInline={true}
+      key="product_training_id"
       tag="span"
       type="small"
       weight={600}
     >
       Product Training
+    </Text>
+    <Text
+      color="#262D33"
+      isInline={true}
+      tag="span"
+      type="small"
+    >
+       or 
+    </Text>
+    <Text
+      color="#262D33"
+      isInline={true}
+      key="it_training_id"
+      tag="span"
+      type="small"
+      weight={600}
+    >
+      IT Training
     </Text>
     <styled.button
       onClick={[Function]}
@@ -41,7 +60,7 @@ exports[`<FilterTag /> should render the filter tag 1`] = `
   </Brick>
   <Brick
     color="neutral"
-    key="tag-Training Provider-1"
+    key="tag-complete_at"
     margins={
       Object {
         "right": 8,
@@ -55,7 +74,7 @@ exports[`<FilterTag /> should render the filter tag 1`] = `
       tag="span"
       type="small"
     >
-      Training Provider is 
+      Complete date from 
     </Text>
     <Text
       color="#262D33"
@@ -64,7 +83,24 @@ exports[`<FilterTag /> should render the filter tag 1`] = `
       type="small"
       weight={600}
     >
-      AWS
+      01/01/2019
+    </Text>
+    <Text
+      color="#262D33"
+      isInline={true}
+      tag="span"
+      type="small"
+    >
+       to 
+    </Text>
+    <Text
+      color="#262D33"
+      isInline={true}
+      tag="span"
+      type="small"
+      weight={600}
+    >
+      31/05/2019
     </Text>
     <styled.button
       onClick={[Function]}
