@@ -8,7 +8,6 @@ interface IStyledCommentProps {
 }
 
 const StyledComment = styled.div<IStyledCommentProps>`
-  ${(props) => styleForMargins(props.margins)}
   display: flex;
   flex-flow: row;
   margin: 1.125rem 0;
@@ -75,6 +74,8 @@ const StyledComment = styled.div<IStyledCommentProps>`
       word-break: break-word;
     }
   }
+
+  ${(props) => styleForMargins(props.margins)}
 `
 
 const CommentActionMenuToggleButton = styled.button`
