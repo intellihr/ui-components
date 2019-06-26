@@ -494,25 +494,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
             onExited={[Function]}
             timeout={200}
           >
-<<<<<<< HEAD
-            <styled.div
-              animationStyle="none"
-              data-component-type="grid_layout_cell"
-              displayType="block"
-              flexHorizontalAlignment="left"
-              gridColumns={12}
-              gutterMarginX={4}
-              gutterMarginY="none"
-              gutterPaddingX="none"
-              gutterPaddingY={
-                Object {
-                  "desktop": "none",
-                  "min": 16,
-                }
-              }
-              offset={0}
-              size={10}
-=======
             <Transition
               appear={false}
               enter={true}
@@ -527,15 +508,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
               onExiting={[Function]}
               timeout={200}
               unmountOnExit={false}
->>>>>>> bd73cf77d79dd62d78f5b6cab2270f04e3796afa
             >
               <styled.div
                 animationStyle="none"
                 data-component-type="grid_layout_cell"
-<<<<<<< HEAD
-                offset={0}
-                size={10}
-=======
                 displayType="block"
                 flexHorizontalAlignments="left"
                 gridColumns={12}
@@ -550,7 +526,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                 }
                 offsets={0}
                 sizes={10}
->>>>>>> bd73cf77d79dd62d78f5b6cab2270f04e3796afa
               >
                 <StyledComponent
                   animationStyle="none"
@@ -626,30 +601,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
             onExited={[Function]}
             timeout={200}
           >
-<<<<<<< HEAD
-            <styled.div
-              animationStyle="none"
-              data-component-type="grid_layout_cell"
-              displayType="flex"
-              flexHorizontalAlignment={
-                Object {
-                  "desktop": "right",
-                  "min": "center",
-                }
-              }
-              gridColumns={12}
-              gutterMarginX={4}
-              gutterMarginY="none"
-              gutterPaddingX="none"
-              gutterPaddingY={
-                Object {
-                  "desktop": "none",
-                  "min": 16,
-                }
-              }
-              offset={0}
-              size={2}
-=======
             <Transition
               appear={false}
               enter={true}
@@ -664,15 +615,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
               onExiting={[Function]}
               timeout={200}
               unmountOnExit={false}
->>>>>>> bd73cf77d79dd62d78f5b6cab2270f04e3796afa
             >
               <styled.div
                 animationStyle="none"
                 data-component-type="grid_layout_cell"
-<<<<<<< HEAD
-                offset={0}
-                size={2}
-=======
                 displayType="flex"
                 flexHorizontalAlignments={
                   Object {
@@ -692,7 +638,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                 }
                 offsets={0}
                 sizes={2}
->>>>>>> bd73cf77d79dd62d78f5b6cab2270f04e3796afa
               >
                 <StyledComponent
                   animationStyle="none"
@@ -773,34 +718,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
             onExited={[Function]}
             timeout={200}
           >
-<<<<<<< HEAD
-            <styled.div
-              animationStyle="none"
-              data-component-type="grid_layout_cell"
-              displayType="block"
-              flexHorizontalAlignment="left"
-              gridColumns={12}
-              gutterMarginX={4}
-              gutterMarginY="none"
-              gutterPaddingX="none"
-              gutterPaddingY={
-                Object {
-                  "desktop": "none",
-                  "min": 16,
-                }
-              }
-              offset={
-                Object {
-                  "tablet": 2,
-                }
-              }
-              size={
-                Object {
-                  "desktop": 3,
-                  "tablet": 4,
-                }
-              }
-=======
             <Transition
               appear={false}
               enter={true}
@@ -815,14 +732,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
               onExiting={[Function]}
               timeout={200}
               unmountOnExit={false}
->>>>>>> bd73cf77d79dd62d78f5b6cab2270f04e3796afa
             >
               <styled.div
                 animationStyle="none"
                 data-component-type="grid_layout_cell"
-<<<<<<< HEAD
-                offset={
-=======
                 displayType="block"
                 flexHorizontalAlignments="left"
                 gridColumns={12}
@@ -836,16 +749,11 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   }
                 }
                 offsets={
->>>>>>> bd73cf77d79dd62d78f5b6cab2270f04e3796afa
                   Object {
                     "tablet": 2,
                   }
                 }
-<<<<<<< HEAD
-                size={
-=======
                 sizes={
->>>>>>> bd73cf77d79dd62d78f5b6cab2270f04e3796afa
                   Object {
                     "desktop": 3,
                     "tablet": 4,
@@ -940,30 +848,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
             onExited={[Function]}
             timeout={200}
           >
-<<<<<<< HEAD
-            <styled.div
-              animationStyle="none"
-              data-component-type="grid_layout_cell"
-              displayType="block"
-              flexHorizontalAlignment="left"
-              gridColumns={12}
-              gutterMarginX={4}
-              gutterMarginY="none"
-              gutterPaddingX="none"
-              gutterPaddingY={
-                Object {
-                  "desktop": "none",
-                  "min": 16,
-                }
-              }
-              offset={0}
-              size={
-                Object {
-                  "desktop": 6,
-                  "tablet": 4,
-                }
-              }
-=======
             <Transition
               appear={false}
               enter={true}
@@ -978,15 +862,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
               onExiting={[Function]}
               timeout={200}
               unmountOnExit={false}
->>>>>>> bd73cf77d79dd62d78f5b6cab2270f04e3796afa
             >
               <styled.div
                 animationStyle="none"
                 data-component-type="grid_layout_cell"
-<<<<<<< HEAD
-                offset={0}
-                size={
-=======
                 displayType="block"
                 flexHorizontalAlignments="left"
                 gridColumns={12}
@@ -1001,7 +880,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                 }
                 offsets={0}
                 sizes={
->>>>>>> bd73cf77d79dd62d78f5b6cab2270f04e3796afa
                   Object {
                     "desktop": 6,
                     "tablet": 4,
@@ -1092,25 +970,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
             onExited={[Function]}
             timeout={200}
           >
-<<<<<<< HEAD
-            <styled.div
-              animationStyle="none"
-              data-component-type="grid_layout_cell"
-              displayType="block"
-              flexHorizontalAlignment="left"
-              gridColumns={12}
-              gutterMarginX={4}
-              gutterMarginY="none"
-              gutterPaddingX="none"
-              gutterPaddingY={
-                Object {
-                  "desktop": "none",
-                  "min": 16,
-                }
-              }
-              offset={3}
-              size="auto"
-=======
             <Transition
               appear={false}
               enter={true}
@@ -1125,15 +984,10 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
               onExiting={[Function]}
               timeout={200}
               unmountOnExit={false}
->>>>>>> bd73cf77d79dd62d78f5b6cab2270f04e3796afa
             >
               <styled.div
                 animationStyle="none"
                 data-component-type="grid_layout_cell"
-<<<<<<< HEAD
-                offset={3}
-                size="auto"
-=======
                 displayType="block"
                 flexHorizontalAlignments="left"
                 gridColumns={12}
@@ -1148,7 +1002,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                 }
                 offsets={3}
                 sizes="auto"
->>>>>>> bd73cf77d79dd62d78f5b6cab2270f04e3796afa
               >
                 <StyledComponent
                   animationStyle="none"
@@ -1750,25 +1603,6 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
             onExited={[Function]}
             timeout={200}
           >
-<<<<<<< HEAD
-            <styled.div
-              animationStyle="none"
-              data-component-type="grid_layout_cell"
-              displayType="block"
-              flexHorizontalAlignment="left"
-              gridColumns={12}
-              gutterMarginX={4}
-              gutterMarginY="none"
-              gutterPaddingX="none"
-              gutterPaddingY={
-                Object {
-                  "desktop": "none",
-                  "min": 16,
-                }
-              }
-              offset={0}
-              size={10}
-=======
             <Transition
               appear={false}
               enter={true}
@@ -1783,15 +1617,10 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
               onExiting={[Function]}
               timeout={200}
               unmountOnExit={false}
->>>>>>> bd73cf77d79dd62d78f5b6cab2270f04e3796afa
             >
               <styled.div
                 animationStyle="none"
                 data-component-type="grid_layout_cell"
-<<<<<<< HEAD
-                offset={0}
-                size={10}
-=======
                 displayType="block"
                 flexHorizontalAlignments="left"
                 gridColumns={12}
@@ -1806,7 +1635,6 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                 }
                 offsets={0}
                 sizes={10}
->>>>>>> bd73cf77d79dd62d78f5b6cab2270f04e3796afa
               >
                 <StyledComponent
                   animationStyle="none"
@@ -1882,30 +1710,6 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
             onExited={[Function]}
             timeout={200}
           >
-<<<<<<< HEAD
-            <styled.div
-              animationStyle="none"
-              data-component-type="grid_layout_cell"
-              displayType="flex"
-              flexHorizontalAlignment={
-                Object {
-                  "desktop": "right",
-                  "min": "center",
-                }
-              }
-              gridColumns={12}
-              gutterMarginX={4}
-              gutterMarginY="none"
-              gutterPaddingX="none"
-              gutterPaddingY={
-                Object {
-                  "desktop": "none",
-                  "min": 16,
-                }
-              }
-              offset={0}
-              size={2}
-=======
             <Transition
               appear={false}
               enter={true}
@@ -1920,15 +1724,10 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
               onExiting={[Function]}
               timeout={200}
               unmountOnExit={false}
->>>>>>> bd73cf77d79dd62d78f5b6cab2270f04e3796afa
             >
               <styled.div
                 animationStyle="none"
                 data-component-type="grid_layout_cell"
-<<<<<<< HEAD
-                offset={0}
-                size={2}
-=======
                 displayType="flex"
                 flexHorizontalAlignments={
                   Object {
@@ -1948,7 +1747,6 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                 }
                 offsets={0}
                 sizes={2}
->>>>>>> bd73cf77d79dd62d78f5b6cab2270f04e3796afa
               >
                 <StyledComponent
                   animationStyle="none"
@@ -2029,34 +1827,6 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
             onExited={[Function]}
             timeout={200}
           >
-<<<<<<< HEAD
-            <styled.div
-              animationStyle="none"
-              data-component-type="grid_layout_cell"
-              displayType="block"
-              flexHorizontalAlignment="left"
-              gridColumns={12}
-              gutterMarginX={4}
-              gutterMarginY="none"
-              gutterPaddingX="none"
-              gutterPaddingY={
-                Object {
-                  "desktop": "none",
-                  "min": 16,
-                }
-              }
-              offset={
-                Object {
-                  "tablet": 2,
-                }
-              }
-              size={
-                Object {
-                  "desktop": 3,
-                  "tablet": 4,
-                }
-              }
-=======
             <Transition
               appear={false}
               enter={true}
@@ -2071,14 +1841,10 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
               onExiting={[Function]}
               timeout={200}
               unmountOnExit={false}
->>>>>>> bd73cf77d79dd62d78f5b6cab2270f04e3796afa
             >
               <styled.div
                 animationStyle="none"
                 data-component-type="grid_layout_cell"
-<<<<<<< HEAD
-                offset={
-=======
                 displayType="block"
                 flexHorizontalAlignments="left"
                 gridColumns={12}
@@ -2092,16 +1858,11 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                   }
                 }
                 offsets={
->>>>>>> bd73cf77d79dd62d78f5b6cab2270f04e3796afa
                   Object {
                     "tablet": 2,
                   }
                 }
-<<<<<<< HEAD
-                size={
-=======
                 sizes={
->>>>>>> bd73cf77d79dd62d78f5b6cab2270f04e3796afa
                   Object {
                     "desktop": 3,
                     "tablet": 4,
@@ -2196,30 +1957,6 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
             onExited={[Function]}
             timeout={200}
           >
-<<<<<<< HEAD
-            <styled.div
-              animationStyle="none"
-              data-component-type="grid_layout_cell"
-              displayType="block"
-              flexHorizontalAlignment="left"
-              gridColumns={12}
-              gutterMarginX={4}
-              gutterMarginY="none"
-              gutterPaddingX="none"
-              gutterPaddingY={
-                Object {
-                  "desktop": "none",
-                  "min": 16,
-                }
-              }
-              offset={0}
-              size={
-                Object {
-                  "desktop": 6,
-                  "tablet": 4,
-                }
-              }
-=======
             <Transition
               appear={false}
               enter={true}
@@ -2234,15 +1971,10 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
               onExiting={[Function]}
               timeout={200}
               unmountOnExit={false}
->>>>>>> bd73cf77d79dd62d78f5b6cab2270f04e3796afa
             >
               <styled.div
                 animationStyle="none"
                 data-component-type="grid_layout_cell"
-<<<<<<< HEAD
-                offset={0}
-                size={
-=======
                 displayType="block"
                 flexHorizontalAlignments="left"
                 gridColumns={12}
@@ -2257,7 +1989,6 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                 }
                 offsets={0}
                 sizes={
->>>>>>> bd73cf77d79dd62d78f5b6cab2270f04e3796afa
                   Object {
                     "desktop": 6,
                     "tablet": 4,
@@ -2348,25 +2079,6 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
             onExited={[Function]}
             timeout={200}
           >
-<<<<<<< HEAD
-            <styled.div
-              animationStyle="none"
-              data-component-type="grid_layout_cell"
-              displayType="block"
-              flexHorizontalAlignment="left"
-              gridColumns={12}
-              gutterMarginX={4}
-              gutterMarginY="none"
-              gutterPaddingX="none"
-              gutterPaddingY={
-                Object {
-                  "desktop": "none",
-                  "min": 16,
-                }
-              }
-              offset={3}
-              size="auto"
-=======
             <Transition
               appear={false}
               enter={true}
@@ -2381,15 +2093,10 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
               onExiting={[Function]}
               timeout={200}
               unmountOnExit={false}
->>>>>>> bd73cf77d79dd62d78f5b6cab2270f04e3796afa
             >
               <styled.div
                 animationStyle="none"
                 data-component-type="grid_layout_cell"
-<<<<<<< HEAD
-                offset={3}
-                size="auto"
-=======
                 displayType="block"
                 flexHorizontalAlignments="left"
                 gridColumns={12}
@@ -2404,7 +2111,6 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                 }
                 offsets={3}
                 sizes="auto"
->>>>>>> bd73cf77d79dd62d78f5b6cab2270f04e3796afa
               >
                 <StyledComponent
                   animationStyle="none"
