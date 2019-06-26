@@ -19,9 +19,47 @@ exports[`<BlockSkeleton /> should render a block skeleton 1`] = `
   showSkeleton={true}
 >
   <styled.span>
-    <span
-      className="c0"
-    />
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  border-radius: 4px;
+  line-height: 1rem;
+  width: ",
+              [Function],
+              ";
+  height: ",
+              [Function],
+              ";
+  ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <span
+        className="c0"
+      />
+    </StyledComponent>
   </styled.span>
 </BlockSkeleton>
 `;
@@ -51,11 +89,51 @@ exports[`<BlockSkeleton /> should render a block skeleton with set width and hei
     height="200px"
     width="400px"
   >
-    <span
-      className="c0"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  border-radius: 4px;
+  line-height: 1rem;
+  width: ",
+              [Function],
+              ";
+  height: ",
+              [Function],
+              ";
+  ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
       height="200px"
       width="400px"
-    />
+    >
+      <span
+        className="c0"
+        height="200px"
+        width="400px"
+      />
+    </StyledComponent>
   </styled.span>
 </BlockSkeleton>
 `;

@@ -161,7 +161,7 @@ export class ScrollingTabGroup extends React.Component<IScrollingTabGroupProps, 
     return (
       <TabParent>
         <TabList
-          innerRef={this.tabListRef}
+          ref={this.tabListRef}
           onScroll={this.handleScrollUpdate}
           role='tablist'
         >

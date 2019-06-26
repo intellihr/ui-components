@@ -123,7 +123,7 @@ export class Callout extends React.Component<ICalloutProps, ICalloutState> {
         margins={margins}
         className={classNames(this.classNames)}
         // tslint:disable-next-line:jsx-no-lambda
-        innerRef={(node) => { this.node = node }}
+        ref={(node) => { this.node = node }}
         data-component-type={Props.ComponentType.Callout}
         data-component-context={componentContext}
       >

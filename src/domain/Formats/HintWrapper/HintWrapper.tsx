@@ -76,7 +76,7 @@ class HintWrapper extends React.PureComponent<IHintWrapperProps> {
         {...dataComponentValues}
         onMouseEnter={openMenu}
         onMouseLeave={closeMenu}
-        innerRef={toggleComponentRef}
+        ref={toggleComponentRef}
         {...ariaProps}
       >
         {children}

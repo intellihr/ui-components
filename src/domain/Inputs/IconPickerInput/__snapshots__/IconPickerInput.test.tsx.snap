@@ -9,7 +9,7 @@ exports[`<IconPickerInput /> should render an Icon Picker 1`] = `
       Array [
         Object {
           "content": <React.Fragment>
-            <styled.input
+            <ForwardRef(styled.input)
               checked={true}
               id="icon-picker-intelli-icon-australia-0"
               name="icon-picker"
@@ -17,22 +17,22 @@ exports[`<IconPickerInput /> should render an Icon Picker 1`] = `
               type="radio"
               value="intelli-icon-australia"
             />
-            <styled.label
+            <ForwardRef(styled.label)
               htmlFor="icon-picker-intelli-icon-australia-0"
               isChecked={true}
             >
-              <Styled(Icon)
+              <ForwardRef(Styled(Icon))
                 color="#7362F5"
                 size="large"
                 type="intelli-icon-australia"
               />
-            </styled.label>
+            </ForwardRef(styled.label)>
           </React.Fragment>,
           "size": "shrink",
         },
         Object {
           "content": <React.Fragment>
-            <styled.input
+            <ForwardRef(styled.input)
               checked={false}
               id="icon-picker-intelli-icon-card-1"
               name="icon-picker"
@@ -40,22 +40,22 @@ exports[`<IconPickerInput /> should render an Icon Picker 1`] = `
               type="radio"
               value="intelli-icon-card"
             />
-            <styled.label
+            <ForwardRef(styled.label)
               htmlFor="icon-picker-intelli-icon-card-1"
               isChecked={false}
             >
-              <Styled(Icon)
+              <ForwardRef(Styled(Icon))
                 color="#424F5C"
                 size="large"
                 type="intelli-icon-card"
               />
-            </styled.label>
+            </ForwardRef(styled.label)>
           </React.Fragment>,
           "size": "shrink",
         },
         Object {
           "content": <React.Fragment>
-            <styled.input
+            <ForwardRef(styled.input)
               checked={false}
               id="icon-picker-intelli-icon-book-2"
               name="icon-picker"
@@ -63,16 +63,16 @@ exports[`<IconPickerInput /> should render an Icon Picker 1`] = `
               type="radio"
               value="intelli-icon-book"
             />
-            <styled.label
+            <ForwardRef(styled.label)
               htmlFor="icon-picker-intelli-icon-book-2"
               isChecked={false}
             >
-              <Styled(Icon)
+              <ForwardRef(Styled(Icon))
                 color="#424F5C"
                 size="large"
                 type="intelli-icon-book"
               />
-            </styled.label>
+            </ForwardRef(styled.label)>
           </React.Fragment>,
           "size": "shrink",
         },

@@ -38,26 +38,93 @@ exports[`<TextLink /> should render a text link 1`] = `
     isInline={true}
     type="anchor"
   >
-    <Component
-      className="c0"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  ",
+              "
+  transition: color .25s ease-out;
+  cursor: pointer;
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  &,
+  &:link,
+  &:visited {
+    color: ",
+              "#432DF3",
+              ";
+  }
+
+  &:hover {
+    color: ",
+              "#2512B3",
+              ";
+    ",
+              [Function],
+              "
+  }
+
+  &:active {
+    color: ",
+              "#0F0080",
+              ";
+  }
+",
+              ";
+",
+            ],
+          },
+          "displayName": "Styled(Component)",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": [Function],
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
       href="/lol"
       isInline={true}
       type="anchor"
     >
-      <Anchor
+      <Component
         className="c0"
         href="/lol"
+        isInline={true}
         type="anchor"
       >
-        <a
+        <Anchor
           className="c0"
           href="/lol"
           type="anchor"
         >
-          Text link me
-        </a>
-      </Anchor>
-    </Component>
+          <a
+            className="c0"
+            href="/lol"
+            type="anchor"
+          >
+            Text link me
+          </a>
+        </Anchor>
+      </Component>
+    </StyledComponent>
   </Styled(Component)>
 </TextLink>
 `;
@@ -99,12 +166,79 @@ exports[`<TextLink /> should render a text link button 1`] = `
     isInline={true}
     type="button"
   >
-    <button
-      className="c0"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bwzfXH",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  ",
+              "
+  transition: color .25s ease-out;
+  cursor: pointer;
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  &,
+  &:link,
+  &:visited {
+    color: ",
+              "#432DF3",
+              ";
+  }
+
+  &:hover {
+    color: ",
+              "#2512B3",
+              ";
+    ",
+              [Function],
+              "
+  }
+
+  &:active {
+    color: ",
+              "#0F0080",
+              ";
+  }
+",
+              ";
+  outline: 0;
+",
+            ],
+          },
+          "displayName": "styled.button",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bwzfXH",
+          "target": "button",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      isInline={true}
       type="button"
     >
-      Text link me
-    </button>
+      <button
+        className="c0"
+        type="button"
+      >
+        Text link me
+      </button>
+    </StyledComponent>
   </styled.button>
 </TextLink>
 `;
@@ -147,26 +281,93 @@ exports[`<TextLink /> should render a text link with display block 1`] = `
     isInline={false}
     type="anchor"
   >
-    <Component
-      className="c0"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  ",
+              "
+  transition: color .25s ease-out;
+  cursor: pointer;
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  &,
+  &:link,
+  &:visited {
+    color: ",
+              "#432DF3",
+              ";
+  }
+
+  &:hover {
+    color: ",
+              "#2512B3",
+              ";
+    ",
+              [Function],
+              "
+  }
+
+  &:active {
+    color: ",
+              "#0F0080",
+              ";
+  }
+",
+              ";
+",
+            ],
+          },
+          "displayName": "Styled(Component)",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": [Function],
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
       href="#"
       isInline={false}
       type="anchor"
     >
-      <Anchor
+      <Component
         className="c0"
         href="#"
+        isInline={false}
         type="anchor"
       >
-        <a
+        <Anchor
           className="c0"
           href="#"
           type="anchor"
         >
-          Block text link
-        </a>
-      </Anchor>
-    </Component>
+          <a
+            className="c0"
+            href="#"
+            type="anchor"
+          >
+            Block text link
+          </a>
+        </Anchor>
+      </Component>
+    </StyledComponent>
   </Styled(Component)>
 </TextLink>
 `;
@@ -213,29 +414,97 @@ exports[`<TextLink /> should render a text link with underline on hover 1`] = `
     type="anchor"
     underlineOnHover={true}
   >
-    <Component
-      className="c0"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  ",
+              "
+  transition: color .25s ease-out;
+  cursor: pointer;
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  &,
+  &:link,
+  &:visited {
+    color: ",
+              "#432DF3",
+              ";
+  }
+
+  &:hover {
+    color: ",
+              "#2512B3",
+              ";
+    ",
+              [Function],
+              "
+  }
+
+  &:active {
+    color: ",
+              "#0F0080",
+              ";
+  }
+",
+              ";
+",
+            ],
+          },
+          "displayName": "Styled(Component)",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": [Function],
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
       href="#"
       isInline={true}
       type="anchor"
       underlineOnHover={true}
     >
-      <Anchor
+      <Component
         className="c0"
         href="#"
+        isInline={true}
         type="anchor"
         underlineOnHover={true}
       >
-        <a
+        <Anchor
           className="c0"
           href="#"
           type="anchor"
           underlineOnHover={true}
         >
-          Underline text link on hover
-        </a>
-      </Anchor>
-    </Component>
+          <a
+            className="c0"
+            href="#"
+            type="anchor"
+            underlineOnHover={true}
+          >
+            Underline text link on hover
+          </a>
+        </Anchor>
+      </Component>
+    </StyledComponent>
   </Styled(Component)>
 </TextLink>
 `;

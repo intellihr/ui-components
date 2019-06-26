@@ -1,5 +1,4 @@
-import React from 'react'
-import styled, { StyledComponentClass, css } from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import { Variables } from '../../../../common'
 import { InputGroupPosition } from '../InputGroup'
@@ -8,7 +7,7 @@ interface IInputGroupButtonProps {
   groupPosition: InputGroupPosition
 }
 
-const InputGroupButton = styled.button`
+const InputGroupButton = styled.button<IInputGroupButtonProps>`
   align-items: center;
   background-color: ${Variables.Color.n200};
   border: 1px solid ${Variables.Color.n400};

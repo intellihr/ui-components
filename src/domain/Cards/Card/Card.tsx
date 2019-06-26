@@ -55,7 +55,7 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
       margins
     } = this.props
 
-    return(
+    return (
       <StyledCard
         margins={margins}
         onClick={onCardToggle}
@@ -81,7 +81,7 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
     } = this.props
 
     if (dropdownSections) {
-      return(
+      return (
         <DropdownMenu
           sections={dropdownSections}
           toggleComponent={this.actionButton}
@@ -97,11 +97,11 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
       onClick={this.handleActionButtonClick(toggleMenu)}
       onMouseOver={this.handleActionButtonMouseOver}
       onMouseOut={this.handleActionButtonMouseOut}
-      innerRef={toggleComponentRef}
+      ref={toggleComponentRef}
       hasRightMargin={!!this.props.extraContent}
       {...ariaProps}
     >
-      <FontAwesomeIcon type='ellipsis-v'/>
+      <FontAwesomeIcon type='ellipsis-v' />
     </StyledActionButton>
   )
 
@@ -112,10 +112,10 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
     } = this.props
 
     if (extraContent) {
-      return(
+      return (
         <StyledCardToggleButton isExpanded={!!isExpanded} hasParentHoverStyle={!this.state.isActionButtonHover}>
           <ChevronIconWrapper>
-            <FontAwesomeIcon type='chevron-down'/>
+            <FontAwesomeIcon type='chevron-down' />
           </ChevronIconWrapper>
         </StyledCardToggleButton>
       )

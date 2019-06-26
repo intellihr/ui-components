@@ -26,17 +26,69 @@ exports[`<ActionLink /> should render an action link 1`] = `
 <ActionLink
   href="/lol"
 >
-  <Anchor
-    className="c0"
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-bdVaJa",
+          "isStatic": true,
+          "lastClassName": "c0",
+          "rules": Array [
+            "
+  font-weight: 600;
+  font-size: .9375rem;
+  text-transform: uppercase;
+  transition: color .25s ease-out;
+
+  &,
+  &:link,
+  &:visited {
+    color: ",
+            "#432DF3",
+            ";
+  }
+
+  &:hover {
+    color: ",
+            "#2512B3",
+            "
+  }
+
+  &:active {
+    color: ",
+            "#0F0080",
+            "
+  }
+",
+          ],
+        },
+        "displayName": "ActionLink",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "sc-bdVaJa",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
     href="/lol"
   >
-    <a
+    <Anchor
       className="c0"
       href="/lol"
     >
-      Grrr I am action man
-    </a>
-  </Anchor>
+      <a
+        className="c0"
+        href="/lol"
+      >
+        Grrr I am action man
+      </a>
+    </Anchor>
+  </StyledComponent>
 </ActionLink>
 `;
 
@@ -73,21 +125,73 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
   <ActionLink
     href="#"
   >
-    <Anchor
-      className="c0"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": true,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  font-weight: 600;
+  font-size: .9375rem;
+  text-transform: uppercase;
+  transition: color .25s ease-out;
+
+  &,
+  &:link,
+  &:visited {
+    color: ",
+              "#432DF3",
+              ";
+  }
+
+  &:hover {
+    color: ",
+              "#2512B3",
+              "
+  }
+
+  &:active {
+    color: ",
+              "#0F0080",
+              "
+  }
+",
+            ],
+          },
+          "displayName": "ActionLink",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": [Function],
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
       href="#"
     >
-      <AnchorComponent
+      <Anchor
         className="c0"
         href="#"
       >
-        <a
-          href="/allTheFeelsUgh"
+        <AnchorComponent
+          className="c0"
+          href="#"
         >
-          Replacement default text
-        </a>
-      </AnchorComponent>
-    </Anchor>
+          <a
+            href="/allTheFeelsUgh"
+          >
+            Replacement default text
+          </a>
+        </AnchorComponent>
+      </Anchor>
+    </StyledComponent>
   </ActionLink>
 </DefaultsProvider>
 `;

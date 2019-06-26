@@ -2,7 +2,7 @@ import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import Color from 'color'
 import React from 'react'
 import ReactModal from 'react-modal'
-import styled, { StyledComponentClass } from 'styled-components'
+import styled from 'styled-components'
 
 import { Variables } from '../../../common'
 

@@ -19,14 +19,48 @@ exports[`<Button /> should render a button with a simple text 1`] = `
     onClick={[Function]}
     type="button"
   >
-    <button
-      className="button neutral "
+    <StyledComponent
+      className="button neutral"
       data-component-type="button"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bxivhb",
+            "isStatic": false,
+            "lastClassName": "kLyrAW",
+            "rules": Array [
+              "
+   ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.button",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bxivhb",
+          "target": "button",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
       onClick={[Function]}
       type="button"
     >
-      testing testing 123
-    </button>
+      <button
+        className="button neutral "
+        data-component-type="button"
+        onClick={[Function]}
+        type="button"
+      >
+        testing testing 123
+      </button>
+    </StyledComponent>
   </styled.button>
 </Button>
 `;
@@ -51,14 +85,48 @@ exports[`<Button /> should render a button with a size large 1`] = `
     onClick={[Function]}
     type="button"
   >
-    <button
-      className="button large neutral "
+    <StyledComponent
+      className="button large neutral"
       data-component-type="button"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bxivhb",
+            "isStatic": false,
+            "lastClassName": "kLyrAW",
+            "rules": Array [
+              "
+   ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.button",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bxivhb",
+          "target": "button",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
       onClick={[Function]}
       type="button"
     >
-      testing testing 123
-    </button>
+      <button
+        className="button large neutral "
+        data-component-type="button"
+        onClick={[Function]}
+        type="button"
+      >
+        testing testing 123
+      </button>
+    </StyledComponent>
   </styled.button>
 </Button>
 `;
@@ -82,14 +150,48 @@ exports[`<Button /> should render a button with a type delete-subtle 1`] = `
     onClick={[Function]}
     type="button"
   >
-    <button
-      className="button delete-subtle "
+    <StyledComponent
+      className="button delete-subtle"
       data-component-type="button"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bxivhb",
+            "isStatic": false,
+            "lastClassName": "kLyrAW",
+            "rules": Array [
+              "
+   ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.button",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bxivhb",
+          "target": "button",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
       onClick={[Function]}
       type="button"
     >
-      testing testing 123
-    </button>
+      <button
+        className="button delete-subtle "
+        data-component-type="button"
+        onClick={[Function]}
+        type="button"
+      >
+        testing testing 123
+      </button>
+    </StyledComponent>
   </styled.button>
 </Button>
 `;
@@ -121,39 +223,115 @@ exports[`<Button /> should render a button with an icon 1`] = `
     data-component-type="button"
     type="button"
   >
-    <button
-      className="button primary-hollow "
+    <StyledComponent
+      className="button primary-hollow"
       data-component-type="button"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bxivhb",
+            "isStatic": false,
+            "lastClassName": "kLyrAW",
+            "rules": Array [
+              "
+   ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.button",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bxivhb",
+          "target": "button",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
       type="button"
     >
-      primary-hollow
-      <span
-        className="button-icon right"
-        data-component-type="button_icon"
+      <button
+        className="button primary-hollow "
+        data-component-type="button"
+        type="button"
       >
-        <FontAwesomeIcon
-          type="star"
+        primary-hollow
+        <span
+          className="button-icon right"
+          data-component-type="button_icon"
         >
-          <Icon
-            isSpinning={false}
-            size="medium"
-            type="fa-star"
+          <FontAwesomeIcon
+            type="star"
           >
-            <styled.i
-              aria-hidden={true}
-              className="icon fa fa-star"
+            <Icon
+              isSpinning={false}
               size="medium"
+              type="fa-star"
             >
-              <i
+              <styled.i
                 aria-hidden={true}
-                className="icon fa fa-star c0"
+                className="icon fa fa-star"
                 size="medium"
-              />
-            </styled.i>
-          </Icon>
-        </FontAwesomeIcon>
-      </span>
-    </button>
+              >
+                <StyledComponent
+                  aria-hidden={true}
+                  className="icon fa fa-star"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bwzfXH",
+                        "isStatic": false,
+                        "lastClassName": "c0",
+                        "rules": Array [
+                          "
+   width: 1.28571em;
+
+  ",
+                          [Function],
+                          "
+
+  &.icon {
+    text-align: center;
+
+  ",
+                          [Function],
+                          "
+  }
+",
+                        ],
+                      },
+                      "displayName": "styled.i",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-bwzfXH",
+                      "target": "i",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  size="medium"
+                >
+                  <i
+                    aria-hidden={true}
+                    className="icon fa fa-star c0"
+                    size="medium"
+                  />
+                </StyledComponent>
+              </styled.i>
+            </Icon>
+          </FontAwesomeIcon>
+        </span>
+      </button>
+    </StyledComponent>
   </styled.button>
 </Button>
 `;
@@ -179,15 +357,50 @@ exports[`<Button /> should render a disabled button 1`] = `
     onClick={[Function]}
     type="button"
   >
-    <button
-      className="button neutral "
+    <StyledComponent
+      className="button neutral"
       data-component-type="button"
       disabled={true}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bxivhb",
+            "isStatic": false,
+            "lastClassName": "kLyrAW",
+            "rules": Array [
+              "
+   ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.button",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bxivhb",
+          "target": "button",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
       onClick={[Function]}
       type="button"
     >
-      testing testing 123
-    </button>
+      <button
+        className="button neutral "
+        data-component-type="button"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      >
+        testing testing 123
+      </button>
+    </StyledComponent>
   </styled.button>
 </Button>
 `;
@@ -238,33 +451,116 @@ exports[`should render a button with a spinner 1`] = `
     data-component-type="button"
     type="button"
   >
-    <button
-      className="button neutral show-spinner "
+    <StyledComponent
+      className="button neutral show-spinner"
       data-component-type="button"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bxivhb",
+            "isStatic": false,
+            "lastClassName": "kLyrAW",
+            "rules": Array [
+              "
+   ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.button",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bxivhb",
+          "target": "button",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
       type="button"
     >
-      <Spinner
-        color="#424F5C"
-        size={10}
-        type="three-bounce"
+      <button
+        className="button neutral show-spinner "
+        data-component-type="button"
+        type="button"
       >
-        <styled.div
-          className="spinner"
+        <Spinner
+          color="#424F5C"
+          size={10}
+          type="three-bounce"
         >
-          <div
-            className="spinner c0"
+          <styled.div
+            className="spinner"
           >
-            <ThreeBounce
-              color="#424F5C"
-              duration="1.5s"
-              gutter={2}
-              scaleEnd={1}
-              scaleStart={0}
-              size={10}
-              timingFunction="ease-in-out"
+            <StyledComponent
+              className="spinner"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-htpNat",
+                    "isStatic": true,
+                    "lastClassName": "c0",
+                    "rules": Array [
+                      "
+  &.page {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &.left {
+    float: left
+  }
+
+  &.center {
+    display: flex;
+    justify-content: center;
+  }
+
+  &.right {
+    float: right;
+  }
+
+  &.inline {
+    display: inline-block;
+    vertical-align: middle;
+  }
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-htpNat",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
             >
-              <Base
-                css="
+              <div
+                className="spinner c0"
+              >
+                <ThreeBounce
+                  color="#424F5C"
+                  duration="1.5s"
+                  gutter={2}
+                  scaleEnd={1}
+                  scaleStart={0}
+                  size={10}
+                  timingFunction="ease-in-out"
+                >
+                  <Base
+                    css="
         @-webkit-keyframes brsk-three-bounce {
           0%, 80%, 100% {
             -webkit-transform: scale(0);
@@ -285,81 +581,83 @@ exports[`should render a button with a spinner 1`] = `
           }
         }
       "
-              >
-                <span>
-                  <style>
-                     @-webkit-keyframes brsk-three-bounce { 0%, 80%, 100% { -webkit-transform: scale(0); } 40% { -webkit-transform: scale(1); } } @keyframes brsk-three-bounce { 0%, 80%, 100% { transform: scale(0); -webkit-transform: scale(0); } 40% { transform: scale(1); -webkit-transform: scale(1); } } 
-                  </style>
-                  <div
-                    style={
-                      Object {
-                        "WebkitAnimationDelay": "-0.32s",
-                        "WebkitAnimationDuration": "1.5s",
-                        "WebkitAnimationIterationCount": "infinite",
-                        "WebkitAnimationName": "brsk-three-bounce",
-                        "WebkitAnimationTimingFunction": "ease-in-out",
-                        "animationDelay": "-0.32s",
-                        "animationDuration": "1.5s",
-                        "animationIterationCount": "infinite",
-                        "animationName": "brsk-three-bounce",
-                        "animationTimingFunction": "ease-in-out",
-                        "backgroundColor": "#424F5C",
-                        "borderRadius": "100%",
-                        "display": "inline-block",
-                        "height": 10,
-                        "marginRight": 2,
-                        "width": 10,
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "WebkitAnimationDelay": "-0.16s",
-                        "WebkitAnimationDuration": "1.5s",
-                        "WebkitAnimationIterationCount": "infinite",
-                        "WebkitAnimationName": "brsk-three-bounce",
-                        "WebkitAnimationTimingFunction": "ease-in-out",
-                        "animationDelay": "-0.16s",
-                        "animationDuration": "1.5s",
-                        "animationIterationCount": "infinite",
-                        "animationName": "brsk-three-bounce",
-                        "animationTimingFunction": "ease-in-out",
-                        "backgroundColor": "#424F5C",
-                        "borderRadius": "100%",
-                        "display": "inline-block",
-                        "height": 10,
-                        "marginRight": 2,
-                        "width": 10,
-                      }
-                    }
-                  />
-                  <div
-                    style={
-                      Object {
-                        "WebkitAnimationDuration": "1.5s",
-                        "WebkitAnimationIterationCount": "infinite",
-                        "WebkitAnimationName": "brsk-three-bounce",
-                        "WebkitAnimationTimingFunction": "ease-in-out",
-                        "animationDuration": "1.5s",
-                        "animationIterationCount": "infinite",
-                        "animationName": "brsk-three-bounce",
-                        "animationTimingFunction": "ease-in-out",
-                        "backgroundColor": "#424F5C",
-                        "borderRadius": "100%",
-                        "display": "inline-block",
-                        "height": 10,
-                        "width": 10,
-                      }
-                    }
-                  />
-                </span>
-              </Base>
-            </ThreeBounce>
-          </div>
-        </styled.div>
-      </Spinner>
-    </button>
+                  >
+                    <span>
+                      <style>
+                         @-webkit-keyframes brsk-three-bounce { 0%, 80%, 100% { -webkit-transform: scale(0); } 40% { -webkit-transform: scale(1); } } @keyframes brsk-three-bounce { 0%, 80%, 100% { transform: scale(0); -webkit-transform: scale(0); } 40% { transform: scale(1); -webkit-transform: scale(1); } } 
+                      </style>
+                      <div
+                        style={
+                          Object {
+                            "WebkitAnimationDelay": "-0.32s",
+                            "WebkitAnimationDuration": "1.5s",
+                            "WebkitAnimationIterationCount": "infinite",
+                            "WebkitAnimationName": "brsk-three-bounce",
+                            "WebkitAnimationTimingFunction": "ease-in-out",
+                            "animationDelay": "-0.32s",
+                            "animationDuration": "1.5s",
+                            "animationIterationCount": "infinite",
+                            "animationName": "brsk-three-bounce",
+                            "animationTimingFunction": "ease-in-out",
+                            "backgroundColor": "#424F5C",
+                            "borderRadius": "100%",
+                            "display": "inline-block",
+                            "height": 10,
+                            "marginRight": 2,
+                            "width": 10,
+                          }
+                        }
+                      />
+                      <div
+                        style={
+                          Object {
+                            "WebkitAnimationDelay": "-0.16s",
+                            "WebkitAnimationDuration": "1.5s",
+                            "WebkitAnimationIterationCount": "infinite",
+                            "WebkitAnimationName": "brsk-three-bounce",
+                            "WebkitAnimationTimingFunction": "ease-in-out",
+                            "animationDelay": "-0.16s",
+                            "animationDuration": "1.5s",
+                            "animationIterationCount": "infinite",
+                            "animationName": "brsk-three-bounce",
+                            "animationTimingFunction": "ease-in-out",
+                            "backgroundColor": "#424F5C",
+                            "borderRadius": "100%",
+                            "display": "inline-block",
+                            "height": 10,
+                            "marginRight": 2,
+                            "width": 10,
+                          }
+                        }
+                      />
+                      <div
+                        style={
+                          Object {
+                            "WebkitAnimationDuration": "1.5s",
+                            "WebkitAnimationIterationCount": "infinite",
+                            "WebkitAnimationName": "brsk-three-bounce",
+                            "WebkitAnimationTimingFunction": "ease-in-out",
+                            "animationDuration": "1.5s",
+                            "animationIterationCount": "infinite",
+                            "animationName": "brsk-three-bounce",
+                            "animationTimingFunction": "ease-in-out",
+                            "backgroundColor": "#424F5C",
+                            "borderRadius": "100%",
+                            "display": "inline-block",
+                            "height": 10,
+                            "width": 10,
+                          }
+                        }
+                      />
+                    </span>
+                  </Base>
+                </ThreeBounce>
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </Spinner>
+      </button>
+    </StyledComponent>
   </styled.button>
 </Button>
 `;
