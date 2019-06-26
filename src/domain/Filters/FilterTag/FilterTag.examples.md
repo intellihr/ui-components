@@ -4,9 +4,9 @@
 initialState = {
   tags: [
           { 
-            field: 'type',
+            fieldName: 'type',
             label: 'Type',
-            operator: 'is',
+            type: 'equality',
             fieldValues:[{
               label: 'Product Training',
               value: 'product_training_id'
@@ -16,10 +16,16 @@ initialState = {
             }]
           },
           { 
-            field: 'complete_at',
+            fieldName: 'complete_at',
             label: 'Complete date',
-            operator: 'from',
-            fieldValues:'01/01/2019,31/05/2019'
+            type: 'range',
+            fieldValues:[{
+              label: '01/01/2019',
+              value: '01/01/2019'
+            }, {
+              label: '31/05/2019',
+              value: '31/05/2019'
+            }]
           }
         ]
 };

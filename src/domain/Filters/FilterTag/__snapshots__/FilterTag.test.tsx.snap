@@ -20,12 +20,19 @@ exports[`<FilterTag /> should render the filter tag 1`] = `
       tag="span"
       type="small"
     >
-      Type is 
+      Type
     </Text>
     <Text
       color="#262D33"
       isInline={true}
-      key="product_training_id"
+      tag="span"
+      type="small"
+    >
+       is 
+    </Text>
+    <Text
+      color="#262D33"
+      isInline={true}
       tag="span"
       type="small"
       weight={600}
@@ -43,7 +50,6 @@ exports[`<FilterTag /> should render the filter tag 1`] = `
     <Text
       color="#262D33"
       isInline={true}
-      key="it_training_id"
       tag="span"
       type="small"
       weight={600}
@@ -74,7 +80,15 @@ exports[`<FilterTag /> should render the filter tag 1`] = `
       tag="span"
       type="small"
     >
-      Complete date from 
+      Complete date
+    </Text>
+    <Text
+      color="#262D33"
+      isInline={true}
+      tag="span"
+      type="small"
+    >
+       from 
     </Text>
     <Text
       color="#262D33"

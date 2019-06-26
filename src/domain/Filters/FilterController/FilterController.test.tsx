@@ -8,7 +8,7 @@ const dummyFunction = () => alert('dummy')
 
 const filters: IAddFilterDropdownMenuFilter[] = [
   {
-    field: 'type',
+    fieldName: 'type',
     label: 'Type',
     type: 'SINGLE_SELECT',
     selectOptions: [
@@ -27,7 +27,7 @@ const filters: IAddFilterDropdownMenuFilter[] = [
     ]
   },
   {
-    field: 'training_provider',
+    fieldName: 'training_provider',
     label: 'Training Provider',
     type: 'SINGLE_SELECT',
     selectOptions: [

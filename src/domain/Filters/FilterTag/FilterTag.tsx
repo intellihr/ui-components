@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import { Props, Variables } from '../../../common'
 import { Brick } from '../../Typographies/Brick'
@@ -12,10 +12,10 @@ interface IFieldValue {
 }
 
 interface IFilterTagDetail {
-  field: string
+  fieldName: string
   label: string
-  operator?: 'is' | 'from'
-  fieldValues: IFieldValue[] | string
+  type: 'equality' | 'range'
+  fieldValues: IFieldValue[]
 }
 
 interface IFilterTagProps {
@@ -49,7 +49,7 @@ class FilterTag extends React.PureComponent<IFilterTagProps> {
   private renderTag = (tag: IFilterTagDetail) => {
     return (
       <Brick
-        key={`tag-${tag.field}`}
+        key={`tag-${tag.fieldName}`}
         margins={{right: Variables.Spacing.sXSmall}}
         typographyType={Props.TypographyType.Small}
         color={BrickColor.Neutral}
@@ -58,7 +58,7 @@ class FilterTag extends React.PureComponent<IFilterTagProps> {
           color={Variables.Color.n800}
           type={Props.TypographyType.Small}
         >
-          {`${tag.label} ${tag.operator} `}
+          {tag.label}
         </Text>
         {this.tagValue(tag)}
         <StyledDeleteButton
@@ -71,53 +71,69 @@ class FilterTag extends React.PureComponent<IFilterTagProps> {
   }
 
   private tagValue = (tag: IFilterTagDetail) => {
-    if (tag.operator === 'from' && typeof  tag.fieldValues === 'string' && tag.fieldValues.indexOf(',') > 0) {
-      const start = tag.fieldValues.split(',')[0]
-      const end = tag.fieldValues.split(',')[1]
+    if (tag.type === 'range') {
+      if (tag.fieldValues.length === 2) {
+        return (
+          <>
+            <Text
+              color={Variables.Color.n800}
+              type={Props.TypographyType.Small}
+            >
+              {' from '}
+            </Text>
+            <Text
+              color={Variables.Color.n800}
+              type={Props.TypographyType.Small}
+              weight={Variables.FontWeight.fwSemiBold}
+            >
+              {tag.fieldValues[0].label}
+            </Text>
+            <Text
+              color={Variables.Color.n800}
+              type={Props.TypographyType.Small}
+            >
+              {' to '}
+            </Text>
+            <Text
+              color={Variables.Color.n800}
+              type={Props.TypographyType.Small}
+              weight={Variables.FontWeight.fwSemiBold}
+            >
+              {tag.fieldValues[1].label}
+            </Text>
+          </>
+        )
+      } else {
+        throw Error('Tag should have two field values when its type is range')
+      }
+    }
 
+    if (tag.type === 'equality') {
       return (
         <>
           <Text
             color={Variables.Color.n800}
             type={Props.TypographyType.Small}
-            weight={Variables.FontWeight.fwSemiBold}
           >
-            {start}
+            {' is '}
           </Text>
-          <Text
-            color={Variables.Color.n800}
-            type={Props.TypographyType.Small}
-          >
-            {' to '}
-          </Text>
-          <Text
-            color={Variables.Color.n800}
-            type={Props.TypographyType.Small}
-            weight={Variables.FontWeight.fwSemiBold}
-          >
-            {end}
-          </Text>
+          {
+            tag.fieldValues.map((fieldValue, index) => {
+              return (
+                <Fragment key={fieldValue.value}>
+                  {index !== 0 && this.seperator}
+                  <Text
+                    color={Variables.Color.n800}
+                    type={Props.TypographyType.Small}
+                    weight={Variables.FontWeight.fwSemiBold}
+                  >
+                    {fieldValue.label}
+                  </Text>
+                </Fragment>
+              )
+            })
+          }
         </>
-      )
-    }
-
-    if (typeof  tag.fieldValues === 'object') {
-      return (
-        tag.fieldValues.map((fieldValue, index) => {
-          return (
-            <>
-              {index !== 0 && this.seperator}
-              <Text
-                key={fieldValue.value}
-                color={Variables.Color.n800}
-                type={Props.TypographyType.Small}
-                weight={Variables.FontWeight.fwSemiBold}
-              >
-                {fieldValue.label}
-              </Text>
-            </>
-          )
-        })
       )
     }
   }

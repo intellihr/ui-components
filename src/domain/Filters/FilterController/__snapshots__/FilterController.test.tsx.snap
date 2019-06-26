@@ -24,7 +24,7 @@ exports[`<FilterController /> should render the filter controller 1`] = `
           filters={
             Array [
               Object {
-                "field": "type",
+                "fieldName": "type",
                 "label": "Type",
                 "selectOptions": Array [
                   Object {
@@ -43,7 +43,7 @@ exports[`<FilterController /> should render the filter controller 1`] = `
                 "type": "SINGLE_SELECT",
               },
               Object {
-                "field": "training_provider",
+                "fieldName": "training_provider",
                 "label": "Training Provider",
                 "selectOptions": Array [
                   Object {

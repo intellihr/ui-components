@@ -5,9 +5,8 @@ import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { InputGroup } from '../../Inputs/InputGroup'
 import { TextInput } from '../../Inputs/TextInput'
 import {
-  AddFilterDropdownMenu,
-  IAddFilterDetail,
-  IAddFilterDropdownMenuFilter
+  AddFilterDropdownMenu, IAddFilterDropdownMenuFilter,
+  IAddedFilter
 } from '../AddFilterDropdownMenu/AddFilterDropdownMenu'
 import { FilterTag, IFilterTagDetail } from '../FilterTag/FilterTag'
 import { ControllerWrapper, StyledController, StyledLeftComponent } from './style'
@@ -24,7 +23,7 @@ export interface IFilterControllerProps {
   /** search value of this filter controller */
   searchValue?: string
   /** Callback when a filter is added */
-  onFilterAdded: (selectedFilter: IAddFilterDetail) => void
+  onFilterAdded: (selectedFilter: IAddedFilter) => void
   /** Callback when a tag is deleted */
   onTagDeleted: (selectedTag: IFilterTagDetail) => void
   /** Callback when input is added in search bar */
@@ -102,7 +101,7 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
     return (
       <InputGroup.Button
         onClick={toggleMenu}
-        ref={toggleComponentRef}
+        innerRef={toggleComponentRef}
         groupPosition='left'
         {...ariaProps}
       >

@@ -6,16 +6,15 @@ import { Button } from '../../Buttons/Button'
 import { SelectInput } from '../../Inputs/SelectInput'
 import { IDropdownMenuToggleComponentProps } from '../../Popovers/DropdownMenu'
 import { Text } from '../../Typographies/Text'
-import { IFilterTagDetail } from '../FilterTag/FilterTag'
 import { OperatorTextWrapper, StyledDropdownMenu } from './style'
 
-export interface IAddFilterDropdownMenuProps {
+interface IAddFilterDropdownMenuProps {
   /** table name that the filters applied to */
   filterMessage?: string
   /** filter selection of this filter dropdown */
   filters: IAddFilterDropdownMenuFilter[]
   /** Callback when a filter is added */
-  onFilterAdded: (selectedFilter: IFilterTagDetail) => void
+  onFilterAdded: (selectedFilter: IAddedFilter) => void
   /**
    * The parent component that opens the filter dropdown and positions it on the page.
    * The callback is given a toggle menu prop which can be used to toggle the menu as needed.
@@ -25,13 +24,11 @@ export interface IAddFilterDropdownMenuProps {
   componentContext?: string
 }
 
-export interface IAddFilterDropdownMenuFilter {
+interface IAddFilterDropdownMenuFilter {
   type: 'SINGLE_SELECT' | 'NUMBER'
   fieldName: string
-  selectOptions: Array<{
-    label: string
-    value: string | number | number
-  }>
+  label: string
+  selectOptions: ISelectOption[]
 }
 
 interface ISelectOption {
@@ -39,22 +36,26 @@ interface ISelectOption {
   value: string | number
 }
 
-export const AddFilterDropdownMenu: React.FC<IAddFilterDropdownMenuProps> = ({
+interface IAddedFilter {
+  filter: IAddFilterDropdownMenuFilter
+  value: string | number
+}
+
+const AddFilterDropdownMenu: React.FC<IAddFilterDropdownMenuProps> = ({
   filterMessage = 'Show all items where:',
   toggleComponent,
   componentContext,
   filters,
   onFilterAdded
 }) => {
-  const [fieldName, setFieldName] = useState('')
-  const [operator, setOperator] = useState('')
-  const [value, setValue] = useState('')
+  const [filterField, setFilterField] = useState('')
+  const [filterValue, setFilterValue] = useState('')
 
   function getFieldInputOptions (): ISelectOption[] | undefined {
     if (filters) {
       return filters.map((filter: IAddFilterDropdownMenuFilter) => (
         {
-          label: filter.fieldName,
+          label: filter.label,
           value: filter.fieldName
         })
       )
@@ -62,23 +63,15 @@ export const AddFilterDropdownMenu: React.FC<IAddFilterDropdownMenuProps> = ({
   }
 
   function handleFieldChange (option: any) {
-    const selectedFilter = filters.find((filter: IAddFilterDropdownMenuFilter) => filter.fieldName === option.value)
-
-    if (selectedFilter) {
-      if (selectedFilter.type === 'SINGLE_SELECT') {
-        setOperator('is')
-      }
-    }
-
-    setFieldName(option.value)
+    setFilterField(option.value)
   }
 
   function handleValueChange (option: any) {
-    setValue(option.value)
+    setFilterValue(option.value)
   }
 
   function valueInputOption (): Array<{ label: string, value: string | number | boolean }> | undefined {
-    const selectedFilter = filters.find((filter: IAddFilterDropdownMenuFilter) => filter.fieldName === fieldName)
+    const selectedFilter = filters.find((filter: IAddFilterDropdownMenuFilter) => filter.fieldName === filterField)
 
     if (selectedFilter) {
       return selectedFilter.selectOptions
@@ -87,11 +80,17 @@ export const AddFilterDropdownMenu: React.FC<IAddFilterDropdownMenuProps> = ({
 
   function applyFilter (closeMenu: () => void) {
     return () => {
-      onFilterAdded({ fieldName, operator, value })
+      const selectedFilter = filters.find((filter: IAddFilterDropdownMenuFilter) => filter.fieldName === filterField)
+
+      if (selectedFilter && filterValue) {
+        onFilterAdded({
+          filter: selectedFilter,
+          value: filterValue
+        })
+      }
       closeMenu()
-      setFieldName('')
-      setOperator('')
-      setValue('')
+      setFilterField('')
+      setFilterValue('')
     }
   }
 
@@ -109,13 +108,13 @@ export const AddFilterDropdownMenu: React.FC<IAddFilterDropdownMenuProps> = ({
           >
             <SelectInput
               name='filterDropdownFieldInput'
-              value={fieldName}
+              value={filterField}
               options={getFieldInputOptions()}
               placeholder='Select a filter'
               handleChange={handleFieldChange}
             />
           </VerticalForm.Field>
-          {fieldName &&
+          {filterField &&
             <>
               <OperatorTextWrapper>
                 <Text
@@ -123,19 +122,19 @@ export const AddFilterDropdownMenu: React.FC<IAddFilterDropdownMenuProps> = ({
                   color={Variables.Color.n700}
                   type={Props.TypographyType.Small}
                 >
-                  {operator}
+                  is
                 </Text>
               </OperatorTextWrapper>
               <SelectInput
                 name='filterDropdownValueInput'
-                value={value}
+                value={filterValue}
                 options={valueInputOption()}
                 placeholder='Select a value'
                 handleChange={handleValueChange}
               />
               <Button
                 type='neutral'
-                disabled={!(fieldName && value)}
+                disabled={!(filterField && filterValue)}
                 onClick={applyFilter(closeMenu)}
               >
                 Add Filter
@@ -145,4 +144,10 @@ export const AddFilterDropdownMenu: React.FC<IAddFilterDropdownMenuProps> = ({
         </>}
     </StyledDropdownMenu>
   )
+}
+
+export {
+  IAddFilterDropdownMenuFilter,
+  AddFilterDropdownMenu,
+  IAddedFilter
 }

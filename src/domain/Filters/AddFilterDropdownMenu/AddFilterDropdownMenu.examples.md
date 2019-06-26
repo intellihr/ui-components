@@ -5,40 +5,40 @@ import { Button } from '@Domain/Buttons';
 
 const filters = [
             { 
-              field: 'type_id',
+              fieldName: 'type',
               label: 'Type',
               type: 'SINGLE_SELECT',
               selectOptions: [
                 {
                   label: 'Product Training',
-                  value: 'Product Training'
+                  value: 'product_training'
                 },
                 {
                   label: 'Personal Development',
-                  value: 'Personal Development'
+                  value: 'personal_development'
                 },
                 {
                   label: 'Soft Skill',
-                  value: 'Soft Skill'
+                  value: 'soft_skill'
                 }
               ]
             },
             {
-              field: 'training_provider_id',
+              fieldName: 'training_provider',
               label: 'Training Provider',
               type: 'SINGLE_SELECT',
               selectOptions: [
                 {
                   label: 'Internal',
-                  value: 'Internal'
+                  value: 'internal'
                 },
                 {
                   label: 'External',
-                  value: 'External'
+                  value: 'external'
                 },
                 {
                   label: 'Others',
-                  value: 'Others'
+                  value: 'others'
                 }
               ]
             }
@@ -56,6 +56,6 @@ const filters = [
       </Button>
     }
   filters = {filters}
-  onFilterAdded = {(filter) => alert(`Filter Applied: ${filter.label} ${filter.operator} ${filter.fieldValue.label}`)}
+  onFilterAdded = {(addedFilter) => alert(`Filter Applied on ${addedFilter.filter.label}:  ${addedFilter.value}`)}
 />
 ```
