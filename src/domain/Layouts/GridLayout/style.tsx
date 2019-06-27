@@ -256,7 +256,7 @@ function getPropertiesForVerticalAlignment (alignment: VerticalAlignment) {
 }
 
 function gridStyleForPropsAtBreakpoint (
-  props: IStyledGridLayoutProps, 
+  props: IStyledGridLayoutProps,
   breakpoint: keyof IStyledGridGutters) {
   const xMarginGutterSize = getGutterPxAtBreakpoint(props.gutterMarginX, breakpoint)
   const yMarginGutterSize = getGutterPxAtBreakpoint(props.gutterMarginY, breakpoint)
