@@ -30,8 +30,6 @@ interface ICellProps {
   componentContext?: string
   displayType?: CellDisplayType
   flexHorizontalAlignment?: HorizontalAlignment | IStyledHorizontalAlignment
-  'data-component-type'?: string
-  'data-component-context'?: string
 }
 
 const Cell: React.FC<ICellProps> = ({
