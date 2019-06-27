@@ -11,59 +11,30 @@ interface IBoardProps {
   rightComponent?: JSX.Element | JSX.Element[] | string
   /** The data-component-context */
   componentContext?: string
+  /** Margins around the component */
+  margins?: Props.IMargins
 }
-export class Board extends React.PureComponent<IBoardProps> {
-  public static Tile = Tile
 
-  get heading (): JSX.Element {
-    return(
+interface ISubComponents {
+  Tile: typeof Tile
+}
+
+export const Board: React.FC<IBoardProps> & ISubComponents = ({ componentContext, children, label, rightComponent, margins }) => {
+  return (
+    <BoardWrapper
+      margins={margins}
+      data-component-type={Props.ComponentType.Board}
+      data-component-context={componentContext}
+    >
       <StyledHeadingWrapper>
-        {this.label}
-        {this.message}
+        {label && <StyledBoardLabel>
+          {label}
+        </StyledBoardLabel>}
+        {rightComponent}
       </StyledHeadingWrapper>
-    )
-  }
-
-  get label (): JSX.Element | null {
-    const {
-      label
-    } = this.props
-
-    if (label) {
-      return (
-        <StyledBoardLabel> {label} </StyledBoardLabel>
-      )
-    }
-
-    return null
-  }
-
-  get message (): JSX.Element | null {
-    const {
-      rightComponent
-    } = this.props
-
-    if (rightComponent) {
-      return <> {rightComponent} </>
-    }
-
-    return null
-  }
-
-  public render (): JSX.Element {
-    const {
-      children,
-      componentContext
-    } = this.props
-
-    return (
-      <BoardWrapper
-        data-component-type={Props.ComponentType.Board}
-        data-component-context={componentContext}
-      >
-        {this.heading}
-        <BoardTilesWrapper> {children} </BoardTilesWrapper>
-      </BoardWrapper>
-    )
-  }
+      <BoardTilesWrapper> {children} </BoardTilesWrapper>
+    </BoardWrapper>
+  )
 }
+
+Board.Tile = Tile

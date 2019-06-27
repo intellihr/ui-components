@@ -2101,8 +2101,6 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                       type="chevron-left"
                     >
                       <Icon
-                        isSpinning={false}
-                        size="medium"
                         type="fa-chevron-left"
                       >
                         <styled.i
@@ -2124,6 +2122,10 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                                   "rules": Array [
                                     "
    width: 1.28571em;
+
+  ",
+                                    [Function],
+                                    "
 
   ",
                                     [Function],
@@ -2188,8 +2190,6 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                       type="chevron-right"
                     >
                       <Icon
-                        isSpinning={false}
-                        size="medium"
                         type="fa-chevron-right"
                       >
                         <styled.i
@@ -2211,6 +2211,10 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                                   "rules": Array [
                                     "
    width: 1.28571em;
+
+  ",
+                                    [Function],
+                                    "
 
   ",
                                     [Function],
@@ -3392,8 +3396,6 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                       type="chevron-left"
                     >
                       <Icon
-                        isSpinning={false}
-                        size="medium"
                         type="fa-chevron-left"
                       >
                         <styled.i
@@ -3415,6 +3417,10 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                                   "rules": Array [
                                     "
    width: 1.28571em;
+
+  ",
+                                    [Function],
+                                    "
 
   ",
                                     [Function],
@@ -3479,8 +3485,6 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                       type="chevron-right"
                     >
                       <Icon
-                        isSpinning={false}
-                        size="medium"
                         type="fa-chevron-right"
                       >
                         <styled.i
@@ -3502,6 +3506,10 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                                   "rules": Array [
                                     "
    width: 1.28571em;
+
+  ",
+                                    [Function],
+                                    "
 
   ",
                                     [Function],
@@ -4744,8 +4752,6 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                       type="chevron-left"
                     >
                       <Icon
-                        isSpinning={false}
-                        size="medium"
                         type="fa-chevron-left"
                       >
                         <styled.i
@@ -4767,6 +4773,10 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                                   "rules": Array [
                                     "
    width: 1.28571em;
+
+  ",
+                                    [Function],
+                                    "
 
   ",
                                     [Function],
@@ -4831,8 +4841,6 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                       type="chevron-right"
                     >
                       <Icon
-                        isSpinning={false}
-                        size="medium"
                         type="fa-chevron-right"
                       >
                         <styled.i
@@ -4854,6 +4862,10 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                                   "rules": Array [
                                     "
    width: 1.28571em;
+
+  ",
+                                    [Function],
+                                    "
 
   ",
                                     [Function],
@@ -6357,8 +6369,6 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                       type="chevron-left"
                     >
                       <Icon
-                        isSpinning={false}
-                        size="medium"
                         type="fa-chevron-left"
                       >
                         <styled.i
@@ -6380,6 +6390,10 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                                   "rules": Array [
                                     "
    width: 1.28571em;
+
+  ",
+                                    [Function],
+                                    "
 
   ",
                                     [Function],
@@ -6444,8 +6458,6 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                       type="chevron-right"
                     >
                       <Icon
-                        isSpinning={false}
-                        size="medium"
                         type="fa-chevron-right"
                       >
                         <styled.i
@@ -6467,6 +6479,10 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                                   "rules": Array [
                                     "
    width: 1.28571em;
+
+  ",
+                                    [Function],
+                                    "
 
   ",
                                     [Function],

@@ -2,6 +2,7 @@ import classNames from 'classnames'
 import { includes } from 'lodash'
 import React from 'react'
 
+import { Props } from '../../../common'
 import { BadgeWrapper, StyledIcon } from './style'
 import { IconType } from './types'
 
@@ -20,84 +21,46 @@ interface IIconProps {
   isSpinning?: boolean
   /** Badge to display on the icon */
   badge?: JSX.Element
+  /** Margins around the component */
+  margins?: Props.IMargins
 }
 
-class Icon extends React.PureComponent<IIconProps> {
-  public static defaultProps: Partial<IIconProps> = {
-    isSpinning: false,
-    size: 'medium'
-  }
-
-  get classNames (): string {
-    const {
-      className,
-      type,
-      isSpinning
-    } = this.props
-
-    return classNames(
-      className,
-      'icon',
-      'fa',
-      type,
-      {
-        'fa-spin': isSpinning
-      }
-    )
-  }
-
-  get badgeSize (): string | undefined {
-    const {
-      size
-    } = this.props
-
-    const newBadgeSize: { [i: string]: string } = {
-      large: 'small',
-      xlarge: 'medium',
-      xxlarge: 'large'
+const Icon: React.FC<IIconProps> = ({ isSpinning = false, size = 'medium', className, color, customSize, type, badge, margins }) => {
+  const classes = classNames(
+    className,
+    'icon',
+    'fa',
+    type,
+    {
+      'fa-spin': isSpinning
     }
+  )
 
-    return size && newBadgeSize[size]
+  const newBadgeSize: { [i: string]: string } = {
+    large: 'small',
+    xlarge: 'medium',
+    xxlarge: 'large'
   }
 
-  get badge (): JSX.Element | undefined {
-    const {
-      badge,
-      size
-    } = this.props
-
-    if (badge && includes(['large', 'xlarge', 'xxlarge'], size)) {
-      return (
+  return (
+    <React.Fragment>
+      <StyledIcon
+        className={classes}
+        aria-hidden
+        color={color}
+        customSize={customSize}
+        size={size}
+        margins={margins}
+      />
+      {badge && includes(['large', 'xlarge', 'xxlarge'], size) && (
         <BadgeWrapper
           size={size}
         >
-          {React.cloneElement(badge, { size: this.badgeSize })}
+          {React.cloneElement(badge, { size: size && newBadgeSize[size] })}
         </BadgeWrapper>
-      )
-    }
-  }
-
-  public render (): JSX.Element {
-    const {
-      color,
-      customSize,
-      size
-    } = this.props
-
-    return (
-      <React.Fragment>
-        <StyledIcon
-          className={this.classNames}
-          aria-hidden
-          color={color}
-          customSize={customSize}
-          size={size}
-        />
-
-        {this.badge}
-      </React.Fragment>
-    )
-  }
+      )}
+    </React.Fragment>
+  )
 }
 
 export {

@@ -1,20 +1,20 @@
 import React from 'react'
 
 import { Props } from '../../../../common'
-import {StyledAnchorTile, StyledHoverLabel, StyledTile } from './style'
+import { StyledAnchorTile, StyledHoverLabel, StyledTile } from './style'
 import { ButtonTileContent } from './ButtonTileContent'
 import { CenteredTileContent } from './CenteredTileContent'
 import { FigureTileContent } from './FigureTileContent'
 
 interface IBoardTileProps {
   /** tile displayed in the size style */
-  size?: 'small'|'medium'|'fullWidth'
+  size?: 'small' | 'medium' | 'fullWidth'
   /** If yes the color of the tile will change when it is hovered */
   isHoverable?: boolean
   /** If yes the tile will use the minimum size of a button */
   isButton?: boolean
   /** the style of tile */
-  type?: 'default'|'hollow'|'card'
+  type?: 'default' | 'hollow' | 'card'
   /** onClick event */
   onClick?: (event: React.MouseEvent<HTMLElement>) => void
   /** Anchor href used when clicking between tabs */

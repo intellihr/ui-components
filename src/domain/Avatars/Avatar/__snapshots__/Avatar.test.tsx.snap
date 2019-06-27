@@ -252,8 +252,6 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
           type="camera"
         >
           <Icon
-            isSpinning={false}
-            size="medium"
             type="fa-camera"
           >
             <styled.i
@@ -275,6 +273,10 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
                       "rules": Array [
                         "
    width: 1.28571em;
+
+  ",
+                        [Function],
+                        "
 
   ",
                         [Function],

@@ -8,7 +8,6 @@ exports[`<ButtonTileContent /> should render a button tile content in the hollow
     <styled.div>
       <Icon
         color="#7362F5"
-        isSpinning={false}
         size="xlarge"
         type="fa-star"
       />
@@ -33,7 +32,6 @@ exports[`<ButtonTileContent /> should render a button tile content with a font a
     <styled.div>
       <Icon
         color="#7362F5"
-        isSpinning={false}
         size="xlarge"
         type="fa-star"
       />
@@ -58,7 +56,6 @@ exports[`<ButtonTileContent /> should render a button tile content with an Intel
     <styled.div>
       <Icon
         color="#7362F5"
-        isSpinning={false}
         size="xlarge"
         type="intelli-icon-alert"
       />

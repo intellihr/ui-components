@@ -34,7 +34,6 @@ exports[`<Badge /> should render a large badge 1`] = `
 <Badge
   backgroundColor="#EDF4FF"
   color="#00368C"
-  hasBorder={true}
   label={6}
   size="large"
 >
@@ -80,6 +79,9 @@ exports[`<Badge /> should render a large badge 1`] = `
   font-weight: 600;
   text-align: center;
   user-select: none;
+  ",
+              [Function],
+              "
 
   .refresh-icon {
     background-color: transparent;
@@ -150,9 +152,7 @@ exports[`<Badge /> should render a small badge 1`] = `
 <Badge
   backgroundColor="#EDF4FF"
   color="#00368C"
-  hasBorder={true}
   label={6}
-  size="small"
 >
   <styled.span
     backgroundColor="#EDF4FF"
@@ -196,6 +196,9 @@ exports[`<Badge /> should render a small badge 1`] = `
   font-weight: 600;
   text-align: center;
   user-select: none;
+  ",
+              [Function],
+              "
 
   .refresh-icon {
     background-color: transparent;
@@ -275,10 +278,8 @@ exports[`<Badge /> should render a spinning badge 1`] = `
 <Badge
   backgroundColor="#EDF4FF"
   color="#00368C"
-  hasBorder={true}
   label={6}
   pending={true}
-  size="small"
 >
   <styled.span
     backgroundColor="#EDF4FF"
@@ -322,6 +323,9 @@ exports[`<Badge /> should render a spinning badge 1`] = `
   font-weight: 600;
   text-align: center;
   user-select: none;
+  ",
+              [Function],
+              "
 
   .refresh-icon {
     background-color: transparent;
@@ -359,7 +363,6 @@ exports[`<Badge /> should render a spinning badge 1`] = `
           <Icon
             className="refresh-icon"
             isSpinning={true}
-            size="medium"
             type="fa-refresh"
           >
             <styled.i
@@ -381,6 +384,10 @@ exports[`<Badge /> should render a spinning badge 1`] = `
                       "rules": Array [
                         "
    width: 1.28571em;
+
+  ",
+                        [Function],
+                        "
 
   ",
                         [Function],

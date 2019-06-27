@@ -94,7 +94,7 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
     )
   }
 
-  private filterButton = ({ toggleMenu, toggleComponentRef, ariaProps }: any ) => {
+  private filterButton = ({ toggleMenu, toggleComponentRef, ariaProps }: any) => {
     return (
       <InputGroup.Button
         onClick={toggleMenu}

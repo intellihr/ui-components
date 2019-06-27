@@ -1,21 +1,24 @@
 import styled, { css } from 'styled-components'
 
+import { Props } from '../../../common'
+import { styleForMargins } from '../../Spacers/services/margins'
 type size = 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge'
 
 interface IStyledIconProps {
   color?: string
   customSize?: number
   size?: size
+  margins?: Props.IMargins
 }
 
 interface IBadgeWrapper {
   size?: size
 }
 
-const BadgeWrapper = styled.span`
+const BadgeWrapper = styled.span<IBadgeWrapper>`
   position: absolute;
 
-  ${(props: IBadgeWrapper) => {
+  ${(props) => {
     switch (props.size) {
       case 'large':
         return css`
@@ -36,17 +39,19 @@ const BadgeWrapper = styled.span`
   }}
 `
 
-const StyledIcon = styled.i`
+const StyledIcon = styled.i<IStyledIconProps>`
    width: 1.28571em;
 
-  ${(props: IStyledIconProps) => props.color && css`
+  ${(props) => styleForMargins(props.margins)}
+
+  ${(props) => props.color && css`
     color: ${props.color};
   `}
 
   &.icon {
     text-align: center;
 
-  ${(props: IStyledIconProps) => {
+  ${(props) => {
     if (props.customSize) {
       return css`
         font-size: ${props.customSize}rem;

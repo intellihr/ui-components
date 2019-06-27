@@ -269,8 +269,6 @@ exports[`<Button /> should render a button with an icon 1`] = `
             type="star"
           >
             <Icon
-              isSpinning={false}
-              size="medium"
               type="fa-star"
             >
               <styled.i
@@ -292,6 +290,10 @@ exports[`<Button /> should render a button with an icon 1`] = `
                         "rules": Array [
                           "
    width: 1.28571em;
+
+  ",
+                          [Function],
+                          "
 
   ",
                           [Function],

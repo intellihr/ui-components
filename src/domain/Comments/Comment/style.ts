@@ -1,8 +1,13 @@
 import styled from 'styled-components'
 
-import { Variables } from '../../../common'
+import { Props, Variables } from '../../../common'
+import { styleForMargins } from '../../Spacers/services/margins'
 
-const StyledComment = styled.div`
+interface IStyledCommentProps {
+  margins?: Props.IMargins
+}
+
+const StyledComment = styled.div<IStyledCommentProps>`
   display: flex;
   flex-flow: row;
   margin: 1.125rem 0;
@@ -69,6 +74,8 @@ const StyledComment = styled.div`
       word-break: break-word;
     }
   }
+
+  ${(props) => styleForMargins(props.margins)}
 `
 
 const CommentActionMenuToggleButton = styled.button`

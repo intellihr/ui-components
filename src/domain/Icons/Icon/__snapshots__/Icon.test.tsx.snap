@@ -11,7 +11,6 @@ exports[`<Icon /> should render a large icon 1`] = `
 }
 
 <Icon
-  isSpinning={false}
   size="large"
   type="fa-circle"
 >
@@ -34,6 +33,10 @@ exports[`<Icon /> should render a large icon 1`] = `
             "rules": Array [
               "
    width: 1.28571em;
+
+  ",
+              [Function],
+              "
 
   ",
               [Function],
@@ -83,8 +86,6 @@ exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
 }
 
 <Icon
-  isSpinning={false}
-  size="medium"
   type="intelli-icon-avatar"
 >
   <styled.i
@@ -106,6 +107,10 @@ exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
             "rules": Array [
               "
    width: 1.28571em;
+
+  ",
+              [Function],
+              "
 
   ",
               [Function],
@@ -195,12 +200,9 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
     <Badge
       backgroundColor="#CADDFC"
       color="#CADDFC"
-      hasBorder={true}
       label={6}
-      size="small"
     />
   }
-  isSpinning={false}
   size="xlarge"
   type="fa-check"
 >
@@ -223,6 +225,10 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
             "rules": Array [
               "
    width: 1.28571em;
+
+  ",
+              [Function],
+              "
 
   ",
               [Function],
@@ -300,7 +306,6 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
         <Badge
           backgroundColor="#CADDFC"
           color="#CADDFC"
-          hasBorder={true}
           label={6}
           size="medium"
         >
@@ -346,6 +351,9 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
   font-weight: 600;
   text-align: center;
   user-select: none;
+  ",
+                      [Function],
+                      "
 
   .refresh-icon {
     background-color: transparent;
@@ -398,8 +406,6 @@ exports[`<Icon /> should render icon with a custom size 1`] = `
 
 <Icon
   customSize={2.6}
-  isSpinning={false}
-  size="medium"
   type="fa-check"
 >
   <styled.i
@@ -423,6 +429,10 @@ exports[`<Icon /> should render icon with a custom size 1`] = `
             "rules": Array [
               "
    width: 1.28571em;
+
+  ",
+              [Function],
+              "
 
   ",
               [Function],
@@ -474,8 +484,6 @@ exports[`<Icon /> should render icon with colour 1`] = `
 
 <Icon
   color="#1A2B3C"
-  isSpinning={false}
-  size="medium"
   type="fa-check"
 >
   <styled.i
@@ -499,6 +507,10 @@ exports[`<Icon /> should render icon with colour 1`] = `
             "rules": Array [
               "
    width: 1.28571em;
+
+  ",
+              [Function],
+              "
 
   ",
               [Function],
@@ -549,8 +561,6 @@ exports[`<Icon /> should render icon with no size or colour 1`] = `
 }
 
 <Icon
-  isSpinning={false}
-  size="medium"
   type="fa-check"
 >
   <styled.i
@@ -572,6 +582,10 @@ exports[`<Icon /> should render icon with no size or colour 1`] = `
             "rules": Array [
               "
    width: 1.28571em;
+
+  ",
+              [Function],
+              "
 
   ",
               [Function],
@@ -621,7 +635,6 @@ exports[`<Icon /> should render icon with size 1`] = `
 }
 
 <Icon
-  isSpinning={false}
   size="medium"
   type="fa-check"
 >
@@ -644,6 +657,10 @@ exports[`<Icon /> should render icon with size 1`] = `
             "rules": Array [
               "
    width: 1.28571em;
+
+  ",
+              [Function],
+              "
 
   ",
               [Function],
