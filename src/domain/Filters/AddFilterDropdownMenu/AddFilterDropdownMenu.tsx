@@ -23,8 +23,6 @@ export interface IAddFilterDropdownMenuProps {
   toggleComponent: (props: IDropdownMenuToggleComponentProps) => React.ReactElement<any>
   /** The data-component-context */
   componentContext?: string
-  /** Margins around the component */
-  margins?: Props.IMargins
 }
 
 export interface IAddFilterDropdownMenuFilter {
@@ -46,8 +44,7 @@ export const AddFilterDropdownMenu: React.FC<IAddFilterDropdownMenuProps> = ({
   toggleComponent,
   componentContext,
   filters,
-  onFilterAdded,
-  margins
+  onFilterAdded
 }) => {
   const [fieldName, setFieldName] = useState('')
   const [operator, setOperator] = useState('')
@@ -100,7 +97,6 @@ export const AddFilterDropdownMenu: React.FC<IAddFilterDropdownMenuProps> = ({
 
   return (
     <StyledDropdownMenu
-      margins={margins}
       toggleComponent={toggleComponent}
       componentContext={componentContext}
     >
