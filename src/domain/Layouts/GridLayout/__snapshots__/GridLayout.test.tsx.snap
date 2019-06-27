@@ -513,7 +513,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                 animationStyle="none"
                 data-component-type="grid_layout_cell"
                 displayType="block"
-                flexHorizontalAlignments="left"
+                flexHorizontalAlignment="left"
                 gridColumns={12}
                 gutterMarginX={4}
                 gutterMarginY="none"
@@ -524,14 +524,14 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                     "min": 16,
                   }
                 }
-                offsets={0}
-                sizes={10}
+                offset={0}
+                size={10}
               >
                 <StyledComponent
                   animationStyle="none"
                   data-component-type="grid_layout_cell"
                   displayType="block"
-                  flexHorizontalAlignments="left"
+                  flexHorizontalAlignment="left"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -578,13 +578,14 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                       "min": 16,
                     }
                   }
-                  offsets={0}
-                  sizes={10}
+                  offset={0}
+                  size={10}
                 >
                   <div
                     className="c1"
                     data-component-type="grid_layout_cell"
-                    sizes={10}
+                    offset={0}
+                    size={10}
                   >
                     <div>
                       1
@@ -620,7 +621,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                 animationStyle="none"
                 data-component-type="grid_layout_cell"
                 displayType="flex"
-                flexHorizontalAlignments={
+                flexHorizontalAlignment={
                   Object {
                     "desktop": "right",
                     "min": "center",
@@ -636,14 +637,14 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                     "min": 16,
                   }
                 }
-                offsets={0}
-                sizes={2}
+                offset={0}
+                size={2}
               >
                 <StyledComponent
                   animationStyle="none"
                   data-component-type="grid_layout_cell"
                   displayType="flex"
-                  flexHorizontalAlignments={
+                  flexHorizontalAlignment={
                     Object {
                       "desktop": "right",
                       "min": "center",
@@ -695,13 +696,14 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                       "min": 16,
                     }
                   }
-                  offsets={0}
-                  sizes={2}
+                  offset={0}
+                  size={2}
                 >
                   <div
                     className="c2"
                     data-component-type="grid_layout_cell"
-                    sizes={2}
+                    offset={0}
+                    size={2}
                   >
                     <div>
                       2
@@ -737,7 +739,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                 animationStyle="none"
                 data-component-type="grid_layout_cell"
                 displayType="block"
-                flexHorizontalAlignments="left"
+                flexHorizontalAlignment="left"
                 gridColumns={12}
                 gutterMarginX={4}
                 gutterMarginY="none"
@@ -748,12 +750,12 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                     "min": 16,
                   }
                 }
-                offsets={
+                offset={
                   Object {
                     "tablet": 2,
                   }
                 }
-                sizes={
+                size={
                   Object {
                     "desktop": 3,
                     "tablet": 4,
@@ -764,7 +766,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   animationStyle="none"
                   data-component-type="grid_layout_cell"
                   displayType="block"
-                  flexHorizontalAlignments="left"
+                  flexHorizontalAlignment="left"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -811,12 +813,12 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                       "min": 16,
                     }
                   }
-                  offsets={
+                  offset={
                     Object {
                       "tablet": 2,
                     }
                   }
-                  sizes={
+                  size={
                     Object {
                       "desktop": 3,
                       "tablet": 4,
@@ -826,7 +828,12 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   <div
                     className="c3"
                     data-component-type="grid_layout_cell"
-                    sizes={
+                    offset={
+                      Object {
+                        "tablet": 2,
+                      }
+                    }
+                    size={
                       Object {
                         "desktop": 3,
                         "tablet": 4,
@@ -867,7 +874,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                 animationStyle="none"
                 data-component-type="grid_layout_cell"
                 displayType="block"
-                flexHorizontalAlignments="left"
+                flexHorizontalAlignment="left"
                 gridColumns={12}
                 gutterMarginX={4}
                 gutterMarginY="none"
@@ -878,8 +885,8 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                     "min": 16,
                   }
                 }
-                offsets={0}
-                sizes={
+                offset={0}
+                size={
                   Object {
                     "desktop": 6,
                     "tablet": 4,
@@ -890,7 +897,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   animationStyle="none"
                   data-component-type="grid_layout_cell"
                   displayType="block"
-                  flexHorizontalAlignments="left"
+                  flexHorizontalAlignment="left"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -937,8 +944,8 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                       "min": 16,
                     }
                   }
-                  offsets={0}
-                  sizes={
+                  offset={0}
+                  size={
                     Object {
                       "desktop": 6,
                       "tablet": 4,
@@ -948,7 +955,8 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                   <div
                     className="c4"
                     data-component-type="grid_layout_cell"
-                    sizes={
+                    offset={0}
+                    size={
                       Object {
                         "desktop": 6,
                         "tablet": 4,
@@ -989,7 +997,7 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                 animationStyle="none"
                 data-component-type="grid_layout_cell"
                 displayType="block"
-                flexHorizontalAlignments="left"
+                flexHorizontalAlignment="left"
                 gridColumns={12}
                 gutterMarginX={4}
                 gutterMarginY="none"
@@ -1000,14 +1008,14 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                     "min": 16,
                   }
                 }
-                offsets={3}
-                sizes="auto"
+                offset={3}
+                size="auto"
               >
                 <StyledComponent
                   animationStyle="none"
                   data-component-type="grid_layout_cell"
                   displayType="block"
-                  flexHorizontalAlignments="left"
+                  flexHorizontalAlignment="left"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -1054,13 +1062,14 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                       "min": 16,
                     }
                   }
-                  offsets={3}
-                  sizes="auto"
+                  offset={3}
+                  size="auto"
                 >
                   <div
                     className="c5"
                     data-component-type="grid_layout_cell"
-                    sizes="auto"
+                    offset={3}
+                    size="auto"
                   >
                     <div>
                       5
@@ -1622,7 +1631,7 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                 animationStyle="none"
                 data-component-type="grid_layout_cell"
                 displayType="block"
-                flexHorizontalAlignments="left"
+                flexHorizontalAlignment="left"
                 gridColumns={12}
                 gutterMarginX={4}
                 gutterMarginY="none"
@@ -1633,14 +1642,14 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                     "min": 16,
                   }
                 }
-                offsets={0}
-                sizes={10}
+                offset={0}
+                size={10}
               >
                 <StyledComponent
                   animationStyle="none"
                   data-component-type="grid_layout_cell"
                   displayType="block"
-                  flexHorizontalAlignments="left"
+                  flexHorizontalAlignment="left"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -1687,13 +1696,14 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                       "min": 16,
                     }
                   }
-                  offsets={0}
-                  sizes={10}
+                  offset={0}
+                  size={10}
                 >
                   <div
                     className="c1"
                     data-component-type="grid_layout_cell"
-                    sizes={10}
+                    offset={0}
+                    size={10}
                   >
                     <div>
                       1
@@ -1729,7 +1739,7 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                 animationStyle="none"
                 data-component-type="grid_layout_cell"
                 displayType="flex"
-                flexHorizontalAlignments={
+                flexHorizontalAlignment={
                   Object {
                     "desktop": "right",
                     "min": "center",
@@ -1745,14 +1755,14 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                     "min": 16,
                   }
                 }
-                offsets={0}
-                sizes={2}
+                offset={0}
+                size={2}
               >
                 <StyledComponent
                   animationStyle="none"
                   data-component-type="grid_layout_cell"
                   displayType="flex"
-                  flexHorizontalAlignments={
+                  flexHorizontalAlignment={
                     Object {
                       "desktop": "right",
                       "min": "center",
@@ -1804,13 +1814,14 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                       "min": 16,
                     }
                   }
-                  offsets={0}
-                  sizes={2}
+                  offset={0}
+                  size={2}
                 >
                   <div
                     className="c2"
                     data-component-type="grid_layout_cell"
-                    sizes={2}
+                    offset={0}
+                    size={2}
                   >
                     <div>
                       2
@@ -1846,7 +1857,7 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                 animationStyle="none"
                 data-component-type="grid_layout_cell"
                 displayType="block"
-                flexHorizontalAlignments="left"
+                flexHorizontalAlignment="left"
                 gridColumns={12}
                 gutterMarginX={4}
                 gutterMarginY="none"
@@ -1857,12 +1868,12 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                     "min": 16,
                   }
                 }
-                offsets={
+                offset={
                   Object {
                     "tablet": 2,
                   }
                 }
-                sizes={
+                size={
                   Object {
                     "desktop": 3,
                     "tablet": 4,
@@ -1873,7 +1884,7 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                   animationStyle="none"
                   data-component-type="grid_layout_cell"
                   displayType="block"
-                  flexHorizontalAlignments="left"
+                  flexHorizontalAlignment="left"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -1920,12 +1931,12 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                       "min": 16,
                     }
                   }
-                  offsets={
+                  offset={
                     Object {
                       "tablet": 2,
                     }
                   }
-                  sizes={
+                  size={
                     Object {
                       "desktop": 3,
                       "tablet": 4,
@@ -1935,7 +1946,12 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                   <div
                     className="c3"
                     data-component-type="grid_layout_cell"
-                    sizes={
+                    offset={
+                      Object {
+                        "tablet": 2,
+                      }
+                    }
+                    size={
                       Object {
                         "desktop": 3,
                         "tablet": 4,
@@ -1976,7 +1992,7 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                 animationStyle="none"
                 data-component-type="grid_layout_cell"
                 displayType="block"
-                flexHorizontalAlignments="left"
+                flexHorizontalAlignment="left"
                 gridColumns={12}
                 gutterMarginX={4}
                 gutterMarginY="none"
@@ -1987,8 +2003,8 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                     "min": 16,
                   }
                 }
-                offsets={0}
-                sizes={
+                offset={0}
+                size={
                   Object {
                     "desktop": 6,
                     "tablet": 4,
@@ -1999,7 +2015,7 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                   animationStyle="none"
                   data-component-type="grid_layout_cell"
                   displayType="block"
-                  flexHorizontalAlignments="left"
+                  flexHorizontalAlignment="left"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -2046,8 +2062,8 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                       "min": 16,
                     }
                   }
-                  offsets={0}
-                  sizes={
+                  offset={0}
+                  size={
                     Object {
                       "desktop": 6,
                       "tablet": 4,
@@ -2057,7 +2073,8 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                   <div
                     className="c4"
                     data-component-type="grid_layout_cell"
-                    sizes={
+                    offset={0}
+                    size={
                       Object {
                         "desktop": 6,
                         "tablet": 4,
@@ -2098,7 +2115,7 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                 animationStyle="none"
                 data-component-type="grid_layout_cell"
                 displayType="block"
-                flexHorizontalAlignments="left"
+                flexHorizontalAlignment="left"
                 gridColumns={12}
                 gutterMarginX={4}
                 gutterMarginY="none"
@@ -2109,14 +2126,14 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                     "min": 16,
                   }
                 }
-                offsets={3}
-                sizes="auto"
+                offset={3}
+                size="auto"
               >
                 <StyledComponent
                   animationStyle="none"
                   data-component-type="grid_layout_cell"
                   displayType="block"
-                  flexHorizontalAlignments="left"
+                  flexHorizontalAlignment="left"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -2163,13 +2180,14 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                       "min": 16,
                     }
                   }
-                  offsets={3}
-                  sizes="auto"
+                  offset={3}
+                  size="auto"
                 >
                   <div
                     className="c5"
                     data-component-type="grid_layout_cell"
-                    sizes="auto"
+                    offset={3}
+                    size="auto"
                   >
                     <div>
                       5
@@ -2177,6 +2195,1087 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                   </div>
                 </StyledComponent>
               </styled.div>
+            </Transition>
+          </CSSTransition>
+        </TransitionGroup>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</GridLayout>
+`;
+
+exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.c1 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+}
+
+.c3 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+}
+
+.c4 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+}
+
+.c5 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+}
+
+.c2 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+}
+
+@media only screen and (max-width:639px) {
+  .c0 {
+    margin-left: -2px;
+    margin-right: -2px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c0 {
+    margin-left: -2px;
+    margin-right: -2px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c0 {
+    margin-left: -2px;
+    margin-right: -2px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c0 {
+    margin-left: -2px;
+    margin-right: -2px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c1 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(83.33333333333333% - 4px);
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c1 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(83.33333333333333% - 4px);
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c1 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(83.33333333333333% - 4px);
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c1 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(83.33333333333333% - 4px);
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c3 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c3 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(33.333333333333336% - 4px);
+    margin-left: calc(16.666666666666668% + 2px);
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c3 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(25% - 4px);
+    margin-left: calc(16.666666666666668% + 2px);
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c3 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(25% - 4px);
+    margin-left: calc(16.666666666666668% + 2px);
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c4 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c4 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(33.333333333333336% - 4px);
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c4 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(50% - 4px);
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c4 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(50% - 4px);
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c5 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    width: auto;
+    margin-left: calc(25% + 2px);
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c5 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    width: auto;
+    margin-left: calc(25% + 2px);
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c5 {
+    margin-left: 2px;
+    margin-right: 2px;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    width: auto;
+    margin-left: calc(25% + 2px);
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c5 {
+    margin-left: 2px;
+    margin-right: 2px;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    width: auto;
+    margin-left: calc(25% + 2px);
+  }
+}
+
+@media only screen and (max-width:639px) {
+  .c2 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(16.666666666666668% - 4px);
+  }
+}
+
+@media only screen and (min-width:640px) and (max-width:1033px) {
+  .c2 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(16.666666666666668% - 4px);
+  }
+}
+
+@media only screen and (min-width:1034px) and (max-width:1439px) {
+  .c2 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(16.666666666666668% - 4px);
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .c2 {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: calc(16.666666666666668% - 4px);
+  }
+}
+
+<GridLayout
+  gridColumns={12}
+  gutterMarginX={4}
+  gutterMarginY="none"
+  gutterPaddingX="none"
+  gutterPaddingY={
+    Object {
+      "desktop": "none",
+      "min": 16,
+    }
+  }
+  horizontalAlignment="center"
+  verticalAlignment="stretch"
+>
+  <styled.div
+    data-component-type="grid_layout"
+    gutterMarginX={4}
+    gutterMarginY="none"
+    horizontalAlignment="center"
+    verticalAlignment="stretch"
+  >
+    <StyledComponent
+      data-component-type="grid_layout"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 0 auto;
+
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      gutterMarginX={4}
+      gutterMarginY="none"
+      horizontalAlignment="center"
+      verticalAlignment="stretch"
+    >
+      <div
+        className="c0"
+        data-component-type="grid_layout"
+      >
+        <TransitionGroup
+          childFactory={[Function]}
+          component={null}
+        >
+          <CSSTransition
+            classNames="grid-layout-cell-animation"
+            in={true}
+            key=".$0/.0"
+            onExited={[Function]}
+            timeout={200}
+          >
+            <Transition
+              appear={false}
+              enter={true}
+              exit={true}
+              in={true}
+              mountOnEnter={false}
+              onEnter={[Function]}
+              onEntered={[Function]}
+              onEntering={[Function]}
+              onExit={[Function]}
+              onExited={[Function]}
+              onExiting={[Function]}
+              timeout={200}
+              unmountOnExit={false}
+            >
+              <Cell
+                gridColumns={12}
+                gutterMarginX={4}
+                gutterMarginY="none"
+                gutterPaddingX="none"
+                gutterPaddingY={
+                  Object {
+                    "desktop": "none",
+                    "min": 16,
+                  }
+                }
+                size={10}
+              >
+                <styled.div
+                  animationStyle="none"
+                  data-component-type="grid_layout_cell"
+                  displayType="block"
+                  flexHorizontalAlignment="left"
+                  gridColumns={12}
+                  gutterMarginX={4}
+                  gutterMarginY="none"
+                  gutterPaddingX="none"
+                  gutterPaddingY={
+                    Object {
+                      "desktop": "none",
+                      "min": 16,
+                    }
+                  }
+                  offset={0}
+                  size={10}
+                >
+                  <StyledComponent
+                    animationStyle="none"
+                    data-component-type="grid_layout_cell"
+                    displayType="block"
+                    flexHorizontalAlignment="left"
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-bwzfXH",
+                          "isStatic": false,
+                          "lastClassName": "c5",
+                          "rules": Array [
+                            "
+  flex: 0 0 auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+
+  ",
+                            [Function],
+                            "
+  ",
+                            [Function],
+                            "
+",
+                          ],
+                        },
+                        "displayName": "styled.div",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-bwzfXH",
+                        "target": "div",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    gridColumns={12}
+                    gutterMarginX={4}
+                    gutterMarginY="none"
+                    gutterPaddingX="none"
+                    gutterPaddingY={
+                      Object {
+                        "desktop": "none",
+                        "min": 16,
+                      }
+                    }
+                    offset={0}
+                    size={10}
+                  >
+                    <div
+                      className="c1"
+                      data-component-type="grid_layout_cell"
+                      offset={0}
+                      size={10}
+                    >
+                      <div>
+                        1
+                      </div>
+                    </div>
+                  </StyledComponent>
+                </styled.div>
+              </Cell>
+            </Transition>
+          </CSSTransition>
+          <CSSTransition
+            classNames="grid-layout-cell-animation"
+            in={true}
+            key=".$1/.1"
+            onExited={[Function]}
+            timeout={200}
+          >
+            <Transition
+              appear={false}
+              enter={true}
+              exit={true}
+              in={true}
+              mountOnEnter={false}
+              onEnter={[Function]}
+              onEntered={[Function]}
+              onEntering={[Function]}
+              onExit={[Function]}
+              onExited={[Function]}
+              onExiting={[Function]}
+              timeout={200}
+              unmountOnExit={false}
+            >
+              <Cell
+                gridColumns={12}
+                gutterMarginX={4}
+                gutterMarginY="none"
+                gutterPaddingX="none"
+                gutterPaddingY={
+                  Object {
+                    "desktop": "none",
+                    "min": 16,
+                  }
+                }
+                size={2}
+              >
+                <styled.div
+                  animationStyle="none"
+                  data-component-type="grid_layout_cell"
+                  displayType="block"
+                  flexHorizontalAlignment="left"
+                  gridColumns={12}
+                  gutterMarginX={4}
+                  gutterMarginY="none"
+                  gutterPaddingX="none"
+                  gutterPaddingY={
+                    Object {
+                      "desktop": "none",
+                      "min": 16,
+                    }
+                  }
+                  offset={0}
+                  size={2}
+                >
+                  <StyledComponent
+                    animationStyle="none"
+                    data-component-type="grid_layout_cell"
+                    displayType="block"
+                    flexHorizontalAlignment="left"
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-bwzfXH",
+                          "isStatic": false,
+                          "lastClassName": "c5",
+                          "rules": Array [
+                            "
+  flex: 0 0 auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+
+  ",
+                            [Function],
+                            "
+  ",
+                            [Function],
+                            "
+",
+                          ],
+                        },
+                        "displayName": "styled.div",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-bwzfXH",
+                        "target": "div",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    gridColumns={12}
+                    gutterMarginX={4}
+                    gutterMarginY="none"
+                    gutterPaddingX="none"
+                    gutterPaddingY={
+                      Object {
+                        "desktop": "none",
+                        "min": 16,
+                      }
+                    }
+                    offset={0}
+                    size={2}
+                  >
+                    <div
+                      className="c2"
+                      data-component-type="grid_layout_cell"
+                      offset={0}
+                      size={2}
+                    >
+                      <div>
+                        2
+                      </div>
+                    </div>
+                  </StyledComponent>
+                </styled.div>
+              </Cell>
+            </Transition>
+          </CSSTransition>
+          <CSSTransition
+            classNames="grid-layout-cell-animation"
+            in={true}
+            key=".$2/.2"
+            onExited={[Function]}
+            timeout={200}
+          >
+            <Transition
+              appear={false}
+              enter={true}
+              exit={true}
+              in={true}
+              mountOnEnter={false}
+              onEnter={[Function]}
+              onEntered={[Function]}
+              onEntering={[Function]}
+              onExit={[Function]}
+              onExited={[Function]}
+              onExiting={[Function]}
+              timeout={200}
+              unmountOnExit={false}
+            >
+              <Cell
+                gridColumns={12}
+                gutterMarginX={4}
+                gutterMarginY="none"
+                gutterPaddingX="none"
+                gutterPaddingY={
+                  Object {
+                    "desktop": "none",
+                    "min": 16,
+                  }
+                }
+                offset={
+                  Object {
+                    "tablet": 2,
+                  }
+                }
+                size={
+                  Object {
+                    "desktop": 3,
+                    "tablet": 4,
+                  }
+                }
+              >
+                <styled.div
+                  animationStyle="none"
+                  data-component-type="grid_layout_cell"
+                  displayType="block"
+                  flexHorizontalAlignment="left"
+                  gridColumns={12}
+                  gutterMarginX={4}
+                  gutterMarginY="none"
+                  gutterPaddingX="none"
+                  gutterPaddingY={
+                    Object {
+                      "desktop": "none",
+                      "min": 16,
+                    }
+                  }
+                  offset={
+                    Object {
+                      "tablet": 2,
+                    }
+                  }
+                  size={
+                    Object {
+                      "desktop": 3,
+                      "tablet": 4,
+                    }
+                  }
+                >
+                  <StyledComponent
+                    animationStyle="none"
+                    data-component-type="grid_layout_cell"
+                    displayType="block"
+                    flexHorizontalAlignment="left"
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-bwzfXH",
+                          "isStatic": false,
+                          "lastClassName": "c5",
+                          "rules": Array [
+                            "
+  flex: 0 0 auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+
+  ",
+                            [Function],
+                            "
+  ",
+                            [Function],
+                            "
+",
+                          ],
+                        },
+                        "displayName": "styled.div",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-bwzfXH",
+                        "target": "div",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    gridColumns={12}
+                    gutterMarginX={4}
+                    gutterMarginY="none"
+                    gutterPaddingX="none"
+                    gutterPaddingY={
+                      Object {
+                        "desktop": "none",
+                        "min": 16,
+                      }
+                    }
+                    offset={
+                      Object {
+                        "tablet": 2,
+                      }
+                    }
+                    size={
+                      Object {
+                        "desktop": 3,
+                        "tablet": 4,
+                      }
+                    }
+                  >
+                    <div
+                      className="c3"
+                      data-component-type="grid_layout_cell"
+                      offset={
+                        Object {
+                          "tablet": 2,
+                        }
+                      }
+                      size={
+                        Object {
+                          "desktop": 3,
+                          "tablet": 4,
+                        }
+                      }
+                    >
+                      <div>
+                        3
+                      </div>
+                    </div>
+                  </StyledComponent>
+                </styled.div>
+              </Cell>
+            </Transition>
+          </CSSTransition>
+          <CSSTransition
+            classNames="grid-layout-cell-animation"
+            in={true}
+            key=".$3/.3"
+            onExited={[Function]}
+            timeout={200}
+          >
+            <Transition
+              appear={false}
+              enter={true}
+              exit={true}
+              in={true}
+              mountOnEnter={false}
+              onEnter={[Function]}
+              onEntered={[Function]}
+              onEntering={[Function]}
+              onExit={[Function]}
+              onExited={[Function]}
+              onExiting={[Function]}
+              timeout={200}
+              unmountOnExit={false}
+            >
+              <Cell
+                gridColumns={12}
+                gutterMarginX={4}
+                gutterMarginY="none"
+                gutterPaddingX="none"
+                gutterPaddingY={
+                  Object {
+                    "desktop": "none",
+                    "min": 16,
+                  }
+                }
+                size={
+                  Object {
+                    "desktop": 6,
+                    "tablet": 4,
+                  }
+                }
+              >
+                <styled.div
+                  animationStyle="none"
+                  data-component-type="grid_layout_cell"
+                  displayType="block"
+                  flexHorizontalAlignment="left"
+                  gridColumns={12}
+                  gutterMarginX={4}
+                  gutterMarginY="none"
+                  gutterPaddingX="none"
+                  gutterPaddingY={
+                    Object {
+                      "desktop": "none",
+                      "min": 16,
+                    }
+                  }
+                  offset={0}
+                  size={
+                    Object {
+                      "desktop": 6,
+                      "tablet": 4,
+                    }
+                  }
+                >
+                  <StyledComponent
+                    animationStyle="none"
+                    data-component-type="grid_layout_cell"
+                    displayType="block"
+                    flexHorizontalAlignment="left"
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-bwzfXH",
+                          "isStatic": false,
+                          "lastClassName": "c5",
+                          "rules": Array [
+                            "
+  flex: 0 0 auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+
+  ",
+                            [Function],
+                            "
+  ",
+                            [Function],
+                            "
+",
+                          ],
+                        },
+                        "displayName": "styled.div",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-bwzfXH",
+                        "target": "div",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    gridColumns={12}
+                    gutterMarginX={4}
+                    gutterMarginY="none"
+                    gutterPaddingX="none"
+                    gutterPaddingY={
+                      Object {
+                        "desktop": "none",
+                        "min": 16,
+                      }
+                    }
+                    offset={0}
+                    size={
+                      Object {
+                        "desktop": 6,
+                        "tablet": 4,
+                      }
+                    }
+                  >
+                    <div
+                      className="c4"
+                      data-component-type="grid_layout_cell"
+                      offset={0}
+                      size={
+                        Object {
+                          "desktop": 6,
+                          "tablet": 4,
+                        }
+                      }
+                    >
+                      <div>
+                        4
+                      </div>
+                    </div>
+                  </StyledComponent>
+                </styled.div>
+              </Cell>
+            </Transition>
+          </CSSTransition>
+          <CSSTransition
+            classNames="grid-layout-cell-animation"
+            in={true}
+            key=".$4/.4"
+            onExited={[Function]}
+            timeout={200}
+          >
+            <Transition
+              appear={false}
+              enter={true}
+              exit={true}
+              in={true}
+              mountOnEnter={false}
+              onEnter={[Function]}
+              onEntered={[Function]}
+              onEntering={[Function]}
+              onExit={[Function]}
+              onExited={[Function]}
+              onExiting={[Function]}
+              timeout={200}
+              unmountOnExit={false}
+            >
+              <Cell
+                gridColumns={12}
+                gutterMarginX={4}
+                gutterMarginY="none"
+                gutterPaddingX="none"
+                gutterPaddingY={
+                  Object {
+                    "desktop": "none",
+                    "min": 16,
+                  }
+                }
+                offset={3}
+                size="auto"
+              >
+                <styled.div
+                  animationStyle="none"
+                  data-component-type="grid_layout_cell"
+                  displayType="block"
+                  flexHorizontalAlignment="left"
+                  gridColumns={12}
+                  gutterMarginX={4}
+                  gutterMarginY="none"
+                  gutterPaddingX="none"
+                  gutterPaddingY={
+                    Object {
+                      "desktop": "none",
+                      "min": 16,
+                    }
+                  }
+                  offset={3}
+                  size="auto"
+                >
+                  <StyledComponent
+                    animationStyle="none"
+                    data-component-type="grid_layout_cell"
+                    displayType="block"
+                    flexHorizontalAlignment="left"
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-bwzfXH",
+                          "isStatic": false,
+                          "lastClassName": "c5",
+                          "rules": Array [
+                            "
+  flex: 0 0 auto;
+  flex-basis: auto;
+  min-height: 1px;
+  min-width: 1px;
+  width: 100%;
+
+  ",
+                            [Function],
+                            "
+  ",
+                            [Function],
+                            "
+",
+                          ],
+                        },
+                        "displayName": "styled.div",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-bwzfXH",
+                        "target": "div",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    gridColumns={12}
+                    gutterMarginX={4}
+                    gutterMarginY="none"
+                    gutterPaddingX="none"
+                    gutterPaddingY={
+                      Object {
+                        "desktop": "none",
+                        "min": 16,
+                      }
+                    }
+                    offset={3}
+                    size="auto"
+                  >
+                    <div
+                      className="c5"
+                      data-component-type="grid_layout_cell"
+                      offset={3}
+                      size="auto"
+                    >
+                      <div>
+                        5
+                      </div>
+                    </div>
+                  </StyledComponent>
+                </styled.div>
+              </Cell>
             </Transition>
           </CSSTransition>
         </TransitionGroup>
