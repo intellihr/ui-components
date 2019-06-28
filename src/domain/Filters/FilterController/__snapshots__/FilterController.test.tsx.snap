@@ -19,7 +19,7 @@ exports[`<FilterController /> should render the filter controller 1`] = `
       hasRightMargin={true}
     >
       <InputGroup>
-        <Component
+        <AddFilterDropdownMenu
           filterMessage="dummy filter message:"
           filters={
             Array [
