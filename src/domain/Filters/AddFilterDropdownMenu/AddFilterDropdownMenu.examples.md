@@ -3,46 +3,46 @@
 ```jsx
 import { Button } from '@Domain/Buttons';
 
-initialState = {
-  filters: [
-      { 
-        fieldName: 'Type',
-        type: 'SINGLE_SELECT',
-        selectOptions: [
-          {
-            label: 'Product Training',
-            value: 'Product Training'
-          },
-          {
-            label: 'Personal Development',
-            value: 'Personal Development'
-          },
-          {
-            label: 'Soft Skill',
-            value: 'Soft Skill'
-          }
-        ]
-      },
-      {
-        fieldName: 'Training Provider',
-        type: 'SINGLE_SELECT',
-        selectOptions: [
-          {
-            label: 'Internal',
-            value: 'Internal'
-          },
-          {
-            label: 'External',
-            value: 'External'
-          },
-          {
-            label: 'Others',
-            value: 'Others'
-          }
-        ]
-      }
-    ]
-};
+const filters = [
+            { 
+              fieldName: 'type',
+              label: 'Type',
+              type: 'SINGLE_SELECT',
+              selectOptions: [
+                {
+                  label: 'Product Training',
+                  value: 'product_training'
+                },
+                {
+                  label: 'Personal Development',
+                  value: 'personal_development'
+                },
+                {
+                  label: 'Soft Skill',
+                  value: 'soft_skill'
+                }
+              ]
+            },
+            {
+              fieldName: 'training_provider',
+              label: 'Training Provider',
+              type: 'SINGLE_SELECT',
+              selectOptions: [
+                {
+                  label: 'Internal',
+                  value: 'internal'
+                },
+                {
+                  label: 'External',
+                  value: 'external'
+                },
+                {
+                  label: 'Others',
+                  value: 'others'
+                }
+              ]
+            }
+          ];
 
 <AddFilterDropdownMenu
   filterMessage='Show all training where:'
@@ -55,7 +55,7 @@ initialState = {
         Add filter
       </Button>
     }
-  filters = {state.filters}
-  onFilterAdded = {(filter) => alert(`Filter Applied: ${filter.fieldName} ${filter.operator} ${filter.value}`)}
+  filters = {filters}
+  onFilterAdded = {(addedFilter) => alert(`Filter Applied on ${addedFilter.filter.label}:  ${addedFilter.value}`)}
 />
 ```

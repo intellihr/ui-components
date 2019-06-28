@@ -19,12 +19,13 @@ exports[`<FilterController /> should render the filter controller 1`] = `
       hasRightMargin={true}
     >
       <InputGroup>
-        <Component
+        <AddFilterDropdownMenu
           filterMessage="dummy filter message:"
           filters={
             Array [
               Object {
-                "fieldName": "Type",
+                "fieldName": "type",
+                "label": "Type",
                 "selectOptions": Array [
                   Object {
                     "label": "Product Training",
@@ -42,7 +43,8 @@ exports[`<FilterController /> should render the filter controller 1`] = `
                 "type": "SINGLE_SELECT",
               },
               Object {
-                "fieldName": "Training Provider",
+                "fieldName": "training_provider",
+                "label": "Training Provider",
                 "selectOptions": Array [
                   Object {
                     "label": "Internal",
