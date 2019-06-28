@@ -4,7 +4,10 @@ import { Props } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { InputGroup } from '../../Inputs/InputGroup'
 import { TextInput } from '../../Inputs/TextInput'
-import { AddFilterDropdownMenu, IAddFilterDropdownMenuFilter } from '../AddFilterDropdownMenu/AddFilterDropdownMenu'
+import {
+  AddFilterDropdownMenu, IAddFilterDropdownMenuFilter,
+  IAddedFilter
+} from '../AddFilterDropdownMenu/AddFilterDropdownMenu'
 import { FilterTag, IFilterTagDetail } from '../FilterTag/FilterTag'
 import { ControllerWrapper, StyledController, StyledLeftComponent } from './style'
 
@@ -20,7 +23,7 @@ export interface IFilterControllerProps {
   /** search value of this filter controller */
   searchValue?: string
   /** Callback when a filter is added */
-  onFilterAdded: (selectedFilter: IFilterTagDetail) => void
+  onFilterAdded: (selectedFilter: IAddedFilter) => void
   /** Callback when a tag is deleted */
   onTagDeleted: (selectedTag: IFilterTagDetail) => void
   /** Callback when input is added in search bar */
@@ -94,7 +97,7 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
     )
   }
 
-  private filterButton = ({ toggleMenu, toggleComponentRef, ariaProps }: any ) => {
+  private filterButton = ({ toggleMenu, toggleComponentRef, ariaProps }: any) => {
     return (
       <InputGroup.Button
         onClick={toggleMenu}

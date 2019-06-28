@@ -1,6 +1,7 @@
 import classNames from 'classnames'
 import React from 'react'
 
+import { Props } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons'
 import {
   DropdownMenu,
@@ -30,66 +31,27 @@ export interface ICommentProps {
   commentBodyText: string,
   /** an array of sectionProps from the DropdownMenu to render the submenu sections */
   actions?: IDropdownMenuSectionProps[]
+  /** Margins around the component */
+  margins?: Props.IMargins
 }
 
-export class Comment extends React.Component<ICommentProps> {
-  public render (): JSX.Element {
-    const {
-      focused
-    } = this.props
-
-    return (
-      <StyledComment>
-        {this.avatar}
-        <div
-          className={classNames(
-            'comment-container',
-            { focused }
-          )}
-        >
-          {this.commentHeader}
-          {this.commentContent}
-        </div>
-      </StyledComment>
-    )
-  }
-
-  private get avatar (): JSX.Element {
-    const {
-      avatarComponent
-    } = this.props
-
-    return (
-      <div className='comment-badge-container'>
-        {avatarComponent}
-      </div>
-    )
-  }
-
-  private get commentActions (): JSX.Element | null {
-    const {
-      actions,
-      headerComponent
-    } = this.props
-
-    if (headerComponent || !actions) {
-      return null
-    }
-
-    return (
-      <DropdownMenu
-        toggleComponent={this.dropdownMenuToggleComponent}
-        sections={actions}
-      />
-    )
-  }
-
-  private dropdownMenuToggleComponent = (props: IDropdownMenuToggleComponentProps) => {
+export const Comment: React.FC<ICommentProps> = ({
+  focused,
+  avatarComponent,
+  headerComponent,
+  commentHeaderText,
+  pillComponent,
+  dateComponent,
+  actions,
+  commentBodyText,
+  margins
+}) => {
+  const DropdownMenuToggleComponent = (props: IDropdownMenuToggleComponentProps) => {
     return (
       <CommentActionMenuToggleButton
         type='button'
         onClick={props.toggleMenu}
-        innerRef={props.toggleComponentRef}
+        ref={props.toggleComponentRef}
         {...props.ariaProps}
       >
         <FontAwesomeIcon type='ellipsis-v' />
@@ -97,68 +59,48 @@ export class Comment extends React.Component<ICommentProps> {
     )
   }
 
-  private get commentDate (): JSX.Element {
-    const {
-      dateComponent,
-      pillComponent
-    } = this.props
-
-    return (
-      <div className='comment-header-date'>
-        {pillComponent}
-        {dateComponent}
+  return (
+    <StyledComment margins={margins}>
+      <div className='comment-badge-container'>
+        {avatarComponent}
       </div>
-    )
-  }
-
-  private get commentTitle (): JSX.Element {
-    const {
-      commentHeaderText,
-      headerComponent
-    } = this.props
-
-    return (
-      <div className='comment-header'>
-        <span className='comment-header-person-name'>
-          {commentHeaderText}
-        </span>
-        {headerComponent}
-      </div>
-    )
-  }
-
-  private get commentHeader (): JSX.Element {
-    const {
-      headerComponent
-    } = this.props
-
-    return (
       <div
         className={classNames(
-          'comment-header-container',
-          { 'with-status-update': !(!headerComponent) }
+          'comment-container',
+          { focused }
         )}
       >
-        {this.commentTitle}
+        <div
+          className={classNames(
+            'comment-header-container',
+            { 'with-status-update': !(!headerComponent) }
+          )}
+        >
+          <div className='comment-header'>
+            <span className='comment-header-person-name'>
+              {commentHeaderText}
+            </span>
+            {headerComponent}
+          </div>
 
-        {this.commentDate}
+          <div className='comment-header-date'>
+            {pillComponent}
+            {dateComponent}
+          </div>
 
-        {this.commentActions}
+          {(!headerComponent && actions) && (
+            <DropdownMenu
+              toggleComponent={DropdownMenuToggleComponent}
+              sections={actions}
+            />
+          )}
+        </div>
+        <div className='comment-content'>
+          <FormattedText
+            text={commentBodyText}
+          />
+        </div>
       </div>
-    )
-  }
-
-  private get commentContent (): JSX.Element {
-    const {
-      commentBodyText
-    } = this.props
-
-    return (
-      <div className='comment-content'>
-        <FormattedText
-          text={commentBodyText}
-        />
-      </div>
-    )
-  }
+    </StyledComment>
+  )
 }

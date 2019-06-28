@@ -1,7 +1,6 @@
-import React from 'react'
-import styled, { StyledComponentClass, css } from 'styled-components'
+import styled, { css } from 'styled-components'
 
-import { Props, Variables } from '../../../../common'
+import { Variables } from '../../../../common'
 import { SectionType } from './Section'
 
 const DefaultDropdownButton = styled.button`

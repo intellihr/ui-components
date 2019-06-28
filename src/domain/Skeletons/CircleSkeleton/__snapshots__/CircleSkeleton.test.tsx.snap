@@ -23,10 +23,48 @@ exports[`<CircleSkeleton /> should render a circle skeleton 1`] = `
   <styled.span
     size="large"
   >
-    <span
-      className="c0"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  border-radius: 50%;
+  line-height: 1rem;
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
       size="large"
-    />
+    >
+      <span
+        className="c0"
+        size="large"
+      />
+    </StyledComponent>
   </styled.span>
 </CircleSkeleton>
 `;
@@ -54,10 +92,48 @@ exports[`<CircleSkeleton /> should render a circle skeleton with set size 1`] = 
   <styled.span
     size="small"
   >
-    <span
-      className="c0"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  border-radius: 50%;
+  line-height: 1rem;
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
       size="small"
-    />
+    >
+      <span
+        className="c0"
+        size="small"
+      />
+    </StyledComponent>
   </styled.span>
 </CircleSkeleton>
 `;

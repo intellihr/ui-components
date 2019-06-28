@@ -74,17 +74,80 @@ exports[`<ListColumn /> should render a list column with number content 1`] = `
       sm={6}
       type="row"
     >
-      <div
-        className="c0"
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-htpNat",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding-right: ",
+                [Function],
+                "rem;
+  padding-left: ",
+                [Function],
+                "rem;
+
+  ",
+                [Function],
+                "
+
+  ",
+                [Function],
+                "
+
+  ",
+                [Function],
+                "
+",
+              ],
+            },
+            "displayName": "Col",
+            "foldedComponentIds": Array [],
+            "propTypes": Object {
+              "children": [Function],
+              "lg": [Function],
+              "lgOffset": [Function],
+              "md": [Function],
+              "mdOffset": [Function],
+              "reverse": [Function],
+              "sm": [Function],
+              "smOffset": [Function],
+              "xs": [Function],
+              "xsOffset": [Function],
+            },
+            "render": [Function],
+            "styledComponentId": "sc-htpNat",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        lg={6}
+        md={6}
+        sm={6}
         type="row"
       >
         <div
-          className="list-column"
-          data-component-type="smart_list_column"
+          className="c0"
+          type="row"
         >
-          100
+          <div
+            className="list-column"
+            data-component-type="smart_list_column"
+          >
+            100
+          </div>
         </div>
-      </div>
+      </StyledComponent>
     </Col>
   </Column>
 </ListColumn>
@@ -164,25 +227,88 @@ exports[`<ListColumn /> should render a list column with the right header 1`] = 
       sm={6}
       type="row"
     >
-      <div
-        className="c0"
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-htpNat",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding-right: ",
+                [Function],
+                "rem;
+  padding-left: ",
+                [Function],
+                "rem;
+
+  ",
+                [Function],
+                "
+
+  ",
+                [Function],
+                "
+
+  ",
+                [Function],
+                "
+",
+              ],
+            },
+            "displayName": "Col",
+            "foldedComponentIds": Array [],
+            "propTypes": Object {
+              "children": [Function],
+              "lg": [Function],
+              "lgOffset": [Function],
+              "md": [Function],
+              "mdOffset": [Function],
+              "reverse": [Function],
+              "sm": [Function],
+              "smOffset": [Function],
+              "xs": [Function],
+              "xsOffset": [Function],
+            },
+            "render": [Function],
+            "styledComponentId": "sc-htpNat",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        lg={6}
+        md={6}
+        sm={6}
         type="row"
       >
         <div
-          className="list-column"
-          data-component-type="smart_list_column"
+          className="c0"
+          type="row"
         >
-          <ListHeader
-            label="Test"
+          <div
+            className="list-column"
+            data-component-type="smart_list_column"
           >
-            <span
-              className="ListHeader"
+            <ListHeader
+              label="Test"
             >
-              Test
-            </span>
-          </ListHeader>
+              <span
+                className="ListHeader"
+              >
+                Test
+              </span>
+            </ListHeader>
+          </div>
         </div>
-      </div>
+      </StyledComponent>
     </Col>
   </Column>
 </ListColumn>
@@ -262,19 +388,82 @@ exports[`<ListColumn /> should render a list column with the right non-header ce
       sm={6}
       type="row"
     >
-      <div
-        className="c0"
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-htpNat",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding-right: ",
+                [Function],
+                "rem;
+  padding-left: ",
+                [Function],
+                "rem;
+
+  ",
+                [Function],
+                "
+
+  ",
+                [Function],
+                "
+
+  ",
+                [Function],
+                "
+",
+              ],
+            },
+            "displayName": "Col",
+            "foldedComponentIds": Array [],
+            "propTypes": Object {
+              "children": [Function],
+              "lg": [Function],
+              "lgOffset": [Function],
+              "md": [Function],
+              "mdOffset": [Function],
+              "reverse": [Function],
+              "sm": [Function],
+              "smOffset": [Function],
+              "xs": [Function],
+              "xsOffset": [Function],
+            },
+            "render": [Function],
+            "styledComponentId": "sc-htpNat",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        lg={6}
+        md={6}
+        sm={6}
         type="row"
       >
         <div
-          className="list-column"
-          data-component-type="smart_list_column"
+          className="c0"
+          type="row"
         >
-          <div>
-            Test Name
+          <div
+            className="list-column"
+            data-component-type="smart_list_column"
+          >
+            <div>
+              Test Name
+            </div>
           </div>
         </div>
-      </div>
+      </StyledComponent>
     </Col>
   </Column>
 </ListColumn>

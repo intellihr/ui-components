@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { StyledFunction, css } from 'styled-components'
 
-import {Utils, Variables} from '../../../../common'
+import { Utils, Variables } from '../../../../common'
 import { Anchor, IAnchorProps } from '../../../Internals/Anchor'
 import {
   CenteredContentHeading,
@@ -10,10 +10,10 @@ import {
 } from './styles/centeredTileContent'
 
 interface IStyledTileProps {
-  tileSize: 'small'|'medium'|'fullWidth'
+  tileSize: 'small' | 'medium' | 'fullWidth'
   isHoverable: boolean
   isButton: boolean
-  type: 'default'|'hollow'|'card'
+  type: 'default' | 'hollow' | 'card'
   hasHoverLabel: boolean
 }
 
@@ -151,7 +151,7 @@ const StyledTile = styled.div`
   position: relative;
 `
 
-const styledAnchor: StyledFunction<IStyledTileProps & IAnchorProps> = styled(
+const styledAnchor: StyledFunction<(props: IStyledTileProps & IAnchorProps) => React.ReactElement> = styled(
   (
     {
       tileSize,
@@ -244,9 +244,9 @@ const StyledHeadinglabel = styled.span`
   width: 100%;
 
   ${(props: IStyledHeadingLabelProps) => {
-  switch (props.labelStyle) {
-    case 'success':
-      return css`
+    switch (props.labelStyle) {
+      case 'success':
+        return css`
             color: ${Variables.Color.g400};
           `
       case 'warning':
@@ -341,8 +341,8 @@ const TileContentWrapper = styled.div`
   width: 100%;
 
   ${(props: ITileContentWrapperProps) => {
-  if (props.limitedContentWidth && !(props.limitedContentWidth === 'none')) {
-    return css`
+    if (props.limitedContentWidth && !(props.limitedContentWidth === 'none')) {
+      return css`
         display: flex;
         flex-direction: column;
         align-items: center;

@@ -8,38 +8,40 @@ const dummyHandleFilter = () => alert('dummy')
 
 const filters: IAddFilterDropdownMenuFilter[] = [
   {
-    fieldName: 'Type',
+    fieldName: 'type_id',
+    label: 'Type',
     type: 'SINGLE_SELECT',
     selectOptions: [
       {
         label: 'Product Training',
-        value: 'Product Training'
+        value: 'product_training'
       },
       {
         label: 'Personal Development',
-        value: 'Personal Development'
+        value: 'personal_development'
       },
       {
         label: 'Soft Skill',
-        value: 'Soft Skill'
+        value: 'soft_skill'
       }
     ]
   },
   {
-    fieldName: 'Training Provider',
+    fieldName: 'training_provider_id',
+    label: 'Training Provider',
     type: 'SINGLE_SELECT',
     selectOptions: [
       {
         label: 'Internal',
-        value: 'Internal'
+        value: 'internal'
       },
       {
         label: 'External',
-        value: 'External'
+        value: 'external'
       },
       {
         label: 'Others',
-        value: 'Others'
+        value: 'others'
       }
     ]
   }

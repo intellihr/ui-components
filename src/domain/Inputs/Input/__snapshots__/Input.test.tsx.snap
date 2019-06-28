@@ -64,13 +64,7 @@ exports[`<Input /> should render an input with a disable prefix text 1`] = `
   hasTextIndent={true}
   prefixWrapperWidth={0}
 >
-  <styled.div
-    innerRef={
-      Object {
-        "current": null,
-      }
-    }
-  >
+  <styled.div>
     <styled.span>
        
       test
@@ -95,16 +89,8 @@ exports[`<Input /> should render an input with an icon 1`] = `
   hasTextIndent={true}
   prefixWrapperWidth={0}
 >
-  <styled.div
-    innerRef={
-      Object {
-        "current": null,
-      }
-    }
-  >
+  <styled.div>
     <Icon
-      isSpinning={false}
-      size="medium"
       type="fa-check"
     />
     <styled.span>

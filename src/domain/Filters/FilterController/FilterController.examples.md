@@ -5,57 +5,73 @@ import { isEqual } from 'lodash';
 
 initialState = {
   searchValue: '',
-  filters: [
-        { 
-          fieldName: 'Type',
-          type: 'SINGLE_SELECT',
-          selectOptions: [
-            {
-              label: 'Product Training',
-              value: 'Product Training'
-            },
-            {
-              label: 'Personal Development',
-              value: 'Personal Development'
-            },
-            {
-              label: 'Soft Skill',
-              value: 'Soft Skill'
-            }
-          ]
-        },
-        {
-          fieldName: 'Training Provider',
-          type: 'SINGLE_SELECT',
-          selectOptions: [
-            {
-              label: 'Internal',
-              value: 'Internal'
-            },
-            {
-              label: 'External',
-              value: 'External'
-            },
-            {
-              label: 'Others',
-              value: 'Others'
-            }
-          ]
-        }
-      ],
   tags: []
 };
 
+const filters = [
+            { 
+              fieldName: 'type',
+              label: 'Type',
+              type: 'SINGLE_SELECT',
+              selectOptions: [
+                {
+                  label: 'Product Training',
+                  value: 'Product Training'
+                },
+                {
+                  label: 'Personal Development',
+                  value: 'Personal Development'
+                },
+                {
+                  label: 'Soft Skill',
+                  value: 'Soft Skill'
+                }
+              ]
+            },
+            {
+              fieldName: 'training_provider',
+              label: 'Training Provider',
+              type: 'SINGLE_SELECT',
+              selectOptions: [
+                {
+                  label: 'Internal',
+                  value: 'Internal'
+                },
+                {
+                  label: 'External',
+                  value: 'External'
+                },
+                {
+                  label: 'Others',
+                  value: 'Others'
+                }
+              ]
+            }
+          ];
+          
+const handleAddFilter = (addedFilter) => {
+  const tagsOnExistingField = state.tags.find(tag => tag.fieldName === addedFilter.filter.fieldName);
+  if (tagsOnExistingField) {
+    const oldFieldValues = tagsOnExistingField.fieldValues.find(val => val.value === addedFilter.value);
+    if (!oldFieldValues) {
+        tagsOnExistingField.fieldValues.push(addedFilter.filter.selectOptions.find(option => option.value === addedFilter.value));
+        setState({tags: state.tags.filter(tag => tag.fieldName !== addedFilter.filter.fieldName).concat(tagsOnExistingField)});
+      }
+  } else {
+    setState({tags: [...state.tags, {fieldName: addedFilter.filter.fieldName, label:addedFilter.filter.label, type: 'equality', fieldValues: [addedFilter.filter.selectOptions.find(option => option.value === addedFilter.value)]}]});
+  }
+}
+
 <FilterController
-  filters = {state.filters}
-  tags = {state.tags}
-  searchValue = {state.searchValue}
-  filterMessage = 'Show all training where:'
-  searchPlaceholder = 'Search training'
-  onFilterAdded = {(filter) => { setState({ tags: (state.tags.filter(tag => tag.fieldName !== filter.fieldName)).concat(filter) }) }}
-  onTagDeleted = {(deletedTag) => { setState({ tags: state.tags.filter(tag => !isEqual(tag, deletedTag)) }) }}
-  onSearchUpdated = {(event) => { setState({ searchValue: event.target.value }); console.log('search value updated:', event.target.value) }}
-  onSearchCleared = {(event) => { setState({ searchValue: '' }); alert('clear search value') }}
+  filters={filters}
+  tags={state.tags}
+  searchValue={state.searchValue}
+  filterMessage='Show all training where:'
+  searchPlaceholder='Search training'
+  onTagDeleted={(deletedTag) => { setState({ tags: state.tags.filter(tag => !isEqual(tag, deletedTag)) }) }}
+  onFilterAdded= {(addedFilter) => { handleAddFilter(addedFilter)}}
+  onSearchUpdated={(event) => { setState({ searchValue: event.target.value }); console.log('search value updated:', event.target.value) }}
+  onSearchCleared={(event) => { setState({ searchValue: '' }); alert('clear search value') }}
 />
 ```
 
@@ -75,58 +91,61 @@ initialState = {
   startDate: null,
   endDate:null,
   searchValue: '',
-  filters: [
-        { 
-          fieldName: 'Type',
-          type: 'SINGLE_SELECT',
-          selectOptions: [
-            {
-              label: 'Product Training',
-              value: 'Product Training'
-            },
-            {
-              label: 'Personal Development',
-              value: 'Personal Development'
-            },
-            {
-              label: 'Soft Skill',
-              value: 'Soft Skill'
-            }
-          ]
-        },
-        {
-          fieldName: 'Training Provider',
-          type: 'SINGLE_SELECT',
-          selectOptions: [
-            {
-              label: 'Internal',
-              value: 'Internal'
-            },
-            {
-              label: 'External',
-              value: 'External'
-            },
-            {
-              label: 'Others',
-              value: 'Others'
-            }
-          ]
-        }
-      ],
   tags: []
 };
 
+const filters = [
+            { 
+              field: 'type',
+              label: 'Type',
+              type: 'SINGLE_SELECT',
+              selectOptions: [
+                {
+                  label: 'Product Training',
+                  value: 'Product Training'
+                },
+                {
+                  label: 'Personal Development',
+                  value: 'Personal Development'
+                },
+                {
+                  label: 'Soft Skill',
+                  value: 'Soft Skill'
+                }
+              ]
+            },
+            {
+              field: 'training_provider',
+              label: 'Training Provider',
+              type: 'SINGLE_SELECT',
+              selectOptions: [
+                {
+                  label: 'Internal',
+                  value: 'Internal'
+                },
+                {
+                  label: 'External',
+                  value: 'External'
+                },
+                {
+                  label: 'Others',
+                  value: 'Others'
+                }
+              ]
+            }
+          ];
+
 <FilterController
-  filters = {state.filters}
-  tags = {state.tags}
-  searchValue = {state.searchValue}
-  filterMessage = 'Show all training where:'
-  searchPlaceholder = 'Search training'
-  onFilterAdded = {(filter) => { setState({ tags: (state.tags.filter(tag => tag.fieldName !== filter.fieldName)).concat(filter) }) }}
-  onTagDeleted = {(deletedTag) => { setState({ tags: state.tags.filter(tag => !isEqual(tag, deletedTag)) }) }}
-  onSearchUpdated = {(event) => { setState({ searchValue: event.target.value }); console.log('search value updated:', event.target.value) }}
-  onSearchCleared = {(event) => { setState({ searchValue: '' }); alert('clear search value') }}
-  rightComponent = { <div style={style}>
+  filters={filters}
+  tags={state.tags}
+  searchValue={state.searchValue}
+  filterMessage='Show all training where:'
+  searchPlaceholder='Search training'
+  onFilterAdded={(filter) => { setState({ tags: (state.tags.filter(tag => tag.fieldName !== filter.fieldName)).concat(filter) }) }}
+  onTagDeleted={(deletedTag) => { setState({ tags: state.tags.filter(tag => !isEqual(tag, deletedTag)) }) }}
+  onSearchUpdated={(event) => { setState({ searchValue: event.target.value }); console.log('search value updated:', event.target.value) }}
+  onSearchCleared={(event) => { setState({ searchValue: '' }); alert('clear search value') }}
+  rightComponent={ <div style={style}>
                        <DateRangeInput
                        isInline
                        name='filter-date-picker'
@@ -139,73 +158,5 @@ initialState = {
                       <Button margins={{ left: 8 }} type='neutral' onClick={() => alert('other action')}>Other Action</Button>
                      </div>
                    }
-/>
-```
-
-#### Filter Controller with specific margins
-
-```jsx
-import { isEqual } from 'lodash';
-
-initialState = {
-  searchValue: '',
-  filters: [
-    { 
-      fieldName: 'Gender',
-      type: 'SINGLE_SELECT',
-      selectOptions: [
-        {
-          label: 'Female',
-          value: 'Female'
-        },
-        {
-          label: 'Male',
-          value: 'Male'
-        },
-        {
-          label: 'Others',
-          value: 'Others'
-        }
-      ]
-    },
-    {
-      fieldName: 'Drink perference',
-      type: 'SINGLE_SELECT',
-      selectOptions: [
-        {
-          label: 'Tea',
-          value: 'Tea'
-        },
-        {
-          label: 'Coffee',
-          value: 'Coffee'
-        },
-        {
-          label: 'Others',
-          value: 'Others'
-        }
-      ]
-    }
-  ],
-  tags: []
-};
-
-<FilterController
-  margins={{
-      top: 20,
-      left: 20,
-      right: 20,
-      bottom: 20
-    }}
-  tableName='people'
-  filters = {state.filters}
-  tags = {state.tags}
-  searchValue = {state.searchValue}
-  filterMessage = 'Show all people where:'
-  searchPlaceholder = 'Search people'
-  onFilterAdded = {(filter) => { setState({ tags: (state.tags.filter(tag => tag.fieldName !== filter.fieldName)).concat(filter) }) }}
-  onTagDeleted = {(deletedTag) => { setState({ tags: state.tags.filter(tag => !isEqual(tag, deletedTag)) }) }}
-  onSearchUpdated = {(event) => { setState({ searchValue: event.target.value }); console.log('search value updated:', event.target.value) }}
-  onSearchCleared = {(event) => { setState({ searchValue: '' }); alert('clear search value') }}
 />
 ```

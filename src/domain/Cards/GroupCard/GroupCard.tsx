@@ -55,7 +55,7 @@ export class GroupCard extends React.PureComponent<IGroupCardProps> {
       margins
     } = this.props
 
-    return(
+    return (
       <StyledGroupCard
         margins={margins}
         data-component-type={Props.ComponentType.GroupCard}
@@ -100,10 +100,10 @@ export class GroupCard extends React.PureComponent<IGroupCardProps> {
     } = this.props
 
     if (bodyContents) {
-      return(
+      return (
         <StyledGroupCardToggleButton isExpanded={!!isExpanded}>
           <ChevronIconWrapper>
-            <FontAwesomeIcon type='chevron-down'/>
+            <FontAwesomeIcon type='chevron-down' />
           </ChevronIconWrapper>
         </StyledGroupCardToggleButton>
       )
@@ -118,7 +118,7 @@ export class GroupCard extends React.PureComponent<IGroupCardProps> {
     } = bodyContent
 
     if (mainContent) {
-      return(
+      return (
         <StyledBodyContent>
           <StyledFlexContent>
             <StyledPrimaryContent>{mainContent}</StyledPrimaryContent>
@@ -130,9 +130,9 @@ export class GroupCard extends React.PureComponent<IGroupCardProps> {
     }
   }
 
-  private actionButtonDropdownMenu = (dropdownSections: ISectionProps[]|undefined) =>  {
+  private actionButtonDropdownMenu = (dropdownSections: ISectionProps[] | undefined) => {
     if (dropdownSections) {
-      return(
+      return (
         <DropdownMenu
           sections={dropdownSections}
           toggleComponent={this.actionButton}
@@ -146,10 +146,10 @@ export class GroupCard extends React.PureComponent<IGroupCardProps> {
   private actionButton = ({ toggleMenu, toggleComponentRef, ariaProps }: IDropdownMenuToggleComponentProps) => (
     <StyledBodyActionButton
       onClick={this.handleActionButtonClick(toggleMenu)}
-      innerRef={toggleComponentRef}
+      ref={toggleComponentRef}
       {...ariaProps}
     >
-      <FontAwesomeIcon type='ellipsis-v'/>
+      <FontAwesomeIcon type='ellipsis-v' />
     </StyledBodyActionButton>
   )
 

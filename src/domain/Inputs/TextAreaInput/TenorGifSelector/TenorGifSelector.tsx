@@ -196,7 +196,7 @@ const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, handleGifC
     return (
       <StyledGifContainer
         key={previewURL + index}
-        innerRef={index + 1 === markerIndex ? markerGifRef : undefined}
+        ref={index + 1 === markerIndex ? markerGifRef : undefined}
         onClick={handleGifClick(actualGif.url)}
       >
         <img src={previewURL} width={width} height={height} />
@@ -207,7 +207,7 @@ const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, handleGifC
   return (
     <div data-component-type={Props.ComponentType.TenorGifSelector}>
       <StyledGifButton
-        innerRef={anchorRef}
+        ref={anchorRef}
         opened={opened}
         onClick={toggleOpened}
         data-component-type={Props.ComponentType.Button}
@@ -216,7 +216,7 @@ const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, handleGifC
       </StyledGifButton>
 
       <Popover isOpen={opened} parentRef={anchorRef}>
-        <StyledGifList innerRef={gifListRef}>
+        <StyledGifList ref={gifListRef}>
           <TextInput
             icon={<Icon type='fa-search' />}
             name='searchTerm'
@@ -227,7 +227,7 @@ const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, handleGifC
             autoFocus
           />
           <PoweredByTenor />
-          <StyledScrollArea innerRef={scrollAreaRef}>
+          <StyledScrollArea ref={scrollAreaRef}>
             {renderGifs()}
           </StyledScrollArea>
         </StyledGifList>

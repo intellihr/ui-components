@@ -1,21 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { Props, Variables } from '../../../common'
 import { VerticalForm } from '../..//Forms/VerticalForm'
-import { IDropdownMenuToggleComponentProps } from '../..//Popovers/DropdownMenu'
 import { Button } from '../../Buttons/Button'
 import { SelectInput } from '../../Inputs/SelectInput'
+import { IDropdownMenuToggleComponentProps } from '../../Popovers/DropdownMenu'
 import { Text } from '../../Typographies/Text'
-import { IFilterTagDetail } from '../FilterTag/FilterTag'
 import { OperatorTextWrapper, StyledDropdownMenu } from './style'
 
-export interface IAddFilterDropdownMenuProps {
+interface IAddFilterDropdownMenuProps {
   /** table name that the filters applied to */
-  filterMessage: string
+  filterMessage?: string
   /** filter selection of this filter dropdown */
   filters: IAddFilterDropdownMenuFilter[]
   /** Callback when a filter is added */
-  onFilterAdded: (selectedFilter: IFilterTagDetail) => void
+  onFilterAdded: (selectedFilter: IAddedFilter) => void
   /**
    * The parent component that opens the filter dropdown and positions it on the page.
    * The callback is given a toggle menu prop which can be used to toggle the menu as needed.
@@ -25,164 +24,130 @@ export interface IAddFilterDropdownMenuProps {
   componentContext?: string
 }
 
-export interface IAddFilterDropdownMenuFilter {
+interface IAddFilterDropdownMenuFilter {
   type: 'SINGLE_SELECT' | 'NUMBER'
   fieldName: string
-  selectOptions: Array<{
-    label: string
-    value: string | number | number
-  }>
+  label: string
+  selectOptions: ISelectOption[]
 }
 
-export interface IAddFilterDropdownMenuState {
-  fieldName: string
-  operator: string
-  value: string
+interface ISelectOption {
+  label: string
+  value: string | number
 }
 
-export class AddFilterDropdownMenu extends React.PureComponent<IAddFilterDropdownMenuProps, IAddFilterDropdownMenuState> {
-  public static defaultProps: Partial<IAddFilterDropdownMenuProps> = {
-    filterMessage: 'Show all items where:'
-  }
+interface IAddedFilter {
+  filter: IAddFilterDropdownMenuFilter
+  value: string | number
+}
 
-  public state: IAddFilterDropdownMenuState = {
-    fieldName: '',
-    operator:  '',
-    value: ''
-  }
+const AddFilterDropdownMenu: React.FC<IAddFilterDropdownMenuProps> = ({
+  filterMessage = 'Show all items where:',
+  toggleComponent,
+  componentContext,
+  filters,
+  onFilterAdded
+}) => {
+  const [filterField, setFilterField] = useState('')
+  const [filterValue, setFilterValue] = useState('')
 
-  public render (): JSX.Element {
-    const {
-      toggleComponent,
-      componentContext
-    } = this.props
-
-    return (
-      <StyledDropdownMenu
-        toggleComponent={toggleComponent}
-        componentContext={componentContext}
-      >
-        {({closeMenu}) => this.renderDropdown(closeMenu)}
-      </StyledDropdownMenu>
-    )
-  }
-
-  private renderDropdown = (closeMenu: () => void) => {
-    const {
-      filterMessage
-    } = this.props
-
-    return (
-      <>
-        <VerticalForm.Field
-          inputName='filterDropdownFieldInput'
-          label={filterMessage}
-          showBottomMargin={false}
-        >
-          <SelectInput
-            name='filterDropdownFieldInput'
-            value={this.state.fieldName}
-            options={this.fieldInputOptions}
-            placeholder='Select a filter'
-            handleChange={this.handleFieldChange}
-          />
-        </VerticalForm.Field>
-        {this.filterOptionContent(closeMenu)}
-      </>
-    )
-  }
-
-  private get fieldInputOptions (): Array<{label: string, value: string}> | undefined {
-    const {
-      filters
-    } = this.props
-
+  function getFieldInputOptions (): ISelectOption[] | undefined {
     if (filters) {
       return filters.map((filter: IAddFilterDropdownMenuFilter) => (
         {
-          label: filter.fieldName,
+          label: filter.label,
           value: filter.fieldName
         })
       )
     }
   }
 
-  private handleFieldChange = (option: any) => {
-    const {
-      filters
-    } = this.props
-
-    const selectedFilter = filters.find((filter: IAddFilterDropdownMenuFilter) => filter.fieldName === option.value)
-
-    if (selectedFilter) {
-      let operator
-      if (selectedFilter.type === 'SINGLE_SELECT') {
-        operator = 'is'
-
-        this.setState({ operator })
-      }
-    }
-
-    this.setState({ fieldName: option.value })
+  function handleFieldChange (option: any) {
+    setFilterField(option.value)
   }
 
-  private filterOptionContent = (closeMenu: () => void): JSX.Element | null => {
-    if (this.state.fieldName) {
-      return (
-        <>
-          <OperatorTextWrapper>
-            <Text
-              isInline={false}
-              color={Variables.Color.n700}
-              type={Props.TypographyType.Small}
-            >
-              {this.state.operator}
-            </Text>
-          </OperatorTextWrapper>
-          <SelectInput
-            name='filterDropdownValueInput'
-            value={this.state.value}
-            options={this.valueInputOption}
-            placeholder='Select a value'
-            handleChange={this.handleValueChange}
-          />
-          <Button
-            type='neutral'
-            disabled={!(this.state.fieldName && this.state.value)}
-            onClick={this.applyFilter(closeMenu)}
-          >
-            Add Filter
-          </Button>
-        </>
-      )
-    }
-
-    return null
+  function handleValueChange (option: any) {
+    setFilterValue(option.value)
   }
 
-  private get valueInputOption (): Array<{label: string, value: string | number | boolean}> | undefined {
-    const {
-      filters
-    } = this.props
-
-    const selectedFilter = filters.find((filter: IAddFilterDropdownMenuFilter) => filter.fieldName === this.state.fieldName)
+  function valueInputOption (): Array<{ label: string, value: string | number | boolean }> | undefined {
+    const selectedFilter = filters.find((filter: IAddFilterDropdownMenuFilter) => filter.fieldName === filterField)
 
     if (selectedFilter) {
       return selectedFilter.selectOptions
     }
   }
 
-  private handleValueChange = (option: any) => {
-    this.setState({ value: option.value })
+  function applyFilter (closeMenu: () => void) {
+    return () => {
+      const selectedFilter = filters.find((filter: IAddFilterDropdownMenuFilter) => filter.fieldName === filterField)
+
+      if (selectedFilter && filterValue) {
+        onFilterAdded({
+          filter: selectedFilter,
+          value: filterValue
+        })
+      }
+      closeMenu()
+      setFilterField('')
+      setFilterValue('')
+    }
   }
 
-  private applyFilter = (closeMenu: () => void) => () => {
-    const {
-      onFilterAdded
-    } = this.props
+  return (
+    <StyledDropdownMenu
+      toggleComponent={toggleComponent}
+      componentContext={componentContext}
+    >
+      {({ closeMenu }: { closeMenu: (() => void) }) =>
+        <>
+          <VerticalForm.Field
+            inputName='filterDropdownFieldInput'
+            label={filterMessage}
+            showBottomMargin={false}
+          >
+            <SelectInput
+              name='filterDropdownFieldInput'
+              value={filterField}
+              options={getFieldInputOptions()}
+              placeholder='Select a filter'
+              handleChange={handleFieldChange}
+            />
+          </VerticalForm.Field>
+          {filterField &&
+            <>
+              <OperatorTextWrapper>
+                <Text
+                  isInline={false}
+                  color={Variables.Color.n700}
+                  type={Props.TypographyType.Small}
+                >
+                  is
+                </Text>
+              </OperatorTextWrapper>
+              <SelectInput
+                name='filterDropdownValueInput'
+                value={filterValue}
+                options={valueInputOption()}
+                placeholder='Select a value'
+                handleChange={handleValueChange}
+              />
+              <Button
+                type='neutral'
+                disabled={!(filterField && filterValue)}
+                onClick={applyFilter(closeMenu)}
+              >
+                Add Filter
+              </Button>
+            </>
+          }
+        </>}
+    </StyledDropdownMenu>
+  )
+}
 
-    onFilterAdded(this.state)
-    closeMenu()
-    this.setState({ fieldName: '', operator:  '', value: '' })
-  }
+export {
+  IAddFilterDropdownMenuFilter,
+  AddFilterDropdownMenu,
+  IAddedFilter
 }

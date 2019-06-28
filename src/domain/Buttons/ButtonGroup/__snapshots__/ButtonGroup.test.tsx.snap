@@ -15,58 +15,127 @@ exports[`<ButtonGroup /> should render a button group with buttons and link butt
   <styled.span
     data-component-type="button_group"
   >
-    <span
-      className="c0"
+    <StyledComponent
       data-component-type="button_group"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-ifAKCX",
+            "isStatic": true,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  > a,
+  > button {
+    margin-right: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-ifAKCX",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      <Button
-        hasLegacyMargins={false}
-        iconAlignment="left"
-        key="button1"
-        showSpinner={false}
-        type="neutral"
+      <span
+        className="c0"
+        data-component-type="button_group"
       >
-        <styled.button
-          className="button neutral"
-          data-component-type="button"
-          type="button"
+        <Button
+          hasLegacyMargins={false}
+          iconAlignment="left"
+          key="button1"
+          showSpinner={false}
+          type="neutral"
         >
-          <button
-            className="button neutral "
+          <styled.button
+            className="button neutral"
             data-component-type="button"
             type="button"
           >
-            Button 1
-          </button>
-        </styled.button>
-      </Button>
-      ,
-      <LinkButton
-        disabled={false}
-        hasLegacyMargins={false}
-        iconAlignment="left"
-        key="button2"
-        showSpinner={false}
-        type="neutral"
-      >
-        <Anchor
-          href="#"
-          onClick={[Function]}
+            <StyledComponent
+              className="button neutral"
+              data-component-type="button"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bxivhb",
+                    "isStatic": false,
+                    "lastClassName": "kLyrAW",
+                    "rules": Array [
+                      "
+   ",
+                      [Function],
+                      "
+",
+                    ],
+                  },
+                  "displayName": "styled.button",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bxivhb",
+                  "target": "button",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              type="button"
+            >
+              <button
+                className="button neutral "
+                data-component-type="button"
+                type="button"
+              >
+                Button 1
+              </button>
+            </StyledComponent>
+          </styled.button>
+        </Button>
+        ,
+        <LinkButton
+          disabled={false}
+          hasLegacyMargins={false}
+          iconAlignment="left"
+          key="button2"
+          showSpinner={false}
+          type="neutral"
         >
-          <a
+          <Anchor
             href="#"
             onClick={[Function]}
           >
-            <span
-              className="button neutral"
-              data-component-type="link_button"
+            <a
+              href="#"
+              onClick={[Function]}
             >
-              Button 2
-            </span>
-          </a>
-        </Anchor>
-      </LinkButton>
-    </span>
+              <span
+                className="button neutral"
+                data-component-type="link_button"
+              >
+                Button 2
+              </span>
+            </a>
+          </Anchor>
+        </LinkButton>
+      </span>
+    </StyledComponent>
   </styled.span>
 </ButtonGroup>
 `;

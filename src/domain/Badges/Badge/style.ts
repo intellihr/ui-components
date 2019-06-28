@@ -1,12 +1,14 @@
 import styled, { css } from 'styled-components'
 
-import { Variables } from '../../../common'
+import { Props, Variables } from '../../../common'
+import { styleForMargins } from '../../Spacers/services/margins'
 
 interface IBadgeWrapper {
   backgroundColor?: Variables.Color
   color?: Variables.Color
   size?: 'small' | 'medium' | 'large'
   hasBorder?: boolean
+  margins?: Props.IMargins
 }
 
 const BadgeWrapper = styled.span`
@@ -64,6 +66,7 @@ const BadgeWrapper = styled.span`
   font-weight: 600;
   text-align: center;
   user-select: none;
+  ${(props) => styleForMargins(props.margins)}
 
   .refresh-icon {
     background-color: transparent;
