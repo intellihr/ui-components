@@ -2,7 +2,6 @@ import React from 'react'
 
 import { Props } from '../../../../common'
 import {
-  CellAnimation,
   CellOffset,
   CellSize,
   GutterSize,
@@ -25,7 +24,6 @@ interface ICellProps {
   gutterMarginY?: GutterSize | IStyledGridGutters
   gutterPaddingX?: GutterSize | IStyledGridGutters
   gutterPaddingY?: GutterSize | IStyledGridGutters
-  animationStyle?: CellAnimation
   /** Component context */
   componentContext?: string
   displayType?: CellDisplayType
@@ -41,7 +39,6 @@ const Cell: React.FC<ICellProps> = ({
   gutterMarginY,
   gutterPaddingX,
   gutterPaddingY,
-  animationStyle,
   displayType,
   flexHorizontalAlignment,
   componentContext
@@ -50,7 +47,6 @@ const Cell: React.FC<ICellProps> = ({
     <StyledCell
       size={size || 'auto'}
       offset={offset || 0}
-      animationStyle={animationStyle || 'none'}
       gridColumns={gridColumns!}
       displayType={displayType || 'block'}
       flexHorizontalAlignment={flexHorizontalAlignment || HorizontalAlignment.Left}

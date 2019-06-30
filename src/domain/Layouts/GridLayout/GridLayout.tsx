@@ -1,9 +1,7 @@
 import React from 'react'
-import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 import { Props } from '../../../common'
 import {
-  CellAnimation,
   CellSize,
   GutterSize,
   HorizontalAlignment,
@@ -70,8 +68,6 @@ interface IGridLayoutCell {
   flexHorizontalAlignment?: IHorizontalAlignmentDefinition | HorizontalAlignment
   /** The cell offset from the edge of the grid */
   offset?: ICellOffsetDefinition | number
-  /** Animation style for adding/removing the cell (overrides the grid style) */
-  animationStyle?: CellAnimation
   /** Component context */
   componentContext?: string
 }
@@ -91,8 +87,6 @@ interface IGridLayoutBaseProps {
   gutterPaddingY?: IGutterSizeDefinition | GutterSize
   /** Determines the amount of columns within the grid */
   gridColumns?: number
-  /** Animation style for adding/removing cells to the grid */
-  animationStyle?: CellAnimation
   /** Component context */
   componentContext?: string
   /** The margins around the component */
@@ -136,7 +130,6 @@ export class GridLayout extends React.PureComponent<GridLayoutProps, never> {
       horizontalAlignment,
       verticalAlignment,
       componentContext,
-      animationStyle: gridAnimationStyle,
       margins
     } = this.props
 
@@ -153,30 +146,23 @@ export class GridLayout extends React.PureComponent<GridLayoutProps, never> {
           key,
           size,
           offset,
-          animationStyle: cellAnimationStyle,
           flexHorizontalAlignment,
           displayType
         } = child.props
 
         return (
-          <CSSTransition
-            key={key !== undefined ? key : index}
-            classNames='grid-layout-cell-animation'
-            timeout={200}
-          >
-            {React.cloneElement(child, {
-              size,
-              offset,
-              displayType,
-              gridColumns,
-              gutterMarginX,
-              gutterMarginY,
-              gutterPaddingX,
-              gutterPaddingY,
-              animationStyle: cellAnimationStyle ? cellAnimationStyle : gridAnimationStyle,
-              flexHorizontalAlignment
-            })}
-          </CSSTransition>
+          React.cloneElement(child, {
+            key,
+            size,
+            offset,
+            displayType,
+            gridColumns,
+            gutterMarginX,
+            gutterMarginY,
+            gutterPaddingX,
+            gutterPaddingY,
+            flexHorizontalAlignment
+          })
         )
       })
     }
@@ -191,7 +177,7 @@ export class GridLayout extends React.PureComponent<GridLayoutProps, never> {
         data-component-type={Props.ComponentType.GridLayout}
         data-component-context={componentContext}
       >
-        <TransitionGroup component={null}>{renderChildren}</TransitionGroup>
+        {renderChildren}
       </StyledGridLayout>
     )
   }
@@ -205,8 +191,7 @@ export class GridLayout extends React.PureComponent<GridLayoutProps, never> {
       gutterMarginX,
       gutterMarginY,
       gutterPaddingX,
-      gutterPaddingY,
-      animationStyle: gridAnimationStyle
+      gutterPaddingY
     } = this.props
 
     const {
@@ -216,33 +201,26 @@ export class GridLayout extends React.PureComponent<GridLayoutProps, never> {
       displayType,
       flexHorizontalAlignment,
       offset,
-      componentContext,
-      animationStyle: cellAnimationStyle
+      componentContext
     } = cell
 
     return (
-      <CSSTransition
-        key={key !== undefined ? key : index}
-        classNames='grid-layout-cell-animation'
-        timeout={200}
+      <StyledCell
+        key={key || index}
+        size={size || 'auto'}
+        offset={offset || 0}
+        gridColumns={gridColumns!}
+        displayType={displayType || 'block'}
+        flexHorizontalAlignment={flexHorizontalAlignment || HorizontalAlignment.Left}
+        gutterMarginX={gutterMarginX!}
+        gutterMarginY={gutterMarginY!}
+        gutterPaddingX={gutterPaddingX!}
+        gutterPaddingY={gutterPaddingY!}
+        data-component-type={Props.ComponentType.GridLayoutCell}
+        data-component-context={componentContext}
       >
-        <StyledCell
-          size={size || 'auto'}
-          offset={offset || 0}
-          animationStyle={cellAnimationStyle || gridAnimationStyle || 'none'}
-          gridColumns={gridColumns!}
-          displayType={displayType || 'block'}
-          flexHorizontalAlignment={flexHorizontalAlignment || HorizontalAlignment.Left}
-          gutterMarginX={gutterMarginX!}
-          gutterMarginY={gutterMarginY!}
-          gutterPaddingX={gutterPaddingX!}
-          gutterPaddingY={gutterPaddingY!}
-          data-component-type={Props.ComponentType.GridLayoutCell}
-          data-component-context={componentContext}
-        >
-          {content}
-        </StyledCell>
-      </CSSTransition>
+        {content}
+      </StyledCell>
     )
   }
 }
