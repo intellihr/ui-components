@@ -13,7 +13,6 @@ exports[`<BlockSkeleton /> should render a block skeleton 1`] = `
   background-color: #E1E6EB;
   border: 1px solid #E1E6EB;
   display: block;
-  display: block;
 }
 
 <BlockSkeleton
@@ -44,9 +43,6 @@ exports[`<BlockSkeleton /> should render a block skeleton 1`] = `
               [Function],
               ";
   ",
-              [Function],
-              ";
-  display: ",
               [Function],
               ";
 ",
@@ -87,7 +83,6 @@ exports[`<BlockSkeleton /> should render a block skeleton with set width and hei
   background-color: #E1E6EB;
   border: 1px solid #E1E6EB;
   display: block;
-  display: block;
 }
 
 <BlockSkeleton
@@ -122,9 +117,6 @@ exports[`<BlockSkeleton /> should render a block skeleton with set width and hei
               [Function],
               ";
   ",
-              [Function],
-              ";
-  display: ",
               [Function],
               ";
 ",

@@ -22,13 +22,16 @@ exports[`<TextSkeleton /> should render a text skeleton 1`] = `
 }
 
 <TextSkeleton
+  display="block"
   showSkeleton={true}
   type="body"
 >
   <styled.span
+    display="block"
     textType="body"
   >
     <StyledComponent
+      display="block"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -69,6 +72,7 @@ exports[`<TextSkeleton /> should render a text skeleton 1`] = `
     >
       <span
         className="c0"
+        display="block"
       >
         ‌
       </span>
@@ -99,13 +103,16 @@ exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
 }
 
 <TextSkeleton
+  display="block"
   showSkeleton={true}
   type="display"
 >
   <styled.span
+    display="block"
     textType="display"
   >
     <StyledComponent
+      display="block"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -146,6 +153,7 @@ exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
     >
       <span
         className="c0"
+        display="block"
       >
         ‌
       </span>
@@ -177,15 +185,18 @@ exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
 }
 
 <TextSkeleton
+  display="block"
   showSkeleton={true}
   type="body"
   width={250}
 >
   <styled.span
+    display="block"
     textType="body"
     width="250px"
   >
     <StyledComponent
+      display="block"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -227,6 +238,7 @@ exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
     >
       <span
         className="c0"
+        display="block"
         width="250px"
       >
         ‌

@@ -15,6 +15,5 @@ export const BlockSkeletonWrapper = styled.span`
   line-height: 1rem;
   width: ${(props: IBlockSkeletonWrapperProps) => props.width ? `${props.width}` : null};
   height: ${(props: IBlockSkeletonWrapperProps) => props.height ? `${props.height}` : '1rem'};
-  ${(props: IBlockSkeletonWrapperProps) => styleForSkeletons(props.margins)};
-  display: ${(props: IBlockSkeletonWrapperProps) => props.display};
+  ${(props: IBlockSkeletonWrapperProps) => styleForSkeletons(props)};
 `

@@ -8,6 +8,7 @@ export interface ITextSkeletonWrapperProps {
   width?: string,
   textType?: Props.TypographyType
   margins?: Props.IMargins
+  display: 'block' | 'inline-block'
 }
 
 export const TextSkeletonWrapper = styled.span`
@@ -16,5 +17,5 @@ export const TextSkeletonWrapper = styled.span`
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   ${(props: ITextSkeletonWrapperProps) => styleForTypographyType(props.textType)};
-  ${(props: ITextSkeletonWrapperProps) => styleForSkeletons(props.margins)};
+  ${(props: ITextSkeletonWrapperProps) => styleForSkeletons(props)};
 `
