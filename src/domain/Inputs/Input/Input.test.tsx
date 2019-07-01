@@ -116,4 +116,16 @@ describe('<Input />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it(`should render with an onChange function if onChange is passed in`, () => {
+    const wrapper = shallow(
+      <Input
+        name='test-input'
+        type='text'
+        onChange={dummyClick}
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })
