@@ -186,7 +186,7 @@ export class Input extends React.PureComponent<IInputProps> {
         <InputWrapper
           disabledPrefix={disabledPrefix}
           hasIcon={!!icon}
-          hasClearButton={!!handleClear}
+          hasClearButton={this.hasClearButton}
           hasTextIndent={!!(icon || disabledPrefix)}
           prefixWrapperWidth={get(this.prefixWrapperRef, 'current.clientWidth', 0)}
         >
@@ -198,6 +198,15 @@ export class Input extends React.PureComponent<IInputProps> {
     }
 
     return this.input()
+  }
+
+  private get hasClearButton (): boolean {
+    const {
+      handleClear,
+      value
+    } = this.props
+
+    return (!!value || value !== '') && !!handleClear
   }
 
   private get prefix (): JSX.Element | null {
@@ -225,7 +234,7 @@ export class Input extends React.PureComponent<IInputProps> {
       handleClear
     } = this.props
 
-    if (handleClear) {
+    if (this.hasClearButton) {
       return <StyleClearButton onClick={handleClear}>×</StyleClearButton>
     }
 

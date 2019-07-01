@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { Props } from '../../../common'
 import { ISkeletonProps } from '../interfaces'
 import { BlockSkeletonWrapper } from './style'
 
@@ -9,11 +8,14 @@ export interface IBlockSkeletonProps extends ISkeletonProps {
   width?: number | string,
   /** Height of the skeleton */
   height?: number | string
+  /** Display style of the skeleton */
+  display?: 'block' | 'inline-block'
 }
 
 class BlockSkeleton extends React.Component<IBlockSkeletonProps> {
   public static defaultProps: Partial<IBlockSkeletonProps> = {
-    showSkeleton: false
+    showSkeleton: false,
+    display: 'block'
   }
 
   public render (): JSX.Element {
@@ -23,7 +25,8 @@ class BlockSkeleton extends React.Component<IBlockSkeletonProps> {
       height,
       children,
       className,
-      margins
+      margins,
+      display
     } = this.props
 
     if (!showSkeleton) {
@@ -40,6 +43,7 @@ class BlockSkeleton extends React.Component<IBlockSkeletonProps> {
         height={typeof height === 'number' ? `${height}px` : height}
         className={className}
         margins={margins}
+        display={display!}
       />
     )
   }

@@ -6,6 +6,7 @@ import { styleForSkeletons } from '../style'
 export interface ICircleSkeletonWrapperProps {
   size?: Props.AvatarSize
   margins?: Props.IMargins
+  display: 'block' | 'inline-block'
 }
 
 export const CircleSkeletonWrapper = styled.span`
@@ -37,5 +38,5 @@ export const CircleSkeletonWrapper = styled.span`
     }
   }}
 
-  ${(props: ICircleSkeletonWrapperProps) => styleForSkeletons(props.margins)};
+  ${(props: ICircleSkeletonWrapperProps) => styleForSkeletons(props)};
 `

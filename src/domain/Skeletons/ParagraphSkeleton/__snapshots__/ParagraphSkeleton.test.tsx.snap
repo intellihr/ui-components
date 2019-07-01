@@ -100,15 +100,18 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
         className=""
       >
         <TextSkeleton
+          display="block"
           showSkeleton={true}
           type="display-large"
           width={200}
         >
           <styled.span
+            display="block"
             textType="display-large"
             width="200px"
           >
             <StyledComponent
+              display="block"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -150,6 +153,7 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
             >
               <span
                 className="c0"
+                display="block"
                 width="200px"
               >
                 ‌
@@ -158,13 +162,16 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
           </styled.span>
         </TextSkeleton>
         <TextSkeleton
+          display="block"
           showSkeleton={true}
           type="body"
         >
           <styled.span
+            display="block"
             textType="body"
           >
             <StyledComponent
+              display="block"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -205,6 +212,7 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
             >
               <span
                 className="c1"
+                display="block"
               >
                 ‌
               </span>
@@ -212,13 +220,16 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
           </styled.span>
         </TextSkeleton>
         <TextSkeleton
+          display="block"
           showSkeleton={true}
           type="body"
         >
           <styled.span
+            display="block"
             textType="body"
           >
             <StyledComponent
+              display="block"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -259,6 +270,7 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
             >
               <span
                 className="c1"
+                display="block"
               >
                 ‌
               </span>
@@ -266,13 +278,16 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
           </styled.span>
         </TextSkeleton>
         <TextSkeleton
+          display="block"
           showSkeleton={true}
           type="body"
         >
           <styled.span
+            display="block"
             textType="body"
           >
             <StyledComponent
+              display="block"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -313,6 +328,7 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
             >
               <span
                 className="c1"
+                display="block"
               >
                 ‌
               </span>
@@ -320,13 +336,16 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
           </styled.span>
         </TextSkeleton>
         <TextSkeleton
+          display="block"
           showSkeleton={true}
           type="body"
         >
           <styled.span
+            display="block"
             textType="body"
           >
             <StyledComponent
+              display="block"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -367,6 +386,7 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
             >
               <span
                 className="c1"
+                display="block"
               >
                 ‌
               </span>
@@ -374,15 +394,18 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
           </styled.span>
         </TextSkeleton>
         <TextSkeleton
+          display="block"
           showSkeleton={true}
           type="body"
           width="50%"
         >
           <styled.span
+            display="block"
             textType="body"
             width="50%"
           >
             <StyledComponent
+              display="block"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -424,6 +447,7 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
             >
               <span
                 className="c2"
+                display="block"
                 width="50%"
               >
                 ‌

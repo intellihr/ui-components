@@ -17,13 +17,16 @@ exports[`<CircleSkeleton /> should render a circle skeleton 1`] = `
 }
 
 <CircleSkeleton
+  display="block"
   showSkeleton={true}
   size="large"
 >
   <styled.span
+    display="block"
     size="large"
   >
     <StyledComponent
+      display="block"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -62,6 +65,7 @@ exports[`<CircleSkeleton /> should render a circle skeleton 1`] = `
     >
       <span
         className="c0"
+        display="block"
         size="large"
       />
     </StyledComponent>
@@ -86,13 +90,16 @@ exports[`<CircleSkeleton /> should render a circle skeleton with set size 1`] = 
 }
 
 <CircleSkeleton
+  display="block"
   showSkeleton={true}
   size="small"
 >
   <styled.span
+    display="block"
     size="small"
   >
     <StyledComponent
+      display="block"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -131,6 +138,7 @@ exports[`<CircleSkeleton /> should render a circle skeleton with set size 1`] = 
     >
       <span
         className="c0"
+        display="block"
         size="small"
       />
     </StyledComponent>

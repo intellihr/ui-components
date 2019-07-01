@@ -16,10 +16,14 @@ exports[`<BlockSkeleton /> should render a block skeleton 1`] = `
 }
 
 <BlockSkeleton
+  display="block"
   showSkeleton={true}
 >
-  <styled.span>
+  <styled.span
+    display="block"
+  >
     <StyledComponent
+      display="block"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -58,6 +62,7 @@ exports[`<BlockSkeleton /> should render a block skeleton 1`] = `
     >
       <span
         className="c0"
+        display="block"
       />
     </StyledComponent>
   </styled.span>
@@ -81,15 +86,18 @@ exports[`<BlockSkeleton /> should render a block skeleton with set width and hei
 }
 
 <BlockSkeleton
+  display="block"
   height={200}
   showSkeleton={true}
   width={400}
 >
   <styled.span
+    display="block"
     height="200px"
     width="400px"
   >
     <StyledComponent
+      display="block"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -130,6 +138,7 @@ exports[`<BlockSkeleton /> should render a block skeleton with set width and hei
     >
       <span
         className="c0"
+        display="block"
         height="200px"
         width="400px"
       />

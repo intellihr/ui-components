@@ -6649,13 +6649,16 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     data-component-type="smart_list_column"
                                   >
                                     <TextSkeleton
+                                      display="block"
                                       showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
+                                        display="block"
                                         textType="body"
                                       >
                                         <StyledComponent
+                                          display="block"
                                           forwardedComponent={
                                             Object {
                                               "$$typeof": Symbol(react.forward_ref),
@@ -6696,6 +6699,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                         >
                                           <span
                                             className="c4"
+                                            display="block"
                                           >
                                             ‌
                                           </span>
@@ -6819,13 +6823,16 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     data-component-type="smart_list_column"
                                   >
                                     <TextSkeleton
+                                      display="block"
                                       showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
+                                        display="block"
                                         textType="body"
                                       >
                                         <StyledComponent
+                                          display="block"
                                           forwardedComponent={
                                             Object {
                                               "$$typeof": Symbol(react.forward_ref),
@@ -6866,6 +6873,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                         >
                                           <span
                                             className="c4"
+                                            display="block"
                                           >
                                             ‌
                                           </span>
@@ -6989,13 +6997,16 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     data-component-type="smart_list_column"
                                   >
                                     <TextSkeleton
+                                      display="block"
                                       showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
+                                        display="block"
                                         textType="body"
                                       >
                                         <StyledComponent
+                                          display="block"
                                           forwardedComponent={
                                             Object {
                                               "$$typeof": Symbol(react.forward_ref),
@@ -7036,6 +7047,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                         >
                                           <span
                                             className="c4"
+                                            display="block"
                                           >
                                             ‌
                                           </span>
@@ -7373,13 +7385,16 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     data-component-type="smart_list_column"
                                   >
                                     <TextSkeleton
+                                      display="block"
                                       showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
+                                        display="block"
                                         textType="body"
                                       >
                                         <StyledComponent
+                                          display="block"
                                           forwardedComponent={
                                             Object {
                                               "$$typeof": Symbol(react.forward_ref),
@@ -7420,6 +7435,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                         >
                                           <span
                                             className="c4"
+                                            display="block"
                                           >
                                             ‌
                                           </span>
@@ -7543,13 +7559,16 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     data-component-type="smart_list_column"
                                   >
                                     <TextSkeleton
+                                      display="block"
                                       showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
+                                        display="block"
                                         textType="body"
                                       >
                                         <StyledComponent
+                                          display="block"
                                           forwardedComponent={
                                             Object {
                                               "$$typeof": Symbol(react.forward_ref),
@@ -7590,6 +7609,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                         >
                                           <span
                                             className="c4"
+                                            display="block"
                                           >
                                             ‌
                                           </span>
@@ -7713,13 +7733,16 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     data-component-type="smart_list_column"
                                   >
                                     <TextSkeleton
+                                      display="block"
                                       showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
+                                        display="block"
                                         textType="body"
                                       >
                                         <StyledComponent
+                                          display="block"
                                           forwardedComponent={
                                             Object {
                                               "$$typeof": Symbol(react.forward_ref),
@@ -7760,6 +7783,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                         >
                                           <span
                                             className="c4"
+                                            display="block"
                                           >
                                             ‌
                                           </span>
@@ -8097,13 +8121,16 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     data-component-type="smart_list_column"
                                   >
                                     <TextSkeleton
+                                      display="block"
                                       showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
+                                        display="block"
                                         textType="body"
                                       >
                                         <StyledComponent
+                                          display="block"
                                           forwardedComponent={
                                             Object {
                                               "$$typeof": Symbol(react.forward_ref),
@@ -8144,6 +8171,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                         >
                                           <span
                                             className="c4"
+                                            display="block"
                                           >
                                             ‌
                                           </span>
@@ -8267,13 +8295,16 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     data-component-type="smart_list_column"
                                   >
                                     <TextSkeleton
+                                      display="block"
                                       showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
+                                        display="block"
                                         textType="body"
                                       >
                                         <StyledComponent
+                                          display="block"
                                           forwardedComponent={
                                             Object {
                                               "$$typeof": Symbol(react.forward_ref),
@@ -8314,6 +8345,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                         >
                                           <span
                                             className="c4"
+                                            display="block"
                                           >
                                             ‌
                                           </span>
@@ -8437,13 +8469,16 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     data-component-type="smart_list_column"
                                   >
                                     <TextSkeleton
+                                      display="block"
                                       showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
+                                        display="block"
                                         textType="body"
                                       >
                                         <StyledComponent
+                                          display="block"
                                           forwardedComponent={
                                             Object {
                                               "$$typeof": Symbol(react.forward_ref),
@@ -8484,6 +8519,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                         >
                                           <span
                                             className="c4"
+                                            display="block"
                                           >
                                             ‌
                                           </span>
@@ -8821,13 +8857,16 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     data-component-type="smart_list_column"
                                   >
                                     <TextSkeleton
+                                      display="block"
                                       showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
+                                        display="block"
                                         textType="body"
                                       >
                                         <StyledComponent
+                                          display="block"
                                           forwardedComponent={
                                             Object {
                                               "$$typeof": Symbol(react.forward_ref),
@@ -8868,6 +8907,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                         >
                                           <span
                                             className="c4"
+                                            display="block"
                                           >
                                             ‌
                                           </span>
@@ -8991,13 +9031,16 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     data-component-type="smart_list_column"
                                   >
                                     <TextSkeleton
+                                      display="block"
                                       showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
+                                        display="block"
                                         textType="body"
                                       >
                                         <StyledComponent
+                                          display="block"
                                           forwardedComponent={
                                             Object {
                                               "$$typeof": Symbol(react.forward_ref),
@@ -9038,6 +9081,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                         >
                                           <span
                                             className="c4"
+                                            display="block"
                                           >
                                             ‌
                                           </span>
@@ -9161,13 +9205,16 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     data-component-type="smart_list_column"
                                   >
                                     <TextSkeleton
+                                      display="block"
                                       showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
+                                        display="block"
                                         textType="body"
                                       >
                                         <StyledComponent
+                                          display="block"
                                           forwardedComponent={
                                             Object {
                                               "$$typeof": Symbol(react.forward_ref),
@@ -9208,6 +9255,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                         >
                                           <span
                                             className="c4"
+                                            display="block"
                                           >
                                             ‌
                                           </span>
@@ -9545,13 +9593,16 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     data-component-type="smart_list_column"
                                   >
                                     <TextSkeleton
+                                      display="block"
                                       showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
+                                        display="block"
                                         textType="body"
                                       >
                                         <StyledComponent
+                                          display="block"
                                           forwardedComponent={
                                             Object {
                                               "$$typeof": Symbol(react.forward_ref),
@@ -9592,6 +9643,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                         >
                                           <span
                                             className="c4"
+                                            display="block"
                                           >
                                             ‌
                                           </span>
@@ -9715,13 +9767,16 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     data-component-type="smart_list_column"
                                   >
                                     <TextSkeleton
+                                      display="block"
                                       showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
+                                        display="block"
                                         textType="body"
                                       >
                                         <StyledComponent
+                                          display="block"
                                           forwardedComponent={
                                             Object {
                                               "$$typeof": Symbol(react.forward_ref),
@@ -9762,6 +9817,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                         >
                                           <span
                                             className="c4"
+                                            display="block"
                                           >
                                             ‌
                                           </span>
@@ -9885,13 +9941,16 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                     data-component-type="smart_list_column"
                                   >
                                     <TextSkeleton
+                                      display="block"
                                       showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
+                                        display="block"
                                         textType="body"
                                       >
                                         <StyledComponent
+                                          display="block"
                                           forwardedComponent={
                                             Object {
                                               "$$typeof": Symbol(react.forward_ref),
@@ -9932,6 +9991,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                         >
                                           <span
                                             className="c4"
+                                            display="block"
                                           >
                                             ‌
                                           </span>

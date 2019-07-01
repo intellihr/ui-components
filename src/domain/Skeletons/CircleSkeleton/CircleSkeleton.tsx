@@ -7,12 +7,15 @@ import { CircleSkeletonWrapper } from './style'
 export interface ICircleSkeletonProps extends ISkeletonProps {
   /** Circle size of the skeleton */
   size?: Props.AvatarSize
+  /** Display style of the skeleton */
+  display?: 'block' | 'inline-block'
 }
 
 class CircleSkeleton extends React.Component<ICircleSkeletonProps> {
   public static defaultProps: Partial<ICircleSkeletonProps> = {
     showSkeleton: false,
-    size: Props.AvatarSize.Large
+    size: Props.AvatarSize.Large,
+    display: 'block'
   }
 
   public render (): JSX.Element {
@@ -21,7 +24,8 @@ class CircleSkeleton extends React.Component<ICircleSkeletonProps> {
       size,
       children,
       className,
-      margins
+      margins,
+      display
     } = this.props
 
     if (!showSkeleton) {
@@ -37,6 +41,7 @@ class CircleSkeleton extends React.Component<ICircleSkeletonProps> {
         size={size}
         className={className}
         margins={margins}
+        display={display!}
       />
     )
   }
