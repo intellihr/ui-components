@@ -38,7 +38,7 @@ interface ISelectOption {
 
 interface IAddedFilter {
   filter: IAddFilterDropdownMenuFilter
-  value: string | number
+  addedOption: ISelectOption
 }
 
 const AddFilterDropdownMenu: React.FC<IAddFilterDropdownMenuProps> = ({
@@ -83,9 +83,11 @@ const AddFilterDropdownMenu: React.FC<IAddFilterDropdownMenuProps> = ({
       const selectedFilter = filters.find((filter: IAddFilterDropdownMenuFilter) => filter.fieldName === filterField)
 
       if (selectedFilter && filterValue) {
+        const selectedFilterOption = selectedFilter.selectOptions.find((option) => option.value === filterValue)
+
         onFilterAdded({
           filter: selectedFilter,
-          value: filterValue
+          addedOption: selectedFilterOption!
         })
       }
       closeMenu()
