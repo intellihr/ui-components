@@ -19,6 +19,8 @@ interface IGenericInputProps {
   isInvalid?: boolean
   /** Function passed to `onChange` prop */
   handleChange?: ChangeEventHandler<HTMLInputElement>
+  /** Called when the input is changed */
+  onChange?: (value: string | number) => void
   /** Value of the input */
   value?: string | number
   /** [Number only] Minimum value allowed */
@@ -144,7 +146,8 @@ export class Input extends React.PureComponent<IInputProps> {
       isChecked,
       width,
       componentContext,
-      margins
+      margins,
+      onChange
     } = this.props
 
     return (
@@ -154,7 +157,7 @@ export class Input extends React.PureComponent<IInputProps> {
         type={type}
         value={value}
         checked={isChecked}
-        onChange={handleChange}
+        onChange={onChange ? this.handleChange : handleChange}
         onKeyDown={handleKeyDown}
         onBlur={handleBlur ? (e) => handleBlur(e, value) : undefined}
         onFocus={this.onFocus}
@@ -239,6 +242,16 @@ export class Input extends React.PureComponent<IInputProps> {
     }
 
     return null
+  }
+
+  private handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const {
+      onChange
+    } = this.props
+
+    if (onChange) {
+      onChange(event.target.value)
+    }
   }
 }
 

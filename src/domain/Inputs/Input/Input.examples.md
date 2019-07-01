@@ -96,7 +96,7 @@ import { NumberInput, TextInput } from '@Domain/Inputs';
 </div>
 ```
 
-#### Input with handleChange
+#### Input with onChange
 
 ```jsx
 import { NumberInput, TextInput } from '@Domain/Inputs';
@@ -105,17 +105,15 @@ import { NumberInput, TextInput } from '@Domain/Inputs';
   Text
   <TextInput
     value='Blur me!'
-    handleChange={(e) => alert(`
-      event: ${e}
-      value: ${e.target.value}
+    onChange={(value) => alert(`
+      value: ${value}
     `)}
   />
   Number
   <NumberInput
     value={987654321}
-    handleChange={(e) => alert(`
-      event: ${e}
-      value: ${e.target.value}
+    onChange={(value) => alert(`
+      value: ${value}
     `)}
   />
 </div>
@@ -152,7 +150,7 @@ initialState = { textValue: 'I have a clear button' };
 <TextInput
     value={state.textValue}
     handleClear={() => {setState({textValue: ''}); alert('clear value')}} 
-    handleChange={(e) => {setState({textValue: e.target.value})}}
+    onChange={(value) => {setState({textValue: value})}}
   />
 ```
 
