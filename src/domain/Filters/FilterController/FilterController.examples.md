@@ -9,56 +9,67 @@ initialState = {
 };
 
 const filters = [
-            { 
-              fieldName: 'type',
-              label: 'Type',
-              type: 'SINGLE_SELECT',
-              selectOptions: [
-                {
-                  label: 'Product Training',
-                  value: 'Product Training'
-                },
-                {
-                  label: 'Personal Development',
-                  value: 'Personal Development'
-                },
-                {
-                  label: 'Soft Skill',
-                  value: 'Soft Skill'
-                }
-              ]
-            },
-            {
-              fieldName: 'training_provider',
-              label: 'Training Provider',
-              type: 'SINGLE_SELECT',
-              selectOptions: [
-                {
-                  label: 'Internal',
-                  value: 'Internal'
-                },
-                {
-                  label: 'External',
-                  value: 'External'
-                },
-                {
-                  label: 'Others',
-                  value: 'Others'
-                }
-              ]
-            }
-          ];
+  { 
+    fieldName: 'type',
+    label: 'Type',
+    type: 'SINGLE_SELECT',
+    selectOptions: [
+      {
+        label: 'Product Training',
+        value: 'Product Training'
+      },
+      {
+        label: 'Personal Development',
+        value: 'Personal Development'
+      },
+      {
+        label: 'Soft Skill',
+        value: 'Soft Skill'
+      }
+    ]
+  },
+  {
+    fieldName: 'training_provider',
+    label: 'Training Provider',
+    type: 'SINGLE_SELECT',
+    selectOptions: [
+      {
+        label: 'Internal',
+        value: 'Internal'
+      },
+      {
+        label: 'External',
+        value: 'External'
+      },
+      {
+        label: 'Others',
+        value: 'Others'
+      }
+    ]
+  }
+];
           
-const handleAddFilter = (addedFilter) => {
-  const tagsOnExistingField = state.tags.find(tag => tag.fieldName === addedFilter.filter.fieldName);
-  if (tagsOnExistingField) {
-    const oldFieldValues = tagsOnExistingField.fieldValues.find(val => val.value === addedFilter.value);
+const handleFilterAdded = (filterInfo) => {
+  const fieldName = filterInfo.filter.fieldName;
+  const existingFilterTag = state.tags.find(tag => tag.fieldName === fieldName);
+  
+  if (existingFilterTag) {
+    const oldFieldValues = existingFilterTag.fieldValues.find(val => val.value === filterInfo.addedOption.value);
+    
     if (!oldFieldValues) {
-        tagsOnExistingField.fieldValues.push(addedFilter.filter.selectOptions.find(option => option.value === addedFilter.value));
-        setState({tags: state.tags.filter(tag => tag.fieldName !== addedFilter.filter.fieldName).concat(tagsOnExistingField)});
+        existingFilterTag.fieldValues.push(filterInfo.addedOption);
+        
+        setState({tags: [...state.tags.filter(tag => tag.fieldName !== fieldName), existingFilterTag]});
       }
   } else {
-    setState({tags: [...state.tags, {fieldName: addedFilter.filter.fieldName, label:addedFilter.filter.label, type: 'equality', fieldValues: [addedFilter.filter.selectOptions.find(option => option.value === addedFilter.value)]}]});
+    const newTag = {
+      fieldName: fieldName,
+      label: filterInfo.filter.label,
+      type: 'equality',
+      fieldValues: [filterInfo.addedOption]
+    };
+  
+    setState({tags: [...state.tags, newTag]});
   }
 }
 
@@ -69,7 +80,7 @@ const handleAddFilter = (addedFilter) => {
   filterMessage='Show all training where:'
   searchPlaceholder='Search training'
   onTagDeleted={(deletedTag) => { setState({ tags: state.tags.filter(tag => !isEqual(tag, deletedTag)) }) }}
-  onFilterAdded= {(addedFilter) => { handleAddFilter(addedFilter)}}
+  onFilterAdded= {handleFilterAdded}
   onSearchUpdated={(event) => { setState({ searchValue: event.target.value }); console.log('search value updated:', event.target.value) }}
   onSearchCleared={(event) => { setState({ searchValue: '' }); alert('clear search value') }}
 />
@@ -95,45 +106,45 @@ initialState = {
 };
 
 const filters = [
-            { 
-              field: 'type',
-              label: 'Type',
-              type: 'SINGLE_SELECT',
-              selectOptions: [
-                {
-                  label: 'Product Training',
-                  value: 'Product Training'
-                },
-                {
-                  label: 'Personal Development',
-                  value: 'Personal Development'
-                },
-                {
-                  label: 'Soft Skill',
-                  value: 'Soft Skill'
-                }
-              ]
-            },
-            {
-              field: 'training_provider',
-              label: 'Training Provider',
-              type: 'SINGLE_SELECT',
-              selectOptions: [
-                {
-                  label: 'Internal',
-                  value: 'Internal'
-                },
-                {
-                  label: 'External',
-                  value: 'External'
-                },
-                {
-                  label: 'Others',
-                  value: 'Others'
-                }
-              ]
-            }
-          ];
+  { 
+    field: 'type',
+    label: 'Type',
+    type: 'SINGLE_SELECT',
+    selectOptions: [
+      {
+        label: 'Product Training',
+        value: 'Product Training'
+      },
+      {
+        label: 'Personal Development',
+        value: 'Personal Development'
+      },
+      {
+        label: 'Soft Skill',
+        value: 'Soft Skill'
+      }
+    ]
+  },
+  {
+    field: 'training_provider',
+    label: 'Training Provider',
+    type: 'SINGLE_SELECT',
+    selectOptions: [
+      {
+        label: 'Internal',
+        value: 'Internal'
+      },
+      {
+        label: 'External',
+        value: 'External'
+      },
+      {
+        label: 'Others',
+        value: 'Others'
+      }
+    ]
+  }
+];
 
 <FilterController
   filters={filters}

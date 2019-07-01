@@ -56,6 +56,8 @@ const filters = [
       </Button>
     }
   filters = {filters}
-  onFilterAdded = {(addedFilter) => alert(`Filter Applied on ${addedFilter.filter.label}:  ${addedFilter.value}`)}
+  onFilterAdded = {(filterInfo) => alert(
+    `Filter Applied on ${filterInfo.filter.label}: ${filterInfo.addedOption.label} (internal value: ${filterInfo.addedOption.value})`
+  )}
 />
 ```
