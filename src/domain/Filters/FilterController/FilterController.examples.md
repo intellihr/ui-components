@@ -147,7 +147,6 @@ const filters = [
   onSearchCleared={(event) => { setState({ searchValue: '' }); alert('clear search value') }}
   rightComponent={ <div style={style}>
                        <DateRangeInput
-                       isInline
                        name='filter-date-picker'
                        startDate={state.startDate}
                        endDate={state.endDate}

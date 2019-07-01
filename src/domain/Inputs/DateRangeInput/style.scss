@@ -79,6 +79,12 @@
 
   .DateInput {
     background: none;
+    margin-right: 20px;
+    width: 108px;
+
+    &:first-child {
+      margin-right: 0;
+    }
 
     .DateInput_input {
       background: none;
@@ -116,11 +122,12 @@
 
   .DateRangePickerInput_clearDates {
     color: $n600;
-    font-size: $fz-heading;
+    font-size: $fz-body;
     font-weight: $fw-semi-bold;
-    line-height: $lh-heading;
-    margin-right: $spacing-2xsmall;
+    line-height: $lh-body;
+    margin: 0;
     outline: none;
+    padding: 10px $spacing-small $spacing-small $spacing-3xsmall;
     transition: color .3s ease-in-out;
 
     &:focus,
@@ -141,21 +148,6 @@
     &:hover {
       border-color: $n400;
       cursor: not-allowed;
-    }
-  }
-
-  &.is-inline {
-    display: inline-block;
-
-    .DateRangePickerInput_clearDates {
-      line-height: $lh-small;
-      margin: 0;
-      padding: $spacing-xsmall $spacing-small;
-      position: relative;
-    }
-
-    .DateRangePickerInput_clearDates__hide {
-      display: none;
     }
   }
 
