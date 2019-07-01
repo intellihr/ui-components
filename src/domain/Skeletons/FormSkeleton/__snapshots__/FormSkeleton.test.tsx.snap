@@ -3,6 +3,7 @@
 exports[`<FormFieldSkeleton /> should render a form field skeleton 1`] = `
 <Fragment>
   <BlockSkeleton
+    display="block"
     height={24}
     margins={
       Object {
@@ -13,6 +14,7 @@ exports[`<FormFieldSkeleton /> should render a form field skeleton 1`] = `
     width={200}
   />
   <BlockSkeleton
+    display="block"
     height={40}
     margins={
       Object {
@@ -30,6 +32,7 @@ exports[`<FormSkeleton /> should render a form skeleton 1`] = `
   <FormFieldSkeleton />
   <FormFieldSkeleton />
   <BlockSkeleton
+    display="block"
     height={40}
     margins={
       Object {

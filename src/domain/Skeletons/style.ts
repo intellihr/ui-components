@@ -16,7 +16,7 @@ const animateProgressRule = css`
   ${progress} .8s linear infinite alternate;
 `
 
-function styleForSkeletons (margins?: Props.IMargins) {
+function styleForSkeletons ({ display, margins }: { display: 'block' | 'inline-block', margins?: Props.IMargins }) {
   return (
     css`
     animation: ${animateProgressRule};
@@ -24,8 +24,8 @@ function styleForSkeletons (margins?: Props.IMargins) {
     will-change: opacity;
     background-color: ${Variables.Color.n300};
     border: 1px solid ${Variables.Color.n300};
-    display: block;
-    ${() => styleForMargins(margins)};
+    display: ${display};
+    ${styleForMargins(margins)};
   `
   )
 }
