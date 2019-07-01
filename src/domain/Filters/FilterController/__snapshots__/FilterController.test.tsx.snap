@@ -15,9 +15,7 @@ exports[`<FilterController /> should render the filter controller 1`] = `
   <styled.div
     hasBottomMargin={false}
   >
-    <styled.div
-      hasRightMargin={true}
-    >
+    <styled.div>
       <InputGroup>
         <AddFilterDropdownMenu
           filterMessage="dummy filter message:"
@@ -81,9 +79,11 @@ exports[`<FilterController /> should render the filter controller 1`] = `
         />
       </InputGroup>
     </styled.div>
-    <div>
-      RightComponent
-    </div>
+    <styled.div>
+      <div>
+        RightComponent
+      </div>
+    </styled.div>
   </styled.div>
   <FilterTag
     onTagDeleted={[Function]}
