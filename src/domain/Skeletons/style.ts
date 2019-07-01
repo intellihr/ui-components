@@ -25,7 +25,7 @@ function styleForSkeletons (margins?: Props.IMargins) {
     background-color: ${Variables.Color.n300};
     border: 1px solid ${Variables.Color.n300};
     display: block;
-    ${() => styleForMargins(margins)};
+    ${styleForMargins(margins)};
   `
   )
 }
