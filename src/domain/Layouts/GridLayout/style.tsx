@@ -22,7 +22,6 @@ enum VerticalAlignment {
 type GutterSize = 'none' | Variables.Spacing | Variables.Layout
 type CellSize = number | 'auto' | 'shrink' | 'fullWidth'
 type CellOffset = number
-type CellAnimation = 'none' | 'fadeInOut' | 'zoomInOut'
 type CellDisplayType = 'block' | 'flex'
 
 interface IStyledCellSizes {
@@ -76,7 +75,6 @@ interface IStyledCellProps {
   gutterMarginY: GutterSize | IStyledGridGutters
   gutterPaddingX: GutterSize | IStyledGridGutters
   gutterPaddingY: GutterSize | IStyledGridGutters
-  animationStyle: CellAnimation
   displayType: CellDisplayType
   flexHorizontalAlignment: HorizontalAlignment | IStyledHorizontalAlignment
 }
@@ -552,50 +550,6 @@ function cellStyleForProps (props: IStyledCellProps) {
   `
 }
 
-function cellAnimationForProps (props: IStyledCellProps) {
-  if (props.animationStyle === 'fadeInOut') {
-    return css`
-      transition: opacity 200ms ease-in-out;
-
-      &.grid-layout-cell-animation-enter {
-        opacity: 0;
-      }
-
-      &.grid-layout-cell-animation-enter-active {
-        opacity: 1;
-      }
-
-      &.grid-layout-cell-animation-exit {
-        opacity: 1;
-      }
-
-      &.grid-layout-cell-animation-exit-active {
-        opacity: 0;
-      }
-    `
-  } else if (props.animationStyle === 'zoomInOut') {
-    return css`
-      transition: transform 200ms ease-in-out;
-
-      &.grid-layout-cell-animation-enter {
-        transform: scale(0.1);
-      }
-
-      &.grid-layout-cell-animation-enter-active {
-        transform: scale(1.0);
-      }
-
-      &.grid-layout-cell-animation-exit {
-        transform: scale(1.0);
-      }
-
-      &.grid-layout-cell-animation-exit-active {
-        transform: scale(0.1);
-      }
-    `
-  }
-}
-
 const StyledCell = styled.div<IStyledCellProps>`
   flex: 0 0 auto;
   flex-basis: auto;
@@ -604,11 +558,9 @@ const StyledCell = styled.div<IStyledCellProps>`
   width: 100%;
 
   ${cellStyleForProps}
-  ${cellAnimationForProps}
 `
 
 export {
-  CellAnimation,
   CellOffset,
   CellSize,
   GutterSize,
