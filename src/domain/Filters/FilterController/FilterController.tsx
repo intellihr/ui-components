@@ -9,7 +9,7 @@ import {
   IAddedFilter
 } from '../AddFilterDropdownMenu/AddFilterDropdownMenu'
 import { FilterTag, IFilterTagDetail } from '../FilterTag/FilterTag'
-import { ControllerWrapper, StyledController, StyledLeftComponent } from './style'
+import { ControllerWrapper, StyledController, StyledLeftComponent, StyledRightComponent } from './style'
 
 export interface IFilterControllerProps {
   /** filter dropdown message of this filter controller */
@@ -66,7 +66,7 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
         data-component-context={componentContext}
       >
         <StyledController hasBottomMargin={tags.length > 0}>
-          <StyledLeftComponent hasRightMargin={!!rightComponent}>
+          <StyledLeftComponent>
             <InputGroup>
               <AddFilterDropdownMenu
                 componentContext={componentContext && `${componentContext}-dropdown-menu`}
@@ -86,7 +86,7 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
               />
             </InputGroup>
           </StyledLeftComponent>
-          {rightComponent}
+          {rightComponent && this.rightComponent}
         </StyledController>
         <FilterTag
           componentContext={componentContext && `${componentContext}-filter-tag`}
@@ -94,6 +94,17 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
           onTagDeleted={onTagDeleted}
         />
       </ControllerWrapper>
+    )
+  }
+
+  private get rightComponent () {
+    const {
+      rightComponent
+    } = this.props
+    return (
+      <StyledRightComponent>
+        {rightComponent}
+      </StyledRightComponent>
     )
   }
 

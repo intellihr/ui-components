@@ -95,7 +95,13 @@ import { Button } from '@Domain/Buttons';
 
 const style = {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    width: '100%',
+};
+
+const dateRangeStyle = {
+    width: '100%',
+    flex: '1 1 0%'
 };
 
 initialState = {
@@ -107,7 +113,7 @@ initialState = {
 
 const filters = [
   { 
-    field: 'type',
+    fieldName: 'type',
     label: 'Type',
     type: 'SINGLE_SELECT',
     selectOptions: [
@@ -126,7 +132,7 @@ const filters = [
     ]
   },
   {
-    field: 'training_provider',
+    fieldName: 'training_provider',
     label: 'Training Provider',
     type: 'SINGLE_SELECT',
     selectOptions: [
@@ -145,6 +151,30 @@ const filters = [
     ]
   }
 ];
+          
+const handleFilterAdded = (filterInfo) => {
+  const fieldName = filterInfo.filter.fieldName;
+  const existingFilterTag = state.tags.find(tag => tag.fieldName === fieldName);
+  
+  if (existingFilterTag) {
+    const oldFieldValues = existingFilterTag.fieldValues.find(val => val.value === filterInfo.addedOption.value);
+    
+    if (!oldFieldValues) {
+        existingFilterTag.fieldValues.push(filterInfo.addedOption);
+        
+        setState({tags: [...state.tags.filter(tag => tag.fieldName !== fieldName), existingFilterTag]});
+      }
+  } else {
+    const newTag = {
+      fieldName: fieldName,
+      label: filterInfo.filter.label,
+      type: 'equality',
+      fieldValues: [filterInfo.addedOption]
+    };
+  
+    setState({tags: [...state.tags, newTag]});
+  }
+}
 
 <FilterController
   filters={filters}
@@ -152,22 +182,22 @@ const filters = [
   searchValue={state.searchValue}
   filterMessage='Show all training where:'
   searchPlaceholder='Search training'
-  onFilterAdded={(filter) => { setState({ tags: (state.tags.filter(tag => tag.fieldName !== filter.fieldName)).concat(filter) }) }}
   onTagDeleted={(deletedTag) => { setState({ tags: state.tags.filter(tag => !isEqual(tag, deletedTag)) }) }}
+  onFilterAdded= {handleFilterAdded}
   onSearchUpdated={(event) => { setState({ searchValue: event.target.value }); console.log('search value updated:', event.target.value) }}
   onSearchCleared={(event) => { setState({ searchValue: '' }); alert('clear search value') }}
-  rightComponent={ <div style={style}>
+  rightComponent={<div style={style}>
+                     <div style={dateRangeStyle}>
                        <DateRangeInput
-                       isInline
-                       name='filter-date-picker'
-                       startDate={state.startDate}
-                       endDate={state.endDate}
-                       startDatePlaceholder='Start Date'
-                       endDatePlaceholder='End Date'
-                       handleDatesChange={(dates) => { setState({ startDate: dates.startDate, endDate: dates.endDate })}}
-                      />
-                      <Button margins={{ left: 8 }} type='neutral' onClick={() => alert('other action')}>Other Action</Button>
-                     </div>
-                   }
+                        name='filter-date-picker'
+                        startDate={state.startDate}
+                        endDate={state.endDate}
+                        startDatePlaceholder='Start Date'
+                        endDatePlaceholder='End Date'
+                        handleDatesChange={(dates) => { setState({ startDate: dates.startDate, endDate: dates.endDate })}}
+                       />
+                       </div>
+                    <Button margins={{ left: 8 }} type='neutral' onClick={() => alert('other action')}>Other Action</Button>
+                   </div>}
 />
 ```
