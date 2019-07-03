@@ -11,17 +11,6 @@ module.exports = {
     '^.+\\.(ts|tsx)?$': 'ts-jest'
   },
   testRegex: './src/.*\\.test.(ts|tsx)$',
-  collectCoverage: true,
-  coverageDirectory: '<rootDir>/coverage/',
-  coverageReporters: [
-    'text',
-    'html'
-  ],
-  collectCoverageFrom: [
-    'src/**/*.tsx',
-    '!src/style.tsx',
-    '!**/examples/**'
-  ],
   globals: {
     'ts-jest': {
       tsConfig: 'tsconfig-jest.json',
