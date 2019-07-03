@@ -63,6 +63,25 @@ import { Statistic } from '@Domain/Formats';
 </Carousel>
 ```
 
+#### Carousel tiles can also have a lighter or darker background color
+
+```jsx
+<Carousel>
+  <Carousel.Tile
+    background='white'
+  >
+    White
+  </Carousel.Tile>
+  <Carousel.Tile
+      background='grey'
+  >
+    Grey
+  </Carousel.Tile>
+</Carousel>
+```
+
+
+
 #### Carousel with custom children
 
 ```jsx
