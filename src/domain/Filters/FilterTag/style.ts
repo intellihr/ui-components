@@ -15,7 +15,12 @@ const StyledCross = styled.span`
       color: ${Variables.Color.r600};
     }
 `
+
+const StyledFilterTag = styled.div`
+  margin-bottom: -${Variables.Spacing.s2XSmall}px;
+`
 export {
   StyledDeleteButton,
-  StyledCross
+  StyledCross,
+  StyledFilterTag
 }
