@@ -133,8 +133,8 @@
   "scripts": {
     "postinstall": "npm rebuild node-sass",
     "clean": "rimraf dist/* types/*",
-    "test": "cross-env NODE_ENV=test jest --coverage",
-    "test:ci": "cross-env NODE_ENV=test jest --silent --ci --coverage --colors",
+    "test": "cross-env NODE_ENV=test jest",
+    "test:ci": "cross-env NODE_ENV=test jest --silent --ci --colors",
     "lint": "tslint -t stylish -c ./tslint.json \"src/**/*.{ts,tsx}\"",
     "lint:fix": "tslint -t stylish --fix -c ./tslint.json \"src/**/*.{ts,tsx}\"",
     "lint:css": "stylelint \"src/**/*.{ts,tsx}\"",
