@@ -13,6 +13,11 @@ interface ICarouselContainerProps {
   margins?: Props.IMargins
 }
 
+interface ICarouselTileProps {
+  /** Color of the tile background */
+  background?: 'grey' | 'white'
+}
+
 const CarouselContainer = styled.div`
   width: 100%;
   display: flex;
@@ -84,8 +89,16 @@ const CarouselTile = styled.div`
   padding: ${Variables.Spacing.sMedium}px;
   border-radius: ${Variables.Style.borderRadius}px;
   border: 1px solid ${Variables.Color.n250};
-  background-color: ${Variables.Color.n150};
   margin: 0 ${Variables.Spacing.sXSmall / 2}px;
+  background-color: ${(props: ICarouselTileProps) => {
+    switch (props.background) {
+      case 'white':
+        return Variables.Color.n100
+      case 'grey':
+      default:
+        return Variables.Color.n150
+    }
+  }};
 
   &:first-of-type {
     margin-left: 0;
@@ -96,11 +109,16 @@ const CarouselTile = styled.div`
   }
 `
 
+CarouselTile.defaultProps = {
+  background: 'grey'
+}
+
 export {
   CarouselStyleConstants,
   CarouselContainer,
   CarouselChevronButton,
   CarouselList,
   CarouselParent,
-  CarouselTile
+  CarouselTile,
+  ICarouselTileProps
 }
