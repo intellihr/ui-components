@@ -4,7 +4,7 @@ import { Props, Variables } from '../../../common'
 import { Brick } from '../../Typographies/Brick'
 import { BrickColor } from '../../Typographies/Brick/style'
 import { Text } from '../../Typographies/Text'
-import { StyledCross, StyledDeleteButton } from './style'
+import { StyledCross, StyledDeleteButton, StyledFilterTag } from './style'
 
 interface IFieldValue {
   label: string
@@ -34,12 +34,12 @@ class FilterTag extends React.PureComponent<IFilterTagProps> {
 
     if (tags) {
       return (
-        <div
+        <StyledFilterTag
           data-component-type={Props.ComponentType.FilterTag}
           data-component-context={componentContext}
         >
           {tags.map((tag) => this.renderTag(tag))}
-        </div>
+        </StyledFilterTag>
       )
     }
 
@@ -50,7 +50,7 @@ class FilterTag extends React.PureComponent<IFilterTagProps> {
     return (
       <Brick
         key={`tag-${tag.fieldName}`}
-        margins={{right: Variables.Spacing.sXSmall}}
+        margins={{right: Variables.Spacing.sXSmall,  bottom: Variables.Spacing.s2XSmall}}
         typographyType={Props.TypographyType.Small}
         color={BrickColor.Neutral}
       >
