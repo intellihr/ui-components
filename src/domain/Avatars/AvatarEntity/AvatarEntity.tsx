@@ -11,7 +11,7 @@ import {
   TertiaryTextWrapper
 } from './style'
 
-export interface IAvatarEntity {
+export interface IAvatarEntityProps {
   /** The primary text */
   primaryText: string
   /** The secondary text */
@@ -24,18 +24,29 @@ export interface IAvatarEntity {
   isHoverable?: boolean
   /** The primary text type  */
   primaryTextType?: Props.TypographyType
-  /** The other text type  */
-  otherTextType?: Props.TypographyType
+  /** The secondary text type  */
+  secondaryTextType?: Props.TypographyType
+  /** The tertiary text type  */
+  tertiaryTextType?: Props.TypographyType
   /** Margins around the component */
   margins?: Props.IMargins
+  /** Initials to display if no valid `imageUrl` or `imageData` is passed to Avatar */
+  initials?: string
+  /** Image URL */
+  imageUrl?: string
+  /** Display a coloured status dot on the avatar */
+  statusDot?: 'primary' | 'secondary' | 'success' | 'warning' | 'alert' | 'neutral' | 'highlight' | 'dark'
+  /** Display an icon component on the avatar */
+  statusIcon?: JSX.Element
 }
 
-export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarProps> {
-  public static defaultProps: Partial<IAvatarEntity> = {
+export class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
+  public static defaultProps: Partial<IAvatarEntityProps> = {
     isCompact: false,
     isHoverable: false,
     primaryTextType: Props.TypographyType.Body,
-    otherTextType: Props.TypographyType.XSmall,
+    secondaryTextType: Props.TypographyType.XSmall,
+    tertiaryTextType: Props.TypographyType.XSmall,
     margins: {
       top: Variables.Spacing.s3XSmall,
       bottom: Variables.Spacing.s3XSmall,
@@ -87,7 +98,7 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
     const {
       secondaryText,
       isCompact,
-      otherTextType
+      secondaryTextType
     } = this.props
 
     if (!secondaryText) {
@@ -102,7 +113,7 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
 
     return (
       <SecondaryTextWrapper
-        textType={otherTextType!}
+        textType={secondaryTextType!}
         isCompact={isCompact}
       >
         {text}
@@ -114,7 +125,7 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
     const {
       tertiaryText,
       isCompact,
-      otherTextType
+      tertiaryTextType
     } = this.props
 
     if (!tertiaryText || isCompact) {
@@ -123,7 +134,7 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
 
     return (
         <TertiaryTextWrapper
-          textType={otherTextType!}
+          textType={tertiaryTextType!}
           isCompact={isCompact}
         >
           {tertiaryText}

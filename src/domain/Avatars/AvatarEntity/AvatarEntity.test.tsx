@@ -43,15 +43,18 @@ describe('<AvatarEntity />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a compact avatar entity with specific text type`, () => {
+  it(`should render a avatar entity with specific text type`, () => {
     const wrapper = shallow(
       <AvatarEntity
         initials='JW'
+        statusDot='primary'
         primaryText='John Wick'
         secondaryText='Guy Killer'
-        primaryTextType={Props.TypographyType.Small}
-        otherTextType={Props.TypographyType.Small}
-        isCompact
+        tertiaryText='Job Ending in 3 days'
+        isHoverable
+        primaryTextType={Props.TypographyType.Heading}
+        secondaryTextType={Props.TypographyType.Body}
+        tertiaryTextType={Props.TypographyType.Small}
       />
     )
 
