@@ -42,16 +42,16 @@ function styleForMargin (type: 'top' | 'bottom' | 'left' | 'right', margin?: Pro
     }
 
     ${Utils.mediaQueryBetweenSizes({
-    minPx: Variables.Breakpoint.breakpointTablet,
-    maxPx: Variables.Breakpoint.breakpointDesktop
-  })} {
+      minPx: Variables.Breakpoint.breakpointTablet,
+      maxPx: Variables.Breakpoint.breakpointDesktop
+    })} {
       margin-${type}: ${getMarginSizeAtBreakpoint('tablet', margin)}px;
     }
 
     ${Utils.mediaQueryBetweenSizes({
-    minPx: Variables.Breakpoint.breakpointDesktop,
-    maxPx: Variables.Breakpoint.breakpointBigDesktop
-  })} {
+      minPx: Variables.Breakpoint.breakpointDesktop,
+      maxPx: Variables.Breakpoint.breakpointBigDesktop
+    })} {
       margin-${type}: ${getMarginSizeAtBreakpoint('desktop', margin)}px;
     }
 
