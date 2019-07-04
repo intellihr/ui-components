@@ -104,7 +104,7 @@ const AddFilterDropdownMenu: React.FC<IAddFilterDropdownMenuProps> = ({
           <VerticalForm.Field
             inputName='filterDropdownFieldInput'
             label={filterMessage}
-            showBottomMargin={false}
+            margins={{ bottom: 0 }}
           >
             <SelectInput
               name='filterDropdownFieldInput'

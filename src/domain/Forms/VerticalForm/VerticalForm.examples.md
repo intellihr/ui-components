@@ -272,7 +272,7 @@ initialState = { textInputValue: '' };
     <VerticalForm.Field
       inputName='testInput'
       label='This is a test input'
-      showBottomMargin={false}
+      margins={{ bottom: 0 }}
     >
       <TextInput
         name='testInput'
