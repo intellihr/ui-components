@@ -61,6 +61,10 @@
     }
   }
 
+  .DateInput_fang {
+    top: 56px !important; // sass-lint:disable-line no-important
+  }
+
   .DateRangePickerInput {
     align-items: center;
     border-color: $n400;

@@ -91,6 +91,36 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
     isHoverable
   />
 ```
+
+#### Customised text type
+
+```jsx
+     <AvatarEntity
+       initials='JW'
+       statusDot='primary'
+       primaryText='John Wick'
+       secondaryText='Guy Killer'
+       isHoverable
+       primaryTextType='small'
+       secondaryTextType='small'
+       isCompact
+     />
+```
+
+```jsx
+     <AvatarEntity
+       initials='JW'
+       statusDot='primary'
+       primaryText='John Wick'
+       secondaryText='Guy Killer'
+       tertiaryText='Job Ending in 3 days'
+       isHoverable
+        primaryTextType='heading'
+        secondaryTextType='body'
+        tertiaryTextType='small'
+     />
+```
+
 #### Very long name and position title
 
 ```jsx

@@ -1,22 +1,25 @@
 import styled, { css } from 'styled-components'
 
 import { Props, Variables } from '../../../common'
+import { styleForMargins } from '../../Spacers/services/margins'
 import { styleForTruncatedText, styleForTypographyType } from '../../Typographies/services/textStyles'
 
 interface IAvatarEntityWrapper {
   className?: string,
-  isHoverable?: boolean
+  isHoverable?: boolean,
+  margins?: Props.IMargins
 }
 
 interface ITextWrapper {
   isCompact?: boolean
+  textType: Props.TypographyType
 }
 
 const AvatarEntityWrapper = styled.div`
   align-items: center;
   display: flex;
-  padding: 2px;
   color: ${Variables.Color.n700};
+  ${(props: IAvatarEntityWrapper) => styleForMargins(props.margins)}
 
   ${(props: IAvatarEntityWrapper) => {
     if (props.isHoverable) {
@@ -43,7 +46,7 @@ const AvatarEntityInfo = styled.div`
   align-self: center;
 `
 const PrimaryTextWrapper = styled.span`
-  ${styleForTypographyType(Props.TypographyType.Body)}
+  ${(props: ITextWrapper) => styleForTypographyType(props.textType)}
   font-weight: ${Variables.FontWeight.fwNormal};
 
   ${(props: ITextWrapper) => {
@@ -57,7 +60,7 @@ const PrimaryTextWrapper = styled.span`
 `
 
 const SecondaryTextWrapper = styled.span`
-  ${styleForTypographyType(Props.TypographyType.XSmall)}
+  ${(props: ITextWrapper) => styleForTypographyType(props.textType)}
   font-weight: ${Variables.FontWeight.fwNormal};
 
   margin-top: 2px;
@@ -75,7 +78,7 @@ const SecondaryTextWrapper = styled.span`
 `
 
 const TertiaryTextWrapper = styled.span`
-  ${styleForTypographyType(Props.TypographyType.XSmall)}
+  ${(props: ITextWrapper) => styleForTypographyType(props.textType)}
   font-weight: ${Variables.FontWeight.fwSemiBold};
 
   ${styleForTruncatedText()}
