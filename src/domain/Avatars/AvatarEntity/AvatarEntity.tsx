@@ -22,12 +22,26 @@ export interface IAvatarEntity {
   isCompact?: boolean
   /** If true, will display a hover state style when hovered */
   isHoverable?: boolean
+  /** The primary text type  */
+  primaryTextType?: Props.TypographyType
+  /** The other text type  */
+  otherTextType?: Props.TypographyType
+  /** Margins around the component */
+  margins?: Props.IMargins
 }
 
 export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarProps> {
   public static defaultProps: Partial<IAvatarEntity> = {
     isCompact: false,
-    isHoverable: false
+    isHoverable: false,
+    primaryTextType: Props.TypographyType.Body,
+    otherTextType: Props.TypographyType.XSmall,
+    margins: {
+      top: Variables.Spacing.s3XSmall,
+      bottom: Variables.Spacing.s3XSmall,
+      left: Variables.Spacing.s3XSmall,
+      right: Variables.Spacing.s3XSmall
+    }
   }
 
   get avatar (): JSX.Element {
@@ -55,11 +69,13 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
   get primaryText (): JSX.Element {
     const {
       primaryText,
-      isCompact
+      isCompact,
+      primaryTextType
     } = this.props
 
     return (
       <PrimaryTextWrapper
+        textType={primaryTextType!}
         isCompact={isCompact}
       >
         {primaryText}
@@ -70,7 +86,8 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
   get secondaryText (): JSX.Element | null {
     const {
       secondaryText,
-      isCompact
+      isCompact,
+      otherTextType
     } = this.props
 
     if (!secondaryText) {
@@ -85,6 +102,7 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
 
     return (
       <SecondaryTextWrapper
+        textType={otherTextType!}
         isCompact={isCompact}
       >
         {text}
@@ -95,7 +113,8 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
   get tertiaryText (): JSX.Element | null {
     const {
       tertiaryText,
-      isCompact
+      isCompact,
+      otherTextType
     } = this.props
 
     if (!tertiaryText || isCompact) {
@@ -104,6 +123,7 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
 
     return (
         <TertiaryTextWrapper
+          textType={otherTextType!}
           isCompact={isCompact}
         >
           {tertiaryText}
@@ -113,13 +133,15 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntity & IAvatarPro
 
   public render (): JSX.Element {
     const {
-      isHoverable
+      isHoverable,
+      margins
     } = this.props
 
     return (
       <AvatarEntityWrapper
         className='avatar-entity'
         isHoverable={isHoverable}
+        margins={margins}
       >
         {this.avatar}
         <AvatarEntityInfo>

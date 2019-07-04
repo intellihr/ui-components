@@ -1,7 +1,8 @@
-import { shallow } from 'enzyme'
+import {shallow} from 'enzyme'
 import React from 'react'
 
-import { AvatarEntity } from './AvatarEntity'
+import {Props} from '../../../common'
+import {AvatarEntity} from './AvatarEntity'
 
 describe('<AvatarEntity />', () => {
   it(`should render a basic avatar entity`, () => {
@@ -35,6 +36,21 @@ describe('<AvatarEntity />', () => {
       <AvatarEntity
         initials='JW'
         primaryText='John Wick'
+        isCompact
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it(`should render a compact avatar entity with specific text type`, () => {
+    const wrapper = shallow(
+      <AvatarEntity
+        initials='JW'
+        primaryText='John Wick'
+        secondaryText='Guy Killer'
+        primaryTextType={Props.TypographyType.Small}
+        otherTextType={Props.TypographyType.Small}
         isCompact
       />
     )

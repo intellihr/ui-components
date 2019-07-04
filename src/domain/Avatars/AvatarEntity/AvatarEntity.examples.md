@@ -91,6 +91,25 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
     isHoverable
   />
 ```
+
+#### Customised text type
+
+```jsx
+const { Variables } = require('@Common');
+const { FontAwesomeIcon } = require('@Domain/Icons');
+
+  <AvatarEntity
+    initials='JW'
+    statusDot='primary'
+    primaryText='John Wick'
+    secondaryText='Guy Killer'
+    isHoverable
+    primaryTextType='small'
+    otherTextType='small'
+    isCompact
+  />
+```
+
 #### Very long name and position title
 
 ```jsx
