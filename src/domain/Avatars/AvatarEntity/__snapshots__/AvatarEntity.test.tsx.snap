@@ -4,6 +4,14 @@ exports[`<AvatarEntity /> should render a avatar entity with lots of data 1`] = 
 <styled.div
   className="avatar-entity"
   isHoverable={false}
+  margins={
+    Object {
+      "bottom": 2,
+      "left": 2,
+      "right": 2,
+      "top": 2,
+    }
+  }
 >
   <styled.div>
     <Avatar
@@ -16,18 +24,64 @@ exports[`<AvatarEntity /> should render a avatar entity with lots of data 1`] = 
   <styled.div>
     <styled.span
       isCompact={false}
+      textType="body"
     >
       John Wick
     </styled.span>
     <styled.span
       isCompact={false}
+      textType="xsmall"
     >
       Guy Killer
     </styled.span>
     <styled.span
       isCompact={false}
+      textType="xsmall"
     >
       In Cinemas 2019
+    </styled.span>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<AvatarEntity /> should render a avatar entity with specific text type 1`] = `
+<styled.div
+  className="avatar-entity"
+  isHoverable={true}
+  margins={
+    Object {
+      "bottom": 2,
+      "left": 2,
+      "right": 2,
+      "top": 2,
+    }
+  }
+>
+  <styled.div>
+    <Avatar
+      initials="JW"
+      size="medium"
+      statusDot="primary"
+    />
+  </styled.div>
+  <styled.div>
+    <styled.span
+      isCompact={false}
+      textType="heading"
+    >
+      John Wick
+    </styled.span>
+    <styled.span
+      isCompact={false}
+      textType="body"
+    >
+      Guy Killer
+    </styled.span>
+    <styled.span
+      isCompact={false}
+      textType="small"
+    >
+      Job Ending in 3 days
     </styled.span>
   </styled.div>
 </styled.div>
@@ -37,6 +91,14 @@ exports[`<AvatarEntity /> should render a basic avatar entity 1`] = `
 <styled.div
   className="avatar-entity"
   isHoverable={false}
+  margins={
+    Object {
+      "bottom": 2,
+      "left": 2,
+      "right": 2,
+      "top": 2,
+    }
+  }
 >
   <styled.div>
     <Avatar
@@ -47,6 +109,7 @@ exports[`<AvatarEntity /> should render a basic avatar entity 1`] = `
   <styled.div>
     <styled.span
       isCompact={false}
+      textType="body"
     >
       John Wick
     </styled.span>
@@ -58,6 +121,14 @@ exports[`<AvatarEntity /> should render a basic compact avatar entity 1`] = `
 <styled.div
   className="avatar-entity"
   isHoverable={false}
+  margins={
+    Object {
+      "bottom": 2,
+      "left": 2,
+      "right": 2,
+      "top": 2,
+    }
+  }
 >
   <styled.div>
     <Avatar
@@ -68,6 +139,7 @@ exports[`<AvatarEntity /> should render a basic compact avatar entity 1`] = `
   <styled.div>
     <styled.span
       isCompact={true}
+      textType="body"
     >
       John Wick
     </styled.span>
@@ -79,6 +151,14 @@ exports[`<AvatarEntity /> should render a compact avatar entity with lots of dat
 <styled.div
   className="avatar-entity"
   isHoverable={false}
+  margins={
+    Object {
+      "bottom": 2,
+      "left": 2,
+      "right": 2,
+      "top": 2,
+    }
+  }
 >
   <styled.div>
     <Avatar
@@ -91,11 +171,13 @@ exports[`<AvatarEntity /> should render a compact avatar entity with lots of dat
   <styled.div>
     <styled.span
       isCompact={true}
+      textType="body"
     >
       John Wick
     </styled.span>
     <styled.span
       isCompact={true}
+      textType="xsmall"
     >
       (Guy Killer)
     </styled.span>
