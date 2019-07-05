@@ -11,6 +11,8 @@ export interface IIconPickerProps {
   icons: IconType[]
   /** action triggered when icons are clicked */
   onChange?: ChangeEventHandler<HTMLInputElement>
+  /** action triggered when icons are clicked */
+  handleChange?: ChangeEventHandler<HTMLInputElement>
   /** The currently selected icon */
   value: IconType | null
   /** The name property of the icon picker */
@@ -56,6 +58,7 @@ export class IconPickerInput extends React.PureComponent<IIconPickerProps> {
   private iconInput = (icon: IconType, idx: number) => {
     const {
       onChange,
+      handleChange,
       value,
       name
     } = this.props
@@ -69,7 +72,7 @@ export class IconPickerInput extends React.PureComponent<IIconPickerProps> {
           name={name}
           id={iconId}
           value={icon}
-          onChange={onChange}
+          onChange={handleChange || onChange}
           checked={isChecked}
           type='radio'
         />
