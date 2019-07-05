@@ -26,7 +26,7 @@ function getMarginSizeAtBreakpoint (breakpoint: keyof IBreakpointMargins, margin
 }
 
 function styleForMargin (type: 'top' | 'bottom' | 'left' | 'right', margin?: Props.Margin) {
-  if (!margin) {
+  if (margin === undefined) {
     return null
   }
 
@@ -37,7 +37,7 @@ function styleForMargin (type: 'top' | 'bottom' | 'left' | 'right', margin?: Pro
   }
 
   return css`
-    ${Utils.mediaQueryBetweenSizes({maxPx: Variables.Breakpoint.breakpointTablet})} {
+    ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
       margin-${type}: ${getMarginSizeAtBreakpoint('min', margin)}px;
     }
 
@@ -55,7 +55,7 @@ function styleForMargin (type: 'top' | 'bottom' | 'left' | 'right', margin?: Pro
       margin-${type}: ${getMarginSizeAtBreakpoint('desktop', margin)}px;
     }
 
-    ${Utils.mediaQueryBetweenSizes({minPx: Variables.Breakpoint.breakpointBigDesktop})} {
+    ${Utils.mediaQueryBetweenSizes({ minPx: Variables.Breakpoint.breakpointBigDesktop })} {
       margin-${type}: ${getMarginSizeAtBreakpoint('bigDesktop', margin)}px;
     }
   `

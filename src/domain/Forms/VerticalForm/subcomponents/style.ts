@@ -1,24 +1,24 @@
 import styled, { css } from 'styled-components'
 
-import { Utils, Variables } from '../../../../common'
+import { Props, Utils, Variables } from '../../../../common'
+import { styleForMargins } from '../../../Spacers/services/margins'
 
 interface IStyledInputLabelProps {
   isRequired: boolean
 }
 
 interface IFieldWrapperProps {
-  showBottomMargin: boolean
+  margins?: Props.IMargins
 }
 
-const FieldWrapper = styled.div`
-  ${(props: IFieldWrapperProps) => props.showBottomMargin && css`
-      margin-bottom: ${Variables.Spacing.sLarge}px;
-    `
-  }
+const FieldWrapper = styled.div<IFieldWrapperProps>`
+  margin-bottom: ${Variables.Spacing.sLarge}px;
 
   textarea, .Select .Select-control {
     margin: 0;
   }
+
+  ${(props) => styleForMargins(props.margins)}
 `
 
 const ErrorMessage = styled.div`
@@ -51,6 +51,7 @@ const StyledInputLabel = styled.label`
     `
   }}
 `
+
 const StyledDescription = styled.div`
   color: ${Variables.Color.n600};
   font-size: ${Variables.FontSize.fzSmall}px;
