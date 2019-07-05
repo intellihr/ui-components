@@ -38,8 +38,7 @@ interface IVerticalFormFieldProps {
     label: string
     hintWrapperProps?: Partial<IHintWrapperProps>
   }
-  /** If true, show a margin on the bottom of the input */
-  showBottomMargin?: boolean
+  margins?: Props.IMargins
 }
 
 class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
@@ -166,11 +165,11 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
     const {
       children,
       actionMessage,
-      showBottomMargin
+      margins
     } = this.props
 
     return (
-      <FieldWrapper showBottomMargin={showBottomMargin!} >
+      <FieldWrapper margins={margins} >
         {this.label}
         {this.description}
         {children}
