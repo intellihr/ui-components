@@ -116,7 +116,6 @@ export class TextInput extends React.PureComponent<ITextInputProps> {
     const {
       id,
       name,
-      handleChange,
       isDisabled,
       value,
       handleBlur,
@@ -127,8 +126,7 @@ export class TextInput extends React.PureComponent<ITextInputProps> {
       handleKeyDown,
       width,
       componentContext,
-      margins,
-      onChange
+      margins
     } = this.props
 
     return (
@@ -137,7 +135,7 @@ export class TextInput extends React.PureComponent<ITextInputProps> {
         name={name}
         type='text'
         value={value}
-        onChange={onChange ? this.handleChange : handleChange}
+        onChange={this.handleChange}
         onKeyDown={handleKeyDown}
         onBlur={handleBlur ? (e) => handleBlur(e, value) : undefined}
         onFocus={this.onFocus}
@@ -228,11 +226,14 @@ export class TextInput extends React.PureComponent<ITextInputProps> {
 
   private handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const {
-      onChange
+      onChange,
+      handleChange
     } = this.props
 
     if (onChange) {
       onChange(event.target.value)
+    } else if (handleChange) {
+      handleChange(event)
     }
   }
 }

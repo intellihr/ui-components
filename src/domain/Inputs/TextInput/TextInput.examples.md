@@ -33,7 +33,7 @@ initialState = { textValue: 'I am disabled and cannot change' };
 />
 ```
 
-#### Text Input with placeholder
+#### Text Input with Placeholder
 
 ```jsx
 initialState = { textValue: '' };
@@ -45,7 +45,7 @@ initialState = { textValue: '' };
 />
 ```
 
-#### Input with handleClear
+#### Text Input with HandleClear
 
 ```jsx
 initialState = { textValue: 'I have a clear button' };
@@ -57,7 +57,7 @@ initialState = { textValue: 'I have a clear button' };
 />
 ```
 
-#### Input with handleBlur
+#### Text Input with HandleBlur
 
 ```jsx
 initialState = { textValue: '' };
@@ -93,7 +93,7 @@ initialState = { textValue1: '', textValue2: ''  };
 </div>
 ```
 
-#### Text Input with Disable Prefix text
+#### Text Input with Disable Prefix Text
 
 ```jsx
 import { FontAwesomeIcon } from '@Domain/Icons';
@@ -109,7 +109,7 @@ initialState = { textValue: '' };
 />
 ```
 
-#### Text Input with highlightOnFocus
+#### Text Input with HighlightOnFocus
 
 ```jsx
 initialState = { textValue: 'I will be highlighted when you focus on me' };
@@ -121,7 +121,7 @@ initialState = { textValue: 'I will be highlighted when you focus on me' };
 />
 ```
 
-#### Text Input with custom width
+#### Text Input with Custom Width
 
 ```jsx
 initialState = { textValue: 'I have a custom width 500px' };

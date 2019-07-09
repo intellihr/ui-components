@@ -185,6 +185,7 @@ module.exports = {
             'src/domain/Inputs/IconPickerInput/IconPickerInput.tsx',
             'src/domain/Inputs/Input/Input.tsx',
             'src/domain/Inputs/InputGroup/InputGroup.tsx',
+            'src/domain/Inputs/NumberInput/NumberInput.tsx',
             'src/domain/Inputs/RadioInput/RadioInput.tsx',
             'src/domain/Inputs/RadioSet/RadioSet.tsx',
             'src/domain/Inputs/SelectInput/SelectInput.tsx',

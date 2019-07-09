@@ -16,7 +16,7 @@ export interface IStyledTextInputProps {
   width?: string
 }
 
-const wrapperPadding = 8
+const wrapperPadding = Variables.Spacing.sXSmall
 
 const InputWrapper = styled.div`
   position: relative;
