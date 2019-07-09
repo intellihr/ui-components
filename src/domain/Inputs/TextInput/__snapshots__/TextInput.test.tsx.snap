@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextInput /> should highlight all text when focused and highlightOnFocus is true 1`] = `
+<styled.input
+  className="input "
+  data-component-type="text_input"
+  id="test"
+  name="test"
+  onFocus={[Function]}
+  type="text"
+  value="test"
+/>
+`;
+
+exports[`<TextInput /> should not highlight all text when focused and highlightOnFocus is false 1`] = `
+<styled.input
+  className="input "
+  data-component-type="text_input"
+  id="test"
+  name="test"
+  onFocus={[Function]}
+  type="text"
+  value="test"
+/>
+`;
+
+exports[`<TextInput /> should render an disabled text input 1`] = `
+<styled.input
+  className="input "
+  data-component-type="text_input"
+  disabled={true}
+  id="test"
+  name="test"
+  onFocus={[Function]}
+  type="text"
+  value="test"
+/>
+`;
+
+exports[`<TextInput /> should render an invalid text input 1`] = `
+<styled.input
+  className="input is-invalid-input"
+  data-component-type="text_input"
+  id="test"
+  name="test"
+  onFocus={[Function]}
+  type="text"
+  value="test"
+/>
+`;
+
+exports[`<TextInput /> should render an text input 1`] = `
+<styled.input
+  className="input "
+  data-component-type="text_input"
+  id="test"
+  name="test"
+  onChange={[Function]}
+  onFocus={[Function]}
+  type="text"
+  value="test"
+/>
+`;
+
+exports[`<TextInput /> should render an text input with a clear button 1`] = `
+<styled.div
+  hasClearButton={true}
+  hasIcon={false}
+  hasTextIndent={false}
+  prefixWrapperWidth={0}
+>
+  <styled.input
+    className="input "
+    data-component-type="text_input"
+    id="test"
+    name="test"
+    onFocus={[Function]}
+    type="text"
+    value="test"
+  />
+  <styled.button
+    onClick={[Function]}
+  >
+    ×
+  </styled.button>
+</styled.div>
+`;
+
+exports[`<TextInput /> should render an text input with a disable prefix text 1`] = `
+<styled.div
+  disabledPrefix="test"
+  hasClearButton={false}
+  hasIcon={false}
+  hasTextIndent={true}
+  prefixWrapperWidth={0}
+>
+  <styled.div>
+    <styled.span>
+       
+      test
+       
+    </styled.span>
+  </styled.div>
+  <styled.input
+    className="input "
+    data-component-type="text_input"
+    id="test"
+    name="test"
+    onFocus={[Function]}
+    type="text"
+    value="test"
+  />
+</styled.div>
+`;
+
+exports[`<TextInput /> should render an text input with an icon 1`] = `
+<styled.div
+  hasClearButton={false}
+  hasIcon={true}
+  hasTextIndent={true}
+  prefixWrapperWidth={0}
+>
+  <styled.div>
+    <Icon
+      type="fa-check"
+    />
+    <styled.span>
+       
+       
+    </styled.span>
+  </styled.div>
+  <styled.input
+    className="input "
+    data-component-type="text_input"
+    id="test"
+    name="test"
+    onFocus={[Function]}
+    type="text"
+    value="test"
+  />
+</styled.div>
+`;
+
+exports[`<TextInput /> should render an text input with custom width 1`] = `
+<styled.input
+  className="input "
+  data-component-type="text_input"
+  id="test"
+  name="test"
+  onFocus={[Function]}
+  type="text"
+  value="test"
+  width="100"
+/>
+`;
+
+exports[`<TextInput /> should render with an onBlur function if handleBlur is passed in 1`] = `
+<styled.input
+  className="input "
+  data-component-type="text_input"
+  id="test"
+  name="test"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  type="text"
+  value="test"
+/>
+`;
