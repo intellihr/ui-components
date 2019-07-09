@@ -179,7 +179,6 @@ module.exports = {
         {
           name: 'Inputs',
           components: [
-            'src/domain/Inputs/ToggleSwitch/ToggleSwitch.tsx',
             'src/domain/Inputs/CheckboxInput/CheckboxInput.tsx',
             'src/domain/Inputs/CheckboxSet/CheckboxSet.tsx',
             'src/domain/Inputs/DateRangeInput/DateRangeInput.tsx',
@@ -190,7 +189,9 @@ module.exports = {
             'src/domain/Inputs/RadioSet/RadioSet.tsx',
             'src/domain/Inputs/SelectInput/SelectInput.tsx',
             'src/domain/Inputs/SingleDateInput/SingleDateInput.tsx',
-            'src/domain/Inputs/TextAreaInput/TextAreaInput.tsx'
+            'src/domain/Inputs/TextAreaInput/TextAreaInput.tsx',
+            'src/domain/Inputs/TextInput/TextInput.tsx',
+            'src/domain/Inputs/ToggleSwitch/ToggleSwitch.tsx'
           ]
         },
         {
