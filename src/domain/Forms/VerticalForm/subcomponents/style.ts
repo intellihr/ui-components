@@ -28,6 +28,8 @@ const ErrorMessage = styled.div`
 
 const StyledTooltipPopover = styled.span`
   margin-left: 4px;
+  position: relative;
+  top: 1px;
 `
 
 const StyledInputLabel = styled.label`
