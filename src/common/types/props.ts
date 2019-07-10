@@ -83,6 +83,7 @@ namespace Props {
     LayoutSpacer = 'layout_spacer',
     LayoutSpacerItem = 'layout_spacer_item',
     LinkButton = 'link_button',
+    NumberInput = 'number_input',
     PaginationButtons = 'pagination_buttons',
     PaginationDetails = 'pagination_details',
     Popover = 'popover',

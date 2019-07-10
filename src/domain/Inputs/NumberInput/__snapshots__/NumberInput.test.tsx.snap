@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NumberInput /> should highlight all text when focused and highlightOnFocus is true 1`] = `
+<styled.input
+  className="input "
+  data-component-type="number_input"
+  id="test"
+  name="test"
+  onChange={[Function]}
+  onFocus={[Function]}
+  type="number"
+  value={100}
+/>
+`;
+
+exports[`<NumberInput /> should not highlight all text when focused and highlightOnFocus is false 1`] = `
+<styled.input
+  className="input "
+  data-component-type="number_input"
+  id="test"
+  name="test"
+  onChange={[Function]}
+  onFocus={[Function]}
+  type="number"
+  value={100}
+/>
+`;
+
+exports[`<NumberInput /> should render an disabled number input 1`] = `
+<styled.input
+  className="input "
+  data-component-type="number_input"
+  disabled={true}
+  id="test"
+  name="test"
+  onChange={[Function]}
+  onFocus={[Function]}
+  type="number"
+  value={100}
+/>
+`;
+
+exports[`<NumberInput /> should render an invalid number input 1`] = `
+<styled.input
+  className="input is-invalid-input"
+  data-component-type="number_input"
+  id="test"
+  name="test"
+  onChange={[Function]}
+  onFocus={[Function]}
+  type="number"
+  value={100}
+/>
+`;
+
+exports[`<NumberInput /> should render an number input 1`] = `
+<styled.input
+  className="input "
+  data-component-type="number_input"
+  id="test"
+  name="test"
+  onChange={[Function]}
+  onFocus={[Function]}
+  type="number"
+  value={100}
+/>
+`;
+
+exports[`<NumberInput /> should render an number input with a custom setting 1`] = `
+<styled.input
+  className="input "
+  data-component-type="number_input"
+  id="test"
+  max={5}
+  min={0}
+  name="test"
+  onChange={[Function]}
+  onFocus={[Function]}
+  step={0.5}
+  type="number"
+  value={1}
+/>
+`;
+
+exports[`<NumberInput /> should render an number input with a disable prefix text 1`] = `
+<styled.div
+  disabledPrefix="test"
+  hasIcon={false}
+  hasTextIndent={true}
+  prefixWrapperWidth={0}
+>
+  <styled.div>
+    <styled.span>
+       
+      test
+       
+    </styled.span>
+  </styled.div>
+  <styled.input
+    className="input "
+    data-component-type="number_input"
+    id="test"
+    name="test"
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="number"
+    value={100}
+  />
+</styled.div>
+`;
+
+exports[`<NumberInput /> should render an number input with an icon 1`] = `
+<styled.div
+  hasIcon={true}
+  hasTextIndent={true}
+  prefixWrapperWidth={0}
+>
+  <styled.div>
+    <Icon
+      type="fa-check"
+    />
+    <styled.span>
+       
+       
+    </styled.span>
+  </styled.div>
+  <styled.input
+    className="input "
+    data-component-type="number_input"
+    id="test"
+    name="test"
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="number"
+    value={100}
+  />
+</styled.div>
+`;
+
+exports[`<NumberInput /> should render an number input with custom width 1`] = `
+<styled.input
+  className="input "
+  data-component-type="number_input"
+  id="test"
+  name="test"
+  onChange={[Function]}
+  onFocus={[Function]}
+  type="number"
+  value={100}
+  width="100"
+/>
+`;
+
+exports[`<NumberInput /> should render with an onBlur function if handleBlur is passed in 1`] = `
+<styled.input
+  className="input "
+  data-component-type="number_input"
+  id="test"
+  name="test"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  type="number"
+  value={100}
+/>
+`;
