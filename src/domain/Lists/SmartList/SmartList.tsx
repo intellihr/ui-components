@@ -80,7 +80,7 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
 
   private data: any[] = []
 
-  get listColumns (): JSX.Element[] {
+  get listColumns(): JSX.Element[] {
     const {
       children
     } = this.props
@@ -114,7 +114,10 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
     return map(
       this.listColumns,
       (child: any) => {
-        const childProps = child.props.children
+        let childProps
+        if (child && child.props && child.props.children) {
+          childProps = child.props.children
+        }
 
         if (!React.isValidElement(child)) {
           return <></>
@@ -138,7 +141,7 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
     this.setState({ paginationButton: !this.state.paginationButton })
   }
 
-  get headerRow (): JSX.Element | undefined {
+  get headerRow(): JSX.Element | undefined {
     const {
       showHeaderRow,
       hideHeaderOnSmall
@@ -160,7 +163,7 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
     }
   }
 
-  get canLimitData (): boolean {
+  get canLimitData(): boolean {
     const {
       limit
     } = this.props
@@ -168,7 +171,7 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
     return !isNil(limit) && limit < this.data.length
   }
 
-  public listRow (index: number): JSX.Element {
+  public listRow(index: number): JSX.Element {
     const {
       id,
       handleRowClick,
@@ -206,7 +209,7 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
     )
   }
 
-  get listRowsContent (): JSX.Element[] {
+  get listRowsContent(): JSX.Element[] {
     const {
       limit
     } = this.props
@@ -241,7 +244,7 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
     return rows
   }
 
-  get listContent (): JSX.Element | JSX.Element[] {
+  get listContent(): JSX.Element | JSX.Element[] {
     const {
       emptyListText,
       loading
@@ -269,7 +272,7 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
     return this.listRowsContent
   }
 
-  public showAllRowContent (visibleRowsCount: number) {
+  public showAllRowContent(visibleRowsCount: number) {
     if (this.state.paginationButton) {
       return `Show All (${visibleRowsCount} in Total)`
     }
@@ -277,7 +280,7 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
     return 'Collapse'
   }
 
-  get title (): JSX.Element | undefined {
+  get title(): JSX.Element | undefined {
     const {
       title
     } = this.props
@@ -291,7 +294,7 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
     }
   }
 
-  public render (): JSX.Element {
+  public render(): JSX.Element {
     const {
       data,
       showHoverBg,
