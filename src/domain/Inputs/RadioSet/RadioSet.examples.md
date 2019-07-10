@@ -6,7 +6,7 @@ initialState = { value: 'option 1' };
 <RadioSet
   name='example-radio-set'
   value={state.value}
-  handleChange={(event) => setState({value: event.target.value})}
+  onChange={(value) => setState({value})}
   options={[
       {
         label:'this is option 1',
@@ -24,7 +24,7 @@ initialState = { value: 'option 1' };
       {
         label:'this is option 4 (I have a special action)',
         value:'option 4',
-        handleChange: (event) => { setState({value: event.target.value}); alert('I have a custom onClick handler!');}
+        onChange: (value) => { setState({value}); alert('I have a custom onClick handler!');}
       }
     ]}
 />
@@ -39,7 +39,7 @@ initialState = { value: 'option 1' };
   name='example-radio-set-tight'
   spacing='tight'
   value={state.value}
-  handleChange={(event) => setState({value: event.target.value})}
+  onChange={(value) => setState({value})}
   options={[
       {
         label:'this is option 1',
@@ -57,7 +57,7 @@ initialState = { value: 'option 1' };
       {
         label:'this is option 4 (I have a special action)',
         value:'option 4',
-        handleChange: (event) => { setState({value: event.target.value}); alert('I have a custom onClick handler!');}
+        onChange: (value) => { setState({value}); alert('I have a custom onClick handler!');}
       }
     ]}
 />
@@ -72,7 +72,7 @@ initialState = { value: 'option 1' };
   name='example-radio-set-button'
   value={state.value}
   useButtonStyle
-  handleChange={(event) => setState({value: event.target.value})}
+  onChange={(value) => setState({value})}
   options={[
       {
         label:'this is option 1',
@@ -90,7 +90,7 @@ initialState = { value: 'option 1' };
       {
         label:'this is option 4 (I have a special action)',
         value:'option 4',
-        handleChange: (event) => { setState({event: event.target.value}); alert('I have a custom onClick handler!');}
+        handleChange: (value) => { setState({value}); alert('I have a custom onClick handler!');}
       }
     ]}
 />
@@ -109,7 +109,7 @@ initialState = { value: 'option 1' };
     name='example-radio-set-horizontal'
     value={state.value}
     orientation={Props.Orientation.Horizontal}
-    handleChange={(event) => setState({value: event.target.value})}
+    onChange={(value) => setState({value})}
     options={[
         {
           label:'this is option 1',
@@ -128,7 +128,7 @@ initialState = { value: 'option 1' };
           label:'this is option 4 (I have a special action)',
           value:'option 4',
           isDisabled:false,
-          handleChange: (event) => { setState({value: event.target.value}); alert('I have a custom onClick handler!');}
+          onChange: (value) => { setState({value}); alert('I have a custom onClick handler!');}
         },
         {
           label:'final option is very looooooooooong',
@@ -149,11 +149,11 @@ initialState = { value: 'option 1' };
 <div>
   Horizontal Radio Set
   <RadioSet
-    name='example-radio-set-horizontal'
+    name='example-radio-set-horizontal-tight'
     value={state.value}
     spacing='tight'
     orientation={Props.Orientation.Horizontal}
-    handleChange={(event) => setState({value: event.target.value})}
+    onChange={(value) => setState({value})}
     options={[
         {
           label:'this is option 1',
@@ -172,7 +172,7 @@ initialState = { value: 'option 1' };
           label:'this is option 4 (I have a special action)',
           value:'option 4',
           isDisabled:false,
-          handleChange: (event) => { setState({value: event.target.value}); alert('I have a custom onClick handler!');}
+          onChange: (value) => { setState({value}); alert('I have a custom onClick handler!');}
         },
         {
           label:'final option is very looooooooooong',

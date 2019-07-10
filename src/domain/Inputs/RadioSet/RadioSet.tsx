@@ -14,6 +14,8 @@ export interface IRadioSetProps {
   options: IRadioSetOption[]
   /** action when option is clicked */
   handleChange?: ChangeEventHandler<HTMLInputElement>
+  /** Called when the input is changed */
+  onChange?: (value: string | number) => void
   /** Specify the orientation of the radio set */
   orientation?: Props.Orientation
   /** If true, all radio inputs are wrapped with a button */
@@ -34,10 +36,21 @@ export class RadioSet extends React.PureComponent<IRadioSetProps> {
     spacing: 'normal'
   }
 
-  get options (): JSX.Element[] {
+  public render (): JSX.Element {
+    const {
+      orientation
+    } = this.props
+
+    return (
+      <RadioSetWrapper orientation={orientation!}>
+        {this.options}
+      </RadioSetWrapper>
+    )
+  }
+
+  private get options (): JSX.Element[] {
     const {
       options,
-      handleChange,
       useButtonStyle,
       value,
       name,
@@ -49,7 +62,7 @@ export class RadioSet extends React.PureComponent<IRadioSetProps> {
         <StyledRadioInput
           key={`${name}-${idx}`}
           spacing={spacing!}
-          handleChange={handleChange}
+          handleChange={this.handleChange}
           isButton={useButtonStyle}
           isChecked={value === option.value}
           id={`${name}-${idx}`}
@@ -60,15 +73,16 @@ export class RadioSet extends React.PureComponent<IRadioSetProps> {
     })
   }
 
-  public render (): JSX.Element {
+  private handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const {
-      orientation
+      onChange,
+      handleChange
     } = this.props
 
-    return (
-      <RadioSetWrapper orientation={orientation!}>
-        {this.options}
-      </RadioSetWrapper>
-    )
+    if (onChange) {
+      onChange(event.target.value)
+    } else if (handleChange) {
+      handleChange(event)
+    }
   }
 }

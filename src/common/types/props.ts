@@ -87,6 +87,7 @@ namespace Props {
     PaginationButtons = 'pagination_buttons',
     PaginationDetails = 'pagination_details',
     Popover = 'popover',
+    RadioInput = 'radio_input',
     Record = 'record',
     RecordName = 'record_name',
     SmartList = 'smart_list',
