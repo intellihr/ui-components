@@ -114,11 +114,17 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
     return map(
       this.listColumns,
       (child: any) => {
+        const childProps = child.props.children
+
+        if (!React.isValidElement(child)) {
+          return <></>
+        }
+
         const props: any = listItemProps(child)
 
         if (child.type === ListClickableColumn) {
           props.children = map(
-            child.props.children,
+            childProps,
             (subChild: any) => React.cloneElement(subChild, listItemProps(subChild))
           )
         }
@@ -143,7 +149,7 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
         <div
           className={classNames(
             'header-row',
-            {'hide-for-small-only': hideHeaderOnSmall}
+            { 'hide-for-small-only': hideHeaderOnSmall }
           )}
         >
           <Row>

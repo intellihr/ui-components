@@ -8,14 +8,15 @@ export interface IInputWrapperProps {
   hasIcon: boolean
   prefixWrapperWidth: number
   hasTextIndent: boolean
-  hasClearButton?: boolean
+  hasClearButton: boolean
 }
 
-export interface IStyledInputProps {
+export interface IStyledTextInputProps {
   margins?: Props.IMargins
+  width?: string
 }
 
-const wrapperPadding = 8
+const wrapperPadding = Variables.Spacing.sXSmall
 
 const InputWrapper = styled.div`
   position: relative;
@@ -30,7 +31,7 @@ const InputWrapper = styled.div`
 
   ${(props: IInputWrapperProps) => props.hasClearButton && css`
       input {
-        padding-right: 32px;
+        padding-right: ${Variables.Spacing.sXLarge}px;
       }
   `}
 
@@ -51,17 +52,21 @@ const PrefixWrapper = styled.div`
 `
 
 const DisabledTextWrapper = styled.span`
-  margin-left: 4px;
+  margin-left: ${Variables.Spacing.s2XSmall}px;
   line-height: 21px;
   vertical-align: top;
   user-select: none;
 `
 
-const StyledInput = styled.input`
+const StyledTextInput = styled.input`
   line-height: 16px;
 
   margin: 0;
-  ${(props: IStyledInputProps) => styleForMargins(props.margins)}
+  ${(props: IStyledTextInputProps) => styleForMargins(props.margins)}
+
+  ${(props: IStyledTextInputProps) => props.width && css`
+      width: ${props.width}px;
+   `}
 
   &::-ms-clear {
     display: none;
@@ -71,7 +76,7 @@ const StyledInput = styled.input`
 const StyleClearButton = styled.button`
   position: absolute;
   top: 11px;
-  right: 12px;
+  right: ${Variables.Spacing.sSmall}px;
   outline: none;
   cursor: pointer;
 
@@ -84,6 +89,6 @@ export {
   InputWrapper,
   PrefixWrapper,
   DisabledTextWrapper,
-  StyledInput,
+  StyledTextInput,
   StyleClearButton
 }
