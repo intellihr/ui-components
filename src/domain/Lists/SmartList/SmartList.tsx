@@ -114,7 +114,10 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
     return map(
       this.listColumns,
       (child: any) => {
-        const childProps = child.props.children
+        let childProps
+        if (child && child.props && child.props.children) {
+          childProps = child.props.children
+        }
 
         if (!React.isValidElement(child)) {
           return <></>
