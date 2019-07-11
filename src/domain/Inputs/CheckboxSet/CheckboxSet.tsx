@@ -1,5 +1,5 @@
 import { map } from 'lodash'
-import React, { ChangeEventHandler } from 'react'
+import React from 'react'
 
 import { Props } from '../../../common'
 import { ICheckboxInputProps } from '../CheckboxInput'
@@ -9,10 +9,10 @@ export interface ICheckboxSetProps {
   /** Array of options to display in the list */
   options: ICheckboxInputProps[]
   /** action when option is clicked */
-  handleChange?: ChangeEventHandler<HTMLInputElement>
-  /** ID of the radio input */
+  handleOptionChange?: (name: string, value: string | number) => void
+  /** ID of the checkbox group */
   id?: string
-  /** Specify the orientation of the radio group */
+  /** Specify the orientation of the checkbox group */
   orientation?: Props.Orientation
   /** If true, all checkbox inputs are wrapped with a button */
   useButtonStyle?: boolean
@@ -26,27 +26,6 @@ export class CheckboxSet extends React.PureComponent<ICheckboxSetProps> {
     spacing: 'normal'
   }
 
-  get options (): JSX.Element[] {
-    const {
-      options,
-      handleChange,
-      id,
-      useButtonStyle,
-      spacing
-    } = this.props
-
-    return map(options, (option, idx) => (
-        <StyledCheckboxInput
-          key={id ? `${idx}-${id}` : idx}
-          spacing={spacing!}
-          handleChange={handleChange}
-          isButton={useButtonStyle}
-          {... option}
-        />
-      )
-    )
-  }
-
   public render (): JSX.Element {
     const {
       orientation
@@ -57,5 +36,35 @@ export class CheckboxSet extends React.PureComponent<ICheckboxSetProps> {
         {this.options}
       </CheckboxSetWrapper>
     )
+  }
+
+  private get options (): JSX.Element[] {
+    const {
+      options,
+      id,
+      useButtonStyle,
+      spacing
+    } = this.props
+
+    return map(options, (option, idx) => (
+        <StyledCheckboxInput
+          key={id ? `${idx}-${id}` : idx}
+          spacing={spacing!}
+          handleChange={this.handleChange}
+          isButton={useButtonStyle}
+          {... option}
+        />
+      )
+    )
+  }
+
+  private handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const {
+      handleOptionChange
+    } = this.props
+
+    if (handleOptionChange) {
+      handleOptionChange(event.target.name, event.target.value)
+    }
   }
 }

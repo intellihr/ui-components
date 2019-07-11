@@ -34,7 +34,7 @@ describe('<CheckboxSet />', () => {
     const wrapper = shallow(
       <CheckboxSet
         id='key'
-        handleChange={dummyClick}
+        handleOptionChange={dummyClick}
         options={exampleOptions}
       />
     )
@@ -47,7 +47,7 @@ describe('<CheckboxSet />', () => {
       <CheckboxSet
         useButtonStyle
         id='key'
-        handleChange={dummyClick}
+        handleOptionChange={dummyClick}
         options={exampleOptions}
       />
     )
@@ -60,7 +60,7 @@ describe('<CheckboxSet />', () => {
       <CheckboxSet
         spacing='tight'
         id='key'
-        handleChange={dummyClick}
+        handleOptionChange={dummyClick}
         options={exampleOptions}
       />
     )
@@ -72,7 +72,7 @@ describe('<CheckboxSet />', () => {
     const wrapper = shallow(
       <CheckboxSet
         id='key'
-        handleChange={dummyClick}
+        handleOptionChange={dummyClick}
         options={exampleOptions}
         orientation={Props.Orientation.Horizontal}
       />

@@ -1,67 +1,75 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<CheckboxInput /> should render a checkbox input with a component as the label 1`] = `
-<div
-  className="checkbox-input checkboxInput"
->
-  <Input
-    isButton={false}
-    isChecked={false}
-    label={
+<styled.div>
+  <div
+    className="checkbox-input checkboxInput"
+  >
+    <styled.input
+      className="input "
+      data-component-type="checkbox_input"
+      disabled={false}
+      id="test-jsx-input"
+      name="test-jsx-input"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      className="checkbox"
+      htmlFor="test-jsx-input"
+    >
       <FontAwesomeIcon
         type="star"
       />
-    }
-    name="test-jsx-input"
-    type="checkbox"
-  />
-  <label
-    className="checkbox"
-    htmlFor="test-jsx-input"
-  >
-    <FontAwesomeIcon
-      type="star"
-    />
-  </label>
-</div>
+    </label>
+  </div>
+</styled.div>
 `;
 
 exports[`<CheckboxInput /> should render a checkbox input with button 1`] = `
-<div
-  className="checkbox-input checkboxInput"
->
-  <Input
-    isButton={true}
-    isChecked={false}
-    label="Hey I am a test string"
-    name="test-button-input"
-    type="checkbox"
-  />
-  <label
-    className="checkbox checkbox-button"
-    htmlFor="test-button-input"
+<styled.div>
+  <div
+    className="checkbox-input checkboxInput"
   >
-    Hey I am a test string
-  </label>
-</div>
+    <styled.input
+      className="input "
+      data-component-type="checkbox_input"
+      disabled={false}
+      id="test-button-input"
+      name="test-button-input"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      className="checkbox checkbox-button"
+      htmlFor="test-button-input"
+    >
+      Hey I am a test string
+    </label>
+  </div>
+</styled.div>
 `;
 
 exports[`<CheckboxInput /> should render a checkbox input without button 1`] = `
-<div
-  className="checkbox-input checkboxInput"
->
-  <Input
-    isButton={false}
-    isChecked={false}
-    label="Hey I am a test string"
-    name="test-input"
-    type="checkbox"
-  />
-  <label
-    className="checkbox"
-    htmlFor="test-input"
+<styled.div>
+  <div
+    className="checkbox-input checkboxInput"
   >
-    Hey I am a test string
-  </label>
-</div>
+    <styled.input
+      className="input "
+      data-component-type="checkbox_input"
+      disabled={false}
+      id="test-input"
+      name="test-input"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      className="checkbox"
+      htmlFor="test-input"
+    >
+      Hey I am a test string
+    </label>
+  </div>
+</styled.div>
 `;

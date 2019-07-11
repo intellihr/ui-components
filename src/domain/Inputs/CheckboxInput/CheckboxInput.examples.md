@@ -1,4 +1,4 @@
-#### Basic Input
+#### Basic Checkbox Input
 
 ```jsx
 initialState = { value: false, value2: false };
@@ -8,19 +8,19 @@ initialState = { value: false, value2: false };
     name='example-checkbox'
     label='This is a checkbox input'
     value={state.value}
-    handleChange={() => setState({value: !state.value})}
+    onChange={(value) => setState({value})}
   />
   <CheckboxInput
     isDisabled
     name='example-disabled-checkbox'
     label='This is a disabled checkbox input'
     value={state.value2}
-    handleChange={() => setState({value2: !state.value2})}
+    onChange={(value) => setState({value2: value})}
   />
 </div>
 ```
 
-#### Input Button
+#### Checkbox Input Button
 
 ```jsx
 initialState = { button: false, button2: false };
@@ -31,7 +31,7 @@ initialState = { button: false, button2: false };
     name='button-checkbox'
     label='This is a checkbox input button'
     value={state.button}
-    handleChange={() => setState({button: !state.button})}
+    onChange={(value) => setState({button: value})}
   />
   <CheckboxInput
     isButton
@@ -39,12 +39,12 @@ initialState = { button: false, button2: false };
     name='button-disabled-checkbox'
     label='This is a disabled checkbox input button'
     value={state.button2}
-    handleChange={() => setState({button2: !state.button2})}
+    onChange={(value) => setState({button2: value})}
   />
 </div>
 ```
 
-#### Input with JSX
+#### Checkbox Input with JSX
 
 ```jsx
 import { FontAwesomeIcon } from '@Domain/Icons';
@@ -55,6 +55,20 @@ initialState = { star: false };
   name='star-checkbox'
   label={<div><FontAwesomeIcon type='star' /> I am a star</div>}
   value={state.star}
-  handleChange={() => setState({star: !state.star})}
+  onChange={(value) => setState({star: value})}
+/>
+```
+
+#### Checkbox Input with HandleBlur
+
+```jsx
+initialState = { blur: false };
+
+<CheckboxInput
+  name='blur-checkbox'
+  label='This is a checkbox input with handle blur'
+  value={state.blur}
+  onChange={(value) => setState({blur: value})}
+  handleBlur={() => alert('blur value')} 
 />
 ```

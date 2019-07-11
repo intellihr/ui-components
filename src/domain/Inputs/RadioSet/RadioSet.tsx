@@ -3,15 +3,40 @@ import React, { ChangeEventHandler } from 'react'
 import { Props } from '../../../common'
 import { RadioSetWrapper, StyledRadioInput } from './style'
 
-interface IRadioSetOption {
+export interface IRadioSetOptionProps {
+  /** Custom classname to use */
+  className?: string
+  /** Function passed to `onChange` prop */
+  handleChange?: ChangeEventHandler<HTMLInputElement>
+  /** Called when the input is changed */
+  onChange?: (value: string | number) => void
+  /** Value of the input */
+  value?: string | number
+  /** If true, sets input to disabled state */
+  isDisabled?: boolean
+  /** Handle blur event */
+  handleBlur?: (e: React.FocusEvent<HTMLInputElement>, value?: string | number) => void
+  /** Handle key down events */
+  handleKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void
+  /** If true, use HTML5 required attribute */
+  isHTML5Required?: boolean
+  /** Add autofocus attribute to input */
+  autoFocus?: boolean
+  /** Specify if input is checked */
+  isChecked?: boolean
+  /** The component context */
+  componentContext?: string
+  /** Label to display next to the radio */
   label: JSX.Element | string
-  value: string | number
+  /** If true, the radio input is wrapped with a button */
   isButton?: boolean
+  /** The margins around the component */
+  margins?: Props.IMargins
 }
 
 export interface IRadioSetProps {
   /** Array of options to display in the list */
-  options: IRadioSetOption[]
+  options: IRadioSetOptionProps[]
   /** action when option is clicked */
   handleChange?: ChangeEventHandler<HTMLInputElement>
   /** Called when the input is changed */
@@ -54,7 +79,7 @@ export class RadioSet extends React.PureComponent<IRadioSetProps> {
       useButtonStyle,
       value,
       name,
-      spacing
+      spacing,
     } = this.props
 
     return options.map((option, idx) => {

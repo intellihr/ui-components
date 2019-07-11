@@ -47,28 +47,6 @@ export class RadioInput extends React.PureComponent<IRadioInputProps> {
     isDisabled: false
   }
 
-  get infoLabel (): JSX.Element | null {
-    const {
-      id,
-      name,
-      label,
-      isButton
-    } = this.props
-
-    if (!label) {
-      return null
-    }
-
-    return (
-      <label
-        htmlFor={id || name}
-        className={classNames('radio', { 'radio-button': isButton })}
-      >
-        {label}
-      </label>
-    )
-  }
-
   public render (): JSX.Element {
     const {
       id,
@@ -114,6 +92,28 @@ export class RadioInput extends React.PureComponent<IRadioInputProps> {
     )
   }
 
+  private get infoLabel (): JSX.Element | null {
+    const {
+      id,
+      name,
+      label,
+      isButton
+    } = this.props
+
+    if (!label) {
+      return null
+    }
+
+    return (
+      <label
+        htmlFor={id || name}
+        className={classNames('radio', { 'radio-button': isButton })}
+      >
+        {label}
+      </label>
+    )
+  }
+
   private get classNames (): string {
     const {
       className
@@ -132,9 +132,6 @@ export class RadioInput extends React.PureComponent<IRadioInputProps> {
       onChange,
       handleChange
     } = this.props
-    console.log(event)
-    console.log(onChange,'onChange')
-    console.log(handleChange, 'handleChange')
 
     if (onChange) {
       onChange(event.target.value)

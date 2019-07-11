@@ -90,7 +90,7 @@ initialState = { value: 'option 1' };
       {
         label:'this is option 4 (I have a special action)',
         value:'option 4',
-        handleChange: (value) => { setState({value}); alert('I have a custom onClick handler!');}
+        onChange: (value) => { setState({value}); alert('I have a custom onClick handler!');}
       }
     ]}
 />
