@@ -104,7 +104,7 @@ initialState = { button1: false, button2: false, button3: false, button4: false}
 ```jsx
 import { Props } from '@Common';
 
-initialState = { horizontal1: false, horizontal2: false, horizontal3: false, horizontal4: false};
+initialState = { horizontal1: false, horizontal2: false, horizontal3: false, horizontal4: false, horizontal5: false};
 
 <CheckboxSet
   value={state}
@@ -129,6 +129,10 @@ initialState = { horizontal1: false, horizontal2: false, horizontal3: false, hor
         label:'this is option 4 (I have a special action)',
         identifier:'horizontal4',
         onChange: () => {setState({horizontal4: !state.horizontal4}); alert('I have a custom onClick handler!');}
+      },
+      {
+        label:'final option is very looooooooooong',
+        identifier:'horizontal5'
       }
     ]}
 />
@@ -139,7 +143,7 @@ initialState = { horizontal1: false, horizontal2: false, horizontal3: false, hor
 ```jsx
 import { Props } from '@Common';
 
-initialState = { horizontalTight1: false, horizontalTight2: false, horizontalTight3: false, horizontalTight4: false};
+initialState = { horizontalTight1: false, horizontalTight2: false, horizontalTight3: false, horizontalTight4: false, horizontalTight5: false};
 
 <CheckboxSet
   value={state}
@@ -165,6 +169,10 @@ initialState = { horizontalTight1: false, horizontalTight2: false, horizontalTig
         label:'this is option 4 (I have a special action)',
         identifier:'horizontalTight4',
         onChange: () => {setState({horizontalTight4: !state.horizontalTight4}); alert('I have a custom onClick handler!');}
+      },
+      {
+        label:'final option is very looooooooooong',
+        identifier:'horizontalTight5'
       }
     ]}
 />
