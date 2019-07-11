@@ -79,7 +79,7 @@ export class RadioSet extends React.PureComponent<IRadioSetProps> {
       useButtonStyle,
       value,
       name,
-      spacing,
+      spacing
     } = this.props
 
     return options.map((option, idx) => {
