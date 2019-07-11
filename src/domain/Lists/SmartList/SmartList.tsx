@@ -48,6 +48,8 @@ export interface ISmartList {
   rowWrapper?: (props: object) => JSX.Element
   /** Skeleton Options */
   skeletonOptions?: ISmartListSkeletonOptions
+  /** Stick the header row to the viewport if it is out of view */
+  stickyHeader?: boolean
   /** The data-component-context */
   componentContext?: string
 }
@@ -144,7 +146,8 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
   get headerRow (): JSX.Element | undefined {
     const {
       showHeaderRow,
-      hideHeaderOnSmall
+      hideHeaderOnSmall,
+      stickyHeader
     } = this.props
 
     if (showHeaderRow) {
@@ -152,7 +155,8 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
         <div
           className={classNames(
             'header-row',
-            { 'hide-for-small-only': hideHeaderOnSmall }
+            { 'hide-for-small-only': hideHeaderOnSmall },
+            { sticky: stickyHeader }
           )}
         >
           <Row>
