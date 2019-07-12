@@ -136,6 +136,7 @@ exports[`<SmartList /> should render a headerless Smart List displaying the righ
       "showSkeleton": false,
     }
   }
+  stickyHeader={false}
   title="My List Title"
 >
   <div
@@ -2054,6 +2055,7 @@ exports[`<SmartList /> should render an Smart List displaying the right data wit
       "showSkeleton": false,
     }
   }
+  stickyHeader={false}
 >
   <div
     className="SmartList smart-list hover-bg"
@@ -3945,6 +3947,7 @@ exports[`<SmartList /> should render an Smart List with a single column 1`] = `
       "showSkeleton": false,
     }
   }
+  stickyHeader={false}
 >
   <div
     className="SmartList smart-list hover-bg"
@@ -5094,6 +5097,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
       "showSkeleton": false,
     }
   }
+  stickyHeader={false}
 >
   <div
     className="SmartList smart-list hover-bg"
@@ -5774,6 +5778,7 @@ exports[`<SmartList /> should render skeleton 1`] = `
       "showSkeleton": true,
     }
   }
+  stickyHeader={false}
 >
   <div
     className="SmartList smart-list hover-bg"
