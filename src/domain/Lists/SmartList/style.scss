@@ -48,7 +48,7 @@
 
   .item-row {
     align-items: center;
-    border-top: 1px solid $n300;
+    border-bottom: 1px solid $n300;
     color: $n700;
     min-height: 80px;
     padding: 10px;
@@ -98,5 +98,12 @@
 
   .spinner {
     padding: 2rem 0;
+  }
+
+  .sticky {
+    border-bottom: 1px solid $n300;
+    position: sticky;
+    top: 0;
+    z-index: 1;
   }
 }
