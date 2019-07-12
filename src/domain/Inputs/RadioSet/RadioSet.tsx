@@ -22,8 +22,6 @@ export interface IRadioSetOptionProps {
   isHTML5Required?: boolean
   /** Add autofocus attribute to input */
   autoFocus?: boolean
-  /** Specify if input is checked */
-  isChecked?: boolean
   /** The component context */
   componentContext?: string
   /** Label to display next to the radio */

@@ -1,17 +1,45 @@
-import { map, get } from 'lodash'
+import classNames from 'classnames'
+import { get, map } from 'lodash'
 import React, {ChangeEventHandler} from 'react'
 
-import {Props, Variables} from '../../../common'
-import { ICheckboxInputProps } from '../CheckboxInput'
-import { StyledCheckboxInput, StyledCheckboxInputWrapper} from '../CheckboxInput/style'
-import classNames from 'classnames'
-import {CheckboxSetWrapper} from './style'
+import { Props, Variables } from '../../../common'
+import { StyledCheckboxInput, StyledCheckboxInputWrapper } from '../CheckboxInput/style'
+import { CheckboxSetWrapper } from './style'
 
 const style = require('../CheckboxInput/style.scss')
 
+interface ICheckboxSetOptionProps {
+  /** Custom classname to use */
+  className?: string
+  /** Function passed to `onChange` prop */
+  handleChange?: ChangeEventHandler<HTMLInputElement>
+  /** Called when the input is changed */
+  onChange?: (checked: boolean) => void
+  /** If true, sets input to disabled state */
+  isDisabled?: boolean
+  /** Handle blur event */
+  handleBlur?: (e: React.FocusEvent<HTMLInputElement>, value?: string | number) => void
+  /** Handle key down events */
+  handleKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void
+  /** If true, use HTML5 required attribute */
+  isHTML5Required?: boolean
+  /** Add autofocus attribute to input */
+  autoFocus?: boolean
+  /** The component context */
+  componentContext?: string
+  /** The margins around the component */
+  margins?: Props.IMargins
+  /** Label to display next to the checkbox */
+  label: JSX.Element | string
+  /** If true, the checkbox is wrapped by a button */
+  isButton?: boolean
+  /** Identifier of the input */
+  identifier: string
+}
+
 export interface ICheckboxSetProps {
   /** Array of options to display in the list */
-  options: Array<ICheckboxInputProps & {identifier: string}>
+  options: ICheckboxSetOptionProps[]
   /** Function passed to `onChange` prop */
   handleChange?: ChangeEventHandler<HTMLInputElement>
   /** Called when the input is changed */
@@ -51,13 +79,12 @@ export class CheckboxSet extends React.PureComponent<ICheckboxSetProps> {
   private get options (): Array<JSX.Element|null> {
     const {
       options,
-      name
+      name,
+      value
     } = this.props
 
     return map(options, (option) => {
         const {
-          id,
-          value,
           handleKeyDown,
           handleBlur,
           isDisabled,
@@ -84,7 +111,7 @@ export class CheckboxSet extends React.PureComponent<ICheckboxSetProps> {
                 value={get(value, identifier) ? 'true' : 'false'}
                 onChange={this.handleChange(option)}
                 onKeyDown={handleKeyDown}
-                onBlur={handleBlur ? (e) => handleBlur(e, value) : undefined}
+                onBlur={handleBlur ? (e) => handleBlur(e, get(value, identifier) ? 'true' : 'false') : undefined}
                 className={this.classNames(className)}
                 disabled={isDisabled}
                 required={isHTML5Required}
@@ -147,22 +174,22 @@ export class CheckboxSet extends React.PureComponent<ICheckboxSetProps> {
     )
   }
 
-  private handleChange = (option: ICheckboxInputProps & {identifier: string}) => (event: React.ChangeEvent<HTMLInputElement>) => {
+  private handleChange = (option: ICheckboxSetOptionProps) => (event: React.ChangeEvent<HTMLInputElement>) => {
     const {
       onChange,
       handleChange
     } = this.props
 
     if (onChange) {
-      onChange(event.target.id)
+      onChange(event.target.id.substring(event.target.id.indexOf('-') + 1))
     } else if (handleChange) {
       handleChange(event)
     }
 
-    this.optionHandleChange(option)
+    this.optionHandleChange(option, event)
   }
 
-  private optionHandleChange = (option: ICheckboxInputProps & {identifier: string}) => (event: React.ChangeEvent<HTMLInputElement>) => {
+  private optionHandleChange = (option: ICheckboxSetOptionProps, event: React.ChangeEvent<HTMLInputElement>) => {
     const {
       onChange,
       handleChange

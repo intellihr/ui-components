@@ -6,6 +6,7 @@ exports[`<CheckboxInput /> should render a checkbox input with a component as th
     className="checkbox-input checkboxInput"
   >
     <styled.input
+      checked={false}
       className="input "
       data-component-type="checkbox_input"
       disabled={false}
@@ -32,6 +33,7 @@ exports[`<CheckboxInput /> should render a checkbox input with button 1`] = `
     className="checkbox-input checkboxInput"
   >
     <styled.input
+      checked={false}
       className="input "
       data-component-type="checkbox_input"
       disabled={false}
@@ -56,6 +58,7 @@ exports[`<CheckboxInput /> should render a checkbox input without button 1`] = `
     className="checkbox-input checkboxInput"
   >
     <styled.input
+      checked={false}
       className="input "
       data-component-type="checkbox_input"
       disabled={false}
