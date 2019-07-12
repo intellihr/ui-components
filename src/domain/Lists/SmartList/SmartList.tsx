@@ -75,7 +75,8 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
     skeletonOptions: {
       showSkeleton: false,
       numberOfRows: 5
-    }
+    },
+    stickyHeader: false
   }
 
   public state: ISmartListState = { paginationButton: true }
