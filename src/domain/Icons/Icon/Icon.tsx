@@ -7,6 +7,8 @@ import { BadgeWrapper, StyledIcon } from './style'
 import { IconType } from './types'
 
 interface IIconProps {
+  /**  Prefix */
+  prefix: 'fa-' | 'intelli-icon-'
   /** FontAwesome or alternate name of the icon to display */
   type: IconType
   /** Multiplies icon size by this amount */
@@ -25,12 +27,22 @@ interface IIconProps {
   margins?: Props.IMargins
 }
 
-const Icon: React.FC<IIconProps> = ({ isSpinning = false, size = 'medium', className, color, customSize, type, badge, margins }) => {
+const Icon: React.FC<IIconProps> = ({
+  isSpinning = false,
+  size = 'medium',
+  className,
+  color,
+  customSize,
+  type,
+  badge,
+  margins,
+  prefix
+}) => {
   const classes = classNames(
     className,
     'icon',
     'fas',
-    type,
+    `${prefix}${type}`,
     {
       'fa-spin': isSpinning
     }
