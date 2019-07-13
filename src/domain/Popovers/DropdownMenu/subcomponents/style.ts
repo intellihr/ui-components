@@ -27,7 +27,7 @@ const DefaultDropdownButton = styled.button`
     border-color: ${Variables.Color.n400};
   }
 
-  .fa {
+  .fas {
     font-size: 1.5rem;
     line-height: 1;
     margin: 0;

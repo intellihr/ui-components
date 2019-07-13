@@ -50,7 +50,7 @@ const CarouselChevronButton = styled.button`
     cursor: default;
   }
 
-  .fa {
+  .fas {
     margin: 0;
   }
 `

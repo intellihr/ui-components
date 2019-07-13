@@ -29,7 +29,7 @@ const Icon: React.FC<IIconProps> = ({ isSpinning = false, size = 'medium', class
   const classes = classNames(
     className,
     'icon',
-    'fa',
+    'fas',
     type,
     {
       'fa-spin': isSpinning
