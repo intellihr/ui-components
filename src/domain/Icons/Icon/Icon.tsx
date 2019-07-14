@@ -1,16 +1,13 @@
 import classNames from 'classnames'
-import { includes } from 'lodash'
 import React from 'react'
 
 import { Props } from '../../../common'
 import { BadgeWrapper, StyledIcon } from './style'
-import { IconType } from './types'
+import { IconValue } from './types'
 
 interface IIconProps {
-  /**  Prefix */
-  prefix: 'fa-' | 'intelli-icon-'
   /** FontAwesome or alternate name of the icon to display */
-  type: IconType
+  icon: IconValue
   /** Multiplies icon size by this amount */
   size?: 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge'
   /** Custom sizes for icons */
@@ -33,16 +30,14 @@ const Icon: React.FC<IIconProps> = ({
   className,
   color,
   customSize,
-  type,
+  icon,
   badge,
-  margins,
-  prefix
+  margins
 }) => {
   const classes = classNames(
     className,
     'icon',
-    'fas',
-    `${prefix}${type}`,
+    `${icon}`,
     {
       'fa-spin': isSpinning
     }
@@ -64,7 +59,7 @@ const Icon: React.FC<IIconProps> = ({
         size={size}
         margins={margins}
       />
-      {badge && includes(['large', 'xlarge', 'xxlarge'], size) && (
+      {badge && ['large', 'xlarge', 'xxlarge'].includes(size) && (
         <BadgeWrapper
           size={size}
         >

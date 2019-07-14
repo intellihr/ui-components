@@ -1,18 +1,16 @@
 import React from 'react'
 
-import { Omit } from '../../../common'
 import { IIconProps, Icon } from '../Icon'
-import { FontAwesomeIconType  } from '../Icon/types'
+import { FontAwesomeIconValue } from '../Icon/types'
 
-interface IFontAwesomeIconProps extends Omit<IIconProps, 'type'> {
-  type: FontAwesomeIconType
+interface IFontAwesomeIconProps extends IIconProps {
+  icon: FontAwesomeIconValue
 }
 
-const FontAwesomeIcon: React.FC<IFontAwesomeIconProps> = ({ type, ...props }) => (
+const FontAwesomeIcon: React.FC<IFontAwesomeIconProps> = ({ icon, ...props }) => (
   <Icon
     {...props}
-    prefix='fa-'
-    type={type}
+    icon={icon}
   />
 )
 
