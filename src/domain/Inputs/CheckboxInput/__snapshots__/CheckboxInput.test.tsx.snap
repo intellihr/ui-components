@@ -76,3 +76,29 @@ exports[`<CheckboxInput /> should render a checkbox input without button 1`] = `
   </div>
 </styled.div>
 `;
+
+exports[`<CheckboxInput /> should render a checked checkbox input without button 1`] = `
+<styled.div>
+  <div
+    className="checkbox-input checkboxInput"
+  >
+    <styled.input
+      checked={true}
+      className="input "
+      data-component-type="checkbox_input"
+      disabled={false}
+      id="test-input"
+      name="test-input"
+      onChange={[Function]}
+      type="checkbox"
+      value="true"
+    />
+    <label
+      className="checkbox"
+      htmlFor="test-input"
+    >
+      Hey I am a test string
+    </label>
+  </div>
+</styled.div>
+`;

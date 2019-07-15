@@ -11,10 +11,6 @@ const style = require('../CheckboxInput/style.scss')
 interface ICheckboxSetOptionProps {
   /** Custom classname to use */
   className?: string
-  /** Function passed to `onChange` prop */
-  handleChange?: ChangeEventHandler<HTMLInputElement>
-  /** Called when the input is changed */
-  onChange?: (checked: boolean) => void
   /** If true, sets input to disabled state */
   isDisabled?: boolean
   /** Handle blur event */
@@ -27,8 +23,6 @@ interface ICheckboxSetOptionProps {
   autoFocus?: boolean
   /** The component context */
   componentContext?: string
-  /** The margins around the component */
-  margins?: Props.IMargins
   /** Label to display next to the checkbox */
   label: JSX.Element | string
   /** If true, the checkbox is wrapped by a button */
@@ -38,12 +32,14 @@ interface ICheckboxSetOptionProps {
 }
 
 export interface ICheckboxSetProps {
+  /** The margins around the component */
+  margins?: Props.IMargins
   /** Array of options to display in the list */
   options: ICheckboxSetOptionProps[]
   /** Function passed to `onChange` prop */
   handleChange?: ChangeEventHandler<HTMLInputElement>
   /** Called when the input is changed */
-  onChange?: (checkedOptionIdentifier: string) => void
+  onChange?: (value: { [i: string]: boolean }) => void
   /** Specify the orientation of the checkbox group */
   orientation?: Props.Orientation
   /** If true, all checkbox inputs are wrapped with a button */
@@ -66,11 +62,15 @@ export class CheckboxSet extends React.PureComponent<ICheckboxSetProps> {
 
   public render (): JSX.Element {
     const {
-      orientation
+      orientation,
+      margins
     } = this.props
 
     return (
-      <CheckboxSetWrapper orientation={orientation!}>
+      <CheckboxSetWrapper
+        orientation={orientation!}
+        margins={margins}
+      >
         {this.options}
       </CheckboxSetWrapper>
     )
@@ -92,13 +92,12 @@ export class CheckboxSet extends React.PureComponent<ICheckboxSetProps> {
           autoFocus,
           componentContext,
           className,
-          margins,
           identifier
         } = option
 
         return (
           <StyledCheckboxInputWrapper
-            margins={this.margins(margins)}
+            margins={this.inputMargins}
             key={`${name}-${identifier}`}
           >
             <div
@@ -109,7 +108,7 @@ export class CheckboxSet extends React.PureComponent<ICheckboxSetProps> {
                 name={name}
                 type='checkbox'
                 value={get(value, identifier) ? 'true' : 'false'}
-                onChange={this.handleChange(option)}
+                onChange={this.handleChange}
                 onKeyDown={handleKeyDown}
                 onBlur={handleBlur ? (e) => handleBlur(e, get(value, identifier) ? 'true' : 'false') : undefined}
                 className={this.classNames(className)}
@@ -127,22 +126,16 @@ export class CheckboxSet extends React.PureComponent<ICheckboxSetProps> {
       )
   }
 
-  private margins = (margins?: Props.IMargins) => {
+  private get inputMargins (): Props.IMargins | undefined {
     const {
       spacing
     } = this.props
 
-    if (margins) {
-      return margins
-    } else {
-      if (spacing === 'normal') {
-        return { bottom: Variables.Spacing.sXSmall }
-      }
-
-      if (spacing === 'tight') {
-        return {}
-      }
+    if (spacing === 'normal') {
+      return { bottom: Variables.Spacing.sXSmall }
     }
+
+    return undefined
   }
 
   private infoLabel = (label: string|JSX.Element, id: string) =>  {
@@ -174,29 +167,21 @@ export class CheckboxSet extends React.PureComponent<ICheckboxSetProps> {
     )
   }
 
-  private handleChange = (option: ICheckboxSetOptionProps) => (event: React.ChangeEvent<HTMLInputElement>) => {
+  private handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const {
       onChange,
-      handleChange
+      handleChange,
+      value,
+      name
     } = this.props
 
     if (onChange) {
-      onChange(event.target.id.substring(event.target.id.indexOf('-') + 1))
-    } else if (handleChange) {
-      handleChange(event)
-    }
-
-    this.optionHandleChange(option, event)
-  }
-
-  private optionHandleChange = (option: ICheckboxSetOptionProps, event: React.ChangeEvent<HTMLInputElement>) => {
-    const {
-      onChange,
-      handleChange
-    } = option
-
-    if (onChange) {
-      onChange(event.target.value === 'true' ? true : false)
+        const splitId = event.target.id.split(`${name}-`)
+        const newValue: { [i: string]: boolean } = {
+            ... value,
+          [splitId[1]]: event.target.checked
+        }
+          onChange(newValue)
     } else if (handleChange) {
       handleChange(event)
     }

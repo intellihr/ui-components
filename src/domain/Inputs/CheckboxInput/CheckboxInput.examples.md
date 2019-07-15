@@ -8,14 +8,14 @@ initialState = { value: false, value2: false };
     name='example-checkbox'
     label='This is a checkbox input'
     value={state.value}
-    onChange={(currentValue) => setState({value: !currentValue})}
+    onChange={(currentValue) => setState({value: currentValue})}
   />
   <CheckboxInput
     isDisabled
     name='example-disabled-checkbox'
     label='This is a disabled checkbox input'
     value={state.value2}
-    onChange={(currentValue) => setState({value2: !currentValue})}
+    onChange={(currentValue) => setState({value2: currentValue})}
   />
 </div>
 ```
@@ -31,7 +31,7 @@ initialState = { button: false, button2: false };
     name='button-checkbox'
     label='This is a checkbox input button'
     value={state.button}
-    onChange={(currentValue) => setState({button: !currentValue})}
+    onChange={(currentValue) => setState({button: currentValue})}
   />
   <CheckboxInput
     isButton
@@ -39,7 +39,7 @@ initialState = { button: false, button2: false };
     name='button-disabled-checkbox'
     label='This is a disabled checkbox input button'
     value={state.button2}
-    onChange={(currentValue) => setState({button2: !currentValue})}
+    onChange={(currentValue) => setState({button2: currentValue})}
   />
 </div>
 ```
@@ -55,7 +55,7 @@ initialState = { star: false };
   name='star-checkbox'
   label={<div><FontAwesomeIcon type='star' /> I am a star</div>}
   value={state.star}
-  onChange={(currentValue) => setState({star: !currentValue})}
+  onChange={(currentValue) => setState({star: currentValue})}
 />
 ```
 
@@ -68,7 +68,7 @@ initialState = { blur: false };
   name='blur-checkbox'
   label='This is a checkbox input with handle blur'
   value={state.blur}
-  onChange={(currentValue) => setState({blur: !currentValue})}
+  onChange={(currentValue) => setState({blur: currentValue})}
   handleBlur={() => {setState({blur: false}); alert('blur value')}} 
 />
 ```

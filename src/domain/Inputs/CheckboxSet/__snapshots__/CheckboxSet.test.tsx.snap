@@ -366,7 +366,6 @@ exports[`<CheckboxSet /> should render a checkbox set with tight spacing 1`] = `
 >
   <styled.div
     key="key-option-1"
-    margins={Object {}}
   >
     <div
       className="checkbox-input checkboxInput"
@@ -390,7 +389,6 @@ exports[`<CheckboxSet /> should render a checkbox set with tight spacing 1`] = `
   </styled.div>
   <styled.div
     key="key-option-2"
-    margins={Object {}}
   >
     <div
       className="checkbox-input checkboxInput"
@@ -415,7 +413,6 @@ exports[`<CheckboxSet /> should render a checkbox set with tight spacing 1`] = `
   </styled.div>
   <styled.div
     key="key-option-3"
-    margins={Object {}}
   >
     <div
       className="checkbox-input checkboxInput"
@@ -439,7 +436,6 @@ exports[`<CheckboxSet /> should render a checkbox set with tight spacing 1`] = `
   </styled.div>
   <styled.div
     key="key-option-4"
-    margins={Object {}}
   >
     <div
       className="checkbox-input checkboxInput"

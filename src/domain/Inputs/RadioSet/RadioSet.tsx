@@ -1,15 +1,14 @@
+import classNames from 'classnames'
 import React, { ChangeEventHandler } from 'react'
 
-import { Props } from '../../../common'
-import { RadioSetWrapper, StyledRadioInput } from './style'
+import { Props, Variables } from '../../../common'
+import { RadioSetWrapper, StyledRadioInput, StyledRadioInputWrapper } from './style'
+
+const style = require('../RadioSet/style.scss')
 
 export interface IRadioSetOptionProps {
   /** Custom classname to use */
   className?: string
-  /** Function passed to `onChange` prop */
-  handleChange?: ChangeEventHandler<HTMLInputElement>
-  /** Called when the input is changed */
-  onChange?: (value: string | number) => void
   /** Value of the input */
   value?: string | number
   /** If true, sets input to disabled state */
@@ -28,8 +27,6 @@ export interface IRadioSetOptionProps {
   label: JSX.Element | string
   /** If true, the radio input is wrapped with a button */
   isButton?: boolean
-  /** The margins around the component */
-  margins?: Props.IMargins
 }
 
 export interface IRadioSetProps {
@@ -49,6 +46,8 @@ export interface IRadioSetProps {
   name: string
   /** the spacing of radio set */
   spacing?: 'normal' | 'tight'
+  /** The margins around the component */
+  margins?: Props.IMargins
 }
 
 export class RadioSet extends React.PureComponent<IRadioSetProps> {
@@ -61,11 +60,15 @@ export class RadioSet extends React.PureComponent<IRadioSetProps> {
 
   public render (): JSX.Element {
     const {
-      orientation
+      orientation,
+      margins
     } = this.props
 
     return (
-      <RadioSetWrapper orientation={orientation!}>
+      <RadioSetWrapper
+        orientation={orientation!}
+        margins={margins}
+      >
         {this.options}
       </RadioSetWrapper>
     )
@@ -74,26 +77,91 @@ export class RadioSet extends React.PureComponent<IRadioSetProps> {
   private get options (): JSX.Element[] {
     const {
       options,
-      useButtonStyle,
       value,
-      name,
-      spacing
+      name
     } = this.props
 
     return options.map((option, idx) => {
+      const {
+        handleKeyDown,
+        handleBlur,
+        isDisabled,
+        isHTML5Required,
+        autoFocus,
+        componentContext,
+        className
+      } = option
+
       return (
-        <StyledRadioInput
+        <StyledRadioInputWrapper
+          margins={this.inputMargins}
           key={`${name}-${idx}`}
-          spacing={spacing!}
-          handleChange={this.handleChange}
-          isButton={useButtonStyle}
-          isChecked={value === option.value}
-          id={`${name}-${idx}`}
-          name={name}
-          {...option}
-        />
+        >
+          <div
+            className={classNames( style.radioInput, className)}
+          >
+            <StyledRadioInput
+              id={`${name}-${idx}`}
+              name={name}
+              type='radio'
+              value={option.value}
+              onChange={this.handleChange}
+              onKeyDown={handleKeyDown}
+              onBlur={handleBlur ? (e) => handleBlur(e, option.value) : undefined}
+              className={this.classNames(className)}
+              disabled={isDisabled}
+              required={isHTML5Required}
+              autoFocus={autoFocus}
+              data-component-type={Props.ComponentType.RadioInput}
+              data-component-context={componentContext}
+              checked={value === option.value}
+            />
+            {this.infoLabel(option.label, `${name}-${idx}`)}
+          </div>
+        </StyledRadioInputWrapper>
       )
     })
+  }
+
+  private infoLabel  = (label: string|JSX.Element, id: string) =>  {
+    const {
+      name,
+      useButtonStyle
+    } = this.props
+
+    if (!label) {
+      return null
+    }
+
+    return (
+      <label
+        htmlFor={id || name}
+        className={classNames('radio', { 'radio-button': useButtonStyle })}
+      >
+        {label}
+      </label>
+    )
+  }
+
+  private classNames = (className?: string) => {
+    return classNames(
+      style.input,
+      [
+        className
+      ]
+    )
+  }
+
+  private get inputMargins (): Props.IMargins | undefined {
+    const {
+      spacing
+    } = this.props
+
+    if (spacing === 'normal') {
+      return { bottom: Variables.Spacing.sXSmall }
+    }
+
+    return undefined
   }
 
   private handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {

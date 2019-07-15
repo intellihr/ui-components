@@ -22,9 +22,8 @@ initialState = { value: 'option 1' };
         value:'option 3',
       },
       {
-        label:'this is option 4 (I have a special action)',
-        value:'option 4',
-        onChange: (value) => { setState({value}); alert('I have a custom onClick handler!');}
+        label:'this is option 4',
+        value:'option 4'
       }
     ]}
 />
@@ -55,9 +54,8 @@ initialState = { value: 'option 1' };
         value:'option 3',
       },
       {
-        label:'this is option 4 (I have a special action)',
-        value:'option 4',
-        onChange: (value) => { setState({value}); alert('I have a custom onClick handler!');}
+        label:'this is option 4',
+        value:'option 4'
       }
     ]}
 />
@@ -88,9 +86,8 @@ initialState = { value: 'option 1' };
         value:'option 3',
       },
       {
-        label:'this is option 4 (I have a special action)',
-        value:'option 4',
-        onChange: (value) => { setState({value}); alert('I have a custom onClick handler!');}
+        label:'this is option 4',
+        value:'option 4'
       }
     ]}
 />
@@ -125,10 +122,8 @@ initialState = { value: 'option 1' };
           value:'option 3'
         },
         {
-          label:'this is option 4 (I have a special action)',
-          value:'option 4',
-          isDisabled:false,
-          onChange: (value) => { setState({value}); alert('I have a custom onClick handler!');}
+          label:'this is option 4',
+          value:'option 4'
         },
         {
           label:'final option is very looooooooooong',
@@ -169,10 +164,8 @@ initialState = { value: 'option 1' };
           value:'option 3'
         },
         {
-          label:'this is option 4 (I have a special action)',
-          value:'option 4',
-          isDisabled:false,
-          onChange: (value) => { setState({value}); alert('I have a custom onClick handler!');}
+          label:'this is option 4',
+          value:'option 4'
         },
         {
           label:'final option is very looooooooooong',

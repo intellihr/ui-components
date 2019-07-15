@@ -16,7 +16,7 @@ export interface ICheckboxInputProps {
   /** Function passed to `onChange` prop */
   handleChange?: ChangeEventHandler<HTMLInputElement>
   /** Called when the input is changed */
-  onChange?: (checked: boolean) => void
+  onChange?: (value: boolean) => void
   /** Value of the input */
   value?: string | number
   /** If true, sets input to disabled state */
@@ -94,11 +94,7 @@ export class CheckboxInput extends React.PureComponent<ICheckboxInputProps> {
       value
     } = this.props
 
-    if (value) {
-      return true
-    }
-
-    return false
+    return Boolean(value)
   }
 
   private get infoLabel (): JSX.Element | null {
@@ -143,7 +139,7 @@ export class CheckboxInput extends React.PureComponent<ICheckboxInputProps> {
     } = this.props
 
     if (onChange) {
-      onChange(event.target.value === 'true' ? true : false)
+      onChange(event.target.checked)
     } else if (handleChange) {
       handleChange(event)
     }
