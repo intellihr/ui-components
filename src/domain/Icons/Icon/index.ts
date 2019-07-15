@@ -2,5 +2,6 @@ export { Icon, IIconProps } from './Icon'
 export {
   IconValue,
   FontAwesomeIconValue,
-  IntelliIconValue
+  IntelliIconValue,
+  Icons,
 } from './types'
