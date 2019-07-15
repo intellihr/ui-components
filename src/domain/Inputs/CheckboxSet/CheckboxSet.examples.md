@@ -2,7 +2,7 @@
 
 ```jsx
 
-initialState = { value:{option1: false, option2: false, option3: false, option4: false} };
+initialState = { value:{option1: true, option2: false, option3: false} };
 
 <CheckboxSet
   value={state.value}
@@ -30,7 +30,7 @@ initialState = { value:{option1: false, option2: false, option3: false, option4:
 
 ```jsx
 
-initialState = { value:{tight1: false, tight2: false, tight3: false, tight4: false} };
+initialState = { value:{tight1: false, tight2: true, tight3: false} };
 
 <CheckboxSet
   value={state.value}
@@ -59,7 +59,7 @@ initialState = { value:{tight1: false, tight2: false, tight3: false, tight4: fal
 
 ```jsx
 
-initialState = { value: {button1: false, button2: false, button3: false, button4: false} };
+initialState = { value: {button1: false, button2: false, button3: false} };
 
 <CheckboxSet
   value={state.value}

@@ -22,7 +22,6 @@ exports[`<CheckboxSet /> should render a checkbox button set 1`] = `
         name="key"
         onChange={[Function]}
         type="checkbox"
-        value="false"
       />
       <label
         className="checkbox checkbox-button"
@@ -51,7 +50,6 @@ exports[`<CheckboxSet /> should render a checkbox button set 1`] = `
         name="key"
         onChange={[Function]}
         type="checkbox"
-        value="false"
       />
       <label
         className="checkbox checkbox-button"
@@ -79,7 +77,6 @@ exports[`<CheckboxSet /> should render a checkbox button set 1`] = `
         name="key"
         onChange={[Function]}
         type="checkbox"
-        value="false"
       />
       <label
         className="checkbox checkbox-button"
@@ -107,7 +104,6 @@ exports[`<CheckboxSet /> should render a checkbox button set 1`] = `
         name="key"
         onChange={[Function]}
         type="checkbox"
-        value="false"
       />
       <label
         className="checkbox checkbox-button"
@@ -142,7 +138,6 @@ exports[`<CheckboxSet /> should render a checkbox set 1`] = `
         name="option"
         onChange={[Function]}
         type="checkbox"
-        value="false"
       />
       <label
         className="checkbox"
@@ -171,7 +166,6 @@ exports[`<CheckboxSet /> should render a checkbox set 1`] = `
         name="option"
         onChange={[Function]}
         type="checkbox"
-        value="false"
       />
       <label
         className="checkbox"
@@ -199,7 +193,6 @@ exports[`<CheckboxSet /> should render a checkbox set 1`] = `
         name="option"
         onChange={[Function]}
         type="checkbox"
-        value="false"
       />
       <label
         className="checkbox"
@@ -227,7 +220,6 @@ exports[`<CheckboxSet /> should render a checkbox set 1`] = `
         name="option"
         onChange={[Function]}
         type="checkbox"
-        value="false"
       />
       <label
         className="checkbox"
@@ -262,7 +254,6 @@ exports[`<CheckboxSet /> should render a checkbox set with horizontal buttons 1`
         name="key"
         onChange={[Function]}
         type="checkbox"
-        value="false"
       />
       <label
         className="checkbox"
@@ -291,7 +282,6 @@ exports[`<CheckboxSet /> should render a checkbox set with horizontal buttons 1`
         name="key"
         onChange={[Function]}
         type="checkbox"
-        value="false"
       />
       <label
         className="checkbox"
@@ -319,7 +309,6 @@ exports[`<CheckboxSet /> should render a checkbox set with horizontal buttons 1`
         name="key"
         onChange={[Function]}
         type="checkbox"
-        value="false"
       />
       <label
         className="checkbox"
@@ -347,7 +336,6 @@ exports[`<CheckboxSet /> should render a checkbox set with horizontal buttons 1`
         name="key"
         onChange={[Function]}
         type="checkbox"
-        value="false"
       />
       <label
         className="checkbox"
@@ -377,7 +365,6 @@ exports[`<CheckboxSet /> should render a checkbox set with tight spacing 1`] = `
         name="key"
         onChange={[Function]}
         type="checkbox"
-        value="false"
       />
       <label
         className="checkbox"
@@ -401,7 +388,6 @@ exports[`<CheckboxSet /> should render a checkbox set with tight spacing 1`] = `
         name="key"
         onChange={[Function]}
         type="checkbox"
-        value="false"
       />
       <label
         className="checkbox"
@@ -424,7 +410,6 @@ exports[`<CheckboxSet /> should render a checkbox set with tight spacing 1`] = `
         name="key"
         onChange={[Function]}
         type="checkbox"
-        value="false"
       />
       <label
         className="checkbox"
@@ -447,7 +432,6 @@ exports[`<CheckboxSet /> should render a checkbox set with tight spacing 1`] = `
         name="key"
         onChange={[Function]}
         type="checkbox"
-        value="false"
       />
       <label
         className="checkbox"

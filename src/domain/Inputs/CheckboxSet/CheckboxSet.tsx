@@ -107,7 +107,6 @@ export class CheckboxSet extends React.PureComponent<ICheckboxSetProps> {
                 id={`${name}-${identifier}`}
                 name={name}
                 type='checkbox'
-                value={get(value, identifier) ? 'true' : 'false'}
                 onChange={this.handleChange}
                 onKeyDown={handleKeyDown}
                 onBlur={handleBlur ? (e) => handleBlur(e, get(value, identifier) ? 'true' : 'false') : undefined}
@@ -176,10 +175,10 @@ export class CheckboxSet extends React.PureComponent<ICheckboxSetProps> {
     } = this.props
 
     if (onChange) {
-        const splitId = event.target.id.split(`${name}-`)
+        const  [ _, identifier] = event.target.id.split(`${name}-`)
         const newValue: { [i: string]: boolean } = {
             ... value,
-          [splitId[1]]: event.target.checked
+          [identifier]: event.target.checked
         }
           onChange(newValue)
     } else if (handleChange) {
