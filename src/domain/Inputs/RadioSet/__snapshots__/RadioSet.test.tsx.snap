@@ -4,51 +4,123 @@ exports[`<RadioSet /> should render a radio Button Set 1`] = `
 <styled.div
   orientation="vertical"
 >
-  <Styled(RadioInput)
-    handleChange={[Function]}
-    id="radio-input-set-0"
-    isButton={true}
-    isChecked={false}
+  <styled.div
     key="radio-input-set-0"
-    label="123123"
-    name="radio-input-set"
-    spacing="normal"
-    value="option 1"
-  />
-  <Styled(RadioInput)
-    handleChange={[Function]}
-    id="radio-input-set-1"
-    isButton={true}
-    isChecked={false}
-    isDisabled={true}
+    margins={
+      Object {
+        "bottom": 8,
+      }
+    }
+  >
+    <div
+      className="radioInput"
+    >
+      <styled.input
+        checked={false}
+        className="input "
+        data-component-type="radio_input"
+        id="radio-input-set-0"
+        name="radio-input-set"
+        onChange={[Function]}
+        type="radio"
+        value="option 1"
+      />
+      <label
+        className="radio radio-button"
+        htmlFor="radio-input-set-0"
+      >
+        123123
+      </label>
+    </div>
+  </styled.div>
+  <styled.div
     key="radio-input-set-1"
-    label="this is option 2 (I am disabled)"
-    name="radio-input-set"
-    spacing="normal"
-    value="option 2"
-  />
-  <Styled(RadioInput)
-    handleChange={[Function]}
-    id="radio-input-set-2"
-    isButton={true}
-    isChecked={false}
+    margins={
+      Object {
+        "bottom": 8,
+      }
+    }
+  >
+    <div
+      className="radioInput"
+    >
+      <styled.input
+        checked={false}
+        className="input "
+        data-component-type="radio_input"
+        disabled={true}
+        id="radio-input-set-1"
+        name="radio-input-set"
+        onChange={[Function]}
+        type="radio"
+        value="option 2"
+      />
+      <label
+        className="radio radio-button"
+        htmlFor="radio-input-set-1"
+      >
+        this is option 2 (I am disabled)
+      </label>
+    </div>
+  </styled.div>
+  <styled.div
     key="radio-input-set-2"
-    label="this is option 3"
-    name="radio-input-set"
-    spacing="normal"
-    value="option 3"
-  />
-  <Styled(RadioInput)
-    handleChange={[Function]}
-    id="radio-input-set-3"
-    isButton={true}
-    isChecked={false}
+    margins={
+      Object {
+        "bottom": 8,
+      }
+    }
+  >
+    <div
+      className="radioInput"
+    >
+      <styled.input
+        checked={false}
+        className="input "
+        data-component-type="radio_input"
+        id="radio-input-set-2"
+        name="radio-input-set"
+        onChange={[Function]}
+        type="radio"
+        value="option 3"
+      />
+      <label
+        className="radio radio-button"
+        htmlFor="radio-input-set-2"
+      >
+        this is option 3
+      </label>
+    </div>
+  </styled.div>
+  <styled.div
     key="radio-input-set-3"
-    label="this is option 4"
-    name="radio-input-set"
-    spacing="normal"
-    value="option 4"
-  />
+    margins={
+      Object {
+        "bottom": 8,
+      }
+    }
+  >
+    <div
+      className="radioInput"
+    >
+      <styled.input
+        checked={false}
+        className="input "
+        data-component-type="radio_input"
+        id="radio-input-set-3"
+        name="radio-input-set"
+        onChange={[Function]}
+        type="radio"
+        value="option 4"
+      />
+      <label
+        className="radio radio-button"
+        htmlFor="radio-input-set-3"
+      >
+        this is option 4
+      </label>
+    </div>
+  </styled.div>
 </styled.div>
 `;
 
@@ -56,51 +128,123 @@ exports[`<RadioSet /> should render a radio Set 1`] = `
 <styled.div
   orientation="vertical"
 >
-  <Styled(RadioInput)
-    handleChange={[Function]}
-    id="radio-input-set-0"
-    isButton={false}
-    isChecked={false}
+  <styled.div
     key="radio-input-set-0"
-    label="123123"
-    name="radio-input-set"
-    spacing="normal"
-    value="option 1"
-  />
-  <Styled(RadioInput)
-    handleChange={[Function]}
-    id="radio-input-set-1"
-    isButton={false}
-    isChecked={false}
-    isDisabled={true}
+    margins={
+      Object {
+        "bottom": 8,
+      }
+    }
+  >
+    <div
+      className="radioInput"
+    >
+      <styled.input
+        checked={false}
+        className="input "
+        data-component-type="radio_input"
+        id="radio-input-set-0"
+        name="radio-input-set"
+        onChange={[Function]}
+        type="radio"
+        value="option 1"
+      />
+      <label
+        className="radio"
+        htmlFor="radio-input-set-0"
+      >
+        123123
+      </label>
+    </div>
+  </styled.div>
+  <styled.div
     key="radio-input-set-1"
-    label="this is option 2 (I am disabled)"
-    name="radio-input-set"
-    spacing="normal"
-    value="option 2"
-  />
-  <Styled(RadioInput)
-    handleChange={[Function]}
-    id="radio-input-set-2"
-    isButton={false}
-    isChecked={false}
+    margins={
+      Object {
+        "bottom": 8,
+      }
+    }
+  >
+    <div
+      className="radioInput"
+    >
+      <styled.input
+        checked={false}
+        className="input "
+        data-component-type="radio_input"
+        disabled={true}
+        id="radio-input-set-1"
+        name="radio-input-set"
+        onChange={[Function]}
+        type="radio"
+        value="option 2"
+      />
+      <label
+        className="radio"
+        htmlFor="radio-input-set-1"
+      >
+        this is option 2 (I am disabled)
+      </label>
+    </div>
+  </styled.div>
+  <styled.div
     key="radio-input-set-2"
-    label="this is option 3"
-    name="radio-input-set"
-    spacing="normal"
-    value="option 3"
-  />
-  <Styled(RadioInput)
-    handleChange={[Function]}
-    id="radio-input-set-3"
-    isButton={false}
-    isChecked={false}
+    margins={
+      Object {
+        "bottom": 8,
+      }
+    }
+  >
+    <div
+      className="radioInput"
+    >
+      <styled.input
+        checked={false}
+        className="input "
+        data-component-type="radio_input"
+        id="radio-input-set-2"
+        name="radio-input-set"
+        onChange={[Function]}
+        type="radio"
+        value="option 3"
+      />
+      <label
+        className="radio"
+        htmlFor="radio-input-set-2"
+      >
+        this is option 3
+      </label>
+    </div>
+  </styled.div>
+  <styled.div
     key="radio-input-set-3"
-    label="this is option 4"
-    name="radio-input-set"
-    spacing="normal"
-    value="option 4"
-  />
+    margins={
+      Object {
+        "bottom": 8,
+      }
+    }
+  >
+    <div
+      className="radioInput"
+    >
+      <styled.input
+        checked={false}
+        className="input "
+        data-component-type="radio_input"
+        id="radio-input-set-3"
+        name="radio-input-set"
+        onChange={[Function]}
+        type="radio"
+        value="option 4"
+      />
+      <label
+        className="radio"
+        htmlFor="radio-input-set-3"
+      >
+        this is option 4
+      </label>
+    </div>
+  </styled.div>
 </styled.div>
 `;
 
@@ -108,51 +252,103 @@ exports[`<RadioSet /> should render a radio Set with a tight spacing 1`] = `
 <styled.div
   orientation="vertical"
 >
-  <Styled(RadioInput)
-    handleChange={[Function]}
-    id="radio-input-set-0"
-    isButton={false}
-    isChecked={false}
+  <styled.div
     key="radio-input-set-0"
-    label="123123"
-    name="radio-input-set"
-    spacing="tight"
-    value="option 1"
-  />
-  <Styled(RadioInput)
-    handleChange={[Function]}
-    id="radio-input-set-1"
-    isButton={false}
-    isChecked={false}
-    isDisabled={true}
+  >
+    <div
+      className="radioInput"
+    >
+      <styled.input
+        checked={false}
+        className="input "
+        data-component-type="radio_input"
+        id="radio-input-set-0"
+        name="radio-input-set"
+        onChange={[Function]}
+        type="radio"
+        value="option 1"
+      />
+      <label
+        className="radio"
+        htmlFor="radio-input-set-0"
+      >
+        123123
+      </label>
+    </div>
+  </styled.div>
+  <styled.div
     key="radio-input-set-1"
-    label="this is option 2 (I am disabled)"
-    name="radio-input-set"
-    spacing="tight"
-    value="option 2"
-  />
-  <Styled(RadioInput)
-    handleChange={[Function]}
-    id="radio-input-set-2"
-    isButton={false}
-    isChecked={false}
+  >
+    <div
+      className="radioInput"
+    >
+      <styled.input
+        checked={false}
+        className="input "
+        data-component-type="radio_input"
+        disabled={true}
+        id="radio-input-set-1"
+        name="radio-input-set"
+        onChange={[Function]}
+        type="radio"
+        value="option 2"
+      />
+      <label
+        className="radio"
+        htmlFor="radio-input-set-1"
+      >
+        this is option 2 (I am disabled)
+      </label>
+    </div>
+  </styled.div>
+  <styled.div
     key="radio-input-set-2"
-    label="this is option 3"
-    name="radio-input-set"
-    spacing="tight"
-    value="option 3"
-  />
-  <Styled(RadioInput)
-    handleChange={[Function]}
-    id="radio-input-set-3"
-    isButton={false}
-    isChecked={false}
+  >
+    <div
+      className="radioInput"
+    >
+      <styled.input
+        checked={false}
+        className="input "
+        data-component-type="radio_input"
+        id="radio-input-set-2"
+        name="radio-input-set"
+        onChange={[Function]}
+        type="radio"
+        value="option 3"
+      />
+      <label
+        className="radio"
+        htmlFor="radio-input-set-2"
+      >
+        this is option 3
+      </label>
+    </div>
+  </styled.div>
+  <styled.div
     key="radio-input-set-3"
-    label="this is option 4"
-    name="radio-input-set"
-    spacing="tight"
-    value="option 4"
-  />
+  >
+    <div
+      className="radioInput"
+    >
+      <styled.input
+        checked={false}
+        className="input "
+        data-component-type="radio_input"
+        id="radio-input-set-3"
+        name="radio-input-set"
+        onChange={[Function]}
+        type="radio"
+        value="option 4"
+      />
+      <label
+        className="radio"
+        htmlFor="radio-input-set-3"
+      >
+        this is option 4
+      </label>
+    </div>
+  </styled.div>
 </styled.div>
 `;
 
@@ -160,50 +356,122 @@ exports[`<RadioSet /> should render a radio set with horizontal buttons 1`] = `
 <styled.div
   orientation="horizontal"
 >
-  <Styled(RadioInput)
-    handleChange={[Function]}
-    id="radio-input-set-0"
-    isButton={false}
-    isChecked={false}
+  <styled.div
     key="radio-input-set-0"
-    label="123123"
-    name="radio-input-set"
-    spacing="normal"
-    value="option 1"
-  />
-  <Styled(RadioInput)
-    handleChange={[Function]}
-    id="radio-input-set-1"
-    isButton={false}
-    isChecked={false}
-    isDisabled={true}
+    margins={
+      Object {
+        "bottom": 8,
+      }
+    }
+  >
+    <div
+      className="radioInput"
+    >
+      <styled.input
+        checked={false}
+        className="input "
+        data-component-type="radio_input"
+        id="radio-input-set-0"
+        name="radio-input-set"
+        onChange={[Function]}
+        type="radio"
+        value="option 1"
+      />
+      <label
+        className="radio"
+        htmlFor="radio-input-set-0"
+      >
+        123123
+      </label>
+    </div>
+  </styled.div>
+  <styled.div
     key="radio-input-set-1"
-    label="this is option 2 (I am disabled)"
-    name="radio-input-set"
-    spacing="normal"
-    value="option 2"
-  />
-  <Styled(RadioInput)
-    handleChange={[Function]}
-    id="radio-input-set-2"
-    isButton={false}
-    isChecked={false}
+    margins={
+      Object {
+        "bottom": 8,
+      }
+    }
+  >
+    <div
+      className="radioInput"
+    >
+      <styled.input
+        checked={false}
+        className="input "
+        data-component-type="radio_input"
+        disabled={true}
+        id="radio-input-set-1"
+        name="radio-input-set"
+        onChange={[Function]}
+        type="radio"
+        value="option 2"
+      />
+      <label
+        className="radio"
+        htmlFor="radio-input-set-1"
+      >
+        this is option 2 (I am disabled)
+      </label>
+    </div>
+  </styled.div>
+  <styled.div
     key="radio-input-set-2"
-    label="this is option 3"
-    name="radio-input-set"
-    spacing="normal"
-    value="option 3"
-  />
-  <Styled(RadioInput)
-    handleChange={[Function]}
-    id="radio-input-set-3"
-    isButton={false}
-    isChecked={false}
+    margins={
+      Object {
+        "bottom": 8,
+      }
+    }
+  >
+    <div
+      className="radioInput"
+    >
+      <styled.input
+        checked={false}
+        className="input "
+        data-component-type="radio_input"
+        id="radio-input-set-2"
+        name="radio-input-set"
+        onChange={[Function]}
+        type="radio"
+        value="option 3"
+      />
+      <label
+        className="radio"
+        htmlFor="radio-input-set-2"
+      >
+        this is option 3
+      </label>
+    </div>
+  </styled.div>
+  <styled.div
     key="radio-input-set-3"
-    label="this is option 4"
-    name="radio-input-set"
-    spacing="normal"
-    value="option 4"
-  />
+    margins={
+      Object {
+        "bottom": 8,
+      }
+    }
+  >
+    <div
+      className="radioInput"
+    >
+      <styled.input
+        checked={false}
+        className="input "
+        data-component-type="radio_input"
+        id="radio-input-set-3"
+        name="radio-input-set"
+        onChange={[Function]}
+        type="radio"
+        value="option 4"
+      />
+      <label
+        className="radio"
+        htmlFor="radio-input-set-3"
+      >
+        this is option 4
+      </label>
+    </div>
+  </styled.div>
 </styled.div>
 `;

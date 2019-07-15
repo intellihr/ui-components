@@ -36,37 +36,37 @@ initialState = { textValue: 'I am disabled and cannot change' };
 #### Text Input with Placeholder
 
 ```jsx
-initialState = { textValue: '' };
+initialState = { value: '' };
 
 <TextInput
-  value={state.textValue}
+  value={state.value}
   placeholder='Input some text here...'
-  onChange={(value) => {setState({textValue: value})}}
+  onChange={(value) => {setState({value})}}
 />
 ```
 
 #### Text Input with HandleClear
 
 ```jsx
-initialState = { textValue: 'I have a clear button' };
+initialState = { value: 'I have a clear button' };
 
 <TextInput
-  value={state.textValue}
-  handleClear={() => {setState({textValue: ''}); alert('clear value')}} 
-  onChange={(value) => {setState({textValue: value})}}
+  value={state.value}
+  handleClear={() => {setState({value: ''}); alert('clear value')}} 
+  onChange={(value) => {setState({value})}}
 />
 ```
 
 #### Text Input with HandleBlur
 
 ```jsx
-initialState = { textValue: '' };
+initialState = { value: '' };
 
 <TextInput
-  value={state.textValue}
+  value={state.value}
   placeholder='What is your name?'
-  handleBlur={() => {setState({textValue: `Yo! ${state.textValue}`}); alert('blur value')}} 
-  onChange={(value) => {setState({textValue: value})}}
+  handleBlur={() => {setState({value: `Yo! ${state.value}`}); alert('blur value')}} 
+  onChange={(value) => {setState({value})}}
 />
 ```
 
@@ -98,38 +98,38 @@ initialState = { textValue1: '', textValue2: ''  };
 ```jsx
 import { FontAwesomeIcon } from '@Domain/Icons';
 
-initialState = { textValue: '' };
+initialState = { value: '' };
 
 <TextInput
-  value={state.textValue}
+  value={state.value}
   icon={<FontAwesomeIcon type='facebook' />}
   disabledPrefix='Welcome To Facebook!' 
   placeholder='Input your name...'
-  onChange={(value) => {setState({textValue: value})}}
+  onChange={(value) => {setState({value})}}
 />
 ```
 
 #### Text Input with HighlightOnFocus
 
 ```jsx
-initialState = { textValue: 'I will be highlighted when you focus on me' };
+initialState = { value: 'I will be highlighted when you focus on me' };
 
 <TextInput
-  value={state.textValue}
+  value={state.value}
   highlightOnFocus
-  onChange={(value) => {setState({textValue: value})}}
+  onChange={(value) => {setState({value})}}
 />
 ```
 
 #### Text Input with Custom Width
 
 ```jsx
-initialState = { textValue: 'I have a custom width 500px' };
+initialState = { value: 'I have a custom width 500px' };
 
 <TextInput
-  value={state.textValue}
+  value={state.value}
   width='500'
-  onChange={(value) => {setState({textValue: value})}}
+  onChange={(value) => {setState({value})}}
 />
 ```
 

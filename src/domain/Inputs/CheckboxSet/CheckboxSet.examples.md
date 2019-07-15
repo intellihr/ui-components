@@ -2,32 +2,25 @@
 
 ```jsx
 
-initialState = { option1: false, option2: false, option3: false, option4: false};
+initialState = { value:{option1: true, option2: false, option3: false} };
 
 <CheckboxSet
-  handleChange={(event) => setState({[event.target.name]: !state[event.target.name]})}
+  value={state.value}
+  name='option'
+  onChange={(value) => setState({value})}
   options={[
       {
-        name: 'option1',
         label:'this is option 1',
-        value: state.option1
+        identifier:'option1'
       },
       {
-        name: 'option2',
         label:'this is option 2',
-        value: state.option2
+        identifier:'option2'
       },
       {
-        name: 'option3',
         label:'this is option 3 (I am disabled)',
-        value: state.option3,
+        identifier:'option3',
         isDisabled: true
-      },
-      {
-        name: 'option4',
-        label:'this is option 4 (I have a special action)',
-        value: state.option4,
-        handleChange: (event) => { setState({[event.target.name]: !state[event.target.name]});  alert('I have a custom onClick handler!');}
       }
     ]}
 />
@@ -37,33 +30,26 @@ initialState = { option1: false, option2: false, option3: false, option4: false}
 
 ```jsx
 
-initialState = { optionTight1: false, optionTight2: false, optionTight3: false, optionTight4: false};
+initialState = { value:{tight1: false, tight2: true, tight3: false} };
 
 <CheckboxSet
+  value={state.value}
+  name='tight'
   spacing='tight'
-  handleChange={(event) => setState({[event.target.name]: !state[event.target.name]})}
+  onChange={(value) => setState({value})}
   options={[
       {
-        name: 'option1',
         label:'this is option 1',
-        value: state.optionTight1
+        identifier:'tight1'
       },
       {
-        name: 'option2',
         label:'this is option 2',
-        value: state.option2
+        identifier:'tight2'
       },
       {
-        name: 'option3',
         label:'this is option 3 (I am disabled)',
-        value: state.option3,
+        identifier:'tight3',
         isDisabled: true
-      },
-      {
-        name: 'option4',
-        label:'this is option 4 (I have a special action)',
-        value: state.option4,
-        handleChange: (event) => { setState({[event.target.name]: !state[event.target.name]});  alert('I have a custom onClick handler!');}
       }
     ]}
 />
@@ -73,33 +59,26 @@ initialState = { optionTight1: false, optionTight2: false, optionTight3: false, 
 
 ```jsx
 
-initialState = { button1: false, button2: false, button3: false, button4: false};
+initialState = { value: {button1: false, button2: false, button3: false} };
 
 <CheckboxSet
+  value={state.value}
+  name='button'
   useButtonStyle
-  handleChange={(event) => setState({[event.target.name]: !state[event.target.name]})}
+  onChange={(value) => setState({value})}
   options={[
       {
-        name: 'button1',
         label:'this is option 1',
-        value: state.button1
+        identifier:'button1'
       },
       {
-        name: 'button2',
         label:'this is option 2',
-        value: state.button2
+        identifier:'button2'
       },
       {
-        name: 'button3',
         label:'this is option 3 (I am disabled)',
-        value: state.button3,
+        identifier:'button3',
         isDisabled: true
-      },
-      {
-        name: 'button4',
-        label:'this is option 4 (I have a special action)',
-        value: state.button4,
-        handleChange: (event) => { setState({[event.target.name]: !state[event.target.name]});  alert('I have a custom onClick handler!');}
       }
     ]}
 />
@@ -110,38 +89,34 @@ initialState = { button1: false, button2: false, button3: false, button4: false}
 ```jsx
 import { Props } from '@Common';
 
-initialState = { horizontal1: false, horizontal2: false, horizontal3: false, horixontal4: false, horixontal5: false};
+initialState = { value:{horizontal1: false, horizontal2: false, horizontal3: false, horizontal4: false, horizontal5: false} };
 
 <CheckboxSet
+  value={state.value}
+  name='horizontal'
   orientation={Props.Orientation.Horizontal}
-  handleChange={(event) => setState({[event.target.name]: !state[event.target.name]})}
+  onChange={(value) => setState({value})}
   options={[
       {
-        name: 'horizontal1',
         label:'this is option 1',
-        value: state.horizontal1
+        identifier:'horizontal1'
       },
       {
-        name: 'horizontal2',
         label:'this is option 2',
-        value: state.horizontal2
+        identifier:'horizontal2'
       },
       {
-        name: 'horizontal3',
         label:'this is option 3 (I am disabled)',
-        value: state.horizontal3,
+        identifier:'horizontal3',
         isDisabled: true
       },
       {
-        name: 'horizontal4',
-        label:'this is option 4 (I have a special action)',
-        value: state.horizontal4,
-        handleChange: (event) => { setState({[event.target.name]: !state[event.target.name]});  alert('I have a custom onClick handler!');}
+        label:'this is option 4',
+        identifier:'horizontal4'
       },
       {
-        name: 'horizontal5',
         label:'final option is very looooooooooong',
-        value:state.horizontal5,
+        identifier:'horizontal5'
       }
     ]}
 />
@@ -152,39 +127,35 @@ initialState = { horizontal1: false, horizontal2: false, horizontal3: false, hor
 ```jsx
 import { Props } from '@Common';
 
-initialState = { horizontal1: false, horizontal2: false, horizontal3: false, horixontal4: false, horixontal5: false};
+initialState = { value:{horizontalTight1: false, horizontalTight2: false, horizontalTight3: false, horizontalTight4: false, horizontalTight5: false} };
 
 <CheckboxSet
-  spacing='tight'
+  value={state.value}
+  name='horizontal-tight'
   orientation={Props.Orientation.Horizontal}
-  handleChange={(event) => setState({[event.target.name]: !state[event.target.name]})}
+  spacing='tight'
+  onChange={(value) => setState({value})}
   options={[
       {
-        name: 'horizontal1',
         label:'this is option 1',
-        value: state.horizontal1
+        identifier:'horizontalTight1'
       },
       {
-        name: 'horizontal2',
         label:'this is option 2',
-        value: state.horizontal2
+        identifier:'horizontalTight2'
       },
       {
-        name: 'horizontal3',
         label:'this is option 3 (I am disabled)',
-        value: state.horizontal3,
+        identifier:'horizontalTight3',
         isDisabled: true
       },
       {
-        name: 'horizontal4',
-        label:'this is option 4 (I have a special action)',
-        value: state.horizontal4,
-        handleChange: (event) => { setState({[event.target.name]: !state[event.target.name]});  alert('I have a custom onClick handler!');}
+        label:'this is option 4',
+        identifier:'horizontalTight4'
       },
       {
-        name: 'horizontal5',
         label:'final option is very looooooooooong',
-        value:state.horizontal5,
+        identifier:'horizontalTight5'
       }
     ]}
 />
