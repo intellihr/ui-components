@@ -1,1 +1,1 @@
-export { IntelliIcon } from './intelliIcons'
+export { IntelliIconValue } from './intelliIcons'

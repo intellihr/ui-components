@@ -37,7 +37,7 @@ const Icon: React.FC<IIconProps> = ({
   const classes = classNames(
     className,
     'icon',
-    `${icon}`,
+    icon,
     {
       'fa-spin': isSpinning
     }
