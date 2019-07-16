@@ -16,7 +16,7 @@
     "styled-components": "^4.3.1"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.9.0",
+    "@fortawesome/fontawesome-pro": "^5.9.0",
     "@intellihr/icons": "^0.0.9",
     "@intellihr/styled-components-breakpoint": "0.0.2",
     "@types/chart.js": "2.7.52",
