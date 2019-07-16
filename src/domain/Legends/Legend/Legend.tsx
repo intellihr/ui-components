@@ -36,11 +36,11 @@ export class Legend extends React.Component<ILegendProps> {
                 type='solid'
                 icon='circle'
                 size='xsmall'
-                color={datasets[i].colour}
+                color={dataset.colour}
               />
 
               <LegendLabel>
-                {datasets[i].label}
+                {dataset.label}
               </LegendLabel>
             </li>
           )
