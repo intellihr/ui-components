@@ -43,7 +43,7 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
     searchPlaceholder: 'Search'
   }
 
-  public render (): JSX.Element | null {
+  public render(): JSX.Element | null {
     const {
       filterMessage,
       searchPlaceholder,
@@ -76,7 +76,7 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
                 onFilterAdded={onFilterAdded}
               />
               <TextInput
-                icon={<FontAwesomeIcon type='search' />}
+                icon={<FontAwesomeIcon type='solid' icon='search' />}
                 name='filterControllerSearchInput'
                 placeholder={searchPlaceholder}
                 value={searchValue}
@@ -97,7 +97,7 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
     )
   }
 
-  private get rightComponent () {
+  private get rightComponent() {
     const {
       rightComponent
     } = this.props

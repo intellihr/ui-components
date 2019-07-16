@@ -18,7 +18,7 @@ export class Legend extends React.Component<ILegendProps> {
     datasets: []
   }
 
-  public render (): JSX.Element | null {
+  public render(): JSX.Element | null {
     const {
       datasets
     } = this.props
@@ -33,7 +33,8 @@ export class Legend extends React.Component<ILegendProps> {
           return (
             <li key={i}>
               <FontAwesomeIcon
-                type='circle'
+                type='solid'
+                icon='circle'
                 size='xsmall'
                 color={datasets[i].colour}
               />

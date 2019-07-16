@@ -37,7 +37,7 @@ export class Carousel extends React.PureComponent<ICarouselProps, never> {
     }
   }, 100, { leading: true })
 
-  public componentDidMount (): void {
+  public componentDidMount(): void {
     this.currentlyMounted = true
 
     window.addEventListener('resize', this.handleScrollUpdate)
@@ -46,13 +46,13 @@ export class Carousel extends React.PureComponent<ICarouselProps, never> {
     this.forceUpdate()
   }
 
-  public componentWillUnmount (): void {
+  public componentWillUnmount(): void {
     window.removeEventListener('resize', this.handleScrollUpdate)
 
     this.currentlyMounted = false
   }
 
-  public render (): JSX.Element | null {
+  public render(): JSX.Element | null {
     const {
       componentContext,
       margins
@@ -74,7 +74,7 @@ export class Carousel extends React.PureComponent<ICarouselProps, never> {
   public scrollLeft = () => this.handleScrollButton('left')
   public scrollRight = () => this.handleScrollButton('right')
 
-  private get leftChevron (): JSX.Element | null {
+  private get leftChevron(): JSX.Element | null {
     const carouselListEl = this.carouselListRef.current
 
     if (!carouselListEl || carouselListEl.scrollWidth <= carouselListEl.clientWidth) {
@@ -93,13 +93,13 @@ export class Carousel extends React.PureComponent<ICarouselProps, never> {
         aria-hidden
       >
         <IntelliIcon
-          type='arrow-left'
+          icon='arrow-left'
         />
       </CarouselChevronButton>
     )
   }
 
-  private get rightChevron (): JSX.Element | null {
+  private get rightChevron(): JSX.Element | null {
     const carouselListEl = this.carouselListRef.current
 
     if (!carouselListEl || carouselListEl.scrollWidth <= carouselListEl.clientWidth) {
@@ -118,13 +118,13 @@ export class Carousel extends React.PureComponent<ICarouselProps, never> {
         aria-hidden
       >
         <IntelliIcon
-          type='arrow-right'
+          icon='arrow-right'
         />
       </CarouselChevronButton>
     )
   }
 
-  private get carouselList (): JSX.Element {
+  private get carouselList(): JSX.Element {
     const {
       children
     } = this.props

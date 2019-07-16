@@ -45,7 +45,7 @@ class Avatar extends React.Component<IAvatarProps> {
     showInitials: true
   }
 
-  constructor (props: IAvatarProps) {
+  constructor(props: IAvatarProps) {
     super(props)
 
     this.state = {
@@ -53,7 +53,7 @@ class Avatar extends React.Component<IAvatarProps> {
     }
   }
 
-  public componentDidUpdate (prevProps: IAvatarProps): void {
+  public componentDidUpdate(prevProps: IAvatarProps): void {
     if (this.hasImage(prevProps) !== this.hasImage(this.props)) {
       this.setState({
         showInitials: !this.state.showInitials
@@ -61,7 +61,7 @@ class Avatar extends React.Component<IAvatarProps> {
     }
   }
 
-  public render (): JSX.Element | null {
+  public render(): JSX.Element | null {
     const {
       className,
       size,
@@ -111,7 +111,7 @@ class Avatar extends React.Component<IAvatarProps> {
     }
   }
 
-  private get hoverDom (): JSX.Element | null {
+  private get hoverDom(): JSX.Element | null {
     const {
       size,
       hoverLabel,
@@ -124,13 +124,13 @@ class Avatar extends React.Component<IAvatarProps> {
 
     return (
       <div className={classNames('avatar-hover', `avatar-${size}`)}>
-        <FontAwesomeIcon type='camera' />
+        <FontAwesomeIcon type='solid' icon='camera' />
         <span className='avatar-hover-label'>{hoverLabel}</span>
       </div>
     )
   }
 
-  private get avatarContent (): JSX.Element {
+  private get avatarContent(): JSX.Element {
     const {
       initials,
       imageUrl,
@@ -154,13 +154,13 @@ class Avatar extends React.Component<IAvatarProps> {
     )
   }
 
-  private get picture (): JSX.Element {
+  private get picture(): JSX.Element {
     const {
       imageUrl,
       imageData
     } = this.props
 
-    const errorHandler = () => { this.setState({showInitials: true}) }
+    const errorHandler = () => { this.setState({ showInitials: true }) }
 
     return (
       <AvatarPicture
@@ -170,7 +170,7 @@ class Avatar extends React.Component<IAvatarProps> {
     )
   }
 
-  private get statusDot (): JSX.Element | null {
+  private get statusDot(): JSX.Element | null {
     const {
       statusDot
     } = this.props
@@ -182,7 +182,7 @@ class Avatar extends React.Component<IAvatarProps> {
     return null
   }
 
-  private get statusIcon (): JSX.Element | null {
+  private get statusIcon(): JSX.Element | null {
     const {
       statusIcon
     } = this.props

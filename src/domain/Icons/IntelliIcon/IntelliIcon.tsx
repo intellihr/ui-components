@@ -10,7 +10,7 @@ interface IIntelliIconProps extends IIconProps {
 const IntelliIcon: React.FC<IIntelliIconProps> = ({ icon, ...props }) => (
   <Icon
     {...props}
-    icon={icon}
+    icon={`intelli-icon-${icon}`}
   />
 )
 

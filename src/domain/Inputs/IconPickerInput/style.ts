@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import { Variables } from '../../../common'
 import { Icon } from '../../Icons/Icon'
@@ -25,9 +25,9 @@ const StyledIconArea = styled.label<IStyledIconAreaProps>`
           border-color: ${Variables.Color.i400};
         }
       `
-      }
+    }
 
-      return css`
+    return css`
          &:hover {
           background: ${Variables.Color.n200};
         }

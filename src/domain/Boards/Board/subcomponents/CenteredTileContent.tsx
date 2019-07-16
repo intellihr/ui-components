@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Icon, IconType } from '../../../Icons'
+import { IntelliIcon, IntelliIconValue } from '../../../Icons'
 import { StyledTileLabel, TileContentWrapper } from './style'
 import {
   CenteredContentChildrenWrapper,
@@ -17,7 +17,7 @@ interface IBoardCenteredTileContentProps {
   /** Text displayed above the content of tile */
   label?: string,
   topRightComponent?: JSX.Element,
-  iconType?: IconType,
+  iconType?: IntelliIconValue,
   imageSrc?: string,
   heading?: string,
   subheading?: string,
@@ -30,7 +30,7 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
     limitedContentWidth: 'none'
   }
 
-  private get content (): JSX.Element | null {
+  private get content(): JSX.Element | null {
     const {
       children,
       label,
@@ -52,7 +52,7 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
     )
   }
 
-  private get topRightComponent (): JSX.Element | null {
+  private get topRightComponent(): JSX.Element | null {
     const {
       topRightComponent
     } = this.props
@@ -68,7 +68,7 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
     )
   }
 
-  private get tileLabel (): JSX.Element | null {
+  private get tileLabel(): JSX.Element | null {
     const {
       label
     } = this.props
@@ -84,7 +84,7 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
     return null
   }
 
-  private get icon (): JSX.Element | null {
+  private get icon(): JSX.Element | null {
     const {
       iconType,
       imageSrc,
@@ -105,7 +105,7 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
     if (iconType) {
       return (
         <CenteredContentImageWrapper>
-          <Icon type={iconType} customSize={5} />
+          <IntelliIcon icon={iconType} customSize={5} />
         </CenteredContentImageWrapper>
       )
     }
@@ -113,7 +113,7 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
     return null
   }
 
-  private get heading (): JSX.Element | null {
+  private get heading(): JSX.Element | null {
     const {
       heading
     } = this.props
@@ -129,7 +129,7 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
     )
   }
 
-  private get subheading (): JSX.Element | null {
+  private get subheading(): JSX.Element | null {
     const {
       subheading
     } = this.props
@@ -145,7 +145,7 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
     )
   }
 
-  private get description (): JSX.Element | null {
+  private get description(): JSX.Element | null {
     const {
       description
     } = this.props
@@ -161,7 +161,7 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
     )
   }
 
-  public render (): JSX.Element {
+  public render(): JSX.Element {
     const {
       limitedContentWidth
     } = this.props

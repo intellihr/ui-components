@@ -22,7 +22,7 @@ export class MenuItem extends React.PureComponent<IMenuItemProps> {
     overflowWhenOpen: 'hidden'
   }
 
-  get icon (): JSX.Element | undefined {
+  get icon(): JSX.Element | undefined {
     const { icon } = this.props
 
     if (icon) {
@@ -34,7 +34,7 @@ export class MenuItem extends React.PureComponent<IMenuItemProps> {
     }
   }
 
-  get loadingIcon (): JSX.Element | undefined {
+  get loadingIcon(): JSX.Element | undefined {
     const {
       isLoading
     } = this.props
@@ -43,7 +43,8 @@ export class MenuItem extends React.PureComponent<IMenuItemProps> {
       return (
         <LoadingIconWrapper>
           <FontAwesomeIcon
-            type='circle-o-notch'
+            type='solid'
+            icon='circle-notch'
             isSpinning
           />
         </LoadingIconWrapper>
@@ -51,7 +52,7 @@ export class MenuItem extends React.PureComponent<IMenuItemProps> {
     }
   }
 
-  get label (): JSX.Element {
+  get label(): JSX.Element {
     const {
       label
     } = this.props
@@ -63,7 +64,7 @@ export class MenuItem extends React.PureComponent<IMenuItemProps> {
     )
   }
 
-  get component () {
+  get component() {
     const {
       render,
       url,
@@ -89,7 +90,7 @@ export class MenuItem extends React.PureComponent<IMenuItemProps> {
     )
   }
 
-  public render (): JSX.Element {
+  public render(): JSX.Element {
     const {
       children,
       isOpen,

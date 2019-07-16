@@ -26,7 +26,7 @@ const FontAwesomeIcon: React.FC<IFontAwesomeIconProps> = ({ icon, type, ...props
   return (
     <Icon
       {...props}
-      icon={icon}
+      icon={cssClassName}
     />
   )
 }

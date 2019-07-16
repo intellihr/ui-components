@@ -1,20 +1,20 @@
 import React, { ChangeEventHandler } from 'react'
 
 import { Props, Variables } from '../../../common'
-import { IconType } from '../../Icons/Icon'
+import { IntelliIconValue } from '../../Icons/Icon'
 import { GridLayout } from '../../Layouts/GridLayout'
 import { IGridLayoutCell } from '../../Layouts/GridLayout/GridLayout'
 import { StyledIcon, StyledIconArea, StyledIconInput } from './style'
 
 export interface IIconPickerProps {
   /** Array of icons to display in the list */
-  icons: IconType[]
+  icons: IntelliIconValue[]
   /** action triggered when icons are clicked */
   onChange?: ChangeEventHandler<HTMLInputElement>
   /** action triggered when icons are clicked */
   handleChange?: ChangeEventHandler<HTMLInputElement>
   /** The currently selected icon */
-  value: IconType | null
+  value: IntelliIconValue | null
   /** The name property of the icon picker */
   name: string
   /** The data-component-context */
@@ -22,7 +22,7 @@ export interface IIconPickerProps {
 }
 
 export class IconPickerInput extends React.PureComponent<IIconPickerProps> {
-  public render (): JSX.Element {
+  public render(): JSX.Element {
     const {
       componentContext
     } = this.props
@@ -42,7 +42,7 @@ export class IconPickerInput extends React.PureComponent<IIconPickerProps> {
     )
   }
 
-  private get options (): IGridLayoutCell[] {
+  private get options(): IGridLayoutCell[] {
     const {
       icons
     } = this.props
@@ -51,11 +51,11 @@ export class IconPickerInput extends React.PureComponent<IIconPickerProps> {
       return {
         size: 'shrink',
         content: this.iconInput(icon, idx)
-    }
+      }
     })
   }
 
-  private iconInput = (icon: IconType, idx: number) => {
+  private iconInput = (icon: IntelliIconValue, idx: number) => {
     const {
       onChange,
       handleChange,
@@ -71,14 +71,14 @@ export class IconPickerInput extends React.PureComponent<IIconPickerProps> {
         <StyledIconInput
           name={name}
           id={iconId}
-          value={icon}
+          value={`intelli-icon-${icon}`}
           onChange={handleChange || onChange}
           checked={isChecked}
           type='radio'
         />
         <StyledIconArea isChecked={isChecked} htmlFor={iconId}>
           <StyledIcon
-            type={icon}
+            icon={icon}
             color={isChecked ? Variables.Color.i300 : Variables.Color.n700}
             size='large'
           />

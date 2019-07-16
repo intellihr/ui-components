@@ -23,7 +23,7 @@ class Button extends React.PureComponent<IInputGroupButtonProps> {
     showCaret: true
   }
 
-  public render (): JSX.Element {
+  public render(): JSX.Element {
     const {
       onClick,
       disabled,
@@ -54,13 +54,13 @@ class Button extends React.PureComponent<IInputGroupButtonProps> {
     )
   }
 
-  get caret () {
+  get caret() {
     const {
       showCaret
     } = this.props
 
     if (showCaret) {
-      return <FontAwesomeIcon className='right-component' type='caret-down' />
+      return <FontAwesomeIcon className='right-component' type='solid' icon='caret-down' />
     }
 
     return null

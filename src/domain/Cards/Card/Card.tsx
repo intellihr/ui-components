@@ -45,7 +45,7 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
     isActionButtonHover: false
   }
 
-  public render (): JSX.Element {
+  public render(): JSX.Element {
     const {
       mainContent,
       extraContent,
@@ -75,7 +75,7 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
     )
   }
 
-  private get actionButtonDropdownMenu (): JSX.Element | null {
+  private get actionButtonDropdownMenu(): JSX.Element | null {
     const {
       dropdownSections
     } = this.props
@@ -101,11 +101,11 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
       hasRightMargin={!!this.props.extraContent}
       {...ariaProps}
     >
-      <FontAwesomeIcon type='ellipsis-v' />
+      <FontAwesomeIcon type='solid' icon='ellipsis-v' />
     </StyledActionButton>
   )
 
-  private get toggleButton (): JSX.Element | undefined {
+  private get toggleButton(): JSX.Element | undefined {
     const {
       extraContent,
       isExpanded
@@ -115,7 +115,7 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
       return (
         <StyledCardToggleButton isExpanded={!!isExpanded} hasParentHoverStyle={!this.state.isActionButtonHover}>
           <ChevronIconWrapper>
-            <FontAwesomeIcon type='chevron-down' />
+            <FontAwesomeIcon type='solid' icon='chevron-down' />
           </ChevronIconWrapper>
         </StyledCardToggleButton>
       )

@@ -21,7 +21,7 @@ interface IPaginationButtonsProps {
 
 export class PaginationButtons extends React.PureComponent<IPaginationButtonsProps> {
 
-  public render (): JSX.Element {
+  public render(): JSX.Element {
     const {
       componentContext,
       margins
@@ -40,7 +40,7 @@ export class PaginationButtons extends React.PureComponent<IPaginationButtonsPro
     )
   }
 
-  private get previousPageButton () {
+  private get previousPageButton() {
     const {
       currentPage
     } = this.props
@@ -52,13 +52,13 @@ export class PaginationButtons extends React.PureComponent<IPaginationButtonsPro
         onClick={this.changePage(currentPage - 1)}
       >
         <ChevronIconWrapper arrowDirection='left'>
-          <FontAwesomeIcon  type='chevron-left' />
+          <FontAwesomeIcon type='solid' icon='chevron-left' />
         </ChevronIconWrapper>
       </StylePaginationButton>
     )
   }
 
-  private get nextPageButton () {
+  private get nextPageButton() {
     const {
       currentPage,
       totalPages,
@@ -72,13 +72,13 @@ export class PaginationButtons extends React.PureComponent<IPaginationButtonsPro
         onClick={this.changePage(currentPage + 1)}
       >
         <ChevronIconWrapper arrowDirection='right'>
-          <FontAwesomeIcon  type='chevron-right' />
+          <FontAwesomeIcon type='solid' icon='chevron-right' />
         </ChevronIconWrapper>
       </StylePaginationButton>
     )
   }
 
-  private get paginationPageButtons () {
+  private get paginationPageButtons() {
     const {
       totalPages,
       currentPage
@@ -87,7 +87,7 @@ export class PaginationButtons extends React.PureComponent<IPaginationButtonsPro
     const pageNumberArray = []
 
     // Pagination with ellipse
-    if (totalPages > 7 ) {
+    if (totalPages > 7) {
 
       // Ellipse by the end (1 2 3 4 5 ... 10)
       if (currentPage <= 5) {

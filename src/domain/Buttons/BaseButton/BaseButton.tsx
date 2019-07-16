@@ -19,7 +19,7 @@ type ButtonType =
   'primary-hollow' | 'secondary-hollow' | 'success-hollow' | 'warning-hollow' | 'alert-hollow' |
   'neutral-hollow' | 'highlight-hollow' | 'light-hollow' | 'dark-hollow' |
 
-  'add' |'add-subtle' | 'delete-subtle' | 'delete' | 'resolve' | 'cancel' | 'menu-action' | 'back'
+  'add' | 'add-subtle' | 'delete-subtle' | 'delete' | 'resolve' | 'cancel' | 'menu-action' | 'back'
 
 type ButtonSize = 'small' | 'medium' | 'large'
 
@@ -64,7 +64,7 @@ class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
     showSpinner: false
   }
 
-  get buttonClass (): string {
+  get buttonClass(): string {
     const {
       size,
       type,
@@ -89,7 +89,7 @@ class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
     )
   }
 
-  get buttonContent (): JSX.Element {
+  get buttonContent(): JSX.Element {
     const {
       children,
       icon,
@@ -110,7 +110,7 @@ class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
     }
 
     if (icon || type === 'back') {
-      const buttonIcon = icon || <FontAwesomeIcon type='arrow-left' />
+      const buttonIcon = icon || <FontAwesomeIcon type='solid' icon='arrow-left' />
 
       const iconComponent = (
         <span

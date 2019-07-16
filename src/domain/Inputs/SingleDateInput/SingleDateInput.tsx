@@ -48,7 +48,7 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
     focused: false
   }
 
-  public render (): JSX.Element {
+  public render(): JSX.Element {
     const {
       name,
       dateFormat,
@@ -81,12 +81,12 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
           hideKeyboardShortcutsPanel
           navPrev={(
             <div className={this.navigationButtonClassNames('left')}>
-              <FontAwesomeIcon type='arrow-left'/>
+              <FontAwesomeIcon type='solid' icon='arrow-left' />
             </div>
           )}
           navNext={(
             <div className={this.navigationButtonClassNames('right')}>
-              <FontAwesomeIcon type='arrow-right'/>
+              <FontAwesomeIcon type='solid' icon='arrow-right' />
             </div>
           )}
         />
@@ -94,7 +94,7 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
     )
   }
 
-  get classNames (): string {
+  get classNames(): string {
     const {
       isInvalid,
       groupPosition

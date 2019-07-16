@@ -7,7 +7,7 @@ import { IconValue } from './types'
 
 interface IIconProps {
   /** FontAwesome or alternate name of the icon to display */
-  icon: IconValue
+  icon: string
   /** Multiplies icon size by this amount */
   size?: 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge'
   /** Custom sizes for icons */
