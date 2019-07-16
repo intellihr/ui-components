@@ -38,7 +38,7 @@ const TabChevronButton = styled.button`
     cursor: not-allowed;
   }
 
-  .fas {
+  .icon {
     margin: 0;
   }
 `

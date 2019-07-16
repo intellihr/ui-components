@@ -93,7 +93,7 @@ const CommentActionMenuToggleButton = styled.button`
     outline: none;
   }
 
-  .fas {
+  .icon {
     font-size: ${Variables.FontSize.fzBody}px;
     line-height: ${Variables.LineHeight.lhBody}px;
     margin: 0;

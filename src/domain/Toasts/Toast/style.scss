@@ -14,7 +14,7 @@ $toast-styles: (
   background-color: map-get($color-scheme, background-color);
   border-color: map-get($color-scheme, border-color);
 
-  .fas {
+  .icon {
     color: map-get($color-scheme, border-color);
   }
 
@@ -35,7 +35,7 @@ $toast-styles: (
   overflow: hidden;
   padding: .75rem;
 
-  >.fas,
+  >.icon,
   .fa-container {
     flex: 0 auto;
 

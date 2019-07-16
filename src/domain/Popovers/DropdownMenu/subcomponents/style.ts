@@ -27,7 +27,7 @@ const DefaultDropdownButton = styled.button`
     border-color: ${Variables.Color.n400};
   }
 
-  .fas {
+  .icon {
     font-size: 1.5rem;
     line-height: 1;
     margin: 0;
@@ -83,7 +83,7 @@ const stripMapping: { [n: string]: { stripColor: string, backgroundColor: string
   }
 }
 
-function styleForSectionType (section: IStyledSectionProps) {
+function styleForSectionType(section: IStyledSectionProps) {
   if (section.sectionType in stripMapping) {
     const mapping = stripMapping[section.sectionType]
 
