@@ -22,7 +22,7 @@ export interface IIconPickerProps {
 }
 
 export class IconPickerInput extends React.PureComponent<IIconPickerProps> {
-  public render(): JSX.Element {
+  public render (): JSX.Element {
     const {
       componentContext
     } = this.props
@@ -42,7 +42,7 @@ export class IconPickerInput extends React.PureComponent<IIconPickerProps> {
     )
   }
 
-  private get options(): IGridLayoutCell[] {
+  private get options (): IGridLayoutCell[] {
     const {
       icons
     } = this.props

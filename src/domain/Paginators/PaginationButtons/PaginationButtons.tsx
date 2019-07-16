@@ -21,7 +21,7 @@ interface IPaginationButtonsProps {
 
 export class PaginationButtons extends React.PureComponent<IPaginationButtonsProps> {
 
-  public render(): JSX.Element {
+  public render (): JSX.Element {
     const {
       componentContext,
       margins
@@ -40,7 +40,7 @@ export class PaginationButtons extends React.PureComponent<IPaginationButtonsPro
     )
   }
 
-  private get previousPageButton() {
+  private get previousPageButton () {
     const {
       currentPage
     } = this.props
@@ -58,7 +58,7 @@ export class PaginationButtons extends React.PureComponent<IPaginationButtonsPro
     )
   }
 
-  private get nextPageButton() {
+  private get nextPageButton () {
     const {
       currentPage,
       totalPages,
@@ -78,7 +78,7 @@ export class PaginationButtons extends React.PureComponent<IPaginationButtonsPro
     )
   }
 
-  private get paginationPageButtons() {
+  private get paginationPageButtons () {
     const {
       totalPages,
       currentPage

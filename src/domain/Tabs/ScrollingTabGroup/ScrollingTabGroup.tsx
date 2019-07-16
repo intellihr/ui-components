@@ -59,7 +59,7 @@ export class ScrollingTabGroup extends React.Component<IScrollingTabGroupProps, 
     }
   }, 100, { leading: true })
 
-  public componentDidMount(): void {
+  public componentDidMount (): void {
     this.currentlyMounted = true
 
     window.addEventListener('resize', this.handleScrollUpdate)
@@ -68,13 +68,13 @@ export class ScrollingTabGroup extends React.Component<IScrollingTabGroupProps, 
     this.forceUpdate()
   }
 
-  public componentWillUnmount(): void {
+  public componentWillUnmount (): void {
     window.removeEventListener('resize', this.handleScrollUpdate)
 
     this.currentlyMounted = false
   }
 
-  public componentDidUpdate(prevProps: Readonly<IScrollingTabGroupProps>) {
+  public componentDidUpdate (prevProps: Readonly<IScrollingTabGroupProps>) {
     if (this.props.currentTab !== prevProps.currentTab) {
       return this.handleScrollToTab(
         this.indexForTab(this.props.currentTab)
@@ -82,7 +82,7 @@ export class ScrollingTabGroup extends React.Component<IScrollingTabGroupProps, 
     }
   }
 
-  public render(): JSX.Element | null {
+  public render (): JSX.Element | null {
     const {
       tabs
     } = this.props
@@ -103,7 +103,7 @@ export class ScrollingTabGroup extends React.Component<IScrollingTabGroupProps, 
   public scrollLeft = () => this.handleScrollButton('left')
   public scrollRight = () => this.handleScrollButton('right')
 
-  private get leftChevron(): JSX.Element | null {
+  private get leftChevron (): JSX.Element | null {
     const tabListEl = this.tabListRef.current
 
     if (!tabListEl || tabListEl.scrollWidth <= tabListEl.clientWidth) {
@@ -128,7 +128,7 @@ export class ScrollingTabGroup extends React.Component<IScrollingTabGroupProps, 
     )
   }
 
-  private get rightChevron(): JSX.Element | null {
+  private get rightChevron (): JSX.Element | null {
     const tabListEl = this.tabListRef.current
 
     if (!tabListEl || tabListEl.scrollWidth <= tabListEl.clientWidth) {
@@ -153,7 +153,7 @@ export class ScrollingTabGroup extends React.Component<IScrollingTabGroupProps, 
     )
   }
 
-  private get tabList(): JSX.Element {
+  private get tabList (): JSX.Element {
     const {
       tabs
     } = this.props
@@ -225,7 +225,7 @@ export class ScrollingTabGroup extends React.Component<IScrollingTabGroupProps, 
     return (tabIndex === -1) ? 0 : tabIndex
   }
 
-  private get currentTabIndex(): number {
+  private get currentTabIndex (): number {
     const {
       currentTab
     } = this.props

@@ -66,7 +66,7 @@ class TooltipPopover extends React.Component<ITooltipPopoverProps, ITooltipPopov
 
   private toggleComponentRef: RefObject<any> = React.createRef()
 
-  get toggleComponent() {
+  get toggleComponent () {
     const {
       isPopoverOpen,
       popoverId
@@ -91,7 +91,7 @@ class TooltipPopover extends React.Component<ITooltipPopoverProps, ITooltipPopov
     }
   }
 
-  public render(): JSX.Element {
+  public render (): JSX.Element {
     const {
       isPopoverOpen,
       popoverId

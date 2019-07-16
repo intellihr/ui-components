@@ -45,7 +45,7 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
     isActionButtonHover: false
   }
 
-  public render(): JSX.Element {
+  public render (): JSX.Element {
     const {
       mainContent,
       extraContent,
@@ -75,7 +75,7 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
     )
   }
 
-  private get actionButtonDropdownMenu(): JSX.Element | null {
+  private get actionButtonDropdownMenu (): JSX.Element | null {
     const {
       dropdownSections
     } = this.props
@@ -105,7 +105,7 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
     </StyledActionButton>
   )
 
-  private get toggleButton(): JSX.Element | undefined {
+  private get toggleButton (): JSX.Element | undefined {
     const {
       extraContent,
       isExpanded

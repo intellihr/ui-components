@@ -48,7 +48,7 @@ export class ReportHeader extends React.PureComponent<IReportHeader, IReportHead
     showHelper: true
   }
 
-  constructor(props: IReportHeader) {
+  constructor (props: IReportHeader) {
     super(props)
     this.state = {
       status: InfoTextStatus.initial,
@@ -116,7 +116,7 @@ export class ReportHeader extends React.PureComponent<IReportHeader, IReportHead
     })
   }
 
-  get text(): string {
+  get text (): string {
     const {
       primaryText,
       secondaryText
@@ -138,7 +138,7 @@ export class ReportHeader extends React.PureComponent<IReportHeader, IReportHead
     }
   }
 
-  get icon() {
+  get icon () {
     const {
       status
     } = this.state
@@ -150,7 +150,7 @@ export class ReportHeader extends React.PureComponent<IReportHeader, IReportHead
     return <InfoIcon />
   }
 
-  get helpContent(): JSX.Element | null {
+  get helpContent (): JSX.Element | null {
     const {
       isExpanded
     } = this.state
@@ -171,7 +171,7 @@ export class ReportHeader extends React.PureComponent<IReportHeader, IReportHead
     return null
   }
 
-  get wrapper() {
+  get wrapper () {
     const {
       showHelper,
       renderHelperContent
@@ -195,7 +195,7 @@ export class ReportHeader extends React.PureComponent<IReportHeader, IReportHead
     return null
   }
 
-  get title() {
+  get title () {
     const {
       renderTitle
     } = this.props
@@ -206,7 +206,7 @@ export class ReportHeader extends React.PureComponent<IReportHeader, IReportHead
     )
   }
 
-  public render() {
+  public render () {
     return (
       <div>
         <TitleBox>

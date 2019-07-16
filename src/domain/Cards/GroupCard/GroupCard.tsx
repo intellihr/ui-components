@@ -45,7 +45,7 @@ export class GroupCard extends React.PureComponent<IGroupCardProps> {
     isExpanded: false
   }
 
-  public render(): JSX.Element {
+  public render (): JSX.Element {
     const {
       headingContent,
       bodyContents,
@@ -76,7 +76,7 @@ export class GroupCard extends React.PureComponent<IGroupCardProps> {
     )
   }
 
-  private get bodyContentCards(): JSX.Element | undefined {
+  private get bodyContentCards (): JSX.Element | undefined {
     const {
       bodyContents,
       isExpanded
@@ -93,7 +93,7 @@ export class GroupCard extends React.PureComponent<IGroupCardProps> {
     }
   }
 
-  private get toggleButton(): JSX.Element | undefined {
+  private get toggleButton (): JSX.Element | undefined {
     const {
       bodyContents,
       isExpanded

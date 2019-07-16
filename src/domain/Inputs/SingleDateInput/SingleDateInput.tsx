@@ -48,7 +48,7 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
     focused: false
   }
 
-  public render(): JSX.Element {
+  public render (): JSX.Element {
     const {
       name,
       dateFormat,
@@ -94,7 +94,7 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
     )
   }
 
-  get classNames(): string {
+  get classNames (): string {
     const {
       isInvalid,
       groupPosition

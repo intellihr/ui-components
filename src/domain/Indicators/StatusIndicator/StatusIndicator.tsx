@@ -32,7 +32,7 @@ export class StatusIndicator extends React.Component<IStatusIndicatorProps> {
     isHollow: false
   }
 
-  get subtitleText(): JSX.Element | null {
+  get subtitleText (): JSX.Element | null {
     const {
       subtitleText,
       textColor
@@ -53,7 +53,7 @@ export class StatusIndicator extends React.Component<IStatusIndicatorProps> {
     return null
   }
 
-  public render(): JSX.Element {
+  public render (): JSX.Element {
     const {
       text,
       color,

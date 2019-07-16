@@ -50,7 +50,7 @@ class DateRangeInput extends React.PureComponent<IDateRangeInputProps, IDateRang
     focusedInput: null
   }
 
-  public render(): JSX.Element {
+  public render (): JSX.Element {
     const {
       name,
       isDisabled,
@@ -101,7 +101,7 @@ class DateRangeInput extends React.PureComponent<IDateRangeInputProps, IDateRang
     )
   }
 
-  get classNames(): string {
+  get classNames (): string {
     const {
       isInvalid
     } = this.props

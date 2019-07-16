@@ -26,7 +26,7 @@ export class Tooltip extends React.Component<ITooltipProps> {
     iconColour: Variables.Color.n700
   }
 
-  get tooltipId(): string {
+  get tooltipId (): string {
     const {
       id
     } = this.props
@@ -34,7 +34,7 @@ export class Tooltip extends React.Component<ITooltipProps> {
     return id || uuid.v4()
   }
 
-  get tooltipTriggerElement(): JSX.Element {
+  get tooltipTriggerElement (): JSX.Element {
     const {
       children,
       withIcon,
@@ -87,7 +87,7 @@ export class Tooltip extends React.Component<ITooltipProps> {
     )
   }
 
-  get content(): JSX.Element {
+  get content (): JSX.Element {
     const {
       children,
       withIcon
@@ -107,7 +107,7 @@ export class Tooltip extends React.Component<ITooltipProps> {
     return tooltipTriggerElement
   }
 
-  public render(): JSX.Element[] | JSX.Element {
+  public render (): JSX.Element[] | JSX.Element {
     return this.content
   }
 }

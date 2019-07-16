@@ -83,7 +83,7 @@ const stripMapping: { [n: string]: { stripColor: string, backgroundColor: string
   }
 }
 
-function styleForSectionType(section: IStyledSectionProps) {
+function styleForSectionType (section: IStyledSectionProps) {
   if (section.sectionType in stripMapping) {
     const mapping = stripMapping[section.sectionType]
 

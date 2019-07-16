@@ -22,7 +22,7 @@ interface IBoardButtonTileContentProps {
 
 class ButtonTileContent extends React.PureComponent<IBoardButtonTileContentProps, never> {
 
-  private get icon(): JSX.Element | null {
+  private get icon (): JSX.Element | null {
     const {
       iconType
     } = this.props
@@ -38,7 +38,7 @@ class ButtonTileContent extends React.PureComponent<IBoardButtonTileContentProps
     return null
   }
 
-  private get buttonTitle(): JSX.Element | null {
+  private get buttonTitle (): JSX.Element | null {
     const {
       label
     } = this.props
@@ -54,7 +54,7 @@ class ButtonTileContent extends React.PureComponent<IBoardButtonTileContentProps
     return null
   }
 
-  private get buttonDescription(): JSX.Element | null {
+  private get buttonDescription (): JSX.Element | null {
     const {
       buttonDescription
     } = this.props
@@ -70,7 +70,7 @@ class ButtonTileContent extends React.PureComponent<IBoardButtonTileContentProps
     return null
   }
 
-  private get content(): JSX.Element | null {
+  private get content (): JSX.Element | null {
     return (
       <ButtonWrapper>
         {this.icon}
@@ -82,7 +82,7 @@ class ButtonTileContent extends React.PureComponent<IBoardButtonTileContentProps
     )
   }
 
-  public render(): JSX.Element {
+  public render (): JSX.Element {
     const {
       label
     } = this.props

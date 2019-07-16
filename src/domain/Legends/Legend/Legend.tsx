@@ -18,7 +18,7 @@ export class Legend extends React.Component<ILegendProps> {
     datasets: []
   }
 
-  public render(): JSX.Element | null {
+  public render (): JSX.Element | null {
     const {
       datasets
     } = this.props

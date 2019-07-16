@@ -99,7 +99,7 @@ class DropdownMenu extends React.Component<IDropdownMenuProps, IDropdownMenuStat
 
   private toggleComponentRef: RefObject<any> = React.createRef()
 
-  public render(): JSX.Element {
+  public render (): JSX.Element {
 
     return (
       <React.Fragment>
@@ -142,7 +142,7 @@ class DropdownMenu extends React.Component<IDropdownMenuProps, IDropdownMenuStat
     }
   }
 
-  private get toggleComponent() {
+  private get toggleComponent () {
     const {
       isDropdownOpen,
       dropdownId
@@ -161,7 +161,7 @@ class DropdownMenu extends React.Component<IDropdownMenuProps, IDropdownMenuStat
     })
   }
 
-  private get initialFocusProp(): FocusTarget | undefined {
+  private get initialFocusProp (): FocusTarget | undefined {
     const {
       hasInitialFocus,
       initialFocusElement
@@ -174,7 +174,7 @@ class DropdownMenu extends React.Component<IDropdownMenuProps, IDropdownMenuStat
     return initialFocusElement
   }
 
-  private get dropdownPopover(): JSX.Element | null {
+  private get dropdownPopover (): JSX.Element | null {
     const {
       isDropdownOpen,
       dropdownId
@@ -218,7 +218,7 @@ class DropdownMenu extends React.Component<IDropdownMenuProps, IDropdownMenuStat
     )
   }
 
-  private get dropdownContent(): JSX.Element | JSX.Element[] {
+  private get dropdownContent (): JSX.Element | JSX.Element[] {
     const {
       sections,
       children
@@ -239,7 +239,7 @@ class DropdownMenu extends React.Component<IDropdownMenuProps, IDropdownMenuStat
     )
   }
 
-  private get dropdownSections(): JSX.Element[] {
+  private get dropdownSections (): JSX.Element[] {
     const {
       sections
     } = this.props

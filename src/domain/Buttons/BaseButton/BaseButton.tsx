@@ -64,7 +64,7 @@ class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
     showSpinner: false
   }
 
-  get buttonClass(): string {
+  get buttonClass (): string {
     const {
       size,
       type,
@@ -89,7 +89,7 @@ class BaseButton<T extends IBaseButtonProps> extends React.PureComponent<T> {
     )
   }
 
-  get buttonContent(): JSX.Element {
+  get buttonContent (): JSX.Element {
     const {
       children,
       icon,
