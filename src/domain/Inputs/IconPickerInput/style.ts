@@ -36,6 +36,7 @@ const StyledIconArea = styled.label<IStyledIconAreaProps>`
 `
 
 const StyledIcon = styled(Icon)`
+  display: inline-block;
   width: 100%;
   vertical-align: middle;
 `
