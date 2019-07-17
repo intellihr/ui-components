@@ -72,7 +72,7 @@ initialState = { star: 'Yes' };
 <div>
   <RadioInput
    name='star-yes'
-   label={<div><FontAwesomeIcon type='star' /> I have a star!</div>}
+   label={<div><FontAwesomeIcon type='solid' icon='star' /> I have a star!</div>}
    value='Yes'
    isChecked={state.star === 'Yes'}
    handleChange={(event) => setState({star: event.target.value})}

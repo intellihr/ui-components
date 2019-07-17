@@ -3,7 +3,6 @@ import React from 'react'
 
 import { Props } from '../../../common'
 import { BadgeWrapper, StyledIcon } from './style'
-import { IconValue } from './types'
 
 interface IIconProps {
   /** FontAwesome or alternate name of the icon to display */

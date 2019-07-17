@@ -4,7 +4,9 @@ import { IIconProps, Icon } from '../Icon'
 import { FontAwesomeIconValue } from '../Icon/types'
 
 interface IFontAwesomeIconProps extends IIconProps {
+  /** Name of the icon */
   icon: FontAwesomeIconValue
+  /** One of three alternative versions */
   type: 'solid' | 'regular' | 'light'
 }
 

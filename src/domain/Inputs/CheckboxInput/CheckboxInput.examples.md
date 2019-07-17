@@ -53,7 +53,7 @@ initialState = { star: false };
 
 <CheckboxInput
   name='star-checkbox'
-  label={<div><FontAwesomeIcon type='star' /> I am a star</div>}
+  label={<div><FontAwesomeIcon type='solid' icon='star' /> I am a star</div>}
   value={state.star}
   handleChange={() => setState({star: !state.star})}
 />

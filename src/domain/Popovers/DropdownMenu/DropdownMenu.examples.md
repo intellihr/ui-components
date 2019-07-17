@@ -284,8 +284,8 @@ import { FontAwesomeIcon } from '@Domain/Icons';
 <DropdownMenu
    sections={[
      {
-       leftComponent: <FontAwesomeIcon type='hand-o-right' />,
-       rightComponent: <FontAwesomeIcon type='hand-o-left' />,
+       leftComponent: <FontAwesomeIcon type='solid' icon='hand-o-right' />,
+       rightComponent: <FontAwesomeIcon type='solid' icon='hand-o-left' />,
        onClick: () => alert('Test'),
        text: 'Surrounded by icons'
      }
@@ -325,22 +325,22 @@ import { FontAwesomeIcon, IntelliIcon } from '@Domain/Icons';
      },
      {
        text: 'My Profile',
-       leftComponent: <IntelliIcon type='avatar' />,
+       leftComponent: <IntelliIcon type='solid' icon='avatar' />,
        onClick: () => alert('Test')
      },
      {
        text: 'Change Password',
-       leftComponent: <IntelliIcon type='security' />,
+       leftComponent: <IntelliIcon type='solid' icon='security' />,
        onClick: () => alert('Test')
      },
      {
        text: 'Update Profile Picture',
-       leftComponent: <FontAwesomeIcon type='camera' />,
+       leftComponent: <FontAwesomeIcon type='solid' icon='camera' />,
        onClick: () => alert('Test')
      },
      {
        text: 'User Disclaimer',
-       leftComponent: <IntelliIcon type='shield' />,
+       leftComponent: <IntelliIcon type='solid' icon='shield' />,
        onClick: () => alert('Test')
      },
      {
@@ -348,7 +348,7 @@ import { FontAwesomeIcon, IntelliIcon } from '@Domain/Icons';
      },
      {
        text: 'Log Out',
-       leftComponent: <FontAwesomeIcon type='power-off' />,
+       leftComponent: <FontAwesomeIcon type='solid' type='solid' icon='power-off' />,
        href: 'google.com',
        sectionType: 'alert'
      }
@@ -416,7 +416,7 @@ class ThingList extends React.PureComponent {
       <TextInput
         className='selectMe'
         placeholder='Search country!'
-        icon={<FontAwesomeIcon type='search' />}
+        icon={<FontAwesomeIcon type='solid' icon='search' />}
         value={state.inputValue}
         handleChange={(e) => setState({inputValue: e.target.value})}
       />
