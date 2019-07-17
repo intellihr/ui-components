@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Variables } from '../../../../common'
-import { IntelliIcon, IntelliIconValue } from '../../../Icons'
+import { FontAwesomeIcon, FontAwesomeIconValue, IconValue, IntelliIcon, IntelliIconValue } from '../../../Icons'
 import {
   ButtonDescriptionLabel,
   ButtonTextContentWrapper,
@@ -14,8 +14,12 @@ import {
 interface IBoardButtonTileContentProps {
   /** Text displayed above the content of tile */
   label?: string
-  /** button icon type displayed in the tile */
-  iconType?: IntelliIconValue
+  /** Button icon type displayed in the tile */
+  intelliIcon?: IntelliIconValue
+  fontAwesomeIcon?: {
+    type: 'solid' | 'light' | 'regular'
+    icon: FontAwesomeIconValue
+  }
   /** button description displayed after button title */
   buttonDescription?: string
 }
@@ -24,13 +28,35 @@ class ButtonTileContent extends React.PureComponent<IBoardButtonTileContentProps
 
   private get icon (): JSX.Element | null {
     const {
-      iconType
+      intelliIcon,
+      fontAwesomeIcon
     } = this.props
 
-    if (iconType) {
+    const color = Variables.Color.i300
+    const size = 'xlarge'
+
+    if (intelliIcon) {
       return (
         <StyledIconWrapper>
-          <IntelliIcon icon={iconType} color={Variables.Color.i300} size='xlarge' />
+          <IntelliIcon
+            icon={intelliIcon}
+            color={color}
+            size={size}
+          />
+        </StyledIconWrapper>
+      )
+    }
+
+    if (fontAwesomeIcon) {
+      const { type, icon } = fontAwesomeIcon
+      return (
+        <StyledIconWrapper>
+          <FontAwesomeIcon
+            type={type}
+            icon={icon}
+            color={color}
+            size={size}
+          />
         </StyledIconWrapper>
       )
     }
