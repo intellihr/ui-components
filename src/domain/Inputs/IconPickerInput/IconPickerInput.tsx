@@ -71,7 +71,7 @@ export class IconPickerInput extends React.PureComponent<IIconPickerProps> {
         <StyledIconInput
           name={name}
           id={iconId}
-          value={`intelli-icon-${icon}`}
+          value={icon}
           onChange={handleChange || onChange}
           checked={isChecked}
           type='radio'
