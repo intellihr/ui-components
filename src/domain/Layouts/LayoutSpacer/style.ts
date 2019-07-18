@@ -2,11 +2,17 @@ import styled from 'styled-components'
 
 interface ILayoutSpacerContentItemProps {
   /** Size of the space between this content item and the next */
-  spacingSize?: 'small' | 'medium' | 'large' | 'xlarge'
+  spacingSize?: '3xsmall' | '2xsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge'
 }
 
 const spacingForContentItem = (props: ILayoutSpacerContentItemProps): number => {
   switch (props.spacingSize) {
+    case '3xsmall':
+      return 8
+    case '2xsmall':
+      return 12
+    case 'xsmall':
+      return 16
     case 'small':
       return 24
     case 'medium':
