@@ -44,3 +44,14 @@ exports[`<VerticalForm /> should render with an onChange and onSubmit attributes
   />
 </form>
 `;
+
+exports[`<VerticalForm /> should render with autoComplete when it is passed in 1`] = `
+<form
+  autoComplete="off"
+>
+  <Input
+    name="testInput"
+    type="text"
+  />
+</form>
+`;
