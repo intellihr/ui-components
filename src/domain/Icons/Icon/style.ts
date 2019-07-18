@@ -40,7 +40,10 @@ const BadgeWrapper = styled.span<IBadgeWrapper>`
 `
 
 const StyledIcon = styled.i<IStyledIconProps>`
-   width: 1.28571em;
+  /** Old .fa styles */
+  display: inline-block;
+  font-stretch: 100%;
+  width: 20px;
 
   ${(props) => styleForMargins(props.margins)}
 
