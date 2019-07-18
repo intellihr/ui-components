@@ -1,20 +1,20 @@
 import React, { ChangeEventHandler } from 'react'
 
 import { Props, Variables } from '../../../common'
-import { IntelliIconValue } from '../../Icons/Icon'
 import { GridLayout } from '../../Layouts/GridLayout'
 import { IGridLayoutCell } from '../../Layouts/GridLayout/GridLayout'
 import { StyledIcon, StyledIconArea, StyledIconInput } from './style'
+import { IntelliIconPrefixedValue } from './types'
 
 export interface IIconPickerProps {
   /** Array of icons to display in the list */
-  icons: IntelliIconValue[]
+  icons: IntelliIconPrefixedValue[]
   /** action triggered when icons are clicked */
   onChange?: ChangeEventHandler<HTMLInputElement>
   /** action triggered when icons are clicked */
   handleChange?: ChangeEventHandler<HTMLInputElement>
   /** The currently selected icon */
-  value: IntelliIconValue | null
+  value: IntelliIconPrefixedValue | null
   /** The name property of the icon picker */
   name: string
   /** The data-component-context */
@@ -55,7 +55,7 @@ export class IconPickerInput extends React.PureComponent<IIconPickerProps> {
     })
   }
 
-  private iconInput = (icon: IntelliIconValue, idx: number) => {
+  private iconInput = (icon: IntelliIconPrefixedValue, idx: number) => {
     const {
       onChange,
       handleChange,
