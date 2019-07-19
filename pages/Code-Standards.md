@@ -101,7 +101,47 @@ import { XXX } from '@Domain/XXX'
 import { YYY } from '@Common/YYY'
 ```
 
-#### Styled Components vs Sass Modules
+The reason is [Here](https://github.com/Microsoft/TypeScript/issues/16640)
+
+As we need to output type definitions to our Typescript consumer (e.g. SPA),
+using path mapping will result in wrong mappings because the typescript complier does not re-write the path.
+
+**No Default Exports**
+
+We do not allow default exports in this project.
+
+[No default export](https://palantir.github.io/tslint/rules/no-default-export/)
+
+
+#### Example Component Structure
+
+The following is an example structure of a Component folder:
+
+* `Text/`
+  * `__snapshots__/` - Test snapshots
+  * `Text.examples.md` - Example usage of the component to be shown in the Styleguide
+  * `Text.test.tsx` - Tests written using Jest
+  * `Text.tsx` - The main component file
+  * `index.ts` - The export file for the folder
+  * `style.ts` - Any styled components are stored here
+
+##### Component Examples
+
+Examples of the component are created in a Markdown file which are then shown in the Styleguide.
+Ensure to show the variety of ways the component can be used.
+
+Write the examples using JSX syntax such as below:
+
+```jsx
+<Callout type="info">
+  <div className="title">
+  Information!
+  </div>
+  Bringing you the latest news.
+</Callout>
+```
+
+### Styled Components vs Sass Modules
 
 We have two kinds of component implementation within `ui-components`. Some components use styled-components
 as a CSS-in-JS solution, while others are using external `.scss` files loaded using sass-loader. Using
@@ -138,7 +178,7 @@ should be self-contained.
 Similarly, **NEVER** use one component to restyle another component. For example, if `Button` doesn't have the right
 color for your needs, add a new kind of `Button` instead of using specific css to override its style.
 
-#### Styleguide Structure
+### Styleguide Structure
 
 Your Styleguide Structure should always follow its folder structure,
 however, you can choose not to if putting elsewhere makes more sense (e.g. `Defaults`).
@@ -147,7 +187,7 @@ This can help us developers to look for the source code of the component.
 
 If you created a new domain, please also create a new section for it.
 
-#### Child Components
+### Child Components
 
 A Child Component means a component which can only be used under
 a specific component (e.g. `VerticalTimelineEvent` under `VerticalTimeline`)
@@ -170,7 +210,7 @@ const Example = (
 )
 ```
 
-#### Request Change of Code Standard
+### Request Change of Code Standard
 
 You should create a PR/MR against this file
 and explain the reason behind it in the description.
