@@ -17,6 +17,25 @@ import { Variables } from '@Common';
   </PageLayout.Region>
 </PageLayout>
 ```
+#### Index Layout
+
+This layout is used for pages that display information with a search bar or jumbotron.
+
+```jsx
+import { Variables } from '@Common';
+
+<PageLayout layoutType='index'>
+  <PageLayout.Region regionType='top'>
+     <div style={{backgroundColor: Variables.Color.n300, height: '40px'}}/>
+   </PageLayout.Region>
+  <PageLayout.Region regionType='header'>
+    <div style={{backgroundColor: Variables.Color.n500, height: '240px'}}/>
+  </PageLayout.Region>
+  <PageLayout.Region regionType='content'>
+    <div style={{backgroundColor: Variables.Color.n600, height: '500px'}}/>
+  </PageLayout.Region>
+</PageLayout>
+```
 #### Simple Layout
 
 This layout should be used for most pages
