@@ -4,9 +4,9 @@
   &::before {
     color: $color;
     content: $icon;
-    font-family: FontAwesome;
+    font-family: 'Font Awesome 5 Pro';
     font-size: 17px;
-    font-weight: normal;
+    font-weight: bold;
     margin-right: 10px;
     position: relative;
   }
@@ -80,9 +80,10 @@
       // Signifies sortable headers
       &.-cursor-pointer {
         @include sorting-cursor('\f0dc', $n800);
-
+        
         cursor: pointer;
-
+        font-weight: bold;
+        
         &.-sort-asc {
           @include sorting-cursor('\f0de', $i400);
         }
