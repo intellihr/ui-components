@@ -655,7 +655,7 @@ $button-styles: (
     }
 
     &.left {
-      margin-right: 3px;
+      margin-right: $spacing-xsmall;
     }
 
     &.right {
