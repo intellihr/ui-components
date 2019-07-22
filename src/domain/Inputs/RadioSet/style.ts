@@ -1,19 +1,22 @@
 import styled, { css } from 'styled-components'
 
-import { Props, Variables } from '../../../common'
-import { RadioInput } from '../../Inputs'
+import { Props } from '../../../common'
+import { styleForMargins } from '../../Spacers/services/margins'
 
 interface IRadioSetWrapperProps {
   orientation: Props.Orientation
+  margins?: Props.IMargins
 }
 
-interface IStyledRadioInputProps {
-  spacing?: 'normal' | 'tight'
+interface IStyledRadioInputWrapperProps {
+  margins?: Props.IMargins
 }
 
-export const RadioSetWrapper = styled.div`
+const RadioSetWrapper = styled.div`
   display: inline-flex;
   max-width: 100%;
+
+  ${(props: IRadioSetWrapperProps) => styleForMargins(props.margins)}
 
   ${(props: IRadioSetWrapperProps) => {
     if (props.orientation === Props.Orientation.Vertical) {
@@ -28,17 +31,22 @@ export const RadioSetWrapper = styled.div`
   }}
 `
 
-export const StyledRadioInput = styled(RadioInput)`
-  ${(props: IStyledRadioInputProps) => {
-  switch (props.spacing) {
-    case 'normal':
-      return css`
-          margin-bottom: ${Variables.Spacing.sXSmall}px;
-        `
-    case 'tight':
-      return css`
-        margin-bottom: 0;
-      `
-    }
-  }}
+const StyledRadioInput = styled.input`
+  line-height: 16px;
+
+  margin: 0;
+
+  &::-ms-clear {
+    display: none;
+  }
 `
+
+const StyledRadioInputWrapper = styled.div`
+  ${(props: IStyledRadioInputWrapperProps) => styleForMargins(props.margins)}
+`
+
+export {
+  RadioSetWrapper,
+  StyledRadioInput,
+  StyledRadioInputWrapper
+}

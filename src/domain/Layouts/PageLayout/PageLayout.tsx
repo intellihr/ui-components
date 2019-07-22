@@ -8,7 +8,7 @@ export interface IPageLayoutProps {
   /** What to display in the layout. */
   children?: React.ReactNode,
   /** What type of layout to use */
-  layoutType: 'profile' | 'simple' | 'fullscreen' | 'form'
+  layoutType: 'profile' | 'index' | 'simple' | 'fullscreen' | 'form'
 }
 
 export class PageLayout extends React.Component<IPageLayoutProps> {

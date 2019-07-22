@@ -109,3 +109,47 @@ exports[`<PageLayout /> should render a simple layout 1`] = `
   </div>
 </PageLayout>
 `;
+
+exports[`<PageLayout /> should render an index layout 1`] = `
+<PageLayout
+  layoutType="index"
+>
+  <div
+    className="base index page-base"
+  >
+    <Region
+      regionType="top"
+    >
+      <div
+        className="top"
+      >
+        <div>
+          1
+        </div>
+      </div>
+    </Region>
+    <Region
+      regionType="header"
+    >
+      <div
+        className="header"
+      >
+        <div>
+          a
+        </div>
+      </div>
+    </Region>
+    <Region
+      regionType="content"
+    >
+      <div
+        className="content"
+      >
+        <div>
+          b
+        </div>
+      </div>
+    </Region>
+  </div>
+</PageLayout>
+`;

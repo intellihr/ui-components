@@ -4,7 +4,7 @@ import { Field } from './subcomponents/Field'
 import { LeftAlignControls } from './subcomponents/LeftAlignControls'
 import { RightAlignControls } from './subcomponents/RightAlignControls'
 
-class VerticalForm extends React.PureComponent<React.HTMLAttributes<HTMLFormElement>> {
+class VerticalForm extends React.PureComponent<React.FormHTMLAttributes<HTMLFormElement>> {
   public static Field = Field
   public static LeftAlignControls = LeftAlignControls
   public static RightAlignControls = RightAlignControls
@@ -13,6 +13,7 @@ class VerticalForm extends React.PureComponent<React.HTMLAttributes<HTMLFormElem
     const {
       onSubmit,
       onChange,
+      autoComplete,
       children
     } = this.props
 
@@ -20,6 +21,7 @@ class VerticalForm extends React.PureComponent<React.HTMLAttributes<HTMLFormElem
       <form
         onSubmit={onSubmit}
         onChange={onChange}
+        autoComplete={autoComplete}
       >
         {children}
       </form>

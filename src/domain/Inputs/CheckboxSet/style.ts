@@ -1,19 +1,18 @@
 import styled, { css } from 'styled-components'
 
-import { Props, Variables } from '../../../common'
-import { CheckboxInput } from '../../Inputs'
+import { Props } from '../../../common'
+import { styleForMargins } from '../../Spacers/services/margins'
 
 interface ICheckboxSetWrapperProps {
   orientation: Props.Orientation
-}
-
-interface IStyledCheckboxInputProps {
-  spacing?: 'normal' | 'tight'
+  margins?: Props.IMargins
 }
 
 export const CheckboxSetWrapper = styled.div`
   display: inline-flex;
   max-width: 100%;
+
+  ${(props: ICheckboxSetWrapperProps) => styleForMargins(props.margins)}
 
   ${(props: ICheckboxSetWrapperProps) => {
   if (props.orientation === Props.Orientation.Vertical) {
@@ -27,19 +26,4 @@ export const CheckboxSetWrapper = styled.div`
 
     `
 }}
-`
-
-export const StyledCheckboxInput = styled(CheckboxInput)`
-  ${(props: IStyledCheckboxInputProps) => {
-  switch (props.spacing) {
-    case 'normal':
-      return css`
-          margin-bottom: ${Variables.Spacing.sXSmall}px;
-        `
-    case 'tight':
-      return css`
-        margin-bottom: 0;
-      `
-    }
-  }}
 `

@@ -1,11 +1,38 @@
 import classNames from 'classnames'
-import React from 'react'
+import React, { ChangeEventHandler } from 'react'
 
-import { IGenericInputProps, Input } from '../Input'
+import { Props } from '../../../common'
+import { StyledCheckboxInput, StyledCheckboxInputWrapper } from './style'
 
 const style = require('./style.scss')
 
-export interface ICheckboxInputProps extends IGenericInputProps {
+export interface ICheckboxInputProps {
+  /** ID of the input */
+  id?: string
+  /** Name of the input */
+  name: string
+  /** Custom classname to use */
+  className?: string
+  /** Function passed to `onChange` prop */
+  handleChange?: ChangeEventHandler<HTMLInputElement>
+  /** Called when the input is changed */
+  onChange?: (value: boolean) => void
+  /** Value of the input */
+  value?: string | number
+  /** If true, sets input to disabled state */
+  isDisabled?: boolean
+  /** Handle blur event */
+  handleBlur?: (e: React.FocusEvent<HTMLInputElement>, value?: string | number) => void
+  /** Handle key down events */
+  handleKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void
+  /** If true, use HTML5 required attribute */
+  isHTML5Required?: boolean
+  /** Add autofocus attribute to input */
+  autoFocus?: boolean
+  /** The component context */
+  componentContext?: string
+  /** The margins around the component */
+  margins?: Props.IMargins
   /** Label to display next to the checkbox */
   label: JSX.Element | string
   /** If true, the checkbox is wrapped by a button */
@@ -14,14 +41,68 @@ export interface ICheckboxInputProps extends IGenericInputProps {
 
 export class CheckboxInput extends React.PureComponent<ICheckboxInputProps> {
   public static defaultProps: Partial<ICheckboxInputProps> = {
-    isButton: false
+    isButton: false,
+    isDisabled: false
   }
 
-  get infoLabel (): JSX.Element | null {
+  public render (): JSX.Element {
+    const {
+      id,
+      value,
+      handleKeyDown,
+      handleBlur,
+      isDisabled,
+      isHTML5Required,
+      autoFocus,
+      componentContext,
+      className,
+      margins,
+      name
+    } = this.props
+
+    return (
+      <StyledCheckboxInputWrapper
+        margins={margins}
+      >
+        <div
+          className={classNames('checkbox-input', style.checkboxInput, className)}
+        >
+          <StyledCheckboxInput
+            id={id || name}
+            name={name}
+            type='checkbox'
+            value={value}
+            onChange={this.handleChange}
+            onKeyDown={handleKeyDown}
+            onBlur={handleBlur ? (e) => handleBlur(e, value) : undefined}
+            className={this.classNames}
+            disabled={isDisabled}
+            required={isHTML5Required}
+            autoFocus={autoFocus}
+            data-component-type={Props.ComponentType.CheckboxInput}
+            data-component-context={componentContext}
+            checked={this.isChecked}
+          />
+          {this.infoLabel}
+        </div>
+      </StyledCheckboxInputWrapper>
+    )
+  }
+
+  private get isChecked (): boolean {
+    const {
+      value
+    } = this.props
+
+    return Boolean(value)
+  }
+
+  private get infoLabel (): JSX.Element | null {
     const {
       name,
       label,
-      isButton
+      isButton,
+      id
     } = this.props
 
     if (!label) {
@@ -30,7 +111,7 @@ export class CheckboxInput extends React.PureComponent<ICheckboxInputProps> {
 
     return (
       <label
-        htmlFor={name}
+        htmlFor={id || name}
         className={classNames('checkbox', { 'checkbox-button': isButton })}
       >
         {label}
@@ -38,24 +119,29 @@ export class CheckboxInput extends React.PureComponent<ICheckboxInputProps> {
     )
   }
 
-  public render (): JSX.Element {
+  private get classNames (): string {
     const {
-      value,
-      className,
-      ...props
+      className
     } = this.props
 
-    return (
-      <div
-        className={classNames('checkbox-input', style.checkboxInput, className)}
-      >
-        <Input
-          {...props}
-          isChecked={Boolean(value)}
-          type='checkbox'
-        />
-        {this.infoLabel}
-      </div>
+    return classNames(
+      style.input,
+      [
+        className
+      ]
     )
+  }
+
+  private handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const {
+      onChange,
+      handleChange
+    } = this.props
+
+    if (onChange) {
+      onChange(event.target.checked)
+    } else if (handleChange) {
+      handleChange(event)
+    }
   }
 }

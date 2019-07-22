@@ -10,22 +10,34 @@ describe('<LayoutSpacer />', () => {
         contentItems={[
           {
             content: <div>a</div>,
-            spacingSize: 'small'
+            spacingSize: '3xsmall'
           },
           {
             content: <div>b</div>,
-            spacingSize: 'medium'
+            spacingSize: '2xsmall'
           },
           {
             content: <div>c</div>,
-            spacingSize: 'large'
+            spacingSize: 'xsmall'
           },
           {
             content: <div>d</div>,
+            spacingSize: 'small'
+          },
+          {
+            content: <div>e</div>,
+            spacingSize: 'medium'
+          },
+          {
+            content: <div>f</div>,
+            spacingSize: 'large'
+          },
+          {
+            content: <div>g</div>,
             spacingSize: 'xlarge'
           },
           {
-            content: <div>e</div>
+            content: <div>h</div>
           }
         ]}
       />

@@ -16,6 +16,18 @@ describe('<CheckboxInput />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
+  it(`should render a checked checkbox input without button`, () => {
+    const wrapper = shallow(
+      <CheckboxInput
+        name='test-input'
+        value='true'
+        label='Hey I am a test string'
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it(`should render a checkbox input with button`, () => {
     const wrapper = shallow(
       <CheckboxInput
