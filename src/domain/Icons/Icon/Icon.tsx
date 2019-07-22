@@ -21,6 +21,8 @@ interface IIconProps {
   badge?: JSX.Element
   /** Margins around the component */
   margins?: Props.IMargins
+  /** Width of the icon */
+  width?: number
 }
 
 const Icon: React.FC<IIconProps> = ({
@@ -31,7 +33,8 @@ const Icon: React.FC<IIconProps> = ({
   customSize,
   icon,
   badge,
-  margins
+  margins,
+  width
 }) => {
   const classes = classNames(
     className,
@@ -57,6 +60,7 @@ const Icon: React.FC<IIconProps> = ({
         customSize={customSize}
         size={size}
         margins={margins}
+        width={width}
       />
       {badge && ['large', 'xlarge', 'xxlarge'].includes(size) && (
         <BadgeWrapper
