@@ -48,4 +48,14 @@ describe('<VerticalForm />', () => {
     expect(mockHandleSubmit.mock.calls.length).toBe(1)
     expect(wrapper).toMatchSnapshot()
   })
+
+  it('should render with autoComplete when it is passed in', () => {
+    const wrapper = shallow(
+      <VerticalForm autoComplete='off'>
+        <Input name='testInput' type='text' />
+      </VerticalForm>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })

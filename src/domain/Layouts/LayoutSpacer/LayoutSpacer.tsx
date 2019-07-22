@@ -5,7 +5,7 @@ import { StyledContentItem } from './style'
 
 interface ILayoutSpacerContentItemProps {
   /** Size of the space between this content item and the next */
-  spacingSize?: 'small' | 'medium' | 'large' | 'xlarge',
+  spacingSize?: '3xsmall' | '2xsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge',
   /** Content item */
   content?: JSX.Element | JSX.Element[] | null,
   /** Component context for the content item */
