@@ -168,6 +168,10 @@
         color: $r400;
       }
 
+      &:-ms-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
+        color: $r400;
+      }
+
       &:focus,
       &:hover {
         color: $n700;

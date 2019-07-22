@@ -23,6 +23,10 @@ select {
 input,
 textarea,
 select {
+  &:-ms-input-placeholder { // sass-lint:disable-line no-vendor-prefixes
+    color: $n400;
+  }
+
   &:disabled{
     &,
     &:hover {
