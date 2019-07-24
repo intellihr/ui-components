@@ -30,6 +30,8 @@ interface ICardProps {
   margins?: Props.IMargins
   /** The data-component-context */
   componentContext?: string
+  /** If the card should have a hover style */
+  isHoverable?: boolean
 }
 
 interface ICardState {
@@ -38,7 +40,8 @@ interface ICardState {
 
 export class Card extends React.PureComponent<ICardProps, ICardState> {
   public static defaultProps: Partial<ICardProps> = {
-    isExpanded: false
+    isExpanded: false,
+    isHoverable: false
   }
 
   public state: ICardState = {
@@ -52,14 +55,15 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
       isExpanded,
       onCardToggle,
       componentContext,
-      margins
+      margins,
+      isHoverable
     } = this.props
 
     return (
       <StyledCard
         margins={margins}
         onClick={onCardToggle}
-        hasHoverStyle={!this.state.isActionButtonHover && (!!extraContent || !!onCardToggle)}
+        hasHoverStyle={!this.state.isActionButtonHover && (!!extraContent || !!onCardToggle || isHoverable!)}
         data-component-type={Props.ComponentType.Card}
         data-component-context={componentContext}
       >
