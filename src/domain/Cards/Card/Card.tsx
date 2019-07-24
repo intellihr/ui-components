@@ -59,7 +59,7 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
       <StyledCard
         margins={margins}
         onClick={onCardToggle}
-        hasHoverStyle={!this.state.isActionButtonHover && !!extraContent}
+        hasHoverStyle={!this.state.isActionButtonHover && (!!extraContent || !!onCardToggle)}
         data-component-type={Props.ComponentType.Card}
         data-component-context={componentContext}
       >
