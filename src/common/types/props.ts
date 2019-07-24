@@ -91,6 +91,7 @@ namespace Props {
     RadioInput = 'radio_input',
     Record = 'record',
     RecordName = 'record_name',
+    ScrollingTabGroup = 'scrolling_tab_group',
     SmartList = 'smart_list',
     SmartListColumn = 'smart_list_column',
     Statistic = 'statistic',
