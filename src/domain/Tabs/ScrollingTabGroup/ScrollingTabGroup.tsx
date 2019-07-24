@@ -8,7 +8,7 @@ import {
 } from 'lodash'
 import React, { MouseEvent, RefObject } from 'react'
 
-import { Utils } from '../../../common'
+import { Props, Utils } from '../../../common'
 import { IntelliIcon } from '../../Icons'
 import {
   TabChevronButton,
@@ -42,6 +42,10 @@ export interface IScrollingTabGroupProps {
   onTabChange?: (tab: IScrollingTab, index: number) => void
   /** Callback when the scroll position changes */
   onScrollUpdate?: (newScrollValue: number) => void
+  /** The data-component-context */
+  componentContext?: string
+  /** The margins around the component */
+  margins?: Props.IMargins
 }
 
 export class ScrollingTabGroup extends React.Component<IScrollingTabGroupProps, never> {
@@ -84,7 +88,9 @@ export class ScrollingTabGroup extends React.Component<IScrollingTabGroupProps, 
 
   public render (): JSX.Element | null {
     const {
-      tabs
+      tabs,
+      componentContext,
+      margins
     } = this.props
 
     if (tabs.length === 0) {
@@ -92,7 +98,11 @@ export class ScrollingTabGroup extends React.Component<IScrollingTabGroupProps, 
     }
 
     return (
-      <TabGroupContainer>
+      <TabGroupContainer
+        data-component-context={componentContext}
+        data-component-type={Props.ComponentType.ScrollingTabGroup}
+        margins={margins}
+      >
         {this.leftChevron}
         {this.rightChevron}
         {this.tabList}
