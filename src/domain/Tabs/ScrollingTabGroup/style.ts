@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 
-import { Variables } from '../../../common'
+import { Props, Variables } from '../../../common'
+import { styleForMargins } from '../../Spacers/services/margins'
 
 const TabStyleConstants = {
   GroupHeight: 40,
@@ -8,10 +9,16 @@ const TabStyleConstants = {
   ScrollDuration: 250
 }
 
+interface ITabGroupContainerProps {
+  /** Margins around the highlight area */
+  margins?: Props.IMargins
+}
+
 const TabGroupContainer = styled.div`
   box-shadow: inset 0 -1px 0 0 ${Variables.Color.n300};
   height: ${TabStyleConstants.GroupHeight}px;
   width: 100%;
+  ${(props: ITabGroupContainerProps) => styleForMargins(props.margins)}
 `
 
 interface ITabChevronButtonProps {

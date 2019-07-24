@@ -69,3 +69,4 @@ The components that support margins are:
 * Carousel
 * FilterController
 * HighlightArea
+* ScrollingTabGroup
