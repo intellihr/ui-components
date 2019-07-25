@@ -23,14 +23,11 @@ pipeline {
       steps {
         script {
           skipBuild = helper.shouldSkipBuild()
-
-          echo "Storing fontawesome authentication"
-          fontawesomeAuth = helper.getSSMParameter("/shared/npm/config/fontawesome")
         }
 
         // Setup FontAwesome PRO token for npm:
         // https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers
-        sh "echo \"${helper.getSSMParameter('/shared/npm/config/fontawesome')}\" >> .npmrc"
+        sh "echo \"${helper.getSSMParameter('/shared/npm/rc_config/fontawesome')}\" >> .npmrc"
       }
     }
 
