@@ -23,11 +23,14 @@ pipeline {
       steps {
         script {
           skipBuild = helper.shouldSkipBuild()
-        }
+          env.ENV_TYPE = (helper.isExperimental()) ? 'experimental' : (env.BRANCH_NAME == 'master') ? 'prod' : 'dev'
 
-        // Setup FontAwesome PRO token for npm:
-        // https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers
-        sh "echo \"${helper.getSSMParameter('/shared/npm/rc_config/fontawesome')}\" >> .npmrc"
+          helper.assumeRole(env.ENV_TYPE)
+          // Setup FontAwesome PRO token for npm:
+          // https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers
+          helper.getSSMParameter('/shared/npm/rc_config/fontawesome') >> ".npmrc"
+          helper.resetAWSCredentials()
+        }
       }
     }
 
