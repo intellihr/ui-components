@@ -28,7 +28,7 @@ pipeline {
           helper.assumeRole(env.ENV_TYPE)
           // Setup FontAwesome PRO token for npm:
           // https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers
-          helper.getSSMParameter('/shared/npm/rc_config/fontawesome') >> ".npmrc"
+          sh "echo \"${helper.getSSMParameter('/shared/npm/rc_config/fontawesome')}\" >> .npmrc"
           helper.resetAWSCredentials()
         }
       }
