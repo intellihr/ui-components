@@ -11,6 +11,7 @@ WORKDIR /var/task
 
 ADD package.json /var/task
 ADD yarn.lock /var/task
+ADD .npmrc /var/task
 
 RUN yarn --frozen-lockfile
 
