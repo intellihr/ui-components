@@ -34,7 +34,6 @@ exports[`<Icon /> should render a large icon 1`] = `
             "lastClassName": "c0",
             "rules": Array [
               "
-  /** Old .fa styles */
   display: inline-block;
   font-stretch: 100%;
 
@@ -116,7 +115,6 @@ exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
             "lastClassName": "c0",
             "rules": Array [
               "
-  /** Old .fa styles */
   display: inline-block;
   font-stretch: 100%;
 
@@ -242,7 +240,6 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
             "lastClassName": "c0",
             "rules": Array [
               "
-  /** Old .fa styles */
   display: inline-block;
   font-stretch: 100%;
 
@@ -454,7 +451,6 @@ exports[`<Icon /> should render icon with a custom size 1`] = `
             "lastClassName": "c0",
             "rules": Array [
               "
-  /** Old .fa styles */
   display: inline-block;
   font-stretch: 100%;
 
@@ -540,7 +536,6 @@ exports[`<Icon /> should render icon with colour 1`] = `
             "lastClassName": "c0",
             "rules": Array [
               "
-  /** Old .fa styles */
   display: inline-block;
   font-stretch: 100%;
 
@@ -623,7 +618,6 @@ exports[`<Icon /> should render icon with no size or colour 1`] = `
             "lastClassName": "c0",
             "rules": Array [
               "
-  /** Old .fa styles */
   display: inline-block;
   font-stretch: 100%;
 
@@ -706,7 +700,6 @@ exports[`<Icon /> should render icon with size 1`] = `
             "lastClassName": "c0",
             "rules": Array [
               "
-  /** Old .fa styles */
   display: inline-block;
   font-stretch: 100%;
 

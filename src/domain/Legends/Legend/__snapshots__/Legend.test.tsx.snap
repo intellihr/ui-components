@@ -152,7 +152,6 @@ exports[`<Legend /> should render a legend 1`] = `
                         "lastClassName": "c3",
                         "rules": Array [
                           "
-  /** Old .fa styles */
   display: inline-block;
   font-stretch: 100%;
 
@@ -273,7 +272,6 @@ exports[`<Legend /> should render a legend 1`] = `
                         "lastClassName": "c3",
                         "rules": Array [
                           "
-  /** Old .fa styles */
   display: inline-block;
   font-stretch: 100%;
 

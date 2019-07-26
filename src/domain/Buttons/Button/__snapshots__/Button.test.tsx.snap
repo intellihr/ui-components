@@ -293,7 +293,6 @@ exports[`<Button /> should render a button with an icon 1`] = `
                         "lastClassName": "c0",
                         "rules": Array [
                           "
-  /** Old .fa styles */
   display: inline-block;
   font-stretch: 100%;
 

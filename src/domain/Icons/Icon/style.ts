@@ -41,7 +41,6 @@ const BadgeWrapper = styled.span<IBadgeWrapper>`
 `
 
 const StyledIcon = styled.i<IStyledIconProps>`
-  /** Old .fa styles */
   display: inline-block;
   font-stretch: 100%;
 

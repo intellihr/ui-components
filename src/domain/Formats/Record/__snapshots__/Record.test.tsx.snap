@@ -1276,7 +1276,6 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                             "lastClassName": "c2",
                             "rules": Array [
                               "
-  /** Old .fa styles */
   display: inline-block;
   font-stretch: 100%;
 

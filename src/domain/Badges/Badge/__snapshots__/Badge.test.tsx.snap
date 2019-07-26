@@ -386,7 +386,6 @@ exports[`<Badge /> should render a spinning badge 1`] = `
                       "lastClassName": "c1",
                       "rules": Array [
                         "
-  /** Old .fa styles */
   display: inline-block;
   font-stretch: 100%;
 
