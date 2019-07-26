@@ -1071,7 +1071,9 @@ exports[`<Record /> should render a Record component, with the provided componen
 
 exports[`<Record /> should render a Record with a Tooltip 1`] = `
 .c2 {
-  width: 1.28571em;
+  display: inline-block;
+  font-stretch: 100%;
+  width: px;
   color: #424F5C;
 }
 
@@ -1247,21 +1249,22 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
             >
               <FontAwesomeIcon
                 color="#424F5C"
-                type="question-circle-o"
+                icon="question-circle"
+                type="regular"
               >
                 <Icon
                   color="#424F5C"
-                  type="fa-question-circle-o"
+                  icon="far fa-question-circle"
                 >
                   <styled.i
                     aria-hidden={true}
-                    className="icon fa fa-question-circle-o"
+                    className="icon far fa-question-circle"
                     color="#424F5C"
                     size="medium"
                   >
                     <StyledComponent
                       aria-hidden={true}
-                      className="icon fa fa-question-circle-o"
+                      className="icon far fa-question-circle"
                       color="#424F5C"
                       forwardedComponent={
                         Object {
@@ -1273,7 +1276,13 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                             "lastClassName": "c2",
                             "rules": Array [
                               "
-   width: 1.28571em;
+  /** Old .fa styles */
+  display: inline-block;
+  font-stretch: 100%;
+
+  width: ",
+                              [Function],
+                              "px;
 
   ",
                               [Function],
@@ -1308,7 +1317,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                     >
                       <i
                         aria-hidden={true}
-                        className="icon fa fa-question-circle-o c2"
+                        className="icon far fa-question-circle c2"
                         color="#424F5C"
                         size="medium"
                       />
@@ -1325,7 +1334,9 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
               parentRef={
                 Object {
                   "current": .c0 {
-  width: 1.28571em;
+  display: inline-block;
+  font-stretch: 100%;
+  width: px;
   color: #424F5C;
 }
 
@@ -1343,7 +1354,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                   >
                     <i
                       aria-hidden="true"
-                      class="icon fa fa-question-circle-o c0"
+                      class="icon far fa-question-circle c0"
                       color="#424F5C"
                     />
                   </button>,

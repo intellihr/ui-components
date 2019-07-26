@@ -9,7 +9,7 @@ describe('<Icon />', () => {
   it('should render icon with no size or colour', () => {
     const wrapper = mount(
       <Icon
-        type='fa-check'
+        icon='fa-check'
       />
     )
 
@@ -19,7 +19,7 @@ describe('<Icon />', () => {
   it('should render icon with size', () => {
     const wrapper = mount(
       <Icon
-        type='fa-check'
+        icon='fa-check'
         size='medium'
       />
     )
@@ -30,7 +30,7 @@ describe('<Icon />', () => {
   it('should render a large icon', () => {
     const wrapper = mount(
       <Icon
-        type='fa-circle'
+        icon='fa-circle'
         size='large'
       />
     )
@@ -41,7 +41,7 @@ describe('<Icon />', () => {
   it('should render icon with colour', () => {
     const wrapper = mount(
       <Icon
-        type='fa-check'
+        icon='fa-check'
         color='#1A2B3C'
       />
     )
@@ -52,7 +52,7 @@ describe('<Icon />', () => {
   it('should render icon with a custom size', () => {
     const wrapper = mount(
       <Icon
-        type='fa-check'
+        icon='fa-check'
         customSize={2.6}
       />
     )
@@ -63,7 +63,7 @@ describe('<Icon />', () => {
   it('should render a non-FontAwesome icon', () => {
     const wrapper = mount(
       <Icon
-        type='intelli-icon-avatar'
+        icon='intelli-icon-avatar'
       />
     )
 
@@ -73,7 +73,7 @@ describe('<Icon />', () => {
   it('should render an icon with a badge', () => {
     const wrapper = mount(
       <Icon
-        type='fa-check'
+        icon='fa-check'
         size='xlarge'
         badge={
           <Badge
