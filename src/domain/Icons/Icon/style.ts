@@ -42,9 +42,11 @@ const BadgeWrapper = styled.span<IBadgeWrapper>`
 
 const StyledIcon = styled.i<IStyledIconProps>`
   display: inline-block;
-  font-stretch: 100%;
+  font-stretch: normal;
 
-  width: ${(props) => props.width}px;
+  ${(props) => props.width && css`
+    width: ${props.width}px;
+  `} 
 
   ${(props) => styleForMargins(props.margins)}
 
