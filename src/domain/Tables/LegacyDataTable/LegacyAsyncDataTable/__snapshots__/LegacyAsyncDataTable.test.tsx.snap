@@ -903,8 +903,7 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
 
 .c0 {
   display: inline-block;
-  font-stretch: 100%;
-  width: px;
+  font-stretch: normal;
 }
 
 .c0.icon {
@@ -2125,11 +2124,11 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                                   "rules": Array [
                                     "
   display: inline-block;
-  font-stretch: 100%;
+  font-stretch: normal;
 
-  width: ",
+  ",
                                     [Function],
-                                    "px;
+                                    "
 
   ",
                                     [Function],
@@ -2220,11 +2219,11 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                                   "rules": Array [
                                     "
   display: inline-block;
-  font-stretch: 100%;
+  font-stretch: normal;
 
-  width: ",
+  ",
                                     [Function],
-                                    "px;
+                                    "
 
   ",
                                     [Function],
@@ -2501,8 +2500,7 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
 
 .c0 {
   display: inline-block;
-  font-stretch: 100%;
-  width: px;
+  font-stretch: normal;
 }
 
 .c0.icon {
@@ -3434,11 +3432,11 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                                   "rules": Array [
                                     "
   display: inline-block;
-  font-stretch: 100%;
+  font-stretch: normal;
 
-  width: ",
+  ",
                                     [Function],
-                                    "px;
+                                    "
 
   ",
                                     [Function],
@@ -3529,11 +3527,11 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                                   "rules": Array [
                                     "
   display: inline-block;
-  font-stretch: 100%;
+  font-stretch: normal;
 
-  width: ",
+  ",
                                     [Function],
-                                    "px;
+                                    "
 
   ",
                                     [Function],
@@ -3866,8 +3864,7 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
 
 .c0 {
   display: inline-block;
-  font-stretch: 100%;
-  width: px;
+  font-stretch: normal;
 }
 
 .c0.icon {
@@ -4804,11 +4801,11 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                                   "rules": Array [
                                     "
   display: inline-block;
-  font-stretch: 100%;
+  font-stretch: normal;
 
-  width: ",
+  ",
                                     [Function],
-                                    "px;
+                                    "
 
   ",
                                     [Function],
@@ -4899,11 +4896,11 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                                   "rules": Array [
                                     "
   display: inline-block;
-  font-stretch: 100%;
+  font-stretch: normal;
 
-  width: ",
+  ",
                                     [Function],
-                                    "px;
+                                    "
 
   ",
                                     [Function],
@@ -5185,8 +5182,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
 
 .c0 {
   display: inline-block;
-  font-stretch: 100%;
-  width: px;
+  font-stretch: normal;
 }
 
 .c0.icon {
@@ -6435,11 +6431,11 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                                   "rules": Array [
                                     "
   display: inline-block;
-  font-stretch: 100%;
+  font-stretch: normal;
 
-  width: ",
+  ",
                                     [Function],
-                                    "px;
+                                    "
 
   ",
                                     [Function],
@@ -6530,11 +6526,11 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                                   "rules": Array [
                                     "
   display: inline-block;
-  font-stretch: 100%;
+  font-stretch: normal;
 
-  width: ",
+  ",
                                     [Function],
-                                    "px;
+                                    "
 
   ",
                                     [Function],

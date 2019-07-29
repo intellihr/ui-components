@@ -199,8 +199,7 @@ exports[`<Button /> should render a button with a type delete-subtle 1`] = `
 exports[`<Button /> should render a button with an icon 1`] = `
 .c0 {
   display: inline-block;
-  font-stretch: 100%;
-  width: px;
+  font-stretch: normal;
 }
 
 .c0.icon {
@@ -294,11 +293,11 @@ exports[`<Button /> should render a button with an icon 1`] = `
                         "rules": Array [
                           "
   display: inline-block;
-  font-stretch: 100%;
+  font-stretch: normal;
 
-  width: ",
+  ",
                           [Function],
-                          "px;
+                          "
 
   ",
                           [Function],

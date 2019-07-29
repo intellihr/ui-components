@@ -1072,8 +1072,7 @@ exports[`<Record /> should render a Record component, with the provided componen
 exports[`<Record /> should render a Record with a Tooltip 1`] = `
 .c2 {
   display: inline-block;
-  font-stretch: 100%;
-  width: px;
+  font-stretch: normal;
   color: #424F5C;
 }
 
@@ -1277,11 +1276,11 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                             "rules": Array [
                               "
   display: inline-block;
-  font-stretch: 100%;
+  font-stretch: normal;
 
-  width: ",
+  ",
                               [Function],
-                              "px;
+                              "
 
   ",
                               [Function],
@@ -1334,8 +1333,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                 Object {
                   "current": .c0 {
   display: inline-block;
-  font-stretch: 100%;
-  width: px;
+  font-stretch: normal;
   color: #424F5C;
 }
 

@@ -3,8 +3,7 @@
 exports[`<Legend /> should render a legend 1`] = `
 .c1 {
   display: inline-block;
-  font-stretch: 100%;
-  width: px;
+  font-stretch: normal;
   color: rgb(0,255,0);
 }
 
@@ -15,8 +14,7 @@ exports[`<Legend /> should render a legend 1`] = `
 
 .c3 {
   display: inline-block;
-  font-stretch: 100%;
-  width: px;
+  font-stretch: normal;
   color: rgb(0,0,255);
 }
 
@@ -153,11 +151,11 @@ exports[`<Legend /> should render a legend 1`] = `
                         "rules": Array [
                           "
   display: inline-block;
-  font-stretch: 100%;
+  font-stretch: normal;
 
-  width: ",
+  ",
                           [Function],
-                          "px;
+                          "
 
   ",
                           [Function],
@@ -273,11 +271,11 @@ exports[`<Legend /> should render a legend 1`] = `
                         "rules": Array [
                           "
   display: inline-block;
-  font-stretch: 100%;
+  font-stretch: normal;
 
-  width: ",
+  ",
                           [Function],
-                          "px;
+                          "
 
   ",
                           [Function],

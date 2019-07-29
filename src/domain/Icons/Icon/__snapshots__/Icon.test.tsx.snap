@@ -3,8 +3,7 @@
 exports[`<Icon /> should render a large icon 1`] = `
 .c0 {
   display: inline-block;
-  font-stretch: 100%;
-  width: px;
+  font-stretch: normal;
 }
 
 .c0.icon {
@@ -35,11 +34,11 @@ exports[`<Icon /> should render a large icon 1`] = `
             "rules": Array [
               "
   display: inline-block;
-  font-stretch: 100%;
+  font-stretch: normal;
 
-  width: ",
+  ",
               [Function],
-              "px;
+              "
 
   ",
               [Function],
@@ -85,8 +84,7 @@ exports[`<Icon /> should render a large icon 1`] = `
 exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
 .c0 {
   display: inline-block;
-  font-stretch: 100%;
-  width: px;
+  font-stretch: normal;
 }
 
 .c0.icon {
@@ -116,11 +114,11 @@ exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
             "rules": Array [
               "
   display: inline-block;
-  font-stretch: 100%;
+  font-stretch: normal;
 
-  width: ",
+  ",
               [Function],
-              "px;
+              "
 
   ",
               [Function],
@@ -172,8 +170,7 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
 
 .c0 {
   display: inline-block;
-  font-stretch: 100%;
-  width: px;
+  font-stretch: normal;
 }
 
 .c0.icon {
@@ -241,11 +238,11 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
             "rules": Array [
               "
   display: inline-block;
-  font-stretch: 100%;
+  font-stretch: normal;
 
-  width: ",
+  ",
               [Function],
-              "px;
+              "
 
   ",
               [Function],
@@ -418,8 +415,7 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
 exports[`<Icon /> should render icon with a custom size 1`] = `
 .c0 {
   display: inline-block;
-  font-stretch: 100%;
-  width: px;
+  font-stretch: normal;
 }
 
 .c0.icon {
@@ -452,11 +448,11 @@ exports[`<Icon /> should render icon with a custom size 1`] = `
             "rules": Array [
               "
   display: inline-block;
-  font-stretch: 100%;
+  font-stretch: normal;
 
-  width: ",
+  ",
               [Function],
-              "px;
+              "
 
   ",
               [Function],
@@ -502,8 +498,7 @@ exports[`<Icon /> should render icon with a custom size 1`] = `
 exports[`<Icon /> should render icon with colour 1`] = `
 .c0 {
   display: inline-block;
-  font-stretch: 100%;
-  width: px;
+  font-stretch: normal;
   color: #1A2B3C;
 }
 
@@ -537,11 +532,11 @@ exports[`<Icon /> should render icon with colour 1`] = `
             "rules": Array [
               "
   display: inline-block;
-  font-stretch: 100%;
+  font-stretch: normal;
 
-  width: ",
+  ",
               [Function],
-              "px;
+              "
 
   ",
               [Function],
@@ -588,8 +583,7 @@ exports[`<Icon /> should render icon with colour 1`] = `
 exports[`<Icon /> should render icon with no size or colour 1`] = `
 .c0 {
   display: inline-block;
-  font-stretch: 100%;
-  width: px;
+  font-stretch: normal;
 }
 
 .c0.icon {
@@ -619,11 +613,11 @@ exports[`<Icon /> should render icon with no size or colour 1`] = `
             "rules": Array [
               "
   display: inline-block;
-  font-stretch: 100%;
+  font-stretch: normal;
 
-  width: ",
+  ",
               [Function],
-              "px;
+              "
 
   ",
               [Function],
@@ -669,8 +663,7 @@ exports[`<Icon /> should render icon with no size or colour 1`] = `
 exports[`<Icon /> should render icon with size 1`] = `
 .c0 {
   display: inline-block;
-  font-stretch: 100%;
-  width: px;
+  font-stretch: normal;
 }
 
 .c0.icon {
@@ -701,11 +694,11 @@ exports[`<Icon /> should render icon with size 1`] = `
             "rules": Array [
               "
   display: inline-block;
-  font-stretch: 100%;
+  font-stretch: normal;
 
-  width: ",
+  ",
               [Function],
-              "px;
+              "
 
   ",
               [Function],

@@ -46,7 +46,7 @@ const StyledIcon = styled.i<IStyledIconProps>`
 
   ${(props) => props.width && css`
     width: ${props.width}px;
-  `} 
+  `}
 
   ${(props) => styleForMargins(props.margins)}
 

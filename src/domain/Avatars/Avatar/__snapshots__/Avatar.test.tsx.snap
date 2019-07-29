@@ -224,8 +224,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, using imageData 1`] = 
 exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and overlay 1`] = `
 .c0 {
   display: inline-block;
-  font-stretch: 100%;
-  width: px;
+  font-stretch: normal;
 }
 
 .c0.icon {
@@ -276,11 +275,11 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
                       "rules": Array [
                         "
   display: inline-block;
-  font-stretch: 100%;
+  font-stretch: normal;
 
-  width: ",
+  ",
                         [Function],
-                        "px;
+                        "
 
   ",
                         [Function],

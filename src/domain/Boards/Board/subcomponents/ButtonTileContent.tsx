@@ -14,13 +14,13 @@ import {
 interface IBoardButtonTileContentProps {
   /** Text displayed above the content of tile */
   label?: string
-  /** 
-   * Intelli icon type displayed in the tile. If `fontAwesomeIcon` is 
-   * provided as well `intelliIcon` will take precedence 
+  /**
+   * Intelli icon type displayed in the tile. If `fontAwesomeIcon` is
+   * provided as well `intelliIcon` will take precedence
    */
   intelliIcon?: IntelliIconValue
-  /** 
-   * FontAwesome icon type displayed in the tile. Will not display if an `intelliIcon` 
+  /**
+   * FontAwesome icon type displayed in the tile. Will not display if an `intelliIcon`
    * is provided
    */
   fontAwesomeIcon?: {

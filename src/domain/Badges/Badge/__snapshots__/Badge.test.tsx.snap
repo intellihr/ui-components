@@ -238,8 +238,7 @@ exports[`<Badge /> should render a small badge 1`] = `
 exports[`<Badge /> should render a spinning badge 1`] = `
 .c1 {
   display: inline-block;
-  font-stretch: 100%;
-  width: px;
+  font-stretch: normal;
 }
 
 .c1.icon {
@@ -387,11 +386,11 @@ exports[`<Badge /> should render a spinning badge 1`] = `
                       "rules": Array [
                         "
   display: inline-block;
-  font-stretch: 100%;
+  font-stretch: normal;
 
-  width: ",
+  ",
                         [Function],
-                        "px;
+                        "
 
   ",
                         [Function],
