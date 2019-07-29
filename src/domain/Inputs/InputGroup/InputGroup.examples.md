@@ -132,7 +132,7 @@ initialState = {
       }}
       width={300}
       textInputProps={{
-        icon: <FontAwesomeIcon type='search' />,
+        icon: <FontAwesomeIcon type='solid' icon='search' />,
         placeholder: 'Search country!'
       }}
       options={[
@@ -159,7 +159,7 @@ initialState = {
           value: 4,
           onClick: (option) => {alert('I have a custom onClick handler!'); setState({selectedOption: option}); closeMenu()},
           leftComponent: <Emoji emoji='flag-au' />,
-          rightComponent: <FontAwesomeIcon type='star' />,
+          rightComponent: <FontAwesomeIcon type='solid' icon='star' />,
           buttonText: 'AUD'
         }
       ]}
@@ -224,7 +224,7 @@ class ThingList extends React.PureComponent {
     <>
       <TextInput
         placeholder='Search country!'
-        icon={<FontAwesomeIcon type='search' />}
+        icon={<FontAwesomeIcon type='solid' icon='search' />}
         value={state.inputValue}
         handleChange={(e) => setState({inputValue: e.target.value})}
         width={300}
@@ -314,7 +314,7 @@ class ThingList extends React.PureComponent {
     <>
       <TextInput
         placeholder='Search country!'
-        icon={<FontAwesomeIcon type='search' />}
+        icon={<FontAwesomeIcon type='solid' icon='search' />}
         value={state.inputValue}
         handleChange={(e) => setState({inputValue: e.target.value})}
         width={300}
@@ -355,7 +355,7 @@ class ThingList extends React.PureComponent {
     <>
       <TextInput
         placeholder='Search country!'
-        icon={<FontAwesomeIcon type='search' />}
+        icon={<FontAwesomeIcon type='solid' icon='search' />}
         value={state.inputValue}
         handleChange={(e) => setState({inputValue: e.target.value})}
         width={300}
@@ -396,7 +396,7 @@ class ThingList extends React.PureComponent {
     <>
       <TextInput
         placeholder='Search country!'
-        icon={<FontAwesomeIcon type='search' />}
+        icon={<FontAwesomeIcon type='solid' icon='search' />}
         value={state.inputValue}
         handleChange={(e) => setState({inputValue: e.target.value})}
         width={300}

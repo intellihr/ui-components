@@ -223,7 +223,8 @@ exports[`<Avatar /> Renders a large Avatar with initials, using imageData 1`] = 
 
 exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and overlay 1`] = `
 .c0 {
-  width: 1.28571em;
+  display: inline-block;
+  font-stretch: normal;
 }
 
 .c0.icon {
@@ -249,19 +250,20 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
         className="avatar-hover avatar-large"
       >
         <FontAwesomeIcon
-          type="camera"
+          icon="camera"
+          type="solid"
         >
           <Icon
-            type="fa-camera"
+            icon="fas fa-camera"
           >
             <styled.i
               aria-hidden={true}
-              className="icon fa fa-camera"
+              className="icon fas fa-camera"
               size="medium"
             >
               <StyledComponent
                 aria-hidden={true}
-                className="icon fa fa-camera"
+                className="icon fas fa-camera"
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
@@ -272,7 +274,12 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
                       "lastClassName": "c0",
                       "rules": Array [
                         "
-   width: 1.28571em;
+  display: inline-block;
+  font-stretch: normal;
+
+  ",
+                        [Function],
+                        "
 
   ",
                         [Function],
@@ -307,7 +314,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
               >
                 <i
                   aria-hidden={true}
-                  className="icon fa fa-camera c0"
+                  className="icon fas fa-camera c0"
                   size="medium"
                 />
               </StyledComponent>

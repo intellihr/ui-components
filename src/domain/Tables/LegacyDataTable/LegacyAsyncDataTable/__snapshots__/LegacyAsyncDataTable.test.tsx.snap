@@ -902,7 +902,8 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
 }
 
 .c0 {
-  width: 1.28571em;
+  display: inline-block;
+  font-stretch: normal;
 }
 
 .c0.icon {
@@ -2098,19 +2099,20 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                     type="button"
                   >
                     <FontAwesomeIcon
-                      type="chevron-left"
+                      icon="chevron-left"
+                      type="solid"
                     >
                       <Icon
-                        type="fa-chevron-left"
+                        icon="fas fa-chevron-left"
                       >
                         <styled.i
                           aria-hidden={true}
-                          className="icon fa fa-chevron-left"
+                          className="icon fas fa-chevron-left"
                           size="medium"
                         >
                           <StyledComponent
                             aria-hidden={true}
-                            className="icon fa fa-chevron-left"
+                            className="icon fas fa-chevron-left"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -2121,7 +2123,12 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                                   "lastClassName": "c0",
                                   "rules": Array [
                                     "
-   width: 1.28571em;
+  display: inline-block;
+  font-stretch: normal;
+
+  ",
+                                    [Function],
+                                    "
 
   ",
                                     [Function],
@@ -2156,7 +2163,7 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                           >
                             <i
                               aria-hidden={true}
-                              className="icon fa fa-chevron-left c0"
+                              className="icon fas fa-chevron-left c0"
                               size="medium"
                             />
                           </StyledComponent>
@@ -2187,19 +2194,20 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                     type="button"
                   >
                     <FontAwesomeIcon
-                      type="chevron-right"
+                      icon="chevron-right"
+                      type="solid"
                     >
                       <Icon
-                        type="fa-chevron-right"
+                        icon="fas fa-chevron-right"
                       >
                         <styled.i
                           aria-hidden={true}
-                          className="icon fa fa-chevron-right"
+                          className="icon fas fa-chevron-right"
                           size="medium"
                         >
                           <StyledComponent
                             aria-hidden={true}
-                            className="icon fa fa-chevron-right"
+                            className="icon fas fa-chevron-right"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -2210,7 +2218,12 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                                   "lastClassName": "c0",
                                   "rules": Array [
                                     "
-   width: 1.28571em;
+  display: inline-block;
+  font-stretch: normal;
+
+  ",
+                                    [Function],
+                                    "
 
   ",
                                     [Function],
@@ -2245,7 +2258,7 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                           >
                             <i
                               aria-hidden={true}
-                              className="icon fa fa-chevron-right c0"
+                              className="icon fas fa-chevron-right c0"
                               size="medium"
                             />
                           </StyledComponent>
@@ -2486,7 +2499,8 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
 }
 
 .c0 {
-  width: 1.28571em;
+  display: inline-block;
+  font-stretch: normal;
 }
 
 .c0.icon {
@@ -3393,19 +3407,20 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                     type="button"
                   >
                     <FontAwesomeIcon
-                      type="chevron-left"
+                      icon="chevron-left"
+                      type="solid"
                     >
                       <Icon
-                        type="fa-chevron-left"
+                        icon="fas fa-chevron-left"
                       >
                         <styled.i
                           aria-hidden={true}
-                          className="icon fa fa-chevron-left"
+                          className="icon fas fa-chevron-left"
                           size="medium"
                         >
                           <StyledComponent
                             aria-hidden={true}
-                            className="icon fa fa-chevron-left"
+                            className="icon fas fa-chevron-left"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -3416,7 +3431,12 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                                   "lastClassName": "c0",
                                   "rules": Array [
                                     "
-   width: 1.28571em;
+  display: inline-block;
+  font-stretch: normal;
+
+  ",
+                                    [Function],
+                                    "
 
   ",
                                     [Function],
@@ -3451,7 +3471,7 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                           >
                             <i
                               aria-hidden={true}
-                              className="icon fa fa-chevron-left c0"
+                              className="icon fas fa-chevron-left c0"
                               size="medium"
                             />
                           </StyledComponent>
@@ -3482,19 +3502,20 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                     type="button"
                   >
                     <FontAwesomeIcon
-                      type="chevron-right"
+                      icon="chevron-right"
+                      type="solid"
                     >
                       <Icon
-                        type="fa-chevron-right"
+                        icon="fas fa-chevron-right"
                       >
                         <styled.i
                           aria-hidden={true}
-                          className="icon fa fa-chevron-right"
+                          className="icon fas fa-chevron-right"
                           size="medium"
                         >
                           <StyledComponent
                             aria-hidden={true}
-                            className="icon fa fa-chevron-right"
+                            className="icon fas fa-chevron-right"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -3505,7 +3526,12 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                                   "lastClassName": "c0",
                                   "rules": Array [
                                     "
-   width: 1.28571em;
+  display: inline-block;
+  font-stretch: normal;
+
+  ",
+                                    [Function],
+                                    "
 
   ",
                                     [Function],
@@ -3540,7 +3566,7 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                           >
                             <i
                               aria-hidden={true}
-                              className="icon fa fa-chevron-right c0"
+                              className="icon fas fa-chevron-right c0"
                               size="medium"
                             />
                           </StyledComponent>
@@ -3837,7 +3863,8 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
 }
 
 .c0 {
-  width: 1.28571em;
+  display: inline-block;
+  font-stretch: normal;
 }
 
 .c0.icon {
@@ -4749,19 +4776,20 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                     type="button"
                   >
                     <FontAwesomeIcon
-                      type="chevron-left"
+                      icon="chevron-left"
+                      type="solid"
                     >
                       <Icon
-                        type="fa-chevron-left"
+                        icon="fas fa-chevron-left"
                       >
                         <styled.i
                           aria-hidden={true}
-                          className="icon fa fa-chevron-left"
+                          className="icon fas fa-chevron-left"
                           size="medium"
                         >
                           <StyledComponent
                             aria-hidden={true}
-                            className="icon fa fa-chevron-left"
+                            className="icon fas fa-chevron-left"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -4772,7 +4800,12 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                                   "lastClassName": "c0",
                                   "rules": Array [
                                     "
-   width: 1.28571em;
+  display: inline-block;
+  font-stretch: normal;
+
+  ",
+                                    [Function],
+                                    "
 
   ",
                                     [Function],
@@ -4807,7 +4840,7 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                           >
                             <i
                               aria-hidden={true}
-                              className="icon fa fa-chevron-left c0"
+                              className="icon fas fa-chevron-left c0"
                               size="medium"
                             />
                           </StyledComponent>
@@ -4838,19 +4871,20 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                     type="button"
                   >
                     <FontAwesomeIcon
-                      type="chevron-right"
+                      icon="chevron-right"
+                      type="solid"
                     >
                       <Icon
-                        type="fa-chevron-right"
+                        icon="fas fa-chevron-right"
                       >
                         <styled.i
                           aria-hidden={true}
-                          className="icon fa fa-chevron-right"
+                          className="icon fas fa-chevron-right"
                           size="medium"
                         >
                           <StyledComponent
                             aria-hidden={true}
-                            className="icon fa fa-chevron-right"
+                            className="icon fas fa-chevron-right"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -4861,7 +4895,12 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                                   "lastClassName": "c0",
                                   "rules": Array [
                                     "
-   width: 1.28571em;
+  display: inline-block;
+  font-stretch: normal;
+
+  ",
+                                    [Function],
+                                    "
 
   ",
                                     [Function],
@@ -4896,7 +4935,7 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                           >
                             <i
                               aria-hidden={true}
-                              className="icon fa fa-chevron-right c0"
+                              className="icon fas fa-chevron-right c0"
                               size="medium"
                             />
                           </StyledComponent>
@@ -5142,7 +5181,8 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
 }
 
 .c0 {
-  width: 1.28571em;
+  display: inline-block;
+  font-stretch: normal;
 }
 
 .c0.icon {
@@ -6366,19 +6406,20 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                     type="button"
                   >
                     <FontAwesomeIcon
-                      type="chevron-left"
+                      icon="chevron-left"
+                      type="solid"
                     >
                       <Icon
-                        type="fa-chevron-left"
+                        icon="fas fa-chevron-left"
                       >
                         <styled.i
                           aria-hidden={true}
-                          className="icon fa fa-chevron-left"
+                          className="icon fas fa-chevron-left"
                           size="medium"
                         >
                           <StyledComponent
                             aria-hidden={true}
-                            className="icon fa fa-chevron-left"
+                            className="icon fas fa-chevron-left"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -6389,7 +6430,12 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                                   "lastClassName": "c0",
                                   "rules": Array [
                                     "
-   width: 1.28571em;
+  display: inline-block;
+  font-stretch: normal;
+
+  ",
+                                    [Function],
+                                    "
 
   ",
                                     [Function],
@@ -6424,7 +6470,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                           >
                             <i
                               aria-hidden={true}
-                              className="icon fa fa-chevron-left c0"
+                              className="icon fas fa-chevron-left c0"
                               size="medium"
                             />
                           </StyledComponent>
@@ -6455,19 +6501,20 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                     type="button"
                   >
                     <FontAwesomeIcon
-                      type="chevron-right"
+                      icon="chevron-right"
+                      type="solid"
                     >
                       <Icon
-                        type="fa-chevron-right"
+                        icon="fas fa-chevron-right"
                       >
                         <styled.i
                           aria-hidden={true}
-                          className="icon fa fa-chevron-right"
+                          className="icon fas fa-chevron-right"
                           size="medium"
                         >
                           <StyledComponent
                             aria-hidden={true}
-                            className="icon fa fa-chevron-right"
+                            className="icon fas fa-chevron-right"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -6478,7 +6525,12 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                                   "lastClassName": "c0",
                                   "rules": Array [
                                     "
-   width: 1.28571em;
+  display: inline-block;
+  font-stretch: normal;
+
+  ",
+                                    [Function],
+                                    "
 
   ",
                                     [Function],
@@ -6513,7 +6565,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                           >
                             <i
                               aria-hidden={true}
-                              className="icon fa fa-chevron-right c0"
+                              className="icon fas fa-chevron-right c0"
                               size="medium"
                             />
                           </StyledComponent>

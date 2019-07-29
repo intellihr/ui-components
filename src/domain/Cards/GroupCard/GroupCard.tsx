@@ -103,7 +103,7 @@ export class GroupCard extends React.PureComponent<IGroupCardProps> {
       return (
         <StyledGroupCardToggleButton isExpanded={!!isExpanded}>
           <ChevronIconWrapper>
-            <FontAwesomeIcon type='chevron-down' />
+            <FontAwesomeIcon type='solid' icon='chevron-down' />
           </ChevronIconWrapper>
         </StyledGroupCardToggleButton>
       )
@@ -149,7 +149,7 @@ export class GroupCard extends React.PureComponent<IGroupCardProps> {
       ref={toggleComponentRef}
       {...ariaProps}
     >
-      <FontAwesomeIcon type='ellipsis-v' />
+      <FontAwesomeIcon type='solid' icon='ellipsis-v' />
     </StyledBodyActionButton>
   )
 

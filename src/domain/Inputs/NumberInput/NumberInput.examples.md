@@ -74,13 +74,13 @@ import { FontAwesomeIcon, IntelliIcon } from '@Domain/Icons';
   FontAwesomeIcon
   <NumberInput
     value={state.value1}
-    icon={<FontAwesomeIcon type='facebook' />}
+    icon={<FontAwesomeIcon type='solid' icon='cube' />}
     onChange={(value) => {setState({value1: value})}}
   />
   IntelliIcon
   <NumberInput
     value={state.value2}
-    icon={<IntelliIcon type='search' />}
+    icon={<IntelliIcon type='solid' icon='search' />}
     onChange={(value) => {setState({value2: value})}}
   />
 </div>
@@ -95,7 +95,7 @@ import { FontAwesomeIcon } from '@Domain/Icons';
  
  <NumberInput
   value={state.textValue}
-  icon={<FontAwesomeIcon type='facebook' />}
+  icon={<FontAwesomeIcon type='solid' icon='cube' />}
   disabledPrefix='+614' 
   placeholder='Input your phone number...'
   onChange={(value) => {setState({value: value})}}

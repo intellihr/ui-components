@@ -20,7 +20,8 @@ exports[`<GroupCard /> should render a group card with body contents and  their 
       >
         <styled.span>
           <FontAwesomeIcon
-            type="chevron-down"
+            icon="chevron-down"
+            type="solid"
           />
         </styled.span>
       </styled.button>

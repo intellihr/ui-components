@@ -72,7 +72,7 @@ describe('<Button />', () => {
     const wrapper = mount(
       <Button
         id='test-button-icon'
-        icon={<FontAwesomeIcon type='star' />}
+        icon={<FontAwesomeIcon type='solid' icon='star' />}
         iconAlignment='right'
         type='primary-hollow'
       >

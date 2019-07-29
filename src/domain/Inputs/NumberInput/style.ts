@@ -36,7 +36,7 @@ const PrefixWrapper = styled.div`
   border: 1px solid transparent;
   line-height: 16px;
 
-  .fa {
+  .icon {
     color: ${Variables.Color.n400};
     line-height: 21px;
     vertical-align: top;

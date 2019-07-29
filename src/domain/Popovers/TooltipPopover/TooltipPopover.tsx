@@ -55,7 +55,7 @@ class TooltipPopover extends React.Component<ITooltipPopoverProps, ITooltipPopov
         ref={toggleComponentRef}
         {...ariaProps}
       >
-        <FontAwesomeIcon type='question-circle-o' color={Variables.Color.n700} />
+        <FontAwesomeIcon type='regular' icon='question-circle' color={Variables.Color.n700} />
       </button>
     )
   }

@@ -34,8 +34,8 @@ const InputWrapper = styled.div`
         padding-right: ${Variables.Spacing.sXLarge}px;
       }
   `}
-
 `
+
 const PrefixWrapper = styled.div`
   position: absolute;
   width: auto;
@@ -44,7 +44,7 @@ const PrefixWrapper = styled.div`
   border: 1px solid transparent;
   line-height: 16px;
 
-  .fa {
+  .icon {
     color: ${Variables.Color.n400};
     line-height: 21px;
     vertical-align: top;

@@ -60,7 +60,7 @@ class Button extends React.PureComponent<IInputGroupButtonProps> {
     } = this.props
 
     if (showCaret) {
-      return <FontAwesomeIcon className='right-component' type='caret-down' />
+      return <FontAwesomeIcon className='right-component' type='solid' icon='caret-down' />
     }
 
     return null
