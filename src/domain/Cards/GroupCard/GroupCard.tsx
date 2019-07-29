@@ -110,7 +110,7 @@ export class GroupCard extends React.PureComponent<IGroupCardProps> {
     }
   }
 
-  private bodyContent = (bodyContent: IGroupCardExtraContentProps) => {
+  private bodyContent = (bodyContent: IGroupCardExtraContentProps, idx: number) => {
     const {
       mainContent,
       extraContent,
@@ -119,7 +119,9 @@ export class GroupCard extends React.PureComponent<IGroupCardProps> {
 
     if (mainContent) {
       return (
-        <StyledBodyContent>
+        <StyledBodyContent
+          key={idx}
+        >
           <StyledFlexContent>
             <StyledPrimaryContent>{mainContent}</StyledPrimaryContent>
             {this.actionButtonDropdownMenu(dropdownSections)}
