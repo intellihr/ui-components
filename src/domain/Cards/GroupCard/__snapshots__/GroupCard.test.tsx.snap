@@ -31,7 +31,9 @@ exports[`<GroupCard /> should render a group card with body contents and  their 
     isExpanded={false}
   >
     <styled.div>
-      <styled.div>
+      <styled.div
+        key="0"
+      >
         <styled.div>
           <styled.div>
             <div>
@@ -59,7 +61,9 @@ exports[`<GroupCard /> should render a group card with body contents and  their 
           mainContent
         </div>
       </styled.div>
-      <styled.div>
+      <styled.div
+        key="1"
+      >
         <styled.div>
           <styled.div>
             <div>
