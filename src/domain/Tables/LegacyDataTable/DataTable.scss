@@ -82,7 +82,6 @@
         @include sorting-cursor('\f0dc', $n800);
 
         cursor: pointer;
-        font-weight: bold;
 
         &.-sort-asc {
           @include sorting-cursor('\f0de', $i400);
