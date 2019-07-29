@@ -49,11 +49,11 @@ import { FontAwesomeIcon, IntelliIcon } from '@Domain/Icons';
 <div>
   Text
   <TextInput
-    icon={<FontAwesomeIcon type='facebook' />}
+    icon={<FontAwesomeIcon type='solid' icon='cube' />}
   />
   Number
   <NumberInput
-    icon={<IntelliIcon type='search' />}
+    icon={<IntelliIcon type='solid' icon='search' />}
   />
 </div>
 ```
@@ -67,7 +67,7 @@ import { FontAwesomeIcon } from '@Domain/Icons';
 <div>
   Text
   <TextInput
-    icon={<FontAwesomeIcon type='facebook' />}
+    icon={<FontAwesomeIcon type='solid' icon='cube' />}
     disabledPrefix='Hello!' 
   />
   Number

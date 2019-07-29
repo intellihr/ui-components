@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Icon, IconType } from '../../../Icons'
+import { FontAwesomeIcon, FontAwesomeIconValue, IntelliIcon, IntelliIconValue } from '../../../Icons'
 import { StyledTileLabel, TileContentWrapper } from './style'
 import {
   CenteredContentChildrenWrapper,
@@ -17,7 +17,11 @@ interface IBoardCenteredTileContentProps {
   /** Text displayed above the content of tile */
   label?: string,
   topRightComponent?: JSX.Element,
-  iconType?: IconType,
+  intelliIcon?: IntelliIconValue
+  fontAwesomeIcon?: {
+    type: 'solid' | 'light' | 'regular'
+    icon: FontAwesomeIconValue
+  }
   imageSrc?: string,
   heading?: string,
   subheading?: string,
@@ -86,7 +90,8 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
 
   private get icon (): JSX.Element | null {
     const {
-      iconType,
+      intelliIcon,
+      fontAwesomeIcon,
       imageSrc,
       heading
     } = this.props
@@ -102,10 +107,27 @@ class CenteredTileContent extends React.PureComponent<IBoardCenteredTileContentP
       )
     }
 
-    if (iconType) {
+    const customSize = 5
+    if (intelliIcon) {
       return (
         <CenteredContentImageWrapper>
-          <Icon type={iconType} customSize={5} />
+          <IntelliIcon
+            icon={intelliIcon}
+            customSize={customSize}
+          />
+        </CenteredContentImageWrapper>
+      )
+    }
+
+    if (fontAwesomeIcon) {
+      const { type, icon } = fontAwesomeIcon
+      return (
+        <CenteredContentImageWrapper>
+          <FontAwesomeIcon
+            type={type}
+            icon={icon}
+            customSize={customSize}
+          />
         </CenteredContentImageWrapper>
       )
     }

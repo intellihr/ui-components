@@ -32,7 +32,8 @@ const Badge: React.FC<IBadgeProps> = ({ size = 'small', hasBorder = true, pendin
     >
       {pending ? (
         <FontAwesomeIcon
-          type='refresh'
+          type='solid'
+          icon='sync'
           isSpinning
           className='refresh-icon'
         />

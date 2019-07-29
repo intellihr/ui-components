@@ -2,7 +2,8 @@
 
 exports[`<Legend /> should render a legend 1`] = `
 .c1 {
-  width: 1.28571em;
+  display: inline-block;
+  font-stretch: normal;
   color: rgb(0,255,0);
 }
 
@@ -12,7 +13,8 @@ exports[`<Legend /> should render a legend 1`] = `
 }
 
 .c3 {
-  width: 1.28571em;
+  display: inline-block;
+  font-stretch: normal;
   color: rgb(0,0,255);
 }
 
@@ -119,23 +121,24 @@ exports[`<Legend /> should render a legend 1`] = `
         >
           <FontAwesomeIcon
             color="rgb(0,255,0)"
+            icon="circle"
             size="xsmall"
-            type="circle"
+            type="solid"
           >
             <Icon
               color="rgb(0,255,0)"
+              icon="fas fa-circle"
               size="xsmall"
-              type="fa-circle"
             >
               <styled.i
                 aria-hidden={true}
-                className="icon fa fa-circle"
+                className="icon fas fa-circle"
                 color="rgb(0,255,0)"
                 size="xsmall"
               >
                 <StyledComponent
                   aria-hidden={true}
-                  className="icon fa fa-circle"
+                  className="icon fas fa-circle"
                   color="rgb(0,255,0)"
                   forwardedComponent={
                     Object {
@@ -147,7 +150,12 @@ exports[`<Legend /> should render a legend 1`] = `
                         "lastClassName": "c3",
                         "rules": Array [
                           "
-   width: 1.28571em;
+  display: inline-block;
+  font-stretch: normal;
+
+  ",
+                          [Function],
+                          "
 
   ",
                           [Function],
@@ -182,7 +190,7 @@ exports[`<Legend /> should render a legend 1`] = `
                 >
                   <i
                     aria-hidden={true}
-                    className="icon fa fa-circle c1"
+                    className="icon fas fa-circle c1"
                     color="rgb(0,255,0)"
                     size="xsmall"
                   />
@@ -233,23 +241,24 @@ exports[`<Legend /> should render a legend 1`] = `
         >
           <FontAwesomeIcon
             color="rgb(0,0,255)"
+            icon="circle"
             size="xsmall"
-            type="circle"
+            type="solid"
           >
             <Icon
               color="rgb(0,0,255)"
+              icon="fas fa-circle"
               size="xsmall"
-              type="fa-circle"
             >
               <styled.i
                 aria-hidden={true}
-                className="icon fa fa-circle"
+                className="icon fas fa-circle"
                 color="rgb(0,0,255)"
                 size="xsmall"
               >
                 <StyledComponent
                   aria-hidden={true}
-                  className="icon fa fa-circle"
+                  className="icon fas fa-circle"
                   color="rgb(0,0,255)"
                   forwardedComponent={
                     Object {
@@ -261,7 +270,12 @@ exports[`<Legend /> should render a legend 1`] = `
                         "lastClassName": "c3",
                         "rules": Array [
                           "
-   width: 1.28571em;
+  display: inline-block;
+  font-stretch: normal;
+
+  ",
+                          [Function],
+                          "
 
   ",
                           [Function],
@@ -296,7 +310,7 @@ exports[`<Legend /> should render a legend 1`] = `
                 >
                   <i
                     aria-hidden={true}
-                    className="icon fa fa-circle c3"
+                    className="icon fas fa-circle c3"
                     color="rgb(0,0,255)"
                     size="xsmall"
                   />

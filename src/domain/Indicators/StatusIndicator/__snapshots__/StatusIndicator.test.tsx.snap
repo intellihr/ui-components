@@ -6,7 +6,8 @@ exports[`<StatusIndicator /> should render a dot status label 1`] = `
 >
   <FontAwesomeIcon
     color="#CADDFC"
-    type="circle"
+    icon="circle"
+    type="solid"
   />
   <Text
     isInline={true}
@@ -23,7 +24,8 @@ exports[`<StatusIndicator /> should render a dot status label with default value
   className="StatusIndicator dot-status-label"
 >
   <FontAwesomeIcon
-    type="circle"
+    icon="circle"
+    type="solid"
   />
   <Text
     isInline={true}
@@ -40,7 +42,8 @@ exports[`<StatusIndicator /> should render a hollow dot status label 1`] = `
   className="StatusIndicator dot-status-label"
 >
   <FontAwesomeIcon
-    type="circle-o"
+    icon="circle"
+    type="regular"
   />
   <Text
     isInline={true}

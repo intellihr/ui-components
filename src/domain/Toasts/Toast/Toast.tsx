@@ -2,7 +2,7 @@ import classNames from 'classnames'
 import React from 'react'
 
 import { Variables } from '../../../common'
-import { IntelliIcon, IntelliIconTypeNoPrefix } from '../../Icons'
+import { IntelliIcon, IntelliIconValue } from '../../Icons'
 import { Text } from '../../Typographies/Text'
 const style = require('./style.scss')
 
@@ -36,7 +36,7 @@ export class Toast extends React.PureComponent<IToastProps> {
       handleClose
     } = this.props
 
-    let iconName: IntelliIconTypeNoPrefix = 'check'
+    let iconName: IntelliIconValue = 'check'
     if (type === 'alert') {
       iconName = 'alert'
     }
@@ -48,7 +48,7 @@ export class Toast extends React.PureComponent<IToastProps> {
     return (
       <div className={classNames(style.ToastClass, type)}>
         <IntelliIcon
-          type={iconName}
+          icon={iconName}
           size='xsmall'
           className='toast-icon'
         />
@@ -63,7 +63,7 @@ export class Toast extends React.PureComponent<IToastProps> {
           onClick={handleClose}
         >
           <IntelliIcon
-            type='cross-small'
+            icon='cross-small'
             size='xsmall'
             className='toast-close'
           />

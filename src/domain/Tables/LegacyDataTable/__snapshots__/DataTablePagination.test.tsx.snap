@@ -25,7 +25,8 @@ exports[`<DataTablePagination /> Pagination with few pages should match the snap
       type="button"
     >
       <FontAwesomeIcon
-        type="chevron-left"
+        icon="chevron-left"
+        type="solid"
       />
     </button>
     <button
@@ -59,7 +60,8 @@ exports[`<DataTablePagination /> Pagination with few pages should match the snap
       type="button"
     >
       <FontAwesomeIcon
-        type="chevron-right"
+        icon="chevron-right"
+        type="solid"
       />
     </button>
   </div>
@@ -91,7 +93,8 @@ exports[`<DataTablePagination /> Pagination with many pages should match the sna
       type="button"
     >
       <FontAwesomeIcon
-        type="chevron-left"
+        icon="chevron-left"
+        type="solid"
       />
     </button>
     <button
@@ -155,7 +158,8 @@ exports[`<DataTablePagination /> Pagination with many pages should match the sna
       type="button"
     >
       <FontAwesomeIcon
-        type="chevron-right"
+        icon="chevron-right"
+        type="solid"
       />
     </button>
   </div>
