@@ -271,3 +271,179 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
     }
   />
 ```
+
+#### GroupCard will manage its own state if *isExpanded* is not passed in
+
+```jsx
+import { Button } from '@Domain/Buttons';
+import { GridLayout } from '@Domain/Layouts';
+import { Variables } from '@Common';
+
+const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec libero et libero molestie eleifend. Donec dignissim vel erat eu cursus.';
+ 
+<GroupCard
+  margins={{
+            top:12,
+            bottom: 4
+          }}
+  headingContent= {
+    <GridLayout
+      gutterPaddingX={Variables.Spacing.sSmall}
+      gutterPaddingY={Variables.Spacing.sSmall}
+      cells={[
+        {
+          size: 7,
+          content: text
+        },
+        {
+          size: 5,
+          content: text
+        }
+      ]}
+    />
+  }
+  bodyContents= {[
+    {
+      dropdownSections: [
+              {
+                text: 'homepage',
+                href: 'https://intellihr.github.io/ui-components/',
+                stopPropagation: true
+              },
+              {
+                text: 'Delete',
+                onClick: (event) => { alert('Delete action for the card') },
+                sectionType: 'alert',
+                stopPropagation: true
+              }
+            ],
+      mainContent: (
+                      <GridLayout
+                        gutterPaddingX={Variables.Spacing.sSmall}
+                        gutterPaddingY={Variables.Spacing.sSmall}
+                        cells={[
+                          {
+                            size: 7,
+                            content: text
+                          },
+                          {
+                            size: 5,
+                            content: text
+                          }
+                        ]}
+                      />
+                  ),
+      extraContent: (
+                      <GridLayout
+                        gutterPaddingX={Variables.Spacing.sSmall}
+                        gutterPaddingY={Variables.Spacing.sSmall}
+                        cells={[
+                          {
+                            size: 12,
+                            content: text
+                          },
+                          {
+                            size: 12,
+                            content: text
+                          }
+                        ]}
+                      />
+                  )
+    },
+    {
+      dropdownSections: [
+              {
+                text: 'homepage',
+                href: 'https://intellihr.github.io/ui-components/',
+                stopPropagation: true
+              },
+              {
+                text: 'Delete',
+                onClick: (event) => { alert('Delete action for the card') },
+                sectionType: 'alert',
+                stopPropagation: true
+              }
+            ],
+      mainContent: (
+                      <GridLayout
+                        gutterPaddingX={Variables.Spacing.sSmall}
+                        gutterPaddingY={Variables.Spacing.sSmall}
+                        cells={[
+                          {
+                            size: 7,
+                            content: text
+                          },
+                          {
+                            size: 5,
+                            content: text
+                          }
+                        ]}
+                      />
+                  ),
+      extraContent: (
+                      <GridLayout
+                        gutterPaddingX={Variables.Spacing.sSmall}
+                        gutterPaddingY={Variables.Spacing.sSmall}
+                        cells={[
+                          {
+                            size: 12,
+                            content: text
+                          },
+                          {
+                            size: 12,
+                            content: text
+                          }
+                        ]}
+                      />
+                  )
+    },
+    {
+      dropdownSections: [
+              {
+                text: 'homepage',
+                href: 'https://intellihr.github.io/ui-components/',
+                stopPropagation: true
+              },
+              {
+                text: 'Delete',
+                onClick: (event) => { alert('Delete action for the card') },
+                sectionType: 'alert',
+                stopPropagation: true
+              }
+            ],
+      mainContent: (
+                      <GridLayout
+                        gutterPaddingX={Variables.Spacing.sSmall}
+                        gutterPaddingY={Variables.Spacing.sSmall}
+                        cells={[
+                          {
+                            size: 7,
+                            content: text
+                          },
+                          {
+                            size: 5,
+                            content: text
+                          }
+                        ]}
+                      />
+                  ),
+      extraContent: (
+                      <GridLayout
+                        gutterPaddingX={Variables.Spacing.sSmall}
+                        gutterPaddingY={Variables.Spacing.sSmall}
+                        cells={[
+                          {
+                            size: 12,
+                            content: text
+                          },
+                          {
+                            size: 12,
+                            content: text
+                          }
+                        ]}
+                      />
+                  )
+    }
+  ]}
+/>
+```

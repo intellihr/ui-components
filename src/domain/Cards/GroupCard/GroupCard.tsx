@@ -40,8 +40,12 @@ interface IGroupCardProps {
   componentContext?: string
 }
 
-export class GroupCard extends React.PureComponent<IGroupCardProps> {
-  public static defaultProps: Partial<IGroupCardProps> = {
+interface IGroupCardState {
+  isExpanded: boolean
+}
+
+export class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
+  public state: IGroupCardState = {
     isExpanded: false
   }
 
@@ -49,8 +53,6 @@ export class GroupCard extends React.PureComponent<IGroupCardProps> {
     const {
       headingContent,
       bodyContents,
-      isExpanded,
-      onCardToggle,
       componentContext,
       margins
     } = this.props
@@ -62,8 +64,8 @@ export class GroupCard extends React.PureComponent<IGroupCardProps> {
         data-component-context={componentContext}
       >
         <StyledGroupMainCard
-          onClick={onCardToggle}
-          isExpanded={!!isExpanded && !!bodyContents}
+          onClick={this.handleCardToggle}
+          isExpanded={this.isExpanded && !!bodyContents}
           hasHoverStyle={!!bodyContents}
         >
           <StyledFlexContent>
@@ -76,15 +78,29 @@ export class GroupCard extends React.PureComponent<IGroupCardProps> {
     )
   }
 
+  private handleCardToggle = () => {
+    this.setState((state) => ({ isExpanded: !state.isExpanded }))
+
+    if (this.props.onCardToggle) {
+      this.props.onCardToggle()
+    }
+  }
+
+  private get isExpanded () {
+    if (this.props.isExpanded === undefined) {
+      return this.state.isExpanded
+    }
+    return this.props.isExpanded
+  }
+
   private get bodyContentCards (): JSX.Element | undefined {
     const {
-      bodyContents,
-      isExpanded
+      bodyContents
     } = this.props
 
     if (bodyContents) {
       return (
-        <StyledGroupExtraCard isExpanded={!!isExpanded}>
+        <StyledGroupExtraCard isExpanded={this.isExpanded}>
           <StyledBodyContents>
             {bodyContents.map(this.bodyContent)}
           </StyledBodyContents>
@@ -95,13 +111,12 @@ export class GroupCard extends React.PureComponent<IGroupCardProps> {
 
   private get toggleButton (): JSX.Element | undefined {
     const {
-      bodyContents,
-      isExpanded
+      bodyContents
     } = this.props
 
     if (bodyContents) {
       return (
-        <StyledGroupCardToggleButton isExpanded={!!isExpanded}>
+        <StyledGroupCardToggleButton isExpanded={this.isExpanded}>
           <ChevronIconWrapper>
             <FontAwesomeIcon type='solid' icon='chevron-down' />
           </ChevronIconWrapper>
@@ -110,7 +125,7 @@ export class GroupCard extends React.PureComponent<IGroupCardProps> {
     }
   }
 
-  private bodyContent = (bodyContent: IGroupCardExtraContentProps) => {
+  private bodyContent = (bodyContent: IGroupCardExtraContentProps, idx: number) => {
     const {
       mainContent,
       extraContent,
@@ -119,7 +134,9 @@ export class GroupCard extends React.PureComponent<IGroupCardProps> {
 
     if (mainContent) {
       return (
-        <StyledBodyContent>
+        <StyledBodyContent
+          key={idx}
+        >
           <StyledFlexContent>
             <StyledPrimaryContent>{mainContent}</StyledPrimaryContent>
             {this.actionButtonDropdownMenu(dropdownSections)}

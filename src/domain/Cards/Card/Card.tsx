@@ -36,33 +36,33 @@ interface ICardProps {
 
 interface ICardState {
   isActionButtonHover: boolean
+  isExpanded: boolean
 }
 
 export class Card extends React.PureComponent<ICardProps, ICardState> {
   public static defaultProps: Partial<ICardProps> = {
-    isExpanded: false,
     isHoverable: false
   }
 
   public state: ICardState = {
-    isActionButtonHover: false
+    isActionButtonHover: false,
+    isExpanded: false
   }
 
   public render (): JSX.Element {
     const {
       mainContent,
       extraContent,
-      isExpanded,
-      onCardToggle,
       componentContext,
       margins,
+      onCardToggle,
       isHoverable
     } = this.props
 
     return (
       <StyledCard
         margins={margins}
-        onClick={onCardToggle}
+        onClick={this.handleCardToggle}
         hasHoverStyle={!this.state.isActionButtonHover && (!!extraContent || !!onCardToggle || isHoverable!)}
         data-component-type={Props.ComponentType.Card}
         data-component-context={componentContext}
@@ -72,11 +72,27 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
           {this.actionButtonDropdownMenu}
           {this.toggleButton}
         </StyledFlexContent>
-        <StyledExtraContent isExpanded={!!isExpanded}>
+        <StyledExtraContent isExpanded={this.isExpanded}>
           {extraContent}
         </StyledExtraContent>
       </StyledCard>
     )
+  }
+
+  private handleCardToggle = () => {
+    this.setState((state) => ({ isExpanded: !state.isExpanded }))
+
+    if (this.props.onCardToggle) {
+      this.props.onCardToggle()
+    }
+  }
+
+  private get isExpanded () {
+    if (this.props.isExpanded === undefined) {
+      return this.state.isExpanded
+    }
+
+    return this.props.isExpanded
   }
 
   private get actionButtonDropdownMenu (): JSX.Element | null {
@@ -111,13 +127,12 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
 
   private get toggleButton (): JSX.Element | undefined {
     const {
-      extraContent,
-      isExpanded
+      extraContent
     } = this.props
 
     if (extraContent) {
       return (
-        <StyledCardToggleButton isExpanded={!!isExpanded} hasParentHoverStyle={!this.state.isActionButtonHover}>
+        <StyledCardToggleButton isExpanded={this.isExpanded} hasParentHoverStyle={!this.state.isActionButtonHover}>
           <ChevronIconWrapper>
             <FontAwesomeIcon type='solid' icon='chevron-down' />
           </ChevronIconWrapper>
