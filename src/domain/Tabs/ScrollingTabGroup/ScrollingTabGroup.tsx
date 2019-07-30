@@ -132,7 +132,7 @@ export class ScrollingTabGroup extends React.Component<IScrollingTabGroupProps, 
         aria-hidden
       >
         <IntelliIcon
-          icon='arrow-left'
+          type='arrow-left'
         />
       </TabChevronButton>
     )
@@ -157,7 +157,7 @@ export class ScrollingTabGroup extends React.Component<IScrollingTabGroupProps, 
         aria-hidden
       >
         <IntelliIcon
-          icon='arrow-right'
+          type='arrow-right'
         />
       </TabChevronButton>
     )

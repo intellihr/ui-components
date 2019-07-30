@@ -58,8 +58,7 @@ export class Tooltip extends React.Component<ITooltipProps> {
           <FontAwesomeIcon
             key={tooltipElementKey}
             color={iconColour}
-            type='regular'
-            icon='question-circle'
+            type='question-circle-o'
           />
         </TooltipIcon>
       )

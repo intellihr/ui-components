@@ -31,7 +31,7 @@ interface IDateRangeInputProps {
   /** Applies recommended settings for mobile and tablet viewports */
   isMobile?: boolean
   /** Change handler called when the date is changed */
-  handleDatesChange: (dates: { startDate: Moment | null, endDate: Moment | null }) => void
+  handleDatesChange: (dates: { startDate: Moment | null, endDate: Moment | null}) => void
 }
 
 interface IDateRangeInputState {
@@ -88,12 +88,12 @@ class DateRangeInput extends React.PureComponent<IDateRangeInputProps, IDateRang
           renderMonthText={this.renderMonthText}
           navPrev={(
             <div className={this.navigationButtonClassNames('left')}>
-              <FontAwesomeIcon type='solid' icon='arrow-left' />
+              <FontAwesomeIcon type='arrow-left'/>
             </div>
           )}
           navNext={(
             <div className={this.navigationButtonClassNames('right')}>
-              <FontAwesomeIcon type='solid' icon='arrow-right' />
+              <FontAwesomeIcon type='arrow-right'/>
             </div>
           )}
         />
@@ -118,10 +118,10 @@ class DateRangeInput extends React.PureComponent<IDateRangeInputProps, IDateRang
     this.setState({ focusedInput })
   }
 
-  private onDatesChange = (dates: { startDate: Moment | null, endDate: Moment | null }) => {
+  private onDatesChange = (dates: { startDate: Moment | null, endDate: Moment | null}) => {
     const {
       handleDatesChange
-    } = this.props
+      } = this.props
 
     handleDatesChange(dates)
   }
@@ -131,12 +131,12 @@ class DateRangeInput extends React.PureComponent<IDateRangeInputProps, IDateRang
   private renderMonthText = (day: Moment) => moment(day).format('MMM YYYY')
 
   private navigationButtonClassNames = (side: 'left' | 'right') => {
-    return classNames(
-      'DayPickerNavigation_button__default',
-      'DayPickerNavigation_button__horizontalDefault',
-      `DayPickerNavigation_${side}Button__horizontalDefault`
-    )
-  }
+      return classNames(
+        'DayPickerNavigation_button__default',
+        'DayPickerNavigation_button__horizontalDefault',
+        `DayPickerNavigation_${side}Button__horizontalDefault`
+      )
+    }
 }
 
 export {

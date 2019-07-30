@@ -294,13 +294,13 @@ import { FontAwesomeIcon } from '@Domain/Icons';
   <div>
     <ButtonGroup>
       <LinkButton
-        icon={<FontAwesomeIcon type='solid' icon='star' />}
+        icon={<FontAwesomeIcon type='star' />}
         type='primary'
       >
         primary
       </LinkButton>
       <LinkButton
-        icon={<FontAwesomeIcon type='solid' icon='star' />}
+        icon={<FontAwesomeIcon type='star' />}
         iconAlignment='right'
         type='primary'
       >

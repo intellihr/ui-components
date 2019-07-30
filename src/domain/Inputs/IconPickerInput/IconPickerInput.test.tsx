@@ -1,12 +1,12 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { IntelliIconPrefixedValue } from '../../Inputs/IconPickerInput'
+import { IconType } from '../../Icons/Icon'
 import { IconPickerInput } from './IconPickerInput'
 
 const dummyClick = () => console.log('hey')
 
-const testIcons: IntelliIconPrefixedValue[] = [
+const testIcons: IconType[] = [
   'intelli-icon-australia',
   'intelli-icon-card',
   'intelli-icon-book'

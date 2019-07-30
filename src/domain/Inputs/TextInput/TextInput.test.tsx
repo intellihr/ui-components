@@ -50,7 +50,7 @@ describe('<TextInput />', () => {
         name='test'
         icon={
           <Icon
-            icon='fa-check'
+            type='fa-check'
           />
         }
       />

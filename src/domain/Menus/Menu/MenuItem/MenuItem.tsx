@@ -43,8 +43,7 @@ export class MenuItem extends React.PureComponent<IMenuItemProps> {
       return (
         <LoadingIconWrapper>
           <FontAwesomeIcon
-            type='solid'
-            icon='circle-notch'
+            type='circle-o-notch'
             isSpinning
           />
         </LoadingIconWrapper>

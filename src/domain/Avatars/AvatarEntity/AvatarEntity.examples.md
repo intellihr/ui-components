@@ -25,7 +25,7 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
     initials='JW'
     statusDot='primary'
     statusIcon={
-      <FontAwesomeIcon type='solid' icon='arrow-right' color={Variables.Color.i400} size='small'/>
+      <FontAwesomeIcon type='arrow-right' color={Variables.Color.i400} size='small'/>
     }
     primaryText='John Wick'
     secondaryText='Guy Killer'
@@ -53,7 +53,7 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
     initials='JW'
     statusDot='success'
     statusIcon={
-      <FontAwesomeIcon type='solid' icon='arrow-right' color={Variables.Color.i400} size='xsmall' />
+      <FontAwesomeIcon type='arrow-right' color={Variables.Color.i400} size='xsmall' />
     }
     primaryText='John Wick'
     secondaryText='Guy Killer'
@@ -71,7 +71,7 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
     initials='JW'
     statusDot='primary'
     statusIcon={
-      <FontAwesomeIcon type='solid' icon='arrow-right' color={Variables.Color.i400} size='small'/>
+      <FontAwesomeIcon type='arrow-right' color={Variables.Color.i400} size='small'/>
     }
     primaryText='John Wick'
     secondaryText='Guy Killer'

@@ -35,14 +35,12 @@ exports[`<Section /> Default sections should match the snapshot 1`] = `
     closeDropdownBehaviour="whenActionProvided"
     leftComponent={
       <FontAwesomeIcon
-        icon="hand-point-right"
-        type="regular"
+        type="hand-o-right"
       />
     }
     rightComponent={
       <FontAwesomeIcon
-        icon="hand-point-left"
-        type="regular"
+        type="hand-o-left"
       />
     }
     sectionType="default"

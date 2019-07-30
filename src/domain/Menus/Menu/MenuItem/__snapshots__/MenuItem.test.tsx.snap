@@ -37,7 +37,7 @@ exports[`<MenuItem /> should render a menu item as a submenu if it has children 
       >
         <ForwardRef(styled.span)>
           <IntelliIcon
-            icon="clock"
+            type="clock"
           />
         </ForwardRef(styled.span)>
         <ForwardRef(styled.span)>
@@ -57,7 +57,7 @@ exports[`<MenuItem /> should render a menu item as a submenu if it has children 
     <MenuItem
       icon={
         <IntelliIcon
-          icon="clock"
+          type="clock"
         />
       }
       label="Son"
@@ -67,7 +67,7 @@ exports[`<MenuItem /> should render a menu item as a submenu if it has children 
     <MenuItem
       icon={
         <IntelliIcon
-          icon="clock"
+          type="clock"
         />
       }
       label="Devil"
@@ -125,7 +125,7 @@ exports[`<MenuItem /> should render a menu item with Icon 1`] = `
   >
     <styled.span>
       <IntelliIcon
-        icon="clock"
+        type="clock"
       />
     </styled.span>
     <styled.span>
@@ -156,7 +156,7 @@ exports[`<MenuItem /> should render a menu item with loading state 1`] = `
   >
     <styled.span>
       <IntelliIcon
-        icon="clock"
+        type="clock"
       />
     </styled.span>
     <styled.span>
@@ -164,9 +164,8 @@ exports[`<MenuItem /> should render a menu item with loading state 1`] = `
     </styled.span>
     <styled.span>
       <FontAwesomeIcon
-        icon="circle-notch"
         isSpinning={true}
-        type="solid"
+        type="circle-o-notch"
       />
     </styled.span>
   </a>

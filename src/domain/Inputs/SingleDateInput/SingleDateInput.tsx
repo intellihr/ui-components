@@ -81,12 +81,12 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
           hideKeyboardShortcutsPanel
           navPrev={(
             <div className={this.navigationButtonClassNames('left')}>
-              <FontAwesomeIcon type='solid' icon='arrow-left' />
+              <FontAwesomeIcon type='arrow-left'/>
             </div>
           )}
           navNext={(
             <div className={this.navigationButtonClassNames('right')}>
-              <FontAwesomeIcon type='solid' icon='arrow-right' />
+              <FontAwesomeIcon type='arrow-right'/>
             </div>
           )}
         />

@@ -63,8 +63,7 @@ exports[`<OptionList /> should render a basic option list 1`] = `
     Australian Dollar (AUD)
     <styled.span>
       <FontAwesomeIcon
-        icon="star"
-        type="solid"
+        type="star"
       />
     </styled.span>
   </styled.button>
@@ -134,8 +133,7 @@ exports[`<OptionList /> should render a truncated option list 1`] = `
     Australian Dollar (AUD)
     <styled.span>
       <FontAwesomeIcon
-        icon="star"
-        type="solid"
+        type="star"
       />
     </styled.span>
   </styled.button>
@@ -205,8 +203,7 @@ exports[`<OptionList /> should render an option list with filtered options 1`] =
     Australian Dollar (AUD)
     <styled.span>
       <FontAwesomeIcon
-        icon="star"
-        type="solid"
+        type="star"
       />
     </styled.span>
   </styled.button>

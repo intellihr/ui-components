@@ -1,1 +1,0 @@
-export { IntelliIconValue } from './intelliIcons'

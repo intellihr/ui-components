@@ -47,8 +47,7 @@ exports[`<FilteredOptionList /> should render a basic option list 1`] = `
           />,
           "onClick": [Function],
           "rightComponent": <FontAwesomeIcon
-            icon="star"
-            type="solid"
+            type="star"
           />,
           "text": "Australian Dollar (AUD)",
           "value": 4,
