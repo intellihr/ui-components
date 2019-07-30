@@ -62,7 +62,7 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
     return (
       <StyledCard
         margins={margins}
-        onClick={this.onCardToggle}
+        onClick={this.handleCardToggle}
         hasHoverStyle={!this.state.isActionButtonHover && (!!extraContent || !!onCardToggle || isHoverable!)}
         data-component-type={Props.ComponentType.Card}
         data-component-context={componentContext}
@@ -72,14 +72,14 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
           {this.actionButtonDropdownMenu}
           {this.toggleButton}
         </StyledFlexContent>
-        <StyledExtraContent isExpanded={this.isExpanded()}>
+        <StyledExtraContent isExpanded={this.isExpanded}>
           {extraContent}
         </StyledExtraContent>
       </StyledCard>
     )
   }
 
-  private onCardToggle = () => {
+  private handleCardToggle = () => {
     this.setState((state) => ({ isExpanded: !state.isExpanded }))
 
     if (this.props.onCardToggle) {
@@ -87,7 +87,7 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
     }
   }
 
-  private isExpanded = () => {
+  private get isExpanded () {
     if (this.props.isExpanded === undefined) {
       return this.state.isExpanded
     }
@@ -132,7 +132,7 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
 
     if (extraContent) {
       return (
-        <StyledCardToggleButton isExpanded={this.isExpanded()} hasParentHoverStyle={!this.state.isActionButtonHover}>
+        <StyledCardToggleButton isExpanded={this.isExpanded} hasParentHoverStyle={!this.state.isActionButtonHover}>
           <ChevronIconWrapper>
             <FontAwesomeIcon type='solid' icon='chevron-down' />
           </ChevronIconWrapper>

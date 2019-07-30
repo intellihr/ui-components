@@ -64,8 +64,8 @@ export class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardSt
         data-component-context={componentContext}
       >
         <StyledGroupMainCard
-          onClick={this.onCardToggle}
-          isExpanded={this.isExpanded() && !!bodyContents}
+          onClick={this.handleCardToggle}
+          isExpanded={this.isExpanded && !!bodyContents}
           hasHoverStyle={!!bodyContents}
         >
           <StyledFlexContent>
@@ -78,7 +78,7 @@ export class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardSt
     )
   }
 
-  private onCardToggle = () => {
+  private handleCardToggle = () => {
     this.setState((state) => ({ isExpanded: !state.isExpanded }))
 
     if (this.props.onCardToggle) {
@@ -86,7 +86,7 @@ export class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardSt
     }
   }
 
-  private isExpanded = () => {
+  private get isExpanded () {
     if (this.props.isExpanded === undefined) {
       return this.state.isExpanded
     }
@@ -100,7 +100,7 @@ export class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardSt
 
     if (bodyContents) {
       return (
-        <StyledGroupExtraCard isExpanded={this.isExpanded()}>
+        <StyledGroupExtraCard isExpanded={this.isExpanded}>
           <StyledBodyContents>
             {bodyContents.map(this.bodyContent)}
           </StyledBodyContents>
@@ -116,7 +116,7 @@ export class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardSt
 
     if (bodyContents) {
       return (
-        <StyledGroupCardToggleButton isExpanded={this.isExpanded()}>
+        <StyledGroupCardToggleButton isExpanded={this.isExpanded}>
           <ChevronIconWrapper>
             <FontAwesomeIcon type='solid' icon='chevron-down' />
           </ChevronIconWrapper>
