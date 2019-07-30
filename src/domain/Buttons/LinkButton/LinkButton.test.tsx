@@ -49,7 +49,7 @@ describe('<LinkButton />', () => {
     const wrapper = shallow(
       <LinkButton
         id='test-link-button-icon'
-        icon={<FontAwesomeIcon type='solid' icon='star' />}
+        icon={<FontAwesomeIcon type='star' />}
         type='primary'
         href='test'
       >
@@ -64,7 +64,7 @@ describe('<LinkButton />', () => {
     const wrapper = shallow(
       <LinkButton
         id='test-link-button-icon'
-        icon={<FontAwesomeIcon type='solid' icon='star' />}
+        icon={<FontAwesomeIcon type='star' />}
         type='primary'
         href='test'
         anchorComponentProps={{

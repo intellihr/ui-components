@@ -91,7 +91,7 @@ exports[`<Input /> should render an input with an icon 1`] = `
 >
   <styled.div>
     <Icon
-      icon="fa-check"
+      type="fa-check"
     />
     <styled.span>
        

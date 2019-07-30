@@ -6,7 +6,7 @@ import { MenuItem } from './MenuItem';
 
 <Menu>
   <MenuItem
-    icon={<FontAwesomeIcon type='solid' icon='star' />}
+    icon={<FontAwesomeIcon type='star' />}
     label='Item 1'
   >
     <MenuItem
@@ -78,7 +78,7 @@ import { MenuItem } from './MenuItem';
 
 <Menu>
   <MenuItem
-    icon={<FontAwesomeIcon type='solid' icon='star' />}
+    icon={<FontAwesomeIcon type='star' />}
     label='Item 1'
   >
     <MenuItem

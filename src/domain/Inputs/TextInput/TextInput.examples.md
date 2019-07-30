@@ -81,13 +81,13 @@ initialState = { textValue1: '', textValue2: ''  };
   FontAwesomeIcon
   <TextInput
     value={state.textValue1}
-    icon={<FontAwesomeIcon type='solid' icon='cube' />}
+    icon={<FontAwesomeIcon type='facebook' />}
     onChange={(value) => {setState({textValue1: value})}}
   />
   IntelliIcon
   <TextInput
     value={state.textValue2}
-    icon={<IntelliIcon type='solid' icon='search' />}
+    icon={<IntelliIcon type='search' />}
     onChange={(value) => {setState({textValue2: value})}}
   />
 </div>
@@ -102,7 +102,7 @@ initialState = { value: '' };
 
 <TextInput
   value={state.value}
-  icon={<FontAwesomeIcon type='solid' icon='cube' />}
+  icon={<FontAwesomeIcon type='facebook' />}
   disabledPrefix='Welcome To Facebook!' 
   placeholder='Input your name...'
   onChange={(value) => {setState({value})}}

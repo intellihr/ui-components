@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 
 import { Props } from '../../../../common'
 import { useClickOutside } from '../../../../common/hooks'
-import { FontAwesomeIcon } from '../../../Icons'
+import { Icon } from '../../../Icons'
 import { StyledGifButton, StyledGifContainer, StyledGifList, StyledScrollArea } from '../../../Inputs/TextAreaInput/style'
 import { Popover } from '../../../Popovers'
 import { TextInput } from '../../TextInput'
@@ -218,7 +218,7 @@ const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, handleGifC
       <Popover isOpen={opened} parentRef={anchorRef}>
         <StyledGifList ref={gifListRef}>
           <TextInput
-            icon={<FontAwesomeIcon type='solid' icon='search' />}
+            icon={<Icon type='fa-search' />}
             name='searchTerm'
             value={searchTerm}
             handleChange={handleSearchTermChange}

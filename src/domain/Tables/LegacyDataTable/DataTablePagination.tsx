@@ -193,7 +193,8 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
     const {
       showPageSizeOptions,
       pageSizeOptions,
-      pageSize
+      pageSize,
+      onPageSizeChange
     } = this.props
 
     if (showPageSizeOptions) {
@@ -238,7 +239,7 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
             onClick={this.decrementPage}
             disabled={!canPrevious}
           >
-            <FontAwesomeIcon type='solid' icon='chevron-left' />
+            <FontAwesomeIcon type='chevron-left' />
           </button>
           {this.pagination}
           <button
@@ -247,7 +248,7 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
             onClick={this.incrementPage}
             disabled={!canNext}
           >
-            <FontAwesomeIcon type='solid' icon='chevron-right' />
+            <FontAwesomeIcon type='chevron-right' />
           </button>
         </div>
       </div>

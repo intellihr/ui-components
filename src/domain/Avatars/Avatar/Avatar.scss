@@ -189,7 +189,7 @@ $status-dot-styles: (
       }
 
       // NOTE: This to override default styles of font-awesome in lapis (has no effect on ui-components)
-      >.icon {
+      >.fa {
         margin: 0;
         text-align: inherit;
         width: auto;

@@ -16,9 +16,9 @@ exports[`<CenteredTileContent /> should render a centerd tile with an icon inste
       />
     </styled.div>
     <styled.div>
-      <IntelliIcon
+      <Icon
         customSize={5}
-        icon="smile"
+        type="intelli-icon-smile"
       />
     </styled.div>
     <styled.div>
@@ -94,9 +94,9 @@ exports[`<CenteredTileContent /> should render a centered tile with an icon inst
     limitedContentWidth="none"
   >
     <styled.div>
-      <IntelliIcon
+      <Icon
         customSize={5}
-        icon="smile"
+        type="intelli-icon-smile"
       />
     </styled.div>
     <styled.div>

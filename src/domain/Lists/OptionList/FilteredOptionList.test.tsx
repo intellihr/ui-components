@@ -29,7 +29,7 @@ const exampleOptions = [
     value: 4,
     onClick: (option: IOptionProps) => { alert('I have a custom onClick handler!') },
     leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/au.png?raw=true' />,
-    rightComponent: <FontAwesomeIcon type='solid' icon='star' />,
+    rightComponent: <FontAwesomeIcon type='star' />,
     buttonText: 'AUD'
   }
 ]

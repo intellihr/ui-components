@@ -8,24 +8,24 @@ import { Text } from '../../Typographies/Text'
 const style = require('./StatusIndicator.scss')
 
 export interface IStatusIndicatorProps {
-  /** Text to show inside the label  */
-  text: string
+    /** Text to show inside the label  */
+    text: string
 
-  /** Smaller text shown under the label */
-  subtitleText?: string
+    /** Smaller text shown under the label */
+    subtitleText?: string
 
-  /** Colour of the icon  */
-  color?: Variables.Color
+    /** Colour of the icon  */
+    color?: Variables.Color
 
-  /** Main colour of the text (and icon if no `color` provided)  */
-  textColor?: Variables.Color
+    /** Main colour of the text (and icon if no `color` provided)  */
+    textColor?: Variables.Color
 
-  /** Should the label use a hollow icon  */
-  isHollow?: boolean
+    /** Should the label use a hollow icon  */
+    isHollow?: boolean
 
-  /** Extra classes to apply  */
-  className?: string
-}
+    /** Extra classes to apply  */
+    className?: string
+  }
 
 export class StatusIndicator extends React.Component<IStatusIndicatorProps> {
   public static defaultProps: Partial<IStatusIndicatorProps> = {
@@ -65,8 +65,7 @@ export class StatusIndicator extends React.Component<IStatusIndicatorProps> {
     return (
       <span className={classNames(style.StatusIndicator, className, 'dot-status-label')}>
         <FontAwesomeIcon
-          type={isHollow ? 'regular' : 'solid'}
-          icon='circle'
+          type={isHollow ? 'circle-o' : 'circle'}
           color={color}
         />
         <Text color={textColor}>

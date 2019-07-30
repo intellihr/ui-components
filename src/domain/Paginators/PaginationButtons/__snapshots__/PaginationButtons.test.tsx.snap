@@ -13,8 +13,7 @@ exports[`<PaginationButtons /> should render the pagination buttons 1`] = `
       arrowDirection="left"
     >
       <FontAwesomeIcon
-        icon="chevron-left"
-        type="solid"
+        type="chevron-left"
       />
     </styled.span>
   </styled.button>
@@ -74,8 +73,7 @@ exports[`<PaginationButtons /> should render the pagination buttons 1`] = `
       arrowDirection="right"
     >
       <FontAwesomeIcon
-        icon="chevron-right"
-        type="solid"
+        type="chevron-right"
       />
     </styled.span>
   </styled.button>
@@ -103,8 +101,7 @@ exports[`<PaginationButtons /> should render the pagination buttons with margin 
       arrowDirection="left"
     >
       <FontAwesomeIcon
-        icon="chevron-left"
-        type="solid"
+        type="chevron-left"
       />
     </styled.span>
   </styled.button>
@@ -164,8 +161,7 @@ exports[`<PaginationButtons /> should render the pagination buttons with margin 
       arrowDirection="right"
     >
       <FontAwesomeIcon
-        icon="chevron-right"
-        type="solid"
+        type="chevron-right"
       />
     </styled.span>
   </styled.button>

@@ -1,38 +1,24 @@
 import React from 'react'
 
+import { Omit } from '../../../common'
 import { IIconProps, Icon } from '../Icon'
-import { FontAwesomeIconValue } from '../Icon/types'
+import { FontAwesomeIconType, FontAwesomeIconTypeNoPrefix } from '../Icon/types'
 
-interface IFontAwesomeIconProps extends IIconProps {
-  /** Name of the icon */
-  icon: FontAwesomeIconValue
-  /** One of three alternative versions */
-  type: 'solid' | 'regular' | 'light'
+interface IFontAwesomeIconProps extends Omit<IIconProps, 'type'> {
+  type: FontAwesomeIconTypeNoPrefix
 }
 
-const FontAwesomeIcon: React.FC<IFontAwesomeIconProps> = ({ icon, type, ...props }) => {
-  let cssClassName
-  switch (type) {
-    case 'light':
-      cssClassName = 'fal'
-      break
-    case 'regular':
-      cssClassName = 'far'
-      break
-    case 'solid':
-      cssClassName = 'fas'
-      break
+export class FontAwesomeIcon extends React.PureComponent<IFontAwesomeIconProps> {
+  public render (): JSX.Element {
+    const {
+      type
+    } = this.props
+
+    return (
+      <Icon
+        {...this.props}
+        type={`fa-${type}` as FontAwesomeIconType}
+      />
+    )
   }
-  cssClassName = `${cssClassName} fa-${icon}`
-
-  return (
-    <Icon
-      {...props}
-      icon={cssClassName}
-    />
-  )
-}
-
-export {
-  FontAwesomeIcon
 }

@@ -2,8 +2,7 @@
 
 exports[`<Icon /> should render a large icon 1`] = `
 .c0 {
-  display: inline-block;
-  font-stretch: normal;
+  width: 1.28571em;
 }
 
 .c0.icon {
@@ -12,17 +11,17 @@ exports[`<Icon /> should render a large icon 1`] = `
 }
 
 <Icon
-  icon="fa-circle"
   size="large"
+  type="fa-circle"
 >
   <styled.i
     aria-hidden={true}
-    className="icon fa-circle"
+    className="icon fa fa-circle"
     size="large"
   >
     <StyledComponent
       aria-hidden={true}
-      className="icon fa-circle"
+      className="icon fa fa-circle"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -33,12 +32,7 @@ exports[`<Icon /> should render a large icon 1`] = `
             "lastClassName": "c0",
             "rules": Array [
               "
-  display: inline-block;
-  font-stretch: normal;
-
-  ",
-              [Function],
-              "
+   width: 1.28571em;
 
   ",
               [Function],
@@ -73,7 +67,7 @@ exports[`<Icon /> should render a large icon 1`] = `
     >
       <i
         aria-hidden={true}
-        className="icon fa-circle c0"
+        className="icon fa fa-circle c0"
         size="large"
       />
     </StyledComponent>
@@ -83,8 +77,7 @@ exports[`<Icon /> should render a large icon 1`] = `
 
 exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
 .c0 {
-  display: inline-block;
-  font-stretch: normal;
+  width: 1.28571em;
 }
 
 .c0.icon {
@@ -93,16 +86,16 @@ exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
 }
 
 <Icon
-  icon="intelli-icon-avatar"
+  type="intelli-icon-avatar"
 >
   <styled.i
     aria-hidden={true}
-    className="icon intelli-icon-avatar"
+    className="icon fa intelli-icon-avatar"
     size="medium"
   >
     <StyledComponent
       aria-hidden={true}
-      className="icon intelli-icon-avatar"
+      className="icon fa intelli-icon-avatar"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -113,12 +106,7 @@ exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
             "lastClassName": "c0",
             "rules": Array [
               "
-  display: inline-block;
-  font-stretch: normal;
-
-  ",
-              [Function],
-              "
+   width: 1.28571em;
 
   ",
               [Function],
@@ -153,7 +141,7 @@ exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
     >
       <i
         aria-hidden={true}
-        className="icon intelli-icon-avatar c0"
+        className="icon fa intelli-icon-avatar c0"
         size="medium"
       />
     </StyledComponent>
@@ -169,8 +157,7 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
 }
 
 .c0 {
-  display: inline-block;
-  font-stretch: normal;
+  width: 1.28571em;
 }
 
 .c0.icon {
@@ -194,7 +181,7 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
 }
 
 .c2,
-.c2 .icon {
+.c2 .fa {
   font-size: 15px;
   width: 24px;
   height: 24px;
@@ -216,17 +203,17 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
       label={6}
     />
   }
-  icon="fa-check"
   size="xlarge"
+  type="fa-check"
 >
   <styled.i
     aria-hidden={true}
-    className="icon fa-check"
+    className="icon fa fa-check"
     size="xlarge"
   >
     <StyledComponent
       aria-hidden={true}
-      className="icon fa-check"
+      className="icon fa fa-check"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -237,12 +224,7 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
             "lastClassName": "c0",
             "rules": Array [
               "
-  display: inline-block;
-  font-stretch: normal;
-
-  ",
-              [Function],
-              "
+   width: 1.28571em;
 
   ",
               [Function],
@@ -277,7 +259,7 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
     >
       <i
         aria-hidden={true}
-        className="icon fa-check c0"
+        className="icon fa fa-check c0"
         size="xlarge"
       />
     </StyledComponent>
@@ -354,7 +336,7 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
                       [Function],
                       "
 
-  &, .icon {
+  &, .fa {
   ",
                       [Function],
                       "
@@ -414,8 +396,7 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
 
 exports[`<Icon /> should render icon with a custom size 1`] = `
 .c0 {
-  display: inline-block;
-  font-stretch: normal;
+  width: 1.28571em;
 }
 
 .c0.icon {
@@ -425,17 +406,17 @@ exports[`<Icon /> should render icon with a custom size 1`] = `
 
 <Icon
   customSize={2.6}
-  icon="fa-check"
+  type="fa-check"
 >
   <styled.i
     aria-hidden={true}
-    className="icon fa-check"
+    className="icon fa fa-check"
     customSize={2.6}
     size="medium"
   >
     <StyledComponent
       aria-hidden={true}
-      className="icon fa-check"
+      className="icon fa fa-check"
       customSize={2.6}
       forwardedComponent={
         Object {
@@ -447,12 +428,7 @@ exports[`<Icon /> should render icon with a custom size 1`] = `
             "lastClassName": "c0",
             "rules": Array [
               "
-  display: inline-block;
-  font-stretch: normal;
-
-  ",
-              [Function],
-              "
+   width: 1.28571em;
 
   ",
               [Function],
@@ -487,7 +463,7 @@ exports[`<Icon /> should render icon with a custom size 1`] = `
     >
       <i
         aria-hidden={true}
-        className="icon fa-check c0"
+        className="icon fa fa-check c0"
         size="medium"
       />
     </StyledComponent>
@@ -497,8 +473,7 @@ exports[`<Icon /> should render icon with a custom size 1`] = `
 
 exports[`<Icon /> should render icon with colour 1`] = `
 .c0 {
-  display: inline-block;
-  font-stretch: normal;
+  width: 1.28571em;
   color: #1A2B3C;
 }
 
@@ -509,17 +484,17 @@ exports[`<Icon /> should render icon with colour 1`] = `
 
 <Icon
   color="#1A2B3C"
-  icon="fa-check"
+  type="fa-check"
 >
   <styled.i
     aria-hidden={true}
-    className="icon fa-check"
+    className="icon fa fa-check"
     color="#1A2B3C"
     size="medium"
   >
     <StyledComponent
       aria-hidden={true}
-      className="icon fa-check"
+      className="icon fa fa-check"
       color="#1A2B3C"
       forwardedComponent={
         Object {
@@ -531,12 +506,7 @@ exports[`<Icon /> should render icon with colour 1`] = `
             "lastClassName": "c0",
             "rules": Array [
               "
-  display: inline-block;
-  font-stretch: normal;
-
-  ",
-              [Function],
-              "
+   width: 1.28571em;
 
   ",
               [Function],
@@ -571,7 +541,7 @@ exports[`<Icon /> should render icon with colour 1`] = `
     >
       <i
         aria-hidden={true}
-        className="icon fa-check c0"
+        className="icon fa fa-check c0"
         color="#1A2B3C"
         size="medium"
       />
@@ -582,8 +552,7 @@ exports[`<Icon /> should render icon with colour 1`] = `
 
 exports[`<Icon /> should render icon with no size or colour 1`] = `
 .c0 {
-  display: inline-block;
-  font-stretch: normal;
+  width: 1.28571em;
 }
 
 .c0.icon {
@@ -592,16 +561,16 @@ exports[`<Icon /> should render icon with no size or colour 1`] = `
 }
 
 <Icon
-  icon="fa-check"
+  type="fa-check"
 >
   <styled.i
     aria-hidden={true}
-    className="icon fa-check"
+    className="icon fa fa-check"
     size="medium"
   >
     <StyledComponent
       aria-hidden={true}
-      className="icon fa-check"
+      className="icon fa fa-check"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -612,12 +581,7 @@ exports[`<Icon /> should render icon with no size or colour 1`] = `
             "lastClassName": "c0",
             "rules": Array [
               "
-  display: inline-block;
-  font-stretch: normal;
-
-  ",
-              [Function],
-              "
+   width: 1.28571em;
 
   ",
               [Function],
@@ -652,7 +616,7 @@ exports[`<Icon /> should render icon with no size or colour 1`] = `
     >
       <i
         aria-hidden={true}
-        className="icon fa-check c0"
+        className="icon fa fa-check c0"
         size="medium"
       />
     </StyledComponent>
@@ -662,8 +626,7 @@ exports[`<Icon /> should render icon with no size or colour 1`] = `
 
 exports[`<Icon /> should render icon with size 1`] = `
 .c0 {
-  display: inline-block;
-  font-stretch: normal;
+  width: 1.28571em;
 }
 
 .c0.icon {
@@ -672,17 +635,17 @@ exports[`<Icon /> should render icon with size 1`] = `
 }
 
 <Icon
-  icon="fa-check"
   size="medium"
+  type="fa-check"
 >
   <styled.i
     aria-hidden={true}
-    className="icon fa-check"
+    className="icon fa fa-check"
     size="medium"
   >
     <StyledComponent
       aria-hidden={true}
-      className="icon fa-check"
+      className="icon fa fa-check"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -693,12 +656,7 @@ exports[`<Icon /> should render icon with size 1`] = `
             "lastClassName": "c0",
             "rules": Array [
               "
-  display: inline-block;
-  font-stretch: normal;
-
-  ",
-              [Function],
-              "
+   width: 1.28571em;
 
   ",
               [Function],
@@ -733,7 +691,7 @@ exports[`<Icon /> should render icon with size 1`] = `
     >
       <i
         aria-hidden={true}
-        className="icon fa-check c0"
+        className="icon fa fa-check c0"
         size="medium"
       />
     </StyledComponent>

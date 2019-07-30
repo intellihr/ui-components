@@ -198,8 +198,7 @@ exports[`<Button /> should render a button with a type delete-subtle 1`] = `
 
 exports[`<Button /> should render a button with an icon 1`] = `
 .c0 {
-  display: inline-block;
-  font-stretch: normal;
+  width: 1.28571em;
 }
 
 .c0.icon {
@@ -211,8 +210,7 @@ exports[`<Button /> should render a button with an icon 1`] = `
   hasLegacyMargins={false}
   icon={
     <FontAwesomeIcon
-      icon="star"
-      type="solid"
+      type="star"
     />
   }
   iconAlignment="right"
@@ -268,20 +266,19 @@ exports[`<Button /> should render a button with an icon 1`] = `
           data-component-type="button_icon"
         >
           <FontAwesomeIcon
-            icon="star"
-            type="solid"
+            type="star"
           >
             <Icon
-              icon="fas fa-star"
+              type="fa-star"
             >
               <styled.i
                 aria-hidden={true}
-                className="icon fas fa-star"
+                className="icon fa fa-star"
                 size="medium"
               >
                 <StyledComponent
                   aria-hidden={true}
-                  className="icon fas fa-star"
+                  className="icon fa fa-star"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -292,12 +289,7 @@ exports[`<Button /> should render a button with an icon 1`] = `
                         "lastClassName": "c0",
                         "rules": Array [
                           "
-  display: inline-block;
-  font-stretch: normal;
-
-  ",
-                          [Function],
-                          "
+   width: 1.28571em;
 
   ",
                           [Function],
@@ -332,7 +324,7 @@ exports[`<Button /> should render a button with an icon 1`] = `
                 >
                   <i
                     aria-hidden={true}
-                    className="icon fas fa-star c0"
+                    className="icon fa fa-star c0"
                     size="medium"
                   />
                 </StyledComponent>

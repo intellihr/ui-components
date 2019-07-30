@@ -4,8 +4,7 @@
 import { FontAwesomeIcon } from '@Domain/Icons';
 
   <FontAwesomeIcon
-    type='solid'
-    icon='star'
+    type='star'
   />
 ```
 
@@ -15,7 +14,7 @@ import { FontAwesomeIcon } from '@Domain/Icons';
 import { IntelliIcon } from '@Domain/Icons';
 
   <IntelliIcon
-    icon='smile'
+    type='smile'
   />
 ```
 
@@ -25,8 +24,7 @@ import { IntelliIcon } from '@Domain/Icons';
 import { FontAwesomeIcon } from '@Domain/Icons';
 
   <FontAwesomeIcon
-    type='light'
-    icon='star'
+    type='star'
     size='xlarge'
   />
 ```
@@ -37,8 +35,7 @@ import { FontAwesomeIcon } from '@Domain/Icons';
 import { FontAwesomeIcon } from '@Domain/Icons';
 
   <FontAwesomeIcon
-    type='regular'
-    icon='star'
+    type='star'
     isSpinning
   />
 ```
@@ -49,8 +46,7 @@ import { FontAwesomeIcon } from '@Domain/Icons';
 import { FontAwesomeIcon } from '@Domain/Icons';
 
   <FontAwesomeIcon
-    type='solid'
-    icon='star'
+    type='star'
     color='rgb(204,204,0)'
   />
 ```
@@ -63,8 +59,7 @@ Icon props can be used together!
 import { FontAwesomeIcon } from '@Domain/Icons';
 
   <FontAwesomeIcon
-    type='regular'
-    icon='star'
+    type='star'
     color='rgb(204,204,0)'
     isSpinning
     size='large'
@@ -80,8 +75,7 @@ import { FontAwesomeIcon } from '@Domain/Icons';
 <div>
   <div>
     <FontAwesomeIcon
-      type='light'
-      icon='inbox'
+      type='inbox'
       size='large'
       badge={
         <Badge
@@ -95,8 +89,7 @@ import { FontAwesomeIcon } from '@Domain/Icons';
 
   <div>
     <FontAwesomeIcon
-      type='regular'
-      icon='inbox'
+      type='inbox'
       size='xlarge'
       badge={
         <Badge
@@ -110,8 +103,7 @@ import { FontAwesomeIcon } from '@Domain/Icons';
 
   <div>
     <FontAwesomeIcon
-      type='solid'
-      icon='inbox'
+      type='inbox'
       size='xxlarge'
       badge={
         <Badge
@@ -135,8 +127,7 @@ import { FontAwesomeIcon } from '@Domain/Icons';
 <div>
   <div>
     <FontAwesomeIcon
-      type='solid'
-      icon='inbox'
+      type='inbox'
       size='large'
       badge={
         <Badge
@@ -151,8 +142,7 @@ import { FontAwesomeIcon } from '@Domain/Icons';
 
   <div>
     <FontAwesomeIcon
-      type='regular'
-      icon='inbox'
+      type='inbox'
       size='xlarge'
       badge={
         <Badge
@@ -167,8 +157,7 @@ import { FontAwesomeIcon } from '@Domain/Icons';
 
   <div>
     <FontAwesomeIcon
-      type='light'
-      icon='inbox'
+      type='inbox'
       size='xxlarge'
       badge={
         <Badge

@@ -70,8 +70,7 @@ exports[`<LinkButton /> should render a link button with an icon 1`] = `
       data-component-type="button_icon"
     >
       <FontAwesomeIcon
-        icon="star"
-        type="solid"
+        type="star"
       />
     </span>
     Link Button with Icon
@@ -98,8 +97,7 @@ exports[`<LinkButton /> should render a link button with manual extra props for 
       data-component-type="button_icon"
     >
       <FontAwesomeIcon
-        icon="star"
-        type="solid"
+        type="star"
       />
     </span>
     Link Button with Icon

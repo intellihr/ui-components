@@ -87,7 +87,7 @@ class DropdownMenu extends React.Component<IDropdownMenuProps, IDropdownMenuStat
           onClick={handleClick}
           {...ariaProps}
         >
-          <FontAwesomeIcon type='solid' icon='ellipsis-v' />
+          <FontAwesomeIcon type='ellipsis-v' />
         </DefaultDropdownButton>
       )
     }

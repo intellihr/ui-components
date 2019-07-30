@@ -4,9 +4,9 @@
   &::before {
     color: $color;
     content: $icon;
-    font-family: 'Font Awesome 5 Pro';
+    font-family: FontAwesome;
     font-size: 17px;
-    font-weight: bold;
+    font-weight: normal;
     margin-right: 10px;
     position: relative;
   }

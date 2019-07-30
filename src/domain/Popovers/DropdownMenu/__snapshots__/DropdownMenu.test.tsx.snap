@@ -10,8 +10,7 @@ exports[`<DropdownMenu /> Render a dropdown using custom content should match th
     type="button"
   >
     <FontAwesomeIcon
-      icon="ellipsis-v"
-      type="solid"
+      type="ellipsis-v"
     />
   </styled.button>
   <Popover
@@ -63,8 +62,7 @@ exports[`<DropdownMenu /> Simple dropdown behaviour should match the snapshot 1`
     type="button"
   >
     <FontAwesomeIcon
-      icon="ellipsis-v"
-      type="solid"
+      type="ellipsis-v"
     />
   </styled.button>
   <Popover

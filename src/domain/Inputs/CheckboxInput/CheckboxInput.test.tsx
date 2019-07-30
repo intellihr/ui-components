@@ -44,7 +44,7 @@ describe('<CheckboxInput />', () => {
     const wrapper = shallow(
       <CheckboxInput
         name='test-jsx-input'
-        label={<FontAwesomeIcon type='solid' icon='star' />}
+        label={<FontAwesomeIcon type='star' />}
       />
     )
 
