@@ -42,7 +42,7 @@ initialState = {
       value: 4,
       onClick: (option) => {alert('I have a custom onClick handler!'); setState({selectedOption: option});},
       leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/au.png?raw=true' />,
-      rightComponent: <FontAwesomeIcon type='solid' icon='star' />,
+      rightComponent: <FontAwesomeIcon type='star' />,
       buttonText: 'AUD'
     }
   ]}
@@ -100,7 +100,7 @@ initialState = {
     setState({selectedOption: option})
   }}
   textInputProps={{
-    icon: <FontAwesomeIcon type='solid' icon='search' />,
+    icon: <FontAwesomeIcon type='search' />,
     placeholder: 'Search country!',
     width: 300
   }}
@@ -128,7 +128,7 @@ initialState = {
       value: 4,
       onClick: (option) => {alert('I have a custom onClick handler!'); setState({selectedOption: option});},
       leftComponent: <img src='https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/au.png?raw=true' />,
-      rightComponent: <FontAwesomeIcon type='solid' icon='star' />,
+      rightComponent: <FontAwesomeIcon type='star' />,
       buttonText: 'AUD'
     }
   ]}

@@ -19,7 +19,7 @@ describe('<Section />', () => {
           text='Item 3'
           href='https://intellihr.com.au'
           componentProps={{
-            style: { fontWeight: 600 }
+            style: {fontWeight: 600}
           }}
         />
         <Section
@@ -27,8 +27,8 @@ describe('<Section />', () => {
         />
         <Section
           text='Item 5'
-          leftComponent={<FontAwesomeIcon type='regular' icon='hand-point-right' />}
-          rightComponent={<FontAwesomeIcon type='regular' icon='hand-point-left' />}
+          leftComponent={<FontAwesomeIcon type='hand-o-right' />}
+          rightComponent={<FontAwesomeIcon type='hand-o-left' />}
         />
       </span>
     )
@@ -42,24 +42,24 @@ describe('<Section />', () => {
     const wrapper = mount(
       <Section
         text='surrounded'
-        leftComponent={<FontAwesomeIcon type='regular' icon='hand-point-right' />}
-        rightComponent={<FontAwesomeIcon type='regular' icon='hand-point-left' />}
+        leftComponent={<FontAwesomeIcon type='hand-o-right' />}
+        rightComponent={<FontAwesomeIcon type='hand-o-left' />}
       />
     )
 
     it('should render the left and right components', () => {
       const parent = wrapper
-        .find({ text: 'surrounded' })
+        .find({text: 'surrounded'})
 
       expect(
         parent
-          .find('.fa-hand-point-right')
+          .find('.fa-hand-o-right')
           .exists()
       ).toBeTruthy()
 
       expect(
         parent
-          .find('.fa-hand-point-left')
+          .find('.fa-hand-o-left')
           .exists()
       ).toBeTruthy()
     })

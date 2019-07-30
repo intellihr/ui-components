@@ -41,8 +41,7 @@ exports[`<SingleDateInput /> should render a disabled single date input 1`] = `
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_rightButton__horizontalDefault"
       >
         <FontAwesomeIcon
-          icon="arrow-right"
-          type="solid"
+          type="arrow-right"
         />
       </div>
     }
@@ -51,8 +50,7 @@ exports[`<SingleDateInput /> should render a disabled single date input 1`] = `
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_leftButton__horizontalDefault"
       >
         <FontAwesomeIcon
-          icon="arrow-left"
-          type="solid"
+          type="arrow-left"
         />
       </div>
     }
@@ -159,8 +157,7 @@ exports[`<SingleDateInput /> should render a single date input 1`] = `
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_rightButton__horizontalDefault"
       >
         <FontAwesomeIcon
-          icon="arrow-right"
-          type="solid"
+          type="arrow-right"
         />
       </div>
     }
@@ -169,8 +166,7 @@ exports[`<SingleDateInput /> should render a single date input 1`] = `
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_leftButton__horizontalDefault"
       >
         <FontAwesomeIcon
-          icon="arrow-left"
-          type="solid"
+          type="arrow-left"
         />
       </div>
     }
@@ -277,8 +273,7 @@ exports[`<SingleDateInput /> should render an invalid single date input 1`] = `
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_rightButton__horizontalDefault"
       >
         <FontAwesomeIcon
-          icon="arrow-right"
-          type="solid"
+          type="arrow-right"
         />
       </div>
     }
@@ -287,8 +282,7 @@ exports[`<SingleDateInput /> should render an invalid single date input 1`] = `
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_leftButton__horizontalDefault"
       >
         <FontAwesomeIcon
-          icon="arrow-left"
-          type="solid"
+          type="arrow-left"
         />
       </div>
     }

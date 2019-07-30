@@ -223,7 +223,7 @@ import { FontAwesomeIcon } from '@Domain/Icons';
   <div>
     <h3>Enabled</h3>
     <ButtonGroup>
-      <Button type='add' icon={<FontAwesomeIcon type='solid' icon='plus' />} onClick={() => alert('add')}>
+      <Button type='add' icon={<FontAwesomeIcon type='plus' />} onClick={() => alert('add')}>
         add
       </Button>
       <Button type='add-subtle' onClick={() => alert('add-subtle')}>
@@ -310,14 +310,14 @@ import { FontAwesomeIcon } from '@Domain/Icons';
   <div>
     <ButtonGroup>
       <Button
-        icon={<FontAwesomeIcon type='solid' icon='star' />}
+        icon={<FontAwesomeIcon type='star' />}
         type='primary-hollow'
         onClick={() => alert('primary-hollow')}
       >
         primary-hollow
       </Button>
       <Button
-        icon={<FontAwesomeIcon type='solid' icon='star' />}
+        icon={<FontAwesomeIcon type='star' />}
         iconAlignment='right'
         type='primary-hollow'
         onClick={() => alert('primary-hollow')}
@@ -329,19 +329,19 @@ import { FontAwesomeIcon } from '@Domain/Icons';
   <div>
     <ButtonGroup>
       <Button
-        icon={<FontAwesomeIcon type='solid' icon='star' />}
+        icon={<FontAwesomeIcon type='star' />}
         size='small'
       >
         small
       </Button>
       <Button
-        icon={<FontAwesomeIcon type='solid' icon='star' />}
+        icon={<FontAwesomeIcon type='star' />}
         size='medium'
       >
         medium
       </Button>
       <Button
-        icon={<FontAwesomeIcon type='solid' icon='star' />}
+        icon={<FontAwesomeIcon type='star' />}
         size='large'
       >
         large

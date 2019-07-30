@@ -121,7 +121,7 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
       hasRightMargin={!!this.props.extraContent}
       {...ariaProps}
     >
-      <FontAwesomeIcon type='solid' icon='ellipsis-v' />
+      <FontAwesomeIcon type='ellipsis-v' />
     </StyledActionButton>
   )
 
@@ -134,7 +134,7 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
       return (
         <StyledCardToggleButton isExpanded={this.isExpanded} hasParentHoverStyle={!this.state.isActionButtonHover}>
           <ChevronIconWrapper>
-            <FontAwesomeIcon type='solid' icon='chevron-down' />
+            <FontAwesomeIcon type='chevron-down' />
           </ChevronIconWrapper>
         </StyledCardToggleButton>
       )

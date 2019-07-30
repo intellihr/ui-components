@@ -52,7 +52,7 @@ export class PaginationButtons extends React.PureComponent<IPaginationButtonsPro
         onClick={this.changePage(currentPage - 1)}
       >
         <ChevronIconWrapper arrowDirection='left'>
-          <FontAwesomeIcon type='solid' icon='chevron-left' />
+          <FontAwesomeIcon  type='chevron-left' />
         </ChevronIconWrapper>
       </StylePaginationButton>
     )
@@ -72,7 +72,7 @@ export class PaginationButtons extends React.PureComponent<IPaginationButtonsPro
         onClick={this.changePage(currentPage + 1)}
       >
         <ChevronIconWrapper arrowDirection='right'>
-          <FontAwesomeIcon type='solid' icon='chevron-right' />
+          <FontAwesomeIcon  type='chevron-right' />
         </ChevronIconWrapper>
       </StylePaginationButton>
     )
@@ -87,7 +87,7 @@ export class PaginationButtons extends React.PureComponent<IPaginationButtonsPro
     const pageNumberArray = []
 
     // Pagination with ellipse
-    if (totalPages > 7) {
+    if (totalPages > 7 ) {
 
       // Ellipse by the end (1 2 3 4 5 ... 10)
       if (currentPage <= 5) {

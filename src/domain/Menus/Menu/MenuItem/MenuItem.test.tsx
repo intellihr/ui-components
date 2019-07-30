@@ -43,7 +43,7 @@ describe('<MenuItem />', () => {
       <MenuItem
         url='www.google.com'
         label='Test menu item'
-        icon={<IntelliIcon icon='clock' />}
+        icon={<IntelliIcon type={'clock'} />}
       />
     )
 
@@ -55,7 +55,7 @@ describe('<MenuItem />', () => {
       <MenuItem
         url='www.google.com'
         label='Test menu item'
-        icon={<IntelliIcon icon='clock' />}
+        icon={<IntelliIcon type={'clock'} />}
         isLoading
       />
     )
@@ -68,17 +68,17 @@ describe('<MenuItem />', () => {
       <MenuItem
         url='www.google.com'
         label='Father'
-        icon={<IntelliIcon icon='clock' />}
+        icon={<IntelliIcon type={'clock'} />}
       >
         <MenuItem
           url='www.google.com'
           label='Son'
-          icon={<IntelliIcon icon='clock' />}
+          icon={<IntelliIcon type={'clock'} />}
         />
         <MenuItem
           url='www.google.com'
           label='Devil'
-          icon={<IntelliIcon icon='clock' />}
+          icon={<IntelliIcon type={'clock'} />}
         />
       </MenuItem>
     )

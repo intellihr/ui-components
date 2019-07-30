@@ -7,7 +7,7 @@ import { CenteredTileContent } from './CenteredTileContent'
 describe('<CenteredTileContent />', () => {
   it(`should render a centered tile content with nothing`, () => {
     const wrapper = shallow(
-      <CenteredTileContent />
+      <CenteredTileContent  />
     )
     expect(wrapper).toMatchSnapshot()
   })
@@ -55,7 +55,7 @@ describe('<CenteredTileContent />', () => {
   it('should render a centered tile with an icon instead of an image', () => {
     const wrapper = shallow(
       <CenteredTileContent
-        intelliIcon='smile'
+        iconType='intelli-icon-smile'
         heading='Jeffrey'
         subheading='Harmless guy'
         description='Oh, it is a bit of this, a bit of that. It is called a Jeffrey.'
@@ -68,7 +68,7 @@ describe('<CenteredTileContent />', () => {
   it('should render a centerd tile with an icon instead of an image and a Pill in the top right corner', () => {
     const wrapper = shallow(
       <CenteredTileContent
-        intelliIcon='smile'
+        iconType='intelli-icon-smile'
         topRightComponent={
           <Pill
             text='Testing a pill component'

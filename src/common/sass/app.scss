@@ -24,7 +24,8 @@
 @import '~@intellihr/icons/style.css';
 
 // Font Awesome
-@import '~@fortawesome/fontawesome-pro/css/all.css';
+$fa-font-path: '~font-awesome/fonts';
+@import '~font-awesome/scss/font-awesome';
 
 // Legacy components & styles
 @import 'legacy/components/form';

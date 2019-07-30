@@ -124,7 +124,7 @@ class Avatar extends React.Component<IAvatarProps> {
 
     return (
       <div className={classNames('avatar-hover', `avatar-${size}`)}>
-        <FontAwesomeIcon type='solid' icon='camera' />
+        <FontAwesomeIcon type='camera' />
         <span className='avatar-hover-label'>{hoverLabel}</span>
       </div>
     )
@@ -160,7 +160,7 @@ class Avatar extends React.Component<IAvatarProps> {
       imageData
     } = this.props
 
-    const errorHandler = () => { this.setState({ showInitials: true }) }
+    const errorHandler = () => { this.setState({showInitials: true}) }
 
     return (
       <AvatarPicture

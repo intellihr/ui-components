@@ -285,7 +285,7 @@ import { TextLink } from '@Domain/Links';
     anchorHref='#'
   >
     <Board.Tile.ButtonTileContent
-      fontAwesomeIcon={{ type: 'solid', icon: 'plus-square' }}
+      iconType='fa-plus-square'
       label='Full width Tile button with a font awesome icon'
       buttonDescription='I am the tile description'
     >
@@ -297,7 +297,7 @@ import { TextLink } from '@Domain/Links';
     isButton
   >
     <Board.Tile.ButtonTileContent
-      intelliIcon='smile'
+      iconType='intelli-icon-smile'
       label='Medium Tile button with an IntelliIcon'
       buttonDescription='I am the tile description'
     >
@@ -310,7 +310,7 @@ import { TextLink } from '@Domain/Links';
     isButton
   >
     <Board.Tile.ButtonTileContent
-      fontAwesomeIcon={{ type: 'solid', icon: 'comments' }}
+      iconType='fa-comments'
       label='Medium Tile button button button button button button button button button button'
       buttonDescription='Button description has a maximum line count of 3. This means that long content will have text hidden if the content goes over 3 lines in length.'
     >
@@ -322,7 +322,7 @@ import { TextLink } from '@Domain/Links';
     isButton
   >
     <Board.Tile.ButtonTileContent
-      intelliIcon='smile'
+      iconType='intelli-icon-smile'
       label='Small Tile button with an IntelliIcon'
       buttonDescription='Button description has a maximum line count of 3. This means that long content will have text hidden if the content goes over 3 lines in length.'
     >
@@ -334,7 +334,7 @@ import { TextLink } from '@Domain/Links';
     isButton
   >
     <Board.Tile.ButtonTileContent
-      fontAwesomeIcon={{ type: 'solid', icon: 'exclamation-triangle' }}
+      iconType='fa-exclamation-triangle'
       label='small Tile button title text with a font awesome icon'
       buttonDescription='I am a small tile content.'
     >
@@ -347,7 +347,7 @@ import { TextLink } from '@Domain/Links';
     isButton
   >
     <Board.Tile.ButtonTileContent
-      fontAwesomeIcon={{ type: 'solid', icon: 'plus-square'}}
+      iconType='fa-plus-square'
       label='small admin Tile button with a font awesome icon'
       buttonDescription=' admin content be hidden if it is out of 3 lines'
     >
@@ -418,6 +418,7 @@ import { TextLink } from '@Domain/Links';
 #### Tile of type Card
 
 ```jsx
+  import { IconType } from '@Domain/Icons';
   import { Pill } from '@Domain/Pills';
 
   <Board
@@ -450,7 +451,7 @@ import { TextLink } from '@Domain/Links';
       anchorHref='https://en.wikipedia.org/wiki/Taken_(film)'
     >
       <Board.Tile.CenteredTileContent
-        imageSrc='https://i.imgur.com/yAVbYp7.jpg'
+        imageSrc='https://consequenceofsound.files.wordpress.com/2018/05/liam-neeson-taken.jpg?quality=80&w=807'
         heading='Bryan Mills'
         subheading='Preventer'
         description="If you let my daughter go now, that'll be the end of it. I will not look for you, I will not pursue you. But if you don't, I will look for you, I will find you, and I will kill you."
@@ -463,7 +464,7 @@ import { TextLink } from '@Domain/Links';
       isHoverable
     >
       <Board.Tile.CenteredTileContent
-        intelliIcon='smile'
+        iconType='intelli-icon-smile'
         heading='Jeffrey'
         subheading='Harmless guy'
         description="Oh, it's a bit of this, a bit of that. It's called a Jeffrey. It won't redirect you anywhere."
@@ -476,7 +477,7 @@ import { TextLink } from '@Domain/Links';
       isHoverable
     >
       <Board.Tile.CenteredTileContent
-        fontAwesomeIcon={{ type: 'solid', icon: 'umbrella' }}
+        iconType='fa-umbrella'
         topRightComponent={
           <Pill
             text='Enabled'

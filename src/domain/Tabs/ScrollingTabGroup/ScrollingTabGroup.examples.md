@@ -25,7 +25,7 @@ initialState = {
     },
     {
       title: 'Tab 5',
-      rightComponent: <FontAwesomeIcon type='solid' icon='check' />
+      rightComponent: <FontAwesomeIcon type='check' />
     }
   ]}
 />

@@ -1,12 +1,14 @@
 import classNames from 'classnames'
+import { includes } from 'lodash'
 import React from 'react'
 
 import { Props } from '../../../common'
 import { BadgeWrapper, StyledIcon } from './style'
+import { IconType } from './types'
 
 interface IIconProps {
   /** FontAwesome or alternate name of the icon to display */
-  icon: string
+  type: IconType
   /** Multiplies icon size by this amount */
   size?: 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge'
   /** Custom sizes for icons */
@@ -21,25 +23,14 @@ interface IIconProps {
   badge?: JSX.Element
   /** Margins around the component */
   margins?: Props.IMargins
-  /** Width of the icon */
-  width?: number
 }
 
-const Icon: React.FC<IIconProps> = ({
-  isSpinning = false,
-  size = 'medium',
-  className,
-  color,
-  customSize,
-  icon,
-  badge,
-  margins,
-  width
-}) => {
+const Icon: React.FC<IIconProps> = ({ isSpinning = false, size = 'medium', className, color, customSize, type, badge, margins }) => {
   const classes = classNames(
     className,
     'icon',
-    icon,
+    'fa',
+    type,
     {
       'fa-spin': isSpinning
     }
@@ -60,9 +51,8 @@ const Icon: React.FC<IIconProps> = ({
         customSize={customSize}
         size={size}
         margins={margins}
-        width={width}
       />
-      {badge && ['large', 'xlarge', 'xxlarge'].includes(size) && (
+      {badge && includes(['large', 'xlarge', 'xxlarge'], size) && (
         <BadgeWrapper
           size={size}
         >

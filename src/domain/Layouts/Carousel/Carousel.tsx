@@ -93,7 +93,7 @@ export class Carousel extends React.PureComponent<ICarouselProps, never> {
         aria-hidden
       >
         <IntelliIcon
-          icon='arrow-left'
+          type='arrow-left'
         />
       </CarouselChevronButton>
     )
@@ -118,7 +118,7 @@ export class Carousel extends React.PureComponent<ICarouselProps, never> {
         aria-hidden
       >
         <IntelliIcon
-          icon='arrow-right'
+          type='arrow-right'
         />
       </CarouselChevronButton>
     )

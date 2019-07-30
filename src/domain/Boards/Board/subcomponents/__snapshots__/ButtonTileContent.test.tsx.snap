@@ -6,11 +6,10 @@ exports[`<ButtonTileContent /> should render a button tile content in the hollow
 >
   <styled.div>
     <styled.div>
-      <FontAwesomeIcon
+      <Icon
         color="#7362F5"
-        icon="star"
         size="xlarge"
-        type="solid"
+        type="fa-star"
       />
     </styled.div>
     <styled.div>
@@ -31,11 +30,10 @@ exports[`<ButtonTileContent /> should render a button tile content with a font a
 >
   <styled.div>
     <styled.div>
-      <FontAwesomeIcon
+      <Icon
         color="#7362F5"
-        icon="star"
         size="xlarge"
-        type="solid"
+        type="fa-star"
       />
     </styled.div>
     <styled.div>
@@ -56,10 +54,10 @@ exports[`<ButtonTileContent /> should render a button tile content with an Intel
 >
   <styled.div>
     <styled.div>
-      <IntelliIcon
+      <Icon
         color="#7362F5"
-        icon="alert"
         size="xlarge"
+        type="intelli-icon-alert"
       />
     </styled.div>
     <styled.div>

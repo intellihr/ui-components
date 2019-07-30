@@ -33,14 +33,13 @@ export class Legend extends React.Component<ILegendProps> {
           return (
             <li key={i}>
               <FontAwesomeIcon
-                type='solid'
-                icon='circle'
+                type='circle'
                 size='xsmall'
-                color={dataset.colour}
+                color={datasets[i].colour}
               />
 
               <LegendLabel>
-                {dataset.label}
+                {datasets[i].label}
               </LegendLabel>
             </li>
           )
