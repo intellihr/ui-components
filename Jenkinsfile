@@ -26,9 +26,10 @@ pipeline {
           env.ENV_TYPE = (helper.isExperimental()) ? 'experimental' : (env.BRANCH_NAME == 'master') ? 'prod' : 'dev'
 
           helper.assumeRole(env.ENV_TYPE)
+          env.FONTAWESOME_NPM_AUTH_TOKEN = helper.getSSMParameter('/shared/npm/FONTAWESOME_NPM_AUTH_TOKEN')
           // Setup FontAwesome PRO token for npm:
           // https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers
-          sh "echo \"${helper.getSSMParameter('/shared/npm/rc_config/fontawesome')}\" >> .npmrc"
+          sh "echo \"@fortawesome:registry=https://npm.fontawesome.com/ \n//npm.fontawesome.com/:_authToken=${env.FONTAWESOME_NPM_AUTH_TOKEN}\" > .npmrc"
           helper.resetAWSCredentials()
         }
       }
