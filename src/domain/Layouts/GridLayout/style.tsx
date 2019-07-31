@@ -16,7 +16,8 @@ enum VerticalAlignment {
   Top = 'top',
   Middle = 'middle',
   Bottom = 'bottom',
-  Stretch = 'stretch'
+  Stretch = 'stretch',
+  Baseline = 'baseline'
 }
 
 type GutterSize = 'none' | Variables.Spacing | Variables.Layout
@@ -249,6 +250,10 @@ function getPropertiesForVerticalAlignment (alignment: VerticalAlignment) {
     case VerticalAlignment.Stretch:
       return css`
         align-items: stretch;
+      `
+    case VerticalAlignment.Baseline:
+      return css`
+        align-items: baseline;
       `
   }
 }
