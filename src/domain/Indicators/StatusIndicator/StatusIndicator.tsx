@@ -4,6 +4,7 @@ import React from 'react'
 import { Props, Variables } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons'
 import { Text } from '../../Typographies/Text'
+import {AvatarEntityWrapper} from "../../Avatars/AvatarEntity/style";
 
 const style = require('./StatusIndicator.scss')
 
@@ -35,7 +36,7 @@ export class StatusIndicator extends React.Component<IStatusIndicatorProps> {
   get subtitleText (): JSX.Element | null {
     const {
       subtitleText,
-      textColor
+      textColor,
     } = this.props
 
     if (subtitleText) {
@@ -64,13 +65,18 @@ export class StatusIndicator extends React.Component<IStatusIndicatorProps> {
 
     return (
       <span className={classNames(style.StatusIndicator, className, 'dot-status-label')}>
-        <FontAwesomeIcon
-          type={isHollow ? 'circle-o' : 'circle'}
-          color={color}
-        />
-        <Text color={textColor}>
-          {text}
-        </Text>
+          <div className='statusTitle'>
+            <FontAwesomeIcon
+              type={isHollow ? 'circle-o' : 'circle'}
+              color={color}
+            />
+            <Text
+                color={textColor}
+                margins={{ top: -4 }}
+            >
+              {text}
+            </Text>
+          </div>
         {this.subtitleText}
       </span>
     )
