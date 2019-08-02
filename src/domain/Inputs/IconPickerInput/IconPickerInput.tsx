@@ -1,20 +1,20 @@
 import React, { ChangeEventHandler } from 'react'
 
 import { Props, Variables } from '../../../common'
-import { IconType } from '../../Icons/Icon'
 import { GridLayout } from '../../Layouts/GridLayout'
 import { IGridLayoutCell } from '../../Layouts/GridLayout/GridLayout'
 import { StyledIcon, StyledIconArea, StyledIconInput } from './style'
+import { IntelliIconPrefixedValue } from './types'
 
 export interface IIconPickerProps {
   /** Array of icons to display in the list */
-  icons: IconType[]
+  icons: IntelliIconPrefixedValue[]
   /** action triggered when icons are clicked */
   onChange?: ChangeEventHandler<HTMLInputElement>
   /** action triggered when icons are clicked */
   handleChange?: ChangeEventHandler<HTMLInputElement>
   /** The currently selected icon */
-  value: IconType | null
+  value: IntelliIconPrefixedValue | null
   /** The name property of the icon picker */
   name: string
   /** The data-component-context */
@@ -51,11 +51,11 @@ export class IconPickerInput extends React.PureComponent<IIconPickerProps> {
       return {
         size: 'shrink',
         content: this.iconInput(icon, idx)
-    }
+      }
     })
   }
 
-  private iconInput = (icon: IconType, idx: number) => {
+  private iconInput = (icon: IntelliIconPrefixedValue, idx: number) => {
     const {
       onChange,
       handleChange,
@@ -78,7 +78,7 @@ export class IconPickerInput extends React.PureComponent<IIconPickerProps> {
         />
         <StyledIconArea isChecked={isChecked} htmlFor={iconId}>
           <StyledIcon
-            type={icon}
+            icon={icon}
             color={isChecked ? Variables.Color.i300 : Variables.Color.n700}
             size='large'
           />

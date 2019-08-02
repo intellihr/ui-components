@@ -15,7 +15,8 @@ import {
 const InfoIcon = () => (
   <IconBox>
     <FontAwesomeIcon
-      type='info-circle'
+      type='solid'
+      icon='info-circle'
       size='large'
     />
   </IconBox>

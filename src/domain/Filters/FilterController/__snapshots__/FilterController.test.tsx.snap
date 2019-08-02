@@ -70,7 +70,8 @@ exports[`<FilterController /> should render the filter controller 1`] = `
           handleClear={[Function]}
           icon={
             <FontAwesomeIcon
-              type="search"
+              icon="search"
+              type="solid"
             />
           }
           name="filterControllerSearchInput"

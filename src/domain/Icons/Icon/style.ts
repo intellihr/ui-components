@@ -9,6 +9,7 @@ interface IStyledIconProps {
   customSize?: number
   size?: size
   margins?: Props.IMargins
+  width?: number
 }
 
 interface IBadgeWrapper {
@@ -22,8 +23,8 @@ const BadgeWrapper = styled.span<IBadgeWrapper>`
     switch (props.size) {
       case 'large':
         return css`
-          margin-top: -10px;
-          margin-left: -14px;
+          margin-top: -12px;
+          margin-left: -10px;
         `
       case 'xlarge':
         return css`
@@ -40,7 +41,12 @@ const BadgeWrapper = styled.span<IBadgeWrapper>`
 `
 
 const StyledIcon = styled.i<IStyledIconProps>`
-   width: 1.28571em;
+  display: inline-block;
+  font-stretch: normal;
+
+  ${(props) => props.width && css`
+    width: ${props.width}px;
+  `}
 
   ${(props) => styleForMargins(props.margins)}
 

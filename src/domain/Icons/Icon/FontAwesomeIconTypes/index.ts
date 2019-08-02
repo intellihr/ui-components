@@ -1,0 +1,1 @@
+export { FontAwesomeIconValue } from './types'
