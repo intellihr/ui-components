@@ -6,8 +6,8 @@ exports[`<Toast /> should call the onMount function if given one 1`] = `
 >
   <IntelliIcon
     className="toast-icon"
+    icon="alert"
     size="xsmall"
-    type="alert"
   />
   <div
     className="toast-content no-heading"
@@ -28,8 +28,8 @@ exports[`<Toast /> should call the onMount function if given one 1`] = `
   >
     <IntelliIcon
       className="toast-close"
+      icon="cross-small"
       size="xsmall"
-      type="cross-small"
     />
   </span>
 </div>
@@ -41,8 +41,8 @@ exports[`<Toast /> should render a toast of a default type, which is success 1`]
 >
   <IntelliIcon
     className="toast-icon"
+    icon="check"
     size="xsmall"
-    type="check"
   />
   <div
     className="toast-content no-heading"
@@ -63,8 +63,8 @@ exports[`<Toast /> should render a toast of a default type, which is success 1`]
   >
     <IntelliIcon
       className="toast-close"
+      icon="cross-small"
       size="xsmall"
-      type="cross-small"
     />
   </span>
 </div>
@@ -76,8 +76,8 @@ exports[`<Toast /> should render an alert toast 1`] = `
 >
   <IntelliIcon
     className="toast-icon"
+    icon="alert"
     size="xsmall"
-    type="alert"
   />
   <div
     className="toast-content no-heading"
@@ -98,8 +98,8 @@ exports[`<Toast /> should render an alert toast 1`] = `
   >
     <IntelliIcon
       className="toast-close"
+      icon="cross-small"
       size="xsmall"
-      type="cross-small"
     />
   </span>
 </div>

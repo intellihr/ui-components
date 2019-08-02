@@ -1,24 +1,19 @@
 import React from 'react'
 
-import { Omit } from '../../../common'
 import { IIconProps, Icon } from '../Icon'
-import { IntelliIconType, IntelliIconTypeNoPrefix } from '../Icon/types'
+import { IntelliIconValue } from '../Icon/types'
 
-interface IIntelliIconProps extends Omit<IIconProps, 'type'> {
-  type: IntelliIconTypeNoPrefix
+interface IIntelliIconProps extends IIconProps {
+  icon: IntelliIconValue
 }
 
-export class IntelliIcon extends React.PureComponent<IIntelliIconProps> {
-  public render (): JSX.Element {
-    const {
-      type
-    } = this.props
+const IntelliIcon: React.FC<IIntelliIconProps> = ({ icon, ...props }) => (
+  <Icon
+    {...props}
+    icon={`intelli-icon-${icon}`}
+  />
+)
 
-    return (
-      <Icon
-        {...this.props}
-        type={`intelli-icon-${type}` as IntelliIconType}
-      />
-    )
-  }
+export {
+  IntelliIcon
 }

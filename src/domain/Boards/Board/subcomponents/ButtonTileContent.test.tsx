@@ -23,7 +23,7 @@ describe('<ButtonTileContent />', () => {
   it(`should render a button tile content with a font awesome icon`, () => {
     const wrapper = shallow(
       <ButtonTileContent
-        iconType='fa-star'
+        fontAwesomeIcon={{ type: 'solid', icon: 'star' }}
         label='dummy button title'
         buttonDescription='dummy button description'
       />
@@ -34,7 +34,7 @@ describe('<ButtonTileContent />', () => {
   it(`should render a button tile content with an IntelliIcon`, () => {
     const wrapper = shallow(
       <ButtonTileContent
-        iconType='intelli-icon-alert'
+        intelliIcon='alert'
         label='dummy button title'
         buttonDescription='dummy button description'
       />
@@ -45,7 +45,7 @@ describe('<ButtonTileContent />', () => {
   it(`should render a button tile content in the hollow style`, () => {
     const wrapper = shallow(
       <ButtonTileContent
-        iconType='fa-star'
+        fontAwesomeIcon={{ type: 'solid', icon: 'star' }}
         label='dummy button title'
         buttonDescription='dummy button description'
       />

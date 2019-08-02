@@ -76,7 +76,7 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
                 onFilterAdded={onFilterAdded}
               />
               <TextInput
-                icon={<FontAwesomeIcon type='search' />}
+                icon={<FontAwesomeIcon type='solid' icon='search' />}
                 name='filterControllerSearchInput'
                 placeholder={searchPlaceholder}
                 value={searchValue}

@@ -117,7 +117,7 @@ exports[`<NumberInput /> should render an number input with an icon 1`] = `
 >
   <styled.div>
     <Icon
-      type="fa-check"
+      icon="fa-check"
     />
     <styled.span>
        

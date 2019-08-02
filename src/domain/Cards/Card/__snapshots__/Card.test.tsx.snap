@@ -69,7 +69,8 @@ exports[`<Card /> should render a card with main content and dropdownSections  1
     >
       <styled.span>
         <FontAwesomeIcon
-          type="chevron-down"
+          icon="chevron-down"
+          type="solid"
         />
       </styled.span>
     </styled.button>
@@ -102,7 +103,8 @@ exports[`<Card /> should render a card with main content only 1`] = `
     >
       <styled.span>
         <FontAwesomeIcon
-          type="chevron-down"
+          icon="chevron-down"
+          type="solid"
         />
       </styled.span>
     </styled.button>
