@@ -53,7 +53,8 @@ exports[`<DateRangeInput /> should render a date range input 1`] = `
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_rightButton__horizontalDefault"
       >
         <FontAwesomeIcon
-          type="arrow-right"
+          icon="arrow-right"
+          type="solid"
         />
       </div>
     }
@@ -62,7 +63,8 @@ exports[`<DateRangeInput /> should render a date range input 1`] = `
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_leftButton__horizontalDefault"
       >
         <FontAwesomeIcon
-          type="arrow-left"
+          icon="arrow-left"
+          type="solid"
         />
       </div>
     }
@@ -187,7 +189,8 @@ exports[`<DateRangeInput /> should render a date range input with date format 1`
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_rightButton__horizontalDefault"
       >
         <FontAwesomeIcon
-          type="arrow-right"
+          icon="arrow-right"
+          type="solid"
         />
       </div>
     }
@@ -196,7 +199,8 @@ exports[`<DateRangeInput /> should render a date range input with date format 1`
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_leftButton__horizontalDefault"
       >
         <FontAwesomeIcon
-          type="arrow-left"
+          icon="arrow-left"
+          type="solid"
         />
       </div>
     }
@@ -321,7 +325,8 @@ exports[`<DateRangeInput /> should render a disabled date range input 1`] = `
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_rightButton__horizontalDefault"
       >
         <FontAwesomeIcon
-          type="arrow-right"
+          icon="arrow-right"
+          type="solid"
         />
       </div>
     }
@@ -330,7 +335,8 @@ exports[`<DateRangeInput /> should render a disabled date range input 1`] = `
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_leftButton__horizontalDefault"
       >
         <FontAwesomeIcon
-          type="arrow-left"
+          icon="arrow-left"
+          type="solid"
         />
       </div>
     }
@@ -455,7 +461,8 @@ exports[`<DateRangeInput /> should render a mobile date range input 1`] = `
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_rightButton__horizontalDefault"
       >
         <FontAwesomeIcon
-          type="arrow-right"
+          icon="arrow-right"
+          type="solid"
         />
       </div>
     }
@@ -464,7 +471,8 @@ exports[`<DateRangeInput /> should render a mobile date range input 1`] = `
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_leftButton__horizontalDefault"
       >
         <FontAwesomeIcon
-          type="arrow-left"
+          icon="arrow-left"
+          type="solid"
         />
       </div>
     }
@@ -589,7 +597,8 @@ exports[`<DateRangeInput /> should render an invalid date range input 1`] = `
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_rightButton__horizontalDefault"
       >
         <FontAwesomeIcon
-          type="arrow-right"
+          icon="arrow-right"
+          type="solid"
         />
       </div>
     }
@@ -598,7 +607,8 @@ exports[`<DateRangeInput /> should render an invalid date range input 1`] = `
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_leftButton__horizontalDefault"
       >
         <FontAwesomeIcon
-          type="arrow-left"
+          icon="arrow-left"
+          type="solid"
         />
       </div>
     }

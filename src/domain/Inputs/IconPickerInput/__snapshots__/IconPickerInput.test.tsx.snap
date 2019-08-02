@@ -23,8 +23,8 @@ exports[`<IconPickerInput /> should render an Icon Picker 1`] = `
             >
               <ForwardRef(Styled(Icon))
                 color="#7362F5"
+                icon="intelli-icon-australia"
                 size="large"
-                type="intelli-icon-australia"
               />
             </ForwardRef(styled.label)>
           </React.Fragment>,
@@ -46,8 +46,8 @@ exports[`<IconPickerInput /> should render an Icon Picker 1`] = `
             >
               <ForwardRef(Styled(Icon))
                 color="#424F5C"
+                icon="intelli-icon-card"
                 size="large"
-                type="intelli-icon-card"
               />
             </ForwardRef(styled.label)>
           </React.Fragment>,
@@ -69,8 +69,8 @@ exports[`<IconPickerInput /> should render an Icon Picker 1`] = `
             >
               <ForwardRef(Styled(Icon))
                 color="#424F5C"
+                icon="intelli-icon-book"
                 size="large"
-                type="intelli-icon-book"
               />
             </ForwardRef(styled.label)>
           </React.Fragment>,

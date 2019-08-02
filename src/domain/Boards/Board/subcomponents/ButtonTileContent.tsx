@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Variables } from '../../../../common'
-import { Icon, IconType } from '../../../Icons'
+import { FontAwesomeIcon, FontAwesomeIconValue, IconValue, IntelliIcon, IntelliIconValue } from '../../../Icons'
 import {
   ButtonDescriptionLabel,
   ButtonTextContentWrapper,
@@ -14,8 +14,19 @@ import {
 interface IBoardButtonTileContentProps {
   /** Text displayed above the content of tile */
   label?: string
-  /** button icon type displayed in the tile */
-  iconType?: IconType
+  /**
+   * Intelli icon type displayed in the tile. If `fontAwesomeIcon` is
+   * provided as well `intelliIcon` will take precedence
+   */
+  intelliIcon?: IntelliIconValue
+  /**
+   * FontAwesome icon type displayed in the tile. Will not display if an `intelliIcon`
+   * is provided
+   */
+  fontAwesomeIcon?: {
+    type: 'solid' | 'light' | 'regular'
+    icon: FontAwesomeIconValue
+  }
   /** button description displayed after button title */
   buttonDescription?: string
 }
@@ -24,15 +35,37 @@ class ButtonTileContent extends React.PureComponent<IBoardButtonTileContentProps
 
   private get icon (): JSX.Element | null {
     const {
-      iconType
+      intelliIcon,
+      fontAwesomeIcon
     } = this.props
 
-    if (iconType) {
-        return (
-          <StyledIconWrapper>
-            <Icon type={iconType} color={Variables.Color.i300} size='xlarge' />
-          </StyledIconWrapper>
-        )
+    const color = Variables.Color.i300
+    const size = 'xlarge'
+
+    if (intelliIcon) {
+      return (
+        <StyledIconWrapper>
+          <IntelliIcon
+            icon={intelliIcon}
+            color={color}
+            size={size}
+          />
+        </StyledIconWrapper>
+      )
+    }
+
+    if (fontAwesomeIcon) {
+      const { type, icon } = fontAwesomeIcon
+      return (
+        <StyledIconWrapper>
+          <FontAwesomeIcon
+            type={type}
+            icon={icon}
+            color={color}
+            size={size}
+          />
+        </StyledIconWrapper>
+      )
     }
 
     return null
@@ -75,8 +108,8 @@ class ButtonTileContent extends React.PureComponent<IBoardButtonTileContentProps
       <ButtonWrapper>
         {this.icon}
         <ButtonTextContentWrapper>
-        {this.buttonTitle}
-        {this.buttonDescription}
+          {this.buttonTitle}
+          {this.buttonDescription}
         </ButtonTextContentWrapper>
       </ButtonWrapper>
     )

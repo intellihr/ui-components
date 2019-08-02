@@ -609,7 +609,7 @@ $button-styles: (
     padding-right: 0;
   }
 
-  .fa {
+  .icon {
     vertical-align: initial;
   }
 
@@ -632,7 +632,7 @@ $button-styles: (
     padding: 10px 12px;
 
     .button-icon {
-      > .fa {
+      > .icon {
         font-size: .75rem;
       }
     }
@@ -643,23 +643,23 @@ $button-styles: (
     padding: 17px 20px;
 
     .button-icon {
-      > .fa {
+      > .icon {
         font-size: 1.25rem;
       }
     }
   }
 
   .button-icon {
-    >.fa {
+    >.icon {
       font-size: .9rem;
     }
 
     &.left {
-      margin-right: 3px;
+      margin-right: $spacing-xsmall;
     }
 
     &.right {
-      margin-left: 3px;
+      margin-left: $spacing-xsmall;
     }
   }
 }
@@ -691,7 +691,7 @@ $button-styles: (
     margin: 0;
     padding: 7px 6px;
 
-    .fa {
+    .icon {
       font-size: 1.5rem;
       line-height: 1;
       margin: 0;
@@ -712,7 +712,7 @@ $button-styles: (
     padding: 0;
     width: 1.55rem;
 
-    > .fa {
+    > .icon {
       margin: 0;
     }
   }

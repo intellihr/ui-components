@@ -43,7 +43,8 @@ exports[`<TooltipPopover /> Simple popover behaviour should match the snapshot 1
   >
     <FontAwesomeIcon
       color="#424F5C"
-      type="question-circle-o"
+      icon="question-circle"
+      type="regular"
     />
   </button>
   <Popover

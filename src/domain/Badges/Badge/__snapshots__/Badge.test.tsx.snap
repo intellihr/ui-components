@@ -17,7 +17,7 @@ exports[`<Badge /> should render a large badge 1`] = `
 }
 
 .c0,
-.c0 .fa {
+.c0 .icon {
   font-size: 21px;
   width: 30px;
   height: 30px;
@@ -64,7 +64,7 @@ exports[`<Badge /> should render a large badge 1`] = `
               [Function],
               "
 
-  &, .fa {
+  &, .icon {
   ",
               [Function],
               "
@@ -135,7 +135,7 @@ exports[`<Badge /> should render a small badge 1`] = `
 }
 
 .c0,
-.c0 .fa {
+.c0 .icon {
   font-size: 12px;
   width: 20px;
   height: 20px;
@@ -181,7 +181,7 @@ exports[`<Badge /> should render a small badge 1`] = `
               [Function],
               "
 
-  &, .fa {
+  &, .icon {
   ",
               [Function],
               "
@@ -237,7 +237,8 @@ exports[`<Badge /> should render a small badge 1`] = `
 
 exports[`<Badge /> should render a spinning badge 1`] = `
 .c1 {
-  width: 1.28571em;
+  display: inline-block;
+  font-stretch: normal;
 }
 
 .c1.icon {
@@ -261,7 +262,7 @@ exports[`<Badge /> should render a spinning badge 1`] = `
 }
 
 .c0,
-.c0 .fa {
+.c0 .icon {
   font-size: 12px;
   width: 20px;
   height: 20px;
@@ -308,7 +309,7 @@ exports[`<Badge /> should render a spinning badge 1`] = `
               [Function],
               "
 
-  &, .fa {
+  &, .icon {
   ",
               [Function],
               "
@@ -357,22 +358,23 @@ exports[`<Badge /> should render a spinning badge 1`] = `
       >
         <FontAwesomeIcon
           className="refresh-icon"
+          icon="sync"
           isSpinning={true}
-          type="refresh"
+          type="solid"
         >
           <Icon
             className="refresh-icon"
+            icon="fas fa-sync"
             isSpinning={true}
-            type="fa-refresh"
           >
             <styled.i
               aria-hidden={true}
-              className="refresh-icon icon fa fa-refresh fa-spin"
+              className="refresh-icon icon fas fa-sync fa-spin"
               size="medium"
             >
               <StyledComponent
                 aria-hidden={true}
-                className="refresh-icon icon fa fa-refresh fa-spin"
+                className="refresh-icon icon fas fa-sync fa-spin"
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
@@ -383,7 +385,12 @@ exports[`<Badge /> should render a spinning badge 1`] = `
                       "lastClassName": "c1",
                       "rules": Array [
                         "
-   width: 1.28571em;
+  display: inline-block;
+  font-stretch: normal;
+
+  ",
+                        [Function],
+                        "
 
   ",
                         [Function],
@@ -418,7 +425,7 @@ exports[`<Badge /> should render a spinning badge 1`] = `
               >
                 <i
                   aria-hidden={true}
-                  className="refresh-icon icon fa fa-refresh fa-spin c1"
+                  className="refresh-icon icon fas fa-sync fa-spin c1"
                   size="medium"
                 />
               </StyledComponent>
