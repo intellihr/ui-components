@@ -24,7 +24,6 @@
 />
 ```
 
-
 #### Coloured dot
 
 ```jsx
