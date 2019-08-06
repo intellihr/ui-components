@@ -4,8 +4,7 @@ import React from 'react'
 import { Props, Variables } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons'
 import { Text } from '../../Typographies/Text'
-
-const style = require('./StatusIndicator.scss')
+import { StatusTitle } from './style'
 
 export interface IStatusIndicatorProps {
   /** Text to show inside the label  */
@@ -103,17 +102,17 @@ export class StatusIndicator extends React.Component<IStatusIndicatorProps> {
     } = this.props
 
     return (
-      <span className={classNames(style.StatusIndicator, className, 'dot-status-label')}>
-        <div className='statusTitle'>
+      <StatusIndicator className={classNames(className, 'dot-status-label')}>
+        <StatusTitle>
           <FontAwesomeIcon
             type={isHollow ? 'regular' : 'solid'}
             icon='circle'
             color={color}
           />
           {this.text}
-        </div>
+        </StatusTitle>
         {this.subtitleText}
-      </span>
+      </StatusIndicator>
     )
   }
 }
