@@ -28,6 +28,14 @@ export interface IAvatarEntityProps {
   secondaryTextType?: Props.TypographyType
   /** The tertiary text type  */
   tertiaryTextType?: Props.TypographyType
+  /** Specify the primary text font weight */
+  primaryWeight?: Variables.FontWeight
+  /** Specify the secondary text font weight */
+  secondaryWeight?: Variables.FontWeight
+  /** Color of the primary text */
+  primaryColor?: Variables.Color
+  /** Color of the secondary text */
+  secondaryColor?: Variables.Color
   /** Margins around the component */
   margins?: Props.IMargins
   /** Initials to display if no valid `imageUrl` or `imageData` is passed to Avatar */
@@ -47,6 +55,8 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
     primaryTextType: Props.TypographyType.Body,
     secondaryTextType: Props.TypographyType.XSmall,
     tertiaryTextType: Props.TypographyType.XSmall,
+    primaryWeight: Variables.FontWeight.fwNormal,
+    secondaryWeight: Variables.FontWeight.fwNormal,
     margins: {
       top: Variables.Spacing.s3XSmall,
       bottom: Variables.Spacing.s3XSmall,
@@ -81,13 +91,17 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
     const {
       primaryText,
       isCompact,
-      primaryTextType
+      primaryTextType,
+      primaryColor,
+      primaryWeight
     } = this.props
 
     return (
       <PrimaryTextWrapper
         textType={primaryTextType!}
         isCompact={isCompact}
+        primaryColor={primaryColor!}
+        primaryWeight={primaryWeight!}
       >
         {primaryText}
       </PrimaryTextWrapper>
@@ -98,7 +112,9 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
     const {
       secondaryText,
       isCompact,
-      secondaryTextType
+      secondaryTextType,
+      secondaryColor,
+      secondaryWeight
     } = this.props
 
     if (!secondaryText) {
@@ -115,6 +131,8 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
       <SecondaryTextWrapper
         textType={secondaryTextType!}
         isCompact={isCompact}
+        secondaryColor={secondaryColor!}
+        secondaryWeight={secondaryWeight!}
       >
         {text}
       </SecondaryTextWrapper>

@@ -24,12 +24,14 @@ exports[`<AvatarEntity /> should render a avatar entity with lots of data 1`] = 
   <styled.div>
     <styled.span
       isCompact={false}
+      primaryWeight={400}
       textType="body"
     >
       John Wick
     </styled.span>
     <styled.span
       isCompact={false}
+      secondaryWeight={400}
       textType="xsmall"
     >
       Guy Killer
@@ -67,12 +69,14 @@ exports[`<AvatarEntity /> should render a avatar entity with specific text type 
   <styled.div>
     <styled.span
       isCompact={false}
+      primaryWeight={400}
       textType="heading"
     >
       John Wick
     </styled.span>
     <styled.span
       isCompact={false}
+      secondaryWeight={400}
       textType="body"
     >
       Guy Killer
@@ -109,6 +113,7 @@ exports[`<AvatarEntity /> should render a basic avatar entity 1`] = `
   <styled.div>
     <styled.span
       isCompact={false}
+      primaryWeight={400}
       textType="body"
     >
       John Wick
@@ -139,6 +144,7 @@ exports[`<AvatarEntity /> should render a basic compact avatar entity 1`] = `
   <styled.div>
     <styled.span
       isCompact={true}
+      primaryWeight={400}
       textType="body"
     >
       John Wick
@@ -171,12 +177,14 @@ exports[`<AvatarEntity /> should render a compact avatar entity with lots of dat
   <styled.div>
     <styled.span
       isCompact={true}
+      primaryWeight={400}
       textType="body"
     >
       John Wick
     </styled.span>
     <styled.span
       isCompact={true}
+      secondaryWeight={400}
       textType="xsmall"
     >
       (Guy Killer)

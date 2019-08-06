@@ -10,6 +10,20 @@ interface IAvatarEntityWrapper {
   margins?: Props.IMargins
 }
 
+interface IPrimaryTextWrapper {
+  isCompact?: boolean
+  textType: Props.TypographyType
+  primaryColor: Variables.Color
+  primaryWeight: Variables.FontWeight
+}
+
+interface ISecondaryTextWrapper {
+  isCompact?: boolean
+  textType: Props.TypographyType
+  secondaryColor: Variables.Color
+  secondaryWeight: Variables.FontWeight
+}
+
 interface ITextWrapper {
   isCompact?: boolean
   textType: Props.TypographyType
@@ -46,10 +60,11 @@ const AvatarEntityInfo = styled.div`
   align-self: center;
 `
 const PrimaryTextWrapper = styled.span`
-  ${(props: ITextWrapper) => styleForTypographyType(props.textType)}
-  font-weight: ${Variables.FontWeight.fwNormal};
+  ${(props: IPrimaryTextWrapper) => styleForTypographyType(props.textType)}
+  ${(props: IPrimaryTextWrapper) => (props.primaryColor)}
+  ${(props: IPrimaryTextWrapper) => (props.primaryWeight)}
 
-  ${(props: ITextWrapper) => {
+  ${(props: IPrimaryTextWrapper) => {
     if (!props.isCompact) {
       return css`
         display: block;
@@ -60,15 +75,16 @@ const PrimaryTextWrapper = styled.span`
 `
 
 const SecondaryTextWrapper = styled.span`
-  ${(props: ITextWrapper) => styleForTypographyType(props.textType)}
-  font-weight: ${Variables.FontWeight.fwNormal};
+  ${(props: ISecondaryTextWrapper) => styleForTypographyType(props.textType)}
+  ${(props: ISecondaryTextWrapper) => (props.secondaryColor)}
+  ${(props: ISecondaryTextWrapper) => (props.secondaryWeight)}
 
   margin-top: 2px;
-  margin-left: ${(props: ITextWrapper) => props.isCompact ? '5px' : '0px'};
+  margin-left: ${(props: ISecondaryTextWrapper) => props.isCompact ? '5px' : '0px'};
 
   ${styleForTruncatedText()}
 
-  ${(props: ITextWrapper) => {
+  ${(props: ISecondaryTextWrapper) => {
   if (!props.isCompact) {
     return css`
         display: block;

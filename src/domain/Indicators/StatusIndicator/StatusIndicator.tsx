@@ -41,8 +41,10 @@ export interface IStatusIndicatorProps {
 export class StatusIndicator extends React.Component<IStatusIndicatorProps> {
   public static defaultProps: Partial<IStatusIndicatorProps> = {
     isHollow: false,
-    textType: Props.TypographyType.Body,
-    subtitleTextType: Props.TypographyType.Small
+    textType: Props.TypographyType.Small,
+    textWeight: Variables.FontWeight.fwSemiBold,
+    subtitleTextType: Props.TypographyType.Small,
+    subtitleTextWeight: Variables.FontWeight.fwNormal
   }
 
   private get text (): JSX.Element | null {
