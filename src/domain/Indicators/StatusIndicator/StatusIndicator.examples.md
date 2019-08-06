@@ -69,3 +69,18 @@ import { Variables } from '@Common';
   textColor={Variables.Color.o400}
 />
 ```
+
+#### Typed and Weighted text
+
+```jsx
+import { Props, Variables } from '@Common';
+
+<StatusIndicator
+  text='Approved'
+  textType={Props.TypographyType.XSmall}
+  textWeight={Variables.FontWeight.fwBold}
+  subtitleText='25 days ago'
+  subtitleTextType={Props.TypographyType.XSmall}
+  subtitleTextWeight={Variables.FontWeight.fwBold}
+/>
+```

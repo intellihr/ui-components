@@ -1,56 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StatusIndicator /> should render a dot status label 1`] = `
-<span
-  className="StatusIndicator dot-status-label"
+<styled.div
+  className="dot-status-label"
 >
-  <FontAwesomeIcon
-    color="#CADDFC"
-    icon="circle"
-    type="solid"
-  />
-  <Text
-    isInline={true}
-    tag="span"
-    type="body"
-  >
-    Test
-  </Text>
-</span>
+  <styled.div>
+    <FontAwesomeIcon
+      color="#CADDFC"
+      icon="circle"
+      type="solid"
+    />
+    <Text
+      isInline={true}
+      margins={
+        Object {
+          "top": -4,
+        }
+      }
+      tag="span"
+      type="body"
+    >
+      Test
+    </Text>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`<StatusIndicator /> should render a dot status label with default values 1`] = `
-<span
-  className="StatusIndicator dot-status-label"
+<styled.div
+  className="dot-status-label"
 >
-  <FontAwesomeIcon
-    icon="circle"
-    type="solid"
-  />
-  <Text
-    isInline={true}
-    tag="span"
-    type="body"
-  >
-    Test
-  </Text>
-</span>
+  <styled.div>
+    <FontAwesomeIcon
+      icon="circle"
+      type="solid"
+    />
+    <Text
+      isInline={true}
+      margins={
+        Object {
+          "top": -4,
+        }
+      }
+      tag="span"
+      type="body"
+    >
+      Test
+    </Text>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`<StatusIndicator /> should render a hollow dot status label 1`] = `
-<span
-  className="StatusIndicator dot-status-label"
+<styled.div
+  className="dot-status-label"
 >
-  <FontAwesomeIcon
-    icon="circle"
-    type="regular"
-  />
-  <Text
-    isInline={true}
-    tag="span"
-    type="body"
-  >
-    Test
-  </Text>
-</span>
+  <styled.div>
+    <FontAwesomeIcon
+      icon="circle"
+      type="regular"
+    />
+    <Text
+      isInline={true}
+      margins={
+        Object {
+          "top": -4,
+        }
+      }
+      tag="span"
+      type="body"
+    >
+      Test
+    </Text>
+  </styled.div>
+</styled.div>
 `;
