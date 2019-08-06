@@ -11,8 +11,20 @@ export interface IStatusIndicatorProps {
   /** Text to show inside the label  */
   text: string
 
+  /** The primary text type  */
+  textType?: Props.TypographyType
+
+  /** Specify the primary text font weight */
+  textWeight?: Variables.FontWeight
+
   /** Smaller text shown under the label */
   subtitleText?: string
+
+  /** The subtitle text type  */
+  subtitleTextType?: Props.TypographyType
+
+  /** Specify the subtitle text font weight */
+  subtitleTextWeight?: Variables.FontWeight
 
   /** Colour of the icon  */
   color?: Variables.Color
@@ -29,21 +41,51 @@ export interface IStatusIndicatorProps {
 
 export class StatusIndicator extends React.Component<IStatusIndicatorProps> {
   public static defaultProps: Partial<IStatusIndicatorProps> = {
-    isHollow: false
+    isHollow: false,
+    textType: Props.TypographyType.Body,
+    subtitleTextType: Props.TypographyType.Small
   }
 
-  get subtitleText (): JSX.Element | null {
+  private get text (): JSX.Element | null {
+    const {
+      text,
+      textType,
+      textWeight,
+      textColor
+    } = this.props
+
+    if (text) {
+      return (
+        <Text
+          type={textType!}
+          color={textColor}
+          weight={textWeight}
+          margins={{ top: -4 }}
+        >
+          {text}
+        </Text>
+      )
+    }
+
+    return null
+  }
+
+  private get subtitleText (): JSX.Element | null {
     const {
       subtitleText,
+      subtitleTextType,
+      subtitleTextWeight,
       textColor
     } = this.props
 
     if (subtitleText) {
       return (
         <Text
-          type={Props.TypographyType.Small}
+          type={subtitleTextType!}
           color={textColor}
-          className='subtitle'
+          weight={subtitleTextWeight}
+          isInline={false}
+          margins={{ left: Variables.Spacing.sMedium }}
         >
           {subtitleText}
         </Text>
@@ -55,23 +97,21 @@ export class StatusIndicator extends React.Component<IStatusIndicatorProps> {
 
   public render (): JSX.Element {
     const {
-      text,
       color,
-      textColor,
       isHollow,
       className
     } = this.props
 
     return (
       <span className={classNames(style.StatusIndicator, className, 'dot-status-label')}>
-        <FontAwesomeIcon
-          type={isHollow ? 'regular' : 'solid'}
-          icon='circle'
-          color={color}
-        />
-        <Text color={textColor}>
-          {text}
-        </Text>
+        <div className='statusTitle'>
+          <FontAwesomeIcon
+            type={isHollow ? 'regular' : 'solid'}
+            icon='circle'
+            color={color}
+          />
+          {this.text}
+        </div>
         {this.subtitleText}
       </span>
     )
