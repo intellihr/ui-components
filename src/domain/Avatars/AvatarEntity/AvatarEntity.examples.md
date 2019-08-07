@@ -131,6 +131,23 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
   />
 ```
 
+#### Colored & Weighted Text
+
+```jsx
+const { Variables } = require('@Common');
+
+  <AvatarEntity
+    initials='JW'
+    statusDot='primary'
+    primaryText='John Wick'
+    primaryWeight={Variables.FontWeight.fwBold}
+    primaryColor={Variables.Color.b600}
+    secondaryText='Guy Killer'
+    secondaryWeight={Variables.FontWeight.fwSemiBold}
+    secondaryColor={Variables.Color.b300}
+  />
+```
+
 #### Legacy
 
 Old pages used the `.person-tag`, `.profile-picture-badge` and `.badge-{size}` classes.

@@ -18,7 +18,8 @@ exports[`<StatusIndicator /> should render a dot status label 1`] = `
         }
       }
       tag="span"
-      type="body"
+      type="small"
+      weight={600}
     >
       Test
     </Text>
@@ -43,7 +44,8 @@ exports[`<StatusIndicator /> should render a dot status label with default value
         }
       }
       tag="span"
-      type="body"
+      type="small"
+      weight={600}
     >
       Test
     </Text>
@@ -68,7 +70,8 @@ exports[`<StatusIndicator /> should render a hollow dot status label 1`] = `
         }
       }
       tag="span"
-      type="body"
+      type="small"
+      weight={600}
     >
       Test
     </Text>
