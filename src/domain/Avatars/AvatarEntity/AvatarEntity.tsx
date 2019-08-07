@@ -53,10 +53,12 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
     isCompact: false,
     isHoverable: false,
     primaryTextType: Props.TypographyType.Body,
-    secondaryTextType: Props.TypographyType.XSmall,
+    secondaryTextType: Props.TypographyType.Small,
     tertiaryTextType: Props.TypographyType.XSmall,
     primaryWeight: Variables.FontWeight.fwNormal,
     secondaryWeight: Variables.FontWeight.fwNormal,
+    primaryColor: Variables.Color.n800,
+    secondaryColor: Variables.Color.n700,
     margins: {
       top: Variables.Spacing.s3XSmall,
       bottom: Variables.Spacing.s3XSmall,

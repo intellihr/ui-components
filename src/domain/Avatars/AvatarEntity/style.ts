@@ -59,10 +59,11 @@ const AvatarEntityInfo = styled.div`
   padding-left: 10px;
   align-self: center;
 `
+
 const PrimaryTextWrapper = styled.span`
   ${(props: IPrimaryTextWrapper) => styleForTypographyType(props.textType)}
-  ${(props: IPrimaryTextWrapper) => (props.primaryColor)}
-  ${(props: IPrimaryTextWrapper) => (props.primaryWeight)}
+  color: ${(props: IPrimaryTextWrapper) => props.primaryColor};
+  font-weight: ${(props: IPrimaryTextWrapper) => props.primaryWeight};
 
   ${(props: IPrimaryTextWrapper) => {
     if (!props.isCompact) {
@@ -76,8 +77,8 @@ const PrimaryTextWrapper = styled.span`
 
 const SecondaryTextWrapper = styled.span`
   ${(props: ISecondaryTextWrapper) => styleForTypographyType(props.textType)}
-  ${(props: ISecondaryTextWrapper) => (props.secondaryColor)}
-  ${(props: ISecondaryTextWrapper) => (props.secondaryWeight)}
+  color: ${(props: ISecondaryTextWrapper) => props.secondaryColor};
+  font-weight: ${(props: ISecondaryTextWrapper) => props.secondaryWeight};
 
   margin-top: 2px;
   margin-left: ${(props: ISecondaryTextWrapper) => props.isCompact ? '5px' : '0px'};

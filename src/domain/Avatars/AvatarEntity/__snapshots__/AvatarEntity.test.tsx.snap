@@ -24,6 +24,7 @@ exports[`<AvatarEntity /> should render a avatar entity with lots of data 1`] = 
   <styled.div>
     <styled.span
       isCompact={false}
+      primaryColor="#262D33"
       primaryWeight={400}
       textType="body"
     >
@@ -31,8 +32,9 @@ exports[`<AvatarEntity /> should render a avatar entity with lots of data 1`] = 
     </styled.span>
     <styled.span
       isCompact={false}
+      secondaryColor="#424F5C"
       secondaryWeight={400}
-      textType="xsmall"
+      textType="small"
     >
       Guy Killer
     </styled.span>
@@ -69,6 +71,7 @@ exports[`<AvatarEntity /> should render a avatar entity with specific text type 
   <styled.div>
     <styled.span
       isCompact={false}
+      primaryColor="#262D33"
       primaryWeight={400}
       textType="heading"
     >
@@ -76,6 +79,7 @@ exports[`<AvatarEntity /> should render a avatar entity with specific text type 
     </styled.span>
     <styled.span
       isCompact={false}
+      secondaryColor="#424F5C"
       secondaryWeight={400}
       textType="body"
     >
@@ -113,6 +117,7 @@ exports[`<AvatarEntity /> should render a basic avatar entity 1`] = `
   <styled.div>
     <styled.span
       isCompact={false}
+      primaryColor="#262D33"
       primaryWeight={400}
       textType="body"
     >
@@ -144,6 +149,7 @@ exports[`<AvatarEntity /> should render a basic compact avatar entity 1`] = `
   <styled.div>
     <styled.span
       isCompact={true}
+      primaryColor="#262D33"
       primaryWeight={400}
       textType="body"
     >
@@ -177,6 +183,7 @@ exports[`<AvatarEntity /> should render a compact avatar entity with lots of dat
   <styled.div>
     <styled.span
       isCompact={true}
+      primaryColor="#262D33"
       primaryWeight={400}
       textType="body"
     >
@@ -184,8 +191,9 @@ exports[`<AvatarEntity /> should render a compact avatar entity with lots of dat
     </styled.span>
     <styled.span
       isCompact={true}
+      secondaryColor="#424F5C"
       secondaryWeight={400}
-      textType="xsmall"
+      textType="small"
     >
       (Guy Killer)
     </styled.span>
