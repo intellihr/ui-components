@@ -76,7 +76,7 @@ exports[`<Legend /> should render a legend 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-htpNat",
+            "componentId": "sc-bxivhb",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -104,7 +104,7 @@ exports[`<Legend /> should render a legend 1`] = `
           "displayName": "styled.ul",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-htpNat",
+          "styledComponentId": "sc-bxivhb",
           "target": "ul",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -145,7 +145,7 @@ exports[`<Legend /> should render a legend 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-bwzfXH",
+                        "componentId": "sc-htpNat",
                         "isStatic": false,
                         "lastClassName": "c3",
                         "rules": Array [
@@ -157,6 +157,9 @@ exports[`<Legend /> should render a legend 1`] = `
                           [Function],
                           "
 
+  ",
+                          [Function],
+                          "
   ",
                           [Function],
                           "
@@ -178,7 +181,7 @@ exports[`<Legend /> should render a legend 1`] = `
                       "displayName": "styled.i",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-bwzfXH",
+                      "styledComponentId": "sc-htpNat",
                       "target": "i",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -205,7 +208,7 @@ exports[`<Legend /> should render a legend 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-bxivhb",
+                    "componentId": "sc-ifAKCX",
                     "isStatic": true,
                     "lastClassName": "c2",
                     "rules": Array [
@@ -219,7 +222,7 @@ exports[`<Legend /> should render a legend 1`] = `
                   "displayName": "styled.span",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-bxivhb",
+                  "styledComponentId": "sc-ifAKCX",
                   "target": "span",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -265,7 +268,7 @@ exports[`<Legend /> should render a legend 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-bwzfXH",
+                        "componentId": "sc-htpNat",
                         "isStatic": false,
                         "lastClassName": "c3",
                         "rules": Array [
@@ -277,6 +280,9 @@ exports[`<Legend /> should render a legend 1`] = `
                           [Function],
                           "
 
+  ",
+                          [Function],
+                          "
   ",
                           [Function],
                           "
@@ -298,7 +304,7 @@ exports[`<Legend /> should render a legend 1`] = `
                       "displayName": "styled.i",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-bwzfXH",
+                      "styledComponentId": "sc-htpNat",
                       "target": "i",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -325,7 +331,7 @@ exports[`<Legend /> should render a legend 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-bxivhb",
+                    "componentId": "sc-ifAKCX",
                     "isStatic": true,
                     "lastClassName": "c2",
                     "rules": Array [
@@ -339,7 +345,7 @@ exports[`<Legend /> should render a legend 1`] = `
                   "displayName": "styled.span",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-bxivhb",
+                  "styledComponentId": "sc-ifAKCX",
                   "target": "span",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],

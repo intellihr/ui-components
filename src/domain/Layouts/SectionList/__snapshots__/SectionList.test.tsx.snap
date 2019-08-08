@@ -66,7 +66,7 @@ exports[`<SectionList /> should render a section list with a titled section with
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-VigVT",
+            "componentId": "sc-jTzLTM",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -87,7 +87,7 @@ exports[`<SectionList /> should render a section list with a titled section with
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-VigVT",
+          "styledComponentId": "sc-jTzLTM",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -107,7 +107,7 @@ exports[`<SectionList /> should render a section list with a titled section with
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-kgoBCf",
+                    "componentId": "sc-kGXeez",
                     "isStatic": true,
                     "lastClassName": "c1",
                     "rules": Array [
@@ -140,10 +140,10 @@ exports[`<SectionList /> should render a section list with a titled section with
                   },
                   "displayName": "Styled(styled.div)",
                   "foldedComponentIds": Array [
-                    "sc-jTzLTM",
+                    "sc-fjdhpX",
                   ],
                   "render": [Function],
-                  "styledComponentId": "sc-kgoBCf",
+                  "styledComponentId": "sc-kGXeez",
                   "target": "div",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -182,7 +182,7 @@ exports[`<SectionList /> should render a section list with a titled section with
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-kGXeez",
+                                  "componentId": "sc-kpOJdX",
                                   "isStatic": true,
                                   "lastClassName": "c2",
                                   "rules": Array [
@@ -204,7 +204,7 @@ exports[`<SectionList /> should render a section list with a titled section with
                                 "displayName": "styled.div",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-kGXeez",
+                                "styledComponentId": "sc-kpOJdX",
                                 "target": "div",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -246,7 +246,7 @@ exports[`<SectionList /> should render a section list with a titled section with
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-kpOJdX",
+                                                "componentId": "sc-dxgOiQ",
                                                 "isStatic": true,
                                                 "lastClassName": "c3",
                                                 "rules": Array [
@@ -272,7 +272,7 @@ exports[`<SectionList /> should render a section list with a titled section with
                                               "displayName": "Styled(SectionDescription)",
                                               "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-kpOJdX",
+                                              "styledComponentId": "sc-dxgOiQ",
                                               "target": [Function],
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -330,7 +330,7 @@ exports[`<SectionList /> should render a section list with a titled section with
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-dxgOiQ",
+                                  "componentId": "sc-ckVGcZ",
                                   "isStatic": true,
                                   "lastClassName": "c4",
                                   "rules": Array [
@@ -365,7 +365,7 @@ exports[`<SectionList /> should render a section list with a titled section with
                                 "displayName": "StyledTitledSectionBody",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-dxgOiQ",
+                                "styledComponentId": "sc-ckVGcZ",
                                 "target": "div",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -478,7 +478,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-VigVT",
+            "componentId": "sc-jTzLTM",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -499,7 +499,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-VigVT",
+          "styledComponentId": "sc-jTzLTM",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -518,7 +518,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-jzJRlG",
+                  "componentId": "sc-cSHVUG",
                   "isStatic": true,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -561,10 +561,10 @@ exports[`<SectionList /> should render a section list with an annotated section 
                 },
                 "displayName": "Styled(styled.div)",
                 "foldedComponentIds": Array [
-                  "sc-jTzLTM",
+                  "sc-fjdhpX",
                 ],
                 "render": [Function],
-                "styledComponentId": "sc-jzJRlG",
+                "styledComponentId": "sc-cSHVUG",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -590,7 +590,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-chPdSV",
+                    "componentId": "sc-kgoBCf",
                     "isStatic": true,
                     "lastClassName": "c2",
                     "rules": Array [
@@ -623,10 +623,10 @@ exports[`<SectionList /> should render a section list with an annotated section 
                   },
                   "displayName": "Styled(styled.div)",
                   "foldedComponentIds": Array [
-                    "sc-jTzLTM",
+                    "sc-fjdhpX",
                   ],
                   "render": [Function],
-                  "styledComponentId": "sc-chPdSV",
+                  "styledComponentId": "sc-kgoBCf",
                   "target": "div",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -669,7 +669,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-kAzzGY",
+                                  "componentId": "sc-chPdSV",
                                   "isStatic": true,
                                   "lastClassName": "c3",
                                   "rules": Array [
@@ -697,7 +697,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
                                 "displayName": "Styled(SectionDescription)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-kAzzGY",
+                                "styledComponentId": "sc-chPdSV",
                                 "target": [Function],
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -738,7 +738,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-cSHVUG",
+                                  "componentId": "sc-kAzzGY",
                                   "isStatic": true,
                                   "lastClassName": "c4",
                                   "rules": Array [
@@ -775,7 +775,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
                                 "displayName": "StyledAnnotatedSectionBody",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-cSHVUG",
+                                "styledComponentId": "sc-kAzzGY",
                                 "target": "div",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -994,7 +994,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-VigVT",
+            "componentId": "sc-jTzLTM",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -1015,7 +1015,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-VigVT",
+          "styledComponentId": "sc-jTzLTM",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -1034,7 +1034,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-jzJRlG",
+                  "componentId": "sc-cSHVUG",
                   "isStatic": true,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -1077,10 +1077,10 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                 },
                 "displayName": "Styled(styled.div)",
                 "foldedComponentIds": Array [
-                  "sc-jTzLTM",
+                  "sc-fjdhpX",
                 ],
                 "render": [Function],
-                "styledComponentId": "sc-jzJRlG",
+                "styledComponentId": "sc-cSHVUG",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -1103,7 +1103,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-fjdhpX",
+                  "componentId": "sc-jzJRlG",
                   "isStatic": true,
                   "lastClassName": "c2",
                   "rules": Array [
@@ -1121,7 +1121,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-fjdhpX",
+                "styledComponentId": "sc-jzJRlG",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -1155,7 +1155,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-chPdSV",
+                    "componentId": "sc-kgoBCf",
                     "isStatic": true,
                     "lastClassName": "c3",
                     "rules": Array [
@@ -1188,10 +1188,10 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                   },
                   "displayName": "Styled(styled.div)",
                   "foldedComponentIds": Array [
-                    "sc-jTzLTM",
+                    "sc-fjdhpX",
                   ],
                   "render": [Function],
-                  "styledComponentId": "sc-chPdSV",
+                  "styledComponentId": "sc-kgoBCf",
                   "target": "div",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -1243,7 +1243,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-kAzzGY",
+                                  "componentId": "sc-chPdSV",
                                   "isStatic": true,
                                   "lastClassName": "c4",
                                   "rules": Array [
@@ -1271,7 +1271,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                 "displayName": "Styled(SectionDescription)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-kAzzGY",
+                                "styledComponentId": "sc-chPdSV",
                                 "target": [Function],
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -1325,7 +1325,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-gqjmRU",
+                                            "componentId": "sc-VigVT",
                                             "isStatic": false,
                                             "lastClassName": "c6",
                                             "rules": Array [
@@ -1368,7 +1368,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                           "displayName": "styled.span",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-gqjmRU",
+                                          "styledComponentId": "sc-VigVT",
                                           "target": "span",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -1411,7 +1411,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-gqjmRU",
+                                            "componentId": "sc-VigVT",
                                             "isStatic": false,
                                             "lastClassName": "c6",
                                             "rules": Array [
@@ -1454,7 +1454,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                           "displayName": "styled.span",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-gqjmRU",
+                                          "styledComponentId": "sc-VigVT",
                                           "target": "span",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -1493,7 +1493,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-EHOje",
+                                            "componentId": "sc-bZQynM",
                                             "isStatic": false,
                                             "lastClassName": "c7",
                                             "rules": Array [
@@ -1541,7 +1541,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                           "displayName": "Styled(Component)",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-EHOje",
+                                          "styledComponentId": "sc-bZQynM",
                                           "target": [Function],
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -1603,7 +1603,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-cSHVUG",
+                                  "componentId": "sc-kAzzGY",
                                   "isStatic": true,
                                   "lastClassName": "c8",
                                   "rules": Array [
@@ -1640,7 +1640,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                 "displayName": "StyledAnnotatedSectionBody",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-cSHVUG",
+                                "styledComponentId": "sc-kAzzGY",
                                 "target": "div",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -1695,7 +1695,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-kgoBCf",
+                    "componentId": "sc-kGXeez",
                     "isStatic": true,
                     "lastClassName": "c9",
                     "rules": Array [
@@ -1728,10 +1728,10 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                   },
                   "displayName": "Styled(styled.div)",
                   "foldedComponentIds": Array [
-                    "sc-jTzLTM",
+                    "sc-fjdhpX",
                   ],
                   "render": [Function],
-                  "styledComponentId": "sc-kgoBCf",
+                  "styledComponentId": "sc-kGXeez",
                   "target": "div",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -1770,7 +1770,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-kGXeez",
+                                  "componentId": "sc-kpOJdX",
                                   "isStatic": true,
                                   "lastClassName": "c10",
                                   "rules": Array [
@@ -1792,7 +1792,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                 "displayName": "styled.div",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-kGXeez",
+                                "styledComponentId": "sc-kpOJdX",
                                 "target": "div",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -1838,7 +1838,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-kpOJdX",
+                                                "componentId": "sc-dxgOiQ",
                                                 "isStatic": true,
                                                 "lastClassName": "c11",
                                                 "rules": Array [
@@ -1864,7 +1864,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                               "displayName": "Styled(SectionDescription)",
                                               "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-kpOJdX",
+                                              "styledComponentId": "sc-dxgOiQ",
                                               "target": [Function],
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -1905,7 +1905,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-gqjmRU",
+                                                          "componentId": "sc-VigVT",
                                                           "isStatic": false,
                                                           "lastClassName": "c6",
                                                           "rules": Array [
@@ -1948,7 +1948,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                                         "displayName": "styled.span",
                                                         "foldedComponentIds": Array [],
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-gqjmRU",
+                                                        "styledComponentId": "sc-VigVT",
                                                         "target": "span",
                                                         "toString": [Function],
                                                         "warnTooManyClasses": [Function],
@@ -1991,7 +1991,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-gqjmRU",
+                                                          "componentId": "sc-VigVT",
                                                           "isStatic": false,
                                                           "lastClassName": "c6",
                                                           "rules": Array [
@@ -2034,7 +2034,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                                         "displayName": "styled.span",
                                                         "foldedComponentIds": Array [],
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-gqjmRU",
+                                                        "styledComponentId": "sc-VigVT",
                                                         "target": "span",
                                                         "toString": [Function],
                                                         "warnTooManyClasses": [Function],
@@ -2093,9 +2093,9 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-bxivhb",
+                                                  "componentId": "sc-ifAKCX",
                                                   "isStatic": false,
-                                                  "lastClassName": "kLyrAW",
+                                                  "lastClassName": "fRjHBe",
                                                   "rules": Array [
                                                     "
    ",
@@ -2107,7 +2107,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                                 "displayName": "styled.button",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-bxivhb",
+                                                "styledComponentId": "sc-ifAKCX",
                                                 "target": "button",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -2147,9 +2147,9 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-bxivhb",
+                                                  "componentId": "sc-ifAKCX",
                                                   "isStatic": false,
-                                                  "lastClassName": "kLyrAW",
+                                                  "lastClassName": "fRjHBe",
                                                   "rules": Array [
                                                     "
    ",
@@ -2161,7 +2161,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                                 "displayName": "styled.button",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-bxivhb",
+                                                "styledComponentId": "sc-ifAKCX",
                                                 "target": "button",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -2207,7 +2207,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-dxgOiQ",
+                                  "componentId": "sc-ckVGcZ",
                                   "isStatic": true,
                                   "lastClassName": "c12",
                                   "rules": Array [
@@ -2242,7 +2242,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                 "displayName": "StyledTitledSectionBody",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-dxgOiQ",
+                                "styledComponentId": "sc-ckVGcZ",
                                 "target": "div",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -2425,7 +2425,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-VigVT",
+            "componentId": "sc-jTzLTM",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -2446,7 +2446,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-VigVT",
+          "styledComponentId": "sc-jTzLTM",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -2465,7 +2465,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-jzJRlG",
+                  "componentId": "sc-cSHVUG",
                   "isStatic": true,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -2508,10 +2508,10 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                 },
                 "displayName": "Styled(styled.div)",
                 "foldedComponentIds": Array [
-                  "sc-jTzLTM",
+                  "sc-fjdhpX",
                 ],
                 "render": [Function],
-                "styledComponentId": "sc-jzJRlG",
+                "styledComponentId": "sc-cSHVUG",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -2543,7 +2543,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-chPdSV",
+                    "componentId": "sc-kgoBCf",
                     "isStatic": true,
                     "lastClassName": "c2",
                     "rules": Array [
@@ -2576,10 +2576,10 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                   },
                   "displayName": "Styled(styled.div)",
                   "foldedComponentIds": Array [
-                    "sc-jTzLTM",
+                    "sc-fjdhpX",
                   ],
                   "render": [Function],
-                  "styledComponentId": "sc-chPdSV",
+                  "styledComponentId": "sc-kgoBCf",
                   "target": "div",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -2631,7 +2631,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-kAzzGY",
+                                  "componentId": "sc-chPdSV",
                                   "isStatic": true,
                                   "lastClassName": "c3",
                                   "rules": Array [
@@ -2659,7 +2659,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                 "displayName": "Styled(SectionDescription)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-kAzzGY",
+                                "styledComponentId": "sc-chPdSV",
                                 "target": [Function],
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -2713,7 +2713,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-gqjmRU",
+                                            "componentId": "sc-VigVT",
                                             "isStatic": false,
                                             "lastClassName": "c5",
                                             "rules": Array [
@@ -2756,7 +2756,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                           "displayName": "styled.span",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-gqjmRU",
+                                          "styledComponentId": "sc-VigVT",
                                           "target": "span",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -2799,7 +2799,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-gqjmRU",
+                                            "componentId": "sc-VigVT",
                                             "isStatic": false,
                                             "lastClassName": "c5",
                                             "rules": Array [
@@ -2842,7 +2842,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                           "displayName": "styled.span",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-gqjmRU",
+                                          "styledComponentId": "sc-VigVT",
                                           "target": "span",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -2881,7 +2881,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-EHOje",
+                                            "componentId": "sc-bZQynM",
                                             "isStatic": false,
                                             "lastClassName": "c6",
                                             "rules": Array [
@@ -2929,7 +2929,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                           "displayName": "Styled(Component)",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-EHOje",
+                                          "styledComponentId": "sc-bZQynM",
                                           "target": [Function],
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -3009,7 +3009,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-kgoBCf",
+                    "componentId": "sc-kGXeez",
                     "isStatic": true,
                     "lastClassName": "c7",
                     "rules": Array [
@@ -3042,10 +3042,10 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                   },
                   "displayName": "Styled(styled.div)",
                   "foldedComponentIds": Array [
-                    "sc-jTzLTM",
+                    "sc-fjdhpX",
                   ],
                   "render": [Function],
-                  "styledComponentId": "sc-kgoBCf",
+                  "styledComponentId": "sc-kGXeez",
                   "target": "div",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -3084,7 +3084,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-kGXeez",
+                                  "componentId": "sc-kpOJdX",
                                   "isStatic": true,
                                   "lastClassName": "c8",
                                   "rules": Array [
@@ -3106,7 +3106,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                 "displayName": "styled.div",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-kGXeez",
+                                "styledComponentId": "sc-kpOJdX",
                                 "target": "div",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -3152,7 +3152,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-kpOJdX",
+                                                "componentId": "sc-dxgOiQ",
                                                 "isStatic": true,
                                                 "lastClassName": "c9",
                                                 "rules": Array [
@@ -3178,7 +3178,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                               "displayName": "Styled(SectionDescription)",
                                               "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-kpOJdX",
+                                              "styledComponentId": "sc-dxgOiQ",
                                               "target": [Function],
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -3219,7 +3219,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-gqjmRU",
+                                                          "componentId": "sc-VigVT",
                                                           "isStatic": false,
                                                           "lastClassName": "c5",
                                                           "rules": Array [
@@ -3262,7 +3262,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                                         "displayName": "styled.span",
                                                         "foldedComponentIds": Array [],
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-gqjmRU",
+                                                        "styledComponentId": "sc-VigVT",
                                                         "target": "span",
                                                         "toString": [Function],
                                                         "warnTooManyClasses": [Function],
@@ -3305,7 +3305,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-gqjmRU",
+                                                          "componentId": "sc-VigVT",
                                                           "isStatic": false,
                                                           "lastClassName": "c5",
                                                           "rules": Array [
@@ -3348,7 +3348,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                                         "displayName": "styled.span",
                                                         "foldedComponentIds": Array [],
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-gqjmRU",
+                                                        "styledComponentId": "sc-VigVT",
                                                         "target": "span",
                                                         "toString": [Function],
                                                         "warnTooManyClasses": [Function],
@@ -3407,9 +3407,9 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-bxivhb",
+                                                  "componentId": "sc-ifAKCX",
                                                   "isStatic": false,
-                                                  "lastClassName": "kLyrAW",
+                                                  "lastClassName": "fRjHBe",
                                                   "rules": Array [
                                                     "
    ",
@@ -3421,7 +3421,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                                 "displayName": "styled.button",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-bxivhb",
+                                                "styledComponentId": "sc-ifAKCX",
                                                 "target": "button",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -3461,9 +3461,9 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-bxivhb",
+                                                  "componentId": "sc-ifAKCX",
                                                   "isStatic": false,
-                                                  "lastClassName": "kLyrAW",
+                                                  "lastClassName": "fRjHBe",
                                                   "rules": Array [
                                                     "
    ",
@@ -3475,7 +3475,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                                 "displayName": "styled.button",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-bxivhb",
+                                                "styledComponentId": "sc-ifAKCX",
                                                 "target": "button",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],

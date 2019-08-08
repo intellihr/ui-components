@@ -41,7 +41,7 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-htoDjs",
+              "componentId": "sc-dnqmqq",
               "isStatic": true,
               "lastClassName": "c0",
               "rules": Array [
@@ -56,7 +56,7 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
             "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-htoDjs",
+            "styledComponentId": "sc-dnqmqq",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -94,7 +94,7 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-gzVnrw",
+                      "componentId": "sc-htoDjs",
                       "isStatic": false,
                       "lastClassName": "c1",
                       "rules": Array [
@@ -137,7 +137,7 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
                     "displayName": "styled.span",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-gzVnrw",
+                    "styledComponentId": "sc-htoDjs",
                     "target": "span",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -212,7 +212,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-htoDjs",
+              "componentId": "sc-dnqmqq",
               "isStatic": true,
               "lastClassName": "c0",
               "rules": Array [
@@ -227,7 +227,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
             "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-htoDjs",
+            "styledComponentId": "sc-dnqmqq",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -265,7 +265,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-gzVnrw",
+                      "componentId": "sc-htoDjs",
                       "isStatic": false,
                       "lastClassName": "c1",
                       "rules": Array [
@@ -308,7 +308,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
                     "displayName": "styled.span",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-gzVnrw",
+                    "styledComponentId": "sc-htoDjs",
                     "target": "span",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -435,7 +435,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-htoDjs",
+              "componentId": "sc-dnqmqq",
               "isStatic": true,
               "lastClassName": "c0",
               "rules": Array [
@@ -450,7 +450,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
             "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-htoDjs",
+            "styledComponentId": "sc-dnqmqq",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -488,7 +488,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-gzVnrw",
+                      "componentId": "sc-htoDjs",
                       "isStatic": false,
                       "lastClassName": "c2",
                       "rules": Array [
@@ -531,7 +531,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                     "displayName": "styled.span",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-gzVnrw",
+                    "styledComponentId": "sc-htoDjs",
                     "target": "span",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -578,7 +578,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-gzVnrw",
+                "componentId": "sc-htoDjs",
                 "isStatic": false,
                 "lastClassName": "c2",
                 "rules": Array [
@@ -621,7 +621,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
               "displayName": "styled.span",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-gzVnrw",
+              "styledComponentId": "sc-htoDjs",
               "target": "span",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -693,7 +693,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-htoDjs",
+              "componentId": "sc-dnqmqq",
               "isStatic": true,
               "lastClassName": "c0",
               "rules": Array [
@@ -708,7 +708,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
             "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-htoDjs",
+            "styledComponentId": "sc-dnqmqq",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -746,7 +746,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-gzVnrw",
+                      "componentId": "sc-htoDjs",
                       "isStatic": false,
                       "lastClassName": "c2",
                       "rules": Array [
@@ -789,7 +789,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                     "displayName": "styled.span",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-gzVnrw",
+                    "styledComponentId": "sc-htoDjs",
                     "target": "span",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -836,7 +836,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-gzVnrw",
+                "componentId": "sc-htoDjs",
                 "isStatic": false,
                 "lastClassName": "c2",
                 "rules": Array [
@@ -879,7 +879,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
               "displayName": "styled.span",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-gzVnrw",
+              "styledComponentId": "sc-htoDjs",
               "target": "span",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -940,7 +940,7 @@ exports[`<Record /> should render a Record component, with the provided componen
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-htoDjs",
+              "componentId": "sc-dnqmqq",
               "isStatic": true,
               "lastClassName": "c0",
               "rules": Array [
@@ -955,7 +955,7 @@ exports[`<Record /> should render a Record component, with the provided componen
             "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-htoDjs",
+            "styledComponentId": "sc-dnqmqq",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -993,7 +993,7 @@ exports[`<Record /> should render a Record component, with the provided componen
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-gzVnrw",
+                      "componentId": "sc-htoDjs",
                       "isStatic": false,
                       "lastClassName": "c1",
                       "rules": Array [
@@ -1036,7 +1036,7 @@ exports[`<Record /> should render a Record component, with the provided componen
                     "displayName": "styled.span",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-gzVnrw",
+                    "styledComponentId": "sc-htoDjs",
                     "target": "span",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -1117,7 +1117,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-htoDjs",
+              "componentId": "sc-dnqmqq",
               "isStatic": true,
               "lastClassName": "c0",
               "rules": Array [
@@ -1132,7 +1132,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
             "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-htoDjs",
+            "styledComponentId": "sc-dnqmqq",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -1170,7 +1170,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-gzVnrw",
+                      "componentId": "sc-htoDjs",
                       "isStatic": false,
                       "lastClassName": "c1",
                       "rules": Array [
@@ -1213,7 +1213,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                     "displayName": "styled.span",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-gzVnrw",
+                    "styledComponentId": "sc-htoDjs",
                     "target": "span",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -1270,7 +1270,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-bwzfXH",
+                            "componentId": "sc-htpNat",
                             "isStatic": false,
                             "lastClassName": "c2",
                             "rules": Array [
@@ -1282,6 +1282,9 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                               [Function],
                               "
 
+  ",
+                              [Function],
+                              "
   ",
                               [Function],
                               "
@@ -1303,7 +1306,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                           "displayName": "styled.i",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-bwzfXH",
+                          "styledComponentId": "sc-htpNat",
                           "target": "i",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],

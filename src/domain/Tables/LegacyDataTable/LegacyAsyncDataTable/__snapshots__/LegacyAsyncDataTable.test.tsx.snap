@@ -2118,7 +2118,7 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bxivhb",
+                                  "componentId": "sc-ifAKCX",
                                   "isStatic": false,
                                   "lastClassName": "c0",
                                   "rules": Array [
@@ -2130,6 +2130,9 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                                     [Function],
                                     "
 
+  ",
+                                    [Function],
+                                    "
   ",
                                     [Function],
                                     "
@@ -2151,7 +2154,7 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                                 "displayName": "styled.i",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-bxivhb",
+                                "styledComponentId": "sc-ifAKCX",
                                 "target": "i",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -2213,7 +2216,7 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bxivhb",
+                                  "componentId": "sc-ifAKCX",
                                   "isStatic": false,
                                   "lastClassName": "c0",
                                   "rules": Array [
@@ -2225,6 +2228,9 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                                     [Function],
                                     "
 
+  ",
+                                    [Function],
+                                    "
   ",
                                     [Function],
                                     "
@@ -2246,7 +2252,7 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                                 "displayName": "styled.i",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-bxivhb",
+                                "styledComponentId": "sc-ifAKCX",
                                 "target": "i",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -3426,7 +3432,7 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bxivhb",
+                                  "componentId": "sc-ifAKCX",
                                   "isStatic": false,
                                   "lastClassName": "c0",
                                   "rules": Array [
@@ -3438,6 +3444,9 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                                     [Function],
                                     "
 
+  ",
+                                    [Function],
+                                    "
   ",
                                     [Function],
                                     "
@@ -3459,7 +3468,7 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                                 "displayName": "styled.i",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-bxivhb",
+                                "styledComponentId": "sc-ifAKCX",
                                 "target": "i",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -3521,7 +3530,7 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bxivhb",
+                                  "componentId": "sc-ifAKCX",
                                   "isStatic": false,
                                   "lastClassName": "c0",
                                   "rules": Array [
@@ -3533,6 +3542,9 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                                     [Function],
                                     "
 
+  ",
+                                    [Function],
+                                    "
   ",
                                     [Function],
                                     "
@@ -3554,7 +3566,7 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                                 "displayName": "styled.i",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-bxivhb",
+                                "styledComponentId": "sc-ifAKCX",
                                 "target": "i",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -4795,7 +4807,7 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bxivhb",
+                                  "componentId": "sc-ifAKCX",
                                   "isStatic": false,
                                   "lastClassName": "c0",
                                   "rules": Array [
@@ -4807,6 +4819,9 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                                     [Function],
                                     "
 
+  ",
+                                    [Function],
+                                    "
   ",
                                     [Function],
                                     "
@@ -4828,7 +4843,7 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                                 "displayName": "styled.i",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-bxivhb",
+                                "styledComponentId": "sc-ifAKCX",
                                 "target": "i",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -4890,7 +4905,7 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bxivhb",
+                                  "componentId": "sc-ifAKCX",
                                   "isStatic": false,
                                   "lastClassName": "c0",
                                   "rules": Array [
@@ -4902,6 +4917,9 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                                     [Function],
                                     "
 
+  ",
+                                    [Function],
+                                    "
   ",
                                     [Function],
                                     "
@@ -4923,7 +4941,7 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                                 "displayName": "styled.i",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-bxivhb",
+                                "styledComponentId": "sc-ifAKCX",
                                 "target": "i",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -6425,7 +6443,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bxivhb",
+                                  "componentId": "sc-ifAKCX",
                                   "isStatic": false,
                                   "lastClassName": "c0",
                                   "rules": Array [
@@ -6437,6 +6455,9 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                                     [Function],
                                     "
 
+  ",
+                                    [Function],
+                                    "
   ",
                                     [Function],
                                     "
@@ -6458,7 +6479,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                                 "displayName": "styled.i",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-bxivhb",
+                                "styledComponentId": "sc-ifAKCX",
                                 "target": "i",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -6520,7 +6541,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bxivhb",
+                                  "componentId": "sc-ifAKCX",
                                   "isStatic": false,
                                   "lastClassName": "c0",
                                   "rules": Array [
@@ -6532,6 +6553,9 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                                     [Function],
                                     "
 
+  ",
+                                    [Function],
+                                    "
   ",
                                     [Function],
                                     "
@@ -6553,7 +6577,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                                 "displayName": "styled.i",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-bxivhb",
+                                "styledComponentId": "sc-ifAKCX",
                                 "target": "i",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
