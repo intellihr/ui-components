@@ -13,6 +13,9 @@ import { ButtonGroup } from '@Domain/Buttons';
       <LinkButton type='secondary' href='#'>
         secondary
       </LinkButton>
+      <LinkButton type='success' href='#'>
+        success
+      </LinkButton>
       <LinkButton type='warning' href='#'>
         warning
       </LinkButton>
@@ -41,6 +44,9 @@ import { ButtonGroup } from '@Domain/Buttons';
       </LinkButton>
       <LinkButton disabled type='secondary' href='#'>
         secondary
+      </LinkButton>
+      <LinkButton disabled type='success' href='#'>
+        success
       </LinkButton>
       <LinkButton disabled type='warning' href='#'>
         warning
@@ -80,6 +86,9 @@ import { ButtonGroup } from '@Domain/Buttons';
       <LinkButton type='secondary-borderless' href='#'>
         secondary-borderless
       </LinkButton>
+      <LinkButton type='success-borderless' href='#'>
+        success-borderless
+      </LinkButton>
       <LinkButton type='warning-borderless' href='#'>
         warning-borderless
       </LinkButton>
@@ -108,6 +117,9 @@ import { ButtonGroup } from '@Domain/Buttons';
       </LinkButton>
       <LinkButton disabled type='secondary-borderless' href='#'>
         secondary-borderless
+      </LinkButton>
+      <LinkButton disabled type='success-borderless' href='#'>
+        success-borderless
       </LinkButton>
       <LinkButton disabled type='warning-borderless' href='#'>
         warning-borderless
@@ -146,6 +158,9 @@ import { ButtonGroup } from '@Domain/Buttons';
       <LinkButton type='secondary-hollow' href='#'>
         secondary-hollow
       </LinkButton>
+      <LinkButton type='success-hollow' href='#'>
+        success-hollow
+      </LinkButton>
       <LinkButton type='warning-hollow' href='#'>
         warning-hollow
       </LinkButton>
@@ -174,6 +189,9 @@ import { ButtonGroup } from '@Domain/Buttons';
       </LinkButton>
       <LinkButton disabled type='secondary-hollow' href='#'>
         secondary-hollow
+      </LinkButton>
+      <LinkButton disabled type='success-hollow' href='#'>
+        success-hollow
       </LinkButton>
       <LinkButton disabled type='warning-hollow' href='#'>
         warning-hollow
