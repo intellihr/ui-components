@@ -33,7 +33,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, using a URL for the im
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-htpNat",
+                "componentId": "sc-bxivhb",
                 "isStatic": false,
                 "lastClassName": "c0",
                 "rules": Array [
@@ -50,7 +50,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, using a URL for the im
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-htpNat",
+              "styledComponentId": "sc-bxivhb",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -73,7 +73,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, using a URL for the im
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bxivhb",
+                      "componentId": "sc-ifAKCX",
                       "isStatic": true,
                       "lastClassName": "c1",
                       "rules": Array [
@@ -85,7 +85,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, using a URL for the im
                     "displayName": "styled.img",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-bxivhb",
+                    "styledComponentId": "sc-ifAKCX",
                     "target": "img",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -143,7 +143,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, using imageData 1`] = 
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-htpNat",
+                "componentId": "sc-bxivhb",
                 "isStatic": false,
                 "lastClassName": "c0",
                 "rules": Array [
@@ -160,7 +160,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, using imageData 1`] = 
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-htpNat",
+              "styledComponentId": "sc-bxivhb",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -183,7 +183,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, using imageData 1`] = 
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bxivhb",
+                      "componentId": "sc-ifAKCX",
                       "isStatic": true,
                       "lastClassName": "c1",
                       "rules": Array [
@@ -195,7 +195,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, using imageData 1`] = 
                     "displayName": "styled.img",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-bxivhb",
+                    "styledComponentId": "sc-ifAKCX",
                     "target": "img",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -269,7 +269,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bwzfXH",
+                      "componentId": "sc-htpNat",
                       "isStatic": false,
                       "lastClassName": "c0",
                       "rules": Array [
@@ -281,6 +281,9 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
                         [Function],
                         "
 
+  ",
+                        [Function],
+                        "
   ",
                         [Function],
                         "
@@ -302,7 +305,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
                     "displayName": "styled.i",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-bwzfXH",
+                    "styledComponentId": "sc-htpNat",
                     "target": "i",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -484,7 +487,7 @@ exports[`<Avatar /> should toggle the showInitials state if an image prop is pas
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-htpNat",
+                "componentId": "sc-bxivhb",
                 "isStatic": false,
                 "lastClassName": "c0",
                 "rules": Array [
@@ -501,7 +504,7 @@ exports[`<Avatar /> should toggle the showInitials state if an image prop is pas
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-htpNat",
+              "styledComponentId": "sc-bxivhb",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -524,7 +527,7 @@ exports[`<Avatar /> should toggle the showInitials state if an image prop is pas
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bxivhb",
+                      "componentId": "sc-ifAKCX",
                       "isStatic": true,
                       "lastClassName": "c1",
                       "rules": Array [
@@ -536,7 +539,7 @@ exports[`<Avatar /> should toggle the showInitials state if an image prop is pas
                     "displayName": "styled.img",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-bxivhb",
+                    "styledComponentId": "sc-ifAKCX",
                     "target": "img",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],

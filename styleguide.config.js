@@ -201,7 +201,8 @@ module.exports = {
             'src/domain/Layouts/LayoutSpacer/LayoutSpacer.tsx',
             'src/domain/Layouts/GridLayout/GridLayout.tsx',
             'src/domain/Layouts/PageLayout/PageLayout.tsx',
-            'src/domain/Layouts/SectionList/SectionList.tsx'
+            'src/domain/Layouts/SectionList/SectionList.tsx',
+            'src/domain/Layouts/ShowForSizes/ShowForSizes.tsx'
           ]
         },
         {

@@ -51,7 +51,7 @@ exports[`<Badge /> should render a large badge 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-htpNat",
+            "componentId": "sc-bxivhb",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -95,7 +95,7 @@ exports[`<Badge /> should render a large badge 1`] = `
           "displayName": "styled.span",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-htpNat",
+          "styledComponentId": "sc-bxivhb",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -168,7 +168,7 @@ exports[`<Badge /> should render a small badge 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-htpNat",
+            "componentId": "sc-bxivhb",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -212,7 +212,7 @@ exports[`<Badge /> should render a small badge 1`] = `
           "displayName": "styled.span",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-htpNat",
+          "styledComponentId": "sc-bxivhb",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -296,7 +296,7 @@ exports[`<Badge /> should render a spinning badge 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-htpNat",
+            "componentId": "sc-bxivhb",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -340,7 +340,7 @@ exports[`<Badge /> should render a spinning badge 1`] = `
           "displayName": "styled.span",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-htpNat",
+          "styledComponentId": "sc-bxivhb",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -380,7 +380,7 @@ exports[`<Badge /> should render a spinning badge 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bwzfXH",
+                      "componentId": "sc-htpNat",
                       "isStatic": false,
                       "lastClassName": "c1",
                       "rules": Array [
@@ -392,6 +392,9 @@ exports[`<Badge /> should render a spinning badge 1`] = `
                         [Function],
                         "
 
+  ",
+                        [Function],
+                        "
   ",
                         [Function],
                         "
@@ -413,7 +416,7 @@ exports[`<Badge /> should render a spinning badge 1`] = `
                     "displayName": "styled.i",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-bwzfXH",
+                    "styledComponentId": "sc-htpNat",
                     "target": "i",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ShowForSizes /> Standard ShowForSizes should match the snapshot 1`] = `
+<styled.div
+  lower={640}
+  upper={1034}
+>
+  <div>
+    Display size is tablet
+  </div>
+</styled.div>
+`;

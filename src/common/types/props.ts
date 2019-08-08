@@ -30,6 +30,11 @@ namespace Props {
     right?: Margin
   }
 
+  export interface IShowForSizes {
+    upper?: Variables.Breakpoint
+    lower?: Variables.Breakpoint
+  }
+
   export enum Size {
     XXSmall = 'xxsmall',
     XSmall = 'xsmall',

@@ -26,7 +26,7 @@ exports[`<Header /> should render modal header 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-htoDjs",
+            "componentId": "sc-dnqmqq",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -42,7 +42,7 @@ exports[`<Header /> should render modal header 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-htoDjs",
+          "styledComponentId": "sc-dnqmqq",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -73,7 +73,7 @@ exports[`<Header /> should render modal header 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-gzVnrw",
+                    "componentId": "sc-htoDjs",
                     "isStatic": false,
                     "lastClassName": "c1",
                     "rules": Array [
@@ -116,7 +116,7 @@ exports[`<Header /> should render modal header 1`] = `
                   "displayName": "styled.span",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-gzVnrw",
+                  "styledComponentId": "sc-htoDjs",
                   "target": "span",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],

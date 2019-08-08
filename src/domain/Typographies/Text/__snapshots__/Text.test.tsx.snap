@@ -32,7 +32,7 @@ exports[`<Text /> should render a non-inline text element 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gzVnrw",
+            "componentId": "sc-htoDjs",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -75,7 +75,7 @@ exports[`<Text /> should render a non-inline text element 1`] = `
           "displayName": "styled.span",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gzVnrw",
+          "styledComponentId": "sc-htoDjs",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -128,7 +128,7 @@ exports[`<Text /> should render a text element as a h1 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gzVnrw",
+            "componentId": "sc-htoDjs",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -171,7 +171,7 @@ exports[`<Text /> should render a text element as a h1 1`] = `
           "displayName": "styled.span",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gzVnrw",
+          "styledComponentId": "sc-htoDjs",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -234,7 +234,7 @@ exports[`<Text /> should render a text with data attributes 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gzVnrw",
+            "componentId": "sc-htoDjs",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -277,7 +277,7 @@ exports[`<Text /> should render a text with data attributes 1`] = `
           "displayName": "styled.span",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gzVnrw",
+          "styledComponentId": "sc-htoDjs",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -352,7 +352,7 @@ exports[`<Text /> should render a text with margin 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gzVnrw",
+            "componentId": "sc-htoDjs",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -395,7 +395,7 @@ exports[`<Text /> should render a text with margin 1`] = `
           "displayName": "styled.span",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gzVnrw",
+          "styledComponentId": "sc-htoDjs",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -459,7 +459,7 @@ exports[`<Text /> should render an element with colored text 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gzVnrw",
+            "componentId": "sc-htoDjs",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -502,7 +502,7 @@ exports[`<Text /> should render an element with colored text 1`] = `
           "displayName": "styled.span",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gzVnrw",
+          "styledComponentId": "sc-htoDjs",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -556,7 +556,7 @@ exports[`<Text /> should render an element with heading text 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gzVnrw",
+            "componentId": "sc-htoDjs",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -599,7 +599,7 @@ exports[`<Text /> should render an element with heading text 1`] = `
           "displayName": "styled.span",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gzVnrw",
+          "styledComponentId": "sc-htoDjs",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -654,7 +654,7 @@ exports[`<Text /> should render an element with semi bold text 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gzVnrw",
+            "componentId": "sc-htoDjs",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -697,7 +697,7 @@ exports[`<Text /> should render an element with semi bold text 1`] = `
           "displayName": "styled.span",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gzVnrw",
+          "styledComponentId": "sc-htoDjs",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -751,7 +751,7 @@ exports[`<Text /> should render an element with small text 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gzVnrw",
+            "componentId": "sc-htoDjs",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -794,7 +794,7 @@ exports[`<Text /> should render an element with small text 1`] = `
           "displayName": "styled.span",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gzVnrw",
+          "styledComponentId": "sc-htoDjs",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -847,7 +847,7 @@ exports[`<Text /> should render an element with text 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gzVnrw",
+            "componentId": "sc-htoDjs",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -890,7 +890,7 @@ exports[`<Text /> should render an element with text 1`] = `
           "displayName": "styled.span",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gzVnrw",
+          "styledComponentId": "sc-htoDjs",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -946,7 +946,7 @@ exports[`<Text /> should render an element with the text converted to uppercase 
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gzVnrw",
+            "componentId": "sc-htoDjs",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -989,7 +989,7 @@ exports[`<Text /> should render an element with the text converted to uppercase 
           "displayName": "styled.span",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gzVnrw",
+          "styledComponentId": "sc-htoDjs",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
