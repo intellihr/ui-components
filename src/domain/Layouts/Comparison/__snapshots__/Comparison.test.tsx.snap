@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Comparison /> Mobile Comparison should match the snapshot 1`] = `
+exports[`<Comparison /> Standard Comparison should match the snapshot 1`] = `
 <styled.div
   data-component-type="comparison"
-  isMobile={true}
 >
   <styled.div>
     test before
@@ -19,22 +18,13 @@ exports[`<Comparison /> Mobile Comparison should match the snapshot 1`] = `
         "top": 16,
       }
     }
+    showForSizes={
+      Object {
+        "upper": 640,
+      }
+    }
     type="solid"
   />
-  <styled.div>
-    test after
-  </styled.div>
-</styled.div>
-`;
-
-exports[`<Comparison /> Standard Comparison should match the snapshot 1`] = `
-<styled.div
-  data-component-type="comparison"
-  isMobile={false}
->
-  <styled.div>
-    test before
-  </styled.div>
   <FontAwesomeIcon
     color="#667380"
     icon="arrow-right"
@@ -44,6 +34,11 @@ exports[`<Comparison /> Standard Comparison should match the snapshot 1`] = `
         "left": 16,
         "right": 16,
         "top": 16,
+      }
+    }
+    showForSizes={
+      Object {
+        "lower": 640,
       }
     }
     type="solid"

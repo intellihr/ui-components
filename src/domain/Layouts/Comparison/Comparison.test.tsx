@@ -16,18 +16,4 @@ describe('<Comparison />', () => {
       expect(wrapper).toMatchSnapshot()
     })
   })
-
-  describe('Mobile Comparison', () => {
-    const wrapper = shallow(
-      <Comparison
-        beforeComponent='test before'
-        afterComponent='test after'
-        isMobile
-      />
-    )
-
-    it('should match the snapshot', () => {
-      expect(wrapper).toMatchSnapshot()
-    })
-  })
 })
