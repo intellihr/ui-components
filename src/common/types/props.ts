@@ -77,7 +77,7 @@ namespace Props {
     GridLayout = 'grid_layout',
     GridLayoutCell = 'grid_layout_cell',
     GroupCard = 'group_card',
-    HightlightArea = 'highlight_area',
+    HighlightArea = 'highlight_area',
     HintWrapper = 'hint_wrapper',
     HorizontalRule = 'horizontal_rule',
     IconPicker = 'icon_picker',
