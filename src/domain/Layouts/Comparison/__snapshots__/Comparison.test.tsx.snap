@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Comparison /> Standard Comparison should match the snapshot 1`] = `
+<styled.div
+  data-component-type="comparison"
+>
+  <styled.div>
+    test before
+  </styled.div>
+  <FontAwesomeIcon
+    color="#667380"
+    icon="arrow-down"
+    margins={
+      Object {
+        "bottom": 16,
+        "left": 16,
+        "right": 16,
+        "top": 16,
+      }
+    }
+    showForSizes={
+      Object {
+        "upper": 640,
+      }
+    }
+    type="solid"
+  />
+  <FontAwesomeIcon
+    color="#667380"
+    icon="arrow-right"
+    margins={
+      Object {
+        "bottom": 16,
+        "left": 16,
+        "right": 16,
+        "top": 16,
+      }
+    }
+    showForSizes={
+      Object {
+        "lower": 640,
+      }
+    }
+    type="solid"
+  />
+  <styled.div>
+    test after
+  </styled.div>
+</styled.div>
+`;

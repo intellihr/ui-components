@@ -76,6 +76,7 @@ namespace Props {
     Card = 'card',
     Carousel = 'carousel',
     CheckboxInput = 'checkbox_input',
+    Comparison = 'comparison',
     EmptyState = 'empty_state',
     FilterController = 'filter_controller',
     FilterTag = 'filter_tag',
