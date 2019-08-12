@@ -1,7 +1,9 @@
 import styled, { css } from 'styled-components'
 
 import { Props } from '../../../common'
+import { styleForShowForSizes } from '../../Layouts/ShowForSizes'
 import { styleForMargins } from '../../Spacers/services/margins'
+
 type size = 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge'
 
 interface IStyledIconProps {
@@ -10,10 +12,12 @@ interface IStyledIconProps {
   size?: size
   margins?: Props.IMargins
   width?: number
+  showForSizes?: Props.IShowForSizes
 }
 
 interface IBadgeWrapper {
   size?: size
+  showForSizes?: Props.IShowForSizes
 }
 
 const BadgeWrapper = styled.span<IBadgeWrapper>`
@@ -38,6 +42,8 @@ const BadgeWrapper = styled.span<IBadgeWrapper>`
         `
     }
   }}
+
+  ${(props) => styleForShowForSizes(props.showForSizes)}
 `
 
 const StyledIcon = styled.i<IStyledIconProps>`
@@ -48,6 +54,7 @@ const StyledIcon = styled.i<IStyledIconProps>`
     width: ${props.width}px;
   `}
 
+  ${(props) => styleForShowForSizes(props.showForSizes)}
   ${(props) => styleForMargins(props.margins)}
 
   ${(props) => props.color && css`

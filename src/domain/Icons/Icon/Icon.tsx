@@ -23,6 +23,8 @@ interface IIconProps {
   margins?: Props.IMargins
   /** Width of the icon */
   width?: number
+  /** Shows the component only between these provided screen sizes */
+  showForSizes?: Props.IShowForSizes
 }
 
 const Icon: React.FC<IIconProps> = ({
@@ -34,7 +36,8 @@ const Icon: React.FC<IIconProps> = ({
   icon,
   badge,
   margins,
-  width
+  width,
+  showForSizes
 }) => {
   const classes = classNames(
     className,
@@ -59,12 +62,14 @@ const Icon: React.FC<IIconProps> = ({
         color={color}
         customSize={customSize}
         size={size}
+        showForSizes={showForSizes}
         margins={margins}
         width={width}
       />
       {badge && ['large', 'xlarge', 'xxlarge'].includes(size) && (
         <BadgeWrapper
           size={size}
+          showForSizes={showForSizes}
         >
           {React.cloneElement(badge, { size: size && newBadgeSize[size] })}
         </BadgeWrapper>

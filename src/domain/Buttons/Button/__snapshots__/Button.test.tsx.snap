@@ -27,9 +27,9 @@ exports[`<Button /> should render a button with a simple text 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bxivhb",
+            "componentId": "sc-ifAKCX",
             "isStatic": false,
-            "lastClassName": "kLyrAW",
+            "lastClassName": "fRjHBe",
             "rules": Array [
               "
    ",
@@ -41,7 +41,7 @@ exports[`<Button /> should render a button with a simple text 1`] = `
           "displayName": "styled.button",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bxivhb",
+          "styledComponentId": "sc-ifAKCX",
           "target": "button",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -93,9 +93,9 @@ exports[`<Button /> should render a button with a size large 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bxivhb",
+            "componentId": "sc-ifAKCX",
             "isStatic": false,
-            "lastClassName": "kLyrAW",
+            "lastClassName": "fRjHBe",
             "rules": Array [
               "
    ",
@@ -107,7 +107,7 @@ exports[`<Button /> should render a button with a size large 1`] = `
           "displayName": "styled.button",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bxivhb",
+          "styledComponentId": "sc-ifAKCX",
           "target": "button",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -158,9 +158,9 @@ exports[`<Button /> should render a button with a type delete-subtle 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bxivhb",
+            "componentId": "sc-ifAKCX",
             "isStatic": false,
-            "lastClassName": "kLyrAW",
+            "lastClassName": "fRjHBe",
             "rules": Array [
               "
    ",
@@ -172,7 +172,7 @@ exports[`<Button /> should render a button with a type delete-subtle 1`] = `
           "displayName": "styled.button",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bxivhb",
+          "styledComponentId": "sc-ifAKCX",
           "target": "button",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -233,9 +233,9 @@ exports[`<Button /> should render a button with an icon 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bxivhb",
+            "componentId": "sc-ifAKCX",
             "isStatic": false,
-            "lastClassName": "kLyrAW",
+            "lastClassName": "fRjHBe",
             "rules": Array [
               "
    ",
@@ -247,7 +247,7 @@ exports[`<Button /> should render a button with an icon 1`] = `
           "displayName": "styled.button",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bxivhb",
+          "styledComponentId": "sc-ifAKCX",
           "target": "button",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -287,7 +287,7 @@ exports[`<Button /> should render a button with an icon 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-bwzfXH",
+                        "componentId": "sc-htpNat",
                         "isStatic": false,
                         "lastClassName": "c0",
                         "rules": Array [
@@ -299,6 +299,9 @@ exports[`<Button /> should render a button with an icon 1`] = `
                           [Function],
                           "
 
+  ",
+                          [Function],
+                          "
   ",
                           [Function],
                           "
@@ -320,7 +323,7 @@ exports[`<Button /> should render a button with an icon 1`] = `
                       "displayName": "styled.i",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-bwzfXH",
+                      "styledComponentId": "sc-htpNat",
                       "target": "i",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -376,9 +379,9 @@ exports[`<Button /> should render a disabled button 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bxivhb",
+            "componentId": "sc-ifAKCX",
             "isStatic": false,
-            "lastClassName": "kLyrAW",
+            "lastClassName": "fRjHBe",
             "rules": Array [
               "
    ",
@@ -390,7 +393,7 @@ exports[`<Button /> should render a disabled button 1`] = `
           "displayName": "styled.button",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bxivhb",
+          "styledComponentId": "sc-ifAKCX",
           "target": "button",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -469,9 +472,9 @@ exports[`should render a button with a spinner 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bxivhb",
+            "componentId": "sc-ifAKCX",
             "isStatic": false,
-            "lastClassName": "kLyrAW",
+            "lastClassName": "fRjHBe",
             "rules": Array [
               "
    ",
@@ -483,7 +486,7 @@ exports[`should render a button with a spinner 1`] = `
           "displayName": "styled.button",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bxivhb",
+          "styledComponentId": "sc-ifAKCX",
           "target": "button",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -513,7 +516,7 @@ exports[`should render a button with a spinner 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-htpNat",
+                    "componentId": "sc-bxivhb",
                     "isStatic": true,
                     "lastClassName": "c0",
                     "rules": Array [
@@ -548,7 +551,7 @@ exports[`should render a button with a spinner 1`] = `
                   "displayName": "styled.div",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-htpNat",
+                  "styledComponentId": "sc-bxivhb",
                   "target": "div",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],

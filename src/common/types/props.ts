@@ -30,6 +30,11 @@ namespace Props {
     right?: Margin
   }
 
+  export interface IShowForSizes {
+    upper?: Variables.Breakpoint
+    lower?: Variables.Breakpoint
+  }
+
   export enum Size {
     XXSmall = 'xxsmall',
     XSmall = 'xsmall',
@@ -71,13 +76,14 @@ namespace Props {
     Card = 'card',
     Carousel = 'carousel',
     CheckboxInput = 'checkbox_input',
+    Comparison = 'comparison',
     EmptyState = 'empty_state',
     FilterController = 'filter_controller',
     FilterTag = 'filter_tag',
     GridLayout = 'grid_layout',
     GridLayoutCell = 'grid_layout_cell',
     GroupCard = 'group_card',
-    HightlightArea = 'highlight_area',
+    HighlightArea = 'highlight_area',
     HintWrapper = 'hint_wrapper',
     HorizontalRule = 'horizontal_rule',
     IconPicker = 'icon_picker',
