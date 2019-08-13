@@ -43,7 +43,7 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
     }
   }
 
-  public componentWillReceiveProps (nextProps: IDataTablePaginationProps) {
+  public UNSAFE_componentWillReceiveProps (nextProps: IDataTablePaginationProps) {
     this.setState({
       page: nextProps.page
     })
