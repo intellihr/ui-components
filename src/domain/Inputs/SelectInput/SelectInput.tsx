@@ -81,7 +81,7 @@ export class SelectInput extends React.PureComponent<ISelectInputProps> {
     shouldRemoveElementsFromMultiSelect: true
   }
 
-  public componentWillMount () {
+  public UNSAFE_componentWillMount () {
     this.autoSelectValue()
   }
 
