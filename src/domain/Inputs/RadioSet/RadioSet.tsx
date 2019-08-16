@@ -27,6 +27,8 @@ export interface IRadioSetOptionProps {
   label: JSX.Element | string
   /** If true, the radio input is wrapped with a button */
   isButton?: boolean
+  /** The id of the option */
+  id?: string
 }
 
 export interface IRadioSetProps {
@@ -89,7 +91,8 @@ export class RadioSet extends React.PureComponent<IRadioSetProps> {
         isHTML5Required,
         autoFocus,
         componentContext,
-        className
+        className,
+        id
       } = option
 
       return (
@@ -101,7 +104,7 @@ export class RadioSet extends React.PureComponent<IRadioSetProps> {
             className={classNames( style.radioInput, className)}
           >
             <StyledRadioInput
-              id={`${name}-${idx}`}
+              id={id ? id : `${name}-${idx}`}
               name={name}
               type='radio'
               value={option.value}
@@ -116,7 +119,7 @@ export class RadioSet extends React.PureComponent<IRadioSetProps> {
               data-component-context={componentContext}
               checked={value === option.value}
             />
-            {this.infoLabel(option.label, `${name}-${idx}`)}
+            {this.infoLabel(option.label, id ? id : `${name}-${idx}`)}
           </div>
         </StyledRadioInputWrapper>
       )
