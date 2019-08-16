@@ -48,6 +48,8 @@ export interface IRadioSetProps {
   spacing?: 'normal' | 'tight'
   /** The margins around the component */
   margins?: Props.IMargins
+  /** The id of the RadioSet */
+  id?: string
 }
 
 export class RadioSet extends React.PureComponent<IRadioSetProps> {
@@ -78,7 +80,8 @@ export class RadioSet extends React.PureComponent<IRadioSetProps> {
     const {
       options,
       value,
-      name
+      name,
+      id
     } = this.props
 
     return options.map((option, idx) => {
@@ -101,7 +104,7 @@ export class RadioSet extends React.PureComponent<IRadioSetProps> {
             className={classNames( style.radioInput, className)}
           >
             <StyledRadioInput
-              id={`${name}-${idx}`}
+              id={`${id ? id : name}-${idx}`}
               name={name}
               type='radio'
               value={option.value}
@@ -116,7 +119,7 @@ export class RadioSet extends React.PureComponent<IRadioSetProps> {
               data-component-context={componentContext}
               checked={value === option.value}
             />
-            {this.infoLabel(option.label, `${name}-${idx}`)}
+            {this.infoLabel(option.label, `${id ? id : name}-${idx}`)}
           </div>
         </StyledRadioInputWrapper>
       )
