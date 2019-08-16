@@ -29,8 +29,6 @@ interface ICheckboxSetOptionProps {
   isButton?: boolean
   /** Identifier of the input */
   identifier: string
-  /** The id of the option */
-  id?: string
 }
 
 export interface ICheckboxSetProps {
@@ -54,6 +52,8 @@ export interface ICheckboxSetProps {
   value: {
     [i: string]: boolean
   }
+  /** The id of the option */
+  id?: string
 }
 
 export class CheckboxSet extends React.PureComponent<ICheckboxSetProps> {
@@ -82,7 +82,8 @@ export class CheckboxSet extends React.PureComponent<ICheckboxSetProps> {
     const {
       options,
       name,
-      value
+      value,
+      id
     } = this.props
 
     return map(options, (option) => {
@@ -94,8 +95,7 @@ export class CheckboxSet extends React.PureComponent<ICheckboxSetProps> {
           autoFocus,
           componentContext,
           className,
-          identifier,
-          id
+          identifier
         } = option
 
         return (
@@ -107,7 +107,7 @@ export class CheckboxSet extends React.PureComponent<ICheckboxSetProps> {
               className={classNames('checkbox-input', style.checkboxInput, className)}
             >
               <StyledCheckboxInput
-                id={id ? id : `${name}-${identifier}`}
+                id={`${id ? id : name}-${identifier}`}
                 name={name}
                 type='checkbox'
                 onChange={this.handleChange}
@@ -121,7 +121,7 @@ export class CheckboxSet extends React.PureComponent<ICheckboxSetProps> {
                 data-component-context={componentContext}
                 checked={get(value, identifier)}
               />
-              {this.infoLabel(option.label, id ? id : `${name}-${option.identifier}`)}
+              {this.infoLabel(option.label, `${id ? id : name}-${option.identifier}`)}
             </div>
           </StyledCheckboxInputWrapper>
         )}
