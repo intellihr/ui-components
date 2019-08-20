@@ -42,6 +42,11 @@ exports[`<GroupCard /> should render a group card with body contents and  their 
           </styled.div>
           <DropdownMenu
             hasInitialFocus={false}
+            margins={
+              Object {
+                "right": 40,
+              }
+            }
             sections={
               Array [
                 Object {
