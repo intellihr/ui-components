@@ -33,7 +33,7 @@ const StyledGroupCard = styled.div`
 
 const StyledGroupMainCard = styled.div`
   margin: 0;
-  padding: ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px;
+  padding: ${Variables.Spacing.sMedium}px;
   border: 1px solid ${Variables.Color.n250};
   border-radius: ${Variables.Style.borderRadius}px;
 
@@ -92,7 +92,7 @@ const StyledGroupExtraCard = styled.div`
 `
 
 const StyledBodyContents = styled.div`
-  padding: ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px;
+  padding: ${Variables.Spacing.sMedium}px;
 `
 
 const StyledBodyContent = styled.div`

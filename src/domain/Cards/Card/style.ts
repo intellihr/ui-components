@@ -38,7 +38,7 @@ const StyledCard = styled.div`
   background-color: ${Variables.Color.n100};
 `
 const StyledCardHeader = styled(StyledFlexContent)`
-  padding: ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px;
+  padding: ${Variables.Spacing.sMedium}px;
   border: 1px solid ${Variables.Color.n250};
   border-radius: ${Variables.Style.borderRadius}px;
 
@@ -113,7 +113,7 @@ const StyledExtraContent = styled.div`
 `
 
 const StyledBodyContents = styled.div`
-  padding: ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px;
+  padding: ${Variables.Spacing.sMedium}px;
 `
 
 export {
