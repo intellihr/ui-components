@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Props } from '../../../common'
+import { Props, Variables } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { DropdownMenu, IDropdownMenuToggleComponentProps } from '../../Popovers/DropdownMenu'
 import { ISectionProps } from '../../Popovers/DropdownMenu/subcomponents/Section'
@@ -38,6 +38,8 @@ interface IGroupCardProps {
   margins?: Props.IMargins
   /** The data-component-context */
   componentContext?: string
+  /** dropwon sections to show in the cards action button dropdown */
+  dropdownSections?: ISectionProps[]
 }
 
 interface IGroupCardState {
@@ -54,6 +56,7 @@ export class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardSt
       headingContent,
       bodyContents,
       componentContext,
+      dropdownSections,
       margins
     } = this.props
 
@@ -70,6 +73,7 @@ export class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardSt
         >
           <StyledFlexContent>
             <StyledPrimaryContent>{headingContent}</StyledPrimaryContent>
+            {this.actionButtonDropdownMenu(dropdownSections)}
             {this.toggleButton}
           </StyledFlexContent>
         </StyledGroupMainCard>
@@ -153,6 +157,9 @@ export class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardSt
         <DropdownMenu
           sections={dropdownSections}
           toggleComponent={this.actionButton}
+          margins={{
+            right: Variables.Spacing.s2XLarge
+          }}
         />
       )
     }

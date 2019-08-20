@@ -16,6 +16,19 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
     {state.allCards ? 'Collapse All' : 'Expand All'}
   </Button>
   <GroupCard
+    dropdownSections= {[
+        {
+          text: 'homepage',
+          href: 'https://intellihr.github.io/ui-components/',
+          stopPropagation: true
+        },
+        {
+          text: 'Delete',
+          onClick: (event) => { alert('Delete action for the card') },
+          sectionType: 'alert',
+          stopPropagation: true
+        }
+      ]}
     margins={{
               top:12,
               bottom: 4

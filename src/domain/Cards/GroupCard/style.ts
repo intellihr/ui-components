@@ -24,22 +24,17 @@ interface IStyledGroupCardProps {
 
 const StyledGroupCard = styled.div`
   margin: 0;
-  ${(props: IStyledGroupCardProps) => styleForMargins(props.margins)}}
+  ${(props: IStyledGroupCardProps) => styleForMargins(props.margins)}
 `
 
 const StyledGroupMainCard = styled.div`
   margin: 0;
   padding: ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px;
-  background-color: ${Variables.Color.n150};
   border: 1px solid ${Variables.Color.n250};
   border-radius: ${Variables.Style.borderRadius}px;
 
   ${(props: IStyledGroupMainCardProps) => props.hasHoverStyle && css`
       cursor: pointer;
-      &:hover {
-      background-color: ${Variables.Color.n200};
-      transition: background-color .25s ease-out;
-    }
   `}
 
   ${(props: IStyledGroupMainCardProps) => props.isExpanded && css`
@@ -80,6 +75,7 @@ const StyledGroupExtraCard = styled.div`
   max-height: 0;
   overflow: hidden;
   transition: max-height .5s;
+  background-color: ${Variables.Color.n150}
   ${cardCollpaseAnimation}
 
   ${(props: IStyledGroupExtraCardProps) => props.isExpanded && css`

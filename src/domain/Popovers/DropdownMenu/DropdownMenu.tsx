@@ -3,6 +3,7 @@ import FocusTrap from 'focus-trap-react'
 import { map } from 'lodash'
 import moment, { Moment } from 'moment'
 import React, { RefObject } from 'react'
+import { Props } from 'src/common'
 import uuid from 'uuid'
 
 import { FontAwesomeIcon } from '../../Icons'
@@ -44,6 +45,8 @@ interface IDropdownMenuProps {
   initialFocusElement?: FocusTarget
   /** Children to display as custom content instead of sections */
   children?: (props: IDropdownMenuChildrenProps) => React.ReactElement<any>
+  /** Margins around the component */
+  margins: Props.IMargins
   /** The data-component-context */
   componentContext?: string
 }
