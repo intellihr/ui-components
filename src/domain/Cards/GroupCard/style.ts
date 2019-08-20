@@ -75,7 +75,7 @@ const StyledGroupExtraCard = styled.div`
   max-height: 0;
   overflow: hidden;
   transition: max-height .5s;
-  background-color: ${Variables.Color.n150}
+  background-color: ${Variables.Color.n150};
   ${cardCollpaseAnimation}
 
   ${(props: IStyledGroupExtraCardProps) => props.isExpanded && css`

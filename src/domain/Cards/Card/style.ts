@@ -95,6 +95,7 @@ const StyledActionButton = styled.button<IStyleActionButtonProps>`
 `
 
 const StyledExtraContent = styled.div`
+  padding: 0;
   height: auto;
   max-height: 0;
   overflow: hidden;
@@ -104,7 +105,6 @@ const StyledExtraContent = styled.div`
   border-top: 0;
   border-radius: 0 0 ${Variables.Style.borderRadius}px ${Variables.Style.borderRadius}px;
   background-color: ${Variables.Color.n150};
-  padding: ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px;
 
   ${(props: IStyledExtraContentProps) => props.isExpanded && css`
       max-height: 999px; // Magic number to keep animation working when expanding
@@ -112,7 +112,12 @@ const StyledExtraContent = styled.div`
   `}
 `
 
+const StyledBodyContents = styled.div`
+  padding: ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px;
+`
+
 export {
+  StyledBodyContents,
   StyledCard,
   StyledCardHeader,
   StyledExtraContent,

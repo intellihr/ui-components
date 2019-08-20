@@ -10,6 +10,7 @@ import {
 } from '../services/style'
 import {
   StyledActionButton,
+  StyledBodyContents,
   StyledCard,
   StyledCardHeader,
   StyledCardToggleButton,
@@ -77,7 +78,9 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
         </StyledCardHeader>
         {extraContent && (
           <StyledExtraContent isExpanded={this.isExpanded}>
-            {extraContent}
+            <StyledBodyContents>
+              {extraContent}
+            </StyledBodyContents>
           </StyledExtraContent>
         )}
       </StyledCard>
