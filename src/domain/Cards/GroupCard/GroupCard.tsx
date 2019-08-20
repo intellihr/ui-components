@@ -51,7 +51,7 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
     isExpanded: false
   }
 
-  public render(): JSX.Element {
+  public render (): JSX.Element {
     const {
       headingContent,
       bodyContents,
@@ -90,14 +90,14 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
     }
   }
 
-  private get isExpanded() {
+  private get isExpanded () {
     if (this.props.isExpanded === undefined) {
       return this.state.isExpanded
     }
     return this.props.isExpanded
   }
 
-  private get bodyContentCards(): JSX.Element | undefined {
+  private get bodyContentCards (): JSX.Element | undefined {
     const {
       bodyContents
     } = this.props
@@ -113,7 +113,7 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
     }
   }
 
-  private get toggleButton(): JSX.Element | undefined {
+  private get toggleButton (): JSX.Element | undefined {
     const {
       bodyContents
     } = this.props
