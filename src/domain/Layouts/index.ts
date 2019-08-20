@@ -1,4 +1,5 @@
 export { Carousel } from './Carousel'
+export { Comparison } from './Comparison'
 export { GridLayout } from './GridLayout'
 export { LayoutSpacer } from './LayoutSpacer'
 export { PageLayout } from './PageLayout'
