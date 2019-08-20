@@ -41,7 +41,7 @@ interface ICardState {
   isExpanded: boolean
 }
 
-export class Card extends React.PureComponent<ICardProps, ICardState> {
+class Card extends React.PureComponent<ICardProps, ICardState> {
   public static defaultProps: Partial<ICardProps> = {
     isHoverable: false
   }
@@ -161,4 +161,8 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
   private handleActionButtonMouseOut = () => {
     this.setState({ isActionButtonHover: false })
   }
+}
+
+export {
+  Card
 }

@@ -46,7 +46,7 @@ interface IGroupCardState {
   isExpanded: boolean
 }
 
-export class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
+class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
   public state: IGroupCardState = {
     isExpanded: false
   }
@@ -181,4 +181,9 @@ export class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardSt
     event.stopPropagation()
     toggleMenu()
   }
+}
+
+export {
+  GroupCard,
+  IGroupCardExtraContentProps
 }
