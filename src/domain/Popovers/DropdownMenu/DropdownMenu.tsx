@@ -45,8 +45,6 @@ interface IDropdownMenuProps {
   initialFocusElement?: FocusTarget
   /** Children to display as custom content instead of sections */
   children?: (props: IDropdownMenuChildrenProps) => React.ReactElement<any>
-  /** Margins around the component */
-  margins: Props.IMargins
   /** The data-component-context */
   componentContext?: string
 }

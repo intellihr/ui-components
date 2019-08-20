@@ -157,9 +157,6 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
         <DropdownMenu
           sections={dropdownSections}
           toggleComponent={this.actionButton}
-          margins={{
-            right: Variables.Spacing.s2XLarge
-          }}
         />
       )
     }
@@ -171,7 +168,7 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
     <StyledBodyActionButton
       onClick={this.handleActionButtonClick(toggleMenu)}
       ref={toggleComponentRef}
-      {...ariaProps}
+      hasRightMargin={!!this.props.bodyContents}
     >
       <FontAwesomeIcon type='solid' icon='ellipsis-v' />
     </StyledBodyActionButton>

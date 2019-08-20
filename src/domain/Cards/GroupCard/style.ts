@@ -4,6 +4,10 @@ import { Props, Utils, Variables } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
 import { cardButtonStyle, cardCollpaseAnimation, cardExpandAnimation } from '../services/style'
 
+interface IStyleActionButtonProps {
+  hasRightMargin: boolean
+}
+
 interface IStyledGroupExtraCardProps {
   isExpanded: boolean
 }
@@ -64,6 +68,9 @@ const StyledGroupCardToggleButton = styled.button<IStyledGroupCardToggleButtonPr
 
 const StyledBodyActionButton = styled.button`
   ${cardButtonStyle};
+  ${(props: IStyleActionButtonProps) => props.hasRightMargin && css`
+      margin-right: ${Variables.Spacing.sMedium}px;
+  `}
 `
 
 const StyledGroupExtraCard = styled.div`
