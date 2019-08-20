@@ -79,9 +79,11 @@ exports[`<Card /> should render a card with main content and dropdownSections  1
   <styled.div
     isExpanded={false}
   >
-    <div>
-      test2
-    </div>
+    <styled.div>
+      <div>
+        test2
+      </div>
+    </styled.div>
   </styled.div>
 </styled.div>
 `;
@@ -115,9 +117,11 @@ exports[`<Card /> should render a card with main content only 1`] = `
   <styled.div
     isExpanded={false}
   >
-    <div>
-      test2
-    </div>
+    <styled.div>
+      <div>
+        test2
+      </div>
+    </styled.div>
   </styled.div>
 </styled.div>
 `;
