@@ -79,7 +79,7 @@ const StyledGroupExtraCard = styled.div`
   ${cardCollpaseAnimation}
 
   ${(props: IStyledGroupExtraCardProps) => props.isExpanded && css`
-      max-height: 9999px; // Magic number to keep animation working when expanding
+      max-height: 999px; // Magic number to keep animation working when expanding
       ${cardExpandAnimation}
   `}
 `
