@@ -44,6 +44,11 @@ const StyledCardHeader = styled(StyledFlexContent)`
 
   ${(props: IStyledCardHeader) => props.hasHoverStyle && css`
       cursor: pointer;
+
+      &:hover {
+        background-color: ${Variables.Color.n200};
+        transition: background-color .25s ease-out;
+      }
   `}
 
   ${(props: IStyledCardHeader) => props.isExpanded && css`
@@ -107,7 +112,7 @@ const StyledExtraContent = styled.div`
   background-color: ${Variables.Color.n150};
 
   ${(props: IStyledExtraContentProps) => props.isExpanded && css`
-      max-height: 9999px; // Magic number to keep animation working when expanding
+      max-height: 999px; // Magic number to keep animation working when expanding
       ${cardExpandAnimation}
   `}
 `

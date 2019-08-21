@@ -39,6 +39,11 @@ const StyledGroupMainCard = styled.div`
 
   ${(props: IStyledGroupMainCardProps) => props.hasHoverStyle && css`
       cursor: pointer;
+
+      &:hover {
+        background-color: ${Variables.Color.n200};
+        transition: background-color .25s ease-out;
+      }
   `}
 
   ${(props: IStyledGroupMainCardProps) => props.isExpanded && css`
@@ -86,7 +91,7 @@ const StyledGroupExtraCard = styled.div`
   ${cardCollpaseAnimation}
 
   ${(props: IStyledGroupExtraCardProps) => props.isExpanded && css`
-      max-height: 999px; // Magic number to keep animation working when expanding
+      max-height: 9999px; // Magic number to keep animation working when expanding
       ${cardExpandAnimation}
   `}
 `
