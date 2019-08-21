@@ -21,13 +21,11 @@ const StyledComparison = styled.div`
   display: flex;
 
   ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
-    text-align: center;
     align-items: center;
     flex-direction: column;
   }
 
   ${Utils.mediaQueryBetweenSizes({ minPx: Variables.Breakpoint.breakpointTablet })} {
-    text-align: center;
     align-items: start;
     flex-direction: row;
   }
