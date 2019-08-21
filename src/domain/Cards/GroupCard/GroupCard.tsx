@@ -169,6 +169,7 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
       onClick={this.handleActionButtonClick(toggleMenu)}
       ref={toggleComponentRef}
       hasRightMargin={!!this.props.bodyContents}
+      {...ariaProps}
     >
       <FontAwesomeIcon type='solid' icon='ellipsis-v' />
     </StyledBodyActionButton>
