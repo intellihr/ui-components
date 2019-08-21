@@ -3,7 +3,6 @@ import FocusTrap from 'focus-trap-react'
 import { map } from 'lodash'
 import moment, { Moment } from 'moment'
 import React, { RefObject } from 'react'
-import { Props } from 'src/common'
 import uuid from 'uuid'
 
 import { FontAwesomeIcon } from '../../Icons'
