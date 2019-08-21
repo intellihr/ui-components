@@ -107,7 +107,7 @@ const StyledExtraContent = styled.div`
   background-color: ${Variables.Color.n150};
 
   ${(props: IStyledExtraContentProps) => props.isExpanded && css`
-      max-height: 999px; // Magic number to keep animation working when expanding
+      max-height: 9999px; // Magic number to keep animation working when expanding
       ${cardExpandAnimation}
   `}
 `
