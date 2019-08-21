@@ -176,13 +176,10 @@ import { Button } from '@Domain/Buttons';
 import { GridLayout } from '@Domain/Layouts';
 import { Variables } from '@Common';
 
-initialState = { cardWithOutExpand: false };
-
 const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec libero et libero molestie eleifend. Donec dignissim vel erat eu cursus.';
  
 <Card
     isExpanded= {state.cardWithOutExpand}
-    onCardToggle= {() => setState({ cardWithOutExpand: !state.cardWithOutExpand})}
     dropdownSections= {[
               {
                 text: 'google',
@@ -244,27 +241,7 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
       />
     }
   />
-  <Card
-      onCardToggle= {() => alert('I have ahover state since I have on card toggle')}
-      mainContent= {
-        <GridLayout
-          gutterPaddingX={Variables.Spacing.sSmall}
-          gutterPaddingY={Variables.Spacing.sSmall}
-          cells={[
-            {
-              size: 7,
-              content: text
-            },
-            {
-              size: 5,
-              content: text
-            }
-          ]}
-        />
-      }
-    />
 </div>
-
 ```
 
 #### Card will manage its own state if *isExpanded* is not passed in.

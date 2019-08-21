@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Props } from '../../../common'
+import { Props, Variables } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { DropdownMenu, IDropdownMenuToggleComponentProps } from '../../Popovers/DropdownMenu'
 import { ISectionProps } from '../../Popovers/DropdownMenu/subcomponents/Section'
@@ -38,13 +38,15 @@ interface IGroupCardProps {
   margins?: Props.IMargins
   /** The data-component-context */
   componentContext?: string
+  /** dropwon sections to show in the cards action button dropdown */
+  dropdownSections?: ISectionProps[]
 }
 
 interface IGroupCardState {
   isExpanded: boolean
 }
 
-export class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
+class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
   public state: IGroupCardState = {
     isExpanded: false
   }
@@ -54,6 +56,7 @@ export class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardSt
       headingContent,
       bodyContents,
       componentContext,
+      dropdownSections,
       margins
     } = this.props
 
@@ -70,6 +73,7 @@ export class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardSt
         >
           <StyledFlexContent>
             <StyledPrimaryContent>{headingContent}</StyledPrimaryContent>
+            {this.actionButtonDropdownMenu(dropdownSections)}
             {this.toggleButton}
           </StyledFlexContent>
         </StyledGroupMainCard>
@@ -164,6 +168,7 @@ export class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardSt
     <StyledBodyActionButton
       onClick={this.handleActionButtonClick(toggleMenu)}
       ref={toggleComponentRef}
+      hasRightMargin={!!this.props.bodyContents}
       {...ariaProps}
     >
       <FontAwesomeIcon type='solid' icon='ellipsis-v' />
@@ -174,4 +179,9 @@ export class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardSt
     event.stopPropagation()
     toggleMenu()
   }
+}
+
+export {
+  GroupCard,
+  IGroupCardExtraContentProps
 }

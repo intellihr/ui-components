@@ -6,12 +6,14 @@ import { DropdownMenu, IDropdownMenuToggleComponentProps } from '../../Popovers/
 import { ISectionProps } from '../../Popovers/DropdownMenu/subcomponents/Section'
 import {
   ChevronIconWrapper,
-  StyledFlexContent,
   StyledPrimaryContent
 } from '../services/style'
 import {
   StyledActionButton,
-  StyledCard, StyledCardToggleButton,
+  StyledBodyContents,
+  StyledCard,
+  StyledCardHeader,
+  StyledCardToggleButton,
   StyledExtraContent
 } from './style'
 
@@ -39,7 +41,7 @@ interface ICardState {
   isExpanded: boolean
 }
 
-export class Card extends React.PureComponent<ICardProps, ICardState> {
+class Card extends React.PureComponent<ICardProps, ICardState> {
   public static defaultProps: Partial<ICardProps> = {
     isHoverable: false
   }
@@ -62,19 +64,25 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
     return (
       <StyledCard
         margins={margins}
-        onClick={this.handleCardToggle}
-        hasHoverStyle={!this.state.isActionButtonHover && (!!extraContent || !!onCardToggle || isHoverable!)}
         data-component-type={Props.ComponentType.Card}
         data-component-context={componentContext}
       >
-        <StyledFlexContent>
+        <StyledCardHeader
+          onClick={this.handleCardToggle}
+          isExpanded={this.isExpanded && !!extraContent}
+          hasHoverStyle={!this.state.isActionButtonHover && (!!extraContent || !!onCardToggle || isHoverable!)}
+        >
           <StyledPrimaryContent>{mainContent}</StyledPrimaryContent>
           {this.actionButtonDropdownMenu}
           {this.toggleButton}
-        </StyledFlexContent>
-        <StyledExtraContent isExpanded={this.isExpanded}>
-          {extraContent}
-        </StyledExtraContent>
+        </StyledCardHeader>
+        {extraContent && (
+          <StyledExtraContent isExpanded={this.isExpanded}>
+            <StyledBodyContents>
+              {extraContent}
+            </StyledBodyContents>
+          </StyledExtraContent>
+        )}
       </StyledCard>
     )
   }
@@ -153,4 +161,8 @@ export class Card extends React.PureComponent<ICardProps, ICardState> {
   private handleActionButtonMouseOut = () => {
     this.setState({ isActionButtonHover: false })
   }
+}
+
+export {
+  Card
 }

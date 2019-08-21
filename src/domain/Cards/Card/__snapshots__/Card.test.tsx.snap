@@ -3,10 +3,12 @@
 exports[`<Card /> should render a ard with dropdownSections only 1`] = `
 <styled.div
   data-component-type="card"
-  hasHoverStyle={true}
-  onClick={[Function]}
 >
-  <styled.div>
+  <Styled(styled.div)
+    hasHoverStyle={true}
+    isExpanded={false}
+    onClick={[Function]}
+  >
     <styled.div>
       <div>
         test2
@@ -28,20 +30,19 @@ exports[`<Card /> should render a ard with dropdownSections only 1`] = `
       }
       toggleComponent={[Function]}
     />
-  </styled.div>
-  <styled.div
-    isExpanded={false}
-  />
+  </Styled(styled.div)>
 </styled.div>
 `;
 
 exports[`<Card /> should render a card with main content and dropdownSections  1`] = `
 <styled.div
   data-component-type="card"
-  hasHoverStyle={true}
-  onClick={[Function]}
 >
-  <styled.div>
+  <Styled(styled.div)
+    hasHoverStyle={true}
+    isExpanded={false}
+    onClick={[Function]}
+  >
     <styled.div>
       <div>
         test2
@@ -74,13 +75,15 @@ exports[`<Card /> should render a card with main content and dropdownSections  1
         />
       </styled.span>
     </styled.button>
-  </styled.div>
+  </Styled(styled.div)>
   <styled.div
     isExpanded={false}
   >
-    <div>
-      test2
-    </div>
+    <styled.div>
+      <div>
+        test2
+      </div>
+    </styled.div>
   </styled.div>
 </styled.div>
 `;
@@ -88,10 +91,12 @@ exports[`<Card /> should render a card with main content and dropdownSections  1
 exports[`<Card /> should render a card with main content only 1`] = `
 <styled.div
   data-component-type="card"
-  hasHoverStyle={true}
-  onClick={[Function]}
 >
-  <styled.div>
+  <Styled(styled.div)
+    hasHoverStyle={true}
+    isExpanded={false}
+    onClick={[Function]}
+  >
     <styled.div>
       <div>
         test2
@@ -108,13 +113,15 @@ exports[`<Card /> should render a card with main content only 1`] = `
         />
       </styled.span>
     </styled.button>
-  </styled.div>
+  </Styled(styled.div)>
   <styled.div
     isExpanded={false}
   >
-    <div>
-      test2
-    </div>
+    <styled.div>
+      <div>
+        test2
+      </div>
+    </styled.div>
   </styled.div>
 </styled.div>
 `;
@@ -122,18 +129,17 @@ exports[`<Card /> should render a card with main content only 1`] = `
 exports[`<Card /> should render a card without main content and dropdownSections 1`] = `
 <styled.div
   data-component-type="card"
-  hasHoverStyle={true}
-  onClick={[Function]}
 >
-  <styled.div>
+  <Styled(styled.div)
+    hasHoverStyle={true}
+    isExpanded={false}
+    onClick={[Function]}
+  >
     <styled.div>
       <div>
         test2
       </div>
     </styled.div>
-  </styled.div>
-  <styled.div
-    isExpanded={false}
-  />
+  </Styled(styled.div)>
 </styled.div>
 `;
