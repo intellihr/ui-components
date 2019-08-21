@@ -4,6 +4,10 @@ import { Props, Utils, Variables } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
 import { cardButtonStyle, cardCollpaseAnimation, cardExpandAnimation } from '../services/style'
 
+interface IStyleActionButtonProps {
+  hasRightMargin: boolean
+}
+
 interface IStyledGroupExtraCardProps {
   isExpanded: boolean
 }
@@ -24,22 +28,22 @@ interface IStyledGroupCardProps {
 
 const StyledGroupCard = styled.div`
   margin: 0;
-  ${(props: IStyledGroupCardProps) => styleForMargins(props.margins)}}
+  ${(props: IStyledGroupCardProps) => styleForMargins(props.margins)}
 `
 
 const StyledGroupMainCard = styled.div`
   margin: 0;
-  padding: ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px;
-  background-color: ${Variables.Color.n150};
+  padding: ${Variables.Spacing.sMedium}px;
   border: 1px solid ${Variables.Color.n250};
   border-radius: ${Variables.Style.borderRadius}px;
 
   ${(props: IStyledGroupMainCardProps) => props.hasHoverStyle && css`
       cursor: pointer;
+
       &:hover {
-      background-color: ${Variables.Color.n200};
-      transition: background-color .25s ease-out;
-    }
+        background-color: ${Variables.Color.n200};
+        transition: background-color .25s ease-out;
+      }
   `}
 
   ${(props: IStyledGroupMainCardProps) => props.isExpanded && css`
@@ -69,6 +73,9 @@ const StyledGroupCardToggleButton = styled.button<IStyledGroupCardToggleButtonPr
 
 const StyledBodyActionButton = styled.button`
   ${cardButtonStyle};
+  ${(props: IStyleActionButtonProps) => props.hasRightMargin && css`
+      margin-right: ${Variables.Spacing.sMedium}px;
+  `}
 `
 
 const StyledGroupExtraCard = styled.div`
@@ -80,6 +87,7 @@ const StyledGroupExtraCard = styled.div`
   max-height: 0;
   overflow: hidden;
   transition: max-height .5s;
+  background-color: ${Variables.Color.n150};
   ${cardCollpaseAnimation}
 
   ${(props: IStyledGroupExtraCardProps) => props.isExpanded && css`
@@ -89,7 +97,7 @@ const StyledGroupExtraCard = styled.div`
 `
 
 const StyledBodyContents = styled.div`
-  padding: ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sMedium}px;
+  padding: ${Variables.Spacing.sMedium}px;
 `
 
 const StyledBodyContent = styled.div`
