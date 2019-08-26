@@ -36,7 +36,7 @@ initialState = { value:{family1: true, family2: false, family3: false} };
   value={state.value}
   name='family'
   onChange={(value) => setState({value})}
-  parent={{ label:'All options'}}
+  parentOption={{ label:'All options'}}
   options={[
       {
         label:'this is option 1',

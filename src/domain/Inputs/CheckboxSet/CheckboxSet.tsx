@@ -46,8 +46,6 @@ interface ICheckboxSetParentProps {
   componentContext?: string
   /** Label to display next to the checkbox */
   label: JSX.Element | string
-  /** If true, the checkbox is wrapped by a button */
-  isButton?: ICheckboxSetParentProps
 }
 
 export interface ICheckboxSetProps {
@@ -74,7 +72,7 @@ export interface ICheckboxSetProps {
   /** The id of the option */
   id?: string
   /** The parent checkbox input to display and handle select all */
-  parent?: ICheckboxSetOptionProps
+  parentOption?: ICheckboxSetParentProps
 }
 
 const getInputMargins = (spacing: 'normal' | 'tight') => {
@@ -112,12 +110,12 @@ const handleOptionsChange = (
   handleChange?: ChangeEventHandler<HTMLInputElement>
   ) => (event: React.ChangeEvent<HTMLInputElement>) => {
     if (onChange) {
-        const  [ _, identifier] = event.target.id.split(`${name}-`)
-        const newValue: { [i: string]: boolean } = {
-            ... value,
-          [identifier]: event.target.checked
-        }
-          onChange(newValue)
+      const  [ _, identifier] = event.target.id.split(`${name}-`)
+      const newValue: { [i: string]: boolean } = {
+          ... value,
+        [identifier]: event.target.checked
+      }
+      onChange(newValue)
     } else if (handleChange) {
       handleChange(event)
     }
@@ -129,8 +127,8 @@ const handleParentChange = (
   options: ICheckboxSetOptionProps[],
   onChange?: (value: { [i: string]: boolean }) => void
 ) => () => {
-  if (onChange && !options.some((option) => option.isDisabled ? option.isDisabled : false)) {
-    const newValue = Object.entries(value).reduce((result: { [i: string]: boolean }, [key, _]) => {
+  if (onChange && !options.some((option) => option.isDisabled || false)) {
+    const newValue = Object.keys(value).reduce((result: { [i: string]: boolean }, key) => {
       result[key] = !selectAll
       return result
     }, {})
@@ -192,7 +190,7 @@ const CheckboxSet: React.FC<ICheckboxSetProps> = (props) => {
   const {
     orientation = Props.Orientation.Vertical,
     margins,
-    parent,
+    parentOption,
     name,
     id,
     value,
@@ -204,7 +202,7 @@ const CheckboxSet: React.FC<ICheckboxSetProps> = (props) => {
   } = props
 
   const selectAll = Object.values(value).every((optionValue) => optionValue)
-  if (parent) {
+  if (parentOption) {
     return (
       <FamilyCheckboxSetWrapper
         margins={margins}
@@ -214,24 +212,24 @@ const CheckboxSet: React.FC<ICheckboxSetProps> = (props) => {
           key={`${name}-all`}
         >
           <div
-            className={classNames('checkbox-input', style.checkboxInput, parent.className)}
+            className={classNames('checkbox-input', style.checkboxInput, parentOption.className)}
           >
             <StyledCheckboxInput
               id={`${id ? id : name}-all`}
               name={name}
               type='checkbox'
               onChange={handleParentChange(selectAll, value, options, onChange)}
-              onKeyDown={parent.handleKeyDown}
-              className={getClassNames(parent.className)}
-              disabled={options.some((option) => option.isDisabled ? option.isDisabled : false) || parent.isDisabled}
-              required={parent.isHTML5Required}
-              autoFocus={parent.autoFocus}
+              onKeyDown={parentOption.handleKeyDown}
+              className={getClassNames(parentOption.className)}
+              disabled={options.some((option) => option.isDisabled ? option.isDisabled : false) || parentOption.isDisabled}
+              required={parentOption.isHTML5Required}
+              autoFocus={parentOption.autoFocus}
               data-component-type={Props.ComponentType.CheckboxInput}
-              data-component-context={parent.componentContext}
+              data-component-context={parentOption.componentContext}
               checked={selectAll}
-              onBlur={parent.handleBlur ? (e) => parent.handleBlur!(e, selectAll ? 'true' : 'false') : undefined}
+              onBlur={parentOption.handleBlur ? (e) => parentOption.handleBlur!(e, selectAll ? 'true' : 'false') : undefined}
             />
-            {getInfoLabel(parent.label, `${id ? id : name}-all`, name, false)}
+            {getInfoLabel(parentOption.label, `${id ? id : name}-all`, name, false)}
           </div>
         </StyledCheckboxInputWrapper>
         <CheckboxSetWrapper
