@@ -18,7 +18,7 @@ export interface ICheckboxInputProps {
   /** Called when the input is changed */
   onChange?: (value: boolean) => void
   /** Value of the input */
-  value?: string | number
+  value?: string | number | boolean
   /** If true, sets input to disabled state */
   isDisabled?: boolean
   /** Handle blur event */
@@ -48,7 +48,6 @@ export class CheckboxInput extends React.PureComponent<ICheckboxInputProps> {
   public render (): JSX.Element {
     const {
       id,
-      value,
       handleKeyDown,
       handleBlur,
       isDisabled,
@@ -71,10 +70,10 @@ export class CheckboxInput extends React.PureComponent<ICheckboxInputProps> {
             id={id || name}
             name={name}
             type='checkbox'
-            value={value}
+            value={this.value}
             onChange={this.handleChange}
             onKeyDown={handleKeyDown}
-            onBlur={handleBlur ? (e) => handleBlur(e, value) : undefined}
+            onBlur={handleBlur ? (e) => handleBlur(e, this.value) : undefined}
             className={this.classNames}
             disabled={isDisabled}
             required={isHTML5Required}
@@ -95,6 +94,18 @@ export class CheckboxInput extends React.PureComponent<ICheckboxInputProps> {
     } = this.props
 
     return Boolean(value)
+  }
+
+  private get value (): string | number | undefined {
+    const {
+      value
+    } = this.props
+
+    if (typeof value === 'boolean') {
+      return value ? 1 : 0
+    }
+
+    return value
   }
 
   private get infoLabel (): JSX.Element | null {
