@@ -1,10 +1,10 @@
 import classNames from 'classnames'
-import { get, map } from 'lodash'
-import React, {ChangeEventHandler} from 'react'
+import { get } from 'lodash'
+import React, { ChangeEventHandler } from 'react'
 
 import { Props, Variables } from '../../../common'
 import { StyledCheckboxInput, StyledCheckboxInputWrapper } from '../CheckboxInput/style'
-import { CheckboxSetWrapper } from './style'
+import { CheckboxSetWrapper, FamilyCheckboxSetWrapper } from './style'
 
 const style = require('../CheckboxInput/style.scss')
 
@@ -25,10 +25,27 @@ interface ICheckboxSetOptionProps {
   componentContext?: string
   /** Label to display next to the checkbox */
   label: JSX.Element | string
-  /** If true, the checkbox is wrapped by a button */
-  isButton?: boolean
   /** Identifier of the input */
   identifier: string
+}
+
+interface ICheckboxSetParentProps {
+  /** Custom classname to use */
+  className?: string
+  /** If true, sets input to disabled state */
+  isDisabled?: boolean
+  /** Handle blur event */
+  handleBlur?: (e: React.FocusEvent<HTMLInputElement>, value?: string | number) => void
+  /** Handle key down events */
+  handleKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void
+  /** If true, use HTML5 required attribute */
+  isHTML5Required?: boolean
+  /** Add autofocus attribute to input */
+  autoFocus?: boolean
+  /** The component context */
+  componentContext?: string
+  /** Label to display next to the checkbox */
+  label: JSX.Element | string
 }
 
 export interface ICheckboxSetProps {
@@ -54,138 +71,187 @@ export interface ICheckboxSetProps {
   }
   /** The id of the option */
   id?: string
+  /** The parent checkbox input to display and handle select all */
+  parentOption?: ICheckboxSetParentProps
 }
 
-export class CheckboxSet extends React.PureComponent<ICheckboxSetProps> {
-  public static defaultProps: Partial<ICheckboxSetProps> = {
-    orientation: Props.Orientation.Vertical,
-    spacing: 'normal'
+const getInputMargins = (spacing: 'normal' | 'tight') => {
+  if (spacing === 'normal') {
+    return { bottom: Variables.Spacing.sXSmall }
   }
 
-  public render (): JSX.Element {
-    const {
-      orientation,
-      margins
-    } = this.props
+  return undefined
+}
 
-    return (
-      <CheckboxSetWrapper
-        orientation={orientation!}
-        margins={margins}
-      >
-        {this.options}
-      </CheckboxSetWrapper>
-    )
-  }
+const getInfoLabel = (label: string|JSX.Element, id: string, name: string, useButtonStyle: boolean) =>  {
+  return (
+    <label
+      htmlFor={id || name}
+      className={classNames('checkbox', { 'checkbox-button': useButtonStyle })}
+    >
+      {label}
+    </label>
+  )
+}
 
-  private get options (): Array<JSX.Element|null> {
-    const {
-      options,
-      name,
-      value,
-      id
-    } = this.props
+const getClassNames = (className?: string) => {
+  return classNames(
+    style.input,
+    [
+      className
+    ]
+  )
+}
 
-    return map(options, (option) => {
-        const {
-          handleKeyDown,
-          handleBlur,
-          isDisabled,
-          isHTML5Required,
-          autoFocus,
-          componentContext,
-          className,
-          identifier
-        } = option
-
-        return (
-          <StyledCheckboxInputWrapper
-            margins={this.inputMargins}
-            key={`${name}-${identifier}`}
-          >
-            <div
-              className={classNames('checkbox-input', style.checkboxInput, className)}
-            >
-              <StyledCheckboxInput
-                id={`${id ? id : name}-${identifier}`}
-                name={name}
-                type='checkbox'
-                onChange={this.handleChange}
-                onKeyDown={handleKeyDown}
-                onBlur={handleBlur ? (e) => handleBlur(e, get(value, identifier) ? 'true' : 'false') : undefined}
-                className={this.classNames(className)}
-                disabled={isDisabled}
-                required={isHTML5Required}
-                autoFocus={autoFocus}
-                data-component-type={Props.ComponentType.CheckboxInput}
-                data-component-context={componentContext}
-                checked={get(value, identifier)}
-              />
-              {this.infoLabel(option.label, `${id ? id : name}-${option.identifier}`)}
-            </div>
-          </StyledCheckboxInputWrapper>
-        )}
-      )
-  }
-
-  private get inputMargins (): Props.IMargins | undefined {
-    const {
-      spacing
-    } = this.props
-
-    if (spacing === 'normal') {
-      return { bottom: Variables.Spacing.sXSmall }
-    }
-
-    return undefined
-  }
-
-  private infoLabel = (label: string|JSX.Element, id: string) =>  {
-    const {
-      name,
-      useButtonStyle
-    } = this.props
-
-    if (!label) {
-      return null
-    }
-
-    return (
-      <label
-        htmlFor={id || name}
-        className={classNames('checkbox', { 'checkbox-button': useButtonStyle })}
-      >
-        {label}
-      </label>
-    )
-  }
-
-  private classNames = (className?: string) => {
-    return classNames(
-      style.input,
-      [
-        className
-      ]
-    )
-  }
-
-  private handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const {
-      onChange,
-      handleChange,
-      value,
-      name
-    } = this.props
-
+const handleOptionsChange = (
+  value: { [i: string]: boolean },
+  name: string,
+  onChange?: (value: { [i: string]: boolean }) => void,
+  handleChange?: ChangeEventHandler<HTMLInputElement>
+  ) => (event: React.ChangeEvent<HTMLInputElement>) => {
     if (onChange) {
-        const  [ _, identifier] = event.target.id.split(`${name}-`)
-        const newValue: { [i: string]: boolean } = {
-            ... value,
-          [identifier]: event.target.checked
-        }
-          onChange(newValue)
+      const  [ _, identifier] = event.target.id.split(`${name}-`)
+      const newValue: { [i: string]: boolean } = {
+          ... value,
+        [identifier]: event.target.checked
+      }
+      onChange(newValue)
     } else if (handleChange) {
       handleChange(event)
     }
   }
+
+const handleParentChange = (
+  selectAll: boolean,
+  value: { [i: string]: boolean },
+  options: ICheckboxSetOptionProps[],
+  onChange?: (value: { [i: string]: boolean }) => void
+) => () => {
+  if (onChange && !options.some((option) => option.isDisabled || false)) {
+    const newValue = Object.keys(value).reduce((result: { [i: string]: boolean }, key) => {
+      result[key] = !selectAll
+      return result
+    }, {})
+    onChange(newValue)
+  }
+}
+
+const getOption = (
+  value: { [i: string]: boolean },
+  option: ICheckboxSetOptionProps,
+  name: string,
+  spacing: 'normal' | 'tight',
+  useButtonStyle: boolean,
+  id?: string,
+  onChange?: (value: { [i: string]: boolean }) => void,
+  handleChange?: ChangeEventHandler<HTMLInputElement>
+) => {
+  const {
+    handleKeyDown,
+    handleBlur,
+    isDisabled,
+    isHTML5Required,
+    autoFocus,
+    componentContext,
+    className,
+    identifier
+  } = option
+
+  return (
+    <StyledCheckboxInputWrapper
+      margins={getInputMargins(spacing)}
+      key={`${name}-${identifier}`}
+    >
+      <div
+        className={classNames('checkbox-input', style.checkboxInput, className)}
+      >
+        <StyledCheckboxInput
+          id={`${id ? id : name}-${identifier}`}
+          name={name}
+          type='checkbox'
+          onChange={handleOptionsChange(value, name, onChange, handleChange)}
+          onKeyDown={handleKeyDown}
+          onBlur={handleBlur ? (e) => handleBlur(e, get(value, identifier) ? 'true' : 'false') : undefined}
+          className={getClassNames(className)}
+          disabled={isDisabled}
+          required={isHTML5Required}
+          autoFocus={autoFocus}
+          data-component-type={Props.ComponentType.CheckboxInput}
+          data-component-context={componentContext}
+          checked={get(value, identifier)}
+        />
+        {getInfoLabel(option.label, `${id ? id : name}-${option.identifier}`, name, useButtonStyle)}
+      </div>
+    </StyledCheckboxInputWrapper>
+  )
+}
+
+const CheckboxSet: React.FC<ICheckboxSetProps> = (props) => {
+  const {
+    orientation = Props.Orientation.Vertical,
+    margins,
+    parentOption,
+    name,
+    id,
+    value,
+    options,
+    spacing = 'normal',
+    useButtonStyle = false,
+    onChange,
+    handleChange
+  } = props
+
+  const selectAll = Object.values(value).every((optionValue) => optionValue)
+  if (parentOption) {
+    return (
+      <FamilyCheckboxSetWrapper
+        margins={margins}
+      >
+        <StyledCheckboxInputWrapper
+          margins={getInputMargins(spacing)}
+          key={`${name}-all`}
+        >
+          <div
+            className={classNames('checkbox-input', style.checkboxInput, parentOption.className)}
+          >
+            <StyledCheckboxInput
+              id={`${id ? id : name}-all`}
+              name={name}
+              type='checkbox'
+              onChange={handleParentChange(selectAll, value, options, onChange)}
+              onKeyDown={parentOption.handleKeyDown}
+              className={getClassNames(parentOption.className)}
+              disabled={options.some((option) => option.isDisabled ? option.isDisabled : false) || parentOption.isDisabled}
+              required={parentOption.isHTML5Required}
+              autoFocus={parentOption.autoFocus}
+              data-component-type={Props.ComponentType.CheckboxInput}
+              data-component-context={parentOption.componentContext}
+              checked={selectAll}
+              onBlur={parentOption.handleBlur ? (e) => parentOption.handleBlur!(e, selectAll ? 'true' : 'false') : undefined}
+            />
+            {getInfoLabel(parentOption.label, `${id ? id : name}-all`, name, false)}
+          </div>
+        </StyledCheckboxInputWrapper>
+        <CheckboxSetWrapper
+          orientation={orientation!}
+          margins={{ left: Variables.Spacing.sXLarge }}
+        >
+          {options.map((option) => getOption(value, option, name, spacing, useButtonStyle, id, onChange, handleChange))}
+        </CheckboxSetWrapper>
+      </FamilyCheckboxSetWrapper>
+    )
+  }
+
+  return (
+    <CheckboxSetWrapper
+      orientation={orientation!}
+      margins={margins}
+    >
+      {options.map((option) => getOption(value, option, name, spacing, useButtonStyle, id, onChange, handleChange))}
+    </CheckboxSetWrapper>
+  )
+}
+
+export {
+  CheckboxSet
 }

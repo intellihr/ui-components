@@ -8,7 +8,11 @@ interface ICheckboxSetWrapperProps {
   margins?: Props.IMargins
 }
 
-export const CheckboxSetWrapper = styled.div`
+interface IFamilyCheckboxSetWrapperProps {
+  margins?: Props.IMargins
+}
+
+const CheckboxSetWrapper = styled.div`
   display: inline-flex;
   max-width: 100%;
 
@@ -27,3 +31,12 @@ export const CheckboxSetWrapper = styled.div`
     `
 }}
 `
+
+const FamilyCheckboxSetWrapper = styled.div`
+  ${(props: IFamilyCheckboxSetWrapperProps) => styleForMargins(props.margins)}
+`
+
+export {
+  CheckboxSetWrapper,
+  FamilyCheckboxSetWrapper
+}

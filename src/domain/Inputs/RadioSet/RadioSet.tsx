@@ -25,8 +25,6 @@ export interface IRadioSetOptionProps {
   componentContext?: string
   /** Label to display next to the radio */
   label: JSX.Element | string
-  /** If true, the radio input is wrapped with a button */
-  isButton?: boolean
 }
 
 export interface IRadioSetProps {

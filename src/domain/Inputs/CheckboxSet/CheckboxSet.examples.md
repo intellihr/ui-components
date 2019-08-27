@@ -26,6 +26,34 @@ initialState = { value:{option1: true, option2: false, option3: false} };
 />
 ```
 
+#### Vertical Checkbox Set with parent
+
+```jsx
+
+initialState = { value:{family1: true, family2: false, family3: false} };
+
+<CheckboxSet
+  value={state.value}
+  name='family'
+  onChange={(value) => setState({value})}
+  parentOption={{ label:'All options'}}
+  options={[
+      {
+        label:'this is option 1',
+        identifier:'family1'
+      },
+      {
+        label:'this is option 2',
+        identifier:'family2'
+      },
+      {
+        label:'this is option 3',
+        identifier:'family3'
+      }
+    ]}
+/>
+```
+
 #### Vertical Checkbox Set with tight spacing
 
 ```jsx

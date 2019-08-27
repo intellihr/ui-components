@@ -5,7 +5,7 @@ exports[`<CheckboxSet /> should render a checkbox button set 1`] = `
   orientation="vertical"
 >
   <styled.div
-    key="key-option-1"
+    key="key-option1"
     margins={
       Object {
         "bottom": 8,
@@ -16,23 +16,24 @@ exports[`<CheckboxSet /> should render a checkbox button set 1`] = `
       className="checkbox-input checkboxInput"
     >
       <styled.input
+        checked={true}
         className="input "
         data-component-type="checkbox_input"
-        id="key-option-1"
+        id="key-option1"
         name="key"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="checkbox checkbox-button"
-        htmlFor="key-option-1"
+        htmlFor="key-option1"
       >
         123123
       </label>
     </div>
   </styled.div>
   <styled.div
-    key="key-option-2"
+    key="key-option2"
     margins={
       Object {
         "bottom": 8,
@@ -43,24 +44,25 @@ exports[`<CheckboxSet /> should render a checkbox button set 1`] = `
       className="checkbox-input checkboxInput"
     >
       <styled.input
+        checked={false}
         className="input "
         data-component-type="checkbox_input"
         disabled={true}
-        id="key-option-2"
+        id="key-option2"
         name="key"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="checkbox checkbox-button"
-        htmlFor="key-option-2"
+        htmlFor="key-option2"
       >
         this is option 2 (I am disabled)
       </label>
     </div>
   </styled.div>
   <styled.div
-    key="key-option-3"
+    key="key-option3"
     margins={
       Object {
         "bottom": 8,
@@ -71,23 +73,24 @@ exports[`<CheckboxSet /> should render a checkbox button set 1`] = `
       className="checkbox-input checkboxInput"
     >
       <styled.input
+        checked={false}
         className="input "
         data-component-type="checkbox_input"
-        id="key-option-3"
+        id="key-option3"
         name="key"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="checkbox checkbox-button"
-        htmlFor="key-option-3"
+        htmlFor="key-option3"
       >
         this is option 3
       </label>
     </div>
   </styled.div>
   <styled.div
-    key="key-option-4"
+    key="key-option4"
     margins={
       Object {
         "bottom": 8,
@@ -98,16 +101,17 @@ exports[`<CheckboxSet /> should render a checkbox button set 1`] = `
       className="checkbox-input checkboxInput"
     >
       <styled.input
+        checked={true}
         className="input "
         data-component-type="checkbox_input"
-        id="key-option-4"
+        id="key-option4"
         name="key"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="checkbox checkbox-button"
-        htmlFor="key-option-4"
+        htmlFor="key-option4"
       >
         this is option 4
       </label>
@@ -121,7 +125,7 @@ exports[`<CheckboxSet /> should render a checkbox set 1`] = `
   orientation="vertical"
 >
   <styled.div
-    key="option-option-1"
+    key="option-option1"
     margins={
       Object {
         "bottom": 8,
@@ -132,23 +136,24 @@ exports[`<CheckboxSet /> should render a checkbox set 1`] = `
       className="checkbox-input checkboxInput"
     >
       <styled.input
+        checked={true}
         className="input "
         data-component-type="checkbox_input"
-        id="option-option-1"
+        id="option-option1"
         name="option"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="checkbox"
-        htmlFor="option-option-1"
+        htmlFor="option-option1"
       >
         123123
       </label>
     </div>
   </styled.div>
   <styled.div
-    key="option-option-2"
+    key="option-option2"
     margins={
       Object {
         "bottom": 8,
@@ -159,24 +164,25 @@ exports[`<CheckboxSet /> should render a checkbox set 1`] = `
       className="checkbox-input checkboxInput"
     >
       <styled.input
+        checked={false}
         className="input "
         data-component-type="checkbox_input"
         disabled={true}
-        id="option-option-2"
+        id="option-option2"
         name="option"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="checkbox"
-        htmlFor="option-option-2"
+        htmlFor="option-option2"
       >
         this is option 2 (I am disabled)
       </label>
     </div>
   </styled.div>
   <styled.div
-    key="option-option-3"
+    key="option-option3"
     margins={
       Object {
         "bottom": 8,
@@ -187,23 +193,24 @@ exports[`<CheckboxSet /> should render a checkbox set 1`] = `
       className="checkbox-input checkboxInput"
     >
       <styled.input
+        checked={false}
         className="input "
         data-component-type="checkbox_input"
-        id="option-option-3"
+        id="option-option3"
         name="option"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="checkbox"
-        htmlFor="option-option-3"
+        htmlFor="option-option3"
       >
         this is option 3
       </label>
     </div>
   </styled.div>
   <styled.div
-    key="option-option-4"
+    key="option-option4"
     margins={
       Object {
         "bottom": 8,
@@ -214,16 +221,17 @@ exports[`<CheckboxSet /> should render a checkbox set 1`] = `
       className="checkbox-input checkboxInput"
     >
       <styled.input
+        checked={true}
         className="input "
         data-component-type="checkbox_input"
-        id="option-option-4"
+        id="option-option4"
         name="option"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="checkbox"
-        htmlFor="option-option-4"
+        htmlFor="option-option4"
       >
         this is option 4
       </label>
@@ -237,7 +245,7 @@ exports[`<CheckboxSet /> should render a checkbox set with horizontal buttons 1`
   orientation="horizontal"
 >
   <styled.div
-    key="key-option-1"
+    key="key-option1"
     margins={
       Object {
         "bottom": 8,
@@ -248,23 +256,24 @@ exports[`<CheckboxSet /> should render a checkbox set with horizontal buttons 1`
       className="checkbox-input checkboxInput"
     >
       <styled.input
+        checked={true}
         className="input "
         data-component-type="checkbox_input"
-        id="key-option-1"
+        id="key-option1"
         name="key"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="checkbox"
-        htmlFor="key-option-1"
+        htmlFor="key-option1"
       >
         123123
       </label>
     </div>
   </styled.div>
   <styled.div
-    key="key-option-2"
+    key="key-option2"
     margins={
       Object {
         "bottom": 8,
@@ -275,24 +284,25 @@ exports[`<CheckboxSet /> should render a checkbox set with horizontal buttons 1`
       className="checkbox-input checkboxInput"
     >
       <styled.input
+        checked={false}
         className="input "
         data-component-type="checkbox_input"
         disabled={true}
-        id="key-option-2"
+        id="key-option2"
         name="key"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="checkbox"
-        htmlFor="key-option-2"
+        htmlFor="key-option2"
       >
         this is option 2 (I am disabled)
       </label>
     </div>
   </styled.div>
   <styled.div
-    key="key-option-3"
+    key="key-option3"
     margins={
       Object {
         "bottom": 8,
@@ -303,23 +313,24 @@ exports[`<CheckboxSet /> should render a checkbox set with horizontal buttons 1`
       className="checkbox-input checkboxInput"
     >
       <styled.input
+        checked={false}
         className="input "
         data-component-type="checkbox_input"
-        id="key-option-3"
+        id="key-option3"
         name="key"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="checkbox"
-        htmlFor="key-option-3"
+        htmlFor="key-option3"
       >
         this is option 3
       </label>
     </div>
   </styled.div>
   <styled.div
-    key="key-option-4"
+    key="key-option4"
     margins={
       Object {
         "bottom": 8,
@@ -330,20 +341,177 @@ exports[`<CheckboxSet /> should render a checkbox set with horizontal buttons 1`
       className="checkbox-input checkboxInput"
     >
       <styled.input
+        checked={true}
         className="input "
         data-component-type="checkbox_input"
-        id="key-option-4"
+        id="key-option4"
         name="key"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="checkbox"
-        htmlFor="key-option-4"
+        htmlFor="key-option4"
       >
         this is option 4
       </label>
     </div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<CheckboxSet /> should render a checkbox set with parent 1`] = `
+<styled.div>
+  <styled.div
+    key="option-all"
+    margins={
+      Object {
+        "bottom": 8,
+      }
+    }
+  >
+    <div
+      className="checkbox-input checkboxInput"
+    >
+      <styled.input
+        checked={false}
+        className="input "
+        data-component-type="checkbox_input"
+        disabled={true}
+        id="option-all"
+        name="option"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <label
+        className="checkbox"
+        htmlFor="option-all"
+      >
+        All options
+      </label>
+    </div>
+  </styled.div>
+  <styled.div
+    margins={
+      Object {
+        "left": 32,
+      }
+    }
+    orientation="vertical"
+  >
+    <styled.div
+      key="option-option1"
+      margins={
+        Object {
+          "bottom": 8,
+        }
+      }
+    >
+      <div
+        className="checkbox-input checkboxInput"
+      >
+        <styled.input
+          checked={true}
+          className="input "
+          data-component-type="checkbox_input"
+          id="option-option1"
+          name="option"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <label
+          className="checkbox"
+          htmlFor="option-option1"
+        >
+          123123
+        </label>
+      </div>
+    </styled.div>
+    <styled.div
+      key="option-option2"
+      margins={
+        Object {
+          "bottom": 8,
+        }
+      }
+    >
+      <div
+        className="checkbox-input checkboxInput"
+      >
+        <styled.input
+          checked={false}
+          className="input "
+          data-component-type="checkbox_input"
+          disabled={true}
+          id="option-option2"
+          name="option"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <label
+          className="checkbox"
+          htmlFor="option-option2"
+        >
+          this is option 2 (I am disabled)
+        </label>
+      </div>
+    </styled.div>
+    <styled.div
+      key="option-option3"
+      margins={
+        Object {
+          "bottom": 8,
+        }
+      }
+    >
+      <div
+        className="checkbox-input checkboxInput"
+      >
+        <styled.input
+          checked={false}
+          className="input "
+          data-component-type="checkbox_input"
+          id="option-option3"
+          name="option"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <label
+          className="checkbox"
+          htmlFor="option-option3"
+        >
+          this is option 3
+        </label>
+      </div>
+    </styled.div>
+    <styled.div
+      key="option-option4"
+      margins={
+        Object {
+          "bottom": 8,
+        }
+      }
+    >
+      <div
+        className="checkbox-input checkboxInput"
+      >
+        <styled.input
+          checked={true}
+          className="input "
+          data-component-type="checkbox_input"
+          id="option-option4"
+          name="option"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <label
+          className="checkbox"
+          htmlFor="option-option4"
+        >
+          this is option 4
+        </label>
+      </div>
+    </styled.div>
   </styled.div>
 </styled.div>
 `;
@@ -353,89 +521,93 @@ exports[`<CheckboxSet /> should render a checkbox set with tight spacing 1`] = `
   orientation="vertical"
 >
   <styled.div
-    key="key-option-1"
+    key="key-option1"
   >
     <div
       className="checkbox-input checkboxInput"
     >
       <styled.input
+        checked={true}
         className="input "
         data-component-type="checkbox_input"
-        id="key-option-1"
+        id="key-option1"
         name="key"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="checkbox"
-        htmlFor="key-option-1"
+        htmlFor="key-option1"
       >
         123123
       </label>
     </div>
   </styled.div>
   <styled.div
-    key="key-option-2"
+    key="key-option2"
   >
     <div
       className="checkbox-input checkboxInput"
     >
       <styled.input
+        checked={false}
         className="input "
         data-component-type="checkbox_input"
         disabled={true}
-        id="key-option-2"
+        id="key-option2"
         name="key"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="checkbox"
-        htmlFor="key-option-2"
+        htmlFor="key-option2"
       >
         this is option 2 (I am disabled)
       </label>
     </div>
   </styled.div>
   <styled.div
-    key="key-option-3"
+    key="key-option3"
   >
     <div
       className="checkbox-input checkboxInput"
     >
       <styled.input
+        checked={false}
         className="input "
         data-component-type="checkbox_input"
-        id="key-option-3"
+        id="key-option3"
         name="key"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="checkbox"
-        htmlFor="key-option-3"
+        htmlFor="key-option3"
       >
         this is option 3
       </label>
     </div>
   </styled.div>
   <styled.div
-    key="key-option-4"
+    key="key-option4"
   >
     <div
       className="checkbox-input checkboxInput"
     >
       <styled.input
+        checked={true}
         className="input "
         data-component-type="checkbox_input"
-        id="key-option-4"
+        id="key-option4"
         name="key"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="checkbox"
-        htmlFor="key-option-4"
+        htmlFor="key-option4"
       >
         this is option 4
       </label>
