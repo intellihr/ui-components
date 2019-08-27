@@ -42,7 +42,7 @@ initialState = { startDate: null , endDate: null };
     startDatePlaceholder='Start Date'
     endDatePlaceholder='End Date'
     handleDatesChange={dates => setState({ startDate: dates.startDate, endDate: dates.endDate })}
-    disabledDateRange={day => day.isAfter(moment().startOf('month')) && day.isBefore(moment().endOf('month'))}
+    isDisabledForDate={day => day.isAfter(moment().startOf('month')) && day.isBefore(moment().endOf('month'))}
   />
 </>
 ```

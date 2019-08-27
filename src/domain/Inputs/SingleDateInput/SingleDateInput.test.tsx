@@ -27,7 +27,7 @@ describe('<SingleDateInput />', () => {
         handleChange={jest.fn()}
         name='test-date-input'
         dateFormat='DD/MM/YYYY'
-        disabledDateRange={handleDisabledDateRange}
+        isDisabledForDate={handleDisabledDateRange}
 
       />
     )

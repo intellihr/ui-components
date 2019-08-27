@@ -25,7 +25,7 @@ initialState = { value: null};
     value={state.value}
     handleChange={date => setState({ value: date })}
     name='test-date-picker-disable-range'
-    disabledDateRange={day => day.isAfter(moment().startOf('month')) && day.isBefore(moment().endOf('month'))}
+    isDisabledForDate={day => day.isAfter(moment().startOf('month')) && day.isBefore(moment().endOf('month'))}
   />
 </div>
 ```

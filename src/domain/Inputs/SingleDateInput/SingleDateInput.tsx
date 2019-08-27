@@ -31,7 +31,7 @@ interface ISingleDateInputProps {
   /** Value for the input (Note: in redux, this must be a moment object - strings are invalid) */
   value: Moment | null
   /** Disable for the calender (Return true for disabled date) */
-  disabledDateRange?: (day: Moment) => boolean
+  isDisabledForDate?: (day: Moment) => boolean
 }
 
 interface ISingleDateInputState {
@@ -58,7 +58,7 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
       isMobile,
       value,
       placeholder,
-      disabledDateRange
+      isDisabledForDate
     } = this.props
 
     return (
@@ -75,7 +75,7 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
           focused={this.state.focused}
           onDateChange={this.handleDateChange}
           onFocusChange={this.handleFocusChange}
-          isOutsideRange={disabledDateRange ? disabledDateRange : this.handleDisabledDateRange}
+          isOutsideRange={isDisabledForDate ? isDisabledForDate : this.handleDisabledDateRange}
           renderMonthText={this.renderMonthText}
           noBorder
           block

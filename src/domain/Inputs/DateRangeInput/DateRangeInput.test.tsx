@@ -49,7 +49,7 @@ describe('<DateRangeInput />', () => {
         startDatePlaceholder='Start Date'
         endDatePlaceholder='End Date'
         handleDatesChange={dummyClick}
-        disabledDateRange={handleDisabledDateRange}
+        isDisabledForDate={handleDisabledDateRange}
       />
     )
 
