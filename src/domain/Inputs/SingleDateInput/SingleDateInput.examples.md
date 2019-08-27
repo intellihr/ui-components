@@ -20,7 +20,7 @@ import moment from 'moment'
 initialState = { value: null};
 
 <div>
-  Disable date in current month
+  Disable current month
   <SingleDateInput 
     value={state.value}
     handleChange={date => setState({ value: date })}

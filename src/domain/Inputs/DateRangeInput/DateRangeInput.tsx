@@ -32,6 +32,8 @@ interface IDateRangeInputProps {
   isMobile?: boolean
   /** Change handler called when the date is changed */
   handleDatesChange: (dates: { startDate: Moment | null, endDate: Moment | null }) => void
+  /** Disable for the calender (Return true for disabled date) */
+  disabledDateRange?: (day: Moment) => boolean
 }
 
 interface IDateRangeInputState {
@@ -59,7 +61,8 @@ class DateRangeInput extends React.PureComponent<IDateRangeInputProps, IDateRang
       endDate,
       startDatePlaceholder,
       endDatePlaceholder,
-      dateFormat
+      dateFormat,
+      disabledDateRange
     } = this.props
 
     return (
@@ -83,7 +86,7 @@ class DateRangeInput extends React.PureComponent<IDateRangeInputProps, IDateRang
           showClearDates
           customArrowIcon={<Text color={Variables.Color.n600} weight={Variables.FontWeight.fwSemiBold}>→</Text>}
           customCloseIcon={<span>×</span>}
-          isOutsideRange={this.disabledDateRange}
+          isOutsideRange={disabledDateRange ? disabledDateRange : this.handleDisabledDateRange}
           hideKeyboardShortcutsPanel
           renderMonthText={this.renderMonthText}
           navPrev={(
@@ -126,7 +129,7 @@ class DateRangeInput extends React.PureComponent<IDateRangeInputProps, IDateRang
     handleDatesChange(dates)
   }
 
-  private disabledDateRange = () => false
+  private handleDisabledDateRange = () => false
 
   private renderMonthText = (day: Moment) => moment(day).format('MMM YYYY')
 

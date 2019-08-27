@@ -236,7 +236,7 @@ exports[`<SingleDateInput /> should render a single date input 1`] = `
 </div>
 `;
 
-exports[`<SingleDateInput /> should render a single date input with disable date choice 1`] = `
+exports[`<SingleDateInput /> should render a single date input with disable date choices 1`] = `
 <div
   className="singleDatePickerOverrides"
 >

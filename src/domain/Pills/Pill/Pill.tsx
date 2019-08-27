@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { Props } from '../../../common'
 import { StyledPill } from './style'
 

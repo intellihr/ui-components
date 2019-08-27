@@ -18,7 +18,7 @@ describe('<SingleDateInput />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should render a single date input with disable date choice', () => {
+  it('should render a single date input with disable date choices', () => {
     const handleDisabledDateRange = (day: Moment) => day.isAfter(moment('2018-12-31T14:00:00+00:00'))
 
     const wrapper = shallow(

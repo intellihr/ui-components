@@ -76,12 +76,12 @@ const StyledPill = styled.span`
   line-height: 14px;
   padding: 4px 8px;
   white-space: nowrap;
-  
+
   ${(props: IStyledPillProps) => props.size === 'medium' && css `
     font-size: ${Variables.FontSize.fzSmall}px;
     line-height: 16px;
   `}
- 
+
   ${(props: IStyledPillProps) => props.size === 'large' && css `
     font-size: ${Variables.FontSize.fzBody}px;
     line-height: 18px;
