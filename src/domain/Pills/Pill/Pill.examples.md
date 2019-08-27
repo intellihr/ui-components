@@ -77,11 +77,30 @@
 />
 ```
 
+#### Margin support
+
+```jsx
+<div>
+  <Pill
+    text='Alert!!!'
+    color='alert'
+    margins={{
+      top: 20,
+      left: 20,
+      right: 20,
+      bottom: 20
+    }}
+  />
+</div>
+```
+
 #### Legacy pills
 
 For backwards compatibility, a legacy `label` className is provided to be used without javascript.
 
 ```jsx
+
+
 <div>
   <span className='label primary'>Primary</span>
   <span className='label'>No class = neutral</span>

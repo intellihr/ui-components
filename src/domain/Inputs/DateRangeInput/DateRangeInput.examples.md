@@ -27,6 +27,26 @@ initialState = { startDate: null , endDate: null };
 />
 ```
 
+#### Date Range Input with disable date choice
+```jsx
+import moment from 'moment'
+
+initialState = { startDate: null , endDate: null };
+
+<>
+  Disable current month
+  <DateRangeInput
+    name='test-date-picker3'
+    startDate={state.startDate}
+    endDate={state.endDate}
+    startDatePlaceholder='Start Date'
+    endDatePlaceholder='End Date'
+    handleDatesChange={dates => setState({ startDate: dates.startDate, endDate: dates.endDate })}
+    isDisabledForDate={day => day.isAfter(moment().startOf('month')) && day.isBefore(moment().endOf('month'))}
+  />
+</>
+```
+
 ##### isDisabled
 
 ```jsx
@@ -36,7 +56,7 @@ initialState = { startDate: moment() , endDate: moment() };
 
 <DateRangeInput
   isDisabled
-  name='test-date-picker2'
+  name='test-date-picker4'
   startDate={state.startDate}
   endDate={state.endDate}
   startDatePlaceholder='Start Date'
@@ -54,7 +74,7 @@ initialState = { startDate: moment() , endDate: moment() };
 
 <DateRangeInput
   isInvalid
-  name='test-date-picker3'
+  name='test-date-picker5'
   startDate={state.startDate}
   endDate={state.endDate}
   startDatePlaceholder='Start Date'
@@ -70,7 +90,7 @@ initialState = { startDate: null , endDate: null };
 
 <DateRangeInput
   isMobile
-  name='test-date-picker4'
+  name='test-date-picker6'
   startDate={state.startDate}
   endDate={state.endDate}
   startDatePlaceholder='Start Date'

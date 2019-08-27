@@ -1,17 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Pill /> should render a pill 1`] = `
-<span
-  className="pill alert small"
+<styled.span
+  color="alert"
+  size="small"
 >
   Test
-</span>
+</styled.span>
 `;
 
 exports[`<Pill /> should render a pill with default values 1`] = `
-<span
-  className="pill neutral small"
+<styled.span
+  color="neutral"
+  size="small"
 >
   Test
-</span>
+</styled.span>
 `;

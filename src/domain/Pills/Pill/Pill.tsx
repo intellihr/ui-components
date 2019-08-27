@@ -1,42 +1,39 @@
-import classNames from 'classnames'
 import React from 'react'
 
-const style = require('./style.scss')
+import { Props } from '../../../common'
+import { StyledPill } from './style'
 
-export interface IPillProps {
+type PillColors = 'alert' | 'success' | 'warning' | 'primary' | 'neutral' | 'secondary' | 'highlight' | 'dark'
+
+type PillSizes = 'small' | 'medium' | 'large'
+
+interface IPillProps {
   /** Text to show inside the label  */
   text: string
-
   /** Extra classes to apply to the label  */
   className?: string
-
   /** Background or border colour of the label  */
-  color?: 'alert' | 'success' | 'warning' | 'primary' | 'neutral' | 'secondary' | 'highlight' | 'dark'
-
+  color?: PillColors
   /** size of the label  */
-  size?: 'small' | 'medium' | 'large'
+  size?: PillSizes
+  /** The margins around the component */
+  margins?: Props.IMargins
 }
 
-export class Pill extends React.Component<IPillProps> {
-  public static defaultProps = {
-    color: 'neutral',
-    size: 'small'
-  }
+const Pill: React.FC<IPillProps> = ({color = 'neutral', size = 'small', text, className, margins}) => (
+  <StyledPill
+    className={className}
+    size={size!}
+    color={color!}
+    margins={margins}
+  >
+    {text}
+  </StyledPill>
+)
 
-  public render (): JSX.Element {
-    const {
-      text,
-      color,
-      size,
-      className
-    } = this.props
-
-    return (
-      <span
-        className={classNames(style.pill, className, color, size)}
-      >
-        {text}
-      </span>
-    )
-  }
+export {
+  IPillProps,
+  Pill,
+  PillColors,
+  PillSizes
 }
