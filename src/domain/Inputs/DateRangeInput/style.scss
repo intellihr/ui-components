@@ -27,6 +27,15 @@
       background-color: $n250;
       color: $n800;
       font-weight: $fw-semi-bold;
+
+      .CalendarDay__blocked_out_of_range {
+        background-color: $n200;
+        color: $n600;
+      }
+    }
+
+    .CalendarDay__blocked_out_of_range {
+      cursor: not-allowed;
     }
 
     // the range of dates when user are picking the dates

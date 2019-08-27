@@ -1,5 +1,5 @@
 import { shallow } from 'enzyme'
-import moment from 'moment'
+import moment, { Moment } from 'moment'
 import React from 'react'
 
 import { SingleDateInput } from './SingleDateInput'
@@ -12,6 +12,23 @@ describe('<SingleDateInput />', () => {
         handleChange={jest.fn()}
         name='test-date-input'
         dateFormat='DD/MM/YYYY'
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should render a single date input with disable date choices', () => {
+    const handleDisabledDateRange = (day: Moment) => day.isAfter(moment('2018-12-31T14:00:00+00:00'))
+
+    const wrapper = shallow(
+      <SingleDateInput
+        value={moment('2018-12-31T14:00:00+00:00')}
+        handleChange={jest.fn()}
+        name='test-date-input'
+        dateFormat='DD/MM/YYYY'
+        isDisabledForDate={handleDisabledDateRange}
+
       />
     )
 
