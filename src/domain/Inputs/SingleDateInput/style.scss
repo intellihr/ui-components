@@ -29,6 +29,16 @@
       font-weight: $fw-semi-bold;
     }
 
+    .CalendarDay__blocked_out_of_range {
+      background-color: transparent;
+      cursor: not-allowed;
+    }
+
+    .CalendarDay__today.CalendarDay__blocked_out_of_range{
+      background-color: $n200;
+      color: $n600;
+    }
+
     // Will edit everything selected including everything between a range of dates
     .CalendarDay__selected_span {
       background: $i400; //background

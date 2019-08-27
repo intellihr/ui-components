@@ -13,6 +13,22 @@ initialState = { value: moment() };
 </div>
 ```
 
+#### Single Date Input with disable date choice
+```jsx
+import moment from 'moment'
+
+initialState = { value: null};
+
+<div>
+  Disable date in current month
+  <SingleDateInput 
+    value={state.value}
+    handleChange={date => setState({ value: date })}
+    name='test-date-picker-disable-range'
+    disabledDateRange={day => day.isAfter(moment().startOf('month')) && day.isBefore(moment().endOf('month'))}
+  />
+</div>
+```
 
 ##### isDisabled
 
@@ -33,6 +49,7 @@ initialState = { value: moment() };
   dateFormat='DD/MM/YYYY'
 />
 ```
+
 
 ##### Wrapped with InputGroup
 ```jsx
