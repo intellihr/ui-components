@@ -13,7 +13,7 @@ type ColorOptions = {
   [K in HighLightAreaColors]: IColorOption
 }
 
-const ColorOptions: ColorOptions = {
+const colorOptions: ColorOptions = {
   grey: {
     border: Variables.Color.n400,
     background: Variables.Color.n150
@@ -25,8 +25,8 @@ const ColorOptions: ColorOptions = {
 }
 
 const StyledHighlightArea = styled.div<IHighlightAreaProps>`
-  border: 1px solid ${ (props: IHighlightAreaProps) => ColorOptions[props.color].border};
-  background-color: ${(props: IHighlightAreaProps) => ColorOptions[props.color].background};
+  border: 1px solid ${ (props: IHighlightAreaProps) => colorOptions[props.color].border};
+  background-color: ${(props: IHighlightAreaProps) => colorOptions[props.color].background};
   padding: ${Variables.Spacing.sMedium}px;
   border-radius: ${Variables.Style.borderRadius}px;
   ${(props: IHighlightAreaProps) => styleForMargins(props.margins)}

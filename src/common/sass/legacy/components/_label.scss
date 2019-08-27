@@ -1,4 +1,4 @@
-@import '../../../common/sass/variables';
+@import '../../../../common/sass/variables';
 
 $pill-styles: (
   primary: (
@@ -53,7 +53,11 @@ $pill-styles: (
   color: $text-color;
 }
 
-%pill {
+// --------------
+// Legacy global pill (label) class for non-javascript support
+// --------------
+// sass-lint:disable placeholder-in-extend
+.label {
   border-radius: 32px;
   display: inline-block;
   font-size: $fz-xsmall;
@@ -65,9 +69,9 @@ $pill-styles: (
   @each $color, $value in $pill-styles {
     &.#{$color} {
       @include pill-color(
-        map-get($value, text-color),
-        map-get($value, background-color),
-        map-get($value, border-color)
+          map-get($value, text-color),
+          map-get($value, background-color),
+          map-get($value, border-color)
       );
     }
   }
@@ -82,19 +86,6 @@ $pill-styles: (
     line-height: 18px;
     padding: 4px 12px;
   }
-
-}
-
-:local(.pill) {
-  @extend %pill;
-}
-
-// --------------
-// Legacy global pill (label) class for non-javascript support
-// --------------
-// sass-lint:disable placeholder-in-extend
-.label {
-  @extend %pill;
 
   // Neutral by default
   @extend .neutral;

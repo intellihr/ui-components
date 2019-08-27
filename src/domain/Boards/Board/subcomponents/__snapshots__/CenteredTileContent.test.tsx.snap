@@ -11,7 +11,6 @@ exports[`<CenteredTileContent /> should render a centerd tile with an icon inste
     <styled.div>
       <Pill
         color="success"
-        size="small"
         text="Testing a pill component"
       />
     </styled.div>
