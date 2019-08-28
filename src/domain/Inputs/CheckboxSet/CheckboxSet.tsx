@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import { get } from 'lodash'
-import React, { ChangeEventHandler } from 'react'
+import React from 'react'
 
 import { Props, Variables } from '../../../common'
 import { StyledCheckboxInput, StyledCheckboxInputWrapper } from '../CheckboxInput/style'
@@ -54,7 +54,7 @@ export interface ICheckboxSetProps {
   /** Array of options to display in the list */
   options: ICheckboxSetOptionProps[]
   /** Function passed to `onChange` prop */
-  handleChange?: ChangeEventHandler<HTMLInputElement>
+  handleChange?: (value: { [i: string]: boolean }) => void
   /** Called when the input is changed */
   onChange?: (value: { [i: string]: boolean }) => void
   /** Specify the orientation of the checkbox group */
@@ -107,36 +107,38 @@ const handleOptionsChange = (
   value: { [i: string]: boolean },
   name: string,
   onChange?: (value: { [i: string]: boolean }) => void,
-  handleChange?: ChangeEventHandler<HTMLInputElement>
+  handleChange?: (value: { [i: string]: boolean }) => void
   ) => (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (onChange) {
-      const  [ _, identifier] = event.target.id.split(`${name}-`)
-      const newValue: { [i: string]: boolean } = {
-          ... value,
-        [identifier]: event.target.checked
-      }
-      onChange(newValue)
-    } else if (handleChange) {
-      handleChange(event)
-    }
+  const  [ _, identifier] = event.target.id.split(`${name}-`)
+  const newValue: { [i: string]: boolean } = {
+    ... value,
+    [identifier]: event.target.checked
   }
+  if (onChange) {
+    onChange(newValue)
+  }
+  if (handleChange) {
+    handleChange(newValue)
+  }
+}
 
 const handleParentChange = (
   selectAll: boolean,
   value: { [i: string]: boolean },
   options: ICheckboxSetOptionProps[],
   onChange?: (value: { [i: string]: boolean }) => void,
-  handleChange?: ChangeEventHandler<HTMLInputElement>
-) => (event: React.ChangeEvent<HTMLInputElement>) => {
+  handleChange?: (value: { [i: string]: boolean }) => void
+) => () => {
   if (!options.some((option) => option.isDisabled || false)) {
+    const newValue = Object.keys(value).reduce((result: { [i: string]: boolean }, key) => {
+      result[key] = !selectAll
+      return result
+    }, {})
     if (onChange) {
-      const newValue = Object.keys(value).reduce((result: { [i: string]: boolean }, key) => {
-        result[key] = !selectAll
-        return result
-      }, {})
       onChange(newValue)
-    } else if (handleChange) {
-      handleChange(event)
+    }
+    if (handleChange) {
+      handleChange(newValue)
     }
   }
 }
@@ -149,7 +151,7 @@ const getOption = (
   useButtonStyle: boolean,
   id?: string,
   onChange?: (value: { [i: string]: boolean }) => void,
-  handleChange?: ChangeEventHandler<HTMLInputElement>
+  handleChange?: (value: { [i: string]: boolean }) => void
 ) => {
   const {
     handleKeyDown,
@@ -252,7 +254,7 @@ const CheckboxSet: React.FC<ICheckboxSetProps> = (props) => {
       orientation={orientation!}
       margins={margins}
     >
-      {options.map((option) => getOption(value, option, name, spacing, useButtonStyle, id, onChange, handleChange))}
+      {options.map((option) => getOption(value, option, name, spacing, useButtonStyle, id, onChange,  handleChange))}
     </CheckboxSetWrapper>
   )
 }
