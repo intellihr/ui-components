@@ -125,14 +125,19 @@ const handleParentChange = (
   selectAll: boolean,
   value: { [i: string]: boolean },
   options: ICheckboxSetOptionProps[],
-  onChange?: (value: { [i: string]: boolean }) => void
-) => () => {
-  if (onChange && !options.some((option) => option.isDisabled || false)) {
-    const newValue = Object.keys(value).reduce((result: { [i: string]: boolean }, key) => {
-      result[key] = !selectAll
-      return result
-    }, {})
-    onChange(newValue)
+  onChange?: (value: { [i: string]: boolean }) => void,
+  handleChange?: ChangeEventHandler<HTMLInputElement>
+) => (event: React.ChangeEvent<HTMLInputElement>) => {
+  if (!options.some((option) => option.isDisabled || false)) {
+    if (onChange) {
+      const newValue = Object.keys(value).reduce((result: { [i: string]: boolean }, key) => {
+        result[key] = !selectAll
+        return result
+      }, {})
+      onChange(newValue)
+    } else if (handleChange) {
+      handleChange(event)
+    }
   }
 }
 
@@ -218,7 +223,7 @@ const CheckboxSet: React.FC<ICheckboxSetProps> = (props) => {
               id={`${id ? id : name}-all`}
               name={name}
               type='checkbox'
-              onChange={handleParentChange(selectAll, value, options, onChange)}
+              onChange={handleParentChange(selectAll, value, options, onChange, handleChange)}
               onKeyDown={parentOption.handleKeyDown}
               className={getClassNames(parentOption.className)}
               disabled={options.some((option) => option.isDisabled ? option.isDisabled : false) || parentOption.isDisabled}
