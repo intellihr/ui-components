@@ -83,6 +83,7 @@ const CarouselList = styled.ul`
 `
 
 const CarouselTile = styled.div`
+  overflow: hidden;
   display: inline-block;
   width: 200px;
   height: 90px;
