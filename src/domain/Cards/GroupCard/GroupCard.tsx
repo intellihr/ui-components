@@ -1,6 +1,7 @@
 import React from 'react'
 
-import { Props, Variables } from '../../../common'
+import { Props } from '../../../common'
+import { CardColors } from '../Card/Card'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { DropdownMenu, IDropdownMenuToggleComponentProps } from '../../Popovers/DropdownMenu'
 import { ISectionProps } from '../../Popovers/DropdownMenu/subcomponents/Section'
@@ -40,6 +41,8 @@ interface IGroupCardProps {
   componentContext?: string
   /** dropwon sections to show in the cards action button dropdown */
   dropdownSections?: ISectionProps[]
+  /** Background color of the card */
+  color?: CardColors
 }
 
 interface IGroupCardState {

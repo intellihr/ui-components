@@ -17,6 +17,8 @@ import {
   StyledExtraContent
 } from './style'
 
+type CardColors = 'neutral' | 'orange'
+
 interface ICardProps {
   /** the component that shows even in collapse mode */
   mainContent: JSX.Element
@@ -34,6 +36,8 @@ interface ICardProps {
   componentContext?: string
   /** If the card should have a hover style */
   isHoverable?: boolean
+  /** Background color of the card */
+  color?: CardColors
 }
 
 interface ICardState {
@@ -43,7 +47,8 @@ interface ICardState {
 
 class Card extends React.PureComponent<ICardProps, ICardState> {
   public static defaultProps: Partial<ICardProps> = {
-    isHoverable: false
+    isHoverable: false,
+    color: 'neutral'
   }
 
   public state: ICardState = {
@@ -58,7 +63,8 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
       componentContext,
       margins,
       onCardToggle,
-      isHoverable
+      isHoverable,
+      color
     } = this.props
 
     return (
@@ -66,18 +72,20 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
         margins={margins}
         data-component-type={Props.ComponentType.Card}
         data-component-context={componentContext}
+        color={color!}
       >
         <StyledCardHeader
           onClick={this.handleCardToggle}
           isExpanded={this.isExpanded && !!extraContent}
           hasHoverStyle={!this.state.isActionButtonHover && (!!extraContent || !!onCardToggle || isHoverable!)}
+          color={color!}
         >
           <StyledPrimaryContent>{mainContent}</StyledPrimaryContent>
           {this.actionButtonDropdownMenu}
           {this.toggleButton}
         </StyledCardHeader>
         {extraContent && (
-          <StyledExtraContent isExpanded={this.isExpanded}>
+          <StyledExtraContent isExpanded={this.isExpanded} color={color!}>
             <StyledBodyContents>
               {extraContent}
             </StyledBodyContents>
@@ -127,6 +135,7 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
       onMouseOut={this.handleActionButtonMouseOut}
       ref={toggleComponentRef}
       hasRightMargin={!!this.props.extraContent}
+      color={this.props.color!}
       {...ariaProps}
     >
       <FontAwesomeIcon type='solid' icon='ellipsis-v' />
@@ -135,12 +144,13 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
 
   private get toggleButton (): JSX.Element | undefined {
     const {
-      extraContent
+      extraContent,
+      color
     } = this.props
 
     if (extraContent) {
       return (
-        <StyledCardToggleButton isExpanded={this.isExpanded} hasParentHoverStyle={!this.state.isActionButtonHover}>
+        <StyledCardToggleButton isExpanded={this.isExpanded} hasParentHoverStyle={!this.state.isActionButtonHover} color={color!}>
           <ChevronIconWrapper>
             <FontAwesomeIcon type='solid' icon='chevron-down' />
           </ChevronIconWrapper>
@@ -164,5 +174,6 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
 }
 
 export {
-  Card
+  Card,
+  CardColors
 }
