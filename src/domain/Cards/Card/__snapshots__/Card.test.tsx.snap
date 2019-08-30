@@ -2,9 +2,11 @@
 
 exports[`<Card /> should render a ard with dropdownSections only 1`] = `
 <styled.div
+  color="neutral"
   data-component-type="card"
 >
   <Styled(styled.div)
+    color="neutral"
     hasHoverStyle={true}
     isExpanded={false}
     onClick={[Function]}
@@ -36,9 +38,11 @@ exports[`<Card /> should render a ard with dropdownSections only 1`] = `
 
 exports[`<Card /> should render a card with main content and dropdownSections  1`] = `
 <styled.div
+  color="neutral"
   data-component-type="card"
 >
   <Styled(styled.div)
+    color="neutral"
     hasHoverStyle={true}
     isExpanded={false}
     onClick={[Function]}
@@ -65,6 +69,7 @@ exports[`<Card /> should render a card with main content and dropdownSections  1
       toggleComponent={[Function]}
     />
     <styled.button
+      color="neutral"
       hasParentHoverStyle={true}
       isExpanded={false}
     >
@@ -77,6 +82,7 @@ exports[`<Card /> should render a card with main content and dropdownSections  1
     </styled.button>
   </Styled(styled.div)>
   <styled.div
+    color="neutral"
     isExpanded={false}
   >
     <styled.div>
@@ -90,9 +96,11 @@ exports[`<Card /> should render a card with main content and dropdownSections  1
 
 exports[`<Card /> should render a card with main content only 1`] = `
 <styled.div
+  color="neutral"
   data-component-type="card"
 >
   <Styled(styled.div)
+    color="neutral"
     hasHoverStyle={true}
     isExpanded={false}
     onClick={[Function]}
@@ -103,6 +111,7 @@ exports[`<Card /> should render a card with main content only 1`] = `
       </div>
     </styled.div>
     <styled.button
+      color="neutral"
       hasParentHoverStyle={true}
       isExpanded={false}
     >
@@ -115,6 +124,7 @@ exports[`<Card /> should render a card with main content only 1`] = `
     </styled.button>
   </Styled(styled.div)>
   <styled.div
+    color="neutral"
     isExpanded={false}
   >
     <styled.div>
@@ -128,9 +138,11 @@ exports[`<Card /> should render a card with main content only 1`] = `
 
 exports[`<Card /> should render a card without main content and dropdownSections 1`] = `
 <styled.div
+  color="neutral"
   data-component-type="card"
 >
   <Styled(styled.div)
+    color="neutral"
     hasHoverStyle={true}
     isExpanded={false}
     onClick={[Function]}

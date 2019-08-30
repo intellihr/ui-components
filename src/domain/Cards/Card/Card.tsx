@@ -70,9 +70,9 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
     return (
       <StyledCard
         margins={margins}
+        color={color!}
         data-component-type={Props.ComponentType.Card}
         data-component-context={componentContext}
-        color={color!}
       >
         <StyledCardHeader
           onClick={this.handleCardToggle}

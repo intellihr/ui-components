@@ -1,7 +1,6 @@
 import React from 'react'
 
 import { Props } from '../../../common'
-import { CardColors } from '../Card/Card'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { DropdownMenu, IDropdownMenuToggleComponentProps } from '../../Popovers/DropdownMenu'
 import { ISectionProps } from '../../Popovers/DropdownMenu/subcomponents/Section'
@@ -10,6 +9,7 @@ import {
   StyledFlexContent,
   StyledPrimaryContent
 } from '../services/style'
+import { CardColors } from '../Card/Card'
 import {
   StyledBodyActionButton,
   StyledBodyContent,
@@ -50,6 +50,10 @@ interface IGroupCardState {
 }
 
 class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
+  public static defaultProps: Partial<IGroupCardProps> = {
+    color: 'neutral'
+  }
+
   public state: IGroupCardState = {
     isExpanded: false
   }
@@ -60,12 +64,14 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
       bodyContents,
       componentContext,
       dropdownSections,
-      margins
+      margins,
+      color
     } = this.props
 
     return (
       <StyledGroupCard
         margins={margins}
+        color={color!}
         data-component-type={Props.ComponentType.GroupCard}
         data-component-context={componentContext}
       >
@@ -73,6 +79,7 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
           onClick={this.handleCardToggle}
           isExpanded={this.isExpanded && !!bodyContents}
           hasHoverStyle={!!bodyContents}
+          color={color!}
         >
           <StyledFlexContent>
             <StyledPrimaryContent>{headingContent}</StyledPrimaryContent>
@@ -102,12 +109,13 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
 
   private get bodyContentCards (): JSX.Element | undefined {
     const {
-      bodyContents
+      bodyContents,
+      color
     } = this.props
 
     if (bodyContents) {
       return (
-        <StyledGroupExtraCard isExpanded={this.isExpanded}>
+        <StyledGroupExtraCard isExpanded={this.isExpanded} color={color!}>
           <StyledBodyContents>
             {bodyContents.map(this.bodyContent)}
           </StyledBodyContents>
@@ -118,12 +126,13 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
 
   private get toggleButton (): JSX.Element | undefined {
     const {
-      bodyContents
+      bodyContents,
+      color
     } = this.props
 
     if (bodyContents) {
       return (
-        <StyledGroupCardToggleButton isExpanded={this.isExpanded}>
+        <StyledGroupCardToggleButton isExpanded={this.isExpanded} color={color!}>
           <ChevronIconWrapper>
             <FontAwesomeIcon type='solid' icon='chevron-down' />
           </ChevronIconWrapper>
@@ -172,6 +181,7 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
       onClick={this.handleActionButtonClick(toggleMenu)}
       ref={toggleComponentRef}
       hasRightMargin={!!this.props.bodyContents}
+      color={this.props.color!}
       {...ariaProps}
     >
       <FontAwesomeIcon type='solid' icon='ellipsis-v' />

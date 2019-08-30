@@ -1,9 +1,10 @@
 import styled, { css } from 'styled-components'
 
-import { CardColors } from './Card'
 import { Props, Utils, Variables } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
+import { colorOptions } from '../services/colors'
 import { cardButtonStyle, cardCollpaseAnimation, cardExpandAnimation } from '../services/style'
+import { CardColors } from './Card'
 
 import {
   StyledFlexContent
@@ -36,35 +37,6 @@ interface IStyledCardHeader {
   color: CardColors
 }
 
-interface IColorOption {
-  border: Variables.Color
-  background: Variables.Color
-  hoverBackground: Variables.Color
-  extraContentBackground: Variables.Color
-  hoverButtonBackground: Variables.Color
-}
-
-type ColorOptions = {
-  [K in CardColors]: IColorOption
-}
-
-const colorOptions: ColorOptions = {
-  neutral: {
-    border: Variables.Color.n250,
-    background: Variables.Color.n100,
-    hoverBackground: Variables.Color.n200,
-    extraContentBackground: Variables.Color.n150,
-    hoverButtonBackground: Variables.Color.n300
-  },
-  orange: {
-    border: Variables.Color.n250,
-    background: Variables.Color.o100,
-    hoverBackground: Variables.Color.o200,
-    extraContentBackground: Variables.Color.o100,
-    hoverButtonBackground: Variables.Color.o300
-  }
-}
-
 const StyledCard = styled.div`
   margin: 0;
 
@@ -81,7 +53,7 @@ const StyledCardHeader = styled(StyledFlexContent)`
       cursor: pointer;
 
       &:hover {
-        background-color: ${(props: IStyledCardHeader) => colorOptions[props.color].hoverBackground};
+        background-color: ${colorOptions[props.color].hoverBackground};
         transition: background-color .25s ease-out;
       }
   `}
