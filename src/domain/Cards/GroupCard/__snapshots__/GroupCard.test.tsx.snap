@@ -2,9 +2,11 @@
 
 exports[`<GroupCard /> should render a group card with body contents and  their actions  1`] = `
 <styled.div
+  color="neutral"
   data-component-type="group_card"
 >
   <styled.div
+    color="neutral"
     hasHoverStyle={true}
     isExpanded={false}
     onClick={[Function]}
@@ -16,6 +18,7 @@ exports[`<GroupCard /> should render a group card with body contents and  their 
         </div>
       </styled.div>
       <styled.button
+        color="neutral"
         isExpanded={false}
       >
         <styled.span>
@@ -28,6 +31,7 @@ exports[`<GroupCard /> should render a group card with body contents and  their 
     </styled.div>
   </styled.div>
   <styled.div
+    color="neutral"
     isExpanded={false}
   >
     <styled.div>
@@ -82,9 +86,11 @@ exports[`<GroupCard /> should render a group card with body contents and  their 
 
 exports[`<GroupCard /> should render a group card without body contents 1`] = `
 <styled.div
+  color="neutral"
   data-component-type="group_card"
 >
   <styled.div
+    color="neutral"
     hasHoverStyle={false}
     isExpanded={false}
     onClick={[Function]}

@@ -2,46 +2,55 @@ import styled, { css } from 'styled-components'
 
 import { Props, Utils, Variables } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
+import { colorOptions } from '../services/colors'
 import { cardButtonStyle, cardCollpaseAnimation, cardExpandAnimation } from '../services/style'
+import { CardColors } from '../Card/Card'
 
 interface IStyleActionButtonProps {
   hasRightMargin: boolean
+  color: CardColors
 }
 
 interface IStyledGroupExtraCardProps {
   isExpanded: boolean
+  color: CardColors
 }
 
 interface IStyledGroupMainCardProps {
-  isExpanded: boolean,
-  hasHoverStyle: boolean,
+  isExpanded: boolean
+  hasHoverStyle: boolean
   margins?: Props.IMargins
+  color: CardColors
 }
 
 interface IStyledGroupCardToggleButtonProps {
   isExpanded: boolean
+  color: CardColors
 }
 
 interface IStyledGroupCardProps {
   margins?: Props.IMargins
+  color: CardColors
 }
 
 const StyledGroupCard = styled.div`
   margin: 0;
   ${(props: IStyledGroupCardProps) => styleForMargins(props.margins)}
+
+  background-color: ${(props: IStyledGroupCardProps) => colorOptions[props.color].background};
 `
 
 const StyledGroupMainCard = styled.div`
   margin: 0;
   padding: ${Variables.Spacing.sMedium}px;
-  border: 1px solid ${Variables.Color.n250};
+  border: 1px solid ${(props: IStyledGroupMainCardProps) => colorOptions[props.color].border};
   border-radius: ${Variables.Style.borderRadius}px;
 
   ${(props: IStyledGroupMainCardProps) => props.hasHoverStyle && css`
       cursor: pointer;
 
       &:hover {
-        background-color: ${Variables.Color.n200};
+        background-color: ${colorOptions[props.color].hoverBackground};
         transition: background-color .25s ease-out;
       }
   `}
@@ -62,7 +71,7 @@ const StyledGroupCardToggleButton = styled.button<IStyledGroupCardToggleButtonPr
 
   ${StyledGroupMainCard}:hover & {
     color: ${Variables.Color.n800};
-    background-color: ${Variables.Color.n300};
+    background-color: ${(props: IStyledGroupCardToggleButtonProps) => colorOptions[props.color].hoverButtonBackground};
     transition: all .25s ease-out;
   }
 
@@ -73,6 +82,11 @@ const StyledGroupCardToggleButton = styled.button<IStyledGroupCardToggleButtonPr
 
 const StyledBodyActionButton = styled.button`
   ${cardButtonStyle};
+
+  &:hover {
+    background-color: ${(props: IStyleActionButtonProps) => colorOptions[props.color].hoverButtonBackground};
+  }
+
   ${(props: IStyleActionButtonProps) => props.hasRightMargin && css`
       margin-right: ${Variables.Spacing.sMedium}px;
   `}
@@ -87,7 +101,7 @@ const StyledGroupExtraCard = styled.div`
   max-height: 0;
   overflow: hidden;
   transition: max-height .5s;
-  background-color: ${Variables.Color.n150};
+  background-color: ${(props: IStyledGroupExtraCardProps) => colorOptions[props.color].extraContentBackground};
   ${cardCollpaseAnimation}
 
   ${(props: IStyledGroupExtraCardProps) => props.isExpanded && css`

@@ -2,7 +2,9 @@ import styled, { css } from 'styled-components'
 
 import { Props, Utils, Variables } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
+import { colorOptions } from '../services/colors'
 import { cardButtonStyle, cardCollpaseAnimation, cardExpandAnimation } from '../services/style'
+import { CardColors } from './Card'
 
 import {
   StyledFlexContent
@@ -10,24 +12,29 @@ import {
 
 interface IStyledExtraContentProps {
   isExpanded: boolean
+  color: CardColors
 }
 
 interface IStyledCardProps {
   margins?: Props.IMargins
+  color: CardColors
 }
 
 interface IStyledCardToggleButtonProps {
   isExpanded: boolean,
   hasParentHoverStyle: boolean
+  color: CardColors
 }
 
 interface IStyleActionButtonProps {
   hasRightMargin: boolean
+  color: CardColors
 }
 
 interface IStyledCardHeader {
   isExpanded: boolean
   hasHoverStyle: boolean
+  color: CardColors
 }
 
 const StyledCard = styled.div`
@@ -35,18 +42,18 @@ const StyledCard = styled.div`
 
   ${(props: IStyledCardProps) => styleForMargins(props.margins)}
 
-  background-color: ${Variables.Color.n100};
+  background-color: ${(props: IStyledCardProps) => colorOptions[props.color].background};
 `
 const StyledCardHeader = styled(StyledFlexContent)`
   padding: ${Variables.Spacing.sMedium}px;
-  border: 1px solid ${Variables.Color.n250};
+  border: 1px solid ${(props: IStyledCardHeader) => colorOptions[props.color].border};
   border-radius: ${Variables.Style.borderRadius}px;
 
   ${(props: IStyledCardHeader) => props.hasHoverStyle && css`
       cursor: pointer;
 
       &:hover {
-        background-color: ${Variables.Color.n200};
+        background-color: ${colorOptions[props.color].hoverBackground};
         transition: background-color .25s ease-out;
       }
   `}
@@ -68,7 +75,7 @@ const StyledCardToggleButton = styled.button`
   ${(props: IStyledCardToggleButtonProps) => props.hasParentHoverStyle && css`
     ${StyledCard}:hover & {
       color: ${Variables.Color.n800};
-      background-color: ${Variables.Color.n300};
+      background-color: ${colorOptions[props.color].hoverButtonBackground};
     }
   `}
 
@@ -80,17 +87,11 @@ const StyledCardToggleButton = styled.button`
 const StyledActionButton = styled.button<IStyleActionButtonProps>`
   ${cardButtonStyle};
 
-  &:hover ${StyledCardToggleButton} {
-    background-color: transparent;
-    color: ${Variables.Color.n600};
-  }
-
-  &:hover ${StyledCard} {
-    background-color: ${Variables.Color.n100};
+  &:hover {
+    background-color: ${(props: IStyleActionButtonProps) => colorOptions[props.color].hoverButtonBackground};
   }
 
   ${(props: IStyleActionButtonProps) => props.hasRightMargin && css`
-
       margin-right: ${Variables.Spacing.sMedium}px;
   `}
 
@@ -109,7 +110,7 @@ const StyledExtraContent = styled.div`
   border: 1px solid ${Variables.Color.n250};
   border-top: 0;
   border-radius: 0 0 ${Variables.Style.borderRadius}px ${Variables.Style.borderRadius}px;
-  background-color: ${Variables.Color.n150};
+  background-color: ${(props: IStyledExtraContentProps) => colorOptions[props.color].extraContentBackground};
 
   ${(props: IStyledExtraContentProps) => props.isExpanded && css`
       max-height: 999px; // Magic number to keep animation working when expanding
