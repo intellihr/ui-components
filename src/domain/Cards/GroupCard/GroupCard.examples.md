@@ -8,7 +8,7 @@ import { Variables } from '@Common';
 initialState = { card1: false, card2: false, allCards: false };
 
 const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec libero et libero molestie eleifend. Donec dignissim vel erat eu cursus.';
- 
+
 <div>
   <Button
     type='neutral'
@@ -196,8 +196,22 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
     ]}
   />
   <GroupCard
+      color='orange'
       isExpanded= {state.card2}
       onCardToggle= {() => setState({ card2: !state.card2})}
+      dropdownSections= {[
+        {
+          text: 'homepage',
+          href: 'https://intellihr.github.io/ui-components/',
+          stopPropagation: true
+        },
+        {
+          text: 'Delete',
+          onClick: (event) => { alert('Delete action for the card') },
+          sectionType: 'alert',
+          stopPropagation: true
+        }
+      ]}
       headingContent= {
         <GridLayout
           gutterPaddingX={Variables.Spacing.sSmall}
@@ -293,7 +307,7 @@ import { GridLayout } from '@Domain/Layouts';
 import { Variables } from '@Common';
 
 const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec libero et libero molestie eleifend. Donec dignissim vel erat eu cursus.';
- 
+
 <GroupCard
   margins={{
             top:12,

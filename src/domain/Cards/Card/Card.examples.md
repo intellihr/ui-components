@@ -8,7 +8,7 @@ import { Variables } from '@Common';
 initialState = { card1: false, card2: false, allCards: false };
 
 const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec libero et libero molestie eleifend. Donec dignissim vel erat eu cursus.';
- 
+
 <div>
   <Button
     type='neutral'
@@ -69,6 +69,7 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
     }
   />
   <Card
+      color='orange'
       isExpanded= {state.card2}
       onCardToggle= {() => setState({ card2: !state.card2})}
       dropdownSections= {[
@@ -130,7 +131,7 @@ import { Variables } from '@Common';
 initialState = { cardWithOutAction: false };
 
 const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec libero et libero molestie eleifend. Donec dignissim vel erat eu cursus.';
- 
+
 <Card
     isExpanded= {state.cardWithOutAction}
     onCardToggle= {() => setState({ cardWithOutAction: !state.cardWithOutAction})}
@@ -177,7 +178,7 @@ import { GridLayout } from '@Domain/Layouts';
 import { Variables } from '@Common';
 
 const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec libero et libero molestie eleifend. Donec dignissim vel erat eu cursus.';
- 
+
 <Card
     isExpanded= {state.cardWithOutExpand}
     dropdownSections= {[
@@ -220,7 +221,7 @@ import { GridLayout } from '@Domain/Layouts';
 import { Variables } from '@Common';
 
 const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec libero et libero molestie eleifend. Donec dignissim vel erat eu cursus.';
- 
+
 <div>
   <Card
     margins={{bottom: 8}}
@@ -250,9 +251,9 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
 import { Button } from '@Domain/Buttons';
 import { GridLayout } from '@Domain/Layouts';
 import { Variables } from '@Common';
- 
+
 const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec libero et libero molestie eleifend. Donec dignissim vel erat eu cursus.';
- 
+
 <Card
   margins={{
             top:12,

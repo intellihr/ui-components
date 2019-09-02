@@ -22,7 +22,6 @@ const cardButtonStyle = css`
 
   &:hover {
     color: ${Variables.Color.n800};
-    background-color: ${Variables.Color.n300};
     transition: all .25s ease-out;
   }
 `
