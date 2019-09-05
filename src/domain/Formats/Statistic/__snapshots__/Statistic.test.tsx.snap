@@ -11,7 +11,7 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
   letter-spacing: normal;
 }
 
-.c1 {
+.c2 {
   color: #262D33;
   font-weight: 600;
   font-size: 24px;
@@ -20,6 +20,17 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
   -moz-letter-spacing: -.02em;
   -ms-letter-spacing: -.02em;
   letter-spacing: -.02em;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <Component
@@ -36,7 +47,7 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-htpNat",
+              "componentId": "sc-VigVT",
               "isStatic": true,
               "lastClassName": "c0",
               "rules": Array [
@@ -62,7 +73,7 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
             "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-htpNat",
+            "styledComponentId": "sc-VigVT",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -78,44 +89,28 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
         </div>
       </StyledComponent>
     </styled.div>
-    <styled.span>
+    <styled.div>
       <StyledComponent
         forwardedComponent={
           Object {
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bxivhb",
+              "componentId": "sc-fjdhpX",
               "isStatic": true,
               "lastClassName": "c1",
               "rules": Array [
                 "
-  color: ",
-                "#262D33",
-                ";
-  font-weight: ",
-                "600",
-                ";
-
- ",
-                "
-          font-size: ",
-                "24",
-                "px;
-          line-height: ",
-                "32",
-                "px;
-          letter-spacing: -.02em;
-        ",
-                "
+  display: flex;
+  align-items: center;
 ",
               ],
             },
-            "displayName": "styled.span",
+            "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-bxivhb",
-            "target": "span",
+            "styledComponentId": "sc-fjdhpX",
+            "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
@@ -123,19 +118,72 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
         }
         forwardedRef={null}
       >
-        <span
+        <div
           className="c1"
         >
-          99.00
-        </span>
+          <div>
+            <styled.span>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-jTzLTM",
+                      "isStatic": true,
+                      "lastClassName": "c2",
+                      "rules": Array [
+                        "
+  color: ",
+                        "#262D33",
+                        ";
+  font-weight: ",
+                        "600",
+                        ";
+
+ ",
+                        "
+          font-size: ",
+                        "24",
+                        "px;
+          line-height: ",
+                        "32",
+                        "px;
+          letter-spacing: -.02em;
+        ",
+                        "
+",
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-jTzLTM",
+                    "target": "span",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+              >
+                <span
+                  className="c2"
+                >
+                  99.00
+                </span>
+              </StyledComponent>
+            </styled.span>
+          </div>
+        </div>
       </StyledComponent>
-    </styled.span>
+    </styled.div>
   </div>
 </Component>
 `;
 
 exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
-.c1 {
+.c2 {
   color: #262D33;
   margin-right: 8px;
   font-weight: 600;
@@ -157,7 +205,7 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
   letter-spacing: normal;
 }
 
-.c2 {
+.c3 {
   color: #262D33;
   font-weight: 600;
   font-size: 24px;
@@ -166,6 +214,17 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
   -moz-letter-spacing: -.02em;
   -ms-letter-spacing: -.02em;
   letter-spacing: -.02em;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <Component
@@ -183,7 +242,7 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-htpNat",
+              "componentId": "sc-VigVT",
               "isStatic": true,
               "lastClassName": "c0",
               "rules": Array [
@@ -209,7 +268,7 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
             "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-htpNat",
+            "styledComponentId": "sc-VigVT",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -225,47 +284,28 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
         </div>
       </StyledComponent>
     </styled.div>
-    <styled.span>
+    <styled.div>
       <StyledComponent
         forwardedComponent={
           Object {
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bwzfXH",
+              "componentId": "sc-fjdhpX",
               "isStatic": true,
               "lastClassName": "c1",
               "rules": Array [
                 "
-  color: ",
-                "#262D33",
-                ";
-  margin-right: ",
-                "8",
-                "px;
-  font-weight: ",
-                "600",
-                ";
-
-  ",
-                "
-          font-size: ",
-                "18",
-                "px;
-          line-height: ",
-                "24",
-                "px;
-          letter-spacing: -.02em;
-        ",
-                "
+  display: flex;
+  align-items: center;
 ",
               ],
             },
-            "displayName": "styled.span",
+            "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-bwzfXH",
-            "target": "span",
+            "styledComponentId": "sc-fjdhpX",
+            "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
@@ -273,65 +313,121 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
         }
         forwardedRef={null}
       >
-        <span
+        <div
           className="c1"
         >
-          AUD
-        </span>
-      </StyledComponent>
-    </styled.span>
-    <styled.span>
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-bxivhb",
-              "isStatic": true,
-              "lastClassName": "c2",
-              "rules": Array [
-                "
+          <div>
+            <styled.span>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-gqjmRU",
+                      "isStatic": true,
+                      "lastClassName": "c2",
+                      "rules": Array [
+                        "
   color: ",
-                "#262D33",
-                ";
+                        "#262D33",
+                        ";
+  margin-right: ",
+                        "8",
+                        "px;
   font-weight: ",
-                "600",
-                ";
+                        "600",
+                        ";
 
- ",
-                "
+  ",
+                        "
           font-size: ",
-                "24",
-                "px;
+                        "18",
+                        "px;
           line-height: ",
-                "32",
-                "px;
+                        "24",
+                        "px;
           letter-spacing: -.02em;
         ",
-                "
+                        "
 ",
-              ],
-            },
-            "displayName": "styled.span",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "sc-bxivhb",
-            "target": "span",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-      >
-        <span
-          className="c2"
-        >
-          99.00
-        </span>
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-gqjmRU",
+                    "target": "span",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+              >
+                <span
+                  className="c2"
+                >
+                  AUD
+                </span>
+              </StyledComponent>
+            </styled.span>
+            <styled.span>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-jTzLTM",
+                      "isStatic": true,
+                      "lastClassName": "c3",
+                      "rules": Array [
+                        "
+  color: ",
+                        "#262D33",
+                        ";
+  font-weight: ",
+                        "600",
+                        ";
+
+ ",
+                        "
+          font-size: ",
+                        "24",
+                        "px;
+          line-height: ",
+                        "32",
+                        "px;
+          letter-spacing: -.02em;
+        ",
+                        "
+",
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-jTzLTM",
+                    "target": "span",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+              >
+                <span
+                  className="c3"
+                >
+                  99.00
+                </span>
+              </StyledComponent>
+            </styled.span>
+          </div>
+        </div>
       </StyledComponent>
-    </styled.span>
+    </styled.div>
   </div>
 </Component>
 `;
@@ -372,7 +468,7 @@ exports[`<Statistic /> should render not provided when no value is provided 1`] 
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-htpNat",
+              "componentId": "sc-VigVT",
               "isStatic": true,
               "lastClassName": "c0",
               "rules": Array [
@@ -398,7 +494,7 @@ exports[`<Statistic /> should render not provided when no value is provided 1`] 
             "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-htpNat",
+            "styledComponentId": "sc-VigVT",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -421,7 +517,7 @@ exports[`<Statistic /> should render not provided when no value is provided 1`] 
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
+              "componentId": "sc-gZMcBi",
               "isStatic": true,
               "lastClassName": "c1",
               "rules": Array [
@@ -447,7 +543,7 @@ exports[`<Statistic /> should render not provided when no value is provided 1`] 
             "displayName": "styled.span",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
+            "styledComponentId": "sc-gZMcBi",
             "target": "span",
             "toString": [Function],
             "warnTooManyClasses": [Function],
