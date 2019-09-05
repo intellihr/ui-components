@@ -1,7 +1,8 @@
 import React from 'react'
 
-import { Props } from '../../../common'
-import { NotProvidedText, PrefixText, TitleText, ValueText } from './style'
+import { Props, Variables } from '../../../common'
+import { StatusIndicator } from '../../Indicators'
+import { NotProvidedText, PrefixText, TitleText, ValueContainer, ValueText } from './style'
 
 interface IStatistcProps {
   /** the statistic title */
@@ -12,6 +13,8 @@ interface IStatistcProps {
   prefix?: string
   /** The statistic value */
   value?: string | null
+  /** The color of the indicator if one is needed */
+  indicatorColor?: Variables.Color
 }
 
 export const Statistic: React.FC<IStatistcProps> = (
@@ -19,7 +22,8 @@ export const Statistic: React.FC<IStatistcProps> = (
     componentContext,
     prefix,
     value,
-    title
+    title,
+    indicatorColor
   }
 ) => {
   if (!value) {
@@ -40,10 +44,17 @@ export const Statistic: React.FC<IStatistcProps> = (
       data-component-type={Props.ComponentType.Statistic}
     >
       <TitleText>{title}</TitleText>
-      {prefix && (
-        <PrefixText>{prefix}</PrefixText>
-      )}
-      <ValueText>{value}</ValueText>
+      <ValueContainer>
+        {indicatorColor && (
+          <StatusIndicator color={indicatorColor} />
+        )}
+        <div>
+          {prefix && (
+            <PrefixText>{prefix}</PrefixText>
+          )}
+          <ValueText>{value}</ValueText>
+        </div>
+      </ValueContainer>
     </div>
   )
 }

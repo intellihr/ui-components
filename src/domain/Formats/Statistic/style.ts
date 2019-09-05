@@ -36,3 +36,8 @@ export {
   TitleText,
   ValueText
 }
+
+export const ValueContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
