@@ -10,7 +10,6 @@ exports[`<FormFieldSkeleton /> should render a form field skeleton 1`] = `
         "bottom": 8,
       }
     }
-    showSkeleton={true}
     width={200}
   />
   <BlockSkeleton
@@ -21,7 +20,6 @@ exports[`<FormFieldSkeleton /> should render a form field skeleton 1`] = `
         "bottom": 24,
       }
     }
-    showSkeleton={true}
   />
 </Fragment>
 `;
@@ -39,7 +37,6 @@ exports[`<FormSkeleton /> should render a form skeleton 1`] = `
         "top": 8,
       }
     }
-    showSkeleton={true}
     width={120}
   />
 </Fragment>

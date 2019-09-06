@@ -78,7 +78,7 @@ class ListColumn extends React.PureComponent<IListColumn> {
     const showSkeleton = get(skeletonOptions, 'showSkeleton', false)
 
     if (showSkeleton) {
-      return <TextSkeleton showSkeleton={showSkeleton} />
+      return <TextSkeleton />
     }
 
     if (!isNil(rowIndex) && data && data[rowIndex]) {

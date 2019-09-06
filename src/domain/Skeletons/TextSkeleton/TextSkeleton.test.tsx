@@ -7,9 +7,7 @@ import { TextSkeleton } from './TextSkeleton'
 describe('<TextSkeleton />', () => {
   it('should render a text skeleton', () => {
     const wrapper = mount(
-      <TextSkeleton
-        showSkeleton
-      />
+      <TextSkeleton/>
     )
 
     expect(wrapper).toMatchSnapshot()
@@ -18,7 +16,6 @@ describe('<TextSkeleton />', () => {
   it('should render a text skeleton with set width', () => {
     const wrapper = mount(
       <TextSkeleton
-        showSkeleton
         width={250}
       />
     )
@@ -29,7 +26,6 @@ describe('<TextSkeleton />', () => {
   it('should render a text skeleton with set type', () => {
     const wrapper = mount(
       <TextSkeleton
-        showSkeleton
         type={Props.TypographyType.Display}
       />
     )

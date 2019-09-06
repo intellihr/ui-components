@@ -6,7 +6,6 @@ import uuid from 'uuid'
 import { Props } from '../../../common'
 import { EmptyState } from '../../Callouts'
 import { Row } from '../../Grids/Row'
-import { ISkeletonProps } from '../../Skeletons'
 import { Spinner } from '../../Spinners'
 import { ListClickableColumn } from './ListClickableColumn'
 import { ListColumn } from './ListColumn'
@@ -14,9 +13,15 @@ import { ListRow } from './ListRow'
 
 const style = require('./style.scss')
 
-export interface ISmartListSkeletonOptions extends ISkeletonProps {
+export interface ISmartListSkeletonOptions {
   /* Number of rows to show skeletons */
   numberOfRows?: number
+  /** Additional class names for the parent container */
+  className?: string
+  /** The margins around the component */
+  margins?: Props.IMargins
+  /** If the smartlist should be shown in a skeletonised state */
+  showSkeleton?: boolean
 }
 
 export interface ISmartList {

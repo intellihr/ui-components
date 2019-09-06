@@ -1,30 +1,22 @@
 import React from 'react'
 
 import { Props } from '../../../common'
-import { ISkeletonProps } from '../interfaces'
 import { TextSkeleton } from '../TextSkeleton'
 import { ParagraphSkeletonWrapper } from './style'
 
-class ParagraphSkeleton extends React.Component<ISkeletonProps> {
-  public static defaultProps: Partial<ISkeletonProps> = {
-    showSkeleton: false
-  }
+export interface IParagraphSkeletonProps {
+  /** Additional class names for the parent container */
+  className?: string
+  /** The margins around the component */
+  margins?: Props.IMargins
+}
 
+class ParagraphSkeleton extends React.Component<IParagraphSkeletonProps> {
   public render (): JSX.Element {
     const {
-      showSkeleton,
-      children,
       className,
       margins
     } = this.props
-
-    if (!showSkeleton) {
-      return (
-        <>
-          {children}
-        </>
-      )
-    }
 
     return (
       <ParagraphSkeletonWrapper
@@ -32,25 +24,15 @@ class ParagraphSkeleton extends React.Component<ISkeletonProps> {
         margins={margins}
       >
         <TextSkeleton
-          showSkeleton
           type={Props.TypographyType.DisplayLarge}
           width={200}
         />
+        <TextSkeleton/>
+        <TextSkeleton/>
+        <TextSkeleton/>
+        <TextSkeleton/>
         <TextSkeleton
-          showSkeleton
-        />
-        <TextSkeleton
-          showSkeleton
-        />
-        <TextSkeleton
-          showSkeleton
-        />
-        <TextSkeleton
-          showSkeleton
-        />
-        <TextSkeleton
-          showSkeleton
-          width={'50%'}
+          width='50%'
         />
       </ParagraphSkeletonWrapper>
     )

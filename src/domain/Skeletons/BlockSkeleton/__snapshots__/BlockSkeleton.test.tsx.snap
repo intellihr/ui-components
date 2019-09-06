@@ -17,7 +17,6 @@ exports[`<BlockSkeleton /> should render a block skeleton 1`] = `
 
 <BlockSkeleton
   display="block"
-  showSkeleton={true}
 >
   <styled.span
     display="block"
@@ -88,7 +87,6 @@ exports[`<BlockSkeleton /> should render a block skeleton with set width and hei
 <BlockSkeleton
   display="block"
   height={200}
-  showSkeleton={true}
   width={400}
 >
   <styled.span
