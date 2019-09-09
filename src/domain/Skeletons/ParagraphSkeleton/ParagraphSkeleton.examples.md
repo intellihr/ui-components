@@ -2,6 +2,5 @@
 
 ```jsx
   <ParagraphSkeleton
-    showSkeleton
   />
 ```

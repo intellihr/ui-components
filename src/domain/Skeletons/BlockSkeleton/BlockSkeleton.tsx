@@ -1,41 +1,34 @@
 import React from 'react'
 
-import { ISkeletonProps } from '../interfaces'
+import { Props } from '../../../common'
 import { BlockSkeletonWrapper } from './style'
 
-export interface IBlockSkeletonProps extends ISkeletonProps {
+export interface IBlockSkeletonProps {
   /** Width of the skeleton */
   width?: number | string,
   /** Height of the skeleton */
   height?: number | string
   /** Display style of the skeleton */
   display?: 'block' | 'inline-block'
+  /** Additional class names for the parent container */
+  className?: string
+  /** The margins around the component */
+  margins?: Props.IMargins
 }
 
 class BlockSkeleton extends React.Component<IBlockSkeletonProps> {
   public static defaultProps: Partial<IBlockSkeletonProps> = {
-    showSkeleton: false,
     display: 'block'
   }
 
   public render (): JSX.Element {
     const {
-      showSkeleton,
       width,
       height,
-      children,
       className,
       margins,
       display
     } = this.props
-
-    if (!showSkeleton) {
-      return (
-        <React.Fragment>
-          {children}
-        </React.Fragment>
-      )
-    }
 
     return (
       <BlockSkeletonWrapper

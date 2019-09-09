@@ -18,7 +18,6 @@ exports[`<CircleSkeleton /> should render a circle skeleton 1`] = `
 
 <CircleSkeleton
   display="block"
-  showSkeleton={true}
   size="large"
 >
   <styled.span
@@ -91,7 +90,6 @@ exports[`<CircleSkeleton /> should render a circle skeleton with set size 1`] = 
 
 <CircleSkeleton
   display="block"
-  showSkeleton={true}
   size="small"
 >
   <styled.span
