@@ -6,9 +6,7 @@ import { BlockSkeleton } from './BlockSkeleton'
 describe('<BlockSkeleton />', () => {
   it('should render a block skeleton', () => {
     const wrapper = mount(
-      <BlockSkeleton
-        showSkeleton
-      />
+      <BlockSkeleton/>
     )
 
     expect(wrapper).toMatchSnapshot()
@@ -17,7 +15,6 @@ describe('<BlockSkeleton />', () => {
   it('should render a block skeleton with set width and height', () => {
     const wrapper = mount(
       <BlockSkeleton
-        showSkeleton
         width={400}
         height={200}
       />

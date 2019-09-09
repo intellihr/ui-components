@@ -23,7 +23,6 @@ exports[`<TextSkeleton /> should render a text skeleton 1`] = `
 
 <TextSkeleton
   display="block"
-  showSkeleton={true}
   type="body"
 >
   <styled.span
@@ -104,7 +103,6 @@ exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
 
 <TextSkeleton
   display="block"
-  showSkeleton={true}
   type="display"
 >
   <styled.span
@@ -186,7 +184,6 @@ exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
 
 <TextSkeleton
   display="block"
-  showSkeleton={true}
   type="body"
   width={250}
 >

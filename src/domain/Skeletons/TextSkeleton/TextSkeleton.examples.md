@@ -1,9 +1,7 @@
 #### Text Skeleton
 
 ```jsx
-<TextSkeleton
-  showSkeleton={true}
-/>
+<TextSkeleton/>
 ```
 
 #### Text Skeleton with Width Option
@@ -12,13 +10,11 @@ Provide width either as a number to be converted to px, or as a string containin
 <>
   <div>
     <TextSkeleton
-      showSkeleton={true}
       width='50%'
     />
   </div>
   <div>
     <TextSkeleton
-      showSkeleton={true}
       width={250}
     />
   </div>
@@ -36,7 +32,6 @@ import { Text } from '@Domain/Typographies';
       TextSkeleton for X-Small Text
     </Text>
     <TextSkeleton
-      showSkeleton={true}
       type='xsmall'
     />
   </div>
@@ -45,7 +40,6 @@ import { Text } from '@Domain/Typographies';
       TextSkeleton for Small Text
     </Text>
     <TextSkeleton
-      showSkeleton={true}
       type='small'
     />
   </div>
@@ -54,7 +48,6 @@ import { Text } from '@Domain/Typographies';
       TextSkeleton for Body Text (default)
     </Text>
     <TextSkeleton
-      showSkeleton={true}
       type='body'
     />
   </div>
@@ -63,7 +56,6 @@ import { Text } from '@Domain/Typographies';
       TextSkeleton for Heading Text
     </Text>
     <TextSkeleton
-      showSkeleton={true}
       type='heading'
     />
   </div>
@@ -72,7 +64,6 @@ import { Text } from '@Domain/Typographies';
       TextSkeleton for Display Text
     </Text>
     <TextSkeleton
-      showSkeleton={true}
       type='display'
     />
   </div>
@@ -81,7 +72,6 @@ import { Text } from '@Domain/Typographies';
       TextSkeleton for Display Large Text
     </Text>
     <TextSkeleton
-      showSkeleton={true}
       type='display-large'
     />
   </div>

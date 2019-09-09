@@ -6,9 +6,7 @@ import { ParagraphSkeleton } from './ParagraphSkeleton'
 describe('<ParagraphSkeleton />', () => {
   it('should render a paragraph skeleton', () => {
     const wrapper = mount(
-      <ParagraphSkeleton
-        showSkeleton
-      />
+      <ParagraphSkeleton/>
     )
 
     expect(wrapper).toMatchSnapshot()

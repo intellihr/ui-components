@@ -6655,7 +6655,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                   >
                                     <TextSkeleton
                                       display="block"
-                                      showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
@@ -6829,7 +6828,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                   >
                                     <TextSkeleton
                                       display="block"
-                                      showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
@@ -7003,7 +7001,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                   >
                                     <TextSkeleton
                                       display="block"
-                                      showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
@@ -7391,7 +7388,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                   >
                                     <TextSkeleton
                                       display="block"
-                                      showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
@@ -7565,7 +7561,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                   >
                                     <TextSkeleton
                                       display="block"
-                                      showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
@@ -7739,7 +7734,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                   >
                                     <TextSkeleton
                                       display="block"
-                                      showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
@@ -8127,7 +8121,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                   >
                                     <TextSkeleton
                                       display="block"
-                                      showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
@@ -8301,7 +8294,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                   >
                                     <TextSkeleton
                                       display="block"
-                                      showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
@@ -8475,7 +8467,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                   >
                                     <TextSkeleton
                                       display="block"
-                                      showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
@@ -8863,7 +8854,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                   >
                                     <TextSkeleton
                                       display="block"
-                                      showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
@@ -9037,7 +9027,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                   >
                                     <TextSkeleton
                                       display="block"
-                                      showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
@@ -9211,7 +9200,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                   >
                                     <TextSkeleton
                                       display="block"
-                                      showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
@@ -9599,7 +9587,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                   >
                                     <TextSkeleton
                                       display="block"
-                                      showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
@@ -9773,7 +9760,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                   >
                                     <TextSkeleton
                                       display="block"
-                                      showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
@@ -9947,7 +9933,6 @@ exports[`<SmartList /> should render skeleton 1`] = `
                                   >
                                     <TextSkeleton
                                       display="block"
-                                      showSkeleton={true}
                                       type="body"
                                     >
                                       <styled.span
