@@ -1,16 +1,15 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { Input } from '../../Inputs'
+import { TextInput } from '../../Inputs'
 import { VerticalForm } from './VerticalForm'
 
 describe('<VerticalForm />', () => {
   it(`should render a form`, () => {
     const wrapper = shallow(
       <VerticalForm>
-        <Input
+        <TextInput
           name='testInput'
-          type='text'
         />
       </VerticalForm>
     )
@@ -27,9 +26,8 @@ describe('<VerticalForm />', () => {
         onChange={mockHandleChange}
         onSubmit={mockHandleSubmit}
       >
-        <Input
+        <TextInput
           name='testInput'
-          type='text'
         />
       </VerticalForm>
     )
@@ -52,7 +50,7 @@ describe('<VerticalForm />', () => {
   it('should render with autoComplete when it is passed in', () => {
     const wrapper = shallow(
       <VerticalForm autoComplete='off'>
-        <Input name='testInput' type='text' />
+        <TextInput name='testInput' />
       </VerticalForm>
     )
 

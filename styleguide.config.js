@@ -183,7 +183,6 @@ module.exports = {
             'src/domain/Inputs/CheckboxSet/CheckboxSet.tsx',
             'src/domain/Inputs/DateRangeInput/DateRangeInput.tsx',
             'src/domain/Inputs/IconPickerInput/IconPickerInput.tsx',
-            'src/domain/Inputs/Input/Input.tsx',
             'src/domain/Inputs/InputGroup/InputGroup.tsx',
             'src/domain/Inputs/NumberInput/NumberInput.tsx',
             'src/domain/Inputs/RadioSet/RadioSet.tsx',
