@@ -4,7 +4,7 @@ import React from 'react'
 import { Props, Variables } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons'
 import { Text } from '../../Typographies/Text'
-import {StatusTitle, StyledStatusIndicator} from './style'
+import { StatusTitle, StyledStatusIndicator } from './style'
 
 export interface IStatusIndicatorProps {
   /** Text to show inside the label  */
@@ -36,6 +36,9 @@ export interface IStatusIndicatorProps {
 
   /** Extra classes to apply  */
   className?: string
+
+  /** Margins for the component */
+  margins?: Props.IMargins
 }
 
 export class StatusIndicator extends React.Component<IStatusIndicatorProps> {
@@ -100,11 +103,15 @@ export class StatusIndicator extends React.Component<IStatusIndicatorProps> {
     const {
       color,
       isHollow,
-      className
+      className,
+      margins
     } = this.props
 
     return (
-      <StyledStatusIndicator className={classNames(className, 'dot-status-label')}>
+      <StyledStatusIndicator
+        className={classNames(className, 'dot-status-label')}
+        margins={margins}
+      >
         <StatusTitle>
           <FontAwesomeIcon
             type={isHollow ? 'regular' : 'solid'}

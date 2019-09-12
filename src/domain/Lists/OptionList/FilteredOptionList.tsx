@@ -1,11 +1,11 @@
 import React from 'react'
 
 import { Variables } from '../../../common'
-import { IGenericInputProps, TextInput } from '../../Inputs'
+import { ITextInputProps, TextInput } from '../../Inputs'
 import { IOptionListProps, OptionList } from './OptionList'
 
 interface IFilteredOptionListProps extends IOptionListProps {
-  textInputProps?: IGenericInputProps
+  textInputProps?: ITextInputProps
 }
 
 interface IFilteredOptionListState {
