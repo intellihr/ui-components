@@ -2,9 +2,8 @@
 
 exports[`<VerticalForm /> should render a form 1`] = `
 <form>
-  <Input
+  <TextInput
     name="testInput"
-    type="text"
   />
 </form>
 `;
@@ -38,9 +37,8 @@ exports[`<VerticalForm /> should render with an onChange and onSubmit attributes
     }
   }
 >
-  <Input
+  <TextInput
     name="testInput"
-    type="text"
   />
 </form>
 `;
@@ -49,9 +47,8 @@ exports[`<VerticalForm /> should render with autoComplete when it is passed in 1
 <form
   autoComplete="off"
 >
-  <Input
+  <TextInput
     name="testInput"
-    type="text"
   />
 </form>
 `;

@@ -55,7 +55,7 @@ interface ITextInputProps {
   margins?: Props.IMargins
 }
 
-export class TextInput extends React.PureComponent<ITextInputProps> {
+class TextInput extends React.PureComponent<ITextInputProps> {
   private prefixWrapperRef: RefObject<HTMLDivElement> = React.createRef()
 
   public componentDidMount () {
@@ -236,4 +236,9 @@ export class TextInput extends React.PureComponent<ITextInputProps> {
       handleChange(event)
     }
   }
+}
+
+export {
+  TextInput,
+  ITextInputProps
 }
