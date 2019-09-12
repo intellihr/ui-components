@@ -1,23 +1,30 @@
 import styled from 'styled-components'
 
-import { Variables } from '../../../common'
+import { Props, Variables } from '../../../common'
+import { styleForMargins } from '../../Spacers/services/margins'
+
+interface IStyledStatusIndicator {
+  margins?: Props.IMargins
+}
 
 const StyledStatusIndicator = styled.div`
-   font-size: ${Variables.FontSize.fzBody};
-   font-weight: normal;
-   vertical-align: bottom;
+  font-size: ${Variables.FontSize.fzBody};
+  font-weight: normal;
+  vertical-align: bottom;
 
-   .icon {
-     bottom: 2px;
-     font-size: ${Variables.FontSize.fzXSmall};
-     margin-right: .5rem;
-     position: relative;
-   }
+  ${(props: IStyledStatusIndicator) => props.margins && styleForMargins(props.margins)}
+
+  .icon {
+    bottom: 2px;
+    font-size: ${Variables.FontSize.fzXSmall};
+    margin-right: .5rem;
+    position: relative;
+  }
 `
 
 const StatusTitle = styled.div`
-   display: flex;
-   align-items: center;
+  display: flex;
+  align-items: center;
 `
 
 export {
