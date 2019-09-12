@@ -8,6 +8,9 @@ class VerticalForm extends React.PureComponent<React.FormHTMLAttributes<HTMLForm
   public static Field = Field
   public static LeftAlignControls = LeftAlignControls
   public static RightAlignControls = RightAlignControls
+  public static defaultProps: Partial<HTMLFormElement> = {
+    autoComplete: 'off'
+  }
 
   public render (): JSX.Element {
     const {
