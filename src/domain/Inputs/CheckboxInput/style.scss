@@ -93,6 +93,7 @@
     line-height: $lh-small;
     margin-left: 0;
     margin-right: 0;
+    min-height: calc(#{$spacing-2xsmall} * 2 + #{$icon-width});
     padding: $spacing-2xsmall $spacing-medium $spacing-2xsmall $spacing-xlarge;
     position: relative;
     transition: .25s ease-out, color .25s ease-out;
