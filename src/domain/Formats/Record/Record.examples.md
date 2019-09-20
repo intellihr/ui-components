@@ -86,3 +86,19 @@ const { Variables } = require('@Common');
     Chief Executive Officer
   </Record>
 ```
+
+## Margin Support
+
+```jsx
+  <Record
+    name='Position Title'
+    margins={{
+      top: 50,
+      left: 50,
+      right: 50,
+      bottom: 50
+    }}
+  >
+    Chief Executive Officer
+  </Record>
+```
