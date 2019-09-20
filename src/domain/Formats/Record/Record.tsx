@@ -4,7 +4,7 @@ import React from 'react'
 import { Props, Variables } from '../../../common'
 import { ITooltipPopoverProps, TooltipPopover } from '../../Popovers/TooltipPopover'
 import { Text } from '../../Typographies/Text'
-import { FieldLabelWrapper } from './style'
+import { FieldLabelWrapper, RecordWrapper } from './style'
 
 interface IRecordProps {
   /** Label text */
@@ -15,6 +15,8 @@ interface IRecordProps {
   tooltipContent?: JSX.Element | string
   /** any extra tooltip props */
   tooltipProps?: ITooltipPopoverProps
+  /** Margins */
+  margins?: Props.IMargins
 }
 
 class Record extends React.PureComponent <IRecordProps> {
@@ -74,17 +76,19 @@ class Record extends React.PureComponent <IRecordProps> {
 
   public render (): JSX.Element {
     const {
-      componentContext
+      componentContext,
+      margins
     } = this.props
 
     return (
-      <div
+      <RecordWrapper
         data-component-type={Props.ComponentType.Record}
         data-component-context={componentContext}
+        margins={margins}
       >
         {this.label}
         {this.formattedChildren}
-      </div>
+      </RecordWrapper>
     )
   }
 
