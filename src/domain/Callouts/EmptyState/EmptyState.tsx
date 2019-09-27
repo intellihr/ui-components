@@ -12,6 +12,11 @@ export interface IEmptyStateProps {
   secondaryMessage?: string | null
   /** This will accept the button component */
   buttonComponent?: JSX.Element
+  /** The image to render */
+  image?: {
+    url: string
+    width?: number
+  }
   /** The data-component-context */
   componentContext?: string
 }
@@ -21,6 +26,8 @@ export class EmptyState extends React.Component<IEmptyStateProps> {
     primaryMessage: `Oops... We couldn't find anything for this section.`,
     secondaryMessage: `Please speak to your system admin or add information.`
   }
+
+  private defaultImageWith = 400
 
   get primaryMessage (): JSX.Element | null {
     const {
@@ -52,6 +59,23 @@ export class EmptyState extends React.Component<IEmptyStateProps> {
     return null
   }
 
+  get image (): JSX.Element | null {
+    const {
+      image
+    } = this.props
+
+    if (!isNil(image)) {
+      return (
+        <img
+          className={style.ihrImageComponent}
+          src={image.url}
+          width={image.width ? image.width : this.defaultImageWith}
+        />
+      )
+    }
+    return null
+  }
+
   public render (): JSX.Element {
     const { componentContext, buttonComponent } = this.props
 
@@ -64,6 +88,7 @@ export class EmptyState extends React.Component<IEmptyStateProps> {
           {this.primaryMessage}
           {this.secondaryMessage}
           {buttonComponent}
+          {this.image}
         </div>
       )
     }
