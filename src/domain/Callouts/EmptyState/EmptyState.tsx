@@ -64,7 +64,7 @@ export class EmptyState extends React.Component<IEmptyStateProps> {
       image
     } = this.props
 
-    if (!isNil(image)) {
+    if (!isNil(image) && image.url !== '') {
       return (
         <img
           className={style.ihrImageComponent}
