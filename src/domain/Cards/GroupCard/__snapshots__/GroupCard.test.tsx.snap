@@ -34,51 +34,51 @@ exports[`<GroupCard /> should render a group card with body contents and  their 
     color="neutral"
     isExpanded={false}
   >
-    <styled.div>
-      <styled.div
-        key="0"
-      >
+    <styled.div
+      color="neutral"
+      key="0"
+    >
+      <styled.div>
         <styled.div>
-          <styled.div>
-            <div>
-              mainContent
-            </div>
-          </styled.div>
-          <DropdownMenu
-            hasInitialFocus={false}
-            sections={
-              Array [
-                Object {
-                  "href": "https://www.google.com.au",
-                  "text": "action1",
-                },
-                Object {
-                  "href": "https://www.google.com.au",
-                  "text": "action2",
-                },
-              ]
-            }
-            toggleComponent={[Function]}
-          />
+          <div>
+            mainContent
+          </div>
         </styled.div>
-        <div>
-          mainContent
-        </div>
+        <DropdownMenu
+          hasInitialFocus={false}
+          sections={
+            Array [
+              Object {
+                "href": "https://www.google.com.au",
+                "text": "action1",
+              },
+              Object {
+                "href": "https://www.google.com.au",
+                "text": "action2",
+              },
+            ]
+          }
+          toggleComponent={[Function]}
+        />
       </styled.div>
-      <styled.div
-        key="1"
-      >
+      <div>
+        mainContent
+      </div>
+    </styled.div>
+    <styled.div
+      color="neutral"
+      key="1"
+    >
+      <styled.div>
         <styled.div>
-          <styled.div>
-            <div>
-              mainContent
-            </div>
-          </styled.div>
+          <div>
+            mainContent
+          </div>
         </styled.div>
-        <div>
-          mainContent
-        </div>
       </styled.div>
+      <div>
+        mainContent
+      </div>
     </styled.div>
   </styled.div>
 </styled.div>

@@ -13,7 +13,6 @@ import { CardColors } from '../Card/Card'
 import {
   StyledBodyActionButton,
   StyledBodyContent,
-  StyledBodyContents,
   StyledGroupCard,
   StyledGroupCardToggleButton,
   StyledGroupExtraCard,
@@ -24,6 +23,7 @@ interface IGroupCardExtraContentProps {
   mainContent: JSX.Element
   extraContent?: JSX.Element
   dropdownSections?: ISectionProps[]
+  color?: CardColors
 }
 
 interface IGroupCardProps {
@@ -116,9 +116,7 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
     if (bodyContents) {
       return (
         <StyledGroupExtraCard isExpanded={this.isExpanded} color={color!}>
-          <StyledBodyContents>
-            {bodyContents.map(this.bodyContent)}
-          </StyledBodyContents>
+          {bodyContents.map(this.bodyContent)}
         </StyledGroupExtraCard>
       )
     }
@@ -150,9 +148,7 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
 
     if (mainContent) {
       return (
-        <StyledBodyContent
-          key={idx}
-        >
+        <StyledBodyContent key={idx} color={bodyContent.color || this.props.color!}>
           <StyledFlexContent>
             <StyledPrimaryContent>{mainContent}</StyledPrimaryContent>
             {this.actionButtonDropdownMenu(dropdownSections)}
