@@ -265,6 +265,98 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
         }
       ]}
     />
+    <GroupCard
+      color='red'
+      isExpanded= {state.card2}
+      onCardToggle= {() => setState({ card2: !state.card2})}
+      dropdownSections= {[
+        {
+          text: 'homepage',
+          href: 'https://intellihr.github.io/ui-components/',
+          stopPropagation: true
+        },
+        {
+          text: 'Delete',
+          onClick: (event) => { alert('Delete action for the card') },
+          sectionType: 'alert',
+          stopPropagation: true
+        }
+      ]}
+      headingContent= {
+        <GridLayout
+          gutterPaddingX={Variables.Spacing.sSmall}
+          gutterPaddingY={Variables.Spacing.sSmall}
+          cells={[
+            {
+              size: 7,
+              content: text
+            },
+            {
+              size: 5,
+              content: text
+            }
+          ]}
+        />
+      }
+      bodyContents= {[
+        {
+          mainContent: (
+              <GridLayout
+                gutterPaddingX={Variables.Spacing.sSmall}
+                gutterPaddingY={Variables.Spacing.sSmall}
+                cells={[
+                  {
+                    size: 7,
+                    content: text
+                  },
+                  {
+                    size: 5,
+                    content: text
+                  }
+                ]}
+              />
+          ),
+          color: 'orange'
+        },
+        {
+          mainContent: (
+              <GridLayout
+                gutterPaddingX={Variables.Spacing.sSmall}
+                gutterPaddingY={Variables.Spacing.sSmall}
+                cells={[
+                  {
+                    size: 7,
+                    content: text
+                  },
+                  {
+                    size: 5,
+                    content: text
+                  }
+                ]}
+              />
+          ),
+          color: 'neutral'
+        },
+        {
+          mainContent: (
+              <GridLayout
+                gutterPaddingX={Variables.Spacing.sSmall}
+                gutterPaddingY={Variables.Spacing.sSmall}
+                cells={[
+                  {
+                    size: 7,
+                    content: text
+                  },
+                  {
+                    size: 5,
+                    content: text
+                  }
+                ]}
+              />
+          )
+        }
+      ]}
+    />
 </div>
 ```
 

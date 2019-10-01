@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Card /> should render a ard with dropdownSections only 1`] = `
+exports[`<Card /> should render a card with dropdownSections only 1`] = `
 <styled.div
   color="neutral"
   data-component-type="card"

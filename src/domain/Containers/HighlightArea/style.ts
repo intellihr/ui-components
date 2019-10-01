@@ -21,6 +21,10 @@ const colorOptions: ColorOptions = {
   blue: {
     border: Variables.Color.b200,
     background: Variables.Color.b100
+  },
+  red: {
+    border: Variables.Color.r200,
+    background: Variables.Color.r100
   }
 }
 

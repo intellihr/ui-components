@@ -42,7 +42,7 @@ describe('<Card />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should render a ard with dropdownSections only', () => {
+  it('should render a card with dropdownSections only', () => {
     const wrapper = shallow(
       <Card
         mainContent={<div>test2</div>}

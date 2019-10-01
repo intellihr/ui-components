@@ -33,6 +33,10 @@ interface IStyledGroupCardProps {
   color: CardColors
 }
 
+interface IStyledBodyContentProps {
+  color: CardColors
+}
+
 const StyledGroupCard = styled.div`
   margin: 0;
   ${(props: IStyledGroupCardProps) => styleForMargins(props.margins)}
@@ -110,21 +114,13 @@ const StyledGroupExtraCard = styled.div`
   `}
 `
 
-const StyledBodyContents = styled.div`
-  padding: ${Variables.Spacing.sMedium}px;
-`
-
 const StyledBodyContent = styled.div`
+  background-color: ${(props: IStyledBodyContentProps) => colorOptions[props.color].background};
   border-bottom: 1px solid ${Variables.Color.n250};
-  padding: ${Variables.Spacing.sLarge}px 0;
-
-  :first-child {
-    padding-top: ${Variables.Spacing.sXSmall}px;
-  }
+  padding: ${Variables.Spacing.sLarge}px;
 
   :last-child {
     border-bottom: 0;
-    padding-bottom: ${Variables.Spacing.sXSmall}px;
   }
 `
 export {
@@ -133,6 +129,5 @@ export {
   StyledBodyActionButton,
   StyledGroupCardToggleButton,
   StyledGroupCard,
-  StyledBodyContents,
   StyledBodyContent
 }
