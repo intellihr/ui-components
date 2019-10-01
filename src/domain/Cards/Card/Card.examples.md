@@ -118,6 +118,56 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
         />
       }
     />
+    <Card
+      color='red'
+      isExpanded= {state.card2}
+      onCardToggle= {() => setState({ card2: !state.card2})}
+      dropdownSections= {[
+          {
+            text: 'google',
+            href: 'https://www.google.com.au',
+            stopPropagation: true
+          },
+          {
+            text: 'Delete',
+            onClick: (event) => { alert('Delete action for the card') },
+            sectionType: 'alert',
+            stopPropagation: true
+          }
+        ]}
+      mainContent= {
+        <GridLayout
+          gutterPaddingX={Variables.Spacing.sSmall}
+          gutterPaddingY={Variables.Spacing.sSmall}
+          cells={[
+            {
+              size: 7,
+              content: text
+            },
+            {
+              size: 5,
+              content: text
+            }
+          ]}
+        />
+      }
+      extraContent= {
+        <GridLayout
+          gutterPaddingX={Variables.Spacing.sSmall}
+          gutterPaddingY={Variables.Spacing.sSmall}
+          cells={[
+            {
+              size: 12,
+              content: text
+            },
+            {
+              size: 12,
+              content: text
+            }
+          ]}
+        />
+      }
+    />
 </div>
 ```
 
