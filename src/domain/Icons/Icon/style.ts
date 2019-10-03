@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-import { Props } from '../../../common'
+import { Props, Variables } from '../../../common'
 import { styleForShowForSizes } from '../../Layouts/ShowForSizes'
 import { styleForMargins } from '../../Spacers/services/margins'
 
@@ -8,6 +8,10 @@ type size = 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xx
 
 interface IStyledIconProps {
   color?: string
+  duotoneColors?: {
+    primaryColor: string,
+    secondaryColor?: string
+  }
   customSize?: number
   size?: size
   margins?: Props.IMargins
@@ -49,6 +53,8 @@ const BadgeWrapper = styled.span<IBadgeWrapper>`
 const StyledIcon = styled.i<IStyledIconProps>`
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ${Variables.Color.i500};
+  --fa-secondary-color: ${Variables.Color.i500};
 
   ${(props) => props.width && css`
     width: ${props.width}px;
@@ -59,6 +65,14 @@ const StyledIcon = styled.i<IStyledIconProps>`
 
   ${(props) => props.color && css`
     color: ${props.color};
+  `}
+
+  ${(props) => props.duotoneColors && props.duotoneColors.primaryColor && css`
+    --fa-primary-color: ${props.duotoneColors.primaryColor};
+  `}
+
+  ${(props) => props.duotoneColors && props.duotoneColors.secondaryColor && css`
+    --fa-secondary-color: ${props.duotoneColors.secondaryColor};
   `}
 
   &.icon {

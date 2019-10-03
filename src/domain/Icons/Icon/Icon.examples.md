@@ -31,6 +31,35 @@ import { FontAwesomeIcon } from '@Domain/Icons';
   />
 ```
 
+#### Duotone Icon
+
+```jsx
+import { FontAwesomeIcon } from '@Domain/Icons';
+  <FontAwesomeIcon
+    type='duotone'
+    icon='layer-group'
+    size='xlarge'
+  />
+```
+
+#### Duototone Icon with custom colors 
+
+```jsx
+import { FontAwesomeIcon } from '@Domain/Icons';
+
+<>
+  <FontAwesomeIcon
+    type='duotone'
+    icon='cash-register'
+    size='xlarge'
+    duotoneColors={{
+      primaryColor: 'rgba(52, 158, 235, 1)',
+      secondaryColor: '#eba313'
+    }}
+  />
+  </>
+```
+
 #### Spinning Icon
 
 ```jsx

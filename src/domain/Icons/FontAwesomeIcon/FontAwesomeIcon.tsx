@@ -6,8 +6,8 @@ import { FontAwesomeIconValue } from '../Icon/types'
 interface IFontAwesomeIconProps extends IIconProps {
   /** Name of the icon */
   icon: FontAwesomeIconValue
-  /** One of three alternative versions */
-  type: 'solid' | 'regular' | 'light'
+  /** The alternative versions */
+  type: 'solid' | 'regular' | 'light' | 'duotone'
 }
 
 const FontAwesomeIcon: React.FC<IFontAwesomeIconProps> = ({ icon, type, ...props }) => {
@@ -21,6 +21,9 @@ const FontAwesomeIcon: React.FC<IFontAwesomeIconProps> = ({ icon, type, ...props
       break
     case 'solid':
       cssClassName = 'fas'
+      break
+    case 'duotone':
+      cssClassName = 'fad'
       break
   }
   cssClassName = `${cssClassName} fa-${icon}`
