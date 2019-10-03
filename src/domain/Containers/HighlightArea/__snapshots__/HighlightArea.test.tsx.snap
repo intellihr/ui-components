@@ -52,6 +52,7 @@ exports[`<HighLightArea /> should render a HighlightArea 1`] = `
           "styledComponentId": "sc-bdVaJa",
           "target": "div",
           "toString": [Function],
+          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }

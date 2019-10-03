@@ -78,6 +78,7 @@ exports[`<Text /> should render a non-inline text element 1`] = `
           "styledComponentId": "sc-htoDjs",
           "target": "span",
           "toString": [Function],
+          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -174,6 +175,7 @@ exports[`<Text /> should render a text element as a h1 1`] = `
           "styledComponentId": "sc-htoDjs",
           "target": "span",
           "toString": [Function],
+          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -280,6 +282,7 @@ exports[`<Text /> should render a text with data attributes 1`] = `
           "styledComponentId": "sc-htoDjs",
           "target": "span",
           "toString": [Function],
+          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -398,6 +401,7 @@ exports[`<Text /> should render a text with margin 1`] = `
           "styledComponentId": "sc-htoDjs",
           "target": "span",
           "toString": [Function],
+          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -505,6 +509,7 @@ exports[`<Text /> should render an element with colored text 1`] = `
           "styledComponentId": "sc-htoDjs",
           "target": "span",
           "toString": [Function],
+          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -602,6 +607,7 @@ exports[`<Text /> should render an element with heading text 1`] = `
           "styledComponentId": "sc-htoDjs",
           "target": "span",
           "toString": [Function],
+          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -700,6 +706,7 @@ exports[`<Text /> should render an element with semi bold text 1`] = `
           "styledComponentId": "sc-htoDjs",
           "target": "span",
           "toString": [Function],
+          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -797,6 +804,7 @@ exports[`<Text /> should render an element with small text 1`] = `
           "styledComponentId": "sc-htoDjs",
           "target": "span",
           "toString": [Function],
+          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -893,6 +901,7 @@ exports[`<Text /> should render an element with text 1`] = `
           "styledComponentId": "sc-htoDjs",
           "target": "span",
           "toString": [Function],
+          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -992,6 +1001,7 @@ exports[`<Text /> should render an element with the text converted to uppercase 
           "styledComponentId": "sc-htoDjs",
           "target": "span",
           "toString": [Function],
+          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }

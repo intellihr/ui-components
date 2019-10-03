@@ -68,7 +68,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-VigVT",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -91,6 +91,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
           "styledComponentId": "sc-VigVT",
           "target": "div",
           "toString": [Function],
+          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -98,7 +99,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
       forwardedRef={null}
     >
       <div
-        className="vertical-timeline-event c0"
+        className="c0 vertical-timeline-event"
       >
         <styled.span>
           <StyledComponent
@@ -108,7 +109,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-fjdhpX",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
                     "
@@ -130,6 +131,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
                 "styledComponentId": "sc-fjdhpX",
                 "target": "span",
                 "toString": [Function],
+                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -151,7 +153,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-jTzLTM",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c2",
                   "rules": Array [
                     "
@@ -174,6 +176,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
                 "styledComponentId": "sc-jTzLTM",
                 "target": "div",
                 "toString": [Function],
+                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -191,7 +194,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-jzJRlG",
-                        "isStatic": true,
+                        "isStatic": false,
                         "lastClassName": "c3",
                         "rules": Array [
                           "
@@ -214,6 +217,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
                       "styledComponentId": "sc-jzJRlG",
                       "target": "span",
                       "toString": [Function],
+                      "usesTheme": false,
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
                     }
@@ -236,7 +240,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-cSHVUG",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c4",
                   "rules": Array [
                     "
@@ -250,6 +254,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
                 "styledComponentId": "sc-cSHVUG",
                 "target": "div",
                 "toString": [Function],
+                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -331,7 +336,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-VigVT",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -354,6 +359,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
           "styledComponentId": "sc-VigVT",
           "target": "div",
           "toString": [Function],
+          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -361,7 +367,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
       forwardedRef={null}
     >
       <div
-        className="vertical-timeline-event c0"
+        className="c0 vertical-timeline-event"
       >
         <styled.span>
           <StyledComponent
@@ -371,7 +377,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-fjdhpX",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
                     "
@@ -393,6 +399,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
                 "styledComponentId": "sc-fjdhpX",
                 "target": "span",
                 "toString": [Function],
+                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -412,7 +419,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-jTzLTM",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c2",
                   "rules": Array [
                     "
@@ -435,6 +442,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
                 "styledComponentId": "sc-jTzLTM",
                 "target": "div",
                 "toString": [Function],
+                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -478,7 +486,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-cSHVUG",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c3",
                   "rules": Array [
                     "
@@ -492,6 +500,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
                 "styledComponentId": "sc-cSHVUG",
                 "target": "div",
                 "toString": [Function],
+                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -577,7 +586,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-VigVT",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -600,6 +609,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
           "styledComponentId": "sc-VigVT",
           "target": "div",
           "toString": [Function],
+          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -607,7 +617,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
       forwardedRef={null}
     >
       <div
-        className="vertical-timeline-event c0"
+        className="c0 vertical-timeline-event"
       >
         <styled.span>
           <StyledComponent
@@ -617,7 +627,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-fjdhpX",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
                     "
@@ -639,6 +649,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
                 "styledComponentId": "sc-fjdhpX",
                 "target": "span",
                 "toString": [Function],
+                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -658,7 +669,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-jTzLTM",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c2",
                   "rules": Array [
                     "
@@ -681,6 +692,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
                 "styledComponentId": "sc-jTzLTM",
                 "target": "div",
                 "toString": [Function],
+                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -698,7 +710,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-jzJRlG",
-                        "isStatic": true,
+                        "isStatic": false,
                         "lastClassName": "c3",
                         "rules": Array [
                           "
@@ -721,6 +733,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
                       "styledComponentId": "sc-jzJRlG",
                       "target": "span",
                       "toString": [Function],
+                      "usesTheme": false,
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
                     }
@@ -743,7 +756,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-cSHVUG",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c4",
                   "rules": Array [
                     "
@@ -757,6 +770,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
                 "styledComponentId": "sc-cSHVUG",
                 "target": "div",
                 "toString": [Function],
+                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
