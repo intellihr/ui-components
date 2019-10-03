@@ -8,15 +8,19 @@ type size = 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xx
 
 interface IStyledIconProps {
   color?: string
-  duotoneColors?: {
-    primaryColor: string,
-    secondaryColor?: string
-  }
   customSize?: number
   size?: size
   margins?: Props.IMargins
   width?: number
   showForSizes?: Props.IShowForSizes
+  duotoneColors?: {
+    primaryColor?: string,
+    secondaryColor?: string
+  }
+  duotoneOpacity?: {
+    primaryOpacity?: number
+    secondaryOpacity?: number
+  }
 }
 
 interface IBadgeWrapper {
@@ -73,6 +77,14 @@ const StyledIcon = styled.i<IStyledIconProps>`
 
   ${(props) => props.duotoneColors && props.duotoneColors.secondaryColor && css`
     --fa-secondary-color: ${props.duotoneColors.secondaryColor};
+  `}
+
+  ${(props) => props.duotoneOpacity && props.duotoneOpacity.primaryOpacity && css`
+    --fa-primary-opacity: ${props.duotoneOpacity.primaryOpacity};
+  `}
+
+  ${(props) => props.duotoneOpacity && props.duotoneOpacity.secondaryOpacity && css`
+    --fa-secondary-opacity: ${props.duotoneOpacity.secondaryOpacity};
   `}
 
   &.icon {

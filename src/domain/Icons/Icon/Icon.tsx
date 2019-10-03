@@ -30,6 +30,10 @@ interface IIconProps {
     primaryColor: string,
     secondaryColor?: string
   }
+  duotoneOpacity?: {
+    primaryOpacity?: number
+    secondaryOpacity?: number
+  }
 }
 
 const Icon: React.FC<IIconProps> = ({
@@ -43,7 +47,8 @@ const Icon: React.FC<IIconProps> = ({
   margins,
   width,
   showForSizes,
-  duotoneColors
+  duotoneColors,
+  duotoneOpacity
 }) => {
   const classes = classNames(
     className,
@@ -72,6 +77,7 @@ const Icon: React.FC<IIconProps> = ({
         margins={margins}
         width={width}
         duotoneColors={duotoneColors}
+        duotoneOpacity={duotoneOpacity}
       />
       {badge && ['large', 'xlarge', 'xxlarge'].includes(size) && (
         <BadgeWrapper

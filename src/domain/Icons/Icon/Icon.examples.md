@@ -42,6 +42,24 @@ import { FontAwesomeIcon } from '@Domain/Icons';
   />
 ```
 
+#### Duototone Icon with custom opacity 
+
+```jsx
+import { FontAwesomeIcon } from '@Domain/Icons';
+
+<>
+  <FontAwesomeIcon
+    type='duotone'
+    icon='layer-group'
+    size='xlarge'
+    duotoneOpacity={{
+      primaryOpacity: 0.5,
+      secondaryOpacity: 1
+    }}
+  />
+  </>
+```
+
 #### Duototone Icon with custom colors 
 
 ```jsx
