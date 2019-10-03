@@ -112,13 +112,21 @@ const TabListItemAnchor = styled.a`
   }
 
   ${(props: ITabListItemAnchorProps) => props.active && css`&,`}
-  &:active,
-  &:hover,
-  &:focus {
+  &:active {
     color: ${Variables.Color.i400};
 
     &:before {
       background-color: ${Variables.Color.i400};
+      bottom: 0;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    color: ${Variables.Color.i500};
+
+    &:before {
+      background-color: ${Variables.Color.i500};
       bottom: 0;
     }
   }
