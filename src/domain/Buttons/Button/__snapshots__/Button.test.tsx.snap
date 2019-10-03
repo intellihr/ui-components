@@ -200,6 +200,8 @@ exports[`<Button /> should render a button with an icon 1`] = `
 .c0 {
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
 }
 
 .c0.icon {
@@ -294,6 +296,12 @@ exports[`<Button /> should render a button with an icon 1`] = `
                           "
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ",
+                          "#2512B3",
+                          ";
+  --fa-secondary-color: ",
+                          "#2512B3",
+                          ";
 
   ",
                           [Function],
@@ -302,6 +310,14 @@ exports[`<Button /> should render a button with an icon 1`] = `
   ",
                           [Function],
                           "
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
   ",
                           [Function],
                           "
