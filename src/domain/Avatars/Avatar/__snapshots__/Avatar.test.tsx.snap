@@ -225,6 +225,8 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
 .c0 {
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
 }
 
 .c0.icon {
@@ -276,6 +278,12 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
                         "
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ",
+                        "#2512B3",
+                        ";
+  --fa-secondary-color: ",
+                        "#2512B3",
+                        ";
 
   ",
                         [Function],
@@ -284,6 +292,14 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
   ",
                         [Function],
                         "
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
   ",
                         [Function],
                         "

@@ -904,6 +904,8 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
 .c0 {
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
 }
 
 .c0.icon {
@@ -2125,6 +2127,12 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                                     "
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ",
+                                    "#2512B3",
+                                    ";
+  --fa-secondary-color: ",
+                                    "#2512B3",
+                                    ";
 
   ",
                                     [Function],
@@ -2133,6 +2141,14 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
   ",
                                     [Function],
                                     "
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
   ",
                                     [Function],
                                     "
@@ -2223,6 +2239,12 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                                     "
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ",
+                                    "#2512B3",
+                                    ";
+  --fa-secondary-color: ",
+                                    "#2512B3",
+                                    ";
 
   ",
                                     [Function],
@@ -2231,6 +2253,14 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
   ",
                                     [Function],
                                     "
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
   ",
                                     [Function],
                                     "
@@ -2507,6 +2537,8 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
 .c0 {
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
 }
 
 .c0.icon {
@@ -3439,6 +3471,12 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                                     "
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ",
+                                    "#2512B3",
+                                    ";
+  --fa-secondary-color: ",
+                                    "#2512B3",
+                                    ";
 
   ",
                                     [Function],
@@ -3447,6 +3485,14 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
   ",
                                     [Function],
                                     "
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
   ",
                                     [Function],
                                     "
@@ -3537,6 +3583,12 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                                     "
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ",
+                                    "#2512B3",
+                                    ";
+  --fa-secondary-color: ",
+                                    "#2512B3",
+                                    ";
 
   ",
                                     [Function],
@@ -3545,6 +3597,14 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
   ",
                                     [Function],
                                     "
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
   ",
                                     [Function],
                                     "
@@ -3877,6 +3937,8 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
 .c0 {
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
 }
 
 .c0.icon {
@@ -4814,6 +4876,12 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                                     "
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ",
+                                    "#2512B3",
+                                    ";
+  --fa-secondary-color: ",
+                                    "#2512B3",
+                                    ";
 
   ",
                                     [Function],
@@ -4822,6 +4890,14 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
   ",
                                     [Function],
                                     "
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
   ",
                                     [Function],
                                     "
@@ -4912,6 +4988,12 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                                     "
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ",
+                                    "#2512B3",
+                                    ";
+  --fa-secondary-color: ",
+                                    "#2512B3",
+                                    ";
 
   ",
                                     [Function],
@@ -4920,6 +5002,14 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
   ",
                                     [Function],
                                     "
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
   ",
                                     [Function],
                                     "
@@ -5201,6 +5291,8 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
 .c0 {
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
 }
 
 .c0.icon {
@@ -6450,6 +6542,12 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                                     "
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ",
+                                    "#2512B3",
+                                    ";
+  --fa-secondary-color: ",
+                                    "#2512B3",
+                                    ";
 
   ",
                                     [Function],
@@ -6458,6 +6556,14 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
   ",
                                     [Function],
                                     "
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
   ",
                                     [Function],
                                     "
@@ -6548,6 +6654,12 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                                     "
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ",
+                                    "#2512B3",
+                                    ";
+  --fa-secondary-color: ",
+                                    "#2512B3",
+                                    ";
 
   ",
                                     [Function],
@@ -6556,6 +6668,14 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
   ",
                                     [Function],
                                     "
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
   ",
                                     [Function],
                                     "

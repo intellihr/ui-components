@@ -1253,6 +1253,8 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
 .c2 {
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
   color: #424F5C;
 }
 
@@ -1491,6 +1493,12 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                                   "
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ",
+                                  "#2512B3",
+                                  ";
+  --fa-secondary-color: ",
+                                  "#2512B3",
+                                  ";
 
   ",
                                   [Function],
@@ -1499,6 +1507,14 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
   ",
                                   [Function],
                                   "
+  ",
+                                  [Function],
+                                  "
+
+  ",
+                                  [Function],
+                                  "
+
   ",
                                   [Function],
                                   "
@@ -1551,6 +1567,8 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                       "current": .c0 {
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
   color: #424F5C;
 }
 

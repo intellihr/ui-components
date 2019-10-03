@@ -4,6 +4,8 @@ exports[`<Legend /> should render a legend 1`] = `
 .c1 {
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
   color: rgb(0,255,0);
 }
 
@@ -15,6 +17,8 @@ exports[`<Legend /> should render a legend 1`] = `
 .c3 {
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
   color: rgb(0,0,255);
 }
 
@@ -152,6 +156,12 @@ exports[`<Legend /> should render a legend 1`] = `
                           "
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ",
+                          "#2512B3",
+                          ";
+  --fa-secondary-color: ",
+                          "#2512B3",
+                          ";
 
   ",
                           [Function],
@@ -160,6 +170,14 @@ exports[`<Legend /> should render a legend 1`] = `
   ",
                           [Function],
                           "
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
   ",
                           [Function],
                           "
@@ -275,6 +293,12 @@ exports[`<Legend /> should render a legend 1`] = `
                           "
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ",
+                          "#2512B3",
+                          ";
+  --fa-secondary-color: ",
+                          "#2512B3",
+                          ";
 
   ",
                           [Function],
@@ -283,6 +307,14 @@ exports[`<Legend /> should render a legend 1`] = `
   ",
                           [Function],
                           "
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
   ",
                           [Function],
                           "

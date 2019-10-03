@@ -239,6 +239,8 @@ exports[`<Badge /> should render a spinning badge 1`] = `
 .c1 {
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
 }
 
 .c1.icon {
@@ -387,6 +389,12 @@ exports[`<Badge /> should render a spinning badge 1`] = `
                         "
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ",
+                        "#2512B3",
+                        ";
+  --fa-secondary-color: ",
+                        "#2512B3",
+                        ";
 
   ",
                         [Function],
@@ -395,6 +403,14 @@ exports[`<Badge /> should render a spinning badge 1`] = `
   ",
                         [Function],
                         "
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
   ",
                         [Function],
                         "
