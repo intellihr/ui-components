@@ -126,6 +126,7 @@ exports[`<ListColumn /> should render a list column with number content 1`] = `
             "styledComponentId": "sc-htpNat",
             "target": "div",
             "toString": [Function],
+            "usesTheme": false,
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
           }
@@ -279,6 +280,7 @@ exports[`<ListColumn /> should render a list column with the right header 1`] = 
             "styledComponentId": "sc-htpNat",
             "target": "div",
             "toString": [Function],
+            "usesTheme": false,
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
           }
@@ -440,6 +442,7 @@ exports[`<ListColumn /> should render a list column with the right non-header ce
             "styledComponentId": "sc-htpNat",
             "target": "div",
             "toString": [Function],
+            "usesTheme": false,
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
           }

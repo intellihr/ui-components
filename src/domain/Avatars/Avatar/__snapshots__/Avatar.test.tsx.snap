@@ -53,6 +53,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, using a URL for the im
               "styledComponentId": "sc-bxivhb",
               "target": "div",
               "toString": [Function],
+              "usesTheme": false,
               "warnTooManyClasses": [Function],
               "withComponent": [Function],
             }
@@ -74,7 +75,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, using a URL for the im
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-ifAKCX",
-                      "isStatic": true,
+                      "isStatic": false,
                       "lastClassName": "c1",
                       "rules": Array [
                         "
@@ -88,6 +89,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, using a URL for the im
                     "styledComponentId": "sc-ifAKCX",
                     "target": "img",
                     "toString": [Function],
+                    "usesTheme": false,
                     "warnTooManyClasses": [Function],
                     "withComponent": [Function],
                   }
@@ -163,6 +165,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, using imageData 1`] = 
               "styledComponentId": "sc-bxivhb",
               "target": "div",
               "toString": [Function],
+              "usesTheme": false,
               "warnTooManyClasses": [Function],
               "withComponent": [Function],
             }
@@ -184,7 +187,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, using imageData 1`] = 
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-ifAKCX",
-                      "isStatic": true,
+                      "isStatic": false,
                       "lastClassName": "c1",
                       "rules": Array [
                         "
@@ -198,6 +201,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, using imageData 1`] = 
                     "styledComponentId": "sc-ifAKCX",
                     "target": "img",
                     "toString": [Function],
+                    "usesTheme": false,
                     "warnTooManyClasses": [Function],
                     "withComponent": [Function],
                   }
@@ -324,6 +328,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
                     "styledComponentId": "sc-htpNat",
                     "target": "i",
                     "toString": [Function],
+                    "usesTheme": false,
                     "warnTooManyClasses": [Function],
                     "withComponent": [Function],
                   }
@@ -333,7 +338,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
               >
                 <i
                   aria-hidden={true}
-                  className="icon fas fa-camera c0"
+                  className="c0 icon fas fa-camera"
                   size="medium"
                 />
               </StyledComponent>
@@ -523,6 +528,7 @@ exports[`<Avatar /> should toggle the showInitials state if an image prop is pas
               "styledComponentId": "sc-bxivhb",
               "target": "div",
               "toString": [Function],
+              "usesTheme": false,
               "warnTooManyClasses": [Function],
               "withComponent": [Function],
             }
@@ -544,7 +550,7 @@ exports[`<Avatar /> should toggle the showInitials state if an image prop is pas
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-ifAKCX",
-                      "isStatic": true,
+                      "isStatic": false,
                       "lastClassName": "c1",
                       "rules": Array [
                         "
@@ -558,6 +564,7 @@ exports[`<Avatar /> should toggle the showInitials state if an image prop is pas
                     "styledComponentId": "sc-ifAKCX",
                     "target": "img",
                     "toString": [Function],
+                    "usesTheme": false,
                     "warnTooManyClasses": [Function],
                     "withComponent": [Function],
                   }
