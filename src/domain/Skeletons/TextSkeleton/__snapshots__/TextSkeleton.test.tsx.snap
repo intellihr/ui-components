@@ -62,7 +62,6 @@ exports[`<TextSkeleton /> should render a text skeleton 1`] = `
           "styledComponentId": "sc-bdVaJa",
           "target": "span",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -143,7 +142,6 @@ exports[`<TextSkeleton /> should render a text skeleton with set type 1`] = `
           "styledComponentId": "sc-bdVaJa",
           "target": "span",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -227,7 +225,6 @@ exports[`<TextSkeleton /> should render a text skeleton with set width 1`] = `
           "styledComponentId": "sc-bdVaJa",
           "target": "span",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }

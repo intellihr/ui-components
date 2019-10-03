@@ -48,7 +48,7 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
             "attrs": Array [],
             "componentStyle": ComponentStyle {
               "componentId": "sc-VigVT",
-              "isStatic": false,
+              "isStatic": true,
               "lastClassName": "c0",
               "rules": Array [
                 "
@@ -76,7 +76,6 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
             "styledComponentId": "sc-VigVT",
             "target": "div",
             "toString": [Function],
-            "usesTheme": false,
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
           }
@@ -98,7 +97,7 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
             "attrs": Array [],
             "componentStyle": ComponentStyle {
               "componentId": "sc-fjdhpX",
-              "isStatic": false,
+              "isStatic": true,
               "lastClassName": "c1",
               "rules": Array [
                 "
@@ -113,7 +112,6 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
             "styledComponentId": "sc-fjdhpX",
             "target": "div",
             "toString": [Function],
-            "usesTheme": false,
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
           }
@@ -132,7 +130,7 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-jTzLTM",
-                      "isStatic": false,
+                      "isStatic": true,
                       "lastClassName": "c2",
                       "rules": Array [
                         "
@@ -163,7 +161,6 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
                     "styledComponentId": "sc-jTzLTM",
                     "target": "span",
                     "toString": [Function],
-                    "usesTheme": false,
                     "warnTooManyClasses": [Function],
                     "withComponent": [Function],
                   }
@@ -246,7 +243,7 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
             "attrs": Array [],
             "componentStyle": ComponentStyle {
               "componentId": "sc-VigVT",
-              "isStatic": false,
+              "isStatic": true,
               "lastClassName": "c0",
               "rules": Array [
                 "
@@ -274,7 +271,6 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
             "styledComponentId": "sc-VigVT",
             "target": "div",
             "toString": [Function],
-            "usesTheme": false,
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
           }
@@ -296,7 +292,7 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
             "attrs": Array [],
             "componentStyle": ComponentStyle {
               "componentId": "sc-fjdhpX",
-              "isStatic": false,
+              "isStatic": true,
               "lastClassName": "c1",
               "rules": Array [
                 "
@@ -311,7 +307,6 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
             "styledComponentId": "sc-fjdhpX",
             "target": "div",
             "toString": [Function],
-            "usesTheme": false,
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
           }
@@ -330,7 +325,7 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-gqjmRU",
-                      "isStatic": false,
+                      "isStatic": true,
                       "lastClassName": "c2",
                       "rules": Array [
                         "
@@ -364,7 +359,6 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
                     "styledComponentId": "sc-gqjmRU",
                     "target": "span",
                     "toString": [Function],
-                    "usesTheme": false,
                     "warnTooManyClasses": [Function],
                     "withComponent": [Function],
                   }
@@ -386,7 +380,7 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-jTzLTM",
-                      "isStatic": false,
+                      "isStatic": true,
                       "lastClassName": "c3",
                       "rules": Array [
                         "
@@ -417,7 +411,6 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
                     "styledComponentId": "sc-jTzLTM",
                     "target": "span",
                     "toString": [Function],
-                    "usesTheme": false,
                     "warnTooManyClasses": [Function],
                     "withComponent": [Function],
                   }
@@ -476,7 +469,7 @@ exports[`<Statistic /> should render not provided when no value is provided 1`] 
             "attrs": Array [],
             "componentStyle": ComponentStyle {
               "componentId": "sc-VigVT",
-              "isStatic": false,
+              "isStatic": true,
               "lastClassName": "c0",
               "rules": Array [
                 "
@@ -504,7 +497,6 @@ exports[`<Statistic /> should render not provided when no value is provided 1`] 
             "styledComponentId": "sc-VigVT",
             "target": "div",
             "toString": [Function],
-            "usesTheme": false,
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
           }
@@ -526,7 +518,7 @@ exports[`<Statistic /> should render not provided when no value is provided 1`] 
             "attrs": Array [],
             "componentStyle": ComponentStyle {
               "componentId": "sc-gZMcBi",
-              "isStatic": false,
+              "isStatic": true,
               "lastClassName": "c1",
               "rules": Array [
                 "
@@ -554,7 +546,6 @@ exports[`<Statistic /> should render not provided when no value is provided 1`] 
             "styledComponentId": "sc-gZMcBi",
             "target": "span",
             "toString": [Function],
-            "usesTheme": false,
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
           }

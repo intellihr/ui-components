@@ -81,7 +81,7 @@ exports[`<Legend /> should render a legend 1`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-bxivhb",
-            "isStatic": false,
+            "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -111,7 +111,6 @@ exports[`<Legend /> should render a legend 1`] = `
           "styledComponentId": "sc-bxivhb",
           "target": "ul",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -187,6 +186,14 @@ exports[`<Legend /> should render a legend 1`] = `
                           [Function],
                           "
 
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
   &.icon {
     text-align: center;
 
@@ -203,7 +210,6 @@ exports[`<Legend /> should render a legend 1`] = `
                       "styledComponentId": "sc-htpNat",
                       "target": "i",
                       "toString": [Function],
-                      "usesTheme": false,
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
                     }
@@ -213,7 +219,7 @@ exports[`<Legend /> should render a legend 1`] = `
                 >
                   <i
                     aria-hidden={true}
-                    className="c1 icon fas fa-circle"
+                    className="icon fas fa-circle c1"
                     color="rgb(0,255,0)"
                     size="xsmall"
                   />
@@ -229,7 +235,7 @@ exports[`<Legend /> should render a legend 1`] = `
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-ifAKCX",
-                    "isStatic": false,
+                    "isStatic": true,
                     "lastClassName": "c2",
                     "rules": Array [
                       "
@@ -245,7 +251,6 @@ exports[`<Legend /> should render a legend 1`] = `
                   "styledComponentId": "sc-ifAKCX",
                   "target": "span",
                   "toString": [Function],
-                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }
@@ -326,6 +331,14 @@ exports[`<Legend /> should render a legend 1`] = `
                           [Function],
                           "
 
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
   &.icon {
     text-align: center;
 
@@ -342,7 +355,6 @@ exports[`<Legend /> should render a legend 1`] = `
                       "styledComponentId": "sc-htpNat",
                       "target": "i",
                       "toString": [Function],
-                      "usesTheme": false,
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
                     }
@@ -352,7 +364,7 @@ exports[`<Legend /> should render a legend 1`] = `
                 >
                   <i
                     aria-hidden={true}
-                    className="c3 icon fas fa-circle"
+                    className="icon fas fa-circle c3"
                     color="rgb(0,0,255)"
                     size="xsmall"
                   />
@@ -368,7 +380,7 @@ exports[`<Legend /> should render a legend 1`] = `
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-ifAKCX",
-                    "isStatic": false,
+                    "isStatic": true,
                     "lastClassName": "c2",
                     "rules": Array [
                       "
@@ -384,7 +396,6 @@ exports[`<Legend /> should render a legend 1`] = `
                   "styledComponentId": "sc-ifAKCX",
                   "target": "span",
                   "toString": [Function],
-                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }

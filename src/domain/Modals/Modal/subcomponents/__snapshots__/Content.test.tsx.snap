@@ -18,7 +18,7 @@ exports[`<Content /> should render modal content 1`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-bwzfXH",
-            "isStatic": false,
+            "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -33,7 +33,6 @@ exports[`<Content /> should render modal content 1`] = `
           "styledComponentId": "sc-bwzfXH",
           "target": "div",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }

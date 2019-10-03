@@ -469,7 +469,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
           "styledComponentId": "sc-bdVaJa",
           "target": "div",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -534,7 +533,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                 "styledComponentId": "sc-bwzfXH",
                 "target": "div",
                 "toString": [Function],
-                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -625,7 +623,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                 "styledComponentId": "sc-bwzfXH",
                 "target": "div",
                 "toString": [Function],
-                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -715,7 +712,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                 "styledComponentId": "sc-bwzfXH",
                 "target": "div",
                 "toString": [Function],
-                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -819,7 +815,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                 "styledComponentId": "sc-bwzfXH",
                 "target": "div",
                 "toString": [Function],
-                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -910,7 +905,6 @@ exports[`<GridLayout /> should render a GridLayout 1`] = `
                 "styledComponentId": "sc-bwzfXH",
                 "target": "div",
                 "toString": [Function],
-                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -1440,7 +1434,6 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
           "styledComponentId": "sc-bdVaJa",
           "target": "div",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -1513,7 +1506,6 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                 "styledComponentId": "sc-bwzfXH",
                 "target": "div",
                 "toString": [Function],
-                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -1604,7 +1596,6 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                 "styledComponentId": "sc-bwzfXH",
                 "target": "div",
                 "toString": [Function],
-                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -1694,7 +1685,6 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                 "styledComponentId": "sc-bwzfXH",
                 "target": "div",
                 "toString": [Function],
-                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -1798,7 +1788,6 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                 "styledComponentId": "sc-bwzfXH",
                 "target": "div",
                 "toString": [Function],
-                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -1889,7 +1878,6 @@ exports[`<GridLayout /> should render a GridLayout with margins 1`] = `
                 "styledComponentId": "sc-bwzfXH",
                 "target": "div",
                 "toString": [Function],
-                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -2314,7 +2302,6 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
           "styledComponentId": "sc-bdVaJa",
           "target": "div",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -2392,7 +2379,6 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
                   "styledComponentId": "sc-bwzfXH",
                   "target": "div",
                   "toString": [Function],
-                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }
@@ -2487,7 +2473,6 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
                   "styledComponentId": "sc-bwzfXH",
                   "target": "div",
                   "toString": [Function],
-                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }
@@ -2601,7 +2586,6 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
                   "styledComponentId": "sc-bwzfXH",
                   "target": "div",
                   "toString": [Function],
-                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }
@@ -2724,7 +2708,6 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
                   "styledComponentId": "sc-bwzfXH",
                   "target": "div",
                   "toString": [Function],
-                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }
@@ -2830,7 +2813,6 @@ exports[`<GridLayout /> with children cells should render a GridLayout 1`] = `
                   "styledComponentId": "sc-bwzfXH",
                   "target": "div",
                   "toString": [Function],
-                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }

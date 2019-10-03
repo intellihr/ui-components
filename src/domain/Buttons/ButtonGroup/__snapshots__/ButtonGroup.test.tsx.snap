@@ -23,7 +23,7 @@ exports[`<ButtonGroup /> should render a button group with buttons and link butt
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-EHOje",
-            "isStatic": false,
+            "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -44,7 +44,6 @@ exports[`<ButtonGroup /> should render a button group with buttons and link butt
           "styledComponentId": "sc-EHOje",
           "target": "span",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -92,7 +91,6 @@ exports[`<ButtonGroup /> should render a button group with buttons and link butt
                   "styledComponentId": "sc-ifAKCX",
                   "target": "button",
                   "toString": [Function],
-                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }
@@ -101,7 +99,7 @@ exports[`<ButtonGroup /> should render a button group with buttons and link butt
               type="button"
             >
               <button
-                className="button neutral"
+                className="button neutral "
                 data-component-type="button"
                 type="button"
               >

@@ -98,7 +98,6 @@ exports[`<Badge /> should render a large badge 1`] = `
           "styledComponentId": "sc-bxivhb",
           "target": "span",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -216,7 +215,6 @@ exports[`<Badge /> should render a small badge 1`] = `
           "styledComponentId": "sc-bxivhb",
           "target": "span",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -347,7 +345,6 @@ exports[`<Badge /> should render a spinning badge 1`] = `
           "styledComponentId": "sc-bxivhb",
           "target": "span",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -422,6 +419,14 @@ exports[`<Badge /> should render a spinning badge 1`] = `
                         [Function],
                         "
 
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
   &.icon {
     text-align: center;
 
@@ -438,7 +443,6 @@ exports[`<Badge /> should render a spinning badge 1`] = `
                     "styledComponentId": "sc-htpNat",
                     "target": "i",
                     "toString": [Function],
-                    "usesTheme": false,
                     "warnTooManyClasses": [Function],
                     "withComponent": [Function],
                   }
@@ -448,7 +452,7 @@ exports[`<Badge /> should render a spinning badge 1`] = `
               >
                 <i
                   aria-hidden={true}
-                  className="c1 refresh-icon icon fas fa-sync fa-spin"
+                  className="refresh-icon icon fas fa-sync fa-spin c1"
                   size="medium"
                 />
               </StyledComponent>

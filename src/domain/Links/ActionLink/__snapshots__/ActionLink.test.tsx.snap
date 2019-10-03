@@ -33,7 +33,7 @@ exports[`<ActionLink /> should render an action link 1`] = `
         "attrs": Array [],
         "componentStyle": ComponentStyle {
           "componentId": "sc-bdVaJa",
-          "isStatic": false,
+          "isStatic": true,
           "lastClassName": "c0",
           "rules": Array [
             "
@@ -70,7 +70,6 @@ exports[`<ActionLink /> should render an action link 1`] = `
         "styledComponentId": "sc-bdVaJa",
         "target": [Function],
         "toString": [Function],
-        "usesTheme": false,
         "warnTooManyClasses": [Function],
         "withComponent": [Function],
       }
@@ -133,7 +132,7 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
-            "isStatic": false,
+            "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -170,7 +169,6 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
           "styledComponentId": "sc-bdVaJa",
           "target": [Function],
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }

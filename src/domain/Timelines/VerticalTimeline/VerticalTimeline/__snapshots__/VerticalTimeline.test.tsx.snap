@@ -94,7 +94,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-EHOje",
-            "isStatic": false,
+            "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -109,7 +109,6 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
           "styledComponentId": "sc-EHOje",
           "target": "div",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -117,7 +116,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
       forwardedRef={null}
     >
       <div
-        className="c0 vertical-timeline"
+        className="vertical-timeline c0"
       >
         <styled.div>
           <StyledComponent
@@ -127,7 +126,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-bZQynM",
-                  "isStatic": false,
+                  "isStatic": true,
                   "lastClassName": "c1",
                   "rules": Array [
                     "
@@ -144,7 +143,6 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                 "styledComponentId": "sc-bZQynM",
                 "target": "div",
                 "toString": [Function],
-                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -166,7 +164,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-gzVnrw",
-                  "isStatic": false,
+                  "isStatic": true,
                   "lastClassName": "c2",
                   "rules": Array [
                     "
@@ -192,7 +190,6 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                 "styledComponentId": "sc-gzVnrw",
                 "target": "div",
                 "toString": [Function],
-                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -216,7 +213,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
                           "componentId": "sc-bdVaJa",
-                          "isStatic": false,
+                          "isStatic": true,
                           "lastClassName": "c3",
                           "rules": Array [
                             "
@@ -239,7 +236,6 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                         "styledComponentId": "sc-bdVaJa",
                         "target": "div",
                         "toString": [Function],
-                        "usesTheme": false,
                         "warnTooManyClasses": [Function],
                         "withComponent": [Function],
                       }
@@ -247,7 +243,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                     forwardedRef={null}
                   >
                     <div
-                      className="c3 vertical-timeline-event"
+                      className="vertical-timeline-event c3"
                     >
                       <styled.span>
                         <StyledComponent
@@ -257,7 +253,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-htpNat",
-                                "isStatic": false,
+                                "isStatic": true,
                                 "lastClassName": "c4",
                                 "rules": Array [
                                   "
@@ -279,7 +275,6 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                               "styledComponentId": "sc-htpNat",
                               "target": "span",
                               "toString": [Function],
-                              "usesTheme": false,
                               "warnTooManyClasses": [Function],
                               "withComponent": [Function],
                             }
@@ -301,7 +296,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-bwzfXH",
-                                "isStatic": false,
+                                "isStatic": true,
                                 "lastClassName": "c5",
                                 "rules": Array [
                                   "
@@ -324,7 +319,6 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                               "styledComponentId": "sc-bwzfXH",
                               "target": "div",
                               "toString": [Function],
-                              "usesTheme": false,
                               "warnTooManyClasses": [Function],
                               "withComponent": [Function],
                             }
@@ -342,7 +336,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
-                                      "isStatic": false,
+                                      "isStatic": true,
                                       "lastClassName": "c6",
                                       "rules": Array [
                                         "
@@ -365,7 +359,6 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                                     "styledComponentId": "sc-bxivhb",
                                     "target": "span",
                                     "toString": [Function],
-                                    "usesTheme": false,
                                     "warnTooManyClasses": [Function],
                                     "withComponent": [Function],
                                   }
@@ -388,7 +381,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-ifAKCX",
-                                "isStatic": false,
+                                "isStatic": true,
                                 "lastClassName": "c7",
                                 "rules": Array [
                                   "
@@ -402,7 +395,6 @@ exports[`<VerticalTimeline /> should render a vertical timeline 1`] = `
                               "styledComponentId": "sc-ifAKCX",
                               "target": "div",
                               "toString": [Function],
-                              "usesTheme": false,
                               "warnTooManyClasses": [Function],
                               "withComponent": [Function],
                             }
@@ -521,7 +513,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-EHOje",
-            "isStatic": false,
+            "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -536,7 +528,6 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
           "styledComponentId": "sc-EHOje",
           "target": "div",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -544,7 +535,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
       forwardedRef={null}
     >
       <div
-        className="c0 vertical-timeline"
+        className="vertical-timeline c0"
       >
         <styled.div>
           <StyledComponent
@@ -554,7 +545,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-bZQynM",
-                  "isStatic": false,
+                  "isStatic": true,
                   "lastClassName": "c1",
                   "rules": Array [
                     "
@@ -571,7 +562,6 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                 "styledComponentId": "sc-bZQynM",
                 "target": "div",
                 "toString": [Function],
-                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -591,7 +581,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-gzVnrw",
-                  "isStatic": false,
+                  "isStatic": true,
                   "lastClassName": "c2",
                   "rules": Array [
                     "
@@ -617,7 +607,6 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                 "styledComponentId": "sc-gzVnrw",
                 "target": "div",
                 "toString": [Function],
-                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -641,7 +630,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
                           "componentId": "sc-bdVaJa",
-                          "isStatic": false,
+                          "isStatic": true,
                           "lastClassName": "c3",
                           "rules": Array [
                             "
@@ -664,7 +653,6 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                         "styledComponentId": "sc-bdVaJa",
                         "target": "div",
                         "toString": [Function],
-                        "usesTheme": false,
                         "warnTooManyClasses": [Function],
                         "withComponent": [Function],
                       }
@@ -672,7 +660,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                     forwardedRef={null}
                   >
                     <div
-                      className="c3 vertical-timeline-event"
+                      className="vertical-timeline-event c3"
                     >
                       <styled.span>
                         <StyledComponent
@@ -682,7 +670,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-htpNat",
-                                "isStatic": false,
+                                "isStatic": true,
                                 "lastClassName": "c4",
                                 "rules": Array [
                                   "
@@ -704,7 +692,6 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                               "styledComponentId": "sc-htpNat",
                               "target": "span",
                               "toString": [Function],
-                              "usesTheme": false,
                               "warnTooManyClasses": [Function],
                               "withComponent": [Function],
                             }
@@ -726,7 +713,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-bwzfXH",
-                                "isStatic": false,
+                                "isStatic": true,
                                 "lastClassName": "c5",
                                 "rules": Array [
                                   "
@@ -749,7 +736,6 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                               "styledComponentId": "sc-bwzfXH",
                               "target": "div",
                               "toString": [Function],
-                              "usesTheme": false,
                               "warnTooManyClasses": [Function],
                               "withComponent": [Function],
                             }
@@ -767,7 +753,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
-                                      "isStatic": false,
+                                      "isStatic": true,
                                       "lastClassName": "c6",
                                       "rules": Array [
                                         "
@@ -790,7 +776,6 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                                     "styledComponentId": "sc-bxivhb",
                                     "target": "span",
                                     "toString": [Function],
-                                    "usesTheme": false,
                                     "warnTooManyClasses": [Function],
                                     "withComponent": [Function],
                                   }
@@ -813,7 +798,7 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-ifAKCX",
-                                "isStatic": false,
+                                "isStatic": true,
                                 "lastClassName": "c7",
                                 "rules": Array [
                                   "
@@ -827,7 +812,6 @@ exports[`<VerticalTimeline /> should render a vertical timeline without a year 1
                               "styledComponentId": "sc-ifAKCX",
                               "target": "div",
                               "toString": [Function],
-                              "usesTheme": false,
                               "warnTooManyClasses": [Function],
                               "withComponent": [Function],
                             }

@@ -62,7 +62,6 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
           "styledComponentId": "sc-iwsKbI",
           "target": "span",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -83,7 +82,7 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-dnqmqq",
-                  "isStatic": false,
+                  "isStatic": true,
                   "lastClassName": "c0",
                   "rules": Array [
                     "
@@ -97,7 +96,6 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
                 "styledComponentId": "sc-dnqmqq",
                 "target": [Function],
                 "toString": [Function],
-                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -176,7 +174,6 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
                       "styledComponentId": "sc-htoDjs",
                       "target": "span",
                       "toString": [Function],
-                      "usesTheme": false,
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
                     }
@@ -187,7 +184,7 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
                   weight={600}
                 >
                   <span
-                    className="c1 c0"
+                    className="c0 c1"
                     data-component-type="text"
                   >
                     AUD
@@ -262,7 +259,6 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
                   "styledComponentId": "sc-htoDjs",
                   "target": "span",
                   "toString": [Function],
-                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }
@@ -348,7 +344,6 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
           "styledComponentId": "sc-iwsKbI",
           "target": "span",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -369,7 +364,7 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-dnqmqq",
-                  "isStatic": false,
+                  "isStatic": true,
                   "lastClassName": "c0",
                   "rules": Array [
                     "
@@ -383,7 +378,6 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
                 "styledComponentId": "sc-dnqmqq",
                 "target": [Function],
                 "toString": [Function],
-                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -462,7 +456,6 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
                       "styledComponentId": "sc-htoDjs",
                       "target": "span",
                       "toString": [Function],
-                      "usesTheme": false,
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
                     }
@@ -473,7 +466,7 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
                   weight={600}
                 >
                   <span
-                    className="c1 c0"
+                    className="c0 c1"
                     data-component-type="text"
                   >
                     AUD
@@ -548,7 +541,6 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
                   "styledComponentId": "sc-htoDjs",
                   "target": "span",
                   "toString": [Function],
-                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }
@@ -645,7 +637,6 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
           "styledComponentId": "sc-iwsKbI",
           "target": "span",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -666,7 +657,7 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-dnqmqq",
-                  "isStatic": false,
+                  "isStatic": true,
                   "lastClassName": "c1",
                   "rules": Array [
                     "
@@ -680,7 +671,6 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
                 "styledComponentId": "sc-dnqmqq",
                 "target": [Function],
                 "toString": [Function],
-                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -759,7 +749,6 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
                       "styledComponentId": "sc-htoDjs",
                       "target": "span",
                       "toString": [Function],
-                      "usesTheme": false,
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
                     }
@@ -770,7 +759,7 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
                   weight={600}
                 >
                   <span
-                    className="c2 c1"
+                    className="c1 c2"
                     data-component-type="text"
                   >
                     AUD
@@ -845,7 +834,6 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
                   "styledComponentId": "sc-htoDjs",
                   "target": "span",
                   "toString": [Function],
-                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }
@@ -932,7 +920,6 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
           "styledComponentId": "sc-iwsKbI",
           "target": "span",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -953,7 +940,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-dnqmqq",
-                  "isStatic": false,
+                  "isStatic": true,
                   "lastClassName": "c0",
                   "rules": Array [
                     "
@@ -967,7 +954,6 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
                 "styledComponentId": "sc-dnqmqq",
                 "target": [Function],
                 "toString": [Function],
-                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -1046,7 +1032,6 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
                       "styledComponentId": "sc-htoDjs",
                       "target": "span",
                       "toString": [Function],
-                      "usesTheme": false,
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
                     }
@@ -1057,7 +1042,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
                   weight={600}
                 >
                   <span
-                    className="c1 c0"
+                    className="c0 c1"
                     data-component-type="text"
                   >
                     AUD
@@ -1135,7 +1120,6 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
                   "styledComponentId": "sc-htoDjs",
                   "target": "span",
                   "toString": [Function],
-                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }
@@ -1223,7 +1207,6 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
           "styledComponentId": "sc-iwsKbI",
           "target": "span",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -1246,7 +1229,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-dnqmqq",
-                  "isStatic": false,
+                  "isStatic": true,
                   "lastClassName": "c0",
                   "rules": Array [
                     "
@@ -1260,7 +1243,6 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
                 "styledComponentId": "sc-dnqmqq",
                 "target": [Function],
                 "toString": [Function],
-                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -1342,7 +1324,6 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
                       "styledComponentId": "sc-htoDjs",
                       "target": "span",
                       "toString": [Function],
-                      "usesTheme": false,
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
                     }
@@ -1353,7 +1334,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
                   weight={600}
                 >
                   <span
-                    className="c1 c0"
+                    className="c0 c1"
                     color="#FFD2CC"
                     data-component-type="text"
                   >
@@ -1429,7 +1410,6 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
                   "styledComponentId": "sc-htoDjs",
                   "target": "span",
                   "toString": [Function],
-                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }
@@ -1515,7 +1495,6 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
           "styledComponentId": "sc-iwsKbI",
           "target": "span",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -1536,7 +1515,7 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-dnqmqq",
-                  "isStatic": false,
+                  "isStatic": true,
                   "lastClassName": "c0",
                   "rules": Array [
                     "
@@ -1550,7 +1529,6 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
                 "styledComponentId": "sc-dnqmqq",
                 "target": [Function],
                 "toString": [Function],
-                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -1629,7 +1607,6 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
                       "styledComponentId": "sc-htoDjs",
                       "target": "span",
                       "toString": [Function],
-                      "usesTheme": false,
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
                     }
@@ -1640,7 +1617,7 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
                   weight={600}
                 >
                   <span
-                    className="c1 c0"
+                    className="c0 c1"
                     data-component-type="text"
                   >
                     AUD
@@ -1715,7 +1692,6 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
                   "styledComponentId": "sc-htoDjs",
                   "target": "span",
                   "toString": [Function],
-                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }
@@ -1801,7 +1777,6 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
           "styledComponentId": "sc-iwsKbI",
           "target": "span",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -1822,7 +1797,7 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-dnqmqq",
-                  "isStatic": false,
+                  "isStatic": true,
                   "lastClassName": "c0",
                   "rules": Array [
                     "
@@ -1836,7 +1811,6 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
                 "styledComponentId": "sc-dnqmqq",
                 "target": [Function],
                 "toString": [Function],
-                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -1915,7 +1889,6 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
                       "styledComponentId": "sc-htoDjs",
                       "target": "span",
                       "toString": [Function],
-                      "usesTheme": false,
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
                     }
@@ -1926,7 +1899,7 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
                   weight={600}
                 >
                   <span
-                    className="c1 c0"
+                    className="c0 c1"
                     data-component-type="text"
                   >
                     AUD
@@ -2001,7 +1974,6 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
                   "styledComponentId": "sc-htoDjs",
                   "target": "span",
                   "toString": [Function],
-                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }

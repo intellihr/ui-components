@@ -27,7 +27,7 @@ exports[`<Header /> should render modal header 1`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-dnqmqq",
-            "isStatic": false,
+            "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -45,7 +45,6 @@ exports[`<Header /> should render modal header 1`] = `
           "styledComponentId": "sc-dnqmqq",
           "target": "div",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -120,7 +119,6 @@ exports[`<Header /> should render modal header 1`] = `
                   "styledComponentId": "sc-htoDjs",
                   "target": "span",
                   "toString": [Function],
-                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }

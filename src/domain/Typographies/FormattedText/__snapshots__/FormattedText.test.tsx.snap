@@ -168,7 +168,7 @@ Ordered/multi-level lists:
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-ifAKCX",
-            "isStatic": false,
+            "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -188,7 +188,6 @@ Ordered/multi-level lists:
           "styledComponentId": "sc-ifAKCX",
           "target": "div",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -525,7 +524,6 @@ Ordered/multi-level lists:
                             "styledComponentId": "sc-bwzfXH",
                             "target": [Function],
                             "toString": [Function],
-                            "usesTheme": false,
                             "warnTooManyClasses": [Function],
                             "withComponent": [Function],
                           }
@@ -656,7 +654,6 @@ Ordered/multi-level lists:
                             "styledComponentId": "sc-bwzfXH",
                             "target": [Function],
                             "toString": [Function],
-                            "usesTheme": false,
                             "warnTooManyClasses": [Function],
                             "withComponent": [Function],
                           }
@@ -1441,7 +1438,7 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-ifAKCX",
-            "isStatic": false,
+            "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -1461,7 +1458,6 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
           "styledComponentId": "sc-ifAKCX",
           "target": "div",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -1575,7 +1571,6 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
                             "styledComponentId": "sc-bwzfXH",
                             "target": [Function],
                             "toString": [Function],
-                            "usesTheme": false,
                             "warnTooManyClasses": [Function],
                             "withComponent": [Function],
                           }
@@ -1665,7 +1660,7 @@ exports[`<FormattedText /> should render the formatted text 1`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-ifAKCX",
-            "isStatic": false,
+            "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -1685,7 +1680,6 @@ exports[`<FormattedText /> should render the formatted text 1`] = `
           "styledComponentId": "sc-ifAKCX",
           "target": "div",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }

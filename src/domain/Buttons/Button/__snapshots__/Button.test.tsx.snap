@@ -44,7 +44,6 @@ exports[`<Button /> should render a button with a simple text 1`] = `
           "styledComponentId": "sc-ifAKCX",
           "target": "button",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -54,7 +53,7 @@ exports[`<Button /> should render a button with a simple text 1`] = `
       type="button"
     >
       <button
-        className="button neutral"
+        className="button neutral "
         data-component-type="button"
         onClick={[Function]}
         type="button"
@@ -111,7 +110,6 @@ exports[`<Button /> should render a button with a size large 1`] = `
           "styledComponentId": "sc-ifAKCX",
           "target": "button",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -121,7 +119,7 @@ exports[`<Button /> should render a button with a size large 1`] = `
       type="button"
     >
       <button
-        className="button large neutral"
+        className="button large neutral "
         data-component-type="button"
         onClick={[Function]}
         type="button"
@@ -177,7 +175,6 @@ exports[`<Button /> should render a button with a type delete-subtle 1`] = `
           "styledComponentId": "sc-ifAKCX",
           "target": "button",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -187,7 +184,7 @@ exports[`<Button /> should render a button with a type delete-subtle 1`] = `
       type="button"
     >
       <button
-        className="button delete-subtle"
+        className="button delete-subtle "
         data-component-type="button"
         onClick={[Function]}
         type="button"
@@ -255,7 +252,6 @@ exports[`<Button /> should render a button with an icon 1`] = `
           "styledComponentId": "sc-ifAKCX",
           "target": "button",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -264,7 +260,7 @@ exports[`<Button /> should render a button with an icon 1`] = `
       type="button"
     >
       <button
-        className="button primary-hollow"
+        className="button primary-hollow "
         data-component-type="button"
         type="button"
       >
@@ -330,6 +326,14 @@ exports[`<Button /> should render a button with an icon 1`] = `
                           [Function],
                           "
 
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
   &.icon {
     text-align: center;
 
@@ -346,7 +350,6 @@ exports[`<Button /> should render a button with an icon 1`] = `
                       "styledComponentId": "sc-htpNat",
                       "target": "i",
                       "toString": [Function],
-                      "usesTheme": false,
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
                     }
@@ -356,7 +359,7 @@ exports[`<Button /> should render a button with an icon 1`] = `
                 >
                   <i
                     aria-hidden={true}
-                    className="c0 icon fas fa-star"
+                    className="icon fas fa-star c0"
                     size="medium"
                   />
                 </StyledComponent>
@@ -417,7 +420,6 @@ exports[`<Button /> should render a disabled button 1`] = `
           "styledComponentId": "sc-ifAKCX",
           "target": "button",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -427,7 +429,7 @@ exports[`<Button /> should render a disabled button 1`] = `
       type="button"
     >
       <button
-        className="button neutral"
+        className="button neutral "
         data-component-type="button"
         disabled={true}
         onClick={[Function]}
@@ -511,7 +513,6 @@ exports[`should render a button with a spinner 1`] = `
           "styledComponentId": "sc-ifAKCX",
           "target": "button",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -520,7 +521,7 @@ exports[`should render a button with a spinner 1`] = `
       type="button"
     >
       <button
-        className="button neutral show-spinner"
+        className="button neutral show-spinner "
         data-component-type="button"
         type="button"
       >
@@ -540,7 +541,7 @@ exports[`should render a button with a spinner 1`] = `
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bxivhb",
-                    "isStatic": false,
+                    "isStatic": true,
                     "lastClassName": "c0",
                     "rules": Array [
                       "
@@ -577,7 +578,6 @@ exports[`should render a button with a spinner 1`] = `
                   "styledComponentId": "sc-bxivhb",
                   "target": "div",
                   "toString": [Function],
-                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }
@@ -585,7 +585,7 @@ exports[`should render a button with a spinner 1`] = `
               forwardedRef={null}
             >
               <div
-                className="c0 spinner"
+                className="spinner c0"
               >
                 <ThreeBounce
                   color="#424F5C"

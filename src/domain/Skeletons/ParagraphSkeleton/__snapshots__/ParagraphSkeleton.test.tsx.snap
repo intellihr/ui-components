@@ -88,7 +88,6 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
           "styledComponentId": "sc-bwzfXH",
           "target": "div",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -141,7 +140,6 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
                   "styledComponentId": "sc-bdVaJa",
                   "target": "span",
                   "toString": [Function],
-                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }
@@ -201,7 +199,6 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
                   "styledComponentId": "sc-bdVaJa",
                   "target": "span",
                   "toString": [Function],
-                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }
@@ -259,7 +256,6 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
                   "styledComponentId": "sc-bdVaJa",
                   "target": "span",
                   "toString": [Function],
-                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }
@@ -317,7 +313,6 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
                   "styledComponentId": "sc-bdVaJa",
                   "target": "span",
                   "toString": [Function],
-                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }
@@ -375,7 +370,6 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
                   "styledComponentId": "sc-bdVaJa",
                   "target": "span",
                   "toString": [Function],
-                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }
@@ -435,7 +429,6 @@ exports[`<ParagraphSkeleton /> should render a paragraph skeleton 1`] = `
                   "styledComponentId": "sc-bdVaJa",
                   "target": "span",
                   "toString": [Function],
-                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }

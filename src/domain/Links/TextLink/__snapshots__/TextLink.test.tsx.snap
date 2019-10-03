@@ -95,7 +95,6 @@ exports[`<TextLink /> should render a text link 1`] = `
           "styledComponentId": "sc-bdVaJa",
           "target": [Function],
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -225,7 +224,6 @@ exports[`<TextLink /> should render a text link button 1`] = `
           "styledComponentId": "sc-bwzfXH",
           "target": "button",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -340,7 +338,6 @@ exports[`<TextLink /> should render a text link with display block 1`] = `
           "styledComponentId": "sc-bdVaJa",
           "target": [Function],
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -474,7 +471,6 @@ exports[`<TextLink /> should render a text link with underline on hover 1`] = `
           "styledComponentId": "sc-bdVaJa",
           "target": [Function],
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }

@@ -35,7 +35,6 @@ exports[`<IndentedElement /> should render an element with no indent 1`] = `
           "styledComponentId": "sc-bdVaJa",
           "target": "div",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -87,7 +86,6 @@ exports[`<IndentedElement /> should render an indented element 1`] = `
           "styledComponentId": "sc-bdVaJa",
           "target": "div",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }

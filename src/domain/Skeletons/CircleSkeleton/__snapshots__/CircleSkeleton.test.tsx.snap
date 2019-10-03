@@ -55,7 +55,6 @@ exports[`<CircleSkeleton /> should render a circle skeleton 1`] = `
           "styledComponentId": "sc-bdVaJa",
           "target": "span",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -128,7 +127,6 @@ exports[`<CircleSkeleton /> should render a circle skeleton with set size 1`] = 
           "styledComponentId": "sc-bdVaJa",
           "target": "span",
           "toString": [Function],
-          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
