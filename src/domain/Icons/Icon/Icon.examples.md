@@ -31,7 +31,7 @@ import { FontAwesomeIcon } from '@Domain/Icons';
   />
 ```
 
-#### Duotone Icon
+#### FontAwesome Duotone Icon
 
 ```jsx
 import { FontAwesomeIcon } from '@Domain/Icons';
@@ -42,7 +42,7 @@ import { FontAwesomeIcon } from '@Domain/Icons';
   />
 ```
 
-#### Duototone Icon with custom opacity 
+#### FontAwesome Duototone Icon with custom opacity 
 
 ```jsx
 import { FontAwesomeIcon } from '@Domain/Icons';
@@ -60,7 +60,7 @@ import { FontAwesomeIcon } from '@Domain/Icons';
   </>
 ```
 
-#### Duototone Icon with custom colors 
+#### FontAwesome Duototone Icon with custom colors 
 
 ```jsx
 import { FontAwesomeIcon } from '@Domain/Icons';
