@@ -42,7 +42,7 @@ exports[`<Footer /> should render modal footer 1`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-htpNat",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -62,6 +62,7 @@ exports[`<Footer /> should render modal footer 1`] = `
           "styledComponentId": "sc-htpNat",
           "target": "div",
           "toString": [Function],
+          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -79,7 +80,7 @@ exports[`<Footer /> should render modal footer 1`] = `
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-bxivhb",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
                     "
@@ -93,6 +94,7 @@ exports[`<Footer /> should render modal footer 1`] = `
                 "styledComponentId": "sc-bxivhb",
                 "target": "div",
                 "toString": [Function],
+                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -114,7 +116,7 @@ exports[`<Footer /> should render modal footer 1`] = `
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-bxivhb",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
                     "
@@ -128,6 +130,7 @@ exports[`<Footer /> should render modal footer 1`] = `
                 "styledComponentId": "sc-bxivhb",
                 "target": "div",
                 "toString": [Function],
+                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }

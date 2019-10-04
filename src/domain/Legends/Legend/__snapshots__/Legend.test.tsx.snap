@@ -4,6 +4,8 @@ exports[`<Legend /> should render a legend 1`] = `
 .c1 {
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
   color: rgb(0,255,0);
 }
 
@@ -15,6 +17,8 @@ exports[`<Legend /> should render a legend 1`] = `
 .c3 {
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
   color: rgb(0,0,255);
 }
 
@@ -77,7 +81,7 @@ exports[`<Legend /> should render a legend 1`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-bxivhb",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -107,6 +111,7 @@ exports[`<Legend /> should render a legend 1`] = `
           "styledComponentId": "sc-bxivhb",
           "target": "ul",
           "toString": [Function],
+          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -152,6 +157,12 @@ exports[`<Legend /> should render a legend 1`] = `
                           "
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ",
+                          "#2512B3",
+                          ";
+  --fa-secondary-color: ",
+                          "#2512B3",
+                          ";
 
   ",
                           [Function],
@@ -160,6 +171,22 @@ exports[`<Legend /> should render a legend 1`] = `
   ",
                           [Function],
                           "
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
   ",
                           [Function],
                           "
@@ -184,6 +211,7 @@ exports[`<Legend /> should render a legend 1`] = `
                       "styledComponentId": "sc-htpNat",
                       "target": "i",
                       "toString": [Function],
+                      "usesTheme": false,
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
                     }
@@ -193,7 +221,7 @@ exports[`<Legend /> should render a legend 1`] = `
                 >
                   <i
                     aria-hidden={true}
-                    className="icon fas fa-circle c1"
+                    className="c1 icon fas fa-circle"
                     color="rgb(0,255,0)"
                     size="xsmall"
                   />
@@ -209,7 +237,7 @@ exports[`<Legend /> should render a legend 1`] = `
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-ifAKCX",
-                    "isStatic": true,
+                    "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
                       "
@@ -225,6 +253,7 @@ exports[`<Legend /> should render a legend 1`] = `
                   "styledComponentId": "sc-ifAKCX",
                   "target": "span",
                   "toString": [Function],
+                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }
@@ -275,6 +304,12 @@ exports[`<Legend /> should render a legend 1`] = `
                           "
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ",
+                          "#2512B3",
+                          ";
+  --fa-secondary-color: ",
+                          "#2512B3",
+                          ";
 
   ",
                           [Function],
@@ -283,6 +318,22 @@ exports[`<Legend /> should render a legend 1`] = `
   ",
                           [Function],
                           "
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
   ",
                           [Function],
                           "
@@ -307,6 +358,7 @@ exports[`<Legend /> should render a legend 1`] = `
                       "styledComponentId": "sc-htpNat",
                       "target": "i",
                       "toString": [Function],
+                      "usesTheme": false,
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
                     }
@@ -316,7 +368,7 @@ exports[`<Legend /> should render a legend 1`] = `
                 >
                   <i
                     aria-hidden={true}
-                    className="icon fas fa-circle c3"
+                    className="c3 icon fas fa-circle"
                     color="rgb(0,0,255)"
                     size="xsmall"
                   />
@@ -332,7 +384,7 @@ exports[`<Legend /> should render a legend 1`] = `
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-ifAKCX",
-                    "isStatic": true,
+                    "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
                       "
@@ -348,6 +400,7 @@ exports[`<Legend /> should render a legend 1`] = `
                   "styledComponentId": "sc-ifAKCX",
                   "target": "span",
                   "toString": [Function],
+                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }
