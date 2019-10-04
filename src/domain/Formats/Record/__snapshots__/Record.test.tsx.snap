@@ -55,6 +55,7 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
           "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
+          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -76,7 +77,7 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-dnqmqq",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
                     "
@@ -93,6 +94,7 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
                 "styledComponentId": "sc-dnqmqq",
                 "target": "div",
                 "toString": [Function],
+                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -174,6 +176,7 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
                         "styledComponentId": "sc-htoDjs",
                         "target": "span",
                         "toString": [Function],
+                        "usesTheme": false,
                         "warnTooManyClasses": [Function],
                         "withComponent": [Function],
                       }
@@ -183,7 +186,7 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
                     textType="small"
                   >
                     <span
-                      className="label-component c1"
+                      className="c1 label-component"
                       color="#424F5C"
                       data-component-type="text"
                     >
@@ -262,6 +265,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
           "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
+          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -283,7 +287,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-dnqmqq",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
                     "
@@ -300,6 +304,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
                 "styledComponentId": "sc-dnqmqq",
                 "target": "div",
                 "toString": [Function],
+                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -381,6 +386,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
                         "styledComponentId": "sc-htoDjs",
                         "target": "span",
                         "toString": [Function],
+                        "usesTheme": false,
                         "warnTooManyClasses": [Function],
                         "withComponent": [Function],
                       }
@@ -390,7 +396,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
                     textType="small"
                   >
                     <span
-                      className="label-component c1"
+                      className="c1 label-component"
                       color="#424F5C"
                       data-component-type="text"
                     >
@@ -521,6 +527,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
           "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
+          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -542,7 +549,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-dnqmqq",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
                     "
@@ -559,6 +566,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                 "styledComponentId": "sc-dnqmqq",
                 "target": "div",
                 "toString": [Function],
+                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -640,6 +648,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                         "styledComponentId": "sc-htoDjs",
                         "target": "span",
                         "toString": [Function],
+                        "usesTheme": false,
                         "warnTooManyClasses": [Function],
                         "withComponent": [Function],
                       }
@@ -649,7 +658,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                     textType="small"
                   >
                     <span
-                      className="label-component c1"
+                      className="c1 label-component"
                       color="#424F5C"
                       data-component-type="text"
                     >
@@ -730,6 +739,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                   "styledComponentId": "sc-htoDjs",
                   "target": "span",
                   "toString": [Function],
+                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }
@@ -815,6 +825,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
           "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
+          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -836,7 +847,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-dnqmqq",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
                     "
@@ -853,6 +864,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                 "styledComponentId": "sc-dnqmqq",
                 "target": "div",
                 "toString": [Function],
+                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -934,6 +946,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                         "styledComponentId": "sc-htoDjs",
                         "target": "span",
                         "toString": [Function],
+                        "usesTheme": false,
                         "warnTooManyClasses": [Function],
                         "withComponent": [Function],
                       }
@@ -943,7 +956,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                     textType="small"
                   >
                     <span
-                      className="label-component c1"
+                      className="c1 label-component"
                       color="#424F5C"
                       data-component-type="text"
                     >
@@ -1024,6 +1037,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                   "styledComponentId": "sc-htoDjs",
                   "target": "span",
                   "toString": [Function],
+                  "usesTheme": false,
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }
@@ -1098,6 +1112,7 @@ exports[`<Record /> should render a Record component, with the provided componen
           "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
+          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -1119,7 +1134,7 @@ exports[`<Record /> should render a Record component, with the provided componen
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-dnqmqq",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
                     "
@@ -1136,6 +1151,7 @@ exports[`<Record /> should render a Record component, with the provided componen
                 "styledComponentId": "sc-dnqmqq",
                 "target": "div",
                 "toString": [Function],
+                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -1217,6 +1233,7 @@ exports[`<Record /> should render a Record component, with the provided componen
                         "styledComponentId": "sc-htoDjs",
                         "target": "span",
                         "toString": [Function],
+                        "usesTheme": false,
                         "warnTooManyClasses": [Function],
                         "withComponent": [Function],
                       }
@@ -1226,7 +1243,7 @@ exports[`<Record /> should render a Record component, with the provided componen
                     textType="small"
                   >
                     <span
-                      className="label-component c1"
+                      className="c1 label-component"
                       color="#424F5C"
                       data-component-type="text"
                     >
@@ -1313,6 +1330,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
           "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
+          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -1334,7 +1352,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-dnqmqq",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
                     "
@@ -1351,6 +1369,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                 "styledComponentId": "sc-dnqmqq",
                 "target": "div",
                 "toString": [Function],
+                "usesTheme": false,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -1432,6 +1451,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                         "styledComponentId": "sc-htoDjs",
                         "target": "span",
                         "toString": [Function],
+                        "usesTheme": false,
                         "warnTooManyClasses": [Function],
                         "withComponent": [Function],
                       }
@@ -1441,7 +1461,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                     textType="small"
                   >
                     <span
-                      className="label-component c1"
+                      className="c1 label-component"
                       color="#424F5C"
                       data-component-type="text"
                     >
@@ -1547,6 +1567,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                               "styledComponentId": "sc-htpNat",
                               "target": "i",
                               "toString": [Function],
+                              "usesTheme": false,
                               "warnTooManyClasses": [Function],
                               "withComponent": [Function],
                             }
@@ -1556,7 +1577,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                         >
                           <i
                             aria-hidden={true}
-                            className="icon far fa-question-circle c2"
+                            className="c2 icon far fa-question-circle"
                             color="#424F5C"
                             size="medium"
                           />
@@ -1594,7 +1615,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                       >
                         <i
                           aria-hidden="true"
-                          class="icon far fa-question-circle c0"
+                          class="c0 icon far fa-question-circle"
                           color="#424F5C"
                         />
                       </button>,
