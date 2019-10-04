@@ -27,7 +27,7 @@ interface IIconProps {
   showForSizes?: Props.IShowForSizes
   /** Colors for duotone icons */
   duotoneColors?: {
-    primaryColor: string,
+    primaryColor?: string,
     secondaryColor?: string
   }
   duotoneOpacity?: {
