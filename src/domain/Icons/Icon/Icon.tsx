@@ -25,6 +25,16 @@ interface IIconProps {
   width?: number
   /** Shows the component only between these provided screen sizes */
   showForSizes?: Props.IShowForSizes
+  /** Colors for FontAwesome duotone icons */
+  duotoneColors?: {
+    primaryColor?: string,
+    secondaryColor?: string
+  }
+  /** Opacity for FontAwesome duotone icons */
+  duotoneOpacity?: {
+    primaryOpacity?: number
+    secondaryOpacity?: number
+  }
 }
 
 const Icon: React.FC<IIconProps> = ({
@@ -37,7 +47,9 @@ const Icon: React.FC<IIconProps> = ({
   badge,
   margins,
   width,
-  showForSizes
+  showForSizes,
+  duotoneColors,
+  duotoneOpacity
 }) => {
   const classes = classNames(
     className,
@@ -65,6 +77,8 @@ const Icon: React.FC<IIconProps> = ({
         showForSizes={showForSizes}
         margins={margins}
         width={width}
+        duotoneColors={duotoneColors}
+        duotoneOpacity={duotoneOpacity}
       />
       {badge && ['large', 'xlarge', 'xxlarge'].includes(size) && (
         <BadgeWrapper

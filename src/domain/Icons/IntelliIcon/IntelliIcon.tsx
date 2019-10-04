@@ -1,9 +1,10 @@
 import React from 'react'
+import { Omit } from 'src/common/types/utilityTypes'
 
 import { IIconProps, Icon } from '../Icon'
 import { IntelliIconValue } from '../Icon/types'
 
-interface IIntelliIconProps extends IIconProps {
+interface IIntelliIconProps extends Omit<IIconProps, 'duotoneColors' | 'duotoneOpacity'> {
   icon: IntelliIconValue
 }
 

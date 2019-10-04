@@ -60,6 +60,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with no spacing sizes de
             "styledComponentId": "sc-bdVaJa",
             "target": "div",
             "toString": [Function],
+            "usesTheme": false,
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
           }
@@ -108,6 +109,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with no spacing sizes de
             "styledComponentId": "sc-bdVaJa",
             "target": "div",
             "toString": [Function],
+            "usesTheme": false,
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
           }
@@ -187,6 +189,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with null content 1`] = 
             "styledComponentId": "sc-bdVaJa",
             "target": "div",
             "toString": [Function],
+            "usesTheme": false,
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
           }
@@ -361,6 +364,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
             "styledComponentId": "sc-bdVaJa",
             "target": "div",
             "toString": [Function],
+            "usesTheme": false,
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
           }
@@ -411,6 +415,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
             "styledComponentId": "sc-bdVaJa",
             "target": "div",
             "toString": [Function],
+            "usesTheme": false,
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
           }
@@ -461,6 +466,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
             "styledComponentId": "sc-bdVaJa",
             "target": "div",
             "toString": [Function],
+            "usesTheme": false,
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
           }
@@ -511,6 +517,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
             "styledComponentId": "sc-bdVaJa",
             "target": "div",
             "toString": [Function],
+            "usesTheme": false,
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
           }
@@ -561,6 +568,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
             "styledComponentId": "sc-bdVaJa",
             "target": "div",
             "toString": [Function],
+            "usesTheme": false,
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
           }
@@ -611,6 +619,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
             "styledComponentId": "sc-bdVaJa",
             "target": "div",
             "toString": [Function],
+            "usesTheme": false,
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
           }
@@ -661,6 +670,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
             "styledComponentId": "sc-bdVaJa",
             "target": "div",
             "toString": [Function],
+            "usesTheme": false,
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
           }
@@ -710,6 +720,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
             "styledComponentId": "sc-bdVaJa",
             "target": "div",
             "toString": [Function],
+            "usesTheme": false,
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
           }

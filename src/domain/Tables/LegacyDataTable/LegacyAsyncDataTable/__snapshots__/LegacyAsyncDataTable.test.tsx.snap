@@ -654,6 +654,7 @@ exports[`Empty AsyncDataTable should match the snapshot 1`] = `
                     "styledComponentId": "sc-bdVaJa",
                     "target": "div",
                     "toString": [Function],
+                    "usesTheme": false,
                     "warnTooManyClasses": [Function],
                     "withComponent": [Function],
                   }
@@ -661,7 +662,7 @@ exports[`Empty AsyncDataTable should match the snapshot 1`] = `
                 forwardedRef={[Function]}
               >
                 <div
-                  className="callout no-data "
+                  className="callout no-data"
                   data-component-type="callout"
                 >
                   <div
@@ -701,7 +702,7 @@ exports[`Empty AsyncDataTable should match the snapshot 1`] = `
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
                           "componentId": "sc-bwzfXH",
-                          "isStatic": true,
+                          "isStatic": false,
                           "lastClassName": "c0",
                           "rules": Array [
                             "
@@ -738,6 +739,7 @@ exports[`Empty AsyncDataTable should match the snapshot 1`] = `
                         "styledComponentId": "sc-bwzfXH",
                         "target": "div",
                         "toString": [Function],
+                        "usesTheme": false,
                         "warnTooManyClasses": [Function],
                         "withComponent": [Function],
                       }
@@ -745,7 +747,7 @@ exports[`Empty AsyncDataTable should match the snapshot 1`] = `
                     forwardedRef={null}
                   >
                     <div
-                      className="spinner center c0"
+                      className="c0 spinner center"
                     >
                       <ThreeBounce
                         color="#432DF3"
@@ -904,6 +906,8 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
 .c0 {
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
 }
 
 .c0.icon {
@@ -2125,6 +2129,12 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                                     "
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ",
+                                    "#2512B3",
+                                    ";
+  --fa-secondary-color: ",
+                                    "#2512B3",
+                                    ";
 
   ",
                                     [Function],
@@ -2133,6 +2143,22 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
   ",
                                     [Function],
                                     "
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
   ",
                                     [Function],
                                     "
@@ -2157,6 +2183,7 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                                 "styledComponentId": "sc-ifAKCX",
                                 "target": "i",
                                 "toString": [Function],
+                                "usesTheme": false,
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
                               }
@@ -2166,7 +2193,7 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                           >
                             <i
                               aria-hidden={true}
-                              className="icon fas fa-chevron-left c0"
+                              className="c0 icon fas fa-chevron-left"
                               size="medium"
                             />
                           </StyledComponent>
@@ -2223,6 +2250,12 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                                     "
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ",
+                                    "#2512B3",
+                                    ";
+  --fa-secondary-color: ",
+                                    "#2512B3",
+                                    ";
 
   ",
                                     [Function],
@@ -2231,6 +2264,22 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
   ",
                                     [Function],
                                     "
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
   ",
                                     [Function],
                                     "
@@ -2255,6 +2304,7 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                                 "styledComponentId": "sc-ifAKCX",
                                 "target": "i",
                                 "toString": [Function],
+                                "usesTheme": false,
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
                               }
@@ -2264,7 +2314,7 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                           >
                             <i
                               aria-hidden={true}
-                              className="icon fas fa-chevron-right c0"
+                              className="c0 icon fas fa-chevron-right"
                               size="medium"
                             />
                           </StyledComponent>
@@ -2304,7 +2354,7 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
                           "componentId": "sc-bwzfXH",
-                          "isStatic": true,
+                          "isStatic": false,
                           "lastClassName": "c1",
                           "rules": Array [
                             "
@@ -2341,6 +2391,7 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                         "styledComponentId": "sc-bwzfXH",
                         "target": "div",
                         "toString": [Function],
+                        "usesTheme": false,
                         "warnTooManyClasses": [Function],
                         "withComponent": [Function],
                       }
@@ -2348,7 +2399,7 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                     forwardedRef={null}
                   >
                     <div
-                      className="spinner center c1"
+                      className="c1 spinner center"
                     >
                       <ThreeBounce
                         color="#432DF3"
@@ -2507,6 +2558,8 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
 .c0 {
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
 }
 
 .c0.icon {
@@ -3439,6 +3492,12 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                                     "
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ",
+                                    "#2512B3",
+                                    ";
+  --fa-secondary-color: ",
+                                    "#2512B3",
+                                    ";
 
   ",
                                     [Function],
@@ -3447,6 +3506,22 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
   ",
                                     [Function],
                                     "
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
   ",
                                     [Function],
                                     "
@@ -3471,6 +3546,7 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                                 "styledComponentId": "sc-ifAKCX",
                                 "target": "i",
                                 "toString": [Function],
+                                "usesTheme": false,
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
                               }
@@ -3480,7 +3556,7 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                           >
                             <i
                               aria-hidden={true}
-                              className="icon fas fa-chevron-left c0"
+                              className="c0 icon fas fa-chevron-left"
                               size="medium"
                             />
                           </StyledComponent>
@@ -3537,6 +3613,12 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                                     "
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ",
+                                    "#2512B3",
+                                    ";
+  --fa-secondary-color: ",
+                                    "#2512B3",
+                                    ";
 
   ",
                                     [Function],
@@ -3545,6 +3627,22 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
   ",
                                     [Function],
                                     "
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
   ",
                                     [Function],
                                     "
@@ -3569,6 +3667,7 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                                 "styledComponentId": "sc-ifAKCX",
                                 "target": "i",
                                 "toString": [Function],
+                                "usesTheme": false,
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
                               }
@@ -3578,7 +3677,7 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                           >
                             <i
                               aria-hidden={true}
-                              className="icon fas fa-chevron-right c0"
+                              className="c0 icon fas fa-chevron-right"
                               size="medium"
                             />
                           </StyledComponent>
@@ -3627,6 +3726,7 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                     "styledComponentId": "sc-bdVaJa",
                     "target": "div",
                     "toString": [Function],
+                    "usesTheme": false,
                     "warnTooManyClasses": [Function],
                     "withComponent": [Function],
                   }
@@ -3634,7 +3734,7 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                 forwardedRef={[Function]}
               >
                 <div
-                  className="callout no-data "
+                  className="callout no-data"
                   data-component-type="callout"
                 >
                   <div
@@ -3674,7 +3774,7 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
                           "componentId": "sc-bwzfXH",
-                          "isStatic": true,
+                          "isStatic": false,
                           "lastClassName": "c1",
                           "rules": Array [
                             "
@@ -3711,6 +3811,7 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                         "styledComponentId": "sc-bwzfXH",
                         "target": "div",
                         "toString": [Function],
+                        "usesTheme": false,
                         "warnTooManyClasses": [Function],
                         "withComponent": [Function],
                       }
@@ -3718,7 +3819,7 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                     forwardedRef={null}
                   >
                     <div
-                      className="spinner center c1"
+                      className="c1 spinner center"
                     >
                       <ThreeBounce
                         color="#432DF3"
@@ -3877,6 +3978,8 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
 .c0 {
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
 }
 
 .c0.icon {
@@ -4814,6 +4917,12 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                                     "
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ",
+                                    "#2512B3",
+                                    ";
+  --fa-secondary-color: ",
+                                    "#2512B3",
+                                    ";
 
   ",
                                     [Function],
@@ -4822,6 +4931,22 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
   ",
                                     [Function],
                                     "
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
   ",
                                     [Function],
                                     "
@@ -4846,6 +4971,7 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                                 "styledComponentId": "sc-ifAKCX",
                                 "target": "i",
                                 "toString": [Function],
+                                "usesTheme": false,
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
                               }
@@ -4855,7 +4981,7 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                           >
                             <i
                               aria-hidden={true}
-                              className="icon fas fa-chevron-left c0"
+                              className="c0 icon fas fa-chevron-left"
                               size="medium"
                             />
                           </StyledComponent>
@@ -4912,6 +5038,12 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                                     "
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ",
+                                    "#2512B3",
+                                    ";
+  --fa-secondary-color: ",
+                                    "#2512B3",
+                                    ";
 
   ",
                                     [Function],
@@ -4920,6 +5052,22 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
   ",
                                     [Function],
                                     "
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
   ",
                                     [Function],
                                     "
@@ -4944,6 +5092,7 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                                 "styledComponentId": "sc-ifAKCX",
                                 "target": "i",
                                 "toString": [Function],
+                                "usesTheme": false,
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
                               }
@@ -4953,7 +5102,7 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                           >
                             <i
                               aria-hidden={true}
-                              className="icon fas fa-chevron-right c0"
+                              className="c0 icon fas fa-chevron-right"
                               size="medium"
                             />
                           </StyledComponent>
@@ -4998,7 +5147,7 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
                           "componentId": "sc-bwzfXH",
-                          "isStatic": true,
+                          "isStatic": false,
                           "lastClassName": "c1",
                           "rules": Array [
                             "
@@ -5035,6 +5184,7 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                         "styledComponentId": "sc-bwzfXH",
                         "target": "div",
                         "toString": [Function],
+                        "usesTheme": false,
                         "warnTooManyClasses": [Function],
                         "withComponent": [Function],
                       }
@@ -5042,7 +5192,7 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                     forwardedRef={null}
                   >
                     <div
-                      className="spinner center c1"
+                      className="c1 spinner center"
                     >
                       <ThreeBounce
                         color="#432DF3"
@@ -5201,6 +5351,8 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
 .c0 {
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
 }
 
 .c0.icon {
@@ -6450,6 +6602,12 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                                     "
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ",
+                                    "#2512B3",
+                                    ";
+  --fa-secondary-color: ",
+                                    "#2512B3",
+                                    ";
 
   ",
                                     [Function],
@@ -6458,6 +6616,22 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
   ",
                                     [Function],
                                     "
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
   ",
                                     [Function],
                                     "
@@ -6482,6 +6656,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                                 "styledComponentId": "sc-ifAKCX",
                                 "target": "i",
                                 "toString": [Function],
+                                "usesTheme": false,
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
                               }
@@ -6491,7 +6666,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                           >
                             <i
                               aria-hidden={true}
-                              className="icon fas fa-chevron-left c0"
+                              className="c0 icon fas fa-chevron-left"
                               size="medium"
                             />
                           </StyledComponent>
@@ -6548,6 +6723,12 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                                     "
   display: inline-block;
   font-stretch: normal;
+  --fa-primary-color: ",
+                                    "#2512B3",
+                                    ";
+  --fa-secondary-color: ",
+                                    "#2512B3",
+                                    ";
 
   ",
                                     [Function],
@@ -6556,6 +6737,22 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
   ",
                                     [Function],
                                     "
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
   ",
                                     [Function],
                                     "
@@ -6580,6 +6777,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                                 "styledComponentId": "sc-ifAKCX",
                                 "target": "i",
                                 "toString": [Function],
+                                "usesTheme": false,
                                 "warnTooManyClasses": [Function],
                                 "withComponent": [Function],
                               }
@@ -6589,7 +6787,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                           >
                             <i
                               aria-hidden={true}
-                              className="icon fas fa-chevron-right c0"
+                              className="c0 icon fas fa-chevron-right"
                               size="medium"
                             />
                           </StyledComponent>
@@ -6629,7 +6827,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
                           "componentId": "sc-bwzfXH",
-                          "isStatic": true,
+                          "isStatic": false,
                           "lastClassName": "c1",
                           "rules": Array [
                             "
@@ -6666,6 +6864,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                         "styledComponentId": "sc-bwzfXH",
                         "target": "div",
                         "toString": [Function],
+                        "usesTheme": false,
                         "warnTooManyClasses": [Function],
                         "withComponent": [Function],
                       }
@@ -6673,7 +6872,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                     forwardedRef={null}
                   >
                     <div
-                      className="spinner center c1"
+                      className="c1 spinner center"
                     >
                       <ThreeBounce
                         color="#432DF3"

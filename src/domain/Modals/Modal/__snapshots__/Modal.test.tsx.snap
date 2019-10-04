@@ -177,7 +177,7 @@ exports[`<Modal /> should render a hidden modal 1`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -351,6 +351,7 @@ exports[`<Modal /> should render a hidden modal 1`] = `
           "styledComponentId": "sc-bdVaJa",
           "target": [Function],
           "toString": [Function],
+          "usesTheme": false,
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
         }
@@ -371,7 +372,7 @@ exports[`<Modal /> should render a hidden modal 1`] = `
     >
       <ReactModalAdapter
         ariaHideApp={false}
-        className="modal modal-size-medium c0"
+        className="c0 modal modal-size-medium"
         isOpen={false}
         overlayClassName="modal-overlay"
         style={
@@ -388,13 +389,13 @@ exports[`<Modal /> should render a hidden modal 1`] = `
         <Modal
           ariaHideApp={false}
           bodyOpenClassName="ReactModal__Body--open"
-          className="modal modal-size-medium c0__content"
+          className="c0 modal modal-size-medium__content"
           closeTimeoutMS={0}
           isOpen={false}
           overlayClassName="modal-overlay"
           overlayRef={[Function]}
           parentSelector={[Function]}
-          portalClassName="modal modal-size-medium sc-bdVaJa c0"
+          portalClassName="sc-bdVaJa c0 modal modal-size-medium"
           shouldCloseOnEsc={true}
           shouldCloseOnOverlayClick={true}
           shouldFocusAfterRender={true}
@@ -557,14 +558,14 @@ exports[`<Modal /> should render a hidden modal 1`] = `
 }
 
 <div
-                class="modal modal-size-medium c0"
+                class="c0 modal modal-size-medium"
               />
             }
           >
             <ModalPortal
               ariaHideApp={false}
               bodyOpenClassName="ReactModal__Body--open"
-              className="modal modal-size-medium c0__content"
+              className="c0 modal modal-size-medium__content"
               closeTimeoutMS={0}
               defaultStyles={
                 Object {
@@ -596,7 +597,7 @@ exports[`<Modal /> should render a hidden modal 1`] = `
               overlayClassName="modal-overlay"
               overlayRef={[Function]}
               parentSelector={[Function]}
-              portalClassName="modal modal-size-medium sc-bdVaJa c0"
+              portalClassName="sc-bdVaJa c0 modal modal-size-medium"
               shouldCloseOnEsc={true}
               shouldCloseOnOverlayClick={true}
               shouldFocusAfterRender={true}

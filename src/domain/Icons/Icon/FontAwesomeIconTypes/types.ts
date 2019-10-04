@@ -10,6 +10,8 @@ type FontAwesomeIconValue =
   'alarm-exclamation' |
   'alarm-plus' |
   'alarm-snooze' |
+  'album' |
+  'album-collection' |
   'alicorn' |
   'align-center' |
   'align-justify' |
@@ -19,6 +21,7 @@ type FontAwesomeIconValue =
   'allergies' |
   'ambulance' |
   'american-sign-language-interpreting' |
+  'amp-guitar' |
   'analytics' |
   'anchor' |
   'angel' |
@@ -102,6 +105,7 @@ type FontAwesomeIconValue =
   'badge-check' |
   'badge-dollar' |
   'badge-percent' |
+  'badge-sheriff' |
   'badger-honey' |
   'bags-shopping' |
   'balance-scale' |
@@ -112,6 +116,7 @@ type FontAwesomeIconValue =
   'ballot-check' |
   'ban' |
   'band-aid' |
+  'banjo' |
   'barcode' |
   'barcode-alt' |
   'barcode-read' |
@@ -139,6 +144,7 @@ type FontAwesomeIconValue =
   'bell-school-slash' |
   'bell-slash' |
   'bells' |
+  'betamax' |
   'bezier-curve' |
   'bible' |
   'bicycle' |
@@ -170,10 +176,13 @@ type FontAwesomeIconValue =
   'bookmark' |
   'books' |
   'books-medical' |
+  'boombox' |
   'boot' |
   'booth-curtain' |
   'border-all' |
   'border-bottom' |
+  'border-center-h' |
+  'border-center-v' |
   'border-inner' |
   'border-left' |
   'border-none' |
@@ -226,6 +235,7 @@ type FontAwesomeIconValue =
   'bus-school' |
   'business-time' |
   'cabinet-filing' |
+  'cactus' |
   'calculator' |
   'calculator-alt' |
   'calendar' |
@@ -239,8 +249,11 @@ type FontAwesomeIconValue =
   'calendar-star' |
   'calendar-times' |
   'calendar-week' |
+  'camcorder' |
   'camera' |
   'camera-alt' |
+  'camera-movie' |
+  'camera-polaroid' |
   'camera-retro' |
   'campfire' |
   'campground' |
@@ -278,8 +291,10 @@ type FontAwesomeIconValue =
   'cart-arrow-down' |
   'cart-plus' |
   'cash-register' |
+  'cassette-tape' |
   'cat' |
   'cauldron' |
+  'cctv' |
   'certificate' |
   'chair' |
   'chair-office' |
@@ -339,6 +354,7 @@ type FontAwesomeIconValue =
   'circle' |
   'circle-notch' |
   'city' |
+  'clarinet' |
   'claw-marks' |
   'clinic-medical' |
   'clipboard' |
@@ -359,6 +375,7 @@ type FontAwesomeIconValue =
   'cloud-meatball' |
   'cloud-moon' |
   'cloud-moon-rain' |
+  'cloud-music' |
   'cloud-rain' |
   'cloud-rainbow' |
   'cloud-showers' |
@@ -396,6 +413,7 @@ type FontAwesomeIconValue =
   'comment-alt-lines' |
   'comment-alt-medical' |
   'comment-alt-minus' |
+  'comment-alt-music' |
   'comment-alt-plus' |
   'comment-alt-slash' |
   'comment-alt-smile' |
@@ -408,6 +426,7 @@ type FontAwesomeIconValue =
   'comment-lines' |
   'comment-medical' |
   'comment-minus' |
+  'comment-music' |
   'comment-plus' |
   'comment-slash' |
   'comment-smile' |
@@ -423,6 +442,8 @@ type FontAwesomeIconValue =
   'compress-alt' |
   'compress-arrows-alt' |
   'compress-wide' |
+  'computer-classic' |
+  'computer-speaker' |
   'concierge-bell' |
   'construction' |
   'container-storage' |
@@ -435,6 +456,8 @@ type FontAwesomeIconValue =
   'corn' |
   'couch' |
   'cow' |
+  'cowbell' |
+  'cowbell-more' |
   'credit-card' |
   'credit-card-blank' |
   'credit-card-front' |
@@ -482,6 +505,7 @@ type FontAwesomeIconValue =
   'digital-tachograph' |
   'diploma' |
   'directions' |
+  'disc-drive' |
   'disease' |
   'divide' |
   'dizzy' |
@@ -596,6 +620,7 @@ type FontAwesomeIconValue =
   'file-medical' |
   'file-medical-alt' |
   'file-minus' |
+  'file-music' |
   'file-pdf' |
   'file-plus' |
   'file-powerpoint' |
@@ -613,6 +638,7 @@ type FontAwesomeIconValue =
   'fill-drip' |
   'film' |
   'film-alt' |
+  'film-canister' |
   'filter' |
   'fingerprint' |
   'fire' |
@@ -629,6 +655,7 @@ type FontAwesomeIconValue =
   'flag-checkered' |
   'flag-usa' |
   'flame' |
+  'flashlight' |
   'flask' |
   'flask-poison' |
   'flask-potion' |
@@ -636,6 +663,8 @@ type FontAwesomeIconValue =
   'flower-daffodil' |
   'flower-tulip' |
   'flushed' |
+  'flute' |
+  'flux-capacitor' |
   'fog' |
   'folder' |
   'folder-minus' |
@@ -661,7 +690,9 @@ type FontAwesomeIconValue =
   'futbol' |
   'game-board' |
   'game-board-alt' |
+  'game-console-handheld' |
   'gamepad' |
+  'gamepad-alt' |
   'gas-pump' |
   'gas-pump-slash' |
   'gavel' |
@@ -693,6 +724,7 @@ type FontAwesomeIconValue =
   'golf-club' |
   'gopuram' |
   'graduation-cap' |
+  'gramophone' |
   'greater-than' |
   'greater-than-equal' |
   'grimace' |
@@ -714,6 +746,8 @@ type FontAwesomeIconValue =
   'grip-lines-vertical' |
   'grip-vertical' |
   'guitar' |
+  'guitar-electric' |
+  'guitars' |
   'h-square' |
   'h1' |
   'h2' |
@@ -754,6 +788,8 @@ type FontAwesomeIconValue =
   'hard-hat' |
   'hashtag' |
   'hat-chef' |
+  'hat-cowboy' |
+  'hat-cowboy-side' |
   'hat-santa' |
   'hat-winter' |
   'hat-witch' |
@@ -762,6 +798,7 @@ type FontAwesomeIconValue =
   'hdd' |
   'head-side' |
   'head-side-brain' |
+  'head-side-headphones' |
   'head-side-medical' |
   'head-vr' |
   'heading' |
@@ -794,6 +831,7 @@ type FontAwesomeIconValue =
   'horizontal-rule' |
   'horse' |
   'horse-head' |
+  'horse-saddle' |
   'hospital' |
   'hospital-alt' |
   'hospital-symbol' |
@@ -822,6 +860,7 @@ type FontAwesomeIconValue =
   'id-card-alt' |
   'igloo' |
   'image' |
+  'image-polaroid' |
   'images' |
   'inbox' |
   'inbox-in' |
@@ -843,7 +882,10 @@ type FontAwesomeIconValue =
   'jedi' |
   'joint' |
   'journal-whills' |
+  'joystick' |
+  'jug' |
   'kaaba' |
+  'kazoo' |
   'kerning' |
   'key' |
   'key-skeleton' |
@@ -865,6 +907,7 @@ type FontAwesomeIconValue =
   'laptop' |
   'laptop-code' |
   'laptop-medical' |
+  'lasso' |
   'laugh' |
   'laugh-beam' |
   'laugh-squint' |
@@ -897,6 +940,7 @@ type FontAwesomeIconValue =
   'lira-sign' |
   'list' |
   'list-alt' |
+  'list-music' |
   'list-ol' |
   'list-ul' |
   'location' |
@@ -967,6 +1011,7 @@ type FontAwesomeIconValue =
   'microphone-alt' |
   'microphone-alt-slash' |
   'microphone-slash' |
+  'microphone-stand' |
   'microscope' |
   'mind-share' |
   'minus' |
@@ -999,12 +1044,18 @@ type FontAwesomeIconValue =
   'motorcycle' |
   'mountain' |
   'mountains' |
+  'mouse' |
+  'mouse-alt' |
   'mouse-pointer' |
+  'mp3-player' |
   'mug' |
   'mug-hot' |
   'mug-marshmallows' |
   'mug-tea' |
   'music' |
+  'music-alt' |
+  'music-alt-slash' |
+  'music-slash' |
   'narwhal' |
   'network-wired' |
   'neuter' |
@@ -1073,12 +1124,15 @@ type FontAwesomeIconValue =
   'phone-laptop' |
   'phone-office' |
   'phone-plus' |
+  'phone-rotary' |
   'phone-slash' |
   'phone-square' |
   'phone-square-alt' |
   'phone-volume' |
   'photo-video' |
   'pi' |
+  'piano' |
+  'piano-keyboard' |
   'pie' |
   'pig' |
   'piggy-bank' |
@@ -1122,6 +1176,7 @@ type FontAwesomeIconValue =
   'print-slash' |
   'procedures' |
   'project-diagram' |
+  'projector' |
   'pumpkin' |
   'puzzle-piece' |
   'qrcode' |
@@ -1137,12 +1192,15 @@ type FontAwesomeIconValue =
   'racquet' |
   'radiation' |
   'radiation-alt' |
+  'radio' |
+  'radio-alt' |
   'rainbow' |
   'raindrops' |
   'ram' |
   'ramp-loading' |
   'random' |
   'receipt' |
+  'record-vinyl' |
   'rectangle-landscape' |
   'rectangle-portrait' |
   'rectangle-wide' |
@@ -1170,6 +1228,7 @@ type FontAwesomeIconValue =
   'route' |
   'route-highway' |
   'route-interstate' |
+  'router' |
   'rss' |
   'rss-square' |
   'ruble-sign' |
@@ -1191,9 +1250,12 @@ type FontAwesomeIconValue =
   'satellite-dish' |
   'sausage' |
   'save' |
+  'sax-hot' |
+  'saxophone' |
   'scalpel' |
   'scalpel-path' |
   'scanner' |
+  'scanner-image' |
   'scanner-keyboard' |
   'scanner-touchscreen' |
   'scarecrow' |
@@ -1259,6 +1321,7 @@ type FontAwesomeIconValue =
   'signal-alt-3' |
   'signal-alt-slash' |
   'signal-slash' |
+  'signal-stream' |
   'signature' |
   'sim-card' |
   'sitemap' |
@@ -1269,6 +1332,7 @@ type FontAwesomeIconValue =
   'skiing' |
   'skiing-nordic' |
   'skull' |
+  'skull-cow' |
   'skull-crossbones' |
   'slash' |
   'sledding' |
@@ -1326,6 +1390,8 @@ type FontAwesomeIconValue =
   'space-shuttle' |
   'spade' |
   'sparkles' |
+  'speaker' |
+  'speakers' |
   'spell-check' |
   'spider' |
   'spider-black-widow' |
@@ -1504,6 +1570,7 @@ type FontAwesomeIconValue =
   'tree-palm' |
   'trees' |
   'triangle' |
+  'triangle-music' |
   'trophy' |
   'trophy-alt' |
   'truck' |
@@ -1515,12 +1582,17 @@ type FontAwesomeIconValue =
   'truck-pickup' |
   'truck-plow' |
   'truck-ramp' |
+  'trumpet' |
   'tshirt' |
   'tty' |
   'turkey' |
+  'turntable' |
   'turtle' |
   'tv' |
+  'tv-alt' |
+  'tv-music' |
   'tv-retro' |
+  'typewriter' |
   'umbrella' |
   'umbrella-beach' |
   'underline' |
@@ -1534,6 +1606,7 @@ type FontAwesomeIconValue =
   'unlock' |
   'unlock-alt' |
   'upload' |
+  'usb-drive' |
   'usd-circle' |
   'usd-square' |
   'user' |
@@ -1545,6 +1618,7 @@ type FontAwesomeIconValue =
   'user-circle' |
   'user-clock' |
   'user-cog' |
+  'user-cowboy' |
   'user-crown' |
   'user-edit' |
   'user-friends' |
@@ -1556,6 +1630,7 @@ type FontAwesomeIconValue =
   'user-md' |
   'user-md-chat' |
   'user-minus' |
+  'user-music' |
   'user-ninja' |
   'user-nurse' |
   'user-plus' |
@@ -1580,12 +1655,14 @@ type FontAwesomeIconValue =
   'venus' |
   'venus-double' |
   'venus-mars' |
+  'vhs' |
   'vial' |
   'vials' |
   'video' |
   'video-plus' |
   'video-slash' |
   'vihara' |
+  'violin' |
   'voicemail' |
   'volcano' |
   'volleyball-ball' |
@@ -1598,7 +1675,9 @@ type FontAwesomeIconValue =
   'vote-nay' |
   'vote-yea' |
   'vr-cardboard' |
+  'wagon-covered' |
   'walker' |
+  'walkie-talkie' |
   'walking' |
   'wallet' |
   'wand' |
@@ -1607,6 +1686,7 @@ type FontAwesomeIconValue =
   'warehouse-alt' |
   'washer' |
   'watch' |
+  'watch-calculator' |
   'watch-fitness' |
   'water' |
   'water-lower' |
@@ -1614,6 +1694,8 @@ type FontAwesomeIconValue =
   'wave-sine' |
   'wave-square' |
   'wave-triangle' |
+  'waveform' |
+  'waveform-path' |
   'webcam' |
   'webcam-slash' |
   'weight' |
