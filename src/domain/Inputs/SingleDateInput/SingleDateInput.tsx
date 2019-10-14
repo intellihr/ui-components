@@ -18,6 +18,8 @@ interface ISingleDateInputProps {
   dateFormat?: string
   /** Change handler called when the date is changed */
   handleChange?: (date: Moment | null) => void
+  /** Called when the input is changed */
+  onChange?: (date: Moment | null) => void
   /** If true, adds invalid styles to the input */
   isInvalid?: boolean
   /** If true, adds disabled attribute to the input */
@@ -118,10 +120,13 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
 
   private handleDateChange = (date: Moment | null) => {
     const {
-      handleChange
+      handleChange,
+      onChange
     } = this.props
 
-    if (handleChange) {
+    if (onChange) {
+      onChange(date)
+    } else if (handleChange) {
       handleChange(date)
     }
   }

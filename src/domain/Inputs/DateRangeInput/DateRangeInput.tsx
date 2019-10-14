@@ -31,7 +31,9 @@ interface IDateRangeInputProps {
   /** Applies recommended settings for mobile and tablet viewports */
   isMobile?: boolean
   /** Change handler called when the date is changed */
-  handleDatesChange: (dates: { startDate: Moment | null, endDate: Moment | null }) => void
+  handleDatesChange?: (dates: { startDate: Moment | null, endDate: Moment | null }) => void
+  /** Called when the input is changed */
+  onChange?: (dates: { startDate: Moment | null, endDate: Moment | null }) => void
   /** Disable for the calender (Return true for disabled date) */
   isDisabledForDate?: (day: Moment) => boolean
 }
@@ -123,10 +125,15 @@ class DateRangeInput extends React.PureComponent<IDateRangeInputProps, IDateRang
 
   private onDatesChange = (dates: { startDate: Moment | null, endDate: Moment | null }) => {
     const {
-      handleDatesChange
+      handleDatesChange,
+      onChange
     } = this.props
 
-    handleDatesChange(dates)
+    if (onChange) {
+      onChange(dates)
+    } else if (handleDatesChange) {
+      handleDatesChange(dates)
+    }
   }
 
   private handleDisabledDateRange = () => false
