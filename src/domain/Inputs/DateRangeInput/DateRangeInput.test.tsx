@@ -22,6 +22,21 @@ describe('<DateRangeInput />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
+  it('should render a date range input with onChange', () => {
+    const wrapper = shallow(
+      <DateRangeInput
+        name='test-date-picker1'
+        startDate={moment('2018-12-31T14:00:00+00:00')}
+        endDate={moment('2019-12-31T14:00:00+00:00')}
+        startDatePlaceholder='Start Date'
+        endDatePlaceholder='End Date'
+        onChange={dummyClick}
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it('should render a date range input with date format', () => {
     const wrapper = shallow(
       <DateRangeInput

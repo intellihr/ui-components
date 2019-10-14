@@ -8,7 +8,7 @@ initialState = { startDate: null , endDate: null };
   endDate={state.endDate}
   startDatePlaceholder='Start Date'
   endDatePlaceholder='End Date'
-  handleDatesChange={dates => setState({ startDate: dates.startDate, endDate: dates.endDate })}
+  onChange={dates => setState({ startDate: dates.startDate, endDate: dates.endDate })}
 />
 ```
 
@@ -23,7 +23,7 @@ initialState = { startDate: null , endDate: null };
   startDatePlaceholder='Start Date'
   endDatePlaceholder='End Date'
   dateFormat='DD MMM YYYY'
-  handleDatesChange={dates => setState({ startDate: dates.startDate, endDate: dates.endDate })}
+  onChange={dates => setState({ startDate: dates.startDate, endDate: dates.endDate })}
 />
 ```
 
@@ -41,7 +41,7 @@ initialState = { startDate: null , endDate: null };
     endDate={state.endDate}
     startDatePlaceholder='Start Date'
     endDatePlaceholder='End Date'
-    handleDatesChange={dates => setState({ startDate: dates.startDate, endDate: dates.endDate })}
+    onChange={dates => setState({ startDate: dates.startDate, endDate: dates.endDate })}
     isDisabledForDate={day => day.isAfter(moment().startOf('month')) && day.isBefore(moment().endOf('month'))}
   />
 </>
@@ -61,7 +61,7 @@ initialState = { startDate: moment() , endDate: moment() };
   endDate={state.endDate}
   startDatePlaceholder='Start Date'
   endDatePlaceholder='End Date'
-  handleDatesChange={dates => setState({ startDate: dates.startDate, endDate: dates.endDate })}
+  onChange={dates => setState({ startDate: dates.startDate, endDate: dates.endDate })}
 />
 ```
 
@@ -79,7 +79,7 @@ initialState = { startDate: moment() , endDate: moment() };
   endDate={state.endDate}
   startDatePlaceholder='Start Date'
   endDatePlaceholder='End Date'
-  handleDatesChange={dates => setState({ startDate: dates.startDate, endDate: dates.endDate  })}
+  onChange={dates => setState({ startDate: dates.startDate, endDate: dates.endDate  })}
 />
 ```
 
@@ -95,6 +95,6 @@ initialState = { startDate: null , endDate: null };
   endDate={state.endDate}
   startDatePlaceholder='Start Date'
   endDatePlaceholder='End Date'
-  handleDatesChange={dates => setState({ startDate: dates.startDate, endDate: dates.endDate  })}
+  onChange={dates => setState({ startDate: dates.startDate, endDate: dates.endDate  })}
 />
 ```

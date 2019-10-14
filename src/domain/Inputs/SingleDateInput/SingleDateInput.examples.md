@@ -7,7 +7,7 @@ initialState = { value: moment() };
 <div>
   <SingleDateInput 
     value={state.value}
-    handleChange={date => setState({ value: date })}
+    onChange={date => setState({ value: date })}
     name='test-date-picker1'
   />
 </div>
@@ -23,7 +23,7 @@ initialState = { value: null};
   Disable current month
   <SingleDateInput 
     value={state.value}
-    handleChange={date => setState({ value: date })}
+    onChange={date => setState({ value: date })}
     name='test-date-picker-disable-range'
     isDisabledForDate={day => day.isAfter(moment().startOf('month')) && day.isBefore(moment().endOf('month'))}
   />
