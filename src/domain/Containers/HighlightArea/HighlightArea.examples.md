@@ -10,12 +10,16 @@ import { Variables } from '@Common';
     <HighlightArea color="grey">
         Hello
     </HighlightArea>
-    
+    <br />
     <HighlightArea color="blue">
         Hello
     </HighlightArea>
-   
+    <br />
     <HighlightArea color="red">
+        Hello
+    </HighlightArea>
+    <br />
+    <HighlightArea color="green">
         Hello
     </HighlightArea>
 </div>
