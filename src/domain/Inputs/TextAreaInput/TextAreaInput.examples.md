@@ -6,7 +6,7 @@ initialState = { value: '' };
 <div>
   <TextAreaInput
     value={state.value}
-    handleChange={(e) => setState({value: e.value})}
+    onChange={(value) => setState({value})}
   />
 </div>
 ```
@@ -23,7 +23,7 @@ initialState = { value: '', gifUrl: '' };
   }}>
     <TextAreaInput
       value={state.value}
-      handleChange={(e) => setState({value: e.value})}
+      onChange={(value) => setState({value})}
       gifUrl={state.gifUrl}
       handleGifChange={(url) => setState({gifUrl: url})}
     />
@@ -39,7 +39,7 @@ initialState = { value: '' };
 <div>
   <TextAreaInput
     value={state.value}
-    handleChange={(e) => setState({value: e.value})}
+    onChange={(value) => setState({value})}
     isDisabled
     value="Text area is disabled so you can't change this text"
   />
@@ -54,7 +54,7 @@ initialState = { value: '' };
 <div>
   <TextAreaInput
     value={state.value}
-    handleChange={(e) => setState({value: e.value})}
+    onChange={(value) => setState({value})}
     rows={8}
     placeholder="Hey I'm placeholder text. Hodor. John Wick."
   />
