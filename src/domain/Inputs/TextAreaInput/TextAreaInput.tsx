@@ -18,6 +18,8 @@ interface ITextAreaInputProps {
   isInvalid?: boolean
   /** Function passed to `onChange` prop */
   handleChange?: React.ChangeEventHandler<HTMLTextAreaElement>
+  /** Called when the input is changed */
+  onChange?: (value: string) => void
   /** Value of the input */
   value?: string
   /** If true, sets input to disabled state */
@@ -38,6 +40,14 @@ interface ITextAreaInputProps {
   componentContext?: string
 }
 
+const handleInputChange = (onChange?: ITextAreaInputProps['onChange'], handleChange?: ITextAreaInputProps['handleChange']) => (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+  if (onChange) {
+    onChange(event.target.value)
+  } else if (handleChange) {
+    handleChange(event)
+  }
+}
+
 const TextAreaInput: React.FC<ITextAreaInputProps> = ({
   id,
   className,
@@ -45,6 +55,7 @@ const TextAreaInput: React.FC<ITextAreaInputProps> = ({
   placeholder,
   value,
   handleChange,
+  onChange,
   rows = 2,
   isInvalid,
   isDisabled,
@@ -79,7 +90,7 @@ const TextAreaInput: React.FC<ITextAreaInputProps> = ({
         className={classes}
         id={id || name}
         name={name}
-        onChange={handleChange}
+        onChange={handleInputChange(onChange, handleChange)}
         value={value}
         disabled={isDisabled}
         rows={rows}
