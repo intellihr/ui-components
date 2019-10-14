@@ -18,6 +18,19 @@ describe('<SingleDateInput />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
+  it('should render a single date input with onChange', () => {
+    const wrapper = shallow(
+      <SingleDateInput
+        value={moment('2018-12-31T14:00:00+00:00')}
+        onChange={jest.fn()}
+        name='test-date-input'
+        dateFormat='DD/MM/YYYY'
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it('should render a single date input with disable date choices', () => {
     const handleDisabledDateRange = (day: Moment) => day.isAfter(moment('2018-12-31T14:00:00+00:00'))
 
