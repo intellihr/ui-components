@@ -8,17 +8,19 @@ import { ToggleSwitchInput } from './subcomponents/ToggleSwitchInput'
 
 interface IToggleSwitchProps {
   /** Called when the checkbox is toggled */
-  onChange?: ChangeEventHandler<HTMLInputElement>
+  handleChange?: ChangeEventHandler<HTMLInputElement>
+  /** Called when the input is changed */
+  onChange?: (value: boolean) => void
   /** The form value of the input */
   name: string
   /** The title of the ToggleSwitch */
   title: string
   /** The description of the ToggleSwitch */
   description: string
-  /** If the input is checked */
-  checked: boolean
+  /** Value of the input */
+  value?: string | number | boolean
   /** If the input is disabled */
-  disabled?: boolean
+  isDisabled?: boolean
 
   /** The margins around the component */
   margins?: Props.IMargins
@@ -30,9 +32,10 @@ class ToggleSwitch extends React.PureComponent<IToggleSwitchProps> {
   public render (): JSX.Element {
     const {
       name,
-      checked,
+      value,
       onChange,
-      disabled,
+      handleChange,
+      isDisabled,
       title,
       description,
       margins,
@@ -68,10 +71,11 @@ class ToggleSwitch extends React.PureComponent<IToggleSwitchProps> {
               content: (
                 <ToggleSwitchInput
                   name={name}
-                  checked={checked}
+                  value={value}
                   onChange={onChange}
+                  handleChange={handleChange}
                   componentContext={componentContext}
-                  disabled={disabled}
+                  isDisabled={isDisabled}
                 />
               )
             }
