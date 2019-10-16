@@ -6,7 +6,7 @@ initialState = { value: null };
 <IconPickerInput
   name='icon-picker'
   value={state.value}
-  onChange={(event) => setState({value: event.target.value})}
+  onChange={(value) => setState({value})}
   icons={
     [
       'intelli-icon-australia',
