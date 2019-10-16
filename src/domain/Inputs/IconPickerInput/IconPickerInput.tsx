@@ -10,7 +10,7 @@ export interface IIconPickerProps {
   /** Array of icons to display in the list */
   icons: IntelliIconPrefixedValue[]
   /** action triggered when icons are clicked */
-  onChange?: ChangeEventHandler<HTMLInputElement>
+  onChange?: (value: string | number) => void
   /** action triggered when icons are clicked */
   handleChange?: ChangeEventHandler<HTMLInputElement>
   /** The currently selected icon */
@@ -57,8 +57,6 @@ export class IconPickerInput extends React.PureComponent<IIconPickerProps> {
 
   private iconInput = (icon: IntelliIconPrefixedValue, idx: number) => {
     const {
-      onChange,
-      handleChange,
       value,
       name
     } = this.props
@@ -72,7 +70,7 @@ export class IconPickerInput extends React.PureComponent<IIconPickerProps> {
           name={name}
           id={iconId}
           value={icon}
-          onChange={handleChange || onChange}
+          onChange={this.handleChange}
           checked={isChecked}
           type='radio'
         />
@@ -85,5 +83,18 @@ export class IconPickerInput extends React.PureComponent<IIconPickerProps> {
         </StyledIconArea>
       </>
     )
+  }
+
+  private handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const {
+      onChange,
+      handleChange
+    } = this.props
+
+    if (onChange) {
+      onChange(event.target.value)
+    } else if (handleChange) {
+      handleChange(event)
+    }
   }
 }
