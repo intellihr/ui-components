@@ -29,8 +29,8 @@ exports[`<ToggleSwitch /> should render a checked ToggleSwitch 1`] = `
         },
         Object {
           "content": <ToggleSwitchInput
-            checked={true}
             name="test-input"
+            value={true}
           />,
           "size": "shrink",
         },
@@ -76,9 +76,9 @@ exports[`<ToggleSwitch /> should render a disabled ToggleSwitch 1`] = `
         },
         Object {
           "content": <ToggleSwitchInput
-            checked={false}
-            disabled={true}
+            isDisabled={true}
             name="test-input"
+            value={false}
           />,
           "size": "shrink",
         },
@@ -124,9 +124,9 @@ exports[`<ToggleSwitch /> should render a disabled and checked ToggleSwitch 1`] 
         },
         Object {
           "content": <ToggleSwitchInput
-            checked={true}
-            disabled={true}
+            isDisabled={true}
             name="test-input"
+            value={true}
           />,
           "size": "shrink",
         },
@@ -172,8 +172,8 @@ exports[`<ToggleSwitch /> should render a unchecked ToggleSwitch 1`] = `
         },
         Object {
           "content": <ToggleSwitchInput
-            checked={false}
             name="test-input"
+            value={false}
           />,
           "size": "shrink",
         },
