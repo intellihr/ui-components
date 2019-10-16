@@ -10,13 +10,15 @@ interface IToggleSwitchInputState {
 
 interface IToggleSwitchInputProps {
   /** Called when the checkbox is toggled */
-  onChange?: ChangeEventHandler<HTMLInputElement>
+  handleChange?: ChangeEventHandler<HTMLInputElement>
+  /** Called when the input is changed */
+  onChange?: (value: boolean) => void
   /** The form name of the input */
   name: string
-  /** If the input is checked */
-  checked: boolean
+  /** Value of the input */
+  value?: string | number | boolean
   /** If the input is disabled */
-  disabled?: boolean
+  isDisabled?: boolean
 
   /** The data-component-context */
   componentContext?: string
@@ -30,9 +32,7 @@ class ToggleSwitchInput extends React.PureComponent<IToggleSwitchInputProps, ITo
   public render (): JSX.Element {
     const {
       name,
-      checked,
-      onChange,
-      disabled,
+      isDisabled,
       componentContext
     } = this.props
 
@@ -46,18 +46,19 @@ class ToggleSwitchInput extends React.PureComponent<IToggleSwitchInputProps, ITo
       >
         <StyledSwitch
           htmlFor={name}
-          checked={checked}
-          disabled={disabled}
+          checked={this.isChecked}
+          disabled={isDisabled}
         >
-          <StyledToggler checked={checked}/>
+          <StyledToggler checked={this.isChecked}/>
           <StyledToggleInput
-            disabled={disabled}
+            disabled={isDisabled}
             name={name}
             id={name}
-            onChange={onChange}
+            value={this.value}
+            onChange={this.handleChange}
             onFocus={this.handleFocus}
             onBlur={this.handleBlur}
-            checked={checked}
+            checked={this.isChecked}
             data-component-context={componentContext}
             data-component-type={Props.ComponentType.ToggleSwitchInput}
             type='checkbox'
@@ -67,12 +68,45 @@ class ToggleSwitchInput extends React.PureComponent<IToggleSwitchInputProps, ITo
     )
   }
 
+  private get isChecked (): boolean {
+    const {
+      value
+    } = this.props
+
+    return Boolean(value)
+  }
+
+  private get value (): string | number | undefined {
+    const {
+      value
+    } = this.props
+
+    if (typeof value === 'boolean') {
+      return value ? 1 : 0
+    }
+
+    return value
+  }
+
   private handleBlur = () => {
     this.setState({focused: false})
   }
 
   private handleFocus = () => {
     this.setState({focused: true})
+  }
+
+  private handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const {
+      onChange,
+      handleChange
+    } = this.props
+
+    if (onChange) {
+      onChange(event.target.checked)
+    } else if (handleChange) {
+      handleChange(event)
+    }
   }
 }
 
