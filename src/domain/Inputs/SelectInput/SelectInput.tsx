@@ -1,7 +1,14 @@
 import classNames from 'classnames'
-import { debounce, isEmpty, isEqual } from 'lodash'
+import { debounce, isEmpty, isEqual, get } from 'lodash'
 import React from 'react'
-import Select, { Creatable, OnChangeHandler, OnInputChangeHandler, OnOpenHandler, ReactSelectProps } from 'react-select'
+import Select, {
+  Creatable,
+  OnChangeHandler,
+  OnInputChangeHandler,
+  OnOpenHandler,
+  Option,
+  ReactSelectProps
+} from 'react-select'
 const style = require('./style.scss')
 
 type ISelectInputOptionValue = string | boolean | number | undefined
@@ -58,6 +65,8 @@ export interface ISelectInputProps {
   optionComponent?: ReactSelectProps<ISelectInputOptionValue>['optionComponent']
   /** Handler for selecting an option */
   handleChange?: OnChangeHandler<ISelectInputOptionValue>
+  /** Handler for selecting an option */
+  onChange?: (value: any) => void
   /** Handler for opening the select menu */
   onOpen?: OnOpenHandler
   /** Handler for creating new options */
@@ -129,7 +138,6 @@ export class SelectInput extends React.PureComponent<ISelectInputProps> {
       shouldCloseOnSelect,
       shouldFilteringBePerformed,
       shouldRemoveElementsFromMultiSelect,
-      handleChange,
       onOpen,
       optionComponent
     } = this.props
@@ -147,7 +155,7 @@ export class SelectInput extends React.PureComponent<ISelectInputProps> {
       name: isMultiSelect ? `${name}[]` : name,
       noResultsText,
       onBlurResetsInput: true,
-      onChange: handleChange,
+      onChange: this.handleChange,
       onCloseResetsInput: true,
       onInputChange: this.onInputChange,
       onOpen,
@@ -159,6 +167,19 @@ export class SelectInput extends React.PureComponent<ISelectInputProps> {
       removeSelected: shouldRemoveElementsFromMultiSelect,
       resetValue: emptyValue,
       value
+    }
+  }
+
+  private handleChange = (newValue: Option<ISelectInputOptionValue> | null) => {
+    const {
+      onChange,
+      handleChange
+    } = this.props
+
+    if (onChange) {
+      onChange(get(newValue, 'value', newValue))
+    } else if (handleChange) {
+      return handleChange(newValue)
     }
   }
 
