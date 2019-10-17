@@ -1,10 +1,9 @@
 import classNames from 'classnames'
-import { debounce, isEmpty, isEqual, get } from 'lodash'
+import { debounce, get, isEmpty, isEqual } from 'lodash'
 import React from 'react'
 import Select, {
   Creatable,
   OnChangeHandler,
-  OnInputChangeHandler,
   OnOpenHandler,
   Option,
   ReactSelectProps
@@ -65,13 +64,13 @@ export interface ISelectInputProps {
   optionComponent?: ReactSelectProps<ISelectInputOptionValue>['optionComponent']
   /** Handler for selecting an option */
   handleChange?: OnChangeHandler<ISelectInputOptionValue>
-  /** Handler for selecting an option */
-  onChange?: (value: any) => void
+  /** Called when the input is changed */
+  onChange?: (value: string | number | boolean | Option<ISelectInputOptionValue> | null) => void
   /** Handler for opening the select menu */
   onOpen?: OnOpenHandler
   /** Handler for creating new options */
   onNewOptionCreated?: (option: ISelectInputOption) => void
-  /** Handler for input being updated */
+  /** Handler for input being updated when user type to search */
   onInputChange?: (input: string) => void
 }
 
@@ -158,7 +157,6 @@ export class SelectInput extends React.PureComponent<ISelectInputProps> {
       onChange: this.handleChange,
       onCloseResetsInput: true,
       onInputChange: this.onInputChange,
-      onOpen,
       onSelectResetsInput: true,
       openOnFocus: false,
       optionComponent,
