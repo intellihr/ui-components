@@ -1,35 +1,33 @@
 import classNames from 'classnames'
 import { debounce, isEmpty, isEqual } from 'lodash'
 import React from 'react'
-import Select, { Creatable, OnChangeHandler, OnInputChangeHandler, OnOpenHandler, ReactSelectProps } from 'react-select'
+import Select, {
+  Creatable,
+  OnChangeHandler,
+  OnOpenHandler,
+  Option,
+  OptionValues,
+  Options,
+  ReactSelectProps
+} from 'react-select'
 const style = require('./style.scss')
-
-type ISelectInputOptionValue = string | boolean | number | undefined
-
-interface ISelectInputOption {
-  label?: string
-  value?: ISelectInputOptionValue
-
-  /** Use for passing around other metadata for an option not contained in the label/value */
-  metadata?: unknown
-}
 
 export interface ISelectInputProps {
   /** ID of the input */
   id?: string
   /** Input name */
-  name: string
+  name?: string
   /** Input value */
-  value: ISelectInputOptionValue | ISelectInputOptionValue[]
+  value?: OptionValues | OptionValues[]
 
   /** Placeholder label when no option is selected */
-  placeholder?: string
+  placeholder?: string | JSX.Element
   /** Value when no option is selected */
-  emptyValue: ISelectInputOptionValue
+  emptyValue?: OptionValues | null
   /** Text to display when no results found */
-  noResultsText?: string
+  noResultsText?: string | JSX.Element
   /** Array of options to display. */
-  options: ISelectInputOption[]
+  options?: Options
 
   /** Should an 'x' be shown which clears select inputs? */
   isClearable?: boolean
@@ -55,27 +53,23 @@ export interface ISelectInputProps {
    * DEPRECATED: component to render for options.
    * Should not be used - please create a separate component if you need this functionality.
    */
-  optionComponent?: ReactSelectProps<ISelectInputOptionValue>['optionComponent']
+  optionComponent?: ReactSelectProps<OptionValues>['optionComponent']
   /** Handler for selecting an option */
-  handleChange?: OnChangeHandler<ISelectInputOptionValue>
+  handleChange?: OnChangeHandler<OptionValues>
+  /** Called when the input is changed */
+  onChange?: (value?: OptionValues | OptionValues[] | null) => void
   /** Handler for opening the select menu */
   onOpen?: OnOpenHandler
   /** Handler for creating new options */
-  onNewOptionCreated?: (option: ISelectInputOption) => void
-  /** Handler for input being updated */
+  onNewOptionCreated?: (option: Option) => void
+  /** Handler for input being updated when user type to search */
   onInputChange?: (input: string) => void
 }
 
 export class SelectInput extends React.PureComponent<ISelectInputProps> {
   public static defaultProps: Partial<ISelectInputProps> = {
     placeholder: 'Please Select',
-    emptyValue: '',
     isClearable: true,
-    isDisabled: false,
-    isFetching: false,
-    isInvalid: false,
-    isMultiSelect: false,
-    shouldAutoSelectWhenSingleOption: false,
     shouldCloseOnSelect: true,
     shouldFilteringBePerformed: true,
     shouldRemoveElementsFromMultiSelect: true
@@ -98,7 +92,7 @@ export class SelectInput extends React.PureComponent<ISelectInputProps> {
 
     if (onNewOptionCreated) {
       return (
-        <Creatable<ISelectInputOptionValue>
+        <Creatable<OptionValues>
           {...this.reactSelectProps}
           onNewOptionClick={onNewOptionCreated}
         />
@@ -106,7 +100,7 @@ export class SelectInput extends React.PureComponent<ISelectInputProps> {
     }
 
     return (
-      <Select<ISelectInputOptionValue>
+      <Select<OptionValues>
         {...this.reactSelectProps}
       />
     )
@@ -129,7 +123,6 @@ export class SelectInput extends React.PureComponent<ISelectInputProps> {
       shouldCloseOnSelect,
       shouldFilteringBePerformed,
       shouldRemoveElementsFromMultiSelect,
-      handleChange,
       onOpen,
       optionComponent
     } = this.props
@@ -147,18 +140,42 @@ export class SelectInput extends React.PureComponent<ISelectInputProps> {
       name: isMultiSelect ? `${name}[]` : name,
       noResultsText,
       onBlurResetsInput: true,
-      onChange: handleChange,
+      onChange: this.handleChange,
       onCloseResetsInput: true,
       onInputChange: this.onInputChange,
-      onOpen,
       onSelectResetsInput: true,
       openOnFocus: false,
+      onOpen,
       optionComponent,
       options,
       placeholder,
       removeSelected: shouldRemoveElementsFromMultiSelect,
       resetValue: emptyValue,
       value
+    }
+  }
+
+  private handleChange = (newValue: Option | Options | null) => {
+    const {
+      onChange,
+      handleChange
+    } = this.props
+
+    if (onChange) {
+      if (newValue && Array.isArray(newValue)) {
+        onChange(
+          newValue.reduce((result: OptionValues[], currentOption: Option) => {
+          if (currentOption.value) {
+            result.push(currentOption.value)
+          }
+          return result
+        }, [])
+        )
+      } else {
+        onChange(newValue ? newValue.value : null)
+      }
+    } else if (handleChange) {
+      return handleChange(newValue)
     }
   }
 
@@ -171,8 +188,8 @@ export class SelectInput extends React.PureComponent<ISelectInputProps> {
       value
     } = this.props
 
-    if (shouldAutoSelectWhenSingleOption && isEmpty(value) && options.length === 1) {
-      let changeValue: ISelectInputOption | ISelectInputOption[] = options[0]
+    if (shouldAutoSelectWhenSingleOption && isEmpty(value) && options && options.length === 1) {
+      let changeValue: Option | Option[] = options[0]
 
       if (isMultiSelect) {
         changeValue = [changeValue]
