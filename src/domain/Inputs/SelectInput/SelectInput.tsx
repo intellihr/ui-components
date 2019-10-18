@@ -181,7 +181,6 @@ export class SelectInput extends React.PureComponent<ISelectInputProps> {
 
   private autoSelectValue = (): void => {
     const {
-      handleChange,
       isMultiSelect,
       shouldAutoSelectWhenSingleOption,
       options,
@@ -195,9 +194,7 @@ export class SelectInput extends React.PureComponent<ISelectInputProps> {
         changeValue = [changeValue]
       }
 
-      if (handleChange) {
-        handleChange(changeValue)
-      }
+      this.handleChange(changeValue)
     }
   }
 
