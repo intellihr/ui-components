@@ -23,7 +23,7 @@ export interface ISelectInputProps {
   /** Placeholder label when no option is selected */
   placeholder?: string | JSX.Element
   /** Value when no option is selected */
-  emptyValue?: OptionValues
+  emptyValue?: OptionValues | null
   /** Text to display when no results found */
   noResultsText?: string | JSX.Element
   /** Array of options to display. */
@@ -162,7 +162,7 @@ export class SelectInput extends React.PureComponent<ISelectInputProps> {
     } = this.props
 
     if (onChange) {
-      if (Array.isArray(newValue) && newValue !== null) {
+      if (newValue && Array.isArray(newValue)) {
         onChange(
           newValue.reduce((result: OptionValues[], currentOption: Option) => {
           if (currentOption.value) {
@@ -172,7 +172,7 @@ export class SelectInput extends React.PureComponent<ISelectInputProps> {
         }, [])
         )
       } else {
-        onChange(newValue === null ? null : newValue!.value)
+        onChange(newValue ? newValue.value : null)
       }
     } else if (handleChange) {
       return handleChange(newValue)
