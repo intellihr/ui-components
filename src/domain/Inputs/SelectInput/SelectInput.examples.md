@@ -19,7 +19,7 @@ initialState = { value: '' };
       value: 40
     }
   ]}
-  handleChange={option => setState({ value: option.value })}
+  onChange={value => setState({ value })}
 />
 ```
 
@@ -84,7 +84,7 @@ initialState = { value: [] };
       value: 40
     }
   ]}
-  handleChange={options => setState({ value: options })}
+  onChange={value => setState({ value })}
   isMultiSelect
 />
 ```
@@ -108,7 +108,7 @@ initialState = { value: [] };
       value: 40
     }
   ]}
-  handleChange={options => setState({ value: options })}
+  onChange={value => setState({ value })}
   isMultiSelect
   shouldRemoveElementsFromMultiSelect={false}
 />
@@ -146,7 +146,7 @@ initialState = { value: '' };
       value: 40
     }
   ]}
-  handleChange={option => setState({ value: option.value })}
+  onChange={value => setState({ value })}
   onNewOptionCreated={option => console.log('New option created', option)}
 />
 ```
@@ -197,6 +197,6 @@ initialState = { options: backendOptions, isFetching: false, value: '' };
   shouldFilteringBePerformed={false}
   options={state.options}
   onInputChange={simulateServerSideFiltering}
-  handleChange={option => setState({ value: option.value })}
+  onChange={value => setState({ value })}
 />
 ```
