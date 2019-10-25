@@ -1,29 +1,17 @@
 import styled from 'styled-components'
 
+import { Variables } from '../../../common'
+
 interface ILayoutSpacerContentItemProps {
   /** Size of the space between this content item and the next */
-  spacingSize?: '3xsmall' | '2xsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge'
+  spacingSize?: Variables.Layout
+
+  /** @deprecated This is only here to support old components which had invalid layout sizes */
+  spacingSizeOverride?: number
 }
 
 const spacingForContentItem = (props: ILayoutSpacerContentItemProps): number => {
-  switch (props.spacingSize) {
-    case '3xsmall':
-      return 8
-    case '2xsmall':
-      return 12
-    case 'xsmall':
-      return 16
-    case 'small':
-      return 24
-    case 'medium':
-      return 32
-    case 'large':
-      return 40
-    case 'xlarge':
-      return 56
-    default:
-      return 0
-  }
+  return ((props.spacingSizeOverride !== undefined) ? props.spacingSizeOverride : props.spacingSize) || 0
 }
 
 const StyledContentItem = styled.div<ILayoutSpacerContentItemProps>`

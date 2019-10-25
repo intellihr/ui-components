@@ -1,6 +1,7 @@
 import { mount } from 'enzyme'
 import React from 'react'
 
+import { Variables } from '../../../common'
 import { LayoutSpacer } from './LayoutSpacer'
 
 describe('<LayoutSpacer />', () => {
@@ -9,32 +10,24 @@ describe('<LayoutSpacer />', () => {
       <LayoutSpacer
         contentItems={[
           {
-            content: <div>a</div>,
-            spacingSize: '3xsmall'
-          },
-          {
-            content: <div>b</div>,
-            spacingSize: '2xsmall'
-          },
-          {
             content: <div>c</div>,
-            spacingSize: 'xsmall'
+            spacingSize: Variables.Layout.l2XSmall
           },
           {
             content: <div>d</div>,
-            spacingSize: 'small'
+            spacingSize: Variables.Layout.lXSmall
           },
           {
             content: <div>e</div>,
-            spacingSize: 'medium'
+            spacingSize: Variables.Layout.lSmall
           },
           {
             content: <div>f</div>,
-            spacingSize: 'large'
+            spacingSize: Variables.Layout.lMedium
           },
           {
             content: <div>g</div>,
-            spacingSize: 'xlarge'
+            spacingSizeOverride: 56
           },
           {
             content: <div>h</div>
@@ -69,7 +62,7 @@ describe('<LayoutSpacer />', () => {
         contentItems={[
           {
             content: null,
-            spacingSize: 'medium'
+            spacingSize: Variables.Layout.lSmall
 
           },
           {
