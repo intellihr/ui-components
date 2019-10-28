@@ -1,13 +1,11 @@
 import React from 'react'
 
-import { Props, Variables } from '../../../common/'
+import { Props } from '../../../common/'
 import { StyledContentItem } from './style'
 
 interface ILayoutSpacerContentItemProps {
   /** Size of the space between this content item and the next */
-  spacingSize?: Variables.Layout,
-  /** @deprecated This is only here to support old components which had invalid layout sizes */
-  spacingSizeOverride?: number
+  spacingSize?: '3xsmall' | '2xsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge',
   /** Content item */
   content?: JSX.Element | JSX.Element[] | null,
   /** Component context for the content item */
@@ -43,7 +41,6 @@ class LayoutSpacer extends React.Component<ILayoutSpacerProps> {
               <StyledContentItem
                 key={index}
                 spacingSize={contentItem.spacingSize}
-                spacingSizeOverride={contentItem.spacingSizeOverride}
                 data-component-type={Props.ComponentType.LayoutSpacerItem}
                 data-component-context={contentItem.componentContext}
               >
