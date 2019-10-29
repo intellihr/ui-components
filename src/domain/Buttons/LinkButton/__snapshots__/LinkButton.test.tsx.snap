@@ -5,12 +5,12 @@ exports[`<LinkButton /> should render a disabled link button 1`] = `
   href="#"
   onClick={[Function]}
 >
-  <span
+  <styled.span
     className="button neutral disabled"
     data-component-type="link_button"
   >
     testing testing 123
-  </span>
+  </styled.span>
 </Anchor>
 `;
 
@@ -19,12 +19,12 @@ exports[`<LinkButton /> should render a link button with a simple text 1`] = `
   href="#"
   onClick={[Function]}
 >
-  <span
+  <styled.span
     className="button neutral"
     data-component-type="link_button"
   >
     testing testing 123
-  </span>
+  </styled.span>
 </Anchor>
 `;
 
@@ -33,12 +33,12 @@ exports[`<LinkButton /> should render a link button with a size large 1`] = `
   href="#"
   onClick={[Function]}
 >
-  <span
+  <styled.span
     className="button large neutral"
     data-component-type="link_button"
   >
     testing testing 123
-  </span>
+  </styled.span>
 </Anchor>
 `;
 
@@ -47,12 +47,12 @@ exports[`<LinkButton /> should render a link button with a type delete-subtle 1`
   href="#"
   onClick={[Function]}
 >
-  <span
+  <styled.span
     className="button delete-subtle"
     data-component-type="link_button"
   >
     testing testing 123
-  </span>
+  </styled.span>
 </Anchor>
 `;
 
@@ -61,7 +61,7 @@ exports[`<LinkButton /> should render a link button with an icon 1`] = `
   href="test"
   onClick={[Function]}
 >
-  <span
+  <styled.span
     className="button primary"
     data-component-type="link_button"
   >
@@ -75,7 +75,7 @@ exports[`<LinkButton /> should render a link button with an icon 1`] = `
       />
     </span>
     Link Button with Icon
-  </span>
+  </styled.span>
 </Anchor>
 `;
 
@@ -89,7 +89,7 @@ exports[`<LinkButton /> should render a link button with manual extra props for 
   href="test"
   onClick={[Function]}
 >
-  <span
+  <styled.span
     className="button primary"
     data-component-type="link_button"
   >
@@ -103,6 +103,6 @@ exports[`<LinkButton /> should render a link button with manual extra props for 
       />
     </span>
     Link Button with Icon
-  </span>
+  </styled.span>
 </Anchor>
 `;

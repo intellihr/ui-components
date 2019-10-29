@@ -2,10 +2,11 @@ import classNames from 'classnames'
 import React, { MouseEvent } from 'react'
 
 import { Props } from '../../../common'
-import { Anchor } from '../../Internals'
+import { Anchor } from '../../Internals/Anchor'
 import { BaseButton, IBaseButtonProps } from '../BaseButton'
+import { StyledSpan } from './style'
 
-export interface ILinkButtonProps extends IBaseButtonProps {
+interface ILinkButtonProps extends IBaseButtonProps {
   /** Weather the button is clickable or not */
   disabled?: boolean,
   /** Destination url */
@@ -14,9 +15,11 @@ export interface ILinkButtonProps extends IBaseButtonProps {
   anchorComponentProps?: {
     [i: string]: any
   }
+  /** The margins around the component */
+  margins?: Props.IMargins
 }
 
-export class LinkButton extends BaseButton<ILinkButtonProps> {
+class LinkButton extends BaseButton<ILinkButtonProps> {
   public static defaultProps: Partial<ILinkButtonProps> = {
     ...BaseButton.defaultProps,
     disabled: false
@@ -28,7 +31,8 @@ export class LinkButton extends BaseButton<ILinkButtonProps> {
       href,
       anchorComponentProps,
       innerRef,
-      componentContext
+      componentContext,
+      margins
     } = this.props
 
     return (
@@ -37,14 +41,15 @@ export class LinkButton extends BaseButton<ILinkButtonProps> {
         anchorComponentProps={anchorComponentProps}
         onClick={this.handleClick}
       >
-        <span
+        <StyledSpan
           data-component-type={Props.ComponentType.LinkButton}
           data-component-context={componentContext}
           className={classNames(this.buttonClass, { disabled })}
           ref={innerRef}
+          margins={margins}
         >
           {this.buttonContent}
-        </span>
+        </StyledSpan>
       </Anchor>
     )
   }
@@ -65,4 +70,9 @@ export class LinkButton extends BaseButton<ILinkButtonProps> {
 
     event.stopPropagation()
   }
+}
+
+export {
+  ILinkButtonProps,
+  LinkButton
 }
