@@ -144,7 +144,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with null content 1`] = 
     Array [
       Object {
         "content": null,
-        "spacingSize": "medium",
+        "spacingSize": 32,
       },
       Object {
         "content": <div>
@@ -212,7 +212,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with null content 1`] = 
 
 exports[`<LayoutSpacer /> should render a layout spacer with varying spacing sizes 1`] = `
 .c0 {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .c0:last-child {
@@ -220,7 +220,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
 }
 
 .c1 {
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
 
 .c1:last-child {
@@ -228,7 +228,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
 }
 
 .c2 {
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 }
 
 .c2:last-child {
@@ -236,7 +236,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
 }
 
 .c3 {
-  margin-bottom: 24px;
+  margin-bottom: 40px;
 }
 
 .c3:last-child {
@@ -244,7 +244,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
 }
 
 .c4 {
-  margin-bottom: 32px;
+  margin-bottom: 56px;
 }
 
 .c4:last-child {
@@ -252,26 +252,10 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
 }
 
 .c5 {
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 
 .c5:last-child {
-  margin-bottom: 0px;
-}
-
-.c6 {
-  margin-bottom: 56px;
-}
-
-.c6:last-child {
-  margin-bottom: 0px;
-}
-
-.c7 {
-  margin-bottom: 0px;
-}
-
-.c7:last-child {
   margin-bottom: 0px;
 }
 
@@ -280,45 +264,33 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
     Array [
       Object {
         "content": <div>
-          a
-        </div>,
-        "spacingSize": "3xsmall",
-      },
-      Object {
-        "content": <div>
-          b
-        </div>,
-        "spacingSize": "2xsmall",
-      },
-      Object {
-        "content": <div>
           c
         </div>,
-        "spacingSize": "xsmall",
+        "spacingSize": 16,
       },
       Object {
         "content": <div>
           d
         </div>,
-        "spacingSize": "small",
+        "spacingSize": 24,
       },
       Object {
         "content": <div>
           e
         </div>,
-        "spacingSize": "medium",
+        "spacingSize": 32,
       },
       Object {
         "content": <div>
           f
         </div>,
-        "spacingSize": "large",
+        "spacingSize": 40,
       },
       Object {
         "content": <div>
           g
         </div>,
-        "spacingSize": "xlarge",
+        "spacingSizeOverride": 56,
       },
       Object {
         "content": <div>
@@ -334,7 +306,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
     <styled.div
       data-component-type="layout_spacer_item"
       key="0"
-      spacingSize="3xsmall"
+      spacingSize={16}
     >
       <StyledComponent
         data-component-type="layout_spacer_item"
@@ -345,7 +317,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
             "componentStyle": ComponentStyle {
               "componentId": "sc-bdVaJa",
               "isStatic": false,
-              "lastClassName": "c7",
+              "lastClassName": "c5",
               "rules": Array [
                 "
   margin-bottom: ",
@@ -370,112 +342,10 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
           }
         }
         forwardedRef={null}
-        spacingSize="3xsmall"
+        spacingSize={16}
       >
         <div
           className="c0"
-          data-component-type="layout_spacer_item"
-        >
-          <div>
-            a
-          </div>
-        </div>
-      </StyledComponent>
-    </styled.div>
-    <styled.div
-      data-component-type="layout_spacer_item"
-      key="1"
-      spacingSize="2xsmall"
-    >
-      <StyledComponent
-        data-component-type="layout_spacer_item"
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
-              "isStatic": false,
-              "lastClassName": "c7",
-              "rules": Array [
-                "
-  margin-bottom: ",
-                [Function],
-                "px;
-
-  &:last-child {
-    margin-bottom: 0px;
-  }
-",
-              ],
-            },
-            "displayName": "styled.div",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
-            "target": "div",
-            "toString": [Function],
-            "usesTheme": false,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        spacingSize="2xsmall"
-      >
-        <div
-          className="c1"
-          data-component-type="layout_spacer_item"
-        >
-          <div>
-            b
-          </div>
-        </div>
-      </StyledComponent>
-    </styled.div>
-    <styled.div
-      data-component-type="layout_spacer_item"
-      key="2"
-      spacingSize="xsmall"
-    >
-      <StyledComponent
-        data-component-type="layout_spacer_item"
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
-              "isStatic": false,
-              "lastClassName": "c7",
-              "rules": Array [
-                "
-  margin-bottom: ",
-                [Function],
-                "px;
-
-  &:last-child {
-    margin-bottom: 0px;
-  }
-",
-              ],
-            },
-            "displayName": "styled.div",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
-            "target": "div",
-            "toString": [Function],
-            "usesTheme": false,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        spacingSize="xsmall"
-      >
-        <div
-          className="c2"
           data-component-type="layout_spacer_item"
         >
           <div>
@@ -486,8 +356,8 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
     </styled.div>
     <styled.div
       data-component-type="layout_spacer_item"
-      key="3"
-      spacingSize="small"
+      key="1"
+      spacingSize={24}
     >
       <StyledComponent
         data-component-type="layout_spacer_item"
@@ -498,7 +368,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
             "componentStyle": ComponentStyle {
               "componentId": "sc-bdVaJa",
               "isStatic": false,
-              "lastClassName": "c7",
+              "lastClassName": "c5",
               "rules": Array [
                 "
   margin-bottom: ",
@@ -523,10 +393,10 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
           }
         }
         forwardedRef={null}
-        spacingSize="small"
+        spacingSize={24}
       >
         <div
-          className="c3"
+          className="c1"
           data-component-type="layout_spacer_item"
         >
           <div>
@@ -537,8 +407,8 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
     </styled.div>
     <styled.div
       data-component-type="layout_spacer_item"
-      key="4"
-      spacingSize="medium"
+      key="2"
+      spacingSize={32}
     >
       <StyledComponent
         data-component-type="layout_spacer_item"
@@ -549,7 +419,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
             "componentStyle": ComponentStyle {
               "componentId": "sc-bdVaJa",
               "isStatic": false,
-              "lastClassName": "c7",
+              "lastClassName": "c5",
               "rules": Array [
                 "
   margin-bottom: ",
@@ -574,10 +444,10 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
           }
         }
         forwardedRef={null}
-        spacingSize="medium"
+        spacingSize={32}
       >
         <div
-          className="c4"
+          className="c2"
           data-component-type="layout_spacer_item"
         >
           <div>
@@ -588,8 +458,8 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
     </styled.div>
     <styled.div
       data-component-type="layout_spacer_item"
-      key="5"
-      spacingSize="large"
+      key="3"
+      spacingSize={40}
     >
       <StyledComponent
         data-component-type="layout_spacer_item"
@@ -600,7 +470,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
             "componentStyle": ComponentStyle {
               "componentId": "sc-bdVaJa",
               "isStatic": false,
-              "lastClassName": "c7",
+              "lastClassName": "c5",
               "rules": Array [
                 "
   margin-bottom: ",
@@ -625,10 +495,10 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
           }
         }
         forwardedRef={null}
-        spacingSize="large"
+        spacingSize={40}
       >
         <div
-          className="c5"
+          className="c3"
           data-component-type="layout_spacer_item"
         >
           <div>
@@ -639,8 +509,8 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
     </styled.div>
     <styled.div
       data-component-type="layout_spacer_item"
-      key="6"
-      spacingSize="xlarge"
+      key="4"
+      spacingSizeOverride={56}
     >
       <StyledComponent
         data-component-type="layout_spacer_item"
@@ -651,7 +521,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
             "componentStyle": ComponentStyle {
               "componentId": "sc-bdVaJa",
               "isStatic": false,
-              "lastClassName": "c7",
+              "lastClassName": "c5",
               "rules": Array [
                 "
   margin-bottom: ",
@@ -676,10 +546,10 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
           }
         }
         forwardedRef={null}
-        spacingSize="xlarge"
+        spacingSizeOverride={56}
       >
         <div
-          className="c6"
+          className="c4"
           data-component-type="layout_spacer_item"
         >
           <div>
@@ -690,7 +560,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
     </styled.div>
     <styled.div
       data-component-type="layout_spacer_item"
-      key="7"
+      key="5"
     >
       <StyledComponent
         data-component-type="layout_spacer_item"
@@ -701,7 +571,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
             "componentStyle": ComponentStyle {
               "componentId": "sc-bdVaJa",
               "isStatic": false,
-              "lastClassName": "c7",
+              "lastClassName": "c5",
               "rules": Array [
                 "
   margin-bottom: ",
@@ -728,7 +598,7 @@ exports[`<LayoutSpacer /> should render a layout spacer with varying spacing siz
         forwardedRef={null}
       >
         <div
-          className="c7"
+          className="c5"
           data-component-type="layout_spacer_item"
         >
           <div>
