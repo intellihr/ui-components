@@ -22,7 +22,7 @@ exports[`<ButtonGroup /> should render a button group with buttons and link butt
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-EHOje",
+            "componentId": "sc-bZQynM",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -41,7 +41,7 @@ exports[`<ButtonGroup /> should render a button group with buttons and link butt
           "displayName": "styled.span",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-EHOje",
+          "styledComponentId": "sc-bZQynM",
           "target": "span",
           "toString": [Function],
           "usesTheme": false,
@@ -127,12 +127,50 @@ exports[`<ButtonGroup /> should render a button group with buttons and link butt
               href="#"
               onClick={[Function]}
             >
-              <span
+              <styled.span
                 className="button neutral"
                 data-component-type="link_button"
               >
-                Button 2
-              </span>
+                <StyledComponent
+                  className="button neutral"
+                  data-component-type="link_button"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-EHOje",
+                        "isStatic": false,
+                        "lastClassName": "gViUgL",
+                        "rules": Array [
+                          "
+   ",
+                          [Function],
+                          "
+",
+                        ],
+                      },
+                      "displayName": "styled.span",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-EHOje",
+                      "target": "span",
+                      "toString": [Function],
+                      "usesTheme": false,
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                >
+                  <span
+                    className="button neutral"
+                    data-component-type="link_button"
+                  >
+                    Button 2
+                  </span>
+                </StyledComponent>
+              </styled.span>
             </a>
           </Anchor>
         </LinkButton>
