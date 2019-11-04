@@ -389,7 +389,7 @@ exports[`<Modal /> should render a hidden modal 1`] = `
         <Modal
           ariaHideApp={false}
           bodyOpenClassName="ReactModal__Body--open"
-          className="c0 modal modal-size-medium__content"
+          className="c0 modal modal-size-medium"
           closeTimeoutMS={0}
           isOpen={false}
           overlayClassName="modal-overlay"
@@ -565,7 +565,7 @@ exports[`<Modal /> should render a hidden modal 1`] = `
             <ModalPortal
               ariaHideApp={false}
               bodyOpenClassName="ReactModal__Body--open"
-              className="c0 modal modal-size-medium__content"
+              className="c0 modal modal-size-medium"
               closeTimeoutMS={0}
               defaultStyles={
                 Object {

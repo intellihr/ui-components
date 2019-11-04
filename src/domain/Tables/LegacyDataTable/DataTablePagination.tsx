@@ -218,10 +218,42 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
     }
   }
 
-  public render () {
+  get paginationComponents () {
     const {
       canPrevious,
       canNext,
+      totalCount
+    } = this.props
+
+    if (totalCount > 0) {
+      return (
+        <div className='page-navigation'>
+          <button
+            type='button'
+            className='previous -btn'
+            onClick={this.decrementPage}
+            disabled={!canPrevious}
+          >
+            <FontAwesomeIcon type='solid' icon='chevron-left'/>
+          </button>
+          {this.pagination}
+          <button
+            type='button'
+            className='next -btn'
+            onClick={this.incrementPage}
+            disabled={!canNext}
+          >
+            <FontAwesomeIcon type='solid' icon='chevron-right'/>
+          </button>
+        </div>
+      )
+    }
+
+    return null
+  }
+
+  public render () {
+    const {
       className,
       customComponent
     } = this.props
@@ -231,25 +263,7 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
         {customComponent}
         {this.pageSizeOptions}
         {this.pageDetails}
-        <div className='page-navigation'>
-          <button
-            type='button'
-            className='previous -btn'
-            onClick={this.decrementPage}
-            disabled={!canPrevious}
-          >
-            <FontAwesomeIcon type='solid' icon='chevron-left' />
-          </button>
-          {this.pagination}
-          <button
-            type='button'
-            className='next -btn'
-            onClick={this.incrementPage}
-            disabled={!canNext}
-          >
-            <FontAwesomeIcon type='solid' icon='chevron-right' />
-          </button>
-        </div>
+        {this.paginationComponents}
       </div>
     )
   }

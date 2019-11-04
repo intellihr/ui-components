@@ -24,8 +24,7 @@ class ReactModalAdapter extends React.PureComponent<IReactModalAdapter> {
       <ReactModal
         overlayRef={this.setOverlayRef}
         portalClassName={className}
-        className={this.contentClassName}
-        overlayClassName={this.overlayClassName}
+        className={className}
         {...props}
       >
         {children}
@@ -41,22 +40,6 @@ class ReactModalAdapter extends React.PureComponent<IReactModalAdapter> {
     }
 
     this.overlayRef = overlayRef
-  }
-
-  private get contentClassName (): string {
-    const {
-      className
-    } = this.props
-
-    return className ? `${className}__content` : ''
-  }
-
-  private get overlayClassName (): string {
-    const {
-      className
-    } = this.props
-
-    return className ? `${this.props.className}__overlay` : ''
   }
 }
 

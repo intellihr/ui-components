@@ -1,147 +1,348 @@
 ```jsx
 import { Props } from '@Common';
 import { Button, ButtonGroup } from '@Domain/Buttons';
+import { VerticalForm } from '@Domain/Forms';
+import { TextInput, RadioSet } from '@Domain/Inputs';
 
-class ModalExample extends React.PureComponent {
-  constructor () {
-    this.state = {
-      isOpen: false
-    }
+initialState = { textInputValue: '', radioInputValue: 'today', isOpen: false };
 
-    this.handleClick = this.handleClick.bind(this)
-  }
-
-  handleClick () {
-    const {
-      isOpen
-    } = this.state
-
-    this.setState({
-      isOpen: !isOpen
-    })
-  }
-
-  render () {
-    const {
-      isOpen
-    } = this.state
-    const {
-      showCloseButton,
-      children,
-      buttonText,
-      size,
-      shouldCloseOnOverlayClick,
-      shouldCloseOnEsc,
-      useSubcomponents
-    } = this.props
-
-    return (
-      <>
-        <Button
-          onClick={this.handleClick}
-        >
-          {buttonText}
-        </Button>
-        <Modal
-          isOpen={isOpen}
-          handleClose={this.handleClick}
-          size={size || Props.Size.Medium}
-          showCloseButton={showCloseButton}
-          shouldCloseOnOverlayClick={shouldCloseOnOverlayClick}
-          shouldCloseOnEsc={shouldCloseOnEsc}
-          useSubcomponents={useSubcomponents}
-        >
-          {children}
-        </Modal>
-      </>
-    )
-  }
-}
-
-ModalExample.defaultProps = { showCloseButton: true };
-
-<div>
-  <div>
-    <ModalExample buttonText='Subcomponent style' useSubcomponents={true}>
+<>
+    Example Modal using Subcomponents:
+    <br/>
+    <Button
+      onClick={() => setState({isOpen: true})}
+    >
+      Click Me
+    </Button>
+    <Modal
+      isOpen={state.isOpen}
+      handleClose={() => setState({isOpen: false})}
+      useSubcomponents={true}
+    >
       <Modal.Header>
-        Hello
+        Example Modal
       </Modal.Header>
       <Modal.Content>
-        This is my modal content :) This is my modal content :) This is my modal content :)
-        This is my modal content :) This is my modal content :) This is my modal content :)
-        This is my modal content :) This is my modal content :) This is my modal content :)
-        This is my modal content :) This is my modal content :) This is my modal content :)
+        <VerticalForm
+          onSubmit={() => alert(`Test input: ${state.textInputValue}`)}
+        >
+          <VerticalForm.Field
+            inputName='testTextInput'
+            label='What is your name'
+          >
+            <TextInput
+              name='testInput'
+              onChange={(value) => setState({ textInputValue: value })}
+            />
+          </VerticalForm.Field>
+          <VerticalForm.Field
+            inputName='testRadioInput'
+            label='Choose a day'
+            margins={{ bottom: 0 }}
+          >
+            <RadioSet
+                name='example-radio-set-horizontal'
+                value={state.radioInputValue}
+                orientation={Props.Orientation.Horizontal}
+                onChange={(value) => setState({radioInputValue: value})}
+                options={[
+                    {
+                      label:'Today',
+                      value:'today'
+                    },
+                    {
+                      label:'Tomorrow',
+                      value:'tomorrow'
+                    },
+                    {
+                      label:'Never',
+                      value:'never'
+                    }
+                  ]}
+              />
+          </VerticalForm.Field>
+        </VerticalForm>
       </Modal.Content>
       <Modal.Footer
         leftControls={
-          <Button>Back</Button>
+          <Button onClick={() => alert('Go to previous modal page')}>Back</Button>
         }
         rightControls={
           <ButtonGroup>
-            <Button type='cancel'>Cancel</Button>
-            <Button type='primary'>Next</Button>
+            <Button type='cancel' onClick={() => setState({isOpen: false})}>Cancel</Button>
+            <Button type='primary' onClick={() => alert('Go to next modal page')}>Next</Button>
           </ButtonGroup>
         }
       />
-    </ModalExample>
-  </div>
+    </Modal>
+</>
+```
 
-  <div>
-    <ModalExample buttonText='Simple default modal implementation'>
-      <h1>Hello this is a Modal</h1>
-    </ModalExample>
-  </div>
+```jsx
+import { Props } from '@Common';
+import { Button, ButtonGroup } from '@Domain/Buttons';
+import { VerticalForm } from '@Domain/Forms';
+import { TextInput, RadioSet } from '@Domain/Inputs';
 
-  <div>
-    <ModalExample buttonText='No close button' showCloseButton={false}>
-      I don't have a close button but you can still hide me by pressing escape, clicking outside, or handling your own close state.
-    </ModalExample>
-  </div>
+initialState = { textInputValue: '', radioInputValue: 'today', isLargeOpen: false, isXLargeOpen: false };
 
-  <div>
-    <ModalExample buttonText='Lots of content' showCloseButton={true}>
-      Modals will expand infinitely vertically to match their content, no matter how large it is
+<>
+    Extra sizing options for wide content:
+    <br/>
+    <i>Large</i>
+    <br/>
+    <Button
+      onClick={() => setState({isLargeOpen: true})}
+    >
+      Click Me
+    </Button>
+    <Modal
+      isOpen={state.isLargeOpen}
+      handleClose={() => setState({isLargeOpen: false})}
+      useSubcomponents={true}
+      size={Props.Size.Large}
+    >
+      <Modal.Header>
+        Example Modal
+      </Modal.Header>
+      <Modal.Content>
+        <VerticalForm
+          onSubmit={() => alert(`Test input: ${state.textInputValue}`)}
+        >
+          <h3>Large modals are sized to the standard desktop browser width (1024px)</h3>
 
-      <div style={{height: 2000, backgroundImage: 'linear-gradient(to bottom right, red, yellow)'}}>
-        The following is a dummy space to fill out the modal
-      </div>
-    </ModalExample>
-  </div>
+          <VerticalForm.Field
+            inputName='testTextInput'
+            label='What is your name'
+          >
+            <TextInput
+              name='testInput'
+              onChange={(value) => setState({ textInputValue: value })}
+            />
+          </VerticalForm.Field>
+          <VerticalForm.Field
+            inputName='testRadioInput'
+            label='Choose a day'
+            margins={{ bottom: 0 }}
+          >
+            <RadioSet
+                name='example-radio-set-horizontal'
+                value={state.radioInputValue}
+                orientation={Props.Orientation.Horizontal}
+                onChange={(value) => setState({radioInputValue: value})}
+                options={[
+                    {
+                      label:'Today',
+                      value:'today'
+                    },
+                    {
+                      label:'Tomorrow',
+                      value:'tomorrow'
+                    },
+                    {
+                      label:'Never',
+                      value:'never'
+                    }
+                  ]}
+              />
+          </VerticalForm.Field>
+        </VerticalForm>
+      </Modal.Content>
+      <Modal.Footer
+        leftControls={
+          <Button onClick={() => alert('Go to previous modal page')}>Back</Button>
+        }
+        rightControls={
+          <ButtonGroup>
+            <Button type='cancel' onClick={() => setState({isLargeOpen: false})}>Cancel</Button>
+            <Button type='primary' onClick={() => alert('Go to next modal page')}>Next</Button>
+          </ButtonGroup>
+        }
+      />
+    </Modal>
+    <br/>
+    <br/>
+    <i>Extra Large</i>
+    <br/>
+    <Button
+      onClick={() => setState({isXLargeOpen: true})}
+    >
+      Click Me
+    </Button>
+    <Modal
+      isOpen={state.isXLargeOpen}
+      handleClose={() => setState({isXLargeOpen: false})}
+      useSubcomponents={true}
+      size={Props.Size.XLarge}
+    >
+      <Modal.Header>
+        Example Modal
+      </Modal.Header>
+      <Modal.Content>
+        <VerticalForm
+          onSubmit={() => alert(`Test input: ${state.textInputValue}`)}
+        >
+          <h3>Extra large modals are sized to the big desktop browser width (1440px)</h3>
 
-  <div>
-    <ModalExample buttonText='Size = large' size={Props.Size.Large}>
-      Large modals are sized to the standard desktop browser width (1024px)
-    </ModalExample>
-  </div>
+          <VerticalForm.Field
+            inputName='testTextInput'
+            label='What is your name'
+          >
+            <TextInput
+              name='testInput'
+              onChange={(value) => setState({ textInputValue: value })}
+            />
+          </VerticalForm.Field>
+          <VerticalForm.Field
+            inputName='testRadioInput'
+            label='Choose a day'
+            margins={{ bottom: 0 }}
+          >
+            <RadioSet
+                name='example-radio-set-horizontal'
+                value={state.radioInputValue}
+                orientation={Props.Orientation.Horizontal}
+                onChange={(value) => setState({radioInputValue: value})}
+                options={[
+                    {
+                      label:'Today',
+                      value:'today'
+                    },
+                    {
+                      label:'Tomorrow',
+                      value:'tomorrow'
+                    },
+                    {
+                      label:'Never',
+                      value:'never'
+                    }
+                  ]}
+              />
+          </VerticalForm.Field>
+        </VerticalForm>
+      </Modal.Content>
+      <Modal.Footer
+        leftControls={
+          <Button onClick={() => alert('Go to previous modal page')}>Back</Button>
+        }
+        rightControls={
+          <ButtonGroup>
+            <Button type='cancel' onClick={() => setState({isXLargeOpen: false})}>Cancel</Button>
+            <Button type='primary' onClick={() => alert('Go to next modal page')}>Next</Button>
+          </ButtonGroup>
+        }
+      />
+    </Modal>
+</>
+```
 
-  <div>
-    <ModalExample buttonText='Size = xLarge' size={Props.Size.XLarge}>
-      Extra large modals are sized to the big desktop browser width (1440px)
-    </ModalExample>
-  </div>
+```jsx
+import { Props } from '@Common';
+import { Button, ButtonGroup } from '@Domain/Buttons';
 
-  <div>
-    <ModalExample buttonText='shouldCloseOnEsc = false' shouldCloseOnEsc={false}>
-      You can't close this with esc
-    </ModalExample>
-  </div>
-
-  <div>
-    <ModalExample buttonText='shouldCloseOnOverlayClick = false' shouldCloseOnOverlayClick={false}>
-      You can't close this by clicking the overlay
-    </ModalExample>
-  </div>
-
-  <div>
-    <ModalExample
-      buttonText='shouldCloseOnOverlayClick and shouldCloseOnEsc = false'
+<>
+    <i>shouldCloseOnEsc</i>, <i>shouldCloseOnOverlayClick</i>, and <i>showCloseButton</i>
+     <br/>    
+    Let you make sure users won't accidentally close an important modal:
+    <br/>
+    <Button
+      onClick={() => setState({isOpen: true})}
+    >
+      Click Me
+    </Button>
+    <Modal
+      isOpen={state.isOpen}
+      handleClose={() => setState({isOpen: false})}
+      useSubcomponents={true}
       shouldCloseOnEsc={false}
       shouldCloseOnOverlayClick={false}
-     >
-      You can ONLY close this with the close button
-    </ModalExample>
-  </div>
-</div>
+      showCloseButton={false}
+    >
+      <Modal.Header>
+        Example Modal
+      </Modal.Header>
+      <Modal.Content>
+        You can ONLY close this by clicking 'Confirm'
+      </Modal.Content>
+      <Modal.Footer
+        rightControls={
+          <ButtonGroup>
+            <Button type='primary' onClick={() => setState({isOpen: false})}>Confirm</Button>
+          </ButtonGroup>
+        }
+      />
+    </Modal>
+</>
+```
+
+```jsx
+import { Props } from '@Common';
+import { Button, ButtonGroup } from '@Domain/Buttons';
+
+<>
+    Modal handles long content well:
+    <br/>
+    <Button
+      onClick={() => setState({isOpen: true})}
+    >
+      Click Me
+    </Button>
+    <Modal
+      isOpen={state.isOpen}
+      handleClose={() => setState({isOpen: false})}
+      useSubcomponents={true}
+    >
+      <Modal.Header>
+        Example Modal
+      </Modal.Header>
+      <Modal.Content>
+        Modals will expand infinitely vertically to match their content, no matter how large it is
+        <div style={{height: 2000, backgroundImage: 'linear-gradient(to bottom right, red, yellow)'}}>
+          The following is a dummy space to fill out the modal
+        </div>
+      </Modal.Content>
+      <Modal.Footer
+        leftControls={
+          <Button onClick={() => alert('Go to previous modal page')}>Back</Button>
+        }
+        rightControls={
+          <ButtonGroup>
+            <Button type='primary' onClick={() => alert('Go to next modal page')}>Next</Button>
+          </ButtonGroup>
+        }
+      />
+    </Modal>
+</>
+```
+
+```jsx
+import { Props } from '@Common';
+import { Button, ButtonGroup } from '@Domain/Buttons';
+
+<>
+    Legacy Modal
+    <br/>
+    <Button
+      onClick={() => setState({isOpen: true})}
+    >
+      Click Me
+    </Button>
+    <Modal
+      isOpen={state.isOpen}
+      handleClose={() => setState({isOpen: false})}
+    >
+      <h2>Example Modal</h2>
+
+      This is the legacy modal style which should NOT be used moving forward.
+
+      <br/>
+
+      <ButtonGroup>
+        <Button onClick={() => alert('Go to previous modal page')}>Back</Button>
+        <Button type='primary' onClick={() => alert('Go to next modal page')}>Next</Button>
+      </ButtonGroup>
+    </Modal>
+</>
 ```
 
 #### Long pages
