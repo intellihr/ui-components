@@ -15,21 +15,6 @@ describe('<DateRangeInput />', () => {
         endDate={moment('2019-12-31T14:00:00+00:00')}
         startDatePlaceholder='Start Date'
         endDatePlaceholder='End Date'
-        handleDatesChange={dummyClick}
-      />
-    )
-
-    expect(wrapper).toMatchSnapshot()
-  })
-
-  it('should render a date range input with onChange', () => {
-    const wrapper = shallow(
-      <DateRangeInput
-        name='test-date-picker1'
-        startDate={moment('2018-12-31T14:00:00+00:00')}
-        endDate={moment('2019-12-31T14:00:00+00:00')}
-        startDatePlaceholder='Start Date'
-        endDatePlaceholder='End Date'
         onChange={dummyClick}
       />
     )
@@ -46,7 +31,7 @@ describe('<DateRangeInput />', () => {
         startDatePlaceholder='Start Date'
         endDatePlaceholder='End Date'
         dateFormat='DD MMM YYYY'
-        handleDatesChange={dummyClick}
+        onChange={dummyClick}
       />
     )
 
@@ -63,7 +48,7 @@ describe('<DateRangeInput />', () => {
         endDate={moment('2019-12-31T14:00:00+00:00')}
         startDatePlaceholder='Start Date'
         endDatePlaceholder='End Date'
-        handleDatesChange={dummyClick}
+        onChange={dummyClick}
         isDisabledForDate={handleDisabledDateRange}
       />
     )
@@ -80,7 +65,7 @@ describe('<DateRangeInput />', () => {
         startDatePlaceholder='Start Date'
         endDatePlaceholder='End Date'
         isDisabled
-        handleDatesChange={dummyClick}
+        onChange={dummyClick}
       />
     )
 
@@ -96,7 +81,7 @@ describe('<DateRangeInput />', () => {
         startDatePlaceholder='Start Date'
         endDatePlaceholder='End Date'
         isInvalid
-        handleDatesChange={dummyClick}
+        onChange={dummyClick}
       />
     )
 
@@ -112,7 +97,7 @@ describe('<DateRangeInput />', () => {
         startDatePlaceholder='Start Date'
         endDatePlaceholder='End Date'
         isMobile
-        handleDatesChange={dummyClick}
+        onChange={dummyClick}
       />
     )
 
