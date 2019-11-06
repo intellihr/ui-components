@@ -72,6 +72,29 @@ Hide the default messages by providing `null` as the value
 </div>
 ```
 
+### EmptyState message with primary message and button
+
+```jsx
+import { LinkButton } from '@Domain/Buttons';
+
+  <EmptyState
+    primaryMessage={'Add the things'}
+    secondaryMessage={null}
+     buttonComponent={
+      <LinkButton
+        size='small'
+        href='www.google.com.au'
+        anchorComponentProps={{
+          useReactRouter: false
+        }}
+      >
+        My Link
+      </LinkButton>
+    }
+  >
+  </EmptyState>
+```
+
 ### EmptyState support for legacy pages
 The empty state supports legacy pages
 
