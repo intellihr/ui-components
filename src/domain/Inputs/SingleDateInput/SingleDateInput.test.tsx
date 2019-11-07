@@ -9,19 +9,6 @@ describe('<SingleDateInput />', () => {
     const wrapper = shallow(
       <SingleDateInput
         value={moment('2018-12-31T14:00:00+00:00')}
-        handleChange={jest.fn()}
-        name='test-date-input'
-        dateFormat='DD/MM/YYYY'
-      />
-    )
-
-    expect(wrapper).toMatchSnapshot()
-  })
-
-  it('should render a single date input with onChange', () => {
-    const wrapper = shallow(
-      <SingleDateInput
-        value={moment('2018-12-31T14:00:00+00:00')}
         onChange={jest.fn()}
         name='test-date-input'
         dateFormat='DD/MM/YYYY'
@@ -37,7 +24,7 @@ describe('<SingleDateInput />', () => {
     const wrapper = shallow(
       <SingleDateInput
         value={moment('2018-12-31T14:00:00+00:00')}
-        handleChange={jest.fn()}
+        onChange={jest.fn()}
         name='test-date-input'
         dateFormat='DD/MM/YYYY'
         isDisabledForDate={handleDisabledDateRange}
@@ -53,7 +40,7 @@ describe('<SingleDateInput />', () => {
       <SingleDateInput
         isDisabled
         value={moment('2018-12-31T14:00:00+00:00')}
-        handleChange={jest.fn()}
+        onChange={jest.fn()}
         name='test-date-input'
         dateFormat='DD/MM/YYYY'
       />
@@ -67,7 +54,7 @@ describe('<SingleDateInput />', () => {
       <SingleDateInput
         isInvalid
         value={moment('2018-12-31T14:00:00+00:00')}
-        handleChange={jest.fn()}
+        onChange={jest.fn()}
         name='test-date-input'
         dateFormat='DD/MM/YYYY'
       />

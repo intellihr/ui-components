@@ -53,8 +53,6 @@ export interface ICheckboxSetProps {
   margins?: Props.IMargins
   /** Array of options to display in the list */
   options: ICheckboxSetOptionProps[]
-  /** Function passed to `onChange` prop */
-  handleChange?: (value: { [i: string]: boolean }) => void
   /** Called when the input is changed */
   onChange?: (value: { [i: string]: boolean }) => void
   /** Specify the orientation of the checkbox group */
@@ -106,8 +104,7 @@ const getClassNames = (className?: string) => {
 const handleOptionsChange = (
   value: { [i: string]: boolean },
   name: string,
-  onChange?: (value: { [i: string]: boolean }) => void,
-  handleChange?: (value: { [i: string]: boolean }) => void
+  onChange?: (value: { [i: string]: boolean }) => void
   ) => (event: React.ChangeEvent<HTMLInputElement>) => {
   const  [ _, identifier] = event.target.id.split(`${name}-`)
   const newValue: { [i: string]: boolean } = {
@@ -117,17 +114,13 @@ const handleOptionsChange = (
   if (onChange) {
     onChange(newValue)
   }
-  if (handleChange) {
-    handleChange(newValue)
-  }
 }
 
 const handleParentChange = (
   selectAll: boolean,
   value: { [i: string]: boolean },
   options: ICheckboxSetOptionProps[],
-  onChange?: (value: { [i: string]: boolean }) => void,
-  handleChange?: (value: { [i: string]: boolean }) => void
+  onChange?: (value: { [i: string]: boolean }) => void
 ) => () => {
   if (!options.some((option) => option.isDisabled || false)) {
     const newValue = Object.keys(value).reduce((result: { [i: string]: boolean }, key) => {
@@ -136,9 +129,6 @@ const handleParentChange = (
     }, {})
     if (onChange) {
       onChange(newValue)
-    }
-    if (handleChange) {
-      handleChange(newValue)
     }
   }
 }
@@ -150,8 +140,7 @@ const getOption = (
   spacing: 'normal' | 'tight',
   useButtonStyle: boolean,
   id?: string,
-  onChange?: (value: { [i: string]: boolean }) => void,
-  handleChange?: (value: { [i: string]: boolean }) => void
+  onChange?: (value: { [i: string]: boolean }) => void
 ) => {
   const {
     handleKeyDown,
@@ -176,7 +165,7 @@ const getOption = (
           id={`${id ? id : name}-${identifier}`}
           name={name}
           type='checkbox'
-          onChange={handleOptionsChange(value, name, onChange, handleChange)}
+          onChange={handleOptionsChange(value, name, onChange)}
           onKeyDown={handleKeyDown}
           onBlur={handleBlur ? (e) => handleBlur(e, get(value, identifier) ? 'true' : 'false') : undefined}
           className={getClassNames(className)}
@@ -204,8 +193,7 @@ const CheckboxSet: React.FC<ICheckboxSetProps> = (props) => {
     options,
     spacing = 'normal',
     useButtonStyle = false,
-    onChange,
-    handleChange
+    onChange
   } = props
 
   const selectAll = Object.values(value).every((optionValue) => optionValue)
@@ -225,7 +213,7 @@ const CheckboxSet: React.FC<ICheckboxSetProps> = (props) => {
               id={`${id ? id : name}-all`}
               name={name}
               type='checkbox'
-              onChange={handleParentChange(selectAll, value, options, onChange, handleChange)}
+              onChange={handleParentChange(selectAll, value, options, onChange)}
               onKeyDown={parentOption.handleKeyDown}
               className={getClassNames(parentOption.className)}
               disabled={options.some((option) => option.isDisabled ? option.isDisabled : false) || parentOption.isDisabled}
@@ -243,7 +231,7 @@ const CheckboxSet: React.FC<ICheckboxSetProps> = (props) => {
           orientation={orientation!}
           margins={{ left: Variables.Spacing.sXLarge }}
         >
-          {options.map((option) => getOption(value, option, name, spacing, useButtonStyle, id, onChange, handleChange))}
+          {options.map((option) => getOption(value, option, name, spacing, useButtonStyle, id, onChange))}
         </CheckboxSetWrapper>
       </FamilyCheckboxSetWrapper>
     )
@@ -254,7 +242,7 @@ const CheckboxSet: React.FC<ICheckboxSetProps> = (props) => {
       orientation={orientation!}
       margins={margins}
     >
-      {options.map((option) => getOption(value, option, name, spacing, useButtonStyle, id, onChange,  handleChange))}
+      {options.map((option) => getOption(value, option, name, spacing, useButtonStyle, id, onChange))}
     </CheckboxSetWrapper>
   )
 }

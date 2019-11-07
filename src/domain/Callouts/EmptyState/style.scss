@@ -17,6 +17,7 @@
   font-weight: $fw-semi-bold;
   letter-spacing: -.02em;
   line-height: $lh-body;
+  margin-bottom: $spacing-xsmall;
 }
 
 :local(.ihrSecondaryMessage),
@@ -26,7 +27,7 @@
   font-weight: $fw-normal;
   letter-spacing: normal;
   line-height: $lh-body;
-  margin: 10px 0 20px;
+  margin-bottom: $spacing-medium;
 }
 
 :local(.ihrButtonComponent),
