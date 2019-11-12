@@ -39,7 +39,7 @@ interface IGroupCardProps {
   margins?: Props.IMargins
   /** The data-component-context */
   componentContext?: string
-  /** dropwon sections to show in the cards action button dropdown */
+  /** dropdown sections to show in the cards action button dropdown */
   dropdownSections?: ISectionProps[]
   /** Background color of the card */
   color?: CardColors
@@ -141,17 +141,20 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
 
   private bodyContent = (bodyContent: IGroupCardExtraContentProps, idx: number) => {
     const {
+      color,
       mainContent,
       extraContent,
       dropdownSections
     } = bodyContent
 
     if (mainContent) {
+      const cardColor = color || this.props.color!
+
       return (
-        <StyledBodyContent key={idx} color={bodyContent.color || this.props.color!}>
+        <StyledBodyContent key={idx} color={cardColor}>
           <StyledFlexContent>
             <StyledPrimaryContent>{mainContent}</StyledPrimaryContent>
-            {this.actionButtonDropdownMenu(dropdownSections)}
+            {this.actionButtonDropdownMenu(dropdownSections, cardColor)}
           </StyledFlexContent>
           {extraContent}
         </StyledBodyContent>
@@ -159,12 +162,12 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
     }
   }
 
-  private actionButtonDropdownMenu = (dropdownSections: ISectionProps[] | undefined) => {
+  private actionButtonDropdownMenu = (dropdownSections: ISectionProps[] | undefined, color?: CardColors) => {
     if (dropdownSections) {
       return (
         <DropdownMenu
           sections={dropdownSections}
-          toggleComponent={this.actionButton}
+          toggleComponent={this.actionButton(color)}
         />
       )
     }
@@ -172,12 +175,12 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
     return null
   }
 
-  private actionButton = ({ toggleMenu, toggleComponentRef, ariaProps }: IDropdownMenuToggleComponentProps) => (
+  private actionButton = (color?: CardColors) => ({ toggleMenu, toggleComponentRef, ariaProps }: IDropdownMenuToggleComponentProps) => (
     <StyledBodyActionButton
       onClick={this.handleActionButtonClick(toggleMenu)}
       ref={toggleComponentRef}
       hasRightMargin={!!this.props.bodyContents}
-      color={this.props.color!}
+      color={color || this.props.color!}
       {...ariaProps}
     >
       <FontAwesomeIcon type='solid' icon='ellipsis-v' />
