@@ -4,7 +4,7 @@ import uuid from 'uuid'
 import { Variables } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { IPopoverPosition, Popover } from '../Popover'
-import { StyledTooltipContent } from './style'
+import { StyledToggleComponentWrapper, StyledTooltipContent } from './style'
 const { popoverTrigger } = require('./style.scss')
 
 interface ITooltipPopoverMenuState {
@@ -42,6 +42,8 @@ interface ITooltipPopoverProps {
   toggleComponent?: (props: ITooltipPopoverToggleComponentProps) => React.ReactElement<any>,
   /** The width of the popover */
   width?: number
+  /** Disbale the help cursor over the toggle component */
+  noHelpCursor?: boolean
 }
 
 class TooltipPopover extends React.Component<ITooltipPopoverProps, ITooltipPopoverMenuState> {
@@ -102,12 +104,15 @@ class TooltipPopover extends React.Component<ITooltipPopoverProps, ITooltipPopov
       className,
       parentAnchorPosition,
       popoverAnchorPosition,
-      width
+      width,
+      noHelpCursor
     } = this.props
 
     return (
       <Fragment>
-        {this.toggleComponent}
+        <StyledToggleComponentWrapper noHelpCursor={noHelpCursor === true ? true : false}>
+          {this.toggleComponent}
+        </StyledToggleComponentWrapper>
         <Popover
           isOpen={isPopoverOpen}
           id={popoverId || ''}

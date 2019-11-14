@@ -33,6 +33,27 @@
 
 ```
 
+#### Custom Trigger with no help cursor
+```jsx
+import { StatusIndicator } from '@Domain/Indicators';
+
+  <TooltipPopover
+    noHelpCursor
+    toggleComponent={({ openMenu, closeMenu, toggleComponentRef, ariaProps }) =>
+      <span
+        onMouseEnter={openMenu}
+        onMouseLeave={closeMenu}
+        ref={toggleComponentRef}
+        {...ariaProps}
+      >
+        <StatusIndicator />
+      </span>
+    }
+  >
+    Triggered Customly
+  </TooltipPopover>
+```
+
 #### TooltipPopover Alignment
 
 By default, popovers will be positioned according to their location on the page.

@@ -7,6 +7,14 @@ interface IStyledPopoverProps {
   width?: number
 }
 
+interface IStyledToggleComponentWrapper {
+  noHelpCursor: boolean
+}
+
+const StyledToggleComponentWrapper = styled.span`
+  cursor: ${(props: IStyledToggleComponentWrapper) => props.noHelpCursor ? 'auto' : 'help'};
+`
+
 const StyledTooltipContent = styled.div`
   background-color: ${Variables.Color.n100};
   border-radius: ${Variables.Style.borderRadius}px;
@@ -20,5 +28,6 @@ const StyledTooltipContent = styled.div`
 `
 
 export {
+  StyledToggleComponentWrapper,
   StyledTooltipContent
 }

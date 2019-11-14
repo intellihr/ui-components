@@ -2,15 +2,19 @@
 
 exports[`<TooltipPopover /> Render a popover using a custom trigger should match the snapshot 1`] = `
 <Fragment>
-  <span
-    aria-expanded={false}
-    aria-haspopup={true}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    role="button"
+  <styled.span
+    noHelpCursor={false}
   >
-    Custom trigger component
-  </span>
+    <span
+      aria-expanded={false}
+      aria-haspopup={true}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      role="button"
+    >
+      Custom trigger component
+    </span>
+  </styled.span>
   <Popover
     animationType="tooltip"
     id=""
@@ -32,21 +36,25 @@ exports[`<TooltipPopover /> Render a popover using a custom trigger should match
 
 exports[`<TooltipPopover /> Simple popover behaviour should match the snapshot 1`] = `
 <Fragment>
-  <button
-    aria-expanded={false}
-    aria-haspopup={true}
-    className="popoverTrigger"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    role="button"
-    type="button"
+  <styled.span
+    noHelpCursor={false}
   >
-    <FontAwesomeIcon
-      color="#424F5C"
-      icon="question-circle"
-      type="regular"
-    />
-  </button>
+    <button
+      aria-expanded={false}
+      aria-haspopup={true}
+      className="popoverTrigger"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      role="button"
+      type="button"
+    >
+      <FontAwesomeIcon
+        color="#424F5C"
+        icon="question-circle"
+        type="regular"
+      />
+    </button>
+  </styled.span>
   <Popover
     animationType="tooltip"
     id=""
