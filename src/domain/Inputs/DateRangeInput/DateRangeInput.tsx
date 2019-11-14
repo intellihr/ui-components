@@ -3,7 +3,6 @@ import moment, { Moment } from 'moment'
 import React from 'react'
 import { DateRangePicker, FocusedInputShape } from 'react-dates'
 import 'react-dates/initialize'
-import 'react-dates/lib/css/_datepicker.css'
 
 import { Variables } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'

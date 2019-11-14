@@ -1,4 +1,5 @@
 @import '../../../common/sass/variables';
+@import '~react-dates/lib/css/_datepicker.css';
 
 :local(.dateRangePickerOverrides) {
   .CalendarMonth_table {
