@@ -8,7 +8,7 @@ interface IStyledPopoverProps {
 }
 
 interface IStyledToggleComponentWrapper {
-  noHelpCursor: boolean
+  noHelpCursor?: boolean
 }
 
 const StyledToggleComponentWrapper = styled.span`

@@ -42,7 +42,7 @@ interface ITooltipPopoverProps {
   toggleComponent?: (props: ITooltipPopoverToggleComponentProps) => React.ReactElement<any>,
   /** The width of the popover */
   width?: number
-  /** Disbale the help cursor over the toggle component */
+  /** Disable the help cursor over the toggle component */
   noHelpCursor?: boolean
 }
 
@@ -110,7 +110,7 @@ class TooltipPopover extends React.Component<ITooltipPopoverProps, ITooltipPopov
 
     return (
       <Fragment>
-        <StyledToggleComponentWrapper noHelpCursor={noHelpCursor === true ? true : false}>
+        <StyledToggleComponentWrapper noHelpCursor={noHelpCursor}>
           {this.toggleComponent}
         </StyledToggleComponentWrapper>
         <Popover
