@@ -19,7 +19,7 @@ const StyledPopover = styled.span`
 
   ${(props: IStyledPopoverProps) => {
 
-  switch (props.animationType) {
+    switch (props.animationType) {
       case 'dropdown':
         return css`
           opacity: 0.9;
@@ -35,16 +35,16 @@ const StyledPopover = styled.span`
         `
       case 'tooltip':
         return css`
-          opacity: 0.8;
-          transition: opacity 300ms cubic-bezier(.68,-.55,.265,1.55);
+          opacity: 0;
+          transition: opacity 100ms ease-in;
 
-          &.entering,
           &.entered {
             opacity: 1;
+            transition: opacity 150ms ease-out;
           }
         `
     }
-}}
+  }}
 `
 
 export {
