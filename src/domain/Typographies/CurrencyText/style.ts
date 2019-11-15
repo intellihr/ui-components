@@ -1,9 +1,13 @@
 import styled, { css } from 'styled-components'
 
+import { Props } from '../../../common'
+import { styleForMargins } from '../../Spacers/services/margins'
 import { Text } from '../Text'
 
 export interface IStyledCurrencyTextProps {
   flexAlign?: boolean
+  margins?: Props.IMargins
+  isInline?: boolean
 }
 
 const StyledPrefixText = styled(Text)`
@@ -11,6 +15,17 @@ const StyledPrefixText = styled(Text)`
 `
 
 const StyledCurrencyText = styled.span`
+  ${(props: IStyledCurrencyTextProps) => {
+  if (!props.isInline) {
+    return (css`
+        display: block;
+        `
+      )
+    }
+  }}
+
+  ${(props: IStyledCurrencyTextProps) => styleForMargins(props.margins)}
+
   ${(props: IStyledCurrencyTextProps) => {
     if (props.flexAlign) {
       return (css`

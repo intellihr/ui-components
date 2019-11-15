@@ -26,6 +26,10 @@ interface ICurrencyTextProps {
   valueColor?: Variables.Color
   /** Currency prefix text color  */
   prefixColor?: Variables.Color
+  /** If true, will display the text inline */
+  isInline?: boolean
+  /** The margins around the component */
+  margins?: Props.IMargins
 }
 
 type Formatter = (value: string | number, decimalPlace?: number) => string
@@ -35,7 +39,8 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
     valueType: Props.TypographyType.Body,
     prefixType: Props.TypographyType.Body,
     decimalPlace: 0,
-    flexAlign: false
+    flexAlign: false,
+    isInline: true
   }
 
   public static formatter: Formatter = (value, decimalPlace) => {
@@ -92,12 +97,16 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
   public render (): JSX.Element | string {
     const {
       value,
-      flexAlign
+      flexAlign,
+      margins,
+      isInline
     } = this.props
 
     if (value || value === 0) {
       return (
         <StyledCurrencyText
+          isInline={isInline}
+          margins={margins}
           flexAlign={flexAlign}
         >
           {this.prefix}

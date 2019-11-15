@@ -30,6 +30,7 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
 <CurrencyText
   decimalPlace={2}
   flexAlign={false}
+  isInline={true}
   prefix="AUD"
   prefixType="body"
   value={1000.499}
@@ -37,6 +38,7 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
 >
   <styled.span
     flexAlign={false}
+    isInline={true}
   >
     <StyledComponent
       flexAlign={false}
@@ -47,9 +49,17 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-gZMcBi",
             "isStatic": false,
-            "lastClassName": "dMdnOw",
+            "lastClassName": "lbcszo",
             "rules": Array [
               "
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
   ",
               [Function],
               "
@@ -68,6 +78,7 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
         }
       }
       forwardedRef={null}
+      isInline={true}
     >
       <span
         className=""
@@ -286,6 +297,307 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
 </CurrencyText>
 `;
 
+exports[`<CurrencyText /> should render the Currency Text not inline 1`] = `
+.c2 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 600;
+}
+
+.c3 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
+.c1 {
+  margin-right: 8px;
+}
+
+.c0 {
+  display: block;
+}
+
+<CurrencyText
+  decimalPlace={2}
+  flexAlign={false}
+  isInline={false}
+  prefix="AUD"
+  prefixType="body"
+  value={1000.499}
+  valueType="body"
+>
+  <styled.span
+    flexAlign={false}
+    isInline={false}
+  >
+    <StyledComponent
+      flexAlign={false}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-gZMcBi",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-gZMcBi",
+          "target": "span",
+          "toString": [Function],
+          "usesTheme": false,
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      isInline={false}
+    >
+      <span
+        className="c0"
+      >
+        <Styled(Text)
+          type="body"
+          weight={600}
+        >
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-iwsKbI",
+                  "isStatic": false,
+                  "lastClassName": "c1",
+                  "rules": Array [
+                    "
+  margin-right: 8px;
+",
+                  ],
+                },
+                "displayName": "Styled(Text)",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-iwsKbI",
+                "target": [Function],
+                "toString": [Function],
+                "usesTheme": false,
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+            type="body"
+            weight={600}
+          >
+            <Text
+              className="c1"
+              isInline={true}
+              tag="span"
+              type="body"
+              weight={600}
+            >
+              <styled.span
+                as="span"
+                className="c1"
+                data-component-type="text"
+                isInline={true}
+                textType="body"
+                weight={600}
+              >
+                <StyledComponent
+                  as="span"
+                  className="c1"
+                  data-component-type="text"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-dnqmqq",
+                        "isStatic": false,
+                        "lastClassName": "c3",
+                        "rules": Array [
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
+",
+                        ],
+                      },
+                      "displayName": "styled.span",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-dnqmqq",
+                      "target": "span",
+                      "toString": [Function],
+                      "usesTheme": false,
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  isInline={true}
+                  textType="body"
+                  weight={600}
+                >
+                  <span
+                    className="c2 c1"
+                    data-component-type="text"
+                  >
+                    AUD
+                  </span>
+                </StyledComponent>
+              </styled.span>
+            </Text>
+          </StyledComponent>
+        </Styled(Text)>
+        <Text
+          isInline={true}
+          tag="span"
+          type="body"
+        >
+          <styled.span
+            as="span"
+            data-component-type="text"
+            isInline={true}
+            textType="body"
+          >
+            <StyledComponent
+              as="span"
+              data-component-type="text"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-dnqmqq",
+                    "isStatic": false,
+                    "lastClassName": "c3",
+                    "rules": Array [
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-dnqmqq",
+                  "target": "span",
+                  "toString": [Function],
+                  "usesTheme": false,
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              isInline={true}
+              textType="body"
+            >
+              <span
+                className="c3"
+                data-component-type="text"
+              >
+                1,000.50
+              </span>
+            </StyledComponent>
+          </styled.span>
+        </Text>
+      </span>
+    </StyledComponent>
+  </styled.span>
+</CurrencyText>
+`;
+
 exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = `
 .c1 {
   font-size: 16px;
@@ -316,6 +628,7 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
 <CurrencyText
   decimalPlace={0}
   flexAlign={false}
+  isInline={true}
   prefix="AUD"
   prefixType="body"
   value={0}
@@ -323,6 +636,7 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
 >
   <styled.span
     flexAlign={false}
+    isInline={true}
   >
     <StyledComponent
       flexAlign={false}
@@ -333,9 +647,17 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
           "componentStyle": ComponentStyle {
             "componentId": "sc-gZMcBi",
             "isStatic": false,
-            "lastClassName": "dMdnOw",
+            "lastClassName": "lbcszo",
             "rules": Array [
               "
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
   ",
               [Function],
               "
@@ -354,6 +676,7 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
         }
       }
       forwardedRef={null}
+      isInline={true}
     >
       <span
         className=""
@@ -613,6 +936,7 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
 <CurrencyText
   decimalPlace={0}
   flexAlign={true}
+  isInline={true}
   prefix="AUD"
   prefixType="heading"
   value={1000}
@@ -620,6 +944,7 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
 >
   <styled.span
     flexAlign={true}
+    isInline={true}
   >
     <StyledComponent
       flexAlign={true}
@@ -633,6 +958,14 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
             "lastClassName": "c0",
             "rules": Array [
               "
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
   ",
               [Function],
               "
@@ -651,6 +984,7 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
         }
       }
       forwardedRef={null}
+      isInline={true}
     >
       <span
         className="c0"
@@ -899,6 +1233,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
 <CurrencyText
   decimalPlace={0}
   flexAlign={false}
+  isInline={true}
   prefix="AUD"
   prefixType="body"
   value={1000}
@@ -907,6 +1242,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
 >
   <styled.span
     flexAlign={false}
+    isInline={true}
   >
     <StyledComponent
       flexAlign={false}
@@ -917,9 +1253,17 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
           "componentStyle": ComponentStyle {
             "componentId": "sc-gZMcBi",
             "isStatic": false,
-            "lastClassName": "dMdnOw",
+            "lastClassName": "lbcszo",
             "rules": Array [
               "
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
   ",
               [Function],
               "
@@ -938,6 +1282,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
         }
       }
       forwardedRef={null}
+      isInline={true}
     >
       <span
         className=""
@@ -1190,6 +1535,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
 <CurrencyText
   decimalPlace={0}
   flexAlign={false}
+  isInline={true}
   prefix="AUD"
   prefixColor="#FFD2CC"
   prefixType="body"
@@ -1198,6 +1544,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
 >
   <styled.span
     flexAlign={false}
+    isInline={true}
   >
     <StyledComponent
       flexAlign={false}
@@ -1208,9 +1555,17 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
           "componentStyle": ComponentStyle {
             "componentId": "sc-gZMcBi",
             "isStatic": false,
-            "lastClassName": "dMdnOw",
+            "lastClassName": "lbcszo",
             "rules": Array [
               "
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
   ",
               [Function],
               "
@@ -1229,6 +1584,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
         }
       }
       forwardedRef={null}
+      isInline={true}
     >
       <span
         className=""
@@ -1483,6 +1839,7 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
 <CurrencyText
   decimalPlace={0}
   flexAlign={false}
+  isInline={true}
   prefix="AUD"
   prefixType="body"
   value={1000}
@@ -1490,6 +1847,7 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
 >
   <styled.span
     flexAlign={false}
+    isInline={true}
   >
     <StyledComponent
       flexAlign={false}
@@ -1500,9 +1858,17 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
           "componentStyle": ComponentStyle {
             "componentId": "sc-gZMcBi",
             "isStatic": false,
-            "lastClassName": "dMdnOw",
+            "lastClassName": "lbcszo",
             "rules": Array [
               "
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
   ",
               [Function],
               "
@@ -1521,6 +1887,7 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
         }
       }
       forwardedRef={null}
+      isInline={true}
     >
       <span
         className=""
@@ -1769,6 +2136,7 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
 <CurrencyText
   decimalPlace={0}
   flexAlign={false}
+  isInline={true}
   prefix="AUD"
   prefixType="xsmall"
   value={1000}
@@ -1776,6 +2144,7 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
 >
   <styled.span
     flexAlign={false}
+    isInline={true}
   >
     <StyledComponent
       flexAlign={false}
@@ -1786,9 +2155,17 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
           "componentStyle": ComponentStyle {
             "componentId": "sc-gZMcBi",
             "isStatic": false,
-            "lastClassName": "dMdnOw",
+            "lastClassName": "lbcszo",
             "rules": Array [
               "
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
   ",
               [Function],
               "
@@ -1807,6 +2184,7 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
         }
       }
       forwardedRef={null}
+      isInline={true}
     >
       <span
         className=""
@@ -2029,6 +2407,7 @@ exports[`<CurrencyText /> should render the Currency Text without value 1`] = `
 <CurrencyText
   decimalPlace={0}
   flexAlign={false}
+  isInline={true}
   prefixType="body"
   valueType="body"
 >
