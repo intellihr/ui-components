@@ -113,4 +113,17 @@ describe('<CurrencyText />', () => {
     expect(wrapper.find('HintWrapper').exists()).toBeTruthy()
     expect(wrapper.find('Tooltip').exists()).toBeTruthy()
   })
+
+  it('should render the Currency Text not inline', () => {
+    const wrapper = mount(
+      <CurrencyText
+        isInline={false}
+        value={1000.499}
+        prefix='AUD'
+        decimalPlace={2}
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })

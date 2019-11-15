@@ -102,6 +102,23 @@
   <CurrencyText />
 ```
 
+#### Currency Text With Margins
+
+```jsx
+  <CurrencyText
+    isInline={false}
+    margins={{
+        top: 20,
+        left: 20,
+        right: 20,
+        bottom: 20
+      }}
+    value={1000.499}
+    prefix='AUD'
+    decimalPlace={2}
+   />
+```
+
 #### Using Currency Text formatter externally
 
 CurrencyText exports it's formatter so that it can be used in
