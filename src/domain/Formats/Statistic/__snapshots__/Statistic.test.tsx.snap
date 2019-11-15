@@ -47,7 +47,7 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-VigVT",
+              "componentId": "sc-jTzLTM",
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
@@ -73,7 +73,7 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
             "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-VigVT",
+            "styledComponentId": "sc-jTzLTM",
             "target": "div",
             "toString": [Function],
             "usesTheme": false,
@@ -97,7 +97,7 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-fjdhpX",
+              "componentId": "sc-jzJRlG",
               "isStatic": false,
               "lastClassName": "c1",
               "rules": Array [
@@ -110,7 +110,7 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
             "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-fjdhpX",
+            "styledComponentId": "sc-jzJRlG",
             "target": "div",
             "toString": [Function],
             "usesTheme": false,
@@ -131,7 +131,7 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-jTzLTM",
+                      "componentId": "sc-fjdhpX",
                       "isStatic": false,
                       "lastClassName": "c2",
                       "rules": Array [
@@ -160,7 +160,7 @@ exports[`<Statistic /> should render Statistic Record component 1`] = `
                     "displayName": "styled.span",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-jTzLTM",
+                    "styledComponentId": "sc-fjdhpX",
                     "target": "span",
                     "toString": [Function],
                     "usesTheme": false,
@@ -245,7 +245,7 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-VigVT",
+              "componentId": "sc-jTzLTM",
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
@@ -271,7 +271,7 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
             "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-VigVT",
+            "styledComponentId": "sc-jTzLTM",
             "target": "div",
             "toString": [Function],
             "usesTheme": false,
@@ -295,7 +295,7 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-fjdhpX",
+              "componentId": "sc-jzJRlG",
               "isStatic": false,
               "lastClassName": "c1",
               "rules": Array [
@@ -308,7 +308,7 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
             "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-fjdhpX",
+            "styledComponentId": "sc-jzJRlG",
             "target": "div",
             "toString": [Function],
             "usesTheme": false,
@@ -329,7 +329,7 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-gqjmRU",
+                      "componentId": "sc-VigVT",
                       "isStatic": false,
                       "lastClassName": "c2",
                       "rules": Array [
@@ -361,7 +361,7 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
                     "displayName": "styled.span",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-gqjmRU",
+                    "styledComponentId": "sc-VigVT",
                     "target": "span",
                     "toString": [Function],
                     "usesTheme": false,
@@ -385,7 +385,7 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-jTzLTM",
+                      "componentId": "sc-fjdhpX",
                       "isStatic": false,
                       "lastClassName": "c3",
                       "rules": Array [
@@ -414,7 +414,7 @@ exports[`<Statistic /> should render a Statistic component with a prefix 1`] = `
                     "displayName": "styled.span",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-jTzLTM",
+                    "styledComponentId": "sc-fjdhpX",
                     "target": "span",
                     "toString": [Function],
                     "usesTheme": false,
@@ -475,7 +475,7 @@ exports[`<Statistic /> should render not provided when no value is provided 1`] 
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-VigVT",
+              "componentId": "sc-jTzLTM",
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
@@ -501,7 +501,7 @@ exports[`<Statistic /> should render not provided when no value is provided 1`] 
             "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-VigVT",
+            "styledComponentId": "sc-jTzLTM",
             "target": "div",
             "toString": [Function],
             "usesTheme": false,
@@ -525,7 +525,7 @@ exports[`<Statistic /> should render not provided when no value is provided 1`] 
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-gZMcBi",
+              "componentId": "sc-gqjmRU",
               "isStatic": false,
               "lastClassName": "c1",
               "rules": Array [
@@ -551,7 +551,7 @@ exports[`<Statistic /> should render not provided when no value is provided 1`] 
             "displayName": "styled.span",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-gZMcBi",
+            "styledComponentId": "sc-gqjmRU",
             "target": "span",
             "toString": [Function],
             "usesTheme": false,
