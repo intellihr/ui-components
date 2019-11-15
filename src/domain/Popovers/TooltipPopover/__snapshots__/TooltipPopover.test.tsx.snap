@@ -2,9 +2,7 @@
 
 exports[`<TooltipPopover /> Render a popover using a custom trigger should match the snapshot 1`] = `
 <Fragment>
-  <styled.span
-    noHelpCursor={false}
-  >
+  <styled.span>
     <span
       aria-expanded={false}
       aria-haspopup={true}
@@ -36,9 +34,7 @@ exports[`<TooltipPopover /> Render a popover using a custom trigger should match
 
 exports[`<TooltipPopover /> Simple popover behaviour should match the snapshot 1`] = `
 <Fragment>
-  <styled.span
-    noHelpCursor={false}
-  >
+  <styled.span>
     <button
       aria-expanded={false}
       aria-haspopup={true}

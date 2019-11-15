@@ -412,9 +412,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
               <TooltipPopover
                 toggleComponent={[Function]}
               >
-                <styled.span
-                  noHelpCursor={false}
-                >
+                <styled.span>
                   <StyledComponent
                     forwardedComponent={
                       Object {
@@ -444,7 +442,6 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
                       }
                     }
                     forwardedRef={null}
-                    noHelpCursor={false}
                   >
                     <span
                       className="c2"
@@ -1521,9 +1518,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
               <TooltipPopover
                 toggleComponent={[Function]}
               >
-                <styled.span
-                  noHelpCursor={false}
-                >
+                <styled.span>
                   <StyledComponent
                     forwardedComponent={
                       Object {
@@ -1553,7 +1548,6 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                       }
                     }
                     forwardedRef={null}
-                    noHelpCursor={false}
                   >
                     <span
                       className="c2"
