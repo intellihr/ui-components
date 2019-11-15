@@ -98,7 +98,7 @@ class Popover extends React.Component<IPopoverProps, never> {
       case 'dropdown':
         return 100
       case 'tooltip':
-        return 300
+        return 200
       default:
         return 0
     }
