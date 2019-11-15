@@ -4,7 +4,6 @@ import moment, { Moment } from 'moment'
 import React from 'react'
 import { SingleDatePicker } from 'react-dates'
 import 'react-dates/initialize'
-import 'react-dates/lib/css/_datepicker.css'
 
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { InputGroupPosition } from '../InputGroup'
