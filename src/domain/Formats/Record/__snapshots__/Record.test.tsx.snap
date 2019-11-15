@@ -38,9 +38,9 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-iwsKbI",
+            "componentId": "sc-gZMcBi",
             "isStatic": false,
-            "lastClassName": "eAChmV",
+            "lastClassName": "dMdnOw",
             "rules": Array [
               "
   ",
@@ -52,7 +52,7 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-iwsKbI",
+          "styledComponentId": "sc-gZMcBi",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -76,7 +76,7 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-dnqmqq",
+                  "componentId": "sc-iwsKbI",
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
@@ -91,7 +91,7 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-dnqmqq",
+                "styledComponentId": "sc-iwsKbI",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,
@@ -130,7 +130,7 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-htoDjs",
+                          "componentId": "sc-dnqmqq",
                           "isStatic": false,
                           "lastClassName": "c1",
                           "rules": Array [
@@ -173,7 +173,7 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
                         "displayName": "styled.span",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-htoDjs",
+                        "styledComponentId": "sc-dnqmqq",
                         "target": "span",
                         "toString": [Function],
                         "usesTheme": false,
@@ -210,6 +210,10 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
 `;
 
 exports[`<Record /> should render a Record and tooltip with a custom tooltip and tooltipContent 1`] = `
+.c2 {
+  cursor: help;
+}
+
 .c1 {
   font-size: 14px;
   line-height: 20px;
@@ -248,9 +252,9 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-iwsKbI",
+            "componentId": "sc-gZMcBi",
             "isStatic": false,
-            "lastClassName": "eAChmV",
+            "lastClassName": "dMdnOw",
             "rules": Array [
               "
   ",
@@ -262,7 +266,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-iwsKbI",
+          "styledComponentId": "sc-gZMcBi",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -286,7 +290,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-dnqmqq",
+                  "componentId": "sc-iwsKbI",
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
@@ -301,7 +305,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-dnqmqq",
+                "styledComponentId": "sc-iwsKbI",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,
@@ -340,7 +344,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-htoDjs",
+                          "componentId": "sc-dnqmqq",
                           "isStatic": false,
                           "lastClassName": "c1",
                           "rules": Array [
@@ -383,7 +387,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
                         "displayName": "styled.span",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-htoDjs",
+                        "styledComponentId": "sc-dnqmqq",
                         "target": "span",
                         "toString": [Function],
                         "usesTheme": false,
@@ -408,13 +412,50 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
               <TooltipPopover
                 toggleComponent={[Function]}
               >
-                <span
-                  aria-expanded={false}
-                  aria-haspopup={true}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  role="button"
-                />
+                <styled.span>
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-ifAKCX",
+                          "isStatic": false,
+                          "lastClassName": "c2",
+                          "rules": Array [
+                            "
+  cursor: ",
+                            [Function],
+                            ";
+",
+                          ],
+                        },
+                        "displayName": "styled.span",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-ifAKCX",
+                        "target": "span",
+                        "toString": [Function],
+                        "usesTheme": false,
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                  >
+                    <span
+                      className="c2"
+                    >
+                      <span
+                        aria-expanded={false}
+                        aria-haspopup={true}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        role="button"
+                      />
+                    </span>
+                  </StyledComponent>
+                </styled.span>
                 <Popover
                   animationType="tooltip"
                   id=""
@@ -446,7 +487,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
                       onExit={[Function]}
                       onExited={[Function]}
                       onExiting={[Function]}
-                      timeout={300}
+                      timeout={200}
                       unmountOnExit={true}
                     />
                   </Portal>
@@ -510,9 +551,9 @@ exports[`<Record /> should render a Record component, creating a Text child with
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-iwsKbI",
+            "componentId": "sc-gZMcBi",
             "isStatic": false,
-            "lastClassName": "eAChmV",
+            "lastClassName": "dMdnOw",
             "rules": Array [
               "
   ",
@@ -524,7 +565,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-iwsKbI",
+          "styledComponentId": "sc-gZMcBi",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -548,7 +589,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-dnqmqq",
+                  "componentId": "sc-iwsKbI",
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
@@ -563,7 +604,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-dnqmqq",
+                "styledComponentId": "sc-iwsKbI",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,
@@ -602,7 +643,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-htoDjs",
+                          "componentId": "sc-dnqmqq",
                           "isStatic": false,
                           "lastClassName": "c2",
                           "rules": Array [
@@ -645,7 +686,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                         "displayName": "styled.span",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-htoDjs",
+                        "styledComponentId": "sc-dnqmqq",
                         "target": "span",
                         "toString": [Function],
                         "usesTheme": false,
@@ -693,7 +734,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-htoDjs",
+                    "componentId": "sc-dnqmqq",
                     "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
@@ -736,7 +777,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                   "displayName": "styled.span",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-htoDjs",
+                  "styledComponentId": "sc-dnqmqq",
                   "target": "span",
                   "toString": [Function],
                   "usesTheme": false,
@@ -808,9 +849,9 @@ exports[`<Record /> should render a Record component, creating a Text child with
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-iwsKbI",
+            "componentId": "sc-gZMcBi",
             "isStatic": false,
-            "lastClassName": "eAChmV",
+            "lastClassName": "dMdnOw",
             "rules": Array [
               "
   ",
@@ -822,7 +863,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-iwsKbI",
+          "styledComponentId": "sc-gZMcBi",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -846,7 +887,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-dnqmqq",
+                  "componentId": "sc-iwsKbI",
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
@@ -861,7 +902,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-dnqmqq",
+                "styledComponentId": "sc-iwsKbI",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,
@@ -900,7 +941,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-htoDjs",
+                          "componentId": "sc-dnqmqq",
                           "isStatic": false,
                           "lastClassName": "c2",
                           "rules": Array [
@@ -943,7 +984,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                         "displayName": "styled.span",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-htoDjs",
+                        "styledComponentId": "sc-dnqmqq",
                         "target": "span",
                         "toString": [Function],
                         "usesTheme": false,
@@ -991,7 +1032,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-htoDjs",
+                    "componentId": "sc-dnqmqq",
                     "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
@@ -1034,7 +1075,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                   "displayName": "styled.span",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-htoDjs",
+                  "styledComponentId": "sc-dnqmqq",
                   "target": "span",
                   "toString": [Function],
                   "usesTheme": false,
@@ -1095,9 +1136,9 @@ exports[`<Record /> should render a Record component, with the provided componen
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-iwsKbI",
+            "componentId": "sc-gZMcBi",
             "isStatic": false,
-            "lastClassName": "eAChmV",
+            "lastClassName": "dMdnOw",
             "rules": Array [
               "
   ",
@@ -1109,7 +1150,7 @@ exports[`<Record /> should render a Record component, with the provided componen
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-iwsKbI",
+          "styledComponentId": "sc-gZMcBi",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -1133,7 +1174,7 @@ exports[`<Record /> should render a Record component, with the provided componen
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-dnqmqq",
+                  "componentId": "sc-iwsKbI",
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
@@ -1148,7 +1189,7 @@ exports[`<Record /> should render a Record component, with the provided componen
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-dnqmqq",
+                "styledComponentId": "sc-iwsKbI",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,
@@ -1187,7 +1228,7 @@ exports[`<Record /> should render a Record component, with the provided componen
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-htoDjs",
+                          "componentId": "sc-dnqmqq",
                           "isStatic": false,
                           "lastClassName": "c1",
                           "rules": Array [
@@ -1230,7 +1271,7 @@ exports[`<Record /> should render a Record component, with the provided componen
                         "displayName": "styled.span",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-htoDjs",
+                        "styledComponentId": "sc-dnqmqq",
                         "target": "span",
                         "toString": [Function],
                         "usesTheme": false,
@@ -1267,7 +1308,7 @@ exports[`<Record /> should render a Record component, with the provided componen
 `;
 
 exports[`<Record /> should render a Record with a Tooltip 1`] = `
-.c2 {
+.c3 {
   display: inline-block;
   font-stretch: normal;
   --fa-primary-color: #2512B3;
@@ -1275,9 +1316,13 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
   color: #424F5C;
 }
 
-.c2.icon {
+.c3.icon {
   text-align: center;
   font-size: 1rem;
+}
+
+.c2 {
+  cursor: help;
 }
 
 .c1 {
@@ -1313,9 +1358,9 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-iwsKbI",
+            "componentId": "sc-gZMcBi",
             "isStatic": false,
-            "lastClassName": "eAChmV",
+            "lastClassName": "dMdnOw",
             "rules": Array [
               "
   ",
@@ -1327,7 +1372,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-iwsKbI",
+          "styledComponentId": "sc-gZMcBi",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -1351,7 +1396,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-dnqmqq",
+                  "componentId": "sc-iwsKbI",
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
@@ -1366,7 +1411,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-dnqmqq",
+                "styledComponentId": "sc-iwsKbI",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,
@@ -1405,7 +1450,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-htoDjs",
+                          "componentId": "sc-dnqmqq",
                           "isStatic": false,
                           "lastClassName": "c1",
                           "rules": Array [
@@ -1448,7 +1493,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                         "displayName": "styled.span",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-htoDjs",
+                        "styledComponentId": "sc-dnqmqq",
                         "target": "span",
                         "toString": [Function],
                         "usesTheme": false,
@@ -1473,119 +1518,156 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
               <TooltipPopover
                 toggleComponent={[Function]}
               >
-                <button
-                  aria-expanded={false}
-                  aria-haspopup={true}
-                  className="popoverTrigger"
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  role="button"
-                  type="button"
-                >
-                  <FontAwesomeIcon
-                    color="#424F5C"
-                    icon="question-circle"
-                    type="regular"
+                <styled.span>
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-ifAKCX",
+                          "isStatic": false,
+                          "lastClassName": "c2",
+                          "rules": Array [
+                            "
+  cursor: ",
+                            [Function],
+                            ";
+",
+                          ],
+                        },
+                        "displayName": "styled.span",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-ifAKCX",
+                        "target": "span",
+                        "toString": [Function],
+                        "usesTheme": false,
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
                   >
-                    <Icon
-                      color="#424F5C"
-                      icon="far fa-question-circle"
+                    <span
+                      className="c2"
                     >
-                      <styled.i
-                        aria-hidden={true}
-                        className="icon far fa-question-circle"
-                        color="#424F5C"
-                        size="medium"
+                      <button
+                        aria-expanded={false}
+                        aria-haspopup={true}
+                        className="popoverTrigger"
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        role="button"
+                        type="button"
                       >
-                        <StyledComponent
-                          aria-hidden={true}
-                          className="icon far fa-question-circle"
+                        <FontAwesomeIcon
                           color="#424F5C"
-                          forwardedComponent={
-                            Object {
-                              "$$typeof": Symbol(react.forward_ref),
-                              "attrs": Array [],
-                              "componentStyle": ComponentStyle {
-                                "componentId": "sc-htpNat",
-                                "isStatic": false,
-                                "lastClassName": "c2",
-                                "rules": Array [
-                                  "
+                          icon="question-circle"
+                          type="regular"
+                        >
+                          <Icon
+                            color="#424F5C"
+                            icon="far fa-question-circle"
+                          >
+                            <styled.i
+                              aria-hidden={true}
+                              className="icon far fa-question-circle"
+                              color="#424F5C"
+                              size="medium"
+                            >
+                              <StyledComponent
+                                aria-hidden={true}
+                                className="icon far fa-question-circle"
+                                color="#424F5C"
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "sc-htpNat",
+                                      "isStatic": false,
+                                      "lastClassName": "c3",
+                                      "rules": Array [
+                                        "
   display: inline-block;
   font-stretch: normal;
   --fa-primary-color: ",
-                                  "#2512B3",
-                                  ";
+                                        "#2512B3",
+                                        ";
   --fa-secondary-color: ",
-                                  "#2512B3",
-                                  ";
+                                        "#2512B3",
+                                        ";
 
   ",
-                                  [Function],
-                                  "
+                                        [Function],
+                                        "
 
   ",
-                                  [Function],
-                                  "
+                                        [Function],
+                                        "
   ",
-                                  [Function],
-                                  "
+                                        [Function],
+                                        "
 
   ",
-                                  [Function],
-                                  "
+                                        [Function],
+                                        "
 
   ",
-                                  [Function],
-                                  "
+                                        [Function],
+                                        "
 
   ",
-                                  [Function],
-                                  "
+                                        [Function],
+                                        "
 
   ",
-                                  [Function],
-                                  "
+                                        [Function],
+                                        "
 
   ",
-                                  [Function],
-                                  "
+                                        [Function],
+                                        "
 
   &.icon {
     text-align: center;
 
   ",
-                                  [Function],
-                                  "
+                                        [Function],
+                                        "
   }
 ",
-                                ],
-                              },
-                              "displayName": "styled.i",
-                              "foldedComponentIds": Array [],
-                              "render": [Function],
-                              "styledComponentId": "sc-htpNat",
-                              "target": "i",
-                              "toString": [Function],
-                              "usesTheme": false,
-                              "warnTooManyClasses": [Function],
-                              "withComponent": [Function],
-                            }
-                          }
-                          forwardedRef={null}
-                          size="medium"
-                        >
-                          <i
-                            aria-hidden={true}
-                            className="c2 icon far fa-question-circle"
-                            color="#424F5C"
-                            size="medium"
-                          />
-                        </StyledComponent>
-                      </styled.i>
-                    </Icon>
-                  </FontAwesomeIcon>
-                </button>
+                                      ],
+                                    },
+                                    "displayName": "styled.i",
+                                    "foldedComponentIds": Array [],
+                                    "render": [Function],
+                                    "styledComponentId": "sc-htpNat",
+                                    "target": "i",
+                                    "toString": [Function],
+                                    "usesTheme": false,
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
+                                }
+                                forwardedRef={null}
+                                size="medium"
+                              >
+                                <i
+                                  aria-hidden={true}
+                                  className="c3 icon far fa-question-circle"
+                                  color="#424F5C"
+                                  size="medium"
+                                />
+                              </StyledComponent>
+                            </styled.i>
+                          </Icon>
+                        </FontAwesomeIcon>
+                      </button>
+                    </span>
+                  </StyledComponent>
+                </styled.span>
                 <Popover
                   animationType="tooltip"
                   id=""
@@ -1638,7 +1720,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                       onExit={[Function]}
                       onExited={[Function]}
                       onExiting={[Function]}
-                      timeout={300}
+                      timeout={200}
                       unmountOnExit={true}
                     />
                   </Portal>
