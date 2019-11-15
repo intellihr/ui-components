@@ -17,7 +17,7 @@ import {
   StyledExtraContent
 } from './style'
 
-type CardColors = 'neutral' | 'orange' | 'red'
+type CardColors = 'neutral' | 'orange' | 'red' | 'grey'
 
 interface ICardProps {
   /** the component that shows even in collapse mode */

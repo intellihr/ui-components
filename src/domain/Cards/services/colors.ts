@@ -34,6 +34,13 @@ const colorOptions: ColorOptions = {
     hoverBackground: Variables.Color.r200,
     extraContentBackground: Variables.Color.r100,
     hoverButtonBackground: Variables.Color.r300
+  },
+  grey: {
+    border: Variables.Color.n300,
+    background: Variables.Color.n200,
+    hoverBackground: Variables.Color.n250,
+    extraContentBackground: Variables.Color.n150,
+    hoverButtonBackground: Variables.Color.n300
   }
 }
 
