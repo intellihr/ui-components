@@ -1,10 +1,9 @@
-import React from 'react'
 import styled from 'styled-components'
 
 import { Variables } from '../../../../common'
 
 const StyledModalHeader = styled.div`
-  height: 80px;
+  min-height: 80px;
   background-color: ${Variables.Color.n200};
   padding: 24px;
 `

@@ -13,7 +13,7 @@ exports[`<Header /> should render modal header 1`] = `
 }
 
 .c0 {
-  height: 80px;
+  min-height: 80px;
   background-color: #F5F7FA;
   padding: 24px;
 }
@@ -31,7 +31,7 @@ exports[`<Header /> should render modal header 1`] = `
             "lastClassName": "c0",
             "rules": Array [
               "
-  height: 80px;
+  min-height: 80px;
   background-color: ",
               "#F5F7FA",
               ";
