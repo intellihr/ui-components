@@ -38,11 +38,30 @@ interface ISingleDateInputState {
 }
 
 class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingleDateInputState> {
+  get classNames (): string {
+    const {
+      isInvalid,
+      groupPosition
+    } = this.props
+
+    return classNames(
+      style.singleDatePickerOverrides,
+      {
+        'is-invalid-input': isInvalid,
+        [`input-group-${groupPosition}`]: !isNil(groupPosition)
+      }
+    )
+  }
+
   public static defaultProps = {
     dateFormat: 'DD/MM/YYYY',
     isInvalid: false,
     isDisabled: false,
     isMobile: false
+  }
+
+  private static convertDateToStartOfDay (date: Moment) {
+    return date.startOf('day')
   }
 
   public state: ISingleDateInputState = {
@@ -74,7 +93,7 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
           focused={this.state.focused}
           onDateChange={this.handleDateChange}
           onFocusChange={this.handleFocusChange}
-          isOutsideRange={isDisabledForDate ? isDisabledForDate : this.handleDisabledDateRange}
+          isOutsideRange={isDisabledForDate ? (date) => isDisabledForDate(SingleDateInput.convertDateToStartOfDay(date)) : this.handleDisabledDateRange}
           renderMonthText={this.renderMonthText}
           noBorder
           block
@@ -96,21 +115,6 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
     )
   }
 
-  get classNames (): string {
-    const {
-      isInvalid,
-      groupPosition
-    } = this.props
-
-    return classNames(
-      style.singleDatePickerOverrides,
-      {
-        'is-invalid-input': isInvalid,
-        [`input-group-${groupPosition}`]: !isNil(groupPosition)
-      }
-    )
-  }
-
   private handleDisabledDateRange = () => false
 
   private renderMonthText = (day: Moment) => moment(day).format('MMM YYYY')
@@ -121,6 +125,10 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
     } = this.props
 
     if (onChange) {
+      if (date) {
+        date = SingleDateInput.convertDateToStartOfDay(date)
+      }
+
       onChange(date)
     }
   }
