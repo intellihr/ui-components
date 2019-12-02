@@ -1,7 +1,7 @@
 {
   "name": "@intellihr/ui-components",
   "description": "A common React components library that is used in our company",
-  "version": "40.3.0",
+  "version": "40.3.1",
   "main": "./dist/",
   "types": "./types/index.d.ts",
   "files": [
@@ -103,7 +103,7 @@
     "react": "16.9.0",
     "react-docgen-typescript": "1.12.4",
     "react-dom": "16.9.0",
-    "react-styleguidist": "^9.0.0",
+    "react-styleguidist": "^10.2.1",
     "react-test-renderer": "16.8.6",
     "regenerator-runtime": "^0.13.2",
     "rimraf": "^2.6.3",

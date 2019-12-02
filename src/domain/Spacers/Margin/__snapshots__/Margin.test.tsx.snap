@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Margin /> Standard Margin should match the snapshot 1`] = `
+<styled.div
+  margins={
+    Object {
+      "bottom": 24,
+      "left": 12,
+      "right": 24,
+      "top": Object {
+        "desktop": 12,
+        "min": 24,
+        "tablet": "none",
+      },
+    }
+  }
+>
+  <div>
+    Margin
+  </div>
+</styled.div>
+`;

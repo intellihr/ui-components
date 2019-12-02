@@ -291,12 +291,12 @@ module.exports = {
         {
           name: 'Spacers',
           components: [
-            'src/domain/Spacers/HorizontalRule/HorizontalRule.tsx'
+            'src/domain/Spacers/HorizontalRule/HorizontalRule.tsx',
           ],
           sections: [
             {
               name: 'Margins',
-              content: 'src/domain/Spacers/services/margins.examples.md'
+              content: 'src/domain/Spacers/Margin/Margin.examples.md'
             }
           ]
         },
