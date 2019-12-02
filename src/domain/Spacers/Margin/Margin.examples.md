@@ -60,13 +60,24 @@ import { Button } from '@Domain/Buttons';
 </Button>
 ```
 
-#### Supported Components
+#### Margin Component
 
-The components that support margins are:
-* Button
-* Brick
-* Callout
-* Carousel
-* FilterController
-* HighlightArea
-* ScrollingTabGroup
+There is also a standard margin component which can be used when trying 
+to use margins on components that do not support margin props.
+
+```jsx
+import { Variables } from '@Common';
+
+<div style={{ backgroundColor: Variables.Color.n400, overflow: 'auto', width: 'fit-content', height: 'fit-content' }}>
+    <Margin
+      margins={{
+        top: Variables.Spacing.sXLarge,
+        right: Variables.Spacing.sXLarge,
+        left: Variables.Spacing.sXLarge,
+        bottom: Variables.Spacing.sXLarge
+      }}
+    >
+      <div style={{ height: 200, width: 200, backgroundColor: Variables.Color.n600 }}/>
+    </Margin>
+</div>
+```
