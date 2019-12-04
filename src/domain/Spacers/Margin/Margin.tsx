@@ -1,4 +1,3 @@
-import { isEqual } from 'lodash'
 import React from 'react'
 
 import { Props } from '../../../common'
@@ -15,9 +14,6 @@ const Margin: React.FC<{
   </StyledMargin>
 )
 
-const MemoMargin = React.memo(Margin, (prevProps, nextProps) => isEqual(prevProps.margins, nextProps.margins))
-MemoMargin.displayName = 'Margin'
-
 export {
-  MemoMargin as Margin
+  Margin
 }
