@@ -3,12 +3,13 @@
 exports[`<HorizontalRule /> should render a horizontal rule 1`] = `
 <styled.hr
   data-component-type="horizontal_rule"
-  leftRightSpacing={
+  margins={
     Object {
-      "left": 24,
-      "right": "none",
+      "bottom": 20,
+      "left": 20,
+      "right": 20,
+      "top": 20,
     }
   }
-  topBottomSpacing={32}
 />
 `;
