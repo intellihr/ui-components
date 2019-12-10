@@ -10,17 +10,17 @@ import { MenuItem } from './MenuItem';
     label='Item 1'
   >
     <MenuItem
-      url='#'
+      href='#'
       label='Item 1A'
     />
     <MenuItem
-      url='#'
+      href='#'
       label='Item 1B'
     />
   </MenuItem>
   <MenuItem
     isActive={true}
-    url='#'
+    href='#'
     label='Item 2'
   />
   <MenuItem
@@ -28,11 +28,11 @@ import { MenuItem } from './MenuItem';
     label='Item 3'
   >
     <MenuItem
-      url='#'
+      href='#'
       label='Item 3A'
     />
     <MenuItem
-      url='#'
+      href='#'
       label='Item 3B'
       className='active'
     />
@@ -82,18 +82,18 @@ import { MenuItem } from './MenuItem';
     label='Item 1'
   >
     <MenuItem
-      url='#'
+      href='#'
       label='Item 1A'
     />
     <MenuItem
-      url='#'
+      href='#'
       label='Item 1B'
     />
   </MenuItem>
   <MenuItem
     isActive={true}
     isLoading={true}
-    url='#'
+    href='#'
     label='Item 2'
   />
   <MenuItem
@@ -101,11 +101,11 @@ import { MenuItem } from './MenuItem';
     label='Item 3'
   >
     <MenuItem
-      url='#'
+      href='#'
       label='Item 3A'
     />
     <MenuItem
-      url='#'
+      href='#'
       label='Item 3B'
       className='active'
     />
