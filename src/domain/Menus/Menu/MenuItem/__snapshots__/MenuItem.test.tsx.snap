@@ -2,13 +2,13 @@
 
 exports[`<MenuItem /> should render a a menu item with a link 1`] = `
 <styled.li>
-  <a
+  <Anchor
     href="www.google.com"
   >
     <styled.span>
       Test menu item
     </styled.span>
-  </a>
+  </Anchor>
 </styled.li>
 `;
 
@@ -32,7 +32,7 @@ exports[`<MenuItem /> should render a menu item as a submenu if it has children 
   transitionTime={250}
   trigger={
     <ForwardRef(styled.li)>
-      <a
+      <Anchor
         href="www.google.com"
       >
         <ForwardRef(styled.span)>
@@ -43,7 +43,7 @@ exports[`<MenuItem /> should render a menu item as a submenu if it has children 
         <ForwardRef(styled.span)>
           Father
         </ForwardRef(styled.span)>
-      </a>
+      </Anchor>
     </ForwardRef(styled.li)>
   }
   triggerClassName=""
@@ -55,6 +55,7 @@ exports[`<MenuItem /> should render a menu item as a submenu if it has children 
 >
   <styled.ul>
     <MenuItem
+      href="www.google.com"
       icon={
         <IntelliIcon
           icon="clock"
@@ -62,9 +63,9 @@ exports[`<MenuItem /> should render a menu item as a submenu if it has children 
       }
       label="Son"
       overflowWhenOpen="hidden"
-      url="www.google.com"
     />
     <MenuItem
+      href="www.google.com"
       icon={
         <IntelliIcon
           icon="clock"
@@ -72,7 +73,6 @@ exports[`<MenuItem /> should render a menu item as a submenu if it has children 
       }
       label="Devil"
       overflowWhenOpen="hidden"
-      url="www.google.com"
     />
   </styled.ul>
 </Collapsible>
@@ -98,11 +98,13 @@ exports[`<MenuItem /> should render a menu item which overflowWhenOpen prop is p
   transitionTime={250}
   trigger={
     <ForwardRef(styled.li)>
-      <a>
+      <Anchor
+        href="#"
+      >
         <ForwardRef(styled.span)>
           Test menu item
         </ForwardRef(styled.span)>
-      </a>
+      </Anchor>
     </ForwardRef(styled.li)>
   }
   triggerClassName=""
@@ -120,7 +122,7 @@ exports[`<MenuItem /> should render a menu item which overflowWhenOpen prop is p
 
 exports[`<MenuItem /> should render a menu item with Icon 1`] = `
 <styled.li>
-  <a
+  <Anchor
     href="www.google.com"
   >
     <styled.span>
@@ -131,7 +133,7 @@ exports[`<MenuItem /> should render a menu item with Icon 1`] = `
     <styled.span>
       Test menu item
     </styled.span>
-  </a>
+  </Anchor>
 </styled.li>
 `;
 
@@ -139,19 +141,19 @@ exports[`<MenuItem /> should render a menu item with active state 1`] = `
 <styled.li
   className="active"
 >
-  <a
+  <Anchor
     href="www.google.com"
   >
     <styled.span>
       Test menu item
     </styled.span>
-  </a>
+  </Anchor>
 </styled.li>
 `;
 
 exports[`<MenuItem /> should render a menu item with loading state 1`] = `
 <styled.li>
-  <a
+  <Anchor
     href="www.google.com"
   >
     <styled.span>
@@ -169,16 +171,18 @@ exports[`<MenuItem /> should render a menu item with loading state 1`] = `
         type="solid"
       />
     </styled.span>
-  </a>
+  </Anchor>
 </styled.li>
 `;
 
 exports[`<MenuItem /> should render a simple menu item 1`] = `
 <styled.li>
-  <a>
+  <Anchor
+    href="#"
+  >
     <styled.span>
       Test menu item
     </styled.span>
-  </a>
+  </Anchor>
 </styled.li>
 `;
