@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 
-import { Variables } from '../../../common'
+import { Props, Variables } from '../../../common'
+import { styleForMargins } from '../../Spacers/services/margins'
 
 interface ITabListItem {
   active: boolean
@@ -35,12 +36,14 @@ function stylesFortabSizes (props: ITabListItemButtonProps): any {
   }
 }
 
-const TabGroupContainer = styled.div`
+const TabGroupContainer = styled.div<{margins?: Props.IMargins}>`
   border: 1px solid ${Variables.Color.n400};
   border-radius: ${Variables.Style.borderRadius}px;
   box-sizing: border-box;
   overflow: hidden;
   width: 100%;
+
+  ${({margins}) => styleForMargins(margins)}
 `
 
 const TabList = styled.ul`
