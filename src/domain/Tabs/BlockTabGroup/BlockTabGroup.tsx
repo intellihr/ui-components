@@ -1,4 +1,5 @@
 import {
+  isEqual,
   isNumber,
   map,
   toNumber
@@ -31,6 +32,8 @@ export interface IBlockTabGroupProps {
   tabSize?: TabSize
   /** The data-component-context */
   componentContext?: string
+  /** The margins around the component */
+  margins?: Props.IMargins
 }
 
 export class BlockTabGroup extends React.Component<IBlockTabGroupProps, never> {
@@ -38,10 +41,18 @@ export class BlockTabGroup extends React.Component<IBlockTabGroupProps, never> {
     tabSize: 'medium'
   }
 
+  public shouldComponentUpdate (nextProps: Readonly<IBlockTabGroupProps>): boolean {
+    return nextProps.currentTab !== this.props.currentTab ||
+      !isEqual(this.props.tabs, nextProps.tabs) ||
+      nextProps.tabSize !== this.props.tabSize ||
+      !isEqual(this.props.margins, nextProps.margins)
+  }
+
   public render (): JSX.Element | null {
     const {
       tabs,
-      componentContext
+      componentContext,
+      margins
     } = this.props
 
     if (tabs.length === 0) {
@@ -52,6 +63,7 @@ export class BlockTabGroup extends React.Component<IBlockTabGroupProps, never> {
       <TabGroupContainer
         data-component-type={Props.ComponentType.BlockTabGroup}
         data-component-context={componentContext}
+        margins={margins}
       >
         <TabList role='tablist'>
           {map(tabs, this.listItemForTab)}

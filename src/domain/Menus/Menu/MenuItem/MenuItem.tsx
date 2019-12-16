@@ -2,22 +2,35 @@ import React from 'react'
 import Collapsible from 'react-collapsible'
 
 import { FontAwesomeIcon } from '../../../Icons'
+import { Anchor } from '../../../Internals'
 import { IconWrapper, LoadingIconWrapper, MenuItemLabelWrapper, MenuItemWrapper, SubMenuWrapper } from './style'
 
-export interface IMenuItemProps {
-  /** HTML id to use for the menu */
+export interface IMenuItemProps<TAnchorProps extends Record<string, any> = Record<string, any>> {
+  /** (Deprecated - please use `href`) The URL which the user will be navigated to when this item is clicked */
   url?: string
+  /** The URL which the user will be navigated to when this item is clicked */
+  href?: string
+  /** The label of this item */
   label: string
+  /** The icon of this item */
   icon?: JSX.Element
-  render?: (label: JSX.Element, iconContent?: JSX.Element, url?: string) => JSX.Element
+  /** A render prop to override the default rendering behaviors of the anchor element */
+  render?: (label: JSX.Element, iconContent?: JSX.Element, href?: string) => JSX.Element
+  /** The HTML class name of this item */
   className?: string
+  /** A flag indicating whether this item should show the loading state */
   isLoading?: boolean
+  /** A flag indicating whether this item should show the children if any */
   isOpen?: boolean
+  /** A handler to handle when this item shows or hides the children */
   handleSizeChange?: () => void
+  /** A property determining what to do when a child's content is too big to fit in this item */
   overflowWhenOpen?: 'hidden' | 'visible' | 'auto' | 'scroll' | 'inherit' | 'initial' | 'unset'
+  /** The properties to be passed on to the custom anchor component if provided in the Provider */
+  anchorComponentProps?: TAnchorProps
 }
 
-export class MenuItem extends React.PureComponent<IMenuItemProps> {
+export class MenuItem<TAnchorProps extends Record<string, any> = Record<string, any>> extends React.PureComponent<IMenuItemProps<TAnchorProps>> {
   public static defaultProps: Pick<IMenuItemProps, 'overflowWhenOpen'> = {
     overflowWhenOpen: 'hidden'
   }
@@ -68,24 +81,29 @@ export class MenuItem extends React.PureComponent<IMenuItemProps> {
     const {
       render,
       url,
-      className
+      href,
+      className,
+      anchorComponentProps
     } = this.props
 
     if (render) {
       return (
         <MenuItemWrapper className={className}>
-          {render(this.label, this.icon, url)}
+          {render(this.label, this.icon, href || url)}
         </MenuItemWrapper>
       )
     }
 
     return (
       <MenuItemWrapper className={className}>
-        <a href={url}>
+        <Anchor
+          href={href || url}
+          anchorComponentProps={anchorComponentProps}
+        >
           {this.icon}
           {this.label}
           {this.loadingIcon}
-        </a>
+        </Anchor>
       </MenuItemWrapper>
     )
   }

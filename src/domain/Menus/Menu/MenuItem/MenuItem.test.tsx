@@ -18,7 +18,7 @@ describe('<MenuItem />', () => {
   it('should render a a menu item with a link', () => {
     const wrapper = shallow(
       <MenuItem
-        url='www.google.com'
+        href='www.google.com'
         label='Test menu item'
       />
     )
@@ -29,7 +29,7 @@ describe('<MenuItem />', () => {
   it('should render a menu item with active state', () => {
     const wrapper = shallow(
       <MenuItem
-        url='www.google.com'
+        href='www.google.com'
         label='Test menu item'
         className='active'
       />
@@ -41,7 +41,7 @@ describe('<MenuItem />', () => {
   it('should render a menu item with Icon', () => {
     const wrapper = shallow(
       <MenuItem
-        url='www.google.com'
+        href='www.google.com'
         label='Test menu item'
         icon={<IntelliIcon icon='clock' />}
       />
@@ -53,7 +53,7 @@ describe('<MenuItem />', () => {
   it('should render a menu item with loading state', () => {
     const wrapper = shallow(
       <MenuItem
-        url='www.google.com'
+        href='www.google.com'
         label='Test menu item'
         icon={<IntelliIcon icon='clock' />}
         isLoading
@@ -66,17 +66,17 @@ describe('<MenuItem />', () => {
   it('should render a menu item as a submenu if it has children', () => {
     const wrapper = shallow(
       <MenuItem
-        url='www.google.com'
+        href='www.google.com'
         label='Father'
         icon={<IntelliIcon icon='clock' />}
       >
         <MenuItem
-          url='www.google.com'
+          href='www.google.com'
           label='Son'
           icon={<IntelliIcon icon='clock' />}
         />
         <MenuItem
-          url='www.google.com'
+          href='www.google.com'
           label='Devil'
           icon={<IntelliIcon icon='clock' />}
         />
