@@ -25,7 +25,7 @@ type Filter = IValueFilter
 
 type DataFetchCallback = (filters?: Filter[]) => Promise<any[]>
 
-type RenderCallback = (args: IFilteredListProps | { row: any, filteredRows: any[], index: number }) => JSX.Element | null | undefined
+type RenderCallback = (args: IFilteredListProps & { row: any, filteredRows: any[], index: number }) => JSX.Element | null | undefined
 type ErrorCallback = (errors: any) => JSX.Element | null | undefined
 
 interface IFilteredListProps {
