@@ -21,7 +21,8 @@ export const getTimeBasedLineChartDefaultOptions = (props: ITimeBasedLineChartPr
     xAxisLabel,
     yAxisLabel,
     minXTick,
-    maxXTick
+    maxXTick,
+    hideValueLabelBetweenYTicks
   } = props
 
   return {
@@ -107,6 +108,10 @@ export const getTimeBasedLineChartDefaultOptions = (props: ITimeBasedLineChartPr
 
           let valueLabel = tooltipItem.yLabel
 
+          if (hideValueLabelBetweenYTicks) {
+            valueLabel = ''
+          }
+
           if (yTickLabels) {
             Object.keys(yTickLabels).forEach((key) => {
               if (toNumber(key) === toNumber(get(tooltipItem, ['yLabel'], ''))) {
@@ -115,7 +120,11 @@ export const getTimeBasedLineChartDefaultOptions = (props: ITimeBasedLineChartPr
             })
           }
 
-          return `${label}: ${valueLabel}`
+          if (valueLabel) {
+            return `${label}: ${valueLabel}`
+          }
+
+          return label
         }
       }
     }

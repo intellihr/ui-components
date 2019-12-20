@@ -67,6 +67,8 @@ export interface ITimeBasedLineChartProps {
   minXTick?: string
   /** max X tick value on X Axis */
   maxXTick?: string
+  /** If true, hides the exact value of data points that sit between custom y tick label values */
+  hideValueLabelBetweenYTicks?: boolean
 }
 
 export interface IChartTooltipItem {

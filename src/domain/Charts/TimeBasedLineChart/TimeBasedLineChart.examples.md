@@ -35,3 +35,30 @@ const { lineObject2, lineObject3 } = require('./sampleData');
   height={360}
 />
 ```
+
+#### TimeBasedLineChart with custom YTick Labels
+
+```jsx
+const { lineObject4 } = require('./sampleData');
+const { createGradient } = require('./createGradient');
+
+<TimeBasedLineChart
+  data={[lineObject4]}
+  maxYTick={200}
+  yTickStepSize={50}
+  yTickLabels={{
+    50: 'First Label',
+    100: 'Second Label',
+    150: 'Third Label',
+    200: 'Fourth Label'  
+  }}
+  timeToolTipFormat='ll'
+  timeUnit='month'
+  timeDisplayFormat='MMM'
+  dateFormat='DD/MM/YYYY'
+  height={500}
+  yAxisLabel='Value'
+  xAxisLabel='Date'
+  hideValueLabelBetweenYTicks
+/>
+```
