@@ -212,3 +212,34 @@ export const lineObject3 = {
     }
   ]
 }
+
+export const lineObject4 = {
+  datasetLabel: 'Compliance',
+  lineColor: Variables.Color.c400,
+  dataset: [
+    {
+      x: moment('2018-02-20T23:53:42.000Z'),
+      y: '150'
+    },
+    {
+      x: moment('2017-11-06T22:48:34.000Z'),
+      y: '67'
+    },
+    {
+      x: moment('2017-05-05T00:00:00.000Z'),
+      y: '150'
+    },
+    {
+      x: moment('2017-01-31T00:00:00.000Z'),
+      y: '100'
+    },
+    {
+      x: moment('2016-11-03T00:00:00.000Z'),
+      y: '128'
+    },
+    {
+      x: moment('2016-10-10T00:57:21.000Z'),
+      y: '150'
+    }
+  ]
+}
