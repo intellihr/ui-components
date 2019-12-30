@@ -16,6 +16,8 @@ export interface ILink {
 export interface ISectionDescriptionProps {
   /** The title for what is displayed */
   header?: string,
+  /** The title for what is displayed as a JSX Element (overwritten by header) */
+  headerElement?: JSX.Element,
   /** The description for what is displayed */
   description?: string,
   /** (Deprecated - please use `links`) The text for the call to action */
@@ -53,7 +55,8 @@ class SectionDescription extends React.PureComponent<ISectionDescriptionProps> {
 
   get header () {
     const {
-      header
+      header,
+      headerElement
     } = this.props
 
     if (header) {
@@ -66,6 +69,10 @@ class SectionDescription extends React.PureComponent<ISectionDescriptionProps> {
           {header}
         </Text>
       )
+    }
+
+    if (headerElement) {
+      return headerElement
     }
   }
 

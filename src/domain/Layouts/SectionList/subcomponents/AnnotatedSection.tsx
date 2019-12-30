@@ -11,6 +11,8 @@ import { ILink, ILinkProps } from './SectionDescription'
 export interface IAnnotatedSectionProps {
   /** The title for what is displayed */
   header?: string,
+  /** The title for what is displayed as a JSX Element (overwritten by header) */
+  headerElement?: JSX.Element,
   /** The description for what is displayed */
   description?: string,
   /** (Deprecated - please use `links`) The text for the call to action */
@@ -30,6 +32,7 @@ class AnnotatedSection extends React.PureComponent<IAnnotatedSectionProps> {
     const {
       children,
       header,
+      headerElement,
       description,
       linkText,
       linkProps,
@@ -42,6 +45,7 @@ class AnnotatedSection extends React.PureComponent<IAnnotatedSectionProps> {
           <XYGrid.Cell size={{ desktop: 4, tablet: 4, min: 12 }}>
             <StyledAnnotatedSectionDescription
               header={header}
+              headerElement={headerElement}
               description={description}
               linkText={linkText}
               linkProps={linkProps}

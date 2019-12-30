@@ -65,5 +65,9 @@ import { Text } from '@Domain/Typographies';
       if the action items are set to full width, they will stack on top of each other.
     </Text>
   </SectionList.TitledSection>
+  <SectionList.AnnotatedSection
+    headerElement={<h1>JSX!</h1>}
+    description='This is an annotated section, which uses a JSX Element as its header.'
+  />
 </SectionList>
 ```
