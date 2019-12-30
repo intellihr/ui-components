@@ -10,7 +10,7 @@ import { ILink, ILinkProps } from './SectionDescription'
 
 export interface IAnnotatedSectionProps {
   /** The title for what is displayed */
-  header?: string,
+  header?: string | JSX.Element,
   /** The description for what is displayed */
   description?: string,
   /** (Deprecated - please use `links`) The text for the call to action */

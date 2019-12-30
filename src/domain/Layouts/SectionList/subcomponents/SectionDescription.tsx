@@ -15,7 +15,7 @@ export interface ILink {
 
 export interface ISectionDescriptionProps {
   /** The title for what is displayed */
-  header?: string,
+  header?: string | JSX.Element,
   /** The description for what is displayed */
   description?: string,
   /** (Deprecated - please use `links`) The text for the call to action */
@@ -57,15 +57,18 @@ class SectionDescription extends React.PureComponent<ISectionDescriptionProps> {
     } = this.props
 
     if (header) {
-      return (
-        <Text
-          tag='h2'
-          type={Props.TypographyType.Heading}
-          color={Variables.Color.n700}
-        >
-          {header}
-        </Text>
-      )
+      if (typeof header === 'string') {
+        return (
+          <Text
+            tag='h2'
+            type={Props.TypographyType.Heading}
+            color={Variables.Color.n700}
+          >
+            {header}
+          </Text>
+        )
+      }
+      return header
     }
   }
 
