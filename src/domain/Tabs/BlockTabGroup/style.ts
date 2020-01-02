@@ -3,16 +3,22 @@ import styled, { css } from 'styled-components'
 import { Props, Variables } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
 
-interface ITabListItem {
+interface ITabGroupContainerProps {
+  margins?: Props.IMargins
+  fitContent?: boolean
+}
+
+interface ITabListItemProps {
   active: boolean
 }
 
 interface ITabListItemButtonProps {
   active: boolean,
   tabSize?: 'small' | 'medium' | 'large'
+  fitContent?: boolean
 }
 
-function stylesFortabSizes (props: ITabListItemButtonProps): any {
+function stylesFortabSizes (props: ITabListItemButtonProps) {
   if (props.tabSize === 'small') {
     return css`
       font-size: ${Variables.FontSize.fzXSmall}px;
@@ -36,14 +42,18 @@ function stylesFortabSizes (props: ITabListItemButtonProps): any {
   }
 }
 
-const TabGroupContainer = styled.div<{margins?: Props.IMargins}>`
+const TabGroupContainer = styled.div<ITabGroupContainerProps>`
   border: 1px solid ${Variables.Color.n400};
   border-radius: ${Variables.Style.borderRadius}px;
   box-sizing: border-box;
   overflow: hidden;
   width: 100%;
 
-  ${({margins}) => styleForMargins(margins)}
+  ${({ margins }) => styleForMargins(margins)}
+
+  ${({ fitContent }) => fitContent && css`
+    width: fit-content;
+  `}
 `
 
 const TabList = styled.ul`
@@ -55,7 +65,7 @@ const TabList = styled.ul`
   white-space: nowrap;
 `
 
-const TabListItem = styled.li<ITabListItem>`
+const TabListItem = styled.li<ITabListItemProps>`
   border-right: 1px solid ${Variables.Color.n400};
   display: inline-block;
   position: relative;
@@ -65,7 +75,7 @@ const TabListItem = styled.li<ITabListItem>`
     border-right: 0;
   }
 
-  ${(props: ITabListItem) => props.active && css`
+  ${({ active }) => active && css`
     ::after {
       content: '';
       position: absolute;
@@ -92,22 +102,26 @@ const TabListItemButton = styled.button<ITabListItemButtonProps>`
   text-align: center;
   text-decoration: none;
   transition: background-color .15s ease-in, color .15s ease-in;
-  width: 100%;
+  width: inherit;
 
-  ${(props: ITabListItemButtonProps) => props.active && css `
-    background-color: ${Variables.Color.n100};
-    color: ${Variables.Color.i400};
-  `}
 
-  ${(props: ITabListItemButtonProps) => !props.active && css `
-    &:hover,
-    &:focus {
-      background-color: ${Variables.Color.n300};
-      color: ${Variables.Color.n700};
-    }
+  ${({ active }) => active
+    ? css`
+      background-color: ${Variables.Color.n100};
+      color: ${Variables.Color.i400};
+  ` : css`
+      &:hover,
+      &:focus {
+        background-color: ${Variables.Color.n300};
+        color: ${Variables.Color.n700};
+      }
   `}
 
   ${stylesFortabSizes}
+
+  ${({ fitContent }) => fitContent && css`
+    padding: ${Variables.Spacing.sXSmall}px ${Variables.Spacing.sLarge}px;
+  `}
 `
 
 export {
