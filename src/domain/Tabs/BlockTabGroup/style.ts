@@ -52,7 +52,8 @@ const TabGroupContainer = styled.div<ITabGroupContainerProps>`
   ${({ margins }) => styleForMargins(margins)}
 
   ${({ fitContent }) => fitContent && css`
-    width: fit-content;
+    display: table;
+    width: auto;
   `}
 `
 
