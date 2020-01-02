@@ -34,7 +34,7 @@ export interface IBlockTabGroupProps {
   componentContext?: string
   /** The margins around the component */
   margins?: Props.IMargins
-  /** Let the tab width be determined by the lendth of the tab title */
+  /** Let the tab width be determined by the length of the tab title */
   fitContent?: boolean
 }
 
