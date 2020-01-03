@@ -34,6 +34,8 @@ export interface IBlockTabGroupProps {
   componentContext?: string
   /** The margins around the component */
   margins?: Props.IMargins
+  /** Let the tab width be determined by the length of the tab title */
+  fitContent?: boolean
 }
 
 export class BlockTabGroup extends React.Component<IBlockTabGroupProps, never> {
@@ -52,7 +54,8 @@ export class BlockTabGroup extends React.Component<IBlockTabGroupProps, never> {
     const {
       tabs,
       componentContext,
-      margins
+      margins,
+      fitContent
     } = this.props
 
     if (tabs.length === 0) {
@@ -64,6 +67,7 @@ export class BlockTabGroup extends React.Component<IBlockTabGroupProps, never> {
         data-component-type={Props.ComponentType.BlockTabGroup}
         data-component-context={componentContext}
         margins={margins}
+        fitContent={fitContent}
       >
         <TabList role='tablist'>
           {map(tabs, this.listItemForTab)}
@@ -73,26 +77,27 @@ export class BlockTabGroup extends React.Component<IBlockTabGroupProps, never> {
   }
 
   private listItemForTab = (tab: IBlockTab, index: number): JSX.Element => {
-    const { tabSize } = this.props
+    const { tabSize, fitContent } = this.props
     const currentTabIndex = this.currentTabIndex
 
     return (
-        <TabListItem
-          key={index}
-          role='tab'
+      <TabListItem
+        key={index}
+        role='tab'
+        active={currentTabIndex === index}
+      >
+        <TabListItemButton
+          type='button'
           active={currentTabIndex === index}
+          tabSize={tabSize}
+          onClick={this.handleOnClick}
+          aria-selected={currentTabIndex === index}
+          data-tabindex={index}
+          fitContent={fitContent}
         >
-          <TabListItemButton
-            type='button'
-            active={currentTabIndex === index}
-            tabSize={tabSize}
-            onClick={this.handleOnClick}
-            aria-selected={currentTabIndex === index}
-            data-tabindex={index}
-          >
-            {tab.title}
-          </TabListItemButton>
-        </TabListItem>
+          {tab.title}
+        </TabListItemButton>
+      </TabListItem>
     )
   }
 

@@ -1,3 +1,22 @@
+#### List of tabs fitting content
+
+```jsx
+
+initialState = {
+  openTab: 0
+};
+
+<BlockTabGroup
+  onTabChange={(tab, index) => setState({ openTab: index })}
+  currentTab={state.openTab}
+  tabs={[
+      { title: 'Grid' },
+      { title: 'List' }
+    ]}
+  fitContent
+/>
+```
+
 #### List of small tabs
 
 ```jsx
