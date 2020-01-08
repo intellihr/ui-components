@@ -98,9 +98,15 @@ interface IGridLayoutPropsWithCells extends IGridLayoutBaseProps {
   cells: IGridLayoutCell[]
 }
 
+type GridChild =
+  React.ReactElement<ICellProps>
+  | false
+  | null
+  | undefined
+
 interface IGridLayoutPropsWithChildren extends IGridLayoutBaseProps {
   /** The cell components to place within the grid */
-  children: Array<React.ReactElement<ICellProps>> | React.ReactElement<ICellProps> | undefined
+  children: GridChild[] | GridChild
 }
 
 type GridLayoutProps = IGridLayoutPropsWithCells | IGridLayoutPropsWithChildren
@@ -133,15 +139,19 @@ export class GridLayout extends React.PureComponent<GridLayoutProps, never> {
       margins
     } = this.props
 
-    let renderChildren: Array<React.ReactElement<IStyledCellProps>> = [<></>]
+    let renderChildren: GridChild[] | undefined
 
     if ('cells' in this.props) {
       renderChildren = this.props.cells && this.props.cells.map(this.getCellForDefinition)
     } else if (this.props.children) {
       renderChildren = React.Children.map<
-        React.ReactElement,
-        React.ReactElement<ICellProps>
-      >(this.props.children, (child, index) => {
+        React.ReactElement | false | null | undefined,
+        GridChild
+      >(this.props.children, (child) => {
+        if (!child) {
+          return child
+        }
+
         const {
           key,
           size,
