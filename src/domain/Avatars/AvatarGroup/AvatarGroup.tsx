@@ -113,7 +113,8 @@ class AvatarGroup extends React.PureComponent<IAvatarGroup, IAvatarGroupState> {
   private getAvatarForProps = (avatarProps: IAvatarGroupAvatar, index: number) => {
     const {
       maxAvatarCount,
-      size
+      size,
+      avatars
     } = this.props
 
     const {
@@ -140,7 +141,7 @@ class AvatarGroup extends React.PureComponent<IAvatarGroup, IAvatarGroupState> {
         avatarIndex={index}
         avatarGroupSize={size!}
         isInitials={isInitials}
-        isOverflow={maxAvatarCount !== null && index === maxAvatarCount! - 1}
+        isOverflow={maxAvatarCount !== null && index === maxAvatarCount! - 1 && avatars.length > maxAvatarCount!}
       >
         {avatarContent}
       </StyledAvatar>
