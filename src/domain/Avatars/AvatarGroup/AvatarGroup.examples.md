@@ -52,18 +52,6 @@
   />
 ```
 
-`AvatarGroup` can optionally hide the overflow count if desired:
-
-```jsx
-  <AvatarGroup
-    avatars={new Array(10).fill().map(() => ({
-      initials: 'JW',
-      imageUrl: 'https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-    }))}
-    showOverflowCount={false}
-  />
-```
-
 Or the limit can be removed entirely:
 
 ```jsx

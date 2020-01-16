@@ -21,8 +21,6 @@ interface IAvatarGroup {
   size?: AvatarGroupSize,
   /** The max number of avatars to display in the group; set to null for no limit */
   maxAvatarCount?: number | null,
-  /** Whether to show an additional count if more avatars are provided than shown */
-  showOverflowCount?: boolean,
   /** Whether the avatar group should have hover styles */
   isHoverable?: boolean,
   /** Onclick event for the avatar group */
@@ -44,7 +42,6 @@ class AvatarGroup extends React.PureComponent<IAvatarGroup, IAvatarGroupState> {
   public static defaultProps: Partial<IAvatarGroup> = {
     size: 'medium',
     maxAvatarCount: 6,
-    showOverflowCount: true,
     isHoverable: false
   }
 
@@ -87,22 +84,17 @@ class AvatarGroup extends React.PureComponent<IAvatarGroup, IAvatarGroupState> {
   private get truncatedAvatars (): IAvatarGroupAvatar[] {
     const {
       avatars,
-      maxAvatarCount,
-      showOverflowCount
+      maxAvatarCount
     } = this.props
 
     if (maxAvatarCount && avatars.length > maxAvatarCount) {
-      const truncatedAvatars = avatars.slice(0, maxAvatarCount)
+      const truncatedAvatars = avatars.slice(0, maxAvatarCount - 1)
 
-      if (showOverflowCount) {
-        truncatedAvatars.pop()
+      const overflowCount = Math.min(avatars.length - truncatedAvatars.length, 99)
 
-        const overflowCount = Math.min(avatars.length - truncatedAvatars.length, 99)
-
-        truncatedAvatars.push({
-          initials: `+${overflowCount}`
-        })
-      }
+      truncatedAvatars.push({
+        initials: `+${overflowCount}`
+      })
 
       return truncatedAvatars
     }
