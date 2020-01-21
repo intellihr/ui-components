@@ -9,6 +9,8 @@ import { FieldLabelWrapper, RecordWrapper } from './style'
 interface IRecordProps {
   /** Label text */
   name: string
+  /** If no children,  this will be displayed instead of the 'name' prop */
+  noChildrenText?: string
   /** The data-component-context */
   componentContext?: string
   /** If true, will display a tooltip to the right of the 'name' containing this content */
@@ -20,15 +22,20 @@ interface IRecordProps {
 }
 
 class Record extends React.PureComponent <IRecordProps> {
+  public static defaultProps: Partial<IRecordProps> = {
+    noChildrenText: 'Not Provided'
+  }
+
   get formattedChildren (): JSX.Element[] | JSX.Element {
     const {
-      children
+      children,
+      noChildrenText
     } = this.props
 
     if (!children) {
       return (
         <Text color={Variables.Color.n500} isInline={false}>
-          Not Provided
+          {noChildrenText}
         </Text>
       )
     }
