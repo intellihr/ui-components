@@ -9,10 +9,19 @@
 ```
 
 #### Record with no Children
+   
+   ```jsx
+     <Record
+       name='Position Title'
+     />
+   ```
+
+#### Record with a custom label for when no children are provided
 
 ```jsx
   <Record
     name='Position Title'
+    noChildrenText= 'No Position Title'
   />
 ```
 
