@@ -174,7 +174,7 @@ const getOption = (
           autoFocus={autoFocus}
           data-component-type={Props.ComponentType.CheckboxInput}
           data-component-context={componentContext}
-          checked={get(value, identifier)}
+          checked={get(value, identifier, false)}
         />
         {getInfoLabel(option.label, `${id ? id : name}-${option.identifier}`, name, useButtonStyle)}
       </div>
