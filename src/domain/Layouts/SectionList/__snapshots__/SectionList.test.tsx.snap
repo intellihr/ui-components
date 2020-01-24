@@ -59,8 +59,11 @@ exports[`<SectionList /> should render a section list with a titled section with
 }
 
 <SectionList>
-  <styled.div>
+  <styled.div
+    data-component-type="section_list"
+  >
     <StyledComponent
+      data-component-type="section_list"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -99,10 +102,14 @@ exports[`<SectionList /> should render a section list with a titled section with
     >
       <div
         className="c0"
+        data-component-type="section_list"
       >
         <TitledSection>
-          <Styled(styled.div)>
+          <Styled(styled.div)
+            data-component-type="titled_section"
+          >
             <StyledComponent
+              data-component-type="titled_section"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -156,6 +163,7 @@ exports[`<SectionList /> should render a section list with a titled section with
             >
               <div
                 className="c1"
+                data-component-type="titled_section"
               >
                 <XYGrid
                   gutterMarginX={false}
@@ -476,8 +484,11 @@ exports[`<SectionList /> should render a section list with an annotated section 
 }
 
 <SectionList>
-  <styled.div>
+  <styled.div
+    data-component-type="section_list"
+  >
     <StyledComponent
+      data-component-type="section_list"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -516,82 +527,92 @@ exports[`<SectionList /> should render a section list with an annotated section 
     >
       <div
         className="c0"
+        data-component-type="section_list"
       >
-        <Styled(styled.div)>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-chPdSV",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "
+        <Section>
+          <Styled(styled.div)
+            data-component-type="section"
+          >
+            <StyledComponent
+              data-component-type="section"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-chPdSV",
+                    "isStatic": false,
+                    "lastClassName": "c1",
+                    "rules": Array [
+                      "
   @media only screen and (min-width: ",
-                    "640",
-                    "px) {
+                      "640",
+                      "px) {
      border-bottom: 1px solid ",
-                    "#E1E6EB",
-                    ";
+                      "#E1E6EB",
+                      ";
 
     :last-child {
       border-bottom: 0;
     }
   }
 ",
-                    "
+                      "
   @media only screen and (max-width: ",
-                    "639",
-                    "px) {
+                      "639",
+                      "px) {
     padding: ",
-                    "24",
-                    "px ",
-                    "16",
-                    "px;
+                      "24",
+                      "px ",
+                      "16",
+                      "px;
   }
 
   @media only screen and (min-width: ",
-                    "640",
-                    "px) {
+                      "640",
+                      "px) {
     padding-top: ",
-                    "32",
-                    "px;
+                      "32",
+                      "px;
     padding-bottom: ",
-                    "32",
-                    "px;
+                      "32",
+                      "px;
   }
 ",
+                    ],
+                  },
+                  "displayName": "Styled(styled.div)",
+                  "foldedComponentIds": Array [
+                    "sc-cSHVUG",
                   ],
-                },
-                "displayName": "Styled(styled.div)",
-                "foldedComponentIds": Array [
-                  "sc-cSHVUG",
-                ],
-                "render": [Function],
-                "styledComponentId": "sc-chPdSV",
-                "target": "div",
-                "toString": [Function],
-                "usesTheme": false,
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
+                  "render": [Function],
+                  "styledComponentId": "sc-chPdSV",
+                  "target": "div",
+                  "toString": [Function],
+                  "usesTheme": false,
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
               }
-            }
-            forwardedRef={null}
-          >
-            <div
-              className="c1"
+              forwardedRef={null}
             >
-              section 1
-            </div>
-          </StyledComponent>
-        </Styled(styled.div)>
+              <div
+                className="c1"
+                data-component-type="section"
+              >
+                section 1
+              </div>
+            </StyledComponent>
+          </Styled(styled.div)>
+        </Section>
         <AnnotatedSection
           links={Array []}
         >
-          <Styled(styled.div)>
+          <Styled(styled.div)
+            data-component-type="annotated_section"
+          >
             <StyledComponent
+              data-component-type="annotated_section"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -645,6 +666,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
             >
               <div
                 className="c2"
+                data-component-type="annotated_section"
               >
                 <XYGrid
                   gutterMarginX={false}
@@ -997,8 +1019,11 @@ exports[`<SectionList /> should render a sectionList 1`] = `
 }
 
 <SectionList>
-  <styled.div>
+  <styled.div
+    data-component-type="section_list"
+  >
     <StyledComponent
+      data-component-type="section_list"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -1037,119 +1062,132 @@ exports[`<SectionList /> should render a sectionList 1`] = `
     >
       <div
         className="c0"
+        data-component-type="section_list"
       >
-        <Styled(styled.div)>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-chPdSV",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "
+        <Section>
+          <Styled(styled.div)
+            data-component-type="section"
+          >
+            <StyledComponent
+              data-component-type="section"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-chPdSV",
+                    "isStatic": false,
+                    "lastClassName": "c1",
+                    "rules": Array [
+                      "
   @media only screen and (min-width: ",
-                    "640",
-                    "px) {
+                      "640",
+                      "px) {
      border-bottom: 1px solid ",
-                    "#E1E6EB",
-                    ";
+                      "#E1E6EB",
+                      ";
 
     :last-child {
       border-bottom: 0;
     }
   }
 ",
-                    "
+                      "
   @media only screen and (max-width: ",
-                    "639",
-                    "px) {
+                      "639",
+                      "px) {
     padding: ",
-                    "24",
-                    "px ",
-                    "16",
-                    "px;
+                      "24",
+                      "px ",
+                      "16",
+                      "px;
   }
 
   @media only screen and (min-width: ",
-                    "640",
-                    "px) {
+                      "640",
+                      "px) {
     padding-top: ",
-                    "32",
-                    "px;
+                      "32",
+                      "px;
     padding-bottom: ",
-                    "32",
-                    "px;
+                      "32",
+                      "px;
   }
 ",
+                    ],
+                  },
+                  "displayName": "Styled(styled.div)",
+                  "foldedComponentIds": Array [
+                    "sc-cSHVUG",
                   ],
-                },
-                "displayName": "Styled(styled.div)",
-                "foldedComponentIds": Array [
-                  "sc-cSHVUG",
-                ],
-                "render": [Function],
-                "styledComponentId": "sc-chPdSV",
-                "target": "div",
-                "toString": [Function],
-                "usesTheme": false,
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
+                  "render": [Function],
+                  "styledComponentId": "sc-chPdSV",
+                  "target": "div",
+                  "toString": [Function],
+                  "usesTheme": false,
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
               }
-            }
-            forwardedRef={null}
-          >
-            <div
-              className="c1"
+              forwardedRef={null}
             >
-              section 1
-            </div>
-          </StyledComponent>
-        </Styled(styled.div)>
-        <styled.div>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-kAzzGY",
-                  "isStatic": false,
-                  "lastClassName": "c2",
-                  "rules": Array [
-                    "
+              <div
+                className="c1"
+                data-component-type="section"
+              >
+                section 1
+              </div>
+            </StyledComponent>
+          </Styled(styled.div)>
+        </Section>
+        <UnstyledSection>
+          <styled.div
+            data-component-type="unstyled_section"
+          >
+            <StyledComponent
+              data-component-type="unstyled_section"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-kAzzGY",
+                    "isStatic": false,
+                    "lastClassName": "c2",
+                    "rules": Array [
+                      "
   @media only screen and (max-width: ",
-                    "639",
-                    "px) {
+                      "639",
+                      "px) {
     padding: 0px ",
-                    "16",
-                    "px;
+                      "16",
+                      "px;
   }
 ",
-                  ],
-                },
-                "displayName": "styled.div",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-kAzzGY",
-                "target": "div",
-                "toString": [Function],
-                "usesTheme": false,
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-kAzzGY",
+                  "target": "div",
+                  "toString": [Function],
+                  "usesTheme": false,
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
               }
-            }
-            forwardedRef={null}
-          >
-            <div
-              className="c2"
+              forwardedRef={null}
             >
-              section 2
-            </div>
-          </StyledComponent>
-        </styled.div>
+              <div
+                className="c2"
+                data-component-type="unstyled_section"
+              >
+                section 2
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </UnstyledSection>
         <AnnotatedSection
           description="Annotated Description"
           header="Annotated Section"
@@ -1161,8 +1199,11 @@ exports[`<SectionList /> should render a sectionList 1`] = `
           linkText="Annotated Link"
           links={Array []}
         >
-          <Styled(styled.div)>
+          <Styled(styled.div)
+            data-component-type="annotated_section"
+          >
             <StyledComponent
+              data-component-type="annotated_section"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -1216,6 +1257,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
             >
               <div
                 className="c3"
+                data-component-type="annotated_section"
               >
                 <XYGrid
                   gutterMarginX={false}
@@ -1707,8 +1749,11 @@ exports[`<SectionList /> should render a sectionList 1`] = `
           description="Titled Description"
           header="Titled Section"
         >
-          <Styled(styled.div)>
+          <Styled(styled.div)
+            data-component-type="titled_section"
+          >
             <StyledComponent
+              data-component-type="titled_section"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -1762,6 +1807,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
             >
               <div
                 className="c9"
+                data-component-type="titled_section"
               >
                 <XYGrid
                   gutterMarginX={false}
@@ -2445,8 +2491,11 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
 }
 
 <SectionList>
-  <styled.div>
+  <styled.div
+    data-component-type="section_list"
+  >
     <StyledComponent
+      data-component-type="section_list"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -2485,75 +2534,82 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
     >
       <div
         className="c0"
+        data-component-type="section_list"
       >
-        <Styled(styled.div)>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-chPdSV",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "
+        <Section>
+          <Styled(styled.div)
+            data-component-type="section"
+          >
+            <StyledComponent
+              data-component-type="section"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-chPdSV",
+                    "isStatic": false,
+                    "lastClassName": "c1",
+                    "rules": Array [
+                      "
   @media only screen and (min-width: ",
-                    "640",
-                    "px) {
+                      "640",
+                      "px) {
      border-bottom: 1px solid ",
-                    "#E1E6EB",
-                    ";
+                      "#E1E6EB",
+                      ";
 
     :last-child {
       border-bottom: 0;
     }
   }
 ",
-                    "
+                      "
   @media only screen and (max-width: ",
-                    "639",
-                    "px) {
+                      "639",
+                      "px) {
     padding: ",
-                    "24",
-                    "px ",
-                    "16",
-                    "px;
+                      "24",
+                      "px ",
+                      "16",
+                      "px;
   }
 
   @media only screen and (min-width: ",
-                    "640",
-                    "px) {
+                      "640",
+                      "px) {
     padding-top: ",
-                    "32",
-                    "px;
+                      "32",
+                      "px;
     padding-bottom: ",
-                    "32",
-                    "px;
+                      "32",
+                      "px;
   }
 ",
+                    ],
+                  },
+                  "displayName": "Styled(styled.div)",
+                  "foldedComponentIds": Array [
+                    "sc-cSHVUG",
                   ],
-                },
-                "displayName": "Styled(styled.div)",
-                "foldedComponentIds": Array [
-                  "sc-cSHVUG",
-                ],
-                "render": [Function],
-                "styledComponentId": "sc-chPdSV",
-                "target": "div",
-                "toString": [Function],
-                "usesTheme": false,
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
+                  "render": [Function],
+                  "styledComponentId": "sc-chPdSV",
+                  "target": "div",
+                  "toString": [Function],
+                  "usesTheme": false,
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
               }
-            }
-            forwardedRef={null}
-          >
-            <div
-              className="c1"
-            />
-          </StyledComponent>
-        </Styled(styled.div)>
+              forwardedRef={null}
+            >
+              <div
+                className="c1"
+                data-component-type="section"
+              />
+            </StyledComponent>
+          </Styled(styled.div)>
+        </Section>
         <AnnotatedSection
           description="Annotated Description"
           header="Annotated Section"
@@ -2565,8 +2621,11 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
           linkText="Annotated Link"
           links={Array []}
         >
-          <Styled(styled.div)>
+          <Styled(styled.div)
+            data-component-type="annotated_section"
+          >
             <StyledComponent
+              data-component-type="annotated_section"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -2620,6 +2679,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
             >
               <div
                 className="c2"
+                data-component-type="annotated_section"
               >
                 <XYGrid
                   gutterMarginX={false}
@@ -3036,8 +3096,11 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
           description="Titled Description"
           header="Titled Section"
         >
-          <Styled(styled.div)>
+          <Styled(styled.div)
+            data-component-type="titled_section"
+          >
             <StyledComponent
+              data-component-type="titled_section"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -3091,6 +3154,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
             >
               <div
                 className="c7"
+                data-component-type="titled_section"
               >
                 <XYGrid
                   gutterMarginX={false}

@@ -1,7 +1,9 @@
 import React from 'react'
 
+import {Props} from '../../../../common'
 import { XYGrid } from '../../XYGrid'
 import {
+  StyledAnnotatedSection,
   StyledTitledSection,
   StyledTitledSectionBody,
   StyledTitledSectionDescription,
@@ -15,6 +17,8 @@ export interface ITitledSectionProps {
   description?: string,
   /** Action items (eg. buttons) for the header */
   actionItems?: JSX.Element[]
+  /** The data-component-context */
+  componentContext?: string
 }
 
 class TitledSection extends React.PureComponent<ITitledSectionProps> {
@@ -23,11 +27,15 @@ class TitledSection extends React.PureComponent<ITitledSectionProps> {
       children,
       header,
       description,
-      actionItems
+      actionItems,
+      componentContext
     } = this.props
 
     return (
-      <StyledTitledSection>
+      <StyledTitledSection
+        data-component-type={Props.ComponentType.TitledSection}
+        data-component-context={componentContext}
+      >
         <XYGrid>
           <XYGrid.Cell size={{ min: 12 }}>
             <StyledTitledSectionHeaderRow>

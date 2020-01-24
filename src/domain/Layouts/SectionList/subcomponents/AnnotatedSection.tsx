@@ -1,5 +1,6 @@
 import React from 'react'
 
+import {Props} from '../../../../common'
 import { XYGrid } from '../../XYGrid'
 import {
   StyledAnnotatedSection,
@@ -19,6 +20,8 @@ export interface IAnnotatedSectionProps {
   linkProps?: ILinkProps,
   /** The settings for the list of links */
   links?: ILink[]
+  /** The data-component-context */
+  componentContext?: string
 }
 
 class AnnotatedSection extends React.PureComponent<IAnnotatedSectionProps> {
@@ -33,11 +36,15 @@ class AnnotatedSection extends React.PureComponent<IAnnotatedSectionProps> {
       description,
       linkText,
       linkProps,
-      links
+      links,
+      componentContext
     } = this.props
 
     return (
-      <StyledAnnotatedSection>
+      <StyledAnnotatedSection
+        data-component-type={Props.ComponentType.AnnotatedSection}
+        data-component-context={componentContext}
+      >
         <XYGrid>
           <XYGrid.Cell size={{ desktop: 4, tablet: 4, min: 12 }}>
             <StyledAnnotatedSectionDescription
