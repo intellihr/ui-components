@@ -62,6 +62,7 @@ namespace Props {
   }
 
   export enum ComponentType {
+    AnnotatedSection = 'annotated_section',
     AsyncDataTable = 'async_data_table',
     AvatarGroup = 'avatar_group',
     BlockTabGroup = 'block_tab_group',
@@ -98,6 +99,8 @@ namespace Props {
     Record = 'record',
     RecordName = 'record_name',
     ScrollingTabGroup = 'scrolling_tab_group',
+    Section = 'section',
+    SectionList = 'section_list',
     SmartList = 'smart_list',
     SmartListColumn = 'smart_list_column',
     Statistic = 'statistic',
@@ -108,8 +111,10 @@ namespace Props {
     Tile = 'tile',
     Timeline = 'timeline',
     TimelineEvent = 'timeline_event',
+    TitledSection = 'titled_section',
     ToggleSwitch = 'toggle_switch',
-    ToggleSwitchInput = 'toggle_switch_input'
+    ToggleSwitchInput = 'toggle_switch_input',
+    UnstyledSection = 'unstyled_section'
   }
 
   export enum Orientation {
