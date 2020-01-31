@@ -1,6 +1,6 @@
 import React from 'react'
-import { Omit } from 'src/common/types/utilityTypes'
 
+import { Omit } from '../../../common'
 import { IIconProps, Icon } from '../Icon'
 import { IntelliIconValue } from '../Icon/types'
 
