@@ -2,113 +2,150 @@
 
 ```jsx
 import { FontAwesomeIcon } from '@Domain/Icons';
-import { MenuItem } from './MenuItem';
+import { DefaultsProvider } from '@Domain/Defaults';
+initialState = { value: 5};
 
-<Menu>
-  <MenuItem
-    icon={<FontAwesomeIcon type='solid' icon='star' />}
-    label='Item 1'
-  >
-    <MenuItem
-      href='#'
-      label='Item 1A'
-    />
-    <MenuItem
-      href='#'
-      label='Item 1B'
-    />
-  </MenuItem>
-  <MenuItem
-    isActive={true}
-    href='#'
-    label='Item 2'
-  />
-  <MenuItem
-    isOpen={true}
-    label='Item 3'
-  >
-    <MenuItem
-      href='#'
-      label='Item 3A'
-    />
-    <MenuItem
-      href='#'
-      label='Item 3B'
-      className='active'
-    />
-    <MenuItem
-      isOpen
-      label='Item 3C'
-      overflowWhenOpen='visible'
+<DefaultsProvider
+  value={{
+    AnchorComponent: React.memo(({ anchorComponentProps, children, href }) => {
+     return (<a href={href} onClick={anchorComponentProps && anchorComponentProps.onClick}>{children}</a>)
+    })
+  }}
+>
+  <Menu>
+    <Menu.Item
+      icon={<FontAwesomeIcon type='solid' icon='star' />}
+      label='Item 1'
     >
-      <div
-        style={{
-          position: 'relative',
-          height: '1.5rem',
-          backgroundColor: '#eee'
+      <Menu.Item
+        href='/#/UI%20Components/Menus/Menu'
+        label='Item 1A'
+        isActive={state.value === 1}
+        anchorComponentProps={{
+          onClick:() => {
+              setState({ value: 1 })
+          }
         }}
+      />
+      <Menu.Item
+        href='/#/UI%20Components/Menus/Menu'
+        label='Item 1B'
+        isActive={state.value === 2}
+        anchorComponentProps={{
+          onClick:() => {
+              setState({ value: 2 })
+          }
+        }}
+      />
+    </Menu.Item>
+    <Menu.Item
+      isActive={true}
+      href='/#/UI%20Components/Menus/Menu'
+      label='Item 2'
+      isActive={state.value === 3}
+      anchorComponentProps={{
+        onClick:() => {
+            setState({ value: 3 })
+        }
+      }}
+    />
+    <Menu.Item
+      isOpen={true}
+      label='Item 3'
+    >
+      <Menu.Item
+        href='/#/UI%20Components/Menus/Menu'
+        label='Item 3A'
+        isActive={state.value === 4}
+        anchorComponentProps={{
+          onClick:() => {
+              setState({ value: 4 })
+          }
+        }}
+      />
+      <Menu.Item
+        href='/#/UI%20Components/Menus/Menu'
+        label='Item 3B'
+        isActive={state.value === 5}
+        anchorComponentProps={{
+          onClick:() => {
+              setState({ value: 5 })
+          }
+        }}
+      />
+      <Menu.Item
+        isOpen
+        label='Item 3C'
+        overflowWhenOpen='visible'
       >
         <div
           style={{
-            position: 'absolute',
-            top: '5px',
-            left: '5rem',
-            width: '5rem',
-            height: '3rem',
-            backgroundColor: 'lightblue',
-            padding: '.25rem'
+            position: 'relative',
+            height: '1.5rem',
+            backgroundColor: '#eee'
           }}
         >
-          Overflow
+          <div
+            style={{
+              position: 'absolute',
+              top: '5px',
+              left: '5rem',
+              width: '5rem',
+              height: '3rem',
+              backgroundColor: 'lightblue',
+              padding: '.25rem'
+            }}
+          >
+            Overflow
+          </div>
         </div>
-      </div>
-    </MenuItem>
-    <MenuItem
-      label='Item 3D'
-    />
-  </MenuItem>
-</Menu>
+      </Menu.Item>
+      <Menu.Item
+        label='Item 3D'
+      />
+    </Menu.Item>
+  </Menu>
+</DefaultsProvider>
 ```
 
 #### Menu with loading menu item
 
 ```jsx
 import { FontAwesomeIcon } from '@Domain/Icons';
-import { MenuItem } from './MenuItem';
 
 <Menu>
-  <MenuItem
+  <Menu.Item
     icon={<FontAwesomeIcon type='solid' icon='star' />}
     label='Item 1'
   >
-    <MenuItem
+    <Menu.Item
       href='#'
       label='Item 1A'
     />
-    <MenuItem
+    <Menu.Item
       href='#'
       label='Item 1B'
     />
-  </MenuItem>
-  <MenuItem
+  </Menu.Item>
+  <Menu.Item
     isActive={true}
     isLoading={true}
     href='#'
     label='Item 2'
   />
-  <MenuItem
+  <Menu.Item
     isOpen={true}
     label='Item 3'
   >
-    <MenuItem
+    <Menu.Item
       href='#'
       label='Item 3A'
     />
-    <MenuItem
+    <Menu.Item
       href='#'
       label='Item 3B'
       className='active'
     />
-  </MenuItem>
+  </Menu.Item>
 </Menu>
 ```

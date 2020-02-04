@@ -1,3 +1,4 @@
+import { functions, isEqual, omit } from 'lodash'
 import React from 'react'
 import Collapsible from 'react-collapsible'
 
@@ -6,20 +7,16 @@ import { Anchor } from '../../../Internals'
 import { IconWrapper, LoadingIconWrapper, MenuItemLabelWrapper, MenuItemWrapper, SubMenuWrapper } from './style'
 
 export interface IMenuItemProps<TAnchorProps extends Record<string, any> = Record<string, any>> {
-  /** (Deprecated - please use `href`) The URL which the user will be navigated to when this item is clicked */
-  url?: string
   /** The URL which the user will be navigated to when this item is clicked */
   href?: string
   /** The label of this item */
   label: string
   /** The icon of this item */
   icon?: JSX.Element
-  /** A render prop to override the default rendering behaviors of the anchor element */
-  render?: (label: JSX.Element, iconContent?: JSX.Element, href?: string) => JSX.Element
-  /** The HTML class name of this item */
-  className?: string
   /** A flag indicating whether this item should show the loading state */
   isLoading?: boolean
+  /** if this is a selected menu item */
+  isActive?: boolean
   /** A flag indicating whether this item should show the children if any */
   isOpen?: boolean
   /** A handler to handle when this item shows or hides the children */
@@ -28,111 +25,125 @@ export interface IMenuItemProps<TAnchorProps extends Record<string, any> = Recor
   overflowWhenOpen?: 'hidden' | 'visible' | 'auto' | 'scroll' | 'inherit' | 'initial' | 'unset'
   /** The properties to be passed on to the custom anchor component if provided in the Provider */
   anchorComponentProps?: TAnchorProps
+  /** Children components */
+  children?: React.ReactNode
 }
 
-export class MenuItem<TAnchorProps extends Record<string, any> = Record<string, any>> extends React.PureComponent<IMenuItemProps<TAnchorProps>> {
-  public static defaultProps: Pick<IMenuItemProps, 'overflowWhenOpen'> = {
-    overflowWhenOpen: 'hidden'
-  }
+const MenuItemComponent: React.FC<{
+  isActive?: boolean
+  href?: string
+  anchorComponentProps?: object
+  icon?: JSX.Element
+  label: string
+  isLoading?: boolean
+}> = ({
+  href,
+  isActive,
+  anchorComponentProps,
+  icon,
+  label,
+  isLoading
+}) => {
+  return (
+    <MenuItemWrapper isActive={isActive}>
+      <Anchor
+        href={href}
+        anchorComponentProps={anchorComponentProps}
+      >
+        {icon !== undefined && (
+          <IconWrapper>
+            {icon}
+          </IconWrapper>
+        )}
+        <MenuItemLabelWrapper>
+          {label}
+        </MenuItemLabelWrapper>
+        {isLoading && (
+          <LoadingIconWrapper>
+            <FontAwesomeIcon
+              type='solid'
+              icon='circle-notch'
+              isSpinning
+            />
+          </LoadingIconWrapper>
+        )}
+      </Anchor>
+    </MenuItemWrapper>
+  )
+}
 
-  get icon (): JSX.Element | undefined {
-    const { icon } = this.props
+const MemoMenuItemComponent = React.memo(MenuItemComponent,(prevProps, nextProps) => {
+  return nextProps.href === prevProps.href &&
+    nextProps.label === prevProps.label &&
+    prevProps.icon === nextProps.icon &&
+    nextProps.isLoading === prevProps.isLoading &&
+    nextProps.isActive === prevProps.isActive &&
+    isEqual(prevProps.anchorComponentProps, nextProps.anchorComponentProps)
+})
 
-    if (icon) {
-      return (
-        <IconWrapper>
-          {icon}
-        </IconWrapper>
-      )
-    }
-  }
-
-  get loadingIcon (): JSX.Element | undefined {
-    const {
-      isLoading
-    } = this.props
-
-    if (isLoading) {
-      return (
-        <LoadingIconWrapper>
-          <FontAwesomeIcon
-            type='solid'
-            icon='circle-notch'
-            isSpinning
+const MenuItem: React.FC<IMenuItemProps> = (
+  {
+    children,
+    isOpen,
+    handleSizeChange,
+    anchorComponentProps,
+    href,
+    icon,
+    isActive,
+    isLoading,
+    label,
+    overflowWhenOpen = 'hidden' as const
+  }) => {
+  if (children) {
+    return (
+      <Collapsible
+        trigger={(
+          <MemoMenuItemComponent
+            label={label}
+            isActive={isActive}
+            href={href}
+            anchorComponentProps={anchorComponentProps}
+            icon={icon}
+            isLoading={isLoading}
           />
-        </LoadingIconWrapper>
-      )
-    }
-  }
-
-  get label (): JSX.Element {
-    const {
-      label
-    } = this.props
-
-    return (
-      <MenuItemLabelWrapper>
-        {label}
-      </MenuItemLabelWrapper>
+        )}
+        open={isOpen}
+        transitionTime={250}
+        onOpen={handleSizeChange}
+        onClose={handleSizeChange}
+        overflowWhenOpen={overflowWhenOpen}
+      >
+        <SubMenuWrapper>
+          {children}
+        </SubMenuWrapper>
+      </Collapsible>
     )
   }
+     return (
+       <MemoMenuItemComponent
+         label={label}
+         isActive={isActive}
+         href={href}
+         anchorComponentProps={anchorComponentProps}
+         icon={icon}
+         isLoading={isLoading}
+       />
+     )
+}
 
-  get component () {
-    const {
-      render,
-      url,
-      href,
-      className,
-      anchorComponentProps
-    } = this.props
+const MemoMenuItem = React.memo(MenuItem,(prevProps, nextProps) => {
+  return nextProps.href === prevProps.href &&
+    nextProps.label === prevProps.label &&
+    prevProps.icon === nextProps.icon &&
+    nextProps.isLoading === prevProps.isLoading &&
+    nextProps.isActive === prevProps.isActive &&
+    nextProps.isOpen === prevProps.isOpen &&
+    nextProps.overflowWhenOpen === prevProps.overflowWhenOpen &&
+    prevProps.children === nextProps.children &&
+    isEqual(prevProps.handleSizeChange, nextProps.handleSizeChange) &&
+    isEqual(prevProps.anchorComponentProps, nextProps.anchorComponentProps)
+})
 
-    if (render) {
-      return (
-        <MenuItemWrapper className={className}>
-          {render(this.label, this.icon, href || url)}
-        </MenuItemWrapper>
-      )
-    }
-
-    return (
-      <MenuItemWrapper className={className}>
-        <Anchor
-          href={href || url}
-          anchorComponentProps={anchorComponentProps}
-        >
-          {this.icon}
-          {this.label}
-          {this.loadingIcon}
-        </Anchor>
-      </MenuItemWrapper>
-    )
-  }
-
-  public render (): JSX.Element {
-    const {
-      children,
-      isOpen,
-      handleSizeChange,
-      overflowWhenOpen
-    } = this.props
-
-    if (children) {
-      return (
-        <Collapsible
-          trigger={this.component}
-          open={isOpen}
-          transitionTime={250}
-          onOpen={handleSizeChange}
-          onClose={handleSizeChange}
-          overflowWhenOpen={overflowWhenOpen}
-        >
-          <SubMenuWrapper>
-            {children}
-          </SubMenuWrapper>
-        </Collapsible>
-      )
-    }
-
-    return this.component
-  }
+export {
+  MemoMenuItem as MenuItem
 }

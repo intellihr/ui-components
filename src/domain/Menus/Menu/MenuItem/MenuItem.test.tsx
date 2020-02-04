@@ -31,7 +31,7 @@ describe('<MenuItem />', () => {
       <MenuItem
         href='www.google.com'
         label='Test menu item'
-        className='active'
+        isActive
       />
     )
 
