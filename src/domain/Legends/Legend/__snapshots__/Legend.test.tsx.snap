@@ -124,7 +124,7 @@ exports[`<Legend /> should render a legend 1`] = `
         <li
           key="0"
         >
-          <FontAwesomeIcon
+          <Memo(FontAwesomeIcon)
             color="rgb(0,255,0)"
             icon="circle"
             size="xsmall"
@@ -228,7 +228,7 @@ exports[`<Legend /> should render a legend 1`] = `
                 </StyledComponent>
               </styled.i>
             </Icon>
-          </FontAwesomeIcon>
+          </Memo(FontAwesomeIcon)>
           <styled.span>
             <StyledComponent
               forwardedComponent={
@@ -271,7 +271,7 @@ exports[`<Legend /> should render a legend 1`] = `
         <li
           key="1"
         >
-          <FontAwesomeIcon
+          <Memo(FontAwesomeIcon)
             color="rgb(0,0,255)"
             icon="circle"
             size="xsmall"
@@ -375,7 +375,7 @@ exports[`<Legend /> should render a legend 1`] = `
                 </StyledComponent>
               </styled.i>
             </Icon>
-          </FontAwesomeIcon>
+          </Memo(FontAwesomeIcon)>
           <styled.span>
             <StyledComponent
               forwardedComponent={

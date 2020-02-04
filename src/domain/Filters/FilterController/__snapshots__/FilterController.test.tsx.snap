@@ -69,7 +69,7 @@ exports[`<FilterController /> should render the filter controller 1`] = `
           handleChange={[Function]}
           handleClear={[Function]}
           icon={
-            <FontAwesomeIcon
+            <Memo(FontAwesomeIcon)
               icon="search"
               type="solid"
             />

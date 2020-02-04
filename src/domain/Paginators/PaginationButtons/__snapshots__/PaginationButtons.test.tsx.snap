@@ -12,7 +12,7 @@ exports[`<PaginationButtons /> should render the pagination buttons 1`] = `
     <styled.span
       arrowDirection="left"
     >
-      <FontAwesomeIcon
+      <Memo(FontAwesomeIcon)
         icon="chevron-left"
         type="solid"
       />
@@ -73,7 +73,7 @@ exports[`<PaginationButtons /> should render the pagination buttons 1`] = `
     <styled.span
       arrowDirection="right"
     >
-      <FontAwesomeIcon
+      <Memo(FontAwesomeIcon)
         icon="chevron-right"
         type="solid"
       />
@@ -102,7 +102,7 @@ exports[`<PaginationButtons /> should render the pagination buttons with margin 
     <styled.span
       arrowDirection="left"
     >
-      <FontAwesomeIcon
+      <Memo(FontAwesomeIcon)
         icon="chevron-left"
         type="solid"
       />
@@ -163,7 +163,7 @@ exports[`<PaginationButtons /> should render the pagination buttons with margin 
     <styled.span
       arrowDirection="right"
     >
-      <FontAwesomeIcon
+      <Memo(FontAwesomeIcon)
         icon="chevron-right"
         type="solid"
       />

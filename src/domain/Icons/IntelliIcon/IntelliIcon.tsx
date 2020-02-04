@@ -15,6 +15,8 @@ const IntelliIcon: React.FC<IIntelliIconProps> = ({ icon, ...props }) => (
   />
 )
 
+const MemoIntelliIcon = React.memo(IntelliIcon)
+
 export {
-  IntelliIcon
+  MemoIntelliIcon as IntelliIcon
 }

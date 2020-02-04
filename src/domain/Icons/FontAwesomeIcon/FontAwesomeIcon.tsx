@@ -36,6 +36,8 @@ const FontAwesomeIcon: React.FC<IFontAwesomeIconProps> = ({ icon, type, ...props
   )
 }
 
+const MemoFontAwesomeIcon = React.memo(FontAwesomeIcon)
+
 export {
-  FontAwesomeIcon
+  MemoFontAwesomeIcon as FontAwesomeIcon
 }

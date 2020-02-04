@@ -255,7 +255,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
       <div
         className="avatar-hover avatar-large"
       >
-        <FontAwesomeIcon
+        <Memo(FontAwesomeIcon)
           icon="camera"
           type="solid"
         >
@@ -352,7 +352,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
               </StyledComponent>
             </styled.i>
           </Icon>
-        </FontAwesomeIcon>
+        </Memo(FontAwesomeIcon)>
         <span
           className="avatar-hover-label"
         >

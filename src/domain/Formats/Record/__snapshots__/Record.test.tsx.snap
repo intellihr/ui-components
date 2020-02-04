@@ -1866,7 +1866,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                         role="button"
                         type="button"
                       >
-                        <FontAwesomeIcon
+                        <Memo(FontAwesomeIcon)
                           color="#424F5C"
                           icon="question-circle"
                           type="regular"
@@ -1968,7 +1968,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                               </StyledComponent>
                             </styled.i>
                           </Icon>
-                        </FontAwesomeIcon>
+                        </Memo(FontAwesomeIcon)>
                       </button>
                     </span>
                   </StyledComponent>
