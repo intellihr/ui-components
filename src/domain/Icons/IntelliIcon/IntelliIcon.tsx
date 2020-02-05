@@ -1,3 +1,4 @@
+import { isEqual } from 'lodash'
 import React from 'react'
 
 import { Omit } from '../../../common'
@@ -15,7 +16,18 @@ const IntelliIcon: React.FC<IIntelliIconProps> = ({ icon, ...props }) => (
   />
 )
 
-const MemoIntelliIcon = React.memo(IntelliIcon)
+const MemoIntelliIcon = React.memo(IntelliIcon, ((prevProps, nextProps) => {
+  return prevProps.icon === nextProps.icon &&
+    prevProps.size === nextProps.size &&
+    prevProps.customSize === nextProps.customSize &&
+    prevProps.color === nextProps.color &&
+    prevProps.className === nextProps.className &&
+    prevProps.isSpinning === nextProps.isSpinning &&
+    prevProps.badge === nextProps.badge &&
+    prevProps.width === nextProps.width &&
+    isEqual(prevProps.margins, nextProps.margins) &&
+    isEqual(prevProps.showForSizes, nextProps.showForSizes)
+}))
 
 export {
   MemoIntelliIcon as IntelliIcon

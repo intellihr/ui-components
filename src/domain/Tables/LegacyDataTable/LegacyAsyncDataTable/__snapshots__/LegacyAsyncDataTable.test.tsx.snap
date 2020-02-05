@@ -2102,7 +2102,7 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                     onClick={[Function]}
                     type="button"
                   >
-                    <Memo(FontAwesomeIcon)
+                    <FontAwesomeIcon
                       icon="chevron-left"
                       type="solid"
                     >
@@ -2199,7 +2199,7 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                           </StyledComponent>
                         </styled.i>
                       </Icon>
-                    </Memo(FontAwesomeIcon)>
+                    </FontAwesomeIcon>
                   </button>
                   <button
                     className="current page-button -btn"
@@ -2223,7 +2223,7 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                     onClick={[Function]}
                     type="button"
                   >
-                    <Memo(FontAwesomeIcon)
+                    <FontAwesomeIcon
                       icon="chevron-right"
                       type="solid"
                     >
@@ -2320,7 +2320,7 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
                           </StyledComponent>
                         </styled.i>
                       </Icon>
-                    </Memo(FontAwesomeIcon)>
+                    </FontAwesomeIcon>
                   </button>
                 </div>
               </div>
@@ -3465,7 +3465,7 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                     onClick={[Function]}
                     type="button"
                   >
-                    <Memo(FontAwesomeIcon)
+                    <FontAwesomeIcon
                       icon="chevron-left"
                       type="solid"
                     >
@@ -3562,7 +3562,7 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                           </StyledComponent>
                         </styled.i>
                       </Icon>
-                    </Memo(FontAwesomeIcon)>
+                    </FontAwesomeIcon>
                   </button>
                   <button
                     className="current page-button -btn"
@@ -3586,7 +3586,7 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                     onClick={[Function]}
                     type="button"
                   >
-                    <Memo(FontAwesomeIcon)
+                    <FontAwesomeIcon
                       icon="chevron-right"
                       type="solid"
                     >
@@ -3683,7 +3683,7 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
                           </StyledComponent>
                         </styled.i>
                       </Icon>
-                    </Memo(FontAwesomeIcon)>
+                    </FontAwesomeIcon>
                   </button>
                 </div>
               </div>
@@ -4890,7 +4890,7 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                     onClick={[Function]}
                     type="button"
                   >
-                    <Memo(FontAwesomeIcon)
+                    <FontAwesomeIcon
                       icon="chevron-left"
                       type="solid"
                     >
@@ -4987,7 +4987,7 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                           </StyledComponent>
                         </styled.i>
                       </Icon>
-                    </Memo(FontAwesomeIcon)>
+                    </FontAwesomeIcon>
                   </button>
                   <button
                     className="current page-button -btn"
@@ -5011,7 +5011,7 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                     onClick={[Function]}
                     type="button"
                   >
-                    <Memo(FontAwesomeIcon)
+                    <FontAwesomeIcon
                       icon="chevron-right"
                       type="solid"
                     >
@@ -5108,7 +5108,7 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
                           </StyledComponent>
                         </styled.i>
                       </Icon>
-                    </Memo(FontAwesomeIcon)>
+                    </FontAwesomeIcon>
                   </button>
                 </div>
               </div>
@@ -6575,7 +6575,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                     onClick={[Function]}
                     type="button"
                   >
-                    <Memo(FontAwesomeIcon)
+                    <FontAwesomeIcon
                       icon="chevron-left"
                       type="solid"
                     >
@@ -6672,7 +6672,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                           </StyledComponent>
                         </styled.i>
                       </Icon>
-                    </Memo(FontAwesomeIcon)>
+                    </FontAwesomeIcon>
                   </button>
                   <button
                     className="page-button -btn"
@@ -6696,7 +6696,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                     onClick={[Function]}
                     type="button"
                   >
-                    <Memo(FontAwesomeIcon)
+                    <FontAwesomeIcon
                       icon="chevron-right"
                       type="solid"
                     >
@@ -6793,7 +6793,7 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
                           </StyledComponent>
                         </styled.i>
                       </Icon>
-                    </Memo(FontAwesomeIcon)>
+                    </FontAwesomeIcon>
                   </button>
                 </div>
               </div>

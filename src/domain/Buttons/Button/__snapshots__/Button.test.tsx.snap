@@ -273,7 +273,7 @@ exports[`<Button /> should render a button with an icon 1`] = `
           className="button-icon right"
           data-component-type="button_icon"
         >
-          <Memo(FontAwesomeIcon)
+          <FontAwesomeIcon
             icon="star"
             type="solid"
           >
@@ -370,7 +370,7 @@ exports[`<Button /> should render a button with an icon 1`] = `
                 </StyledComponent>
               </styled.i>
             </Icon>
-          </Memo(FontAwesomeIcon)>
+          </FontAwesomeIcon>
         </span>
       </button>
     </StyledComponent>
