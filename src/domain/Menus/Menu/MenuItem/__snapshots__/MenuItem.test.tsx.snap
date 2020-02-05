@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MenuItem /> should render a a menu item with a link 1`] = `
-<Memo(MenuItemComponent)
+<MenuItemComponent
   href="www.google.com"
   label="Test menu item"
 />
@@ -9,44 +9,49 @@ exports[`<MenuItem /> should render a a menu item with a link 1`] = `
 
 exports[`<MenuItem /> should render a menu item as a submenu if it has children 1`] = `
 <Memo(Collapsible)
+  isOpen={false}
+  onToggle={[Function]}
   trigger={
-    <Memo(MenuItemComponent)
+    <MenuItemComponent
       href="www.google.com"
       icon={
-        <IntelliIcon
+        <Memo(IntelliIcon)
           icon="clock"
         />
       }
+      isOpen={false}
       label="Father"
     />
   }
 >
-  <Memo(MenuItem)
-    href="www.google.com"
-    icon={
-      <IntelliIcon
-        icon="clock"
-      />
-    }
-    label="Son"
-  />
-  <Memo(MenuItem)
-    href="www.google.com"
-    icon={
-      <IntelliIcon
-        icon="clock"
-      />
-    }
-    label="Devil"
-  />
+  <styled.span>
+    <Memo(MenuItem)
+      href="www.google.com"
+      icon={
+        <Memo(IntelliIcon)
+          icon="clock"
+        />
+      }
+      label="Son"
+    />
+    <Memo(MenuItem)
+      href="www.google.com"
+      icon={
+        <Memo(IntelliIcon)
+          icon="clock"
+        />
+      }
+      label="Devil"
+    />
+  </styled.span>
 </Memo(Collapsible)>
 `;
 
 exports[`<MenuItem /> should render a menu item with Icon 1`] = `
-<Memo(MenuItemComponent)
+<MenuItemComponent
   href="www.google.com"
   icon={
-    <IntelliIcon
+    <Memo(IntelliIcon)
       icon="clock"
     />
   }
@@ -55,7 +60,7 @@ exports[`<MenuItem /> should render a menu item with Icon 1`] = `
 `;
 
 exports[`<MenuItem /> should render a menu item with active state 1`] = `
-<Memo(MenuItemComponent)
+<MenuItemComponent
   href="www.google.com"
   isActive={true}
   label="Test menu item"
@@ -63,10 +68,10 @@ exports[`<MenuItem /> should render a menu item with active state 1`] = `
 `;
 
 exports[`<MenuItem /> should render a menu item with loading state 1`] = `
-<Memo(MenuItemComponent)
+<MenuItemComponent
   href="www.google.com"
   icon={
-    <IntelliIcon
+    <Memo(IntelliIcon)
       icon="clock"
     />
   }
@@ -76,7 +81,7 @@ exports[`<MenuItem /> should render a menu item with loading state 1`] = `
 `;
 
 exports[`<MenuItem /> should render a simple menu item 1`] = `
-<Memo(MenuItemComponent)
+<MenuItemComponent
   label="Test menu item"
 />
 `;

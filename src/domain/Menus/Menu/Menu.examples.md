@@ -7,8 +7,8 @@ initialState = { value: 5};
 
 <DefaultsProvider
   value={{
-    AnchorComponent: React.memo(({ anchorComponentProps, children, href }) => {
-     return (<a href={href} onClick={anchorComponentProps && anchorComponentProps.onClick}>{children}</a>)
+    AnchorComponent: React.memo(({ anchorComponentProps, ...props }) => {
+     return (<a onClick={anchorComponentProps && anchorComponentProps.onClick} {...props}/>)
     })
   }}
 >

@@ -1,14 +1,14 @@
 import { isEqual } from 'lodash'
-import React from 'react'
+import React, { useCallback, useState } from 'react'
 
 import { FontAwesomeIcon } from '../../../Icons'
-import { UnstyledLink } from '../../../Links/UnstyledLink'
 import { Collapsible } from '../Collapsible'
 import {
-  IconWrapper,
-  LoadingIconWrapper,
-  MenuItemLabelWrapper,
-  MenuItemWrapper
+  StyledCollapsibleChildren,
+  StyledIcon,
+  StyledLoadingIcon,
+  StyledMenuItem,
+  StyledMenuItemLabel
 } from './style'
 
 export interface IMenuItemProps<TAnchorProps extends Record<string, any> = Record<string, any>> {
@@ -34,6 +34,7 @@ export interface IMenuItemProps<TAnchorProps extends Record<string, any> = Recor
 
 const MenuItemComponent: React.FC<{
   isActive?: boolean
+  isOpen?: boolean
   href?: string
   anchorComponentProps?: object
   icon?: JSX.Element
@@ -45,44 +46,35 @@ const MenuItemComponent: React.FC<{
   anchorComponentProps,
   icon,
   label,
-  isLoading
+  isLoading,
+  isOpen
 }) => {
   return (
-      <MenuItemWrapper isActive={isActive}>
-      <UnstyledLink
-        href={href}
-        anchorComponentProps={anchorComponentProps}
-      >
-        {icon !== undefined && (
-          <IconWrapper isActive={isActive}>
-            {icon}
-          </IconWrapper>
-        )}
-        <MenuItemLabelWrapper isActive={isActive}>
-          {label}
-        </MenuItemLabelWrapper>
-        {isLoading && (
-          <LoadingIconWrapper>
-            <FontAwesomeIcon
-              type='solid'
-              icon='circle-notch'
-              isSpinning
-            />
-          </LoadingIconWrapper>
-        )}
-      </UnstyledLink>
-      </MenuItemWrapper>
+    <StyledMenuItem
+      isActive={isActive}
+      href={href}
+      anchorComponentProps={anchorComponentProps}
+    >
+      {icon !== undefined && (
+        <StyledIcon isActive={isActive}>
+          {icon}
+        </StyledIcon>
+      )}
+      <StyledMenuItemLabel isActive={isActive} isOpen={isOpen}>
+        {label}
+      </StyledMenuItemLabel>
+      {isLoading && (
+        <StyledLoadingIcon>
+          <FontAwesomeIcon
+            type='solid'
+            icon='circle-notch'
+            isSpinning
+          />
+        </StyledLoadingIcon>
+      )}
+    </StyledMenuItem>
   )
 }
-
-const MemoMenuItemComponent = React.memo(MenuItemComponent,(prevProps, nextProps) => {
-  return nextProps.href === prevProps.href &&
-    nextProps.label === prevProps.label &&
-    prevProps.icon === nextProps.icon &&
-    nextProps.isLoading === prevProps.isLoading &&
-    nextProps.isActive === prevProps.isActive &&
-    isEqual(prevProps.anchorComponentProps, nextProps.anchorComponentProps)
-})
 
 const MenuItem: React.FC<IMenuItemProps> = (
   {
@@ -96,15 +88,24 @@ const MenuItem: React.FC<IMenuItemProps> = (
     isLoading,
     label
   }) => {
+  const [open, setOpen] = useState(isOpen || false)
+  const onToggle = useCallback((type: 'open' | 'close') => {
+    setOpen(type === 'open')
+    if (handleSizeChange) {
+      handleSizeChange()
+    }
+  }, [handleSizeChange])
+
   if (children) {
     return (
       <Collapsible
-        isOpen={isOpen}
-        onToggle={handleSizeChange}
+        isOpen={open}
+        onToggle={onToggle}
         trigger={
-          <MemoMenuItemComponent
+          <MenuItemComponent
             label={label}
             isActive={isActive}
+            isOpen={open}
             href={href}
             anchorComponentProps={anchorComponentProps}
             icon={icon}
@@ -112,12 +113,14 @@ const MenuItem: React.FC<IMenuItemProps> = (
           />
         }
       >
-        {children}
+        <StyledCollapsibleChildren>
+          {children}
+        </StyledCollapsibleChildren>
       </Collapsible>
     )
   }
   return (
-    <MemoMenuItemComponent
+    <MenuItemComponent
       label={label}
       isActive={isActive}
       href={href}
@@ -137,7 +140,7 @@ const MemoMenuItem = React.memo(MenuItem,(prevProps, nextProps) => {
     nextProps.isOpen === prevProps.isOpen &&
     prevProps.children === nextProps.children &&
     isEqual(prevProps.handleSizeChange, nextProps.handleSizeChange) &&
-    isEqual(prevProps.anchorComponentProps, nextProps.anchorComponentProps)
+    (prevProps.anchorComponentProps === nextProps.anchorComponentProps || isEqual(prevProps.anchorComponentProps, nextProps.anchorComponentProps))
 })
 
 export {

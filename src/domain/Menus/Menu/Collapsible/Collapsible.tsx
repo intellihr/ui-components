@@ -3,9 +3,9 @@ import { Transition } from 'react-transition-group'
 
 import { FontAwesomeIcon } from '../../../Icons/FontAwesomeIcon'
 import {
-  CollapsibleChildrenWrapper,
-  CollapsibleControllerWrapper,
-  CollapsibleIconWrapper
+  StyledCollapsibleChildren,
+  StyledCollapsibleController,
+  StyledCollapsibleIcon
 } from './style'
 
 interface ICollapsible {
@@ -25,7 +25,6 @@ const Collapsible: React.FC<ICollapsible> = ({
   children,
   trigger
 }) => {
-  const [open, setOpen] = useState( isOpen || false)
   const ref = useRef<HTMLDivElement>(null)
 
   const onKeyPress = useCallback((event: React.KeyboardEvent<HTMLElement>) => {
@@ -33,35 +32,33 @@ const Collapsible: React.FC<ICollapsible> = ({
     if (key === ' ' || key === 'Enter') {
       event.preventDefault()
       if (onToggle) {
-        onToggle(!open ? 'open' : 'close')
+        onToggle(!isOpen ? 'open' : 'close')
       }
-      setOpen(!open)
     }
-  }, [open])
+  }, [isOpen])
 
   const onClick = useCallback((event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault()
     if (onToggle) {
-      onToggle(!open ? 'open' : 'close')
+      onToggle(!isOpen ? 'open' : 'close')
     }
-    setOpen(!open)
-  }, [open])
+  }, [isOpen])
 
   return (
     <>
-      <CollapsibleControllerWrapper onClick={onClick} onKeyPress={onKeyPress} isOpen={open}>
+      <StyledCollapsibleController onClick={onClick} onKeyPress={onKeyPress}>
         {trigger}
-        <CollapsibleIconWrapper>
-          <FontAwesomeIcon icon={open ? 'chevron-up' : 'chevron-down'} type='regular'/>
-        </CollapsibleIconWrapper>
-      </CollapsibleControllerWrapper>
-      <Transition in={open} timeout={open ? 250 : 0}>
+        <StyledCollapsibleIcon>
+          <FontAwesomeIcon icon={isOpen ? 'chevron-up' : 'chevron-down'} type='regular'/>
+        </StyledCollapsibleIcon>
+      </StyledCollapsibleController>
+      <Transition in={isOpen} timeout={isOpen ? 250 : 0}>
         {(state) => (
-          <CollapsibleChildrenWrapper height={ref.current ? ref.current.scrollHeight : 0} transitionState={state}>
+          <StyledCollapsibleChildren height={ref.current ? ref.current.scrollHeight : 0} transitionState={state}>
             <div ref={ref}>
               {children}
             </div>
-          </CollapsibleChildrenWrapper>
+          </StyledCollapsibleChildren>
         )}
       </Transition>
     </>
