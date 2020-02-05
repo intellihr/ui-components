@@ -31,7 +31,7 @@ describe('<MenuItem />', () => {
       <MenuItem
         href='www.google.com'
         label='Test menu item'
-        className='active'
+        isActive
       />
     )
 
@@ -80,19 +80,6 @@ describe('<MenuItem />', () => {
           label='Devil'
           icon={<IntelliIcon icon='clock' />}
         />
-      </MenuItem>
-    )
-
-    expect(wrapper).toMatchSnapshot()
-  })
-
-  it('should render a menu item which overflowWhenOpen prop is passed to the Collapsible component', () => {
-    const wrapper = shallow(
-      <MenuItem
-        label='Test menu item'
-        overflowWhenOpen='visible'
-      >
-        Something
       </MenuItem>
     )
 

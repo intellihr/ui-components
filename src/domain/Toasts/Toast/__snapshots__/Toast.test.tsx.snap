@@ -4,7 +4,7 @@ exports[`<Toast /> should call the onMount function if given one 1`] = `
 <div
   className="ToastClass alert"
 >
-  <IntelliIcon
+  <Memo(IntelliIcon)
     className="toast-icon"
     icon="alert"
     size="xsmall"
@@ -26,7 +26,7 @@ exports[`<Toast /> should call the onMount function if given one 1`] = `
     className="fa-container toast-close-span"
     onClick={[Function]}
   >
-    <IntelliIcon
+    <Memo(IntelliIcon)
       className="toast-close"
       icon="cross-small"
       size="xsmall"
@@ -39,7 +39,7 @@ exports[`<Toast /> should render a toast of a default type, which is success 1`]
 <div
   className="ToastClass success"
 >
-  <IntelliIcon
+  <Memo(IntelliIcon)
     className="toast-icon"
     icon="check"
     size="xsmall"
@@ -61,7 +61,7 @@ exports[`<Toast /> should render a toast of a default type, which is success 1`]
     className="fa-container toast-close-span"
     onClick={[Function]}
   >
-    <IntelliIcon
+    <Memo(IntelliIcon)
       className="toast-close"
       icon="cross-small"
       size="xsmall"
@@ -74,7 +74,7 @@ exports[`<Toast /> should render an alert toast 1`] = `
 <div
   className="ToastClass alert"
 >
-  <IntelliIcon
+  <Memo(IntelliIcon)
     className="toast-icon"
     icon="alert"
     size="xsmall"
@@ -96,7 +96,7 @@ exports[`<Toast /> should render an alert toast 1`] = `
     className="fa-container toast-close-span"
     onClick={[Function]}
   >
-    <IntelliIcon
+    <Memo(IntelliIcon)
       className="toast-close"
       icon="cross-small"
       size="xsmall"

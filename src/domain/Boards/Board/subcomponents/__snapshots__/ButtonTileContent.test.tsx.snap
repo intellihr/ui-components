@@ -6,7 +6,7 @@ exports[`<ButtonTileContent /> should render a button tile content in the hollow
 >
   <styled.div>
     <styled.div>
-      <FontAwesomeIcon
+      <Memo(FontAwesomeIcon)
         color="#7362F5"
         icon="star"
         size="xlarge"
@@ -31,7 +31,7 @@ exports[`<ButtonTileContent /> should render a button tile content with a font a
 >
   <styled.div>
     <styled.div>
-      <FontAwesomeIcon
+      <Memo(FontAwesomeIcon)
         color="#7362F5"
         icon="star"
         size="xlarge"
@@ -56,7 +56,7 @@ exports[`<ButtonTileContent /> should render a button tile content with an Intel
 >
   <styled.div>
     <styled.div>
-      <IntelliIcon
+      <Memo(IntelliIcon)
         color="#7362F5"
         icon="alert"
         size="xlarge"

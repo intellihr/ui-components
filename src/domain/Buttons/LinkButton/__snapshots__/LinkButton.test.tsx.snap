@@ -69,7 +69,7 @@ exports[`<LinkButton /> should render a link button with an icon 1`] = `
       className="button-icon left"
       data-component-type="button_icon"
     >
-      <FontAwesomeIcon
+      <Memo(FontAwesomeIcon)
         icon="star"
         type="solid"
       />
@@ -97,7 +97,7 @@ exports[`<LinkButton /> should render a link button with manual extra props for 
       className="button-icon left"
       data-component-type="button_icon"
     >
-      <FontAwesomeIcon
+      <Memo(FontAwesomeIcon)
         icon="star"
         type="solid"
       />

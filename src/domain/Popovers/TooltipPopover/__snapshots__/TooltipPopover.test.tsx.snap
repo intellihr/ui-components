@@ -44,7 +44,7 @@ exports[`<TooltipPopover /> Simple popover behaviour should match the snapshot 1
       role="button"
       type="button"
     >
-      <FontAwesomeIcon
+      <Memo(FontAwesomeIcon)
         color="#424F5C"
         icon="question-circle"
         type="regular"

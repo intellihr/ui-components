@@ -5,7 +5,7 @@ exports[`<StatusIndicator /> should render a dot status label 1`] = `
   className="dot-status-label"
 >
   <styled.div>
-    <FontAwesomeIcon
+    <Memo(FontAwesomeIcon)
       color="#CADDFC"
       icon="circle"
       type="solid"
@@ -32,7 +32,7 @@ exports[`<StatusIndicator /> should render a dot status label with default value
   className="dot-status-label"
 >
   <styled.div>
-    <FontAwesomeIcon
+    <Memo(FontAwesomeIcon)
       icon="circle"
       type="solid"
     />
@@ -58,7 +58,7 @@ exports[`<StatusIndicator /> should render a hollow dot status label 1`] = `
   className="dot-status-label"
 >
   <styled.div>
-    <FontAwesomeIcon
+    <Memo(FontAwesomeIcon)
       icon="circle"
       type="regular"
     />

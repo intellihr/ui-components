@@ -22,7 +22,7 @@ exports[`<GroupCard /> should render a group card with body contents and  their 
         isExpanded={false}
       >
         <styled.span>
-          <FontAwesomeIcon
+          <Memo(FontAwesomeIcon)
             icon="chevron-down"
             type="solid"
           />

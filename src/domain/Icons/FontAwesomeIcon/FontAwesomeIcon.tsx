@@ -1,3 +1,4 @@
+import { isEqual } from 'lodash'
 import React from 'react'
 
 import { IIconProps, Icon } from '../Icon'
@@ -36,6 +37,21 @@ const FontAwesomeIcon: React.FC<IFontAwesomeIconProps> = ({ icon, type, ...props
   )
 }
 
+const MemoFontAwesomeIcon = React.memo(FontAwesomeIcon, ((prevProps, nextProps) => {
+  return prevProps.icon === nextProps.icon &&
+    prevProps.size === nextProps.size &&
+    prevProps.customSize === nextProps.customSize &&
+    prevProps.color === nextProps.color &&
+    prevProps.className === nextProps.className &&
+    prevProps.isSpinning === nextProps.isSpinning &&
+    prevProps.badge === nextProps.badge &&
+    prevProps.width === nextProps.width &&
+    isEqual(prevProps.margins, nextProps.margins) &&
+    isEqual(prevProps.showForSizes, nextProps.showForSizes) &&
+    isEqual(prevProps.duotoneColors, nextProps.duotoneColors) &&
+    isEqual(prevProps.duotoneOpacity, nextProps.duotoneOpacity)
+}))
+
 export {
-  FontAwesomeIcon
+  MemoFontAwesomeIcon as FontAwesomeIcon
 }
