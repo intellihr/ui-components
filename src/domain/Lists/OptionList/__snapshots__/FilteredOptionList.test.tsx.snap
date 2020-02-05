@@ -46,7 +46,7 @@ exports[`<FilteredOptionList /> should render a basic option list 1`] = `
             src="https://github.com/markjames/famfamfam-flag-icons/blob/master/icons/png/au.png?raw=true"
           />,
           "onClick": [Function],
-          "rightComponent": <FontAwesomeIcon
+          "rightComponent": <Memo(FontAwesomeIcon)
             icon="star"
             type="solid"
           />,

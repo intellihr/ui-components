@@ -36,7 +36,7 @@ exports[`<MenuItem /> should render a menu item as a submenu if it has children 
         href="www.google.com"
       >
         <ForwardRef(styled.span)>
-          <IntelliIcon
+          <Memo(IntelliIcon)
             icon="clock"
           />
         </ForwardRef(styled.span)>
@@ -57,7 +57,7 @@ exports[`<MenuItem /> should render a menu item as a submenu if it has children 
     <MenuItem
       href="www.google.com"
       icon={
-        <IntelliIcon
+        <Memo(IntelliIcon)
           icon="clock"
         />
       }
@@ -67,7 +67,7 @@ exports[`<MenuItem /> should render a menu item as a submenu if it has children 
     <MenuItem
       href="www.google.com"
       icon={
-        <IntelliIcon
+        <Memo(IntelliIcon)
           icon="clock"
         />
       }
@@ -126,7 +126,7 @@ exports[`<MenuItem /> should render a menu item with Icon 1`] = `
     href="www.google.com"
   >
     <styled.span>
-      <IntelliIcon
+      <Memo(IntelliIcon)
         icon="clock"
       />
     </styled.span>
@@ -157,7 +157,7 @@ exports[`<MenuItem /> should render a menu item with loading state 1`] = `
     href="www.google.com"
   >
     <styled.span>
-      <IntelliIcon
+      <Memo(IntelliIcon)
         icon="clock"
       />
     </styled.span>
@@ -165,7 +165,7 @@ exports[`<MenuItem /> should render a menu item with loading state 1`] = `
       Test menu item
     </styled.span>
     <styled.span>
-      <FontAwesomeIcon
+      <Memo(FontAwesomeIcon)
         icon="circle-notch"
         isSpinning={true}
         type="solid"

@@ -74,7 +74,7 @@ exports[`<Card /> should render a card with main content and dropdownSections  1
       isExpanded={false}
     >
       <styled.span>
-        <FontAwesomeIcon
+        <Memo(FontAwesomeIcon)
           icon="chevron-down"
           type="solid"
         />
@@ -116,7 +116,7 @@ exports[`<Card /> should render a card with main content only 1`] = `
       isExpanded={false}
     >
       <styled.span>
-        <FontAwesomeIcon
+        <Memo(FontAwesomeIcon)
           icon="chevron-down"
           type="solid"
         />

@@ -52,7 +52,7 @@ exports[`<DateRangeInput /> should render a date range input 1`] = `
       <div
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_rightButton__horizontalDefault"
       >
-        <FontAwesomeIcon
+        <Memo(FontAwesomeIcon)
           icon="arrow-right"
           type="solid"
         />
@@ -62,7 +62,7 @@ exports[`<DateRangeInput /> should render a date range input 1`] = `
       <div
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_leftButton__horizontalDefault"
       >
-        <FontAwesomeIcon
+        <Memo(FontAwesomeIcon)
           icon="arrow-left"
           type="solid"
         />
@@ -189,7 +189,7 @@ exports[`<DateRangeInput /> should render a date range input with date format 1`
       <div
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_rightButton__horizontalDefault"
       >
-        <FontAwesomeIcon
+        <Memo(FontAwesomeIcon)
           icon="arrow-right"
           type="solid"
         />
@@ -199,7 +199,7 @@ exports[`<DateRangeInput /> should render a date range input with date format 1`
       <div
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_leftButton__horizontalDefault"
       >
-        <FontAwesomeIcon
+        <Memo(FontAwesomeIcon)
           icon="arrow-left"
           type="solid"
         />
@@ -326,7 +326,7 @@ exports[`<DateRangeInput /> should render a date range input with disable date c
       <div
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_rightButton__horizontalDefault"
       >
-        <FontAwesomeIcon
+        <Memo(FontAwesomeIcon)
           icon="arrow-right"
           type="solid"
         />
@@ -336,7 +336,7 @@ exports[`<DateRangeInput /> should render a date range input with disable date c
       <div
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_leftButton__horizontalDefault"
       >
-        <FontAwesomeIcon
+        <Memo(FontAwesomeIcon)
           icon="arrow-left"
           type="solid"
         />
@@ -463,7 +463,7 @@ exports[`<DateRangeInput /> should render a disabled date range input 1`] = `
       <div
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_rightButton__horizontalDefault"
       >
-        <FontAwesomeIcon
+        <Memo(FontAwesomeIcon)
           icon="arrow-right"
           type="solid"
         />
@@ -473,7 +473,7 @@ exports[`<DateRangeInput /> should render a disabled date range input 1`] = `
       <div
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_leftButton__horizontalDefault"
       >
-        <FontAwesomeIcon
+        <Memo(FontAwesomeIcon)
           icon="arrow-left"
           type="solid"
         />
@@ -600,7 +600,7 @@ exports[`<DateRangeInput /> should render a mobile date range input 1`] = `
       <div
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_rightButton__horizontalDefault"
       >
-        <FontAwesomeIcon
+        <Memo(FontAwesomeIcon)
           icon="arrow-right"
           type="solid"
         />
@@ -610,7 +610,7 @@ exports[`<DateRangeInput /> should render a mobile date range input 1`] = `
       <div
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_leftButton__horizontalDefault"
       >
-        <FontAwesomeIcon
+        <Memo(FontAwesomeIcon)
           icon="arrow-left"
           type="solid"
         />
@@ -737,7 +737,7 @@ exports[`<DateRangeInput /> should render an invalid date range input 1`] = `
       <div
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_rightButton__horizontalDefault"
       >
-        <FontAwesomeIcon
+        <Memo(FontAwesomeIcon)
           icon="arrow-right"
           type="solid"
         />
@@ -747,7 +747,7 @@ exports[`<DateRangeInput /> should render an invalid date range input 1`] = `
       <div
         className="DayPickerNavigation_button__default DayPickerNavigation_button__horizontalDefault DayPickerNavigation_leftButton__horizontalDefault"
       >
-        <FontAwesomeIcon
+        <Memo(FontAwesomeIcon)
           icon="arrow-left"
           type="solid"
         />

@@ -19,7 +19,7 @@ exports[`<CheckboxInput /> should render a checkbox input with a component as th
       className="checkbox"
       htmlFor="test-jsx-input"
     >
-      <FontAwesomeIcon
+      <Memo(FontAwesomeIcon)
         icon="star"
         type="solid"
       />
