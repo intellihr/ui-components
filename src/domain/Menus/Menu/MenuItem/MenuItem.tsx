@@ -1,10 +1,15 @@
-import { functions, isEqual, omit } from 'lodash'
+import { isEqual } from 'lodash'
 import React from 'react'
-import Collapsible from 'react-collapsible'
 
 import { FontAwesomeIcon } from '../../../Icons'
-import { Anchor } from '../../../Internals'
-import { IconWrapper, LoadingIconWrapper, MenuItemLabelWrapper, MenuItemWrapper, SubMenuWrapper } from './style'
+import { UnstyledLink } from '../../../Links/UnstyledLink'
+import { Collapsible } from '../Collapsible'
+import {
+  IconWrapper,
+  LoadingIconWrapper,
+  MenuItemLabelWrapper,
+  MenuItemWrapper
+} from './style'
 
 export interface IMenuItemProps<TAnchorProps extends Record<string, any> = Record<string, any>> {
   /** The URL which the user will be navigated to when this item is clicked */
@@ -21,8 +26,6 @@ export interface IMenuItemProps<TAnchorProps extends Record<string, any> = Recor
   isOpen?: boolean
   /** A handler to handle when this item shows or hides the children */
   handleSizeChange?: () => void
-  /** A property determining what to do when a child's content is too big to fit in this item */
-  overflowWhenOpen?: 'hidden' | 'visible' | 'auto' | 'scroll' | 'inherit' | 'initial' | 'unset'
   /** The properties to be passed on to the custom anchor component if provided in the Provider */
   anchorComponentProps?: TAnchorProps
   /** Children components */
@@ -45,17 +48,17 @@ const MenuItemComponent: React.FC<{
   isLoading
 }) => {
   return (
-    <MenuItemWrapper isActive={isActive}>
-      <Anchor
+      <MenuItemWrapper isActive={isActive}>
+      <UnstyledLink
         href={href}
         anchorComponentProps={anchorComponentProps}
       >
         {icon !== undefined && (
-          <IconWrapper>
+          <IconWrapper isActive={isActive}>
             {icon}
           </IconWrapper>
         )}
-        <MenuItemLabelWrapper>
+        <MenuItemLabelWrapper isActive={isActive}>
           {label}
         </MenuItemLabelWrapper>
         {isLoading && (
@@ -67,8 +70,8 @@ const MenuItemComponent: React.FC<{
             />
           </LoadingIconWrapper>
         )}
-      </Anchor>
-    </MenuItemWrapper>
+      </UnstyledLink>
+      </MenuItemWrapper>
   )
 }
 
@@ -91,13 +94,14 @@ const MenuItem: React.FC<IMenuItemProps> = (
     icon,
     isActive,
     isLoading,
-    label,
-    overflowWhenOpen = 'hidden' as const
+    label
   }) => {
   if (children) {
     return (
       <Collapsible
-        trigger={(
+        isOpen={isOpen}
+        onToggle={handleSizeChange}
+        trigger={
           <MemoMenuItemComponent
             label={label}
             isActive={isActive}
@@ -106,29 +110,22 @@ const MenuItem: React.FC<IMenuItemProps> = (
             icon={icon}
             isLoading={isLoading}
           />
-        )}
-        open={isOpen}
-        transitionTime={250}
-        onOpen={handleSizeChange}
-        onClose={handleSizeChange}
-        overflowWhenOpen={overflowWhenOpen}
+        }
       >
-        <SubMenuWrapper>
-          {children}
-        </SubMenuWrapper>
+        {children}
       </Collapsible>
     )
   }
-     return (
-       <MemoMenuItemComponent
-         label={label}
-         isActive={isActive}
-         href={href}
-         anchorComponentProps={anchorComponentProps}
-         icon={icon}
-         isLoading={isLoading}
-       />
-     )
+  return (
+    <MemoMenuItemComponent
+      label={label}
+      isActive={isActive}
+      href={href}
+      anchorComponentProps={anchorComponentProps}
+      icon={icon}
+      isLoading={isLoading}
+    />
+  )
 }
 
 const MemoMenuItem = React.memo(MenuItem,(prevProps, nextProps) => {
@@ -138,7 +135,6 @@ const MemoMenuItem = React.memo(MenuItem,(prevProps, nextProps) => {
     nextProps.isLoading === prevProps.isLoading &&
     nextProps.isActive === prevProps.isActive &&
     nextProps.isOpen === prevProps.isOpen &&
-    nextProps.overflowWhenOpen === prevProps.overflowWhenOpen &&
     prevProps.children === nextProps.children &&
     isEqual(prevProps.handleSizeChange, nextProps.handleSizeChange) &&
     isEqual(prevProps.anchorComponentProps, nextProps.anchorComponentProps)

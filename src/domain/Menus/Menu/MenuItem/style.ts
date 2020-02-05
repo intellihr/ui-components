@@ -3,25 +3,7 @@ import styled, { css } from 'styled-components'
 import { Variables } from '../../../../common'
 
 const MenuItemWrapper = styled.li<{isActive?: boolean}>`
-  a {
-    ${({isActive}) => {
-      if (isActive) {
-        return css`
-          border-left: 3px solid ${Variables.Color.i400};
-          color: ${Variables.Color.i400};
-          font-weight: 600;
-          margin-left: 0;
-        `
-      }
-
-      return css`
-        color: ${Variables.Color.n700};
-        margin-left: 3px;
-      `
-    }}
-  }
-
-  a, a:focus {
+  & > * {
     padding: 1rem;
     display: block;
     align-items: center;
@@ -30,41 +12,77 @@ const MenuItemWrapper = styled.li<{isActive?: boolean}>`
     height: 50px;
 
     &:hover {
-      color: ${Variables.Color.n700};
       background-color: ${Variables.Color.n300};
       border-left: 3px solid ${Variables.Color.n300};
       margin-left: 0;
     }
+
+    ${({isActive}) => {
+      if (isActive) {
+        return css`
+          border-left: 3px solid ${Variables.Color.i400};
+          margin-left: 0;
+        `
+      }
+
+      return css`
+        margin-left: 3px;
+      `
+    }}
   }
 `
 
-const IconWrapper = styled.span`
+const IconWrapper = styled.span<{isActive?: boolean}>`
   margin-right: 0.25rem;
   vertical-align: top;
+
+  &:hover {
+    color: ${Variables.Color.n700};
+  }
+
+  ${({isActive}) => {
+    if (isActive) {
+      return css`
+        color: ${Variables.Color.i400};
+      `
+    }
+
+    return css`
+      color: ${Variables.Color.n700};
+    `
+  }}
 `
 
 const LoadingIconWrapper = styled.span`
   float: right;
 `
 
-const SubMenuWrapper = styled.ul`
-  margin: 0;
-
-  a, a:focus  {
-    padding-left: 2.8rem;
-  }
-`
-
-const MenuItemLabelWrapper = styled.span`
+const MenuItemLabelWrapper = styled.span<{isActive?: boolean}>`
   margin-left: 7.5px;
   white-space: nowrap;
   vertical-align: top;
+
+  &:hover {
+    color: ${Variables.Color.n700};
+  }
+
+  ${({isActive}) => {
+    if (isActive) {
+     return css`
+       color: ${Variables.Color.i400};
+       font-weight: 600;
+      `
+    }
+
+    return css`
+      color: ${Variables.Color.n700};
+    `
+  }}
 `
 
 export {
   IconWrapper,
   MenuItemWrapper,
   LoadingIconWrapper,
-  SubMenuWrapper,
   MenuItemLabelWrapper
 }

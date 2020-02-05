@@ -32,7 +32,7 @@ initialState = { value: 5};
         label='Item 1B'
         isActive={state.value === 2}
         anchorComponentProps={{
-          onClick:() => {
+          onClick: () => {
               setState({ value: 2 })
           }
         }}

@@ -1207,13 +1207,6 @@
   dependencies:
     react-chartjs-2 "*"
 
-"@types/react-collapsible@2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@types/react-collapsible/-/react-collapsible-2.2.1.tgz#2f32ed5e6a02e7556bc70fba9f1ebd75f74ac282"
-  integrity sha512-BcTmyKLFTN3NuXAAAeATtNUlnQm/h2Xlp7lzwwLc/hXR4B8ja9mHfAFoRuHh/bkqict2I8/YB+OkMRr3ApYd9Q==
-  dependencies:
-    "@types/react" "*"
-
 "@types/react-dates@17.1.5":
   version "17.1.5"
   resolved "https://registry.yarnpkg.com/@types/react-dates/-/react-dates-17.1.5.tgz#3b293c7334372f15f04beaac02df0041316be2fc"
@@ -9747,11 +9740,6 @@ react-chartjs-2@2.7.6:
   dependencies:
     lodash "^4.17.4"
     prop-types "^15.5.8"
-
-react-collapsible@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/react-collapsible/-/react-collapsible-2.2.0.tgz#257abef5b96a330d9249810761cac29a3d82f268"
-  integrity sha512-xnkMUj4p6fh2yOeTuZDNK4p+dNK/0iSqOQTujvmLgHKtNNd+aIGhfE5HTKGcareekyhi3Q2OXUFogkimzrgSjQ==
 
 react-dates@^20.2.0:
   version "20.3.0"
