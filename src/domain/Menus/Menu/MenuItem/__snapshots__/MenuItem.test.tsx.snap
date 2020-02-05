@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MenuItem /> should render a a menu item with a link 1`] = `
-<MenuItemComponent
+<MenuItemContent
   href="www.google.com"
   label="Test menu item"
 />
@@ -12,7 +12,7 @@ exports[`<MenuItem /> should render a menu item as a submenu if it has children 
   isOpen={false}
   onToggle={[Function]}
   trigger={
-    <MenuItemComponent
+    <MenuItemContent
       href="www.google.com"
       icon={
         <Memo(IntelliIcon)
@@ -48,7 +48,7 @@ exports[`<MenuItem /> should render a menu item as a submenu if it has children 
 `;
 
 exports[`<MenuItem /> should render a menu item with Icon 1`] = `
-<MenuItemComponent
+<MenuItemContent
   href="www.google.com"
   icon={
     <Memo(IntelliIcon)
@@ -60,7 +60,7 @@ exports[`<MenuItem /> should render a menu item with Icon 1`] = `
 `;
 
 exports[`<MenuItem /> should render a menu item with active state 1`] = `
-<MenuItemComponent
+<MenuItemContent
   href="www.google.com"
   isActive={true}
   label="Test menu item"
@@ -68,7 +68,7 @@ exports[`<MenuItem /> should render a menu item with active state 1`] = `
 `;
 
 exports[`<MenuItem /> should render a menu item with loading state 1`] = `
-<MenuItemComponent
+<MenuItemContent
   href="www.google.com"
   icon={
     <Memo(IntelliIcon)
@@ -81,7 +81,7 @@ exports[`<MenuItem /> should render a menu item with loading state 1`] = `
 `;
 
 exports[`<MenuItem /> should render a simple menu item 1`] = `
-<MenuItemComponent
+<MenuItemContent
   label="Test menu item"
 />
 `;

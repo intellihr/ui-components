@@ -1,18 +1,23 @@
 import React, { useCallback, useRef, useState } from 'react'
 import { Transition } from 'react-transition-group'
 
-import { FontAwesomeIcon } from '../../../Icons/FontAwesomeIcon'
+import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import {
   StyledCollapsibleChildren,
   StyledCollapsibleController,
   StyledCollapsibleIcon
 } from './style'
 
+enum IToggleType {
+  OPEN = 'open',
+  CLOSE = 'close'
+}
+
 interface ICollapsible {
   /** If the collapsible starts open */
   isOpen?: boolean
   /** Called when the collapsible is toggled */
-  onToggle?: (type: 'open' | 'close') => void
+  onToggle?: (type: IToggleType) => void
   /** The trigger component */
   trigger?: JSX.Element
   /** Children components */
@@ -32,7 +37,7 @@ const Collapsible: React.FC<ICollapsible> = ({
     if (key === ' ' || key === 'Enter') {
       event.preventDefault()
       if (onToggle) {
-        onToggle(!isOpen ? 'open' : 'close')
+        onToggle(!isOpen ? IToggleType.OPEN : IToggleType.CLOSE)
       }
     }
   }, [isOpen])
@@ -40,7 +45,7 @@ const Collapsible: React.FC<ICollapsible> = ({
   const onClick = useCallback((event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault()
     if (onToggle) {
-      onToggle(!isOpen ? 'open' : 'close')
+      onToggle(!isOpen ? IToggleType.OPEN : IToggleType.CLOSE)
     }
   }, [isOpen])
 
@@ -73,5 +78,6 @@ const MemoCollapsible = React.memo(Collapsible,(previousProps, nextProps) => {
 })
 
 export {
-  MemoCollapsible as Collapsible
+  MemoCollapsible as Collapsible,
+  IToggleType
 }

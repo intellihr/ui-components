@@ -1,80 +1,12 @@
 import { isEqual } from 'lodash'
 import React, { useCallback, useState } from 'react'
 
-import { FontAwesomeIcon } from '../../../Icons'
-import { Collapsible } from '../Collapsible'
+import { Collapsible, IToggleType } from '../../../Internals/Collapsible'
+import { IMenuItemProps } from './interfaces'
 import {
-  StyledCollapsibleChildren,
-  StyledIcon,
-  StyledLoadingIcon,
-  StyledMenuItem,
-  StyledMenuItemLabel
+  StyledCollapsibleChildren
 } from './style'
-
-export interface IMenuItemProps<TAnchorProps extends Record<string, any> = Record<string, any>> {
-  /** The URL which the user will be navigated to when this item is clicked */
-  href?: string
-  /** The label of this item */
-  label: string
-  /** The icon of this item */
-  icon?: JSX.Element
-  /** A flag indicating whether this item should show the loading state */
-  isLoading?: boolean
-  /** if this is a selected menu item */
-  isActive?: boolean
-  /** A flag indicating whether this item should show the children if any */
-  isOpen?: boolean
-  /** A handler to handle when this item shows or hides the children */
-  handleSizeChange?: () => void
-  /** The properties to be passed on to the custom anchor component if provided in the Provider */
-  anchorComponentProps?: TAnchorProps
-  /** Children components */
-  children?: React.ReactNode
-}
-
-const MenuItemComponent: React.FC<{
-  isActive?: boolean
-  isOpen?: boolean
-  href?: string
-  anchorComponentProps?: object
-  icon?: JSX.Element
-  label: string
-  isLoading?: boolean
-}> = ({
-  href,
-  isActive,
-  anchorComponentProps,
-  icon,
-  label,
-  isLoading,
-  isOpen
-}) => {
-  return (
-    <StyledMenuItem
-      isActive={isActive}
-      href={href}
-      anchorComponentProps={anchorComponentProps}
-    >
-      {icon !== undefined && (
-        <StyledIcon isActive={isActive}>
-          {icon}
-        </StyledIcon>
-      )}
-      <StyledMenuItemLabel isActive={isActive} isOpen={isOpen}>
-        {label}
-      </StyledMenuItemLabel>
-      {isLoading && (
-        <StyledLoadingIcon>
-          <FontAwesomeIcon
-            type='solid'
-            icon='circle-notch'
-            isSpinning
-          />
-        </StyledLoadingIcon>
-      )}
-    </StyledMenuItem>
-  )
-}
+import { MenuItemContent } from './MenuItemContent'
 
 const MenuItem: React.FC<IMenuItemProps> = (
   {
@@ -89,8 +21,8 @@ const MenuItem: React.FC<IMenuItemProps> = (
     label
   }) => {
   const [open, setOpen] = useState(isOpen || false)
-  const onToggle = useCallback((type: 'open' | 'close') => {
-    setOpen(type === 'open')
+  const onToggle = useCallback((type: IToggleType) => {
+    setOpen(type === IToggleType.OPEN)
     if (handleSizeChange) {
       handleSizeChange()
     }
@@ -102,7 +34,7 @@ const MenuItem: React.FC<IMenuItemProps> = (
         isOpen={open}
         onToggle={onToggle}
         trigger={
-          <MenuItemComponent
+          <MenuItemContent
             label={label}
             isActive={isActive}
             isOpen={open}
@@ -120,7 +52,7 @@ const MenuItem: React.FC<IMenuItemProps> = (
     )
   }
   return (
-    <MenuItemComponent
+    <MenuItemContent
       label={label}
       isActive={isActive}
       href={href}
