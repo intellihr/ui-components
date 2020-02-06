@@ -1,0 +1,188 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MenuItem /> should render a a menu item with a link 1`] = `
+<styled.li>
+  <Anchor
+    href="www.google.com"
+  >
+    <styled.span>
+      Test menu item
+    </styled.span>
+  </Anchor>
+</styled.li>
+`;
+
+exports[`<MenuItem /> should render a menu item as a submenu if it has children 1`] = `
+<Collapsible
+  className=""
+  classParentString="Collapsible"
+  contentInnerClassName=""
+  contentOuterClassName=""
+  easing="linear"
+  lazyRender={false}
+  onClose={[Function]}
+  onClosing={[Function]}
+  onOpen={[Function]}
+  onOpening={[Function]}
+  open={false}
+  openedClassName=""
+  overflowWhenOpen="hidden"
+  tabIndex={null}
+  transitionCloseTime={null}
+  transitionTime={250}
+  trigger={
+    <ForwardRef(styled.li)>
+      <Anchor
+        href="www.google.com"
+      >
+        <ForwardRef(styled.span)>
+          <Memo(IntelliIcon)
+            icon="clock"
+          />
+        </ForwardRef(styled.span)>
+        <ForwardRef(styled.span)>
+          Father
+        </ForwardRef(styled.span)>
+      </Anchor>
+    </ForwardRef(styled.li)>
+  }
+  triggerClassName=""
+  triggerDisabled={false}
+  triggerOpenedClassName=""
+  triggerSibling={null}
+  triggerStyle={null}
+  triggerTagName="span"
+>
+  <styled.ul>
+    <MenuItem
+      href="www.google.com"
+      icon={
+        <Memo(IntelliIcon)
+          icon="clock"
+        />
+      }
+      label="Son"
+      overflowWhenOpen="hidden"
+    />
+    <MenuItem
+      href="www.google.com"
+      icon={
+        <Memo(IntelliIcon)
+          icon="clock"
+        />
+      }
+      label="Devil"
+      overflowWhenOpen="hidden"
+    />
+  </styled.ul>
+</Collapsible>
+`;
+
+exports[`<MenuItem /> should render a menu item which overflowWhenOpen prop is passed to the Collapsible component 1`] = `
+<Collapsible
+  className=""
+  classParentString="Collapsible"
+  contentInnerClassName=""
+  contentOuterClassName=""
+  easing="linear"
+  lazyRender={false}
+  onClose={[Function]}
+  onClosing={[Function]}
+  onOpen={[Function]}
+  onOpening={[Function]}
+  open={false}
+  openedClassName=""
+  overflowWhenOpen="visible"
+  tabIndex={null}
+  transitionCloseTime={null}
+  transitionTime={250}
+  trigger={
+    <ForwardRef(styled.li)>
+      <Anchor
+        href="#"
+      >
+        <ForwardRef(styled.span)>
+          Test menu item
+        </ForwardRef(styled.span)>
+      </Anchor>
+    </ForwardRef(styled.li)>
+  }
+  triggerClassName=""
+  triggerDisabled={false}
+  triggerOpenedClassName=""
+  triggerSibling={null}
+  triggerStyle={null}
+  triggerTagName="span"
+>
+  <styled.ul>
+    Something
+  </styled.ul>
+</Collapsible>
+`;
+
+exports[`<MenuItem /> should render a menu item with Icon 1`] = `
+<styled.li>
+  <Anchor
+    href="www.google.com"
+  >
+    <styled.span>
+      <Memo(IntelliIcon)
+        icon="clock"
+      />
+    </styled.span>
+    <styled.span>
+      Test menu item
+    </styled.span>
+  </Anchor>
+</styled.li>
+`;
+
+exports[`<MenuItem /> should render a menu item with active state 1`] = `
+<styled.li
+  className="active"
+>
+  <Anchor
+    href="www.google.com"
+  >
+    <styled.span>
+      Test menu item
+    </styled.span>
+  </Anchor>
+</styled.li>
+`;
+
+exports[`<MenuItem /> should render a menu item with loading state 1`] = `
+<styled.li>
+  <Anchor
+    href="www.google.com"
+  >
+    <styled.span>
+      <Memo(IntelliIcon)
+        icon="clock"
+      />
+    </styled.span>
+    <styled.span>
+      Test menu item
+    </styled.span>
+    <styled.span>
+      <Memo(FontAwesomeIcon)
+        icon="circle-notch"
+        isSpinning={true}
+        type="solid"
+      />
+    </styled.span>
+  </Anchor>
+</styled.li>
+`;
+
+exports[`<MenuItem /> should render a simple menu item 1`] = `
+<styled.li>
+  <Anchor
+    href="#"
+  >
+    <styled.span>
+      Test menu item
+    </styled.span>
+  </Anchor>
+</styled.li>
+`;

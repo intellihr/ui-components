@@ -24,7 +24,7 @@ export { ActionLink, TextLink, UnstyledLink } from './Links'
  */
 export { List, SmartList, ActionList, ListRow, ListClickableColumn, ListColumn, OptionList, FilteredOptionList, FilteredList } from './Lists'
 
-export { Menu, MenuItem } from './Menus'
+export { Menu, MenuItem, LegacyMenu, LegacyMenuItem } from './Menus'
 export { Modal, ToggleModal } from './Modals'
 export { BreadcrumbGroup } from './Navigation'
 export { PaginationButtons, PaginationDetails } from './Paginators'
