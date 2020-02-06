@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Menu /> should render a simple menu 1`] = `
+<styled.ul>
+  <li>
+    Hello I am the child!
+  </li>
+</styled.ul>
+`;
