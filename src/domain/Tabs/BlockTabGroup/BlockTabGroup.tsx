@@ -1,12 +1,14 @@
 import {
   isEqual,
   isNumber,
-  map,
   toNumber
 } from 'lodash'
-import React, { MouseEvent } from 'react'
+import React, { useLayoutEffect, useRef, useState } from 'react'
 
-import { Props } from '../../../common'
+import { Props, Variables } from '../../../common'
+import { usePrevious } from '../../../common/hooks'
+import { IconValue } from '../../Icons'
+import { Text } from '../../Typographies/Text'
 import {
   TabGroupContainer,
   TabList,
@@ -15,11 +17,13 @@ import {
 } from './style'
 
 export interface IBlockTab {
+  /** Icon to use for the tab */
+  icon?: IconValue
   /** String title to use for the tab */
   title?: string
 }
 
-type TabSize = 'small' | 'medium' | 'large'
+type TabSize = 'small' | 'medium' | 'large' | 'fit-content' | 'match-largest-tab'
 
 export interface IBlockTabGroupProps {
   /** The current tab selected */
@@ -34,103 +38,109 @@ export interface IBlockTabGroupProps {
   componentContext?: string
   /** The margins around the component */
   margins?: Props.IMargins
-  /** Let the tab width be determined by the length of the tab title */
-  fitContent?: boolean
 }
 
-export class BlockTabGroup extends React.Component<IBlockTabGroupProps, never> {
-  public static defaultProps = {
-    tabSize: 'medium'
-  }
-
-  public shouldComponentUpdate (nextProps: Readonly<IBlockTabGroupProps>): boolean {
-    return nextProps.currentTab !== this.props.currentTab ||
-      !isEqual(this.props.tabs, nextProps.tabs) ||
-      nextProps.tabSize !== this.props.tabSize ||
-      !isEqual(this.props.margins, nextProps.margins)
-  }
-
-  public render (): JSX.Element | null {
-    const {
-      tabs,
-      componentContext,
-      margins,
-      fitContent
-    } = this.props
-
-    if (tabs.length === 0) {
-      return null
-    }
-
-    return (
-      <TabGroupContainer
-        data-component-type={Props.ComponentType.BlockTabGroup}
-        data-component-context={componentContext}
-        margins={margins}
-        fitContent={fitContent}
-      >
-        <TabList role='tablist'>
-          {map(tabs, this.listItemForTab)}
-        </TabList>
-      </TabGroupContainer>
-    )
-  }
-
-  private listItemForTab = (tab: IBlockTab, index: number): JSX.Element => {
-    const { tabSize, fitContent } = this.props
-    const currentTabIndex = this.currentTabIndex
-
-    return (
-      <TabListItem
-        key={index}
-        role='tab'
-        active={currentTabIndex === index}
-      >
-        <TabListItemButton
-          type='button'
-          active={currentTabIndex === index}
-          tabSize={tabSize}
-          onClick={this.handleOnClick}
-          aria-selected={currentTabIndex === index}
-          data-tabindex={index}
-          fitContent={fitContent}
-        >
-          {tab.title}
-        </TabListItemButton>
-      </TabListItem>
-    )
-  }
-
-  private indexForTab = (tabIdentifier?: number | string): number => {
-    if (!tabIdentifier) {
-      return 0
-    }
-
-    if (isNumber(tabIdentifier)) {
-      return tabIdentifier
-    }
-
+const getCurrentTabIndex = (tabIdentifier?: number | string) => {
+  if (!tabIdentifier) {
     return 0
   }
 
-  private get currentTabIndex (): number {
-    const {
-      currentTab
-    } = this.props
-
-    return this.indexForTab(currentTab)
+  if (isNumber(tabIdentifier)) {
+    return tabIdentifier
   }
 
-  private handleOnClick = (event: MouseEvent<HTMLButtonElement>) => {
-    const {
-      tabs,
-      onTabChange
-    } = this.props
+  return 0
+}
 
+const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
+  currentTab,
+  tabs,
+  onTabChange,
+  tabSize = 'medium',
+  componentContext,
+  margins
+}) => {
+  const [widestTabWidth, setWidestTabLength] = useState<number | undefined>(undefined)
+  const tabListItemRefs = useRef<Array<React.MutableRefObject<HTMLLIElement | null>>>(Array.from({ length: tabs.length }).map(() => React.createRef()))
+
+  const previousTabs = usePrevious(tabs)
+  if (tabSize === 'match-largest-tab' && previousTabs && previousTabs.length !== tabs.length) {
+    tabListItemRefs.current = Array.from({ length: tabs.length }).map(() => React.createRef<HTMLLIElement | null>())
+  }
+
+  useLayoutEffect(() => {
+    if (tabSize === 'match-largest-tab') {
+      let widestTab = 0
+      tabListItemRefs.current.forEach((tabRef) => {
+        const tabWidth = tabRef.current && tabRef.current.clientWidth || 0
+        if (tabWidth > widestTab) {
+          widestTab = tabWidth
+        }
+      })
+      setWidestTabLength(widestTab)
+    }
+  }, [tabSize, tabListItemRefs.current, setWidestTabLength])
+
+  const handleOnClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     const newTabIndex = toNumber(event.currentTarget.dataset.tabindex || 0)
-
-    if (onTabChange && (this.currentTabIndex !== newTabIndex)) {
+    if (onTabChange && (getCurrentTabIndex(currentTab) !== newTabIndex)) {
       onTabChange(tabs[newTabIndex], newTabIndex)
     }
   }
+
+  const renderTabs = () => {
+    return tabs.map((tab, index) => {
+      const currentTabIndex = getCurrentTabIndex(currentTab)
+      return (
+        <TabListItem
+          ref={tabListItemRefs.current[index]}
+          key={index}
+          role='tab'
+          active={currentTabIndex === index}
+          tabWidth={tabSize === 'match-largest-tab' ? widestTabWidth : undefined}
+        >
+          <TabListItemButton
+            type='button'
+            active={currentTabIndex === index}
+            tabSize={tabSize}
+            onClick={handleOnClick}
+            aria-selected={currentTabIndex === index}
+            data-tabindex={index}
+          >
+            {tab.icon}
+            {tab.title && (
+              <Text margins={{ left: tab.icon ? Variables.Spacing.sXSmall : 0 }}>
+                {tab.title}
+              </Text>
+            )}
+          </TabListItemButton>
+        </TabListItem>
+      )
+    })
+  }
+
+  return (
+    <TabGroupContainer
+      data-component-type={Props.ComponentType.BlockTabGroup}
+      data-component-context={componentContext}
+      margins={margins}
+      tabSize={tabSize}
+    >
+      <TabList role='tablist'>
+        {renderTabs()}
+      </TabList>
+    </TabGroupContainer >
+  )
+}
+
+const MemoBlockTabGroup = React.memo(BlockTabGroup, (prevProps, nextProps) => {
+  return prevProps.currentTab === nextProps.currentTab
+    && prevProps.tabSize === nextProps.tabSize
+    && prevProps.onTabChange === nextProps.onTabChange
+    && isEqual(prevProps.tabs, nextProps.tabs)
+    && isEqual(prevProps.margins, nextProps.margins)
+})
+
+export {
+  MemoBlockTabGroup as BlockTabGroup
 }

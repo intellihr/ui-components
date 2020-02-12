@@ -10,10 +10,34 @@ initialState = {
   onTabChange={(tab, index) => setState({ openTab: index })}
   currentTab={state.openTab}
   tabs={[
-      { title: 'Grid' },
-      { title: 'List' }
+      { title: 'One' },
+      { title: 'One Two' },
+      { title: 'One Two Three' }
     ]}
-  fitContent
+  tabSize='fit-content'
+/>
+```
+#### List of tabs matching the width of the widest tab
+
+```jsx
+import { FontAwesomeIcon } from '@Domain/Icons';
+
+initialState = {
+  openTab: 0,
+  tabs : [
+    { title: 'One'},
+    { title: 'One Two'},
+    { title: 'One Two Three'},
+  ]
+};
+
+<BlockTabGroup
+  onTabChange={(tab, index) => {
+    setState({ openTab: index })
+  }}
+  currentTab={state.openTab}
+  tabs={state.tabs}
+  tabSize='match-largest-tab'
 />
 ```
 
