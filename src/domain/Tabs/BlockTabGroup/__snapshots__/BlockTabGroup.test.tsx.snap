@@ -3,6 +3,7 @@
 exports[`<BlockTabGroup /> Standard tabs with current index should match the snapshot 1`] = `
 <styled.div
   data-component-type="block_tab_group"
+  tabSize="medium"
 >
   <styled.ul
     role="tablist"
@@ -20,7 +21,18 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
         tabSize="medium"
         type="button"
       >
-        Tab 1
+        <Text
+          isInline={true}
+          margins={
+            Object {
+              "left": 0,
+            }
+          }
+          tag="span"
+          type="body"
+        >
+          Tab 1
+        </Text>
       </styled.button>
     </styled.li>
     <styled.li
@@ -36,7 +48,18 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
         tabSize="medium"
         type="button"
       >
-        Tab 2
+        <Text
+          isInline={true}
+          margins={
+            Object {
+              "left": 0,
+            }
+          }
+          tag="span"
+          type="body"
+        >
+          Tab 2
+        </Text>
       </styled.button>
     </styled.li>
     <styled.li
@@ -52,7 +75,18 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
         tabSize="medium"
         type="button"
       >
-        Tab 3
+        <Text
+          isInline={true}
+          margins={
+            Object {
+              "left": 0,
+            }
+          }
+          tag="span"
+          type="body"
+        >
+          Tab 3
+        </Text>
       </styled.button>
     </styled.li>
   </styled.ul>
