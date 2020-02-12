@@ -20,7 +20,6 @@ initialState = {
 #### List of tabs matching the width of the widest tab
 
 ```jsx
-import { FontAwesomeIcon } from '@Domain/Icons';
 
 initialState = {
   openTab: 0,
@@ -28,6 +27,29 @@ initialState = {
     { title: 'One'},
     { title: 'One Two'},
     { title: 'One Two Three'},
+  ]
+};
+
+<BlockTabGroup
+  onTabChange={(tab, index) => {
+    setState({ openTab: index })
+  }}
+  currentTab={state.openTab}
+  tabs={state.tabs}
+  tabSize='match-largest-tab'
+/>
+```
+
+#### List of tabs with icons
+
+```jsx
+import { FontAwesomeIcon } from '@Domain/Icons';
+
+initialState = {
+  openTab: 0,
+  tabs : [
+    { icon: <FontAwesomeIcon icon='grip-vertical' type='solid' />},
+    { icon: <FontAwesomeIcon icon='bars' type='solid' />}
   ]
 };
 
