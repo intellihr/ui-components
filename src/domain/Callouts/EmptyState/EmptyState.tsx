@@ -2,6 +2,7 @@ import { isNil } from 'lodash'
 import React from 'react'
 
 import { Props } from '../../../common/types/props'
+import { MarginEmptyState } from './style'
 
 const style = require('./style.scss')
 
@@ -17,6 +18,8 @@ export interface IEmptyStateProps {
     url: string
     width?: number
   }
+  /** The margins around the component */
+  margins?: Props.IMargins
   /** The data-component-context */
   componentContext?: string
 }
@@ -77,19 +80,20 @@ export class EmptyState extends React.Component<IEmptyStateProps> {
   }
 
   public render (): JSX.Element {
-    const { componentContext, buttonComponent } = this.props
+    const { componentContext, buttonComponent, margins } = this.props
 
     return (
-        <div
-          className={style.ihrEmptyState}
-          data-component-type={Props.ComponentType.EmptyState}
-          data-component-context={componentContext}
-        >
+      <MarginEmptyState
+        className={style.ihrEmptyState}
+        data-component-type={Props.ComponentType.EmptyState}
+        data-component-context={componentContext}
+        margins={margins}
+      >
           {this.primaryMessage}
           {this.secondaryMessage}
           {buttonComponent}
           {this.image}
-        </div>
+      </MarginEmptyState>
       )
     }
 }
