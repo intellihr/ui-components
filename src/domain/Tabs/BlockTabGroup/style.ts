@@ -3,19 +3,21 @@ import styled, { css } from 'styled-components'
 import { Props, Variables } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
 
+type TabSize = 'small' | 'medium' | 'large' | 'fit-content' | 'match-largest-tab'
+
 interface ITabGroupContainerProps {
   margins?: Props.IMargins
-  fitContent?: boolean
+  tabSize?: TabSize
 }
 
 interface ITabListItemProps {
   active: boolean
+  tabWidth?: number
 }
 
 interface ITabListItemButtonProps {
-  active: boolean,
-  tabSize?: 'small' | 'medium' | 'large'
-  fitContent?: boolean
+  active: boolean
+  tabSize?: TabSize
 }
 
 function stylesFortabSizes (props: ITabListItemButtonProps) {
@@ -40,6 +42,11 @@ function stylesFortabSizes (props: ITabListItemButtonProps) {
       padding: 16px 0;
     `
   }
+  if (props.tabSize === 'fit-content' || props.tabSize === 'match-largest-tab') {
+    return css`
+        padding: ${Variables.Spacing.sXSmall}px ${Variables.Spacing.sLarge}px;
+      `
+  }
 }
 
 const TabGroupContainer = styled.div<ITabGroupContainerProps>`
@@ -51,10 +58,14 @@ const TabGroupContainer = styled.div<ITabGroupContainerProps>`
 
   ${({ margins }) => styleForMargins(margins)}
 
-  ${({ fitContent }) => fitContent && css`
-    display: table;
-    width: auto;
-  `}
+  ${({ tabSize }) => {
+    if (tabSize === 'fit-content' || tabSize === 'match-largest-tab') {
+      return css`
+        display: table;
+        width: auto;
+      `
+    }
+  }}
 `
 
 const TabList = styled.ul`
@@ -71,6 +82,11 @@ const TabListItem = styled.li<ITabListItemProps>`
   display: inline-block;
   position: relative;
   width: 100%;
+
+  ${({ tabWidth }) => tabWidth && css`
+    display: table;
+    width: ${tabWidth}px;
+  `}
 
   &:last-child {
     border-right: 0;
@@ -103,8 +119,8 @@ const TabListItemButton = styled.button<ITabListItemButtonProps>`
   text-align: center;
   text-decoration: none;
   transition: background-color .15s ease-in, color .15s ease-in;
-  width: inherit;
-
+  width: 100%;
+  height: 100%;
 
   ${({ active }) => active
     ? css`
@@ -119,10 +135,6 @@ const TabListItemButton = styled.button<ITabListItemButtonProps>`
   `}
 
   ${stylesFortabSizes}
-
-  ${({ fitContent }) => fitContent && css`
-    padding: ${Variables.Spacing.sXSmall}px ${Variables.Spacing.sLarge}px;
-  `}
 `
 
 export {
