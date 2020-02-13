@@ -6,7 +6,6 @@ import {
 import React, { useLayoutEffect, useRef, useState } from 'react'
 
 import { Props, Variables } from '../../../common'
-import { usePrevious } from '../../../common/hooks'
 import { IconValue } from '../../Icons'
 import { Text } from '../../Typographies/Text'
 import {
@@ -61,25 +60,26 @@ const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
   margins
 }) => {
   const [widestTabWidth, setWidestTabLength] = useState<number | undefined>(undefined)
-  const tabListItemRefs = useRef<Array<React.MutableRefObject<HTMLLIElement | null>>>(Array.from({ length: tabs.length }).map(() => React.createRef()))
-
-  const previousTabs = usePrevious(tabs)
-  if (tabSize === 'match-largest-tab' && previousTabs && previousTabs.length !== tabs.length) {
-    tabListItemRefs.current = Array.from({ length: tabs.length }).map(() => React.createRef<HTMLLIElement | null>())
-  }
+  const tabListRef = useRef<HTMLUListElement | null>(null)
 
   useLayoutEffect(() => {
     if (tabSize === 'match-largest-tab') {
       let widestTab = 0
-      tabListItemRefs.current.forEach((tabRef) => {
-        const tabWidth = tabRef.current && tabRef.current.clientWidth || 0
-        if (tabWidth > widestTab) {
-          widestTab = tabWidth
+      const children = tabListRef.current && tabListRef.current.children
+
+      if (children) {
+        // tslint:disable-next-line:prefer-for-of
+        for (let i = 0; i < children.length; i++) {
+          const tabWidth = children[i].clientWidth || 0
+          if (tabWidth > widestTab) {
+            widestTab = tabWidth
+          }
         }
-      })
+      }
+
       setWidestTabLength(widestTab)
     }
-  }, [tabSize, tabListItemRefs.current, setWidestTabLength])
+  })
 
   const handleOnClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     const newTabIndex = toNumber(event.currentTarget.dataset.tabindex || 0)
@@ -92,7 +92,6 @@ const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
   const tabItems = tabs.map((tab, index) => {
     return (
       <TabListItem
-        ref={tabListItemRefs.current[index]}
         key={index}
         role='tab'
         active={currentTabIndex === index}
@@ -124,7 +123,10 @@ const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
       margins={margins}
       tabSize={tabSize}
     >
-      <TabList role='tablist'>
+      <TabList
+        ref={tabListRef}
+        role='tablist'
+      >
         {tabItems}
       </TabList>
     </TabGroupContainer >

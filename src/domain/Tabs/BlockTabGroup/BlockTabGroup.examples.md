@@ -63,6 +63,29 @@ initialState = {
 />
 ```
 
+#### List of tabs with icons and titles
+
+```jsx
+import { FontAwesomeIcon } from '@Domain/Icons';
+
+initialState = {
+  openTab: 0,
+  tabs : [
+    { icon: <FontAwesomeIcon icon='grip-vertical' type='solid' />, title: 'Grid' },
+    { icon: <FontAwesomeIcon icon='bars' type='solid' />, title: 'List'}
+  ]
+};
+
+<BlockTabGroup
+  onTabChange={(tab, index) => {
+    setState({ openTab: index })
+  }}
+  currentTab={state.openTab}
+  tabs={state.tabs}
+  tabSize='match-largest-tab'
+/>
+```
+
 #### List of small tabs
 
 ```jsx
