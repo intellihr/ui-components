@@ -59,25 +59,27 @@ const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
   componentContext,
   margins
 }) => {
-  const [widestTabWidth, setWidestTabLength] = useState<number | undefined>(undefined)
+  const [widestTabWidth, setWidestTabWidth] = useState<number | undefined>(undefined)
   const tabListRef = useRef<HTMLUListElement | null>(null)
 
   useLayoutEffect(() => {
     if (tabSize === 'match-largest-tab') {
-      let widestTab = 0
+      let widestWidth = 0
       const children = tabListRef.current && tabListRef.current.children
 
       if (children) {
         // tslint:disable-next-line:prefer-for-of
         for (let i = 0; i < children.length; i++) {
           const tabWidth = children[i].clientWidth || 0
-          if (tabWidth > widestTab) {
-            widestTab = tabWidth
+          if (tabWidth > widestWidth) {
+            widestWidth = tabWidth
           }
         }
       }
 
-      setWidestTabLength(widestTab)
+      if (widestWidth > 0) {
+        setWidestTabWidth(widestWidth)
+      }
     }
   })
 
