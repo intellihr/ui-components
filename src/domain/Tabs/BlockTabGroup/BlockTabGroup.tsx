@@ -88,36 +88,34 @@ const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
     }
   }
 
-  const renderTabs = () => {
-    return tabs.map((tab, index) => {
-      const currentTabIndex = getCurrentTabIndex(currentTab)
-      return (
-        <TabListItem
-          ref={tabListItemRefs.current[index]}
-          key={index}
-          role='tab'
+  const currentTabIndex = getCurrentTabIndex(currentTab)
+  const tabItems = tabs.map((tab, index) => {
+    return (
+      <TabListItem
+        ref={tabListItemRefs.current[index]}
+        key={index}
+        role='tab'
+        active={currentTabIndex === index}
+        tabWidth={tabSize === 'match-largest-tab' ? widestTabWidth : undefined}
+      >
+        <TabListItemButton
+          type='button'
           active={currentTabIndex === index}
-          tabWidth={tabSize === 'match-largest-tab' ? widestTabWidth : undefined}
+          tabSize={tabSize}
+          onClick={handleOnClick}
+          aria-selected={currentTabIndex === index}
+          data-tabindex={index}
         >
-          <TabListItemButton
-            type='button'
-            active={currentTabIndex === index}
-            tabSize={tabSize}
-            onClick={handleOnClick}
-            aria-selected={currentTabIndex === index}
-            data-tabindex={index}
-          >
-            {tab.icon}
-            {tab.title && (
-              <Text margins={{ left: tab.icon ? Variables.Spacing.sXSmall : 0 }}>
-                {tab.title}
-              </Text>
-            )}
-          </TabListItemButton>
-        </TabListItem>
-      )
-    })
-  }
+          {tab.icon}
+          {tab.title && (
+            <Text margins={{ left: tab.icon ? Variables.Spacing.sXSmall : 0 }}>
+              {tab.title}
+            </Text>
+          )}
+        </TabListItemButton>
+      </TabListItem>
+    )
+  })
 
   return (
     <TabGroupContainer
@@ -127,19 +125,13 @@ const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
       tabSize={tabSize}
     >
       <TabList role='tablist'>
-        {renderTabs()}
+        {tabItems}
       </TabList>
     </TabGroupContainer >
   )
 }
 
-const MemoBlockTabGroup = React.memo(BlockTabGroup, (prevProps, nextProps) => {
-  return prevProps.currentTab === nextProps.currentTab
-    && prevProps.tabSize === nextProps.tabSize
-    && prevProps.onTabChange === nextProps.onTabChange
-    && isEqual(prevProps.tabs, nextProps.tabs)
-    && isEqual(prevProps.margins, nextProps.margins)
-})
+const MemoBlockTabGroup = React.memo(BlockTabGroup, isEqual)
 
 export {
   MemoBlockTabGroup as BlockTabGroup

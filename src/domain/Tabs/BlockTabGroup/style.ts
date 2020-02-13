@@ -85,7 +85,6 @@ const TabListItem = styled.li<ITabListItemProps>`
 
   ${({ tabWidth }) => tabWidth && css`
     display: table;
-    width: auto;
     width: ${tabWidth}px;
   `}
 
