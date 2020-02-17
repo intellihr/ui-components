@@ -2,37 +2,27 @@
 
 exports[`EmptyState Renders default empty state 1`] = `
 <styled.div
-  className="ihr-empty-state"
   data-component-type="empty_state"
 >
-  <div
-    className="ihr-primary-message"
-  >
+  <styled.div>
     Oops... We couldn't find anything for this section.
-  </div>
-  <div
-    className="ihr-secondary-message"
-  >
+  </styled.div>
+  <styled.div>
     Please speak to your system admin or add information.
-  </div>
+  </styled.div>
 </styled.div>
 `;
 
 exports[`EmptyState Renders successfully with both primaryMessage, secondaryMessage and buttonComponent 1`] = `
 <styled.div
-  className="ihr-empty-state"
   data-component-type="empty_state"
 >
-  <div
-    className="ihr-primary-message"
-  >
+  <styled.div>
     This is a primary message
-  </div>
-  <div
-    className="ihr-secondary-message"
-  >
+  </styled.div>
+  <styled.div>
     This is a secondary message
-  </div>
+  </styled.div>
   <LinkButton
     anchorComponentProps={
       Object {
@@ -54,43 +44,32 @@ exports[`EmptyState Renders successfully with both primaryMessage, secondaryMess
 
 exports[`EmptyState Renders successfully with null messages 1`] = `
 <styled.div
-  className="ihr-empty-state"
   data-component-type="empty_state"
 />
 `;
 
 exports[`EmptyState Renders successfully with primaryMessage only 1`] = `
 <styled.div
-  className="ihr-empty-state"
   data-component-type="empty_state"
 >
-  <div
-    className="ihr-primary-message"
-  >
+  <styled.div>
     This is a primary message
-  </div>
-  <div
-    className="ihr-secondary-message"
-  >
+  </styled.div>
+  <styled.div>
     Please speak to your system admin or add information.
-  </div>
+  </styled.div>
 </styled.div>
 `;
 
 exports[`EmptyState Renders successfully with secondaryMessage only 1`] = `
 <styled.div
-  className="ihr-empty-state"
   data-component-type="empty_state"
 >
-  <div
-    className="ihr-primary-message"
-  >
+  <styled.div>
     Oops... We couldn't find anything for this section.
-  </div>
-  <div
-    className="ihr-secondary-message"
-  >
+  </styled.div>
+  <styled.div>
     This is a secondary message
-  </div>
+  </styled.div>
 </styled.div>
 `;

@@ -2,7 +2,7 @@ import { isNil } from 'lodash'
 import React from 'react'
 
 import { Props } from '../../../common/types/props'
-import { StyledEmptyState } from './style'
+import { StyledEmptyState, StyledImage, StyledPrimaryMessage, StyledSecondaryMessage } from './style'
 
 export interface IEmptyStateProps {
   /** The message to be shown in the first line as a title/heading */
@@ -37,9 +37,9 @@ export class EmptyState extends React.Component<IEmptyStateProps> {
 
     if (!isNil(primaryMessage)) {
       return (
-        <div className='ihr-primary-message'>
+        <StyledPrimaryMessage>
           {primaryMessage}
-        </div>
+        </StyledPrimaryMessage>
       )
     }
     return null
@@ -52,9 +52,9 @@ export class EmptyState extends React.Component<IEmptyStateProps> {
 
     if (!isNil(secondaryMessage)) {
       return (
-        <div className='ihr-secondary-message'>
+        <StyledSecondaryMessage>
           {secondaryMessage}
-        </div>
+        </StyledSecondaryMessage>
       )
     }
     return null
@@ -67,8 +67,7 @@ export class EmptyState extends React.Component<IEmptyStateProps> {
 
     if (!isNil(image) && image.url !== '') {
       return (
-        <img
-          className='ihr-image-component'
+        <StyledImage
           src={image.url}
           width={image.width ? image.width : this.defaultImageWith}
         />
@@ -82,7 +81,6 @@ export class EmptyState extends React.Component<IEmptyStateProps> {
 
     return (
       <StyledEmptyState
-        className='ihr-empty-state'
         data-component-type={Props.ComponentType.EmptyState}
         data-component-context={componentContext}
         margins={margins}
