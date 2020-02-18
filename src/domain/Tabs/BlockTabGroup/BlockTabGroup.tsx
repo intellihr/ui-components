@@ -3,12 +3,13 @@ import {
   isNumber,
   toNumber
 } from 'lodash'
-import React, { useLayoutEffect, useRef, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 
 import { Props, Variables } from '../../../common'
 import { IconValue } from '../../Icons'
 import { Text } from '../../Typographies/Text'
 import {
+  HighlightBar,
   TabGroupContainer,
   TabList,
   TabListItem,
@@ -22,7 +23,7 @@ export interface IBlockTab {
   title?: string
 }
 
-type TabSize = 'small' | 'medium' | 'large' | 'fit-content' | 'match-largest-tab'
+type TabSize = 'small' | 'medium' | 'large' | 'match-largest-tab'
 
 export interface IBlockTabGroupProps {
   /** The current tab selected */
@@ -51,6 +52,14 @@ const getCurrentTabIndex = (tabIdentifier?: number | string) => {
   return 0
 }
 
+function usePrevious<T> (value: T) {
+  const ref = useRef<T>()
+  useEffect(() => {
+    ref.current = value
+  })
+  return ref.current
+}
+
 const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
   currentTab,
   tabs,
@@ -59,27 +68,30 @@ const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
   componentContext,
   margins
 }) => {
-  const [widestTabWidth, setWidestTabWidth] = useState<number | undefined>(undefined)
+  const [widestWidth, setWidestWidth] = useState(0)
   const tabListRef = useRef<HTMLUListElement | null>(null)
 
+  const previousWidestWidth = usePrevious(widestWidth)
   useLayoutEffect(() => {
-    if (tabSize === 'match-largest-tab') {
-      let widestWidth = 0
-      const children = tabListRef.current && tabListRef.current.children
+    let currentWidestWidth = 0
+    const children = tabListRef.current && tabListRef.current.children
 
-      if (children) {
-        // tslint:disable-next-line:prefer-for-of
-        for (let i = 0; i < children.length; i++) {
-          const tabWidth = children[i].clientWidth || 0
-          if (tabWidth > widestWidth) {
-            widestWidth = tabWidth
+    if (children) {
+      if (tabSize === 'match-largest-tab') {
+        /** Don't look at the last element because it is the highlight bar, not a tab */
+        for (let i = 0; i < children.length - 1; i++) {
+          const tabWidth = children[i].getBoundingClientRect().width || 0
+          if (tabWidth > currentWidestWidth) {
+            currentWidestWidth = tabWidth
           }
         }
+      } else {
+        currentWidestWidth = children[0].getBoundingClientRect().width
       }
+    }
 
-      if (widestWidth > 0) {
-        setWidestTabWidth(widestWidth)
-      }
+    if ((previousWidestWidth !== currentWidestWidth) && (currentWidestWidth > 0)) {
+      setWidestWidth(currentWidestWidth)
     }
   })
 
@@ -97,7 +109,9 @@ const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
         key={index}
         role='tab'
         active={currentTabIndex === index}
-        tabWidth={tabSize === 'match-largest-tab' ? widestTabWidth : undefined}
+        index={index}
+        widestWidth={widestWidth}
+        tabSize={tabSize}
       >
         <TabListItemButton
           type='button'
@@ -130,6 +144,7 @@ const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
         role='tablist'
       >
         {tabItems}
+        <HighlightBar width={widestWidth + 1} />
       </TabList>
     </TabGroupContainer >
   )

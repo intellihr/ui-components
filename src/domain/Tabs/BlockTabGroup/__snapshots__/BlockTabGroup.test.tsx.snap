@@ -10,8 +10,11 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
   >
     <styled.li
       active={false}
+      index={0}
       key="0"
       role="tab"
+      tabSize="medium"
+      widestWidth={0}
     >
       <styled.button
         active={false}
@@ -37,8 +40,11 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
     </styled.li>
     <styled.li
       active={true}
+      index={1}
       key="1"
       role="tab"
+      tabSize="medium"
+      widestWidth={0}
     >
       <styled.button
         active={true}
@@ -64,8 +70,11 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
     </styled.li>
     <styled.li
       active={false}
+      index={2}
       key="2"
       role="tab"
+      tabSize="medium"
+      widestWidth={0}
     >
       <styled.button
         active={false}
@@ -89,6 +98,9 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
         </Text>
       </styled.button>
     </styled.li>
+    <styled.div
+      width={1}
+    />
   </styled.ul>
 </styled.div>
 `;
