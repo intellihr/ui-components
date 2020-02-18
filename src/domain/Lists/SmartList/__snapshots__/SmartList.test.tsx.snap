@@ -5032,10 +5032,10 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
   color: #424F5C;
   font-size: 18px;
   font-weight: 600;
-  -webkit-letter-spacing: -.02em;
-  -moz-letter-spacing: -.02em;
-  -ms-letter-spacing: -.02em;
-  letter-spacing: -.02em;
+  -webkit-letter-spacing: -0.02em;
+  -moz-letter-spacing: -0.02em;
+  -ms-letter-spacing: -0.02em;
+  letter-spacing: -0.02em;
   line-height: 24px;
   margin-bottom: 8px;
 }
@@ -5687,7 +5687,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
         </GridProvider>
       </Row>
     </div>
-    <EmptyState
+    <Component
       primaryMessage="No Results found."
       secondaryMessage={null}
     >
@@ -5706,20 +5706,19 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
                 "lastClassName": "c4",
                 "rules": Array [
                   "
-   ",
+  ",
                   [Function],
                   "
-
-    background-color: ",
+  background-color: ",
                   "#FAFBFC",
                   ";
-    border-color: ",
+  border-color: ",
                   "#C5CED6",
                   ";
-    border-width: 0;
-    flex-grow: 1;
-    padding: 48px;
-    text-align: center;
+  border-width: 0;
+  flex-grow: 1;
+  padding: 48px;
+  text-align: center;
 ",
                 ],
               },
@@ -5752,20 +5751,20 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
                       "lastClassName": "c5",
                       "rules": Array [
                         "
-    color: ",
+  color: ",
                         "#424F5C",
                         ";
-    font-size: ",
+  font-size: ",
                         "18",
                         "px;
-    font-weight: ",
+  font-weight: ",
                         "600",
                         ";
-    letter-spacing: -.02em;
-    line-height: ",
+  letter-spacing: -0.02em;
+  line-height: ",
                         "24",
                         "px;
-    margin-bottom: ",
+  margin-bottom: ",
                         "8",
                         "px;
 ",
@@ -5794,7 +5793,7 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
           </div>
         </StyledComponent>
       </styled.div>
-    </EmptyState>
+    </Component>
   </div>
 </SmartList>
 `;

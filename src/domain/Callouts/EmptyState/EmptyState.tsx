@@ -22,74 +22,42 @@ export interface IEmptyStateProps {
   componentContext?: string
 }
 
-export class EmptyState extends React.Component<IEmptyStateProps> {
-  public static defaultProps: Partial<IEmptyStateProps> = {
-    primaryMessage: `Oops... We couldn't find anything for this section.`,
-    secondaryMessage: `Please speak to your system admin or add information.`
-  }
+const defaultImageWith = 400
 
-  private defaultImageWith = 400
-
-  get primaryMessage (): JSX.Element | null {
-    const {
-      primaryMessage
-    } = this.props
-
-    if (!isNil(primaryMessage)) {
-      return (
+export const EmptyState: React.FC<IEmptyStateProps>  = ({
+  primaryMessage = `Oops... We couldn't find anything for this section.`,
+  secondaryMessage = `Please speak to your system admin or add information.`,
+  componentContext,
+  buttonComponent,
+  margins,
+  image
+}) => {
+  return (
+    <StyledEmptyState
+      data-component-type={Props.ComponentType.EmptyState}
+      data-component-context={componentContext}
+      margins={margins}
+    >
+      {
+        !isNil(primaryMessage) &&
         <StyledPrimaryMessage>
           {primaryMessage}
         </StyledPrimaryMessage>
-      )
-    }
-    return null
-  }
-
-  get secondaryMessage (): JSX.Element | null {
-    const {
-      secondaryMessage
-    } = this.props
-
-    if (!isNil(secondaryMessage)) {
-      return (
+      }
+      {
+        !isNil(secondaryMessage) &&
         <StyledSecondaryMessage>
           {secondaryMessage}
         </StyledSecondaryMessage>
-      )
-    }
-    return null
-  }
-
-  get image (): JSX.Element | null {
-    const {
-      image
-    } = this.props
-
-    if (!isNil(image) && image.url !== '') {
-      return (
+      }
+      {buttonComponent}
+      {
+        !isNil(image) && image.url !== '' &&
         <StyledImage
           src={image.url}
-          width={image.width ? image.width : this.defaultImageWith}
+          width={image.width ? image.width : defaultImageWith}
         />
-      )
-    }
-    return null
-  }
-
-  public render (): JSX.Element {
-    const { componentContext, buttonComponent, margins } = this.props
-
-    return (
-      <StyledEmptyState
-        data-component-type={Props.ComponentType.EmptyState}
-        data-component-context={componentContext}
-        margins={margins}
-      >
-          {this.primaryMessage}
-          {this.secondaryMessage}
-          {buttonComponent}
-          {this.image}
-      </StyledEmptyState>
-      )
-    }
+      }
+    </StyledEmptyState>
+  )
 }
