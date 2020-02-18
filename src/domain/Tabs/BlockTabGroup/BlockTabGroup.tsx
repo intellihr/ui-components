@@ -40,11 +40,6 @@ export interface IBlockTabGroupProps {
   margins?: Props.IMargins
 }
 
-export interface ITabInfo {
-  index: number
-  width: number
-}
-
 const getCurrentTabIndex = (tabIdentifier?: number | string) => {
   if (!tabIdentifier) {
     return 0
@@ -73,31 +68,30 @@ const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
   componentContext,
   margins
 }) => {
-  const [widestTab, setWidestTab] = useState<ITabInfo | undefined>(undefined)
+  const [widestWidth, setWidestWidth] = useState(0)
   const tabListRef = useRef<HTMLUListElement | null>(null)
 
-  const previousWidestTab = usePrevious(widestTab)
+  const previousWidestWidth = usePrevious(widestWidth)
   useLayoutEffect(() => {
-    let widestWidth = 0
-    let index = 0
+    let currentWidestWidth = 0
     const children = tabListRef.current && tabListRef.current.children
 
     if (children) {
       if (tabSize === 'match-largest-tab') {
+        /** Don't look at the last element because it is the highlight bar, not a tab */
         for (let i = 0; i < children.length - 1; i++) {
           const tabWidth = children[i].getBoundingClientRect().width || 0
-          if (tabWidth > widestWidth) {
-            widestWidth = tabWidth
-            index = i
+          if (tabWidth > currentWidestWidth) {
+            currentWidestWidth = tabWidth
           }
         }
       } else {
-        widestWidth = children[0].getBoundingClientRect().width
+        currentWidestWidth = children[0].getBoundingClientRect().width
       }
     }
 
-    if ((previousWidestTab && previousWidestTab.width) !== widestWidth && widestWidth > 0) {
-      setWidestTab({ index, width: widestWidth })
+    if ((previousWidestWidth !== currentWidestWidth) && (currentWidestWidth > 0)) {
+      setWidestWidth(currentWidestWidth)
     }
   })
 
@@ -116,7 +110,7 @@ const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
         role='tab'
         active={currentTabIndex === index}
         index={index}
-        tabInfo={widestTab || undefined}
+        widestWidth={widestWidth}
         tabSize={tabSize}
       >
         <TabListItemButton
@@ -150,7 +144,7 @@ const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
         role='tablist'
       >
         {tabItems}
-        <HighlightBar width={widestTab && widestTab.width + 1 || 0} />
+        <HighlightBar width={widestWidth + 1} />
       </TabList>
     </TabGroupContainer >
   )

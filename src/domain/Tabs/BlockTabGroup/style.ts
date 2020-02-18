@@ -13,7 +13,7 @@ interface ITabGroupContainerProps {
 interface ITabListItemProps {
   active: boolean
   index: number
-  tabInfo?: { index: number, width: number }
+  widestWidth: number
   tabSize?: TabSize
 }
 
@@ -94,13 +94,13 @@ const TabListItem = styled.li<ITabListItemProps>`
      display: table;
   `}
 
-  ${({ tabSize, tabInfo: tabWidth }) => tabSize === 'match-largest-tab' && tabWidth && css`
-    width: ${tabWidth.width}px;
+  ${({ tabSize, widestWidth }) => tabSize === 'match-largest-tab' && css`
+    width: ${widestWidth}px;
   `}
 
-  ${({ active, index, tabInfo: tabWidth }) => active && css`
+  ${({ active, index, widestWidth }) => active && css`
     & ~ ${HighlightBar} {
-      left: ${(index * (tabWidth && tabWidth.width || 0)) - 1}px;
+      left: ${index * widestWidth - 1}px;
     }
   `}
 `
