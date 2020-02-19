@@ -13,10 +13,12 @@ const style = require('./style.scss')
 interface IDateRangeInputProps {
   /** Name of the HTML input */
   name: string
+  /** Value of the input */
+  value?: { startDate: Moment | null, endDate: Moment | null }
   /** Start Date of the input */
-  startDate: Moment | null
+  startDate?: Moment | null
   /** End Date of the input */
-  endDate: Moment | null
+  endDate?: Moment | null
   /** Placeholder of the start Date */
   startDatePlaceholder?: string
   /** Placeholder of the end Date */
@@ -54,6 +56,7 @@ class DateRangeInput extends React.PureComponent<IDateRangeInputProps, IDateRang
   public render (): JSX.Element {
     const {
       name,
+      value,
       isDisabled,
       isMobile,
       startDate,
@@ -71,9 +74,9 @@ class DateRangeInput extends React.PureComponent<IDateRangeInputProps, IDateRang
         <DateRangePicker
           block
           startDateId={`${name}-start`}
-          startDate={startDate}
+          startDate={value ? value.startDate : (startDate ? startDate : null)}
           endDateId={`${name}-end`}
-          endDate={endDate}
+          endDate={value ? value.endDate : (endDate ? endDate : null)}
           startDatePlaceholderText={startDatePlaceholder || dateFormat}
           endDatePlaceholderText={endDatePlaceholder || dateFormat}
           displayFormat={dateFormat}
