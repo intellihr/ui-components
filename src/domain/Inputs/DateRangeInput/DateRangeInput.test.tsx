@@ -7,7 +7,21 @@ import { DateRangeInput } from './DateRangeInput'
 const dummyClick = (dates: {startDate: Moment | null, endDate: Moment | null}) => console.log(dates)
 
 describe('<DateRangeInput />', () => {
-  it('should render a date range input', () => {
+  it('should render a date range input with value', () => {
+    const wrapper = shallow(
+      <DateRangeInput
+        name='test-date-picker1'
+        value={{ startDate: moment('2018-12-31T14:00:00+00:00'), endDate: moment('2019-12-31T14:00:00+00:00')}}
+        startDatePlaceholder='Start Date'
+        endDatePlaceholder='End Date'
+        onChange={dummyClick}
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should render a date range input with startDate and endDate', () => {
     const wrapper = shallow(
       <DateRangeInput
         name='test-date-picker1'

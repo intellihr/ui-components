@@ -3,14 +3,18 @@
 exports[`<BlockTabGroup /> Standard tabs with current index should match the snapshot 1`] = `
 <styled.div
   data-component-type="block_tab_group"
+  tabSize="medium"
 >
   <styled.ul
     role="tablist"
   >
     <styled.li
       active={false}
+      index={0}
       key="0"
       role="tab"
+      tabSize="medium"
+      widestWidth={0}
     >
       <styled.button
         active={false}
@@ -20,13 +24,27 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
         tabSize="medium"
         type="button"
       >
-        Tab 1
+        <Text
+          isInline={true}
+          margins={
+            Object {
+              "left": 0,
+            }
+          }
+          tag="span"
+          type="body"
+        >
+          Tab 1
+        </Text>
       </styled.button>
     </styled.li>
     <styled.li
       active={true}
+      index={1}
       key="1"
       role="tab"
+      tabSize="medium"
+      widestWidth={0}
     >
       <styled.button
         active={true}
@@ -36,13 +54,27 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
         tabSize="medium"
         type="button"
       >
-        Tab 2
+        <Text
+          isInline={true}
+          margins={
+            Object {
+              "left": 0,
+            }
+          }
+          tag="span"
+          type="body"
+        >
+          Tab 2
+        </Text>
       </styled.button>
     </styled.li>
     <styled.li
       active={false}
+      index={2}
       key="2"
       role="tab"
+      tabSize="medium"
+      widestWidth={0}
     >
       <styled.button
         active={false}
@@ -52,9 +84,23 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
         tabSize="medium"
         type="button"
       >
-        Tab 3
+        <Text
+          isInline={true}
+          margins={
+            Object {
+              "left": 0,
+            }
+          }
+          tag="span"
+          type="body"
+        >
+          Tab 3
+        </Text>
       </styled.button>
     </styled.li>
+    <styled.div
+      width={1}
+    />
   </styled.ul>
 </styled.div>
 `;
