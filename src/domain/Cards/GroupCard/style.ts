@@ -21,11 +21,14 @@ interface IStyledGroupMainCardProps {
   hasHoverStyle: boolean
   margins?: Props.IMargins
   color: CardColors
+  hasClickHandler: boolean
 }
 
 interface IStyledGroupCardToggleButtonProps {
   isExpanded: boolean
+  hasParentHoverStyle: boolean
   color: CardColors
+  hasClickHandler: boolean
 }
 
 interface IStyledGroupCardProps {
@@ -35,6 +38,7 @@ interface IStyledGroupCardProps {
 
 interface IStyledBodyContentProps {
   color: CardColors
+  hasHoverStyle: boolean
 }
 
 const StyledGroupCard = styled.div`
@@ -49,6 +53,7 @@ const StyledGroupMainCard = styled.div`
   padding: ${Variables.Spacing.sMedium}px;
   border: 1px solid ${(props: IStyledGroupMainCardProps) => colorOptions[props.color].border};
   border-radius: ${Variables.Style.borderRadius}px;
+  width: 100%;
 
   ${(props: IStyledGroupMainCardProps) => props.hasHoverStyle && css`
       cursor: pointer;
@@ -62,6 +67,12 @@ const StyledGroupMainCard = styled.div`
   ${(props: IStyledGroupMainCardProps) => props.isExpanded && css`
       border-radius: ${Variables.Style.borderRadius}px ${Variables.Style.borderRadius}px 0 0;
   `}
+
+  ${(props: IStyledGroupMainCardProps) => props.hasClickHandler && css`
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  `}
 `
 
 const StyledGroupCardToggleButton = styled.button<IStyledGroupCardToggleButtonProps>`
@@ -73,14 +84,18 @@ const StyledGroupCardToggleButton = styled.button<IStyledGroupCardToggleButtonPr
       transition: all .25s ease-out;
   `}
 
-  ${StyledGroupMainCard}:hover & {
-    color: ${Variables.Color.n800};
-    background-color: ${(props: IStyledGroupCardToggleButtonProps) => colorOptions[props.color].hoverButtonBackground};
-    transition: all .25s ease-out;
-  }
+  ${(props: IStyledGroupCardToggleButtonProps) => props.hasParentHoverStyle && !props.hasClickHandler && css`
+    ${StyledGroupMainCard}:hover & {
+      color: ${Variables.Color.n800};
+      background-color: ${colorOptions[props.color].hoverButtonBackground};
+      transition: all .25s ease-out;
+    }
+  `}
 
   ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
-    display: none;
+    ${(props: IStyledGroupCardToggleButtonProps) => !props.hasClickHandler && css`
+      display: none;
+    `}
   }
 `
 
@@ -119,15 +134,57 @@ const StyledBodyContent = styled.div`
   border-bottom: 1px solid ${Variables.Color.n250};
   padding: ${Variables.Spacing.sLarge}px;
 
+  ${(props: IStyledBodyContentProps) => props.hasHoverStyle && css`
+    cursor: pointer;
+
+    &:hover {
+      background-color: ${colorOptions[props.color].hoverBackground};
+    }
+  `}
+
   :last-child {
     border-bottom: 0;
   }
 `
+
+interface IStyledExpandableButtonSectionProps {
+  isExpanded: boolean
+  color: CardColors
+}
+
+const StyledExpandableButtonSection = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 0 ${Variables.Spacing.sMedium}px 0 ${Variables.Spacing.sMedium}px;
+  border: 1px solid ${Variables.Color.n250};
+  border-top-right-radius: ${Variables.Style.borderRadius}px;
+  border-bottom-right-radius: ${Variables.Style.borderRadius}px;
+  cursor: pointer;
+
+  ${(props: IStyledExpandableButtonSectionProps) => css`
+    &:hover  {
+      color: ${Variables.Color.n800};
+      background-color: ${colorOptions[props.color].hoverBackground};
+      transition: background-color .25s ease-out;
+    }
+  `}
+
+  ${(props: IStyledExpandableButtonSectionProps) => props.isExpanded && css`
+    border-bottom-right-radius: 0;
+  `}
+`
+
+const StyledHeaderContainer = styled.div`
+  display: flex;
+`
+
 export {
   StyledGroupMainCard,
   StyledGroupExtraCard,
   StyledBodyActionButton,
   StyledGroupCardToggleButton,
   StyledGroupCard,
-  StyledBodyContent
+  StyledBodyContent,
+  StyledExpandableButtonSection,
+  StyledHeaderContainer
 }

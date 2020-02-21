@@ -16,6 +16,7 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
     {state.allCards ? 'Collapse All' : 'Expand All'}
   </Button>
   <GroupCard
+    handleClick={() => alert('click handler called')}
     dropdownSections= {[
         {
           text: 'homepage',
@@ -53,6 +54,7 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
     }
     bodyContents= {[
       {
+        handleClick: () => alert('click handler called'),
         dropdownSections: [
                 {
                   text: 'homepage',

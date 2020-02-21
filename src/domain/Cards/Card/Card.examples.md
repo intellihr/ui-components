@@ -1,16 +1,9 @@
 #### Simple card
-
 ```jsx
-import { Button } from '@Domain/Buttons';
-
-<Card
-  margins={{bottom: 8}}
-  mainContent= {<>I'm a card</>}
-/>
+<Card mainContent="I'm a card (✿◠‿◠)" />
 ```
 
 #### Card with click-through
-
 ```jsx
 import { GridLayout } from '@Domain/Layouts';
 import { Variables } from '@Common';
@@ -42,18 +35,12 @@ import { Text } from '@Domain/Typographies';
 ```
 
 #### Card with actions
-
 ```jsx
-import { GridLayout } from '@Domain/Layouts';
-import { Variables } from '@Common';
-
-const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
-
 <Card
-  isExpanded= {state.cardWithOutExpand}
+  mainContent="I'm a card with actions! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧"
   dropdownSections= {[
     {
-      text: 'google',
+      text: 'Update',
       href: 'https://www.google.com.au',
       stopPropagation: true
     },
@@ -64,53 +51,14 @@ const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
       stopPropagation: true
     }
   ]}
-  mainContent= {
-    <GridLayout
-      gutterPaddingX={Variables.Spacing.sSmall}
-      gutterPaddingY={Variables.Spacing.sSmall}
-      cells={[
-        {
-          size: 6,
-          content: text
-        },
-        {
-          size: 6,
-          content: text
-        }
-      ]}
-    />
-  }
 />
 ```
 
 #### Card with expansion
-
 ```jsx
-import { GridLayout } from '@Domain/Layouts';
-import { Variables } from '@Common';
-
-const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
-
 <Card
-  mainContent= {
-    <GridLayout
-      gutterPaddingX={Variables.Spacing.sSmall}
-      gutterPaddingY={Variables.Spacing.sSmall}
-      cells={[
-        {
-          size: 6,
-          content: text
-        },
-        {
-          size: 6,
-          content: text
-        }
-      ]}
-    />
-  }
-  extraContent={
-    <div>{text}</div>
-  } 
+  mainContent="I'm a card than can expand!"
+  extraContent="(◕‿-)" 
 />
 ```
 

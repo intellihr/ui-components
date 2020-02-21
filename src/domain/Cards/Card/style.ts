@@ -96,6 +96,7 @@ const StyledExpandableButtonSection = styled.div`
     &:hover  {
       color: ${Variables.Color.n800};
       background-color: ${colorOptions[props.color].hoverBackground};
+      transition: background-color .25s ease-out;
     }
   `}
 
