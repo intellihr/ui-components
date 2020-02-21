@@ -24,6 +24,7 @@ interface IStyledCardToggleButtonProps {
   isExpanded: boolean,
   hasParentHoverStyle: boolean
   color: CardColors
+  hasClickHandler?: boolean
 }
 
 interface IStyleActionButtonProps {
@@ -35,6 +36,8 @@ interface IStyledCardHeader {
   isExpanded: boolean
   hasHoverStyle: boolean
   color: CardColors
+  hasClickHandler?: boolean
+  expandable: boolean
 }
 
 const StyledCard = styled.div`
@@ -44,10 +47,16 @@ const StyledCard = styled.div`
 
   background-color: ${(props: IStyledCardProps) => colorOptions[props.color].background};
 `
+
+const StyledHeaderContainer = styled.div`
+  display: flex;
+`
+
 const StyledCardHeader = styled(StyledFlexContent)`
   padding: ${Variables.Spacing.sMedium}px;
   border: 1px solid ${(props: IStyledCardHeader) => colorOptions[props.color].border};
   border-radius: ${Variables.Style.borderRadius}px;
+  width: 100%;
 
   ${(props: IStyledCardHeader) => props.hasHoverStyle && css`
       cursor: pointer;
@@ -61,6 +70,38 @@ const StyledCardHeader = styled(StyledFlexContent)`
   ${(props: IStyledCardHeader) => props.isExpanded && css`
       border-radius: ${Variables.Style.borderRadius}px ${Variables.Style.borderRadius}px 0 0;
   `}
+
+  ${(props: IStyledCardHeader) => props.hasClickHandler && props.expandable && css`
+      border-right: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+  `}
+`
+
+interface IStyledExpandableButtonSectionProps {
+  isExpanded: boolean
+  color: CardColors
+}
+
+const StyledExpandableButtonSection = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 0 ${Variables.Spacing.sMedium}px 0 ${Variables.Spacing.sMedium}px;
+  border: 1px solid ${Variables.Color.n250};
+  border-top-right-radius: ${Variables.Style.borderRadius}px;
+  border-bottom-right-radius: ${Variables.Style.borderRadius}px;
+  cursor: pointer;
+
+  ${(props: IStyledExpandableButtonSectionProps) => css`
+    &:hover  {
+      color: ${Variables.Color.n800};
+      background-color: ${colorOptions[props.color].hoverBackground};
+    }
+  `}
+
+  ${(props: IStyledExpandableButtonSectionProps) => props.isExpanded && css`
+    border-bottom-right-radius: 0;
+  `}
 `
 
 const StyledCardToggleButton = styled.button`
@@ -72,7 +113,7 @@ const StyledCardToggleButton = styled.button`
       transition: all .25s ease-out;
   `}
 
-  ${(props: IStyledCardToggleButtonProps) => props.hasParentHoverStyle && css`
+  ${(props: IStyledCardToggleButtonProps) => props.hasParentHoverStyle && !props.hasClickHandler && css`
     ${StyledCard}:hover & {
       color: ${Variables.Color.n800};
       background-color: ${colorOptions[props.color].hoverButtonBackground};
@@ -80,7 +121,9 @@ const StyledCardToggleButton = styled.button`
   `}
 
   ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
-    display: none;
+    ${(props: IStyledCardToggleButtonProps) => !props.hasClickHandler && css`
+      display: none;
+    `}
   }
 `
 
@@ -128,5 +171,7 @@ export {
   StyledCardHeader,
   StyledExtraContent,
   StyledActionButton,
-  StyledCardToggleButton
+  StyledCardToggleButton,
+  StyledExpandableButtonSection,
+  StyledHeaderContainer
 }

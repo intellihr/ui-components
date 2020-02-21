@@ -5,34 +5,38 @@ exports[`<Card /> should render a card with dropdownSections only 1`] = `
   color="neutral"
   data-component-type="card"
 >
-  <Styled(styled.div)
-    color="neutral"
-    hasHoverStyle={true}
-    isExpanded={false}
-    onClick={[Function]}
-  >
-    <styled.div>
-      <div>
-        test2
-      </div>
-    </styled.div>
-    <DropdownMenu
-      hasInitialFocus={false}
-      sections={
-        Array [
-          Object {
-            "href": "https://www.google.com.au",
-            "text": "action1",
-          },
-          Object {
-            "href": "https://www.google.com.au",
-            "text": "action2",
-          },
-        ]
-      }
-      toggleComponent={[Function]}
-    />
-  </Styled(styled.div)>
+  <styled.div>
+    <Styled(styled.div)
+      color="neutral"
+      expandable={false}
+      hasClickHandler={false}
+      hasHoverStyle={true}
+      isExpanded={false}
+      onClick={[Function]}
+    >
+      <styled.div>
+        <div>
+          test2
+        </div>
+      </styled.div>
+      <DropdownMenu
+        hasInitialFocus={false}
+        sections={
+          Array [
+            Object {
+              "href": "https://www.google.com.au",
+              "text": "action1",
+            },
+            Object {
+              "href": "https://www.google.com.au",
+              "text": "action2",
+            },
+          ]
+        }
+        toggleComponent={[Function]}
+      />
+    </Styled(styled.div)>
+  </styled.div>
 </styled.div>
 `;
 
@@ -41,46 +45,51 @@ exports[`<Card /> should render a card with main content and dropdownSections  1
   color="neutral"
   data-component-type="card"
 >
-  <Styled(styled.div)
-    color="neutral"
-    hasHoverStyle={true}
-    isExpanded={false}
-    onClick={[Function]}
-  >
-    <styled.div>
-      <div>
-        test2
-      </div>
-    </styled.div>
-    <DropdownMenu
-      hasInitialFocus={false}
-      sections={
-        Array [
-          Object {
-            "href": "https://www.google.com.au",
-            "text": "action1",
-          },
-          Object {
-            "href": "https://www.google.com.au",
-            "text": "action2",
-          },
-        ]
-      }
-      toggleComponent={[Function]}
-    />
-    <styled.button
+  <styled.div>
+    <Styled(styled.div)
       color="neutral"
-      hasParentHoverStyle={true}
+      expandable={true}
+      hasClickHandler={false}
+      hasHoverStyle={true}
       isExpanded={false}
+      onClick={[Function]}
     >
-      <styled.span>
-        <Memo(FontAwesomeIcon)
-          icon="chevron-down"
-          type="solid"
-        />
-      </styled.span>
-    </styled.button>
-  </Styled(styled.div)>
+      <styled.div>
+        <div>
+          test2
+        </div>
+      </styled.div>
+      <DropdownMenu
+        hasInitialFocus={false}
+        sections={
+          Array [
+            Object {
+              "href": "https://www.google.com.au",
+              "text": "action1",
+            },
+            Object {
+              "href": "https://www.google.com.au",
+              "text": "action2",
+            },
+          ]
+        }
+        toggleComponent={[Function]}
+      />
+      <styled.button
+        color="neutral"
+        hasClickHandler={false}
+        hasParentHoverStyle={true}
+        isExpanded={false}
+      >
+        <styled.span>
+          <Memo(FontAwesomeIcon)
+            icon="chevron-down"
+            type="solid"
+          />
+        </styled.span>
+      </styled.button>
+    </Styled(styled.div)>
+  </styled.div>
   <styled.div
     color="neutral"
     isExpanded={false}
@@ -99,30 +108,35 @@ exports[`<Card /> should render a card with main content only 1`] = `
   color="neutral"
   data-component-type="card"
 >
-  <Styled(styled.div)
-    color="neutral"
-    hasHoverStyle={true}
-    isExpanded={false}
-    onClick={[Function]}
-  >
-    <styled.div>
-      <div>
-        test2
-      </div>
-    </styled.div>
-    <styled.button
+  <styled.div>
+    <Styled(styled.div)
       color="neutral"
-      hasParentHoverStyle={true}
+      expandable={true}
+      hasClickHandler={false}
+      hasHoverStyle={true}
       isExpanded={false}
+      onClick={[Function]}
     >
-      <styled.span>
-        <Memo(FontAwesomeIcon)
-          icon="chevron-down"
-          type="solid"
-        />
-      </styled.span>
-    </styled.button>
-  </Styled(styled.div)>
+      <styled.div>
+        <div>
+          test2
+        </div>
+      </styled.div>
+      <styled.button
+        color="neutral"
+        hasClickHandler={false}
+        hasParentHoverStyle={true}
+        isExpanded={false}
+      >
+        <styled.span>
+          <Memo(FontAwesomeIcon)
+            icon="chevron-down"
+            type="solid"
+          />
+        </styled.span>
+      </styled.button>
+    </Styled(styled.div)>
+  </styled.div>
   <styled.div
     color="neutral"
     isExpanded={false}
@@ -141,17 +155,21 @@ exports[`<Card /> should render a card without main content and dropdownSections
   color="neutral"
   data-component-type="card"
 >
-  <Styled(styled.div)
-    color="neutral"
-    hasHoverStyle={true}
-    isExpanded={false}
-    onClick={[Function]}
-  >
-    <styled.div>
-      <div>
-        test2
-      </div>
-    </styled.div>
-  </Styled(styled.div)>
+  <styled.div>
+    <Styled(styled.div)
+      color="neutral"
+      expandable={false}
+      hasClickHandler={false}
+      hasHoverStyle={true}
+      isExpanded={false}
+      onClick={[Function]}
+    >
+      <styled.div>
+        <div>
+          test2
+        </div>
+      </styled.div>
+    </Styled(styled.div)>
+  </styled.div>
 </styled.div>
 `;
