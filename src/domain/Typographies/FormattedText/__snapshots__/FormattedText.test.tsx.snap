@@ -492,6 +492,10 @@ Ordered/multi-level lists:
                                 [Function],
                                 "
 
+  ",
+                                [Function],
+                                "
+
   &,
   &:link,
   &:visited {
@@ -614,6 +618,10 @@ Ordered/multi-level lists:
                                 "
   transition: color .25s ease-out;
   cursor: pointer;
+
+  ",
+                                [Function],
+                                "
 
   ",
                                 [Function],
@@ -1533,6 +1541,10 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
                                 "
   transition: color .25s ease-out;
   cursor: pointer;
+
+  ",
+                                [Function],
+                                "
 
   ",
                                 [Function],

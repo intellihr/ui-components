@@ -3,12 +3,18 @@ import styled, { StyledFunction, css } from 'styled-components'
 
 import { Props, Variables } from '../../../common'
 import { Anchor, IAnchorProps } from '../../Internals/Anchor'
+import { styleForMargins } from '../../Spacers/services/margins'
 import { styleForTypographyType } from '../../Typographies/services/textStyles'
 
 interface ITextLinkCommonProps {
+  /** Specify the type of text to use */
   textType?: Props.TypographyType
+  /** If true, will display the text link inline */
   isInline?: boolean
+  /** If true, will underline the link on hover */
   underlineOnHover?: boolean
+  /** The margins around the component */
+  margins?: Props.IMargins
 }
 
 interface ITextLinkAnchorProps extends IAnchorProps, ITextLinkCommonProps {
@@ -30,11 +36,29 @@ const TextLinkStyles = css`
 
   ${(props: ITextLinkCommonProps) => styleForTypographyType(props.textType)}
 
-  ${
-  ({ isInline }: ITextLinkCommonProps) => css`
-      display: ${isInline && 'inline' || 'block'};
+  ${(props: ITextLinkCommonProps) => {
+    return css`
+      ${styleForMargins(props.margins)}
     `
-  }
+  }}
+
+  ${(props: ITextLinkCommonProps) => {
+    if (props.margins) {
+      return css`
+        display: inline-block;
+      `
+    }
+
+    if (props.isInline) {
+      return css`
+        display: inline;
+      `
+    }
+
+    return css`
+      display: block;
+    `
+  }}
 
   &,
   &:link,
@@ -81,7 +105,8 @@ class TextLink<P> extends React.PureComponent<P & ITextLinkProps> {
         isInline,
         onClick,
         textType,
-        underlineOnHover
+        underlineOnHover,
+        margins
       } = this.props
 
       return (
@@ -91,6 +116,7 @@ class TextLink<P> extends React.PureComponent<P & ITextLinkProps> {
           isInline={isInline}
           underlineOnHover={underlineOnHover}
           onClick={onClick}
+          margins={margins}
         >
           {children}
         </StyledTextButton>
