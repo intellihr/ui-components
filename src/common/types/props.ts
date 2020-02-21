@@ -65,6 +65,7 @@ namespace Props {
     AnnotatedSection = 'annotated_section',
     AsyncDataTable = 'async_data_table',
     AvatarGroup = 'avatar_group',
+    AvatarTile = 'avatar_tile',
     BlockTabGroup = 'block_tab_group',
     Board = 'board',
     Breadcrumb = 'breadcrumb',
