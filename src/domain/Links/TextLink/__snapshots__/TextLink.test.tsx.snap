@@ -62,6 +62,10 @@ exports[`<TextLink /> should render a text link 1`] = `
               [Function],
               "
 
+  ",
+              [Function],
+              "
+
   &,
   &:link,
   &:visited {
@@ -191,6 +195,10 @@ exports[`<TextLink /> should render a text link button 1`] = `
               [Function],
               "
 
+  ",
+              [Function],
+              "
+
   &,
   &:link,
   &:visited {
@@ -298,6 +306,10 @@ exports[`<TextLink /> should render a text link with display block 1`] = `
               "
   transition: color .25s ease-out;
   cursor: pointer;
+
+  ",
+              [Function],
+              "
 
   ",
               [Function],
@@ -432,6 +444,10 @@ exports[`<TextLink /> should render a text link with underline on hover 1`] = `
               "
   transition: color .25s ease-out;
   cursor: pointer;
+
+  ",
+              [Function],
+              "
 
   ",
               [Function],
