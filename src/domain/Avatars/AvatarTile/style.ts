@@ -4,27 +4,23 @@ import { Props, Variables } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
 import { styleForTruncatedText, styleForTypographyType } from '../../Typographies/services/textStyles'
 
-export interface IAvatarTile {
+interface IAvatarTile {
   hovered: boolean
 }
 
-export interface IStyledContainer extends IAvatarTile {
+interface IStyledContainer extends IAvatarTile {
   onMouseEnter: () => void
   onMouseLeave: () => void
   margins?: Props.IMargins
   displayStatusBanner: boolean
 }
 
-export interface IStyledStatusBanner extends IAvatarTile {
+interface IStyledStatusBanner extends IAvatarTile {
   statusColor?: 'primary' | 'secondary' | 'success' | 'warning' | 'alert' | 'neutral' | 'highlight' | 'dark'
 }
 
-export interface IStyledDropdownMenu {
+interface IStyledDropdownMenu {
   displayStatusBanner: boolean
-}
-
-export interface IStyledJobNameContainer {
-  displayJobCount: boolean
 }
 
 const StyledStatusBanner = styled.div`
@@ -38,7 +34,7 @@ const StyledStatusBanner = styled.div`
   align-items: center;
   justify-content: center;
 
-  transition: ease-in .2s;
+  transition: ease-in 0.15s;
   transform: translateY(-30px);
 
   ${(props: IStyledStatusBanner) => {
@@ -129,7 +125,7 @@ const StyledAvatarContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: ease-in .2s;
+  transition: ease-in 0.15s;
   pointer-events: none;
   margin-top: 55px;
   margin-bottom: 4px;
@@ -139,11 +135,11 @@ const StyledTitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: ease-in .2s;
+  transition: ease-in 0.15s;
   pointer-events: none;
 `
 
-const StyledPersonNameContainer = styled.span`
+const StyledPrimaryTextContainer = styled.span`
   max-width: 220px;
   font-weight: ${Variables.FontWeight.fwSemiBold};
   color: ${Variables.Color.n800};
@@ -153,37 +149,31 @@ const StyledPersonNameContainer = styled.span`
     if (props.hovered) {
       return css`
         ${styleForTypographyType(Props.TypographyType.Small)}
-        transition: ease-out .15s;
+        transition: ease-out 0.2s;
       `
     }
 
     return css`
       ${styleForTypographyType(Props.TypographyType.Body)}
-      transition: ease-in 0.2s;
+      transition: ease-in 0.15s;
     `
   }}
 `
 
-const StyledJobContainer = styled.div`
+const StyledSecondaryContainer = styled.div`
   max-width: 220px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  min-height: ${Variables.LineHeight.lhXSmall}px;
 `
 
-const StyledJobNameContainer = styled.span`
+const StyledSecondaryTextContainer = styled.span`
   display: block;
+  flex: 1 0 0;
   color: ${Variables.Color.n800};
   ${styleForTypographyType(Props.TypographyType.XSmall)}
   ${styleForTruncatedText()}
-
-  ${(props: IStyledJobNameContainer) => {
-    if (props.displayJobCount) {
-      return css`
-        max-width: 185px;
-      `
-    }
-  }}
 `
 
 const StyledActionArea = styled.div`
@@ -209,7 +199,7 @@ const StyledActionArea = styled.div`
 const StyledContentContainer = styled.div`
   height: 116px;
   padding: 16px;
-  transition: ease-in .2s;
+  transition: ease-in 0.15s;
   transform: translateY(70px);
 `
 
@@ -219,7 +209,7 @@ const StyledContainer = styled.div`
   width: 260px;
   height: 278px;
   border-radius: 8px;
-  transition: ease-in 0.2s;
+  transition: ease-in 0.15s;
   overflow: hidden;
 
   ${(props: IStyledContainer) => styleForMargins(props.margins)}
@@ -229,22 +219,22 @@ const StyledContainer = styled.div`
       return css`
         ${StyledStatusBanner} {
           transform: translateY(0px);
-          transition: ease-out .15s;
+          transition: ease-out 0.2s;
         }
 
         ${StyledContentContainer} {
           transform: translateY(-60px);
-          transition: ease-out .15s;
+          transition: ease-out 0.2s;
         }
 
         ${StyledAvatarContainer} {
           transform: scale(0.6) translateY(-80px);
-          transition: ease-out 0.15s;
+          transition: ease-out 0.2s;
         }
 
         ${StyledTitleContainer} {
           transform: translateY(-74px);
-          transition: ease-out 0.15s;
+          transition: ease-out 0.2s;
         }
       `
     }
@@ -271,9 +261,9 @@ export {
   StyledDropdownButton,
   StyledAvatarContainer,
   StyledTitleContainer,
-  StyledPersonNameContainer,
-  StyledJobContainer,
-  StyledJobNameContainer,
+  StyledPrimaryTextContainer,
+  StyledSecondaryContainer,
+  StyledSecondaryTextContainer,
   StyledActionArea,
   StyledContentContainer,
   StyledContainer

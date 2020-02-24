@@ -5,8 +5,7 @@ import { FontAwesomeIcon } from '../../Icons'
 import { Anchor } from '../../Internals'
 import { DropdownMenu, IDropdownMenuToggleComponentProps } from '../../Popovers/DropdownMenu'
 import { ISectionProps } from '../../Popovers/DropdownMenu/subcomponents/Section'
-import { Brick, Text } from '../../Typographies'
-import { BrickColor } from '../../Typographies/Brick/style'
+import { Text } from '../../Typographies'
 import { Avatar } from '../Avatar'
 import {
   StyledActionArea,
@@ -15,45 +14,45 @@ import {
   StyledContentContainer,
   StyledDropdownButton,
   StyledDropdownMenu,
-  StyledJobContainer,
-  StyledJobNameContainer,
-  StyledPersonNameContainer,
+  StyledSecondaryContainer,
+  StyledSecondaryTextContainer,
+  StyledPrimaryTextContainer,
   StyledStatusBanner,
   StyledTitleContainer
 } from './style'
 
 interface IAvatarTileProps {
-  /** The display name of the person */
-  displayName: string
-  /** The job name of the person */
-  jobName: string
+  /** The primary text */
+  primaryText: string
+  /** The secondary text */
+  secondaryText?: string
+  /** The component to display to the right of the secondary text */
+  secondaryRightElement?: JSX.Element
   /** Initials to display if no valid `imageUrl` is provided */
   initials?: string
-  /** If number of jobs is greater than 1, brick with additional job information will be displayed */
-  numberOfJobs?: number
   /** Image URL for the avatar */
   imageUrl?: string
-  /** dropdown sections to show in the cards action button dropdown */
+  /** dropdown sections to show in the action button dropdown */
   dropdownSections?: ISectionProps[]
-  /** The url to navigate to when clicking the top half of the card */
+  /** The url to navigate to when clicking the top half of the tile */
   href?: string
-  /** The colour of the status if one is to be displayed */
+  /** The colour of the status, if one is to be displayed */
   statusColor?: 'primary' | 'secondary' | 'success' | 'warning' | 'alert' | 'neutral' | 'highlight' | 'dark'
   /** Text to describe the status */
   statusText?: string
   /** The margins around the component */
   margins?: Props.IMargins
-  /** Children to render beneath the avatar */
+  /** Children to render beneath the avatar on hover */
   children?: React.ReactNode
   /** The data-component-context */
   componentContext?: string
 }
 
 const AvatarTile: React.FC<IAvatarTileProps> = ({
-  displayName,
+  primaryText,
   initials,
-  jobName,
-  numberOfJobs,
+  secondaryText,
+  secondaryRightElement,
   imageUrl,
   dropdownSections,
   href,
@@ -64,11 +63,10 @@ const AvatarTile: React.FC<IAvatarTileProps> = ({
   componentContext
 }) => {
   const [hovered, setHovered] = useState(false)
-  const set = () => setHovered(true)
-  const unSet = () => setHovered(false)
+  const onMouseEnter = () => setHovered(true)
+  const onMouseLeave = () => setHovered(false)
 
   const displayStatusBanner = !!statusColor && !!statusText
-  const displayJobCount = !!numberOfJobs && numberOfJobs > 1
 
   const actionButton = ({ toggleMenu, toggleComponentRef, ariaProps }: IDropdownMenuToggleComponentProps) => (
     <StyledDropdownButton
@@ -135,28 +133,10 @@ const AvatarTile: React.FC<IAvatarTileProps> = ({
     return null
   }
 
-  const jobCountBrick = (): JSX.Element | null => {
-    if (displayJobCount) {
-      return (
-        <Brick
-          typographyType={Props.TypographyType.XSmall}
-          margins={{
-            left: 4
-          }}
-          color={BrickColor.Dark}
-        >
-          + {numberOfJobs! - 1}
-        </Brick>
-      )
-    }
-
-    return null
-  }
-
   return (
     <StyledContainer
-      onMouseEnter={set}
-      onMouseLeave={unSet}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
       hovered={hovered}
       margins={margins}
       displayStatusBanner={displayStatusBanner}
@@ -175,15 +155,15 @@ const AvatarTile: React.FC<IAvatarTileProps> = ({
         />
       </StyledAvatarContainer>
       <StyledTitleContainer>
-        <StyledPersonNameContainer hovered={hovered}>
-          {displayName}
-        </StyledPersonNameContainer>
-        <StyledJobContainer>
-          <StyledJobNameContainer displayJobCount={displayJobCount}>
-            {jobName}
-          </StyledJobNameContainer>
-          {jobCountBrick()}
-        </StyledJobContainer>
+        <StyledPrimaryTextContainer hovered={hovered}>
+          {primaryText}
+        </StyledPrimaryTextContainer>
+        <StyledSecondaryContainer>
+          <StyledSecondaryTextContainer>
+            {secondaryText}
+          </StyledSecondaryTextContainer>
+          {secondaryRightElement}
+        </StyledSecondaryContainer>
       </StyledTitleContainer>
       <StyledContentContainer>
         {children}

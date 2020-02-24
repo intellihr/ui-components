@@ -2,7 +2,8 @@
 
 ```jsx
   import { Props, Variables } from '@Common';
-  import { Text } from '@Domain/Typographies';
+  import { Brick, Text } from '@Domain/Typographies';
+  import { BrickColor } from '@Domain/Typographies/Brick/style';
   import { UnstyledLink } from '@Domain/Links';
 
   const style = {
@@ -18,8 +19,8 @@
 
   <div style={style}>
     <AvatarTile
-      displayName='LeBron James'
-      jobName='Small Forward'
+      primaryText='LeBron James'
+      secondaryText='Small Forward'
       imageUrl='https://img.bleacherreport.net/img/slides/photos/004/340/032/bcf2a3842774d474d7424be8dd78bf4e_crop_exact.jpg?h=533&w=800&q=70&crop_x=center&crop_y=top'
       href='#'
       dropdownSections={[
@@ -81,8 +82,8 @@
     </AvatarTile>
 
     <AvatarTile
-      displayName='Giannis Sina Ougko Antetokounmpo'
-      jobName='Forward'
+      primaryText='Giannis Sina Ougko Antetokounmpo'
+      secondaryText='Forward'
       imageUrl='https://i0.wp.com/sportytell.com/wp-content/uploads/2019/06/Giannis-Antetokounmpo-of-Milwaukee-Bucks%E2%80%94Biography-Facts.jpg?resize=680%2C350&ssl=1'
       href='#'
       statusColor='warning'
@@ -132,8 +133,8 @@
     </AvatarTile>
 
     <AvatarTile
-      displayName='Kobe Bryant'
-      jobName='Shooting Guard'
+      primaryText='Kobe Bryant'
+      secondaryText='Shooting Guard'
       imageUrl='https://www.abc.net.au/news/image/11902598-3x2-700x467.jpg'
       href='#'
     >
@@ -160,9 +161,9 @@
     </AvatarTile>
 
     <AvatarTile
-      displayName='Damian Lillard'
+      primaryText='Damian Lillard'
       initials='DL'
-      jobName='Point Guard'
+      secondaryText='Point Guard'
       href='#'
     >
       <Text
@@ -178,8 +179,7 @@
     </AvatarTile>
 
     <AvatarTile
-      displayName='Russell Westbrook'
-      jobName='Point Guard'
+      primaryText='Russell Westbrook'
       imageUrl='https://img.bleacherreport.net/img/images/photos/003/784/268/hi-res-47f5dd6bc7e4ea2d09037f468580e35a_crop_north.jpg?h=533&w=800&q=70&crop_x=center&crop_y=top'
       href='#'
     >
@@ -226,9 +226,19 @@
     </AvatarTile>
 
     <AvatarTile
-      displayName='Luka Doncic'
-      jobName='Guard'
-      numberOfJobs={2}
+      primaryText='Luka Doncic'
+      secondaryText='Guard'
+      secondaryRightElement={
+        <Brick
+          typographyType={Props.TypographyType.XSmall}
+          margins={{
+            left: Variables.Spacing.s2XSmall
+          }}
+          color={BrickColor.Dark}
+        >
+          + 1
+        </Brick>
+      }
       imageUrl='https://sportshub.cbsistatic.com/i/r/2020/01/22/3ab3d32e-6d54-4734-9776-119f06d6329c/thumbnail/1200x675/721d2787b03ed614542faef1999f4d44/luka-doncic-2.jpg'
       href='#'
     >
@@ -279,8 +289,8 @@ Any content can be passed as children to render in the bottom half of the tile o
 
   <div style={style}>
     <AvatarTile
-      displayName='LeBron James'
-      jobName='Small Forward'
+      primaryText='LeBron James'
+      secondaryText='Small Forward'
       imageUrl='https://img.bleacherreport.net/img/slides/photos/004/340/032/bcf2a3842774d474d7424be8dd78bf4e_crop_exact.jpg?h=533&w=800&q=70&crop_x=center&crop_y=top'
       href='#'
     >
@@ -320,8 +330,8 @@ Provide the dropdownSections prop in order to render a Dropdown Menu on hover.
 
   <div style={style}>
     <AvatarTile
-      displayName='LeBron James'
-      jobName='Small Forward'
+      primaryText='LeBron James'
+      secondaryText='Small Forward'
       imageUrl='https://img.bleacherreport.net/img/slides/photos/004/340/032/bcf2a3842774d474d7424be8dd78bf4e_crop_exact.jpg?h=533&w=800&q=70&crop_x=center&crop_y=top'
       href='#'
       dropdownSections={[
@@ -345,13 +355,14 @@ Provide the dropdownSections prop in order to render a Dropdown Menu on hover.
   </div>
 ```
 
-#### AvatarTile showing the person has multiple jobs
+#### AvatarTile with a secondary right element
 
-If you provide the numberOfJobs prop and it's greater than 1, a Brick will display the additional jobs number next to the jobName. If the jobName is too long, it will be truncated to fit the Brick.
+You can provide an element to render inline beside the secondary text on the right hand side. The secondary text will truncate to accomodate it.
 
 ```jsx
   import { Props, Variables } from '@Common';
-  import { Text } from '@Domain/Typographies';
+  import { Brick, Text } from '@Domain/Typographies';
+  import { BrickColor } from '@Domain/Typographies/Brick/style';
 
   const style = {
     backgroundColor: Variables.Color.n250,
@@ -365,9 +376,19 @@ If you provide the numberOfJobs prop and it's greater than 1, a Brick will displ
 
   <div style={style}>
     <AvatarTile
-      displayName='LeBron James'
-      jobName='Small Forward'
-      numberOfJobs={2}
+      primaryText='LeBron James'
+      secondaryText='Small Forward'
+      secondaryRightElement={
+        <Brick
+          typographyType={Props.TypographyType.XSmall}
+          margins={{
+            left: Variables.Spacing.s2XSmall
+          }}
+          color={BrickColor.Dark}
+        >
+          + 1
+        </Brick>
+      }
       imageUrl='https://img.bleacherreport.net/img/slides/photos/004/340/032/bcf2a3842774d474d7424be8dd78bf4e_crop_exact.jpg?h=533&w=800&q=70&crop_x=center&crop_y=top'
       href='#'
     >
@@ -384,9 +405,19 @@ If you provide the numberOfJobs prop and it's greater than 1, a Brick will displ
     </AvatarTile>
 
     <AvatarTile
-      displayName='Giannis Antetokounmpo'
-      jobName='Coach for the Milwaukee Bucks'
-      numberOfJobs={3}
+      primaryText='Giannis Antetokounmpo'
+      secondaryText='Coach for the Milwaukee Bucks but only on Tuesdays'
+      secondaryRightElement={
+        <Brick
+          typographyType={Props.TypographyType.XSmall}
+          margins={{
+            left: Variables.Spacing.s2XSmall
+          }}
+          color={BrickColor.Dark}
+        >
+          + 2
+        </Brick>
+      }
       imageUrl='https://i0.wp.com/sportytell.com/wp-content/uploads/2019/06/Giannis-Antetokounmpo-of-Milwaukee-Bucks%E2%80%94Biography-Facts.jpg?resize=680%2C350&ssl=1'
       href='#'
     >
@@ -426,8 +457,8 @@ If you provide a statusColor **and** a statusText, it will display a banner on h
 
   <div style={style}>
     <AvatarTile
-      displayName='LeBron James'
-      jobName='Small Forward'
+      primaryText='LeBron James'
+      secondaryText='Small Forward'
       imageUrl='https://img.bleacherreport.net/img/slides/photos/004/340/032/bcf2a3842774d474d7424be8dd78bf4e_crop_exact.jpg?h=533&w=800&q=70&crop_x=center&crop_y=top'
       href='#'
       statusColor='warning'
@@ -446,8 +477,8 @@ If you provide a statusColor **and** a statusText, it will display a banner on h
     </AvatarTile>
 
     <AvatarTile
-      displayName='Giannis Sina Ougko Antetokounmpo'
-      jobName='Forward'
+      primaryText='Giannis Sina Ougko Antetokounmpo'
+      secondaryText='Forward'
       imageUrl='https://i0.wp.com/sportytell.com/wp-content/uploads/2019/06/Giannis-Antetokounmpo-of-Milwaukee-Bucks%E2%80%94Biography-Facts.jpg?resize=680%2C350&ssl=1'
       href='#'
       statusColor='neutral'
@@ -466,8 +497,8 @@ If you provide a statusColor **and** a statusText, it will display a banner on h
     </AvatarTile>
 
     <AvatarTile
-      displayName='Kobe Bryant'
-      jobName='Shooting Guard'
+      primaryText='Kobe Bryant'
+      secondaryText='Shooting Guard'
       imageUrl='https://www.abc.net.au/news/image/11902598-3x2-700x467.jpg'
       href='#'
       statusColor='highlight'
