@@ -231,7 +231,7 @@ class LegacyDataTable extends React.Component<IDataTableProps, IDataTableState> 
     return (
       <ReactTable
         {...this.defaultReactTableProps}
-        data={filteredData as string[]}
+        data={filteredData as any[]}
         noDataText={noDataText}
         columns={this.columns}
         className={this.classNames}

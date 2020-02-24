@@ -96,7 +96,7 @@ const LegacyAsyncDataTable: React.SFC<IAsyncDataTableProps> = ({
         {...defaultReactTableProps}
         className={classes}
         columns={columns}
-        data={data}
+        data={data as any[]}
         page={page}
         pages={Math.ceil(totalCount / pageSize)}
         pageSize={pageSize}
