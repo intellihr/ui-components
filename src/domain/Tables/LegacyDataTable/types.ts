@@ -19,7 +19,7 @@ interface IBaseDataTableProps {
   /** Name for this table */
   tableId?: string
   /** List of all row data */
-  data: any[]
+  data: readonly any[]
   /** Column definitions for the table */
   columns: IDataTableColumn[]
   /** Show vertical delineation between columns  */
