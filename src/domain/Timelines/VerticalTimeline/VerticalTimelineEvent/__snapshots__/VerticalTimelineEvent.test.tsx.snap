@@ -67,7 +67,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bRBYWo",
+            "componentId": "sc-VigVT",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -88,7 +88,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bRBYWo",
+          "styledComponentId": "sc-VigVT",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -108,7 +108,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-jhAzac",
+                  "componentId": "sc-fjdhpX",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -128,7 +128,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
                 "displayName": "styled.span",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-jhAzac",
+                "styledComponentId": "sc-fjdhpX",
                 "target": "span",
                 "toString": [Function],
                 "usesTheme": false,
@@ -152,7 +152,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-hzDkRC",
+                  "componentId": "sc-jTzLTM",
                   "isStatic": false,
                   "lastClassName": "c2",
                   "rules": Array [
@@ -173,7 +173,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-hzDkRC",
+                "styledComponentId": "sc-jTzLTM",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,
@@ -193,7 +193,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-fBuWsC",
+                        "componentId": "sc-jzJRlG",
                         "isStatic": false,
                         "lastClassName": "c3",
                         "rules": Array [
@@ -214,7 +214,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
                       "displayName": "styled.span",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-fBuWsC",
+                      "styledComponentId": "sc-jzJRlG",
                       "target": "span",
                       "toString": [Function],
                       "usesTheme": false,
@@ -239,7 +239,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-fMiknA",
+                  "componentId": "sc-cSHVUG",
                   "isStatic": false,
                   "lastClassName": "c4",
                   "rules": Array [
@@ -251,7 +251,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event 1`] =
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-fMiknA",
+                "styledComponentId": "sc-cSHVUG",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,
@@ -335,7 +335,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bRBYWo",
+            "componentId": "sc-VigVT",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -356,7 +356,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bRBYWo",
+          "styledComponentId": "sc-VigVT",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -376,7 +376,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-jhAzac",
+                  "componentId": "sc-fjdhpX",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -396,7 +396,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
                 "displayName": "styled.span",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-jhAzac",
+                "styledComponentId": "sc-fjdhpX",
                 "target": "span",
                 "toString": [Function],
                 "usesTheme": false,
@@ -418,7 +418,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-hzDkRC",
+                  "componentId": "sc-jTzLTM",
                   "isStatic": false,
                   "lastClassName": "c2",
                   "rules": Array [
@@ -439,7 +439,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-hzDkRC",
+                "styledComponentId": "sc-jTzLTM",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,
@@ -485,7 +485,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-fMiknA",
+                  "componentId": "sc-cSHVUG",
                   "isStatic": false,
                   "lastClassName": "c3",
                   "rules": Array [
@@ -497,7 +497,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event with 
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-fMiknA",
+                "styledComponentId": "sc-cSHVUG",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,
@@ -585,7 +585,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bRBYWo",
+            "componentId": "sc-VigVT",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -606,7 +606,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bRBYWo",
+          "styledComponentId": "sc-VigVT",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -626,7 +626,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-jhAzac",
+                  "componentId": "sc-fjdhpX",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -646,7 +646,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
                 "displayName": "styled.span",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-jhAzac",
+                "styledComponentId": "sc-fjdhpX",
                 "target": "span",
                 "toString": [Function],
                 "usesTheme": false,
@@ -668,7 +668,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-hzDkRC",
+                  "componentId": "sc-jTzLTM",
                   "isStatic": false,
                   "lastClassName": "c2",
                   "rules": Array [
@@ -689,7 +689,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-hzDkRC",
+                "styledComponentId": "sc-jTzLTM",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,
@@ -709,7 +709,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-fBuWsC",
+                        "componentId": "sc-jzJRlG",
                         "isStatic": false,
                         "lastClassName": "c3",
                         "rules": Array [
@@ -730,7 +730,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
                       "displayName": "styled.span",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-fBuWsC",
+                      "styledComponentId": "sc-jzJRlG",
                       "target": "span",
                       "toString": [Function],
                       "usesTheme": false,
@@ -755,7 +755,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-fMiknA",
+                  "componentId": "sc-cSHVUG",
                   "isStatic": false,
                   "lastClassName": "c4",
                   "rules": Array [
@@ -767,7 +767,7 @@ exports[`<VerticalTimelineEvent /> should render a vertical timeline event witho
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-fMiknA",
+                "styledComponentId": "sc-cSHVUG",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,
