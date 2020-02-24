@@ -1,3 +1,4 @@
+import { isEqual } from 'lodash'
 import React, { useState } from 'react'
 
 import { Props, Variables } from '../../../../common'
@@ -68,19 +69,8 @@ const AvatarTile: React.FC<IAvatarTileProps> = ({
 
   const displayStatusBanner = !!statusColor && !!statusText
 
-  const actionButton = ({ toggleMenu, toggleComponentRef, ariaProps }: IDropdownMenuToggleComponentProps) => (
-    <StyledDropdownButton
-      onClick={toggleMenu}
-      ref={toggleComponentRef}
-      {...ariaProps}
-    >
-      <FontAwesomeIcon type='solid' icon='ellipsis-v' />
-    </StyledDropdownButton>
-  )
-
-  const actionButtonDropdownMenu = (): JSX.Element | null => {
-    if (dropdownSections && hovered) {
-      return (
+  const actionButtonDropdownMenu = (dropdownSections && hovered)
+    ? (
         <StyledDropdownMenu
           displayStatusBanner={displayStatusBanner}
         >
@@ -97,41 +87,30 @@ const AvatarTile: React.FC<IAvatarTileProps> = ({
             }}
           />
         </StyledDropdownMenu>
-      )
-    }
+    )
+    : null
 
-    return null
-  }
-
-  const actionArea = (): JSX.Element | null => {
-    if (href) {
-      return (
+  const actionArea = href
+    ? (
         <Anchor href={href}>
           <StyledActionArea hovered={hovered} />
         </Anchor>
-      )
-    }
+    )
+    : null
 
-    return null
-  }
-
-  const statusBanner = (): JSX.Element | null => {
-    if (displayStatusBanner) {
-      return (
-        <StyledStatusBanner statusColor={statusColor} hovered={hovered}>
-          <Text
-            type={Props.TypographyType.XSmall}
-            color={Variables.Color.n100}
-            weight={Variables.FontWeight.fwSemiBold}
-          >
-            {statusText}
-          </Text>
-        </StyledStatusBanner>
-      )
-    }
-
-    return null
-  }
+  const statusBanner = displayStatusBanner
+    ? (
+      <StyledStatusBanner statusColor={statusColor} hovered={hovered}>
+        <Text
+          type={Props.TypographyType.XSmall}
+          color={Variables.Color.n100}
+          weight={Variables.FontWeight.fwSemiBold}
+        >
+          {statusText}
+        </Text>
+      </StyledStatusBanner>
+    )
+    : null
 
   return (
     <StyledContainer
@@ -143,9 +122,9 @@ const AvatarTile: React.FC<IAvatarTileProps> = ({
       data-component-type={Props.ComponentType.AvatarTile}
       data-component-context={componentContext}
     >
-      {actionArea()}
-      {statusBanner()}
-      {actionButtonDropdownMenu()}
+      {actionArea}
+      {statusBanner}
+      {actionButtonDropdownMenu}
       <StyledAvatarContainer>
         <Avatar
           initials={initials}
@@ -172,6 +151,31 @@ const AvatarTile: React.FC<IAvatarTileProps> = ({
   )
 }
 
+const actionButton = ({ toggleMenu, toggleComponentRef, ariaProps }: IDropdownMenuToggleComponentProps) => (
+  <StyledDropdownButton
+    onClick={toggleMenu}
+    ref={toggleComponentRef}
+    {...ariaProps}
+  >
+    <FontAwesomeIcon type='solid' icon='ellipsis-v' />
+  </StyledDropdownButton>
+)
+
+const MemoAvatarTile = React.memo(AvatarTile, ((prevProps, nextProps) => {
+  return prevProps.primaryText === nextProps.primaryText &&
+    prevProps.secondaryText === nextProps.secondaryText &&
+    prevProps.secondaryRightElement === nextProps.secondaryRightElement &&
+    prevProps.initials === nextProps.initials &&
+    prevProps.imageUrl === nextProps.imageUrl &&
+    prevProps.dropdownSections === nextProps.dropdownSections &&
+    prevProps.href === nextProps.href &&
+    prevProps.statusColor === nextProps.statusColor &&
+    prevProps.statusText === nextProps.statusText &&
+    prevProps.children === nextProps.children &&
+    prevProps.componentContext === nextProps.componentContext &&
+    isEqual(prevProps.margins, nextProps.margins)
+}))
+
 export {
-  AvatarTile
+  MemoAvatarTile as AvatarTile
 }

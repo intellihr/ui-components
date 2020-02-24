@@ -26,7 +26,7 @@ export const AvatarBoard: React.FC<IAvatarBoardProps> & ISubComponents = ({ comp
       data-component-type={Props.ComponentType.AvatarBoard}
       data-component-context={componentContext}
     >
-        {children ? children : emptyStateComponent}
+        {children && (!Array.isArray(children) || children.length > 0) ? children : emptyStateComponent}
     </AvatarBoardWrapper>
   )
 }
