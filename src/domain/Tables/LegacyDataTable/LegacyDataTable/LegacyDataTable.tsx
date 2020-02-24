@@ -40,19 +40,6 @@ interface IDataTableProps extends IBaseDataTableProps {
   showSearchFilter?: boolean
 }
 
-interface IDataTableProps extends IBaseDataTableProps {
-  /** Whether the table can be sorted on its columns */
-  sortable?: boolean
-  /** Default sorting properties */
-  defaultSorted?: SortingRule[]
-  /** Whether the table should be paginated */
-  showPagination?: boolean
-  /** Default page size (only applicable if paginated) */
-  defaultPageSize?: PageSizeOption
-  /** Whether we should add a search filter - requires pagination  */
-  showSearchFilter?: boolean
-}
-
 class LegacyDataTable extends React.Component<IDataTableProps, IDataTableState> {
   public static defaultProps: Partial<IDataTableProps> = {
     sortable: false,
@@ -119,7 +106,7 @@ class LegacyDataTable extends React.Component<IDataTableProps, IDataTableState> 
     return false
   }
 
-  get filteredData (): any[] {
+  get filteredData (): readonly any[] {
     const { data, showSearchFilter } = this.props
     const { searchFilter } = this.state
 
@@ -244,7 +231,7 @@ class LegacyDataTable extends React.Component<IDataTableProps, IDataTableState> 
     return (
       <ReactTable
         {...this.defaultReactTableProps}
-        data={filteredData}
+        data={filteredData as string[]}
         noDataText={noDataText}
         columns={this.columns}
         className={this.classNames}
