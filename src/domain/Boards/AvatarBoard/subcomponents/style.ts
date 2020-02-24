@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components'
 
-import { Props, Variables } from '../../../common'
-import { styleForMargins } from '../../Spacers/services/margins'
-import { styleForTruncatedText, styleForTypographyType } from '../../Typographies/services/textStyles'
+import { Props, Variables } from '../../../../common'
+import { styleForMargins } from '../../../Spacers/services/margins'
+import { styleForTruncatedText, styleForTypographyType } from '../../../Typographies/services/textStyles'
 
 interface IAvatarTile {
   hovered: boolean
@@ -211,6 +211,9 @@ const StyledContainer = styled.div`
   border-radius: 8px;
   transition: ease-in 0.15s;
   overflow: hidden;
+
+  margin-right: 20px;
+  margin-bottom: 20px;
 
   ${(props: IStyledContainer) => styleForMargins(props.margins)}
 

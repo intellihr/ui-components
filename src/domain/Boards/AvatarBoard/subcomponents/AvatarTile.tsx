@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 
-import { Props, Variables } from '../../../common'
-import { FontAwesomeIcon } from '../../Icons'
-import { Anchor } from '../../Internals'
-import { DropdownMenu, IDropdownMenuToggleComponentProps } from '../../Popovers/DropdownMenu'
-import { ISectionProps } from '../../Popovers/DropdownMenu/subcomponents/Section'
-import { Text } from '../../Typographies'
-import { Avatar } from '../Avatar'
+import { Props, Variables } from '../../../../common'
+import { Avatar } from '../../../Avatars/Avatar'
+import { FontAwesomeIcon } from '../../../Icons'
+import { Anchor } from '../../../Internals'
+import { DropdownMenu, IDropdownMenuToggleComponentProps } from '../../../Popovers/DropdownMenu'
+import { ISectionProps } from '../../../Popovers/DropdownMenu/subcomponents/Section'
+import { Text } from '../../../Typographies'
 import {
   StyledActionArea,
   StyledAvatarContainer,
@@ -14,9 +14,9 @@ import {
   StyledContentContainer,
   StyledDropdownButton,
   StyledDropdownMenu,
+  StyledPrimaryTextContainer,
   StyledSecondaryContainer,
   StyledSecondaryTextContainer,
-  StyledPrimaryTextContainer,
   StyledStatusBanner,
   StyledTitleContainer
 } from './style'

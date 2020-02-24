@@ -85,8 +85,7 @@ module.exports = {
           components: [
             'src/domain/Avatars/Avatar/Avatar.tsx',
             'src/domain/Avatars/AvatarEntity/AvatarEntity.tsx',
-            'src/domain/Avatars/AvatarGroup/AvatarGroup.tsx',
-            'src/domain/Avatars/AvatarTile/AvatarTile.tsx'
+            'src/domain/Avatars/AvatarGroup/AvatarGroup.tsx'
           ]
         },
         {
@@ -98,7 +97,8 @@ module.exports = {
         {
           name: 'Boards',
           components: [
-            'src/domain/Boards/Board/Board.tsx'
+            'src/domain/Boards/Board/Board.tsx',
+            'src/domain/Boards/AvatarBoard/AvatarBoard.tsx'
           ]
         },
         {

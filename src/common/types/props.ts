@@ -64,6 +64,7 @@ namespace Props {
   export enum ComponentType {
     AnnotatedSection = 'annotated_section',
     AsyncDataTable = 'async_data_table',
+    AvatarBoard = 'avatar_board',
     AvatarGroup = 'avatar_group',
     AvatarTile = 'avatar_tile',
     BlockTabGroup = 'block_tab_group',

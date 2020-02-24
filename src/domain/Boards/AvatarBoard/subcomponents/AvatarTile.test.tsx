@@ -1,16 +1,16 @@
 import { mount } from 'enzyme'
 import React from 'react'
 
-import { Brick } from '../../Typographies'
+import { Brick } from '../../../Typographies'
 import { AvatarTile } from './AvatarTile'
 
 describe('<AvatarTile />', () => {
   it(`should render a basic avatar tile`, () => {
     const wrapper = mount(
       <AvatarTile
-        displayName='Le Bron James'
+        primaryText='Le Bron James'
         initials='LJ'
-        jobName='Small Forward'
+        secondaryText='Small Forward'
       />
     )
 
@@ -19,13 +19,17 @@ describe('<AvatarTile />', () => {
     expect(wrapper.contains('Small Forward')).toBeTruthy()
   })
 
-  it(`should render an avatar tile with a brick displaying the number of additional jobs`, () => {
+  it(`should render an avatar tile with a secondaryRightElement`, () => {
     const wrapper = mount(
       <AvatarTile
-        displayName='Le Bron James'
+        primaryText='Le Bron James'
         initials='LJ'
-        jobName='Small Forward'
-        numberOfJobs={3}
+        secondaryText='Small Forward'
+        secondaryRightElement={
+          <Brick>
+            + 2
+          </Brick>
+        }
       />
     )
 
@@ -35,16 +39,15 @@ describe('<AvatarTile />', () => {
 
     const brick = wrapper.find(Brick)
     expect(brick.exists()).toBeTruthy()
-    expect(brick.contains('+ ')).toBeTruthy()
-    expect(brick.contains('2')).toBeTruthy()
+    expect(brick.contains('+ 2')).toBeTruthy()
   })
 
   it(`should render an avatar tile with a status`, () => {
     const wrapper = mount(
       <AvatarTile
-        displayName='Le Bron James'
+        primaryText='Le Bron James'
         initials='LJ'
-        jobName='Small Forward'
+        secondaryText='Small Forward'
         statusColor='warning'
         statusText='On Extended Leave'
       />
@@ -60,9 +63,9 @@ describe('<AvatarTile />', () => {
   it(`should render an avatar tile with children`, () => {
     const wrapper = mount(
       <AvatarTile
-        displayName='Le Bron James'
+        primaryText='Le Bron James'
         initials='LJ'
-        jobName='Small Forward'
+        secondaryText='Small Forward'
       >
         <div>I should be getting rendered</div>
       </AvatarTile>
