@@ -1,15 +1,24 @@
 ### Card
 
 ```jsx
-
+import { Button } from '@Domain/Buttons';
 import { Variables, Props } from '@Common';
 import { AvatarEntity } from '@Domain/Avatars';
 import { StatusIndicator } from '@Domain/Indicators';
 import { GridLayout } from '@Domain/Layouts';
-import { Brick, Text } from '@Domain/Typographies';
+import { Brick, CurrencyText, Text } from '@Domain/Typographies';
+
+initialState = { card1: false, card2: false, card3: false, allCards: false };
 
 <>
+  <Button
+    type='neutral'
+    onClick={() => setState({ card1: !state.allCards, card2: !state.allCards, card3: !state.allCards, allCards: !state.allCards})}>
+    {state.allCards ? 'Collapse All' : 'Expand All'}
+  </Button>
   <Card
+    isExpanded={state.card1}
+    onCardToggle={() => setState({ card1: !state.card1 })}
     handleClick={() => alert('Click handler called')}
     mainContent={
       <GridLayout verticalAlignment={GridLayout.VerticalAlignment.Middle}>
@@ -24,18 +33,21 @@ import { Brick, Text } from '@Domain/Typographies';
         <GridLayout.Cell size={{ desktop: 3, tablet: 4, min: 12 }}>
           <StatusIndicator
             text={12}
-            color={Variables.Color.r500}
-            textColor={Variables.Color.r500}
+            color={Variables.Color.r300}
+            textColor={Variables.Color.r300}
           />
         </GridLayout.Cell>
       </GridLayout>
     }
     margins={{
+      top: Variables.Spacing.sSmall,
       bottom: Variables.Spacing.sSmall
     }}
   />
 
   <Card
+    isExpanded={state.card2}
+    onCardToggle={() => setState({ card2: !state.card2 })}
     dropdownSections= {[
       {
         text: 'Edit',
@@ -88,7 +100,13 @@ import { Brick, Text } from '@Domain/Typographies';
           },
           {
             size: 2,
-            content: <><strong>AUD</strong> 1,741.87</>
+            content: (
+              <CurrencyText
+                value={1070.49}
+                prefix='AUD'
+                decimalPlace={2}
+              />
+            )
           }
         ]}
       />
@@ -109,6 +127,8 @@ import { Brick, Text } from '@Domain/Typographies';
   />
 
   <Card
+    isExpanded={state.card3}
+    onCardToggle={() => setState({ card3: !state.card3 })}
     href='#'
     dropdownSections= {[
       {
@@ -317,57 +337,25 @@ import { Button } from '@Domain/Buttons';
 import { GridLayout } from '@Domain/Layouts';
 import { Variables } from '@Common';
 
-const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec libero et libero molestie eleifend. Donec dignissim vel erat eu cursus.';
-
 <Card
   margins={{
-            top:12,
-            bottom: 4
-          }}
+    top:12,
+    bottom: 4
+  }}
   dropdownSections= {[
-      {
-        text: 'homepage',
-        href: 'https://intellihr.github.io/ui-components/',
-        stopPropagation: true
-      },
-      {
-        text: 'Delete',
-        onClick: (event) => { alert('Delete action for the card') },
-        sectionType: 'alert',
-        stopPropagation: true
-      }
-    ]}
-  mainContent= {
-    <GridLayout
-      gutterPaddingX={Variables.Spacing.sSmall}
-      gutterPaddingY={Variables.Spacing.sSmall}
-      cells={[
-        {
-          size: 7,
-          content: text
-        },
-        {
-          size: 5,
-          content: text
-        }
-      ]}
-    />
-  }
-  extraContent= {
-    <GridLayout
-      gutterPaddingX={Variables.Spacing.sSmall}
-      gutterPaddingY={Variables.Spacing.sSmall}
-      cells={[
-        {
-          size: 12,
-          content: text
-        },
-        {
-          size: 12,
-          content: text
-        }
-      ]}
-    />
-  }
+    {
+      text: 'homepage',
+      href: 'https://intellihr.github.io/ui-components/',
+      stopPropagation: true
+    },
+    {
+      text: 'Delete',
+      onClick: (event) => { alert('Delete action for the card') },
+      sectionType: 'alert',
+      stopPropagation: true
+    }
+  ]}
+  mainContent="I'll manage my own state (✿◠‿◠)"
+  extraContent="(◕‿-)"
 />
 ```

@@ -21,14 +21,14 @@ interface IStyledGroupMainCardProps {
   hasHoverStyle: boolean
   margins?: Props.IMargins
   color: CardColors
-  hasClickHandler: boolean
+  hasHrefOrHandleClick: boolean
 }
 
 interface IStyledGroupCardToggleButtonProps {
   isExpanded: boolean
   hasParentHoverStyle: boolean
   color: CardColors
-  hasClickHandler: boolean
+  hasHrefOrHandleClick: boolean
 }
 
 interface IStyledGroupCardProps {
@@ -49,6 +49,7 @@ const StyledGroupCard = styled.div`
 `
 
 const StyledGroupMainCard = styled.div`
+  position: relative;
   margin: 0;
   padding: ${Variables.Spacing.sMedium}px;
   border: 1px solid ${(props: IStyledGroupMainCardProps) => colorOptions[props.color].border};
@@ -68,7 +69,7 @@ const StyledGroupMainCard = styled.div`
       border-radius: ${Variables.Style.borderRadius}px ${Variables.Style.borderRadius}px 0 0;
   `}
 
-  ${(props: IStyledGroupMainCardProps) => props.hasClickHandler && css`
+  ${(props: IStyledGroupMainCardProps) => props.hasHrefOrHandleClick && css`
     border-right: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -78,13 +79,14 @@ const StyledGroupMainCard = styled.div`
 const StyledGroupCardToggleButton = styled.button<IStyledGroupCardToggleButtonProps>`
   ${cardButtonStyle};
   transition: all .25s ease-out;
+  z-index: 1;
 
   ${(props: IStyledGroupCardToggleButtonProps) => props.isExpanded && css`
       transform: rotate(180deg);
       transition: all .25s ease-out;
   `}
 
-  ${(props: IStyledGroupCardToggleButtonProps) => props.hasParentHoverStyle && !props.hasClickHandler && css`
+  ${(props: IStyledGroupCardToggleButtonProps) => props.hasParentHoverStyle && !props.hasHrefOrHandleClick && css`
     ${StyledGroupMainCard}:hover & {
       color: ${Variables.Color.n800};
       background-color: ${colorOptions[props.color].hoverButtonBackground};
@@ -93,7 +95,7 @@ const StyledGroupCardToggleButton = styled.button<IStyledGroupCardToggleButtonPr
   `}
 
   ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
-    ${(props: IStyledGroupCardToggleButtonProps) => !props.hasClickHandler && css`
+    ${(props: IStyledGroupCardToggleButtonProps) => !props.hasHrefOrHandleClick && css`
       display: none;
     `}
   }
@@ -101,6 +103,7 @@ const StyledGroupCardToggleButton = styled.button<IStyledGroupCardToggleButtonPr
 
 const StyledBodyActionButton = styled.button`
   ${cardButtonStyle};
+  z-index: 1;
 
   &:hover {
     background-color: ${(props: IStyleActionButtonProps) => colorOptions[props.color].hoverButtonBackground};
