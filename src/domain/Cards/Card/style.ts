@@ -24,7 +24,7 @@ interface IStyledCardToggleButtonProps {
   isExpanded: boolean,
   hasParentHoverStyle: boolean
   color: CardColors
-  hasClickHandler?: boolean
+  hasHrefOrHandleClick?: boolean
 }
 
 interface IStyleActionButtonProps {
@@ -36,7 +36,7 @@ interface IStyledCardHeader {
   isExpanded: boolean
   hasHoverStyle: boolean
   color: CardColors
-  hasClickHandler?: boolean
+  hasHrefOrHandleClick?: boolean
   expandable: boolean
 }
 
@@ -53,6 +53,7 @@ const StyledHeaderContainer = styled.div`
 `
 
 const StyledCardHeader = styled(StyledFlexContent)`
+  position: relative;
   padding: ${Variables.Spacing.sMedium}px;
   border: 1px solid ${(props: IStyledCardHeader) => colorOptions[props.color].border};
   border-radius: ${Variables.Style.borderRadius}px;
@@ -71,7 +72,7 @@ const StyledCardHeader = styled(StyledFlexContent)`
       border-radius: ${Variables.Style.borderRadius}px ${Variables.Style.borderRadius}px 0 0;
   `}
 
-  ${(props: IStyledCardHeader) => props.hasClickHandler && props.expandable && css`
+  ${(props: IStyledCardHeader) => props.hasHrefOrHandleClick && props.expandable && css`
       border-right: 0;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
@@ -108,13 +109,14 @@ const StyledExpandableButtonSection = styled.div`
 const StyledCardToggleButton = styled.button`
   ${cardButtonStyle};
   transition: all .25s ease-out;
+  z-index: 1;
 
   ${(props: IStyledCardToggleButtonProps) => props.isExpanded && css`
       transform: rotate(180deg);
       transition: all .25s ease-out;
   `}
 
-  ${(props: IStyledCardToggleButtonProps) => props.hasParentHoverStyle && !props.hasClickHandler && css`
+  ${(props: IStyledCardToggleButtonProps) => props.hasParentHoverStyle && !props.hasHrefOrHandleClick && css`
     ${StyledCard}:hover & {
       color: ${Variables.Color.n800};
       background-color: ${colorOptions[props.color].hoverButtonBackground};
@@ -122,7 +124,7 @@ const StyledCardToggleButton = styled.button`
   `}
 
   ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
-    ${(props: IStyledCardToggleButtonProps) => !props.hasClickHandler && css`
+    ${(props: IStyledCardToggleButtonProps) => !props.hasHrefOrHandleClick && css`
       display: none;
     `}
   }
@@ -130,6 +132,7 @@ const StyledCardToggleButton = styled.button`
 
 const StyledActionButton = styled.button<IStyleActionButtonProps>`
   ${cardButtonStyle};
+  z-index: 1;
 
   &:hover {
     background-color: ${(props: IStyleActionButtonProps) => colorOptions[props.color].hoverButtonBackground};

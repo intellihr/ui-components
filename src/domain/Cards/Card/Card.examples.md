@@ -1,230 +1,115 @@
-#### Simple card
-```jsx
-<Card mainContent="I'm a card (✿◠‿◠)" />
-```
-
-#### Card with click-through
-```jsx
-import { GridLayout } from '@Domain/Layouts';
-import { Variables } from '@Common';
-import { StatusIndicator } from '@Domain/Indicators';
-import { Text } from '@Domain/Typographies';
-
-<Card
-  handleClick={() => alert('Click handler called')}
-  mainContent={
-    <GridLayout verticalAlignment={GridLayout.VerticalAlignment.Middle}>
-      <GridLayout.Cell size={{ desktop: 5, tablet: 5, min: 12 }}>
-        <Text weight={Variables.FontWeight.fwSemiBold}>Fire Warden Certificate</Text>
-      </GridLayout.Cell>
-
-      <GridLayout.Cell size={{ desktop: 4, tablet: 3, min: 12 }}>
-        <Text isInline={false} color={Variables.Color.n600}>Certification</Text>
-      </GridLayout.Cell>
-
-      <GridLayout.Cell size={{ desktop: 3, tablet: 4, min: 12 }}>
-        <StatusIndicator
-          text={12}
-          color={Variables.Color.r500}
-          textColor={Variables.Color.r500}
-        />
-      </GridLayout.Cell>
-    </GridLayout>
-  }
-/>
-```
-
-#### Card with actions
-```jsx
-<Card
-  mainContent="I'm a card with actions! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧"
-  dropdownSections= {[
-    {
-      text: 'Update',
-      href: 'https://www.google.com.au',
-      stopPropagation: true
-    },
-    {
-      text: 'Delete',
-      onClick: (event) => { alert('Delete action for the card') },
-      sectionType: 'alert',
-      stopPropagation: true
-    }
-  ]}
-/>
-```
-
-#### Card with expansion
-```jsx
-<Card
-  mainContent="I'm a card than can expand!"
-  extraContent="(◕‿-)" 
-/>
-```
-
-#### Card with actions and expansion
+### Card
 
 ```jsx
-import { GridLayout } from '@Domain/Layouts';
+
 import { Variables, Props } from '@Common';
+import { AvatarEntity } from '@Domain/Avatars';
+import { StatusIndicator } from '@Domain/Indicators';
+import { GridLayout } from '@Domain/Layouts';
 import { Brick, Text } from '@Domain/Typographies';
 
-<Card
-  dropdownSections= {[
-    {
-      text: 'Edit',
-      href: 'https://www.google.com.au',
-      stopPropagation: true
-    },
-    {
-      text: 'Delete',
-      onClick: (event) => { alert('Delete action for the card') },
-      sectionType: 'alert',
-      stopPropagation: true
+<>
+  <Card
+    handleClick={() => alert('Click handler called')}
+    mainContent={
+      <GridLayout verticalAlignment={GridLayout.VerticalAlignment.Middle}>
+        <GridLayout.Cell size={{ desktop: 5, tablet: 5, min: 12 }}>
+          <Text weight={Variables.FontWeight.fwSemiBold}>Fire Warden Certificate</Text>
+        </GridLayout.Cell>
+
+        <GridLayout.Cell size={{ desktop: 4, tablet: 3, min: 12 }}>
+          <Text isInline={false} color={Variables.Color.n600}>Certification</Text>
+        </GridLayout.Cell>
+
+        <GridLayout.Cell size={{ desktop: 3, tablet: 4, min: 12 }}>
+          <StatusIndicator
+            text={12}
+            color={Variables.Color.r500}
+            textColor={Variables.Color.r500}
+          />
+        </GridLayout.Cell>
+      </GridLayout>
     }
-  ]}
-  mainContent= {
-    <GridLayout
-      gutterPaddingX={Variables.Spacing.sSmall}
-      gutterPaddingY={Variables.Spacing.sSmall}
-      verticalAlignment='middle'
-      cells={[
-        {
-          size: 8,
-          content: (
-            <>
-              <Text 
-                isInline={false}
-                type={Props.TypographyType.Small}
-                color={Variables.Color.n600} 
-              >
-                Completed 28/02/2020
-              </Text>
-              <Text 
-                weight={Variables.FontWeight.fwSemiBold} 
-                isInline={false}
-              >
-                ReactConf AU
-              </Text>
-              <Brick 
-                typographyType={Props.TypographyType.XSmall}
-                color='primary'
-                isInline={false}
-              >
-                Core Skills
-              </Brick>
-            </>
-          )
-        },
-        {
-          size: 2,
-          content: '16 hrs'
-        },
-        {
-          size: 2,
-          content: <><strong>AUD</strong> 1,741.87</>
-        }
-      ]}
-    />
-  }
-  extraContent={
-    <div style={{ display: 'grid', width: '400px', gridTemplateColumns: '50% 50%' }}>
-      <Text color={Variables.Color.n600} isInline={false}>
-        Training Provider
-      </Text>
-      <Text isInline={false}>
-        External
-      </Text>
-    </div>
-  }
-/>
-```
-
-#### Card with click-through and expansion
-
-```jsx
-import { GridLayout } from '@Domain/Layouts';
-import { Variables } from '@Common';
-
-const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
-
-<Card
-  handleClick={() => alert('Click handler called')}
-  mainContent= {
-    <GridLayout
-      gutterPaddingX={Variables.Spacing.sSmall}
-      gutterPaddingY={Variables.Spacing.sSmall}
-      cells={[
-        {
-          size: 6,
-          content: text
-        },
-        {
-          size: 6,
-          content: text
-        }
-      ]}
-    />
-  }
-  extraContent={
-    <div>{text}</div>
-  } 
-/>
-```
-
-#### Card with click-through and actions
-
-```jsx
-import { GridLayout } from '@Domain/Layouts';
-import { Variables } from '@Common';
-
-const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
-
-<Card
-  handleClick={() => alert('Click handler called')}
-  dropdownSections= {[
-    {
-      text: 'google',
-      href: 'https://www.google.com.au',
-      stopPropagation: true
-    },
-    {
-      text: 'Delete',
-      onClick: (event) => { alert('Delete action for the card') },
-      sectionType: 'alert',
-      stopPropagation: true
-    }
-  ]}
-  mainContent= {
-    <GridLayout
-      gutterPaddingX={Variables.Spacing.sSmall}
-      gutterPaddingY={Variables.Spacing.sSmall}
-      cells={[
-        {
-          size: 6,
-          content: text
-        },
-        {
-          size: 6,
-          content: text
-        }
-      ]}
-    />
-  }
-/>
-```
-
-#### Card with click-through, actions and expansion
-
-```jsx
-import { GridLayout } from '@Domain/Layouts';
-import { AvatarEntity } from '@Domain/Avatars';
-import { Text } from '@Domain/Typographies';
-import { Variables, Props } from '@Common';
+    margins={{
+      bottom: Variables.Spacing.sSmall
+    }}
+  />
 
   <Card
-    margins={{ top:12, bottom: 4 }}
-    handleClick={() => alert('Click handler called')}
+    dropdownSections= {[
+      {
+        text: 'Edit',
+        href: 'https://www.google.com.au',
+        stopPropagation: true
+      },
+      {
+        text: 'Delete',
+        onClick: (event) => { alert('Delete action for the card') },
+        sectionType: 'alert',
+        stopPropagation: true
+      }
+    ]}
+    mainContent= {
+      <GridLayout
+        gutterPaddingX={Variables.Spacing.sSmall}
+        gutterPaddingY={Variables.Spacing.sSmall}
+        verticalAlignment='middle'
+        cells={[
+          {
+            size: 8,
+            content: (
+              <>
+                <Text
+                  isInline={false}
+                  type={Props.TypographyType.Small}
+                  color={Variables.Color.n600}
+                >
+                  Completed 28/02/2020
+                </Text>
+                <Text
+                  weight={Variables.FontWeight.fwSemiBold}
+                  isInline={false}
+                >
+                  ReactConf AU
+                </Text>
+                <Brick
+                  typographyType={Props.TypographyType.XSmall}
+                  color='primary'
+                  isInline={false}
+                >
+                  Core Skills
+                </Brick>
+              </>
+            )
+          },
+          {
+            size: 2,
+            content: '16 hrs'
+          },
+          {
+            size: 2,
+            content: <><strong>AUD</strong> 1,741.87</>
+          }
+        ]}
+      />
+    }
+    extraContent={
+      <div style={{ display: 'grid', width: '400px', gridTemplateColumns: '50% 50%' }}>
+        <Text color={Variables.Color.n600} isInline={false}>
+          Training Provider
+        </Text>
+        <Text isInline={false}>
+          External
+        </Text>
+      </div>
+    }
+    margins={{
+      bottom: Variables.Spacing.sSmall
+    }}
+  />
+
+  <Card
+    href='#'
     dropdownSections= {[
       {
         text: 'Update',
@@ -339,9 +224,93 @@ import { Variables, Props } from '@Common';
       />
     }
   />
+</>
 ```
 
-#### Card will manage its own state if *isExpanded* is not passed in.
+### Simple Card
+```jsx
+<Card mainContent="I'm a card (✿◠‿◠)" />
+```
+
+### Cards with Actions on Click
+
+There are three different actions that can be performed by clicking on a card:
+- Running a handle click function
+- Navigating to a href
+- Expanding the card
+
+The expansion of the card can either be considered a primary action where clicking anywhere on the card header performs the expansion, *or* as a secondary action where the primary action is either a handleClick or a href. If the expansion is a secondary action, the dropdown chevron will have a dedicated click area on the right hand side of the card.
+
+**Note:** You can only provide either the handleClick prop, *or* the href prop - not both.
+
+#### Card with a click handler
+
+If you provide a function to the handleClick prop, this will run when clicking on the main portion of the card.
+
+Use this for scenarios such as wanting to open a modal on click.
+
+```jsx
+<Card
+  handleClick={() => alert('Click handler called')}
+  mainContent="I'm a card with a click handler (✿◠‿◠)"
+/>
+```
+
+#### Card with a href
+
+If you provide the href prop, this will be navigated to when clicking on the main portion of the card.
+
+```jsx
+<Card
+  href='#'
+  mainContent="I'm a card with a href (✿◠‿◠)"
+/>
+```
+
+#### Card with expansion as a primary action
+
+If you provide any content to the extraContent prop, it will make the card expandable on click to display the extra content.
+```jsx
+<Card
+  mainContent="I'm a card that can expand!"
+  extraContent="(◕‿-)"
+/>
+```
+
+#### Card with expansion as a secondary action
+
+```jsx
+<Card
+  handleClick={() => alert('Click handler called')}
+  mainContent="Click on the main portion of the card to call the handleClick function, or click on the right section to expand!"
+  extraContent="(◕‿-)"
+/>
+```
+
+### Card with Dropdown Menu
+
+Any variation of the card can take a dropdownSections prop to render a dropdown menu.
+
+```jsx
+<Card
+  mainContent="I'm a card with actions! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧"
+  dropdownSections= {[
+    {
+      text: 'Update',
+      href: 'https://www.google.com.au',
+      stopPropagation: true
+    },
+    {
+      text: 'Delete',
+      onClick: (event) => { alert('Delete action for the card') },
+      sectionType: 'alert',
+      stopPropagation: true
+    }
+  ]}
+/>
+```
+
+### Card will manage its own state if *isExpanded* is not passed in.
 
 ```jsx
 import { Button } from '@Domain/Buttons';

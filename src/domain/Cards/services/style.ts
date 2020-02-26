@@ -1,15 +1,24 @@
 import styled, { css, keyframes } from 'styled-components'
 
 import { Variables } from '../../../common'
+import { Anchor } from '../../Internals'
 
 const StyledFlexContent = styled.div`
   display: flex;
   align-items: center;
 `
 
+const StyledAnchor = styled(Anchor)`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-left: -16px;
+`
+
 const StyledPrimaryContent = styled.div`
     width: auto;
     flex: 1 1 0%;
+    pointer-events: none;
 `
 
 const cardButtonStyle = css`
@@ -81,6 +90,7 @@ const cardCollpaseAnimation = css`
 `
 
 export {
+  StyledAnchor,
   StyledFlexContent,
   StyledPrimaryContent,
   cardButtonStyle,

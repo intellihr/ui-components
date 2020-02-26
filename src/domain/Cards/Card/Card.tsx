@@ -6,6 +6,7 @@ import { DropdownMenu, IDropdownMenuToggleComponentProps } from '../../Popovers/
 import { ISectionProps } from '../../Popovers/DropdownMenu/subcomponents/Section'
 import {
   ChevronIconWrapper,
+  StyledAnchor,
   StyledPrimaryContent
 } from '../services/style'
 import {
@@ -21,7 +22,7 @@ import {
 
 type CardColors = 'neutral' | 'orange' | 'red' | 'grey'
 
-interface ICardProps {
+interface ICardBasicProps {
   /** the component that shows even in collapse mode */
   mainContent: JSX.Element
   /** the component that shows in expand mode only */
@@ -40,9 +41,19 @@ interface ICardProps {
   isHoverable?: boolean
   /** Background color of the card */
   color?: CardColors
-  /** A click handler that will be called when you click on the card header */
-  handleClick?: () => void
 }
+
+interface ICardWithHrefProps extends ICardBasicProps {
+  /** The url to navigate to when you click on the card header - not to be used with handleClick */
+  href?: string
+}
+
+interface ICardWithHandleClickProps extends ICardBasicProps {
+  /** A click handler that will be called when you click on the card header - not to be used with href */
+  handleClick: () => void
+}
+
+type ICardProps = ICardWithHrefProps | ICardWithHandleClickProps
 
 interface ICardState {
   isActionButtonHover: boolean
@@ -68,11 +79,9 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
       margins,
       onCardToggle,
       isHoverable,
-      color,
-      handleClick
+      color
     } = this.props
 
-    const hasClickHandler = handleClick ? true : false
     return (
       <StyledCard
         margins={margins}
@@ -82,25 +91,26 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
       >
         <StyledHeaderContainer>
           <StyledCardHeader
-            hasClickHandler={hasClickHandler}
-            onClick={hasClickHandler ? () => handleClick!() : this.handleCardToggle}
+            hasHrefOrHandleClick={this.hasHrefOrHandleClick}
+            onClick={this.headerOnClick}
             isExpanded={this.isExpanded && !!extraContent}
-            hasHoverStyle={!this.state.isActionButtonHover && (!!extraContent || !!onCardToggle || isHoverable! || hasClickHandler)}
+            hasHoverStyle={!this.state.isActionButtonHover && (!!extraContent || !!onCardToggle || isHoverable! || this.hasHrefOrHandleClick)}
             expandable={!!extraContent}
             color={color!}
           >
+            {!!this.href && <StyledAnchor href={this.href} />}
             <StyledPrimaryContent>{mainContent}</StyledPrimaryContent>
             {this.actionButtonDropdownMenu}
-            {!hasClickHandler && this.toggleButton(hasClickHandler)}
+            {!this.hasHrefOrHandleClick && this.toggleButton()}
           </StyledCardHeader>
 
-          {hasClickHandler && !!extraContent && (
+          {this.hasHrefOrHandleClick && !!extraContent && (
             <StyledExpandableButtonSection
               isExpanded={this.isExpanded && !!extraContent}
               onClick={this.handleCardToggle}
               color={color!}
             >
-              {this.toggleButton(hasClickHandler)}
+              {this.toggleButton()}
             </StyledExpandableButtonSection>
           )}
 
@@ -114,6 +124,38 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
         )}
       </StyledCard>
     )
+  }
+
+  private get href (): string | undefined {
+    if ('href' in this.props) {
+      return this.props.href
+    }
+
+    return undefined
+  }
+
+  private get handleClick (): (() => void) | undefined {
+    if ('handleClick' in this.props) {
+      return this.props.handleClick
+    }
+
+    return undefined
+  }
+
+  private get hasHrefOrHandleClick (): boolean {
+    return !!this.handleClick || !!this.href
+  }
+
+  private get headerOnClick (): any {
+    if (!!this.handleClick) {
+      return this.handleClick
+    }
+
+    if (!!this.href) {
+      return undefined
+    }
+
+    return this.handleCardToggle
   }
 
   private handleCardToggle = () => {
@@ -134,15 +176,14 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
 
   private get actionButtonDropdownMenu (): JSX.Element | null {
     const {
-      dropdownSections,
-      handleClick
+      dropdownSections
     } = this.props
 
     if (dropdownSections) {
       return (
         <DropdownMenu
           sections={dropdownSections}
-          toggleComponent={this.actionButton(handleClick ? true : false)}
+          toggleComponent={this.actionButton}
         />
       )
     }
@@ -150,13 +191,13 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
     return null
   }
 
-  private actionButton = (hasClickHandler: boolean) => ({ toggleMenu, toggleComponentRef, ariaProps }: IDropdownMenuToggleComponentProps) => (
+  private actionButton = ({ toggleMenu, toggleComponentRef, ariaProps }: IDropdownMenuToggleComponentProps) => (
     <StyledActionButton
       onClick={this.handleActionButtonClick(toggleMenu)}
       onMouseOver={this.handleActionButtonMouseOver}
       onMouseOut={this.handleActionButtonMouseOut}
       ref={toggleComponentRef}
-      hasRightMargin={!!this.props.extraContent && !hasClickHandler}
+      hasRightMargin={!!this.props.extraContent && !this.hasHrefOrHandleClick}
       color={this.props.color!}
       {...ariaProps}
     >
@@ -164,7 +205,7 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
     </StyledActionButton>
   )
 
-  private toggleButton (hasClickHandler: boolean): JSX.Element | undefined {
+  private toggleButton (): JSX.Element | undefined {
     const {
       extraContent,
       color
@@ -176,7 +217,7 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
           isExpanded={this.isExpanded}
           hasParentHoverStyle={!this.state.isActionButtonHover}
           color={color!}
-          hasClickHandler={hasClickHandler}
+          hasHrefOrHandleClick={this.hasHrefOrHandleClick}
         >
           <ChevronIconWrapper>
             <FontAwesomeIcon type='solid' icon='chevron-down' />
