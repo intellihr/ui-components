@@ -38,7 +38,7 @@ interface IAvatarTileProps {
   /** The url to navigate to when clicking the top half of the tile */
   href?: string
   /** The colour of the status, if one is to be displayed */
-  statusColor?: 'primary' | 'secondary' | 'success' | 'warning' | 'alert' | 'neutral' | 'highlight' | 'dark'
+  statusColor?: Props.AvatarStatusDotColor
   /** Text to describe the status */
   statusText?: string
   /** The margins around the component */

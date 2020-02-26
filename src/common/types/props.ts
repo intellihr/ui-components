@@ -52,6 +52,17 @@ namespace Props {
     XLarge = 'xlarge'
   }
 
+  export enum AvatarStatusDotColor {
+    Indigo = 'primary',
+    Blue = 'secondary',
+    Green = 'success',
+    Orange = 'warning',
+    Red = 'alert',
+    Neutral = 'neutral',
+    Cyan = 'highlight',
+    Dark = 'dark'
+  }
+
   export enum TypographyType {
     XSmall = 'xsmall',
     Small = 'small',

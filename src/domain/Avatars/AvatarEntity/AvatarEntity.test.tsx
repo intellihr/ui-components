@@ -21,7 +21,7 @@ describe('<AvatarEntity />', () => {
       <AvatarEntity
         initials='JW'
         imageUrl='www.example.com'
-        statusDot='primary'
+        statusDot={Props.AvatarStatusDotColor.Indigo}
         primaryText='John Wick'
         secondaryText='Guy Killer'
         tertiaryText='In Cinemas 2019'
@@ -47,7 +47,7 @@ describe('<AvatarEntity />', () => {
     const wrapper = shallow(
       <AvatarEntity
         initials='JW'
-        statusDot='primary'
+        statusDot={Props.AvatarStatusDotColor.Indigo}
         primaryText='John Wick'
         secondaryText='Guy Killer'
         tertiaryText='Job Ending in 3 days'
@@ -66,7 +66,7 @@ describe('<AvatarEntity />', () => {
       <AvatarEntity
         initials='JW'
         imageUrl='www.example.com'
-        statusDot='primary'
+        statusDot={Props.AvatarStatusDotColor.Indigo}
         primaryText='John Wick'
         secondaryText='Guy Killer'
         tertiaryText='In Cinemas 2019'

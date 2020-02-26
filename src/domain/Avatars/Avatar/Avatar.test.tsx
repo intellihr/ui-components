@@ -23,7 +23,7 @@ describe('<Avatar />', () => {
       <Avatar
         initials='JW'
         size={Props.AvatarSize.Medium}
-        statusDot='warning'
+        statusDot={Props.AvatarStatusDotColor.Orange}
       />
     )
 

@@ -16,7 +16,7 @@ interface IStyledContainer extends IAvatarTile {
 }
 
 interface IStyledStatusBanner extends IAvatarTile {
-  statusColor?: 'primary' | 'secondary' | 'success' | 'warning' | 'alert' | 'neutral' | 'highlight' | 'dark'
+  statusColor?: Props.AvatarStatusDotColor
 }
 
 interface IStyledDropdownMenu {
@@ -40,35 +40,35 @@ const StyledStatusBanner = styled.div`
   ${(props: IStyledStatusBanner) => {
     if (props.statusColor) {
       switch (props.statusColor) {
-        case 'primary':
+        case Props.AvatarStatusDotColor.Indigo:
           return css`
             background-color: ${Variables.Color.i400};
           `
-        case 'secondary':
+        case Props.AvatarStatusDotColor.Blue:
           return css`
             background-color: ${Variables.Color.b400};
           `
-        case 'success':
+        case Props.AvatarStatusDotColor.Green:
           return css`
             background-color: ${Variables.Color.g400};
           `
-        case 'warning':
+        case Props.AvatarStatusDotColor.Orange:
           return css`
             background-color: ${Variables.Color.o400};
           `
-        case 'alert':
+        case Props.AvatarStatusDotColor.Red:
           return css`
             background-color: ${Variables.Color.r400};
           `
-        case 'neutral':
+        case Props.AvatarStatusDotColor.Neutral:
           return css`
             background-color: ${Variables.Color.n500};
           `
-        case 'highlight':
+        case Props.AvatarStatusDotColor.Cyan:
           return css`
             background-color: ${Variables.Color.c400};
           `
-        case 'dark':
+        case Props.AvatarStatusDotColor.Dark:
           return css`
             background-color: ${Variables.Color.n700};
           `

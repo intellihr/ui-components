@@ -76,7 +76,7 @@
       secondaryText='Forward'
       imageUrl='https://i0.wp.com/sportytell.com/wp-content/uploads/2019/06/Giannis-Antetokounmpo-of-Milwaukee-Bucks%E2%80%94Biography-Facts.jpg?resize=680%2C350&ssl=1'
       href='#'
-      statusColor='warning'
+      statusColor={Props.AvatarStatusDotColor.Orange}
       statusText='On Extended Leave'
       dropdownSections={[
         {
@@ -437,7 +437,7 @@ If you provide a statusColor **and** a statusText, it will display a banner on h
       secondaryText='Small Forward'
       imageUrl='https://img.bleacherreport.net/img/slides/photos/004/340/032/bcf2a3842774d474d7424be8dd78bf4e_crop_exact.jpg?h=533&w=800&q=70&crop_x=center&crop_y=top'
       href='#'
-      statusColor='warning'
+      statusColor={Props.AvatarStatusDotColor.Orange}
       statusText='On Extended Leave'
     >
       <Text
@@ -457,7 +457,7 @@ If you provide a statusColor **and** a statusText, it will display a banner on h
       secondaryText='Forward'
       imageUrl='https://i0.wp.com/sportytell.com/wp-content/uploads/2019/06/Giannis-Antetokounmpo-of-Milwaukee-Bucks%E2%80%94Biography-Facts.jpg?resize=680%2C350&ssl=1'
       href='#'
-      statusColor='neutral'
+      statusColor={Props.AvatarStatusDotColor.Neutral}
       statusText='Past Staff'
     >
       <Text
@@ -477,7 +477,7 @@ If you provide a statusColor **and** a statusText, it will display a banner on h
       secondaryText='Shooting Guard'
       imageUrl='https://www.abc.net.au/news/image/11902598-3x2-700x467.jpg'
       href='#'
-      statusColor='highlight'
+      statusColor={Props.AvatarStatusDotColor.Cyan}
       statusText='Upcoming Staff'
     >
       <Text

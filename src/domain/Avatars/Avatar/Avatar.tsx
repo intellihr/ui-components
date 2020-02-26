@@ -26,7 +26,7 @@ export interface IAvatarProps {
   /** Image blob data */
   imageData?: string
   /** Display a coloured status dot on the avatar */
-  statusDot?: 'primary' | 'secondary' | 'success' | 'warning' | 'alert' | 'neutral' | 'highlight' | 'dark'
+  statusDot?: Props.AvatarStatusDotColor
   /** Display an icon component on the avatar */
   statusIcon?: JSX.Element
 
