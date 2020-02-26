@@ -6,9 +6,9 @@ import { DropdownMenu, IDropdownMenuToggleComponentProps } from '../../Popovers/
 import { ISectionProps } from '../../Popovers/DropdownMenu/subcomponents/Section'
 import {
   ChevronIconWrapper,
+  StyledAnchor,
   StyledFlexContent,
-  StyledPrimaryContent,
-  StyledAnchor
+  StyledPrimaryContent
 } from '../services/style'
 import { CardColors } from '../Card/Card'
 import {
@@ -319,6 +319,7 @@ const BodyCard: React.FC<IBodyCardProps> = ({
 }
 
 export {
+  BodyCard,
   GroupCard,
   IGroupCardExtraContentProps
 }

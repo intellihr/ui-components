@@ -41,7 +41,7 @@ initialState = { card1: false, card2: false, card3: false, allCards: false };
     }
     margins={{
       top: Variables.Spacing.sSmall,
-      bottom: Variables.Spacing.sSmall
+      bottom: Variables.Spacing.s2XSmall
     }}
   />
 
@@ -330,6 +330,75 @@ Any variation of the card can take a dropdownSections prop to render a dropdown 
 />
 ```
 
+### Card with Color
+```jsx
+import { Variables } from '@Common';
+
+<>
+  <Card
+    color='neutral'
+    mainContent="I'm a neutral (default) card (✿◠‿◠)"
+    extraContent="(◕‿-)"
+    dropdownSections= {[
+      {
+        text: 'Delete',
+        onClick: (event) => { alert('Delete action for the card') },
+        sectionType: 'alert',
+        stopPropagation: true
+      }
+    ]}
+    margins={{
+      bottom: Variables.Spacing.s2XSmall
+    }}
+  />
+  <Card
+    color='grey'
+    mainContent="I'm a grey card (✿◠‿◠)"
+    extraContent="(◕‿-)"
+    dropdownSections= {[
+      {
+        text: 'Delete',
+        onClick: (event) => { alert('Delete action for the card') },
+        sectionType: 'alert',
+        stopPropagation: true
+      }
+    ]}
+    margins={{
+      bottom: Variables.Spacing.s2XSmall
+    }}
+  />
+  <Card
+    color='orange'
+    mainContent="I'm an orange card (✿◠‿◠)"
+    extraContent="(◕‿-)"
+    dropdownSections= {[
+      {
+        text: 'Delete',
+        onClick: (event) => { alert('Delete action for the card') },
+        sectionType: 'alert',
+        stopPropagation: true
+      }
+    ]}
+    margins={{
+      bottom: Variables.Spacing.s2XSmall
+    }}
+  />
+  <Card
+    color='red'
+    mainContent="I'm a red card (✿◠‿◠)"
+    extraContent="(◕‿-)"
+    dropdownSections= {[
+      {
+        text: 'Delete',
+        onClick: (event) => { alert('Delete action for the card') },
+        sectionType: 'alert',
+        stopPropagation: true
+      }
+    ]}
+  />
+</>
+```
+
 ### Card will manage its own state if *isExpanded* is not passed in.
 
 ```jsx
@@ -338,10 +407,6 @@ import { GridLayout } from '@Domain/Layouts';
 import { Variables } from '@Common';
 
 <Card
-  margins={{
-    top:12,
-    bottom: 4
-  }}
   dropdownSections= {[
     {
       text: 'homepage',

@@ -23,8 +23,8 @@ initialState = { card1: false, card2: false, allCards: false };
   <GroupCard
     handleClick={() => alert('click handler called')}
     margins={{
-      top:12,
-      bottom: 4
+      top: Variables.Spacing.sSmall,
+      bottom: Variables.Spacing.s2XSmall
     }}
     isExpanded={state.card1}
     onCardToggle={() => setState({ card1: !state.card1 })}
@@ -97,10 +97,6 @@ initialState = { card1: false, card2: false, allCards: false };
     ]}
   />
   <GroupCard
-    margins={{
-      top:12,
-      bottom: 4
-    }}
     isExpanded={state.card2}
     onCardToggle={() => setState({ card2: !state.card2 })}
     headingContent={
@@ -303,6 +299,130 @@ import { Variables } from '@Common';
 />
 ```
 
+#### GroupCard with Color
+
+```jsx
+import { Variables } from '@Common';
+
+<>
+  <GroupCard
+    color='neutral'
+    margins={{
+      bottom: Variables.Spacing.s2XSmall
+    }}
+    headingContent="I'm a neutral (default) group card (✿◠‿◠)"
+    bodyContents= {[
+      {
+        dropdownSections: [
+          {
+            text: 'Delete',
+            onClick: (event) => { alert('Delete action for the card') },
+            sectionType: 'alert',
+            stopPropagation: true
+          }
+        ],
+        mainContent: "(◕‿-)",
+      }
+    ]}
+    dropdownSections={[
+        {
+          text: 'Delete',
+          onClick: (event) => { alert('Delete action for the group card') },
+          sectionType: 'alert',
+          stopPropagation: true
+        }
+      ]}
+  />
+
+  <GroupCard
+    color='grey'
+    margins={{
+      bottom: Variables.Spacing.s2XSmall
+    }}
+    headingContent="I'm a grey group card (✿◠‿◠)"
+    bodyContents= {[
+      {
+        dropdownSections: [
+          {
+            text: 'Delete',
+            onClick: (event) => { alert('Delete action for the card') },
+            sectionType: 'alert',
+            stopPropagation: true
+          }
+        ],
+        mainContent: "(◕‿-)",
+      }
+    ]}
+    dropdownSections={[
+        {
+          text: 'Delete',
+          onClick: (event) => { alert('Delete action for the group card') },
+          sectionType: 'alert',
+          stopPropagation: true
+        }
+      ]}
+  />
+
+  <GroupCard
+    color='orange'
+    margins={{
+      bottom: Variables.Spacing.s2XSmall
+    }}
+    headingContent="I'm an orange group card (✿◠‿◠)"
+    bodyContents= {[
+      {
+        dropdownSections: [
+          {
+            text: 'Delete',
+            onClick: (event) => { alert('Delete action for the card') },
+            sectionType: 'alert',
+            stopPropagation: true
+          }
+        ],
+        mainContent: "(◕‿-)",
+      }
+    ]}
+    dropdownSections={[
+        {
+          text: 'Delete',
+          onClick: (event) => { alert('Delete action for the group card') },
+          sectionType: 'alert',
+          stopPropagation: true
+        }
+      ]}
+  />
+
+  <GroupCard
+    color='red'
+    margins={{
+      bottom: Variables.Spacing.s2XSmall
+    }}
+    headingContent="I'm a red group card (✿◠‿◠)"
+    bodyContents= {[
+      {
+        dropdownSections: [
+          {
+            text: 'Delete',
+            onClick: (event) => { alert('Delete action for the card') },
+            sectionType: 'alert',
+            stopPropagation: true
+          }
+        ],
+        mainContent: "(◕‿-)",
+      }
+    ]}
+    dropdownSections={[
+        {
+          text: 'Delete',
+          onClick: (event) => { alert('Delete action for the group card') },
+          sectionType: 'alert',
+          stopPropagation: true
+        }
+      ]}
+  />
+</>
+```
+
 #### GroupCard will manage its own state if *isExpanded* is not passed in
 
 ```jsx
@@ -311,10 +431,6 @@ import { GridLayout } from '@Domain/Layouts';
 import { Variables } from '@Common';
 
 <GroupCard
-  margins={{
-    top:12,
-    bottom: 4
-  }}
   headingContent="I'll manage my own state (✿◠‿◠)"
   bodyContents= {[
     {
