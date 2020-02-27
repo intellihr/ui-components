@@ -12,13 +12,13 @@ const StyledAnchor = styled(Anchor)`
   position: absolute;
   width: 100%;
   height: 100%;
-  margin-left: -16px;
+  margin-left: -${Variables.Spacing.sMedium}px;
 `
 
 const StyledPrimaryContent = styled.div`
-    width: auto;
-    flex: 1 1 0%;
-    pointer-events: none;
+  width: auto;
+  flex: 1 1 0%;
+  pointer-events: none;
 `
 
 const cardButtonStyle = css`

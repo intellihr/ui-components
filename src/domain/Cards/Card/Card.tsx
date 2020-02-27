@@ -15,9 +15,9 @@ import {
   StyledCard,
   StyledCardHeader,
   StyledCardToggleButton,
-  StyledExpandableButtonSection,
   StyledExtraContent,
-  StyledHeaderContainer
+  StyledHeaderContainer,
+  StyledToggleButtonSection
 } from './style'
 
 type CardColors = 'neutral' | 'orange' | 'red' | 'grey'
@@ -95,7 +95,7 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
             onClick={this.headerOnClick}
             isExpanded={this.isExpanded && !!extraContent}
             hasHoverStyle={!this.state.isActionButtonHover && (!!extraContent || !!onCardToggle || isHoverable! || this.hasHrefOrHandleClick)}
-            expandable={!!extraContent}
+            canExpand={!!extraContent}
             color={color!}
           >
             {!!this.href && <StyledAnchor href={this.href} />}
@@ -105,13 +105,13 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
           </StyledCardHeader>
 
           {this.hasHrefOrHandleClick && !!extraContent && (
-            <StyledExpandableButtonSection
+            <StyledToggleButtonSection
               isExpanded={this.isExpanded && !!extraContent}
               onClick={this.handleCardToggle}
               color={color!}
             >
               {this.toggleButton()}
-            </StyledExpandableButtonSection>
+            </StyledToggleButtonSection>
           )}
 
         </StyledHeaderContainer>
@@ -215,7 +215,6 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
       return (
         <StyledCardToggleButton
           isExpanded={this.isExpanded}
-          hasParentHoverStyle={!this.state.isActionButtonHover}
           color={color!}
           hasHrefOrHandleClick={this.hasHrefOrHandleClick}
         >

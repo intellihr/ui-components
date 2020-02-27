@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import { Props, Utils, Variables } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
 import { colorOptions } from '../services/colors'
-import { cardButtonStyle, cardCollpaseAnimation, cardExpandAnimation } from '../services/style'
+import { StyledFlexContent, cardButtonStyle, cardCollpaseAnimation, cardExpandAnimation } from '../services/style'
 import { CardColors } from '../Card/Card'
 
 interface IStyleActionButtonProps {
@@ -26,7 +26,6 @@ interface IStyledGroupMainCardProps {
 
 interface IStyledGroupCardToggleButtonProps {
   isExpanded: boolean
-  hasParentHoverStyle: boolean
   color: CardColors
   hasHrefOrHandleClick: boolean
 }
@@ -86,13 +85,14 @@ const StyledGroupCardToggleButton = styled.button<IStyledGroupCardToggleButtonPr
       transition: all .25s ease-out;
   `}
 
-  ${(props: IStyledGroupCardToggleButtonProps) => props.hasParentHoverStyle && !props.hasHrefOrHandleClick && css`
-    ${StyledGroupMainCard}:hover & {
-      color: ${Variables.Color.n800};
-      background-color: ${colorOptions[props.color].hoverButtonBackground};
-      transition: all .25s ease-out;
-    }
-  `}
+  ${(props: IStyledGroupCardToggleButtonProps) => {
+    return css`
+      &:hover {
+        color: ${Variables.Color.n800};
+        background-color: ${colorOptions[props.color].hoverButtonBackground};
+      }
+    `
+  }}
 
   ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
     ${(props: IStyledGroupCardToggleButtonProps) => !props.hasHrefOrHandleClick && css`
@@ -104,6 +104,7 @@ const StyledGroupCardToggleButton = styled.button<IStyledGroupCardToggleButtonPr
 const StyledBodyActionButton = styled.button`
   ${cardButtonStyle};
   z-index: 1;
+  transition: all .25s ease-out;
 
   &:hover {
     background-color: ${(props: IStyleActionButtonProps) => colorOptions[props.color].hoverButtonBackground};
@@ -150,21 +151,19 @@ const StyledBodyContent = styled.div`
   }
 `
 
-interface IStyledExpandableButtonSectionProps {
+interface IStyledToggleButtonSectionProps {
   isExpanded: boolean
   color: CardColors
 }
 
-const StyledExpandableButtonSection = styled.div`
-  display: flex;
-  align-items: center;
+const StyledToggleButtonSection = styled(StyledFlexContent)`
   padding: 0 ${Variables.Spacing.sMedium}px 0 ${Variables.Spacing.sMedium}px;
   border: 1px solid ${Variables.Color.n250};
   border-top-right-radius: ${Variables.Style.borderRadius}px;
   border-bottom-right-radius: ${Variables.Style.borderRadius}px;
   cursor: pointer;
 
-  ${(props: IStyledExpandableButtonSectionProps) => css`
+  ${(props: IStyledToggleButtonSectionProps) => css`
     &:hover  {
       color: ${Variables.Color.n800};
       background-color: ${colorOptions[props.color].hoverBackground};
@@ -172,7 +171,7 @@ const StyledExpandableButtonSection = styled.div`
     }
   `}
 
-  ${(props: IStyledExpandableButtonSectionProps) => props.isExpanded && css`
+  ${(props: IStyledToggleButtonSectionProps) => props.isExpanded && css`
     border-bottom-right-radius: 0;
   `}
 `
@@ -188,6 +187,6 @@ export {
   StyledGroupCardToggleButton,
   StyledGroupCard,
   StyledBodyContent,
-  StyledExpandableButtonSection,
+  StyledToggleButtonSection,
   StyledHeaderContainer
 }

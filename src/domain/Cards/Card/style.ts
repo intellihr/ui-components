@@ -3,12 +3,8 @@ import styled, { css } from 'styled-components'
 import { Props, Utils, Variables } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
 import { colorOptions } from '../services/colors'
-import { cardButtonStyle, cardCollpaseAnimation, cardExpandAnimation } from '../services/style'
+import { StyledFlexContent, cardButtonStyle, cardCollpaseAnimation, cardExpandAnimation } from '../services/style'
 import { CardColors } from './Card'
-
-import {
-  StyledFlexContent
-} from '../services/style'
 
 interface IStyledExtraContentProps {
   isExpanded: boolean
@@ -22,7 +18,6 @@ interface IStyledCardProps {
 
 interface IStyledCardToggleButtonProps {
   isExpanded: boolean,
-  hasParentHoverStyle: boolean
   color: CardColors
   hasHrefOrHandleClick?: boolean
 }
@@ -37,7 +32,7 @@ interface IStyledCardHeader {
   hasHoverStyle: boolean
   color: CardColors
   hasHrefOrHandleClick?: boolean
-  expandable: boolean
+  canExpand: boolean
 }
 
 const StyledCard = styled.div`
@@ -72,36 +67,34 @@ const StyledCardHeader = styled(StyledFlexContent)`
       border-radius: ${Variables.Style.borderRadius}px ${Variables.Style.borderRadius}px 0 0;
   `}
 
-  ${(props: IStyledCardHeader) => props.hasHrefOrHandleClick && props.expandable && css`
+  ${(props: IStyledCardHeader) => props.hasHrefOrHandleClick && props.canExpand && css`
       border-right: 0;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
   `}
 `
 
-interface IStyledExpandableButtonSectionProps {
+interface IStyledToggleButtonSectionProps {
   isExpanded: boolean
   color: CardColors
 }
 
-const StyledExpandableButtonSection = styled.div`
-  display: flex;
-  align-items: center;
+const StyledToggleButtonSection = styled(StyledFlexContent)`
   padding: 0 ${Variables.Spacing.sMedium}px 0 ${Variables.Spacing.sMedium}px;
   border: 1px solid ${Variables.Color.n250};
   border-top-right-radius: ${Variables.Style.borderRadius}px;
   border-bottom-right-radius: ${Variables.Style.borderRadius}px;
   cursor: pointer;
 
-  ${(props: IStyledExpandableButtonSectionProps) => css`
-    &:hover  {
+  ${(props: IStyledToggleButtonSectionProps) => css`
+    &:hover {
       color: ${Variables.Color.n800};
       background-color: ${colorOptions[props.color].hoverBackground};
       transition: background-color .25s ease-out;
     }
   `}
 
-  ${(props: IStyledExpandableButtonSectionProps) => props.isExpanded && css`
+  ${(props: IStyledToggleButtonSectionProps) => props.isExpanded && css`
     border-bottom-right-radius: 0;
   `}
 `
@@ -116,12 +109,14 @@ const StyledCardToggleButton = styled.button`
       transition: all .25s ease-out;
   `}
 
-  ${(props: IStyledCardToggleButtonProps) => props.hasParentHoverStyle && !props.hasHrefOrHandleClick && css`
-    ${StyledCard}:hover & {
-      color: ${Variables.Color.n800};
-      background-color: ${colorOptions[props.color].hoverButtonBackground};
-    }
-  `}
+  ${(props: IStyledCardToggleButtonProps) => {
+    return css`
+      &:hover {
+        color: ${Variables.Color.n800};
+        background-color: ${colorOptions[props.color].hoverButtonBackground};
+      }
+    `
+  }}
 
   ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
     ${(props: IStyledCardToggleButtonProps) => !props.hasHrefOrHandleClick && css`
@@ -133,6 +128,7 @@ const StyledCardToggleButton = styled.button`
 const StyledActionButton = styled.button<IStyleActionButtonProps>`
   ${cardButtonStyle};
   z-index: 1;
+  transition: all .25s ease-out;
 
   &:hover {
     background-color: ${(props: IStyleActionButtonProps) => colorOptions[props.color].hoverButtonBackground};
@@ -176,6 +172,6 @@ export {
   StyledExtraContent,
   StyledActionButton,
   StyledCardToggleButton,
-  StyledExpandableButtonSection,
+  StyledToggleButtonSection,
   StyledHeaderContainer
 }

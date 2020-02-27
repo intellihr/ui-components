@@ -14,12 +14,12 @@ import { CardColors } from '../Card/Card'
 import {
   StyledBodyActionButton,
   StyledBodyContent,
-  StyledExpandableButtonSection,
   StyledGroupCard,
   StyledGroupCardToggleButton,
   StyledGroupExtraCard,
   StyledGroupMainCard,
-  StyledHeaderContainer
+  StyledHeaderContainer,
+  StyledToggleButtonSection
 } from './style'
 
 interface IGroupCardExtraContentProps {
@@ -109,13 +109,13 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
             </StyledFlexContent>
           </StyledGroupMainCard>
           {this.hasHrefOrHandleClick && (
-            <StyledExpandableButtonSection
+            <StyledToggleButtonSection
               isExpanded={this.isExpanded}
               onClick={this.handleCardToggle}
               color={color!}
             >
               {this.toggleButton()}
-            </StyledExpandableButtonSection>
+            </StyledToggleButtonSection>
           )}
         </StyledHeaderContainer>
         {this.bodyContentCards}
@@ -195,7 +195,6 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
       return (
         <StyledGroupCardToggleButton
           isExpanded={this.isExpanded}
-          hasParentHoverStyle={!this.state.isActionButtonHover}
           color={color!}
           hasHrefOrHandleClick={this.hasHrefOrHandleClick}
         >
