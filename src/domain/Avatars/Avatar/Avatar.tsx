@@ -10,6 +10,17 @@ import { FontAwesomeIcon } from '../../Icons'
 import { AvatarPicture, AvatarPictureContainer } from './style'
 const style = require('./Avatar.scss')
 
+enum AvatarStatusDotColor {
+  Indigo = 'indigo',
+  Blue = 'blue',
+  Green = 'green',
+  Orange = 'orange',
+  Red = 'red',
+  Neutral = 'neutral',
+  Cyan = 'cyan',
+  Dark = 'dark'
+}
+
 export interface IAvatarProps {
   /** Size of the avatar  */
   size?: Props.AvatarSize
@@ -26,7 +37,7 @@ export interface IAvatarProps {
   /** Image blob data */
   imageData?: string
   /** Display a coloured status dot on the avatar */
-  statusDot?: Props.AvatarStatusDotColor
+  statusDot?: AvatarStatusDotColor | 'primary' | 'secondary' | 'success' | 'warning' | 'alert' | 'neutral' | 'highlight' | 'dark'
   /** Display an icon component on the avatar */
   statusIcon?: JSX.Element
 
@@ -176,7 +187,29 @@ class Avatar extends React.Component<IAvatarProps> {
     } = this.props
 
     if (statusDot) {
-      return <span className={`status-dot ${statusDot}`} />
+      let statusDotClassname = statusDot
+
+      switch (statusDot) {
+        case AvatarStatusDotColor.Indigo:
+          statusDotClassname = 'primary'
+          break
+        case AvatarStatusDotColor.Blue:
+          statusDotClassname = 'secondary'
+          break
+        case AvatarStatusDotColor.Green:
+          statusDotClassname = 'success'
+          break
+        case AvatarStatusDotColor.Orange:
+          statusDotClassname = 'warning'
+          break
+        case AvatarStatusDotColor.Red:
+          statusDotClassname = 'alert'
+          break
+        case AvatarStatusDotColor.Cyan:
+          statusDotClassname = 'highlight'
+      }
+
+      return <span className={`status-dot ${statusDotClassname}`} />
     }
 
     return null
@@ -200,5 +233,6 @@ class Avatar extends React.Component<IAvatarProps> {
 }
 
 export {
-  Avatar
+  Avatar,
+  AvatarStatusDotColor
 }

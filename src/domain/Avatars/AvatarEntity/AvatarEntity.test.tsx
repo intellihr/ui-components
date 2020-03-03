@@ -1,8 +1,9 @@
-import {shallow} from 'enzyme'
+import { shallow } from 'enzyme'
 import React from 'react'
 
-import {Props} from '../../../common'
-import {AvatarEntity} from './AvatarEntity'
+import { Props } from '../../../common'
+import { AvatarStatusDotColor } from '../Avatar'
+import { AvatarEntity } from './AvatarEntity'
 
 describe('<AvatarEntity />', () => {
   it(`should render a basic avatar entity`, () => {
@@ -21,7 +22,7 @@ describe('<AvatarEntity />', () => {
       <AvatarEntity
         initials='JW'
         imageUrl='www.example.com'
-        statusDot={Props.AvatarStatusDotColor.Indigo}
+        statusDot={AvatarStatusDotColor.Indigo}
         primaryText='John Wick'
         secondaryText='Guy Killer'
         tertiaryText='In Cinemas 2019'
@@ -47,7 +48,7 @@ describe('<AvatarEntity />', () => {
     const wrapper = shallow(
       <AvatarEntity
         initials='JW'
-        statusDot={Props.AvatarStatusDotColor.Indigo}
+        statusDot={AvatarStatusDotColor.Indigo}
         primaryText='John Wick'
         secondaryText='Guy Killer'
         tertiaryText='Job Ending in 3 days'
@@ -66,7 +67,7 @@ describe('<AvatarEntity />', () => {
       <AvatarEntity
         initials='JW'
         imageUrl='www.example.com'
-        statusDot={Props.AvatarStatusDotColor.Indigo}
+        statusDot={AvatarStatusDotColor.Indigo}
         primaryText='John Wick'
         secondaryText='Guy Killer'
         tertiaryText='In Cinemas 2019'

@@ -2,7 +2,7 @@ import { isEqual } from 'lodash'
 import React, { useState } from 'react'
 
 import { Props, Variables } from '../../../../common'
-import { Avatar } from '../../../Avatars/Avatar'
+import { Avatar, AvatarStatusDotColor } from '../../../Avatars/Avatar'
 import { FontAwesomeIcon } from '../../../Icons'
 import { Anchor } from '../../../Internals'
 import { DropdownMenu, IDropdownMenuToggleComponentProps } from '../../../Popovers/DropdownMenu'
@@ -38,7 +38,7 @@ interface IAvatarTileProps {
   /** The url to navigate to when clicking the top half of the tile */
   href?: string
   /** The colour of the status, if one is to be displayed */
-  statusColor?: Props.AvatarStatusDotColor
+  statusColor?: AvatarStatusDotColor | 'primary' | 'secondary' | 'success' | 'warning' | 'alert' | 'neutral' | 'highlight' | 'dark'
   /** Text to describe the status */
   statusText?: string
   /** The margins around the component */

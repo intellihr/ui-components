@@ -1,7 +1,7 @@
 import { mount } from 'enzyme'
 import React from 'react'
 
-import { Props } from '../../../../common'
+import { AvatarStatusDotColor } from '../../../Avatars/Avatar'
 import { Brick } from '../../../Typographies'
 import { AvatarTile } from './AvatarTile'
 
@@ -49,7 +49,7 @@ describe('<AvatarTile />', () => {
         primaryText='Le Bron James'
         initials='LJ'
         secondaryText='Small Forward'
-        statusColor={Props.AvatarStatusDotColor.Orange}
+        statusColor={AvatarStatusDotColor.Orange}
         statusText='On Extended Leave'
       />
     )

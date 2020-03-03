@@ -55,7 +55,8 @@ import { Props } from '@Common';
 #### Avatar using statusDot
 
 ```jsx
-import { Props } from '@Common';
+const { Props } = require('@Common');
+const { AvatarStatusDotColor } = require('@Domain/Avatars/Avatar');
 
 <div>
   <div>
@@ -63,25 +64,25 @@ import { Props } from '@Common';
       initials='JW'
       size={Props.AvatarSize.XLarge}
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      statusDot={Props.AvatarStatusDotColor.Indigo}
+      statusDot={AvatarStatusDotColor.Indigo}
     />
     <Avatar
       initials='JW'
       size={Props.AvatarSize.Large}
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      statusDot={Props.AvatarStatusDotColor.Indigo}
+      statusDot={AvatarStatusDotColor.Indigo}
     />
     <Avatar
       initials='JW'
       size={Props.AvatarSize.Medium}
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      statusDot={Props.AvatarStatusDotColor.Indigo}
+      statusDot={AvatarStatusDotColor.Indigo}
     />
     <Avatar
       initials='JW'
       size={Props.AvatarSize.Small}
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      statusDot={Props.AvatarStatusDotColor.Indigo}
+      statusDot={AvatarStatusDotColor.Indigo}
     />
   </div>
   <div>
@@ -89,49 +90,49 @@ import { Props } from '@Common';
       initials='JW'
       size={Props.AvatarSize.Medium}
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      statusDot={Props.AvatarStatusDotColor.Indigo}
+      statusDot={AvatarStatusDotColor.Indigo}
     />
     <Avatar
       initials='JW'
       size={Props.AvatarSize.Medium}
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      statusDot={Props.AvatarStatusDotColor.Blue}
+      statusDot={AvatarStatusDotColor.Blue}
     />
     <Avatar
       initials='JW'
       size={Props.AvatarSize.Medium}
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      statusDot={Props.AvatarStatusDotColor.Green}
+      statusDot={AvatarStatusDotColor.Green}
     />
     <Avatar
       initials='JW'
       size={Props.AvatarSize.Medium}
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      statusDot={Props.AvatarStatusDotColor.Orange}
+      statusDot={AvatarStatusDotColor.Orange}
     />
     <Avatar
       initials='JW'
       size={Props.AvatarSize.Medium}
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      statusDot={Props.AvatarStatusDotColor.Red}
+      statusDot={AvatarStatusDotColor.Red}
     />
     <Avatar
       initials='JW'
       size={Props.AvatarSize.Medium}
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      statusDot={Props.AvatarStatusDotColor.Cyan}
+      statusDot={AvatarStatusDotColor.Cyan}
     />
     <Avatar
       initials='JW'
       size={Props.AvatarSize.Medium}
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      statusDot={Props.AvatarStatusDotColor.Neutral}
+      statusDot={AvatarStatusDotColor.Neutral}
     />
     <Avatar
       initials='JW'
       size={Props.AvatarSize.Medium}
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      statusDot={Props.AvatarStatusDotColor.Dark}
+      statusDot={AvatarStatusDotColor.Dark}
     />
   </div>
 </div>
@@ -141,6 +142,7 @@ import { Props } from '@Common';
 
 ```jsx
 const { Props, Variables } = require('@Common');
+const { AvatarStatusDotColor } = require('@Domain/Avatars/Avatar');
 const { FontAwesomeIcon } = require('@Domain/Icons');
 
 <div>
@@ -155,7 +157,7 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
       <Avatar
         initials='JW'
         size={Props.AvatarSize.Medium}
-        statusDot={Props.AvatarStatusDotColor.Green}
+        statusDot={AvatarStatusDotColor.Green}
         statusIcon={<FontAwesomeIcon type='solid' icon='arrow-right' color={Variables.Color.i400} size='small' />}
       />
     </div>

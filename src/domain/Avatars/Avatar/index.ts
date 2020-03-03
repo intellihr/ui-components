@@ -1,1 +1,1 @@
-export { Avatar, IAvatarProps } from './Avatar'
+export { Avatar, IAvatarProps, AvatarStatusDotColor } from './Avatar'

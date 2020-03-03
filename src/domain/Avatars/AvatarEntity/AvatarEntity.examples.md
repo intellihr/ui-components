@@ -2,32 +2,35 @@
 
 ```jsx
 import { Props } from '@Common';
+import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
 
   <AvatarEntity
     initials='JW'
-    statusDot={Props.AvatarStatusDotColor.Indigo}
+    statusDot={AvatarStatusDotColor.Indigo}
     primaryText='John Wick'
   />
 ```
 
 ```jsx
 import { Props } from '@Common';
+import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
 
   <AvatarEntity
     initials='JW'
-    statusDot={Props.AvatarStatusDotColor.Indigo}
+    statusDot={AvatarStatusDotColor.Indigo}
     primaryText='John Wick'
     secondaryText='Guy Killer'
   />
 ```
 
 ```jsx
-const { Props, Variables } = require('@Common');
-const { FontAwesomeIcon } = require('@Domain/Icons');
+import { Props, Variables } from '@Common';
+import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
+import { FontAwesomeIcon } from '@Domain/Icons';
 
   <AvatarEntity
     initials='JW'
-    statusDot={Props.AvatarStatusDotColor.Indigo}
+    statusDot={AvatarStatusDotColor.Indigo}
     statusIcon={
       <FontAwesomeIcon type='solid' icon='arrow-right' color={Variables.Color.i400} size='small'/>
     }
@@ -41,10 +44,11 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 
 ```jsx
 import { Props } from '@Common';
+import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
 
   <AvatarEntity
     initials='JW'
-    statusDot={Props.AvatarStatusDotColor.Green}
+    statusDot={AvatarStatusDotColor.Green}
     primaryText='John Wick'
     isCompact
   />
@@ -52,12 +56,13 @@ import { Props } from '@Common';
 
 
 ```jsx
-const { Props, Variables } = require('@Common');
-const { FontAwesomeIcon } = require('@Domain/Icons');
+import { Props, Variables } from '@Common';
+import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
+import { FontAwesomeIcon } from '@Domain/Icons';
 
   <AvatarEntity
     initials='JW'
-    statusDot={Props.AvatarStatusDotColor.Green}
+    statusDot={AvatarStatusDotColor.Green}
     statusIcon={
       <FontAwesomeIcon type='solid' icon='arrow-right' color={Variables.Color.i400} size='xsmall' />
     }
@@ -70,12 +75,13 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 #### isHoverable
 
 ```jsx
-const { Props, Variables } = require('@Common');
-const { FontAwesomeIcon } = require('@Domain/Icons');
+import { Props, Variables } from '@Common';
+import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
+import { FontAwesomeIcon } from '@Domain/Icons';
 
   <AvatarEntity
     initials='JW'
-    statusDot={Props.AvatarStatusDotColor.Indigo}
+    statusDot={AvatarStatusDotColor.Indigo}
     statusIcon={
       <FontAwesomeIcon type='solid' icon='arrow-right' color={Variables.Color.i400} size='small'/>
     }
@@ -87,7 +93,7 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 ```
 
 ```jsx
-const { FontAwesomeIcon } = require('@Domain/Icons');
+import { FontAwesomeIcon } from '@Domain/Icons';
 
   <AvatarEntity
     initials='JW'
@@ -102,10 +108,11 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 
 ```jsx
 import { Props } from '@Common';
+import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
 
      <AvatarEntity
        initials='JW'
-       statusDot={Props.AvatarStatusDotColor.Indigo}
+       statusDot={AvatarStatusDotColor.Indigo}
        primaryText='John Wick'
        secondaryText='Guy Killer'
        isHoverable
@@ -117,10 +124,11 @@ import { Props } from '@Common';
 
 ```jsx
 import { Props } from '@Common';
+import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
 
      <AvatarEntity
        initials='JW'
-       statusDot={Props.AvatarStatusDotColor.Indigo}
+       statusDot={AvatarStatusDotColor.Indigo}
        primaryText='John Wick'
        secondaryText='Guy Killer'
        tertiaryText='Job Ending in 3 days'
@@ -144,11 +152,12 @@ import { Props } from '@Common';
 #### Colored & Weighted Text
 
 ```jsx
-const { Props, Variables } = require('@Common');
+import { Props, Variables } from '@Common';
+import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
 
   <AvatarEntity
     initials='JW'
-    statusDot={Props.AvatarStatusDotColor.Indigo}
+    statusDot={AvatarStatusDotColor.Indigo}
     primaryText='John Wick'
     primaryWeight={Variables.FontWeight.fwBold}
     primaryColor={Variables.Color.b600}

@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 
 import { Props, Variables } from '../../../../common'
+import { AvatarStatusDotColor } from '../../../Avatars/Avatar'
 import { styleForMargins } from '../../../Spacers/services/margins'
 import { styleForTruncatedText, styleForTypographyType } from '../../../Typographies/services/textStyles'
 
@@ -16,7 +17,7 @@ interface IStyledContainer extends IAvatarTile {
 }
 
 interface IStyledStatusBanner extends IAvatarTile {
-  statusColor?: Props.AvatarStatusDotColor
+  statusColor?: AvatarStatusDotColor | 'primary' | 'secondary' | 'success' | 'warning' | 'alert' | 'neutral' | 'highlight' | 'dark'
 }
 
 interface IStyledDropdownMenu {
@@ -40,35 +41,43 @@ const StyledStatusBanner = styled.div`
   ${(props: IStyledStatusBanner) => {
     if (props.statusColor) {
       switch (props.statusColor) {
-        case Props.AvatarStatusDotColor.Indigo:
+        case 'primary':
+        case AvatarStatusDotColor.Indigo:
           return css`
             background-color: ${Variables.Color.i400};
           `
-        case Props.AvatarStatusDotColor.Blue:
+        case 'secondary':
+        case AvatarStatusDotColor.Blue:
           return css`
             background-color: ${Variables.Color.b400};
           `
-        case Props.AvatarStatusDotColor.Green:
+        case 'success':
+        case AvatarStatusDotColor.Green:
           return css`
             background-color: ${Variables.Color.g400};
           `
-        case Props.AvatarStatusDotColor.Orange:
+        case 'warning':
+        case AvatarStatusDotColor.Orange:
           return css`
             background-color: ${Variables.Color.o400};
           `
-        case Props.AvatarStatusDotColor.Red:
+        case 'alert':
+        case AvatarStatusDotColor.Red:
           return css`
             background-color: ${Variables.Color.r400};
           `
-        case Props.AvatarStatusDotColor.Neutral:
+        case 'neutral':
+        case AvatarStatusDotColor.Neutral:
           return css`
             background-color: ${Variables.Color.n500};
           `
-        case Props.AvatarStatusDotColor.Cyan:
+        case 'highlight':
+        case AvatarStatusDotColor.Cyan:
           return css`
             background-color: ${Variables.Color.c400};
           `
-        case Props.AvatarStatusDotColor.Dark:
+        case 'dark':
+        case AvatarStatusDotColor.Dark:
           return css`
             background-color: ${Variables.Color.n700};
           `
