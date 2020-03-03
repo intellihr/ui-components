@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { Props } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
@@ -6,6 +6,7 @@ import { DropdownMenu, IDropdownMenuToggleComponentProps } from '../../Popovers/
 import { ISectionProps } from '../../Popovers/DropdownMenu/subcomponents/Section'
 import {
   ChevronIconWrapper,
+  StyledAnchor,
   StyledFlexContent,
   StyledPrimaryContent
 } from '../services/style'
@@ -16,7 +17,9 @@ import {
   StyledGroupCard,
   StyledGroupCardToggleButton,
   StyledGroupExtraCard,
-  StyledGroupMainCard
+  StyledGroupMainCard,
+  StyledHeaderContainer,
+  StyledToggleButtonSection
 } from './style'
 
 interface IGroupCardExtraContentProps {
@@ -24,9 +27,10 @@ interface IGroupCardExtraContentProps {
   extraContent?: JSX.Element
   dropdownSections?: ISectionProps[]
   color?: CardColors
+  handleClick?: () => void
 }
 
-interface IGroupCardProps {
+interface IGroupCardBasicProps {
   /** the component that shows even in collapse mode */
   headingContent: JSX.Element
   /** the components that shows in expand mode only */
@@ -45,7 +49,20 @@ interface IGroupCardProps {
   color?: CardColors
 }
 
+interface IGroupCardWithHrefProps extends IGroupCardBasicProps {
+  /** The url to navigate to when you click on the card header - not to be used with handleClick */
+  href?: string
+}
+
+interface IGroupCardWithHandleClickProps extends IGroupCardBasicProps {
+  /** A click handler that will be called when you click on the card header - not to be used with href */
+  handleClick: () => void
+}
+
+type IGroupCardProps = IGroupCardWithHrefProps | IGroupCardWithHandleClickProps
+
 interface IGroupCardState {
+  isActionButtonHover: boolean
   isExpanded: boolean
 }
 
@@ -55,6 +72,7 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
   }
 
   public state: IGroupCardState = {
+    isActionButtonHover: false,
     isExpanded: false
   }
 
@@ -75,21 +93,66 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
         data-component-type={Props.ComponentType.GroupCard}
         data-component-context={componentContext}
       >
-        <StyledGroupMainCard
-          onClick={this.handleCardToggle}
-          isExpanded={this.isExpanded && !!bodyContents}
-          hasHoverStyle={!!bodyContents}
-          color={color!}
-        >
-          <StyledFlexContent>
-            <StyledPrimaryContent>{headingContent}</StyledPrimaryContent>
-            {this.actionButtonDropdownMenu(dropdownSections)}
-            {this.toggleButton}
-          </StyledFlexContent>
-        </StyledGroupMainCard>
+        <StyledHeaderContainer>
+          <StyledGroupMainCard
+            hasHrefOrHandleClick={this.hasHrefOrHandleClick}
+            onClick={this.headerOnClick}
+            isExpanded={this.isExpanded && !!bodyContents}
+            hasHoverStyle={!this.state.isActionButtonHover && !!bodyContents}
+            color={color!}
+          >
+            <StyledFlexContent>
+              {!!this.href && <StyledAnchor href={this.href} />}
+              <StyledPrimaryContent>{headingContent}</StyledPrimaryContent>
+              {this.actionButtonDropdownMenu(dropdownSections)}
+              {!this.hasHrefOrHandleClick && this.toggleButton()}
+            </StyledFlexContent>
+          </StyledGroupMainCard>
+          {this.hasHrefOrHandleClick && (
+            <StyledToggleButtonSection
+              isExpanded={this.isExpanded}
+              onClick={this.handleCardToggle}
+              color={color!}
+            >
+              {this.toggleButton()}
+            </StyledToggleButtonSection>
+          )}
+        </StyledHeaderContainer>
         {this.bodyContentCards}
       </StyledGroupCard>
     )
+  }
+
+  private get href (): string | undefined {
+    if ('href' in this.props) {
+      return this.props.href
+    }
+
+    return undefined
+  }
+
+  private get handleClick (): (() => void) | undefined {
+    if ('handleClick' in this.props) {
+      return this.props.handleClick
+    }
+
+    return undefined
+  }
+
+  private get hasHrefOrHandleClick (): boolean {
+    return !!this.handleClick || !!this.href
+  }
+
+  private get headerOnClick (): any {
+    if (!!this.handleClick) {
+      return this.handleClick
+    }
+
+    if (!!this.href) {
+      return undefined
+    }
+
+    return this.handleCardToggle
   }
 
   private handleCardToggle = () => {
@@ -122,7 +185,7 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
     }
   }
 
-  private get toggleButton (): JSX.Element | undefined {
+  private toggleButton (): JSX.Element | undefined {
     const {
       bodyContents,
       color
@@ -130,7 +193,11 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
 
     if (bodyContents) {
       return (
-        <StyledGroupCardToggleButton isExpanded={this.isExpanded} color={color!}>
+        <StyledGroupCardToggleButton
+          isExpanded={this.isExpanded}
+          color={color!}
+          hasHrefOrHandleClick={this.hasHrefOrHandleClick}
+        >
           <ChevronIconWrapper>
             <FontAwesomeIcon type='solid' icon='chevron-down' />
           </ChevronIconWrapper>
@@ -139,35 +206,44 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
     }
   }
 
-  private bodyContent = (bodyContent: IGroupCardExtraContentProps, idx: number) => {
+  private bodyContent = (bodyContent: IGroupCardExtraContentProps, index: number) => {
     const {
       color,
       mainContent,
       extraContent,
-      dropdownSections
+      dropdownSections,
+      handleClick
     } = bodyContent
 
-    if (mainContent) {
-      const cardColor = color || this.props.color!
+    const cardColor = color || this.props.color!
+    const actionDropdownMenu = (onMouseOver: () => void, onMouseOut: () => void) =>
+      this.actionButtonDropdownMenu(dropdownSections, cardColor, onMouseOver, onMouseOut)
 
+    if (mainContent) {
       return (
-        <StyledBodyContent key={idx} color={cardColor}>
-          <StyledFlexContent>
-            <StyledPrimaryContent>{mainContent}</StyledPrimaryContent>
-            {this.actionButtonDropdownMenu(dropdownSections, cardColor)}
-          </StyledFlexContent>
-          {extraContent}
-        </StyledBodyContent>
+        <BodyCard
+          key={index}
+          color={cardColor}
+          mainContent={mainContent}
+          extraContent={extraContent}
+          handleClick={handleClick}
+          actionButtonDropdownMenu={actionDropdownMenu}
+        />
       )
     }
   }
 
-  private actionButtonDropdownMenu = (dropdownSections: ISectionProps[] | undefined, color?: CardColors) => {
+  private actionButtonDropdownMenu = (
+    dropdownSections: ISectionProps[] | undefined,
+    color?: CardColors,
+    onMouseOver?: () => void,
+    onMouseOut?: () => void
+  ) => {
     if (dropdownSections) {
       return (
         <DropdownMenu
           sections={dropdownSections}
-          toggleComponent={this.actionButton(color)}
+          toggleComponent={this.actionButton(color, onMouseOver, onMouseOut)}
         />
       )
     }
@@ -175,25 +251,74 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
     return null
   }
 
-  private actionButton = (color?: CardColors) => ({ toggleMenu, toggleComponentRef, ariaProps }: IDropdownMenuToggleComponentProps) => (
-    <StyledBodyActionButton
-      onClick={this.handleActionButtonClick(toggleMenu)}
-      ref={toggleComponentRef}
-      hasRightMargin={!!this.props.bodyContents}
-      color={color || this.props.color!}
-      {...ariaProps}
-    >
-      <FontAwesomeIcon type='solid' icon='ellipsis-v' />
-    </StyledBodyActionButton>
-  )
+  private actionButton = (
+    color?: CardColors,
+    onMouseOver?: () => void,
+    onMouseOut?: () => void
+  ) =>
+    ({ toggleMenu, toggleComponentRef, ariaProps }: IDropdownMenuToggleComponentProps) => (
+      <StyledBodyActionButton
+        onClick={this.handleActionButtonClick(toggleMenu)}
+        onMouseOver={onMouseOver || this.handleActionButtonMouseOver}
+        onMouseOut={onMouseOut || this.handleActionButtonMouseOut}
+        ref={toggleComponentRef}
+        hasRightMargin={!!this.props.bodyContents && !this.hasHrefOrHandleClick}
+        color={color || this.props.color!}
+        {...ariaProps}
+      >
+        <FontAwesomeIcon type='solid' icon='ellipsis-v' />
+      </StyledBodyActionButton>
+    )
 
   private handleActionButtonClick = (toggleMenu: () => void) => (event: React.MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation()
     toggleMenu()
   }
+
+  private handleActionButtonMouseOver = () => {
+    this.setState({ isActionButtonHover: true })
+  }
+
+  private handleActionButtonMouseOut = () => {
+    this.setState({ isActionButtonHover: false })
+  }
+}
+
+interface IBodyCardProps {
+  mainContent: JSX.Element
+  color: CardColors
+  extraContent?: JSX.Element
+  dropdownSections?: ISectionProps[]
+  handleClick?: () => void
+  actionButtonDropdownMenu: (onMouseOver: () => void, onMouseOut: () => void) => JSX.Element | null
+}
+
+const BodyCard: React.FC<IBodyCardProps> = ({
+  mainContent,
+  color,
+  extraContent,
+  handleClick,
+  actionButtonDropdownMenu
+}) => {
+  const [actionButtonHovered, setActionButtonHovered] = useState(false)
+
+  return (
+    <StyledBodyContent
+      color={color}
+      onClick={handleClick ? () => handleClick() : undefined}
+      hasHoverStyle={!actionButtonHovered && handleClick ? true : false}
+    >
+      <StyledFlexContent>
+        <StyledPrimaryContent>{mainContent}</StyledPrimaryContent>
+        {actionButtonDropdownMenu(() => setActionButtonHovered(true), () => setActionButtonHovered(false))}
+      </StyledFlexContent>
+      {extraContent}
+    </StyledBodyContent>
+  )
 }
 
 export {
+  BodyCard,
   GroupCard,
   IGroupCardExtraContentProps
 }
