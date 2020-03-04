@@ -17,7 +17,7 @@ describe('<LegacyDataTable />', () => {
             name: 'Jason Maurer',
             age: 23
           }
-        ]}
+        ] as readonly any[]}
         columns={[
           {
             Header: 'Name',
@@ -57,7 +57,7 @@ describe('<LegacyDataTable />', () => {
             name: 'Jason Maurer',
             age: 23
           }
-        ]}
+        ] as readonly any[]}
         columns={[
           {
             Header: 'Name',
@@ -97,7 +97,7 @@ describe('<LegacyDataTable />', () => {
             name: 'Sutherlan Caulfield',
             age: '35'
           }
-        ]}
+        ] as readonly any[]}
         columns={[
           {
             Header: 'Name',
@@ -135,7 +135,7 @@ describe('<LegacyDataTable />', () => {
             name: 'Sutherlan Caulfield',
             age: '35'
           }
-        ]}
+        ] as readonly any[]}
         columns={[
           {
             Header: 'Name',
@@ -191,7 +191,7 @@ describe('<LegacyDataTable />', () => {
             name: 'Some other guy',
             age: '35'
           }
-        ]}
+        ] as readonly any[]}
         columns={[
           {
             Header: 'Name',

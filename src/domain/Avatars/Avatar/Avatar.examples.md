@@ -1,22 +1,24 @@
 #### Avatar using Initials
 
 ```jsx
+import { Props } from '@Common';
+
 <div>
   <Avatar
     initials='JW'
-    size='xlarge'
+    size={Props.AvatarSize.XLarge}
   />
   <Avatar
     initials='JW'
-    size='large'
+    size={Props.AvatarSize.Large}
   />
   <Avatar
     initials='JW'
-    size='medium'
+    size={Props.AvatarSize.Medium}
   />
   <Avatar
     initials='JW'
-    size='small'
+    size={Props.AvatarSize.Small}
   />
 </div>
 ```
@@ -24,25 +26,27 @@
 #### Avatar using ImageUrl
 
 ```jsx
+import { Props } from '@Common';
+
 <div>
   <Avatar
     initials='JW'
-    size='xlarge'
+    size={Props.AvatarSize.XLarge}
     imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
   />
   <Avatar
     initials='JW'
-    size='large'
+    size={Props.AvatarSize.Large}
     imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
   />
   <Avatar
     initials='JW'
-    size='medium'
+    size={Props.AvatarSize.Medium}
     imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
   />
   <Avatar
     initials='JW'
-    size='small'
+    size={Props.AvatarSize.Small}
     imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
   />
 </div>
@@ -51,81 +55,84 @@
 #### Avatar using statusDot
 
 ```jsx
+const { Props } = require('@Common');
+const { AvatarStatusDotColor } = require('@Domain/Avatars/Avatar');
+
 <div>
   <div>
     <Avatar
       initials='JW'
-      size='xlarge'
+      size={Props.AvatarSize.XLarge}
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      statusDot='primary'
+      statusDot={AvatarStatusDotColor.Indigo}
     />
     <Avatar
       initials='JW'
-      size='large'
+      size={Props.AvatarSize.Large}
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      statusDot='primary'
+      statusDot={AvatarStatusDotColor.Indigo}
     />
     <Avatar
       initials='JW'
-      size='medium'
+      size={Props.AvatarSize.Medium}
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      statusDot='primary'
+      statusDot={AvatarStatusDotColor.Indigo}
     />
     <Avatar
       initials='JW'
-      size='small'
+      size={Props.AvatarSize.Small}
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      statusDot='primary'
+      statusDot={AvatarStatusDotColor.Indigo}
     />
   </div>
   <div>
     <Avatar
       initials='JW'
-      size='medium'
+      size={Props.AvatarSize.Medium}
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      statusDot='primary'
+      statusDot={AvatarStatusDotColor.Indigo}
     />
     <Avatar
       initials='JW'
-      size='medium'
+      size={Props.AvatarSize.Medium}
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      statusDot='secondary'
+      statusDot={AvatarStatusDotColor.Blue}
     />
     <Avatar
       initials='JW'
-      size='medium'
+      size={Props.AvatarSize.Medium}
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      statusDot='success'
+      statusDot={AvatarStatusDotColor.Green}
     />
     <Avatar
       initials='JW'
-      size='medium'
+      size={Props.AvatarSize.Medium}
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      statusDot='warning'
+      statusDot={AvatarStatusDotColor.Orange}
     />
     <Avatar
       initials='JW'
-      size='medium'
+      size={Props.AvatarSize.Medium}
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      statusDot='alert'
+      statusDot={AvatarStatusDotColor.Red}
     />
     <Avatar
       initials='JW'
-      size='medium'
+      size={Props.AvatarSize.Medium}
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      statusDot='highlight'
+      statusDot={AvatarStatusDotColor.Cyan}
     />
     <Avatar
       initials='JW'
-      size='medium'
+      size={Props.AvatarSize.Medium}
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      statusDot='neutral'
+      statusDot={AvatarStatusDotColor.Neutral}
     />
     <Avatar
       initials='JW'
-      size='medium'
+      size={Props.AvatarSize.Medium}
       imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
-      statusDot='dark'
+      statusDot={AvatarStatusDotColor.Dark}
     />
   </div>
 </div>
@@ -134,23 +141,23 @@
 #### Avatar using status icon
 
 ```jsx
-
-const { Variables } = require('@Common');
+const { Props, Variables } = require('@Common');
+const { AvatarStatusDotColor } = require('@Domain/Avatars/Avatar');
 const { FontAwesomeIcon } = require('@Domain/Icons');
 
 <div>
     <div>
       <Avatar
         initials='JW'
-        size='medium'
+        size={Props.AvatarSize.Medium}
         statusIcon={<FontAwesomeIcon type='solid' icon='arrow-right' color={Variables.Color.i400} size='small'/>}
       />
     </div>
     <div>
       <Avatar
         initials='JW'
-        size='medium'
-        statusDot='success'
+        size={Props.AvatarSize.Medium}
+        statusDot={AvatarStatusDotColor.Green}
         statusIcon={<FontAwesomeIcon type='solid' icon='arrow-right' color={Variables.Color.i400} size='small' />}
       />
     </div>
@@ -161,10 +168,12 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 #### Avatar using hover props
 
 ```jsx
+import { Props } from '@Common';
+
 <div>
   <Avatar
     initials='JW'
-    size='xlarge'
+    size={Props.AvatarSize.XLarge}
     imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
     hoverIcon='camera'
     hoverLabel='Change Picture'
@@ -172,7 +181,7 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
   />
   <Avatar
     initials='JW'
-    size='large'
+    size={Props.AvatarSize.Large}
     imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
     hoverIcon='camera'
     hoverLabel='Change Picture'
@@ -180,7 +189,7 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
   />
   <Avatar
     initials='JW'
-    size='medium'
+    size={Props.AvatarSize.Medium}
     imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
     hoverIcon='camera'
     hoverLabel='Change Picture'
@@ -188,7 +197,7 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
   />
   <Avatar
     initials='JW'
-    size='small'
+    size={Props.AvatarSize.Small}
     imageUrl='https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
     hoverIcon='camera'
     hoverLabel='Change Picture'

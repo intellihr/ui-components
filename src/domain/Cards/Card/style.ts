@@ -3,12 +3,8 @@ import styled, { css } from 'styled-components'
 import { Props, Utils, Variables } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
 import { colorOptions } from '../services/colors'
-import { cardButtonStyle, cardCollpaseAnimation, cardExpandAnimation } from '../services/style'
+import { StyledFlexContent, cardButtonStyle, cardCollpaseAnimation, cardExpandAnimation } from '../services/style'
 import { CardColors } from './Card'
-
-import {
-  StyledFlexContent
-} from '../services/style'
 
 interface IStyledExtraContentProps {
   isExpanded: boolean
@@ -22,8 +18,8 @@ interface IStyledCardProps {
 
 interface IStyledCardToggleButtonProps {
   isExpanded: boolean,
-  hasParentHoverStyle: boolean
   color: CardColors
+  hasHrefOrHandleClick?: boolean
 }
 
 interface IStyleActionButtonProps {
@@ -35,6 +31,8 @@ interface IStyledCardHeader {
   isExpanded: boolean
   hasHoverStyle: boolean
   color: CardColors
+  hasHrefOrHandleClick?: boolean
+  canExpand: boolean
 }
 
 const StyledCard = styled.div`
@@ -44,10 +42,17 @@ const StyledCard = styled.div`
 
   background-color: ${(props: IStyledCardProps) => colorOptions[props.color].background};
 `
+
+const StyledHeaderContainer = styled.div`
+  display: flex;
+`
+
 const StyledCardHeader = styled(StyledFlexContent)`
+  position: relative;
   padding: ${Variables.Spacing.sMedium}px;
   border: 1px solid ${(props: IStyledCardHeader) => colorOptions[props.color].border};
   border-radius: ${Variables.Style.borderRadius}px;
+  width: 100%;
 
   ${(props: IStyledCardHeader) => props.hasHoverStyle && css`
       cursor: pointer;
@@ -61,31 +66,69 @@ const StyledCardHeader = styled(StyledFlexContent)`
   ${(props: IStyledCardHeader) => props.isExpanded && css`
       border-radius: ${Variables.Style.borderRadius}px ${Variables.Style.borderRadius}px 0 0;
   `}
+
+  ${(props: IStyledCardHeader) => props.hasHrefOrHandleClick && props.canExpand && css`
+      border-right: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+  `}
+`
+
+interface IStyledToggleButtonSectionProps {
+  isExpanded: boolean
+  color: CardColors
+}
+
+const StyledToggleButtonSection = styled(StyledFlexContent)`
+  padding: 0 ${Variables.Spacing.sMedium}px 0 ${Variables.Spacing.sMedium}px;
+  border: 1px solid ${Variables.Color.n250};
+  border-top-right-radius: ${Variables.Style.borderRadius}px;
+  border-bottom-right-radius: ${Variables.Style.borderRadius}px;
+  cursor: pointer;
+
+  ${(props: IStyledToggleButtonSectionProps) => css`
+    &:hover {
+      color: ${Variables.Color.n800};
+      background-color: ${colorOptions[props.color].hoverBackground};
+      transition: background-color .25s ease-out;
+    }
+  `}
+
+  ${(props: IStyledToggleButtonSectionProps) => props.isExpanded && css`
+    border-bottom-right-radius: 0;
+  `}
 `
 
 const StyledCardToggleButton = styled.button`
   ${cardButtonStyle};
   transition: all .25s ease-out;
+  z-index: 1;
 
   ${(props: IStyledCardToggleButtonProps) => props.isExpanded && css`
       transform: rotate(180deg);
       transition: all .25s ease-out;
   `}
 
-  ${(props: IStyledCardToggleButtonProps) => props.hasParentHoverStyle && css`
-    ${StyledCard}:hover & {
-      color: ${Variables.Color.n800};
-      background-color: ${colorOptions[props.color].hoverButtonBackground};
-    }
-  `}
+  ${(props: IStyledCardToggleButtonProps) => {
+    return css`
+      &:hover {
+        color: ${Variables.Color.n800};
+        background-color: ${colorOptions[props.color].hoverButtonBackground};
+      }
+    `
+  }}
 
   ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
-    display: none;
+    ${(props: IStyledCardToggleButtonProps) => !props.hasHrefOrHandleClick && css`
+      display: none;
+    `}
   }
 `
 
 const StyledActionButton = styled.button<IStyleActionButtonProps>`
   ${cardButtonStyle};
+  z-index: 1;
+  transition: all .25s ease-out;
 
   &:hover {
     background-color: ${(props: IStyleActionButtonProps) => colorOptions[props.color].hoverButtonBackground};
@@ -128,5 +171,7 @@ export {
   StyledCardHeader,
   StyledExtraContent,
   StyledActionButton,
-  StyledCardToggleButton
+  StyledCardToggleButton,
+  StyledToggleButtonSection,
+  StyledHeaderContainer
 }

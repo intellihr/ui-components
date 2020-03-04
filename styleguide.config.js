@@ -97,7 +97,8 @@ module.exports = {
         {
           name: 'Boards',
           components: [
-            'src/domain/Boards/Board/Board.tsx'
+            'src/domain/Boards/Board/Board.tsx',
+            'src/domain/Boards/AvatarBoard/AvatarBoard.tsx'
           ]
         },
         {

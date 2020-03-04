@@ -16,7 +16,7 @@ describe('LegacyAsyncDataTable', () => {
                     name: 'Sutherlan Caulfield',
                     age: '35'
                 }
-            ]}
+            ] as readonly any[]}
             columns={[
                 {
                     Header: 'Name',
@@ -61,7 +61,7 @@ describe('onPageChange changes page', () => {
                     name: 'Sutherlan Caulfield',
                     age: '35'
                 }
-            ]}
+            ] as readonly any[]}
             columns={[
                 {
                     Header: 'Name',
@@ -101,7 +101,7 @@ describe('Empty AsyncDataTable', () => {
     const mockOnPageChange = jest.fn()
     const wrapper = mount(
         <NonMemoizedAsyncDataTable
-            data={[]}
+            data={[] as readonly any[]}
             columns={[
                 {
                     Header: 'Name',
@@ -132,7 +132,7 @@ describe('Loading AsyncDataTable', () => {
     const mockOnPageChange = jest.fn()
     const wrapper = mount(
         <NonMemoizedAsyncDataTable
-            data={[]}
+            data={[] as readonly any[]}
             columns={[
                 {
                     Header: 'Name',
@@ -159,7 +159,7 @@ describe('Set noDataComponent on AsyncDataTable', () => {
     const mockOnPageChange = jest.fn()
     const wrapper = mount(
         <NonMemoizedAsyncDataTable
-            data={[]}
+            data={[] as readonly any[]}
             columns={[
                 {
                     Header: 'Name',

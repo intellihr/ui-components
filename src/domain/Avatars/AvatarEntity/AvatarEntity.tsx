@@ -1,7 +1,8 @@
 import React from 'react'
 
-import { Avatar, IAvatarProps } from '../'
+import { Avatar } from '../'
 import { Props, Variables } from '../../../common'
+import { AvatarStatusDotColor } from '../Avatar'
 import {
   AvatarContainer,
   AvatarEntityInfo,
@@ -43,7 +44,7 @@ export interface IAvatarEntityProps {
   /** Image URL */
   imageUrl?: string
   /** Display a coloured status dot on the avatar */
-  statusDot?: 'primary' | 'secondary' | 'success' | 'warning' | 'alert' | 'neutral' | 'highlight' | 'dark'
+  statusDot?: AvatarStatusDotColor | 'primary' | 'secondary' | 'success' | 'warning' | 'alert' | 'neutral' | 'highlight' | 'dark'
   /** Display an icon component on the avatar */
   statusIcon?: JSX.Element
 }

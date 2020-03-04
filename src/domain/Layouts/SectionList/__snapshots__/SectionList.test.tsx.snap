@@ -1570,6 +1570,10 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                               [Function],
                                               "
 
+  ",
+                                              [Function],
+                                              "
+
   &,
   &:link,
   &:visited {
@@ -2983,6 +2987,10 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                               "
   transition: color .25s ease-out;
   cursor: pointer;
+
+  ",
+                                              [Function],
+                                              "
 
   ",
                                               [Function],

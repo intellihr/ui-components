@@ -18,7 +18,7 @@ exports[`<AvatarEntity /> should render a avatar entity with lots of data 1`] = 
       imageUrl="www.example.com"
       initials="JW"
       size="medium"
-      statusDot="primary"
+      statusDot="indigo"
     />
   </styled.div>
   <styled.div>
@@ -65,7 +65,7 @@ exports[`<AvatarEntity /> should render a avatar entity with specific text type 
     <Avatar
       initials="JW"
       size="medium"
-      statusDot="primary"
+      statusDot="indigo"
     />
   </styled.div>
   <styled.div>
@@ -177,7 +177,7 @@ exports[`<AvatarEntity /> should render a compact avatar entity with lots of dat
       imageUrl="www.example.com"
       initials="JW"
       size="small"
-      statusDot="primary"
+      statusDot="indigo"
     />
   </styled.div>
   <styled.div>

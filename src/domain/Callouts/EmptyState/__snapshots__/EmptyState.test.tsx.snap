@@ -1,38 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`EmptyState Renders default empty state 1`] = `
-<div
-  className="ihrEmptyState"
+<styled.div
   data-component-type="empty_state"
 >
-  <div
-    className="ihrPrimaryMessage"
-  >
+  <styled.div>
     Oops... We couldn't find anything for this section.
-  </div>
-  <div
-    className="ihrSecondaryMessage"
-  >
+  </styled.div>
+  <styled.div>
     Please speak to your system admin or add information.
-  </div>
-</div>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`EmptyState Renders successfully with both primaryMessage, secondaryMessage and buttonComponent 1`] = `
-<div
-  className="ihrEmptyState"
+<styled.div
   data-component-type="empty_state"
 >
-  <div
-    className="ihrPrimaryMessage"
-  >
+  <styled.div>
     This is a primary message
-  </div>
-  <div
-    className="ihrSecondaryMessage"
-  >
+  </styled.div>
+  <styled.div>
     This is a secondary message
-  </div>
+  </styled.div>
   <LinkButton
     anchorComponentProps={
       Object {
@@ -49,48 +39,37 @@ exports[`EmptyState Renders successfully with both primaryMessage, secondaryMess
   >
     Add Address
   </LinkButton>
-</div>
+</styled.div>
 `;
 
 exports[`EmptyState Renders successfully with null messages 1`] = `
-<div
-  className="ihrEmptyState"
+<styled.div
   data-component-type="empty_state"
 />
 `;
 
 exports[`EmptyState Renders successfully with primaryMessage only 1`] = `
-<div
-  className="ihrEmptyState"
+<styled.div
   data-component-type="empty_state"
 >
-  <div
-    className="ihrPrimaryMessage"
-  >
+  <styled.div>
     This is a primary message
-  </div>
-  <div
-    className="ihrSecondaryMessage"
-  >
+  </styled.div>
+  <styled.div>
     Please speak to your system admin or add information.
-  </div>
-</div>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`EmptyState Renders successfully with secondaryMessage only 1`] = `
-<div
-  className="ihrEmptyState"
+<styled.div
   data-component-type="empty_state"
 >
-  <div
-    className="ihrPrimaryMessage"
-  >
+  <styled.div>
     Oops... We couldn't find anything for this section.
-  </div>
-  <div
-    className="ihrSecondaryMessage"
-  >
+  </styled.div>
+  <styled.div>
     This is a secondary message
-  </div>
-</div>
+  </styled.div>
+</styled.div>
 `;
