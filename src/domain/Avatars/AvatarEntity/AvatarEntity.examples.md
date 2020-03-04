@@ -1,29 +1,36 @@
-#### Basic AvatarEntity 
+#### Basic AvatarEntity
 
 ```jsx
+import { Props } from '@Common';
+import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
+
   <AvatarEntity
     initials='JW'
-    statusDot='primary'
+    statusDot={AvatarStatusDotColor.Indigo}
     primaryText='John Wick'
   />
 ```
 
 ```jsx
+import { Props } from '@Common';
+import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
+
   <AvatarEntity
     initials='JW'
-    statusDot='primary'
+    statusDot={AvatarStatusDotColor.Indigo}
     primaryText='John Wick'
     secondaryText='Guy Killer'
   />
 ```
 
 ```jsx
-const { Variables } = require('@Common');
-const { FontAwesomeIcon } = require('@Domain/Icons');
+import { Props, Variables } from '@Common';
+import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
+import { FontAwesomeIcon } from '@Domain/Icons';
 
   <AvatarEntity
     initials='JW'
-    statusDot='primary'
+    statusDot={AvatarStatusDotColor.Indigo}
     statusIcon={
       <FontAwesomeIcon type='solid' icon='arrow-right' color={Variables.Color.i400} size='small'/>
     }
@@ -36,9 +43,12 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 #### Compact
 
 ```jsx
+import { Props } from '@Common';
+import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
+
   <AvatarEntity
     initials='JW'
-    statusDot='success'
+    statusDot={AvatarStatusDotColor.Green}
     primaryText='John Wick'
     isCompact
   />
@@ -46,12 +56,13 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 
 
 ```jsx
-const { Variables } = require('@Common');
-const { FontAwesomeIcon } = require('@Domain/Icons');
+import { Props, Variables } from '@Common';
+import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
+import { FontAwesomeIcon } from '@Domain/Icons';
 
   <AvatarEntity
     initials='JW'
-    statusDot='success'
+    statusDot={AvatarStatusDotColor.Green}
     statusIcon={
       <FontAwesomeIcon type='solid' icon='arrow-right' color={Variables.Color.i400} size='xsmall' />
     }
@@ -64,12 +75,13 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 #### isHoverable
 
 ```jsx
-const { Variables } = require('@Common');
-const { FontAwesomeIcon } = require('@Domain/Icons');
+import { Props, Variables } from '@Common';
+import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
+import { FontAwesomeIcon } from '@Domain/Icons';
 
   <AvatarEntity
     initials='JW'
-    statusDot='primary'
+    statusDot={AvatarStatusDotColor.Indigo}
     statusIcon={
       <FontAwesomeIcon type='solid' icon='arrow-right' color={Variables.Color.i400} size='small'/>
     }
@@ -81,7 +93,7 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 ```
 
 ```jsx
-const { FontAwesomeIcon } = require('@Domain/Icons');
+import { FontAwesomeIcon } from '@Domain/Icons';
 
   <AvatarEntity
     initials='JW'
@@ -95,29 +107,35 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 #### Customised text type
 
 ```jsx
+import { Props } from '@Common';
+import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
+
      <AvatarEntity
        initials='JW'
-       statusDot='primary'
+       statusDot={AvatarStatusDotColor.Indigo}
        primaryText='John Wick'
        secondaryText='Guy Killer'
        isHoverable
-       primaryTextType='small'
-       secondaryTextType='small'
+       primaryTextType={Props.TypographyType.Small}
+       secondaryTextType={Props.TypographyType.Small}
        isCompact
      />
 ```
 
 ```jsx
+import { Props } from '@Common';
+import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
+
      <AvatarEntity
        initials='JW'
-       statusDot='primary'
+       statusDot={AvatarStatusDotColor.Indigo}
        primaryText='John Wick'
        secondaryText='Guy Killer'
        tertiaryText='Job Ending in 3 days'
        isHoverable
-        primaryTextType='heading'
-        secondaryTextType='body'
-        tertiaryTextType='small'
+        primaryTextType={Props.TypographyType.Heading}
+        secondaryTextType={Props.TypographyType.Body}
+        tertiaryTextType={Props.TypographyType.Small}
      />
 ```
 
@@ -134,11 +152,12 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 #### Colored & Weighted Text
 
 ```jsx
-const { Variables } = require('@Common');
+import { Props, Variables } from '@Common';
+import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
 
   <AvatarEntity
     initials='JW'
-    statusDot='primary'
+    statusDot={AvatarStatusDotColor.Indigo}
     primaryText='John Wick'
     primaryWeight={Variables.FontWeight.fwBold}
     primaryColor={Variables.Color.b600}
@@ -171,7 +190,7 @@ These should be avoided where possible, but are provided as legacy non-javascrip
       </div>
     </div>
   </div>
-  
+
   <div class="grid-x person-tag">
     <div class="avatar-container">
       <span class="initials-badge badge-medium">

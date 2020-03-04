@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 
 import { Props, Variables } from '../../../../common'
+import { AvatarStatusDotColor } from '../../../Avatars/Avatar'
 import { styleForMargins } from '../../../Spacers/services/margins'
 import { styleForTruncatedText, styleForTypographyType } from '../../../Typographies/services/textStyles'
 
@@ -16,7 +17,7 @@ interface IStyledContainer extends IAvatarTile {
 }
 
 interface IStyledStatusBanner extends IAvatarTile {
-  statusColor?: 'primary' | 'secondary' | 'success' | 'warning' | 'alert' | 'neutral' | 'highlight' | 'dark'
+  statusColor?: AvatarStatusDotColor | 'primary' | 'secondary' | 'success' | 'warning' | 'alert' | 'neutral' | 'highlight' | 'dark'
 }
 
 interface IStyledDropdownMenu {
@@ -41,34 +42,42 @@ const StyledStatusBanner = styled.div`
     if (props.statusColor) {
       switch (props.statusColor) {
         case 'primary':
+        case AvatarStatusDotColor.Indigo:
           return css`
             background-color: ${Variables.Color.i400};
           `
         case 'secondary':
+        case AvatarStatusDotColor.Blue:
           return css`
             background-color: ${Variables.Color.b400};
           `
         case 'success':
+        case AvatarStatusDotColor.Green:
           return css`
             background-color: ${Variables.Color.g400};
           `
         case 'warning':
+        case AvatarStatusDotColor.Orange:
           return css`
             background-color: ${Variables.Color.o400};
           `
         case 'alert':
+        case AvatarStatusDotColor.Red:
           return css`
             background-color: ${Variables.Color.r400};
           `
         case 'neutral':
+        case AvatarStatusDotColor.Neutral:
           return css`
             background-color: ${Variables.Color.n500};
           `
         case 'highlight':
+        case AvatarStatusDotColor.Cyan:
           return css`
             background-color: ${Variables.Color.c400};
           `
         case 'dark':
+        case AvatarStatusDotColor.Dark:
           return css`
             background-color: ${Variables.Color.n700};
           `

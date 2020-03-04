@@ -377,7 +377,7 @@ exports[`<Avatar /> Renders a medium Avatar with initials and a warning status d
 <Avatar
   initials="JW"
   size="medium"
-  statusDot="warning"
+  statusDot="orange"
 >
   <div
     className="Avatar avatar-medium"
