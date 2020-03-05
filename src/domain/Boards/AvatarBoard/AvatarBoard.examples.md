@@ -501,3 +501,19 @@ If you provide a statusColor **and** a statusText, it will display a banner on h
     </AvatarBoard.AvatarTile>
   </AvatarBoard>
 ```
+
+#### AvatarBoard loading state
+
+If the board is flagged as loading, it will render a skeleton. It will render 15 tiles by default (assuming this will be 3 rows of 5 on desktop), but you can pass in the skeletonTilesNum to determine how many to render.
+
+```jsx
+  import { EmptyState } from '@Domain/Callouts';
+
+  <AvatarBoard
+    emptyStateComponent={
+      <EmptyState />
+    }
+    loading
+    skeletonTilesNum={9}
+  />
+```
