@@ -262,11 +262,17 @@
 You must pass a component to render for when no children are provided.
 
 ```jsx
+  import { Variables } from '@Common';
   import { EmptyState } from '@Domain/Callouts';
 
   <AvatarBoard
     emptyStateComponent={
-      <EmptyState />
+      <EmptyState
+        margins={{
+          left: Variables.Spacing.sLarge,
+          bottom: Variables.Spacing.sLarge
+        }}
+      />
     }
   />
 ```
