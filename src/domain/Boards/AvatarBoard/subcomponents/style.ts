@@ -196,6 +196,7 @@ const StyledActionArea = styled.div`
     if (props.hovered) {
       return css`
         background-color: ${Variables.Color.c100};
+        transition: ease-out 0.2s;
 
         &:hover {
           background-color: ${Variables.Color.c200};
@@ -221,8 +222,8 @@ const StyledContainer = styled.div`
   transition: ease-in 0.15s;
   overflow: hidden;
 
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin-left: ${Variables.Spacing.sLarge}px;
+  margin-bottom: ${Variables.Spacing.sLarge}px;
 
   ${(props: IStyledContainer) => styleForMargins(props.margins)}
 

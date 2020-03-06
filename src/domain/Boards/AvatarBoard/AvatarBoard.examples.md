@@ -262,11 +262,17 @@
 You must pass a component to render for when no children are provided.
 
 ```jsx
+  import { Variables } from '@Common';
   import { EmptyState } from '@Domain/Callouts';
 
   <AvatarBoard
     emptyStateComponent={
-      <EmptyState />
+      <EmptyState
+        margins={{
+          left: Variables.Spacing.sLarge,
+          bottom: Variables.Spacing.sLarge
+        }}
+      />
     }
   />
 ```
@@ -494,4 +500,20 @@ If you provide a statusColor **and** a statusText, it will display a banner on h
       </Text>
     </AvatarBoard.AvatarTile>
   </AvatarBoard>
+```
+
+#### AvatarBoard loading state
+
+If the board is flagged as loading, it will render a skeleton. It will render 15 tiles by default (assuming this will be 3 rows of 5 on desktop), but you can pass in the skeletonTilesNum to determine how many to render.
+
+```jsx
+  import { EmptyState } from '@Domain/Callouts';
+
+  <AvatarBoard
+    emptyStateComponent={
+      <EmptyState />
+    }
+    loading
+    skeletonTilesNum={9}
+  />
 ```

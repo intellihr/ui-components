@@ -9,13 +9,15 @@ interface IBoardWrapperProps {
 
 const AvatarBoardWrapper = styled.div<IBoardWrapperProps>`
   ${(props) => styleForMargins(props.margins)}
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 
   background-color: ${Variables.Color.n250};
   border-radius: 4px;
 
-  padding: 20px;
+  padding-right: ${Variables.Spacing.sLarge}px;
+  padding-top: ${Variables.Spacing.sLarge}px;
 `
 
 export {

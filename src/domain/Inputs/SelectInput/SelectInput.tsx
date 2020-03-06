@@ -3,6 +3,7 @@ import { debounce, isEmpty, isEqual } from 'lodash'
 import React from 'react'
 import Select, {
   Creatable,
+  FilterOptionsHandler,
   OnChangeHandler,
   OnOpenHandler,
   Option,
@@ -64,6 +65,8 @@ export interface ISelectInputProps {
   onNewOptionCreated?: (option: Option) => void
   /** Handler for input being updated when user type to search */
   onInputChange?: (input: string) => void
+  /** A function to customize the filtering logic */
+  filterOptions?: FilterOptionsHandler
 }
 
 export class SelectInput extends React.PureComponent<ISelectInputProps> {
@@ -124,18 +127,20 @@ export class SelectInput extends React.PureComponent<ISelectInputProps> {
       shouldFilteringBePerformed,
       shouldRemoveElementsFromMultiSelect,
       onOpen,
-      optionComponent
+      optionComponent,
+      filterOptions
     } = this.props
 
     return {
       autoFocus: false,
-      className: classNames({'is-invalid-input': isInvalid}, `react-select-${name}`, style.selectInput),
+      className: classNames({ 'is-invalid-input': isInvalid }, `react-select-${name}`, style.selectInput),
       clearable: isClearable,
       closeOnSelect: shouldCloseOnSelect,
       disabled: isDisabled,
       id: id || name,
       isLoading: isFetching,
       filterOption: shouldFilteringBePerformed ? undefined : this.disableFiltering,
+      filterOptions,
       multi: isMultiSelect,
       name: isMultiSelect ? `${name}[]` : name,
       noResultsText,
@@ -165,11 +170,11 @@ export class SelectInput extends React.PureComponent<ISelectInputProps> {
       if (newValue && Array.isArray(newValue)) {
         onChange(
           newValue.reduce((result: OptionValues[], currentOption: Option) => {
-          if (currentOption.value) {
-            result.push(currentOption.value)
-          }
-          return result
-        }, [])
+            if (currentOption.value) {
+              result.push(currentOption.value)
+            }
+            return result
+          }, [])
         )
       } else {
         onChange(newValue ? newValue.value : null)
@@ -209,7 +214,7 @@ export class SelectInput extends React.PureComponent<ISelectInputProps> {
     if (onInputChange) {
       onInputChange(input)
     }
-  }, 500, {maxWait: 1000})
+  }, 500, { maxWait: 1000 })
 
   // We debounce the callback but onInputChange must always return the current input text to work correctly
   private onInputChange = (input: string): string => {
