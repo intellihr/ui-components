@@ -196,6 +196,7 @@ const StyledActionArea = styled.div`
     if (props.hovered) {
       return css`
         background-color: ${Variables.Color.c100};
+        transition: ease-out 0.2s;
 
         &:hover {
           background-color: ${Variables.Color.c200};
