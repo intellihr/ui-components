@@ -11,13 +11,12 @@ interface ITabGroupContainerProps {
 }
 
 interface ITabListItemProps {
-  active: boolean
-  index: number
   widestWidth: number
   tabSize?: TabSize
 }
 
 interface ITabListItemButtonProps {
+  hasText?: boolean
   active: boolean
   tabSize?: TabSize
 }
@@ -47,6 +46,10 @@ function stylesFortabSizes (props: ITabListItemButtonProps) {
   if (props.tabSize === 'match-largest-tab') {
     return css`
         padding: ${Variables.Spacing.sXSmall}px ${Variables.Spacing.sLarge}px;
+        ${props.hasText && css`
+          font-size: ${Variables.FontSize.fzBody}px;
+          line-height: ${Variables.LineHeight.lhBody}px;
+        `}
       `
   }
 }
@@ -98,26 +101,34 @@ const TabListItem = styled.li<ITabListItemProps>`
     width: ${widestWidth}px;
   `}
 
-  ${({ active, index, widestWidth }) => active && css`
-    & ~ ${HighlightBar} {
-      left: ${index * widestWidth - 1}px;
-    }
-  `}
 `
 
 interface IHilightBarProps {
   width: number
+  index: number
+  widestWidth: number
+  widthChanging: boolean
 }
 
-const HighlightBar = styled.div<IHilightBarProps>`
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: ${({ width }) => width}px;
+const HighlightBar = styled.div.attrs<IHilightBarProps>(
+  ({ index, widestWidth, widthChanging, width }) => {
+    return {
+      style: {
+        left: `${index * widestWidth - 1}px`,
+        transition: widthChanging ? 'none' : 'left .1s ease-in',
+        width: `${width}px`
+      }
+    }
+  }
+) <IHilightBarProps>`
+  width: 100%;
   height: 2px;
   border-radius: 1px;
   background-color: ${Variables.Color.i400};
-  transition: .15s ease-in;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: left .1s ease-in;
 `
 
 const TabListItemButton = styled.button<ITabListItemButtonProps>`
@@ -128,6 +139,7 @@ const TabListItemButton = styled.button<ITabListItemButtonProps>`
   display: block;
   font-size: ${Variables.FontSize.fzSmall}px;
   font-weight: ${Variables.FontWeight.fwSemiBold};
+  /* line-height: ${Variables.LineHeight.lhBody}px; */
   outline: none;
   padding: 10px 0;
   position: relative;
@@ -143,7 +155,8 @@ const TabListItemButton = styled.button<ITabListItemButtonProps>`
       background-color: ${Variables.Color.n100};
       color: ${Variables.Color.i400};
       transition: .15s ease-out;
-  ` : css`
+    `
+    : css`
       &:hover,
       &:focus {
         background-color: ${Variables.Color.n300};
@@ -155,10 +168,15 @@ const TabListItemButton = styled.button<ITabListItemButtonProps>`
   ${stylesFortabSizes}
 `
 
+const StyledIconContainer = styled.span<{ margins: Props.IMargins }>`
+  ${({ margins }) => styleForMargins(margins)}
+`
+
 export {
   TabGroupContainer,
   TabList,
   TabListItem,
   TabListItemButton,
-  HighlightBar
+  HighlightBar,
+  StyledIconContainer
 }

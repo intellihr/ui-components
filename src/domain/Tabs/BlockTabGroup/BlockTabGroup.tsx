@@ -3,13 +3,14 @@ import {
   isNumber,
   toNumber
 } from 'lodash'
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import React, { ReactElement, useEffect, useLayoutEffect, useRef, useState } from 'react'
 
 import { Props, Variables } from '../../../common'
 import { IconValue } from '../../Icons'
 import { Text } from '../../Typographies/Text'
 import {
   HighlightBar,
+  StyledIconContainer,
   TabGroupContainer,
   TabList,
   TabListItem,
@@ -18,7 +19,7 @@ import {
 
 export interface IBlockTab {
   /** Icon to use for the tab */
-  icon?: IconValue
+  icon?: ReactElement
   /** String title to use for the tab */
   title?: string
 }
@@ -72,6 +73,7 @@ const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
   const tabListRef = useRef<HTMLUListElement | null>(null)
 
   const previousWidestWidth = usePrevious(widestWidth)
+  /** Find the widest tab width tab set it if it has changed */
   useLayoutEffect(() => {
     let currentWidestWidth = 0
     const children = tabListRef.current && tabListRef.current.children
@@ -95,6 +97,26 @@ const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
     }
   })
 
+  /** Setup window resize listener to reset widestWidth */
+  useEffect(() => {
+    if (tabSize !== 'match-largest-tab') {
+      let resizeListener: () => void
+      const children = tabListRef.current && tabListRef.current.children
+
+      if (children) {
+        resizeListener = () => {
+          const { width } = children[0].getBoundingClientRect()
+          setWidestWidth(width)
+        }
+
+        window.addEventListener('resize', resizeListener)
+      }
+      return () => {
+        window.removeEventListener('resize', resizeListener)
+      }
+    }
+  }, [tabListRef.current, setWidestWidth, tabSize])
+
   const handleOnClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     const newTabIndex = toNumber(event.currentTarget.dataset.tabindex || 0)
     if (onTabChange && (getCurrentTabIndex(currentTab) !== newTabIndex)) {
@@ -104,29 +126,33 @@ const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
 
   const currentTabIndex = getCurrentTabIndex(currentTab)
   const tabItems = tabs.map((tab, index) => {
+    const active = currentTabIndex === index
     return (
       <TabListItem
         key={index}
         role='tab'
-        active={currentTabIndex === index}
-        index={index}
         widestWidth={widestWidth}
         tabSize={tabSize}
       >
         <TabListItemButton
           type='button'
-          active={currentTabIndex === index}
+          hasText={tab.title ? true : false}
+          active={active}
           tabSize={tabSize}
           onClick={handleOnClick}
           aria-selected={currentTabIndex === index}
           data-tabindex={index}
         >
-          {tab.icon}
-          {tab.title && (
-            <Text margins={{ left: tab.icon ? Variables.Spacing.sXSmall : 0 }}>
-              {tab.title}
-            </Text>
+          {tab.icon && (
+            <StyledIconContainer
+              margins={{
+                right: tab.title ? Variables.Spacing.sXSmall : 0
+              }}
+            >
+              {tab.icon}
+            </StyledIconContainer>
           )}
+          {tab.title}
         </TabListItemButton>
       </TabListItem>
     )
@@ -144,7 +170,12 @@ const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
         role='tablist'
       >
         {tabItems}
-        <HighlightBar width={widestWidth + 1} />
+        <HighlightBar
+          width={widestWidth + 1}
+          index={currentTabIndex}
+          widestWidth={widestWidth}
+          widthChanging={widestWidth !== previousWidestWidth}
+        />
       </TabList>
     </TabGroupContainer >
   )
