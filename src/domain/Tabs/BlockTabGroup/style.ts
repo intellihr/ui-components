@@ -113,8 +113,8 @@ interface IHilightBarProps {
 
 const HighlightBar = styled.div.attrs<IHilightBarProps>(
   ({ currentTabIndex, widestWidth, widthChanging, width, previousTabIndex }) => {
-    let durationExtension = 0.04 * Math.abs(currentTabIndex - previousTabIndex)
-    durationExtension = durationExtension > 250 ? 250 : durationExtension
+    const tabsToTransition = Math.abs(currentTabIndex - previousTabIndex)
+    const durationExtension = 0.04 * (tabsToTransition > 6 ? 6 : tabsToTransition)
     const duration = 0.1 + durationExtension
 
     return {
