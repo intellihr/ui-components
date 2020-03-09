@@ -8,7 +8,7 @@ yarn styleguide:build
 
 cd ./styleguide
 
-git add .
+git add -f .
 
 git \
   -c user.email="continuous.integration@intellihr.com.au" \
