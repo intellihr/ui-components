@@ -51,7 +51,7 @@ const getCurrentTabIndex = (tabIdentifier?: number | string) => {
   return 0
 }
 
-function usePrevious<T>(value: T) {
+function usePrevious<T> (value: T) {
   const ref = useRef<T>()
   useEffect(() => {
     ref.current = value
