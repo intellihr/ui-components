@@ -18,7 +18,7 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
         active={false}
         aria-selected={false}
         data-tabindex={0}
-        hasText={true}
+        hasTitle={true}
         onClick={[Function]}
         tabSize="medium"
         type="button"
@@ -36,7 +36,7 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
         active={true}
         aria-selected={true}
         data-tabindex={1}
-        hasText={true}
+        hasTitle={true}
         onClick={[Function]}
         tabSize="medium"
         type="button"
@@ -54,7 +54,7 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
         active={false}
         aria-selected={false}
         data-tabindex={2}
-        hasText={true}
+        hasTitle={true}
         onClick={[Function]}
         tabSize="medium"
         type="button"
@@ -63,10 +63,9 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
       </styled.button>
     </styled.li>
     <styled.div
-      index={1}
+      currentTabIndex={1}
       previousTabIndex={0}
       widestWidth={0}
-      width={1}
       widthChanging={true}
     />
   </styled.ul>

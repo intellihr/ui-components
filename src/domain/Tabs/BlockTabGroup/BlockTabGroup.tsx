@@ -170,7 +170,6 @@ const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
       >
         {tabItems}
         <HighlightBar
-          width={widestWidth + 1}
           currentTabIndex={currentTabIndex}
           previousTabIndex={previousTabIndex || 0}
           widestWidth={widestWidth}
