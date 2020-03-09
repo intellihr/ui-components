@@ -6,8 +6,6 @@ import {
 import React, { ReactElement, useEffect, useLayoutEffect, useRef, useState } from 'react'
 
 import { Props, Variables } from '../../../common'
-import { IconValue } from '../../Icons'
-import { Text } from '../../Typographies/Text'
 import {
   HighlightBar,
   StyledIconContainer,
@@ -53,7 +51,7 @@ const getCurrentTabIndex = (tabIdentifier?: number | string) => {
   return 0
 }
 
-function usePrevious<T> (value: T) {
+function usePrevious<T>(value: T) {
   const ref = useRef<T>()
   useEffect(() => {
     ref.current = value
@@ -73,6 +71,7 @@ const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
   const tabListRef = useRef<HTMLUListElement | null>(null)
 
   const previousWidestWidth = usePrevious(widestWidth)
+  const previousTabIndex = usePrevious(getCurrentTabIndex(currentTab))
   /** Find the widest tab width tab set it if it has changed */
   useLayoutEffect(() => {
     let currentWidestWidth = 0
@@ -173,6 +172,7 @@ const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
         <HighlightBar
           width={widestWidth + 1}
           index={currentTabIndex}
+          previousTabIndex={previousTabIndex || 0}
           widestWidth={widestWidth}
           widthChanging={widestWidth !== previousWidestWidth}
         />

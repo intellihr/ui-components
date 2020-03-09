@@ -108,14 +108,19 @@ interface IHilightBarProps {
   index: number
   widestWidth: number
   widthChanging: boolean
+  previousTabIndex: number
 }
 
 const HighlightBar = styled.div.attrs<IHilightBarProps>(
-  ({ index, widestWidth, widthChanging, width }) => {
+  ({ index, widestWidth, widthChanging, width, previousTabIndex }) => {
+    let durationExtension = 0.04 * Math.abs(index - previousTabIndex)
+    durationExtension = durationExtension > 250 ? 250 : durationExtension
+    const duration = 0.1 + durationExtension
+
     return {
       style: {
         left: `${index * widestWidth - 1}px`,
-        transition: widthChanging ? 'none' : 'left .1s ease-in',
+        transition: widthChanging ? 'none' : `left ${duration}s ease-in`,
         width: `${width}px`
       }
     }
@@ -139,7 +144,6 @@ const TabListItemButton = styled.button<ITabListItemButtonProps>`
   display: block;
   font-size: ${Variables.FontSize.fzSmall}px;
   font-weight: ${Variables.FontWeight.fwSemiBold};
-  /* line-height: ${Variables.LineHeight.lhBody}px; */
   outline: none;
   padding: 10px 0;
   position: relative;
