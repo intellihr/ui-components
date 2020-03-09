@@ -16,7 +16,7 @@ interface ITabListItemProps {
 }
 
 interface ITabListItemButtonProps {
-  hasText?: boolean
+  hasTitle?: boolean
   active: boolean
   tabSize?: TabSize
 }
@@ -46,7 +46,7 @@ function stylesFortabSizes (props: ITabListItemButtonProps) {
   if (props.tabSize === 'match-largest-tab') {
     return css`
         padding: ${Variables.Spacing.sXSmall}px ${Variables.Spacing.sLarge}px;
-        ${props.hasText && css`
+        ${props.hasTitle && css`
           font-size: ${Variables.FontSize.fzBody}px;
           line-height: ${Variables.LineHeight.lhBody}px;
         `}
@@ -105,35 +105,33 @@ const TabListItem = styled.li<ITabListItemProps>`
 
 interface IHilightBarProps {
   width: number
-  index: number
+  currentTabIndex: number
+  previousTabIndex: number
   widestWidth: number
   widthChanging: boolean
-  previousTabIndex: number
 }
 
 const HighlightBar = styled.div.attrs<IHilightBarProps>(
-  ({ index, widestWidth, widthChanging, width, previousTabIndex }) => {
-    let durationExtension = 0.04 * Math.abs(index - previousTabIndex)
+  ({ currentTabIndex, widestWidth, widthChanging, width, previousTabIndex }) => {
+    let durationExtension = 0.04 * Math.abs(currentTabIndex - previousTabIndex)
     durationExtension = durationExtension > 250 ? 250 : durationExtension
     const duration = 0.1 + durationExtension
 
     return {
       style: {
-        left: `${index * widestWidth - 1}px`,
+        left: `${currentTabIndex * widestWidth - 1}px`,
         transition: widthChanging ? 'none' : `left ${duration}s ease-in`,
         width: `${width}px`
       }
     }
   }
 ) <IHilightBarProps>`
-  width: 100%;
   height: 2px;
   border-radius: 1px;
   background-color: ${Variables.Color.i400};
   position: absolute;
   left: 0;
   bottom: 0;
-  transition: left .1s ease-in;
 `
 
 const TabListItemButton = styled.button<ITabListItemButtonProps>`

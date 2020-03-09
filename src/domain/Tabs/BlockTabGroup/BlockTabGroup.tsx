@@ -72,6 +72,7 @@ const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
 
   const previousWidestWidth = usePrevious(widestWidth)
   const previousTabIndex = usePrevious(getCurrentTabIndex(currentTab))
+
   /** Find the widest tab width tab set it if it has changed */
   useLayoutEffect(() => {
     let currentWidestWidth = 0
@@ -107,7 +108,6 @@ const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
           const { width } = children[0].getBoundingClientRect()
           setWidestWidth(width)
         }
-
         window.addEventListener('resize', resizeListener)
       }
       return () => {
@@ -135,7 +135,7 @@ const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
       >
         <TabListItemButton
           type='button'
-          hasText={tab.title ? true : false}
+          hasTitle={tab.title ? true : false}
           active={active}
           tabSize={tabSize}
           onClick={handleOnClick}
@@ -171,13 +171,13 @@ const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
         {tabItems}
         <HighlightBar
           width={widestWidth + 1}
-          index={currentTabIndex}
+          currentTabIndex={currentTabIndex}
           previousTabIndex={previousTabIndex || 0}
           widestWidth={widestWidth}
           widthChanging={widestWidth !== previousWidestWidth}
         />
       </TabList>
-    </TabGroupContainer >
+    </TabGroupContainer>
   )
 }
 
