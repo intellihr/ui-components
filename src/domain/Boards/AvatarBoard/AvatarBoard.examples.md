@@ -5,7 +5,7 @@
   import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
   import { Brick, Text } from '@Domain/Typographies';
   import { BrickColor } from '@Domain/Typographies/Brick/style';
-  import { UnstyledLink } from '@Domain/Links';
+  import { TextLink } from '@Domain/Links';
   import { EmptyState } from '@Domain/Callouts';
 
   <AvatarBoard emptyStateComponent={<EmptyState />}>
@@ -41,35 +41,28 @@
       >
         Los Angeles, California (9:49AM)
       </Text>
-      <UnstyledLink
+      <TextLink
         href='#'
+        isInline={false}
+        isTruncated
+        textType={Props.TypographyType.XSmall}
+        margins={{
+          bottom: 4
+        }}
       >
-        <Text
-          isInline={false}
-          isTruncated
-          type={Props.TypographyType.XSmall}
-          margins={{
-            bottom: 4
-          }}
-
-        >
-          lebron.james@losangeleslakers.co
-        </Text>
-      </UnstyledLink>
-      <UnstyledLink
+        lebron.james@losangeleslakers.co
+      </TextLink>
+      <TextLink
         href='#'
+        isInline={false}
+        isTruncated
+        textType={Props.TypographyType.XSmall}
+        margins={{
+          bottom: 4
+        }}
       >
-        <Text
-          isInline={false}
-          isTruncated
-          type={Props.TypographyType.XSmall}
-          margins={{
-            bottom: 4
-          }}
-        >
-          +61 422 000 000
-        </Text>
-      </UnstyledLink>
+        +61 422 000 000
+      </TextLink>
     </AvatarBoard.AvatarTile>
 
     <AvatarBoard.AvatarTile
@@ -106,21 +99,18 @@
       >
         Milwaukee, Wisconsin (12:19PM)
       </Text>
-      <UnstyledLink
+      <TextLink
         href='#'
-      >
-        <Text
-          isInline={false}
-          isTruncated
-          type={Props.TypographyType.XSmall}
-          margins={{
-            bottom: 4
-          }}
+        isInline={false}
+        isTruncated
+        textType={Props.TypographyType.XSmall}
+        margins={{
+          bottom: 4
+        }}
 
-        >
-          giannis.antetokounmpo@milwaukeebucks.com
-        </Text>
-      </UnstyledLink>
+      >
+        giannis.antetokounmpo@milwaukeebucks.com
+      </TextLink>
     </AvatarBoard.AvatarTile>
 
     <AvatarBoard.AvatarTile
@@ -184,36 +174,30 @@
       >
         Houston Rockets
       </Text>
-      <UnstyledLink
+      <TextLink
         href='#'
-      >
-        <Text
-          isInline={false}
-          isTruncated
-          type={Props.TypographyType.XSmall}
-          margins={{
-            bottom: 4
-          }}
+        isInline={false}
+        isTruncated
+        textType={Props.TypographyType.XSmall}
+        margins={{
+          bottom: 4
+        }}
 
-        >
-          russell.westbrook@houstonrockets.com
-        </Text>
-      </UnstyledLink>
-      <UnstyledLink
+      >
+        russell.westbrook@houstonrockets.com
+      </TextLink>
+      <TextLink
         href='#'
-      >
-        <Text
-          isInline={false}
-          isTruncated
-          type={Props.TypographyType.XSmall}
-          margins={{
-            bottom: 4
-          }}
+        isInline={false}
+        isTruncated
+        textType={Props.TypographyType.XSmall}
+        margins={{
+          bottom: 4
+        }}
 
-        >
-          (07) 3333 0000
-        </Text>
-      </UnstyledLink>
+      >
+        (07) 3333 0000
+      </TextLink>
     </AvatarBoard.AvatarTile>
 
     <AvatarBoard.AvatarTile
@@ -303,7 +287,6 @@ Any content can be passed as children to render in the bottom half of the tile o
       <div style={style}>
         <Text
           isInline={false}
-          isTruncated
           type={Props.TypographyType.Small}
           margins={{
             bottom: Variables.Spacing.sSmall
@@ -326,7 +309,6 @@ Provide the dropdownSections prop in order to render a Dropdown Menu on hover.
 ```jsx
   import { Props } from '@Common';
   import { Text } from '@Domain/Typographies';
-  import { UnstyledLink } from '@Domain/Links';
   import { EmptyState } from '@Domain/Callouts';
 
   <AvatarBoard emptyStateComponent={<EmptyState />}>

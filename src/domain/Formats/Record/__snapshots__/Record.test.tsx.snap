@@ -168,6 +168,14 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
   ",
                             [Function],
                             "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
 ",
                           ],
                         },
@@ -350,6 +358,14 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
                           "isStatic": false,
                           "lastClassName": "c1",
                           "rules": Array [
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
                             "
 
   ",
@@ -684,6 +700,14 @@ exports[`<Record /> should render a Record component without children 1`] = `
   ",
                             [Function],
                             "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
 ",
                           ],
                         },
@@ -741,6 +765,14 @@ exports[`<Record /> should render a Record component without children 1`] = `
                     "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
                       "
 
   ",
@@ -982,6 +1014,14 @@ exports[`<Record /> should render a Record component, creating a Text child with
   ",
                             [Function],
                             "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
 ",
                           ],
                         },
@@ -1040,6 +1080,14 @@ exports[`<Record /> should render a Record component, creating a Text child with
                     "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
                       "
 
   ",
@@ -1281,6 +1329,14 @@ exports[`<Record /> should render a Record component, creating a Text child with
   ",
                             [Function],
                             "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
 ",
                           ],
                         },
@@ -1339,6 +1395,14 @@ exports[`<Record /> should render a Record component, creating a Text child with
                     "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
                       "
 
   ",
@@ -1569,6 +1633,14 @@ exports[`<Record /> should render a Record component, with the provided componen
   ",
                             [Function],
                             "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
 ",
                           ],
                         },
@@ -1759,6 +1831,14 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                           "isStatic": false,
                           "lastClassName": "c1",
                           "rules": Array [
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
                             "
 
   ",
