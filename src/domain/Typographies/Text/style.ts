@@ -13,6 +13,9 @@ export interface ITextWrapperProps {
   isTruncated?: boolean
   isItalic?: boolean
   margins?: Props.IMargins
+  isLink?: boolean
+  isLinkButton?: boolean
+  underlineOnHover?: boolean
 }
 
 export const TextWrapper = styled.span`
@@ -84,5 +87,36 @@ export const TextWrapper = styled.span`
 
   ${(props: ITextWrapperProps) => props.isItalic && css`
     font-style: italic;
+  `}
+
+  ${(props: ITextWrapperProps) => (props.isLink || props.isLinkButton) && css`
+      transition: color .25s ease-out;
+      cursor: pointer;
+
+      &,
+      &:link,
+      &:visited {
+        color: ${Variables.Color.i400};
+      }
+
+      &:hover {
+        color: ${Variables.Color.i500};
+        ${({ underlineOnHover }: ITextWrapperProps) => {
+            if (underlineOnHover) {
+              return css`
+                    text-decoration: underline;
+                  `
+            }
+          }
+        }
+      }
+
+      &:active {
+        color: ${Variables.Color.i600};
+      }
+  `}
+
+  ${(props: ITextWrapperProps) => props.isLinkButton && css`
+    outline: 0;
   `}
 `

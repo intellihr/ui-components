@@ -98,6 +98,7 @@ export class SelectInput extends React.PureComponent<ISelectInputProps> {
         <Creatable<OptionValues>
           {...this.reactSelectProps}
           onNewOptionClick={onNewOptionCreated}
+          showNewOptionAtTop={false}
         />
       )
     }

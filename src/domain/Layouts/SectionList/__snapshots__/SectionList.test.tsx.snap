@@ -69,7 +69,7 @@ exports[`<SectionList /> should render a section list with a titled section with
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-jzJRlG",
+            "componentId": "sc-jTzLTM",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -90,7 +90,7 @@ exports[`<SectionList /> should render a section list with a titled section with
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-jzJRlG",
+          "styledComponentId": "sc-jTzLTM",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -115,7 +115,7 @@ exports[`<SectionList /> should render a section list with a titled section with
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-dxgOiQ",
+                    "componentId": "sc-kGXeez",
                     "isStatic": false,
                     "lastClassName": "c1",
                     "rules": Array [
@@ -148,10 +148,10 @@ exports[`<SectionList /> should render a section list with a titled section with
                   },
                   "displayName": "Styled(styled.div)",
                   "foldedComponentIds": Array [
-                    "sc-cSHVUG",
+                    "sc-fjdhpX",
                   ],
                   "render": [Function],
-                  "styledComponentId": "sc-dxgOiQ",
+                  "styledComponentId": "sc-kGXeez",
                   "target": "div",
                   "toString": [Function],
                   "usesTheme": false,
@@ -192,7 +192,7 @@ exports[`<SectionList /> should render a section list with a titled section with
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-ckVGcZ",
+                                  "componentId": "sc-kpOJdX",
                                   "isStatic": false,
                                   "lastClassName": "c2",
                                   "rules": Array [
@@ -214,7 +214,7 @@ exports[`<SectionList /> should render a section list with a titled section with
                                 "displayName": "styled.div",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-ckVGcZ",
+                                "styledComponentId": "sc-kpOJdX",
                                 "target": "div",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -257,7 +257,7 @@ exports[`<SectionList /> should render a section list with a titled section with
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-jKJlTe",
+                                                "componentId": "sc-dxgOiQ",
                                                 "isStatic": false,
                                                 "lastClassName": "c3",
                                                 "rules": Array [
@@ -283,7 +283,7 @@ exports[`<SectionList /> should render a section list with a titled section with
                                               "displayName": "Styled(SectionDescription)",
                                               "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-jKJlTe",
+                                              "styledComponentId": "sc-dxgOiQ",
                                               "target": [Function],
                                               "toString": [Function],
                                               "usesTheme": false,
@@ -342,7 +342,7 @@ exports[`<SectionList /> should render a section list with a titled section with
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-eNQAEJ",
+                                  "componentId": "sc-ckVGcZ",
                                   "isStatic": false,
                                   "lastClassName": "c4",
                                   "rules": Array [
@@ -377,7 +377,7 @@ exports[`<SectionList /> should render a section list with a titled section with
                                 "displayName": "StyledTitledSectionBody",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-eNQAEJ",
+                                "styledComponentId": "sc-ckVGcZ",
                                 "target": "div",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -494,7 +494,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-jzJRlG",
+            "componentId": "sc-jTzLTM",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -515,7 +515,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-jzJRlG",
+          "styledComponentId": "sc-jTzLTM",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -540,7 +540,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-chPdSV",
+                    "componentId": "sc-cSHVUG",
                     "isStatic": false,
                     "lastClassName": "c1",
                     "rules": Array [
@@ -583,10 +583,10 @@ exports[`<SectionList /> should render a section list with an annotated section 
                   },
                   "displayName": "Styled(styled.div)",
                   "foldedComponentIds": Array [
-                    "sc-cSHVUG",
+                    "sc-fjdhpX",
                   ],
                   "render": [Function],
-                  "styledComponentId": "sc-chPdSV",
+                  "styledComponentId": "sc-cSHVUG",
                   "target": "div",
                   "toString": [Function],
                   "usesTheme": false,
@@ -618,7 +618,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-kpOJdX",
+                    "componentId": "sc-kgoBCf",
                     "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
@@ -651,10 +651,10 @@ exports[`<SectionList /> should render a section list with an annotated section 
                   },
                   "displayName": "Styled(styled.div)",
                   "foldedComponentIds": Array [
-                    "sc-cSHVUG",
+                    "sc-fjdhpX",
                   ],
                   "render": [Function],
-                  "styledComponentId": "sc-kpOJdX",
+                  "styledComponentId": "sc-kgoBCf",
                   "target": "div",
                   "toString": [Function],
                   "usesTheme": false,
@@ -699,7 +699,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-kGXeez",
+                                  "componentId": "sc-chPdSV",
                                   "isStatic": false,
                                   "lastClassName": "c3",
                                   "rules": Array [
@@ -727,7 +727,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
                                 "displayName": "Styled(SectionDescription)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-kGXeez",
+                                "styledComponentId": "sc-chPdSV",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -769,7 +769,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-kgoBCf",
+                                  "componentId": "sc-kAzzGY",
                                   "isStatic": false,
                                   "lastClassName": "c4",
                                   "rules": Array [
@@ -806,7 +806,7 @@ exports[`<SectionList /> should render a section list with an annotated section 
                                 "displayName": "StyledAnnotatedSectionBody",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-kgoBCf",
+                                "styledComponentId": "sc-kAzzGY",
                                 "target": "div",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -838,33 +838,6 @@ exports[`<SectionList /> should render a section list with an annotated section 
 `;
 
 exports[`<SectionList /> should render a sectionList 1`] = `
-.c7 {
-  -webkit-transition: color .25s ease-out;
-  transition: color .25s ease-out;
-  cursor: pointer;
-  font-size: 14px;
-  line-height: 20px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  display: inline;
-}
-
-.c7,
-.c7:link,
-.c7:visited {
-  color: #432DF3;
-}
-
-.c7:hover {
-  color: #2512B3;
-}
-
-.c7:active {
-  color: #0F0080;
-}
-
 .c5 {
   font-size: 18px;
   line-height: 24px;
@@ -886,6 +859,34 @@ exports[`<SectionList /> should render a sectionList 1`] = `
   color: #667380;
   font-weight: 400;
   display: block;
+}
+
+.c7 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #262D33;
+  font-weight: 400;
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  cursor: pointer;
+}
+
+.c7,
+.c7:link,
+.c7:visited {
+  color: #432DF3;
+}
+
+.c7:hover {
+  color: #2512B3;
+}
+
+.c7:active {
+  color: #0F0080;
 }
 
 @media only screen and (min-width:640px) {
@@ -1029,7 +1030,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-jzJRlG",
+            "componentId": "sc-jTzLTM",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -1050,7 +1051,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-jzJRlG",
+          "styledComponentId": "sc-jTzLTM",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -1075,7 +1076,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-chPdSV",
+                    "componentId": "sc-cSHVUG",
                     "isStatic": false,
                     "lastClassName": "c1",
                     "rules": Array [
@@ -1118,10 +1119,10 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                   },
                   "displayName": "Styled(styled.div)",
                   "foldedComponentIds": Array [
-                    "sc-cSHVUG",
+                    "sc-fjdhpX",
                   ],
                   "render": [Function],
-                  "styledComponentId": "sc-chPdSV",
+                  "styledComponentId": "sc-cSHVUG",
                   "target": "div",
                   "toString": [Function],
                   "usesTheme": false,
@@ -1151,7 +1152,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-kAzzGY",
+                    "componentId": "sc-jzJRlG",
                     "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
@@ -1169,7 +1170,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                   "displayName": "styled.div",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-kAzzGY",
+                  "styledComponentId": "sc-jzJRlG",
                   "target": "div",
                   "toString": [Function],
                   "usesTheme": false,
@@ -1209,7 +1210,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-kpOJdX",
+                    "componentId": "sc-kgoBCf",
                     "isStatic": false,
                     "lastClassName": "c3",
                     "rules": Array [
@@ -1242,10 +1243,10 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                   },
                   "displayName": "Styled(styled.div)",
                   "foldedComponentIds": Array [
-                    "sc-cSHVUG",
+                    "sc-fjdhpX",
                   ],
                   "render": [Function],
-                  "styledComponentId": "sc-kpOJdX",
+                  "styledComponentId": "sc-kgoBCf",
                   "target": "div",
                   "toString": [Function],
                   "usesTheme": false,
@@ -1299,7 +1300,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-kGXeez",
+                                  "componentId": "sc-chPdSV",
                                   "isStatic": false,
                                   "lastClassName": "c4",
                                   "rules": Array [
@@ -1327,7 +1328,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                 "displayName": "Styled(SectionDescription)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-kGXeez",
+                                "styledComponentId": "sc-chPdSV",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -1382,10 +1383,18 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-fjdhpX",
+                                            "componentId": "sc-gzVnrw",
                                             "isStatic": false,
                                             "lastClassName": "c6",
                                             "rules": Array [
+                                              "
+
+  ",
+                                              [Function],
+                                              "
+
+  ",
+                                              [Function],
                                               "
 
   ",
@@ -1425,7 +1434,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                           "displayName": "styled.span",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-fjdhpX",
+                                          "styledComponentId": "sc-gzVnrw",
                                           "target": "span",
                                           "toString": [Function],
                                           "usesTheme": false,
@@ -1469,10 +1478,18 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-fjdhpX",
+                                            "componentId": "sc-gzVnrw",
                                             "isStatic": false,
                                             "lastClassName": "c6",
                                             "rules": Array [
+                                              "
+
+  ",
+                                              [Function],
+                                              "
+
+  ",
+                                              [Function],
                                               "
 
   ",
@@ -1512,7 +1529,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                           "displayName": "styled.span",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-fjdhpX",
+                                          "styledComponentId": "sc-gzVnrw",
                                           "target": "span",
                                           "toString": [Function],
                                           "usesTheme": false,
@@ -1536,111 +1553,105 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                 </Text>
                                 <TextLink
                                   href="#"
-                                  isInline={true}
                                   textType="small"
-                                  type="anchor"
                                 >
-                                  <Styled(Component)
+                                  <Anchor
                                     href="#"
-                                    isInline={true}
-                                    textType="small"
-                                    type="anchor"
                                   >
-                                    <StyledComponent
-                                      forwardedComponent={
-                                        Object {
-                                          "$$typeof": Symbol(react.forward_ref),
-                                          "attrs": Array [],
-                                          "componentStyle": ComponentStyle {
-                                            "componentId": "sc-gzVnrw",
-                                            "isStatic": false,
-                                            "lastClassName": "c7",
-                                            "rules": Array [
-                                              "
-  ",
-                                              "
-  transition: color .25s ease-out;
-  cursor: pointer;
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  &,
-  &:link,
-  &:visited {
-    color: ",
-                                              "#432DF3",
-                                              ";
-  }
-
-  &:hover {
-    color: ",
-                                              "#2512B3",
-                                              ";
-    ",
-                                              [Function],
-                                              "
-  }
-
-  &:active {
-    color: ",
-                                              "#0F0080",
-                                              ";
-  }
-",
-                                              ";
-",
-                                            ],
-                                          },
-                                          "displayName": "Styled(Component)",
-                                          "foldedComponentIds": Array [],
-                                          "render": [Function],
-                                          "styledComponentId": "sc-gzVnrw",
-                                          "target": [Function],
-                                          "toString": [Function],
-                                          "usesTheme": false,
-                                          "warnTooManyClasses": [Function],
-                                          "withComponent": [Function],
-                                        }
-                                      }
-                                      forwardedRef={null}
+                                    <a
                                       href="#"
-                                      isInline={true}
-                                      textType="small"
-                                      type="anchor"
                                     >
-                                      <Component
-                                        className="c7"
-                                        href="#"
+                                      <styled.span
+                                        data-component-type="text_link"
                                         isInline={true}
+                                        isLink={true}
+                                        isLinkButton={false}
                                         textType="small"
-                                        type="anchor"
+                                        weight={400}
                                       >
-                                        <Anchor
-                                          className="c7"
-                                          href="#"
-                                          type="anchor"
+                                        <StyledComponent
+                                          data-component-type="text_link"
+                                          forwardedComponent={
+                                            Object {
+                                              "$$typeof": Symbol(react.forward_ref),
+                                              "attrs": Array [],
+                                              "componentStyle": ComponentStyle {
+                                                "componentId": "sc-gzVnrw",
+                                                "isStatic": false,
+                                                "lastClassName": "c6",
+                                                "rules": Array [
+                                                  "
+
+  ",
+                                                  [Function],
+                                                  "
+
+  ",
+                                                  [Function],
+                                                  "
+
+  ",
+                                                  [Function],
+                                                  "
+
+  ",
+                                                  [Function],
+                                                  "
+
+  ",
+                                                  [Function],
+                                                  "
+
+  ",
+                                                  [Function],
+                                                  "
+
+  ",
+                                                  [Function],
+                                                  "
+
+  ",
+                                                  [Function],
+                                                  "
+
+  ",
+                                                  [Function],
+                                                  "
+
+  ",
+                                                  [Function],
+                                                  "
+",
+                                                ],
+                                              },
+                                              "displayName": "styled.span",
+                                              "foldedComponentIds": Array [],
+                                              "render": [Function],
+                                              "styledComponentId": "sc-gzVnrw",
+                                              "target": "span",
+                                              "toString": [Function],
+                                              "usesTheme": false,
+                                              "warnTooManyClasses": [Function],
+                                              "withComponent": [Function],
+                                            }
+                                          }
+                                          forwardedRef={null}
+                                          isInline={true}
+                                          isLink={true}
+                                          isLinkButton={false}
+                                          textType="small"
+                                          weight={400}
                                         >
-                                          <a
+                                          <span
                                             className="c7"
-                                            href="#"
-                                            type="anchor"
+                                            data-component-type="text_link"
                                           >
                                             Annotated Link
-                                          </a>
-                                        </Anchor>
-                                      </Component>
-                                    </StyledComponent>
-                                  </Styled(Component)>
+                                          </span>
+                                        </StyledComponent>
+                                      </styled.span>
+                                    </a>
+                                  </Anchor>
                                 </TextLink>
                               </div>
                             </SectionDescription>
@@ -1667,7 +1678,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-kgoBCf",
+                                  "componentId": "sc-kAzzGY",
                                   "isStatic": false,
                                   "lastClassName": "c8",
                                   "rules": Array [
@@ -1704,7 +1715,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                 "displayName": "StyledAnnotatedSectionBody",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-kgoBCf",
+                                "styledComponentId": "sc-kAzzGY",
                                 "target": "div",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -1763,7 +1774,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-dxgOiQ",
+                    "componentId": "sc-kGXeez",
                     "isStatic": false,
                     "lastClassName": "c9",
                     "rules": Array [
@@ -1796,10 +1807,10 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                   },
                   "displayName": "Styled(styled.div)",
                   "foldedComponentIds": Array [
-                    "sc-cSHVUG",
+                    "sc-fjdhpX",
                   ],
                   "render": [Function],
-                  "styledComponentId": "sc-dxgOiQ",
+                  "styledComponentId": "sc-kGXeez",
                   "target": "div",
                   "toString": [Function],
                   "usesTheme": false,
@@ -1840,7 +1851,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-ckVGcZ",
+                                  "componentId": "sc-kpOJdX",
                                   "isStatic": false,
                                   "lastClassName": "c10",
                                   "rules": Array [
@@ -1862,7 +1873,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                 "displayName": "styled.div",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-ckVGcZ",
+                                "styledComponentId": "sc-kpOJdX",
                                 "target": "div",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -1909,7 +1920,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-jKJlTe",
+                                                "componentId": "sc-dxgOiQ",
                                                 "isStatic": false,
                                                 "lastClassName": "c11",
                                                 "rules": Array [
@@ -1935,7 +1946,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                               "displayName": "Styled(SectionDescription)",
                                               "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-jKJlTe",
+                                              "styledComponentId": "sc-dxgOiQ",
                                               "target": [Function],
                                               "toString": [Function],
                                               "usesTheme": false,
@@ -1977,10 +1988,18 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-fjdhpX",
+                                                          "componentId": "sc-gzVnrw",
                                                           "isStatic": false,
                                                           "lastClassName": "c6",
                                                           "rules": Array [
+                                                            "
+
+  ",
+                                                            [Function],
+                                                            "
+
+  ",
+                                                            [Function],
                                                             "
 
   ",
@@ -2020,7 +2039,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                                         "displayName": "styled.span",
                                                         "foldedComponentIds": Array [],
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-fjdhpX",
+                                                        "styledComponentId": "sc-gzVnrw",
                                                         "target": "span",
                                                         "toString": [Function],
                                                         "usesTheme": false,
@@ -2064,10 +2083,18 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-fjdhpX",
+                                                          "componentId": "sc-gzVnrw",
                                                           "isStatic": false,
                                                           "lastClassName": "c6",
                                                           "rules": Array [
+                                                            "
+
+  ",
+                                                            [Function],
+                                                            "
+
+  ",
+                                                            [Function],
                                                             "
 
   ",
@@ -2107,7 +2134,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                                         "displayName": "styled.span",
                                                         "foldedComponentIds": Array [],
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-fjdhpX",
+                                                        "styledComponentId": "sc-gzVnrw",
                                                         "target": "span",
                                                         "toString": [Function],
                                                         "usesTheme": false,
@@ -2283,7 +2310,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-eNQAEJ",
+                                  "componentId": "sc-ckVGcZ",
                                   "isStatic": false,
                                   "lastClassName": "c12",
                                   "rules": Array [
@@ -2318,7 +2345,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                 "displayName": "StyledTitledSectionBody",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-eNQAEJ",
+                                "styledComponentId": "sc-ckVGcZ",
                                 "target": "div",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -2350,33 +2377,6 @@ exports[`<SectionList /> should render a sectionList 1`] = `
 `;
 
 exports[`<SectionList /> should render sectionList items with no children 1`] = `
-.c6 {
-  -webkit-transition: color .25s ease-out;
-  transition: color .25s ease-out;
-  cursor: pointer;
-  font-size: 14px;
-  line-height: 20px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  display: inline;
-}
-
-.c6,
-.c6:link,
-.c6:visited {
-  color: #432DF3;
-}
-
-.c6:hover {
-  color: #2512B3;
-}
-
-.c6:active {
-  color: #0F0080;
-}
-
 .c4 {
   font-size: 18px;
   line-height: 24px;
@@ -2398,6 +2398,34 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
   color: #667380;
   font-weight: 400;
   display: block;
+}
+
+.c6 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #262D33;
+  font-weight: 400;
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  cursor: pointer;
+}
+
+.c6,
+.c6:link,
+.c6:visited {
+  color: #432DF3;
+}
+
+.c6:hover {
+  color: #2512B3;
+}
+
+.c6:active {
+  color: #0F0080;
 }
 
 @media only screen and (min-width:640px) {
@@ -2505,7 +2533,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-jzJRlG",
+            "componentId": "sc-jTzLTM",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -2526,7 +2554,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-jzJRlG",
+          "styledComponentId": "sc-jTzLTM",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -2551,7 +2579,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-chPdSV",
+                    "componentId": "sc-cSHVUG",
                     "isStatic": false,
                     "lastClassName": "c1",
                     "rules": Array [
@@ -2594,10 +2622,10 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                   },
                   "displayName": "Styled(styled.div)",
                   "foldedComponentIds": Array [
-                    "sc-cSHVUG",
+                    "sc-fjdhpX",
                   ],
                   "render": [Function],
-                  "styledComponentId": "sc-chPdSV",
+                  "styledComponentId": "sc-cSHVUG",
                   "target": "div",
                   "toString": [Function],
                   "usesTheme": false,
@@ -2635,7 +2663,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-kpOJdX",
+                    "componentId": "sc-kgoBCf",
                     "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
@@ -2668,10 +2696,10 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                   },
                   "displayName": "Styled(styled.div)",
                   "foldedComponentIds": Array [
-                    "sc-cSHVUG",
+                    "sc-fjdhpX",
                   ],
                   "render": [Function],
-                  "styledComponentId": "sc-kpOJdX",
+                  "styledComponentId": "sc-kgoBCf",
                   "target": "div",
                   "toString": [Function],
                   "usesTheme": false,
@@ -2725,7 +2753,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-kGXeez",
+                                  "componentId": "sc-chPdSV",
                                   "isStatic": false,
                                   "lastClassName": "c3",
                                   "rules": Array [
@@ -2753,7 +2781,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                 "displayName": "Styled(SectionDescription)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-kGXeez",
+                                "styledComponentId": "sc-chPdSV",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -2808,10 +2836,18 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-fjdhpX",
+                                            "componentId": "sc-gzVnrw",
                                             "isStatic": false,
                                             "lastClassName": "c5",
                                             "rules": Array [
+                                              "
+
+  ",
+                                              [Function],
+                                              "
+
+  ",
+                                              [Function],
                                               "
 
   ",
@@ -2851,7 +2887,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                           "displayName": "styled.span",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-fjdhpX",
+                                          "styledComponentId": "sc-gzVnrw",
                                           "target": "span",
                                           "toString": [Function],
                                           "usesTheme": false,
@@ -2895,10 +2931,18 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-fjdhpX",
+                                            "componentId": "sc-gzVnrw",
                                             "isStatic": false,
                                             "lastClassName": "c5",
                                             "rules": Array [
+                                              "
+
+  ",
+                                              [Function],
+                                              "
+
+  ",
+                                              [Function],
                                               "
 
   ",
@@ -2938,7 +2982,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                           "displayName": "styled.span",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-fjdhpX",
+                                          "styledComponentId": "sc-gzVnrw",
                                           "target": "span",
                                           "toString": [Function],
                                           "usesTheme": false,
@@ -2962,111 +3006,105 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                 </Text>
                                 <TextLink
                                   href="#"
-                                  isInline={true}
                                   textType="small"
-                                  type="anchor"
                                 >
-                                  <Styled(Component)
+                                  <Anchor
                                     href="#"
-                                    isInline={true}
-                                    textType="small"
-                                    type="anchor"
                                   >
-                                    <StyledComponent
-                                      forwardedComponent={
-                                        Object {
-                                          "$$typeof": Symbol(react.forward_ref),
-                                          "attrs": Array [],
-                                          "componentStyle": ComponentStyle {
-                                            "componentId": "sc-gzVnrw",
-                                            "isStatic": false,
-                                            "lastClassName": "c6",
-                                            "rules": Array [
-                                              "
-  ",
-                                              "
-  transition: color .25s ease-out;
-  cursor: pointer;
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  ",
-                                              [Function],
-                                              "
-
-  &,
-  &:link,
-  &:visited {
-    color: ",
-                                              "#432DF3",
-                                              ";
-  }
-
-  &:hover {
-    color: ",
-                                              "#2512B3",
-                                              ";
-    ",
-                                              [Function],
-                                              "
-  }
-
-  &:active {
-    color: ",
-                                              "#0F0080",
-                                              ";
-  }
-",
-                                              ";
-",
-                                            ],
-                                          },
-                                          "displayName": "Styled(Component)",
-                                          "foldedComponentIds": Array [],
-                                          "render": [Function],
-                                          "styledComponentId": "sc-gzVnrw",
-                                          "target": [Function],
-                                          "toString": [Function],
-                                          "usesTheme": false,
-                                          "warnTooManyClasses": [Function],
-                                          "withComponent": [Function],
-                                        }
-                                      }
-                                      forwardedRef={null}
+                                    <a
                                       href="#"
-                                      isInline={true}
-                                      textType="small"
-                                      type="anchor"
                                     >
-                                      <Component
-                                        className="c6"
-                                        href="#"
+                                      <styled.span
+                                        data-component-type="text_link"
                                         isInline={true}
+                                        isLink={true}
+                                        isLinkButton={false}
                                         textType="small"
-                                        type="anchor"
+                                        weight={400}
                                       >
-                                        <Anchor
-                                          className="c6"
-                                          href="#"
-                                          type="anchor"
+                                        <StyledComponent
+                                          data-component-type="text_link"
+                                          forwardedComponent={
+                                            Object {
+                                              "$$typeof": Symbol(react.forward_ref),
+                                              "attrs": Array [],
+                                              "componentStyle": ComponentStyle {
+                                                "componentId": "sc-gzVnrw",
+                                                "isStatic": false,
+                                                "lastClassName": "c5",
+                                                "rules": Array [
+                                                  "
+
+  ",
+                                                  [Function],
+                                                  "
+
+  ",
+                                                  [Function],
+                                                  "
+
+  ",
+                                                  [Function],
+                                                  "
+
+  ",
+                                                  [Function],
+                                                  "
+
+  ",
+                                                  [Function],
+                                                  "
+
+  ",
+                                                  [Function],
+                                                  "
+
+  ",
+                                                  [Function],
+                                                  "
+
+  ",
+                                                  [Function],
+                                                  "
+
+  ",
+                                                  [Function],
+                                                  "
+
+  ",
+                                                  [Function],
+                                                  "
+",
+                                                ],
+                                              },
+                                              "displayName": "styled.span",
+                                              "foldedComponentIds": Array [],
+                                              "render": [Function],
+                                              "styledComponentId": "sc-gzVnrw",
+                                              "target": "span",
+                                              "toString": [Function],
+                                              "usesTheme": false,
+                                              "warnTooManyClasses": [Function],
+                                              "withComponent": [Function],
+                                            }
+                                          }
+                                          forwardedRef={null}
+                                          isInline={true}
+                                          isLink={true}
+                                          isLinkButton={false}
+                                          textType="small"
+                                          weight={400}
                                         >
-                                          <a
+                                          <span
                                             className="c6"
-                                            href="#"
-                                            type="anchor"
+                                            data-component-type="text_link"
                                           >
                                             Annotated Link
-                                          </a>
-                                        </Anchor>
-                                      </Component>
-                                    </StyledComponent>
-                                  </Styled(Component)>
+                                          </span>
+                                        </StyledComponent>
+                                      </styled.span>
+                                    </a>
+                                  </Anchor>
                                 </TextLink>
                               </div>
                             </SectionDescription>
@@ -3114,7 +3152,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-dxgOiQ",
+                    "componentId": "sc-kGXeez",
                     "isStatic": false,
                     "lastClassName": "c7",
                     "rules": Array [
@@ -3147,10 +3185,10 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                   },
                   "displayName": "Styled(styled.div)",
                   "foldedComponentIds": Array [
-                    "sc-cSHVUG",
+                    "sc-fjdhpX",
                   ],
                   "render": [Function],
-                  "styledComponentId": "sc-dxgOiQ",
+                  "styledComponentId": "sc-kGXeez",
                   "target": "div",
                   "toString": [Function],
                   "usesTheme": false,
@@ -3191,7 +3229,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-ckVGcZ",
+                                  "componentId": "sc-kpOJdX",
                                   "isStatic": false,
                                   "lastClassName": "c8",
                                   "rules": Array [
@@ -3213,7 +3251,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                 "displayName": "styled.div",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-ckVGcZ",
+                                "styledComponentId": "sc-kpOJdX",
                                 "target": "div",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -3260,7 +3298,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-jKJlTe",
+                                                "componentId": "sc-dxgOiQ",
                                                 "isStatic": false,
                                                 "lastClassName": "c9",
                                                 "rules": Array [
@@ -3286,7 +3324,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                               "displayName": "Styled(SectionDescription)",
                                               "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-jKJlTe",
+                                              "styledComponentId": "sc-dxgOiQ",
                                               "target": [Function],
                                               "toString": [Function],
                                               "usesTheme": false,
@@ -3328,10 +3366,18 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-fjdhpX",
+                                                          "componentId": "sc-gzVnrw",
                                                           "isStatic": false,
                                                           "lastClassName": "c5",
                                                           "rules": Array [
+                                                            "
+
+  ",
+                                                            [Function],
+                                                            "
+
+  ",
+                                                            [Function],
                                                             "
 
   ",
@@ -3371,7 +3417,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                                         "displayName": "styled.span",
                                                         "foldedComponentIds": Array [],
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-fjdhpX",
+                                                        "styledComponentId": "sc-gzVnrw",
                                                         "target": "span",
                                                         "toString": [Function],
                                                         "usesTheme": false,
@@ -3415,10 +3461,18 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-fjdhpX",
+                                                          "componentId": "sc-gzVnrw",
                                                           "isStatic": false,
                                                           "lastClassName": "c5",
                                                           "rules": Array [
+                                                            "
+
+  ",
+                                                            [Function],
+                                                            "
+
+  ",
+                                                            [Function],
                                                             "
 
   ",
@@ -3458,7 +3512,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                                         "displayName": "styled.span",
                                                         "foldedComponentIds": Array [],
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-fjdhpX",
+                                                        "styledComponentId": "sc-gzVnrw",
                                                         "target": "span",
                                                         "toString": [Function],
                                                         "usesTheme": false,

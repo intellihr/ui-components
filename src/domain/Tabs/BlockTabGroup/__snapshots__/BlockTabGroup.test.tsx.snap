@@ -9,8 +9,6 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
     role="tablist"
   >
     <styled.li
-      active={false}
-      index={0}
       key="0"
       role="tab"
       tabSize="medium"
@@ -20,27 +18,15 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
         active={false}
         aria-selected={false}
         data-tabindex={0}
+        hasTitle={true}
         onClick={[Function]}
         tabSize="medium"
         type="button"
       >
-        <Text
-          isInline={true}
-          margins={
-            Object {
-              "left": 0,
-            }
-          }
-          tag="span"
-          type="body"
-        >
-          Tab 1
-        </Text>
+        Tab 1
       </styled.button>
     </styled.li>
     <styled.li
-      active={true}
-      index={1}
       key="1"
       role="tab"
       tabSize="medium"
@@ -50,27 +36,15 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
         active={true}
         aria-selected={true}
         data-tabindex={1}
+        hasTitle={true}
         onClick={[Function]}
         tabSize="medium"
         type="button"
       >
-        <Text
-          isInline={true}
-          margins={
-            Object {
-              "left": 0,
-            }
-          }
-          tag="span"
-          type="body"
-        >
-          Tab 2
-        </Text>
+        Tab 2
       </styled.button>
     </styled.li>
     <styled.li
-      active={false}
-      index={2}
       key="2"
       role="tab"
       tabSize="medium"
@@ -80,26 +54,19 @@ exports[`<BlockTabGroup /> Standard tabs with current index should match the sna
         active={false}
         aria-selected={false}
         data-tabindex={2}
+        hasTitle={true}
         onClick={[Function]}
         tabSize="medium"
         type="button"
       >
-        <Text
-          isInline={true}
-          margins={
-            Object {
-              "left": 0,
-            }
-          }
-          tag="span"
-          type="body"
-        >
-          Tab 3
-        </Text>
+        Tab 3
       </styled.button>
     </styled.li>
     <styled.div
-      width={1}
+      currentTabIndex={1}
+      previousTabIndex={0}
+      widestWidth={0}
+      widthChanging={true}
     />
   </styled.ul>
 </styled.div>

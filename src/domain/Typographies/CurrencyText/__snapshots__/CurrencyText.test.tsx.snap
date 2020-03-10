@@ -178,6 +178,14 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
   ",
                           [Function],
                           "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
 ",
                         ],
                       },
@@ -231,6 +239,14 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
                     "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
                       "
 
   ",
@@ -479,6 +495,14 @@ exports[`<CurrencyText /> should render the Currency Text not inline 1`] = `
   ",
                           [Function],
                           "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
 ",
                         ],
                       },
@@ -532,6 +556,14 @@ exports[`<CurrencyText /> should render the Currency Text not inline 1`] = `
                     "isStatic": false,
                     "lastClassName": "c3",
                     "rules": Array [
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
                       "
 
   ",
@@ -776,6 +808,14 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
   ",
                           [Function],
                           "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
 ",
                         ],
                       },
@@ -829,6 +869,14 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
                     "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
                       "
 
   ",
@@ -1084,6 +1132,14 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
   ",
                           [Function],
                           "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
 ",
                         ],
                       },
@@ -1137,6 +1193,14 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
                     "isStatic": false,
                     "lastClassName": "c3",
                     "rules": Array [
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
                       "
 
   ",
@@ -1382,6 +1446,14 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
   ",
                           [Function],
                           "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
 ",
                         ],
                       },
@@ -1438,6 +1510,14 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
                     "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
                       "
 
   ",
@@ -1689,6 +1769,14 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
   ",
                           [Function],
                           "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
 ",
                         ],
                       },
@@ -1743,6 +1831,14 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
                     "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
                       "
 
   ",
@@ -1987,6 +2083,14 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
   ",
                           [Function],
                           "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
 ",
                         ],
                       },
@@ -2040,6 +2144,14 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
                     "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
                       "
 
   ",
@@ -2284,6 +2396,14 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
   ",
                           [Function],
                           "
+
+  ",
+                          [Function],
+                          "
+
+  ",
+                          [Function],
+                          "
 ",
                         ],
                       },
@@ -2337,6 +2457,14 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
                     "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
                       "
 
   ",

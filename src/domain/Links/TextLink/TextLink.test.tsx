@@ -1,6 +1,7 @@
-import { mount, shallow } from 'enzyme'
+import { mount } from 'enzyme'
 import React from 'react'
 
+import { Anchor } from '../../Internals/Anchor'
 import { TextLink } from './TextLink'
 
 describe('<TextLink />', () => {
@@ -11,7 +12,9 @@ describe('<TextLink />', () => {
       </TextLink>
     )
 
-    expect(wrapper).toMatchSnapshot()
+    expect(wrapper.find(Anchor)).toBeTruthy()
+    expect(wrapper.find(Anchor).contains('Text link me')).toBeTruthy()
+
   })
 
   it(`should render a text link button`, () => {
@@ -21,13 +24,14 @@ describe('<TextLink />', () => {
       </TextLink>
     )
 
-    expect(wrapper).toMatchSnapshot()
+    expect(wrapper.find('button')).toBeTruthy()
+    expect(wrapper.find('button').contains('Text link me')).toBeTruthy()
   })
 
   it(`should render a text link button with an onClick`, () => {
     const mockHandleClick = jest.fn()
 
-    const wrapper = shallow(
+    const wrapper = mount(
       <TextLink
         type='button'
         onClick={mockHandleClick}
@@ -35,34 +39,12 @@ describe('<TextLink />', () => {
         Text link me
       </TextLink>
     )
+
+    expect(wrapper.find('button')).toBeTruthy()
+    expect(wrapper.find('button').contains('Text link me')).toBeTruthy()
+
     expect(mockHandleClick.mock.calls.length).toBe(0)
     wrapper.simulate('click')
     expect(mockHandleClick.mock.calls.length).toBe(1)
-  })
-
-  it('should render a text link with display block', () => {
-    const wrapper = mount(
-      <TextLink
-        href='#'
-        isInline={false}
-      >
-        Block text link
-      </TextLink>
-    )
-
-    expect(wrapper).toMatchSnapshot()
-  })
-
-  it('should render a text link with underline on hover', () => {
-    const wrapper = mount(
-      <TextLink
-        href='#'
-        underlineOnHover
-      >
-        Underline text link on hover
-      </TextLink>
-    )
-
-    expect(wrapper).toMatchSnapshot()
   })
 })
