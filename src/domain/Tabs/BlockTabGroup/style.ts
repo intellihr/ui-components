@@ -11,13 +11,12 @@ interface ITabGroupContainerProps {
 }
 
 interface ITabListItemProps {
-  active: boolean
-  index: number
   widestWidth: number
   tabSize?: TabSize
 }
 
 interface ITabListItemButtonProps {
+  hasTitle?: boolean
   active: boolean
   tabSize?: TabSize
 }
@@ -47,6 +46,10 @@ function stylesFortabSizes (props: ITabListItemButtonProps) {
   if (props.tabSize === 'match-largest-tab') {
     return css`
         padding: ${Variables.Spacing.sXSmall}px ${Variables.Spacing.sLarge}px;
+        ${props.hasTitle && css`
+          font-size: ${Variables.FontSize.fzBody}px;
+          line-height: ${Variables.LineHeight.lhBody}px;
+        `}
       `
   }
 }
@@ -98,26 +101,36 @@ const TabListItem = styled.li<ITabListItemProps>`
     width: ${widestWidth}px;
   `}
 
-  ${({ active, index, widestWidth }) => active && css`
-    & ~ ${HighlightBar} {
-      left: ${index * widestWidth - 1}px;
-    }
-  `}
 `
 
-interface IHilightBarProps {
-  width: number
+interface IHighlightBarProps {
+  currentTabIndex: number
+  previousTabIndex: number
+  widestWidth: number
+  widthChanging: boolean
 }
 
-const HighlightBar = styled.div<IHilightBarProps>`
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: ${({ width }) => width}px;
+const HighlightBar = styled.div.attrs<IHighlightBarProps>(
+  ({ currentTabIndex, previousTabIndex, widestWidth, widthChanging }) => {
+    const tabsToTransition = Math.abs(currentTabIndex - previousTabIndex)
+    const durationExtension = 0.04 * (tabsToTransition > 6 ? 6 : tabsToTransition)
+    const duration = 0.1 + durationExtension
+
+    return {
+      style: {
+        left: `${currentTabIndex * widestWidth - 1}px`,
+        width: `${widestWidth + 1}px`,
+        transition: widthChanging ? 'none' : `left ${duration}s ease-in`
+      }
+    }
+  }
+) <IHighlightBarProps>`
   height: 2px;
   border-radius: 1px;
   background-color: ${Variables.Color.i400};
-  transition: .15s ease-in;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 `
 
 const TabListItemButton = styled.button<ITabListItemButtonProps>`
@@ -143,7 +156,8 @@ const TabListItemButton = styled.button<ITabListItemButtonProps>`
       background-color: ${Variables.Color.n100};
       color: ${Variables.Color.i400};
       transition: .15s ease-out;
-  ` : css`
+    `
+    : css`
       &:hover,
       &:focus {
         background-color: ${Variables.Color.n300};
@@ -155,10 +169,15 @@ const TabListItemButton = styled.button<ITabListItemButtonProps>`
   ${stylesFortabSizes}
 `
 
+const StyledIconContainer = styled.span<{ margins: Props.IMargins }>`
+  ${({ margins }) => styleForMargins(margins)}
+`
+
 export {
   TabGroupContainer,
   TabList,
   TabListItem,
   TabListItemButton,
-  HighlightBar
+  HighlightBar,
+  StyledIconContainer
 }

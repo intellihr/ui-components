@@ -100,7 +100,10 @@ initialState = {
   tabs={[
       { title: 'Tab 1' },
       { title: 'Tab 2' },
-      { title: 'Tab 3' }
+      { title: 'Tab 3' },
+      { title: 'Tab 4' },
+      { title: 'Tab 5' },
+      { title: 'Tab 6' },
     ]}
 />
 ```
