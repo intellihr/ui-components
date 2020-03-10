@@ -103,14 +103,14 @@ const TabListItem = styled.li<ITabListItemProps>`
 
 `
 
-interface IHilightBarProps {
+interface IHighlightBarProps {
   currentTabIndex: number
   previousTabIndex: number
   widestWidth: number
   widthChanging: boolean
 }
 
-const HighlightBar = styled.div.attrs<IHilightBarProps>(
+const HighlightBar = styled.div.attrs<IHighlightBarProps>(
   ({ currentTabIndex, previousTabIndex, widestWidth, widthChanging }) => {
     const tabsToTransition = Math.abs(currentTabIndex - previousTabIndex)
     const durationExtension = 0.04 * (tabsToTransition > 6 ? 6 : tabsToTransition)
@@ -124,7 +124,7 @@ const HighlightBar = styled.div.attrs<IHilightBarProps>(
       }
     }
   }
-) <IHilightBarProps>`
+) <IHighlightBarProps>`
   height: 2px;
   border-radius: 1px;
   background-color: ${Variables.Color.i400};

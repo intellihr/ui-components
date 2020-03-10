@@ -1,4 +1,5 @@
 import {
+  debounce,
   isEqual,
   isNumber,
   toNumber
@@ -104,10 +105,10 @@ const BlockTabGroup: React.FC<IBlockTabGroupProps> = ({
       const children = tabListRef.current && tabListRef.current.children
 
       if (children) {
-        resizeListener = () => {
+        resizeListener = debounce(() => {
           const { width } = children[0].getBoundingClientRect()
           setWidestWidth(width)
-        }
+        }, 16, { leading: true })
         window.addEventListener('resize', resizeListener)
       }
       return () => {
