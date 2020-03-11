@@ -197,6 +197,7 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
           isExpanded={this.isExpanded}
           color={color!}
           hasHrefOrHandleClick={this.hasHrefOrHandleClick}
+          hasParentHoverStyle={!this.state.isActionButtonHover && !this.hasHrefOrHandleClick}
         >
           <ChevronIconWrapper>
             <FontAwesomeIcon type='solid' icon='chevron-down' />

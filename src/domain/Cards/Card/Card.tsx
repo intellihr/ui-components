@@ -208,7 +208,8 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
   private toggleButton (): JSX.Element | undefined {
     const {
       extraContent,
-      color
+      color,
+      isHoverable
     } = this.props
 
     if (extraContent) {
@@ -217,6 +218,7 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
           isExpanded={this.isExpanded}
           color={color!}
           hasHrefOrHandleClick={this.hasHrefOrHandleClick}
+          hasParentHoverStyle={!this.state.isActionButtonHover && (isHoverable! || !this.hasHrefOrHandleClick)}
         >
           <ChevronIconWrapper>
             <FontAwesomeIcon type='solid' icon='chevron-down' />
