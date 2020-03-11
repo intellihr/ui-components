@@ -20,6 +20,7 @@ interface IStyledCardToggleButtonProps {
   isExpanded: boolean,
   color: CardColors
   hasHrefOrHandleClick?: boolean
+  hasParentHoverStyle: boolean
 }
 
 interface IStyleActionButtonProps {
@@ -53,13 +54,14 @@ const StyledCardHeader = styled(StyledFlexContent)`
   border: 1px solid ${(props: IStyledCardHeader) => colorOptions[props.color].border};
   border-radius: ${Variables.Style.borderRadius}px;
   width: 100%;
+  transition: background-color .1s ease-in;
 
   ${(props: IStyledCardHeader) => props.hasHoverStyle && css`
       cursor: pointer;
 
       &:hover {
         background-color: ${colorOptions[props.color].hoverBackground};
-        transition: background-color .25s ease-out;
+        transition: background-color .15s ease-out;
       }
   `}
 
@@ -85,12 +87,12 @@ const StyledToggleButtonSection = styled(StyledFlexContent)`
   border-top-right-radius: ${Variables.Style.borderRadius}px;
   border-bottom-right-radius: ${Variables.Style.borderRadius}px;
   cursor: pointer;
+  transition: color .1s ease-in, background-color .1s ease-in;
 
   ${(props: IStyledToggleButtonSectionProps) => css`
     &:hover {
-      color: ${Variables.Color.n800};
       background-color: ${colorOptions[props.color].hoverBackground};
-      transition: background-color .25s ease-out;
+      transition: color .15s ease-out, background-color .15s ease-out;
     }
   `}
 
@@ -101,22 +103,19 @@ const StyledToggleButtonSection = styled(StyledFlexContent)`
 
 const StyledCardToggleButton = styled.button`
   ${cardButtonStyle};
-  transition: all .25s ease-out;
+  transition: background-color .1s ease-in, transform .25s ease-out;
   z-index: 1;
 
   ${(props: IStyledCardToggleButtonProps) => props.isExpanded && css`
-      transform: rotate(180deg);
-      transition: all .25s ease-out;
+    transform: rotate(180deg);
   `}
 
-  ${(props: IStyledCardToggleButtonProps) => {
-    return css`
-      &:hover {
-        color: ${Variables.Color.n800};
-        background-color: ${colorOptions[props.color].hoverButtonBackground};
-      }
-    `
-  }}
+  ${(props: IStyledCardToggleButtonProps) => props.hasParentHoverStyle && css`
+    ${StyledHeaderContainer}:hover & {
+      background-color: ${colorOptions[props.color].hoverButtonBackground};
+      transition: background-color .15s ease-out, transform: .25s ease-out;
+    }
+  `}
 
   ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
     ${(props: IStyledCardToggleButtonProps) => !props.hasHrefOrHandleClick && css`
@@ -128,10 +127,12 @@ const StyledCardToggleButton = styled.button`
 const StyledActionButton = styled.button<IStyleActionButtonProps>`
   ${cardButtonStyle};
   z-index: 1;
-  transition: all .25s ease-out;
+  transition: .1s ease-in;
 
   &:hover {
     background-color: ${(props: IStyleActionButtonProps) => colorOptions[props.color].hoverButtonBackground};
+    color: ${Variables.Color.n700};
+    transition: .15s ease-out;
   }
 
   ${(props: IStyleActionButtonProps) => props.hasRightMargin && css`
