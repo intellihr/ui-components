@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Props } from '../../../common'
-import { AvatarBoardWrapper } from './style'
+import { AvatarBoardWrapper, AvatarBoardChildrenWrapper } from './style'
 import { AvatarTile, AvatarTileSkeleton } from './subcomponents'
 
 interface IAvatarBoardProps {
@@ -37,7 +37,9 @@ export const AvatarBoard: React.FC<IAvatarBoardProps> & ISubComponents = ({ comp
         data-component-type={Props.ComponentType.AvatarBoard}
         data-component-context={componentContext}
       >
-        {...skeletonTiles}
+        <AvatarBoardChildrenWrapper>
+          {...skeletonTiles}
+        </AvatarBoardChildrenWrapper>
       </AvatarBoardWrapper>
     )
   }
@@ -47,7 +49,7 @@ export const AvatarBoard: React.FC<IAvatarBoardProps> & ISubComponents = ({ comp
       data-component-type={Props.ComponentType.AvatarBoard}
       data-component-context={componentContext}
     >
-        {children && (!Array.isArray(children) || children.length > 0) ? children : emptyStateComponent}
+        {children && (!Array.isArray(children) || children.length > 0) ? <AvatarBoardChildrenWrapper>{children}</AvatarBoardChildrenWrapper> : emptyStateComponent}
     </AvatarBoardWrapper>
   )
 }

@@ -251,12 +251,7 @@ You must pass a component to render for when no children are provided.
 
   <AvatarBoard
     emptyStateComponent={
-      <EmptyState
-        margins={{
-          left: Variables.Spacing.sLarge,
-          bottom: Variables.Spacing.sLarge
-        }}
-      />
+      <EmptyState />
     }
   />
 ```

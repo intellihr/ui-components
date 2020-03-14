@@ -222,8 +222,9 @@ const StyledContainer = styled.div`
   transition: ease-in 0.15s;
   overflow: hidden;
 
-  margin-left: ${Variables.Spacing.sLarge}px;
-  margin-bottom: ${Variables.Spacing.sLarge}px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 
   ${(props: IStyledContainer) => styleForMargins(props.margins)}
 
