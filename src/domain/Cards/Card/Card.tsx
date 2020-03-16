@@ -45,7 +45,14 @@ interface ICardBasicProps {
 
 interface ICardWithHrefProps extends ICardBasicProps {
   /** The url to navigate to when you click on the card header - not to be used with handleClick */
-  href?: string
+  href: string
+}
+
+interface ICardWithHrefAndAnchorPropsProps extends ICardWithHrefProps {
+  /** Props for the external anchor component */
+  anchorComponentProps: {
+    [i: string]: any
+  }
 }
 
 interface ICardWithHandleClickProps extends ICardBasicProps {
@@ -53,7 +60,7 @@ interface ICardWithHandleClickProps extends ICardBasicProps {
   handleClick: () => void
 }
 
-type ICardProps = ICardWithHrefProps | ICardWithHandleClickProps
+type ICardProps = ICardBasicProps | ICardWithHrefProps | ICardWithHrefAndAnchorPropsProps | ICardWithHandleClickProps
 
 interface ICardState {
   isActionButtonHover: boolean
@@ -98,7 +105,12 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
             canExpand={!!extraContent}
             color={color!}
           >
-            {!!this.href && <StyledAnchor href={this.href} />}
+            {!!this.href && (
+              <StyledAnchor
+                href={this.href}
+                anchorComponentProps={this.anchorComponentProps}
+              />
+            )}
             <StyledPrimaryContent>{mainContent}</StyledPrimaryContent>
             {this.actionButtonDropdownMenu}
             {!this.hasHrefOrHandleClick && this.toggleButton()}
@@ -124,6 +136,14 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
         )}
       </StyledCard>
     )
+  }
+
+  private get anchorComponentProps () {
+    if ('anchorComponentProps' in this.props) {
+      return this.props.anchorComponentProps
+    }
+
+    return undefined
   }
 
   private get href (): string | undefined {
@@ -208,7 +228,8 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
   private toggleButton (): JSX.Element | undefined {
     const {
       extraContent,
-      color
+      color,
+      isHoverable
     } = this.props
 
     if (extraContent) {
@@ -217,6 +238,7 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
           isExpanded={this.isExpanded}
           color={color!}
           hasHrefOrHandleClick={this.hasHrefOrHandleClick}
+          hasParentHoverStyle={!this.state.isActionButtonHover && (isHoverable! || !this.hasHrefOrHandleClick)}
         >
           <ChevronIconWrapper>
             <FontAwesomeIcon type='solid' icon='chevron-down' />

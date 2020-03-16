@@ -28,11 +28,6 @@ const cardButtonStyle = css`
   height: 28px;
   border-radius: 50%;
   cursor: pointer;
-
-  &:hover {
-    color: ${Variables.Color.n800};
-    transition: all .25s ease-out;
-  }
 `
 
 const ChevronIconWrapper = styled.span`
