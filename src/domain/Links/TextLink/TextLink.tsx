@@ -1,8 +1,10 @@
 import React from 'react'
+import styled, { StyledFunction, css } from 'styled-components'
 
 import { Props, Variables } from '../../../common'
 import { Anchor, IAnchorProps } from '../../Internals/Anchor'
-import { TextWrapper } from '../../Typographies/Text/style'
+import { styleForMargins } from '../../Spacers/services/margins'
+import { styleForTruncatedText, styleForTypographyType } from '../../Typographies/services/textStyles'
 
 interface ITextLinkCommonProps {
   /** Specify the type of text to use */
@@ -30,47 +32,125 @@ interface ITextLinkButtonProps extends ITextLinkCommonProps {
 
 type ITextLinkProps = ITextLinkAnchorProps | ITextLinkButtonProps
 
-const TextLink: React.FC<ITextLinkProps> = ({
-  type = 'anchor',
-  textType,
-  isInline = true,
-  isTruncated,
-  underlineOnHover,
-  onClick,
-  margins,
-  componentContext,
-  children,
-  ...rest
-}) => {
+const TextLinkStyles = css`
+  transition: color .25s ease-out;
+  cursor: pointer;
 
-  const textLink = (
-    <TextWrapper
-      as={type === 'button' ? 'button' : undefined}
-      margins={margins}
-      textType={textType}
-      weight={Variables.FontWeight.fwNormal}
-      isInline={isInline}
-      underlineOnHover={underlineOnHover}
-      isLink={type === 'anchor'}
-      isLinkButton={type === 'button'}
-      onClick={onClick}
-      isTruncated={isTruncated}
-      data-component-type={Props.ComponentType.TextLink}
-      data-component-context={componentContext}
-    >
-      {children}
-    </TextWrapper>
-  )
+  ${(props: ITextLinkCommonProps) => styleForTypographyType(props.textType)}
 
-  if (type === 'button') {
-    return textLink
+  ${(props: ITextLinkCommonProps) => {
+    return css`
+      ${styleForMargins(props.margins)}
+    `
+  }}
+
+  ${(props: ITextLinkCommonProps) => props.isTruncated && css`
+    ${styleForTruncatedText()}
+  `}
+
+  ${(props: ITextLinkCommonProps) => {
+    if (props.isInline) {
+      return css`
+        display: inline;
+      `
+    }
+
+    return css`
+      display: block;
+    `
+  }}
+
+  &,
+  &:link,
+  &:visited {
+    color: ${Variables.Color.i400};
   }
 
-  return (
-    <Anchor {...rest}>
-      {textLink}
-    </Anchor>
-  )
+  &:hover {
+    color: ${Variables.Color.i500};
+    ${({ underlineOnHover }: ITextLinkCommonProps) => {
+      if (underlineOnHover) {
+        return css`
+              text-decoration: underline;
+            `
+      }
+    }}
+  }
+
+  &:active {
+    color: ${Variables.Color.i600};
+  }
+`
+
+const StyledTextLink = styled.span`
+  ${TextLinkStyles};
+`
+const StyledTextButton = styled.button`
+  ${TextLinkStyles};
+  outline: 0;
+`
+
+class TextLink<P> extends React.PureComponent<P & ITextLinkProps> {
+  public static defaultProps: Partial<ITextLinkProps> = {
+    isInline: true,
+    type: 'anchor'
+  }
+
+  public render (): JSX.Element {
+    if (this.isButton(this.props)) {
+      const {
+        children,
+        isInline,
+        isTruncated,
+        onClick,
+        textType,
+        underlineOnHover,
+        margins
+      } = this.props
+
+      return (
+        <StyledTextButton
+          type='button'
+          textType={textType}
+          isInline={isInline}
+          isTruncated={isTruncated}
+          underlineOnHover={underlineOnHover}
+          onClick={onClick}
+          margins={margins}
+        >
+          {children}
+        </StyledTextButton>
+      )
+    } else {
+      const {
+        children,
+        isInline,
+        isTruncated,
+        textType,
+        underlineOnHover,
+        margins,
+        ...rest
+      } = this.props
+
+      return (
+        <Anchor {...rest}>
+          <StyledTextLink
+            textType={textType}
+            isInline={isInline}
+            isTruncated={isTruncated}
+            underlineOnHover={underlineOnHover}
+            margins={margins}
+          >
+            {children}
+          </StyledTextLink>
+        </Anchor>
+      )
+    }
+  }
+
+  private isButton (props: ITextLinkProps): props is ITextLinkButtonProps {
+    return this.props.type === 'button'
+  }
 }
 
 export {
