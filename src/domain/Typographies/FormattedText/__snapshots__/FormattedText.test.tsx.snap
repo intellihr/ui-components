@@ -45,17 +45,16 @@ exports[`<FormattedText /> should not include a custom text renderer 1`] = `
 
 exports[`<FormattedText /> should render a big block of markdown 1`] = `
 .c1 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  cursor: pointer;
   font-size: 16px;
   line-height: 24px;
   -webkit-letter-spacing: normal;
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
-  color: #424F5C;
-  font-weight: 400;
-  -webkit-transition: color .25s ease-out;
-  transition: color .25s ease-out;
-  cursor: pointer;
+  display: inline;
 }
 
 .c1,
@@ -168,7 +167,7 @@ Ordered/multi-level lists:
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bxivhb",
+            "componentId": "sc-ifAKCX",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -186,7 +185,7 @@ Ordered/multi-level lists:
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bxivhb",
+          "styledComponentId": "sc-ifAKCX",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -457,99 +456,106 @@ Ordered/multi-level lists:
                   <TextLink
                     anchorComponent="a"
                     href="http://www.intellihr.com.au"
+                    isInline={true}
                     target="_blank"
+                    type="anchor"
                   >
-                    <Anchor
+                    <Styled(Component)
                       anchorComponent="a"
                       href="http://www.intellihr.com.au"
+                      isInline={true}
                       target="_blank"
+                      type="anchor"
                     >
-                      <a
-                        href="http://www.intellihr.com.au"
-                        target="_blank"
-                      >
-                        <styled.span
-                          data-component-type="text_link"
-                          isInline={true}
-                          isLink={true}
-                          isLinkButton={false}
-                          weight={400}
-                        >
-                          <StyledComponent
-                            data-component-type="text_link"
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bwzfXH",
-                                  "isStatic": false,
-                                  "lastClassName": "c1",
-                                  "rules": Array [
-                                    "
+                      <StyledComponent
+                        anchorComponent="a"
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-bwzfXH",
+                              "isStatic": false,
+                              "lastClassName": "c1",
+                              "rules": Array [
+                                "
+  ",
+                                "
+  transition: color .25s ease-out;
+  cursor: pointer;
 
   ",
-                                    [Function],
-                                    "
+                                [Function],
+                                "
 
   ",
-                                    [Function],
-                                    "
+                                [Function],
+                                "
 
-  ",
-                                    [Function],
-                                    "
+  &,
+  &:link,
+  &:visited {
+    color: ",
+                                "#432DF3",
+                                ";
+  }
 
-  ",
-                                    [Function],
-                                    "
+  &:hover {
+    color: ",
+                                "#2512B3",
+                                ";
+    ",
+                                [Function],
+                                "
+  }
 
-  ",
-                                    [Function],
-                                    "
-
-  ",
-                                    [Function],
-                                    "
-
-  ",
-                                    [Function],
-                                    "
-
-  ",
-                                    [Function],
-                                    "
-
-  ",
-                                    [Function],
-                                    "
-
-  ",
-                                    [Function],
-                                    "
+  &:active {
+    color: ",
+                                "#0F0080",
+                                ";
+  }
 ",
-                                  ],
-                                },
-                                "displayName": "styled.span",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-bwzfXH",
-                                "target": "span",
-                                "toString": [Function],
-                                "usesTheme": false,
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            isInline={true}
-                            isLink={true}
-                            isLinkButton={false}
-                            weight={400}
+                                ";
+",
+                              ],
+                            },
+                            "displayName": "Styled(Component)",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-bwzfXH",
+                            "target": [Function],
+                            "toString": [Function],
+                            "usesTheme": false,
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
+                        href="http://www.intellihr.com.au"
+                        isInline={true}
+                        target="_blank"
+                        type="anchor"
+                      >
+                        <Component
+                          anchorComponent="a"
+                          className="c1"
+                          href="http://www.intellihr.com.au"
+                          isInline={true}
+                          target="_blank"
+                          type="anchor"
+                        >
+                          <Anchor
+                            anchorComponent="a"
+                            className="c1"
+                            href="http://www.intellihr.com.au"
+                            target="_blank"
+                            type="anchor"
                           >
-                            <span
+                            <a
                               className="c1"
-                              data-component-type="text_link"
+                              href="http://www.intellihr.com.au"
+                              target="_blank"
+                              type="anchor"
                             >
                               <TextRenderer
                                 key="text-24-1"
@@ -558,11 +564,11 @@ Ordered/multi-level lists:
                               >
                                 http://www.intellihr.com.au
                               </TextRenderer>
-                            </span>
-                          </StyledComponent>
-                        </styled.span>
-                      </a>
-                    </Anchor>
+                            </a>
+                          </Anchor>
+                        </Component>
+                      </StyledComponent>
+                    </Styled(Component)>
                   </TextLink>
                 </Component>
                 <TextRenderer
@@ -581,99 +587,106 @@ Ordered/multi-level lists:
                   <TextLink
                     anchorComponent="a"
                     href="http://www.google.com"
+                    isInline={true}
                     target="_blank"
+                    type="anchor"
                   >
-                    <Anchor
+                    <Styled(Component)
                       anchorComponent="a"
                       href="http://www.google.com"
+                      isInline={true}
                       target="_blank"
+                      type="anchor"
                     >
-                      <a
-                        href="http://www.google.com"
-                        target="_blank"
-                      >
-                        <styled.span
-                          data-component-type="text_link"
-                          isInline={true}
-                          isLink={true}
-                          isLinkButton={false}
-                          weight={400}
-                        >
-                          <StyledComponent
-                            data-component-type="text_link"
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bwzfXH",
-                                  "isStatic": false,
-                                  "lastClassName": "c1",
-                                  "rules": Array [
-                                    "
+                      <StyledComponent
+                        anchorComponent="a"
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-bwzfXH",
+                              "isStatic": false,
+                              "lastClassName": "c1",
+                              "rules": Array [
+                                "
+  ",
+                                "
+  transition: color .25s ease-out;
+  cursor: pointer;
 
   ",
-                                    [Function],
-                                    "
+                                [Function],
+                                "
 
   ",
-                                    [Function],
-                                    "
+                                [Function],
+                                "
 
-  ",
-                                    [Function],
-                                    "
+  &,
+  &:link,
+  &:visited {
+    color: ",
+                                "#432DF3",
+                                ";
+  }
 
-  ",
-                                    [Function],
-                                    "
+  &:hover {
+    color: ",
+                                "#2512B3",
+                                ";
+    ",
+                                [Function],
+                                "
+  }
 
-  ",
-                                    [Function],
-                                    "
-
-  ",
-                                    [Function],
-                                    "
-
-  ",
-                                    [Function],
-                                    "
-
-  ",
-                                    [Function],
-                                    "
-
-  ",
-                                    [Function],
-                                    "
-
-  ",
-                                    [Function],
-                                    "
+  &:active {
+    color: ",
+                                "#0F0080",
+                                ";
+  }
 ",
-                                  ],
-                                },
-                                "displayName": "styled.span",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-bwzfXH",
-                                "target": "span",
-                                "toString": [Function],
-                                "usesTheme": false,
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            isInline={true}
-                            isLink={true}
-                            isLinkButton={false}
-                            weight={400}
+                                ";
+",
+                              ],
+                            },
+                            "displayName": "Styled(Component)",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-bwzfXH",
+                            "target": [Function],
+                            "toString": [Function],
+                            "usesTheme": false,
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
+                        href="http://www.google.com"
+                        isInline={true}
+                        target="_blank"
+                        type="anchor"
+                      >
+                        <Component
+                          anchorComponent="a"
+                          className="c1"
+                          href="http://www.google.com"
+                          isInline={true}
+                          target="_blank"
+                          type="anchor"
+                        >
+                          <Anchor
+                            anchorComponent="a"
+                            className="c1"
+                            href="http://www.google.com"
+                            target="_blank"
+                            type="anchor"
                           >
-                            <span
+                            <a
                               className="c1"
-                              data-component-type="text_link"
+                              href="http://www.google.com"
+                              target="_blank"
+                              type="anchor"
                             >
                               <TextRenderer
                                 key="text-25-2"
@@ -682,11 +695,11 @@ Ordered/multi-level lists:
                               >
                                 Inline link
                               </TextRenderer>
-                            </span>
-                          </StyledComponent>
-                        </styled.span>
-                      </a>
-                    </Anchor>
+                            </a>
+                          </Anchor>
+                        </Component>
+                      </StyledComponent>
+                    </Styled(Component)>
                   </TextLink>
                 </Component>
               </p>
@@ -1380,17 +1393,16 @@ Ordered/multi-level lists:
 
 exports[`<FormattedText /> should render any urls as links 1`] = `
 .c1 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  cursor: pointer;
   font-size: 16px;
   line-height: 24px;
   -webkit-letter-spacing: normal;
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
-  color: #424F5C;
-  font-weight: 400;
-  -webkit-transition: color .25s ease-out;
-  transition: color .25s ease-out;
-  cursor: pointer;
+  display: inline;
 }
 
 .c1,
@@ -1428,7 +1440,7 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bxivhb",
+            "componentId": "sc-ifAKCX",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -1446,7 +1458,7 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bxivhb",
+          "styledComponentId": "sc-ifAKCX",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -1494,99 +1506,106 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
                   <TextLink
                     anchorComponent="a"
                     href="http://www.heyguy.com"
+                    isInline={true}
                     target="_blank"
+                    type="anchor"
                   >
-                    <Anchor
+                    <Styled(Component)
                       anchorComponent="a"
                       href="http://www.heyguy.com"
+                      isInline={true}
                       target="_blank"
+                      type="anchor"
                     >
-                      <a
-                        href="http://www.heyguy.com"
-                        target="_blank"
-                      >
-                        <styled.span
-                          data-component-type="text_link"
-                          isInline={true}
-                          isLink={true}
-                          isLinkButton={false}
-                          weight={400}
-                        >
-                          <StyledComponent
-                            data-component-type="text_link"
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bwzfXH",
-                                  "isStatic": false,
-                                  "lastClassName": "c1",
-                                  "rules": Array [
-                                    "
+                      <StyledComponent
+                        anchorComponent="a"
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-bwzfXH",
+                              "isStatic": false,
+                              "lastClassName": "c1",
+                              "rules": Array [
+                                "
+  ",
+                                "
+  transition: color .25s ease-out;
+  cursor: pointer;
 
   ",
-                                    [Function],
-                                    "
+                                [Function],
+                                "
 
   ",
-                                    [Function],
-                                    "
+                                [Function],
+                                "
 
-  ",
-                                    [Function],
-                                    "
+  &,
+  &:link,
+  &:visited {
+    color: ",
+                                "#432DF3",
+                                ";
+  }
 
-  ",
-                                    [Function],
-                                    "
+  &:hover {
+    color: ",
+                                "#2512B3",
+                                ";
+    ",
+                                [Function],
+                                "
+  }
 
-  ",
-                                    [Function],
-                                    "
-
-  ",
-                                    [Function],
-                                    "
-
-  ",
-                                    [Function],
-                                    "
-
-  ",
-                                    [Function],
-                                    "
-
-  ",
-                                    [Function],
-                                    "
-
-  ",
-                                    [Function],
-                                    "
+  &:active {
+    color: ",
+                                "#0F0080",
+                                ";
+  }
 ",
-                                  ],
-                                },
-                                "displayName": "styled.span",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-bwzfXH",
-                                "target": "span",
-                                "toString": [Function],
-                                "usesTheme": false,
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            isInline={true}
-                            isLink={true}
-                            isLinkButton={false}
-                            weight={400}
+                                ";
+",
+                              ],
+                            },
+                            "displayName": "Styled(Component)",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-bwzfXH",
+                            "target": [Function],
+                            "toString": [Function],
+                            "usesTheme": false,
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
+                        href="http://www.heyguy.com"
+                        isInline={true}
+                        target="_blank"
+                        type="anchor"
+                      >
+                        <Component
+                          anchorComponent="a"
+                          className="c1"
+                          href="http://www.heyguy.com"
+                          isInline={true}
+                          target="_blank"
+                          type="anchor"
+                        >
+                          <Anchor
+                            anchorComponent="a"
+                            className="c1"
+                            href="http://www.heyguy.com"
+                            target="_blank"
+                            type="anchor"
                           >
-                            <span
+                            <a
                               className="c1"
-                              data-component-type="text_link"
+                              href="http://www.heyguy.com"
+                              target="_blank"
+                              type="anchor"
                             >
                               <TextRenderer
                                 key="text-1-1"
@@ -1595,11 +1614,11 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
                               >
                                 http://www.heyguy.com
                               </TextRenderer>
-                            </span>
-                          </StyledComponent>
-                        </styled.span>
-                      </a>
-                    </Anchor>
+                            </a>
+                          </Anchor>
+                        </Component>
+                      </StyledComponent>
+                    </Styled(Component)>
                   </TextLink>
                 </Component>
               </p>
@@ -1645,7 +1664,7 @@ exports[`<FormattedText /> should render the formatted text 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bxivhb",
+            "componentId": "sc-ifAKCX",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -1663,7 +1682,7 @@ exports[`<FormattedText /> should render the formatted text 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bxivhb",
+          "styledComponentId": "sc-ifAKCX",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
