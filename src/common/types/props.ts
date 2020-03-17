@@ -110,7 +110,6 @@ namespace Props {
     Text = 'text',
     TextAreaInput = 'text_area_input',
     TextInput = 'text_input',
-    TextLink = 'text_link',
     Tile = 'tile',
     Timeline = 'timeline',
     TimelineEvent = 'timeline_event',
