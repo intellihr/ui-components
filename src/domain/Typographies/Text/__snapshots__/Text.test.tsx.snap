@@ -69,14 +69,6 @@ exports[`<Text /> should render a non-inline text element 1`] = `
   ",
               [Function],
               "
-
-  ",
-              [Function],
-              "
-
-  ",
-              [Function],
-              "
 ",
             ],
           },
@@ -141,14 +133,6 @@ exports[`<Text /> should render a text element as a h1 1`] = `
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "
-
-  ",
-              [Function],
-              "
-
-  ",
-              [Function],
               "
 
   ",
@@ -256,14 +240,6 @@ exports[`<Text /> should render a text with data attributes 1`] = `
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "
-
-  ",
-              [Function],
-              "
-
-  ",
-              [Function],
               "
 
   ",
@@ -416,14 +392,6 @@ exports[`<Text /> should render a text with margin 1`] = `
   ",
               [Function],
               "
-
-  ",
-              [Function],
-              "
-
-  ",
-              [Function],
-              "
 ",
             ],
           },
@@ -532,14 +500,6 @@ exports[`<Text /> should render an element with colored text 1`] = `
   ",
               [Function],
               "
-
-  ",
-              [Function],
-              "
-
-  ",
-              [Function],
-              "
 ",
             ],
           },
@@ -605,14 +565,6 @@ exports[`<Text /> should render an element with heading text 1`] = `
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "
-
-  ",
-              [Function],
-              "
-
-  ",
-              [Function],
               "
 
   ",
@@ -745,14 +697,6 @@ exports[`<Text /> should render an element with semi bold text 1`] = `
   ",
               [Function],
               "
-
-  ",
-              [Function],
-              "
-
-  ",
-              [Function],
-              "
 ",
             ],
           },
@@ -818,14 +762,6 @@ exports[`<Text /> should render an element with small text 1`] = `
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "
-
-  ",
-              [Function],
-              "
-
-  ",
-              [Function],
               "
 
   ",
@@ -956,14 +892,6 @@ exports[`<Text /> should render an element with text 1`] = `
   ",
               [Function],
               "
-
-  ",
-              [Function],
-              "
-
-  ",
-              [Function],
-              "
 ",
             ],
           },
@@ -1031,14 +959,6 @@ exports[`<Text /> should render an element with the text converted to uppercase 
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "
-
-  ",
-              [Function],
-              "
-
-  ",
-              [Function],
               "
 
   ",
