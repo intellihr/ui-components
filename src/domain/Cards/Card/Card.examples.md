@@ -16,6 +16,37 @@ initialState = { card1: false, card2: false, card3: false, allCards: false };
     onClick={() => setState({ card1: !state.allCards, card2: !state.allCards, card3: !state.allCards, allCards: !state.allCards})}>
     {state.allCards ? 'Collapse All' : 'Expand All'}
   </Button>
+
+  <Card
+    handleClick={() => alert('Card click handler called')}
+    mainContent={
+      <GridLayout verticalAlignment={GridLayout.VerticalAlignment.Middle}>
+        <GridLayout.Cell size={{ desktop: 5, tablet: 5, min: 12 }}>
+          <Text weight={Variables.FontWeight.fwSemiBold}>Fire Warden Certificate</Text>
+        </GridLayout.Cell>
+
+        <GridLayout.Cell size={{ desktop: 5, tablet: 3, min: 12 }}>
+          <Text isInline={false} color={Variables.Color.n600}>Certification</Text>
+        </GridLayout.Cell>
+
+        <GridLayout.Cell size={{ desktop: 2, tablet: 4, min: 12 }}>
+          <Button
+            onClick={(event) => {
+              event.stopPropagation()
+              alert('Button click handler called')
+            }}
+          >
+            Renew
+          </Button>
+        </GridLayout.Cell>
+      </GridLayout>
+    }
+    margins={{
+      top: Variables.Spacing.sSmall,
+      bottom: Variables.Spacing.s2XSmall
+    }}
+  />
+
   <Card
     isExpanded={state.card1}
     onCardToggle={() => setState({ card1: !state.card1 })}
@@ -40,7 +71,6 @@ initialState = { card1: false, card2: false, card3: false, allCards: false };
       </GridLayout>
     }
     margins={{
-      top: Variables.Spacing.sSmall,
       bottom: Variables.Spacing.s2XSmall
     }}
   />
