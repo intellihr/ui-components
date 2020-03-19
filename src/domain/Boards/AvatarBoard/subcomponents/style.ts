@@ -35,7 +35,7 @@ const StyledStatusBanner = styled.div`
   align-items: center;
   justify-content: center;
 
-  transition: ease-in 0.15s;
+  transition: ease-in 0.1s;
   transform: translateY(-30px);
 
   ${(props: IStyledStatusBanner) => {
@@ -134,7 +134,7 @@ const StyledAvatarContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: ease-in 0.15s;
+  transition: ease-out 0.2s;
   pointer-events: none;
   margin-top: 55px;
   margin-bottom: 4px;
@@ -144,7 +144,7 @@ const StyledTitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: ease-in 0.15s;
+  transition: ease-out 0.2s;
   pointer-events: none;
 `
 
@@ -209,8 +209,9 @@ const StyledActionArea = styled.div`
 const StyledContentContainer = styled.div`
   height: 116px;
   padding: 16px;
-  transition: ease-in 0.15s;
-  transform: translateY(70px);
+  opacity: 0;
+  transform: translateY(60px);
+  transition: transform ease-in 0.15s, opacity 0.075s ease-in;
 `
 
 const StyledContainer = styled.div`
@@ -232,12 +233,13 @@ const StyledContainer = styled.div`
       return css`
         ${StyledStatusBanner} {
           transform: translateY(0px);
-          transition: ease-out 0.2s;
+          transition: ease-out 0.15s;
         }
 
         ${StyledContentContainer} {
+          opacity: 1;
           transform: translateY(-60px);
-          transition: ease-out 0.2s;
+          transition: transform ease-out 0.2s, opacity ease-out 0.4s;
         }
 
         ${StyledAvatarContainer} {
