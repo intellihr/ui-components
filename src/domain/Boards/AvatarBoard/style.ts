@@ -9,15 +9,12 @@ interface IBoardWrapperProps {
 
 const AvatarBoardWrapper = styled.div<IBoardWrapperProps>`
   ${(props) => styleForMargins(props.margins)}
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
 
-  background-color: ${Variables.Color.n250};
-  border-radius: 4px;
-
-  padding-right: ${Variables.Spacing.sLarge}px;
-  padding-top: ${Variables.Spacing.sLarge}px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 260px);
+  gap: ${Variables.Spacing.s2XLarge}px;
+  justify-content: center;
+  justify-items: center;
 `
 
 export {

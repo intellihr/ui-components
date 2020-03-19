@@ -35,9 +35,6 @@ const StyledStatusBanner = styled.div`
   align-items: center;
   justify-content: center;
 
-  transition: ease-in 0.1s;
-  transform: translateY(-30px);
-
   ${(props: IStyledStatusBanner) => {
     if (props.statusColor) {
       switch (props.statusColor) {
@@ -109,18 +106,22 @@ const StyledDropdownButton = styled.div`
   outline: none;
   padding: 6px 0px 4px 0px;
   border-radius: 8px;
+  transition: 0.15s ease-in;
 
   &:hover {
-    background-color: ${Variables.Color.c200};
+    background-color: ${Variables.Color.n250};
+    transition: 0.2s ease-out;
   }
 
   &:active {
-    background-color: ${Variables.Color.c300};
+    background-color: ${Variables.Color.n300};
+    transition: 0.2s ease-out;
   }
 
   &:focus {
-    background-color: ${Variables.Color.c200};
-    border-color: ${Variables.Color.c400};
+    background-color: ${Variables.Color.n250};
+    border-color: ${Variables.Color.n400};
+    transition: 0.2s ease-out;
   }
 
   .icon {
@@ -181,7 +182,20 @@ const StyledSecondaryTextContainer = styled.span`
   display: block;
   flex: 1 0 0;
   color: ${Variables.Color.n800};
-  ${styleForTypographyType(Props.TypographyType.XSmall)}
+
+  ${(props: IAvatarTile) => {
+    if (props.hovered) {
+      return css`
+        ${styleForTypographyType(Props.TypographyType.XSmall)}
+        transition: ease-out 0.2s;
+      `
+    }
+
+    return css`
+      ${styleForTypographyType(Props.TypographyType.Small)}
+      transition: ease-in 0.15s;
+    `
+  }}
   ${styleForTruncatedText()}
 `
 
@@ -191,15 +205,16 @@ const StyledActionArea = styled.div`
   width: 260px;
   position: absolute;
   top: 0px;
+  transition: ease-in 0.15s;
 
   ${(props: IAvatarTile) => {
     if (props.hovered) {
       return css`
-        background-color: ${Variables.Color.c100};
-        transition: ease-out 0.2s;
+        background-color: ${Variables.Color.n150};
 
         &:hover {
-          background-color: ${Variables.Color.c200};
+          background-color: ${Variables.Color.n250};
+          transition: ease-out 0.2s;
         }
       `
     }
@@ -222,19 +237,13 @@ const StyledContainer = styled.div`
   border-radius: 8px;
   transition: ease-in 0.15s;
   overflow: hidden;
-
-  margin-left: ${Variables.Spacing.sLarge}px;
-  margin-bottom: ${Variables.Spacing.sLarge}px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12), 0px 3px 8px rgba(0, 0, 0, 0.14), 0px 1px 6px rgba(102, 115, 128, 0.2);
 
   ${(props: IStyledContainer) => styleForMargins(props.margins)}
 
   ${(props: IStyledContainer) => {
     if (props.hovered) {
       return css`
-        ${StyledStatusBanner} {
-          transform: translateY(0px);
-          transition: ease-out 0.15s;
-        }
 
         ${StyledContentContainer} {
           opacity: 1;
