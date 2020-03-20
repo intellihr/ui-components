@@ -31,7 +31,7 @@ describe('<TooltipPopover />', () => {
   describe('dark style popover behaviour', () => {
     const wrapper = shallow(
       <TooltipPopover
-        type='dark'
+        variant='dark'
       >
         dark Popover
       </TooltipPopover>

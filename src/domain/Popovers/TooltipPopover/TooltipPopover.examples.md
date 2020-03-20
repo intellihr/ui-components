@@ -10,7 +10,7 @@
 
 ```jsx
 <TooltipPopover
- type='dark'
+ variant='dark'
 >
   go dark 
 </TooltipPopover>

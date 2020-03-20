@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 import { Variables } from '../../../common'
 import { styleForLineBreakText } from '../../Typographies/services/textStyles'
-import { TooltipPopoverType } from './TooltipPopover'
+import { TooltipPopoverVariant } from './TooltipPopover'
 
 interface IStyledToggleComponentWrapper {
   noHelpCursor?: boolean
@@ -10,7 +10,7 @@ interface IStyledToggleComponentWrapper {
 
 interface IStyledTooltipContentProps {
   width?: number
-  type: TooltipPopoverType
+  variant: TooltipPopoverVariant
 }
 
 const StyledToggleComponentWrapper = styled.span`
@@ -25,7 +25,7 @@ const StyledTooltipContent = styled.div`
 
   ${(props: IStyledTooltipContentProps) => {
 
-    switch (props.type) {
+    switch (props.variant) {
       case 'neutral':
         return css`
             background-color: ${Variables.Color.n100};
@@ -40,7 +40,7 @@ const StyledTooltipContent = styled.div`
             background-color: ${Variables.Color.n800};
             border-radius: ${Variables.Style.borderRadius}px;
             opacity: 0.9;
-            box-shadow: ${Variables.boxShadow.bsActive};
+            box-shadow: ${Variables.BoxShadow.bsLv3Active};
             padding: ${Variables.Spacing.s2XSmall}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.s2XSmall}px ${Variables.Spacing.sMedium}px;
           `
     }
