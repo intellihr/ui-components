@@ -71,30 +71,30 @@ const AvatarTile: React.FC<IAvatarTileProps> = ({
 
   const actionButtonDropdownMenu = (dropdownSections && hovered)
     ? (
-        <StyledDropdownMenu
-          displayStatusBanner={displayStatusBanner}
-        >
-          <DropdownMenu
-            toggleComponent={actionButton}
-            sections={dropdownSections}
-            parentAnchorPosition={{
-              xPos: Props.Position.Right,
-              yPos: Props.Position.Bottom
-            }}
-            dropdownAnchorPosition={{
-              xPos: Props.Position.Right,
-              yPos: Props.Position.Top
-            }}
-          />
-        </StyledDropdownMenu>
+      <StyledDropdownMenu
+        displayStatusBanner={displayStatusBanner}
+      >
+        <DropdownMenu
+          toggleComponent={actionButton}
+          sections={dropdownSections}
+          parentAnchorPosition={{
+            xPos: Props.Position.Right,
+            yPos: Props.Position.Bottom
+          }}
+          dropdownAnchorPosition={{
+            xPos: Props.Position.Right,
+            yPos: Props.Position.Top
+          }}
+        />
+      </StyledDropdownMenu>
     )
     : null
 
   const actionArea = href
     ? (
-        <Anchor href={href}>
-          <StyledActionArea hovered={hovered} />
-        </Anchor>
+      <Anchor href={href}>
+        <StyledActionArea hovered={hovered} />
+      </Anchor>
     )
     : null
 
@@ -138,7 +138,7 @@ const AvatarTile: React.FC<IAvatarTileProps> = ({
           {primaryText}
         </StyledPrimaryTextContainer>
         <StyledSecondaryContainer>
-          <StyledSecondaryTextContainer>
+          <StyledSecondaryTextContainer hovered={hovered}>
             {secondaryText}
           </StyledSecondaryTextContainer>
           {secondaryRightElement}
