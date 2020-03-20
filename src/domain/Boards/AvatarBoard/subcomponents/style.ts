@@ -26,7 +26,7 @@ interface IStyledDropdownMenu {
 
 const StyledStatusBanner = styled.div`
   position: absolute;
-  width: 260px;
+  width: 100%;
   height: 22px;
   border-radius: 8px 8px 0px 0px;
   pointer-events: none;
@@ -34,6 +34,9 @@ const StyledStatusBanner = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  transition: ease-in 0.1s;
+  transform: translateY(-30px);
 
   ${(props: IStyledStatusBanner) => {
     if (props.statusColor) {
@@ -150,7 +153,7 @@ const StyledTitleContainer = styled.div`
 `
 
 const StyledPrimaryTextContainer = styled.span`
-  max-width: 220px;
+  max-width: 80%;
   font-weight: ${Variables.FontWeight.fwSemiBold};
   color: ${Variables.Color.n800};
   ${styleForTruncatedText()}
@@ -202,7 +205,7 @@ const StyledSecondaryTextContainer = styled.span`
 const StyledActionArea = styled.div`
   border-radius: 8px 8px 0px 0px;
   height: 162px;
-  width: 260px;
+  width: 100%;
   position: absolute;
   top: 0px;
   transition: ease-in 0.15s;
@@ -232,7 +235,8 @@ const StyledContentContainer = styled.div`
 const StyledContainer = styled.div`
   position: relative;
   background-color: ${Variables.Color.n100};
-  width: 260px;
+  width: 100%;
+  max-width: 540px;
   height: 278px;
   border-radius: 8px;
   transition: ease-in 0.15s;
@@ -244,6 +248,10 @@ const StyledContainer = styled.div`
   ${(props: IStyledContainer) => {
     if (props.hovered) {
       return css`
+        ${StyledStatusBanner} {
+          transform: translateY(0px);
+          transition: ease-out 0.15s;
+        }
 
         ${StyledContentContainer} {
           opacity: 1;

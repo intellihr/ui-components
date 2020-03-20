@@ -130,7 +130,7 @@ const AvatarTile: React.FC<IAvatarTileProps> = ({
           initials={initials}
           size={Props.AvatarSize.XLarge}
           imageUrl={imageUrl}
-          statusDot={hovered ? undefined : statusColor}
+          statusDot={statusColor}
         />
       </StyledAvatarContainer>
       <StyledTitleContainer>
