@@ -26,7 +26,7 @@ interface IStyledDropdownMenu {
 
 const StyledStatusBanner = styled.div`
   position: absolute;
-  width: 260px;
+  width: 100%;
   height: 22px;
   border-radius: 8px 8px 0px 0px;
   pointer-events: none;
@@ -35,7 +35,7 @@ const StyledStatusBanner = styled.div`
   align-items: center;
   justify-content: center;
 
-  transition: ease-in 0.15s;
+  transition: ease-in 0.1s;
   transform: translateY(-30px);
 
   ${(props: IStyledStatusBanner) => {
@@ -109,18 +109,22 @@ const StyledDropdownButton = styled.div`
   outline: none;
   padding: 6px 0px 4px 0px;
   border-radius: 8px;
+  transition: 0.15s ease-in;
 
   &:hover {
-    background-color: ${Variables.Color.c200};
+    background-color: ${Variables.Color.n250};
+    transition: 0.2s ease-out;
   }
 
   &:active {
-    background-color: ${Variables.Color.c300};
+    background-color: ${Variables.Color.n300};
+    transition: 0.2s ease-out;
   }
 
   &:focus {
-    background-color: ${Variables.Color.c200};
-    border-color: ${Variables.Color.c400};
+    background-color: ${Variables.Color.n250};
+    border-color: ${Variables.Color.n400};
+    transition: 0.2s ease-out;
   }
 
   .icon {
@@ -134,7 +138,7 @@ const StyledAvatarContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: ease-in 0.15s;
+  transition: ease-out 0.2s;
   pointer-events: none;
   margin-top: 55px;
   margin-bottom: 4px;
@@ -144,12 +148,12 @@ const StyledTitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: ease-in 0.15s;
+  transition: ease-out 0.2s;
   pointer-events: none;
 `
 
 const StyledPrimaryTextContainer = styled.span`
-  max-width: 220px;
+  max-width: 80%;
   font-weight: ${Variables.FontWeight.fwSemiBold};
   color: ${Variables.Color.n800};
   ${styleForTruncatedText()}
@@ -181,25 +185,39 @@ const StyledSecondaryTextContainer = styled.span`
   display: block;
   flex: 1 0 0;
   color: ${Variables.Color.n800};
-  ${styleForTypographyType(Props.TypographyType.XSmall)}
+
+  ${(props: IAvatarTile) => {
+    if (props.hovered) {
+      return css`
+        ${styleForTypographyType(Props.TypographyType.XSmall)}
+        transition: ease-out 0.2s;
+      `
+    }
+
+    return css`
+      ${styleForTypographyType(Props.TypographyType.Small)}
+      transition: ease-in 0.15s;
+    `
+  }}
   ${styleForTruncatedText()}
 `
 
 const StyledActionArea = styled.div`
   border-radius: 8px 8px 0px 0px;
   height: 162px;
-  width: 260px;
+  width: 100%;
   position: absolute;
   top: 0px;
+  transition: ease-in 0.15s;
 
   ${(props: IAvatarTile) => {
     if (props.hovered) {
       return css`
-        background-color: ${Variables.Color.c100};
-        transition: ease-out 0.2s;
+        background-color: ${Variables.Color.n150};
 
         &:hover {
-          background-color: ${Variables.Color.c200};
+          background-color: ${Variables.Color.n250};
+          transition: ease-out 0.2s;
         }
       `
     }
@@ -209,21 +227,21 @@ const StyledActionArea = styled.div`
 const StyledContentContainer = styled.div`
   height: 116px;
   padding: 16px;
-  transition: ease-in 0.15s;
-  transform: translateY(70px);
+  opacity: 0;
+  transform: translateY(60px);
+  transition: transform ease-in 0.15s, opacity 0.075s ease-in;
 `
 
 const StyledContainer = styled.div`
   position: relative;
   background-color: ${Variables.Color.n100};
-  width: 260px;
+  width: 100%;
+  max-width: 540px;
   height: 278px;
   border-radius: 8px;
   transition: ease-in 0.15s;
   overflow: hidden;
-
-  margin-left: ${Variables.Spacing.sLarge}px;
-  margin-bottom: ${Variables.Spacing.sLarge}px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12), 0px 3px 8px rgba(0, 0, 0, 0.14), 0px 1px 6px rgba(102, 115, 128, 0.2);
 
   ${(props: IStyledContainer) => styleForMargins(props.margins)}
 
@@ -232,12 +250,13 @@ const StyledContainer = styled.div`
       return css`
         ${StyledStatusBanner} {
           transform: translateY(0px);
-          transition: ease-out 0.2s;
+          transition: ease-out 0.15s;
         }
 
         ${StyledContentContainer} {
+          opacity: 1;
           transform: translateY(-60px);
-          transition: ease-out 0.2s;
+          transition: transform ease-out 0.2s, opacity ease-out 0.4s;
         }
 
         ${StyledAvatarContainer} {
