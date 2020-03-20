@@ -28,6 +28,32 @@ describe('<TooltipPopover />', () => {
     })
   })
 
+  describe('dark style popover behaviour', () => {
+    const wrapper = shallow(
+      <TooltipPopover
+        type='dark'
+      >
+        dark Popover
+      </TooltipPopover>
+    )
+
+    it('should match the snapshot', () => {
+      expect(wrapper).toMatchSnapshot()
+    })
+
+    it('should open the menu', () => {
+      // @ts-ignore TS2339
+      wrapper.instance().openMenu()
+
+      expect(
+        wrapper
+          .update()
+          .find('Popover')
+          .prop('isOpen')
+      ).toBeTruthy()
+    })
+  })
+
   describe('Render a popover using a custom trigger', () => {
     const triggerComponent = ({ openMenu, closeMenu, toggleComponentRef, ariaProps }: ITooltipPopoverToggleComponentProps) => (
         <span
