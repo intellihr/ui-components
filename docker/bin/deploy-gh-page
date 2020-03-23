@@ -16,4 +16,4 @@ git \
   commit \
   -m "Update gh-pages as of $(git log '--format=format:%H' remotes/origin/master -1)"
 
-git push --set-upstream origin HEAD:gh-pages
+git push -f --set-upstream origin HEAD:gh-pages
