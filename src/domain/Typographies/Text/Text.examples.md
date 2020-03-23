@@ -83,6 +83,24 @@ const { Variables } = require('../../../common');
   </Text>
 ```
 
+#### Text.Link
+
+Use Text to style your Text.Link!
+
+```jsx
+const { Variables } = require('../../../common');
+
+<div>
+    <Text>
+        Hello! <Text.Link href='https://www.google.com' underlineOnHover>I am link text</Text.Link> and <Text.Link onClick={()=> {alert('Hey!')}}>I have onClick!</Text.Link>
+    </Text>
+    <br/>
+    <Text isTruncated type='display' weight={Variables.FontWeight.fwBold}>
+        Hello! <Text.Link href='https://www.google.com' underlineOnHover>I am link text</Text.Link> and <Text type='xsmall'><Text.Link onClick={()=> {alert('Hey!')}}>I have onClick!</Text.Link></Text>
+    </Text>
+</div>
+```
+
 #### Inline (false)
 
 ```jsx

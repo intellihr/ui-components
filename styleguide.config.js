@@ -213,7 +213,7 @@ module.exports = {
           ]
         },
         {
-          name: 'Links',
+          name: 'Links (Deprecated)',
           components: [
             'src/domain/Links/ActionLink/ActionLink.tsx',
             'src/domain/Links/TextLink/TextLink.tsx',

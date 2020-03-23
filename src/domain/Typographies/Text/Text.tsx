@@ -4,6 +4,7 @@ import React from 'react'
 import { Props, Variables } from '../../../common'
 import { HintWrapper, IHintWrapperProps } from '../../Formats/HintWrapper'
 import { TextWrapper } from './style'
+import { Link } from './subcomponents/Link'
 
 export interface ITextProps {
   /** Text to display */
@@ -39,6 +40,7 @@ export interface ITextProps {
 }
 
 export class Text extends React.PureComponent<ITextProps> {
+  public static Link = Link
   public static defaultProps: Partial<ITextProps> = {
     isInline: true,
     type: Props.TypographyType.Body,
