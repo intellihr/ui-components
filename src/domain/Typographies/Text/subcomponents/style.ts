@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+
 import { Variables } from '../../../../common'
 import { ILinkProps, LinkVariant } from './Link'
 
@@ -12,7 +13,7 @@ const StyledA = styled.a`
   }
 
   ${({variant}: IStyledAProps) => {
-  switch(variant) {
+  switch (variant) {
     case LinkVariant.Unstyled:
       return css`
           &,
@@ -27,17 +28,17 @@ const StyledA = styled.a`
       return css`
           transition: color .25s ease-out;
           cursor: pointer;
-      
+
           &,
           &:link,
           &:visited {
             color: ${Variables.Color.i400};
           }
-      
+
           &:hover {
             color: ${Variables.Color.i500};
           }
-      
+
           &:active {
             color: ${Variables.Color.i600};
           }

@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { StyledA } from './style'
 
 interface ILinkProps {
@@ -6,6 +7,8 @@ interface ILinkProps {
   href?: string
   /* Callback to fire on click */
   onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void
+  /** Href target */
+  target?: string
   /** Underlines the text when hovered */
   underlineOnHover?: boolean
   /** Specifies the style variant */
@@ -17,11 +20,12 @@ enum LinkVariant {
   Unstyled = 'unstyled'
 }
 
-const Link: React.FC<ILinkProps> = ({ children, href, onClick, variant, underlineOnHover}) => {
+const Link: React.FC<ILinkProps> = ({ children, href, onClick, variant, underlineOnHover, target}) => {
   return (
     <StyledA
       href={href}
       onClick={onClick}
+      target={target}
       role={(!!onClick && !href) ? 'button' : undefined}
       variant={variant || LinkVariant.Default}
       underlineOnHover={underlineOnHover}
