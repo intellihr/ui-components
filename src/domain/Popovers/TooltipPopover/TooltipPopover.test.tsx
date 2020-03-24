@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { ITooltipPopoverToggleComponentProps, TooltipPopover } from './TooltipPopover'
+import {ITooltipPopoverToggleComponentProps, TooltipPopover, TooltipPopoverVariant} from './TooltipPopover'
 
 describe('<TooltipPopover />', () => {
   describe('Simple popover behaviour', () => {
@@ -31,7 +31,7 @@ describe('<TooltipPopover />', () => {
   describe('dark style popover behaviour', () => {
     const wrapper = shallow(
       <TooltipPopover
-        variant='dark'
+        variant={TooltipPopoverVariant.Dark}
       >
         dark Popover
       </TooltipPopover>

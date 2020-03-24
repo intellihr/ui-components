@@ -7,7 +7,10 @@ import { IPopoverPosition, Popover } from '../Popover'
 import { StyledToggleComponentWrapper, StyledTooltipContent } from './style'
 const { popoverTrigger } = require('./style.scss')
 
-type TooltipPopoverVariant = 'neutral' | 'dark'
+enum TooltipPopoverVariant {
+  Neutral = 'neutral',
+  Dark = 'dark'
+}
 
 interface ITooltipPopoverMenuState {
   isPopoverOpen: boolean
@@ -52,7 +55,7 @@ interface ITooltipPopoverProps {
 
 class TooltipPopover extends React.Component<ITooltipPopoverProps, ITooltipPopoverMenuState> {
   public static defaultProps: Partial<ITooltipPopoverProps> = {
-    variant: 'neutral',
+    variant: TooltipPopoverVariant.Neutral,
     toggleComponent: ({ openMenu, closeMenu, toggleComponentRef, ariaProps }) => (
       <button
         className={popoverTrigger}

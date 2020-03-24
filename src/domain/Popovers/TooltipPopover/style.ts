@@ -26,7 +26,7 @@ const StyledTooltipContent = styled.div`
   ${(props: IStyledTooltipContentProps) => {
 
     switch (props.variant) {
-      case 'neutral':
+      case TooltipPopoverVariant.Neutral:
         return css`
             background-color: ${Variables.Color.n100};
             border-radius: ${Variables.Style.borderRadius}px;
@@ -34,7 +34,7 @@ const StyledTooltipContent = styled.div`
             box-shadow: 0 2px 4px rgba(38, 45, 51, 0.1);
             padding: ${Variables.Spacing.sMedium}px;
           `
-      case 'dark':
+      case TooltipPopoverVariant.Dark:
         return css`
             color: ${Variables.Color.n100};
             background-color: ${Variables.Color.n800};
