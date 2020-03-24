@@ -60,6 +60,7 @@ exports[`<HintWrapper /> should render a hint wrapper with a JSX Element for the
 exports[`<HintWrapper /> should render a popover hint wrapper 1`] = `
 <TooltipPopover
   toggleComponent={[Function]}
+  variant="neutral"
 >
   Never trust a cat
 </TooltipPopover>

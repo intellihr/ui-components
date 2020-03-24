@@ -6,6 +6,16 @@
 </TooltipPopover>
 ```
 
+#### dark style TooltipPopover
+
+```jsx
+<TooltipPopover
+ variant='dark'
+>
+  go dark 
+</TooltipPopover>
+```
+
 #### Custom Width TooltipPopover
 
 ```jsx

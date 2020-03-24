@@ -12,7 +12,7 @@ const AvatarBoardWrapper = styled.div<IBoardWrapperProps>`
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: ${Variables.Spacing.s2XLarge}px;
+  gap: ${Variables.Spacing.sXLarge}px;
   justify-content: center;
   justify-items: center;
 `

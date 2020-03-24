@@ -1,3 +1,7 @@
+# DEPRECATED
+
+## Please use the <Text.Link> component instead
+
 #### Text link
 
 ```jsx

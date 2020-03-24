@@ -9,7 +9,7 @@
 ```
 
 #### Record with no Children
-   
+
    ```jsx
      <Record
        name='Position Title'
@@ -74,15 +74,16 @@ const { Variables } = require('@Common');
   <Record
     name='Position Title'
     tooltipProps={{
-      toggleComponent: ({ openMenu, closeMenu, toggleComponentRef, ariaProps }) =>
+      toggleComponent: ({ openMenu, closeMenu, toggleComponentRef, ariaProps }) => (
         <span
           onMouseEnter={openMenu}
           onMouseLeave={closeMenu}
           ref={toggleComponentRef}
           {...ariaProps}
         >
-          <FontAwesomeIcon type='exclamation-triangle' color={Variables.Color.o400} />
+          <FontAwesomeIcon type='solid' icon='exclamation-triangle' color={Variables.Color.o400} />
         </span>
+      )
     }}
     tooltipContent={
       <Record

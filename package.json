@@ -1,7 +1,7 @@
 {
   "name": "@intellihr/ui-components",
   "description": "A common React components library that is used in our company",
-  "version": "45.0.2",
+  "version": "45.0.3",
   "main": "./dist/",
   "types": "./types/index.d.ts",
   "files": [
