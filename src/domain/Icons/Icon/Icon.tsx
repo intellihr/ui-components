@@ -8,7 +8,7 @@ interface IIconProps {
   /** FontAwesome or alternate name of the icon to display */
   icon: string
   /** Multiplies icon size by this amount */
-  size?: 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge'
+  size?: 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge' | 'xxxlarge'
   /** Custom sizes for icons */
   customSize?: number
   /** Colour of the icon */
