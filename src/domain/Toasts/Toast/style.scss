@@ -27,7 +27,7 @@ $toast-styles: (
   align-items: flex-start;
   border: .1rem solid;
   border-radius: $border-radius;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, .15);
+  box-shadow: $box-shadow-lv4-front-of-mind;
   display: flex;
   flex-direction: row;
   height: 100%;
