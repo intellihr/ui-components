@@ -4,7 +4,7 @@ import { Props, Variables } from '../../../common'
 import { styleForShowForSizes } from '../../Layouts/ShowForSizes'
 import { styleForMargins } from '../../Spacers/services/margins'
 
-type size = 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge' | 'xxxlarge'
+type size = 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge'
 
 interface IStyledIconProps {
   color?: string
@@ -123,10 +123,6 @@ const StyledIcon = styled.i<IStyledIconProps>`
           font-size: 2rem; // 32px
         `
       case 'xxlarge':
-        return css`
-          font-size: 3rem; // 48px
-        `
-      case 'xxxlarge':
         return css`
           font-size: 52px;
         `

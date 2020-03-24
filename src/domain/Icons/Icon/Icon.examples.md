@@ -31,17 +31,6 @@ import { FontAwesomeIcon } from '@Domain/Icons';
   />
 ```
 
-### Largest Icon
-```jsx
-import { FontAwesomeIcon } from '@Domain/Icons';
-
-  <FontAwesomeIcon
-    type='solid'
-    icon='cloud-upload'
-    size='xxxlarge'
-  />
-```
-
 #### FontAwesome Duotone Icon
 
 ```jsx
