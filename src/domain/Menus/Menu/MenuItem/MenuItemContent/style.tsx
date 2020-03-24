@@ -19,8 +19,6 @@ const StyledMenuItem = styledAnchor`
 
   &:hover {
     background-color: ${Variables.Color.n300};
-    border-left: 3px solid ${Variables.Color.n300};
-    margin-left: 0;
   }
 
   ${({isActive}) => {
