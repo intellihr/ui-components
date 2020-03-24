@@ -7,6 +7,11 @@ import { IPopoverPosition, Popover } from '../Popover'
 import { StyledToggleComponentWrapper, StyledTooltipContent } from './style'
 const { popoverTrigger } = require('./style.scss')
 
+enum TooltipPopoverVariant {
+  Neutral = 'neutral',
+  Dark = 'dark'
+}
+
 interface ITooltipPopoverMenuState {
   isPopoverOpen: boolean
   popoverId?: string
@@ -44,10 +49,13 @@ interface ITooltipPopoverProps {
   width?: number
   /** Disable the help cursor over the toggle component */
   noHelpCursor?: boolean
+  /** What style variant of tooltip popover to display */
+  variant?: TooltipPopoverVariant
 }
 
 class TooltipPopover extends React.Component<ITooltipPopoverProps, ITooltipPopoverMenuState> {
   public static defaultProps: Partial<ITooltipPopoverProps> = {
+    variant: TooltipPopoverVariant.Neutral,
     toggleComponent: ({ openMenu, closeMenu, toggleComponentRef, ariaProps }) => (
       <button
         className={popoverTrigger}
@@ -105,7 +113,8 @@ class TooltipPopover extends React.Component<ITooltipPopoverProps, ITooltipPopov
       parentAnchorPosition,
       popoverAnchorPosition,
       width,
-      noHelpCursor
+      noHelpCursor,
+      variant
     } = this.props
 
     return (
@@ -122,6 +131,7 @@ class TooltipPopover extends React.Component<ITooltipPopoverProps, ITooltipPopov
           animationType='tooltip'
         >
           <StyledTooltipContent
+            variant={variant!}
             className={className}
             width={width}
           >
@@ -160,6 +170,7 @@ class TooltipPopover extends React.Component<ITooltipPopoverProps, ITooltipPopov
 }
 
 export {
+  TooltipPopoverVariant,
   TooltipPopover,
   ITooltipPopoverProps,
   ITooltipPopoverToggleComponentProps

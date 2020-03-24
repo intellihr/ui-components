@@ -25,7 +25,9 @@ exports[`<TooltipPopover /> Render a popover using a custom trigger should match
     }
     popoverAnchorPosition="auto"
   >
-    <styled.div>
+    <styled.div
+      variant="neutral"
+    >
       Triggered Customly
     </styled.div>
   </Popover>
@@ -63,8 +65,50 @@ exports[`<TooltipPopover /> Simple popover behaviour should match the snapshot 1
     }
     popoverAnchorPosition="auto"
   >
-    <styled.div>
+    <styled.div
+      variant="neutral"
+    >
       Simple Popover
+    </styled.div>
+  </Popover>
+</Fragment>
+`;
+
+exports[`<TooltipPopover /> dark style popover behaviour should match the snapshot 1`] = `
+<Fragment>
+  <styled.span>
+    <button
+      aria-expanded={false}
+      aria-haspopup={true}
+      className="popoverTrigger"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      role="button"
+      type="button"
+    >
+      <Memo(FontAwesomeIcon)
+        color="#424F5C"
+        icon="question-circle"
+        type="regular"
+      />
+    </button>
+  </styled.span>
+  <Popover
+    animationType="tooltip"
+    id=""
+    isOpen={false}
+    parentAnchorPosition="auto"
+    parentRef={
+      Object {
+        "current": null,
+      }
+    }
+    popoverAnchorPosition="auto"
+  >
+    <styled.div
+      variant="dark"
+    >
+      dark Popover
     </styled.div>
   </Popover>
 </Fragment>

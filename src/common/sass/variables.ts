@@ -155,6 +155,13 @@ namespace Variables {
     zIndexToaster =         4000,
     zIndexAbsoluteTop =     9999
   }
+
+  export enum BoxShadow {
+    bsLv1Static = '0 2px 1px rgba(102, 115, 128, 0.2), 0 1px 1px rgba(0, 0, 0, 0.14), 0 1px 3px rgba(0, 0, 0, 0.12)',
+    bsLv2Prominent = '0 2px 4px rgba(102, 115, 128, 0.2), 0 4px 5px rgba(0, 0, 0, 0.14), 0 1px 10px rgba(0, 0, 0, 0.12)',
+    bsLv3Active = '0 5px 5px rgba(102, 115, 128, 0.18), 0 8px 10px rgba(0, 0, 0, 0.12), 0 3px 14px rgba(0, 0, 0, 0.10)',
+    bsLv4FrontOfMind = '0 10px 14px rgba(102, 115, 128, 0.2), 0 22px 35px rgba(0, 0, 0, 0.14), 0 8px 42px rgba(0, 0, 0, 0.12)'
+  }
 }
 
 export {
