@@ -39,9 +39,9 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gZMcBi",
+            "componentId": "sc-gqjmRU",
             "isStatic": false,
-            "lastClassName": "dMdnOw",
+            "lastClassName": "iTpbJv",
             "rules": Array [
               "
   ",
@@ -53,7 +53,7 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gZMcBi",
+          "styledComponentId": "sc-gqjmRU",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -77,7 +77,7 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
@@ -92,7 +92,7 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,
@@ -254,9 +254,9 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gZMcBi",
+            "componentId": "sc-gqjmRU",
             "isStatic": false,
-            "lastClassName": "dMdnOw",
+            "lastClassName": "iTpbJv",
             "rules": Array [
               "
   ",
@@ -268,7 +268,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gZMcBi",
+          "styledComponentId": "sc-gqjmRU",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -292,7 +292,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
@@ -307,7 +307,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,
@@ -556,9 +556,9 @@ exports[`<Record /> should render a Record component without children 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gZMcBi",
+            "componentId": "sc-gqjmRU",
             "isStatic": false,
-            "lastClassName": "dMdnOw",
+            "lastClassName": "iTpbJv",
             "rules": Array [
               "
   ",
@@ -570,7 +570,7 @@ exports[`<Record /> should render a Record component without children 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gZMcBi",
+          "styledComponentId": "sc-gqjmRU",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -594,7 +594,7 @@ exports[`<Record /> should render a Record component without children 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
@@ -609,7 +609,7 @@ exports[`<Record /> should render a Record component without children 1`] = `
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,
@@ -854,9 +854,9 @@ exports[`<Record /> should render a Record component, creating a Text child with
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gZMcBi",
+            "componentId": "sc-gqjmRU",
             "isStatic": false,
-            "lastClassName": "dMdnOw",
+            "lastClassName": "iTpbJv",
             "rules": Array [
               "
   ",
@@ -868,7 +868,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gZMcBi",
+          "styledComponentId": "sc-gqjmRU",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -892,7 +892,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
@@ -907,7 +907,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,
@@ -1153,9 +1153,9 @@ exports[`<Record /> should render a Record component, creating a Text child with
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gZMcBi",
+            "componentId": "sc-gqjmRU",
             "isStatic": false,
-            "lastClassName": "dMdnOw",
+            "lastClassName": "iTpbJv",
             "rules": Array [
               "
   ",
@@ -1167,7 +1167,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gZMcBi",
+          "styledComponentId": "sc-gqjmRU",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -1191,7 +1191,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
@@ -1206,7 +1206,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,
@@ -1441,9 +1441,9 @@ exports[`<Record /> should render a Record component, with the provided componen
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gZMcBi",
+            "componentId": "sc-gqjmRU",
             "isStatic": false,
-            "lastClassName": "dMdnOw",
+            "lastClassName": "iTpbJv",
             "rules": Array [
               "
   ",
@@ -1455,7 +1455,7 @@ exports[`<Record /> should render a Record component, with the provided componen
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gZMcBi",
+          "styledComponentId": "sc-gqjmRU",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -1479,7 +1479,7 @@ exports[`<Record /> should render a Record component, with the provided componen
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
@@ -1494,7 +1494,7 @@ exports[`<Record /> should render a Record component, with the provided componen
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,
@@ -1664,9 +1664,9 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gZMcBi",
+            "componentId": "sc-gqjmRU",
             "isStatic": false,
-            "lastClassName": "dMdnOw",
+            "lastClassName": "iTpbJv",
             "rules": Array [
               "
   ",
@@ -1678,7 +1678,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gZMcBi",
+          "styledComponentId": "sc-gqjmRU",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -1702,7 +1702,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
@@ -1717,7 +1717,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,

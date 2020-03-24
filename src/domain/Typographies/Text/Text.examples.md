@@ -83,6 +83,37 @@ const { Variables } = require('../../../common');
   </Text>
 ```
 
+#### Text.Link
+
+Use Text to style your Text.Link!
+
+```jsx
+const { Variables } = require('../../../common');
+
+<div>
+  <b>Default</b>
+  <div style={{padding: '20px', backgroundColor: 'whitesmoke'}}>
+    <Text>
+        Hello! <Text.Link href='https://www.google.com' underlineOnHover>I am link text</Text.Link> and <Text.Link onClick={()=> {alert('Hey!')}}>I have onClick!</Text.Link>
+    </Text>
+    <br/>
+    <Text isTruncated type='display' weight={Variables.FontWeight.fwBold}>
+        Hello! <Text.Link href='https://www.google.com' underlineOnHover>I am link text</Text.Link> and <Text type='xsmall'><Text.Link onClick={()=> {alert('Hey!')}}>I have onClick!</Text.Link></Text>
+    </Text>
+  </div>
+    <br/><br/>
+  <b>Unstyled</b>
+  <br/>
+  The unstyled variant will inherit from it's parent. Usage is not recommended but provides an escape hatch in some unlikely situations.
+  <b>If there is a new design pattern for links, consider adding it as a new variant instead</b> 
+  <div style={{padding: '20px', backgroundColor: 'whitesmoke'}}>
+    <Text color='red'>
+        Hello! <Text.Link href='https://www.google.com' variant='unstyled' underlineOnHover>I am an unstyled link</Text.Link>
+    </Text>
+  </div>
+</div>
+```
+
 #### Inline (false)
 
 ```jsx

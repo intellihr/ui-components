@@ -4,10 +4,9 @@ import React from 'react'
 import { Props, Variables } from '../../../common'
 import { HintWrapper, IHintWrapperProps } from '../../Formats/HintWrapper'
 import { TextWrapper } from './style'
+import { Link } from './subcomponents/Link'
 
-export interface ITextProps {
-  /** Text to display */
-  children: string | string[] | number
+interface ITextProps {
   /** Custom class name to use */
   className?: string
   /** If true, displays the text in uppercase */
@@ -38,7 +37,8 @@ export interface ITextProps {
   margins?: Props.IMargins
 }
 
-export class Text extends React.PureComponent<ITextProps> {
+class Text extends React.PureComponent<ITextProps> {
+  public static Link = Link
   public static defaultProps: Partial<ITextProps> = {
     isInline: true,
     type: Props.TypographyType.Body,
@@ -106,4 +106,9 @@ export class Text extends React.PureComponent<ITextProps> {
 
     return text
   }
+}
+
+export {
+  ITextProps,
+  Text
 }

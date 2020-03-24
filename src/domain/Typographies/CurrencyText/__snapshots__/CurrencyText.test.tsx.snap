@@ -47,9 +47,9 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gZMcBi",
+            "componentId": "sc-gqjmRU",
             "isStatic": false,
-            "lastClassName": "lbcszo",
+            "lastClassName": "lnRckP",
             "rules": Array [
               "
   ",
@@ -69,7 +69,7 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
           "displayName": "styled.span",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gZMcBi",
+          "styledComponentId": "sc-gqjmRU",
           "target": "span",
           "toString": [Function],
           "usesTheme": false,
@@ -91,9 +91,10 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
+                "Link": [Function],
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
@@ -105,7 +106,7 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
                 "displayName": "Styled(Text)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "usesTheme": false,
@@ -348,7 +349,7 @@ exports[`<CurrencyText /> should render the Currency Text not inline 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gZMcBi",
+            "componentId": "sc-gqjmRU",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -370,7 +371,7 @@ exports[`<CurrencyText /> should render the Currency Text not inline 1`] = `
           "displayName": "styled.span",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gZMcBi",
+          "styledComponentId": "sc-gqjmRU",
           "target": "span",
           "toString": [Function],
           "usesTheme": false,
@@ -392,9 +393,10 @@ exports[`<CurrencyText /> should render the Currency Text not inline 1`] = `
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
+                "Link": [Function],
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -406,7 +408,7 @@ exports[`<CurrencyText /> should render the Currency Text not inline 1`] = `
                 "displayName": "Styled(Text)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "usesTheme": false,
@@ -645,9 +647,9 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gZMcBi",
+            "componentId": "sc-gqjmRU",
             "isStatic": false,
-            "lastClassName": "lbcszo",
+            "lastClassName": "lnRckP",
             "rules": Array [
               "
   ",
@@ -667,7 +669,7 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
           "displayName": "styled.span",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gZMcBi",
+          "styledComponentId": "sc-gqjmRU",
           "target": "span",
           "toString": [Function],
           "usesTheme": false,
@@ -689,9 +691,10 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
+                "Link": [Function],
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
@@ -703,7 +706,7 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
                 "displayName": "Styled(Text)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "usesTheme": false,
@@ -953,7 +956,7 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gZMcBi",
+            "componentId": "sc-gqjmRU",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -975,7 +978,7 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
           "displayName": "styled.span",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gZMcBi",
+          "styledComponentId": "sc-gqjmRU",
           "target": "span",
           "toString": [Function],
           "usesTheme": false,
@@ -997,9 +1000,10 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
+                "Link": [Function],
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -1011,7 +1015,7 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
                 "displayName": "Styled(Text)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "usesTheme": false,
@@ -1251,9 +1255,9 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gZMcBi",
+            "componentId": "sc-gqjmRU",
             "isStatic": false,
-            "lastClassName": "lbcszo",
+            "lastClassName": "lnRckP",
             "rules": Array [
               "
   ",
@@ -1273,7 +1277,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
           "displayName": "styled.span",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gZMcBi",
+          "styledComponentId": "sc-gqjmRU",
           "target": "span",
           "toString": [Function],
           "usesTheme": false,
@@ -1295,9 +1299,10 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
+                "Link": [Function],
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
@@ -1309,7 +1314,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
                 "displayName": "Styled(Text)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "usesTheme": false,
@@ -1553,9 +1558,9 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gZMcBi",
+            "componentId": "sc-gqjmRU",
             "isStatic": false,
-            "lastClassName": "lbcszo",
+            "lastClassName": "lnRckP",
             "rules": Array [
               "
   ",
@@ -1575,7 +1580,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
           "displayName": "styled.span",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gZMcBi",
+          "styledComponentId": "sc-gqjmRU",
           "target": "span",
           "toString": [Function],
           "usesTheme": false,
@@ -1599,9 +1604,10 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
+                "Link": [Function],
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
@@ -1613,7 +1619,7 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
                 "displayName": "Styled(Text)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "usesTheme": false,
@@ -1856,9 +1862,9 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gZMcBi",
+            "componentId": "sc-gqjmRU",
             "isStatic": false,
-            "lastClassName": "lbcszo",
+            "lastClassName": "lnRckP",
             "rules": Array [
               "
   ",
@@ -1878,7 +1884,7 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
           "displayName": "styled.span",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gZMcBi",
+          "styledComponentId": "sc-gqjmRU",
           "target": "span",
           "toString": [Function],
           "usesTheme": false,
@@ -1900,9 +1906,10 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
+                "Link": [Function],
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
@@ -1914,7 +1921,7 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
                 "displayName": "Styled(Text)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "usesTheme": false,
@@ -2153,9 +2160,9 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gZMcBi",
+            "componentId": "sc-gqjmRU",
             "isStatic": false,
-            "lastClassName": "lbcszo",
+            "lastClassName": "lnRckP",
             "rules": Array [
               "
   ",
@@ -2175,7 +2182,7 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
           "displayName": "styled.span",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gZMcBi",
+          "styledComponentId": "sc-gqjmRU",
           "target": "span",
           "toString": [Function],
           "usesTheme": false,
@@ -2197,9 +2204,10 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
+                "Link": [Function],
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
@@ -2211,7 +2219,7 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
                 "displayName": "Styled(Text)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "usesTheme": false,
