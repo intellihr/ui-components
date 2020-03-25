@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Section /> Default sections should match the snapshot 1`] = `
+exports[`<TableCheckboxInput /> Default sections should match the snapshot 1`] = `
 <span>
-  <Section
+  <TableCheckboxInput
     closeDropdownBehaviour="whenActionProvided"
     sectionType="default"
     text="Item 1"
   />
-  <Section
+  <TableCheckboxInput
     closeDropdownBehaviour="whenActionProvided"
     onClick={[MockFunction]}
     sectionType="default"
     text="Item 2"
   />
-  <Section
+  <TableCheckboxInput
     closeDropdownBehaviour="whenActionProvided"
     componentProps={
       Object {
@@ -26,12 +26,12 @@ exports[`<Section /> Default sections should match the snapshot 1`] = `
     sectionType="default"
     text="Item 3"
   />
-  <Section
+  <TableCheckboxInput
     closeDropdownBehaviour="whenActionProvided"
     component={<hr />}
     sectionType="default"
   />
-  <Section
+  <TableCheckboxInput
     closeDropdownBehaviour="whenActionProvided"
     leftComponent={
       <Memo(FontAwesomeIcon)

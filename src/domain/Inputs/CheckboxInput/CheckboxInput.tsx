@@ -34,7 +34,7 @@ export interface ICheckboxInputProps {
   /** The margins around the component */
   margins?: Props.IMargins
   /** Label to display next to the checkbox */
-  label: JSX.Element | string
+  label?: JSX.Element | string
   /** If true, the checkbox is wrapped by a button */
   isButton?: boolean
 }
@@ -103,6 +103,10 @@ export class CheckboxInput extends React.PureComponent<ICheckboxInputProps> {
 
     if (typeof value === 'boolean') {
       return value ? 1 : 0
+    }
+
+    if (typeof value === 'string') {
+      return value === 'true' ? 1 : 0
     }
 
     return value

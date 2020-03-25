@@ -98,14 +98,14 @@ exports[`<DropdownMenu /> Simple dropdown behaviour should match the snapshot 1`
         role="menu"
       >
         <styled.ul>
-          <Section
+          <TableCheckboxInput
             __closeMenuCallback={[Function]}
             closeDropdownBehaviour="whenActionProvided"
             key="0"
             sectionType="default"
             text="Item 1"
           />
-          <Section
+          <TableCheckboxInput
             __closeMenuCallback={[Function]}
             closeDropdownBehaviour="whenActionProvided"
             href="https://www.intellihr.com.au"
