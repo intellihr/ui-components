@@ -14,6 +14,10 @@ interface IStyledRowProps {
   variant: RowVariant
 }
 
+interface IStyledProgressBarProps {
+  percentage: number
+}
+
 const StyledTable = styled.div`
   border: 1px solid ${Variables.Color.n250};
   border-bottom: 0px;
@@ -43,8 +47,16 @@ const StyledRow = styled.div`
   `}
 `
 
+const StyledProgressBar = styled.div`
+  height: ${Variables.Spacing.s3XSmall}px;
+  ${(props: IStyledProgressBarProps) => css`
+    width: ${props.percentage}%;
+    background: ${props.percentage === 100 ? Variables.Color.i400 : Variables.Color.n500};
+  `}
+`
+
 export {
   StyledTable,
   StyledRow,
-  IStyledRowProps
+  StyledProgressBar
 }

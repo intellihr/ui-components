@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, {useEffect, useState} from 'react'
+import { clamp } from 'lodash'
 
-import { Props, Variables } from '../../../common'
-import { GridLayout } from '../../Layouts/GridLayout'
-import { Text } from '../../Typographies'
-import { RowVariant } from './colors'
-import { StyledRow, StyledTable } from './style'
-import { TableCheckboxInput, TableCheckboxInputValue } from './subcomponents/TableCheckboxInput'
+import {Props, Variables} from '../../../common'
+import {GridLayout} from '../../Layouts/GridLayout'
+import {Text} from '../../Typographies'
+import {RowVariant} from './colors'
+import {StyledProgressBar, StyledRow, StyledTable} from './style'
+import {TableCheckboxInput, TableCheckboxInputValue} from './subcomponents/TableCheckboxInput'
 import {TooltipPopover} from '../../Popovers/TooltipPopover'
+import {TooltipPopoverVariant} from '../../Popovers/TooltipPopover/TooltipPopover'
 
 enum ColumnSize {
   Auto = 'auto',
@@ -103,8 +105,8 @@ const TableHeader: React.FC<{columns: IColumnProps[], selectedAll: TableCheckbox
   )
 }
 
-const handleTableCellClicked = (id: string, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void, isSelectedRow?: boolean) => () => {
-  if (isSelectedRow) {
+const handleTableCellClicked = (id: string, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void, isSelectable?: boolean) => () => {
+  if (isSelectable) {
     const newValue = {
       ...selectedRows,
       [id]: !selectedRows[id]
@@ -117,7 +119,6 @@ const TableCell: React.FC<{tooltipText?: string, onClick: () => void}> = ({ tool
   if (tooltipText) {
     const toggleComponent = ({ openMenu, closeMenu, toggleComponentRef, ariaProps }: any) => (
       <span
-        onClick={onClick}
         onMouseEnter={openMenu}
         onMouseLeave={closeMenu}
         ref={toggleComponentRef}
@@ -128,11 +129,16 @@ const TableCell: React.FC<{tooltipText?: string, onClick: () => void}> = ({ tool
     )
 
     return (
-      <TooltipPopover
-        toggleComponent={toggleComponent}
+      <div
+        onClick={onClick}
       >
-        {tooltipText}
-      </TooltipPopover>
+        <TooltipPopover
+          variant={TooltipPopoverVariant.Dark}
+          toggleComponent={toggleComponent}
+        >
+          {tooltipText}
+        </TooltipPopover>
+      </div>
     )
   }
 
@@ -145,29 +151,39 @@ const TableCell: React.FC<{tooltipText?: string, onClick: () => void}> = ({ tool
   )
 }
 
-const TableRow: React.FC<{columns: IColumnProps[], row: IRowProps, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void, isMobile: boolean}> = ({ columns, row, selectedRows, setSelectedRows, isMobile}) => {
-  let isSelectedRow: boolean | undefined
-  let leftCell
-  if (row.isSelectable && !row.isRemovable && !isMobile) {
-    isSelectedRow = selectedRows[row.id]
-    const SelectedCheckboxInputValue = isSelectedRow ? TableCheckboxInputValue.True : TableCheckboxInputValue.False
-    leftCell = [getTableCheckboxInputCell(ColumnSize.Shrink, row.id, SelectedCheckboxInputValue, handleTableCheckboxInputChange(row.id, selectedRows, setSelectedRows))]
-  } else {
-    leftCell = [{
+const getTableRowLeftCell = (isSelectable: boolean, isRemovable: boolean, isMobile: boolean, row: IRowProps, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void) => {
+  if (isSelectable && !isRemovable && !isMobile) {
+    const SelectedCheckboxInputValue = selectedRows[row.id] ? TableCheckboxInputValue.True : TableCheckboxInputValue.False
+    return [getTableCheckboxInputCell(ColumnSize.Shrink, row.id, SelectedCheckboxInputValue, handleTableCheckboxInputChange(row.id, selectedRows, setSelectedRows))]
+  }
+
+  if (isRemovable && !isMobile) {
+    return [{
       size: ColumnSize.Shrink,
       content: <Text>1</Text>
     }]
   }
+
+  return []
+}
+
+const TableRow: React.FC<{columns: IColumnProps[], row: IRowProps, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void, isMobile: boolean}> = ({ columns, row, selectedRows, setSelectedRows, isMobile = false}) => {
+  const {
+    isSelectable = false,
+    isRemovable = false
+  } = row
+  const leftCell = getTableRowLeftCell(isSelectable, isRemovable, isMobile, row, selectedRows, setSelectedRows)
   return (
-    <StyledRow variant={row.variant || RowVariant.Neutral} isHoverable isSelected={isSelectedRow}>
+    <StyledRow variant={row.variant || RowVariant.Neutral} isHoverable={!isMobile} isSelected={!isMobile && isSelectable ? selectedRows[row.id] : false}>
       <GridLayout
-        margins={{top: Variables.Spacing.sSmall, left: Variables.Spacing.sSmall, right: Variables.Spacing.sSmall, bottom: Variables.Spacing.sSmall}}
+        margins={{top: Variables.Spacing.sSmall, left: Variables.Spacing.sSmall, right: Variables.Spacing.sSmall, bottom: row.progress ? Variables.Spacing.sSmall - 2 : Variables.Spacing.sSmall}}
         verticalAlignment={GridLayout.VerticalAlignment.Middle}
         cells={leftCell.concat(columns.map((column, index) => ({
           size: column.size,
-          content: <TableCell tooltipText={column.tooltipText ? column.tooltipText(row.data) : undefined} onClick={handleTableCellClicked(row.id, selectedRows, setSelectedRows, isSelectedRow)}>{row.contentOverride ? row.contentOverride(row.data)[index] : column.content(row.data)}</TableCell>
+          content: <TableCell tooltipText={column.tooltipText ? column.tooltipText(row.data) : undefined} onClick={handleTableCellClicked(row.id, selectedRows, setSelectedRows, row.isSelectable)}>{row.contentOverride ? row.contentOverride(row.data)[index] : column.content(row.data)}</TableCell>
         })))}
       />
+      {row.progress && <StyledProgressBar percentage={clamp(row.progress, 0, 1) * 100}/>}
     </StyledRow>
   )
 }
@@ -203,6 +219,11 @@ const Table: React.FC<ITableProps> = ({ rows, columns, onSelectionChanged, margi
   useEffect(() => {
     setSelectedRows(allSelectableRowsToFalse(rows))
   }, [rows])
+  useEffect(() => {
+    if (isMobile) {
+      setSelectedRows(allSelectableRowsToFalse(rows))
+    }
+  }, [isMobile])
   useEffect(() => {
     if (selectedAll === TableCheckboxInputValue.False || selectedAll === TableCheckboxInputValue.True ) {
       const newSelectedRows = rows.reduce((result: ISelectedRows, row) => {
