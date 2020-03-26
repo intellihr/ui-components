@@ -1,10 +1,15 @@
 import styled, {css, keyframes} from 'styled-components'
-import { Variables } from '../../../../common'
+import {Utils, Variables} from '../../../../common'
 import { TableCheckboxInputValue } from './TableCheckboxInput'
 import { FontAwesomeIcon } from '../../../Icons/FontAwesomeIcon'
+import {StyledRow} from '../style'
 
 interface IStyledTableCheckboxInputProps {
   labelValue: TableCheckboxInputValue
+}
+
+interface IStyledTableCheckboxLabelProps {
+  value: TableCheckboxInputValue
 }
 
 const StyledTableCheckboxInput = styled.input`
@@ -110,6 +115,16 @@ const StyledTableCheckboxLabel = styled.label`
       border-color: ${Variables.Color.n600};
     }
   }
+
+  ${(props: IStyledTableCheckboxLabelProps) => props.value === TableCheckboxInputValue.False && css`
+    ${StyledRow}:hover & {
+      &::before {
+        background-color: ${Variables.Color.n300};
+        border-color: ${Variables.Color.n600};
+        transition: .25s ease-out, color .25s ease-out;
+      }
+    }
+`}
 `
 
 const styledFontAwesomeIconAnimation = keyframes`
@@ -118,6 +133,10 @@ const styledFontAwesomeIconAnimation = keyframes`
 `
 
 const StyledFontAwesomeIcon =  styled(FontAwesomeIcon)`
+  ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
+    display: none;
+  }
+
   position: absolute;
   width: 21px;
   height: 20px;

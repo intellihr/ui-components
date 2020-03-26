@@ -1,6 +1,7 @@
-import React, {useEffect, useState} from 'react'
-import {Props, Variables} from '../../../../common'
-import {StyledFontAwesomeIcon, StyledTableCheckboxInput, StyledTableCheckboxLabel} from './style'
+import React, { useEffect, useState } from 'react'
+
+import { Props, Variables } from '../../../../common'
+import { StyledFontAwesomeIcon, StyledTableCheckboxInput, StyledTableCheckboxLabel } from './style'
 
 enum TableCheckboxInputValue {
   True = 'true',
@@ -12,7 +13,7 @@ interface ITableCheckboxInputProps {
   /** Name of the input */
   name: string
   /** Called when the input is changed */
-  onChange: (value: TableCheckboxInputValue) => void
+  onChange?: (value: TableCheckboxInputValue) => void
   /** Value of the input */
   value?: TableCheckboxInputValue
   /** If true, sets input to disabled state */
@@ -38,14 +39,17 @@ const getIcon = (value: TableCheckboxInputValue) => {
 const TableCheckboxInput: React.FC<ITableCheckboxInputProps> = ({ name, onChange, value = TableCheckboxInputValue.False, isDisabled, autoFocus, componentContext}) => {
   const [currentValue, setCurrentValue] = useState<TableCheckboxInputValue>(value)
   useEffect(() => {
-    console.log('changed')
-    onChange(currentValue)
+    if (onChange) {
+      onChange(currentValue)
+    }
   }, [currentValue])
+  useEffect(() => {
+    setCurrentValue(value)
+  }, [value])
   const handleChange = () => {
     if (currentValue === TableCheckboxInputValue.False) {
       setCurrentValue(TableCheckboxInputValue.True)
     } else {
-
       setCurrentValue(TableCheckboxInputValue.False)
     }
 
@@ -68,6 +72,7 @@ const TableCheckboxInput: React.FC<ITableCheckboxInputProps> = ({ name, onChange
       />
       <StyledTableCheckboxLabel
         htmlFor={name}
+        value={currentValue}
       >
         {getIcon(currentValue)}
       </StyledTableCheckboxLabel>
