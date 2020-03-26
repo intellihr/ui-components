@@ -1,0 +1,938 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FontAwesomeIconButton /> should render a selected icon button 1`] = `
+.c2 {
+  display: inline-block;
+  font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
+}
+
+.c2.icon {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.c1 {
+  color: #667380;
+  color: #262D33;
+  background: #C5CED6;
+  width: 24px;
+  height: 24px;
+  border-radius: 24px;
+}
+
+.c1:hover {
+  color: #424F5C;
+  background: #EDF1F5;
+  -webkit-transition: color .25s ease-out,background .25s ease-out;
+  transition: color .25s ease-out,background .25s ease-out;
+}
+
+.c0 {
+  cursor: help;
+}
+
+<FontAwesomeIconButton
+  icon="check"
+  isSelected={true}
+  type="duotone"
+>
+  <TooltipPopover
+    toggleComponent={[Function]}
+  >
+    <styled.span>
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-EHOje",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "
+  cursor: ",
+                [Function],
+                ";
+",
+              ],
+            },
+            "displayName": "styled.span",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-EHOje",
+            "target": "span",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+      >
+        <span
+          className="c0"
+        >
+          <span
+            aria-expanded={false}
+            aria-haspopup={true}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="button"
+          >
+            <styled.button
+              isSelected={true}
+              variant="neutral"
+            >
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bxivhb",
+                      "isStatic": false,
+                      "lastClassName": "c1",
+                      "rules": Array [
+                        "
+  ",
+                        [Function],
+                        ";
+  ",
+                        [Function],
+                        "
+  ",
+                        [Function],
+                        "
+  width: ",
+                        "24",
+                        "px;
+  height: ",
+                        "24",
+                        "px;
+  border-radius: ",
+                        "24",
+                        "px;
+",
+                      ],
+                    },
+                    "displayName": "styled.button",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bxivhb",
+                    "target": "button",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                isSelected={true}
+                variant="neutral"
+              >
+                <button
+                  className="c1"
+                >
+                  <FontAwesomeIcon
+                    icon="check"
+                    type="duotone"
+                  >
+                    <Icon
+                      icon="fad fa-check"
+                    >
+                      <styled.i
+                        aria-hidden={true}
+                        className="icon fad fa-check"
+                        size="medium"
+                      >
+                        <StyledComponent
+                          aria-hidden={true}
+                          className="icon fad fa-check"
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-htpNat",
+                                "isStatic": false,
+                                "lastClassName": "c2",
+                                "rules": Array [
+                                  "
+  display: inline-block;
+  font-stretch: normal;
+  --fa-primary-color: ",
+                                  "#2512B3",
+                                  ";
+  --fa-secondary-color: ",
+                                  "#2512B3",
+                                  ";
+
+  ",
+                                  [Function],
+                                  "
+
+  ",
+                                  [Function],
+                                  "
+  ",
+                                  [Function],
+                                  "
+
+  ",
+                                  [Function],
+                                  "
+
+  ",
+                                  [Function],
+                                  "
+
+  ",
+                                  [Function],
+                                  "
+
+  ",
+                                  [Function],
+                                  "
+
+  ",
+                                  [Function],
+                                  "
+
+  &.icon {
+    text-align: center;
+
+  ",
+                                  [Function],
+                                  "
+  }
+",
+                                ],
+                              },
+                              "displayName": "styled.i",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-htpNat",
+                              "target": "i",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          size="medium"
+                        >
+                          <i
+                            aria-hidden={true}
+                            className="icon fad fa-check c2"
+                            size="medium"
+                          />
+                        </StyledComponent>
+                      </styled.i>
+                    </Icon>
+                  </FontAwesomeIcon>
+                </button>
+              </StyledComponent>
+            </styled.button>
+          </span>
+        </span>
+      </StyledComponent>
+    </styled.span>
+    <Popover
+      animationType="tooltip"
+      id=""
+      isOpen={false}
+      parentAnchorPosition="auto"
+      parentRef={
+        Object {
+          "current": .c1 {
+  display: inline-block;
+  font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
+}
+
+.c1.icon {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.c0 {
+  color: #667380;
+  color: #262D33;
+  background: #C5CED6;
+  width: 24px;
+  height: 24px;
+  border-radius: 24px;
+}
+
+.c0:hover {
+  color: #424F5C;
+  background: #EDF1F5;
+  -webkit-transition: color .25s ease-out,background .25s ease-out;
+  transition: color .25s ease-out,background .25s ease-out;
+}
+
+<span
+            aria-expanded="false"
+            aria-haspopup="true"
+            role="button"
+          >
+            <button
+              class="c0"
+            >
+              <i
+                aria-hidden="true"
+                class="icon fad fa-check c1"
+              />
+            </button>
+          </span>,
+        }
+      }
+      popoverAnchorPosition="auto"
+    >
+      <Portal
+        containerInfo={<body />}
+      >
+        <Transition
+          appear={false}
+          enter={true}
+          exit={true}
+          in={false}
+          mountOnEnter={true}
+          onEnter={[Function]}
+          onEntered={[Function]}
+          onEntering={[Function]}
+          onExit={[Function]}
+          onExited={[Function]}
+          onExiting={[Function]}
+          timeout={200}
+          unmountOnExit={true}
+        />
+      </Portal>
+    </Popover>
+  </TooltipPopover>
+</FontAwesomeIconButton>
+`;
+
+exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
+.c2 {
+  display: inline-block;
+  font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
+}
+
+.c2.icon {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.c1 {
+  color: #F25749;
+  width: 24px;
+  height: 24px;
+  border-radius: 24px;
+}
+
+.c1:hover {
+  color: #D41200;
+  background: #FFF1F0;
+  -webkit-transition: color .25s ease-out,background .25s ease-out;
+  transition: color .25s ease-out,background .25s ease-out;
+}
+
+.c0 {
+  cursor: help;
+}
+
+<FontAwesomeIconButton
+  icon="check"
+  type="duotone"
+  variant="red"
+>
+  <TooltipPopover
+    toggleComponent={[Function]}
+  >
+    <styled.span>
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-EHOje",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "
+  cursor: ",
+                [Function],
+                ";
+",
+              ],
+            },
+            "displayName": "styled.span",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-EHOje",
+            "target": "span",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+      >
+        <span
+          className="c0"
+        >
+          <span
+            aria-expanded={false}
+            aria-haspopup={true}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="button"
+          >
+            <styled.button
+              isSelected={false}
+              variant="red"
+            >
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bxivhb",
+                      "isStatic": false,
+                      "lastClassName": "c1",
+                      "rules": Array [
+                        "
+  ",
+                        [Function],
+                        ";
+  ",
+                        [Function],
+                        "
+  ",
+                        [Function],
+                        "
+  width: ",
+                        "24",
+                        "px;
+  height: ",
+                        "24",
+                        "px;
+  border-radius: ",
+                        "24",
+                        "px;
+",
+                      ],
+                    },
+                    "displayName": "styled.button",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bxivhb",
+                    "target": "button",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                isSelected={false}
+                variant="red"
+              >
+                <button
+                  className="c1"
+                >
+                  <FontAwesomeIcon
+                    icon="check"
+                    type="duotone"
+                  >
+                    <Icon
+                      icon="fad fa-check"
+                    >
+                      <styled.i
+                        aria-hidden={true}
+                        className="icon fad fa-check"
+                        size="medium"
+                      >
+                        <StyledComponent
+                          aria-hidden={true}
+                          className="icon fad fa-check"
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-htpNat",
+                                "isStatic": false,
+                                "lastClassName": "c2",
+                                "rules": Array [
+                                  "
+  display: inline-block;
+  font-stretch: normal;
+  --fa-primary-color: ",
+                                  "#2512B3",
+                                  ";
+  --fa-secondary-color: ",
+                                  "#2512B3",
+                                  ";
+
+  ",
+                                  [Function],
+                                  "
+
+  ",
+                                  [Function],
+                                  "
+  ",
+                                  [Function],
+                                  "
+
+  ",
+                                  [Function],
+                                  "
+
+  ",
+                                  [Function],
+                                  "
+
+  ",
+                                  [Function],
+                                  "
+
+  ",
+                                  [Function],
+                                  "
+
+  ",
+                                  [Function],
+                                  "
+
+  &.icon {
+    text-align: center;
+
+  ",
+                                  [Function],
+                                  "
+  }
+",
+                                ],
+                              },
+                              "displayName": "styled.i",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-htpNat",
+                              "target": "i",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          size="medium"
+                        >
+                          <i
+                            aria-hidden={true}
+                            className="icon fad fa-check c2"
+                            size="medium"
+                          />
+                        </StyledComponent>
+                      </styled.i>
+                    </Icon>
+                  </FontAwesomeIcon>
+                </button>
+              </StyledComponent>
+            </styled.button>
+          </span>
+        </span>
+      </StyledComponent>
+    </styled.span>
+    <Popover
+      animationType="tooltip"
+      id=""
+      isOpen={false}
+      parentAnchorPosition="auto"
+      parentRef={
+        Object {
+          "current": .c1 {
+  display: inline-block;
+  font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
+}
+
+.c1.icon {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.c0 {
+  color: #F25749;
+  width: 24px;
+  height: 24px;
+  border-radius: 24px;
+}
+
+.c0:hover {
+  color: #D41200;
+  background: #FFF1F0;
+  -webkit-transition: color .25s ease-out,background .25s ease-out;
+  transition: color .25s ease-out,background .25s ease-out;
+}
+
+<span
+            aria-expanded="false"
+            aria-haspopup="true"
+            role="button"
+          >
+            <button
+              class="c0"
+            >
+              <i
+                aria-hidden="true"
+                class="icon fad fa-check c1"
+              />
+            </button>
+          </span>,
+        }
+      }
+      popoverAnchorPosition="auto"
+    >
+      <Portal
+        containerInfo={<body />}
+      >
+        <Transition
+          appear={false}
+          enter={true}
+          exit={true}
+          in={false}
+          mountOnEnter={true}
+          onEnter={[Function]}
+          onEntered={[Function]}
+          onEntering={[Function]}
+          onExit={[Function]}
+          onExited={[Function]}
+          onExiting={[Function]}
+          timeout={200}
+          unmountOnExit={true}
+        />
+      </Portal>
+    </Popover>
+  </TooltipPopover>
+</FontAwesomeIconButton>
+`;
+
+exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
+.c2 {
+  display: inline-block;
+  font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
+}
+
+.c2.icon {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.c1 {
+  color: #667380;
+  width: 24px;
+  height: 24px;
+  border-radius: 24px;
+}
+
+.c1:hover {
+  color: #424F5C;
+  background: #EDF1F5;
+  -webkit-transition: color .25s ease-out,background .25s ease-out;
+  transition: color .25s ease-out,background .25s ease-out;
+}
+
+.c0 {
+  cursor: help;
+}
+
+<FontAwesomeIconButton
+  icon="check"
+  tooltipText="tooltip text"
+  type="duotone"
+>
+  <TooltipPopover
+    toggleComponent={[Function]}
+  >
+    <styled.span>
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-EHOje",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "
+  cursor: ",
+                [Function],
+                ";
+",
+              ],
+            },
+            "displayName": "styled.span",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-EHOje",
+            "target": "span",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+      >
+        <span
+          className="c0"
+        >
+          <span
+            aria-expanded={false}
+            aria-haspopup={true}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="button"
+          >
+            <styled.button
+              isSelected={false}
+              variant="neutral"
+            >
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bxivhb",
+                      "isStatic": false,
+                      "lastClassName": "c1",
+                      "rules": Array [
+                        "
+  ",
+                        [Function],
+                        ";
+  ",
+                        [Function],
+                        "
+  ",
+                        [Function],
+                        "
+  width: ",
+                        "24",
+                        "px;
+  height: ",
+                        "24",
+                        "px;
+  border-radius: ",
+                        "24",
+                        "px;
+",
+                      ],
+                    },
+                    "displayName": "styled.button",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bxivhb",
+                    "target": "button",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                isSelected={false}
+                variant="neutral"
+              >
+                <button
+                  className="c1"
+                >
+                  <FontAwesomeIcon
+                    icon="check"
+                    type="duotone"
+                  >
+                    <Icon
+                      icon="fad fa-check"
+                    >
+                      <styled.i
+                        aria-hidden={true}
+                        className="icon fad fa-check"
+                        size="medium"
+                      >
+                        <StyledComponent
+                          aria-hidden={true}
+                          className="icon fad fa-check"
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-htpNat",
+                                "isStatic": false,
+                                "lastClassName": "c2",
+                                "rules": Array [
+                                  "
+  display: inline-block;
+  font-stretch: normal;
+  --fa-primary-color: ",
+                                  "#2512B3",
+                                  ";
+  --fa-secondary-color: ",
+                                  "#2512B3",
+                                  ";
+
+  ",
+                                  [Function],
+                                  "
+
+  ",
+                                  [Function],
+                                  "
+  ",
+                                  [Function],
+                                  "
+
+  ",
+                                  [Function],
+                                  "
+
+  ",
+                                  [Function],
+                                  "
+
+  ",
+                                  [Function],
+                                  "
+
+  ",
+                                  [Function],
+                                  "
+
+  ",
+                                  [Function],
+                                  "
+
+  &.icon {
+    text-align: center;
+
+  ",
+                                  [Function],
+                                  "
+  }
+",
+                                ],
+                              },
+                              "displayName": "styled.i",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-htpNat",
+                              "target": "i",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          size="medium"
+                        >
+                          <i
+                            aria-hidden={true}
+                            className="icon fad fa-check c2"
+                            size="medium"
+                          />
+                        </StyledComponent>
+                      </styled.i>
+                    </Icon>
+                  </FontAwesomeIcon>
+                </button>
+              </StyledComponent>
+            </styled.button>
+          </span>
+        </span>
+      </StyledComponent>
+    </styled.span>
+    <Popover
+      animationType="tooltip"
+      id=""
+      isOpen={false}
+      parentAnchorPosition="auto"
+      parentRef={
+        Object {
+          "current": .c1 {
+  display: inline-block;
+  font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
+}
+
+.c1.icon {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.c0 {
+  color: #667380;
+  width: 24px;
+  height: 24px;
+  border-radius: 24px;
+}
+
+.c0:hover {
+  color: #424F5C;
+  background: #EDF1F5;
+  -webkit-transition: color .25s ease-out,background .25s ease-out;
+  transition: color .25s ease-out,background .25s ease-out;
+}
+
+<span
+            aria-expanded="false"
+            aria-haspopup="true"
+            role="button"
+          >
+            <button
+              class="c0"
+            >
+              <i
+                aria-hidden="true"
+                class="icon fad fa-check c1"
+              />
+            </button>
+          </span>,
+        }
+      }
+      popoverAnchorPosition="auto"
+    >
+      <Portal
+        containerInfo={<body />}
+      >
+        <Transition
+          appear={false}
+          enter={true}
+          exit={true}
+          in={false}
+          mountOnEnter={true}
+          onEnter={[Function]}
+          onEntered={[Function]}
+          onEntering={[Function]}
+          onExit={[Function]}
+          onExited={[Function]}
+          onExiting={[Function]}
+          timeout={200}
+          unmountOnExit={true}
+        />
+      </Portal>
+    </Popover>
+  </TooltipPopover>
+</FontAwesomeIconButton>
+`;

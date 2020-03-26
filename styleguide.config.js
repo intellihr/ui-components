@@ -105,8 +105,9 @@ module.exports = {
           name: 'Buttons',
           components: [
             'src/domain/Buttons/Button/Button.tsx',
-            'src/domain/Buttons/LinkButton/LinkButton.tsx',
-            'src/domain/Buttons/ButtonGroup/ButtonGroup.tsx'
+            'src/domain/Buttons/ButtonGroup/ButtonGroup.tsx',
+            'src/domain/Buttons/FontAwesomeIconButton/FontAwesomeIconButton.tsx',
+            'src/domain/Buttons/LinkButton/LinkButton.tsx'
           ]
         },
         {
