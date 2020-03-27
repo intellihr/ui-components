@@ -5,9 +5,29 @@ import { Text } from '@Domain/Typographies';
 import { Variables, Props } from '@Common';
 import { FontAwesomeIcon } from '@Domain/Icons';
 
-initialState = { fileNameSort: undefined, createAtSort: 'down'};
+initialState = {
+fileNameSort: undefined,
+createAtSort: 'down',
+hasSuccessRowContent: true
+};
+
+const successRowContentOverride = (
+                                      (data)=> ([
+                                                   <Text>{data.fileName}</Text>,
+                                                   <div>
+                                                       <Text color={Variables.Color.i400} margins={{right: Variables.Spacing.sXSmall}}>Success</Text>
+                                                       <FontAwesomeIcon
+                                                           type='regular'
+                                                           icon='check'
+                                                           color={Variables.Color.i400}
+                                                       />
+                                                   </div>
+                                                  ])
+                                  );
 
 <Table
+  onSelectionChanged = {(dataSet) => console.log(dataSet)}
+  onProgressEnd = {(data) => setState({hasSuccessRowContent:false})}
   rows={[
         {
             id: '0',
@@ -15,6 +35,7 @@ initialState = { fileNameSort: undefined, createAtSort: 'down'};
             isSelectable: false,
             isRemovable: true,
             variant: 'red',
+            onClick: (data) => alert(`Error on ${data.fileName}`),
             contentOverride: (data)=> ([
                             <Text>{data.fileName}</Text>,
                              <div>
@@ -32,7 +53,7 @@ initialState = { fileNameSort: undefined, createAtSort: 'down'};
             data: {fileName: 'uploading.pdf', createAt: '05/01/2018', size: '99', fileType: 'PDF'},
             isSelectable: false,
             isRemovable: true,
-            progress: 0.7,
+            progress: [0, 0.7],
             contentOverride: (data)=> ([
                              <Text>{data.fileName}</Text>,
                              <div>
@@ -44,20 +65,10 @@ initialState = { fileNameSort: undefined, createAtSort: 'down'};
         {
             id: '2',
             data: {fileName: 'success.pdf', createAt: '05/01/2018', size: '3.7', fileType: 'PDF'},
-            isSelectable: false,
-            isRemovable: true,
-            progress: 1,
-            contentOverride: (data)=> ([
-                             <Text>{data.fileName}</Text>,
-                             <div>
-                                 <Text color={Variables.Color.i400} margins={{right: Variables.Spacing.sXSmall}}>Success</Text>
-                                 <FontAwesomeIcon
-                                     type='regular'
-                                     icon='check'
-                                     color={Variables.Color.i400}
-                                 />
-                             </div>
-                            ])
+            isSelectable: !state.hasSuccessRowContent,
+            isRemovable: state.hasSuccessRowContent,
+            progress: [0.5, 1],
+            contentOverride: state.hasSuccessRowContent ? successRowContentOverride : undefined
           },
         {
             id: '3',
@@ -100,10 +111,27 @@ import { Text } from '@Domain/Typographies';
 import { Variables, Props } from '@Common';
 import { FontAwesomeIcon } from '@Domain/Icons';
 
-initialState = { fileNameSort: undefined, createAtSort: 'down'};
+initialState = {
+fileNameSort: undefined,
+createAtSort: 'down',
+hasSuccessRowContent: true
+};
+
+const successRowContentOverride = (
+                                      (data)=> ([
+                                                   <Text>{data.fileName}</Text>,
+                                                   <FontAwesomeIcon
+                                                      type='regular'
+                                                      icon='check'
+                                                      color={Variables.Color.i400}
+                                                    />
+                                                  ])
+                                  );
 
 <Table
-    isMobile
+  isMobile
+  onSelectionChanged = {(dataSet) => console.log(dataSet)}
+  onProgressEnd = {(data) => setState({hasSuccessRowContent:false})}
   rows={[
         {
             id: '0',
@@ -111,21 +139,22 @@ initialState = { fileNameSort: undefined, createAtSort: 'down'};
             isSelectable: false,
             isRemovable: true,
             variant: 'red',
+            onClick: (data) => alert(`Error on ${data.fileName}`),
             contentOverride: (data)=> ([
-                            <Text>{data.fileName}</Text>,
-                             <FontAwesomeIcon
-                                  type='regular'
-                                  icon='exclamation-triangle'
-                                  color={Variables.Color.r400}
-                              />
-                             ])
+                                        <Text>{data.fileName}</Text>,
+                                         <FontAwesomeIcon
+                                              type='regular'
+                                              icon='exclamation-triangle'
+                                              color={Variables.Color.r400}
+                                          />
+                                         ])
           },
         {
             id: '1',
             data: {fileName: 'uploading.pdf', createAt: '05/01/2018', size: '99', fileType: 'PDF'},
             isSelectable: false,
             isRemovable: true,
-            progress: 0.7,
+            progress: [0, 0.7],
             contentOverride: (data)=> ([
                              <Text>{data.fileName}</Text>,
                              <Text color={Variables.Color.n500}>{data.size}MB</Text>
@@ -134,17 +163,10 @@ initialState = { fileNameSort: undefined, createAtSort: 'down'};
         {
             id: '2',
             data: {fileName: 'success.pdf', createAt: '05/01/2018', size: '3.7', fileType: 'PDF'},
-            isSelectable: false,
-            isRemovable: true,
-            progress: 1,
-            contentOverride: (data)=> ([
-                             <Text>{data.fileName}</Text>,
-                             <FontAwesomeIcon
-                                  type='regular'
-                                  icon='check'
-                                  color={Variables.Color.i400}
-                              />
-                            ])
+            isSelectable: !state.hasSuccessRowContent,
+            isRemovable: state.hasSuccessRowContent,
+            progress: [0.5, 1],
+            contentOverride: state.hasSuccessRowContent ? successRowContentOverride : undefined
           },
         {
             id: '3',
@@ -179,4 +201,3 @@ initialState = { fileNameSort: undefined, createAtSort: 'down'};
     ]}
  />
 ```
-

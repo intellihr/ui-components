@@ -1,8 +1,9 @@
 import styled, {css, keyframes} from 'styled-components'
+
 import {Utils, Variables} from '../../../../common'
-import { TableCheckboxInputValue } from './TableCheckboxInput'
 import { FontAwesomeIcon } from '../../../Icons/FontAwesomeIcon'
 import {StyledRow} from '../style'
+import { TableCheckboxInputValue } from './TableCheckboxInput'
 
 interface IStyledTableCheckboxInputProps {
   labelValue: TableCheckboxInputValue
@@ -133,10 +134,6 @@ const styledFontAwesomeIconAnimation = keyframes`
 `
 
 const StyledFontAwesomeIcon =  styled(FontAwesomeIcon)`
-  ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
-    display: none;
-  }
-
   position: absolute;
   width: 21px;
   height: 20px;

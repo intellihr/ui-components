@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components'
+import styled, {css, keyframes} from 'styled-components'
 
 import { Props, Variables } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
@@ -16,6 +16,8 @@ interface IStyledRowProps {
 
 interface IStyledProgressBarProps {
   percentage: number
+  previousPercentage: number
+  isEnd: boolean
 }
 
 const StyledTable = styled.div`
@@ -26,6 +28,7 @@ const StyledTable = styled.div`
 `
 
 const StyledRow = styled.div`
+  display: block;
   border-bottom: 1px solid ${Variables.Color.n250};
   border-top: 1px solid ${Variables.Color.n250};
   background: ${Variables.Color.n100};
@@ -47,12 +50,31 @@ const StyledRow = styled.div`
   `}
 `
 
+const StyledProgressBarAnimation = (props: IStyledProgressBarProps) => keyframes`
+  0% {
+      width: ${props.previousPercentage}%;
+    background: ${props.previousPercentage === 100 ? Variables.Color.i400 : Variables.Color.n500};
+  }
+    100% {
+    width: ${props.percentage}%;
+    background: ${props.percentage === 100 ? Variables.Color.i400 : Variables.Color.n500};
+  }
+`
+
 const StyledProgressBar = styled.div`
   height: ${Variables.Spacing.s3XSmall}px;
+  animation-name: ${(props: IStyledProgressBarProps) => StyledProgressBarAnimation(props)};
+  animation-duration: 1s;
+
   ${(props: IStyledProgressBarProps) => css`
     width: ${props.percentage}%;
     background: ${props.percentage === 100 ? Variables.Color.i400 : Variables.Color.n500};
   `}
+
+  ${(props: IStyledProgressBarProps) => props.isEnd && css`
+      background: transparent;
+  `}
+
 `
 
 export {
