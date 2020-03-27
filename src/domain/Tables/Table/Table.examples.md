@@ -83,7 +83,6 @@ const successRowContentOverride = (
     ]}
   columns={[
         {
-            name: 'fileName', 
             title: 'file name',
             size: 'auto',
             content: (data)=> <Text>{data.fileName}</Text>,
@@ -93,7 +92,6 @@ const successRowContentOverride = (
             tooltipText: (data)=> `${data.fileType}(file type): ${data.size}MB (size)`
           },
           {
-            name: 'createAt', 
             title: 'created at',
             size: 'shrink',
             content: (data)=> <Text>{data.createAt}</Text>,
@@ -181,8 +179,6 @@ const successRowContentOverride = (
     ]}
   columns={[
         {
-            name: 'fileName', 
-            title: 'file name',
             size: 'auto',
             content: (data)=> <Text>{data.fileName}</Text>,
             sort: state.fileNameSort, 
@@ -191,7 +187,6 @@ const successRowContentOverride = (
             tooltipText: (data)=> `${data.fileType}(file type): ${data.size}MB (size)`
           },
           {
-            name: 'createAt', 
             title: 'created at',
             size: 'shrink',
             content: (data)=> <Text>{data.createAt}</Text>,

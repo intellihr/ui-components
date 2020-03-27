@@ -1,14 +1,14 @@
 import { clamp } from 'lodash'
-import React, {useEffect, useMemo, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 
-import {Props, Variables} from '../../../common'
-import {GridLayout} from '../../Layouts/GridLayout'
-import {TooltipPopover} from '../../Popovers/TooltipPopover'
-import {TooltipPopoverVariant} from '../../Popovers/TooltipPopover/TooltipPopover'
-import {Text} from '../../Typographies'
-import {RowVariant} from './colors'
-import {StyledProgressBar, StyledRow, StyledTable} from './style'
-import {TableCheckboxInput, TableCheckboxInputValue} from './subcomponents/TableCheckboxInput'
+import { Props, Variables } from '../../../common'
+import { GridLayout } from '../../Layouts/GridLayout'
+import { TooltipPopover } from '../../Popovers/TooltipPopover'
+import { TooltipPopoverVariant } from '../../Popovers/TooltipPopover/TooltipPopover'
+import { Text } from '../../Typographies'
+import { RowVariant } from './colors'
+import { StyledProgressBar, StyledRow, StyledTable } from './style'
+import { TableCheckboxInput, TableCheckboxInputValue } from './subcomponents/TableCheckboxInput'
 
 enum ColumnSize {
   Auto = 'auto',
@@ -53,7 +53,6 @@ interface IRowProps {
 }
 
 interface IColumnProps {
-  name: string
   title?: string
   size: ColumnSize
   headerSize?: ColumnSize
@@ -193,9 +192,6 @@ const TableRow: React.FC<{columns: IColumnProps[], row: IRowProps, selectedRows:
     }
   }, [hasProgressBarEnded])
   const leftCell = getTableRowLeftCell(isSelectable, isRemovable, isMobile, row, selectedRows, setSelectedRows)
-  const progressBar = useMemo(() => progress && <StyledProgressBar isEnd={hasProgressBarEnded} previousPercentage={parsedProgressToPercentage(progress[0])} percentage={parsedProgressToPercentage(progress[1])}/>
-    , [hasProgressBarEnded])
-
   if (progress && progress[1] === 1 && !hasProgressBarEnded) {
     setTimeout(() => {
       setHasProgressBarEnded(true)
@@ -212,7 +208,7 @@ const TableRow: React.FC<{columns: IColumnProps[], row: IRowProps, selectedRows:
           content: <TableCell tooltipText={column.tooltipText ? column.tooltipText(row.data) : undefined} onClick={handleTableCellClicked(row.id, row, selectedRows, setSelectedRows, isSelectable, onClick)}>{contentOverride ? contentOverride(data)[index] : column.content(data)}</TableCell>
         })))}
       />
-      {progressBar}
+      {progress && <StyledProgressBar isEnd={hasProgressBarEnded} previousPercentage={parsedProgressToPercentage(progress[0])} percentage={parsedProgressToPercentage(progress[1])}/>}
     </StyledRow>
   )
 }
