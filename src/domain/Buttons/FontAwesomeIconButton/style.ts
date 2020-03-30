@@ -11,23 +11,26 @@ interface IStyledIconButton {
 }
 
 const StyledIconButton = styled.button`
+  outline: none;
+  cursor: pointer;
+  width: ${Variables.Spacing.sLarge}px;
+  height: ${Variables.Spacing.sLarge}px;
+  border-radius: ${Variables.Spacing.sLarge}px;
+  transition: 0.15s ease-in;
   ${(props: IStyledIconButton) => styleForMargins(props.margins)};
   ${(props: IStyledIconButton) => css`
     color: ${variantOptions[props.variant].iconColor};
     &:hover {
       color: ${variantOptions[props.variant].hoverIconColor};
       background: ${variantOptions[props.variant].hoverBackground};
-      transition: color .25s ease-out, background .25s ease-out;
+      transition: 0.2s ease-out;
     }
   `}
   ${(props: IStyledIconButton) => props.isSelected && css`
     color: ${variantOptions[props.variant].selectedIconColor};
     background: ${variantOptions[props.variant].selectedBackground};
+    transition: 0.2s ease-out;
   `}
-  outline: none; cursor: pointer;
-  width: ${Variables.Spacing.sLarge}px;
-  height: ${Variables.Spacing.sLarge}px;
-  border-radius: ${Variables.Spacing.sLarge}px;
 `
 
 export {

@@ -14,21 +14,25 @@ exports[`<FontAwesomeIconButton /> should render a selected icon button 1`] = `
 }
 
 .c0 {
-  color: #667380;
-  color: #262D33;
-  background: #C5CED6;
   outline: none;
   cursor: pointer;
   width: 24px;
   height: 24px;
   border-radius: 24px;
+  -webkit-transition: 0.15s ease-in;
+  transition: 0.15s ease-in;
+  color: #667380;
+  color: #262D33;
+  background: #C5CED6;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
 }
 
 .c0:hover {
   color: #424F5C;
   background: #EDF1F5;
-  -webkit-transition: color .25s ease-out,background .25s ease-out;
-  transition: color .25s ease-out,background .25s ease-out;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
 }
 
 <FontAwesomeIconButton
@@ -53,16 +57,8 @@ exports[`<FontAwesomeIconButton /> should render a selected icon button 1`] = `
             "lastClassName": "c0",
             "rules": Array [
               "
-  ",
-              [Function],
-              ";
-  ",
-              [Function],
-              "
-  ",
-              [Function],
-              "
-  outline: none; cursor: pointer;
+  outline: none;
+  cursor: pointer;
   width: ",
               "24",
               "px;
@@ -72,6 +68,16 @@ exports[`<FontAwesomeIconButton /> should render a selected icon button 1`] = `
   border-radius: ",
               "24",
               "px;
+  transition: 0.15s ease-in;
+  ",
+              [Function],
+              ";
+  ",
+              [Function],
+              "
+  ",
+              [Function],
+              "
 ",
             ],
           },
@@ -212,19 +218,21 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
 }
 
 .c0 {
-  color: #F25749;
   outline: none;
   cursor: pointer;
   width: 24px;
   height: 24px;
   border-radius: 24px;
+  -webkit-transition: 0.15s ease-in;
+  transition: 0.15s ease-in;
+  color: #F25749;
 }
 
 .c0:hover {
   color: #D41200;
   background: #FFF1F0;
-  -webkit-transition: color .25s ease-out,background .25s ease-out;
-  transition: color .25s ease-out,background .25s ease-out;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
 }
 
 <FontAwesomeIconButton
@@ -249,16 +257,8 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
             "lastClassName": "c0",
             "rules": Array [
               "
-  ",
-              [Function],
-              ";
-  ",
-              [Function],
-              "
-  ",
-              [Function],
-              "
-  outline: none; cursor: pointer;
+  outline: none;
+  cursor: pointer;
   width: ",
               "24",
               "px;
@@ -268,6 +268,16 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
   border-radius: ",
               "24",
               "px;
+  transition: 0.15s ease-in;
+  ",
+              [Function],
+              ";
+  ",
+              [Function],
+              "
+  ",
+              [Function],
+              "
 ",
             ],
           },
@@ -412,19 +422,21 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
 }
 
 .c1 {
-  color: #667380;
   outline: none;
   cursor: pointer;
   width: 24px;
   height: 24px;
   border-radius: 24px;
+  -webkit-transition: 0.15s ease-in;
+  transition: 0.15s ease-in;
+  color: #667380;
 }
 
 .c1:hover {
   color: #424F5C;
   background: #EDF1F5;
-  -webkit-transition: color .25s ease-out,background .25s ease-out;
-  transition: color .25s ease-out,background .25s ease-out;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
 }
 
 <FontAwesomeIconButton
@@ -493,16 +505,8 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
                       "lastClassName": "c1",
                       "rules": Array [
                         "
-  ",
-                        [Function],
-                        ";
-  ",
-                        [Function],
-                        "
-  ",
-                        [Function],
-                        "
-  outline: none; cursor: pointer;
+  outline: none;
+  cursor: pointer;
   width: ",
                         "24",
                         "px;
@@ -512,6 +516,16 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
   border-radius: ",
                         "24",
                         "px;
+  transition: 0.15s ease-in;
+  ",
+                        [Function],
+                        ";
+  ",
+                        [Function],
+                        "
+  ",
+                        [Function],
+                        "
 ",
                       ],
                     },
@@ -658,19 +672,21 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
 }
 
 .c0 {
-  color: #667380;
   outline: none;
   cursor: pointer;
   width: 24px;
   height: 24px;
   border-radius: 24px;
+  -webkit-transition: 0.15s ease-in;
+  transition: 0.15s ease-in;
+  color: #667380;
 }
 
 .c0:hover {
   color: #424F5C;
   background: #EDF1F5;
-  -webkit-transition: color .25s ease-out,background .25s ease-out;
-  transition: color .25s ease-out,background .25s ease-out;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
 }
 
 <span
