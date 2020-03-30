@@ -1,8 +1,8 @@
 import { Variables } from '../../../common'
 
 enum IconButtonVariants {
-  NEUTRAL = 'neutral',
-  RED = 'red'
+  Neutral = 'neutral',
+  Red = 'red'
 }
 
 interface IVariantOption {
@@ -18,14 +18,14 @@ type VariantOptions = {
 }
 
 const variantOptions: VariantOptions = {
-  [IconButtonVariants.NEUTRAL]: {
+  [IconButtonVariants.Neutral]: {
     iconColor: Variables.Color.n600,
     hoverIconColor: Variables.Color.n700,
     selectedIconColor: Variables.Color.n800,
     hoverBackground: Variables.Color.n250,
     selectedBackground: Variables.Color.n400
   },
-  [IconButtonVariants.RED]: {
+  [IconButtonVariants.Red]: {
     iconColor: Variables.Color.r400,
     hoverIconColor: Variables.Color.r500,
     selectedIconColor: Variables.Color.r600,

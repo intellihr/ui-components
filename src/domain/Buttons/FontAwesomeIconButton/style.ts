@@ -24,6 +24,7 @@ const StyledIconButton = styled.button`
     color: ${variantOptions[props.variant].selectedIconColor};
     background: ${variantOptions[props.variant].selectedBackground};
   `}
+  outline: none; cursor: pointer;
   width: ${Variables.Spacing.sLarge}px;
   height: ${Variables.Spacing.sLarge}px;
   border-radius: ${Variables.Spacing.sLarge}px;

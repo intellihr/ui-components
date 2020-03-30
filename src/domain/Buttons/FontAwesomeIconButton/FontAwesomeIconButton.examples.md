@@ -1,37 +1,21 @@
 #### FontAwesome Icon Button
 
 ```jsx
+initialState = { isIconChecked: false, isRedIconChecked: true};
+
 <div>
   <FontAwesomeIconButton
     icon='check'
     type='regular'
-    onClick={() => alert('clicked!')}
+    onClick={() => setState({ isIconChecked: !state.isIconChecked })}
+    isSelected={state.isIconChecked}
     tooltipText='this is a tooltip'
   />
   <FontAwesomeIconButton
     icon='times'
     type='regular'
-    onClick={() => alert('clicked!')}
-    variant='red'
-    tooltipText='this is a tooltip'
-  />
-</div>
-```
-#### FontAwesome Icon Button that has been selected
-```jsx
-<div>
-  <FontAwesomeIconButton
-    icon='check'
-    type='regular'
-    onClick={() => alert('clicked!')}
-    isSelected={true}
-    tooltipText='this is a tooltip'
-  />
-  <FontAwesomeIconButton
-    icon='times'
-    type='regular'
-    onClick={() => alert('clicked!')}
-    isSelected={true}
+    onClick={() => setState({ isRedIconChecked: !state.isRedIconChecked })}
+    isSelected={state.isRedIconChecked}
     variant='red'
     tooltipText='this is a tooltip'
   />

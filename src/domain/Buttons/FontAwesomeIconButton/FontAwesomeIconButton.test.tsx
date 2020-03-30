@@ -1,6 +1,7 @@
-import { mount } from 'enzyme'
+import {mount, shallow} from 'enzyme'
 import React from 'react'
 
+import {Tile} from '../../Boards/Board/subcomponents/Tile'
 import {IconButtonVariants} from './colors'
 import {FontAwesomeIconButton} from './FontAwesomeIconButton'
 
@@ -38,12 +39,29 @@ describe('<FontAwesomeIconButton />', () => {
       <FontAwesomeIconButton
         icon='check'
         type='duotone'
-        variant={IconButtonVariants.RED}
+        variant={IconButtonVariants.Red}
       >
         test
       </FontAwesomeIconButton>
     )
 
     expect(wrapper).toMatchSnapshot()
+  })
+
+  it(`should render an icon button with an onClick`, () => {
+    const mockHandleClick = jest.fn()
+
+    const wrapper = shallow(
+      <FontAwesomeIconButton
+        icon='check'
+        type='duotone'
+        onClick={mockHandleClick}
+      >
+        test
+      </FontAwesomeIconButton>
+    )
+    expect(mockHandleClick.mock.calls.length).toBe(0)
+    wrapper.simulate('click')
+    expect(mockHandleClick.mock.calls.length).toBe(1)
   })
 })

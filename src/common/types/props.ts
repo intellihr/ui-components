@@ -83,6 +83,7 @@ namespace Props {
     EmptyState = 'empty_state',
     FilterController = 'filter_controller',
     FilterTag = 'filter_tag',
+    FontAwesomeIconButton= 'font_awesome_icon_button',
     GridLayout = 'grid_layout',
     GridLayoutCell = 'grid_layout_cell',
     GroupCard = 'group_card',
