@@ -12,6 +12,11 @@ interface IStyledRowProps {
   isSelected?: boolean
   isHoverable?: boolean
   variant: RowVariant
+  movement?: number
+}
+
+interface IStyledSwipeActionsProps {
+  width: number
 }
 
 interface IStyledProgressBarProps {
@@ -23,6 +28,7 @@ interface IStyledProgressBarProps {
 const StyledTable = styled.div`
   border: 1px solid ${Variables.Color.n250};
   border-bottom: 0px;
+  overflow: hidden;
 
   ${(props: IStyledTableProps) => styleForMargins(props.margins)}
 `
@@ -31,7 +37,10 @@ const StyledRow = styled.div`
   display: block;
   border-bottom: 1px solid ${Variables.Color.n250};
   border-top: 1px solid ${Variables.Color.n250};
+  border-right: none;
   background: ${Variables.Color.n100};
+  margins: 0;
+  transition: 0.2s ease-out;
 
   ${(props: IStyledRowProps) => props.isHoverable && !props.isSelected && css`
       &:hover {
@@ -47,6 +56,29 @@ const StyledRow = styled.div`
 
   ${(props: IStyledRowProps) => props.isSelected && css`
       background: ${variantOptions[props.variant].selectBackground};
+  `}
+
+  ${(props: IStyledRowProps) => props.movement && css`
+      border-right: 1px solid ${Variables.Color.n250};
+      margin-left: -${props.movement}px;
+      margin-right: ${props.movement}px;
+      transition: 0.2s ease-out;
+  `}
+`
+
+const StyledSwipeActions = styled.div`
+  border-left: 1px solid ${Variables.Color.n250};
+  display: block;
+  float: right;
+  width: 0;
+  height: 50px;
+  transition: 0.2s ease-out;
+  overflow: hidden;
+  margin-top: -50px;
+
+  ${(props: IStyledSwipeActionsProps) => props.width && css`
+      width: ${props.width}px;
+      transition: 0.2s ease-out;
   `}
 `
 
@@ -80,5 +112,6 @@ const StyledProgressBar = styled.div`
 export {
   StyledTable,
   StyledRow,
-  StyledProgressBar
+  StyledProgressBar,
+  StyledSwipeActions
 }

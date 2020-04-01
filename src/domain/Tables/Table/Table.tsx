@@ -1,5 +1,6 @@
 import { clamp } from 'lodash'
 import React, { useEffect, useState } from 'react'
+import { useDrag } from 'react-use-gesture'
 
 import { Props, Variables } from '../../../common'
 import { GridLayout } from '../../Layouts/GridLayout'
@@ -7,7 +8,7 @@ import { TooltipPopover } from '../../Popovers/TooltipPopover'
 import { TooltipPopoverVariant } from '../../Popovers/TooltipPopover/TooltipPopover'
 import { Text } from '../../Typographies'
 import { RowVariant } from './colors'
-import { StyledProgressBar, StyledRow, StyledTable } from './style'
+import { StyledProgressBar, StyledRow, StyledSwipeActions, StyledTable } from './style'
 import { TableCheckboxInput, TableCheckboxInputValue } from './subcomponents/TableCheckboxInput'
 
 enum ColumnSize {
@@ -185,7 +186,25 @@ const TableRow: React.FC<{columns: IColumnProps[], row: IRowProps, selectedRows:
     data
   } = row
 
+  const swipeContentWidth = 100
+
   const [hasProgressBarEnded, setHasProgressBarEnded] = useState<boolean>(false)
+  const [movement, setMovement] = useState<number>(0)
+  const blind = useDrag((props: any) => {
+    if (isMobile && props._movement[0] <= movement) {
+      console.log(props._movement, 'props._movement,')
+      if (Math.floor(props._movement[0]) !== movement) {
+        setMovement(Math.min(Math.trunc(Math.abs(props._movement[0])), swipeContentWidth))
+      }
+
+      if (!props.dragging && props._movement[0] < 0) {
+        console.log('drag end')
+        console.log(props._movement, 'props._movement,')
+        console.log((Math.abs(props._movement[0]) < (swipeContentWidth / 2)) ? 0 : swipeContentWidth)
+        setMovement((Math.abs(props._movement[0]) < (swipeContentWidth / 2)) ? 0 : swipeContentWidth)
+      }
+    }
+  })
   useEffect(() => {
     if (onProgressEnd && hasProgressBarEnded) {
       onProgressEnd(data)
@@ -199,17 +218,20 @@ const TableRow: React.FC<{columns: IColumnProps[], row: IRowProps, selectedRows:
   }
 
   return (
-    <StyledRow variant={variant} isHoverable={!isMobile && (isSelectable || !!onClick)} isSelected={!isMobile && isSelectable ? selectedRows[row.id] : false}>
-      <GridLayout
-        margins={{top: Variables.Spacing.sSmall, left: Variables.Spacing.sSmall, right: Variables.Spacing.sSmall, bottom: row.progress ? Variables.Spacing.sSmall - 2 : Variables.Spacing.sSmall}}
-        verticalAlignment={GridLayout.VerticalAlignment.Middle}
-        cells={leftCell.concat(columns.map((column, index) => ({
-          size: column.size,
-          content: <TableCell tooltipText={column.tooltipText ? column.tooltipText(row.data) : undefined} onClick={handleTableCellClicked(row.id, row, selectedRows, setSelectedRows, isSelectable, onClick)}>{contentOverride ? contentOverride(data)[index] : column.content(data)}</TableCell>
-        })))}
-      />
-      {progress && <StyledProgressBar isEnd={hasProgressBarEnded} previousPercentage={parsedProgressToPercentage(progress[0])} percentage={parsedProgressToPercentage(progress[1])}/>}
-    </StyledRow>
+    <>
+      <StyledRow {...blind()} movement={movement} variant={variant} isHoverable={!isMobile && (isSelectable || !!onClick)} isSelected={!isMobile && isSelectable ? selectedRows[row.id] : false}>
+        <GridLayout
+          margins={{top: Variables.Spacing.sSmall, left: Variables.Spacing.sSmall, right: Variables.Spacing.sSmall, bottom: row.progress ? Variables.Spacing.sSmall - 2 : Variables.Spacing.sSmall}}
+          verticalAlignment={GridLayout.VerticalAlignment.Middle}
+          cells={leftCell.concat(columns.map((column, index) => ({
+            size: column.size,
+            content: <TableCell tooltipText={column.tooltipText ? column.tooltipText(row.data) : undefined} onClick={handleTableCellClicked(row.id, row, selectedRows, setSelectedRows, isSelectable, onClick)}>{contentOverride ? contentOverride(data)[index] : column.content(data)}</TableCell>
+          })))}
+        />
+        {progress && <StyledProgressBar isEnd={hasProgressBarEnded} previousPercentage={parsedProgressToPercentage(progress[0])} percentage={parsedProgressToPercentage(progress[1])}/>}
+      </StyledRow>
+      {isMobile && <StyledSwipeActions width={movement}>12 13 14 15</StyledSwipeActions>}
+    </>
   )
 }
 
