@@ -65,38 +65,6 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
   </Record>
 ```
 
-#### Record with a Tooltip and custom tooltip trigger
-
-```jsx
-const { FontAwesomeIcon } = require('@Domain/Icons');
-const { Variables } = require('@Common');
-
-  <Record
-    name='Position Title'
-    tooltipProps={{
-      toggleComponent: ({ openMenu, closeMenu, toggleComponentRef, ariaProps }) => (
-        <span
-          onMouseEnter={openMenu}
-          onMouseLeave={closeMenu}
-          ref={toggleComponentRef}
-          {...ariaProps}
-        >
-          <FontAwesomeIcon type='solid' icon='exclamation-triangle' color={Variables.Color.o400} />
-        </span>
-      )
-    }}
-    tooltipContent={
-      <Record
-        name='Tooltip'
-      >
-        Record in a Record
-      </Record>
-    }
-  >
-    Chief Executive Officer
-  </Record>
-```
-
 ## Margin Support
 
 ```jsx
