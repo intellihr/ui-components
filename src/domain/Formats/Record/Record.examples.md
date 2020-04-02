@@ -71,20 +71,20 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
 const { FontAwesomeIcon } = require('@Domain/Icons');
 const { Variables } = require('@Common');
 
+  const toggleComponent = (
+    <span
+      onMouseEnter={openMenu}
+      onMouseLeave={closeMenu}
+      ref={toggleComponentRef}
+      {...ariaProps}
+    >
+      <FontAwesomeIcon type='solid' icon='exclamation-triangle' color={Variables.Color.o400} />
+    </span>
+  )
+
   <Record
     name='Position Title'
-    tooltipProps={{
-      toggleComponent: ({ openMenu, closeMenu, toggleComponentRef, ariaProps }) => (
-        <span
-          onMouseEnter={openMenu}
-          onMouseLeave={closeMenu}
-          ref={toggleComponentRef}
-          {...ariaProps}
-        >
-          <FontAwesomeIcon type='solid' icon='exclamation-triangle' color={Variables.Color.o400} />
-        </span>
-      )
-    }}
+    tooltipProps={{ toggleComponent: ({ openMenu, closeMenu, toggleComponentRef, ariaProps }) => toggleComponent }}
     tooltipContent={
       <Record
         name='Tooltip'
