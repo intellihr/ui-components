@@ -9,9 +9,11 @@ interface IFontAwesomeIconProps extends IIconProps {
   icon: FontAwesomeIconValue
   /** The alternative versions */
   type: 'solid' | 'regular' | 'light' | 'duotone'
+  /** The data-component-context */
+  componentContext?: string
 }
 
-const FontAwesomeIcon: React.FC<IFontAwesomeIconProps> = ({ icon, type, ...props }) => {
+const FontAwesomeIcon: React.FC<IFontAwesomeIconProps> = ({ icon, type, componentContext, ...props }) => {
   let cssClassName
   switch (type) {
     case 'light':
@@ -33,6 +35,7 @@ const FontAwesomeIcon: React.FC<IFontAwesomeIconProps> = ({ icon, type, ...props
     <Icon
       {...props}
       icon={cssClassName}
+      componentContext={componentContext}
     />
   )
 }

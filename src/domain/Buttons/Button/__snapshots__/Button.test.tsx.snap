@@ -283,11 +283,13 @@ exports[`<Button /> should render a button with an icon 1`] = `
               <styled.i
                 aria-hidden={true}
                 className="icon fas fa-star"
+                data-component-type="icon"
                 size="medium"
               >
                 <StyledComponent
                   aria-hidden={true}
                   className="icon fas fa-star"
+                  data-component-type="icon"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -365,6 +367,7 @@ exports[`<Button /> should render a button with an icon 1`] = `
                   <i
                     aria-hidden={true}
                     className="c0 icon fas fa-star"
+                    data-component-type="icon"
                     size="medium"
                   />
                 </StyledComponent>

@@ -5,6 +5,7 @@ exports[`<Icon /> should render a large icon 1`] = `
   <styled.i
     aria-hidden={true}
     className="icon fa-circle"
+    data-component-type="icon"
     size="large"
   />
 </Fragment>
@@ -15,6 +16,7 @@ exports[`<Icon /> should render a non-FontAwesome icon 1`] = `
   <styled.i
     aria-hidden={true}
     className="icon intelli-icon-avatar"
+    data-component-type="icon"
     size="medium"
   />
 </Fragment>
@@ -25,6 +27,7 @@ exports[`<Icon /> should render an icon with a badge 1`] = `
   <styled.i
     aria-hidden={true}
     className="icon fa-check"
+    data-component-type="icon"
     size="xlarge"
   />
   <styled.span
@@ -46,6 +49,7 @@ exports[`<Icon /> should render icon with a custom size 1`] = `
     aria-hidden={true}
     className="icon fa-check"
     customSize={2.6}
+    data-component-type="icon"
     size="medium"
   />
 </Fragment>
@@ -57,6 +61,7 @@ exports[`<Icon /> should render icon with colour 1`] = `
     aria-hidden={true}
     className="icon fa-check"
     color="#1A2B3C"
+    data-component-type="icon"
     size="medium"
   />
 </Fragment>
@@ -67,6 +72,7 @@ exports[`<Icon /> should render icon with no size or colour 1`] = `
   <styled.i
     aria-hidden={true}
     className="icon fa-check"
+    data-component-type="icon"
     size="medium"
   />
 </Fragment>
@@ -77,6 +83,7 @@ exports[`<Icon /> should render icon with size 1`] = `
   <styled.i
     aria-hidden={true}
     className="icon fa-check"
+    data-component-type="icon"
     size="medium"
   />
 </Fragment>

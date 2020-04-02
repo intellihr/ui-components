@@ -110,11 +110,13 @@ exports[`<FontAwesomeIconButton /> should render a selected icon button 1`] = `
             <styled.i
               aria-hidden={true}
               className="icon fad fa-check"
+              data-component-type="icon"
               size="medium"
             >
               <StyledComponent
                 aria-hidden={true}
                 className="icon fad fa-check"
+                data-component-type="icon"
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
@@ -192,6 +194,7 @@ exports[`<FontAwesomeIconButton /> should render a selected icon button 1`] = `
                 <i
                   aria-hidden={true}
                   className="c1 icon fad fa-check"
+                  data-component-type="icon"
                   size="medium"
                 />
               </StyledComponent>
@@ -310,11 +313,13 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
             <styled.i
               aria-hidden={true}
               className="icon fad fa-check"
+              data-component-type="icon"
               size="medium"
             >
               <StyledComponent
                 aria-hidden={true}
                 className="icon fad fa-check"
+                data-component-type="icon"
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
@@ -392,6 +397,7 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
                 <i
                   aria-hidden={true}
                   className="c1 icon fad fa-check"
+                  data-component-type="icon"
                   size="medium"
                 />
               </StyledComponent>
@@ -557,11 +563,13 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
                       <styled.i
                         aria-hidden={true}
                         className="icon fad fa-check"
+                        data-component-type="icon"
                         size="medium"
                       >
                         <StyledComponent
                           aria-hidden={true}
                           className="icon fad fa-check"
+                          data-component-type="icon"
                           forwardedComponent={
                             Object {
                               "$$typeof": Symbol(react.forward_ref),
@@ -639,6 +647,7 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
                           <i
                             aria-hidden={true}
                             className="c2 icon fad fa-check"
+                            data-component-type="icon"
                             size="medium"
                           />
                         </StyledComponent>
@@ -700,6 +709,7 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
               <i
                 aria-hidden="true"
                 class="c1 icon fad fa-check"
+                data-component-type="icon"
               />
             </button>
           </span>,

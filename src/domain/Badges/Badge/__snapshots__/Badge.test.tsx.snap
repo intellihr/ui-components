@@ -375,11 +375,13 @@ exports[`<Badge /> should render a spinning badge 1`] = `
             <styled.i
               aria-hidden={true}
               className="refresh-icon icon fas fa-sync fa-spin"
+              data-component-type="icon"
               size="medium"
             >
               <StyledComponent
                 aria-hidden={true}
                 className="refresh-icon icon fas fa-sync fa-spin"
+                data-component-type="icon"
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
@@ -457,6 +459,7 @@ exports[`<Badge /> should render a spinning badge 1`] = `
                 <i
                   aria-hidden={true}
                   className="c1 refresh-icon icon fas fa-sync fa-spin"
+                  data-component-type="icon"
                   size="medium"
                 />
               </StyledComponent>

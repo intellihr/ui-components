@@ -18,6 +18,8 @@ interface ITelephoneTextProps {
   color?: Variables.Color
   /** If true, displays the flag */
   showFlag?: boolean
+  /** The data-component-context */
+  componentContext?: string
 }
 
 class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
@@ -107,7 +109,10 @@ class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
 
   public render (): JSX.Element {
     return (
-      <span>
+      <span
+        data-component-type={Props.ComponentType.TelephoneText}
+        data-component-context={this.props.componentContext}
+      >
         {this.prefix}
         {this.phoneNumber}
       </span>
