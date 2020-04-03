@@ -64,6 +64,7 @@ typings/
 /assets/
 /dist/
 /styleguide/
+/styleguidist/
 
 # Vim
 *.swp

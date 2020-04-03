@@ -1,15 +1,14 @@
 #!/bin/sh -xe
 
 rm -rf styleguide
-
-git worktree add styleguide remotes/origin/gh-pages
-
 yarn styleguide:build
 
-cd ./styleguide
+git worktree add styleguidist remotes/origin/gh-pages
+cp -r ./styleguide/* ./styleguidist
+
+cd ./styleguidist
 
 git add -f .
-
 git \
   -c user.email="continuous.integration@intellihr.com.au" \
   -c user.name="IntelliHR CI" \
