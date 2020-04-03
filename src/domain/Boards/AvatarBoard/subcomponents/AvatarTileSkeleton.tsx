@@ -4,16 +4,14 @@ import { Variables } from '../../../../common'
 import { styleForSkeletons } from '../../../Skeletons/style'
 
 const AvatarTileSkeleton = styled.div`
-  width: 260px;
+  position: relative;
+  width: 100%;
+  max-width: 540px;
   height: 278px;
   border-radius: 8px;
   ${styleForSkeletons(
     {
-      display: 'inline-block',
-      margins: {
-        left: Variables.Spacing.sLarge,
-        bottom: Variables.Spacing.sLarge
-      }
+      display: 'inline-block'
     }
   )};
 `
