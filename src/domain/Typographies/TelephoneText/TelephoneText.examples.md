@@ -40,7 +40,7 @@ If either of the following are true:
 * `phoneNumber` isn't a valid phone number in `countryCode`
 * `countryCode` is missing and the `phoneNumber` does not include a valid country dial code
 
-`TelephoneText` will display `phoneNumber` as-is without any additional formatting. 
+`TelephoneText` will display `phoneNumber` as-is without any additional formatting.
 
 ```jsx
   <div>
@@ -116,6 +116,18 @@ const { Variables } = require('../../../common');
     phoneNumber='412341234'
     countryCode='AU'
     color={Variables.Color.i400}
+   />
+```
+
+#### Telephone Text that is a link to dial
+
+```jsx
+const { Variables } = require('../../../common');
+
+  <TelephoneText
+    phoneNumber='1300123123'
+    countryCode='AU'
+    isLink
    />
 ```
 

@@ -18,12 +18,17 @@ interface ITelephoneTextProps {
   color?: Variables.Color
   /** If true, displays the flag */
   showFlag?: boolean
+  /** If true, turns the phone number into a telephone link */
+  isLink?: boolean
+  /** The data-component-context */
+  componentContext?: string
 }
 
 class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
   public static defaultProps = {
     type: Props.TypographyType.Body,
-    showFlag: true
+    showFlag: true,
+    isLink: false
   }
 
   get flag (): JSX.Element | undefined {
@@ -77,7 +82,8 @@ class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
       countryCode,
       phoneNumber,
       type,
-      color
+      color,
+      isLink
     } = this.props
 
     let formattedPhoneNumber = phoneNumber
@@ -100,14 +106,20 @@ class TelephoneText extends React.PureComponent<ITelephoneTextProps> {
             role: 'phoneNumber'
           }}
         >
-          {formattedPhoneNumber}
+          {isLink
+            ? <Text.Link href={`tel:${formattedPhoneNumber}`}>{formattedPhoneNumber}</Text.Link>
+            : formattedPhoneNumber
+          }
         </Text>
     )
   }
 
   public render (): JSX.Element {
     return (
-      <span>
+      <span
+        data-component-type={Props.ComponentType.TelephoneText}
+        data-component-context={this.props.componentContext}
+      >
         {this.prefix}
         {this.phoneNumber}
       </span>

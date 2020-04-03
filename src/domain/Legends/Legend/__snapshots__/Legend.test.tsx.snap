@@ -139,12 +139,14 @@ exports[`<Legend /> should render a legend 1`] = `
                 aria-hidden={true}
                 className="icon fas fa-circle"
                 color="rgb(0,255,0)"
+                data-component-type="icon"
                 size="xsmall"
               >
                 <StyledComponent
                   aria-hidden={true}
                   className="icon fas fa-circle"
                   color="rgb(0,255,0)"
+                  data-component-type="icon"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -223,6 +225,7 @@ exports[`<Legend /> should render a legend 1`] = `
                     aria-hidden={true}
                     className="c1 icon fas fa-circle"
                     color="rgb(0,255,0)"
+                    data-component-type="icon"
                     size="xsmall"
                   />
                 </StyledComponent>
@@ -286,12 +289,14 @@ exports[`<Legend /> should render a legend 1`] = `
                 aria-hidden={true}
                 className="icon fas fa-circle"
                 color="rgb(0,0,255)"
+                data-component-type="icon"
                 size="xsmall"
               >
                 <StyledComponent
                   aria-hidden={true}
                   className="icon fas fa-circle"
                   color="rgb(0,0,255)"
+                  data-component-type="icon"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -370,6 +375,7 @@ exports[`<Legend /> should render a legend 1`] = `
                     aria-hidden={true}
                     className="c3 icon fas fa-circle"
                     color="rgb(0,0,255)"
+                    data-component-type="icon"
                     size="xsmall"
                   />
                 </StyledComponent>

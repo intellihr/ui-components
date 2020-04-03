@@ -1,7 +1,7 @@
 export { Avatar, AvatarEntity, AvatarGroup } from './Avatars'
 export { Badge } from './Badges'
 export { AvatarBoard, Board } from './Boards'
-export { BaseButton, Button, ButtonGroup, LinkButton } from './Buttons'
+export { BaseButton, Button, ButtonGroup, FontAwesomeIconButton, LinkButton } from './Buttons'
 export { Callout, EmptyState } from './Callouts'
 export { Card, GroupCard } from './Cards'
 export { RadarChart, TimeBasedLineChart } from './Charts'

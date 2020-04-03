@@ -124,7 +124,7 @@ const StyledIcon = styled.i<IStyledIconProps>`
         `
       case 'xxlarge':
         return css`
-          font-size: 3rem; // 48px
+          font-size: 52px;
         `
     }
   }}
