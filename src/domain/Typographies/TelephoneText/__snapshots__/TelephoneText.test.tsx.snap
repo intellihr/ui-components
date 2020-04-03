@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TelephoneText /> should render the Telephone Text 1`] = `
-<span>
+<span
+  data-component-type="telephone_text"
+>
   <Emoji
     emoji="flag-au"
     type="body"
@@ -35,7 +37,9 @@ exports[`<TelephoneText /> should render the Telephone Text 1`] = `
 `;
 
 exports[`<TelephoneText /> should render the Telephone Text no flag 1`] = `
-<span>
+<span
+  data-component-type="telephone_text"
+>
   <Styled(Text)
     color="#667380"
     dataAttributes={
@@ -65,7 +69,9 @@ exports[`<TelephoneText /> should render the Telephone Text no flag 1`] = `
 `;
 
 exports[`<TelephoneText /> should render the Telephone Text with no country information 1`] = `
-<span>
+<span
+  data-component-type="telephone_text"
+>
   <Text
     dataAttributes={
       Object {

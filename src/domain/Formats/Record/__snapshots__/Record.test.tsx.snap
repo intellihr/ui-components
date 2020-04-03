@@ -1881,12 +1881,14 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                               aria-hidden={true}
                               className="icon far fa-question-circle"
                               color="#424F5C"
+                              data-component-type="icon"
                               size="medium"
                             >
                               <StyledComponent
                                 aria-hidden={true}
                                 className="icon far fa-question-circle"
                                 color="#424F5C"
+                                data-component-type="icon"
                                 forwardedComponent={
                                   Object {
                                     "$$typeof": Symbol(react.forward_ref),
@@ -1965,6 +1967,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                                   aria-hidden={true}
                                   className="c3 icon far fa-question-circle"
                                   color="#424F5C"
+                                  data-component-type="icon"
                                   size="medium"
                                 />
                               </StyledComponent>
@@ -2006,6 +2009,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                           aria-hidden="true"
                           class="c0 icon far fa-question-circle"
                           color="#424F5C"
+                          data-component-type="icon"
                         />
                       </button>,
                     }

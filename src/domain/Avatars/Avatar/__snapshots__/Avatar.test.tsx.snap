@@ -265,11 +265,13 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
             <styled.i
               aria-hidden={true}
               className="icon fas fa-camera"
+              data-component-type="icon"
               size="medium"
             >
               <StyledComponent
                 aria-hidden={true}
                 className="icon fas fa-camera"
+                data-component-type="icon"
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
@@ -347,6 +349,7 @@ exports[`<Avatar /> Renders a large Avatar with initials, with hover effect and 
                 <i
                   aria-hidden={true}
                   className="c0 icon fas fa-camera"
+                  data-component-type="icon"
                   size="medium"
                 />
               </StyledComponent>
