@@ -26,7 +26,12 @@ const StyledTableCheckboxInput = styled.input`
     display: none;
   }
 
+  & + label {
+    margin: 0;
+  }
+
   &:disabled + label {
+    margin: 0;
     color: ${Variables.Color.n500};
     cursor: not-allowed;
 
@@ -37,6 +42,7 @@ const StyledTableCheckboxInput = styled.input`
   }
 
   &:focus + label {
+    margin: 0;
     &.checkbox {
       border-color: ${Variables.Color.i400};
 
@@ -53,6 +59,7 @@ const StyledTableCheckboxInput = styled.input`
   }
 
   &:checked + label {
+    margin: 0;
     border-color: ${Variables.Color.i600};
 
     &::before {
@@ -70,6 +77,7 @@ const StyledTableCheckboxInput = styled.input`
 
   ${(props: IStyledTableCheckboxInputProps) => props.labelValue === TableCheckboxInputValue.PartialTrue && css`
     & + label {
+      margin: 0;
       border-color: ${Variables.Color.i600};
 
       &::before {
@@ -93,6 +101,7 @@ const StyledTableCheckboxLabel = styled.label`
   position: relative;
   cursor: pointer;
   transition: .25s ease-out;
+  margin: 0;
 
   &::before {
       background-color: ${Variables.Color.n150};
@@ -138,6 +147,7 @@ const StyledFontAwesomeIcon =  styled(FontAwesomeIcon)`
   width: 21px;
   height: 20px;
   top: 9px;
+  left: 0;
   animation-name: ${styledFontAwesomeIconAnimation};
   animation-duration: .25s;
 `

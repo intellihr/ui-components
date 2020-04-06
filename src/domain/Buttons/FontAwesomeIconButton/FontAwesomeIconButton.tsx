@@ -91,5 +91,6 @@ const FontAwesomeIconButton: React.FC<IFontAwesomeIconButtonProps> = (props) => 
 }
 
 export {
-  FontAwesomeIconButton
+  FontAwesomeIconButton,
+  IFontAwesomeIconButtonProps
 }

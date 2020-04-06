@@ -1,15 +1,24 @@
 import { clamp } from 'lodash'
-import React, { useEffect, useState } from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import { useDrag } from 'react-use-gesture'
 
 import { Props, Variables } from '../../../common'
 import { GridLayout } from '../../Layouts/GridLayout'
-import { TooltipPopover } from '../../Popovers/TooltipPopover'
-import { TooltipPopoverVariant } from '../../Popovers/TooltipPopover/TooltipPopover'
 import { Text } from '../../Typographies'
 import { RowVariant } from './colors'
-import { StyledProgressBar, StyledRow, StyledSwipeActions, StyledTable } from './style'
+import {
+  StyledRow,
+  StyledTable,
+  StyledHeaderCell,
+  StyledHeaderLeftCell,
+  StyledTHead, StyledEmptyStateCell
+} from './style'
 import { TableCheckboxInput, TableCheckboxInputValue } from './subcomponents/TableCheckboxInput'
+import {
+  FontAwesomeIconButton,
+  IFontAwesomeIconButtonProps
+} from '../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
+import {TableRow} from './subcomponents/TableRow'
 
 enum ColumnSize {
   Auto = 'auto',
@@ -39,6 +48,8 @@ interface ITableProps {
   componentContext?: string
   isMobile?: boolean
   onProgressEnd?: (data: any) => void
+  bulkActions?: IFontAwesomeIconButtonProps[]
+  emptyState: JSX.Element
 }
 
 interface IRowProps {
@@ -46,192 +57,82 @@ interface IRowProps {
   isSelectable?: boolean
   isRemovable?: boolean
   tooltipText?: string
-  progress?: [number, number]
+  progress?: number
   variant?: RowVariant
   data: any
+  checkboxOverride?: (data: any) => JSX.Element
   contentOverride?: (data: any) => JSX.Element[]
   onClick?: (data: any) => void
+  swipeActions?: IFontAwesomeIconButtonProps[]
 }
 
 interface IColumnProps {
   title?: string
   size: ColumnSize
-  headerSize?: ColumnSize
   content: (data: any) => JSX.Element
   sort?: ColumnSortDirection
   onSortChange: () => void
   alignment?: ColumnAlignment
   tooltipText?: (data: any) => string
-}
-
-const getTableCheckboxInputCell = (size: ColumnSize, name: string, value: TableCheckboxInputValue, onChange: (value: TableCheckboxInputValue) => void) => {
-  return ({
-      size,
-      content: (
-        <TableCheckboxInput
-          name={name}
-          value={value}
-          onChange={onChange}
-        />
-      )
-    })
-}
-
-const handleTableCheckboxInputChange = (id: string, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void) => (value: TableCheckboxInputValue) => {
-  const newValue = {
-    ...selectedRows,
-    [id]: value === TableCheckboxInputValue.True
-  }
-  setSelectedRows(newValue)
+  hoverActions?: IFontAwesomeIconButtonProps[]
 }
 
 const handleTableHeaderCheckboxInputChange = (setSelectedAll: (value: TableCheckboxInputValue) => void) => (value: TableCheckboxInputValue) => {
   setSelectedAll(value)
 }
 
-const TableHeader: React.FC<{columns: IColumnProps[], selectedAll: TableCheckboxInputValue, setSelectedAll: (value: TableCheckboxInputValue) => void, isMobile: boolean}> = ({ columns, selectedAll, setSelectedAll, isMobile}) => {
-  const selectCheckbox = [getTableCheckboxInputCell(ColumnSize.Shrink, 'selectAll', selectedAll, handleTableHeaderCheckboxInputChange(setSelectedAll))]
-  const headerCells = columns.map((column) => ({
-    size: column.headerSize || column.size,
-    content: <Text weight={Variables.FontWeight.fwSemiBold}>{column.title}</Text>
+const getActionsCells = (actions: IFontAwesomeIconButtonProps[], name?: string) => {
+  return actions.map((actionProps, index) => ({
+    size:  ColumnSize.Shrink,
+    content: <FontAwesomeIconButton key={`actions-${name}-${index}`} {...actionProps}/>
   }))
+}
 
+const getHeaderCells = (columns: IColumnProps[], bulkActions?: IFontAwesomeIconButtonProps[], isMobile?: boolean) => columns.map((column, index) => {
+  if (bulkActions && !isMobile) {
+    return (
+      <StyledHeaderCell key={index} size={column.size} alignment={column.alignment}>
+        {
+          index === 0 && (
+            <GridLayout
+              gutterMarginX={Variables.Spacing.sMedium}
+              verticalAlignment={GridLayout.VerticalAlignment.Middle}
+              cells={getActionsCells(bulkActions, 'bulk')}
+            />
+          )
+        }
+      </StyledHeaderCell>
+    )
+  }
+
+  return (
+    <StyledHeaderCell key={index} size={column.size} alignment={column.alignment} isLastColumn={index === columns.length - 1}  isFirstColumn={isMobile && index === 0}>
+      <Text weight={Variables.FontWeight.fwSemiBold}>{column.title}</Text>
+    </StyledHeaderCell>
+  )
+})
+
+const TableHeader: React.FC<{columns: IColumnProps[], selectedAll: TableCheckboxInputValue, setSelectedAll: (value: TableCheckboxInputValue) => void, isMobile: boolean, bulkActions?: IFontAwesomeIconButtonProps[], hasBulkAction: boolean, isEmpty: boolean}> = ({ columns, selectedAll, setSelectedAll, isMobile, bulkActions, hasBulkAction, isEmpty}) => {
   return (
     <StyledRow variant={RowVariant.Neutral}>
-      <GridLayout
-        margins={{top: Variables.Spacing.sSmall, left: Variables.Spacing.sSmall, right: Variables.Spacing.sSmall, bottom: Variables.Spacing.sSmall}}
-        verticalAlignment={GridLayout.VerticalAlignment.Middle}
-        cells={isMobile ? headerCells : selectCheckbox.concat(headerCells)}
-      />
+      {
+        (isMobile || isEmpty) ? getHeaderCells(columns, hasBulkAction ? bulkActions : undefined ) : (
+          <>
+            <StyledHeaderLeftCell>
+              <TableCheckboxInput
+                name='selectAll'
+                value={selectedAll}
+                onChange={handleTableHeaderCheckboxInputChange(setSelectedAll)}
+              />
+            </StyledHeaderLeftCell>
+            {
+              getHeaderCells(columns, hasBulkAction ? bulkActions : undefined )
+            }
+          </>
+        )
+      }
+
     </StyledRow>
-  )
-}
-
-const handleTableCellClicked = (id: string, row: IRowProps, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void, isSelectable?: boolean, onClick?: (data: any) => void) => () => {
-  if (isSelectable) {
-    const newValue = {
-      ...selectedRows,
-      [id]: !selectedRows[id]
-    }
-    setSelectedRows(newValue)
-  }
-
-  if (onClick) {
-    onClick(row.data)
-  }
-}
-
-const TableCell: React.FC<{tooltipText?: string, onClick: () => void}> = ({ tooltipText, onClick, children}) => {
-  if (tooltipText) {
-    const toggleComponent = ({ openMenu, closeMenu, toggleComponentRef, ariaProps }: any) => (
-      <span
-        onMouseEnter={openMenu}
-        onMouseLeave={closeMenu}
-        ref={toggleComponentRef}
-        {...ariaProps}
-      >
-          {children}
-      </span>
-    )
-
-    return (
-      <div
-        onClick={onClick}
-      >
-        <TooltipPopover
-          variant={TooltipPopoverVariant.Dark}
-          toggleComponent={toggleComponent}
-        >
-          {tooltipText}
-        </TooltipPopover>
-      </div>
-    )
-  }
-
-  return (
-    <div
-      onClick={onClick}
-    >
-      {children}
-    </div>
-  )
-}
-
-const getTableRowLeftCell = (isSelectable: boolean, isRemovable: boolean, isMobile: boolean, row: IRowProps, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void) => {
-  if (isSelectable && !isRemovable && !isMobile) {
-    const SelectedCheckboxInputValue = selectedRows[row.id] ? TableCheckboxInputValue.True : TableCheckboxInputValue.False
-    return [getTableCheckboxInputCell(ColumnSize.Shrink, row.id, SelectedCheckboxInputValue, handleTableCheckboxInputChange(row.id, selectedRows, setSelectedRows))]
-  }
-
-  if (isRemovable && !isMobile) {
-    return [{
-      size: ColumnSize.Shrink,
-      content: <Text>1</Text>
-    }]
-  }
-
-  return []
-}
-
-const parsedProgressToPercentage = (progress?: number) => progress ? clamp(progress, 0, 1) * 100 : 0
-
-const TableRow: React.FC<{columns: IColumnProps[], row: IRowProps, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void, isMobile: boolean, onProgressEnd?: (row: any) => void}> = ({ columns, row, selectedRows, setSelectedRows, isMobile = false, onProgressEnd}) => {
-  const {
-    isSelectable = false,
-    isRemovable = false,
-    variant = RowVariant.Neutral,
-    progress,
-    onClick,
-    contentOverride,
-    data
-  } = row
-
-  const swipeContentWidth = 100
-
-  const [hasProgressBarEnded, setHasProgressBarEnded] = useState<boolean>(false)
-  const [movement, setMovement] = useState<number>(0)
-  const blind = useDrag((props: any) => {
-    if (isMobile && props._movement[0] <= movement) {
-      console.log(props._movement, 'props._movement,')
-      if (Math.floor(props._movement[0]) !== movement) {
-        setMovement(Math.min(Math.trunc(Math.abs(props._movement[0])), swipeContentWidth))
-      }
-
-      if (!props.dragging && props._movement[0] < 0) {
-        console.log('drag end')
-        console.log(props._movement, 'props._movement,')
-        console.log((Math.abs(props._movement[0]) < (swipeContentWidth / 2)) ? 0 : swipeContentWidth)
-        setMovement((Math.abs(props._movement[0]) < (swipeContentWidth / 2)) ? 0 : swipeContentWidth)
-      }
-    }
-  })
-  useEffect(() => {
-    if (onProgressEnd && hasProgressBarEnded) {
-      onProgressEnd(data)
-    }
-  }, [hasProgressBarEnded])
-  const leftCell = getTableRowLeftCell(isSelectable, isRemovable, isMobile, row, selectedRows, setSelectedRows)
-  if (progress && progress[1] === 1 && !hasProgressBarEnded) {
-    setTimeout(() => {
-      setHasProgressBarEnded(true)
-    }, 3000)
-  }
-
-  return (
-    <>
-      <StyledRow {...blind()} movement={movement} variant={variant} isHoverable={!isMobile && (isSelectable || !!onClick)} isSelected={!isMobile && isSelectable ? selectedRows[row.id] : false}>
-        <GridLayout
-          margins={{top: Variables.Spacing.sSmall, left: Variables.Spacing.sSmall, right: Variables.Spacing.sSmall, bottom: row.progress ? Variables.Spacing.sSmall - 2 : Variables.Spacing.sSmall}}
-          verticalAlignment={GridLayout.VerticalAlignment.Middle}
-          cells={leftCell.concat(columns.map((column, index) => ({
-            size: column.size,
-            content: <TableCell tooltipText={column.tooltipText ? column.tooltipText(row.data) : undefined} onClick={handleTableCellClicked(row.id, row, selectedRows, setSelectedRows, isSelectable, onClick)}>{contentOverride ? contentOverride(data)[index] : column.content(data)}</TableCell>
-          })))}
-        />
-        {progress && <StyledProgressBar isEnd={hasProgressBarEnded} previousPercentage={parsedProgressToPercentage(progress[0])} percentage={parsedProgressToPercentage(progress[1])}/>}
-      </StyledRow>
-      {isMobile && <StyledSwipeActions width={movement}>12 13 14 15</StyledSwipeActions>}
-    </>
   )
 }
 
@@ -278,7 +179,7 @@ const handleSelectionChanged = (rows: IRowProps[], selectedRows: ISelectedRows, 
   onSelectionChanged(selectedRowsData)
 }
 
-const Table: React.FC<ITableProps> = ({ rows, columns, onSelectionChanged, onProgressEnd, margins, componentContext, isMobile = false}) => {
+const Table: React.FC<ITableProps> = ({ rows, columns, onSelectionChanged, onProgressEnd, margins, componentContext, isMobile = false, bulkActions, emptyState}) => {
   const [selectedAll, setSelectedAll] = useState<TableCheckboxInputValue>(TableCheckboxInputValue.False)
   const [selectedRows, setSelectedRows] = useState<ISelectedRows>({})
   useEffect(() => {
@@ -312,12 +213,33 @@ const Table: React.FC<ITableProps> = ({ rows, columns, onSelectionChanged, onPro
   }, [selectedRows])
   return (
     <StyledTable margins={margins}>
-      <TableHeader columns={columns} selectedAll={selectedAll} setSelectedAll={setSelectedAll} isMobile={isMobile}/>
-      {rows.map((row) => <TableRow key={row.id} columns={columns} row={row} selectedRows={selectedRows} setSelectedRows={setSelectedRows} isMobile={isMobile} onProgressEnd={onProgressEnd}/>)}
+      <StyledTHead>
+        <TableHeader
+          columns={columns}
+          selectedAll={selectedAll}
+          setSelectedAll={setSelectedAll}
+          isMobile={isMobile}
+          bulkActions={bulkActions}
+          hasBulkAction={selectedAll !== TableCheckboxInputValue.False}
+          isEmpty={rows.length === 0 }
+        />
+      </StyledTHead>
+      <tbody>
+        {
+          rows.length === 0 ? (
+            <tr><StyledEmptyStateCell colSpan={columns.length}>{emptyState}</StyledEmptyStateCell></tr>
+          ) : rows.map((row) => <TableRow key={row.id} columns={columns} row={row} selectedRows={selectedRows} setSelectedRows={setSelectedRows} isMobile={isMobile} onProgressEnd={onProgressEnd}/>)
+        }
+      </tbody>
     </StyledTable>
   )
 }
 
 export {
-  Table
+  Table,
+  IRowProps,
+  IColumnProps,
+  ISelectedRows,
+  ColumnSize,
+  ColumnAlignment
 }

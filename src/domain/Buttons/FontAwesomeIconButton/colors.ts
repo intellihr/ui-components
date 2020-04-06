@@ -29,7 +29,7 @@ const variantOptions: VariantOptions = {
     iconColor: Variables.Color.r400,
     hoverIconColor: Variables.Color.r500,
     selectedIconColor: Variables.Color.r600,
-    hoverBackground: Variables.Color.r100,
+    hoverBackground: Variables.Color.r200,
     selectedBackground: Variables.Color.r200
   }
 }

@@ -1,8 +1,9 @@
 import styled, {css, keyframes} from 'styled-components'
 
-import { Props, Variables } from '../../../common'
-import { styleForMargins } from '../../Spacers/services/margins'
-import { RowVariant, variantOptions } from './colors'
+import {Props, Variables} from '../../../common'
+import {styleForMargins} from '../../Spacers/services/margins'
+import {RowVariant, variantOptions} from './colors'
+import {ColumnAlignment, ColumnSize} from './Table'
 
 interface IStyledTableProps {
   margins?: Props.IMargins
@@ -13,6 +14,7 @@ interface IStyledRowProps {
   isHoverable?: boolean
   variant: RowVariant
   movement?: number
+  hasProgressBar?: boolean
 }
 
 interface IStyledSwipeActionsProps {
@@ -25,22 +27,85 @@ interface IStyledProgressBarProps {
   isEnd: boolean
 }
 
-const StyledTable = styled.div`
+interface IStyledHeaderCellProps {
+  size?: ColumnSize
+  alignment?: ColumnAlignment
+  isLastColumn?: boolean
+  isFirstColumn?: boolean
+}
+
+interface IStyledDataCellProps {
+  alignment?: ColumnAlignment
+  isLastColumn?: boolean
+  isFirstColumn?: boolean
+}
+
+const StyledTHead = styled.thead`
+  background: none;
+  border-bottom: none;
+`
+
+const StyledTable = styled.table`
   border: 1px solid ${Variables.Color.n250};
-  border-bottom: 0px;
-  overflow: hidden;
+  border-collapse: collapse;
+  border-spacing: 0;
 
   ${(props: IStyledTableProps) => styleForMargins(props.margins)}
 `
 
-const StyledRow = styled.div`
-  display: block;
+const StyledHeaderCell = styled.th`
+  padding: ${Variables.Spacing.sSmall}px;
+  text-align: left;
+
+  ${(props: IStyledHeaderCellProps) => props.isLastColumn && css`
+      padding:  ${Variables.Spacing.sSmall}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sSmall}px ${Variables.Spacing.sSmall}px;
+  `}
+
+  ${(props: IStyledHeaderCellProps) => props.isFirstColumn && css`
+      padding: ${Variables.Spacing.sSmall}px ${Variables.Spacing.sSmall}px ${Variables.Spacing.sSmall}px ${Variables.Spacing.sMedium}px;
+  `}
+
+  ${(props: IStyledHeaderCellProps) => props.size === ColumnSize.Auto && css`
+      width: 100%;
+  `}
+
+  ${(props: IStyledHeaderCellProps) => props.alignment === ColumnAlignment.Right && css`
+      text-align: right;
+  `}
+`
+
+const StyledHeaderLeftCell = styled.th`
+  padding: ${Variables.Spacing.sSmall}px ${Variables.Spacing.sSmall}px ${Variables.Spacing.sSmall}px ${Variables.Spacing.sMedium}px;
+  text-align: center;
+  width: ${Variables.Spacing.sXLarge}px;
+`
+
+const StyledDataCell = styled.td`
+  padding: ${Variables.Spacing.sSmall}px;
+  text-align: left;
+
+  ${(props: IStyledDataCellProps) => props.alignment === ColumnAlignment.Right && css`
+      text-align: right;
+  `}
+
+  ${(props: IStyledDataCellProps) => props.isLastColumn && css`
+      padding:  ${Variables.Spacing.sSmall}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sSmall}px ${Variables.Spacing.sSmall}px;
+  `}
+
+  ${(props: IStyledDataCellProps) => props.isFirstColumn && css`
+      padding: ${Variables.Spacing.sSmall}px ${Variables.Spacing.sSmall}px ${Variables.Spacing.sSmall}px ${Variables.Spacing.sMedium}px;
+  `}
+`
+const StyledProgressBarRow = styled.tr`
+  border-bottom: 1px solid ${Variables.Color.n250};
+  background: ${Variables.Color.n100};
+`
+const StyledRow = styled.tr`
+  white-space: nowrap;
   border-bottom: 1px solid ${Variables.Color.n250};
   border-top: 1px solid ${Variables.Color.n250};
-  border-right: none;
   background: ${Variables.Color.n100};
-  margins: 0;
-  transition: 0.2s ease-out;
+  transition: transform 0.2s ease-out;
 
   ${(props: IStyledRowProps) => props.isHoverable && !props.isSelected && css`
       &:hover {
@@ -58,23 +123,25 @@ const StyledRow = styled.div`
       background: ${variantOptions[props.variant].selectBackground};
   `}
 
+  ${(props: IStyledRowProps) => props.hasProgressBar && css`
+      border-bottom: none;
+  `}
+
   ${(props: IStyledRowProps) => props.movement && css`
-      border-right: 1px solid ${Variables.Color.n250};
-      margin-left: -${props.movement}px;
-      margin-right: ${props.movement}px;
-      transition: 0.2s ease-out;
+      transform: translateX(-${props.movement}px);
+      transition: transform 0.2s ease-out;
   `}
 `
 
 const StyledSwipeActions = styled.div`
+  position: absolute;
   border-left: 1px solid ${Variables.Color.n250};
   display: block;
-  float: right;
+  top: 0;
   width: 0;
-  height: 50px;
+  height: 100%;
   transition: 0.2s ease-out;
   overflow: hidden;
-  margin-top: -50px;
 
   ${(props: IStyledSwipeActionsProps) => props.width && css`
       width: ${props.width}px;
@@ -93,10 +160,16 @@ const StyledProgressBarAnimation = (props: IStyledProgressBarProps) => keyframes
   }
 `
 
-const StyledProgressBar = styled.div`
+const StyledProgressBarCell = styled.td`
   height: ${Variables.Spacing.s3XSmall}px;
+  padding: 0;
+`
+
+const StyledProgressBar = styled.div`
+  height: 100%;
   animation-name: ${(props: IStyledProgressBarProps) => StyledProgressBarAnimation(props)};
   animation-duration: 1s;
+  animation-timing-function: ease-in-out;
 
   ${(props: IStyledProgressBarProps) => css`
     width: ${props.percentage}%;
@@ -109,9 +182,20 @@ const StyledProgressBar = styled.div`
 
 `
 
+const StyledEmptyStateCell =styled.td`
+  padding: ${Variables.Spacing.s3XLarge}px;
+`
+
 export {
   StyledTable,
   StyledRow,
   StyledProgressBar,
-  StyledSwipeActions
+  StyledSwipeActions,
+  StyledHeaderCell,
+  StyledDataCell,
+  StyledProgressBarCell,
+  StyledProgressBarRow,
+  StyledHeaderLeftCell,
+  StyledTHead,
+  StyledEmptyStateCell
 }
