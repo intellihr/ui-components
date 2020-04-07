@@ -11,7 +11,7 @@ const AvatarBoardWrapper = styled.div<IBoardWrapperProps>`
   ${(props) => styleForMargins(props.margins)}
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: ${Variables.Spacing.sXLarge}px;
   justify-content: center;
   justify-items: center;
