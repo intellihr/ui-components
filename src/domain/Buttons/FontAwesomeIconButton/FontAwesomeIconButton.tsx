@@ -21,6 +21,8 @@ interface IFontAwesomeIconButtonProps {
   margins?: Props.IMargins
   /** Text display in the column header tooltip */
   tooltipText?: string
+  /** Whether the Icon Button is hovered */
+  isHovered?: boolean
   /** Whether the Icon Button is active/selected */
   isSelected?: boolean
   /** The component context */
@@ -36,6 +38,7 @@ const FontAwesomeIconButton: React.FC<IFontAwesomeIconButtonProps> = (props) => 
     margins,
     tooltipText,
     isSelected = false,
+    isHovered = false,
     componentContext
   } = props
 
@@ -51,6 +54,7 @@ const FontAwesomeIconButton: React.FC<IFontAwesomeIconButtonProps> = (props) => 
         variant={variant}
         margins={margins}
         isSelected={isSelected}
+        isHovered={isHovered}
       >
         <FontAwesomeIcon
           icon={icon}
@@ -78,6 +82,7 @@ const FontAwesomeIconButton: React.FC<IFontAwesomeIconButtonProps> = (props) => 
           variant={variant}
           margins={margins}
           isSelected={isSelected}
+          isHovered={isHovered}
           data-component-type={Props.ComponentType.FontAwesomeIconButton}
           data-component-context={componentContext}
         >

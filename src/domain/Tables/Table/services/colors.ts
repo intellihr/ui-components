@@ -1,4 +1,4 @@
-import { Variables } from '../../../common'
+import { Variables } from '../../../../common'
 
 enum RowVariant {
   Neutral = 'neutral',

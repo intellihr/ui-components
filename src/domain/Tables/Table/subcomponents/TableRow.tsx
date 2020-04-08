@@ -1,8 +1,8 @@
 import { clamp } from 'lodash'
-import React, {useEffect, useRef, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDrag } from 'react-use-gesture'
 
-import { IColumnProps, IRowProps, ISelectedRows } from '../Table'
+import {ColumnSize, getActionsIconButtonGroup, IColumnProps, IRowProps, ISelectedRows} from '../Table'
 import { TableCheckboxInput, TableCheckboxInputValue } from './TableCheckboxInput'
 import {
   FontAwesomeIconButton,
@@ -10,7 +10,7 @@ import {
 } from '../../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
 import { TooltipPopover } from '../../../Popovers/TooltipPopover'
 import { TooltipPopoverVariant } from '../../../Popovers/TooltipPopover/TooltipPopover'
-import { RowVariant } from '../colors'
+import { RowVariant } from '../services/colors'
 import {
   StyledDataCell,
   StyledProgressBar,
@@ -18,22 +18,8 @@ import {
   StyledProgressBarCell,
   StyledProgressBarRow,
   StyledHeaderLeftCell
-} from '../style'
-import {validateSourceMapOncePerProject} from 'ts-loader/dist/types/utils'
-
-enum ColumnSize {
-  Auto = 'auto',
-  Shrink = 'shrink'
-}
-enum ColumnSortDirection {
-  Up = 'up',
-  Down = 'down'
-}
-
-enum ColumnAlignment {
-  Left = 'left',
-  Right = 'right'
-}
+} from '../services/style'
+import {handleHovered, usePrevious} from '../services/helper'
 
 interface ITableRowProps {
   columns: IColumnProps[]
@@ -52,14 +38,7 @@ const handleTableCheckboxInputChange = (id: string, selectedRows: ISelectedRows,
   setSelectedRows(newValue)
 }
 
-const getActionsCells = (actions: IFontAwesomeIconButtonProps[], name?: string) => {
-  return actions.map((actionProps, index) => ({
-    size:  ColumnSize.Shrink,
-    content: <FontAwesomeIconButton key={`actions-${name}-${index}`} {...actionProps}/>
-  }))
-}
-
-const handleTableCellClicked = (id: string, row: IRowProps, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void, isSelectable?: boolean, onClick?: (data: any) => void) => () => {
+const handleTableCellClicked = (id: string, row: IRowProps, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void, setHasHovered: (value: boolean) => void, isSelectable?: boolean, onClick?: (data: any) => void) => () => {
   if (isSelectable) {
     const newValue = {
       ...selectedRows,
@@ -71,6 +50,8 @@ const handleTableCellClicked = (id: string, row: IRowProps, selectedRows: ISelec
   if (onClick) {
     onClick(row.data)
   }
+
+  setHasHovered(false)
 }
 
 const TableCellTooltip: React.FC<{tooltipText: string}> = ({ tooltipText, children}) => {
@@ -95,7 +76,7 @@ const TableCellTooltip: React.FC<{tooltipText: string}> = ({ tooltipText, childr
   )
 }
 
-const getTableRowLeftCell = (isSelectable: boolean, isRemovable: boolean, isMobile: boolean, row: IRowProps, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void, checkboxOverrideContent?: JSX.Element ) => {
+const getLeftCell = (isSelectable: boolean, isRemovable: boolean, isMobile: boolean, row: IRowProps, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void, checkboxOverrideContent?: JSX.Element ) => {
   if (isSelectable && !isRemovable && !isMobile) {
     const SelectedCheckboxInputValue = selectedRows[row.id] ? TableCheckboxInputValue.True : TableCheckboxInputValue.False
     return (
@@ -116,16 +97,44 @@ const getTableRowLeftCell = (isSelectable: boolean, isRemovable: boolean, isMobi
   return null
 }
 
+const getDataCells = (isSelected: boolean, columns: IColumnProps[], row: IRowProps, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void, setHasHovered: (value: boolean) => void, isMobile: boolean, hasHoverButton: boolean) => columns.map((column, index) => {
+  const {
+    isSelectable = false,
+    onClick,
+    contentOverride,
+    data,
+    id
+  } = row
+
+  if (column.hoverActions && hasHoverButton && !contentOverride && !isSelected) {
+    return (
+      <StyledDataCell
+        key={column.name}
+        alignment={column.alignment}
+        isLastColumn={index === columns.length - 1}
+        isFirstColumn={isMobile && index === 0}
+      >
+        {getActionsIconButtonGroup(column.hoverActions(data), id, column.alignment)}
+      </StyledDataCell>
+    )
+  }
+
+  const content = contentOverride ? contentOverride(data)[index] : column.content(data)
+
+  return (
+    <StyledDataCell
+      key={column.name}
+      alignment={column.alignment}
+      onClick={handleTableCellClicked(row.id, row, selectedRows, setSelectedRows, setHasHovered, isSelectable, onClick)}
+      isLastColumn={index === columns.length - 1}
+      isFirstColumn={isMobile && index === 0}
+    >
+      {column.tooltipText ? <TableCellTooltip tooltipText={column.tooltipText(row.data)}>{content}</TableCellTooltip> : content}
+    </StyledDataCell>
+  )
+})
+
 const parsedProgressToPercentage = (progress?: number) => progress ? clamp(progress, 0, 1) * 100 : 0
-
-const usePrevious = <T extends {}>(value: T): T => {
-  const ref = useRef<T>()
-  useEffect(() => {
-    ref.current = value
-  }, [value])
-
-  return ref.current as T
-}
 
 const TableRow: React.FC<ITableRowProps> = ({ columns, row, selectedRows, setSelectedRows, isMobile = false, onProgressEnd}) => {
   const {
@@ -135,7 +144,6 @@ const TableRow: React.FC<ITableRowProps> = ({ columns, row, selectedRows, setSel
     progress,
     onClick,
     checkboxOverride,
-    contentOverride,
     data,
     swipeActions
   } = row
@@ -145,6 +153,8 @@ const TableRow: React.FC<ITableRowProps> = ({ columns, row, selectedRows, setSel
   const [hasProgressBarEnded, setHasProgressBarEnded] = useState<boolean>(false)
   const [movement, setMovement] = useState<number>(0)
   const [previousProgress, setPreviousProgress] = useState<number>(0)
+  const [hasHovered, setHasHovered] = useState<boolean>(false)
+
   const blind = useDrag((props: any) => {
     if (isMobile && swipeActions && props._movement[0] <= movement) {
       console.log(props._movement, 'props._movement,')
@@ -165,21 +175,6 @@ const TableRow: React.FC<ITableRowProps> = ({ columns, row, selectedRows, setSel
       onProgressEnd(data)
     }
   }, [hasProgressBarEnded])
-  const leftCell = getTableRowLeftCell(isSelectable, isRemovable, isMobile, row, selectedRows, setSelectedRows, checkboxOverride ? checkboxOverride(data) : undefined)
-  const dataCells = columns.map((column, index) => {
-    const content = contentOverride ? contentOverride(data)[index] : column.content(data)
-    return (
-      <StyledDataCell
-        key={index}
-        alignment={column.alignment}
-        onClick={handleTableCellClicked(row.id, row, selectedRows, setSelectedRows, isSelectable, onClick)}
-        isLastColumn={index === columns.length - 1}
-        isFirstColumn={isMobile && index === 0}
-      >
-        {column.tooltipText ? <TableCellTooltip tooltipText={column.tooltipText(row.data)}>{content}</TableCellTooltip> : content}
-      </StyledDataCell>
-    )
-  })
   if (progress && progress === 1 && !hasProgressBarEnded) {
     setTimeout(() => {
       setHasProgressBarEnded(true)
@@ -188,15 +183,13 @@ const TableRow: React.FC<ITableRowProps> = ({ columns, row, selectedRows, setSel
 
   const previousRowProps = usePrevious<IRowProps>(row)
   const previousProgressFromPreviousRowProps = previousRowProps ? (previousRowProps.progress ? previousRowProps.progress : 0) : 0
+  const isSelected = !isMobile && isSelectable ? selectedRows[row.id] : false
 
   useEffect(() => {
     if (progress && previousProgressFromPreviousRowProps !== (progress ? progress : 0)) {
       setPreviousProgress(previousProgressFromPreviousRowProps)
     }
   }, [progress])
-
-  console.log(progress)
-  console.log(row)
 
   return (
     <>
@@ -205,11 +198,13 @@ const TableRow: React.FC<ITableRowProps> = ({ columns, row, selectedRows, setSel
         movement={movement}
         variant={variant}
         isHoverable={!isMobile && (isSelectable || !!onClick)}
-        isSelected={!isMobile && isSelectable ? selectedRows[row.id] : false}
+        isSelected={isSelected}
         hasProgressBar={progress}
+        onMouseEnter={handleHovered(true, setHasHovered)}
+        onMouseLeave={handleHovered(false, setHasHovered)}
       >
-        {leftCell}
-        {dataCells}
+        {getLeftCell(isSelectable, isRemovable, isMobile, row, selectedRows, setSelectedRows, checkboxOverride ? checkboxOverride(data) : undefined)}
+        {getDataCells(isSelected, columns, row, selectedRows, setSelectedRows, setHasHovered, isMobile, hasHovered)}
       </StyledRow>
       {(progress && !hasProgressBarEnded) && (
         <StyledProgressBarRow>

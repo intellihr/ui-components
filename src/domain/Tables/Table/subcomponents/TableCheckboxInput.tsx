@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react'
 
 import { Props, Variables } from '../../../../common'
-import { StyledFontAwesomeIcon, StyledTableCheckboxInput, StyledTableCheckboxLabel } from './style'
+import {
+  StyledFontAwesomeIcon,
+  StyledTableCheckboxInput,
+  StyledTableCheckboxLabel
+} from '../services/style'
 
 enum TableCheckboxInputValue {
   True = 'true',

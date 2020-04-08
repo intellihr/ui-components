@@ -43,8 +43,7 @@ const uploadingRowContentOverride = (
                                   );
 
 initialState = {
-fileNameSort: undefined,
-createAtSort: 'down',
+sort: {fileName: undefined, createAt: 'down'},
 hasSuccessRowContent: true,
 selectedDataSet: [],
 successProgress: 0.5,
@@ -123,6 +122,7 @@ const successRowBackToNormal = {
                    };
 
 <div>
+    {Object.entries(state.sort).map(([name, sort]) => <div>{name} : {sort}</div>)}
     <Button margins={{ bottom: 10}} onClick={() => setState({rows: [state.rows[0], state.rows[1]].concat([successRowTo100, state.rows[3], state.rows[4]])})}>
         update success progress %
      </Button>
@@ -154,23 +154,39 @@ const successRowBackToNormal = {
       onSelectionChanged = {(dataSet) => setState({selectedDataSet:dataSet})}
       onProgressEnd = {(data) => setState({rows: [state.rows[0], state.rows[1]].concat([successRowBackToNormal, state.rows[3], state.rows[4]])})}
       rows={state.rows}
+      sort={state.sort}
+      onSortChange={(sort) => setState({sort})}
       columns={[
             {
+                name: 'fileName',
                 title: 'file name',
                 size: 'auto',
                 content: (data)=> <Text>{data.fileName}</Text>,
-                sort: state.fileNameSort, 
                 alignment: 'left',
-                onSortChange: (sort) => setState({ fileNameSort: state.fileNameSort ? (state.fileNameSort==='down' ? 'up' : undefined) : 'down' }),
                 tooltipText: (data)=> `${data.fileType}(file type): ${data.size}MB (size)`
               },
               {
+                name: 'createAt',
                 title: 'created at',
                 size: 'shrink',
                 content: (data)=> <Text>{data.createAt}</Text>,
-                sort: state.createAtSort,
                 alignment: 'right',
-                onSortChange: (sort) => setState({ createAtSort: state.createAtSort ? (state.createAtSort==='down' ? 'up' : undefined) : 'down' })
+                hoverActions: (data) => (
+                                            [
+                                                    {
+                                                        icon:'file-download',
+                                                        type:'solid',
+                                                        tooltipText:'Download',
+                                                        onClick: () => alert(`download action on ${data.fileName}`)
+                                                    },
+                                                    {
+                                                        icon:'trash',
+                                                        type:'solid',
+                                                        tooltipText:'Delete',
+                                                        onClick: () => alert(`delete action on ${data.fileName}`)
+                                                    }
+                                            ]
+                                        )
               }
         ]}
      />
@@ -185,8 +201,7 @@ import { Variables, Props } from '@Common';
 import { FontAwesomeIcon } from '@Domain/Icons';
 
 initialState = {
-fileNameSort: undefined,
-createAtSort: 'down',
+sort: {fileName: undefined, createAt: 'down'},
 hasSuccessRowContent: true
 };
 
@@ -278,23 +293,21 @@ const successRowContentOverride = (
             swipeActions: rowActions 
           }
     ]}
+      sort={state.sort}
+      onSortChange={(sort) => setState({sort})}
   columns={[
         {
             size: 'auto',
             content: (data)=> <Text>{data.fileName}</Text>,
-            sort: state.fileNameSort, 
             alignment: 'left',
-            onSortChange: (sort) => setState({ fileNameSort: state.fileNameSort ? (state.fileNameSort==='down' ? 'up' : undefined) : 'down' }),
             tooltipText: (data)=> `${data.fileType}(file type): ${data.size}MB (size)`
           },
           {
             title: 'created at',
             size: 'shrink',
             content: (data)=> <Text>{data.createAt}</Text>,
-            sort: state.createAtSort,
-            alignment: 'right',
-            onSortChange: (sort) => setState({ createAtSort: state.createAtSort ? (state.createAtSort==='down' ? 'up' : undefined) : 'down' })
+            alignment: 'right'
           }
     ]}
- >
+ />
 ```

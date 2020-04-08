@@ -1,24 +1,21 @@
-import { clamp } from 'lodash'
-import React, {useEffect, useRef, useState} from 'react'
-import { useDrag } from 'react-use-gesture'
+import React, { useEffect, useState } from 'react'
 
 import { Props, Variables } from '../../../common'
 import { GridLayout } from '../../Layouts/GridLayout'
-import { Text } from '../../Typographies'
-import { RowVariant } from './colors'
+import { RowVariant } from './services/colors'
 import {
-  StyledRow,
   StyledTable,
-  StyledHeaderCell,
-  StyledHeaderLeftCell,
-  StyledTHead, StyledEmptyStateCell
-} from './style'
-import { TableCheckboxInput, TableCheckboxInputValue } from './subcomponents/TableCheckboxInput'
+  StyledTHead,
+  StyledEmptyStateCell,
+  StyledTableWrapper
+} from './services/style'
+import { TableCheckboxInputValue } from './subcomponents/TableCheckboxInput'
 import {
   FontAwesomeIconButton,
   IFontAwesomeIconButtonProps
 } from '../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
-import {TableRow} from './subcomponents/TableRow'
+import { TableRow } from './subcomponents/TableRow'
+import { TableHeader } from './subcomponents/TableHeader'
 
 enum ColumnSize {
   Auto = 'auto',
@@ -35,7 +32,11 @@ enum ColumnAlignment {
 }
 
 interface ISelectedRows {
-  [i: string]: boolean
+  [rowId: string]: boolean
+}
+
+interface IColumnSorts {
+  [columnName: string]: ColumnSortDirection
 }
 
 interface ITableProps {
@@ -50,6 +51,8 @@ interface ITableProps {
   onProgressEnd?: (data: any) => void
   bulkActions?: IFontAwesomeIconButtonProps[]
   emptyState: JSX.Element
+  sort: IColumnSorts
+  onSortChange: (sort: IColumnSorts) => void
 }
 
 interface IRowProps {
@@ -67,73 +70,13 @@ interface IRowProps {
 }
 
 interface IColumnProps {
+  name: string
   title?: string
   size: ColumnSize
   content: (data: any) => JSX.Element
-  sort?: ColumnSortDirection
-  onSortChange: () => void
   alignment?: ColumnAlignment
   tooltipText?: (data: any) => string
-  hoverActions?: IFontAwesomeIconButtonProps[]
-}
-
-const handleTableHeaderCheckboxInputChange = (setSelectedAll: (value: TableCheckboxInputValue) => void) => (value: TableCheckboxInputValue) => {
-  setSelectedAll(value)
-}
-
-const getActionsCells = (actions: IFontAwesomeIconButtonProps[], name?: string) => {
-  return actions.map((actionProps, index) => ({
-    size:  ColumnSize.Shrink,
-    content: <FontAwesomeIconButton key={`actions-${name}-${index}`} {...actionProps}/>
-  }))
-}
-
-const getHeaderCells = (columns: IColumnProps[], bulkActions?: IFontAwesomeIconButtonProps[], isMobile?: boolean) => columns.map((column, index) => {
-  if (bulkActions && !isMobile) {
-    return (
-      <StyledHeaderCell key={index} size={column.size} alignment={column.alignment}>
-        {
-          index === 0 && (
-            <GridLayout
-              gutterMarginX={Variables.Spacing.sMedium}
-              verticalAlignment={GridLayout.VerticalAlignment.Middle}
-              cells={getActionsCells(bulkActions, 'bulk')}
-            />
-          )
-        }
-      </StyledHeaderCell>
-    )
-  }
-
-  return (
-    <StyledHeaderCell key={index} size={column.size} alignment={column.alignment} isLastColumn={index === columns.length - 1}  isFirstColumn={isMobile && index === 0}>
-      <Text weight={Variables.FontWeight.fwSemiBold}>{column.title}</Text>
-    </StyledHeaderCell>
-  )
-})
-
-const TableHeader: React.FC<{columns: IColumnProps[], selectedAll: TableCheckboxInputValue, setSelectedAll: (value: TableCheckboxInputValue) => void, isMobile: boolean, bulkActions?: IFontAwesomeIconButtonProps[], hasBulkAction: boolean, isEmpty: boolean}> = ({ columns, selectedAll, setSelectedAll, isMobile, bulkActions, hasBulkAction, isEmpty}) => {
-  return (
-    <StyledRow variant={RowVariant.Neutral}>
-      {
-        (isMobile || isEmpty) ? getHeaderCells(columns, hasBulkAction ? bulkActions : undefined ) : (
-          <>
-            <StyledHeaderLeftCell>
-              <TableCheckboxInput
-                name='selectAll'
-                value={selectedAll}
-                onChange={handleTableHeaderCheckboxInputChange(setSelectedAll)}
-              />
-            </StyledHeaderLeftCell>
-            {
-              getHeaderCells(columns, hasBulkAction ? bulkActions : undefined )
-            }
-          </>
-        )
-      }
-
-    </StyledRow>
-  )
+  hoverActions?: (data: any) => IFontAwesomeIconButtonProps[]
 }
 
 const getNewSelectedAll = (currentSelectedRows: boolean[]) => {
@@ -179,7 +122,29 @@ const handleSelectionChanged = (rows: IRowProps[], selectedRows: ISelectedRows, 
   onSelectionChanged(selectedRowsData)
 }
 
-const Table: React.FC<ITableProps> = ({ rows, columns, onSelectionChanged, onProgressEnd, margins, componentContext, isMobile = false, bulkActions, emptyState}) => {
+const getActionsIconButtonGroup = (actions?: IFontAwesomeIconButtonProps[], name?: string, alignment?: ColumnAlignment) => {
+  if (actions) {
+    const horizontalAlignment = alignment === ColumnAlignment.Right ? GridLayout.HorizontalAlignment.Right : GridLayout.HorizontalAlignment.Left
+
+    return (
+      <GridLayout
+        horizontalAlignment={horizontalAlignment}
+        gutterMarginX={Variables.Spacing.sXSmall}
+        verticalAlignment={GridLayout.VerticalAlignment.Middle}
+        cells={
+          actions.map((actionProps, index) => ({
+            size:  ColumnSize.Shrink,
+            content: <FontAwesomeIconButton key={`actions-${name}-${index}`} {...actionProps}/>
+          }))
+        }
+      />
+      )
+  }
+
+  return null
+}
+
+const Table: React.FC<ITableProps> = ({ rows, sort, onSortChange, columns, onSelectionChanged, onProgressEnd, margins, componentContext, isMobile = false, bulkActions, emptyState}) => {
   const [selectedAll, setSelectedAll] = useState<TableCheckboxInputValue>(TableCheckboxInputValue.False)
   const [selectedRows, setSelectedRows] = useState<ISelectedRows>({})
   useEffect(() => {
@@ -212,26 +177,30 @@ const Table: React.FC<ITableProps> = ({ rows, columns, onSelectionChanged, onPro
     }
   }, [selectedRows])
   return (
-    <StyledTable margins={margins}>
-      <StyledTHead>
-        <TableHeader
-          columns={columns}
-          selectedAll={selectedAll}
-          setSelectedAll={setSelectedAll}
-          isMobile={isMobile}
-          bulkActions={bulkActions}
-          hasBulkAction={selectedAll !== TableCheckboxInputValue.False}
-          isEmpty={rows.length === 0 }
-        />
-      </StyledTHead>
-      <tbody>
+    <StyledTableWrapper margins={margins}>
+      <StyledTable>
+        <StyledTHead>
+          <TableHeader
+            sort={sort}
+            onSortChange={onSortChange}
+            columns={columns}
+            selectedAll={selectedAll}
+            setSelectedAll={setSelectedAll}
+            isMobile={isMobile}
+            bulkActions={bulkActions}
+            hasBulkAction={selectedAll !== TableCheckboxInputValue.False}
+            isEmpty={rows.length === 0}
+          />
+        </StyledTHead>
+        <tbody>
         {
           rows.length === 0 ? (
             <tr><StyledEmptyStateCell colSpan={columns.length}>{emptyState}</StyledEmptyStateCell></tr>
           ) : rows.map((row) => <TableRow key={row.id} columns={columns} row={row} selectedRows={selectedRows} setSelectedRows={setSelectedRows} isMobile={isMobile} onProgressEnd={onProgressEnd}/>)
         }
-      </tbody>
-    </StyledTable>
+        </tbody>
+      </StyledTable>
+    </StyledTableWrapper>
   )
 }
 
@@ -241,5 +210,8 @@ export {
   IColumnProps,
   ISelectedRows,
   ColumnSize,
-  ColumnAlignment
+  ColumnAlignment,
+  ColumnSortDirection,
+  IColumnSorts,
+  getActionsIconButtonGroup
 }

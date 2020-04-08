@@ -1,11 +1,21 @@
 import styled, {css, keyframes} from 'styled-components'
 
-import {Props, Variables} from '../../../common'
-import {styleForMargins} from '../../Spacers/services/margins'
+import {Props, Variables} from '../../../../common'
+import {styleForMargins} from '../../../Spacers/services/margins'
 import {RowVariant, variantOptions} from './colors'
-import {ColumnAlignment, ColumnSize} from './Table'
+import {ColumnAlignment, ColumnSize, ColumnSortDirection} from '../Table'
+import {TableCheckboxInputValue} from '../subcomponents/TableCheckboxInput'
+import {FontAwesomeIcon} from '../../../Icons/FontAwesomeIcon'
 
-interface IStyledTableProps {
+interface IStyledTableCheckboxInputProps {
+  labelValue: TableCheckboxInputValue
+}
+
+interface IStyledTableCheckboxLabelProps {
+  value: TableCheckboxInputValue
+}
+
+interface IStyledTableWrapperProps {
   margins?: Props.IMargins
 }
 
@@ -40,17 +50,26 @@ interface IStyledDataCellProps {
   isFirstColumn?: boolean
 }
 
+interface IStyledSortButtonProps {
+  sort?: ColumnSortDirection
+  alignment: ColumnAlignment
+}
+
 const StyledTHead = styled.thead`
   background: none;
   border-bottom: none;
 `
 
-const StyledTable = styled.table`
+const StyledTableWrapper = styled.div`
   border: 1px solid ${Variables.Color.n250};
+
+  ${(props: IStyledTableWrapperProps) => styleForMargins(props.margins)}
+`
+
+const StyledTable = styled.table`
+  overflow: hidden;
   border-collapse: collapse;
   border-spacing: 0;
-
-  ${(props: IStyledTableProps) => styleForMargins(props.margins)}
 `
 
 const StyledHeaderCell = styled.th`
@@ -106,6 +125,7 @@ const StyledRow = styled.tr`
   border-top: 1px solid ${Variables.Color.n250};
   background: ${Variables.Color.n100};
   transition: transform 0.2s ease-out;
+  height: ${Variables.Spacing.sSmall * 2 + Variables.Spacing.sXLarge}px;
 
   ${(props: IStyledRowProps) => props.isHoverable && !props.isSelected && css`
       &:hover {
@@ -182,8 +202,174 @@ const StyledProgressBar = styled.div`
 
 `
 
-const StyledEmptyStateCell =styled.td`
+const StyledEmptyStateCell = styled.td`
   padding: ${Variables.Spacing.s3XLarge}px;
+`
+const StyledHeaderTitle = styled.div``
+
+const StyledSortButton = styled.div`
+  display: none;
+  margin: 0;
+  transition: transform .2s ease-out, display .2s ease-out;
+
+  ${(props: IStyledSortButtonProps) => props.alignment === ColumnAlignment.Right && css`
+      margin-right: ${Variables.Spacing.sXSmall}px;
+  `}
+
+  ${(props: IStyledSortButtonProps) => props.alignment === ColumnAlignment.Left && css`
+      margin-left: ${Variables.Spacing.sXSmall}px;
+  `}
+
+  ${(props: IStyledSortButtonProps) => props.sort && css`
+      display: inline-block;
+  `}
+
+  ${(props: IStyledSortButtonProps) => props.sort === ColumnSortDirection.Up && css`
+      transform: rotate(-180deg);
+  `}
+
+  ${StyledHeaderTitle}:hover & {
+    display: inline-block;
+  }
+`
+
+const StyledTableCheckboxInput = styled.input`
+  line-height: 16px;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  width: 0;
+
+  margin: 0;
+
+  &::-ms-clear {
+    display: none;
+  }
+
+  & + label {
+    margin: 0;
+  }
+
+  &:disabled + label {
+    margin: 0;
+    color: ${Variables.Color.n500};
+    cursor: not-allowed;
+
+    &::before {
+      background-color: ${Variables.Color.n150};
+      border-color: ${Variables.Color.n300};
+    }
+  }
+
+  &:focus + label {
+    margin: 0;
+    &.checkbox {
+      border-color: ${Variables.Color.i400};
+
+      &::before {
+        background-color: ${Variables.Color.n300};
+        border-color: ${Variables.Color.i400};
+      }
+    }
+
+    &.checkbox-button {
+      background-color: ${Variables.Color.n200};
+      border-color: ${Variables.Color.i400};
+    }
+  }
+
+  &:checked + label {
+    margin: 0;
+    border-color: ${Variables.Color.i600};
+
+    &::before {
+      border-color: ${Variables.Color.i400};
+    }
+
+    &:hover {
+      border-color: ${Variables.Color.i400};
+
+      &::before {
+        border-color: ${Variables.Color.i400};
+      }
+    }
+  }
+
+  ${(props: IStyledTableCheckboxInputProps) => props.labelValue === TableCheckboxInputValue.PartialTrue && css`
+    & + label {
+      margin: 0;
+      border-color: ${Variables.Color.i600};
+
+      &::before {
+        border-color: ${Variables.Color.i400};
+      }
+
+      &:hover {
+        border-color: ${Variables.Color.i400};
+
+        &::before {
+          border-color: ${Variables.Color.i400};
+        }
+      }
+    }
+  `}
+`
+
+const StyledTableCheckboxLabel = styled.label`
+  width:20px;
+  height:20px;
+  position: relative;
+  cursor: pointer;
+  transition: .25s ease-out;
+  margin: 0;
+
+  &::before {
+      background-color: ${Variables.Color.n150};
+      border: 2px solid  ${Variables.Color.n400};
+      border-radius: ${Variables.Style.borderRadius}px;
+      content: '';
+      display: inline-block;
+      height: 20px;
+      left: 0;
+      position: absolute;
+      top: 4px;
+      transition: .25s ease-out, color .25s ease-out;
+      vertical-align: top;
+      width: 20px;
+    }
+
+  &:hover {
+
+    &::before {
+      background-color: ${Variables.Color.n300};
+      border-color: ${Variables.Color.n600};
+    }
+  }
+
+  ${(props: IStyledTableCheckboxLabelProps) => props.value === TableCheckboxInputValue.False && css`
+    ${StyledRow}:hover & {
+      &::before {
+        background-color: ${Variables.Color.n300};
+        border-color: ${Variables.Color.n600};
+        transition: .25s ease-out, color .25s ease-out;
+      }
+    }
+`}
+`
+
+const styledFontAwesomeIconAnimation = keyframes`
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+`
+
+const StyledFontAwesomeIcon =  styled(FontAwesomeIcon)`
+  position: absolute;
+  width: 21px;
+  height: 20px;
+  top: 9px;
+  left: 0;
+  animation-name: ${styledFontAwesomeIconAnimation};
+  animation-duration: .25s;
 `
 
 export {
@@ -197,5 +383,10 @@ export {
   StyledProgressBarRow,
   StyledHeaderLeftCell,
   StyledTHead,
-  StyledEmptyStateCell
+  StyledEmptyStateCell,
+  StyledTableCheckboxInput,
+  StyledTableCheckboxLabel,
+  StyledFontAwesomeIcon,
+  StyledSortButton,
+  StyledTableWrapper
 }
