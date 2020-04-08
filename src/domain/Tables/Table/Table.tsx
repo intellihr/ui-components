@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react'
 
 import { Props, Variables } from '../../../common'
-import { GridLayout } from '../../Layouts/GridLayout'
-import { RowVariant } from './services/colors'
-import {
-  StyledTable,
-  StyledTHead,
-  StyledEmptyStateCell,
-  StyledTableWrapper
-} from './services/style'
-import { TableCheckboxInputValue } from './subcomponents/TableCheckboxInput'
 import {
   FontAwesomeIconButton,
   IFontAwesomeIconButtonProps
 } from '../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
-import { TableRow } from './subcomponents/TableRow'
+import { GridLayout } from '../../Layouts/GridLayout'
+import { RowVariant } from './services/colors'
+import {
+  StyledEmptyStateCell,
+  StyledTHead,
+  StyledTable,
+  StyledTableWrapper
+} from './services/style'
+import { TableCheckboxInputValue } from './subcomponents/TableCheckboxInput'
 import { TableHeader } from './subcomponents/TableHeader'
+import { TableRow } from './subcomponents/TableRow'
 
 enum ColumnSize {
   Auto = 'auto',

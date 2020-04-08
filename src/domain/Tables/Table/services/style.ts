@@ -1,11 +1,11 @@
 import styled, {css, keyframes} from 'styled-components'
 
 import {Props, Variables} from '../../../../common'
-import {styleForMargins} from '../../../Spacers/services/margins'
-import {RowVariant, variantOptions} from './colors'
-import {ColumnAlignment, ColumnSize, ColumnSortDirection} from '../Table'
-import {TableCheckboxInputValue} from '../subcomponents/TableCheckboxInput'
 import {FontAwesomeIcon} from '../../../Icons/FontAwesomeIcon'
+import {styleForMargins} from '../../../Spacers/services/margins'
+import {TableCheckboxInputValue} from '../subcomponents/TableCheckboxInput'
+import {ColumnAlignment, ColumnSize, ColumnSortDirection} from '../Table'
+import {RowVariant, variantOptions} from './colors'
 
 interface IStyledTableCheckboxInputProps {
   labelValue: TableCheckboxInputValue

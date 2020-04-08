@@ -2,21 +2,21 @@ import { clamp } from 'lodash'
 import React, { useEffect, useState } from 'react'
 import { useDrag } from 'react-use-gesture'
 
-import {ColumnAlignment, getActionsIconButtonGroup, IColumnProps, IRowProps, ISelectedRows} from '../Table'
-import { TableCheckboxInput, TableCheckboxInputValue } from './TableCheckboxInput'
+import {Variables} from '../../../../common'
 import { TooltipPopover } from '../../../Popovers/TooltipPopover'
 import { TooltipPopoverVariant } from '../../../Popovers/TooltipPopover/TooltipPopover'
 import { RowVariant } from '../services/colors'
+import {handleHovered, usePrevious} from '../services/helper'
 import {
   StyledDataCell,
+  StyledHeaderCell,
+  StyledHeaderLeftCell,
   StyledProgressBar,
-  StyledRow,
   StyledProgressBarCell,
-  StyledProgressBarRow,
-  StyledHeaderLeftCell, StyledSortButton, StyledHeaderCell, StyledSwipeActionsCell, StyledSwipeActions
+  StyledProgressBarRow, StyledRow, StyledSortButton, StyledSwipeActions, StyledSwipeActionsCell
 } from '../services/style'
-import {handleHovered, usePrevious} from '../services/helper'
-import {Variables} from '../../../../common'
+import {ColumnAlignment, IColumnProps, IRowProps, ISelectedRows, getActionsIconButtonGroup} from '../Table'
+import { TableCheckboxInput, TableCheckboxInputValue } from './TableCheckboxInput'
 
 interface ITableRowProps {
   columns: IColumnProps[]

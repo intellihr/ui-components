@@ -1,17 +1,17 @@
 import React, {useState} from 'react'
 
 import {Variables} from '../../../../common'
-import {Text} from '../../../Typographies'
-import {RowVariant} from '../services/colors'
-import {StyledHeaderCell, StyledHeaderLeftCell, StyledRow, StyledSortButton} from '../services/style'
-import {TableCheckboxInput, TableCheckboxInputValue} from './TableCheckboxInput'
 import {
   FontAwesomeIconButton,
   IFontAwesomeIconButtonProps
 } from '../../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
-import {ColumnAlignment, ColumnSortDirection, getActionsIconButtonGroup, IColumnProps, IColumnSorts} from '../Table'
+import {Text} from '../../../Typographies'
 import {LinkVariant} from '../../../Typographies/Text/subcomponents/Link'
+import {RowVariant} from '../services/colors'
 import {handleHovered} from '../services/helper'
+import {StyledHeaderCell, StyledHeaderLeftCell, StyledRow, StyledSortButton} from '../services/style'
+import {ColumnAlignment, ColumnSortDirection, IColumnProps, IColumnSorts, getActionsIconButtonGroup} from '../Table'
+import {TableCheckboxInput, TableCheckboxInputValue} from './TableCheckboxInput'
 
 interface ITableHeaderProps {
   columns: IColumnProps[]
