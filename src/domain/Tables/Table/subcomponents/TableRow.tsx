@@ -2,12 +2,8 @@ import { clamp } from 'lodash'
 import React, { useEffect, useState } from 'react'
 import { useDrag } from 'react-use-gesture'
 
-import {ColumnSize, getActionsIconButtonGroup, IColumnProps, IRowProps, ISelectedRows} from '../Table'
+import {ColumnAlignment, getActionsIconButtonGroup, IColumnProps, IRowProps, ISelectedRows} from '../Table'
 import { TableCheckboxInput, TableCheckboxInputValue } from './TableCheckboxInput'
-import {
-  FontAwesomeIconButton,
-  IFontAwesomeIconButtonProps
-} from '../../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
 import { TooltipPopover } from '../../../Popovers/TooltipPopover'
 import { TooltipPopoverVariant } from '../../../Popovers/TooltipPopover/TooltipPopover'
 import { RowVariant } from '../services/colors'
@@ -17,9 +13,10 @@ import {
   StyledRow,
   StyledProgressBarCell,
   StyledProgressBarRow,
-  StyledHeaderLeftCell
+  StyledHeaderLeftCell, StyledSortButton, StyledHeaderCell, StyledSwipeActionsCell, StyledSwipeActions
 } from '../services/style'
 import {handleHovered, usePrevious} from '../services/helper'
+import {Variables} from '../../../../common'
 
 interface ITableRowProps {
   columns: IColumnProps[]
@@ -27,6 +24,7 @@ interface ITableRowProps {
   selectedRows: ISelectedRows
   setSelectedRows: (value: ISelectedRows) => void
   isMobile: boolean
+  hasTableSwipeActions: boolean
   onProgressEnd?: (row: any) => void
 }
 
@@ -97,7 +95,7 @@ const getLeftCell = (isSelectable: boolean, isRemovable: boolean, isMobile: bool
   return null
 }
 
-const getDataCells = (isSelected: boolean, columns: IColumnProps[], row: IRowProps, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void, setHasHovered: (value: boolean) => void, isMobile: boolean, hasHoverButton: boolean) => columns.map((column, index) => {
+const getDataCells = (hasSwipeActions: boolean, hasTableSwipeActions: boolean, isSelected: boolean, columns: IColumnProps[], row: IRowProps, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void, setHasHovered: (value: boolean) => void, isMobile: boolean, hasHoverButton: boolean) => columns.map((column, index) => {
   const {
     isSelectable = false,
     onClick,
@@ -120,13 +118,15 @@ const getDataCells = (isSelected: boolean, columns: IColumnProps[], row: IRowPro
   }
 
   const content = contentOverride ? contentOverride(data)[index] : column.content(data)
+  const isLastColumn = index === columns.length - 1
 
   return (
     <StyledDataCell
       key={column.name}
+      colSpan={(isLastColumn && hasTableSwipeActions && !hasSwipeActions) ? 2 : undefined}
       alignment={column.alignment}
       onClick={handleTableCellClicked(row.id, row, selectedRows, setSelectedRows, setHasHovered, isSelectable, onClick)}
-      isLastColumn={index === columns.length - 1}
+      isLastColumn={isLastColumn}
       isFirstColumn={isMobile && index === 0}
     >
       {column.tooltipText ? <TableCellTooltip tooltipText={column.tooltipText(row.data)}>{content}</TableCellTooltip> : content}
@@ -136,7 +136,7 @@ const getDataCells = (isSelected: boolean, columns: IColumnProps[], row: IRowPro
 
 const parsedProgressToPercentage = (progress?: number) => progress ? clamp(progress, 0, 1) * 100 : 0
 
-const TableRow: React.FC<ITableRowProps> = ({ columns, row, selectedRows, setSelectedRows, isMobile = false, onProgressEnd}) => {
+const TableRow: React.FC<ITableRowProps> = ({ columns, row, selectedRows, setSelectedRows, isMobile = false, onProgressEnd, hasTableSwipeActions}) => {
   const {
     isSelectable = false,
     isRemovable = false,
@@ -148,7 +148,7 @@ const TableRow: React.FC<ITableRowProps> = ({ columns, row, selectedRows, setSel
     swipeActions
   } = row
 
-  const swipeContentWidth = swipeActions ? swipeActions.length * 40 + 10 : 0
+  const swipeContentWidth = swipeActions ? swipeActions.length * Variables.Spacing.sXLarge + (swipeActions.length - 1) * Variables.Spacing.sXSmall + 2 * Variables.Spacing.sMedium : 0
 
   const [hasProgressBarEnded, setHasProgressBarEnded] = useState<boolean>(false)
   const [movement, setMovement] = useState<number>(0)
@@ -191,6 +191,8 @@ const TableRow: React.FC<ITableRowProps> = ({ columns, row, selectedRows, setSel
     }
   }, [progress])
 
+  const hasSwipeActions = isMobile  && !!swipeActions && swipeActions.length > 0
+
   return (
     <>
       <StyledRow
@@ -204,7 +206,16 @@ const TableRow: React.FC<ITableRowProps> = ({ columns, row, selectedRows, setSel
         onMouseLeave={handleHovered(false, setHasHovered)}
       >
         {getLeftCell(isSelectable, isRemovable, isMobile, row, selectedRows, setSelectedRows, checkboxOverride ? checkboxOverride(data) : undefined)}
-        {getDataCells(isSelected, columns, row, selectedRows, setSelectedRows, setHasHovered, isMobile, hasHovered)}
+        {getDataCells(hasSwipeActions, hasTableSwipeActions, isSelected, columns, row, selectedRows, setSelectedRows, setHasHovered, isMobile, hasHovered)}
+        {
+          hasSwipeActions && (
+            <StyledSwipeActionsCell>
+              <StyledSwipeActions width={movement}>
+                {getActionsIconButtonGroup(swipeActions)}
+              </StyledSwipeActions>
+            </StyledSwipeActionsCell>
+          )
+        }
       </StyledRow>
       {(progress && !hasProgressBarEnded) && (
         <StyledProgressBarRow>

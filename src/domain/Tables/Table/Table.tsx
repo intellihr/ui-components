@@ -176,6 +176,9 @@ const Table: React.FC<ITableProps> = ({ rows, sort, onSortChange, columns, onSel
       }
     }
   }, [selectedRows])
+
+  const hasTableSwipeActions = isMobile && rows.some((row) => !!row.swipeActions && row.swipeActions.length > 0)
+
   return (
     <StyledTableWrapper margins={margins}>
       <StyledTable>
@@ -188,6 +191,7 @@ const Table: React.FC<ITableProps> = ({ rows, sort, onSortChange, columns, onSel
             setSelectedAll={setSelectedAll}
             isMobile={isMobile}
             bulkActions={bulkActions}
+            hasTableSwipeActions={hasTableSwipeActions}
             hasBulkAction={selectedAll !== TableCheckboxInputValue.False}
             isEmpty={rows.length === 0}
           />
@@ -196,7 +200,7 @@ const Table: React.FC<ITableProps> = ({ rows, sort, onSortChange, columns, onSel
         {
           rows.length === 0 ? (
             <tr><StyledEmptyStateCell colSpan={columns.length}>{emptyState}</StyledEmptyStateCell></tr>
-          ) : rows.map((row) => <TableRow key={row.id} columns={columns} row={row} selectedRows={selectedRows} setSelectedRows={setSelectedRows} isMobile={isMobile} onProgressEnd={onProgressEnd}/>)
+          ) : rows.map((row) => <TableRow key={row.id} hasTableSwipeActions={hasTableSwipeActions} columns={columns} row={row} selectedRows={selectedRows} setSelectedRows={setSelectedRows} isMobile={isMobile} onProgressEnd={onProgressEnd}/>)
         }
         </tbody>
       </StyledTable>

@@ -67,6 +67,7 @@ const StyledTableWrapper = styled.div`
 `
 
 const StyledTable = styled.table`
+  margin: 0;
   overflow: hidden;
   border-collapse: collapse;
   border-spacing: 0;
@@ -97,6 +98,25 @@ const StyledHeaderLeftCell = styled.th`
   padding: ${Variables.Spacing.sSmall}px ${Variables.Spacing.sSmall}px ${Variables.Spacing.sSmall}px ${Variables.Spacing.sMedium}px;
   text-align: center;
   width: ${Variables.Spacing.sXLarge}px;
+`
+
+const StyledSwipeActionsCell = styled.td`
+  padding: 0;
+`
+
+const StyledSwipeActions = styled.div`
+    padding: ${Variables.Spacing.sSmall}px
+    top:0;
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+    border-left: 1px solid ${Variables.Color.n250};
+    height: 50px;
+
+    ${(props: IStyledSwipeActionsProps) => props.width && css`
+      width: ${props.width}px;
+      transition: 0.2s ease-out;
+  `}
 `
 
 const StyledDataCell = styled.td`
@@ -150,22 +170,6 @@ const StyledRow = styled.tr`
   ${(props: IStyledRowProps) => props.movement && css`
       transform: translateX(-${props.movement}px);
       transition: transform 0.2s ease-out;
-  `}
-`
-
-const StyledSwipeActions = styled.div`
-  position: absolute;
-  border-left: 1px solid ${Variables.Color.n250};
-  display: block;
-  top: 0;
-  width: 0;
-  height: 100%;
-  transition: 0.2s ease-out;
-  overflow: hidden;
-
-  ${(props: IStyledSwipeActionsProps) => props.width && css`
-      width: ${props.width}px;
-      transition: 0.2s ease-out;
   `}
 `
 
@@ -376,7 +380,6 @@ export {
   StyledTable,
   StyledRow,
   StyledProgressBar,
-  StyledSwipeActions,
   StyledHeaderCell,
   StyledDataCell,
   StyledProgressBarCell,
@@ -388,5 +391,7 @@ export {
   StyledTableCheckboxLabel,
   StyledFontAwesomeIcon,
   StyledSortButton,
-  StyledTableWrapper
+  StyledTableWrapper,
+  StyledSwipeActionsCell,
+  StyledSwipeActions
 }
