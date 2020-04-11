@@ -21,7 +21,7 @@ interface ITabListItemButtonProps {
   tabSize?: TabSize
 }
 
-function stylesFortabSizes (props: ITabListItemButtonProps) {
+function stylesFortabSizes(props: ITabListItemButtonProps) {
   if (props.tabSize === 'small') {
     return css`
       font-size: ${Variables.FontSize.fzXSmall}px;
@@ -125,7 +125,7 @@ const HighlightBar = styled.div.attrs<IHighlightBarProps>(
     }
   }
 ) <IHighlightBarProps>`
-  height: 2px;
+  height: 2.1px;
   border-radius: 1px;
   background-color: ${Variables.Color.i400};
   position: absolute;
