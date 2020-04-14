@@ -922,11 +922,13 @@ exports[`<Table /> should render a mobile table 1`] = `
                                                       <styled.i
                                                         aria-hidden={true}
                                                         className="icon fas fa-arrow-down"
+                                                        data-component-type="icon"
                                                         size="medium"
                                                       >
                                                         <StyledComponent
                                                           aria-hidden={true}
                                                           className="icon fas fa-arrow-down"
+                                                          data-component-type="icon"
                                                           forwardedComponent={
                                                             Object {
                                                               "$$typeof": Symbol(react.forward_ref),
@@ -1004,6 +1006,7 @@ exports[`<Table /> should render a mobile table 1`] = `
                                                           <i
                                                             aria-hidden={true}
                                                             className="c10 icon fas fa-arrow-down"
+                                                            data-component-type="icon"
                                                             size="medium"
                                                           />
                                                         </StyledComponent>
@@ -1248,11 +1251,13 @@ exports[`<Table /> should render a mobile table 1`] = `
                                                       <styled.i
                                                         aria-hidden={true}
                                                         className="icon fas fa-arrow-down"
+                                                        data-component-type="icon"
                                                         size="medium"
                                                       >
                                                         <StyledComponent
                                                           aria-hidden={true}
                                                           className="icon fas fa-arrow-down"
+                                                          data-component-type="icon"
                                                           forwardedComponent={
                                                             Object {
                                                               "$$typeof": Symbol(react.forward_ref),
@@ -1330,6 +1335,7 @@ exports[`<Table /> should render a mobile table 1`] = `
                                                           <i
                                                             aria-hidden={true}
                                                             className="c10 icon fas fa-arrow-down"
+                                                            data-component-type="icon"
                                                             size="medium"
                                                           />
                                                         </StyledComponent>
@@ -4518,11 +4524,13 @@ exports[`<Table /> should render a table 1`] = `
                                                       <styled.i
                                                         aria-hidden={true}
                                                         className="icon fas fa-arrow-down"
+                                                        data-component-type="icon"
                                                         size="medium"
                                                       >
                                                         <StyledComponent
                                                           aria-hidden={true}
                                                           className="icon fas fa-arrow-down"
+                                                          data-component-type="icon"
                                                           forwardedComponent={
                                                             Object {
                                                               "$$typeof": Symbol(react.forward_ref),
@@ -4600,6 +4608,7 @@ exports[`<Table /> should render a table 1`] = `
                                                           <i
                                                             aria-hidden={true}
                                                             className="c13 icon fas fa-arrow-down"
+                                                            data-component-type="icon"
                                                             size="medium"
                                                           />
                                                         </StyledComponent>
@@ -4844,11 +4853,13 @@ exports[`<Table /> should render a table 1`] = `
                                                       <styled.i
                                                         aria-hidden={true}
                                                         className="icon fas fa-arrow-down"
+                                                        data-component-type="icon"
                                                         size="medium"
                                                       >
                                                         <StyledComponent
                                                           aria-hidden={true}
                                                           className="icon fas fa-arrow-down"
+                                                          data-component-type="icon"
                                                           forwardedComponent={
                                                             Object {
                                                               "$$typeof": Symbol(react.forward_ref),
@@ -4926,6 +4937,7 @@ exports[`<Table /> should render a table 1`] = `
                                                           <i
                                                             aria-hidden={true}
                                                             className="c13 icon fas fa-arrow-down"
+                                                            data-component-type="icon"
                                                             size="medium"
                                                           />
                                                         </StyledComponent>
@@ -5411,11 +5423,13 @@ exports[`<Table /> should render a table 1`] = `
                                                     <styled.i
                                                       aria-hidden={true}
                                                       className="icon far fa-times"
+                                                      data-component-type="icon"
                                                       size="medium"
                                                     >
                                                       <StyledComponent
                                                         aria-hidden={true}
                                                         className="icon far fa-times"
+                                                        data-component-type="icon"
                                                         forwardedComponent={
                                                           Object {
                                                             "$$typeof": Symbol(react.forward_ref),
@@ -5493,6 +5507,7 @@ exports[`<Table /> should render a table 1`] = `
                                                         <i
                                                           aria-hidden={true}
                                                           className="c13 icon far fa-times"
+                                                          data-component-type="icon"
                                                           size="medium"
                                                         />
                                                       </StyledComponent>
@@ -5554,6 +5569,7 @@ exports[`<Table /> should render a table 1`] = `
                                             <i
                                               aria-hidden="true"
                                               class="c1 icon far fa-times"
+                                              data-component-type="icon"
                                             />
                                           </button>
                                         </span>,
@@ -6043,11 +6059,13 @@ exports[`<Table /> should render a table 1`] = `
                                                     <styled.i
                                                       aria-hidden={true}
                                                       className="icon far fa-times"
+                                                      data-component-type="icon"
                                                       size="medium"
                                                     >
                                                       <StyledComponent
                                                         aria-hidden={true}
                                                         className="icon far fa-times"
+                                                        data-component-type="icon"
                                                         forwardedComponent={
                                                           Object {
                                                             "$$typeof": Symbol(react.forward_ref),
@@ -6125,6 +6143,7 @@ exports[`<Table /> should render a table 1`] = `
                                                         <i
                                                           aria-hidden={true}
                                                           className="c13 icon far fa-times"
+                                                          data-component-type="icon"
                                                           size="medium"
                                                         />
                                                       </StyledComponent>
@@ -6186,6 +6205,7 @@ exports[`<Table /> should render a table 1`] = `
                                             <i
                                               aria-hidden="true"
                                               class="c1 icon far fa-times"
+                                              data-component-type="icon"
                                             />
                                           </button>
                                         </span>,
@@ -6809,11 +6829,13 @@ exports[`<Table /> should render a table 1`] = `
                                                     <styled.i
                                                       aria-hidden={true}
                                                       className="icon far fa-times"
+                                                      data-component-type="icon"
                                                       size="medium"
                                                     >
                                                       <StyledComponent
                                                         aria-hidden={true}
                                                         className="icon far fa-times"
+                                                        data-component-type="icon"
                                                         forwardedComponent={
                                                           Object {
                                                             "$$typeof": Symbol(react.forward_ref),
@@ -6891,6 +6913,7 @@ exports[`<Table /> should render a table 1`] = `
                                                         <i
                                                           aria-hidden={true}
                                                           className="c13 icon far fa-times"
+                                                          data-component-type="icon"
                                                           size="medium"
                                                         />
                                                       </StyledComponent>
@@ -6952,6 +6975,7 @@ exports[`<Table /> should render a table 1`] = `
                                             <i
                                               aria-hidden="true"
                                               class="c1 icon far fa-times"
+                                              data-component-type="icon"
                                             />
                                           </button>
                                         </span>,
@@ -9184,11 +9208,13 @@ exports[`<Table /> should render an empty table 1`] = `
                                                       <styled.i
                                                         aria-hidden={true}
                                                         className="icon fas fa-arrow-down"
+                                                        data-component-type="icon"
                                                         size="medium"
                                                       >
                                                         <StyledComponent
                                                           aria-hidden={true}
                                                           className="icon fas fa-arrow-down"
+                                                          data-component-type="icon"
                                                           forwardedComponent={
                                                             Object {
                                                               "$$typeof": Symbol(react.forward_ref),
@@ -9266,6 +9292,7 @@ exports[`<Table /> should render an empty table 1`] = `
                                                           <i
                                                             aria-hidden={true}
                                                             className="c10 icon fas fa-arrow-down"
+                                                            data-component-type="icon"
                                                             size="medium"
                                                           />
                                                         </StyledComponent>
@@ -9510,11 +9537,13 @@ exports[`<Table /> should render an empty table 1`] = `
                                                       <styled.i
                                                         aria-hidden={true}
                                                         className="icon fas fa-arrow-down"
+                                                        data-component-type="icon"
                                                         size="medium"
                                                       >
                                                         <StyledComponent
                                                           aria-hidden={true}
                                                           className="icon fas fa-arrow-down"
+                                                          data-component-type="icon"
                                                           forwardedComponent={
                                                             Object {
                                                               "$$typeof": Symbol(react.forward_ref),
@@ -9592,6 +9621,7 @@ exports[`<Table /> should render an empty table 1`] = `
                                                           <i
                                                             aria-hidden={true}
                                                             className="c10 icon fas fa-arrow-down"
+                                                            data-component-type="icon"
                                                             size="medium"
                                                           />
                                                         </StyledComponent>
