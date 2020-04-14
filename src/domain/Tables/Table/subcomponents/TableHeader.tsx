@@ -1,14 +1,14 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
-import {Variables} from '../../../../common'
+import { Variables } from '../../../../common'
 import {
   FontAwesomeIconButton,
   IFontAwesomeIconButtonProps
 } from '../../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
-import {GridLayout} from '../../../Layouts/GridLayout'
-import {Text} from '../../../Typographies'
-import {LinkVariant} from '../../../Typographies/Text/subcomponents/Link'
-import {TableRowVariant} from '../services/colors'
+import { GridLayout } from '../../../Layouts/GridLayout'
+import { Text } from '../../../Typographies'
+import { LinkVariant } from '../../../Typographies/Text/subcomponents/Link'
+import { TableRowVariant } from '../services/colors'
 import {
   getSortButtonDirection,
   handleHeaderTitleClicked,
@@ -30,14 +30,14 @@ import {
   IColumnSorts,
   getActionsIconButtonGroup
 } from '../Table'
-import {TableCheckboxInput, TableCheckboxInputValue} from './TableCheckboxInput'
+import { TableCheckboxInput, TableCheckboxInputValue } from './TableCheckboxInput'
 
 interface ITableHeaderProps {
   columns: IColumnProps[]
   selectedAll: TableCheckboxInputValue
   setSelectedAll: (value: TableCheckboxInputValue) => void
-  isMobile: boolean
   bulkActions?: IFontAwesomeIconButtonProps[]
+  hasLeftAction: boolean
   hasBulkAction: boolean
   hasTableSwipeActions: boolean
   isEmpty: boolean
@@ -96,14 +96,14 @@ const getHeaderCells = (
   columns: IColumnProps[],
   sort: IColumnSorts,
   onSortChange: (sort: IColumnSorts) => void,
-  bulkActions?: IFontAwesomeIconButtonProps[],
-  isMobile?: boolean
+  hasLeftAction: boolean,
+  bulkActions?: IFontAwesomeIconButtonProps[]
 ) => {
   const hasHeaderSize = columns.some((column) => !!column.headerSize)
 
   if (hasHeaderSize) {
     return (
-      <StyledHeaderCellWithHeaderSize colSpan={isMobile ? columns.length : columns.length + 1}>
+      <StyledHeaderCellWithHeaderSize colSpan={!hasLeftAction ? columns.length : columns.length + 1}>
         <GridLayout
           cells={
             columns.map((column, index) => {
@@ -113,7 +113,7 @@ const getHeaderCells = (
                 displayType: 'flex',
                 flexHorizontalAlignment: (column.alignment && column.alignment === ColumnAlignment.Right) ? GridLayout.HorizontalAlignment.Right : GridLayout.HorizontalAlignment.Left,
                 size: (size === ColumnSize.Shrink) ? 'shrink' : 'auto',
-                content: <div><TableHeaderCellContent column={column} sort={sort} onSortChange={onSortChange} isLastColumn={index === columns.length - 1} isFirstColumn={!!isMobile && index === 0} hasTableSwipeActions={hasTableSwipeActions}/></div>
+                content: <div><TableHeaderCellContent column={column} sort={sort} onSortChange={onSortChange} isLastColumn={index === columns.length - 1} isFirstColumn={!hasLeftAction && index === 0} hasTableSwipeActions={hasTableSwipeActions}/></div>
               })
             })
           }
@@ -131,9 +131,9 @@ const getHeaderCells = (
       } =  column
 
       const isLastColumn = index === columns.length - 1
-      const isFirstColumn = !!isMobile && index === 0
+      const isFirstColumn = !hasLeftAction && index === 0
 
-      if (bulkActions && !isMobile) {
+      if (bulkActions && hasLeftAction) {
         return (
           <StyledHeaderCell key={name} size={size} alignment={alignment}>
             {
@@ -151,11 +151,11 @@ const getHeaderCells = (
   )
 }
 
-const TableHeader: React.FC<ITableHeaderProps> = ({ columns, sort, onSortChange, hasTableSwipeActions, selectedAll, setSelectedAll, isMobile, bulkActions, hasBulkAction, isEmpty}) => {
+const TableHeader: React.FC<ITableHeaderProps> = ({ hasLeftAction, columns, sort, onSortChange, hasTableSwipeActions, selectedAll, setSelectedAll, bulkActions, hasBulkAction, isEmpty}) => {
   return (
-    <StyledRow variant={TableRowVariant.Neutral}>
+    <StyledRow variant={TableRowVariant.Neutral} isHeader isEmptyHeader={isEmpty} >
       {
-        (isMobile || isEmpty) ? getHeaderCells(hasTableSwipeActions, columns, sort, onSortChange, hasBulkAction ? bulkActions : undefined ) : (
+        (!hasLeftAction || isEmpty) ? getHeaderCells(hasTableSwipeActions, columns, sort, onSortChange,  hasLeftAction, hasBulkAction ? bulkActions : undefined ) : (
           <>
             <StyledHeaderLeftCell>
               <TableCheckboxInput
@@ -165,7 +165,7 @@ const TableHeader: React.FC<ITableHeaderProps> = ({ columns, sort, onSortChange,
               />
             </StyledHeaderLeftCell>
             {
-              getHeaderCells(hasTableSwipeActions, columns, sort, onSortChange, hasBulkAction ? bulkActions : undefined )
+              getHeaderCells(hasTableSwipeActions, columns, sort, onSortChange, hasLeftAction, hasBulkAction ? bulkActions : undefined )
             }
           </>
         )

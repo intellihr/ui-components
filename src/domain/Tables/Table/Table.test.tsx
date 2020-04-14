@@ -1,14 +1,15 @@
-import {mount, shallow} from 'enzyme'
+import {mount} from 'enzyme'
 import React from 'react'
 
 import {TableRowVariant} from './services/colors'
-import {ColumnAlignment, ColumnSize, ColumnSortDirection, Table} from './Table'
+import {ColumnAlignment, ColumnSize, ColumnSortDirection, Table, TableTouchType} from './Table'
 
 const onSelectionChanged = jest.fn()
 const onSortChange = jest.fn()
 const onRowClick = jest.fn()
 const emptyState = <div>empty</div>
 const contentOverride = () => [<div key={0}>override</div>, <div key={1}>override</div>]
+const rowContentOverride = () => <div>override</div>
 const columns = [
   {
     name: 'fileName',
@@ -33,7 +34,7 @@ const rows = [
     isRemovable: true,
     variant: TableRowVariant.Red,
     onClick: onRowClick,
-    contentOverride
+    rowContentOverride
   },
   {
     id: '1',
@@ -67,6 +68,7 @@ describe('<Table />', () => {
   it('should render a table', () => {
     const wrapper = mount(
       <Table
+        hasLeftAction
         onSelectionChanged={onSelectionChanged}
         rows={rows}
         sort={{createAt: ColumnSortDirection.Down}}
@@ -79,10 +81,10 @@ describe('<Table />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should render a table', () => {
+  it('should render a mobile table', () => {
     const wrapper = mount(
       <Table
-        isMobile
+        touchType={TableTouchType.Swipe}
         onSelectionChanged={onSelectionChanged}
         rows={rows}
         sort={{createAt: ColumnSortDirection.Down}}

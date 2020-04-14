@@ -1,11 +1,11 @@
-import styled, {css, keyframes} from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 
-import {Props, Variables} from '../../../../common'
-import {FontAwesomeIcon} from '../../../Icons/FontAwesomeIcon'
-import {styleForMargins} from '../../../Spacers/services/margins'
-import {TableCheckboxInputValue} from '../subcomponents/TableCheckboxInput'
-import {ColumnAlignment, ColumnSize, ColumnSortDirection} from '../Table'
-import {TableRowVariant, variantOptions} from './colors'
+import { Props, Variables } from '../../../../common'
+import { FontAwesomeIcon } from '../../../Icons/FontAwesomeIcon'
+import { styleForMargins } from '../../../Spacers/services/margins'
+import { TableCheckboxInputValue } from '../subcomponents/TableCheckboxInput'
+import { ColumnAlignment, ColumnSize, ColumnSortDirection } from '../Table'
+import { TableRowVariant, variantOptions } from './colors'
 
 interface IStyledTableCheckboxInputProps {
   labelValue: TableCheckboxInputValue
@@ -25,6 +25,8 @@ interface IStyledRowProps {
   variant: TableRowVariant
   movement?: number
   hasProgressBar?: boolean
+  isHeader?: boolean
+  isEmptyHeader?: boolean
 }
 
 interface IStyledSwipeActionsProps {
@@ -47,6 +49,7 @@ interface IStyledDataCellProps {
   alignment?: ColumnAlignment
   isLastColumn?: boolean
   isFirstColumn?: boolean
+  hasProgressBar?: boolean
 }
 
 interface IStyledSortButtonProps {
@@ -77,15 +80,15 @@ const StyledHeaderCellWithHeaderSize = styled.th`
 `
 
 const StyledHeaderCell = styled.th`
-  padding:  ${Variables.Spacing.sSmall}px ${Variables.Spacing.sMedium}px;
+  padding:  ${Variables.Spacing.sSmall}px;
   text-align: left;
 
   ${(props: IStyledHeaderCellProps) => props.isLastColumn && css`
-      padding:  ${Variables.Spacing.sSmall}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sSmall}px ${Variables.Spacing.sSmall}px;
+      padding-right: ${Variables.Spacing.sMedium}px;
   `}
 
   ${(props: IStyledHeaderCellProps) => props.isFirstColumn && css`
-      padding: ${Variables.Spacing.sSmall}px ${Variables.Spacing.sSmall}px ${Variables.Spacing.sSmall}px ${Variables.Spacing.sMedium}px;
+      padding-left: ${Variables.Spacing.sMedium}px;
   `}
 
   ${(props: IStyledHeaderCellProps) => props.size === ColumnSize.Auto && css`
@@ -123,7 +126,7 @@ const StyledSwipeActions = styled.div`
 `
 
 const StyledDataCell = styled.td`
-  padding: ${Variables.Spacing.sSmall}px;
+  padding:  ${Variables.Spacing.sSmall}px;
   text-align: left;
 
   ${(props: IStyledDataCellProps) => props.alignment === ColumnAlignment.Right && css`
@@ -131,11 +134,15 @@ const StyledDataCell = styled.td`
   `}
 
   ${(props: IStyledDataCellProps) => props.isLastColumn && css`
-      padding:  ${Variables.Spacing.sSmall}px ${Variables.Spacing.sMedium}px ${Variables.Spacing.sSmall}px ${Variables.Spacing.sSmall}px;
+      padding-right: ${Variables.Spacing.sMedium}px;
   `}
 
   ${(props: IStyledDataCellProps) => props.isFirstColumn && css`
-      padding: ${Variables.Spacing.sSmall}px ${Variables.Spacing.sSmall}px ${Variables.Spacing.sSmall}px ${Variables.Spacing.sMedium}px;
+      padding-left: ${Variables.Spacing.sMedium}px;
+  `}
+
+  ${(props: IStyledDataCellProps) => props.hasProgressBar && css`
+      padding-bottom:  ${Variables.Spacing.sSmall - 2}px;
   `}
 `
 const StyledProgressBarRow = styled.tr`
@@ -144,11 +151,11 @@ const StyledProgressBarRow = styled.tr`
 `
 const StyledRow = styled.tr`
   white-space: nowrap;
-  border-bottom: 1px solid ${Variables.Color.n250};
+  border: none;
   border-top: 1px solid ${Variables.Color.n250};
   background: ${Variables.Color.n100};
   transition: transform 0.2s ease-out;
-  height: ${Variables.Spacing.sSmall * 2 + Variables.Spacing.sXLarge + 2}px;
+  height: ${Variables.Spacing.sSmall * 2 + Variables.Spacing.sXLarge + 3}px;
 
   ${(props: IStyledRowProps) => props.isHoverable && !props.isSelected && css`
       &:hover {
@@ -167,12 +174,20 @@ const StyledRow = styled.tr`
   `}
 
   ${(props: IStyledRowProps) => props.hasProgressBar && css`
-      border-bottom: none;
+      height: ${Variables.Spacing.sSmall * 2 + Variables.Spacing.sXLarge + 1}px;
   `}
 
   ${(props: IStyledRowProps) => props.movement && css`
       transform: translateX(-${props.movement}px);
       transition: transform 0.2s ease-out;
+  `}
+
+  ${(props: IStyledRowProps) => props.isHeader && css`
+      border-top: none;
+  `}
+
+  ${(props: IStyledRowProps) => props.isEmptyHeader && css`
+      border-bottom: 1px solid ${Variables.Color.n250};
   `}
 `
 

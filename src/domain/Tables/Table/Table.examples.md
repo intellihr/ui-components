@@ -4,8 +4,9 @@
 import { Text } from '@Domain/Typographies';
 import { Variables, Props } from '@Common';
 import { FontAwesomeIcon } from '@Domain/Icons';
-import { FontAwesomeIconButton, Button } from '@Domain/Buttons';
+import { FontAwesomeIconButton, Button} from '@Domain/Buttons';
 import { GridLayout } from '@Domain/Layouts';
+import { TextInput } from '@Domain/Inputs';
 
 const successRowContentOverride = (
                                       (data)=> ([
@@ -81,7 +82,25 @@ rows: [
                   id: '4',
                   data: {fileName: 'test1.pdf', createAt: '05/01/2018', size: '1.5', fileType: 'PDF'},
                   isSelectable: true
-                }
+                },
+             {
+                 id: '5',
+                 data: {fileName: 'test3.pdf', createAt: '05/01/2018', size: '1.8', fileType: 'PDF'},
+                 isSelectable: false,
+                 contentOverride: (data)=> (
+                                                <GridLayout gutterMarginX={Variables.Spacing.sMedium}>
+                                                     <GridLayout.Cell size = 'auto'>
+                                                        <TextInput value={data.fileName}/>
+                                                     </GridLayout.Cell>
+                                                     <GridLayout.Cell size = 'shrink'>
+                                                        <Button type='primary' key='button1'>Confirm</Button>
+                                                     </GridLayout.Cell>
+                                                     <GridLayout.Cell size = 'shrink'>
+                                                        <Button type='light' key='button1'>Cancel</Button>
+                                                     </GridLayout.Cell>
+                                                </GridLayout>
+                                            )
+               }
           ]
 };
 
@@ -102,13 +121,14 @@ const successRowToNormal = {
                    };
 
 <div>
-    <Button margins={{ bottom: 10}} onClick={() => setState({rows: [state.rows[0], state.rows[1]].concat([successRowTo100, state.rows[3], state.rows[4]])})}>
+    <Button margins={{ bottom: 10}} onClick={() => setState({rows: [state.rows[0], state.rows[1]].concat([successRowTo100, state.rows[3], state.rows[4], state.rows[5]])})}>
         update success row progress to 100%
      </Button>
-    <Button margins={{ bottom: 10}} onClick={() => setState({rows: [state.rows[0], state.rows[1]].concat([successRowToNormal, state.rows[3], state.rows[4]])})}>
+    <Button margins={{ bottom: 10}} onClick={() => setState({rows: [state.rows[0], state.rows[1]].concat([successRowToNormal, state.rows[3], state.rows[4], state.rows[5]])})}>
         update success row back to normal (after 3 secs)
      </Button>
     <Table
+      hasLeftAction
       onRowRemove = {(data) => alert(`Remove row action on ${data.fileName}`)}
       emptyState = {
             <div style={{textAlign: 'center'}}>
@@ -224,6 +244,7 @@ const successRowContentOverride = (
                                                   ])
                                   );
 <Table
+  touchType='swipe'
   isMobile
   onSelectionChanged = {(dataSet) => console.log(dataSet)}
   onProgressEnd = {(data) => setState({hasSuccessRowContent:false})}

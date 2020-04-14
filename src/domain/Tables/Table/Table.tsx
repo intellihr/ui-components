@@ -33,6 +33,11 @@ enum ColumnAlignment {
   Right = 'right'
 }
 
+enum TableTouchType {
+  Hover = 'hover',
+  Swipe = 'swipe'
+}
+
 interface ISelectedRows {
   [rowId: string]: boolean
 }
@@ -58,6 +63,10 @@ interface ITableProps {
   bulkActions?: IFontAwesomeIconButtonProps[]
   /** Called when some row is removed */
   onRowRemove?: (data: any) => void
+  /** If yes the left action cells are displayed (checkbox and remove button) */
+  hasLeftAction?: boolean
+  /** If touch type is Hover, it will display hover actions when hover. If touch type is swipe, it will display swipe actions when tap or swipe. */
+  touchType?: TableTouchType
   /** Applies recommended settings for mobile and tablet viewports */
   isMobile?: boolean
   /** Margins around the table */
@@ -74,7 +83,7 @@ interface IRowProps {
   progress?: number
   variant?: TableRowVariant
   data: any
-  contentOverride?: (data: any) => JSX.Element[]
+  contentOverride?: (data: any) => JSX.Element[] | JSX.Element
   onClick?: (data: any) => void
   swipeActions?: IFontAwesomeIconButtonProps[]
 }
@@ -122,9 +131,10 @@ const Table: React.FC<ITableProps> = (props) => {
     onSelectionChanged,
     margins,
     componentContext,
-    isMobile = false,
+    hasLeftAction = false,
     bulkActions,
-    emptyState
+    emptyState,
+    touchType = TableTouchType.Hover
   } = props
 
   const [selectedAll, setSelectedAll] = useState<TableCheckboxInputValue>(TableCheckboxInputValue.False)
@@ -134,10 +144,10 @@ const Table: React.FC<ITableProps> = (props) => {
     setSelectedRows(getUpdatedAllSelectableRows(rows, selectedRows))
   }, [rows])
   useEffect(() => {
-    if (isMobile) {
+    if (hasLeftAction) {
       setSelectedRows({})
     }
-  }, [isMobile])
+  }, [hasLeftAction])
   useEffect(() => {
     if (selectedAll === TableCheckboxInputValue.False ) {
       setSelectedRows(mapValues(selectedRows, () => false))
@@ -149,7 +159,7 @@ const Table: React.FC<ITableProps> = (props) => {
   }, [selectedAll])
 
   useEffect(() => {
-    if (!isMobile) {
+    if (!hasLeftAction) {
       const currentSelectedRows = Object.values(selectedRows)
       setSelectedAll(getNewSelectedAll(currentSelectedRows))
       if (onSelectionChanged) {
@@ -158,7 +168,7 @@ const Table: React.FC<ITableProps> = (props) => {
     }
   }, [selectedRows])
 
-  const hasTableSwipeActions = isMobile && rows.some((row) => !!row.swipeActions && row.swipeActions.length > 0)
+  const hasTableSwipeActions = touchType === TableTouchType.Swipe && rows.some((row) => !!row.swipeActions && row.swipeActions.length > 0)
 
   return (
     <StyledTableWrapper
@@ -174,7 +184,7 @@ const Table: React.FC<ITableProps> = (props) => {
             columns={columns}
             selectedAll={selectedAll}
             setSelectedAll={setSelectedAll}
-            isMobile={isMobile}
+            hasLeftAction={hasLeftAction}
             bulkActions={bulkActions}
             hasTableSwipeActions={hasTableSwipeActions}
             hasBulkAction={selectedAll !== TableCheckboxInputValue.False}
@@ -193,7 +203,8 @@ const Table: React.FC<ITableProps> = (props) => {
               row={row}
               selectedRows={selectedRows}
               setSelectedRows={setSelectedRows}
-              isMobile={isMobile}
+              hasLeftAction={hasLeftAction}
+              touchType={touchType}
               onRowRemove={onRowRemove}
             />
           ))
@@ -213,5 +224,6 @@ export {
   ColumnAlignment,
   ColumnSortDirection,
   IColumnSorts,
+  TableTouchType,
   getActionsIconButtonGroup
 }
