@@ -1,6 +1,6 @@
 import { Variables } from '../../../../common'
 
-enum RowVariant {
+enum TableRowVariant {
   Neutral = 'neutral',
   Red = 'red'
 }
@@ -11,15 +11,15 @@ interface IVariantOption {
 }
 
 type VariantOptions = {
-  [K in RowVariant]: IVariantOption
+  [K in TableRowVariant]: IVariantOption
 }
 
 const variantOptions: VariantOptions = {
-  [RowVariant.Neutral]: {
+  [TableRowVariant.Neutral]: {
     hoverBackground: Variables.Color.n150,
     selectBackground: Variables.Color.i100
   },
-  [RowVariant.Red]: {
+  [TableRowVariant.Red]: {
     hoverBackground: Variables.Color.r100,
     selectBackground: Variables.Color.r100
   }
@@ -27,5 +27,5 @@ const variantOptions: VariantOptions = {
 
 export {
   variantOptions,
-  RowVariant
+  TableRowVariant
 }

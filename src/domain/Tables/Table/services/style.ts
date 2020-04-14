@@ -5,7 +5,7 @@ import {FontAwesomeIcon} from '../../../Icons/FontAwesomeIcon'
 import {styleForMargins} from '../../../Spacers/services/margins'
 import {TableCheckboxInputValue} from '../subcomponents/TableCheckboxInput'
 import {ColumnAlignment, ColumnSize, ColumnSortDirection} from '../Table'
-import {RowVariant, variantOptions} from './colors'
+import {TableRowVariant, variantOptions} from './colors'
 
 interface IStyledTableCheckboxInputProps {
   labelValue: TableCheckboxInputValue
@@ -22,7 +22,7 @@ interface IStyledTableWrapperProps {
 interface IStyledRowProps {
   isSelected?: boolean
   isHoverable?: boolean
-  variant: RowVariant
+  variant: TableRowVariant
   movement?: number
   hasProgressBar?: boolean
 }
@@ -34,7 +34,6 @@ interface IStyledSwipeActionsProps {
 interface IStyledProgressBarProps {
   percentage: number
   previousPercentage: number
-  isEnd: boolean
 }
 
 interface IStyledHeaderCellProps {
@@ -73,8 +72,12 @@ const StyledTable = styled.table`
   border-spacing: 0;
 `
 
+const StyledHeaderCellWithHeaderSize = styled.th`
+  padding:  ${Variables.Spacing.sSmall}px ${Variables.Spacing.sMedium}px;
+`
+
 const StyledHeaderCell = styled.th`
-  padding: ${Variables.Spacing.sSmall}px;
+  padding:  ${Variables.Spacing.sSmall}px ${Variables.Spacing.sMedium}px;
   text-align: left;
 
   ${(props: IStyledHeaderCellProps) => props.isLastColumn && css`
@@ -145,7 +148,7 @@ const StyledRow = styled.tr`
   border-top: 1px solid ${Variables.Color.n250};
   background: ${Variables.Color.n100};
   transition: transform 0.2s ease-out;
-  height: ${Variables.Spacing.sSmall * 2 + Variables.Spacing.sXLarge}px;
+  height: ${Variables.Spacing.sSmall * 2 + Variables.Spacing.sXLarge + 2}px;
 
   ${(props: IStyledRowProps) => props.isHoverable && !props.isSelected && css`
       &:hover {
@@ -199,11 +202,6 @@ const StyledProgressBar = styled.div`
     width: ${props.percentage}%;
     background: ${props.percentage === 100 ? Variables.Color.i400 : Variables.Color.n500};
   `}
-
-  ${(props: IStyledProgressBarProps) => props.isEnd && css`
-      background: transparent;
-  `}
-
 `
 
 const StyledEmptyStateCell = styled.td`
@@ -393,5 +391,6 @@ export {
   StyledSortButton,
   StyledTableWrapper,
   StyledSwipeActionsCell,
-  StyledSwipeActions
+  StyledSwipeActions,
+  StyledHeaderCellWithHeaderSize
 }

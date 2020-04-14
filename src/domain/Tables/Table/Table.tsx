@@ -1,3 +1,4 @@
+import { mapValues } from 'lodash'
 import React, { useEffect, useState } from 'react'
 
 import { Props, Variables } from '../../../common'
@@ -6,7 +7,8 @@ import {
   IFontAwesomeIconButtonProps
 } from '../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
 import { GridLayout } from '../../Layouts/GridLayout'
-import { RowVariant } from './services/colors'
+import { TableRowVariant } from './services/colors'
+import {getNewSelectedAll, getUpdatedAllSelectableRows, handleSelectionChanged} from './services/helper'
 import {
   StyledEmptyStateCell,
   StyledTHead,
@@ -40,19 +42,28 @@ interface IColumnSorts {
 }
 
 interface ITableProps {
+  /** Rows of the table */
   rows: IRowProps[]
+  /** Columns of the table */
   columns: IColumnProps[]
+  /** Empty state of the table */
+  emptyState: JSX.Element
+  /** Sorting of the table and only allow one column sorting at once */
+  sort: IColumnSorts
+  /** Called when the sorting is changed */
+  onSortChange: (sort: IColumnSorts) => void
+  /** Called when the selection is changed */
   onSelectionChanged?: (dataSet: any[]) => void
+  /** Icon Buttons group for bulkActions when the user selects some row */
+  bulkActions?: IFontAwesomeIconButtonProps[]
+  /** Called when some row is removed */
+  onRowRemove?: (data: any) => void
+  /** Applies recommended settings for mobile and tablet viewports */
+  isMobile?: boolean
   /** Margins around the table */
   margins?: Props.IMargins
   /** The component context */
   componentContext?: string
-  isMobile?: boolean
-  onProgressEnd?: (data: any) => void
-  bulkActions?: IFontAwesomeIconButtonProps[]
-  emptyState: JSX.Element
-  sort: IColumnSorts
-  onSortChange: (sort: IColumnSorts) => void
 }
 
 interface IRowProps {
@@ -61,9 +72,8 @@ interface IRowProps {
   isRemovable?: boolean
   tooltipText?: string
   progress?: number
-  variant?: RowVariant
+  variant?: TableRowVariant
   data: any
-  checkboxOverride?: (data: any) => JSX.Element
   contentOverride?: (data: any) => JSX.Element[]
   onClick?: (data: any) => void
   swipeActions?: IFontAwesomeIconButtonProps[]
@@ -73,53 +83,11 @@ interface IColumnProps {
   name: string
   title?: string
   size: ColumnSize
+  headerSize?: ColumnSize
   content: (data: any) => JSX.Element
   alignment?: ColumnAlignment
   tooltipText?: (data: any) => string
   hoverActions?: (data: any) => IFontAwesomeIconButtonProps[]
-}
-
-const getNewSelectedAll = (currentSelectedRows: boolean[]) => {
-  let newSelectedAll = null
-
-  for (const selectedRow of currentSelectedRows) {
-    if (newSelectedAll === null) {
-      newSelectedAll = selectedRow
-    }
-
-    if (newSelectedAll !== selectedRow) {
-      return TableCheckboxInputValue.PartialTrue
-    }
-  }
-
-  return newSelectedAll ? TableCheckboxInputValue.True : TableCheckboxInputValue.False
-}
-
-const getUpdatedAllSelectableRows = (rows: IRowProps[], selectedRows: ISelectedRows) => (
-  rows.reduce((result: ISelectedRows, row) => {
-    if (row.isSelectable) {
-      result[row.id] = selectedRows[row.id] || false
-    }
-    return result
-  }, {})
-)
-
-const handleSelectionChanged = (rows: IRowProps[], selectedRows: ISelectedRows, onSelectionChanged: (rows: any[]) => void) => {
-  const selectedRowIds = Object.entries(selectedRows).reduce((result: string[], [key, value]) => {
-    if (value) {
-      result.push(key)
-    }
-    return result
-  }, [])
-
-  const selectedRowsData = rows.reduce((result: any[], row) => {
-    if (selectedRowIds.includes(row.id)) {
-      result.push(row.data)
-    }
-
-    return result
-  }, [])
-  onSelectionChanged(selectedRowsData)
 }
 
 const getActionsIconButtonGroup = (actions?: IFontAwesomeIconButtonProps[], name?: string, alignment?: ColumnAlignment) => {
@@ -144,9 +112,24 @@ const getActionsIconButtonGroup = (actions?: IFontAwesomeIconButtonProps[], name
   return null
 }
 
-const Table: React.FC<ITableProps> = ({ rows, sort, onSortChange, columns, onSelectionChanged, onProgressEnd, margins, componentContext, isMobile = false, bulkActions, emptyState}) => {
+const Table: React.FC<ITableProps> = (props) => {
+  const {
+    onRowRemove,
+    rows,
+    sort,
+    onSortChange,
+    columns,
+    onSelectionChanged,
+    margins,
+    componentContext,
+    isMobile = false,
+    bulkActions,
+    emptyState
+  } = props
+
   const [selectedAll, setSelectedAll] = useState<TableCheckboxInputValue>(TableCheckboxInputValue.False)
-  const [selectedRows, setSelectedRows] = useState<ISelectedRows>({})
+  const [selectedRows, setSelectedRows] = useState<ISelectedRows>(getUpdatedAllSelectableRows(rows, {}))
+
   useEffect(() => {
     setSelectedRows(getUpdatedAllSelectableRows(rows, selectedRows))
   }, [rows])
@@ -156,14 +139,12 @@ const Table: React.FC<ITableProps> = ({ rows, sort, onSortChange, columns, onSel
     }
   }, [isMobile])
   useEffect(() => {
-    if (selectedAll === TableCheckboxInputValue.False || selectedAll === TableCheckboxInputValue.True ) {
-      const newSelectedRows = rows.reduce((result: ISelectedRows, row) => {
-        if (row.isSelectable) {
-          result[row.id] = selectedAll === TableCheckboxInputValue.True
-        }
-        return result
-      }, {})
-      setSelectedRows(newSelectedRows)
+    if (selectedAll === TableCheckboxInputValue.False ) {
+      setSelectedRows(mapValues(selectedRows, () => false))
+    }
+
+    if (selectedAll === TableCheckboxInputValue.True ) {
+      setSelectedRows(mapValues(selectedRows, () => true))
     }
   }, [selectedAll])
 
@@ -180,7 +161,11 @@ const Table: React.FC<ITableProps> = ({ rows, sort, onSortChange, columns, onSel
   const hasTableSwipeActions = isMobile && rows.some((row) => !!row.swipeActions && row.swipeActions.length > 0)
 
   return (
-    <StyledTableWrapper margins={margins}>
+    <StyledTableWrapper
+      margins={margins}
+      data-component-type={Props.ComponentType.Table}
+      data-component-context={componentContext}
+    >
       <StyledTable>
         <StyledTHead>
           <TableHeader
@@ -200,7 +185,18 @@ const Table: React.FC<ITableProps> = ({ rows, sort, onSortChange, columns, onSel
         {
           rows.length === 0 ? (
             <tr><StyledEmptyStateCell colSpan={columns.length}>{emptyState}</StyledEmptyStateCell></tr>
-          ) : rows.map((row) => <TableRow key={row.id} hasTableSwipeActions={hasTableSwipeActions} columns={columns} row={row} selectedRows={selectedRows} setSelectedRows={setSelectedRows} isMobile={isMobile} onProgressEnd={onProgressEnd}/>)
+          ) : rows.map((row: IRowProps) => (
+            <TableRow
+              key={row.id}
+              hasTableSwipeActions={hasTableSwipeActions}
+              columns={columns}
+              row={row}
+              selectedRows={selectedRows}
+              setSelectedRows={setSelectedRows}
+              isMobile={isMobile}
+              onRowRemove={onRowRemove}
+            />
+          ))
         }
         </tbody>
       </StyledTable>

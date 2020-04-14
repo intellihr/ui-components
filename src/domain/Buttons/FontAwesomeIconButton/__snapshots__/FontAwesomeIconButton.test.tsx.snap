@@ -16,9 +16,9 @@ exports[`<FontAwesomeIconButton /> should render a selected icon button 1`] = `
 .c0 {
   outline: none;
   cursor: pointer;
-  width: 24px;
-  height: 24px;
-  border-radius: 24px;
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
   -webkit-transition: 0.15s ease-in;
   transition: 0.15s ease-in;
   color: #667380;
@@ -42,6 +42,7 @@ exports[`<FontAwesomeIconButton /> should render a selected icon button 1`] = `
 >
   <styled.button
     data-component-type="font_awesome_icon_button"
+    isHovered={false}
     isSelected={true}
     variant="neutral"
   >
@@ -60,13 +61,13 @@ exports[`<FontAwesomeIconButton /> should render a selected icon button 1`] = `
   outline: none;
   cursor: pointer;
   width: ",
-              "24",
+              "32",
               "px;
   height: ",
-              "24",
+              "32",
               "px;
   border-radius: ",
-              "24",
+              "32",
               "px;
   transition: 0.15s ease-in;
   ",
@@ -75,6 +76,10 @@ exports[`<FontAwesomeIconButton /> should render a selected icon button 1`] = `
   ",
               [Function],
               "
+  ",
+              [Function],
+              "
+
   ",
               [Function],
               "
@@ -93,6 +98,7 @@ exports[`<FontAwesomeIconButton /> should render a selected icon button 1`] = `
         }
       }
       forwardedRef={null}
+      isHovered={false}
       isSelected={true}
       variant="neutral"
     >
@@ -223,9 +229,9 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
 .c0 {
   outline: none;
   cursor: pointer;
-  width: 24px;
-  height: 24px;
-  border-radius: 24px;
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
   -webkit-transition: 0.15s ease-in;
   transition: 0.15s ease-in;
   color: #F25749;
@@ -233,7 +239,7 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
 
 .c0:hover {
   color: #D41200;
-  background: #FFF1F0;
+  background: #FFD2CC;
   -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
 }
@@ -245,6 +251,7 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
 >
   <styled.button
     data-component-type="font_awesome_icon_button"
+    isHovered={false}
     isSelected={false}
     variant="red"
   >
@@ -263,13 +270,13 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
   outline: none;
   cursor: pointer;
   width: ",
-              "24",
+              "32",
               "px;
   height: ",
-              "24",
+              "32",
               "px;
   border-radius: ",
-              "24",
+              "32",
               "px;
   transition: 0.15s ease-in;
   ",
@@ -278,6 +285,10 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
   ",
               [Function],
               "
+  ",
+              [Function],
+              "
+
   ",
               [Function],
               "
@@ -296,6 +307,7 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
         }
       }
       forwardedRef={null}
+      isHovered={false}
       isSelected={false}
       variant="red"
     >
@@ -430,9 +442,9 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
 .c1 {
   outline: none;
   cursor: pointer;
-  width: 24px;
-  height: 24px;
-  border-radius: 24px;
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
   -webkit-transition: 0.15s ease-in;
   transition: 0.15s ease-in;
   color: #667380;
@@ -497,6 +509,7 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
             role="button"
           >
             <styled.button
+              isHovered={false}
               isSelected={false}
               variant="neutral"
             >
@@ -514,13 +527,13 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
   outline: none;
   cursor: pointer;
   width: ",
-                        "24",
+                        "32",
                         "px;
   height: ",
-                        "24",
+                        "32",
                         "px;
   border-radius: ",
-                        "24",
+                        "32",
                         "px;
   transition: 0.15s ease-in;
   ",
@@ -529,6 +542,10 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
   ",
                         [Function],
                         "
+  ",
+                        [Function],
+                        "
+
   ",
                         [Function],
                         "
@@ -547,6 +564,7 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
                   }
                 }
                 forwardedRef={null}
+                isHovered={false}
                 isSelected={false}
                 variant="neutral"
               >
@@ -683,9 +701,9 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
 .c0 {
   outline: none;
   cursor: pointer;
-  width: 24px;
-  height: 24px;
-  border-radius: 24px;
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
   -webkit-transition: 0.15s ease-in;
   transition: 0.15s ease-in;
   color: #667380;

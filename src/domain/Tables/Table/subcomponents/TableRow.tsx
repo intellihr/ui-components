@@ -3,10 +3,17 @@ import React, { useEffect, useState } from 'react'
 import { useDrag } from 'react-use-gesture'
 
 import {Variables} from '../../../../common'
+import {FontAwesomeIconButton} from '../../../Buttons/FontAwesomeIconButton'
+import {IconButtonVariants} from '../../../Buttons/FontAwesomeIconButton/colors'
 import { TooltipPopover } from '../../../Popovers/TooltipPopover'
 import { TooltipPopoverVariant } from '../../../Popovers/TooltipPopover/TooltipPopover'
-import { RowVariant } from '../services/colors'
-import {handleHovered, usePrevious} from '../services/helper'
+import { TableRowVariant } from '../services/colors'
+import {
+  handleHovered, handleRemoveButtonClick, handleTableCellClicked,
+  handleTableRowCheckboxInputChange,
+  parsedProgressToPercentage,
+  usePrevious
+} from '../services/helper'
 import {
   StyledDataCell,
   StyledHeaderCell,
@@ -25,31 +32,7 @@ interface ITableRowProps {
   setSelectedRows: (value: ISelectedRows) => void
   isMobile: boolean
   hasTableSwipeActions: boolean
-  onProgressEnd?: (row: any) => void
-}
-
-const handleTableCheckboxInputChange = (id: string, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void) => (value: TableCheckboxInputValue) => {
-  const newValue = {
-    ...selectedRows,
-    [id]: value === TableCheckboxInputValue.True
-  }
-  setSelectedRows(newValue)
-}
-
-const handleTableCellClicked = (id: string, row: IRowProps, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void, setHasHovered: (value: boolean) => void, isSelectable?: boolean, onClick?: (data: any) => void) => () => {
-  if (isSelectable) {
-    const newValue = {
-      ...selectedRows,
-      [id]: !selectedRows[id]
-    }
-    setSelectedRows(newValue)
-  }
-
-  if (onClick) {
-    onClick(row.data)
-  }
-
-  setHasHovered(false)
+  onRowRemove?: (data: any) => void
 }
 
 const TableCellTooltip: React.FC<{tooltipText: string}> = ({ tooltipText, children}) => {
@@ -74,7 +57,7 @@ const TableCellTooltip: React.FC<{tooltipText: string}> = ({ tooltipText, childr
   )
 }
 
-const getLeftCell = (isSelectable: boolean, isRemovable: boolean, isMobile: boolean, row: IRowProps, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void, checkboxOverrideContent?: JSX.Element ) => {
+const getLeftCell = (isSelectable: boolean, isRemovable: boolean, isMobile: boolean, row: IRowProps, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void, onRowRemove?: (data: any) => void ) => {
   if (isSelectable && !isRemovable && !isMobile) {
     const SelectedCheckboxInputValue = selectedRows[row.id] ? TableCheckboxInputValue.True : TableCheckboxInputValue.False
     return (
@@ -82,20 +65,30 @@ const getLeftCell = (isSelectable: boolean, isRemovable: boolean, isMobile: bool
         <TableCheckboxInput
           name={row.id}
           value={SelectedCheckboxInputValue}
-          onChange={handleTableCheckboxInputChange(row.id, selectedRows, setSelectedRows)}
+          onChange={handleTableRowCheckboxInputChange(row.id, selectedRows, setSelectedRows)}
         />
       </StyledHeaderLeftCell>
     )
   }
 
   if (isRemovable && !isMobile) {
-    return <StyledHeaderLeftCell>{checkboxOverrideContent}</StyledHeaderLeftCell>
+    return (
+        <StyledHeaderLeftCell>
+          <FontAwesomeIconButton
+            icon='times'
+            type='regular'
+            variant={row.variant === TableRowVariant.Red ? IconButtonVariants.Red : IconButtonVariants.Neutral}
+            onClick={handleRemoveButtonClick(row.data, onRowRemove)}
+            tooltipText='Delete'
+          />
+        </StyledHeaderLeftCell>
+      )
   }
 
   return null
 }
 
-const getDataCells = (hasSwipeActions: boolean, hasTableSwipeActions: boolean, isSelected: boolean, columns: IColumnProps[], row: IRowProps, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void, setHasHovered: (value: boolean) => void, isMobile: boolean, hasHoverButton: boolean) => columns.map((column, index) => {
+const getDataCells = ( hasSwipeActions: boolean, hasTableSwipeActions: boolean, isSelected: boolean, columns: IColumnProps[], row: IRowProps, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void, setHasHovered: (value: boolean) => void, isMobile: boolean, hasHoverButton: boolean, handleSwipeActionClosed?: () => void) => columns.map((column, index) => {
   const {
     isSelectable = false,
     onClick,
@@ -125,7 +118,7 @@ const getDataCells = (hasSwipeActions: boolean, hasTableSwipeActions: boolean, i
       key={column.name}
       colSpan={(isLastColumn && hasTableSwipeActions && !hasSwipeActions) ? 2 : undefined}
       alignment={column.alignment}
-      onClick={handleTableCellClicked(row.id, row, selectedRows, setSelectedRows, setHasHovered, isSelectable, onClick)}
+      onClick={handleTableCellClicked(row.id, row, selectedRows, setSelectedRows, setHasHovered, handleSwipeActionClosed, isSelectable, onClick)}
       isLastColumn={isLastColumn}
       isFirstColumn={isMobile && index === 0}
     >
@@ -134,56 +127,38 @@ const getDataCells = (hasSwipeActions: boolean, hasTableSwipeActions: boolean, i
   )
 })
 
-const parsedProgressToPercentage = (progress?: number) => progress ? clamp(progress, 0, 1) * 100 : 0
-
-const TableRow: React.FC<ITableRowProps> = ({ columns, row, selectedRows, setSelectedRows, isMobile = false, onProgressEnd, hasTableSwipeActions}) => {
+const TableRow: React.FC<ITableRowProps> = ({onRowRemove, columns, row, selectedRows, setSelectedRows, isMobile = false, hasTableSwipeActions}) => {
   const {
     isSelectable = false,
     isRemovable = false,
-    variant = RowVariant.Neutral,
+    variant = TableRowVariant.Neutral,
     progress,
     onClick,
-    checkboxOverride,
-    data,
     swipeActions
   } = row
 
-  const swipeContentWidth = swipeActions ? swipeActions.length * Variables.Spacing.sXLarge + (swipeActions.length - 1) * Variables.Spacing.sXSmall + 2 * Variables.Spacing.sMedium : 0
-
-  const [hasProgressBarEnded, setHasProgressBarEnded] = useState<boolean>(false)
   const [movement, setMovement] = useState<number>(0)
   const [previousProgress, setPreviousProgress] = useState<number>(0)
   const [hasHovered, setHasHovered] = useState<boolean>(false)
 
+  const swipeContentWidth = swipeActions ? swipeActions.length * Variables.Spacing.sXLarge + (swipeActions.length - 1) * Variables.Spacing.sXSmall + 2 * Variables.Spacing.sMedium : 0
+
   const blind = useDrag((props: any) => {
-    if (isMobile && swipeActions && props._movement[0] <= movement) {
-      console.log(props._movement, 'props._movement,')
+    if (isMobile && swipeActions && props._movement[0] <= movement && props._movement[0] !== 0) {
       if (Math.floor(props._movement[0]) !== movement) {
         setMovement(Math.min(Math.trunc(Math.abs(props._movement[0])), swipeContentWidth))
       }
 
       if (!props.dragging && props._movement[0] < 0) {
-        console.log('drag end')
-        console.log(props._movement, 'props._movement,')
-        console.log((Math.abs(props._movement[0]) < (swipeContentWidth / 2)) ? 0 : swipeContentWidth)
         setMovement((Math.abs(props._movement[0]) < (swipeContentWidth / 2)) ? 0 : swipeContentWidth)
       }
     }
   })
-  useEffect(() => {
-    if (onProgressEnd && hasProgressBarEnded) {
-      onProgressEnd(data)
-    }
-  }, [hasProgressBarEnded])
-  if (progress && progress === 1 && !hasProgressBarEnded) {
-    setTimeout(() => {
-      setHasProgressBarEnded(true)
-    }, 3000)
-  }
 
   const previousRowProps = usePrevious<IRowProps>(row)
   const previousProgressFromPreviousRowProps = previousRowProps ? (previousRowProps.progress ? previousRowProps.progress : 0) : 0
   const isSelected = !isMobile && isSelectable ? selectedRows[row.id] : false
+  const handleSwipeActionClosed = () => (isMobile && movement !== 0) ? setMovement(0) : undefined
 
   useEffect(() => {
     if (progress && previousProgressFromPreviousRowProps !== (progress ? progress : 0)) {
@@ -205,8 +180,8 @@ const TableRow: React.FC<ITableRowProps> = ({ columns, row, selectedRows, setSel
         onMouseEnter={handleHovered(true, setHasHovered)}
         onMouseLeave={handleHovered(false, setHasHovered)}
       >
-        {getLeftCell(isSelectable, isRemovable, isMobile, row, selectedRows, setSelectedRows, checkboxOverride ? checkboxOverride(data) : undefined)}
-        {getDataCells(hasSwipeActions, hasTableSwipeActions, isSelected, columns, row, selectedRows, setSelectedRows, setHasHovered, isMobile, hasHovered)}
+        {getLeftCell(isSelectable, isRemovable, isMobile, row, selectedRows, setSelectedRows, onRowRemove)}
+        {getDataCells(hasSwipeActions, hasTableSwipeActions, isSelected, columns, row, selectedRows, setSelectedRows, setHasHovered, isMobile, hasHovered, handleSwipeActionClosed)}
         {
           hasSwipeActions && (
             <StyledSwipeActionsCell>
@@ -217,41 +192,15 @@ const TableRow: React.FC<ITableRowProps> = ({ columns, row, selectedRows, setSel
           )
         }
       </StyledRow>
-      {(progress && !hasProgressBarEnded) && (
+      {(progress) && (
         <StyledProgressBarRow>
           <StyledProgressBarCell colSpan={isMobile ? columns.length : columns.length + 1}>
-            <StyledProgressBar isEnd={hasProgressBarEnded} previousPercentage={parsedProgressToPercentage(previousProgress)} percentage={parsedProgressToPercentage(progress)}/>
+            <StyledProgressBar previousPercentage={parsedProgressToPercentage(previousProgress)} percentage={parsedProgressToPercentage(progress)}/>
           </StyledProgressBarCell>
         </StyledProgressBarRow>
       )}
     </>
   )
-
-  // return (
-  //   <>
-  //     <StyledRow {...blind()} movement={movement} variant={variant} isHoverable={!isMobile && (isSelectable || !!onClick)} isSelected={!isMobile && isSelectable ? selectedRows[row.id] : false}>
-  //       <GridLayout
-  //         gutterMarginX={Variables.Spacing.sMedium}
-  //         margins={{top: Variables.Spacing.sSmall, left: Variables.Spacing.sSmall, right: Variables.Spacing.sSmall, bottom: row.progress ? Variables.Spacing.sSmall - 2 : Variables.Spacing.sSmall}}
-  //         verticalAlignment={GridLayout.VerticalAlignment.Middle}
-  //         cells={leftCell.concat(columns.map((column, index) => ({
-  //           size: column.size,
-  //           content: <TableCell tooltipText={column.tooltipText ? column.tooltipText(row.data) : undefined} onClick={handleTableCellClicked(row.id, row, selectedRows, setSelectedRows, isSelectable, onClick)}>{contentOverride ? contentOverride(data)[index] : column.content(data)}</TableCell>
-  //         })))}
-  //       />
-  //       {progress && <StyledProgressBar isEnd={hasProgressBarEnded} previousPercentage={parsedProgressToPercentage(progress[0])} percentage={parsedProgressToPercentage(progress[1])}/>}
-  //     </StyledRow>
-  //     {isMobile && swipeActions && (
-  //       <StyledSwipeActions width={movement}>
-  //         <GridLayout
-  //           gutterMarginX={Variables.Spacing.sMedium}
-  //           margins={{top: Variables.Spacing.sSmall, left: Variables.Spacing.sSmall, right: Variables.Spacing.sSmall, bottom: row.progress ? Variables.Spacing.sSmall - 2 : Variables.Spacing.sSmall}}
-  //           cells={getActionsCells(swipeActions)}
-  //         />
-  //       </StyledSwipeActions>
-  //     )}
-  //   </>
-  // )
 }
 
 export {

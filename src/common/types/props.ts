@@ -108,6 +108,7 @@ namespace Props {
     SmartList = 'smart_list',
     SmartListColumn = 'smart_list_column',
     Statistic = 'statistic',
+    Table = 'table',
     TenorGifSelector = 'tenor_gif_selector',
     Text = 'text',
     TextAreaInput = 'text_area_input',

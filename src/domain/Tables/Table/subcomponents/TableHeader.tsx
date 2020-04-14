@@ -5,12 +5,31 @@ import {
   FontAwesomeIconButton,
   IFontAwesomeIconButtonProps
 } from '../../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
+import {GridLayout} from '../../../Layouts/GridLayout'
 import {Text} from '../../../Typographies'
 import {LinkVariant} from '../../../Typographies/Text/subcomponents/Link'
-import {RowVariant} from '../services/colors'
-import {handleHovered} from '../services/helper'
-import {StyledHeaderCell, StyledHeaderLeftCell, StyledRow, StyledSortButton} from '../services/style'
-import {ColumnAlignment, ColumnSortDirection, IColumnProps, IColumnSorts, getActionsIconButtonGroup} from '../Table'
+import {TableRowVariant} from '../services/colors'
+import {
+  getSortButtonDirection,
+  handleHeaderTitleClicked,
+  handleHovered,
+  handleSortButtonClicked,
+  handleTableHeaderCheckboxInputChange
+} from '../services/helper'
+import {
+  StyledHeaderCell,
+  StyledHeaderCellWithHeaderSize,
+  StyledHeaderLeftCell,
+  StyledRow,
+  StyledSortButton
+} from '../services/style'
+import {
+  ColumnAlignment,
+  ColumnSize,
+  IColumnProps,
+  IColumnSorts,
+  getActionsIconButtonGroup
+} from '../Table'
 import {TableCheckboxInput, TableCheckboxInputValue} from './TableCheckboxInput'
 
 interface ITableHeaderProps {
@@ -26,7 +45,7 @@ interface ITableHeaderProps {
   onSortChange: (sort: IColumnSorts) => void
 }
 
-interface ITableHeaderCellProps {
+interface ITableHeaderCellContentProps {
   column: IColumnProps
   sort: IColumnSorts
   onSortChange: (sort: IColumnSorts) => void
@@ -35,48 +54,9 @@ interface ITableHeaderCellProps {
   hasTableSwipeActions: boolean
 }
 
-const handleTableHeaderCheckboxInputChange = (setSelectedAll: (value: TableCheckboxInputValue) => void) => (value: TableCheckboxInputValue) => {
-  setSelectedAll(value)
-}
-
-const handleSortButtonClicked = (name: string, sort: IColumnSorts, onSortChange: (sort: IColumnSorts) => void) => () => {
-  onSortChange({
-    ...sort,
-    [name]: sort[name] === ColumnSortDirection.Up ? ColumnSortDirection.Down : ColumnSortDirection.Up
-  })
-}
-
-const handleHeaderTitleClicked = (name: string, sort: IColumnSorts, onSortChange: (value: IColumnSorts) => void, setHasHeaderHovered: (value: boolean) => void) => () => {
-  let newSort = {
-    [name]: ColumnSortDirection.Down
-  }
-
-  if (sort[name]) {
-    newSort = {
-      ...sort,
-      [name]: sort[name] === ColumnSortDirection.Up ? ColumnSortDirection.Down : ColumnSortDirection.Up
-    }
-  }
-  setHasHeaderHovered(false)
-  onSortChange(newSort)
-}
-
-const getSortButtonDirection = (hasHeaderHovered: boolean, currentSortDirection?: ColumnSortDirection) => {
-  if (hasHeaderHovered) {
-    if (currentSortDirection) {
-      return currentSortDirection === ColumnSortDirection.Down ? ColumnSortDirection.Up : ColumnSortDirection.Down
-    }
-
-    return ColumnSortDirection.Down
-  }
-
-  return currentSortDirection
-}
-
-const TableHeaderCell: React.FC<ITableHeaderCellProps> = ({ column, sort, hasTableSwipeActions, onSortChange, isFirstColumn, isLastColumn }) => {
+const TableHeaderCellContent: React.FC<ITableHeaderCellContentProps> = ({ column, sort, hasTableSwipeActions, onSortChange, isFirstColumn, isLastColumn }) => {
   const {
     name,
-    size,
     title,
     alignment = ColumnAlignment.Left
   } =  column
@@ -89,12 +69,11 @@ const TableHeaderCell: React.FC<ITableHeaderCellProps> = ({ column, sort, hasTab
     </StyledSortButton>
   )
 
-  return (
-    <StyledHeaderCell colSpan={(isLastColumn && hasTableSwipeActions) ? 2 : undefined} size={size} alignment={alignment} isLastColumn={isLastColumn} isFirstColumn={isFirstColumn}>
-      {
-        title && <>
-          {alignment === ColumnAlignment.Right && sortButton}
-          <span onMouseEnter={handleHovered(true, setHasHeaderHovered)} onMouseLeave={handleHovered(false, setHasHeaderHovered)}>
+  if (title) {
+    return (
+      <>
+        {alignment === ColumnAlignment.Right && sortButton}
+        <span onMouseEnter={handleHovered(true, setHasHeaderHovered)} onMouseLeave={handleHovered(false, setHasHeaderHovered)}>
             <Text weight={Variables.FontWeight.fwSemiBold}>
               <Text.Link
                 variant={LinkVariant.Unstyled}
@@ -104,36 +83,77 @@ const TableHeaderCell: React.FC<ITableHeaderCellProps> = ({ column, sort, hasTab
               </Text.Link>
             </Text>
           </span>
-          {alignment === ColumnAlignment.Left && sortButton}
-        </>
-      }
-    </StyledHeaderCell>
-  )
-}
-
-const getHeaderCells = (hasTableSwipeActions: boolean, columns: IColumnProps[], sort: IColumnSorts, onSortChange: (sort: IColumnSorts) => void, bulkActions?: IFontAwesomeIconButtonProps[], isMobile?: boolean) => columns.map((column, index) => {
-  const {
-    name,
-    size,
-    alignment = ColumnAlignment.Left
-  } =  column
-
-  if (bulkActions && !isMobile) {
-    return (
-      <StyledHeaderCell key={name} size={size} alignment={alignment}>
-        {
-          index === 0 && getActionsIconButtonGroup(bulkActions, 'bulk')
-        }
-      </StyledHeaderCell>
+        {alignment === ColumnAlignment.Left && sortButton}
+      </>
     )
   }
 
-  return <TableHeaderCell key={name} column={column} sort={sort} onSortChange={onSortChange} isLastColumn={index === columns.length - 1}  isFirstColumn={!!isMobile && index === 0} hasTableSwipeActions={hasTableSwipeActions}/>
-})
+  return null
+}
+
+const getHeaderCells = (
+  hasTableSwipeActions: boolean,
+  columns: IColumnProps[],
+  sort: IColumnSorts,
+  onSortChange: (sort: IColumnSorts) => void,
+  bulkActions?: IFontAwesomeIconButtonProps[],
+  isMobile?: boolean
+) => {
+  const hasHeaderSize = columns.some((column) => !!column.headerSize)
+
+  if (hasHeaderSize) {
+    return (
+      <StyledHeaderCellWithHeaderSize colSpan={isMobile ? columns.length : columns.length + 1}>
+        <GridLayout
+          cells={
+            columns.map((column, index) => {
+              const size = column.headerSize || column.size
+
+              return ({
+                displayType: 'flex',
+                flexHorizontalAlignment: (column.alignment && column.alignment === ColumnAlignment.Right) ? GridLayout.HorizontalAlignment.Right : GridLayout.HorizontalAlignment.Left,
+                size: (size === ColumnSize.Shrink) ? 'shrink' : 'auto',
+                content: <div><TableHeaderCellContent column={column} sort={sort} onSortChange={onSortChange} isLastColumn={index === columns.length - 1} isFirstColumn={!!isMobile && index === 0} hasTableSwipeActions={hasTableSwipeActions}/></div>
+              })
+            })
+          }
+        />
+      </StyledHeaderCellWithHeaderSize>
+    )
+  }
+
+  return (
+    columns.map((column, index) => {
+      const {
+        name,
+        size,
+        alignment = ColumnAlignment.Left
+      } =  column
+
+      const isLastColumn = index === columns.length - 1
+      const isFirstColumn = !!isMobile && index === 0
+
+      if (bulkActions && !isMobile) {
+        return (
+          <StyledHeaderCell key={name} size={size} alignment={alignment}>
+            {
+              index === 0 && getActionsIconButtonGroup(bulkActions, 'bulk')
+            }
+          </StyledHeaderCell>
+        )
+      }
+
+      return (
+        <StyledHeaderCell key={name} colSpan={(isLastColumn && hasTableSwipeActions) ? 2 : undefined} size={size} alignment={alignment} isLastColumn={isLastColumn} isFirstColumn={isFirstColumn}>
+          <TableHeaderCellContent column={column} sort={sort} onSortChange={onSortChange} isLastColumn={isLastColumn}  isFirstColumn={isFirstColumn} hasTableSwipeActions={hasTableSwipeActions}/>
+        </StyledHeaderCell>
+      )})
+  )
+}
 
 const TableHeader: React.FC<ITableHeaderProps> = ({ columns, sort, onSortChange, hasTableSwipeActions, selectedAll, setSelectedAll, isMobile, bulkActions, hasBulkAction, isEmpty}) => {
   return (
-    <StyledRow variant={RowVariant.Neutral}>
+    <StyledRow variant={TableRowVariant.Neutral}>
       {
         (isMobile || isEmpty) ? getHeaderCells(hasTableSwipeActions, columns, sort, onSortChange, hasBulkAction ? bulkActions : undefined ) : (
           <>
