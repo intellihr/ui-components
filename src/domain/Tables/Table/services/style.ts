@@ -196,7 +196,7 @@ const StyledProgressBarAnimation = (props: IStyledProgressBarProps) => keyframes
       width: ${props.previousPercentage}%;
     background: ${props.previousPercentage === 100 ? Variables.Color.i400 : Variables.Color.n500};
   }
-    100% {
+  100% {
     width: ${props.percentage}%;
     background: ${props.percentage === 100 ? Variables.Color.i400 : Variables.Color.n500};
   }
@@ -222,7 +222,6 @@ const StyledProgressBar = styled.div`
 const StyledEmptyStateCell = styled.td`
   padding: ${Variables.Spacing.s3XLarge}px;
 `
-const StyledHeaderTitle = styled.div``
 
 const StyledSortButton = styled.div`
   display: none;
@@ -241,13 +240,9 @@ const StyledSortButton = styled.div`
       display: inline-block;
   `}
 
-  ${(props: IStyledSortButtonProps) => props.sort === ColumnSortDirection.Up && css`
+  ${(props: IStyledSortButtonProps) => props.sort === ColumnSortDirection.Descending && css`
       transform: rotate(-180deg);
   `}
-
-  ${StyledHeaderTitle}:hover & {
-    display: inline-block;
-  }
 `
 
 const StyledTableCheckboxInput = styled.input`

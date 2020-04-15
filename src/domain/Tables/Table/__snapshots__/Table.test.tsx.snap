@@ -34,7 +34,7 @@ exports[`<Table /> should render a mobile table 1`] = `
         setSelectedAll={[Function]}
         sort={
           Object {
-            "createAt": "down",
+            "createAt": "ascending",
           }
         }
       />
@@ -61,6 +61,7 @@ exports[`<Table /> should render a mobile table 1`] = `
         }
         hasLeftAction={false}
         hasTableSwipeActions={false}
+        interactionType="swipe"
         key="0"
         row={
           Object {
@@ -85,7 +86,6 @@ exports[`<Table /> should render a mobile table 1`] = `
           }
         }
         setSelectedRows={[Function]}
-        touchType="swipe"
       />
       <TableRow
         columns={
@@ -108,6 +108,7 @@ exports[`<Table /> should render a mobile table 1`] = `
         }
         hasLeftAction={false}
         hasTableSwipeActions={false}
+        interactionType="swipe"
         key="1"
         row={
           Object {
@@ -131,7 +132,6 @@ exports[`<Table /> should render a mobile table 1`] = `
           }
         }
         setSelectedRows={[Function]}
-        touchType="swipe"
       />
       <TableRow
         columns={
@@ -154,6 +154,7 @@ exports[`<Table /> should render a mobile table 1`] = `
         }
         hasLeftAction={false}
         hasTableSwipeActions={false}
+        interactionType="swipe"
         key="2"
         row={
           Object {
@@ -177,7 +178,6 @@ exports[`<Table /> should render a mobile table 1`] = `
           }
         }
         setSelectedRows={[Function]}
-        touchType="swipe"
       />
       <TableRow
         columns={
@@ -200,6 +200,7 @@ exports[`<Table /> should render a mobile table 1`] = `
         }
         hasLeftAction={false}
         hasTableSwipeActions={false}
+        interactionType="swipe"
         key="3"
         row={
           Object {
@@ -220,7 +221,6 @@ exports[`<Table /> should render a mobile table 1`] = `
           }
         }
         setSelectedRows={[Function]}
-        touchType="swipe"
       />
       <TableRow
         columns={
@@ -243,6 +243,7 @@ exports[`<Table /> should render a mobile table 1`] = `
         }
         hasLeftAction={false}
         hasTableSwipeActions={false}
+        interactionType="swipe"
         key="4"
         row={
           Object {
@@ -263,7 +264,6 @@ exports[`<Table /> should render a mobile table 1`] = `
           }
         }
         setSelectedRows={[Function]}
-        touchType="swipe"
       />
     </tbody>
   </styled.table>
@@ -304,7 +304,7 @@ exports[`<Table /> should render a table 1`] = `
         setSelectedAll={[Function]}
         sort={
           Object {
-            "createAt": "down",
+            "createAt": "ascending",
           }
         }
       />
@@ -331,6 +331,7 @@ exports[`<Table /> should render a table 1`] = `
         }
         hasLeftAction={true}
         hasTableSwipeActions={false}
+        interactionType="hover"
         key="0"
         row={
           Object {
@@ -355,7 +356,6 @@ exports[`<Table /> should render a table 1`] = `
           }
         }
         setSelectedRows={[Function]}
-        touchType="hover"
       />
       <TableRow
         columns={
@@ -378,6 +378,7 @@ exports[`<Table /> should render a table 1`] = `
         }
         hasLeftAction={true}
         hasTableSwipeActions={false}
+        interactionType="hover"
         key="1"
         row={
           Object {
@@ -401,7 +402,6 @@ exports[`<Table /> should render a table 1`] = `
           }
         }
         setSelectedRows={[Function]}
-        touchType="hover"
       />
       <TableRow
         columns={
@@ -424,6 +424,7 @@ exports[`<Table /> should render a table 1`] = `
         }
         hasLeftAction={true}
         hasTableSwipeActions={false}
+        interactionType="hover"
         key="2"
         row={
           Object {
@@ -447,7 +448,6 @@ exports[`<Table /> should render a table 1`] = `
           }
         }
         setSelectedRows={[Function]}
-        touchType="hover"
       />
       <TableRow
         columns={
@@ -470,6 +470,7 @@ exports[`<Table /> should render a table 1`] = `
         }
         hasLeftAction={true}
         hasTableSwipeActions={false}
+        interactionType="hover"
         key="3"
         row={
           Object {
@@ -490,7 +491,6 @@ exports[`<Table /> should render a table 1`] = `
           }
         }
         setSelectedRows={[Function]}
-        touchType="hover"
       />
       <TableRow
         columns={
@@ -513,6 +513,7 @@ exports[`<Table /> should render a table 1`] = `
         }
         hasLeftAction={true}
         hasTableSwipeActions={false}
+        interactionType="hover"
         key="4"
         row={
           Object {
@@ -533,7 +534,6 @@ exports[`<Table /> should render a table 1`] = `
           }
         }
         setSelectedRows={[Function]}
-        touchType="hover"
       />
     </tbody>
   </styled.table>
@@ -574,7 +574,7 @@ exports[`<Table /> should render an empty table 1`] = `
         setSelectedAll={[Function]}
         sort={
           Object {
-            "createAt": "down",
+            "createAt": "ascending",
           }
         }
       />

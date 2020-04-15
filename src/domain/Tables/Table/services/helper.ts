@@ -13,9 +13,7 @@ const usePrevious = <T extends {}>(value: T): T => {
   return ref.current as T
 }
 
-const handleHovered = (value: boolean, setHasHovered: (value: boolean) => void) => () => setHasHovered(value)
-
-const getUpdatedAllSelectableRows = (rows: IRowProps[], selectedRows: ISelectedRows) => (
+const getUpdatedAllSelectableRows = <T extends {}>(rows: Array<IRowProps<T>>, selectedRows: ISelectedRows) => (
   rows.reduce((result: ISelectedRows, row) => {
     if (row.isSelectable) {
       result[row.id] = selectedRows[row.id] || false
@@ -24,7 +22,7 @@ const getUpdatedAllSelectableRows = (rows: IRowProps[], selectedRows: ISelectedR
   }, {})
 )
 
-const handleSelectionChanged = (rows: IRowProps[], selectedRows: ISelectedRows, onSelectionChanged: (rows: any[]) => void) => {
+const handleSelectionChanged = <T extends {}>(rows: Array<IRowProps<T>>, selectedRows: ISelectedRows, onSelectionChanged: (rows: any[]) => void) => {
   const selectedRowIds = Object.entries(selectedRows).reduce((result: string[], [key, value]) => {
     if (value) {
       result.push(key)
@@ -58,39 +56,39 @@ const getSelectAllTableCheckboxInputValue = (currentSelectedRows: boolean[]) => 
   return newSelectedAll ? TableCheckboxInputValue.True : TableCheckboxInputValue.False
 }
 
-const handleTableHeaderCheckboxInputChange = (setSelectedAll: (value: TableCheckboxInputValue) => void) => (value: TableCheckboxInputValue) => {
-  setSelectedAll(value)
-}
-
-const handleSortButtonClicked = (name: string, sort: IColumnSorts, onSortChange: (sort: IColumnSorts) => void) => () => {
-  onSortChange({
-    ...sort,
-    [name]: sort[name] === ColumnSortDirection.Up ? ColumnSortDirection.Down : ColumnSortDirection.Up
-  })
-}
-
-const handleHeaderTitleClicked = (name: string, sort: IColumnSorts, onSortChange: (value: IColumnSorts) => void, setHasHeaderHovered: (value: boolean) => void) => () => {
-  let newSort = {
-    [name]: ColumnSortDirection.Down
-  }
-
-  if (sort[name]) {
-    newSort = {
+const handleSortButtonClicked = (name: string, sort?: IColumnSorts, onSortChange?: (sort: IColumnSorts) => void) => () => {
+  if (sort && onSortChange) {
+    onSortChange({
       ...sort,
-      [name]: sort[name] === ColumnSortDirection.Up ? ColumnSortDirection.Down : ColumnSortDirection.Up
-    }
+      [name]: sort[name] === ColumnSortDirection.Descending ? ColumnSortDirection.Ascending : ColumnSortDirection.Descending
+    })
   }
-  setHasHeaderHovered(false)
-  onSortChange(newSort)
+}
+
+const handleHeaderTitleClicked = (name: string, setHasHeaderHovered: (value: boolean) => void, sort?: IColumnSorts, onSortChange?: (value: IColumnSorts) => void) => () => {
+  if (sort && onSortChange) {
+    let newSort = {
+      [name]: ColumnSortDirection.Ascending
+    }
+
+    if (sort[name]) {
+      newSort = {
+        ...sort,
+        [name]: sort[name] === ColumnSortDirection.Descending ? ColumnSortDirection.Ascending : ColumnSortDirection.Descending
+      }
+    }
+    setHasHeaderHovered(false)
+    onSortChange(newSort)
+  }
 }
 
 const getSortButtonDirection = (hasHeaderHovered: boolean, currentSortDirection?: ColumnSortDirection) => {
   if (hasHeaderHovered) {
     if (currentSortDirection) {
-      return currentSortDirection === ColumnSortDirection.Down ? ColumnSortDirection.Up : ColumnSortDirection.Down
+      return currentSortDirection === ColumnSortDirection.Descending ? ColumnSortDirection.Ascending : ColumnSortDirection.Descending
     }
 
-    return ColumnSortDirection.Down
+    return ColumnSortDirection.Ascending
   }
 
   return currentSortDirection
@@ -112,7 +110,7 @@ const handleTableRowCheckboxInputChange = (id: string, selectedRows: ISelectedRo
   setSelectedRows(newValue)
 }
 
-const handleTableCellClicked = (id: string, row: IRowProps, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void, setHasHovered: (value: boolean) => void, handleSwipeActionClosed?: () => void, isSelectable?: boolean, onClick?: (data: any) => void) => () => {
+const handleTableCellClicked = <T extends {}>(id: string, row: IRowProps<T>, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void, setHasHovered: (value: boolean) => void, handleSwipeActionClosed?: () => void, isSelectable?: boolean, onClick?: (data: any) => void) => () => {
   if (isSelectable) {
     const newValue = {
       ...selectedRows,
@@ -134,13 +132,11 @@ const handleTableCellClicked = (id: string, row: IRowProps, selectedRows: ISelec
 
 export {
   usePrevious,
-  handleHovered,
   getUpdatedAllSelectableRows,
   handleSelectionChanged,
   getSelectAllTableCheckboxInputValue,
   handleHeaderTitleClicked,
   handleSortButtonClicked,
-  handleTableHeaderCheckboxInputChange,
   getSortButtonDirection,
   parsedProgressToPercentage,
   handleRemoveButtonClick,

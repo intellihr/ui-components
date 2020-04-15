@@ -247,7 +247,7 @@ const successRowContentOverride = (
                                                   ])
                                   );
 <Table
-  touchType='swipe'
+  interactionType='swipe'
   isMobile
   onSelectionChanged = {(dataSet) => console.log(dataSet)}
   onProgressEnd = {(data) => setState({hasSuccessRowContent:false})}

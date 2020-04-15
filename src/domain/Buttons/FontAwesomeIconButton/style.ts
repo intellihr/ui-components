@@ -31,14 +31,15 @@ const StyledIconButton = styled.button`
       ${iconButtonHoverStyle}
     }
   `}
+
+  ${(props: IStyledIconButton) => props.isHovered && css`
+    ${iconButtonHoverStyle}
+  `}
+
   ${(props: IStyledIconButton) => props.isSelected && css`
     color: ${variantOptions[props.variant].selectedIconColor};
     background: ${variantOptions[props.variant].selectedBackground};
     transition: 0.2s ease-out;
-  `}
-
-  ${(props: IStyledIconButton) => props.isHovered && css`
-    ${iconButtonHoverStyle}
   `}
 `
 

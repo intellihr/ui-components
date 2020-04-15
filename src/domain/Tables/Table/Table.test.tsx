@@ -1,8 +1,8 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import {TableRowVariant} from './services/colors'
-import {ColumnAlignment, ColumnSize, ColumnSortDirection, Table, TableTouchType} from './Table'
+import { TableRowVariant } from './services/colors'
+import { ColumnAlignment, ColumnSize, ColumnSortDirection, Table, TableInteractionType } from './Table'
 
 const onSelectionChanged = jest.fn()
 const onSortChange = jest.fn()
@@ -68,10 +68,11 @@ describe('<Table />', () => {
   it('should render a table', () => {
     const wrapper = shallow(
       <Table
+        <{fileName: string, createAt: string, size: string, fileType: string}>
         hasLeftAction
         onSelectionChanged={onSelectionChanged}
         rows={rows}
-        sort={{createAt: ColumnSortDirection.Down}}
+        sort={{createAt: ColumnSortDirection.Ascending}}
         onSortChange={onSortChange}
         emptyState={emptyState}
         columns={columns}
@@ -84,10 +85,11 @@ describe('<Table />', () => {
   it('should render a mobile table', () => {
     const wrapper = shallow(
       <Table
-        touchType={TableTouchType.Swipe}
+        <{fileName: string, createAt: string, size: string, fileType: string}>
+        interactionType={TableInteractionType.Swipe}
         onSelectionChanged={onSelectionChanged}
         rows={rows}
-        sort={{createAt: ColumnSortDirection.Down}}
+        sort={{createAt: ColumnSortDirection.Ascending}}
         onSortChange={onSortChange}
         emptyState={emptyState}
         columns={columns}
@@ -100,9 +102,10 @@ describe('<Table />', () => {
   it('should render an empty table', () => {
     const wrapper = shallow(
       <Table
+        <{fileName: string, createAt: string, size: string, fileType: string}>
         onSelectionChanged={onSelectionChanged}
         rows={[]}
-        sort={{createAt: ColumnSortDirection.Down}}
+        sort={{createAt: ColumnSortDirection.Ascending}}
         onSortChange={onSortChange}
         emptyState={emptyState}
         columns={columns}

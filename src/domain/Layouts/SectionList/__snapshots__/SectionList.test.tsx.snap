@@ -2612,7 +2612,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
         </Section>
         <AnnotatedSection
           description="Annotated Description"
-          header="Annotated TableCheckboxInput"
+          header="Annotated Section"
           linkProps={
             Object {
               "href": "#",
@@ -2705,7 +2705,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                       >
                         <Styled(SectionDescription)
                           description="Annotated Description"
-                          header="Annotated TableCheckboxInput"
+                          header="Annotated Section"
                           linkProps={
                             Object {
                               "href": "#",
@@ -2758,7 +2758,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                               }
                             }
                             forwardedRef={null}
-                            header="Annotated TableCheckboxInput"
+                            header="Annotated Section"
                             linkProps={
                               Object {
                                 "href": "#",
@@ -2770,7 +2770,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                             <SectionDescription
                               className="c3"
                               description="Annotated Description"
-                              header="Annotated TableCheckboxInput"
+                              header="Annotated Section"
                               linkProps={
                                 Object {
                                   "href": "#",
@@ -2864,7 +2864,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                         color="#424F5C"
                                         data-component-type="text"
                                       >
-                                        Annotated TableCheckboxInput
+                                        Annotated Section
                                       </h2>
                                     </StyledComponent>
                                   </styled.span>
@@ -3094,7 +3094,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
             ]
           }
           description="Titled Description"
-          header="Titled TableCheckboxInput"
+          header="Titled Section"
         >
           <Styled(styled.div)
             data-component-type="titled_section"
@@ -3243,7 +3243,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                     >
                                       <Styled(SectionDescription)
                                         description="Titled Description"
-                                        header="Titled TableCheckboxInput"
+                                        header="Titled Section"
                                       >
                                         <StyledComponent
                                           description="Titled Description"
@@ -3287,12 +3287,12 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                             }
                                           }
                                           forwardedRef={null}
-                                          header="Titled TableCheckboxInput"
+                                          header="Titled Section"
                                         >
                                           <SectionDescription
                                             className="c9"
                                             description="Titled Description"
-                                            header="Titled TableCheckboxInput"
+                                            header="Titled Section"
                                             links={Array []}
                                           >
                                             <div
@@ -3380,7 +3380,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                                       color="#424F5C"
                                                       data-component-type="text"
                                                     >
-                                                      Titled TableCheckboxInput
+                                                      Titled Section
                                                     </h2>
                                                   </StyledComponent>
                                                 </styled.span>

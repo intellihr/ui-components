@@ -76,6 +76,7 @@ exports[`<FontAwesomeIconButton /> should render a selected icon button 1`] = `
   ",
               [Function],
               "
+
   ",
               [Function],
               "
@@ -285,6 +286,7 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
   ",
               [Function],
               "
+
   ",
               [Function],
               "
@@ -542,6 +544,7 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
   ",
                         [Function],
                         "
+
   ",
                         [Function],
                         "

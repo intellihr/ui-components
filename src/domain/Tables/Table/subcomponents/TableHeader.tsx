@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {useCallback, useState} from 'react'
 
 import { Variables } from '../../../../common'
 import {
@@ -12,9 +12,7 @@ import { TableRowVariant } from '../services/colors'
 import {
   getSortButtonDirection,
   handleHeaderTitleClicked,
-  handleHovered,
-  handleSortButtonClicked,
-  handleTableHeaderCheckboxInputChange
+  handleSortButtonClicked
 } from '../services/helper'
 import {
   StyledHeaderCell,
@@ -32,8 +30,8 @@ import {
 } from '../Table'
 import { TableCheckboxInput, TableCheckboxInputValue } from './TableCheckboxInput'
 
-interface ITableHeaderProps {
-  columns: IColumnProps[]
+interface ITableHeaderProps <T> {
+  columns: Array<IColumnProps<T>>
   selectedAll: TableCheckboxInputValue
   setSelectedAll: (value: TableCheckboxInputValue) => void
   bulkActions?: IFontAwesomeIconButtonProps[]
@@ -41,30 +39,31 @@ interface ITableHeaderProps {
   hasBulkAction: boolean
   hasTableSwipeActions: boolean
   isEmpty: boolean
-  sort: IColumnSorts
-  onSortChange: (sort: IColumnSorts) => void
+  sort?: IColumnSorts
+  onSortChange?: (sort: IColumnSorts) => void
 }
 
-interface ITableHeaderCellContentProps {
-  column: IColumnProps
-  sort: IColumnSorts
-  onSortChange: (sort: IColumnSorts) => void
-  isLastColumn: boolean
-  isFirstColumn: boolean
-  hasTableSwipeActions: boolean
+interface ITableHeaderCellContentProps <T> {
+  column: IColumnProps<T>
+  sort?: IColumnSorts
+  onSortChange?: (sort: IColumnSorts) => void
 }
 
-const TableHeaderCellContent: React.FC<ITableHeaderCellContentProps> = ({ column, sort, hasTableSwipeActions, onSortChange, isFirstColumn, isLastColumn }) => {
+const TableHeaderCellContent = <T extends {}>(props: ITableHeaderCellContentProps<T>) => {
+  const { column, sort, onSortChange } =props
   const {
     name,
     title,
     alignment = ColumnAlignment.Left
-  } =  column
+  } = column
 
   const [hasHeaderHovered, setHasHeaderHovered] = useState<boolean>(false)
 
+  const setHeaderHoveredTrue = useCallback(() => setHasHeaderHovered(true), [setHasHeaderHovered])
+  const setHeaderHoveredFalse = useCallback(() => setHasHeaderHovered(false), [setHasHeaderHovered])
+
   const sortButton = (
-    <StyledSortButton alignment={alignment} sort={getSortButtonDirection(hasHeaderHovered, sort[name])} onClick={handleSortButtonClicked(name, sort, onSortChange)}>
+    <StyledSortButton alignment={alignment} sort={sort && getSortButtonDirection(hasHeaderHovered, sort[name])} onClick={handleSortButtonClicked(name, sort, onSortChange)}>
       <FontAwesomeIconButton icon='arrow-down' type='solid' isHovered={hasHeaderHovered}/>
     </StyledSortButton>
   )
@@ -73,11 +72,11 @@ const TableHeaderCellContent: React.FC<ITableHeaderCellContentProps> = ({ column
     return (
       <>
         {alignment === ColumnAlignment.Right && sortButton}
-        <span onMouseEnter={handleHovered(true, setHasHeaderHovered)} onMouseLeave={handleHovered(false, setHasHeaderHovered)}>
+        <span onMouseEnter={setHeaderHoveredTrue} onMouseLeave={setHeaderHoveredFalse}>
             <Text weight={Variables.FontWeight.fwSemiBold}>
               <Text.Link
                 variant={LinkVariant.Unstyled}
-                onClick={handleHeaderTitleClicked(name, sort, onSortChange, setHasHeaderHovered)}
+                onClick={handleHeaderTitleClicked(name, setHasHeaderHovered, sort, onSortChange)}
               >
                 {title}
               </Text.Link>
@@ -91,12 +90,12 @@ const TableHeaderCellContent: React.FC<ITableHeaderCellContentProps> = ({ column
   return null
 }
 
-const getHeaderCells = (
+const getHeaderCells = <T extends {}>(
   hasTableSwipeActions: boolean,
-  columns: IColumnProps[],
-  sort: IColumnSorts,
-  onSortChange: (sort: IColumnSorts) => void,
+  columns: Array<IColumnProps<T>>,
   hasLeftAction: boolean,
+  sort?: IColumnSorts,
+  onSortChange?: (sort: IColumnSorts) => void,
   bulkActions?: IFontAwesomeIconButtonProps[]
 ) => {
   const hasHeaderSize = columns.some((column) => !!column.headerSize)
@@ -113,7 +112,7 @@ const getHeaderCells = (
                 displayType: 'flex',
                 flexHorizontalAlignment: (column.alignment && column.alignment === ColumnAlignment.Right) ? GridLayout.HorizontalAlignment.Right : GridLayout.HorizontalAlignment.Left,
                 size: (size === ColumnSize.Shrink) ? 'shrink' : 'auto',
-                content: <div><TableHeaderCellContent column={column} sort={sort} onSortChange={onSortChange} isLastColumn={index === columns.length - 1} isFirstColumn={!hasLeftAction && index === 0} hasTableSwipeActions={hasTableSwipeActions}/></div>
+                content: <div><TableHeaderCellContent<T> column={column} sort={sort} onSortChange={onSortChange}/></div>
               })
             })
           }
@@ -145,27 +144,42 @@ const getHeaderCells = (
 
       return (
         <StyledHeaderCell key={name} colSpan={(isLastColumn && hasTableSwipeActions) ? 2 : undefined} size={size} alignment={alignment} isLastColumn={isLastColumn} isFirstColumn={isFirstColumn}>
-          <TableHeaderCellContent column={column} sort={sort} onSortChange={onSortChange} isLastColumn={isLastColumn}  isFirstColumn={isFirstColumn} hasTableSwipeActions={hasTableSwipeActions}/>
+          <TableHeaderCellContent<T> column={column} sort={sort} onSortChange={onSortChange}/>
         </StyledHeaderCell>
       )})
   )
 }
 
-const TableHeader: React.FC<ITableHeaderProps> = ({ hasLeftAction, columns, sort, onSortChange, hasTableSwipeActions, selectedAll, setSelectedAll, bulkActions, hasBulkAction, isEmpty}) => {
+const TableHeader = <T extends {}>(props: ITableHeaderProps<T>) => {
+  const {
+    hasLeftAction,
+    columns,
+    sort,
+    onSortChange,
+    hasTableSwipeActions,
+    selectedAll,
+    setSelectedAll,
+    bulkActions,
+    hasBulkAction,
+    isEmpty
+  } = props
+
+  const setSelectedAllTableCheckboxInputValue = useCallback((value) => setSelectedAll(value), [setSelectedAll])
+
   return (
     <StyledRow variant={TableRowVariant.Neutral} isHeader isEmptyHeader={isEmpty} >
       {
-        (!hasLeftAction || isEmpty) ? getHeaderCells(hasTableSwipeActions, columns, sort, onSortChange,  hasLeftAction, hasBulkAction ? bulkActions : undefined ) : (
+        (!hasLeftAction || isEmpty) ? getHeaderCells(hasTableSwipeActions, columns, hasLeftAction, sort, onSortChange,hasBulkAction ? bulkActions : undefined ) : (
           <>
             <StyledHeaderLeftCell>
               <TableCheckboxInput
                 name='selectAll'
                 value={selectedAll}
-                onChange={handleTableHeaderCheckboxInputChange(setSelectedAll)}
+                onChange={setSelectedAllTableCheckboxInputValue}
               />
             </StyledHeaderLeftCell>
             {
-              getHeaderCells(hasTableSwipeActions, columns, sort, onSortChange, hasLeftAction, hasBulkAction ? bulkActions : undefined )
+              getHeaderCells(hasTableSwipeActions, columns, hasLeftAction, sort, onSortChange,hasBulkAction ? bulkActions : undefined )
             }
           </>
         )
