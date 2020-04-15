@@ -91,7 +91,7 @@ const getLeftCell = <T extends {}>(isSelectable: boolean, isRemovable: boolean, 
           <FontAwesomeIconButton
             icon='times'
             type='regular'
-            variant={row.variant === TableRowVariant.Red ? IconButtonVariants.Red : IconButtonVariants.Neutral}
+            variant={row.variant === TableRowVariant.Error ? IconButtonVariants.Red : IconButtonVariants.Neutral}
             onClick={handleRemoveButtonClick(row.data, onRowRemove)}
             tooltipText='Delete'
           />

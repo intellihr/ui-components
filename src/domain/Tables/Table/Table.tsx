@@ -17,7 +17,7 @@ import {
   StyledEmptyStateCell,
   StyledTHead,
   StyledTable,
-  StyledTableWrapper
+  StyledTableWrapper, StyledEmptyStateRow
 } from './services/style'
 import { TableCheckboxInputValue } from './subcomponents/TableCheckboxInput'
 import { TableHeader } from './subcomponents/TableHeader'
@@ -61,8 +61,8 @@ interface ITableProps <T extends {}> {
   sort?: IColumnSorts
   /** Called when the sorting is changed */
   onSortChange?: (sort: IColumnSorts) => void
-  /** Called when the selection is changed */
-  onSelectionChanged?: (selectedRowData: T[]) => void
+  /** Called when the selected row is changed */
+  onSelectedRowChange?: (selectedRowData: T[]) => void
   /** Icon Buttons group for bulkActions when the user selects some row */
   bulkActions?: IFontAwesomeIconButtonProps[]
   /** Called when some row is removed */
@@ -130,7 +130,7 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
     sort,
     onSortChange,
     columns,
-    onSelectionChanged,
+    onSelectedRowChange,
     margins,
     componentContext,
     hasLeftAction = false,
@@ -164,8 +164,8 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
     if (!hasLeftAction) {
       const currentSelectedRows = Object.values(selectedRows)
       setSelectedAll(getSelectAllTableCheckboxInputValue(currentSelectedRows))
-      if (onSelectionChanged) {
-        handleSelectionChanged<T>(rows, selectedRows, onSelectionChanged)
+      if (onSelectedRowChange) {
+        handleSelectionChanged<T>(rows, selectedRows, onSelectedRowChange)
       }
     }
   }, [selectedRows])
@@ -196,7 +196,7 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
         <tbody>
         {
           rows.length === 0 ? (
-            <tr><StyledEmptyStateCell colSpan={columns.length}>{emptyState}</StyledEmptyStateCell></tr>
+            <StyledEmptyStateRow><StyledEmptyStateCell colSpan={columns.length}>{emptyState}</StyledEmptyStateCell></StyledEmptyStateRow>
           ) : rows.map((row: IRowProps<T>) => (
             <TableRow
               key={row.id}

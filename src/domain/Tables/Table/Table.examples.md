@@ -43,7 +43,7 @@ rows: [
                   data: {fileName: 'fail.pdf', createAt: '05/01/2018', size: '8.2', fileType: 'PDF'},
                   isSelectable: false,
                   isRemovable: true,
-                  variant: 'red',
+                  variant: 'error',
                   onClick: (data) => alert(`Error on ${data.fileName}`),
                   contentOverride: (data)=> ([
                                                <Text>{data.fileName}</Text>,
@@ -154,7 +154,7 @@ const successRowToNormal = {
             onClick: () => alert(`Bulk delete action on ${state.selectedDataSet.length} files`)
         }
         ]}
-      onSelectionChanged = {(dataSet) => setState({selectedDataSet:dataSet})}
+      onSelectedRowChange = {(dataSet) => setState({selectedDataSet:dataSet})}
       rows={state.rows}
       sort={state.sort}
       onSortChange={(sort) => setState({sort})}
@@ -249,7 +249,7 @@ const successRowContentOverride = (
 <Table
   interactionType='swipe'
   isMobile
-  onSelectionChanged = {(dataSet) => console.log(dataSet)}
+  onSelectedRowChange = {(dataSet) => console.log(dataSet)}
   onProgressEnd = {(data) => setState({hasSuccessRowContent:false})}
   rows={[
         {
@@ -257,7 +257,7 @@ const successRowContentOverride = (
             data: {fileName: 'fail.pdf', createAt: '05/01/2018', size: '8.2', fileType: 'PDF'},
             isSelectable: false,
             isRemovable: true,
-            variant: 'red',
+            variant: 'error',
             onClick: (data) => alert(`Error on ${data.fileName}`),
             swipeActions: removeableRowActions,
             contentOverride: (data)=> ([
@@ -337,7 +337,7 @@ sort: {createAt: 'down'}
 };
 
 <Table
-  onSelectionChanged = {(dataSet) => console.log(dataSet)}
+  onSelectedRowChange = {(dataSet) => console.log(dataSet)}
   rows={[]}
   sort={state.sort}
   onSortChange={(sort) => setState({sort})}

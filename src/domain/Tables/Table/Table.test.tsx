@@ -4,7 +4,7 @@ import React from 'react'
 import { TableRowVariant } from './services/colors'
 import { ColumnAlignment, ColumnSize, ColumnSortDirection, Table, TableInteractionType } from './Table'
 
-const onSelectionChanged = jest.fn()
+const onSelectedRowChange = jest.fn()
 const onSortChange = jest.fn()
 const onRowClick = jest.fn()
 const emptyState = <div>empty</div>
@@ -32,7 +32,7 @@ const rows = [
     data: {fileName: 'fail.pdf', createAt: '05/01/2018', size: '8.2', fileType: 'PDF'},
     isSelectable: false,
     isRemovable: true,
-    variant: TableRowVariant.Red,
+    variant: TableRowVariant.Error,
     onClick: onRowClick,
     rowContentOverride
   },
@@ -70,7 +70,7 @@ describe('<Table />', () => {
       <Table
         <{fileName: string, createAt: string, size: string, fileType: string}>
         hasLeftAction
-        onSelectionChanged={onSelectionChanged}
+        onSelectedRowChange={onSelectedRowChange}
         rows={rows}
         sort={{createAt: ColumnSortDirection.Ascending}}
         onSortChange={onSortChange}
@@ -87,7 +87,7 @@ describe('<Table />', () => {
       <Table
         <{fileName: string, createAt: string, size: string, fileType: string}>
         interactionType={TableInteractionType.Swipe}
-        onSelectionChanged={onSelectionChanged}
+        onSelectedRowChange={onSelectedRowChange}
         rows={rows}
         sort={{createAt: ColumnSortDirection.Ascending}}
         onSortChange={onSortChange}
@@ -103,7 +103,7 @@ describe('<Table />', () => {
     const wrapper = shallow(
       <Table
         <{fileName: string, createAt: string, size: string, fileType: string}>
-        onSelectionChanged={onSelectionChanged}
+        onSelectedRowChange={onSelectedRowChange}
         rows={[]}
         sort={{createAt: ColumnSortDirection.Ascending}}
         onSortChange={onSortChange}

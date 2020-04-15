@@ -76,7 +76,7 @@ exports[`<Table /> should render a mobile table 1`] = `
             "isSelectable": false,
             "onClick": [MockFunction],
             "rowContentOverride": [Function],
-            "variant": "red",
+            "variant": "error",
           }
         }
         selectedRows={
@@ -346,7 +346,7 @@ exports[`<Table /> should render a table 1`] = `
             "isSelectable": false,
             "onClick": [MockFunction],
             "rowContentOverride": [Function],
-            "variant": "red",
+            "variant": "error",
           }
         }
         selectedRows={
@@ -580,7 +580,7 @@ exports[`<Table /> should render an empty table 1`] = `
       />
     </styled.thead>
     <tbody>
-      <tr>
+      <styled.tr>
         <styled.td
           colSpan={2}
         >
@@ -588,7 +588,7 @@ exports[`<Table /> should render an empty table 1`] = `
             empty
           </div>
         </styled.td>
-      </tr>
+      </styled.tr>
     </tbody>
   </styled.table>
 </styled.div>

@@ -149,6 +149,10 @@ const StyledProgressBarRow = styled.tr`
   border-bottom: 1px solid ${Variables.Color.n250};
   background: ${Variables.Color.n100};
 `
+const StyledEmptyStateRow = styled.tr`
+  border: none;
+`
+
 const StyledRow = styled.tr`
   white-space: nowrap;
   border: none;
@@ -402,5 +406,6 @@ export {
   StyledTableWrapper,
   StyledSwipeActionsCell,
   StyledSwipeActions,
-  StyledHeaderCellWithHeaderSize
+  StyledHeaderCellWithHeaderSize,
+  StyledEmptyStateRow
 }
