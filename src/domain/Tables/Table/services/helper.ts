@@ -42,7 +42,7 @@ const handleSelectionChanged = (rows: IRowProps[], selectedRows: ISelectedRows, 
   onSelectionChanged(selectedRowsData)
 }
 
-const getNewSelectedAll = (currentSelectedRows: boolean[]) => {
+const getSelectAllTableCheckboxInputValue = (currentSelectedRows: boolean[]) => {
   let newSelectedAll = null
 
   for (const selectedRow of currentSelectedRows) {
@@ -137,7 +137,7 @@ export {
   handleHovered,
   getUpdatedAllSelectableRows,
   handleSelectionChanged,
-  getNewSelectedAll,
+  getSelectAllTableCheckboxInputValue,
   handleHeaderTitleClicked,
   handleSortButtonClicked,
   handleTableHeaderCheckboxInputChange,

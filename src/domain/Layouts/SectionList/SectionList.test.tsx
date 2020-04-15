@@ -15,7 +15,7 @@ describe('<SectionList />', () => {
           section 2
         </SectionList.UnstyledSection>
         <SectionList.AnnotatedSection
-          header='Annotated TableCheckboxInput'
+          header='Annotated Section'
           description='Annotated Description'
           linkText='Annotated Link'
           linkProps={{href: '#'}}
@@ -23,7 +23,7 @@ describe('<SectionList />', () => {
           section 2
         </SectionList.AnnotatedSection>
         <SectionList.TitledSection
-          header='Titled TableCheckboxInput'
+          header='Titled Section'
           description='Titled Description'
           actionItems={[
             <Button type='primary' key={1}>Action 1</Button>,

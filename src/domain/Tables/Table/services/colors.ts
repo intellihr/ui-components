@@ -5,16 +5,7 @@ enum TableRowVariant {
   Red = 'red'
 }
 
-interface IVariantOption {
-  hoverBackground: Variables.Color
-  selectBackground: Variables.Color
-}
-
-type VariantOptions = {
-  [K in TableRowVariant]: IVariantOption
-}
-
-const variantOptions: VariantOptions = {
+const variantOptions = {
   [TableRowVariant.Neutral]: {
     hoverBackground: Variables.Color.n150,
     selectBackground: Variables.Color.i100

@@ -1,4 +1,4 @@
-import {mount} from 'enzyme'
+import { shallow } from 'enzyme'
 import React from 'react'
 
 import {TableRowVariant} from './services/colors'
@@ -66,7 +66,7 @@ const rows = [
 
 describe('<Table />', () => {
   it('should render a table', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <Table
         hasLeftAction
         onSelectionChanged={onSelectionChanged}
@@ -82,7 +82,7 @@ describe('<Table />', () => {
   })
 
   it('should render a mobile table', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <Table
         touchType={TableTouchType.Swipe}
         onSelectionChanged={onSelectionChanged}
@@ -98,7 +98,7 @@ describe('<Table />', () => {
   })
 
   it('should render an empty table', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <Table
         onSelectionChanged={onSelectionChanged}
         rows={[]}

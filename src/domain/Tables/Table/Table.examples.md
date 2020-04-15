@@ -206,18 +206,21 @@ initialState = {
 sort: {createAt: 'down'}
 };
 
+const removeableRowActions = ([
+                        {
+                            icon:'trash',
+                            type:'solid',
+                            tooltipText:'Delete',
+                            onClick: () => alert('delete')
+                        }
+                    ])
+
 const rowActions = ([
                         {
                             icon:'link',
                             type:'solid',
                             tooltipText:'Copy Link',
                             onClick: () => alert('copy link')
-                        },
-                        {
-                            icon:'pencil-alt',
-                            type:'solid',
-                            tooltipText:'Rename',
-                            onClick: () => alert('rename')
                         },
                         {
                             icon:'file-download',
@@ -256,6 +259,7 @@ const successRowContentOverride = (
             isRemovable: true,
             variant: 'red',
             onClick: (data) => alert(`Error on ${data.fileName}`),
+            swipeActions: removeableRowActions,
             contentOverride: (data)=> ([
                                         <Text>{data.fileName}</Text>,
                                          <FontAwesomeIcon
@@ -271,6 +275,7 @@ const successRowContentOverride = (
             isSelectable: false,
             isRemovable: true,
             progress: 0.7,
+            swipeActions: removeableRowActions,
             contentOverride: (data)=> ([
                              <Text>{data.fileName}</Text>,
                              <Text color={Variables.Color.n500}>{data.size}MB</Text>

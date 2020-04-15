@@ -8,7 +8,11 @@ import {
 } from '../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
 import { GridLayout } from '../../Layouts/GridLayout'
 import { TableRowVariant } from './services/colors'
-import {getNewSelectedAll, getUpdatedAllSelectableRows, handleSelectionChanged} from './services/helper'
+import {
+  getSelectAllTableCheckboxInputValue,
+  getUpdatedAllSelectableRows,
+  handleSelectionChanged
+} from './services/helper'
 import {
   StyledEmptyStateCell,
   StyledTHead,
@@ -161,7 +165,7 @@ const Table: React.FC<ITableProps> = (props) => {
   useEffect(() => {
     if (!hasLeftAction) {
       const currentSelectedRows = Object.values(selectedRows)
-      setSelectedAll(getNewSelectedAll(currentSelectedRows))
+      setSelectedAll(getSelectAllTableCheckboxInputValue(currentSelectedRows))
       if (onSelectionChanged) {
         handleSelectionChanged(rows, selectedRows, onSelectionChanged)
       }
