@@ -5,19 +5,19 @@ import { Button, ButtonGroup } from '@Domain/Buttons';
 import { Text } from '@Domain/Typographies';
 
 <SectionList>
-  <SectionList.TableCheckboxInput>
+  <SectionList.Section>
     <Text>
-      This is a TableCheckboxInput, it can be used to display data on the page with correct padding and will automatically
+      This is a Section, it can be used to display data on the page with correct padding and will automatically
       display a border below itself if another section is below it in the section list and you are on desktop.
     </Text>
-  </SectionList.TableCheckboxInput>
+  </SectionList.Section>
   <SectionList.UnstyledSection>
     <Text>
-      This is a unstyled TableCheckboxInput, it can be used to display data on the page with correct padding.
+      This is a unstyled Section, it can be used to display data on the page with correct padding.
     </Text>
   </SectionList.UnstyledSection>
   <SectionList.AnnotatedSection
-    header='Annotated TableCheckboxInput'
+    header='Annotated Section'
     description='This is an annotated section, which enables sections to have a description.'
     links={[
       {
@@ -35,23 +35,23 @@ import { Text } from '@Domain/Typographies';
     ]}
   >
     <Text>
-      As is the same with a TableCheckboxInput, content can be passed into an Annotated TableCheckboxInput which will then be displayed
+      As is the same with a Section, content can be passed into an Annotated Section which will then be displayed
       inside the section.
     </Text>
   </SectionList.AnnotatedSection>
   <SectionList.AnnotatedSection
-    header='Annotated TableCheckboxInput (Deprecated)'
+    header='Annotated Section (Deprecated)'
     description='This is the deprecated annotated section, which enables sections to have a description and only one link.'
     linkText='The only link'
     linkProps={{href: '#'}}
   >
     <Text>
-      As is the same with a TableCheckboxInput, content can be passed into an Annotated TableCheckboxInput which will then be displayed
+      As is the same with a Section, content can be passed into an Annotated Section which will then be displayed
       inside the section.
     </Text>
   </SectionList.AnnotatedSection>
   <SectionList.TitledSection
-    header='Titled TableCheckboxInput'
+    header='Titled Section'
     description='This is a titled section, which enables sections to have a description and action item(s).'
     actionItems={[
         <ButtonGroup key={1}>
