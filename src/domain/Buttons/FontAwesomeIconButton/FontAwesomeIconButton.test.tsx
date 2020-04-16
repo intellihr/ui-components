@@ -1,7 +1,6 @@
 import {mount, shallow} from 'enzyme'
 import React from 'react'
 
-import {Tile} from '../../Boards/Board/subcomponents/Tile'
 import {IconButtonVariants} from './colors'
 import {FontAwesomeIconButton} from './FontAwesomeIconButton'
 

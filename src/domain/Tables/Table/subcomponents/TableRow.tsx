@@ -121,7 +121,9 @@ const getDataCells = <T extends {}>(
     onClick,
     contentOverride,
     data,
-    id
+    id,
+    actions,
+    isRemovable
   } = row
 
   if (contentOverride && !Array.isArray(contentOverride(data))) {
@@ -140,16 +142,16 @@ const getDataCells = <T extends {}>(
   return (
     columns.map((column, index) => {
 
-      if (column.hoverActions && hasHoverButton && !contentOverride && !isSelected) {
+      if (hasHoverButton && !contentOverride && !isSelected && index === columns.length - 1 && !isRemovable && isSelectable) {
         return (
           <StyledDataCell
             key={column.name}
             hasProgressBar={hasProgressBar}
             alignment={column.alignment}
-            isLastColumn={index === columns.length - 1}
+            isLastColumn
             isFirstColumn={!hasLeftAction && index === 0}
           >
-            {getActionsIconButtonGroup(column.hoverActions(data), id, column.alignment)}
+            {getActionsIconButtonGroup(actions, id)}
           </StyledDataCell>
         )
       }
@@ -193,7 +195,7 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
     variant = TableRowVariant.Neutral,
     progress,
     onClick,
-    swipeActions
+    actions
   } = row
 
   const [movement, setMovement] = useState<number>(0)
@@ -202,11 +204,13 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
 
   const setHoveredTrue = useCallback(() => setHasHovered(true), [setHasHovered])
   const setHoveredFalse = useCallback(() => setHasHovered(false), [setHasHovered])
+  const hasSwipeActions = interactionType === TableInteractionType.Swipe && !!actions && actions.length > 0
+  const hasHoverActions = interactionType === TableInteractionType.Hover && !!actions && actions.length > 0
 
-  const swipeContentWidth = swipeActions ? swipeActions.length * Variables.Spacing.sXLarge + (swipeActions.length - 1) * Variables.Spacing.sXSmall + 2 * Variables.Spacing.sMedium : 0
+  const swipeContentWidth = hasSwipeActions && actions ? actions.length * Variables.Spacing.sXLarge + (actions.length - 1) * Variables.Spacing.sXSmall + 2 * Variables.Spacing.sMedium : 0
 
   const onDragBlind = useDrag((useDragProps: IUseDragProps) => {
-    if (interactionType === TableInteractionType.Swipe && swipeActions && useDragProps._movement[0] <= movement && useDragProps._movement[0] !== 0) {
+    if (hasSwipeActions && useDragProps._movement[0] <= movement && useDragProps._movement[0] !== 0) {
       if (Math.floor(useDragProps._movement[0]) !== movement) {
         setMovement(Math.min(Math.trunc(Math.abs(useDragProps._movement[0])), swipeContentWidth))
       }
@@ -220,15 +224,13 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
   const previousRowProps = usePrevious<IRowProps<T>>(row)
   const previousProgressFromPreviousRowProps = previousRowProps ? (previousRowProps.progress ? previousRowProps.progress : 0) : 0
   const isSelected = hasLeftAction && isSelectable ? selectedRows[row.id] : false
-  const handleSwipeActionClosed = () => (interactionType === TableInteractionType.Swipe  && movement !== 0) ? setMovement(0) : undefined
+  const handleSwipeActionClosed = () => (hasSwipeActions  && movement !== 0) ? setMovement(0) : undefined
 
   useEffect(() => {
     if (progress && previousProgressFromPreviousRowProps !== (progress ? progress : 0)) {
       setPreviousProgress(previousProgressFromPreviousRowProps)
     }
   }, [progress])
-
-  const hasSwipeActions = interactionType === TableInteractionType.Swipe   && !!swipeActions && swipeActions.length > 0
 
   return (
     <>
@@ -243,12 +245,12 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
         onMouseLeave={setHoveredFalse}
       >
         {hasLeftAction && getLeftCell<T>(isSelectable, isRemovable, hasLeftAction, row, selectedRows, setSelectedRows, onRowRemove)}
-        {getDataCells<T>(!!progress, hasSwipeActions, hasTableSwipeActions, isSelected, columns, row, selectedRows, setSelectedRows, setHasHovered, hasLeftAction, hasHovered, handleSwipeActionClosed)}
+        {getDataCells<T>(!!progress, hasSwipeActions, hasTableSwipeActions, isSelected, columns, row, selectedRows, setSelectedRows, setHasHovered, hasLeftAction, hasHoverActions ? hasHovered : false, handleSwipeActionClosed)}
         {
           hasSwipeActions && (
             <StyledSwipeActionsCell>
               <StyledSwipeActions width={movement}>
-                {getActionsIconButtonGroup(swipeActions)}
+                {getActionsIconButtonGroup(actions)}
               </StyledSwipeActions>
             </StyledSwipeActionsCell>
           )

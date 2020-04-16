@@ -15,9 +15,10 @@ import {
 } from './services/helper'
 import {
   StyledEmptyStateCell,
+  StyledEmptyStateRow,
+  StyledFontAwesomeIconButtonWrapper,
   StyledTHead,
-  StyledTable,
-  StyledTableWrapper, StyledEmptyStateRow
+  StyledTable, StyledTableWrapper
 } from './services/style'
 import { TableCheckboxInputValue } from './subcomponents/TableCheckboxInput'
 import { TableHeader } from './subcomponents/TableHeader'
@@ -87,7 +88,7 @@ interface IRowProps <T> {
   data: T
   contentOverride?: (rowData: T) => JSX.Element[] | JSX.Element
   onClick?: (rowData: T) => void
-  swipeActions?: IFontAwesomeIconButtonProps[]
+  actions?: IFontAwesomeIconButtonProps[]
 }
 
 interface IColumnProps <T> {
@@ -98,25 +99,14 @@ interface IColumnProps <T> {
   content: (rowData: T) => JSX.Element
   alignment?: ColumnAlignment
   tooltipText?: (rowData: T) => string
-  hoverActions?: (rowData: T) => IFontAwesomeIconButtonProps[]
 }
 
-const getActionsIconButtonGroup = (actions?: IFontAwesomeIconButtonProps[], name?: string, alignment?: ColumnAlignment) => {
+const getActionsIconButtonGroup = (actions?: IFontAwesomeIconButtonProps[], name?: string) => {
   if (actions) {
-    const horizontalAlignment = alignment === ColumnAlignment.Right ? GridLayout.HorizontalAlignment.Right : GridLayout.HorizontalAlignment.Left
-
     return (
-      <GridLayout
-        horizontalAlignment={horizontalAlignment}
-        gutterMarginX={Variables.Spacing.sXSmall}
-        verticalAlignment={GridLayout.VerticalAlignment.Middle}
-        cells={
-          actions.map((actionProps, index) => ({
-            size:  ColumnSize.Shrink,
-            content: <FontAwesomeIconButton key={`actions-${name}-${index}`} {...actionProps}/>
-          }))
-        }
-      />
+      <div>
+        {actions.map((actionProps, index) => (<StyledFontAwesomeIconButtonWrapper key={`actions-${name}-${index}`}><FontAwesomeIconButton {...actionProps}/></StyledFontAwesomeIconButtonWrapper>))}
+      </div>
       )
   }
 
@@ -161,7 +151,7 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
   }, [selectedAll])
 
   useEffect(() => {
-    if (!hasLeftAction) {
+    if (hasLeftAction) {
       const currentSelectedRows = Object.values(selectedRows)
       setSelectedAll(getSelectAllTableCheckboxInputValue(currentSelectedRows))
       if (onSelectedRowChange) {
@@ -170,7 +160,7 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
     }
   }, [selectedRows])
 
-  const hasTableSwipeActions = interactionType === TableInteractionType.Swipe && rows.some((row) => !!row.swipeActions && row.swipeActions.length > 0)
+  const hasTableSwipeActions = interactionType === TableInteractionType.Swipe && rows.some((row) => !!row.actions && row.actions.length > 0)
 
   return (
     <StyledTableWrapper

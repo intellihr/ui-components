@@ -388,6 +388,14 @@ const StyledFontAwesomeIcon =  styled(FontAwesomeIcon)`
   animation-duration: .25s;
 `
 
+const StyledFontAwesomeIconButtonWrapper = styled.span`
+  margin-right: ${Variables.Spacing.sXSmall}px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+`
+
 export {
   StyledTable,
   StyledRow,
@@ -407,5 +415,6 @@ export {
   StyledSwipeActionsCell,
   StyledSwipeActions,
   StyledHeaderCellWithHeaderSize,
-  StyledEmptyStateRow
+  StyledEmptyStateRow,
+  StyledFontAwesomeIconButtonWrapper
 }

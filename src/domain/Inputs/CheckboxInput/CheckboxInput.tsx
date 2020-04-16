@@ -120,18 +120,18 @@ export class CheckboxInput extends React.PureComponent<ICheckboxInputProps> {
       id
     } = this.props
 
-    if (!label) {
-      return null
+    if (label) {
+      return (
+        <label
+          htmlFor={id || name}
+          className={classNames('checkbox', { 'checkbox-button': isButton })}
+        >
+          {label}
+        </label>
+      )
     }
 
-    return (
-      <label
-        htmlFor={id || name}
-        className={classNames('checkbox', { 'checkbox-button': isButton })}
-      >
-        {label}
-      </label>
-    )
+    return null
   }
 
   private get classNames (): string {

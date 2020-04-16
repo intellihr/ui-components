@@ -27,7 +27,7 @@ exports[`<Table /> should render a mobile table 1`] = `
         }
         hasBulkAction={false}
         hasLeftAction={false}
-        hasTableSwipeActions={false}
+        hasTableSwipeActions={true}
         isEmpty={false}
         onSortChange={[MockFunction]}
         selectedAll="false"
@@ -60,11 +60,37 @@ exports[`<Table /> should render a mobile table 1`] = `
           ]
         }
         hasLeftAction={false}
-        hasTableSwipeActions={false}
+        hasTableSwipeActions={true}
         interactionType="swipe"
         key="0"
         row={
           Object {
+            "actions": Array [
+              Object {
+                "icon": "link",
+                "onClick": [Function],
+                "tooltipText": "Copy Link",
+                "type": "solid",
+              },
+              Object {
+                "icon": "pencil-alt",
+                "onClick": [Function],
+                "tooltipText": "Rename",
+                "type": "solid",
+              },
+              Object {
+                "icon": "file-download",
+                "onClick": [Function],
+                "tooltipText": "Download",
+                "type": "solid",
+              },
+              Object {
+                "icon": "trash",
+                "onClick": [Function],
+                "tooltipText": "Delete",
+                "type": "solid",
+              },
+            ],
             "data": Object {
               "createAt": "05/01/2018",
               "fileName": "fail.pdf",
@@ -107,11 +133,37 @@ exports[`<Table /> should render a mobile table 1`] = `
           ]
         }
         hasLeftAction={false}
-        hasTableSwipeActions={false}
+        hasTableSwipeActions={true}
         interactionType="swipe"
         key="1"
         row={
           Object {
+            "actions": Array [
+              Object {
+                "icon": "link",
+                "onClick": [Function],
+                "tooltipText": "Copy Link",
+                "type": "solid",
+              },
+              Object {
+                "icon": "pencil-alt",
+                "onClick": [Function],
+                "tooltipText": "Rename",
+                "type": "solid",
+              },
+              Object {
+                "icon": "file-download",
+                "onClick": [Function],
+                "tooltipText": "Download",
+                "type": "solid",
+              },
+              Object {
+                "icon": "trash",
+                "onClick": [Function],
+                "tooltipText": "Delete",
+                "type": "solid",
+              },
+            ],
             "contentOverride": [Function],
             "data": Object {
               "createAt": "05/01/2018",
@@ -153,11 +205,37 @@ exports[`<Table /> should render a mobile table 1`] = `
           ]
         }
         hasLeftAction={false}
-        hasTableSwipeActions={false}
+        hasTableSwipeActions={true}
         interactionType="swipe"
         key="2"
         row={
           Object {
+            "actions": Array [
+              Object {
+                "icon": "link",
+                "onClick": [Function],
+                "tooltipText": "Copy Link",
+                "type": "solid",
+              },
+              Object {
+                "icon": "pencil-alt",
+                "onClick": [Function],
+                "tooltipText": "Rename",
+                "type": "solid",
+              },
+              Object {
+                "icon": "file-download",
+                "onClick": [Function],
+                "tooltipText": "Download",
+                "type": "solid",
+              },
+              Object {
+                "icon": "trash",
+                "onClick": [Function],
+                "tooltipText": "Delete",
+                "type": "solid",
+              },
+            ],
             "contentOverride": [Function],
             "data": Object {
               "createAt": "05/01/2018",
@@ -199,11 +277,37 @@ exports[`<Table /> should render a mobile table 1`] = `
           ]
         }
         hasLeftAction={false}
-        hasTableSwipeActions={false}
+        hasTableSwipeActions={true}
         interactionType="swipe"
         key="3"
         row={
           Object {
+            "actions": Array [
+              Object {
+                "icon": "link",
+                "onClick": [Function],
+                "tooltipText": "Copy Link",
+                "type": "solid",
+              },
+              Object {
+                "icon": "pencil-alt",
+                "onClick": [Function],
+                "tooltipText": "Rename",
+                "type": "solid",
+              },
+              Object {
+                "icon": "file-download",
+                "onClick": [Function],
+                "tooltipText": "Download",
+                "type": "solid",
+              },
+              Object {
+                "icon": "trash",
+                "onClick": [Function],
+                "tooltipText": "Delete",
+                "type": "solid",
+              },
+            ],
             "data": Object {
               "createAt": "05/01/2018",
               "fileName": "test.pdf",
@@ -242,11 +346,37 @@ exports[`<Table /> should render a mobile table 1`] = `
           ]
         }
         hasLeftAction={false}
-        hasTableSwipeActions={false}
+        hasTableSwipeActions={true}
         interactionType="swipe"
         key="4"
         row={
           Object {
+            "actions": Array [
+              Object {
+                "icon": "link",
+                "onClick": [Function],
+                "tooltipText": "Copy Link",
+                "type": "solid",
+              },
+              Object {
+                "icon": "pencil-alt",
+                "onClick": [Function],
+                "tooltipText": "Rename",
+                "type": "solid",
+              },
+              Object {
+                "icon": "file-download",
+                "onClick": [Function],
+                "tooltipText": "Download",
+                "type": "solid",
+              },
+              Object {
+                "icon": "trash",
+                "onClick": [Function],
+                "tooltipText": "Delete",
+                "type": "solid",
+              },
+            ],
             "data": Object {
               "createAt": "05/01/2018",
               "fileName": "test1.pdf",
@@ -335,6 +465,32 @@ exports[`<Table /> should render a table 1`] = `
         key="0"
         row={
           Object {
+            "actions": Array [
+              Object {
+                "icon": "link",
+                "onClick": [Function],
+                "tooltipText": "Copy Link",
+                "type": "solid",
+              },
+              Object {
+                "icon": "pencil-alt",
+                "onClick": [Function],
+                "tooltipText": "Rename",
+                "type": "solid",
+              },
+              Object {
+                "icon": "file-download",
+                "onClick": [Function],
+                "tooltipText": "Download",
+                "type": "solid",
+              },
+              Object {
+                "icon": "trash",
+                "onClick": [Function],
+                "tooltipText": "Delete",
+                "type": "solid",
+              },
+            ],
             "data": Object {
               "createAt": "05/01/2018",
               "fileName": "fail.pdf",
@@ -382,6 +538,32 @@ exports[`<Table /> should render a table 1`] = `
         key="1"
         row={
           Object {
+            "actions": Array [
+              Object {
+                "icon": "link",
+                "onClick": [Function],
+                "tooltipText": "Copy Link",
+                "type": "solid",
+              },
+              Object {
+                "icon": "pencil-alt",
+                "onClick": [Function],
+                "tooltipText": "Rename",
+                "type": "solid",
+              },
+              Object {
+                "icon": "file-download",
+                "onClick": [Function],
+                "tooltipText": "Download",
+                "type": "solid",
+              },
+              Object {
+                "icon": "trash",
+                "onClick": [Function],
+                "tooltipText": "Delete",
+                "type": "solid",
+              },
+            ],
             "contentOverride": [Function],
             "data": Object {
               "createAt": "05/01/2018",
@@ -428,6 +610,32 @@ exports[`<Table /> should render a table 1`] = `
         key="2"
         row={
           Object {
+            "actions": Array [
+              Object {
+                "icon": "link",
+                "onClick": [Function],
+                "tooltipText": "Copy Link",
+                "type": "solid",
+              },
+              Object {
+                "icon": "pencil-alt",
+                "onClick": [Function],
+                "tooltipText": "Rename",
+                "type": "solid",
+              },
+              Object {
+                "icon": "file-download",
+                "onClick": [Function],
+                "tooltipText": "Download",
+                "type": "solid",
+              },
+              Object {
+                "icon": "trash",
+                "onClick": [Function],
+                "tooltipText": "Delete",
+                "type": "solid",
+              },
+            ],
             "contentOverride": [Function],
             "data": Object {
               "createAt": "05/01/2018",
@@ -474,6 +682,32 @@ exports[`<Table /> should render a table 1`] = `
         key="3"
         row={
           Object {
+            "actions": Array [
+              Object {
+                "icon": "link",
+                "onClick": [Function],
+                "tooltipText": "Copy Link",
+                "type": "solid",
+              },
+              Object {
+                "icon": "pencil-alt",
+                "onClick": [Function],
+                "tooltipText": "Rename",
+                "type": "solid",
+              },
+              Object {
+                "icon": "file-download",
+                "onClick": [Function],
+                "tooltipText": "Download",
+                "type": "solid",
+              },
+              Object {
+                "icon": "trash",
+                "onClick": [Function],
+                "tooltipText": "Delete",
+                "type": "solid",
+              },
+            ],
             "data": Object {
               "createAt": "05/01/2018",
               "fileName": "test.pdf",
@@ -517,6 +751,32 @@ exports[`<Table /> should render a table 1`] = `
         key="4"
         row={
           Object {
+            "actions": Array [
+              Object {
+                "icon": "link",
+                "onClick": [Function],
+                "tooltipText": "Copy Link",
+                "type": "solid",
+              },
+              Object {
+                "icon": "pencil-alt",
+                "onClick": [Function],
+                "tooltipText": "Rename",
+                "type": "solid",
+              },
+              Object {
+                "icon": "file-download",
+                "onClick": [Function],
+                "tooltipText": "Download",
+                "type": "solid",
+              },
+              Object {
+                "icon": "trash",
+                "onClick": [Function],
+                "tooltipText": "Delete",
+                "type": "solid",
+              },
+            ],
             "data": Object {
               "createAt": "05/01/2018",
               "fileName": "test1.pdf",

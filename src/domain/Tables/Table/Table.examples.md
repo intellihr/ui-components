@@ -8,6 +8,33 @@ import { FontAwesomeIconButton, Button} from '@Domain/Buttons';
 import { GridLayout } from '@Domain/Layouts';
 import { TextInput } from '@Domain/Inputs';
 
+const rowActions = ([
+                        {
+                            icon:'link',
+                            type:'solid',
+                            tooltipText:'Copy Link',
+                            onClick: () => alert('copy link')
+                        },
+                        {
+                            icon:'pencil-alt',
+                            type:'solid',
+                            tooltipText:'Rename',
+                            onClick: () => alert('rename')
+                        },
+                        {
+                            icon:'file-download',
+                            type:'solid',
+                            tooltipText:'Download',
+                            onClick: () => alert('download')
+                        },
+                        {
+                            icon:'trash',
+                            type:'solid',
+                            tooltipText:'Delete',
+                            onClick: () => alert('delete')
+                        }
+                    ])
+
 const successRowContentOverride = (
                                       (data)=> ([
                                                    <Text>{data.fileName}</Text>,
@@ -45,6 +72,7 @@ rows: [
                   isRemovable: true,
                   variant: 'error',
                   onClick: (data) => alert(`Error on ${data.fileName}`),
+                  actions: rowActions,
                   contentOverride: (data)=> ([
                                                <Text>{data.fileName}</Text>,
                                                 <div>
@@ -63,6 +91,7 @@ rows: [
                   isSelectable: false,
                   isRemovable: true,
                   progress: 0.7,
+                  actions: rowActions,
                   contentOverride: uploadingRowContentOverride
                 },
               {
@@ -71,22 +100,26 @@ rows: [
                   isSelectable: false,
                   isRemovable: true,
                   progress: 0.5,
+                  actions: rowActions,
                   contentOverride: uploadingRowContentOverride
                 },
               {
                   id: '3',
                   data: {fileName: 'test.pdf', createAt: '05/01/2018', size: '2.2', fileType: 'PDF'},
-                  isSelectable: true
+                  isSelectable: true,
+                  actions: rowActions
                 },
               {
                   id: '4',
                   data: {fileName: 'test1.pdf', createAt: '05/01/2018', size: '1.5', fileType: 'PDF'},
-                  isSelectable: true
+                  isSelectable: true,
+                  actions: rowActions
                 },
              {
                  id: '5',
                  data: {fileName: 'test3.pdf', createAt: '05/01/2018', size: '1.8', fileType: 'PDF'},
                  isSelectable: false,
+                 actions: rowActions,
                  contentOverride: (data)=> (
                                                 <GridLayout gutterMarginX={Variables.Spacing.sMedium}>
                                                      <GridLayout.Cell size = 'auto'>
@@ -110,6 +143,7 @@ const successRowTo100 = {
                      isSelectable: false,
                      isRemovable: true,
                      progress: 1,
+                     actions: rowActions,
                      contentOverride: successRowContentOverride
                    };
 
@@ -117,7 +151,8 @@ const successRowToNormal = {
                      id: '2',
                      data: {fileName: 'success.pdf', createAt: '05/01/2018', size: '3.7', fileType: 'PDF'},
                      isSelectable: true,
-                     isRemovable: false
+                     isRemovable: false,
+                     actions: rowActions
                    };
 
 <div>
@@ -154,7 +189,7 @@ const successRowToNormal = {
             onClick: () => alert(`Bulk delete action on ${state.selectedDataSet.length} files`)
         }
         ]}
-      onSelectedRowChange = {(dataSet) => setState({selectedDataSet:dataSet})}
+      onSelectedRowChange = {(dataSet) => {setState({selectedDataSet:dataSet}); console.log(dataSet)}}
       rows={state.rows}
       sort={state.sort}
       onSortChange={(sort) => setState({sort})}
@@ -172,23 +207,7 @@ const successRowToNormal = {
                 title: 'created at',
                 size: 'shrink',
                 content: (data)=> <Text>{data.createAt}</Text>,
-                alignment: 'right',
-                hoverActions: (data) => (
-                                            [
-                                                    {
-                                                        icon:'file-download',
-                                                        type:'solid',
-                                                        tooltipText:'Download',
-                                                        onClick: () => alert(`download action on ${data.fileName}`)
-                                                    },
-                                                    {
-                                                        icon:'trash',
-                                                        type:'solid',
-                                                        tooltipText:'Delete',
-                                                        onClick: () => alert(`delete action on ${data.fileName}`)
-                                                    }
-                                            ]
-                                        )
+                alignment: 'right'
               }
         ]}
      />
@@ -249,7 +268,6 @@ const successRowContentOverride = (
 <Table
   interactionType='swipe'
   isMobile
-  onSelectedRowChange = {(dataSet) => console.log(dataSet)}
   onProgressEnd = {(data) => setState({hasSuccessRowContent:false})}
   rows={[
         {
@@ -259,7 +277,7 @@ const successRowContentOverride = (
             isRemovable: true,
             variant: 'error',
             onClick: (data) => alert(`Error on ${data.fileName}`),
-            swipeActions: removeableRowActions,
+            actions: removeableRowActions,
             contentOverride: (data)=> ([
                                         <Text>{data.fileName}</Text>,
                                          <FontAwesomeIcon
@@ -275,7 +293,6 @@ const successRowContentOverride = (
             isSelectable: false,
             isRemovable: true,
             progress: 0.7,
-            swipeActions: removeableRowActions,
             contentOverride: (data)=> ([
                              <Text>{data.fileName}</Text>,
                              <Text color={Variables.Color.n500}>{data.size}MB</Text>
@@ -288,19 +305,19 @@ const successRowContentOverride = (
             isRemovable: true,
             progress: 1,
             contentOverride: state.hasSuccessRowContent ? successRowContentOverride : undefined,
-            swipeActions: state.hasSuccessRowContent ? rowActions : undefined
+            actions: state.hasSuccessRowContent ? rowActions : undefined
           },
         {
             id: '3',
             data: {fileName: 'test.pdf', createAt: '05/01/2018', size: '2.2', fileType: 'PDF'},
             isSelectable: true,
-            swipeActions: rowActions
+            actions: rowActions
           },
         {
             id: '4',
             data: {fileName: 'test1.pdf', createAt: '05/01/2018', size: '1.5', fileType: 'PDF'},
             isSelectable: true,
-            swipeActions: rowActions 
+            actions: rowActions 
           }
     ]}
       sort={state.sort}
@@ -337,7 +354,6 @@ sort: {createAt: 'down'}
 };
 
 <Table
-  onSelectedRowChange = {(dataSet) => console.log(dataSet)}
   rows={[]}
   sort={state.sort}
   onSortChange={(sort) => setState({sort})}
