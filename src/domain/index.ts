@@ -35,7 +35,7 @@ export { TextSkeleton, ParagraphSkeleton, BlockSkeleton, CircleSkeleton, FormFie
 export { HorizontalRule, Margin } from './Spacers'
 export { Spinner } from './Spinners'
 export { withStyledBreakpoints } from './Styles'
-export { LegacyDataTable, LegacyAsyncDataTable } from './Tables'
+export { Table, LegacyDataTable, LegacyAsyncDataTable } from './Tables'
 export { BlockTabGroup, ScrollingTabGroup } from './Tabs'
 
 /*

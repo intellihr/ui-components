@@ -56,5 +56,6 @@ const MemoFontAwesomeIcon = React.memo(FontAwesomeIcon, ((prevProps, nextProps) 
 }))
 
 export {
-  MemoFontAwesomeIcon as FontAwesomeIcon
+  MemoFontAwesomeIcon as FontAwesomeIcon,
+  IFontAwesomeIconProps
 }

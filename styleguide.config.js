@@ -311,6 +311,7 @@ module.exports = {
         {
           name: 'Tables',
           components: [
+            'src/domain/Tables/Table/Table.tsx',
             'src/domain/Tables/LegacyDataTable/LegacyAsyncDataTable/LegacyAsyncDataTable.tsx',
             'src/domain/Tables/LegacyDataTable/LegacyDataTable/LegacyDataTable.tsx'
           ]

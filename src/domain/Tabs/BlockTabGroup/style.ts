@@ -125,7 +125,7 @@ const HighlightBar = styled.div.attrs<IHighlightBarProps>(
     }
   }
 ) <IHighlightBarProps>`
-  height: 2px;
+  height: 2.1px;
   border-radius: 1px;
   background-color: ${Variables.Color.i400};
   position: absolute;
