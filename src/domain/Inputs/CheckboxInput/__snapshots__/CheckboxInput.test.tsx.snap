@@ -92,7 +92,7 @@ exports[`<CheckboxInput /> should render a checked checkbox input without button
       name="test-input"
       onChange={[Function]}
       type="checkbox"
-      value={1}
+      value="true"
     />
     <label
       className="checkbox"
