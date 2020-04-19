@@ -110,7 +110,16 @@ const handleTableRowCheckboxInputChange = (id: string, selectedRows: ISelectedRo
   setSelectedRows(newValue)
 }
 
-const handleTableCellClicked = <T extends {}>(id: string, row: IRowProps<T>, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void, setHasHovered: (value: boolean) => void, handleSwipeActionClosed?: () => void, isSelectable?: boolean, onClick?: (data: any) => void) => () => {
+const handleTableCellClicked = <T extends {}>(
+  id: string,
+  row: IRowProps<T>,
+  selectedRows: ISelectedRows,
+  setSelectedRows: (value: ISelectedRows) => void,
+  setHasHovered: (value: boolean) => void,
+  handleSwipeAction?: () => void,
+  isSelectable?: boolean,
+  onClick?: (data: any) => void
+) => () => {
   if (isSelectable) {
     const newValue = {
       ...selectedRows,
@@ -123,8 +132,8 @@ const handleTableCellClicked = <T extends {}>(id: string, row: IRowProps<T>, sel
     onClick(row.data)
   }
 
-  if (handleSwipeActionClosed) {
-    handleSwipeActionClosed()
+  if (handleSwipeAction) {
+    handleSwipeAction()
   }
 
   setHasHovered(false)

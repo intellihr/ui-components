@@ -130,6 +130,7 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
 
   const [selectedAll, setSelectedAll] = useState<TableCheckboxInputValue>(TableCheckboxInputValue.False)
   const [selectedRows, setSelectedRows] = useState<ISelectedRows>(getUpdatedAllSelectableRows(rows, {}))
+  const [expandedSwipeCellRow, setExpandedSwipeCellRow] = useState<string | null>(null)
 
   useEffect(() => {
     setSelectedRows(getUpdatedAllSelectableRows<T>(rows, selectedRows))
@@ -186,17 +187,20 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
         {
           rows.length === 0 ? (
             <StyledEmptyStateRow><StyledEmptyStateCell colSpan={columns.length}>{emptyState}</StyledEmptyStateCell></StyledEmptyStateRow>
-          ) : rows.map((row: IRowProps<T>) => (
+          ) : rows.map((row: IRowProps<T>, index) => (
             <TableRow
               key={row.id}
               hasTableSwipeActions={hasTableSwipeActions}
               columns={columns}
               row={row}
+              lastRow={index === rows.length - 1}
               selectedRows={selectedRows}
               setSelectedRows={setSelectedRows}
               hasLeftAction={hasLeftAction}
               interactionType={interactionType}
               onRowRemove={onRowRemove}
+              expandedSwipeCellRow={expandedSwipeCellRow}
+              setExpandedSwipeCellRow={setExpandedSwipeCellRow}
             />
           ))
         }

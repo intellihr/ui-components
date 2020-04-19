@@ -13,6 +13,7 @@ interface IStyledTableCheckboxInputProps {
 
 interface IStyledTableCheckboxLabelProps {
   value: TableCheckboxInputValue
+  hasStyledOnRowHovered: boolean
 }
 
 interface IStyledTableWrapperProps {
@@ -25,12 +26,12 @@ interface IStyledRowProps {
   variant: TableRowVariant
   movement?: number
   hasProgressBar?: boolean
-  isHeader?: boolean
-  isEmptyHeader?: boolean
+  hideBottomBorder?: boolean
 }
 
 interface IStyledSwipeActionsProps {
   width: number
+  hasProgressBar?: boolean
 }
 
 interface IStyledProgressBarProps {
@@ -111,17 +112,21 @@ const StyledSwipeActionsCell = styled.td`
 `
 
 const StyledSwipeActions = styled.div`
-    padding: ${Variables.Spacing.sSmall}px
-    top:0;
-    width: 0;
-    overflow: hidden;
-    position: absolute;
-    border-left: 1px solid ${Variables.Color.n250};
-    height: 50px;
+  padding: ${Variables.Spacing.sSmall}px
+  top:0;
+  width: 0;
+  overflow: hidden;
+  position: absolute;
+  border-left: 1px solid ${Variables.Color.n250};
+  height: 59px;
 
-    ${(props: IStyledSwipeActionsProps) => props.width && css`
+  ${(props: IStyledSwipeActionsProps) => props.width && css`
       width: ${props.width}px;
       transition: 0.2s ease-out;
+  `}
+
+  ${(props: IStyledSwipeActionsProps) => props.hasProgressBar && css`
+      height: 57px;
   `}
 `
 
@@ -156,7 +161,7 @@ const StyledEmptyStateRow = styled.tr`
 const StyledRow = styled.tr`
   white-space: nowrap;
   border: none;
-  border-top: 1px solid ${Variables.Color.n250};
+  border-bottom: 1px solid ${Variables.Color.n250};
   background: ${Variables.Color.n100};
   transition: transform 0.2s ease-out;
   height: ${Variables.Spacing.sSmall * 2 + Variables.Spacing.sXLarge + 3}px;
@@ -175,6 +180,7 @@ const StyledRow = styled.tr`
 
   ${(props: IStyledRowProps) => props.isSelected && css`
       background: ${variantOptions[props.variant].selectBackground};
+      border-bottom: 1px solid ${Variables.Color.n100};
   `}
 
   ${(props: IStyledRowProps) => props.hasProgressBar && css`
@@ -186,12 +192,9 @@ const StyledRow = styled.tr`
       transition: transform 0.2s ease-out;
   `}
 
-  ${(props: IStyledRowProps) => props.isHeader && css`
-      border-top: none;
-  `}
-
-  ${(props: IStyledRowProps) => props.isEmptyHeader && css`
-      border-bottom: 1px solid ${Variables.Color.n250};
+  ${(props: IStyledRowProps) => props.hideBottomBorder && css`
+      border: none;
+      border-bottom: 0;
   `}
 `
 
@@ -362,7 +365,7 @@ const StyledTableCheckboxLabel = styled.label`
     }
   }
 
-  ${(props: IStyledTableCheckboxLabelProps) => props.value === TableCheckboxInputValue.False && css`
+  ${(props: IStyledTableCheckboxLabelProps) => props.hasStyledOnRowHovered && props.value === TableCheckboxInputValue.False && css`
     ${StyledRow}:hover & {
       &::before {
         background-color: ${Variables.Color.n300};

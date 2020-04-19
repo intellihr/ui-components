@@ -166,7 +166,7 @@ const TableHeader = <T extends {}>(props: ITableHeaderProps<T>) => {
   const setSelectedAllTableCheckboxInputValue = useCallback((value) => setSelectedAll(value), [setSelectedAll])
 
   return (
-    <StyledRow variant={TableRowVariant.Neutral} isHeader isEmptyHeader={isEmpty} >
+    <StyledRow variant={TableRowVariant.Neutral}>
       {
         (!hasLeftAction || isEmpty) ? getHeaderCells(hasTableSwipeActions, columns, hasLeftAction, sort, onSortChange,hasBulkAction ? bulkActions : undefined ) : (
           <>
@@ -175,6 +175,7 @@ const TableHeader = <T extends {}>(props: ITableHeaderProps<T>) => {
                 name='selectAll'
                 value={selectedAll}
                 onChange={setSelectedAllTableCheckboxInputValue}
+                hasStyledOnRowHovered={false}
               />
             </StyledHeaderLeftCell>
             {

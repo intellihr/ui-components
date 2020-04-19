@@ -36,6 +36,9 @@ interface ITableRowProps <T> {
   hasLeftAction: boolean
   hasTableSwipeActions: boolean
   onRowRemove?: (removedRowData: T) => void
+  expandedSwipeCellRow: string | null
+  setExpandedSwipeCellRow: (value: string | null) => void
+  lastRow: boolean
 }
 
 interface IUseDragProps {
@@ -114,7 +117,7 @@ const getDataCells = <T extends {}>(
   setHasHovered: (value: boolean) => void,
   hasLeftAction: boolean,
   hasHoverButton: boolean,
-  handleSwipeActionClosed?: () => void
+  handleSwipeAction?: () => void
 ) => {
   const {
     isSelectable = false,
@@ -166,7 +169,7 @@ const getDataCells = <T extends {}>(
           hasProgressBar={hasProgressBar}
           colSpan={(isLastColumn && hasTableSwipeActions && !hasSwipeActions) ? 2 : undefined}
           alignment={column.alignment}
-          onClick={handleTableCellClicked(row.id, row, selectedRows, setSelectedRows, setHasHovered, handleSwipeActionClosed, isSelectable, onClick)}
+          onClick={handleTableCellClicked(row.id, row, selectedRows, setSelectedRows, setHasHovered, handleSwipeAction, isSelectable, onClick)}
           isLastColumn={isLastColumn}
           isFirstColumn={!hasLeftAction && index === 0}
         >
@@ -186,10 +189,14 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
     row,
     selectedRows,
     setSelectedRows,
-    hasTableSwipeActions
+    hasTableSwipeActions,
+    expandedSwipeCellRow,
+    setExpandedSwipeCellRow,
+    lastRow
   } = props
 
   const {
+    id,
     isSelectable = false,
     isRemovable = false,
     variant = TableRowVariant.Neutral,
@@ -224,13 +231,25 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
   const previousRowProps = usePrevious<IRowProps<T>>(row)
   const previousProgressFromPreviousRowProps = previousRowProps ? (previousRowProps.progress ? previousRowProps.progress : 0) : 0
   const isSelected = hasLeftAction && isSelectable ? selectedRows[row.id] : false
-  const handleSwipeActionClosed = () => (hasSwipeActions  && movement !== 0) ? setMovement(0) : undefined
+  const handleSwipeAction = () => hasSwipeActions ? (movement !== 0 ? setMovement(0) : setMovement(swipeContentWidth)) : undefined
 
   useEffect(() => {
     if (progress && previousProgressFromPreviousRowProps !== (progress ? progress : 0)) {
       setPreviousProgress(previousProgressFromPreviousRowProps)
     }
   }, [progress])
+  useEffect(() => {
+    if (movement > 0) {
+      setExpandedSwipeCellRow(id)
+    } else {
+      setExpandedSwipeCellRow(null)
+    }
+  }, [movement])
+  useEffect(() => {
+    if (expandedSwipeCellRow !== null && expandedSwipeCellRow !== id) {
+      setMovement(0)
+    }
+  }, [expandedSwipeCellRow])
 
   return (
     <>
@@ -243,13 +262,14 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
         hasProgressBar={progress}
         onMouseEnter={setHoveredTrue}
         onMouseLeave={setHoveredFalse}
+        hideBottomBorder={!!progress || lastRow}
       >
         {hasLeftAction && getLeftCell<T>(isSelectable, isRemovable, hasLeftAction, row, selectedRows, setSelectedRows, onRowRemove)}
-        {getDataCells<T>(!!progress, hasSwipeActions, hasTableSwipeActions, isSelected, columns, row, selectedRows, setSelectedRows, setHasHovered, hasLeftAction, hasHoverActions ? hasHovered : false, handleSwipeActionClosed)}
+        {getDataCells<T>(!!progress, hasSwipeActions, hasTableSwipeActions, isSelected, columns, row, selectedRows, setSelectedRows, setHasHovered, hasLeftAction, hasHoverActions ? hasHovered : false, handleSwipeAction)}
         {
           hasSwipeActions && (
             <StyledSwipeActionsCell>
-              <StyledSwipeActions width={movement}>
+              <StyledSwipeActions width={movement} hasProgressBar={!!progress}>
                 {getActionsIconButtonGroup(actions)}
               </StyledSwipeActions>
             </StyledSwipeActionsCell>

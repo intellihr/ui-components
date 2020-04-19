@@ -18,7 +18,7 @@ const iconButtonHoverStyle = (props: IStyledIconButton) => css`
 `
 
 const StyledIconButton = styled.button`
-  outline: none;
+  outline: 0;
   cursor: pointer;
   width: ${Variables.Spacing.sXLarge}px;
   height: ${Variables.Spacing.sXLarge}px;

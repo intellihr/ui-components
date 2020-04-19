@@ -277,7 +277,6 @@ const successRowContentOverride = (
             isRemovable: true,
             variant: 'error',
             onClick: (data) => alert(`Error on ${data.fileName}`),
-            actions: removeableRowActions,
             contentOverride: (data)=> ([
                                         <Text>{data.fileName}</Text>,
                                          <FontAwesomeIcon
@@ -293,6 +292,7 @@ const successRowContentOverride = (
             isSelectable: false,
             isRemovable: true,
             progress: 0.7,
+            actions: removeableRowActions,
             contentOverride: (data)=> ([
                              <Text>{data.fileName}</Text>,
                              <Text color={Variables.Color.n500}>{data.size}MB</Text>
@@ -304,8 +304,8 @@ const successRowContentOverride = (
             isSelectable: false,
             isRemovable: true,
             progress: 1,
-            contentOverride: state.hasSuccessRowContent ? successRowContentOverride : undefined,
-            actions: state.hasSuccessRowContent ? rowActions : undefined
+            contentOverride: successRowContentOverride,
+            actions: rowActions
           },
         {
             id: '3',
