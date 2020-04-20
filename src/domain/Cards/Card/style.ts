@@ -104,7 +104,7 @@ const StyledToggleButtonSection = styled(StyledFlexContent)`
 const StyledCardToggleButton = styled.button`
   ${cardButtonStyle};
   transition: background-color .1s ease-in, transform .25s ease-out;
-  z-index: 1;
+  z-index: 0;
 
   ${(props: IStyledCardToggleButtonProps) => props.isExpanded && css`
     transform: rotate(180deg);
@@ -126,7 +126,7 @@ const StyledCardToggleButton = styled.button`
 
 const StyledActionButton = styled.button<IStyleActionButtonProps>`
   ${cardButtonStyle};
-  z-index: 1;
+  z-index: 0;
   transition: .1s ease-in;
 
   &:hover {
