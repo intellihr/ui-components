@@ -1,10 +1,9 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import {IFontAwesomeIconButtonProps} from '../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
-import {FontAwesomeIconValue} from '../../Icons/Icon/FontAwesomeIconTypes'
+import { IFontAwesomeIconButtonProps } from '../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
 import { TableRowVariant } from './services/colors'
-import { ColumnAlignment, ColumnSize, ColumnSortDirection, Table, TableInteractionType } from './Table'
+import { Table } from './Table'
 
 const onSelectedRowChange = jest.fn()
 const onSortChange = jest.fn()
@@ -42,16 +41,16 @@ const columns = [
   {
     name: 'fileName',
     title: 'file name',
-    size: ColumnSize.Auto,
+    size: Table.ColumnSize.Auto,
     content: (data: any) => <div>{data.fileName}</div>,
-    alignment: ColumnAlignment.Left
+    alignment: Table.ColumnAlignment.Left
   },
   {
     name: 'createAt',
     title: 'created at',
-    size: ColumnSize.Shrink,
+    size: Table.ColumnSize.Shrink,
     content: (data: any) => <div>{data.createAt}</div>,
-    alignment: ColumnAlignment.Right
+    alignment: Table.ColumnAlignment.Right
   }
 ]
 const rows = [
@@ -105,7 +104,7 @@ describe('<Table />', () => {
         hasLeftAction
         onSelectedRowChange={onSelectedRowChange}
         rows={rows}
-        sort={{createAt: ColumnSortDirection.Ascending}}
+        sort={{createAt: Table.ColumnSortDirection.Ascending}}
         onSortChange={onSortChange}
         emptyState={emptyState}
         columns={columns}
@@ -119,10 +118,10 @@ describe('<Table />', () => {
     const wrapper = shallow(
       <Table
         <{fileName: string, createAt: string, size: string, fileType: string}>
-        interactionType={TableInteractionType.Swipe}
+        interactionType={Table.InteractionType.Swipe}
         onSelectedRowChange={onSelectedRowChange}
         rows={rows}
-        sort={{createAt: ColumnSortDirection.Ascending}}
+        sort={{createAt: Table.ColumnSortDirection.Ascending}}
         onSortChange={onSortChange}
         emptyState={emptyState}
         columns={columns}
@@ -138,7 +137,7 @@ describe('<Table />', () => {
         <{fileName: string, createAt: string, size: string, fileType: string}>
         onSelectedRowChange={onSelectedRowChange}
         rows={[]}
-        sort={{createAt: ColumnSortDirection.Ascending}}
+        sort={{createAt: Table.ColumnSortDirection.Ascending}}
         onSortChange={onSortChange}
         emptyState={emptyState}
         columns={columns}
