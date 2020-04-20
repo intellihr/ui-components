@@ -1,12 +1,11 @@
 import { mapValues } from 'lodash'
 import React, { useEffect, useState } from 'react'
 
-import { Props, Variables } from '../../../common'
+import { Props } from '../../../common'
 import {
   FontAwesomeIconButton,
   IFontAwesomeIconButtonProps
 } from '../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
-import { GridLayout } from '../../Layouts/GridLayout'
 import { TableRowVariant } from './services/colors'
 import {
   getSelectAllTableCheckboxInputValue,
@@ -38,7 +37,7 @@ enum ColumnAlignment {
   Right = 'right'
 }
 
-enum TableInteractionType {
+enum InteractionType {
   Hover = 'hover',
   Swipe = 'swipe'
 }
@@ -71,7 +70,7 @@ interface ITableProps <T extends {}> {
   /** If yes the left action cells are displayed (checkbox and remove button) */
   hasLeftAction?: boolean
   /** If interaction type is Hover, it will display hover actions when hover. If interaction type is swipe, it will display swipe actions when tap or swipe. */
-  interactionType?: TableInteractionType
+  interactionType?: InteractionType
   /** Margins around the table */
   margins?: Props.IMargins
   /** The component context */
@@ -126,7 +125,7 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
     hasLeftAction = false,
     bulkActions,
     emptyState,
-    interactionType = TableInteractionType.Hover
+    interactionType = InteractionType.Hover
   } = props
 
   const [selectedAll, setSelectedAll] = useState<TableCheckboxInputValue>(TableCheckboxInputValue.False)
@@ -160,7 +159,7 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
     }
   }, [selectedRows])
 
-  const hasTableSwipeActions = interactionType === TableInteractionType.Swipe && rows.some((row) => !!row.actions && row.actions.length > 0)
+  const hasTableSwipeActions = interactionType === InteractionType.Swipe && rows.some((row) => !!row.actions && row.actions.length > 0)
 
   return (
     <StyledTableWrapper
@@ -207,15 +206,16 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
   )
 }
 
+Table.ColumnSize = ColumnSize
+Table.ColumnAlignment = ColumnAlignment
+Table.ColumnSortDirection = ColumnSortDirection
+Table.InteractionType = InteractionType
+
 export {
   Table,
   IRowProps,
   IColumnProps,
   ISelectedRows,
-  ColumnSize,
-  ColumnAlignment,
-  ColumnSortDirection,
   IColumnSorts,
-  TableInteractionType,
   getActionsIconButtonGroup
 }

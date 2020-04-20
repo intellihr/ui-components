@@ -22,10 +22,9 @@ import {
   StyledSortButton
 } from '../services/style'
 import {
-  ColumnAlignment,
-  ColumnSize,
   IColumnProps,
   IColumnSorts,
+  Table,
   getActionsIconButtonGroup
 } from '../Table'
 import { TableCheckboxInput, TableCheckboxInputValue } from './TableCheckboxInput'
@@ -54,7 +53,7 @@ const TableHeaderCellContent = <T extends {}>(props: ITableHeaderCellContentProp
   const {
     name,
     title,
-    alignment = ColumnAlignment.Left
+    alignment = Table.ColumnAlignment.Left
   } = column
 
   const [hasHeaderHovered, setHasHeaderHovered] = useState<boolean>(false)
@@ -71,7 +70,7 @@ const TableHeaderCellContent = <T extends {}>(props: ITableHeaderCellContentProp
   if (title) {
     return (
       <>
-        {alignment === ColumnAlignment.Right && sortButton}
+        {alignment === Table.ColumnAlignment.Right && sortButton}
         <span onMouseEnter={setHeaderHoveredTrue} onMouseLeave={setHeaderHoveredFalse}>
             <Text weight={Variables.FontWeight.fwSemiBold}>
               <Text.Link
@@ -82,7 +81,7 @@ const TableHeaderCellContent = <T extends {}>(props: ITableHeaderCellContentProp
               </Text.Link>
             </Text>
           </span>
-        {alignment === ColumnAlignment.Left && sortButton}
+        {alignment === Table.ColumnAlignment.Left && sortButton}
       </>
     )
   }
@@ -110,8 +109,8 @@ const getHeaderCells = <T extends {}>(
 
               return ({
                 displayType: 'flex',
-                flexHorizontalAlignment: (column.alignment && column.alignment === ColumnAlignment.Right) ? GridLayout.HorizontalAlignment.Right : GridLayout.HorizontalAlignment.Left,
-                size: (size === ColumnSize.Shrink) ? 'shrink' : 'auto',
+                flexHorizontalAlignment: (column.alignment && column.alignment === Table.ColumnAlignment.Right) ? GridLayout.HorizontalAlignment.Right : GridLayout.HorizontalAlignment.Left,
+                size: (size === Table.ColumnSize.Shrink) ? 'shrink' : 'auto',
                 content: <div><TableHeaderCellContent<T> column={column} sort={sort} onSortChange={onSortChange}/></div>
               })
             })
@@ -126,7 +125,7 @@ const getHeaderCells = <T extends {}>(
       const {
         name,
         size,
-        alignment = ColumnAlignment.Left
+        alignment = Table.ColumnAlignment.Left
       } =  column
 
       const isLastColumn = index === columns.length - 1
