@@ -210,6 +210,7 @@ Table.ColumnSize = ColumnSize
 Table.ColumnAlignment = ColumnAlignment
 Table.ColumnSortDirection = ColumnSortDirection
 Table.InteractionType = InteractionType
+Table.RowVariant = TableRowVariant
 
 export {
   Table,

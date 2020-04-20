@@ -2,7 +2,6 @@ import { shallow } from 'enzyme'
 import React from 'react'
 
 import { IFontAwesomeIconButtonProps } from '../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
-import { TableRowVariant } from './services/colors'
 import { Table } from './Table'
 
 const onSelectedRowChange = jest.fn()
@@ -59,7 +58,7 @@ const rows = [
     data: {fileName: 'fail.pdf', createAt: '05/01/2018', size: '8.2', fileType: 'PDF'},
     isSelectable: false,
     isRemovable: true,
-    variant: TableRowVariant.Error,
+    variant: Table.RowVariant.Error,
     onClick: onRowClick,
     actions,
     rowContentOverride
