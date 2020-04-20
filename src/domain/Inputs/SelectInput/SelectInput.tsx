@@ -40,6 +40,8 @@ export interface ISelectInputProps {
   isInvalid?: boolean
   /** If true, allows selecting multiple options */
   isMultiSelect?: boolean
+  /** If true, allows typing on select inputbox */
+  isSearchable?: boolean
 
   /** Should the input autoselect an option when there is only one provided? */
   shouldAutoSelectWhenSingleOption?: boolean
@@ -73,6 +75,7 @@ export class SelectInput extends React.PureComponent<ISelectInputProps> {
   public static defaultProps: Partial<ISelectInputProps> = {
     placeholder: 'Please Select',
     isClearable: true,
+    isSearchable: true,
     shouldCloseOnSelect: true,
     shouldFilteringBePerformed: true,
     shouldRemoveElementsFromMultiSelect: true
@@ -120,6 +123,7 @@ export class SelectInput extends React.PureComponent<ISelectInputProps> {
       noResultsText,
       options,
       isClearable,
+      isSearchable,
       isDisabled,
       isFetching,
       isInvalid,
@@ -136,6 +140,7 @@ export class SelectInput extends React.PureComponent<ISelectInputProps> {
       autoFocus: false,
       className: classNames({ 'is-invalid-input': isInvalid }, `react-select-${name}`, style.selectInput),
       clearable: isClearable,
+      searchable: isSearchable,
       closeOnSelect: shouldCloseOnSelect,
       disabled: isDisabled,
       id: id || name,

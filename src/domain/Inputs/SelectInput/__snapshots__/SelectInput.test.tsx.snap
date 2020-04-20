@@ -35,6 +35,7 @@ exports[`<SelectInput /> should render a creatable select box 1`] = `
   placeholder="Please Select"
   promptTextCreator={[Function]}
   removeSelected={true}
+  searchable={true}
   shouldKeyDownEventCreateNewOption={[Function]}
   showNewOptionAtTop={false}
   value=""
