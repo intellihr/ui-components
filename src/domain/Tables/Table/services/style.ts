@@ -4,7 +4,7 @@ import { Props, Variables } from '../../../../common'
 import { FontAwesomeIcon } from '../../../Icons/FontAwesomeIcon'
 import { styleForMargins } from '../../../Spacers/services/margins'
 import { TableCheckboxInputValue } from '../subcomponents/TableCheckboxInput'
-import { ColumnAlignment, ColumnSize, ColumnSortDirection } from '../Table'
+import { Table } from '../Table'
 import { TableRowVariant, variantOptions } from './colors'
 
 interface IStyledTableCheckboxInputProps {
@@ -39,22 +39,22 @@ interface IStyledProgressBarProps {
 }
 
 interface IStyledHeaderCellProps {
-  size?: ColumnSize
-  alignment?: ColumnAlignment
+  size?: Table.ColumnSize
+  alignment?: Table.ColumnAlignment
   isLastColumn?: boolean
   isFirstColumn?: boolean
 }
 
 interface IStyledDataCellProps {
-  alignment?: ColumnAlignment
+  alignment?: Table.ColumnAlignment
   isLastColumn?: boolean
   isFirstColumn?: boolean
   hasProgressBar?: boolean
 }
 
 interface IStyledSortButtonProps {
-  sort?: ColumnSortDirection
-  alignment: ColumnAlignment
+  sort?: Table.ColumnSortDirection
+  alignment: Table.ColumnAlignment
 }
 
 const StyledTHead = styled.thead`
@@ -91,11 +91,11 @@ const StyledHeaderCell = styled.th`
       padding-left: ${Variables.Spacing.sMedium}px;
   `}
 
-  ${(props: IStyledHeaderCellProps) => props.size === ColumnSize.Auto && css`
+  ${(props: IStyledHeaderCellProps) => props.size === Table.ColumnSize.Auto && css`
       width: 100%;
   `}
 
-  ${(props: IStyledHeaderCellProps) => props.alignment === ColumnAlignment.Right && css`
+  ${(props: IStyledHeaderCellProps) => props.alignment === Table.ColumnAlignment.Right && css`
       text-align: right;
   `}
 `
@@ -129,7 +129,7 @@ const StyledDataCell = styled.td`
   padding:  ${Variables.Spacing.sSmall}px;
   text-align: left;
 
-  ${(props: IStyledDataCellProps) => props.alignment === ColumnAlignment.Right && css`
+  ${(props: IStyledDataCellProps) => props.alignment === Table.ColumnAlignment.Right && css`
       text-align: right;
   `}
 
@@ -232,11 +232,11 @@ const StyledSortButton = styled.div`
   margin: 0;
   transition: transform .2s ease-out, display .2s ease-out;
 
-  ${(props: IStyledSortButtonProps) => props.alignment === ColumnAlignment.Right && css`
+  ${(props: IStyledSortButtonProps) => props.alignment === Table.ColumnAlignment.Right && css`
       margin-right: ${Variables.Spacing.sXSmall}px;
   `}
 
-  ${(props: IStyledSortButtonProps) => props.alignment === ColumnAlignment.Left && css`
+  ${(props: IStyledSortButtonProps) => props.alignment === Table.ColumnAlignment.Left && css`
       margin-left: ${Variables.Spacing.sXSmall}px;
   `}
 
@@ -244,7 +244,7 @@ const StyledSortButton = styled.div`
       display: inline-block;
   `}
 
-  ${(props: IStyledSortButtonProps) => props.sort === ColumnSortDirection.Descending && css`
+  ${(props: IStyledSortButtonProps) => props.sort === Table.ColumnSortDirection.Descending && css`
       transform: rotate(-180deg);
   `}
 `

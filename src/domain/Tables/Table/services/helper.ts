@@ -1,8 +1,8 @@
-import {clamp} from 'lodash'
+import { clamp } from 'lodash'
 import { useEffect, useRef } from 'react'
 
-import {TableCheckboxInputValue} from '../subcomponents/TableCheckboxInput'
-import {ColumnSortDirection, IColumnSorts, IRowProps, ISelectedRows} from '../Table'
+import { TableCheckboxInputValue } from '../subcomponents/TableCheckboxInput'
+import { IColumnSorts, IRowProps, ISelectedRows, Table } from '../Table'
 
 const usePrevious = <T extends {}>(value: T): T => {
   const ref = useRef<T>()
@@ -60,7 +60,7 @@ const handleSortButtonClicked = (name: string, sort?: IColumnSorts, onSortChange
   if (sort && onSortChange) {
     onSortChange({
       ...sort,
-      [name]: sort[name] === ColumnSortDirection.Descending ? ColumnSortDirection.Ascending : ColumnSortDirection.Descending
+      [name]: sort[name] === Table.ColumnSortDirection.Descending ? Table.ColumnSortDirection.Ascending : Table.ColumnSortDirection.Descending
     })
   }
 }
@@ -68,13 +68,13 @@ const handleSortButtonClicked = (name: string, sort?: IColumnSorts, onSortChange
 const handleHeaderTitleClicked = (name: string, setHasHeaderHovered: (value: boolean) => void, sort?: IColumnSorts, onSortChange?: (value: IColumnSorts) => void) => () => {
   if (sort && onSortChange) {
     let newSort = {
-      [name]: ColumnSortDirection.Ascending
+      [name]: Table.ColumnSortDirection.Ascending
     }
 
     if (sort[name]) {
       newSort = {
         ...sort,
-        [name]: sort[name] === ColumnSortDirection.Descending ? ColumnSortDirection.Ascending : ColumnSortDirection.Descending
+        [name]: sort[name] === Table.ColumnSortDirection.Descending ? Table.ColumnSortDirection.Ascending : Table.ColumnSortDirection.Descending
       }
     }
     setHasHeaderHovered(false)
@@ -82,13 +82,13 @@ const handleHeaderTitleClicked = (name: string, setHasHeaderHovered: (value: boo
   }
 }
 
-const getSortButtonDirection = (hasHeaderHovered: boolean, currentSortDirection?: ColumnSortDirection) => {
+const getSortButtonDirection = (hasHeaderHovered: boolean, currentSortDirection?: Table.ColumnSortDirection) => {
   if (hasHeaderHovered) {
     if (currentSortDirection) {
-      return currentSortDirection === ColumnSortDirection.Descending ? ColumnSortDirection.Ascending : ColumnSortDirection.Descending
+      return currentSortDirection === Table.ColumnSortDirection.Descending ? Table.ColumnSortDirection.Ascending : Table.ColumnSortDirection.Descending
     }
 
-    return ColumnSortDirection.Ascending
+    return Table.ColumnSortDirection.Ascending
   }
 
   return currentSortDirection

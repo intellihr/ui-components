@@ -24,7 +24,7 @@ import {
   StyledSwipeActions,
   StyledSwipeActionsCell
 } from '../services/style'
-import { IColumnProps, IRowProps, ISelectedRows, TableInteractionType, getActionsIconButtonGroup } from '../Table'
+import { IColumnProps, IRowProps, ISelectedRows, Table, getActionsIconButtonGroup } from '../Table'
 import { TableCheckboxInput, TableCheckboxInputValue } from './TableCheckboxInput'
 
 interface ITableRowProps <T> {
@@ -32,7 +32,7 @@ interface ITableRowProps <T> {
   row: IRowProps<T>
   selectedRows: ISelectedRows
   setSelectedRows: (value: ISelectedRows) => void
-  interactionType: TableInteractionType
+  interactionType: Table.InteractionType
   hasLeftAction: boolean
   hasTableSwipeActions: boolean
   onRowRemove?: (removedRowData: T) => void
@@ -204,8 +204,8 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
 
   const setHoveredTrue = useCallback(() => setHasHovered(true), [setHasHovered])
   const setHoveredFalse = useCallback(() => setHasHovered(false), [setHasHovered])
-  const hasSwipeActions = interactionType === TableInteractionType.Swipe && !!actions && actions.length > 0
-  const hasHoverActions = interactionType === TableInteractionType.Hover && !!actions && actions.length > 0
+  const hasSwipeActions = interactionType === Table.InteractionType.Swipe && !!actions && actions.length > 0
+  const hasHoverActions = interactionType === Table.InteractionType.Hover && !!actions && actions.length > 0
 
   const swipeContentWidth = hasSwipeActions && actions ? actions.length * Variables.Spacing.sXLarge + (actions.length - 1) * Variables.Spacing.sXSmall + 2 * Variables.Spacing.sMedium : 0
 
@@ -238,7 +238,7 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
         {...onDragBlind()}
         movement={movement}
         variant={variant}
-        isHoverable={interactionType === TableInteractionType.Hover  && (isSelectable || !!onClick)}
+        isHoverable={interactionType === Table.InteractionType.Hover  && (isSelectable || !!onClick)}
         isSelected={isSelected}
         hasProgressBar={progress}
         onMouseEnter={setHoveredTrue}
