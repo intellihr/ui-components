@@ -80,7 +80,6 @@ const StyledGroupMainCard = styled.div`
 const StyledGroupCardToggleButton = styled.button<IStyledGroupCardToggleButtonProps>`
   ${cardButtonStyle};
   transition: background-color .1s ease-in, transform .25s ease-out;
-  z-index: 1;
 
   ${(props: IStyledGroupCardToggleButtonProps) => props.isExpanded && css`
       transform: rotate(180deg);
@@ -104,7 +103,6 @@ const StyledGroupCardToggleButton = styled.button<IStyledGroupCardToggleButtonPr
 
 const StyledBodyActionButton = styled.button`
   ${cardButtonStyle};
-  z-index: 1;
   transition: .1s ease-in;
 
   &:hover {
