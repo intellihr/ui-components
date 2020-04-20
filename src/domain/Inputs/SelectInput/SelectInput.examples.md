@@ -63,6 +63,28 @@ And an invalid state:
 />
 ```
 
+And disabled typing on input
+
+```jsx
+initialState = { value: '' };
+<SelectInput
+  name='testInput'
+  value={state.value}
+  isSearchable={false}
+  options={[
+    {
+      label: 'Hello World',
+      value: 20
+    },
+    {
+      label: 'Try selecting me',
+      value: 40
+    }
+  ]}
+  onChange={value => {setState({ value })}}
+/>
+```
+
 #### Multiselect Input
 
 They can also be used as a multiselect. In this case, their value is a `string[]` array:
