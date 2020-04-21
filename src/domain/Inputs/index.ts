@@ -1,6 +1,7 @@
 export { CheckboxInput } from './CheckboxInput'
 export { CheckboxSet } from './CheckboxSet'
 export { DateRangeInput } from './DateRangeInput'
+export { HierarchicalSelectInput } from './HierarchicalSelectInput'
 export { IconPickerInput } from './IconPickerInput'
 export { InputGroup } from './InputGroup'
 export { NumberInput } from './NumberInput'
