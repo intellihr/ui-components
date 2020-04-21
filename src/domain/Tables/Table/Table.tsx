@@ -71,6 +71,8 @@ interface ITableProps <T extends {}> {
   hasLeftAction?: boolean
   /** If interaction type is Hover, it will display hover actions when hover. If interaction type is swipe, it will display swipe actions when tap or swipe. */
   interactionType?: InteractionType
+  /** If yes, sort is enable with interaction. If no, sort button and title is disable */
+  hasSortEnabled?: boolean
   /** Margins around the table */
   margins?: Props.IMargins
   /** The component context */
@@ -125,7 +127,8 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
     hasLeftAction = false,
     bulkActions,
     emptyState,
-    interactionType = InteractionType.Hover
+    interactionType = InteractionType.Hover,
+    hasSortEnabled = true
   } = props
 
   const [selectedAll, setSelectedAll] = useState<TableCheckboxInputValue>(TableCheckboxInputValue.False)
@@ -181,6 +184,7 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
             hasTableSwipeActions={hasTableSwipeActions}
             hasBulkAction={selectedAll !== TableCheckboxInputValue.False}
             isEmpty={rows.length === 0}
+            hasSortEnabled={hasSortEnabled}
           />
         </StyledTHead>
         <tbody>

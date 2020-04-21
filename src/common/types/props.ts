@@ -52,6 +52,11 @@ namespace Props {
     XLarge = 'xlarge'
   }
 
+  export enum FontAwesomeIconButtonSize {
+    Small = 'small',
+    Large = 'large'
+  }
+
   export enum TypographyType {
     XSmall = 'xsmall',
     Small = 'small',

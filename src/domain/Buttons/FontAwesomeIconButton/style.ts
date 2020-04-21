@@ -8,7 +8,9 @@ interface IStyledIconButton {
   variant: IconButtonVariants
   isSelected: boolean
   isHovered: boolean
+  isDisabled: boolean
   margins?: Props.IMargins
+  size: Props.FontAwesomeIconButtonSize
 }
 
 const iconButtonHoverStyle = (props: IStyledIconButton) => css`
@@ -25,7 +27,7 @@ const StyledIconButton = styled.button`
   border-radius: ${Variables.Spacing.sXLarge}px;
   transition: 0.15s ease-in;
   ${(props: IStyledIconButton) => styleForMargins(props.margins)};
-  ${(props: IStyledIconButton) => css`
+  ${(props: IStyledIconButton) => !props.isDisabled && css`
     color: ${variantOptions[props.variant].iconColor};
     &:hover {
       ${iconButtonHoverStyle}
@@ -39,6 +41,19 @@ const StyledIconButton = styled.button`
   ${(props: IStyledIconButton) => props.isSelected && css`
     color: ${variantOptions[props.variant].selectedIconColor};
     background: ${variantOptions[props.variant].selectedBackground};
+    transition: 0.2s ease-out;
+  `}
+
+  ${(props: IStyledIconButton) => props.size === Props.FontAwesomeIconButtonSize.Large && css`
+    width: ${Variables.Spacing.s3XLarge}px;
+    height: ${Variables.Spacing.s3XLarge}px;
+    border-radius: ${Variables.Spacing.s3XLarge}px;
+  `}
+
+  ${(props: IStyledIconButton) => props.isDisabled && css`
+    color: ${Variables.Color.n300};
+    background: none;
+    cursor: not-allowed;
     transition: 0.2s ease-out;
   `}
 `

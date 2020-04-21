@@ -123,7 +123,7 @@ rows: [
                  contentOverride: (data)=> (
                                                 <GridLayout gutterMarginX={Variables.Spacing.sMedium}>
                                                      <GridLayout.Cell size = 'auto'>
-                                                        <TextInput value={data.fileName}/>
+                                                        <TextInput value={data.fileName.split('.')[0]}/>
                                                      </GridLayout.Cell>
                                                      <GridLayout.Cell size = 'shrink'>
                                                         <Button type='primary' key='button1'>Confirm</Button>
@@ -196,7 +196,7 @@ const successRowToNormal = {
       columns={[
             {
                 name: 'fileName',
-                title: 'file name',
+                title: 'File Name',
                 size: 'auto',
                 content: (data)=> <Text>{data.fileName}</Text>,
                 alignment: 'left',
@@ -204,7 +204,7 @@ const successRowToNormal = {
               },
               {
                 name: 'createAt',
-                title: 'created at',
+                title: 'Date Uploaded',
                 size: 'shrink',
                 content: (data)=> <Text>{data.createAt}</Text>,
                 alignment: 'right'
@@ -230,6 +230,7 @@ const removeableRowActions = ([
                             icon:'trash',
                             type:'solid',
                             tooltipText:'Delete',
+                            size:'large',
                             onClick: () => alert('delete')
                         }
                     ])
@@ -239,18 +240,21 @@ const rowActions = ([
                             icon:'link',
                             type:'solid',
                             tooltipText:'Copy Link',
+                            size:'large',
                             onClick: () => alert('copy link')
                         },
                         {
                             icon:'file-download',
                             type:'solid',
                             tooltipText:'Download',
+                            size:'large',
                             onClick: () => alert('download')
                         },
                         {
                             icon:'trash',
                             type:'solid',
                             tooltipText:'Delete',
+                            size:'large',
                             onClick: () => alert('delete')
                         }
                     ])
@@ -266,6 +270,7 @@ const successRowContentOverride = (
                                                   ])
                                   );
 <Table
+  hasSortEnabled={false}
   interactionType='swipe'
   isMobile
   onProgressEnd = {(data) => setState({hasSuccessRowContent:false})}
@@ -304,8 +309,7 @@ const successRowContentOverride = (
             isSelectable: false,
             isRemovable: true,
             progress: 1,
-            contentOverride: successRowContentOverride,
-            actions: rowActions
+            contentOverride: successRowContentOverride
           },
         {
             id: '3',
@@ -370,14 +374,14 @@ sort: {createAt: 'down'}
   columns={[
         {
             name: 'fileName',
-            title: 'file name',
+            title: 'File Name',
             size: 'auto',
             content: (data)=> <Text>{data.fileName}</Text>,
             alignment: 'left'
           },
           {
             name: 'createAt',
-            title: 'created at',
+            title: 'Date uploaded',
             size: 'shrink',
             content: (data)=> <Text>{data.createAt}</Text>,
             alignment: 'right'

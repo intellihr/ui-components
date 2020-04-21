@@ -34,6 +34,10 @@ interface IStyledSwipeActionsProps {
   hasProgressBar?: boolean
 }
 
+interface IStyledSwipeActionsButtonWrapperProps {
+  isFullWidth: boolean
+}
+
 interface IStyledProgressBarProps {
   percentage: number
   previousPercentage: number
@@ -111,8 +115,19 @@ const StyledSwipeActionsCell = styled.td`
   padding: 0;
 `
 
+const StyledSwipeActionsButtonWrapper = styled.div`
+  padding: 0;
+  padding-left: ${Variables.Spacing.sSmall}px;
+
+  ${(props: IStyledSwipeActionsButtonWrapperProps) => props.isFullWidth && css`
+      padding-right: ${Variables.Spacing.sSmall}px;
+      transition: 0.2s ease-out;
+  `}
+`
+
 const StyledSwipeActions = styled.div`
-  padding: ${Variables.Spacing.sSmall}px
+  display: flex;
+  align-items: center;
   top:0;
   width: 0;
   overflow: hidden;
@@ -127,6 +142,7 @@ const StyledSwipeActions = styled.div`
 
   ${(props: IStyledSwipeActionsProps) => props.hasProgressBar && css`
       height: 57px;
+      transition: 0.2s ease-out;
   `}
 `
 
@@ -419,5 +435,6 @@ export {
   StyledSwipeActions,
   StyledHeaderCellWithHeaderSize,
   StyledEmptyStateRow,
-  StyledFontAwesomeIconButtonWrapper
+  StyledFontAwesomeIconButtonWrapper,
+  StyledSwipeActionsButtonWrapper
 }

@@ -1,6 +1,8 @@
 import { clamp } from 'lodash'
 import { useEffect, useRef } from 'react'
 
+import { Props, Variables } from '../../../../common'
+import { IFontAwesomeIconButtonProps } from '../../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
 import { TableCheckboxInputValue } from '../subcomponents/TableCheckboxInput'
 import { IColumnSorts, IRowProps, ISelectedRows, Table } from '../Table'
 
@@ -56,8 +58,8 @@ const getSelectAllTableCheckboxInputValue = (currentSelectedRows: boolean[]) => 
   return newSelectedAll ? TableCheckboxInputValue.True : TableCheckboxInputValue.False
 }
 
-const handleSortButtonClicked = (name: string, sort?: IColumnSorts, onSortChange?: (sort: IColumnSorts) => void) => () => {
-  if (sort && onSortChange) {
+const handleSortButtonClicked = (name: string, hasSortEnabled: boolean, sort?: IColumnSorts, onSortChange?: (sort: IColumnSorts) => void) => () => {
+  if (sort && onSortChange && hasSortEnabled) {
     onSortChange({
       ...sort,
       [name]: sort[name] === Table.ColumnSortDirection.Descending ? Table.ColumnSortDirection.Ascending : Table.ColumnSortDirection.Descending
@@ -65,8 +67,8 @@ const handleSortButtonClicked = (name: string, sort?: IColumnSorts, onSortChange
   }
 }
 
-const handleHeaderTitleClicked = (name: string, setHasHeaderHovered: (value: boolean) => void, sort?: IColumnSorts, onSortChange?: (value: IColumnSorts) => void) => () => {
-  if (sort && onSortChange) {
+const handleHeaderTitleClicked = (name: string, setHasHeaderHovered: (value: boolean) => void, hasSortEnabled: boolean, sort?: IColumnSorts, onSortChange?: (value: IColumnSorts) => void) => () => {
+  if (sort && onSortChange && hasSortEnabled) {
     let newSort = {
       [name]: Table.ColumnSortDirection.Ascending
     }
@@ -139,6 +141,12 @@ const handleTableCellClicked = <T extends {}>(
   setHasHovered(false)
 }
 
+const getIconButtonWidth = (actions: IFontAwesomeIconButtonProps[]) => (
+  actions.reduce((totalWidth: number, action) => {
+    return totalWidth + (action.size === Props.FontAwesomeIconButtonSize.Large ? Variables.Spacing.s3XLarge : Variables.Spacing.sXLarge)
+  }, 0)
+)
+
 export {
   usePrevious,
   getUpdatedAllSelectableRows,
@@ -150,5 +158,6 @@ export {
   parsedProgressToPercentage,
   handleRemoveButtonClick,
   handleTableRowCheckboxInputChange,
-  handleTableCellClicked
+  handleTableCellClicked,
+  getIconButtonWidth
 }

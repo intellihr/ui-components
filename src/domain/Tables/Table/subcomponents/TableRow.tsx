@@ -4,10 +4,12 @@ import { useDrag } from 'react-use-gesture'
 import { Variables } from '../../../../common'
 import { FontAwesomeIconButton } from '../../../Buttons/FontAwesomeIconButton'
 import { IconButtonVariants } from '../../../Buttons/FontAwesomeIconButton/colors'
+import {IFontAwesomeIconButtonProps} from '../../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
 import { TooltipPopover } from '../../../Popovers/TooltipPopover'
 import { TooltipPopoverVariant } from '../../../Popovers/TooltipPopover/TooltipPopover'
 import { TableRowVariant } from '../services/colors'
 import {
+  getIconButtonWidth,
   handleRemoveButtonClick,
   handleTableCellClicked,
   handleTableRowCheckboxInputChange,
@@ -21,7 +23,7 @@ import {
   StyledProgressBarCell,
   StyledProgressBarRow,
   StyledRow,
-  StyledSwipeActions,
+  StyledSwipeActions, StyledSwipeActionsButtonWrapper,
   StyledSwipeActionsCell
 } from '../services/style'
 import { IColumnProps, IRowProps, ISelectedRows, Table, getActionsIconButtonGroup } from '../Table'
@@ -214,7 +216,7 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
   const hasSwipeActions = interactionType === Table.InteractionType.Swipe && !!actions && actions.length > 0
   const hasHoverActions = interactionType === Table.InteractionType.Hover && !!actions && actions.length > 0
 
-  const swipeContentWidth = hasSwipeActions && actions ? actions.length * Variables.Spacing.sXLarge + (actions.length - 1) * Variables.Spacing.sXSmall + 2 * Variables.Spacing.sMedium : 0
+  const swipeContentWidth = hasSwipeActions && actions ? getIconButtonWidth(actions) + (actions.length - 1) * Variables.Spacing.sXSmall + 2 * Variables.Spacing.sMedium : 0
 
   const onDragBlind = useDrag((useDragProps: IUseDragProps) => {
     if (hasSwipeActions && useDragProps._movement[0] <= movement && useDragProps._movement[0] !== 0) {
@@ -270,7 +272,9 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
           hasSwipeActions && (
             <StyledSwipeActionsCell>
               <StyledSwipeActions width={movement} hasProgressBar={!!progress}>
-                {getActionsIconButtonGroup(actions)}
+                <StyledSwipeActionsButtonWrapper isFullWidth={movement === swipeContentWidth}>
+                  {getActionsIconButtonGroup(actions)}
+                </StyledSwipeActionsButtonWrapper>
               </StyledSwipeActions>
             </StyledSwipeActionsCell>
           )
