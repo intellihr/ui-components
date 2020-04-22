@@ -1,48 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SelectInput /> should render a creatable select box 1`] = `
-<CreatableSelect
-  autoFocus={false}
-  className="react-select-test selectInput"
-  clearable={true}
-  closeOnSelect={true}
-  filterOptions={[Function]}
-  id="test"
-  isOptionUnique={[Function]}
-  isValidNewOption={[Function]}
-  menuRenderer={[Function]}
-  name="test"
-  newOptionCreator={[Function]}
-  onBlurResetsInput={true}
-  onChange={[Function]}
-  onCloseResetsInput={true}
-  onInputChange={[Function]}
-  onNewOptionClick={[Function]}
-  onSelectResetsInput={true}
-  openOnFocus={false}
-  options={
-    Array [
-      Object {
-        "label": "option1",
-        "value": "value1",
-      },
-      Object {
-        "label": "option2",
-        "value": "value2",
-      },
-    ]
-  }
-  placeholder="Please Select"
-  promptTextCreator={[Function]}
-  removeSelected={true}
-  searchable={true}
-  shouldKeyDownEventCreateNewOption={[Function]}
-  showNewOptionAtTop={false}
-  value=""
-/>
-`;
-
-exports[`<SelectInput /> should render a multi select box with options 1`] = `
+exports[`<HierarchicalSelectInput /> should render a multi select box with options 1`] = `
 <Select
   arrowRenderer={[Function]}
   autoFocus={false}
@@ -59,6 +17,7 @@ exports[`<SelectInput /> should render a multi select box with options 1`] = `
   delimiter=","
   disabled={false}
   escapeClearsValue={true}
+  filterOption={[Function]}
   filterOptions={[Function]}
   id="test"
   ignoreAccents={true}
@@ -77,7 +36,6 @@ exports[`<SelectInput /> should render a multi select box with options 1`] = `
   onBlurResetsInput={true}
   onChange={[Function]}
   onCloseResetsInput={true}
-  onInputChange={[Function]}
   onSelectResetsInput={true}
   openOnClick={true}
   openOnFocus={false}
@@ -85,12 +43,34 @@ exports[`<SelectInput /> should render a multi select box with options 1`] = `
   options={
     Array [
       Object {
-        "label": "option1",
-        "value": "value1",
+        "depth": 0,
+        "label": "Parent Option 1",
+        "parentOption": null,
+        "value": 10,
       },
       Object {
-        "label": "option2",
-        "value": "value2",
+        "depth": 1,
+        "label": "Child Option 1",
+        "parentOption": Object {
+          "depth": 0,
+          "label": "Parent Option 1",
+          "parentOption": null,
+          "value": 10,
+        },
+        "parentValue": 10,
+        "value": 11,
+      },
+      Object {
+        "depth": 1,
+        "label": "Child Option 2",
+        "parentOption": Object {
+          "depth": 0,
+          "label": "Parent Option 1",
+          "parentOption": null,
+          "value": 10,
+        },
+        "parentValue": 10,
+        "value": 12,
       },
     ]
   }
@@ -104,13 +84,13 @@ exports[`<SelectInput /> should render a multi select box with options 1`] = `
   simpleValue={false}
   tabSelectsValue={true}
   trimFilter={true}
-  value=""
+  value={Array []}
   valueComponent={[Function]}
   valueKey="value"
 />
 `;
 
-exports[`<SelectInput /> should render a select box with options 1`] = `
+exports[`<HierarchicalSelectInput /> should render a select box with options 1`] = `
 <Select
   arrowRenderer={[Function]}
   autoFocus={false}
@@ -127,6 +107,7 @@ exports[`<SelectInput /> should render a select box with options 1`] = `
   delimiter=","
   disabled={false}
   escapeClearsValue={true}
+  filterOption={[Function]}
   filterOptions={[Function]}
   id="test"
   ignoreAccents={true}
@@ -145,7 +126,6 @@ exports[`<SelectInput /> should render a select box with options 1`] = `
   onBlurResetsInput={true}
   onChange={[Function]}
   onCloseResetsInput={true}
-  onInputChange={[Function]}
   onSelectResetsInput={true}
   openOnClick={true}
   openOnFocus={false}
@@ -153,12 +133,34 @@ exports[`<SelectInput /> should render a select box with options 1`] = `
   options={
     Array [
       Object {
-        "label": "option1",
-        "value": "value1",
+        "depth": 0,
+        "label": "Parent Option 1",
+        "parentOption": null,
+        "value": 10,
       },
       Object {
-        "label": "option2",
-        "value": "value2",
+        "depth": 1,
+        "label": "Child Option 1",
+        "parentOption": Object {
+          "depth": 0,
+          "label": "Parent Option 1",
+          "parentOption": null,
+          "value": 10,
+        },
+        "parentValue": 10,
+        "value": 11,
+      },
+      Object {
+        "depth": 1,
+        "label": "Child Option 2",
+        "parentOption": Object {
+          "depth": 0,
+          "label": "Parent Option 1",
+          "parentOption": null,
+          "value": 10,
+        },
+        "parentValue": 10,
+        "value": 12,
       },
     ]
   }

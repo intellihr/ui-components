@@ -1,0 +1,160 @@
+@import '~react-select/dist/react-select.css';
+
+@import '../../../common/sass/variables';
+
+:local(.selectInput) {
+  &.Select {
+    &.is-focused {
+      .Select-control {
+        border: 1px solid $i400;
+        box-shadow: none;
+      }
+    }
+
+    &.is-disabled {
+      .Select-control {
+        &:hover {
+          background-color: $n200;
+          cursor: not-allowed;
+        }
+
+        .Select-value {
+          .Select-value-label {
+            color: $n600;
+          }
+        }
+      }
+    }
+
+    &.is-invalid-input {
+      .Select-control {
+        border-color: $r300;
+      }
+
+      &:not(.is-focused) {
+        .Select-control {
+          background-color: $r100;
+        }
+      }
+    }
+
+    &.has-value {
+      .Select-control {
+        &:hover {
+          background-color: $n100;
+        }
+      }
+    }
+
+    .Select-control {
+      border: 1px solid $n400;
+      cursor: pointer;
+      margin-bottom: 1rem;
+      transition: border-color .3s ease-in-out, background-color .3s ease;
+
+      &:hover {
+        background-color: $n200;
+      }
+
+      .Select-value-label {
+        color: $n700;
+      }
+
+      .Select-placeholder {
+        color: $n400;
+      }
+
+      .Select-clear-zone {
+        color: $n700;
+
+        &:hover {
+          color: $r600;
+        }
+      }
+    }
+
+    .Select-clear {
+      font-weight: $fw-semi-bold;
+    }
+
+    .Select-option {
+      color: $n700;
+
+      &.is-focused {
+        background-color: $n200;
+      }
+
+      &.is-selected {
+        background-color: $i100;
+        color: $i600;
+      }
+    }
+
+    .Select-menu-outer {
+      border-top-color: $n400;
+      margin-bottom: 40px;
+    }
+
+    .Select-input > input {
+      line-height: 38px; // Magic number to account for border-width
+      padding: 0;
+    }
+
+    &.Select--multi {
+      .Select-control {
+        height: 40px;
+      }
+
+      .Select-placeholder {
+        line-height: 38px; // Magic number to account for border-width
+      }
+
+      .Select-multi-value-wrapper {
+        align-items: flex-start;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: $spacing-2xsmall;
+        padding-right: $spacing-xsmall;
+
+        // The following nesting is needed to overwrite library specificity
+        .Select-value {
+          margin: 7px 0 0 $spacing-xsmall;
+
+          .Select-value-label {
+            color: $n800;
+            padding: $spacing-3xsmall 0 $spacing-3xsmall $spacing-2xsmall;
+          }
+        }
+      }
+
+      .Select-value {
+        align-items: center;
+        background-color: $n250;
+        border: 0;
+        border-radius: $border-radius;
+        color: $n800;
+        display: flex;
+        flex-direction: row-reverse;
+        font-size: $fz-small;
+        line-height: $lh-small;
+        margin: 7px 0 7px $spacing-xsmall; // Magic number to account for border-width
+      }
+
+      .Select-value-icon {
+        align-items: center;
+        background-color: transparent;
+        border: 0;
+        border-radius: 0 $border-radius $border-radius 0;
+        color: $n700;
+        display: flex;
+        height: 100%;
+        padding: 0 $spacing-2xsmall 0 $spacing-xsmall;
+
+        &:hover {
+          background-color: transparent;
+          color: $r600;
+        }
+      }
+    }
+  }
+}
