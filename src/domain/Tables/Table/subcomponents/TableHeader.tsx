@@ -65,7 +65,7 @@ const TableHeaderCellContent = <T extends {}>(props: ITableHeaderCellContentProp
 
   const sortButton = (
     <StyledSortButton alignment={alignment} sort={sort && getSortButtonDirection(hasHeaderHovered, sort[name])} onClick={handleSortButtonClicked(name, hasSortEnabled, sort, onSortChange)}>
-      <FontAwesomeIconButton icon='arrow-down' type='solid' isHovered={hasHeaderHovered} isDisabled={!hasSortEnabled}/>
+      <FontAwesomeIconButton icon='arrow-up' type='solid' isHovered={hasHeaderHovered} isDisabled={!hasSortEnabled}/>
     </StyledSortButton>
   )
 

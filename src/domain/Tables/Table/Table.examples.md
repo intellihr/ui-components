@@ -156,6 +156,9 @@ const successRowToNormal = {
                    };
 
 <div>
+    <Button margins={{ bottom: 10}} onClick={() => setState({rows: state.rows.slice(1)})}>
+            remove first
+         </Button>
     <Button margins={{ bottom: 10}} onClick={() => setState({rows: [state.rows[0], state.rows[1]].concat([successRowTo100, state.rows[3], state.rows[4], state.rows[5]])})}>
         update success row progress to 100%
      </Button>

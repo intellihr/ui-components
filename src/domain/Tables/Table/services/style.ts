@@ -146,26 +146,6 @@ const StyledSwipeActions = styled.div`
   `}
 `
 
-const StyledDataCell = styled.td`
-  padding:  ${Variables.Spacing.sSmall}px;
-  text-align: left;
-
-  ${(props: IStyledDataCellProps) => props.alignment === Table.ColumnAlignment.Right && css`
-      text-align: right;
-  `}
-
-  ${(props: IStyledDataCellProps) => props.isLastColumn && css`
-      padding-right: ${Variables.Spacing.sMedium}px;
-  `}
-
-  ${(props: IStyledDataCellProps) => props.isFirstColumn && css`
-      padding-left: ${Variables.Spacing.sMedium}px;
-  `}
-
-  ${(props: IStyledDataCellProps) => props.hasProgressBar && css`
-      padding-bottom:  ${Variables.Spacing.sSmall - 2}px;
-  `}
-`
 const StyledProgressBarRow = styled.tr`
   border-bottom: 1px solid ${Variables.Color.n250};
   background: ${Variables.Color.n100};
@@ -211,6 +191,39 @@ const StyledRow = styled.tr`
   ${(props: IStyledRowProps) => props.hideBottomBorder && css`
       border: none;
       border-bottom: 0;
+  `}
+`
+
+const StyledDataCellChangeAnimation = keyframes`
+  0% {
+      opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`
+
+const StyledDataCell = styled.td`
+  padding:  ${Variables.Spacing.sSmall}px;
+  text-align: left;
+  animation-name: ${StyledDataCellChangeAnimation};
+  animation-duration: 500ms;
+  animation-timing-function: ease-in;
+
+  ${(props: IStyledDataCellProps) => props.alignment === Table.ColumnAlignment.Right && css`
+      text-align: right;
+  `}
+
+  ${(props: IStyledDataCellProps) => props.isLastColumn && css`
+      padding-right: ${Variables.Spacing.sMedium}px;
+  `}
+
+  ${(props: IStyledDataCellProps) => props.isFirstColumn && css`
+      padding-left: ${Variables.Spacing.sMedium}px;
+  `}
+
+  ${(props: IStyledDataCellProps) => props.hasProgressBar && css`
+      padding-bottom:  ${Variables.Spacing.sSmall - 2}px;
   `}
 `
 
@@ -264,7 +277,7 @@ const StyledSortButton = styled.div`
   `}
 
   ${(props: IStyledSortButtonProps) => props.sort === Table.ColumnSortDirection.Descending && css`
-      transform: rotate(-180deg);
+      transform: rotate(180deg);
   `}
 `
 
