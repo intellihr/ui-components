@@ -113,6 +113,7 @@ const AddFilterDropdownMenu: React.FC<IAddFilterDropdownMenuProps> = ({
               value={filterField}
               options={getFieldInputOptions()}
               placeholder='Select a filter'
+              isClearable={false}
               handleChange={handleFieldChange}
             />
           </VerticalForm.Field>
@@ -132,6 +133,7 @@ const AddFilterDropdownMenu: React.FC<IAddFilterDropdownMenuProps> = ({
                 value={filterValue}
                 options={valueInputOption()}
                 placeholder='Select a value'
+                isClearable={false}
                 handleChange={handleValueChange}
               />
               <Button
