@@ -184,6 +184,7 @@ module.exports = {
             'src/domain/Inputs/CheckboxInput/CheckboxInput.tsx',
             'src/domain/Inputs/CheckboxSet/CheckboxSet.tsx',
             'src/domain/Inputs/DateRangeInput/DateRangeInput.tsx',
+            'src/domain/Inputs/HierarchicalSelectInput/HierarchicalSelectInput.tsx',
             'src/domain/Inputs/IconPickerInput/IconPickerInput.tsx',
             'src/domain/Inputs/InputGroup/InputGroup.tsx',
             'src/domain/Inputs/NumberInput/NumberInput.tsx',
