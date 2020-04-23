@@ -68,6 +68,7 @@ const StyledTHead = styled.thead`
 `
 
 const StyledTableWrapper = styled.div`
+  overflow: scroll;
   border: 1px solid ${Variables.Color.n250};
   border-radius: ${Variables.Style.borderRadius}px;
 

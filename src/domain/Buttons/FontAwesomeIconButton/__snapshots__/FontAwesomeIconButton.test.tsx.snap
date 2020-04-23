@@ -14,7 +14,7 @@ exports[`<FontAwesomeIconButton /> should render a selected icon button 1`] = `
 }
 
 .c0 {
-  outline: none;
+  outline: 0;
   cursor: pointer;
   width: 32px;
   height: 32px;
@@ -42,8 +42,10 @@ exports[`<FontAwesomeIconButton /> should render a selected icon button 1`] = `
 >
   <styled.button
     data-component-type="font_awesome_icon_button"
+    isDisabled={false}
     isHovered={false}
     isSelected={true}
+    size="small"
     variant="neutral"
   >
     <StyledComponent
@@ -58,7 +60,7 @@ exports[`<FontAwesomeIconButton /> should render a selected icon button 1`] = `
             "lastClassName": "c0",
             "rules": Array [
               "
-  outline: none;
+  outline: 0;
   cursor: pointer;
   width: ",
               "32",
@@ -73,6 +75,14 @@ exports[`<FontAwesomeIconButton /> should render a selected icon button 1`] = `
   ",
               [Function],
               ";
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
   ",
               [Function],
               "
@@ -99,13 +109,16 @@ exports[`<FontAwesomeIconButton /> should render a selected icon button 1`] = `
         }
       }
       forwardedRef={null}
+      isDisabled={false}
       isHovered={false}
       isSelected={true}
+      size="small"
       variant="neutral"
     >
       <button
         className="c0"
         data-component-type="font_awesome_icon_button"
+        size="small"
       >
         <FontAwesomeIcon
           icon="check"
@@ -228,7 +241,7 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
 }
 
 .c0 {
-  outline: none;
+  outline: 0;
   cursor: pointer;
   width: 32px;
   height: 32px;
@@ -252,8 +265,10 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
 >
   <styled.button
     data-component-type="font_awesome_icon_button"
+    isDisabled={false}
     isHovered={false}
     isSelected={false}
+    size="small"
     variant="red"
   >
     <StyledComponent
@@ -268,7 +283,7 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
             "lastClassName": "c0",
             "rules": Array [
               "
-  outline: none;
+  outline: 0;
   cursor: pointer;
   width: ",
               "32",
@@ -283,6 +298,14 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
   ",
               [Function],
               ";
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
   ",
               [Function],
               "
@@ -309,13 +332,16 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
         }
       }
       forwardedRef={null}
+      isDisabled={false}
       isHovered={false}
       isSelected={false}
+      size="small"
       variant="red"
     >
       <button
         className="c0"
         data-component-type="font_awesome_icon_button"
+        size="small"
       >
         <FontAwesomeIcon
           icon="check"
@@ -442,7 +468,7 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
 }
 
 .c1 {
-  outline: none;
+  outline: 0;
   cursor: pointer;
   width: 32px;
   height: 32px;
@@ -511,8 +537,10 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
             role="button"
           >
             <styled.button
+              isDisabled={false}
               isHovered={false}
               isSelected={false}
+              size="small"
               variant="neutral"
             >
               <StyledComponent
@@ -526,7 +554,7 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
                       "lastClassName": "c1",
                       "rules": Array [
                         "
-  outline: none;
+  outline: 0;
   cursor: pointer;
   width: ",
                         "32",
@@ -541,6 +569,14 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
   ",
                         [Function],
                         ";
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
   ",
                         [Function],
                         "
@@ -567,12 +603,15 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
                   }
                 }
                 forwardedRef={null}
+                isDisabled={false}
                 isHovered={false}
                 isSelected={false}
+                size="small"
                 variant="neutral"
               >
                 <button
                   className="c1"
+                  size="small"
                 >
                   <FontAwesomeIcon
                     icon="check"
@@ -702,7 +741,7 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
 }
 
 .c0 {
-  outline: none;
+  outline: 0;
   cursor: pointer;
   width: 32px;
   height: 32px;

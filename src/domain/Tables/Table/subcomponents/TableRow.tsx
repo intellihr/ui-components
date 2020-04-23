@@ -1,5 +1,5 @@
 import { isEqual } from 'lodash'
-import React, {CSSProperties, useCallback, useEffect, useState, Fragment} from 'react'
+import React, {CSSProperties, Fragment, useCallback, useEffect, useState} from 'react'
 import {useDrag} from 'react-use-gesture'
 import uuid from 'uuid'
 

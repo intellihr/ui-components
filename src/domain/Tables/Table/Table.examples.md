@@ -115,8 +115,14 @@ rows: [
                   isSelectable: true,
                   actions: rowActions
                 },
+              {
+                id: '5',
+                data: {fileName: 'test1_test1_test1_test1_final_final_final_final_final_final_final.pdf', createAt: '05/01/2018', size: '1.5', fileType: 'PDF'},
+                isSelectable: true,
+                actions: rowActions
+              },
              {
-                 id: '5',
+                 id: '6',
                  data: {fileName: 'test3.pdf', createAt: '05/01/2018', size: '1.8', fileType: 'PDF'},
                  isSelectable: false,
                  actions: rowActions,
@@ -159,12 +165,20 @@ const successRowToNormal = {
     <Button margins={{ bottom: 10}} onClick={() => setState({rows: state.rows.slice(1)})}>
             remove first
          </Button>
-    <Button margins={{ bottom: 10}} onClick={() => setState({rows: [state.rows[0], state.rows[1]].concat([successRowTo100, state.rows[3], state.rows[4], state.rows[5]])})}>
-        update success row progress to 100%
-     </Button>
-    <Button margins={{ bottom: 10}} onClick={() => setState({rows: [state.rows[0], state.rows[1]].concat([successRowToNormal, state.rows[3], state.rows[4], state.rows[5]])})}>
-        update success row back to normal (after 3 secs)
-     </Button>
+    {
+        state.rows.length === 7 && (
+            <div>
+            <Button margins={{ bottom: 10}} onClick={() => setState({rows: [state.rows[0], state.rows[1]].concat([successRowTo100, state.rows[3], state.rows[4], state.rows[5], state.rows[6]])})}>
+                update success row progress to 100%
+             </Button>
+            <Button margins={{ bottom: 10}} onClick={() => setState({rows: [state.rows[0], state.rows[1]].concat([successRowToNormal, state.rows[3], state.rows[4], state.rows[5], state.rows[6]])})}>
+                update success row back to normal (after 3 secs)
+             </Button>
+            </div>
+        )
+    }
+
+    
     <Table
       hasLeftAction
       onRowRemove = {(data) => alert(`Remove row action on ${data.fileName}`)}
@@ -200,8 +214,8 @@ const successRowToNormal = {
             {
                 name: 'fileName',
                 title: 'File Name',
-                size: 'auto',
-                content: (data)=> <Text>{data.fileName}</Text>,
+                size: 'shrink',
+                content: (data)=> <div style={{width: '100%', maxWidth: '200px'}}><Text isTruncated isInline={false}>{data.fileName}</Text></div>,
                 alignment: 'left',
                 tooltipText: (data)=> `${data.fileType}(file type): ${data.size}MB (size)`
               },
@@ -209,7 +223,7 @@ const successRowToNormal = {
                 name: 'createAt',
                 title: 'Date Uploaded',
                 size: 'shrink',
-                content: (data)=> <Text>{data.createAt}</Text>,
+                content: (data)=> <Text isTruncated>{data.createAt}</Text>,
                 alignment: 'right'
               }
         ]}
