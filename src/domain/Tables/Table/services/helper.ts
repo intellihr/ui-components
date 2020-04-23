@@ -147,6 +147,19 @@ const getIconButtonWidth = (actions: IFontAwesomeIconButtonProps[]) => (
   }, 0)
 )
 
+const getTransitionStyles = (state: 'entering' | 'entered' | 'exiting' | 'exited') => {
+  switch (state) {
+    case 'entering':
+      return { opacity: 1 }
+    case 'entered':
+      return { opacity: 1 }
+    case 'exiting':
+      return { opacity: 0 }
+    case 'exited':
+      return { opacity: 0 }
+  }
+}
+
 export {
   usePrevious,
   getUpdatedAllSelectableRows,
@@ -159,5 +172,6 @@ export {
   handleRemoveButtonClick,
   handleTableRowCheckboxInputChange,
   handleTableCellClicked,
-  getIconButtonWidth
+  getIconButtonWidth,
+  getTransitionStyles
 }

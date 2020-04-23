@@ -1,5 +1,5 @@
 import { isEqual } from 'lodash'
-import React, { useCallback, useEffect, useState } from 'react'
+import React, {CSSProperties, useCallback, useEffect, useState, Fragment} from 'react'
 import {useDrag} from 'react-use-gesture'
 import uuid from 'uuid'
 
@@ -44,6 +44,7 @@ interface ITableRowProps <T> {
   expandedSwipeCellRow: string | null
   setExpandedSwipeCellRow: (value: string | null) => void
   lastRow: boolean
+  transitionStyle?: CSSProperties
 }
 
 interface ITableRowDataCellProps <T> {
@@ -252,7 +253,8 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
     hasTableSwipeActions,
     expandedSwipeCellRow,
     setExpandedSwipeCellRow,
-    lastRow
+    lastRow,
+    transitionStyle
   } = props
 
   const {
@@ -323,6 +325,7 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
   return (
     <>
       <StyledRow
+        style={transitionStyle}
         {...onDragBlind()}
         movement={movement}
         variant={variant}
@@ -348,7 +351,7 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
         }
       </StyledRow>
       {(progress) && (
-        <StyledProgressBarRow>
+        <StyledProgressBarRow style={transitionStyle}>
           <StyledProgressBarCell colSpan={!hasLeftAction ? columns.length : columns.length + 1}>
             <StyledProgressBar previousPercentage={parsedProgressToPercentage(previousProgress)} percentage={parsedProgressToPercentage(progress)}/>
           </StyledProgressBarCell>

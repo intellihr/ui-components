@@ -69,6 +69,7 @@ const StyledTHead = styled.thead`
 
 const StyledTableWrapper = styled.div`
   border: 1px solid ${Variables.Color.n250};
+  border-radius: ${Variables.Style.borderRadius}px;
 
   ${(props: IStyledTableWrapperProps) => styleForMargins(props.margins)}
 `

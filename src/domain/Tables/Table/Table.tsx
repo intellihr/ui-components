@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import { mapValues } from 'lodash'
 import React, { useEffect, useState } from 'react'
-import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import {CSSTransition, Transition, TransitionGroup} from 'react-transition-group'
 
 import { Props } from '../../../common'
 import {
@@ -10,7 +10,7 @@ import {
 } from '../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
 import { TableRowVariant } from './services/colors'
 import {
-  getSelectAllTableCheckboxInputValue,
+  getSelectAllTableCheckboxInputValue, getTransitionStyles,
   getUpdatedAllSelectableRows,
   handleSelectionChanged
 } from './services/helper'
@@ -24,8 +24,6 @@ import {
 import { TableCheckboxInputValue } from './subcomponents/TableCheckboxInput'
 import { TableHeader } from './subcomponents/TableHeader'
 import { TableRow } from './subcomponents/TableRow'
-
-const style = require('./services/style.scss')
 
 enum ColumnSize {
   Auto = 'auto',
@@ -169,15 +167,17 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
 
   const hasTableSwipeActions = interactionType === InteractionType.Swipe && rows.some((row) => !!row.actions && row.actions.length > 0)
 
+  const defaultStyle = {
+    transition: 'opacity 500ms ease-in-out',
+    opacity: 0
+  }
+
   return (
     <StyledTableWrapper
       margins={margins}
       data-component-type={Props.ComponentType.Table}
       data-component-context={componentContext}
     >
-      <div
-        className={classNames('table', style.table)}
-      >
       <StyledTable>
         <StyledTHead>
           <TableHeader<T>
@@ -199,32 +199,38 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
             rows.length === 0 ? (
               <StyledEmptyStateRow><StyledEmptyStateCell colSpan={columns.length}>{emptyState}</StyledEmptyStateCell></StyledEmptyStateRow>
             ) : rows.map((row: IRowProps<T>, index) => (
-                <CSSTransition
+                <Transition
                   key={row.id}
                   timeout={500}
-                  classNames='row'
+                  mountOnEnter
+                  unmountOnExit
                 >
-                  <TableRow<T>
-                    hasTableSwipeActions={hasTableSwipeActions}
-                    columns={columns}
-                    row={row}
-                    lastRow={index === rows.length - 1}
-                    selectedAll={selectedAll}
-                    selectedRows={selectedRows}
-                    setSelectedRows={setSelectedRows}
-                    hasLeftAction={hasLeftAction}
-                    interactionType={interactionType}
-                    onRowRemove={onRowRemove}
-                    expandedSwipeCellRow={expandedSwipeCellRow}
-                    setExpandedSwipeCellRow={setExpandedSwipeCellRow}
-                  />
+                  { (state: 'entering' | 'entered' | 'exiting' | 'exited') => (
+                    <TableRow<T>
+                      transitionStyle={{
+                        ...defaultStyle,
+                        ...getTransitionStyles(state)
+                      }}
+                      hasTableSwipeActions={hasTableSwipeActions}
+                      columns={columns}
+                      row={row}
+                      lastRow={index === rows.length - 1}
+                      selectedAll={selectedAll}
+                      selectedRows={selectedRows}
+                      setSelectedRows={setSelectedRows}
+                      hasLeftAction={hasLeftAction}
+                      interactionType={interactionType}
+                      onRowRemove={onRowRemove}
+                      expandedSwipeCellRow={expandedSwipeCellRow}
+                      setExpandedSwipeCellRow={setExpandedSwipeCellRow}
+                    />
+                  )}
 
-                </CSSTransition>
+                </Transition>
             ))
           }
         </TransitionGroup>
       </StyledTable>
-      </div>
     </StyledTableWrapper>
   )
 }
