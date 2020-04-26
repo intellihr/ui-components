@@ -2,7 +2,10 @@ import { clamp } from 'lodash'
 import { useEffect, useRef } from 'react'
 
 import { Props, Variables } from '../../../../common'
-import { IFontAwesomeIconButtonProps } from '../../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
+import {
+  FontAwesomeIconButton,
+  IFontAwesomeIconButtonProps
+} from '../../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
 import { TableCheckboxInputValue } from '../subcomponents/TableCheckboxInput'
 import { IColumnSorts, IRowProps, ISelectedRows, Table } from '../Table'
 
@@ -143,7 +146,7 @@ const handleTableCellClicked = <T extends {}>(
 
 const getIconButtonWidth = (actions: IFontAwesomeIconButtonProps[]) => (
   actions.reduce((totalWidth: number, action) => {
-    return totalWidth + (action.size === Props.FontAwesomeIconButtonSize.Large ? Variables.Spacing.s3XLarge : Variables.Spacing.sXLarge)
+    return totalWidth + (action.size === FontAwesomeIconButton.Size.Large ? Variables.Spacing.s3XLarge : Variables.Spacing.sXLarge)
   }, 0)
 )
 

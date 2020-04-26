@@ -1,5 +1,5 @@
 import { isEqual } from 'lodash'
-import React, {CSSProperties, Fragment, useCallback, useEffect, useState} from 'react'
+import React, { CSSProperties, useCallback, useEffect, useState } from 'react'
 import {useDrag} from 'react-use-gesture'
 import uuid from 'uuid'
 
@@ -164,43 +164,43 @@ const getDataCells = <T extends {}>(
   }
 
   return (
-        columns.map((column, index) => {
+    columns.map((column, index) => {
 
-          if (hasHoverButton && !contentOverride && !isSelected && index === columns.length - 1 && !isRemovable && isSelectable) {
-            return (
-              <StyledDataCell
-                key={column.name}
-                hasProgressBar={hasProgressBar}
-                alignment={column.alignment}
-                isLastColumn
-                isFirstColumn={!hasLeftAction && index === 0}
-              >
-                {getActionsIconButtonGroup(actions, id)}
-              </StyledDataCell>
-            )
-          }
+      if (hasHoverButton && !contentOverride && !isSelected && index === columns.length - 1 && !isRemovable && isSelectable) {
+        return (
+          <StyledDataCell
+            key={column.name}
+            hasProgressBar={hasProgressBar}
+            alignment={column.alignment}
+            isLastColumn
+            isFirstColumn={!hasLeftAction && index === 0}
+          >
+            {getActionsIconButtonGroup(actions, id)}
+          </StyledDataCell>
+        )
+      }
 
-          const cellContentOverride = (contentOverride && Array.isArray(contentOverride(data))) ? contentOverride(data) as JSX.Element[] : undefined
+      const cellContentOverride = (contentOverride && Array.isArray(contentOverride(data))) ? contentOverride(data) as JSX.Element[] : undefined
 
-          return (
-            <TableRowDataCell<T>
-              key={`${column.name}-${key}`}
-              hasProgressBar={hasProgressBar}
-              isLastColumn={index === columns.length - 1}
-              hasTableSwipeActions={hasTableSwipeActions}
-              hasSwipeActions={hasSwipeActions}
-              column={column}
-              row={row}
-              selectedRows={selectedRows}
-              setSelectedRows={setSelectedRows}
-              setHasHovered={setHasHovered}
-              handleSwipeAction={handleSwipeAction}
-              isFirstColumn={!hasLeftAction && index === 0}
-            >
-              {cellContentOverride ? cellContentOverride[index] : column.content(data)}
-            </TableRowDataCell>
-          )
-        })
+      return (
+        <TableRowDataCell<T>
+          key={`${column.name}-${key}`}
+          hasProgressBar={hasProgressBar}
+          isLastColumn={index === columns.length - 1}
+          hasTableSwipeActions={hasTableSwipeActions}
+          hasSwipeActions={hasSwipeActions}
+          column={column}
+          row={row}
+          selectedRows={selectedRows}
+          setSelectedRows={setSelectedRows}
+          setHasHovered={setHasHovered}
+          handleSwipeAction={handleSwipeAction}
+          isFirstColumn={!hasLeftAction && index === 0}
+        >
+          {cellContentOverride ? cellContentOverride[index] : column.content(data)}
+        </TableRowDataCell>
+      )
+    })
   )
 }
 
@@ -300,23 +300,30 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
   const hasHoverButton = (selectedAll === TableCheckboxInputValue.False && hasHoverActions) ? hasHovered : false
 
   useEffect(() => {
+    // get previous progress when progress is given and different from the current progress
     if (progress && previousProgressFromPreviousRowProps !== (progress ? progress : 0)) {
       setPreviousProgress(previousProgressFromPreviousRowProps)
     }
   }, [progress])
   useEffect(() => {
+    // when user expands this row swipe cell, set expanded row id as this row id to force other row swipe cell collapse
     if (movement > 0) {
       setExpandedSwipeCellRow(id)
-    } else {
+    }
+
+    // when user collapse this row swipe cell (not when it is force collapsed by other row), set expanded row id null
+    if (movement === 0 && !(expandedSwipeCellRow !== null && expandedSwipeCellRow !== id)) {
       setExpandedSwipeCellRow(null)
     }
   }, [movement])
   useEffect(() => {
+    // when user expands other row, collapse this row
     if (expandedSwipeCellRow !== null && expandedSwipeCellRow !== id) {
       setMovement(0)
     }
   }, [expandedSwipeCellRow])
   useEffect(() => {
+    // update key to force data cell content to remount for animation on update
     if (hasContentOverrideChange) {
       setKey(uuid.v4())
     }

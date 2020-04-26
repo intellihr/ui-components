@@ -17,8 +17,7 @@ import {
 import {
   StyledHeaderCell,
   StyledHeaderCellWithHeaderSize,
-  StyledHeaderLeftCell,
-  StyledRow,
+  StyledHeaderLeftCell, StyledRow,
   StyledSortButton
 } from '../services/style'
 import {

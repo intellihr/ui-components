@@ -1,7 +1,6 @@
-import classNames from 'classnames'
 import { mapValues } from 'lodash'
 import React, { useEffect, useState } from 'react'
-import {CSSTransition, Transition, TransitionGroup} from 'react-transition-group'
+import { Transition, TransitionGroup } from 'react-transition-group'
 
 import { Props } from '../../../common'
 import {
@@ -73,7 +72,7 @@ interface ITableProps <T extends {}> {
   hasLeftAction?: boolean
   /** If interaction type is Hover, it will display hover actions when hover. If interaction type is swipe, it will display swipe actions when tap or swipe. */
   interactionType?: InteractionType
-  /** If yes, sort is enable with interaction. If no, sort button and title is disable */
+  /** If yes, sort is enable with interaction. If no, sort button display in disable style with given sort */
   hasSortEnabled?: boolean
   /** Margins around the table */
   margins?: Props.IMargins

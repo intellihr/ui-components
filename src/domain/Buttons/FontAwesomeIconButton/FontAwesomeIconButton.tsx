@@ -8,11 +8,16 @@ import { TooltipPopoverVariant } from '../../Popovers/TooltipPopover/TooltipPopo
 import { IconButtonVariants } from './colors'
 import { StyledIconButton } from './style'
 
+enum Size {
+  Small = 'small',
+  Large = 'large'
+}
+
 interface IFontAwesomeIconButtonProps {
   /** Name of the icon */
   icon: FontAwesomeIconValue
   /** Size of the icon */
-  size?: Props.FontAwesomeIconButtonSize
+  size?: Size
   /** The alternative font awesome icon versions */
   type: 'solid' | 'regular' | 'light' | 'duotone'
   /** onClick event */
@@ -33,7 +38,7 @@ interface IFontAwesomeIconButtonProps {
   componentContext?: string
 }
 
-const FontAwesomeIconButton: React.FC<IFontAwesomeIconButtonProps> = (props) => {
+const FontAwesomeIconButton = (props: IFontAwesomeIconButtonProps) => {
   const {
     icon,
     type,
@@ -45,7 +50,7 @@ const FontAwesomeIconButton: React.FC<IFontAwesomeIconButtonProps> = (props) => 
     isHovered = false,
     isDisabled = false,
     componentContext,
-    size = Props.FontAwesomeIconButtonSize.Small
+    size = Size.Small
   } = props
 
   const toggleComponent = ({ openMenu, closeMenu, toggleComponentRef, ariaProps }: ITooltipPopoverToggleComponentProps) => (
@@ -104,6 +109,8 @@ const FontAwesomeIconButton: React.FC<IFontAwesomeIconButtonProps> = (props) => 
       )
   )
 }
+
+FontAwesomeIconButton.Size = Size
 
 export {
   FontAwesomeIconButton,

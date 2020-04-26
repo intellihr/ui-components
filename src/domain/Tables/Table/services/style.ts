@@ -114,6 +114,7 @@ const StyledHeaderLeftCell = styled.th`
 `
 
 const StyledSwipeActionsCell = styled.td`
+  position: relative;
   padding: 0;
 `
 
