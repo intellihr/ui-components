@@ -11,9 +11,7 @@ describe('<FontAwesomeIconButton />', () => {
         icon='check'
         type='duotone'
         tooltipText='tooltip text'
-      >
-        test
-      </FontAwesomeIconButton>
+      />
     )
 
     expect(wrapper).toMatchSnapshot()
@@ -25,9 +23,7 @@ describe('<FontAwesomeIconButton />', () => {
         icon='check'
         type='duotone'
         isSelected
-      >
-        test
-      </FontAwesomeIconButton>
+      />
     )
 
     expect(wrapper).toMatchSnapshot()
@@ -39,9 +35,7 @@ describe('<FontAwesomeIconButton />', () => {
         icon='check'
         type='duotone'
         variant={IconButtonVariants.Red}
-      >
-        test
-      </FontAwesomeIconButton>
+      />
     )
 
     expect(wrapper).toMatchSnapshot()
@@ -55,9 +49,7 @@ describe('<FontAwesomeIconButton />', () => {
         icon='check'
         type='duotone'
         onClick={mockHandleClick}
-      >
-        test
-      </FontAwesomeIconButton>
+      />
     )
     expect(mockHandleClick.mock.calls.length).toBe(0)
     wrapper.simulate('click')
