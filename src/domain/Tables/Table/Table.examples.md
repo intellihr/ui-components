@@ -37,9 +37,9 @@ const rowActions = ([
 
 const successRowContentOverride = (
 (data)=> ([
-  <Text>{data.fileName}</Text>,
+  <Text isTruncated isInline={false}>{data.fileName}</Text>,
   <div>
-     <Text color={Variables.Color.i400} margins={{right: Variables.Spacing.sXSmall}}>Success</Text>
+     <Text  color={Variables.Color.i400} margins={{right: Variables.Spacing.sXSmall}}>Success</Text>
      <FontAwesomeIcon
        type='regular'
        icon='check'
@@ -51,7 +51,7 @@ const successRowContentOverride = (
 
 const uploadingRowContentOverride = (
 (data)=> ([
-  <Text>{data.fileName}</Text>,
+  <Text isTruncated isInline={false}>{data.fileName}</Text>,
   <div>
     <Text color={Variables.Color.n500} margins={{right: Variables.Spacing.sXSmall}}>Uploading</Text>
     <Text color={Variables.Color.n500}>{data.size}MB</Text>
@@ -74,7 +74,7 @@ initialState = {
       onClick: (data) => alert(`Error on ${data.fileName}`),
       actions: rowActions,
       contentOverride: (data)=> ([
-        <Text>{data.fileName}</Text>,
+        <Text isTruncated isInline={false}>{data.fileName}</Text>,
         <div>
           <Text color={Variables.Color.r400} margins={{right: Variables.Spacing.sXSmall}}>Error</Text>
           <FontAwesomeIcon
@@ -213,8 +213,8 @@ const successRowToNormal = {
       {
         name: 'fileName',
         title: 'File Name',
-        size: 'shrink',
-        content: (data)=> <div style={{width: '100%', maxWidth: '200px'}}><Text isTruncated isInline={false}>{data.fileName}</Text></div>,
+        size: 'auto',
+        content: (data)=> <Text isTruncated isInline={false}>{data.fileName}</Text>,
         alignment: 'left',
         tooltipText: (data)=> `${data.fileType}(file type): ${data.size}MB (size)`
       },

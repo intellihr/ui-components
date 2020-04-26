@@ -15,7 +15,7 @@ import {
   handleSortButtonClicked
 } from '../services/helper'
 import {
-  StyledHeaderCell,
+  StyledHeaderCell, StyledHeaderCellContent,
   StyledHeaderCellWithHeaderSize,
   StyledHeaderLeftCell, StyledRow,
   StyledSortButton
@@ -79,7 +79,7 @@ const TableHeaderCellContent = <T extends {}>(props: ITableHeaderCellContentProp
 
   if (title) {
     return (
-      <>
+      <StyledHeaderCellContent>
         {alignment === Table.ColumnAlignment.Right && sortButton}
         <span onMouseEnter={setHeaderHoveredTrue} onMouseLeave={setHeaderHoveredFalse}>
             <Text weight={Variables.FontWeight.fwSemiBold}>
@@ -87,7 +87,7 @@ const TableHeaderCellContent = <T extends {}>(props: ITableHeaderCellContentProp
             </Text>
           </span>
         {alignment === Table.ColumnAlignment.Left && sortButton}
-      </>
+      </StyledHeaderCellContent>
     )
   }
 

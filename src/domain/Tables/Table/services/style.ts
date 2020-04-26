@@ -93,6 +93,10 @@ const StyledHeaderCellWithHeaderSize = styled.th`
   padding:  ${Variables.Spacing.sSmall}px ${Variables.Spacing.sMedium}px;
 `
 
+const StyledHeaderCellContent = styled.div`
+  overflow: hidden;
+`
+
 const StyledHeaderCell = styled.th`
   padding:  ${Variables.Spacing.sSmall}px;
   text-align: left;
@@ -107,6 +111,7 @@ const StyledHeaderCell = styled.th`
 
   ${(props: IStyledHeaderCellProps) => props.size === Table.ColumnSize.Auto && css`
       width: 100%;
+      max-width: 0;
   `}
 
   ${(props: IStyledHeaderCellProps) => props.alignment === Table.ColumnAlignment.Right && css`
@@ -229,6 +234,7 @@ const StyledDataCellChangeAnimation = keyframes`
 `
 
 const StyledDataCell = styled.td`
+  max-width: 0;
   padding:  ${Variables.Spacing.sSmall}px;
   text-align: left;
   animation-name: ${StyledDataCellChangeAnimation};
@@ -474,5 +480,6 @@ export {
   StyledHeaderCellWithHeaderSize,
   StyledEmptyStateRow,
   StyledFontAwesomeIconButtonWrapper,
-  StyledSwipeActionsButtonWrapper
+  StyledSwipeActionsButtonWrapper,
+  StyledHeaderCellContent
 }
