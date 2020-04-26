@@ -6,6 +6,7 @@ import { styleForMargins } from '../../../Spacers/services/margins'
 import { TableCheckboxInputValue } from '../subcomponents/TableCheckboxInput'
 import { Table } from '../Table'
 import { TableRowVariant, variantOptions } from './colors'
+import {getRowTransitionOpacity} from './helper'
 
 interface IStyledTableCheckboxInputProps {
   labelValue: TableCheckboxInputValue
@@ -27,6 +28,12 @@ interface IStyledRowProps {
   movement?: number
   hasProgressBar?: boolean
   hideBottomBorder?: boolean
+  hasTransition?: boolean
+  transitionState?: 'entering' | 'entered' | 'exiting' | 'exited'
+}
+
+interface IStyledProgressBarRowProps {
+  transitionState?: 'entering' | 'entered' | 'exiting' | 'exited'
 }
 
 interface IStyledSwipeActionsProps {
@@ -152,12 +159,18 @@ const StyledSwipeActions = styled.div`
 const StyledProgressBarRow = styled.tr`
   border-bottom: 1px solid ${Variables.Color.n250};
   background: ${Variables.Color.n100};
+
+  ${(props: IStyledProgressBarRowProps) => css`
+      opacity: ${getRowTransitionOpacity(props.transitionState)};
+      transition: opacity 500ms ease-in-out;
+  `}
 `
 const StyledEmptyStateRow = styled.tr`
   border: none;
 `
 
 const StyledRow = styled.tr`
+  opacity: 1;
   white-space: nowrap;
   border: none;
   border-bottom: 1px solid ${Variables.Color.n250};
@@ -194,6 +207,15 @@ const StyledRow = styled.tr`
   ${(props: IStyledRowProps) => props.hideBottomBorder && css`
       border: none;
       border-bottom: 0;
+  `}
+
+  ${(props: IStyledRowProps) => props.hasTransition && css`
+      opacity: 0;
+  `}
+
+  ${(props: IStyledRowProps) => props.transitionState && css`
+      opacity: ${getRowTransitionOpacity(props.transitionState)};
+      transition: opacity 500ms ease-in-out;
   `}
 `
 

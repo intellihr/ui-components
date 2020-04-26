@@ -44,7 +44,7 @@ interface ITableRowProps <T> {
   expandedSwipeCellRow: string | null
   setExpandedSwipeCellRow: (value: string | null) => void
   lastRow: boolean
-  transitionStyle?: CSSProperties
+  transitionState?: 'entering' | 'entered' | 'exiting' | 'exited'
 }
 
 interface ITableRowDataCellProps <T> {
@@ -254,7 +254,7 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
     expandedSwipeCellRow,
     setExpandedSwipeCellRow,
     lastRow,
-    transitionStyle
+    transitionState
   } = props
 
   const {
@@ -332,7 +332,8 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
   return (
     <>
       <StyledRow
-        style={transitionStyle}
+        hasTransition
+        transitionState={transitionState}
         {...onDragBlind()}
         movement={movement}
         variant={variant}
@@ -358,7 +359,7 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
         }
       </StyledRow>
       {(progress) && (
-        <StyledProgressBarRow style={transitionStyle}>
+        <StyledProgressBarRow transitionState={transitionState}>
           <StyledProgressBarCell colSpan={!hasLeftAction ? columns.length : columns.length + 1}>
             <StyledProgressBar previousPercentage={parsedProgressToPercentage(previousProgress)} percentage={parsedProgressToPercentage(progress)}/>
           </StyledProgressBarCell>

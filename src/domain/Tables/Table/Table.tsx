@@ -9,7 +9,7 @@ import {
 } from '../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
 import { TableRowVariant } from './services/colors'
 import {
-  getSelectAllTableCheckboxInputValue, getTransitionStyles,
+  getSelectAllTableCheckboxInputValue,
   getUpdatedAllSelectableRows,
   handleSelectionChanged
 } from './services/helper'
@@ -166,11 +166,6 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
 
   const hasTableSwipeActions = interactionType === InteractionType.Swipe && rows.some((row) => !!row.actions && row.actions.length > 0)
 
-  const defaultStyle = {
-    transition: 'opacity 500ms ease-in-out',
-    opacity: 0
-  }
-
   return (
     <StyledTableWrapper
       margins={margins}
@@ -206,10 +201,7 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
                 >
                   { (state: 'entering' | 'entered' | 'exiting' | 'exited') => (
                     <TableRow<T>
-                      transitionStyle={{
-                        ...defaultStyle,
-                        ...getTransitionStyles(state)
-                      }}
+                      transitionState={state}
                       hasTableSwipeActions={hasTableSwipeActions}
                       columns={columns}
                       row={row}
