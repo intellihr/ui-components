@@ -1,5 +1,5 @@
 import { mapValues } from 'lodash'
-import React, { useEffect, useState } from 'react'
+import React, {useCallback, useEffect, useState} from 'react'
 import { Transition, TransitionGroup } from 'react-transition-group'
 
 import { Props } from '../../../common'
@@ -133,8 +133,19 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
   const [selectedRows, setSelectedRows] = useState<ISelectedRows>(getUpdatedAllSelectableRows(rows, {}))
   const [expandedSwipeCellRow, setExpandedSwipeCellRow] = useState<string | null>(null)
 
+  const handleRowSelectionChange = useCallback((rowsSelected: ISelectedRows) => {
+    setSelectedRows(rowsSelected)
+    if (hasLeftAction) {
+      const currentSelectedRows = Object.values(rowsSelected)
+      setSelectedAll(getSelectAllTableCheckboxInputValue(currentSelectedRows))
+      if (onSelectedRowChange) {
+        handleSelectionChanged<T>(rows, rowsSelected, onSelectedRowChange)
+      }
+    }
+  }, [setSelectedRows])
+
   useEffect(() => {
-    setSelectedRows(getUpdatedAllSelectableRows<T>(rows, selectedRows))
+    handleRowSelectionChange(getUpdatedAllSelectableRows<T>(rows, selectedRows))
   }, [rows])
   useEffect(() => {
     if (hasLeftAction) {
