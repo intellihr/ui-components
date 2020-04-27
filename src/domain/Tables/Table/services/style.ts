@@ -75,7 +75,7 @@ const StyledTHead = styled.thead`
 `
 
 const StyledTableWrapper = styled.div`
-  overflow: scroll;
+  overflow: hidden;
   border: 1px solid ${Variables.Color.n250};
   border-radius: ${Variables.Style.borderRadius}px;
 
@@ -98,6 +98,7 @@ const StyledHeaderCellContent = styled.div`
 `
 
 const StyledHeaderCell = styled.th`
+  overflow: hidden;
   padding:  ${Variables.Spacing.sSmall}px;
   text-align: left;
 

@@ -137,7 +137,7 @@ const getHeaderCells = <T extends {}>(
       const isLastColumn = index === columns.length - 1
       const isFirstColumn = !hasLeftAction && index === 0
 
-      if (bulkActions && hasLeftAction) {
+      if (bulkActions && hasLeftAction && index === 0) {
         return (
           <StyledHeaderCell key={name} size={size} alignment={alignment}>
             {
