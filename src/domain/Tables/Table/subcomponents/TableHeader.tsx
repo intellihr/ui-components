@@ -15,10 +15,9 @@ import {
   handleSortButtonClicked
 } from '../services/helper'
 import {
-  StyledHeaderCell,
+  StyledHeaderCell, StyledHeaderCellContent,
   StyledHeaderCellWithHeaderSize,
-  StyledHeaderLeftCell,
-  StyledRow,
+  StyledHeaderLeftCell, StyledRow,
   StyledSortButton
 } from '../services/style'
 import {
@@ -40,16 +39,18 @@ interface ITableHeaderProps <T> {
   isEmpty: boolean
   sort?: IColumnSorts
   onSortChange?: (sort: IColumnSorts) => void
+  hasSortEnabled: boolean
 }
 
 interface ITableHeaderCellContentProps <T> {
   column: IColumnProps<T>
   sort?: IColumnSorts
   onSortChange?: (sort: IColumnSorts) => void
+  hasSortEnabled: boolean
 }
 
 const TableHeaderCellContent = <T extends {}>(props: ITableHeaderCellContentProps<T>) => {
-  const { column, sort, onSortChange } =props
+  const { column, sort, onSortChange, hasSortEnabled } = props
   const {
     name,
     title,
@@ -58,31 +59,35 @@ const TableHeaderCellContent = <T extends {}>(props: ITableHeaderCellContentProp
 
   const [hasHeaderHovered, setHasHeaderHovered] = useState<boolean>(false)
 
-  const setHeaderHoveredTrue = useCallback(() => setHasHeaderHovered(true), [setHasHeaderHovered])
-  const setHeaderHoveredFalse = useCallback(() => setHasHeaderHovered(false), [setHasHeaderHovered])
+  const setHeaderHoveredTrue = useCallback(() => hasSortEnabled && setHasHeaderHovered(true), [setHasHeaderHovered])
+  const setHeaderHoveredFalse = useCallback(() => hasSortEnabled && setHasHeaderHovered(false), [setHasHeaderHovered])
 
   const sortButton = (
-    <StyledSortButton alignment={alignment} sort={sort && getSortButtonDirection(hasHeaderHovered, sort[name])} onClick={handleSortButtonClicked(name, sort, onSortChange)}>
-      <FontAwesomeIconButton icon='arrow-down' type='solid' isHovered={hasHeaderHovered}/>
+    <StyledSortButton alignment={alignment} sort={sort && getSortButtonDirection(hasHeaderHovered, sort[name])} onClick={handleSortButtonClicked(name, hasSortEnabled, sort, onSortChange)}>
+      <FontAwesomeIconButton icon='arrow-up' type='solid' isHovered={hasHeaderHovered} isDisabled={!hasSortEnabled}/>
     </StyledSortButton>
+  )
+
+  const headerTitleLink = (
+    <Text.Link
+      variant={LinkVariant.Unstyled}
+      onClick={handleHeaderTitleClicked(name, setHasHeaderHovered, hasSortEnabled, sort, onSortChange)}
+    >
+      {title}
+    </Text.Link>
   )
 
   if (title) {
     return (
-      <>
+      <StyledHeaderCellContent>
         {alignment === Table.ColumnAlignment.Right && sortButton}
         <span onMouseEnter={setHeaderHoveredTrue} onMouseLeave={setHeaderHoveredFalse}>
             <Text weight={Variables.FontWeight.fwSemiBold}>
-              <Text.Link
-                variant={LinkVariant.Unstyled}
-                onClick={handleHeaderTitleClicked(name, setHasHeaderHovered, sort, onSortChange)}
-              >
-                {title}
-              </Text.Link>
+              {hasSortEnabled ? headerTitleLink : title}
             </Text>
           </span>
         {alignment === Table.ColumnAlignment.Left && sortButton}
-      </>
+      </StyledHeaderCellContent>
     )
   }
 
@@ -90,6 +95,7 @@ const TableHeaderCellContent = <T extends {}>(props: ITableHeaderCellContentProp
 }
 
 const getHeaderCells = <T extends {}>(
+  hasSortEnabled: boolean,
   hasTableSwipeActions: boolean,
   columns: Array<IColumnProps<T>>,
   hasLeftAction: boolean,
@@ -111,7 +117,7 @@ const getHeaderCells = <T extends {}>(
                 displayType: 'flex',
                 flexHorizontalAlignment: (column.alignment && column.alignment === Table.ColumnAlignment.Right) ? GridLayout.HorizontalAlignment.Right : GridLayout.HorizontalAlignment.Left,
                 size: (size === Table.ColumnSize.Shrink) ? 'shrink' : 'auto',
-                content: <div><TableHeaderCellContent<T> column={column} sort={sort} onSortChange={onSortChange}/></div>
+                content: <div><TableHeaderCellContent<T> column={column} sort={sort} onSortChange={onSortChange} hasSortEnabled={hasSortEnabled}/></div>
               })
             })
           }
@@ -143,7 +149,7 @@ const getHeaderCells = <T extends {}>(
 
       return (
         <StyledHeaderCell key={name} colSpan={(isLastColumn && hasTableSwipeActions) ? 2 : undefined} size={size} alignment={alignment} isLastColumn={isLastColumn} isFirstColumn={isFirstColumn}>
-          <TableHeaderCellContent<T> column={column} sort={sort} onSortChange={onSortChange}/>
+          <TableHeaderCellContent<T> column={column} sort={sort} onSortChange={onSortChange} hasSortEnabled={hasSortEnabled}/>
         </StyledHeaderCell>
       )})
   )
@@ -160,25 +166,27 @@ const TableHeader = <T extends {}>(props: ITableHeaderProps<T>) => {
     setSelectedAll,
     bulkActions,
     hasBulkAction,
-    isEmpty
+    isEmpty,
+    hasSortEnabled
   } = props
 
   const setSelectedAllTableCheckboxInputValue = useCallback((value) => setSelectedAll(value), [setSelectedAll])
 
   return (
-    <StyledRow variant={TableRowVariant.Neutral} isHeader isEmptyHeader={isEmpty} >
+    <StyledRow variant={TableRowVariant.Neutral}>
       {
-        (!hasLeftAction || isEmpty) ? getHeaderCells(hasTableSwipeActions, columns, hasLeftAction, sort, onSortChange,hasBulkAction ? bulkActions : undefined ) : (
+        (!hasLeftAction || isEmpty) ? getHeaderCells(hasSortEnabled, hasTableSwipeActions, columns, hasLeftAction, sort, onSortChange,hasBulkAction ? bulkActions : undefined ) : (
           <>
             <StyledHeaderLeftCell>
               <TableCheckboxInput
                 name='selectAll'
                 value={selectedAll}
                 onChange={setSelectedAllTableCheckboxInputValue}
+                hasStyledOnRowHovered={false}
               />
             </StyledHeaderLeftCell>
             {
-              getHeaderCells(hasTableSwipeActions, columns, hasLeftAction, sort, onSortChange,hasBulkAction ? bulkActions : undefined )
+              getHeaderCells(hasSortEnabled, hasTableSwipeActions, columns, hasLeftAction, sort, onSortChange,hasBulkAction ? bulkActions : undefined )
             }
           </>
         )

@@ -1,5 +1,7 @@
-import React, { useCallback, useEffect, useState } from 'react'
-import { useDrag } from 'react-use-gesture'
+import { isEqual } from 'lodash'
+import React, { CSSProperties, useCallback, useEffect, useState } from 'react'
+import {useDrag} from 'react-use-gesture'
+import uuid from 'uuid'
 
 import { Variables } from '../../../../common'
 import { FontAwesomeIconButton } from '../../../Buttons/FontAwesomeIconButton'
@@ -8,6 +10,7 @@ import { TooltipPopover } from '../../../Popovers/TooltipPopover'
 import { TooltipPopoverVariant } from '../../../Popovers/TooltipPopover/TooltipPopover'
 import { TableRowVariant } from '../services/colors'
 import {
+  getIconButtonWidth,
   handleRemoveButtonClick,
   handleTableCellClicked,
   handleTableRowCheckboxInputChange,
@@ -22,6 +25,7 @@ import {
   StyledProgressBarRow,
   StyledRow,
   StyledSwipeActions,
+  StyledSwipeActionsButtonWrapper,
   StyledSwipeActionsCell
 } from '../services/style'
 import { IColumnProps, IRowProps, ISelectedRows, Table, getActionsIconButtonGroup } from '../Table'
@@ -30,12 +34,32 @@ import { TableCheckboxInput, TableCheckboxInputValue } from './TableCheckboxInpu
 interface ITableRowProps <T> {
   columns: Array<IColumnProps<T>>
   row: IRowProps<T>
+  selectedAll: TableCheckboxInputValue
   selectedRows: ISelectedRows
   setSelectedRows: (value: ISelectedRows) => void
   interactionType: Table.InteractionType
   hasLeftAction: boolean
   hasTableSwipeActions: boolean
   onRowRemove?: (removedRowData: T) => void
+  expandedSwipeCellRow: string | null
+  setExpandedSwipeCellRow: (value: string | null) => void
+  lastRow: boolean
+  transitionState?: 'entering' | 'entered' | 'exiting' | 'exited'
+}
+
+interface ITableRowDataCellProps <T> {
+  column: IColumnProps<T>
+  row: IRowProps<T>
+  hasProgressBar: boolean
+  isLastColumn: boolean
+  hasTableSwipeActions: boolean
+  hasSwipeActions: boolean
+  selectedRows: ISelectedRows
+  setSelectedRows: (value: ISelectedRows) => void
+  setHasHovered: (value: boolean) => void
+  handleSwipeAction?: () => void
+  isFirstColumn: boolean
+  children: JSX.Element
 }
 
 interface IUseDragProps {
@@ -103,6 +127,7 @@ const getLeftCell = <T extends {}>(isSelectable: boolean, isRemovable: boolean, 
 }
 
 const getDataCells = <T extends {}>(
+  key: string,
   hasProgressBar: boolean,
   hasSwipeActions: boolean,
   hasTableSwipeActions: boolean,
@@ -114,11 +139,10 @@ const getDataCells = <T extends {}>(
   setHasHovered: (value: boolean) => void,
   hasLeftAction: boolean,
   hasHoverButton: boolean,
-  handleSwipeActionClosed?: () => void
+  handleSwipeAction?: () => void
 ) => {
   const {
     isSelectable = false,
-    onClick,
     contentOverride,
     data,
     id,
@@ -157,23 +181,62 @@ const getDataCells = <T extends {}>(
       }
 
       const cellContentOverride = (contentOverride && Array.isArray(contentOverride(data))) ? contentOverride(data) as JSX.Element[] : undefined
-      const content = cellContentOverride ? cellContentOverride[index] : column.content(data)
-      const isLastColumn = index === columns.length - 1
 
       return (
-        <StyledDataCell
-          key={column.name}
+        <TableRowDataCell<T>
+          key={`${column.name}-${key}`}
           hasProgressBar={hasProgressBar}
-          colSpan={(isLastColumn && hasTableSwipeActions && !hasSwipeActions) ? 2 : undefined}
-          alignment={column.alignment}
-          onClick={handleTableCellClicked(row.id, row, selectedRows, setSelectedRows, setHasHovered, handleSwipeActionClosed, isSelectable, onClick)}
-          isLastColumn={isLastColumn}
+          isLastColumn={index === columns.length - 1}
+          hasTableSwipeActions={hasTableSwipeActions}
+          hasSwipeActions={hasSwipeActions}
+          column={column}
+          row={row}
+          selectedRows={selectedRows}
+          setSelectedRows={setSelectedRows}
+          setHasHovered={setHasHovered}
+          handleSwipeAction={handleSwipeAction}
           isFirstColumn={!hasLeftAction && index === 0}
         >
-          {column.tooltipText ? <TableCellTooltip tooltipText={column.tooltipText(row.data)}>{content}</TableCellTooltip> : content}
-        </StyledDataCell>
+          {cellContentOverride ? cellContentOverride[index] : column.content(data)}
+        </TableRowDataCell>
       )
     })
+  )
+}
+
+const TableRowDataCell = <T extends {}>(props: ITableRowDataCellProps<T>) => {
+  const {
+    hasProgressBar,
+    isLastColumn,
+    hasTableSwipeActions,
+    hasSwipeActions,
+    column,
+    row,
+    selectedRows,
+    setSelectedRows,
+    setHasHovered,
+    handleSwipeAction,
+    isFirstColumn,
+    children
+  } = props
+
+  const {
+    isSelectable = false,
+    onClick,
+    id
+  } = row
+
+  return (
+    <StyledDataCell
+      hasProgressBar={hasProgressBar}
+      colSpan={(isLastColumn && hasTableSwipeActions && !hasSwipeActions) ? 2 : undefined}
+      alignment={column.alignment}
+      onClick={handleTableCellClicked(id, row, selectedRows, setSelectedRows, setHasHovered, handleSwipeAction, isSelectable, onClick)}
+      isLastColumn={isLastColumn}
+      isFirstColumn={isFirstColumn}
+    >
+      {column.tooltipText ? <TableCellTooltip tooltipText={column.tooltipText(row.data)}>{children}</TableCellTooltip> : children}
+    </StyledDataCell>
   )
 }
 
@@ -184,12 +247,18 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
     onRowRemove,
     columns,
     row,
+    selectedAll,
     selectedRows,
     setSelectedRows,
-    hasTableSwipeActions
+    hasTableSwipeActions,
+    expandedSwipeCellRow,
+    setExpandedSwipeCellRow,
+    lastRow,
+    transitionState
   } = props
 
   const {
+    id,
     isSelectable = false,
     isRemovable = false,
     variant = TableRowVariant.Neutral,
@@ -201,13 +270,14 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
   const [movement, setMovement] = useState<number>(0)
   const [previousProgress, setPreviousProgress] = useState<number>(0)
   const [hasHovered, setHasHovered] = useState<boolean>(false)
+  const [key, setKey] = useState<string>('')
 
   const setHoveredTrue = useCallback(() => setHasHovered(true), [setHasHovered])
   const setHoveredFalse = useCallback(() => setHasHovered(false), [setHasHovered])
   const hasSwipeActions = interactionType === Table.InteractionType.Swipe && !!actions && actions.length > 0
   const hasHoverActions = interactionType === Table.InteractionType.Hover && !!actions && actions.length > 0
 
-  const swipeContentWidth = hasSwipeActions && actions ? actions.length * Variables.Spacing.sXLarge + (actions.length - 1) * Variables.Spacing.sXSmall + 2 * Variables.Spacing.sMedium : 0
+  const swipeContentWidth = hasSwipeActions && actions ? getIconButtonWidth(actions) + (actions.length - 1) * Variables.Spacing.sXSmall + 2 * Variables.Spacing.sMedium : 0
 
   const onDragBlind = useDrag((useDragProps: IUseDragProps) => {
     if (hasSwipeActions && useDragProps._movement[0] <= movement && useDragProps._movement[0] !== 0) {
@@ -223,18 +293,47 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
 
   const previousRowProps = usePrevious<IRowProps<T>>(row)
   const previousProgressFromPreviousRowProps = previousRowProps ? (previousRowProps.progress ? previousRowProps.progress : 0) : 0
+  const previousContentOverrideFromPreviousRowProps = previousRowProps && previousRowProps.contentOverride
+  const hasContentOverrideChange = !!previousRowProps && !isEqual(previousContentOverrideFromPreviousRowProps, row.contentOverride)
   const isSelected = hasLeftAction && isSelectable ? selectedRows[row.id] : false
-  const handleSwipeActionClosed = () => (hasSwipeActions  && movement !== 0) ? setMovement(0) : undefined
+  const handleSwipeAction = () => hasSwipeActions ? (movement !== 0 ? setMovement(0) : setMovement(swipeContentWidth)) : undefined
+  const hasHoverButton = (selectedAll === TableCheckboxInputValue.False && hasHoverActions) ? hasHovered : false
 
   useEffect(() => {
+    // get previous progress when progress is given and different from the current progress
     if (progress && previousProgressFromPreviousRowProps !== (progress ? progress : 0)) {
       setPreviousProgress(previousProgressFromPreviousRowProps)
     }
   }, [progress])
+  useEffect(() => {
+    // when user expands this row swipe cell, set expanded row id as this row id to force other row swipe cell collapse
+    if (movement > 0) {
+      setExpandedSwipeCellRow(id)
+    }
+
+    // when user collapse this row swipe cell (not when it is force collapsed by other row), set expanded row id null
+    if (movement === 0 && !(expandedSwipeCellRow !== null && expandedSwipeCellRow !== id)) {
+      setExpandedSwipeCellRow(null)
+    }
+  }, [movement])
+  useEffect(() => {
+    // when user expands other row, collapse this row
+    if (expandedSwipeCellRow !== null && expandedSwipeCellRow !== id) {
+      setMovement(0)
+    }
+  }, [expandedSwipeCellRow])
+  useEffect(() => {
+    // update key to force data cell content to remount for animation on update
+    if (hasContentOverrideChange) {
+      setKey(uuid.v4())
+    }
+  }, [hasContentOverrideChange])
 
   return (
     <>
       <StyledRow
+        hasTransition
+        transitionState={transitionState}
         {...onDragBlind()}
         movement={movement}
         variant={variant}
@@ -243,21 +342,24 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
         hasProgressBar={progress}
         onMouseEnter={setHoveredTrue}
         onMouseLeave={setHoveredFalse}
+        hideBottomBorder={!!progress || lastRow}
       >
         {hasLeftAction && getLeftCell<T>(isSelectable, isRemovable, hasLeftAction, row, selectedRows, setSelectedRows, onRowRemove)}
-        {getDataCells<T>(!!progress, hasSwipeActions, hasTableSwipeActions, isSelected, columns, row, selectedRows, setSelectedRows, setHasHovered, hasLeftAction, hasHoverActions ? hasHovered : false, handleSwipeActionClosed)}
+        {getDataCells<T>(key, !!progress, hasSwipeActions, hasTableSwipeActions, isSelected, columns, row, selectedRows, setSelectedRows, setHasHovered, hasLeftAction, hasHoverButton, handleSwipeAction)}
         {
           hasSwipeActions && (
             <StyledSwipeActionsCell>
-              <StyledSwipeActions width={movement}>
-                {getActionsIconButtonGroup(actions)}
+              <StyledSwipeActions width={movement} hasProgressBar={!!progress}>
+                <StyledSwipeActionsButtonWrapper isFullWidth={movement === swipeContentWidth}>
+                  {getActionsIconButtonGroup(actions)}
+                </StyledSwipeActionsButtonWrapper>
               </StyledSwipeActions>
             </StyledSwipeActionsCell>
           )
         }
       </StyledRow>
       {(progress) && (
-        <StyledProgressBarRow>
+        <StyledProgressBarRow transitionState={transitionState}>
           <StyledProgressBarCell colSpan={!hasLeftAction ? columns.length : columns.length + 1}>
             <StyledProgressBar previousPercentage={parsedProgressToPercentage(previousProgress)} percentage={parsedProgressToPercentage(progress)}/>
           </StyledProgressBarCell>

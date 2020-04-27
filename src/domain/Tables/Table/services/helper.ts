@@ -1,6 +1,11 @@
 import { clamp } from 'lodash'
 import { useEffect, useRef } from 'react'
 
+import { Props, Variables } from '../../../../common'
+import {
+  FontAwesomeIconButton,
+  IFontAwesomeIconButtonProps
+} from '../../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
 import { TableCheckboxInputValue } from '../subcomponents/TableCheckboxInput'
 import { IColumnSorts, IRowProps, ISelectedRows, Table } from '../Table'
 
@@ -56,8 +61,8 @@ const getSelectAllTableCheckboxInputValue = (currentSelectedRows: boolean[]) => 
   return newSelectedAll ? TableCheckboxInputValue.True : TableCheckboxInputValue.False
 }
 
-const handleSortButtonClicked = (name: string, sort?: IColumnSorts, onSortChange?: (sort: IColumnSorts) => void) => () => {
-  if (sort && onSortChange) {
+const handleSortButtonClicked = (name: string, hasSortEnabled: boolean, sort?: IColumnSorts, onSortChange?: (sort: IColumnSorts) => void) => () => {
+  if (sort && onSortChange && hasSortEnabled) {
     onSortChange({
       ...sort,
       [name]: sort[name] === Table.ColumnSortDirection.Descending ? Table.ColumnSortDirection.Ascending : Table.ColumnSortDirection.Descending
@@ -65,8 +70,8 @@ const handleSortButtonClicked = (name: string, sort?: IColumnSorts, onSortChange
   }
 }
 
-const handleHeaderTitleClicked = (name: string, setHasHeaderHovered: (value: boolean) => void, sort?: IColumnSorts, onSortChange?: (value: IColumnSorts) => void) => () => {
-  if (sort && onSortChange) {
+const handleHeaderTitleClicked = (name: string, setHasHeaderHovered: (value: boolean) => void, hasSortEnabled: boolean, sort?: IColumnSorts, onSortChange?: (value: IColumnSorts) => void) => () => {
+  if (sort && onSortChange && hasSortEnabled) {
     let newSort = {
       [name]: Table.ColumnSortDirection.Ascending
     }
@@ -110,7 +115,16 @@ const handleTableRowCheckboxInputChange = (id: string, selectedRows: ISelectedRo
   setSelectedRows(newValue)
 }
 
-const handleTableCellClicked = <T extends {}>(id: string, row: IRowProps<T>, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void, setHasHovered: (value: boolean) => void, handleSwipeActionClosed?: () => void, isSelectable?: boolean, onClick?: (data: any) => void) => () => {
+const handleTableCellClicked = <T extends {}>(
+  id: string,
+  row: IRowProps<T>,
+  selectedRows: ISelectedRows,
+  setSelectedRows: (value: ISelectedRows) => void,
+  setHasHovered: (value: boolean) => void,
+  handleSwipeAction?: () => void,
+  isSelectable?: boolean,
+  onClick?: (data: any) => void
+) => () => {
   if (isSelectable) {
     const newValue = {
       ...selectedRows,
@@ -123,11 +137,29 @@ const handleTableCellClicked = <T extends {}>(id: string, row: IRowProps<T>, sel
     onClick(row.data)
   }
 
-  if (handleSwipeActionClosed) {
-    handleSwipeActionClosed()
+  if (handleSwipeAction) {
+    handleSwipeAction()
   }
 
   setHasHovered(false)
+}
+
+const getIconButtonWidth = (actions: IFontAwesomeIconButtonProps[]) => (
+  actions.reduce((totalWidth: number, action) => {
+    return totalWidth + (action.size === FontAwesomeIconButton.Size.Large ? Variables.Spacing.s3XLarge : Variables.Spacing.sXLarge)
+  }, 0)
+)
+
+const getRowTransitionOpacity = (state?: 'entering' | 'entered' | 'exiting' | 'exited') => {
+  switch (state) {
+    case 'entering':
+    case 'entered':
+      return 1
+    case 'exiting':
+    case 'exited':
+    default:
+      return 0
+  }
 }
 
 export {
@@ -141,5 +173,7 @@ export {
   parsedProgressToPercentage,
   handleRemoveButtonClick,
   handleTableRowCheckboxInputChange,
-  handleTableCellClicked
+  handleTableCellClicked,
+  getIconButtonWidth,
+  getRowTransitionOpacity
 }

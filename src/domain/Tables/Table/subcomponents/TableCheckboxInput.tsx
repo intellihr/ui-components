@@ -26,6 +26,8 @@ interface ITableCheckboxInputProps {
   autoFocus?: boolean
   /** The component context */
   componentContext?: string
+  /** If true, show hover style when user hover on table row */
+  hasStyledOnRowHovered?: boolean
 }
 
 const getIcon = (value: TableCheckboxInputValue) => {
@@ -40,7 +42,15 @@ const getIcon = (value: TableCheckboxInputValue) => {
   }
 }
 
-const TableCheckboxInput: React.FC<ITableCheckboxInputProps> = ({ name, onChange, value = TableCheckboxInputValue.False, isDisabled, autoFocus, componentContext}) => {
+const TableCheckboxInput: React.FC<ITableCheckboxInputProps> = ({
+  name,
+  onChange,
+  value= TableCheckboxInputValue.False,
+  isDisabled,
+  autoFocus,
+  componentContext,
+  hasStyledOnRowHovered = true
+}) => {
   const [currentValue, setCurrentValue] = useState<TableCheckboxInputValue>(value)
   useEffect(() => {
     if (onChange) {
@@ -77,6 +87,7 @@ const TableCheckboxInput: React.FC<ITableCheckboxInputProps> = ({ name, onChange
       <StyledTableCheckboxLabel
         htmlFor={name}
         value={currentValue}
+        hasStyledOnRowHovered={hasStyledOnRowHovered}
       >
         {getIcon(currentValue)}
       </StyledTableCheckboxLabel>
