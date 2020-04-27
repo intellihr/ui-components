@@ -18,6 +18,7 @@ const StyledAnchor = styled(Anchor)`
 const StyledPrimaryContent = styled.div`
   width: auto;
   flex: 1 1 0%;
+  overflow: hidden;
 `
 
 const cardButtonStyle = css`

@@ -162,6 +162,7 @@ const StyledExtraContent = styled.div`
 
 const StyledBodyContents = styled.div`
   padding: ${Variables.Spacing.sMedium}px;
+  overflow: hidden;
 `
 
 export {
