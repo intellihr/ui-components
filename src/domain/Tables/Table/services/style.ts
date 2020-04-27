@@ -6,6 +6,7 @@ import { styleForMargins } from '../../../Spacers/services/margins'
 import { TableCheckboxInputValue } from '../subcomponents/TableCheckboxInput'
 import { Table } from '../Table'
 import { TableRowVariant, variantOptions } from './colors'
+import {getRowTransitionOpacity} from './helper'
 
 interface IStyledTableCheckboxInputProps {
   labelValue: TableCheckboxInputValue
@@ -13,6 +14,7 @@ interface IStyledTableCheckboxInputProps {
 
 interface IStyledTableCheckboxLabelProps {
   value: TableCheckboxInputValue
+  hasStyledOnRowHovered: boolean
 }
 
 interface IStyledTableWrapperProps {
@@ -25,12 +27,22 @@ interface IStyledRowProps {
   variant: TableRowVariant
   movement?: number
   hasProgressBar?: boolean
-  isHeader?: boolean
-  isEmptyHeader?: boolean
+  hideBottomBorder?: boolean
+  hasTransition?: boolean
+  transitionState?: 'entering' | 'entered' | 'exiting' | 'exited'
+}
+
+interface IStyledProgressBarRowProps {
+  transitionState?: 'entering' | 'entered' | 'exiting' | 'exited'
 }
 
 interface IStyledSwipeActionsProps {
   width: number
+  hasProgressBar?: boolean
+}
+
+interface IStyledSwipeActionsButtonWrapperProps {
+  isFullWidth: boolean
 }
 
 interface IStyledProgressBarProps {
@@ -63,7 +75,9 @@ const StyledTHead = styled.thead`
 `
 
 const StyledTableWrapper = styled.div`
+  overflow: scroll;
   border: 1px solid ${Variables.Color.n250};
+  border-radius: ${Variables.Style.borderRadius}px;
 
   ${(props: IStyledTableWrapperProps) => styleForMargins(props.margins)}
 `
@@ -77,6 +91,10 @@ const StyledTable = styled.table`
 
 const StyledHeaderCellWithHeaderSize = styled.th`
   padding:  ${Variables.Spacing.sSmall}px ${Variables.Spacing.sMedium}px;
+`
+
+const StyledHeaderCellContent = styled.div`
+  overflow: hidden;
 `
 
 const StyledHeaderCell = styled.th`
@@ -93,6 +111,7 @@ const StyledHeaderCell = styled.th`
 
   ${(props: IStyledHeaderCellProps) => props.size === Table.ColumnSize.Auto && css`
       width: 100%;
+      max-width: 0;
   `}
 
   ${(props: IStyledHeaderCellProps) => props.alignment === Table.ColumnAlignment.Right && css`
@@ -107,56 +126,59 @@ const StyledHeaderLeftCell = styled.th`
 `
 
 const StyledSwipeActionsCell = styled.td`
+  position: relative;
   padding: 0;
 `
 
-const StyledSwipeActions = styled.div`
-    padding: ${Variables.Spacing.sSmall}px
-    top:0;
-    width: 0;
-    overflow: hidden;
-    position: absolute;
-    border-left: 1px solid ${Variables.Color.n250};
-    height: 50px;
+const StyledSwipeActionsButtonWrapper = styled.div`
+  padding: 0;
+  padding-left: ${Variables.Spacing.sSmall}px;
 
-    ${(props: IStyledSwipeActionsProps) => props.width && css`
-      width: ${props.width}px;
+  ${(props: IStyledSwipeActionsButtonWrapperProps) => props.isFullWidth && css`
+      padding-right: ${Variables.Spacing.sSmall}px;
       transition: 0.2s ease-out;
   `}
 `
 
-const StyledDataCell = styled.td`
-  padding:  ${Variables.Spacing.sSmall}px;
-  text-align: left;
+const StyledSwipeActions = styled.div`
+  display: flex;
+  align-items: center;
+  top:0;
+  width: 0;
+  overflow: hidden;
+  position: absolute;
+  border-left: 1px solid ${Variables.Color.n250};
+  height: 59px;
 
-  ${(props: IStyledDataCellProps) => props.alignment === Table.ColumnAlignment.Right && css`
-      text-align: right;
+  ${(props: IStyledSwipeActionsProps) => props.width && css`
+      width: ${props.width}px;
+      transition: 0.2s ease-out;
   `}
 
-  ${(props: IStyledDataCellProps) => props.isLastColumn && css`
-      padding-right: ${Variables.Spacing.sMedium}px;
-  `}
-
-  ${(props: IStyledDataCellProps) => props.isFirstColumn && css`
-      padding-left: ${Variables.Spacing.sMedium}px;
-  `}
-
-  ${(props: IStyledDataCellProps) => props.hasProgressBar && css`
-      padding-bottom:  ${Variables.Spacing.sSmall - 2}px;
+  ${(props: IStyledSwipeActionsProps) => props.hasProgressBar && css`
+      height: 57px;
+      transition: 0.2s ease-out;
   `}
 `
+
 const StyledProgressBarRow = styled.tr`
   border-bottom: 1px solid ${Variables.Color.n250};
   background: ${Variables.Color.n100};
+
+  ${(props: IStyledProgressBarRowProps) => css`
+      opacity: ${getRowTransitionOpacity(props.transitionState)};
+      transition: opacity 500ms ease-in-out;
+  `}
 `
 const StyledEmptyStateRow = styled.tr`
   border: none;
 `
 
 const StyledRow = styled.tr`
+  opacity: 1;
   white-space: nowrap;
   border: none;
-  border-top: 1px solid ${Variables.Color.n250};
+  border-bottom: 1px solid ${Variables.Color.n250};
   background: ${Variables.Color.n100};
   transition: transform 0.2s ease-out;
   height: ${Variables.Spacing.sSmall * 2 + Variables.Spacing.sXLarge + 3}px;
@@ -175,6 +197,7 @@ const StyledRow = styled.tr`
 
   ${(props: IStyledRowProps) => props.isSelected && css`
       background: ${variantOptions[props.variant].selectBackground};
+      border-bottom: 1px solid ${Variables.Color.n100};
   `}
 
   ${(props: IStyledRowProps) => props.hasProgressBar && css`
@@ -186,12 +209,52 @@ const StyledRow = styled.tr`
       transition: transform 0.2s ease-out;
   `}
 
-  ${(props: IStyledRowProps) => props.isHeader && css`
-      border-top: none;
+  ${(props: IStyledRowProps) => props.hideBottomBorder && css`
+      border: none;
+      border-bottom: 0;
   `}
 
-  ${(props: IStyledRowProps) => props.isEmptyHeader && css`
-      border-bottom: 1px solid ${Variables.Color.n250};
+  ${(props: IStyledRowProps) => props.hasTransition && css`
+      opacity: 0;
+  `}
+
+  ${(props: IStyledRowProps) => props.transitionState && css`
+      opacity: ${getRowTransitionOpacity(props.transitionState)};
+      transition: opacity 500ms ease-in-out;
+  `}
+`
+
+const StyledDataCellChangeAnimation = keyframes`
+  0% {
+      opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`
+
+const StyledDataCell = styled.td`
+  max-width: 0;
+  padding:  ${Variables.Spacing.sSmall}px;
+  text-align: left;
+  animation-name: ${StyledDataCellChangeAnimation};
+  animation-duration: 500ms;
+  animation-timing-function: ease-in;
+
+  ${(props: IStyledDataCellProps) => props.alignment === Table.ColumnAlignment.Right && css`
+      text-align: right;
+  `}
+
+  ${(props: IStyledDataCellProps) => props.isLastColumn && css`
+      padding-right: ${Variables.Spacing.sMedium}px;
+  `}
+
+  ${(props: IStyledDataCellProps) => props.isFirstColumn && css`
+      padding-left: ${Variables.Spacing.sMedium}px;
+  `}
+
+  ${(props: IStyledDataCellProps) => props.hasProgressBar && css`
+      padding-bottom:  ${Variables.Spacing.sSmall - 2}px;
   `}
 `
 
@@ -245,7 +308,7 @@ const StyledSortButton = styled.div`
   `}
 
   ${(props: IStyledSortButtonProps) => props.sort === Table.ColumnSortDirection.Descending && css`
-      transform: rotate(-180deg);
+      transform: rotate(180deg);
   `}
 `
 
@@ -362,7 +425,7 @@ const StyledTableCheckboxLabel = styled.label`
     }
   }
 
-  ${(props: IStyledTableCheckboxLabelProps) => props.value === TableCheckboxInputValue.False && css`
+  ${(props: IStyledTableCheckboxLabelProps) => props.hasStyledOnRowHovered && props.value === TableCheckboxInputValue.False && css`
     ${StyledRow}:hover & {
       &::before {
         background-color: ${Variables.Color.n300};
@@ -416,5 +479,7 @@ export {
   StyledSwipeActions,
   StyledHeaderCellWithHeaderSize,
   StyledEmptyStateRow,
-  StyledFontAwesomeIconButtonWrapper
+  StyledFontAwesomeIconButtonWrapper,
+  StyledSwipeActionsButtonWrapper,
+  StyledHeaderCellContent
 }

@@ -1,5 +1,6 @@
 import { mapValues } from 'lodash'
 import React, { useEffect, useState } from 'react'
+import { Transition, TransitionGroup } from 'react-transition-group'
 
 import { Props } from '../../../common'
 import {
@@ -71,6 +72,8 @@ interface ITableProps <T extends {}> {
   hasLeftAction?: boolean
   /** If interaction type is Hover, it will display hover actions when hover. If interaction type is swipe, it will display swipe actions when tap or swipe. */
   interactionType?: InteractionType
+  /** If yes, sort is enable with interaction. If no, sort button display in disable style with given sort */
+  hasSortEnabled?: boolean
   /** Margins around the table */
   margins?: Props.IMargins
   /** The component context */
@@ -125,11 +128,13 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
     hasLeftAction = false,
     bulkActions,
     emptyState,
-    interactionType = InteractionType.Hover
+    interactionType = InteractionType.Hover,
+    hasSortEnabled = true
   } = props
 
   const [selectedAll, setSelectedAll] = useState<TableCheckboxInputValue>(TableCheckboxInputValue.False)
   const [selectedRows, setSelectedRows] = useState<ISelectedRows>(getUpdatedAllSelectableRows(rows, {}))
+  const [expandedSwipeCellRow, setExpandedSwipeCellRow] = useState<string | null>(null)
 
   useEffect(() => {
     setSelectedRows(getUpdatedAllSelectableRows<T>(rows, selectedRows))
@@ -169,7 +174,7 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
     >
       <StyledTable>
         <StyledTHead>
-          <TableHeader
+          <TableHeader<T>
             sort={sort}
             onSortChange={onSortChange}
             columns={columns}
@@ -180,27 +185,42 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
             hasTableSwipeActions={hasTableSwipeActions}
             hasBulkAction={selectedAll !== TableCheckboxInputValue.False}
             isEmpty={rows.length === 0}
+            hasSortEnabled={hasSortEnabled}
           />
         </StyledTHead>
-        <tbody>
-        {
-          rows.length === 0 ? (
-            <StyledEmptyStateRow><StyledEmptyStateCell colSpan={columns.length}>{emptyState}</StyledEmptyStateCell></StyledEmptyStateRow>
-          ) : rows.map((row: IRowProps<T>) => (
-            <TableRow
-              key={row.id}
-              hasTableSwipeActions={hasTableSwipeActions}
-              columns={columns}
-              row={row}
-              selectedRows={selectedRows}
-              setSelectedRows={setSelectedRows}
-              hasLeftAction={hasLeftAction}
-              interactionType={interactionType}
-              onRowRemove={onRowRemove}
-            />
-          ))
-        }
-        </tbody>
+        <TransitionGroup className='table-rows' component='tbody'>
+          {
+            rows.length === 0 ? (
+              <StyledEmptyStateRow><StyledEmptyStateCell colSpan={columns.length}>{emptyState}</StyledEmptyStateCell></StyledEmptyStateRow>
+            ) : rows.map((row: IRowProps<T>, index) => (
+                <Transition
+                  key={row.id}
+                  timeout={500}
+                  mountOnEnter
+                  unmountOnExit
+                >
+                  { (state: 'entering' | 'entered' | 'exiting' | 'exited') => (
+                    <TableRow<T>
+                      transitionState={state}
+                      hasTableSwipeActions={hasTableSwipeActions}
+                      columns={columns}
+                      row={row}
+                      lastRow={index === rows.length - 1}
+                      selectedAll={selectedAll}
+                      selectedRows={selectedRows}
+                      setSelectedRows={setSelectedRows}
+                      hasLeftAction={hasLeftAction}
+                      interactionType={interactionType}
+                      onRowRemove={onRowRemove}
+                      expandedSwipeCellRow={expandedSwipeCellRow}
+                      setExpandedSwipeCellRow={setExpandedSwipeCellRow}
+                    />
+                  )}
+
+                </Transition>
+            ))
+          }
+        </TransitionGroup>
       </StyledTable>
     </StyledTableWrapper>
   )

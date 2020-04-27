@@ -1,16 +1,23 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-import {Props} from '../../../common'
-import {FontAwesomeIcon} from '../../Icons/FontAwesomeIcon'
-import {FontAwesomeIconValue} from '../../Icons/Icon/FontAwesomeIconTypes'
-import {ITooltipPopoverToggleComponentProps, TooltipPopover} from '../../Popovers/TooltipPopover'
-import {TooltipPopoverVariant} from '../../Popovers/TooltipPopover/TooltipPopover'
-import {IconButtonVariants} from './colors'
-import {StyledIconButton} from './style'
+import { Props } from '../../../common'
+import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
+import { FontAwesomeIconValue } from '../../Icons/Icon/FontAwesomeIconTypes'
+import { ITooltipPopoverToggleComponentProps, TooltipPopover } from '../../Popovers/TooltipPopover'
+import { TooltipPopoverVariant } from '../../Popovers/TooltipPopover/TooltipPopover'
+import { IconButtonVariants } from './colors'
+import { StyledIconButton } from './style'
+
+enum Size {
+  Small = 'small',
+  Large = 'large'
+}
 
 interface IFontAwesomeIconButtonProps {
   /** Name of the icon */
   icon: FontAwesomeIconValue
+  /** Size of the icon */
+  size?: Size
   /** The alternative font awesome icon versions */
   type: 'solid' | 'regular' | 'light' | 'duotone'
   /** onClick event */
@@ -25,11 +32,13 @@ interface IFontAwesomeIconButtonProps {
   isHovered?: boolean
   /** Whether the Icon Button is active/selected */
   isSelected?: boolean
+  /** Whether the Icon Button is disabled */
+  isDisabled?: boolean
   /** The component context */
   componentContext?: string
 }
 
-const FontAwesomeIconButton: React.FC<IFontAwesomeIconButtonProps> = (props) => {
+const FontAwesomeIconButton = (props: IFontAwesomeIconButtonProps) => {
   const {
     icon,
     type,
@@ -39,7 +48,9 @@ const FontAwesomeIconButton: React.FC<IFontAwesomeIconButtonProps> = (props) => 
     tooltipText,
     isSelected = false,
     isHovered = false,
-    componentContext
+    isDisabled = false,
+    componentContext,
+    size = Size.Small
   } = props
 
   const toggleComponent = ({ openMenu, closeMenu, toggleComponentRef, ariaProps }: ITooltipPopoverToggleComponentProps) => (
@@ -50,11 +61,13 @@ const FontAwesomeIconButton: React.FC<IFontAwesomeIconButtonProps> = (props) => 
       {...ariaProps}
     >
       <StyledIconButton
+        size={size}
         onClick={onClick}
         variant={variant}
         margins={margins}
         isSelected={isSelected}
         isHovered={isHovered}
+        isDisabled={isDisabled}
       >
         <FontAwesomeIcon
           icon={icon}
@@ -65,7 +78,7 @@ const FontAwesomeIconButton: React.FC<IFontAwesomeIconButtonProps> = (props) => 
   )
 
   return (
-    tooltipText
+    tooltipText && !isDisabled
     ? (
         <TooltipPopover
           variant={TooltipPopoverVariant.Dark}
@@ -78,11 +91,13 @@ const FontAwesomeIconButton: React.FC<IFontAwesomeIconButtonProps> = (props) => 
       )
     : (
         <StyledIconButton
+          size={size}
           onClick={onClick}
           variant={variant}
           margins={margins}
           isSelected={isSelected}
           isHovered={isHovered}
+          isDisabled={isDisabled}
           data-component-type={Props.ComponentType.FontAwesomeIconButton}
           data-component-context={componentContext}
         >
@@ -94,6 +109,8 @@ const FontAwesomeIconButton: React.FC<IFontAwesomeIconButtonProps> = (props) => 
       )
   )
 }
+
+FontAwesomeIconButton.Size = Size
 
 export {
   FontAwesomeIconButton,

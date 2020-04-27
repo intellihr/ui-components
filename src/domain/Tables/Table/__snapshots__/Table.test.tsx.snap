@@ -27,6 +27,7 @@ exports[`<Table /> should render a mobile table 1`] = `
         }
         hasBulkAction={false}
         hasLeftAction={false}
+        hasSortEnabled={true}
         hasTableSwipeActions={true}
         isEmpty={false}
         onSortChange={[MockFunction]}
@@ -39,363 +40,102 @@ exports[`<Table /> should render a mobile table 1`] = `
         }
       />
     </styled.thead>
-    <tbody>
-      <TableRow
-        columns={
-          Array [
-            Object {
-              "alignment": "left",
-              "content": [Function],
-              "name": "fileName",
-              "size": "auto",
-              "title": "file name",
-            },
-            Object {
-              "alignment": "right",
-              "content": [Function],
-              "name": "createAt",
-              "size": "shrink",
-              "title": "created at",
-            },
-          ]
-        }
-        hasLeftAction={false}
-        hasTableSwipeActions={true}
-        interactionType="swipe"
+    <TransitionGroup
+      childFactory={[Function]}
+      className="table-rows"
+      component="tbody"
+    >
+      <Transition
+        appear={false}
+        enter={true}
+        exit={true}
+        in={false}
         key="0"
-        row={
-          Object {
-            "actions": Array [
-              Object {
-                "icon": "link",
-                "onClick": [Function],
-                "tooltipText": "Copy Link",
-                "type": "solid",
-              },
-              Object {
-                "icon": "pencil-alt",
-                "onClick": [Function],
-                "tooltipText": "Rename",
-                "type": "solid",
-              },
-              Object {
-                "icon": "file-download",
-                "onClick": [Function],
-                "tooltipText": "Download",
-                "type": "solid",
-              },
-              Object {
-                "icon": "trash",
-                "onClick": [Function],
-                "tooltipText": "Delete",
-                "type": "solid",
-              },
-            ],
-            "data": Object {
-              "createAt": "05/01/2018",
-              "fileName": "fail.pdf",
-              "fileType": "PDF",
-              "size": "8.2",
-            },
-            "id": "0",
-            "isRemovable": true,
-            "isSelectable": false,
-            "onClick": [MockFunction],
-            "rowContentOverride": [Function],
-            "variant": "error",
-          }
-        }
-        selectedRows={
-          Object {
-            "3": false,
-            "4": false,
-          }
-        }
-        setSelectedRows={[Function]}
-      />
-      <TableRow
-        columns={
-          Array [
-            Object {
-              "alignment": "left",
-              "content": [Function],
-              "name": "fileName",
-              "size": "auto",
-              "title": "file name",
-            },
-            Object {
-              "alignment": "right",
-              "content": [Function],
-              "name": "createAt",
-              "size": "shrink",
-              "title": "created at",
-            },
-          ]
-        }
-        hasLeftAction={false}
-        hasTableSwipeActions={true}
-        interactionType="swipe"
+        mountOnEnter={true}
+        onEnter={[Function]}
+        onEntered={[Function]}
+        onEntering={[Function]}
+        onExit={[Function]}
+        onExited={[Function]}
+        onExiting={[Function]}
+        timeout={500}
+        unmountOnExit={true}
+      >
+        <Component />
+      </Transition>
+      <Transition
+        appear={false}
+        enter={true}
+        exit={true}
+        in={false}
         key="1"
-        row={
-          Object {
-            "actions": Array [
-              Object {
-                "icon": "link",
-                "onClick": [Function],
-                "tooltipText": "Copy Link",
-                "type": "solid",
-              },
-              Object {
-                "icon": "pencil-alt",
-                "onClick": [Function],
-                "tooltipText": "Rename",
-                "type": "solid",
-              },
-              Object {
-                "icon": "file-download",
-                "onClick": [Function],
-                "tooltipText": "Download",
-                "type": "solid",
-              },
-              Object {
-                "icon": "trash",
-                "onClick": [Function],
-                "tooltipText": "Delete",
-                "type": "solid",
-              },
-            ],
-            "contentOverride": [Function],
-            "data": Object {
-              "createAt": "05/01/2018",
-              "fileName": "uploading.pdf",
-              "fileType": "PDF",
-              "size": "99",
-            },
-            "id": "1",
-            "isRemovable": true,
-            "isSelectable": false,
-            "progress": 0.7,
-          }
-        }
-        selectedRows={
-          Object {
-            "3": false,
-            "4": false,
-          }
-        }
-        setSelectedRows={[Function]}
-      />
-      <TableRow
-        columns={
-          Array [
-            Object {
-              "alignment": "left",
-              "content": [Function],
-              "name": "fileName",
-              "size": "auto",
-              "title": "file name",
-            },
-            Object {
-              "alignment": "right",
-              "content": [Function],
-              "name": "createAt",
-              "size": "shrink",
-              "title": "created at",
-            },
-          ]
-        }
-        hasLeftAction={false}
-        hasTableSwipeActions={true}
-        interactionType="swipe"
+        mountOnEnter={true}
+        onEnter={[Function]}
+        onEntered={[Function]}
+        onEntering={[Function]}
+        onExit={[Function]}
+        onExited={[Function]}
+        onExiting={[Function]}
+        timeout={500}
+        unmountOnExit={true}
+      >
+        <Component />
+      </Transition>
+      <Transition
+        appear={false}
+        enter={true}
+        exit={true}
+        in={false}
         key="2"
-        row={
-          Object {
-            "actions": Array [
-              Object {
-                "icon": "link",
-                "onClick": [Function],
-                "tooltipText": "Copy Link",
-                "type": "solid",
-              },
-              Object {
-                "icon": "pencil-alt",
-                "onClick": [Function],
-                "tooltipText": "Rename",
-                "type": "solid",
-              },
-              Object {
-                "icon": "file-download",
-                "onClick": [Function],
-                "tooltipText": "Download",
-                "type": "solid",
-              },
-              Object {
-                "icon": "trash",
-                "onClick": [Function],
-                "tooltipText": "Delete",
-                "type": "solid",
-              },
-            ],
-            "contentOverride": [Function],
-            "data": Object {
-              "createAt": "05/01/2018",
-              "fileName": "success.pdf",
-              "fileType": "PDF",
-              "size": "3.7",
-            },
-            "id": "2",
-            "isRemovable": true,
-            "isSelectable": false,
-            "progress": 0.5,
-          }
-        }
-        selectedRows={
-          Object {
-            "3": false,
-            "4": false,
-          }
-        }
-        setSelectedRows={[Function]}
-      />
-      <TableRow
-        columns={
-          Array [
-            Object {
-              "alignment": "left",
-              "content": [Function],
-              "name": "fileName",
-              "size": "auto",
-              "title": "file name",
-            },
-            Object {
-              "alignment": "right",
-              "content": [Function],
-              "name": "createAt",
-              "size": "shrink",
-              "title": "created at",
-            },
-          ]
-        }
-        hasLeftAction={false}
-        hasTableSwipeActions={true}
-        interactionType="swipe"
+        mountOnEnter={true}
+        onEnter={[Function]}
+        onEntered={[Function]}
+        onEntering={[Function]}
+        onExit={[Function]}
+        onExited={[Function]}
+        onExiting={[Function]}
+        timeout={500}
+        unmountOnExit={true}
+      >
+        <Component />
+      </Transition>
+      <Transition
+        appear={false}
+        enter={true}
+        exit={true}
+        in={false}
         key="3"
-        row={
-          Object {
-            "actions": Array [
-              Object {
-                "icon": "link",
-                "onClick": [Function],
-                "tooltipText": "Copy Link",
-                "type": "solid",
-              },
-              Object {
-                "icon": "pencil-alt",
-                "onClick": [Function],
-                "tooltipText": "Rename",
-                "type": "solid",
-              },
-              Object {
-                "icon": "file-download",
-                "onClick": [Function],
-                "tooltipText": "Download",
-                "type": "solid",
-              },
-              Object {
-                "icon": "trash",
-                "onClick": [Function],
-                "tooltipText": "Delete",
-                "type": "solid",
-              },
-            ],
-            "data": Object {
-              "createAt": "05/01/2018",
-              "fileName": "test.pdf",
-              "fileType": "PDF",
-              "size": "2.2",
-            },
-            "id": "3",
-            "isSelectable": true,
-          }
-        }
-        selectedRows={
-          Object {
-            "3": false,
-            "4": false,
-          }
-        }
-        setSelectedRows={[Function]}
-      />
-      <TableRow
-        columns={
-          Array [
-            Object {
-              "alignment": "left",
-              "content": [Function],
-              "name": "fileName",
-              "size": "auto",
-              "title": "file name",
-            },
-            Object {
-              "alignment": "right",
-              "content": [Function],
-              "name": "createAt",
-              "size": "shrink",
-              "title": "created at",
-            },
-          ]
-        }
-        hasLeftAction={false}
-        hasTableSwipeActions={true}
-        interactionType="swipe"
+        mountOnEnter={true}
+        onEnter={[Function]}
+        onEntered={[Function]}
+        onEntering={[Function]}
+        onExit={[Function]}
+        onExited={[Function]}
+        onExiting={[Function]}
+        timeout={500}
+        unmountOnExit={true}
+      >
+        <Component />
+      </Transition>
+      <Transition
+        appear={false}
+        enter={true}
+        exit={true}
+        in={false}
         key="4"
-        row={
-          Object {
-            "actions": Array [
-              Object {
-                "icon": "link",
-                "onClick": [Function],
-                "tooltipText": "Copy Link",
-                "type": "solid",
-              },
-              Object {
-                "icon": "pencil-alt",
-                "onClick": [Function],
-                "tooltipText": "Rename",
-                "type": "solid",
-              },
-              Object {
-                "icon": "file-download",
-                "onClick": [Function],
-                "tooltipText": "Download",
-                "type": "solid",
-              },
-              Object {
-                "icon": "trash",
-                "onClick": [Function],
-                "tooltipText": "Delete",
-                "type": "solid",
-              },
-            ],
-            "data": Object {
-              "createAt": "05/01/2018",
-              "fileName": "test1.pdf",
-              "fileType": "PDF",
-              "size": "1.5",
-            },
-            "id": "4",
-            "isSelectable": true,
-          }
-        }
-        selectedRows={
-          Object {
-            "3": false,
-            "4": false,
-          }
-        }
-        setSelectedRows={[Function]}
-      />
-    </tbody>
+        mountOnEnter={true}
+        onEnter={[Function]}
+        onEntered={[Function]}
+        onEntering={[Function]}
+        onExit={[Function]}
+        onExited={[Function]}
+        onExiting={[Function]}
+        timeout={500}
+        unmountOnExit={true}
+      >
+        <Component />
+      </Transition>
+    </TransitionGroup>
   </styled.table>
 </styled.div>
 `;
@@ -427,6 +167,7 @@ exports[`<Table /> should render a table 1`] = `
         }
         hasBulkAction={false}
         hasLeftAction={true}
+        hasSortEnabled={true}
         hasTableSwipeActions={false}
         isEmpty={false}
         onSortChange={[MockFunction]}
@@ -439,363 +180,102 @@ exports[`<Table /> should render a table 1`] = `
         }
       />
     </styled.thead>
-    <tbody>
-      <TableRow
-        columns={
-          Array [
-            Object {
-              "alignment": "left",
-              "content": [Function],
-              "name": "fileName",
-              "size": "auto",
-              "title": "file name",
-            },
-            Object {
-              "alignment": "right",
-              "content": [Function],
-              "name": "createAt",
-              "size": "shrink",
-              "title": "created at",
-            },
-          ]
-        }
-        hasLeftAction={true}
-        hasTableSwipeActions={false}
-        interactionType="hover"
+    <TransitionGroup
+      childFactory={[Function]}
+      className="table-rows"
+      component="tbody"
+    >
+      <Transition
+        appear={false}
+        enter={true}
+        exit={true}
+        in={false}
         key="0"
-        row={
-          Object {
-            "actions": Array [
-              Object {
-                "icon": "link",
-                "onClick": [Function],
-                "tooltipText": "Copy Link",
-                "type": "solid",
-              },
-              Object {
-                "icon": "pencil-alt",
-                "onClick": [Function],
-                "tooltipText": "Rename",
-                "type": "solid",
-              },
-              Object {
-                "icon": "file-download",
-                "onClick": [Function],
-                "tooltipText": "Download",
-                "type": "solid",
-              },
-              Object {
-                "icon": "trash",
-                "onClick": [Function],
-                "tooltipText": "Delete",
-                "type": "solid",
-              },
-            ],
-            "data": Object {
-              "createAt": "05/01/2018",
-              "fileName": "fail.pdf",
-              "fileType": "PDF",
-              "size": "8.2",
-            },
-            "id": "0",
-            "isRemovable": true,
-            "isSelectable": false,
-            "onClick": [MockFunction],
-            "rowContentOverride": [Function],
-            "variant": "error",
-          }
-        }
-        selectedRows={
-          Object {
-            "3": false,
-            "4": false,
-          }
-        }
-        setSelectedRows={[Function]}
-      />
-      <TableRow
-        columns={
-          Array [
-            Object {
-              "alignment": "left",
-              "content": [Function],
-              "name": "fileName",
-              "size": "auto",
-              "title": "file name",
-            },
-            Object {
-              "alignment": "right",
-              "content": [Function],
-              "name": "createAt",
-              "size": "shrink",
-              "title": "created at",
-            },
-          ]
-        }
-        hasLeftAction={true}
-        hasTableSwipeActions={false}
-        interactionType="hover"
+        mountOnEnter={true}
+        onEnter={[Function]}
+        onEntered={[Function]}
+        onEntering={[Function]}
+        onExit={[Function]}
+        onExited={[Function]}
+        onExiting={[Function]}
+        timeout={500}
+        unmountOnExit={true}
+      >
+        <Component />
+      </Transition>
+      <Transition
+        appear={false}
+        enter={true}
+        exit={true}
+        in={false}
         key="1"
-        row={
-          Object {
-            "actions": Array [
-              Object {
-                "icon": "link",
-                "onClick": [Function],
-                "tooltipText": "Copy Link",
-                "type": "solid",
-              },
-              Object {
-                "icon": "pencil-alt",
-                "onClick": [Function],
-                "tooltipText": "Rename",
-                "type": "solid",
-              },
-              Object {
-                "icon": "file-download",
-                "onClick": [Function],
-                "tooltipText": "Download",
-                "type": "solid",
-              },
-              Object {
-                "icon": "trash",
-                "onClick": [Function],
-                "tooltipText": "Delete",
-                "type": "solid",
-              },
-            ],
-            "contentOverride": [Function],
-            "data": Object {
-              "createAt": "05/01/2018",
-              "fileName": "uploading.pdf",
-              "fileType": "PDF",
-              "size": "99",
-            },
-            "id": "1",
-            "isRemovable": true,
-            "isSelectable": false,
-            "progress": 0.7,
-          }
-        }
-        selectedRows={
-          Object {
-            "3": false,
-            "4": false,
-          }
-        }
-        setSelectedRows={[Function]}
-      />
-      <TableRow
-        columns={
-          Array [
-            Object {
-              "alignment": "left",
-              "content": [Function],
-              "name": "fileName",
-              "size": "auto",
-              "title": "file name",
-            },
-            Object {
-              "alignment": "right",
-              "content": [Function],
-              "name": "createAt",
-              "size": "shrink",
-              "title": "created at",
-            },
-          ]
-        }
-        hasLeftAction={true}
-        hasTableSwipeActions={false}
-        interactionType="hover"
+        mountOnEnter={true}
+        onEnter={[Function]}
+        onEntered={[Function]}
+        onEntering={[Function]}
+        onExit={[Function]}
+        onExited={[Function]}
+        onExiting={[Function]}
+        timeout={500}
+        unmountOnExit={true}
+      >
+        <Component />
+      </Transition>
+      <Transition
+        appear={false}
+        enter={true}
+        exit={true}
+        in={false}
         key="2"
-        row={
-          Object {
-            "actions": Array [
-              Object {
-                "icon": "link",
-                "onClick": [Function],
-                "tooltipText": "Copy Link",
-                "type": "solid",
-              },
-              Object {
-                "icon": "pencil-alt",
-                "onClick": [Function],
-                "tooltipText": "Rename",
-                "type": "solid",
-              },
-              Object {
-                "icon": "file-download",
-                "onClick": [Function],
-                "tooltipText": "Download",
-                "type": "solid",
-              },
-              Object {
-                "icon": "trash",
-                "onClick": [Function],
-                "tooltipText": "Delete",
-                "type": "solid",
-              },
-            ],
-            "contentOverride": [Function],
-            "data": Object {
-              "createAt": "05/01/2018",
-              "fileName": "success.pdf",
-              "fileType": "PDF",
-              "size": "3.7",
-            },
-            "id": "2",
-            "isRemovable": true,
-            "isSelectable": false,
-            "progress": 0.5,
-          }
-        }
-        selectedRows={
-          Object {
-            "3": false,
-            "4": false,
-          }
-        }
-        setSelectedRows={[Function]}
-      />
-      <TableRow
-        columns={
-          Array [
-            Object {
-              "alignment": "left",
-              "content": [Function],
-              "name": "fileName",
-              "size": "auto",
-              "title": "file name",
-            },
-            Object {
-              "alignment": "right",
-              "content": [Function],
-              "name": "createAt",
-              "size": "shrink",
-              "title": "created at",
-            },
-          ]
-        }
-        hasLeftAction={true}
-        hasTableSwipeActions={false}
-        interactionType="hover"
+        mountOnEnter={true}
+        onEnter={[Function]}
+        onEntered={[Function]}
+        onEntering={[Function]}
+        onExit={[Function]}
+        onExited={[Function]}
+        onExiting={[Function]}
+        timeout={500}
+        unmountOnExit={true}
+      >
+        <Component />
+      </Transition>
+      <Transition
+        appear={false}
+        enter={true}
+        exit={true}
+        in={false}
         key="3"
-        row={
-          Object {
-            "actions": Array [
-              Object {
-                "icon": "link",
-                "onClick": [Function],
-                "tooltipText": "Copy Link",
-                "type": "solid",
-              },
-              Object {
-                "icon": "pencil-alt",
-                "onClick": [Function],
-                "tooltipText": "Rename",
-                "type": "solid",
-              },
-              Object {
-                "icon": "file-download",
-                "onClick": [Function],
-                "tooltipText": "Download",
-                "type": "solid",
-              },
-              Object {
-                "icon": "trash",
-                "onClick": [Function],
-                "tooltipText": "Delete",
-                "type": "solid",
-              },
-            ],
-            "data": Object {
-              "createAt": "05/01/2018",
-              "fileName": "test.pdf",
-              "fileType": "PDF",
-              "size": "2.2",
-            },
-            "id": "3",
-            "isSelectable": true,
-          }
-        }
-        selectedRows={
-          Object {
-            "3": false,
-            "4": false,
-          }
-        }
-        setSelectedRows={[Function]}
-      />
-      <TableRow
-        columns={
-          Array [
-            Object {
-              "alignment": "left",
-              "content": [Function],
-              "name": "fileName",
-              "size": "auto",
-              "title": "file name",
-            },
-            Object {
-              "alignment": "right",
-              "content": [Function],
-              "name": "createAt",
-              "size": "shrink",
-              "title": "created at",
-            },
-          ]
-        }
-        hasLeftAction={true}
-        hasTableSwipeActions={false}
-        interactionType="hover"
+        mountOnEnter={true}
+        onEnter={[Function]}
+        onEntered={[Function]}
+        onEntering={[Function]}
+        onExit={[Function]}
+        onExited={[Function]}
+        onExiting={[Function]}
+        timeout={500}
+        unmountOnExit={true}
+      >
+        <Component />
+      </Transition>
+      <Transition
+        appear={false}
+        enter={true}
+        exit={true}
+        in={false}
         key="4"
-        row={
-          Object {
-            "actions": Array [
-              Object {
-                "icon": "link",
-                "onClick": [Function],
-                "tooltipText": "Copy Link",
-                "type": "solid",
-              },
-              Object {
-                "icon": "pencil-alt",
-                "onClick": [Function],
-                "tooltipText": "Rename",
-                "type": "solid",
-              },
-              Object {
-                "icon": "file-download",
-                "onClick": [Function],
-                "tooltipText": "Download",
-                "type": "solid",
-              },
-              Object {
-                "icon": "trash",
-                "onClick": [Function],
-                "tooltipText": "Delete",
-                "type": "solid",
-              },
-            ],
-            "data": Object {
-              "createAt": "05/01/2018",
-              "fileName": "test1.pdf",
-              "fileType": "PDF",
-              "size": "1.5",
-            },
-            "id": "4",
-            "isSelectable": true,
-          }
-        }
-        selectedRows={
-          Object {
-            "3": false,
-            "4": false,
-          }
-        }
-        setSelectedRows={[Function]}
-      />
-    </tbody>
+        mountOnEnter={true}
+        onEnter={[Function]}
+        onEntered={[Function]}
+        onEntering={[Function]}
+        onExit={[Function]}
+        onExited={[Function]}
+        onExiting={[Function]}
+        timeout={500}
+        unmountOnExit={true}
+      >
+        <Component />
+      </Transition>
+    </TransitionGroup>
   </styled.table>
 </styled.div>
 `;
@@ -827,6 +307,7 @@ exports[`<Table /> should render an empty table 1`] = `
         }
         hasBulkAction={false}
         hasLeftAction={false}
+        hasSortEnabled={true}
         hasTableSwipeActions={false}
         isEmpty={true}
         onSortChange={[MockFunction]}
@@ -839,7 +320,11 @@ exports[`<Table /> should render an empty table 1`] = `
         }
       />
     </styled.thead>
-    <tbody>
+    <TransitionGroup
+      childFactory={[Function]}
+      className="table-rows"
+      component="tbody"
+    >
       <styled.tr>
         <styled.td
           colSpan={2}
@@ -849,7 +334,7 @@ exports[`<Table /> should render an empty table 1`] = `
           </div>
         </styled.td>
       </styled.tr>
-    </tbody>
+    </TransitionGroup>
   </styled.table>
 </styled.div>
 `;
