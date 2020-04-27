@@ -39,18 +39,16 @@ interface ITableHeaderProps <T> {
   isEmpty: boolean
   sort?: IColumnSorts
   onSortChange?: (sort: IColumnSorts) => void
-  hasSortEnabled: boolean
 }
 
 interface ITableHeaderCellContentProps <T> {
   column: IColumnProps<T>
   sort?: IColumnSorts
   onSortChange?: (sort: IColumnSorts) => void
-  hasSortEnabled: boolean
 }
 
 const TableHeaderCellContent = <T extends {}>(props: ITableHeaderCellContentProps<T>) => {
-  const { column, sort, onSortChange, hasSortEnabled } = props
+  const { column, sort, onSortChange } = props
   const {
     name,
     title,
@@ -58,6 +56,7 @@ const TableHeaderCellContent = <T extends {}>(props: ITableHeaderCellContentProp
   } = column
 
   const [hasHeaderHovered, setHasHeaderHovered] = useState<boolean>(false)
+  const hasSortEnabled = !!onSortChange
 
   const setHeaderHoveredTrue = useCallback(() => hasSortEnabled && setHasHeaderHovered(true), [setHasHeaderHovered])
   const setHeaderHoveredFalse = useCallback(() => hasSortEnabled && setHasHeaderHovered(false), [setHasHeaderHovered])
@@ -95,7 +94,6 @@ const TableHeaderCellContent = <T extends {}>(props: ITableHeaderCellContentProp
 }
 
 const getHeaderCells = <T extends {}>(
-  hasSortEnabled: boolean,
   hasTableSwipeActions: boolean,
   columns: Array<IColumnProps<T>>,
   hasLeftAction: boolean,
@@ -117,7 +115,7 @@ const getHeaderCells = <T extends {}>(
                 displayType: 'flex',
                 flexHorizontalAlignment: (column.alignment && column.alignment === Table.ColumnAlignment.Right) ? GridLayout.HorizontalAlignment.Right : GridLayout.HorizontalAlignment.Left,
                 size: (size === Table.ColumnSize.Shrink) ? 'shrink' : 'auto',
-                content: <div><TableHeaderCellContent<T> column={column} sort={sort} onSortChange={onSortChange} hasSortEnabled={hasSortEnabled}/></div>
+                content: <div><TableHeaderCellContent<T> column={column} sort={sort} onSortChange={onSortChange}/></div>
               })
             })
           }
@@ -149,7 +147,7 @@ const getHeaderCells = <T extends {}>(
 
       return (
         <StyledHeaderCell key={name} colSpan={(isLastColumn && hasTableSwipeActions) ? 2 : undefined} size={size} alignment={alignment} isLastColumn={isLastColumn} isFirstColumn={isFirstColumn}>
-          <TableHeaderCellContent<T> column={column} sort={sort} onSortChange={onSortChange} hasSortEnabled={hasSortEnabled}/>
+          <TableHeaderCellContent<T> column={column} sort={sort} onSortChange={onSortChange}/>
         </StyledHeaderCell>
       )})
   )
@@ -166,8 +164,7 @@ const TableHeader = <T extends {}>(props: ITableHeaderProps<T>) => {
     setSelectedAll,
     bulkActions,
     hasBulkAction,
-    isEmpty,
-    hasSortEnabled
+    isEmpty
   } = props
 
   const setSelectedAllTableCheckboxInputValue = useCallback((value) => setSelectedAll(value), [setSelectedAll])
@@ -175,7 +172,7 @@ const TableHeader = <T extends {}>(props: ITableHeaderProps<T>) => {
   return (
     <StyledRow variant={TableRowVariant.Neutral}>
       {
-        (!hasLeftAction || isEmpty) ? getHeaderCells(hasSortEnabled, hasTableSwipeActions, columns, hasLeftAction, sort, onSortChange,hasBulkAction ? bulkActions : undefined ) : (
+        (!hasLeftAction || isEmpty) ? getHeaderCells(hasTableSwipeActions, columns, hasLeftAction, sort, onSortChange,hasBulkAction ? bulkActions : undefined ) : (
           <>
             <StyledHeaderLeftCell>
               <TableCheckboxInput
@@ -186,7 +183,7 @@ const TableHeader = <T extends {}>(props: ITableHeaderProps<T>) => {
               />
             </StyledHeaderLeftCell>
             {
-              getHeaderCells(hasSortEnabled, hasTableSwipeActions, columns, hasLeftAction, sort, onSortChange,hasBulkAction ? bulkActions : undefined )
+              getHeaderCells(hasTableSwipeActions, columns, hasLeftAction, sort, onSortChange,hasBulkAction ? bulkActions : undefined )
             }
           </>
         )

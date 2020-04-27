@@ -1,7 +1,7 @@
 import { clamp } from 'lodash'
 import { useEffect, useRef } from 'react'
 
-import { Props, Variables } from '../../../../common'
+import { Variables } from '../../../../common'
 import {
   FontAwesomeIconButton,
   IFontAwesomeIconButtonProps

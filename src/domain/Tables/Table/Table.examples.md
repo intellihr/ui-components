@@ -237,10 +237,6 @@ import { Text } from '@Domain/Typographies';
 import { Variables, Props } from '@Common';
 import { FontAwesomeIcon } from '@Domain/Icons';
 
-initialState = {
-sort: {createAt: 'ascending'}
-};
-
 const removeableRowActions = ([
   {
     icon:'trash',
@@ -286,9 +282,7 @@ const successRowContentOverride = (
   ])
 );
 <Table
-  hasSortEnabled={false}
   interactionType='swipe'
-  isMobile
   onProgressEnd = {(data) => setState({hasSuccessRowContent:false})}
   rows={[
     {
@@ -340,8 +334,7 @@ const successRowContentOverride = (
       actions: rowActions 
       }
   ]}
-  sort={state.sort}
-  onSortChange={(sort) => setState({sort})}
+  sort={{createAt: 'ascending'}}
   columns={[
     {
       name: 'fileName',
@@ -353,7 +346,7 @@ const successRowContentOverride = (
       },
       {
       name: 'createAt',
-      title: 'created at',
+      title: 'Date Uploaded',
       size: 'shrink',
       headerSize: 'auto',
       content: (data)=> <Text>{data.createAt}</Text>,

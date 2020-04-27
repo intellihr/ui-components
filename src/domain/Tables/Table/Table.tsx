@@ -56,6 +56,10 @@ interface ITableProps <T extends {}> {
   rows: Array<IRowProps<T>>
   /** Columns of the table */
   columns: Array<IColumnProps<T>>
+  /** If yes the left action cells are displayed (checkbox and remove button) */
+  hasLeftAction?: boolean
+  /** If interaction type is Hover, it will display hover actions when hover. If interaction type is swipe, it will display swipe actions when tap or swipe. */
+  interactionType?: InteractionType
   /** Empty state of the table */
   emptyState: JSX.Element
   /** Sorting of the table and only allow one column sorting at once */
@@ -68,12 +72,6 @@ interface ITableProps <T extends {}> {
   bulkActions?: IFontAwesomeIconButtonProps[]
   /** Called when some row is removed */
   onRowRemove?: (removedRowData: T) => void
-  /** If yes the left action cells are displayed (checkbox and remove button) */
-  hasLeftAction?: boolean
-  /** If interaction type is Hover, it will display hover actions when hover. If interaction type is swipe, it will display swipe actions when tap or swipe. */
-  interactionType?: InteractionType
-  /** If yes, sort is enable with interaction. If no, sort button display in disable style with given sort */
-  hasSortEnabled?: boolean
   /** Margins around the table */
   margins?: Props.IMargins
   /** The component context */
@@ -128,8 +126,7 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
     hasLeftAction = false,
     bulkActions,
     emptyState,
-    interactionType = InteractionType.Hover,
-    hasSortEnabled = true
+    interactionType = InteractionType.Hover
   } = props
 
   const [selectedAll, setSelectedAll] = useState<TableCheckboxInputValue>(TableCheckboxInputValue.False)
@@ -185,7 +182,6 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
             hasTableSwipeActions={hasTableSwipeActions}
             hasBulkAction={selectedAll !== TableCheckboxInputValue.False}
             isEmpty={rows.length === 0}
-            hasSortEnabled={hasSortEnabled}
           />
         </StyledTHead>
         <TransitionGroup className='table-rows' component='tbody'>
