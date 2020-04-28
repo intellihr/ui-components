@@ -288,7 +288,7 @@ const StyledProgressBar = styled.div`
 `
 
 const StyledEmptyStateCell = styled.td`
-  padding: ${Variables.Spacing.s3XLarge}px;
+  padding: 0;
 `
 
 const StyledSortButton = styled.div`
