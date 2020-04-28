@@ -4,9 +4,12 @@ import { Props, Variables } from '../../../../common'
 import { FontAwesomeIcon } from '../../../Icons/FontAwesomeIcon'
 import { styleForMargins } from '../../../Spacers/services/margins'
 import { TableCheckboxInputValue } from '../subcomponents/TableCheckboxInput'
-import { Table } from '../Table'
 import { TableRowVariant, variantOptions } from './colors'
-import {getRowTransitionOpacity} from './helper'
+import {
+  ColumnAlignment,
+  ColumnSize,
+  ColumnSortDirection
+} from './types'
 
 interface IStyledTableCheckboxInputProps {
   labelValue: TableCheckboxInputValue
@@ -29,11 +32,6 @@ interface IStyledRowProps {
   hasProgressBar?: boolean
   hideBottomBorder?: boolean
   hasTransition?: boolean
-  transitionState?: 'entering' | 'entered' | 'exiting' | 'exited'
-}
-
-interface IStyledProgressBarRowProps {
-  transitionState?: 'entering' | 'entered' | 'exiting' | 'exited'
 }
 
 interface IStyledSwipeActionsProps {
@@ -51,22 +49,22 @@ interface IStyledProgressBarProps {
 }
 
 interface IStyledHeaderCellProps {
-  size?: Table.ColumnSize
-  alignment?: Table.ColumnAlignment
+  size?: ColumnSize
+  alignment?: ColumnAlignment
   isLastColumn?: boolean
   isFirstColumn?: boolean
 }
 
 interface IStyledDataCellProps {
-  alignment?: Table.ColumnAlignment
+  alignment?: ColumnAlignment
   isLastColumn?: boolean
   isFirstColumn?: boolean
   hasProgressBar?: boolean
 }
 
 interface IStyledSortButtonProps {
-  sort?: Table.ColumnSortDirection
-  alignment: Table.ColumnAlignment
+  sort?: ColumnSortDirection
+  alignment: ColumnAlignment
 }
 
 const StyledTHead = styled.thead`
@@ -90,7 +88,7 @@ const StyledTable = styled.table`
 `
 
 const StyledHeaderCellWithHeaderSize = styled.th`
-  padding:  ${Variables.Spacing.sSmall}px ${Variables.Spacing.sMedium}px;
+  padding: ${Variables.Spacing.sSmall}px ${Variables.Spacing.sMedium}px;
 `
 
 const StyledHeaderCellContent = styled.div`
@@ -110,12 +108,12 @@ const StyledHeaderCell = styled.th`
       padding-left: ${Variables.Spacing.sMedium}px;
   `}
 
-  ${(props: IStyledHeaderCellProps) => props.size === Table.ColumnSize.Auto && css`
+  ${(props: IStyledHeaderCellProps) => props.size === ColumnSize.Auto && css`
       width: 100%;
       max-width: 0;
   `}
 
-  ${(props: IStyledHeaderCellProps) => props.alignment === Table.ColumnAlignment.Right && css`
+  ${(props: IStyledHeaderCellProps) => props.alignment === ColumnAlignment.Right && css`
       text-align: right;
   `}
 `
@@ -129,6 +127,7 @@ const StyledHeaderLeftCell = styled.th`
 const StyledSwipeActionsCell = styled.td`
   position: relative;
   padding: 0;
+  width: 0;
 `
 
 const StyledSwipeActionsButtonWrapper = styled.div`
@@ -165,18 +164,12 @@ const StyledSwipeActions = styled.div`
 const StyledProgressBarRow = styled.tr`
   border-bottom: 1px solid ${Variables.Color.n250};
   background: ${Variables.Color.n100};
-
-  ${(props: IStyledProgressBarRowProps) => css`
-      opacity: ${getRowTransitionOpacity(props.transitionState)};
-      transition: opacity 500ms ease-in-out;
-  `}
 `
 const StyledEmptyStateRow = styled.tr`
   border: none;
 `
 
 const StyledRow = styled.tr`
-  opacity: 1;
   white-space: nowrap;
   border: none;
   border-bottom: 1px solid ${Variables.Color.n250};
@@ -214,15 +207,6 @@ const StyledRow = styled.tr`
       border: none;
       border-bottom: 0;
   `}
-
-  ${(props: IStyledRowProps) => props.hasTransition && css`
-      opacity: 0;
-  `}
-
-  ${(props: IStyledRowProps) => props.transitionState && css`
-      opacity: ${getRowTransitionOpacity(props.transitionState)};
-      transition: opacity 500ms ease-in-out;
-  `}
 `
 
 const StyledDataCellChangeAnimation = keyframes`
@@ -242,7 +226,7 @@ const StyledDataCell = styled.td`
   animation-duration: 500ms;
   animation-timing-function: ease-in;
 
-  ${(props: IStyledDataCellProps) => props.alignment === Table.ColumnAlignment.Right && css`
+  ${(props: IStyledDataCellProps) => props.alignment === ColumnAlignment.Right && css`
       text-align: right;
   `}
 
@@ -296,11 +280,11 @@ const StyledSortButton = styled.div`
   margin: 0;
   transition: transform .2s ease-out, display .2s ease-out;
 
-  ${(props: IStyledSortButtonProps) => props.alignment === Table.ColumnAlignment.Right && css`
+  ${(props: IStyledSortButtonProps) => props.alignment === ColumnAlignment.Right && css`
       margin-right: ${Variables.Spacing.sXSmall}px;
   `}
 
-  ${(props: IStyledSortButtonProps) => props.alignment === Table.ColumnAlignment.Left && css`
+  ${(props: IStyledSortButtonProps) => props.alignment === ColumnAlignment.Left && css`
       margin-left: ${Variables.Spacing.sXSmall}px;
   `}
 
@@ -308,7 +292,7 @@ const StyledSortButton = styled.div`
       display: inline-block;
   `}
 
-  ${(props: IStyledSortButtonProps) => props.sort === Table.ColumnSortDirection.Descending && css`
+  ${(props: IStyledSortButtonProps) => props.sort === ColumnSortDirection.Descending && css`
       transform: rotate(180deg);
   `}
 `
