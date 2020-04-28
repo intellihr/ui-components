@@ -49,6 +49,7 @@ export interface IAvatarState {
 }
 
 class Avatar extends React.Component<IAvatarProps> {
+  public static StatusDotColor = AvatarStatusDotColor
   public static defaultProps: IAvatarProps = {
     size: Props.AvatarSize.Medium
   }
