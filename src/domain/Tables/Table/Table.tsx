@@ -11,7 +11,8 @@ import { TableRowVariant } from './services/colors'
 import {
   getSelectAllTableCheckboxInputValue,
   getUpdatedAllSelectableRows,
-  handleSelectionChanged
+  handleSelectionChanged,
+  validateProps
 } from './services/helper'
 import {
   StyledEmptyStateCell,
@@ -132,6 +133,7 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
     hasSortEnabled = true
   } = props
 
+  validateProps(props)
   const [selectedAll, setSelectedAll] = useState<TableCheckboxInputValue>(TableCheckboxInputValue.False)
   const [selectedRows, setSelectedRows] = useState<ISelectedRows>(getUpdatedAllSelectableRows(rows, {}))
   const [expandedSwipeCellRow, setExpandedSwipeCellRow] = useState<string | null>(null)
@@ -238,5 +240,6 @@ export {
   IColumnProps,
   ISelectedRows,
   IColumnSorts,
+  ITableProps,
   getActionsIconButtonGroup
 }

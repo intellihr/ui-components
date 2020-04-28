@@ -7,7 +7,7 @@ import {
   IFontAwesomeIconButtonProps
 } from '../../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
 import { TableCheckboxInputValue } from '../subcomponents/TableCheckboxInput'
-import { IColumnSorts, IRowProps, ISelectedRows, Table } from '../Table'
+import { IColumnSorts, IRowProps, ISelectedRows, ITableProps, Table } from '../Table'
 
 const usePrevious = <T extends {}>(value: T): T => {
   const ref = useRef<T>()
@@ -162,6 +162,16 @@ const getRowTransitionOpacity = (state?: 'entering' | 'entered' | 'exiting' | 'e
   }
 }
 
+const validateProps = <T>(props: ITableProps<T>) => {
+  if (props.hasLeftAction && props.interactionType === Table.InteractionType.Swipe) {
+    throw new Error('Having left actions is not compatible with swipe interaction')
+  }
+
+  if (props.onSortChange && !props.sort) {
+    throw new Error('You must provide a sort for onSortChange to work')
+  }
+}
+
 export {
   usePrevious,
   getUpdatedAllSelectableRows,
@@ -175,5 +185,6 @@ export {
   handleTableRowCheckboxInputChange,
   handleTableCellClicked,
   getIconButtonWidth,
-  getRowTransitionOpacity
+  getRowTransitionOpacity,
+  validateProps
 }
