@@ -6,12 +6,7 @@ import {
   StyledTableCheckboxInput,
   StyledTableCheckboxLabel
 } from '../services/style'
-
-enum TableCheckboxInputValue {
-  True = 'true',
-  False = 'false',
-  PartialTrue = 'partialTrue'
-}
+import { TableCheckboxInputValue } from '../services/types'
 
 interface ITableCheckboxInputProps {
   /** Name of the input */
@@ -45,28 +40,16 @@ const getIcon = (value: TableCheckboxInputValue) => {
 const TableCheckboxInput: React.FC<ITableCheckboxInputProps> = ({
   name,
   onChange,
-  value= TableCheckboxInputValue.False,
+  value = TableCheckboxInputValue.False,
   isDisabled,
   autoFocus,
   componentContext,
   hasStyledOnRowHovered = true
 }) => {
-  const [currentValue, setCurrentValue] = useState<TableCheckboxInputValue>(value)
-  useEffect(() => {
-    if (onChange) {
-      onChange(currentValue)
-    }
-  }, [currentValue])
-  useEffect(() => {
-    setCurrentValue(value)
-  }, [value])
   const handleChange = () => {
-    if (currentValue === TableCheckboxInputValue.False) {
-      setCurrentValue(TableCheckboxInputValue.True)
-    } else {
-      setCurrentValue(TableCheckboxInputValue.False)
+    if (onChange) {
+      onChange((value === TableCheckboxInputValue.True) ? TableCheckboxInputValue.False : TableCheckboxInputValue.True)
     }
-
   }
 
   return (
@@ -75,21 +58,21 @@ const TableCheckboxInput: React.FC<ITableCheckboxInputProps> = ({
         id={name}
         name={name}
         type='checkbox'
-        labelValue={currentValue}
-        value={currentValue === TableCheckboxInputValue.True ? 1 : 0}
+        labelValue={value}
+        value={value === TableCheckboxInputValue.True ? 1 : 0}
         onChange={handleChange}
         disabled={isDisabled}
         autoFocus={autoFocus}
         data-component-type={Props.ComponentType.CheckboxInput}
         data-component-context={componentContext}
-        checked={currentValue === TableCheckboxInputValue.True}
+        checked={value === TableCheckboxInputValue.True}
       />
       <StyledTableCheckboxLabel
         htmlFor={name}
-        value={currentValue}
+        value={value}
         hasStyledOnRowHovered={hasStyledOnRowHovered}
       >
-        {getIcon(currentValue)}
+        {getIcon(value)}
       </StyledTableCheckboxLabel>
     </>
   )

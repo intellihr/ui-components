@@ -6,7 +6,7 @@ exports[`<Table /> should render a mobile table 1`] = `
 >
   <styled.table>
     <styled.thead>
-      <TableHeader
+      <Memo(TableHeader)
         columns={
           Array [
             Object {
@@ -31,8 +31,8 @@ exports[`<Table /> should render a mobile table 1`] = `
         hasTableSwipeActions={true}
         isEmpty={false}
         onSortChange={[MockFunction]}
-        selectedAll="false"
-        setSelectedAll={[Function]}
+        selectAllTableCheckboxInputValue="false"
+        setSelectAllTableCheckboxInputValue={[Function]}
         sort={
           Object {
             "createAt": "ascending",
@@ -40,102 +40,351 @@ exports[`<Table /> should render a mobile table 1`] = `
         }
       />
     </styled.thead>
-    <TransitionGroup
-      childFactory={[Function]}
-      className="table-rows"
-      component="tbody"
-    >
-      <Transition
-        appear={false}
-        enter={true}
-        exit={true}
-        in={false}
-        key="0"
-        mountOnEnter={true}
-        onEnter={[Function]}
-        onEntered={[Function]}
-        onEntering={[Function]}
-        onExit={[Function]}
-        onExited={[Function]}
-        onExiting={[Function]}
-        timeout={500}
-        unmountOnExit={true}
-      >
-        <Component />
-      </Transition>
-      <Transition
-        appear={false}
-        enter={true}
-        exit={true}
-        in={false}
-        key="1"
-        mountOnEnter={true}
-        onEnter={[Function]}
-        onEntered={[Function]}
-        onEntering={[Function]}
-        onExit={[Function]}
-        onExited={[Function]}
-        onExiting={[Function]}
-        timeout={500}
-        unmountOnExit={true}
-      >
-        <Component />
-      </Transition>
-      <Transition
-        appear={false}
-        enter={true}
-        exit={true}
-        in={false}
-        key="2"
-        mountOnEnter={true}
-        onEnter={[Function]}
-        onEntered={[Function]}
-        onEntering={[Function]}
-        onExit={[Function]}
-        onExited={[Function]}
-        onExiting={[Function]}
-        timeout={500}
-        unmountOnExit={true}
-      >
-        <Component />
-      </Transition>
-      <Transition
-        appear={false}
-        enter={true}
-        exit={true}
-        in={false}
-        key="3"
-        mountOnEnter={true}
-        onEnter={[Function]}
-        onEntered={[Function]}
-        onEntering={[Function]}
-        onExit={[Function]}
-        onExited={[Function]}
-        onExiting={[Function]}
-        timeout={500}
-        unmountOnExit={true}
-      >
-        <Component />
-      </Transition>
-      <Transition
-        appear={false}
-        enter={true}
-        exit={true}
-        in={false}
-        key="4"
-        mountOnEnter={true}
-        onEnter={[Function]}
-        onEntered={[Function]}
-        onEntering={[Function]}
-        onExit={[Function]}
-        onExited={[Function]}
-        onExiting={[Function]}
-        timeout={500}
-        unmountOnExit={true}
-      >
-        <Component />
-      </Transition>
-    </TransitionGroup>
+    <Memo(TableRow)
+      columns={
+        Array [
+          Object {
+            "alignment": "left",
+            "content": [Function],
+            "name": "fileName",
+            "size": "auto",
+            "title": "file name",
+          },
+          Object {
+            "alignment": "right",
+            "content": [Function],
+            "name": "createAt",
+            "size": "shrink",
+            "title": "created at",
+          },
+        ]
+      }
+      expandedSwipeCellRow={null}
+      hasLeftAction={false}
+      hasTableSwipeActions={true}
+      interactionType="swipe"
+      isSelected={false}
+      key="0"
+      lastRow={false}
+      row={
+        Object {
+          "actions": Array [
+            Object {
+              "icon": "link",
+              "onClick": [Function],
+              "tooltipText": "Copy Link",
+              "type": "solid",
+            },
+            Object {
+              "icon": "pencil-alt",
+              "onClick": [Function],
+              "tooltipText": "Rename",
+              "type": "solid",
+            },
+            Object {
+              "icon": "file-download",
+              "onClick": [Function],
+              "tooltipText": "Download",
+              "type": "solid",
+            },
+            Object {
+              "icon": "trash",
+              "onClick": [Function],
+              "tooltipText": "Delete",
+              "type": "solid",
+            },
+          ],
+          "data": Object {
+            "createAt": "05/01/2018",
+            "fileName": "fail.pdf",
+            "fileType": "PDF",
+            "size": "8.2",
+          },
+          "id": "0",
+          "isRemovable": true,
+          "isSelectable": false,
+          "onClick": [MockFunction],
+          "rowContentOverride": [Function],
+          "variant": "error",
+        }
+      }
+      setExpandedSwipeCellRow={[Function]}
+      toggleSelected={[Function]}
+    />
+    <Memo(TableRow)
+      columns={
+        Array [
+          Object {
+            "alignment": "left",
+            "content": [Function],
+            "name": "fileName",
+            "size": "auto",
+            "title": "file name",
+          },
+          Object {
+            "alignment": "right",
+            "content": [Function],
+            "name": "createAt",
+            "size": "shrink",
+            "title": "created at",
+          },
+        ]
+      }
+      expandedSwipeCellRow={null}
+      hasLeftAction={false}
+      hasTableSwipeActions={true}
+      interactionType="swipe"
+      isSelected={false}
+      key="1"
+      lastRow={false}
+      row={
+        Object {
+          "actions": Array [
+            Object {
+              "icon": "link",
+              "onClick": [Function],
+              "tooltipText": "Copy Link",
+              "type": "solid",
+            },
+            Object {
+              "icon": "pencil-alt",
+              "onClick": [Function],
+              "tooltipText": "Rename",
+              "type": "solid",
+            },
+            Object {
+              "icon": "file-download",
+              "onClick": [Function],
+              "tooltipText": "Download",
+              "type": "solid",
+            },
+            Object {
+              "icon": "trash",
+              "onClick": [Function],
+              "tooltipText": "Delete",
+              "type": "solid",
+            },
+          ],
+          "contentOverride": [Function],
+          "data": Object {
+            "createAt": "05/01/2018",
+            "fileName": "uploading.pdf",
+            "fileType": "PDF",
+            "size": "99",
+          },
+          "id": "1",
+          "isRemovable": true,
+          "isSelectable": false,
+          "progress": 0.7,
+        }
+      }
+      setExpandedSwipeCellRow={[Function]}
+      toggleSelected={[Function]}
+    />
+    <Memo(TableRow)
+      columns={
+        Array [
+          Object {
+            "alignment": "left",
+            "content": [Function],
+            "name": "fileName",
+            "size": "auto",
+            "title": "file name",
+          },
+          Object {
+            "alignment": "right",
+            "content": [Function],
+            "name": "createAt",
+            "size": "shrink",
+            "title": "created at",
+          },
+        ]
+      }
+      expandedSwipeCellRow={null}
+      hasLeftAction={false}
+      hasTableSwipeActions={true}
+      interactionType="swipe"
+      isSelected={false}
+      key="2"
+      lastRow={false}
+      row={
+        Object {
+          "actions": Array [
+            Object {
+              "icon": "link",
+              "onClick": [Function],
+              "tooltipText": "Copy Link",
+              "type": "solid",
+            },
+            Object {
+              "icon": "pencil-alt",
+              "onClick": [Function],
+              "tooltipText": "Rename",
+              "type": "solid",
+            },
+            Object {
+              "icon": "file-download",
+              "onClick": [Function],
+              "tooltipText": "Download",
+              "type": "solid",
+            },
+            Object {
+              "icon": "trash",
+              "onClick": [Function],
+              "tooltipText": "Delete",
+              "type": "solid",
+            },
+          ],
+          "contentOverride": [Function],
+          "data": Object {
+            "createAt": "05/01/2018",
+            "fileName": "success.pdf",
+            "fileType": "PDF",
+            "size": "3.7",
+          },
+          "id": "2",
+          "isRemovable": true,
+          "isSelectable": false,
+          "progress": 0.5,
+        }
+      }
+      setExpandedSwipeCellRow={[Function]}
+      toggleSelected={[Function]}
+    />
+    <Memo(TableRow)
+      columns={
+        Array [
+          Object {
+            "alignment": "left",
+            "content": [Function],
+            "name": "fileName",
+            "size": "auto",
+            "title": "file name",
+          },
+          Object {
+            "alignment": "right",
+            "content": [Function],
+            "name": "createAt",
+            "size": "shrink",
+            "title": "created at",
+          },
+        ]
+      }
+      expandedSwipeCellRow={null}
+      hasLeftAction={false}
+      hasTableSwipeActions={true}
+      interactionType="swipe"
+      isSelected={false}
+      key="3"
+      lastRow={false}
+      row={
+        Object {
+          "actions": Array [
+            Object {
+              "icon": "link",
+              "onClick": [Function],
+              "tooltipText": "Copy Link",
+              "type": "solid",
+            },
+            Object {
+              "icon": "pencil-alt",
+              "onClick": [Function],
+              "tooltipText": "Rename",
+              "type": "solid",
+            },
+            Object {
+              "icon": "file-download",
+              "onClick": [Function],
+              "tooltipText": "Download",
+              "type": "solid",
+            },
+            Object {
+              "icon": "trash",
+              "onClick": [Function],
+              "tooltipText": "Delete",
+              "type": "solid",
+            },
+          ],
+          "data": Object {
+            "createAt": "05/01/2018",
+            "fileName": "test.pdf",
+            "fileType": "PDF",
+            "size": "2.2",
+          },
+          "id": "3",
+          "isSelectable": true,
+        }
+      }
+      setExpandedSwipeCellRow={[Function]}
+      toggleSelected={[Function]}
+    />
+    <Memo(TableRow)
+      columns={
+        Array [
+          Object {
+            "alignment": "left",
+            "content": [Function],
+            "name": "fileName",
+            "size": "auto",
+            "title": "file name",
+          },
+          Object {
+            "alignment": "right",
+            "content": [Function],
+            "name": "createAt",
+            "size": "shrink",
+            "title": "created at",
+          },
+        ]
+      }
+      expandedSwipeCellRow={null}
+      hasLeftAction={false}
+      hasTableSwipeActions={true}
+      interactionType="swipe"
+      isSelected={false}
+      key="4"
+      lastRow={true}
+      row={
+        Object {
+          "actions": Array [
+            Object {
+              "icon": "link",
+              "onClick": [Function],
+              "tooltipText": "Copy Link",
+              "type": "solid",
+            },
+            Object {
+              "icon": "pencil-alt",
+              "onClick": [Function],
+              "tooltipText": "Rename",
+              "type": "solid",
+            },
+            Object {
+              "icon": "file-download",
+              "onClick": [Function],
+              "tooltipText": "Download",
+              "type": "solid",
+            },
+            Object {
+              "icon": "trash",
+              "onClick": [Function],
+              "tooltipText": "Delete",
+              "type": "solid",
+            },
+          ],
+          "data": Object {
+            "createAt": "05/01/2018",
+            "fileName": "test1.pdf",
+            "fileType": "PDF",
+            "size": "1.5",
+          },
+          "id": "4",
+          "isSelectable": true,
+        }
+      }
+      setExpandedSwipeCellRow={[Function]}
+      toggleSelected={[Function]}
+    />
   </styled.table>
 </styled.div>
 `;
@@ -146,7 +395,7 @@ exports[`<Table /> should render a table 1`] = `
 >
   <styled.table>
     <styled.thead>
-      <TableHeader
+      <Memo(TableHeader)
         columns={
           Array [
             Object {
@@ -171,8 +420,8 @@ exports[`<Table /> should render a table 1`] = `
         hasTableSwipeActions={false}
         isEmpty={false}
         onSortChange={[MockFunction]}
-        selectedAll="false"
-        setSelectedAll={[Function]}
+        selectAllTableCheckboxInputValue="false"
+        setSelectAllTableCheckboxInputValue={[Function]}
         sort={
           Object {
             "createAt": "ascending",
@@ -180,102 +429,351 @@ exports[`<Table /> should render a table 1`] = `
         }
       />
     </styled.thead>
-    <TransitionGroup
-      childFactory={[Function]}
-      className="table-rows"
-      component="tbody"
-    >
-      <Transition
-        appear={false}
-        enter={true}
-        exit={true}
-        in={false}
-        key="0"
-        mountOnEnter={true}
-        onEnter={[Function]}
-        onEntered={[Function]}
-        onEntering={[Function]}
-        onExit={[Function]}
-        onExited={[Function]}
-        onExiting={[Function]}
-        timeout={500}
-        unmountOnExit={true}
-      >
-        <Component />
-      </Transition>
-      <Transition
-        appear={false}
-        enter={true}
-        exit={true}
-        in={false}
-        key="1"
-        mountOnEnter={true}
-        onEnter={[Function]}
-        onEntered={[Function]}
-        onEntering={[Function]}
-        onExit={[Function]}
-        onExited={[Function]}
-        onExiting={[Function]}
-        timeout={500}
-        unmountOnExit={true}
-      >
-        <Component />
-      </Transition>
-      <Transition
-        appear={false}
-        enter={true}
-        exit={true}
-        in={false}
-        key="2"
-        mountOnEnter={true}
-        onEnter={[Function]}
-        onEntered={[Function]}
-        onEntering={[Function]}
-        onExit={[Function]}
-        onExited={[Function]}
-        onExiting={[Function]}
-        timeout={500}
-        unmountOnExit={true}
-      >
-        <Component />
-      </Transition>
-      <Transition
-        appear={false}
-        enter={true}
-        exit={true}
-        in={false}
-        key="3"
-        mountOnEnter={true}
-        onEnter={[Function]}
-        onEntered={[Function]}
-        onEntering={[Function]}
-        onExit={[Function]}
-        onExited={[Function]}
-        onExiting={[Function]}
-        timeout={500}
-        unmountOnExit={true}
-      >
-        <Component />
-      </Transition>
-      <Transition
-        appear={false}
-        enter={true}
-        exit={true}
-        in={false}
-        key="4"
-        mountOnEnter={true}
-        onEnter={[Function]}
-        onEntered={[Function]}
-        onEntering={[Function]}
-        onExit={[Function]}
-        onExited={[Function]}
-        onExiting={[Function]}
-        timeout={500}
-        unmountOnExit={true}
-      >
-        <Component />
-      </Transition>
-    </TransitionGroup>
+    <Memo(TableRow)
+      columns={
+        Array [
+          Object {
+            "alignment": "left",
+            "content": [Function],
+            "name": "fileName",
+            "size": "auto",
+            "title": "file name",
+          },
+          Object {
+            "alignment": "right",
+            "content": [Function],
+            "name": "createAt",
+            "size": "shrink",
+            "title": "created at",
+          },
+        ]
+      }
+      expandedSwipeCellRow={null}
+      hasLeftAction={true}
+      hasTableSwipeActions={false}
+      interactionType="hover"
+      isSelected={false}
+      key="0"
+      lastRow={false}
+      row={
+        Object {
+          "actions": Array [
+            Object {
+              "icon": "link",
+              "onClick": [Function],
+              "tooltipText": "Copy Link",
+              "type": "solid",
+            },
+            Object {
+              "icon": "pencil-alt",
+              "onClick": [Function],
+              "tooltipText": "Rename",
+              "type": "solid",
+            },
+            Object {
+              "icon": "file-download",
+              "onClick": [Function],
+              "tooltipText": "Download",
+              "type": "solid",
+            },
+            Object {
+              "icon": "trash",
+              "onClick": [Function],
+              "tooltipText": "Delete",
+              "type": "solid",
+            },
+          ],
+          "data": Object {
+            "createAt": "05/01/2018",
+            "fileName": "fail.pdf",
+            "fileType": "PDF",
+            "size": "8.2",
+          },
+          "id": "0",
+          "isRemovable": true,
+          "isSelectable": false,
+          "onClick": [MockFunction],
+          "rowContentOverride": [Function],
+          "variant": "error",
+        }
+      }
+      setExpandedSwipeCellRow={[Function]}
+      toggleSelected={[Function]}
+    />
+    <Memo(TableRow)
+      columns={
+        Array [
+          Object {
+            "alignment": "left",
+            "content": [Function],
+            "name": "fileName",
+            "size": "auto",
+            "title": "file name",
+          },
+          Object {
+            "alignment": "right",
+            "content": [Function],
+            "name": "createAt",
+            "size": "shrink",
+            "title": "created at",
+          },
+        ]
+      }
+      expandedSwipeCellRow={null}
+      hasLeftAction={true}
+      hasTableSwipeActions={false}
+      interactionType="hover"
+      isSelected={false}
+      key="1"
+      lastRow={false}
+      row={
+        Object {
+          "actions": Array [
+            Object {
+              "icon": "link",
+              "onClick": [Function],
+              "tooltipText": "Copy Link",
+              "type": "solid",
+            },
+            Object {
+              "icon": "pencil-alt",
+              "onClick": [Function],
+              "tooltipText": "Rename",
+              "type": "solid",
+            },
+            Object {
+              "icon": "file-download",
+              "onClick": [Function],
+              "tooltipText": "Download",
+              "type": "solid",
+            },
+            Object {
+              "icon": "trash",
+              "onClick": [Function],
+              "tooltipText": "Delete",
+              "type": "solid",
+            },
+          ],
+          "contentOverride": [Function],
+          "data": Object {
+            "createAt": "05/01/2018",
+            "fileName": "uploading.pdf",
+            "fileType": "PDF",
+            "size": "99",
+          },
+          "id": "1",
+          "isRemovable": true,
+          "isSelectable": false,
+          "progress": 0.7,
+        }
+      }
+      setExpandedSwipeCellRow={[Function]}
+      toggleSelected={[Function]}
+    />
+    <Memo(TableRow)
+      columns={
+        Array [
+          Object {
+            "alignment": "left",
+            "content": [Function],
+            "name": "fileName",
+            "size": "auto",
+            "title": "file name",
+          },
+          Object {
+            "alignment": "right",
+            "content": [Function],
+            "name": "createAt",
+            "size": "shrink",
+            "title": "created at",
+          },
+        ]
+      }
+      expandedSwipeCellRow={null}
+      hasLeftAction={true}
+      hasTableSwipeActions={false}
+      interactionType="hover"
+      isSelected={false}
+      key="2"
+      lastRow={false}
+      row={
+        Object {
+          "actions": Array [
+            Object {
+              "icon": "link",
+              "onClick": [Function],
+              "tooltipText": "Copy Link",
+              "type": "solid",
+            },
+            Object {
+              "icon": "pencil-alt",
+              "onClick": [Function],
+              "tooltipText": "Rename",
+              "type": "solid",
+            },
+            Object {
+              "icon": "file-download",
+              "onClick": [Function],
+              "tooltipText": "Download",
+              "type": "solid",
+            },
+            Object {
+              "icon": "trash",
+              "onClick": [Function],
+              "tooltipText": "Delete",
+              "type": "solid",
+            },
+          ],
+          "contentOverride": [Function],
+          "data": Object {
+            "createAt": "05/01/2018",
+            "fileName": "success.pdf",
+            "fileType": "PDF",
+            "size": "3.7",
+          },
+          "id": "2",
+          "isRemovable": true,
+          "isSelectable": false,
+          "progress": 0.5,
+        }
+      }
+      setExpandedSwipeCellRow={[Function]}
+      toggleSelected={[Function]}
+    />
+    <Memo(TableRow)
+      columns={
+        Array [
+          Object {
+            "alignment": "left",
+            "content": [Function],
+            "name": "fileName",
+            "size": "auto",
+            "title": "file name",
+          },
+          Object {
+            "alignment": "right",
+            "content": [Function],
+            "name": "createAt",
+            "size": "shrink",
+            "title": "created at",
+          },
+        ]
+      }
+      expandedSwipeCellRow={null}
+      hasLeftAction={true}
+      hasTableSwipeActions={false}
+      interactionType="hover"
+      isSelected={false}
+      key="3"
+      lastRow={false}
+      row={
+        Object {
+          "actions": Array [
+            Object {
+              "icon": "link",
+              "onClick": [Function],
+              "tooltipText": "Copy Link",
+              "type": "solid",
+            },
+            Object {
+              "icon": "pencil-alt",
+              "onClick": [Function],
+              "tooltipText": "Rename",
+              "type": "solid",
+            },
+            Object {
+              "icon": "file-download",
+              "onClick": [Function],
+              "tooltipText": "Download",
+              "type": "solid",
+            },
+            Object {
+              "icon": "trash",
+              "onClick": [Function],
+              "tooltipText": "Delete",
+              "type": "solid",
+            },
+          ],
+          "data": Object {
+            "createAt": "05/01/2018",
+            "fileName": "test.pdf",
+            "fileType": "PDF",
+            "size": "2.2",
+          },
+          "id": "3",
+          "isSelectable": true,
+        }
+      }
+      setExpandedSwipeCellRow={[Function]}
+      toggleSelected={[Function]}
+    />
+    <Memo(TableRow)
+      columns={
+        Array [
+          Object {
+            "alignment": "left",
+            "content": [Function],
+            "name": "fileName",
+            "size": "auto",
+            "title": "file name",
+          },
+          Object {
+            "alignment": "right",
+            "content": [Function],
+            "name": "createAt",
+            "size": "shrink",
+            "title": "created at",
+          },
+        ]
+      }
+      expandedSwipeCellRow={null}
+      hasLeftAction={true}
+      hasTableSwipeActions={false}
+      interactionType="hover"
+      isSelected={false}
+      key="4"
+      lastRow={true}
+      row={
+        Object {
+          "actions": Array [
+            Object {
+              "icon": "link",
+              "onClick": [Function],
+              "tooltipText": "Copy Link",
+              "type": "solid",
+            },
+            Object {
+              "icon": "pencil-alt",
+              "onClick": [Function],
+              "tooltipText": "Rename",
+              "type": "solid",
+            },
+            Object {
+              "icon": "file-download",
+              "onClick": [Function],
+              "tooltipText": "Download",
+              "type": "solid",
+            },
+            Object {
+              "icon": "trash",
+              "onClick": [Function],
+              "tooltipText": "Delete",
+              "type": "solid",
+            },
+          ],
+          "data": Object {
+            "createAt": "05/01/2018",
+            "fileName": "test1.pdf",
+            "fileType": "PDF",
+            "size": "1.5",
+          },
+          "id": "4",
+          "isSelectable": true,
+        }
+      }
+      setExpandedSwipeCellRow={[Function]}
+      toggleSelected={[Function]}
+    />
   </styled.table>
 </styled.div>
 `;
@@ -286,7 +784,7 @@ exports[`<Table /> should render an empty table 1`] = `
 >
   <styled.table>
     <styled.thead>
-      <TableHeader
+      <Memo(TableHeader)
         columns={
           Array [
             Object {
@@ -311,8 +809,8 @@ exports[`<Table /> should render an empty table 1`] = `
         hasTableSwipeActions={false}
         isEmpty={true}
         onSortChange={[MockFunction]}
-        selectedAll="false"
-        setSelectedAll={[Function]}
+        selectAllTableCheckboxInputValue="false"
+        setSelectAllTableCheckboxInputValue={[Function]}
         sort={
           Object {
             "createAt": "ascending",
@@ -320,21 +818,15 @@ exports[`<Table /> should render an empty table 1`] = `
         }
       />
     </styled.thead>
-    <TransitionGroup
-      childFactory={[Function]}
-      className="table-rows"
-      component="tbody"
-    >
-      <styled.tr>
-        <styled.td
-          colSpan={2}
-        >
-          <div>
-            empty
-          </div>
-        </styled.td>
-      </styled.tr>
-    </TransitionGroup>
+    <styled.tr>
+      <styled.td
+        colSpan={2}
+      >
+        <div>
+          empty
+        </div>
+      </styled.td>
+    </styled.tr>
   </styled.table>
 </styled.div>
 `;

@@ -21,17 +21,20 @@ import {
   StyledSortButton
 } from '../services/style'
 import {
+  ColumnAlignment,
+  ColumnSize,
   IColumnProps,
-  IColumnSorts,
-  Table,
+  IColumnSorts
+} from '../services/types'
+import {
   getActionsIconButtonGroup
-} from '../Table'
+} from './ActionIconButtonGroup'
 import { TableCheckboxInput, TableCheckboxInputValue } from './TableCheckboxInput'
 
 interface ITableHeaderProps <T> {
   columns: Array<IColumnProps<T>>
-  selectedAll: TableCheckboxInputValue
-  setSelectedAll: (value: TableCheckboxInputValue) => void
+  selectAllTableCheckboxInputValue: TableCheckboxInputValue
+  setSelectAllTableCheckboxInputValue: (value: TableCheckboxInputValue) => void
   bulkActions?: IFontAwesomeIconButtonProps[]
   hasLeftAction: boolean
   hasBulkAction: boolean
@@ -54,7 +57,7 @@ const TableHeaderCellContent = <T extends {}>(props: ITableHeaderCellContentProp
   const {
     name,
     title,
-    alignment = Table.ColumnAlignment.Left
+    alignment = ColumnAlignment.Left
   } = column
 
   const [hasHeaderHovered, setHasHeaderHovered] = useState<boolean>(false)
@@ -80,13 +83,13 @@ const TableHeaderCellContent = <T extends {}>(props: ITableHeaderCellContentProp
   if (title) {
     return (
       <StyledHeaderCellContent>
-        {alignment === Table.ColumnAlignment.Right && sortButton}
+        {alignment === ColumnAlignment.Right && sortButton}
         <span onMouseEnter={setHeaderHoveredTrue} onMouseLeave={setHeaderHoveredFalse}>
             <Text weight={Variables.FontWeight.fwSemiBold}>
               {hasSortEnabled ? headerTitleLink : title}
             </Text>
           </span>
-        {alignment === Table.ColumnAlignment.Left && sortButton}
+        {alignment === ColumnAlignment.Left && sortButton}
       </StyledHeaderCellContent>
     )
   }
@@ -115,8 +118,8 @@ const getHeaderCells = <T extends {}>(
 
               return ({
                 displayType: 'flex',
-                flexHorizontalAlignment: (column.alignment && column.alignment === Table.ColumnAlignment.Right) ? GridLayout.HorizontalAlignment.Right : GridLayout.HorizontalAlignment.Left,
-                size: (size === Table.ColumnSize.Shrink) ? 'shrink' : 'auto',
+                flexHorizontalAlignment: (column.alignment && column.alignment === ColumnAlignment.Right) ? GridLayout.HorizontalAlignment.Right : GridLayout.HorizontalAlignment.Left,
+                size: (size === ColumnSize.Shrink) ? 'shrink' : 'auto',
                 content: <div><TableHeaderCellContent<T> column={column} sort={sort} onSortChange={onSortChange} hasSortEnabled={hasSortEnabled}/></div>
               })
             })
@@ -131,7 +134,7 @@ const getHeaderCells = <T extends {}>(
       const {
         name,
         size,
-        alignment = Table.ColumnAlignment.Left
+        alignment = ColumnAlignment.Left
       } =  column
 
       const isLastColumn = index === columns.length - 1
@@ -162,15 +165,13 @@ const TableHeader = <T extends {}>(props: ITableHeaderProps<T>) => {
     sort,
     onSortChange,
     hasTableSwipeActions,
-    selectedAll,
-    setSelectedAll,
+    selectAllTableCheckboxInputValue,
+    setSelectAllTableCheckboxInputValue,
     bulkActions,
     hasBulkAction,
     isEmpty,
     hasSortEnabled
   } = props
-
-  const setSelectedAllTableCheckboxInputValue = useCallback((value) => setSelectedAll(value), [setSelectedAll])
 
   return (
     <StyledRow variant={TableRowVariant.Neutral}>
@@ -180,8 +181,8 @@ const TableHeader = <T extends {}>(props: ITableHeaderProps<T>) => {
             <StyledHeaderLeftCell>
               <TableCheckboxInput
                 name='selectAll'
-                value={selectedAll}
-                onChange={setSelectedAllTableCheckboxInputValue}
+                value={selectAllTableCheckboxInputValue}
+                onChange={setSelectAllTableCheckboxInputValue}
                 hasStyledOnRowHovered={false}
               />
             </StyledHeaderLeftCell>
@@ -196,6 +197,9 @@ const TableHeader = <T extends {}>(props: ITableHeaderProps<T>) => {
   )
 }
 
+// Purposefully not deep comparison as columns and sort are both memoisable in other applications
+const MemoTableHeader: typeof TableHeader = React.memo(TableHeader) as any
+
 export {
-  TableHeader
+  MemoTableHeader as TableHeader
 }
