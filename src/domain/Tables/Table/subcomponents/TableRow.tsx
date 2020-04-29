@@ -1,7 +1,6 @@
 import { isEqual } from 'lodash'
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import {useDrag} from 'react-use-gesture'
-import uuid from 'uuid'
 
 import { Variables } from '../../../../common'
 import { FontAwesomeIconButton } from '../../../Buttons/FontAwesomeIconButton'
@@ -16,6 +15,7 @@ import {
 import {
   StyledDataCell,
   StyledHeaderLeftCell,
+  StyledHeaderLeftCellContent,
   StyledProgressBar,
   StyledProgressBarCell,
   StyledProgressBarRow,
@@ -69,16 +69,18 @@ const getLeftCell = <T extends {}>({ isSelectable, isSelected, isRemovable, hasL
     const selectedCheckboxInputValue = isSelected ? TableCheckboxInputValue.True : TableCheckboxInputValue.False
     return (
       <StyledHeaderLeftCell>
-        {
-          isSelectable && (
-            <TableCheckboxInput
-              name={row.id}
-              value={selectedCheckboxInputValue}
-              // tslint:disable-next-line:jsx-no-lambda
-              onChange={() => toggleSelected(row)}
-            />
-          )
-        }
+        <StyledHeaderLeftCellContent>
+          {
+            isSelectable && (
+              <TableCheckboxInput
+                name={row.id}
+                value={selectedCheckboxInputValue}
+                // tslint:disable-next-line:jsx-no-lambda
+                onChange={() => toggleSelected(row)}
+              />
+            )
+          }
+        </StyledHeaderLeftCellContent>
       </StyledHeaderLeftCell>
     )
   }
@@ -86,13 +88,15 @@ const getLeftCell = <T extends {}>({ isSelectable, isSelected, isRemovable, hasL
   if (isRemovable && hasLeftAction) {
     return (
         <StyledHeaderLeftCell>
-          <FontAwesomeIconButton
-            icon='times'
-            type='regular'
-            variant={row.variant === TableRowVariant.Error ? IconButtonVariants.Red : IconButtonVariants.Neutral}
-            onClick={handleRemoveButtonClick(row.data, onRowRemove)}
-            tooltipText='Delete'
-          />
+          <StyledHeaderLeftCellContent>
+            <FontAwesomeIconButton
+              icon='times'
+              type='regular'
+              variant={row.variant === TableRowVariant.Error ? IconButtonVariants.Red : IconButtonVariants.Neutral}
+              onClick={handleRemoveButtonClick(row.data, onRowRemove)}
+              tooltipText='Delete'
+            />
+          </StyledHeaderLeftCellContent>
         </StyledHeaderLeftCell>
       )
   }

@@ -120,8 +120,11 @@ const StyledHeaderCell = styled.th`
 
 const StyledHeaderLeftCell = styled.th`
   padding: ${Variables.Spacing.sSmall}px ${Variables.Spacing.sSmall}px ${Variables.Spacing.sSmall}px ${Variables.Spacing.sMedium}px;
-  text-align: center;
+`
+
+const StyledHeaderLeftCellContent = styled.div`
   width: ${Variables.Spacing.sXLarge}px;
+  text-align: center;
 `
 
 const StyledSwipeActionsCell = styled.td`
@@ -466,5 +469,6 @@ export {
   StyledEmptyStateRow,
   StyledFontAwesomeIconButtonWrapper,
   StyledSwipeActionsButtonWrapper,
-  StyledHeaderCellContent
+  StyledHeaderCellContent,
+  StyledHeaderLeftCellContent
 }
