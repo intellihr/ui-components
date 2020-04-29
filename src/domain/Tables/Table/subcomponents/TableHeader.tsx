@@ -17,7 +17,7 @@ import {
 import {
   StyledHeaderCell, StyledHeaderCellContent,
   StyledHeaderCellWithHeaderSize,
-  StyledHeaderLeftCell, StyledRow,
+  StyledHeaderLeftCell, StyledHeaderLeftCellContent, StyledRow,
   StyledSortButton
 } from '../services/style'
 import {
@@ -179,12 +179,14 @@ const TableHeader = <T extends {}>(props: ITableHeaderProps<T>) => {
         (!hasLeftAction || isEmpty) ? getHeaderCells(hasSortEnabled, hasTableSwipeActions, columns, hasLeftAction, sort, onSortChange,hasBulkAction ? bulkActions : undefined ) : (
           <>
             <StyledHeaderLeftCell>
-              <TableCheckboxInput
-                name='selectAll'
-                value={selectAllTableCheckboxInputValue}
-                onChange={setSelectAllTableCheckboxInputValue}
-                hasStyledOnRowHovered={false}
-              />
+              <StyledHeaderLeftCellContent>
+                <TableCheckboxInput
+                  name='selectAll'
+                  value={selectAllTableCheckboxInputValue}
+                  onChange={setSelectAllTableCheckboxInputValue}
+                  hasStyledOnRowHovered={false}
+                />
+              </StyledHeaderLeftCellContent>
             </StyledHeaderLeftCell>
             {
               getHeaderCells(hasSortEnabled, hasTableSwipeActions, columns, hasLeftAction, sort, onSortChange,hasBulkAction ? bulkActions : undefined )
