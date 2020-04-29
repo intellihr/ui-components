@@ -1,21 +1,26 @@
 import { clamp } from 'lodash'
 import { useEffect, useRef } from 'react'
 
-import { Props, Variables } from '../../../../common'
+import { Variables } from '../../../../common'
 import {
   FontAwesomeIconButton,
   IFontAwesomeIconButtonProps
 } from '../../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
-import { TableCheckboxInputValue } from '../subcomponents/TableCheckboxInput'
-import { IColumnSorts, IRowProps, ISelectedRows, Table } from '../Table'
+import {
+  ColumnSortDirection,
+  IColumnSorts,
+  IRowProps,
+  ISelectedRows,
+  TableCheckboxInputValue
+} from './types'
 
 const usePrevious = <T extends {}>(value: T): T => {
-  const ref = useRef<T>()
+  const ref = useRef<T>(value)
   useEffect(() => {
     ref.current = value
   }, [value])
 
-  return ref.current as T
+  return ref.current
 }
 
 const getUpdatedAllSelectableRows = <T extends {}>(rows: Array<IRowProps<T>>, selectedRows: ISelectedRows) => (
@@ -65,7 +70,7 @@ const handleSortButtonClicked = (name: string, hasSortEnabled: boolean, sort?: I
   if (sort && onSortChange && hasSortEnabled) {
     onSortChange({
       ...sort,
-      [name]: sort[name] === Table.ColumnSortDirection.Descending ? Table.ColumnSortDirection.Ascending : Table.ColumnSortDirection.Descending
+      [name]: sort[name] === ColumnSortDirection.Descending ? ColumnSortDirection.Ascending : ColumnSortDirection.Descending
     })
   }
 }
@@ -73,13 +78,13 @@ const handleSortButtonClicked = (name: string, hasSortEnabled: boolean, sort?: I
 const handleHeaderTitleClicked = (name: string, setHasHeaderHovered: (value: boolean) => void, hasSortEnabled: boolean, sort?: IColumnSorts, onSortChange?: (value: IColumnSorts) => void) => () => {
   if (sort && onSortChange && hasSortEnabled) {
     let newSort = {
-      [name]: Table.ColumnSortDirection.Ascending
+      [name]: ColumnSortDirection.Ascending
     }
 
     if (sort[name]) {
       newSort = {
         ...sort,
-        [name]: sort[name] === Table.ColumnSortDirection.Descending ? Table.ColumnSortDirection.Ascending : Table.ColumnSortDirection.Descending
+        [name]: sort[name] === ColumnSortDirection.Descending ? ColumnSortDirection.Ascending : ColumnSortDirection.Descending
       }
     }
     setHasHeaderHovered(false)
@@ -87,13 +92,13 @@ const handleHeaderTitleClicked = (name: string, setHasHeaderHovered: (value: boo
   }
 }
 
-const getSortButtonDirection = (hasHeaderHovered: boolean, currentSortDirection?: Table.ColumnSortDirection) => {
+const getSortButtonDirection = (hasHeaderHovered: boolean, currentSortDirection?: ColumnSortDirection) => {
   if (hasHeaderHovered) {
     if (currentSortDirection) {
-      return currentSortDirection === Table.ColumnSortDirection.Descending ? Table.ColumnSortDirection.Ascending : Table.ColumnSortDirection.Descending
+      return currentSortDirection === ColumnSortDirection.Descending ? ColumnSortDirection.Ascending : ColumnSortDirection.Descending
     }
 
-    return Table.ColumnSortDirection.Ascending
+    return ColumnSortDirection.Ascending
   }
 
   return currentSortDirection
@@ -107,60 +112,11 @@ const handleRemoveButtonClick = (data: any, onRowRemove?: (data: any) => void) =
   }
 }
 
-const handleTableRowCheckboxInputChange = (id: string, selectedRows: ISelectedRows, setSelectedRows: (value: ISelectedRows) => void) => (value: TableCheckboxInputValue) => {
-  const newValue = {
-    ...selectedRows,
-    [id]: value === TableCheckboxInputValue.True
-  }
-  setSelectedRows(newValue)
-}
-
-const handleTableCellClicked = <T extends {}>(
-  id: string,
-  row: IRowProps<T>,
-  selectedRows: ISelectedRows,
-  setSelectedRows: (value: ISelectedRows) => void,
-  setHasHovered: (value: boolean) => void,
-  handleSwipeAction?: () => void,
-  isSelectable?: boolean,
-  onClick?: (data: any) => void
-) => () => {
-  if (isSelectable) {
-    const newValue = {
-      ...selectedRows,
-      [id]: !selectedRows[id]
-    }
-    setSelectedRows(newValue)
-  }
-
-  if (onClick) {
-    onClick(row.data)
-  }
-
-  if (handleSwipeAction) {
-    handleSwipeAction()
-  }
-
-  setHasHovered(false)
-}
-
 const getIconButtonWidth = (actions: IFontAwesomeIconButtonProps[]) => (
   actions.reduce((totalWidth: number, action) => {
     return totalWidth + (action.size === FontAwesomeIconButton.Size.Large ? Variables.Spacing.s3XLarge : Variables.Spacing.sXLarge)
   }, 0)
 )
-
-const getRowTransitionOpacity = (state?: 'entering' | 'entered' | 'exiting' | 'exited') => {
-  switch (state) {
-    case 'entering':
-    case 'entered':
-      return 1
-    case 'exiting':
-    case 'exited':
-    default:
-      return 0
-  }
-}
 
 export {
   usePrevious,
@@ -172,8 +128,5 @@ export {
   getSortButtonDirection,
   parsedProgressToPercentage,
   handleRemoveButtonClick,
-  handleTableRowCheckboxInputChange,
-  handleTableCellClicked,
-  getIconButtonWidth,
-  getRowTransitionOpacity
+  getIconButtonWidth
 }

@@ -1,10 +1,8 @@
-import { mapValues } from 'lodash'
-import React, { useEffect, useState } from 'react'
-import { Transition, TransitionGroup } from 'react-transition-group'
+import { isEqual } from 'lodash'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 
 import { Props } from '../../../common'
 import {
-  FontAwesomeIconButton,
   IFontAwesomeIconButtonProps
 } from '../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
 import { TableRowVariant } from './services/colors'
@@ -16,39 +14,32 @@ import {
 import {
   StyledEmptyStateCell,
   StyledEmptyStateRow,
-  StyledFontAwesomeIconButtonWrapper,
   StyledTHead,
-  StyledTable, StyledTableWrapper
+  StyledTable,
+  StyledTableWrapper
 } from './services/style'
+import {
+  ColumnAlignment,
+  ColumnSize,
+  ColumnSortDirection,
+  IColumnProps,
+  IColumnSorts,
+  IRowProps,
+  ISelectedRows,
+  InteractionType
+} from './services/types'
 import { TableCheckboxInputValue } from './subcomponents/TableCheckboxInput'
 import { TableHeader } from './subcomponents/TableHeader'
 import { TableRow } from './subcomponents/TableRow'
 
-enum ColumnSize {
-  Auto = 'auto',
-  Shrink = 'shrink'
-}
-enum ColumnSortDirection {
-  Descending = 'descending',
-  Ascending = 'ascending'
-}
+const validateProps = <T extends {}>(props: ITableProps<T>) => {
+  if (props.hasLeftAction && props.interactionType === InteractionType.Swipe) {
+    throw new Error('Having left actions is not compatible with swipe interaction')
+  }
 
-enum ColumnAlignment {
-  Left = 'left',
-  Right = 'right'
-}
-
-enum InteractionType {
-  Hover = 'hover',
-  Swipe = 'swipe'
-}
-
-interface ISelectedRows {
-  [rowId: string]: boolean
-}
-
-interface IColumnSorts {
-  [columnName: string]: ColumnSortDirection
+  if (props.onSortChange && !props.sort) {
+    throw new Error('You must provide a sort for onSortChange to work')
+  }
 }
 
 interface ITableProps <T extends {}> {
@@ -80,42 +71,7 @@ interface ITableProps <T extends {}> {
   componentContext?: string
 }
 
-interface IRowProps <T> {
-  id: string
-  isSelectable?: boolean
-  isRemovable?: boolean
-  tooltipText?: string
-  progress?: number
-  variant?: TableRowVariant
-  data: T
-  contentOverride?: (rowData: T) => JSX.Element[] | JSX.Element
-  onClick?: (rowData: T) => void
-  actions?: IFontAwesomeIconButtonProps[]
-}
-
-interface IColumnProps <T> {
-  name: string
-  title?: string
-  size: ColumnSize
-  headerSize?: ColumnSize
-  content: (rowData: T) => JSX.Element
-  alignment?: ColumnAlignment
-  tooltipText?: (rowData: T) => string
-}
-
-const getActionsIconButtonGroup = (actions?: IFontAwesomeIconButtonProps[], name?: string) => {
-  if (actions) {
-    return (
-      <div>
-        {actions.map((actionProps, index) => (<StyledFontAwesomeIconButtonWrapper key={`actions-${name}-${index}`}><FontAwesomeIconButton {...actionProps}/></StyledFontAwesomeIconButtonWrapper>))}
-      </div>
-      )
-  }
-
-  return null
-}
-
-const Table = <T extends{}>(props: ITableProps<T>) => {
+const Table = <T extends {}>(props: ITableProps<T>) => {
   const {
     onRowRemove,
     rows,
@@ -132,12 +88,34 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
     hasSortEnabled = true
   } = props
 
-  const [selectedAll, setSelectedAll] = useState<TableCheckboxInputValue>(TableCheckboxInputValue.False)
-  const [selectedRows, setSelectedRows] = useState<ISelectedRows>(getUpdatedAllSelectableRows(rows, {}))
+  validateProps(props)
+  const [selectedRows, setSelectedRows] = useState<ISelectedRows>(() => getUpdatedAllSelectableRows(rows, {}))
   const [expandedSwipeCellRow, setExpandedSwipeCellRow] = useState<string | null>(null)
 
+  const selectAllTableCheckboxInputValue = useMemo(() => getSelectAllTableCheckboxInputValue(Object.values(selectedRows)), [selectedRows])
+
+  const setAllRows = useCallback((value: TableCheckboxInputValue) => {
+    const newSelectedRows = rows.reduce<ISelectedRows>((acc, row) => {
+      acc[row.id] = (value === TableCheckboxInputValue.True)
+
+      return acc
+    }, {})
+
+    setSelectedRows(newSelectedRows)
+  }, [rows, setSelectedRows])
+
+  const toggleSingleRow = useCallback((row: IRowProps<T>) => {
+    setSelectedRows(
+      (selectedRowsFromState) => ({...selectedRowsFromState, [row.id]: !selectedRowsFromState[row.id] })
+    )
+  }, [setSelectedRows])
+
   useEffect(() => {
-    setSelectedRows(getUpdatedAllSelectableRows<T>(rows, selectedRows))
+    const updatedSelectedRows = getUpdatedAllSelectableRows<T>(rows, selectedRows)
+
+    if (!isEqual(updatedSelectedRows, selectedRows)) {
+      setSelectedRows(updatedSelectedRows)
+    }
   }, [rows])
   useEffect(() => {
     if (hasLeftAction) {
@@ -145,22 +123,8 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
     }
   }, [hasLeftAction])
   useEffect(() => {
-    if (selectedAll === TableCheckboxInputValue.False ) {
-      setSelectedRows(mapValues(selectedRows, () => false))
-    }
-
-    if (selectedAll === TableCheckboxInputValue.True ) {
-      setSelectedRows(mapValues(selectedRows, () => true))
-    }
-  }, [selectedAll])
-
-  useEffect(() => {
-    if (hasLeftAction) {
-      const currentSelectedRows = Object.values(selectedRows)
-      setSelectedAll(getSelectAllTableCheckboxInputValue(currentSelectedRows))
-      if (onSelectedRowChange) {
-        handleSelectionChanged<T>(rows, selectedRows, onSelectedRowChange)
-      }
+    if (hasLeftAction && onSelectedRowChange) {
+      handleSelectionChanged<T>(rows, selectedRows, onSelectedRowChange)
     }
   }, [selectedRows])
 
@@ -178,65 +142,62 @@ const Table = <T extends{}>(props: ITableProps<T>) => {
             sort={sort}
             onSortChange={onSortChange}
             columns={columns}
-            selectedAll={selectedAll}
-            setSelectedAll={setSelectedAll}
+            selectAllTableCheckboxInputValue={selectAllTableCheckboxInputValue}
+            setSelectAllTableCheckboxInputValue={setAllRows}
             hasLeftAction={hasLeftAction}
             bulkActions={bulkActions}
             hasTableSwipeActions={hasTableSwipeActions}
-            hasBulkAction={selectedAll !== TableCheckboxInputValue.False}
+            hasBulkAction={selectAllTableCheckboxInputValue !== TableCheckboxInputValue.False}
             isEmpty={rows.length === 0}
             hasSortEnabled={hasSortEnabled}
           />
         </StyledTHead>
-        <TransitionGroup className='table-rows' component='tbody'>
           {
             rows.length === 0 ? (
-              <StyledEmptyStateRow><StyledEmptyStateCell colSpan={columns.length}>{emptyState}</StyledEmptyStateCell></StyledEmptyStateRow>
-            ) : rows.map((row: IRowProps<T>, index) => (
-                <Transition
-                  key={row.id}
-                  timeout={500}
-                  mountOnEnter
-                  unmountOnExit
-                >
-                  { (state: 'entering' | 'entered' | 'exiting' | 'exited') => (
-                    <TableRow<T>
-                      transitionState={state}
-                      hasTableSwipeActions={hasTableSwipeActions}
-                      columns={columns}
-                      row={row}
-                      lastRow={index === rows.length - 1}
-                      selectedAll={selectedAll}
-                      selectedRows={selectedRows}
-                      setSelectedRows={setSelectedRows}
-                      hasLeftAction={hasLeftAction}
-                      interactionType={interactionType}
-                      onRowRemove={onRowRemove}
-                      expandedSwipeCellRow={expandedSwipeCellRow}
-                      setExpandedSwipeCellRow={setExpandedSwipeCellRow}
-                    />
-                  )}
-
-                </Transition>
+              <StyledEmptyStateRow>
+                <StyledEmptyStateCell colSpan={columns.length}>
+                  {emptyState}
+                </StyledEmptyStateCell>
+              </StyledEmptyStateRow>
+            ) : rows.map((row, index) => (
+              <TableRow<T>
+                key={row.id}
+                row={row}
+                lastRow={index === rows.length - 1}
+                hasTableSwipeActions={hasTableSwipeActions}
+                columns={columns}
+                isSelected={selectedRows[row.id] || false}
+                toggleSelected={toggleSingleRow}
+                hasLeftAction={hasLeftAction}
+                interactionType={interactionType}
+                onRowRemove={onRowRemove}
+                expandedSwipeCellRow={expandedSwipeCellRow}
+                setExpandedSwipeCellRow={setExpandedSwipeCellRow}
+              />
             ))
           }
-        </TransitionGroup>
       </StyledTable>
     </StyledTableWrapper>
   )
 }
 
-Table.ColumnSize = ColumnSize
-Table.ColumnAlignment = ColumnAlignment
-Table.ColumnSortDirection = ColumnSortDirection
-Table.InteractionType = InteractionType
-Table.RowVariant = TableRowVariant
+type ITableType = typeof Table & {
+  ColumnAlignment: typeof ColumnAlignment
+  ColumnSize: typeof ColumnSize
+  ColumnSortDirection: typeof ColumnSortDirection
+  InteractionType: typeof InteractionType
+  RowVariant: typeof TableRowVariant
+}
+
+const MemoTable: ITableType = React.memo(Table) as any
+
+MemoTable.ColumnSize = ColumnSize
+MemoTable.ColumnAlignment = ColumnAlignment
+MemoTable.ColumnSortDirection = ColumnSortDirection
+MemoTable.InteractionType = InteractionType
+MemoTable.RowVariant = TableRowVariant
 
 export {
-  Table,
-  IRowProps,
-  IColumnProps,
-  ISelectedRows,
-  IColumnSorts,
-  getActionsIconButtonGroup
+  Table as UnmemoTable, // Needed for styleguide (memoed components won't be detected)
+  MemoTable as Table
 }

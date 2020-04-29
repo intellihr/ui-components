@@ -368,6 +368,7 @@ const successRowContentOverride = (
 ```jsx
 import { Text } from '@Domain/Typographies';
 import { Variables, Props } from '@Common';
+import { EmptyState } from '@Domain/Callouts';
 
 initialState = {
 sort: {createAt: 'ascending'}
@@ -378,14 +379,10 @@ sort: {createAt: 'ascending'}
   sort={state.sort}
   onSortChange={(sort) => setState({sort})}
   emptyState = {
-    <div style={{textAlign: 'center'}}>
-      <Text isInline={false} type='heading'>
-        Could not find any matching search results.
-      </Text>
-      <Text isInline={false} type='body'>
-        Try changing the filters or search term
-      </Text>
-    </div>
+    <EmptyState
+      primaryMessage='Could not find any matching search results.'
+      secondaryMessage='Try changing the filters or search term'
+    />
   }
   columns={[
     {

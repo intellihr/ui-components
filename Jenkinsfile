@@ -194,7 +194,7 @@ pipeline {
           steps {
             sshagent (credentials: ['GITHUB_CI_SSH_KEY']) {
               script {
-                env.NPM_TOKEN = helper.getSSMParameter('shared.NPM_TOKEN')
+                env.NPM_TOKEN = helper.getSSMParameter('/shared/NPM_TOKEN')
                 env.RELEASE_VERSION = RELEASE_VERSION
               }
 
