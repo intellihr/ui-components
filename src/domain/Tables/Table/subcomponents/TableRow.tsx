@@ -315,7 +315,7 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
           )
         }
       </StyledRow>
-      {(progress) && (
+      {!!progress && (progress !== 0) && (
         <StyledProgressBarRow>
           <StyledProgressBarCell colSpan={!hasLeftAction ? columns.length : columns.length + 1}>
             <StyledProgressBar
