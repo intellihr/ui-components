@@ -45,6 +45,7 @@ interface ITableRowProps <T> {
   expandedSwipeCellRow: string | null
   setExpandedSwipeCellRow: (value: string | null) => void
   lastRow: boolean
+  areRowsSelected: boolean
 }
 
 interface IUseDragProps {
@@ -205,7 +206,8 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
     hasTableSwipeActions,
     expandedSwipeCellRow,
     setExpandedSwipeCellRow,
-    lastRow
+    lastRow,
+    areRowsSelected
   } = props
 
   const {
@@ -227,7 +229,7 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
   const setHoveredFalse = useCallback(() => setHasHovered(false), [setHasHovered])
   const hasSwipeActions = interactionType === InteractionType.Swipe && !!actions && actions.length > 0
   const hasHoverActions = interactionType === InteractionType.Hover && !!actions && actions.length > 0
-  const hasHoverButton = (!isSelected && hasHoverActions) ? hasHovered : false
+  const hasHoverButton = (!areRowsSelected && !isSelected && hasHoverActions) ? hasHovered : false
 
   const swipeContentWidth = hasSwipeActions && actions ? getIconButtonWidth(actions) + (actions.length - 1) * Variables.Spacing.sXSmall + 2 * Variables.Spacing.sMedium : 0
 
@@ -348,7 +350,8 @@ const MemoTableRow: typeof TableRow = React.memo(TableRow,
     prevProps.onRowRemove === nextProps.onRowRemove &&
     prevProps.expandedSwipeCellRow === nextProps.expandedSwipeCellRow &&
     prevProps.setExpandedSwipeCellRow === nextProps.setExpandedSwipeCellRow &&
-    prevProps.lastRow === nextProps.lastRow
+    prevProps.lastRow === nextProps.lastRow &&
+    prevProps.areRowsSelected === nextProps.areRowsSelected
   )
 ) as any
 
