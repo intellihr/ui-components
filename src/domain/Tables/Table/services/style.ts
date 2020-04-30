@@ -56,6 +56,7 @@ interface IStyledHeaderCellProps {
 }
 
 interface IStyledDataCellProps {
+  size?: ColumnSize
   alignment?: ColumnAlignment
   isLastColumn?: boolean
   isFirstColumn?: boolean
@@ -222,12 +223,16 @@ const StyledDataCellChangeAnimation = keyframes`
 `
 
 const StyledDataCell = styled.td`
-  max-width: 0;
   padding:  ${Variables.Spacing.sSmall}px;
   text-align: left;
   animation-name: ${StyledDataCellChangeAnimation};
   animation-duration: 500ms;
   animation-timing-function: ease-in;
+
+  ${(props: IStyledDataCellProps) => props.size === ColumnSize.Auto && css`
+      width: 100%;
+      max-width: 0;
+  `}
 
   ${(props: IStyledDataCellProps) => props.alignment === ColumnAlignment.Right && css`
       text-align: right;
