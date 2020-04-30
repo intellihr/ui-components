@@ -58,8 +58,7 @@ const TableRowDataCell = <T extends {}>(props: ITableRowDataCellProps<T>) => {
 
   const {
     isSelectable = false,
-    onClick,
-    id
+    onClick
   } = row
 
   const handleTableCellClicked = useCallback(() => {
@@ -80,6 +79,7 @@ const TableRowDataCell = <T extends {}>(props: ITableRowDataCellProps<T>) => {
 
   return (
     <StyledDataCell
+      size={column.size}
       hasProgressBar={hasProgressBar}
       colSpan={(isLastColumn && hasTableSwipeActions && !hasSwipeActions) ? 2 : undefined}
       alignment={column.alignment}
