@@ -93,6 +93,9 @@ const Table = <T extends {}>(props: ITableProps<T>) => {
   const [expandedSwipeCellRow, setExpandedSwipeCellRow] = useState<string | null>(null)
 
   const selectAllTableCheckboxInputValue = useMemo(() => getSelectAllTableCheckboxInputValue(Object.values(selectedRows)), [selectedRows])
+  const areRowsSelected = useMemo(() => {
+    return Object.values(selectedRows).includes(true)
+  }, [selectedRows])
 
   const setAllRows = useCallback((value: TableCheckboxInputValue) => {
     const newSelectedRows = rows.reduce<ISelectedRows>((acc, row) => {
@@ -166,6 +169,7 @@ const Table = <T extends {}>(props: ITableProps<T>) => {
                 lastRow={index === rows.length - 1}
                 hasTableSwipeActions={hasTableSwipeActions}
                 columns={columns}
+                areRowsSelected={areRowsSelected}
                 isSelected={selectedRows[row.id] || false}
                 toggleSelected={toggleSingleRow}
                 hasLeftAction={hasLeftAction}

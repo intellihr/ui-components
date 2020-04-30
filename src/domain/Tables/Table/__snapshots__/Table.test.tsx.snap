@@ -41,6 +41,7 @@ exports[`<Table /> should render a mobile table 1`] = `
       />
     </styled.thead>
     <Memo(TableRow)
+      areRowsSelected={false}
       columns={
         Array [
           Object {
@@ -112,6 +113,7 @@ exports[`<Table /> should render a mobile table 1`] = `
       toggleSelected={[Function]}
     />
     <Memo(TableRow)
+      areRowsSelected={false}
       columns={
         Array [
           Object {
@@ -182,6 +184,7 @@ exports[`<Table /> should render a mobile table 1`] = `
       toggleSelected={[Function]}
     />
     <Memo(TableRow)
+      areRowsSelected={false}
       columns={
         Array [
           Object {
@@ -252,6 +255,7 @@ exports[`<Table /> should render a mobile table 1`] = `
       toggleSelected={[Function]}
     />
     <Memo(TableRow)
+      areRowsSelected={false}
       columns={
         Array [
           Object {
@@ -319,6 +323,7 @@ exports[`<Table /> should render a mobile table 1`] = `
       toggleSelected={[Function]}
     />
     <Memo(TableRow)
+      areRowsSelected={false}
       columns={
         Array [
           Object {
@@ -430,6 +435,7 @@ exports[`<Table /> should render a table 1`] = `
       />
     </styled.thead>
     <Memo(TableRow)
+      areRowsSelected={false}
       columns={
         Array [
           Object {
@@ -501,6 +507,7 @@ exports[`<Table /> should render a table 1`] = `
       toggleSelected={[Function]}
     />
     <Memo(TableRow)
+      areRowsSelected={false}
       columns={
         Array [
           Object {
@@ -571,6 +578,7 @@ exports[`<Table /> should render a table 1`] = `
       toggleSelected={[Function]}
     />
     <Memo(TableRow)
+      areRowsSelected={false}
       columns={
         Array [
           Object {
@@ -641,6 +649,7 @@ exports[`<Table /> should render a table 1`] = `
       toggleSelected={[Function]}
     />
     <Memo(TableRow)
+      areRowsSelected={false}
       columns={
         Array [
           Object {
@@ -708,6 +717,7 @@ exports[`<Table /> should render a table 1`] = `
       toggleSelected={[Function]}
     />
     <Memo(TableRow)
+      areRowsSelected={false}
       columns={
         Array [
           Object {
