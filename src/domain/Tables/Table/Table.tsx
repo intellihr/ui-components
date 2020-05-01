@@ -155,6 +155,7 @@ const Table = <T extends {}>(props: ITableProps<T>) => {
             hasSortEnabled={hasSortEnabled}
           />
         </StyledTHead>
+        <tbody>
           {
             rows.length === 0 ? (
               <StyledEmptyStateRow>
@@ -180,6 +181,7 @@ const Table = <T extends {}>(props: ITableProps<T>) => {
               />
             ))
           }
+        </tbody>
       </StyledTable>
     </StyledTableWrapper>
   )
