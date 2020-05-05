@@ -1,11 +1,15 @@
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 
 import { Props, Variables } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
 
-const StyledEmptyState = styled.div<{ margins?: Props.IMargins }>`
+const StyledEmptyState = styled.div<{ margins?: Props.IMargins, backgroundColor?: Variables.Color }>`
   ${(props: { margins?: Props.IMargins }) => styleForMargins(props.margins)}
-  background-color: ${Variables.Color.n150};
+  ${(props: { backgroundColor?: Variables.Color }) => (
+    props.backgroundColor
+      ? css`background-color: ${props.backgroundColor}`
+      : css`background-color: ${Variables.Color.n150}`
+)}
   border-color: ${Variables.Color.n400};
   border-width: 0;
   flex-grow: 1;

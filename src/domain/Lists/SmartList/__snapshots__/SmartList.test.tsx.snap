@@ -5709,9 +5709,9 @@ exports[`<SmartList /> should render an empty Smart List displaying the right da
   ",
                   [Function],
                   "
-  background-color: ",
-                  "#FAFBFC",
-                  ";
+  ",
+                  [Function],
+                  "
   border-color: ",
                   "#C5CED6",
                   ";

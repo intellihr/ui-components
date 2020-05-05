@@ -1,6 +1,7 @@
 import { isNil } from 'lodash'
 import React from 'react'
 
+import {Variables} from '../../../common'
 import { Props } from '../../../common/types/props'
 import { StyledEmptyState, StyledImage, StyledPrimaryMessage, StyledSecondaryMessage } from './style'
 
@@ -20,6 +21,8 @@ export interface IEmptyStateProps {
   margins?: Props.IMargins
   /** The data-component-context */
   componentContext?: string
+  /** Background color of the component */
+  backgroundColor?: Variables.Color
 }
 
 const defaultImageWith = 400
@@ -30,13 +33,15 @@ export const EmptyState: React.FC<IEmptyStateProps>  = ({
   componentContext,
   buttonComponent,
   margins,
-  image
+  image,
+  backgroundColor
 }) => {
   return (
     <StyledEmptyState
       data-component-type={Props.ComponentType.EmptyState}
       data-component-context={componentContext}
       margins={margins}
+      backgroundColor={backgroundColor}
     >
       {
         !isNil(primaryMessage) &&

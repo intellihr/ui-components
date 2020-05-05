@@ -95,6 +95,17 @@ import { LinkButton } from '@Domain/Buttons';
   </EmptyState>
 ```
 
+### EmptyState with a different background color
+Transparent background
+
+```jsx
+import { Variables } from '@Common';
+
+<EmptyState
+    backgroundColor={Variables.Color.n100}
+/>
+```
+
 ### EmptyState support for legacy pages
 The empty state supports legacy pages
 
