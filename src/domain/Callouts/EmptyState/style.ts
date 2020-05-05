@@ -3,12 +3,12 @@ import styled, {css} from 'styled-components'
 import { Props, Variables } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
 
-const StyledEmptyState = styled.div<{ margins?: Props.IMargins, backgroundColor?: Variables.Color }>`
+const StyledEmptyState = styled.div<{ margins?: Props.IMargins, isBackgroundTransparent?: boolean }>`
   ${(props: { margins?: Props.IMargins }) => styleForMargins(props.margins)}
-  ${(props: { backgroundColor?: Variables.Color }) => (
-    props.backgroundColor
-      ? css`background-color: ${props.backgroundColor}`
-      : css`background-color: ${Variables.Color.n150}`
+  ${(props: { isBackgroundTransparent?: boolean }) => (
+    props.isBackgroundTransparent
+      ? css`background-color: rgba(250, 251, 252, 0);`
+      : css`background-color: ${Variables.Color.n150};`
 )}
   border-color: ${Variables.Color.n400};
   border-width: 0;

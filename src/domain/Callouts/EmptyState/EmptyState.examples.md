@@ -95,14 +95,10 @@ import { LinkButton } from '@Domain/Buttons';
   </EmptyState>
 ```
 
-### EmptyState with a different background color
-Transparent background
-
+### EmptyState with a transparent background
 ```jsx
-import { Variables } from '@Common';
-
 <EmptyState
-    backgroundColor={Variables.Color.n100}
+    isBackgroundTransparent={true}
 />
 ```
 
