@@ -92,8 +92,9 @@ const StyledHeaderCellWithHeaderSize = styled.th`
   padding: ${Variables.Spacing.sSmall}px ${Variables.Spacing.sMedium}px;
 `
 
-const StyledHeaderCellContent = styled.div`
+const StyledHeaderCellContent = styled.div<{hasSortEnabled: boolean}>`
   overflow: hidden;
+  ${({hasSortEnabled}) => hasSortEnabled && css`cursor: pointer;`}
 `
 
 const StyledHeaderCell = styled.th`

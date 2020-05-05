@@ -66,15 +66,6 @@ const getSelectAllTableCheckboxInputValue = (currentSelectedRows: boolean[]) => 
   return newSelectedAll ? TableCheckboxInputValue.True : TableCheckboxInputValue.False
 }
 
-const handleSortButtonClicked = (name: string, hasSortEnabled: boolean, sort?: IColumnSorts, onSortChange?: (sort: IColumnSorts) => void) => () => {
-  if (sort && onSortChange && hasSortEnabled) {
-    onSortChange({
-      ...sort,
-      [name]: sort[name] === ColumnSortDirection.Descending ? ColumnSortDirection.Ascending : ColumnSortDirection.Descending
-    })
-  }
-}
-
 const handleHeaderTitleClicked = (name: string, setHasHeaderHovered: (value: boolean) => void, hasSortEnabled: boolean, sort?: IColumnSorts, onSortChange?: (value: IColumnSorts) => void) => () => {
   if (sort && onSortChange && hasSortEnabled) {
     let newSort = {
@@ -124,7 +115,6 @@ export {
   handleSelectionChanged,
   getSelectAllTableCheckboxInputValue,
   handleHeaderTitleClicked,
-  handleSortButtonClicked,
   getSortButtonDirection,
   parsedProgressToPercentage,
   handleRemoveButtonClick,
