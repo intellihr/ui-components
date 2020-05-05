@@ -55,6 +55,7 @@ export class ScrollingTabGroup extends React.Component<IScrollingTabGroupProps, 
 
   private tabListRef: RefObject<HTMLUListElement> = React.createRef()
   private currentlyMounted: boolean = false
+  private forceUpdateTimeout: number | null = null
 
   private handleScrollUpdate = debounce(() => {
     // Force a react re-render to correctly update the dom
@@ -69,12 +70,16 @@ export class ScrollingTabGroup extends React.Component<IScrollingTabGroupProps, 
     window.addEventListener('resize', this.handleScrollUpdate)
 
     // Force an update to set the arrows correctly
-    this.forceUpdate()
+    this.forceUpdateTimeout = setTimeout(() => {
+      this.forceUpdate()
+    }, 100)
   }
 
   public componentWillUnmount (): void {
     window.removeEventListener('resize', this.handleScrollUpdate)
-
+    if (this.forceUpdateTimeout) {
+      clearTimeout(this.forceUpdateTimeout)
+    }
     this.currentlyMounted = false
   }
 

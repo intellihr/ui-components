@@ -7,12 +7,10 @@ import {
 } from '../../../Buttons/FontAwesomeIconButton/FontAwesomeIconButton'
 import { GridLayout } from '../../../Layouts/GridLayout'
 import { Text } from '../../../Typographies'
-import { LinkVariant } from '../../../Typographies/Text/subcomponents/Link'
 import { TableRowVariant } from '../services/colors'
 import {
   getSortButtonDirection,
-  handleHeaderTitleClicked,
-  handleSortButtonClicked
+  handleHeaderTitleClicked
 } from '../services/helper'
 import {
   StyledHeaderCell, StyledHeaderCellContent,
@@ -66,27 +64,21 @@ const TableHeaderCellContent = <T extends {}>(props: ITableHeaderCellContentProp
   const setHeaderHoveredFalse = useCallback(() => hasSortEnabled && setHasHeaderHovered(false), [setHasHeaderHovered])
 
   const sortButton = (
-    <StyledSortButton alignment={alignment} sort={sort && getSortButtonDirection(hasHeaderHovered, sort[name])} onClick={handleSortButtonClicked(name, hasSortEnabled, sort, onSortChange)}>
+    <StyledSortButton alignment={alignment} sort={sort && getSortButtonDirection(hasHeaderHovered, sort[name])}>
       <FontAwesomeIconButton icon='arrow-up' type='solid' isHovered={hasHeaderHovered} isDisabled={!hasSortEnabled}/>
     </StyledSortButton>
   )
 
-  const headerTitleLink = (
-    <Text.Link
-      variant={LinkVariant.Unstyled}
-      onClick={handleHeaderTitleClicked(name, setHasHeaderHovered, hasSortEnabled, sort, onSortChange)}
-    >
-      {title}
-    </Text.Link>
-  )
-
   if (title) {
     return (
-      <StyledHeaderCellContent>
+      <StyledHeaderCellContent
+        hasSortEnabled={hasSortEnabled}
+        onClick={handleHeaderTitleClicked(name, setHasHeaderHovered, hasSortEnabled, sort, onSortChange)}
+      >
         {alignment === ColumnAlignment.Right && sortButton}
         <span onMouseEnter={setHeaderHoveredTrue} onMouseLeave={setHeaderHoveredFalse}>
             <Text weight={Variables.FontWeight.fwSemiBold}>
-              {hasSortEnabled ? headerTitleLink : title}
+              {title}
             </Text>
           </span>
         {alignment === ColumnAlignment.Left && sortButton}

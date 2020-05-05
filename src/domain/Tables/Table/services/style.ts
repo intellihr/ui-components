@@ -56,6 +56,7 @@ interface IStyledHeaderCellProps {
 }
 
 interface IStyledDataCellProps {
+  size?: ColumnSize
   alignment?: ColumnAlignment
   isLastColumn?: boolean
   isFirstColumn?: boolean
@@ -91,8 +92,9 @@ const StyledHeaderCellWithHeaderSize = styled.th`
   padding: ${Variables.Spacing.sSmall}px ${Variables.Spacing.sMedium}px;
 `
 
-const StyledHeaderCellContent = styled.div`
+const StyledHeaderCellContent = styled.div<{hasSortEnabled: boolean}>`
   overflow: hidden;
+  ${({hasSortEnabled}) => hasSortEnabled && css`cursor: pointer;`}
 `
 
 const StyledHeaderCell = styled.th`
@@ -222,12 +224,16 @@ const StyledDataCellChangeAnimation = keyframes`
 `
 
 const StyledDataCell = styled.td`
-  max-width: 0;
   padding:  ${Variables.Spacing.sSmall}px;
   text-align: left;
   animation-name: ${StyledDataCellChangeAnimation};
   animation-duration: 500ms;
   animation-timing-function: ease-in;
+
+  ${(props: IStyledDataCellProps) => props.size === ColumnSize.Auto && css`
+      width: 100%;
+      max-width: 0;
+  `}
 
   ${(props: IStyledDataCellProps) => props.alignment === ColumnAlignment.Right && css`
       text-align: right;
