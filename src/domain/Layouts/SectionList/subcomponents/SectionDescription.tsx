@@ -17,7 +17,7 @@ export interface ISectionDescriptionProps {
   /** The title for what is displayed */
   header?: string | JSX.Element,
   /** The description for what is displayed */
-  description?: string,
+  description?: string | JSX.Element,
   /** (Deprecated - please use `links`) The text for the call to action */
   linkText?: string,
   /** The className of the component (used by styled components) */
@@ -39,15 +39,19 @@ class SectionDescription extends React.PureComponent<ISectionDescriptionProps> {
     } = this.props
 
     if (description) {
-      return (
-        <Text
-          isInline={false}
-          type={Props.TypographyType.Small}
-          color={Variables.Color.n600}
-        >
-          {description}
-        </Text>
-      )
+      if (typeof description === 'string') {
+        return (
+          <Text
+            isInline={false}
+            type={Props.TypographyType.Small}
+            color={Variables.Color.n600}
+          >
+            {description}
+          </Text>
+        )
+      }
+
+      return description
     }
   }
 

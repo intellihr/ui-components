@@ -13,7 +13,7 @@ export interface IAnnotatedSectionProps {
   /** The title for what is displayed */
   header?: string | JSX.Element,
   /** The description for what is displayed */
-  description?: string,
+  description?: string | JSX.Element,
   /** (Deprecated - please use `links`) The text for the call to action */
   linkText?: string,
   /** (Deprecated - please use `links`) Any extra link props */

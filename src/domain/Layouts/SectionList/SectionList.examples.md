@@ -67,7 +67,7 @@ import { Text } from '@Domain/Typographies';
   </SectionList.TitledSection>
   <SectionList.AnnotatedSection
     header={<h1>JSX!</h1>}
-    description='This is an annotated section, which uses a JSX Element as its header.'
+    description={<p><small>This is an annotated section, which uses a JSX Element as its header and description.</small></p>}
   />
 </SectionList>
 ```
