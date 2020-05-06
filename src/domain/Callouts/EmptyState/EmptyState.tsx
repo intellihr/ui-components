@@ -20,6 +20,8 @@ export interface IEmptyStateProps {
   margins?: Props.IMargins
   /** The data-component-context */
   componentContext?: string
+  /** Whether the background of the component is transparent */
+  isBackgroundTransparent?: boolean
 }
 
 const defaultImageWith = 400
@@ -30,13 +32,15 @@ export const EmptyState: React.FC<IEmptyStateProps>  = ({
   componentContext,
   buttonComponent,
   margins,
-  image
+  image,
+  isBackgroundTransparent
 }) => {
   return (
     <StyledEmptyState
       data-component-type={Props.ComponentType.EmptyState}
       data-component-context={componentContext}
       margins={margins}
+      isBackgroundTransparent={isBackgroundTransparent}
     >
       {
         !isNil(primaryMessage) &&

@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-import { Props, Variables } from '../../../common'
+import { Props, Utils, Variables } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
 
 interface IStylePaginationButton {
@@ -23,8 +23,13 @@ const ButtonsWrapper = styled.div`
 const EllipsisWrapper = styled.div`
   color: ${Variables.Color.n800};
   cursor: not-allowed;
-  width: 28px;
-  height: 28px;
+  width: ${Variables.Spacing.sLarge}px;
+  height: ${Variables.Spacing.sLarge}px;
+
+  ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
+    width: ${Variables.Spacing.s3XLarge}px;
+    height: ${Variables.Spacing.s3XLarge}px;
+  }
   display: inline-block;
   text-align: center;
 `
@@ -51,20 +56,26 @@ const ChevronIconWrapper = styled.span`
 
 const StylePaginationButton = styled.button`
   border: 0;
-  border-radius: 28px;
   color: ${Variables.Color.n700};
   cursor: pointer;
   font-size: ${Variables.FontSize.fzSmall}px;
-  line-height: ${Variables.LineHeight.lhSmall}px;
-  height: 28px;
+  min-width: ${Variables.Spacing.sLarge}px;
+  height: ${Variables.Spacing.sLarge}px;
+  border-radius: ${Variables.Spacing.sLarge}px;
   margin-left: ${Variables.Spacing.s2XSmall}px;
   margin-right: ${Variables.Spacing.s2XSmall}px;
-  min-width: 28px;
   outline: none;
   transition: color, background-color .1s ease;
   display: inline-block;
   text-align: center;
   padding: ${Variables.Spacing.s2XSmall}px;
+
+  ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointTablet })} {
+    width: ${Variables.Spacing.s3XLarge}px;
+    height: ${Variables.Spacing.s3XLarge}px;
+    border-radius: ${Variables.Spacing.s3XLarge}px;
+    font-size: ${Variables.FontSize.fzBody}px;
+  }
 
   &:disabled {
      color: ${Variables.Color.n400};

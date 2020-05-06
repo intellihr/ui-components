@@ -95,6 +95,13 @@ import { LinkButton } from '@Domain/Buttons';
   </EmptyState>
 ```
 
+### EmptyState with a transparent background
+```jsx
+<EmptyState
+    isBackgroundTransparent={true}
+/>
+```
+
 ### EmptyState support for legacy pages
 The empty state supports legacy pages
 
