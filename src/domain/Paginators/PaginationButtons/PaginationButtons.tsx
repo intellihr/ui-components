@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Props } from '../../../common'
+import { Props, Variables } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { ButtonsWrapper, ChevronIconWrapper, EllipsisWrapper, StylePaginationButton } from './style'
 
@@ -19,7 +19,17 @@ interface IPaginationButtonsProps {
   margins?: Props.IMargins
 }
 
-export class PaginationButtons extends React.PureComponent<IPaginationButtonsProps> {
+export class PaginationButtons extends React.PureComponent<IPaginationButtonsProps, { isMobile: boolean }> {
+
+  private currentlyMounted: boolean = false
+
+  constructor (props: IPaginationButtonsProps) {
+    super(props)
+
+    this.state = {
+      isMobile: this.isMobile
+    }
+  }
 
   public render (): JSX.Element {
     const {
@@ -38,6 +48,29 @@ export class PaginationButtons extends React.PureComponent<IPaginationButtonsPro
         {this.nextPageButton}
       </ButtonsWrapper>
     )
+  }
+
+  public componentDidMount () {
+    this.currentlyMounted = true
+
+    window.addEventListener('resize', this.onWindowUpdate)
+  }
+
+  public componentWillUnmount () {
+    this.currentlyMounted = false
+
+    window.removeEventListener('resize', this.onWindowUpdate)
+  }
+
+  private onWindowUpdate = () => {
+    // This allows the menu to reposition correctly when the window changes
+    if (this.currentlyMounted) {
+      this.setState({ isMobile: this.isMobile })
+    }
+  }
+
+  private get isMobile () {
+    return window.innerWidth < Variables.Breakpoint.breakpointTablet
   }
 
   private get previousPageButton () {
@@ -85,13 +118,15 @@ export class PaginationButtons extends React.PureComponent<IPaginationButtonsPro
     } = this.props
 
     const pageNumberArray = []
+    const pagesAtEnds = this.state.isMobile ? 3 : 5
+    const pagesInMiddle = this.state.isMobile ? 0 : 1
 
     // Pagination with ellipse
-    if (totalPages > 7) {
+    if (totalPages > (pagesAtEnds + 2)) {
 
       // Ellipse by the end (1 2 3 4 5 ... 10)
-      if (currentPage <= 5) {
-        for (let i = 0; i < 5; i++) {
+      if (currentPage <= pagesAtEnds) {
+        for (let i = 0; i < pagesAtEnds; i++) {
           pageNumberArray.push(this.buttonForPage(i + 1))
         }
         pageNumberArray.push(<EllipsisWrapper key={`pagination-ellipsis`}>...</EllipsisWrapper>)
@@ -101,11 +136,11 @@ export class PaginationButtons extends React.PureComponent<IPaginationButtonsPro
       }
 
       // Ellipse in the beginning (1 ... 6 7 8 9 10)
-      if (currentPage <= totalPages && currentPage >= (totalPages - 4)) {
+      if (currentPage <= totalPages && currentPage >= (totalPages - pagesAtEnds + 1)) {
         pageNumberArray.push(this.buttonForPage(1))
         pageNumberArray.push(<EllipsisWrapper key={`pagination-ellipsis`}>...</EllipsisWrapper>)
 
-        for (let i = (totalPages - 5); i < totalPages; i++) {
+        for (let i = (totalPages - pagesAtEnds); i < totalPages; i++) {
           pageNumberArray.push(this.buttonForPage(i + 1))
         }
 
@@ -115,7 +150,7 @@ export class PaginationButtons extends React.PureComponent<IPaginationButtonsPro
       // Ellipse in the middle (1 ... 59 60 61 ... 100)
       pageNumberArray.push(this.buttonForPage(1))
       pageNumberArray.push(<EllipsisWrapper key={`pagination-ellipsis-1`}>...</EllipsisWrapper>)
-      for (let i = (currentPage - 2); i < (currentPage + 1); i++) {
+      for (let i = (currentPage - pagesInMiddle - 1); i < (currentPage + pagesInMiddle); i++) {
         pageNumberArray.push(this.buttonForPage(i + 1))
       }
       pageNumberArray.push(<EllipsisWrapper key={`pagination-ellipsis-2`}>...</EllipsisWrapper>)
