@@ -7,7 +7,7 @@ const StyledEmptyState = styled.div<{ margins?: Props.IMargins, isBackgroundTran
   ${(props: { margins?: Props.IMargins }) => styleForMargins(props.margins)}
   ${(props: { isBackgroundTransparent?: boolean }) => (
     props.isBackgroundTransparent
-      ? css`background-color: rgba(250, 251, 252, 0);`
+      ? css`background-color: transparent;`
       : css`background-color: ${Variables.Color.n150};`
 )}
   border-color: ${Variables.Color.n400};
