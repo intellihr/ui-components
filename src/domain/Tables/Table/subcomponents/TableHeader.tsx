@@ -135,9 +135,7 @@ const getHeaderCells = <T extends {}>(
       if (bulkActions && hasLeftAction && index === 0) {
         return (
           <StyledHeaderCell key={name} size={size} alignment={alignment}>
-            {
-              index === 0 && getActionsIconButtonGroup(bulkActions, 'bulk')
-            }
+            {index === 0 && getActionsIconButtonGroup(bulkActions.map((action) => ({...action, size: FontAwesomeIconButton.Size.Small})), 'bulk')}
           </StyledHeaderCell>
         )
       }

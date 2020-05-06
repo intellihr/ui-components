@@ -246,7 +246,6 @@ const removeableRowActions = ([
     icon:'trash',
     type:'solid',
     tooltipText:'Delete',
-    size:'large',
     onClick: () => alert('delete')
   }
 ])
@@ -256,21 +255,18 @@ const rowActions = ([
     icon:'link',
     type:'solid',
     tooltipText:'Copy Link',
-    size:'large',
     onClick: () => alert('copy link')
   },
   {
     icon:'file-download',
     type:'solid',
     tooltipText:'Download',
-    size:'large',
     onClick: () => alert('download')
   },
   {
     icon:'trash',
     type:'solid',
     tooltipText:'Delete',
-    size:'large',
     onClick: () => alert('delete')
   }
 ])

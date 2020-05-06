@@ -103,12 +103,6 @@ const handleRemoveButtonClick = (data: any, onRowRemove?: (data: any) => void) =
   }
 }
 
-const getIconButtonWidth = (actions: IFontAwesomeIconButtonProps[]) => (
-  actions.reduce((totalWidth: number, action) => {
-    return totalWidth + (action.size === FontAwesomeIconButton.Size.Large ? Variables.Spacing.s3XLarge : Variables.Spacing.sXLarge)
-  }, 0)
-)
-
 export {
   usePrevious,
   getUpdatedAllSelectableRows,
@@ -117,6 +111,5 @@ export {
   handleHeaderTitleClicked,
   getSortButtonDirection,
   parsedProgressToPercentage,
-  handleRemoveButtonClick,
-  getIconButtonWidth
+  handleRemoveButtonClick
 }
