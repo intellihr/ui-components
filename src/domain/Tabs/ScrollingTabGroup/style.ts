@@ -111,6 +111,16 @@ const TabListItemAnchor = styled.a`
     width: 100%;
   }
 
+  &:after {
+    content: '';
+    height: 100%;
+    left: -5px;
+    right: -5px;
+    position: absolute;
+    transition: all .15s ease-in-out;
+    border-radius: ${Variables.Style.borderRadius}px;
+  }
+
   ${(props: ITabListItemAnchorProps) => props.active && css`&,`}
   &:active {
     color: ${Variables.Color.i400};
@@ -121,14 +131,16 @@ const TabListItemAnchor = styled.a`
     }
   }
 
-  &:focus,
-  &:hover {
+  &:focus {
     color: ${Variables.Color.i500};
 
-    &:before {
-      background-color: ${Variables.Color.i500};
-      bottom: 0;
+    &:after {
+      border: 1px solid ${Variables.Color.i500};
     }
+  }
+
+  &:hover {
+    color: ${Variables.Color.i500};
   }
 
   .left-component {
