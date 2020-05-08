@@ -42,7 +42,8 @@ namespace Props {
     Medium = 'medium',
     Large = 'large',
     XLarge = 'xlarge',
-    XXLarge = 'xxlarge'
+    XXLarge = 'xxlarge',
+    FullScreen = 'fullscreen'
   }
 
   export enum AvatarSize {

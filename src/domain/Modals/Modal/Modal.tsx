@@ -18,7 +18,7 @@ interface IBaseModalProps {
   /** Extra classes to apply */
   className?: string
   /** Modal Size */
-  size?: Props.Size.Medium | Props.Size.Large | Props.Size.XLarge
+  size?: Props.Size.Medium | Props.Size.Large | Props.Size.XLarge | Props.Size.FullScreen
   /** The offset amount for the Z index of the modal */
   offsetZIndex?: number
   /** If true, will close when esc is pressed */
