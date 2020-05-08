@@ -7,7 +7,6 @@ import { FontAwesomeIconButton } from '../../../Buttons/FontAwesomeIconButton'
 import { IconButtonVariants } from '../../../Buttons/FontAwesomeIconButton/colors'
 import { TableRowVariant } from '../services/colors'
 import {
-  getIconButtonWidth,
   handleRemoveButtonClick,
   parsedProgressToPercentage,
   usePrevious
@@ -168,7 +167,7 @@ const getDataCells = <T extends {}>(props: IGetDataCells<T>) => {
             isLastColumn
             isFirstColumn={!hasLeftAction && index === 0}
           >
-            {getActionsIconButtonGroup(actions, id)}
+            {getActionsIconButtonGroup(actions && actions.map((action) => ({...action, size: FontAwesomeIconButton.Size.Small})), id)}
           </StyledDataCell>
         )
       }
@@ -231,7 +230,7 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
   const hasHoverActions = interactionType === InteractionType.Hover && !!actions && actions.length > 0
   const hasHoverButton = (!areRowsSelected && !isSelected && hasHoverActions) ? hasHovered : false
 
-  const swipeContentWidth = hasSwipeActions && actions ? getIconButtonWidth(actions) + (actions.length - 1) * Variables.Spacing.sXSmall + 2 * Variables.Spacing.sMedium : 0
+  const swipeContentWidth = hasSwipeActions && actions ? (actions.length * Variables.Spacing.s3XLarge) + (actions.length - 1) * Variables.Spacing.sXSmall + 2 * Variables.Spacing.sMedium : 0
 
   const onDragBlind = useDrag((useDragProps: IUseDragProps) => {
     if (hasSwipeActions && useDragProps._movement[0] !== 0) {
@@ -308,7 +307,7 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
             <StyledSwipeActionsCell>
               <StyledSwipeActions width={movement} hasProgressBar={!!progress}>
                 <StyledSwipeActionsButtonWrapper isFullWidth={movement === swipeContentWidth}>
-                  {getActionsIconButtonGroup(actions)}
+                  {getActionsIconButtonGroup(actions && actions.map((action) => ({ ...action, size: FontAwesomeIconButton.Size.Large })))}
                 </StyledSwipeActionsButtonWrapper>
               </StyledSwipeActions>
             </StyledSwipeActionsCell>

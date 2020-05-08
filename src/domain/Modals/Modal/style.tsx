@@ -170,6 +170,17 @@ const StyledReactModal = styled(ReactModalAdapter)`
         width: 100%;
       }
     }
+
+    &.modal-size-fullscreen {
+      min-width: 0;
+      width: auto;
+
+      @media only screen and (min-width: ${breakpointTablet}px) {
+        min-height: calc(100vh - 2 * 1rem);
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+    }
   }
 `
 
