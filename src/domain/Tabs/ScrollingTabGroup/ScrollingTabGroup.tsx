@@ -1,11 +1,9 @@
-import {
-  clamp,
-  debounce,
-  findIndex,
-  isNumber,
-  map,
-  toNumber
-} from 'lodash'
+import clamp from 'lodash/clamp'
+import debounce from 'lodash/debounce'
+import findIndex from 'lodash/findIndex'
+import isNumber from 'lodash/isNumber'
+import map from 'lodash/map'
+import toNumber from 'lodash/toNumber'
 import React, { MouseEvent, RefObject } from 'react'
 
 import { Props, Utils } from '../../../common'
@@ -55,7 +53,7 @@ export class ScrollingTabGroup extends React.Component<IScrollingTabGroupProps, 
 
   private tabListRef: RefObject<HTMLUListElement> = React.createRef()
   private currentlyMounted: boolean = false
-  private forceUpdateTimeout: number | null = null
+  private forceUpdateTimeout: NodeJS.Timeout | null = null
 
   private handleScrollUpdate = debounce(() => {
     // Force a react re-render to correctly update the dom

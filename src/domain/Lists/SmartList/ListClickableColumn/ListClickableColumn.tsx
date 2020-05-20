@@ -1,10 +1,10 @@
 import classNames from 'classnames'
-import { isNil } from 'lodash'
+import isNil from 'lodash/isNil'
 import React from 'react'
 
 import { Anchor } from '../../../Internals'
 
-const style = require('./style.scss')
+import style from './style.scss'
 
 export interface IListClickableColumn {
   /** Dataset used to generate the list rows */

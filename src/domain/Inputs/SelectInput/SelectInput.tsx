@@ -1,5 +1,7 @@
 import classNames from 'classnames'
-import { debounce, isEmpty, isEqual } from 'lodash'
+import debounce from 'lodash/debounce'
+import isEmpty from 'lodash/isEmpty'
+import isEqual from 'lodash/isEqual'
 import React from 'react'
 import Select, {
   Creatable,
@@ -11,7 +13,8 @@ import Select, {
   Options,
   ReactSelectProps
 } from 'react-select'
-const style = require('./style.scss')
+
+import style from './style.scss'
 
 export interface ISelectInputProps {
   /** ID of the input */

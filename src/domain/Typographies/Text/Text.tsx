@@ -1,4 +1,4 @@
-import { reduce } from 'lodash'
+import reduce from 'lodash/reduce'
 import React from 'react'
 
 import { Props, Variables } from '../../../common'

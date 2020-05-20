@@ -1,4 +1,5 @@
-import { isString, map } from 'lodash'
+import isString from 'lodash/isString'
+import map from 'lodash/map'
 import React from 'react'
 import { IHintWrapperProps } from 'src/domain/Formats/HintWrapper'
 

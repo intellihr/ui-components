@@ -1,4 +1,4 @@
-import { clamp } from 'lodash'
+import clamp from 'lodash/clamp'
 import { useEffect, useRef } from 'react'
 
 import { Variables } from '../../../../common'

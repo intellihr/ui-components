@@ -1,7 +1,9 @@
 import classNames from 'classnames'
 import Color from 'color'
 import { Parser as HtmlToReactParser } from 'html-to-react'
-import { forEach, get, merge } from 'lodash'
+import forEach from 'lodash/forEach'
+import get from 'lodash/get'
+import merge from 'lodash/merge'
 import React from 'react'
 import { Radar, defaults as chartJSDefaults } from 'react-chartjs-2'
 import ReactDOMServer from 'react-dom/server'
@@ -9,7 +11,7 @@ import ReactDOMServer from 'react-dom/server'
 import { Variables } from '../../../common'
 import { Legend } from '../../Legends'
 
-const style = require('./style.scss')
+import style from './style.scss'
 
 interface IDataset {
   colour: string

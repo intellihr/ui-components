@@ -114,5 +114,6 @@ FontAwesomeIconButton.Size = Size
 
 export {
   FontAwesomeIconButton,
+  Size as FontAwesomeIconButtonSize,
   IFontAwesomeIconButtonProps
 }

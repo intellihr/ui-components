@@ -1,11 +1,9 @@
 import classNames from 'classnames'
-import {
-  filter,
-  get,
-  isFunction,
-  isString,
-  lowerCase
-} from 'lodash'
+import filter from 'lodash/filter'
+import get from 'lodash/get'
+import isFunction from 'lodash/isFunction'
+import isString from 'lodash/isString'
+import lowerCase from 'lodash/lowerCase'
 import React, { ChangeEvent } from 'react'
 import ReactTable, { DefaultFilterFunction, Filter, SortingRule, TableProps } from 'react-table'
 
@@ -18,7 +16,8 @@ import {
 } from '../types'
 import { IBaseDataTableProps } from '../types'
 import { DataTablePagination, IDataTablePaginationProps } from '../DataTablePagination'
-const style = require('../DataTable.scss')
+
+import style from '../DataTable.scss'
 
 type PageSizeOption = 10 | 25 | 50 | 100
 
@@ -182,8 +181,8 @@ class LegacyDataTable extends React.Component<IDataTableProps, IDataTableState> 
     return (
       <DataTablePagination
         key='pagination'
-        totalCount={this.props.data.length}
         {...paginationProps}
+        totalCount={paginationProps.totalCount ?? this.props.data.length}
         customComponent={this.searchFilterComponent}
       />
     )

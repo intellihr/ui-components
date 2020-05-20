@@ -1,4 +1,4 @@
-import { isEqual } from 'lodash'
+import isEqual from 'lodash/isEqual'
 import React, { useCallback, useEffect, useState } from 'react'
 import {useDrag} from 'react-use-gesture'
 

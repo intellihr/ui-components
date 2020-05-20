@@ -1,4 +1,4 @@
-import { isEqual } from 'lodash'
+import isEqual from 'lodash/isEqual'
 import React, { useCallback, useState } from 'react'
 
 import { Collapsible, IToggleType } from '../../../Internals/Collapsible'

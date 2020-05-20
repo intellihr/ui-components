@@ -7,7 +7,8 @@ import { Callout } from '../../../Callouts'
 import { Spinner } from '../../../Spinners/Spinner'
 import { IBaseDataTableProps } from '../types'
 import { DataTablePagination, IDataTablePaginationProps } from '../DataTablePagination'
-const style = require('../DataTable.scss')
+
+import style from '../DataTable.scss'
 
 interface IAsyncDataTableProps extends IBaseDataTableProps {
   /** The total number of data entries */
@@ -62,8 +63,8 @@ const LegacyAsyncDataTable: React.SFC<IAsyncDataTableProps> = ({
       return (
         <DataTablePagination
           key='pagination'
-          totalCount={totalCount}
           {...props}
+          totalCount={props.totalCount ?? totalCount}
         />
       )
     }

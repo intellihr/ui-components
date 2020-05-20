@@ -3,7 +3,7 @@ import React from 'react'
 import { Props } from '../../../../common'
 import { Anchor } from '../../../Internals/Anchor'
 
-const style = require('../style.scss')
+import style from '../style.scss'
 
 interface IBreadcrumbProps {
   /** where to navigate to */

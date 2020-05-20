@@ -4,7 +4,7 @@ import React, { ChangeEventHandler, FocusEventHandler, KeyboardEventHandler, Mou
 import { Props } from '../../../common'
 import { StyledClearButton, StyledSuggestableTextInput, StyledSuggestion, StyledSuggestions, StyledTextInput } from './style'
 
-const style = require('../style.scss')
+import style from '../style.scss'
 
 interface ISuggestion {
   text: string
@@ -55,7 +55,7 @@ interface ISuggestableTextInputProps {
 
 const ACCEPTED_KEY_CODES = [13, 27, 38, 40]
 
-let timeoutID: number | null = null
+let timeoutID: NodeJS.Immediate | null = null
 let manualChangeTimeStamp = 0
 
 const getInitializedSuggestions = (suggestions: ISuggestion[]): ISuggestionState[] => (

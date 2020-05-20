@@ -1,4 +1,5 @@
-import { get, toNumber } from 'lodash'
+import get from 'lodash/get'
+import toNumber from 'lodash/toNumber'
 import { ChartData } from 'react-chartjs-2'
 
 import { IChartTooltipItem, ITimeBasedLineChartProps } from './TimeBasedLineChart'

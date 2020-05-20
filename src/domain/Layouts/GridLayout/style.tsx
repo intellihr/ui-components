@@ -1,4 +1,4 @@
-import { isPlainObject } from 'lodash'
+import isPlainObject from 'lodash/isPlainObject'
 import styled, { css } from 'styled-components'
 
 import { Props, Utils, Variables } from '../../../common'

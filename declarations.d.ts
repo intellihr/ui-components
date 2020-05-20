@@ -8,3 +8,7 @@ declare module 'react-use-gesture'
 declare module 'body-scroll-lock'
 declare module '@intellihr/styled-components-breakpoint'
 declare let Foundation: any
+declare module '*.scss' {
+  const content: { [className: string]: string }
+  export = content
+}
