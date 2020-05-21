@@ -1,5 +1,14 @@
 import classNames from 'classnames'
-import { every, fill, filter, isArray, isEmpty, isNil, map, size, take, times } from 'lodash'
+import every from 'lodash/every'
+import fill from 'lodash/fill'
+import filter from 'lodash/filter'
+import isArray from 'lodash/isArray'
+import isEmpty from 'lodash/isEmpty'
+import isNil from 'lodash/isNil'
+import map from 'lodash/map'
+import size from 'lodash/size'
+import take from 'lodash/take'
+import times from 'lodash/times'
 import React from 'react'
 import uuid from 'uuid'
 
@@ -11,7 +20,7 @@ import { ListClickableColumn } from './ListClickableColumn'
 import { ListColumn } from './ListColumn'
 import { ListRow } from './ListRow'
 
-const style = require('./style.scss')
+import style from './style.scss'
 
 export interface ISmartListSkeletonOptions {
   /* Number of rows to show skeletons */

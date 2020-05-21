@@ -1,4 +1,5 @@
-import { isNil, keys, reduce } from 'lodash'
+import isNil from 'lodash/isNil'
+import reduce from 'lodash/reduce'
 import React from 'react'
 import { Col } from 'react-styled-flexboxgrid'
 

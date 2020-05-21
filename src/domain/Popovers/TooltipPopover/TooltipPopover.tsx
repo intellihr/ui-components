@@ -5,7 +5,8 @@ import { Variables } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { IPopoverPosition, Popover } from '../Popover'
 import { StyledToggleComponentWrapper, StyledTooltipContent } from './style'
-const { popoverTrigger } = require('./style.scss')
+
+import style from './style.scss'
 
 enum TooltipPopoverVariant {
   Neutral = 'neutral',
@@ -59,7 +60,7 @@ class TooltipPopover extends React.Component<ITooltipPopoverProps, ITooltipPopov
     variant: TooltipPopoverVariant.Neutral,
     toggleComponent: ({ openMenu, closeMenu, toggleComponentRef, ariaProps }) => (
       <button
-        className={popoverTrigger}
+        className={style.popoverTrigger}
         type='button'
         onMouseEnter={openMenu}
         onMouseLeave={closeMenu}

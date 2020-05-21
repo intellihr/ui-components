@@ -1,5 +1,6 @@
 import { CountryCode, parsePhoneNumber } from 'libphonenumber-js'
-import { toLower, toUpper } from 'lodash'
+import toLower from 'lodash/toLower'
+import toUpper from 'lodash/toUpper'
 import React from 'react'
 
 import { Props, Variables } from '../../../common'

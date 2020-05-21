@@ -1,4 +1,5 @@
-import { isNumber, isString } from 'lodash'
+import isNumber from 'lodash/isNumber'
+import isString from 'lodash/isString'
 import React from 'react'
 
 import { Props, Variables } from '../../../common'

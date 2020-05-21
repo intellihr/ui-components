@@ -3,7 +3,7 @@ import React from 'react'
 
 import { Cell } from './subcomponents/Cell'
 
-const style = require('./style.scss')
+import style from './style.scss'
 
 export enum HorizontalAlignment {
   Right = 'right',

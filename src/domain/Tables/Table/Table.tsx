@@ -1,4 +1,4 @@
-import { isEqual } from 'lodash'
+import isEqual from 'lodash/isEqual'
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
 
 import { Props } from '../../../common'

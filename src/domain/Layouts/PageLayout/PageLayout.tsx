@@ -2,7 +2,8 @@ import classNames from 'classnames'
 import React from 'react'
 
 import { Region } from './subcomponents/Region'
-const style = require('./style.scss')
+
+import style from './style.scss'
 
 export interface IPageLayoutProps {
   /** What to display in the layout. */

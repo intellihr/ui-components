@@ -1,14 +1,12 @@
 import classNames from 'classnames'
-import {
-  isEmpty,
-  isNil
-} from 'lodash'
+import isEmpty from 'lodash/isEmpty'
+import isNil from 'lodash/isNil'
 import React from 'react'
 
 import { Props } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons'
 import { AvatarPicture, AvatarPictureContainer } from './style'
-const style = require('./Avatar.scss')
+import style from './Avatar.scss'
 
 enum AvatarStatusDotColor {
   Indigo = 'indigo',

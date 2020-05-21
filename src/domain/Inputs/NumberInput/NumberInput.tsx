@@ -1,12 +1,13 @@
 import classNames from 'classnames'
-import { get, isNil } from 'lodash'
+import get from 'lodash/get'
+import isNil from 'lodash/isNil'
 import React, { ChangeEventHandler, RefObject } from 'react'
 
 import { Props } from '../../../common'
 import { InputGroupPosition } from '../InputGroup'
 import { DisabledTextWrapper, InputWrapper, PrefixWrapper, StyledNumberInput } from './style'
 
-const style = require('../style.scss')
+import style from '../style.scss'
 
 interface INumberInputProps {
   /** ID of the input */
@@ -138,7 +139,7 @@ export class NumberInput extends React.PureComponent<INumberInputProps> {
         value={value}
         onChange={this.handleChange}
         onKeyDown={handleKeyDown}
-        onBlur={handleBlur ? (e) => handleBlur(e, value) : undefined}
+        onBlur={handleBlur ? (e: React.FocusEvent<HTMLInputElement>) => handleBlur(e, value) : undefined}
         onFocus={this.onFocus}
         className={this.classNames}
         disabled={isDisabled}

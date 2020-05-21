@@ -4,7 +4,7 @@ import React, { ChangeEventHandler } from 'react'
 import { Props, Variables } from '../../../common'
 import { RadioSetWrapper, StyledRadioInput, StyledRadioInputWrapper } from './style'
 
-const style = require('../RadioSet/style.scss')
+import style from '../RadioSet/style.scss'
 
 export interface IRadioSetOptionProps {
   /** Custom classname to use */
@@ -108,7 +108,7 @@ export class RadioSet extends React.PureComponent<IRadioSetProps> {
               value={option.value}
               onChange={this.handleChange}
               onKeyDown={handleKeyDown}
-              onBlur={handleBlur ? (e) => handleBlur(e, option.value) : undefined}
+              onBlur={handleBlur ? (e: React.FocusEvent<HTMLInputElement>) => handleBlur(e, option.value) : undefined}
               className={this.classNames(className)}
               disabled={isDisabled}
               required={isHTML5Required}

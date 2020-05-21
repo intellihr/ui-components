@@ -1,4 +1,4 @@
-import { merge } from 'lodash'
+import merge from 'lodash/merge'
 import React from 'react'
 import { ChartData, Line } from 'react-chartjs-2'
 

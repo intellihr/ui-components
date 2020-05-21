@@ -1,11 +1,11 @@
 import classNames from 'classnames'
-import { isEmpty } from 'lodash'
+import isEmpty from 'lodash/isEmpty'
 import React from 'react'
 
 import { Props } from '../../../common'
 import { MarginCallout } from './style'
 
-const style = require('./style.scss')
+import style from './style.scss'
 
 export interface ICalloutProps {
   type: 'info' | 'success' | 'error' | 'warning' | 'preview-mode' | 'edit-mode' | 'no-data' | ''
@@ -123,7 +123,7 @@ export class Callout extends React.Component<ICalloutProps, ICalloutState> {
         margins={margins}
         className={classNames(this.classNames)}
         // tslint:disable-next-line:jsx-no-lambda
-        ref={(node) => { this.node = node }}
+        ref={(node: HTMLDivElement) => { this.node = node }}
         data-component-type={Props.ComponentType.Callout}
         data-component-context={componentContext}
       >

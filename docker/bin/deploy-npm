@@ -11,6 +11,7 @@
 ###
 
 yarn build
+yarn build:esm:prod
 
 git config user.email "continuous.integration@intellihr.com.au"
 git config user.name "IntelliHR CI"

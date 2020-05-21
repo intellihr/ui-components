@@ -1,5 +1,6 @@
 import React from 'react'
-const style = require('../style.scss')
+
+import style from '../style.scss'
 
 export interface IPageRegionProps {
   /** What to display in the layout. */

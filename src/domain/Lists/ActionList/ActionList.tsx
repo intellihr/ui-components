@@ -1,4 +1,6 @@
-import { cloneDeep, isEmpty, map } from 'lodash'
+import cloneDeep from 'lodash/cloneDeep'
+import isEmpty from 'lodash/isEmpty'
+import map from 'lodash/map'
 import React from 'react'
 
 import { TextLink } from '../../Links'
