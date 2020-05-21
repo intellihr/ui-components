@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Tooltip } from '../../../Tooltips'
 
-const style = require('./style.scss')
+import style from './style.scss'
 
 export interface IListHeader {
   /** Label for the column header */

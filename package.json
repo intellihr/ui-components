@@ -1,7 +1,7 @@
 {
   "name": "@intellihr/ui-components",
   "description": "A common React components library that is used in our company",
-  "version": "45.6.0",
+  "version": "45.7.0",
   "main": "./dist/",
   "types": "./types/index.d.ts",
   "files": [
@@ -40,7 +40,6 @@
     "@types/react-test-renderer": "16.8.1",
     "@types/react-tooltip": "^3.3.5",
     "@types/react-transition-group": "2.9.1",
-    "@types/styled-components": "^4.1.16",
     "@types/uuid": "^3.4.3",
     "better-react-spinkit": "2.0.4",
     "body-scroll-lock": "2.6.1",
@@ -78,6 +77,10 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
     "@intellihr/standard-tslint": "^2.1.1",
+    "@rollup/plugin-commonjs": "^11.1.0",
+    "@rollup/plugin-json": "^4.0.3",
+    "@rollup/plugin-node-resolve": "^7.1.3",
+    "@rollup/plugin-url": "^5.0.0",
     "@types/enzyme-adapter-react-16": "^1.0.5",
     "babel-loader": "^8.0.6",
     "compass-mixins": "0.12.10",
@@ -108,10 +111,18 @@
     "react-test-renderer": "16.8.6",
     "regenerator-runtime": "^0.13.2",
     "rimraf": "^2.6.3",
+    "rollup": "^2.10.2",
+    "rollup-plugin-node-externals": "^2.1.6",
+    "rollup-plugin-postcss": "^3.1.1",
+    "rollup-plugin-progress": "^1.1.2",
+    "rollup-plugin-sourcemaps": "^0.6.2",
+    "rollup-plugin-terser": "^5.3.0",
+    "rollup-plugin-typescript2": "^0.27.1",
     "sass-lint": "1.12.1",
     "sass-lint-auto-fix": "^0.17.0",
     "sass-loader": "6.0.7",
     "snazzy": "8.0.0",
+    "string-hash": "^1.1.3",
     "style-loader": "0.23.1",
     "styled-components": "^4.3.1",
     "stylelint": "9.1.3",
@@ -120,10 +131,11 @@
     "stylelint-processor-styled-components": "1.7.0",
     "ts-jest": "24.0.2",
     "ts-loader": "^6.0.1",
+    "tslib": "^2.0.0",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.14.0",
     "tslint-react": "^4.0.0",
-    "typescript": "3.4.5",
+    "typescript": "^3.9.2",
     "url-loader": "1.1.2",
     "webpack": "4.34.0",
     "webpack-cli": "3.3.2",
@@ -142,6 +154,8 @@
     "lint:sass": "sass-lint --verbose",
     "lint:sass:fix": "sass-lint-auto-fix -c .sass-lint.yml",
     "build": "npm run clean && webpack --display=minimal",
+    "build:esm": "rollup -c",
+    "build:esm:prod": "rollup -c --environment BUILD:production",
     "build:watch": "npm run clean && webpack --watch --display=minimal",
     "styleguide:build": "styleguidist build",
     "styleguide": "styleguidist server"
@@ -161,5 +175,6 @@
   "bugs": {
     "url": "https://github.com/intellihr/ui-components/issues"
   },
-  "homepage": "https://github.com/intellihr/ui-components#readme"
+  "homepage": "https://github.com/intellihr/ui-components#readme",
+  "sideEffects": false
 }

@@ -1,13 +1,11 @@
-import {
-  debounce,
-  every,
-  filter as lodashFilter,
-  get,
-  map,
-  partial,
-  some,
-  toLower
-} from 'lodash'
+import debounce from 'lodash/debounce'
+import every from 'lodash/every'
+import lodashFilter from 'lodash/filter'
+import get from 'lodash/get'
+import map from 'lodash/map'
+import partial from 'lodash/partial'
+import some from 'lodash/some'
+import toLower from 'lodash/toLower'
 import React, { Fragment } from 'react'
 
 interface IValueFilter {

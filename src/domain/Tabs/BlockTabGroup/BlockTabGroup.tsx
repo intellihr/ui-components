@@ -1,9 +1,7 @@
-import {
-  debounce,
-  isEqual,
-  isNumber,
-  toNumber
-} from 'lodash'
+import debounce from 'lodash/debounce'
+import isEqual from 'lodash/isEqual'
+import isNumber from 'lodash/isNumber'
+import toNumber from 'lodash/toNumber'
 import React, { ReactElement, useEffect, useLayoutEffect, useRef, useState } from 'react'
 
 import { Props, Variables } from '../../../common'

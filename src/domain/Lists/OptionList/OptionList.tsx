@@ -1,4 +1,5 @@
-import { map, toLower } from 'lodash'
+import map from 'lodash/map'
+import toLower from 'lodash/toLower'
 import React from 'react'
 
 import { Props } from '../../../common'

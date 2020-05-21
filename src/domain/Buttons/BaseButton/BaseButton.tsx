@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { Spinner } from '../../Spinners/Spinner'
 import { spinnerColour } from './style'
 
-const style = require('./style.scss')
+import style from './style.scss'
 
 type ButtonType =
   'primary' | 'secondary' | 'success' | 'warning' | 'alert' | 'neutral' | 'highlight' |

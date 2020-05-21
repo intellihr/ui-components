@@ -1,4 +1,4 @@
-import { Props } from '..'
+import { Props } from '../types/props'
 
 /**
  * The following variables are the core design variables for the entire design system

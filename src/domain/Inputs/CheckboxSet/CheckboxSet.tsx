@@ -1,12 +1,12 @@
 import classNames from 'classnames'
-import { get } from 'lodash'
+import get from 'lodash/get'
 import React from 'react'
 
 import { Props, Variables } from '../../../common'
 import { StyledCheckboxInput, StyledCheckboxInputWrapper } from '../CheckboxInput/style'
 import { CheckboxSetWrapper, FamilyCheckboxSetWrapper } from './style'
 
-const style = require('../CheckboxInput/style.scss')
+import style from '../CheckboxInput/style.scss'
 
 interface ICheckboxSetOptionProps {
   /** Custom classname to use */
@@ -167,7 +167,7 @@ const getOption = (
           type='checkbox'
           onChange={handleOptionsChange(value, name, onChange)}
           onKeyDown={handleKeyDown}
-          onBlur={handleBlur ? (e) => handleBlur(e, get(value, identifier) ? 'true' : 'false') : undefined}
+          onBlur={handleBlur ? (e: React.FocusEvent<HTMLInputElement>) => handleBlur(e, get(value, identifier) ? 'true' : 'false') : undefined}
           className={getClassNames(className)}
           disabled={isDisabled}
           required={isHTML5Required}
@@ -222,7 +222,7 @@ const CheckboxSet: React.FC<ICheckboxSetProps> = (props) => {
               data-component-type={Props.ComponentType.CheckboxInput}
               data-component-context={parentOption.componentContext}
               checked={selectAll}
-              onBlur={parentOption.handleBlur ? (e) => parentOption.handleBlur!(e, selectAll ? 'true' : 'false') : undefined}
+              onBlur={parentOption.handleBlur ? (e: React.FocusEvent<HTMLInputElement>) => parentOption.handleBlur!(e, selectAll ? 'true' : 'false') : undefined}
             />
             {getInfoLabel(parentOption.label, `${id ? id : name}-all`, name, false)}
           </div>

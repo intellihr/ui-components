@@ -1,5 +1,6 @@
 import classNames from 'classnames'
-import { get, isNil } from 'lodash'
+import get from 'lodash/get'
+import isNil from 'lodash/isNil'
 import React from 'react'
 
 import { Props } from '../../../../common'

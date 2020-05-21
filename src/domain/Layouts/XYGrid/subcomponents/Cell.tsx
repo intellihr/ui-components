@@ -1,8 +1,11 @@
 import classNames from 'classnames'
-import { isPlainObject, isString, kebabCase, reduce } from 'lodash'
+import isPlainObject from 'lodash/isPlainObject'
+import isString from 'lodash/isString'
+import kebabCase from 'lodash/kebabCase'
+import reduce from 'lodash/reduce'
 import React from 'react'
 
-const style = require('../style.scss')
+import style from '../style.scss'
 
 type XYGridSizeNumber = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
 type XYGridSize = XYGridSizeNumber | 'auto' | 'shrink'

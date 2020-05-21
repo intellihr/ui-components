@@ -8,7 +8,7 @@ import { Variables } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { Text } from '../../Typographies/Text'
 
-const style = require('./style.scss')
+import style from './style.scss'
 
 interface IDateRangeInputProps {
   /** Name of the HTML input */

@@ -4,7 +4,7 @@ import React from 'react'
 
 import { Props, Variables } from '../../../common'
 
-const style = require('./style.scss')
+import style from './style.scss'
 
 interface IEmojiProps {
   /** emoji to display */

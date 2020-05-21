@@ -1,4 +1,4 @@
-import { isEqual } from 'lodash'
+import isEqual from 'lodash/isEqual'
 import React, { useState } from 'react'
 
 import { Props, Variables } from '../../../../common'

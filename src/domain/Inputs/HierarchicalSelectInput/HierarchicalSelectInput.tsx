@@ -8,7 +8,8 @@ import Select, {
 
 import { IHierarchicalOption, convertHierarchicalOptionsToFlattenedOptions } from './helpers'
 import { HierarchicalSelectInputOption } from './HierarchicalSelectInputOption'
-const style = require('./style.scss')
+
+import style from './style.scss'
 
 interface IHierarchicalSelectInputProps {
   /** ID of the input */

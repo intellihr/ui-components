@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import { Props, Variables } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
 import { IconButtonVariants, variantOptions } from './colors'
-import { FontAwesomeIconButton } from './FontAwesomeIconButton'
+import { FontAwesomeIconButton, FontAwesomeIconButtonSize } from './FontAwesomeIconButton'
 
 interface IStyledIconButton {
   variant: IconButtonVariants
@@ -11,7 +11,7 @@ interface IStyledIconButton {
   isHovered: boolean
   isDisabled: boolean
   margins?: Props.IMargins
-  size: FontAwesomeIconButton.Size
+  size: FontAwesomeIconButtonSize
 }
 
 const iconButtonHoverStyle = (props: IStyledIconButton) => css`

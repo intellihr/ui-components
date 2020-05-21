@@ -4,7 +4,7 @@ import React, { ChangeEventHandler } from 'react'
 import { Props } from '../../../common'
 import { StyledCheckboxInput, StyledCheckboxInputWrapper } from './style'
 
-const style = require('./style.scss')
+import style from './style.scss'
 
 export interface ICheckboxInputProps {
   /** ID of the input */
@@ -73,7 +73,7 @@ export class CheckboxInput extends React.PureComponent<ICheckboxInputProps> {
             value={this.value}
             onChange={this.handleChange}
             onKeyDown={handleKeyDown}
-            onBlur={handleBlur ? (e) => handleBlur(e, this.value) : undefined}
+            onBlur={handleBlur ? (e: React.FocusEvent<HTMLInputElement>) => handleBlur(e, this.value) : undefined}
             className={this.classNames}
             disabled={isDisabled}
             required={isHTML5Required}

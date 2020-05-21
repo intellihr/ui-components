@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import { isNil } from 'lodash'
+import isNil from 'lodash/isNil'
 import moment, { Moment } from 'moment'
 import React from 'react'
 import { SingleDatePicker } from 'react-dates'
@@ -8,7 +8,7 @@ import 'react-dates/initialize'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { InputGroupPosition } from '../InputGroup'
 
-const style = require('./style.scss')
+import style from './style.scss'
 
 interface ISingleDateInputProps {
   /** Name and ID of the HTML input */

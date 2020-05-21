@@ -1,4 +1,4 @@
-import { debounce } from 'lodash'
+import debounce from 'lodash/debounce'
 import React, { RefObject } from 'react'
 import ReactDOM from 'react-dom'
 import { Transition } from 'react-transition-group'

@@ -1,6 +1,6 @@
 import { FocusTarget } from 'focus-trap'
 import FocusTrap from 'focus-trap-react'
-import { map } from 'lodash'
+import map from 'lodash/map'
 import moment, { Moment } from 'moment'
 import React, { RefObject } from 'react'
 import uuid from 'uuid'

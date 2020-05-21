@@ -3,7 +3,7 @@ import React from 'react'
 import { Props } from '../../../common'
 import { Breadcrumb } from './subcomponents/Breadcrumb'
 
-const style = require('./style.scss')
+import style from './style.scss'
 
 interface IBreadcrumbGroupProps {
   /** The data-component-context */

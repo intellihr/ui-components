@@ -4,7 +4,7 @@ import React from 'react'
 import { Variables } from '../../../common'
 import { IntelliIcon, IntelliIconValue } from '../../Icons'
 import { Text } from '../../Typographies/Text'
-const style = require('./style.scss')
+import style from './style.scss'
 
 export interface IToastProps {
   heading?: string

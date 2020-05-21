@@ -1,7 +1,5 @@
-import {
-  clamp,
-  debounce
-} from 'lodash'
+import clamp from 'lodash/clamp'
+import debounce from 'lodash/debounce'
 import React, { RefObject } from 'react'
 
 import { Props, Utils } from '../../../common'
