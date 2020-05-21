@@ -226,6 +226,7 @@ module.exports = {
           name: 'Lists',
           components: [
             'src/domain/Lists/ActionList/ActionList.tsx',
+            'src/domain/Lists/DraggableList/DraggableList.tsx',
             'src/domain/Lists/FilteredList/FilteredList.tsx',
             'src/domain/Lists/List/List.tsx',
             'src/domain/Lists/OptionList/OptionList.tsx',

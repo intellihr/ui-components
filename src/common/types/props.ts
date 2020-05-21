@@ -81,6 +81,8 @@ namespace Props {
     Carousel = 'carousel',
     CheckboxInput = 'checkbox_input',
     Comparison = 'comparison',
+    DraggableList = 'draggable_list',
+    DraggableListRow = 'draggable_list_row',
     EmptyState = 'empty_state',
     FilterController = 'filter_controller',
     FilterTag = 'filter_tag',
