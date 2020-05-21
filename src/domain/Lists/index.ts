@@ -1,4 +1,5 @@
 export { ActionList } from './ActionList'
+export { DraggableList } from './DraggableList'
 export { FilteredList } from './FilteredList'
 export { List } from './List'
 export { OptionList, FilteredOptionList } from './OptionList'
