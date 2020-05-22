@@ -10,7 +10,6 @@ import ts from 'typescript'
 import { terser } from 'rollup-plugin-terser'
 import externals from 'rollup-plugin-node-externals'
 import progress from 'rollup-plugin-progress'
-import stringHash from 'string-hash'
 
 const isProduction = process.env.BUILD === 'production'
 
@@ -79,20 +78,7 @@ const commonPlugins = [
   postcss({
     extract: true,
     modules: {
-      // to achieve similar behavior as css-loader
-      generateScopedName: (name, filename, css) => {
-        const i = css.indexOf(`:local(.${name})`)
-        if (i < 0) {
-          return name
-        }
-
-        const lineNumber = css.substr(0, i).split(/[\r\n]/).length
-        const hash = stringHash(css)
-          .toString(36)
-          .substr(0, 5)
-
-        return `_${name}_${hash}_${lineNumber}`
-      }
+      scopeBehaviour: 'global'
     },
     use: ['sass'],
     minimize: isProduction,
