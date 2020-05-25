@@ -50,7 +50,7 @@ $status-dot-styles: (
   >.status-icon {
     bottom: -4px;
     position: absolute;
-    right: -4px;
+    left: -4px;
   }
 
   &.avatar-small {
@@ -60,7 +60,7 @@ $status-dot-styles: (
 
     >.status-dot {
       bottom: -.1rem;
-      left: -.2rem;
+      right: -.2rem;
       padding: 4px;
     }
   }
@@ -72,7 +72,7 @@ $status-dot-styles: (
 
     >.status-dot {
       bottom: -1px;
-      left: -1px;
+      right: -1px;
       padding: 4px;
     }
   }
@@ -84,7 +84,7 @@ $status-dot-styles: (
 
     >.status-dot {
       bottom: .1rem;
-      left: .1rem;
+      right: .1rem;
       padding: 6.5px;
     }
   }
@@ -96,7 +96,7 @@ $status-dot-styles: (
 
     >.status-dot {
       bottom: .25rem;
-      left: .75rem;
+      right: .75rem;
       padding: 7px;
     }
   }

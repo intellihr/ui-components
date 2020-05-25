@@ -150,7 +150,7 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
       <Avatar
         initials='JW'
         size={Props.AvatarSize.Medium}
-        statusIcon={<FontAwesomeIcon type='solid' icon='arrow-right' color={Variables.Color.i400} size='small'/>}
+        statusIcon={<FontAwesomeIcon type='solid' icon='arrow-left' color={Variables.Color.i400} size='small'/>}
       />
     </div>
     <div>
@@ -158,7 +158,7 @@ const { FontAwesomeIcon } = require('@Domain/Icons');
         initials='JW'
         size={Props.AvatarSize.Medium}
         statusDot={AvatarStatusDotColor.Green}
-        statusIcon={<FontAwesomeIcon type='solid' icon='arrow-right' color={Variables.Color.i400} size='small' />}
+        statusIcon={<FontAwesomeIcon type='solid' icon='arrow-left' color={Variables.Color.i400} size='small' />}
       />
     </div>
 </div>
