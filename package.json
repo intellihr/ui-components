@@ -177,5 +177,7 @@
     "url": "https://github.com/intellihr/ui-components/issues"
   },
   "homepage": "https://github.com/intellihr/ui-components#readme",
-  "sideEffects": false
+  "sideEffects": [
+    "*.css"
+  ]
 }
