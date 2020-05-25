@@ -113,7 +113,7 @@
     bottom: -.1rem;
     border: 2px solid $n100;
     border-radius: 50%;
-    left: -.3rem;
+    right: -.3rem;
     padding: 5.5px;
     position: absolute;
   }
@@ -142,7 +142,7 @@
 
     .extended-leave-circle {
       bottom: .1rem;
-      left: .1rem;
+      right: .1rem;
       padding: 6.5px;
     }
   }
@@ -155,7 +155,7 @@
 
     .extended-leave-circle {
       bottom: .25rem;
-      left: .75rem;
+      right: .75rem;
       padding: 7px;
     }
   }
