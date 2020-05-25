@@ -1748,23 +1748,23 @@
 
 ._1J7b4-w63fdc01Gi9SN74X > .status-dot.dark { background: #424F5C; border: 2px solid #FFFFFF; }
 
-._1J7b4-w63fdc01Gi9SN74X > .status-icon { bottom: -4px; position: absolute; right: -4px; }
+._1J7b4-w63fdc01Gi9SN74X > .status-icon { bottom: -4px; left: -4px; position: absolute; }
 
 ._1J7b4-w63fdc01Gi9SN74X.avatar-small { font-size: 12.8px; font-size: .8rem; height: 30px; width: 30px; }
 
-._1J7b4-w63fdc01Gi9SN74X.avatar-small > .status-dot { bottom: -1.6px; bottom: -.1rem; left: -3.2px; left: -.2rem; padding: 4px; }
+._1J7b4-w63fdc01Gi9SN74X.avatar-small > .status-dot { bottom: -1.6px; bottom: -.1rem; padding: 4px; right: -3.2px; right: -.2rem; }
 
 ._1J7b4-w63fdc01Gi9SN74X.avatar-medium { font-size: 16px; font-size: 1rem; height: 40px; width: 40px; }
 
-._1J7b4-w63fdc01Gi9SN74X.avatar-medium > .status-dot { bottom: -1px; left: -1px; padding: 4px; }
+._1J7b4-w63fdc01Gi9SN74X.avatar-medium > .status-dot { bottom: -1px; padding: 4px; right: -1px; }
 
 ._1J7b4-w63fdc01Gi9SN74X.avatar-large { font-size: 24px; font-size: 1.5rem; height: 72px; width: 72px; }
 
-._1J7b4-w63fdc01Gi9SN74X.avatar-large > .status-dot { bottom: 1.6px; bottom: .1rem; left: 1.6px; left: .1rem; padding: 6.5px; }
+._1J7b4-w63fdc01Gi9SN74X.avatar-large > .status-dot { bottom: 1.6px; bottom: .1rem; padding: 6.5px; right: 1.6px; right: .1rem; }
 
 ._1J7b4-w63fdc01Gi9SN74X.avatar-xlarge { font-size: 40px; font-size: 2.5rem; height: 120px; width: 120px; }
 
-._1J7b4-w63fdc01Gi9SN74X.avatar-xlarge > .status-dot { bottom: 4px; bottom: .25rem; left: 12px; left: .75rem; padding: 7px; }
+._1J7b4-w63fdc01Gi9SN74X.avatar-xlarge > .status-dot { bottom: 4px; bottom: .25rem; padding: 7px; right: 12px; right: .75rem; }
 
 ._1J7b4-w63fdc01Gi9SN74X > .avatar-inner-container { border: 1px solid #C5CED6; border-radius: 50%; color: #432DF3; font-weight: 600; height: 100%; overflow: hidden; position: relative; text-align: center; text-transform: uppercase; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; width: 100%; }
 
@@ -21154,7 +21154,7 @@ input.is-invalid-input:focus { border-color: #FF8A80; }
 
 .profile-picture-badge, .initials-badge { border: 1px solid #C5CED6; border-radius: 50%; color: #432DF3; display: inline-block; font-size: 16px; font-size: 1rem; font-weight: 600; height: 40px; line-height: 38px; overflow: hidden; text-align: center; width: 40px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; vertical-align: middle; }
 
-.profile-picture-badge .extended-leave-circle, .initials-badge .extended-leave-circle { background-color: #FFC145; bottom: -1.6px; bottom: -.1rem; border: 2px solid #FFFFFF; border-radius: 50%; left: -4.8px; left: -.3rem; padding: 5.5px; position: absolute; }
+.profile-picture-badge .extended-leave-circle, .initials-badge .extended-leave-circle { background-color: #FFC145; bottom: -1.6px; bottom: -.1rem; border: 2px solid #FFFFFF; border-radius: 50%; right: -4.8px; right: -.3rem; padding: 5.5px; position: absolute; }
 
 .profile-picture-badge img, .initials-badge img { vertical-align: baseline; vertical-align: initial; width: 100%; }
 
@@ -21164,11 +21164,11 @@ input.is-invalid-input:focus { border-color: #FF8A80; }
 
 .profile-picture-badge.badge-large, .initials-badge.badge-large { font-size: 24px; font-size: 1.5rem; height: 72px; line-height: 70px; width: 72px; }
 
-.profile-picture-badge.badge-large .extended-leave-circle, .initials-badge.badge-large .extended-leave-circle { bottom: 1.6px; bottom: .1rem; left: 1.6px; left: .1rem; padding: 6.5px; }
+.profile-picture-badge.badge-large .extended-leave-circle, .initials-badge.badge-large .extended-leave-circle { bottom: 1.6px; bottom: .1rem; right: 1.6px; right: .1rem; padding: 6.5px; }
 
 .profile-picture-badge.badge-xlarge, .initials-badge.badge-xlarge { font-size: 40px; font-size: 2.5rem; height: 120px; line-height: 118px; width: 120px; }
 
-.profile-picture-badge.badge-xlarge .extended-leave-circle, .initials-badge.badge-xlarge .extended-leave-circle { bottom: 4px; bottom: .25rem; left: 12px; left: .75rem; padding: 7px; }
+.profile-picture-badge.badge-xlarge .extended-leave-circle, .initials-badge.badge-xlarge .extended-leave-circle { bottom: 4px; bottom: .25rem; right: 12px; right: .75rem; padding: 7px; }
 
 .profile-picture-badge { background-color: transparent; }
 
