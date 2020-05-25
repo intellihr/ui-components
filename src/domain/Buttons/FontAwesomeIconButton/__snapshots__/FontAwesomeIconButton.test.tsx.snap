@@ -46,6 +46,7 @@ exports[`<FontAwesomeIconButton /> should render a selected icon button 1`] = `
     isHovered={false}
     isSelected={true}
     size="small"
+    type="button"
     variant="neutral"
   >
     <StyledComponent
@@ -113,12 +114,14 @@ exports[`<FontAwesomeIconButton /> should render a selected icon button 1`] = `
       isHovered={false}
       isSelected={true}
       size="small"
+      type="button"
       variant="neutral"
     >
       <button
         className="c0"
         data-component-type="font_awesome_icon_button"
         size="small"
+        type="button"
       >
         <FontAwesomeIcon
           icon="check"
@@ -269,6 +272,7 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
     isHovered={false}
     isSelected={false}
     size="small"
+    type="button"
     variant="red"
   >
     <StyledComponent
@@ -336,12 +340,14 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
       isHovered={false}
       isSelected={false}
       size="small"
+      type="button"
       variant="red"
     >
       <button
         className="c0"
         data-component-type="font_awesome_icon_button"
         size="small"
+        type="button"
       >
         <FontAwesomeIcon
           icon="check"
@@ -541,6 +547,7 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
               isHovered={false}
               isSelected={false}
               size="small"
+              type="button"
               variant="neutral"
             >
               <StyledComponent
@@ -607,11 +614,13 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
                 isHovered={false}
                 isSelected={false}
                 size="small"
+                type="button"
                 variant="neutral"
               >
                 <button
                   className="c1"
                   size="small"
+                  type="button"
                 >
                   <FontAwesomeIcon
                     icon="check"
@@ -765,6 +774,7 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
           >
             <button
               class="c0"
+              type="button"
             >
               <i
                 aria-hidden="true"

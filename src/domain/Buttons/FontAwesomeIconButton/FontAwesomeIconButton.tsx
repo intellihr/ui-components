@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Props } from '../../../common'
+import { Omit, Props } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { FontAwesomeIconValue } from '../../Icons/Icon/FontAwesomeIconTypes'
 import { ITooltipPopoverToggleComponentProps, TooltipPopover } from '../../Popovers/TooltipPopover'
@@ -14,6 +14,8 @@ enum Size {
 }
 
 interface IFontAwesomeIconButtonProps {
+  /** Button props passthrough */
+  buttonOverrides?: Omit<React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>, 'ref'>
   /** Name of the icon */
   icon: FontAwesomeIconValue
   /** Size of the icon */
@@ -50,7 +52,8 @@ const FontAwesomeIconButton = (props: IFontAwesomeIconButtonProps) => {
     isHovered = false,
     isDisabled = false,
     componentContext,
-    size = Size.Small
+    size = Size.Small,
+    buttonOverrides
   } = props
 
   const toggleComponent = ({ openMenu, closeMenu, toggleComponentRef, ariaProps }: ITooltipPopoverToggleComponentProps) => (
@@ -68,6 +71,8 @@ const FontAwesomeIconButton = (props: IFontAwesomeIconButtonProps) => {
         isSelected={isSelected}
         isHovered={isHovered}
         isDisabled={isDisabled}
+        type='button'
+        {...buttonOverrides}
       >
         <FontAwesomeIcon
           icon={icon}
@@ -98,6 +103,8 @@ const FontAwesomeIconButton = (props: IFontAwesomeIconButtonProps) => {
           isSelected={isSelected}
           isHovered={isHovered}
           isDisabled={isDisabled}
+          type='button'
+          {...buttonOverrides}
           data-component-type={Props.ComponentType.FontAwesomeIconButton}
           data-component-context={componentContext}
         >
