@@ -1,5 +1,4 @@
 import React from 'react'
-import { FlattenSimpleInterpolation } from 'styled-components'
 
 import { Props } from '../../../common'
 import { styleForMargins } from '../services/margins'
@@ -9,7 +8,7 @@ type IMargin = React.FC<{
   margins?: Props.IMargins
   children?: React.ReactNode
 }> & {
-  styleForMargins: (margins?: Props.IMargins) => FlattenSimpleInterpolation | null
+  styleForMargins: typeof styleForMargins
 }
 
 const Margin: IMargin = ({margins, children}) =>  (
