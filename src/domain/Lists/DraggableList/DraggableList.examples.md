@@ -109,3 +109,62 @@ initialState = {
   </>
 ```
 
+#### Draggable List with RadioSet
+```jsx
+import { RadioSet } from '@Domain/Inputs';
+initialState = {
+    items: [
+        { 
+            id: 'first-item',
+            value: 'option 1'
+        },
+        { 
+            id: 'second-item',
+            value: 'option 2'
+        },
+        { 
+            id: 'third-item',
+            value: 'option 3'
+        },
+        { 
+            id: 'fourth-item',
+            value: 'option 4'
+        }
+    ]
+};
+
+  <DraggableList
+    droppableId='b4bb0ac5-0474-4760-8bbb-6bf92d60b2ba'
+    setItems={(itemsCallback) => {
+      return setState((prevState) => {
+        return { items: itemsCallback(prevState.items)}
+      })
+    }
+  }>
+    {state.items.map((item, index) => (
+        <RadioSet
+            key={item.id}
+            name={index}
+            value={item.value}
+            options={[
+                {
+                  label:'this is option 1',
+                  value:'option 1',
+                },
+                {
+                  label:'this is option 2 (I am disabled)',
+                  value:'option 2'
+                },
+                {
+                  label:'this is option 3',
+                  value:'option 3',
+                },
+                {
+                  label:'this is option 4',
+                  value:'option 4'
+                }
+              ]}
+        />
+    ))}
+  </DraggableList>
+```

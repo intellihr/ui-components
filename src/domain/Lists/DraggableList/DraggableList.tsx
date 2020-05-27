@@ -14,8 +14,8 @@ interface IDraggableListProps<T> {
   droppableId: string
   /** useState hook to update the array of items when they have been re-arranged */
   setItems: React.Dispatch<React.SetStateAction<T[]>>
-  /** An array of ReactNode that should represent the array of items */
-  children: React.ReactNode[]
+  /** An array of ReactElements that should represent the array of items */
+  children: React.ReactElement[]
   /** The data-component-context */
   componentContext?: string
 }
@@ -45,31 +45,37 @@ const DraggableList = <T extends {}> ({ droppableId, setItems, children, compone
           {(droppableProvided) => (
             <div ref={droppableProvided.innerRef}>
               <StyledListArea>
-                {React.Children.map(
-                  children, (child, index) => (
-                    <Draggable
-                      draggableId={index.toString()}
-                      index={index}
-                    >
-                      {(draggableProvided, snapshot) => (
-                        <div
-                          ref={draggableProvided.innerRef}
-                          {...draggableProvided.draggableProps}
-                          {...draggableProvided.dragHandleProps}
-                          style={draggableProvided.draggableProps.style}
-                        >
-                          {child && (
-                            <StyledListItem
-                              isDragging={snapshot.isDragging}
-                              data-component-type={Props.ComponentType.DraggableListRow}
-                            >
-                              {child}
-                            </StyledListItem>
-                          )}
-                        </div>
-                      )}
-                    </Draggable>
-                  )
+                {React.Children.map<React.ReactElement, React.ReactElement>(
+                  children,
+                  (child, index) => {
+                    const key = child && child.key ? child.key : index
+
+                    return (
+                      <Draggable
+                        key={key}
+                        draggableId={key.toString()}
+                        index={index}
+                      >
+                        {(draggableProvided, snapshot) => (
+                          <div
+                            ref={draggableProvided.innerRef}
+                            {...draggableProvided.draggableProps}
+                            {...draggableProvided.dragHandleProps}
+                            style={draggableProvided.draggableProps.style}
+                          >
+                            {child && (
+                              <StyledListItem
+                                isDragging={snapshot.isDragging}
+                                data-component-type={Props.ComponentType.DraggableListRow}
+                              >
+                                {child}
+                              </StyledListItem>
+                            )}
+                          </div>
+                        )}
+                      </Draggable>
+                    )
+                  }
                 )}
                 {droppableProvided.placeholder}
               </StyledListArea>
