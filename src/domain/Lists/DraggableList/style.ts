@@ -22,8 +22,11 @@ const StyledListItem = styled.div<IListItemProps>`
 `
 
 const StyledListArea = styled.div`
-  display: grid;
-  row-gap: ${Variables.Spacing.sXSmall}px;
+  // We can't remove the margin on the last child because RBD needs consistent sizing to work properly
+  margin-bottom: -${Variables.Spacing.sXSmall}px;
+  > * {
+    margin-bottom: ${Variables.Spacing.sXSmall}px;
+  }
 `
 
 export {
