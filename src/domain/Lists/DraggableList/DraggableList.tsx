@@ -7,7 +7,7 @@ import {
 } from 'react-beautiful-dnd'
 
 import { Props } from '../../../common'
-import { StyledListArea, StyledListItem } from './style'
+import { StyledDraggableList, StyledListArea, StyledListItem } from './style'
 
 interface IDraggableListProps<T> {
   /** Droppable area id - this allows us to have more than one per page */
@@ -16,11 +16,13 @@ interface IDraggableListProps<T> {
   setItems: React.Dispatch<React.SetStateAction<T[]>>
   /** An array of ReactElements that should represent the array of items */
   children: React.ReactElement[]
+  /** The margins around the component */
+  margins?: Props.IMargins
   /** The data-component-context */
   componentContext?: string
 }
 
-const DraggableList = <T extends {}> ({ droppableId, setItems, children, componentContext }: IDraggableListProps<T>) => {
+const DraggableList = <T extends {}> ({ droppableId, setItems, children, margins, componentContext }: IDraggableListProps<T>) => {
   const onDragEnd = (result: DropResult) => {
     if (!result.destination) {
       return
@@ -36,7 +38,8 @@ const DraggableList = <T extends {}> ({ droppableId, setItems, children, compone
   }
 
   return (
-    <span
+    <StyledDraggableList
+      margins={margins}
       data-component-type={Props.ComponentType.DraggableList}
       data-component-context={componentContext}
     >
@@ -83,7 +86,7 @@ const DraggableList = <T extends {}> ({ droppableId, setItems, children, compone
           )}
         </Droppable>
       </DragDropContext>
-    </span>
+    </StyledDraggableList>
   )
 }
 
