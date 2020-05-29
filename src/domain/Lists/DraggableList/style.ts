@@ -1,10 +1,15 @@
 import styled, { css } from 'styled-components'
 
-import { Variables } from '../../../common'
+import { Props, Variables } from '../../../common'
+import { styleForMargins } from '../../Spacers/services/margins'
 
 interface IListItemProps {
   isDragging: boolean
   children: React.ReactNode
+}
+
+interface IStyledDraggableListProps {
+  margins?: Props.IMargins
 }
 
 const StyledListItem = styled.div<IListItemProps>`
@@ -29,7 +34,11 @@ const StyledListArea = styled.div`
   }
 `
 
+const StyledDraggableList = styled.div`
+  ${(props: IStyledDraggableListProps) => styleForMargins(props.margins)}
+`
 export {
   StyledListArea,
-  StyledListItem
+  StyledListItem,
+  StyledDraggableList
 }
