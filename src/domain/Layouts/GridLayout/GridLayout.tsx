@@ -5,7 +5,6 @@ import {
   CellSize,
   GutterSize,
   HorizontalAlignment,
-  IStyledCellProps,
   StyledCell,
   StyledGridLayout,
   VerticalAlignment
@@ -53,11 +52,6 @@ interface IVerticalAlignmentDefinition {
 }
 
 interface IGridLayoutCell {
-  /**
-   * Key for the cell. This is important for animations, as cells with the same key will be kept unanimated
-   * when transitioning. Defaults to the index of the cell.
-   */
-  key?: string | number
   /** The content to place within the cell */
   content?: JSX.Element | string | null
   /** The size this cell takes up within the grid */
@@ -103,10 +97,11 @@ type GridChild =
   | false
   | null
   | undefined
+  | GridChild[]
 
 interface IGridLayoutPropsWithChildren extends IGridLayoutBaseProps {
   /** The cell components to place within the grid */
-  children: GridChild[] | GridChild
+  children: GridChild
 }
 
 type GridLayoutProps = IGridLayoutPropsWithCells | IGridLayoutPropsWithChildren
@@ -144,16 +139,18 @@ export class GridLayout extends React.PureComponent<GridLayoutProps, never> {
     if ('cells' in this.props) {
       renderChildren = this.props.cells && this.props.cells.map(this.getCellForDefinition)
     } else if (this.props.children) {
-      renderChildren = React.Children.map<
-        React.ReactElement | false | null | undefined,
-        GridChild
-      >(this.props.children, (child) => {
+      renderChildren = React.Children.map(this.props.children, (child) => {
         if (!child) {
           return child
         }
 
+        // This can never happen, as React.children expands out child arrays automatically
+        // Kept because otherwise typescript complains (typing of .map isn't great)
+        if (Array.isArray(child)) {
+          return null
+        }
+
         const {
-          key,
           size,
           offset,
           flexHorizontalAlignment,
@@ -162,7 +159,6 @@ export class GridLayout extends React.PureComponent<GridLayoutProps, never> {
 
         return (
           React.cloneElement(child, {
-            key,
             size,
             offset,
             displayType,
@@ -205,7 +201,6 @@ export class GridLayout extends React.PureComponent<GridLayoutProps, never> {
     } = this.props
 
     const {
-      key,
       content,
       size,
       displayType,
@@ -216,7 +211,7 @@ export class GridLayout extends React.PureComponent<GridLayoutProps, never> {
 
     return (
       <StyledCell
-        key={key || index}
+        key={index}
         size={size || 'auto'}
         offset={offset || 0}
         gridColumns={gridColumns!}

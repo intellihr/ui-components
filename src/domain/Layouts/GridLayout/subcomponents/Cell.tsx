@@ -16,7 +16,6 @@ import {
 type CellDisplayType = 'block' | 'flex'
 
 interface ICellProps {
-  key?: string | number
   gridColumns?: number
   size?: CellSize | IStyledCellSizes
   offset?: CellOffset | IStyledCellOffsets
