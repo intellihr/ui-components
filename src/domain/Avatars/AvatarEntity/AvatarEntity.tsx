@@ -1,18 +1,20 @@
 import React from 'react'
 
-import { Avatar } from '../'
 import { Props, Variables } from '../../../common'
 import { Text } from '../../Typographies/Text'
-import { AvatarStatusDotColor } from '../Avatar'
+import {Avatar, AvatarStatusDotColor} from '../Avatar'
 import {
   AvatarEntityInfo,
   MainContentWrapper,
-  StyledAvatarEntity
+  StyledAvatar,
+  StyledAvatarEntity, StyledTertiaryText
 } from './style'
 
-enum Size {
+enum AvatarEntitySize {
   Small = 'small',
-  Normal = 'normal'
+  Normal = 'normal',
+  SmallCompact = 'smallCompact',
+  NormalCompact = 'normalCompact'
 }
 
 export interface IAvatarEntityProps {
@@ -23,9 +25,7 @@ export interface IAvatarEntityProps {
   /** The tertiary text */
   tertiaryText?: string
   /** Specify the size of avatar entity to use */
-  size?: Size
-  /** If true, displays AvatarEntity in a compact view */
-  isCompact?: boolean
+  size?: AvatarEntitySize
   /** If true, will display a hover state style when hovered */
   isHoverable?: boolean
   /** Margins around the component */
@@ -41,11 +41,10 @@ export interface IAvatarEntityProps {
 }
 
 class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
-  public static Size = Size
+  public static Size = AvatarEntitySize
   public static defaultProps: Partial<IAvatarEntityProps> = {
-    isCompact: false,
     isHoverable: false,
-    size: Size.Normal
+    size: AvatarEntitySize.Normal
   }
 
   get avatar (): JSX.Element {
@@ -57,14 +56,16 @@ class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
     } = this.props
 
     return (
-      <div>
+      <StyledAvatar
+        size={size}
+      >
         <Avatar
           initials={initials}
           imageUrl={imageUrl}
           statusDot={statusDot}
-          size={size === Size.Small ? Props.AvatarSize.Small : Props.AvatarSize.Medium}
+          size={size === AvatarEntitySize.Small ? Props.AvatarSize.Small : Props.AvatarSize.Medium}
         />
-      </div>
+      </StyledAvatar>
     )
   }
 
@@ -78,7 +79,7 @@ class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
       <Text
         isTruncated
         color={Variables.Color.n800}
-        type={size === Size.Normal ? Props.TypographyType.Body : Props.TypographyType.Small}
+        type={size === AvatarEntitySize.Normal ? Props.TypographyType.Body : Props.TypographyType.Small}
       >
         {primaryText}
       </Text>
@@ -88,7 +89,6 @@ class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
   get secondaryText (): JSX.Element | null {
     const {
       secondaryText,
-      isCompact,
       size
     } = this.props
 
@@ -98,7 +98,7 @@ class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
 
     let text = secondaryText
 
-    if (isCompact) {
+    if (size === AvatarEntitySize.NormalCompact || size === AvatarEntitySize.SmallCompact) {
       text = `(${text})`
     }
 
@@ -106,8 +106,8 @@ class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
       <Text
         isTruncated
         color={Variables.Color.n700}
-        margins={isCompact ? { left: Variables.Spacing.sXSmall } : undefined}
-        type={size === Size.Normal ? Props.TypographyType.Small : Props.TypographyType.XSmall}
+        margins={size === AvatarEntitySize.NormalCompact || size === AvatarEntitySize.SmallCompact ? { left: Variables.Spacing.sXSmall } : undefined}
+        type={size === AvatarEntitySize.Normal ? Props.TypographyType.Small : Props.TypographyType.XSmall}
       >
         {text}
       </Text>
@@ -117,31 +117,32 @@ class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
   get tertiaryText (): JSX.Element | null {
     const {
       tertiaryText,
-      isCompact,
       size
     } = this.props
 
-    if (!tertiaryText || isCompact) {
+    if (!tertiaryText || size === AvatarEntitySize.NormalCompact || size === AvatarEntitySize.SmallCompact) {
       return null
     }
 
     return (
-      <Text
-        isInline={false}
-        isTruncated
-        color={Variables.Color.n700}
-        margins={{ left: size === Size.Normal ? 48 : 38 }}
-        type={size === Size.Normal ? Props.TypographyType.Small : Props.TypographyType.XSmall}
+      <StyledTertiaryText
+        size={size}
       >
-        {tertiaryText}
-      </Text>
+        <Text
+          isInline={false}
+          isTruncated
+          color={Variables.Color.n700}
+          type={size === AvatarEntitySize.Normal ? Props.TypographyType.Small : Props.TypographyType.XSmall}
+        >
+          {tertiaryText}
+        </Text>
+      </StyledTertiaryText>
     )
   }
 
   public render (): JSX.Element {
     const {
       isHoverable,
-      isCompact,
       margins,
       componentContext,
       size
@@ -152,14 +153,13 @@ class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
         data-component-type={Props.ComponentType.AvatarEntity}
         data-component-context={componentContext}
         margins={margins}
+        isHoverable={isHoverable}
       >
         <MainContentWrapper
-          isHoverable={isHoverable}
           size={size}
         >
           {this.avatar}
           <AvatarEntityInfo
-            isCompact={isCompact}
             size={size}
           >
             {this.primaryText}
@@ -174,5 +174,5 @@ class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
 
 export {
   AvatarEntity,
-  Size
+  AvatarEntitySize
 }

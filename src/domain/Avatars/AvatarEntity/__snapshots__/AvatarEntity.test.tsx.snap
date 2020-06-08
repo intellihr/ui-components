@@ -1,23 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<AvatarEntity /> should render a avatar entity with lots of data 1`] = `
+exports[`<AvatarEntity /> should render a basic avatar entity 1`] = `
 <styled.div
   data-component-type="avatar_entity"
+  isHoverable={false}
 >
   <styled.div
-    isHoverable={false}
     size="normal"
   >
-    <div>
+    <styled.span
+      size="normal"
+    >
       <Avatar
-        imageUrl="www.example.com"
         initials="JW"
         size="medium"
-        statusDot="indigo"
       />
-    </div>
+    </styled.span>
     <styled.div
-      isCompact={false}
       size="normal"
     >
       <Text
@@ -26,6 +25,74 @@ exports[`<AvatarEntity /> should render a avatar entity with lots of data 1`] = 
         isTruncated={true}
         tag="span"
         type="body"
+      >
+        John Wick
+      </Text>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<AvatarEntity /> should render a normal compact avatar entity 1`] = `
+<styled.div
+  data-component-type="avatar_entity"
+  isHoverable={false}
+>
+  <styled.div
+    size="normalCompact"
+  >
+    <styled.span
+      size="normalCompact"
+    >
+      <Avatar
+        initials="JW"
+        size="medium"
+      />
+    </styled.span>
+    <styled.div
+      size="normalCompact"
+    >
+      <Text
+        color="#262D33"
+        isInline={true}
+        isTruncated={true}
+        tag="span"
+        type="small"
+      >
+        John Wick
+      </Text>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<AvatarEntity /> should render a small avatar entity 1`] = `
+<styled.div
+  data-component-type="avatar_entity"
+  isHoverable={false}
+>
+  <styled.div
+    size="small"
+  >
+    <styled.span
+      size="small"
+    >
+      <Avatar
+        imageUrl="www.example.com"
+        initials="JW"
+        size="small"
+        statusDot="indigo"
+      />
+    </styled.span>
+    <styled.div
+      size="small"
+    >
+      <Text
+        color="#262D33"
+        isInline={true}
+        isTruncated={true}
+        tag="span"
+        type="small"
       >
         John Wick
       </Text>
@@ -34,112 +101,48 @@ exports[`<AvatarEntity /> should render a avatar entity with lots of data 1`] = 
         isInline={true}
         isTruncated={true}
         tag="span"
-        type="small"
+        type="xsmall"
       >
         Guy Killer
       </Text>
     </styled.div>
   </styled.div>
-  <Text
-    color="#424F5C"
-    isInline={false}
-    isTruncated={true}
-    margins={
-      Object {
-        "left": 48,
-      }
-    }
-    tag="span"
-    type="small"
-  >
-    In Cinemas 2019
-  </Text>
-</styled.div>
-`;
-
-exports[`<AvatarEntity /> should render a basic avatar entity 1`] = `
-<styled.div
-  data-component-type="avatar_entity"
->
   <styled.div
-    isHoverable={false}
-    size="normal"
-  >
-    <div>
-      <Avatar
-        initials="JW"
-        size="medium"
-      />
-    </div>
-    <styled.div
-      isCompact={false}
-      size="normal"
-    >
-      <Text
-        color="#262D33"
-        isInline={true}
-        isTruncated={true}
-        tag="span"
-        type="body"
-      >
-        John Wick
-      </Text>
-    </styled.div>
-  </styled.div>
-</styled.div>
-`;
-
-exports[`<AvatarEntity /> should render a basic compact avatar entity 1`] = `
-<styled.div
-  data-component-type="avatar_entity"
->
-  <styled.div
-    isHoverable={false}
-    size="normal"
-  >
-    <div>
-      <Avatar
-        initials="JW"
-        size="medium"
-      />
-    </div>
-    <styled.div
-      isCompact={true}
-      size="normal"
-    >
-      <Text
-        color="#262D33"
-        isInline={true}
-        isTruncated={true}
-        tag="span"
-        type="body"
-      >
-        John Wick
-      </Text>
-    </styled.div>
-  </styled.div>
-</styled.div>
-`;
-
-exports[`<AvatarEntity /> should render a compact small avatar entity 1`] = `
-<styled.div
-  data-component-type="avatar_entity"
->
-  <styled.div
-    isHoverable={false}
     size="small"
   >
-    <div>
+    <Text
+      color="#424F5C"
+      isInline={false}
+      isTruncated={true}
+      tag="span"
+      type="xsmall"
+    >
+      In Cinemas 2019
+    </Text>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<AvatarEntity /> should render a small compact avatar entity 1`] = `
+<styled.div
+  data-component-type="avatar_entity"
+  isHoverable={false}
+>
+  <styled.div
+    size="smallCompact"
+  >
+    <styled.span
+      size="smallCompact"
+    >
       <Avatar
         imageUrl="www.example.com"
         initials="JW"
-        size="small"
+        size="medium"
         statusDot="indigo"
       />
-    </div>
+    </styled.span>
     <styled.div
-      isCompact={true}
-      size="small"
+      size="smallCompact"
     >
       <Text
         color="#262D33"
