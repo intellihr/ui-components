@@ -8,6 +8,7 @@ exports[`<PaginationButtons /> should render the pagination buttons 1`] = `
     chevron="left"
     disabled={true}
     onClick={[Function]}
+    type="button"
   >
     <styled.span
       arrowDirection="left"
@@ -75,6 +76,7 @@ exports[`<PaginationButtons /> should render the pagination buttons 1`] = `
     chevron="right"
     disabled={false}
     onClick={[Function]}
+    type="button"
   >
     <styled.span
       arrowDirection="right"
@@ -104,6 +106,7 @@ exports[`<PaginationButtons /> should render the pagination buttons with margin 
     chevron="left"
     disabled={true}
     onClick={[Function]}
+    type="button"
   >
     <styled.span
       arrowDirection="left"
@@ -171,6 +174,7 @@ exports[`<PaginationButtons /> should render the pagination buttons with margin 
     chevron="right"
     disabled={false}
     onClick={[Function]}
+    type="button"
   >
     <styled.span
       arrowDirection="right"

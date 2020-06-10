@@ -83,6 +83,7 @@ export class PaginationButtons extends React.PureComponent<IPaginationButtonsPro
         chevron='left'
         disabled={currentPage <= 1}
         onClick={this.changePage(currentPage - 1)}
+        type='button'
       >
         <ChevronIconWrapper arrowDirection='left'>
           <FontAwesomeIcon type='solid' icon='chevron-left' />
@@ -103,6 +104,7 @@ export class PaginationButtons extends React.PureComponent<IPaginationButtonsPro
         chevron='right'
         disabled={hasMorePages ? hasMorePages : totalPages <= currentPage}
         onClick={this.changePage(currentPage + 1)}
+        type='button'
       >
         <ChevronIconWrapper arrowDirection='right'>
           <FontAwesomeIcon type='solid' icon='chevron-right' />
