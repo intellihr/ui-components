@@ -22,6 +22,7 @@ exports[`<PaginationButtons /> should render the pagination buttons 1`] = `
     isCurrent={true}
     key="pagination-1"
     onClick={[Function]}
+    type="button"
   >
     1
   </styled.button>
@@ -29,6 +30,7 @@ exports[`<PaginationButtons /> should render the pagination buttons 1`] = `
     isCurrent={false}
     key="pagination-2"
     onClick={[Function]}
+    type="button"
   >
     2
   </styled.button>
@@ -36,6 +38,7 @@ exports[`<PaginationButtons /> should render the pagination buttons 1`] = `
     isCurrent={false}
     key="pagination-3"
     onClick={[Function]}
+    type="button"
   >
     3
   </styled.button>
@@ -43,6 +46,7 @@ exports[`<PaginationButtons /> should render the pagination buttons 1`] = `
     isCurrent={false}
     key="pagination-4"
     onClick={[Function]}
+    type="button"
   >
     4
   </styled.button>
@@ -50,6 +54,7 @@ exports[`<PaginationButtons /> should render the pagination buttons 1`] = `
     isCurrent={false}
     key="pagination-5"
     onClick={[Function]}
+    type="button"
   >
     5
   </styled.button>
@@ -62,6 +67,7 @@ exports[`<PaginationButtons /> should render the pagination buttons 1`] = `
     isCurrent={false}
     key="pagination-10"
     onClick={[Function]}
+    type="button"
   >
     10
   </styled.button>
@@ -112,6 +118,7 @@ exports[`<PaginationButtons /> should render the pagination buttons with margin 
     isCurrent={true}
     key="pagination-1"
     onClick={[Function]}
+    type="button"
   >
     1
   </styled.button>
@@ -119,6 +126,7 @@ exports[`<PaginationButtons /> should render the pagination buttons with margin 
     isCurrent={false}
     key="pagination-2"
     onClick={[Function]}
+    type="button"
   >
     2
   </styled.button>
@@ -126,6 +134,7 @@ exports[`<PaginationButtons /> should render the pagination buttons with margin 
     isCurrent={false}
     key="pagination-3"
     onClick={[Function]}
+    type="button"
   >
     3
   </styled.button>
@@ -133,6 +142,7 @@ exports[`<PaginationButtons /> should render the pagination buttons with margin 
     isCurrent={false}
     key="pagination-4"
     onClick={[Function]}
+    type="button"
   >
     4
   </styled.button>
@@ -140,6 +150,7 @@ exports[`<PaginationButtons /> should render the pagination buttons with margin 
     isCurrent={false}
     key="pagination-5"
     onClick={[Function]}
+    type="button"
   >
     5
   </styled.button>
@@ -152,6 +163,7 @@ exports[`<PaginationButtons /> should render the pagination buttons with margin 
     isCurrent={false}
     key="pagination-10"
     onClick={[Function]}
+    type="button"
   >
     10
   </styled.button>
