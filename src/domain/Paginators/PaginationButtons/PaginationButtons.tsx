@@ -183,6 +183,7 @@ export class PaginationButtons extends React.PureComponent<IPaginationButtonsPro
         key={`pagination-${pageNumber}`}
         isCurrent={currentPage === pageNumber}
         onClick={this.changePage(pageNumber)}
+        type='button'
       >
         {pageNumber}
       </StylePaginationButton>
