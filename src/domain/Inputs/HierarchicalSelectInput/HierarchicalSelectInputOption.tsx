@@ -5,17 +5,16 @@ import Select, {
 import styled from 'styled-components'
 
 import { Props, Variables } from '../../../common'
-import { styleForTypographyType } from '../../Typographies/services/textStyles'
+import { Text } from '../../Typographies'
+import { styleForTruncatedText } from '../../Typographies/services/textStyles'
 import { TextMatch } from './TextMatch'
 
 const StyledOptionLabelWrapper = styled.div`
-  margin-right: ${Variables.Spacing.sMedium}px;
-  text-overflow: ellipsis;
+  ${styleForTruncatedText()}
 `
 
 const StyledOptionParentLabelWrapper = styled.div`
   word-break: break-all;
-  ${styleForTypographyType(Props.TypographyType.Small)}
 `
 
 interface IOption {
@@ -46,13 +45,15 @@ const HierarchicalSelectInputOption: React.FC<OptionComponentProps> = (props) =>
     >
       {option.parentOption && (
         <StyledOptionParentLabelWrapper>
-          {parentDisplay(option.parentOption)}
+          <Text type={Props.TypographyType.Small} color={Variables.Color.n700}>
+            {parentDisplay(option.parentOption)}
+          </Text>
         </StyledOptionParentLabelWrapper>
       )}
       <StyledOptionLabelWrapper>
         <TextMatch
-          otherTextProps={{ type: Props.TypographyType.Small, color: Variables.Color.n800 }}
-          matchTextProps={{ type: Props.TypographyType.Small, weight: Variables.FontWeight.fwSemiBold }}
+          otherTextProps={{ color: Variables.Color.n800 }}
+          matchTextProps={{ weight: Variables.FontWeight.fwSemiBold }}
           mainText={option.label}
           searchText={inputValue}
         />
