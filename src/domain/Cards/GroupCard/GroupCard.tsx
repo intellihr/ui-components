@@ -52,6 +52,8 @@ interface IGroupCardBasicProps {
 interface IGroupCardWithHrefProps extends IGroupCardBasicProps {
   /** The url to navigate to when you click on the card header - not to be used with handleClick */
   href: string
+  /** Where to open the href link */
+  target?: string
 }
 
 interface IGroupCardWithHrefAndAnchorPropsProps extends IGroupCardWithHrefProps {
@@ -112,6 +114,7 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
               {!!this.href && (
                 <StyledAnchor
                   href={this.href}
+                  target={this.target}
                   anchorComponentProps={this.anchorComponentProps}
                 />
               )}
@@ -146,6 +149,14 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
   private get href (): string | undefined {
     if ('href' in this.props) {
       return this.props.href
+    }
+
+    return undefined
+  }
+
+  private get target (): string | undefined {
+    if ('target' in this.props) {
+      return this.props.target
     }
 
     return undefined
