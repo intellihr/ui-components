@@ -317,6 +317,18 @@ If you provide the href prop, this will be navigated to when clicking on the mai
 />
 ```
 
+#### Card with a href and target
+
+If you provide the target prop in addition to the href prop, this will be navigated to the specified target when clicking on the main portion of the card.
+
+```jsx
+<Card
+  href='#'
+  target='_blank'
+  mainContent="I'm a card with a href and target (✿◠‿◠)"
+/>
+```
+
 #### Card with expansion as a primary action
 
 If you provide any content to the extraContent prop, it will make the card expandable on click to display the extra content.

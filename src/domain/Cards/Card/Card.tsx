@@ -46,6 +46,8 @@ interface ICardBasicProps {
 interface ICardWithHrefProps extends ICardBasicProps {
   /** The url to navigate to when you click on the card header - not to be used with handleClick */
   href: string
+  /** Where to open the href link */
+  target?: string
 }
 
 interface ICardWithHrefAndAnchorPropsProps extends ICardWithHrefProps {
@@ -108,6 +110,7 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
             {!!this.href && (
               <StyledAnchor
                 href={this.href}
+                target={this.target}
                 anchorComponentProps={this.anchorComponentProps}
               />
             )}
@@ -149,6 +152,14 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
   private get href (): string | undefined {
     if ('href' in this.props) {
       return this.props.href
+    }
+
+    return undefined
+  }
+
+  private get target (): string | undefined {
+    if ('target' in this.props) {
+      return this.props.target
     }
 
     return undefined
