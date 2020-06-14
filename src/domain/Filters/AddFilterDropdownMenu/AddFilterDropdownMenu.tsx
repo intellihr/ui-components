@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo, useCallback } from 'react'
 
 import { Props, Variables } from '../../../common'
 import { VerticalForm } from '../..//Forms/VerticalForm'
@@ -8,11 +8,11 @@ import { IDropdownMenuToggleComponentProps } from '../../Popovers/DropdownMenu'
 import { Text } from '../../Typographies/Text'
 import { OperatorTextWrapper, StyledDropdownMenu } from './style'
 
-interface IAddFilterDropdownMenuProps {
-  /** table name that the filters applied to */
+interface IAddFilterDropdownMenuProps<FilterValue = string | number> {
+  /** The message at the top of the filter dropdown, prompting the user to select a filter  */
   filterMessage?: string
-  /** filter selection of this filter dropdown */
-  filters: IAddFilterDropdownMenuFilter[]
+  /** selectable filters for this filter dropdown */
+  filters: IAddFilterDropdownMenuFilter<FilterValue>[]
   /** Callback when a filter is added */
   onFilterAdded: (selectedFilter: IAddedFilter) => void
   /**
@@ -24,51 +24,81 @@ interface IAddFilterDropdownMenuProps {
   componentContext?: string
 }
 
-interface IAddFilterDropdownMenuFilter {
-  type: 'SINGLE_SELECT' | 'NUMBER'
+interface IAddFilterDropdownMenuFilter<FilterValue = string | number> {
+  /** Internal name of the filter, so it can be distinguished from other filters */
   fieldName: string
+  /** Human readable name used to show the filter */
   label: string
-  selectOptions: ISelectOption[]
+  /** Text used to describe how the filter is applied. Defaults to 'is' */
+  operator?: string
+  /** List of select options to fill the select input for the filter with */
+  selectOptions?: ISelectOption[]
+  /** A custom input component to use to select the filter. Overrides selectOptions */
+  customInputComponent?: React.ReactElement<{ onChange: (value: FilterValue) => void }>
 }
 
-interface ISelectOption {
+interface ISelectOption<FilterValue = string | number> {
   label: string
-  value: string | number
+  value: FilterValue
 }
 
-interface IAddedFilter {
-  filter: IAddFilterDropdownMenuFilter
-  addedOption: ISelectOption
+interface IAddedFilter<FilterValue = string | number> {
+  /** The filter definition that was added */
+  filter: IAddFilterDropdownMenuFilter<FilterValue>
+  /**
+   * The exact option within the filter that was added.
+   * For custom input components, the label is 'custom' as
+   */
+  addedOption: ISelectOption<FilterValue>
 }
 
-const AddFilterDropdownMenu: React.FC<IAddFilterDropdownMenuProps> = ({
+function AddFilterDropdownMenu<FilterValue = string | number>({
   filterMessage = 'Show all items where:',
   toggleComponent,
   componentContext,
   filters,
   onFilterAdded
-}) => {
-  const [filterField, setFilterField] = useState('')
-  const [filterValue, setFilterValue] = useState('')
+}: IAddFilterDropdownMenuProps<FilterValue>) {
+  const [selectedFilterName, setSelectedFilterName] = useState<string | null>(null)
+  const [filterValue, setFilterValue] = useState<FilterValue | null>(null)
 
-  function getFieldInputOptions (): ISelectOption[] | undefined {
-    if (filters) {
-      return filters.map((filter: IAddFilterDropdownMenuFilter) => (
-        {
-          label: filter.label,
-          value: filter.fieldName
-        })
-      )
+  const filtersOptions = filters.map((filter) => (
+    {
+      label: filter.label,
+      value: filter.fieldName
+  }))
+
+  const selectedFilter = filters.find((filter) => filter.fieldName === selectedFilterName)
+
+  const filterValueComponent = useMemo(() => {
+    if (selectedFilter) {
+      if (selectedFilter.customInputComponent) {
+
+      }
+
+      if (selectedFilter.selectOptions) {
+        return (
+          <SelectInput
+            name='filterDropdownValueInput'
+            value={(filterValue ?? '') as string | number}
+            options={selectedFilter.selectOptions}
+            placeholder='Select a value'
+            isClearable={false}
+            onChange={setFilterValue}
+          />
+        )
+      }
     }
-  }
 
-  function handleFieldChange (option: any) {
-    setFilterField(option.value)
-  }
+    return null
+  }, [selectedFilter])
 
-  function handleValueChange (option: any) {
-    setFilterValue(option.value)
-  }
+  const applyFilter = useCallback(() => {
+    if (selectedFilter && filterValue) {
+
+    }
+  })
+
 
   function valueInputOption (): Array<{ label: string, value: string | number | boolean }> | undefined {
     const selectedFilter = filters.find((filter: IAddFilterDropdownMenuFilter) => filter.fieldName === filterField)
