@@ -1,8 +1,8 @@
-import React, { useState, useMemo, useCallback } from 'react'
+import React, { useCallback, useMemo, useState } from 'react'
 
 import { Props, Variables } from '../../../common'
-import { VerticalForm } from '../..//Forms/VerticalForm'
 import { Button } from '../../Buttons/Button'
+import { VerticalForm } from '../../Forms/VerticalForm'
 import { SelectInput } from '../../Inputs/SelectInput'
 import { IDropdownMenuToggleComponentProps } from '../../Popovers/DropdownMenu'
 import { Text } from '../../Typographies/Text'
@@ -12,9 +12,9 @@ interface IAddFilterDropdownMenuProps<FilterValue = string | number> {
   /** The message at the top of the filter dropdown, prompting the user to select a filter  */
   filterMessage?: string
   /** selectable filters for this filter dropdown */
-  filters: IAddFilterDropdownMenuFilter<FilterValue>[]
+  filters: Array<IAddFilterDropdownMenuFilter<FilterValue>>
   /** Callback when a filter is added */
-  onFilterAdded: (selectedFilter: IAddedFilter) => void
+  onFilterAdded: (selectedFilter: IAddedFilter<FilterValue>) => void
   /**
    * The parent component that opens the filter dropdown and positions it on the page.
    * The callback is given a toggle menu prop which can be used to toggle the menu as needed.
@@ -32,9 +32,13 @@ interface IAddFilterDropdownMenuFilter<FilterValue = string | number> {
   /** Text used to describe how the filter is applied. Defaults to 'is' */
   operator?: string
   /** List of select options to fill the select input for the filter with */
-  selectOptions?: ISelectOption[]
+  selectOptions?: Array<ISelectOption<FilterValue>>
   /** A custom input component to use to select the filter. Overrides selectOptions */
-  customInputComponent?: React.ReactElement<{ onChange: (value: FilterValue) => void }>
+  customInputComponent?: React.ComponentType<{ onChange: (value: FilterValue | null) => void, value: FilterValue | null}>
+  /**
+   * @deprecated was never fully implemented and custom input component covers it's cases
+   */
+  type?: 'SINGLE_SELECT' | 'NUMBER'
 }
 
 interface ISelectOption<FilterValue = string | number> {
@@ -42,23 +46,55 @@ interface ISelectOption<FilterValue = string | number> {
   value: FilterValue
 }
 
-interface IAddedFilter<FilterValue = string | number> {
+interface IAddedFilter<FilterValue> {
   /** The filter definition that was added */
   filter: IAddFilterDropdownMenuFilter<FilterValue>
   /**
    * The exact option within the filter that was added.
-   * For custom input components, the label is 'custom' as
+   * For custom input components, the label is 'custom'
+   * as we don't want to break the interface
    */
   addedOption: ISelectOption<FilterValue>
 }
 
-function AddFilterDropdownMenu<FilterValue = string | number>({
+interface IAddFilterDropdownMenuContentProps<FilterValue = string | number> {
+  filterMessage?: string
+  filters: Array<IAddFilterDropdownMenuFilter<FilterValue>>
+  onFilterAdded: (selectedFilter: IAddedFilter<FilterValue>) => void
+  closeMenu: () => void
+}
+
+function AddFilterDropdownMenu<FilterValue = string | number> ({
   filterMessage = 'Show all items where:',
   toggleComponent,
   componentContext,
   filters,
   onFilterAdded
 }: IAddFilterDropdownMenuProps<FilterValue>) {
+  return (
+    <StyledDropdownMenu
+      toggleComponent={toggleComponent}
+      componentContext={componentContext}
+    >
+      {({ closeMenu }: { closeMenu: (() => void) }) => (
+        <DropdownMenuContent<FilterValue>
+          closeMenu={closeMenu}
+          filterMessage={filterMessage}
+          filters={filters}
+          onFilterAdded={onFilterAdded}
+        />
+      )}
+    </StyledDropdownMenu>
+  )
+}
+
+function DropdownMenuContent<FilterValue = string | number> (
+  {
+    closeMenu,
+    filterMessage,
+    filters,
+    onFilterAdded
+  }: IAddFilterDropdownMenuContentProps<FilterValue>) {
   const [selectedFilterName, setSelectedFilterName] = useState<string | null>(null)
   const [filterValue, setFilterValue] = useState<FilterValue | null>(null)
 
@@ -66,14 +102,21 @@ function AddFilterDropdownMenu<FilterValue = string | number>({
     {
       label: filter.label,
       value: filter.fieldName
-  }))
+    }))
 
   const selectedFilter = filters.find((filter) => filter.fieldName === selectedFilterName)
+  const onChange = useCallback((value) => setFilterValue(value), [setFilterValue])
 
   const filterValueComponent = useMemo(() => {
     if (selectedFilter) {
       if (selectedFilter.customInputComponent) {
-
+        const CustomInputComponent = selectedFilter.customInputComponent
+        return (
+          <CustomInputComponent
+            value={filterValue}
+            onChange={setFilterValue}
+          />
+        )
       }
 
       if (selectedFilter.selectOptions) {
@@ -81,102 +124,74 @@ function AddFilterDropdownMenu<FilterValue = string | number>({
           <SelectInput
             name='filterDropdownValueInput'
             value={(filterValue ?? '') as string | number}
-            options={selectedFilter.selectOptions}
+            options={selectedFilter.selectOptions as unknown as ISelectOption[]}
             placeholder='Select a value'
             isClearable={false}
-            onChange={setFilterValue}
+            onChange={onChange}
           />
         )
       }
     }
 
     return null
-  }, [selectedFilter])
+  }, [selectedFilter, filterValue])
 
-  const applyFilter = useCallback(() => {
-    if (selectedFilter && filterValue) {
+  const handleFilterSelectChange = useCallback((option) => setSelectedFilterName(option?.value), [setSelectedFilterName])
 
-    }
-  })
-
-
-  function valueInputOption (): Array<{ label: string, value: string | number | boolean }> | undefined {
-    const selectedFilter = filters.find((filter: IAddFilterDropdownMenuFilter) => filter.fieldName === filterField)
-
-    if (selectedFilter) {
-      return selectedFilter.selectOptions
-    }
-  }
-
-  function applyFilter (closeMenu: () => void) {
-    return () => {
-      const selectedFilter = filters.find((filter: IAddFilterDropdownMenuFilter) => filter.fieldName === filterField)
-
+  const applyFilter = useCallback(
+     () => {
       if (selectedFilter && filterValue) {
-        const selectedFilterOption = selectedFilter.selectOptions.find((option) => option.value === filterValue)
-
+        const selectedFilterOption = selectedFilter.selectOptions?.find((option) => option.value === filterValue)
         onFilterAdded({
           filter: selectedFilter,
           addedOption: selectedFilterOption!
         })
       }
+
       closeMenu()
-      setFilterField('')
-      setFilterValue('')
+      setSelectedFilterName(null)
+      setFilterValue(null)
     }
-  }
+  , [])
 
   return (
-    <StyledDropdownMenu
-      toggleComponent={toggleComponent}
-      componentContext={componentContext}
-    >
-      {({ closeMenu }: { closeMenu: (() => void) }) =>
-        <>
-          <VerticalForm.Field
-            inputName='filterDropdownFieldInput'
-            label={filterMessage}
-            margins={{ bottom: 0 }}
+    <>
+      <VerticalForm.Field
+        inputName='filterDropdownFieldInput'
+        label={filterMessage}
+        margins={{ bottom: 0 }}
+      >
+        <SelectInput
+          name='filterDropdownFieldInput'
+          value={selectedFilterName ?? undefined}
+          options={filtersOptions}
+          placeholder='Select a filter'
+          isClearable={false}
+          handleChange={handleFilterSelectChange}
+        />
+      </VerticalForm.Field>
+      {selectedFilter &&
+      <>
+        <OperatorTextWrapper>
+          <Text
+            isInline={false}
+            color={Variables.Color.n700}
+            type={Props.TypographyType.Small}
           >
-            <SelectInput
-              name='filterDropdownFieldInput'
-              value={filterField}
-              options={getFieldInputOptions()}
-              placeholder='Select a filter'
-              isClearable={false}
-              handleChange={handleFieldChange}
-            />
-          </VerticalForm.Field>
-          {filterField &&
-            <>
-              <OperatorTextWrapper>
-                <Text
-                  isInline={false}
-                  color={Variables.Color.n700}
-                  type={Props.TypographyType.Small}
-                >
-                  is
-                </Text>
-              </OperatorTextWrapper>
-              <SelectInput
-                name='filterDropdownValueInput'
-                value={filterValue}
-                options={valueInputOption()}
-                placeholder='Select a value'
-                isClearable={false}
-                handleChange={handleValueChange}
-              />
-              <Button
-                type='neutral'
-                disabled={!(filterField && filterValue)}
-                onClick={applyFilter(closeMenu)}
-              >
-                Add Filter
-              </Button>
-            </>
-          }
-        </>}
-    </StyledDropdownMenu>
+            {selectedFilter.operator || 'is'}
+          </Text>
+        </OperatorTextWrapper>
+        {filterValueComponent}
+        <Button
+          type='neutral'
+          disabled={!(selectedFilter && filterValue)}
+          onClick={applyFilter}
+        >
+          Add Filter
+        </Button>
+      </>
+      }
+    </>
   )
 }
 

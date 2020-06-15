@@ -10,7 +10,6 @@ const filters: IAddFilterDropdownMenuFilter[] = [
   {
     fieldName: 'type',
     label: 'Type',
-    type: 'SINGLE_SELECT',
     selectOptions: [
       {
         label: 'Product Training',
@@ -29,7 +28,6 @@ const filters: IAddFilterDropdownMenuFilter[] = [
   {
     fieldName: 'training_provider',
     label: 'Training Provider',
-    type: 'SINGLE_SELECT',
     selectOptions: [
       {
         label: 'Internal',

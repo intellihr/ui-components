@@ -11,7 +11,7 @@ import {
 import { FilterTag, IFilterTagDetail } from '../FilterTag/FilterTag'
 import { ControllerWrapper, StyledController, StyledLeftComponent, StyledRightComponent } from './style'
 
-export interface IFilterControllerProps {
+export interface IFilterControllerProps<FilterValue = string | number> {
   /** filter dropdown message of this filter controller */
   filterMessage?: string
   /** search input placeholder of this filter controller */
@@ -23,7 +23,7 @@ export interface IFilterControllerProps {
   /** search value of this filter controller */
   searchValue?: string
   /** Callback when a filter is added */
-  onFilterAdded: (selectedFilter: IAddedFilter) => void
+  onFilterAdded: (selectedFilter: IAddedFilter<FilterValue>) => void
   /** Callback when a tag is deleted */
   onTagDeleted: (selectedTag: IFilterTagDetail) => void
   /** Callback when input is added in search bar */
