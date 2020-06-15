@@ -35,9 +35,7 @@ interface IAddFilterDropdownMenuFilter<FilterValue = string | number> {
   selectOptions?: Array<ISelectOption<FilterValue>>
   /** A custom input component to use to select the filter. Overrides selectOptions */
   customInputComponent?: React.ComponentType<{ onChange: (value: FilterValue | null) => void, value: FilterValue | null}>
-  /**
-   * @deprecated was never fully implemented and custom input component covers it's cases
-   */
+  /** @deprecated This is unused and has no effect */
   type?: 'SINGLE_SELECT' | 'NUMBER'
 }
 
@@ -46,7 +44,7 @@ interface ISelectOption<FilterValue = string | number> {
   value: FilterValue
 }
 
-interface IAddedFilter<FilterValue> {
+interface IAddedFilter<FilterValue = string | number> {
   /** The filter definition that was added */
   filter: IAddFilterDropdownMenuFilter<FilterValue>
   /**
@@ -141,7 +139,12 @@ function DropdownMenuContent<FilterValue = string | number> (
   const applyFilter = useCallback(
      () => {
       if (selectedFilter && filterValue) {
-        const selectedFilterOption = selectedFilter.selectOptions?.find((option) => option.value === filterValue)
+
+        const selectedFilterOption = selectedFilter.selectOptions?.find((option) => option.value === filterValue) ?? {
+           value :filterValue,
+           label: 'custom'
+        }
+
         onFilterAdded({
           filter: selectedFilter,
           addedOption: selectedFilterOption!
@@ -152,7 +155,7 @@ function DropdownMenuContent<FilterValue = string | number> (
       setSelectedFilterName(null)
       setFilterValue(null)
     }
-  , [])
+  , [selectedFilter, filterValue, setSelectedFilterName, setFilterValue])
 
   return (
     <>
@@ -178,7 +181,7 @@ function DropdownMenuContent<FilterValue = string | number> (
             color={Variables.Color.n700}
             type={Props.TypographyType.Small}
           >
-            {selectedFilter.operator || 'is'}
+            {selectedFilter.operator ?? 'is'}
           </Text>
         </OperatorTextWrapper>
         {filterValueComponent}
