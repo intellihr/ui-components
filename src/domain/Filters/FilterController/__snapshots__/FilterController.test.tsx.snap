@@ -38,7 +38,6 @@ exports[`<FilterController /> should render the filter controller 1`] = `
                     "value": "Soft Skill",
                   },
                 ],
-                "type": "SINGLE_SELECT",
               },
               Object {
                 "fieldName": "training_provider",
@@ -57,7 +56,6 @@ exports[`<FilterController /> should render the filter controller 1`] = `
                     "value": "Others",
                   },
                 ],
-                "type": "SINGLE_SELECT",
               },
             ]
           }
