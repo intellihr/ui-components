@@ -1,202 +1,173 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<AvatarEntity /> should render a avatar entity with lots of data 1`] = `
-<styled.div
-  className="avatar-entity"
-  isHoverable={false}
-  margins={
-    Object {
-      "bottom": 2,
-      "left": 2,
-      "right": 2,
-      "top": 2,
-    }
-  }
->
-  <styled.div>
-    <Avatar
-      imageUrl="www.example.com"
-      initials="JW"
-      size="medium"
-      statusDot="indigo"
-    />
-  </styled.div>
-  <styled.div>
-    <styled.span
-      isCompact={false}
-      primaryColor="#262D33"
-      primaryWeight={400}
-      textType="body"
-    >
-      John Wick
-    </styled.span>
-    <styled.span
-      isCompact={false}
-      secondaryColor="#424F5C"
-      secondaryWeight={400}
-      textType="small"
-    >
-      Guy Killer
-    </styled.span>
-    <styled.span
-      isCompact={false}
-      textType="xsmall"
-    >
-      In Cinemas 2019
-    </styled.span>
-  </styled.div>
-</styled.div>
-`;
-
-exports[`<AvatarEntity /> should render a avatar entity with specific text type 1`] = `
-<styled.div
-  className="avatar-entity"
-  isHoverable={true}
-  margins={
-    Object {
-      "bottom": 2,
-      "left": 2,
-      "right": 2,
-      "top": 2,
-    }
-  }
->
-  <styled.div>
-    <Avatar
-      initials="JW"
-      size="medium"
-      statusDot="indigo"
-    />
-  </styled.div>
-  <styled.div>
-    <styled.span
-      isCompact={false}
-      primaryColor="#262D33"
-      primaryWeight={400}
-      textType="heading"
-    >
-      John Wick
-    </styled.span>
-    <styled.span
-      isCompact={false}
-      secondaryColor="#424F5C"
-      secondaryWeight={400}
-      textType="body"
-    >
-      Guy Killer
-    </styled.span>
-    <styled.span
-      isCompact={false}
-      textType="small"
-    >
-      Job Ending in 3 days
-    </styled.span>
-  </styled.div>
-</styled.div>
-`;
-
 exports[`<AvatarEntity /> should render a basic avatar entity 1`] = `
 <styled.div
-  className="avatar-entity"
+  data-component-type="avatar_entity"
   isHoverable={false}
-  margins={
-    Object {
-      "bottom": 2,
-      "left": 2,
-      "right": 2,
-      "top": 2,
-    }
-  }
 >
-  <styled.div>
-    <Avatar
-      initials="JW"
-      size="medium"
-    />
-  </styled.div>
-  <styled.div>
+  <styled.div
+    size="normal"
+  >
     <styled.span
-      isCompact={false}
-      primaryColor="#262D33"
-      primaryWeight={400}
-      textType="body"
+      size="normal"
     >
-      John Wick
+      <Avatar
+        initials="JW"
+        size="medium"
+      />
     </styled.span>
+    <styled.div
+      size="normal"
+    >
+      <Text
+        color="#262D33"
+        isInline={true}
+        isTruncated={true}
+        tag="span"
+        type="body"
+      >
+        John Wick
+      </Text>
+    </styled.div>
   </styled.div>
 </styled.div>
 `;
 
-exports[`<AvatarEntity /> should render a basic compact avatar entity 1`] = `
+exports[`<AvatarEntity /> should render a normal compact avatar entity 1`] = `
 <styled.div
-  className="avatar-entity"
+  data-component-type="avatar_entity"
   isHoverable={false}
-  margins={
-    Object {
-      "bottom": 2,
-      "left": 2,
-      "right": 2,
-      "top": 2,
-    }
-  }
 >
-  <styled.div>
-    <Avatar
-      initials="JW"
-      size="small"
-    />
-  </styled.div>
-  <styled.div>
+  <styled.div
+    size="normalCompact"
+  >
     <styled.span
-      isCompact={true}
-      primaryColor="#262D33"
-      primaryWeight={400}
-      textType="body"
+      size="normalCompact"
     >
-      John Wick
+      <Avatar
+        initials="JW"
+        size="medium"
+      />
     </styled.span>
+    <styled.div
+      size="normalCompact"
+    >
+      <Text
+        color="#262D33"
+        isInline={true}
+        isTruncated={true}
+        tag="span"
+        type="small"
+      >
+        John Wick
+      </Text>
+    </styled.div>
   </styled.div>
 </styled.div>
 `;
 
-exports[`<AvatarEntity /> should render a compact avatar entity with lots of data 1`] = `
+exports[`<AvatarEntity /> should render a small avatar entity 1`] = `
 <styled.div
-  className="avatar-entity"
+  data-component-type="avatar_entity"
   isHoverable={false}
-  margins={
-    Object {
-      "bottom": 2,
-      "left": 2,
-      "right": 2,
-      "top": 2,
-    }
-  }
 >
-  <styled.div>
-    <Avatar
-      imageUrl="www.example.com"
-      initials="JW"
+  <styled.div
+    size="small"
+  >
+    <styled.span
       size="small"
-      statusDot="indigo"
-    />
+    >
+      <Avatar
+        imageUrl="www.example.com"
+        initials="JW"
+        size="small"
+        statusDot="indigo"
+      />
+    </styled.span>
+    <styled.div
+      size="small"
+    >
+      <Text
+        color="#262D33"
+        isInline={true}
+        isTruncated={true}
+        tag="span"
+        type="small"
+      >
+        John Wick
+      </Text>
+      <Text
+        color="#424F5C"
+        isInline={true}
+        isTruncated={true}
+        tag="span"
+        type="xsmall"
+      >
+        Guy Killer
+      </Text>
+    </styled.div>
   </styled.div>
-  <styled.div>
-    <styled.span
-      isCompact={true}
-      primaryColor="#262D33"
-      primaryWeight={400}
-      textType="body"
+  <styled.div
+    size="small"
+  >
+    <Text
+      color="#424F5C"
+      isInline={false}
+      isTruncated={true}
+      tag="span"
+      type="xsmall"
     >
-      John Wick
-    </styled.span>
+      In Cinemas 2019
+    </Text>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<AvatarEntity /> should render a small compact avatar entity 1`] = `
+<styled.div
+  data-component-type="avatar_entity"
+  isHoverable={false}
+>
+  <styled.div
+    size="smallCompact"
+  >
     <styled.span
-      isCompact={true}
-      secondaryColor="#424F5C"
-      secondaryWeight={400}
-      textType="small"
+      size="smallCompact"
     >
-      (Guy Killer)
+      <Avatar
+        imageUrl="www.example.com"
+        initials="JW"
+        size="medium"
+        statusDot="indigo"
+      />
     </styled.span>
+    <styled.div
+      size="smallCompact"
+    >
+      <Text
+        color="#262D33"
+        isInline={true}
+        isTruncated={true}
+        tag="span"
+        type="small"
+      >
+        John Wick
+      </Text>
+      <Text
+        color="#424F5C"
+        isInline={true}
+        isTruncated={true}
+        margins={
+          Object {
+            "left": 8,
+          }
+        }
+        tag="span"
+        type="xsmall"
+      >
+        (Guy Killer)
+      </Text>
+    </styled.div>
   </styled.div>
 </styled.div>
 `;

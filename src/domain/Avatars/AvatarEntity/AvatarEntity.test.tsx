@@ -1,9 +1,8 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { Props } from '../../../common'
 import { AvatarStatusDotColor } from '../Avatar'
-import { AvatarEntity } from './AvatarEntity'
+import { AvatarEntity, AvatarEntitySize } from './AvatarEntity'
 
 describe('<AvatarEntity />', () => {
   it(`should render a basic avatar entity`, () => {
@@ -17,9 +16,10 @@ describe('<AvatarEntity />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a avatar entity with lots of data`, () => {
+  it(`should render a small avatar entity`, () => {
     const wrapper = shallow(
       <AvatarEntity
+        size={AvatarEntitySize.Small}
         initials='JW'
         imageUrl='www.example.com'
         statusDot={AvatarStatusDotColor.Indigo}
@@ -32,46 +32,28 @@ describe('<AvatarEntity />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a basic compact avatar entity`, () => {
+  it(`should render a normal compact avatar entity`, () => {
     const wrapper = shallow(
       <AvatarEntity
+        size={AvatarEntitySize.NormalCompact}
         initials='JW'
         primaryText='John Wick'
-        isCompact
       />
     )
 
     expect(wrapper).toMatchSnapshot()
   })
 
-  it(`should render a avatar entity with specific text type`, () => {
+  it(`should render a small compact avatar entity`, () => {
     const wrapper = shallow(
       <AvatarEntity
-        initials='JW'
-        statusDot={AvatarStatusDotColor.Indigo}
-        primaryText='John Wick'
-        secondaryText='Guy Killer'
-        tertiaryText='Job Ending in 3 days'
-        isHoverable
-        primaryTextType={Props.TypographyType.Heading}
-        secondaryTextType={Props.TypographyType.Body}
-        tertiaryTextType={Props.TypographyType.Small}
-      />
-    )
-
-    expect(wrapper).toMatchSnapshot()
-  })
-
-  it(`should render a compact avatar entity with lots of data`, () => {
-    const wrapper = shallow(
-      <AvatarEntity
+        size={AvatarEntitySize.SmallCompact}
         initials='JW'
         imageUrl='www.example.com'
         statusDot={AvatarStatusDotColor.Indigo}
         primaryText='John Wick'
         secondaryText='Guy Killer'
         tertiaryText='In Cinemas 2019'
-        isCompact
       />
     )
 
