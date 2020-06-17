@@ -68,7 +68,7 @@ import { FontAwesomeIcon } from '@Domain/Icons';
 
 <>
   <AvatarEntity
-    size='noramlCompact'
+    size='normalCompact'
     initials='JW'
     statusDot={AvatarStatusDotColor.Indigo}
     primaryText='John Wick'

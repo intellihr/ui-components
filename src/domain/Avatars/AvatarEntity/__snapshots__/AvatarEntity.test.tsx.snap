@@ -137,7 +137,7 @@ exports[`<AvatarEntity /> should render a small compact avatar entity 1`] = `
       <Avatar
         imageUrl="www.example.com"
         initials="JW"
-        size="medium"
+        size="small"
         statusDot="indigo"
       />
     </styled.span>
