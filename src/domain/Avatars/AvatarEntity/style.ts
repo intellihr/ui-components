@@ -2,120 +2,81 @@ import styled, { css } from 'styled-components'
 
 import { Props, Variables } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
-import { styleForTruncatedText, styleForTypographyType } from '../../Typographies/services/textStyles'
+import { styleForTruncatedText } from '../../Typographies/services/textStyles'
+import { AvatarEntitySize } from './AvatarEntity'
 
-interface IAvatarEntityWrapper {
-  className?: string,
-  isHoverable?: boolean,
+interface IMainContentWrapperProps {
+  size: AvatarEntitySize
+}
+
+interface IStyledAvatarEntityProps {
+  isHoverable: boolean,
   margins?: Props.IMargins
 }
 
-interface IPrimaryTextWrapper {
-  isCompact?: boolean
-  textType: Props.TypographyType
-  primaryColor: Variables.Color
-  primaryWeight: Variables.FontWeight
+interface IAvatarEntityInfoProps {
+  size: AvatarEntitySize
 }
 
-interface ISecondaryTextWrapper {
-  isCompact?: boolean
-  textType: Props.TypographyType
-  secondaryColor: Variables.Color
-  secondaryWeight: Variables.FontWeight
+interface IStyledAvatarProps {
+  size: AvatarEntitySize
 }
 
-interface ITextWrapper {
-  isCompact?: boolean
-  textType: Props.TypographyType
+interface IStyledTertiaryTextProps {
+  size: AvatarEntitySize
 }
 
-const AvatarEntityWrapper = styled.div`
-  align-items: center;
-  display: flex;
-  color: ${Variables.Color.n700};
-  ${(props: IAvatarEntityWrapper) => styleForMargins(props.margins)}
-
-  ${(props: IAvatarEntityWrapper) => {
-    if (props.isHoverable) {
-      return css`
-        &:hover {
-          color: ${Variables.Color.i400};
-          cursor: pointer;
-        }
-      `
-    }
-  }}
-}
+// use height in avatar-medium or avatar-small
+const StyledAvatar = styled.span`
+  ${(props: IStyledAvatarProps) => css`
+    height: ${(props.size === AvatarEntitySize.Normal || props.size === AvatarEntitySize.NormalCompact) ? 40 :  30}px;
+  `}
 `
 
-const AvatarContainer = styled.div`
-  align-self: start;
-  position: relative;
+const StyledAvatarEntity = styled.div`
+  ${(props: IStyledAvatarEntityProps) => styleForMargins(props.margins)}
+  ${(props: IStyledAvatarEntityProps) => props.isHoverable && css`
+    &:hover {
+      color: ${Variables.Color.i400};
+      cursor: pointer;
+    }
+  `}
+`
+
+// We're using magic numbers here to align the tertiary text with the primary and secondary text because it sits outside of the main avatar entity content
+const StyledTertiaryText = styled.div`
+  ${(props: IStyledTertiaryTextProps) => css`
+    margin-left: ${(props.size === AvatarEntitySize.Normal || props.size === AvatarEntitySize.NormalCompact) ? 48 : 38}px;
+  `}
+  ${styleForTruncatedText()}
+`
+
+const MainContentWrapper = styled.div`
   display: flex;
+  align-items: center;
+  color: ${Variables.Color.n700};
+
+  ${(props: IMainContentWrapperProps) => css`
+      height: ${(props.size === AvatarEntitySize.Normal || props.size === AvatarEntitySize.NormalCompact) ? Variables.LineHeight.lhSmall + Variables.LineHeight.lhBody :  Variables.LineHeight.lhSmall + Variables.LineHeight.lhXSmall}px;
+  `}
+}
 `
 
 const AvatarEntityInfo = styled.div`
   overflow: hidden;
-  padding-left: 10px;
-  align-self: center;
-`
-
-const PrimaryTextWrapper = styled.span`
-  ${(props: IPrimaryTextWrapper) => styleForTypographyType(props.textType)}
-  color: ${(props: IPrimaryTextWrapper) => props.primaryColor};
-  font-weight: ${(props: IPrimaryTextWrapper) => props.primaryWeight};
-
-  ${(props: IPrimaryTextWrapper) => {
-    if (!props.isCompact) {
-      return css`
-        display: block;
-      `
-    }
-  }}
-  ${styleForTruncatedText()}
-`
-
-const SecondaryTextWrapper = styled.span`
-  ${(props: ISecondaryTextWrapper) => styleForTypographyType(props.textType)}
-  color: ${(props: ISecondaryTextWrapper) => props.secondaryColor};
-  font-weight: ${(props: ISecondaryTextWrapper) => props.secondaryWeight};
-
-  margin-top: 2px;
-  margin-left: ${(props: ISecondaryTextWrapper) => props.isCompact ? '5px' : '0px'};
-
-  ${styleForTruncatedText()}
-
-  ${(props: ISecondaryTextWrapper) => {
-  if (!props.isCompact) {
-    return css`
-        display: block;
-      `
-    }
-}}
-`
-
-const TertiaryTextWrapper = styled.span`
-  ${(props: ITextWrapper) => styleForTypographyType(props.textType)}
-  font-weight: ${Variables.FontWeight.fwSemiBold};
-
-  ${styleForTruncatedText()}
-
-  ${(props: ITextWrapper) => {
-    if (!props.isCompact) {
-      return css`
-        display: block;
-      `
-    }
-  }}
+  padding-left: ${Variables.Spacing.sXSmall}px;
+  display: flex;
+  flex-direction: column;
+  ${(props: IAvatarEntityInfoProps) => (props.size === AvatarEntitySize.NormalCompact || props.size === AvatarEntitySize.SmallCompact) && css`
+    flex-direction: row;
+    align-items: center;
+  `}
 `
 
 export {
-  IAvatarEntityWrapper,
-  ITextWrapper,
-  AvatarEntityWrapper,
-  AvatarContainer,
+  StyledAvatarEntity,
+  MainContentWrapper,
   AvatarEntityInfo,
-  PrimaryTextWrapper,
-  SecondaryTextWrapper,
-  TertiaryTextWrapper
+  StyledAvatar,
+  StyledTertiaryText
 }

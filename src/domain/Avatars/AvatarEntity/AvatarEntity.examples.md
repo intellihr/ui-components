@@ -4,166 +4,111 @@
 import { Props } from '@Common';
 import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
 
+<>
   <AvatarEntity
     initials='JW'
     statusDot={AvatarStatusDotColor.Indigo}
     primaryText='John Wick'
   />
-```
-
-```jsx
-import { Props } from '@Common';
-import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
-
   <AvatarEntity
     initials='JW'
     statusDot={AvatarStatusDotColor.Indigo}
     primaryText='John Wick'
     secondaryText='Guy Killer'
   />
-```
-
-```jsx
-import { Props, Variables } from '@Common';
-import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
-import { FontAwesomeIcon } from '@Domain/Icons';
-
   <AvatarEntity
     initials='JW'
     statusDot={AvatarStatusDotColor.Indigo}
-    statusIcon={
-      <FontAwesomeIcon type='solid' icon='arrow-right' color={Variables.Color.i400} size='small'/>
-    }
     primaryText='John Wick'
     secondaryText='Guy Killer'
     tertiaryText='Job Ending in 3 days'
   />
+</>
 ```
 
-#### Compact
+#### Small AvatarEntity
 
 ```jsx
 import { Props } from '@Common';
 import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
 
+<>
   <AvatarEntity
-    initials='JW'
-    statusDot={AvatarStatusDotColor.Green}
-    primaryText='John Wick'
-    isCompact
-  />
-```
-
-
-```jsx
-import { Props, Variables } from '@Common';
-import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
-import { FontAwesomeIcon } from '@Domain/Icons';
-
-  <AvatarEntity
-    initials='JW'
-    statusDot={AvatarStatusDotColor.Green}
-    statusIcon={
-      <FontAwesomeIcon type='solid' icon='arrow-right' color={Variables.Color.i400} size='xsmall' />
-    }
-    primaryText='John Wick'
-    secondaryText='Guy Killer'
-    isCompact
-  />
-```
-
-#### isHoverable
-
-```jsx
-import { Props, Variables } from '@Common';
-import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
-import { FontAwesomeIcon } from '@Domain/Icons';
-
-  <AvatarEntity
+    size='small'
     initials='JW'
     statusDot={AvatarStatusDotColor.Indigo}
-    statusIcon={
-      <FontAwesomeIcon type='solid' icon='arrow-right' color={Variables.Color.i400} size='small'/>
-    }
+    primaryText='John Wick'
+  />
+  <AvatarEntity
+    size='small'
+    initials='JW'
+    statusDot={AvatarStatusDotColor.Indigo}
+    primaryText='John Wick'
+    secondaryText='Guy Killer'
+  />
+  <AvatarEntity
+    size='small'
+    initials='JW'
+    statusDot={AvatarStatusDotColor.Indigo}
     primaryText='John Wick'
     secondaryText='Guy Killer'
     tertiaryText='Job Ending in 3 days'
-    isHoverable
   />
+</>
 ```
 
+#### Compact AvatarEntity
+
+Compact style will hide the tertiary text and put primary text and secondary text on one line
+
 ```jsx
+import { Props, Variables } from '@Common';
+import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
 import { FontAwesomeIcon } from '@Domain/Icons';
 
+<>
   <AvatarEntity
+    size='noramlCompact'
     initials='JW'
+    statusDot={AvatarStatusDotColor.Indigo}
     primaryText='John Wick'
     secondaryText='Guy Killer'
-    isCompact
-    isHoverable
+    tertiaryText='Job Ending in 3 days'
   />
+  <AvatarEntity
+    size='smallCompact'
+    initials='JW'
+    statusDot={AvatarStatusDotColor.Indigo}
+    primaryText='John Wick'
+    secondaryText='Guy Killer'
+    tertiaryText='Job Ending in 3 days'
+  />
+</>
 ```
 
-#### Customised text type
+#### Hoverable AvatarEntity
 
 ```jsx
 import { Props } from '@Common';
 import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
 
-     <AvatarEntity
-       initials='JW'
-       statusDot={AvatarStatusDotColor.Indigo}
-       primaryText='John Wick'
-       secondaryText='Guy Killer'
-       isHoverable
-       primaryTextType={Props.TypographyType.Small}
-       secondaryTextType={Props.TypographyType.Small}
-       isCompact
-     />
+<AvatarEntity
+  initials='JW'
+  statusDot={AvatarStatusDotColor.Green}
+  primaryText='John Wick'
+  isHoverable
+/>
 ```
 
-```jsx
-import { Props } from '@Common';
-import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
-
-     <AvatarEntity
-       initials='JW'
-       statusDot={AvatarStatusDotColor.Indigo}
-       primaryText='John Wick'
-       secondaryText='Guy Killer'
-       tertiaryText='Job Ending in 3 days'
-       isHoverable
-        primaryTextType={Props.TypographyType.Heading}
-        secondaryTextType={Props.TypographyType.Body}
-        tertiaryTextType={Props.TypographyType.Small}
-     />
-```
-
-#### Very long name and position title
+#### Label are truncated to support long text
+It requires the parent has hidden override css style.
 
 ```jsx
   <AvatarEntity
     initials='JW'
     primaryText='I have a very very long name and I do not want the style to break because of my very very long name'
     secondaryText='I have a very very long position title and I do not want the style to break because of it'
-  />
-```
-
-#### Colored & Weighted Text
-
-```jsx
-import { Props, Variables } from '@Common';
-import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
-
-  <AvatarEntity
-    initials='JW'
-    statusDot={AvatarStatusDotColor.Indigo}
-    primaryText='John Wick'
-    primaryWeight={Variables.FontWeight.fwBold}
-    primaryColor={Variables.Color.b600}
-    secondaryText='Guy Killer'
-    secondaryWeight={Variables.FontWeight.fwSemiBold}
-    secondaryColor={Variables.Color.b300}
+    tertiaryText='I have a very very long position title and I do not want the style to break because of it'
   />
 ```
 
@@ -190,7 +135,6 @@ These should be avoided where possible, but are provided as legacy non-javascrip
       </div>
     </div>
   </div>
-
   <div class="grid-x person-tag">
     <div class="avatar-container">
       <span class="initials-badge badge-medium">

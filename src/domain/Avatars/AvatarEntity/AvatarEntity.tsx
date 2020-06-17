@@ -1,16 +1,21 @@
 import React from 'react'
 
-import { Avatar } from '../'
 import { Props, Variables } from '../../../common'
-import { AvatarStatusDotColor } from '../Avatar'
+import { Text } from '../../Typographies/Text'
+import {Avatar, AvatarStatusDotColor} from '../Avatar'
 import {
-  AvatarContainer,
   AvatarEntityInfo,
-  AvatarEntityWrapper,
-  PrimaryTextWrapper,
-  SecondaryTextWrapper,
-  TertiaryTextWrapper
+  MainContentWrapper,
+  StyledAvatar,
+  StyledAvatarEntity, StyledTertiaryText
 } from './style'
+
+enum AvatarEntitySize {
+  Small = 'small',
+  Normal = 'normal',
+  SmallCompact = 'smallCompact',
+  NormalCompact = 'normalCompact'
+}
 
 export interface IAvatarEntityProps {
   /** The primary text */
@@ -19,24 +24,10 @@ export interface IAvatarEntityProps {
   secondaryText?: string
   /** The tertiary text */
   tertiaryText?: string
-  /** If true, displays AvatarEntity in a compact view */
-  isCompact?: boolean
+  /** Specify the size of avatar entity to use */
+  size?: AvatarEntitySize
   /** If true, will display a hover state style when hovered */
   isHoverable?: boolean
-  /** The primary text type  */
-  primaryTextType?: Props.TypographyType
-  /** The secondary text type  */
-  secondaryTextType?: Props.TypographyType
-  /** The tertiary text type  */
-  tertiaryTextType?: Props.TypographyType
-  /** Specify the primary text font weight */
-  primaryWeight?: Variables.FontWeight
-  /** Specify the secondary text font weight */
-  secondaryWeight?: Variables.FontWeight
-  /** Color of the primary text */
-  primaryColor?: Variables.Color
-  /** Color of the secondary text */
-  secondaryColor?: Variables.Color
   /** Margins around the component */
   margins?: Props.IMargins
   /** Initials to display if no valid `imageUrl` or `imageData` is passed to Avatar */
@@ -45,27 +36,15 @@ export interface IAvatarEntityProps {
   imageUrl?: string
   /** Display a coloured status dot on the avatar */
   statusDot?: AvatarStatusDotColor | 'primary' | 'secondary' | 'success' | 'warning' | 'alert' | 'neutral' | 'highlight' | 'dark'
-  /** Display an icon component on the avatar */
-  statusIcon?: JSX.Element
+  /** The component context */
+  componentContext?: string
 }
 
-export class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
+class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
+  public static Size = AvatarEntitySize
   public static defaultProps: Partial<IAvatarEntityProps> = {
-    isCompact: false,
     isHoverable: false,
-    primaryTextType: Props.TypographyType.Body,
-    secondaryTextType: Props.TypographyType.Small,
-    tertiaryTextType: Props.TypographyType.XSmall,
-    primaryWeight: Variables.FontWeight.fwNormal,
-    secondaryWeight: Variables.FontWeight.fwNormal,
-    primaryColor: Variables.Color.n800,
-    secondaryColor: Variables.Color.n700,
-    margins: {
-      top: Variables.Spacing.s3XSmall,
-      bottom: Variables.Spacing.s3XSmall,
-      left: Variables.Spacing.s3XSmall,
-      right: Variables.Spacing.s3XSmall
-    }
+    size: AvatarEntitySize.Normal
   }
 
   get avatar (): JSX.Element {
@@ -73,51 +52,44 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
       initials,
       imageUrl,
       statusDot,
-      statusIcon,
-      isCompact
+      size
     } = this.props
 
     return (
-      <AvatarContainer>
+      <StyledAvatar
+        size={size}
+      >
         <Avatar
           initials={initials}
           imageUrl={imageUrl}
           statusDot={statusDot}
-          statusIcon={statusIcon}
-          size={isCompact ? Props.AvatarSize.Small : Props.AvatarSize.Medium}
+          size={size === AvatarEntitySize.Small ? Props.AvatarSize.Small : Props.AvatarSize.Medium}
         />
-      </AvatarContainer>
+      </StyledAvatar>
     )
   }
 
   get primaryText (): JSX.Element {
     const {
       primaryText,
-      isCompact,
-      primaryTextType,
-      primaryColor,
-      primaryWeight
+      size
     } = this.props
 
     return (
-      <PrimaryTextWrapper
-        textType={primaryTextType!}
-        isCompact={isCompact}
-        primaryColor={primaryColor!}
-        primaryWeight={primaryWeight!}
+      <Text
+        isTruncated
+        color={Variables.Color.n800}
+        type={size === AvatarEntitySize.Normal ? Props.TypographyType.Body : Props.TypographyType.Small}
       >
         {primaryText}
-      </PrimaryTextWrapper>
+      </Text>
     )
   }
 
   get secondaryText (): JSX.Element | null {
     const {
       secondaryText,
-      isCompact,
-      secondaryTextType,
-      secondaryColor,
-      secondaryWeight
+      size
     } = this.props
 
     if (!secondaryText) {
@@ -126,62 +98,81 @@ export class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
 
     let text = secondaryText
 
-    if (isCompact) {
+    if (size === AvatarEntitySize.NormalCompact || size === AvatarEntitySize.SmallCompact) {
       text = `(${text})`
     }
 
     return (
-      <SecondaryTextWrapper
-        textType={secondaryTextType!}
-        isCompact={isCompact}
-        secondaryColor={secondaryColor!}
-        secondaryWeight={secondaryWeight!}
+      <Text
+        isTruncated
+        color={Variables.Color.n700}
+        margins={size === AvatarEntitySize.NormalCompact || size === AvatarEntitySize.SmallCompact ? { left: Variables.Spacing.sXSmall } : undefined}
+        type={size === AvatarEntitySize.Normal ? Props.TypographyType.Small : Props.TypographyType.XSmall}
       >
         {text}
-      </SecondaryTextWrapper>
+      </Text>
     )
   }
 
   get tertiaryText (): JSX.Element | null {
     const {
       tertiaryText,
-      isCompact,
-      tertiaryTextType
+      size
     } = this.props
 
-    if (!tertiaryText || isCompact) {
+    if (!tertiaryText || size === AvatarEntitySize.NormalCompact || size === AvatarEntitySize.SmallCompact) {
       return null
     }
 
     return (
-        <TertiaryTextWrapper
-          textType={tertiaryTextType!}
-          isCompact={isCompact}
+      <StyledTertiaryText
+        size={size}
+      >
+        <Text
+          isInline={false}
+          isTruncated
+          color={Variables.Color.n700}
+          type={size === AvatarEntitySize.Normal ? Props.TypographyType.Small : Props.TypographyType.XSmall}
         >
           {tertiaryText}
-        </TertiaryTextWrapper>
+        </Text>
+      </StyledTertiaryText>
     )
   }
 
   public render (): JSX.Element {
     const {
       isHoverable,
-      margins
+      margins,
+      componentContext,
+      size
     } = this.props
 
-    return (
-      <AvatarEntityWrapper
-        className='avatar-entity'
-        isHoverable={isHoverable}
+    return(
+      <StyledAvatarEntity
+        data-component-type={Props.ComponentType.AvatarEntity}
+        data-component-context={componentContext}
         margins={margins}
+        isHoverable={isHoverable}
       >
-        {this.avatar}
-        <AvatarEntityInfo>
-          {this.primaryText}
-          {this.secondaryText}
-          {this.tertiaryText}
-        </AvatarEntityInfo>
-      </AvatarEntityWrapper>
+        <MainContentWrapper
+          size={size}
+        >
+          {this.avatar}
+          <AvatarEntityInfo
+            size={size}
+          >
+            {this.primaryText}
+            {this.secondaryText}
+          </AvatarEntityInfo>
+        </MainContentWrapper>
+        {this.tertiaryText}
+      </StyledAvatarEntity>
     )
   }
+}
+
+export {
+  AvatarEntity,
+  AvatarEntitySize
 }
