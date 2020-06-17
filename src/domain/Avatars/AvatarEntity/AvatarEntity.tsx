@@ -63,7 +63,7 @@ class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
           initials={initials}
           imageUrl={imageUrl}
           statusDot={statusDot}
-          size={size === AvatarEntitySize.Small ? Props.AvatarSize.Small : Props.AvatarSize.Medium}
+          size={(size === AvatarEntitySize.Small || size === AvatarEntitySize.SmallCompact) ? Props.AvatarSize.Small : Props.AvatarSize.Medium}
         />
       </StyledAvatar>
     )
