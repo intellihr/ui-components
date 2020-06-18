@@ -100,6 +100,21 @@ exports[`<Field /> should render a vertical form field with a single error messa
 </styled.div>
 `;
 
+exports[`<Field /> should render a vertical form field with conditional label 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.label
+      conditionLabel="only test"
+      htmlFor="testInput"
+      isRequired={false}
+    >
+      This is a test input
+    </styled.label>
+  </styled.div>
+  Children
+</styled.div>
+`;
+
 exports[`<Field /> should render a vertical form field with error messages 1`] = `
 <styled.div>
   <styled.div>

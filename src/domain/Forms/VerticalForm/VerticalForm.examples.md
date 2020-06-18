@@ -317,3 +317,34 @@ initialState = { textInputValue: '' };
         </VerticalForm.RightAlignControls>
   </VerticalForm>
 ```
+
+Field with condition label
+
+```jsx
+import { ButtonGroup, Button } from '@Domain/Buttons';
+import { TextInput } from '@Domain/Inputs';
+
+initialState = { textInputValue: '' };
+
+  <VerticalForm
+    onSubmit={() => alert(`Test input: ${state.textInputValue}`)}
+  >
+    <VerticalForm.Field
+      inputName='testInput'
+      label='This is a test input'
+      conditionLabel='only test condition'
+    >
+      <TextInput
+        name='testInput'
+        handleChange={(e) => setState({ textInputValue: e.target.value })}
+      />
+    </VerticalForm.Field>
+    <VerticalForm.RightAlignControls>
+      <Button
+         type='primary'
+      >
+        Submit me :)
+      </Button>
+    </VerticalForm.RightAlignControls>
+  </VerticalForm>
+```

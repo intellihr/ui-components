@@ -5,6 +5,7 @@ import { styleForMargins } from '../../../Spacers/services/margins'
 
 interface IStyledInputLabelProps {
   isRequired: boolean
+  conditionLabel?: string
 }
 
 interface IFieldWrapperProps {
@@ -52,6 +53,16 @@ const StyledInputLabel = styled.label`
       }
     `
   }}
+
+  ${(props: IStyledInputLabelProps) => props.conditionLabel && css`
+      &::after {
+        color: ${Variables.Color.n400};
+        content: " -  ${props.conditionLabel}";
+        font-size: ${Variables.FontSize.fzSmall}px;
+        font-style: italic;
+      }
+    `
+}}
 `
 
 const StyledDescription = styled.div`

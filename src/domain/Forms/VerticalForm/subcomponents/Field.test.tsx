@@ -137,4 +137,18 @@ describe('<Field />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it(`should render a vertical form field with conditional label`, () => {
+    const wrapper = shallow(
+      <Field
+        inputName='testInput'
+        label='This is a test input'
+        conditionLabel='only test'
+      >
+        Children
+      </Field>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })
