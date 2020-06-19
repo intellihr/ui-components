@@ -23,6 +23,8 @@ interface IVerticalFormFieldProps {
   isRequired?: boolean
   /** Text displayed above the input */
   label?: string
+  /** Arbitrary text displayed after the label, it will replace the required label when isRequired is true */
+  labelSuffix?: string
   /** Descriptive text displayed above the input */
   description?: string
   /** action text link displayed below the input */
@@ -84,7 +86,8 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
     const {
       inputName,
       isRequired,
-      label
+      label,
+      labelSuffix
     } = this.props
 
     if (label) {
@@ -92,6 +95,7 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
         <StyledInputLabel
           htmlFor={inputName}
           isRequired={isRequired!}
+          labelSuffix={labelSuffix}
         >
           {label}
           {this.tooltip}

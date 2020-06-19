@@ -121,6 +121,21 @@ exports[`<Field /> should render a vertical form field with error messages 1`] =
 </styled.div>
 `;
 
+exports[`<Field /> should render a vertical form field with label suffix 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.label
+      htmlFor="testInput"
+      isRequired={false}
+      labelSuffix="only test"
+    >
+      This is a test input
+    </styled.label>
+  </styled.div>
+  Children
+</styled.div>
+`;
+
 exports[`<Field /> should render a vertical form field with nothing 1`] = `<styled.div />`;
 
 exports[`<Field /> should render a vertical form field with regular props 1`] = `
