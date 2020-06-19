@@ -318,25 +318,59 @@ initialState = { textInputValue: '' };
   </VerticalForm>
 ```
 
-Field with condition label
+Field with label suffix
 
 ```jsx
 import { ButtonGroup, Button } from '@Domain/Buttons';
-import { TextInput } from '@Domain/Inputs';
+import { SelectInput } from '@Domain/Inputs';
 
-initialState = { textInputValue: '' };
+initialState = { people: [], parentGoalId: '' };
 
   <VerticalForm
-    onSubmit={() => alert(`Test input: ${state.textInputValue}`)}
   >
     <VerticalForm.Field
-      inputName='testInput'
-      label='This is a test input'
-      conditionLabel='only test condition'
+      inputName='people'
+      label='Set Goal for'
     >
-      <TextInput
-        name='testInput'
-        handleChange={(e) => setState({ textInputValue: e.target.value })}
+      <SelectInput
+        name='people'
+        value={state.people}
+        options={[
+          {
+            label: 'Lyanna Moreton',
+            value: 1
+          },
+          {
+            label: 'Donna Summer',
+            value: 2
+          }
+        ]}
+        onChange={value => { value.length > 1 ? setState({ people: value, parentGoalId:'' }) : setState({ people: value })  }}
+        isMultiSelect
+      />
+    </VerticalForm.Field>
+    <VerticalForm.Field
+      inputName='parentGoalId'
+      label='Parent Goal'
+      labelSuffix='individuals only'
+      tooltipMessage='Parent goals are related to an individual and cannot be selected for multiple people.'
+      tooltipProps={{width: 300}}
+    >
+      <SelectInput
+        isDisabled={state.people.length > 1}
+        name='parentGoalId'
+        value={state.parentGoalId}
+        options={[
+          {
+            label: 'Sale Goal',
+            value: 1
+          },
+          {
+            label: 'IT Goal',
+            value: 2
+          }
+        ]}
+        onChange={value => setState({ parentGoalId: value })}
       />
     </VerticalForm.Field>
     <VerticalForm.RightAlignControls>
