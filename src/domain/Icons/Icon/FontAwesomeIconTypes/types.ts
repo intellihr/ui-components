@@ -1,3 +1,9 @@
+/**
+ * The type FontAwesomeIconValue needs to be updated whenever new font awesome icons are introduced in an update.
+ * The value was generated on 23/06/2020 by visiting: https://fontawesome.com/icons?d=gallery&s=solid
+ * Clicking load more until all the icons were loaded, and running the following script to scrape all the icon names
+ * Array.from($('.list.ma0').querySelectorAll('.dib')).map((el) => `'${el.firstChild.firstChild.firstChild.className.split(' ')[1].substr(3)}'`).join(" |\n")
+ */
 type FontAwesomeIconValue =
   'abacus' |
   'acorn' |
@@ -5,6 +11,7 @@ type FontAwesomeIconValue =
   'address-book' |
   'address-card' |
   'adjust' |
+  'air-conditioner' |
   'air-freshener' |
   'alarm-clock' |
   'alarm-exclamation' |
@@ -13,6 +20,8 @@ type FontAwesomeIconValue =
   'album' |
   'album-collection' |
   'alicorn' |
+  'alien' |
+  'alien-monster' |
   'align-center' |
   'align-justify' |
   'align-left' |
@@ -101,6 +110,8 @@ type FontAwesomeIconValue =
   'backspace' |
   'backward' |
   'bacon' |
+  'bacteria' |
+  'bacterium' |
   'badge' |
   'badge-check' |
   'badge-dollar' |
@@ -108,6 +119,7 @@ type FontAwesomeIconValue =
   'badge-sheriff' |
   'badger-honey' |
   'bags-shopping' |
+  'bahai' |
   'balance-scale' |
   'balance-scale-left' |
   'balance-scale-right' |
@@ -136,9 +148,13 @@ type FontAwesomeIconValue =
   'battery-slash' |
   'battery-three-quarters' |
   'bed' |
+  'bed-alt' |
+  'bed-bunk' |
+  'bed-empty' |
   'beer' |
   'bell' |
   'bell-exclamation' |
+  'bell-on' |
   'bell-plus' |
   'bell-school' |
   'bell-school-slash' |
@@ -157,6 +173,9 @@ type FontAwesomeIconValue =
   'blender' |
   'blender-phone' |
   'blind' |
+  'blinds' |
+  'blinds-open' |
+  'blinds-raised' |
   'blog' |
   'bold' |
   'bolt' |
@@ -202,6 +221,7 @@ type FontAwesomeIconValue =
   'box-full' |
   'box-heart' |
   'box-open' |
+  'box-tissue' |
   'box-up' |
   'box-usd' |
   'boxes' |
@@ -252,6 +272,7 @@ type FontAwesomeIconValue =
   'camcorder' |
   'camera' |
   'camera-alt' |
+  'camera-home' |
   'camera-movie' |
   'camera-polaroid' |
   'camera-retro' |
@@ -274,6 +295,8 @@ type FontAwesomeIconValue =
   'car-side' |
   'car-tilt' |
   'car-wash' |
+  'caravan' |
+  'caravan-alt' |
   'caret-circle-down' |
   'caret-circle-left' |
   'caret-circle-right' |
@@ -293,6 +316,7 @@ type FontAwesomeIconValue =
   'cash-register' |
   'cassette-tape' |
   'cat' |
+  'cat-space' |
   'cauldron' |
   'cctv' |
   'certificate' |
@@ -396,13 +420,16 @@ type FontAwesomeIconValue =
   'code-commit' |
   'code-merge' |
   'coffee' |
+  'coffee-pot' |
   'coffee-togo' |
   'coffin' |
+  'coffin-cross' |
   'cog' |
   'cogs' |
   'coin' |
   'coins' |
   'columns' |
+  'comet' |
   'comment' |
   'comment-alt' |
   'comment-alt-check' |
@@ -588,9 +615,12 @@ type FontAwesomeIconValue =
   'eye-evil' |
   'eye-slash' |
   'fan' |
+  'fan-table' |
   'farm' |
   'fast-backward' |
   'fast-forward' |
+  'faucet' |
+  'faucet-drip' |
   'fax' |
   'feather' |
   'feather-alt' |
@@ -667,11 +697,13 @@ type FontAwesomeIconValue =
   'flux-capacitor' |
   'fog' |
   'folder' |
+  'folder-download' |
   'folder-minus' |
   'folder-open' |
   'folder-plus' |
   'folder-times' |
   'folder-tree' |
+  'folder-upload' |
   'folders' |
   'font' |
   'font-case' |
@@ -688,11 +720,15 @@ type FontAwesomeIconValue =
   'function' |
   'funnel-dollar' |
   'futbol' |
+  'galaxy' |
   'game-board' |
   'game-board-alt' |
   'game-console-handheld' |
   'gamepad' |
   'gamepad-alt' |
+  'garage' |
+  'garage-car' |
+  'garage-open' |
   'gas-pump' |
   'gas-pump-slash' |
   'gavel' |
@@ -762,6 +798,7 @@ type FontAwesomeIconValue =
   'hand-holding-box' |
   'hand-holding-heart' |
   'hand-holding-magic' |
+  'hand-holding-medical' |
   'hand-holding-seedling' |
   'hand-holding-usd' |
   'hand-holding-water' |
@@ -777,13 +814,17 @@ type FontAwesomeIconValue =
   'hand-receiving' |
   'hand-rock' |
   'hand-scissors' |
+  'hand-sparkles' |
   'hand-spock' |
   'hands' |
   'hands-heart' |
   'hands-helping' |
   'hands-usd' |
+  'hands-wash' |
   'handshake' |
   'handshake-alt' |
+  'handshake-alt-slash' |
+  'handshake-slash' |
   'hanukiah' |
   'hard-hat' |
   'hashtag' |
@@ -794,12 +835,15 @@ type FontAwesomeIconValue =
   'hat-winter' |
   'hat-witch' |
   'hat-wizard' |
-  'haykal' |
   'hdd' |
   'head-side' |
   'head-side-brain' |
+  'head-side-cough' |
+  'head-side-cough-slash' |
   'head-side-headphones' |
+  'head-side-mask' |
   'head-side-medical' |
+  'head-side-virus' |
   'head-vr' |
   'heading' |
   'headphones' |
@@ -811,6 +855,7 @@ type FontAwesomeIconValue =
   'heart-rate' |
   'heart-square' |
   'heartbeat' |
+  'heat' |
   'helicopter' |
   'helmet-battle' |
   'hexagon' |
@@ -844,8 +889,15 @@ type FontAwesomeIconValue =
   'hourglass-end' |
   'hourglass-half' |
   'hourglass-start' |
+  'house' |
   'house-damage' |
+  'house-day' |
   'house-flood' |
+  'house-leave' |
+  'house-night' |
+  'house-return' |
+  'house-signal' |
+  'house-user' |
   'hryvnia' |
   'humidity' |
   'hurricane' |
@@ -901,11 +953,14 @@ type FontAwesomeIconValue =
   'knife-kitchen' |
   'lambda' |
   'lamp' |
+  'lamp-desk' |
+  'lamp-floor' |
   'landmark' |
   'landmark-alt' |
   'language' |
   'laptop' |
   'laptop-code' |
+  'laptop-house' |
   'laptop-medical' |
   'lasso' |
   'laugh' |
@@ -927,6 +982,10 @@ type FontAwesomeIconValue =
   'level-up' |
   'level-up-alt' |
   'life-ring' |
+  'light-ceiling' |
+  'light-switch' |
+  'light-switch-off' |
+  'light-switch-on' |
   'lightbulb' |
   'lightbulb-dollar' |
   'lightbulb-exclamation' |
@@ -964,6 +1023,7 @@ type FontAwesomeIconValue =
   'luchador' |
   'luggage-cart' |
   'lungs' |
+  'lungs-virus' |
   'mace' |
   'magic' |
   'magnet' |
@@ -1013,6 +1073,7 @@ type FontAwesomeIconValue =
   'microphone-slash' |
   'microphone-stand' |
   'microscope' |
+  'microwave' |
   'mind-share' |
   'minus' |
   'minus-circle' |
@@ -1072,6 +1133,8 @@ type FontAwesomeIconValue =
   'ornament' |
   'otter' |
   'outdent' |
+  'outlet' |
+  'oven' |
   'overline' |
   'page-break' |
   'pager' |
@@ -1110,6 +1173,7 @@ type FontAwesomeIconValue =
   'pencil-paintbrush' |
   'pencil-ruler' |
   'pennant' |
+  'people-arrows' |
   'people-carry' |
   'pepper-hot' |
   'percent' |
@@ -1144,6 +1208,9 @@ type FontAwesomeIconValue =
   'plane-alt' |
   'plane-arrival' |
   'plane-departure' |
+  'plane-slash' |
+  'planet-moon' |
+  'planet-ringed' |
   'play' |
   'play-circle' |
   'plug' |
@@ -1155,6 +1222,7 @@ type FontAwesomeIconValue =
   'podcast' |
   'podium' |
   'podium-star' |
+  'police-box' |
   'poll' |
   'poll-h' |
   'poll-people' |
@@ -1162,6 +1230,8 @@ type FontAwesomeIconValue =
   'poo-storm' |
   'poop' |
   'popcorn' |
+  'portal-enter' |
+  'portal-exit' |
   'portrait' |
   'pound-sign' |
   'power-off' |
@@ -1177,6 +1247,8 @@ type FontAwesomeIconValue =
   'procedures' |
   'project-diagram' |
   'projector' |
+  'pump-medical' |
+  'pump-soap' |
   'pumpkin' |
   'puzzle-piece' |
   'qrcode' |
@@ -1190,6 +1262,7 @@ type FontAwesomeIconValue =
   'rabbit' |
   'rabbit-fast' |
   'racquet' |
+  'radar' |
   'radiation' |
   'radiation-alt' |
   'radio' |
@@ -1199,6 +1272,7 @@ type FontAwesomeIconValue =
   'ram' |
   'ramp-loading' |
   'random' |
+  'raygun' |
   'receipt' |
   'record-vinyl' |
   'rectangle-landscape' |
@@ -1207,6 +1281,7 @@ type FontAwesomeIconValue =
   'recycle' |
   'redo' |
   'redo-alt' |
+  'refrigerator' |
   'registered' |
   'remove-format' |
   'repeat' |
@@ -1225,6 +1300,7 @@ type FontAwesomeIconValue =
   'road' |
   'robot' |
   'rocket' |
+  'rocket-launch' |
   'route' |
   'route-highway' |
   'route-interstate' |
@@ -1275,6 +1351,11 @@ type FontAwesomeIconValue =
   'seedling' |
   'send-back' |
   'send-backward' |
+  'sensor' |
+  'sensor-alert' |
+  'sensor-fire' |
+  'sensor-on' |
+  'sensor-smoke' |
   'server' |
   'shapes' |
   'share' |
@@ -1288,6 +1369,7 @@ type FontAwesomeIconValue =
   'shield-alt' |
   'shield-check' |
   'shield-cross' |
+  'shield-virus' |
   'ship' |
   'shipping-fast' |
   'shipping-timed' |
@@ -1324,6 +1406,9 @@ type FontAwesomeIconValue =
   'signal-stream' |
   'signature' |
   'sim-card' |
+  'sink' |
+  'siren' |
+  'siren-on' |
   'sitemap' |
   'skating' |
   'skeleton' |
@@ -1359,8 +1444,10 @@ type FontAwesomeIconValue =
   'snowman' |
   'snowmobile' |
   'snowplow' |
+  'soap' |
   'socks' |
   'solar-panel' |
+  'solar-system' |
   'sort' |
   'sort-alpha-down' |
   'sort-alpha-down-alt' |
@@ -1371,6 +1458,9 @@ type FontAwesomeIconValue =
   'sort-amount-down-alt' |
   'sort-amount-up' |
   'sort-amount-up-alt' |
+  'sort-circle' |
+  'sort-circle-down' |
+  'sort-circle-up' |
   'sort-down' |
   'sort-numeric-down' |
   'sort-numeric-down-alt' |
@@ -1388,6 +1478,8 @@ type FontAwesomeIconValue =
   'soup' |
   'spa' |
   'space-shuttle' |
+  'space-station-moon' |
+  'space-station-moon-alt' |
   'spade' |
   'sparkles' |
   'speaker' |
@@ -1400,6 +1492,7 @@ type FontAwesomeIconValue =
   'spinner-third' |
   'splotch' |
   'spray-can' |
+  'sprinkler' |
   'square' |
   'square-full' |
   'square-root' |
@@ -1415,7 +1508,12 @@ type FontAwesomeIconValue =
   'star-half-alt' |
   'star-of-david' |
   'star-of-life' |
+  'star-shooting' |
+  'starfighter' |
+  'starfighter-alt' |
   'stars' |
+  'starship' |
+  'starship-freighter' |
   'steak' |
   'steering-wheel' |
   'step-backward' |
@@ -1427,8 +1525,11 @@ type FontAwesomeIconValue =
   'stop' |
   'stop-circle' |
   'stopwatch' |
+  'stopwatch-20' |
   'store' |
   'store-alt' |
+  'store-alt-slash' |
+  'store-slash' |
   'stream' |
   'street-view' |
   'stretcher' |
@@ -1451,7 +1552,10 @@ type FontAwesomeIconValue =
   'swimmer' |
   'swimming-pool' |
   'sword' |
+  'sword-laser' |
+  'sword-laser-alt' |
   'swords' |
+  'swords-laser' |
   'synagogue' |
   'sync' |
   'sync-alt' |
@@ -1487,10 +1591,13 @@ type FontAwesomeIconValue =
   'taxi' |
   'teeth' |
   'teeth-open' |
+  'telescope' |
+  'temperature-down' |
   'temperature-frigid' |
   'temperature-high' |
   'temperature-hot' |
   'temperature-low' |
+  'temperature-up' |
   'tenge' |
   'tennis-ball' |
   'terminal' |
@@ -1535,6 +1642,7 @@ type FontAwesomeIconValue =
   'toilet' |
   'toilet-paper' |
   'toilet-paper-alt' |
+  'toilet-paper-slash' |
   'tombstone' |
   'tombstone-alt' |
   'toolbox' |
@@ -1551,10 +1659,16 @@ type FontAwesomeIconValue =
   'traffic-light-go' |
   'traffic-light-slow' |
   'traffic-light-stop' |
+  'trailer' |
   'train' |
   'tram' |
   'transgender' |
   'transgender-alt' |
+  'transporter' |
+  'transporter-1' |
+  'transporter-2' |
+  'transporter-3' |
+  'transporter-empty' |
   'trash' |
   'trash-alt' |
   'trash-restore' |
@@ -1593,6 +1707,8 @@ type FontAwesomeIconValue =
   'tv-music' |
   'tv-retro' |
   'typewriter' |
+  'ufo' |
+  'ufo-beam' |
   'umbrella' |
   'umbrella-beach' |
   'underline' |
@@ -1610,6 +1726,7 @@ type FontAwesomeIconValue =
   'usd-circle' |
   'usd-square' |
   'user' |
+  'user-alien' |
   'user-alt' |
   'user-alt-slash' |
   'user-astronaut' |
@@ -1634,22 +1751,28 @@ type FontAwesomeIconValue =
   'user-ninja' |
   'user-nurse' |
   'user-plus' |
+  'user-robot' |
   'user-secret' |
   'user-shield' |
   'user-slash' |
   'user-tag' |
   'user-tie' |
   'user-times' |
+  'user-unlock' |
+  'user-visor' |
   'users' |
   'users-class' |
   'users-cog' |
   'users-crown' |
   'users-medical' |
+  'users-slash' |
   'utensil-fork' |
   'utensil-knife' |
   'utensil-spoon' |
   'utensils' |
   'utensils-alt' |
+  'vacuum' |
+  'vacuum-robot' |
   'value-absolute' |
   'vector-square' |
   'venus' |
@@ -1663,6 +1786,9 @@ type FontAwesomeIconValue =
   'video-slash' |
   'vihara' |
   'violin' |
+  'virus' |
+  'virus-slash' |
+  'viruses' |
   'voicemail' |
   'volcano' |
   'volleyball-ball' |
@@ -1714,6 +1840,8 @@ type FontAwesomeIconValue =
   'window' |
   'window-alt' |
   'window-close' |
+  'window-frame' |
+  'window-frame-open' |
   'window-maximize' |
   'window-minimize' |
   'window-restore' |
