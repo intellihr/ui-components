@@ -110,27 +110,6 @@ class Section extends React.PureComponent<ISectionProps, never> {
     }
 
     const Component = this.component
-    if (tooltipMessage) {
-      return (
-        <StyledSection {...this.styleProps}>
-          <Component
-            {...componentProps}
-            onClick={onClick}
-            href={href}
-          >
-            <StyledSectionContent>
-              <Margin margins={{ right: Variables.Spacing.sXSmall }}>
-                {leftComponent && <span className='left-component'>{leftComponent}</span>}
-                {text}
-                {rightComponent && <span className='right-component'>{rightComponent}</span>}
-              </Margin>
-              <FontAwesomeIcon icon='info-circle' type='solid' color={Variables.Color.n400}/>
-            </StyledSectionContent>
-          </Component>
-        </StyledSection>
-      )
-    }
-
     return (
       <StyledSection {...this.styleProps}>
         <Component
@@ -138,9 +117,24 @@ class Section extends React.PureComponent<ISectionProps, never> {
           onClick={onClick}
           href={href}
         >
-          {leftComponent && <span className='left-component'>{leftComponent}</span>}
-          {text}
-          {rightComponent && <span className='right-component'>{rightComponent}</span>}
+        {
+          tooltipMessage ? (
+            <>
+              <Margin margins={{ right: Variables.Spacing.sXSmall }}>
+                {leftComponent && <span className='left-component'>{leftComponent}</span>}
+                {text}
+                {rightComponent && <span className='right-component'>{rightComponent}</span>}
+              </Margin>
+              <FontAwesomeIcon icon='info-circle' type='solid' color={Variables.Color.n400}/>
+            </>
+          ) : (
+            <>
+              {leftComponent && <span className='left-component'>{leftComponent}</span>}
+              {text}
+              {rightComponent && <span className='right-component'>{rightComponent}</span>}
+            </>
+          )
+        }
         </Component>
       </StyledSection>
     )
@@ -161,6 +155,15 @@ class Section extends React.PureComponent<ISectionProps, never> {
       return (
         <TooltipPopover
           toggleComponent={this.toggleComponent(this.content)}
+          width={300}
+          parentAnchorPosition={{
+            xPos: Props.Position.Left,
+            yPos: Props.Position.Top
+          }}
+          popoverAnchorPosition={{
+            xPos: Props.Position.Right,
+            yPos: Props.Position.Top
+          }}
           {...tooltipProps}
         >
           {tooltipMessage}
