@@ -1,7 +1,15 @@
 import React from 'react'
 
+import {Props, Variables} from '../../../../common'
+import {StyledIconButton} from '../../../Buttons/FontAwesomeIconButton/style'
+import {StyledInputLabel} from '../../../Forms/VerticalForm/subcomponents/style'
+import {FontAwesomeIcon} from '../../../Icons/FontAwesomeIcon'
 import { Anchor } from '../../../Internals'
-import { StyledSection } from './style'
+import {GridLayout} from '../../../Layouts/GridLayout'
+import {Margin} from '../../../Spacers/Margin'
+import {ITooltipPopoverProps, ITooltipPopoverToggleComponentProps, TooltipPopover} from '../../TooltipPopover'
+import {TooltipPopoverVariant} from '../../TooltipPopover/TooltipPopover'
+import {StyledSection, StyledSectionContent} from './style'
 
 type SectionType =
   'default'
@@ -41,6 +49,10 @@ interface ISectionProps {
   styleOnHover?: boolean
   /** Stop propagation of click event */
   stopPropagation?: boolean
+  /** Message of tooltip to show */
+  tooltipMessage?: JSX.Element | string
+  /** any extra tooltip props */
+  tooltipProps?: ITooltipPopoverProps
 }
 
 class Section extends React.PureComponent<ISectionProps, never> {
@@ -76,12 +88,8 @@ class Section extends React.PureComponent<ISectionProps, never> {
       role: 'menuitem'
     }
   }
-  public static defaultProps: Partial<ISectionProps> = {
-    sectionType: 'default',
-    closeDropdownBehaviour: 'whenActionProvided'
-  }
 
-  public render (): JSX.Element {
+  private get content () {
     const {
       component,
       componentProps,
@@ -89,7 +97,8 @@ class Section extends React.PureComponent<ISectionProps, never> {
       rightComponent,
       text,
       onClick,
-      href
+      href,
+      tooltipMessage
     } = this.props
 
     if (component) {
@@ -108,13 +117,73 @@ class Section extends React.PureComponent<ISectionProps, never> {
           onClick={onClick}
           href={href}
         >
-          {leftComponent && <span className='left-component'>{leftComponent}</span>}
-          {text}
-          {rightComponent && <span className='right-component'>{rightComponent}</span>}
+        {
+          tooltipMessage ? (
+            <>
+              <Margin margins={{ right: Variables.Spacing.sXSmall }}>
+                {leftComponent && <span className='left-component'>{leftComponent}</span>}
+                {text}
+                {rightComponent && <span className='right-component'>{rightComponent}</span>}
+              </Margin>
+              <FontAwesomeIcon icon='info-circle' type='solid' color={Variables.Color.n400}/>
+            </>
+          ) : (
+            <>
+              {leftComponent && <span className='left-component'>{leftComponent}</span>}
+              {text}
+              {rightComponent && <span className='right-component'>{rightComponent}</span>}
+            </>
+          )
+        }
         </Component>
       </StyledSection>
     )
   }
+
+  public static defaultProps: Partial<ISectionProps> = {
+    sectionType: 'default',
+    closeDropdownBehaviour: 'whenActionProvided'
+  }
+
+  public render (): JSX.Element {
+    const {
+      tooltipMessage,
+      tooltipProps
+    } = this.props
+
+    if (tooltipMessage) {
+      return (
+        <TooltipPopover
+          toggleComponent={this.toggleComponent(this.content)}
+          width={300}
+          parentAnchorPosition={{
+            xPos: Props.Position.Left,
+            yPos: Props.Position.Top
+          }}
+          popoverAnchorPosition={{
+            xPos: Props.Position.Right,
+            yPos: Props.Position.Top
+          }}
+          {...tooltipProps}
+        >
+          {tooltipMessage}
+        </TooltipPopover>
+      )
+    }
+
+    return this.content
+  }
+
+  private toggleComponent = (content: JSX.Element) => ({ openMenu, closeMenu, toggleComponentRef, ariaProps }: ITooltipPopoverToggleComponentProps) => (
+    <span
+      onMouseEnter={openMenu}
+      onMouseLeave={closeMenu}
+      ref={toggleComponentRef}
+      {...ariaProps}
+    >
+      {content}
+    </span>
+  )
 
   private handleCloseMenuClick = (event: React.SyntheticEvent<HTMLLIElement>) => {
     const {

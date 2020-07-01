@@ -44,6 +44,26 @@
 </div>
 ```
 
+#### DropdownMenu with tooltip
+
+```jsx
+<DropdownMenu
+  sections={[
+    {
+      text: 'Hover and View Tooltip',
+      href: 'https://www.intellihr.com.au',
+      tooltipMessage: 'I am a tooltip for item 1'
+    },
+    {
+      text: 'Archive',
+      onClick: () => alert('Archive'),
+      tooltipMessage: 'This template has been used to create a goal so it cannot be deleted. Archived templates are hidden when creating goals.',
+      tooltipProps: { width: 300 }
+    }
+  ]}
+/>
+```
+
 #### Dropdown Menu using strip colors
 
 ```jsx
