@@ -230,10 +230,16 @@ const StyledSection = styled.li`
   }
 `
 
+const StyledSectionContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
 export {
   DefaultDropdownButton,
   StyledContentWrapper,
   StyledSection,
   StyledDropdownSectionList,
-  StyledDropdownCustomContent
+  StyledDropdownCustomContent,
+  StyledSectionContent
 }
