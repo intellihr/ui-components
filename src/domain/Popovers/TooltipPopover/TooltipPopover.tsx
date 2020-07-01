@@ -59,16 +59,15 @@ class TooltipPopover extends React.Component<ITooltipPopoverProps, ITooltipPopov
   public static defaultProps: Partial<ITooltipPopoverProps> = {
     variant: TooltipPopoverVariant.Neutral,
     toggleComponent: ({ openMenu, closeMenu, toggleComponentRef, ariaProps }) => (
-      <button
+      <span
         className={style.popoverTrigger}
-        type='button'
         onMouseEnter={openMenu}
         onMouseLeave={closeMenu}
         ref={toggleComponentRef}
         {...ariaProps}
       >
         <FontAwesomeIcon type='regular' icon='question-circle' color={Variables.Color.n700} />
-      </button>
+      </span>
     )
   }
 
