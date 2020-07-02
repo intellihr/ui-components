@@ -5,7 +5,6 @@ import { styleForMargins } from '../../../Spacers/services/margins'
 
 interface IStyledInputLabelProps {
   isRequired: boolean
-  labelSuffix?: string
 }
 
 interface IFieldWrapperProps {
@@ -53,16 +52,6 @@ const StyledInputLabel = styled.label`
       }
     `
   }}
-
-  ${(props: IStyledInputLabelProps) => props.labelSuffix && css`
-      &::after {
-        color: ${Variables.Color.n400};
-        content: " -  ${props.labelSuffix}";
-        font-size: ${Variables.FontSize.fzSmall}px;
-        font-style: italic;
-      }
-    `
-}}
 `
 
 const StyledDescription = styled.div`

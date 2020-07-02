@@ -53,6 +53,80 @@ exports[`<DropdownMenu /> Render a dropdown using custom content should match th
 </Fragment>
 `;
 
+exports[`<DropdownMenu /> Render a dropdown with tooltip should match the snapshot 1`] = `
+<Fragment>
+  <styled.button
+    aria-expanded={false}
+    aria-haspopup={true}
+    onClick={[Function]}
+    role="button"
+    type="button"
+  >
+    <Memo(FontAwesomeIcon)
+      icon="ellipsis-v"
+      type="solid"
+    />
+  </styled.button>
+  <Popover
+    animationType="dropdown"
+    id=""
+    isOpen={false}
+    parentAnchorPosition="auto"
+    parentRef={
+      Object {
+        "current": null,
+      }
+    }
+    popoverAnchorPosition="auto"
+  >
+    <FocusTrap
+      _createFocusTrap={[Function]}
+      active={false}
+      focusTrapOptions={
+        Object {
+          "clickOutsideDeactivates": true,
+          "fallbackFocus": <body />,
+          "initialFocus": <body />,
+          "onDeactivate": [Function],
+          "returnFocusOnDeactivate": false,
+        }
+      }
+      paused={false}
+      tag="span"
+    >
+      <styled.div
+        role="menu"
+      >
+        <styled.ul>
+          <Section
+            __closeMenuCallback={[Function]}
+            closeDropdownBehaviour="whenActionProvided"
+            key="0"
+            sectionType="default"
+            text="Item 1"
+            tooltipMessage="I am a tooltip for item 1"
+          />
+          <Section
+            __closeMenuCallback={[Function]}
+            closeDropdownBehaviour="whenActionProvided"
+            href="https://www.intellihr.com.au"
+            key="1"
+            sectionType="default"
+            text="Item 2"
+            tooltipMessage="I am a tooltip for item 2"
+            tooltipProps={
+              Object {
+                "width": 300,
+              }
+            }
+          />
+        </styled.ul>
+      </styled.div>
+    </FocusTrap>
+  </Popover>
+</Fragment>
+`;
+
 exports[`<DropdownMenu /> Simple dropdown behaviour should match the snapshot 1`] = `
 <Fragment>
   <styled.button

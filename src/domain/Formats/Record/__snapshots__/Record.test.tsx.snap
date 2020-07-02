@@ -1859,14 +1859,13 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                     <span
                       className="c2"
                     >
-                      <button
+                      <span
                         aria-expanded={false}
                         aria-haspopup={true}
                         className="popoverTrigger"
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
                         role="button"
-                        type="button"
                       >
                         <FontAwesomeIcon
                           color="#424F5C"
@@ -1974,7 +1973,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                             </styled.i>
                           </Icon>
                         </FontAwesomeIcon>
-                      </button>
+                      </span>
                     </span>
                   </StyledComponent>
                 </styled.span>
@@ -1998,12 +1997,11 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
   font-size: 1rem;
 }
 
-<button
+<span
                         aria-expanded="false"
                         aria-haspopup="true"
                         class="popoverTrigger"
                         role="button"
-                        type="button"
                       >
                         <i
                           aria-hidden="true"
@@ -2011,7 +2009,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                           color="#424F5C"
                           data-component-type="icon"
                         />
-                      </button>,
+                      </span>,
                     }
                   }
                   popoverAnchorPosition="auto"
