@@ -119,14 +119,14 @@ class Section extends React.PureComponent<ISectionProps, never> {
         >
         {
           tooltipMessage ? (
-            <>
+            <StyledSectionContent>
               <Margin margins={{ right: Variables.Spacing.sXSmall }}>
                 {leftComponent && <span className='left-component'>{leftComponent}</span>}
                 {text}
                 {rightComponent && <span className='right-component'>{rightComponent}</span>}
               </Margin>
               <FontAwesomeIcon icon='info-circle' type='solid' color={Variables.Color.n400}/>
-            </>
+            </StyledSectionContent>
           ) : (
             <>
               {leftComponent && <span className='left-component'>{leftComponent}</span>}
