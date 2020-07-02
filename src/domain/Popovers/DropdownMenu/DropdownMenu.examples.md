@@ -304,8 +304,8 @@ import { FontAwesomeIcon } from '@Domain/Icons';
 <DropdownMenu
    sections={[
      {
-       leftComponent: <FontAwesomeIcon type='solid' icon='hand-o-right' />,
-       rightComponent: <FontAwesomeIcon type='solid' icon='hand-o-left' />,
+       leftComponent: <FontAwesomeIcon type='solid' icon='hand-point-right' />,
+       rightComponent: <FontAwesomeIcon type='solid' icon='hand-point-left' />,
        onClick: () => alert('Test'),
        text: 'Surrounded by icons'
      }
