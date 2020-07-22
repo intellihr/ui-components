@@ -3,5 +3,7 @@ To be used for the arrangement and positioning of components within a page or la
 Note: These variables return a number, not a px value
 
 ```jsx
+const { ExampleLayoutVariables } = require('./ExampleLayoutVariables');
+
   <ExampleLayoutVariables />
 ```

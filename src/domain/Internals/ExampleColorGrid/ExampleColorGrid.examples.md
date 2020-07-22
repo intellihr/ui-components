@@ -1,6 +1,7 @@
 #### Primary
 ```jsx
 import { Variables } from '@Common';
+const { ExampleColorGrid } = require('./ExampleColorGrid');
 
 <ExampleColorGrid
   colors={[
@@ -43,6 +44,7 @@ import { Variables } from '@Common';
 #### Neutrals
 ```jsx
 import { Variables } from '@Common';
+const { ExampleColorGrid } = require('./ExampleColorGrid');
 
 <ExampleColorGrid
   colors={[
@@ -93,6 +95,7 @@ import { Variables } from '@Common';
 #### Cyan
 ```jsx
 import { Variables } from '@Common';
+const { ExampleColorGrid } = require('./ExampleColorGrid');
 
 <ExampleColorGrid
   colors={[
@@ -127,6 +130,7 @@ import { Variables } from '@Common';
 #### Blue
 ```jsx
 import { Variables } from '@Common';
+const { ExampleColorGrid } = require('./ExampleColorGrid');
 
 <ExampleColorGrid
   colors={[
@@ -161,6 +165,7 @@ import { Variables } from '@Common';
 #### Indigo
 ```jsx
 import { Variables } from '@Common';
+const { ExampleColorGrid } = require('./ExampleColorGrid');
 
 <ExampleColorGrid
   colors={[
@@ -195,6 +200,7 @@ import { Variables } from '@Common';
 #### Green
 ```jsx
 import { Variables } from '@Common';
+const { ExampleColorGrid } = require('./ExampleColorGrid');
 
 <ExampleColorGrid
   colors={[
@@ -229,6 +235,7 @@ import { Variables } from '@Common';
 #### Yellow
 ```jsx
 import { Variables } from '@Common';
+const { ExampleColorGrid } = require('./ExampleColorGrid');
 
 <ExampleColorGrid
   colors={[
@@ -263,6 +270,7 @@ import { Variables } from '@Common';
 #### Orange
 ```jsx
 import { Variables } from '@Common';
+const { ExampleColorGrid } = require('./ExampleColorGrid');
 
 <ExampleColorGrid
   colors={[
@@ -297,6 +305,7 @@ import { Variables } from '@Common';
 #### Red
 ```jsx
 import { Variables } from '@Common';
+const { ExampleColorGrid } = require('./ExampleColorGrid');
 
 <ExampleColorGrid
   colors={[
