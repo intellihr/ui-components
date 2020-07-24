@@ -1,6 +1,7 @@
 export { Carousel } from './Carousel'
 export { Comparison } from './Comparison'
 export { GridLayout } from './GridLayout'
+export { Inline } from './Inline'
 export { LayoutSpacer } from './LayoutSpacer'
 export { PageLayout } from './PageLayout'
 export { SectionList } from './SectionList'
