@@ -3,7 +3,7 @@
 Welcome to the Wonka Component Factory!    
 The _golden ticket_ to creating consistent user experiences within the intelliHR platform
 
-WCF is a set design guidelines and reusable, common React components written in Typescript.
+WCF is a set of design guidelines and reusable, common React components written in Typescript.
 
 The latest release can always be found at the following link:
 https://intellihr.github.io/ui-components/
