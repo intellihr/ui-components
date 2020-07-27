@@ -5,7 +5,7 @@ const webpackConfig = require('./webpack.config');
 
 module.exports = {
   webpackConfig,
-  title: 'Zen Design System',
+  title: 'Wonka Component Factory',
   require: [
     require.resolve('core-js/stable'),
     require.resolve('regenerator-runtime/runtime'),
@@ -38,7 +38,7 @@ module.exports = {
   },
   sections: [
     {
-      name: 'About Zen',
+      name: 'Wonka Component Factory',
       sectionDepth: 2,
       sections: [
         {
