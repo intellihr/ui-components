@@ -78,7 +78,7 @@ const StyledReactModal = styled(ReactModalAdapter)`
     max-width: ${dialogContentMaxWidth}px;
 
     ${Utils.mediaQueryBetweenSizes({ maxPx: totalDialogWidth })} {
-      margin: auto 24px;
+      margin: auto ${Variables.Spacing.sLarge}px;
     }
   }
 `

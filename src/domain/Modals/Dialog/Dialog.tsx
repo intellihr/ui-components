@@ -3,7 +3,6 @@ import React from 'react'
 import { Props, Variables } from '../../../common'
 import { Button } from '../../Buttons/Button'
 import { Inline } from '../../Layouts/Inline'
-import { InlineAlign } from '../../Layouts/Inline/Inline'
 import { Margin } from '../../Spacers/Margin'
 import { Text } from '../../Typographies'
 import { StyledReactModal } from './style'
@@ -21,8 +20,18 @@ interface IDialogProps {
 }
 
 enum DialogVariant {
-  Positive = 'positive',
-  Negative = 'negative'
+  Default = 'default',
+  Destructive = 'destructive'
+}
+
+const getPrimaryButtonVariant = (variant: DialogVariant) => {
+  switch (variant) {
+    case DialogVariant.Destructive:
+      return 'alert'
+    case DialogVariant.Default:
+    default:
+      return 'primary'
+  }
 }
 
 const Dialog: React.FC<IDialogProps> = ({
@@ -68,7 +77,7 @@ const Dialog: React.FC<IDialogProps> = ({
       <Margin margins={{bottom: Variables.Spacing.sMedium }}>
         {children}
       </Margin>
-      <Inline align={InlineAlign.Right}>
+      <Inline align={Inline.Align.Right}>
         {onSecondaryActionClick && secondaryActionLabel && (
           <Button
             onClick={onSecondaryActionClick}
@@ -78,7 +87,7 @@ const Dialog: React.FC<IDialogProps> = ({
         )}
         <Button
           onClick={onPrimaryActionClick}
-          type={variant === DialogVariant.Positive ? 'primary' : 'alert'}
+          type={getPrimaryButtonVariant(variant)}
         >
           {primaryActionLabel}
         </Button>
