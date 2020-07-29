@@ -85,7 +85,7 @@ const Table = <T extends {}>(props: ITableProps<T>) => {
     bulkActions,
     emptyState,
     interactionType = InteractionType.Hover,
-    hasSortEnabled = true
+    hasSortEnabled = false
   } = props
 
   validateProps(props)

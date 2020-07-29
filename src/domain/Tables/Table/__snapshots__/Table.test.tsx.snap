@@ -27,7 +27,7 @@ exports[`<Table /> should render a mobile table 1`] = `
         }
         hasBulkAction={false}
         hasLeftAction={false}
-        hasSortEnabled={true}
+        hasSortEnabled={false}
         hasTableSwipeActions={true}
         isEmpty={false}
         onSortChange={[MockFunction]}
@@ -423,7 +423,7 @@ exports[`<Table /> should render a table 1`] = `
         }
         hasBulkAction={false}
         hasLeftAction={true}
-        hasSortEnabled={true}
+        hasSortEnabled={false}
         hasTableSwipeActions={false}
         isEmpty={false}
         onSortChange={[MockFunction]}
@@ -819,7 +819,7 @@ exports[`<Table /> should render an empty table 1`] = `
         }
         hasBulkAction={false}
         hasLeftAction={false}
-        hasSortEnabled={true}
+        hasSortEnabled={false}
         hasTableSwipeActions={false}
         isEmpty={true}
         onSortChange={[MockFunction]}

@@ -1,3 +1,82 @@
+### Basic Table
+
+```jsx
+import { Text } from '@Domain/Typographies';
+import { EmptyState } from '@Domain/Callouts';
+
+const rowActions = ([
+    {
+      icon:'link',
+      type:'solid',
+      tooltipText:'Copy Link',
+      onClick: () => alert('copy link')
+    },
+    {
+      icon:'pencil-alt',
+      type:'solid',
+      tooltipText:'Rename',
+      onClick: () => alert('rename')
+    },
+    {
+      icon:'file-download',
+      type:'solid',
+      tooltipText:'Download',
+      onClick: () => alert('download')
+    },
+    {
+      icon:'trash',
+      type:'solid',
+      tooltipText:'Delete',
+      onClick: () => alert('delete')
+    }
+]);
+
+<Table
+  rows={[
+    {
+      id: '3',
+      data: {fileName: 'test.pdf', createAt: '05/01/2018', size: '2.2', fileType: 'PDF'},
+      isSelectable: false,
+      actions: rowActions
+    },
+    {
+      id: '4',
+      data: {fileName: 'test1.pdf', createAt: '05/01/2018', size: '1.5', fileType: 'PDF'},
+      isSelectable: false,
+      actions: rowActions
+    },
+    {
+      id: '5',
+      data: {fileName: 'test1_test1_test1_test1_final_final_final_final_final_final_final.pdf', createAt: '05/01/2018', size: '1.5', fileType: 'PDF'},
+      isSelectable: false,
+      actions: rowActions
+    }
+  ]}
+  emptyState = {
+    <EmptyState
+      primaryMessage='Could not find any matching search results.'
+      secondaryMessage='Try changing the filters or search term'
+    />
+  }
+  columns={[
+    {
+          name: 'fileName',
+          title: 'File Name',
+          size: 'auto',
+          content: (data)=> <Text>{data.fileName}</Text>,
+          alignment: 'left'
+      },
+      {
+          name: 'createAt',
+          title: 'Date uploaded',
+          size: 'shrink',
+          content: (data)=> <Text>{data.createAt}</Text>,
+          alignment: 'right'
+      }
+  ]}
+ />
+```
+
 ### Table
 
 ```jsx
@@ -208,6 +287,7 @@ const successRowToNormal = {
     onSelectedRowChange = {(dataSet) => {setState({selectedDataSet:dataSet}); console.log(dataSet)}}
     rows={state.rows}
     sort={state.sort}
+    hasSortEnabled={true} 
     onSortChange={(sort) => setState({sort})}
     columns={[
       {
@@ -372,6 +452,7 @@ sort: {createAt: 'ascending'}
 
 <Table
   rows={[]}
+  hasSortEnabled={true}
   sort={state.sort}
   onSortChange={(sort) => setState({sort})}
   emptyState = {
@@ -398,5 +479,3 @@ sort: {createAt: 'ascending'}
   ]}
  />
 ```
-
-
