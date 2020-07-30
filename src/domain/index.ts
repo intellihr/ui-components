@@ -17,7 +17,7 @@ export { StatusIndicator } from './Indicators'
 export { Carousel, Comparison, LayoutSpacer, GridLayout, Inline, PageLayout, SectionList, XYGrid, ShowForSizes } from './Layouts'
 export { Legend } from './Legends'
 export { GridProvider, Row } from './Grids'
-export { ActionLink, TextLink, UnstyledLink } from './Links'
+export { ActionLink, BackLink, TextLink, UnstyledLink } from './Links'
 /*
  * ListRow, ListClickableColumn and ListColumn are here for legacy support.
  * They should be static properties of SmartList
