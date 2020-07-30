@@ -152,6 +152,7 @@ namespace Variables {
     zIndexModal =           1000,
     zIndexDateInput =       2000,
     zIndexDropdownMenu =    3000,
+    zIndexDialog =          3500,
     zIndexToaster =         4000,
     zIndexAbsoluteTop =     9999
   }

@@ -53,7 +53,7 @@ export class ScrollingTabGroup extends React.Component<IScrollingTabGroupProps, 
 
   private tabListRef: RefObject<HTMLUListElement> = React.createRef()
   private currentlyMounted: boolean = false
-  private forceUpdateTimeout: NodeJS.Timeout | null = null
+  private forceUpdateTimeout: any = null
 
   private handleScrollUpdate = debounce(() => {
     // Force a react re-render to correctly update the dom
