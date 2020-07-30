@@ -8,7 +8,7 @@ interface IUnstyledLinkProps extends IAnchorProps { }
 
 const styledAnchor: StyledFunction<(props: IUnstyledLinkProps) => React.ReactElement> = styled(Anchor)
 
-export const UnstyledLink = styledAnchor`
+const UnstyledLink = styledAnchor`
   &,
   &:link,
   &:visited,
@@ -21,5 +21,6 @@ export const UnstyledLink = styledAnchor`
 UnstyledLink.displayName = 'UnstyledLink'
 
 export {
-  IUnstyledLinkProps
+  IUnstyledLinkProps,
+  UnstyledLink
 }

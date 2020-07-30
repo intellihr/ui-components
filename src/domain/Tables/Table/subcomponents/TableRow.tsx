@@ -158,7 +158,7 @@ const getDataCells = <T extends {}>(props: IGetDataCells<T>) => {
 
   return (
     columns.map((column, index) => {
-      if (hasHoverButton && !contentOverride && !isSelected && index === columns.length - 1 && !isRemovable && isSelectable) {
+      if (hasHoverButton && !contentOverride && !isSelected && index === columns.length - 1 && !isRemovable) {
         return (
           <StyledDataCell
             key={column.name}
