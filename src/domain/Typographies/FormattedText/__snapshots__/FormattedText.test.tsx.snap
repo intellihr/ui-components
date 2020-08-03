@@ -167,7 +167,7 @@ Ordered/multi-level lists:
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-ifAKCX",
+            "componentId": "sc-htoDjs",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -185,7 +185,7 @@ Ordered/multi-level lists:
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-ifAKCX",
+          "styledComponentId": "sc-htoDjs",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -474,7 +474,7 @@ Ordered/multi-level lists:
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-bwzfXH",
+                              "componentId": "sc-EHOje",
                               "isStatic": false,
                               "lastClassName": "c1",
                               "rules": Array [
@@ -522,7 +522,7 @@ Ordered/multi-level lists:
                             "displayName": "Styled(Component)",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-bwzfXH",
+                            "styledComponentId": "sc-EHOje",
                             "target": [Function],
                             "toString": [Function],
                             "usesTheme": false,
@@ -605,7 +605,7 @@ Ordered/multi-level lists:
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-bwzfXH",
+                              "componentId": "sc-EHOje",
                               "isStatic": false,
                               "lastClassName": "c1",
                               "rules": Array [
@@ -653,7 +653,7 @@ Ordered/multi-level lists:
                             "displayName": "Styled(Component)",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-bwzfXH",
+                            "styledComponentId": "sc-EHOje",
                             "target": [Function],
                             "toString": [Function],
                             "usesTheme": false,
@@ -1440,7 +1440,7 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-ifAKCX",
+            "componentId": "sc-htoDjs",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -1458,7 +1458,7 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-ifAKCX",
+          "styledComponentId": "sc-htoDjs",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -1524,7 +1524,7 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-bwzfXH",
+                              "componentId": "sc-EHOje",
                               "isStatic": false,
                               "lastClassName": "c1",
                               "rules": Array [
@@ -1572,7 +1572,7 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
                             "displayName": "Styled(Component)",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-bwzfXH",
+                            "styledComponentId": "sc-EHOje",
                             "target": [Function],
                             "toString": [Function],
                             "usesTheme": false,
@@ -1664,7 +1664,7 @@ exports[`<FormattedText /> should render the formatted text 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-ifAKCX",
+            "componentId": "sc-htoDjs",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -1682,7 +1682,7 @@ exports[`<FormattedText /> should render the formatted text 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-ifAKCX",
+          "styledComponentId": "sc-htoDjs",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,

@@ -69,6 +69,7 @@ namespace Props {
     AvatarEntity = 'avatar_entity',
     AvatarGroup = 'avatar_group',
     AvatarTile = 'avatar_tile',
+    BackLink = 'back_link',
     BlockTabGroup = 'block_tab_group',
     Board = 'board',
     Breadcrumb = 'breadcrumb',
