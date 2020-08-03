@@ -13,6 +13,23 @@ initialState = { value: moment() };
 </div>
 ```
 
+#### Single Date Input with month select
+```jsx
+import moment from 'moment'
+
+initialState = { value: moment() };
+
+<div>
+  <SingleDateInput 
+    showMonthPicker
+    initialVisibleMonth={moment('2018-05-08T05:06:52.000Z')}
+    value={state.value}
+    onChange={date => setState({ value: date })}
+    name='test-date-picker1'
+  />
+</div>
+```
+
 #### Single Date Input with disable date choice
 ```jsx
 import moment from 'moment'
