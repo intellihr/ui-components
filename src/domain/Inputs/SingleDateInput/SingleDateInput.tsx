@@ -8,9 +8,6 @@ import 'react-dates/initialize'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { InputGroupPosition } from '../InputGroup'
 
-import { Variables } from '../../../common'
-import { GridLayout } from '../../Layouts/GridLayout'
-import { HorizontalAlignment } from '../../Layouts/GridLayout/style'
 import style from './style.scss'
 import { MonthPicker } from './MonthPicker'
 
@@ -43,6 +40,7 @@ interface ISingleDateInputProps {
 
 interface ISingleDateInputState {
   focused: boolean
+  monthPickerView: 'text' | 'dropdown'
 }
 
 class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingleDateInputState> {
@@ -54,7 +52,8 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
   }
 
   public state: ISingleDateInputState = {
-    focused: false
+    focused: false,
+    monthPickerView: 'text'
   }
 
   public render (): JSX.Element {
@@ -92,6 +91,8 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
             <MonthPicker
               handleDateChange={this.handleDateChange}
               date={value ?? initialVisibleMonth}
+              monthPickerView={this.state.monthPickerView}
+              setMonthPickerView={this.showMonthPickerDropdown}
             />
             ) : undefined
           }
@@ -151,6 +152,8 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
       focused: focusChangeArgs.focused || false
     })
   }
+
+  private showMonthPickerDropdown = () => this.setState({monthPickerView: 'dropdown'})
 
   private navigationButtonClassNames = (side: 'left' | 'right') => {
     return classNames(

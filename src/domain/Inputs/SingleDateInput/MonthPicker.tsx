@@ -1,9 +1,17 @@
 import moment, { Moment } from 'moment'
-import React from 'react'
+import React, { useState } from 'react'
 
 import { Variables } from '../../../common'
 import { GridLayout } from '../../Layouts/GridLayout'
-import { HorizontalAlignment } from '../../Layouts/GridLayout/style'
+import { HorizontalAlignment, VerticalAlignment } from '../../Layouts/GridLayout/style'
+import { Text } from '../../Typographies'
+
+interface IMonthPickerProps {
+  date?: Moment | null
+  handleDateChange: (date: Moment | null) => void
+  monthPickerView: 'text' | 'dropdown'
+  setMonthPickerView: () => void
+}
 
 const monthPickerYears = () => {
   const years = []
@@ -13,7 +21,7 @@ const monthPickerYears = () => {
   return years
 }
 
-const MonthPicker = ({date, handleDateChange}: {date?: Moment | null, handleDateChange: (date: Moment | null) => void}) => {
+const MonthPicker = ({date, handleDateChange, setMonthPickerView, monthPickerView}: IMonthPickerProps) => {
   const value = date ?? moment()
   const selectYear = (event: React.ChangeEvent<HTMLSelectElement>) => {
     value.set('year', parseInt(event.target.value, 10))
@@ -22,6 +30,24 @@ const MonthPicker = ({date, handleDateChange}: {date?: Moment | null, handleDate
   const selectMonth = (event: React.ChangeEvent<HTMLSelectElement>) => {
     value.set('month', parseInt(event.target.value, 10))
     handleDateChange(value)
+  }
+
+  if (monthPickerView === 'text') {
+    return (
+      <GridLayout
+        horizontalAlignment={HorizontalAlignment.Center}
+        verticalAlignment={VerticalAlignment.Middle}
+        gutterMarginX={Variables.Spacing.sMedium}
+      >
+        <GridLayout.Cell size='shrink'>
+          <Text margins={{top: Variables.Spacing.sMedium}} isInline={false}>
+            <Text.Link onClick={setMonthPickerView}>
+              Jump to...
+            </Text.Link>
+          </Text>
+        </GridLayout.Cell>
+      </GridLayout>
+    )
   }
 
   return (
@@ -55,7 +81,9 @@ const MonthPicker = ({date, handleDateChange}: {date?: Moment | null, handleDate
 
 const MemoMonthPicker = React.memo(MonthPicker, (prevProps, nextProps) => {
   return prevProps.date === nextProps.date &&
-    prevProps.handleDateChange === nextProps.handleDateChange
+    prevProps.handleDateChange === nextProps.handleDateChange &&
+    prevProps.monthPickerView === nextProps.monthPickerView &&
+    prevProps.setMonthPickerView === nextProps.setMonthPickerView
 })
 
 export {
