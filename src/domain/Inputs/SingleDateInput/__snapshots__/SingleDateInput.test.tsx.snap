@@ -8,7 +8,7 @@ exports[`<SingleDateInput /> should render a disabled single date input 1`] = `
     anchorDirection="left"
     appendToBody={false}
     block={true}
-    calendarInfoPosition="bottom"
+    calendarInfoPosition="top"
     customCloseIcon={
       <span>
         ×
@@ -127,7 +127,7 @@ exports[`<SingleDateInput /> should render a single date input 1`] = `
     anchorDirection="left"
     appendToBody={false}
     block={true}
-    calendarInfoPosition="bottom"
+    calendarInfoPosition="top"
     customCloseIcon={
       <span>
         ×
@@ -246,7 +246,7 @@ exports[`<SingleDateInput /> should render a single date input with disable date
     anchorDirection="left"
     appendToBody={false}
     block={true}
-    calendarInfoPosition="bottom"
+    calendarInfoPosition="top"
     customCloseIcon={
       <span>
         ×
@@ -365,7 +365,7 @@ exports[`<SingleDateInput /> should render an invalid single date input 1`] = `
     anchorDirection="left"
     appendToBody={false}
     block={true}
-    calendarInfoPosition="bottom"
+    calendarInfoPosition="top"
     customCloseIcon={
       <span>
         ×
