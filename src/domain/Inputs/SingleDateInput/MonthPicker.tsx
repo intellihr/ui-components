@@ -24,12 +24,12 @@ const monthPickerYears = () => {
 const MonthPicker = ({date, handleDateChange, setMonthPickerView, monthPickerView}: IMonthPickerProps) => {
   const value = date ?? moment()
   const selectYear = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    value.set('year', parseInt(event.target.value, 10))
-    handleDateChange(value)
+    const newValue = value.clone().set('year', parseInt(event.target.value, 10))
+    handleDateChange(newValue)
   }
   const selectMonth = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    value.set('month', parseInt(event.target.value, 10))
-    handleDateChange(value)
+    const newValue = value.clone().set('month', parseInt(event.target.value, 10))
+    handleDateChange(newValue)
   }
 
   if (monthPickerView === 'text') {
