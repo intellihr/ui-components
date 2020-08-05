@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { InputGroupPosition } from '../InputGroup'
 
 import style from './style.scss'
+import { MonthPicker } from './MonthPicker'
 
 interface ISingleDateInputProps {
   /** Name and ID of the HTML input */
@@ -29,12 +30,17 @@ interface ISingleDateInputProps {
   placeholder?: string
   /** Value for the input (Note: in redux, this must be a moment object - strings are invalid) */
   value: Moment | null
+  /** Value for the input (Note: in redux, this must be a moment object - strings are invalid) */
+  initialVisibleMonth?: Moment
   /** Disable for the calender (Return true for disabled date) */
   isDisabledForDate?: (day: Moment) => boolean
+  /** Whether to render the dropdown that lets you pick month and year */
+  showMonthPicker?: boolean
 }
 
 interface ISingleDateInputState {
   focused: boolean
+  monthPickerView: 'text' | 'dropdown'
 }
 
 class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingleDateInputState> {
@@ -46,7 +52,8 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
   }
 
   public state: ISingleDateInputState = {
-    focused: false
+    focused: false,
+    monthPickerView: 'text'
   }
 
   public render (): JSX.Element {
@@ -57,7 +64,9 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
       isMobile,
       value,
       placeholder,
-      isDisabledForDate
+      isDisabledForDate,
+      showMonthPicker,
+      initialVisibleMonth
     } = this.props
 
     return (
@@ -76,6 +85,19 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
           onFocusChange={this.handleFocusChange}
           isOutsideRange={isDisabledForDate ? isDisabledForDate : this.handleDisabledDateRange}
           renderMonthText={this.renderMonthText}
+          calendarInfoPosition='top'
+          initialVisibleMonth={initialVisibleMonth ? () => initialVisibleMonth : undefined}
+          renderCalendarInfo={showMonthPicker ? () => (
+            <MonthPicker
+              handleDateChange={this.handleDateChange}
+              date={value ?? initialVisibleMonth}
+              monthPickerView={this.state.monthPickerView}
+              setMonthPickerView={this.showMonthPickerDropdown}
+            />
+            ) : undefined
+          }
+          /** gross hack to change displayed month when date does https://github.com/airbnb/react-dates/issues/1320 */
+          key={showMonthPicker ? value?.format('MMM YYYY') : undefined}
           noBorder
           block
           showClearDate
@@ -130,6 +152,8 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
       focused: focusChangeArgs.focused || false
     })
   }
+
+  private showMonthPickerDropdown = () => this.setState({monthPickerView: 'dropdown'})
 
   private navigationButtonClassNames = (side: 'left' | 'right') => {
     return classNames(

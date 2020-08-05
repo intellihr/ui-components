@@ -14,10 +14,10 @@ export { VerticalForm } from './Forms'
 export { FontAwesomeIcon, IntelliIcon } from './Icons'
 export { TextInput, NumberInput, CheckboxInput, CheckboxSet, DateRangeInput, SelectInput, HierarchicalSelectInput, TextAreaInput, ToggleSwitch, ToggleSwitchInput, InputGroup, RadioSet, SingleDateInput, IconPickerInput, SuggestableTextInput } from './Inputs'
 export { StatusIndicator } from './Indicators'
-export { Carousel, Comparison, LayoutSpacer, GridLayout, PageLayout, SectionList, XYGrid, ShowForSizes } from './Layouts'
+export { Carousel, Comparison, LayoutSpacer, GridLayout, Inline, PageLayout, SectionList, XYGrid, ShowForSizes } from './Layouts'
 export { Legend } from './Legends'
 export { GridProvider, Row } from './Grids'
-export { ActionLink, TextLink, UnstyledLink } from './Links'
+export { ActionLink, BackLink, TextLink, UnstyledLink } from './Links'
 /*
  * ListRow, ListClickableColumn and ListColumn are here for legacy support.
  * They should be static properties of SmartList
@@ -25,7 +25,7 @@ export { ActionLink, TextLink, UnstyledLink } from './Links'
 export { List, SmartList, ActionList, ListRow, ListClickableColumn, ListColumn, OptionList, FilteredOptionList, FilteredList, DraggableList } from './Lists'
 
 export { Menu, MenuItem, LegacyMenu, LegacyMenuItem } from './Menus'
-export { Modal, ToggleModal } from './Modals'
+export { Modal, ToggleModal, Dialog } from './Modals'
 export { BreadcrumbGroup } from './Navigation'
 export { PaginationButtons, PaginationDetails } from './Paginators'
 export { Pill } from './Pills'

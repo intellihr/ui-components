@@ -78,6 +78,7 @@ module.exports = {
       sectionDepth: 2,
       components: [
         'src/domain/Boards/Board/Board.tsx',
+        'src/domain/Layouts/Inline/Inline.tsx',
         'src/domain/Layouts/GridLayout/GridLayout.tsx',
         'src/domain/Layouts/PageLayout/PageLayout.tsx',
         'src/domain/Spacers/HorizontalRule/HorizontalRule.tsx',
@@ -95,7 +96,8 @@ module.exports = {
       components: [
         'src/domain/Menus/Menu/Menu.tsx',
         'src/domain/Links/UnstyledLink/UnstyledLink.tsx',
-        'src/domain/Navigation/BreadcrumbGroup/BreadcrumbGroup.tsx'
+        'src/domain/Navigation/BreadcrumbGroup/BreadcrumbGroup.tsx',
+        'src/domain/Links/BackLink/BackLink.tsx'
       ],
       sections: [
         {
@@ -189,6 +191,7 @@ module.exports = {
       components: [
         'src/domain/Popovers/DropdownMenu/DropdownMenu.tsx',
         'src/domain/Modals/Modal/Modal.tsx',
+        'src/domain/Modals/Dialog/Dialog.tsx',
         'src/domain/Toasts/Toast/Toast.tsx',
         'src/domain/Popovers/TooltipPopover/TooltipPopover.tsx'
       ]
