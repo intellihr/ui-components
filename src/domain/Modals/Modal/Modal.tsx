@@ -113,9 +113,7 @@ class Modal extends React.PureComponent<IModalProps> {
           className='modal-close-button'
           type='button'
           onClick={handleClose}
-        >
-          <span aria-hidden='true'>&times;</span>
-        </button>
+        />
       )
     }
   }
