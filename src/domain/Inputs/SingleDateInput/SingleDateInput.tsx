@@ -86,7 +86,7 @@ class SingleDateInput extends React.PureComponent<ISingleDateInputProps, ISingle
           isOutsideRange={isDisabledForDate ? isDisabledForDate : this.handleDisabledDateRange}
           renderMonthText={this.renderMonthText}
           calendarInfoPosition='top'
-          initialVisibleMonth={initialVisibleMonth ? () => initialVisibleMonth : undefined}
+          initialVisibleMonth={(initialVisibleMonth && !value) ? () => initialVisibleMonth : undefined}
           renderCalendarInfo={showMonthPicker ? () => (
             <MonthPicker
               handleDateChange={this.handleDateChange}
