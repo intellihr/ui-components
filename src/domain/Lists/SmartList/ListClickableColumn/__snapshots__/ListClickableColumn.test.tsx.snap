@@ -16,6 +16,7 @@ exports[`<ListClickableColumn /> should render a list row wrapped and clickable 
     className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"
     href="#"
     onClick={[Function]}
+    openInNewTab={false}
   >
     <a
       className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"
@@ -47,6 +48,7 @@ exports[`<ListClickableColumn /> should render a list row wrapped and clickable 
     className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"
     href="#"
     onClick={[Function]}
+    openInNewTab={false}
   >
     <a
       className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"
@@ -78,6 +80,7 @@ exports[`<ListClickableColumn /> should render a list row wrapped and clickable 
     className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"
     href="#"
     onClick={[Function]}
+    openInNewTab={false}
   >
     <a
       className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"
@@ -109,6 +112,7 @@ exports[`<ListClickableColumn /> should render a list row wrapped and clickable 
     className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"
     href="test-url.test"
     onClick={[Function]}
+    openInNewTab={false}
   >
     <a
       className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"
@@ -139,6 +143,7 @@ exports[`<ListClickableColumn /> should render a simple list row if is header 1`
     className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"
     href="#"
     onClick={[Function]}
+    openInNewTab={false}
   >
     <a
       className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"
@@ -180,6 +185,7 @@ exports[`<ListClickableColumn /> should render a simple list row with a simple r
     className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"
     href="test-url.test"
     onClick={[Function]}
+    openInNewTab={false}
   >
     <a
       className="ListClickableColumns clickable-columns cell auto grid-x grid-padding-x"

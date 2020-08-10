@@ -99,7 +99,7 @@ exports[`<Tile /> should render an anchor board tile 1`] = `
   href="#dummy"
   isButton={false}
   isHoverable={false}
-  target=""
+  openInNewTab={false}
   tileSize="medium"
   type="default"
 />
@@ -112,7 +112,7 @@ exports[`<Tile /> should render an anchor board tile in new tab if anchorOpenInN
   href="#dummy"
   isButton={false}
   isHoverable={false}
-  target="_blank"
+  openInNewTab={true}
   tileSize="medium"
   type="default"
 />

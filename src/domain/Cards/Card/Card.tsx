@@ -46,8 +46,10 @@ interface ICardBasicProps {
 interface ICardWithHrefProps extends ICardBasicProps {
   /** The url to navigate to when you click on the card header - not to be used with handleClick */
   href: string
-  /** Where to open the href link */
+  /** @deprecated Use `openInNewTab` instead. Where to open the href link */
   target?: string
+  /** Open href in new tab */
+  openInNewTab?: boolean
 }
 
 interface ICardWithHrefAndAnchorPropsProps extends ICardWithHrefProps {
@@ -111,6 +113,7 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
               <StyledAnchor
                 href={this.href}
                 target={this.target}
+                openInNewTab={this.openInNewTab}
                 anchorComponentProps={this.anchorComponentProps}
               />
             )}
@@ -160,6 +163,14 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
   private get target (): string | undefined {
     if ('target' in this.props) {
       return this.props.target
+    }
+
+    return undefined
+  }
+
+  private get openInNewTab (): boolean | undefined {
+    if ('openInNewTab' in this.props) {
+      return this.props.openInNewTab
     }
 
     return undefined

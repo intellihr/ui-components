@@ -81,6 +81,7 @@ exports[`<ActionLink /> should render an action link 1`] = `
     <Anchor
       className="c0"
       href="/lol"
+      openInNewTab={false}
     >
       <a
         className="c0"
@@ -181,6 +182,7 @@ exports[`<ActionLink /> should render an action link with a replacement anchor t
       <Anchor
         className="c0"
         href="#"
+        openInNewTab={false}
       >
         <AnchorComponent
           className="c0"

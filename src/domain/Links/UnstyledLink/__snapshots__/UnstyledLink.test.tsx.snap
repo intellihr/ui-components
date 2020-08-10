@@ -50,6 +50,7 @@ exports[`<TextLink /> should render a text link 1`] = `
     <Anchor
       className="c0"
       href="/lol"
+      openInNewTab={false}
     >
       <a
         className="c0"
