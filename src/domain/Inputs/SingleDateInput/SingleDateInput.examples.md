@@ -33,7 +33,7 @@ initialState = { value: moment() };
 ```jsx
 import moment from 'moment'
 
-initialState = { value: moment() };
+initialState = { value: null };
 
 <div>
   <SingleDateInput 
