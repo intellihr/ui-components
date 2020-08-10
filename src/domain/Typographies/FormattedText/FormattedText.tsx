@@ -23,7 +23,7 @@ export class FormattedText extends React.PureComponent<IFormattedTextProps> {
       <TextLink
         anchorComponent='a'
         href={props.href}
-        target='_blank'
+        openInNewTab
       >
         {props.children}
       </TextLink>

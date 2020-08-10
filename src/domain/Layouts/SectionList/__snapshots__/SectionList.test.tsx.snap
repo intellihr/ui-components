@@ -1624,6 +1624,7 @@ exports[`<SectionList /> should render a sectionList 1`] = `
                                         <Anchor
                                           className="c7"
                                           href="#"
+                                          openInNewTab={false}
                                           type="anchor"
                                         >
                                           <a
@@ -3046,6 +3047,7 @@ exports[`<SectionList /> should render sectionList items with no children 1`] = 
                                         <Anchor
                                           className="c6"
                                           href="#"
+                                          openInNewTab={false}
                                           type="anchor"
                                         >
                                           <a

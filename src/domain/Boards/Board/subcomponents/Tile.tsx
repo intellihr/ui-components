@@ -86,14 +86,12 @@ class Tile extends React.PureComponent<IBoardTileProps, never> {
       'data-component-context': componentContext
     }
 
-    const target = anchorOpenInNewTab ? '_blank' : ''
-
     if (anchorHref) {
       return (
         <StyledAnchorTile
           {...commonProps}
           href={anchorHref}
-          target={target}
+          openInNewTab={anchorOpenInNewTab}
           anchorComponentProps={anchorComponentProps}
         >
           {children}

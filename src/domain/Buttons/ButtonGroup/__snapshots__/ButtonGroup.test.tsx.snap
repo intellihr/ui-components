@@ -122,6 +122,7 @@ exports[`<ButtonGroup /> should render a button group with buttons and link butt
           <Anchor
             href="#"
             onClick={[Function]}
+            openInNewTab={false}
           >
             <a
               href="#"

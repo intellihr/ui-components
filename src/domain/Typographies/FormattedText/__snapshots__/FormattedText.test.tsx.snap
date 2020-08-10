@@ -457,14 +457,14 @@ Ordered/multi-level lists:
                     anchorComponent="a"
                     href="http://www.intellihr.com.au"
                     isInline={true}
-                    target="_blank"
+                    openInNewTab={true}
                     type="anchor"
                   >
                     <Styled(Component)
                       anchorComponent="a"
                       href="http://www.intellihr.com.au"
                       isInline={true}
-                      target="_blank"
+                      openInNewTab={true}
                       type="anchor"
                     >
                       <StyledComponent
@@ -533,7 +533,7 @@ Ordered/multi-level lists:
                         forwardedRef={null}
                         href="http://www.intellihr.com.au"
                         isInline={true}
-                        target="_blank"
+                        openInNewTab={true}
                         type="anchor"
                       >
                         <Component
@@ -541,19 +541,20 @@ Ordered/multi-level lists:
                           className="c1"
                           href="http://www.intellihr.com.au"
                           isInline={true}
-                          target="_blank"
+                          openInNewTab={true}
                           type="anchor"
                         >
                           <Anchor
                             anchorComponent="a"
                             className="c1"
                             href="http://www.intellihr.com.au"
-                            target="_blank"
+                            openInNewTab={true}
                             type="anchor"
                           >
                             <a
                               className="c1"
                               href="http://www.intellihr.com.au"
+                              rel="noreferrer"
                               target="_blank"
                               type="anchor"
                             >
@@ -588,14 +589,14 @@ Ordered/multi-level lists:
                     anchorComponent="a"
                     href="http://www.google.com"
                     isInline={true}
-                    target="_blank"
+                    openInNewTab={true}
                     type="anchor"
                   >
                     <Styled(Component)
                       anchorComponent="a"
                       href="http://www.google.com"
                       isInline={true}
-                      target="_blank"
+                      openInNewTab={true}
                       type="anchor"
                     >
                       <StyledComponent
@@ -664,7 +665,7 @@ Ordered/multi-level lists:
                         forwardedRef={null}
                         href="http://www.google.com"
                         isInline={true}
-                        target="_blank"
+                        openInNewTab={true}
                         type="anchor"
                       >
                         <Component
@@ -672,19 +673,20 @@ Ordered/multi-level lists:
                           className="c1"
                           href="http://www.google.com"
                           isInline={true}
-                          target="_blank"
+                          openInNewTab={true}
                           type="anchor"
                         >
                           <Anchor
                             anchorComponent="a"
                             className="c1"
                             href="http://www.google.com"
-                            target="_blank"
+                            openInNewTab={true}
                             type="anchor"
                           >
                             <a
                               className="c1"
                               href="http://www.google.com"
+                              rel="noreferrer"
                               target="_blank"
                               type="anchor"
                             >
@@ -1507,14 +1509,14 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
                     anchorComponent="a"
                     href="http://www.heyguy.com"
                     isInline={true}
-                    target="_blank"
+                    openInNewTab={true}
                     type="anchor"
                   >
                     <Styled(Component)
                       anchorComponent="a"
                       href="http://www.heyguy.com"
                       isInline={true}
-                      target="_blank"
+                      openInNewTab={true}
                       type="anchor"
                     >
                       <StyledComponent
@@ -1583,7 +1585,7 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
                         forwardedRef={null}
                         href="http://www.heyguy.com"
                         isInline={true}
-                        target="_blank"
+                        openInNewTab={true}
                         type="anchor"
                       >
                         <Component
@@ -1591,19 +1593,20 @@ exports[`<FormattedText /> should render any urls as links 1`] = `
                           className="c1"
                           href="http://www.heyguy.com"
                           isInline={true}
-                          target="_blank"
+                          openInNewTab={true}
                           type="anchor"
                         >
                           <Anchor
                             anchorComponent="a"
                             className="c1"
                             href="http://www.heyguy.com"
-                            target="_blank"
+                            openInNewTab={true}
                             type="anchor"
                           >
                             <a
                               className="c1"
                               href="http://www.heyguy.com"
+                              rel="noreferrer"
                               target="_blank"
                               type="anchor"
                             >

@@ -4,6 +4,7 @@ exports[`<MenuItem /> should render a a menu item with a link 1`] = `
 <styled.li>
   <Anchor
     href="www.google.com"
+    openInNewTab={false}
   >
     <styled.span>
       Test menu item
@@ -34,6 +35,7 @@ exports[`<MenuItem /> should render a menu item as a submenu if it has children 
     <ForwardRef(styled.li)>
       <Anchor
         href="www.google.com"
+        openInNewTab={false}
       >
         <ForwardRef(styled.span)>
           <Memo(IntelliIcon)
@@ -100,6 +102,7 @@ exports[`<MenuItem /> should render a menu item which overflowWhenOpen prop is p
     <ForwardRef(styled.li)>
       <Anchor
         href="#"
+        openInNewTab={false}
       >
         <ForwardRef(styled.span)>
           Test menu item
@@ -124,6 +127,7 @@ exports[`<MenuItem /> should render a menu item with Icon 1`] = `
 <styled.li>
   <Anchor
     href="www.google.com"
+    openInNewTab={false}
   >
     <styled.span>
       <Memo(IntelliIcon)
@@ -143,6 +147,7 @@ exports[`<MenuItem /> should render a menu item with active state 1`] = `
 >
   <Anchor
     href="www.google.com"
+    openInNewTab={false}
   >
     <styled.span>
       Test menu item
@@ -155,6 +160,7 @@ exports[`<MenuItem /> should render a menu item with loading state 1`] = `
 <styled.li>
   <Anchor
     href="www.google.com"
+    openInNewTab={false}
   >
     <styled.span>
       <Memo(IntelliIcon)
@@ -179,6 +185,7 @@ exports[`<MenuItem /> should render a simple menu item 1`] = `
 <styled.li>
   <Anchor
     href="#"
+    openInNewTab={false}
   >
     <styled.span>
       Test menu item
