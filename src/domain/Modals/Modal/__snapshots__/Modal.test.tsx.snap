@@ -48,7 +48,7 @@ exports[`<Modal /> should render a hidden modal 1`] = `
 
 .c0 .modal.subcomponent-modal-style .modal-close-button {
   right: 29px;
-  top: 33px;
+  top: 31px;
   line-height: 14px;
 }
 
@@ -60,6 +60,11 @@ exports[`<Modal /> should render a hidden modal 1`] = `
   color: #262D33;
   font-size: 2em;
   line-height: 1;
+}
+
+.c0 .modal .modal-close-button::before {
+  content: "\\00D7";
+  display: block;
 }
 
 .c0 .modal.modal-size-xlarge {
@@ -91,6 +96,22 @@ exports[`<Modal /> should render a hidden modal 1`] = `
     left: 0;
     margin: 0;
     top: 0;
+  }
+}
+
+@media only screen and (max-width:640px) {
+  .c0 .modal.subcomponent-modal-style .modal-close-button {
+    position: fixed;
+    will-change: scroll-position;
+    left: 12px;
+    top: 16px !important;
+  }
+
+  .c0 .modal.subcomponent-modal-style .modal-close-button::before {
+    font-family: 'Font Awesome 5 Pro';
+    content: "\\f104";
+    display: block;
+    font-size: 18px;
   }
 }
 
@@ -252,8 +273,24 @@ exports[`<Modal /> should render a hidden modal 1`] = `
 
       .modal-close-button {
         right: 29px;
-        top: 33px;
+        top: 31px;
         line-height: 14px;
+
+        @media only screen and (max-width: ",
+              "640",
+              "px) {
+          position: fixed;
+          will-change: scroll-position;
+          left: 12px;
+          top: 16px !important;
+
+          &::before {
+            font-family: 'Font Awesome 5 Pro';
+            content: \\"\\\\f104\\";
+            display: block;
+            font-size: 18px;
+          }
+        }
       }
     }
 
@@ -284,6 +321,11 @@ exports[`<Modal /> should render a hidden modal 1`] = `
               ";
       font-size: 2em;
       line-height: 1;
+
+      &::before {
+        content: \\"\\\\00D7\\"; // 'times' HTML entity
+        display: block;
+      }
 
       @media only screen and (max-width: ",
               "640",
@@ -486,7 +528,7 @@ exports[`<Modal /> should render a hidden modal 1`] = `
 
 .c0 .modal.subcomponent-modal-style .modal-close-button {
   right: 29px;
-  top: 33px;
+  top: 31px;
   line-height: 14px;
 }
 
@@ -498,6 +540,11 @@ exports[`<Modal /> should render a hidden modal 1`] = `
   color: #262D33;
   font-size: 2em;
   line-height: 1;
+}
+
+.c0 .modal .modal-close-button::before {
+  content: "\\00D7";
+  display: block;
 }
 
 .c0 .modal.modal-size-xlarge {
@@ -529,6 +576,22 @@ exports[`<Modal /> should render a hidden modal 1`] = `
     left: 0;
     margin: 0;
     top: 0;
+  }
+}
+
+@media only screen and (max-width:640px) {
+  .c0 .modal.subcomponent-modal-style .modal-close-button {
+    position: fixed;
+    will-change: scroll-position;
+    left: 12px;
+    top: 16px !important;
+  }
+
+  .c0 .modal.subcomponent-modal-style .modal-close-button::before {
+    font-family: 'Font Awesome 5 Pro';
+    content: "\\f104";
+    display: block;
+    font-size: 18px;
   }
 }
 

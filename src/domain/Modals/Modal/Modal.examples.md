@@ -1,3 +1,9 @@
+**Modals** display additional content over the main view a page.
+Their content can be changed to suit many different cases for forms and features.
+
+The modern modal design requires the use of the `useSubcomponents` prop
+and proper usage of the subcomponents: `Header`, `Content`, and `Footer`
+
 ```jsx
 import { Props } from '@Common';
 import { Button, ButtonGroup } from '@Domain/Buttons';
@@ -7,8 +13,6 @@ import { TextInput, RadioSet } from '@Domain/Inputs';
 initialState = { textInputValue: '', radioInputValue: 'today', isOpen: false };
 
 <>
-    Example Modal using Subcomponents:
-    <br/>
     <Button
       onClick={() => setState({isOpen: true})}
     >
@@ -77,6 +81,19 @@ initialState = { textInputValue: '', radioInputValue: 'today', isOpen: false };
     </Modal>
 </>
 ```
+
+### Best Practices
+* Only use a modal when displaying content that does not merit a full page
+* Include clear call-to-actions for the user to proceed, cancel, or close
+
+<br />
+
+### Related Components
+* For a simple binary choice that require user interruption, use a [Dialog](/#/Overlay/Dialog).
+
+<br />
+
+### Props Examples
 
 ```jsx
 import { Props } from '@Common';

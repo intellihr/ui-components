@@ -1,6 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Header /> should render modal header 1`] = `
+.c0 {
+  min-height: 80px;
+  background-color: #F5F7FA;
+  padding: 24px;
+}
+
 .c1 {
   font-size: 24px;
   line-height: 32px;
@@ -8,14 +14,38 @@ exports[`<Header /> should render modal header 1`] = `
   -moz-letter-spacing: -.02em;
   -ms-letter-spacing: -.02em;
   letter-spacing: -.02em;
-  color: #424F5C;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-weight: 600;
 }
 
-.c0 {
-  min-height: 80px;
-  background-color: #F5F7FA;
-  padding: 24px;
+@media only screen and (max-width:640px) {
+  .c0 {
+    padding: 12px;
+    min-height: 48px;
+    height: 48px;
+    position: fixed;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c1 {
+    margin-right: 32px;
+  }
+}
+
+@media only screen and (max-width:640px) {
+  .c1 {
+    font-size: 18px;
+    line-height: 24px;
+    -webkit-letter-spacing: -.02em;
+    -moz-letter-spacing: -.02em;
+    -ms-letter-spacing: -.02em;
+    letter-spacing: -.02em;
+    margin-left: 24px;
+  }
 }
 
 <Header>
@@ -26,7 +56,7 @@ exports[`<Header /> should render modal header 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gZMcBi",
+            "componentId": "sc-bdVaJa",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -36,13 +66,23 @@ exports[`<Header /> should render modal header 1`] = `
               "#F5F7FA",
               ";
   padding: 24px;
+
+  @media only screen and (max-width: ",
+              "640",
+              "px) {
+    padding: 12px;
+    min-height: 48px;
+    height: 48px;
+    position: fixed;
+    width: 100%;
+  }
 ",
             ],
           },
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gZMcBi",
+          "styledComponentId": "sc-bdVaJa",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -55,89 +95,85 @@ exports[`<Header /> should render modal header 1`] = `
       <div
         className="c0"
       >
-        <Text
-          isInline={true}
-          tag="span"
-          type="display"
-        >
-          <styled.span
-            as="span"
-            data-component-type="text"
-            isInline={true}
-            textType="display"
-          >
-            <StyledComponent
-              as="span"
-              data-component-type="text"
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-dnqmqq",
-                    "isStatic": false,
-                    "lastClassName": "c1",
-                    "rules": Array [
-                      "
-
+        <styled.div>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bwzfXH",
+                  "isStatic": false,
+                  "lastClassName": "c1",
+                  "rules": Array [
+                    "
   ",
-                      [Function],
-                      "
-
+                    "
+          font-size: ",
+                    "24",
+                    "px;
+          line-height: ",
+                    "32",
+                    "px;
+          letter-spacing: -.02em;
+        ",
+                    "
   ",
-                      [Function],
-                      "
-
+                    "
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   ",
-                      [Function],
-                      "
+                    "
+  font-weight: ",
+                    "600",
+                    ";
 
-  ",
-                      [Function],
-                      "
+  @media only screen and (min-width: ",
+                    "641",
+                    "px) {
+      margin-right: 32px;
+  }
 
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
+  @media only screen and (max-width: ",
+                    "640",
+                    "px) {
+      ",
+                    "
+          font-size: ",
+                    "18",
+                    "px;
+          line-height: ",
+                    "24",
+                    "px;
+          letter-spacing: -.02em;
+        ",
+                    "
+      margin-left: 24px;
+  }
 ",
-                    ],
-                  },
-                  "displayName": "styled.span",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "sc-dnqmqq",
-                  "target": "span",
-                  "toString": [Function],
-                  "usesTheme": false,
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bwzfXH",
+                "target": "div",
+                "toString": [Function],
+                "usesTheme": false,
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
               }
-              forwardedRef={null}
-              isInline={true}
-              textType="display"
+            }
+            forwardedRef={null}
+          >
+            <div
+              className="c1"
             >
-              <span
-                className="c1"
-                data-component-type="text"
-              >
-                Header Text
-              </span>
-            </StyledComponent>
-          </styled.span>
-        </Text>
+              Header Text
+            </div>
+          </StyledComponent>
+        </styled.div>
       </div>
     </StyledComponent>
   </styled.div>

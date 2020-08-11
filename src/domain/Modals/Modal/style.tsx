@@ -96,8 +96,22 @@ const StyledReactModal = styled(ReactModalAdapter)`
 
       .modal-close-button {
         right: 29px;
-        top: 33px;
+        top: 31px;
         line-height: 14px;
+
+        @media only screen and (max-width: ${breakpointTablet}px) {
+          position: fixed;
+          will-change: scroll-position;
+          left: 12px;
+          top: 16px !important;
+
+          &::before {
+            font-family: 'Font Awesome 5 Pro';
+            content: "\\f104";
+            display: block;
+            font-size: 18px;
+          }
+        }
       }
     }
 
@@ -124,6 +138,11 @@ const StyledReactModal = styled(ReactModalAdapter)`
       color: ${Variables.Color.n800};
       font-size: 2em;
       line-height: 1;
+
+      &::before {
+        content: "\\00D7"; // 'times' HTML entity
+        display: block;
+      }
 
       @media only screen and (max-width: ${breakpointTablet}px) {
         position: fixed;

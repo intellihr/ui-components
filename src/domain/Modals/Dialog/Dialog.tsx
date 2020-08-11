@@ -17,6 +17,10 @@ interface IDialogProps {
   secondaryActionLabel?: string
   variant: DialogVariant
   componentContext: string
+  /** If true, will close when esc is pressed */
+  shouldCloseOnEsc?: boolean
+  /** If true, will close when overlay is clicked */
+  shouldCloseOnOverlayClick?: boolean
 }
 
 enum DialogVariant {
@@ -44,7 +48,9 @@ const Dialog: React.FC<IDialogProps> = ({
   onSecondaryActionClick,
   secondaryActionLabel,
   variant,
-  componentContext
+  componentContext,
+  shouldCloseOnEsc = true,
+  shouldCloseOnOverlayClick = true
 }) => {
 
   return (
@@ -54,8 +60,8 @@ const Dialog: React.FC<IDialogProps> = ({
       ariaHideApp={false}
       isOpen={isOpen}
       onRequestClose={handleClose}
-      shouldCloseOnEsc
-      shouldCloseOnOverlayClick
+      shouldCloseOnEsc={shouldCloseOnEsc}
+      shouldCloseOnOverlayClick={shouldCloseOnOverlayClick}
       overlayClassName='dialog-overlay'
       className='dialog'
       style={{
