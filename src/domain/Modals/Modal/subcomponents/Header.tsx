@@ -1,8 +1,6 @@
 import React from 'react'
 
-import { Props } from '../../../../common'
-import { Text } from '../../../Typographies/Text'
-import { StyledModalHeader } from './style'
+import { StyledModalHeader, StyledModalHeaderHeading } from './style'
 
 interface IHeaderProps {
   children: string
@@ -16,11 +14,9 @@ class Header extends React.PureComponent<IHeaderProps, never> {
 
     return (
       <StyledModalHeader>
-        <Text
-          type={Props.TypographyType.Display}
-        >
+        <StyledModalHeaderHeading>
           {children}
-        </Text>
+        </StyledModalHeaderHeading>
       </StyledModalHeader>
     )
   }

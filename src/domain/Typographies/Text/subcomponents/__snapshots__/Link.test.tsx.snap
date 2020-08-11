@@ -1,0 +1,315 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link /> should render a link 1`] = `
+Array [
+  .c0 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  cursor: pointer;
+}
+
+.c0,
+.c0:link,
+.c0:visited {
+  color: #432DF3;
+}
+
+.c0:hover {
+  color: #2512B3;
+}
+
+.c0:active {
+  color: #0F0080;
+}
+
+<Link
+    href="#"
+  >
+    <styled.a
+      href="#"
+      variant="default"
+    >
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "
+  &:hover {
+    ",
+                [Function],
+                "
+  }
+
+  ",
+                [Function],
+                "
+",
+              ],
+            },
+            "displayName": "styled.a",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "a",
+            "toString": [Function],
+            "usesTheme": false,
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        href="#"
+        variant="default"
+      >
+        <a
+          className="c0"
+          href="#"
+        >
+          Relative URL
+        </a>
+      </StyledComponent>
+    </styled.a>
+  </Link>,
+  .c0 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  cursor: pointer;
+}
+
+.c0,
+.c0:link,
+.c0:visited {
+  color: #432DF3;
+}
+
+.c0:hover {
+  color: #2512B3;
+}
+
+.c0:active {
+  color: #0F0080;
+}
+
+<Link
+    href="http://localhost/#"
+  >
+    <styled.a
+      href="http://localhost/#"
+      variant="default"
+    >
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "
+  &:hover {
+    ",
+                [Function],
+                "
+  }
+
+  ",
+                [Function],
+                "
+",
+              ],
+            },
+            "displayName": "styled.a",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "a",
+            "toString": [Function],
+            "usesTheme": false,
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        href="http://localhost/#"
+        variant="default"
+      >
+        <a
+          className="c0"
+          href="http://localhost/#"
+        >
+          Absolute URL
+        </a>
+      </StyledComponent>
+    </styled.a>
+  </Link>,
+]
+`;
+
+exports[`<Link /> should render a link with rel when href is external 1`] = `
+.c0 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  cursor: pointer;
+}
+
+.c0,
+.c0:link,
+.c0:visited {
+  color: #432DF3;
+}
+
+.c0:hover {
+  color: #2512B3;
+}
+
+.c0:active {
+  color: #0F0080;
+}
+
+<Link
+  href="http://www.google.com"
+>
+  <styled.a
+    href="http://www.google.com"
+    rel="noreferrer"
+    variant="default"
+  >
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  &:hover {
+    ",
+              [Function],
+              "
+  }
+
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.a",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "a",
+          "toString": [Function],
+          "usesTheme": false,
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      href="http://www.google.com"
+      rel="noreferrer"
+      variant="default"
+    >
+      <a
+        className="c0"
+        href="http://www.google.com"
+        rel="noreferrer"
+      >
+        Hello World
+      </a>
+    </StyledComponent>
+  </styled.a>
+</Link>
+`;
+
+exports[`<Link /> should render a link with target when openInNewTab is true 1`] = `
+.c0 {
+  -webkit-transition: color .25s ease-out;
+  transition: color .25s ease-out;
+  cursor: pointer;
+}
+
+.c0,
+.c0:link,
+.c0:visited {
+  color: #432DF3;
+}
+
+.c0:hover {
+  color: #2512B3;
+}
+
+.c0:active {
+  color: #0F0080;
+}
+
+<Link
+  href="#"
+  openInNewTab={true}
+>
+  <styled.a
+    href="#"
+    target="_blank"
+    variant="default"
+  >
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  &:hover {
+    ",
+              [Function],
+              "
+  }
+
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.a",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "a",
+          "toString": [Function],
+          "usesTheme": false,
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      href="#"
+      target="_blank"
+      variant="default"
+    >
+      <a
+        className="c0"
+        href="#"
+        target="_blank"
+      >
+        Hello World
+      </a>
+    </StyledComponent>
+  </styled.a>
+</Link>
+`;

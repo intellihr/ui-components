@@ -2,6 +2,7 @@ import isString from 'lodash/isString'
 import React from 'react'
 
 import { DefaultsConsumer, IDefaults } from '../../Defaults'
+import { isExternalURL } from './helper'
 
 interface IAnchorProps extends React.HTMLProps<HTMLAnchorElement> {
   /** Alternative prop to render using if you don't want the default */
@@ -12,11 +13,14 @@ interface IAnchorProps extends React.HTMLProps<HTMLAnchorElement> {
   }
   /** Fix typescript issue with refs */
   ref?: any
+  /** Open anchor href in new tab */
+  openInNewTab?: boolean
 }
 
 class Anchor extends React.PureComponent<IAnchorProps, never> {
   public static defaultProps = {
-    href: '#'
+    href: '#',
+    openInNewTab: false
   }
 
   public render (): JSX.Element {
@@ -32,10 +36,23 @@ class Anchor extends React.PureComponent<IAnchorProps, never> {
       anchorComponent,
       children,
       href,
+      openInNewTab,
+      target,
+      rel,
       ...props
     } = this.props
 
     const AnchorComponent = anchorComponent || defaultValues.AnchorComponent || 'a'
+
+    const targetProp = openInNewTab ? '_blank' : target
+    let relProp = rel
+
+    if (href && isExternalURL(href)) {
+      const rels = new Set((relProp ?? '').split(/\s+/).filter(Boolean as any))
+      rels.add('noreferrer')
+
+      relProp = Array.from(rels.values()).join(' ')
+    }
 
     // Prevent warnings from passing anchorComponentProps to core html tags
     if (isString(AnchorComponent)) {
@@ -46,6 +63,8 @@ class Anchor extends React.PureComponent<IAnchorProps, never> {
       <AnchorComponent
         {...props}
         href={href}
+        target={targetProp}
+        rel={relProp}
       >
         {children}
       </AnchorComponent>

@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { GridProvider } from '../../Grids'
-
 interface IDefaults {
   /** Anchor component used for clickable links */
   AnchorComponent?: React.ComponentType<any>

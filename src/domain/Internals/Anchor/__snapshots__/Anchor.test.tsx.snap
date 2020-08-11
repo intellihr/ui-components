@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Anchor /> should render a link 1`] = `
+Array [
+  <Anchor
+    href="#"
+    openInNewTab={false}
+  >
+    <a
+      href="#"
+    >
+      Relative URL
+    </a>
+  </Anchor>,
+  <Anchor
+    href="http://localhost/#"
+    openInNewTab={false}
+  >
+    <a
+      href="http://localhost/#"
+    >
+      Absolute URL
+    </a>
+  </Anchor>,
+]
+`;
+
+exports[`<Anchor /> should render a link with rel with href is external 1`] = `
+Array [
+  <Anchor
+    href="http://www.google.com"
+    openInNewTab={false}
+  >
+    <a
+      href="http://www.google.com"
+      rel="noreferrer"
+    >
+      No Rel
+    </a>
+  </Anchor>,
+  <Anchor
+    href="http://www.google.com"
+    openInNewTab={false}
+    rel="noreferrer"
+  >
+    <a
+      href="http://www.google.com"
+      rel="noreferrer"
+    >
+      Rel with noreferrer
+    </a>
+  </Anchor>,
+  <Anchor
+    href="http://www.google.com"
+    openInNewTab={false}
+    rel="nofollower"
+  >
+    <a
+      href="http://www.google.com"
+      rel="nofollower noreferrer"
+    >
+      Rel with nofollower
+    </a>
+  </Anchor>,
+]
+`;
+
+exports[`<Anchor /> should render a link with target when openInNewTab is true 1`] = `
+Array [
+  <Anchor
+    href="#"
+    openInNewTab={true}
+  >
+    <a
+      href="#"
+      target="_blank"
+    >
+      No target
+    </a>
+  </Anchor>,
+  <Anchor
+    href="#"
+    openInNewTab={true}
+    target="_self"
+  >
+    <a
+      href="#"
+      target="_blank"
+    >
+      With target
+    </a>
+  </Anchor>,
+]
+`;

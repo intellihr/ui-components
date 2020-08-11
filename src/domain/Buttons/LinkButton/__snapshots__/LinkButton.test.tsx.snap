@@ -4,6 +4,7 @@ exports[`<LinkButton /> should render a disabled link button 1`] = `
 <Anchor
   href="#"
   onClick={[Function]}
+  openInNewTab={false}
 >
   <styled.span
     className="button neutral disabled"
@@ -18,6 +19,7 @@ exports[`<LinkButton /> should render a link button with a simple text 1`] = `
 <Anchor
   href="#"
   onClick={[Function]}
+  openInNewTab={false}
 >
   <styled.span
     className="button neutral"
@@ -32,6 +34,7 @@ exports[`<LinkButton /> should render a link button with a size large 1`] = `
 <Anchor
   href="#"
   onClick={[Function]}
+  openInNewTab={false}
 >
   <styled.span
     className="button large neutral"
@@ -46,6 +49,7 @@ exports[`<LinkButton /> should render a link button with a type delete-subtle 1`
 <Anchor
   href="#"
   onClick={[Function]}
+  openInNewTab={false}
 >
   <styled.span
     className="button delete-subtle"
@@ -60,6 +64,7 @@ exports[`<LinkButton /> should render a link button with an icon 1`] = `
 <Anchor
   href="test"
   onClick={[Function]}
+  openInNewTab={false}
 >
   <styled.span
     className="button primary"
@@ -88,6 +93,7 @@ exports[`<LinkButton /> should render a link button with manual extra props for 
   }
   href="test"
   onClick={[Function]}
+  openInNewTab={false}
 >
   <styled.span
     className="button primary"

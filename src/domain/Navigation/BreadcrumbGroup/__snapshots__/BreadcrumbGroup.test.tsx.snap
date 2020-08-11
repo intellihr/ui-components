@@ -19,6 +19,7 @@ exports[`<BreadcrumbGroup /> should render a breadcrumb by itself 1`] = `
     className="baseCrumb"
     data-component-type="breadcrumb"
     href="/test"
+    openInNewTab={false}
   >
     <a
       className="baseCrumb"
@@ -55,6 +56,7 @@ exports[`<BreadcrumbGroup /> should render a simple breadcrumbGroup 1`] = `
         className="baseCrumb"
         data-component-type="breadcrumb"
         href="/test"
+        openInNewTab={false}
       >
         <a
           className="baseCrumb"
@@ -83,6 +85,7 @@ exports[`<BreadcrumbGroup /> should render a simple breadcrumbGroup 1`] = `
         className="baseCrumb"
         data-component-type="breadcrumb"
         href="/test"
+        openInNewTab={false}
       >
         <a
           className="baseCrumb"
@@ -111,6 +114,7 @@ exports[`<BreadcrumbGroup /> should render a simple breadcrumbGroup 1`] = `
         className="activeCrumb"
         data-component-type="breadcrumb"
         href="/test"
+        openInNewTab={false}
       >
         <a
           className="activeCrumb"
