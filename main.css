@@ -2626,6 +2626,16 @@
 
 .FUEGYQ9xr8O5pLrbZJCpx .loading-title { color: #432DF3; }
 ._34CmOZwOoIFJuQHkD73bjb ul { position: absolute; }
+._2i_ORrWgjZ3HpRVz7vU1xS:focus, ._2i_ORrWgjZ3HpRVz7vU1xS *:focus { outline: 0; }
+
+._2i_ORrWgjZ3HpRVz7vU1xS:hover :not(.label).cell:first-child { color: #432DF3; }
+
+._2i_ORrWgjZ3HpRVz7vU1xS:hover :not(.label).cell-label { color: #432DF3; }
+
+._2i_ORrWgjZ3HpRVz7vU1xS:hover .label { cursor: pointer; }
+
+._2i_ORrWgjZ3HpRVz7vU1xS, ._2i_ORrWgjZ3HpRVz7vU1xS .modal-button, ._2i_ORrWgjZ3HpRVz7vU1xS .modal-trigger { -webkit-box-align: center; -ms-flex-align: center; align-items: center; cursor: pointer; display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; }
+._2OAeT2NkNjdKsKPD9CZcaW { color: #424F5C; font-size: 15px; font-size: .9375rem; font-weight: 600; }
 /** Foundation for Sites by ZURB Version 6.5.3 foundation.zurb.com Licensed under MIT Open Source */
 .grid-container { padding-right: 8px; padding-right: 0.5rem; padding-left: 8px; padding-left: 0.5rem; padding-right: 8px; padding-right: 0.5rem; padding-left: 8px; padding-left: 0.5rem; max-width: 1920px; max-width: 120rem; margin-left: auto; margin-right: auto; }
 
@@ -4994,16 +5004,6 @@
 @media screen and (min-width: 90em) { .grid-margin-y.big-desktop-grid-frame { height: calc(100vh + 1.5rem); } }
 
 .ihr-grid-y, ._2u32MqDtdXXi_EEnlcXRlZ { height: 100%; }
-._2i_ORrWgjZ3HpRVz7vU1xS:focus, ._2i_ORrWgjZ3HpRVz7vU1xS *:focus { outline: 0; }
-
-._2i_ORrWgjZ3HpRVz7vU1xS:hover :not(.label).cell:first-child { color: #432DF3; }
-
-._2i_ORrWgjZ3HpRVz7vU1xS:hover :not(.label).cell-label { color: #432DF3; }
-
-._2i_ORrWgjZ3HpRVz7vU1xS:hover .label { cursor: pointer; }
-
-._2i_ORrWgjZ3HpRVz7vU1xS, ._2i_ORrWgjZ3HpRVz7vU1xS .modal-button, ._2i_ORrWgjZ3HpRVz7vU1xS .modal-trigger { -webkit-box-align: center; -ms-flex-align: center; align-items: center; cursor: pointer; display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; }
-._2OAeT2NkNjdKsKPD9CZcaW { color: #424F5C; font-size: 15px; font-size: .9375rem; font-weight: 600; }
 ._1ws_FEQREuncuaxqLQss0l { cursor: pointer; outline: 0; }
 @font-face {
   font-family: 'intellihr';
