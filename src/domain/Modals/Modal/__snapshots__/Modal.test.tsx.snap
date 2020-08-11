@@ -103,9 +103,10 @@ exports[`<Modal /> should render a hidden modal 1`] = `
   .c0 .modal.subcomponent-modal-style .modal-close-button {
     position: fixed;
     will-change: scroll-position;
-    left: 12px;
-    top: 16px !important;
-    width: 8px;
+    left: 0;
+    top: 0;
+    height: 48px;
+    width: 48px;
   }
 
   .c0 .modal.subcomponent-modal-style .modal-close-button::before {
@@ -282,10 +283,10 @@ exports[`<Modal /> should render a hidden modal 1`] = `
               "px) {
           position: fixed;
           will-change: scroll-position;
-          left: 12px;
-          top: 16px !important;
-          /* This is required to fix the element width in safari while using left */
-          width: 8px;
+          left: 0;
+          top: 0;
+          height: 48px;
+          width: 48px;
 
           &::before {
             font-family: 'Font Awesome 5 Pro';
@@ -586,9 +587,10 @@ exports[`<Modal /> should render a hidden modal 1`] = `
   .c0 .modal.subcomponent-modal-style .modal-close-button {
     position: fixed;
     will-change: scroll-position;
-    left: 12px;
-    top: 16px !important;
-    width: 8px;
+    left: 0;
+    top: 0;
+    height: 48px;
+    width: 48px;
   }
 
   .c0 .modal.subcomponent-modal-style .modal-close-button::before {
