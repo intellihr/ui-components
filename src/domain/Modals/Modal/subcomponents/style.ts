@@ -28,7 +28,7 @@ const StyledModalHeaderHeading = styled.div`
 
   @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet}px) {
       ${styleForTypographyType(Props.TypographyType.Heading)}
-      margin-left: 24px;
+      margin-left: 38px;
   }
 `
 

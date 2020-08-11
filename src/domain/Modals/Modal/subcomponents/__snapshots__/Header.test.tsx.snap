@@ -44,7 +44,7 @@ exports[`<Header /> should render modal header 1`] = `
     -moz-letter-spacing: -.02em;
     -ms-letter-spacing: -.02em;
     letter-spacing: -.02em;
-    margin-left: 24px;
+    margin-left: 38px;
   }
 }
 
@@ -149,7 +149,7 @@ exports[`<Header /> should render modal header 1`] = `
           letter-spacing: -.02em;
         ",
                     "
-      margin-left: 24px;
+      margin-left: 38px;
   }
 ",
                   ],
