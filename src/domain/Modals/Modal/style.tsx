@@ -104,6 +104,8 @@ const StyledReactModal = styled(ReactModalAdapter)`
           will-change: scroll-position;
           left: 12px;
           top: 16px !important;
+          /* This is required to fix the element width in safari while using left */
+          width: 8px;
 
           &::before {
             font-family: 'Font Awesome 5 Pro';
