@@ -102,10 +102,10 @@ const StyledReactModal = styled(ReactModalAdapter)`
         @media only screen and (max-width: ${breakpointTablet}px) {
           position: fixed;
           will-change: scroll-position;
-          left: 12px;
-          top: 16px !important;
-          /* This is required to fix the element width in safari while using left */
-          width: 8px;
+          left: 0;
+          top: 0;
+          height: 48px;
+          width: 48px;
 
           &::before {
             font-family: 'Font Awesome 5 Pro';
