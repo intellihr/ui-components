@@ -23,6 +23,13 @@ exports[`<Footer /> should render modal footer 1`] = `
 }
 
 @media only screen and (max-width:640px) {
+  .c0:not(:root:root),
+  .c0 .selector {
+    margin-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width:640px) {
   .c0 {
     background-color: transparent;
   }
@@ -59,6 +66,14 @@ exports[`<Footer /> should render modal footer 1`] = `
   padding: 20px;
   display: flex;
   justify-content: space-between;
+
+  &:not(:root:root), .selector {
+    @media only screen and (max-width: ",
+              "640",
+              "px) {
+      margin-bottom: 50px;
+    }
+  }
 
   @media only screen and (max-width: ",
               "640",
