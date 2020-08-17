@@ -47,6 +47,12 @@ const StyledModalFooter = styled.div`
   display: flex;
   justify-content: space-between;
 
+  &:not(:root:root), .selector {
+    @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet}px) {
+      margin-bottom: 50px;
+    }
+  }
+
   @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet}px) {
     background-color: transparent;
   }
