@@ -12,7 +12,7 @@ interface IStyledBackLinkProps {
 const StyledBackLink = styled(Anchor)`
   transition: color .25s ease-out;
   cursor: pointer;
-  display: block;
+  display: inline;
 
   ${(props: IStyledBackLinkProps) => styleForMargins(props.margins)}
 
