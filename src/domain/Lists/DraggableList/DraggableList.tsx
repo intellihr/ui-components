@@ -64,6 +64,7 @@ const DraggableList = <T extends {}> ({ droppableId, setItems, children, margins
                             ref={draggableProvided.innerRef}
                             {...draggableProvided.draggableProps}
                             {...draggableProvided.dragHandleProps}
+                            onDragStart={draggableProvided.dragHandleProps?.onDragStart as React.DragEventHandler<HTMLDivElement>}
                             style={draggableProvided.draggableProps.style}
                           >
                             {child && (

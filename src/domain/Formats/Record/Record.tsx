@@ -27,7 +27,7 @@ class Record extends React.PureComponent <IRecordProps> {
     noChildrenText: 'Not Provided'
   }
 
-  get formattedChildren (): JSX.Element[] | JSX.Element {
+  get formattedChildren (): JSX.Element[] | JSX.Element | null | undefined {
     const {
       children,
       noChildrenText
