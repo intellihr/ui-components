@@ -35,6 +35,7 @@ const TableCellTooltip: React.FC<{tooltipText: string}> = ({ tooltipText, childr
     <TooltipPopover
       variant={TooltipPopoverVariant.Dark}
       toggleComponent={toggleComponent}
+      width={300}
     >
       {tooltipText}
     </TooltipPopover>
@@ -77,6 +78,8 @@ const TableRowDataCell = <T extends {}>(props: ITableRowDataCellProps<T>) => {
     setHasHovered(false)
   }, [isSelectable, toggleSelected, row, onClick, handleSwipeAction, setHasHovered])
 
+  const tooltipText = column.tooltipText?.(row.data)
+
   return (
     <StyledDataCell
       size={column.size}
@@ -87,7 +90,7 @@ const TableRowDataCell = <T extends {}>(props: ITableRowDataCellProps<T>) => {
       isLastColumn={isLastColumn}
       isFirstColumn={isFirstColumn}
     >
-      {column.tooltipText ? <TableCellTooltip tooltipText={column.tooltipText(row.data)}>{children}</TableCellTooltip> : children}
+      {tooltipText ? <TableCellTooltip tooltipText={tooltipText}>{children}</TableCellTooltip> : children}
     </StyledDataCell>
   )
 }
