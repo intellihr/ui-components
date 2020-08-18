@@ -63,14 +63,17 @@ const rowActions = ([
           name: 'fileName',
           title: 'File Name',
           size: 'auto',
-          content: (data)=> <Text>{data.fileName}</Text>,
-          alignment: 'left'
+          content: (data) => <Text>{data.fileName}</Text>,
+          alignment: 'left',
+          tooltipText: (row) => (row.fileName === 'test1.pdf') ?
+            'This row has a long stretch of text used for its tooltip. This should only exist for the second row, and should break into multiple lines.' :
+            null
       },
       {
           name: 'createAt',
           title: 'Date uploaded',
           size: 'shrink',
-          content: (data)=> <Text>{data.createAt}</Text>,
+          content: (data) => <Text>{data.createAt}</Text>,
           alignment: 'right'
       }
   ]}
@@ -287,7 +290,7 @@ const successRowToNormal = {
     onSelectedRowChange = {(dataSet) => {setState({selectedDataSet:dataSet}); console.log(dataSet)}}
     rows={state.rows}
     sort={state.sort}
-    hasSortEnabled={true} 
+    hasSortEnabled={true}
     onSortChange={(sort) => setState({sort})}
     columns={[
       {
@@ -413,7 +416,7 @@ const successRowContentOverride = (
       id: '4',
       data: {fileName: 'test1.pdf', createAt: '05/01/2018', size: '1.5', fileType: 'PDF'},
       isSelectable: true,
-      actions: rowActions 
+      actions: rowActions
       }
   ]}
   sort={state.sort}

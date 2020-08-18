@@ -54,7 +54,7 @@ interface IColumnProps <T> {
   headerSize?: ColumnSize
   content: (rowData: T) => JSX.Element
   alignment?: ColumnAlignment
-  tooltipText?: (rowData: T) => string
+  tooltipText?: (rowData: T) => string | null | undefined
 }
 
 export {
