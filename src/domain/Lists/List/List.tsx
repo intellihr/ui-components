@@ -9,7 +9,7 @@ class List extends React.PureComponent<IList> {
     type: 'unordered'
   }
 
-  get items (): Array<JSX.Element | null> {
+  get items (): Array<JSX.Element | null> | null | undefined {
     const {
       children
     } = this.props

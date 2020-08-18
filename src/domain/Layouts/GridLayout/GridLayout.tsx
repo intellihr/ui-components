@@ -134,7 +134,7 @@ export class GridLayout extends React.PureComponent<GridLayoutProps, never> {
       margins
     } = this.props
 
-    let renderChildren: GridChild[] | undefined
+    let renderChildren: GridChild[] | undefined | null
 
     if ('cells' in this.props) {
       renderChildren = this.props.cells && this.props.cells.map(this.getCellForDefinition)
