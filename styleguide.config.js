@@ -61,8 +61,12 @@ module.exports = {
       sectionDepth: 2,
       sections: [
         {
-          name: 'Page',
-          content: 'docs/page.md'
+          name: 'Content Page',
+          content: 'docs/ContentPage.md'
+        },
+        {
+          name: 'Form Page',
+          content: 'docs/FormPage.md'
         }
       ]
     },
