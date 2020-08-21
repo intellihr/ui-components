@@ -62,7 +62,6 @@ typings/
 
 # Compiled and built files
 /types/
-/assets/
 /dist/
 /styleguide/
 /styleguidist/
