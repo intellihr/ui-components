@@ -5,6 +5,7 @@ const webpackConfig = require('./webpack.config');
 
 module.exports = {
   webpackConfig,
+  assetsDir: './assets',
   title: 'Wonka Component Factory',
   require: [
     require.resolve('core-js/stable'),
@@ -52,6 +53,20 @@ module.exports = {
         {
           name: 'Automation',
           content: 'docs/automation.md'
+        }
+      ]
+    },
+    {
+      name: 'Design Pattern',
+      sectionDepth: 2,
+      sections: [
+        {
+          name: 'Content Page',
+          content: 'docs/ContentPage.md'
+        },
+        {
+          name: 'Form Page',
+          content: 'docs/FormPage.md'
         }
       ]
     },
