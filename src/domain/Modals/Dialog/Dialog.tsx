@@ -38,7 +38,7 @@ const getPrimaryButtonVariant = (variant: DialogVariant) => {
   }
 }
 
-const Dialog: React.FC<IDialogProps> = ({
+const Dialog: React.FC<IDialogProps> & {Variant: typeof DialogVariant} = ({
   isOpen,
   handleClose,
   title,
@@ -101,6 +101,8 @@ const Dialog: React.FC<IDialogProps> = ({
     </StyledReactModal>
   )
 }
+
+Dialog.Variant = DialogVariant
 
 export {
   IDialogProps,
