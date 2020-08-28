@@ -57,6 +57,7 @@ interface ITooltipPopoverProps {
 class TooltipPopover extends React.Component<ITooltipPopoverProps, ITooltipPopoverMenuState> {
   public static Variant = TooltipPopoverVariant
   public static defaultProps: Partial<ITooltipPopoverProps> = {
+    width: 300,
     variant: TooltipPopoverVariant.Neutral,
     toggleComponent: ({ openMenu, closeMenu, toggleComponentRef, ariaProps }) => (
       <span

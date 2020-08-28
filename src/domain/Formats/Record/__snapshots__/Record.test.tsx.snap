@@ -414,6 +414,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
               <TooltipPopover
                 toggleComponent={[Function]}
                 variant="neutral"
+                width={300}
               >
                 <styled.span>
                   <StyledComponent
@@ -1824,6 +1825,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
               <TooltipPopover
                 toggleComponent={[Function]}
                 variant="neutral"
+                width={300}
               >
                 <styled.span>
                   <StyledComponent

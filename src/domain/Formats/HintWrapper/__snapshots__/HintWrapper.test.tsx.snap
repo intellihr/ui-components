@@ -61,6 +61,7 @@ exports[`<HintWrapper /> should render a popover hint wrapper 1`] = `
 <TooltipPopover
   toggleComponent={[Function]}
   variant="neutral"
+  width={300}
 >
   Never trust a cat
 </TooltipPopover>
