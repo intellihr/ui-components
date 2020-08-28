@@ -9,7 +9,7 @@ interface IStyledToggleComponentWrapper {
 }
 
 interface IStyledTooltipContentProps {
-  width?: number
+  width: number
   variant: TooltipPopoverVariant
 }
 
@@ -21,7 +21,7 @@ const StyledTooltipContent = styled.div`
   width: max-content;
 
   ${styleForLineBreakText()}
-  ${(props: IStyledTooltipContentProps) => props.width && css`max-width: ${props.width}px`}
+  ${(props: IStyledTooltipContentProps) => css`max-width: ${props.width}px`}
 
   ${(props: IStyledTooltipContentProps) => {
 

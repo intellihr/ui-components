@@ -57,6 +57,7 @@ interface ITooltipPopoverProps {
 class TooltipPopover extends React.Component<ITooltipPopoverProps, ITooltipPopoverMenuState> {
   public static Variant = TooltipPopoverVariant
   public static defaultProps: Partial<ITooltipPopoverProps> = {
+    width: 300,
     variant: TooltipPopoverVariant.Neutral,
     toggleComponent: ({ openMenu, closeMenu, toggleComponentRef, ariaProps }) => (
       <span
@@ -66,7 +67,7 @@ class TooltipPopover extends React.Component<ITooltipPopoverProps, ITooltipPopov
         ref={toggleComponentRef}
         {...ariaProps}
       >
-        <FontAwesomeIcon type='regular' icon='question-circle' color={Variables.Color.n700} />
+        <FontAwesomeIcon type='solid' icon='info-circle' color={Variables.Color.n400} />
       </span>
     )
   }

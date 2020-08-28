@@ -414,6 +414,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
               <TooltipPopover
                 toggleComponent={[Function]}
                 variant="neutral"
+                width={300}
               >
                 <styled.span>
                   <StyledComponent
@@ -1618,7 +1619,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
   font-stretch: normal;
   --fa-primary-color: #2512B3;
   --fa-secondary-color: #2512B3;
-  color: #424F5C;
+  color: #C5CED6;
 }
 
 .c3.icon {
@@ -1824,6 +1825,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
               <TooltipPopover
                 toggleComponent={[Function]}
                 variant="neutral"
+                width={300}
               >
                 <styled.span>
                   <StyledComponent
@@ -1868,25 +1870,25 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                         role="button"
                       >
                         <FontAwesomeIcon
-                          color="#424F5C"
-                          icon="question-circle"
-                          type="regular"
+                          color="#C5CED6"
+                          icon="info-circle"
+                          type="solid"
                         >
                           <Icon
-                            color="#424F5C"
-                            icon="far fa-question-circle"
+                            color="#C5CED6"
+                            icon="fas fa-info-circle"
                           >
                             <styled.i
                               aria-hidden={true}
-                              className="icon far fa-question-circle"
-                              color="#424F5C"
+                              className="icon fas fa-info-circle"
+                              color="#C5CED6"
                               data-component-type="icon"
                               size="medium"
                             >
                               <StyledComponent
                                 aria-hidden={true}
-                                className="icon far fa-question-circle"
-                                color="#424F5C"
+                                className="icon fas fa-info-circle"
+                                color="#C5CED6"
                                 data-component-type="icon"
                                 forwardedComponent={
                                   Object {
@@ -1964,8 +1966,8 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                               >
                                 <i
                                   aria-hidden={true}
-                                  className="c3 icon far fa-question-circle"
-                                  color="#424F5C"
+                                  className="c3 icon fas fa-info-circle"
+                                  color="#C5CED6"
                                   data-component-type="icon"
                                   size="medium"
                                 />
@@ -1989,7 +1991,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
   font-stretch: normal;
   --fa-primary-color: #2512B3;
   --fa-secondary-color: #2512B3;
-  color: #424F5C;
+  color: #C5CED6;
 }
 
 .c0.icon {
@@ -2005,8 +2007,8 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                       >
                         <i
                           aria-hidden="true"
-                          class="c0 icon far fa-question-circle"
-                          color="#424F5C"
+                          class="c0 icon fas fa-info-circle"
+                          color="#C5CED6"
                           data-component-type="icon"
                         />
                       </span>,
