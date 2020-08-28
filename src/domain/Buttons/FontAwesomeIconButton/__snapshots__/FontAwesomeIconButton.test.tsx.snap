@@ -500,6 +500,7 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
     data-component-type="font_awesome_icon_button"
     toggleComponent={[Function]}
     variant="dark"
+    width={300}
   >
     <styled.span>
       <StyledComponent
