@@ -54,6 +54,8 @@ interface ITextInputProps {
   handleClear?: (e: React.MouseEvent<HTMLButtonElement>) => void
   /** The margins around the component */
   margins?: Props.IMargins
+  /** Label for accessibility */
+  'aria-label'?: string
 }
 
 class TextInput extends React.PureComponent<ITextInputProps> {
@@ -127,7 +129,8 @@ class TextInput extends React.PureComponent<ITextInputProps> {
       handleKeyDown,
       width,
       componentContext,
-      margins
+      margins,
+      'aria-label': label
     } = this.props
 
     return (
@@ -150,6 +153,7 @@ class TextInput extends React.PureComponent<ITextInputProps> {
         data-component-type={Props.ComponentType.TextInput}
         data-component-context={componentContext}
         margins={margins}
+        aria-label={label}
       />
     )
   }

@@ -72,6 +72,8 @@ export interface ISelectInputProps {
   onInputChange?: (input: string) => void
   /** A function to customize the filtering logic */
   filterOptions?: FilterOptionsHandler
+  /** Label for accessibility */
+  'aria-label'?: string
 }
 
 export class SelectInput extends React.PureComponent<ISelectInputProps> {
@@ -136,36 +138,38 @@ export class SelectInput extends React.PureComponent<ISelectInputProps> {
       shouldRemoveElementsFromMultiSelect,
       onOpen,
       optionComponent,
-      filterOptions
+      filterOptions,
+      'aria-label': label
     } = this.props
 
     return {
-      autoFocus: false,
-      className: classNames({ 'is-invalid-input': isInvalid }, `react-select-${name}`, style.selectInput),
-      clearable: isClearable,
-      searchable: isSearchable,
-      closeOnSelect: shouldCloseOnSelect,
-      disabled: isDisabled,
-      id: id || name,
-      isLoading: isFetching,
-      filterOption: shouldFilteringBePerformed ? undefined : this.disableFiltering,
+      'autoFocus': false,
+      'className': classNames({ 'is-invalid-input': isInvalid }, `react-select-${name}`, style.selectInput),
+      'clearable': isClearable,
+      'searchable': isSearchable,
+      'closeOnSelect': shouldCloseOnSelect,
+      'disabled': isDisabled,
+      'id': id || name,
+      'isLoading': isFetching,
+      'filterOption': shouldFilteringBePerformed ? undefined : this.disableFiltering,
       filterOptions,
-      multi: isMultiSelect,
-      name: isMultiSelect ? `${name}[]` : name,
+      'multi': isMultiSelect,
+      'name': isMultiSelect ? `${name}[]` : name,
       noResultsText,
-      onBlurResetsInput: true,
-      onChange: this.handleChange,
-      onCloseResetsInput: true,
-      onInputChange: this.onInputChange,
-      onSelectResetsInput: true,
-      openOnFocus: false,
+      'onBlurResetsInput': true,
+      'onChange': this.handleChange,
+      'onCloseResetsInput': true,
+      'onInputChange': this.onInputChange,
+      'onSelectResetsInput': true,
+      'openOnFocus': false,
       onOpen,
       optionComponent,
       options,
       placeholder,
-      removeSelected: shouldRemoveElementsFromMultiSelect,
-      resetValue: emptyValue,
-      value
+      'removeSelected': shouldRemoveElementsFromMultiSelect,
+      'resetValue': emptyValue,
+      value,
+      'aria-label': label
     }
   }
 

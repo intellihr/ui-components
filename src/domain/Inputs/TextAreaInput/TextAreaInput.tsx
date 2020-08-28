@@ -38,6 +38,8 @@ interface ITextAreaInputProps {
   margins?: Props.IMargins
   /** The component context */
   componentContext?: string
+  /** Label for accessibility */
+  'aria-label'?: string
 }
 
 const handleInputChange = (onChange?: ITextAreaInputProps['onChange'], handleChange?: ITextAreaInputProps['handleChange']) => (event: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -63,7 +65,8 @@ const TextAreaInput: React.FC<ITextAreaInputProps> = ({
   gifUrl,
   handleGifChange,
   margins,
-  componentContext
+  componentContext,
+  'aria-label': label
 }) => {
   const { tenorApiKey } = useContext(DefaultsContext)
   const hasGif = gifUrl !== ''
@@ -98,6 +101,7 @@ const TextAreaInput: React.FC<ITextAreaInputProps> = ({
         required={isHTML5Required}
         gifsEnabled={showGifs}
         hasGif={hasGif}
+        aria-label={label}
       />
       {showGifs &&
         <>
