@@ -36,6 +36,8 @@ const InputGroupButton = styled.button<IInputGroupButtonProps>`
         return css`border-radius: 4px 0 0 4px !important;`
       case 'right':
         return css`border-radius: 0 4px 4px 0 !important;`
+      case 'middle':
+        return css`border-radius: 4px 4px 4px 4px !important;`
       default:
         return css`border-radius: 0 !important;`
     }

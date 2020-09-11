@@ -7,6 +7,10 @@ exports[`<InputGroup /> should render a simple input group 1`] = `
     name="test-input"
   />
   <TextInput
+    groupPosition="middle"
+    name="test-input"
+  />
+  <TextInput
     groupPosition="right"
     name="test-input"
   />

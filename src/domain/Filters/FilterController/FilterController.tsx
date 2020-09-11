@@ -36,6 +36,8 @@ export interface IFilterControllerProps<FilterValue = string | number> {
   componentContext?: string
   /** A component that is shown to the right of the search bar */
   rightComponent?: JSX.Element
+  /** Whether to hide the search bar component */
+  hideSearchBar?: boolean
 }
 
 export class FilterController extends React.PureComponent<IFilterControllerProps> {
@@ -56,7 +58,8 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
       searchValue,
       margins,
       componentContext,
-      rightComponent
+      rightComponent,
+      hideSearchBar
     } = this.props
 
     return (
@@ -67,6 +70,16 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
       >
         <StyledController hasBottomMargin={tags.length > 0}>
           <StyledLeftComponent>
+          {
+            hideSearchBar ?
+            <AddFilterDropdownMenu
+              componentContext={componentContext && `${componentContext}-dropdown-menu`}
+              filterMessage={filterMessage}
+              toggleComponent={this.filterButtonWithRoundBorderAllSide}
+              filters={filters}
+              onFilterAdded={onFilterAdded}
+            />
+            :
             <InputGroup>
               <AddFilterDropdownMenu
                 componentContext={componentContext && `${componentContext}-dropdown-menu`}
@@ -85,6 +98,7 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
                 handleClear={onSearchCleared}
               />
             </InputGroup>
+          }
           </StyledLeftComponent>
           {rightComponent && this.rightComponent}
         </StyledController>
@@ -114,6 +128,19 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
         onClick={toggleMenu}
         innerRef={toggleComponentRef}
         groupPosition='left'
+        {...ariaProps}
+      >
+        Filter
+      </InputGroup.Button>
+    )
+  }
+
+  private filterButtonWithRoundBorderAllSide = ({ toggleMenu, toggleComponentRef, ariaProps }: any) => {
+    return (
+      <InputGroup.Button
+        onClick={toggleMenu}
+        innerRef={toggleComponentRef}
+        groupPosition='middle'
         {...ariaProps}
       >
         Filter

@@ -27,7 +27,7 @@ const StyledLeftComponent = styled.div`
     width: auto;
     flex: 1 1 0%;
     margin-right: ${Variables.Spacing.sXSmall}px;
-    margin-bottom: ${Variables.Spacing.sXSmall}px
+    margin-bottom: ${Variables.Spacing.sXSmall}px;
 
 
     ${Utils.mediaQueryBetweenSizes({ maxPx: Variables.Breakpoint.breakpointDesktop })} {
