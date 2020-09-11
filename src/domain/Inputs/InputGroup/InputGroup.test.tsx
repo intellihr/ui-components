@@ -9,7 +9,6 @@ describe('<InputGroup />', () => {
     const wrapper = shallow(
       <InputGroup>
         <TextInput name='test-input' groupPosition='left' />
-        <TextInput name='test-input' groupPosition='middle' />
         <TextInput name='test-input' groupPosition='right' />
       </InputGroup>
     )

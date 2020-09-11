@@ -1,6 +1,7 @@
 import React, { ChangeEventHandler } from 'react'
 
 import { Props } from '../../../common'
+import { Button } from '../../Buttons/Button'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { InputGroup } from '../../Inputs/InputGroup'
 import { TextInput } from '../../Inputs/TextInput'
@@ -75,7 +76,7 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
             <AddFilterDropdownMenu
               componentContext={componentContext && `${componentContext}-dropdown-menu`}
               filterMessage={filterMessage}
-              toggleComponent={this.filterButtonWithRoundBorderAllSide}
+              toggleComponent={this.filterButton}
               filters={filters}
               onFilterAdded={onFilterAdded}
             />
@@ -84,7 +85,7 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
               <AddFilterDropdownMenu
                 componentContext={componentContext && `${componentContext}-dropdown-menu`}
                 filterMessage={filterMessage}
-                toggleComponent={this.filterButton}
+                toggleComponent={this.inputGroupFilterButton}
                 filters={filters}
                 onFilterAdded={onFilterAdded}
               />
@@ -122,7 +123,7 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
     )
   }
 
-  private filterButton = ({ toggleMenu, toggleComponentRef, ariaProps }: any) => {
+  private inputGroupFilterButton = ({ toggleMenu, toggleComponentRef, ariaProps }: any) => {
     return (
       <InputGroup.Button
         onClick={toggleMenu}
@@ -135,16 +136,18 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
     )
   }
 
-  private filterButtonWithRoundBorderAllSide = ({ toggleMenu, toggleComponentRef, ariaProps }: any) => {
+  private filterButton  = ({ toggleMenu, toggleComponentRef, ariaProps }: any) => {
     return (
-      <InputGroup.Button
+      <Button
+        type='neutral'
+        icon={<FontAwesomeIcon type='solid' icon='caret-down' />}
+        iconAlignment={'right'}
         onClick={toggleMenu}
         innerRef={toggleComponentRef}
-        groupPosition='middle'
         {...ariaProps}
       >
         Filter
-      </InputGroup.Button>
+      </Button>
     )
   }
 }
