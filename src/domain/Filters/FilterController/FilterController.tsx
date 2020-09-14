@@ -1,6 +1,7 @@
 import React, { ChangeEventHandler } from 'react'
 
 import { Props } from '../../../common'
+import { Button } from '../../Buttons/Button'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { InputGroup } from '../../Inputs/InputGroup'
 import { TextInput } from '../../Inputs/TextInput'
@@ -36,6 +37,8 @@ export interface IFilterControllerProps<FilterValue = string | number> {
   componentContext?: string
   /** A component that is shown to the right of the search bar */
   rightComponent?: JSX.Element
+  /** Whether to hide the search bar component */
+  hideSearchBar?: boolean
 }
 
 export class FilterController extends React.PureComponent<IFilterControllerProps> {
@@ -56,7 +59,8 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
       searchValue,
       margins,
       componentContext,
-      rightComponent
+      rightComponent,
+      hideSearchBar
     } = this.props
 
     return (
@@ -67,11 +71,21 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
       >
         <StyledController hasBottomMargin={tags.length > 0}>
           <StyledLeftComponent>
+          {
+            hideSearchBar ?
+            <AddFilterDropdownMenu
+              componentContext={componentContext && `${componentContext}-dropdown-menu`}
+              filterMessage={filterMessage}
+              toggleComponent={this.filterButton}
+              filters={filters}
+              onFilterAdded={onFilterAdded}
+            />
+            :
             <InputGroup>
               <AddFilterDropdownMenu
                 componentContext={componentContext && `${componentContext}-dropdown-menu`}
                 filterMessage={filterMessage}
-                toggleComponent={this.filterButton}
+                toggleComponent={this.inputGroupFilterButton}
                 filters={filters}
                 onFilterAdded={onFilterAdded}
               />
@@ -85,6 +99,7 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
                 handleClear={onSearchCleared}
               />
             </InputGroup>
+          }
           </StyledLeftComponent>
           {rightComponent && this.rightComponent}
         </StyledController>
@@ -108,7 +123,7 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
     )
   }
 
-  private filterButton = ({ toggleMenu, toggleComponentRef, ariaProps }: any) => {
+  private inputGroupFilterButton = ({ toggleMenu, toggleComponentRef, ariaProps }: any) => {
     return (
       <InputGroup.Button
         onClick={toggleMenu}
@@ -118,6 +133,21 @@ export class FilterController extends React.PureComponent<IFilterControllerProps
       >
         Filter
       </InputGroup.Button>
+    )
+  }
+
+  private filterButton  = ({ toggleMenu, toggleComponentRef, ariaProps }: any) => {
+    return (
+      <Button
+        type='neutral'
+        icon={<FontAwesomeIcon type='solid' icon='caret-down' />}
+        iconAlignment={'right'}
+        onClick={toggleMenu}
+        innerRef={toggleComponentRef}
+        {...ariaProps}
+      >
+        Filter
+      </Button>
     )
   }
 }
