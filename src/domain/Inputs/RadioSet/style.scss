@@ -103,7 +103,7 @@
     line-height: $lh-small;
     margin-left: 0;
     margin-right: 0;
-    padding: $spacing-2xsmall $spacing-medium $spacing-2xsmall $spacing-xlarge;
+    padding: $spacing-2xsmall $spacing-xlarge $spacing-2xsmall ($icon-width + $spacing-xsmall);
     position: relative;
     transition: .25s ease-out, color .25s ease-out;
     word-break: break-all;
