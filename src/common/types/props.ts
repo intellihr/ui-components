@@ -127,7 +127,8 @@ namespace Props {
     TitledSection = 'titled_section',
     ToggleSwitch = 'toggle_switch',
     ToggleSwitchInput = 'toggle_switch_input',
-    UnstyledSection = 'unstyled_section'
+    UnstyledSection = 'unstyled_section',
+    VerticalFormSection = 'vertical_form_section'
   }
 
   export enum Orientation {

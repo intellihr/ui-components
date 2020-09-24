@@ -3,11 +3,13 @@ import React from 'react'
 import { Field } from './subcomponents/Field'
 import { LeftAlignControls } from './subcomponents/LeftAlignControls'
 import { RightAlignControls } from './subcomponents/RightAlignControls'
+import { Section } from './subcomponents/Section'
 
 class VerticalForm extends React.PureComponent<React.FormHTMLAttributes<HTMLFormElement>> {
   public static Field = Field
   public static LeftAlignControls = LeftAlignControls
   public static RightAlignControls = RightAlignControls
+  public static Section = Section
   public static defaultProps: Partial<HTMLFormElement> = {
     autoComplete: 'off'
   }
