@@ -323,6 +323,7 @@ Form with Sections
 ```jsx
 import { ButtonGroup, Button } from '@Domain/Buttons';
 import { TextInput } from '@Domain/Inputs';
+import { Text } from '@Domain/Typographies';
 
 initialState = { textInputValue: '' };
 
@@ -352,7 +353,10 @@ initialState = { textInputValue: '' };
         </VerticalForm.Field>
     </VerticalForm.Section>
 
-    <VerticalForm.Section name='Other Section'>
+    <VerticalForm.Section 
+      name='Other Section'
+      rightComponent={<Text.Link>Select All</Text.Link>}
+    >
         <VerticalForm.Field
           inputName='testInput'
           label='This is a test input'
