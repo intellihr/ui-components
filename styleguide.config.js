@@ -230,7 +230,8 @@ module.exports = {
         'src/domain/Formats/Record/Record.tsx',
         'src/domain/Layouts/SectionList/SectionList.tsx',
         'src/domain/Formats/Statistic/Statistic.tsx',
-        'src/domain/Tables/Table/Table.tsx',
+        'src/domain/Statuses/Status/Status.tsx',
+        'src/domain/Tables/Table/Table.tsx'
       ],
       sections: [
         {

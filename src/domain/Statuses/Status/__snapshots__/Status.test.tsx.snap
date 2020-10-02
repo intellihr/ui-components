@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Status /> should render a status 1`] = `
+<styled.div
+  data-component-type="status"
+>
+  <StatusDot
+    variant="grey"
+  />
+  <Text
+    color="#424F5C"
+    isInline={true}
+    margins={
+      Object {
+        "left": 8,
+      }
+    }
+    tag="span"
+    type="small"
+  >
+    Status
+  </Text>
+</styled.div>
+`;
+
+exports[`<Status /> should render a status with size 1`] = `
+<styled.div
+  data-component-type="status"
+>
+  <StatusDot
+    variant="grey"
+  />
+  <Text
+    color="#424F5C"
+    isInline={true}
+    margins={
+      Object {
+        "left": 8,
+      }
+    }
+    tag="span"
+    type="xsmall"
+  >
+    Status With Size
+  </Text>
+</styled.div>
+`;
+
+exports[`<Status /> should render a status with variant 1`] = `
+<styled.div
+  data-component-type="status"
+>
+  <StatusDot
+    variant="red"
+  />
+  <Text
+    color="#424F5C"
+    isInline={true}
+    margins={
+      Object {
+        "left": 8,
+      }
+    }
+    tag="span"
+    type="small"
+  >
+    Status With Variant
+  </Text>
+</styled.div>
+`;
