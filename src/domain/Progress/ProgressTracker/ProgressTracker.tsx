@@ -11,11 +11,13 @@ import {
 } from './style'
 
 interface IProgressTrackerProps {
-  /** Component context */
+  /** The data-component-context */
   componentContext?: string
+  /** The margins around the component */
   margins?: Props.IMargins
+  /** Current step index of the progress tracker with the current progress step style */
   currentIndex: number
-  isClickable?: boolean
+  /** Applies style for mobile viewports */
   isMobile?: boolean
 }
 
@@ -31,8 +33,8 @@ const getVariant = (index: number, currentIndex: number) => {
   }
 }
 
-const ProgressTracker: React.FC<IProgressTrackerProps> & {Step: typeof ProgressStep} = ({ currentIndex, isMobile = false, margins, isClickable = true, componentContext, children}) => {
-  const progressTrackerChildren = React.Children.toArray(children)
+const ProgressTracker: React.FC<IProgressTrackerProps> & {Step: typeof ProgressStep} = ({ currentIndex, isMobile = false, margins, componentContext, children}) => {
+  const progressTrackerChildrenLength = React.Children.toArray(children).length
 
   return (
     <StyledProgressTracker
@@ -40,29 +42,38 @@ const ProgressTracker: React.FC<IProgressTrackerProps> & {Step: typeof ProgressS
       data-component-context={componentContext}
       margins={margins}
       isMobile={isMobile}
+      hasTwoItems={progressTrackerChildrenLength < 3}
     >
       {
-        progressTrackerChildren.reduce((formattedChild: JSX.Element[], child: any, index) => {
-          if (child ) {
-            if (!isMobile || (isMobile && currentIndex === index)) {
-              formattedChild.push(React.cloneElement(child, {
-                ...child.props,
-                index,
-                variant: getVariant(index, currentIndex),
-                isHoverable: isClickable
-              }))
-            }
+        React.Children.map(children,(child: any, index) => {
+          if (child && child?.type && child?.type?.name === ProgressStep.name) {
+            return (
+              <>
+                {
+                  (!isMobile || (isMobile && currentIndex === index)) &&
+                  React.cloneElement(child, {
+                    ...child?.props,
+                    index,
+                    variant: getVariant(index, currentIndex)
+                  })
+                }
+                {
+                  !isMobile && progressTrackerChildrenLength - 1 > index && <StyledProgressStepItemDivider/>
+                }
+                {
+                  isMobile && currentIndex === index &&
+                  <Text
+                    type={Props.TypographyType.Small}
+                    color={Variables.Color.n500}
+                    margins={{ left: Variables.Spacing.sXSmall }}
+                  >
+                    {`Step ${index + 1} of ${progressTrackerChildrenLength}`}
+                  </Text>
+                }
+              </>
+            )
           }
-
-          if (!isMobile && progressTrackerChildren.length - 1 > index ) {
-            formattedChild.push(<StyledProgressStepItemDivider/>)
-          }
-
-          if (isMobile && currentIndex === index) {
-            formattedChild.push(<Text type={Props.TypographyType.Small} color={Variables.Color.n500} margins={{ left: Variables.Spacing.sXSmall }}>{`Step ${index + 1} of ${progressTrackerChildren.length}`}</Text>)
-          }
-          return formattedChild
-        }, [])
+        })
       }
     </StyledProgressTracker>
   )

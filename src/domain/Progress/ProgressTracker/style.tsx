@@ -10,12 +10,14 @@ const StyledProgressTracker = styled.div`
     align-items: baseline;
   `}
   ${({ margins }) => styleForMargins(margins)}
+  ${({ hasTwoItems }) => hasTwoItems && css`
+    width: 50%;
+  `}
 `
 
 const StyledProgressStepItemDivider = styled.div`
   flex: 1 1 0%;
   width: auto;
-  width: 100%;
   height: ${Variables.Spacing.s3XSmall}px;
   background-color: ${Variables.Color.n300};
   margin: ${Variables.Spacing.sMedium}px;

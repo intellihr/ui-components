@@ -112,11 +112,6 @@ exports[`<ProgressTracker /> should render an progress tracker 1`] = `
   height: 32px;
   color: #FFFFFF;
   background-color: #8FA1B3;
-  cursor: pointer;
-}
-
-.c1:hover .c9 {
-  background-color: #667380;
 }
 
 .c2 {
@@ -146,7 +141,6 @@ exports[`<ProgressTracker /> should render an progress tracker 1`] = `
   -ms-flex: 1 1 0%;
   flex: 1 1 0%;
   width: auto;
-  width: 100%;
   height: 2px;
   background-color: #E1E6EB;
   margin: 16px;
@@ -157,6 +151,7 @@ exports[`<ProgressTracker /> should render an progress tracker 1`] = `
 >
   <styled.div
     data-component-type="progress_tracker"
+    hasTwoItems={false}
     isMobile={false}
   >
     <StyledComponent
@@ -178,6 +173,9 @@ exports[`<ProgressTracker /> should render an progress tracker 1`] = `
   ",
               [Function],
               "
+  ",
+              [Function],
+              "
 ",
             ],
           },
@@ -193,6 +191,7 @@ exports[`<ProgressTracker /> should render an progress tracker 1`] = `
         }
       }
       forwardedRef={null}
+      hasTwoItems={false}
       isMobile={false}
     >
       <div
@@ -201,17 +200,17 @@ exports[`<ProgressTracker /> should render an progress tracker 1`] = `
       >
         <ProgressStep
           index={0}
-          isHoverable={true}
-          key=".0"
           label="Report Issue"
           onClick={[MockFunction]}
           variant="past"
         >
           <styled.div
-            isHoverable={[MockFunction]}
+            data-component-type="progress_step"
+            isHoverable={true}
             onClick={[MockFunction]}
           >
             <StyledComponent
+              data-component-type="progress_step"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -219,7 +218,7 @@ exports[`<ProgressTracker /> should render an progress tracker 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "c1",
                     "isStatic": false,
-                    "lastClassName": "c2",
+                    "lastClassName": "c7",
                     "rules": Array [
                       "
   flex: 0 0 auto;
@@ -243,15 +242,16 @@ exports[`<ProgressTracker /> should render an progress tracker 1`] = `
                 }
               }
               forwardedRef={null}
-              isHoverable={[MockFunction]}
+              isHoverable={true}
               onClick={[MockFunction]}
             >
               <div
                 className="c1 c2"
+                data-component-type="progress_step"
                 onClick={[MockFunction]}
               >
                 <styled.div
-                  isHoverable={[MockFunction]}
+                  isHoverable={true}
                   variant="past"
                 >
                   <StyledComponent
@@ -307,7 +307,7 @@ exports[`<ProgressTracker /> should render an progress tracker 1`] = `
                       }
                     }
                     forwardedRef={null}
-                    isHoverable={[MockFunction]}
+                    isHoverable={true}
                     variant="past"
                   >
                     <div
@@ -542,7 +542,6 @@ exports[`<ProgressTracker /> should render an progress tracker 1`] = `
                     "
   flex: 1 1 0%;
   width: auto;
-  width: 100%;
   height: ",
                     "2",
                     "px;
@@ -575,16 +574,16 @@ exports[`<ProgressTracker /> should render an progress tracker 1`] = `
         </styled.div>
         <ProgressStep
           index={1}
-          isHoverable={true}
-          key=".1"
           label="Initiate Plan"
           onClick={[MockFunction]}
           variant="current"
         >
           <styled.div
+            data-component-type="progress_step"
             isHoverable={false}
           >
             <StyledComponent
+              data-component-type="progress_step"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -592,7 +591,7 @@ exports[`<ProgressTracker /> should render an progress tracker 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "c1",
                     "isStatic": false,
-                    "lastClassName": "c2",
+                    "lastClassName": "c7",
                     "rules": Array [
                       "
   flex: 0 0 auto;
@@ -620,6 +619,7 @@ exports[`<ProgressTracker /> should render an progress tracker 1`] = `
             >
               <div
                 className="c1 c7"
+                data-component-type="progress_step"
               >
                 <styled.div
                   isHoverable={false}
@@ -913,7 +913,6 @@ exports[`<ProgressTracker /> should render an progress tracker 1`] = `
                     "
   flex: 1 1 0%;
   width: auto;
-  width: 100%;
   height: ",
                     "2",
                     "px;
@@ -946,17 +945,16 @@ exports[`<ProgressTracker /> should render an progress tracker 1`] = `
         </styled.div>
         <ProgressStep
           index={2}
-          isHoverable={true}
-          key=".2"
           label="Add Cost and  Follow Up"
           onClick={[MockFunction]}
           variant="upcoming"
         >
           <styled.div
-            isHoverable={[MockFunction]}
-            onClick={[MockFunction]}
+            data-component-type="progress_step"
+            isHoverable={false}
           >
             <StyledComponent
+              data-component-type="progress_step"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -964,7 +962,7 @@ exports[`<ProgressTracker /> should render an progress tracker 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "c1",
                     "isStatic": false,
-                    "lastClassName": "c2",
+                    "lastClassName": "c7",
                     "rules": Array [
                       "
   flex: 0 0 auto;
@@ -988,15 +986,14 @@ exports[`<ProgressTracker /> should render an progress tracker 1`] = `
                 }
               }
               forwardedRef={null}
-              isHoverable={[MockFunction]}
-              onClick={[MockFunction]}
+              isHoverable={false}
             >
               <div
-                className="c1 c2"
-                onClick={[MockFunction]}
+                className="c1 c7"
+                data-component-type="progress_step"
               >
                 <styled.div
-                  isHoverable={[MockFunction]}
+                  isHoverable={false}
                   variant="upcoming"
                 >
                   <StyledComponent
@@ -1052,7 +1049,7 @@ exports[`<ProgressTracker /> should render an progress tracker 1`] = `
                       }
                     }
                     forwardedRef={null}
-                    isHoverable={[MockFunction]}
+                    isHoverable={false}
                     variant="upcoming"
                   >
                     <div
@@ -1325,10 +1322,6 @@ exports[`<ProgressTracker /> should render an progress tracker in mobile style 1
   background-color: #432DF3;
 }
 
-.c1:hover .c8 {
-  background-color: #667380;
-}
-
 .c2 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1353,6 +1346,7 @@ exports[`<ProgressTracker /> should render an progress tracker in mobile style 1
 >
   <styled.div
     data-component-type="progress_tracker"
+    hasTwoItems={false}
     isMobile={true}
   >
     <StyledComponent
@@ -1374,6 +1368,9 @@ exports[`<ProgressTracker /> should render an progress tracker in mobile style 1
   ",
               [Function],
               "
+  ",
+              [Function],
+              "
 ",
             ],
           },
@@ -1389,6 +1386,7 @@ exports[`<ProgressTracker /> should render an progress tracker in mobile style 1
         }
       }
       forwardedRef={null}
+      hasTwoItems={false}
       isMobile={true}
     >
       <div
@@ -1397,16 +1395,16 @@ exports[`<ProgressTracker /> should render an progress tracker in mobile style 1
       >
         <ProgressStep
           index={1}
-          isHoverable={true}
-          key=".1"
           label="Initiate Plan"
           onClick={[MockFunction]}
           variant="current"
         >
           <styled.div
+            data-component-type="progress_step"
             isHoverable={false}
           >
             <StyledComponent
+              data-component-type="progress_step"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -1442,6 +1440,7 @@ exports[`<ProgressTracker /> should render an progress tracker in mobile style 1
             >
               <div
                 className="c1 c2"
+                data-component-type="progress_step"
               >
                 <styled.div
                   isHoverable={false}

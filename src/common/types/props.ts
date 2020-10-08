@@ -106,6 +106,7 @@ namespace Props {
     PaginationButtons = 'pagination_buttons',
     PaginationDetails = 'pagination_details',
     Popover = 'popover',
+    ProgressStep = 'progress_step',
     ProgressTracker = 'progress_tracker',
     RadioInput = 'radio_input',
     Record = 'record',

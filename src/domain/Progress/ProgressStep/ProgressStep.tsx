@@ -8,17 +8,25 @@ import { ProgressStepVariant, StyledProgressStep, StyledProgressStepDot } from '
 interface IProgressStepProps {
   /** What style variant of progress step to display */
   variant?: ProgressStepVariant
+  /** label of the progress step */
   label: string
+  /** index of the progress step (start from 0) */
   index?: number
+  /** Event handler when the past progress step is clicked */
   onClick?: (event: React.MouseEvent<HTMLSpanElement>) => void
-  /** If the step should have a hover style */
-  isHoverable?: boolean
+  /** The data-component-context */
+  componentContext?: string
 }
 
-const ProgressStep: React.FC<IProgressStepProps> & {Variant: typeof ProgressStepVariant} = ({ variant = ProgressStepVariant.Upcoming, isHoverable = true, onClick, label, index}) => {
-  const clickEnabled = variant !== ProgressStepVariant.Current && isHoverable && onClick
+const ProgressStep: React.FC<IProgressStepProps> & {Variant: typeof ProgressStepVariant} = ({ variant = ProgressStepVariant.Upcoming, onClick, label, index, componentContext}) => {
+  const clickEnabled = onClick && variant === ProgressStepVariant.Past
   return (
-    <StyledProgressStep isHoverable={clickEnabled} onClick={clickEnabled ? onClick : undefined}>
+    <StyledProgressStep
+      data-component-type={Props.ComponentType.ProgressStep}
+      data-component-context={componentContext}
+      isHoverable={clickEnabled}
+      onClick={clickEnabled ? onClick : undefined}
+    >
       <StyledProgressStepDot
         variant={variant}
         isHoverable={clickEnabled}
@@ -26,12 +34,20 @@ const ProgressStep: React.FC<IProgressStepProps> & {Variant: typeof ProgressStep
         {variant === ProgressStepVariant.Current && <FontAwesomeIcon color={Variables.Color.n100} type='solid' icon='pencil-alt' />}
         {variant === ProgressStepVariant.Past && <FontAwesomeIcon color={Variables.Color.n100} type='solid' icon='check' />}
         {
-          (variant !== ProgressStepVariant.Current && variant !== ProgressStepVariant.Past && index) && (
+          (variant === ProgressStepVariant.Upcoming && index) && (
             <Text type={Props.TypographyType.Body} color={Variables.Color.n100} weight={Variables.FontWeight.fwSemiBold}>{(index + 1).toString()}</Text>
           )
         }
       </StyledProgressStepDot>
-      <Text type={Props.TypographyType.Small} color={variant === ProgressStepVariant.Upcoming ? Variables.Color.n500 : Variables.Color.n700} margins={label ? { left: Variables.Spacing.sXSmall } : undefined}>{label}</Text>
+      {label && (
+        <Text
+          type={Props.TypographyType.Small}
+          color={variant === ProgressStepVariant.Upcoming ? Variables.Color.n500 : Variables.Color.n700}
+          margins={{ left: Variables.Spacing.sXSmall }}
+        >
+          {label}
+        </Text>
+      )}
     </StyledProgressStep>
   )
 }
