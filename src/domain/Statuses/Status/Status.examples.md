@@ -3,7 +3,7 @@ The **Status** visually label and indicate status.
 ### Status
 ```jsx
 <>
-  <Status>Default</Status>
+  <Status variant={Status.Variant.Neutral}>Default</Status>
   <Status variant={Status.Variant.Success}>Success</Status>
   <Status variant={Status.Variant.Warning}>Warning</Status>
   <Status variant={Status.Variant.Critical}>Critical</Status>
@@ -14,7 +14,7 @@ The **Status** visually label and indicate status.
 ### Small Status 
 ```jsx
 <>
-  <Status size={Status.Size.Small}>Default Small</Status>
+  <Status size={Status.Size.Small} variant={Status.Variant.Neutral}>Default Small</Status>
   <Status size={Status.Size.Small} variant={Status.Variant.Success}>Success Small</Status>
   <Status size={Status.Size.Small} variant={Status.Variant.Warning}>Warning Small</Status>
   <Status size={Status.Size.Small} variant={Status.Variant.Critical}>Critical Small</Status>

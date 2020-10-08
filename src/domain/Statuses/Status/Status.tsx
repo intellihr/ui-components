@@ -7,14 +7,14 @@ import { StyledStatus } from './style'
 
 enum Size {
   Small = 'small',
-  Large = 'large'
+  Default = 'default'
 }
 
 interface IStatusProps {
   /** Component context */
   componentContext?: string
   /** What style variant of status dot to display */
-  variant?: StatusDotVariants
+  variant: StatusDotVariants
   /** The margins around the component */
   margins?: Props.Margin
   /** label of the status */
@@ -30,7 +30,7 @@ interface IStatusExtendProps {
   Size: typeof Size
 }
 
-const Status: React.FC<IStatusProps> & IStatusExtendProps = ({componentContext, margins, size= Size.Large, variant = StatusDotVariants.Default, isInline = false, children}) => {
+const Status: React.FC<IStatusProps> & IStatusExtendProps = ({componentContext, margins, size= Size.Default, variant, isInline = false, children}) => {
   return (
     <StyledStatus
       data-component-type={Props.ComponentType.Status}
@@ -40,7 +40,7 @@ const Status: React.FC<IStatusProps> & IStatusExtendProps = ({componentContext, 
       <StatusDot variant={variant}/>
       <Text
         color={Variables.Color.n700}
-        type={size === Size.Large ? Props.TypographyType.Small : Props.TypographyType.XSmall}
+        type={size === Size.Default ? Props.TypographyType.Small : Props.TypographyType.XSmall}
         margins={{ left: Variables.Spacing.sXSmall }}
       >
         {children}

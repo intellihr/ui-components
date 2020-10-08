@@ -7,14 +7,14 @@ interface IStatusDotProps {
   /** Component context */
   componentContext?: string
   /** What style variant of status dot to display */
-  variant: StatusDotVariants
+  variant?: StatusDotVariants
   /** The margins around the component */
   margins?: Props.Margin
   /** If true, will display the dot inline */
   isInline?: boolean
 }
 
-const StatusDot: React.FC<IStatusDotProps> & {Variant: typeof StatusDotVariants} = ({componentContext, margins, variant = StatusDotVariants.Default, isInline = false}) => {
+const StatusDot: React.FC<IStatusDotProps> & {Variant: typeof StatusDotVariants} = ({componentContext, margins, variant, isInline = false}) => {
   return (
     <StyledStatusDot
       data-component-type={Props.ComponentType.StatusDot}
