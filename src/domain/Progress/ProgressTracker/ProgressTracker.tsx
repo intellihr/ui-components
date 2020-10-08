@@ -34,7 +34,7 @@ const getVariant = (index: number, currentIndex: number) => {
 }
 
 const ProgressTracker: React.FC<IProgressTrackerProps> & {Step: typeof ProgressStep} = ({ currentIndex, isMobile = false, margins, componentContext, children}) => {
-  const progressTrackerChildrenLength = React.Children.toArray(children).length
+  const childCount = React.Children.toArray(children).length
 
   return (
     <StyledProgressTracker
@@ -42,7 +42,7 @@ const ProgressTracker: React.FC<IProgressTrackerProps> & {Step: typeof ProgressS
       data-component-context={componentContext}
       margins={margins}
       isMobile={isMobile}
-      hasTwoItems={progressTrackerChildrenLength < 3}
+      hasTwoItems={childCount < 3}
     >
       {
         React.Children.map(children,(child: any, index) => {
@@ -58,7 +58,7 @@ const ProgressTracker: React.FC<IProgressTrackerProps> & {Step: typeof ProgressS
                   })
                 }
                 {
-                  !isMobile && progressTrackerChildrenLength - 1 > index && <StyledProgressStepItemDivider/>
+                  !isMobile && childCount - 1 > index && <StyledProgressStepItemDivider/>
                 }
                 {
                   isMobile && currentIndex === index &&
@@ -67,7 +67,7 @@ const ProgressTracker: React.FC<IProgressTrackerProps> & {Step: typeof ProgressS
                     color={Variables.Color.n500}
                     margins={{ left: Variables.Spacing.sXSmall }}
                   >
-                    {`Step ${index + 1} of ${progressTrackerChildrenLength}`}
+                    {`Step ${index + 1} of ${childCount}`}
                   </Text>
                 }
               </>

@@ -3,7 +3,7 @@ They guide the user through a number of steps in order to complete a specified p
 
 <br />
 
-Progress Tracker onclick action is only available for past step
+Progress Tracker `onClick` action is only available for past steps
 
 ```jsx
 initialState = { value: 1 };
@@ -30,13 +30,10 @@ initialState = { value: 1 };
 ### Best Practices
 * Progress Tracker should only be used for tasks requiring 2 to 6 steps.
 * If a task needs more than 6 steps, consider simplifying the process or breaking it up into multiple tasks.
-Use labels that clearly indicate the purpose of the step.
+* Use labels that clearly indicate the purpose of the step.
 * Keep labels to a single line of text, be short and concise (1-2 words).
+* ProgressTracker will handle its own width based on the number of steps involved. Always ensure that the ProgressTracker is not in any surrounding boxes so that it will always take up 100% of the page content width
 
-<br />
-
-### Design Pattern
-* When progress tracker have less steps (~2 steps), the progress tracker would place 50% content to avoid the steps stay far away. 
 ```jsx
 initialState = { value: 1 };
 
