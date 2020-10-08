@@ -11,13 +11,19 @@ All pages should have **Breadcrumb Group**
 - Breadcrumb should have back page and **action** (e.g. Create, Edit). 
 - For person profile form, person name / person profile tab name / action. Person name will link to person profile page while tab name will link to specific tab
 
+<br />
+
 ### Back Button
 All pages should have `backButtonProps` on Page component for **Back Button** 
 - All labels are in **Title Case**
 - It should be the **back page title**
 
+<br />
+
 ### Page Title
 Page title should be ‘**Action** Name’ ‘Item Name’
+
+<br />
 
 ### Page Description
 Descriptions are optional for other pages and should be used when more context is necessary.

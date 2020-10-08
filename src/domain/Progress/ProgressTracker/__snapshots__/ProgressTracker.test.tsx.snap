@@ -1,0 +1,1829 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProgressTracker /> should render an progress tracker 1`] = `
+.c4 {
+  display: inline-block;
+  font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
+  color: #FFFFFF;
+}
+
+.c4.icon {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.c5 {
+  margin-left: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
+.c10 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.c11 {
+  margin-left: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #8FA1B3;
+  font-weight: 400;
+}
+
+.c3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 32px;
+  width: 32px;
+  height: 32px;
+  color: #FFFFFF;
+  background-color: #424F5C;
+  cursor: pointer;
+}
+
+.c1:hover .c3 {
+  background-color: #262D33;
+}
+
+.c8 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 32px;
+  width: 32px;
+  height: 32px;
+  color: #FFFFFF;
+  background-color: #432DF3;
+}
+
+.c9 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 32px;
+  width: 32px;
+  height: 32px;
+  color: #FFFFFF;
+  background-color: #8FA1B3;
+}
+
+.c2 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: auto;
+  cursor: pointer;
+}
+
+.c7 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c6 {
+  -webkit-flex: 1 1 0%;
+  -ms-flex: 1 1 0%;
+  flex: 1 1 0%;
+  width: auto;
+  height: 2px;
+  background-color: #E1E6EB;
+  margin: 16px;
+}
+
+<ProgressTracker
+  currentIndex={1}
+>
+  <styled.div
+    data-component-type="progress_tracker"
+    hasTwoItems={false}
+    isMobile={false}
+  >
+    <StyledComponent
+      data-component-type="progress_tracker"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-VigVT",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  display: flex;
+  ",
+              [Function],
+              "
+  ",
+              [Function],
+              "
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-VigVT",
+          "target": "div",
+          "toString": [Function],
+          "usesTheme": false,
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      hasTwoItems={false}
+      isMobile={false}
+    >
+      <div
+        className="c0"
+        data-component-type="progress_tracker"
+      >
+        <ProgressStep
+          index={0}
+          label="Report Issue"
+          onClick={[MockFunction]}
+          variant="past"
+        >
+          <styled.div
+            data-component-type="progress_step"
+            isHoverable={true}
+            onClick={[MockFunction]}
+          >
+            <StyledComponent
+              data-component-type="progress_step"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "c1",
+                    "isStatic": false,
+                    "lastClassName": "c7",
+                    "rules": Array [
+                      "
+  flex: 0 0 auto;
+  width: auto;
+
+  ",
+                      [Function],
+                      "
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "c1",
+                  "target": "div",
+                  "toString": [Function],
+                  "usesTheme": false,
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              isHoverable={true}
+              onClick={[MockFunction]}
+            >
+              <div
+                className="c1 c2"
+                data-component-type="progress_step"
+                onClick={[MockFunction]}
+              >
+                <styled.div
+                  isHoverable={true}
+                  variant="past"
+                >
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-gZMcBi",
+                          "isStatic": false,
+                          "lastClassName": "c9",
+                          "rules": Array [
+                            "
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: ",
+                            "32",
+                            "px;
+  width: ",
+                            "32",
+                            "px;
+  height: ",
+                            "32",
+                            "px;
+  color: ",
+                            "#FFFFFF",
+                            ";
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+",
+                          ],
+                        },
+                        "displayName": "styled.div",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-gZMcBi",
+                        "target": "div",
+                        "toString": [Function],
+                        "usesTheme": false,
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    isHoverable={true}
+                    variant="past"
+                  >
+                    <div
+                      className="c3"
+                    >
+                      <FontAwesomeIcon
+                        color="#FFFFFF"
+                        icon="check"
+                        type="solid"
+                      >
+                        <Icon
+                          color="#FFFFFF"
+                          icon="fas fa-check"
+                        >
+                          <styled.i
+                            aria-hidden={true}
+                            className="icon fas fa-check"
+                            color="#FFFFFF"
+                            data-component-type="icon"
+                            size="medium"
+                          >
+                            <StyledComponent
+                              aria-hidden={true}
+                              className="icon fas fa-check"
+                              color="#FFFFFF"
+                              data-component-type="icon"
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "sc-htpNat",
+                                    "isStatic": false,
+                                    "lastClassName": "c4",
+                                    "rules": Array [
+                                      "
+  display: inline-block;
+  font-stretch: normal;
+  --fa-primary-color: ",
+                                      "#2512B3",
+                                      ";
+  --fa-secondary-color: ",
+                                      "#2512B3",
+                                      ";
+
+  ",
+                                      [Function],
+                                      "
+
+  ",
+                                      [Function],
+                                      "
+  ",
+                                      [Function],
+                                      "
+
+  ",
+                                      [Function],
+                                      "
+
+  ",
+                                      [Function],
+                                      "
+
+  ",
+                                      [Function],
+                                      "
+
+  ",
+                                      [Function],
+                                      "
+
+  ",
+                                      [Function],
+                                      "
+
+  &.icon {
+    text-align: center;
+
+  ",
+                                      [Function],
+                                      "
+  }
+",
+                                    ],
+                                  },
+                                  "displayName": "styled.i",
+                                  "foldedComponentIds": Array [],
+                                  "render": [Function],
+                                  "styledComponentId": "sc-htpNat",
+                                  "target": "i",
+                                  "toString": [Function],
+                                  "usesTheme": false,
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
+                                }
+                              }
+                              forwardedRef={null}
+                              size="medium"
+                            >
+                              <i
+                                aria-hidden={true}
+                                className="c4 icon fas fa-check"
+                                color="#FFFFFF"
+                                data-component-type="icon"
+                                size="medium"
+                              />
+                            </StyledComponent>
+                          </styled.i>
+                        </Icon>
+                      </FontAwesomeIcon>
+                    </div>
+                  </StyledComponent>
+                </styled.div>
+                <Text
+                  color="#424F5C"
+                  isInline={true}
+                  margins={
+                    Object {
+                      "left": 8,
+                    }
+                  }
+                  tag="span"
+                  type="small"
+                >
+                  <styled.span
+                    as="span"
+                    color="#424F5C"
+                    data-component-type="text"
+                    isInline={true}
+                    margins={
+                      Object {
+                        "left": 8,
+                      }
+                    }
+                    textType="small"
+                  >
+                    <StyledComponent
+                      as="span"
+                      color="#424F5C"
+                      data-component-type="text"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-dnqmqq",
+                            "isStatic": false,
+                            "lastClassName": "c11",
+                            "rules": Array [
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+",
+                            ],
+                          },
+                          "displayName": "styled.span",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-dnqmqq",
+                          "target": "span",
+                          "toString": [Function],
+                          "usesTheme": false,
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      isInline={true}
+                      margins={
+                        Object {
+                          "left": 8,
+                        }
+                      }
+                      textType="small"
+                    >
+                      <span
+                        className="c5"
+                        color="#424F5C"
+                        data-component-type="text"
+                      >
+                        Report Issue
+                      </span>
+                    </StyledComponent>
+                  </styled.span>
+                </Text>
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </ProgressStep>
+        <styled.div>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-jTzLTM",
+                  "isStatic": false,
+                  "lastClassName": "c6",
+                  "rules": Array [
+                    "
+  flex: 1 1 0%;
+  width: auto;
+  height: ",
+                    "2",
+                    "px;
+  background-color: ",
+                    "#E1E6EB",
+                    ";
+  margin: ",
+                    "16",
+                    "px;
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-jTzLTM",
+                "target": "div",
+                "toString": [Function],
+                "usesTheme": false,
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <div
+              className="c6"
+            />
+          </StyledComponent>
+        </styled.div>
+        <ProgressStep
+          index={1}
+          label="Initiate Plan"
+          onClick={[MockFunction]}
+          variant="current"
+        >
+          <styled.div
+            data-component-type="progress_step"
+            isHoverable={false}
+          >
+            <StyledComponent
+              data-component-type="progress_step"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "c1",
+                    "isStatic": false,
+                    "lastClassName": "c7",
+                    "rules": Array [
+                      "
+  flex: 0 0 auto;
+  width: auto;
+
+  ",
+                      [Function],
+                      "
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "c1",
+                  "target": "div",
+                  "toString": [Function],
+                  "usesTheme": false,
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              isHoverable={false}
+            >
+              <div
+                className="c1 c7"
+                data-component-type="progress_step"
+              >
+                <styled.div
+                  isHoverable={false}
+                  variant="current"
+                >
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-gZMcBi",
+                          "isStatic": false,
+                          "lastClassName": "c9",
+                          "rules": Array [
+                            "
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: ",
+                            "32",
+                            "px;
+  width: ",
+                            "32",
+                            "px;
+  height: ",
+                            "32",
+                            "px;
+  color: ",
+                            "#FFFFFF",
+                            ";
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+",
+                          ],
+                        },
+                        "displayName": "styled.div",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-gZMcBi",
+                        "target": "div",
+                        "toString": [Function],
+                        "usesTheme": false,
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    isHoverable={false}
+                    variant="current"
+                  >
+                    <div
+                      className="c8"
+                    >
+                      <FontAwesomeIcon
+                        color="#FFFFFF"
+                        icon="pencil-alt"
+                        type="solid"
+                      >
+                        <Icon
+                          color="#FFFFFF"
+                          icon="fas fa-pencil-alt"
+                        >
+                          <styled.i
+                            aria-hidden={true}
+                            className="icon fas fa-pencil-alt"
+                            color="#FFFFFF"
+                            data-component-type="icon"
+                            size="medium"
+                          >
+                            <StyledComponent
+                              aria-hidden={true}
+                              className="icon fas fa-pencil-alt"
+                              color="#FFFFFF"
+                              data-component-type="icon"
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "sc-htpNat",
+                                    "isStatic": false,
+                                    "lastClassName": "c4",
+                                    "rules": Array [
+                                      "
+  display: inline-block;
+  font-stretch: normal;
+  --fa-primary-color: ",
+                                      "#2512B3",
+                                      ";
+  --fa-secondary-color: ",
+                                      "#2512B3",
+                                      ";
+
+  ",
+                                      [Function],
+                                      "
+
+  ",
+                                      [Function],
+                                      "
+  ",
+                                      [Function],
+                                      "
+
+  ",
+                                      [Function],
+                                      "
+
+  ",
+                                      [Function],
+                                      "
+
+  ",
+                                      [Function],
+                                      "
+
+  ",
+                                      [Function],
+                                      "
+
+  ",
+                                      [Function],
+                                      "
+
+  &.icon {
+    text-align: center;
+
+  ",
+                                      [Function],
+                                      "
+  }
+",
+                                    ],
+                                  },
+                                  "displayName": "styled.i",
+                                  "foldedComponentIds": Array [],
+                                  "render": [Function],
+                                  "styledComponentId": "sc-htpNat",
+                                  "target": "i",
+                                  "toString": [Function],
+                                  "usesTheme": false,
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
+                                }
+                              }
+                              forwardedRef={null}
+                              size="medium"
+                            >
+                              <i
+                                aria-hidden={true}
+                                className="c4 icon fas fa-pencil-alt"
+                                color="#FFFFFF"
+                                data-component-type="icon"
+                                size="medium"
+                              />
+                            </StyledComponent>
+                          </styled.i>
+                        </Icon>
+                      </FontAwesomeIcon>
+                    </div>
+                  </StyledComponent>
+                </styled.div>
+                <Text
+                  color="#424F5C"
+                  isInline={true}
+                  margins={
+                    Object {
+                      "left": 8,
+                    }
+                  }
+                  tag="span"
+                  type="small"
+                >
+                  <styled.span
+                    as="span"
+                    color="#424F5C"
+                    data-component-type="text"
+                    isInline={true}
+                    margins={
+                      Object {
+                        "left": 8,
+                      }
+                    }
+                    textType="small"
+                  >
+                    <StyledComponent
+                      as="span"
+                      color="#424F5C"
+                      data-component-type="text"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-dnqmqq",
+                            "isStatic": false,
+                            "lastClassName": "c11",
+                            "rules": Array [
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+",
+                            ],
+                          },
+                          "displayName": "styled.span",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-dnqmqq",
+                          "target": "span",
+                          "toString": [Function],
+                          "usesTheme": false,
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      isInline={true}
+                      margins={
+                        Object {
+                          "left": 8,
+                        }
+                      }
+                      textType="small"
+                    >
+                      <span
+                        className="c5"
+                        color="#424F5C"
+                        data-component-type="text"
+                      >
+                        Initiate Plan
+                      </span>
+                    </StyledComponent>
+                  </styled.span>
+                </Text>
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </ProgressStep>
+        <styled.div>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-jTzLTM",
+                  "isStatic": false,
+                  "lastClassName": "c6",
+                  "rules": Array [
+                    "
+  flex: 1 1 0%;
+  width: auto;
+  height: ",
+                    "2",
+                    "px;
+  background-color: ",
+                    "#E1E6EB",
+                    ";
+  margin: ",
+                    "16",
+                    "px;
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-jTzLTM",
+                "target": "div",
+                "toString": [Function],
+                "usesTheme": false,
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <div
+              className="c6"
+            />
+          </StyledComponent>
+        </styled.div>
+        <ProgressStep
+          index={2}
+          label="Add Cost and  Follow Up"
+          onClick={[MockFunction]}
+          variant="upcoming"
+        >
+          <styled.div
+            data-component-type="progress_step"
+            isHoverable={false}
+          >
+            <StyledComponent
+              data-component-type="progress_step"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "c1",
+                    "isStatic": false,
+                    "lastClassName": "c7",
+                    "rules": Array [
+                      "
+  flex: 0 0 auto;
+  width: auto;
+
+  ",
+                      [Function],
+                      "
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "c1",
+                  "target": "div",
+                  "toString": [Function],
+                  "usesTheme": false,
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              isHoverable={false}
+            >
+              <div
+                className="c1 c7"
+                data-component-type="progress_step"
+              >
+                <styled.div
+                  isHoverable={false}
+                  variant="upcoming"
+                >
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-gZMcBi",
+                          "isStatic": false,
+                          "lastClassName": "c9",
+                          "rules": Array [
+                            "
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: ",
+                            "32",
+                            "px;
+  width: ",
+                            "32",
+                            "px;
+  height: ",
+                            "32",
+                            "px;
+  color: ",
+                            "#FFFFFF",
+                            ";
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+",
+                          ],
+                        },
+                        "displayName": "styled.div",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-gZMcBi",
+                        "target": "div",
+                        "toString": [Function],
+                        "usesTheme": false,
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    isHoverable={false}
+                    variant="upcoming"
+                  >
+                    <div
+                      className="c9"
+                    >
+                      <Text
+                        color="#FFFFFF"
+                        isInline={true}
+                        tag="span"
+                        type="body"
+                        weight={600}
+                      >
+                        <styled.span
+                          as="span"
+                          color="#FFFFFF"
+                          data-component-type="text"
+                          isInline={true}
+                          textType="body"
+                          weight={600}
+                        >
+                          <StyledComponent
+                            as="span"
+                            color="#FFFFFF"
+                            data-component-type="text"
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-dnqmqq",
+                                  "isStatic": false,
+                                  "lastClassName": "c11",
+                                  "rules": Array [
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+
+  ",
+                                    [Function],
+                                    "
+",
+                                  ],
+                                },
+                                "displayName": "styled.span",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "sc-dnqmqq",
+                                "target": "span",
+                                "toString": [Function],
+                                "usesTheme": false,
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            isInline={true}
+                            textType="body"
+                            weight={600}
+                          >
+                            <span
+                              className="c10"
+                              color="#FFFFFF"
+                              data-component-type="text"
+                            >
+                              3
+                            </span>
+                          </StyledComponent>
+                        </styled.span>
+                      </Text>
+                    </div>
+                  </StyledComponent>
+                </styled.div>
+                <Text
+                  color="#8FA1B3"
+                  isInline={true}
+                  margins={
+                    Object {
+                      "left": 8,
+                    }
+                  }
+                  tag="span"
+                  type="small"
+                >
+                  <styled.span
+                    as="span"
+                    color="#8FA1B3"
+                    data-component-type="text"
+                    isInline={true}
+                    margins={
+                      Object {
+                        "left": 8,
+                      }
+                    }
+                    textType="small"
+                  >
+                    <StyledComponent
+                      as="span"
+                      color="#8FA1B3"
+                      data-component-type="text"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-dnqmqq",
+                            "isStatic": false,
+                            "lastClassName": "c11",
+                            "rules": Array [
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+",
+                            ],
+                          },
+                          "displayName": "styled.span",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-dnqmqq",
+                          "target": "span",
+                          "toString": [Function],
+                          "usesTheme": false,
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      isInline={true}
+                      margins={
+                        Object {
+                          "left": 8,
+                        }
+                      }
+                      textType="small"
+                    >
+                      <span
+                        className="c11"
+                        color="#8FA1B3"
+                        data-component-type="text"
+                      >
+                        Add Cost and  Follow Up
+                      </span>
+                    </StyledComponent>
+                  </styled.span>
+                </Text>
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </ProgressStep>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</ProgressTracker>
+`;
+
+exports[`<ProgressTracker /> should render an progress tracker in mobile style 1`] = `
+.c4 {
+  display: inline-block;
+  font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
+  color: #FFFFFF;
+}
+
+.c4.icon {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.c5 {
+  margin-left: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
+.c6 {
+  margin-left: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #8FA1B3;
+  font-weight: 400;
+}
+
+.c1:hover .c7 {
+  background-color: #262D33;
+}
+
+.c3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 32px;
+  width: 32px;
+  height: 32px;
+  color: #FFFFFF;
+  background-color: #432DF3;
+}
+
+.c2 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+<ProgressTracker
+  currentIndex={1}
+  isMobile={true}
+>
+  <styled.div
+    data-component-type="progress_tracker"
+    hasTwoItems={false}
+    isMobile={true}
+  >
+    <StyledComponent
+      data-component-type="progress_tracker"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-VigVT",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  display: flex;
+  ",
+              [Function],
+              "
+  ",
+              [Function],
+              "
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-VigVT",
+          "target": "div",
+          "toString": [Function],
+          "usesTheme": false,
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      hasTwoItems={false}
+      isMobile={true}
+    >
+      <div
+        className="c0"
+        data-component-type="progress_tracker"
+      >
+        <ProgressStep
+          index={1}
+          label="Initiate Plan"
+          onClick={[MockFunction]}
+          variant="current"
+        >
+          <styled.div
+            data-component-type="progress_step"
+            isHoverable={false}
+          >
+            <StyledComponent
+              data-component-type="progress_step"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "c1",
+                    "isStatic": false,
+                    "lastClassName": "c2",
+                    "rules": Array [
+                      "
+  flex: 0 0 auto;
+  width: auto;
+
+  ",
+                      [Function],
+                      "
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "c1",
+                  "target": "div",
+                  "toString": [Function],
+                  "usesTheme": false,
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              isHoverable={false}
+            >
+              <div
+                className="c1 c2"
+                data-component-type="progress_step"
+              >
+                <styled.div
+                  isHoverable={false}
+                  variant="current"
+                >
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-gZMcBi",
+                          "isStatic": false,
+                          "lastClassName": "c3",
+                          "rules": Array [
+                            "
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: ",
+                            "32",
+                            "px;
+  width: ",
+                            "32",
+                            "px;
+  height: ",
+                            "32",
+                            "px;
+  color: ",
+                            "#FFFFFF",
+                            ";
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+",
+                          ],
+                        },
+                        "displayName": "styled.div",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-gZMcBi",
+                        "target": "div",
+                        "toString": [Function],
+                        "usesTheme": false,
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    isHoverable={false}
+                    variant="current"
+                  >
+                    <div
+                      className="c3"
+                    >
+                      <FontAwesomeIcon
+                        color="#FFFFFF"
+                        icon="pencil-alt"
+                        type="solid"
+                      >
+                        <Icon
+                          color="#FFFFFF"
+                          icon="fas fa-pencil-alt"
+                        >
+                          <styled.i
+                            aria-hidden={true}
+                            className="icon fas fa-pencil-alt"
+                            color="#FFFFFF"
+                            data-component-type="icon"
+                            size="medium"
+                          >
+                            <StyledComponent
+                              aria-hidden={true}
+                              className="icon fas fa-pencil-alt"
+                              color="#FFFFFF"
+                              data-component-type="icon"
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "sc-htpNat",
+                                    "isStatic": false,
+                                    "lastClassName": "c4",
+                                    "rules": Array [
+                                      "
+  display: inline-block;
+  font-stretch: normal;
+  --fa-primary-color: ",
+                                      "#2512B3",
+                                      ";
+  --fa-secondary-color: ",
+                                      "#2512B3",
+                                      ";
+
+  ",
+                                      [Function],
+                                      "
+
+  ",
+                                      [Function],
+                                      "
+  ",
+                                      [Function],
+                                      "
+
+  ",
+                                      [Function],
+                                      "
+
+  ",
+                                      [Function],
+                                      "
+
+  ",
+                                      [Function],
+                                      "
+
+  ",
+                                      [Function],
+                                      "
+
+  ",
+                                      [Function],
+                                      "
+
+  &.icon {
+    text-align: center;
+
+  ",
+                                      [Function],
+                                      "
+  }
+",
+                                    ],
+                                  },
+                                  "displayName": "styled.i",
+                                  "foldedComponentIds": Array [],
+                                  "render": [Function],
+                                  "styledComponentId": "sc-htpNat",
+                                  "target": "i",
+                                  "toString": [Function],
+                                  "usesTheme": false,
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
+                                }
+                              }
+                              forwardedRef={null}
+                              size="medium"
+                            >
+                              <i
+                                aria-hidden={true}
+                                className="c4 icon fas fa-pencil-alt"
+                                color="#FFFFFF"
+                                data-component-type="icon"
+                                size="medium"
+                              />
+                            </StyledComponent>
+                          </styled.i>
+                        </Icon>
+                      </FontAwesomeIcon>
+                    </div>
+                  </StyledComponent>
+                </styled.div>
+                <Text
+                  color="#424F5C"
+                  isInline={true}
+                  margins={
+                    Object {
+                      "left": 8,
+                    }
+                  }
+                  tag="span"
+                  type="small"
+                >
+                  <styled.span
+                    as="span"
+                    color="#424F5C"
+                    data-component-type="text"
+                    isInline={true}
+                    margins={
+                      Object {
+                        "left": 8,
+                      }
+                    }
+                    textType="small"
+                  >
+                    <StyledComponent
+                      as="span"
+                      color="#424F5C"
+                      data-component-type="text"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-dnqmqq",
+                            "isStatic": false,
+                            "lastClassName": "c6",
+                            "rules": Array [
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
+",
+                            ],
+                          },
+                          "displayName": "styled.span",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-dnqmqq",
+                          "target": "span",
+                          "toString": [Function],
+                          "usesTheme": false,
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      isInline={true}
+                      margins={
+                        Object {
+                          "left": 8,
+                        }
+                      }
+                      textType="small"
+                    >
+                      <span
+                        className="c5"
+                        color="#424F5C"
+                        data-component-type="text"
+                      >
+                        Initiate Plan
+                      </span>
+                    </StyledComponent>
+                  </styled.span>
+                </Text>
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </ProgressStep>
+        <Text
+          color="#8FA1B3"
+          isInline={true}
+          margins={
+            Object {
+              "left": 8,
+            }
+          }
+          tag="span"
+          type="small"
+        >
+          <styled.span
+            as="span"
+            color="#8FA1B3"
+            data-component-type="text"
+            isInline={true}
+            margins={
+              Object {
+                "left": 8,
+              }
+            }
+            textType="small"
+          >
+            <StyledComponent
+              as="span"
+              color="#8FA1B3"
+              data-component-type="text"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-dnqmqq",
+                    "isStatic": false,
+                    "lastClassName": "c6",
+                    "rules": Array [
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-dnqmqq",
+                  "target": "span",
+                  "toString": [Function],
+                  "usesTheme": false,
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              isInline={true}
+              margins={
+                Object {
+                  "left": 8,
+                }
+              }
+              textType="small"
+            >
+              <span
+                className="c6"
+                color="#8FA1B3"
+                data-component-type="text"
+              >
+                Step 2 of 3
+              </span>
+            </StyledComponent>
+          </styled.span>
+        </Text>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</ProgressTracker>
+`;
