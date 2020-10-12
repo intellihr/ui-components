@@ -18,10 +18,8 @@ interface IStatusProps {
   /** The margins around the component */
   margins?: Props.Margin
   /** label of the status */
-  children: string
-  /** If true, will display the status inline */
-  isInline?: boolean
-  /** Size of the icon */
+  label: string
+  /** Size of the text label on status */
   size?: Size
 }
 
@@ -30,7 +28,7 @@ interface IStatusExtendProps {
   Size: typeof Size
 }
 
-const Status: React.FC<IStatusProps> & IStatusExtendProps = ({componentContext, margins, size= Size.Default, variant, isInline = false, children}) => {
+const Status: React.FC<IStatusProps> & IStatusExtendProps = ({componentContext, margins, size= Size.Default, variant, label}) => {
   return (
     <StyledStatus
       data-component-type={Props.ComponentType.Status}
@@ -43,7 +41,7 @@ const Status: React.FC<IStatusProps> & IStatusExtendProps = ({componentContext, 
         type={size === Size.Default ? Props.TypographyType.Small : Props.TypographyType.XSmall}
         margins={{ left: Variables.Spacing.sXSmall }}
       >
-        {children}
+        {label}
       </Text>
     </StyledStatus>
   )

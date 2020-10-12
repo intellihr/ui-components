@@ -26,9 +26,9 @@ const variantOptions: {[K in StatusDotVariants]: Variables.Color} = {
 }
 
 const StyledStatusDot = styled.div`
-  width: ${Variables.Spacing.sMedium}px;
-  height: ${Variables.Spacing.sMedium}px;
-  border-radius: ${Variables.Spacing.sMedium}px;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
   ${(props: IStyledStatusDotProps) => styleForMargins(props.margins)};
   ${(props: IStyledStatusDotProps) => props.variant && css`
     background-color: ${variantOptions[props.variant]};

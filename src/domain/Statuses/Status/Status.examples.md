@@ -3,22 +3,22 @@ The **Status** visually label and indicate status.
 ### Status
 ```jsx
 <>
-  <Status variant={Status.Variant.Neutral}>Default</Status>
-  <Status variant={Status.Variant.Success}>Success</Status>
-  <Status variant={Status.Variant.Warning}>Warning</Status>
-  <Status variant={Status.Variant.Critical}>Critical</Status>
-  <Status variant={Status.Variant.Info}>Info</Status>
+  <Status variant={Status.Variant.Neutral} label='Neutral'/>
+  <Status variant={Status.Variant.Success} label='Success'/>
+  <Status variant={Status.Variant.Warning} label='Warning'/>
+  <Status variant={Status.Variant.Critical} label='Critical'/>
+  <Status variant={Status.Variant.Info} label='Info'/>
 </>
 ```
 
 ### Small Status 
 ```jsx
 <>
-  <Status size={Status.Size.Small} variant={Status.Variant.Neutral}>Default Small</Status>
-  <Status size={Status.Size.Small} variant={Status.Variant.Success}>Success Small</Status>
-  <Status size={Status.Size.Small} variant={Status.Variant.Warning}>Warning Small</Status>
-  <Status size={Status.Size.Small} variant={Status.Variant.Critical}>Critical Small</Status>
-  <Status size={Status.Size.Small} variant={Status.Variant.Info}>Info Small</Status>
+  <Status size={Status.Size.Small} variant={Status.Variant.Neutral} label='Neutral Small'/>
+  <Status size={Status.Size.Small} variant={Status.Variant.Success} label='Success Small'/>
+  <Status size={Status.Size.Small} variant={Status.Variant.Warning} label='Warning Small'/>
+  <Status size={Status.Size.Small} variant={Status.Variant.Critical} label='Critical Small'/>
+  <Status size={Status.Size.Small} variant={Status.Variant.Info} label='Info Small'/>
 </>
 ```
 
