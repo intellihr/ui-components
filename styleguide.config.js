@@ -112,7 +112,8 @@ module.exports = {
         'src/domain/Menus/Menu/Menu.tsx',
         'src/domain/Links/UnstyledLink/UnstyledLink.tsx',
         'src/domain/Navigation/BreadcrumbGroup/BreadcrumbGroup.tsx',
-        'src/domain/Links/BackLink/BackLink.tsx'
+        'src/domain/Links/BackLink/BackLink.tsx',
+        'src/domain/Progress/ProgressTracker/ProgressTracker.tsx'
       ],
       sections: [
         {
@@ -230,7 +231,8 @@ module.exports = {
         'src/domain/Formats/Record/Record.tsx',
         'src/domain/Layouts/SectionList/SectionList.tsx',
         'src/domain/Formats/Statistic/Statistic.tsx',
-        'src/domain/Tables/Table/Table.tsx',
+        'src/domain/Statuses/Status/Status.tsx',
+        'src/domain/Tables/Table/Table.tsx'
       ],
       sections: [
         {

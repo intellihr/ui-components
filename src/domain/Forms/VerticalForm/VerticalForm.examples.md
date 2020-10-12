@@ -317,3 +317,82 @@ initialState = { textInputValue: '' };
         </VerticalForm.RightAlignControls>
   </VerticalForm>
 ```
+
+Form with Sections
+
+```jsx
+import { ButtonGroup, Button } from '@Domain/Buttons';
+import { TextInput } from '@Domain/Inputs';
+import { Text } from '@Domain/Typographies';
+
+initialState = { textInputValue: '' };
+
+  <VerticalForm
+    onSubmit={() => alert(`Test input: ${state.textInputValue}`)}
+  >
+    <VerticalForm.Section name='My Section'>
+        <VerticalForm.Field
+          inputName='testInput'
+          label='This is a test input'
+          isRequired
+        >
+          <TextInput
+            name='testInput'
+            handleChange={(e) => setState({ textInputValue: e.target.value })}
+          />
+        </VerticalForm.Field>
+        <VerticalForm.Field
+          inputName='testInput'
+          label='This is a test input'
+          isRequired
+        >
+          <TextInput
+            name='testInput'
+            handleChange={(e) => setState({ textInputValue: e.target.value })}
+          />
+        </VerticalForm.Field>
+    </VerticalForm.Section>
+
+    <VerticalForm.Section 
+      name='Other Section'
+      rightComponent={<Text.Link>Select All</Text.Link>}
+    >
+        <VerticalForm.Field
+          inputName='testInput'
+          label='This is a test input'
+          isRequired
+        >
+          <TextInput
+            name='testInput'
+            handleChange={(e) => setState({ textInputValue: e.target.value })}
+          />
+        </VerticalForm.Field>
+        <VerticalForm.Field
+          inputName='testInput'
+          label='This is a test input'
+          isRequired
+        >
+          <TextInput
+            name='testInput'
+            handleChange={(e) => setState({ textInputValue: e.target.value })}
+          />
+        </VerticalForm.Field>
+    </VerticalForm.Section>
+    
+    <VerticalForm.RightAlignControls>
+      <ButtonGroup>
+        <Button
+          type='neutral'
+        >
+          Cancel
+        </Button>
+        <Button
+          type='primary'
+        >
+          Submit me :)
+        </Button>
+      </ButtonGroup>
+    </VerticalForm.RightAlignControls>
+  </VerticalForm>
+```
+
