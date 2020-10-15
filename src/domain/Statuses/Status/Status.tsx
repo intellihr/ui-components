@@ -21,6 +21,8 @@ interface IStatusProps {
   label: string
   /** Size of the text label on status */
   size?: Size
+  /** If true, makes the status dot pulse */
+  isPulsing?: boolean
 }
 
 interface IStatusExtendProps {
@@ -28,14 +30,24 @@ interface IStatusExtendProps {
   Size: typeof Size
 }
 
-const Status: React.FC<IStatusProps> & IStatusExtendProps = ({componentContext, margins, size= Size.Default, variant, label}) => {
+const Status: React.FC<IStatusProps> & IStatusExtendProps = ({
+  componentContext,
+  margins,
+  size= Size.Default,
+  variant,
+  label,
+  isPulsing = false
+}) => {
   return (
     <StyledStatus
       data-component-type={Props.ComponentType.Status}
       data-component-context={componentContext}
       margins={margins}
     >
-      <StatusDot variant={variant}/>
+      <StatusDot
+        variant={variant}
+        isPulsing={isPulsing}
+      />
       <Text
         color={Variables.Color.n700}
         type={size === Size.Default ? Props.TypographyType.Small : Props.TypographyType.XSmall}

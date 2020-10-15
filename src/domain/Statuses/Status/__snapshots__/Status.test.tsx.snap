@@ -5,6 +5,7 @@ exports[`<Status /> should render a status 1`] = `
   data-component-type="status"
 >
   <StatusDot
+    isPulsing={false}
     variant="red"
   />
   <Text
@@ -28,6 +29,7 @@ exports[`<Status /> should render a status with size 1`] = `
   data-component-type="status"
 >
   <StatusDot
+    isPulsing={false}
     variant="grey"
   />
   <Text
