@@ -29,6 +29,7 @@ const variantOptions: {[K in StatusDotVariants]: Variables.Color} = {
 
 const StyledStatusDot = styled.div`
   width: 16px;
+  min-width: 16px;
   height: 16px;
   border-radius: 16px;
   ${(props: IStyledStatusDotProps) => styleForMargins(props.margins)};
