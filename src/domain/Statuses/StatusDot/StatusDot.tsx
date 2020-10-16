@@ -12,9 +12,17 @@ interface IStatusDotProps {
   margins?: Props.Margin
   /** If true, will display the dot inline */
   isInline?: boolean
+  /** If true, makes the dot pulse */
+  isPulsing?: boolean
 }
 
-const StatusDot: React.FC<IStatusDotProps> & {Variant: typeof StatusDotVariants} = ({componentContext, margins, variant, isInline = false}) => {
+const StatusDot: React.FC<IStatusDotProps> & {Variant: typeof StatusDotVariants} = ({
+  componentContext,
+  margins,
+  variant,
+  isInline = false,
+  isPulsing = false
+}) => {
   return (
     <StyledStatusDot
       data-component-type={Props.ComponentType.StatusDot}
@@ -22,6 +30,7 @@ const StatusDot: React.FC<IStatusDotProps> & {Variant: typeof StatusDotVariants}
       margins={margins}
       variant={variant}
       isInline={isInline}
+      isPulsing={isPulsing}
     />
   )
 }
