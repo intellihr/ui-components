@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components'
+import hexRgb from 'hex-rgb'
+import styled, { css, keyframes } from 'styled-components'
 
 import { Props, Variables } from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
@@ -15,6 +16,7 @@ interface IStyledStatusDotProps {
   variant?: StatusDotVariants
   margins?: Props.IMargins
   isInline: boolean
+  isPulsing: boolean
 }
 
 const variantOptions: {[K in StatusDotVariants]: Variables.Color} = {
@@ -27,6 +29,7 @@ const variantOptions: {[K in StatusDotVariants]: Variables.Color} = {
 
 const StyledStatusDot = styled.div`
   width: 16px;
+  min-width: 16px;
   height: 16px;
   border-radius: 16px;
   ${(props: IStyledStatusDotProps) => styleForMargins(props.margins)};
@@ -36,6 +39,39 @@ const StyledStatusDot = styled.div`
   ${(props: IStyledStatusDotProps) => props.isInline && css`
     display: inline-block;
   `};
+
+  ${(props: IStyledStatusDotProps) => {
+    if (!props.isPulsing || !props.variant) {
+      return css``
+    }
+
+  const rgbaVariantColor = hexRgb(variantOptions[props.variant])
+  const rgbString = `${rgbaVariantColor.red}, ${rgbaVariantColor.green}, ${rgbaVariantColor.blue}`
+
+  return css`
+     box-shadow: 0 0 0 0 rgba(${rgbString}, 1);
+     transform: scale(1);
+     animation: ${pulseAnimation(rgbString)} 1.5s infinite;
+    `
+  }};
+}
+`
+
+const pulseAnimation = (rgbString: string) => keyframes`
+  0% {
+     transform: scale(0.95);
+     box-shadow: 0 0 0 0 rgba(${rgbString}, 0.5);
+   }
+
+   70% {
+     transform: scale(1);
+     box-shadow: 0 0 0 10px rgba(${rgbString}, 0);
+   }
+
+   100% {
+     transform: scale(0.95);
+     box-shadow: 0 0 0 0 rgba(${rgbString}, 0);
+  }
 `
 
 export {

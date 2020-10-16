@@ -22,6 +22,17 @@ The **Status** visually label and indicate status.
 </>
 ```
 
+### Pulsing
+Status can use the `isPulsing` prop to draw attention to a particular status.
+This should be used sparingly -- only in situations where visual feedback is required.
+```jsx
+<>
+  <Status variant={Status.Variant.Critical} label='Needs Attention' isPulsing/>
+    <br/>
+  <Status variant={Status.Variant.Info} label='Processing' isPulsing/>
+</>
+```
+
 ### Best Practices
 * Status should be used to represent the state of a record (eg. Not Started, In Progress, Completed)
 * Keep labels to a single line of text, be short and concise (1-2 words).
