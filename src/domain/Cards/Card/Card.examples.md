@@ -352,24 +352,67 @@ If you provide any content to the extraContent prop, it will make the card expan
 ### Card with Dropdown Menu
 
 Any variation of the card can take a dropdownSections prop to render a dropdown menu.
+Cards that have dropdownSections provided with no items will line up with those rows.
 
 ```jsx
-<Card
-  mainContent="I'm a card with actions! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧"
-  dropdownSections= {[
-    {
-      text: 'Update',
-      href: 'https://www.google.com.au',
-      stopPropagation: true
-    },
-    {
-      text: 'Delete',
-      onClick: (event) => { alert('Delete action for the card') },
-      sectionType: 'alert',
-      stopPropagation: true
-    }
-  ]}
-/>
+    import { Variables, Props } from '@Common';
+    import { StatusIndicator } from '@Domain/Indicators';
+    import { GridLayout } from '@Domain/Layouts';
+  <>
+    <Card
+      mainContent={
+        <GridLayout verticalAlignment={GridLayout.VerticalAlignment.Middle}>
+          <GridLayout.Cell size={8}>
+            I'm a card with actions! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
+          </GridLayout.Cell>
+          <GridLayout.Cell size={4}>
+            <StatusIndicator
+              text={12}
+              color={Variables.Color.r300}
+              textColor={Variables.Color.r300}
+            />
+          </GridLayout.Cell>
+        </GridLayout>
+      }
+      dropdownSections= {[
+        {
+          text: 'Update',
+          href: 'https://www.google.com.au',
+          stopPropagation: true
+        },
+        {
+          text: 'Delete',
+          onClick: (event) => { alert('Delete action for the card') },
+          sectionType: 'alert',
+          stopPropagation: true        }
+      ]}
+      margins={{
+        top: Variables.Spacing.sSmall,
+        bottom: Variables.Spacing.s2XSmall
+      }}
+    />
+    <Card
+      mainContent={
+        <GridLayout verticalAlignment={GridLayout.VerticalAlignment.Middle}>
+          <GridLayout.Cell size={8}>
+            I'm a card with no actions but i'm aligned correctly
+          </GridLayout.Cell>
+          <GridLayout.Cell size={4}>
+            <StatusIndicator
+              text={12}
+              color={Variables.Color.r300}
+              textColor={Variables.Color.r300}
+            />
+          </GridLayout.Cell>
+        </GridLayout>
+      }
+      dropdownSections= {[]}
+      margins={{
+        top: Variables.Spacing.sSmall,
+        bottom: Variables.Spacing.s2XSmall
+      }}
+    />
+</>
 ```
 
 ### Card with Color

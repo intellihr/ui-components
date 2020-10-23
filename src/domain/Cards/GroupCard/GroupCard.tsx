@@ -14,6 +14,7 @@ import { CardColors } from '../Card/Card'
 import {
   StyledBodyActionButton,
   StyledBodyContent,
+  StyledDropdownPlaceholder,
   StyledGroupCard,
   StyledGroupCardToggleButton,
   StyledGroupExtraCard,
@@ -283,6 +284,10 @@ class GroupCard extends React.PureComponent<IGroupCardProps, IGroupCardState> {
     onMouseOut?: () => void
   ) => {
     if (dropdownSections) {
+      if (dropdownSections.length === 0) {
+        return <StyledDropdownPlaceholder />
+      }
+
       return (
         <DropdownMenu
           sections={dropdownSections}

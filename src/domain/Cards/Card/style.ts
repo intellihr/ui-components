@@ -166,6 +166,10 @@ const StyledBodyContents = styled.div`
   overflow: hidden;
 `
 
+const StyledDropdownPlaceholder = styled.div`
+  width: 28px;
+`
+
 export {
   StyledBodyContents,
   StyledCard,
@@ -174,5 +178,6 @@ export {
   StyledActionButton,
   StyledCardToggleButton,
   StyledToggleButtonSection,
-  StyledHeaderContainer
+  StyledHeaderContainer,
+  StyledDropdownPlaceholder
 }
