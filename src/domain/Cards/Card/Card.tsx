@@ -15,6 +15,7 @@ import {
   StyledCard,
   StyledCardHeader,
   StyledCardToggleButton,
+  StyledDropdownPlaceholder,
   StyledExtraContent,
   StyledHeaderContainer,
   StyledToggleButtonSection
@@ -222,6 +223,10 @@ class Card extends React.PureComponent<ICardProps, ICardState> {
     } = this.props
 
     if (dropdownSections) {
+      if (dropdownSections.length === 0) {
+        return <StyledDropdownPlaceholder />
+      }
+
       return (
         <DropdownMenu
           sections={dropdownSections}

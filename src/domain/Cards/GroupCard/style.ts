@@ -183,6 +183,10 @@ const StyledHeaderContainer = styled.div`
   display: flex;
 `
 
+const StyledDropdownPlaceholder = styled.div`
+  width: 28px;
+`
+
 export {
   StyledGroupMainCard,
   StyledGroupExtraCard,
@@ -191,5 +195,6 @@ export {
   StyledGroupCard,
   StyledBodyContent,
   StyledToggleButtonSection,
-  StyledHeaderContainer
+  StyledHeaderContainer,
+  StyledDropdownPlaceholder
 }
