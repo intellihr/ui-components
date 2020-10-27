@@ -3,7 +3,6 @@ import React from 'react'
 import { Props, Variables } from '../../../../../common'
 import { Margin } from '../../../../Spacers/Margin'
 import { Text } from '../../../../Typographies/Text'
-import { StyledSection } from './style'
 
 interface ISectionProps {
   /** Name to display */
@@ -16,7 +15,7 @@ interface ISectionProps {
 
 const Section: React.FC<ISectionProps> = ({ name, componentContext, rightComponent, children }) => {
   return (
-    <StyledSection
+    <div
       data-component-type={Props.ComponentType.VerticalFormSection}
       data-component-context={componentContext}
     >
@@ -30,7 +29,7 @@ const Section: React.FC<ISectionProps> = ({ name, componentContext, rightCompone
         {rightComponent}
       </Margin>
       {children}
-    </StyledSection>
+    </div>
   )
 }
 
