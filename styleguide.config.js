@@ -229,6 +229,7 @@ module.exports = {
         'src/domain/Timelines/ModularTimeline/ModularTimeline.tsx',
         'src/domain/Lists/OptionList/OptionList.tsx',
         'src/domain/Formats/Record/Record.tsx',
+        'src/domain/Formats/Attribute/Attribute.tsx',
         'src/domain/Layouts/SectionList/SectionList.tsx',
         'src/domain/Formats/Statistic/Statistic.tsx',
         'src/domain/Statuses/Status/Status.tsx',
