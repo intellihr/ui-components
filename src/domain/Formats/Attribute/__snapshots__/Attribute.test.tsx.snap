@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Attribute /> should render a Attribute component 1`] = `
+<styled.div
+  data-component-type="attribute"
+  isCollapsed={false}
+>
+  <styled.div>
+    <styled.div>
+      <Memo(FontAwesomeIcon)
+        color="#667380"
+        icon="check-circle"
+        type="solid"
+      />
+    </styled.div>
+    <Text
+      color="#667380"
+      isInline={false}
+      tag="span"
+      type="xsmall"
+    >
+      Everything is updated
+    </Text>
+  </styled.div>
+  <Text
+    color="#8FA1B3"
+    isInline={false}
+    margins={
+      Object {
+        "left": 24,
+        "top": -2,
+      }
+    }
+    tag="span"
+    type="xsmall"
+  >
+    Notify 10 days before expiry
+  </Text>
+</styled.div>
+`;
+
+exports[`<Attribute /> should render a false Attribute component as null 1`] = `""`;
+
+exports[`<Attribute /> should render a isCollapsed Attribute component 1`] = `
+<styled.div
+  data-component-type="attribute"
+  isCollapsed={true}
+>
+  <TooltipPopover
+    toggleComponent={[Function]}
+    variant="dark"
+    width={300}
+  >
+    Everything is ok
+    <br />
+  </TooltipPopover>
+</styled.div>
+`;
