@@ -48,6 +48,7 @@ const dialogPadding = Variables.Spacing.sLarge
 const totalDialogWidth = dialogContentMaxWidth + (dialogPadding * 2)
 
 const StyledReactModal = styled(ReactModalAdapter)`
+  word-break: break-word;
   .dialog-overlay {
     background-color: ${Color(Variables.Color.n800).alpha(0.45).toString()};
 

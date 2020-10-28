@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Modal /> should render a hidden modal 1`] = `
+.c0 {
+  word-break: break-word;
+}
+
 .c0 .modal-overlay {
   background-color: rgba(38,45,51,0.45);
   display: -webkit-box;
@@ -217,6 +221,7 @@ exports[`<Modal /> should render a hidden modal 1`] = `
             "lastClassName": "c0",
             "rules": Array [
               "
+  word-break: break-word;
   .modal-overlay {
     background-color: ",
               "rgba(38, 45, 51, 0.45)",
@@ -485,7 +490,11 @@ exports[`<Modal /> should render a hidden modal 1`] = `
         >
           <Portal
             containerInfo={
-              .c0 .modal-overlay {
+              .c0 {
+  word-break: break-word;
+}
+
+.c0 .modal-overlay {
   background-color: rgba(38,45,51,0.45);
   display: -webkit-box;
   display: -webkit-flex;
