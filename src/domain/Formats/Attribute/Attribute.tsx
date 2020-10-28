@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { FontAwesomeIconValue } from '../../Icons/Icon/FontAwesomeIconTypes'
 import { ITooltipPopoverToggleComponentProps, TooltipPopover } from '../../Popovers/TooltipPopover'
 import { Text } from '../../Typographies'
-import { AttributeContentWrapper, FontAwesomeIconWrapper, StyledAttribute } from './style'
+import {AttributeContentWrapper, FontAwesomeIconWrapper, StyledAttribute, iconRightMargin, iconWidth} from './style'
 
 enum Variant {
   True = 'true',
@@ -18,13 +18,10 @@ interface IVariantOption {
   labelColor?: Variables.Color
 }
 
-const variantOptions: {[K in Variant]: IVariantOption} = {
+const variantOptions: {[Variant.True]: IVariantOption, [Variant.Optional]: IVariantOption} = {
   [Variant.True]: {
     iconColor: Variables.Color.n600,
     labelColor: Variables.Color.n600
-  },
-  [Variant.False]: {
-    iconColor: Variables.Color.n400
   },
   [Variant.Optional]: {
     iconColor: Variables.Color.n400,
@@ -107,7 +104,7 @@ const Attribute: React.FC<IAttributeProps> & { Variant: typeof Variant} = ({ var
               secondaryLabel && (
                 <Text
                   isInline={false}
-                  margins={{ left: Variables.Spacing.sMedium + Variables.Spacing.sXSmall, top: -Variables.Spacing.s3XSmall }}
+                  margins={{ left: iconWidth + iconRightMargin, top: -Variables.Spacing.s3XSmall }}
                   type={Props.TypographyType.XSmall}
                   color={Variables.Color.n500}
                 >

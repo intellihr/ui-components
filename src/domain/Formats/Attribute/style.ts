@@ -3,10 +3,13 @@ import styled, { css } from 'styled-components'
 import {Props, Variables} from '../../../common'
 import { styleForMargins } from '../../Spacers/services/margins'
 
-export interface IStyledAttributeProps {
+interface IStyledAttributeProps {
   margins?: Props.IMargins
   isCollapsed: boolean
 }
+
+const iconWidth = Variables.Spacing.sMedium
+const iconRightMargin = Variables.Spacing.sXSmall
 
 const StyledAttribute = styled.div`
   ${(props: IStyledAttributeProps) => styleForMargins(props.margins)}
@@ -23,12 +26,14 @@ const AttributeContentWrapper = styled.div`
 const FontAwesomeIconWrapper = styled.div`
   display: flex;
   justify-content: center;
-  width: ${Variables.Spacing.sMedium}px;
-  margin-right: ${Variables.Spacing.sXSmall}px;
+  width: ${iconWidth}px;
+  margin-right: ${iconRightMargin}px;
 `
 
 export {
   StyledAttribute,
   AttributeContentWrapper,
-  FontAwesomeIconWrapper
+  FontAwesomeIconWrapper,
+  iconWidth,
+  iconRightMargin
 }
