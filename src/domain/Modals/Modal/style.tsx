@@ -50,6 +50,7 @@ const {
 } = Variables.Breakpoint
 
 const StyledReactModal = styled(ReactModalAdapter)`
+  word-break: break-word;
   .modal-overlay {
     background-color: ${Color(Variables.Color.n800).alpha(0.45).toString()};
 
