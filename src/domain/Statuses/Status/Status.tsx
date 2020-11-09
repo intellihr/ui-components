@@ -16,7 +16,7 @@ interface IStatusProps {
   /** What style variant of status dot to display */
   variant: StatusDotVariants
   /** The margins around the component */
-  margins?: Props.Margin
+  margins?: Props.IMargins
   /** label of the status */
   label: string
   /** Size of the text label on status */
