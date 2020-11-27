@@ -148,6 +148,7 @@ const StyledExtraContent = styled.div`
   height: auto;
   max-height: 0;
   overflow: hidden;
+  overflow-y: auto;
   transition: max-height .5s;
   ${cardCollpaseAnimation}
   border: 1px solid ${Variables.Color.n250};
