@@ -66,7 +66,7 @@ const TimelineWrapper = styled.div`
 `
 
 const TimelineEventWrapper = styled.div<ITimelineEventWrapperProps>`
-  margin-left: 48px;
+  margin-left: 32px;
   margin-bottom: ${spacingForEventSpacing}px;
   position: relative;
 
