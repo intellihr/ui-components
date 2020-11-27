@@ -44,14 +44,13 @@ function offsetForMarker (props: ITimelineTitleProps): any {
 
   return css`
     left: ${-24 - radius}px;
-    top: calc(50% - ${radius}px);
+    top: 4px;
   `
 }
 
 const TimelineEventTitle = styled.div<ITimelineTitleProps>`
   line-height: 1;
   position: relative;
-  white-space: nowrap; // Title will break line styling if wrapped
   width: 100%;
 
   ${(props) => props.markerColor !== 'transparent' && css`
