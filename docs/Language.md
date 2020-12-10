@@ -13,6 +13,10 @@ The following guidelines for writing copy are intended to create a consistent st
     * **Do**:  Nice! You've completed all of your outstanding tasks.
     * **Don't**: Task completed successfully. All outstanding tasks have been completed.
 
+* **Use contractions** to sound more natural
+    * **Do**: You can't delete an active goal
+    * **Don't**: You cannot delete an active goal
+
 * **When to use 'My' and 'Your'**
     * **You/Your**: When asking questions, giving instructions, or describing things to the user. Imagine writing from the perspective of a personal assistant.
     * **Me/My**: When the user is interacting with the product on things like buttons- ONLY if absolutely necessary for clarity. _First person is not preferred._
@@ -34,23 +38,23 @@ The following guidelines for writing copy are intended to create a consistent st
     * **Don't**: Use the word `new` on creation actions. It is implied.
 
 ## Capitalization and Punctuation
-* **Use Title Case for buttons, page titles, menu items, and labels** - most words are capitalized
+* **Use Title Case for buttons, page titles, menu items, and labels** most words are capitalized
+    * **Example**: Expected Start/End Date
     * **Example**: Set a Goal
-    * **Do Capitalize**: The first letter of nouns, adjectives, verbs, adverbs, and pronouns
-    * **Do Capitalize**: The first and last words of the text element
-    * **Do Capitalize**: The second word of a hyphenated compound unless it is an article or preposition (for example: “Quick-Search Options” and “Add-on Choices”).
-    * **Don't Capitalize**: Articles (“a,” “an,” “the”) or prepositions with fewer than five letters (“to,” “on,” “at,” “by,” “from”) unless they’re the first or last words of the text element.
+    * **Example**: Check-in Now
+    * **Example**: Create a Self-Service Action Tile
+    * **Do**: Capitalize all words except articles (“a,” “an,” “the”) and short prepositions (“to,” “on,” “at,” “by,” “from”) which should only be capitalized if they are the first or last word (eg: 'A Goal')
 
-* **Use Sentence Case for descriptions, help text, and anything conversational** - most words are lowercase
+* **Use Sentence Case for descriptions, help text, and anything conversational** most words are lowercase
     * **Example**: You haven't completed any training in the last quarter.
     * **Do**: Only capitalize the first word of the text element, as well as any proper nouns.
 
-* **Explain acronyms at the first instance on the page** - when using acronyms
+* **Explain acronyms at the first instance on the page** when using acronyms
     * **Example**: Performance Improvement Plan (PIP)
 
 * **Use serial (Oxford) commas** for clarity in lists
     * **Do**: The Performance Improvement page features all of your skills, goals, and training records
-    * **Don't**: The Performance Improvement page features all of your skills, goals, and training records
+    * **Don't**: The Performance Improvement page features all of your skills, goals and training records
 
 * **Numbers should always be digits** to make text easier to scan
     * **Do**: You have 27 outstanding tasks
