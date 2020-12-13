@@ -49,8 +49,17 @@
     .Select-control {
       border: 1px solid $n400;
       cursor: pointer;
+      height: 39px;
       margin-bottom: 1rem;
       transition: border-color .3s ease-in-out, background-color .3s ease;
+
+      .Select-multi-value-wrapper {
+        height: 37px;
+
+        .Select-value-label {
+          vertical-align: middle;
+        }
+      }
 
       &:hover {
         background-color: $n200;
@@ -102,7 +111,7 @@
 
     &.Select--multi {
       .Select-control {
-        height: 40px;
+        height: 39px;
       }
 
       .Select-placeholder {
