@@ -59,6 +59,12 @@ The following guidelines for writing copy are intended to create a consistent st
 * **Numbers should always be digits** to make text easier to scan
     * **Do**: You have 27 outstanding tasks
     * **Don't**: You have twenty-seven outstanding tasks
+    
+* **Plurals should always be context sensitive** 
+    * **Do**: You have 1 task remaining
+    * **Do**: You have 5 tasks remaining
+    * **Don't**: You have 1 task(s) remaining
+    * **Don't**: You have 5 task(s) remaining
 
 ## References
 Many of these guidelines have been lifted from Google and Firefox's design standards.
