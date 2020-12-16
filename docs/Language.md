@@ -10,18 +10,27 @@ The following guidelines for writing copy are intended to create a consistent st
     * **Don't**: Diary Notes
 
 * **Use a friendly tone and avoid niceties** to appear more conversational
-    * **Do**: Nice! You've completed all of your outstanding tasks.
-    * **Don't**: Task completed successfully. All outstanding tasks have been completed.
-    * **Do**: All done. The job end date has been finalized.
-    * **Don't**: Job end date has successfully been finalized.
-    * **Do**: Exciting! Your new starter has been created.
-    * **Don't**: Person successfully created.
-    * **Do**: All set. John Wick's job record is ready to go.
-    * **Don't**: Job successfully created.
-    * **Do**: 8 forms have been scheduled. We'll automatically email the recipients when it's time.
-    * **Don't**: Successfully scheduled 8 forms.
-    * **Do**: Goal Template has been enabled.
-    * **Don't**: Goal Template has been enabled successfully.
+    * Toasts
+       * **Do**: All done. The job end date has been finalized.
+       * **Don't**: Job end date has successfully been finalized.
+       * **Do**: Exciting! Your new starter has been created.
+       * **Don't**: Person successfully created.
+       * **Do**: All set. John Wick's job record is ready to go.
+       * **Don't**: Job successfully created.
+       * **Do**: 8 forms have been scheduled. We'll automatically email the recipients when it's time.
+       * **Don't**: Successfully scheduled 8 forms.
+       * **Do**: Goal Template has been enabled.
+       * **Don't**: Goal Template has been enabled successfully.
+       * **Do**: Your changes have been saved.
+       * **Do**: Your changes to John Wick have been saved.
+       * **Don't**: Person successfully updated.
+       * **Do**: Thanks! Your answers have been saved.
+       * **Don't**: Task completed successfully.
+    * Empty State
+       * **Do**: Great! You've completed all of your outstanding tasks.
+       * **Don't**: No outstanding tasks.
+       * **Do**: We couldn't find any results matching your search terms.
+       * **Don't**: No results found.
 
 * **Use contractions** to sound more natural
     * **Do**: You can't delete an active goal
