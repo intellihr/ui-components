@@ -61,6 +61,10 @@ module.exports = {
       sectionDepth: 2,
       sections: [
         {
+          name: 'Language and Copy',
+          content: 'docs/Language.md'
+        },
+        {
           name: 'Content Page',
           content: 'docs/ContentPage.md'
         },
