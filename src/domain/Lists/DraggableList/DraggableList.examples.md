@@ -1,5 +1,13 @@
 #### Draggable List
 
+DraggableList can work as both a standalone component or within a ReduxForm
+
+`onChange` returns the source and destination indexes for you to handle setting the state once the drag ends.
+
+When using ReduxForm's FieldArray, simply pass the `fields.move` to the `onChange` and it will handle the state management for you.
+
+_setItems_ is deprecated and should no longer be used.
+
 ```jsx
 initialState = {
     items: [
@@ -10,28 +18,19 @@ initialState = {
   ]
 };
 
-/*
-  useState Hooks version - this is ideally what you would use, but we can't show this as an example in styleguidist
-
-  const [items, setItems] = useState(['lisa', 'needs', 'braces', 'dental plan!'])
-
-  <DraggableList setItems={setItems}>
-    {state.items.map(item => (
-        <div>
-          {item}
-        </div>
-    ))}
-  </DraggableList>
-*/
-
   <DraggableList
     droppableId='b4bb0ac5-0474-4760-8bbb-6bf92d60b2ba'
-    setItems={(itemsCallback) => {
-      return setState((prevState) => {
-        return { items: itemsCallback(prevState.items)}
+    onChange={(sourceIndex, destinationIndex) => {
+      setState((prevState) => {
+        // You can use something like npm array-move instead of the following code
+        const clonedItems = Array.from(prevState.items)
+        const element = clonedItems[sourceIndex]
+        clonedItems.splice(sourceIndex, 1)
+        clonedItems.splice(destinationIndex, 0, element)
+        return { items: clonedItems }
       })
-    }
-  }>
+    }}
+  >
     {state.items.map(item => (
         <div>
           {item}
@@ -80,12 +79,17 @@ initialState = {
 
     <DraggableList
       droppableId='b4bb0ac5-0474-4760-8bbb-6bf92d60b2ba'
-      setItems={(itemsCallback) => {
-        return setState((prevState) => {
-          return { items: itemsCallback(prevState.items)}
+      onChange={(sourceIndex, destinationIndex) => {
+        setState((prevState) => {
+          // You can use something like npm array-move instead of the following code
+          const clonedItems = Array.from(prevState.items)
+          const element = clonedItems[sourceIndex]
+          clonedItems.splice(sourceIndex, 1)
+          clonedItems.splice(destinationIndex, 0, element)
+          return { items: clonedItems }
         })
-      }
-    }>
+      }}
+    >
       {state.items.map((item, index) => (
           <div>
             {item}
@@ -135,12 +139,17 @@ initialState = {
 
   <DraggableList
     droppableId='b4bb0ac5-0474-4760-8bbb-6bf92d60b2ba'
-    setItems={(itemsCallback) => {
-      return setState((prevState) => {
-        return { items: itemsCallback(prevState.items)}
+    onChange={(sourceIndex, destinationIndex) => {
+      setState((prevState) => {
+        // You can use something like npm array-move instead of the following code
+        const clonedItems = Array.from(prevState.items)
+        const element = clonedItems[sourceIndex]
+        clonedItems.splice(sourceIndex, 1)
+        clonedItems.splice(destinationIndex, 0, element)
+        return { items: clonedItems }
       })
-    }
-  }>
+    }}
+  >
     {state.items.map((item, index) => (
         <RadioSet
             key={item.id}

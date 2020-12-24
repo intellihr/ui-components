@@ -12,8 +12,10 @@ import { StyledDraggableList, StyledListArea, StyledListItem } from './style'
 interface IDraggableListProps<T> {
   /** Droppable area id - this allows us to have more than one per page */
   droppableId: string
+  /** DEPRECATED // useState hook to update the array of items when they have been re-arranged */
+  setItems?: React.Dispatch<React.SetStateAction<T[]>>
   /** useState hook to update the array of items when they have been re-arranged */
-  setItems: React.Dispatch<React.SetStateAction<T[]>>
+  onChange?: (sourceIndex: number, destinationIndex: number) => void
   /** An array of ReactElements that should represent the array of items */
   children: React.ReactElement[]
   /** The margins around the component */
@@ -22,19 +24,25 @@ interface IDraggableListProps<T> {
   componentContext?: string
 }
 
-const DraggableList = <T extends {}> ({ droppableId, setItems, children, margins, componentContext }: IDraggableListProps<T>) => {
+const DraggableList = <T extends {}> ({ droppableId, onChange, setItems, children, margins, componentContext }: IDraggableListProps<T>) => {
   const onDragEnd = (result: DropResult) => {
     if (!result.destination) {
       return
     }
     const { source, destination } = result
 
-    setItems((previousItems) => {
-      const newItems = [...previousItems]
-      const [removed] = newItems.splice(source.index, 1)
-      newItems.splice(destination.index, 0, removed)
-      return newItems
-    })
+    if (onChange) {
+      onChange(source.index, destination.index)
+    }
+
+    if (setItems) {
+      setItems((previousItems) => {
+        const newItems = [...previousItems]
+        const [removed] = newItems.splice(source.index, 1)
+        newItems.splice(destination.index, 0, removed)
+        return newItems
+      })
+    }
   }
 
   return (
