@@ -2,7 +2,6 @@ Pages with form or forms (wizard) are considered as form page
 
 Form page should use `Page` with `form` as `layoutType`
 
-![page layout type](./image/Page.png)
 ![form page](./image/FormPage.png)
 
 ### Breadcrumb Group

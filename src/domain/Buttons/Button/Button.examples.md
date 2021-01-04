@@ -324,6 +324,12 @@ import { FontAwesomeIcon } from '@Domain/Icons';
       >
         primary-hollow
       </Button>
+      <Button
+        icon={<FontAwesomeIcon type='solid' icon='star' />}
+        type='primary-hollow'
+        iconAlignment='no'
+        onClick={() => alert('primary-hollow')}
+      />
     </ButtonGroup>
   </div>
   <div>
