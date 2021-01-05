@@ -15,6 +15,30 @@ describe('<Record />', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
+  it(`should render a label below Record component`, () => {
+    const wrapper = mount(
+      <Record
+        name='Position Title'
+        variant={Record.Variant.LabelBelow}
+      >
+        Chief Executive Officer
+      </Record>
+    )
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it(`should render a label right Record component`, () => {
+    const wrapper = mount(
+      <Record
+        name='Position Title'
+        variant={Record.Variant.LabelRight}
+      >
+        Chief Executive Officer
+      </Record>
+    )
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it(`should render a Record component without children`, () => {
     const wrapper = mount(
       <Record

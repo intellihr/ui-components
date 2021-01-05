@@ -1,10 +1,32 @@
-#### Basic Record
+#### Default Record - Label Above
 
 ```jsx
   <Record
     name='Position Title'
   >
     Chief Executive Officer
+  </Record>
+```
+
+#### Label Below Record
+
+```jsx
+  <Record
+    name='Hours'
+    variant={Record.Variant.LabelBelow}
+  >
+    10.5
+  </Record>
+```
+
+#### Label Right Record
+
+```jsx
+  <Record
+    name='Instances'
+    variant={Record.Variant.LabelRight}
+  >
+    8
   </Record>
 ```
 

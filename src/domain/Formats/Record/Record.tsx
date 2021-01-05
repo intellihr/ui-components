@@ -2,10 +2,10 @@ import isNumber from 'lodash/isNumber'
 import isString from 'lodash/isString'
 import React from 'react'
 
-import { Props, Variables } from '../../../common'
-import { ITooltipPopoverProps, TooltipPopover } from '../../Popovers/TooltipPopover'
-import { Text } from '../../Typographies/Text'
-import { FieldLabelWrapper, RecordWrapper } from './style'
+import {Props, Variables} from '../../../common'
+import {ITooltipPopoverProps, TooltipPopover} from '../../Popovers/TooltipPopover'
+import {Text} from '../../Typographies/Text'
+import {FieldLabelWrapper, RecordVariant, RecordWrapper} from './style'
 
 interface IRecordProps {
   /** Label text */
@@ -20,11 +20,15 @@ interface IRecordProps {
   tooltipProps?: ITooltipPopoverProps
   /** Margins */
   margins?: Props.IMargins
+  /** What style variant of record to display */
+  variant?: RecordVariant
 }
 
 class Record extends React.PureComponent <IRecordProps> {
+  public static Variant = RecordVariant
   public static defaultProps: Partial<IRecordProps> = {
-    noChildrenText: 'Not Provided'
+    noChildrenText: 'Not Provided',
+    variant: RecordVariant.LabelAbove
   }
 
   get formattedChildren (): JSX.Element[] | JSX.Element | null | undefined {
@@ -61,13 +65,15 @@ class Record extends React.PureComponent <IRecordProps> {
   get label (): JSX.Element {
     const {
       name,
-      componentContext
+      componentContext,
+      variant
     } = this.props
 
     return (
       <FieldLabelWrapper
         data-component-type={Props.ComponentType.RecordName}
         data-component-context={componentContext}
+        variant={variant}
       >
         <Text
           type={Props.TypographyType.Small}
@@ -85,7 +91,8 @@ class Record extends React.PureComponent <IRecordProps> {
   public render (): JSX.Element {
     const {
       componentContext,
-      margins
+      margins,
+      variant
     } = this.props
 
     return (
@@ -93,9 +100,10 @@ class Record extends React.PureComponent <IRecordProps> {
         data-component-type={Props.ComponentType.Record}
         data-component-context={componentContext}
         margins={margins}
+        variant={variant}
       >
-        {this.label}
         {this.formattedChildren}
+        {this.label}
       </RecordWrapper>
     )
   }

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Record /> should render a Record and no Tooltip with only a custom tooltip 1`] = `
-.c1 {
+.c2 {
   font-size: 14px;
   line-height: 20px;
   -webkit-letter-spacing: normal;
@@ -12,12 +12,22 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
   font-weight: 400;
 }
 
-.c0 {
+.c1 {
   margin-bottom: 4px;
 }
 
-.c0 .label-component {
+.c1 .label-component {
   padding-right: .25rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
 }
 
 <Record
@@ -28,9 +38,11 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
       "toggleComponent": [Function],
     }
   }
+  variant="labelAbove"
 >
   <styled.div
     data-component-type="record"
+    variant="labelAbove"
   >
     <StyledComponent
       data-component-type="record"
@@ -41,8 +53,12 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
           "componentStyle": ComponentStyle {
             "componentId": "sc-gqjmRU",
             "isStatic": false,
-            "lastClassName": "iTpbJv",
+            "lastClassName": "c0",
             "rules": Array [
+              "
+  display: flex;
+  ",
+              [Function],
               "
   ",
               [Function],
@@ -62,13 +78,20 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
         }
       }
       forwardedRef={null}
+      variant="labelAbove"
     >
       <div
-        className=""
+        className="c0"
         data-component-type="record"
       >
+        <p
+          key=".0"
+        >
+          Chief Executive Officer
+        </p>
         <styled.div
           data-component-type="record_name"
+          variant="labelAbove"
         >
           <StyledComponent
             data-component-type="record_name"
@@ -79,13 +102,16 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-gZMcBi",
                   "isStatic": false,
-                  "lastClassName": "c0",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
-  margin-bottom: 4px;
   .label-component {
     padding-right: .25rem;
   }
+
+  ",
+                    [Function],
+                    "
 ",
                   ],
                 },
@@ -101,9 +127,10 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
               }
             }
             forwardedRef={null}
+            variant="labelAbove"
           >
             <div
-              className="c0"
+              className="c1"
               data-component-type="record_name"
             >
               <Text
@@ -133,7 +160,7 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
                         "componentStyle": ComponentStyle {
                           "componentId": "sc-dnqmqq",
                           "isStatic": false,
-                          "lastClassName": "c1",
+                          "lastClassName": "c2",
                           "rules": Array [
                             "
 
@@ -187,7 +214,7 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
                     textType="small"
                   >
                     <span
-                      className="c1 label-component"
+                      className="c2 label-component"
                       color="#424F5C"
                       data-component-type="text"
                     >
@@ -199,11 +226,6 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
             </div>
           </StyledComponent>
         </styled.div>
-        <p
-          key=".0"
-        >
-          Chief Executive Officer
-        </p>
       </div>
     </StyledComponent>
   </styled.div>
@@ -211,11 +233,11 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
 `;
 
 exports[`<Record /> should render a Record and tooltip with a custom tooltip and tooltipContent 1`] = `
-.c2 {
+.c3 {
   cursor: help;
 }
 
-.c1 {
+.c2 {
   font-size: 14px;
   line-height: 20px;
   -webkit-letter-spacing: normal;
@@ -226,12 +248,22 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
   font-weight: 400;
 }
 
-.c0 {
+.c1 {
   margin-bottom: 4px;
 }
 
-.c0 .label-component {
+.c1 .label-component {
   padding-right: .25rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
 }
 
 <Record
@@ -243,9 +275,11 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
       "toggleComponent": [Function],
     }
   }
+  variant="labelAbove"
 >
   <styled.div
     data-component-type="record"
+    variant="labelAbove"
   >
     <StyledComponent
       data-component-type="record"
@@ -256,8 +290,12 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
           "componentStyle": ComponentStyle {
             "componentId": "sc-gqjmRU",
             "isStatic": false,
-            "lastClassName": "iTpbJv",
+            "lastClassName": "c0",
             "rules": Array [
+              "
+  display: flex;
+  ",
+              [Function],
               "
   ",
               [Function],
@@ -277,13 +315,20 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
         }
       }
       forwardedRef={null}
+      variant="labelAbove"
     >
       <div
-        className=""
+        className="c0"
         data-component-type="record"
       >
+        <p
+          key=".0"
+        >
+          Chief Executive Officer
+        </p>
         <styled.div
           data-component-type="record_name"
+          variant="labelAbove"
         >
           <StyledComponent
             data-component-type="record_name"
@@ -294,13 +339,16 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-gZMcBi",
                   "isStatic": false,
-                  "lastClassName": "c0",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
-  margin-bottom: 4px;
   .label-component {
     padding-right: .25rem;
   }
+
+  ",
+                    [Function],
+                    "
 ",
                   ],
                 },
@@ -316,9 +364,10 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
               }
             }
             forwardedRef={null}
+            variant="labelAbove"
           >
             <div
-              className="c0"
+              className="c1"
               data-component-type="record_name"
             >
               <Text
@@ -348,7 +397,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
                         "componentStyle": ComponentStyle {
                           "componentId": "sc-dnqmqq",
                           "isStatic": false,
-                          "lastClassName": "c1",
+                          "lastClassName": "c2",
                           "rules": Array [
                             "
 
@@ -402,7 +451,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
                     textType="small"
                   >
                     <span
-                      className="c1 label-component"
+                      className="c2 label-component"
                       color="#424F5C"
                       data-component-type="text"
                     >
@@ -425,7 +474,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
                         "componentStyle": ComponentStyle {
                           "componentId": "sc-ifAKCX",
                           "isStatic": false,
-                          "lastClassName": "c2",
+                          "lastClassName": "c3",
                           "rules": Array [
                             "
   cursor: ",
@@ -448,7 +497,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
                     forwardedRef={null}
                   >
                     <span
-                      className="c2"
+                      className="c3"
                     >
                       <span
                         aria-expanded={false}
@@ -500,11 +549,6 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
             </div>
           </StyledComponent>
         </styled.div>
-        <p
-          key=".0"
-        >
-          Chief Executive Officer
-        </p>
       </div>
     </StyledComponent>
   </styled.div>
@@ -512,7 +556,7 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
 `;
 
 exports[`<Record /> should render a Record component without children 1`] = `
-.c1 {
+.c3 {
   font-size: 14px;
   line-height: 20px;
   -webkit-letter-spacing: normal;
@@ -523,7 +567,7 @@ exports[`<Record /> should render a Record component without children 1`] = `
   font-weight: 400;
 }
 
-.c2 {
+.c1 {
   font-size: 16px;
   line-height: 24px;
   -webkit-letter-spacing: normal;
@@ -535,20 +579,32 @@ exports[`<Record /> should render a Record component without children 1`] = `
   display: block;
 }
 
-.c0 {
+.c2 {
   margin-bottom: 4px;
 }
 
-.c0 .label-component {
+.c2 .label-component {
   padding-right: .25rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
 }
 
 <Record
   name="Position Title"
   noChildrenText="No Position Title"
+  variant="labelAbove"
 >
   <styled.div
     data-component-type="record"
+    variant="labelAbove"
   >
     <StyledComponent
       data-component-type="record"
@@ -559,8 +615,12 @@ exports[`<Record /> should render a Record component without children 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-gqjmRU",
             "isStatic": false,
-            "lastClassName": "iTpbJv",
+            "lastClassName": "c0",
             "rules": Array [
+              "
+  display: flex;
+  ",
+              [Function],
               "
   ",
               [Function],
@@ -580,143 +640,12 @@ exports[`<Record /> should render a Record component without children 1`] = `
         }
       }
       forwardedRef={null}
+      variant="labelAbove"
     >
       <div
-        className=""
+        className="c0"
         data-component-type="record"
       >
-        <styled.div
-          data-component-type="record_name"
-        >
-          <StyledComponent
-            data-component-type="record_name"
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-gZMcBi",
-                  "isStatic": false,
-                  "lastClassName": "c0",
-                  "rules": Array [
-                    "
-  margin-bottom: 4px;
-  .label-component {
-    padding-right: .25rem;
-  }
-",
-                  ],
-                },
-                "displayName": "styled.div",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-gZMcBi",
-                "target": "div",
-                "toString": [Function],
-                "usesTheme": false,
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-          >
-            <div
-              className="c0"
-              data-component-type="record_name"
-            >
-              <Text
-                className="label-component"
-                color="#424F5C"
-                isInline={true}
-                tag="span"
-                type="small"
-              >
-                <styled.span
-                  as="span"
-                  className="label-component"
-                  color="#424F5C"
-                  data-component-type="text"
-                  isInline={true}
-                  textType="small"
-                >
-                  <StyledComponent
-                    as="span"
-                    className="label-component"
-                    color="#424F5C"
-                    data-component-type="text"
-                    forwardedComponent={
-                      Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "attrs": Array [],
-                        "componentStyle": ComponentStyle {
-                          "componentId": "sc-dnqmqq",
-                          "isStatic": false,
-                          "lastClassName": "c2",
-                          "rules": Array [
-                            "
-
-  ",
-                            [Function],
-                            "
-
-  ",
-                            [Function],
-                            "
-
-  ",
-                            [Function],
-                            "
-
-  ",
-                            [Function],
-                            "
-
-  ",
-                            [Function],
-                            "
-
-  ",
-                            [Function],
-                            "
-
-  ",
-                            [Function],
-                            "
-
-  ",
-                            [Function],
-                            "
-",
-                          ],
-                        },
-                        "displayName": "styled.span",
-                        "foldedComponentIds": Array [],
-                        "render": [Function],
-                        "styledComponentId": "sc-dnqmqq",
-                        "target": "span",
-                        "toString": [Function],
-                        "usesTheme": false,
-                        "warnTooManyClasses": [Function],
-                        "withComponent": [Function],
-                      }
-                    }
-                    forwardedRef={null}
-                    isInline={true}
-                    textType="small"
-                  >
-                    <span
-                      className="c1 label-component"
-                      color="#424F5C"
-                      data-component-type="text"
-                    >
-                      Position Title
-                    </span>
-                  </StyledComponent>
-                </styled.span>
-              </Text>
-            </div>
-          </StyledComponent>
-        </styled.div>
         <Text
           color="#8FA1B3"
           isInline={false}
@@ -741,7 +670,7 @@ exports[`<Record /> should render a Record component without children 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-dnqmqq",
                     "isStatic": false,
-                    "lastClassName": "c2",
+                    "lastClassName": "c3",
                     "rules": Array [
                       "
 
@@ -795,7 +724,7 @@ exports[`<Record /> should render a Record component without children 1`] = `
               textType="body"
             >
               <span
-                className="c2"
+                className="c1"
                 color="#8FA1B3"
                 data-component-type="text"
               >
@@ -804,87 +733,9 @@ exports[`<Record /> should render a Record component without children 1`] = `
             </StyledComponent>
           </styled.span>
         </Text>
-      </div>
-    </StyledComponent>
-  </styled.div>
-</Record>
-`;
-
-exports[`<Record /> should render a Record component, creating a Text child with the provided number 1`] = `
-.c1 {
-  font-size: 14px;
-  line-height: 20px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #424F5C;
-  font-weight: 400;
-}
-
-.c2 {
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #262D33;
-  font-weight: 400;
-}
-
-.c0 {
-  margin-bottom: 4px;
-}
-
-.c0 .label-component {
-  padding-right: .25rem;
-}
-
-<Record
-  name="FTE"
-  noChildrenText="Not Provided"
->
-  <styled.div
-    data-component-type="record"
-  >
-    <StyledComponent
-      data-component-type="record"
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-gqjmRU",
-            "isStatic": false,
-            "lastClassName": "iTpbJv",
-            "rules": Array [
-              "
-  ",
-              [Function],
-              "
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-gqjmRU",
-          "target": "div",
-          "toString": [Function],
-          "usesTheme": false,
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-    >
-      <div
-        className=""
-        data-component-type="record"
-      >
         <styled.div
           data-component-type="record_name"
+          variant="labelAbove"
         >
           <StyledComponent
             data-component-type="record_name"
@@ -895,13 +746,16 @@ exports[`<Record /> should render a Record component, creating a Text child with
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-gZMcBi",
                   "isStatic": false,
-                  "lastClassName": "c0",
+                  "lastClassName": "c2",
                   "rules": Array [
                     "
-  margin-bottom: 4px;
   .label-component {
     padding-right: .25rem;
   }
+
+  ",
+                    [Function],
+                    "
 ",
                   ],
                 },
@@ -917,9 +771,10 @@ exports[`<Record /> should render a Record component, creating a Text child with
               }
             }
             forwardedRef={null}
+            variant="labelAbove"
           >
             <div
-              className="c0"
+              className="c2"
               data-component-type="record_name"
             >
               <Text
@@ -949,7 +804,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                         "componentStyle": ComponentStyle {
                           "componentId": "sc-dnqmqq",
                           "isStatic": false,
-                          "lastClassName": "c2",
+                          "lastClassName": "c3",
                           "rules": Array [
                             "
 
@@ -1003,7 +858,328 @@ exports[`<Record /> should render a Record component, creating a Text child with
                     textType="small"
                   >
                     <span
-                      className="c1 label-component"
+                      className="c3 label-component"
+                      color="#424F5C"
+                      data-component-type="text"
+                    >
+                      Position Title
+                    </span>
+                  </StyledComponent>
+                </styled.span>
+              </Text>
+            </div>
+          </StyledComponent>
+        </styled.div>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</Record>
+`;
+
+exports[`<Record /> should render a Record component, creating a Text child with the provided number 1`] = `
+.c1 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #262D33;
+  font-weight: 400;
+}
+
+.c3 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
+.c2 {
+  margin-bottom: 4px;
+}
+
+.c2 .label-component {
+  padding-right: .25rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+<Record
+  name="FTE"
+  noChildrenText="Not Provided"
+  variant="labelAbove"
+>
+  <styled.div
+    data-component-type="record"
+    variant="labelAbove"
+  >
+    <StyledComponent
+      data-component-type="record"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-gqjmRU",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  display: flex;
+  ",
+              [Function],
+              "
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-gqjmRU",
+          "target": "div",
+          "toString": [Function],
+          "usesTheme": false,
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      variant="labelAbove"
+    >
+      <div
+        className="c0"
+        data-component-type="record"
+      >
+        <Text
+          color="#262D33"
+          isInline={true}
+          key=".0"
+          tag="span"
+          type="body"
+        >
+          <styled.span
+            as="span"
+            color="#262D33"
+            data-component-type="text"
+            isInline={true}
+            textType="body"
+          >
+            <StyledComponent
+              as="span"
+              color="#262D33"
+              data-component-type="text"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-dnqmqq",
+                    "isStatic": false,
+                    "lastClassName": "c3",
+                    "rules": Array [
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-dnqmqq",
+                  "target": "span",
+                  "toString": [Function],
+                  "usesTheme": false,
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              isInline={true}
+              textType="body"
+            >
+              <span
+                className="c1"
+                color="#262D33"
+                data-component-type="text"
+              >
+                1.000
+              </span>
+            </StyledComponent>
+          </styled.span>
+        </Text>
+        <styled.div
+          data-component-type="record_name"
+          variant="labelAbove"
+        >
+          <StyledComponent
+            data-component-type="record_name"
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-gZMcBi",
+                  "isStatic": false,
+                  "lastClassName": "c2",
+                  "rules": Array [
+                    "
+  .label-component {
+    padding-right: .25rem;
+  }
+
+  ",
+                    [Function],
+                    "
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-gZMcBi",
+                "target": "div",
+                "toString": [Function],
+                "usesTheme": false,
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+            variant="labelAbove"
+          >
+            <div
+              className="c2"
+              data-component-type="record_name"
+            >
+              <Text
+                className="label-component"
+                color="#424F5C"
+                isInline={true}
+                tag="span"
+                type="small"
+              >
+                <styled.span
+                  as="span"
+                  className="label-component"
+                  color="#424F5C"
+                  data-component-type="text"
+                  isInline={true}
+                  textType="small"
+                >
+                  <StyledComponent
+                    as="span"
+                    className="label-component"
+                    color="#424F5C"
+                    data-component-type="text"
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-dnqmqq",
+                          "isStatic": false,
+                          "lastClassName": "c3",
+                          "rules": Array [
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+",
+                          ],
+                        },
+                        "displayName": "styled.span",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-dnqmqq",
+                        "target": "span",
+                        "toString": [Function],
+                        "usesTheme": false,
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    isInline={true}
+                    textType="small"
+                  >
+                    <span
+                      className="c3 label-component"
                       color="#424F5C"
                       data-component-type="text"
                     >
@@ -1015,6 +1191,102 @@ exports[`<Record /> should render a Record component, creating a Text child with
             </div>
           </StyledComponent>
         </styled.div>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</Record>
+`;
+
+exports[`<Record /> should render a Record component, creating a Text child with the provided text 1`] = `
+.c1 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #262D33;
+  font-weight: 400;
+}
+
+.c3 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
+.c2 {
+  margin-bottom: 4px;
+}
+
+.c2 .label-component {
+  padding-right: .25rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+<Record
+  name="Position Title"
+  noChildrenText="Not Provided"
+  variant="labelAbove"
+>
+  <styled.div
+    data-component-type="record"
+    variant="labelAbove"
+  >
+    <StyledComponent
+      data-component-type="record"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-gqjmRU",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  display: flex;
+  ",
+              [Function],
+              "
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-gqjmRU",
+          "target": "div",
+          "toString": [Function],
+          "usesTheme": false,
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      variant="labelAbove"
+    >
+      <div
+        className="c0"
+        data-component-type="record"
+      >
         <Text
           color="#262D33"
           isInline={true}
@@ -1040,7 +1312,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-dnqmqq",
                     "isStatic": false,
-                    "lastClassName": "c2",
+                    "lastClassName": "c3",
                     "rules": Array [
                       "
 
@@ -1094,23 +1366,160 @@ exports[`<Record /> should render a Record component, creating a Text child with
               textType="body"
             >
               <span
-                className="c2"
+                className="c1"
                 color="#262D33"
                 data-component-type="text"
               >
-                1.000
+                Chief Executive Officer
               </span>
             </StyledComponent>
           </styled.span>
         </Text>
+        <styled.div
+          data-component-type="record_name"
+          variant="labelAbove"
+        >
+          <StyledComponent
+            data-component-type="record_name"
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-gZMcBi",
+                  "isStatic": false,
+                  "lastClassName": "c2",
+                  "rules": Array [
+                    "
+  .label-component {
+    padding-right: .25rem;
+  }
+
+  ",
+                    [Function],
+                    "
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-gZMcBi",
+                "target": "div",
+                "toString": [Function],
+                "usesTheme": false,
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+            variant="labelAbove"
+          >
+            <div
+              className="c2"
+              data-component-type="record_name"
+            >
+              <Text
+                className="label-component"
+                color="#424F5C"
+                isInline={true}
+                tag="span"
+                type="small"
+              >
+                <styled.span
+                  as="span"
+                  className="label-component"
+                  color="#424F5C"
+                  data-component-type="text"
+                  isInline={true}
+                  textType="small"
+                >
+                  <StyledComponent
+                    as="span"
+                    className="label-component"
+                    color="#424F5C"
+                    data-component-type="text"
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-dnqmqq",
+                          "isStatic": false,
+                          "lastClassName": "c3",
+                          "rules": Array [
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+",
+                          ],
+                        },
+                        "displayName": "styled.span",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-dnqmqq",
+                        "target": "span",
+                        "toString": [Function],
+                        "usesTheme": false,
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    isInline={true}
+                    textType="small"
+                  >
+                    <span
+                      className="c3 label-component"
+                      color="#424F5C"
+                      data-component-type="text"
+                    >
+                      Position Title
+                    </span>
+                  </StyledComponent>
+                </styled.span>
+              </Text>
+            </div>
+          </StyledComponent>
+        </styled.div>
       </div>
     </StyledComponent>
   </styled.div>
 </Record>
 `;
 
-exports[`<Record /> should render a Record component, creating a Text child with the provided text 1`] = `
-.c1 {
+exports[`<Record /> should render a Record component, with the provided component child 1`] = `
+.c2 {
   font-size: 14px;
   line-height: 20px;
   -webkit-letter-spacing: normal;
@@ -1121,31 +1530,32 @@ exports[`<Record /> should render a Record component, creating a Text child with
   font-weight: 400;
 }
 
-.c2 {
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #262D33;
-  font-weight: 400;
-}
-
-.c0 {
+.c1 {
   margin-bottom: 4px;
 }
 
-.c0 .label-component {
+.c1 .label-component {
   padding-right: .25rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
 }
 
 <Record
   name="Position Title"
   noChildrenText="Not Provided"
+  variant="labelAbove"
 >
   <styled.div
     data-component-type="record"
+    variant="labelAbove"
   >
     <StyledComponent
       data-component-type="record"
@@ -1156,8 +1566,12 @@ exports[`<Record /> should render a Record component, creating a Text child with
           "componentStyle": ComponentStyle {
             "componentId": "sc-gqjmRU",
             "isStatic": false,
-            "lastClassName": "iTpbJv",
+            "lastClassName": "c0",
             "rules": Array [
+              "
+  display: flex;
+  ",
+              [Function],
               "
   ",
               [Function],
@@ -1177,13 +1591,20 @@ exports[`<Record /> should render a Record component, creating a Text child with
         }
       }
       forwardedRef={null}
+      variant="labelAbove"
     >
       <div
-        className=""
+        className="c0"
         data-component-type="record"
       >
+        <p
+          key=".0"
+        >
+          Chief Executive Officer
+        </p>
         <styled.div
           data-component-type="record_name"
+          variant="labelAbove"
         >
           <StyledComponent
             data-component-type="record_name"
@@ -1194,13 +1615,16 @@ exports[`<Record /> should render a Record component, creating a Text child with
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-gZMcBi",
                   "isStatic": false,
-                  "lastClassName": "c0",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
-  margin-bottom: 4px;
   .label-component {
     padding-right: .25rem;
   }
+
+  ",
+                    [Function],
+                    "
 ",
                   ],
                 },
@@ -1216,9 +1640,10 @@ exports[`<Record /> should render a Record component, creating a Text child with
               }
             }
             forwardedRef={null}
+            variant="labelAbove"
           >
             <div
-              className="c0"
+              className="c1"
               data-component-type="record_name"
             >
               <Text
@@ -1302,7 +1727,7 @@ exports[`<Record /> should render a Record component, creating a Text child with
                     textType="small"
                   >
                     <span
-                      className="c1 label-component"
+                      className="c2 label-component"
                       color="#424F5C"
                       data-component-type="text"
                     >
@@ -1314,299 +1739,6 @@ exports[`<Record /> should render a Record component, creating a Text child with
             </div>
           </StyledComponent>
         </styled.div>
-        <Text
-          color="#262D33"
-          isInline={true}
-          key=".0"
-          tag="span"
-          type="body"
-        >
-          <styled.span
-            as="span"
-            color="#262D33"
-            data-component-type="text"
-            isInline={true}
-            textType="body"
-          >
-            <StyledComponent
-              as="span"
-              color="#262D33"
-              data-component-type="text"
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-dnqmqq",
-                    "isStatic": false,
-                    "lastClassName": "c2",
-                    "rules": Array [
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-",
-                    ],
-                  },
-                  "displayName": "styled.span",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "sc-dnqmqq",
-                  "target": "span",
-                  "toString": [Function],
-                  "usesTheme": false,
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-              isInline={true}
-              textType="body"
-            >
-              <span
-                className="c2"
-                color="#262D33"
-                data-component-type="text"
-              >
-                Chief Executive Officer
-              </span>
-            </StyledComponent>
-          </styled.span>
-        </Text>
-      </div>
-    </StyledComponent>
-  </styled.div>
-</Record>
-`;
-
-exports[`<Record /> should render a Record component, with the provided component child 1`] = `
-.c1 {
-  font-size: 14px;
-  line-height: 20px;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #424F5C;
-  font-weight: 400;
-}
-
-.c0 {
-  margin-bottom: 4px;
-}
-
-.c0 .label-component {
-  padding-right: .25rem;
-}
-
-<Record
-  name="Position Title"
-  noChildrenText="Not Provided"
->
-  <styled.div
-    data-component-type="record"
-  >
-    <StyledComponent
-      data-component-type="record"
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-gqjmRU",
-            "isStatic": false,
-            "lastClassName": "iTpbJv",
-            "rules": Array [
-              "
-  ",
-              [Function],
-              "
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-gqjmRU",
-          "target": "div",
-          "toString": [Function],
-          "usesTheme": false,
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-    >
-      <div
-        className=""
-        data-component-type="record"
-      >
-        <styled.div
-          data-component-type="record_name"
-        >
-          <StyledComponent
-            data-component-type="record_name"
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-gZMcBi",
-                  "isStatic": false,
-                  "lastClassName": "c0",
-                  "rules": Array [
-                    "
-  margin-bottom: 4px;
-  .label-component {
-    padding-right: .25rem;
-  }
-",
-                  ],
-                },
-                "displayName": "styled.div",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-gZMcBi",
-                "target": "div",
-                "toString": [Function],
-                "usesTheme": false,
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-          >
-            <div
-              className="c0"
-              data-component-type="record_name"
-            >
-              <Text
-                className="label-component"
-                color="#424F5C"
-                isInline={true}
-                tag="span"
-                type="small"
-              >
-                <styled.span
-                  as="span"
-                  className="label-component"
-                  color="#424F5C"
-                  data-component-type="text"
-                  isInline={true}
-                  textType="small"
-                >
-                  <StyledComponent
-                    as="span"
-                    className="label-component"
-                    color="#424F5C"
-                    data-component-type="text"
-                    forwardedComponent={
-                      Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "attrs": Array [],
-                        "componentStyle": ComponentStyle {
-                          "componentId": "sc-dnqmqq",
-                          "isStatic": false,
-                          "lastClassName": "c1",
-                          "rules": Array [
-                            "
-
-  ",
-                            [Function],
-                            "
-
-  ",
-                            [Function],
-                            "
-
-  ",
-                            [Function],
-                            "
-
-  ",
-                            [Function],
-                            "
-
-  ",
-                            [Function],
-                            "
-
-  ",
-                            [Function],
-                            "
-
-  ",
-                            [Function],
-                            "
-
-  ",
-                            [Function],
-                            "
-",
-                          ],
-                        },
-                        "displayName": "styled.span",
-                        "foldedComponentIds": Array [],
-                        "render": [Function],
-                        "styledComponentId": "sc-dnqmqq",
-                        "target": "span",
-                        "toString": [Function],
-                        "usesTheme": false,
-                        "warnTooManyClasses": [Function],
-                        "withComponent": [Function],
-                      }
-                    }
-                    forwardedRef={null}
-                    isInline={true}
-                    textType="small"
-                  >
-                    <span
-                      className="c1 label-component"
-                      color="#424F5C"
-                      data-component-type="text"
-                    >
-                      Position Title
-                    </span>
-                  </StyledComponent>
-                </styled.span>
-              </Text>
-            </div>
-          </StyledComponent>
-        </styled.div>
-        <p
-          key=".0"
-        >
-          Chief Executive Officer
-        </p>
       </div>
     </StyledComponent>
   </styled.div>
@@ -1614,7 +1746,7 @@ exports[`<Record /> should render a Record component, with the provided componen
 `;
 
 exports[`<Record /> should render a Record with a Tooltip 1`] = `
-.c3 {
+.c4 {
   display: inline-block;
   font-stretch: normal;
   --fa-primary-color: #2512B3;
@@ -1622,16 +1754,16 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
   color: #C5CED6;
 }
 
-.c3.icon {
+.c4.icon {
   text-align: center;
   font-size: 1rem;
 }
 
-.c2 {
+.c3 {
   cursor: help;
 }
 
-.c1 {
+.c2 {
   font-size: 14px;
   line-height: 20px;
   -webkit-letter-spacing: normal;
@@ -1642,21 +1774,33 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
   font-weight: 400;
 }
 
-.c0 {
+.c1 {
   margin-bottom: 4px;
 }
 
-.c0 .label-component {
+.c1 .label-component {
   padding-right: .25rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
 }
 
 <Record
   name="Position Title"
   noChildrenText="Not Provided"
   tooltipContent="a"
+  variant="labelAbove"
 >
   <styled.div
     data-component-type="record"
+    variant="labelAbove"
   >
     <StyledComponent
       data-component-type="record"
@@ -1667,8 +1811,12 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-gqjmRU",
             "isStatic": false,
-            "lastClassName": "iTpbJv",
+            "lastClassName": "c0",
             "rules": Array [
+              "
+  display: flex;
+  ",
+              [Function],
               "
   ",
               [Function],
@@ -1688,13 +1836,20 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
         }
       }
       forwardedRef={null}
+      variant="labelAbove"
     >
       <div
-        className=""
+        className="c0"
         data-component-type="record"
       >
+        <p
+          key=".0"
+        >
+          Chief Executive Officer
+        </p>
         <styled.div
           data-component-type="record_name"
+          variant="labelAbove"
         >
           <StyledComponent
             data-component-type="record_name"
@@ -1705,13 +1860,16 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-gZMcBi",
                   "isStatic": false,
-                  "lastClassName": "c0",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
-  margin-bottom: 4px;
   .label-component {
     padding-right: .25rem;
   }
+
+  ",
+                    [Function],
+                    "
 ",
                   ],
                 },
@@ -1727,9 +1885,10 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
               }
             }
             forwardedRef={null}
+            variant="labelAbove"
           >
             <div
-              className="c0"
+              className="c1"
               data-component-type="record_name"
             >
               <Text
@@ -1759,7 +1918,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                         "componentStyle": ComponentStyle {
                           "componentId": "sc-dnqmqq",
                           "isStatic": false,
-                          "lastClassName": "c1",
+                          "lastClassName": "c2",
                           "rules": Array [
                             "
 
@@ -1813,7 +1972,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                     textType="small"
                   >
                     <span
-                      className="c1 label-component"
+                      className="c2 label-component"
                       color="#424F5C"
                       data-component-type="text"
                     >
@@ -1836,7 +1995,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                         "componentStyle": ComponentStyle {
                           "componentId": "sc-ifAKCX",
                           "isStatic": false,
-                          "lastClassName": "c2",
+                          "lastClassName": "c3",
                           "rules": Array [
                             "
   cursor: ",
@@ -1859,7 +2018,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                     forwardedRef={null}
                   >
                     <span
-                      className="c2"
+                      className="c3"
                     >
                       <span
                         aria-expanded={false}
@@ -1897,7 +2056,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-htpNat",
                                       "isStatic": false,
-                                      "lastClassName": "c3",
+                                      "lastClassName": "c4",
                                       "rules": Array [
                                         "
   display: inline-block;
@@ -1966,7 +2125,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
                               >
                                 <i
                                   aria-hidden={true}
-                                  className="c3 icon fas fa-info-circle"
+                                  className="c4 icon fas fa-info-circle"
                                   color="#C5CED6"
                                   data-component-type="icon"
                                   size="medium"
@@ -2040,11 +2199,648 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
             </div>
           </StyledComponent>
         </styled.div>
-        <p
+      </div>
+    </StyledComponent>
+  </styled.div>
+</Record>
+`;
+
+exports[`<Record /> should render a label below Record component 1`] = `
+.c1 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #262D33;
+  font-weight: 400;
+}
+
+.c3 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
+.c2 {
+  margins: 0px;
+}
+
+.c2 .label-component {
+  padding-right: .25rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+<Record
+  name="Position Title"
+  noChildrenText="Not Provided"
+  variant="labelBelow"
+>
+  <styled.div
+    data-component-type="record"
+    variant="labelBelow"
+  >
+    <StyledComponent
+      data-component-type="record"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-gqjmRU",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  display: flex;
+  ",
+              [Function],
+              "
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-gqjmRU",
+          "target": "div",
+          "toString": [Function],
+          "usesTheme": false,
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      variant="labelBelow"
+    >
+      <div
+        className="c0"
+        data-component-type="record"
+      >
+        <Text
+          color="#262D33"
+          isInline={true}
           key=".0"
+          tag="span"
+          type="body"
         >
-          Chief Executive Officer
-        </p>
+          <styled.span
+            as="span"
+            color="#262D33"
+            data-component-type="text"
+            isInline={true}
+            textType="body"
+          >
+            <StyledComponent
+              as="span"
+              color="#262D33"
+              data-component-type="text"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-dnqmqq",
+                    "isStatic": false,
+                    "lastClassName": "c3",
+                    "rules": Array [
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-dnqmqq",
+                  "target": "span",
+                  "toString": [Function],
+                  "usesTheme": false,
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              isInline={true}
+              textType="body"
+            >
+              <span
+                className="c1"
+                color="#262D33"
+                data-component-type="text"
+              >
+                Chief Executive Officer
+              </span>
+            </StyledComponent>
+          </styled.span>
+        </Text>
+        <styled.div
+          data-component-type="record_name"
+          variant="labelBelow"
+        >
+          <StyledComponent
+            data-component-type="record_name"
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-gZMcBi",
+                  "isStatic": false,
+                  "lastClassName": "c2",
+                  "rules": Array [
+                    "
+  .label-component {
+    padding-right: .25rem;
+  }
+
+  ",
+                    [Function],
+                    "
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-gZMcBi",
+                "target": "div",
+                "toString": [Function],
+                "usesTheme": false,
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+            variant="labelBelow"
+          >
+            <div
+              className="c2"
+              data-component-type="record_name"
+            >
+              <Text
+                className="label-component"
+                color="#424F5C"
+                isInline={true}
+                tag="span"
+                type="small"
+              >
+                <styled.span
+                  as="span"
+                  className="label-component"
+                  color="#424F5C"
+                  data-component-type="text"
+                  isInline={true}
+                  textType="small"
+                >
+                  <StyledComponent
+                    as="span"
+                    className="label-component"
+                    color="#424F5C"
+                    data-component-type="text"
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-dnqmqq",
+                          "isStatic": false,
+                          "lastClassName": "c3",
+                          "rules": Array [
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+",
+                          ],
+                        },
+                        "displayName": "styled.span",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-dnqmqq",
+                        "target": "span",
+                        "toString": [Function],
+                        "usesTheme": false,
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    isInline={true}
+                    textType="small"
+                  >
+                    <span
+                      className="c3 label-component"
+                      color="#424F5C"
+                      data-component-type="text"
+                    >
+                      Position Title
+                    </span>
+                  </StyledComponent>
+                </styled.span>
+              </Text>
+            </div>
+          </StyledComponent>
+        </styled.div>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</Record>
+`;
+
+exports[`<Record /> should render a label right Record component 1`] = `
+.c1 {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #262D33;
+  font-weight: 400;
+}
+
+.c3 {
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #424F5C;
+  font-weight: 400;
+}
+
+.c2 {
+  margin-left: 8px;
+}
+
+.c2 .label-component {
+  padding-right: .25rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+<Record
+  name="Position Title"
+  noChildrenText="Not Provided"
+  variant="labelRight"
+>
+  <styled.div
+    data-component-type="record"
+    variant="labelRight"
+  >
+    <StyledComponent
+      data-component-type="record"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-gqjmRU",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  display: flex;
+  ",
+              [Function],
+              "
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-gqjmRU",
+          "target": "div",
+          "toString": [Function],
+          "usesTheme": false,
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      variant="labelRight"
+    >
+      <div
+        className="c0"
+        data-component-type="record"
+      >
+        <Text
+          color="#262D33"
+          isInline={true}
+          key=".0"
+          tag="span"
+          type="body"
+        >
+          <styled.span
+            as="span"
+            color="#262D33"
+            data-component-type="text"
+            isInline={true}
+            textType="body"
+          >
+            <StyledComponent
+              as="span"
+              color="#262D33"
+              data-component-type="text"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-dnqmqq",
+                    "isStatic": false,
+                    "lastClassName": "c3",
+                    "rules": Array [
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+
+  ",
+                      [Function],
+                      "
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-dnqmqq",
+                  "target": "span",
+                  "toString": [Function],
+                  "usesTheme": false,
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              isInline={true}
+              textType="body"
+            >
+              <span
+                className="c1"
+                color="#262D33"
+                data-component-type="text"
+              >
+                Chief Executive Officer
+              </span>
+            </StyledComponent>
+          </styled.span>
+        </Text>
+        <styled.div
+          data-component-type="record_name"
+          variant="labelRight"
+        >
+          <StyledComponent
+            data-component-type="record_name"
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-gZMcBi",
+                  "isStatic": false,
+                  "lastClassName": "c2",
+                  "rules": Array [
+                    "
+  .label-component {
+    padding-right: .25rem;
+  }
+
+  ",
+                    [Function],
+                    "
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-gZMcBi",
+                "target": "div",
+                "toString": [Function],
+                "usesTheme": false,
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+            variant="labelRight"
+          >
+            <div
+              className="c2"
+              data-component-type="record_name"
+            >
+              <Text
+                className="label-component"
+                color="#424F5C"
+                isInline={true}
+                tag="span"
+                type="small"
+              >
+                <styled.span
+                  as="span"
+                  className="label-component"
+                  color="#424F5C"
+                  data-component-type="text"
+                  isInline={true}
+                  textType="small"
+                >
+                  <StyledComponent
+                    as="span"
+                    className="label-component"
+                    color="#424F5C"
+                    data-component-type="text"
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-dnqmqq",
+                          "isStatic": false,
+                          "lastClassName": "c3",
+                          "rules": Array [
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+
+  ",
+                            [Function],
+                            "
+",
+                          ],
+                        },
+                        "displayName": "styled.span",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-dnqmqq",
+                        "target": "span",
+                        "toString": [Function],
+                        "usesTheme": false,
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    isInline={true}
+                    textType="small"
+                  >
+                    <span
+                      className="c3 label-component"
+                      color="#424F5C"
+                      data-component-type="text"
+                    >
+                      Position Title
+                    </span>
+                  </StyledComponent>
+                </styled.span>
+              </Text>
+            </div>
+          </StyledComponent>
+        </styled.div>
       </div>
     </StyledComponent>
   </styled.div>
