@@ -1,19 +1,20 @@
 List are used for listing items on page
 
-[Card](/#/Content/Cards/Card) is used for list item instead of smart list
-List should be limited to **10** cards each except person profile (20 cards)
+Page content generally takes the forms of lists of items. 
+As a general rule, we display data using paginated lists of 10 [Card](/#/Content/Cards/Card) components per page.
+There are exceptions but please run this through the frontend/design guild before committing to any designs.
 
-Sections from top to bottom:
+List pages contain the following elements, typically in this order:
 - Filter and sort section
 - Statistic tiles
 - cards
 - Pagination section
 
-There is sLarge spacing 24px between each section and sXSmall between Cards
+There is sLarge spacing between each section and sXSmall between Cards
 
 ![list page](./image/ListPage.png)
 
-Tab is not recommended. You can consider to have default filter on the page to enable user focus on the more important content like extended leave.
+We generally don't use tabs - instead we use filter bars. You can apply default filters on the page where necessary.
 
 ![list with default filter](./image/ListWithDefaultFilter.png)
 
@@ -25,7 +26,7 @@ Tabs should be limited to one line on mobile view
 <br />
 
 ### Filter and sort section
-All list should have filter (filter button and search bar) function when the page is customer facing
+Lists of user generated data that are expected to have more than a page of data should always have filter and search functionality
 Sort function would be depend on case but highly recommend if page has any call for action or stress level like compliance
 
 Filter and search section consists of
@@ -33,23 +34,24 @@ Filter and search section consists of
 - sort section
 - other special action section
 
-There is sMedium spacing 16px between each section and sXSmall spacing 8 px within section
+There is sMedium spacing between each section and sXSmall spacing within section
 
 #### Filter section
-Filter section should have sXSmall spacing 8px between each item within the section
-Filter button will always br joined to the left of the search bar
-search bar should indicate the searchable text in the placeholder
+Filter section should have sXSmall spacing between each item within the section
+Filter button will always be joined to the left of the search bar
+Search bar placeholder text should inform the user what they can search on
+Search should only search on free text fields like names and descriptions while things like categories and types should be managed by filters
 
-Filter section should have 8px between tags and filter controller
+Filter section should have sXSmall spacing between tags and filter controller
 
 #### Sort section
 Sort by will always sit to the right of the filter section
-Sort section should have sXSmall spacing 8px between label and input
+Sort section should have sXSmall spacing between label and input
 
 #### Actions section
-Actions section should have sXSmall spacing 8px between rach button
+Actions section should have sXSmall spacing between each button
 
-Actions are displayed in icon with a dark style tooltip popver in default button style.
+Actions are displayed in icon with a dark style tooltip popover in default button style.
 Most common used actions goes first from right to left.
 
 If no icon fits the use case, use default button instead. Text on page action buttons should be limited to one line on mobile view
@@ -291,12 +293,12 @@ const handleFilterAdded = (filterInfo) => {
                     <Inline spacing={Variables.Spacing.sXSmall}>
                       <Button
                         icon={<FontAwesomeIcon type='solid' icon='archive' />}
-                        iconAlignment='no'
+                        iconAlignment='center'
                         onClick={() => alert('archive action')}
                       />
                       <Button
                         icon={<FontAwesomeIcon type='solid' icon='download' />}
-                        iconAlignment='no'
+                        iconAlignment='center'
                         onClick={() => alert('download action')}
                       />
                     </Inline>
@@ -329,7 +331,7 @@ const handleFilterAdded = (filterInfo) => {
 <br />
 
 ### Statistic section
-The label text length should be limited to one line with additional info in ( )  The value should be in one line too.
+Keep statistics concise so the label and value both only take up one line. Always keep these in a Carousel for a good mobile experience
 
 The high stress level status statistic order from left to right.
 
@@ -337,61 +339,66 @@ The high stress level status statistic order from left to right.
 import { Carousel } from '@Domain/Layouts';
 import { Statistic } from '@Domain/Formats';
 
-<>
-    <Carousel>
-      <Carousel.Tile>
-        <Statistic
-          title='Overdue'
-          value='2'
-        />
-      </Carousel.Tile>
-      <Carousel.Tile>
-        <Statistic
-          title='Expiring Soon'
-          value='1'
-        />
-      </Carousel.Tile>
-      <Carousel.Tile>
-        <Statistic
-          title='Missing End Dates'
-          value='3'
-        />
-      </Carousel.Tile>
-    </Carousel>
-    <Carousel>
-      <Carousel.Tile>
-        <Statistic
-          title='Total Session'
-          value='25'
-        />
-      </Carousel.Tile>
-      <Carousel.Tile>
-        <Statistic
-          title='Total Hours'
-          value='211'
-        />
-      </Carousel.Tile>
-      <Carousel.Tile>
-        <Statistic
-          title='Total Cost (AUD)'
-          prefix='AUD'
-          value='54,118.00'
-        />
-      </Carousel.Tile>
-      <Carousel.Tile>
-        <Statistic
-          title='Total Cost (DZD)'
-          prefix='DZD'
-          value='99.00'
-        />
-      </Carousel.Tile>
-    </Carousel>
-</>
+<Carousel>
+  <Carousel.Tile>
+    <Statistic
+      title='Overdue'
+      value='2'
+    />
+  </Carousel.Tile>
+  <Carousel.Tile>
+    <Statistic
+      title='Expiring Soon'
+      value='1'
+    />
+  </Carousel.Tile>
+  <Carousel.Tile>
+    <Statistic
+      title='Missing End Dates'
+      value='3'
+    />
+  </Carousel.Tile>
+</Carousel>
+
+```
+
+```jsx
+import { Carousel } from '@Domain/Layouts';
+import { Statistic } from '@Domain/Formats';
+
+<Carousel>
+  <Carousel.Tile>
+    <Statistic
+      title='Total Session'
+      value='25'
+    />
+  </Carousel.Tile>
+  <Carousel.Tile>
+    <Statistic
+      title='Total Hours'
+      value='211'
+    />
+  </Carousel.Tile>
+  <Carousel.Tile>
+    <Statistic
+      title='Total Cost (AUD)'
+      prefix='AUD'
+      value='54,118.00'
+    />
+  </Carousel.Tile>
+  <Carousel.Tile>
+    <Statistic
+      title='Total Cost (DZD)'
+      prefix='DZD'
+      value='99.00'
+    />
+  </Carousel.Tile>
+</Carousel>
 ```
 
 
 ### Pagination section
-All list should have [Pagination](/#/Interaction/Pagination) when the page is customer facing
+Lists of user generated data that are expected to have more than a page of data should always have [Pagination](/#/Interaction/Pagination) functionality
 It should be hidden when there is no record (also no result when filtering)
 
 ```jsx
@@ -434,28 +441,30 @@ import { Variables } from '@Common';
 ```
 
 ### Loading state
-List section (from top to bottom): filter and sort section, statistics tile, cards, pagination with sLarge spacing 24px in between
+The following values will typically work for most content, but depending on the size of your content they may need minor adjustments.
 
-Filter and sort section goes together as a 40px height skeleton
-Statistics tile would depend on the number of tile would the list have (It would be depend on minimum number of tile so it would not include the optional ones)
-The skeleton would be 200 x 90 with 8 margin in between Cards section skeleton would have three cards only and the skeleton height would depend on the card height on that page
+Filter Section: sLarge spacing height
+sLarge spacing between section
+Statistics: 200px wide | 90px height | sXSmall spacing between each tile skeletons
+sLarge spacing between section
+Cards: Match your actual card height | sXSmall spacing between each card skeletons
 
-Pagination section would not have a skeleton for it
+No skeleton for pagination bar
+
+Only display the minimum number of Statistics/Cards that the page can load with. If it always has 6 Statistics, then show 6 skeletons. For lists of Cards, display as many as a full page of results (typically 10) unless the content is unlikely to reach a full page of results.
 
 ```jsx
 import { BlockSkeleton } from '@Domain/Skeletons';
-import { Inline } from '@Domain/Layouts';
+import { Inline, Carousel } from '@Domain/Layouts';
 import { Variables } from '@Common';
 
 <>
   <BlockSkeleton margins={{ bottom: Variables.Spacing.sLarge}} height={Variables.Spacing.s2XLarge}/>
-  <Inline
-    margins={{ bottom: Variables.Spacing.sLarge}}
-  >
-    <BlockSkeleton height={90} width={200}/>
-    <BlockSkeleton height={90} width={200}/>
-    <BlockSkeleton height={90} width={200}/>
-  </Inline>
+  <Carousel margins={{ bottom: Variables.Spacing.sLarge}}>
+    <BlockSkeleton display='inline-block' margins={{ right: Variables.Spacing.sXSmall}} height={90} width={200}/>
+    <BlockSkeleton display='inline-block' margins={{ right: Variables.Spacing.sXSmall}} height={90} width={200}/>
+    <BlockSkeleton display='inline-block' height={90} width={200}/>
+  </Carousel>
   <Inline collapse>
       <BlockSkeleton height={78}/>
       <BlockSkeleton height={78}/>
