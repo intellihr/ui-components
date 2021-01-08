@@ -153,4 +153,17 @@ describe('<TextInput />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it(`should render an password input`, () => {
+    const wrapper = shallow(
+      <TextInput
+        type='password'
+        value='test'
+        name='test'
+        onChange={dummyFunction}
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })
