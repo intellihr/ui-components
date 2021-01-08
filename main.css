@@ -613,6 +613,8 @@
 
 ._2KJdFV_f2_YV_45PNtBoTY .button-icon.right, .button .button-icon.right { margin-left: 8px; }
 
+._2KJdFV_f2_YV_45PNtBoTY .button-icon.center, .button .button-icon.center { margin: 0; }
+
 .button { background-color: #E1E6EB; border-color: transparent; color: #424F5C; margin: 0 2px 16px; margin: 0 .125rem 1rem; }
 
 .button:disabled, .button.disabled, .button[disabled] { cursor: not-allowed; }
