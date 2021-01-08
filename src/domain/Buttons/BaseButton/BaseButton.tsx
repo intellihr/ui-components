@@ -41,7 +41,7 @@ interface IBaseButtonProps {
   /** What type of button to display */
   type?: ButtonType
   /** Alignment of the button icon */
-  iconAlignment?: 'left' | 'right'
+  iconAlignment?: 'left' | 'right' | 'center'
   /** Icon component passed to Button */
   icon?: JSX.Element
   /** Any extra classes */

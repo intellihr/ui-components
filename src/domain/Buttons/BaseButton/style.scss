@@ -661,6 +661,10 @@ $button-styles: (
     &.right {
       margin-left: $spacing-xsmall;
     }
+
+    &.center {
+      margin: 0;
+    }
   }
 }
 

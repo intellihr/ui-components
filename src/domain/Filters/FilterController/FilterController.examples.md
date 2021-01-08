@@ -92,17 +92,8 @@ const handleFilterAdded = (filterInfo) => {
 import { isEqual } from 'lodash';
 import { DateRangeInput } from '@Domain/Inputs';
 import { Button } from '@Domain/Buttons';
-
-const style = {
-    display: 'flex',
-    alignItems: 'center',
-    width: '100%',
-};
-
-const dateRangeStyle = {
-    width: '100%',
-    flex: '1 1 0%'
-};
+import { Inline } from '@Domain/Layouts';
+import { Variables } from '@Common';
 
 initialState = {
   startDate: null,
@@ -186,19 +177,17 @@ const handleFilterAdded = (filterInfo) => {
   onFilterAdded= {handleFilterAdded}
   onSearchUpdated={(event) => { setState({ searchValue: event.target.value }); console.log('search value updated:', event.target.value) }}
   onSearchCleared={(event) => { setState({ searchValue: '' }); alert('clear search value') }}
-  rightComponent={<div style={style}>
-                     <div style={dateRangeStyle}>
-                       <DateRangeInput
-                        name='filter-date-picker'
-                        startDate={state.startDate}
-                        endDate={state.endDate}
-                        startDatePlaceholder='Start Date'
-                        endDatePlaceholder='End Date'
-                        handleDatesChange={(dates) => { setState({ startDate: dates.startDate, endDate: dates.endDate })}}
-                       />
-                       </div>
+  rightComponent={<Inline spacing={Variables.Spacing.sSmall}>
+                     <DateRangeInput
+                      name='filter-date-picker'
+                      startDate={state.startDate}
+                      endDate={state.endDate}
+                      startDatePlaceholder='Start Date'
+                      endDatePlaceholder='End Date'
+                      handleDatesChange={(dates) => { setState({ startDate: dates.startDate, endDate: dates.endDate })}}
+                     />
                     <Button margins={{ left: 8 }} type='neutral' onClick={() => alert('other action')}>Other Action</Button>
-                   </div>}
+                   </Inline>}
 />
 ```
 
@@ -208,12 +197,8 @@ const handleFilterAdded = (filterInfo) => {
 import { isEqual } from 'lodash';
 import { DateRangeInput } from '@Domain/Inputs';
 import { Button } from '@Domain/Buttons';
-
-const style = {
-    display: 'flex',
-    alignItems: 'center',
-    width: '100%',
-};
+import { Inline } from '@Domain/Layouts';
+import { Variables } from '@Common';
 
 const dateRangeStyle = {
     width: '100%',
@@ -303,18 +288,16 @@ const handleFilterAdded = (filterInfo) => {
   onSearchUpdated={(event) => { setState({ searchValue: event.target.value }); console.log('search value updated:', event.target.value) }}
   onSearchCleared={(event) => { setState({ searchValue: '' }); alert('clear search value') }}
   hideSearchBar
-  rightComponent={<div style={style}>
-                     <div style={dateRangeStyle}>
-                       <DateRangeInput
-                        name='filter-date-picker'
-                        startDate={state.startDate}
-                        endDate={state.endDate}
-                        startDatePlaceholder='Start Date'
-                        endDatePlaceholder='End Date'
-                        handleDatesChange={(dates) => { setState({ startDate: dates.startDate, endDate: dates.endDate })}}
-                       />
-                       </div>
+  rightComponent={<Inline spacing={Variables.Spacing.sSmall}>
+                     <DateRangeInput
+                       name='filter-date-picker'
+                       startDate={state.startDate}
+                       endDate={state.endDate}
+                       startDatePlaceholder='Start Date'
+                       endDatePlaceholder='End Date'
+                       handleDatesChange={(dates) => { setState({ startDate: dates.startDate, endDate: dates.endDate })}}
+                     />
                     <Button margins={{ left: 8 }} type='neutral' onClick={() => alert('other action')}>Other Action</Button>
-                   </div>}
+                   </Inline>}
 />
 ```

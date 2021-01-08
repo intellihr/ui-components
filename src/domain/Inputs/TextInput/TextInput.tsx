@@ -24,6 +24,8 @@ interface ITextInputProps {
   onChange?: (value: string) => void
   /** Value of the input */
   value?: string | number
+  /** Type of the input */
+  type?: 'text' | 'password'
   /** If true, sets input to disabled state */
   isDisabled?: boolean
   /** Icon to display in the input box */
@@ -130,6 +132,7 @@ class TextInput extends React.PureComponent<ITextInputProps> {
       width,
       componentContext,
       margins,
+      type,
       'aria-label': label
     } = this.props
 
@@ -137,7 +140,7 @@ class TextInput extends React.PureComponent<ITextInputProps> {
       <StyledTextInput
         id={id || name}
         name={name}
-        type='text'
+        type={type ? type : 'text'}
         value={value}
         onChange={this.handleChange}
         onKeyDown={handleKeyDown}

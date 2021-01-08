@@ -71,6 +71,10 @@ module.exports = {
         {
           name: 'Form Page',
           content: 'docs/FormPage.md'
+        },
+        {
+          name: 'List',
+          content: 'docs/List.md'
         }
       ]
     },

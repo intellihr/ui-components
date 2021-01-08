@@ -2,7 +2,6 @@ Settings pages or feature pages are considered as content page
 
 Content page should use `Page` with `content` as `layoutType`
 
-![page layout type](./image/Page.png)
 ![content page](./image/ContentPage.png)
 
 ### Breadcrumb Group
@@ -31,7 +30,7 @@ A description is **required for all settings/ feature front pages** to provide c
 <br />
 
 ### Page Action
-Use `Inline` for page action and pass into `titleAction` on Page component for page action
+Use [Inline](/#/Composition/Inline) for page action and pass into `titleAction` on Page component for page action
 ```jsx
 import { FontAwesomeIcon } from '@Domain/Icons';
 import { TooltipPopover } from '@Domain/Popovers';
