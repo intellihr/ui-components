@@ -53,6 +53,19 @@ exports[`<TextInput /> should render an invalid text input 1`] = `
 />
 `;
 
+exports[`<TextInput /> should render an password input 1`] = `
+<styled.input
+  className="input "
+  data-component-type="text_input"
+  id="test"
+  name="test"
+  onChange={[Function]}
+  onFocus={[Function]}
+  type="password"
+  value="test"
+/>
+`;
+
 exports[`<TextInput /> should render an text input 1`] = `
 <styled.input
   className="input "

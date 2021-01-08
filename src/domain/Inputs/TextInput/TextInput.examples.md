@@ -133,3 +133,15 @@ initialState = { value: 'I have a custom width 500px' };
 />
 ```
 
+#### Password Input
+
+```jsx
+initialState = { textValue: '1234567890' };
+
+<TextInput
+  type='password'
+  value={state.textValue}
+  onChange={(value) => {setState({textValue: value})}}
+/>
+```
+
