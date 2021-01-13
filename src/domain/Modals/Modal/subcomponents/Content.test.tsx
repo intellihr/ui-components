@@ -13,4 +13,16 @@ describe('<Content />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it('should render modal content', () => {
+    const wrapper = mount(
+      <Content
+        rightColumn={<div>testing right column</div>}
+      >
+        Content Text
+      </Content>
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
 })

@@ -93,6 +93,109 @@ initialState = { textInputValue: '', radioInputValue: 'today', isOpen: false };
 
 <br />
 
+### Content Modal
+```jsx
+import { Props, Variables } from '@Common';
+import { Button, ButtonGroup } from '@Domain/Buttons';
+import { VerticalForm } from '@Domain/Forms';
+import { Text } from '@Domain/Typographies';
+import { AvatarEntity, AvatarGroup } from '@Domain/Avatars';
+import { TextInput } from '@Domain/Inputs';
+import { FontAwesomeIcon } from '@Domain/Icons';
+
+initialState = { textInputValue: '', isOpen: false };
+
+<>
+    <Button
+      onClick={() => setState({isOpen: true})}
+    >
+      Click Me
+    </Button>
+    <Modal
+      isOpen={state.isOpen}
+      handleClose={() => setState({isOpen: false})}
+      useSubcomponents={true}
+      size={Props.Size.Large}
+    >
+      <Modal.Header
+       rightComponent={<ButtonGroup>
+                          <Button onClick={() => alert('Action 1')}>Action</Button>
+                          <Button onClick={() => alert('Action 2')}>Action</Button>
+                        </ButtonGroup>}
+       dropdownSections= {[
+             {
+               text: 'Edit',
+               href: 'https://www.google.com.au',
+               stopPropagation: true
+             },
+             {
+               text: 'Delete',
+               onClick: (event) => { alert('Delete action for the item') },
+               sectionType: 'alert',
+               stopPropagation: true
+             }
+           ]}
+      >
+        Example Modal
+      </Modal.Header>
+      <Modal.Content
+        rightColumn={<div style={{ width: '240px' }}>
+                       <Text
+                          isInline={false}
+                          type={Props.TypographyType.Small}
+                          margins={{ bottom: 4}}
+                       >
+                         Created By
+                       </Text>
+                       <AvatarEntity
+                         initials='JW'
+                         primaryText='John Wick'
+                         margins={{ bottom: 16}}
+                       />
+                       <Text
+                         isInline={false}
+                         type={Props.TypographyType.Small}
+                         margins={{ bottom: 4}}
+                       >
+                         Related to
+                       </Text>
+                       <TextInput
+                         name='testInput'
+                         placeholder='Input some text here...'
+                         icon={<FontAwesomeIcon type='solid' icon='search' />}
+                         onChange={(value) => setState({ textInputValue: value })}
+                       />
+                       <Text
+                         isInline={false}
+                         type={Props.TypographyType.Small}
+                         margins={{ bottom: 4, top: 16}}
+                       >
+                         Share with 
+                        </Text>
+                       <AvatarGroup
+                         avatars={new Array(10).fill().map(() => ({
+                         initials: 'JW',
+                         imageUrl: 'https://pbs.twimg.com/profile_images/921785062626127873/FbfY4sRz_400x400.jpg'
+                         }))}
+                       />
+                     </div>}
+      >
+        <Text
+           isInline={false}
+           type={Props.TypographyType.Display}
+           margins={{ bottom: 26}}
+        >
+          Team Kiki Note Summary
+        </Text>
+        <Text type={Props.TypographyType.Heading} weight={Variables.FontWeight.fwNormal}>
+          Hi team, I found out an issue in the team workplace area. 
+          There is lots of empty boxes on the pathway. I concern about the work safety.
+        </Text>
+      </Modal.Content>
+    </Modal>
+</>
+```
+
 ### Props Examples
 
 ```jsx

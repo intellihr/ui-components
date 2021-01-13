@@ -1,12 +1,14 @@
 import styled from 'styled-components'
 
-import { Props, Variables } from '../../../../common'
+import {Props, Variables} from '../../../../common'
 import { styleForTruncatedText, styleForTypographyType } from '../../../Typographies/services/textStyles'
 
 const StyledModalHeader = styled.div`
-  min-height: 80px;
+  display: flex;
+  align-items: center;
+  min-height: 64px;
   background-color: ${Variables.Color.n200};
-  padding: 24px;
+  padding: 12px 50px 12px 20px;
 
   @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet}px) {
     padding: 12px;
@@ -18,7 +20,9 @@ const StyledModalHeader = styled.div`
 `
 
 const StyledModalHeaderHeading = styled.div`
-  ${styleForTypographyType(Props.TypographyType.Display)}
+  display: inline;
+  flex: 1 1 0%;
+  ${styleForTypographyType(Props.TypographyType.Heading)}
   ${styleForTruncatedText()}
   font-weight: ${Variables.FontWeight.fwSemiBold};
 
@@ -33,17 +37,30 @@ const StyledModalHeaderHeading = styled.div`
 `
 
 const StyledModalContent = styled.div`
-  padding: 16px 24px;
+  padding: 16px 20px;
 
   @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet}px) {
     padding-top: 64px;
   }
 `
+const StyledModalFlexContent = styled.div`
+  display: flex;
+`
+
+const StyledModalChildren = styled.div`
+  padding: 16px 20px;
+  flex: 1 1 0%;
+`
+
+const StyledModalRightColumn = styled.div`
+  background: ${Variables.Color.n150};
+  padding: 16px 20px;
+`
 
 const StyledModalFooter = styled.div`
-  height: 80px;
+  height: 64px;
   background-color: ${Variables.Color.n200};
-  padding: 20px;
+  padding: 12px 20px;
   display: flex;
   justify-content: space-between;
 
@@ -62,10 +79,37 @@ const StyledModalControls = styled.div`
   display: flex;
 `
 
+const StyledHeaderControls = styled.div`
+  display: inline-flex;
+  margin-left: 12px;
+`
+
+const StyledActionButton = styled.button`
+  outline: none;
+  color: ${Variables.Color.n600};
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .1s ease-in;
+  z-index: 1;
+  margin-left: 12px;
+
+  &:hover {
+    color: ${Variables.Color.n700};
+    transition: .15s ease-out;
+  }
+`
+
 export {
   StyledModalHeader,
   StyledModalHeaderHeading,
   StyledModalContent,
   StyledModalFooter,
-  StyledModalControls
+  StyledModalControls,
+  StyledHeaderControls,
+  StyledActionButton,
+  StyledModalFlexContent,
+  StyledModalChildren,
+  StyledModalRightColumn
 }

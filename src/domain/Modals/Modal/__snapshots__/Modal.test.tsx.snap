@@ -51,9 +51,9 @@ exports[`<Modal /> should render a hidden modal 1`] = `
 }
 
 .c0 .modal.subcomponent-modal-style .modal-close-button {
-  right: 29px;
-  top: 31px;
-  line-height: 14px;
+  right: 16px;
+  top: 18px;
+  line-height: 24px;
 }
 
 .c0 .modal .modal-close-button {
@@ -279,9 +279,9 @@ exports[`<Modal /> should render a hidden modal 1`] = `
       flex-direction: column;
 
       .modal-close-button {
-        right: 29px;
-        top: 31px;
-        line-height: 14px;
+        right: 16px;
+        top: 18px;
+        line-height: 24px;
 
         @media only screen and (max-width: ",
               "640",
@@ -540,9 +540,9 @@ exports[`<Modal /> should render a hidden modal 1`] = `
 }
 
 .c0 .modal.subcomponent-modal-style .modal-close-button {
-  right: 29px;
-  top: 31px;
-  line-height: 14px;
+  right: 16px;
+  top: 18px;
+  line-height: 24px;
 }
 
 .c0 .modal .modal-close-button {

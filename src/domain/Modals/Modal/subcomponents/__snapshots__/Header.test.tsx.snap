@@ -2,14 +2,26 @@
 
 exports[`<Header /> should render modal header 1`] = `
 .c0 {
-  min-height: 80px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 64px;
   background-color: #F5F7FA;
-  padding: 24px;
+  padding: 12px 50px 12px 20px;
 }
 
 .c1 {
-  font-size: 24px;
-  line-height: 32px;
+  display: inline;
+  -webkit-flex: 1 1 0%;
+  -ms-flex: 1 1 0%;
+  flex: 1 1 0%;
+  font-size: 18px;
+  line-height: 24px;
   -webkit-letter-spacing: -.02em;
   -moz-letter-spacing: -.02em;
   -ms-letter-spacing: -.02em;
@@ -56,16 +68,18 @@ exports[`<Header /> should render modal header 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "sc-VigVT",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
-  min-height: 80px;
+  display: flex;
+  align-items: center;
+  min-height: 64px;
   background-color: ",
               "#F5F7FA",
               ";
-  padding: 24px;
+  padding: 12px 50px 12px 20px;
 
   @media only screen and (max-width: ",
               "640",
@@ -82,7 +96,7 @@ exports[`<Header /> should render modal header 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "sc-VigVT",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -102,18 +116,20 @@ exports[`<Header /> should render modal header 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-bwzfXH",
+                  "componentId": "sc-jTzLTM",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
                     "
+  display: inline;
+  flex: 1 1 0%;
   ",
                     "
           font-size: ",
-                    "24",
+                    "18",
                     "px;
           line-height: ",
-                    "32",
+                    "24",
                     "px;
           letter-spacing: -.02em;
         ",
@@ -157,7 +173,7 @@ exports[`<Header /> should render modal header 1`] = `
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-bwzfXH",
+                "styledComponentId": "sc-jTzLTM",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,
@@ -174,6 +190,576 @@ exports[`<Header /> should render modal header 1`] = `
             </div>
           </StyledComponent>
         </styled.div>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</Header>
+`;
+
+exports[`<Header /> should render modal header with right component and dropdown sections 1`] = `
+.c4 {
+  display: inline-block;
+  font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
+}
+
+.c4.icon {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 64px;
+  background-color: #F5F7FA;
+  padding: 12px 50px 12px 20px;
+}
+
+.c1 {
+  display: inline;
+  -webkit-flex: 1 1 0%;
+  -ms-flex: 1 1 0%;
+  flex: 1 1 0%;
+  font-size: 18px;
+  line-height: 24px;
+  -webkit-letter-spacing: -.02em;
+  -moz-letter-spacing: -.02em;
+  -ms-letter-spacing: -.02em;
+  letter-spacing: -.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-left: 12px;
+}
+
+.c3 {
+  outline: none;
+  color: #667380;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: .1s ease-in;
+  transition: .1s ease-in;
+  z-index: 1;
+  margin-left: 12px;
+}
+
+.c3:hover {
+  color: #424F5C;
+  -webkit-transition: .15s ease-out;
+  transition: .15s ease-out;
+}
+
+@media only screen and (max-width:640px) {
+  .c0 {
+    padding: 12px;
+    min-height: 48px;
+    height: 48px;
+    position: fixed;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c1 {
+    margin-right: 32px;
+  }
+}
+
+@media only screen and (max-width:640px) {
+  .c1 {
+    font-size: 18px;
+    line-height: 24px;
+    -webkit-letter-spacing: -.02em;
+    -moz-letter-spacing: -.02em;
+    -ms-letter-spacing: -.02em;
+    letter-spacing: -.02em;
+    margin-left: 38px;
+  }
+}
+
+<Header
+  dropdownSections={
+    Array [
+      Object {
+        "href": "https://www.google.com.au",
+        "stopPropagation": true,
+        "text": "Edit",
+      },
+      Object {
+        "onClick": [Function],
+        "sectionType": "alert",
+        "stopPropagation": true,
+        "text": "Delete",
+      },
+    ]
+  }
+  rightComponent={
+    <div>
+      testing right component
+    </div>
+  }
+>
+  <styled.div>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-VigVT",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+  background-color: ",
+              "#F5F7FA",
+              ";
+  padding: 12px 50px 12px 20px;
+
+  @media only screen and (max-width: ",
+              "640",
+              "px) {
+    padding: 12px;
+    min-height: 48px;
+    height: 48px;
+    position: fixed;
+    width: 100%;
+  }
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-VigVT",
+          "target": "div",
+          "toString": [Function],
+          "usesTheme": false,
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <div
+        className="c0"
+      >
+        <styled.div>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-jTzLTM",
+                  "isStatic": false,
+                  "lastClassName": "c1",
+                  "rules": Array [
+                    "
+  display: inline;
+  flex: 1 1 0%;
+  ",
+                    "
+          font-size: ",
+                    "18",
+                    "px;
+          line-height: ",
+                    "24",
+                    "px;
+          letter-spacing: -.02em;
+        ",
+                    "
+  ",
+                    "
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  ",
+                    "
+  font-weight: ",
+                    "600",
+                    ";
+
+  @media only screen and (min-width: ",
+                    "641",
+                    "px) {
+      margin-right: 32px;
+  }
+
+  @media only screen and (max-width: ",
+                    "640",
+                    "px) {
+      ",
+                    "
+          font-size: ",
+                    "18",
+                    "px;
+          line-height: ",
+                    "24",
+                    "px;
+          letter-spacing: -.02em;
+        ",
+                    "
+      margin-left: 38px;
+  }
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-jTzLTM",
+                "target": "div",
+                "toString": [Function],
+                "usesTheme": false,
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <div
+              className="c1"
+            >
+              Header Text
+            </div>
+          </StyledComponent>
+        </styled.div>
+        <styled.div>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-kGXeez",
+                  "isStatic": false,
+                  "lastClassName": "c2",
+                  "rules": Array [
+                    "
+  display: inline-flex;
+  margin-left: 12px;
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-kGXeez",
+                "target": "div",
+                "toString": [Function],
+                "usesTheme": false,
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <div
+              className="c2"
+            >
+              <div>
+                testing right component
+              </div>
+            </div>
+          </StyledComponent>
+        </styled.div>
+        <DropdownMenu
+          hasInitialFocus={false}
+          sections={
+            Array [
+              Object {
+                "href": "https://www.google.com.au",
+                "stopPropagation": true,
+                "text": "Edit",
+              },
+              Object {
+                "onClick": [Function],
+                "sectionType": "alert",
+                "stopPropagation": true,
+                "text": "Delete",
+              },
+            ]
+          }
+          toggleComponent={[Function]}
+        >
+          <styled.button
+            aria-expanded={false}
+            aria-haspopup={true}
+            onClick={[Function]}
+            role="button"
+          >
+            <StyledComponent
+              aria-expanded={false}
+              aria-haspopup={true}
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-kpOJdX",
+                    "isStatic": false,
+                    "lastClassName": "c3",
+                    "rules": Array [
+                      "
+  outline: none;
+  color: ",
+                      "#667380",
+                      ";
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .1s ease-in;
+  z-index: 1;
+  margin-left: 12px;
+
+  &:hover {
+    color: ",
+                      "#424F5C",
+                      ";
+    transition: .15s ease-out;
+  }
+",
+                    ],
+                  },
+                  "displayName": "styled.button",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-kpOJdX",
+                  "target": "button",
+                  "toString": [Function],
+                  "usesTheme": false,
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={
+                Object {
+                  "current": .c1 {
+  display: inline-block;
+  font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
+}
+
+.c1.icon {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.c0 {
+  outline: none;
+  color: #667380;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: .1s ease-in;
+  transition: .1s ease-in;
+  z-index: 1;
+  margin-left: 12px;
+}
+
+.c0:hover {
+  color: #424F5C;
+  -webkit-transition: .15s ease-out;
+  transition: .15s ease-out;
+}
+
+<button
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    class="c0"
+                    role="button"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="c1 icon fas fa-ellipsis-v"
+                      data-component-type="icon"
+                    />
+                  </button>,
+                }
+              }
+              onClick={[Function]}
+              role="button"
+            >
+              <button
+                aria-expanded={false}
+                aria-haspopup={true}
+                className="c3"
+                onClick={[Function]}
+                role="button"
+              >
+                <FontAwesomeIcon
+                  icon="ellipsis-v"
+                  type="solid"
+                >
+                  <Icon
+                    icon="fas fa-ellipsis-v"
+                  >
+                    <styled.i
+                      aria-hidden={true}
+                      className="icon fas fa-ellipsis-v"
+                      data-component-type="icon"
+                      size="medium"
+                    >
+                      <StyledComponent
+                        aria-hidden={true}
+                        className="icon fas fa-ellipsis-v"
+                        data-component-type="icon"
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-htpNat",
+                              "isStatic": false,
+                              "lastClassName": "c4",
+                              "rules": Array [
+                                "
+  display: inline-block;
+  font-stretch: normal;
+  --fa-primary-color: ",
+                                "#2512B3",
+                                ";
+  --fa-secondary-color: ",
+                                "#2512B3",
+                                ";
+
+  ",
+                                [Function],
+                                "
+
+  ",
+                                [Function],
+                                "
+  ",
+                                [Function],
+                                "
+
+  ",
+                                [Function],
+                                "
+
+  ",
+                                [Function],
+                                "
+
+  ",
+                                [Function],
+                                "
+
+  ",
+                                [Function],
+                                "
+
+  ",
+                                [Function],
+                                "
+
+  &.icon {
+    text-align: center;
+
+  ",
+                                [Function],
+                                "
+  }
+",
+                              ],
+                            },
+                            "displayName": "styled.i",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-htpNat",
+                            "target": "i",
+                            "toString": [Function],
+                            "usesTheme": false,
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
+                        size="medium"
+                      >
+                        <i
+                          aria-hidden={true}
+                          className="c4 icon fas fa-ellipsis-v"
+                          data-component-type="icon"
+                          size="medium"
+                        />
+                      </StyledComponent>
+                    </styled.i>
+                  </Icon>
+                </FontAwesomeIcon>
+              </button>
+            </StyledComponent>
+          </styled.button>
+          <Popover
+            animationType="dropdown"
+            id=""
+            isOpen={false}
+            parentAnchorPosition="auto"
+            parentRef={
+              Object {
+                "current": <button
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  class="c3"
+                  role="button"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="c4 icon fas fa-ellipsis-v"
+                    data-component-type="icon"
+                  />
+                </button>,
+              }
+            }
+            popoverAnchorPosition="auto"
+          >
+            <Portal
+              containerInfo={<body />}
+            >
+              <Transition
+                appear={false}
+                enter={true}
+                exit={true}
+                in={false}
+                mountOnEnter={true}
+                onEnter={[Function]}
+                onEntered={[Function]}
+                onEntering={[Function]}
+                onExit={[Function]}
+                onExited={[Function]}
+                onExiting={[Function]}
+                timeout={100}
+                unmountOnExit={true}
+              />
+            </Portal>
+          </Popover>
+        </DropdownMenu>
       </div>
     </StyledComponent>
   </styled.div>
