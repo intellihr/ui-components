@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { StyledModalChildren, StyledModalContent, StyledModalFlexContent, StyledModalRightColumn } from './style'
+import {StyledModalContent, StyledModalFlexContent, StyledModalLeftColumn, StyledModalRightColumn} from './style'
 
 interface IContentProps {
   /** right column to show in the modal content */
@@ -17,9 +17,9 @@ class Content extends React.PureComponent<IContentProps, never> {
     if (rightColumn) {
       return (
         <StyledModalFlexContent>
-          <StyledModalChildren>
+          <StyledModalLeftColumn>
             {children}
-          </StyledModalChildren>
+          </StyledModalLeftColumn>
           <StyledModalRightColumn>
             {rightColumn}
           </StyledModalRightColumn>

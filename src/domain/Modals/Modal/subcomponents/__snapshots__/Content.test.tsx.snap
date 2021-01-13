@@ -77,6 +77,18 @@ exports[`<Content /> should render modal content 2`] = `
   padding: 16px 20px;
 }
 
+@media only screen and (max-width:640px) {
+  .c1 {
+    padding: 64px 20px 16px 20px;
+  }
+}
+
+@media only screen and (max-width:640px) {
+  .c2 {
+    display: none;
+  }
+}
+
 <Content
   rightColumn={
     <div>
@@ -130,6 +142,12 @@ exports[`<Content /> should render modal content 2`] = `
                     "
   padding: 16px 20px;
   flex: 1 1 0%;
+
+  @media only screen and (max-width: ",
+                    "640",
+                    "px) {
+     padding: 64px 20px 16px 20px;
+  }
 ",
                   ],
                 },
@@ -169,6 +187,12 @@ exports[`<Content /> should render modal content 2`] = `
                     "#FAFBFC",
                     ";
   padding: 16px 20px;
+
+  @media only screen and (max-width: ",
+                    "640",
+                    "px) {
+    display: none;
+  }
 ",
                   ],
                 },

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import {Props, Variables} from '../../../../common'
+import { Props, Variables } from '../../../../common'
 import { styleForTruncatedText, styleForTypographyType } from '../../../Typographies/services/textStyles'
 
 const StyledModalHeader = styled.div`
@@ -47,14 +47,22 @@ const StyledModalFlexContent = styled.div`
   display: flex;
 `
 
-const StyledModalChildren = styled.div`
+const StyledModalLeftColumn = styled.div`
   padding: 16px 20px;
   flex: 1 1 0%;
+
+  @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet}px) {
+     padding: 64px 20px 16px 20px;
+  }
 `
 
 const StyledModalRightColumn = styled.div`
   background: ${Variables.Color.n150};
   padding: 16px 20px;
+
+  @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet}px) {
+    display: none;
+  }
 `
 
 const StyledModalFooter = styled.div`
@@ -79,9 +87,13 @@ const StyledModalControls = styled.div`
   display: flex;
 `
 
-const StyledHeaderControls = styled.div`
+const StyledHeaderRightComponent = styled.div`
   display: inline-flex;
   margin-left: 12px;
+
+  @media only screen and (max-width: ${Variables.Breakpoint.breakpointTablet}px) {
+    display: none;
+  }
 `
 
 const StyledActionButton = styled.button`
@@ -107,9 +119,9 @@ export {
   StyledModalContent,
   StyledModalFooter,
   StyledModalControls,
-  StyledHeaderControls,
+  StyledHeaderRightComponent,
   StyledActionButton,
   StyledModalFlexContent,
-  StyledModalChildren,
+  StyledModalLeftColumn,
   StyledModalRightColumn
 }

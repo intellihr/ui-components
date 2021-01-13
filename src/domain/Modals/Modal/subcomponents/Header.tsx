@@ -3,7 +3,12 @@ import React from 'react'
 import { FontAwesomeIcon } from '../../../Icons/FontAwesomeIcon'
 import { DropdownMenu, IDropdownMenuToggleComponentProps } from '../../../Popovers/DropdownMenu'
 import { ISectionProps } from '../../../Popovers/DropdownMenu/subcomponents/Section'
-import { StyledActionButton, StyledHeaderControls, StyledModalHeader, StyledModalHeaderHeading } from './style'
+import {
+  StyledActionButton,
+  StyledHeaderRightComponent,
+  StyledModalHeader,
+  StyledModalHeaderHeading
+} from './style'
 
 interface IHeaderProps {
   children: string
@@ -28,9 +33,9 @@ class Header extends React.PureComponent<IHeaderProps, never> {
         </StyledModalHeaderHeading>
         {
           rightComponent && (
-            <StyledHeaderControls>
+            <StyledHeaderRightComponent>
               {rightComponent}
-            </StyledHeaderControls>
+            </StyledHeaderRightComponent>
           )
         }
         {
