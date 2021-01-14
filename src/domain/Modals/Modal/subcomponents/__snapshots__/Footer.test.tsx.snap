@@ -2,9 +2,9 @@
 
 exports[`<Footer /> should render modal footer 1`] = `
 .c0 {
-  height: 80px;
+  height: 64px;
   background-color: #F5F7FA;
-  padding: 20px;
+  padding: 12px 20px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -54,16 +54,16 @@ exports[`<Footer /> should render modal footer 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bxivhb",
+            "componentId": "sc-bZQynM",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
-  height: 80px;
+  height: 64px;
   background-color: ",
               "#F5F7FA",
               ";
-  padding: 20px;
+  padding: 12px 20px;
   display: flex;
   justify-content: space-between;
 
@@ -86,7 +86,7 @@ exports[`<Footer /> should render modal footer 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bxivhb",
+          "styledComponentId": "sc-bZQynM",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -106,7 +106,7 @@ exports[`<Footer /> should render modal footer 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-ifAKCX",
+                  "componentId": "sc-gzVnrw",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -118,7 +118,7 @@ exports[`<Footer /> should render modal footer 1`] = `
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-ifAKCX",
+                "styledComponentId": "sc-gzVnrw",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,
@@ -142,7 +142,7 @@ exports[`<Footer /> should render modal footer 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-ifAKCX",
+                  "componentId": "sc-gzVnrw",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -154,7 +154,7 @@ exports[`<Footer /> should render modal footer 1`] = `
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-ifAKCX",
+                "styledComponentId": "sc-gzVnrw",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,

@@ -96,9 +96,9 @@ const StyledReactModal = styled(ReactModalAdapter)`
       flex-direction: column;
 
       .modal-close-button {
-        right: 29px;
-        top: 31px;
-        line-height: 14px;
+        right: 16px;
+        top: 18px;
+        line-height: 24px;
 
         @media only screen and (max-width: ${breakpointTablet}px) {
           position: fixed;
