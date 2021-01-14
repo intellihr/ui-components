@@ -30,7 +30,7 @@ interface ICardBasicProps {
   extraContent?: JSX.Element
   /** If true, the card is in expand style */
   isExpanded?: boolean
-  /** dropwon sections to show in the cards action button dropdown */
+  /** dropdown sections to show in the cards action button dropdown */
   dropdownSections?: ISectionProps[]
   /** callback when user toggle card */
   onCardToggle?: () => void
