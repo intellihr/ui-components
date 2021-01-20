@@ -84,11 +84,13 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
         className="c0"
         data-component-type="record"
       >
-        <p
-          key=".0"
-        >
-          Chief Executive Officer
-        </p>
+        <div>
+          <p
+            key=".0"
+          >
+            Chief Executive Officer
+          </p>
+        </div>
         <styled.div
           data-component-type="record_name"
           variant="labelAbove"
@@ -321,11 +323,13 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
         className="c0"
         data-component-type="record"
       >
-        <p
-          key=".0"
-        >
-          Chief Executive Officer
-        </p>
+        <div>
+          <p
+            key=".0"
+          >
+            Chief Executive Officer
+          </p>
+        </div>
         <styled.div
           data-component-type="record_name"
           variant="labelAbove"
@@ -646,93 +650,95 @@ exports[`<Record /> should render a Record component without children 1`] = `
         className="c0"
         data-component-type="record"
       >
-        <Text
-          color="#8FA1B3"
-          isInline={false}
-          tag="span"
-          type="body"
-        >
-          <styled.span
-            as="span"
+        <div>
+          <Text
             color="#8FA1B3"
-            data-component-type="text"
             isInline={false}
-            textType="body"
+            tag="span"
+            type="body"
           >
-            <StyledComponent
+            <styled.span
               as="span"
               color="#8FA1B3"
               data-component-type="text"
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-dnqmqq",
-                    "isStatic": false,
-                    "lastClassName": "c3",
-                    "rules": Array [
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-",
-                    ],
-                  },
-                  "displayName": "styled.span",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "sc-dnqmqq",
-                  "target": "span",
-                  "toString": [Function],
-                  "usesTheme": false,
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
               isInline={false}
               textType="body"
             >
-              <span
-                className="c1"
+              <StyledComponent
+                as="span"
                 color="#8FA1B3"
                 data-component-type="text"
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-dnqmqq",
+                      "isStatic": false,
+                      "lastClassName": "c3",
+                      "rules": Array [
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+",
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-dnqmqq",
+                    "target": "span",
+                    "toString": [Function],
+                    "usesTheme": false,
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                isInline={false}
+                textType="body"
               >
-                No Position Title
-              </span>
-            </StyledComponent>
-          </styled.span>
-        </Text>
+                <span
+                  className="c1"
+                  color="#8FA1B3"
+                  data-component-type="text"
+                >
+                  No Position Title
+                </span>
+              </StyledComponent>
+            </styled.span>
+          </Text>
+        </div>
         <styled.div
           data-component-type="record_name"
           variant="labelAbove"
@@ -966,94 +972,96 @@ exports[`<Record /> should render a Record component, creating a Text child with
         className="c0"
         data-component-type="record"
       >
-        <Text
-          color="#262D33"
-          isInline={true}
-          key=".0"
-          tag="span"
-          type="body"
-        >
-          <styled.span
-            as="span"
+        <div>
+          <Text
             color="#262D33"
-            data-component-type="text"
             isInline={true}
-            textType="body"
+            key=".0"
+            tag="span"
+            type="body"
           >
-            <StyledComponent
+            <styled.span
               as="span"
               color="#262D33"
               data-component-type="text"
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-dnqmqq",
-                    "isStatic": false,
-                    "lastClassName": "c3",
-                    "rules": Array [
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-",
-                    ],
-                  },
-                  "displayName": "styled.span",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "sc-dnqmqq",
-                  "target": "span",
-                  "toString": [Function],
-                  "usesTheme": false,
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
               isInline={true}
               textType="body"
             >
-              <span
-                className="c1"
+              <StyledComponent
+                as="span"
                 color="#262D33"
                 data-component-type="text"
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-dnqmqq",
+                      "isStatic": false,
+                      "lastClassName": "c3",
+                      "rules": Array [
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+",
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-dnqmqq",
+                    "target": "span",
+                    "toString": [Function],
+                    "usesTheme": false,
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                isInline={true}
+                textType="body"
               >
-                1.000
-              </span>
-            </StyledComponent>
-          </styled.span>
-        </Text>
+                <span
+                  className="c1"
+                  color="#262D33"
+                  data-component-type="text"
+                >
+                  1.000
+                </span>
+              </StyledComponent>
+            </styled.span>
+          </Text>
+        </div>
         <styled.div
           data-component-type="record_name"
           variant="labelAbove"
@@ -1287,94 +1295,96 @@ exports[`<Record /> should render a Record component, creating a Text child with
         className="c0"
         data-component-type="record"
       >
-        <Text
-          color="#262D33"
-          isInline={true}
-          key=".0"
-          tag="span"
-          type="body"
-        >
-          <styled.span
-            as="span"
+        <div>
+          <Text
             color="#262D33"
-            data-component-type="text"
             isInline={true}
-            textType="body"
+            key=".0"
+            tag="span"
+            type="body"
           >
-            <StyledComponent
+            <styled.span
               as="span"
               color="#262D33"
               data-component-type="text"
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-dnqmqq",
-                    "isStatic": false,
-                    "lastClassName": "c3",
-                    "rules": Array [
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-",
-                    ],
-                  },
-                  "displayName": "styled.span",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "sc-dnqmqq",
-                  "target": "span",
-                  "toString": [Function],
-                  "usesTheme": false,
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
               isInline={true}
               textType="body"
             >
-              <span
-                className="c1"
+              <StyledComponent
+                as="span"
                 color="#262D33"
                 data-component-type="text"
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-dnqmqq",
+                      "isStatic": false,
+                      "lastClassName": "c3",
+                      "rules": Array [
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+",
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-dnqmqq",
+                    "target": "span",
+                    "toString": [Function],
+                    "usesTheme": false,
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                isInline={true}
+                textType="body"
               >
-                Chief Executive Officer
-              </span>
-            </StyledComponent>
-          </styled.span>
-        </Text>
+                <span
+                  className="c1"
+                  color="#262D33"
+                  data-component-type="text"
+                >
+                  Chief Executive Officer
+                </span>
+              </StyledComponent>
+            </styled.span>
+          </Text>
+        </div>
         <styled.div
           data-component-type="record_name"
           variant="labelAbove"
@@ -1597,11 +1607,13 @@ exports[`<Record /> should render a Record component, with the provided componen
         className="c0"
         data-component-type="record"
       >
-        <p
-          key=".0"
-        >
-          Chief Executive Officer
-        </p>
+        <div>
+          <p
+            key=".0"
+          >
+            Chief Executive Officer
+          </p>
+        </div>
         <styled.div
           data-component-type="record_name"
           variant="labelAbove"
@@ -1842,11 +1854,13 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
         className="c0"
         data-component-type="record"
       >
-        <p
-          key=".0"
-        >
-          Chief Executive Officer
-        </p>
+        <div>
+          <p
+            key=".0"
+          >
+            Chief Executive Officer
+          </p>
+        </div>
         <styled.div
           data-component-type="record_name"
           variant="labelAbove"
@@ -2295,94 +2309,96 @@ exports[`<Record /> should render a label below Record component 1`] = `
         className="c0"
         data-component-type="record"
       >
-        <Text
-          color="#262D33"
-          isInline={true}
-          key=".0"
-          tag="span"
-          type="body"
-        >
-          <styled.span
-            as="span"
+        <div>
+          <Text
             color="#262D33"
-            data-component-type="text"
             isInline={true}
-            textType="body"
+            key=".0"
+            tag="span"
+            type="body"
           >
-            <StyledComponent
+            <styled.span
               as="span"
               color="#262D33"
               data-component-type="text"
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-dnqmqq",
-                    "isStatic": false,
-                    "lastClassName": "c3",
-                    "rules": Array [
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-",
-                    ],
-                  },
-                  "displayName": "styled.span",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "sc-dnqmqq",
-                  "target": "span",
-                  "toString": [Function],
-                  "usesTheme": false,
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
               isInline={true}
               textType="body"
             >
-              <span
-                className="c1"
+              <StyledComponent
+                as="span"
                 color="#262D33"
                 data-component-type="text"
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-dnqmqq",
+                      "isStatic": false,
+                      "lastClassName": "c3",
+                      "rules": Array [
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+",
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-dnqmqq",
+                    "target": "span",
+                    "toString": [Function],
+                    "usesTheme": false,
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                isInline={true}
+                textType="body"
               >
-                Chief Executive Officer
-              </span>
-            </StyledComponent>
-          </styled.span>
-        </Text>
+                <span
+                  className="c1"
+                  color="#262D33"
+                  data-component-type="text"
+                >
+                  Chief Executive Officer
+                </span>
+              </StyledComponent>
+            </styled.span>
+          </Text>
+        </div>
         <styled.div
           data-component-type="record_name"
           variant="labelBelow"
@@ -2616,94 +2632,96 @@ exports[`<Record /> should render a label right Record component 1`] = `
         className="c0"
         data-component-type="record"
       >
-        <Text
-          color="#262D33"
-          isInline={true}
-          key=".0"
-          tag="span"
-          type="body"
-        >
-          <styled.span
-            as="span"
+        <div>
+          <Text
             color="#262D33"
-            data-component-type="text"
             isInline={true}
-            textType="body"
+            key=".0"
+            tag="span"
+            type="body"
           >
-            <StyledComponent
+            <styled.span
               as="span"
               color="#262D33"
               data-component-type="text"
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-dnqmqq",
-                    "isStatic": false,
-                    "lastClassName": "c3",
-                    "rules": Array [
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-
-  ",
-                      [Function],
-                      "
-",
-                    ],
-                  },
-                  "displayName": "styled.span",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "sc-dnqmqq",
-                  "target": "span",
-                  "toString": [Function],
-                  "usesTheme": false,
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
               isInline={true}
               textType="body"
             >
-              <span
-                className="c1"
+              <StyledComponent
+                as="span"
                 color="#262D33"
                 data-component-type="text"
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-dnqmqq",
+                      "isStatic": false,
+                      "lastClassName": "c3",
+                      "rules": Array [
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+",
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-dnqmqq",
+                    "target": "span",
+                    "toString": [Function],
+                    "usesTheme": false,
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                isInline={true}
+                textType="body"
               >
-                Chief Executive Officer
-              </span>
-            </StyledComponent>
-          </styled.span>
-        </Text>
+                <span
+                  className="c1"
+                  color="#262D33"
+                  data-component-type="text"
+                >
+                  Chief Executive Officer
+                </span>
+              </StyledComponent>
+            </styled.span>
+          </Text>
+        </div>
         <styled.div
           data-component-type="record_name"
           variant="labelRight"
