@@ -102,7 +102,9 @@ class Record extends React.PureComponent <IRecordProps> {
         margins={margins}
         variant={variant}
       >
-        {this.formattedChildren}
+        <div>
+          {this.formattedChildren}
+        </div>
         {this.label}
       </RecordWrapper>
     )
