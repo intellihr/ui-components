@@ -23,7 +23,7 @@ The following guidelines for writing copy are intended to create a consistent st
 
 * **Dates**
     * **Do**: Always respect the user's shorthand date format (DD/MM/YY, MM/DD/YY, YY/MM/DD, etc.)
-    * **Do**: Use `d MMM YYYY` (eg: 7 Jul 1977) in contexts where a more conversational date is required
+    * **Do**: Use `D MMM YYYY` (eg: 7 Jul 1977) in contexts where a more conversational date is required
 
 * **Use input agnostic language** where possible instead of input specific terminology
     * **Do**: Pick your preferred email address
