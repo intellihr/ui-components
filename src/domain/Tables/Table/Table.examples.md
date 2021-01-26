@@ -195,7 +195,8 @@ initialState = {
       id: '4',
       data: {fileName: 'test1.pdf', createAt: '05/01/2018', size: '1.5', fileType: 'PDF'},
       isSelectable: true,
-      actions: rowActions
+      actions: rowActions,
+      onClick: () => alert('row click')
     },
     {
       id: '5',

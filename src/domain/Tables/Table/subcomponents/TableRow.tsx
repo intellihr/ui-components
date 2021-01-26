@@ -74,6 +74,7 @@ const getLeftCell = <T extends {}>({ isSelectable, isSelected, isRemovable, hasL
             isSelectable && (
               <TableCheckboxInput
                 name={row.id}
+                hasStyledOnRowHovered={!row.onClick}
                 value={selectedCheckboxInputValue}
                 // tslint:disable-next-line:jsx-no-lambda
                 onChange={() => toggleSelected(row)}
