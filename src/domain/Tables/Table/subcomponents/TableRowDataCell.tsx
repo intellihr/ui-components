@@ -1,6 +1,6 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useMemo } from 'react'
 
-import { TooltipPopover } from '../../../Popovers/TooltipPopover'
+import { TooltipPopover } from '../../../Popovers'
 import { TooltipPopoverVariant } from '../../../Popovers/TooltipPopover/TooltipPopover'
 import { StyledDataCell } from '../services/style'
 import { IColumnProps, IRowProps } from '../services/types'
@@ -63,7 +63,7 @@ const TableRowDataCell = <T extends {}>(props: ITableRowDataCellProps<T>) => {
   } = row
 
   const handleTableCellClicked = useCallback(() => {
-    if (isSelectable) {
+    if (!onClick && isSelectable) {
       toggleSelected(row)
     }
 
@@ -82,6 +82,7 @@ const TableRowDataCell = <T extends {}>(props: ITableRowDataCellProps<T>) => {
 
   return (
     <StyledDataCell
+      clickable={!!onClick}
       size={column.size}
       hasProgressBar={hasProgressBar}
       colSpan={(isLastColumn && hasTableSwipeActions && !hasSwipeActions) ? 2 : undefined}
