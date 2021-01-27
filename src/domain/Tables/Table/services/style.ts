@@ -56,6 +56,7 @@ interface IStyledHeaderCellProps {
 }
 
 interface IStyledDataCellProps {
+  clickable?: boolean
   size?: ColumnSize
   alignment?: ColumnAlignment
   isLastColumn?: boolean
@@ -223,12 +224,22 @@ const StyledDataCellChangeAnimation = keyframes`
   }
 `
 
-const StyledDataCell = styled.td`
+const StyledDataCell = styled.td<IStyledDataCellProps>`
   padding:  ${Variables.Spacing.sSmall}px;
   text-align: left;
   animation-name: ${StyledDataCellChangeAnimation};
   animation-duration: 500ms;
   animation-timing-function: ease-in;
+
+  ${(props: IStyledDataCellProps) => props.clickable && css`
+    & > span {
+      cursor: pointer;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  `}
 
   ${(props: IStyledDataCellProps) => props.size === ColumnSize.Auto && css`
       width: 100%;
@@ -454,27 +465,27 @@ const StyledFontAwesomeIconButtonWrapper = styled.span`
 `
 
 export {
-  StyledTable,
-  StyledRow,
-  StyledProgressBar,
-  StyledHeaderCell,
   StyledDataCell,
+  StyledEmptyStateCell,
+  StyledEmptyStateRow,
+  StyledFontAwesomeIcon,
+  StyledFontAwesomeIconButtonWrapper,
+  StyledHeaderCell,
+  StyledHeaderCellContent,
+  StyledHeaderCellWithHeaderSize,
+  StyledHeaderLeftCell,
+  StyledHeaderLeftCellContent,
+  StyledProgressBar,
   StyledProgressBarCell,
   StyledProgressBarRow,
-  StyledHeaderLeftCell,
-  StyledTHead,
-  StyledEmptyStateCell,
+  StyledRow,
+  StyledSortButton,
+  StyledSwipeActions,
+  StyledSwipeActionsButtonWrapper,
+  StyledSwipeActionsCell,
+  StyledTable,
   StyledTableCheckboxInput,
   StyledTableCheckboxLabel,
-  StyledFontAwesomeIcon,
-  StyledSortButton,
   StyledTableWrapper,
-  StyledSwipeActionsCell,
-  StyledSwipeActions,
-  StyledHeaderCellWithHeaderSize,
-  StyledEmptyStateRow,
-  StyledFontAwesomeIconButtonWrapper,
-  StyledSwipeActionsButtonWrapper,
-  StyledHeaderCellContent,
-  StyledHeaderLeftCellContent
+  StyledTHead
 }
