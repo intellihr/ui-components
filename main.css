@@ -2204,7 +2204,7 @@
 
 ._2Z9R9asHIoy521P2DUF8O9.Select.has-value .Select-control:hover { background-color: #FFFFFF; }
 
-._2Z9R9asHIoy521P2DUF8O9.Select .Select-control { border: 1px solid #C5CED6; cursor: pointer; height: 39px; margin-bottom: 16px; margin-bottom: 1rem; -webkit-transition: border-color .3s ease-in-out, background-color .3s ease; transition: border-color .3s ease-in-out, background-color .3s ease; }
+._2Z9R9asHIoy521P2DUF8O9.Select .Select-control { border: 1px solid #C5CED6; cursor: pointer; height: 39px; -webkit-transition: border-color .3s ease-in-out, background-color .3s ease; transition: border-color .3s ease-in-out, background-color .3s ease; }
 
 ._2Z9R9asHIoy521P2DUF8O9.Select .Select-control .Select-multi-value-wrapper { height: 37px; }
 
