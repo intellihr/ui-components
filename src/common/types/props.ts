@@ -115,6 +115,7 @@ namespace Props {
     ScrollingTabGroup = 'scrolling_tab_group',
     Section = 'section',
     SectionList = 'section_list',
+    SelectInput = 'select_input',
     SmartList = 'smart_list',
     SmartListColumn = 'smart_list_column',
     Statistic = 'statistic',
