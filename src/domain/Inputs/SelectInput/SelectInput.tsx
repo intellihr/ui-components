@@ -14,6 +14,9 @@ import Select, {
   ReactSelectProps
 } from 'react-select'
 
+import { Props } from '../../../common'
+import { TabGroupContainer } from '../../Tabs/ScrollingTabGroup/style'
+import { StyledSelectInputWrapper } from './style'
 import style from './style.scss'
 
 export interface ISelectInputProps {
@@ -74,6 +77,11 @@ export interface ISelectInputProps {
   filterOptions?: FilterOptionsHandler
   /** Label for accessibility */
   'aria-label'?: string
+
+  /** The margins around the component */
+  margins?: Props.IMargins
+  /** The data-component-context */
+  componentContext?: string
 }
 
 export class SelectInput extends React.PureComponent<ISelectInputProps> {
@@ -98,23 +106,37 @@ export class SelectInput extends React.PureComponent<ISelectInputProps> {
 
   public render (): JSX.Element {
     const {
-      onNewOptionCreated
+      onNewOptionCreated,
+      margins,
+      componentContext
     } = this.props
 
     if (onNewOptionCreated) {
       return (
-        <Creatable<OptionValues>
-          {...this.reactSelectProps}
-          onNewOptionClick={onNewOptionCreated}
-          showNewOptionAtTop={false}
-        />
+        <StyledSelectInputWrapper
+          margins={margins}
+          data-component-context={componentContext}
+          data-component-type={Props.ComponentType.SelectInput}
+        >
+          <Creatable<OptionValues>
+            {...this.reactSelectProps}
+            onNewOptionClick={onNewOptionCreated}
+            showNewOptionAtTop={false}
+          />
+        </StyledSelectInputWrapper>
       )
     }
 
     return (
-      <Select<OptionValues>
-        {...this.reactSelectProps}
-      />
+      <StyledSelectInputWrapper
+        margins={margins}
+        data-component-context={componentContext}
+        data-component-type={Props.ComponentType.SelectInput}
+      >
+        <Select<OptionValues>
+          {...this.reactSelectProps}
+        />
+      </StyledSelectInputWrapper>
     )
   }
 
