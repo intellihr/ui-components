@@ -53,6 +53,18 @@ $status-dot-styles: (
     position: absolute;
   }
 
+  &.avatar-xsmall {
+    font-size: 10px;
+    height: 24px;
+    width: 24px;
+
+    >.status-dot {
+      bottom: -.1rem;
+      padding: 4px;
+      right: -.2rem;
+    }
+  }
+
   &.avatar-small {
     font-size: .8rem;
     height: 30px;

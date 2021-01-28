@@ -14,7 +14,8 @@ enum AvatarEntitySize {
   Small = 'small',
   Normal = 'normal',
   SmallCompact = 'smallCompact',
-  NormalCompact = 'normalCompact'
+  NormalCompact = 'normalCompact',
+  XSmallCompact = 'xSmallCompact'
 }
 
 export interface IAvatarEntityProps {
@@ -63,7 +64,10 @@ class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
           initials={initials}
           imageUrl={imageUrl}
           statusDot={statusDot}
-          size={(size === AvatarEntitySize.Small || size === AvatarEntitySize.SmallCompact) ? Props.AvatarSize.Small : Props.AvatarSize.Medium}
+          size={
+            (size === AvatarEntitySize.Small || size === AvatarEntitySize.SmallCompact) ? Props.AvatarSize.Small :
+              (size === AvatarEntitySize.Normal || size === AvatarEntitySize.NormalCompact) ? Props.AvatarSize.Medium : Props.AvatarSize.XSmall
+          }
         />
       </StyledAvatar>
     )
@@ -98,7 +102,7 @@ class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
 
     let text = secondaryText
 
-    if (size === AvatarEntitySize.NormalCompact || size === AvatarEntitySize.SmallCompact) {
+    if (size === AvatarEntitySize.NormalCompact || size === AvatarEntitySize.SmallCompact || size === AvatarEntitySize.XSmallCompact) {
       text = `(${text})`
     }
 
@@ -106,7 +110,7 @@ class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
       <Text
         isTruncated
         color={Variables.Color.n700}
-        margins={size === AvatarEntitySize.NormalCompact || size === AvatarEntitySize.SmallCompact ? { left: Variables.Spacing.sXSmall } : undefined}
+        margins={size === AvatarEntitySize.NormalCompact || size === AvatarEntitySize.SmallCompact || size === AvatarEntitySize.XSmallCompact ? { left: Variables.Spacing.sXSmall } : undefined}
         type={size === AvatarEntitySize.Normal ? Props.TypographyType.Small : Props.TypographyType.XSmall}
       >
         {text}
@@ -120,7 +124,7 @@ class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
       size
     } = this.props
 
-    if (!tertiaryText || size === AvatarEntitySize.NormalCompact || size === AvatarEntitySize.SmallCompact) {
+    if (!tertiaryText || size === AvatarEntitySize.NormalCompact || size === AvatarEntitySize.SmallCompact || size === AvatarEntitySize.XSmallCompact) {
       return null
     }
 
