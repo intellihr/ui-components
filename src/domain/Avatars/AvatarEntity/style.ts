@@ -28,8 +28,13 @@ interface IStyledTertiaryTextProps {
 
 // use height in avatar-medium or avatar-small
 const StyledAvatar = styled.span`
-  ${(props: IStyledAvatarProps) => css`
-    height: ${(props.size === AvatarEntitySize.Normal || props.size === AvatarEntitySize.NormalCompact) ? 40 :  30}px;
+ height: 40px;
+ ${(props: IStyledAvatarProps) => (props.size === AvatarEntitySize.SmallCompact || props.size === AvatarEntitySize.Small) && css`
+    height: 30px;
+  `}
+
+  ${(props: IStyledAvatarProps) => props.size === AvatarEntitySize.XSmallCompact && css`
+    height: 24px;
   `}
 `
 
@@ -55,9 +60,13 @@ const MainContentWrapper = styled.div`
   display: flex;
   align-items: center;
   color: ${Variables.Color.n700};
+  height: 44px;
+ ${(props: IMainContentWrapperProps) => (props.size === AvatarEntitySize.SmallCompact || props.size === AvatarEntitySize.Small) && css`
+    height: 38px;
+  `}
 
-  ${(props: IMainContentWrapperProps) => css`
-      height: ${(props.size === AvatarEntitySize.Normal || props.size === AvatarEntitySize.NormalCompact) ? Variables.LineHeight.lhSmall + Variables.LineHeight.lhBody :  Variables.LineHeight.lhSmall + Variables.LineHeight.lhXSmall}px;
+  ${(props: IMainContentWrapperProps) => props.size === AvatarEntitySize.XSmallCompact && css`
+    height: 24px;
   `}
 }
 `
@@ -67,7 +76,7 @@ const AvatarEntityInfo = styled.div`
   padding-left: ${Variables.Spacing.sXSmall}px;
   display: flex;
   flex-direction: column;
-  ${(props: IAvatarEntityInfoProps) => (props.size === AvatarEntitySize.NormalCompact || props.size === AvatarEntitySize.SmallCompact) && css`
+  ${(props: IAvatarEntityInfoProps) => (props.size === AvatarEntitySize.NormalCompact || props.size === AvatarEntitySize.SmallCompact || props.size === AvatarEntitySize.XSmallCompact) && css`
     flex-direction: row;
     align-items: center;
   `}

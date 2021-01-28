@@ -57,6 +57,37 @@ import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
 </>
 ```
 
+#### XSmall Compact AvatarEntity
+
+```jsx
+import { Props } from '@Common';
+import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
+import { Record } from '@Domain/Formats/Record';
+
+<>
+  <AvatarEntity
+    size='xSmallCompact'
+    initials='JW'
+    statusDot={AvatarStatusDotColor.Indigo}
+    primaryText='John Wick'
+  />
+  <br/>
+  It works well as record value:
+
+  <Record
+    name='Created by'
+    variant={Record.Variant.LabelBelow}
+  >
+    <AvatarEntity
+      size='xSmallCompact'
+      initials='JW'
+      statusDot={AvatarStatusDotColor.Indigo}
+      primaryText='John Wick'
+    />
+  </Record>
+</>
+```
+
 #### Compact AvatarEntity
 
 Compact style will hide the tertiary text and put primary text and secondary text on one line
@@ -77,6 +108,14 @@ import { FontAwesomeIcon } from '@Domain/Icons';
   />
   <AvatarEntity
     size='smallCompact'
+    initials='JW'
+    statusDot={AvatarStatusDotColor.Indigo}
+    primaryText='John Wick'
+    secondaryText='Guy Killer'
+    tertiaryText='Job Ending in 3 days'
+  />
+  <AvatarEntity
+    size='xSmallCompact'
     initials='JW'
     statusDot={AvatarStatusDotColor.Indigo}
     primaryText='John Wick'

@@ -47,6 +47,7 @@ namespace Props {
   }
 
   export enum AvatarSize {
+    XSmall = 'xsmall',
     Small = 'small',
     Medium = 'medium',
     Large = 'large',
