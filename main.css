@@ -2401,6 +2401,10 @@
 
 ._1J7b4-w63fdc01Gi9SN74X > .status-icon { bottom: -4px; left: -4px; position: absolute; }
 
+._1J7b4-w63fdc01Gi9SN74X.avatar-xsmall { font-size: 10px; height: 24px; width: 24px; }
+
+._1J7b4-w63fdc01Gi9SN74X.avatar-xsmall > .status-dot { bottom: -1.6px; bottom: -.1rem; padding: 4px; right: -3.2px; right: -.2rem; }
+
 ._1J7b4-w63fdc01Gi9SN74X.avatar-small { font-size: 12.8px; font-size: .8rem; height: 30px; width: 30px; }
 
 ._1J7b4-w63fdc01Gi9SN74X.avatar-small > .status-dot { bottom: -1.6px; bottom: -.1rem; padding: 4px; right: -3.2px; right: -.2rem; }
