@@ -222,3 +222,32 @@ initialState = { options: backendOptions, isFetching: false, value: '' };
   onChange={value => setState({ value })}
 />
 ```
+
+#### Select Input with margins
+
+```jsx
+const { Variables } = require('@Common');
+
+initialState = { value: '' };
+
+<SelectInput
+  placeholder='Select an option!'
+  name='testInput'
+  value={state.value}
+  margins={{
+    top: Variables.Spacing.sSmall,
+    bottom: Variables.Spacing.s2XSmall
+  }}
+  options={[
+    {
+      label: 'Hello World',
+      value: 20
+    },
+    {
+      label: 'Try selecting me',
+      value: 40
+    }
+  ]}
+  onChange={value => setState({ value })}
+/>
+```
