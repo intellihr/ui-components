@@ -2,10 +2,10 @@ import isNumber from 'lodash/isNumber'
 import isString from 'lodash/isString'
 import React from 'react'
 
-import {Props, Variables} from '../../../common'
-import {ITooltipPopoverProps, TooltipPopover} from '../../Popovers/TooltipPopover'
-import {Text} from '../../Typographies/Text'
-import {FieldLabelWrapper, RecordVariant, RecordWrapper} from './style'
+import { Props, Variables } from '../../../common'
+import { ITooltipPopoverProps, TooltipPopover } from '../../Popovers/TooltipPopover'
+import { Text} from '../../Typographies/Text'
+import { FieldLabelWrapper, RecordVariant, RecordWrapper } from './style'
 
 interface IRecordProps {
   /** Label text */
@@ -66,7 +66,8 @@ class Record extends React.PureComponent <IRecordProps> {
     const {
       name,
       componentContext,
-      variant
+      variant,
+      tooltipContent
     } = this.props
 
     return (
@@ -74,6 +75,7 @@ class Record extends React.PureComponent <IRecordProps> {
         data-component-type={Props.ComponentType.RecordName}
         data-component-context={componentContext}
         variant={variant}
+        hasTooltip={!!tooltipContent}
       >
         <Text
           type={Props.TypographyType.Small}
