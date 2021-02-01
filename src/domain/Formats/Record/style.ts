@@ -11,11 +11,12 @@ enum RecordVariant {
 
 interface IFieldLabelWrapperProps {
   variant: RecordVariant
+  hasTooltip: boolean
 }
 
 const FieldLabelWrapper = styled.div`
   .label-component {
-    padding-right: .25rem;
+    ${(props: IFieldLabelWrapperProps) => props.hasTooltip && css`padding-right: .25rem;`}
   }
 
   ${(props: IFieldLabelWrapperProps) => {
