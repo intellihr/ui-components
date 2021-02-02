@@ -104,7 +104,6 @@ const StyledGroupCardToggleButton = styled.button<IStyledGroupCardToggleButtonPr
 const StyledBodyActionButton = styled.button`
   ${cardButtonStyle};
   transition: .1s ease-in;
-  z-index: 1;
 
   &:hover {
     background-color: ${(props: IStyleActionButtonProps) => colorOptions[props.color].hoverButtonBackground};
