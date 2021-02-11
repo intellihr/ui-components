@@ -54,3 +54,73 @@ initialState = { isIconChecked: false, isLargeIconChecked: false, isRedIconCheck
   />
 </div>
 ```
+
+#### FontAwesome Icon Button with status dot
+
+```jsx
+
+<div>
+  <FontAwesomeIconButton
+    iconSize='large'
+    size='medium'
+    icon='paper-plane'
+    type='solid'
+    tooltipText='My Notes'
+    statusDotVariant={FontAwesomeIconButton.StatusDotVariants.Info}
+  />
+  <FontAwesomeIconButton
+    iconSize='large'
+    size='medium'
+    icon='paper-plane'
+    type='solid'
+    tooltipText='My Notes'
+    statusDotVariant={FontAwesomeIconButton.StatusDotVariants.Warning}
+  />
+  <FontAwesomeIconButton
+    iconSize='large'
+    size='medium'
+    icon='inbox'
+    type='solid'
+    tooltipText='My Tasks'
+    statusDotVariant={FontAwesomeIconButton.StatusDotVariants.Critical}
+  />
+</div>
+```
+
+#### FontAwesome Icon Button on system top menu
+
+```jsx
+import { Props } from '@Common';
+import { Avatar } from '@Domain/Avatars';
+import { Inline } from '@Domain/Layouts';
+
+<Inline>
+  <FontAwesomeIconButton
+    iconSize='large'
+    size='medium'
+    icon='paper-plane'
+    type='solid'
+    tooltipText='My Notes'
+    statusDotVariant={FontAwesomeIconButton.StatusDotVariants.Info}
+  />
+  <FontAwesomeIconButton
+    iconSize='large'
+    size='medium'
+    icon='inbox'
+    type='solid'
+    tooltipText='My Tasks'
+    statusDotVariant={FontAwesomeIconButton.StatusDotVariants.Warning}
+  />
+  <FontAwesomeIconButton
+    iconSize='large'
+    size='medium'
+    icon='plus'
+    type='regular'
+  />
+  <Avatar
+    initials='JW'
+    size={Props.AvatarSize.Medium}
+    statusDot='indigo'
+  />
+</Inline>
+```

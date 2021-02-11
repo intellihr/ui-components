@@ -9,7 +9,7 @@ describe('<FontAwesomeIconButton />', () => {
     const wrapper = mount(
       <FontAwesomeIconButton
         icon='check'
-        type='duotone'
+        type='solid'
         tooltipText='tooltip text'
       />
     )
@@ -21,7 +21,7 @@ describe('<FontAwesomeIconButton />', () => {
     const wrapper = mount(
       <FontAwesomeIconButton
         icon='check'
-        type='duotone'
+        type='solid'
         isSelected
       />
     )
@@ -33,8 +33,8 @@ describe('<FontAwesomeIconButton />', () => {
     const wrapper = mount(
       <FontAwesomeIconButton
         icon='check'
-        type='duotone'
-        variant={IconButtonVariants.Red}
+        type='solid'
+        variant={FontAwesomeIconButton.IconButtonVariants.Red}
       />
     )
 
@@ -47,12 +47,51 @@ describe('<FontAwesomeIconButton />', () => {
     const wrapper = shallow(
       <FontAwesomeIconButton
         icon='check'
-        type='duotone'
+        type='solid'
         onClick={mockHandleClick}
       />
     )
     expect(mockHandleClick.mock.calls.length).toBe(0)
     wrapper.simulate('click')
     expect(mockHandleClick.mock.calls.length).toBe(1)
+  })
+
+  it('should render a variant icon button size', () => {
+    const wrapper = mount(
+      <FontAwesomeIconButton
+        size={FontAwesomeIconButton.Size.Large}
+        icon='check'
+        type='solid'
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should render a variant icon button icon size', () => {
+    const wrapper = mount(
+      <FontAwesomeIconButton
+        iconSize={FontAwesomeIconButton.IconSize.Large}
+        size={FontAwesomeIconButton.Size.Medium}
+        icon='check'
+        type='solid'
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should render a variant icon button with status dot', () => {
+    const wrapper = mount(
+      <FontAwesomeIconButton
+        iconSize={FontAwesomeIconButton.IconSize.Large}
+        size={FontAwesomeIconButton.Size.Medium}
+        icon='check'
+        type='solid'
+        statusDotVariant={FontAwesomeIconButton.StatusDotVariants.Info}
+      />
+    )
+
+    expect(wrapper).toMatchSnapshot()
   })
 })

@@ -5,10 +5,16 @@ import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { FontAwesomeIconValue } from '../../Icons/Icon/FontAwesomeIconTypes'
 import { ITooltipPopoverToggleComponentProps, TooltipPopover } from '../../Popovers/TooltipPopover'
 import { TooltipPopoverVariant } from '../../Popovers/TooltipPopover/TooltipPopover'
-import { IconButtonVariants } from './colors'
-import { StyledIconButton } from './style'
+import { IconButtonVariants, StatusDotVariants } from './colors'
+import { StyledIconButton, StyledStatusDot, TooltipPopoverWrapper } from './style'
 
 enum Size {
+  Small = 'small',
+  Medium = 'medium',
+  Large = 'large'
+}
+
+enum IconSize {
   Small = 'small',
   Large = 'large'
 }
@@ -18,8 +24,10 @@ interface IFontAwesomeIconButtonProps {
   buttonOverrides?: Omit<React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>, 'ref'>
   /** Name of the icon */
   icon: FontAwesomeIconValue
-  /** Size of the icon */
+  /** Size of the button */
   size?: Size
+  /** Size of the icon */
+  iconSize?: IconSize
   /** The alternative font awesome icon versions */
   type: 'solid' | 'regular' | 'light' | 'duotone'
   /** onClick event */
@@ -36,6 +44,8 @@ interface IFontAwesomeIconButtonProps {
   isSelected?: boolean
   /** Whether the Icon Button is disabled */
   isDisabled?: boolean
+  /** Variant of the status dot */
+  statusDotVariant?: StatusDotVariants
   /** The component context */
   componentContext?: string
 }
@@ -52,9 +62,13 @@ const FontAwesomeIconButton = (props: IFontAwesomeIconButtonProps) => {
     isHovered = false,
     isDisabled = false,
     componentContext,
+    iconSize = IconSize.Small,
     size = Size.Small,
-    buttonOverrides
+    buttonOverrides,
+    statusDotVariant
   } = props
+
+  const hasStatusDot = !!statusDotVariant && iconSize === IconSize.Large
 
   const toggleComponent = ({ openMenu, closeMenu, toggleComponentRef, ariaProps }: ITooltipPopoverToggleComponentProps) => (
     <span
@@ -75,9 +89,17 @@ const FontAwesomeIconButton = (props: IFontAwesomeIconButtonProps) => {
         {...buttonOverrides}
       >
         <FontAwesomeIcon
+          size={iconSize === IconSize.Large ? 'large' : 'medium'}
           icon={icon}
           type={type}
         />
+        {
+          hasStatusDot && (
+            <StyledStatusDot
+              variant={statusDotVariant}
+            />
+          )
+        }
       </StyledIconButton>
     </span>
   )
@@ -85,14 +107,18 @@ const FontAwesomeIconButton = (props: IFontAwesomeIconButtonProps) => {
   return (
     tooltipText && !isDisabled
     ? (
-        <TooltipPopover
-          variant={TooltipPopoverVariant.Dark}
-          toggleComponent={toggleComponent}
-          data-component-type={Props.ComponentType.FontAwesomeIconButton}
-          data-component-context={componentContext}
-        >
-          {tooltipText}
-        </TooltipPopover>
+       <TooltipPopoverWrapper
+         size={size}
+         data-component-type={Props.ComponentType.FontAwesomeIconButton}
+         data-component-context={componentContext}
+       >
+         <TooltipPopover
+           variant={TooltipPopoverVariant.Dark}
+           toggleComponent={toggleComponent}
+         >
+           {tooltipText}
+         </TooltipPopover>
+       </TooltipPopoverWrapper>
       )
     : (
         <StyledIconButton
@@ -109,15 +135,26 @@ const FontAwesomeIconButton = (props: IFontAwesomeIconButtonProps) => {
           data-component-context={componentContext}
         >
           <FontAwesomeIcon
+            size={iconSize === IconSize.Large ? 'large' : 'medium'}
             icon={icon}
             type={type}
           />
+          {
+            hasStatusDot && (
+              <StyledStatusDot
+                variant={statusDotVariant}
+              />
+            )
+          }
         </StyledIconButton>
       )
   )
 }
 
 FontAwesomeIconButton.Size = Size
+FontAwesomeIconButton.IconSize = IconSize
+FontAwesomeIconButton.StatusDotVariants = StatusDotVariants
+FontAwesomeIconButton.IconButtonVariants = IconButtonVariants
 
 export {
   FontAwesomeIconButton,
