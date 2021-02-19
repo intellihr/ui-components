@@ -2,6 +2,7 @@ import isNil from 'lodash/isNil'
 import React from 'react'
 
 import { Props } from '../../../common/types/props'
+import { useTranslateFunction } from '../../Defaults/Defaults/Defaults'
 import { StyledEmptyState, StyledImage, StyledPrimaryMessage, StyledSecondaryMessage } from './style'
 
 export interface IEmptyStateProps {
@@ -24,17 +25,22 @@ export interface IEmptyStateProps {
   isBackgroundTransparent?: boolean
 }
 
-const defaultImageWith = 400
+const defaultImageWidth = 400
 
 export const EmptyState: React.FC<IEmptyStateProps>  = ({
-  primaryMessage = `Oops... We couldn't find anything for this section.`,
-  secondaryMessage = `Please speak to your system admin or add information.`,
+  primaryMessage,
+  secondaryMessage,
   componentContext,
   buttonComponent,
   margins,
   image,
   isBackgroundTransparent
 }) => {
+  const t = useTranslateFunction()
+
+  const i18nPrimaryMessage = primaryMessage || t('emptyState.primaryMessage')
+  const i18nSecondaryMessage = secondaryMessage || t('emptyState.secondaryMessage')
+
   return (
     <StyledEmptyState
       data-component-type={Props.ComponentType.EmptyState}
@@ -43,15 +49,15 @@ export const EmptyState: React.FC<IEmptyStateProps>  = ({
       isBackgroundTransparent={isBackgroundTransparent}
     >
       {
-        !isNil(primaryMessage) &&
+        primaryMessage !== null &&
         <StyledPrimaryMessage>
-          {primaryMessage}
+          {i18nPrimaryMessage}
         </StyledPrimaryMessage>
       }
       {
-        !isNil(secondaryMessage) &&
+        secondaryMessage !== null &&
         <StyledSecondaryMessage>
-          {secondaryMessage}
+          {i18nSecondaryMessage}
         </StyledSecondaryMessage>
       }
       {buttonComponent}
@@ -59,7 +65,7 @@ export const EmptyState: React.FC<IEmptyStateProps>  = ({
         !isNil(image) && image.url !== '' &&
         <StyledImage
           src={image.url}
-          width={image.width ? image.width : defaultImageWith}
+          width={image.width ? image.width : defaultImageWidth}
         />
       }
     </StyledEmptyState>

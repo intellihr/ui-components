@@ -6,6 +6,7 @@ import Select, {
   OptionValues
 } from 'react-select'
 
+import { useTranslateFunction } from '../../Defaults/Defaults/Defaults'
 import { IHierarchicalOption, convertHierarchicalOptionsToFlattenedOptions } from './helpers'
 import { HierarchicalSelectInputOption } from './HierarchicalSelectInputOption'
 
@@ -60,7 +61,7 @@ const HierarchicalSelectInput: React.FC<IHierarchicalSelectInputProps> = (props)
     id,
     name,
     value,
-    placeholder = 'Please Select',
+    placeholder,
     emptyValue,
     hierarchicalOptions,
     noResultsText,
@@ -71,6 +72,8 @@ const HierarchicalSelectInput: React.FC<IHierarchicalSelectInputProps> = (props)
     onChange,
     onOpen
   } = props
+
+  const t = useTranslateFunction()
 
   const options = useMemo(() => convertHierarchicalOptionsToFlattenedOptions(hierarchicalOptions), [hierarchicalOptions])
 
@@ -124,7 +127,7 @@ const HierarchicalSelectInput: React.FC<IHierarchicalSelectInputProps> = (props)
       onOpen={onOpen}
       optionComponent={HierarchicalSelectInputOption}
       options={options}
-      placeholder={placeholder}
+      placeholder={placeholder || t('selectPlaceholder')}
       removeSelected
       resetValue={emptyValue}
       value={value}

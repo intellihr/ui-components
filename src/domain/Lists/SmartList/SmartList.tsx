@@ -14,6 +14,7 @@ import uuid from 'uuid'
 
 import { Props } from '../../../common'
 import { EmptyState } from '../../Callouts'
+import { useTranslateFunction } from '../../Defaults/Defaults/Defaults'
 import { Row } from '../../Grids/Row'
 import { Spinner } from '../../Spinners'
 import { ListClickableColumn } from './ListClickableColumn'
@@ -37,7 +38,7 @@ export interface ISmartList {
   /** ID of the smart list */
   id?: string
   /** Dataset used to generate the list rows */
-  data: any
+  data?: any
   /** Column components passed to the list */
   children: any
   /** Callback that gets triggered when clicking on a list row */
@@ -66,6 +67,7 @@ export interface ISmartList {
   stickyHeader?: boolean
   /** The data-component-context */
   componentContext?: string
+  translateFunction?: any
 }
 
 export interface ISmartListState {
@@ -73,13 +75,28 @@ export interface ISmartListState {
   paginationButton: boolean
 }
 
-class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
+const SmartList: React.FC<ISmartList> & {Row: typeof ListRow, Column: typeof ListColumn, ClickableColumn: typeof ListClickableColumn}  = (props) => {
+  const t = useTranslateFunction()
+
+  return (
+    <ClassBasedSmartList
+      {...props}
+      emptyListText={props.emptyListText || t('noResults')}
+      translateFunction={t}
+    />
+  )
+}
+
+SmartList.Row = ListRow
+SmartList.Column = ListColumn
+SmartList.ClickableColumn = ListClickableColumn
+
+class ClassBasedSmartList extends React.PureComponent<ISmartList, ISmartListState> {
   public static Row = ListRow
   public static Column = ListColumn
   public static ClickableColumn = ListClickableColumn
 
   public static defaultProps: Partial<ISmartList> = {
-    emptyListText: 'No Results found.',
     loading: false,
     cursor: 'auto',
     showHeaderRow: true,
@@ -293,10 +310,10 @@ class SmartList extends React.PureComponent<ISmartList, ISmartListState> {
 
   public showAllRowContent (visibleRowsCount: number) {
     if (this.state.paginationButton) {
-      return `Show All (${visibleRowsCount} in Total)`
+      return this.props.translateFunction('smartList.showAllRows', { visibleRowsCount })
     }
 
-    return 'Collapse'
+    return this.props.translateFunction('smartList.collapse')
   }
 
   get title (): JSX.Element | undefined {

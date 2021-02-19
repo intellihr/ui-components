@@ -4,6 +4,7 @@ import React from 'react'
 import { IHintWrapperProps } from 'src/domain/Formats/HintWrapper'
 
 import { Props } from '../../../../common'
+import { useTranslateFunction } from '../../../Defaults/Defaults/Defaults'
 import { HintWrapper } from '../../../Formats'
 import { ITooltipPopoverProps, TooltipPopover } from '../../../Popovers/TooltipPopover'
 import { Text } from '../../../Typographies/Text'
@@ -80,28 +81,6 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
     return null
   }
 
-  private get inputLabel (): JSX.Element | null {
-    const {
-      inputName,
-      isRequired,
-      label
-    } = this.props
-
-    if (label) {
-      return (
-        <StyledInputLabel
-          htmlFor={inputName}
-          isRequired={isRequired!}
-        >
-          {label}
-          {this.tooltip}
-        </StyledInputLabel>
-      )
-    }
-
-    return null
-  }
-
   private get description (): JSX.Element | null {
     const {
       description
@@ -140,23 +119,6 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
     return null
   }
 
-  private get label (): JSX.Element | null {
-    const {
-      label
-    } = this.props
-
-    if (label) {
-      return (
-        <StyledLabelWrapper>
-          {this.inputLabel}
-          {this.hint}
-        </StyledLabelWrapper>
-      )
-    }
-
-    return null
-  }
-
   public static defaultProps = {
     isRequired: false,
     showBottomMargin: true
@@ -166,12 +128,19 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
     const {
       children,
       actionMessage,
-      margins
+      margins,
+      inputName,
+      isRequired,
+      label
     } = this.props
 
     return (
       <FieldWrapper margins={margins} >
-        {this.label}
+        <InputLabel
+          inputName={inputName}
+          isRequired={isRequired}
+          label={label}
+        />
         {this.description}
         {children}
         {this.errorMessages}
@@ -193,6 +162,28 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
       </ErrorMessage>
     )
   }
+}
+
+const InputLabel: React.FC<any> = ({
+  inputName,
+  isRequired,
+  label
+}) => {
+  const t = useTranslateFunction()
+
+  if (label) {
+    return (
+      <StyledInputLabel
+        htmlFor={inputName}
+        isRequired={isRequired!}
+        i18nRequiredSuffix={t('requiredSuffix')}
+      >
+        {label}
+      </StyledInputLabel>
+    )
+  }
+
+  return null
 }
 
 export {

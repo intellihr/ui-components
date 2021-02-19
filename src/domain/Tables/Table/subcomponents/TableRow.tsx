@@ -5,6 +5,7 @@ import {useDrag} from 'react-use-gesture'
 import { Variables } from '../../../../common'
 import { FontAwesomeIconButton } from '../../../Buttons/FontAwesomeIconButton'
 import { IconButtonVariants } from '../../../Buttons/FontAwesomeIconButton/colors'
+import { useTranslateFunction } from '../../../Defaults/Defaults/Defaults'
 import { TableRowVariant } from '../services/colors'
 import {
   handleRemoveButtonClick,
@@ -55,6 +56,7 @@ interface IUseDragProps {
 }
 
 interface IGetLeftCell <T extends {}> {
+  t: any
   isSelectable: boolean
   isRemovable: boolean
   hasLeftAction: boolean
@@ -64,7 +66,7 @@ interface IGetLeftCell <T extends {}> {
   onRowRemove?: (data: T) => void
 }
 
-const getLeftCell = <T extends {}>({ isSelectable, isSelected, isRemovable, hasLeftAction, row, onRowRemove, toggleSelected }: IGetLeftCell<T>) => {
+const getLeftCell = <T extends {}>({ t, isSelectable, isSelected, isRemovable, hasLeftAction, row, onRowRemove, toggleSelected }: IGetLeftCell<T>) => {
   if (!isRemovable && hasLeftAction) {
     const selectedCheckboxInputValue = isSelected ? TableCheckboxInputValue.True : TableCheckboxInputValue.False
     return (
@@ -95,7 +97,7 @@ const getLeftCell = <T extends {}>({ isSelectable, isSelected, isRemovable, hasL
               type='regular'
               variant={row.variant === TableRowVariant.Error ? IconButtonVariants.Red : IconButtonVariants.Neutral}
               onClick={handleRemoveButtonClick(row.data, onRowRemove)}
-              tooltipText='Delete'
+              tooltipText={t('delete')}
             />
           </StyledHeaderLeftCellContent>
         </StyledHeaderLeftCell>
@@ -195,6 +197,8 @@ const getDataCells = <T extends {}>(props: IGetDataCells<T>) => {
 }
 
 const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
+  const t = useTranslateFunction()
+
   const {
     hasLeftAction,
     interactionType,
@@ -289,7 +293,7 @@ const TableRow = <T extends {}>(props: ITableRowProps<T>) => {
         onMouseLeave={setHoveredFalse}
         hideBottomBorder={!!progress || lastRow}
       >
-        {hasLeftAction && getLeftCell<T>({ isSelectable, isRemovable, hasLeftAction, row, isSelected, toggleSelected, onRowRemove })}
+        {hasLeftAction && getLeftCell<T>({ t, isSelectable, isRemovable, hasLeftAction, row, isSelected, toggleSelected, onRowRemove })}
         {getDataCells<T>({
           hasProgressBar: !!progress,
           hasSwipeActions,

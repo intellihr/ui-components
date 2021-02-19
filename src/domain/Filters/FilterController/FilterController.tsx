@@ -2,6 +2,7 @@ import React, { ChangeEventHandler } from 'react'
 
 import { Props } from '../../../common'
 import { Button } from '../../Buttons/Button'
+import { useTranslateFunction } from '../../Defaults/Defaults/Defaults'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { InputGroup } from '../../Inputs/InputGroup'
 import { TextInput } from '../../Inputs/TextInput'
@@ -41,113 +42,104 @@ export interface IFilterControllerProps<FilterValue = string | number> {
   hideSearchBar?: boolean
 }
 
-export class FilterController extends React.PureComponent<IFilterControllerProps> {
-  public static defaultProps: Partial<IFilterControllerProps> = {
-    searchPlaceholder: 'Search'
-  }
+const FilterController: React.FC<IFilterControllerProps> = ({
+  filterMessage,
+  searchPlaceholder,
+  filters,
+  onFilterAdded,
+  tags,
+  onTagDeleted,
+  onSearchUpdated,
+  onSearchCleared,
+  searchValue,
+  margins,
+  componentContext,
+  rightComponent,
+  hideSearchBar
+}) => {
+  const t = useTranslateFunction()
 
-  public render (): JSX.Element | null {
-    const {
-      filterMessage,
-      searchPlaceholder,
-      filters,
-      onFilterAdded,
-      tags,
-      onTagDeleted,
-      onSearchUpdated,
-      onSearchCleared,
-      searchValue,
-      margins,
-      componentContext,
-      rightComponent,
-      hideSearchBar
-    } = this.props
-
-    return (
-      <ControllerWrapper
-        margins={margins}
-        data-component-type={Props.ComponentType.FilterController}
-        data-component-context={componentContext}
-      >
-        <StyledController hasBottomMargin={tags.length > 0}>
-          <StyledLeftComponent>
+  return (
+    <ControllerWrapper
+      margins={margins}
+      data-component-type={Props.ComponentType.FilterController}
+      data-component-context={componentContext}
+    >
+      <StyledController hasBottomMargin={tags.length > 0}>
+        <StyledLeftComponent>
           {
             hideSearchBar ?
-            <AddFilterDropdownMenu
-              componentContext={componentContext && `${componentContext}-dropdown-menu`}
-              filterMessage={filterMessage}
-              toggleComponent={this.filterButton}
-              filters={filters}
-              onFilterAdded={onFilterAdded}
-            />
-            :
-            <InputGroup>
               <AddFilterDropdownMenu
                 componentContext={componentContext && `${componentContext}-dropdown-menu`}
                 filterMessage={filterMessage}
-                toggleComponent={this.inputGroupFilterButton}
+                toggleComponent={filterButton(t('filter'))}
                 filters={filters}
                 onFilterAdded={onFilterAdded}
               />
-              <TextInput
-                icon={<FontAwesomeIcon type='solid' icon='search' />}
-                name='filterControllerSearchInput'
-                placeholder={searchPlaceholder}
-                value={searchValue}
-                groupPosition='right'
-                handleChange={onSearchUpdated}
-                handleClear={onSearchCleared}
-              />
-            </InputGroup>
+              :
+              <InputGroup>
+                <AddFilterDropdownMenu
+                  componentContext={componentContext && `${componentContext}-dropdown-menu`}
+                  filterMessage={filterMessage}
+                  toggleComponent={inputGroupFilterButton(t('filter'))}
+                  filters={filters}
+                  onFilterAdded={onFilterAdded}
+                />
+                <TextInput
+                  icon={<FontAwesomeIcon type='solid' icon='search' />}
+                  name='filterControllerSearchInput'
+                  placeholder={searchPlaceholder || t('searchPlaceholder')}
+                  value={searchValue}
+                  groupPosition='right'
+                  handleChange={onSearchUpdated}
+                  handleClear={onSearchCleared}
+                />
+              </InputGroup>
           }
-          </StyledLeftComponent>
-          {rightComponent && this.rightComponent}
-        </StyledController>
-        <FilterTag
-          componentContext={componentContext && `${componentContext}-filter-tag`}
-          tags={tags}
-          onTagDeleted={onTagDeleted}
-        />
-      </ControllerWrapper>
-    )
-  }
+        </StyledLeftComponent>
+        {rightComponent && (
+          <StyledRightComponent>
+            {rightComponent}
+          </StyledRightComponent>
+        )}
+      </StyledController>
+      <FilterTag
+        componentContext={componentContext && `${componentContext}-filter-tag`}
+        tags={tags}
+        onTagDeleted={onTagDeleted}
+      />
+    </ControllerWrapper>
+  )
+}
 
-  private get rightComponent () {
-    const {
-      rightComponent
-    } = this.props
-    return (
-      <StyledRightComponent>
-        {rightComponent}
-      </StyledRightComponent>
-    )
-  }
+const inputGroupFilterButton = (i18nFilter: string) => ({ toggleMenu, toggleComponentRef, ariaProps }: any) => {
+  return (
+    <InputGroup.Button
+      onClick={toggleMenu}
+      innerRef={toggleComponentRef}
+      groupPosition='left'
+      {...ariaProps}
+    >
+      {i18nFilter}
+    </InputGroup.Button>
+  )
+}
 
-  private inputGroupFilterButton = ({ toggleMenu, toggleComponentRef, ariaProps }: any) => {
-    return (
-      <InputGroup.Button
-        onClick={toggleMenu}
-        innerRef={toggleComponentRef}
-        groupPosition='left'
-        {...ariaProps}
-      >
-        Filter
-      </InputGroup.Button>
-    )
-  }
+const filterButton = (i18nFilter: string) => ({ toggleMenu, toggleComponentRef, ariaProps }: any) => {
+  return (
+    <Button
+      type='neutral'
+      icon={<FontAwesomeIcon type='solid' icon='caret-down' />}
+      iconAlignment={'right'}
+      onClick={toggleMenu}
+      innerRef={toggleComponentRef}
+      {...ariaProps}
+    >
+      {i18nFilter}
+    </Button>
+  )
+}
 
-  private filterButton  = ({ toggleMenu, toggleComponentRef, ariaProps }: any) => {
-    return (
-      <Button
-        type='neutral'
-        icon={<FontAwesomeIcon type='solid' icon='caret-down' />}
-        iconAlignment={'right'}
-        onClick={toggleMenu}
-        innerRef={toggleComponentRef}
-        {...ariaProps}
-      >
-        Filter
-      </Button>
-    )
-  }
+export {
+  FilterController
 }
