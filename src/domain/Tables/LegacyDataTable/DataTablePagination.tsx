@@ -1,6 +1,7 @@
 import classNames from 'classnames'
 import React from 'react'
 
+import { useTranslateFunction } from '../../Defaults/Defaults/Defaults'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 
 export interface IDataTablePaginationState {
@@ -169,55 +170,6 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
     return response
   }
 
-  get pageDetails () {
-    const {
-      pageSize,
-      totalCount
-    } = this.props
-    const { page } = this.state
-
-    const entryCount = totalCount
-    const nextPage = page + 1
-    const maxPossibleCurrentPageIndex = nextPage * pageSize
-    const maxActualCurrentPageIndex = Math.min(entryCount, maxPossibleCurrentPageIndex)
-    const pageStartingIndex = page * pageSize || 1
-
-    return (
-      <div className='page-details'>
-        Showing {pageStartingIndex} to {maxActualCurrentPageIndex} of {entryCount} entries
-      </div>
-    )
-  }
-
-  get pageSizeOptions () {
-    const {
-      showPageSizeOptions,
-      pageSizeOptions,
-      pageSize
-    } = this.props
-
-    if (showPageSizeOptions) {
-      const pageSizeSelect = (
-        <select
-          onChange={this.changeHandler}
-          value={pageSize}
-        >
-          {pageSizeOptions.map((option: number) => (
-            <option key={option} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
-      )
-
-      return (
-        <span className='page-size-options'>
-          <label>Show {pageSizeSelect} entries</label>
-        </span>
-      )
-    }
-  }
-
   get paginationComponents () {
     const {
       canPrevious,
@@ -255,28 +207,75 @@ export class DataTablePagination extends React.Component<IDataTablePaginationPro
   public render () {
     const {
       className,
-      customComponent
+      customComponent,
+      showPageSizeOptions,
+      pageSizeOptions,
+      pageSize,
+      onPageSizeChange,
+      totalCount
     } = this.props
 
     return (
       <div className={classNames(className, '-pagination')} >
         {customComponent}
-        {this.pageSizeOptions}
-        {this.pageDetails}
+        <PageSizeOptions
+          showPageSizeOptions={showPageSizeOptions}
+          pageSizeOptions={pageSizeOptions}
+          pageSize={pageSize}
+          onPageSizeChange={onPageSizeChange}
+          page={this.state.page}
+        />
+        <PageDetails
+          pageSize={pageSize}
+          totalCount={totalCount}
+          page={this.state.page}
+        />
         {this.paginationComponents}
       </div>
     )
   }
+}
 
-  private changeHandler = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const {
-      onPageSizeChange
-    } = this.props
+const PageDetails: React.FC<any> = ({pageSize, totalCount, page}) => {
+  const t = useTranslateFunction()
 
-    const {
-      page
-    } = this.state
+  const entryCount = totalCount
+  const nextPage = page + 1
+  const maxPossibleCurrentPageIndex = nextPage * pageSize
+  const maxActualCurrentPageIndex = Math.min(entryCount, maxPossibleCurrentPageIndex)
+  const pageStartingIndex = page * pageSize || 1
 
-    return onPageSizeChange(Number(e.target.value), page)
+  return (
+    <div className='page-details'>
+      {t('pagination.details', {firstItemOnPage: pageStartingIndex, lastItemOnPage: maxActualCurrentPageIndex, totalItems: entryCount})}
+    </div>
+  )
+}
+
+const PageSizeOptions: React.FC<any> = ({showPageSizeOptions, pageSizeOptions, pageSize, onPageSizeChange, page}) => {
+  const t = useTranslateFunction()
+
+  if (showPageSizeOptions) {
+    const pageSizeSelect = (
+      <select
+        // tslint:disable-next-line:jsx-no-lambda
+        onChange={(e) => onPageSizeChange(Number(e.target.value), page)}
+        value={pageSize}
+      >
+        {pageSizeOptions.map((option: number) => (
+          <option key={option} value={option}>
+            {option}
+          </option>
+        ))}
+      </select>
+    )
+
+    return (
+      <span className='page-size-options'>
+        <label>{pageSizeSelect} {t('pagination.entriesPerPage')}</label>
+      </span>
+    )
   }
+
+  return null
 }

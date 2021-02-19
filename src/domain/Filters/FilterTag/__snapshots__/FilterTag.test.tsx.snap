@@ -23,40 +23,25 @@ exports[`<FilterTag /> should render the filter tag 1`] = `
     >
       Type
     </Text>
-    <Text
-      color="#262D33"
-      isInline={true}
-      tag="span"
-      type="small"
-    >
-       is 
-    </Text>
-    <Text
-      color="#262D33"
-      isInline={true}
-      tag="span"
-      type="small"
-      weight={600}
-    >
-      Product Training
-    </Text>
-    <Text
-      color="#262D33"
-      isInline={true}
-      tag="span"
-      type="small"
-    >
-       or 
-    </Text>
-    <Text
-      color="#262D33"
-      isInline={true}
-      tag="span"
-      type="small"
-      weight={600}
-    >
-      IT Training
-    </Text>
+    <TagValue
+      tag={
+        Object {
+          "fieldName": "type",
+          "fieldValues": Array [
+            Object {
+              "label": "Product Training",
+              "value": "product_training_id",
+            },
+            Object {
+              "label": "IT Training",
+              "value": "it_training_id",
+            },
+          ],
+          "label": "Type",
+          "type": "equality",
+        }
+      }
+    />
     <styled.button
       onClick={[Function]}
     >
@@ -84,40 +69,25 @@ exports[`<FilterTag /> should render the filter tag 1`] = `
     >
       Complete date
     </Text>
-    <Text
-      color="#262D33"
-      isInline={true}
-      tag="span"
-      type="small"
-    >
-       from 
-    </Text>
-    <Text
-      color="#262D33"
-      isInline={true}
-      tag="span"
-      type="small"
-      weight={600}
-    >
-      01/01/2019
-    </Text>
-    <Text
-      color="#262D33"
-      isInline={true}
-      tag="span"
-      type="small"
-    >
-       to 
-    </Text>
-    <Text
-      color="#262D33"
-      isInline={true}
-      tag="span"
-      type="small"
-      weight={600}
-    >
-      31/05/2019
-    </Text>
+    <TagValue
+      tag={
+        Object {
+          "fieldName": "complete_at",
+          "fieldValues": Array [
+            Object {
+              "label": "01/01/2019",
+              "value": "01/01/2019",
+            },
+            Object {
+              "label": "31/05/2019",
+              "value": "31/05/2019",
+            },
+          ],
+          "label": "Complete date",
+          "type": "range",
+        }
+      }
+    />
     <styled.button
       onClick={[Function]}
     >

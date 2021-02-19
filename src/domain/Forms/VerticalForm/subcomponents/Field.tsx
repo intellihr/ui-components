@@ -4,6 +4,7 @@ import React from 'react'
 import { IHintWrapperProps } from 'src/domain/Formats/HintWrapper'
 
 import { Props } from '../../../../common'
+import { useTranslateFunction } from '../../../Defaults/Defaults/Defaults'
 import { HintWrapper } from '../../../Formats'
 import { ITooltipPopoverProps, TooltipPopover } from '../../../Popovers/TooltipPopover'
 import { Text } from '../../../Typographies/Text'
@@ -61,47 +62,6 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
     return null
   }
 
-  private get tooltip (): JSX.Element | null {
-    const {
-      tooltipMessage,
-      tooltipProps
-    } = this.props
-
-    if (tooltipMessage) {
-      return (
-        <StyledTooltipPopover>
-          <TooltipPopover {...tooltipProps}>
-            {tooltipMessage}
-          </TooltipPopover>
-        </StyledTooltipPopover>
-      )
-    }
-
-    return null
-  }
-
-  private get inputLabel (): JSX.Element | null {
-    const {
-      inputName,
-      isRequired,
-      label
-    } = this.props
-
-    if (label) {
-      return (
-        <StyledInputLabel
-          htmlFor={inputName}
-          isRequired={isRequired!}
-        >
-          {label}
-          {this.tooltip}
-        </StyledInputLabel>
-      )
-    }
-
-    return null
-  }
-
   private get description (): JSX.Element | null {
     const {
       description
@@ -142,13 +102,23 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
 
   private get label (): JSX.Element | null {
     const {
-      label
+      label,
+      inputName,
+      isRequired,
+      tooltipProps,
+      tooltipMessage
     } = this.props
 
     if (label) {
       return (
         <StyledLabelWrapper>
-          {this.inputLabel}
+          <InputLabel
+            inputName={inputName}
+            isRequired={isRequired}
+            label={label}
+            tooltipProps={tooltipProps}
+            tooltipMessage={tooltipMessage}
+          />
           {this.hint}
         </StyledLabelWrapper>
       )
@@ -193,6 +163,37 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
       </ErrorMessage>
     )
   }
+}
+
+const InputLabel: React.FC<any> = ({
+  inputName,
+  isRequired,
+  label,
+  tooltipMessage,
+  tooltipProps
+}) => {
+  const t = useTranslateFunction()
+
+  if (label) {
+    return (
+      <StyledInputLabel
+        htmlFor={inputName}
+        isRequired={isRequired!}
+        i18nRequiredSuffix={t('requiredSuffix')}
+      >
+        {label}
+        {tooltipMessage && (
+          <StyledTooltipPopover>
+            <TooltipPopover {...tooltipProps}>
+              {tooltipMessage}
+            </TooltipPopover>
+          </StyledTooltipPopover>
+        )}
+      </StyledInputLabel>
+    )
+  }
+
+  return null
 }
 
 export {

@@ -15,6 +15,7 @@ import Select, {
 } from 'react-select'
 
 import { Props } from '../../../common'
+import { useTranslateFunction } from '../../Defaults/Defaults/Defaults'
 import { TabGroupContainer } from '../../Tabs/ScrollingTabGroup/style'
 import { StyledSelectInputWrapper } from './style'
 import style from './style.scss'
@@ -84,9 +85,19 @@ export interface ISelectInputProps {
   componentContext?: string
 }
 
-export class SelectInput extends React.PureComponent<ISelectInputProps> {
+export const SelectInput: React.FC<ISelectInputProps> = (props) => {
+  const t = useTranslateFunction()
+
+  return (
+    <ClassBasedSelectInput
+      {...props}
+      placeholder={props.placeholder || t('selectPlaceholder')}
+    />
+  )
+}
+
+class ClassBasedSelectInput extends React.PureComponent<ISelectInputProps> {
   public static defaultProps: Partial<ISelectInputProps> = {
-    placeholder: 'Please Select',
     isClearable: true,
     isSearchable: true,
     shouldCloseOnSelect: true,

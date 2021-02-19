@@ -3,6 +3,7 @@ import toLower from 'lodash/toLower'
 import React from 'react'
 
 import { Props } from '../../../common'
+import { useTranslateFunction } from '../../Defaults/Defaults/Defaults'
 import { Text } from '../../Typographies/Text'
 import {
   OptionListButton,
@@ -116,25 +117,13 @@ class OptionList extends React.PureComponent<IOptionListProps> {
     } = this.props
 
     if (options.length === 0) {
-      return (
-        <StyledEmptyState>
-          <Text type={Props.TypographyType.Small}>
-            Sorry, We couldn't find any options
-          </Text>
-        </StyledEmptyState>
-      )
+      return <NoOptionsEmptyState />
     }
 
     const filteredOptions = this.options
 
     if (this.hiddenOptions.hidden === options.length) {
-      return (
-        <StyledEmptyState>
-          <Text type={Props.TypographyType.Small}>
-            Unfortunately, we couldn't find anything from your search
-          </Text>
-        </StyledEmptyState>
-      )
+      return <NoResultsEmptyState />
     }
 
     return filteredOptions
@@ -167,6 +156,30 @@ class OptionList extends React.PureComponent<IOptionListProps> {
 
     return handleClick(option)
   }
+}
+
+const NoOptionsEmptyState: React.FC<any> = () => {
+  const t = useTranslateFunction()
+
+  return (
+    <StyledEmptyState>
+      <Text type={Props.TypographyType.Small}>
+        {t('optionList.noOptionsMessage')}
+      </Text>
+    </StyledEmptyState>
+  )
+}
+
+const NoResultsEmptyState: React.FC<any> = () => {
+  const t = useTranslateFunction()
+
+  return (
+    <StyledEmptyState>
+      <Text type={Props.TypographyType.Small}>
+        {t('optionList.noResultsMessage')}
+      </Text>
+    </StyledEmptyState>
+  )
 }
 
 export {

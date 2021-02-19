@@ -28,13 +28,11 @@ exports[`<Record /> should render a Record and no Tooltip with only a custom too
 
 <Record
   name="Position Title"
-  noChildrenText="Not Provided"
   tooltipProps={
     Object {
       "toggleComponent": [Function],
     }
   }
-  variant="labelAbove"
 >
   <styled.div
     data-component-type="record"
@@ -270,14 +268,12 @@ exports[`<Record /> should render a Record and tooltip with a custom tooltip and
 
 <Record
   name="Position Title"
-  noChildrenText="Not Provided"
   tooltipContent="a"
   tooltipProps={
     Object {
       "toggleComponent": [Function],
     }
   }
-  variant="labelAbove"
 >
   <styled.div
     data-component-type="record"
@@ -604,7 +600,6 @@ exports[`<Record /> should render a Record component without children 1`] = `
 <Record
   name="Position Title"
   noChildrenText="No Position Title"
-  variant="labelAbove"
 >
   <styled.div
     data-component-type="record"
@@ -925,8 +920,6 @@ exports[`<Record /> should render a Record component, creating a Text child with
 
 <Record
   name="FTE"
-  noChildrenText="Not Provided"
-  variant="labelAbove"
 >
   <styled.div
     data-component-type="record"
@@ -1248,8 +1241,6 @@ exports[`<Record /> should render a Record component, creating a Text child with
 
 <Record
   name="Position Title"
-  noChildrenText="Not Provided"
-  variant="labelAbove"
 >
   <styled.div
     data-component-type="record"
@@ -1560,8 +1551,6 @@ exports[`<Record /> should render a Record component, with the provided componen
 
 <Record
   name="Position Title"
-  noChildrenText="Not Provided"
-  variant="labelAbove"
 >
   <styled.div
     data-component-type="record"
@@ -1810,9 +1799,7 @@ exports[`<Record /> should render a Record with a Tooltip 1`] = `
 
 <Record
   name="Position Title"
-  noChildrenText="Not Provided"
   tooltipContent="a"
-  variant="labelAbove"
 >
   <styled.div
     data-component-type="record"
@@ -2266,7 +2253,6 @@ exports[`<Record /> should render a label below Record component 1`] = `
 
 <Record
   name="Position Title"
-  noChildrenText="Not Provided"
   variant="labelBelow"
 >
   <styled.div
@@ -2589,7 +2575,6 @@ exports[`<Record /> should render a label right Record component 1`] = `
 
 <Record
   name="Position Title"
-  noChildrenText="Not Provided"
   variant="labelRight"
 >
   <styled.div

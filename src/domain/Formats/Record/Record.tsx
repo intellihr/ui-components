@@ -3,6 +3,7 @@ import isString from 'lodash/isString'
 import React from 'react'
 
 import { Props, Variables } from '../../../common'
+import { useTranslateFunction } from '../../Defaults/Defaults/Defaults'
 import { ITooltipPopoverProps, TooltipPopover } from '../../Popovers/TooltipPopover'
 import { Text} from '../../Typographies/Text'
 import { FieldLabelWrapper, RecordVariant, RecordWrapper } from './style'
@@ -24,53 +25,40 @@ interface IRecordProps {
   variant?: RecordVariant
 }
 
-class Record extends React.PureComponent <IRecordProps> {
-  public static Variant = RecordVariant
-  public static defaultProps: Partial<IRecordProps> = {
-    noChildrenText: 'Not Provided',
-    variant: RecordVariant.LabelAbove
-  }
+const Record: React.FC<IRecordProps> & { Variant: typeof RecordVariant }  = ({
+  componentContext,
+  margins,
+  variant = RecordVariant.LabelAbove,
+  children,
+  noChildrenText,
+  tooltipContent,
+  tooltipProps,
+  name
+}) => {
+  const t = useTranslateFunction()
 
-  get formattedChildren (): JSX.Element[] | JSX.Element | null | undefined {
-    const {
-      children,
-      noChildrenText
-    } = this.props
+  return (
+    <RecordWrapper
+      data-component-type={Props.ComponentType.Record}
+      data-component-context={componentContext}
+      margins={margins}
+      variant={variant}
+    >
+      <div>
+        {children
+          ? React.Children.map<any, React.ReactNode>(
+              children,
+              (child) => {
+                if (isString(child) || isNumber(child)) {
+                  return <Text color={Variables.Color.n800} componentContext={componentContext}>{child}</Text>
+                }
 
-    if (!children) {
-      return (
-        <Text color={Variables.Color.n500} isInline={false}>
-          {noChildrenText}
-        </Text>
-      )
-    }
-
-    return React.Children.map<any, React.ReactNode>(
-      children,
-      this.formattedChild
-    )
-  }
-
-  get tooltip () {
-    const {
-      tooltipContent,
-      tooltipProps
-    } = this.props
-
-    if (tooltipContent) {
-      return <TooltipPopover {...tooltipProps}>{tooltipContent}</TooltipPopover>
-    }
-  }
-
-  get label (): JSX.Element {
-    const {
-      name,
-      componentContext,
-      variant,
-      tooltipContent
-    } = this.props
-
-    return (
+                return child
+              }
+            )
+          : <Text color={Variables.Color.n500} isInline={false}>{noChildrenText || t('notProvided')}</Text>
+        }
+      </div>
       <FieldLabelWrapper
         data-component-type={Props.ComponentType.RecordName}
         data-component-context={componentContext}
@@ -85,52 +73,15 @@ class Record extends React.PureComponent <IRecordProps> {
         >
           {name}
         </Text>
-        {this.tooltip}
+        {tooltipContent && (
+          <TooltipPopover {...tooltipProps}>{tooltipContent}</TooltipPopover>
+        )}
       </FieldLabelWrapper>
-    )
-  }
-
-  public render (): JSX.Element {
-    const {
-      componentContext,
-      margins,
-      variant
-    } = this.props
-
-    return (
-      <RecordWrapper
-        data-component-type={Props.ComponentType.Record}
-        data-component-context={componentContext}
-        margins={margins}
-        variant={variant}
-      >
-        <div>
-          {this.formattedChildren}
-        </div>
-        {this.label}
-      </RecordWrapper>
-    )
-  }
-
-  private formattedChild = (child?: React.ReactNode) => {
-    const {
-      componentContext
-    } = this.props
-
-    if (isString(child) || isNumber(child)) {
-      return (
-        <Text
-          color={Variables.Color.n800}
-          componentContext={componentContext}
-        >
-          {child}
-        </Text>
-      )
-    }
-
-    return child
-  }
+    </RecordWrapper>
+  )
 }
+
+Record.Variant = RecordVariant
 
 export {
   IRecordProps,
