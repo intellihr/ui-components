@@ -3,7 +3,6 @@ import React from 'react'
 
 import { useTranslateFunction } from '../../Defaults/Defaults/Defaults'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
-import { TableCheckboxInput } from '../Table/subcomponents/TableCheckboxInput'
 
 export interface IDataTablePaginationState {
   /** Currently selected page - stored here to allow async changes */

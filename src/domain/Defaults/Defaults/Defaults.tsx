@@ -1,3 +1,4 @@
+import isArray from 'lodash/isArray'
 import isNumber from 'lodash/isNumber'
 import isString from 'lodash/isString'
 import React, { useContext } from 'react'
@@ -6,8 +7,10 @@ interface IDefaults {
   /** Anchor component used for clickable links */
   AnchorComponent?: React.ComponentType<any>
   tenorApiKey?: string
-  i18nTranslationFunction?: any
+  i18nTranslationFunction?: TranslateFunction
 }
+
+type TranslateFunction = (key: string | string[], options?: {[k: string]: any}) => string
 
 const i18nDefaults = {
   'delete': 'Delete',
@@ -75,8 +78,9 @@ const useTranslateFunction = () => {
     return i18nTranslationFunction
   }
 
-  return (i18nKey: keyof typeof i18nDefaults, translationFunctionOptions: {[k: string]: any} = {}) => {
-    let translation = i18nDefaults[i18nKey]
+  return (i18nKey: keyof typeof i18nDefaults | Array<keyof typeof i18nDefaults>, translationFunctionOptions: {[k: string]: any} = {}) => {
+    const key = isArray(i18nKey) ? i18nKey[0] : i18nKey
+    let translation = i18nDefaults[key]
     for (const optionKey of Object.keys(translationFunctionOptions)) {
       if (isString(translationFunctionOptions[optionKey]) || isNumber(translationFunctionOptions[optionKey])) {
         translation = translation.replace(`{{${optionKey}}}`, translationFunctionOptions[optionKey])
@@ -93,5 +97,6 @@ export {
   DefaultsProvider,
   DefaultsContext,
   defaults,
-  useTranslateFunction
+  useTranslateFunction,
+  TranslateFunction
 }

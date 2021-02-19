@@ -62,25 +62,6 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
     return null
   }
 
-  private get tooltip (): JSX.Element | null {
-    const {
-      tooltipMessage,
-      tooltipProps
-    } = this.props
-
-    if (tooltipMessage) {
-      return (
-        <StyledTooltipPopover>
-          <TooltipPopover {...tooltipProps}>
-            {tooltipMessage}
-          </TooltipPopover>
-        </StyledTooltipPopover>
-      )
-    }
-
-    return null
-  }
-
   private get description (): JSX.Element | null {
     const {
       description
@@ -119,6 +100,33 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
     return null
   }
 
+  private get label (): JSX.Element | null {
+    const {
+      label,
+      inputName,
+      isRequired,
+      tooltipProps,
+      tooltipMessage
+    } = this.props
+
+    if (label) {
+      return (
+        <StyledLabelWrapper>
+          <InputLabel
+            inputName={inputName}
+            isRequired={isRequired}
+            label={label}
+            tooltipProps={tooltipProps}
+            tooltipMessage={tooltipMessage}
+          />
+          {this.hint}
+        </StyledLabelWrapper>
+      )
+    }
+
+    return null
+  }
+
   public static defaultProps = {
     isRequired: false,
     showBottomMargin: true
@@ -128,19 +136,12 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
     const {
       children,
       actionMessage,
-      margins,
-      inputName,
-      isRequired,
-      label
+      margins
     } = this.props
 
     return (
       <FieldWrapper margins={margins} >
-        <InputLabel
-          inputName={inputName}
-          isRequired={isRequired}
-          label={label}
-        />
+        {this.label}
         {this.description}
         {children}
         {this.errorMessages}
@@ -167,7 +168,9 @@ class Field extends React.PureComponent<IVerticalFormFieldProps, never> {
 const InputLabel: React.FC<any> = ({
   inputName,
   isRequired,
-  label
+  label,
+  tooltipMessage,
+  tooltipProps
 }) => {
   const t = useTranslateFunction()
 
@@ -179,6 +182,13 @@ const InputLabel: React.FC<any> = ({
         i18nRequiredSuffix={t('requiredSuffix')}
       >
         {label}
+        {tooltipMessage && (
+          <StyledTooltipPopover>
+            <TooltipPopover {...tooltipProps}>
+              {tooltipMessage}
+            </TooltipPopover>
+          </StyledTooltipPopover>
+        )}
       </StyledInputLabel>
     )
   }
