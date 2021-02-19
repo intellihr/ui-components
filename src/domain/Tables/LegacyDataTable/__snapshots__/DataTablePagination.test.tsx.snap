@@ -4,17 +4,25 @@ exports[`<DataTablePagination /> Pagination with few pages should match the snap
 <div
   className="-pagination"
 >
-  <div
-    className="page-details"
-  >
-    Showing 
-    50
-     to 
-    70
-     of 
-    70
-     entries
-  </div>
+  <PageSizeOptions
+    onPageSizeChange={[MockFunction]}
+    page={2}
+    pageSize={25}
+    pageSizeOptions={
+      Array [
+        5,
+        10,
+        20,
+        100,
+      ]
+    }
+    showPageSizeOptions={false}
+  />
+  <PageDetails
+    page={2}
+    pageSize={25}
+    totalCount={70}
+  />
   <div
     className="page-navigation"
   >
@@ -72,17 +80,25 @@ exports[`<DataTablePagination /> Pagination with many pages should match the sna
 <div
   className="-pagination"
 >
-  <div
-    className="page-details"
-  >
-    Showing 
-    30
-     to 
-    40
-     of 
-    295
-     entries
-  </div>
+  <PageSizeOptions
+    onPageSizeChange={[MockFunction]}
+    page={3}
+    pageSize={10}
+    pageSizeOptions={
+      Array [
+        5,
+        10,
+        20,
+        100,
+      ]
+    }
+    showPageSizeOptions={false}
+  />
+  <PageDetails
+    page={3}
+    pageSize={10}
+    totalCount={295}
+  />
   <div
     className="page-navigation"
   >

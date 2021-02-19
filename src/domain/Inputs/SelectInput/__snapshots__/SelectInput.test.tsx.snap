@@ -1,191 +1,78 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SelectInput /> should render a creatable select box 1`] = `
-<styled.div
-  data-component-type="select_input"
->
-  <CreatableSelect
-    autoFocus={false}
-    className="react-select-test selectInput"
-    clearable={true}
-    closeOnSelect={true}
-    filterOptions={[Function]}
-    id="test"
-    isOptionUnique={[Function]}
-    isValidNewOption={[Function]}
-    menuRenderer={[Function]}
-    name="test"
-    newOptionCreator={[Function]}
-    onBlurResetsInput={true}
-    onChange={[Function]}
-    onCloseResetsInput={true}
-    onInputChange={[Function]}
-    onNewOptionClick={[Function]}
-    onSelectResetsInput={true}
-    openOnFocus={false}
-    options={
-      Array [
-        Object {
-          "label": "option1",
-          "value": "value1",
-        },
-        Object {
-          "label": "option2",
-          "value": "value2",
-        },
-      ]
-    }
-    placeholder="Please Select"
-    promptTextCreator={[Function]}
-    removeSelected={true}
-    searchable={true}
-    shouldKeyDownEventCreateNewOption={[Function]}
-    showNewOptionAtTop={false}
-    value=""
-  />
-</styled.div>
+<ClassBasedSelectInput
+  isClearable={true}
+  isSearchable={true}
+  name="test"
+  onNewOptionCreated={[Function]}
+  options={
+    Array [
+      Object {
+        "label": "option1",
+        "value": "value1",
+      },
+      Object {
+        "label": "option2",
+        "value": "value2",
+      },
+    ]
+  }
+  placeholder="Please Select"
+  shouldCloseOnSelect={true}
+  shouldFilteringBePerformed={true}
+  shouldRemoveElementsFromMultiSelect={true}
+  value=""
+/>
 `;
 
 exports[`<SelectInput /> should render a multi select box with options 1`] = `
-<styled.div
-  data-component-type="select_input"
->
-  <Select
-    arrowRenderer={[Function]}
-    autoFocus={false}
-    autosize={true}
-    backspaceRemoves={true}
-    backspaceToRemoveMessage="Press backspace to remove {label}"
-    className="react-select-test selectInput"
-    clearAllText="Clear all"
-    clearRenderer={[Function]}
-    clearValueText="Clear value"
-    clearable={true}
-    closeOnSelect={true}
-    deleteRemoves={true}
-    delimiter=","
-    disabled={false}
-    escapeClearsValue={true}
-    filterOptions={[Function]}
-    id="test"
-    ignoreAccents={true}
-    ignoreCase={true}
-    inputProps={Object {}}
-    isLoading={false}
-    joinValues={false}
-    labelKey="label"
-    matchPos="any"
-    matchProp="any"
-    menuBuffer={0}
-    menuRenderer={[Function]}
-    multi={true}
-    name="test[]"
-    noResultsText="No results found"
-    onBlurResetsInput={true}
-    onChange={[Function]}
-    onCloseResetsInput={true}
-    onInputChange={[Function]}
-    onSelectResetsInput={true}
-    openOnClick={true}
-    openOnFocus={false}
-    optionComponent={[Function]}
-    options={
-      Array [
-        Object {
-          "label": "option1",
-          "value": "value1",
-        },
-        Object {
-          "label": "option2",
-          "value": "value2",
-        },
-      ]
-    }
-    pageSize={5}
-    placeholder="Please Select"
-    removeSelected={true}
-    required={false}
-    rtl={false}
-    scrollMenuIntoView={true}
-    searchable={true}
-    simpleValue={false}
-    tabSelectsValue={true}
-    trimFilter={true}
-    value=""
-    valueComponent={[Function]}
-    valueKey="value"
-  />
-</styled.div>
+<ClassBasedSelectInput
+  isClearable={true}
+  isMultiSelect={true}
+  isSearchable={true}
+  name="test"
+  options={
+    Array [
+      Object {
+        "label": "option1",
+        "value": "value1",
+      },
+      Object {
+        "label": "option2",
+        "value": "value2",
+      },
+    ]
+  }
+  placeholder="Please Select"
+  shouldCloseOnSelect={true}
+  shouldFilteringBePerformed={true}
+  shouldRemoveElementsFromMultiSelect={true}
+  value=""
+/>
 `;
 
 exports[`<SelectInput /> should render a select box with options 1`] = `
-<styled.div
-  data-component-type="select_input"
->
-  <Select
-    arrowRenderer={[Function]}
-    autoFocus={false}
-    autosize={true}
-    backspaceRemoves={true}
-    backspaceToRemoveMessage="Press backspace to remove {label}"
-    className="react-select-test selectInput"
-    clearAllText="Clear all"
-    clearRenderer={[Function]}
-    clearValueText="Clear value"
-    clearable={true}
-    closeOnSelect={true}
-    deleteRemoves={true}
-    delimiter=","
-    disabled={false}
-    escapeClearsValue={true}
-    filterOptions={[Function]}
-    id="test"
-    ignoreAccents={true}
-    ignoreCase={true}
-    inputProps={Object {}}
-    isLoading={false}
-    joinValues={false}
-    labelKey="label"
-    matchPos="any"
-    matchProp="any"
-    menuBuffer={0}
-    menuRenderer={[Function]}
-    multi={false}
-    name="test"
-    noResultsText="No results found"
-    onBlurResetsInput={true}
-    onChange={[Function]}
-    onCloseResetsInput={true}
-    onInputChange={[Function]}
-    onSelectResetsInput={true}
-    openOnClick={true}
-    openOnFocus={false}
-    optionComponent={[Function]}
-    options={
-      Array [
-        Object {
-          "label": "option1",
-          "value": "value1",
-        },
-        Object {
-          "label": "option2",
-          "value": "value2",
-        },
-      ]
-    }
-    pageSize={5}
-    placeholder="Please Select"
-    removeSelected={true}
-    required={false}
-    rtl={false}
-    scrollMenuIntoView={true}
-    searchable={true}
-    simpleValue={false}
-    tabSelectsValue={true}
-    trimFilter={true}
-    value=""
-    valueComponent={[Function]}
-    valueKey="value"
-  />
-</styled.div>
+<ClassBasedSelectInput
+  isClearable={true}
+  isSearchable={true}
+  name="test"
+  options={
+    Array [
+      Object {
+        "label": "option1",
+        "value": "value1",
+      },
+      Object {
+        "label": "option2",
+        "value": "value2",
+      },
+    ]
+  }
+  placeholder="Please Select"
+  shouldCloseOnSelect={true}
+  shouldFilteringBePerformed={true}
+  shouldRemoveElementsFromMultiSelect={true}
+  value=""
+/>
 `;

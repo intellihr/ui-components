@@ -2,6 +2,7 @@ import React, { useCallback, useMemo, useState } from 'react'
 
 import { Props, Variables } from '../../../common'
 import { Button } from '../../Buttons/Button'
+import { useTranslateFunction } from '../../Defaults/Defaults/Defaults'
 import { VerticalForm } from '../../Forms/VerticalForm'
 import { SelectInput } from '../../Inputs/SelectInput'
 import { IDropdownMenuToggleComponentProps } from '../../Popovers/DropdownMenu'
@@ -63,12 +64,14 @@ interface IAddFilterDropdownMenuContentProps<FilterValue = string | number> {
 }
 
 function AddFilterDropdownMenu<FilterValue = string | number> ({
-  filterMessage = 'Show all items where:',
+  filterMessage,
   toggleComponent,
   componentContext,
   filters,
   onFilterAdded
 }: IAddFilterDropdownMenuProps<FilterValue>) {
+  const t = useTranslateFunction()
+
   return (
     <StyledDropdownMenu
       toggleComponent={toggleComponent}
@@ -77,7 +80,7 @@ function AddFilterDropdownMenu<FilterValue = string | number> ({
       {({ closeMenu }: { closeMenu: (() => void) }) => (
         <DropdownMenuContent<FilterValue>
           closeMenu={closeMenu}
-          filterMessage={filterMessage}
+          filterMessage={filterMessage || t('addFilterDropdownMenu.filterMessage')}
           filters={filters}
           onFilterAdded={onFilterAdded}
         />
@@ -93,6 +96,8 @@ function DropdownMenuContent<FilterValue = string | number> (
     filters,
     onFilterAdded
   }: IAddFilterDropdownMenuContentProps<FilterValue>) {
+  const t = useTranslateFunction()
+
   const [selectedFilterName, setSelectedFilterName] = useState<string | null>(null)
   const [filterValue, setFilterValue] = useState<FilterValue | null>(null)
 
@@ -123,7 +128,7 @@ function DropdownMenuContent<FilterValue = string | number> (
             name='filterDropdownValueInput'
             value={(filterValue ?? '') as string | number}
             options={selectedFilter.selectOptions as unknown as ISelectOption[]}
-            placeholder='Select a value'
+            placeholder={t('addFilterDropdownMenu.selectAValue')}
             isClearable={false}
             onChange={onChange}
           />
@@ -168,7 +173,7 @@ function DropdownMenuContent<FilterValue = string | number> (
           name='filterDropdownFieldInput'
           value={selectedFilterName ?? undefined}
           options={filtersOptions}
-          placeholder='Select a filter'
+          placeholder={t('addFilterDropdownMenu.selectAFilter')}
           isClearable={false}
           handleChange={handleFilterSelectChange}
         />
@@ -190,7 +195,7 @@ function DropdownMenuContent<FilterValue = string | number> (
           disabled={!(selectedFilter && filterValue)}
           onClick={applyFilter}
         >
-          Add Filter
+          {t('addFilterDropdownMenu.addFilter')}
         </Button>
       </>
       }

@@ -8,13 +8,7 @@ exports[`<PaginationDetails /> should render a pagination details 1`] = `
   tag="span"
   type="small"
 >
-  Showing 
-  1
-   to 
-  10
-   of 
-  10
-   entries
+  Showing 1 to 10 of 10 entries
 </Text>
 `;
 
@@ -34,12 +28,6 @@ exports[`<PaginationDetails /> should render a pagination details with margin 1`
   tag="span"
   type="small"
 >
-  Showing 
-  1
-   to 
-  10
-   of 
-  10
-   entries
+  Showing 1 to 10 of 10 entries
 </Text>
 `;

@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Props, Variables } from '../../../common'
+import { useTranslateFunction } from '../../Defaults/Defaults/Defaults'
 import { StatusIndicator } from '../../Indicators'
 import { NotProvidedText, PrefixText, TitleText, ValueContainer, ValueText } from './style'
 
@@ -26,6 +27,8 @@ export const Statistic: React.FC<IStatistcProps> = (
     indicatorColor
   }
 ) => {
+  const t = useTranslateFunction()
+
   if (!value) {
     return (
       <div
@@ -33,7 +36,7 @@ export const Statistic: React.FC<IStatistcProps> = (
         data-component-type={Props.ComponentType.Statistic}
       >
         <TitleText>{title}</TitleText>
-        <NotProvidedText>Not Provided</NotProvidedText>
+        <NotProvidedText>{t('notProvided')}</NotProvidedText>
       </div>
     )
   }

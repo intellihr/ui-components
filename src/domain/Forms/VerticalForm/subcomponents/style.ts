@@ -5,6 +5,7 @@ import { styleForMargins } from '../../../Spacers/services/margins'
 
 interface IStyledInputLabelProps {
   isRequired: boolean
+  i18nRequiredSuffix: string
 }
 
 interface IFieldWrapperProps {
@@ -46,7 +47,7 @@ const StyledInputLabel = styled.label`
   ${(props: IStyledInputLabelProps) => props.isRequired && css`
       &::after {
         color: ${Variables.Color.n400};
-        content: ' - required';
+        content: '${` - ${props.i18nRequiredSuffix}`}';
         font-size: ${Variables.FontSize.fzSmall}px;
         font-style: italic;
       }

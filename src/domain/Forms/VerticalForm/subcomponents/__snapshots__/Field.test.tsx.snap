@@ -3,11 +3,10 @@
 exports[`<Field /> should render a vertical form field with a action message 1`] = `
 <styled.div>
   <styled.div>
-    <styled.label
+    <InputLabel
       isRequired={false}
-    >
-      This is a test input
-    </styled.label>
+      label="This is a test input"
+    />
   </styled.div>
   Children
   <div>
@@ -19,20 +18,16 @@ exports[`<Field /> should render a vertical form field with a action message 1`]
 exports[`<Field /> should render a vertical form field with a action message 2`] = `
 <styled.div>
   <styled.div>
-    <styled.label
+    <InputLabel
       isRequired={false}
-    >
-      This is a test input
-      <styled.span>
-        <TooltipPopover
-          toggleComponent={[Function]}
-          variant="neutral"
-          width={100}
-        >
-          I am a test tooltip
-        </TooltipPopover>
-      </styled.span>
-    </styled.label>
+      label="This is a test input"
+      tooltipMessage="I am a test tooltip"
+      tooltipProps={
+        Object {
+          "width": 100,
+        }
+      }
+    />
   </styled.div>
   Children
 </styled.div>
@@ -41,11 +36,10 @@ exports[`<Field /> should render a vertical form field with a action message 2`]
 exports[`<Field /> should render a vertical form field with a description 1`] = `
 <styled.div>
   <styled.div>
-    <styled.label
+    <InputLabel
       isRequired={false}
-    >
-      This is a test input
-    </styled.label>
+      label="This is a test input"
+    />
   </styled.div>
   <styled.div>
     This is a test description
@@ -57,11 +51,10 @@ exports[`<Field /> should render a vertical form field with a description 1`] = 
 exports[`<Field /> should render a vertical form field with a hint 1`] = `
 <styled.div>
   <styled.div>
-    <styled.label
+    <InputLabel
       isRequired={false}
-    >
-      This is a test input
-    </styled.label>
+      label="This is a test input"
+    />
     <HintWrapper
       hint={
         <div>
@@ -87,11 +80,10 @@ exports[`<Field /> should render a vertical form field with a hint 1`] = `
 exports[`<Field /> should render a vertical form field with a single error message 1`] = `
 <styled.div>
   <styled.div>
-    <styled.label
+    <InputLabel
       isRequired={false}
-    >
-      This is a test input
-    </styled.label>
+      label="This is a test input"
+    />
   </styled.div>
   Children
   <styled.div>
@@ -103,11 +95,10 @@ exports[`<Field /> should render a vertical form field with a single error messa
 exports[`<Field /> should render a vertical form field with error messages 1`] = `
 <styled.div>
   <styled.div>
-    <styled.label
+    <InputLabel
       isRequired={false}
-    >
-      This is a test input
-    </styled.label>
+      label="This is a test input"
+    />
   </styled.div>
   Children
   <styled.div>
@@ -126,12 +117,11 @@ exports[`<Field /> should render a vertical form field with nothing 1`] = `<styl
 exports[`<Field /> should render a vertical form field with regular props 1`] = `
 <styled.div>
   <styled.div>
-    <styled.label
-      htmlFor="testInput"
+    <InputLabel
+      inputName="testInput"
       isRequired={true}
-    >
-      This is a test input
-    </styled.label>
+      label="This is a test input"
+    />
   </styled.div>
   Children
 </styled.div>
@@ -140,12 +130,11 @@ exports[`<Field /> should render a vertical form field with regular props 1`] = 
 exports[`<Field /> should render a vertical form field without bottom margin 1`] = `
 <styled.div>
   <styled.div>
-    <styled.label
-      htmlFor="testInput"
+    <InputLabel
+      inputName="testInput"
       isRequired={false}
-    >
-      This is a test input
-    </styled.label>
+      label="This is a test input"
+    />
   </styled.div>
   Children
 </styled.div>

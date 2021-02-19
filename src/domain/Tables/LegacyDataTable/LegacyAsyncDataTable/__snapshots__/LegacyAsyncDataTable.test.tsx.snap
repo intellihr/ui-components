@@ -2082,17 +2082,33 @@ exports[`LegacyAsyncDataTable should match the snapshot 1`] = `
               <div
                 className="-pagination"
               >
-                <div
-                  className="page-details"
+                <PageSizeOptions
+                  onPageSizeChange={[Function]}
+                  page={0}
+                  pageSize={1}
+                  pageSizeOptions={
+                    Array [
+                      5,
+                      10,
+                      20,
+                      25,
+                      50,
+                      100,
+                    ]
+                  }
+                  showPageSizeOptions={false}
+                />
+                <PageDetails
+                  page={0}
+                  pageSize={1}
+                  totalCount={2}
                 >
-                  Showing 
-                  1
-                   to 
-                  1
-                   of 
-                  2
-                   entries
-                </div>
+                  <div
+                    className="page-details"
+                  >
+                    Showing 1 to 1 of 2 entries
+                  </div>
+                </PageDetails>
                 <div
                   className="page-navigation"
                 >
@@ -3451,17 +3467,33 @@ exports[`Loading AsyncDataTable should match the snapshot 1`] = `
               <div
                 className="-pagination"
               >
-                <div
-                  className="page-details"
+                <PageSizeOptions
+                  onPageSizeChange={[Function]}
+                  page={0}
+                  pageSize={1}
+                  pageSizeOptions={
+                    Array [
+                      5,
+                      10,
+                      20,
+                      25,
+                      50,
+                      100,
+                    ]
+                  }
+                  showPageSizeOptions={false}
+                />
+                <PageDetails
+                  page={0}
+                  pageSize={1}
+                  totalCount={2}
                 >
-                  Showing 
-                  1
-                   to 
-                  1
-                   of 
-                  2
-                   entries
-                </div>
+                  <div
+                    className="page-details"
+                  >
+                    Showing 1 to 1 of 2 entries
+                  </div>
+                </PageDetails>
                 <div
                   className="page-navigation"
                 >
@@ -4882,17 +4914,33 @@ exports[`Set noDataComponent on AsyncDataTable should match the snapshot 1`] = `
               <div
                 className="-pagination"
               >
-                <div
-                  className="page-details"
+                <PageSizeOptions
+                  onPageSizeChange={[Function]}
+                  page={0}
+                  pageSize={1}
+                  pageSizeOptions={
+                    Array [
+                      5,
+                      10,
+                      20,
+                      25,
+                      50,
+                      100,
+                    ]
+                  }
+                  showPageSizeOptions={false}
+                />
+                <PageDetails
+                  page={0}
+                  pageSize={1}
+                  totalCount={2}
                 >
-                  Showing 
-                  1
-                   to 
-                  1
-                   of 
-                  2
-                   entries
-                </div>
+                  <div
+                    className="page-details"
+                  >
+                    Showing 1 to 1 of 2 entries
+                  </div>
+                </PageDetails>
                 <div
                   className="page-navigation"
                 >
@@ -6573,17 +6621,33 @@ exports[`onPageChange changes page should match the snapshot 1`] = `
               <div
                 className="-pagination"
               >
-                <div
-                  className="page-details"
+                <PageSizeOptions
+                  onPageSizeChange={[Function]}
+                  page={1}
+                  pageSize={1}
+                  pageSizeOptions={
+                    Array [
+                      5,
+                      10,
+                      20,
+                      25,
+                      50,
+                      100,
+                    ]
+                  }
+                  showPageSizeOptions={false}
+                />
+                <PageDetails
+                  page={1}
+                  pageSize={1}
+                  totalCount={2}
                 >
-                  Showing 
-                  1
-                   to 
-                  2
-                   of 
-                  2
-                   entries
-                </div>
+                  <div
+                    className="page-details"
+                  >
+                    Showing 1 to 2 of 2 entries
+                  </div>
+                </PageDetails>
                 <div
                   className="page-navigation"
                 >

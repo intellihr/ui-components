@@ -17,6 +17,7 @@ import {
 import { IBaseDataTableProps } from '../types'
 import { DataTablePagination, IDataTablePaginationProps } from '../DataTablePagination'
 
+import { useTranslateFunction } from '../../../Defaults/Defaults/Defaults'
 import style from '../DataTable.scss'
 
 type PageSizeOption = 10 | 25 | 50 | 100
@@ -144,25 +145,6 @@ class LegacyDataTable extends React.Component<IDataTableProps, IDataTableState> 
     })
   }
 
-  get searchFilterComponent (): JSX.Element | undefined {
-    const {
-      showSearchFilter,
-      tableId
-    } = this.props
-
-    if (showSearchFilter) {
-      return (
-        <span className='search-filter'>
-          <label>Search:</label>
-          <TextInput
-            handleChange={this.updateSearchFilter}
-            name={`${tableId}-search-filter`}
-          />
-        </span>
-      )
-    }
-  }
-
   public noDataComponent = (props: any): JSX.Element => {
     const {
       noDataComponent
@@ -183,7 +165,11 @@ class LegacyDataTable extends React.Component<IDataTableProps, IDataTableState> 
         key='pagination'
         {...paginationProps}
         totalCount={paginationProps.totalCount ?? this.props.data.length}
-        customComponent={this.searchFilterComponent}
+        customComponent={<SearchFilterComponent
+          showSearchFilter={this.props.showSearchFilter}
+          tableId={this.props.tableId}
+          handleChange={this.updateSearchFilter}
+        />}
       />
     )
   }
@@ -245,6 +231,24 @@ class LegacyDataTable extends React.Component<IDataTableProps, IDataTableState> 
       />
     )
   }
+}
+
+const SearchFilterComponent: React.FC<any> = ({showSearchFilter, tableId, handleChange}) => {
+  const t = useTranslateFunction()
+
+  if (showSearchFilter) {
+    return (
+      <span className='search-filter'>
+          <label>{t('legacyDataTable.search')}</label>
+          <TextInput
+            handleChange={handleChange}
+            name={`${tableId}-search-filter`}
+          />
+        </span>
+    )
+  }
+
+  return null
 }
 
 export {

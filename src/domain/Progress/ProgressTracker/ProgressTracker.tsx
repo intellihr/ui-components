@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Props, Variables } from '../../../common'
+import { useTranslateFunction } from '../../Defaults/Defaults/Defaults'
 import { Text } from '../../Typographies/Text'
 import {
   ProgressStep, ProgressStepVariant
@@ -34,6 +35,7 @@ const getVariant = (index: number, currentIndex: number) => {
 }
 
 const ProgressTracker: React.FC<IProgressTrackerProps> & {Step: typeof ProgressStep} = ({ currentIndex, isMobile = false, margins, componentContext, children}) => {
+  const t = useTranslateFunction()
   const childCount = React.Children.toArray(children).length
 
   return (
@@ -67,7 +69,7 @@ const ProgressTracker: React.FC<IProgressTrackerProps> & {Step: typeof ProgressS
                     color={Variables.Color.n500}
                     margins={{ left: Variables.Spacing.sXSmall }}
                   >
-                    {`Step ${index + 1} of ${childCount}`}
+                    {t('progressTracker.stepCount', { currentStep: index + 1, totalSteps: childCount})}
                   </Text>
                 }
               </>
