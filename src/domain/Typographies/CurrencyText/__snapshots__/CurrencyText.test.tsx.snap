@@ -29,12 +29,8 @@ exports[`<CurrencyText /> should render the Currency Text 1`] = `
 
 <CurrencyText
   decimalPlace={2}
-  flexAlign={false}
-  isInline={true}
   prefix="AUD"
-  prefixType="body"
   value={1000.499}
-  valueType="body"
 >
   <styled.span
     flexAlign={false}
@@ -331,12 +327,9 @@ exports[`<CurrencyText /> should render the Currency Text not inline 1`] = `
 
 <CurrencyText
   decimalPlace={2}
-  flexAlign={false}
   isInline={false}
   prefix="AUD"
-  prefixType="body"
   value={1000.499}
-  valueType="body"
 >
   <styled.span
     flexAlign={false}
@@ -628,13 +621,8 @@ exports[`<CurrencyText /> should render the Currency Text with 0 as value 1`] = 
 }
 
 <CurrencyText
-  decimalPlace={0}
-  flexAlign={false}
-  isInline={true}
   prefix="AUD"
-  prefixType="body"
   value={0}
-  valueType="body"
 >
   <styled.span
     flexAlign={false}
@@ -937,9 +925,7 @@ exports[`<CurrencyText /> should render the Currency Text with a center flex ali
 }
 
 <CurrencyText
-  decimalPlace={0}
   flexAlign={true}
-  isInline={true}
   prefix="AUD"
   prefixType="heading"
   value={1000}
@@ -1235,14 +1221,9 @@ exports[`<CurrencyText /> should render the Currency Text with a red money color
 }
 
 <CurrencyText
-  decimalPlace={0}
-  flexAlign={false}
-  isInline={true}
   prefix="AUD"
-  prefixType="body"
   value={1000}
   valueColor="#FFD2CC"
-  valueType="body"
 >
   <styled.span
     flexAlign={false}
@@ -1538,14 +1519,9 @@ exports[`<CurrencyText /> should render the Currency Text with a red prefix colo
 }
 
 <CurrencyText
-  decimalPlace={0}
-  flexAlign={false}
-  isInline={true}
   prefix="AUD"
   prefixColor="#FFD2CC"
-  prefixType="body"
   value={1000}
-  valueType="body"
 >
   <styled.span
     flexAlign={false}
@@ -1843,11 +1819,7 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small mo
 }
 
 <CurrencyText
-  decimalPlace={0}
-  flexAlign={false}
-  isInline={true}
   prefix="AUD"
-  prefixType="body"
   value={1000}
   valueType="xsmall"
 >
@@ -2141,13 +2113,9 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
 }
 
 <CurrencyText
-  decimalPlace={0}
-  flexAlign={false}
-  isInline={true}
   prefix="AUD"
   prefixType="xsmall"
   value={1000}
-  valueType="body"
 >
   <styled.span
     flexAlign={false}
@@ -2412,13 +2380,7 @@ exports[`<CurrencyText /> should render the Currency Text with an extra small pr
 `;
 
 exports[`<CurrencyText /> should render the Currency Text without value 1`] = `
-<CurrencyText
-  decimalPlace={0}
-  flexAlign={false}
-  isInline={true}
-  prefixType="body"
-  valueType="body"
->
+<CurrencyText>
   -
 </CurrencyText>
 `;

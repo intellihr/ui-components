@@ -5,6 +5,7 @@ Array [
   Array [
     Object {
       "AnchorComponent": [Function],
+      "i18nLocale": "en",
     },
   ],
 ]
@@ -13,7 +14,9 @@ Array [
 exports[`<Defaults /> should provide default values 1`] = `
 Array [
   Array [
-    Object {},
+    Object {
+      "i18nLocale": "en",
+    },
   ],
 ]
 `;
@@ -23,6 +26,7 @@ Array [
   Array [
     Object {
       "AnchorComponent": [Function],
+      "i18nLocale": "en",
     },
   ],
 ]
@@ -31,7 +35,9 @@ Array [
 exports[`<Defaults /> should still provide default values without Provider 1`] = `
 Array [
   Array [
-    Object {},
+    Object {
+      "i18nLocale": "en",
+    },
   ],
 ]
 `;

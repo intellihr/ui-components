@@ -1,8 +1,7 @@
-import padEnd from 'lodash/padEnd'
-import Numeral from 'numeral'
-import React from 'react'
+import React, { useContext, useMemo } from 'react'
 
 import { Props, Variables } from '../../../common'
+import { DefaultsContext } from '../../Defaults'
 import { IHintWrapperProps } from '../../Formats/HintWrapper'
 import { Text } from '../Text'
 import { StyledCurrencyText, StyledPrefixText } from './style'
@@ -32,33 +31,25 @@ interface ICurrencyTextProps {
   margins?: Props.IMargins
 }
 
-type Formatter = (value: string | number, decimalPlace?: number) => string
+type Formatter = (value: string | number, decimalPlace?: number, locale?: string) => string
 
-class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
-  public static defaultProps: Partial<ICurrencyTextProps> = {
-    valueType: Props.TypographyType.Body,
-    prefixType: Props.TypographyType.Body,
-    decimalPlace: 0,
-    flexAlign: false,
-    isInline: true
-  }
-
-  public static formatter: Formatter = (value, decimalPlace) => {
-    let moneyFormat = '0,0.'
-    if (decimalPlace) {
-      moneyFormat = padEnd(moneyFormat, moneyFormat.length + decimalPlace, '0')
-    }
-
-    return Numeral(value.toString()).format(moneyFormat)
-  }
-
-  get prefix (): JSX.Element | null {
-    const {
-      prefix,
-      prefixType,
-      prefixColor
-    } = this.props
-
+const CurrencyText: React.FC<ICurrencyTextProps> & {
+  formatter: Formatter
+} = ({
+  valueType = Props.TypographyType.Body,
+  prefixType = Props.TypographyType.Body,
+  decimalPlace = 0,
+  flexAlign = false,
+  isInline = true,
+  value,
+  margins,
+  prefixColor,
+  prefix,
+  valueColor,
+  valueHintComponentProps
+}) => {
+  const { i18nLocale } = useContext(DefaultsContext)
+  const prefixText = useMemo(() => {
     if (!prefix) {
       return null
     }
@@ -72,51 +63,38 @@ class CurrencyText extends React.PureComponent<ICurrencyTextProps> {
         {prefix}
       </StyledPrefixText>
     )
-  }
+  }, [prefixType, prefixColor, prefix])
 
-  get formattedValue (): JSX.Element {
-    const {
-      decimalPlace,
-      value,
-      valueType,
-      valueColor,
-      valueHintComponentProps
-    } = this.props
-
-    return (
-      <Text
-        type={valueType}
-        color={valueColor}
-        hintComponentProps={valueHintComponentProps}
-      >
-        {CurrencyText.formatter(value!, decimalPlace)}
-      </Text>
-    )
-  }
-
-  public render (): JSX.Element | string {
-    const {
-      value,
-      flexAlign,
-      margins,
-      isInline
-    } = this.props
-
-    if (value || value === 0) {
+  if (value || value === 0) {
       return (
         <StyledCurrencyText
           isInline={isInline}
           margins={margins}
           flexAlign={flexAlign}
         >
-          {this.prefix}
-          {this.formattedValue}
+          {prefixText}
+          <Text
+            type={valueType}
+            color={valueColor}
+            hintComponentProps={valueHintComponentProps}
+          >
+            {CurrencyText.formatter(value!, decimalPlace, i18nLocale)}
+          </Text>
         </StyledCurrencyText>
       )
     }
 
-    return '-'
-  }
+    return (
+      <>-</>
+    )
+}
+
+CurrencyText.formatter = (value, decimalPlace, locale = 'en') => {
+  const formatter = new Intl.NumberFormat(locale, {
+    maximumFractionDigits: decimalPlace,
+    minimumFractionDigits: decimalPlace
+  })
+  return formatter.format(parseFloat(value.toString()))
 }
 
 export {

@@ -1,4 +1,4 @@
-FROM node:10.15.0-alpine
+FROM node:12.20.0-alpine
 
 WORKDIR /var/task
 
@@ -9,5 +9,7 @@ ADD yarn.lock /var/task
 ADD .npmrc /var/task
 
 RUN yarn --frozen-lockfile && mkdir dist types
+
+ENV NODE_ICU_DATA=node_modules/full-icu
 
 ADD . /var/task
