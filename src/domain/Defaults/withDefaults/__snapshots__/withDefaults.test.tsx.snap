@@ -4,7 +4,9 @@ exports[`withDefaults should provide default values 1`] = `
 Array [
   Array [
     Object {
-      "defaults": Object {},
+      "defaults": Object {
+        "i18nLocale": "en",
+      },
     },
   ],
 ]
@@ -14,7 +16,9 @@ exports[`withDefaults should still provide default values without Provider 1`] =
 Array [
   Array [
     Object {
-      "defaults": Object {},
+      "defaults": Object {
+        "i18nLocale": "en",
+      },
       "mockFn": [MockFunction] {
         "calls": [Circular],
         "results": Array [

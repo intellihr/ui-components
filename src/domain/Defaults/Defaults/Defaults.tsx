@@ -8,6 +8,7 @@ interface IDefaults {
   AnchorComponent?: React.ComponentType<any>
   tenorApiKey?: string
   i18nTranslationFunction?: TranslateFunction
+  i18nLocale?: string
 }
 
 type TranslateFunction = (key: string | string[], options?: {[k: string]: any}) => string
@@ -45,7 +46,9 @@ interface IDefaultsProviders {
   children?: React.ReactNode
 }
 
-const defaults: IDefaults = {}
+const defaults: IDefaults = {
+  i18nLocale: 'en'
+}
 
 const DefaultsContext: React.Context<IDefaults> = React.createContext(defaults)
 

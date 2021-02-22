@@ -126,4 +126,11 @@ describe('<CurrencyText />', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it('should format differently based on locale', () => {
+    expect(CurrencyText.formatter(1000.499, 2, 'fr'))
+      .toEqual('1 000,50')
+    expect(CurrencyText.formatter(1000.499, 2, 'au'))
+      .toEqual('1,000.50')
+  })
 })
