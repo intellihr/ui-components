@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 
 import { Props } from '../../../../common'
 import { useClickOutside } from '../../../../common/hooks'
+import { useTranslateFunction } from '../../../Defaults/Defaults/Defaults'
 import { FontAwesomeIcon } from '../../../Icons'
 import { StyledGifButton, StyledGifContainer, StyledGifList, StyledScrollArea } from '../../../Inputs/TextAreaInput/style'
 import { Popover } from '../../../Popovers'
@@ -52,6 +53,8 @@ function transformResults (gifs: IGifObject[]): IGifObject[] {
 }
 
 const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, handleGifChange }) => {
+  const t = useTranslateFunction()
+
   const api = 'https://api.tenor.com/v1/'
 
   const [searchTerm, setSearchTerm] = useState('')
@@ -212,7 +215,7 @@ const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, handleGifC
         onClick={toggleOpened}
         data-component-type={Props.ComponentType.Button}
       >
-        GIF
+        {t('tenorGifSelector.gif')}
       </StyledGifButton>
 
       <Popover isOpen={opened} parentRef={anchorRef}>
@@ -223,7 +226,7 @@ const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, handleGifC
             value={searchTerm}
             handleChange={handleSearchTermChange}
             width='220px'
-            placeholder='Search GIFs'
+            placeholder={t('tenorGifSelector.searchGifs')}
             autoFocus
           />
           <PoweredByTenor />

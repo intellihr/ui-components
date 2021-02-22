@@ -21,6 +21,7 @@ const i18nDefaults = {
   'searchPlaceholder': 'Search',
   'selectPlaceholder': 'Please Select',
   'requiredSuffix': 'required',
+  'remove': 'Remove',
   'addFilterDropdownMenu.selectAFilter': 'Select A Filter',
   'addFilterDropdownMenu.selectAValue': 'Select A Value',
   'addFilterDropdownMenu.addFilter': 'Add Filter',
@@ -38,7 +39,10 @@ const i18nDefaults = {
   'progressTracker.stepCount': 'Step {{currentStep}} of {{totalSteps}}',
   'pagination.details': 'Showing {{firstItemOnPage}} to {{lastItemOnPage}} of {{totalItems}} entries',
   'pagination.entriesPerPage': 'entries per page',
-  'legacyDataTable.search': 'Search:'
+  'legacyDataTable.search': 'Search:',
+  'monthPicker.jumpTo': 'Jump to...',
+  'tenorGifSelector.gif': 'GIF',
+  'tenorGifSelector.searchGifs': 'Search GIFs'
 }
 
 interface IDefaultsProviders {
