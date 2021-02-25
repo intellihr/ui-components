@@ -127,7 +127,7 @@ const HierarchicalSelectInput: React.FC<IHierarchicalSelectInputProps> = (props)
       onOpen={onOpen}
       optionComponent={HierarchicalSelectInputOption}
       options={options}
-      placeholder={placeholder || t('selectPlaceholder')}
+      placeholder={placeholder || t('selectPlaceholder', {defaultValue: 'Please Select'})}
       removeSelected
       resetValue={emptyValue}
       value={value}

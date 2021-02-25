@@ -25,7 +25,7 @@ const GifSection: React.FC<IGifSectionProps> = ({
         <StyledMainGifContainer>
           <StyledGif src={gifUrl} />
           <StyledRemoveButton onClick={clearGif}>
-            {t('remove')}
+            {t('remove', {defaultValue: 'Remove'})}
           </StyledRemoveButton>
         </StyledMainGifContainer>
       )}

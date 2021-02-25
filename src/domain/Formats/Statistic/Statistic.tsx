@@ -36,7 +36,7 @@ export const Statistic: React.FC<IStatistcProps> = (
         data-component-type={Props.ComponentType.Statistic}
       >
         <TitleText>{title}</TitleText>
-        <NotProvidedText>{t('notProvided')}</NotProvidedText>
+        <NotProvidedText>{t('notProvided', {defaultValue: 'Not Provided'})}</NotProvidedText>
       </div>
     )
   }

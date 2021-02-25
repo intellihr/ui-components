@@ -72,7 +72,7 @@ const FilterController: React.FC<IFilterControllerProps> = ({
               <AddFilterDropdownMenu
                 componentContext={componentContext && `${componentContext}-dropdown-menu`}
                 filterMessage={filterMessage}
-                toggleComponent={filterButton(t('filter'))}
+                toggleComponent={filterButton(t('filter', {defaultValue: 'Filter'}))}
                 filters={filters}
                 onFilterAdded={onFilterAdded}
               />
@@ -81,14 +81,14 @@ const FilterController: React.FC<IFilterControllerProps> = ({
                 <AddFilterDropdownMenu
                   componentContext={componentContext && `${componentContext}-dropdown-menu`}
                   filterMessage={filterMessage}
-                  toggleComponent={inputGroupFilterButton(t('filter'))}
+                  toggleComponent={inputGroupFilterButton(t('filter', {defaultValue: 'Filter'}))}
                   filters={filters}
                   onFilterAdded={onFilterAdded}
                 />
                 <TextInput
                   icon={<FontAwesomeIcon type='solid' icon='search' />}
                   name='filterControllerSearchInput'
-                  placeholder={searchPlaceholder || t('searchPlaceholder')}
+                  placeholder={searchPlaceholder || t('searchPlaceholder', {defaultValue: 'Search'})}
                   value={searchValue}
                   groupPosition='right'
                   handleChange={onSearchUpdated}

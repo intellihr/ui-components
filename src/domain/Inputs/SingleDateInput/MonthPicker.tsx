@@ -45,7 +45,7 @@ const MonthPicker = ({date, handleDateChange, setMonthPickerView, monthPickerVie
         <GridLayout.Cell size='shrink'>
           <Text margins={{top: Variables.Spacing.sMedium}} isInline={false}>
             <Text.Link onClick={setMonthPickerView}>
-              {t('monthPicker.jumpTo')}
+              {t('monthPicker.jumpTo', {defaultValue: 'Jump to...'})}
             </Text.Link>
           </Text>
         </GridLayout.Cell>

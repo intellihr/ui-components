@@ -215,7 +215,7 @@ const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, handleGifC
         onClick={toggleOpened}
         data-component-type={Props.ComponentType.Button}
       >
-        {t('tenorGifSelector.gif')}
+        {t('tenorGifSelector.gif', {defaultValue: 'GIF'})}
       </StyledGifButton>
 
       <Popover isOpen={opened} parentRef={anchorRef}>
@@ -226,7 +226,7 @@ const TenorGifSelector: React.FC<ITenorGifSelectorProps> = ({ apiKey, handleGifC
             value={searchTerm}
             handleChange={handleSearchTermChange}
             width='220px'
-            placeholder={t('tenorGifSelector.searchGifs')}
+            placeholder={t('tenorGifSelector.searchGifs', {defaultValue: 'Search GIFs'})}
             autoFocus
           />
           <PoweredByTenor />
