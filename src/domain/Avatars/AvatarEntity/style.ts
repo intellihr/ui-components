@@ -82,7 +82,19 @@ const AvatarEntityInfo = styled.div`
   `}
 `
 
+const SecondaryTextArrayWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+const SecondaryTextMoreDetailsWrapper = styled.div`
+  display: flex;
+  pointer-events: auto;
+`
+
 export {
+  SecondaryTextMoreDetailsWrapper,
+  SecondaryTextArrayWrapper,
   StyledAvatarEntity,
   MainContentWrapper,
   AvatarEntityInfo,

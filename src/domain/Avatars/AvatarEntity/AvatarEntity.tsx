@@ -1,14 +1,10 @@
 import React from 'react'
 
 import { Props, Variables } from '../../../common'
+import { TooltipPopover } from '../../Popovers'
 import { Text } from '../../Typographies/Text'
-import {Avatar, AvatarStatusDotColor} from '../Avatar'
-import {
-  AvatarEntityInfo,
-  MainContentWrapper,
-  StyledAvatar,
-  StyledAvatarEntity, StyledTertiaryText
-} from './style'
+import { Avatar, AvatarStatusDotColor } from '../Avatar'
+import { AvatarEntityInfo, MainContentWrapper, SecondaryTextArrayWrapper, SecondaryTextMoreDetailsWrapper, StyledAvatar, StyledAvatarEntity, StyledTertiaryText } from './style'
 
 enum AvatarEntitySize {
   Small = 'small',
@@ -22,7 +18,7 @@ export interface IAvatarEntityProps {
   /** The primary text */
   primaryText: string
   /** The secondary text */
-  secondaryText?: string
+  secondaryText?: string | string[]
   /** The tertiary text */
   tertiaryText?: string
   /** Specify the size of avatar entity to use */
@@ -100,22 +96,38 @@ class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
       return null
     }
 
-    let text = secondaryText
+    if (Array.isArray(secondaryText)) {
+      const [primarySecondaryString, ...otherSecondaryStrings] = secondaryText
 
-    if (size === AvatarEntitySize.NormalCompact || size === AvatarEntitySize.SmallCompact || size === AvatarEntitySize.XSmallCompact) {
-      text = `(${text})`
+      return (
+        <SecondaryTextArrayWrapper>
+          {this.secondaryTextText(primarySecondaryString)}
+          {otherSecondaryStrings.length > 0 && (
+            <TooltipPopover
+              width={450}
+              variant={TooltipPopover.Variant.Dark}
+              toggleComponent={AvatarEntity.secondaryTextMoreDetailsToggle(otherSecondaryStrings.length, size)}
+            >
+              {otherSecondaryStrings.map((secondaryString, index) => {
+                return (
+                  <Text
+                    key={index}
+                    color={Variables.Color.n200}
+                    type={Props.TypographyType.XSmall}
+                    weight={Variables.FontWeight.fwSemiBold}
+                    margins={{ bottom: Variables.Spacing.s2XSmall }}
+                  >
+                    {secondaryString}
+                  </Text>
+                )
+              })}
+            </TooltipPopover >
+          )}
+        </SecondaryTextArrayWrapper>
+      )
     }
 
-    return (
-      <Text
-        isTruncated
-        color={Variables.Color.n700}
-        margins={size === AvatarEntitySize.NormalCompact || size === AvatarEntitySize.SmallCompact || size === AvatarEntitySize.XSmallCompact ? { left: Variables.Spacing.sXSmall } : undefined}
-        type={size === AvatarEntitySize.Normal ? Props.TypographyType.Small : Props.TypographyType.XSmall}
-      >
-        {text}
-      </Text>
-    )
+    return this.secondaryTextText(secondaryText)
   }
 
   get tertiaryText (): JSX.Element | null {
@@ -141,6 +153,22 @@ class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
           {tertiaryText}
         </Text>
       </StyledTertiaryText>
+    )
+  }
+
+  private static secondaryTextMoreDetailsToggle = (count: number, size?: AvatarEntitySize) => ({ openMenu, closeMenu, toggleComponentRef, ariaProps }: any) => {
+    return (
+      <SecondaryTextMoreDetailsWrapper onMouseEnter={openMenu} onMouseLeave={closeMenu} ref={toggleComponentRef}{...ariaProps}>
+        <Text
+          isTruncated
+          weight={Variables.FontWeight.fwSemiBold}
+          color={Variables.Color.n600}
+          margins={{ left: Variables.Spacing.s2XSmall }}
+          type={size === AvatarEntitySize.Normal ? Props.TypographyType.Small : Props.TypographyType.XSmall}
+        >
+          +{count}
+        </Text>
+      </SecondaryTextMoreDetailsWrapper>
     )
   }
 
@@ -172,6 +200,25 @@ class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
         </MainContentWrapper>
         {this.tertiaryText}
       </StyledAvatarEntity>
+    )
+  }
+
+  private secondaryTextText = (text: string) => {
+    const { size } = this.props
+
+    if (size === AvatarEntitySize.NormalCompact || size === AvatarEntitySize.SmallCompact || size === AvatarEntitySize.XSmallCompact) {
+      text = `(${text})`
+    }
+
+    return (
+      <Text
+        isTruncated
+        color={Variables.Color.n700}
+        margins={size === AvatarEntitySize.NormalCompact || size === AvatarEntitySize.SmallCompact || size === AvatarEntitySize.XSmallCompact ? { left: Variables.Spacing.sXSmall } : undefined}
+        type={size === AvatarEntitySize.Normal ? Props.TypographyType.Small : Props.TypographyType.XSmall}
+      >
+        {text}
+      </Text>
     )
   }
 }
