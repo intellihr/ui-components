@@ -111,6 +111,7 @@ class AvatarEntity extends React.PureComponent<IAvatarEntityProps> {
               {otherSecondaryStrings.map((secondaryString, index) => {
                 return (
                   <Text
+                    isInline={false}
                     key={index}
                     color={Variables.Color.n200}
                     type={Props.TypographyType.XSmall}
