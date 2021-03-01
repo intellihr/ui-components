@@ -2,6 +2,7 @@ import moment, { Moment } from 'moment'
 import React, { useState } from 'react'
 
 import { Variables } from '../../../common'
+import { useTranslateFunction } from '../../Defaults/Defaults/Defaults'
 import { GridLayout } from '../../Layouts/GridLayout'
 import { HorizontalAlignment, VerticalAlignment } from '../../Layouts/GridLayout/style'
 import { Text } from '../../Typographies'
@@ -22,6 +23,8 @@ const monthPickerYears = () => {
 }
 
 const MonthPicker = ({date, handleDateChange, setMonthPickerView, monthPickerView}: IMonthPickerProps) => {
+  const t = useTranslateFunction()
+
   const value = date ?? moment()
   const selectYear = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const newValue = value.clone().set('year', parseInt(event.target.value, 10))
@@ -42,7 +45,7 @@ const MonthPicker = ({date, handleDateChange, setMonthPickerView, monthPickerVie
         <GridLayout.Cell size='shrink'>
           <Text margins={{top: Variables.Spacing.sMedium}} isInline={false}>
             <Text.Link onClick={setMonthPickerView}>
-              Jump to...
+              {t('monthPicker.jumpTo', {defaultValue: 'Jump to...'})}
             </Text.Link>
           </Text>
         </GridLayout.Cell>

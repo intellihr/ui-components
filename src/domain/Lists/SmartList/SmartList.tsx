@@ -81,7 +81,7 @@ const SmartList: React.FC<ISmartList> & {Row: typeof ListRow, Column: typeof Lis
   return (
     <ClassBasedSmartList
       {...props}
-      emptyListText={props.emptyListText || t('noResults')}
+      emptyListText={props.emptyListText || t('noResults', {defaultValue: 'No Results'})}
       translateFunction={t}
     />
   )
@@ -310,10 +310,10 @@ class ClassBasedSmartList extends React.PureComponent<ISmartList, ISmartListStat
 
   public showAllRowContent (visibleRowsCount: number) {
     if (this.state.paginationButton) {
-      return this.props.translateFunction('smartList.showAllRows', { visibleRowsCount })
+      return this.props.translateFunction('smartList.showAllRows', { defaultValue: 'Show All ({{visibleRowsCount}} in Total)', visibleRowsCount })
     }
 
-    return this.props.translateFunction('smartList.collapse')
+    return this.props.translateFunction('smartList.collapse', {defaultValue: 'Collapse'})
   }
 
   get title (): JSX.Element | undefined {

@@ -239,7 +239,7 @@ const SearchFilterComponent: React.FC<any> = ({showSearchFilter, tableId, handle
   if (showSearchFilter) {
     return (
       <span className='search-filter'>
-          <label>{t('legacyDataTable.search')}</label>
+          <label>{t('legacyDataTable.search', {defaultValue: 'Search:'})}</label>
           <TextInput
             handleChange={handleChange}
             name={`${tableId}-search-filter`}

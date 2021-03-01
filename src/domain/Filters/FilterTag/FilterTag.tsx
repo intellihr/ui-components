@@ -79,7 +79,7 @@ const TagValue: React.FC<ITagValueProps> = ({tag}) => {
             color={Variables.Color.n800}
             type={Props.TypographyType.Small}
           >
-            {` ${t('filterTag.from')} `}
+            {` ${t('filterTag.from', {defaultValue: 'from'})} `}
           </Text>
           <Text
             color={Variables.Color.n800}
@@ -92,7 +92,7 @@ const TagValue: React.FC<ITagValueProps> = ({tag}) => {
             color={Variables.Color.n800}
             type={Props.TypographyType.Small}
           >
-            {` ${t('filterTag.to')} `}
+            {` ${t('filterTag.to', {defaultValue: 'to'})} `}
           </Text>
           <Text
             color={Variables.Color.n800}
@@ -115,7 +115,7 @@ const TagValue: React.FC<ITagValueProps> = ({tag}) => {
           color={Variables.Color.n800}
           type={Props.TypographyType.Small}
         >
-          {` ${t('filterTag.is')} `}
+          {` ${t('filterTag.is', {defaultValue: 'is'})} `}
         </Text>
         {
           tag.fieldValues.map((fieldValue, index) => {
@@ -123,7 +123,7 @@ const TagValue: React.FC<ITagValueProps> = ({tag}) => {
               <Fragment key={fieldValue.value}>
                 {index !== 0 && (
                   <Text color={Variables.Color.n800} type={Props.TypographyType.Small}>
-                    {` ${t('filterTag.or')} `}
+                    {` ${t('filterTag.or', {defaultValue: 'or'})} `}
                   </Text>
                 )}
                 <Text

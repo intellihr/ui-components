@@ -56,7 +56,7 @@ const Record: React.FC<IRecordProps> & { Variant: typeof RecordVariant }  = ({
                 return child
               }
             )
-          : <Text color={Variables.Color.n500} isInline={false}>{noChildrenText || t('notProvided')}</Text>
+          : <Text color={Variables.Color.n500} isInline={false}>{noChildrenText || t('notProvided', {defaultValue: 'Not Provided'})}</Text>
         }
       </div>
       <FieldLabelWrapper
