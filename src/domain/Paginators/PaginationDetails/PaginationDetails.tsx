@@ -40,7 +40,12 @@ export const PaginationDetails: React.FC<IPaginationDetailsProps> = ({
       data-component-type={Props.ComponentType.PaginationDetails}
       data-component-context={componentContext}
     >
-      {t('pagination.details', {firstItemOnPage: pageStartingIndex, lastItemOnPage: maxActualCurrentPageIndex, totalItems: totalCount})}
+      {t('pagination.details', {
+        defaultValue: 'Showing {{firstItemOnPage}} to {{lastItemOnPage}} of {{totalItems}} entries',
+        firstItemOnPage: pageStartingIndex,
+        lastItemOnPage: maxActualCurrentPageIndex,
+        totalItems: totalCount
+      })}
     </Text>
   )
 }

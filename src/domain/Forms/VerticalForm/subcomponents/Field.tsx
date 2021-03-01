@@ -179,7 +179,7 @@ const InputLabel: React.FC<any> = ({
       <StyledInputLabel
         htmlFor={inputName}
         isRequired={isRequired!}
-        i18nRequiredSuffix={t('requiredSuffix')}
+        i18nRequiredSuffix={t('requiredSuffix', {defaultValue: 'required'})}
       >
         {label}
         {tooltipMessage && (

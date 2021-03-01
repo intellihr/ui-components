@@ -91,7 +91,7 @@ export const SelectInput: React.FC<ISelectInputProps> = (props) => {
   return (
     <ClassBasedSelectInput
       {...props}
-      placeholder={props.placeholder || t('selectPlaceholder')}
+      placeholder={props.placeholder || t('selectPlaceholder', {defaultValue: 'Please Select'})}
     />
   )
 }

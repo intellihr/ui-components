@@ -38,8 +38,8 @@ export const EmptyState: React.FC<IEmptyStateProps>  = ({
 }) => {
   const t = useTranslateFunction()
 
-  const i18nPrimaryMessage = primaryMessage || t('emptyState.primaryMessage')
-  const i18nSecondaryMessage = secondaryMessage || t('emptyState.secondaryMessage')
+  const i18nPrimaryMessage = primaryMessage || t('emptyState.primaryMessage', {defaultValue: `Oops... We couldn't find anything for this section.`})
+  const i18nSecondaryMessage = secondaryMessage || t('emptyState.secondaryMessage', {defaultValue: `Please speak to your system admin or add information.`})
 
   return (
     <StyledEmptyState

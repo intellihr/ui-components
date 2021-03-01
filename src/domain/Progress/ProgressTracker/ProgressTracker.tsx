@@ -69,7 +69,11 @@ const ProgressTracker: React.FC<IProgressTrackerProps> & {Step: typeof ProgressS
                     color={Variables.Color.n500}
                     margins={{ left: Variables.Spacing.sXSmall }}
                   >
-                    {t('progressTracker.stepCount', { currentStep: index + 1, totalSteps: childCount})}
+                    {t('progressTracker.stepCount', {
+                      defaultValue: 'Step {{currentStep}} of {{totalSteps}}',
+                      currentStep: index + 1,
+                      totalSteps: childCount
+                    })}
                   </Text>
                 }
               </>

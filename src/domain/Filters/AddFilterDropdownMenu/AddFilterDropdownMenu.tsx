@@ -80,7 +80,7 @@ function AddFilterDropdownMenu<FilterValue = string | number> ({
       {({ closeMenu }: { closeMenu: (() => void) }) => (
         <DropdownMenuContent<FilterValue>
           closeMenu={closeMenu}
-          filterMessage={filterMessage || t('addFilterDropdownMenu.filterMessage')}
+          filterMessage={filterMessage || t('addFilterDropdownMenu.filterMessage', {defaultValue: 'Show all items where:'})}
           filters={filters}
           onFilterAdded={onFilterAdded}
         />
@@ -128,7 +128,7 @@ function DropdownMenuContent<FilterValue = string | number> (
             name='filterDropdownValueInput'
             value={(filterValue ?? '') as string | number}
             options={selectedFilter.selectOptions as unknown as ISelectOption[]}
-            placeholder={t('addFilterDropdownMenu.selectAValue')}
+            placeholder={t('addFilterDropdownMenu.selectAValue', {defaultValue: 'Select A Value'})}
             isClearable={false}
             onChange={onChange}
           />
@@ -173,7 +173,7 @@ function DropdownMenuContent<FilterValue = string | number> (
           name='filterDropdownFieldInput'
           value={selectedFilterName ?? undefined}
           options={filtersOptions}
-          placeholder={t('addFilterDropdownMenu.selectAFilter')}
+          placeholder={t('addFilterDropdownMenu.selectAFilter', {defaultValue: 'Select A Filter'})}
           isClearable={false}
           handleChange={handleFilterSelectChange}
         />
@@ -195,7 +195,7 @@ function DropdownMenuContent<FilterValue = string | number> (
           disabled={!(selectedFilter && filterValue)}
           onClick={applyFilter}
         >
-          {t('addFilterDropdownMenu.addFilter')}
+          {t('addFilterDropdownMenu.addFilter', {defaultValue: 'Add Filter'})}
         </Button>
       </>
       }
