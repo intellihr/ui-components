@@ -118,7 +118,7 @@ const HierarchicalSelectInput: React.FC<IHierarchicalSelectInputProps> = (props)
       filterOption={(filterOption)}
       multi={isMultiSelect}
       name={isMultiSelect ? `${name}[]` : name}
-      noResultsText={noResultsText}
+      noResultsText={noResultsText || t('selectNoResultsFound', {defaultValue: 'No results found'})}
       onBlurResetsInput
       onChange={handleChange}
       onCloseResetsInput
