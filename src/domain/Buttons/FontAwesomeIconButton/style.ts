@@ -25,8 +25,6 @@ interface IStyledStatusDot {
   variant: StatusDotVariants
 }
 
-console.log(statusDotVariantsOptions)
-
 const StyledStatusDot = styled.span`
   border-radius: 50%;
   position: absolute;

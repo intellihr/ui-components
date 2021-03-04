@@ -55,7 +55,9 @@ initialState = { isIconChecked: false, isLargeIconChecked: false, isRedIconCheck
 </div>
 ```
 
-#### FontAwesome Icon Button with status dot
+#### Large FontAwesome Icon Button with status dot
+Status dot only supports large fontawesome icon size. 
+Recommend to use large icon size and medium button size to have readable icon and status dot for users. 
 
 ```jsx
 

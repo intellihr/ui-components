@@ -1,7 +1,6 @@
 import {mount, shallow} from 'enzyme'
 import React from 'react'
 
-import {IconButtonVariants} from './colors'
 import {FontAwesomeIconButton} from './FontAwesomeIconButton'
 
 describe('<FontAwesomeIconButton />', () => {
