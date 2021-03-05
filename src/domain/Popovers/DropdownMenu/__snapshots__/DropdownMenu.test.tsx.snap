@@ -53,6 +53,131 @@ exports[`<DropdownMenu /> Render a dropdown using custom content should match th
 </Fragment>
 `;
 
+exports[`<DropdownMenu /> Render a dropdown with icon should match the snapshot 1`] = `
+<Fragment>
+  <styled.button
+    aria-expanded={false}
+    aria-haspopup={true}
+    onClick={[Function]}
+    role="button"
+    type="button"
+  >
+    <Memo(FontAwesomeIcon)
+      icon="ellipsis-v"
+      type="solid"
+    />
+  </styled.button>
+  <Popover
+    animationType="dropdown"
+    id=""
+    isOpen={false}
+    parentAnchorPosition="auto"
+    parentRef={
+      Object {
+        "current": null,
+      }
+    }
+    popoverAnchorPosition="auto"
+  >
+    <FocusTrap
+      _createFocusTrap={[Function]}
+      active={false}
+      focusTrapOptions={
+        Object {
+          "clickOutsideDeactivates": true,
+          "fallbackFocus": <body />,
+          "initialFocus": <body />,
+          "onDeactivate": [Function],
+          "returnFocusOnDeactivate": false,
+        }
+      }
+      paused={false}
+      tag="span"
+    >
+      <styled.div
+        role="menu"
+      >
+        <styled.ul>
+          <Section
+            __closeMenuCallback={[Function]}
+            closeDropdownBehaviour="whenActionProvided"
+            iconProps={
+              Object {
+                "icon": "sticky-note",
+                "iconType": "solid",
+              }
+            }
+            key="0"
+            sectionType="default"
+            text="Section with icon"
+          />
+        </styled.ul>
+      </styled.div>
+    </FocusTrap>
+  </Popover>
+</Fragment>
+`;
+
+exports[`<DropdownMenu /> Render a dropdown with secondary text should match the snapshot 1`] = `
+<Fragment>
+  <styled.button
+    aria-expanded={false}
+    aria-haspopup={true}
+    onClick={[Function]}
+    role="button"
+    type="button"
+  >
+    <Memo(FontAwesomeIcon)
+      icon="ellipsis-v"
+      type="solid"
+    />
+  </styled.button>
+  <Popover
+    animationType="dropdown"
+    id=""
+    isOpen={false}
+    parentAnchorPosition="auto"
+    parentRef={
+      Object {
+        "current": null,
+      }
+    }
+    popoverAnchorPosition="auto"
+  >
+    <FocusTrap
+      _createFocusTrap={[Function]}
+      active={false}
+      focusTrapOptions={
+        Object {
+          "clickOutsideDeactivates": true,
+          "fallbackFocus": <body />,
+          "initialFocus": <body />,
+          "onDeactivate": [Function],
+          "returnFocusOnDeactivate": false,
+        }
+      }
+      paused={false}
+      tag="span"
+    >
+      <styled.div
+        role="menu"
+      >
+        <styled.ul>
+          <Section
+            __closeMenuCallback={[Function]}
+            closeDropdownBehaviour="whenActionProvided"
+            key="0"
+            secondaryText="add a secondary text"
+            sectionType="default"
+            text="Section with Secondary Text"
+          />
+        </styled.ul>
+      </styled.div>
+    </FocusTrap>
+  </Popover>
+</Fragment>
+`;
+
 exports[`<DropdownMenu /> Render a dropdown with tooltip should match the snapshot 1`] = `
 <Fragment>
   <styled.button
