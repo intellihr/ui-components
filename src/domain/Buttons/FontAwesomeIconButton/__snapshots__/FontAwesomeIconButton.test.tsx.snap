@@ -38,7 +38,7 @@ exports[`<FontAwesomeIconButton /> should render a selected icon button 1`] = `
 <FontAwesomeIconButton
   icon="check"
   isSelected={true}
-  type="duotone"
+  type="solid"
 >
   <styled.button
     data-component-type="font_awesome_icon_button"
@@ -56,7 +56,7 @@ exports[`<FontAwesomeIconButton /> should render a selected icon button 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bZQynM",
+            "componentId": "sc-htoDjs",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -95,13 +95,17 @@ exports[`<FontAwesomeIconButton /> should render a selected icon button 1`] = `
   ",
               [Function],
               "
+
+  ",
+              [Function],
+              "
 ",
             ],
           },
           "displayName": "styled.button",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bZQynM",
+          "styledComponentId": "sc-htoDjs",
           "target": "button",
           "toString": [Function],
           "usesTheme": false,
@@ -125,20 +129,22 @@ exports[`<FontAwesomeIconButton /> should render a selected icon button 1`] = `
       >
         <FontAwesomeIcon
           icon="check"
-          type="duotone"
+          size="medium"
+          type="solid"
         >
           <Icon
-            icon="fad fa-check"
+            icon="fas fa-check"
+            size="medium"
           >
             <styled.i
               aria-hidden={true}
-              className="icon fad fa-check"
+              className="icon fas fa-check"
               data-component-type="icon"
               size="medium"
             >
               <StyledComponent
                 aria-hidden={true}
-                className="icon fad fa-check"
+                className="icon fas fa-check"
                 data-component-type="icon"
                 forwardedComponent={
                   Object {
@@ -216,7 +222,7 @@ exports[`<FontAwesomeIconButton /> should render a selected icon button 1`] = `
               >
                 <i
                   aria-hidden={true}
-                  className="c1 icon fad fa-check"
+                  className="c1 icon fas fa-check"
                   data-component-type="icon"
                   size="medium"
                 />
@@ -263,7 +269,7 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
 
 <FontAwesomeIconButton
   icon="check"
-  type="duotone"
+  type="solid"
   variant="red"
 >
   <styled.button
@@ -282,7 +288,7 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bZQynM",
+            "componentId": "sc-htoDjs",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -321,13 +327,17 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
   ",
               [Function],
               "
+
+  ",
+              [Function],
+              "
 ",
             ],
           },
           "displayName": "styled.button",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bZQynM",
+          "styledComponentId": "sc-htoDjs",
           "target": "button",
           "toString": [Function],
           "usesTheme": false,
@@ -351,20 +361,22 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
       >
         <FontAwesomeIcon
           icon="check"
-          type="duotone"
+          size="medium"
+          type="solid"
         >
           <Icon
-            icon="fad fa-check"
+            icon="fas fa-check"
+            size="medium"
           >
             <styled.i
               aria-hidden={true}
-              className="icon fad fa-check"
+              className="icon fas fa-check"
               data-component-type="icon"
               size="medium"
             >
               <StyledComponent
                 aria-hidden={true}
-                className="icon fad fa-check"
+                className="icon fas fa-check"
                 data-component-type="icon"
                 forwardedComponent={
                   Object {
@@ -442,7 +454,7 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
               >
                 <i
                   aria-hidden={true}
-                  className="c1 icon fad fa-check"
+                  className="c1 icon fas fa-check"
                   data-component-type="icon"
                   size="medium"
                 />
@@ -456,24 +468,802 @@ exports[`<FontAwesomeIconButton /> should render a variant icon button 1`] = `
 </FontAwesomeIconButton>
 `;
 
-exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
-.c2 {
+exports[`<FontAwesomeIconButton /> should render a variant icon button icon size 1`] = `
+.c1 {
   display: inline-block;
   font-stretch: normal;
   --fa-primary-color: #2512B3;
   --fa-secondary-color: #2512B3;
 }
 
-.c2.icon {
+.c1.icon {
+  text-align: center;
+  font-size: 1.3125rem;
+}
+
+.c0 {
+  outline: 0;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  -webkit-transition: 0.15s ease-in;
+  transition: 0.15s ease-in;
+  color: #667380;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+}
+
+.c0:hover {
+  color: #424F5C;
+  background: #EDF1F5;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+<FontAwesomeIconButton
+  icon="check"
+  iconSize="large"
+  size="medium"
+  type="solid"
+>
+  <styled.button
+    data-component-type="font_awesome_icon_button"
+    isDisabled={false}
+    isHovered={false}
+    isSelected={false}
+    size="medium"
+    type="button"
+    variant="neutral"
+  >
+    <StyledComponent
+      data-component-type="font_awesome_icon_button"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-htoDjs",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  outline: 0;
+  cursor: pointer;
+  width: ",
+              "32",
+              "px;
+  height: ",
+              "32",
+              "px;
+  border-radius: ",
+              "32",
+              "px;
+  transition: 0.15s ease-in;
+  ",
+              [Function],
+              ";
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.button",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-htoDjs",
+          "target": "button",
+          "toString": [Function],
+          "usesTheme": false,
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      isDisabled={false}
+      isHovered={false}
+      isSelected={false}
+      size="medium"
+      type="button"
+      variant="neutral"
+    >
+      <button
+        className="c0"
+        data-component-type="font_awesome_icon_button"
+        size="medium"
+        type="button"
+      >
+        <FontAwesomeIcon
+          icon="check"
+          size="large"
+          type="solid"
+        >
+          <Icon
+            icon="fas fa-check"
+            size="large"
+          >
+            <styled.i
+              aria-hidden={true}
+              className="icon fas fa-check"
+              data-component-type="icon"
+              size="large"
+            >
+              <StyledComponent
+                aria-hidden={true}
+                className="icon fas fa-check"
+                data-component-type="icon"
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-htpNat",
+                      "isStatic": false,
+                      "lastClassName": "c1",
+                      "rules": Array [
+                        "
+  display: inline-block;
+  font-stretch: normal;
+  --fa-primary-color: ",
+                        "#2512B3",
+                        ";
+  --fa-secondary-color: ",
+                        "#2512B3",
+                        ";
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  &.icon {
+    text-align: center;
+
+  ",
+                        [Function],
+                        "
+  }
+",
+                      ],
+                    },
+                    "displayName": "styled.i",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-htpNat",
+                    "target": "i",
+                    "toString": [Function],
+                    "usesTheme": false,
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                size="large"
+              >
+                <i
+                  aria-hidden={true}
+                  className="c1 icon fas fa-check"
+                  data-component-type="icon"
+                  size="large"
+                />
+              </StyledComponent>
+            </styled.i>
+          </Icon>
+        </FontAwesomeIcon>
+      </button>
+    </StyledComponent>
+  </styled.button>
+</FontAwesomeIconButton>
+`;
+
+exports[`<FontAwesomeIconButton /> should render a variant icon button size 1`] = `
+.c1 {
+  display: inline-block;
+  font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
+}
+
+.c1.icon {
   text-align: center;
   font-size: 1rem;
 }
 
 .c0 {
-  cursor: help;
+  outline: 0;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  -webkit-transition: 0.15s ease-in;
+  transition: 0.15s ease-in;
+  color: #667380;
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+}
+
+.c0:hover {
+  color: #424F5C;
+  background: #EDF1F5;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+<FontAwesomeIconButton
+  icon="check"
+  size="large"
+  type="solid"
+>
+  <styled.button
+    data-component-type="font_awesome_icon_button"
+    isDisabled={false}
+    isHovered={false}
+    isSelected={false}
+    size="large"
+    type="button"
+    variant="neutral"
+  >
+    <StyledComponent
+      data-component-type="font_awesome_icon_button"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-htoDjs",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  outline: 0;
+  cursor: pointer;
+  width: ",
+              "32",
+              "px;
+  height: ",
+              "32",
+              "px;
+  border-radius: ",
+              "32",
+              "px;
+  transition: 0.15s ease-in;
+  ",
+              [Function],
+              ";
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.button",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-htoDjs",
+          "target": "button",
+          "toString": [Function],
+          "usesTheme": false,
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      isDisabled={false}
+      isHovered={false}
+      isSelected={false}
+      size="large"
+      type="button"
+      variant="neutral"
+    >
+      <button
+        className="c0"
+        data-component-type="font_awesome_icon_button"
+        size="large"
+        type="button"
+      >
+        <FontAwesomeIcon
+          icon="check"
+          size="medium"
+          type="solid"
+        >
+          <Icon
+            icon="fas fa-check"
+            size="medium"
+          >
+            <styled.i
+              aria-hidden={true}
+              className="icon fas fa-check"
+              data-component-type="icon"
+              size="medium"
+            >
+              <StyledComponent
+                aria-hidden={true}
+                className="icon fas fa-check"
+                data-component-type="icon"
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-htpNat",
+                      "isStatic": false,
+                      "lastClassName": "c1",
+                      "rules": Array [
+                        "
+  display: inline-block;
+  font-stretch: normal;
+  --fa-primary-color: ",
+                        "#2512B3",
+                        ";
+  --fa-secondary-color: ",
+                        "#2512B3",
+                        ";
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  &.icon {
+    text-align: center;
+
+  ",
+                        [Function],
+                        "
+  }
+",
+                      ],
+                    },
+                    "displayName": "styled.i",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-htpNat",
+                    "target": "i",
+                    "toString": [Function],
+                    "usesTheme": false,
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                size="medium"
+              >
+                <i
+                  aria-hidden={true}
+                  className="c1 icon fas fa-check"
+                  data-component-type="icon"
+                  size="medium"
+                />
+              </StyledComponent>
+            </styled.i>
+          </Icon>
+        </FontAwesomeIcon>
+      </button>
+    </StyledComponent>
+  </styled.button>
+</FontAwesomeIconButton>
+`;
+
+exports[`<FontAwesomeIconButton /> should render a variant icon button with status dot 1`] = `
+.c1 {
+  display: inline-block;
+  font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
+}
+
+.c1.icon {
+  text-align: center;
+  font-size: 1.3125rem;
+}
+
+.c2 {
+  border-radius: 50%;
+  position: absolute;
+  bottom: 4px;
+  padding: 4px;
+  right: 4px;
+  border: 2px solid #FFFFFF;
+  background: #432DF3;
+}
+
+.c0 {
+  outline: 0;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  -webkit-transition: 0.15s ease-in;
+  transition: 0.15s ease-in;
+  color: #667380;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+}
+
+.c0:hover {
+  color: #424F5C;
+  background: #EDF1F5;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+<FontAwesomeIconButton
+  icon="check"
+  iconSize="large"
+  size="medium"
+  statusDotVariant="indigo"
+  type="solid"
+>
+  <styled.button
+    data-component-type="font_awesome_icon_button"
+    isDisabled={false}
+    isHovered={false}
+    isSelected={false}
+    size="medium"
+    type="button"
+    variant="neutral"
+  >
+    <StyledComponent
+      data-component-type="font_awesome_icon_button"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-htoDjs",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  outline: 0;
+  cursor: pointer;
+  width: ",
+              "32",
+              "px;
+  height: ",
+              "32",
+              "px;
+  border-radius: ",
+              "32",
+              "px;
+  transition: 0.15s ease-in;
+  ",
+              [Function],
+              ";
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
+",
+            ],
+          },
+          "displayName": "styled.button",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-htoDjs",
+          "target": "button",
+          "toString": [Function],
+          "usesTheme": false,
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      isDisabled={false}
+      isHovered={false}
+      isSelected={false}
+      size="medium"
+      type="button"
+      variant="neutral"
+    >
+      <button
+        className="c0"
+        data-component-type="font_awesome_icon_button"
+        size="medium"
+        type="button"
+      >
+        <FontAwesomeIcon
+          icon="check"
+          size="large"
+          type="solid"
+        >
+          <Icon
+            icon="fas fa-check"
+            size="large"
+          >
+            <styled.i
+              aria-hidden={true}
+              className="icon fas fa-check"
+              data-component-type="icon"
+              size="large"
+            >
+              <StyledComponent
+                aria-hidden={true}
+                className="icon fas fa-check"
+                data-component-type="icon"
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-htpNat",
+                      "isStatic": false,
+                      "lastClassName": "c1",
+                      "rules": Array [
+                        "
+  display: inline-block;
+  font-stretch: normal;
+  --fa-primary-color: ",
+                        "#2512B3",
+                        ";
+  --fa-secondary-color: ",
+                        "#2512B3",
+                        ";
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  ",
+                        [Function],
+                        "
+
+  &.icon {
+    text-align: center;
+
+  ",
+                        [Function],
+                        "
+  }
+",
+                      ],
+                    },
+                    "displayName": "styled.i",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-htpNat",
+                    "target": "i",
+                    "toString": [Function],
+                    "usesTheme": false,
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                size="large"
+              >
+                <i
+                  aria-hidden={true}
+                  className="c1 icon fas fa-check"
+                  data-component-type="icon"
+                  size="large"
+                />
+              </StyledComponent>
+            </styled.i>
+          </Icon>
+        </FontAwesomeIcon>
+        <styled.span
+          variant="indigo"
+        >
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bZQynM",
+                  "isStatic": false,
+                  "lastClassName": "c2",
+                  "rules": Array [
+                    "
+  border-radius: 50%;
+  position: absolute;
+  bottom: ",
+                    "4",
+                    "px;
+  padding: ",
+                    "4",
+                    "px;
+  right: ",
+                    "4",
+                    "px;
+  border: 2px solid ",
+                    "#FFFFFF",
+                    ";
+  ",
+                    [Function],
+                    ";
+",
+                  ],
+                },
+                "displayName": "styled.span",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bZQynM",
+                "target": "span",
+                "toString": [Function],
+                "usesTheme": false,
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+            variant="indigo"
+          >
+            <span
+              className="c2"
+            />
+          </StyledComponent>
+        </styled.span>
+      </button>
+    </StyledComponent>
+  </styled.button>
+</FontAwesomeIconButton>
+`;
+
+exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
+.c3 {
+  display: inline-block;
+  font-stretch: normal;
+  --fa-primary-color: #2512B3;
+  --fa-secondary-color: #2512B3;
+}
+
+.c3.icon {
+  text-align: center;
+  font-size: 1rem;
 }
 
 .c1 {
+  cursor: help;
+}
+
+.c0 {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+.c2 {
   outline: 0;
   cursor: pointer;
   width: 32px;
@@ -484,7 +1274,7 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
   color: #667380;
 }
 
-.c1:hover {
+.c2:hover {
   color: #424F5C;
   background: #EDF1F5;
   -webkit-transition: 0.2s ease-out;
@@ -494,251 +1284,310 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
 <FontAwesomeIconButton
   icon="check"
   tooltipText="tooltip text"
-  type="duotone"
+  type="solid"
 >
-  <TooltipPopover
+  <styled.span
     data-component-type="font_awesome_icon_button"
-    toggleComponent={[Function]}
-    variant="dark"
-    width={300}
+    size="small"
   >
-    <styled.span>
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-ifAKCX",
-              "isStatic": false,
-              "lastClassName": "c0",
-              "rules": Array [
-                "
-  cursor: ",
-                [Function],
-                ";
+    <StyledComponent
+      data-component-type="font_awesome_icon_button"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-gzVnrw",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  position: relative;
+  display: inline-block;
+  width: ",
+              "32",
+              "px;
+  height: ",
+              "32",
+              "px;
+
+  ",
+              [Function],
+              "
+
+  ",
+              [Function],
+              "
 ",
-              ],
-            },
-            "displayName": "styled.span",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "sc-ifAKCX",
-            "target": "span",
-            "toString": [Function],
-            "usesTheme": false,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-gzVnrw",
+          "target": "span",
+          "toString": [Function],
+          "usesTheme": false,
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
         }
-        forwardedRef={null}
+      }
+      forwardedRef={null}
+      size="small"
+    >
+      <span
+        className="c0"
+        data-component-type="font_awesome_icon_button"
+        size="small"
       >
-        <span
-          className="c0"
+        <TooltipPopover
+          toggleComponent={[Function]}
+          variant="dark"
+          width={300}
         >
-          <span
-            aria-expanded={false}
-            aria-haspopup={true}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            role="button"
-          >
-            <styled.button
-              isDisabled={false}
-              isHovered={false}
-              isSelected={false}
-              size="small"
-              type="button"
-              variant="neutral"
+          <styled.span>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-ifAKCX",
+                    "isStatic": false,
+                    "lastClassName": "c1",
+                    "rules": Array [
+                      "
+  cursor: ",
+                      [Function],
+                      ";
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-ifAKCX",
+                  "target": "span",
+                  "toString": [Function],
+                  "usesTheme": false,
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
             >
-              <StyledComponent
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-bZQynM",
-                      "isStatic": false,
-                      "lastClassName": "c1",
-                      "rules": Array [
-                        "
+              <span
+                className="c1"
+              >
+                <span
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="button"
+                >
+                  <styled.button
+                    isDisabled={false}
+                    isHovered={false}
+                    isSelected={false}
+                    size="small"
+                    type="button"
+                    variant="neutral"
+                  >
+                    <StyledComponent
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-htoDjs",
+                            "isStatic": false,
+                            "lastClassName": "c2",
+                            "rules": Array [
+                              "
   outline: 0;
   cursor: pointer;
   width: ",
-                        "32",
-                        "px;
+                              "32",
+                              "px;
   height: ",
-                        "32",
-                        "px;
+                              "32",
+                              "px;
   border-radius: ",
-                        "32",
-                        "px;
+                              "32",
+                              "px;
   transition: 0.15s ease-in;
   ",
-                        [Function],
-                        ";
+                              [Function],
+                              ";
   ",
-                        [Function],
-                        "
+                              [Function],
+                              "
 
   ",
-                        [Function],
-                        "
+                              [Function],
+                              "
 
   ",
-                        [Function],
-                        "
+                              [Function],
+                              "
 
   ",
-                        [Function],
-                        "
+                              [Function],
+                              "
 
   ",
-                        [Function],
-                        "
+                              [Function],
+                              "
+
+  ",
+                              [Function],
+                              "
 ",
-                      ],
-                    },
-                    "displayName": "styled.button",
-                    "foldedComponentIds": Array [],
-                    "render": [Function],
-                    "styledComponentId": "sc-bZQynM",
-                    "target": "button",
-                    "toString": [Function],
-                    "usesTheme": false,
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
-                isDisabled={false}
-                isHovered={false}
-                isSelected={false}
-                size="small"
-                type="button"
-                variant="neutral"
-              >
-                <button
-                  className="c1"
-                  size="small"
-                  type="button"
-                >
-                  <FontAwesomeIcon
-                    icon="check"
-                    type="duotone"
-                  >
-                    <Icon
-                      icon="fad fa-check"
+                            ],
+                          },
+                          "displayName": "styled.button",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-htoDjs",
+                          "target": "button",
+                          "toString": [Function],
+                          "usesTheme": false,
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      isDisabled={false}
+                      isHovered={false}
+                      isSelected={false}
+                      size="small"
+                      type="button"
+                      variant="neutral"
                     >
-                      <styled.i
-                        aria-hidden={true}
-                        className="icon fad fa-check"
-                        data-component-type="icon"
-                        size="medium"
+                      <button
+                        className="c2"
+                        size="small"
+                        type="button"
                       >
-                        <StyledComponent
-                          aria-hidden={true}
-                          className="icon fad fa-check"
-                          data-component-type="icon"
-                          forwardedComponent={
-                            Object {
-                              "$$typeof": Symbol(react.forward_ref),
-                              "attrs": Array [],
-                              "componentStyle": ComponentStyle {
-                                "componentId": "sc-htpNat",
-                                "isStatic": false,
-                                "lastClassName": "c2",
-                                "rules": Array [
-                                  "
+                        <FontAwesomeIcon
+                          icon="check"
+                          size="medium"
+                          type="solid"
+                        >
+                          <Icon
+                            icon="fas fa-check"
+                            size="medium"
+                          >
+                            <styled.i
+                              aria-hidden={true}
+                              className="icon fas fa-check"
+                              data-component-type="icon"
+                              size="medium"
+                            >
+                              <StyledComponent
+                                aria-hidden={true}
+                                className="icon fas fa-check"
+                                data-component-type="icon"
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "sc-htpNat",
+                                      "isStatic": false,
+                                      "lastClassName": "c3",
+                                      "rules": Array [
+                                        "
   display: inline-block;
   font-stretch: normal;
   --fa-primary-color: ",
-                                  "#2512B3",
-                                  ";
+                                        "#2512B3",
+                                        ";
   --fa-secondary-color: ",
-                                  "#2512B3",
-                                  ";
+                                        "#2512B3",
+                                        ";
 
   ",
-                                  [Function],
-                                  "
+                                        [Function],
+                                        "
 
   ",
-                                  [Function],
-                                  "
+                                        [Function],
+                                        "
   ",
-                                  [Function],
-                                  "
+                                        [Function],
+                                        "
 
   ",
-                                  [Function],
-                                  "
+                                        [Function],
+                                        "
 
   ",
-                                  [Function],
-                                  "
+                                        [Function],
+                                        "
 
   ",
-                                  [Function],
-                                  "
+                                        [Function],
+                                        "
 
   ",
-                                  [Function],
-                                  "
+                                        [Function],
+                                        "
 
   ",
-                                  [Function],
-                                  "
+                                        [Function],
+                                        "
 
   &.icon {
     text-align: center;
 
   ",
-                                  [Function],
-                                  "
+                                        [Function],
+                                        "
   }
 ",
-                                ],
-                              },
-                              "displayName": "styled.i",
-                              "foldedComponentIds": Array [],
-                              "render": [Function],
-                              "styledComponentId": "sc-htpNat",
-                              "target": "i",
-                              "toString": [Function],
-                              "usesTheme": false,
-                              "warnTooManyClasses": [Function],
-                              "withComponent": [Function],
-                            }
-                          }
-                          forwardedRef={null}
-                          size="medium"
-                        >
-                          <i
-                            aria-hidden={true}
-                            className="c2 icon fad fa-check"
-                            data-component-type="icon"
-                            size="medium"
-                          />
-                        </StyledComponent>
-                      </styled.i>
-                    </Icon>
-                  </FontAwesomeIcon>
-                </button>
-              </StyledComponent>
-            </styled.button>
-          </span>
-        </span>
-      </StyledComponent>
-    </styled.span>
-    <Popover
-      animationType="tooltip"
-      id=""
-      isOpen={false}
-      parentAnchorPosition="auto"
-      parentRef={
-        Object {
-          "current": .c1 {
+                                      ],
+                                    },
+                                    "displayName": "styled.i",
+                                    "foldedComponentIds": Array [],
+                                    "render": [Function],
+                                    "styledComponentId": "sc-htpNat",
+                                    "target": "i",
+                                    "toString": [Function],
+                                    "usesTheme": false,
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
+                                }
+                                forwardedRef={null}
+                                size="medium"
+                              >
+                                <i
+                                  aria-hidden={true}
+                                  className="c3 icon fas fa-check"
+                                  data-component-type="icon"
+                                  size="medium"
+                                />
+                              </StyledComponent>
+                            </styled.i>
+                          </Icon>
+                        </FontAwesomeIcon>
+                      </button>
+                    </StyledComponent>
+                  </styled.button>
+                </span>
+              </span>
+            </StyledComponent>
+          </styled.span>
+          <Popover
+            animationType="tooltip"
+            id=""
+            isOpen={false}
+            parentAnchorPosition="auto"
+            parentRef={
+              Object {
+                "current": .c1 {
   display: inline-block;
   font-stretch: normal;
   --fa-primary-color: #2512B3;
@@ -769,45 +1618,48 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
 }
 
 <span
-            aria-expanded="false"
-            aria-haspopup="true"
-            role="button"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  role="button"
+                >
+                  <button
+                    class="c0"
+                    type="button"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="c1 icon fas fa-check"
+                      data-component-type="icon"
+                    />
+                  </button>
+                </span>,
+              }
+            }
+            popoverAnchorPosition="auto"
           >
-            <button
-              class="c0"
-              type="button"
+            <Portal
+              containerInfo={<body />}
             >
-              <i
-                aria-hidden="true"
-                class="c1 icon fad fa-check"
-                data-component-type="icon"
+              <Transition
+                appear={false}
+                enter={true}
+                exit={true}
+                in={false}
+                mountOnEnter={true}
+                onEnter={[Function]}
+                onEntered={[Function]}
+                onEntering={[Function]}
+                onExit={[Function]}
+                onExited={[Function]}
+                onExiting={[Function]}
+                timeout={200}
+                unmountOnExit={true}
               />
-            </button>
-          </span>,
-        }
-      }
-      popoverAnchorPosition="auto"
-    >
-      <Portal
-        containerInfo={<body />}
-      >
-        <Transition
-          appear={false}
-          enter={true}
-          exit={true}
-          in={false}
-          mountOnEnter={true}
-          onEnter={[Function]}
-          onEntered={[Function]}
-          onEntering={[Function]}
-          onExit={[Function]}
-          onExited={[Function]}
-          onExiting={[Function]}
-          timeout={200}
-          unmountOnExit={true}
-        />
-      </Portal>
-    </Popover>
-  </TooltipPopover>
+            </Portal>
+          </Popover>
+        </TooltipPopover>
+      </span>
+    </StyledComponent>
+  </styled.span>
 </FontAwesomeIconButton>
 `;

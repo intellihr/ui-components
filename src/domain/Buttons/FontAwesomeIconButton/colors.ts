@@ -5,6 +5,12 @@ enum IconButtonVariants {
   Red = 'red'
 }
 
+enum StatusDotVariants {
+  Info = 'indigo',
+  Critical = 'red',
+  Warning = 'yellow'
+}
+
 interface IVariantOption {
   iconColor: Variables.Color
   hoverIconColor: Variables.Color,
@@ -34,7 +40,15 @@ const variantOptions: VariantOptions = {
   }
 }
 
+const statusDotVariantsOptions: {[K in StatusDotVariants]: Variables.Color} = {
+  [StatusDotVariants.Critical]: Variables.Color.r400,
+  [StatusDotVariants.Warning]: Variables.Color.o400,
+  [StatusDotVariants.Info]: Variables.Color.i400
+}
+
 export {
   IconButtonVariants,
-  variantOptions
+  variantOptions,
+  statusDotVariantsOptions,
+  StatusDotVariants
 }
