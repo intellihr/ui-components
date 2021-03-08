@@ -18,7 +18,8 @@ const MenuItem: React.FC<IMenuItemProps> = (
     icon,
     isActive,
     isLoading,
-    label
+    label,
+    openInNewTab = false
   }) => {
   const [open, setOpen] = useState(isOpen || false)
   const onToggle = useCallback((type: IToggleType) => {
@@ -42,6 +43,7 @@ const MenuItem: React.FC<IMenuItemProps> = (
             anchorComponentProps={anchorComponentProps}
             icon={icon}
             isLoading={isLoading}
+            openInNewTab={openInNewTab}
           />
         }
       >
@@ -59,6 +61,7 @@ const MenuItem: React.FC<IMenuItemProps> = (
       anchorComponentProps={anchorComponentProps}
       icon={icon}
       isLoading={isLoading}
+      openInNewTab={openInNewTab}
     />
   )
 }
@@ -71,6 +74,7 @@ const MemoMenuItem = React.memo(MenuItem,(prevProps, nextProps) => {
     nextProps.isActive === prevProps.isActive &&
     nextProps.isOpen === prevProps.isOpen &&
     prevProps.children === nextProps.children &&
+    prevProps.openInNewTab === nextProps.openInNewTab &&
     isEqual(prevProps.handleSizeChange, nextProps.handleSizeChange) &&
     (prevProps.anchorComponentProps === nextProps.anchorComponentProps || isEqual(prevProps.anchorComponentProps, nextProps.anchorComponentProps))
 })

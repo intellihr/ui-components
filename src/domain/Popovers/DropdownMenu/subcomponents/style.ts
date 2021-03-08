@@ -3,6 +3,10 @@ import styled, { css } from 'styled-components'
 import { Variables } from '../../../../common'
 import { SectionType } from './Section'
 
+interface IStyledSection {
+  hasSecondaryText: boolean
+}
+
 const DefaultDropdownButton = styled.button`
   background-color: transparent;
   border: 1px solid transparent;
@@ -184,6 +188,7 @@ const StyledSection = styled.li`
     outline: 0;
     padding: 1em;
     text-align: left;
+    ${(props: IStyledSection) => props.hasSecondaryText ? css`padding: 7px 1em;` : css` padding: 1em;`}
 
     &,
     .left-component,
@@ -230,9 +235,21 @@ const StyledSection = styled.li`
   }
 `
 
-const StyledSectionContent = styled.div`
+const StyledSectionContentWithTooltip = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
+`
+
+const StyledSectionContent = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+const FontAwesomeIconWrapper = styled.div`
+  width: ${Variables.Spacing.sLarge}px;
+  display: flex;
+  justify-content: space-around;
 `
 
 export {
@@ -241,5 +258,7 @@ export {
   StyledSection,
   StyledDropdownSectionList,
   StyledDropdownCustomContent,
-  StyledSectionContent
+  StyledSectionContentWithTooltip,
+  StyledSectionContent,
+  FontAwesomeIconWrapper
 }

@@ -16,13 +16,15 @@ const MenuItemContent: React.FC<IMenuItemContent> = ({
         icon,
         label,
         isLoading,
-        isOpen
+        isOpen,
+        openInNewTab
       }) => {
   return (
     <StyledMenuItem
       isActive={isActive}
       href={href}
       anchorComponentProps={anchorComponentProps}
+      openInNewTab={openInNewTab}
     >
       {icon && (
         <StyledIcon isActive={isActive}>

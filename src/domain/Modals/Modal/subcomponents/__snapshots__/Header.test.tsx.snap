@@ -68,7 +68,7 @@ exports[`<Header /> should render modal header 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-VigVT",
+            "componentId": "sc-iAyFgw",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -96,7 +96,7 @@ exports[`<Header /> should render modal header 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-VigVT",
+          "styledComponentId": "sc-iAyFgw",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -116,7 +116,7 @@ exports[`<Header /> should render modal header 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-jTzLTM",
+                  "componentId": "sc-hSdWYo",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -173,7 +173,7 @@ exports[`<Header /> should render modal header 1`] = `
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-jTzLTM",
+                "styledComponentId": "sc-hSdWYo",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,
@@ -330,7 +330,7 @@ exports[`<Header /> should render modal header with right component and dropdown
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-VigVT",
+            "componentId": "sc-iAyFgw",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -358,7 +358,7 @@ exports[`<Header /> should render modal header with right component and dropdown
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-VigVT",
+          "styledComponentId": "sc-iAyFgw",
           "target": "div",
           "toString": [Function],
           "usesTheme": false,
@@ -378,7 +378,7 @@ exports[`<Header /> should render modal header with right component and dropdown
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-jTzLTM",
+                  "componentId": "sc-hSdWYo",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -435,7 +435,7 @@ exports[`<Header /> should render modal header with right component and dropdown
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-jTzLTM",
+                "styledComponentId": "sc-hSdWYo",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,
@@ -459,7 +459,7 @@ exports[`<Header /> should render modal header with right component and dropdown
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-kGXeez",
+                  "componentId": "sc-jDwBTQ",
                   "isStatic": false,
                   "lastClassName": "c2",
                   "rules": Array [
@@ -478,7 +478,7 @@ exports[`<Header /> should render modal header with right component and dropdown
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-kGXeez",
+                "styledComponentId": "sc-jDwBTQ",
                 "target": "div",
                 "toString": [Function],
                 "usesTheme": false,
@@ -530,7 +530,7 @@ exports[`<Header /> should render modal header with right component and dropdown
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-kpOJdX",
+                    "componentId": "sc-gPEVay",
                     "isStatic": false,
                     "lastClassName": "c3",
                     "rules": Array [
@@ -559,7 +559,7 @@ exports[`<Header /> should render modal header with right component and dropdown
                   "displayName": "styled.button",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-kpOJdX",
+                  "styledComponentId": "sc-gPEVay",
                   "target": "button",
                   "toString": [Function],
                   "usesTheme": false,
