@@ -149,3 +149,17 @@ import { FontAwesomeIcon } from '@Domain/Icons';
   </Menu.Item>
 </Menu>
 ```
+#### Menu item opening in new tab
+
+```jsx
+import { FontAwesomeIcon } from '@Domain/Icons';
+
+<Menu>
+  <Menu.Item
+    icon={<FontAwesomeIcon type='solid' icon='star' />}
+    label='Item 1'
+    href='https://www.google.com/'
+    openInNewTab={true}
+  />
+</Menu>
+```

@@ -4,6 +4,7 @@ exports[`<MenuItem /> should render a a menu item with a link 1`] = `
 <MenuItemContent
   href="www.google.com"
   label="Test menu item"
+  openInNewTab={false}
 />
 `;
 
@@ -21,6 +22,7 @@ exports[`<MenuItem /> should render a menu item as a submenu if it has children 
       }
       isOpen={false}
       label="Father"
+      openInNewTab={false}
     />
   }
 >
@@ -56,6 +58,7 @@ exports[`<MenuItem /> should render a menu item with Icon 1`] = `
     />
   }
   label="Test menu item"
+  openInNewTab={false}
 />
 `;
 
@@ -64,6 +67,7 @@ exports[`<MenuItem /> should render a menu item with active state 1`] = `
   href="www.google.com"
   isActive={true}
   label="Test menu item"
+  openInNewTab={false}
 />
 `;
 
@@ -77,11 +81,13 @@ exports[`<MenuItem /> should render a menu item with loading state 1`] = `
   }
   isLoading={true}
   label="Test menu item"
+  openInNewTab={false}
 />
 `;
 
 exports[`<MenuItem /> should render a simple menu item 1`] = `
 <MenuItemContent
   label="Test menu item"
+  openInNewTab={false}
 />
 `;
