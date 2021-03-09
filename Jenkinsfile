@@ -41,10 +41,10 @@ pipeline {
       }
       steps {
         script {
-          def prId = helper.github.getPullRequestIdFromCommit('intellihr/ui-components', env.GIT_COMMIT)
+          def prId = helper.github.getPullRequestIdFromCommit('intelliHR/ui-components', env.GIT_COMMIT)
           if (prId != null) {
             echo "Pull request ID: ${prId}"
-            for (label in helper.github.getPullRequestLabels('intellihr/ui-components', prId)) {
+            for (label in helper.github.getPullRequestLabels('intelliHR/ui-components', prId)) {
               if (label == 'MAJOR') {
                 RELEASE_VERSION = 'major'
                 break
@@ -71,7 +71,7 @@ pipeline {
           script {
             try {
               sh '''
-                git fetch --no-tags --progress git@github.com:intellihr/ui-components.git \
+                git fetch --no-tags --progress git@github.com:intelliHR/ui-components.git \
                   +refs/heads/gh-pages:refs/remotes/origin/gh-pages
               '''
             } catch (Exception e) {
@@ -88,7 +88,7 @@ pipeline {
                     --allow-empty \
                     -m "Initial GitHub Page Branch"
                 '''
-                sh 'git remote add origin git@github.com:intellihr/ui-components.git'
+                sh 'git remote add origin git@github.com:intelliHR/ui-components.git'
                 sh 'git push --set-upstream origin gh-pages'
               }
             }
