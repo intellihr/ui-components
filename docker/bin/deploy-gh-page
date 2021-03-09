@@ -4,7 +4,7 @@ rm -rf styleguide
 yarn styleguide:build
 
 git worktree add styleguidist remotes/origin/gh-pages
-cp -r ./styleguide/* ./styleguidist
+cp -rf ./styleguide/* ./styleguidist
 
 cd ./styleguidist
 

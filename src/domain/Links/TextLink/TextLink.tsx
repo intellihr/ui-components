@@ -5,7 +5,7 @@ import { Props, Variables } from '../../../common'
 import { Anchor, IAnchorProps } from '../../Internals/Anchor'
 import { styleForTypographyType } from '../../Typographies/services/textStyles'
 
-interface ITextLinkCommonProps {
+interface ITextLinkCommonProps extends Props.ICypressData {
   textType?: Props.TypographyType
   isInline?: boolean
   underlineOnHover?: boolean
@@ -78,6 +78,7 @@ class TextLink<P> extends React.PureComponent<P & ITextLinkProps> {
     if (this.isButton(this.props)) {
       const {
         children,
+        cyData,
         isInline,
         onClick,
         textType,
@@ -91,6 +92,7 @@ class TextLink<P> extends React.PureComponent<P & ITextLinkProps> {
           isInline={isInline}
           underlineOnHover={underlineOnHover}
           onClick={onClick}
+          cyData={cyData}
         >
           {children}
         </StyledTextButton>

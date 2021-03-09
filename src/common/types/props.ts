@@ -35,6 +35,10 @@ namespace Props {
     lower?: Variables.Breakpoint
   }
 
+  export interface ICypressData {
+    cyData?: string
+  }
+
   export enum Size {
     XXSmall = 'xxsmall',
     XSmall = 'xsmall',
