@@ -3,6 +3,7 @@ import React from 'react'
 import { Omit, Props } from '../../../common'
 import { FontAwesomeIcon } from '../../Icons/FontAwesomeIcon'
 import { FontAwesomeIconValue } from '../../Icons/Icon/FontAwesomeIconTypes'
+import { Anchor } from '../../Internals'
 import { ITooltipPopoverToggleComponentProps, TooltipPopover } from '../../Popovers/TooltipPopover'
 import { TooltipPopoverVariant } from '../../Popovers/TooltipPopover/TooltipPopover'
 import { IconButtonVariants, StatusDotVariants } from './colors'
@@ -31,7 +32,13 @@ interface IFontAwesomeIconButtonProps {
   /** The alternative font awesome icon versions */
   type: 'solid' | 'regular' | 'light' | 'duotone'
   /** onClick event */
-  onClick?: (event: React.MouseEvent<HTMLElement>) => void,
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void
+  /** A link that will be navigated to on click */
+  href?: string
+  /** Pass through for anchor props when using href */
+  anchorComponentProps?: {
+    [i: string]: any
+  }
   /** Background and Color of the button  */
   variant?: IconButtonVariants
   /** The margins around the component */
@@ -65,48 +72,58 @@ const FontAwesomeIconButton = (props: IFontAwesomeIconButtonProps) => {
     iconSize = IconSize.Small,
     size = Size.Small,
     buttonOverrides,
-    statusDotVariant
+    statusDotVariant,
+    href,
+    anchorComponentProps
   } = props
 
   const hasStatusDot = !!statusDotVariant && iconSize === IconSize.Large
+  const showTooltip = tooltipText && !isDisabled
 
-  const toggleComponent = ({ openMenu, closeMenu, toggleComponentRef, ariaProps }: ITooltipPopoverToggleComponentProps) => (
-    <span
-      onMouseEnter={openMenu}
-      onMouseLeave={closeMenu}
-      ref={toggleComponentRef}
-      {...ariaProps}
+  const iconButtonBase = (
+    <StyledIconButton
+      size={size}
+      onClick={href ? undefined : onClick}
+      variant={variant}
+      margins={margins}
+      isSelected={isSelected}
+      isHovered={isHovered}
+      isDisabled={isDisabled}
+      type='button'
+      {...buttonOverrides}
+      data-component-type={showTooltip ? undefined : Props.ComponentType.FontAwesomeIconButton}
+      data-component-context={showTooltip ? undefined : componentContext}
     >
-      <StyledIconButton
-        size={size}
-        onClick={onClick}
-        variant={variant}
-        margins={margins}
-        isSelected={isSelected}
-        isHovered={isHovered}
-        isDisabled={isDisabled}
-        type='button'
-        {...buttonOverrides}
-      >
-        <FontAwesomeIcon
-          size={iconSize === IconSize.Large ? 'large' : 'medium'}
-          icon={icon}
-          type={type}
-        />
-        {
-          hasStatusDot && (
-            <StyledStatusDot
-              variant={statusDotVariant}
-            />
-          )
-        }
-      </StyledIconButton>
-    </span>
+      <FontAwesomeIcon
+        size={iconSize === IconSize.Large ? 'large' : 'medium'}
+        icon={icon}
+        type={type}
+      />
+      {
+        hasStatusDot && (
+          <StyledStatusDot
+            variant={statusDotVariant}
+          />
+        )
+      }
+    </StyledIconButton>
   )
 
+  const iconButtonWithLink = (
+    <Anchor
+      href={href}
+      {...anchorComponentProps}
+    >
+      {iconButtonBase}
+    </Anchor>
+  )
+
+  const iconButton = href ? iconButtonWithLink : iconButtonBase
+
   return (
-    tooltipText && !isDisabled
-    ? (
+    !showTooltip
+    ? iconButton
+    : (
        <TooltipPopoverWrapper
          size={size}
          data-component-type={Props.ComponentType.FontAwesomeIconButton}
@@ -114,39 +131,23 @@ const FontAwesomeIconButton = (props: IFontAwesomeIconButtonProps) => {
        >
          <TooltipPopover
            variant={TooltipPopoverVariant.Dark}
-           toggleComponent={toggleComponent}
+           noHelpCursor
+           // tslint:disable-next-line:jsx-no-lambda
+           toggleComponent={({ openMenu, closeMenu, toggleComponentRef, ariaProps }: ITooltipPopoverToggleComponentProps) => (
+             <div
+               onMouseEnter={openMenu}
+               onMouseLeave={closeMenu}
+               ref={toggleComponentRef}
+               {...ariaProps}
+               style={{borderRadius: '50%'}}
+             >
+               {iconButton}
+             </div>
+           )}
          >
            {tooltipText}
          </TooltipPopover>
        </TooltipPopoverWrapper>
-      )
-    : (
-        <StyledIconButton
-          size={size}
-          onClick={onClick}
-          variant={variant}
-          margins={margins}
-          isSelected={isSelected}
-          isHovered={isHovered}
-          isDisabled={isDisabled}
-          type='button'
-          {...buttonOverrides}
-          data-component-type={Props.ComponentType.FontAwesomeIconButton}
-          data-component-context={componentContext}
-        >
-          <FontAwesomeIcon
-            size={iconSize === IconSize.Large ? 'large' : 'medium'}
-            icon={icon}
-            type={type}
-          />
-          {
-            hasStatusDot && (
-              <StyledStatusDot
-                variant={statusDotVariant}
-              />
-            )
-          }
-        </StyledIconButton>
       )
   )
 }
