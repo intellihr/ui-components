@@ -118,14 +118,16 @@ class Section extends React.PureComponent<ISectionProps, never> {
           {leftComponent && <span className='left-component'>{leftComponent}</span>}
           {text}
           {rightComponent && <span className='right-component'>{rightComponent}</span>}
-          <Text
-            type={Props.TypographyType.XSmall}
-            color={Variables.Color.n600}
-            isInline={false}
-            margins={{ top: Variables.Spacing.s2XSmall }}
-          >
-            {secondaryText}
-          </Text>
+          {secondaryText && (
+            <Text
+              type={Props.TypographyType.XSmall}
+              color={Variables.Color.n600}
+              isInline={false}
+              margins={{top: Variables.Spacing.s2XSmall}}
+            >
+              {secondaryText}
+            </Text>
+          )}
         </Margin>
       </StyledSectionContent>
     )

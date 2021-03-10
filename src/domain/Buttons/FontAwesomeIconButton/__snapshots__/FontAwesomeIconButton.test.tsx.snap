@@ -1253,7 +1253,7 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
 }
 
 .c1 {
-  cursor: help;
+  cursor: auto;
 }
 
 .c0 {
@@ -1341,11 +1341,14 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
         size="small"
       >
         <TooltipPopover
+          noHelpCursor={true}
           toggleComponent={[Function]}
           variant="dark"
           width={300}
         >
-          <styled.span>
+          <styled.span
+            noHelpCursor={true}
+          >
             <StyledComponent
               forwardedComponent={
                 Object {
@@ -1375,16 +1378,22 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
                 }
               }
               forwardedRef={null}
+              noHelpCursor={true}
             >
               <span
                 className="c1"
               >
-                <span
+                <div
                   aria-expanded={false}
                   aria-haspopup={true}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
                   role="button"
+                  style={
+                    Object {
+                      "borderRadius": "50%",
+                    }
+                  }
                 >
                   <styled.button
                     isDisabled={false}
@@ -1576,7 +1585,7 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
                       </button>
                     </StyledComponent>
                   </styled.button>
-                </span>
+                </div>
               </span>
             </StyledComponent>
           </styled.span>
@@ -1617,10 +1626,11 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
   transition: 0.2s ease-out;
 }
 
-<span
+<div
                   aria-expanded="false"
                   aria-haspopup="true"
                   role="button"
+                  style="border-radius: 50%;"
                 >
                   <button
                     class="c0"
@@ -1632,7 +1642,7 @@ exports[`<FontAwesomeIconButton /> should render an icon button 1`] = `
                       data-component-type="icon"
                     />
                   </button>
-                </span>,
+                </div>,
               }
             }
             popoverAnchorPosition="auto"
