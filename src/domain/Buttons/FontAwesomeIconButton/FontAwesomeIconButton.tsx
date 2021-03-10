@@ -112,7 +112,7 @@ const FontAwesomeIconButton = (props: IFontAwesomeIconButtonProps) => {
   const iconButtonWithLink = (
     <Anchor
       href={href}
-      {...anchorComponentProps}
+      anchorComponentProps={anchorComponentProps}
     >
       {iconButtonBase}
     </Anchor>
