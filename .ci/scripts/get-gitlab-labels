@@ -1,0 +1,31 @@
+#!/bin/sh -e
+
+GITLAB_PROJECT_ID="25040379"
+
+[ ! -z "$JENKINS_GITLAB_TOKEN" ] || (echo '$JENKINS_GITLAB_TOKEN not set!' && exit 1)
+[ ! -z "$BRANCH_NAME" ] || (echo '$BRANCH_NAME not set!' && exit 1)
+
+get_commit() {
+  curl \
+    -s \
+    -H "Content-Type: application/json" \
+    -H "Authorization: Bearer ${JENKINS_GITLAB_TOKEN}" \
+    https://gitlab.com/api/v4/projects/${GITLAB_PROJECT_ID}/repository/branches/${BRANCH_NAME} | jq -r .commit.id
+}
+
+get_commit_mr_labels() {
+  curl \
+    -s \
+    -H "Content-Type: application/json" \
+    -H "Authorization: Bearer ${JENKINS_GITLAB_TOKEN}" \
+    https://gitlab.com/api/v4/projects/${GITLAB_PROJECT_ID}/repository/commits/${1}/merge_requests | jq -r 'del(.[] | select (.author.username == "intellihrci1"))[0].labels | join(",")'
+}
+
+HEAD_COMMIT=$(get_commit)
+MR_LABELS=$(get_commit_mr_labels $HEAD_COMMIT)
+
+if ! echo $MR_LABELS | grep ',' > /dev/null; then
+  echo "${MR_LABELS},"
+else
+  echo $MR_LABELS
+fi
