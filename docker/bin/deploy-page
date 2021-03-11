@@ -3,7 +3,7 @@
 rm -rf styleguide
 yarn styleguide:build
 
-git worktree add styleguidist remotes/origin/gh-pages
+git worktree add styleguidist remotes/origin/pages
 mkdir ./public || true
 cp -r ./styleguide/* ./public
 
