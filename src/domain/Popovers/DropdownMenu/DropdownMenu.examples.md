@@ -15,7 +15,6 @@
 />
 ```
 
-
 #### DropdownMenu inside overflow: hidden, position: relative bounding box
 
 ```jsx
@@ -59,6 +58,49 @@
       onClick: () => alert('Archive'),
       tooltipMessage: 'This template has been used to create a goal so it cannot be deleted. Archived templates are hidden when creating goals.',
       tooltipProps: { width: 300 }
+    }
+  ]}
+/>
+```
+
+#### DropdownMenu with secondary text and icon
+
+```jsx
+<DropdownMenu
+  sections={[
+    {
+       text: 'Create',
+       componentProps: {
+         style: {'fontWeight':600}
+       },
+       onClick: () => alert('Create')
+     }, 
+    {
+      text: 'Note',
+      secondaryText: 'add a note to yourself or share',
+      iconProps: {
+        icon: 'sticky-note',
+        iconType: 'solid'
+      },
+      onClick: () => alert('Note')
+    },
+    {
+      text: 'Training',
+      secondaryText: 'add a training to yourself or others',
+      iconProps: {
+        icon: 'chalkboard-teacher',
+        iconType: 'solid'
+      },
+      onClick: () => alert('Training')
+    },
+    {
+      text: 'Goal',
+      secondaryText: 'set a goal to yourself or others',
+      iconProps: {
+        icon: 'bullseye-arrow',
+        iconType: 'solid'
+      },
+      onClick: () => alert('Goal')
     }
   ]}
 />
@@ -308,69 +350,6 @@ import { FontAwesomeIcon } from '@Domain/Icons';
        rightComponent: <FontAwesomeIcon type='solid' icon='hand-point-left' />,
        onClick: () => alert('Test'),
        text: 'Surrounded by icons'
-     }
-   ]}
-/>
-```
-
-#### Profile Menu Example
-
-```jsx
-import { Avatar } from '@Domain/Avatars';
-import { FontAwesomeIcon, IntelliIcon } from '@Domain/Icons';
-
-<DropdownMenu
-   toggleComponent={({ toggleMenu, toggleComponentRef, ariaProps }) =>
-     <div
-       onClick={toggleMenu}
-       ref={toggleComponentRef}
-       {...ariaProps}
-       style={{ cursor: 'pointer' }}
-     >
-       <Avatar
-         initials='JD'
-         size='medium'
-       />
-     </div>
-   }
-   sections={[
-     {
-       text: 'John Doe',
-       componentProps: {
-         style: {'fontWeight':600}
-       }
-     },
-     {
-       component: <hr/>
-     },
-     {
-       text: 'My Profile',
-       leftComponent: <IntelliIcon type='solid' icon='avatar' />,
-       onClick: () => alert('Test')
-     },
-     {
-       text: 'Change Password',
-       leftComponent: <IntelliIcon type='solid' icon='security' />,
-       onClick: () => alert('Test')
-     },
-     {
-       text: 'Update Profile Picture',
-       leftComponent: <FontAwesomeIcon type='solid' icon='camera' />,
-       onClick: () => alert('Test')
-     },
-     {
-       text: 'User Disclaimer',
-       leftComponent: <IntelliIcon type='solid' icon='shield' />,
-       onClick: () => alert('Test')
-     },
-     {
-       component: <hr/>
-     },
-     {
-       text: 'Log Out',
-       leftComponent: <FontAwesomeIcon type='solid' type='solid' icon='power-off' />,
-       href: 'google.com',
-       sectionType: 'alert'
      }
    ]}
 />

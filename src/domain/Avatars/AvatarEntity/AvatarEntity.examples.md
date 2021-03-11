@@ -20,6 +20,12 @@ import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
     initials='JW'
     statusDot={AvatarStatusDotColor.Indigo}
     primaryText='John Wick'
+    secondaryText={['Guy Killer', 'Dog Protector']}
+  />
+  <AvatarEntity
+    initials='JW'
+    statusDot={AvatarStatusDotColor.Indigo}
+    primaryText='John Wick'
     secondaryText='Guy Killer'
     tertiaryText='Job Ending in 3 days'
   />
@@ -45,6 +51,13 @@ import { AvatarStatusDotColor } from '@Domain/Avatars/Avatar';
     statusDot={AvatarStatusDotColor.Indigo}
     primaryText='John Wick'
     secondaryText='Guy Killer'
+  />
+  <AvatarEntity
+    size='small'
+    initials='JW'
+    statusDot={AvatarStatusDotColor.Indigo}
+    primaryText='John Wick'
+    secondaryText={['Guy Killer', 'Dog Protector']}
   />
   <AvatarEntity
     size='small'

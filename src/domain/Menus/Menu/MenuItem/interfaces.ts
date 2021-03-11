@@ -17,11 +17,13 @@ interface IMenuItemProps<TAnchorProps extends Record<string, any> = Record<strin
   handleSizeChange?: () => void
   /** The properties to be passed on to the custom anchor component if provided in the Provider */
   anchorComponentProps?: TAnchorProps
+  /** Open a new tab. Default is false */
+  openInNewTab?: boolean
   /** Children components */
   children?: React.ReactNode
 }
 
-type IMenuItemContent = Pick<IMenuItemProps, 'isActive' | 'isOpen' | 'href' | 'anchorComponentProps' | 'icon' | 'label' | 'isLoading'>
+type IMenuItemContent = Pick<IMenuItemProps, 'isActive' | 'isOpen' | 'href' | 'anchorComponentProps' | 'icon' | 'label' | 'isLoading'| 'openInNewTab'>
 
 export {
   IMenuItemProps,

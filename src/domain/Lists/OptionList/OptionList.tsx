@@ -164,7 +164,7 @@ const NoOptionsEmptyState: React.FC<any> = () => {
   return (
     <StyledEmptyState>
       <Text type={Props.TypographyType.Small}>
-        {t('optionList.noOptionsMessage')}
+        {t('optionList.noOptionsMessage', {defaultValue: `Sorry, We couldn't find any options`})}
       </Text>
     </StyledEmptyState>
   )
@@ -176,7 +176,7 @@ const NoResultsEmptyState: React.FC<any> = () => {
   return (
     <StyledEmptyState>
       <Text type={Props.TypographyType.Small}>
-        {t('optionList.noResultsMessage')}
+        {t('optionList.noResultsMessage', {defaultValue: `Unfortunately, we couldn't find anything from your search`})}
       </Text>
     </StyledEmptyState>
   )

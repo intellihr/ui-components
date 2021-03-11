@@ -1,15 +1,13 @@
 import React from 'react'
 
-import {Props, Variables} from '../../../../common'
-import {StyledIconButton} from '../../../Buttons/FontAwesomeIconButton/style'
-import {StyledInputLabel} from '../../../Forms/VerticalForm/subcomponents/style'
-import {FontAwesomeIcon} from '../../../Icons/FontAwesomeIcon'
+import { Props, Variables } from '../../../../common'
+import { FontAwesomeIcon } from '../../../Icons/FontAwesomeIcon'
+import { FontAwesomeIconValue } from '../../../Icons/Icon/FontAwesomeIconTypes'
 import { Anchor } from '../../../Internals'
-import {GridLayout} from '../../../Layouts/GridLayout'
-import {Margin} from '../../../Spacers/Margin'
-import {ITooltipPopoverProps, ITooltipPopoverToggleComponentProps, TooltipPopover} from '../../TooltipPopover'
-import {TooltipPopoverVariant} from '../../TooltipPopover/TooltipPopover'
-import {StyledSection, StyledSectionContent} from './style'
+import { Margin } from '../../../Spacers/Margin'
+import { Text } from '../../../Typographies'
+import { ITooltipPopoverProps, ITooltipPopoverToggleComponentProps, TooltipPopover } from '../../TooltipPopover'
+import {FontAwesomeIconWrapper, StyledSection, StyledSectionContent, StyledSectionContentWithTooltip} from './style'
 
 type SectionType =
   'default'
@@ -53,6 +51,12 @@ interface ISectionProps {
   tooltipMessage?: JSX.Element | string
   /** any extra tooltip props */
   tooltipProps?: ITooltipPopoverProps
+  /** props of the icon to display */
+  iconProps?: {
+    icon: FontAwesomeIconValue
+    iconType: 'solid' | 'regular' | 'light' | 'duotone'
+  }
+  secondaryText?: string
 }
 
 class Section extends React.PureComponent<ISectionProps, never> {
@@ -91,14 +95,52 @@ class Section extends React.PureComponent<ISectionProps, never> {
 
   private get content () {
     const {
-      component,
-      componentProps,
       leftComponent,
       rightComponent,
       text,
+      iconProps,
+      secondaryText
+    } = this.props
+
+    return (
+      <StyledSectionContent>
+        {
+          iconProps && (
+            <FontAwesomeIconWrapper>
+              <FontAwesomeIcon
+                icon={iconProps.icon}
+                type={iconProps.iconType}
+              />
+            </FontAwesomeIconWrapper>
+          )
+        }
+        <Margin margins={iconProps ? { left: Variables.Spacing.sSmall } : undefined}>
+          {leftComponent && <span className='left-component'>{leftComponent}</span>}
+          {text}
+          {rightComponent && <span className='right-component'>{rightComponent}</span>}
+          {secondaryText && (
+            <Text
+              type={Props.TypographyType.XSmall}
+              color={Variables.Color.n600}
+              isInline={false}
+              margins={{top: Variables.Spacing.s2XSmall}}
+            >
+              {secondaryText}
+            </Text>
+          )}
+        </Margin>
+      </StyledSectionContent>
+    )
+  }
+
+  private get section () {
+    const {
+      component,
+      componentProps,
       onClick,
       href,
-      tooltipMessage
+      tooltipMessage,
+      secondaryText
     } = this.props
 
     if (component) {
@@ -111,7 +153,7 @@ class Section extends React.PureComponent<ISectionProps, never> {
 
     const Component = this.component
     return (
-      <StyledSection {...this.styleProps}>
+      <StyledSection {...this.styleProps} hasSecondaryText={secondaryText}>
         <Component
           {...componentProps}
           onClick={onClick}
@@ -119,21 +161,13 @@ class Section extends React.PureComponent<ISectionProps, never> {
         >
         {
           tooltipMessage ? (
-            <StyledSectionContent>
+            <StyledSectionContentWithTooltip>
               <Margin margins={{ right: Variables.Spacing.sXSmall }}>
-                {leftComponent && <span className='left-component'>{leftComponent}</span>}
-                {text}
-                {rightComponent && <span className='right-component'>{rightComponent}</span>}
+                {this.content}
               </Margin>
               <FontAwesomeIcon icon='info-circle' type='solid' color={Variables.Color.n400}/>
-            </StyledSectionContent>
-          ) : (
-            <>
-              {leftComponent && <span className='left-component'>{leftComponent}</span>}
-              {text}
-              {rightComponent && <span className='right-component'>{rightComponent}</span>}
-            </>
-          )
+            </StyledSectionContentWithTooltip>
+          ) : this.content
         }
         </Component>
       </StyledSection>
@@ -154,7 +188,7 @@ class Section extends React.PureComponent<ISectionProps, never> {
     if (tooltipMessage) {
       return (
         <TooltipPopover
-          toggleComponent={this.toggleComponent(this.content)}
+          toggleComponent={this.toggleComponent(this.section)}
           width={300}
           parentAnchorPosition={{
             xPos: Props.Position.Left,
@@ -171,7 +205,7 @@ class Section extends React.PureComponent<ISectionProps, never> {
       )
     }
 
-    return this.content
+    return this.section
   }
 
   private toggleComponent = (content: JSX.Element) => ({ openMenu, closeMenu, toggleComponentRef, ariaProps }: ITooltipPopoverToggleComponentProps) => (

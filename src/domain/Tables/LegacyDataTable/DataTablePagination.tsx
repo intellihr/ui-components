@@ -247,7 +247,12 @@ const PageDetails: React.FC<any> = ({pageSize, totalCount, page}) => {
 
   return (
     <div className='page-details'>
-      {t('pagination.details', {firstItemOnPage: pageStartingIndex, lastItemOnPage: maxActualCurrentPageIndex, totalItems: entryCount})}
+      {t('pagination.details', {
+        defaultValue: 'Showing {{firstItemOnPage}} to {{lastItemOnPage}} of {{totalItems}} entries',
+        firstItemOnPage: pageStartingIndex,
+        lastItemOnPage: maxActualCurrentPageIndex,
+        totalItems: entryCount
+      })}
     </div>
   )
 }
@@ -272,7 +277,7 @@ const PageSizeOptions: React.FC<any> = ({showPageSizeOptions, pageSizeOptions, p
 
     return (
       <span className='page-size-options'>
-        <label>{pageSizeSelect} {t('pagination.entriesPerPage')}</label>
+        <label>{pageSizeSelect} {t('pagination.entriesPerPage', {defaultValue: 'entries per page'})}</label>
       </span>
     )
   }

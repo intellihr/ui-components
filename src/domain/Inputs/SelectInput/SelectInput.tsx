@@ -91,7 +91,8 @@ export const SelectInput: React.FC<ISelectInputProps> = (props) => {
   return (
     <ClassBasedSelectInput
       {...props}
-      placeholder={props.placeholder || t('selectPlaceholder')}
+      placeholder={props.placeholder || t('selectPlaceholder', {defaultValue: 'Please Select'})}
+      noResultsText={props.noResultsText || t('selectNoResultsFound', {defaultValue: 'No results found'})}
     />
   )
 }

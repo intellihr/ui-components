@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { useTranslateFunction } from '../../../Defaults/Defaults/Defaults'
 import { StyledGif, StyledMainGifContainer, StyledRemoveButton } from '../style'
 
 interface IGifSectionProps {
@@ -15,6 +16,7 @@ const GifSection: React.FC<IGifSectionProps> = ({
   gifUrl,
   clearGif
 }) => {
+  const t = useTranslateFunction()
   const hasGif = gifUrl !== ''
 
   return (
@@ -23,7 +25,7 @@ const GifSection: React.FC<IGifSectionProps> = ({
         <StyledMainGifContainer>
           <StyledGif src={gifUrl} />
           <StyledRemoveButton onClick={clearGif}>
-            Remove
+            {t('remove', {defaultValue: 'Remove'})}
           </StyledRemoveButton>
         </StyledMainGifContainer>
       )}
