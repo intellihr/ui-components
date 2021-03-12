@@ -6,7 +6,7 @@ The _golden ticket_ to creating consistent user experiences within the intelliHR
 WCF is a set of design guidelines and reusable, common React components written in Typescript.
 
 The latest release can always be found at the following link:
-https://intellihr.github.io/ui-components/
+https://intellihr.gitlab.io/engineering/ui-components/
 
 ---
 

@@ -1,0 +1,19 @@
+#!/bin/sh -xe
+
+rm -rf styleguide
+yarn styleguide:build
+
+git worktree add styleguidist remotes/origin/pages
+mkdir ./public || true
+cp -r ./styleguide/* ./public
+
+cd ./public
+
+git add -f .
+git \
+  -c user.email="continuous.integration@intellihr.com.au" \
+  -c user.name="IntelliHR CI" \
+  commit \
+  -m "Update pages as of $(git log '--format=format:%H' remotes/origin/master -1)"
+
+git push -f --set-upstream origin HEAD:pages

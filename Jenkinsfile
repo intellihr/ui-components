@@ -5,17 +5,16 @@ import net.intellihr.Helper
 import net.intellihr.CodeAnalysis
 
 def helper = new net.intellihr.Helper(this)
-def analyse = new net.intellihr.CodeAnalysis(this)
 
 def skipBuild = false
-
-def RELEASE_VERSION = 'patch'
 
 pipeline {
   agent any
 
   environment {
+    AWS_REGION = getAWSRegion()
     COMPOSE_PROJECT_NAME = "$BUILD_TAG"
+    BUILD_TAG = env.BUILD_TAG.replaceAll(/jenkins-intelliHR Engineering-intellihr%2Fengineering%2F/, '').trim().replaceAll(/%2F|\/|\s/, '-').take(64)
   }
 
   stages {
@@ -24,13 +23,21 @@ pipeline {
         script {
           skipBuild = helper.shouldSkipBuild()
           env.ENV_TYPE = (helper.isExperimental()) ? 'experimental' : (env.BRANCH_NAME == 'master') ? 'prod' : 'dev'
+          env.RELEASE_VERSION = 'patch'
 
-          helper.assumeRole(env.ENV_TYPE)
-          env.FONTAWESOME_NPM_AUTH_TOKEN = helper.getSSMParameter('/shared/npm/FONTAWESOME_NPM_AUTH_TOKEN')
+          withAWSParameterStore(namePrefixes: '/shared/ASSUME_ROLE_ARNS,/shared/NPM_TOKEN,/jenkins/GITLAB_TOKEN', regionName: env.AWS_REGION) {
+            env.NPM_TOKEN = env.SHARED_NPM_TOKEN
+            env.JENKINS_GITLAB_TOKEN = env.JENKINS_GITLAB_TOKEN
+
+            assumeRole(env.ENV_TYPE)
+            withAWSParameterStore(namePrefixes: '/shared/npm/FONTAWESOME_NPM_AUTH_TOKEN', regionName: env.AWS_REGION) {
+              env.FONTAWESOME_NPM_AUTH_TOKEN = env.SHARED_NPM_FONTAWESOME_NPM_AUTH_TOKEN
+            }
+          }
           // Setup FontAwesome PRO token for npm:
           // https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers
           sh "echo \"@fortawesome:registry=https://npm.fontawesome.com/ \n//npm.fontawesome.com/:_authToken=${env.FONTAWESOME_NPM_AUTH_TOKEN}\" > .npmrc"
-          helper.resetAWSCredentials()
+          resetAWSCredentials()
         }
       }
     }
@@ -41,21 +48,14 @@ pipeline {
       }
       steps {
         script {
-          def prId = helper.github.getPullRequestIdFromCommit('intelliHR/ui-components', env.GIT_COMMIT)
-          if (prId != null) {
-            echo "Pull request ID: ${prId}"
-            for (label in helper.github.getPullRequestLabels('intelliHR/ui-components', prId)) {
-              if (label == 'MAJOR') {
-                RELEASE_VERSION = 'major'
-                break
-              } else if (label == 'MINOR') {
-                RELEASE_VERSION = 'minor'
-                break
-              }
-            }
+          def labels = sh(script: '.ci/scripts/get-gitlab-labels', returnStdout: true).trim().split(',')
+          if (labels.contains('MAJOR')) {
+            env.RELEASE_VERSION = 'major'
+          } else if (labels.contains('MINOR')) {
+            env.RELEASE_VERSION = 'minor'
           }
-          echo "The next release version is ${RELEASE_VERSION}"
         }
+        echo "The next release version is ${env.RELEASE_VERSION}"
       }
     }
 
@@ -67,29 +67,29 @@ pipeline {
         }
       }
       steps {
-        sshagent (credentials: ['GITHUB_CI_SSH_KEY']) {
+        sshagent (credentials: ['GITLAB_CI']) {
           script {
             try {
               sh '''
-                git fetch --no-tags --progress git@github.com:intelliHR/ui-components.git \
-                  +refs/heads/gh-pages:refs/remotes/origin/gh-pages
+                git fetch --no-tags --progress git@gitlab.com:intellihr/engineering/ui-components.git \
+                  +refs/heads/pages:refs/remotes/origin/pages
               '''
             } catch (Exception e) {
               sh 'rm -rf styleguide'
               sh 'mkdir styleguide'
               dir ('./styleguide') {
                 sh 'git init'
-                sh 'git checkout -b gh-pages'
+                sh 'git checkout -b pages'
                 sh '''
                   git \
                     -c user.email="continuous.integration@intellihr.com.au" \
                     -c user.name="IntelliHR CI" \
                     commit \
                     --allow-empty \
-                    -m "Initial GitHub Page Branch"
+                    -m "Initial GitLab Page Branch"
                 '''
-                sh 'git remote add origin git@github.com:intelliHR/ui-components.git'
-                sh 'git push --set-upstream origin gh-pages'
+                sh 'git remote add origin git@gitlab.com:intellihr/engineering/ui-components.git'
+                sh 'git push --set-upstream origin pages'
               }
             }
           }
@@ -173,19 +173,16 @@ pipeline {
       parallel {
         stage('Publish GitHub Page') {
           steps {
-            sshagent (credentials: ['GITHUB_CI_SSH_KEY']) {
+            sshagent (credentials: ['GITLAB_CI']) {
               script {
-                try {
-                  sh '''
-                    docker-compose run --rm \
-                      --name "$BUILD_TAG"-gh-pages \
-                      --volume "$SSH_AUTH_SOCK":/tmp/agent.sock \
-                      -e SSH_AUTH_SOCK=/tmp/agent.sock \
-                      jenkins ./docker/bin/deploy-gh-page
-                  '''
-                } catch (Exception e) {
-                  echo 'No need to publish gh-pages...Skipping...'
-                }
+                sh '''
+                  docker-compose run --rm \
+                    --name "$BUILD_TAG"-gh-pages \
+                    --volume "$SSH_AUTH_SOCK":/tmp/agent.sock \
+                    -e SSH_AUTH_SOCK=/tmp/agent.sock \
+                    jenkins ./docker/bin/deploy-page \
+                    || echo 'No need to publish pages... Skipping...'
+                '''
               }
             }
           }
@@ -193,11 +190,6 @@ pipeline {
         stage('Publish NPM') {
           steps {
             sshagent (credentials: ['GITHUB_CI_SSH_KEY']) {
-              script {
-                env.NPM_TOKEN = helper.getSSMParameter('/shared/NPM_TOKEN')
-                env.RELEASE_VERSION = RELEASE_VERSION
-              }
-
               sh '''
                   docker-compose run --rm \
                     --name "$BUILD_TAG"-publish-npm \
@@ -223,15 +215,38 @@ pipeline {
       slackSend(
         channel: "#devops-log",
         color: 'danger',
-        message: "Jenkins UI-Components (${env.BRANCH_NAME}) <${env.BUILD_URL}|#${env.BUILD_NUMBER}> *FAILED*"
+        message: "UI-Components (${env.BRANCH_NAME}) <${env.BUILD_URL}|#${env.BUILD_NUMBER}> *FAILED*"
       )
     }
     success {
       slackSend(
         channel: "#devops-log",
         color: 'good',
-        message: "Jenkins UI-Components (${env.BRANCH_NAME}) <${env.BUILD_URL}|#${env.BUILD_NUMBER}> *SUCCESSFUL*"
+        message: "UI-Components (${env.BRANCH_NAME}) <${env.BUILD_URL}|#${env.BUILD_NUMBER}> *SUCCESSFUL*"
       )
     }
   }
+}
+
+def getAWSRegion() {
+  return sh(
+      script: 'curl --silent http://169.254.169.254/latest/dynamic/instance-identity/document | grep "region" | cut -f4 -d\'"\'',
+      returnStdout: true
+    ).trim()
+}
+
+def assumeRole(def envType) {
+  env.AWS_ASSUME_ROLE_ARN = readJSON(text: env.SHARED_ASSUME_ROLE_ARNS)[envType]
+
+  def credentials = sh(script: './.ci/scripts/assume-role.sh', returnStdout: true).split()
+  env.AWS_ACCESS_KEY_ID = credentials[0]
+  env.AWS_SECRET_ACCESS_KEY = credentials[1]
+  env.AWS_SESSION_TOKEN = credentials[2]
+
+}
+
+def resetAWSCredentials() {
+  env.AWS_ACCESS_KEY_ID = ''
+  env.AWS_SECRET_ACCESS_KEY = ''
+  env.AWS_SESSION_TOKEN = ''
 }
