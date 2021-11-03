@@ -44,7 +44,7 @@
     "@types/uuid": "^3.4.3",
     "better-react-spinkit": "2.0.4",
     "body-scroll-lock": "2.6.1",
-    "chart.js": "2.8.0",
+    "chart.js": "2.9.4",
     "classnames": "2.2.5",
     "color": "3.1.1",
     "emoji-mart": "2.11.1",
